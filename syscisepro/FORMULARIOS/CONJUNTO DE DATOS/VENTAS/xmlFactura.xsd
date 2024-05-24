@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<factura id='comprobante' version='1.0.0'>
+  <infoTributaria>
+    <ambiente></ambiente>
+    <tipoEmision></tipoEmision>
+    <razonSocial></razonSocial>
+    <ruc></ruc>
+    <claveAcceso></claveAcceso>
+    <codDoc></codDoc>
+    <estab></estab>
+    <ptoEmi></ptoEmi>
+    <secuencial></secuencial>
+    <dirMatriz></dirMatriz>
+    <agenteRetencion></agenteRetencion>
+  </infoTributaria>
+  <infoFactura>
+    <fechaEmision></fechaEmision>
+    <dirEstablecimiento></dirEstablecimiento>
+    <obligadoContabilidad></obligadoContabilidad>
+    <tipoIdentificacionComprador></tipoIdentificacionComprador>
+    <razonSocialComprador></razonSocialComprador>
+    <identificacionComprador></identificacionComprador>
+    <direccionComprador></direccionComprador>
+    <totalSinImpuestos></totalSinImpuestos>
+    <totalDescuento></totalDescuento>
+    <totalConImpuestos>
+      <totalImpuesto>
+        <codigo></codigo>
+        <codigoPorcentaje></codigoPorcentaje>
+        <descuentoAdicional></descuentoAdicional>
+        <baseImponible></baseImponible>
+        <tarifa></tarifa>
+        <valor></valor>
+      </totalImpuesto>
+    </totalConImpuestos>
+    <propina></propina>
+    <importeTotal></importeTotal>
+    <moneda></moneda>
+    <pagos>
+      <pago>
+        <formaPago></formaPago>
+        <total></total>
+        <plazo></plazo>
+        <unidadTiempo></unidadTiempo>
+      </pago>
+    </pagos>
+  </infoFactura>
+  <detalles>
+    <detalle>
+      <codigoPrincipal></codigoPrincipal>
+      <descripcion></descripcion>
+      <cantidad></cantidad>
+      <precioUnitario></precioUnitario>
+      <descuento></descuento>
+      <precioTotalSinImpuesto></precioTotalSinImpuesto>
+      <impuestos>
+        <impuesto>
+          <codigo></codigo>
+          <codigoPorcentaje></codigoPorcentaje>
+          <baseImponible></baseImponible>
+          <tarifa></tarifa>
+          <valor></valor>
+        </impuesto>
+      </impuestos>
+    </detalle>
+  </detalles>
+  <infoAdicional>
+    <campoAdicional nombre='Informacion'></campoAdicional>
+    <campoAdicional nombre='Retencion'></campoAdicional>
+    <campoAdicional nombre='Observaciones'></campoAdicional>
+  </infoAdicional>
+</factura>

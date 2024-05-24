@@ -1,0 +1,115 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using ClassLibraryCisepro3.Enums;
+using ClassLibraryCisepro3.ProcesosSql;
+using System.Data;
+using System.Data.SqlClient;
+
+namespace ClassLibraryCisepro3.TalentoHumano
+{
+    public class ClassTicketsFarmaciaComecsa
+    {
+        /**
+         * ATRIBUTOS QUE ESTAN LIGADOS A LA(S) TABLA(S) CORRESPONDIENTE(S) 
+         * SI AGREGO UNA COLUMNA EN LA TABLA (BD), ES RECOMENDABLE CREAR SU ATRIBUTO CORRESPONDIENTE CON EL MISMO TIPO DE DATO
+         * TODOS LOS METODOS DE GUARDAR, SELECCIONAR, BUSCAR, ESTAN LIGADOS A UN PROCEDIMIENTO EN BD Y SU TIPO DE RETRNO GENERAL ES DATATABLE
+         * HAY METODOS DONDE NO USAMOS PROCEDIMIENTOS ALMACENADOS SINO LAS SENTENCIAS SQL DE ACUERDO A LA LOGICA DE USO
+         **/
+        public int IdRegistro { get; set; }
+        public DateTime FechaRegistro { get; set; }
+        public int NumDocumento { get; set; } 
+        public string CedulaRuc { get; set; }
+        public string ApellidosNombres { get; set; }
+        public string Detalle { get; set; }
+        public int Tipo { get; set; }
+        public int Estado { get; set; }
+
+        public int BuscarMayorIdTicket(TipoConexion tipoCon)
+        {
+            var data = ComandosSql.SeleccionarQueryToDataTable(tipoCon, "SELECT id_ticket=CASE WHEN MAX(id_ticket) IS NULL THEN 0 ELSE MAX(id_ticket) End FROM TICKETS_FARMACIA_COMECSA;", false);
+            return data.Rows.Count == 0 ? 0 : data.Rows[0][0] == DBNull.Value ? 0 : Convert.ToInt32(data.Rows[0][0]);
+        }
+
+        public DataTable SeleccionarRegistroNotificaciones(TipoConexion tipoCon, string desde, string hasta, int tipo, string filtro)
+        {
+            var pars = new List<object[]>
+            {
+                new object[] { "DESDE", SqlDbType.DateTime, desde } ,
+                new object[] { "HASTA", SqlDbType.DateTime, hasta } ,
+                new object[] { "FILTRO", SqlDbType.VarChar, filtro }  
+            };
+            // string sql = null;
+            //if (tipo == 0) sql = "select r.*, (case r.tipo_ticket when 0 then 'TICKET DE FARMACIA' else 'TICKET DE COMECSA' end) TIPO from TICKETS_FARMACIA_COMECSA r where (r.fecha_registro between @DESDE and @HASTA) and r.estado = 1 and (r.detalle_observacion like ('%'+@FILTRO+'%') or r.cedularuc like ('%'+@FILTRO+'%') or r.apellidos_nombres like ('%'+@FILTRO+'%')) order by r.fecha_registro;";
+            //if (tipo == 1) sql = "select r.*, (case r.tipo_ticket when 0 then 'TICKET DE FARMACIA' else 'TICKET DE COMECS' end) TIPO from TICKETS_FARMACIA_COMECSA r where (r.fecha_registro between @DESDE and @HASTA) and r.tipo_ticket = 0 and r.estado = 1 and (r.detalle_observacion like ('%'+@FILTRO+'%') or r.cedularuc like ('%'+@FILTRO+'%') or r.apellidos_nombres like ('%'+@FILTRO+'%')) order by r.fecha_registro;";
+            //if (tipo == 2) sql = "select r.*, (case r.tipo_ticket when 0 then 'TICKET DE FARMACIA' else 'TICKET DE COMECSA' end) TIPO from TICKETS_FARMACIA_COMECSA r where (r.fecha_registro between @DESDE and @HASTA) and r.tipo_ticket = 1 and r.estado = 1 and (r.detalle_observacion like ('%'+@FILTRO+'%') or r.cedularuc like ('%'+@FILTRO+'%') or r.apellidos_nombres like ('%'+@FILTRO+'%')) order by r.fecha_registro;";
+
+            //if (tipo == 0) sql = "select r.*, (case r.tipo_ticket when 0 then 'TICKET DE FARMACIA' when 1 then 'TICKET DE COMECSA' when 2  then 'SOLICITUD ANTICIPO' when 3 then 'TICKET DE COMISARIATO' end) TIPO from TICKETS_FARMACIA_COMECSA r where (r.fecha_registro between @DESDE and @HASTA)  and r.estado = 1 and (r.detalle_observacion like ('%'+@FILTRO+'%') or r.cedularuc like ('%'+@FILTRO+'%') or r.apellidos_nombres like ('%'+@FILTRO+'%')) order by r.fecha_registro;";
+            //if (tipo == 1) sql = "select r.*, (case r.tipo_ticket when 1 then 'TICKET DE COMECSA' end) TIPO from TICKETS_FARMACIA_COMECSA r where (r.fecha_registro between @DESDE and @HASTA) and r.tipo_ticket = 1 and r.estado = 1 and (r.detalle_observacion like ('%'+@FILTRO+'%') or r.cedularuc like ('%'+@FILTRO+'%') or r.apellidos_nombres like ('%'+@FILTRO+'%')) order by r.fecha_registro;";
+            //if (tipo == 2) sql = "select r.*, (case r.tipo_ticket when 2 then 'SOLICITUD ANTICIPO' end) TIPO from TICKETS_FARMACIA_COMECSA r where (r.fecha_registro between @DESDE and @HASTA) and r.tipo_ticket = 2 and r.estado = 1 and (r.detalle_observacion like ('%'+@FILTRO+'%') or r.cedularuc like ('%'+@FILTRO+'%') or r.apellidos_nombres like ('%'+@FILTRO+'%')) order by r.fecha_registro;";
+            //if (tipo == 3) sql = "select r.*, (case r.tipo_ticket when 3 then 'TICKET DE COMISARIATO' end) TIPO from TICKETS_FARMACIA_COMECSA r where (r.fecha_registro between @DESDE and @HASTA) and r.tipo_ticket = 3 and r.estado = 1 and (r.detalle_observacion like ('%'+@FILTRO+'%') or r.cedularuc like ('%'+@FILTRO+'%') or r.apellidos_nombres like ('%'+@FILTRO+'%')) order by r.fecha_registro;";
+
+            string sql = "SELECT r.*, " +
+                  "CASE r.tipo_ticket " +
+                  "    WHEN 0 THEN 'TICKET DE FARMACIA' " +
+                  "    WHEN 1 THEN 'TICKET DE COMECSA' " +
+                  "    WHEN 2 THEN 'SOLICITUD ANTICIPO' " +
+                  "    WHEN 3 THEN 'TICKET DE COMISARIATO' " +
+                  "END AS TIPO " +
+                  "FROM TICKETS_FARMACIA_COMECSA r " +
+                  "WHERE r.fecha_registro BETWEEN @DESDE AND @HASTA " +
+                  "AND r.estado = 1 " +
+                  "AND (r.detalle_observacion LIKE ('%' + @FILTRO + '%') OR r.cedularuc LIKE ('%' + @FILTRO + '%') OR r.apellidos_nombres LIKE ('%' + @FILTRO + '%')) ";
+            
+            if (tipo > 0 && tipo <= 4)
+            {
+                sql += "AND r.tipo_ticket = " + (tipo - 1) + " ";
+            }
+            else if (tipo == 0)
+            {
+                sql += "AND r.tipo_ticket IN (0, 1, 2, 3) ";
+            }
+
+            sql += "ORDER BY r.fecha_registro;";
+
+
+            
+
+
+
+            return ComandosSql.SeleccionarQueryWithParamsToDataTable(tipoCon, sql, false, pars);
+        }
+
+        public SqlCommand NuevoRegistroNotificacionCommands()
+        {
+            var cmd = new SqlCommand
+            {
+                CommandType = CommandType.Text,
+                CommandText = "insert into TICKETS_FARMACIA_COMECSA (id_ticket, num_ticket, fecha_registro, cedularuc, apellidos_nombres, detalle_observacion, tipo_ticket, estado) values " +
+                              "(@id_ticket, @num_ticket, @fecha_registro, @cedularuc, @apellidos_nombres, @detalle_observacion, @tipo_ticket, @estado);"
+            };
+            cmd.Parameters.AddWithValue("@id_ticket", SqlDbType.Int).Value = IdRegistro;
+            cmd.Parameters.AddWithValue("@num_ticket", SqlDbType.Int).Value = NumDocumento;
+            cmd.Parameters.AddWithValue("@fecha_registro", SqlDbType.Date).Value = FechaRegistro; 
+            cmd.Parameters.AddWithValue("@cedularuc", SqlDbType.VarChar).Value = CedulaRuc;
+            cmd.Parameters.AddWithValue("@apellidos_nombres", SqlDbType.VarChar).Value = ApellidosNombres;
+            cmd.Parameters.AddWithValue("@detalle_observacion", SqlDbType.VarChar).Value = Detalle;
+            cmd.Parameters.AddWithValue("@tipo_ticket", SqlDbType.Int).Value = Tipo;
+            cmd.Parameters.AddWithValue("@estado", SqlDbType.Int).Value = Estado;
+            return cmd;
+        }
+
+        public SqlCommand AnularRegistroNotificacion()
+        {
+            var cmd = new SqlCommand
+            {
+                CommandType = CommandType.Text,
+                CommandText = "update TICKETS_FARMACIA_COMECSA set estado=@estado where id_ticket=@id_ticket;"
+            };
+            cmd.Parameters.AddWithValue("@id_ticket", SqlDbType.Int).Value = IdRegistro;
+            cmd.Parameters.AddWithValue("@estado", SqlDbType.Int).Value = Estado;
+            return cmd;
+        } 
+    }
+}

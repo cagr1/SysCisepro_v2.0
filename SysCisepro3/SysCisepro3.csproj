@@ -1,0 +1,1295 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{52AF2206-477D-476B-8617-8E323FAE3FF8}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SysCisepro3</RootNamespace>
+    <AssemblyName>SysCisepro3</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>SysCisepro3.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\logo_c.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AForge, Version=2.2.5.0, Culture=neutral, PublicKeyToken=c1db6ff4eaa06aeb, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.2.2.5\lib\AForge.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Controls, Version=2.2.5.0, Culture=neutral, PublicKeyToken=a8ac264d1dc6b9d9, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.Controls.2.2.5\lib\AForge.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Imaging, Version=2.2.5.0, Culture=neutral, PublicKeyToken=ba8ddea9676ca48b, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.Imaging.2.2.5\lib\AForge.Imaging.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Math, Version=2.2.5.0, Culture=neutral, PublicKeyToken=abba2e25397ee8c9, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.Math.2.2.5\lib\AForge.Math.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video, Version=2.2.5.0, Culture=neutral, PublicKeyToken=cbfb6e07d173c401, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.Video.2.2.5\lib\AForge.Video.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video.DirectShow, Version=2.2.5.0, Culture=neutral, PublicKeyToken=61ea4348d43881b7, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.Video.DirectShow.2.2.5\lib\AForge.Video.DirectShow.dll</HintPath>
+    </Reference>
+    <Reference Include="ComponentFactory.Krypton.Toolkit">
+      <HintPath>..\..\..\Krypton-master\Krypton-master\Bin\ComponentFactory.Krypton.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Design, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.CrystalReports.TemplateEngine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.Enterprise.Viewing.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.ClientDoc, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.CommLayer, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.CommonControls, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.CommonObjectModel, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.Controllers, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.CubeDefModel, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.DataDefModel, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.DataSetConversion, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportAppServer.ObjectFactory, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.Prompting, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.ReportDefModel, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.XmlSerialize, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="FontAwesome.Sharp, Version=6.3.0.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
+      <HintPath>..\packages\FontAwesome.Sharp.6.3.0\lib\net472\FontAwesome.Sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialSkin, Version=2.3.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialSkin.2.2.3.1\lib\net461\MaterialSkin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.7.0.0\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Dynamic, Version=1.3.4.0, Culture=neutral, PublicKeyToken=7f709c5b713576e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\DynamicLanguageRuntime.1.3.4\lib\net452\Microsoft.Dynamic.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Primitives, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Primitives.2.2.0\lib\netstandard2.0\Microsoft.Extensions.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Net.Http.Headers, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Net.Http.Headers.2.2.0\lib\netstandard2.0\Microsoft.Net.Http.Headers.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1001\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Word, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Word.15.0.4797.1004\lib\net20\Microsoft.Office.Interop.Word.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Scripting, Version=1.3.4.0, Culture=neutral, PublicKeyToken=7f709c5b713576e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\DynamicLanguageRuntime.1.3.4\lib\net452\Microsoft.Scripting.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Scripting.Metadata, Version=1.3.4.0, Culture=neutral, PublicKeyToken=7f709c5b713576e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\DynamicLanguageRuntime.1.3.4\lib\net452\Microsoft.Scripting.Metadata.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing.Common, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Drawing.Common.7.0.0\lib\net462\System.Drawing.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing.Primitives, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Drawing.Primitives.4.3.0\lib\net45\System.Drawing.Primitives.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Runtime, Version=4.1.1.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.4.3.1\lib\net462\System.Runtime.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.InteropServices.RuntimeInformation.4.3.0\lib\net45\System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Text.Encodings.Web, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Encodings.Web.7.0.0\lib\net462\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json, Version=7.0.0.3, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Json.7.0.3\lib\net462\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WebCAM, Version=1.0.1814.37443, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\syscisepro\bin\Debug\WebCAM.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Administracion\FrmCargo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administracion\FrmCargo.Designer.cs">
+      <DependentUpon>FrmCargo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\FrmEstructuraAdministrativa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administracion\FrmEstructuraAdministrativa.Designer.cs">
+      <DependentUpon>FrmEstructuraAdministrativa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\FrmRoles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administracion\FrmRoles.Designer.cs">
+      <DependentUpon>FrmRoles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bodega\FrmReporteSitioBodega.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bodega\FrmReporteSitioBodega.Designer.cs">
+      <DependentUpon>FrmReporteSitioBodega.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contabilidad\Compras\FrmAprobacionOrdenCompra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contabilidad\Compras\FrmAprobacionOrdenCompra.Designer.cs">
+      <DependentUpon>FrmAprobacionOrdenCompra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contabilidad\Compras\FrmBuscarProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contabilidad\Compras\FrmBuscarProveedor.Designer.cs">
+      <DependentUpon>FrmBuscarProveedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contabilidad\Compras\FrmPorcentajesRetencion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contabilidad\Compras\FrmPorcentajesRetencion.Designer.cs">
+      <DependentUpon>FrmPorcentajesRetencion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contabilidad\Compras\FrmPorcentajesRetencionIva.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contabilidad\Compras\FrmPorcentajesRetencionIva.Designer.cs">
+      <DependentUpon>FrmPorcentajesRetencionIva.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contabilidad\FrmBuscarPlanCuentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contabilidad\FrmBuscarPlanCuentas.Designer.cs">
+      <DependentUpon>FrmBuscarPlanCuentas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Datos\dsCredencialPersonal.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsCredencialPersonal.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Datos\dsDetalleRol.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsDetalleRol.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Datos\dsPermisos.cs">
+      <DependentUpon>dsPermisos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Datos\dsPermisos.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsPermisos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Datos\DsSysSecurity.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DsSysSecurity.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Datos\ValidationForms.cs" />
+    <Compile Include="Datos\dsPersonalSeport.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsPersonalSeport.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FrmSplash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSplash.Designer.cs">
+      <DependentUpon>FrmSplash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventarios\FrmBodega.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventarios\FrmBodega.Designer.cs">
+      <DependentUpon>FrmBodega.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\FrmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\FrmLogin.Designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\FrmNewLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\FrmNewLogin.Designer.cs">
+      <DependentUpon>FrmNewLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\MdiParentMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\MdiParentMain.Designer.cs">
+      <DependentUpon>MdiParentMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\MdiParentMonitoreo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\MdiParentMonitoreo.Designer.cs">
+      <DependentUpon>MdiParentMonitoreo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Operaciones\FrmBuscarPuestoTrabajo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Operaciones\FrmBuscarPuestoTrabajo.Designer.cs">
+      <DependentUpon>FrmBuscarPuestoTrabajo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Operaciones\FrmDivisionGeografica.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Operaciones\FrmDivisionGeografica.Designer.cs">
+      <DependentUpon>FrmDivisionGeografica.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Operaciones\FrmOrdenRevisionTecnica.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Operaciones\FrmOrdenRevisionTecnica.Designer.cs">
+      <DependentUpon>FrmOrdenRevisionTecnica.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\crCredencialSeportpac21.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crCredencialSeportpac2.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\rptSalidaPersonal.cs">
+      <DependentUpon>rptSalidaPersonal.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\rptPlanillaPagoBasicoTodos.cs">
+      <DependentUpon>rptPlanillaPagoBasicoTodos.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\crBodegas.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crBodegas.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\crCredencial21.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crCredencial2.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\crCredencialExport21.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crCredencialExport2.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\FrmInputBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\FrmInputBox.Designer.cs">
+      <DependentUpon>FrmInputBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\FrmVisualizadorReportes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\FrmVisualizadorReportes.Designer.cs">
+      <DependentUpon>FrmVisualizadorReportes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\rptPlanillaPagoBasico.cs">
+      <DependentUpon>rptPlanillaPagoBasico.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\rptPlanillaPago.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptPlanillaPago.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\rptSolicitudPermisoMedico.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptSolicitudPermisoMedico.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\rptSolicitudVacaciones.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptSolicitudVacaciones.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TalentoHumano\FrmAgregarPersonalRolPago.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TalentoHumano\FrmAgregarPersonalRolPago.Designer.cs">
+      <DependentUpon>FrmAgregarPersonalRolPago.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TalentoHumano\FrmAspirantes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TalentoHumano\FrmAspirantes.Designer.cs">
+      <DependentUpon>FrmAspirantes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TalentoHumano\FrmBuscarAspirante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TalentoHumano\FrmBuscarAspirante.Designer.cs">
+      <DependentUpon>FrmBuscarAspirante.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TalentoHumano\FrmCuentasBancarias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TalentoHumano\FrmCuentasBancarias.Designer.cs">
+      <DependentUpon>FrmCuentasBancarias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TalentoHumano\FrmCumpleanosPersonal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TalentoHumano\FrmCumpleanosPersonal.Designer.cs">
+      <DependentUpon>FrmCumpleanosPersonal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TalentoHumano\FrmDescuentos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TalentoHumano\FrmDescuentos.Designer.cs">
+      <DependentUpon>FrmDescuentos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TalentoHumano\FrmDetalleAsistenciaRol.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TalentoHumano\FrmDetalleAsistenciaRol.Designer.cs">
+      <DependentUpon>FrmDetalleAsistenciaRol.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TalentoHumano\FrmInformesPago.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TalentoHumano\FrmInformesPago.Designer.cs">
+      <DependentUpon>FrmInformesPago.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TalentoHumano\FrmNotificarNovedades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TalentoHumano\FrmNotificarNovedades.Designer.cs">
+      <DependentUpon>FrmNotificarNovedades.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TalentoHumano\FrmPendientesVcaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TalentoHumano\FrmPendientesVcaciones.Designer.cs">
+      <DependentUpon>FrmPendientesVcaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TalentoHumano\FrmPeriodoVacaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TalentoHumano\FrmPeriodoVacaciones.Designer.cs">
+      <DependentUpon>FrmPeriodoVacaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TalentoHumano\FrmPoryectoContratacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TalentoHumano\FrmPoryectoContratacion.Designer.cs">
+      <DependentUpon>FrmPoryectoContratacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TalentoHumano\FrmReporteGeneralNomina.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TalentoHumano\FrmReporteGeneralNomina.Designer.cs">
+      <DependentUpon>FrmReporteGeneralNomina.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TalentoHumano\FrmReportePersonalGeneral.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TalentoHumano\FrmReportePersonalGeneral.Designer.cs">
+      <DependentUpon>FrmReportePersonalGeneral.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TalentoHumano\FrmDocumentos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TalentoHumano\FrmDocumentos.Designer.cs">
+      <DependentUpon>FrmDocumentos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TalentoHumano\FrmGenerarCredencial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TalentoHumano\FrmGenerarCredencial.Designer.cs">
+      <DependentUpon>FrmGenerarCredencial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TalentoHumano\FrmNotificaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TalentoHumano\FrmNotificaciones.Designer.cs">
+      <DependentUpon>FrmNotificaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TalentoHumano\FrmPersonal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TalentoHumano\FrmPersonal.Designer.cs">
+      <DependentUpon>FrmPersonal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TalentoHumano\FrmBuscarPersonal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TalentoHumano\FrmBuscarPersonal.Designer.cs">
+      <DependentUpon>FrmBuscarPersonal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TalentoHumano\FrmBuscarRolPago.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TalentoHumano\FrmBuscarRolPago.Designer.cs">
+      <DependentUpon>FrmBuscarRolPago.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TalentoHumano\FrmPermisos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TalentoHumano\FrmPermisos.Designer.cs">
+      <DependentUpon>FrmPermisos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TalentoHumano\FrmReporteVacaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TalentoHumano\FrmReporteVacaciones.Designer.cs">
+      <DependentUpon>FrmReporteVacaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TalentoHumano\FrmRolPago.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TalentoHumano\FrmRolPago.Designer.cs">
+      <DependentUpon>FrmRolPago.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TalentoHumano\FrmSalidaPersonal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TalentoHumano\FrmSalidaPersonal.Designer.cs">
+      <DependentUpon>FrmSalidaPersonal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TalentoHumano\FrmSeleccionarMotivoFechaSalida.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TalentoHumano\FrmSeleccionarMotivoFechaSalida.Designer.cs">
+      <DependentUpon>FrmSeleccionarMotivoFechaSalida.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TalentoHumano\FrmTicketsFamaciaComecsa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TalentoHumano\FrmTicketsFamaciaComecsa.Designer.cs">
+      <DependentUpon>FrmTicketsFamaciaComecsa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TalentoHumano\FrmTomarFoto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TalentoHumano\FrmTomarFoto.Designer.cs">
+      <DependentUpon>FrmTomarFoto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TalentoHumano\FrmVacaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TalentoHumano\FrmVacaciones.Designer.cs">
+      <DependentUpon>FrmVacaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TalentoHumano\FrmValidar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TalentoHumano\FrmValidar.Designer.cs">
+      <DependentUpon>FrmValidar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TalentoHumano\FrmValor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TalentoHumano\FrmValor.Designer.cs">
+      <DependentUpon>FrmValor.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Administracion\FrmCargo.resx">
+      <DependentUpon>FrmCargo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administracion\FrmEstructuraAdministrativa.resx">
+      <DependentUpon>FrmEstructuraAdministrativa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administracion\FrmRoles.resx">
+      <DependentUpon>FrmRoles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bodega\FrmReporteSitioBodega.resx">
+      <DependentUpon>FrmReporteSitioBodega.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contabilidad\Compras\FrmAprobacionOrdenCompra.resx">
+      <DependentUpon>FrmAprobacionOrdenCompra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contabilidad\Compras\FrmBuscarProveedor.resx">
+      <DependentUpon>FrmBuscarProveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contabilidad\Compras\FrmPorcentajesRetencion.resx">
+      <DependentUpon>FrmPorcentajesRetencion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contabilidad\Compras\FrmPorcentajesRetencionIva.resx">
+      <DependentUpon>FrmPorcentajesRetencionIva.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contabilidad\FrmBuscarPlanCuentas.resx">
+      <DependentUpon>FrmBuscarPlanCuentas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSplash.resx">
+      <DependentUpon>FrmSplash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventarios\FrmBodega.resx">
+      <DependentUpon>FrmBodega.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\FrmNewLogin.resx">
+      <DependentUpon>FrmNewLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\MdiParentMain.resx">
+      <DependentUpon>MdiParentMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\MdiParentMonitoreo.resx">
+      <DependentUpon>MdiParentMonitoreo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Operaciones\FrmBuscarPuestoTrabajo.resx">
+      <DependentUpon>FrmBuscarPuestoTrabajo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Operaciones\FrmDivisionGeografica.resx">
+      <DependentUpon>FrmDivisionGeografica.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Operaciones\FrmOrdenRevisionTecnica.resx">
+      <DependentUpon>FrmOrdenRevisionTecnica.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\crCredencialSeportpac2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crCredencialSeportpac21.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\rptSalidaPersonal.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptSalidaPersonal.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\rptPlanillaPagoBasicoTodos.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptPlanillaPagoBasicoTodos.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\crBodegas.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crBodegas.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\crCredencial2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crCredencial21.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\crCredencialExport2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crCredencialExport21.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\FrmInputBox.resx">
+      <DependentUpon>FrmInputBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\FrmVisualizadorReportes.resx">
+      <DependentUpon>FrmVisualizadorReportes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\rptPlanillaPagoBasico.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptPlanillaPagoBasico.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\rptPlanillaPago.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptPlanillaPago.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\rptSolicitudPermisoMedico.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptSolicitudPermisoMedico.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\rptSolicitudVacaciones.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptSolicitudVacaciones.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TalentoHumano\FrmAgregarPersonalRolPago.resx">
+      <DependentUpon>FrmAgregarPersonalRolPago.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TalentoHumano\FrmAspirantes.resx">
+      <DependentUpon>FrmAspirantes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TalentoHumano\FrmBuscarAspirante.resx">
+      <DependentUpon>FrmBuscarAspirante.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TalentoHumano\FrmCuentasBancarias.resx">
+      <DependentUpon>FrmCuentasBancarias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TalentoHumano\FrmCumpleanosPersonal.resx">
+      <DependentUpon>FrmCumpleanosPersonal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TalentoHumano\FrmDescuentos.resx">
+      <DependentUpon>FrmDescuentos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TalentoHumano\FrmDetalleAsistenciaRol.resx">
+      <DependentUpon>FrmDetalleAsistenciaRol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TalentoHumano\FrmInformesPago.resx">
+      <DependentUpon>FrmInformesPago.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TalentoHumano\FrmNotificarNovedades.resx">
+      <DependentUpon>FrmNotificarNovedades.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TalentoHumano\FrmPendientesVcaciones.resx">
+      <DependentUpon>FrmPendientesVcaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TalentoHumano\FrmPeriodoVacaciones.resx">
+      <DependentUpon>FrmPeriodoVacaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TalentoHumano\FrmPoryectoContratacion.resx">
+      <DependentUpon>FrmPoryectoContratacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TalentoHumano\FrmReporteGeneralNomina.resx">
+      <DependentUpon>FrmReporteGeneralNomina.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TalentoHumano\FrmReportePersonalGeneral.resx">
+      <DependentUpon>FrmReportePersonalGeneral.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TalentoHumano\FrmDocumentos.resx">
+      <DependentUpon>FrmDocumentos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TalentoHumano\FrmGenerarCredencial.resx">
+      <DependentUpon>FrmGenerarCredencial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TalentoHumano\FrmNotificaciones.resx">
+      <DependentUpon>FrmNotificaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TalentoHumano\FrmPersonal.resx">
+      <DependentUpon>FrmPersonal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TalentoHumano\FrmBuscarPersonal.resx">
+      <DependentUpon>FrmBuscarPersonal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TalentoHumano\FrmBuscarRolPago.resx">
+      <DependentUpon>FrmBuscarRolPago.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TalentoHumano\FrmPermisos.resx">
+      <DependentUpon>FrmPermisos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TalentoHumano\FrmReporteVacaciones.resx">
+      <DependentUpon>FrmReporteVacaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TalentoHumano\FrmRolPago.resx">
+      <DependentUpon>FrmRolPago.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TalentoHumano\FrmSalidaPersonal.resx">
+      <DependentUpon>FrmSalidaPersonal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TalentoHumano\FrmSeleccionarMotivoFechaSalida.resx">
+      <DependentUpon>FrmSeleccionarMotivoFechaSalida.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TalentoHumano\FrmTicketsFamaciaComecsa.resx">
+      <DependentUpon>FrmTicketsFamaciaComecsa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TalentoHumano\FrmTomarFoto.resx">
+      <DependentUpon>FrmTomarFoto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TalentoHumano\FrmVacaciones.resx">
+      <DependentUpon>FrmVacaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TalentoHumano\FrmValidar.resx">
+      <DependentUpon>FrmValidar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TalentoHumano\FrmValor.resx">
+      <DependentUpon>FrmValor.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Datos\dsCredencialPersonal.xsc">
+      <DependentUpon>dsCredencialPersonal.xsd</DependentUpon>
+    </None>
+    <None Include="Datos\dsCredencialPersonal.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsCredencialPersonal.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Datos\dsCredencialPersonal.xss">
+      <DependentUpon>dsCredencialPersonal.xsd</DependentUpon>
+    </None>
+    <None Include="Datos\dsDetalleRol.xsc">
+      <DependentUpon>dsDetalleRol.xsd</DependentUpon>
+    </None>
+    <None Include="Datos\dsDetalleRol.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsDetalleRol.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Datos\dsDetalleRol.xss">
+      <DependentUpon>dsDetalleRol.xsd</DependentUpon>
+    </None>
+    <None Include="Datos\dsPermisos.xsc">
+      <DependentUpon>dsPermisos.xsd</DependentUpon>
+    </None>
+    <None Include="Datos\dsPermisos.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsPermisos.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Datos\dsPermisos.xss">
+      <DependentUpon>dsPermisos.xsd</DependentUpon>
+    </None>
+    <None Include="Datos\DsSysSecurity.xsc">
+      <DependentUpon>DsSysSecurity.xsd</DependentUpon>
+    </None>
+    <None Include="Datos\DsSysSecurity.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DsSysSecurity.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Datos\DsSysSecurity.xss">
+      <DependentUpon>DsSysSecurity.xsd</DependentUpon>
+    </None>
+    <None Include="Datos\dsPersonalSeport.xsc">
+      <DependentUpon>dsPersonalSeport.xsd</DependentUpon>
+    </None>
+    <None Include="Datos\dsPersonalSeport.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsPersonalSeport.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Datos\dsPersonalSeport.xss">
+      <DependentUpon>dsPersonalSeport.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\casilla_verifica.png" />
+    <None Include="Resources\lista_tareas.png" />
+    <None Include="Resources\para_hacer.png" />
+    <None Include="Resources\document_search.png" />
+    <None Include="Resources\document_ok.png" />
+    <None Include="Resources\add_document.png" />
+    <None Include="Resources\refresh.png" />
+    <None Include="Resources\logo_s.ico" />
+    <None Include="Resources\logo_c.ico" />
+    <None Include="Resources\Roboto-Black.ttf" />
+    <None Include="Resources\Roboto-BlackItalic.ttf" />
+    <None Include="Resources\Roboto-Bold.ttf" />
+    <None Include="Resources\Roboto-BoldItalic.ttf" />
+    <None Include="Resources\Roboto-Italic.ttf" />
+    <None Include="Resources\Roboto-Light.ttf" />
+    <None Include="Resources\Roboto-LightItalic.ttf" />
+    <None Include="Resources\Roboto-Medium.ttf" />
+    <None Include="Resources\Roboto-MediumItalic.ttf" />
+    <None Include="Resources\Roboto-Regular.ttf" />
+    <None Include="Resources\Roboto-Thin.ttf" />
+    <None Include="Resources\Roboto-ThinItalic.ttf" />
+    <None Include="Resources\SeportPac_Wall.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login.png" />
+    <None Include="Resources\Cisepro_Wall.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ClassLibrarySecurity\ClassLibraryCisepro3.csproj">
+      <Project>{5DF081DF-9FD5-4362-9FDA-2B8F91BB5DFF}</Project>
+      <Name>ClassLibraryCisepro3</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\syscisepro\syscisepro.vbproj">
+      <Project>{155DEEA4-726B-4FE4-B2E2-B4ABC7606BEB}</Project>
+      <Name>syscisepro</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\herramientas_admin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon-addressbook.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon-dollar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon-money.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon-inventory.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon-people.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cisepro_wall_min.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SeportPac_wall_min.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\default.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\erri.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\oki.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder-applications-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\money-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder-documents-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sri.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\security-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\preferences-system-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-identity-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendar-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calculator-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\notepad-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ok.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\remove.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BuscarRegistro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EliminarRegistro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NuevoRegistro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ModificarRegistro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GuardarRegistro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\report.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\excel-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\visible-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\invisible-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\select-column-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\preview-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\next-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\row-delete-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\money-delete-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\generate-tables-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\retener-list-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\informe-bullets-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logbp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logbm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\items_adm.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\basket_edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\page_edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\script_edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\script.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cog_edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cog_error.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\application_home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\application_add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\application_edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\application_go.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\application_form_delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tag_green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\application_link.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\car.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\money.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\briefcase.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sol_caja.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\book_open.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\basket.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\coins.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\group.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\application_view_detail.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\application_get.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\application_put.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\application_side_boxes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\application_form_add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\card-index-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\debit-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\people-add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cake.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\world_edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\location.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chart_organisation_add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\database_table.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\comments_delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inventory-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\list-details-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\network-checklist-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\invoice-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tool-box-preferences-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\deskotp-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="AxAcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="Shell32">
+      <Guid>{50A7E9B0-70EF-11D1-B75A-00A0C90564FE}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\addu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendapermi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chanu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\quir.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\remu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\talki.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cen1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calculator_add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calculator_delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calculator_edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calculator_error.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calculator_link.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\printer_empty.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo_a.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cahange_system.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Diseño sin título %281%29.png" />
+    <None Include="Resources\Image1.png" />
+    <None Include="Resources\Diseño sin título %281%291.png" />
+    <None Include="Resources\LICENSE.txt" />
+    <None Include="Resources\Roboto.bmp" />
+    <None Include="bin\Debug\cisepro.png" />
+    <Content Include="Resources\charticon.png" />
+    <None Include="Resources\tick.png" />
+    <None Include="Resources\user-group-icon.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

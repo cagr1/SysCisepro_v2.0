@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSetBalanceFinal" targetNamespace="http://tempuri.org/DataSetBalanceFinal.xsd" xmlns:mstns="http://tempuri.org/DataSetBalanceFinal.xsd" xmlns="http://tempuri.org/DataSetBalanceFinal.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSetBalanceFinal" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSetBalanceFinal" msprop:Generator_UserDSName="DataSetBalanceFinal">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="REPORTE_BALANCE_FINAL" msprop:Generator_TableClassName="REPORTE_BALANCE_FINALDataTable" msprop:Generator_TableVarName="tableREPORTE_BALANCE_FINAL" msprop:Generator_TablePropName="REPORTE_BALANCE_FINAL" msprop:Generator_RowDeletingName="REPORTE_BALANCE_FINALRowDeleting" msprop:Generator_RowChangingName="REPORTE_BALANCE_FINALRowChanging" msprop:Generator_RowEvHandlerName="REPORTE_BALANCE_FINALRowChangeEventHandler" msprop:Generator_RowDeletedName="REPORTE_BALANCE_FINALRowDeleted" msprop:Generator_UserTableName="REPORTE_BALANCE_FINAL" msprop:Generator_RowChangedName="REPORTE_BALANCE_FINALRowChanged" msprop:Generator_RowEvArgName="REPORTE_BALANCE_FINALRowChangeEvent" msprop:Generator_RowClassName="REPORTE_BALANCE_FINALRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="DETALLE" msprop:Generator_ColumnVarNameInTable="columnDETALLE" msprop:Generator_ColumnPropNameInRow="DETALLE" msprop:Generator_ColumnPropNameInTable="DETALLEColumn" msprop:Generator_UserColumnName="DETALLE" type="xs:string" minOccurs="0" />
+              <xs:element name="TOTAL" msprop:Generator_ColumnVarNameInTable="columnTOTAL" msprop:Generator_ColumnPropNameInRow="TOTAL" msprop:Generator_ColumnPropNameInTable="TOTALColumn" msprop:Generator_UserColumnName="TOTAL" type="xs:double" minOccurs="0" />
+              <xs:element name="B" msprop:Generator_ColumnVarNameInTable="columnB" msprop:Generator_ColumnPropNameInRow="B" msprop:Generator_ColumnPropNameInTable="BColumn" msprop:Generator_UserColumnName="B" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsVistaCodigosActivosFijos" targetNamespace="http://tempuri.org/dsVistaCodigosActivosFijos.xsd" xmlns:mstns="http://tempuri.org/dsVistaCodigosActivosFijos.xsd" xmlns="http://tempuri.org/dsVistaCodigosActivosFijos.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="SYSCISEPROConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="SYSCISEPROConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.syscisepro.My.MySettings.GlobalReference.Default.SYSCISEPROConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="CODIGOS_ACTIVOSTableAdapter" GeneratorDataComponentClassName="CODIGOS_ACTIVOSTableAdapter" Name="CODIGOS_ACTIVOS" UserDataComponentName="CODIGOS_ACTIVOSTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="SYSCISEPROConnectionString (MySettings)" DbObjectName="SYSCISEPRO.dbo.CODIGOS_ACTIVOS" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT ID_CATEGORIA, [CODIGO CATEGORIA], CATEGORIA, ESTADO_CATEGORIA, ID_GRUPO, [CODIGO GRUPO], GRUPO, ESTADO_GRUPO, [CODIGO SUBGRUPO], SUBGRUPO, ESTADO_SUB_GRUPO, [CODIGO SECUENCIAL], SECUENCIAL, ESTADO_SECUENCIAL, DEPRECIABLE FROM dbo.CODIGOS_ACTIVOS</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ID_CATEGORIA" DataSetColumn="ID_CATEGORIA" />
+              <Mapping SourceColumn="CODIGO CATEGORIA" DataSetColumn="CODIGO CATEGORIA" />
+              <Mapping SourceColumn="CATEGORIA" DataSetColumn="CATEGORIA" />
+              <Mapping SourceColumn="ESTADO_CATEGORIA" DataSetColumn="ESTADO_CATEGORIA" />
+              <Mapping SourceColumn="ID_GRUPO" DataSetColumn="ID_GRUPO" />
+              <Mapping SourceColumn="CODIGO GRUPO" DataSetColumn="CODIGO GRUPO" />
+              <Mapping SourceColumn="GRUPO" DataSetColumn="GRUPO" />
+              <Mapping SourceColumn="ESTADO_GRUPO" DataSetColumn="ESTADO_GRUPO" />
+              <Mapping SourceColumn="CODIGO SUBGRUPO" DataSetColumn="CODIGO SUBGRUPO" />
+              <Mapping SourceColumn="SUBGRUPO" DataSetColumn="SUBGRUPO" />
+              <Mapping SourceColumn="ESTADO_SUB_GRUPO" DataSetColumn="ESTADO_SUB_GRUPO" />
+              <Mapping SourceColumn="CODIGO SECUENCIAL" DataSetColumn="CODIGO SECUENCIAL" />
+              <Mapping SourceColumn="SECUENCIAL" DataSetColumn="SECUENCIAL" />
+              <Mapping SourceColumn="ESTADO_SECUENCIAL" DataSetColumn="ESTADO_SECUENCIAL" />
+              <Mapping SourceColumn="DEPRECIABLE" DataSetColumn="DEPRECIABLE" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsVistaCodigosActivosFijos" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsVistaCodigosActivosFijos" msprop:Generator_UserDSName="dsVistaCodigosActivosFijos">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="CODIGOS_ACTIVOS" msprop:Generator_TableClassName="CODIGOS_ACTIVOSDataTable" msprop:Generator_TableVarName="tableCODIGOS_ACTIVOS" msprop:Generator_RowChangedName="CODIGOS_ACTIVOSRowChanged" msprop:Generator_TablePropName="CODIGOS_ACTIVOS" msprop:Generator_RowDeletingName="CODIGOS_ACTIVOSRowDeleting" msprop:Generator_RowChangingName="CODIGOS_ACTIVOSRowChanging" msprop:Generator_RowEvHandlerName="CODIGOS_ACTIVOSRowChangeEventHandler" msprop:Generator_RowDeletedName="CODIGOS_ACTIVOSRowDeleted" msprop:Generator_RowClassName="CODIGOS_ACTIVOSRow" msprop:Generator_UserTableName="CODIGOS_ACTIVOS" msprop:Generator_RowEvArgName="CODIGOS_ACTIVOSRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID_CATEGORIA" msprop:Generator_ColumnVarNameInTable="columnID_CATEGORIA" msprop:Generator_ColumnPropNameInRow="ID_CATEGORIA" msprop:Generator_ColumnPropNameInTable="ID_CATEGORIAColumn" msprop:Generator_UserColumnName="ID_CATEGORIA" type="xs:int" />
+              <xs:element name="CODIGO_x0020_CATEGORIA" msprop:Generator_ColumnVarNameInTable="columnCODIGO_CATEGORIA" msprop:Generator_ColumnPropNameInRow="CODIGO_CATEGORIA" msprop:Generator_ColumnPropNameInTable="CODIGO_CATEGORIAColumn" msprop:Generator_UserColumnName="CODIGO CATEGORIA" type="xs:int" />
+              <xs:element name="CATEGORIA" msprop:Generator_ColumnVarNameInTable="columnCATEGORIA" msprop:Generator_ColumnPropNameInRow="CATEGORIA" msprop:Generator_ColumnPropNameInTable="CATEGORIAColumn" msprop:Generator_UserColumnName="CATEGORIA">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ESTADO_CATEGORIA" msprop:Generator_ColumnVarNameInTable="columnESTADO_CATEGORIA" msprop:Generator_ColumnPropNameInRow="ESTADO_CATEGORIA" msprop:Generator_ColumnPropNameInTable="ESTADO_CATEGORIAColumn" msprop:Generator_UserColumnName="ESTADO_CATEGORIA" type="xs:int" />
+              <xs:element name="ID_GRUPO" msprop:Generator_ColumnVarNameInTable="columnID_GRUPO" msprop:Generator_ColumnPropNameInRow="ID_GRUPO" msprop:Generator_ColumnPropNameInTable="ID_GRUPOColumn" msprop:Generator_UserColumnName="ID_GRUPO" type="xs:int" />
+              <xs:element name="CODIGO_x0020_GRUPO" msprop:Generator_ColumnVarNameInTable="columnCODIGO_GRUPO" msprop:Generator_ColumnPropNameInRow="CODIGO_GRUPO" msprop:Generator_ColumnPropNameInTable="CODIGO_GRUPOColumn" msprop:Generator_UserColumnName="CODIGO GRUPO" type="xs:int" />
+              <xs:element name="GRUPO" msprop:Generator_ColumnVarNameInTable="columnGRUPO" msprop:Generator_ColumnPropNameInRow="GRUPO" msprop:Generator_ColumnPropNameInTable="GRUPOColumn" msprop:Generator_UserColumnName="GRUPO">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ESTADO_GRUPO" msprop:Generator_ColumnVarNameInTable="columnESTADO_GRUPO" msprop:Generator_ColumnPropNameInRow="ESTADO_GRUPO" msprop:Generator_ColumnPropNameInTable="ESTADO_GRUPOColumn" msprop:Generator_UserColumnName="ESTADO_GRUPO" type="xs:int" />
+              <xs:element name="CODIGO_x0020_SUBGRUPO" msprop:Generator_ColumnVarNameInTable="columnCODIGO_SUBGRUPO" msprop:Generator_ColumnPropNameInRow="CODIGO_SUBGRUPO" msprop:Generator_ColumnPropNameInTable="CODIGO_SUBGRUPOColumn" msprop:Generator_UserColumnName="CODIGO SUBGRUPO" type="xs:int" />
+              <xs:element name="SUBGRUPO" msprop:Generator_ColumnVarNameInTable="columnSUBGRUPO" msprop:Generator_ColumnPropNameInRow="SUBGRUPO" msprop:Generator_ColumnPropNameInTable="SUBGRUPOColumn" msprop:Generator_UserColumnName="SUBGRUPO">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ESTADO_SUB_GRUPO" msprop:Generator_ColumnVarNameInTable="columnESTADO_SUB_GRUPO" msprop:Generator_ColumnPropNameInRow="ESTADO_SUB_GRUPO" msprop:Generator_ColumnPropNameInTable="ESTADO_SUB_GRUPOColumn" msprop:Generator_UserColumnName="ESTADO_SUB_GRUPO" type="xs:int" />
+              <xs:element name="CODIGO_x0020_SECUENCIAL" msprop:Generator_ColumnVarNameInTable="columnCODIGO_SECUENCIAL" msprop:Generator_ColumnPropNameInRow="CODIGO_SECUENCIAL" msprop:Generator_ColumnPropNameInTable="CODIGO_SECUENCIALColumn" msprop:Generator_UserColumnName="CODIGO SECUENCIAL" type="xs:int" />
+              <xs:element name="SECUENCIAL" msprop:Generator_ColumnVarNameInTable="columnSECUENCIAL" msprop:Generator_ColumnPropNameInRow="SECUENCIAL" msprop:Generator_ColumnPropNameInTable="SECUENCIALColumn" msprop:Generator_UserColumnName="SECUENCIAL">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ESTADO_SECUENCIAL" msprop:Generator_ColumnVarNameInTable="columnESTADO_SECUENCIAL" msprop:Generator_ColumnPropNameInRow="ESTADO_SECUENCIAL" msprop:Generator_ColumnPropNameInTable="ESTADO_SECUENCIALColumn" msprop:Generator_UserColumnName="ESTADO_SECUENCIAL" type="xs:int" />
+              <xs:element name="DEPRECIABLE" msprop:Generator_ColumnVarNameInTable="columnDEPRECIABLE" msprop:Generator_ColumnPropNameInRow="DEPRECIABLE" msprop:Generator_ColumnPropNameInTable="DEPRECIABLEColumn" msprop:Generator_UserColumnName="DEPRECIABLE">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

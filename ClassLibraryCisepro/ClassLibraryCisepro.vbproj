@@ -1,0 +1,318 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>
+    </SchemaVersion>
+    <ProjectGuid>{8DF0F26E-420A-42E1-8E49-CEC37B2BDD98}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>ClassLibraryCisepro</RootNamespace>
+    <AssemblyName>ClassLibraryCisepro</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>Windows</MyType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>ClassLibraryCisepro.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>ClassLibraryCisepro.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DocumentationFile>ClassLibraryCisepro.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\ClassLibraryCisepro.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.vb</CodeAnalysisModuleSuppressionsFile>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DocumentationFile>ClassLibraryCisepro.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\ClassLibraryCisepro.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.vb</CodeAnalysisModuleSuppressionsFile>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ACTIVOS FIJOS\DEPRECIACIONES\ClassDepreciaciones.vb" />
+    <Compile Include="ACTIVOS FIJOS\DEPRECIACIONES\ClassDetalleDepreciaciones.vb" />
+    <Compile Include="CONTABILIDAD\BANCOS\ClassBancos.vb" />
+    <Compile Include="CONTABILIDAD\BANCOS\ClassBancosCobros.vb" />
+    <Compile Include="CONTABILIDAD\BANCOS\ClassChequesEmitidosCXP.vb" />
+    <Compile Include="CONTABILIDAD\BANCOS\ClassChequesRecibidosCXC.vb" />
+    <Compile Include="CONTABILIDAD\BANCOS\ClassCompEgresoPagosCompCompra.vb" />
+    <Compile Include="CONTABILIDAD\BANCOS\ClassComprobanteEgresoBanco.vb" />
+    <Compile Include="CONTABILIDAD\BANCOS\ClassComprobanteIngresoBanco.vb" />
+    <Compile Include="CONTABILIDAD\BANCOS\ClassDetallePlanillaCobrosPagos.vb" />
+    <Compile Include="CONTABILIDAD\BANCOS\ClassNumeroRegistroAsientoComprobanteEgreso.vb" />
+    <Compile Include="CONTABILIDAD\BANCOS\ClassNumeroRegistroAsientoComprobanteIngreso.vb" />
+    <Compile Include="CONTABILIDAD\BANCOS\ClassPlanillaCobrosPagos.vb" />
+    <Compile Include="CONTABILIDAD\COMPRAS\COMPROBANTES COMPRA\ClassConceptosComprobanteIngresoBancos.vb" />
+    <Compile Include="CONTABILIDAD\BANCOS\ClassCuentasBancos.vb" />
+    <Compile Include="CONTABILIDAD\COMPRAS\COMPROBANTES COMPRA\ClassComprobantesCompra.vb" />
+    <Compile Include="CONTABILIDAD\COMPRAS\COMPROBANTES COMPRA\ClassDetalleLiquidacionCompra.vb" />
+    <Compile Include="CONTABILIDAD\COMPRAS\COMPROBANTES COMPRA\ClassNotaCredito.vb" />
+    <Compile Include="CONTABILIDAD\COMPRAS\COMPROBANTES COMPRA\ClassNumeroRegistroAsientoComprobanteCompra.vb" />
+    <Compile Include="CONTABILIDAD\COMPRAS\COMPROBANTES COMPRA\ClassPagosComprobantesCompra.vb" />
+    <Compile Include="CONTABILIDAD\COMPRAS\COMPROBANTES COMPRA\ClassDetalleImpuesto.vb" />
+    <Compile Include="CONTABILIDAD\COMPRAS\ORDEN DE COMPRA\ClassDetalleOrdenCompra.vb" />
+    <Compile Include="CONTABILIDAD\COMPRAS\ORDEN DE COMPRA\ClassOrdenCompra.vb" />
+    <Compile Include="CONTABILIDAD\COMPRAS\PROVEEDORES\ClassCalificacionProveedores.vb" />
+    <Compile Include="CONTABILIDAD\COMPRAS\PROVEEDORES\ClassContactosProveedorCalificado.vb" />
+    <Compile Include="CONTABILIDAD\COMPRAS\PROVEEDORES\ClassDetalleProveedorItem.vb" />
+    <Compile Include="CONTABILIDAD\COMPRAS\PROVEEDORES\ClassEvaluacionProveedoreServicios.vb" />
+    <Compile Include="CONTABILIDAD\COMPRAS\PROVEEDORES\ClassEvaluacionProveedorMateriales.vb" />
+    <Compile Include="CONTABILIDAD\COMPRAS\PROVEEDORES\ClassProveedorCalificado.vb" />
+    <Compile Include="CONTABILIDAD\COMPRAS\PROVEEDORES\ClassProveedores.vb" />
+    <Compile Include="CONTABILIDAD\COMPRAS\REQUISICIONES\ClassDetalleRequisicionProductoServicio.vb" />
+    <Compile Include="CONTABILIDAD\COMPRAS\REQUISICIONES\ClassRequisicionProductoServicio.vb" />
+    <Compile Include="CONTABILIDAD\COMPROBANTES ELECTRONICOS\ClassDocumentosElectronicos.vb" />
+    <Compile Include="CONTABILIDAD\COMPROBANTES RETENCION\ClassComprobantesRetencion.vb" />
+    <Compile Include="CONTABILIDAD\COMPROBANTES RETENCION\ClassComprobantesRetencionVenta.vb" />
+    <Compile Include="CONTABILIDAD\COMPROBANTES RETENCION\ClassDetalleComprobantesRetencion.vb" />
+    <Compile Include="CONTABILIDAD\COMPROBANTES RETENCION\ClassDetalleComprobantesRetencionVenta.vb" />
+    <Compile Include="CONTABILIDAD\COMPROBANTES RETENCION\ClassDetalleRetencionPlanCuentas.vb" />
+    <Compile Include="CONTABILIDAD\CUENTAS POR COBRAR\ClassCuentasPorCobrar.vb" />
+    <Compile Include="CONTABILIDAD\CUENTAS POR PAGAR\ClassCuentasPorPagar.vb" />
+    <Compile Include="CONTABILIDAD\DOCUMENTOS NO DEDUCIBLES\ClassDocumentoNoDeducible.vb" />
+    <Compile Include="CONTABILIDAD\LIBRO DIARIO\ClassAjustarAsientosLibroDiario.vb" />
+    <Compile Include="CONTABILIDAD\LIBRO DIARIO\ClassAsientosLibroDiario.vb" />
+    <Compile Include="CONTABILIDAD\LIBRO DIARIO\ClassLibroDiario.vb" />
+    <Compile Include="CONTABILIDAD\LIBRO DIARIO\ClassNumeroRegistroAsiento.vb" />
+    <Compile Include="CONTABILIDAD\MAYORIZACION\ClassDetalleMayores.vb" />
+    <Compile Include="CONTABILIDAD\MAYORIZACION\ClassMayorGeneral.vb" />
+    <Compile Include="CONTABILIDAD\PERDIDAS Y GANANCIAS\ClassPerdidasYGanancia.vb" />
+    <Compile Include="CONTABILIDAD\RETENCIONES EMITIDAS\ClassConceptosPago.vb" />
+    <Compile Include="CONTABILIDAD\RETENCIONES EMITIDAS\ClassContribuyenteRetenido.vb" />
+    <Compile Include="CONTABILIDAD\RETENCIONES EMITIDAS\ClassImpuestos.vb" />
+    <Compile Include="CONTABILIDAD\RETENCIONES EMITIDAS\ClassPorcentajes.vb" />
+    <Compile Include="CONTABILIDAD\SRI\ClassAnexoTransaccional.vb" />
+    <Compile Include="CONTABILIDAD\SRI\ClassATS.vb" />
+    <Compile Include="CONTABILIDAD\SRI\ClassInformacionTributaria.vb" />
+    <Compile Include="CONTABILIDAD\VENTAS\ClassClienteGeneral.vb" />
+    <Compile Include="CONTABILIDAD\VENTAS\ClassConceptosFacturaVenta.vb" />
+    <Compile Include="CONTABILIDAD\VENTAS\ClassContratoCliente.vb" />
+    <Compile Include="CONTABILIDAD\VENTAS\ClassConvenioClienteDebito.vb" />
+    <Compile Include="CONTABILIDAD\VENTAS\ClassDetalle.vb" />
+    <Compile Include="CONTABILIDAD\VENTAS\ClassDetalleFacturaVenta.vb" />
+    <Compile Include="CONTABILIDAD\VENTAS\ClassDireccionesFacturacion.vb" />
+    <Compile Include="CONTABILIDAD\VENTAS\ClassFacturaSecuenciales.vb" />
+    <Compile Include="CONTABILIDAD\VENTAS\ClassFacturaVenta.vb" />
+    <Compile Include="CONTABILIDAD\VENTAS\ClassFormasPago.vb" />
+    <Compile Include="CONTABILIDAD\VENTAS\ClassNumeroRegistroAsientoFacturaVenta.vb" />
+    <Compile Include="CONTABILIDAD\VENTAS\ClassNumeroRegistroAsientoNotaCreditoVenta.vb" />
+    <Compile Include="CONTABILIDAD\VENTAS\ClassPagosFacturaVenta.vb" />
+    <Compile Include="DIVISION GEOGRÁFICA\ClassPaises.vb" />
+    <Compile Include="ENUMS\Enums.vb" />
+    <Compile Include="FONDOS\FONDO ROTATIVO\ClassAuxiliarConceptos.vb" />
+    <Compile Include="FONDOS\FONDO ROTATIVO\ClassAuxiliarFondoRotativo.vb" />
+    <Compile Include="FONDOS\FONDO ROTATIVO\ClassControlCombustible.vb" />
+    <Compile Include="FONDOS\FONDO ROTATIVO\ClassFondoRotativo.vb" />
+    <Compile Include="FONDOS\FONDO ROTATIVO\ClassGastosFondoRotativo.vb" />
+    <Compile Include="FONDOS\FONDO ROTATIVO\ClassLiquidacionFondoRotativo.vb" />
+    <Compile Include="FONDOS\FONDO ROTATIVO\ClassLlegadaVehiculosControlCombustible.vb" />
+    <Compile Include="FONDOS\FONDO ROTATIVO\ClassResponsableAutorizacionFondoRotativo.vb" />
+    <Compile Include="FONDOS\FONDO ROTATIVO\ClassSalidaVehiculoControlcombustible.vb" />
+    <Compile Include="FONDOS\FONDO ROTATIVO\ClassSolicitudFondoRotativo.vb" />
+    <Compile Include="INVENTARIOS\BODEGA\ClassBodega.vb" />
+    <Compile Include="CONTABILIDAD\CENTRO DE COSTOS\ClassCentroCosto.vb" />
+    <Compile Include="DIVISION GEOGRÁFICA\ClassSitiosTrabajo.vb" />
+    <Compile Include="FONDOS\CAJA CHICA\ClassAuxiliarCajaChica.vb" />
+    <Compile Include="FONDOS\CAJA CHICA\ClassCajaChica.vb" />
+    <Compile Include="FONDOS\CAJA CHICA\ClassGastosCajaChica.vb" />
+    <Compile Include="ACTIVOS FIJOS\MODULOS DE ACTIVOS FIJOS\ClassActivoFijo.vb" />
+    <Compile Include="ACTIVOS FIJOS\MODULOS DE ACTIVOS FIJOS\ClassActivoFijoBajas.vb" />
+    <Compile Include="ACTIVOS FIJOS\MODULOS DE ACTIVOS FIJOS\ClassActivoFijoTransferencias.vb" />
+    <Compile Include="ACTIVOS FIJOS\MODULOS DE ACTIVOS FIJOS\ClassRotacionActivos.vb" />
+    <Compile Include="ACTIVOS FIJOS\TIPOS DE ACTIVOS\ClassArmas.vb" />
+    <Compile Include="ACTIVOS FIJOS\TIPOS DE ACTIVOS\ClassCamarasSeguridad.vb" />
+    <Compile Include="ACTIVOS FIJOS\TIPOS DE ACTIVOS\ClassChalecos.vb" />
+    <Compile Include="INVENTARIOS\COMPROBANTES\ClassComprobanteEgresoBodega.vb" />
+    <Compile Include="INVENTARIOS\COMPROBANTES\ClassComprobanteIngresoBodego.vb" />
+    <Compile Include="INVENTARIOS\COMPROBANTES\ClassDetalleBodegaSitio.vb" />
+    <Compile Include="INVENTARIOS\COMPROBANTES\ClassDetalleComprobanteIngreso.vb" />
+    <Compile Include="INVENTARIOS\COMPROBANTES\ClassDetalleComprobanteEgreso.vb" />
+    <Compile Include="INVENTARIOS\CONCEPTOS\ClassConceptosInventarios.vb" />
+    <Compile Include="INVENTARIOS\KARDEX\ClassDetalleKardex.vb" />
+    <Compile Include="INVENTARIOS\KARDEX\ClassKardex.vb" />
+    <Compile Include="INVENTARIOS\PARAMETROS\ClassColor.vb" />
+    <Compile Include="ACTIVOS FIJOS\MODULOS DE ACTIVOS FIJOS\ClassDetalleTransferencias.vb" />
+    <Compile Include="ACTIVOS FIJOS\TIPOS DE ACTIVOS\ClassEquipoComputo.vb" />
+    <Compile Include="ACTIVOS FIJOS\TIPOS DE ACTIVOS\ClassEquiposAmbientacion.vb" />
+    <Compile Include="ACTIVOS FIJOS\TIPOS DE ACTIVOS\ClassEquiposCocina.vb" />
+    <Compile Include="ACTIVOS FIJOS\TIPOS DE ACTIVOS\ClassEquiposComunicacion.vb" />
+    <Compile Include="ACTIVOS FIJOS\TIPOS DE ACTIVOS\ClassEquiposOficina.vb" />
+    <Compile Include="ACTIVOS FIJOS\TIPOS DE ACTIVOS\ClassEquiposSeguridad.vb" />
+    <Compile Include="ACTIVOS FIJOS\TIPOS DE ACTIVOS\ClassGeneradores.vb" />
+    <Compile Include="ACTIVOS FIJOS\TIPOS DE ACTIVOS\ClassLibrosColecciones.vb" />
+    <Compile Include="ACTIVOS FIJOS\MODULOS DE ACTIVOS FIJOS\ClassActivoFijoMantenimiento.vb" />
+    <Compile Include="INVENTARIOS\PARAMETROS\ClassMarca.vb" />
+    <Compile Include="INVENTARIOS\PARAMETROS\ClassMaterial.vb" />
+    <Compile Include="INVENTARIOS\PARAMETROS\ClassModelo.vb" />
+    <Compile Include="ACTIVOS FIJOS\TIPOS DE ACTIVOS\ClassMueblesOficina.vb" />
+    <Compile Include="ACTIVOS FIJOS\TIPOS DE ACTIVOS\ClassRadios.vb" />
+    <Compile Include="ACTIVOS FIJOS\TIPOS DE ACTIVOS\ClassSoftware.vb" />
+    <Compile Include="ACTIVOS FIJOS\TIPOS DE ACTIVOS\ClassTerreno.vb" />
+    <Compile Include="ACTIVOS FIJOS\TIPOS DE ACTIVOS\ClassVehiculo.vb" />
+    <Compile Include="CONTABILIDAD\BANCOS\AUDITORIA\ClassAuditoriaGeneral.vb" />
+    <Compile Include="CARGOS\ClassCargo.vb" />
+    <Compile Include="ESTRUCTURA EMPRESA\ClassGerenciasGeneral.vb" />
+    <Compile Include="ESTRUCTURA EMPRESA\ClassEmpresa.vb" />
+    <Compile Include="ESTRUCTURA EMPRESA\ClassSucursal.vb" />
+    <Compile Include="ESTRUCTURA EMPRESA\ClassArea.vb" />
+    <Compile Include="DIVISION GEOGRÁFICA\ClassCiudades.vb" />
+    <Compile Include="DIVISION GEOGRÁFICA\ClassParroquias.vb" />
+    <Compile Include="DIVISION GEOGRÁFICA\ClassProvincias.vb" />
+    <Compile Include="FONDOS\CAJA CHICA\ClassLiquidacionCajaChica.vb" />
+    <Compile Include="FONDOS\CAJA CHICA\ClassResponsableAutorizacionesCCH.vb" />
+    <Compile Include="FONDOS\CAJA CHICA\ClassSolicitudCajaChica.vb" />
+    <Compile Include="INVENTARIOS\ITEMS\ClassCategoriaItem.vb" />
+    <Compile Include="INVENTARIOS\ITEMS\ClassGrupoItem.vb" />
+    <Compile Include="INVENTARIOS\ITEMS\ClassSecuencialItem.vb" />
+    <Compile Include="INVENTARIOS\ITEMS\ClassSubGrupoItem.vb" />
+    <Compile Include="INVENTARIOS\UBICACIONES\ClassCategoriaUbicacionItem.vb" />
+    <Compile Include="INVENTARIOS\UBICACIONES\ClassGrupoUbicacionItem.vb" />
+    <Compile Include="INVENTARIOS\UBICACIONES\ClassSubGrupoUbicacionItem.vb" />
+    <Compile Include="INVENTARIOS\UNIFORMES\ClassControlUniformes.vb" />
+    <Compile Include="INVENTARIOS\UNIFORMES\ClassDetalleUniforme.vb" />
+    <Compile Include="INVENTARIOS\UNIFORMES\ClassEntregaUniformes.vb" />
+    <Compile Include="JERARQUIAS DE ACTIVOS\ClassCategoria.vb" />
+    <Compile Include="JERARQUIAS DE ACTIVOS\ClassGrupo.vb" />
+    <Compile Include="CONTABILIDAD\PLAN DE CUENTAS\ClassPlanDeCuentas.vb" />
+    <Compile Include="OPERACIONES\ClassDetallesProgramacion.vb" />
+    <Compile Include="OPERACIONES\ClassHorariosOperacion.vb" />
+    <Compile Include="OPERACIONES\ClassProgramacionOperaciones.vb" />
+    <Compile Include="PROCESOSSQL\ComandosSql.vb" />
+    <Compile Include="PROCESOSSQL\Conexion.vb" />
+    <Compile Include="RUBROS-PARAMETROS\ClassParametroDocumentos.vb" />
+    <Compile Include="RUBROS-PARAMETROS\ClassRubro.vb" />
+    <Compile Include="TALENTO HUMANO\ClassAnticiposPrestamos.vb" />
+    <Compile Include="TALENTO HUMANO\ClassAsignacionPersonal.vb" />
+    <Compile Include="TALENTO HUMANO\ClassDescuentosPersonal.vb" />
+    <Compile Include="TALENTO HUMANO\ClassHistorialLaboral.vb" />
+    <Compile Include="TALENTO HUMANO\ClassPersonal.vb" />
+    <Compile Include="JERARQUIAS DE ACTIVOS\ClassSecuencial.vb" />
+    <Compile Include="JERARQUIAS DE ACTIVOS\ClassSubGrupo.vb" />
+    <Compile Include="REPORTES\ClassReporteCodigoActivos.vb" />
+    <Compile Include="INVENTARIOS\PARAMETROS\ClassUnidadMedida.vb" />
+    <Compile Include="TALENTO HUMANO\ClassRegistroSancionPersonal.vb" />
+    <Compile Include="TALENTO HUMANO\ClassSanciones.vb" />
+    <Compile Include="USUARIOS DEL SISTEMA\ClassUsuarioGeneral.vb" />
+    <Compile Include="VALIDACIONES\ClassBeep.vb" />
+    <Compile Include="VALIDACIONES\ClassGenerarSerie.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="VALIDACIONES\ClassValidaciones.vb" />
+    <Compile Include="VALIDACIONES\ClassFoto.vb" />
+    <Compile Include="VALIDACIONES\VEHICULOS\ClassHistorialVehiculos.vb" />
+    <Compile Include="VALIDACIONES\VEHICULOS\ClassVehiculosOtros.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

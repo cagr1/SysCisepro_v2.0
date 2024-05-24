@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsPermisos" targetNamespace="http://tempuri.org/dsPermisos.xsd" xmlns:mstns="http://tempuri.org/dsPermisos.xsd" xmlns="http://tempuri.org/dsPermisos.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="SYSCISEPROConnectionString1" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="SYSCISEPROConnectionString1 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.SysCisepro3.Properties.Settings.GlobalReference.Default.SYSCISEPROConnectionString1" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsPermisos" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="dsPermisos" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsPermisos">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dtregistroPermisoPersonal" msprop:Generator_RowClassName="dtregistroPermisoPersonalRow" msprop:Generator_RowEvHandlerName="dtregistroPermisoPersonalRowChangeEventHandler" msprop:Generator_RowDeletedName="dtregistroPermisoPersonalRowDeleted" msprop:Generator_RowDeletingName="dtregistroPermisoPersonalRowDeleting" msprop:Generator_RowEvArgName="dtregistroPermisoPersonalRowChangeEvent" msprop:Generator_TablePropName="dtregistroPermisoPersonal" msprop:Generator_RowChangedName="dtregistroPermisoPersonalRowChanged" msprop:Generator_UserTableName="dtregistroPermisoPersonal" msprop:Generator_RowChangingName="dtregistroPermisoPersonalRowChanging" msprop:Generator_TableClassName="dtregistroPermisoPersonalDataTable" msprop:Generator_TableVarName="tabledtregistroPermisoPersonal">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id_sancion" msprop:Generator_UserColumnName="id_sancion" msprop:Generator_ColumnPropNameInTable="id_sancionColumn" msprop:Generator_ColumnPropNameInRow="id_sancion" msprop:Generator_ColumnVarNameInTable="columnid_sancion" type="xs:int" />
+              <xs:element name="desde" msprop:Generator_UserColumnName="desde" msprop:Generator_ColumnPropNameInTable="desdeColumn" msprop:Generator_ColumnPropNameInRow="desde" msprop:Generator_ColumnVarNameInTable="columndesde" type="xs:dateTime" />
+              <xs:element name="hasta" msprop:Generator_UserColumnName="hasta" msprop:Generator_ColumnPropNameInTable="hastaColumn" msprop:Generator_ColumnPropNameInRow="hasta" msprop:Generator_ColumnVarNameInTable="columnhasta" type="xs:dateTime" />
+              <xs:element name="observacion" msprop:Generator_UserColumnName="observacion" msprop:Generator_ColumnPropNameInTable="observacionColumn" msprop:Generator_ColumnPropNameInRow="observacion" msprop:Generator_ColumnVarNameInTable="columnobservacion" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ndoc" msprop:Generator_UserColumnName="ndoc" msprop:Generator_ColumnPropNameInTable="ndocColumn" msprop:Generator_ColumnPropNameInRow="ndoc" msprop:Generator_ColumnVarNameInTable="columnndoc" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
