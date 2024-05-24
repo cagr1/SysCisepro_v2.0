@@ -27,7 +27,7 @@ using AForge.Controls;
 
 namespace SysCisepro3.Main
 {
-    public partial class FrmNewLogin : MaterialSkin.Controls.MaterialForm
+    public partial class FrmNewLogin : KryptonForm
     {
         public TipoConexion TipoCon { private get; set; }
         public int TiempoNotificacion { private get; set; }
@@ -53,15 +53,18 @@ namespace SysCisepro3.Main
             //lblPassword.Font = new Font(pfc.Families[0], 11, FontStyle.Regular);
 
             var materialSkinManager = MaterialSkinManager.Instance;
-            materialSkinManager.AddFormToManage(this);
+            //materialSkinManager.AddFormToManage(this);
             materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
             materialSkinManager.ColorScheme = new MaterialSkin.ColorScheme(Primary.Blue800, Primary.Blue800, Primary.Blue700, Accent.LightBlue200, TextShade.WHITE);
             _objUsuario = new ClassUsuarioGeneral();
+            
         }
 
         private void FrmNewLogin_Load(object sender, EventArgs e)
         {
             CargarSisitema();
+            //change background picture
+            
         }
 
         public void CargarSisitema()

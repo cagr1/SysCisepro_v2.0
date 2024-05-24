@@ -22,6 +22,7 @@ using SysCisepro3.Reportes;
 using SysCisepro3.TalentoHumano;
 using SysCisepro3.Bodega;
 using ClassLibraryCisepro3.ActivoFijo;
+using ComponentFactory.Krypton.Toolkit;
 
 
 namespace SysCisepro3.Main
@@ -160,7 +161,7 @@ namespace SysCisepro3.Main
             }
 
             if (res) return;
-            MessageBox.Show(@"Error al generar SECUENCIAL DE CONTRATOS!. Por favor, contácte al administrador!", @"MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            KryptonMessageBox.Show(@"Error al generar SECUENCIAL DE CONTRATOS!. Por favor, contácte al administrador!", @"MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
             Close();
         }
             
@@ -470,7 +471,7 @@ namespace SysCisepro3.Main
 
         private void MdiParentMain_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (MessageBox.Show(@"Está seguro que desea salir del sistema?", @"MENSAJE DELL SISTEMA", MessageBoxButtons.YesNo, MessageBoxIcon.Question) !=
+            if (KryptonMessageBox.Show(@"Está seguro que desea salir del sistema?", @"MENSAJE DEL SISTEMA", MessageBoxButtons.YesNo, MessageBoxIcon.Question) !=
                 DialogResult.Yes)
             {
                 e.Cancel = true;
@@ -509,7 +510,7 @@ namespace SysCisepro3.Main
 
             if (string.IsNullOrEmpty(r)) // CLAVE DEBE COINCIDER EN MAYÚSCULAS Y/O MINÚSCULAS
             {
-                MessageBox.Show(@"Error al cargar rutas del sistema!", @"MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                KryptonMessageBox.Show(@"Error al cargar rutas del sistema!", @"MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Close();
             }
 
@@ -519,7 +520,7 @@ namespace SysCisepro3.Main
 
             if (fechaUltimoLibro == DateTime.MinValue)
             {
-                MessageBox.Show(@"Error al generar LIBRO DIARIO  de hoy. Por favor, contácte al administrador!", @"MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                KryptonMessageBox.Show(@"Error al generar LIBRO DIARIO  de hoy. Por favor, contácte al administrador!", @"MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Close();
             }
 
@@ -534,7 +535,7 @@ namespace SysCisepro3.Main
             var res = ComandosSql.ProcesarComando(TipoCon, _objLibroDiario.NuevoRegistroLibroDiario());
 
             if (res) return;
-            MessageBox.Show(@"Error al generar LIBRO DIARIO  de hoy. Por favor, contácte al administrador!", @"MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            KryptonMessageBox.Show(@"Error al generar LIBRO DIARIO  de hoy. Por favor, contácte al administrador!", @"MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
             Close();
         }
 
@@ -712,8 +713,8 @@ namespace SysCisepro3.Main
             if (ib.ShowDialog() != DialogResult.OK) return;
             if (ib.textBox1.Text.Trim().Length == 0)
             {
-                MessageBox.Show(@"Debe ingresar el n° de transferncia para consultar!",
-                    @"MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                KryptonMessageBox.Show(@"Debe ingresar el n° de transferencia para consultar!",
+                    @"MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
 
@@ -726,8 +727,8 @@ namespace SysCisepro3.Main
             if (ib.ShowDialog() != DialogResult.OK) return;
             if (ib.textBox1.Text.Trim().Length == 0)
             {
-                MessageBox.Show(@"Debe ingresar el n° de transferncia para consultar!",
-                    @"MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                KryptonMessageBox.Show(@"Debe ingresar el n° de transferncia para consultar!",
+                    @"MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
 
@@ -740,8 +741,8 @@ namespace SysCisepro3.Main
             if (ib.ShowDialog() != DialogResult.OK) return;
             if (ib.textBox1.Text.Trim().Length == 0)
             {
-                MessageBox.Show(@"Debe ingresar el n° de transferncia para consultar!",
-                    @"MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                KryptonMessageBox.Show(@"Debe ingresar el n° de transferncia para consultar!",
+                    @"MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
 
@@ -759,8 +760,8 @@ namespace SysCisepro3.Main
             if (ib.ShowDialog() != DialogResult.OK) return;
             if (ib.textBox1.Text.Trim().Length == 0)
             {
-                MessageBox.Show(@"Debe ingresar el n° de transferncia para consultar!",
-                    @"MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                KryptonMessageBox.Show(@"Debe ingresar el n° de transferncia para consultar!",
+                    @"MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
 
@@ -1482,8 +1483,8 @@ namespace SysCisepro3.Main
             }
             catch
             {
-                MessageBox.Show(@"Hubo un problema al iniciar CALCULADORA!", @"MENSAJE DELL SISTEMA",
-                    MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show(@"Hubo un problema al iniciar CALCULADORA!", @"MENSAJE DEL SISTEMA",
+                     MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
         private void toolStripButtonNote_Click(object sender, EventArgs e)
@@ -1494,7 +1495,7 @@ namespace SysCisepro3.Main
             }
             catch
             {
-                MessageBox.Show(@"Hubo un problema al iniciar BLOC DE NOTAS!", @"MENSAJE DELL SISTEMA",
+                KryptonMessageBox.Show(@"Hubo un problema al iniciar BLOC DE NOTAS!", @"MENSAJE DEL SISTEMA",
                     MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
@@ -1508,7 +1509,7 @@ namespace SysCisepro3.Main
 
         private void btnChange_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show(@"ESTÁ SEGURO QUE DESEA CAMBIAR EL ENTORNO DE TRABAJO?", @"MENSAJE DELL SISTEMA", MessageBoxButtons.YesNo, MessageBoxIcon.Question) != DialogResult.Yes) return;
+            if (KryptonMessageBox.Show(@"ESTÁ SEGURO QUE DESEA CAMBIAR EL ENTORNO DE TRABAJO?", @"MENSAJE DEL SISTEMA", MessageBoxButtons.YesNo, MessageBoxIcon.Question) != DialogResult.Yes) return;
             switch (TipoCon)
             {
                 case TipoConexion.Cisepro:
@@ -1531,7 +1532,7 @@ namespace SysCisepro3.Main
 
         private void toolStripButtonUser_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show(@"ESTÁ SEGURO QUE DESEA CAMBIAR DE USUARIO?", @"MENSAJE DELL SISTEMA", MessageBoxButtons.YesNo, MessageBoxIcon.Question) != DialogResult.Yes) return;
+            if (KryptonMessageBox.Show(@"ESTÁ SEGURO QUE DESEA CAMBIAR DE USUARIO?", @"MENSAJE DEL SISTEMA", MessageBoxButtons.YesNo, MessageBoxIcon.Question) != DialogResult.Yes) return;
 
             DisposeAllButThis();            
 

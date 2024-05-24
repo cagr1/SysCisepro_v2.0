@@ -51,7 +51,7 @@
             // 
             // btnContinuar
             // 
-            this.btnContinuar.Location = new System.Drawing.Point(211, 210);
+            this.btnContinuar.Location = new System.Drawing.Point(211, 224);
             this.btnContinuar.Name = "btnContinuar";
             this.btnContinuar.Size = new System.Drawing.Size(98, 39);
             this.btnContinuar.StateCommon.Back.Color1 = System.Drawing.Color.Transparent;
@@ -74,7 +74,7 @@
             // 
             // pbs
             // 
-            this.pbs.Location = new System.Drawing.Point(327, 267);
+            this.pbs.Location = new System.Drawing.Point(388, 289);
             this.pbs.Name = "pbs";
             this.pbs.Size = new System.Drawing.Size(100, 23);
             this.pbs.TabIndex = 43;
@@ -94,20 +94,21 @@
             // lblDerechos
             // 
             this.lblDerechos.AutoSize = false;
-            this.lblDerechos.Location = new System.Drawing.Point(297, 255);
+            this.lblDerechos.Location = new System.Drawing.Point(302, 284);
             this.lblDerechos.Name = "lblDerechos";
-            this.lblDerechos.Size = new System.Drawing.Size(223, 42);
+            this.lblDerechos.Size = new System.Drawing.Size(212, 39);
             this.lblDerechos.StateNormal.ShortText.Color1 = System.Drawing.Color.White;
             this.lblDerechos.StateNormal.ShortText.Color2 = System.Drawing.Color.White;
             this.lblDerechos.StateNormal.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDerechos.TabIndex = 46;
             this.lblDerechos.Values.Text = "     ";
+            this.lblDerechos.Paint += new System.Windows.Forms.PaintEventHandler(this.lblDerechos_Paint);
             // 
             // FrmIntro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(523, 302);
+            this.ClientSize = new System.Drawing.Size(518, 324);
             this.Controls.Add(this.lblDerechos);
             this.Controls.Add(this.lblNombreSistema);
             this.Controls.Add(this.btnContinuar);

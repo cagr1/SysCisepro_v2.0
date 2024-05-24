@@ -107,6 +107,11 @@ namespace SysCisepro3
         {
 
         }
+
+        private void lblDerechos_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
     
 }
