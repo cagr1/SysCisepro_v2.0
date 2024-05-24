@@ -176,7 +176,10 @@ namespace SysCisepro3.Main
             btnLogin_Click(null, null);
         }
 
-       
+        private void materialCard1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 
        
