@@ -7,23 +7,23 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using ComponentFactory.Krypton.Toolkit;
 using ClassLibraryCisepro3.Enums;
 using ClassLibraryCisepro3.Estaticas;
 using SysCisepro3.Main;
 using SysCisepro3.Properties;
 using ClassLibraryCisepro3.UsuarioGeneral;
+using ComponentFactory.Krypton.Toolkit;
 
 namespace SysCisepro3
 {
     public partial class FrmIntro : KryptonForm
     {
-
         private readonly TipoConexion _tipoCon; // TIPO DE CONEXION (CISEPRO, SEPORTAPC, ASERNAVA)
         private readonly int _tiempoNotificacion; // TIEMPO PARA NOTIFICACION
 
         private FrmLogin _loginForm;
         private FrmNewLogin _newLoginForm;
+        
         public FrmIntro(TipoConexion tipoCon, int tiempoNotificacion)
         {
             InitializeComponent();
@@ -33,15 +33,15 @@ namespace SysCisepro3
 
         private void FrmIntro_Load(object sender, EventArgs e)
         {
-
-            lbNombreSistema.Text = Validaciones.NombreCompany(_tipoCon) + @" 2020";
+            lblNombreSistema.Text = Validaciones.NombreCompany(_tipoCon) + " " + DateTime.Now.Year.ToString();
+            lblDerechos.Text = "Todos los derechos reservados © " + DateTime.Now.Year.ToString();
             Text = Validaciones.NombreCompany(_tipoCon);
             switch (_tipoCon)
             {
                 case TipoConexion.Seportpac:
                     Icon = Resources.logo_s;
                     //BackColor = Settings.Default.Color;
-                    //BackgroundImage = Resources.background_6795625_1280;
+                    BackgroundImage = Resources.background_6795625_1280;
                     //BackgroundImageLayout = ImageLayout.Stretch;
                     pbxLogo.Image = Resources.SeportPac_Wall;
                     //btnContinuar.FlatAppearance.MouseDownBackColor = Color.Gold;
@@ -55,7 +55,7 @@ namespace SysCisepro3
                     break;
                 default: // CISEPRO
                     Icon = Resources.logo_c;
-                    //BackgroundImage = Resources.background_6795625_1280;
+                    BackgroundImage = Resources.background_6795625_1280;
                     //BackgroundImageLayout = ImageLayout.None;
                     //BackColor = Settings.Default.ColorCisepro;
 
@@ -65,41 +65,32 @@ namespace SysCisepro3
                     break;
             }
 
-            BackgroundImageLayout = ImageLayout.Zoom;
+            //BackgroundImageLayout = ImageLayout.Zoom;
 
             Refresh();
 
         }
 
-        private void btnLogin_Click(object sender, EventArgs e)
-        {
-            Hide();
-            
-
-            _newLoginForm = new FrmNewLogin();
-            _newLoginForm.Show();
-        }
+      
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            
-                if (pbs.Value >= 50)
-                {
-                    Opacity = 100;
-                    timer1.Stop();
-                    lblDerechos.Visible = true;
-                    lbNombreSistema.Visible = true;
-                    btnContinuar.Visible = true;
-                }
-                else
-                {
-                    pbs.Value += 5;
-                    Opacity += 0.015;
-                    Width = pbs.Value * 5;
-                    Height = pbs.Value * 2;
-                    CenterToScreen();
-                }
-            
+            if (pbs.Value >= 50)
+            {
+                Opacity = 100;
+                timer1.Stop();
+                lblDerechos.Visible = true;
+                lblNombreSistema.Visible = true;
+                btnContinuar.Visible = true;
+            }
+            else
+            {
+                pbs.Value += 5;
+                Opacity += 0.015;
+                Width = pbs.Value * 5;
+                Height = pbs.Value * 2;
+                CenterToScreen();
+            }
         }
 
         private void btnContinuar_Click(object sender, EventArgs e)
@@ -111,5 +102,11 @@ namespace SysCisepro3
             _newLoginForm = new FrmNewLogin();
             _newLoginForm.Show();
         }
+
+        private void lblDerechos_Click(object sender, EventArgs e)
+        {
+
+        }
     }
+    
 }

@@ -310,6 +310,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dsPersonalSeport.xsd</DependentUpon>
     </Compile>
+    <Compile Include="FrmIntro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmIntro.Designer.cs">
+      <DependentUpon>FrmIntro.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmSplash.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -650,6 +656,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Contabilidad\FrmBuscarPlanCuentas.resx">
       <DependentUpon>FrmBuscarPlanCuentas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmIntro.resx">
+      <DependentUpon>FrmIntro.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmSplash.resx">
       <DependentUpon>FrmSplash.cs</DependentUpon>
@@ -1280,6 +1289,7 @@
     <None Include="Resources\LICENSE.txt" />
     <None Include="Resources\Roboto.bmp" />
     <None Include="bin\Debug\cisepro.png" />
+    <None Include="Resources\background-6795625_1280.jpg" />
     <Content Include="Resources\charticon.png" />
     <None Include="Resources\tick.png" />
     <None Include="Resources\user-group-icon.png" />

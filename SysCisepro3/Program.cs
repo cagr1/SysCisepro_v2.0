@@ -43,7 +43,8 @@ namespace SysCisepro3
             // HABILITA ESTILOS VISUALES DE WINDOWS
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmSplash(tipo, tiempoNotificacion));
+            //Application.Run(new FrmSplash(tipo, tiempoNotificacion));
+            Application.Run(new FrmIntro(tipo, tiempoNotificacion));
         }
     }
 }

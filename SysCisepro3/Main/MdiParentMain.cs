@@ -179,7 +179,7 @@ namespace SysCisepro3.Main
                        
             if (ObjUsuario.TipoUsuario.Trim().Contains("ADMINISTRADOR"))
             {
-                btnChange.Visible = ObjUsuario.Datos.Equals("JORGE AGUIRRE VEGA") || ObjUsuario.Datos.Equals("GALLARDO ROMERO CARLOS ALBERTO"); //|| ObjUsuario.Datos.Equals("JONAS BONILLA RUIZ");
+                btnChange.Visible = ObjUsuario.Datos.Equals("JORGE AGUIRRE VEGA") || ObjUsuario.Datos.Equals("GALLARDO ROMERO CARLOS ALBERTO") || ObjUsuario.Datos.Equals("ELENA ARTEAGA CORO"); //|| ObjUsuario.Datos.Equals("JONAS BONILLA RUIZ");
                 IsAdmin = true;
                 tsRecursoHumano.DropDownItems["dESCUENTOSPERSONALToolStripMenuItem"].Visible = ObjUsuario.Datos.Equals("JORGE AGUIRRE VEGA") || ObjUsuario.Datos.Equals("GALLARDO ROMERO CARLOS ALBERTO") || ObjUsuario.Datos.Equals("NATALIA VIVAS");
                 sITIOSDETRABAJOTOLSTRPIMENUITEM.Visible = true;
