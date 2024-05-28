@@ -180,6 +180,15 @@ namespace SysCisepro3.Main
         {
 
         }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            
+            _objUsuario.SalirSistema(TipoCon);
+            Dispose();
+            Application.Exit();
+
+        }
     }
 
        

@@ -23,11 +23,13 @@ using SysCisepro3.TalentoHumano;
 using SysCisepro3.Bodega;
 using ClassLibraryCisepro3.ActivoFijo;
 using ComponentFactory.Krypton.Toolkit;
+using FontAwesome.Sharp;
+
 
 
 namespace SysCisepro3.Main
 {
-    public partial class MdiParentMain : Form
+    public partial class MdiParentMain : KryptonForm
     {
         /// <summary>
         /// CISEPRO 2019
@@ -41,6 +43,8 @@ namespace SysCisepro3.Main
 
         public FrmLogin _frmLogin { private get; set; }
         public FrmNewLogin _frmNewLogin { private get; set; }
+
+
 
         private int TipoCox
         {
@@ -101,7 +105,7 @@ namespace SysCisepro3.Main
             // DEFINR TIPO DE SISTEMA
             foreach (var t in from ToolStripItem t in toolStrip1.Items where t != null select t) t.ForeColor = Color.White;
             toolStripButtonCalc.ForeColor = Color.White;
-            toolStripButtonNote.ForeColor = Color.White;
+            toolStripButtonNote.ForeColor = ValidationForms.GetColorSistema(TipoCon);
             toolStripStatusLabel1.ForeColor = Color.White;
             lblVersion.ForeColor = Color.White;
             toolStripStatusLabel4.ForeColor = Color.White;
@@ -467,6 +471,9 @@ namespace SysCisepro3.Main
             // CARGAR ICONO Y DESIEÑO SEGUN SISTEMA
             DefinirTipoSistema();             
             timer1.Start();
+            
+           
+
         }
 
         private void MdiParentMain_FormClosing(object sender, FormClosingEventArgs e)
@@ -1737,6 +1744,13 @@ namespace SysCisepro3.Main
 
         }
 
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+       
+
         private void rOLESYPERMISOSToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FrmRoles.Instancia.MdiParent = this;
@@ -1747,5 +1761,6 @@ namespace SysCisepro3.Main
         }
 
        
+
     }
 }

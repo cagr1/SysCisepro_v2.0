@@ -51,9 +51,9 @@
             // 
             // btnContinuar
             // 
-            this.btnContinuar.Location = new System.Drawing.Point(211, 224);
+            this.btnContinuar.Location = new System.Drawing.Point(190, 223);
             this.btnContinuar.Name = "btnContinuar";
-            this.btnContinuar.Size = new System.Drawing.Size(98, 39);
+            this.btnContinuar.Size = new System.Drawing.Size(141, 44);
             this.btnContinuar.StateCommon.Back.Color1 = System.Drawing.Color.Transparent;
             this.btnContinuar.StateCommon.Back.Color2 = System.Drawing.Color.Transparent;
             this.btnContinuar.StateCommon.Border.Color1 = System.Drawing.Color.White;
@@ -62,8 +62,14 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.btnContinuar.StateCommon.Border.Rounding = 20;
+            this.btnContinuar.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnContinuar.StateNormal.Back.Color1 = System.Drawing.Color.Transparent;
             this.btnContinuar.StateNormal.Back.Color2 = System.Drawing.Color.Transparent;
+            this.btnContinuar.StateNormal.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnContinuar.StatePressed.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(101)))), ((int)(((byte)(192)))));
+            this.btnContinuar.StatePressed.Content.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(101)))), ((int)(((byte)(192)))));
+            this.btnContinuar.StatePressed.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnContinuar.StateTracking.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnContinuar.TabIndex = 42;
             this.btnContinuar.Values.Text = "Continuar";
             this.btnContinuar.Click += new System.EventHandler(this.btnContinuar_Click);

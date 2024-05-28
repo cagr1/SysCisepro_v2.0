@@ -6,10 +6,10 @@
       <Value Profile="(Default)" />
     </Setting>
     <Setting Name="ColorCisepro" Type="System.Drawing.Color" Scope="User">
-      <Value Profile="(Default)">16, 60, 123</Value>
+      <Value Profile="(Default)">21, 101, 192</Value>
     </Setting>
     <Setting Name="ColorSeportpac" Type="System.Drawing.Color" Scope="User">
-      <Value Profile="(Default)">64, 64, 64</Value>
+      <Value Profile="(Default)">38, 50, 56</Value>
     </Setting>
     <Setting Name="ColorAsenava" Type="System.Drawing.Color" Scope="User">
       <Value Profile="(Default)">SteelBlue</Value>

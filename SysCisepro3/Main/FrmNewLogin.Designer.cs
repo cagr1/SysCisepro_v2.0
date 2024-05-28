@@ -35,37 +35,56 @@
             this.ipbxPassword = new FontAwesome.Sharp.IconPictureBox();
             this.ipbxNombre = new FontAwesome.Sharp.IconPictureBox();
             this.pbxCisepro = new System.Windows.Forms.PictureBox();
+            this.btnSalir = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.kryptonLabel1 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.materialCard1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ipbxPassword)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ipbxNombre)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxCisepro)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnLogin
             // 
-            this.btnLogin.Location = new System.Drawing.Point(91, 323);
+            this.btnLogin.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.Form;
+            this.btnLogin.Location = new System.Drawing.Point(91, 339);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(135, 40);
-            this.btnLogin.StateCommon.Back.Color1 = System.Drawing.Color.White;
-            this.btnLogin.StateCommon.Back.Color2 = System.Drawing.Color.White;
+            this.btnLogin.Size = new System.Drawing.Size(145, 43);
+            this.btnLogin.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(101)))), ((int)(((byte)(192)))));
+            this.btnLogin.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(101)))), ((int)(((byte)(192)))));
+            this.btnLogin.StateCommon.Back.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.None;
+            this.btnLogin.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(101)))), ((int)(((byte)(192)))));
+            this.btnLogin.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(101)))), ((int)(((byte)(192)))));
+            this.btnLogin.StateCommon.Border.ColorStyle = ComponentFactory.Krypton.Toolkit.PaletteColorStyle.Solid;
             this.btnLogin.StateCommon.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.None;
             this.btnLogin.StateCommon.Border.Rounding = 20;
-            this.btnLogin.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.Black;
-            this.btnLogin.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin.StateNormal.Back.Color1 = System.Drawing.Color.White;
-            this.btnLogin.StateNormal.Back.Color2 = System.Drawing.Color.White;
-            this.btnLogin.StateNormal.Border.Color1 = System.Drawing.Color.DodgerBlue;
-            this.btnLogin.StateNormal.Border.Color2 = System.Drawing.Color.DodgerBlue;
+            this.btnLogin.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.btnLogin.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogin.StateDisabled.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(101)))), ((int)(((byte)(192)))));
+            this.btnLogin.StateDisabled.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(101)))), ((int)(((byte)(192)))));
+            this.btnLogin.StateNormal.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(101)))), ((int)(((byte)(192)))));
+            this.btnLogin.StateNormal.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(101)))), ((int)(((byte)(192)))));
+            this.btnLogin.StateNormal.Back.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.True;
+            this.btnLogin.StateNormal.Back.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.None;
+            this.btnLogin.StateNormal.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(101)))), ((int)(((byte)(192)))));
+            this.btnLogin.StateNormal.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(101)))), ((int)(((byte)(192)))));
+            this.btnLogin.StateNormal.Border.ColorStyle = ComponentFactory.Krypton.Toolkit.PaletteColorStyle.Solid;
+            this.btnLogin.StateNormal.Border.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.False;
             this.btnLogin.StateNormal.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.btnLogin.StateNormal.Border.Rounding = 20;
             this.btnLogin.StateNormal.Content.DrawFocus = ComponentFactory.Krypton.Toolkit.InheritBool.False;
+            this.btnLogin.StateNormal.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.btnLogin.StateNormal.Content.ShortText.Color2 = System.Drawing.Color.White;
+            this.btnLogin.StateNormal.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.StatePressed.Back.Color1 = System.Drawing.Color.DodgerBlue;
             this.btnLogin.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.btnLogin.StatePressed.Border.Rounding = 20;
+            this.btnLogin.StatePressed.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.StateTracking.Back.Color1 = System.Drawing.Color.White;
             this.btnLogin.StateTracking.Back.Color2 = System.Drawing.Color.White;
             this.btnLogin.StateTracking.Border.Color1 = System.Drawing.Color.LightBlue;
@@ -73,6 +92,10 @@
             this.btnLogin.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnLogin.StateTracking.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(101)))), ((int)(((byte)(192)))));
+            this.btnLogin.StateTracking.Content.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(101)))), ((int)(((byte)(192)))));
+            this.btnLogin.StateTracking.Content.ShortText.ColorAlign = ComponentFactory.Krypton.Toolkit.PaletteRectangleAlign.Local;
+            this.btnLogin.StateTracking.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.TabIndex = 5;
             this.btnLogin.Values.Text = "Ingresar";
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
@@ -83,41 +106,23 @@
             this.cbxUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.cbxUser.Depth = 0;
             this.cbxUser.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.cbxUser.DropDownHeight = 292;
+            this.cbxUser.DropDownHeight = 432;
             this.cbxUser.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxUser.DropDownWidth = 121;
             this.cbxUser.Font = new System.Drawing.Font("Roboto Medium", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.cbxUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.cbxUser.FormattingEnabled = true;
+            this.cbxUser.Hint = "Usuario";
             this.cbxUser.IntegralHeight = false;
-            this.cbxUser.ItemHeight = 29;
-            this.cbxUser.Items.AddRange(new object[] {
-            "Carlos",
-            "Carlos",
-            "Carlos",
-            "Carlos",
-            "Carlos",
-            "Carlos",
-            "Carlos",
-            "Carlos",
-            "Carlos",
-            "Carlos",
-            "Carlos",
-            "Carlos",
-            "Carlos",
-            "Carlos",
-            "Carlos",
-            "Carlos",
-            "Carlos",
-            "Carlos"});
+            this.cbxUser.ItemHeight = 43;
             this.cbxUser.Location = new System.Drawing.Point(100, 185);
             this.cbxUser.MaxDropDownItems = 10;
             this.cbxUser.MouseState = MaterialSkin.MouseState.OUT;
             this.cbxUser.Name = "cbxUser";
-            this.cbxUser.Size = new System.Drawing.Size(183, 35);
+            this.cbxUser.Size = new System.Drawing.Size(183, 49);
             this.cbxUser.StartIndex = 0;
-            this.cbxUser.TabIndex = 6;
-            this.cbxUser.UseTallSize = false;
+            this.cbxUser.TabIndex = 0;
+            this.cbxUser.UseAccent = false;
             // 
             // txtPassword
             // 
@@ -125,18 +130,19 @@
             this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPassword.Depth = 0;
             this.txtPassword.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtPassword.Hint = "Password";
             this.txtPassword.LeadingIcon = null;
-            this.txtPassword.Location = new System.Drawing.Point(100, 247);
+            this.txtPassword.Location = new System.Drawing.Point(100, 263);
             this.txtPassword.MaxLength = 50;
             this.txtPassword.MouseState = MaterialSkin.MouseState.OUT;
             this.txtPassword.Multiline = false;
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Password = true;
-            this.txtPassword.Size = new System.Drawing.Size(183, 36);
+            this.txtPassword.Size = new System.Drawing.Size(183, 50);
             this.txtPassword.TabIndex = 7;
             this.txtPassword.Text = "";
             this.txtPassword.TrailingIcon = null;
-            this.txtPassword.UseTallSize = false;
+            this.txtPassword.UseAccent = false;
             this.txtPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPassword_KeyPress);
             // 
             // materialCard1
@@ -155,19 +161,19 @@
             this.materialCard1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialCard1.Name = "materialCard1";
             this.materialCard1.Padding = new System.Windows.Forms.Padding(14);
-            this.materialCard1.Size = new System.Drawing.Size(373, 471);
+            this.materialCard1.Size = new System.Drawing.Size(367, 471);
             this.materialCard1.TabIndex = 11;
             this.materialCard1.Paint += new System.Windows.Forms.PaintEventHandler(this.materialCard1_Paint);
             // 
             // ipbxPassword
             // 
             this.ipbxPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.ipbxPassword.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.ipbxPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(101)))), ((int)(((byte)(192)))));
             this.ipbxPassword.IconChar = FontAwesome.Sharp.IconChar.Key;
-            this.ipbxPassword.IconColor = System.Drawing.Color.DodgerBlue;
+            this.ipbxPassword.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(101)))), ((int)(((byte)(192)))));
             this.ipbxPassword.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.ipbxPassword.IconSize = 31;
-            this.ipbxPassword.Location = new System.Drawing.Point(38, 252);
+            this.ipbxPassword.Location = new System.Drawing.Point(54, 271);
             this.ipbxPassword.Name = "ipbxPassword";
             this.ipbxPassword.Size = new System.Drawing.Size(37, 31);
             this.ipbxPassword.TabIndex = 12;
@@ -176,12 +182,12 @@
             // ipbxNombre
             // 
             this.ipbxNombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.ipbxNombre.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.ipbxNombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(101)))), ((int)(((byte)(192)))));
             this.ipbxNombre.IconChar = FontAwesome.Sharp.IconChar.User;
-            this.ipbxNombre.IconColor = System.Drawing.Color.DodgerBlue;
+            this.ipbxNombre.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(101)))), ((int)(((byte)(192)))));
             this.ipbxNombre.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.ipbxNombre.IconSize = 28;
-            this.ipbxNombre.Location = new System.Drawing.Point(38, 192);
+            this.ipbxNombre.Location = new System.Drawing.Point(54, 196);
             this.ipbxNombre.Name = "ipbxNombre";
             this.ipbxNombre.Size = new System.Drawing.Size(37, 28);
             this.ipbxNombre.TabIndex = 11;
@@ -197,15 +203,77 @@
             this.pbxCisepro.TabIndex = 10;
             this.pbxCisepro.TabStop = false;
             // 
+            // btnSalir
+            // 
+            this.btnSalir.Location = new System.Drawing.Point(663, 1);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(63, 47);
+            this.btnSalir.StateCommon.Back.Color1 = System.Drawing.Color.Transparent;
+            this.btnSalir.StateCommon.Back.Color2 = System.Drawing.Color.Transparent;
+            this.btnSalir.StateCommon.Border.Color1 = System.Drawing.Color.Transparent;
+            this.btnSalir.StateCommon.Border.Color2 = System.Drawing.Color.Transparent;
+            this.btnSalir.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnSalir.StateNormal.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnSalir.StateNormal.Border.Rounding = 20;
+            this.btnSalir.StateNormal.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.btnSalir.StateNormal.Content.ShortText.Color2 = System.Drawing.Color.White;
+            this.btnSalir.StateNormal.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalir.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnSalir.StatePressed.Border.Rounding = 20;
+            this.btnSalir.StatePressed.Content.ShortText.Color1 = System.Drawing.Color.Red;
+            this.btnSalir.StatePressed.Content.ShortText.Color2 = System.Drawing.Color.Red;
+            this.btnSalir.StatePressed.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalir.StateTracking.Back.Color1 = System.Drawing.Color.Transparent;
+            this.btnSalir.StateTracking.Back.Color2 = System.Drawing.Color.Transparent;
+            this.btnSalir.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnSalir.StateTracking.Border.Rounding = 20;
+            this.btnSalir.StateTracking.Content.ShortText.Color1 = System.Drawing.Color.Red;
+            this.btnSalir.StateTracking.Content.ShortText.Color2 = System.Drawing.Color.Red;
+            this.btnSalir.StateTracking.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalir.TabIndex = 12;
+            this.btnSalir.Values.Text = "X";
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            // 
+            // kryptonLabel1
+            // 
+            this.kryptonLabel1.Location = new System.Drawing.Point(481, 102);
+            this.kryptonLabel1.Name = "kryptonLabel1";
+            this.kryptonLabel1.Size = new System.Drawing.Size(159, 36);
+            this.kryptonLabel1.StateCommon.ShortText.Color1 = System.Drawing.Color.White;
+            this.kryptonLabel1.StateCommon.ShortText.Color2 = System.Drawing.Color.White;
+            this.kryptonLabel1.StateCommon.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonLabel1.TabIndex = 13;
+            this.kryptonLabel1.Values.Text = "Bienvenido";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::SysCisepro3.Properties.Resources.wp9764031;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(359, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(378, 471);
+            this.pictureBox1.TabIndex = 14;
+            this.pictureBox1.TabStop = false;
+            // 
             // FrmNewLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.BackgroundImage = global::SysCisepro3.Properties.Resources.wp9764031;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(725, 469);
             this.ControlBox = false;
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.kryptonLabel1);
+            this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.materialCard1);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -217,28 +285,34 @@
             this.StateActive.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.StateActive.Border.Rounding = 20;
             this.StateCommon.Border.Color1 = System.Drawing.Color.Lavender;
             this.StateCommon.Border.Color2 = System.Drawing.Color.Lavender;
             this.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.StateCommon.Border.Rounding = 15;
+            this.StateCommon.Border.Rounding = 20;
             this.Load += new System.EventHandler(this.FrmNewLogin_Load);
             this.materialCard1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ipbxPassword)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ipbxNombre)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxCisepro)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnLogin;
-        private MaterialSkin.Controls.MaterialComboBox cbxUser;
         private MaterialSkin.Controls.MaterialCard materialCard1;
         private System.Windows.Forms.PictureBox pbxCisepro;
         private FontAwesome.Sharp.IconPictureBox ipbxNombre;
         private FontAwesome.Sharp.IconPictureBox ipbxPassword;
         public MaterialSkin.Controls.MaterialTextBox txtPassword;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton btnSalir;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel1;
+        private MaterialSkin.Controls.MaterialComboBox cbxUser;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
