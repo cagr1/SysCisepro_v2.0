@@ -3411,5 +3411,15 @@ namespace SysCisepro3.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Your_paragraph_text {
+            get {
+                object obj = ResourceManager.GetObject("Your paragraph text", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

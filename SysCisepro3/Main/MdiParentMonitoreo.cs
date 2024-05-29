@@ -8,10 +8,10 @@ using ClassLibraryCisepro3.UsuarioGeneral;
 using SysCisepro3.Properties;
 using SysCisepro3.TalentoHumano;
 using SysCisepro3.Operaciones;
-
+using Krypton.Toolkit;
 namespace SysCisepro3.Main
 {
-    public partial class MdiParentMonitoreo : Form
+    public partial class MdiParentMonitoreo : KryptonForm
     {
         /// <summary>
         /// CISEPRO 2019

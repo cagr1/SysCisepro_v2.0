@@ -52,6 +52,7 @@
             this.iNGRESOSSALIDASToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.pENDIENTESDEVACACIONESToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.rEPORTEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripLabel4 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripDropDownButton8 = new System.Windows.Forms.ToolStripDropDownButton();
@@ -68,7 +69,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
-            this.rEPORTEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -154,6 +154,7 @@
             this.toolStrip1.AutoSize = false;
             this.toolStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(65)))), ((int)(((byte)(120)))));
             this.toolStrip1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.toolStrip1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripLabel6,
@@ -197,6 +198,7 @@
             // toolStripLabel5
             // 
             this.toolStripLabel5.AutoSize = false;
+            this.toolStripLabel5.BackColor = System.Drawing.Color.Transparent;
             this.toolStripLabel5.BackgroundImage = global::SysCisepro3.Properties.Resources.Cisepro_Wall;
             this.toolStripLabel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.toolStripLabel5.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -350,6 +352,14 @@
             this.pENDIENTESDEVACACIONESToolStripMenuItem.Text = "PENDIENTES VACACIONES";
             this.pENDIENTESDEVACACIONESToolStripMenuItem.Click += new System.EventHandler(this.pENDIENTESDEVACACIONESToolStripMenuItem_Click);
             // 
+            // rEPORTEToolStripMenuItem
+            // 
+            this.rEPORTEToolStripMenuItem.Image = global::SysCisepro3.Properties.Resources.report;
+            this.rEPORTEToolStripMenuItem.Name = "rEPORTEToolStripMenuItem";
+            this.rEPORTEToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
+            this.rEPORTEToolStripMenuItem.Text = "REPORTE GENERAL";
+            this.rEPORTEToolStripMenuItem.Click += new System.EventHandler(this.rEPORTEToolStripMenuItem_Click);
+            // 
             // toolStripLabel4
             // 
             this.toolStripLabel4.AutoSize = false;
@@ -363,6 +373,7 @@
             // toolStripLabel1
             // 
             this.toolStripLabel1.AutoSize = false;
+            this.toolStripLabel1.BackColor = System.Drawing.Color.Transparent;
             this.toolStripLabel1.BackgroundImage = global::SysCisepro3.Properties.Resources.SeportPac_Wall;
             this.toolStripLabel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.toolStripLabel1.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -537,14 +548,6 @@
             this.notifyIcon1.BalloonTipClicked += new System.EventHandler(this.notifyIcon1_BalloonTipClicked);
             this.notifyIcon1.Click += new System.EventHandler(this.notifyIcon1_Click);
             // 
-            // rEPORTEToolStripMenuItem
-            // 
-            this.rEPORTEToolStripMenuItem.Image = global::SysCisepro3.Properties.Resources.report;
-            this.rEPORTEToolStripMenuItem.Name = "rEPORTEToolStripMenuItem";
-            this.rEPORTEToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
-            this.rEPORTEToolStripMenuItem.Text = "REPORTE GENERAL";
-            this.rEPORTEToolStripMenuItem.Click += new System.EventHandler(this.rEPORTEToolStripMenuItem_Click);
-            // 
             // MdiParentMonitoreo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -554,11 +557,17 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.statusStrip);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "MdiParentMonitoreo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StateActive.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.StateActive.Border.Rounding = 20F;
+            this.StateCommon.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.Text = "MONITOREO";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MdiParentMain_FormClosing);
             this.Load += new System.EventHandler(this.MdiParentMain_Load);

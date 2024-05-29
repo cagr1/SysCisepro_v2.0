@@ -1,9 +1,10 @@
 ﻿Namespace FORMULARIOS.OPERACIONES
     <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
     Partial Class FrmReporteAsistencia
-        Inherits System.Windows.Forms.Form
-
+        'Inherits System.Windows.Forms.Form
+        'Inherits MaterialSkin.Controls.MaterialForm
         'Form reemplaza a Dispose para limpiar la lista de componentes.
+        Inherits Krypton.Toolkit.KryptonForm
         <System.Diagnostics.DebuggerNonUserCode()> _
         Protected Overrides Sub Dispose(ByVal disposing As Boolean)
             Try
@@ -216,6 +217,7 @@
             'MenuStrip3
             '
             Me.MenuStrip3.BackColor = System.Drawing.Color.Gainsboro
+            Me.MenuStrip3.Font = New System.Drawing.Font("Segoe UI", 9.0!)
             Me.MenuStrip3.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnAgregar, Me.btnCambiar, Me.ToolStripMenuItem3, Me.ToolStripMenuItem1, Me.btnQuitar, Me.btnAddRad, Me.ToolStripMenuItem6})
             Me.MenuStrip3.Location = New System.Drawing.Point(0, 0)
             Me.MenuStrip3.Name = "MenuStrip3"
@@ -289,6 +291,7 @@
             '
             'MenuStrip1
             '
+            Me.MenuStrip1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
             Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.REPORTESToolStripMenuItem, Me.GUARDARCAMBIOSToolStripMenuItem})
             Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
             Me.MenuStrip1.Name = "MenuStrip1"
@@ -376,6 +379,7 @@
             '
             'MenuStrip2
             '
+            Me.MenuStrip2.Font = New System.Drawing.Font("Segoe UI", 9.0!)
             Me.MenuStrip2.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem2})
             Me.MenuStrip2.Location = New System.Drawing.Point(0, 0)
             Me.MenuStrip2.Name = "MenuStrip2"
@@ -1056,6 +1060,7 @@
             Me.ListView3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
             Me.ListView3.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader11, Me.ColumnHeader14, Me.ColumnHeader15, Me.ColumnHeader16, Me.ColumnHeader18, Me.ColumnHeader5, Me.ColumnHeader6})
             Me.ListView3.FullRowSelect = True
+            Me.ListView3.HideSelection = False
             Me.ListView3.Location = New System.Drawing.Point(557, 82)
             Me.ListView3.MultiSelect = False
             Me.ListView3.Name = "ListView3"
@@ -1104,6 +1109,7 @@
             Me.ListView1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
             Me.ListView1.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader25, Me.ColumnHeader27, Me.ColumnHeader28, Me.ColumnHeader29, Me.ColumnHeader1, Me.ColumnHeader2, Me.ColumnHeader3, Me.ColumnHeader4})
             Me.ListView1.FullRowSelect = True
+            Me.ListView1.HideSelection = False
             Me.ListView1.Location = New System.Drawing.Point(1, 82)
             Me.ListView1.MultiSelect = False
             Me.ListView1.Name = "ListView1"
@@ -1169,8 +1175,8 @@
             Me.Label2.Name = "Label2"
             Me.Label2.Size = New System.Drawing.Size(550, 24)
             Me.Label2.TabIndex = 203
-            Me.Label2.Text = "BUSCAR:                                                            ASISTENCIA POR" & _
-                " PUESTO, VIGILANTE  Y DÍAS TRABAJADOS"
+            Me.Label2.Text = "BUSCAR:                                                            ASISTENCIA POR" &
+    " PUESTO, VIGILANTE  Y DÍAS TRABAJADOS"
             Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
             '
             'GroupBox1
@@ -1274,10 +1280,17 @@
             Me.BackColor = System.Drawing.Color.White
             Me.ClientSize = New System.Drawing.Size(1274, 673)
             Me.Controls.Add(Me.tcSitios)
-            Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
+            Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
             Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
             Me.Name = "FrmReporteAsistencia"
             Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+            Me.StateActive.Border.DrawBorders = CType((((Krypton.Toolkit.PaletteDrawBorders.Top Or Krypton.Toolkit.PaletteDrawBorders.Bottom) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Left) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Right), Krypton.Toolkit.PaletteDrawBorders)
+            Me.StateActive.Border.Rounding = 20.0!
+            Me.StateCommon.Border.DrawBorders = CType((((Krypton.Toolkit.PaletteDrawBorders.Top Or Krypton.Toolkit.PaletteDrawBorders.Bottom) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Left) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Right), Krypton.Toolkit.PaletteDrawBorders)
             Me.Text = "REPORTE ASISTENCIA"
             Me.tcSitios.ResumeLayout(False)
             Me.TabPage1.ResumeLayout(False)

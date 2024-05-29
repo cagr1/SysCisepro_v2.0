@@ -48,7 +48,7 @@ Namespace OPERACIONES
         Public Function SeleccionarProgramacionByFecha(ByVal tipoCon As TipoConexion, ByVal fecha As DateTime) As DataTable
             Dim pars = New List(Of Object())
             pars.Add(New Object() {"fecha", SqlDbType.DateTime, fecha})
-            Return ComandosSql.SeleccionarQueryWithParamsToDataTable(tipoCon, "select * from programacion_operativos where @fecha between fecha_desde and fecha_hasta;", False, pars)
+            Return ComandosSql.SeleccionarQueryWithParamsToDataTable(tipoCon, "select * from programacion_operativos where @fecha between fecha_desde and fecha_hasta and estado = 1 ;", False, pars)
         End Function
 
         Public Function SeleccionarProgramacionById(ByVal tipoCon As TipoConexion, ByVal id As Integer) As DataTable
