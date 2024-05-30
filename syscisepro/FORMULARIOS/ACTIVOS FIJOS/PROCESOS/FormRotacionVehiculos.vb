@@ -61,7 +61,9 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
                     dgvVehiculos.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
                     dgvRotaciones.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
             End Select
-
+            dgvPersonal.Font = New Font("Roboto", 8, FontStyle.Regular)
+            dgvVehiculos.Font = New Font("Roboto", 8, FontStyle.Regular)
+            dgvRotaciones.Font = New Font("Roboto", 8, FontStyle.Regular)
             _sqlCommands = New List(Of SqlCommand)
             Cargar() 
         End Sub

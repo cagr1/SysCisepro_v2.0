@@ -7,13 +7,14 @@ using AForge.Video.DirectShow;
 using System.IO;
 using System.Drawing;
 using System.Diagnostics;
+using Krypton.Toolkit;
 
 
 
 
 namespace SysCisepro3.TalentoHumano
 {
-    public partial class FrmTomarFoto : Form
+    public partial class FrmTomarFoto : KryptonForm
     {
         /// <summary>
         /// CISEPRO 2019
@@ -308,7 +309,8 @@ namespace SysCisepro3.TalentoHumano
                         process.StartInfo.Arguments = $"\"{fotoBash}\"";
                         process.StartInfo.UseShellExecute = false;
                         process.StartInfo.RedirectStandardOutput = true;
-                        process.Start();                                      
+                        process.Start();
+                        process.WaitForExit();
 
                     }
 
@@ -323,7 +325,8 @@ namespace SysCisepro3.TalentoHumano
                         process.StartInfo.UseShellExecute = false;
                         process.StartInfo.RedirectStandardOutput = true;
                         process.Start();
-                 
+                        process.WaitForExit();
+
                     }
                 }
                                     

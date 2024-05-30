@@ -1,8 +1,8 @@
 ﻿Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
     <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
     Partial Class FormRotacionVehiculos
-        Inherits System.Windows.Forms.Form
-
+        'Inherits System.Windows.Forms.Form
+        Inherits Krypton.Toolkit.KryptonForm
         'Form reemplaza a Dispose para limpiar la lista de componentes.
         <System.Diagnostics.DebuggerNonUserCode()> _
         Protected Overrides Sub Dispose(ByVal disposing As Boolean)
@@ -65,6 +65,7 @@
             'gbSupervisores
             '
             Me.gbSupervisores.Controls.Add(Me.dgvPersonal)
+            Me.gbSupervisores.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.gbSupervisores.Location = New System.Drawing.Point(5, 4)
             Me.gbSupervisores.Name = "gbSupervisores"
             Me.gbSupervisores.Size = New System.Drawing.Size(988, 152)
@@ -84,7 +85,7 @@
             Me.dgvPersonal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
             DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
             DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
-            DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle2.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
             DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(123, Byte), Integer))
             DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
@@ -101,6 +102,7 @@
             'gbVehiculos
             '
             Me.gbVehiculos.Controls.Add(Me.dgvVehiculos)
+            Me.gbVehiculos.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.gbVehiculos.Location = New System.Drawing.Point(5, 155)
             Me.gbVehiculos.Name = "gbVehiculos"
             Me.gbVehiculos.Size = New System.Drawing.Size(988, 141)
@@ -120,7 +122,7 @@
             Me.dgvVehiculos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
             DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
             DataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window
-            DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle4.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText
             DataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(123, Byte), Integer))
             DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
@@ -137,18 +139,20 @@
             'Label1
             '
             Me.Label1.AutoSize = True
+            Me.Label1.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Label1.Location = New System.Drawing.Point(730, 307)
             Me.Label1.Name = "Label1"
-            Me.Label1.Size = New System.Drawing.Size(122, 13)
+            Me.Label1.Size = New System.Drawing.Size(118, 13)
             Me.Label1.TabIndex = 3
             Me.Label1.Text = "FECHA DE ROTACIÓN:"
             '
             'txtFechaRotacion
             '
             Me.txtFechaRotacion.Enabled = False
+            Me.txtFechaRotacion.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtFechaRotacion.Location = New System.Drawing.Point(858, 300)
             Me.txtFechaRotacion.Name = "txtFechaRotacion"
-            Me.txtFechaRotacion.Size = New System.Drawing.Size(132, 20)
+            Me.txtFechaRotacion.Size = New System.Drawing.Size(132, 21)
             Me.txtFechaRotacion.TabIndex = 4
             '
             'gbRotaciones
@@ -172,7 +176,7 @@
             Me.dgvRotaciones.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ID_ROTACION, Me.ID_ACTIVO, Me.NOMBRE_ACTIVO, Me.FECHA, Me.ID_CUSTODIO_NUEVO, Me.CUSTODIO_NUEVO, Me.ID_CUSTODIO_ANTERIOR, Me.CUSTODIO_ANTERIOR, Me.OBSERVACION})
             DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
             DataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window
-            DataGridViewCellStyle6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle6.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             DataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText
             DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(123, Byte), Integer))
             DataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText
@@ -253,35 +257,39 @@
             '
             'txtObservacion
             '
+            Me.txtObservacion.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtObservacion.Location = New System.Drawing.Point(101, 338)
             Me.txtObservacion.Name = "txtObservacion"
-            Me.txtObservacion.Size = New System.Drawing.Size(624, 20)
+            Me.txtObservacion.Size = New System.Drawing.Size(624, 21)
             Me.txtObservacion.TabIndex = 7
             Me.txtObservacion.Text = "NINGUNA"
             '
             'Label2
             '
             Me.Label2.AutoSize = True
+            Me.Label2.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Label2.Location = New System.Drawing.Point(8, 338)
             Me.Label2.Name = "Label2"
-            Me.Label2.Size = New System.Drawing.Size(87, 13)
+            Me.Label2.Size = New System.Drawing.Size(85, 13)
             Me.Label2.TabIndex = 6
             Me.Label2.Text = "OBSERVACIÓN:"
             '
             'txtIdRotacion
             '
             Me.txtIdRotacion.Enabled = False
+            Me.txtIdRotacion.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtIdRotacion.Location = New System.Drawing.Point(94, 304)
             Me.txtIdRotacion.Name = "txtIdRotacion"
-            Me.txtIdRotacion.Size = New System.Drawing.Size(86, 20)
+            Me.txtIdRotacion.Size = New System.Drawing.Size(86, 21)
             Me.txtIdRotacion.TabIndex = 9
             '
             'Label3
             '
             Me.Label3.AutoSize = True
+            Me.Label3.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Label3.Location = New System.Drawing.Point(8, 307)
             Me.Label3.Name = "Label3"
-            Me.Label3.Size = New System.Drawing.Size(80, 13)
+            Me.Label3.Size = New System.Drawing.Size(78, 13)
             Me.Label3.TabIndex = 8
             Me.Label3.Text = "ID ROTACIÓN:"
             '
@@ -330,6 +338,7 @@
             Me.Controls.Add(Me.gbVehiculos)
             Me.Controls.Add(Me.Label1)
             Me.Controls.Add(Me.gbSupervisores)
+            Me.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
             Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
             Me.MaximizeBox = False

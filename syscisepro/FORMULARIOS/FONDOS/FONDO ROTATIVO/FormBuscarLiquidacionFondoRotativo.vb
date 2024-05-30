@@ -43,7 +43,7 @@ Namespace FORMULARIOS.FONDOS.FONDO_ROTATIVO
                 Dim fechaHasta = DateTimePicker2.Value.Year & "-" & DateTimePicker2.Value.Month & "-" & DateTimePicker2.Value.Day & " 23:59:59"
 
                 dgvLiquidacionFondoRotativo.DataSource = _objetoLiquidacionFondoRotativo.SeleccionarLiquidacionFondoRotativo(_tipoCon, fechaDesde, fechaHasta)
-
+                dgvLiquidacionFondoRotativo.Font = New Font("Roboto", 9, FontStyle.Regular)
                 dgvLiquidacionFondoRotativo.Columns(0).HeaderText = "ID LIQ"
                 dgvLiquidacionFondoRotativo.Columns(1).HeaderText = "FECHA"
                 dgvLiquidacionFondoRotativo.Columns(2).HeaderText = "TOTAL"

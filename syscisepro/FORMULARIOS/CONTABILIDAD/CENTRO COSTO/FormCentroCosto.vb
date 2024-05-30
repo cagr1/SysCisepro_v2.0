@@ -4,6 +4,7 @@ Imports ClassLibraryCisepro.CONTABILIDAD.CENTRO_DE_COSTOS
 Imports ClassLibraryCisepro.ENUMS
 Imports syscisepro.FORMULARIOS.CONTABILIDAD.CENTRO_COSTO.REPORTES
 
+
 Namespace FORMULARIOS.CONTABILIDAD.CENTRO_COSTO
     ''' <summary>
     ''' CISEPRO - SEPORTPAC - ASENAVA 2019
@@ -157,6 +158,7 @@ Namespace FORMULARIOS.CONTABILIDAD.CENTRO_COSTO
                     MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorCisepro
                     MenuStrip1.ForeColor = Color.White
                     dgvCentroCosto.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
+                    dgvCentroCosto.Font = New Font("Roboto", 9, FontStyle.Regular)
             End Select
             DesabilitadoInicio()
         End Sub

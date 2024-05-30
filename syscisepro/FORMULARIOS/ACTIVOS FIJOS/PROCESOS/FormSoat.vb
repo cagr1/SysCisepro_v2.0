@@ -47,7 +47,7 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
                     Icon = My.Resources.logo_c
                     dgvSoat.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
             End Select
-
+            dgvSoat.Font = New Font("Roboto", 8, FontStyle.Regular)
             txtFechaActual.Text = Date.Now
             Consultar()
             If dgvSoat.RowCount > 1 Then

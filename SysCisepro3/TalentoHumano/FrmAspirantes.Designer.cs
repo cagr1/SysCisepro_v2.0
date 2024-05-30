@@ -133,7 +133,6 @@
             this.dgvPersonal = new System.Windows.Forms.DataGridView();
             this.label24 = new System.Windows.Forms.Label();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.axAcroPDF1 = new AxAcroPDFLib.AxAcroPDF();
             this.label9 = new System.Windows.Forms.Label();
             this.dtpHoy = new System.Windows.Forms.DateTimePicker();
             this.toolStrip1.SuspendLayout();
@@ -144,12 +143,11 @@
             this.GroupBox3.SuspendLayout();
             this.GroupBox7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPersonal)).BeginInit();
-            this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.axAcroPDF1)).BeginInit();
             this.SuspendLayout();
             // 
             // toolStrip1
             // 
+            this.toolStrip1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnBuscar,
             this.ButtonNuevoRegistro,
@@ -1465,22 +1463,12 @@
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.axAcroPDF1);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Size = new System.Drawing.Size(1007, 558);
             this.tabPage1.TabIndex = 1;
             this.tabPage1.Text = "DOCUMENTOS";
             this.tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // axAcroPDF1
-            // 
-            this.axAcroPDF1.Enabled = true;
-            this.axAcroPDF1.Location = new System.Drawing.Point(3, 3);
-            this.axAcroPDF1.Name = "axAcroPDF1";
-            this.axAcroPDF1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axAcroPDF1.OcxState")));
-            this.axAcroPDF1.Size = new System.Drawing.Size(1002, 552);
-            this.axAcroPDF1.TabIndex = 222;
             // 
             // label9
             // 
@@ -1534,8 +1522,6 @@
             this.GroupBox7.ResumeLayout(false);
             this.GroupBox7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPersonal)).EndInit();
-            this.tabPage1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.axAcroPDF1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1644,6 +1630,6 @@
         internal System.Windows.Forms.TextBox txtDocumentos;
         internal System.Windows.Forms.Button btnDocumentos;
         private System.Windows.Forms.TabPage tabPage1;
-        private AxAcroPDFLib.AxAcroPDF axAcroPDF1;
+       // private AxAcroPDFLib.AxAcroPDF axAcroPDF1;
     }
 }

@@ -13,6 +13,7 @@ using syscisepro;
 using SysCisepro3.Datos;
 using SysCisepro3.Properties;
 using SysCisepro3.Reportes;
+using Krypton.Toolkit;
 
 namespace SysCisepro3.Administracion
 {
@@ -20,7 +21,7 @@ namespace SysCisepro3.Administracion
     /// CISEPRO 2019
     /// Para administración de ESTRUCTURA ADMINISTRATIVA
     /// </summary>
-    public partial class FrmEstructuraAdministrativa : Form
+    public partial class FrmEstructuraAdministrativa : KryptonForm
     {
         public static TipoConexion TipoCon { private get; set; }
         public static ClassUsuarioGeneral Usuario { get; set; }

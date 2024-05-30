@@ -83,16 +83,23 @@ Namespace FORMULARIOS.CONTABILIDAD.LIQUIDACIONES
                     MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
                     MenuStrip1.ForeColor = Color.White
                     dgvLiquidacionesPendientes.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorSeportpac
+
                     dgvSolicitudFondoRotativo.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorSeportpac
                     dgvSolicitudFonoRotativoNoDeducible.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorSeportpac
+
                 Case Else
                     Icon = My.Resources.logo_c
                     MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorCisepro
                     MenuStrip1.ForeColor = Color.White
                     dgvLiquidacionesPendientes.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
+
                     dgvSolicitudFondoRotativo.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
                     dgvSolicitudFonoRotativoNoDeducible.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
+
             End Select
+            dgvLiquidacionesPendientes.Font = New Font("Roboto", 8, FontStyle.Regular)
+            dgvSolicitudFondoRotativo.Font = New Font("Roboto", 8, FontStyle.Regular)
+            dgvSolicitudFonoRotativoNoDeducible.Font = New Font("Roboto", 8, FontStyle.Regular)
 
             _sqlCommands = New List(Of SqlCommand)
         End Sub

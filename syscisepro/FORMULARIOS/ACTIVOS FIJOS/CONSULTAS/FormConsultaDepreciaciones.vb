@@ -51,6 +51,7 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.CONSULTAS
             dgvDepreciaciones.AutoResizeRows()
             dgvDepreciaciones.ReadOnly = False
             dgvDepreciaciones.EditMode = DataGridViewEditMode.EditProgrammatically
+            dgvDepreciaciones.Font = New Font("Roboto", 8, FontStyle.Regular)
         End Sub
     End Class
 End Namespace

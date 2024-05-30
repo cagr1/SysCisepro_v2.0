@@ -84,7 +84,10 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
                     dgvHoy.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
             End Select
             _sqlCommands = New List(Of SqlCommand)
-
+            dgvComprobantesIngreso.Font = New Font("Roboto", 8, FontStyle.Regular)
+            dgvDebitos.Font = New Font("Roboto", 8, FontStyle.Regular)
+            dgvDetalleComprobate.Font = New Font("Roboto", 8, FontStyle.Regular)
+            dgvHoy.Font = New Font("Roboto", 8, FontStyle.Regular)
             txtBeneficiario.Text = ValidationForms.NombreCompany(_tipoCon)
             cbxTipoCuenta.SelectedIndex = 0
             cbxTipoNegociacion.SelectedIndex = 0

@@ -307,6 +307,7 @@
             // Label24
             // 
             this.Label24.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Label24.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label24.Location = new System.Drawing.Point(4, 198);
             this.Label24.Name = "Label24";
             this.Label24.Size = new System.Drawing.Size(780, 16);
@@ -329,9 +330,10 @@
             // 
             this.Label7.AutoSize = true;
             this.Label7.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Label7.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label7.Location = new System.Drawing.Point(11, 221);
             this.Label7.Name = "Label7";
-            this.Label7.Size = new System.Drawing.Size(48, 13);
+            this.Label7.Size = new System.Drawing.Size(46, 13);
             this.Label7.TabIndex = 190;
             this.Label7.Text = "FILTRO:";
             this.Label7.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -339,6 +341,7 @@
             // Label11
             // 
             this.Label11.AutoSize = true;
+            this.Label11.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label11.Location = new System.Drawing.Point(671, 220);
             this.Label11.Name = "Label11";
             this.Label11.Size = new System.Drawing.Size(17, 13);
@@ -348,9 +351,10 @@
             // Label10
             // 
             this.Label10.AutoSize = true;
+            this.Label10.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label10.Location = new System.Drawing.Point(541, 221);
             this.Label10.Name = "Label10";
-            this.Label10.Size = new System.Drawing.Size(31, 13);
+            this.Label10.Size = new System.Drawing.Size(29, 13);
             this.Label10.TabIndex = 201;
             this.Label10.Text = "DEL:";
             // 
@@ -508,6 +512,7 @@
             // 
             // toolStrip1
             // 
+            this.toolStrip1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnBuscar,
             this.btnNuevo,
@@ -620,7 +625,9 @@
             this.columnHeader26,
             this.columnHeader27,
             this.columnHeader28});
+            this.listView2.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listView2.FullRowSelect = true;
+            this.listView2.HideSelection = false;
             this.listView2.Location = new System.Drawing.Point(8, 245);
             this.listView2.MultiSelect = false;
             this.listView2.Name = "listView2";

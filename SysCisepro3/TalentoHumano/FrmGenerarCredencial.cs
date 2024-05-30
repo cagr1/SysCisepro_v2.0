@@ -127,7 +127,8 @@ namespace SysCisepro3.TalentoHumano
             toolStrip1.ForeColor = Color.White;
             dgvBusquedaPersonal.DefaultCellStyle.SelectionBackColor = ValidationForms.GetColorSistema(TipoCon);
             DataGridView1.DefaultCellStyle.SelectionBackColor = ValidationForms.GetColorSistema(TipoCon);
-
+            DataGridView1.Font = new Font("Roboto", 8, FontStyle.Regular);
+            dgvBusquedaPersonal.Font = new Font("Roboto", 8, FontStyle.Regular);
             cREDENCIALCISSEPToolStripMenuItem.Visible = Usuario.TipoUsuario.Trim().Contains("ADMINISTRADOR");
 
             switch (TipoCon)

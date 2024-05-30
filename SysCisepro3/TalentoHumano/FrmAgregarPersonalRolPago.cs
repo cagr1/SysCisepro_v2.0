@@ -5,10 +5,11 @@ using ClassLibraryCisepro3.Enums;
 using SysCisepro3.Datos;
 using SysCisepro3.Operaciones;
 using SysCisepro3.Properties;
+using Krypton.Toolkit;
 
 namespace SysCisepro3.TalentoHumano
 {
-    public partial class FrmAgregarPersonalRolPago : Form
+    public partial class FrmAgregarPersonalRolPago : KryptonForm
     {
         /// <summary>
         /// CISEPRO 2019

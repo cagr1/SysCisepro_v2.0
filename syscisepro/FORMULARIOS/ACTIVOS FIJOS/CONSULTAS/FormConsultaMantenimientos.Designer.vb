@@ -1,8 +1,8 @@
 ﻿Namespace FORMULARIOS.ACTIVOS_FIJOS.CONSULTAS
     <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
     Partial Class FormConsultaMantenimientos
-        Inherits System.Windows.Forms.Form
-
+        'Inherits System.Windows.Forms.Form
+        Inherits Krypton.Toolkit.KryptonForm
         'Form reemplaza a Dispose para limpiar la lista de componentes.
         <System.Diagnostics.DebuggerNonUserCode()> _
         Protected Overrides Sub Dispose(ByVal disposing As Boolean)
@@ -73,7 +73,7 @@
             Me.rbDia.AutoSize = True
             Me.rbDia.Location = New System.Drawing.Point(25, 17)
             Me.rbDia.Name = "rbDia"
-            Me.rbDia.Size = New System.Drawing.Size(43, 17)
+            Me.rbDia.Size = New System.Drawing.Size(42, 17)
             Me.rbDia.TabIndex = 1
             Me.rbDia.TabStop = True
             Me.rbDia.Text = "DIA"
@@ -96,9 +96,9 @@
             Me.btnConsultar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
             Me.btnConsultar.Location = New System.Drawing.Point(280, 13)
             Me.btnConsultar.Name = "btnConsultar"
-            Me.btnConsultar.Size = New System.Drawing.Size(91, 25)
+            Me.btnConsultar.Size = New System.Drawing.Size(108, 25)
             Me.btnConsultar.TabIndex = 7
-            Me.btnConsultar.Text = "COSULTAR"
+            Me.btnConsultar.Text = "BUSCAR"
             Me.btnConsultar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
             Me.btnConsultar.UseVisualStyleBackColor = True
             '
@@ -107,6 +107,7 @@
             Me.gbMantenimientosProgramados.Controls.Add(Me.rbDia)
             Me.gbMantenimientosProgramados.Controls.Add(Me.btnConsultar)
             Me.gbMantenimientosProgramados.Controls.Add(Me.rbSemana)
+            Me.gbMantenimientosProgramados.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.gbMantenimientosProgramados.Location = New System.Drawing.Point(1, 0)
             Me.gbMantenimientosProgramados.Name = "gbMantenimientosProgramados"
             Me.gbMantenimientosProgramados.Size = New System.Drawing.Size(406, 47)
@@ -120,6 +121,7 @@
             Me.GroupBox1.Controls.Add(Me.rbCumplidas)
             Me.GroupBox1.Controls.Add(Me.rbTodas)
             Me.GroupBox1.Controls.Add(Me.btnConsultarTodas)
+            Me.GroupBox1.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.GroupBox1.Location = New System.Drawing.Point(413, 0)
             Me.GroupBox1.Name = "GroupBox1"
             Me.GroupBox1.Size = New System.Drawing.Size(572, 47)
@@ -132,7 +134,7 @@
             Me.rbNoCumplidas.AutoSize = True
             Me.rbNoCumplidas.Location = New System.Drawing.Point(143, 17)
             Me.rbNoCumplidas.Name = "rbNoCumplidas"
-            Me.rbNoCumplidas.Size = New System.Drawing.Size(106, 17)
+            Me.rbNoCumplidas.Size = New System.Drawing.Size(105, 17)
             Me.rbNoCumplidas.TabIndex = 11
             Me.rbNoCumplidas.TabStop = True
             Me.rbNoCumplidas.Text = "NO CUMPLIDAS"
@@ -143,7 +145,7 @@
             Me.rbCumplidas.AutoSize = True
             Me.rbCumplidas.Location = New System.Drawing.Point(21, 17)
             Me.rbCumplidas.Name = "rbCumplidas"
-            Me.rbCumplidas.Size = New System.Drawing.Size(87, 17)
+            Me.rbCumplidas.Size = New System.Drawing.Size(86, 17)
             Me.rbCumplidas.TabIndex = 10
             Me.rbCumplidas.TabStop = True
             Me.rbCumplidas.Text = "CUMPLIDAS"
@@ -154,7 +156,7 @@
             Me.rbTodas.AutoSize = True
             Me.rbTodas.Location = New System.Drawing.Point(316, 17)
             Me.rbTodas.Name = "rbTodas"
-            Me.rbTodas.Size = New System.Drawing.Size(62, 17)
+            Me.rbTodas.Size = New System.Drawing.Size(61, 17)
             Me.rbTodas.TabIndex = 9
             Me.rbTodas.TabStop = True
             Me.rbTodas.Text = "TODAS"
@@ -168,7 +170,7 @@
             Me.btnConsultarTodas.Name = "btnConsultarTodas"
             Me.btnConsultarTodas.Size = New System.Drawing.Size(102, 25)
             Me.btnConsultarTodas.TabIndex = 8
-            Me.btnConsultarTodas.Text = "COSULTAR"
+            Me.btnConsultarTodas.Text = "BUSCAR"
             Me.btnConsultarTodas.TextAlign = System.Drawing.ContentAlignment.MiddleRight
             Me.btnConsultarTodas.UseVisualStyleBackColor = True
             '

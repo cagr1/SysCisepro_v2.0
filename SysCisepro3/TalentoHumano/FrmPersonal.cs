@@ -18,10 +18,11 @@ using SysCisepro3.Operaciones;
 using SysCisepro3.Properties;
 using Office = Microsoft.Office.Interop;
 using DataTable = System.Data.DataTable;
+using Krypton.Toolkit;
 
 namespace SysCisepro3.TalentoHumano
 {
-    public partial class FrmPersonal : Form
+    public partial class FrmPersonal : KryptonForm
     {
         /// <summary>
         /// CISEPRO 2019
@@ -111,7 +112,7 @@ namespace SysCisepro3.TalentoHumano
             pbFoto.Image = Resources._default;
             pbPerfil.Image = Resources._default;
             PictureBox1.Image = Resources._default;
-
+            dgvPersonal.Font = new System.Drawing.Font("Roboto", 8, FontStyle.Regular);
             CargarProyectos(true);
             CargarProvincias();
             CargarBancos();

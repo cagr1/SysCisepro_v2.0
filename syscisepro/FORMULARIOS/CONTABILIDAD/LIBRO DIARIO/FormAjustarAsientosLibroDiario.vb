@@ -13,6 +13,7 @@ Imports Microsoft.Office.Interop
 Imports syscisepro.DATOS
 Imports syscisepro.FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO.REPORTES
 Imports syscisepro.FORMULARIOS.INVENTARIOS.PROCESO
+Imports Krypton.Toolkit
 
 Namespace FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
     ''' <summary>
@@ -109,6 +110,7 @@ Namespace FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
         End Sub
         Private Sub CargarNumeroRegistroAsientoLibroDiario()
             Try
+                dgvNumeroRegistroAsiento.Font = New Font("Roboto", 9, FontStyle.Regular)
                 dgvNumeroRegistroAsiento.DataSource = _objetoAsientoLibroDiario.SeleccionarNumeroRegistroAsientosLibroDiario(_tipoCon)
                 dgvNumeroRegistroAsiento.Columns(0).HeaderText = "Nº ASIE."
                 dgvNumeroRegistroAsiento.Columns(0).DefaultCellStyle.Alignment = DataGridViewContentAlignment.BottomLeft
@@ -169,7 +171,7 @@ Namespace FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
                 End Select
 
                 dgvAsientoBuscado.AutoResizeColumns()
-
+                dgvAsientoBuscado.Font = New Font("Roboto", 9, FontStyle.Regular)
                 dgvAsientoBuscado.Columns(0).Width = 60 '"ORD"
                 dgvAsientoBuscado.Columns(1).Width = 100 '"FECHA"
                 dgvAsientoBuscado.Columns(1).DefaultCellStyle.Format = "g"

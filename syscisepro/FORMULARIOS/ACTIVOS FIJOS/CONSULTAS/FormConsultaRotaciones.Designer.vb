@@ -1,8 +1,8 @@
 ﻿Namespace FORMULARIOS.ACTIVOS_FIJOS.CONSULTAS
     <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
     Partial Class FormConsultaRotaciones
-        Inherits System.Windows.Forms.Form
-
+        'Inherits System.Windows.Forms.Form
+        Inherits Krypton.Toolkit.KryptonForm
         'Form reemplaza a Dispose para limpiar la lista de componentes.
         <System.Diagnostics.DebuggerNonUserCode()> _
         Protected Overrides Sub Dispose(ByVal disposing As Boolean)
@@ -58,9 +58,10 @@
             'rbEntre
             '
             Me.rbEntre.AutoSize = True
+            Me.rbEntre.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.rbEntre.Location = New System.Drawing.Point(155, 16)
             Me.rbEntre.Name = "rbEntre"
-            Me.rbEntre.Size = New System.Drawing.Size(62, 17)
+            Me.rbEntre.Size = New System.Drawing.Size(59, 17)
             Me.rbEntre.TabIndex = 17
             Me.rbEntre.TabStop = True
             Me.rbEntre.Text = "ENTRE"
@@ -69,24 +70,26 @@
             'dtpFechaFinal
             '
             Me.dtpFechaFinal.CustomFormat = ""
+            Me.dtpFechaFinal.Font = New System.Drawing.Font("Roboto", 6.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.dtpFechaFinal.Location = New System.Drawing.Point(448, 13)
             Me.dtpFechaFinal.Name = "dtpFechaFinal"
-            Me.dtpFechaFinal.Size = New System.Drawing.Size(200, 20)
+            Me.dtpFechaFinal.Size = New System.Drawing.Size(200, 18)
             Me.dtpFechaFinal.TabIndex = 16
             Me.dtpFechaFinal.Value = New Date(2012, 6, 18, 0, 0, 0, 0)
             '
             'dtpFechaInicial
             '
             Me.dtpFechaInicial.CustomFormat = ""
+            Me.dtpFechaInicial.Font = New System.Drawing.Font("Roboto", 6.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.dtpFechaInicial.Location = New System.Drawing.Point(242, 13)
             Me.dtpFechaInicial.Name = "dtpFechaInicial"
-            Me.dtpFechaInicial.Size = New System.Drawing.Size(200, 20)
+            Me.dtpFechaInicial.Size = New System.Drawing.Size(200, 18)
             Me.dtpFechaInicial.TabIndex = 15
             Me.dtpFechaInicial.Value = New Date(2012, 6, 18, 0, 0, 0, 0)
             '
             'btnReporteRotaciones
             '
-            Me.btnReporteRotaciones.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.btnReporteRotaciones.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.btnReporteRotaciones.Image = Global.syscisepro.My.Resources.Resources.report
             Me.btnReporteRotaciones.ImageAlign = System.Drawing.ContentAlignment.TopCenter
             Me.btnReporteRotaciones.Location = New System.Drawing.Point(753, 3)
@@ -99,12 +102,12 @@
             '
             'btnConsultar
             '
-            Me.btnConsultar.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.btnConsultar.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.btnConsultar.Image = CType(resources.GetObject("btnConsultar.Image"), System.Drawing.Image)
             Me.btnConsultar.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-            Me.btnConsultar.Location = New System.Drawing.Point(674, 3)
+            Me.btnConsultar.Location = New System.Drawing.Point(666, 3)
             Me.btnConsultar.Name = "btnConsultar"
-            Me.btnConsultar.Size = New System.Drawing.Size(73, 42)
+            Me.btnConsultar.Size = New System.Drawing.Size(81, 42)
             Me.btnConsultar.TabIndex = 13
             Me.btnConsultar.Text = "CONSULTAR"
             Me.btnConsultar.TextAlign = System.Drawing.ContentAlignment.BottomCenter
@@ -113,9 +116,10 @@
             'rbTodas
             '
             Me.rbTodas.AutoSize = True
+            Me.rbTodas.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.rbTodas.Location = New System.Drawing.Point(85, 16)
             Me.rbTodas.Name = "rbTodas"
-            Me.rbTodas.Size = New System.Drawing.Size(62, 17)
+            Me.rbTodas.Size = New System.Drawing.Size(61, 17)
             Me.rbTodas.TabIndex = 12
             Me.rbTodas.TabStop = True
             Me.rbTodas.Text = "TODAS"
@@ -124,6 +128,7 @@
             'rbDia
             '
             Me.rbDia.AutoSize = True
+            Me.rbDia.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.rbDia.Location = New System.Drawing.Point(29, 16)
             Me.rbDia.Name = "rbDia"
             Me.rbDia.Size = New System.Drawing.Size(48, 17)
@@ -134,7 +139,7 @@
             '
             'btnPrevio
             '
-            Me.btnPrevio.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.btnPrevio.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.btnPrevio.Image = CType(resources.GetObject("btnPrevio.Image"), System.Drawing.Image)
             Me.btnPrevio.ImageAlign = System.Drawing.ContentAlignment.TopCenter
             Me.btnPrevio.Location = New System.Drawing.Point(832, 3)
@@ -147,7 +152,7 @@
             '
             'btnImprimir
             '
-            Me.btnImprimir.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.btnImprimir.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.btnImprimir.Image = CType(resources.GetObject("btnImprimir.Image"), System.Drawing.Image)
             Me.btnImprimir.ImageAlign = System.Drawing.ContentAlignment.TopCenter
             Me.btnImprimir.Location = New System.Drawing.Point(911, 3)
@@ -190,6 +195,7 @@
             Me.crvRotaciones.ActiveViewIndex = -1
             Me.crvRotaciones.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
             Me.crvRotaciones.Cursor = System.Windows.Forms.Cursors.Default
+            Me.crvRotaciones.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.crvRotaciones.Location = New System.Drawing.Point(2, 179)
             Me.crvRotaciones.Name = "crvRotaciones"
             Me.crvRotaciones.Size = New System.Drawing.Size(982, 386)

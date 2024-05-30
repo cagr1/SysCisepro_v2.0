@@ -55,7 +55,7 @@
             'txtCustodio
             '
             Me.txtCustodio.Enabled = False
-            Me.txtCustodio.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtCustodio.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtCustodio.Location = New System.Drawing.Point(52, 11)
             Me.txtCustodio.Name = "txtCustodio"
             Me.txtCustodio.Size = New System.Drawing.Size(250, 21)
@@ -65,15 +65,17 @@
             '
             Me.lblDatos.AutoSize = True
             Me.lblDatos.BackColor = System.Drawing.Color.Transparent
+            Me.lblDatos.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.lblDatos.Location = New System.Drawing.Point(3, 16)
             Me.lblDatos.Name = "lblDatos"
-            Me.lblDatos.Size = New System.Drawing.Size(47, 13)
+            Me.lblDatos.Size = New System.Drawing.Size(45, 13)
             Me.lblDatos.TabIndex = 3
             Me.lblDatos.Text = "DATOS:"
             '
             'btnBuscar
             '
             Me.btnBuscar.BackColor = System.Drawing.Color.Transparent
+            Me.btnBuscar.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.btnBuscar.Image = Global.syscisepro.My.Resources.Resources.BuscarRegistro
             Me.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.TopCenter
             Me.btnBuscar.Location = New System.Drawing.Point(327, 4)
@@ -86,6 +88,7 @@
             '
             'btnActualizar
             '
+            Me.btnActualizar.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.btnActualizar.Image = Global.syscisepro.My.Resources.Resources.oki
             Me.btnActualizar.ImageAlign = System.Drawing.ContentAlignment.TopCenter
             Me.btnActualizar.Location = New System.Drawing.Point(402, 4)
@@ -125,41 +128,41 @@
             '
             Me.cbSucursal.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cbSucursal.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-            Me.cbSucursal.Font = New System.Drawing.Font("Calibri", 9.75!)
+            Me.cbSucursal.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cbSucursal.FormattingEnabled = True
             Me.cbSucursal.Location = New System.Drawing.Point(844, 12)
             Me.cbSucursal.Name = "cbSucursal"
-            Me.cbSucursal.Size = New System.Drawing.Size(142, 23)
+            Me.cbSucursal.Size = New System.Drawing.Size(142, 21)
             Me.cbSucursal.TabIndex = 78
             '
             'cbEmpresa
             '
             Me.cbEmpresa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cbEmpresa.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-            Me.cbEmpresa.Font = New System.Drawing.Font("Calibri", 9.75!)
+            Me.cbEmpresa.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cbEmpresa.FormattingEnabled = True
             Me.cbEmpresa.Location = New System.Drawing.Point(557, 11)
             Me.cbEmpresa.Name = "cbEmpresa"
-            Me.cbEmpresa.Size = New System.Drawing.Size(185, 23)
+            Me.cbEmpresa.Size = New System.Drawing.Size(185, 21)
             Me.cbEmpresa.TabIndex = 77
             '
             'lblSucursal
             '
             Me.lblSucursal.AutoSize = True
-            Me.lblSucursal.Font = New System.Drawing.Font("Calibri", 9.75!)
+            Me.lblSucursal.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.lblSucursal.Location = New System.Drawing.Point(768, 15)
             Me.lblSucursal.Name = "lblSucursal"
-            Me.lblSucursal.Size = New System.Drawing.Size(64, 15)
+            Me.lblSucursal.Size = New System.Drawing.Size(65, 13)
             Me.lblSucursal.TabIndex = 76
             Me.lblSucursal.Text = "SUCURSAL:"
             '
             'lblEmpresa
             '
             Me.lblEmpresa.AutoSize = True
-            Me.lblEmpresa.Font = New System.Drawing.Font("Calibri", 9.75!)
+            Me.lblEmpresa.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.lblEmpresa.Location = New System.Drawing.Point(491, 16)
             Me.lblEmpresa.Name = "lblEmpresa"
-            Me.lblEmpresa.Size = New System.Drawing.Size(60, 15)
+            Me.lblEmpresa.Size = New System.Drawing.Size(60, 13)
             Me.lblEmpresa.TabIndex = 75
             Me.lblEmpresa.Text = "EMPRESA:"
             '

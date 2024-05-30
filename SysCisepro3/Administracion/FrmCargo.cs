@@ -13,10 +13,11 @@ using syscisepro;
 using SysCisepro3.Datos;
 using SysCisepro3.Properties;
 using SysCisepro3.Reportes;
+using Krypton.Toolkit;
 
 namespace SysCisepro3.Administracion
 {
-    public partial class FrmCargo : Form
+    public partial class FrmCargo : KryptonForm
     {
         /// <summary>
         /// CISEPRO 2019

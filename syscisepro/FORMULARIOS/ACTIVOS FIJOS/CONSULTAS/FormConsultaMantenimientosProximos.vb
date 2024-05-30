@@ -203,6 +203,7 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.CONSULTAS
                     Icon = My.Resources.logo_c
                     dgvMantenimientosProximos.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
             End Select
+            dgvMantenimientosProximos.Font = New Font("Roboto", 8.25, FontStyle.Regular)
         End Sub
     End Class
 End Namespace

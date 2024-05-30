@@ -10,6 +10,7 @@ using ClassLibraryCisepro3.ProcesosSql;
 using ClassLibraryCisepro3.UsuarioGeneral;
 using SysCisepro3.Datos;
 using SysCisepro3.Properties;
+using Krypton.Toolkit;
 
 namespace SysCisepro3.Contabilidad.Compras
 {
@@ -17,7 +18,7 @@ namespace SysCisepro3.Contabilidad.Compras
     /// CISEPRO 2019
     /// Para aprobar ORDENES DE COMPRA
     /// </summary>
-    public partial class FrmAprobacionOrdenCompra : Form
+    public partial class FrmAprobacionOrdenCompra : KryptonForm
     {
         public static TipoConexion TipoCon { private get; set; }
 
@@ -67,6 +68,8 @@ namespace SysCisepro3.Contabilidad.Compras
                     Icon = Resources.logo_c; 
                     break;
             }
+            dgvOrdenCompra.Font = new Font("Roboto", 9, FontStyle.Regular);
+            dgvDetalleOrdenCompra.Font = new Font("Roboto", 9, FontStyle.Regular);
         }
 
         private void LimpiarParametros()

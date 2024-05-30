@@ -298,6 +298,7 @@
             this.TabControl1.Controls.Add(this.TabDetallesRol);
             this.TabControl1.Controls.Add(this.TabResumenRol);
             this.TabControl1.Controls.Add(this.tabPage1);
+            this.TabControl1.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TabControl1.Location = new System.Drawing.Point(1, 28);
             this.TabControl1.Name = "TabControl1";
             this.TabControl1.SelectedIndex = 0;
@@ -351,7 +352,7 @@
             this.dgvDetallesRol.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.dgvDetallesRol.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvDetallesRol.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvDetallesRol.ColumnHeadersHeight = 50;
@@ -437,7 +438,7 @@
             this.colExtSal});
             dataGridViewCellStyle62.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle62.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle62.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle62.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle62.ForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle62.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle62.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -450,7 +451,7 @@
             this.dgvDetallesRol.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle63.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle63.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle63.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle63.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle63.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle63.SelectionBackColor = System.Drawing.SystemColors.Info;
             dataGridViewCellStyle63.SelectionForeColor = System.Drawing.SystemColors.GrayText;
@@ -1384,7 +1385,7 @@
             this.TextBox1.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.TextBox1.Location = new System.Drawing.Point(57, 6);
             this.TextBox1.Name = "TextBox1";
-            this.TextBox1.Size = new System.Drawing.Size(247, 20);
+            this.TextBox1.Size = new System.Drawing.Size(247, 21);
             this.TextBox1.TabIndex = 210;
             this.TextBox1.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TextBox1_KeyUp);
             // 
@@ -1483,7 +1484,7 @@
             this.TextBox7.Enabled = false;
             this.TextBox7.Location = new System.Drawing.Point(951, 617);
             this.TextBox7.Name = "TextBox7";
-            this.TextBox7.Size = new System.Drawing.Size(54, 20);
+            this.TextBox7.Size = new System.Drawing.Size(54, 21);
             this.TextBox7.TabIndex = 229;
             this.TextBox7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -1504,7 +1505,7 @@
             this.TextBox6.Enabled = false;
             this.TextBox6.Location = new System.Drawing.Point(776, 617);
             this.TextBox6.Name = "TextBox6";
-            this.TextBox6.Size = new System.Drawing.Size(54, 20);
+            this.TextBox6.Size = new System.Drawing.Size(54, 21);
             this.TextBox6.TabIndex = 227;
             this.TextBox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -1525,7 +1526,7 @@
             this.TextBox5.Enabled = false;
             this.TextBox5.Location = new System.Drawing.Point(584, 617);
             this.TextBox5.Name = "TextBox5";
-            this.TextBox5.Size = new System.Drawing.Size(54, 20);
+            this.TextBox5.Size = new System.Drawing.Size(54, 21);
             this.TextBox5.TabIndex = 225;
             this.TextBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -1546,7 +1547,7 @@
             this.TextBox4.Enabled = false;
             this.TextBox4.Location = new System.Drawing.Point(417, 617);
             this.TextBox4.Name = "TextBox4";
-            this.TextBox4.Size = new System.Drawing.Size(54, 20);
+            this.TextBox4.Size = new System.Drawing.Size(54, 21);
             this.TextBox4.TabIndex = 223;
             this.TextBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -1558,7 +1559,7 @@
             this.dgvInformePago.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.dgvInformePago.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
             dataGridViewCellStyle65.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle65.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle65.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle65.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvInformePago.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle65;
             this.dgvInformePago.ColumnHeadersHeight = 40;
@@ -1583,7 +1584,7 @@
             this.Column15});
             dataGridViewCellStyle74.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle74.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle74.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle74.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle74.ForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle74.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle74.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -1596,7 +1597,7 @@
             this.dgvInformePago.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle75.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle75.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle75.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle75.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle75.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle75.SelectionBackColor = System.Drawing.SystemColors.Info;
             dataGridViewCellStyle75.SelectionForeColor = System.Drawing.SystemColors.GrayText;
@@ -1802,7 +1803,7 @@
             this.TextBox3.Enabled = false;
             this.TextBox3.Location = new System.Drawing.Point(268, 617);
             this.TextBox3.Name = "TextBox3";
-            this.TextBox3.Size = new System.Drawing.Size(54, 20);
+            this.TextBox3.Size = new System.Drawing.Size(54, 21);
             this.TextBox3.TabIndex = 221;
             this.TextBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -1894,7 +1895,7 @@
             this.dtpMesExtra.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpMesExtra.Location = new System.Drawing.Point(443, 5);
             this.dtpMesExtra.Name = "dtpMesExtra";
-            this.dtpMesExtra.Size = new System.Drawing.Size(136, 20);
+            this.dtpMesExtra.Size = new System.Drawing.Size(136, 21);
             this.dtpMesExtra.TabIndex = 237;
             // 
             // textBox10
@@ -1924,7 +1925,7 @@
             this.chkFondos.AutoSize = true;
             this.chkFondos.Location = new System.Drawing.Point(1093, 9);
             this.chkFondos.Name = "chkFondos";
-            this.chkFondos.Size = new System.Drawing.Size(182, 17);
+            this.chkFondos.Size = new System.Drawing.Size(177, 17);
             this.chkFondos.TabIndex = 234;
             this.chkFondos.Text = "MARCAR PERSONAL CON F.R.";
             this.chkFondos.UseVisualStyleBackColor = true;
@@ -1960,7 +1961,7 @@
             this.dgvHorasExtra.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.dgvHorasExtra.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
             dataGridViewCellStyle77.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle77.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle77.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle77.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvHorasExtra.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle77;
             this.dgvHorasExtra.ColumnHeadersHeight = 40;
@@ -1981,7 +1982,7 @@
             this.Column11});
             dataGridViewCellStyle85.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle85.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle85.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle85.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle85.ForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle85.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle85.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -1994,7 +1995,7 @@
             this.dgvHorasExtra.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle86.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle86.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle86.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle86.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle86.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle86.SelectionBackColor = System.Drawing.SystemColors.Info;
             dataGridViewCellStyle86.SelectionForeColor = System.Drawing.SystemColors.GrayText;
@@ -2152,6 +2153,7 @@
             // 
             // toolStrip1
             // 
+            this.toolStrip1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnBuscar,
             this.btnResumen,

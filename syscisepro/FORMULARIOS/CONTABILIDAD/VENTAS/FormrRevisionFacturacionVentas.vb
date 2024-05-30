@@ -452,7 +452,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
             End Select
 
             _sqlCommands = New List(Of SqlCommand)
-
+            dgvRevisionFacturacion.Font = New Font("Roboto", 8, FontStyle.Regular)
             btnExportar.Enabled = False ' deshabilita el boton
             btnFacturacion.Enabled = False ' deshabilita el boton 
             btnExportar.Enabled = True ' habilita el boton 

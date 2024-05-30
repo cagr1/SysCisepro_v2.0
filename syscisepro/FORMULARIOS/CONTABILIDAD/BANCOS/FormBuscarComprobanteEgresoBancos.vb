@@ -119,6 +119,8 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
 
                 dgvComprobanteEgresoBancos.AutoResizeColumns()
                 dgvComprobanteEgresoBancos.AutoResizeRows()
+                'Set font dgvComprobanteEgresoBancos Roboto
+                dgvComprobanteEgresoBancos.Font = New Font("Roboto", 9, FontStyle.Regular)
 
                 dgvComprobanteEgresoBancos.Columns(0).HeaderText = "ID"
                 dgvComprobanteEgresoBancos.Columns(1).HeaderText = "NRO CE"

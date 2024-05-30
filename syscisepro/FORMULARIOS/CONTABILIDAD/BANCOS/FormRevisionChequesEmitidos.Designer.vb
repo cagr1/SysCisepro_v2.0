@@ -1,8 +1,8 @@
 ﻿Namespace FORMULARIOS.CONTABILIDAD.BANCOS
     <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
     Partial Class FormRevisionChequesEmitidos
-        Inherits System.Windows.Forms.Form
-
+        'Inherits System.Windows.Forms.Form
+        Inherits Krypton.Toolkit.KryptonForm
         'Form reemplaza a Dispose para limpiar la lista de componentes.
         <System.Diagnostics.DebuggerNonUserCode()> _
         Protected Overrides Sub Dispose(ByVal disposing As Boolean)
@@ -98,10 +98,10 @@
             '
             Me.txtTotalEmitidosNoCobrados.BackColor = System.Drawing.Color.White
             Me.txtTotalEmitidosNoCobrados.Enabled = False
-            Me.txtTotalEmitidosNoCobrados.Font = New System.Drawing.Font("Consolas", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtTotalEmitidosNoCobrados.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtTotalEmitidosNoCobrados.Location = New System.Drawing.Point(81, 14)
             Me.txtTotalEmitidosNoCobrados.Name = "txtTotalEmitidosNoCobrados"
-            Me.txtTotalEmitidosNoCobrados.Size = New System.Drawing.Size(69, 23)
+            Me.txtTotalEmitidosNoCobrados.Size = New System.Drawing.Size(69, 21)
             Me.txtTotalEmitidosNoCobrados.TabIndex = 0
             Me.txtTotalEmitidosNoCobrados.Text = "0.00"
             Me.txtTotalEmitidosNoCobrados.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -110,10 +110,10 @@
             '
             Me.txtTotalEmitidosCobrados.BackColor = System.Drawing.Color.White
             Me.txtTotalEmitidosCobrados.Enabled = False
-            Me.txtTotalEmitidosCobrados.Font = New System.Drawing.Font("Consolas", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtTotalEmitidosCobrados.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtTotalEmitidosCobrados.Location = New System.Drawing.Point(6, 14)
             Me.txtTotalEmitidosCobrados.Name = "txtTotalEmitidosCobrados"
-            Me.txtTotalEmitidosCobrados.Size = New System.Drawing.Size(69, 23)
+            Me.txtTotalEmitidosCobrados.Size = New System.Drawing.Size(69, 21)
             Me.txtTotalEmitidosCobrados.TabIndex = 0
             Me.txtTotalEmitidosCobrados.Text = "0.00"
             Me.txtTotalEmitidosCobrados.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -121,9 +121,10 @@
             'lblIdComprobanteEgresoBanco
             '
             Me.lblIdComprobanteEgresoBanco.AutoSize = True
+            Me.lblIdComprobanteEgresoBanco.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.lblIdComprobanteEgresoBanco.Location = New System.Drawing.Point(6, 0)
             Me.lblIdComprobanteEgresoBanco.Name = "lblIdComprobanteEgresoBanco"
-            Me.lblIdComprobanteEgresoBanco.Size = New System.Drawing.Size(25, 13)
+            Me.lblIdComprobanteEgresoBanco.Size = New System.Drawing.Size(16, 13)
             Me.lblIdComprobanteEgresoBanco.TabIndex = 58
             Me.lblIdComprobanteEgresoBanco.Text = "..."
             '
@@ -140,7 +141,7 @@
             Me.dgvChequesEmitidosAprobados.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
             DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
             DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control
-            DataGridViewCellStyle2.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle2.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText
             DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption
             DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
@@ -150,7 +151,7 @@
             Me.dgvChequesEmitidosAprobados.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.CHK})
             DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
             DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window
-            DataGridViewCellStyle3.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle3.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText
             DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(123, Byte), Integer))
             DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
@@ -186,7 +187,7 @@
             Me.tcRevisionCheques.Controls.Add(Me.tpEmitidosNoCobrados)
             Me.tcRevisionCheques.Controls.Add(Me.tpEmitidosCobrados)
             Me.tcRevisionCheques.Controls.Add(Me.tpCaducados)
-            Me.tcRevisionCheques.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.tcRevisionCheques.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.tcRevisionCheques.Location = New System.Drawing.Point(2, 79)
             Me.tcRevisionCheques.Name = "tcRevisionCheques"
             Me.tcRevisionCheques.SelectedIndex = 0
@@ -230,7 +231,7 @@
             Me.dgvEmitidosCobrados.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
             DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
             DataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control
-            DataGridViewCellStyle5.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle5.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             DataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText
             DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption
             DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
@@ -239,7 +240,7 @@
             Me.dgvEmitidosCobrados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
             DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
             DataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window
-            DataGridViewCellStyle6.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle6.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             DataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText
             DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(123, Byte), Integer))
             DataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText
@@ -290,7 +291,7 @@
             Me.dgvEmitidosCaducados.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
             DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
             DataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control
-            DataGridViewCellStyle8.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle8.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             DataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText
             DataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption
             DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText
@@ -299,7 +300,7 @@
             Me.dgvEmitidosCaducados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
             DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
             DataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Window
-            DataGridViewCellStyle9.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle9.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             DataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.ControlText
             DataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(123, Byte), Integer))
             DataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText
@@ -320,7 +321,7 @@
             Me.gbRangoFechaBusqueda.Controls.Add(Me.Label2)
             Me.gbRangoFechaBusqueda.Controls.Add(Me.dtpFechaHasta)
             Me.gbRangoFechaBusqueda.Controls.Add(Me.dtpFechaDesde)
-            Me.gbRangoFechaBusqueda.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.gbRangoFechaBusqueda.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.gbRangoFechaBusqueda.Location = New System.Drawing.Point(2, 28)
             Me.gbRangoFechaBusqueda.Name = "gbRangoFechaBusqueda"
             Me.gbRangoFechaBusqueda.Size = New System.Drawing.Size(251, 45)
@@ -342,7 +343,7 @@
             Me.dtpFechaHasta.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
             Me.dtpFechaHasta.Location = New System.Drawing.Point(142, 18)
             Me.dtpFechaHasta.Name = "dtpFechaHasta"
-            Me.dtpFechaHasta.Size = New System.Drawing.Size(103, 20)
+            Me.dtpFechaHasta.Size = New System.Drawing.Size(103, 21)
             Me.dtpFechaHasta.TabIndex = 1
             '
             'dtpFechaDesde
@@ -350,7 +351,7 @@
             Me.dtpFechaDesde.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
             Me.dtpFechaDesde.Location = New System.Drawing.Point(6, 18)
             Me.dtpFechaDesde.Name = "dtpFechaDesde"
-            Me.dtpFechaDesde.Size = New System.Drawing.Size(112, 20)
+            Me.dtpFechaDesde.Size = New System.Drawing.Size(112, 21)
             Me.dtpFechaDesde.TabIndex = 0
             '
             'gbFechaCobroCheque
@@ -358,7 +359,7 @@
             Me.gbFechaCobroCheque.BackColor = System.Drawing.Color.White
             Me.gbFechaCobroCheque.Controls.Add(Me.chkCaducado)
             Me.gbFechaCobroCheque.Controls.Add(Me.dtpFechaCobroCheque)
-            Me.gbFechaCobroCheque.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.gbFechaCobroCheque.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.gbFechaCobroCheque.Location = New System.Drawing.Point(526, 28)
             Me.gbFechaCobroCheque.Name = "gbFechaCobroCheque"
             Me.gbFechaCobroCheque.Size = New System.Drawing.Size(283, 45)
@@ -371,7 +372,7 @@
             Me.chkCaducado.AutoSize = True
             Me.chkCaducado.Location = New System.Drawing.Point(118, 20)
             Me.chkCaducado.Name = "chkCaducado"
-            Me.chkCaducado.Size = New System.Drawing.Size(74, 17)
+            Me.chkCaducado.Size = New System.Drawing.Size(75, 17)
             Me.chkCaducado.TabIndex = 3
             Me.chkCaducado.Text = "Caducado"
             Me.chkCaducado.UseVisualStyleBackColor = True
@@ -381,7 +382,7 @@
             Me.dtpFechaCobroCheque.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
             Me.dtpFechaCobroCheque.Location = New System.Drawing.Point(6, 18)
             Me.dtpFechaCobroCheque.Name = "dtpFechaCobroCheque"
-            Me.dtpFechaCobroCheque.Size = New System.Drawing.Size(103, 20)
+            Me.dtpFechaCobroCheque.Size = New System.Drawing.Size(103, 21)
             Me.dtpFechaCobroCheque.TabIndex = 2
             '
             'gbBanco
@@ -390,7 +391,7 @@
             Me.gbBanco.Controls.Add(Me.Label10)
             Me.gbBanco.Controls.Add(Me.cmbCuentaBancos)
             Me.gbBanco.Controls.Add(Me.cmbBancos)
-            Me.gbBanco.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.gbBanco.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.gbBanco.Location = New System.Drawing.Point(253, 28)
             Me.gbBanco.Name = "gbBanco"
             Me.gbBanco.Size = New System.Drawing.Size(273, 45)
@@ -403,7 +404,7 @@
             Me.Label10.AutoSize = True
             Me.Label10.Location = New System.Drawing.Point(155, 0)
             Me.Label10.Name = "Label10"
-            Me.Label10.Size = New System.Drawing.Size(61, 13)
+            Me.Label10.Size = New System.Drawing.Size(62, 13)
             Me.Label10.TabIndex = 34
             Me.Label10.Text = "CA/CC/TA:"
             '
@@ -475,6 +476,7 @@
             Me.CrToolStripTextBox1.AutoSize = False
             Me.CrToolStripTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None
             Me.CrToolStripTextBox1.Enabled = False
+            Me.CrToolStripTextBox1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
             Me.CrToolStripTextBox1.Name = "CrToolStripTextBox1"
             Me.CrToolStripTextBox1.ReadOnly = True
             Me.CrToolStripTextBox1.Size = New System.Drawing.Size(100, 20)

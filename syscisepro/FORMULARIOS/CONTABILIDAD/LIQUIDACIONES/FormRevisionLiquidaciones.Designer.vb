@@ -1,8 +1,8 @@
 ﻿Namespace FORMULARIOS.CONTABILIDAD.LIQUIDACIONES
     <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
     Partial Class FormRevisionLiquidaciones
-        Inherits System.Windows.Forms.Form
-
+        'Inherits System.Windows.Forms.Form
+        Inherits Krypton.Toolkit.KryptonForm
         'Form reemplaza a Dispose para limpiar la lista de componentes.
         <System.Diagnostics.DebuggerNonUserCode()> _
         Protected Overrides Sub Dispose(ByVal disposing As Boolean)
@@ -93,7 +93,7 @@
             Me.gbLiquidacion.Controls.Add(Me.lblReposicionLiquidacion)
             Me.gbLiquidacion.Controls.Add(Me.txtTotalLiquidacion)
             Me.gbLiquidacion.Controls.Add(Me.txtFechaLiquidacion)
-            Me.gbLiquidacion.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.gbLiquidacion.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.gbLiquidacion.Location = New System.Drawing.Point(2, 96)
             Me.gbLiquidacion.Name = "gbLiquidacion"
             Me.gbLiquidacion.Size = New System.Drawing.Size(909, 42)
@@ -106,16 +106,17 @@
             Me.txtIdLiquidacion.AutoSize = True
             Me.txtIdLiquidacion.Location = New System.Drawing.Point(79, 0)
             Me.txtIdLiquidacion.Name = "txtIdLiquidacion"
-            Me.txtIdLiquidacion.Size = New System.Drawing.Size(25, 13)
+            Me.txtIdLiquidacion.Size = New System.Drawing.Size(16, 13)
             Me.txtIdLiquidacion.TabIndex = 1
             Me.txtIdLiquidacion.Text = "..."
             '
             'lblFechaLiquidacionFondoRotativo
             '
             Me.lblFechaLiquidacionFondoRotativo.AutoSize = True
+            Me.lblFechaLiquidacionFondoRotativo.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.lblFechaLiquidacionFondoRotativo.Location = New System.Drawing.Point(12, 17)
             Me.lblFechaLiquidacionFondoRotativo.Name = "lblFechaLiquidacionFondoRotativo"
-            Me.lblFechaLiquidacionFondoRotativo.Size = New System.Drawing.Size(43, 13)
+            Me.lblFechaLiquidacionFondoRotativo.Size = New System.Drawing.Size(44, 13)
             Me.lblFechaLiquidacionFondoRotativo.TabIndex = 2
             Me.lblFechaLiquidacionFondoRotativo.Text = "FECHA:"
             '
@@ -124,7 +125,7 @@
             Me.lblTotalLiquidacionFondoRotativo.AutoSize = True
             Me.lblTotalLiquidacionFondoRotativo.Location = New System.Drawing.Point(271, 17)
             Me.lblTotalLiquidacionFondoRotativo.Name = "lblTotalLiquidacionFondoRotativo"
-            Me.lblTotalLiquidacionFondoRotativo.Size = New System.Drawing.Size(43, 13)
+            Me.lblTotalLiquidacionFondoRotativo.Size = New System.Drawing.Size(45, 13)
             Me.lblTotalLiquidacionFondoRotativo.TabIndex = 3
             Me.lblTotalLiquidacionFondoRotativo.Text = "TOTAL:"
             '
@@ -145,7 +146,7 @@
             Me.lblFondoLiquidacion.AutoSize = True
             Me.lblFondoLiquidacion.Location = New System.Drawing.Point(391, 17)
             Me.lblFondoLiquidacion.Name = "lblFondoLiquidacion"
-            Me.lblFondoLiquidacion.Size = New System.Drawing.Size(43, 13)
+            Me.lblFondoLiquidacion.Size = New System.Drawing.Size(47, 13)
             Me.lblFondoLiquidacion.TabIndex = 4
             Me.lblFondoLiquidacion.Text = "FONDO:"
             '
@@ -166,7 +167,7 @@
             Me.lblGastosLiquidacion.AutoSize = True
             Me.lblGastosLiquidacion.Location = New System.Drawing.Point(511, 17)
             Me.lblGastosLiquidacion.Name = "lblGastosLiquidacion"
-            Me.lblGastosLiquidacion.Size = New System.Drawing.Size(49, 13)
+            Me.lblGastosLiquidacion.Size = New System.Drawing.Size(54, 13)
             Me.lblGastosLiquidacion.TabIndex = 5
             Me.lblGastosLiquidacion.Text = "GASTOS:"
             '
@@ -187,7 +188,7 @@
             Me.lblSaldoLiquidacion.AutoSize = True
             Me.lblSaldoLiquidacion.Location = New System.Drawing.Point(637, 16)
             Me.lblSaldoLiquidacion.Name = "lblSaldoLiquidacion"
-            Me.lblSaldoLiquidacion.Size = New System.Drawing.Size(43, 13)
+            Me.lblSaldoLiquidacion.Size = New System.Drawing.Size(45, 13)
             Me.lblSaldoLiquidacion.TabIndex = 6
             Me.lblSaldoLiquidacion.Text = "SALDO:"
             '
@@ -208,7 +209,7 @@
             Me.lblReposicionLiquidacion.AutoSize = True
             Me.lblReposicionLiquidacion.Location = New System.Drawing.Point(758, 16)
             Me.lblReposicionLiquidacion.Name = "lblReposicionLiquidacion"
-            Me.lblReposicionLiquidacion.Size = New System.Drawing.Size(73, 13)
+            Me.lblReposicionLiquidacion.Size = New System.Drawing.Size(74, 13)
             Me.lblReposicionLiquidacion.TabIndex = 7
             Me.lblReposicionLiquidacion.Text = "REPOSICION:"
             '
@@ -228,9 +229,10 @@
             '
             Me.txtFechaLiquidacion.BackColor = System.Drawing.Color.White
             Me.txtFechaLiquidacion.Enabled = False
+            Me.txtFechaLiquidacion.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtFechaLiquidacion.Location = New System.Drawing.Point(61, 14)
             Me.txtFechaLiquidacion.Name = "txtFechaLiquidacion"
-            Me.txtFechaLiquidacion.Size = New System.Drawing.Size(178, 20)
+            Me.txtFechaLiquidacion.Size = New System.Drawing.Size(178, 21)
             Me.txtFechaLiquidacion.TabIndex = 9
             '
             'dgvSolicitudFondoRotativo
@@ -246,7 +248,7 @@
             Me.dgvSolicitudFondoRotativo.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.CHK})
             DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
             DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
-            DataGridViewCellStyle2.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle2.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
             DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(123, Byte), Integer))
             DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
@@ -268,7 +270,7 @@
             Me.CHK.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader
             Me.CHK.HeaderText = "CHK"
             Me.CHK.Name = "CHK"
-            Me.CHK.Width = 31
+            Me.CHK.Width = 35
             '
             'dgvLiquidacionesPendientes
             '
@@ -299,11 +301,11 @@
             'chkSeleccionarTodo
             '
             Me.chkSeleccionarTodo.AutoSize = True
-            Me.chkSeleccionarTodo.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.chkSeleccionarTodo.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.chkSeleccionarTodo.Location = New System.Drawing.Point(770, -1)
             Me.chkSeleccionarTodo.Name = "chkSeleccionarTodo"
             Me.chkSeleccionarTodo.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-            Me.chkSeleccionarTodo.Size = New System.Drawing.Size(134, 17)
+            Me.chkSeleccionarTodo.Size = New System.Drawing.Size(147, 17)
             Me.chkSeleccionarTodo.TabIndex = 23
             Me.chkSeleccionarTodo.Text = "MARCAR / DESMARCAR"
             Me.chkSeleccionarTodo.UseVisualStyleBackColor = True
@@ -311,11 +313,11 @@
             'chkSeleccionarTodoNoDeducibles
             '
             Me.chkSeleccionarTodoNoDeducibles.AutoSize = True
-            Me.chkSeleccionarTodoNoDeducibles.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.chkSeleccionarTodoNoDeducibles.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.chkSeleccionarTodoNoDeducibles.Location = New System.Drawing.Point(771, -1)
             Me.chkSeleccionarTodoNoDeducibles.Name = "chkSeleccionarTodoNoDeducibles"
             Me.chkSeleccionarTodoNoDeducibles.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-            Me.chkSeleccionarTodoNoDeducibles.Size = New System.Drawing.Size(134, 17)
+            Me.chkSeleccionarTodoNoDeducibles.Size = New System.Drawing.Size(147, 17)
             Me.chkSeleccionarTodoNoDeducibles.TabIndex = 30
             Me.chkSeleccionarTodoNoDeducibles.Text = "MARCAR / DESMARCAR"
             Me.chkSeleccionarTodoNoDeducibles.UseVisualStyleBackColor = True
@@ -333,7 +335,7 @@
             Me.dgvSolicitudFonoRotativoNoDeducible.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewCheckBoxColumn1})
             DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
             DataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Window
-            DataGridViewCellStyle7.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle7.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             DataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ControlText
             DataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(123, Byte), Integer))
             DataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText
@@ -355,7 +357,7 @@
             Me.DataGridViewCheckBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader
             Me.DataGridViewCheckBoxColumn1.HeaderText = "CHK"
             Me.DataGridViewCheckBoxColumn1.Name = "DataGridViewCheckBoxColumn1"
-            Me.DataGridViewCheckBoxColumn1.Width = 31
+            Me.DataGridViewCheckBoxColumn1.Width = 35
             '
             'gbNoDeducibles
             '
@@ -363,7 +365,7 @@
             Me.gbNoDeducibles.Controls.Add(Me.lblNoDeducibles)
             Me.gbNoDeducibles.Controls.Add(Me.chkSeleccionarTodoNoDeducibles)
             Me.gbNoDeducibles.Controls.Add(Me.dgvSolicitudFonoRotativoNoDeducible)
-            Me.gbNoDeducibles.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.gbNoDeducibles.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.gbNoDeducibles.Location = New System.Drawing.Point(2, 144)
             Me.gbNoDeducibles.Name = "gbNoDeducibles"
             Me.gbNoDeducibles.Size = New System.Drawing.Size(909, 257)
@@ -376,7 +378,7 @@
             Me.lblNoDeducibles.AutoSize = True
             Me.lblNoDeducibles.Location = New System.Drawing.Point(104, 0)
             Me.lblNoDeducibles.Name = "lblNoDeducibles"
-            Me.lblNoDeducibles.Size = New System.Drawing.Size(25, 13)
+            Me.lblNoDeducibles.Size = New System.Drawing.Size(16, 13)
             Me.lblNoDeducibles.TabIndex = 31
             Me.lblNoDeducibles.Text = "..."
             '
@@ -386,7 +388,7 @@
             Me.gbDeducibles.Controls.Add(Me.lblDeducibles)
             Me.gbDeducibles.Controls.Add(Me.chkSeleccionarTodo)
             Me.gbDeducibles.Controls.Add(Me.dgvSolicitudFondoRotativo)
-            Me.gbDeducibles.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.gbDeducibles.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.gbDeducibles.Location = New System.Drawing.Point(2, 403)
             Me.gbDeducibles.Name = "gbDeducibles"
             Me.gbDeducibles.Size = New System.Drawing.Size(909, 250)
@@ -397,9 +399,10 @@
             'lblDeducibles
             '
             Me.lblDeducibles.AutoSize = True
+            Me.lblDeducibles.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.lblDeducibles.Location = New System.Drawing.Point(104, 0)
             Me.lblDeducibles.Name = "lblDeducibles"
-            Me.lblDeducibles.Size = New System.Drawing.Size(25, 13)
+            Me.lblDeducibles.Size = New System.Drawing.Size(16, 13)
             Me.lblDeducibles.TabIndex = 32
             Me.lblDeducibles.Text = "..."
             '
@@ -451,35 +454,35 @@
             '
             'btnRecargar
             '
-            Me.btnRecargar.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.btnRecargar.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.btnRecargar.Image = Global.syscisepro.My.Resources.Resources.BuscarRegistro
             Me.btnRecargar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnRecargar.Name = "btnRecargar"
-            Me.btnRecargar.Size = New System.Drawing.Size(133, 20)
+            Me.btnRecargar.Size = New System.Drawing.Size(126, 20)
             Me.btnRecargar.Text = "RECARGAR LIQU."
             '
             'btnAgregarDiarioNoDeducibles
             '
-            Me.btnAgregarDiarioNoDeducibles.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.btnAgregarDiarioNoDeducibles.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.btnAgregarDiarioNoDeducibles.Image = CType(resources.GetObject("btnAgregarDiarioNoDeducibles.Image"), System.Drawing.Image)
             Me.btnAgregarDiarioNoDeducibles.Name = "btnAgregarDiarioNoDeducibles"
-            Me.btnAgregarDiarioNoDeducibles.Size = New System.Drawing.Size(182, 20)
+            Me.btnAgregarDiarioNoDeducibles.Size = New System.Drawing.Size(180, 20)
             Me.btnAgregarDiarioNoDeducibles.Text = "AGREGAR NO DEDUCIBLES"
             '
             'btnAgregarDiarioDeducibles
             '
-            Me.btnAgregarDiarioDeducibles.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.btnAgregarDiarioDeducibles.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.btnAgregarDiarioDeducibles.Image = CType(resources.GetObject("btnAgregarDiarioDeducibles.Image"), System.Drawing.Image)
             Me.btnAgregarDiarioDeducibles.Name = "btnAgregarDiarioDeducibles"
-            Me.btnAgregarDiarioDeducibles.Size = New System.Drawing.Size(161, 20)
+            Me.btnAgregarDiarioDeducibles.Size = New System.Drawing.Size(160, 20)
             Me.btnAgregarDiarioDeducibles.Text = "AGREGAR DEDUCIBLES"
             '
             'btnFinRevision
             '
-            Me.btnFinRevision.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.btnFinRevision.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.btnFinRevision.Image = Global.syscisepro.My.Resources.Resources.oki
             Me.btnFinRevision.Name = "btnFinRevision"
-            Me.btnFinRevision.Size = New System.Drawing.Size(175, 20)
+            Me.btnFinRevision.Size = New System.Drawing.Size(157, 20)
             Me.btnFinRevision.Text = "FINALIZAR Y LIQUIDAR"
             '
             'FormRevisionLiquidaciones

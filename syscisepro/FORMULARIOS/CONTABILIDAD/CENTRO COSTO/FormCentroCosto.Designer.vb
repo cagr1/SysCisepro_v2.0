@@ -1,8 +1,8 @@
 ﻿Namespace FORMULARIOS.CONTABILIDAD.CENTRO_COSTO
     <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
     Partial Class FormCentroCosto
-        Inherits System.Windows.Forms.Form
-
+        'Inherits System.Windows.Forms.Form
+        Inherits Krypton.Toolkit.KryptonForm
         'Form reemplaza a Dispose para limpiar la lista de componentes.
         <System.Diagnostics.DebuggerNonUserCode()> _
         Protected Overrides Sub Dispose(ByVal disposing As Boolean)
@@ -53,7 +53,7 @@
             Me.lblIdCentroCosto.ForeColor = System.Drawing.Color.Black
             Me.lblIdCentroCosto.Location = New System.Drawing.Point(45, 24)
             Me.lblIdCentroCosto.Name = "lblIdCentroCosto"
-            Me.lblIdCentroCosto.Size = New System.Drawing.Size(28, 14)
+            Me.lblIdCentroCosto.Size = New System.Drawing.Size(21, 14)
             Me.lblIdCentroCosto.TabIndex = 0
             Me.lblIdCentroCosto.Text = "ID:"
             '
@@ -63,7 +63,7 @@
             Me.lblDetalle.ForeColor = System.Drawing.Color.Black
             Me.lblDetalle.Location = New System.Drawing.Point(10, 52)
             Me.lblDetalle.Name = "lblDetalle"
-            Me.lblDetalle.Size = New System.Drawing.Size(63, 14)
+            Me.lblDetalle.Size = New System.Drawing.Size(59, 14)
             Me.lblDetalle.TabIndex = 1
             Me.lblDetalle.Text = "DETALLE:"
             '
@@ -73,7 +73,7 @@
             Me.lblCodigo.ForeColor = System.Drawing.Color.Black
             Me.lblCodigo.Location = New System.Drawing.Point(307, 24)
             Me.lblCodigo.Name = "lblCodigo"
-            Me.lblCodigo.Size = New System.Drawing.Size(56, 14)
+            Me.lblCodigo.Size = New System.Drawing.Size(53, 14)
             Me.lblCodigo.TabIndex = 2
             Me.lblCodigo.Text = "CODIGO:"
             '
@@ -143,7 +143,7 @@
             Me.GroupBox1.Controls.Add(Me.txtDetalleCentroCosto)
             Me.GroupBox1.Controls.Add(Me.lblCodigo)
             Me.GroupBox1.Controls.Add(Me.txtIdCentroCosto)
-            Me.GroupBox1.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.GroupBox1.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.GroupBox1.ForeColor = System.Drawing.Color.Black
             Me.GroupBox1.Location = New System.Drawing.Point(0, 21)
             Me.GroupBox1.Name = "GroupBox1"

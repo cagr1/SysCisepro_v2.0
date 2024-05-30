@@ -16,10 +16,11 @@ using SysCisepro3.Properties;
 using ClassLibraryCisepro3.ProcesosSql;
 using ClassLibraryCisepro3.Estaticas;
 using Microsoft.Office.Interop.Excel;
+using Krypton.Toolkit;
 
 namespace SysCisepro3.TalentoHumano
 {
-    public partial class FrmTicketsFamaciaComecsa : Form
+    public partial class FrmTicketsFamaciaComecsa : KryptonForm
     {
         /// <summary>
         /// CISEPRO 2019
@@ -64,6 +65,7 @@ namespace SysCisepro3.TalentoHumano
             Label1.BackColor = ValidationForms.GetColorSistema(TipoCon);
             Label1.ForeColor = Color.White;
             dataGridView1.DefaultCellStyle.SelectionBackColor = ValidationForms.GetColorSistema(TipoCon);
+            dataGridView1.Font = new System.Drawing.Font("Roboto", 9, FontStyle.Regular);
             switch (TipoCon)
             {
                 case TipoConexion.Seportpac:

@@ -182,6 +182,7 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
 
                 dgvComprobanteEgresoBancos.AutoResizeColumns()
                 dgvComprobanteEgresoBancos.AutoResizeRows()
+                dgvComprobanteEgresoBancos.Font = New Font("Roboto", 9, FontStyle.Regular)
                 dgvComprobanteEgresoBancos.Columns("FACTURAS").Width = 250
                 dgvComprobanteEgresoBancos.Columns("CLIENTE").Width = 250
                 dgvComprobanteEgresoBancos.Columns("OBSERVACION").Width = 250
@@ -219,6 +220,8 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
                     MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorCisepro
                     MenuStrip1.ForeColor = Color.White
                     dgvComprobanteEgresoBancos.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
+                    'set font robot dgvComporbanteEgresoBancos
+
             End Select
              
             llenarComboBancos()

@@ -52,6 +52,7 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.CONSULTAS
             dgvActivoFijosBajas.AutoResizeRows()
             dgvActivoFijosBajas.ReadOnly = False
             dgvActivoFijosBajas.EditMode = DataGridViewEditMode.EditProgrammatically
+            dgvActivoFijosBajas.Font = New Font("Roboto", 8, FontStyle.Regular)
 
         End Sub
     End Class

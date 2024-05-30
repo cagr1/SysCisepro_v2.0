@@ -154,7 +154,7 @@ namespace SysCisepro3.TalentoHumano
 
         private void btnListar_Click(object sender, EventArgs e)
         {
-
+            CargarPersonal(txtFiltro.Text.Trim());
         }
 
         private void dgvPersonal_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)

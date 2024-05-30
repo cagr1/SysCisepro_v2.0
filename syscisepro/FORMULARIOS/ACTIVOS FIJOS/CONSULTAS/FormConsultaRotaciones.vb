@@ -144,7 +144,7 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.CONSULTAS
 
         Private Sub FormConsultaRotaciones_Load(ByVal sender As System.Object, ByVal e As EventArgs) Handles MyBase.Load
             ' DEFINIR TIPO Y COLOR DE SISTEMA
-            Select _tipoCon
+            Select Case _tipoCon
                 Case TipoConexion.Asenava
                     Icon = My.Resources.logo_a
                     dgvRotacionesVehiculos.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorAsenava
@@ -155,6 +155,8 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.CONSULTAS
                     Icon = My.Resources.logo_c
                     dgvRotacionesVehiculos.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
             End Select
+            dgvRotacionesVehiculos.Font = New Font("Roboto", 8, FontStyle.Regular)
+
         End Sub
     End Class
 End Namespace

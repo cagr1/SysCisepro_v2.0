@@ -458,9 +458,10 @@
             '
             Me.rbAcreditadoBancos.AutoSize = True
             Me.rbAcreditadoBancos.Checked = True
+            Me.rbAcreditadoBancos.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.rbAcreditadoBancos.Location = New System.Drawing.Point(6, 8)
             Me.rbAcreditadoBancos.Name = "rbAcreditadoBancos"
-            Me.rbAcreditadoBancos.Size = New System.Drawing.Size(61, 17)
+            Me.rbAcreditadoBancos.Size = New System.Drawing.Size(62, 17)
             Me.rbAcreditadoBancos.TabIndex = 67
             Me.rbAcreditadoBancos.TabStop = True
             Me.rbAcreditadoBancos.Text = "Bancos"
@@ -469,9 +470,10 @@
             'rbAcreditadoCaja
             '
             Me.rbAcreditadoCaja.AutoSize = True
+            Me.rbAcreditadoCaja.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.rbAcreditadoCaja.Location = New System.Drawing.Point(6, 24)
             Me.rbAcreditadoCaja.Name = "rbAcreditadoCaja"
-            Me.rbAcreditadoCaja.Size = New System.Drawing.Size(46, 17)
+            Me.rbAcreditadoCaja.Size = New System.Drawing.Size(47, 17)
             Me.rbAcreditadoCaja.TabIndex = 68
             Me.rbAcreditadoCaja.TabStop = True
             Me.rbAcreditadoCaja.Text = "Caja"
@@ -480,9 +482,10 @@
             'rbAcreditadoCruceCtas
             '
             Me.rbAcreditadoCruceCtas.AutoSize = True
+            Me.rbAcreditadoCruceCtas.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.rbAcreditadoCruceCtas.Location = New System.Drawing.Point(6, 40)
             Me.rbAcreditadoCruceCtas.Name = "rbAcreditadoCruceCtas"
-            Me.rbAcreditadoCruceCtas.Size = New System.Drawing.Size(77, 17)
+            Me.rbAcreditadoCruceCtas.Size = New System.Drawing.Size(80, 17)
             Me.rbAcreditadoCruceCtas.TabIndex = 69
             Me.rbAcreditadoCruceCtas.TabStop = True
             Me.rbAcreditadoCruceCtas.Text = "Cruce Ctas"

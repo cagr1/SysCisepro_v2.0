@@ -395,6 +395,9 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.CONSULTAS
                     MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorCisepro
             End Select
             cbmTipoActivo.SelectedIndex = 0
+            dgvTotalActivosFijos.Font = New Font("Roboto", 8, FontStyle.Regular)
+            dgvActivosFijos.Font = New Font("Roboto", 8, FontStyle.Regular)
+
         End Sub
 
         Private Sub btnReporteFondoRotativo_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnReporteFondoRotativo.Click

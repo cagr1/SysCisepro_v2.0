@@ -65,7 +65,9 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.REQUERIMIENTOS
                     dgvDetalleRequisicionProductoServicio.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
             End Select
             _sqlCommands = New List(Of SqlCommand)
-            deshabilitadoInicio()
+            dgvRequisicionProductoServicio.Font = New Font("Roboto", 8, FontStyle.Regular)
+            dgvDetalleRequisicionProductoServicio.Font = New Font("Roboto", 8, FontStyle.Regular)
+            DeshabilitadoInicio()
             cargarRequisicionProductoServicio()
         End Sub
         Public Sub DeshabilitadoInicio()

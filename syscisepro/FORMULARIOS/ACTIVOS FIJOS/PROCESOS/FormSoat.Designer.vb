@@ -63,9 +63,10 @@
             'txtFechaActual
             '
             Me.txtFechaActual.Enabled = False
+            Me.txtFechaActual.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtFechaActual.Location = New System.Drawing.Point(12, 7)
             Me.txtFechaActual.Name = "txtFechaActual"
-            Me.txtFechaActual.Size = New System.Drawing.Size(240, 20)
+            Me.txtFechaActual.Size = New System.Drawing.Size(240, 21)
             Me.txtFechaActual.TabIndex = 1
             Me.txtFechaActual.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
             '
@@ -81,12 +82,12 @@
             '
             'btnConsultar
             '
-            Me.btnConsultar.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.btnConsultar.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.btnConsultar.Image = CType(resources.GetObject("btnConsultar.Image"), System.Drawing.Image)
             Me.btnConsultar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
             Me.btnConsultar.Location = New System.Drawing.Point(258, 2)
             Me.btnConsultar.Name = "btnConsultar"
-            Me.btnConsultar.Size = New System.Drawing.Size(83, 30)
+            Me.btnConsultar.Size = New System.Drawing.Size(95, 30)
             Me.btnConsultar.TabIndex = 3
             Me.btnConsultar.Text = "CONSULTAR"
             Me.btnConsultar.TextAlign = System.Drawing.ContentAlignment.MiddleRight

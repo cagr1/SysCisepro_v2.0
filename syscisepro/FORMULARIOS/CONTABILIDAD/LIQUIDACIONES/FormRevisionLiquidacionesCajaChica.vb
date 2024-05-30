@@ -79,6 +79,7 @@ Namespace FORMULARIOS.CONTABILIDAD.LIQUIDACIONES
                     MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorAsenava
                     dgvLiquidacionesCajaChica.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorAsenava
                     dgvSolicitudes.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorAsenava
+
                 Case TipoConexion.Seportpac
                     Icon = My.Resources.logo_s
                     MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
@@ -92,7 +93,8 @@ Namespace FORMULARIOS.CONTABILIDAD.LIQUIDACIONES
                     dgvLiquidacionesCajaChica.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
                     dgvSolicitudes.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
             End Select
-
+            dgvSolicitudes.Font = New Font("Roboto", 8, FontStyle.Regular)
+            dgvLiquidacionesCajaChica.Font = New Font("Roboto", 8, FontStyle.Regular)
             _sqlCommands = New List(Of SqlCommand)
 
         End Sub

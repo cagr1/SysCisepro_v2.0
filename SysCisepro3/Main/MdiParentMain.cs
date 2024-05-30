@@ -1750,10 +1750,10 @@ namespace SysCisepro3.Main
             Dispose();
             GC.SuppressFinalize(this);
 
-            _frmLogin.TipoCon = TipoCon;
-            _frmLogin.txtPassword.Clear();
-            _frmLogin.CargarSisitema();
-            _frmLogin.Show();
+            _frmNewLogin.TipoCon = TipoCon;
+            _frmNewLogin.txtPassword.Clear();
+            _frmNewLogin.CargarSisitema();
+            _frmNewLogin.Show();
         } 
 
         private void DisposeAllButThis()

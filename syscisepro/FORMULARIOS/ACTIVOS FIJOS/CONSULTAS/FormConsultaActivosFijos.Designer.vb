@@ -1,8 +1,8 @@
 ﻿Namespace FORMULARIOS.ACTIVOS_FIJOS.CONSULTAS
     <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
     Partial Class FormConsultaActivosFijos
-        Inherits System.Windows.Forms.Form
-
+        'Inherits System.Windows.Forms.Form
+        Inherits Krypton.Toolkit.KryptonForm
         'Form reemplaza a Dispose para limpiar la lista de componentes.
         <System.Diagnostics.DebuggerNonUserCode()> _
         Protected Overrides Sub Dispose(ByVal disposing As Boolean)
@@ -54,10 +54,10 @@
             'Label1
             '
             Me.Label1.AutoSize = True
-            Me.Label1.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Label1.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Label1.Location = New System.Drawing.Point(4, 159)
             Me.Label1.Name = "Label1"
-            Me.Label1.Size = New System.Drawing.Size(65, 13)
+            Me.Label1.Size = New System.Drawing.Size(74, 13)
             Me.Label1.TabIndex = 6
             Me.Label1.Text = "TIPO ACTIVO"
             '
@@ -109,10 +109,10 @@
             'Label2
             '
             Me.Label2.AutoSize = True
-            Me.Label2.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Label2.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Label2.Location = New System.Drawing.Point(363, 159)
             Me.Label2.Name = "Label2"
-            Me.Label2.Size = New System.Drawing.Size(56, 13)
+            Me.Label2.Size = New System.Drawing.Size(60, 13)
             Me.Label2.TabIndex = 8
             Me.Label2.Text = "CANTIDAD"
             '
@@ -120,9 +120,10 @@
             '
             Me.txtCantidad.BackColor = System.Drawing.Color.White
             Me.txtCantidad.Enabled = False
+            Me.txtCantidad.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtCantidad.Location = New System.Drawing.Point(425, 155)
             Me.txtCantidad.Name = "txtCantidad"
-            Me.txtCantidad.Size = New System.Drawing.Size(56, 20)
+            Me.txtCantidad.Size = New System.Drawing.Size(56, 21)
             Me.txtCantidad.TabIndex = 9
             Me.txtCantidad.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
             '
@@ -130,19 +131,20 @@
             '
             Me.txtTotal.BackColor = System.Drawing.Color.White
             Me.txtTotal.Enabled = False
+            Me.txtTotal.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtTotal.Location = New System.Drawing.Point(534, 155)
             Me.txtTotal.Name = "txtTotal"
-            Me.txtTotal.Size = New System.Drawing.Size(100, 20)
+            Me.txtTotal.Size = New System.Drawing.Size(100, 21)
             Me.txtTotal.TabIndex = 11
             Me.txtTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
             '
             'Label3
             '
             Me.Label3.AutoSize = True
-            Me.Label3.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Label3.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Label3.Location = New System.Drawing.Point(493, 159)
             Me.Label3.Name = "Label3"
-            Me.Label3.Size = New System.Drawing.Size(35, 13)
+            Me.Label3.Size = New System.Drawing.Size(42, 13)
             Me.Label3.TabIndex = 10
             Me.Label3.Text = "TOTAL"
             '
@@ -185,10 +187,10 @@
             'Label4
             '
             Me.Label4.AutoSize = True
-            Me.Label4.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Label4.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Label4.Location = New System.Drawing.Point(0, 35)
             Me.Label4.Name = "Label4"
-            Me.Label4.Size = New System.Drawing.Size(117, 13)
+            Me.Label4.Size = New System.Drawing.Size(140, 13)
             Me.Label4.TabIndex = 13
             Me.Label4.Text = "TOTAL DE ACTIVOS FIJOS"
             '
@@ -200,41 +202,42 @@
             Me.MenuStrip1.Name = "MenuStrip1"
             Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(7, 2, 0, 2)
             Me.MenuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
-            Me.MenuStrip1.Size = New System.Drawing.Size(974, 27)
+            Me.MenuStrip1.Size = New System.Drawing.Size(974, 25)
             Me.MenuStrip1.TabIndex = 242
             Me.MenuStrip1.Text = "msIngresoBodega"
             '
             'ToolStripMenuItem1
             '
-            Me.ToolStripMenuItem1.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.ToolStripMenuItem1.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.ToolStripMenuItem1.Image = Global.syscisepro.My.Resources.Resources.BuscarRegistro
             Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
-            Me.ToolStripMenuItem1.Size = New System.Drawing.Size(116, 20)
+            Me.ToolStripMenuItem1.Size = New System.Drawing.Size(117, 20)
             Me.ToolStripMenuItem1.Text = "CARGAR TODAS"
             '
             'cbmTipoActivo
             '
             Me.cbmTipoActivo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cbmTipoActivo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+            Me.cbmTipoActivo.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cbmTipoActivo.Items.AddRange(New Object() {"ARMAS", "RADIOS", "VEHICULOS", "TERRENOS", "EQUIPOS DE COMPUTO", "LIBROS Y COLECCIONES", "EQUIPOS DE OFICINA", "MUEBLES DE OFICINA", "EQUIPOS DE COCINA", "EQUIPOS DE AMBIENTACION", "EQUIPOS DE COMUNICACION Y TELEFONIA", "EQUIPOS DE SEGURIDAD INDUSTRIAL", "CAMARAS DE SEGURIDAD", "GENERADORES", "CHALECOS", "SOFTWARE"})
             Me.cbmTipoActivo.Name = "cbmTipoActivo"
-            Me.cbmTipoActivo.Size = New System.Drawing.Size(121, 23)
+            Me.cbmTipoActivo.Size = New System.Drawing.Size(121, 21)
             '
             'btnReporteFondoRotativo
             '
-            Me.btnReporteFondoRotativo.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.btnReporteFondoRotativo.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.btnReporteFondoRotativo.Image = Global.syscisepro.My.Resources.Resources.excel_icon
             Me.btnReporteFondoRotativo.Name = "btnReporteFondoRotativo"
-            Me.btnReporteFondoRotativo.Size = New System.Drawing.Size(82, 20)
+            Me.btnReporteFondoRotativo.Size = New System.Drawing.Size(83, 20)
             Me.btnReporteFondoRotativo.Text = "REPORTE"
             '
             'Label5
             '
             Me.Label5.AutoSize = True
-            Me.Label5.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Label5.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Label5.Location = New System.Drawing.Point(666, 159)
             Me.Label5.Name = "Label5"
-            Me.Label5.Size = New System.Drawing.Size(54, 13)
+            Me.Label5.Size = New System.Drawing.Size(61, 13)
             Me.Label5.TabIndex = 243
             Me.Label5.Text = "CUSTODIO"
             '
@@ -242,9 +245,10 @@
             '
             Me.txtCustodio.BackColor = System.Drawing.Color.White
             Me.txtCustodio.Enabled = False
+            Me.txtCustodio.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtCustodio.Location = New System.Drawing.Point(726, 155)
             Me.txtCustodio.Name = "txtCustodio"
-            Me.txtCustodio.Size = New System.Drawing.Size(248, 20)
+            Me.txtCustodio.Size = New System.Drawing.Size(248, 21)
             Me.txtCustodio.TabIndex = 244
             Me.txtCustodio.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
             '
@@ -252,9 +256,10 @@
             '
             Me.txtActivo.BackColor = System.Drawing.Color.White
             Me.txtActivo.Enabled = False
+            Me.txtActivo.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtActivo.Location = New System.Drawing.Point(75, 154)
             Me.txtActivo.Name = "txtActivo"
-            Me.txtActivo.Size = New System.Drawing.Size(237, 20)
+            Me.txtActivo.Size = New System.Drawing.Size(237, 21)
             Me.txtActivo.TabIndex = 245
             Me.txtActivo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
             '

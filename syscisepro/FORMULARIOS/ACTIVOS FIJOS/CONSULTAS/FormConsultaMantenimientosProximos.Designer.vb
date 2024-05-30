@@ -1,8 +1,8 @@
 ﻿Namespace FORMULARIOS.ACTIVOS_FIJOS.CONSULTAS
     <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
     Partial Class FormConsultaMantenimientosProximos
-        Inherits System.Windows.Forms.Form
-
+        'Inherits System.Windows.Forms.Form
+        Inherits Krypton.Toolkit.KryptonForm
         'Form reemplaza a Dispose para limpiar la lista de componentes.
         <System.Diagnostics.DebuggerNonUserCode()> _
         Protected Overrides Sub Dispose(ByVal disposing As Boolean)
@@ -64,10 +64,10 @@
             'rbSemana
             '
             Me.rbSemana.AutoSize = True
-            Me.rbSemana.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.rbSemana.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.rbSemana.Location = New System.Drawing.Point(152, 5)
             Me.rbSemana.Name = "rbSemana"
-            Me.rbSemana.Size = New System.Drawing.Size(63, 17)
+            Me.rbSemana.Size = New System.Drawing.Size(70, 17)
             Me.rbSemana.TabIndex = 1
             Me.rbSemana.TabStop = True
             Me.rbSemana.Text = "SEMANA"
@@ -76,10 +76,10 @@
             'rbTodos
             '
             Me.rbTodos.AutoSize = True
-            Me.rbTodos.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.rbTodos.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.rbTodos.Location = New System.Drawing.Point(11, 4)
             Me.rbTodos.Name = "rbTodos"
-            Me.rbTodos.Size = New System.Drawing.Size(56, 17)
+            Me.rbTodos.Size = New System.Drawing.Size(62, 17)
             Me.rbTodos.TabIndex = 2
             Me.rbTodos.TabStop = True
             Me.rbTodos.Text = "TODOS"
@@ -87,7 +87,7 @@
             '
             'btnFiltrar
             '
-            Me.btnFiltrar.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.btnFiltrar.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.btnFiltrar.Image = CType(resources.GetObject("btnFiltrar.Image"), System.Drawing.Image)
             Me.btnFiltrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
             Me.btnFiltrar.Location = New System.Drawing.Point(271, 3)
@@ -100,7 +100,7 @@
             '
             'btnMayores
             '
-            Me.btnMayores.Font = New System.Drawing.Font("Consolas", 8.25!)
+            Me.btnMayores.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.btnMayores.Image = Global.syscisepro.My.Resources.Resources.excel_icon
             Me.btnMayores.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
             Me.btnMayores.Location = New System.Drawing.Point(367, 3)

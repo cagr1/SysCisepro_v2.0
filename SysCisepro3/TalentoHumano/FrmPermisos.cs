@@ -18,10 +18,11 @@ using SysCisepro3.Reportes;
 using SysCisepro3.Properties;
 using Office = Microsoft.Office.Interop;
 using CrystalDecisions.CrystalReports.Engine;
+using Krypton.Toolkit;
 
 namespace SysCisepro3.TalentoHumano
 {
-    public partial class FrmPermisos : Form
+    public partial class FrmPermisos : KryptonForm
     {
         /// <summary>
         /// CISEPRO 2019

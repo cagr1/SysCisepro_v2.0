@@ -19,10 +19,12 @@ using DataTable = System.Data.DataTable;
 using Microsoft.Office.Interop.Excel;
 using Office = Microsoft.Office.Interop;
 using ClassLibraryCisepro3.Estaticas;
+using Krypton.Toolkit;
+using PdfSharp;
 
 namespace SysCisepro3.TalentoHumano
 {
-    public partial class FrmAspirantes : Form
+    public partial class FrmAspirantes : KryptonForm
     {
         /// <summary>
         /// CISEPRO 2019
@@ -281,16 +283,17 @@ namespace SysCisepro3.TalentoHumano
                     var tempFileName = Path.ChangeExtension(Path.GetTempFileName(), "PDF");
                     File.WriteAllBytes(tempFileName, (byte[])asp["DOCUMENTOS"]);
 
-                    axAcroPDF1.LoadFile(tempFileName);
-                    axAcroPDF1.setShowToolbar(false);
-                    axAcroPDF1.setZoom(75);
-                    axAcroPDF1.setLayoutMode("SinglePage");
-                    axAcroPDF1.Show();
+                    
+                    //axAcroPDF1.LoadFile(tempFileName);
+                    //axAcroPDF1.setShowToolbar(false);
+                    //axAcroPDF1.setZoom(75);
+                    //axAcroPDF1.setLayoutMode("SinglePage");
+                    //axAcroPDF1.Show();
                 }
                 catch
                 {                              
-                    axAcroPDF1.LoadFile("people.pdf");
-                    axAcroPDF1.Refresh();
+                    //axAcroPDF1.LoadFile("people.pdf");
+                    //axAcroPDF1.Refresh();
                 }
 
                 HabilitarBotonesMenu(true, false, true, false);

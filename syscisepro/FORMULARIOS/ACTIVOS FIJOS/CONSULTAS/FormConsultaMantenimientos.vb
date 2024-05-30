@@ -77,6 +77,7 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.CONSULTAS
                     Icon = My.Resources.logo_c
                     dgvActivosFijosMantenimientos.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
             End Select
+            dgvActivosFijosMantenimientos.Font = New Font("Roboto", 8, FontStyle.Regular)
         End Sub
     End Class
 End Namespace

@@ -23,7 +23,6 @@
         'No lo modifique con el editor de código.
         <System.Diagnostics.DebuggerStepThrough()> _
         Private Sub InitializeComponent()
-            Me.components = New System.ComponentModel.Container()
             Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormComprobanteEgresoBanco))
             Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
@@ -108,7 +107,7 @@
             Me.ID_PCC = New System.Windows.Forms.DataGridViewTextBoxColumn()
             Me.MONTO_PCC = New System.Windows.Forms.DataGridViewTextBoxColumn()
             Me.NRO_REG_ASIENTO = New System.Windows.Forms.DataGridViewTextBoxColumn()
-            Me.ContextMenuStripClicDerecho = New System.Windows.Forms.ContextMenuStrip(Me.components)
+            Me.ContextMenuStripClicDerecho = New System.Windows.Forms.ContextMenuStrip()
             Me.ToolStripMenuItemEliminar = New System.Windows.Forms.ToolStripMenuItem()
             Me.GroupBox2 = New System.Windows.Forms.GroupBox()
             Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
@@ -658,9 +657,10 @@
             'chkTransferenciaInterna
             '
             Me.chkTransferenciaInterna.AutoSize = True
+            Me.chkTransferenciaInterna.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.chkTransferenciaInterna.Location = New System.Drawing.Point(92, 62)
             Me.chkTransferenciaInterna.Name = "chkTransferenciaInterna"
-            Me.chkTransferenciaInterna.Size = New System.Drawing.Size(169, 17)
+            Me.chkTransferenciaInterna.Size = New System.Drawing.Size(162, 17)
             Me.chkTransferenciaInterna.TabIndex = 38
             Me.chkTransferenciaInterna.Text = "CRUCE INTERNO CUENTAS"
             Me.chkTransferenciaInterna.UseVisualStyleBackColor = True

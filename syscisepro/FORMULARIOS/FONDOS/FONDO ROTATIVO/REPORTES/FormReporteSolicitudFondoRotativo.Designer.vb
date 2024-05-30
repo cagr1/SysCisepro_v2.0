@@ -43,6 +43,7 @@
             'btnVolver
             '
             Me.btnVolver.Cursor = System.Windows.Forms.Cursors.Arrow
+            Me.btnVolver.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.btnVolver.Image = Global.syscisepro.My.Resources.Resources.BuscarRegistro
             Me.btnVolver.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
             Me.btnVolver.Location = New System.Drawing.Point(821, 2)
