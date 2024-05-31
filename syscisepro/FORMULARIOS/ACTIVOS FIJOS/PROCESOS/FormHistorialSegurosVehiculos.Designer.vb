@@ -1,8 +1,8 @@
 ﻿Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
     <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
     Partial Class FormHistorialSegurosVehiculos
-        Inherits System.Windows.Forms.Form
-
+        'Inherits System.Windows.Forms.Form
+        Inherits Krypton.Toolkit.KryptonForm
         'Form reemplaza a Dispose para limpiar la lista de componentes.
         <System.Diagnostics.DebuggerNonUserCode()> _
         Protected Overrides Sub Dispose(ByVal disposing As Boolean)
@@ -65,6 +65,7 @@
             '
             Me.cbmVehiculos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cbmVehiculos.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+            Me.cbmVehiculos.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cbmVehiculos.FormattingEnabled = True
             Me.cbmVehiculos.Location = New System.Drawing.Point(81, 12)
             Me.cbmVehiculos.Name = "cbmVehiculos"
@@ -74,9 +75,10 @@
             'Label1
             '
             Me.Label1.AutoSize = True
+            Me.Label1.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Label1.Location = New System.Drawing.Point(7, 15)
             Me.Label1.Name = "Label1"
-            Me.Label1.Size = New System.Drawing.Size(68, 13)
+            Me.Label1.Size = New System.Drawing.Size(66, 13)
             Me.Label1.TabIndex = 2
             Me.Label1.Text = "VEHICULOS"
             '

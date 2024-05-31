@@ -1,8 +1,8 @@
 ﻿Namespace FORMULARIOS.ACTIVOS_FIJOS.CONSULTAS
     <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
     Partial Class FormConsultarProximosSegurosVencidos
-        Inherits System.Windows.Forms.Form
-
+        'Inherits System.Windows.Forms.Form
+        Inherits Krypton.Toolkit.KryptonForm
         'Form reemplaza a Dispose para limpiar la lista de componentes.
         <System.Diagnostics.DebuggerNonUserCode()> _
         Protected Overrides Sub Dispose(ByVal disposing As Boolean)
@@ -52,6 +52,7 @@
             '
             Me.tcSeguros.Controls.Add(Me.tpSeguros)
             Me.tcSeguros.Controls.Add(Me.tpDispositivos)
+            Me.tcSeguros.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.tcSeguros.Location = New System.Drawing.Point(0, 0)
             Me.tcSeguros.Name = "tcSeguros"
             Me.tcSeguros.SelectedIndex = 0
@@ -100,7 +101,7 @@
             Me.txtFechaActual.Enabled = False
             Me.txtFechaActual.Location = New System.Drawing.Point(23, 27)
             Me.txtFechaActual.Name = "txtFechaActual"
-            Me.txtFechaActual.Size = New System.Drawing.Size(115, 20)
+            Me.txtFechaActual.Size = New System.Drawing.Size(115, 21)
             Me.txtFechaActual.TabIndex = 9
             Me.txtFechaActual.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
             '
@@ -116,7 +117,7 @@
             Me.dgvSeguros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
             DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
             DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
-            DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle2.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
             DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(123, Byte), Integer))
             DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
@@ -147,12 +148,12 @@
             '
             'Button1
             '
-            Me.Button1.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Button1.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
             Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
             Me.Button1.Location = New System.Drawing.Point(142, 6)
             Me.Button1.Name = "Button1"
-            Me.Button1.Size = New System.Drawing.Size(86, 35)
+            Me.Button1.Size = New System.Drawing.Size(98, 35)
             Me.Button1.TabIndex = 15
             Me.Button1.Text = "CONSULTAR"
             Me.Button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -173,7 +174,7 @@
             Me.txtFechaActualDispositivo.Enabled = False
             Me.txtFechaActualDispositivo.Location = New System.Drawing.Point(21, 16)
             Me.txtFechaActualDispositivo.Name = "txtFechaActualDispositivo"
-            Me.txtFechaActualDispositivo.Size = New System.Drawing.Size(115, 20)
+            Me.txtFechaActualDispositivo.Size = New System.Drawing.Size(115, 21)
             Me.txtFechaActualDispositivo.TabIndex = 13
             Me.txtFechaActualDispositivo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
             '
@@ -186,7 +187,7 @@
             Me.dgvDispositivos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
             DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
             DataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window
-            DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle4.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText
             DataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(123, Byte), Integer))
             DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText

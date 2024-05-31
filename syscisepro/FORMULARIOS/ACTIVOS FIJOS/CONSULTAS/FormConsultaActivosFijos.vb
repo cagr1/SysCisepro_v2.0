@@ -2,13 +2,22 @@
 Imports ClassLibraryCisepro.ENUMS
 Imports Microsoft.Office.Interop
 Imports syscisepro.DATOS
+Imports Krypton.Toolkit
+Imports System.Windows.Forms
+Imports System.Drawing
 
 Namespace FORMULARIOS.ACTIVOS_FIJOS.CONSULTAS
     ''' <summary>
     ''' CISEPRO - SEPORTPAC - ASENAVA 2019
     ''' </summary>
     Public Class FormConsultaActivosFijos
+
         Private _tipoCon As TipoConexion
+
+
+
+
+
         Property TipoCox As Integer
             Get
                 Select Case _tipoCon
@@ -30,7 +39,7 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.CONSULTAS
                         _tipoCon = TipoConexion.Cisepro
                 End Select
             End Set
-        End Property 
+        End Property
         Public IdUsuario As Integer
 
         ReadOnly _objActivo As New ClassActivoFijo
@@ -235,7 +244,7 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.CONSULTAS
                 dgvTotalActivosFijos.AutoResizeColumns()
                 dgvTotalActivosFijos.AutoResizeRows()
             Catch
-                dgvTotalActivosFijos.DataSource = Nothing               
+                dgvTotalActivosFijos.DataSource = Nothing
             End Try
         End Sub
 
@@ -256,7 +265,7 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.CONSULTAS
                 txtCantidad.Text = "0.00"
             End Try
         End Sub
-         
+
         Private Sub ExportarDatosExcel(ByVal dataGridViewExp As DataGridView, ByVal titulo As String)
             Dim mExcel As New Excel.Application
             mExcel.Cursor = Excel.XlMousePointer.xlWait
@@ -378,7 +387,7 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.CONSULTAS
             End With
             mExcel.Cursor = Excel.XlMousePointer.xlDefault
         End Sub
-         
+
         Private Sub FormConsultaActivosFijos_Load(ByVal sender As System.Object, ByVal e As EventArgs) Handles MyBase.Load
             dgvTotalActivosFijos.DefaultCellStyle.SelectionBackColor = ValidationForms.GetColorSistema(_tipoCon)
             dgvActivosFijos.DefaultCellStyle.SelectionBackColor = ValidationForms.GetColorSistema(_tipoCon)
@@ -398,8 +407,38 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.CONSULTAS
             dgvTotalActivosFijos.Font = New Font("Roboto", 8, FontStyle.Regular)
             dgvActivosFijos.Font = New Font("Roboto", 8, FontStyle.Regular)
 
+
+            txtBuscar.ForeColor = ValidationForms.GetColorSistema(_tipoCon)
+            txtBuscar.Font = New Font("Roboto", 9, FontStyle.Regular)
+
+            SetPlaceholder(txtBuscar, "BUSCAR ACTIVO")
+            Dim BottomPadding As Integer = (txtBuscar.Height - txtBuscar.Font.Height) / 2
+            txtBuscar.Padding = New Padding(0, BottomPadding, 0, 0)
+            Me.Controls.Add(txtBuscar)
+
+
         End Sub
 
+        Private Sub SetPlaceholder(txtBox As TextBox, placeholderText As String)
+            ' Set the initial placeholder text and color
+            txtBox.Text = placeholderText
+            txtBox.ForeColor = Color.Gray
+
+            ' Add event handlers to manage the placeholder text behavior
+            AddHandler txtBox.Enter, Sub(sender, e)
+                                         If txtBox.Text = placeholderText Then
+                                             txtBox.Text = String.Empty
+                                             txtBox.ForeColor = Color.Black
+                                         End If
+                                     End Sub
+
+            AddHandler txtBox.Leave, Sub(sender, e)
+                                         If String.IsNullOrWhiteSpace(txtBox.Text) Then
+                                             txtBox.Text = placeholderText
+                                             txtBox.ForeColor = Color.Gray
+                                         End If
+                                     End Sub
+        End Sub
         Private Sub btnReporteFondoRotativo_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnReporteFondoRotativo.Click
             ExportarDatosExcel(dgvActivosFijos, "REPORTE DE ACTIVOS" + cbmTipoActivo.Text)
         End Sub

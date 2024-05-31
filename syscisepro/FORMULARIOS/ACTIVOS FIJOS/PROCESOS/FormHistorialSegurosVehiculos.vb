@@ -82,7 +82,7 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
                     Icon = My.Resources.logo_c
                      dgvHistorial.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
             End Select
-
+            dgvHistorial.Font = New Font("Roboto", 8, FontStyle.Regular)
             CargarTodos()
             LlenarComboVehiculos()
 

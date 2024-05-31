@@ -55,9 +55,10 @@ namespace SysCisepro3.Main
             var materialSkinManager = MaterialSkinManager.Instance;
             //materialSkinManager.AddFormToManage(this);
             materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
-            materialSkinManager.ColorScheme = new MaterialSkin.ColorScheme(Primary.Blue800, Primary.Blue800, Primary.Blue700, Accent.LightBlue200, TextShade.WHITE);
+            materialSkinManager.ColorScheme = new MaterialSkin.ColorScheme(Primary.Blue900, Primary.Blue900, Primary.Blue900, Accent.Blue700, TextShade.WHITE);
             _objUsuario = new ClassUsuarioGeneral();
-            
+            //cbxUser.Font = new Font("Roboto", 8, FontStyle.Regular);
+
         }
 
         private void FrmNewLogin_Load(object sender, EventArgs e)
@@ -95,6 +96,8 @@ namespace SysCisepro3.Main
                     //pictureBoxA.Visible = false;
                     break;
             }
+
+
             //btnAceptar.ForeColor = Color.White;
            // btnAceptar.BackColor = ValidationForms.GetColorSistema(TipoCon);
 
@@ -187,6 +190,11 @@ namespace SysCisepro3.Main
             _objUsuario.SalirSistema(TipoCon);
             Dispose();
             Application.Exit();
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
 
         }
     }

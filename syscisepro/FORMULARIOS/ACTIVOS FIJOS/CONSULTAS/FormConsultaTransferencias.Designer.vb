@@ -1,8 +1,8 @@
 ﻿Namespace FORMULARIOS.ACTIVOS_FIJOS.CONSULTAS
     <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
     Partial Class FormConsultaTransferencias
-        Inherits System.Windows.Forms.Form
-
+        'Inherits System.Windows.Forms.Form
+        Inherits Krypton.Toolkit.KryptonForm
         'Form reemplaza a Dispose para limpiar la lista de componentes.
         <System.Diagnostics.DebuggerNonUserCode()> _
         Protected Overrides Sub Dispose(ByVal disposing As Boolean)
@@ -41,18 +41,20 @@
             'dtpFechaInicial
             '
             Me.dtpFechaInicial.CustomFormat = ""
+            Me.dtpFechaInicial.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.dtpFechaInicial.Location = New System.Drawing.Point(81, 26)
             Me.dtpFechaInicial.Name = "dtpFechaInicial"
-            Me.dtpFechaInicial.Size = New System.Drawing.Size(200, 20)
+            Me.dtpFechaInicial.Size = New System.Drawing.Size(200, 21)
             Me.dtpFechaInicial.TabIndex = 0
             Me.dtpFechaInicial.Value = New Date(2012, 6, 18, 0, 0, 0, 0)
             '
             'rbFecha
             '
             Me.rbFecha.AutoSize = True
+            Me.rbFecha.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.rbFecha.Location = New System.Drawing.Point(12, 26)
             Me.rbFecha.Name = "rbFecha"
-            Me.rbFecha.Size = New System.Drawing.Size(63, 17)
+            Me.rbFecha.Size = New System.Drawing.Size(62, 17)
             Me.rbFecha.TabIndex = 1
             Me.rbFecha.TabStop = True
             Me.rbFecha.Text = "FECHA:"
@@ -61,9 +63,10 @@
             'rbTodas
             '
             Me.rbTodas.AutoSize = True
+            Me.rbTodas.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.rbTodas.Location = New System.Drawing.Point(494, 36)
             Me.rbTodas.Name = "rbTodas"
-            Me.rbTodas.Size = New System.Drawing.Size(62, 17)
+            Me.rbTodas.Size = New System.Drawing.Size(61, 17)
             Me.rbTodas.TabIndex = 2
             Me.rbTodas.TabStop = True
             Me.rbTodas.Text = "TODAS"
@@ -98,17 +101,19 @@
             '
             'txtParametroBusqueda
             '
+            Me.txtParametroBusqueda.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtParametroBusqueda.Location = New System.Drawing.Point(640, 22)
             Me.txtParametroBusqueda.Name = "txtParametroBusqueda"
-            Me.txtParametroBusqueda.Size = New System.Drawing.Size(267, 20)
+            Me.txtParametroBusqueda.Size = New System.Drawing.Size(267, 21)
             Me.txtParametroBusqueda.TabIndex = 4
             '
             'rbCustodioAnterior
             '
             Me.rbCustodioAnterior.AutoSize = True
+            Me.rbCustodioAnterior.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.rbCustodioAnterior.Location = New System.Drawing.Point(494, 6)
             Me.rbCustodioAnterior.Name = "rbCustodioAnterior"
-            Me.rbCustodioAnterior.Size = New System.Drawing.Size(140, 17)
+            Me.rbCustodioAnterior.Size = New System.Drawing.Size(135, 17)
             Me.rbCustodioAnterior.TabIndex = 5
             Me.rbCustodioAnterior.TabStop = True
             Me.rbCustodioAnterior.Text = "CUSTODIO ANTERIOR"
@@ -116,6 +121,7 @@
             '
             'btnBuscar
             '
+            Me.btnBuscar.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.btnBuscar.Image = Global.syscisepro.My.Resources.Resources.BuscarRegistro
             Me.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.TopCenter
             Me.btnBuscar.Location = New System.Drawing.Point(927, 12)
@@ -129,18 +135,20 @@
             'dtpFechaFinal
             '
             Me.dtpFechaFinal.CustomFormat = ""
+            Me.dtpFechaFinal.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.dtpFechaFinal.Location = New System.Drawing.Point(287, 26)
             Me.dtpFechaFinal.Name = "dtpFechaFinal"
-            Me.dtpFechaFinal.Size = New System.Drawing.Size(200, 20)
+            Me.dtpFechaFinal.Size = New System.Drawing.Size(200, 21)
             Me.dtpFechaFinal.TabIndex = 7
             Me.dtpFechaFinal.Value = New Date(2012, 6, 18, 0, 0, 0, 0)
             '
             'rbCustodioNuevo
             '
             Me.rbCustodioNuevo.AutoSize = True
+            Me.rbCustodioNuevo.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.rbCustodioNuevo.Location = New System.Drawing.Point(494, 21)
             Me.rbCustodioNuevo.Name = "rbCustodioNuevo"
-            Me.rbCustodioNuevo.Size = New System.Drawing.Size(122, 17)
+            Me.rbCustodioNuevo.Size = New System.Drawing.Size(118, 17)
             Me.rbCustodioNuevo.TabIndex = 8
             Me.rbCustodioNuevo.TabStop = True
             Me.rbCustodioNuevo.Text = "CUSTODIO NUEVO"

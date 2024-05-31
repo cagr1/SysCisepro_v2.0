@@ -1,8 +1,8 @@
 ﻿Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
     <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
     Partial Class FormMantenimientoMarcasMaterialesColores
-        Inherits System.Windows.Forms.Form
-
+        'Inherits System.Windows.Forms.Form
+        Inherits Krypton.Toolkit.KryptonForm
         'Form reemplaza a Dispose para limpiar la lista de componentes.
         <System.Diagnostics.DebuggerNonUserCode()> _
         Protected Overrides Sub Dispose(ByVal disposing As Boolean)
@@ -74,7 +74,7 @@
             ID_CATEGORIALabel.AutoSize = True
             ID_CATEGORIALabel.Location = New System.Drawing.Point(6, 37)
             ID_CATEGORIALabel.Name = "ID_CATEGORIALabel"
-            ID_CATEGORIALabel.Size = New System.Drawing.Size(21, 13)
+            ID_CATEGORIALabel.Size = New System.Drawing.Size(20, 13)
             ID_CATEGORIALabel.TabIndex = 17
             ID_CATEGORIALabel.Text = "ID:"
             '
@@ -83,7 +83,7 @@
             NOMBRE_CATEGORIALabel.AutoSize = True
             NOMBRE_CATEGORIALabel.Location = New System.Drawing.Point(6, 73)
             NOMBRE_CATEGORIALabel.Name = "NOMBRE_CATEGORIALabel"
-            NOMBRE_CATEGORIALabel.Size = New System.Drawing.Size(58, 13)
+            NOMBRE_CATEGORIALabel.Size = New System.Drawing.Size(55, 13)
             NOMBRE_CATEGORIALabel.TabIndex = 21
             NOMBRE_CATEGORIALabel.Text = "DETALLE:"
             '
@@ -92,7 +92,7 @@
             ID_SUB_GRUPOLabel.AutoSize = True
             ID_SUB_GRUPOLabel.Location = New System.Drawing.Point(23, 35)
             ID_SUB_GRUPOLabel.Name = "ID_SUB_GRUPOLabel"
-            ID_SUB_GRUPOLabel.Size = New System.Drawing.Size(21, 13)
+            ID_SUB_GRUPOLabel.Size = New System.Drawing.Size(20, 13)
             ID_SUB_GRUPOLabel.TabIndex = 0
             ID_SUB_GRUPOLabel.Text = "ID:"
             '
@@ -101,7 +101,7 @@
             NOMBRE_SUB_GRUPOLabel.AutoSize = True
             NOMBRE_SUB_GRUPOLabel.Location = New System.Drawing.Point(23, 70)
             NOMBRE_SUB_GRUPOLabel.Name = "NOMBRE_SUB_GRUPOLabel"
-            NOMBRE_SUB_GRUPOLabel.Size = New System.Drawing.Size(58, 13)
+            NOMBRE_SUB_GRUPOLabel.Size = New System.Drawing.Size(55, 13)
             NOMBRE_SUB_GRUPOLabel.TabIndex = 4
             NOMBRE_SUB_GRUPOLabel.Text = "DETALLE:"
             '
@@ -110,7 +110,7 @@
             ID_GRUPOLabel.AutoSize = True
             ID_GRUPOLabel.Location = New System.Drawing.Point(9, 41)
             ID_GRUPOLabel.Name = "ID_GRUPOLabel"
-            ID_GRUPOLabel.Size = New System.Drawing.Size(21, 13)
+            ID_GRUPOLabel.Size = New System.Drawing.Size(20, 13)
             ID_GRUPOLabel.TabIndex = 13
             ID_GRUPOLabel.Text = "ID:"
             '
@@ -119,7 +119,7 @@
             NOMBRE_GRUPOLabel.AutoSize = True
             NOMBRE_GRUPOLabel.Location = New System.Drawing.Point(9, 80)
             NOMBRE_GRUPOLabel.Name = "NOMBRE_GRUPOLabel"
-            NOMBRE_GRUPOLabel.Size = New System.Drawing.Size(58, 13)
+            NOMBRE_GRUPOLabel.Size = New System.Drawing.Size(55, 13)
             NOMBRE_GRUPOLabel.TabIndex = 17
             NOMBRE_GRUPOLabel.Text = "DETALLE:"
             '
@@ -212,6 +212,7 @@
             Me.gbMarcas.Controls.Add(Me.txtIdMarca)
             Me.gbMarcas.Controls.Add(Me.txtDetalleMarca)
             Me.gbMarcas.Controls.Add(NOMBRE_CATEGORIALabel)
+            Me.gbMarcas.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.gbMarcas.Location = New System.Drawing.Point(2, 2)
             Me.gbMarcas.Name = "gbMarcas"
             Me.gbMarcas.Size = New System.Drawing.Size(395, 108)
@@ -223,7 +224,7 @@
             '
             Me.btnGuardarMarca.BackColor = System.Drawing.Color.White
             Me.btnGuardarMarca.Enabled = False
-            Me.btnGuardarMarca.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.btnGuardarMarca.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.btnGuardarMarca.Image = CType(resources.GetObject("btnGuardarMarca.Image"), System.Drawing.Image)
             Me.btnGuardarMarca.ImageAlign = System.Drawing.ContentAlignment.TopCenter
             Me.btnGuardarMarca.Location = New System.Drawing.Point(301, 22)
@@ -238,7 +239,7 @@
             '
             Me.btnNuevoMarca.BackColor = System.Drawing.Color.White
             Me.btnNuevoMarca.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-            Me.btnNuevoMarca.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.btnNuevoMarca.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.btnNuevoMarca.Image = CType(resources.GetObject("btnNuevoMarca.Image"), System.Drawing.Image)
             Me.btnNuevoMarca.ImageAlign = System.Drawing.ContentAlignment.TopCenter
             Me.btnNuevoMarca.Location = New System.Drawing.Point(220, 22)
@@ -255,7 +256,7 @@
             Me.txtIdMarca.Enabled = False
             Me.txtIdMarca.Location = New System.Drawing.Point(70, 37)
             Me.txtIdMarca.Name = "txtIdMarca"
-            Me.txtIdMarca.Size = New System.Drawing.Size(63, 20)
+            Me.txtIdMarca.Size = New System.Drawing.Size(63, 21)
             Me.txtIdMarca.TabIndex = 3
             '
             'txtDetalleMarca
@@ -263,12 +264,13 @@
             Me.txtDetalleMarca.Enabled = False
             Me.txtDetalleMarca.Location = New System.Drawing.Point(70, 66)
             Me.txtDetalleMarca.Name = "txtDetalleMarca"
-            Me.txtDetalleMarca.Size = New System.Drawing.Size(306, 20)
+            Me.txtDetalleMarca.Size = New System.Drawing.Size(306, 21)
             Me.txtDetalleMarca.TabIndex = 7
             '
             'btnVolver
             '
             Me.btnVolver.BackColor = System.Drawing.Color.White
+            Me.btnVolver.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.btnVolver.Image = Global.syscisepro.My.Resources.Resources.ok
             Me.btnVolver.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
             Me.btnVolver.Location = New System.Drawing.Point(225, 334)
@@ -286,6 +288,7 @@
             Me.gbMateriales.Controls.Add(Me.btnNuevoMaterial)
             Me.gbMateriales.Controls.Add(NOMBRE_SUB_GRUPOLabel)
             Me.gbMateriales.Controls.Add(Me.txtDetalleMaterial)
+            Me.gbMateriales.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.gbMateriales.Location = New System.Drawing.Point(1, 235)
             Me.gbMateriales.Name = "gbMateriales"
             Me.gbMateriales.Size = New System.Drawing.Size(396, 93)
@@ -297,7 +300,7 @@
             '
             Me.btnGuardarMaterial.BackColor = System.Drawing.Color.White
             Me.btnGuardarMaterial.Enabled = False
-            Me.btnGuardarMaterial.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.btnGuardarMaterial.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.btnGuardarMaterial.Image = CType(resources.GetObject("btnGuardarMaterial.Image"), System.Drawing.Image)
             Me.btnGuardarMaterial.ImageAlign = System.Drawing.ContentAlignment.TopCenter
             Me.btnGuardarMaterial.Location = New System.Drawing.Point(302, 19)
@@ -314,14 +317,14 @@
             Me.txtIdMaterial.Enabled = False
             Me.txtIdMaterial.Location = New System.Drawing.Point(87, 28)
             Me.txtIdMaterial.Name = "txtIdMaterial"
-            Me.txtIdMaterial.Size = New System.Drawing.Size(60, 20)
+            Me.txtIdMaterial.Size = New System.Drawing.Size(60, 21)
             Me.txtIdMaterial.TabIndex = 0
             Me.txtIdMaterial.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
             '
             'btnNuevoMaterial
             '
             Me.btnNuevoMaterial.BackColor = System.Drawing.Color.White
-            Me.btnNuevoMaterial.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.btnNuevoMaterial.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.btnNuevoMaterial.Image = CType(resources.GetObject("btnNuevoMaterial.Image"), System.Drawing.Image)
             Me.btnNuevoMaterial.ImageAlign = System.Drawing.ContentAlignment.TopCenter
             Me.btnNuevoMaterial.Location = New System.Drawing.Point(221, 19)
@@ -337,7 +340,7 @@
             Me.txtDetalleMaterial.Enabled = False
             Me.txtDetalleMaterial.Location = New System.Drawing.Point(87, 63)
             Me.txtDetalleMaterial.Name = "txtDetalleMaterial"
-            Me.txtDetalleMaterial.Size = New System.Drawing.Size(280, 20)
+            Me.txtDetalleMaterial.Size = New System.Drawing.Size(280, 21)
             Me.txtDetalleMaterial.TabIndex = 2
             '
             'gbColores
@@ -349,6 +352,7 @@
             Me.gbColores.Controls.Add(Me.txtIdColor)
             Me.gbColores.Controls.Add(NOMBRE_GRUPOLabel)
             Me.gbColores.Controls.Add(Me.txtDetalleColor)
+            Me.gbColores.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.gbColores.Location = New System.Drawing.Point(2, 116)
             Me.gbColores.Name = "gbColores"
             Me.gbColores.Size = New System.Drawing.Size(395, 113)
@@ -360,7 +364,7 @@
             '
             Me.btnGuardarColor.BackColor = System.Drawing.Color.White
             Me.btnGuardarColor.Enabled = False
-            Me.btnGuardarColor.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.btnGuardarColor.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.btnGuardarColor.Image = CType(resources.GetObject("btnGuardarColor.Image"), System.Drawing.Image)
             Me.btnGuardarColor.ImageAlign = System.Drawing.ContentAlignment.TopCenter
             Me.btnGuardarColor.Location = New System.Drawing.Point(304, 31)
@@ -374,7 +378,7 @@
             'btnNuevoColor
             '
             Me.btnNuevoColor.BackColor = System.Drawing.Color.White
-            Me.btnNuevoColor.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.btnNuevoColor.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.btnNuevoColor.Image = CType(resources.GetObject("btnNuevoColor.Image"), System.Drawing.Image)
             Me.btnNuevoColor.ImageAlign = System.Drawing.ContentAlignment.TopCenter
             Me.btnNuevoColor.Location = New System.Drawing.Point(223, 31)
@@ -391,7 +395,7 @@
             Me.txtIdColor.Enabled = False
             Me.txtIdColor.Location = New System.Drawing.Point(73, 34)
             Me.txtIdColor.Name = "txtIdColor"
-            Me.txtIdColor.Size = New System.Drawing.Size(60, 20)
+            Me.txtIdColor.Size = New System.Drawing.Size(60, 21)
             Me.txtIdColor.TabIndex = 4
             Me.txtIdColor.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
             '
@@ -400,7 +404,7 @@
             Me.txtDetalleColor.Enabled = False
             Me.txtDetalleColor.Location = New System.Drawing.Point(73, 73)
             Me.txtDetalleColor.Name = "txtDetalleColor"
-            Me.txtDetalleColor.Size = New System.Drawing.Size(306, 20)
+            Me.txtDetalleColor.Size = New System.Drawing.Size(306, 21)
             Me.txtDetalleColor.TabIndex = 9
             '
             'FormMantenimientoMarcasMaterialesColores

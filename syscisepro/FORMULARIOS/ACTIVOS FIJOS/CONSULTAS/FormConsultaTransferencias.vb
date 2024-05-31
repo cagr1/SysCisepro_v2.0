@@ -78,7 +78,8 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.CONSULTAS
                 Case Else
                     Icon = My.Resources.logo_c
                     dgvConsulta.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
-            End Select 
+            End Select
+            dgvConsulta.Font = New Font("Roboto", 8, FontStyle.Regular)
         End Sub
     End Class
 End Namespace

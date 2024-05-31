@@ -60,7 +60,9 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
                     dgvColores.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
                     dgvMateriales.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
             End Select
-
+            dgvColores.Font = New Font("Roboto", 8, FontStyle.Regular)
+            dgvMarcas.Font = New Font("Roboto", 8, FontStyle.Regular)
+            dgvMateriales.Font = New Font("Roboto", 8, FontStyle.Regular)
             _sqlCommands = New List(Of SqlCommand)
             mostrarTodosRegistrosColores()
             mostrarTodosRegistrosMarcas()

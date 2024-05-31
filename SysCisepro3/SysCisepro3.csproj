@@ -1354,6 +1354,7 @@
     <None Include="Resources\cahange_system.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\lock_24dp_FILL0_wght400_GRAD0_opsz24.png" />
     <None Include="Resources\person_add_24dp_FILL0_wght400_GRAD0_opsz24.png" />
     <None Include="Resources\request_quote_24dp_FILL0_wght400_GRAD0_opsz24.png" />
     <None Include="Resources\point_of_sale_24dp_FILL0_wght400_GRAD0_opsz24 %282%29.png" />

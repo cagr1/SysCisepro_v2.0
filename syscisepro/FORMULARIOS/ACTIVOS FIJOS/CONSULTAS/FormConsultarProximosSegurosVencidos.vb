@@ -53,7 +53,8 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.CONSULTAS
                      dgvDispositivos.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
                     dgvSeguros.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
             End Select
-
+            dgvDispositivos.Font = New Font("Roboto", 8, FontStyle.Regular)
+            dgvSeguros.Font = New Font("Roboto", 8, FontStyle.Regular)
             txtFechaActual.Text = Date.Now
             txtFechaActualDispositivo.Text = Date.Now
             Dim cerrar = 0

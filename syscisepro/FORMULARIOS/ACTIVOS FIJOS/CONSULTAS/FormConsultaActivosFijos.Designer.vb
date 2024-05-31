@@ -1,10 +1,10 @@
 ﻿Namespace FORMULARIOS.ACTIVOS_FIJOS.CONSULTAS
-    <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+    <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
     Partial Class FormConsultaActivosFijos
         'Inherits System.Windows.Forms.Form
         Inherits Krypton.Toolkit.KryptonForm
         'Form reemplaza a Dispose para limpiar la lista de componentes.
-        <System.Diagnostics.DebuggerNonUserCode()> _
+        <System.Diagnostics.DebuggerNonUserCode()>
         Protected Overrides Sub Dispose(ByVal disposing As Boolean)
             Try
                 If disposing AndAlso components IsNot Nothing Then
@@ -21,7 +21,7 @@
         'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
         'Se puede modificar usando el Diseñador de Windows Forms.  
         'No lo modifique con el editor de código.
-        <System.Diagnostics.DebuggerStepThrough()> _
+        <System.Diagnostics.DebuggerStepThrough()>
         Private Sub InitializeComponent()
             Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
@@ -46,6 +46,8 @@
             Me.Label5 = New System.Windows.Forms.Label()
             Me.txtCustodio = New System.Windows.Forms.TextBox()
             Me.txtActivo = New System.Windows.Forms.TextBox()
+            Me.KryptonButton1 = New ComponentFactory.Krypton.Toolkit.KryptonButton()
+            Me.txtBuscar = New System.Windows.Forms.TextBox()
             CType(Me.dgvActivosFijos, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.dgvTotalActivosFijos, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.MenuStrip1.SuspendLayout()
@@ -55,7 +57,7 @@
             '
             Me.Label1.AutoSize = True
             Me.Label1.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label1.Location = New System.Drawing.Point(4, 159)
+            Me.Label1.Location = New System.Drawing.Point(13, 208)
             Me.Label1.Name = "Label1"
             Me.Label1.Size = New System.Drawing.Size(74, 13)
             Me.Label1.TabIndex = 6
@@ -89,7 +91,7 @@
             DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
             DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
             Me.dgvActivosFijos.DefaultCellStyle = DataGridViewCellStyle3
-            Me.dgvActivosFijos.Location = New System.Drawing.Point(0, 180)
+            Me.dgvActivosFijos.Location = New System.Drawing.Point(0, 245)
             Me.dgvActivosFijos.MultiSelect = False
             Me.dgvActivosFijos.Name = "dgvActivosFijos"
             Me.dgvActivosFijos.ReadOnly = True
@@ -110,7 +112,7 @@
             '
             Me.Label2.AutoSize = True
             Me.Label2.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label2.Location = New System.Drawing.Point(363, 159)
+            Me.Label2.Location = New System.Drawing.Point(359, 208)
             Me.Label2.Name = "Label2"
             Me.Label2.Size = New System.Drawing.Size(60, 13)
             Me.Label2.TabIndex = 8
@@ -121,7 +123,7 @@
             Me.txtCantidad.BackColor = System.Drawing.Color.White
             Me.txtCantidad.Enabled = False
             Me.txtCantidad.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtCantidad.Location = New System.Drawing.Point(425, 155)
+            Me.txtCantidad.Location = New System.Drawing.Point(425, 206)
             Me.txtCantidad.Name = "txtCantidad"
             Me.txtCantidad.Size = New System.Drawing.Size(56, 21)
             Me.txtCantidad.TabIndex = 9
@@ -132,7 +134,7 @@
             Me.txtTotal.BackColor = System.Drawing.Color.White
             Me.txtTotal.Enabled = False
             Me.txtTotal.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtTotal.Location = New System.Drawing.Point(534, 155)
+            Me.txtTotal.Location = New System.Drawing.Point(534, 206)
             Me.txtTotal.Name = "txtTotal"
             Me.txtTotal.Size = New System.Drawing.Size(100, 21)
             Me.txtTotal.TabIndex = 11
@@ -142,7 +144,7 @@
             '
             Me.Label3.AutoSize = True
             Me.Label3.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label3.Location = New System.Drawing.Point(493, 159)
+            Me.Label3.Location = New System.Drawing.Point(493, 210)
             Me.Label3.Name = "Label3"
             Me.Label3.Size = New System.Drawing.Size(42, 13)
             Me.Label3.TabIndex = 10
@@ -167,7 +169,7 @@
             DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
             Me.dgvTotalActivosFijos.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle6
             Me.dgvTotalActivosFijos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-            Me.dgvTotalActivosFijos.Location = New System.Drawing.Point(0, 51)
+            Me.dgvTotalActivosFijos.Location = New System.Drawing.Point(0, 102)
             Me.dgvTotalActivosFijos.MultiSelect = False
             Me.dgvTotalActivosFijos.Name = "dgvTotalActivosFijos"
             Me.dgvTotalActivosFijos.ReadOnly = True
@@ -188,7 +190,7 @@
             '
             Me.Label4.AutoSize = True
             Me.Label4.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label4.Location = New System.Drawing.Point(0, 35)
+            Me.Label4.Location = New System.Drawing.Point(16, 81)
             Me.Label4.Name = "Label4"
             Me.Label4.Size = New System.Drawing.Size(140, 13)
             Me.Label4.TabIndex = 13
@@ -209,7 +211,7 @@
             'ToolStripMenuItem1
             '
             Me.ToolStripMenuItem1.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.ToolStripMenuItem1.Image = Global.syscisepro.My.Resources.Resources.BuscarRegistro
+            Me.ToolStripMenuItem1.Image = Global.syscisepro.My.Resources.Resources.search_24dp_FILL0_wght400_GRAD0_opsz24__2_
             Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
             Me.ToolStripMenuItem1.Size = New System.Drawing.Size(117, 20)
             Me.ToolStripMenuItem1.Text = "CARGAR TODAS"
@@ -235,7 +237,7 @@
             '
             Me.Label5.AutoSize = True
             Me.Label5.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label5.Location = New System.Drawing.Point(666, 159)
+            Me.Label5.Location = New System.Drawing.Point(659, 210)
             Me.Label5.Name = "Label5"
             Me.Label5.Size = New System.Drawing.Size(61, 13)
             Me.Label5.TabIndex = 243
@@ -246,7 +248,7 @@
             Me.txtCustodio.BackColor = System.Drawing.Color.White
             Me.txtCustodio.Enabled = False
             Me.txtCustodio.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtCustodio.Location = New System.Drawing.Point(726, 155)
+            Me.txtCustodio.Location = New System.Drawing.Point(726, 206)
             Me.txtCustodio.Name = "txtCustodio"
             Me.txtCustodio.Size = New System.Drawing.Size(248, 21)
             Me.txtCustodio.TabIndex = 244
@@ -257,11 +259,43 @@
             Me.txtActivo.BackColor = System.Drawing.Color.White
             Me.txtActivo.Enabled = False
             Me.txtActivo.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtActivo.Location = New System.Drawing.Point(75, 154)
+            Me.txtActivo.Location = New System.Drawing.Point(105, 205)
             Me.txtActivo.Name = "txtActivo"
             Me.txtActivo.Size = New System.Drawing.Size(237, 21)
             Me.txtActivo.TabIndex = 245
             Me.txtActivo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+            '
+            'KryptonButton1
+            '
+            Me.KryptonButton1.AutoSize = True
+            Me.KryptonButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+            Me.KryptonButton1.Location = New System.Drawing.Point(235, 36)
+            Me.KryptonButton1.Name = "KryptonButton1"
+            Me.KryptonButton1.Size = New System.Drawing.Size(32, 32)
+            Me.KryptonButton1.StateCommon.Back.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.[False]
+            Me.KryptonButton1.StateCommon.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit
+            Me.KryptonButton1.StateCommon.Border.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.[False]
+            Me.KryptonButton1.StateCommon.Border.DrawBorders = CType((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top Or ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) _
+            Or ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) _
+            Or ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right), ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)
+            Me.KryptonButton1.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit
+            Me.KryptonButton1.StateCommon.Content.Padding = New System.Windows.Forms.Padding(2)
+            Me.KryptonButton1.TabIndex = 247
+            Me.KryptonButton1.Values.ImageStates.ImageCheckedNormal = Nothing
+            Me.KryptonButton1.Values.ImageStates.ImageCheckedPressed = Nothing
+            Me.KryptonButton1.Values.ImageStates.ImageCheckedTracking = Nothing
+            Me.KryptonButton1.Values.ImageStates.ImageDisabled = Global.syscisepro.My.Resources.Resources.search_24dp_FILL0_wght400_GRAD0_opsz24__2_
+            Me.KryptonButton1.Values.ImageStates.ImageNormal = Global.syscisepro.My.Resources.Resources.search_24dp_FILL0_wght400_GRAD0_opsz24__2_
+            Me.KryptonButton1.Values.Text = ""
+            '
+            'txtBuscar
+            '
+            Me.txtBuscar.Location = New System.Drawing.Point(19, 36)
+            Me.txtBuscar.Multiline = True
+            Me.txtBuscar.Name = "txtBuscar"
+            Me.txtBuscar.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
+            Me.txtBuscar.Size = New System.Drawing.Size(191, 32)
+            Me.txtBuscar.TabIndex = 248
             '
             'FormConsultaActivosFijos
             '
@@ -269,6 +303,8 @@
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.BackColor = System.Drawing.Color.White
             Me.ClientSize = New System.Drawing.Size(974, 616)
+            Me.Controls.Add(Me.txtBuscar)
+            Me.Controls.Add(Me.KryptonButton1)
             Me.Controls.Add(Me.txtActivo)
             Me.Controls.Add(Me.txtCustodio)
             Me.Controls.Add(Me.Label5)
@@ -310,5 +346,7 @@
         Friend WithEvents txtCustodio As System.Windows.Forms.TextBox
         Friend WithEvents cbmTipoActivo As System.Windows.Forms.ToolStripComboBox
         Friend WithEvents txtActivo As System.Windows.Forms.TextBox
+        Friend WithEvents KryptonButton1 As ComponentFactory.Krypton.Toolkit.KryptonButton
+        Friend WithEvents txtBuscar As TextBox
     End Class
 End Namespace

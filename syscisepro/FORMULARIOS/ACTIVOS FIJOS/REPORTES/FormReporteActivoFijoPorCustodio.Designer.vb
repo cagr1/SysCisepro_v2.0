@@ -1,7 +1,8 @@
 ﻿Namespace FORMULARIOS.ACTIVOS_FIJOS.REPORTES
     <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
     Partial Class FormReporteActivoFijoPorCustodio
-        Inherits System.Windows.Forms.Form
+        'Inherits System.Windows.Forms.Form
+        Inherits Krypton.Toolkit.KryptonForm
 
         'Form reemplaza a Dispose para limpiar la lista de componentes.
         <System.Diagnostics.DebuggerNonUserCode()> _
@@ -58,7 +59,7 @@
             Me.txtCustodio.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtCustodio.Location = New System.Drawing.Point(52, 11)
             Me.txtCustodio.Name = "txtCustodio"
-            Me.txtCustodio.Size = New System.Drawing.Size(250, 21)
+            Me.txtCustodio.Size = New System.Drawing.Size(258, 21)
             Me.txtCustodio.TabIndex = 2
             '
             'lblDatos

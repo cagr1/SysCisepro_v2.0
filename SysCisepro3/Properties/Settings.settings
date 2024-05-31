@@ -6,7 +6,7 @@
       <Value Profile="(Default)" />
     </Setting>
     <Setting Name="ColorCisepro" Type="System.Drawing.Color" Scope="User">
-      <Value Profile="(Default)">21, 101, 192</Value>
+      <Value Profile="(Default)">0, 83, 156</Value>
     </Setting>
     <Setting Name="ColorSeportpac" Type="System.Drawing.Color" Scope="User">
       <Value Profile="(Default)">38, 50, 56</Value>

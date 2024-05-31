@@ -1,7 +1,8 @@
 ﻿Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
     <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
     Partial Class FormSoat
-        Inherits System.Windows.Forms.Form
+        'Inherits System.Windows.Forms.Form
+        Inherits Krypton.Toolkit.KryptonForm
 
         'Form reemplaza a Dispose para limpiar la lista de componentes.
         <System.Diagnostics.DebuggerNonUserCode()> _
@@ -87,7 +88,7 @@
             Me.btnConsultar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
             Me.btnConsultar.Location = New System.Drawing.Point(258, 2)
             Me.btnConsultar.Name = "btnConsultar"
-            Me.btnConsultar.Size = New System.Drawing.Size(95, 30)
+            Me.btnConsultar.Size = New System.Drawing.Size(114, 30)
             Me.btnConsultar.TabIndex = 3
             Me.btnConsultar.Text = "CONSULTAR"
             Me.btnConsultar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
