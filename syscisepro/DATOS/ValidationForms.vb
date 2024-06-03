@@ -214,5 +214,26 @@ Namespace DATOS
 
             Return claveAcceso
         End Function
+
+        Public Sub SetPlaceholder(txtBox As TextBox, placeholderText As String)
+
+            txtBox.Text = placeholderText
+            txtBox.ForeColor = Color.Gray
+
+
+            AddHandler txtBox.Enter, Sub(sender, e)
+                                         If txtBox.Text = placeholderText Then
+                                             txtBox.Text = String.Empty
+                                             txtBox.ForeColor = Color.Black
+                                         End If
+                                     End Sub
+
+            AddHandler txtBox.Leave, Sub(sender, e)
+                                         If String.IsNullOrWhiteSpace(txtBox.Text) Then
+                                             txtBox.Text = placeholderText
+                                             txtBox.ForeColor = Color.Gray
+                                         End If
+                                     End Sub
+        End Sub
     End Class
 End Namespace

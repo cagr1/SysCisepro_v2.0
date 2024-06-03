@@ -300,7 +300,7 @@ Namespace FORMULARIOS.ESTRUCTURA_ADMINISTRATIVA
                     msKardex.ForeColor = Color.White
                     dgvUsuarios.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
             End Select
-
+            dgvUsuarios.Font = New Font("Roboto", 8, FontStyle.Regular)
             _sqlCommands = New List(Of SqlCommand)
             ComboEmpresa()
             ComboSucursal()

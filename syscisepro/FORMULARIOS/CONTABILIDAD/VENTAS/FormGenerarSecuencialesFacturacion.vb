@@ -122,7 +122,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                     Label7.BackColor = My.MySettingsProperty.Settings.ColorCisepro
                     dgvFacturaSecuenciales.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
             End Select
-
+            dgvFacturaSecuenciales.Font = New Font("Roboto", 8, FontStyle.Regular)
             _sqlCommands = New List(Of SqlCommand)
 
             Deshabilitado()

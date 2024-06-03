@@ -76,6 +76,7 @@ namespace SysCisepro3.Main
             {
                 case TipoConexion.Seportpac:
                     Icon = Resources.logo_s;
+                    pbxCisepro.Image = Resources.SeportPac_Wall;
                     //pictureBoxS.BackColor = Settings.Default.ColorSeportpac;
                     //pictureBoxS.Visible = true;
                     //pictureBoxC.Visible = false;
@@ -83,6 +84,7 @@ namespace SysCisepro3.Main
                     break;
                 case TipoConexion.Asenava:
                     Icon = Resources.logo_a;
+                    pbxCisepro.BackColor = Settings.Default.ColorSeportpac;
                     //pictureBoxA.BackColor = Settings.Default.ColorAsenava;
                     //pictureBoxS.Visible = false;
                     //pictureBoxC.Visible = false;
@@ -90,6 +92,7 @@ namespace SysCisepro3.Main
                     break;
                 default: // CISEPRO
                     Icon = Resources.logo_c;
+                    pbxCisepro.Image = Resources.Cisepro_Wall;
                     //pictureBoxC.BackColor = Settings.Default.ColorCisepro;
                     //pictureBoxS.Visible = false;
                     pbxCisepro.Visible = true;
@@ -163,7 +166,7 @@ namespace SysCisepro3.Main
                     TipoCon = TipoCon,
                     ObjUsuario = u,
                     TiempoNotificacion = TiempoNotificacion,
-                    _frmNewLogin = this
+                    //_frmNewLogin = this
                 };
                 _formMenu.Show();
 

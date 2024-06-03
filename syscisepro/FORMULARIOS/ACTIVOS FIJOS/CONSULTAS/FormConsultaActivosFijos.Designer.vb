@@ -269,7 +269,7 @@
             '
             Me.KryptonButton1.AutoSize = True
             Me.KryptonButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-            Me.KryptonButton1.Location = New System.Drawing.Point(235, 36)
+            Me.KryptonButton1.Location = New System.Drawing.Point(228, 32)
             Me.KryptonButton1.Name = "KryptonButton1"
             Me.KryptonButton1.Size = New System.Drawing.Size(32, 32)
             Me.KryptonButton1.StateCommon.Back.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.[False]
@@ -286,15 +286,18 @@
             Me.KryptonButton1.Values.ImageStates.ImageCheckedTracking = Nothing
             Me.KryptonButton1.Values.ImageStates.ImageDisabled = Global.syscisepro.My.Resources.Resources.search_24dp_FILL0_wght400_GRAD0_opsz24__2_
             Me.KryptonButton1.Values.ImageStates.ImageNormal = Global.syscisepro.My.Resources.Resources.search_24dp_FILL0_wght400_GRAD0_opsz24__2_
+            Me.KryptonButton1.Values.ImageStates.ImagePressed = Global.syscisepro.My.Resources.Resources.search_24dp_FILL0_wght400_GRAD0_opsz40
+            Me.KryptonButton1.Values.ImageStates.ImageTracking = Global.syscisepro.My.Resources.Resources.search_24dp_FILL0_wght400_GRAD0_opsz40
             Me.KryptonButton1.Values.Text = ""
             '
             'txtBuscar
             '
+            Me.txtBuscar.Font = New System.Drawing.Font("Roboto", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtBuscar.Location = New System.Drawing.Point(19, 36)
-            Me.txtBuscar.Multiline = True
+            Me.txtBuscar.Margin = New System.Windows.Forms.Padding(4, 4, 2, 2)
             Me.txtBuscar.Name = "txtBuscar"
             Me.txtBuscar.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-            Me.txtBuscar.Size = New System.Drawing.Size(191, 32)
+            Me.txtBuscar.Size = New System.Drawing.Size(194, 23)
             Me.txtBuscar.TabIndex = 248
             '
             'FormConsultaActivosFijos
@@ -347,6 +350,6 @@
         Friend WithEvents cbmTipoActivo As System.Windows.Forms.ToolStripComboBox
         Friend WithEvents txtActivo As System.Windows.Forms.TextBox
         Friend WithEvents KryptonButton1 As ComponentFactory.Krypton.Toolkit.KryptonButton
-        Friend WithEvents txtBuscar As TextBox
+        Friend WithEvents txtBuscar As System.Windows.Forms.TextBox
     End Class
 End Namespace

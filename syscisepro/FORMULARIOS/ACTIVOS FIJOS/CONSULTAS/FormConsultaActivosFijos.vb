@@ -17,7 +17,6 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.CONSULTAS
 
 
 
-
         Property TipoCox As Integer
             Get
                 Select Case _tipoCon
@@ -408,37 +407,22 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.CONSULTAS
             dgvActivosFijos.Font = New Font("Roboto", 8, FontStyle.Regular)
 
 
+
             txtBuscar.ForeColor = ValidationForms.GetColorSistema(_tipoCon)
             txtBuscar.Font = New Font("Roboto", 9, FontStyle.Regular)
+            txtBuscar.AutoSize = False
+            Dim validation As New ValidationForms()
+            validation.SetPlaceholder(txtBuscar, "BUSCAR ACTIVO")
 
-            SetPlaceholder(txtBuscar, "BUSCAR ACTIVO")
-            Dim BottomPadding As Integer = (txtBuscar.Height - txtBuscar.Font.Height) / 2
-            txtBuscar.Padding = New Padding(0, BottomPadding, 0, 0)
+
+
+
             Me.Controls.Add(txtBuscar)
 
 
         End Sub
 
-        Private Sub SetPlaceholder(txtBox As TextBox, placeholderText As String)
-            ' Set the initial placeholder text and color
-            txtBox.Text = placeholderText
-            txtBox.ForeColor = Color.Gray
 
-            ' Add event handlers to manage the placeholder text behavior
-            AddHandler txtBox.Enter, Sub(sender, e)
-                                         If txtBox.Text = placeholderText Then
-                                             txtBox.Text = String.Empty
-                                             txtBox.ForeColor = Color.Black
-                                         End If
-                                     End Sub
-
-            AddHandler txtBox.Leave, Sub(sender, e)
-                                         If String.IsNullOrWhiteSpace(txtBox.Text) Then
-                                             txtBox.Text = placeholderText
-                                             txtBox.ForeColor = Color.Gray
-                                         End If
-                                     End Sub
-        End Sub
         Private Sub btnReporteFondoRotativo_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnReporteFondoRotativo.Click
             ExportarDatosExcel(dgvActivosFijos, "REPORTE DE ACTIVOS" + cbmTipoActivo.Text)
         End Sub

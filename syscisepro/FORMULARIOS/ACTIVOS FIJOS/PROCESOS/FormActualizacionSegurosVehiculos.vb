@@ -58,7 +58,7 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
                     MenuStrip1.ForeColor = Color.White
                     dgvActualizacionVehiculos.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
             End Select
-
+            dgvActualizacionVehiculos.Font = New Font("Roboto", 8, FontStyle.Regular)
             _sqlCommands = New List(Of SqlCommand)
             CargarTodos() 
         End Sub

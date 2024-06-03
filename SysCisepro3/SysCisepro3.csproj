@@ -411,6 +411,12 @@
     <Compile Include="Main\FrmNewLogin.Designer.cs">
       <DependentUpon>FrmNewLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Main\FrmNewLogin2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\FrmNewLogin2.Designer.cs">
+      <DependentUpon>FrmNewLogin2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Main\MdiParentMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -742,6 +748,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Main\FrmNewLogin.resx">
       <DependentUpon>FrmNewLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\FrmNewLogin2.resx">
+      <DependentUpon>FrmNewLogin2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main\MdiParentMain.resx">
       <DependentUpon>MdiParentMain.cs</DependentUpon>
@@ -1354,6 +1363,23 @@
     <None Include="Resources\cahange_system.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\local_mall_24dp_FILL0_wght400_GRAD0_opsz24.png" />
+    <None Include="Resources\input_24dp_FILL0_wght400_GRAD0_opsz24.png" />
+    <None Include="Resources\wallet_20dp_FILL0_wght400_GRAD0_opsz24.png" />
+    <None Include="Resources\task_alt_20dp %282%29.png" />
+    <None Include="Resources\swap_horiz_20dp_FILL0_wght400_GRAD0_opsz20 %282%29.png" />
+    <None Include="Resources\storefront_20dp_FILL0_wght400_GRAD0_opsz20 %282%29.png" />
+    <None Include="Resources\settings_account_box_20dp_FILL0_wght400_GRAD0_opsz20 %282%29.png" />
+    <None Include="Resources\request_quote_24dp_FILL0_wght400_GRAD0_opsz24 %282%29.png" />
+    <None Include="Resources\point_of_sale_24dp_FILL0_wght400_GRAD0_opsz24 %281%29.png" />
+    <None Include="Resources\person_add_24dp_FILL0_wght400_GRAD0_opsz24 %282%29.png" />
+    <None Include="Resources\lock_24dp.png" />
+    <None Include="Resources\label_20dp_FILL0_wght400_GRAD0_opsz20.png" />
+    <None Include="Resources\desktop_windows_24dp.png" />
+    <None Include="Resources\currency_exchange_20dp_FILL0_wght400_GRAD0_opsz20 %282%29.png" />
+    <None Include="Resources\contract_delete_20dp_FILL0_wght400_GRAD0_opsz20 %282%29.png" />
+    <None Include="Resources\content_paste_20dp_FILL0_wght400_GRAD0_opsz20.png" />
+    <None Include="Resources\checkbook_20dp_FILL0_wght400_GRAD0_opsz20.png" />
     <None Include="Resources\lock_24dp_FILL0_wght400_GRAD0_opsz24.png" />
     <None Include="Resources\person_add_24dp_FILL0_wght400_GRAD0_opsz24.png" />
     <None Include="Resources\request_quote_24dp_FILL0_wght400_GRAD0_opsz24.png" />
@@ -1713,6 +1739,10 @@
     <None Include="Resources\business_center_20dp_FILL0_wght400_GRAD0_opsz20 %281%29.png" />
     <None Include="Resources\business_center_20dp_FILL0_wght400_GRAD0_opsz20 %282%29.png" />
     <None Include="Resources\add_circle_24dp_FILL0_wght400_GRAD0_opsz24 %282%29.png" />
+    <None Include="Resources\add_circle_24dp_FILL0_wght400_GRAD0_opsz24.png" />
+    <None Include="Resources\autorenew_20dp_FILL0_wght400_GRAD0_opsz20.png" />
+    <None Include="Resources\business_24dp.png" />
+    <None Include="Resources\business_center_20dp_FILL0_wght400_GRAD0_opsz20.png" />
     <Content Include="Resources\charticon.png" />
     <None Include="Resources\tick.png" />
     <None Include="Resources\user-group-icon.png" />

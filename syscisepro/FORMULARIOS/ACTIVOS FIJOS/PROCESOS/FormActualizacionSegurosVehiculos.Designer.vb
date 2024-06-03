@@ -1,8 +1,8 @@
 ﻿Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
     <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
     Partial Class FormActualizacionSegurosVehiculos
-        Inherits System.Windows.Forms.Form
-
+        'Inherits System.Windows.Forms.Form
+        Inherits Krypton.Toolkit.KryptonForm
         'Form reemplaza a Dispose para limpiar la lista de componentes.
         <System.Diagnostics.DebuggerNonUserCode()> _
         Protected Overrides Sub Dispose(ByVal disposing As Boolean)
@@ -120,7 +120,7 @@
             Me.txtParametroBusqueda.BackColor = System.Drawing.Color.White
             Me.txtParametroBusqueda.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtParametroBusqueda.ForeColor = System.Drawing.Color.Black
-            Me.txtParametroBusqueda.Location = New System.Drawing.Point(298, 19)
+            Me.txtParametroBusqueda.Location = New System.Drawing.Point(259, 16)
             Me.txtParametroBusqueda.Name = "txtParametroBusqueda"
             Me.txtParametroBusqueda.Size = New System.Drawing.Size(345, 29)
             Me.txtParametroBusqueda.TabIndex = 2

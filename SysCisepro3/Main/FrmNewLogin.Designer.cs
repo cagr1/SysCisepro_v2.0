@@ -33,7 +33,6 @@
             this.txtPassword = new MaterialSkin.Controls.MaterialTextBox();
             this.materialCard1 = new MaterialSkin.Controls.MaterialCard();
             this.pbxCisepro = new System.Windows.Forms.PictureBox();
-            this.btnSalir = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonLabel1 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.materialCard1.SuspendLayout();
@@ -150,12 +149,12 @@
             this.materialCard1.Controls.Add(this.cbxUser);
             this.materialCard1.Depth = 0;
             this.materialCard1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialCard1.Location = new System.Drawing.Point(-1, 0);
+            this.materialCard1.Location = new System.Drawing.Point(-1, 28);
             this.materialCard1.Margin = new System.Windows.Forms.Padding(14);
             this.materialCard1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialCard1.Name = "materialCard1";
             this.materialCard1.Padding = new System.Windows.Forms.Padding(14);
-            this.materialCard1.Size = new System.Drawing.Size(367, 471);
+            this.materialCard1.Size = new System.Drawing.Size(367, 443);
             this.materialCard1.TabIndex = 11;
             this.materialCard1.Paint += new System.Windows.Forms.PaintEventHandler(this.materialCard1_Paint);
             // 
@@ -168,45 +167,6 @@
             this.pbxCisepro.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbxCisepro.TabIndex = 10;
             this.pbxCisepro.TabStop = false;
-            // 
-            // btnSalir
-            // 
-            this.btnSalir.Location = new System.Drawing.Point(663, 1);
-            this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(63, 47);
-            this.btnSalir.StateCommon.Back.Color1 = System.Drawing.Color.Transparent;
-            this.btnSalir.StateCommon.Back.Color2 = System.Drawing.Color.Transparent;
-            this.btnSalir.StateCommon.Border.Color1 = System.Drawing.Color.Transparent;
-            this.btnSalir.StateCommon.Border.Color2 = System.Drawing.Color.Transparent;
-            this.btnSalir.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.btnSalir.StateNormal.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.btnSalir.StateNormal.Border.Rounding = 20;
-            this.btnSalir.StateNormal.Content.ShortText.Color1 = System.Drawing.Color.White;
-            this.btnSalir.StateNormal.Content.ShortText.Color2 = System.Drawing.Color.White;
-            this.btnSalir.StateNormal.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalir.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.btnSalir.StatePressed.Border.Rounding = 20;
-            this.btnSalir.StatePressed.Content.ShortText.Color1 = System.Drawing.Color.Red;
-            this.btnSalir.StatePressed.Content.ShortText.Color2 = System.Drawing.Color.Red;
-            this.btnSalir.StatePressed.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalir.StateTracking.Back.Color1 = System.Drawing.Color.Transparent;
-            this.btnSalir.StateTracking.Back.Color2 = System.Drawing.Color.Transparent;
-            this.btnSalir.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.btnSalir.StateTracking.Border.Rounding = 20;
-            this.btnSalir.StateTracking.Content.ShortText.Color1 = System.Drawing.Color.Red;
-            this.btnSalir.StateTracking.Content.ShortText.Color2 = System.Drawing.Color.Red;
-            this.btnSalir.StateTracking.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalir.TabIndex = 12;
-            this.btnSalir.Values.Text = "X";
-            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // kryptonLabel1
             // 
@@ -223,9 +183,9 @@
             // 
             this.pictureBox1.BackgroundImage = global::SysCisepro3.Properties.Resources.wp9764031;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(359, 0);
+            this.pictureBox1.Location = new System.Drawing.Point(372, 28);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(367, 471);
+            this.pictureBox1.Size = new System.Drawing.Size(385, 443);
             this.pictureBox1.TabIndex = 14;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
@@ -234,16 +194,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(725, 469);
+            this.ClientSize = new System.Drawing.Size(763, 469);
             this.ControlBox = false;
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.kryptonLabel1);
-            this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.materialCard1);
             this.DoubleBuffered = true;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmNewLogin";
             this.Padding = new System.Windows.Forms.Padding(3, 24, 3, 3);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -273,7 +231,6 @@
         private MaterialSkin.Controls.MaterialCard materialCard1;
         private System.Windows.Forms.PictureBox pbxCisepro;
         public MaterialSkin.Controls.MaterialTextBox txtPassword;
-        private ComponentFactory.Krypton.Toolkit.KryptonButton btnSalir;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel1;
         private MaterialSkin.Controls.MaterialComboBox cbxUser;
         private System.Windows.Forms.PictureBox pictureBox1;

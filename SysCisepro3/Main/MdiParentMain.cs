@@ -45,7 +45,7 @@ namespace SysCisepro3.Main
         private bool IsAdmin { get; set; }
 
         public FrmLogin _frmLogin { private get; set; }
-        public FrmNewLogin _frmNewLogin { private get; set; }
+        public FrmNewLogin2 _frmNewLogin { private get; set; }
 
         private PrivateFontCollection _pfc = new PrivateFontCollection();
 

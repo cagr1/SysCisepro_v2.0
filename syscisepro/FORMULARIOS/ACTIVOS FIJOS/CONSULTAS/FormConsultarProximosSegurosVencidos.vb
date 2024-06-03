@@ -1,6 +1,7 @@
 ﻿Imports ClassLibraryCisepro.ACTIVOS_FIJOS.TIPOS_DE_ACTIVOS
 Imports ClassLibraryCisepro.ENUMS
 Imports ClassLibraryCisepro.VALIDACIONES
+Imports Krypton.Toolkit
 
 Namespace FORMULARIOS.ACTIVOS_FIJOS.CONSULTAS
     ''' <summary>
@@ -61,11 +62,12 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.CONSULTAS
             Consultar()
             ConsultarDispositivos()
             If dgvSeguros.RowCount > 1 Then
-                MsgBox("Algunos Vehículos necesitan renovar el SEGURO esta semana", MsgBoxStyle.Critical, "MENSAJE DE VALIDACIÓN")
+                'MsgBox("Algunos Vehículos necesitan renovar el SEGURO esta semana", MsgBoxStyle.Critical, "MENSAJE DE VALIDACIÓN")
+                KryptonMessageBox.Show("Algunos Vehículos necesitan renovar el SEGURO esta semana", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
                 _sonido.Intermitente()
                 tcSeguros.SelectedIndex = 0
             Else
-                MsgBox("No existen Vehículos que necesiten renovar el SEGURO esta semana", MsgBoxStyle.Information, "MENSAJE DE VALIDACIÓN")
+                KryptonMessageBox.Show("No existen Vehículos que necesiten renovar el SEGURO esta semana", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
                 cerrar += 1
             End If
             If dgvDispositivos.RowCount > 1 Then
