@@ -67,6 +67,7 @@
             // 
             // toolStrip1
             // 
+            this.toolStrip1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnBuscar,
             this.btnNuevo,
@@ -154,7 +155,7 @@
             this.GroupBox1.Controls.Add(this.txtCliente);
             this.GroupBox1.Controls.Add(this.Label26);
             this.GroupBox1.Controls.Add(this.Label27);
-            this.GroupBox1.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GroupBox1.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GroupBox1.Location = new System.Drawing.Point(0, 28);
             this.GroupBox1.Name = "GroupBox1";
             this.GroupBox1.Size = new System.Drawing.Size(778, 90);
@@ -168,7 +169,7 @@
             this.chkEstado.Enabled = false;
             this.chkEstado.Location = new System.Drawing.Point(698, 67);
             this.chkEstado.Name = "chkEstado";
-            this.chkEstado.Size = new System.Drawing.Size(74, 17);
+            this.chkEstado.Size = new System.Drawing.Size(76, 17);
             this.chkEstado.TabIndex = 211;
             this.chkEstado.Text = "VIGENTE?";
             this.chkEstado.UseVisualStyleBackColor = true;
@@ -180,7 +181,7 @@
             this.txtCodigo.Enabled = false;
             this.txtCodigo.Location = new System.Drawing.Point(55, 39);
             this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(158, 20);
+            this.txtCodigo.Size = new System.Drawing.Size(158, 21);
             this.txtCodigo.TabIndex = 210;
             // 
             // label2
@@ -188,28 +189,28 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(6, 42);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(49, 13);
+            this.label2.Size = new System.Drawing.Size(51, 13);
             this.label2.TabIndex = 209;
             this.label2.Text = "CÓDIGO:";
             // 
             // dateTimePicker2
             // 
             this.dateTimePicker2.Enabled = false;
-            this.dateTimePicker2.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker2.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker2.Location = new System.Drawing.Point(288, 65);
             this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(110, 20);
+            this.dateTimePicker2.Size = new System.Drawing.Size(110, 21);
             this.dateTimePicker2.TabIndex = 207;
             // 
             // dateTimePicker1
             // 
             this.dateTimePicker1.Enabled = false;
-            this.dateTimePicker1.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker1.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker1.Location = new System.Drawing.Point(55, 65);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(110, 20);
+            this.dateTimePicker1.Size = new System.Drawing.Size(110, 21);
             this.dateTimePicker1.TabIndex = 205;
             // 
             // label32
@@ -241,7 +242,7 @@
             this.txtNombre.Enabled = false;
             this.txtNombre.Location = new System.Drawing.Point(288, 39);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(486, 20);
+            this.txtNombre.Size = new System.Drawing.Size(486, 21);
             this.txtNombre.TabIndex = 197;
             // 
             // btnCliente
@@ -265,7 +266,7 @@
             this.txtIdProyecto.Enabled = false;
             this.txtIdProyecto.Location = new System.Drawing.Point(55, 13);
             this.txtIdProyecto.Name = "txtIdProyecto";
-            this.txtIdProyecto.Size = new System.Drawing.Size(47, 20);
+            this.txtIdProyecto.Size = new System.Drawing.Size(47, 21);
             this.txtIdProyecto.TabIndex = 28;
             // 
             // Label22
@@ -273,7 +274,7 @@
             this.Label22.AutoSize = true;
             this.Label22.Location = new System.Drawing.Point(12, 18);
             this.Label22.Name = "Label22";
-            this.Label22.Size = new System.Drawing.Size(25, 13);
+            this.Label22.Size = new System.Drawing.Size(20, 13);
             this.Label22.TabIndex = 8;
             this.Label22.Text = "ID:";
             // 
@@ -284,7 +285,7 @@
             this.txtCliente.Enabled = false;
             this.txtCliente.Location = new System.Drawing.Point(219, 16);
             this.txtCliente.Name = "txtCliente";
-            this.txtCliente.Size = new System.Drawing.Size(529, 20);
+            this.txtCliente.Size = new System.Drawing.Size(529, 21);
             this.txtCliente.TabIndex = 0;
             // 
             // Label26
@@ -292,7 +293,7 @@
             this.Label26.AutoSize = true;
             this.Label26.Location = new System.Drawing.Point(167, 17);
             this.Label26.Name = "Label26";
-            this.Label26.Size = new System.Drawing.Size(55, 13);
+            this.Label26.Size = new System.Drawing.Size(53, 13);
             this.Label26.TabIndex = 3;
             this.Label26.Text = "CLIENTE:";
             // 
@@ -301,13 +302,14 @@
             this.Label27.AutoSize = true;
             this.Label27.Location = new System.Drawing.Point(239, 42);
             this.Label27.Name = "Label27";
-            this.Label27.Size = new System.Drawing.Size(49, 13);
+            this.Label27.Size = new System.Drawing.Size(56, 13);
             this.Label27.TabIndex = 196;
             this.Label27.Text = "NOMBRE:";
             // 
             // Label24
             // 
             this.Label24.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Label24.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label24.Location = new System.Drawing.Point(-1, 121);
             this.Label24.Name = "Label24";
             this.Label24.Size = new System.Drawing.Size(780, 16);
@@ -319,9 +321,10 @@
             // 
             this.Label7.AutoSize = true;
             this.Label7.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Label7.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label7.Location = new System.Drawing.Point(3, 146);
             this.Label7.Name = "Label7";
-            this.Label7.Size = new System.Drawing.Size(48, 13);
+            this.Label7.Size = new System.Drawing.Size(46, 13);
             this.Label7.TabIndex = 231;
             this.Label7.Text = "FILTRO:";
             this.Label7.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -330,7 +333,7 @@
             // 
             this.txtFiltro.BackColor = System.Drawing.Color.White;
             this.txtFiltro.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtFiltro.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFiltro.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFiltro.Location = new System.Drawing.Point(50, 142);
             this.txtFiltro.Name = "txtFiltro";
             this.txtFiltro.Size = new System.Drawing.Size(314, 21);

@@ -132,9 +132,11 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.ORDEN_DE_COMPRA
                     MenuStrip1.ForeColor = Color.White
                     dgvDetalleOrdenCompra.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
                     dgvOrdenCompra.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
-            End Select           
+            End Select
+            dgvDetalleOrdenCompra.Font = New Font("Roboto", 8, FontStyle.Regular)
+            dgvOrdenCompra.Font = New Font("Roboto", 8, FontStyle.Regular)
         End Sub
- 
+
         Private Sub btnReporte_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnReporte.Click
             If txtIdOrdenCompra.Text = "..." Then Return
             Dim f = New FormReporteOrdenCompra

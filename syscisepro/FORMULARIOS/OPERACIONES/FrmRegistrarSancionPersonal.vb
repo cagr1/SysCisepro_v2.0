@@ -65,6 +65,8 @@ Namespace FORMULARIOS.OPERACIONES
                     Label1.BackColor = My.MySettingsProperty.Settings.ColorAsenava
                     Label2.ForeColor = Color.White
                     Label2.BackColor = My.MySettingsProperty.Settings.ColorAsenava
+                    dgvSanciones.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorAsenava
+
                 Case TipoConexion.Seportpac
                     Icon = My.Resources.logo_s
                     MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
@@ -75,6 +77,7 @@ Namespace FORMULARIOS.OPERACIONES
                     Label1.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
                     Label2.ForeColor = Color.White
                     Label2.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
+                    dgvSanciones.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorSeportpac
                 Case Else
                     Icon = My.Resources.logo_c
                     MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorCisepro
@@ -85,8 +88,9 @@ Namespace FORMULARIOS.OPERACIONES
                     Label1.BackColor = My.MySettingsProperty.Settings.ColorCisepro
                     Label2.ForeColor = Color.White
                     Label2.BackColor = My.MySettingsProperty.Settings.ColorCisepro
+                    dgvSanciones.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
             End Select
-
+            dgvSanciones.Font = New Font("Roboto", 8, FontStyle.Regular)
             _hoy = DateTime.Now
             dtpFecha.Value = _hoy
             dtpFechaDesde.Value = New DateTime(_hoy.Year, _hoy.Month, 1, 0, 0, 0)

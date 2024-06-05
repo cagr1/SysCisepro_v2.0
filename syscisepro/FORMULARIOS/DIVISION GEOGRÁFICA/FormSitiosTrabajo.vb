@@ -799,7 +799,7 @@ Namespace FORMULARIOS.DIVISION_GEOGRÁFICA
                     Icon = My.Resources.logo_c
                     dgvCategoriaItem.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
             End Select
-
+            dgvCategoriaItem.Font = New Font("Roboto", 8, FontStyle.Regular)
             Dim horas = New DataTable()
             horas.Columns.Add("ID")
             horas.Columns.Add("HORA")

@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.btnRecargar = new System.Windows.Forms.ToolStripButton();
             this.btnGuardar = new System.Windows.Forms.ToolStripButton();
@@ -77,6 +77,7 @@
             // 
             // toolStrip1
             // 
+            this.toolStrip1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnRecargar,
             this.btnGuardar,
@@ -138,6 +139,7 @@
             // 
             // dtpFechaHasta
             // 
+            this.dtpFechaHasta.CalendarFont = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpFechaHasta.CustomFormat = "dddd, dd-MMM-yyyy";
             this.dtpFechaHasta.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpFechaHasta.Format = System.Windows.Forms.DateTimePickerFormat.Short;
@@ -149,6 +151,7 @@
             // 
             // dtpFechaDesde
             // 
+            this.dtpFechaDesde.CalendarFont = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpFechaDesde.CustomFormat = "dddd, dd-MMM-yyyy";
             this.dtpFechaDesde.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpFechaDesde.Format = System.Windows.Forms.DateTimePickerFormat.Short;
@@ -162,7 +165,7 @@
             // 
             this.txtFiltro.BackColor = System.Drawing.Color.White;
             this.txtFiltro.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtFiltro.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFiltro.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFiltro.Location = new System.Drawing.Point(60, 43);
             this.txtFiltro.Name = "txtFiltro";
             this.txtFiltro.Size = new System.Drawing.Size(244, 21);
@@ -174,7 +177,7 @@
             this.Label10.AutoSize = true;
             this.Label10.Location = new System.Drawing.Point(262, 22);
             this.Label10.Name = "Label10";
-            this.Label10.Size = new System.Drawing.Size(47, 13);
+            this.Label10.Size = new System.Drawing.Size(43, 13);
             this.Label10.TabIndex = 221;
             this.Label10.Text = "DESDE:";
             // 
@@ -182,9 +185,10 @@
             // 
             this.Label7.AutoSize = true;
             this.Label7.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Label7.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label7.Location = new System.Drawing.Point(6, 47);
             this.Label7.Name = "Label7";
-            this.Label7.Size = new System.Drawing.Size(48, 13);
+            this.Label7.Size = new System.Drawing.Size(46, 13);
             this.Label7.TabIndex = 217;
             this.Label7.Text = "FILTRO:";
             this.Label7.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -201,6 +205,7 @@
             // Label1
             // 
             this.Label1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Label1.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label1.Location = new System.Drawing.Point(0, 516);
             this.Label1.Name = "Label1";
             this.Label1.Size = new System.Drawing.Size(1074, 15);
@@ -213,8 +218,8 @@
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -361,8 +366,8 @@
             // 
             // Column17
             // 
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.Column17.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.Column17.DefaultCellStyle = dataGridViewCellStyle4;
             this.Column17.HeaderText = "COBRO";
             this.Column17.Name = "Column17";
             this.Column17.ReadOnly = true;
@@ -381,7 +386,7 @@
             this.radioButton1.Checked = true;
             this.radioButton1.Location = new System.Drawing.Point(6, 19);
             this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(119, 17);
+            this.radioButton1.Size = new System.Drawing.Size(115, 17);
             this.radioButton1.TabIndex = 225;
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "FECHA REGISTRO";
@@ -392,7 +397,7 @@
             this.radioButton2.AutoSize = true;
             this.radioButton2.Location = new System.Drawing.Point(142, 20);
             this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(101, 17);
+            this.radioButton2.Size = new System.Drawing.Size(99, 17);
             this.radioButton2.TabIndex = 226;
             this.radioButton2.Text = "FECHA SALIDA";
             this.radioButton2.UseVisualStyleBackColor = true;
@@ -406,12 +411,13 @@
             this.groupBox1.Controls.Add(this.radioButton2);
             this.groupBox1.Controls.Add(this.Label10);
             this.groupBox1.Controls.Add(this.dtpFechaDesde);
+            this.groupBox1.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(310, 27);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(534, 50);
             this.groupBox1.TabIndex = 227;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "DEALLE";
+            this.groupBox1.Text = "DETALLE";
             // 
             // chkDetalle
             // 
@@ -429,6 +435,7 @@
             // 
             this.groupBox2.Controls.Add(this.chkPeriodo);
             this.groupBox2.Controls.Add(this.cbxPeriodo);
+            this.groupBox2.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(850, 27);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(222, 50);
@@ -452,7 +459,7 @@
             this.cbxPeriodo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxPeriodo.Enabled = false;
             this.cbxPeriodo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbxPeriodo.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxPeriodo.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxPeriodo.FormattingEnabled = true;
             this.cbxPeriodo.Location = new System.Drawing.Point(6, 19);
             this.cbxPeriodo.Name = "cbxPeriodo";

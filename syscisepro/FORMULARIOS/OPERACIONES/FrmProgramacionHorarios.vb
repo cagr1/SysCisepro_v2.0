@@ -68,7 +68,7 @@ Namespace FORMULARIOS.OPERACIONES
                     Label21.BackColor = My.MySettingsProperty.Settings.ColorCisepro
                     dgvHorarios.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
             End Select
-
+            dgvHorarios.Font = New Font("Roboto", 8, FontStyle.Regular)
             _hoy = DateTime.Now
             ResetTimes()
             _sqlCommands = New List(Of SqlCommand)

@@ -53,6 +53,7 @@
             // 
             // toolStrip1
             // 
+            this.toolStrip1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnRecargar,
             this.btnCancelar});
@@ -97,7 +98,7 @@
             this.Label7.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Label7.Location = new System.Drawing.Point(8, 22);
             this.Label7.Name = "Label7";
-            this.Label7.Size = new System.Drawing.Size(48, 13);
+            this.Label7.Size = new System.Drawing.Size(46, 13);
             this.Label7.TabIndex = 217;
             this.Label7.Text = "FILTRO:";
             this.Label7.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -142,6 +143,7 @@
             this.groupBox2.Controls.Add(this.cbxHasta);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.label2);
+            this.groupBox2.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(3, 27);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(983, 50);
@@ -242,7 +244,7 @@
             this.label2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label2.Location = new System.Drawing.Point(499, 22);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(59, 13);
+            this.label2.Size = new System.Drawing.Size(56, 13);
             this.label2.TabIndex = 231;
             this.label2.Text = "PERÍODO:";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;

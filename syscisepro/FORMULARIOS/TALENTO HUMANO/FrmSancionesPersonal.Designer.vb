@@ -1,8 +1,8 @@
 ﻿Namespace FORMULARIOS.TALENTO_HUMANO
     <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
     Partial Class FrmSancionesPersonal
-        Inherits System.Windows.Forms.Form
-
+        'Inherits System.Windows.Forms.Form
+        Inherits Krypton.Toolkit.KryptonForm
         'Form reemplaza a Dispose para limpiar la lista de componentes.
         <System.Diagnostics.DebuggerNonUserCode()> _
         Protected Overrides Sub Dispose(ByVal disposing As Boolean)
@@ -65,6 +65,7 @@
             '
             Me.tcSitios.Controls.Add(Me.TabPage1)
             Me.tcSitios.Controls.Add(Me.tpReporte)
+            Me.tcSitios.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.tcSitios.Location = New System.Drawing.Point(2, 2)
             Me.tcSitios.Name = "tcSitios"
             Me.tcSitios.SelectedIndex = 0
@@ -90,6 +91,7 @@
             'Label21
             '
             Me.Label21.Cursor = System.Windows.Forms.Cursors.Hand
+            Me.Label21.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Label21.Location = New System.Drawing.Point(1, 83)
             Me.Label21.Name = "Label21"
             Me.Label21.Size = New System.Drawing.Size(720, 14)
@@ -101,7 +103,7 @@
             '
             Me.txtFiltro.BackColor = System.Drawing.Color.White
             Me.txtFiltro.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-            Me.txtFiltro.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtFiltro.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtFiltro.Location = New System.Drawing.Point(62, 100)
             Me.txtFiltro.Name = "txtFiltro"
             Me.txtFiltro.Size = New System.Drawing.Size(659, 21)
@@ -111,9 +113,10 @@
             '
             Me.Label7.AutoSize = True
             Me.Label7.Cursor = System.Windows.Forms.Cursors.Hand
+            Me.Label7.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Label7.Location = New System.Drawing.Point(7, 102)
             Me.Label7.Name = "Label7"
-            Me.Label7.Size = New System.Drawing.Size(48, 13)
+            Me.Label7.Size = New System.Drawing.Size(46, 13)
             Me.Label7.TabIndex = 190
             Me.Label7.Text = "FILTRO:"
             Me.Label7.TextAlign = System.Drawing.ContentAlignment.TopCenter
@@ -129,7 +132,7 @@
             Me.GroupBox1.Controls.Add(Me.txtDefinicion)
             Me.GroupBox1.Controls.Add(Me.Label26)
             Me.GroupBox1.Controls.Add(Me.Label1)
-            Me.GroupBox1.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.GroupBox1.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.GroupBox1.Location = New System.Drawing.Point(3, 30)
             Me.GroupBox1.Name = "GroupBox1"
             Me.GroupBox1.Size = New System.Drawing.Size(718, 50)
@@ -144,7 +147,7 @@
             Me.txtValor.Enabled = False
             Me.txtValor.Location = New System.Drawing.Point(651, 19)
             Me.txtValor.Name = "txtValor"
-            Me.txtValor.Size = New System.Drawing.Size(64, 20)
+            Me.txtValor.Size = New System.Drawing.Size(64, 21)
             Me.txtValor.TabIndex = 32
             '
             'Label2
@@ -152,7 +155,7 @@
             Me.Label2.AutoSize = True
             Me.Label2.Location = New System.Drawing.Point(611, 22)
             Me.Label2.Name = "Label2"
-            Me.Label2.Size = New System.Drawing.Size(43, 13)
+            Me.Label2.Size = New System.Drawing.Size(45, 13)
             Me.Label2.TabIndex = 31
             Me.Label2.Text = "VALOR:"
             '
@@ -173,7 +176,7 @@
             Me.txtIdSancion.Enabled = False
             Me.txtIdSancion.Location = New System.Drawing.Point(32, 19)
             Me.txtIdSancion.Name = "txtIdSancion"
-            Me.txtIdSancion.Size = New System.Drawing.Size(50, 20)
+            Me.txtIdSancion.Size = New System.Drawing.Size(50, 21)
             Me.txtIdSancion.TabIndex = 28
             '
             'Label22
@@ -181,7 +184,7 @@
             Me.Label22.AutoSize = True
             Me.Label22.Location = New System.Drawing.Point(7, 23)
             Me.Label22.Name = "Label22"
-            Me.Label22.Size = New System.Drawing.Size(25, 13)
+            Me.Label22.Size = New System.Drawing.Size(20, 13)
             Me.Label22.TabIndex = 8
             Me.Label22.Text = "ID:"
             '
@@ -192,7 +195,7 @@
             Me.txtDefinicion.Enabled = False
             Me.txtDefinicion.Location = New System.Drawing.Point(329, 19)
             Me.txtDefinicion.Name = "txtDefinicion"
-            Me.txtDefinicion.Size = New System.Drawing.Size(261, 20)
+            Me.txtDefinicion.Size = New System.Drawing.Size(261, 21)
             Me.txtDefinicion.TabIndex = 0
             '
             'Label26
@@ -209,7 +212,7 @@
             Me.Label1.AutoSize = True
             Me.Label1.Location = New System.Drawing.Point(98, 23)
             Me.Label1.Name = "Label1"
-            Me.Label1.Size = New System.Drawing.Size(37, 13)
+            Me.Label1.Size = New System.Drawing.Size(35, 13)
             Me.Label1.TabIndex = 29
             Me.Label1.Text = "TIPO:"
             '
@@ -293,7 +296,9 @@
             '
             Me.ListView1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
             Me.ListView1.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader1, Me.ColumnHeader4, Me.ColumnHeader5, Me.ColumnHeader6})
+            Me.ListView1.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.ListView1.FullRowSelect = True
+            Me.ListView1.HideSelection = False
             Me.ListView1.Location = New System.Drawing.Point(3, 121)
             Me.ListView1.MultiSelect = False
             Me.ListView1.Name = "ListView1"

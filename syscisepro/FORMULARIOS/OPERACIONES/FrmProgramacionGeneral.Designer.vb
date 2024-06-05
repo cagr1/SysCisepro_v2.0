@@ -1,8 +1,8 @@
 ﻿Namespace FORMULARIOS.OPERACIONES
     <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
     Partial Class FrmProgramacionGeneral
-        Inherits System.Windows.Forms.Form
-
+        'Inherits System.Windows.Forms.Form
+        Inherits Krypton.Toolkit.KryptonForm
         'Form reemplaza a Dispose para limpiar la lista de componentes.
         <System.Diagnostics.DebuggerNonUserCode()> _
         Protected Overrides Sub Dispose(ByVal disposing As Boolean)
@@ -160,6 +160,7 @@
             '
             Me.tcSitios.Controls.Add(Me.TabPage1)
             Me.tcSitios.Controls.Add(Me.tpReporte)
+            Me.tcSitios.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.tcSitios.Location = New System.Drawing.Point(2, 2)
             Me.tcSitios.Name = "tcSitios"
             Me.tcSitios.SelectedIndex = 0
@@ -253,7 +254,7 @@
             Me.GroupBox3.Controls.Add(Me.Label21)
             Me.GroupBox3.Controls.Add(Me.txtSitio)
             Me.GroupBox3.Controls.Add(Me.Label23)
-            Me.GroupBox3.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.GroupBox3.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.GroupBox3.Location = New System.Drawing.Point(3, 72)
             Me.GroupBox3.Name = "GroupBox3"
             Me.GroupBox3.Size = New System.Drawing.Size(995, 70)
@@ -268,7 +269,7 @@
             Me.txtPo.Enabled = False
             Me.txtPo.Location = New System.Drawing.Point(950, 43)
             Me.txtPo.Name = "txtPo"
-            Me.txtPo.Size = New System.Drawing.Size(39, 20)
+            Me.txtPo.Size = New System.Drawing.Size(39, 21)
             Me.txtPo.TabIndex = 214
             Me.txtPo.Text = "0"
             Me.txtPo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
@@ -280,7 +281,7 @@
             Me.txtP8.Enabled = False
             Me.txtP8.Location = New System.Drawing.Point(859, 43)
             Me.txtP8.Name = "txtP8"
-            Me.txtP8.Size = New System.Drawing.Size(39, 20)
+            Me.txtP8.Size = New System.Drawing.Size(39, 21)
             Me.txtP8.TabIndex = 212
             Me.txtP8.Text = "0"
             Me.txtP8.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
@@ -292,7 +293,7 @@
             Me.txtP12.Enabled = False
             Me.txtP12.Location = New System.Drawing.Point(769, 43)
             Me.txtP12.Name = "txtP12"
-            Me.txtP12.Size = New System.Drawing.Size(39, 20)
+            Me.txtP12.Size = New System.Drawing.Size(39, 21)
             Me.txtP12.TabIndex = 210
             Me.txtP12.Text = "0"
             Me.txtP12.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
@@ -304,7 +305,7 @@
             Me.txtP24.Enabled = False
             Me.txtP24.Location = New System.Drawing.Point(674, 43)
             Me.txtP24.Name = "txtP24"
-            Me.txtP24.Size = New System.Drawing.Size(39, 20)
+            Me.txtP24.Size = New System.Drawing.Size(39, 21)
             Me.txtP24.TabIndex = 208
             Me.txtP24.Text = "0"
             Me.txtP24.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
@@ -356,7 +357,7 @@
             Me.txtCliente.Enabled = False
             Me.txtCliente.Location = New System.Drawing.Point(79, 42)
             Me.txtCliente.Name = "txtCliente"
-            Me.txtCliente.Size = New System.Drawing.Size(552, 20)
+            Me.txtCliente.Size = New System.Drawing.Size(552, 21)
             Me.txtCliente.TabIndex = 201
             '
             'Label28
@@ -364,7 +365,7 @@
             Me.Label28.AutoSize = True
             Me.Label28.Location = New System.Drawing.Point(18, 45)
             Me.Label28.Name = "Label28"
-            Me.Label28.Size = New System.Drawing.Size(55, 13)
+            Me.Label28.Size = New System.Drawing.Size(53, 13)
             Me.Label28.TabIndex = 200
             Me.Label28.Text = "CLIENTE:"
             '
@@ -399,7 +400,7 @@
             Me.Label21.AutoSize = True
             Me.Label21.Location = New System.Drawing.Point(18, 21)
             Me.Label21.Name = "Label21"
-            Me.Label21.Size = New System.Drawing.Size(25, 13)
+            Me.Label21.Size = New System.Drawing.Size(20, 13)
             Me.Label21.TabIndex = 8
             Me.Label21.Text = "ID:"
             '
@@ -410,7 +411,7 @@
             Me.txtSitio.Enabled = False
             Me.txtSitio.Location = New System.Drawing.Point(247, 16)
             Me.txtSitio.Name = "txtSitio"
-            Me.txtSitio.Size = New System.Drawing.Size(714, 20)
+            Me.txtSitio.Size = New System.Drawing.Size(714, 21)
             Me.txtSitio.TabIndex = 0
             '
             'Label23
@@ -442,6 +443,7 @@
             Me.ListView1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
             Me.ListView1.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader2, Me.ColumnHeader3, Me.ColumnHeader6, Me.ColumnHeader8, Me.ColumnHeader10, Me.ColumnHeader11, Me.ColumnHeader12, Me.ColumnHeader13, Me.ColumnHeader14, Me.ColumnHeader15, Me.ColumnHeader16, Me.ColumnHeader17, Me.ColumnHeader18, Me.ColumnHeader19, Me.ColumnHeader1, Me.ColumnHeader4, Me.ColumnHeader5, Me.ColumnHeader7})
             Me.ListView1.FullRowSelect = True
+            Me.ListView1.HideSelection = False
             Me.ListView1.Location = New System.Drawing.Point(0, 339)
             Me.ListView1.MultiSelect = False
             Me.ListView1.Name = "ListView1"
@@ -576,7 +578,7 @@
             Me.GroupBox4.Controls.Add(Me.dtpMes)
             Me.GroupBox4.Controls.Add(Me.Label17)
             Me.GroupBox4.Controls.Add(Me.Label16)
-            Me.GroupBox4.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.GroupBox4.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.GroupBox4.Location = New System.Drawing.Point(3, 26)
             Me.GroupBox4.Name = "GroupBox4"
             Me.GroupBox4.Size = New System.Drawing.Size(996, 47)
@@ -590,7 +592,7 @@
             Me.DateTimePicker2.Enabled = False
             Me.DateTimePicker2.Location = New System.Drawing.Point(735, 13)
             Me.DateTimePicker2.Name = "DateTimePicker2"
-            Me.DateTimePicker2.Size = New System.Drawing.Size(255, 20)
+            Me.DateTimePicker2.Size = New System.Drawing.Size(255, 21)
             Me.DateTimePicker2.TabIndex = 202
             '
             'Label19
@@ -598,7 +600,7 @@
             Me.Label19.AutoSize = True
             Me.Label19.Location = New System.Drawing.Point(694, 16)
             Me.Label19.Name = "Label19"
-            Me.Label19.Size = New System.Drawing.Size(43, 13)
+            Me.Label19.Size = New System.Drawing.Size(46, 13)
             Me.Label19.TabIndex = 203
             Me.Label19.Text = "HASTA:"
             '
@@ -608,7 +610,7 @@
             Me.DateTimePicker1.Enabled = False
             Me.DateTimePicker1.Location = New System.Drawing.Point(382, 14)
             Me.DateTimePicker1.Name = "DateTimePicker1"
-            Me.DateTimePicker1.Size = New System.Drawing.Size(255, 20)
+            Me.DateTimePicker1.Size = New System.Drawing.Size(255, 21)
             Me.DateTimePicker1.TabIndex = 200
             '
             'TextBox3
@@ -628,7 +630,7 @@
             Me.Label18.AutoSize = True
             Me.Label18.Location = New System.Drawing.Point(7, 18)
             Me.Label18.Name = "Label18"
-            Me.Label18.Size = New System.Drawing.Size(25, 13)
+            Me.Label18.Size = New System.Drawing.Size(20, 13)
             Me.Label18.TabIndex = 8
             Me.Label18.Text = "ID:"
             '
@@ -640,7 +642,7 @@
             Me.dtpMes.Location = New System.Drawing.Point(165, 15)
             Me.dtpMes.Name = "dtpMes"
             Me.dtpMes.ShowUpDown = True
-            Me.dtpMes.Size = New System.Drawing.Size(121, 20)
+            Me.dtpMes.Size = New System.Drawing.Size(121, 21)
             Me.dtpMes.TabIndex = 198
             '
             'Label17
@@ -657,7 +659,7 @@
             Me.Label16.AutoSize = True
             Me.Label16.Location = New System.Drawing.Point(136, 19)
             Me.Label16.Name = "Label16"
-            Me.Label16.Size = New System.Drawing.Size(31, 13)
+            Me.Label16.Size = New System.Drawing.Size(33, 13)
             Me.Label16.TabIndex = 199
             Me.Label16.Text = "MES:"
             '
@@ -703,7 +705,7 @@
             Me.GroupBox2.Controls.Add(Me.Label2)
             Me.GroupBox2.Controls.Add(Me.Label1)
             Me.GroupBox2.Controls.Add(Me.chkLunes)
-            Me.GroupBox2.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.GroupBox2.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.GroupBox2.Location = New System.Drawing.Point(4, 140)
             Me.GroupBox2.Name = "GroupBox2"
             Me.GroupBox2.Size = New System.Drawing.Size(995, 85)
@@ -763,7 +765,7 @@
             Me.dtpADomingo.Location = New System.Drawing.Point(871, 56)
             Me.dtpADomingo.Name = "dtpADomingo"
             Me.dtpADomingo.ShowUpDown = True
-            Me.dtpADomingo.Size = New System.Drawing.Size(61, 20)
+            Me.dtpADomingo.Size = New System.Drawing.Size(61, 21)
             Me.dtpADomingo.TabIndex = 42
             '
             'dtpDDomingo
@@ -774,7 +776,7 @@
             Me.dtpDDomingo.Location = New System.Drawing.Point(871, 34)
             Me.dtpDDomingo.Name = "dtpDDomingo"
             Me.dtpDDomingo.ShowUpDown = True
-            Me.dtpDDomingo.Size = New System.Drawing.Size(61, 20)
+            Me.dtpDDomingo.Size = New System.Drawing.Size(61, 21)
             Me.dtpDDomingo.TabIndex = 41
             '
             'Label14
@@ -782,7 +784,7 @@
             Me.Label14.AutoSize = True
             Me.Label14.Location = New System.Drawing.Point(853, 59)
             Me.Label14.Name = "Label14"
-            Me.Label14.Size = New System.Drawing.Size(19, 13)
+            Me.Label14.Size = New System.Drawing.Size(17, 13)
             Me.Label14.TabIndex = 40
             Me.Label14.Text = "A:"
             '
@@ -791,7 +793,7 @@
             Me.Label15.AutoSize = True
             Me.Label15.Location = New System.Drawing.Point(847, 37)
             Me.Label15.Name = "Label15"
-            Me.Label15.Size = New System.Drawing.Size(25, 13)
+            Me.Label15.Size = New System.Drawing.Size(23, 13)
             Me.Label15.TabIndex = 39
             Me.Label15.Text = "DE:"
             '
@@ -801,7 +803,7 @@
             Me.chkDomingo.Enabled = False
             Me.chkDomingo.Location = New System.Drawing.Point(850, 19)
             Me.chkDomingo.Name = "chkDomingo"
-            Me.chkDomingo.Size = New System.Drawing.Size(68, 17)
+            Me.chkDomingo.Size = New System.Drawing.Size(78, 17)
             Me.chkDomingo.TabIndex = 38
             Me.chkDomingo.Text = "DOMINGO"
             Me.chkDomingo.UseVisualStyleBackColor = True
@@ -814,7 +816,7 @@
             Me.dtpASabado.Location = New System.Drawing.Point(761, 56)
             Me.dtpASabado.Name = "dtpASabado"
             Me.dtpASabado.ShowUpDown = True
-            Me.dtpASabado.Size = New System.Drawing.Size(61, 20)
+            Me.dtpASabado.Size = New System.Drawing.Size(61, 21)
             Me.dtpASabado.TabIndex = 37
             '
             'dtpDSabado
@@ -825,7 +827,7 @@
             Me.dtpDSabado.Location = New System.Drawing.Point(761, 34)
             Me.dtpDSabado.Name = "dtpDSabado"
             Me.dtpDSabado.ShowUpDown = True
-            Me.dtpDSabado.Size = New System.Drawing.Size(61, 20)
+            Me.dtpDSabado.Size = New System.Drawing.Size(61, 21)
             Me.dtpDSabado.TabIndex = 36
             '
             'Label12
@@ -833,7 +835,7 @@
             Me.Label12.AutoSize = True
             Me.Label12.Location = New System.Drawing.Point(743, 59)
             Me.Label12.Name = "Label12"
-            Me.Label12.Size = New System.Drawing.Size(19, 13)
+            Me.Label12.Size = New System.Drawing.Size(17, 13)
             Me.Label12.TabIndex = 35
             Me.Label12.Text = "A:"
             '
@@ -842,7 +844,7 @@
             Me.Label13.AutoSize = True
             Me.Label13.Location = New System.Drawing.Point(737, 37)
             Me.Label13.Name = "Label13"
-            Me.Label13.Size = New System.Drawing.Size(25, 13)
+            Me.Label13.Size = New System.Drawing.Size(23, 13)
             Me.Label13.TabIndex = 34
             Me.Label13.Text = "DE:"
             '
@@ -852,7 +854,7 @@
             Me.chkSabado.Enabled = False
             Me.chkSabado.Location = New System.Drawing.Point(740, 19)
             Me.chkSabado.Name = "chkSabado"
-            Me.chkSabado.Size = New System.Drawing.Size(62, 17)
+            Me.chkSabado.Size = New System.Drawing.Size(69, 17)
             Me.chkSabado.TabIndex = 33
             Me.chkSabado.Text = "SÁBADO"
             Me.chkSabado.UseVisualStyleBackColor = True
@@ -865,7 +867,7 @@
             Me.dtpAViernes.Location = New System.Drawing.Point(642, 56)
             Me.dtpAViernes.Name = "dtpAViernes"
             Me.dtpAViernes.ShowUpDown = True
-            Me.dtpAViernes.Size = New System.Drawing.Size(61, 20)
+            Me.dtpAViernes.Size = New System.Drawing.Size(61, 21)
             Me.dtpAViernes.TabIndex = 32
             '
             'dtpDViernes
@@ -876,7 +878,7 @@
             Me.dtpDViernes.Location = New System.Drawing.Point(642, 34)
             Me.dtpDViernes.Name = "dtpDViernes"
             Me.dtpDViernes.ShowUpDown = True
-            Me.dtpDViernes.Size = New System.Drawing.Size(61, 20)
+            Me.dtpDViernes.Size = New System.Drawing.Size(61, 21)
             Me.dtpDViernes.TabIndex = 31
             '
             'Label10
@@ -884,7 +886,7 @@
             Me.Label10.AutoSize = True
             Me.Label10.Location = New System.Drawing.Point(624, 59)
             Me.Label10.Name = "Label10"
-            Me.Label10.Size = New System.Drawing.Size(19, 13)
+            Me.Label10.Size = New System.Drawing.Size(17, 13)
             Me.Label10.TabIndex = 30
             Me.Label10.Text = "A:"
             '
@@ -893,7 +895,7 @@
             Me.Label11.AutoSize = True
             Me.Label11.Location = New System.Drawing.Point(618, 37)
             Me.Label11.Name = "Label11"
-            Me.Label11.Size = New System.Drawing.Size(25, 13)
+            Me.Label11.Size = New System.Drawing.Size(23, 13)
             Me.Label11.TabIndex = 29
             Me.Label11.Text = "DE:"
             '
@@ -903,7 +905,7 @@
             Me.chkViernes.Enabled = False
             Me.chkViernes.Location = New System.Drawing.Point(621, 19)
             Me.chkViernes.Name = "chkViernes"
-            Me.chkViernes.Size = New System.Drawing.Size(68, 17)
+            Me.chkViernes.Size = New System.Drawing.Size(70, 17)
             Me.chkViernes.TabIndex = 28
             Me.chkViernes.Text = "VIERNES"
             Me.chkViernes.UseVisualStyleBackColor = True
@@ -916,7 +918,7 @@
             Me.dtpAJueves.Location = New System.Drawing.Point(522, 56)
             Me.dtpAJueves.Name = "dtpAJueves"
             Me.dtpAJueves.ShowUpDown = True
-            Me.dtpAJueves.Size = New System.Drawing.Size(61, 20)
+            Me.dtpAJueves.Size = New System.Drawing.Size(61, 21)
             Me.dtpAJueves.TabIndex = 27
             '
             'dtpDJueves
@@ -927,7 +929,7 @@
             Me.dtpDJueves.Location = New System.Drawing.Point(522, 34)
             Me.dtpDJueves.Name = "dtpDJueves"
             Me.dtpDJueves.ShowUpDown = True
-            Me.dtpDJueves.Size = New System.Drawing.Size(61, 20)
+            Me.dtpDJueves.Size = New System.Drawing.Size(61, 21)
             Me.dtpDJueves.TabIndex = 26
             '
             'Label8
@@ -935,7 +937,7 @@
             Me.Label8.AutoSize = True
             Me.Label8.Location = New System.Drawing.Point(504, 59)
             Me.Label8.Name = "Label8"
-            Me.Label8.Size = New System.Drawing.Size(19, 13)
+            Me.Label8.Size = New System.Drawing.Size(17, 13)
             Me.Label8.TabIndex = 25
             Me.Label8.Text = "A:"
             '
@@ -944,7 +946,7 @@
             Me.Label9.AutoSize = True
             Me.Label9.Location = New System.Drawing.Point(498, 37)
             Me.Label9.Name = "Label9"
-            Me.Label9.Size = New System.Drawing.Size(25, 13)
+            Me.Label9.Size = New System.Drawing.Size(23, 13)
             Me.Label9.TabIndex = 24
             Me.Label9.Text = "DE:"
             '
@@ -954,7 +956,7 @@
             Me.chkJueves.Enabled = False
             Me.chkJueves.Location = New System.Drawing.Point(501, 19)
             Me.chkJueves.Name = "chkJueves"
-            Me.chkJueves.Size = New System.Drawing.Size(62, 17)
+            Me.chkJueves.Size = New System.Drawing.Size(65, 17)
             Me.chkJueves.TabIndex = 23
             Me.chkJueves.Text = "JUEVES"
             Me.chkJueves.UseVisualStyleBackColor = True
@@ -967,7 +969,7 @@
             Me.dtpAMiercoles.Location = New System.Drawing.Point(400, 57)
             Me.dtpAMiercoles.Name = "dtpAMiercoles"
             Me.dtpAMiercoles.ShowUpDown = True
-            Me.dtpAMiercoles.Size = New System.Drawing.Size(61, 20)
+            Me.dtpAMiercoles.Size = New System.Drawing.Size(61, 21)
             Me.dtpAMiercoles.TabIndex = 22
             '
             'dtpDMiercoles
@@ -978,7 +980,7 @@
             Me.dtpDMiercoles.Location = New System.Drawing.Point(400, 35)
             Me.dtpDMiercoles.Name = "dtpDMiercoles"
             Me.dtpDMiercoles.ShowUpDown = True
-            Me.dtpDMiercoles.Size = New System.Drawing.Size(61, 20)
+            Me.dtpDMiercoles.Size = New System.Drawing.Size(61, 21)
             Me.dtpDMiercoles.TabIndex = 21
             '
             'Label5
@@ -986,7 +988,7 @@
             Me.Label5.AutoSize = True
             Me.Label5.Location = New System.Drawing.Point(379, 60)
             Me.Label5.Name = "Label5"
-            Me.Label5.Size = New System.Drawing.Size(19, 13)
+            Me.Label5.Size = New System.Drawing.Size(17, 13)
             Me.Label5.TabIndex = 20
             Me.Label5.Text = "A:"
             '
@@ -995,7 +997,7 @@
             Me.Label6.AutoSize = True
             Me.Label6.Location = New System.Drawing.Point(373, 38)
             Me.Label6.Name = "Label6"
-            Me.Label6.Size = New System.Drawing.Size(25, 13)
+            Me.Label6.Size = New System.Drawing.Size(23, 13)
             Me.Label6.TabIndex = 19
             Me.Label6.Text = "DE:"
             '
@@ -1005,7 +1007,7 @@
             Me.chkMiercoles.Enabled = False
             Me.chkMiercoles.Location = New System.Drawing.Point(379, 20)
             Me.chkMiercoles.Name = "chkMiercoles"
-            Me.chkMiercoles.Size = New System.Drawing.Size(80, 17)
+            Me.chkMiercoles.Size = New System.Drawing.Size(86, 17)
             Me.chkMiercoles.TabIndex = 18
             Me.chkMiercoles.Text = "MIÉRCOLES"
             Me.chkMiercoles.UseVisualStyleBackColor = True
@@ -1018,7 +1020,7 @@
             Me.dtpAMartes.Location = New System.Drawing.Point(274, 57)
             Me.dtpAMartes.Name = "dtpAMartes"
             Me.dtpAMartes.ShowUpDown = True
-            Me.dtpAMartes.Size = New System.Drawing.Size(61, 20)
+            Me.dtpAMartes.Size = New System.Drawing.Size(61, 21)
             Me.dtpAMartes.TabIndex = 17
             '
             'dtpDMartes
@@ -1029,7 +1031,7 @@
             Me.dtpDMartes.Location = New System.Drawing.Point(274, 35)
             Me.dtpDMartes.Name = "dtpDMartes"
             Me.dtpDMartes.ShowUpDown = True
-            Me.dtpDMartes.Size = New System.Drawing.Size(61, 20)
+            Me.dtpDMartes.Size = New System.Drawing.Size(61, 21)
             Me.dtpDMartes.TabIndex = 16
             '
             'Label3
@@ -1037,7 +1039,7 @@
             Me.Label3.AutoSize = True
             Me.Label3.Location = New System.Drawing.Point(251, 60)
             Me.Label3.Name = "Label3"
-            Me.Label3.Size = New System.Drawing.Size(19, 13)
+            Me.Label3.Size = New System.Drawing.Size(17, 13)
             Me.Label3.TabIndex = 15
             Me.Label3.Text = "A:"
             '
@@ -1046,7 +1048,7 @@
             Me.Label4.AutoSize = True
             Me.Label4.Location = New System.Drawing.Point(245, 38)
             Me.Label4.Name = "Label4"
-            Me.Label4.Size = New System.Drawing.Size(25, 13)
+            Me.Label4.Size = New System.Drawing.Size(23, 13)
             Me.Label4.TabIndex = 14
             Me.Label4.Text = "DE:"
             '
@@ -1056,7 +1058,7 @@
             Me.chkMartes.Enabled = False
             Me.chkMartes.Location = New System.Drawing.Point(253, 20)
             Me.chkMartes.Name = "chkMartes"
-            Me.chkMartes.Size = New System.Drawing.Size(62, 17)
+            Me.chkMartes.Size = New System.Drawing.Size(70, 17)
             Me.chkMartes.TabIndex = 13
             Me.chkMartes.Text = "MARTES"
             Me.chkMartes.UseVisualStyleBackColor = True
@@ -1069,7 +1071,7 @@
             Me.dtpALunes.Location = New System.Drawing.Point(142, 56)
             Me.dtpALunes.Name = "dtpALunes"
             Me.dtpALunes.ShowUpDown = True
-            Me.dtpALunes.Size = New System.Drawing.Size(61, 20)
+            Me.dtpALunes.Size = New System.Drawing.Size(61, 21)
             Me.dtpALunes.TabIndex = 12
             '
             'dtpDLunes
@@ -1080,7 +1082,7 @@
             Me.dtpDLunes.Location = New System.Drawing.Point(142, 34)
             Me.dtpDLunes.Name = "dtpDLunes"
             Me.dtpDLunes.ShowUpDown = True
-            Me.dtpDLunes.Size = New System.Drawing.Size(61, 20)
+            Me.dtpDLunes.Size = New System.Drawing.Size(61, 21)
             Me.dtpDLunes.TabIndex = 11
             '
             'Label2
@@ -1088,7 +1090,7 @@
             Me.Label2.AutoSize = True
             Me.Label2.Location = New System.Drawing.Point(124, 59)
             Me.Label2.Name = "Label2"
-            Me.Label2.Size = New System.Drawing.Size(19, 13)
+            Me.Label2.Size = New System.Drawing.Size(17, 13)
             Me.Label2.TabIndex = 10
             Me.Label2.Text = "A:"
             '
@@ -1097,7 +1099,7 @@
             Me.Label1.AutoSize = True
             Me.Label1.Location = New System.Drawing.Point(118, 37)
             Me.Label1.Name = "Label1"
-            Me.Label1.Size = New System.Drawing.Size(25, 13)
+            Me.Label1.Size = New System.Drawing.Size(23, 13)
             Me.Label1.TabIndex = 9
             Me.Label1.Text = "DE:"
             '
@@ -1107,7 +1109,7 @@
             Me.chkLunes.Enabled = False
             Me.chkLunes.Location = New System.Drawing.Point(121, 19)
             Me.chkLunes.Name = "chkLunes"
-            Me.chkLunes.Size = New System.Drawing.Size(56, 17)
+            Me.chkLunes.Size = New System.Drawing.Size(60, 17)
             Me.chkLunes.TabIndex = 0
             Me.chkLunes.Text = "LUNES"
             Me.chkLunes.UseVisualStyleBackColor = True
@@ -1132,7 +1134,7 @@
             Me.GroupBox1.Controls.Add(Me.Label22)
             Me.GroupBox1.Controls.Add(Me.txtPersonal)
             Me.GroupBox1.Controls.Add(Me.Label26)
-            Me.GroupBox1.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.GroupBox1.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.GroupBox1.Location = New System.Drawing.Point(2, 223)
             Me.GroupBox1.Name = "GroupBox1"
             Me.GroupBox1.Size = New System.Drawing.Size(996, 87)
@@ -1159,7 +1161,7 @@
             Me.Label32.AutoSize = True
             Me.Label32.Location = New System.Drawing.Point(686, 44)
             Me.Label32.Name = "Label32"
-            Me.Label32.Size = New System.Drawing.Size(37, 13)
+            Me.Label32.Size = New System.Drawing.Size(35, 13)
             Me.Label32.TabIndex = 208
             Me.Label32.Text = "TIPO:"
             '
@@ -1169,7 +1171,7 @@
             Me.dtpHastaP.Enabled = False
             Me.dtpHastaP.Location = New System.Drawing.Point(394, 38)
             Me.dtpHastaP.Name = "dtpHastaP"
-            Me.dtpHastaP.Size = New System.Drawing.Size(255, 20)
+            Me.dtpHastaP.Size = New System.Drawing.Size(255, 21)
             Me.dtpHastaP.TabIndex = 206
             '
             'Label20
@@ -1177,7 +1179,7 @@
             Me.Label20.AutoSize = True
             Me.Label20.Location = New System.Drawing.Point(341, 41)
             Me.Label20.Name = "Label20"
-            Me.Label20.Size = New System.Drawing.Size(55, 13)
+            Me.Label20.Size = New System.Drawing.Size(58, 13)
             Me.Label20.TabIndex = 207
             Me.Label20.Text = "TERMINA:"
             '
@@ -1187,7 +1189,7 @@
             Me.dtpDesdeP.Enabled = False
             Me.dtpDesdeP.Location = New System.Drawing.Point(55, 38)
             Me.dtpDesdeP.Name = "dtpDesdeP"
-            Me.dtpDesdeP.Size = New System.Drawing.Size(255, 20)
+            Me.dtpDesdeP.Size = New System.Drawing.Size(255, 21)
             Me.dtpDesdeP.TabIndex = 204
             '
             'Label31
@@ -1195,7 +1197,7 @@
             Me.Label31.AutoSize = True
             Me.Label31.Location = New System.Drawing.Point(8, 41)
             Me.Label31.Name = "Label31"
-            Me.Label31.Size = New System.Drawing.Size(49, 13)
+            Me.Label31.Size = New System.Drawing.Size(41, 13)
             Me.Label31.TabIndex = 205
             Me.Label31.Text = "INICIA:"
             '
@@ -1206,7 +1208,7 @@
             Me.txtDetalle.Enabled = False
             Me.txtDetalle.Location = New System.Drawing.Point(89, 62)
             Me.txtDetalle.Name = "txtDetalle"
-            Me.txtDetalle.Size = New System.Drawing.Size(905, 20)
+            Me.txtDetalle.Size = New System.Drawing.Size(905, 21)
             Me.txtDetalle.TabIndex = 199
             '
             'Label29
@@ -1214,7 +1216,7 @@
             Me.Label29.AutoSize = True
             Me.Label29.Location = New System.Drawing.Point(7, 65)
             Me.Label29.Name = "Label29"
-            Me.Label29.Size = New System.Drawing.Size(79, 13)
+            Me.Label29.Size = New System.Drawing.Size(85, 13)
             Me.Label29.TabIndex = 198
             Me.Label29.Text = "OBSERVACIÓN:"
             '
@@ -1224,7 +1226,7 @@
             Me.txtArea.Enabled = False
             Me.txtArea.Location = New System.Drawing.Point(113, 38)
             Me.txtArea.Name = "txtArea"
-            Me.txtArea.Size = New System.Drawing.Size(192, 20)
+            Me.txtArea.Size = New System.Drawing.Size(192, 21)
             Me.txtArea.TabIndex = 197
             Me.txtArea.Visible = False
             '
@@ -1244,7 +1246,7 @@
             Me.txtCargo.Enabled = False
             Me.txtCargo.Location = New System.Drawing.Point(69, 38)
             Me.txtCargo.Name = "txtCargo"
-            Me.txtCargo.Size = New System.Drawing.Size(187, 20)
+            Me.txtCargo.Size = New System.Drawing.Size(187, 21)
             Me.txtCargo.TabIndex = 195
             Me.txtCargo.Visible = False
             '
@@ -1253,7 +1255,7 @@
             Me.Label25.AutoSize = True
             Me.Label25.Location = New System.Drawing.Point(23, 41)
             Me.Label25.Name = "Label25"
-            Me.Label25.Size = New System.Drawing.Size(43, 13)
+            Me.Label25.Size = New System.Drawing.Size(47, 13)
             Me.Label25.TabIndex = 194
             Me.Label25.Text = "CARGO:"
             Me.Label25.Visible = False
@@ -1289,7 +1291,7 @@
             Me.Label22.AutoSize = True
             Me.Label22.Location = New System.Drawing.Point(8, 16)
             Me.Label22.Name = "Label22"
-            Me.Label22.Size = New System.Drawing.Size(25, 13)
+            Me.Label22.Size = New System.Drawing.Size(20, 13)
             Me.Label22.TabIndex = 8
             Me.Label22.Text = "ID:"
             '
@@ -1300,7 +1302,7 @@
             Me.txtPersonal.Enabled = False
             Me.txtPersonal.Location = New System.Drawing.Point(182, 14)
             Me.txtPersonal.Name = "txtPersonal"
-            Me.txtPersonal.Size = New System.Drawing.Size(780, 20)
+            Me.txtPersonal.Size = New System.Drawing.Size(780, 21)
             Me.txtPersonal.TabIndex = 0
             '
             'Label26
@@ -1308,7 +1310,7 @@
             Me.Label26.AutoSize = True
             Me.Label26.Location = New System.Drawing.Point(130, 17)
             Me.Label26.Name = "Label26"
-            Me.Label26.Size = New System.Drawing.Size(55, 13)
+            Me.Label26.Size = New System.Drawing.Size(63, 13)
             Me.Label26.TabIndex = 3
             Me.Label26.Text = "NOMBRES:"
             '
@@ -1425,7 +1427,7 @@
             Me.DateTimePicker3.Location = New System.Drawing.Point(698, 7)
             Me.DateTimePicker3.Name = "DateTimePicker3"
             Me.DateTimePicker3.ShowUpDown = True
-            Me.DateTimePicker3.Size = New System.Drawing.Size(121, 20)
+            Me.DateTimePicker3.Size = New System.Drawing.Size(121, 21)
             Me.DateTimePicker3.TabIndex = 200
             '
             'Label30
@@ -1460,7 +1462,7 @@
             Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
             Me.Name = "FrmProgramacionGeneral"
             Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-            Me.Text = "PROGRAMACIÓN GENERA"
+            Me.Text = "PROGRAMACIÓN GENERAL"
             Me.tcSitios.ResumeLayout(False)
             Me.TabPage1.ResumeLayout(False)
             Me.TabPage1.PerformLayout()

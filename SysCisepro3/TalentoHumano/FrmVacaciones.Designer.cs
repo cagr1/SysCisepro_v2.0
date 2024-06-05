@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.btnNuevo = new System.Windows.Forms.ToolStripButton();
             this.btnGuardar = new System.Windows.Forms.ToolStripButton();
@@ -103,6 +103,7 @@
             // 
             // toolStrip1
             // 
+            this.toolStrip1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnNuevo,
             this.btnGuardar,
@@ -156,7 +157,7 @@
             this.GroupBox1.Controls.Add(this.Label22);
             this.GroupBox1.Controls.Add(this.txtPersonal);
             this.GroupBox1.Controls.Add(this.Label26);
-            this.GroupBox1.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GroupBox1.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GroupBox1.Location = new System.Drawing.Point(0, 28);
             this.GroupBox1.Name = "GroupBox1";
             this.GroupBox1.Size = new System.Drawing.Size(778, 64);
@@ -170,7 +171,7 @@
             this.dtpFechaEntrada.Enabled = false;
             this.dtpFechaEntrada.Location = new System.Drawing.Point(530, 39);
             this.dtpFechaEntrada.Name = "dtpFechaEntrada";
-            this.dtpFechaEntrada.Size = new System.Drawing.Size(242, 20);
+            this.dtpFechaEntrada.Size = new System.Drawing.Size(242, 21);
             this.dtpFechaEntrada.TabIndex = 206;
             // 
             // label6
@@ -178,7 +179,7 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(476, 42);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(55, 13);
+            this.label6.Size = new System.Drawing.Size(57, 13);
             this.label6.TabIndex = 207;
             this.label6.Text = "INGRESO:";
             // 
@@ -189,7 +190,7 @@
             this.txtArea.Enabled = false;
             this.txtArea.Location = new System.Drawing.Point(285, 39);
             this.txtArea.Name = "txtArea";
-            this.txtArea.Size = new System.Drawing.Size(156, 20);
+            this.txtArea.Size = new System.Drawing.Size(156, 21);
             this.txtArea.TabIndex = 197;
             // 
             // Label27
@@ -208,7 +209,7 @@
             this.txtCargo.Enabled = false;
             this.txtCargo.Location = new System.Drawing.Point(59, 39);
             this.txtCargo.Name = "txtCargo";
-            this.txtCargo.Size = new System.Drawing.Size(163, 20);
+            this.txtCargo.Size = new System.Drawing.Size(163, 21);
             this.txtCargo.TabIndex = 195;
             // 
             // Label25
@@ -216,7 +217,7 @@
             this.Label25.AutoSize = true;
             this.Label25.Location = new System.Drawing.Point(13, 42);
             this.Label25.Name = "Label25";
-            this.Label25.Size = new System.Drawing.Size(43, 13);
+            this.Label25.Size = new System.Drawing.Size(47, 13);
             this.Label25.TabIndex = 194;
             this.Label25.Text = "CARGO:";
             // 
@@ -242,7 +243,7 @@
             this.txtIdPersonal.Enabled = false;
             this.txtIdPersonal.Location = new System.Drawing.Point(44, 13);
             this.txtIdPersonal.Name = "txtIdPersonal";
-            this.txtIdPersonal.Size = new System.Drawing.Size(47, 20);
+            this.txtIdPersonal.Size = new System.Drawing.Size(47, 21);
             this.txtIdPersonal.TabIndex = 28;
             // 
             // Label22
@@ -250,7 +251,7 @@
             this.Label22.AutoSize = true;
             this.Label22.Location = new System.Drawing.Point(18, 18);
             this.Label22.Name = "Label22";
-            this.Label22.Size = new System.Drawing.Size(25, 13);
+            this.Label22.Size = new System.Drawing.Size(20, 13);
             this.Label22.TabIndex = 8;
             this.Label22.Text = "ID:";
             // 
@@ -261,7 +262,7 @@
             this.txtPersonal.Enabled = false;
             this.txtPersonal.Location = new System.Drawing.Point(219, 16);
             this.txtPersonal.Name = "txtPersonal";
-            this.txtPersonal.Size = new System.Drawing.Size(529, 20);
+            this.txtPersonal.Size = new System.Drawing.Size(529, 21);
             this.txtPersonal.TabIndex = 0;
             // 
             // Label26
@@ -269,7 +270,7 @@
             this.Label26.AutoSize = true;
             this.Label26.Location = new System.Drawing.Point(167, 17);
             this.Label26.Name = "Label26";
-            this.Label26.Size = new System.Drawing.Size(55, 13);
+            this.Label26.Size = new System.Drawing.Size(63, 13);
             this.Label26.TabIndex = 3;
             this.Label26.Text = "NOMBRES:";
             // 
@@ -303,7 +304,7 @@
             this.GroupBox2.Controls.Add(this.Label3);
             this.GroupBox2.Controls.Add(this.Label31);
             this.GroupBox2.Controls.Add(this.label5);
-            this.GroupBox2.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GroupBox2.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GroupBox2.Location = new System.Drawing.Point(0, 92);
             this.GroupBox2.Name = "GroupBox2";
             this.GroupBox2.Size = new System.Drawing.Size(778, 528);
@@ -318,7 +319,7 @@
             this.txtValorCobro.Enabled = false;
             this.txtValorCobro.Location = new System.Drawing.Point(669, 324);
             this.txtValorCobro.Name = "txtValorCobro";
-            this.txtValorCobro.Size = new System.Drawing.Size(72, 20);
+            this.txtValorCobro.Size = new System.Drawing.Size(72, 21);
             this.txtValorCobro.TabIndex = 232;
             this.txtValorCobro.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtValorCobro_KeyPress);
             this.txtValorCobro.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtValorCobro_KeyUp);
@@ -328,7 +329,7 @@
             this.chkCobro.AutoSize = true;
             this.chkCobro.Location = new System.Drawing.Point(669, 305);
             this.chkCobro.Name = "chkCobro";
-            this.chkCobro.Size = new System.Drawing.Size(74, 17);
+            this.chkCobro.Size = new System.Drawing.Size(83, 17);
             this.chkCobro.TabIndex = 231;
             this.chkCobro.Text = "COBRADAS";
             this.chkCobro.UseVisualStyleBackColor = true;
@@ -341,7 +342,7 @@
             this.txtDisponibles.Enabled = false;
             this.txtDisponibles.Location = new System.Drawing.Point(181, 324);
             this.txtDisponibles.Name = "txtDisponibles";
-            this.txtDisponibles.Size = new System.Drawing.Size(58, 20);
+            this.txtDisponibles.Size = new System.Drawing.Size(58, 21);
             this.txtDisponibles.TabIndex = 229;
             // 
             // label9
@@ -349,7 +350,7 @@
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(12, 328);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(109, 13);
+            this.label9.Size = new System.Drawing.Size(106, 13);
             this.label9.TabIndex = 228;
             this.label9.Text = "DÍAS DISPONIBLES:";
             // 
@@ -372,7 +373,7 @@
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(12, 302);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(55, 13);
+            this.label8.Size = new System.Drawing.Size(56, 13);
             this.label8.TabIndex = 226;
             this.label8.Text = "PERÍODO:";
             // 
@@ -411,8 +412,8 @@
             this.dataGridView2.AllowUserToAddRows = false;
             this.dataGridView2.AllowUserToDeleteRows = false;
             this.dataGridView2.AllowUserToResizeRows = false;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dataGridView2.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dataGridView2.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView2.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView2.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -484,8 +485,8 @@
             // 
             // Column18
             // 
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.Column18.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.Column18.DefaultCellStyle = dataGridViewCellStyle2;
             this.Column18.HeaderText = "COBRO";
             this.Column18.Name = "Column18";
             this.Column18.ReadOnly = true;
@@ -498,7 +499,7 @@
             this.txtPendientes.Enabled = false;
             this.txtPendientes.Location = new System.Drawing.Point(621, 324);
             this.txtPendientes.Name = "txtPendientes";
-            this.txtPendientes.Size = new System.Drawing.Size(35, 20);
+            this.txtPendientes.Size = new System.Drawing.Size(35, 21);
             this.txtPendientes.TabIndex = 222;
             // 
             // txtDias
@@ -508,7 +509,7 @@
             this.txtDias.Enabled = false;
             this.txtDias.Location = new System.Drawing.Point(621, 298);
             this.txtDias.Name = "txtDias";
-            this.txtDias.Size = new System.Drawing.Size(35, 20);
+            this.txtDias.Size = new System.Drawing.Size(35, 21);
             this.txtDias.TabIndex = 220;
             this.txtDias.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNumDoc_KeyPress);
             // 
@@ -517,7 +518,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(586, 301);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(37, 13);
+            this.label1.Size = new System.Drawing.Size(34, 13);
             this.label1.TabIndex = 219;
             this.label1.Text = "DÍAS:";
             // 
@@ -526,8 +527,8 @@
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AllowUserToResizeRows = false;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -615,8 +616,8 @@
             // 
             // Column17
             // 
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.Column17.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.Column17.DefaultCellStyle = dataGridViewCellStyle4;
             this.Column17.HeaderText = "COBRO";
             this.Column17.Name = "Column17";
             this.Column17.ReadOnly = true;
@@ -629,7 +630,7 @@
             this.txtNumDoc.Enabled = false;
             this.txtNumDoc.Location = new System.Drawing.Point(208, 21);
             this.txtNumDoc.Name = "txtNumDoc";
-            this.txtNumDoc.Size = new System.Drawing.Size(52, 20);
+            this.txtNumDoc.Size = new System.Drawing.Size(52, 21);
             this.txtNumDoc.TabIndex = 217;
             this.txtNumDoc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNumDoc_KeyPress);
             // 
@@ -640,7 +641,7 @@
             this.txtObservacion.Enabled = false;
             this.txtObservacion.Location = new System.Drawing.Point(57, 353);
             this.txtObservacion.Name = "txtObservacion";
-            this.txtObservacion.Size = new System.Drawing.Size(715, 20);
+            this.txtObservacion.Size = new System.Drawing.Size(715, 21);
             this.txtObservacion.TabIndex = 201;
             // 
             // Label18
@@ -648,7 +649,7 @@
             this.Label18.AutoSize = true;
             this.Label18.Location = new System.Drawing.Point(5, 356);
             this.Label18.Name = "Label18";
-            this.Label18.Size = new System.Drawing.Size(49, 13);
+            this.Label18.Size = new System.Drawing.Size(52, 13);
             this.Label18.TabIndex = 200;
             this.Label18.Text = "OBSERV:";
             // 
@@ -657,7 +658,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(162, 24);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(49, 13);
+            this.label2.Size = new System.Drawing.Size(47, 13);
             this.label2.TabIndex = 216;
             this.label2.Text = "N° DOC:";
             // 
@@ -667,7 +668,7 @@
             this.dtpHasta.Enabled = false;
             this.dtpHasta.Location = new System.Drawing.Point(308, 324);
             this.dtpHasta.Name = "dtpHasta";
-            this.dtpHasta.Size = new System.Drawing.Size(264, 20);
+            this.dtpHasta.Size = new System.Drawing.Size(264, 21);
             this.dtpHasta.TabIndex = 209;
             this.dtpHasta.ValueChanged += new System.EventHandler(this.dtpDesde_ValueChanged);
             // 
@@ -676,7 +677,7 @@
             this.Label4.AutoSize = true;
             this.Label4.Location = new System.Drawing.Point(256, 327);
             this.Label4.Name = "Label4";
-            this.Label4.Size = new System.Drawing.Size(55, 13);
+            this.Label4.Size = new System.Drawing.Size(56, 13);
             this.Label4.TabIndex = 210;
             this.Label4.Text = "INGRESA:";
             // 
@@ -702,7 +703,7 @@
             this.txtSitio.Enabled = false;
             this.txtSitio.Location = new System.Drawing.Point(322, 21);
             this.txtSitio.Name = "txtSitio";
-            this.txtSitio.Size = new System.Drawing.Size(426, 20);
+            this.txtSitio.Size = new System.Drawing.Size(426, 21);
             this.txtSitio.TabIndex = 211;
             // 
             // dtpDesde
@@ -711,7 +712,7 @@
             this.dtpDesde.Enabled = false;
             this.dtpDesde.Location = new System.Drawing.Point(308, 298);
             this.dtpDesde.Name = "dtpDesde";
-            this.dtpDesde.Size = new System.Drawing.Size(264, 20);
+            this.dtpDesde.Size = new System.Drawing.Size(264, 21);
             this.dtpDesde.TabIndex = 207;
             this.dtpDesde.ValueChanged += new System.EventHandler(this.dtpDesde_ValueChanged);
             // 
@@ -720,7 +721,7 @@
             this.Label23.AutoSize = true;
             this.Label23.Location = new System.Drawing.Point(276, 24);
             this.Label23.Name = "Label23";
-            this.Label23.Size = new System.Drawing.Size(49, 13);
+            this.Label23.Size = new System.Drawing.Size(52, 13);
             this.Label23.TabIndex = 212;
             this.Label23.Text = "PUESTO:";
             // 
@@ -731,7 +732,7 @@
             this.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpFecha.Location = new System.Drawing.Point(45, 21);
             this.dtpFecha.Name = "dtpFecha";
-            this.dtpFecha.Size = new System.Drawing.Size(90, 20);
+            this.dtpFecha.Size = new System.Drawing.Size(90, 21);
             this.dtpFecha.TabIndex = 204;
             // 
             // Label3
@@ -739,7 +740,7 @@
             this.Label3.AutoSize = true;
             this.Label3.Location = new System.Drawing.Point(256, 301);
             this.Label3.Name = "Label3";
-            this.Label3.Size = new System.Drawing.Size(37, 13);
+            this.Label3.Size = new System.Drawing.Size(36, 13);
             this.Label3.TabIndex = 208;
             this.Label3.Text = "SALE:";
             // 
@@ -748,7 +749,7 @@
             this.Label31.AutoSize = true;
             this.Label31.Location = new System.Drawing.Point(4, 24);
             this.Label31.Name = "Label31";
-            this.Label31.Size = new System.Drawing.Size(43, 13);
+            this.Label31.Size = new System.Drawing.Size(44, 13);
             this.Label31.TabIndex = 205;
             this.Label31.Text = "FECHA:";
             // 
@@ -757,7 +758,7 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(586, 327);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(37, 13);
+            this.label5.Size = new System.Drawing.Size(38, 13);
             this.label5.TabIndex = 230;
             this.label5.Text = "PEND:";
             // 

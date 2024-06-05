@@ -201,7 +201,7 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
             End Select
             _sqlCommands = New List(Of SqlCommand)
 
-
+            dgvComprobanteEgresoBancos.Font = New Font("Roboto", 8, FontStyle.Regular)
             LlenarComboBancos()
             CargarComprobanteEgresoBancos()
         End Sub

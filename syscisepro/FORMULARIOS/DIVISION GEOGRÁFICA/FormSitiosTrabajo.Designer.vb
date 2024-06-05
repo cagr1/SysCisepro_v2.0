@@ -1,8 +1,8 @@
 ﻿Namespace FORMULARIOS.DIVISION_GEOGRÁFICA
     <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
     Partial Class FormSitiosTrabajo
-        Inherits System.Windows.Forms.Form
-
+        ' Inherits System.Windows.Forms.Form
+        Inherits Krypton.Toolkit.KryptonForm
         'Form reemplaza a Dispose para limpiar la lista de componentes.
         <System.Diagnostics.DebuggerNonUserCode()> _
         Protected Overrides Sub Dispose(ByVal disposing As Boolean)
@@ -23,9 +23,9 @@
         'No lo modifique con el editor de código.
         <System.Diagnostics.DebuggerStepThrough()> _
         Private Sub InitializeComponent()
-            Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormSitiosTrabajo))
+            Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Me.tcSitios = New System.Windows.Forms.TabControl()
             Me.TabPage1 = New System.Windows.Forms.TabPage()
             Me.GroupBox5 = New System.Windows.Forms.GroupBox()
@@ -185,6 +185,7 @@
             Me.tcSitios.Controls.Add(Me.TabPage1)
             Me.tcSitios.Controls.Add(Me.TabPage2)
             Me.tcSitios.Controls.Add(Me.tpReporte)
+            Me.tcSitios.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.tcSitios.Location = New System.Drawing.Point(2, 2)
             Me.tcSitios.Name = "tcSitios"
             Me.tcSitios.SelectedIndex = 0
@@ -226,14 +227,14 @@
             Me.GroupBox5.Controls.Add(Me.txtHoras50)
             Me.GroupBox5.Controls.Add(Me.Label11)
             Me.GroupBox5.Controls.Add(Me.txtHorasNormal)
-            Me.GroupBox5.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.GroupBox5.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.GroupBox5.Location = New System.Drawing.Point(1, 209)
             Me.GroupBox5.Name = "GroupBox5"
             Me.GroupBox5.Size = New System.Drawing.Size(907, 73)
             Me.GroupBox5.TabIndex = 200
             Me.GroupBox5.TabStop = False
-            Me.GroupBox5.Text = "DATOS CONTABLES (DESGLOSE DE HORAS Y SOBRETIEMPO SEGÚN PARÁMETROS EN ROL DE PAGOS" & _
-                ")"
+            Me.GroupBox5.Text = "DATOS CONTABLES (DESGLOSE DE HORAS Y SOBRETIEMPO SEGÚN PARÁMETROS EN ROL DE PAGOS" &
+    ")"
             '
             'chkExtra
             '
@@ -262,7 +263,7 @@
             Me.txtAdicional.Enabled = False
             Me.txtAdicional.Location = New System.Drawing.Point(628, 45)
             Me.txtAdicional.Name = "txtAdicional"
-            Me.txtAdicional.Size = New System.Drawing.Size(62, 20)
+            Me.txtAdicional.Size = New System.Drawing.Size(62, 21)
             Me.txtAdicional.TabIndex = 210
             '
             'Label20
@@ -282,7 +283,7 @@
             Me.txtHorasNoct.Enabled = False
             Me.txtHorasNoct.Location = New System.Drawing.Point(628, 19)
             Me.txtHorasNoct.Name = "txtHorasNoct"
-            Me.txtHorasNoct.Size = New System.Drawing.Size(62, 20)
+            Me.txtHorasNoct.Size = New System.Drawing.Size(62, 21)
             Me.txtHorasNoct.TabIndex = 208
             '
             'Label14
@@ -302,7 +303,7 @@
             Me.txtHorasFeria.Enabled = False
             Me.txtHorasFeria.Location = New System.Drawing.Point(435, 45)
             Me.txtHorasFeria.Name = "txtHorasFeria"
-            Me.txtHorasFeria.Size = New System.Drawing.Size(62, 20)
+            Me.txtHorasFeria.Size = New System.Drawing.Size(62, 21)
             Me.txtHorasFeria.TabIndex = 206
             '
             'Label15
@@ -322,7 +323,7 @@
             Me.txtHoras100.Enabled = False
             Me.txtHoras100.Location = New System.Drawing.Point(434, 19)
             Me.txtHoras100.Name = "txtHoras100"
-            Me.txtHoras100.Size = New System.Drawing.Size(62, 20)
+            Me.txtHoras100.Size = New System.Drawing.Size(62, 21)
             Me.txtHoras100.TabIndex = 204
             '
             'Label13
@@ -342,7 +343,7 @@
             Me.txtHoras50.Enabled = False
             Me.txtHoras50.Location = New System.Drawing.Point(128, 45)
             Me.txtHoras50.Name = "txtHoras50"
-            Me.txtHoras50.Size = New System.Drawing.Size(62, 20)
+            Me.txtHoras50.Size = New System.Drawing.Size(62, 21)
             Me.txtHoras50.TabIndex = 202
             '
             'Label11
@@ -362,17 +363,18 @@
             Me.txtHorasNormal.Enabled = False
             Me.txtHorasNormal.Location = New System.Drawing.Point(128, 19)
             Me.txtHorasNormal.Name = "txtHorasNormal"
-            Me.txtHorasNormal.Size = New System.Drawing.Size(62, 20)
+            Me.txtHorasNormal.Size = New System.Drawing.Size(62, 21)
             Me.txtHorasNormal.TabIndex = 200
             '
             'Label24
             '
             Me.Label24.Cursor = System.Windows.Forms.Cursors.Hand
+            Me.Label24.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Label24.Location = New System.Drawing.Point(1, 285)
             Me.Label24.Name = "Label24"
             Me.Label24.Size = New System.Drawing.Size(911, 18)
             Me.Label24.TabIndex = 199
-            Me.Label24.Text = "STIO / PUESTOS REGISTRADOS"
+            Me.Label24.Text = "SITIO / PUESTOS REGISTRADOS"
             Me.Label24.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
             '
             'cbxFiltro
@@ -392,7 +394,7 @@
             '
             Me.txtFiltro.BackColor = System.Drawing.Color.White
             Me.txtFiltro.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-            Me.txtFiltro.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtFiltro.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtFiltro.Location = New System.Drawing.Point(50, 308)
             Me.txtFiltro.Name = "txtFiltro"
             Me.txtFiltro.Size = New System.Drawing.Size(733, 21)
@@ -402,9 +404,10 @@
             '
             Me.Label7.AutoSize = True
             Me.Label7.Cursor = System.Windows.Forms.Cursors.Hand
+            Me.Label7.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Label7.Location = New System.Drawing.Point(5, 312)
             Me.Label7.Name = "Label7"
-            Me.Label7.Size = New System.Drawing.Size(48, 13)
+            Me.Label7.Size = New System.Drawing.Size(46, 13)
             Me.Label7.TabIndex = 190
             Me.Label7.Text = "FILTRO:"
             Me.Label7.TextAlign = System.Drawing.ContentAlignment.TopCenter
@@ -436,7 +439,7 @@
             Me.GroupBox2.Controls.Add(Me.Label27)
             Me.GroupBox2.Controls.Add(Me.lblTipo)
             Me.GroupBox2.Controls.Add(Me.Label8)
-            Me.GroupBox2.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.GroupBox2.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.GroupBox2.Location = New System.Drawing.Point(4, 90)
             Me.GroupBox2.Name = "GroupBox2"
             Me.GroupBox2.Size = New System.Drawing.Size(907, 119)
@@ -485,7 +488,7 @@
             Me.txtRiver.Enabled = False
             Me.txtRiver.Location = New System.Drawing.Point(404, 41)
             Me.txtRiver.Name = "txtRiver"
-            Me.txtRiver.Size = New System.Drawing.Size(41, 20)
+            Me.txtRiver.Size = New System.Drawing.Size(41, 21)
             Me.txtRiver.TabIndex = 198
             '
             'Label10
@@ -505,7 +508,7 @@
             Me.txtLongitud.Enabled = False
             Me.txtLongitud.Location = New System.Drawing.Point(563, 41)
             Me.txtLongitud.Name = "txtLongitud"
-            Me.txtLongitud.Size = New System.Drawing.Size(72, 20)
+            Me.txtLongitud.Size = New System.Drawing.Size(72, 21)
             Me.txtLongitud.TabIndex = 192
             '
             'txtLatitud
@@ -515,7 +518,7 @@
             Me.txtLatitud.Enabled = False
             Me.txtLatitud.Location = New System.Drawing.Point(490, 41)
             Me.txtLatitud.Name = "txtLatitud"
-            Me.txtLatitud.Size = New System.Drawing.Size(72, 20)
+            Me.txtLatitud.Size = New System.Drawing.Size(72, 21)
             Me.txtLatitud.TabIndex = 191
             '
             'txtNombreSitio
@@ -655,7 +658,7 @@
             Me.Label28.AutoSize = True
             Me.Label28.Location = New System.Drawing.Point(141, 0)
             Me.Label28.Name = "Label28"
-            Me.Label28.Size = New System.Drawing.Size(25, 13)
+            Me.Label28.Size = New System.Drawing.Size(16, 13)
             Me.Label28.TabIndex = 6
             Me.Label28.Text = "..."
             '
@@ -679,7 +682,7 @@
             Me.Label27.Cursor = System.Windows.Forms.Cursors.Hand
             Me.Label27.Location = New System.Drawing.Point(43, 95)
             Me.Label27.Name = "Label27"
-            Me.Label27.Size = New System.Drawing.Size(73, 13)
+            Me.Label27.Size = New System.Drawing.Size(76, 13)
             Me.Label27.TabIndex = 185
             Me.Label27.Text = "SUPERVISOR:"
             Me.Label27.TextAlign = System.Drawing.ContentAlignment.TopCenter
@@ -717,7 +720,7 @@
             Me.GroupBox1.Controls.Add(Me.Label26)
             Me.GroupBox1.Controls.Add(Me.txtClienteComercial)
             Me.GroupBox1.Controls.Add(Me.txtCliente)
-            Me.GroupBox1.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.GroupBox1.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.GroupBox1.Location = New System.Drawing.Point(3, 27)
             Me.GroupBox1.Name = "GroupBox1"
             Me.GroupBox1.Size = New System.Drawing.Size(907, 64)
@@ -756,7 +759,7 @@
             Me.Label22.AutoSize = True
             Me.Label22.Location = New System.Drawing.Point(7, 16)
             Me.Label22.Name = "Label22"
-            Me.Label22.Size = New System.Drawing.Size(127, 13)
+            Me.Label22.Size = New System.Drawing.Size(121, 13)
             Me.Label22.TabIndex = 8
             Me.Label22.Text = "TIPO IDENTIFICACIÓN:"
             '
@@ -765,7 +768,7 @@
             Me.Label23.AutoSize = True
             Me.Label23.Location = New System.Drawing.Point(57, 0)
             Me.Label23.Name = "Label23"
-            Me.Label23.Size = New System.Drawing.Size(25, 13)
+            Me.Label23.Size = New System.Drawing.Size(16, 13)
             Me.Label23.TabIndex = 6
             Me.Label23.Text = "..."
             '
@@ -774,7 +777,7 @@
             Me.Label25.AutoSize = True
             Me.Label25.Location = New System.Drawing.Point(7, 41)
             Me.Label25.Name = "Label25"
-            Me.Label25.Size = New System.Drawing.Size(55, 13)
+            Me.Label25.Size = New System.Drawing.Size(53, 13)
             Me.Label25.TabIndex = 4
             Me.Label25.Text = "CLIENTE:"
             '
@@ -785,7 +788,7 @@
             Me.txtCiRuc.Enabled = False
             Me.txtCiRuc.Location = New System.Drawing.Point(746, 13)
             Me.txtCiRuc.Name = "txtCiRuc"
-            Me.txtCiRuc.Size = New System.Drawing.Size(123, 20)
+            Me.txtCiRuc.Size = New System.Drawing.Size(123, 21)
             Me.txtCiRuc.TabIndex = 0
             '
             'Label26
@@ -793,7 +796,7 @@
             Me.Label26.AutoSize = True
             Me.Label26.Location = New System.Drawing.Point(661, 17)
             Me.Label26.Name = "Label26"
-            Me.Label26.Size = New System.Drawing.Size(79, 13)
+            Me.Label26.Size = New System.Drawing.Size(61, 13)
             Me.Label26.TabIndex = 3
             Me.Label26.Text = "RUC / C. I.:"
             '
@@ -804,7 +807,7 @@
             Me.txtClienteComercial.Enabled = False
             Me.txtClienteComercial.Location = New System.Drawing.Point(474, 38)
             Me.txtClienteComercial.Name = "txtClienteComercial"
-            Me.txtClienteComercial.Size = New System.Drawing.Size(430, 20)
+            Me.txtClienteComercial.Size = New System.Drawing.Size(430, 21)
             Me.txtClienteComercial.TabIndex = 2
             '
             'txtCliente
@@ -814,7 +817,7 @@
             Me.txtCliente.Enabled = False
             Me.txtCliente.Location = New System.Drawing.Point(68, 38)
             Me.txtCliente.Name = "txtCliente"
-            Me.txtCliente.Size = New System.Drawing.Size(400, 20)
+            Me.txtCliente.Size = New System.Drawing.Size(400, 21)
             Me.txtCliente.TabIndex = 1
             '
             'MenuStrip1
@@ -898,7 +901,9 @@
             '
             Me.ListView1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
             Me.ListView1.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader1, Me.ColumnHeader4, Me.ColumnHeader23, Me.ColumnHeader5, Me.ColumnHeader6, Me.ColumnHeader2, Me.ColumnHeader3, Me.ColumnHeader7, Me.ColumnHeader8, Me.ColumnHeader9, Me.ColumnHeader10, Me.ColumnHeader11, Me.ColumnHeader12, Me.ColumnHeader13, Me.ColumnHeader14, Me.ColumnHeader15, Me.ColumnHeader16, Me.ColumnHeader17, Me.ColumnHeader18, Me.ColumnHeader19, Me.ColumnHeader20, Me.ColumnHeader21, Me.ColumnHeader22, Me.ColumnHeader39, Me.ColumnHeader40})
+            Me.ListView1.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.ListView1.FullRowSelect = True
+            Me.ListView1.HideSelection = False
             Me.ListView1.Location = New System.Drawing.Point(3, 332)
             Me.ListView1.MultiSelect = False
             Me.ListView1.Name = "ListView1"
@@ -1052,19 +1057,19 @@
             '
             Me.dgvCategoriaItem.AllowUserToAddRows = False
             Me.dgvCategoriaItem.AllowUserToDeleteRows = False
-            DataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-            Me.dgvCategoriaItem.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle3
+            DataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+            Me.dgvCategoriaItem.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle5
             Me.dgvCategoriaItem.BackgroundColor = System.Drawing.Color.White
             Me.dgvCategoriaItem.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
             Me.dgvCategoriaItem.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-            DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-            DataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window
-            DataGridViewCellStyle4.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText
-            DataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(123, Byte), Integer))
-            DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-            DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-            Me.dgvCategoriaItem.DefaultCellStyle = DataGridViewCellStyle4
+            DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+            DataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window
+            DataGridViewCellStyle6.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText
+            DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(123, Byte), Integer))
+            DataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+            DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+            Me.dgvCategoriaItem.DefaultCellStyle = DataGridViewCellStyle6
             Me.dgvCategoriaItem.GridColor = System.Drawing.Color.LightSteelBlue
             Me.dgvCategoriaItem.Location = New System.Drawing.Point(4, 434)
             Me.dgvCategoriaItem.MultiSelect = False
@@ -1092,14 +1097,16 @@
             Me.Label32.Name = "Label32"
             Me.Label32.Size = New System.Drawing.Size(911, 18)
             Me.Label32.TabIndex = 209
-            Me.Label32.Text = "STIO / PUESTOS REGISTRADOS"
+            Me.Label32.Text = "SITIO / PUESTOS REGISTRADOS"
             Me.Label32.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
             '
             'ListView3
             '
             Me.ListView3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
             Me.ListView3.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader24, Me.ColumnHeader25, Me.ColumnHeader26, Me.ColumnHeader27, Me.ColumnHeader28, Me.ColumnHeader29, Me.ColumnHeader30, Me.ColumnHeader31, Me.ColumnHeader32, Me.ColumnHeader33, Me.ColumnHeader34, Me.ColumnHeader35, Me.ColumnHeader36, Me.ColumnHeader37, Me.ColumnHeader38})
+            Me.ListView3.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.ListView3.FullRowSelect = True
+            Me.ListView3.HideSelection = False
             Me.ListView3.Location = New System.Drawing.Point(3, 193)
             Me.ListView3.MultiSelect = False
             Me.ListView3.Name = "ListView3"
@@ -1251,7 +1258,7 @@
             Me.GroupBox4.Controls.Add(Me.DateTimePicker7)
             Me.GroupBox4.Controls.Add(Me.Label18)
             Me.GroupBox4.Controls.Add(Me.Label17)
-            Me.GroupBox4.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.GroupBox4.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.GroupBox4.Location = New System.Drawing.Point(3, 144)
             Me.GroupBox4.Name = "GroupBox4"
             Me.GroupBox4.Size = New System.Drawing.Size(907, 47)
@@ -1264,7 +1271,7 @@
             Me.DateTimePicker6.CustomFormat = "MMMM yyyy"
             Me.DateTimePicker6.Location = New System.Drawing.Point(339, 19)
             Me.DateTimePicker6.Name = "DateTimePicker6"
-            Me.DateTimePicker6.Size = New System.Drawing.Size(255, 20)
+            Me.DateTimePicker6.Size = New System.Drawing.Size(255, 21)
             Me.DateTimePicker6.TabIndex = 202
             '
             'DateTimePicker7
@@ -1272,7 +1279,7 @@
             Me.DateTimePicker7.CustomFormat = "MMMM yyyy"
             Me.DateTimePicker7.Location = New System.Drawing.Point(39, 19)
             Me.DateTimePicker7.Name = "DateTimePicker7"
-            Me.DateTimePicker7.Size = New System.Drawing.Size(255, 20)
+            Me.DateTimePicker7.Size = New System.Drawing.Size(255, 21)
             Me.DateTimePicker7.TabIndex = 200
             '
             'Label18
@@ -1280,7 +1287,7 @@
             Me.Label18.AutoSize = True
             Me.Label18.Location = New System.Drawing.Point(10, 22)
             Me.Label18.Name = "Label18"
-            Me.Label18.Size = New System.Drawing.Size(31, 13)
+            Me.Label18.Size = New System.Drawing.Size(29, 13)
             Me.Label18.TabIndex = 201
             Me.Label18.Text = "DEL:"
             '
@@ -1289,7 +1296,7 @@
             Me.Label17.AutoSize = True
             Me.Label17.Location = New System.Drawing.Point(318, 22)
             Me.Label17.Name = "Label17"
-            Me.Label17.Size = New System.Drawing.Size(25, 13)
+            Me.Label17.Size = New System.Drawing.Size(23, 13)
             Me.Label17.TabIndex = 203
             Me.Label17.Text = "AL:"
             '
@@ -1312,7 +1319,7 @@
             Me.GroupBox3.Controls.Add(Me.Label16)
             Me.GroupBox3.Controls.Add(Me.Label1)
             Me.GroupBox3.Controls.Add(Me.Label5)
-            Me.GroupBox3.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.GroupBox3.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.GroupBox3.Location = New System.Drawing.Point(3, 29)
             Me.GroupBox3.Name = "GroupBox3"
             Me.GroupBox3.Size = New System.Drawing.Size(907, 95)
@@ -1352,7 +1359,7 @@
             Me.txtRiver2.Enabled = False
             Me.txtRiver2.Location = New System.Drawing.Point(475, 15)
             Me.txtRiver2.Name = "txtRiver2"
-            Me.txtRiver2.Size = New System.Drawing.Size(55, 20)
+            Me.txtRiver2.Size = New System.Drawing.Size(55, 21)
             Me.txtRiver2.TabIndex = 198
             '
             'Label2
@@ -1372,7 +1379,7 @@
             Me.txtLongitud2.Enabled = False
             Me.txtLongitud2.Location = New System.Drawing.Point(644, 15)
             Me.txtLongitud2.Name = "txtLongitud2"
-            Me.txtLongitud2.Size = New System.Drawing.Size(72, 20)
+            Me.txtLongitud2.Size = New System.Drawing.Size(72, 21)
             Me.txtLongitud2.TabIndex = 192
             '
             'txtLatitud2
@@ -1382,7 +1389,7 @@
             Me.txtLatitud2.Enabled = False
             Me.txtLatitud2.Location = New System.Drawing.Point(572, 15)
             Me.txtLatitud2.Name = "txtLatitud2"
-            Me.txtLatitud2.Size = New System.Drawing.Size(72, 20)
+            Me.txtLatitud2.Size = New System.Drawing.Size(72, 21)
             Me.txtLatitud2.TabIndex = 191
             '
             'txtNombreSitio2
@@ -1454,7 +1461,7 @@
             Me.Label12.AutoSize = True
             Me.Label12.Location = New System.Drawing.Point(141, 0)
             Me.Label12.Name = "Label12"
-            Me.Label12.Size = New System.Drawing.Size(25, 13)
+            Me.Label12.Size = New System.Drawing.Size(16, 13)
             Me.Label12.TabIndex = 6
             Me.Label12.Text = "..."
             '

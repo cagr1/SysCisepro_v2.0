@@ -1,8 +1,8 @@
 ﻿Namespace FORMULARIOS.CONTABILIDAD.BANCOS
     <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
     Partial Class FormAnularComprobanteIngresoBancos
-        Inherits System.Windows.Forms.Form
-
+        'Inherits System.Windows.Forms.Form
+        Inherits Krypton.Toolkit.KryptonForm
         'Form reemplaza a Dispose para limpiar la lista de componentes.
         <System.Diagnostics.DebuggerNonUserCode()> _
         Protected Overrides Sub Dispose(ByVal disposing As Boolean)
@@ -61,7 +61,7 @@
             Me.gbBanco.Controls.Add(Me.Label10)
             Me.gbBanco.Controls.Add(Me.cmbCuentaBancos)
             Me.gbBanco.Controls.Add(Me.cmbBancos)
-            Me.gbBanco.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.gbBanco.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.gbBanco.Location = New System.Drawing.Point(0, 27)
             Me.gbBanco.Name = "gbBanco"
             Me.gbBanco.Size = New System.Drawing.Size(386, 57)
@@ -74,7 +74,7 @@
             Me.Label10.AutoSize = True
             Me.Label10.Location = New System.Drawing.Point(218, 0)
             Me.Label10.Name = "Label10"
-            Me.Label10.Size = New System.Drawing.Size(61, 13)
+            Me.Label10.Size = New System.Drawing.Size(62, 13)
             Me.Label10.TabIndex = 34
             Me.Label10.Text = "CA/CC/TA:"
             '
@@ -109,7 +109,7 @@
             Me.gbRangoFechas.Controls.Add(Me.Label1)
             Me.gbRangoFechas.Controls.Add(Me.dtpHasta)
             Me.gbRangoFechas.Controls.Add(Me.dtpDesde)
-            Me.gbRangoFechas.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.gbRangoFechas.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.gbRangoFechas.Location = New System.Drawing.Point(392, 27)
             Me.gbRangoFechas.Name = "gbRangoFechas"
             Me.gbRangoFechas.Size = New System.Drawing.Size(499, 57)
@@ -122,7 +122,7 @@
             Me.lblIdComprobanteIngresoBanco.AutoSize = True
             Me.lblIdComprobanteIngresoBanco.Location = New System.Drawing.Point(191, 0)
             Me.lblIdComprobanteIngresoBanco.Name = "lblIdComprobanteIngresoBanco"
-            Me.lblIdComprobanteIngresoBanco.Size = New System.Drawing.Size(25, 13)
+            Me.lblIdComprobanteIngresoBanco.Size = New System.Drawing.Size(16, 13)
             Me.lblIdComprobanteIngresoBanco.TabIndex = 3
             Me.lblIdComprobanteIngresoBanco.Text = "..."
             '
@@ -140,7 +140,7 @@
             Me.dtpHasta.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
             Me.dtpHasta.Location = New System.Drawing.Point(153, 28)
             Me.dtpHasta.Name = "dtpHasta"
-            Me.dtpHasta.Size = New System.Drawing.Size(119, 20)
+            Me.dtpHasta.Size = New System.Drawing.Size(119, 21)
             Me.dtpHasta.TabIndex = 1
             '
             'dtpDesde
@@ -148,7 +148,7 @@
             Me.dtpDesde.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
             Me.dtpDesde.Location = New System.Drawing.Point(9, 28)
             Me.dtpDesde.Name = "dtpDesde"
-            Me.dtpDesde.Size = New System.Drawing.Size(118, 20)
+            Me.dtpDesde.Size = New System.Drawing.Size(118, 21)
             Me.dtpDesde.TabIndex = 0
             '
             'GroupBox1
@@ -238,6 +238,7 @@
             '
             'msKardex
             '
+            Me.msKardex.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.msKardex.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnBuscar, Me.btnReporte})
             Me.msKardex.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow
             Me.msKardex.Location = New System.Drawing.Point(0, 0)

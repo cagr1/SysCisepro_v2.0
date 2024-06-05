@@ -73,7 +73,7 @@ namespace SysCisepro3.TalentoHumano
                     Icon = Resources.logo_c; 
                     break;
             }
-
+            dataGridView1.Font = new System.Drawing.Font("Roboto", 8, FontStyle.Regular);
             LlenarPeriodosValidos();
 
             var f = Usuario.Now(TipoCon);

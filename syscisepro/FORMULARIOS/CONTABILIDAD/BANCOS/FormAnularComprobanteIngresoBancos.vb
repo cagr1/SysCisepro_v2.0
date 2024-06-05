@@ -191,7 +191,8 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
                     dgvComprobanteEgresoBancos.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
             End Select
             _sqlCommands = New List(Of SqlCommand)
-            llenarComboBancos()
+            dgvComprobanteEgresoBancos.Font = New Font("Roboto", 8, FontStyle.Regular)
+            LlenarComboBancos()
         End Sub
 
         Private Sub btnBuscar_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnBuscar.Click

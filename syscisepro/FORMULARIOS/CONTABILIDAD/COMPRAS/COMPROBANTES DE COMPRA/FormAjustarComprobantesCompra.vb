@@ -66,7 +66,9 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
                     dgvComprobanteRetencion.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
             End Select
             _sqlCommands = New List(Of SqlCommand)
-
+            dgvComprobantesCompra.Font = New Font("Roboto", 8, FontStyle.Regular)
+            dgvDetalleComprobanteRetencion.Font = New Font("Roboto", 8, FontStyle.Regular)
+            dgvComprobanteRetencion.Font = New Font("Roboto", 8, FontStyle.Regular)
             AutocompletarNombreProveedor()
             DeshabilitadoInicio()
         End Sub 

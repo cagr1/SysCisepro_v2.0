@@ -104,7 +104,7 @@
             Me.gbOrdenCompra.Controls.Add(Me.lblFechaOrdenCompra)
             Me.gbOrdenCompra.Controls.Add(Me.lblNroOrdenCompra)
             Me.gbOrdenCompra.Controls.Add(Me.lblIdOrdenCompra)
-            Me.gbOrdenCompra.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.gbOrdenCompra.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.gbOrdenCompra.Location = New System.Drawing.Point(541, 29)
             Me.gbOrdenCompra.Name = "gbOrdenCompra"
             Me.gbOrdenCompra.Size = New System.Drawing.Size(475, 200)
@@ -119,7 +119,7 @@
             Me.txtTotalOrdenCompra.Enabled = False
             Me.txtTotalOrdenCompra.Location = New System.Drawing.Point(400, 170)
             Me.txtTotalOrdenCompra.Name = "txtTotalOrdenCompra"
-            Me.txtTotalOrdenCompra.Size = New System.Drawing.Size(65, 20)
+            Me.txtTotalOrdenCompra.Size = New System.Drawing.Size(65, 21)
             Me.txtTotalOrdenCompra.TabIndex = 22
             Me.txtTotalOrdenCompra.Text = "0.00"
             Me.txtTotalOrdenCompra.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -129,7 +129,7 @@
             Me.lblTotalORdenCompra.AutoSize = True
             Me.lblTotalORdenCompra.Location = New System.Drawing.Point(322, 173)
             Me.lblTotalORdenCompra.Name = "lblTotalORdenCompra"
-            Me.lblTotalORdenCompra.Size = New System.Drawing.Size(43, 13)
+            Me.lblTotalORdenCompra.Size = New System.Drawing.Size(45, 13)
             Me.lblTotalORdenCompra.TabIndex = 21
             Me.lblTotalORdenCompra.Text = "TOTAL:"
             '
@@ -140,7 +140,7 @@
             Me.txtIvaOrdenCompra.Enabled = False
             Me.txtIvaOrdenCompra.Location = New System.Drawing.Point(400, 144)
             Me.txtIvaOrdenCompra.Name = "txtIvaOrdenCompra"
-            Me.txtIvaOrdenCompra.Size = New System.Drawing.Size(65, 20)
+            Me.txtIvaOrdenCompra.Size = New System.Drawing.Size(65, 21)
             Me.txtIvaOrdenCompra.TabIndex = 20
             Me.txtIvaOrdenCompra.Text = "0.00"
             Me.txtIvaOrdenCompra.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -150,7 +150,7 @@
             Me.lblIvaOrdenCompra.AutoSize = True
             Me.lblIvaOrdenCompra.Location = New System.Drawing.Point(322, 147)
             Me.lblIvaOrdenCompra.Name = "lblIvaOrdenCompra"
-            Me.lblIvaOrdenCompra.Size = New System.Drawing.Size(67, 13)
+            Me.lblIvaOrdenCompra.Size = New System.Drawing.Size(58, 13)
             Me.lblIvaOrdenCompra.TabIndex = 19
             Me.lblIvaOrdenCompra.Text = "IVA (12%):"
             '
@@ -161,7 +161,7 @@
             Me.txtDescuentoOrdenCompra.Enabled = False
             Me.txtDescuentoOrdenCompra.Location = New System.Drawing.Point(400, 118)
             Me.txtDescuentoOrdenCompra.Name = "txtDescuentoOrdenCompra"
-            Me.txtDescuentoOrdenCompra.Size = New System.Drawing.Size(65, 20)
+            Me.txtDescuentoOrdenCompra.Size = New System.Drawing.Size(65, 21)
             Me.txtDescuentoOrdenCompra.TabIndex = 18
             Me.txtDescuentoOrdenCompra.Text = "0.00"
             Me.txtDescuentoOrdenCompra.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -171,7 +171,7 @@
             Me.lblDescuentoOrdenCompra.AutoSize = True
             Me.lblDescuentoOrdenCompra.Location = New System.Drawing.Point(322, 121)
             Me.lblDescuentoOrdenCompra.Name = "lblDescuentoOrdenCompra"
-            Me.lblDescuentoOrdenCompra.Size = New System.Drawing.Size(67, 13)
+            Me.lblDescuentoOrdenCompra.Size = New System.Drawing.Size(73, 13)
             Me.lblDescuentoOrdenCompra.TabIndex = 17
             Me.lblDescuentoOrdenCompra.Text = "DESCUENTO:"
             '
@@ -182,7 +182,7 @@
             Me.txtSubtotal0OrdenCompra.Enabled = False
             Me.txtSubtotal0OrdenCompra.Location = New System.Drawing.Point(400, 92)
             Me.txtSubtotal0OrdenCompra.Name = "txtSubtotal0OrdenCompra"
-            Me.txtSubtotal0OrdenCompra.Size = New System.Drawing.Size(65, 20)
+            Me.txtSubtotal0OrdenCompra.Size = New System.Drawing.Size(65, 21)
             Me.txtSubtotal0OrdenCompra.TabIndex = 16
             Me.txtSubtotal0OrdenCompra.Text = "0.00"
             Me.txtSubtotal0OrdenCompra.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -192,7 +192,7 @@
             Me.lblSubtotal0OrdenCompra.AutoSize = True
             Me.lblSubtotal0OrdenCompra.Location = New System.Drawing.Point(322, 95)
             Me.lblSubtotal0OrdenCompra.Name = "lblSubtotal0OrdenCompra"
-            Me.lblSubtotal0OrdenCompra.Size = New System.Drawing.Size(73, 13)
+            Me.lblSubtotal0OrdenCompra.Size = New System.Drawing.Size(75, 13)
             Me.lblSubtotal0OrdenCompra.TabIndex = 15
             Me.lblSubtotal0OrdenCompra.Text = "SUBTOTAL 0:"
             '
@@ -203,7 +203,7 @@
             Me.txtSubtotal12OrdenCompra.Enabled = False
             Me.txtSubtotal12OrdenCompra.Location = New System.Drawing.Point(400, 66)
             Me.txtSubtotal12OrdenCompra.Name = "txtSubtotal12OrdenCompra"
-            Me.txtSubtotal12OrdenCompra.Size = New System.Drawing.Size(65, 20)
+            Me.txtSubtotal12OrdenCompra.Size = New System.Drawing.Size(65, 21)
             Me.txtSubtotal12OrdenCompra.TabIndex = 14
             Me.txtSubtotal12OrdenCompra.Text = "0.00"
             Me.txtSubtotal12OrdenCompra.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -213,7 +213,7 @@
             Me.lblSubtotal12OrdenCompra.AutoSize = True
             Me.lblSubtotal12OrdenCompra.Location = New System.Drawing.Point(322, 69)
             Me.lblSubtotal12OrdenCompra.Name = "lblSubtotal12OrdenCompra"
-            Me.lblSubtotal12OrdenCompra.Size = New System.Drawing.Size(79, 13)
+            Me.lblSubtotal12OrdenCompra.Size = New System.Drawing.Size(81, 13)
             Me.lblSubtotal12OrdenCompra.TabIndex = 13
             Me.lblSubtotal12OrdenCompra.Text = "SUBTOTAL 12:"
             '
@@ -224,7 +224,7 @@
             Me.txtTipoPagoOrdenCompra.Enabled = False
             Me.txtTipoPagoOrdenCompra.Location = New System.Drawing.Point(83, 171)
             Me.txtTipoPagoOrdenCompra.Name = "txtTipoPagoOrdenCompra"
-            Me.txtTipoPagoOrdenCompra.Size = New System.Drawing.Size(217, 20)
+            Me.txtTipoPagoOrdenCompra.Size = New System.Drawing.Size(217, 21)
             Me.txtTipoPagoOrdenCompra.TabIndex = 12
             '
             'lblTipoPagoOrdenCompra
@@ -243,7 +243,7 @@
             Me.txtFormaPagoOrdenCompra.Enabled = False
             Me.txtFormaPagoOrdenCompra.Location = New System.Drawing.Point(83, 142)
             Me.txtFormaPagoOrdenCompra.Name = "txtFormaPagoOrdenCompra"
-            Me.txtFormaPagoOrdenCompra.Size = New System.Drawing.Size(217, 20)
+            Me.txtFormaPagoOrdenCompra.Size = New System.Drawing.Size(217, 21)
             Me.txtFormaPagoOrdenCompra.TabIndex = 10
             '
             'lblFormaPagoOrdenCompra
@@ -251,7 +251,7 @@
             Me.lblFormaPagoOrdenCompra.AutoSize = True
             Me.lblFormaPagoOrdenCompra.Location = New System.Drawing.Point(4, 145)
             Me.lblFormaPagoOrdenCompra.Name = "lblFormaPagoOrdenCompra"
-            Me.lblFormaPagoOrdenCompra.Size = New System.Drawing.Size(73, 13)
+            Me.lblFormaPagoOrdenCompra.Size = New System.Drawing.Size(80, 13)
             Me.lblFormaPagoOrdenCompra.TabIndex = 9
             Me.lblFormaPagoOrdenCompra.Text = "FORMA PAGO:"
             '
@@ -271,7 +271,7 @@
             Me.lblNombreProveedor.AutoSize = True
             Me.lblNombreProveedor.Location = New System.Drawing.Point(4, 48)
             Me.lblNombreProveedor.Name = "lblNombreProveedor"
-            Me.lblNombreProveedor.Size = New System.Drawing.Size(67, 13)
+            Me.lblNombreProveedor.Size = New System.Drawing.Size(73, 13)
             Me.lblNombreProveedor.TabIndex = 7
             Me.lblNombreProveedor.Text = "PROVEEDOR:"
             '
@@ -282,7 +282,7 @@
             Me.txtRucProveedor.Enabled = False
             Me.txtRucProveedor.Location = New System.Drawing.Point(371, 22)
             Me.txtRucProveedor.Name = "txtRucProveedor"
-            Me.txtRucProveedor.Size = New System.Drawing.Size(94, 20)
+            Me.txtRucProveedor.Size = New System.Drawing.Size(94, 21)
             Me.txtRucProveedor.TabIndex = 6
             '
             'lblRucProveedor
@@ -301,7 +301,7 @@
             Me.txtFechaOrdenCompra.Enabled = False
             Me.txtFechaOrdenCompra.Location = New System.Drawing.Point(202, 19)
             Me.txtFechaOrdenCompra.Name = "txtFechaOrdenCompra"
-            Me.txtFechaOrdenCompra.Size = New System.Drawing.Size(98, 20)
+            Me.txtFechaOrdenCompra.Size = New System.Drawing.Size(98, 21)
             Me.txtFechaOrdenCompra.TabIndex = 4
             '
             'txtIdOrdenCompra
@@ -311,7 +311,7 @@
             Me.txtIdOrdenCompra.Enabled = False
             Me.txtIdOrdenCompra.Location = New System.Drawing.Point(83, 19)
             Me.txtIdOrdenCompra.Name = "txtIdOrdenCompra"
-            Me.txtIdOrdenCompra.Size = New System.Drawing.Size(72, 20)
+            Me.txtIdOrdenCompra.Size = New System.Drawing.Size(72, 21)
             Me.txtIdOrdenCompra.TabIndex = 3
             '
             'lblFechaOrdenCompra
@@ -319,7 +319,7 @@
             Me.lblFechaOrdenCompra.AutoSize = True
             Me.lblFechaOrdenCompra.Location = New System.Drawing.Point(158, 22)
             Me.lblFechaOrdenCompra.Name = "lblFechaOrdenCompra"
-            Me.lblFechaOrdenCompra.Size = New System.Drawing.Size(43, 13)
+            Me.lblFechaOrdenCompra.Size = New System.Drawing.Size(44, 13)
             Me.lblFechaOrdenCompra.TabIndex = 2
             Me.lblFechaOrdenCompra.Text = "FECHA:"
             '
@@ -328,7 +328,7 @@
             Me.lblNroOrdenCompra.AutoSize = True
             Me.lblNroOrdenCompra.Location = New System.Drawing.Point(4, 22)
             Me.lblNroOrdenCompra.Name = "lblNroOrdenCompra"
-            Me.lblNroOrdenCompra.Size = New System.Drawing.Size(25, 13)
+            Me.lblNroOrdenCompra.Size = New System.Drawing.Size(23, 13)
             Me.lblNroOrdenCompra.TabIndex = 1
             Me.lblNroOrdenCompra.Text = "Nº:"
             '

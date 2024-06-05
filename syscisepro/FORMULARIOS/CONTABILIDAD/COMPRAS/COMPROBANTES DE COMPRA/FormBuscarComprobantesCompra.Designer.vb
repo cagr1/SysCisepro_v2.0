@@ -48,6 +48,8 @@
             Me.Label9 = New System.Windows.Forms.Label()
             Me.Label1 = New System.Windows.Forms.Label()
             Me.gbTotal = New System.Windows.Forms.GroupBox()
+            Me.txtIva5Compras = New System.Windows.Forms.TextBox()
+            Me.Label12 = New System.Windows.Forms.Label()
             Me.Label6 = New System.Windows.Forms.Label()
             Me.txtSubTotalCompras = New System.Windows.Forms.TextBox()
             Me.Label5 = New System.Windows.Forms.Label()
@@ -79,8 +81,6 @@
             Me.txtRetencionPath = New System.Windows.Forms.TextBox()
             Me.Label10 = New System.Windows.Forms.Label()
             Me.Label11 = New System.Windows.Forms.Label()
-            Me.Label12 = New System.Windows.Forms.Label()
-            Me.txtIva5Compras = New System.Windows.Forms.TextBox()
             Me.gbNombreComercialProveedor.SuspendLayout()
             CType(Me.dgvComprobantesCompra, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.gbParametrosBusqueda.SuspendLayout()
@@ -104,7 +104,7 @@
             Me.gbNombreComercialProveedor.Controls.Add(Me.chkProveedorGeneral)
             Me.gbNombreComercialProveedor.Controls.Add(Me.txtNombreComercialProveedorGeneral)
             Me.gbNombreComercialProveedor.Controls.Add(Me.lblIdProveedorGeneral)
-            Me.gbNombreComercialProveedor.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.gbNombreComercialProveedor.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.gbNombreComercialProveedor.Location = New System.Drawing.Point(0, 2)
             Me.gbNombreComercialProveedor.Name = "gbNombreComercialProveedor"
             Me.gbNombreComercialProveedor.Size = New System.Drawing.Size(497, 61)
@@ -117,7 +117,7 @@
             Me.lblPorcentaje.AutoSize = True
             Me.lblPorcentaje.Location = New System.Drawing.Point(386, -1)
             Me.lblPorcentaje.Name = "lblPorcentaje"
-            Me.lblPorcentaje.Size = New System.Drawing.Size(25, 13)
+            Me.lblPorcentaje.Size = New System.Drawing.Size(16, 13)
             Me.lblPorcentaje.TabIndex = 81
             Me.lblPorcentaje.Text = "..."
             '
@@ -126,7 +126,7 @@
             Me.lblEstadoComprobanteCompra.AutoSize = True
             Me.lblEstadoComprobanteCompra.Location = New System.Drawing.Point(259, -1)
             Me.lblEstadoComprobanteCompra.Name = "lblEstadoComprobanteCompra"
-            Me.lblEstadoComprobanteCompra.Size = New System.Drawing.Size(25, 13)
+            Me.lblEstadoComprobanteCompra.Size = New System.Drawing.Size(16, 13)
             Me.lblEstadoComprobanteCompra.TabIndex = 80
             Me.lblEstadoComprobanteCompra.Text = "..."
             '
@@ -135,7 +135,7 @@
             Me.Label8.AutoSize = True
             Me.Label8.Location = New System.Drawing.Point(216, -1)
             Me.Label8.Name = "Label8"
-            Me.Label8.Size = New System.Drawing.Size(37, 13)
+            Me.Label8.Size = New System.Drawing.Size(35, 13)
             Me.Label8.TabIndex = 79
             Me.Label8.Text = "TIPO:"
             '
@@ -144,7 +144,7 @@
             Me.Label7.AutoSize = True
             Me.Label7.Location = New System.Drawing.Point(125, -1)
             Me.Label7.Name = "Label7"
-            Me.Label7.Size = New System.Drawing.Size(43, 13)
+            Me.Label7.Size = New System.Drawing.Size(37, 13)
             Me.Label7.TabIndex = 78
             Me.Label7.Text = "ID CC:"
             '
@@ -153,7 +153,7 @@
             Me.lblIdComprobanteCompra.AutoSize = True
             Me.lblIdComprobanteCompra.Location = New System.Drawing.Point(167, -1)
             Me.lblIdComprobanteCompra.Name = "lblIdComprobanteCompra"
-            Me.lblIdComprobanteCompra.Size = New System.Drawing.Size(25, 13)
+            Me.lblIdComprobanteCompra.Size = New System.Drawing.Size(16, 13)
             Me.lblIdComprobanteCompra.TabIndex = 3
             Me.lblIdComprobanteCompra.Text = "..."
             '
@@ -164,7 +164,7 @@
             Me.chkProveedorGeneral.CheckState = System.Windows.Forms.CheckState.Checked
             Me.chkProveedorGeneral.Location = New System.Drawing.Point(430, 0)
             Me.chkProveedorGeneral.Name = "chkProveedorGeneral"
-            Me.chkProveedorGeneral.Size = New System.Drawing.Size(56, 17)
+            Me.chkProveedorGeneral.Size = New System.Drawing.Size(63, 17)
             Me.chkProveedorGeneral.TabIndex = 77
             Me.chkProveedorGeneral.Text = "TODOS"
             Me.chkProveedorGeneral.UseVisualStyleBackColor = True
@@ -201,7 +201,7 @@
             Me.dgvComprobantesCompra.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
             DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
             DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
-            DataGridViewCellStyle2.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle2.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
             DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(123, Byte), Integer))
             DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
@@ -226,10 +226,10 @@
             Me.gbParametrosBusqueda.Controls.Add(Me.rbCompras)
             Me.gbParametrosBusqueda.Controls.Add(Me.rbCajaChica)
             Me.gbParametrosBusqueda.Controls.Add(Me.rbFondoRotativo)
-            Me.gbParametrosBusqueda.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.gbParametrosBusqueda.Location = New System.Drawing.Point(495, 1)
+            Me.gbParametrosBusqueda.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.gbParametrosBusqueda.Location = New System.Drawing.Point(495, 2)
             Me.gbParametrosBusqueda.Name = "gbParametrosBusqueda"
-            Me.gbParametrosBusqueda.Size = New System.Drawing.Size(253, 61)
+            Me.gbParametrosBusqueda.Size = New System.Drawing.Size(259, 61)
             Me.gbParametrosBusqueda.TabIndex = 103
             Me.gbParametrosBusqueda.TabStop = False
             Me.gbParametrosBusqueda.Text = "PARAMETROS DE BUSQUEDA"
@@ -240,7 +240,7 @@
             Me.rbTodos.Checked = True
             Me.rbTodos.Location = New System.Drawing.Point(195, 26)
             Me.rbTodos.Name = "rbTodos"
-            Me.rbTodos.Size = New System.Drawing.Size(55, 17)
+            Me.rbTodos.Size = New System.Drawing.Size(62, 17)
             Me.rbTodos.TabIndex = 3
             Me.rbTodos.TabStop = True
             Me.rbTodos.Text = "TODOS"
@@ -251,7 +251,7 @@
             Me.rbCompras.AutoSize = True
             Me.rbCompras.Location = New System.Drawing.Point(122, 26)
             Me.rbCompras.Name = "rbCompras"
-            Me.rbCompras.Size = New System.Drawing.Size(67, 17)
+            Me.rbCompras.Size = New System.Drawing.Size(78, 17)
             Me.rbCompras.TabIndex = 2
             Me.rbCompras.Text = "COMPRAS"
             Me.rbCompras.UseVisualStyleBackColor = True
@@ -261,7 +261,7 @@
             Me.rbCajaChica.AutoSize = True
             Me.rbCajaChica.Location = New System.Drawing.Point(67, 26)
             Me.rbCajaChica.Name = "rbCajaChica"
-            Me.rbCajaChica.Size = New System.Drawing.Size(49, 17)
+            Me.rbCajaChica.Size = New System.Drawing.Size(52, 17)
             Me.rbCajaChica.TabIndex = 1
             Me.rbCajaChica.Text = "CAJA"
             Me.rbCajaChica.UseVisualStyleBackColor = True
@@ -271,7 +271,7 @@
             Me.rbFondoRotativo.AutoSize = True
             Me.rbFondoRotativo.Location = New System.Drawing.Point(6, 26)
             Me.rbFondoRotativo.Name = "rbFondoRotativo"
-            Me.rbFondoRotativo.Size = New System.Drawing.Size(55, 17)
+            Me.rbFondoRotativo.Size = New System.Drawing.Size(62, 17)
             Me.rbFondoRotativo.TabIndex = 0
             Me.rbFondoRotativo.Text = "FONDO"
             Me.rbFondoRotativo.UseVisualStyleBackColor = True
@@ -283,10 +283,10 @@
             Me.gbRangoFechas.Controls.Add(Me.dtpFechaDesde)
             Me.gbRangoFechas.Controls.Add(Me.Label9)
             Me.gbRangoFechas.Controls.Add(Me.Label1)
-            Me.gbRangoFechas.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.gbRangoFechas.Location = New System.Drawing.Point(751, 2)
+            Me.gbRangoFechas.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.gbRangoFechas.Location = New System.Drawing.Point(754, 2)
             Me.gbRangoFechas.Name = "gbRangoFechas"
-            Me.gbRangoFechas.Size = New System.Drawing.Size(522, 61)
+            Me.gbRangoFechas.Size = New System.Drawing.Size(519, 61)
             Me.gbRangoFechas.TabIndex = 104
             Me.gbRangoFechas.TabStop = False
             Me.gbRangoFechas.Text = "RANGO DE FECHAS"
@@ -295,14 +295,14 @@
             '
             Me.dtpFechaHasta.Location = New System.Drawing.Point(283, 24)
             Me.dtpFechaHasta.Name = "dtpFechaHasta"
-            Me.dtpFechaHasta.Size = New System.Drawing.Size(234, 20)
+            Me.dtpFechaHasta.Size = New System.Drawing.Size(222, 21)
             Me.dtpFechaHasta.TabIndex = 1
             '
             'dtpFechaDesde
             '
             Me.dtpFechaDesde.Location = New System.Drawing.Point(24, 24)
             Me.dtpFechaDesde.Name = "dtpFechaDesde"
-            Me.dtpFechaDesde.Size = New System.Drawing.Size(234, 20)
+            Me.dtpFechaDesde.Size = New System.Drawing.Size(234, 21)
             Me.dtpFechaDesde.TabIndex = 0
             '
             'Label9
@@ -344,6 +344,26 @@
             Me.gbTotal.Size = New System.Drawing.Size(1272, 44)
             Me.gbTotal.TabIndex = 106
             Me.gbTotal.TabStop = False
+            '
+            'txtIva5Compras
+            '
+            Me.txtIva5Compras.BackColor = System.Drawing.Color.White
+            Me.txtIva5Compras.Enabled = False
+            Me.txtIva5Compras.Location = New System.Drawing.Point(386, 15)
+            Me.txtIva5Compras.Name = "txtIva5Compras"
+            Me.txtIva5Compras.Size = New System.Drawing.Size(100, 20)
+            Me.txtIva5Compras.TabIndex = 17
+            Me.txtIva5Compras.Text = "0.00"
+            Me.txtIva5Compras.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+            '
+            'Label12
+            '
+            Me.Label12.AutoSize = True
+            Me.Label12.Location = New System.Drawing.Point(337, 20)
+            Me.Label12.Name = "Label12"
+            Me.Label12.Size = New System.Drawing.Size(43, 13)
+            Me.Label12.TabIndex = 16
+            Me.Label12.Text = "IVA 5:"
             '
             'Label6
             '
@@ -467,7 +487,7 @@
             '
             'MenuStrip1
             '
-            Me.MenuStrip1.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.MenuStrip1.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnBuscar, Me.btnReporte, Me.btnExportar, Me.ToolStripMenuItem1, Me.GENERARCOMPROBANTEToolStripMenuItem})
             Me.MenuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow
             Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
@@ -558,6 +578,7 @@
             '
             Me.TabControl1.Controls.Add(Me.TabPage1)
             Me.TabControl1.Controls.Add(Me.TabPage2)
+            Me.TabControl1.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.TabControl1.Location = New System.Drawing.Point(0, 26)
             Me.TabControl1.Name = "TabControl1"
             Me.TabControl1.SelectedIndex = 0
@@ -627,7 +648,7 @@
             Me.txtLiquidacionPath.Enabled = False
             Me.txtLiquidacionPath.Location = New System.Drawing.Point(231, 50)
             Me.txtLiquidacionPath.Name = "txtLiquidacionPath"
-            Me.txtLiquidacionPath.Size = New System.Drawing.Size(656, 20)
+            Me.txtLiquidacionPath.Size = New System.Drawing.Size(656, 21)
             Me.txtLiquidacionPath.TabIndex = 3
             '
             'txtRetencionPath
@@ -635,7 +656,7 @@
             Me.txtRetencionPath.Enabled = False
             Me.txtRetencionPath.Location = New System.Drawing.Point(231, 22)
             Me.txtRetencionPath.Name = "txtRetencionPath"
-            Me.txtRetencionPath.Size = New System.Drawing.Size(656, 20)
+            Me.txtRetencionPath.Size = New System.Drawing.Size(656, 21)
             Me.txtRetencionPath.TabIndex = 2
             '
             'Label10
@@ -643,7 +664,7 @@
             Me.Label10.AutoSize = True
             Me.Label10.Location = New System.Drawing.Point(11, 25)
             Me.Label10.Name = "Label10"
-            Me.Label10.Size = New System.Drawing.Size(181, 13)
+            Me.Label10.Size = New System.Drawing.Size(185, 13)
             Me.Label10.TabIndex = 0
             Me.Label10.Text = "RUTA DE RETENCION DE COMPRA :"
             '
@@ -652,29 +673,9 @@
             Me.Label11.AutoSize = True
             Me.Label11.Location = New System.Drawing.Point(11, 54)
             Me.Label11.Name = "Label11"
-            Me.Label11.Size = New System.Drawing.Size(193, 13)
+            Me.Label11.Size = New System.Drawing.Size(192, 13)
             Me.Label11.TabIndex = 1
             Me.Label11.Text = "RUTA DE LIQUIDACION DE COMPRA :"
-            '
-            'Label12
-            '
-            Me.Label12.AutoSize = True
-            Me.Label12.Location = New System.Drawing.Point(337, 20)
-            Me.Label12.Name = "Label12"
-            Me.Label12.Size = New System.Drawing.Size(43, 13)
-            Me.Label12.TabIndex = 16
-            Me.Label12.Text = "IVA 5:"
-            '
-            'txtIva5Compras
-            '
-            Me.txtIva5Compras.BackColor = System.Drawing.Color.White
-            Me.txtIva5Compras.Enabled = False
-            Me.txtIva5Compras.Location = New System.Drawing.Point(386, 15)
-            Me.txtIva5Compras.Name = "txtIva5Compras"
-            Me.txtIva5Compras.Size = New System.Drawing.Size(100, 20)
-            Me.txtIva5Compras.TabIndex = 17
-            Me.txtIva5Compras.Text = "0.00"
-            Me.txtIva5Compras.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
             '
             'FormBuscarComprobantesCompra
             '

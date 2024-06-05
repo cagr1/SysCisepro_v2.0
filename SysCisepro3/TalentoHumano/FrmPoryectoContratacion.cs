@@ -69,6 +69,7 @@ namespace SysCisepro3.TalentoHumano
                     Icon = Resources.logo_c;
                     break;
             }
+            dgvPoryectos.Font = new Font("Roboto", 8, FontStyle.Regular);
         }
 
         private void btnPersonalEntra_Click(object sender, EventArgs e)
