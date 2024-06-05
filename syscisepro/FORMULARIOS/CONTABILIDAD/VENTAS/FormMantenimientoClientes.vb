@@ -139,6 +139,12 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                     DataGridView2.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
                     DataGridView3.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
             End Select
+            dgvClienteGeneral.Font = New Font("Roboto", 8, FontStyle.Regular)
+            dgvSitios.Font = New Font("Roboto", 8, FontStyle.Regular)
+            DataGridView1.Font = New Font("Roboto", 8, FontStyle.Regular)
+            dgvFacturaVenta.Font = New Font("Roboto", 8, FontStyle.Regular)
+            DataGridView2.Font = New Font("Roboto", 8, FontStyle.Regular)
+            DataGridView3.Font = New Font("Roboto", 8, FontStyle.Regular)
             _sqlCommands = New List(Of SqlCommand)
 
             dtpFechaDesde.Value = New DateTime(DateTime.Now.Year, 1, 1, 0, 0, 0)
@@ -489,7 +495,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
             TextBox2.Clear()
             TextBox3.Clear()
         End Sub
-        Private Sub txtCiudad_KeyUp(ByVal sender As System.Object, ByVal e As Windows.Forms.KeyEventArgs) Handles txtCiudad.KeyUp
+        Private Sub txtCiudad_KeyUp(ByVal sender As System.Object, ByVal e As Windows.Forms.KeyEventArgs) Handles txtCiudad.KeyUp, TextBox14.KeyUp
             If e.KeyCode <> Keys.Enter Then Return
             lblIdCiudad.Text = _objCiudad.BuscarIdCiudadPorNombreCiudad(_tipoCon, txtCiudad.Text)
         End Sub
@@ -1271,6 +1277,12 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
 
         Private Sub MenuStrip4_ItemClicked(ByVal sender As System.Object, ByVal e As System.Windows.Forms.ToolStripItemClickedEventArgs) Handles MenuStrip4.ItemClicked
 
+        End Sub
+
+        Private Sub AGREGARSITIOToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AGREGARSITIOToolStripMenuItem.Click
+            Dim f As New syscisepro.FORMULARIOS.DIVISION_GEOGRÁFICA.FormSitiosTrabajo()
+            f.TipoCox = _tipoCon
+            f.Show()
         End Sub
     End Class
 End Namespace

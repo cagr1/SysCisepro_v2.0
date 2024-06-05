@@ -1,8 +1,8 @@
 ﻿Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
     <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
     Partial Class FormAuxiliarMantenimientos
-        Inherits System.Windows.Forms.Form
-
+        'Inherits System.Windows.Forms.Form
+        Inherits Krypton.Toolkit.KryptonForm
         'Form reemplaza a Dispose para limpiar la lista de componentes.
         <System.Diagnostics.DebuggerNonUserCode()> _
         Protected Overrides Sub Dispose(ByVal disposing As Boolean)
@@ -121,10 +121,10 @@
             'Label1
             '
             Me.Label1.AutoSize = True
-            Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Label1.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Label1.Location = New System.Drawing.Point(12, 214)
             Me.Label1.Name = "Label1"
-            Me.Label1.Size = New System.Drawing.Size(74, 16)
+            Me.Label1.Size = New System.Drawing.Size(56, 14)
             Me.Label1.TabIndex = 209
             Me.Label1.Text = "ASIENTO"
             '
@@ -157,10 +157,10 @@
             'Label2
             '
             Me.Label2.AutoSize = True
-            Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Label2.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Label2.Location = New System.Drawing.Point(12, 16)
             Me.Label2.Name = "Label2"
-            Me.Label2.Size = New System.Drawing.Size(144, 16)
+            Me.Label2.Size = New System.Drawing.Size(112, 14)
             Me.Label2.TabIndex = 230
             Me.Label2.Text = "MANTENIMIENTOS"
             '

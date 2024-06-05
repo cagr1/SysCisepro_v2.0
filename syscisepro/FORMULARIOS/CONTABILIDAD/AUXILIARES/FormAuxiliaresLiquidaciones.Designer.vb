@@ -1,8 +1,8 @@
 ﻿Namespace FORMULARIOS.CONTABILIDAD.AUXILIARES
     <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
     Partial Class FormAuxiliaresLiquidaciones
-        Inherits System.Windows.Forms.Form
-
+        'Inherits System.Windows.Forms.Form
+        Inherits Krypton.Toolkit.KryptonForm
         'Form reemplaza a Dispose para limpiar la lista de componentes.
         <System.Diagnostics.DebuggerNonUserCode()> _
         Protected Overrides Sub Dispose(ByVal disposing As Boolean)
@@ -79,7 +79,7 @@
             '
             Me.tcAuxiliaresLiquidaciones.Controls.Add(Me.tpLiquidaciones)
             Me.tcAuxiliaresLiquidaciones.Controls.Add(Me.tpReporte)
-            Me.tcAuxiliaresLiquidaciones.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.tcAuxiliaresLiquidaciones.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.tcAuxiliaresLiquidaciones.Location = New System.Drawing.Point(2, 52)
             Me.tcAuxiliaresLiquidaciones.Name = "tcAuxiliaresLiquidaciones"
             Me.tcAuxiliaresLiquidaciones.SelectedIndex = 0
@@ -211,10 +211,10 @@
             '
             Me.rbFondo.AutoSize = True
             Me.rbFondo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-            Me.rbFondo.Font = New System.Drawing.Font("Consolas", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.rbFondo.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.rbFondo.Location = New System.Drawing.Point(230, 13)
             Me.rbFondo.Name = "rbFondo"
-            Me.rbFondo.Size = New System.Drawing.Size(59, 19)
+            Me.rbFondo.Size = New System.Drawing.Size(61, 17)
             Me.rbFondo.TabIndex = 234
             Me.rbFondo.Text = "FONDO"
             Me.rbFondo.UseVisualStyleBackColor = True
@@ -224,10 +224,10 @@
             Me.rbCaja.AutoSize = True
             Me.rbCaja.Checked = True
             Me.rbCaja.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-            Me.rbCaja.Font = New System.Drawing.Font("Consolas", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.rbCaja.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.rbCaja.Location = New System.Drawing.Point(134, 13)
             Me.rbCaja.Name = "rbCaja"
-            Me.rbCaja.Size = New System.Drawing.Size(52, 19)
+            Me.rbCaja.Size = New System.Drawing.Size(51, 17)
             Me.rbCaja.TabIndex = 233
             Me.rbCaja.TabStop = True
             Me.rbCaja.Text = "CAJA"
@@ -245,10 +245,10 @@
             'Label2
             '
             Me.Label2.AutoSize = True
-            Me.Label2.Font = New System.Drawing.Font("Consolas", 11.25!, System.Drawing.FontStyle.Bold)
+            Me.Label2.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Label2.Location = New System.Drawing.Point(6, 13)
             Me.Label2.Name = "Label2"
-            Me.Label2.Size = New System.Drawing.Size(96, 18)
+            Me.Label2.Size = New System.Drawing.Size(74, 13)
             Me.Label2.TabIndex = 226
             Me.Label2.Text = "LIQUIDACION"
             '
@@ -332,7 +332,7 @@
             Me.txtCantidad.Enabled = False
             Me.txtCantidad.Location = New System.Drawing.Point(683, 7)
             Me.txtCantidad.Name = "txtCantidad"
-            Me.txtCantidad.Size = New System.Drawing.Size(94, 20)
+            Me.txtCantidad.Size = New System.Drawing.Size(94, 21)
             Me.txtCantidad.TabIndex = 258
             Me.txtCantidad.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
             '
@@ -343,7 +343,7 @@
             Me.txtTotal.Enabled = False
             Me.txtTotal.Location = New System.Drawing.Point(874, 6)
             Me.txtTotal.Name = "txtTotal"
-            Me.txtTotal.Size = New System.Drawing.Size(94, 20)
+            Me.txtTotal.Size = New System.Drawing.Size(94, 21)
             Me.txtTotal.TabIndex = 257
             Me.txtTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
             '
@@ -357,7 +357,7 @@
             Me.dgvSolicitudes.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
             DataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
             DataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Control
-            DataGridViewCellStyle10.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle10.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             DataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.WindowText
             DataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight
             DataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText
@@ -366,7 +366,7 @@
             Me.dgvSolicitudes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
             DataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
             DataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Window
-            DataGridViewCellStyle11.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle11.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             DataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.ControlText
             DataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(123, Byte), Integer))
             DataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText
@@ -444,17 +444,17 @@
             'lblHasta
             '
             Me.lblHasta.AutoSize = True
-            Me.lblHasta.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+            Me.lblHasta.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.lblHasta.Location = New System.Drawing.Point(282, 30)
             Me.lblHasta.Name = "lblHasta"
-            Me.lblHasta.Size = New System.Drawing.Size(38, 13)
+            Me.lblHasta.Size = New System.Drawing.Size(40, 13)
             Me.lblHasta.TabIndex = 220
             Me.lblHasta.Text = "Hasta:"
             '
             'lblDesde
             '
             Me.lblDesde.AutoSize = True
-            Me.lblDesde.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+            Me.lblDesde.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.lblDesde.Location = New System.Drawing.Point(7, 30)
             Me.lblDesde.Name = "lblDesde"
             Me.lblDesde.Size = New System.Drawing.Size(41, 13)
@@ -463,16 +463,18 @@
             '
             'dtpFinal
             '
+            Me.dtpFinal.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.dtpFinal.Location = New System.Drawing.Point(326, 27)
             Me.dtpFinal.Name = "dtpFinal"
-            Me.dtpFinal.Size = New System.Drawing.Size(200, 20)
+            Me.dtpFinal.Size = New System.Drawing.Size(200, 21)
             Me.dtpFinal.TabIndex = 218
             '
             'dtpInicio
             '
+            Me.dtpInicio.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.dtpInicio.Location = New System.Drawing.Point(53, 27)
             Me.dtpInicio.Name = "dtpInicio"
-            Me.dtpInicio.Size = New System.Drawing.Size(200, 20)
+            Me.dtpInicio.Size = New System.Drawing.Size(200, 21)
             Me.dtpInicio.TabIndex = 217
             '
             'FormAuxiliaresLiquidaciones

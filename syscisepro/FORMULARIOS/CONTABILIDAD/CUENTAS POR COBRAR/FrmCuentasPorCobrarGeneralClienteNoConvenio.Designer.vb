@@ -1,8 +1,8 @@
 ﻿Namespace FORMULARIOS.CONTABILIDAD.CUENTAS_POR_COBRAR
     <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
     Partial Class FrmCuentasPorCobrarGeneralClienteNoConvenio
-        Inherits System.Windows.Forms.Form
-
+        'Inherits System.Windows.Forms.Form
+        Inherits Krypton.Toolkit.KryptonForm
         'Form reemplaza a Dispose para limpiar la lista de componentes.
         <System.Diagnostics.DebuggerNonUserCode()> _
         Protected Overrides Sub Dispose(ByVal disposing As Boolean)
@@ -284,7 +284,7 @@
             Me.rbPorCliente.AutoSize = True
             Me.rbPorCliente.Location = New System.Drawing.Point(136, 14)
             Me.rbPorCliente.Name = "rbPorCliente"
-            Me.rbPorCliente.Size = New System.Drawing.Size(91, 17)
+            Me.rbPorCliente.Size = New System.Drawing.Size(93, 17)
             Me.rbPorCliente.TabIndex = 1
             Me.rbPorCliente.TabStop = True
             Me.rbPorCliente.Text = "POR CLIENTE"
@@ -296,7 +296,7 @@
             Me.rbGeneral.Checked = True
             Me.rbGeneral.Location = New System.Drawing.Point(12, 14)
             Me.rbGeneral.Name = "rbGeneral"
-            Me.rbGeneral.Size = New System.Drawing.Size(67, 17)
+            Me.rbGeneral.Size = New System.Drawing.Size(73, 17)
             Me.rbGeneral.TabIndex = 0
             Me.rbGeneral.TabStop = True
             Me.rbGeneral.Text = "GENERAL"
@@ -306,7 +306,7 @@
             '
             Me.gbTipoReporte.Controls.Add(Me.rbPorCliente)
             Me.gbTipoReporte.Controls.Add(Me.rbGeneral)
-            Me.gbTipoReporte.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.gbTipoReporte.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.gbTipoReporte.Location = New System.Drawing.Point(0, 28)
             Me.gbTipoReporte.Name = "gbTipoReporte"
             Me.gbTipoReporte.Size = New System.Drawing.Size(242, 40)
@@ -321,7 +321,7 @@
             Me.gbRangoFechas.Controls.Add(Me.Label7)
             Me.gbRangoFechas.Controls.Add(Me.dtpHasta)
             Me.gbRangoFechas.Controls.Add(Me.dtpDesde)
-            Me.gbRangoFechas.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.gbRangoFechas.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.gbRangoFechas.Location = New System.Drawing.Point(710, 28)
             Me.gbRangoFechas.Name = "gbRangoFechas"
             Me.gbRangoFechas.Size = New System.Drawing.Size(582, 40)
@@ -334,7 +334,7 @@
             Me.Label10.AutoSize = True
             Me.Label10.Location = New System.Drawing.Point(13, 19)
             Me.Label10.Name = "Label10"
-            Me.Label10.Size = New System.Drawing.Size(37, 13)
+            Me.Label10.Size = New System.Drawing.Size(38, 13)
             Me.Label10.TabIndex = 4
             Me.Label10.Text = "Desde"
             '
@@ -343,7 +343,7 @@
             Me.lblIdComprobanteEgresoBanco.AutoSize = True
             Me.lblIdComprobanteEgresoBanco.Location = New System.Drawing.Point(191, 0)
             Me.lblIdComprobanteEgresoBanco.Name = "lblIdComprobanteEgresoBanco"
-            Me.lblIdComprobanteEgresoBanco.Size = New System.Drawing.Size(25, 13)
+            Me.lblIdComprobanteEgresoBanco.Size = New System.Drawing.Size(16, 13)
             Me.lblIdComprobanteEgresoBanco.TabIndex = 3
             Me.lblIdComprobanteEgresoBanco.Text = "..."
             '
@@ -352,7 +352,7 @@
             Me.Label7.AutoSize = True
             Me.Label7.Location = New System.Drawing.Point(191, 18)
             Me.Label7.Name = "Label7"
-            Me.Label7.Size = New System.Drawing.Size(37, 13)
+            Me.Label7.Size = New System.Drawing.Size(35, 13)
             Me.Label7.TabIndex = 2
             Me.Label7.Text = "hasta"
             '
@@ -361,7 +361,7 @@
             Me.dtpHasta.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
             Me.dtpHasta.Location = New System.Drawing.Point(234, 15)
             Me.dtpHasta.Name = "dtpHasta"
-            Me.dtpHasta.Size = New System.Drawing.Size(98, 20)
+            Me.dtpHasta.Size = New System.Drawing.Size(98, 21)
             Me.dtpHasta.TabIndex = 1
             '
             'dtpDesde
@@ -369,7 +369,7 @@
             Me.dtpDesde.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
             Me.dtpDesde.Location = New System.Drawing.Point(56, 14)
             Me.dtpDesde.Name = "dtpDesde"
-            Me.dtpDesde.Size = New System.Drawing.Size(97, 20)
+            Me.dtpDesde.Size = New System.Drawing.Size(97, 21)
             Me.dtpDesde.TabIndex = 0
             Me.dtpDesde.Value = New Date(2013, 1, 1, 0, 1, 0, 0)
             '
@@ -378,7 +378,7 @@
             Me.lblIdClienteGeneral.AutoSize = True
             Me.lblIdClienteGeneral.Location = New System.Drawing.Point(74, -1)
             Me.lblIdClienteGeneral.Name = "lblIdClienteGeneral"
-            Me.lblIdClienteGeneral.Size = New System.Drawing.Size(25, 13)
+            Me.lblIdClienteGeneral.Size = New System.Drawing.Size(16, 13)
             Me.lblIdClienteGeneral.TabIndex = 76
             Me.lblIdClienteGeneral.Text = "..."
             '
@@ -386,7 +386,7 @@
             '
             Me.gbClienteGeneral.Controls.Add(Me.txtNombreComercialClienteGeneral)
             Me.gbClienteGeneral.Controls.Add(Me.lblIdClienteGeneral)
-            Me.gbClienteGeneral.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.gbClienteGeneral.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.gbClienteGeneral.Location = New System.Drawing.Point(242, 28)
             Me.gbClienteGeneral.Name = "gbClienteGeneral"
             Me.gbClienteGeneral.Size = New System.Drawing.Size(468, 40)

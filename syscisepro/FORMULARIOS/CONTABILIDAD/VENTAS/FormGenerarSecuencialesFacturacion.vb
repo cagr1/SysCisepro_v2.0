@@ -103,20 +103,20 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                 Case TipoConexion.Asenava
                     Icon = My.Resources.logo_a
                     msKardex.ForeColor = Color.White
-                    msKardex.BackColor = My.MySettingsProperty.Settings.ColorAsenava
+                    'msKardex.BackColor = My.MySettingsProperty.Settings.ColorAsenava
                     Label7.ForeColor = Color.White
                     Label7.BackColor = My.MySettingsProperty.Settings.ColorAsenava
                     dgvFacturaSecuenciales.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorAsenava
                 Case TipoConexion.Seportpac
                     Icon = My.Resources.logo_s
-                    msKardex.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
+                    'msKardex.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
                     msKardex.ForeColor = Color.White
                     Label7.ForeColor = Color.White
                     Label7.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
                     dgvFacturaSecuenciales.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorSeportpac
                 Case Else
                     Icon = My.Resources.logo_c
-                    msKardex.BackColor = My.MySettingsProperty.Settings.ColorCisepro
+                    'msKardex.BackColor = My.MySettingsProperty.Settings.ColorCisepro
                     msKardex.ForeColor = Color.White
                     Label7.ForeColor = Color.White
                     Label7.BackColor = My.MySettingsProperty.Settings.ColorCisepro

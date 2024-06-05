@@ -317,26 +317,26 @@
             '
             Me.NOVEDADESACBMToolStripMenuItem.Image = CType(resources.GetObject("NOVEDADESACBMToolStripMenuItem.Image"), System.Drawing.Image)
             Me.NOVEDADESACBMToolStripMenuItem.Name = "NOVEDADESACBMToolStripMenuItem"
-            Me.NOVEDADESACBMToolStripMenuItem.Size = New System.Drawing.Size(194, 22)
+            Me.NOVEDADESACBMToolStripMenuItem.Size = New System.Drawing.Size(198, 22)
             Me.NOVEDADESACBMToolStripMenuItem.Text = "NOVEDADES A / C B.M."
             '
             'REPORTESDERADIOToolStripMenuItem
             '
             Me.REPORTESDERADIOToolStripMenuItem.Image = CType(resources.GetObject("REPORTESDERADIOToolStripMenuItem.Image"), System.Drawing.Image)
             Me.REPORTESDERADIOToolStripMenuItem.Name = "REPORTESDERADIOToolStripMenuItem"
-            Me.REPORTESDERADIOToolStripMenuItem.Size = New System.Drawing.Size(194, 22)
+            Me.REPORTESDERADIOToolStripMenuItem.Size = New System.Drawing.Size(198, 22)
             Me.REPORTESDERADIOToolStripMenuItem.Text = "SANCIONES / MULTAS"
             '
             'ToolStripSeparator1
             '
             Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
-            Me.ToolStripSeparator1.Size = New System.Drawing.Size(191, 6)
+            Me.ToolStripSeparator1.Size = New System.Drawing.Size(195, 6)
             '
             'EXPORTARDATOSToolStripMenuItem
             '
             Me.EXPORTARDATOSToolStripMenuItem.Image = CType(resources.GetObject("EXPORTARDATOSToolStripMenuItem.Image"), System.Drawing.Image)
             Me.EXPORTARDATOSToolStripMenuItem.Name = "EXPORTARDATOSToolStripMenuItem"
-            Me.EXPORTARDATOSToolStripMenuItem.Size = New System.Drawing.Size(194, 22)
+            Me.EXPORTARDATOSToolStripMenuItem.Size = New System.Drawing.Size(198, 22)
             Me.EXPORTARDATOSToolStripMenuItem.Text = "EXPORTAR DATOS"
             '
             'GUARDARCAMBIOSToolStripMenuItem
@@ -362,7 +362,7 @@
             '
             Me.Label8.AutoSize = True
             Me.Label8.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label8.ForeColor = System.Drawing.Color.White
+            Me.Label8.ForeColor = System.Drawing.Color.Transparent
             Me.Label8.Location = New System.Drawing.Point(536, 6)
             Me.Label8.Name = "Label8"
             Me.Label8.Size = New System.Drawing.Size(53, 13)
@@ -372,6 +372,7 @@
             'Label7
             '
             Me.Label7.AutoSize = True
+            Me.Label7.ForeColor = System.Drawing.Color.Transparent
             Me.Label7.Location = New System.Drawing.Point(463, 5)
             Me.Label7.Name = "Label7"
             Me.Label7.Size = New System.Drawing.Size(63, 13)
@@ -1037,7 +1038,7 @@
             '
             Me.TextBox1.BackColor = System.Drawing.Color.White
             Me.TextBox1.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-            Me.TextBox1.Location = New System.Drawing.Point(53, 60)
+            Me.TextBox1.Location = New System.Drawing.Point(58, 60)
             Me.TextBox1.Name = "TextBox1"
             Me.TextBox1.Size = New System.Drawing.Size(167, 21)
             Me.TextBox1.TabIndex = 29
@@ -1158,9 +1159,9 @@
             'Label2
             '
             Me.Label2.Cursor = System.Windows.Forms.Cursors.Hand
-            Me.Label2.Location = New System.Drawing.Point(1, 58)
+            Me.Label2.Location = New System.Drawing.Point(3, 58)
             Me.Label2.Name = "Label2"
-            Me.Label2.Size = New System.Drawing.Size(550, 24)
+            Me.Label2.Size = New System.Drawing.Size(572, 24)
             Me.Label2.TabIndex = 203
             Me.Label2.Text = "BUSCAR:                                                            ASISTENCIA POR" &
     " PUESTO, VIGILANTE  Y DÍAS TRABAJADOS"

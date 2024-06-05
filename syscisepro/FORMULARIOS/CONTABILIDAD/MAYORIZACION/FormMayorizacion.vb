@@ -61,6 +61,9 @@ Namespace FORMULARIOS.CONTABILIDAD.MAYORIZACION
                     dgvMayoresHijos.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
                     dgvRegistros.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
             End Select
+            dgvAsiento.Font = New Font("Roboto", 8, FontStyle.Regular)
+            dgvMayoresHijos.Font = New Font("Roboto", 8, FontStyle.Regular)
+            dgvRegistros.Font = New Font("Roboto", 8, FontStyle.Regular)
 
             AutocompletarPlanCuentas()
             txtCuentaPadre.Focus()

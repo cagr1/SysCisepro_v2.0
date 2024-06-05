@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.GroupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnCargaBasica = new System.Windows.Forms.Button();
             this.btnCargarPersonal = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.DateTimePicker6 = new System.Windows.Forms.DateTimePicker();
@@ -43,7 +44,6 @@
             this.ColumnHeader15 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ColumnHeader16 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ColumnHeader18 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.btnCargaBasica = new System.Windows.Forms.Button();
             this.GroupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -59,13 +59,28 @@
             this.GroupBox1.Controls.Add(this.Label5);
             this.GroupBox1.Controls.Add(this.label1);
             this.GroupBox1.Controls.Add(this.label2);
-            this.GroupBox1.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GroupBox1.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GroupBox1.Location = new System.Drawing.Point(1, 0);
             this.GroupBox1.Name = "GroupBox1";
             this.GroupBox1.Size = new System.Drawing.Size(774, 131);
             this.GroupBox1.TabIndex = 203;
             this.GroupBox1.TabStop = false;
             this.GroupBox1.Text = "REPORTE DE ASISTENCIA, POR PUESTO Y DÍAS TRABAJADOS:";
+            // 
+            // btnCargaBasica
+            // 
+            this.btnCargaBasica.BackColor = System.Drawing.Color.White;
+            this.btnCargaBasica.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCargaBasica.Image = global::SysCisepro3.Properties.Resources.printer_empty;
+            this.btnCargaBasica.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnCargaBasica.Location = new System.Drawing.Point(677, 21);
+            this.btnCargaBasica.Name = "btnCargaBasica";
+            this.btnCargaBasica.Size = new System.Drawing.Size(91, 42);
+            this.btnCargaBasica.TabIndex = 208;
+            this.btnCargaBasica.Text = "Rol Basico";
+            this.btnCargaBasica.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnCargaBasica.UseVisualStyleBackColor = false;
+            this.btnCargaBasica.Click += new System.EventHandler(this.btnCargaBasica_Click);
             // 
             // btnCargarPersonal
             // 
@@ -89,7 +104,7 @@
             this.textBox1.Enabled = false;
             this.textBox1.Location = new System.Drawing.Point(71, 88);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(264, 20);
+            this.textBox1.Size = new System.Drawing.Size(264, 21);
             this.textBox1.TabIndex = 205;
             // 
             // DateTimePicker6
@@ -98,7 +113,7 @@
             this.DateTimePicker6.Enabled = false;
             this.DateTimePicker6.Location = new System.Drawing.Point(401, 90);
             this.DateTimePicker6.Name = "DateTimePicker6";
-            this.DateTimePicker6.Size = new System.Drawing.Size(255, 20);
+            this.DateTimePicker6.Size = new System.Drawing.Size(255, 21);
             this.DateTimePicker6.TabIndex = 202;
             // 
             // Label3
@@ -106,7 +121,7 @@
             this.Label3.AutoSize = true;
             this.Label3.Location = new System.Drawing.Point(380, 92);
             this.Label3.Name = "Label3";
-            this.Label3.Size = new System.Drawing.Size(25, 13);
+            this.Label3.Size = new System.Drawing.Size(23, 13);
             this.Label3.TabIndex = 203;
             this.Label3.Text = "AL:";
             // 
@@ -116,7 +131,7 @@
             this.DateTimePicker7.Enabled = false;
             this.DateTimePicker7.Location = new System.Drawing.Point(401, 68);
             this.DateTimePicker7.Name = "DateTimePicker7";
-            this.DateTimePicker7.Size = new System.Drawing.Size(255, 20);
+            this.DateTimePicker7.Size = new System.Drawing.Size(255, 21);
             this.DateTimePicker7.TabIndex = 200;
             // 
             // Label5
@@ -124,7 +139,7 @@
             this.Label5.AutoSize = true;
             this.Label5.Location = new System.Drawing.Point(372, 71);
             this.Label5.Name = "Label5";
-            this.Label5.Size = new System.Drawing.Size(31, 13);
+            this.Label5.Size = new System.Drawing.Size(29, 13);
             this.Label5.TabIndex = 201;
             this.Label5.Text = "DEL:";
             // 
@@ -133,13 +148,13 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(6, 96);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(49, 13);
+            this.label1.Size = new System.Drawing.Size(46, 13);
             this.label1.TabIndex = 204;
             this.label1.Text = "FILTRO:";
             // 
             // label2
             // 
-            this.label2.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(6, 21);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(671, 35);
@@ -156,7 +171,9 @@
             this.ColumnHeader15,
             this.ColumnHeader16,
             this.ColumnHeader18});
+            this.ListView3.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ListView3.FullRowSelect = true;
+            this.ListView3.HideSelection = false;
             this.ListView3.Location = new System.Drawing.Point(-5, 137);
             this.ListView3.MultiSelect = false;
             this.ListView3.Name = "ListView3";
@@ -189,21 +206,6 @@
             // 
             this.ColumnHeader18.Text = "OBSERVACIONES";
             this.ColumnHeader18.Width = 300;
-            // 
-            // btnCargaBasica
-            // 
-            this.btnCargaBasica.BackColor = System.Drawing.Color.White;
-            this.btnCargaBasica.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCargaBasica.Image = global::SysCisepro3.Properties.Resources.printer_empty;
-            this.btnCargaBasica.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnCargaBasica.Location = new System.Drawing.Point(677, 21);
-            this.btnCargaBasica.Name = "btnCargaBasica";
-            this.btnCargaBasica.Size = new System.Drawing.Size(91, 42);
-            this.btnCargaBasica.TabIndex = 208;
-            this.btnCargaBasica.Text = "Rol Basico";
-            this.btnCargaBasica.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnCargaBasica.UseVisualStyleBackColor = false;
-            this.btnCargaBasica.Click += new System.EventHandler(this.btnCargaBasica_Click);
             // 
             // FrmDetalleAsistenciaRol
             // 

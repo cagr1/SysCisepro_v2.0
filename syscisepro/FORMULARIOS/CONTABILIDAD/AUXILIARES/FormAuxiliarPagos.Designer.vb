@@ -1,8 +1,8 @@
 ﻿Namespace FORMULARIOS.CONTABILIDAD.AUXILIARES
     <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
     Partial Class FormAuxiliarPagos
-        Inherits System.Windows.Forms.Form
-
+        'Inherits System.Windows.Forms.Form
+        Inherits Krypton.Toolkit.KryptonForm
         'Form reemplaza a Dispose para limpiar la lista de componentes.
         <System.Diagnostics.DebuggerNonUserCode()> _
         Protected Overrides Sub Dispose(ByVal disposing As Boolean)
@@ -229,7 +229,7 @@
             '
             Me.TabControl1.Controls.Add(Me.TabPage1)
             Me.TabControl1.Controls.Add(Me.TabPage2)
-            Me.TabControl1.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.TabControl1.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.TabControl1.Location = New System.Drawing.Point(1, 26)
             Me.TabControl1.Name = "TabControl1"
             Me.TabControl1.SelectedIndex = 0
@@ -264,7 +264,7 @@
             Me.GroupBox1.BackColor = System.Drawing.Color.White
             Me.GroupBox1.Controls.Add(Me.rbPorProveedor)
             Me.GroupBox1.Controls.Add(Me.rbTodoCompras)
-            Me.GroupBox1.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.GroupBox1.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.GroupBox1.Location = New System.Drawing.Point(0, 0)
             Me.GroupBox1.Name = "GroupBox1"
             Me.GroupBox1.Size = New System.Drawing.Size(165, 44)
@@ -277,7 +277,7 @@
             Me.rbPorProveedor.AutoSize = True
             Me.rbPorProveedor.Location = New System.Drawing.Point(9, 18)
             Me.rbPorProveedor.Name = "rbPorProveedor"
-            Me.rbPorProveedor.Size = New System.Drawing.Size(79, 17)
+            Me.rbPorProveedor.Size = New System.Drawing.Size(75, 17)
             Me.rbPorProveedor.TabIndex = 1
             Me.rbPorProveedor.Text = "Proveedor"
             Me.rbPorProveedor.UseVisualStyleBackColor = True
@@ -304,7 +304,7 @@
             Me.gbComprobanteRetencion.Controls.Add(Me.Label14)
             Me.gbComprobanteRetencion.Controls.Add(Me.Label16)
             Me.gbComprobanteRetencion.Controls.Add(Me.Label18)
-            Me.gbComprobanteRetencion.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.gbComprobanteRetencion.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.gbComprobanteRetencion.Location = New System.Drawing.Point(723, 43)
             Me.gbComprobanteRetencion.Name = "gbComprobanteRetencion"
             Me.gbComprobanteRetencion.Size = New System.Drawing.Size(500, 39)
@@ -317,7 +317,7 @@
             Me.lblIdComprobanteRetencion.AutoSize = True
             Me.lblIdComprobanteRetencion.Location = New System.Drawing.Point(79, 0)
             Me.lblIdComprobanteRetencion.Name = "lblIdComprobanteRetencion"
-            Me.lblIdComprobanteRetencion.Size = New System.Drawing.Size(25, 13)
+            Me.lblIdComprobanteRetencion.Size = New System.Drawing.Size(16, 13)
             Me.lblIdComprobanteRetencion.TabIndex = 70
             Me.lblIdComprobanteRetencion.Text = "..."
             '
@@ -326,7 +326,7 @@
             Me.txtTotalComprobanteRetencion.BorderStyle = System.Windows.Forms.BorderStyle.None
             Me.txtTotalComprobanteRetencion.Location = New System.Drawing.Point(351, 16)
             Me.txtTotalComprobanteRetencion.Name = "txtTotalComprobanteRetencion"
-            Me.txtTotalComprobanteRetencion.Size = New System.Drawing.Size(56, 13)
+            Me.txtTotalComprobanteRetencion.Size = New System.Drawing.Size(56, 14)
             Me.txtTotalComprobanteRetencion.TabIndex = 35
             Me.txtTotalComprobanteRetencion.Text = "0.00"
             Me.txtTotalComprobanteRetencion.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -336,7 +336,7 @@
             Me.lblFechaComprobanteRetencion.AutoSize = True
             Me.lblFechaComprobanteRetencion.Location = New System.Drawing.Point(208, 16)
             Me.lblFechaComprobanteRetencion.Name = "lblFechaComprobanteRetencion"
-            Me.lblFechaComprobanteRetencion.Size = New System.Drawing.Size(67, 13)
+            Me.lblFechaComprobanteRetencion.Size = New System.Drawing.Size(65, 13)
             Me.lblFechaComprobanteRetencion.TabIndex = 23
             Me.lblFechaComprobanteRetencion.Text = "00/00/0000"
             Me.lblFechaComprobanteRetencion.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -390,7 +390,7 @@
             Me.gbNombreComercialProveedor.Controls.Add(Me.lblRucProveedorGeneral)
             Me.gbNombreComercialProveedor.Controls.Add(Me.txtNombreComercialProveedorGeneral)
             Me.gbNombreComercialProveedor.Controls.Add(Me.lblIdProveedorGeneral)
-            Me.gbNombreComercialProveedor.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.gbNombreComercialProveedor.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.gbNombreComercialProveedor.Location = New System.Drawing.Point(165, 0)
             Me.gbNombreComercialProveedor.Name = "gbNombreComercialProveedor"
             Me.gbNombreComercialProveedor.Size = New System.Drawing.Size(555, 44)
@@ -403,7 +403,7 @@
             Me.Label5.AutoSize = True
             Me.Label5.Location = New System.Drawing.Point(339, 1)
             Me.Label5.Name = "Label5"
-            Me.Label5.Size = New System.Drawing.Size(55, 13)
+            Me.Label5.Size = New System.Drawing.Size(57, 13)
             Me.Label5.TabIndex = 82
             Me.Label5.Text = "FACTURA:"
             '
@@ -412,7 +412,7 @@
             Me.lblFactura.AutoSize = True
             Me.lblFactura.Location = New System.Drawing.Point(419, 1)
             Me.lblFactura.Name = "lblFactura"
-            Me.lblFactura.Size = New System.Drawing.Size(25, 13)
+            Me.lblFactura.Size = New System.Drawing.Size(16, 13)
             Me.lblFactura.TabIndex = 81
             Me.lblFactura.Text = "..."
             '
@@ -430,7 +430,7 @@
             Me.lblRucProveedorGeneral.AutoSize = True
             Me.lblRucProveedorGeneral.Location = New System.Drawing.Point(170, 1)
             Me.lblRucProveedorGeneral.Name = "lblRucProveedorGeneral"
-            Me.lblRucProveedorGeneral.Size = New System.Drawing.Size(25, 13)
+            Me.lblRucProveedorGeneral.Size = New System.Drawing.Size(16, 13)
             Me.lblRucProveedorGeneral.TabIndex = 79
             Me.lblRucProveedorGeneral.Text = "..."
             '
@@ -462,7 +462,7 @@
             Me.gbRangoFechas.Controls.Add(Me.dtpHasta)
             Me.gbRangoFechas.Controls.Add(Me.dtpDesde)
             Me.gbRangoFechas.Controls.Add(Me.Label1)
-            Me.gbRangoFechas.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.gbRangoFechas.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.gbRangoFechas.Location = New System.Drawing.Point(723, 0)
             Me.gbRangoFechas.Name = "gbRangoFechas"
             Me.gbRangoFechas.Size = New System.Drawing.Size(500, 44)
@@ -489,7 +489,7 @@
             Me.Label21.AutoSize = True
             Me.Label21.Location = New System.Drawing.Point(5, 20)
             Me.Label21.Name = "Label21"
-            Me.Label21.Size = New System.Drawing.Size(121, 13)
+            Me.Label21.Size = New System.Drawing.Size(128, 13)
             Me.Label21.TabIndex = 4
             Me.Label21.Text = "CARGAR REGISTRO DEL"
             '
@@ -498,7 +498,7 @@
             Me.lblIdComprobanteCompra.AutoSize = True
             Me.lblIdComprobanteCompra.Location = New System.Drawing.Point(125, 1)
             Me.lblIdComprobanteCompra.Name = "lblIdComprobanteCompra"
-            Me.lblIdComprobanteCompra.Size = New System.Drawing.Size(25, 13)
+            Me.lblIdComprobanteCompra.Size = New System.Drawing.Size(16, 13)
             Me.lblIdComprobanteCompra.TabIndex = 3
             Me.lblIdComprobanteCompra.Text = "..."
             '
@@ -507,7 +507,7 @@
             Me.dtpHasta.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
             Me.dtpHasta.Location = New System.Drawing.Point(272, 16)
             Me.dtpHasta.Name = "dtpHasta"
-            Me.dtpHasta.Size = New System.Drawing.Size(119, 20)
+            Me.dtpHasta.Size = New System.Drawing.Size(119, 21)
             Me.dtpHasta.TabIndex = 1
             '
             'dtpDesde
@@ -515,7 +515,7 @@
             Me.dtpDesde.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
             Me.dtpDesde.Location = New System.Drawing.Point(128, 16)
             Me.dtpDesde.Name = "dtpDesde"
-            Me.dtpDesde.Size = New System.Drawing.Size(111, 20)
+            Me.dtpDesde.Size = New System.Drawing.Size(111, 21)
             Me.dtpDesde.TabIndex = 0
             '
             'Label1
@@ -523,7 +523,7 @@
             Me.Label1.AutoSize = True
             Me.Label1.Location = New System.Drawing.Point(254, 19)
             Me.Label1.Name = "Label1"
-            Me.Label1.Size = New System.Drawing.Size(19, 13)
+            Me.Label1.Size = New System.Drawing.Size(20, 13)
             Me.Label1.TabIndex = 2
             Me.Label1.Text = "AL"
             '
@@ -659,7 +659,7 @@
             Me.dgvComprobantesCompra.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
             DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
             DataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control
-            DataGridViewCellStyle5.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle5.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             DataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText
             DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption
             DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
@@ -668,7 +668,7 @@
             Me.dgvComprobantesCompra.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
             DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
             DataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window
-            DataGridViewCellStyle6.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle6.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             DataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText
             DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(123, Byte), Integer))
             DataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText
@@ -676,7 +676,7 @@
             Me.dgvComprobantesCompra.DefaultCellStyle = DataGridViewCellStyle6
             Me.dgvComprobantesCompra.Dock = System.Windows.Forms.DockStyle.Fill
             Me.dgvComprobantesCompra.GridColor = System.Drawing.SystemColors.ControlLight
-            Me.dgvComprobantesCompra.Location = New System.Drawing.Point(3, 16)
+            Me.dgvComprobantesCompra.Location = New System.Drawing.Point(3, 17)
             Me.dgvComprobantesCompra.MultiSelect = False
             Me.dgvComprobantesCompra.Name = "dgvComprobantesCompra"
             Me.dgvComprobantesCompra.ReadOnly = True
@@ -684,7 +684,7 @@
             DataGridViewCellStyle7.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.dgvComprobantesCompra.RowsDefaultCellStyle = DataGridViewCellStyle7
             Me.dgvComprobantesCompra.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvComprobantesCompra.Size = New System.Drawing.Size(714, 381)
+            Me.dgvComprobantesCompra.Size = New System.Drawing.Size(714, 380)
             Me.dgvComprobantesCompra.TabIndex = 109
             '
             'gbDetalleRetencionCompra
@@ -711,7 +711,7 @@
             Me.dgvDetalleComprobanteRetencion.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
             DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
             DataGridViewCellStyle9.BackColor = System.Drawing.Color.White
-            DataGridViewCellStyle9.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle9.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             DataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText
             DataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption
             DataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText
@@ -720,7 +720,7 @@
             Me.dgvDetalleComprobanteRetencion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
             DataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
             DataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Window
-            DataGridViewCellStyle10.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle10.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             DataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.ControlText
             DataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(123, Byte), Integer))
             DataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText
@@ -728,14 +728,14 @@
             Me.dgvDetalleComprobanteRetencion.DefaultCellStyle = DataGridViewCellStyle10
             Me.dgvDetalleComprobanteRetencion.Dock = System.Windows.Forms.DockStyle.Fill
             Me.dgvDetalleComprobanteRetencion.GridColor = System.Drawing.SystemColors.ControlLight
-            Me.dgvDetalleComprobanteRetencion.Location = New System.Drawing.Point(3, 16)
+            Me.dgvDetalleComprobanteRetencion.Location = New System.Drawing.Point(3, 17)
             Me.dgvDetalleComprobanteRetencion.MultiSelect = False
             Me.dgvDetalleComprobanteRetencion.Name = "dgvDetalleComprobanteRetencion"
             Me.dgvDetalleComprobanteRetencion.ReadOnly = True
             Me.dgvDetalleComprobanteRetencion.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
             Me.dgvDetalleComprobanteRetencion.RowHeadersVisible = False
             Me.dgvDetalleComprobanteRetencion.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvDetalleComprobanteRetencion.Size = New System.Drawing.Size(494, 103)
+            Me.dgvDetalleComprobanteRetencion.Size = New System.Drawing.Size(494, 102)
             Me.dgvDetalleComprobanteRetencion.TabIndex = 111
             '
             'dgvComprobanteRetencion
@@ -836,7 +836,7 @@
             Me.dgvComprobanteEgresoBancos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
             DataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
             DataGridViewCellStyle16.BackColor = System.Drawing.SystemColors.Control
-            DataGridViewCellStyle16.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle16.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             DataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.WindowText
             DataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption
             DataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText
@@ -845,7 +845,7 @@
             Me.dgvComprobanteEgresoBancos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
             DataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
             DataGridViewCellStyle17.BackColor = System.Drawing.SystemColors.Window
-            DataGridViewCellStyle17.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle17.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             DataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.ControlText
             DataGridViewCellStyle17.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(123, Byte), Integer))
             DataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText
@@ -853,7 +853,7 @@
             Me.dgvComprobanteEgresoBancos.DefaultCellStyle = DataGridViewCellStyle17
             Me.dgvComprobanteEgresoBancos.Dock = System.Windows.Forms.DockStyle.Fill
             Me.dgvComprobanteEgresoBancos.GridColor = System.Drawing.SystemColors.ControlLight
-            Me.dgvComprobanteEgresoBancos.Location = New System.Drawing.Point(3, 16)
+            Me.dgvComprobanteEgresoBancos.Location = New System.Drawing.Point(3, 17)
             Me.dgvComprobanteEgresoBancos.MultiSelect = False
             Me.dgvComprobanteEgresoBancos.Name = "dgvComprobanteEgresoBancos"
             Me.dgvComprobanteEgresoBancos.ReadOnly = True
@@ -861,7 +861,7 @@
             Me.dgvComprobanteEgresoBancos.RowHeadersVisible = False
             Me.dgvComprobanteEgresoBancos.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal
             Me.dgvComprobanteEgresoBancos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvComprobanteEgresoBancos.Size = New System.Drawing.Size(494, 65)
+            Me.dgvComprobanteEgresoBancos.Size = New System.Drawing.Size(494, 64)
             Me.dgvComprobanteEgresoBancos.TabIndex = 118
             '
             'GroupBox5
@@ -898,7 +898,7 @@
             Me.dgvAsientoDiarioEgreso.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
             DataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
             DataGridViewCellStyle19.BackColor = System.Drawing.SystemColors.Control
-            DataGridViewCellStyle19.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle19.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             DataGridViewCellStyle19.ForeColor = System.Drawing.SystemColors.WindowText
             DataGridViewCellStyle19.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption
             DataGridViewCellStyle19.SelectionForeColor = System.Drawing.SystemColors.HighlightText
@@ -907,7 +907,7 @@
             Me.dgvAsientoDiarioEgreso.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
             DataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
             DataGridViewCellStyle20.BackColor = System.Drawing.SystemColors.Window
-            DataGridViewCellStyle20.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle20.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             DataGridViewCellStyle20.ForeColor = System.Drawing.SystemColors.ControlText
             DataGridViewCellStyle20.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(123, Byte), Integer))
             DataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText
@@ -915,14 +915,14 @@
             Me.dgvAsientoDiarioEgreso.DefaultCellStyle = DataGridViewCellStyle20
             Me.dgvAsientoDiarioEgreso.Dock = System.Windows.Forms.DockStyle.Fill
             Me.dgvAsientoDiarioEgreso.GridColor = System.Drawing.SystemColors.ControlLight
-            Me.dgvAsientoDiarioEgreso.Location = New System.Drawing.Point(3, 16)
+            Me.dgvAsientoDiarioEgreso.Location = New System.Drawing.Point(3, 17)
             Me.dgvAsientoDiarioEgreso.MultiSelect = False
             Me.dgvAsientoDiarioEgreso.Name = "dgvAsientoDiarioEgreso"
             Me.dgvAsientoDiarioEgreso.ReadOnly = True
             Me.dgvAsientoDiarioEgreso.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
             Me.dgvAsientoDiarioEgreso.RowHeadersVisible = False
             Me.dgvAsientoDiarioEgreso.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvAsientoDiarioEgreso.Size = New System.Drawing.Size(494, 168)
+            Me.dgvAsientoDiarioEgreso.Size = New System.Drawing.Size(494, 167)
             Me.dgvAsientoDiarioEgreso.TabIndex = 119
             '
             'gbTotalDebeTotalHaberEgreso
@@ -1085,7 +1085,7 @@
             Me.dgvAsientoDiarioIngreso.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
             DataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
             DataGridViewCellStyle22.BackColor = System.Drawing.SystemColors.Control
-            DataGridViewCellStyle22.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle22.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             DataGridViewCellStyle22.ForeColor = System.Drawing.SystemColors.WindowText
             DataGridViewCellStyle22.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption
             DataGridViewCellStyle22.SelectionForeColor = System.Drawing.SystemColors.HighlightText
@@ -1094,7 +1094,7 @@
             Me.dgvAsientoDiarioIngreso.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
             DataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
             DataGridViewCellStyle23.BackColor = System.Drawing.SystemColors.Window
-            DataGridViewCellStyle23.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle23.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             DataGridViewCellStyle23.ForeColor = System.Drawing.SystemColors.ControlText
             DataGridViewCellStyle23.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption
             DataGridViewCellStyle23.SelectionForeColor = System.Drawing.SystemColors.HighlightText
@@ -1102,14 +1102,14 @@
             Me.dgvAsientoDiarioIngreso.DefaultCellStyle = DataGridViewCellStyle23
             Me.dgvAsientoDiarioIngreso.Dock = System.Windows.Forms.DockStyle.Fill
             Me.dgvAsientoDiarioIngreso.GridColor = System.Drawing.SystemColors.ControlLight
-            Me.dgvAsientoDiarioIngreso.Location = New System.Drawing.Point(3, 16)
+            Me.dgvAsientoDiarioIngreso.Location = New System.Drawing.Point(3, 17)
             Me.dgvAsientoDiarioIngreso.MultiSelect = False
             Me.dgvAsientoDiarioIngreso.Name = "dgvAsientoDiarioIngreso"
             Me.dgvAsientoDiarioIngreso.ReadOnly = True
             Me.dgvAsientoDiarioIngreso.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
             Me.dgvAsientoDiarioIngreso.RowHeadersVisible = False
             Me.dgvAsientoDiarioIngreso.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvAsientoDiarioIngreso.Size = New System.Drawing.Size(492, 224)
+            Me.dgvAsientoDiarioIngreso.Size = New System.Drawing.Size(492, 223)
             Me.dgvAsientoDiarioIngreso.TabIndex = 119
             '
             'GroupBox4
@@ -1428,7 +1428,7 @@
             Me.dgvComprobanteIngreso.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
             DataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
             DataGridViewCellStyle29.BackColor = System.Drawing.SystemColors.Control
-            DataGridViewCellStyle29.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle29.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             DataGridViewCellStyle29.ForeColor = System.Drawing.SystemColors.WindowText
             DataGridViewCellStyle29.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption
             DataGridViewCellStyle29.SelectionForeColor = System.Drawing.SystemColors.HighlightText
@@ -1437,7 +1437,7 @@
             Me.dgvComprobanteIngreso.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
             DataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
             DataGridViewCellStyle30.BackColor = System.Drawing.SystemColors.Window
-            DataGridViewCellStyle30.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle30.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             DataGridViewCellStyle30.ForeColor = System.Drawing.SystemColors.ControlText
             DataGridViewCellStyle30.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption
             DataGridViewCellStyle30.SelectionForeColor = System.Drawing.SystemColors.HighlightText
@@ -1445,14 +1445,14 @@
             Me.dgvComprobanteIngreso.DefaultCellStyle = DataGridViewCellStyle30
             Me.dgvComprobanteIngreso.Dock = System.Windows.Forms.DockStyle.Fill
             Me.dgvComprobanteIngreso.GridColor = System.Drawing.SystemColors.ControlLight
-            Me.dgvComprobanteIngreso.Location = New System.Drawing.Point(3, 16)
+            Me.dgvComprobanteIngreso.Location = New System.Drawing.Point(3, 17)
             Me.dgvComprobanteIngreso.MultiSelect = False
             Me.dgvComprobanteIngreso.Name = "dgvComprobanteIngreso"
             Me.dgvComprobanteIngreso.ReadOnly = True
             Me.dgvComprobanteIngreso.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
             Me.dgvComprobanteIngreso.RowHeadersVisible = False
             Me.dgvComprobanteIngreso.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvComprobanteIngreso.Size = New System.Drawing.Size(492, 65)
+            Me.dgvComprobanteIngreso.Size = New System.Drawing.Size(492, 64)
             Me.dgvComprobanteIngreso.TabIndex = 118
             '
             'gbDetalleRetencionVenta
@@ -1478,7 +1478,7 @@
             Me.dgvDetalleRetencionVenta.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
             DataGridViewCellStyle32.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
             DataGridViewCellStyle32.BackColor = System.Drawing.SystemColors.Control
-            DataGridViewCellStyle32.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle32.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             DataGridViewCellStyle32.ForeColor = System.Drawing.SystemColors.WindowText
             DataGridViewCellStyle32.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption
             DataGridViewCellStyle32.SelectionForeColor = System.Drawing.SystemColors.HighlightText
@@ -1487,7 +1487,7 @@
             Me.dgvDetalleRetencionVenta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
             DataGridViewCellStyle33.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
             DataGridViewCellStyle33.BackColor = System.Drawing.SystemColors.Window
-            DataGridViewCellStyle33.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle33.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             DataGridViewCellStyle33.ForeColor = System.Drawing.SystemColors.ControlText
             DataGridViewCellStyle33.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption
             DataGridViewCellStyle33.SelectionForeColor = System.Drawing.SystemColors.HighlightText
@@ -1495,14 +1495,14 @@
             Me.dgvDetalleRetencionVenta.DefaultCellStyle = DataGridViewCellStyle33
             Me.dgvDetalleRetencionVenta.Dock = System.Windows.Forms.DockStyle.Fill
             Me.dgvDetalleRetencionVenta.GridColor = System.Drawing.SystemColors.ControlLight
-            Me.dgvDetalleRetencionVenta.Location = New System.Drawing.Point(3, 16)
+            Me.dgvDetalleRetencionVenta.Location = New System.Drawing.Point(3, 17)
             Me.dgvDetalleRetencionVenta.MultiSelect = False
             Me.dgvDetalleRetencionVenta.Name = "dgvDetalleRetencionVenta"
             Me.dgvDetalleRetencionVenta.ReadOnly = True
             Me.dgvDetalleRetencionVenta.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
             Me.dgvDetalleRetencionVenta.RowHeadersVisible = False
             Me.dgvDetalleRetencionVenta.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvDetalleRetencionVenta.Size = New System.Drawing.Size(492, 103)
+            Me.dgvDetalleRetencionVenta.Size = New System.Drawing.Size(492, 102)
             Me.dgvDetalleRetencionVenta.TabIndex = 111
             '
             'dgvComprobanteRetencionVenta
@@ -1604,7 +1604,7 @@
             Me.Label20.AutoSize = True
             Me.Label20.Location = New System.Drawing.Point(151, 0)
             Me.Label20.Name = "Label20"
-            Me.Label20.Size = New System.Drawing.Size(31, 13)
+            Me.Label20.Size = New System.Drawing.Size(33, 13)
             Me.Label20.TabIndex = 110
             Me.Label20.Text = "NRO:"
             '
@@ -1629,7 +1629,7 @@
             Me.dgvFacturaVenta.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
             DataGridViewCellStyle38.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
             DataGridViewCellStyle38.BackColor = System.Drawing.SystemColors.Control
-            DataGridViewCellStyle38.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle38.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             DataGridViewCellStyle38.ForeColor = System.Drawing.SystemColors.WindowText
             DataGridViewCellStyle38.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption
             DataGridViewCellStyle38.SelectionForeColor = System.Drawing.SystemColors.HighlightText
@@ -1638,7 +1638,7 @@
             Me.dgvFacturaVenta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
             DataGridViewCellStyle39.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
             DataGridViewCellStyle39.BackColor = System.Drawing.SystemColors.Window
-            DataGridViewCellStyle39.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle39.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             DataGridViewCellStyle39.ForeColor = System.Drawing.SystemColors.ControlText
             DataGridViewCellStyle39.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption
             DataGridViewCellStyle39.SelectionForeColor = System.Drawing.SystemColors.HighlightText
@@ -1646,7 +1646,7 @@
             Me.dgvFacturaVenta.DefaultCellStyle = DataGridViewCellStyle39
             Me.dgvFacturaVenta.Dock = System.Windows.Forms.DockStyle.Fill
             Me.dgvFacturaVenta.GridColor = System.Drawing.SystemColors.ControlLight
-            Me.dgvFacturaVenta.Location = New System.Drawing.Point(3, 16)
+            Me.dgvFacturaVenta.Location = New System.Drawing.Point(3, 17)
             Me.dgvFacturaVenta.MultiSelect = False
             Me.dgvFacturaVenta.Name = "dgvFacturaVenta"
             Me.dgvFacturaVenta.ReadOnly = True
@@ -1655,7 +1655,7 @@
             DataGridViewCellStyle40.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.dgvFacturaVenta.RowsDefaultCellStyle = DataGridViewCellStyle40
             Me.dgvFacturaVenta.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvFacturaVenta.Size = New System.Drawing.Size(714, 381)
+            Me.dgvFacturaVenta.Size = New System.Drawing.Size(714, 380)
             Me.dgvFacturaVenta.TabIndex = 109
             '
             'GroupBox13
@@ -1861,6 +1861,7 @@
             '
             'MenuStrip1
             '
+            Me.MenuStrip1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
             Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnExportarPago})
             Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
             Me.MenuStrip1.Name = "MenuStrip1"

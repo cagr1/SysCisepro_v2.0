@@ -384,6 +384,7 @@ Namespace FORMULARIOS.CONTABILIDAD.CUENTAS_POR_COBRAR
                     dgvCuentasPorCobrar.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
             End Select
             rbGeneral.Checked = True
+            dgvCuentasPorCobrar.Font = New Font("Roboto", 8, FontStyle.Regular)
         End Sub
 
         Private Sub btnBuscar_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnBuscar.Click

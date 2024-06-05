@@ -333,6 +333,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                     MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorCisepro
                     dgvAsientosDiario.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
             End Select
+            dgvAsientosDiario.Font = New Font("Roboto", 8, FontStyle.Regular)
             GenerarAnios()
             AutocompletarNombreCliente()
         End Sub

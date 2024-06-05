@@ -102,7 +102,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                     dgvNotaCredito.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
             End Select
 
-
+            dgvNotaCredito.Font = New Drawing.Font("Roboto", 8, FontStyle.Regular)
             Dim txtFilePathNotaCredito As String = Path.Combine(Application.StartupPath & "\Leer XML Temp\pathRetencion.txt")
             If File.Exists(txtFilePathNotaCredito) Then
                 Dim selectedFolderPath1 As String = File.ReadAllText(txtFilePathNotaCredito)

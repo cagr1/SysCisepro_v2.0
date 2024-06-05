@@ -132,6 +132,9 @@ Namespace FORMULARIOS.CONTABILIDAD.AUXILIARES
                     dgvSolicitudes.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
                     dgvLiquidaciones.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
             End Select
+            dgvAsiento.Font = New Font("Roboto", 8, FontStyle.Regular)
+            dgvSolicitudes.Font = New Font("Roboto", 8, FontStyle.Regular)
+            dgvLiquidaciones.Font = New Font("Roboto", 8, FontStyle.Regular)
         End Sub
 
         Private Sub dgvLiquidaciones_SelectionChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles dgvLiquidaciones.SelectionChanged

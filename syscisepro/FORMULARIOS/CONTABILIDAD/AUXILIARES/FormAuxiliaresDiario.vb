@@ -111,6 +111,9 @@ Namespace FORMULARIOS.CONTABILIDAD.AUXILIARES
                     dgvDiarios.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
                     dgvJornalizacion.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
             End Select
+            dgvAsientos.Font = New Font("Roboto", 8, FontStyle.Regular)
+            dgvDiarios.Font = New Font("Roboto", 8, FontStyle.Regular)
+            dgvJornalizacion.Font = New Font("Roboto", 8, FontStyle.Regular)
 
         End Sub
 

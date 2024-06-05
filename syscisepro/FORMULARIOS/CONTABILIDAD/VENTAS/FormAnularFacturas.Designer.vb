@@ -1,8 +1,8 @@
 ﻿Namespace FORMULARIOS.CONTABILIDAD.VENTAS
     <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
     Partial Class FormAnularFacturas
-        Inherits System.Windows.Forms.Form
-
+        'Inherits System.Windows.Forms.Form
+        Inherits Krypton.Toolkit.KryptonForm
         'Form reemplaza a Dispose para limpiar la lista de componentes.
         <System.Diagnostics.DebuggerNonUserCode()> _
         Protected Overrides Sub Dispose(ByVal disposing As Boolean)
@@ -77,7 +77,7 @@
             Me.gbClienteGeneral.Controls.Add(Me.Label1)
             Me.gbClienteGeneral.Controls.Add(Me.lblIdClienteGeneral)
             Me.gbClienteGeneral.Controls.Add(Me.txtNombreComercialCliente)
-            Me.gbClienteGeneral.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.gbClienteGeneral.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.gbClienteGeneral.Location = New System.Drawing.Point(242, 27)
             Me.gbClienteGeneral.Name = "gbClienteGeneral"
             Me.gbClienteGeneral.Size = New System.Drawing.Size(599, 48)
@@ -90,7 +90,7 @@
             Me.Label5.AutoSize = True
             Me.Label5.Location = New System.Drawing.Point(244, 0)
             Me.Label5.Name = "Label5"
-            Me.Label5.Size = New System.Drawing.Size(121, 13)
+            Me.Label5.Size = New System.Drawing.Size(122, 13)
             Me.Label5.TabIndex = 100
             Me.Label5.Text = "LLEVA CONTABILIDAD:"
             '
@@ -108,7 +108,7 @@
             Me.lblLlevaContabilidadClienteGeneral.AutoSize = True
             Me.lblLlevaContabilidadClienteGeneral.Location = New System.Drawing.Point(365, 0)
             Me.lblLlevaContabilidadClienteGeneral.Name = "lblLlevaContabilidadClienteGeneral"
-            Me.lblLlevaContabilidadClienteGeneral.Size = New System.Drawing.Size(25, 13)
+            Me.lblLlevaContabilidadClienteGeneral.Size = New System.Drawing.Size(16, 13)
             Me.lblLlevaContabilidadClienteGeneral.TabIndex = 98
             Me.lblLlevaContabilidadClienteGeneral.Text = "..."
             '
@@ -117,7 +117,7 @@
             Me.Label2.AutoSize = True
             Me.Label2.Location = New System.Drawing.Point(229, 0)
             Me.Label2.Name = "Label2"
-            Me.Label2.Size = New System.Drawing.Size(13, 13)
+            Me.Label2.Size = New System.Drawing.Size(12, 13)
             Me.Label2.TabIndex = 97
             Me.Label2.Text = "/"
             '
@@ -126,7 +126,7 @@
             Me.lblRucClienteGenral.AutoSize = True
             Me.lblRucClienteGenral.Location = New System.Drawing.Point(141, 0)
             Me.lblRucClienteGenral.Name = "lblRucClienteGenral"
-            Me.lblRucClienteGenral.Size = New System.Drawing.Size(25, 13)
+            Me.lblRucClienteGenral.Size = New System.Drawing.Size(16, 13)
             Me.lblRucClienteGenral.TabIndex = 96
             Me.lblRucClienteGenral.Text = "..."
             '
@@ -135,7 +135,7 @@
             Me.Label1.AutoSize = True
             Me.Label1.Location = New System.Drawing.Point(95, 0)
             Me.Label1.Name = "Label1"
-            Me.Label1.Size = New System.Drawing.Size(13, 13)
+            Me.Label1.Size = New System.Drawing.Size(12, 13)
             Me.Label1.TabIndex = 95
             Me.Label1.Text = "/"
             '
@@ -144,7 +144,7 @@
             Me.lblIdClienteGeneral.AutoSize = True
             Me.lblIdClienteGeneral.Location = New System.Drawing.Point(60, 0)
             Me.lblIdClienteGeneral.Name = "lblIdClienteGeneral"
-            Me.lblIdClienteGeneral.Size = New System.Drawing.Size(25, 13)
+            Me.lblIdClienteGeneral.Size = New System.Drawing.Size(16, 13)
             Me.lblIdClienteGeneral.TabIndex = 1
             Me.lblIdClienteGeneral.Text = "..."
             '
@@ -154,7 +154,7 @@
             Me.txtNombreComercialCliente.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtNombreComercialCliente.Location = New System.Drawing.Point(11, 18)
             Me.txtNombreComercialCliente.Name = "txtNombreComercialCliente"
-            Me.txtNombreComercialCliente.Size = New System.Drawing.Size(582, 20)
+            Me.txtNombreComercialCliente.Size = New System.Drawing.Size(582, 21)
             Me.txtNombreComercialCliente.TabIndex = 0
             '
             'gbFacturaVenta
@@ -221,6 +221,7 @@
             '
             Me.gbBuscarFactura.Controls.Add(Me.btnBuscarAsiento)
             Me.gbBuscarFactura.Controls.Add(Me.txtNumeroFacturaBuscar)
+            Me.gbBuscarFactura.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.gbBuscarFactura.Location = New System.Drawing.Point(4, 27)
             Me.gbBuscarFactura.Name = "gbBuscarFactura"
             Me.gbBuscarFactura.Size = New System.Drawing.Size(236, 48)
@@ -248,7 +249,7 @@
             Me.txtNumeroFacturaBuscar.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtNumeroFacturaBuscar.Location = New System.Drawing.Point(11, 19)
             Me.txtNumeroFacturaBuscar.Name = "txtNumeroFacturaBuscar"
-            Me.txtNumeroFacturaBuscar.Size = New System.Drawing.Size(105, 20)
+            Me.txtNumeroFacturaBuscar.Size = New System.Drawing.Size(105, 21)
             Me.txtNumeroFacturaBuscar.TabIndex = 0
             Me.txtNumeroFacturaBuscar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
             '

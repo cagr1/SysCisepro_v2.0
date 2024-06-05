@@ -771,12 +771,12 @@
             '
             'msKardex
             '
+            Me.msKardex.Font = New System.Drawing.Font("Segoe UI", 9.0!)
             Me.msKardex.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnBuscar, Me.btnMarcarTodo, Me.btnDesmarcarTodo, Me.btnAprovar, Me.btnExportar, Me.btnFacturacion})
             Me.msKardex.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow
             Me.msKardex.Location = New System.Drawing.Point(0, 0)
             Me.msKardex.Name = "msKardex"
             Me.msKardex.Padding = New System.Windows.Forms.Padding(7, 2, 0, 2)
-            Me.msKardex.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
             Me.msKardex.Size = New System.Drawing.Size(1294, 24)
             Me.msKardex.TabIndex = 180
             Me.msKardex.Text = "msIngresoBodega"

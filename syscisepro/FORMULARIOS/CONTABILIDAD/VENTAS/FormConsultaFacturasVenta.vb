@@ -294,7 +294,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                     MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorCisepro
                     dgvFacturaVenta.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
             End Select
-
+            dgvFacturaVenta.Font = New Drawing.Font("Roboto", 8, FontStyle.Regular)
             CargarDatosEmpresa()
 
 

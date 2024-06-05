@@ -197,7 +197,8 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
                     msKardex.BackColor = My.MySettingsProperty.Settings.ColorCisepro
                     dgvBancos.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
             End Select
-            cargarBancos()
+            dgvBancos.Font = New Font("Roboto", 8, FontStyle.Regular)
+            CargarBancos()
             desabilitadoInicio()
         End Sub
  

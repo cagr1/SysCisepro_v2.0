@@ -71,11 +71,11 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.CONSULTAS
                 cerrar += 1
             End If
             If dgvDispositivos.RowCount > 1 Then
-                MsgBox("Algunos Vehículos necesitan renovar el DISPOSITIVO DE SEGURIDAD esta semana", MsgBoxStyle.Critical, "MENSAJE DE VALIDACIÓN")
+                KryptonMessageBox.Show("Algunos Vehículos necesitan renovar el DISPOSITIVO DE SEGURIDAD esta semana", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
                 tcSeguros.SelectedIndex = 1
                 _sonido.Intermitente()
             Else
-                MsgBox("No existen Vehículos que necesiten renovar el DISPOSITIVO DE SEGURIDAD esta semana", MsgBoxStyle.Information, "MENSAJE DE VALIDACIÓN")
+                KryptonMessageBox.Show("No existen Vehículos que necesiten renovar el DISPOSITIVO DE SEGURIDAD esta semana", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
                 cerrar += 1
             End If
             If cerrar = 2 Then

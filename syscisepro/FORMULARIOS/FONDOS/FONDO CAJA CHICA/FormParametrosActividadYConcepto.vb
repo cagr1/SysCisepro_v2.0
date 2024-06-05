@@ -79,7 +79,7 @@ Namespace FORMULARIOS.FONDOS.FONDO_CAJA_CHICA
                     MenuStrip1.ForeColor = Color.White
                     dgvGastosCajaChica.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
             End Select
-
+            dgvGastosCajaChica.Font = New Font("Roboto", 8, FontStyle.Regular)
             _sqlCommands = New List(Of SqlCommand)
             LlenarComboPlanCuentas()
             CargarGastosCajaChica()

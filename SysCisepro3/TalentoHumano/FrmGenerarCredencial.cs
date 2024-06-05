@@ -18,11 +18,11 @@ using System.Data.SqlClient;
 using ClassLibraryCisepro3.ProcesosSql;
 using ClassLibraryCisepro3.Estaticas;
 using syscisepro;
-
+using Krypton.Toolkit;
 
 namespace SysCisepro3.TalentoHumano
 {
-    public partial class FrmGenerarCredencial : Form
+    public partial class FrmGenerarCredencial : KryptonForm
     {
         /// <summary>
         /// CISEPRO 2019
@@ -239,7 +239,7 @@ namespace SysCisepro3.TalentoHumano
             crvCredenciales.Refresh();
 
             crvCredenciales.Visible = true;
-            axAcroPDF1.Visible = false;
+           // axAcroPDF1.Visible = false;
         }
 
         private void pARAPERSONALToolStripMenuItem_Click(object sender, EventArgs e)
@@ -309,7 +309,7 @@ namespace SysCisepro3.TalentoHumano
                 crvCredenciales.Refresh();
 
                 crvCredenciales.Visible = true;
-                axAcroPDF1.Visible = false;
+                //axAcroPDF1.Visible = false;
             }
             catch
             {
@@ -451,7 +451,7 @@ namespace SysCisepro3.TalentoHumano
                 crvCredenciales.Refresh();
 
                 crvCredenciales.Visible = true;
-                axAcroPDF1.Visible = false;
+               // axAcroPDF1.Visible = false;
             }
             catch
             {
@@ -521,7 +521,7 @@ namespace SysCisepro3.TalentoHumano
                 crvCredenciales.Refresh();
 
                 crvCredenciales.Visible = true;
-                axAcroPDF1.Visible = false;
+               // axAcroPDF1.Visible = false;
             }
             MessageBox.Show((string)res[1], "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information); 
           
@@ -585,7 +585,7 @@ namespace SysCisepro3.TalentoHumano
                 crvCredenciales.Refresh();
 
                 crvCredenciales.Visible = true;
-                axAcroPDF1.Visible = false;
+               // axAcroPDF1.Visible = false;
             }
             MessageBox.Show((string)res[1], "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information); 
         }
@@ -660,7 +660,7 @@ namespace SysCisepro3.TalentoHumano
                 crvCredenciales.Refresh();
 
                 crvCredenciales.Visible = true;
-                axAcroPDF1.Visible = false;
+               // axAcroPDF1.Visible = false;
             }
             MessageBox.Show((string)res[1], "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information); 
         }
@@ -735,7 +735,7 @@ namespace SysCisepro3.TalentoHumano
                 crvCredenciales.Refresh();
 
                 crvCredenciales.Visible = true;
-                axAcroPDF1.Visible = false;
+               // axAcroPDF1.Visible = false;
             }
             MessageBox.Show((string)res[1], "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information); 
         }

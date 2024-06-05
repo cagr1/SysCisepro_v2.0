@@ -1,8 +1,8 @@
 ﻿Namespace FORMULARIOS.FONDOS.FONDO_CAJA_CHICA
     <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
     Partial Class FormParametrosAutorizacionesCajaChica
-        Inherits System.Windows.Forms.Form
-
+        'Inherits System.Windows.Forms.Form
+        Inherits Krypton.Toolkit.KryptonForm
         'Form reemplaza a Dispose para limpiar la lista de componentes.
         <System.Diagnostics.DebuggerNonUserCode()> _
         Protected Overrides Sub Dispose(ByVal disposing As Boolean)
@@ -79,6 +79,7 @@
             '
             Me.tcAutorizaciones.Controls.Add(Me.tpAutorizaciones)
             Me.tcAutorizaciones.Controls.Add(Me.tpReporte)
+            Me.tcAutorizaciones.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.tcAutorizaciones.Location = New System.Drawing.Point(0, 27)
             Me.tcAutorizaciones.Name = "tcAutorizaciones"
             Me.tcAutorizaciones.SelectedIndex = 0

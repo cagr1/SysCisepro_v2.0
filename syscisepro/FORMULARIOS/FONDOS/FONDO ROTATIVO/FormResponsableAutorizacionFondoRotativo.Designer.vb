@@ -1,8 +1,8 @@
 ﻿Namespace FORMULARIOS.FONDOS.FONDO_ROTATIVO
     <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
     Partial Class FormResponsableAutorizacionFondoRotativo
-        Inherits System.Windows.Forms.Form
-
+        'Inherits System.Windows.Forms.Form
+        Inherits Krypton.Toolkit.KryptonForm
         'Form reemplaza a Dispose para limpiar la lista de componentes.
         <System.Diagnostics.DebuggerNonUserCode()> _
         Protected Overrides Sub Dispose(ByVal disposing As Boolean)
@@ -60,7 +60,7 @@
             Me.lblIdResponsableAutoFR.AutoSize = True
             Me.lblIdResponsableAutoFR.Location = New System.Drawing.Point(12, 22)
             Me.lblIdResponsableAutoFR.Name = "lblIdResponsableAutoFR"
-            Me.lblIdResponsableAutoFR.Size = New System.Drawing.Size(53, 13)
+            Me.lblIdResponsableAutoFR.Size = New System.Drawing.Size(50, 13)
             Me.lblIdResponsableAutoFR.TabIndex = 0
             Me.lblIdResponsableAutoFR.Text = "ID RESP:"
             '
@@ -78,7 +78,7 @@
             Me.lblNombreResponsableAutoFR.AutoSize = True
             Me.lblNombreResponsableAutoFR.Location = New System.Drawing.Point(437, 18)
             Me.lblNombreResponsableAutoFR.Name = "lblNombreResponsableAutoFR"
-            Me.lblNombreResponsableAutoFR.Size = New System.Drawing.Size(57, 13)
+            Me.lblNombreResponsableAutoFR.Size = New System.Drawing.Size(56, 13)
             Me.lblNombreResponsableAutoFR.TabIndex = 2
             Me.lblNombreResponsableAutoFR.Text = "NOMBRE:"
             '
@@ -87,7 +87,7 @@
             Me.lblCargoResponsableAutoFR.AutoSize = True
             Me.lblCargoResponsableAutoFR.Location = New System.Drawing.Point(12, 52)
             Me.lblCargoResponsableAutoFR.Name = "lblCargoResponsableAutoFR"
-            Me.lblCargoResponsableAutoFR.Size = New System.Drawing.Size(48, 13)
+            Me.lblCargoResponsableAutoFR.Size = New System.Drawing.Size(47, 13)
             Me.lblCargoResponsableAutoFR.TabIndex = 3
             Me.lblCargoResponsableAutoFR.Text = "CARGO:"
             '
@@ -124,7 +124,7 @@
             Me.txtIdResponsableAutoFR.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtIdResponsableAutoFR.Location = New System.Drawing.Point(69, 19)
             Me.txtIdResponsableAutoFR.Name = "txtIdResponsableAutoFR"
-            Me.txtIdResponsableAutoFR.Size = New System.Drawing.Size(95, 20)
+            Me.txtIdResponsableAutoFR.Size = New System.Drawing.Size(95, 21)
             Me.txtIdResponsableAutoFR.TabIndex = 20
             '
             'txtCIResponsableAutoFR
@@ -133,7 +133,7 @@
             Me.txtCIResponsableAutoFR.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtCIResponsableAutoFR.Location = New System.Drawing.Point(240, 19)
             Me.txtCIResponsableAutoFR.Name = "txtCIResponsableAutoFR"
-            Me.txtCIResponsableAutoFR.Size = New System.Drawing.Size(132, 20)
+            Me.txtCIResponsableAutoFR.Size = New System.Drawing.Size(132, 21)
             Me.txtCIResponsableAutoFR.TabIndex = 21
             '
             'txtNombreResponsableAutoFR
@@ -142,7 +142,7 @@
             Me.txtNombreResponsableAutoFR.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtNombreResponsableAutoFR.Location = New System.Drawing.Point(500, 15)
             Me.txtNombreResponsableAutoFR.Name = "txtNombreResponsableAutoFR"
-            Me.txtNombreResponsableAutoFR.Size = New System.Drawing.Size(252, 20)
+            Me.txtNombreResponsableAutoFR.Size = New System.Drawing.Size(252, 21)
             Me.txtNombreResponsableAutoFR.TabIndex = 23
             '
             'txtApellidoResponsableAutoFR
@@ -151,7 +151,7 @@
             Me.txtApellidoResponsableAutoFR.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtApellidoResponsableAutoFR.Location = New System.Drawing.Point(500, 41)
             Me.txtApellidoResponsableAutoFR.Name = "txtApellidoResponsableAutoFR"
-            Me.txtApellidoResponsableAutoFR.Size = New System.Drawing.Size(252, 20)
+            Me.txtApellidoResponsableAutoFR.Size = New System.Drawing.Size(252, 21)
             Me.txtApellidoResponsableAutoFR.TabIndex = 26
             '
             'lblApellidoResponsableAutoFR
@@ -159,7 +159,7 @@
             Me.lblApellidoResponsableAutoFR.AutoSize = True
             Me.lblApellidoResponsableAutoFR.Location = New System.Drawing.Point(439, 44)
             Me.lblApellidoResponsableAutoFR.Name = "lblApellidoResponsableAutoFR"
-            Me.lblApellidoResponsableAutoFR.Size = New System.Drawing.Size(62, 13)
+            Me.lblApellidoResponsableAutoFR.Size = New System.Drawing.Size(60, 13)
             Me.lblApellidoResponsableAutoFR.TabIndex = 25
             Me.lblApellidoResponsableAutoFR.Text = "APELLIDO:"
             '
@@ -172,6 +172,7 @@
             Me.pCentroCostoSolicitudFR.Controls.Add(Me.lblParroquia)
             Me.pCentroCostoSolicitudFR.Controls.Add(Me.lblProvincia)
             Me.pCentroCostoSolicitudFR.Controls.Add(Me.lblCanton)
+            Me.pCentroCostoSolicitudFR.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.pCentroCostoSolicitudFR.Location = New System.Drawing.Point(2, 102)
             Me.pCentroCostoSolicitudFR.Name = "pCentroCostoSolicitudFR"
             Me.pCentroCostoSolicitudFR.Size = New System.Drawing.Size(768, 41)
@@ -215,7 +216,7 @@
             Me.lblParroquia.AutoSize = True
             Me.lblParroquia.Location = New System.Drawing.Point(508, 13)
             Me.lblParroquia.Name = "lblParroquia"
-            Me.lblParroquia.Size = New System.Drawing.Size(74, 13)
+            Me.lblParroquia.Size = New System.Drawing.Size(70, 13)
             Me.lblParroquia.TabIndex = 5
             Me.lblParroquia.Text = "PARROQUIA:"
             '
@@ -224,7 +225,7 @@
             Me.lblProvincia.AutoSize = True
             Me.lblProvincia.Location = New System.Drawing.Point(8, 13)
             Me.lblProvincia.Name = "lblProvincia"
-            Me.lblProvincia.Size = New System.Drawing.Size(68, 13)
+            Me.lblProvincia.Size = New System.Drawing.Size(67, 13)
             Me.lblProvincia.TabIndex = 1
             Me.lblProvincia.Text = "PROVINCIA:"
             '
@@ -261,6 +262,7 @@
             Me.gbResponsable.Controls.Add(Me.lblApellidoResponsableAutoFR)
             Me.gbResponsable.Controls.Add(Me.txtCIResponsableAutoFR)
             Me.gbResponsable.Controls.Add(Me.txtNombreResponsableAutoFR)
+            Me.gbResponsable.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.gbResponsable.Location = New System.Drawing.Point(4, 26)
             Me.gbResponsable.Name = "gbResponsable"
             Me.gbResponsable.Size = New System.Drawing.Size(764, 76)

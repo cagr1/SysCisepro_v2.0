@@ -148,7 +148,8 @@ Namespace FORMULARIOS.FONDOS.FONDO_CAJA_CHICA
                     dgvPersonal.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
                     dgvParametroAutorizaciones.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
             End Select
-
+            dgvPersonal.Font = New Font("Roboto", 8, FontStyle.Regular)
+            dgvParametroAutorizaciones.Font = New Font("Roboto", 8, FontStyle.Regular)
             _sqlCommands = New List(Of SqlCommand)
             LlenarComboProvincias()
             LlenarComboCiudad()

@@ -14,10 +14,10 @@ using SysCisepro3.Datos;
 using syscisepro.FORMULARIOS.INVENTARIOS.PROCESO;
 using ClassLibraryCisepro3.ProcesosSql;
 using ClassLibraryCisepro3.TalentoHumano;
-
+using Krypton.Toolkit;
 namespace SysCisepro3.TalentoHumano
 {
-    public partial class FrmPoryectoContratacion : Form
+    public partial class FrmPoryectoContratacion : KryptonForm
     {
         /// <summary>
         /// CISEPRO 2019

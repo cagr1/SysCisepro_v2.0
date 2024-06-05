@@ -14,10 +14,11 @@ using SysCisepro3.Datos;
 using SysCisepro3.Properties;
 using ClassLibraryCisepro3.Estaticas;
 using ClassLibraryCisepro3.ProcesosSql;
+using Krypton.Toolkit;
 
 namespace SysCisepro3.Contabilidad.Compras
 {
-    public partial class FrmPorcentajesRetencionIva : Form
+    public partial class FrmPorcentajesRetencionIva : KryptonForm
     {
         /// <summary>
         /// CISEPRO 2019

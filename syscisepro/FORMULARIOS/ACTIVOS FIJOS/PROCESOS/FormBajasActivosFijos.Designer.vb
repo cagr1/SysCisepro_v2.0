@@ -1,8 +1,8 @@
 ﻿Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
     <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
     Partial Class FormBajasActivosFijos
-        Inherits System.Windows.Forms.Form
-
+        'Inherits System.Windows.Forms.Form
+        Inherits Krypton.Toolkit.KryptonForm
         'Form reemplaza a Dispose para limpiar la lista de componentes.
         <System.Diagnostics.DebuggerNonUserCode()> _
         Protected Overrides Sub Dispose(ByVal disposing As Boolean)
@@ -97,6 +97,7 @@
             Me.GroupBox1.Controls.Add(Me.rbNombreCustodio)
             Me.GroupBox1.Controls.Add(Me.txtBusquedaActivoFijo)
             Me.GroupBox1.Controls.Add(Me.rbCodigoActivo)
+            Me.GroupBox1.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.GroupBox1.Location = New System.Drawing.Point(3, 28)
             Me.GroupBox1.Name = "GroupBox1"
             Me.GroupBox1.Size = New System.Drawing.Size(920, 220)
@@ -118,7 +119,7 @@
             Me.txtAutorizo.Enabled = False
             Me.txtAutorizo.Location = New System.Drawing.Point(115, 140)
             Me.txtAutorizo.Name = "txtAutorizo"
-            Me.txtAutorizo.Size = New System.Drawing.Size(588, 20)
+            Me.txtAutorizo.Size = New System.Drawing.Size(588, 21)
             Me.txtAutorizo.TabIndex = 70
             '
             'Label12
@@ -126,7 +127,7 @@
             Me.Label12.AutoSize = True
             Me.Label12.Location = New System.Drawing.Point(8, 143)
             Me.Label12.Name = "Label12"
-            Me.Label12.Size = New System.Drawing.Size(66, 13)
+            Me.Label12.Size = New System.Drawing.Size(64, 13)
             Me.Label12.TabIndex = 69
             Me.Label12.Text = "AUTORIZO:"
             '
@@ -135,7 +136,7 @@
             Me.txtIdBaja.Enabled = False
             Me.txtIdBaja.Location = New System.Drawing.Point(823, 39)
             Me.txtIdBaja.Name = "txtIdBaja"
-            Me.txtIdBaja.Size = New System.Drawing.Size(88, 20)
+            Me.txtIdBaja.Size = New System.Drawing.Size(88, 21)
             Me.txtIdBaja.TabIndex = 68
             '
             'Label11
@@ -143,7 +144,7 @@
             Me.Label11.AutoSize = True
             Me.Label11.Location = New System.Drawing.Point(708, 45)
             Me.Label11.Name = "Label11"
-            Me.Label11.Size = New System.Drawing.Size(51, 13)
+            Me.Label11.Size = New System.Drawing.Size(52, 13)
             Me.Label11.TabIndex = 67
             Me.Label11.Text = "N° BAJA:"
             '
@@ -152,7 +153,7 @@
             Me.txtDestinatario.Enabled = False
             Me.txtDestinatario.Location = New System.Drawing.Point(115, 117)
             Me.txtDestinatario.Name = "txtDestinatario"
-            Me.txtDestinatario.Size = New System.Drawing.Size(588, 20)
+            Me.txtDestinatario.Size = New System.Drawing.Size(588, 21)
             Me.txtDestinatario.TabIndex = 65
             '
             'Label10
@@ -160,7 +161,7 @@
             Me.Label10.AutoSize = True
             Me.Label10.Location = New System.Drawing.Point(8, 111)
             Me.Label10.Name = "Label10"
-            Me.Label10.Size = New System.Drawing.Size(87, 26)
+            Me.Label10.Size = New System.Drawing.Size(83, 26)
             Me.Label10.TabIndex = 64
             Me.Label10.Text = "DESTINATARIO" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "ACTIVO:"
             '
@@ -169,7 +170,7 @@
             Me.txtNroMemorandum.Enabled = False
             Me.txtNroMemorandum.Location = New System.Drawing.Point(821, 120)
             Me.txtNroMemorandum.Name = "txtNroMemorandum"
-            Me.txtNroMemorandum.Size = New System.Drawing.Size(92, 20)
+            Me.txtNroMemorandum.Size = New System.Drawing.Size(92, 21)
             Me.txtNroMemorandum.TabIndex = 63
             '
             'Label9
@@ -177,7 +178,7 @@
             Me.Label9.AutoSize = True
             Me.Label9.Location = New System.Drawing.Point(707, 123)
             Me.Label9.Name = "Label9"
-            Me.Label9.Size = New System.Drawing.Size(106, 13)
+            Me.Label9.Size = New System.Drawing.Size(105, 13)
             Me.Label9.TabIndex = 62
             Me.Label9.Text = "N° MEMORANDUM:"
             '
@@ -197,7 +198,7 @@
             Me.Label7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
             Me.Label7.Location = New System.Drawing.Point(6, 181)
             Me.Label7.Name = "Label7"
-            Me.Label7.Size = New System.Drawing.Size(66, 13)
+            Me.Label7.Size = New System.Drawing.Size(64, 13)
             Me.Label7.TabIndex = 60
             Me.Label7.Text = "CUSTODIO:"
             '
@@ -206,7 +207,7 @@
             Me.Label6.AutoSize = True
             Me.Label6.Location = New System.Drawing.Point(6, 162)
             Me.Label6.Name = "Label6"
-            Me.Label6.Size = New System.Drawing.Size(47, 13)
+            Me.Label6.Size = New System.Drawing.Size(45, 13)
             Me.Label6.TabIndex = 59
             Me.Label6.Text = "DATOS:"
             '
@@ -215,7 +216,7 @@
             Me.Label5.AutoSize = True
             Me.Label5.Location = New System.Drawing.Point(6, 64)
             Me.Label5.Name = "Label5"
-            Me.Label5.Size = New System.Drawing.Size(109, 13)
+            Me.Label5.Size = New System.Drawing.Size(107, 13)
             Me.Label5.TabIndex = 58
             Me.Label5.Text = "INFORME TÉCNICO:"
             '
@@ -243,7 +244,7 @@
             Me.Label4.AutoSize = True
             Me.Label4.Location = New System.Drawing.Point(395, 16)
             Me.Label4.Name = "Label4"
-            Me.Label4.Size = New System.Drawing.Size(96, 13)
+            Me.Label4.Size = New System.Drawing.Size(94, 13)
             Me.Label4.TabIndex = 55
             Me.Label4.Text = "ESTADO ACTIVO:"
             '
@@ -288,7 +289,7 @@
             Me.Label3.AutoSize = True
             Me.Label3.Location = New System.Drawing.Point(708, 16)
             Me.Label3.Name = "Label3"
-            Me.Label3.Size = New System.Drawing.Size(45, 13)
+            Me.Label3.Size = New System.Drawing.Size(44, 13)
             Me.Label3.TabIndex = 50
             Me.Label3.Text = "FECHA:"
             '
@@ -297,7 +298,7 @@
             Me.txtFecha.Enabled = False
             Me.txtFecha.Location = New System.Drawing.Point(776, 13)
             Me.txtFecha.Name = "txtFecha"
-            Me.txtFecha.Size = New System.Drawing.Size(135, 20)
+            Me.txtFecha.Size = New System.Drawing.Size(135, 21)
             Me.txtFecha.TabIndex = 48
             '
             'cbmMotivo
@@ -315,7 +316,7 @@
             Me.Label2.AutoSize = True
             Me.Label2.Location = New System.Drawing.Point(395, 42)
             Me.Label2.Name = "Label2"
-            Me.Label2.Size = New System.Drawing.Size(52, 13)
+            Me.Label2.Size = New System.Drawing.Size(53, 13)
             Me.Label2.TabIndex = 46
             Me.Label2.Text = "MOTIVO:"
             '
@@ -345,7 +346,7 @@
             Me.txtBusquedaActivoFijo.Enabled = False
             Me.txtBusquedaActivoFijo.Location = New System.Drawing.Point(9, 37)
             Me.txtBusquedaActivoFijo.Name = "txtBusquedaActivoFijo"
-            Me.txtBusquedaActivoFijo.Size = New System.Drawing.Size(367, 20)
+            Me.txtBusquedaActivoFijo.Size = New System.Drawing.Size(367, 21)
             Me.txtBusquedaActivoFijo.TabIndex = 39
             '
             'rbCodigoActivo

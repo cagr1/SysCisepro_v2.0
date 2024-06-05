@@ -234,7 +234,8 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
                     dgvActivoFijo.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
                     dgvMantenimientoDepreciaciones.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
             End Select
-
+            dgvActivoFijo.Font = New Font("Roboto", 8, FontStyle.Regular)
+            dgvMantenimientoDepreciaciones.Font = New Font("Roboto", 8, FontStyle.Regular)
             _sqlCommands = New List(Of SqlCommand)
         End Sub
     End Class

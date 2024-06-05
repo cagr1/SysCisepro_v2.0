@@ -1,8 +1,8 @@
 ﻿Namespace FORMULARIOS.CONTABILIDAD.VENTAS
     <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
     Partial Class FrmFacturadoPorClienteAnual
-        Inherits System.Windows.Forms.Form
-
+        'Inherits System.Windows.Forms.Form
+        Inherits Krypton.Toolkit.KryptonForm
         'Form reemplaza a Dispose para limpiar la lista de componentes.
         <System.Diagnostics.DebuggerNonUserCode()> _
         Protected Overrides Sub Dispose(ByVal disposing As Boolean)
@@ -52,7 +52,7 @@
             Me.gbClienteGeneral.Controls.Add(Me.txtNombreComercialClienteGeneral)
             Me.gbClienteGeneral.Controls.Add(Me.lblIdClienteGeneral)
             Me.gbClienteGeneral.Controls.Add(Me.Label11)
-            Me.gbClienteGeneral.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.gbClienteGeneral.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.gbClienteGeneral.Location = New System.Drawing.Point(1, 23)
             Me.gbClienteGeneral.Name = "gbClienteGeneral"
             Me.gbClienteGeneral.Size = New System.Drawing.Size(599, 60)
@@ -76,7 +76,7 @@
             Me.lblIdClienteGeneral.AutoSize = True
             Me.lblIdClienteGeneral.Location = New System.Drawing.Point(74, -1)
             Me.lblIdClienteGeneral.Name = "lblIdClienteGeneral"
-            Me.lblIdClienteGeneral.Size = New System.Drawing.Size(25, 13)
+            Me.lblIdClienteGeneral.Size = New System.Drawing.Size(16, 13)
             Me.lblIdClienteGeneral.TabIndex = 76
             Me.lblIdClienteGeneral.Text = "..."
             '
@@ -126,7 +126,7 @@
             Me.gbRangoFechas.Controls.Add(Me.dtpDesde)
             Me.gbRangoFechas.Controls.Add(Me.Label10)
             Me.gbRangoFechas.Controls.Add(Me.Label7)
-            Me.gbRangoFechas.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.gbRangoFechas.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.gbRangoFechas.Location = New System.Drawing.Point(602, 24)
             Me.gbRangoFechas.Name = "gbRangoFechas"
             Me.gbRangoFechas.Size = New System.Drawing.Size(570, 60)
@@ -139,7 +139,7 @@
             Me.Label14.AutoSize = True
             Me.Label14.Location = New System.Drawing.Point(6, 24)
             Me.Label14.Name = "Label14"
-            Me.Label14.Size = New System.Drawing.Size(85, 13)
+            Me.Label14.Size = New System.Drawing.Size(94, 13)
             Me.Label14.TabIndex = 15
             Me.Label14.Text = "AÑO CONTRATO:"
             '
@@ -160,7 +160,7 @@
             Me.dtpHasta.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
             Me.dtpHasta.Location = New System.Drawing.Point(467, 21)
             Me.dtpHasta.Name = "dtpHasta"
-            Me.dtpHasta.Size = New System.Drawing.Size(98, 20)
+            Me.dtpHasta.Size = New System.Drawing.Size(98, 21)
             Me.dtpHasta.TabIndex = 1
             '
             'dtpDesde
@@ -168,7 +168,7 @@
             Me.dtpDesde.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
             Me.dtpDesde.Location = New System.Drawing.Point(347, 21)
             Me.dtpDesde.Name = "dtpDesde"
-            Me.dtpDesde.Size = New System.Drawing.Size(97, 20)
+            Me.dtpDesde.Size = New System.Drawing.Size(97, 21)
             Me.dtpDesde.TabIndex = 0
             Me.dtpDesde.Value = New Date(2013, 1, 1, 0, 1, 0, 0)
             '
@@ -177,7 +177,7 @@
             Me.Label10.AutoSize = True
             Me.Label10.Location = New System.Drawing.Point(198, 24)
             Me.Label10.Name = "Label10"
-            Me.Label10.Size = New System.Drawing.Size(151, 13)
+            Me.Label10.Size = New System.Drawing.Size(167, 13)
             Me.Label10.TabIndex = 4
             Me.Label10.Text = "DATOS COMPRENDIDOS ENTRE"
             '
@@ -186,7 +186,7 @@
             Me.Label7.AutoSize = True
             Me.Label7.Location = New System.Drawing.Point(448, 24)
             Me.Label7.Name = "Label7"
-            Me.Label7.Size = New System.Drawing.Size(13, 13)
+            Me.Label7.Size = New System.Drawing.Size(14, 13)
             Me.Label7.TabIndex = 2
             Me.Label7.Text = "Y"
             '

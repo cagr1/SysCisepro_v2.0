@@ -1,8 +1,8 @@
 ﻿Namespace FORMULARIOS.CONTABILIDAD.VENTAS
     <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
     Partial Class FormConsultaFacturasVenta
-        Inherits System.Windows.Forms.Form
-
+        'Inherits System.Windows.Forms.Form
+        Inherits Krypton.Toolkit.KryptonForm
         'Form reemplaza a Dispose para limpiar la lista de componentes.
         <System.Diagnostics.DebuggerNonUserCode()> _
         Protected Overrides Sub Dispose(ByVal disposing As Boolean)
@@ -618,6 +618,7 @@
             '
             Me.TabControl1.Controls.Add(Me.BUSQUEDA)
             Me.TabControl1.Controls.Add(Me.REPORTE)
+            Me.TabControl1.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.TabControl1.Location = New System.Drawing.Point(1, 80)
             Me.TabControl1.Name = "TabControl1"
             Me.TabControl1.SelectedIndex = 0
@@ -651,7 +652,7 @@
             Me.GroupBox2.Controls.Add(Me.btnFacturaPath)
             Me.GroupBox2.Controls.Add(Me.txtFacturaPath)
             Me.GroupBox2.Controls.Add(Me.Label9)
-            Me.GroupBox2.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.GroupBox2.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.GroupBox2.Location = New System.Drawing.Point(7, 22)
             Me.GroupBox2.Name = "GroupBox2"
             Me.GroupBox2.Size = New System.Drawing.Size(1150, 83)
@@ -673,7 +674,7 @@
             Me.txtFacturaPath.Enabled = False
             Me.txtFacturaPath.Location = New System.Drawing.Point(121, 25)
             Me.txtFacturaPath.Name = "txtFacturaPath"
-            Me.txtFacturaPath.Size = New System.Drawing.Size(621, 20)
+            Me.txtFacturaPath.Size = New System.Drawing.Size(621, 21)
             Me.txtFacturaPath.TabIndex = 1
             '
             'Label9

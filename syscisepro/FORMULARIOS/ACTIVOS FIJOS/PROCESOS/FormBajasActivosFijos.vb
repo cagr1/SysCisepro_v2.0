@@ -157,6 +157,7 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
                     MenuStrip1.ForeColor = Color.White
                     dgvActivosFijos.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
             End Select
+            dgvActivosFijos.Font = New Font("Roboto", 8, FontStyle.Regular)
             _sqlCommands = New List(Of SqlCommand)
             txtFecha.Text = Date.Now 
         End Sub

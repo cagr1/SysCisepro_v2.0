@@ -14,10 +14,10 @@ using System.Data.SqlClient;
 using ClassLibraryCisepro3.Contabilidad.LibroDiario;
 using ClassLibraryCisepro3.ProcesosSql;
 using ClassLibraryCisepro3.Estaticas;
-
+using Krypton.Toolkit;
 namespace SysCisepro3.Contabilidad.Compras
 {
-    public partial class FrmPorcentajesRetencion : Form
+    public partial class FrmPorcentajesRetencion : KryptonForm
     {
         /// <summary>
         /// CISEPRO 2019

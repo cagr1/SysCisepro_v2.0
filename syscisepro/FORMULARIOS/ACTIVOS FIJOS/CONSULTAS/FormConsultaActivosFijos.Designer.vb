@@ -91,7 +91,7 @@
             DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
             DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
             Me.dgvActivosFijos.DefaultCellStyle = DataGridViewCellStyle3
-            Me.dgvActivosFijos.Location = New System.Drawing.Point(0, 245)
+            Me.dgvActivosFijos.Location = New System.Drawing.Point(0, 246)
             Me.dgvActivosFijos.MultiSelect = False
             Me.dgvActivosFijos.Name = "dgvActivosFijos"
             Me.dgvActivosFijos.ReadOnly = True
@@ -105,7 +105,7 @@
             Me.dgvActivosFijos.RowHeadersDefaultCellStyle = DataGridViewCellStyle4
             Me.dgvActivosFijos.RowHeadersVisible = False
             Me.dgvActivosFijos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvActivosFijos.Size = New System.Drawing.Size(974, 433)
+            Me.dgvActivosFijos.Size = New System.Drawing.Size(974, 358)
             Me.dgvActivosFijos.TabIndex = 7
             '
             'Label2
@@ -198,12 +198,12 @@
             '
             'MenuStrip1
             '
+            Me.MenuStrip1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
             Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem1, Me.cbmTipoActivo, Me.btnReporteFondoRotativo})
             Me.MenuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow
             Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
             Me.MenuStrip1.Name = "MenuStrip1"
             Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(7, 2, 0, 2)
-            Me.MenuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
             Me.MenuStrip1.Size = New System.Drawing.Size(974, 25)
             Me.MenuStrip1.TabIndex = 242
             Me.MenuStrip1.Text = "msIngresoBodega"
@@ -211,6 +211,7 @@
             'ToolStripMenuItem1
             '
             Me.ToolStripMenuItem1.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.ToolStripMenuItem1.ForeColor = System.Drawing.Color.White
             Me.ToolStripMenuItem1.Image = Global.syscisepro.My.Resources.Resources.search_24dp_FILL0_wght400_GRAD0_opsz24__2_
             Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
             Me.ToolStripMenuItem1.Size = New System.Drawing.Size(117, 20)

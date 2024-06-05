@@ -124,9 +124,10 @@
             // 
             this.Label7.AutoSize = true;
             this.Label7.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Label7.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label7.Location = new System.Drawing.Point(10, 310);
             this.Label7.Name = "Label7";
-            this.Label7.Size = new System.Drawing.Size(48, 13);
+            this.Label7.Size = new System.Drawing.Size(46, 13);
             this.Label7.TabIndex = 238;
             this.Label7.Text = "FILTRO:";
             this.Label7.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -157,7 +158,9 @@
             this.columnHeader5,
             this.columnHeader2,
             this.columnHeader6});
+            this.ListView1.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ListView1.FullRowSelect = true;
+            this.ListView1.HideSelection = false;
             this.ListView1.Location = new System.Drawing.Point(1, 330);
             this.ListView1.MultiSelect = false;
             this.ListView1.Name = "ListView1";
@@ -186,7 +189,7 @@
             // 
             this.txtFiltro.BackColor = System.Drawing.Color.White;
             this.txtFiltro.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtFiltro.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFiltro.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFiltro.Location = new System.Drawing.Point(64, 306);
             this.txtFiltro.Name = "txtFiltro";
             this.txtFiltro.Size = new System.Drawing.Size(829, 21);
@@ -196,6 +199,7 @@
             // Label24
             // 
             this.Label24.Cursor = System.Windows.Forms.Cursors.Default;
+            this.Label24.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label24.Location = new System.Drawing.Point(1, 285);
             this.Label24.Name = "Label24";
             this.Label24.Size = new System.Drawing.Size(894, 18);
@@ -206,6 +210,7 @@
             // Label1
             // 
             this.Label1.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.Label1.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label1.Location = new System.Drawing.Point(-2, 652);
             this.Label1.Name = "Label1";
             this.Label1.Size = new System.Drawing.Size(897, 21);
@@ -215,6 +220,7 @@
             // 
             // toolStrip1
             // 
+            this.toolStrip1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnBuscar,
             this.btnNuevo,
@@ -320,7 +326,7 @@
             this.groupBox3.Controls.Add(this.label8);
             this.groupBox3.Controls.Add(this.label9);
             this.groupBox3.Controls.Add(this.label10);
-            this.groupBox3.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox3.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.Location = new System.Drawing.Point(1, 31);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(894, 125);
@@ -333,7 +339,7 @@
             this.label18.AutoSize = true;
             this.label18.Location = new System.Drawing.Point(247, 0);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(49, 13);
+            this.label18.Size = new System.Drawing.Size(50, 13);
             this.label18.TabIndex = 246;
             this.label18.Text = "PRCN. %";
             // 
@@ -358,7 +364,7 @@
             this.txtVentaBienEsp.Enabled = false;
             this.txtVentaBienEsp.Location = new System.Drawing.Point(618, 98);
             this.txtVentaBienEsp.Name = "txtVentaBienEsp";
-            this.txtVentaBienEsp.Size = new System.Drawing.Size(250, 20);
+            this.txtVentaBienEsp.Size = new System.Drawing.Size(250, 21);
             this.txtVentaBienEsp.TabIndex = 239;
             // 
             // btnCompraBienEsp
@@ -382,7 +388,7 @@
             this.txtCompraBienEsp.Enabled = false;
             this.txtCompraBienEsp.Location = new System.Drawing.Point(331, 98);
             this.txtCompraBienEsp.Name = "txtCompraBienEsp";
-            this.txtCompraBienEsp.Size = new System.Drawing.Size(250, 20);
+            this.txtCompraBienEsp.Size = new System.Drawing.Size(250, 21);
             this.txtCompraBienEsp.TabIndex = 237;
             // 
             // btnVentaBienExp
@@ -406,7 +412,7 @@
             this.txtVentaBienExp.Enabled = false;
             this.txtVentaBienExp.Location = new System.Drawing.Point(618, 77);
             this.txtVentaBienExp.Name = "txtVentaBienExp";
-            this.txtVentaBienExp.Size = new System.Drawing.Size(250, 20);
+            this.txtVentaBienExp.Size = new System.Drawing.Size(250, 21);
             this.txtVentaBienExp.TabIndex = 235;
             // 
             // btnVentaBienPsin
@@ -430,7 +436,7 @@
             this.txtVentaBienPsin.Enabled = false;
             this.txtVentaBienPsin.Location = new System.Drawing.Point(618, 56);
             this.txtVentaBienPsin.Name = "txtVentaBienPsin";
-            this.txtVentaBienPsin.Size = new System.Drawing.Size(250, 20);
+            this.txtVentaBienPsin.Size = new System.Drawing.Size(250, 21);
             this.txtVentaBienPsin.TabIndex = 233;
             // 
             // btnCompraBienExp
@@ -454,7 +460,7 @@
             this.txtCompraBienExp.Enabled = false;
             this.txtCompraBienExp.Location = new System.Drawing.Point(331, 77);
             this.txtCompraBienExp.Name = "txtCompraBienExp";
-            this.txtCompraBienExp.Size = new System.Drawing.Size(250, 20);
+            this.txtCompraBienExp.Size = new System.Drawing.Size(250, 21);
             this.txtCompraBienExp.TabIndex = 231;
             // 
             // btnCompraBienPsin
@@ -478,7 +484,7 @@
             this.txtCompraBienPsin.Enabled = false;
             this.txtCompraBienPsin.Location = new System.Drawing.Point(331, 56);
             this.txtCompraBienPsin.Name = "txtCompraBienPsin";
-            this.txtCompraBienPsin.Size = new System.Drawing.Size(250, 20);
+            this.txtCompraBienPsin.Size = new System.Drawing.Size(250, 21);
             this.txtCompraBienPsin.TabIndex = 229;
             // 
             // btnVentaBienPcon
@@ -502,7 +508,7 @@
             this.txtVentaBienPcon.Enabled = false;
             this.txtVentaBienPcon.Location = new System.Drawing.Point(618, 35);
             this.txtVentaBienPcon.Name = "txtVentaBienPcon";
-            this.txtVentaBienPcon.Size = new System.Drawing.Size(250, 20);
+            this.txtVentaBienPcon.Size = new System.Drawing.Size(250, 21);
             this.txtVentaBienPcon.TabIndex = 227;
             // 
             // btnCompraBienPcon
@@ -540,7 +546,7 @@
             this.txtCompraBienPcon.Enabled = false;
             this.txtCompraBienPcon.Location = new System.Drawing.Point(331, 35);
             this.txtCompraBienPcon.Name = "txtCompraBienPcon";
-            this.txtCompraBienPcon.Size = new System.Drawing.Size(250, 20);
+            this.txtCompraBienPcon.Size = new System.Drawing.Size(250, 21);
             this.txtCompraBienPcon.TabIndex = 223;
             // 
             // txtVentaBienSoc
@@ -550,7 +556,7 @@
             this.txtVentaBienSoc.Enabled = false;
             this.txtVentaBienSoc.Location = new System.Drawing.Point(618, 14);
             this.txtVentaBienSoc.Name = "txtVentaBienSoc";
-            this.txtVentaBienSoc.Size = new System.Drawing.Size(250, 20);
+            this.txtVentaBienSoc.Size = new System.Drawing.Size(250, 21);
             this.txtVentaBienSoc.TabIndex = 225;
             // 
             // btnCompraBienSoc
@@ -574,7 +580,7 @@
             this.txtCompraBienSoc.Enabled = false;
             this.txtCompraBienSoc.Location = new System.Drawing.Point(331, 14);
             this.txtCompraBienSoc.Name = "txtCompraBienSoc";
-            this.txtCompraBienSoc.Size = new System.Drawing.Size(250, 20);
+            this.txtCompraBienSoc.Size = new System.Drawing.Size(250, 21);
             this.txtCompraBienSoc.TabIndex = 221;
             // 
             // label15
@@ -582,7 +588,7 @@
             this.label15.AutoSize = true;
             this.label15.Location = new System.Drawing.Point(615, 2);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(103, 13);
+            this.label15.Size = new System.Drawing.Size(111, 13);
             this.label15.TabIndex = 214;
             this.label15.Text = "CUENTA EN VENTAS";
             // 
@@ -591,7 +597,7 @@
             this.label16.AutoSize = true;
             this.label16.Location = new System.Drawing.Point(328, 2);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(109, 13);
+            this.label16.Size = new System.Drawing.Size(122, 13);
             this.label16.TabIndex = 213;
             this.label16.Text = "CUENTA EN COMPRAS";
             // 
@@ -602,7 +608,7 @@
             this.txtBienEsp.Enabled = false;
             this.txtBienEsp.Location = new System.Drawing.Point(250, 98);
             this.txtBienEsp.Name = "txtBienEsp";
-            this.txtBienEsp.Size = new System.Drawing.Size(49, 20);
+            this.txtBienEsp.Size = new System.Drawing.Size(49, 21);
             this.txtBienEsp.TabIndex = 212;
             this.txtBienEsp.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtBienEsp.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtRentaEsp_KeyPress);
@@ -612,7 +618,7 @@
             this.label14.AutoSize = true;
             this.label14.Location = new System.Drawing.Point(11, 101);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(145, 13);
+            this.label14.Size = new System.Drawing.Size(150, 13);
             this.label14.TabIndex = 211;
             this.label14.Text = "CONTRIBUYENTE ESPECIAL:";
             // 
@@ -623,7 +629,7 @@
             this.txtBienExp.Enabled = false;
             this.txtBienExp.Location = new System.Drawing.Point(250, 77);
             this.txtBienExp.Name = "txtBienExp";
-            this.txtBienExp.Size = new System.Drawing.Size(49, 20);
+            this.txtBienExp.Size = new System.Drawing.Size(49, 21);
             this.txtBienExp.TabIndex = 210;
             this.txtBienExp.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtBienExp.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtRentaEsp_KeyPress);
@@ -635,7 +641,7 @@
             this.txtBienPsin.Enabled = false;
             this.txtBienPsin.Location = new System.Drawing.Point(250, 56);
             this.txtBienPsin.Name = "txtBienPsin";
-            this.txtBienPsin.Size = new System.Drawing.Size(49, 20);
+            this.txtBienPsin.Size = new System.Drawing.Size(49, 21);
             this.txtBienPsin.TabIndex = 209;
             this.txtBienPsin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtBienPsin.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtRentaEsp_KeyPress);
@@ -647,7 +653,7 @@
             this.txtBienPcon.Enabled = false;
             this.txtBienPcon.Location = new System.Drawing.Point(250, 35);
             this.txtBienPcon.Name = "txtBienPcon";
-            this.txtBienPcon.Size = new System.Drawing.Size(49, 20);
+            this.txtBienPcon.Size = new System.Drawing.Size(49, 21);
             this.txtBienPcon.TabIndex = 208;
             this.txtBienPcon.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtBienPcon.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtRentaEsp_KeyPress);
@@ -659,7 +665,7 @@
             this.txtBienSoc.Enabled = false;
             this.txtBienSoc.Location = new System.Drawing.Point(250, 14);
             this.txtBienSoc.Name = "txtBienSoc";
-            this.txtBienSoc.Size = new System.Drawing.Size(49, 20);
+            this.txtBienSoc.Size = new System.Drawing.Size(49, 21);
             this.txtBienSoc.TabIndex = 207;
             this.txtBienSoc.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtBienSoc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtRentaEsp_KeyPress);
@@ -669,7 +675,7 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(11, 82);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(79, 13);
+            this.label6.Size = new System.Drawing.Size(88, 13);
             this.label6.TabIndex = 206;
             this.label6.Text = "EXPORTADORA:";
             // 
@@ -678,7 +684,7 @@
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(10, 59);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(205, 13);
+            this.label8.Size = new System.Drawing.Size(212, 13);
             this.label8.TabIndex = 205;
             this.label8.Text = "PERSONA NATURAL SIN CONTABILIDAD:";
             // 
@@ -687,7 +693,7 @@
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(10, 37);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(205, 13);
+            this.label9.Size = new System.Drawing.Size(217, 13);
             this.label9.TabIndex = 204;
             this.label9.Text = "PERSONA NATURAL CON CONTABILIDAD:";
             // 
@@ -696,7 +702,7 @@
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(10, 17);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(61, 13);
+            this.label10.Size = new System.Drawing.Size(62, 13);
             this.label10.TabIndex = 203;
             this.label10.Text = "SOCIEDAD:";
             // 
@@ -735,7 +741,7 @@
             this.groupBox1.Controls.Add(this.label12);
             this.groupBox1.Controls.Add(this.label13);
             this.groupBox1.Controls.Add(this.label17);
-            this.groupBox1.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(1, 158);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(894, 125);
@@ -748,7 +754,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(247, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(49, 13);
+            this.label2.Size = new System.Drawing.Size(50, 13);
             this.label2.TabIndex = 246;
             this.label2.Text = "PRCN. %";
             // 
@@ -773,7 +779,7 @@
             this.txtVentaServiEsp.Enabled = false;
             this.txtVentaServiEsp.Location = new System.Drawing.Point(618, 98);
             this.txtVentaServiEsp.Name = "txtVentaServiEsp";
-            this.txtVentaServiEsp.Size = new System.Drawing.Size(250, 20);
+            this.txtVentaServiEsp.Size = new System.Drawing.Size(250, 21);
             this.txtVentaServiEsp.TabIndex = 239;
             // 
             // btnCompraServiEsp
@@ -797,7 +803,7 @@
             this.txtCompraServiEsp.Enabled = false;
             this.txtCompraServiEsp.Location = new System.Drawing.Point(331, 98);
             this.txtCompraServiEsp.Name = "txtCompraServiEsp";
-            this.txtCompraServiEsp.Size = new System.Drawing.Size(250, 20);
+            this.txtCompraServiEsp.Size = new System.Drawing.Size(250, 21);
             this.txtCompraServiEsp.TabIndex = 237;
             // 
             // btnVentaServiExp
@@ -821,7 +827,7 @@
             this.txtVentaServiExp.Enabled = false;
             this.txtVentaServiExp.Location = new System.Drawing.Point(618, 77);
             this.txtVentaServiExp.Name = "txtVentaServiExp";
-            this.txtVentaServiExp.Size = new System.Drawing.Size(250, 20);
+            this.txtVentaServiExp.Size = new System.Drawing.Size(250, 21);
             this.txtVentaServiExp.TabIndex = 235;
             // 
             // btnVentaServiPsin
@@ -845,7 +851,7 @@
             this.txtVentaServiPsin.Enabled = false;
             this.txtVentaServiPsin.Location = new System.Drawing.Point(618, 56);
             this.txtVentaServiPsin.Name = "txtVentaServiPsin";
-            this.txtVentaServiPsin.Size = new System.Drawing.Size(250, 20);
+            this.txtVentaServiPsin.Size = new System.Drawing.Size(250, 21);
             this.txtVentaServiPsin.TabIndex = 233;
             // 
             // btnCompraServiExp
@@ -869,7 +875,7 @@
             this.txtCompraServiExp.Enabled = false;
             this.txtCompraServiExp.Location = new System.Drawing.Point(331, 77);
             this.txtCompraServiExp.Name = "txtCompraServiExp";
-            this.txtCompraServiExp.Size = new System.Drawing.Size(250, 20);
+            this.txtCompraServiExp.Size = new System.Drawing.Size(250, 21);
             this.txtCompraServiExp.TabIndex = 231;
             // 
             // btnCompraServiPsin
@@ -893,7 +899,7 @@
             this.txtCompraServiPsin.Enabled = false;
             this.txtCompraServiPsin.Location = new System.Drawing.Point(331, 56);
             this.txtCompraServiPsin.Name = "txtCompraServiPsin";
-            this.txtCompraServiPsin.Size = new System.Drawing.Size(250, 20);
+            this.txtCompraServiPsin.Size = new System.Drawing.Size(250, 21);
             this.txtCompraServiPsin.TabIndex = 229;
             // 
             // btnVentaServiPcon
@@ -917,7 +923,7 @@
             this.txtVentaServiPcon.Enabled = false;
             this.txtVentaServiPcon.Location = new System.Drawing.Point(618, 35);
             this.txtVentaServiPcon.Name = "txtVentaServiPcon";
-            this.txtVentaServiPcon.Size = new System.Drawing.Size(250, 20);
+            this.txtVentaServiPcon.Size = new System.Drawing.Size(250, 21);
             this.txtVentaServiPcon.TabIndex = 227;
             // 
             // btnCompraServiPcon
@@ -955,7 +961,7 @@
             this.txtCompraServiPcon.Enabled = false;
             this.txtCompraServiPcon.Location = new System.Drawing.Point(331, 35);
             this.txtCompraServiPcon.Name = "txtCompraServiPcon";
-            this.txtCompraServiPcon.Size = new System.Drawing.Size(250, 20);
+            this.txtCompraServiPcon.Size = new System.Drawing.Size(250, 21);
             this.txtCompraServiPcon.TabIndex = 223;
             // 
             // txtVentaServiSoc
@@ -965,7 +971,7 @@
             this.txtVentaServiSoc.Enabled = false;
             this.txtVentaServiSoc.Location = new System.Drawing.Point(618, 14);
             this.txtVentaServiSoc.Name = "txtVentaServiSoc";
-            this.txtVentaServiSoc.Size = new System.Drawing.Size(250, 20);
+            this.txtVentaServiSoc.Size = new System.Drawing.Size(250, 21);
             this.txtVentaServiSoc.TabIndex = 225;
             // 
             // btnCompraServiSoc
@@ -989,7 +995,7 @@
             this.txtCompraServiSoc.Enabled = false;
             this.txtCompraServiSoc.Location = new System.Drawing.Point(331, 14);
             this.txtCompraServiSoc.Name = "txtCompraServiSoc";
-            this.txtCompraServiSoc.Size = new System.Drawing.Size(250, 20);
+            this.txtCompraServiSoc.Size = new System.Drawing.Size(250, 21);
             this.txtCompraServiSoc.TabIndex = 221;
             // 
             // label3
@@ -997,7 +1003,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(615, 2);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(103, 13);
+            this.label3.Size = new System.Drawing.Size(111, 13);
             this.label3.TabIndex = 214;
             this.label3.Text = "CUENTA EN VENTAS";
             // 
@@ -1006,7 +1012,7 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(328, 2);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(109, 13);
+            this.label4.Size = new System.Drawing.Size(122, 13);
             this.label4.TabIndex = 213;
             this.label4.Text = "CUENTA EN COMPRAS";
             // 
@@ -1017,7 +1023,7 @@
             this.txtServiEsp.Enabled = false;
             this.txtServiEsp.Location = new System.Drawing.Point(250, 98);
             this.txtServiEsp.Name = "txtServiEsp";
-            this.txtServiEsp.Size = new System.Drawing.Size(49, 20);
+            this.txtServiEsp.Size = new System.Drawing.Size(49, 21);
             this.txtServiEsp.TabIndex = 212;
             this.txtServiEsp.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -1026,7 +1032,7 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(11, 101);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(145, 13);
+            this.label5.Size = new System.Drawing.Size(150, 13);
             this.label5.TabIndex = 211;
             this.label5.Text = "CONTRIBUYENTE ESPECIAL:";
             // 
@@ -1037,7 +1043,7 @@
             this.txtServiExp.Enabled = false;
             this.txtServiExp.Location = new System.Drawing.Point(250, 77);
             this.txtServiExp.Name = "txtServiExp";
-            this.txtServiExp.Size = new System.Drawing.Size(49, 20);
+            this.txtServiExp.Size = new System.Drawing.Size(49, 21);
             this.txtServiExp.TabIndex = 210;
             this.txtServiExp.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -1048,7 +1054,7 @@
             this.txtServiPsin.Enabled = false;
             this.txtServiPsin.Location = new System.Drawing.Point(250, 56);
             this.txtServiPsin.Name = "txtServiPsin";
-            this.txtServiPsin.Size = new System.Drawing.Size(49, 20);
+            this.txtServiPsin.Size = new System.Drawing.Size(49, 21);
             this.txtServiPsin.TabIndex = 209;
             this.txtServiPsin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -1059,7 +1065,7 @@
             this.txtServiPcon.Enabled = false;
             this.txtServiPcon.Location = new System.Drawing.Point(250, 35);
             this.txtServiPcon.Name = "txtServiPcon";
-            this.txtServiPcon.Size = new System.Drawing.Size(49, 20);
+            this.txtServiPcon.Size = new System.Drawing.Size(49, 21);
             this.txtServiPcon.TabIndex = 208;
             this.txtServiPcon.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -1070,7 +1076,7 @@
             this.txtServiSoc.Enabled = false;
             this.txtServiSoc.Location = new System.Drawing.Point(250, 14);
             this.txtServiSoc.Name = "txtServiSoc";
-            this.txtServiSoc.Size = new System.Drawing.Size(49, 20);
+            this.txtServiSoc.Size = new System.Drawing.Size(49, 21);
             this.txtServiSoc.TabIndex = 207;
             this.txtServiSoc.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -1079,7 +1085,7 @@
             this.label11.AutoSize = true;
             this.label11.Location = new System.Drawing.Point(11, 82);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(79, 13);
+            this.label11.Size = new System.Drawing.Size(88, 13);
             this.label11.TabIndex = 206;
             this.label11.Text = "EXPORTADORA:";
             // 
@@ -1088,7 +1094,7 @@
             this.label12.AutoSize = true;
             this.label12.Location = new System.Drawing.Point(10, 59);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(205, 13);
+            this.label12.Size = new System.Drawing.Size(212, 13);
             this.label12.TabIndex = 205;
             this.label12.Text = "PERSONA NATURAL SIN CONTABILIDAD:";
             // 
@@ -1097,7 +1103,7 @@
             this.label13.AutoSize = true;
             this.label13.Location = new System.Drawing.Point(10, 37);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(205, 13);
+            this.label13.Size = new System.Drawing.Size(217, 13);
             this.label13.TabIndex = 204;
             this.label13.Text = "PERSONA NATURAL CON CONTABILIDAD:";
             // 
@@ -1106,7 +1112,7 @@
             this.label17.AutoSize = true;
             this.label17.Location = new System.Drawing.Point(10, 17);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(61, 13);
+            this.label17.Size = new System.Drawing.Size(62, 13);
             this.label17.TabIndex = 203;
             this.label17.Text = "SOCIEDAD:";
             // 

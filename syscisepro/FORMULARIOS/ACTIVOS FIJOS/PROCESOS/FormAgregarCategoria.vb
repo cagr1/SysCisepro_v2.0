@@ -69,7 +69,9 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
                     dgvGrupos.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
                     dgvSecuencial.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
             End Select
-
+            dgvCategoria.Font = New Font("Roboto", 8, FontStyle.Regular)
+            dgvGrupos.Font = New Font("Roboto", 8, FontStyle.Regular)
+            dgvSubgrupos.Font = New Font("Roboto", 8, FontStyle.Regular)
             _sqlCommands = New List(Of SqlCommand)
             MostrarTodosRegistrosCategoria()
             MostrarTodosRegistrosGrupo()

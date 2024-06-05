@@ -249,6 +249,7 @@ Namespace FORMULARIOS.CONTABILIDAD.AUXILIARES
                     MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorCisepro
                     dgvAsientosDiario.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
             End Select
+            dgvAsientosDiario.Font = New Font("Roboto", 8, FontStyle.Regular)
             dtpInicio.Value = New DateTime(Date.Now.Year, Date.Now.Month, 1, 0, 0, 0)
             dtpFinal.Value = dtpInicio.Value.AddMonths(1).AddDays(-1)
         End Sub

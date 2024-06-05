@@ -397,10 +397,10 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.CONSULTAS
                     MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorAsenava
                 Case TipoConexion.Seportpac
                     Icon = My.Resources.logo_s
-                    MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
+                    'MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
                 Case Else
                     Icon = My.Resources.logo_c
-                    MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorCisepro
+                    'MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorCisepro
             End Select
             cbmTipoActivo.SelectedIndex = 0
             dgvTotalActivosFijos.Font = New Font("Roboto", 8, FontStyle.Regular)

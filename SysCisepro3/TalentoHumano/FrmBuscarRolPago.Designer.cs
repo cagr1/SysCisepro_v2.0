@@ -43,7 +43,7 @@
             // dtpFechaHasta
             // 
             this.dtpFechaHasta.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaHasta.Location = new System.Drawing.Point(422, 12);
+            this.dtpFechaHasta.Location = new System.Drawing.Point(465, 12);
             this.dtpFechaHasta.Name = "dtpFechaHasta";
             this.dtpFechaHasta.Size = new System.Drawing.Size(101, 20);
             this.dtpFechaHasta.TabIndex = 38;
@@ -54,7 +54,7 @@
             this.lblHasta.AutoSize = true;
             this.lblHasta.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHasta.ForeColor = System.Drawing.Color.White;
-            this.lblHasta.Location = new System.Drawing.Point(378, 16);
+            this.lblHasta.Location = new System.Drawing.Point(404, 15);
             this.lblHasta.Name = "lblHasta";
             this.lblHasta.Size = new System.Drawing.Size(43, 14);
             this.lblHasta.TabIndex = 37;

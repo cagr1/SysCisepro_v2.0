@@ -63,6 +63,7 @@
             '
             Me.tcParametros.Controls.Add(Me.tpActividades)
             Me.tcParametros.Controls.Add(Me.tpReporte)
+            Me.tcParametros.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.tcParametros.Location = New System.Drawing.Point(2, 27)
             Me.tcParametros.Name = "tcParametros"
             Me.tcParametros.SelectedIndex = 0
@@ -91,7 +92,7 @@
             Me.GroupBox2.Controls.Add(Me.Label4)
             Me.GroupBox2.Controls.Add(Me.txtDetalle)
             Me.GroupBox2.Controls.Add(Me.Label1)
-            Me.GroupBox2.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.GroupBox2.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.GroupBox2.Location = New System.Drawing.Point(239, 4)
             Me.GroupBox2.Name = "GroupBox2"
             Me.GroupBox2.Size = New System.Drawing.Size(790, 66)
@@ -116,7 +117,7 @@
             Me.lblCuentaGastos.AutoSize = True
             Me.lblCuentaGastos.Location = New System.Drawing.Point(736, 38)
             Me.lblCuentaGastos.Name = "lblCuentaGastos"
-            Me.lblCuentaGastos.Size = New System.Drawing.Size(44, 13)
+            Me.lblCuentaGastos.Size = New System.Drawing.Size(52, 13)
             Me.lblCuentaGastos.TabIndex = 12
             Me.lblCuentaGastos.Text = "CUENTA "
             '
@@ -125,7 +126,7 @@
             Me.Label5.AutoSize = True
             Me.Label5.Location = New System.Drawing.Point(477, 17)
             Me.Label5.Name = "Label5"
-            Me.Label5.Size = New System.Drawing.Size(87, 13)
+            Me.Label5.Size = New System.Drawing.Size(103, 13)
             Me.Label5.TabIndex = 10
             Me.Label5.Text = "PLAN DE CUENTAS"
             '
@@ -144,7 +145,7 @@
             Me.Label4.AutoSize = True
             Me.Label4.Location = New System.Drawing.Point(368, 17)
             Me.Label4.Name = "Label4"
-            Me.Label4.Size = New System.Drawing.Size(90, 13)
+            Me.Label4.Size = New System.Drawing.Size(108, 13)
             Me.Label4.TabIndex = 8
             Me.Label4.Text = "CUENTA CONTABLE"
             '
@@ -163,7 +164,7 @@
             Me.Label1.AutoSize = True
             Me.Label1.Location = New System.Drawing.Point(6, 17)
             Me.Label1.Name = "Label1"
-            Me.Label1.Size = New System.Drawing.Size(47, 13)
+            Me.Label1.Size = New System.Drawing.Size(55, 13)
             Me.Label1.TabIndex = 4
             Me.Label1.Text = "DETALLE:"
             '
@@ -179,7 +180,7 @@
             Me.dgvGastosCajaChica.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
             DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
             DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
-            DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle2.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
             DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(123, Byte), Integer))
             DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
@@ -200,7 +201,7 @@
             Me.GroupBox1.Controls.Add(Me.txtDetalleCuenta)
             Me.GroupBox1.Controls.Add(Me.Label3)
             Me.GroupBox1.Controls.Add(Me.Label2)
-            Me.GroupBox1.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.GroupBox1.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.GroupBox1.Location = New System.Drawing.Point(2, 4)
             Me.GroupBox1.Name = "GroupBox1"
             Me.GroupBox1.Size = New System.Drawing.Size(231, 66)
@@ -213,7 +214,7 @@
             Me.lblIdGastoCajaChica.AutoSize = True
             Me.lblIdGastoCajaChica.Location = New System.Drawing.Point(147, 36)
             Me.lblIdGastoCajaChica.Name = "lblIdGastoCajaChica"
-            Me.lblIdGastoCajaChica.Size = New System.Drawing.Size(64, 13)
+            Me.lblIdGastoCajaChica.Size = New System.Drawing.Size(75, 13)
             Me.lblIdGastoCajaChica.TabIndex = 13
             Me.lblIdGastoCajaChica.Text = "N° REGISTRO"
             '

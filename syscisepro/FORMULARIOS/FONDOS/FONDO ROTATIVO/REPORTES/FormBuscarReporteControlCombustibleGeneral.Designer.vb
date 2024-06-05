@@ -1,8 +1,8 @@
 ﻿Namespace FORMULARIOS.FONDOS.FONDO_ROTATIVO.REPORTES
     <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
     Partial Class FormBuscarReporteControlCombustibleGeneral
-        Inherits System.Windows.Forms.Form
-
+        'Inherits System.Windows.Forms.Form
+        Inherits Krypton.Toolkit.KryptonForm
         'Form reemplaza a Dispose para limpiar la lista de componentes.
         <System.Diagnostics.DebuggerNonUserCode()> _
         Protected Overrides Sub Dispose(ByVal disposing As Boolean)
@@ -105,7 +105,7 @@
             Me.lblIdControlC.AutoSize = True
             Me.lblIdControlC.Location = New System.Drawing.Point(5, 21)
             Me.lblIdControlC.Name = "lblIdControlC"
-            Me.lblIdControlC.Size = New System.Drawing.Size(75, 13)
+            Me.lblIdControlC.Size = New System.Drawing.Size(74, 13)
             Me.lblIdControlC.TabIndex = 19
             Me.lblIdControlC.Text = "ID CONTROL:"
             '
@@ -123,7 +123,7 @@
             Me.lblValorControlC.AutoSize = True
             Me.lblValorControlC.Location = New System.Drawing.Point(5, 49)
             Me.lblValorControlC.Name = "lblValorControlC"
-            Me.lblValorControlC.Size = New System.Drawing.Size(44, 13)
+            Me.lblValorControlC.Size = New System.Drawing.Size(45, 13)
             Me.lblValorControlC.TabIndex = 21
             Me.lblValorControlC.Text = "VALOR:"
             '
@@ -142,7 +142,7 @@
             Me.lblMotivoControlC.AutoSize = True
             Me.lblMotivoControlC.Location = New System.Drawing.Point(5, 77)
             Me.lblMotivoControlC.Name = "lblMotivoControlC"
-            Me.lblMotivoControlC.Size = New System.Drawing.Size(54, 13)
+            Me.lblMotivoControlC.Size = New System.Drawing.Size(53, 13)
             Me.lblMotivoControlC.TabIndex = 23
             Me.lblMotivoControlC.Text = "MOTIVO:"
             '
@@ -151,7 +151,7 @@
             Me.lblTotalKm.AutoSize = True
             Me.lblTotalKm.Location = New System.Drawing.Point(5, 105)
             Me.lblTotalKm.Name = "lblTotalKm"
-            Me.lblTotalKm.Size = New System.Drawing.Size(68, 13)
+            Me.lblTotalKm.Size = New System.Drawing.Size(73, 13)
             Me.lblTotalKm.TabIndex = 24
             Me.lblTotalKm.Text = "TOTAL KM's:"
             '
@@ -189,7 +189,7 @@
             Me.txtIdControlC.Enabled = False
             Me.txtIdControlC.Location = New System.Drawing.Point(90, 18)
             Me.txtIdControlC.Name = "txtIdControlC"
-            Me.txtIdControlC.Size = New System.Drawing.Size(100, 22)
+            Me.txtIdControlC.Size = New System.Drawing.Size(100, 21)
             Me.txtIdControlC.TabIndex = 29
             '
             'txtFechaControlC
@@ -198,7 +198,7 @@
             Me.txtFechaControlC.Enabled = False
             Me.txtFechaControlC.Location = New System.Drawing.Point(348, 18)
             Me.txtFechaControlC.Name = "txtFechaControlC"
-            Me.txtFechaControlC.Size = New System.Drawing.Size(103, 22)
+            Me.txtFechaControlC.Size = New System.Drawing.Size(103, 21)
             Me.txtFechaControlC.TabIndex = 30
             '
             'txtValorControlC
@@ -207,7 +207,7 @@
             Me.txtValorControlC.Enabled = False
             Me.txtValorControlC.Location = New System.Drawing.Point(90, 46)
             Me.txtValorControlC.Name = "txtValorControlC"
-            Me.txtValorControlC.Size = New System.Drawing.Size(100, 22)
+            Me.txtValorControlC.Size = New System.Drawing.Size(100, 21)
             Me.txtValorControlC.TabIndex = 31
             '
             'txtDestinoControlC
@@ -216,7 +216,7 @@
             Me.txtDestinoControlC.Enabled = False
             Me.txtDestinoControlC.Location = New System.Drawing.Point(348, 46)
             Me.txtDestinoControlC.Name = "txtDestinoControlC"
-            Me.txtDestinoControlC.Size = New System.Drawing.Size(103, 22)
+            Me.txtDestinoControlC.Size = New System.Drawing.Size(103, 21)
             Me.txtDestinoControlC.TabIndex = 32
             '
             'txtMotivoControlC
@@ -225,7 +225,7 @@
             Me.txtMotivoControlC.Enabled = False
             Me.txtMotivoControlC.Location = New System.Drawing.Point(90, 74)
             Me.txtMotivoControlC.Name = "txtMotivoControlC"
-            Me.txtMotivoControlC.Size = New System.Drawing.Size(361, 22)
+            Me.txtMotivoControlC.Size = New System.Drawing.Size(361, 21)
             Me.txtMotivoControlC.TabIndex = 33
             '
             'txtTotalKmsControlC
@@ -234,7 +234,7 @@
             Me.txtTotalKmsControlC.Enabled = False
             Me.txtTotalKmsControlC.Location = New System.Drawing.Point(90, 102)
             Me.txtTotalKmsControlC.Name = "txtTotalKmsControlC"
-            Me.txtTotalKmsControlC.Size = New System.Drawing.Size(100, 22)
+            Me.txtTotalKmsControlC.Size = New System.Drawing.Size(100, 21)
             Me.txtTotalKmsControlC.TabIndex = 34
             '
             'txtVehiculo
@@ -243,7 +243,7 @@
             Me.txtVehiculo.Enabled = False
             Me.txtVehiculo.Location = New System.Drawing.Point(88, 130)
             Me.txtVehiculo.Name = "txtVehiculo"
-            Me.txtVehiculo.Size = New System.Drawing.Size(363, 22)
+            Me.txtVehiculo.Size = New System.Drawing.Size(363, 21)
             Me.txtVehiculo.TabIndex = 35
             '
             'txtRubro
@@ -252,7 +252,7 @@
             Me.txtRubro.Enabled = False
             Me.txtRubro.Location = New System.Drawing.Point(348, 102)
             Me.txtRubro.Name = "txtRubro"
-            Me.txtRubro.Size = New System.Drawing.Size(103, 22)
+            Me.txtRubro.Size = New System.Drawing.Size(103, 21)
             Me.txtRubro.TabIndex = 36
             '
             'txtFechaSalidaVehiculo
@@ -261,7 +261,7 @@
             Me.txtFechaSalidaVehiculo.Enabled = False
             Me.txtFechaSalidaVehiculo.Location = New System.Drawing.Point(90, 15)
             Me.txtFechaSalidaVehiculo.Name = "txtFechaSalidaVehiculo"
-            Me.txtFechaSalidaVehiculo.Size = New System.Drawing.Size(100, 22)
+            Me.txtFechaSalidaVehiculo.Size = New System.Drawing.Size(100, 21)
             Me.txtFechaSalidaVehiculo.TabIndex = 37
             '
             'lblNombreVehiculo
@@ -269,7 +269,7 @@
             Me.lblNombreVehiculo.AutoSize = True
             Me.lblNombreVehiculo.Location = New System.Drawing.Point(6, 133)
             Me.lblNombreVehiculo.Name = "lblNombreVehiculo"
-            Me.lblNombreVehiculo.Size = New System.Drawing.Size(63, 13)
+            Me.lblNombreVehiculo.Size = New System.Drawing.Size(62, 13)
             Me.lblNombreVehiculo.TabIndex = 39
             Me.lblNombreVehiculo.Text = "VEHICULO:"
             '
@@ -279,7 +279,7 @@
             Me.txtKmSalidaVehiculo.Enabled = False
             Me.txtKmSalidaVehiculo.Location = New System.Drawing.Point(90, 41)
             Me.txtKmSalidaVehiculo.Name = "txtKmSalidaVehiculo"
-            Me.txtKmSalidaVehiculo.Size = New System.Drawing.Size(100, 22)
+            Me.txtKmSalidaVehiculo.Size = New System.Drawing.Size(100, 21)
             Me.txtKmSalidaVehiculo.TabIndex = 40
             '
             'lblFechaSalidaVehiculo
@@ -296,7 +296,7 @@
             Me.lblKmSalidaVehiculo.AutoSize = True
             Me.lblKmSalidaVehiculo.Location = New System.Drawing.Point(5, 44)
             Me.lblKmSalidaVehiculo.Name = "lblKmSalidaVehiculo"
-            Me.lblKmSalidaVehiculo.Size = New System.Drawing.Size(80, 13)
+            Me.lblKmSalidaVehiculo.Size = New System.Drawing.Size(83, 13)
             Me.lblKmSalidaVehiculo.TabIndex = 42
             Me.lblKmSalidaVehiculo.Text = "KILOMETRAJE:"
             '
@@ -305,7 +305,7 @@
             Me.Label1.AutoSize = True
             Me.Label1.Location = New System.Drawing.Point(266, 105)
             Me.Label1.Name = "Label1"
-            Me.Label1.Size = New System.Drawing.Size(47, 13)
+            Me.Label1.Size = New System.Drawing.Size(46, 13)
             Me.Label1.TabIndex = 44
             Me.Label1.Text = "RUBRO:"
             '
@@ -330,7 +330,7 @@
             Me.gbControl1.Controls.Add(Me.txtMotivoControlC)
             Me.gbControl1.Controls.Add(Me.lblIdVehiculo)
             Me.gbControl1.Controls.Add(Me.lblIdRubro)
-            Me.gbControl1.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.gbControl1.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.gbControl1.Location = New System.Drawing.Point(2, 29)
             Me.gbControl1.Name = "gbControl1"
             Me.gbControl1.Size = New System.Drawing.Size(467, 161)
@@ -346,7 +346,7 @@
             Me.gbControl2.Controls.Add(Me.txtFechaSalidaVehiculo)
             Me.gbControl2.Controls.Add(Me.txtKmSalidaVehiculo)
             Me.gbControl2.Controls.Add(Me.lblIdSalidaVehiculo)
-            Me.gbControl2.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.gbControl2.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.gbControl2.Location = New System.Drawing.Point(470, 121)
             Me.gbControl2.Name = "gbControl2"
             Me.gbControl2.Size = New System.Drawing.Size(195, 69)
@@ -362,7 +362,7 @@
             Me.GroupBox1.Controls.Add(Me.txtKmLlegadaVehiculo)
             Me.GroupBox1.Controls.Add(Me.txtFechaLlegadaVehiculo)
             Me.GroupBox1.Controls.Add(Me.lblIdLlegadaVehiculo)
-            Me.GroupBox1.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.GroupBox1.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.GroupBox1.Location = New System.Drawing.Point(668, 121)
             Me.GroupBox1.Name = "GroupBox1"
             Me.GroupBox1.Size = New System.Drawing.Size(195, 69)
@@ -384,7 +384,7 @@
             Me.Label3.AutoSize = True
             Me.Label3.Location = New System.Drawing.Point(4, 45)
             Me.Label3.Name = "Label3"
-            Me.Label3.Size = New System.Drawing.Size(80, 13)
+            Me.Label3.Size = New System.Drawing.Size(83, 13)
             Me.Label3.TabIndex = 50
             Me.Label3.Text = "KILOMETRAJE:"
             '
@@ -394,7 +394,7 @@
             Me.txtKmLlegadaVehiculo.Enabled = False
             Me.txtKmLlegadaVehiculo.Location = New System.Drawing.Point(88, 41)
             Me.txtKmLlegadaVehiculo.Name = "txtKmLlegadaVehiculo"
-            Me.txtKmLlegadaVehiculo.Size = New System.Drawing.Size(100, 22)
+            Me.txtKmLlegadaVehiculo.Size = New System.Drawing.Size(100, 21)
             Me.txtKmLlegadaVehiculo.TabIndex = 48
             '
             'txtFechaLlegadaVehiculo
@@ -403,7 +403,7 @@
             Me.txtFechaLlegadaVehiculo.Enabled = False
             Me.txtFechaLlegadaVehiculo.Location = New System.Drawing.Point(88, 15)
             Me.txtFechaLlegadaVehiculo.Name = "txtFechaLlegadaVehiculo"
-            Me.txtFechaLlegadaVehiculo.Size = New System.Drawing.Size(100, 22)
+            Me.txtFechaLlegadaVehiculo.Size = New System.Drawing.Size(100, 21)
             Me.txtFechaLlegadaVehiculo.TabIndex = 47
             '
             'lblIdLlegadaVehiculo
@@ -455,35 +455,37 @@
             '
             'dtpAsientoDesde
             '
+            Me.dtpAsientoDesde.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.dtpAsientoDesde.Location = New System.Drawing.Point(100, 202)
             Me.dtpAsientoDesde.Name = "dtpAsientoDesde"
-            Me.dtpAsientoDesde.Size = New System.Drawing.Size(262, 22)
+            Me.dtpAsientoDesde.Size = New System.Drawing.Size(262, 21)
             Me.dtpAsientoDesde.TabIndex = 193
             '
             'lblFechaSolicitudFR
             '
             Me.lblFechaSolicitudFR.AutoSize = True
-            Me.lblFechaSolicitudFR.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.lblFechaSolicitudFR.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.lblFechaSolicitudFR.Location = New System.Drawing.Point(7, 205)
             Me.lblFechaSolicitudFR.Name = "lblFechaSolicitudFR"
-            Me.lblFechaSolicitudFR.Size = New System.Drawing.Size(90, 13)
+            Me.lblFechaSolicitudFR.Size = New System.Drawing.Size(89, 13)
             Me.lblFechaSolicitudFR.TabIndex = 192
             Me.lblFechaSolicitudFR.Text = "CARGAR DESDE:"
             '
             'dtpAsientoHasta
             '
+            Me.dtpAsientoHasta.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.dtpAsientoHasta.Location = New System.Drawing.Point(449, 202)
             Me.dtpAsientoHasta.Name = "dtpAsientoHasta"
-            Me.dtpAsientoHasta.Size = New System.Drawing.Size(262, 22)
+            Me.dtpAsientoHasta.Size = New System.Drawing.Size(262, 21)
             Me.dtpAsientoHasta.TabIndex = 195
             '
             'Label4
             '
             Me.Label4.AutoSize = True
-            Me.Label4.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Label4.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Label4.Location = New System.Drawing.Point(400, 207)
             Me.Label4.Name = "Label4"
-            Me.Label4.Size = New System.Drawing.Size(43, 13)
+            Me.Label4.Size = New System.Drawing.Size(46, 13)
             Me.Label4.TabIndex = 194
             Me.Label4.Text = "HASTA:"
             '

@@ -69,6 +69,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                     dgvFacturaVenta.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
                     MenuStrip1.ForeColor = Color.White
             End Select
+            dgvFacturaVenta.Font = New Font("Roboto", 8, FontStyle.Regular)
             _sqlCommands = New List(Of SqlCommand)
             _notSelect = New List(Of Integer)
              

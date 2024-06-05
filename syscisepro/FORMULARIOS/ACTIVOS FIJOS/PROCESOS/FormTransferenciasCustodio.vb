@@ -99,6 +99,9 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
                     dgvTransferencias.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
                     dgvBusquedaPersonal.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
             End Select
+            dgvActivoFijo.Font = New Font("Roboto", 8, FontStyle.Regular)
+            dgvTransferencias.Font = New Font("Roboto", 8, FontStyle.Regular)
+            dgvBusquedaPersonal.Font = New Font("Roboto", 8, FontStyle.Regular)
 
             _sqlCommands = New List(Of SqlCommand)
             txtFechaTransferencia.Text = Date.Now

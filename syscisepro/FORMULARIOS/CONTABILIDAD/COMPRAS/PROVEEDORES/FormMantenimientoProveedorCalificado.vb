@@ -195,8 +195,8 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.PROVEEDORES
                     MenuStrip1.ForeColor = Color.White
                     dgvContactosProveedorCalificado.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
             End Select
-
-            deshabilitadoInicio()
+            dgvContactosProveedorCalificado.Font = New Font("Roboto", 8, FontStyle.Regular)
+            DeshabilitadoInicio()
             limpiarParametros()
             llenarComboPaises() 
         End Sub

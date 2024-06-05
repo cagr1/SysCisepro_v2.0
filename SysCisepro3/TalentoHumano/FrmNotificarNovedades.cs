@@ -9,10 +9,11 @@ using Microsoft.Office.Interop.Excel;
 using Office = Microsoft.Office.Interop;
 using DataTable = System.Data.DataTable;
 using SysCisepro3.Properties;
+using Krypton.Toolkit;
 
 namespace SysCisepro3.TalentoHumano
 {
-    public partial class FrmNotificarNovedades : Form
+    public partial class FrmNotificarNovedades : KryptonForm
     {
         /// <summary>
         /// CISEPRO 2019
@@ -150,7 +151,9 @@ namespace SysCisepro3.TalentoHumano
                     Icon = Resources.logo_c;
                     break;
             }
-
+            dgv3meses.Font = new System.Drawing.Font("Roboto", 8,FontStyle.Regular);
+            dgvNotificacion.Font = new System.Drawing.Font("Roboto", 8, FontStyle.Regular);
+            dgvVacaciones.Font = new System.Drawing.Font("Roboto", 8, FontStyle.Regular);
             dgvNotificacion.DataSource = DataNotificacion;
             dgvVacaciones.DataSource = DataVacaciones;
             dgv3meses.DataSource = Data3Meses;

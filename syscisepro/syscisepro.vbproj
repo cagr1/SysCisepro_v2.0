@@ -168,6 +168,9 @@
     <Reference Include="Krypton.Toolkit, Version=80.24.3.64, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
       <HintPath>..\packages\Krypton.Toolkit.80.24.3.64\lib\net472\Krypton.Toolkit.dll</HintPath>
     </Reference>
+    <Reference Include="Krypton.Toolkit.Suite.Extended.Floating.Toolbars">
+      <HintPath>..\..\SysCisepro4\packages\Krypton.Toolkit.Suite.Extended.Floating.Toolbars.80.24.3.64\lib\net472\Krypton.Toolkit.Suite.Extended.Floating.Toolbars.dll</HintPath>
+    </Reference>
     <Reference Include="log4net, Version=2.0.12.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
       <HintPath>..\packages\log4net.2.0.12\lib\net45\log4net.dll</HintPath>
     </Reference>

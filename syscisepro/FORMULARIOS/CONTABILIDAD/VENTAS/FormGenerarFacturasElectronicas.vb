@@ -581,7 +581,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                     dgvDetalleFacturaVenta.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
                     dgvEmpresa.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
             End Select
-
+            dgvFacturaVenta.Font = New Font("Roboto", 8, FontStyle.Regular)
             AutocompletarNombreCliente()
             CargarDatosEmpresa()
             rbProduccion.Checked = True

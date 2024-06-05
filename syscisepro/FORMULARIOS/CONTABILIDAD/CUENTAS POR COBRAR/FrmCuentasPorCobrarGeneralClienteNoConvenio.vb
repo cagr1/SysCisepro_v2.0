@@ -58,7 +58,8 @@ Namespace FORMULARIOS.CONTABILIDAD.CUENTAS_POR_COBRAR
                     MenuStrip1.ForeColor = Color.White
                     MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorCisepro
                     dgvCuentasPorCobrar.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
-            End Select 
+            End Select
+            dgvCuentasPorCobrar.Font = New Font("Roboto", 8, FontStyle.Regular)
             rbGeneral.Checked = True
         End Sub
 

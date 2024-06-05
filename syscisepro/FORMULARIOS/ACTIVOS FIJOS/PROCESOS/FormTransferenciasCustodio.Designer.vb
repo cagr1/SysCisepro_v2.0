@@ -1,8 +1,8 @@
 ﻿Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
     <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
     Partial Class FormTransferenciasActivosFijos
-        Inherits System.Windows.Forms.Form
-
+        'Inherits System.Windows.Forms.Form
+        Inherits Krypton.Toolkit.KryptonForm
         'Form reemplaza a Dispose para limpiar la lista de componentes.
         <System.Diagnostics.DebuggerNonUserCode()> _
         Protected Overrides Sub Dispose(ByVal disposing As Boolean)
@@ -101,6 +101,7 @@
             'Label1
             '
             Me.Label1.AutoSize = True
+            Me.Label1.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Label1.Location = New System.Drawing.Point(808, 34)
             Me.Label1.Name = "Label1"
             Me.Label1.Size = New System.Drawing.Size(19, 13)
@@ -124,6 +125,7 @@
             Me.gbParámetros.Controls.Add(Me.rbCédula)
             Me.gbParámetros.Controls.Add(Me.txtBusqueda)
             Me.gbParámetros.Controls.Add(Me.rbApellido)
+            Me.gbParámetros.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.gbParámetros.Location = New System.Drawing.Point(3, 143)
             Me.gbParámetros.Name = "gbParámetros"
             Me.gbParámetros.Size = New System.Drawing.Size(1005, 133)
@@ -143,7 +145,7 @@
             Me.dgvBusquedaPersonal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
             DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
             DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
-            DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle2.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
             DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(123, Byte), Integer))
             DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
@@ -185,7 +187,7 @@
             '
             Me.txtBusqueda.Location = New System.Drawing.Point(283, 13)
             Me.txtBusqueda.Name = "txtBusqueda"
-            Me.txtBusqueda.Size = New System.Drawing.Size(203, 20)
+            Me.txtBusqueda.Size = New System.Drawing.Size(203, 21)
             Me.txtBusqueda.TabIndex = 35
             '
             'rbApellido
@@ -247,6 +249,7 @@
             Me.GroupBox1.Controls.Add(Me.btnAgregarActivoFijo)
             Me.GroupBox1.Controls.Add(Me.txtBusquedaActivoFijo)
             Me.GroupBox1.Controls.Add(Me.rbCodigoActivo)
+            Me.GroupBox1.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.GroupBox1.Location = New System.Drawing.Point(3, 278)
             Me.GroupBox1.Name = "GroupBox1"
             Me.GroupBox1.Size = New System.Drawing.Size(1005, 189)
@@ -289,7 +292,7 @@
             Me.dgvActivoFijo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
             DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
             DataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window
-            DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle4.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText
             DataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(123, Byte), Integer))
             DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
@@ -445,7 +448,7 @@
             '
             Me.txtBusquedaActivoFijo.Location = New System.Drawing.Point(6, 38)
             Me.txtBusquedaActivoFijo.Name = "txtBusquedaActivoFijo"
-            Me.txtBusquedaActivoFijo.Size = New System.Drawing.Size(203, 20)
+            Me.txtBusquedaActivoFijo.Size = New System.Drawing.Size(203, 21)
             Me.txtBusquedaActivoFijo.TabIndex = 35
             '
             'rbCodigoActivo
@@ -464,6 +467,7 @@
             '
             Me.GroupBox2.BackColor = System.Drawing.Color.White
             Me.GroupBox2.Controls.Add(Me.dgvTransferencias)
+            Me.GroupBox2.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.GroupBox2.Location = New System.Drawing.Point(3, 468)
             Me.GroupBox2.Name = "GroupBox2"
             Me.GroupBox2.Size = New System.Drawing.Size(1005, 204)
@@ -482,7 +486,7 @@
             Me.dgvTransferencias.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ID_TRANSFERENCIA, Me.CODIGO_ACTIVO, Me.NOMBRE_ACTIVO, Me.ESTADO_ACTIVO, Me.ID_EMPRESA, Me.ID_SUCURSAL, Me.ID_GERENCIAS, Me.ID_AREA, Me.ID_PERSONAL, Me.ID_ACTIVO_FIJO})
             DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
             DataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window
-            DataGridViewCellStyle8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle8.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             DataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText
             DataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(123, Byte), Integer))
             DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText
@@ -636,9 +640,10 @@
             'Label8
             '
             Me.Label8.AutoSize = True
+            Me.Label8.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Label8.Location = New System.Drawing.Point(587, 34)
             Me.Label8.Name = "Label8"
-            Me.Label8.Size = New System.Drawing.Size(45, 13)
+            Me.Label8.Size = New System.Drawing.Size(44, 13)
             Me.Label8.TabIndex = 57
             Me.Label8.Text = "FECHA:"
             '

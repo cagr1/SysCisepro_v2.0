@@ -1,8 +1,8 @@
 ﻿Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
     <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
     Partial Class FormDepreciaciones
-        Inherits System.Windows.Forms.Form
-
+        'Inherits System.Windows.Forms.Form
+        Inherits Krypton.Toolkit.KryptonForm
         'Form reemplaza a Dispose para limpiar la lista de componentes.
         <System.Diagnostics.DebuggerNonUserCode()> _
         Protected Overrides Sub Dispose(ByVal disposing As Boolean)
@@ -28,18 +28,16 @@
             Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormDepreciaciones))
             Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-            Me.txtFechaActual = New System.Windows.Forms.TextBox()
+            Me.dtpHasta = New System.Windows.Forms.DateTimePicker()
+            Me.dtpDesde = New System.Windows.Forms.DateTimePicker()
             Me.btnBuscar = New System.Windows.Forms.Button()
             Me.dgvActivoFijo = New System.Windows.Forms.DataGridView()
             Me.txtCodigoActivo = New System.Windows.Forms.TextBox()
             Me.Label2 = New System.Windows.Forms.Label()
             Me.btnCargar = New System.Windows.Forms.Button()
+            Me.txtFechaActual = New System.Windows.Forms.TextBox()
             Me.dgvMantenimientoDepreciaciones = New System.Windows.Forms.DataGridView()
             Me.Label1 = New System.Windows.Forms.Label()
             Me.txtIdDepreciacion = New System.Windows.Forms.TextBox()
@@ -65,8 +63,6 @@
             Me.btnDepreciar = New System.Windows.Forms.ToolStripMenuItem()
             Me.btnGuardar = New System.Windows.Forms.ToolStripMenuItem()
             Me.btnReporte = New System.Windows.Forms.ToolStripMenuItem()
-            Me.dtpDesde = New System.Windows.Forms.DateTimePicker()
-            Me.dtpHasta = New System.Windows.Forms.DateTimePicker()
             Me.GroupBox1.SuspendLayout()
             CType(Me.dgvActivoFijo, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.dgvMantenimientoDepreciaciones, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -83,6 +79,7 @@
             Me.GroupBox1.Controls.Add(Me.txtCodigoActivo)
             Me.GroupBox1.Controls.Add(Me.Label2)
             Me.GroupBox1.Controls.Add(Me.btnCargar)
+            Me.GroupBox1.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.GroupBox1.Location = New System.Drawing.Point(5, 27)
             Me.GroupBox1.Name = "GroupBox1"
             Me.GroupBox1.Size = New System.Drawing.Size(998, 274)
@@ -90,14 +87,19 @@
             Me.GroupBox1.TabStop = False
             Me.GroupBox1.Text = "BUSQUEDA DE ACTIVO FIJO A DEPRECIAR"
             '
-            'txtFechaActual
+            'dtpHasta
             '
-            Me.txtFechaActual.Enabled = False
-            Me.txtFechaActual.Location = New System.Drawing.Point(784, 4)
-            Me.txtFechaActual.Name = "txtFechaActual"
-            Me.txtFechaActual.Size = New System.Drawing.Size(68, 20)
-            Me.txtFechaActual.TabIndex = 18
-            Me.txtFechaActual.Visible = False
+            Me.dtpHasta.Location = New System.Drawing.Point(826, 19)
+            Me.dtpHasta.Name = "dtpHasta"
+            Me.dtpHasta.Size = New System.Drawing.Size(164, 21)
+            Me.dtpHasta.TabIndex = 20
+            '
+            'dtpDesde
+            '
+            Me.dtpDesde.Location = New System.Drawing.Point(638, 19)
+            Me.dtpDesde.Name = "dtpDesde"
+            Me.dtpDesde.Size = New System.Drawing.Size(176, 21)
+            Me.dtpDesde.TabIndex = 19
             '
             'btnBuscar
             '
@@ -121,34 +123,18 @@
             Me.dgvActivoFijo.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
             Me.dgvActivoFijo.BackgroundColor = System.Drawing.Color.White
             Me.dgvActivoFijo.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
-            DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-            DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control
-            DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText
-            DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-            DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-            DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-            Me.dgvActivoFijo.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
             Me.dgvActivoFijo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-            DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-            DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window
-            DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText
-            DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(123, Byte), Integer))
-            DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-            DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-            Me.dgvActivoFijo.DefaultCellStyle = DataGridViewCellStyle3
+            DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+            DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
+            DataGridViewCellStyle2.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
+            DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(123, Byte), Integer))
+            DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+            DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+            Me.dgvActivoFijo.DefaultCellStyle = DataGridViewCellStyle2
             Me.dgvActivoFijo.Location = New System.Drawing.Point(6, 63)
             Me.dgvActivoFijo.MultiSelect = False
             Me.dgvActivoFijo.Name = "dgvActivoFijo"
-            DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-            DataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control
-            DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText
-            DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
-            DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-            DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-            Me.dgvActivoFijo.RowHeadersDefaultCellStyle = DataGridViewCellStyle4
             Me.dgvActivoFijo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
             Me.dgvActivoFijo.Size = New System.Drawing.Size(985, 205)
             Me.dgvActivoFijo.TabIndex = 10
@@ -157,7 +143,7 @@
             '
             Me.txtCodigoActivo.Location = New System.Drawing.Point(280, 18)
             Me.txtCodigoActivo.Name = "txtCodigoActivo"
-            Me.txtCodigoActivo.Size = New System.Drawing.Size(175, 20)
+            Me.txtCodigoActivo.Size = New System.Drawing.Size(175, 21)
             Me.txtCodigoActivo.TabIndex = 9
             '
             'Label2
@@ -165,7 +151,7 @@
             Me.Label2.AutoSize = True
             Me.Label2.Location = New System.Drawing.Point(8, 21)
             Me.Label2.Name = "Label2"
-            Me.Label2.Size = New System.Drawing.Size(267, 13)
+            Me.Label2.Size = New System.Drawing.Size(257, 13)
             Me.Label2.TabIndex = 8
             Me.Label2.Text = "INGRESE CÓDIGO, TIPO O CUSTODIO DE ACTIVO :"
             '
@@ -182,43 +168,36 @@
             Me.btnCargar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
             Me.btnCargar.UseVisualStyleBackColor = True
             '
+            'txtFechaActual
+            '
+            Me.txtFechaActual.Enabled = False
+            Me.txtFechaActual.Location = New System.Drawing.Point(784, 4)
+            Me.txtFechaActual.Name = "txtFechaActual"
+            Me.txtFechaActual.Size = New System.Drawing.Size(68, 20)
+            Me.txtFechaActual.TabIndex = 18
+            Me.txtFechaActual.Visible = False
+            '
             'dgvMantenimientoDepreciaciones
             '
             Me.dgvMantenimientoDepreciaciones.AllowUserToAddRows = False
             Me.dgvMantenimientoDepreciaciones.AllowUserToDeleteRows = False
             Me.dgvMantenimientoDepreciaciones.AllowUserToResizeRows = False
-            DataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-            Me.dgvMantenimientoDepreciaciones.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle5
+            DataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+            Me.dgvMantenimientoDepreciaciones.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle3
             Me.dgvMantenimientoDepreciaciones.BackgroundColor = System.Drawing.Color.White
             Me.dgvMantenimientoDepreciaciones.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
-            DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-            DataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control
-            DataGridViewCellStyle6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            DataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText
-            DataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight
-            DataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-            DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-            Me.dgvMantenimientoDepreciaciones.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle6
             Me.dgvMantenimientoDepreciaciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-            DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-            DataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Window
-            DataGridViewCellStyle7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            DataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ControlText
-            DataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(123, Byte), Integer))
-            DataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-            DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-            Me.dgvMantenimientoDepreciaciones.DefaultCellStyle = DataGridViewCellStyle7
+            DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+            DataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window
+            DataGridViewCellStyle4.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText
+            DataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(123, Byte), Integer))
+            DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+            DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+            Me.dgvMantenimientoDepreciaciones.DefaultCellStyle = DataGridViewCellStyle4
             Me.dgvMantenimientoDepreciaciones.Location = New System.Drawing.Point(11, 104)
             Me.dgvMantenimientoDepreciaciones.MultiSelect = False
             Me.dgvMantenimientoDepreciaciones.Name = "dgvMantenimientoDepreciaciones"
-            DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-            DataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control
-            DataGridViewCellStyle8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            DataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText
-            DataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight
-            DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-            DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-            Me.dgvMantenimientoDepreciaciones.RowHeadersDefaultCellStyle = DataGridViewCellStyle8
             Me.dgvMantenimientoDepreciaciones.RowHeadersVisible = False
             Me.dgvMantenimientoDepreciaciones.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
             Me.dgvMantenimientoDepreciaciones.Size = New System.Drawing.Size(984, 172)
@@ -229,7 +208,7 @@
             Me.Label1.AutoSize = True
             Me.Label1.Location = New System.Drawing.Point(12, 22)
             Me.Label1.Name = "Label1"
-            Me.Label1.Size = New System.Drawing.Size(104, 13)
+            Me.Label1.Size = New System.Drawing.Size(99, 13)
             Me.Label1.TabIndex = 14
             Me.Label1.Text = "ID DEPRECIACION:"
             '
@@ -238,7 +217,7 @@
             Me.txtIdDepreciacion.Enabled = False
             Me.txtIdDepreciacion.Location = New System.Drawing.Point(122, 16)
             Me.txtIdDepreciacion.Name = "txtIdDepreciacion"
-            Me.txtIdDepreciacion.Size = New System.Drawing.Size(97, 20)
+            Me.txtIdDepreciacion.Size = New System.Drawing.Size(97, 21)
             Me.txtIdDepreciacion.TabIndex = 15
             '
             'Label3
@@ -246,7 +225,7 @@
             Me.Label3.AutoSize = True
             Me.Label3.Location = New System.Drawing.Point(12, 54)
             Me.Label3.Name = "Label3"
-            Me.Label3.Size = New System.Drawing.Size(45, 13)
+            Me.Label3.Size = New System.Drawing.Size(44, 13)
             Me.Label3.TabIndex = 16
             Me.Label3.Text = "FECHA:"
             '
@@ -255,7 +234,7 @@
             Me.txtFecha.Enabled = False
             Me.txtFecha.Location = New System.Drawing.Point(119, 47)
             Me.txtFecha.Name = "txtFecha"
-            Me.txtFecha.Size = New System.Drawing.Size(156, 20)
+            Me.txtFecha.Size = New System.Drawing.Size(156, 21)
             Me.txtFecha.TabIndex = 17
             '
             'Label4
@@ -263,7 +242,7 @@
             Me.Label4.AutoSize = True
             Me.Label4.Location = New System.Drawing.Point(12, 81)
             Me.Label4.Name = "Label4"
-            Me.Label4.Size = New System.Drawing.Size(102, 13)
+            Me.Label4.Size = New System.Drawing.Size(98, 13)
             Me.Label4.TabIndex = 18
             Me.Label4.Text = "N° DEPRECIACION"
             '
@@ -272,7 +251,7 @@
             Me.txtNroDepreciacion.Enabled = False
             Me.txtNroDepreciacion.Location = New System.Drawing.Point(119, 78)
             Me.txtNroDepreciacion.Name = "txtNroDepreciacion"
-            Me.txtNroDepreciacion.Size = New System.Drawing.Size(97, 20)
+            Me.txtNroDepreciacion.Size = New System.Drawing.Size(97, 21)
             Me.txtNroDepreciacion.TabIndex = 19
             '
             'Label5
@@ -280,7 +259,7 @@
             Me.Label5.AutoSize = True
             Me.Label5.Location = New System.Drawing.Point(445, 25)
             Me.Label5.Name = "Label5"
-            Me.Label5.Size = New System.Drawing.Size(129, 13)
+            Me.Label5.Size = New System.Drawing.Size(124, 13)
             Me.Label5.TabIndex = 20
             Me.Label5.Text = "VALOR DEPRECIACION:"
             '
@@ -289,7 +268,7 @@
             Me.txtValorDepreciacion.Enabled = False
             Me.txtValorDepreciacion.Location = New System.Drawing.Point(580, 19)
             Me.txtValorDepreciacion.Name = "txtValorDepreciacion"
-            Me.txtValorDepreciacion.Size = New System.Drawing.Size(114, 20)
+            Me.txtValorDepreciacion.Size = New System.Drawing.Size(114, 21)
             Me.txtValorDepreciacion.TabIndex = 21
             '
             'Label6
@@ -297,7 +276,7 @@
             Me.Label6.AutoSize = True
             Me.Label6.Location = New System.Drawing.Point(445, 54)
             Me.Label6.Name = "Label6"
-            Me.Label6.Size = New System.Drawing.Size(103, 13)
+            Me.Label6.Size = New System.Drawing.Size(98, 13)
             Me.Label6.TabIndex = 22
             Me.Label6.Text = "VALOR RESIDUAL:"
             '
@@ -306,7 +285,7 @@
             Me.txtValorResidual.Enabled = False
             Me.txtValorResidual.Location = New System.Drawing.Point(582, 51)
             Me.txtValorResidual.Name = "txtValorResidual"
-            Me.txtValorResidual.Size = New System.Drawing.Size(114, 20)
+            Me.txtValorResidual.Size = New System.Drawing.Size(114, 21)
             Me.txtValorResidual.TabIndex = 23
             '
             'Label8
@@ -314,7 +293,7 @@
             Me.Label8.AutoSize = True
             Me.Label8.Location = New System.Drawing.Point(445, 81)
             Me.Label8.Name = "Label8"
-            Me.Label8.Size = New System.Drawing.Size(122, 13)
+            Me.Label8.Size = New System.Drawing.Size(117, 13)
             Me.Label8.TabIndex = 26
             Me.Label8.Text = "TOPE DEPRECIACIÓN:"
             '
@@ -323,7 +302,7 @@
             Me.txtTope.Enabled = False
             Me.txtTope.Location = New System.Drawing.Point(638, 78)
             Me.txtTope.Name = "txtTope"
-            Me.txtTope.Size = New System.Drawing.Size(56, 20)
+            Me.txtTope.Size = New System.Drawing.Size(56, 21)
             Me.txtTope.TabIndex = 27
             '
             'gbDepreciaciones
@@ -347,6 +326,7 @@
             Me.gbDepreciaciones.Controls.Add(Me.lblNro)
             Me.gbDepreciaciones.Controls.Add(Me.lblFecha)
             Me.gbDepreciaciones.Controls.Add(Me.lblIdDepreciacion)
+            Me.gbDepreciaciones.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.gbDepreciaciones.Location = New System.Drawing.Point(5, 307)
             Me.gbDepreciaciones.Name = "gbDepreciaciones"
             Me.gbDepreciaciones.Size = New System.Drawing.Size(998, 285)
@@ -370,7 +350,7 @@
             Me.lblValorResidual.ForeColor = System.Drawing.Color.Maroon
             Me.lblValorResidual.Location = New System.Drawing.Point(745, 50)
             Me.lblValorResidual.Name = "lblValorResidual"
-            Me.lblValorResidual.Size = New System.Drawing.Size(34, 13)
+            Me.lblValorResidual.Size = New System.Drawing.Size(33, 13)
             Me.lblValorResidual.TabIndex = 32
             Me.lblValorResidual.Text = "00,00"
             '
@@ -380,7 +360,7 @@
             Me.lblDepreciacion.ForeColor = System.Drawing.Color.Maroon
             Me.lblDepreciacion.Location = New System.Drawing.Point(745, 19)
             Me.lblDepreciacion.Name = "lblDepreciacion"
-            Me.lblDepreciacion.Size = New System.Drawing.Size(34, 13)
+            Me.lblDepreciacion.Size = New System.Drawing.Size(33, 13)
             Me.lblDepreciacion.TabIndex = 31
             Me.lblDepreciacion.Text = "00,00"
             '
@@ -453,20 +433,6 @@
             Me.btnReporte.Name = "btnReporte"
             Me.btnReporte.Size = New System.Drawing.Size(84, 20)
             Me.btnReporte.Text = "REPORTE"
-            '
-            'dtpDesde
-            '
-            Me.dtpDesde.Location = New System.Drawing.Point(638, 19)
-            Me.dtpDesde.Name = "dtpDesde"
-            Me.dtpDesde.Size = New System.Drawing.Size(176, 20)
-            Me.dtpDesde.TabIndex = 19
-            '
-            'dtpHasta
-            '
-            Me.dtpHasta.Location = New System.Drawing.Point(826, 19)
-            Me.dtpHasta.Name = "dtpHasta"
-            Me.dtpHasta.Size = New System.Drawing.Size(164, 20)
-            Me.dtpHasta.TabIndex = 20
             '
             'FormDepreciaciones
             '

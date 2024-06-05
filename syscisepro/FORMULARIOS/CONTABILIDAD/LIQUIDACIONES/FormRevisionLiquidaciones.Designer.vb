@@ -295,14 +295,14 @@
             Me.dgvLiquidacionesPendientes.Name = "dgvLiquidacionesPendientes"
             Me.dgvLiquidacionesPendientes.RowHeadersVisible = False
             Me.dgvLiquidacionesPendientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvLiquidacionesPendientes.Size = New System.Drawing.Size(910, 68)
+            Me.dgvLiquidacionesPendientes.Size = New System.Drawing.Size(905, 68)
             Me.dgvLiquidacionesPendientes.TabIndex = 22
             '
             'chkSeleccionarTodo
             '
             Me.chkSeleccionarTodo.AutoSize = True
             Me.chkSeleccionarTodo.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.chkSeleccionarTodo.Location = New System.Drawing.Point(770, -1)
+            Me.chkSeleccionarTodo.Location = New System.Drawing.Point(746, 1)
             Me.chkSeleccionarTodo.Name = "chkSeleccionarTodo"
             Me.chkSeleccionarTodo.RightToLeft = System.Windows.Forms.RightToLeft.Yes
             Me.chkSeleccionarTodo.Size = New System.Drawing.Size(147, 17)
@@ -314,7 +314,7 @@
             '
             Me.chkSeleccionarTodoNoDeducibles.AutoSize = True
             Me.chkSeleccionarTodoNoDeducibles.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.chkSeleccionarTodoNoDeducibles.Location = New System.Drawing.Point(771, -1)
+            Me.chkSeleccionarTodoNoDeducibles.Location = New System.Drawing.Point(746, -1)
             Me.chkSeleccionarTodoNoDeducibles.Name = "chkSeleccionarTodoNoDeducibles"
             Me.chkSeleccionarTodoNoDeducibles.RightToLeft = System.Windows.Forms.RightToLeft.Yes
             Me.chkSeleccionarTodoNoDeducibles.Size = New System.Drawing.Size(147, 17)
@@ -448,7 +448,7 @@
             Me.MenuStrip1.Name = "MenuStrip1"
             Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(7, 2, 0, 2)
             Me.MenuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
-            Me.MenuStrip1.Size = New System.Drawing.Size(913, 24)
+            Me.MenuStrip1.Size = New System.Drawing.Size(907, 24)
             Me.MenuStrip1.TabIndex = 184
             Me.MenuStrip1.Text = "msIngresoBodega"
             '
@@ -490,7 +490,7 @@
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.BackColor = System.Drawing.Color.White
-            Me.ClientSize = New System.Drawing.Size(913, 656)
+            Me.ClientSize = New System.Drawing.Size(907, 656)
             Me.Controls.Add(Me.gbNoDeducibles)
             Me.Controls.Add(Me.MenuStrip1)
             Me.Controls.Add(Me.dgvDetalleComprobanteRetencionCompra)

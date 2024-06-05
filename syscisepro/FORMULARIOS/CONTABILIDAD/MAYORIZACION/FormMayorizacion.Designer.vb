@@ -1,8 +1,8 @@
 ﻿Namespace FORMULARIOS.CONTABILIDAD.MAYORIZACION
     <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
     Partial Class FormMayorizacion
-        Inherits System.Windows.Forms.Form
-
+        'Inherits System.Windows.Forms.Form
+        Inherits Krypton.Toolkit.KryptonForm
         'Form reemplaza a Dispose para limpiar la lista de componentes.
         <System.Diagnostics.DebuggerNonUserCode()> _
         Protected Overrides Sub Dispose(ByVal disposing As Boolean)
@@ -457,6 +457,7 @@
             Me.Panel1.Controls.Add(Me.dtpFinal)
             Me.Panel1.Controls.Add(Me.lblDesde)
             Me.Panel1.Controls.Add(Me.lblHasta)
+            Me.Panel1.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Panel1.Location = New System.Drawing.Point(0, 25)
             Me.Panel1.Name = "Panel1"
             Me.Panel1.Size = New System.Drawing.Size(282, 52)
@@ -469,6 +470,7 @@
             Me.Panel2.Controls.Add(Me.txtCuentaPadre)
             Me.Panel2.Controls.Add(Me.Label1)
             Me.Panel2.Controls.Add(Me.dgvMayoresPadres)
+            Me.Panel2.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Panel2.Location = New System.Drawing.Point(288, 25)
             Me.Panel2.Name = "Panel2"
             Me.Panel2.Size = New System.Drawing.Size(660, 52)
@@ -480,7 +482,7 @@
             Me.CheckBox1.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
             Me.CheckBox1.Location = New System.Drawing.Point(516, 30)
             Me.CheckBox1.Name = "CheckBox1"
-            Me.CheckBox1.Size = New System.Drawing.Size(133, 17)
+            Me.CheckBox1.Size = New System.Drawing.Size(125, 17)
             Me.CheckBox1.TabIndex = 227
             Me.CheckBox1.Text = "ES CUENTA PADRE?"
             Me.CheckBox1.UseVisualStyleBackColor = True

@@ -8,10 +8,11 @@ using ClassLibraryCisepro3.TalentoHumano;
 using ClassLibraryCisepro3.UsuarioGeneral;
 using SysCisepro3.Datos;
 using SysCisepro3.Properties;
+using Krypton.Toolkit;
 
 namespace SysCisepro3.TalentoHumano
 {
-    public partial class FrmBuscarRolPago : Form
+    public partial class FrmBuscarRolPago : KryptonForm
     {
         /// <summary>
         /// CISEPRO 2019

@@ -89,7 +89,7 @@
             this.txtArea.Enabled = false;
             this.txtArea.Location = new System.Drawing.Point(441, 39);
             this.txtArea.Name = "txtArea";
-            this.txtArea.Size = new System.Drawing.Size(330, 20);
+            this.txtArea.Size = new System.Drawing.Size(330, 21);
             this.txtArea.TabIndex = 197;
             // 
             // Label1
@@ -114,7 +114,7 @@
             this.GroupBox1.Controls.Add(this.Label22);
             this.GroupBox1.Controls.Add(this.txtPersonal);
             this.GroupBox1.Controls.Add(this.Label26);
-            this.GroupBox1.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GroupBox1.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GroupBox1.Location = new System.Drawing.Point(4, 27);
             this.GroupBox1.Name = "GroupBox1";
             this.GroupBox1.Size = new System.Drawing.Size(778, 64);
@@ -129,7 +129,7 @@
             this.txtCargo.Enabled = false;
             this.txtCargo.Location = new System.Drawing.Point(50, 39);
             this.txtCargo.Name = "txtCargo";
-            this.txtCargo.Size = new System.Drawing.Size(327, 20);
+            this.txtCargo.Size = new System.Drawing.Size(327, 21);
             this.txtCargo.TabIndex = 195;
             // 
             // Label25
@@ -137,7 +137,7 @@
             this.Label25.AutoSize = true;
             this.Label25.Location = new System.Drawing.Point(4, 42);
             this.Label25.Name = "Label25";
-            this.Label25.Size = new System.Drawing.Size(43, 13);
+            this.Label25.Size = new System.Drawing.Size(47, 13);
             this.Label25.TabIndex = 194;
             this.Label25.Text = "CARGO:";
             // 
@@ -162,7 +162,7 @@
             this.txtIdPersonal.Enabled = false;
             this.txtIdPersonal.Location = new System.Drawing.Point(44, 13);
             this.txtIdPersonal.Name = "txtIdPersonal";
-            this.txtIdPersonal.Size = new System.Drawing.Size(47, 20);
+            this.txtIdPersonal.Size = new System.Drawing.Size(47, 21);
             this.txtIdPersonal.TabIndex = 28;
             // 
             // Label22
@@ -170,7 +170,7 @@
             this.Label22.AutoSize = true;
             this.Label22.Location = new System.Drawing.Point(18, 18);
             this.Label22.Name = "Label22";
-            this.Label22.Size = new System.Drawing.Size(25, 13);
+            this.Label22.Size = new System.Drawing.Size(20, 13);
             this.Label22.TabIndex = 8;
             this.Label22.Text = "ID:";
             // 
@@ -181,7 +181,7 @@
             this.txtPersonal.Enabled = false;
             this.txtPersonal.Location = new System.Drawing.Point(219, 16);
             this.txtPersonal.Name = "txtPersonal";
-            this.txtPersonal.Size = new System.Drawing.Size(529, 20);
+            this.txtPersonal.Size = new System.Drawing.Size(529, 21);
             this.txtPersonal.TabIndex = 0;
             // 
             // Label26
@@ -189,12 +189,13 @@
             this.Label26.AutoSize = true;
             this.Label26.Location = new System.Drawing.Point(167, 17);
             this.Label26.Name = "Label26";
-            this.Label26.Size = new System.Drawing.Size(55, 13);
+            this.Label26.Size = new System.Drawing.Size(63, 13);
             this.Label26.TabIndex = 3;
             this.Label26.Text = "NOMBRES:";
             // 
             // toolStrip1
             // 
+            this.toolStrip1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnBuscar,
             this.btnNuevo,
@@ -316,7 +317,7 @@
             this.GroupBox2.Controls.Add(this.cbxTipoCuenta);
             this.GroupBox2.Controls.Add(this.txtNumCuenta);
             this.GroupBox2.Controls.Add(this.Label46);
-            this.GroupBox2.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GroupBox2.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GroupBox2.Location = new System.Drawing.Point(4, 92);
             this.GroupBox2.Name = "GroupBox2";
             this.GroupBox2.Size = new System.Drawing.Size(778, 50);
@@ -401,6 +402,7 @@
             this.columnHeader22,
             this.columnHeader23});
             this.ListView1.FullRowSelect = true;
+            this.ListView1.HideSelection = false;
             this.ListView1.Location = new System.Drawing.Point(4, 190);
             this.ListView1.MultiSelect = false;
             this.ListView1.Name = "ListView1";

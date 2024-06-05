@@ -106,7 +106,8 @@ Namespace FORMULARIOS.FONDOS.FONDO_ROTATIVO.REPORTES
                     MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorCisepro
                     MenuStrip1.ForeColor = Color.White
                     dgvControlCombustible.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
-            End Select 
+            End Select
+            dgvControlCombustible.Font = New Font("Roboto", 8, FontStyle.Regular)
         End Sub
 
         Private Sub btnReporte_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnReporte.Click

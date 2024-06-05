@@ -64,7 +64,7 @@
             '
             Me.rbTodas.AutoSize = True
             Me.rbTodas.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.rbTodas.Location = New System.Drawing.Point(494, 36)
+            Me.rbTodas.Location = New System.Drawing.Point(494, 38)
             Me.rbTodas.Name = "rbTodas"
             Me.rbTodas.Size = New System.Drawing.Size(61, 17)
             Me.rbTodas.TabIndex = 2
@@ -111,7 +111,7 @@
             '
             Me.rbCustodioAnterior.AutoSize = True
             Me.rbCustodioAnterior.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.rbCustodioAnterior.Location = New System.Drawing.Point(494, 6)
+            Me.rbCustodioAnterior.Location = New System.Drawing.Point(494, 4)
             Me.rbCustodioAnterior.Name = "rbCustodioAnterior"
             Me.rbCustodioAnterior.Size = New System.Drawing.Size(135, 17)
             Me.rbCustodioAnterior.TabIndex = 5

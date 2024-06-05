@@ -11,6 +11,7 @@ using ClassLibraryCisepro3.UsuarioGeneral;
 using ClassLibraryCisepro3.ProcesosSql;
 using SysCisepro3.Main;
 using Microsoft.Office.Interop.Excel;
+using Krypton.Toolkit;
 
 using DataTable = System.Data.DataTable;
 using Font = System.Drawing.Font;
@@ -29,7 +30,7 @@ using CrystalDecisions.CrystalReports.Engine;
 
 namespace SysCisepro3.TalentoHumano
 {
-    public partial class FrmRolPago : Form
+    public partial class FrmRolPago : KryptonForm
     {
         /// <summary>
         /// CISEPRO 2019

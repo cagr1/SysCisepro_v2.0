@@ -72,14 +72,14 @@ Namespace FORMULARIOS.OPERACIONES
                 Case TipoConexion.Asenava
                     Icon = My.Resources.logo_a
                     MenuStrip1.ForeColor = Color.White
-                    MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorAsenava
+                    '  MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorAsenava
                     MenuStrip2.ForeColor = Color.White
-                    MenuStrip2.BackColor = My.MySettingsProperty.Settings.ColorAsenava
+                    'MenuStrip2.BackColor = My.MySettingsProperty.Settings.ColorAsenava
                     Label24.ForeColor = Color.White
                     Label24.BackColor = My.MySettingsProperty.Settings.ColorAsenava
-                    Label7.ForeColor = Color.White
+                    'Label7.ForeColor = Color.White
                     Label7.BackColor = My.MySettingsProperty.Settings.ColorAsenava
-                    Label8.ForeColor = Color.White
+                    'Label8.ForeColor = Color.White
                     Label8.BackColor = My.MySettingsProperty.Settings.ColorAsenava
                     Label2.ForeColor = Color.White
                     Label2.BackColor = My.MySettingsProperty.Settings.ColorAsenava
@@ -89,15 +89,15 @@ Namespace FORMULARIOS.OPERACIONES
                     dgvNoche.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorAsenava
                 Case TipoConexion.Seportpac
                     Icon = My.Resources.logo_s
-                    MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
+                    'MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
                     MenuStrip1.ForeColor = Color.White
                     MenuStrip2.ForeColor = Color.White
-                    MenuStrip2.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
+                    ' MenuStrip2.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
                     Label24.ForeColor = Color.White
                     Label24.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
-                    Label7.ForeColor = Color.White
+                    'Label7.ForeColor = Color.White
                     Label7.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
-                    Label8.ForeColor = Color.White
+                    'Label8.ForeColor = Color.White
                     Label8.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
                     Label2.ForeColor = Color.White
                     Label2.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
@@ -107,16 +107,16 @@ Namespace FORMULARIOS.OPERACIONES
                     dgvNoche.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorSeportpac
                 Case Else
                     Icon = My.Resources.logo_c
-                    MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorCisepro
+                    'MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorCisepro
                     MenuStrip1.ForeColor = Color.White
                     MenuStrip2.ForeColor = Color.White
-                    MenuStrip2.BackColor = My.MySettingsProperty.Settings.ColorCisepro
+                    'MenuStrip2.BackColor = My.MySettingsProperty.Settings.ColorCisepro
                     Label24.ForeColor = Color.White
                     Label24.BackColor = My.MySettingsProperty.Settings.ColorCisepro
-                    Label7.ForeColor = Color.White
-                    Label7.BackColor = My.MySettingsProperty.Settings.ColorCisepro
-                    Label8.ForeColor = Color.White
-                    Label8.BackColor = My.MySettingsProperty.Settings.ColorCisepro
+                    Label7.ForeColor = My.MySettingsProperty.Settings.ColorCisepro
+                    'Label7.BackColor = My.MySettingsProperty.Settings.ColorCisepro
+                    Label8.ForeColor = My.MySettingsProperty.Settings.ColorCisepro
+                    'Label8.BackColor = My.MySettingsProperty.Settings.ColorCisepro
                     Label2.ForeColor = Color.White
                     Label2.BackColor = My.MySettingsProperty.Settings.ColorCisepro
                     Label4.ForeColor = Color.White

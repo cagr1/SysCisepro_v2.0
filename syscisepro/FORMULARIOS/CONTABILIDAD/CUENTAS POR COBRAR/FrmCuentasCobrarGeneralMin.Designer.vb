@@ -1,8 +1,8 @@
 ﻿Namespace FORMULARIOS.CONTABILIDAD.CUENTAS_POR_COBRAR
     <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
     Partial Class FrmCuentasCobrarGeneralMin
-        Inherits System.Windows.Forms.Form
-
+        'Inherits System.Windows.Forms.Form
+        Inherits Krypton.Toolkit.KryptonForm
         'Form reemplaza a Dispose para limpiar la lista de componentes.
         <System.Diagnostics.DebuggerNonUserCode()> _
         Protected Overrides Sub Dispose(ByVal disposing As Boolean)
@@ -23,8 +23,8 @@
         'No lo modifique con el editor de código.
         <System.Diagnostics.DebuggerStepThrough()> _
         Private Sub InitializeComponent()
-            Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmCuentasCobrarGeneralMin))
             Me.gbTipoReporte = New System.Windows.Forms.GroupBox()
             Me.Label2 = New System.Windows.Forms.Label()
@@ -62,7 +62,7 @@
             Me.gbTipoReporte.Controls.Add(Me.Label7)
             Me.gbTipoReporte.Controls.Add(Me.dtpHasta)
             Me.gbTipoReporte.Controls.Add(Me.dtpDesde)
-            Me.gbTipoReporte.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.gbTipoReporte.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.gbTipoReporte.ForeColor = System.Drawing.Color.Black
             Me.gbTipoReporte.Location = New System.Drawing.Point(-1, 26)
             Me.gbTipoReporte.Name = "gbTipoReporte"
@@ -76,7 +76,7 @@
             Me.Label2.AutoSize = True
             Me.Label2.Location = New System.Drawing.Point(524, -2)
             Me.Label2.Name = "Label2"
-            Me.Label2.Size = New System.Drawing.Size(55, 13)
+            Me.Label2.Size = New System.Drawing.Size(53, 13)
             Me.Label2.TabIndex = 77
             Me.Label2.Text = "CLIENTE:"
             '
@@ -85,7 +85,7 @@
             Me.lblIdClienteGeneral.AutoSize = True
             Me.lblIdClienteGeneral.Location = New System.Drawing.Point(595, -1)
             Me.lblIdClienteGeneral.Name = "lblIdClienteGeneral"
-            Me.lblIdClienteGeneral.Size = New System.Drawing.Size(25, 13)
+            Me.lblIdClienteGeneral.Size = New System.Drawing.Size(16, 13)
             Me.lblIdClienteGeneral.TabIndex = 76
             Me.lblIdClienteGeneral.Text = "..."
             '
@@ -94,11 +94,11 @@
             Me.txtNombreComercialClienteGeneral.BackColor = System.Drawing.Color.White
             Me.txtNombreComercialClienteGeneral.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtNombreComercialClienteGeneral.Enabled = False
-            Me.txtNombreComercialClienteGeneral.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtNombreComercialClienteGeneral.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtNombreComercialClienteGeneral.ForeColor = System.Drawing.SystemColors.ControlText
             Me.txtNombreComercialClienteGeneral.Location = New System.Drawing.Point(525, 14)
             Me.txtNombreComercialClienteGeneral.Name = "txtNombreComercialClienteGeneral"
-            Me.txtNombreComercialClienteGeneral.Size = New System.Drawing.Size(288, 20)
+            Me.txtNombreComercialClienteGeneral.Size = New System.Drawing.Size(288, 21)
             Me.txtNombreComercialClienteGeneral.TabIndex = 2
             '
             'Label1
@@ -106,7 +106,7 @@
             Me.Label1.AutoSize = True
             Me.Label1.Location = New System.Drawing.Point(215, 18)
             Me.Label1.Name = "Label1"
-            Me.Label1.Size = New System.Drawing.Size(43, 13)
+            Me.Label1.Size = New System.Drawing.Size(41, 13)
             Me.Label1.TabIndex = 4
             Me.Label1.Text = "Desde:"
             '
@@ -115,7 +115,7 @@
             Me.rbPorCliente.AutoSize = True
             Me.rbPorCliente.Location = New System.Drawing.Point(103, 18)
             Me.rbPorCliente.Name = "rbPorCliente"
-            Me.rbPorCliente.Size = New System.Drawing.Size(91, 17)
+            Me.rbPorCliente.Size = New System.Drawing.Size(93, 17)
             Me.rbPorCliente.TabIndex = 1
             Me.rbPorCliente.TabStop = True
             Me.rbPorCliente.Text = "POR CLIENTE"
@@ -126,7 +126,7 @@
             Me.rbGeneral.AutoSize = True
             Me.rbGeneral.Location = New System.Drawing.Point(13, 18)
             Me.rbGeneral.Name = "rbGeneral"
-            Me.rbGeneral.Size = New System.Drawing.Size(67, 17)
+            Me.rbGeneral.Size = New System.Drawing.Size(73, 17)
             Me.rbGeneral.TabIndex = 0
             Me.rbGeneral.TabStop = True
             Me.rbGeneral.Text = "GENERAL"
@@ -137,7 +137,7 @@
             Me.Label7.AutoSize = True
             Me.Label7.Location = New System.Drawing.Point(382, 18)
             Me.Label7.Name = "Label7"
-            Me.Label7.Size = New System.Drawing.Size(19, 13)
+            Me.Label7.Size = New System.Drawing.Size(16, 13)
             Me.Label7.TabIndex = 2
             Me.Label7.Text = "a:"
             '
@@ -146,7 +146,7 @@
             Me.dtpHasta.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
             Me.dtpHasta.Location = New System.Drawing.Point(401, 15)
             Me.dtpHasta.Name = "dtpHasta"
-            Me.dtpHasta.Size = New System.Drawing.Size(98, 20)
+            Me.dtpHasta.Size = New System.Drawing.Size(98, 21)
             Me.dtpHasta.TabIndex = 1
             '
             'dtpDesde
@@ -154,12 +154,13 @@
             Me.dtpDesde.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
             Me.dtpDesde.Location = New System.Drawing.Point(262, 15)
             Me.dtpDesde.Name = "dtpDesde"
-            Me.dtpDesde.Size = New System.Drawing.Size(97, 20)
+            Me.dtpDesde.Size = New System.Drawing.Size(97, 21)
             Me.dtpDesde.TabIndex = 0
             Me.dtpDesde.Value = New Date(2013, 1, 1, 0, 1, 0, 0)
             '
             'ChkTodos
             '
+            Me.ChkTodos.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.ChkTodos.Location = New System.Drawing.Point(707, 4)
             Me.ChkTodos.Name = "ChkTodos"
             Me.ChkTodos.Size = New System.Drawing.Size(104, 15)
@@ -195,19 +196,19 @@
             Me.dgvCuentasPorCobrar.AllowUserToAddRows = False
             Me.dgvCuentasPorCobrar.AllowUserToDeleteRows = False
             Me.dgvCuentasPorCobrar.AllowUserToResizeRows = False
-            DataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-            Me.dgvCuentasPorCobrar.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle3
+            DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+            Me.dgvCuentasPorCobrar.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
             Me.dgvCuentasPorCobrar.BackgroundColor = System.Drawing.Color.White
             Me.dgvCuentasPorCobrar.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
             Me.dgvCuentasPorCobrar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-            DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-            DataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window
-            DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText
-            DataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(123, Byte), Integer))
-            DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-            DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-            Me.dgvCuentasPorCobrar.DefaultCellStyle = DataGridViewCellStyle4
+            DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+            DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
+            DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
+            DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(123, Byte), Integer))
+            DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+            DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+            Me.dgvCuentasPorCobrar.DefaultCellStyle = DataGridViewCellStyle2
             Me.dgvCuentasPorCobrar.GridColor = System.Drawing.SystemColors.ControlLightLight
             Me.dgvCuentasPorCobrar.Location = New System.Drawing.Point(0, 65)
             Me.dgvCuentasPorCobrar.MultiSelect = False

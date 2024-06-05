@@ -66,8 +66,8 @@
             Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
             Me.btnNuevo = New System.Windows.Forms.ToolStripMenuItem()
             Me.btnGuardar = New System.Windows.Forms.ToolStripMenuItem()
-            Me.btnCancelar = New System.Windows.Forms.ToolStripMenuItem()
             Me.btnModificar = New System.Windows.Forms.ToolStripMenuItem()
+            Me.btnCancelar = New System.Windows.Forms.ToolStripMenuItem()
             Me.gbEmpresa.SuspendLayout()
             Me.gbSecuenciaComprobantes.SuspendLayout()
             Me.GroupBox1.SuspendLayout()
@@ -93,7 +93,7 @@
             Me.gbEmpresa.Controls.Add(Me.txtRucEmpresa)
             Me.gbEmpresa.Controls.Add(Me.txtRazonSocialEmpresa)
             Me.gbEmpresa.Controls.Add(Me.txtNombreComercialEmpresa)
-            Me.gbEmpresa.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.gbEmpresa.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.gbEmpresa.Location = New System.Drawing.Point(2, 24)
             Me.gbEmpresa.Name = "gbEmpresa"
             Me.gbEmpresa.Size = New System.Drawing.Size(626, 173)
@@ -106,7 +106,7 @@
             Me.Label6.AutoSize = True
             Me.Label6.Location = New System.Drawing.Point(327, 143)
             Me.Label6.Name = "Label6"
-            Me.Label6.Size = New System.Drawing.Size(181, 13)
+            Me.Label6.Size = New System.Drawing.Size(186, 13)
             Me.Label6.TabIndex = 13
             Me.Label6.Text = "OBLIGADO LLEVAR CONTABILIDAD:"
             '
@@ -115,7 +115,7 @@
             Me.Label5.AutoSize = True
             Me.Label5.Location = New System.Drawing.Point(7, 143)
             Me.Label5.Name = "Label5"
-            Me.Label5.Size = New System.Drawing.Size(187, 13)
+            Me.Label5.Size = New System.Drawing.Size(190, 13)
             Me.Label5.TabIndex = 12
             Me.Label5.Text = "NRO RESOLUCIÓN CONT. ESPECIAL:"
             '
@@ -133,7 +133,7 @@
             Me.Label3.AutoSize = True
             Me.Label3.Location = New System.Drawing.Point(7, 81)
             Me.Label3.Name = "Label3"
-            Me.Label3.Size = New System.Drawing.Size(109, 13)
+            Me.Label3.Size = New System.Drawing.Size(120, 13)
             Me.Label3.TabIndex = 10
             Me.Label3.Text = "NOMBRE COMERCIAL:"
             '
@@ -142,7 +142,7 @@
             Me.Label2.AutoSize = True
             Me.Label2.Location = New System.Drawing.Point(7, 50)
             Me.Label2.Name = "Label2"
-            Me.Label2.Size = New System.Drawing.Size(85, 13)
+            Me.Label2.Size = New System.Drawing.Size(88, 13)
             Me.Label2.TabIndex = 9
             Me.Label2.Text = "RAZÓN SOCIAL:"
             '
@@ -151,7 +151,7 @@
             Me.Label1.AutoSize = True
             Me.Label1.Location = New System.Drawing.Point(7, 19)
             Me.Label1.Name = "Label1"
-            Me.Label1.Size = New System.Drawing.Size(49, 13)
+            Me.Label1.Size = New System.Drawing.Size(40, 13)
             Me.Label1.TabIndex = 8
             Me.Label1.Text = "R.U.C.:"
             '
@@ -160,7 +160,7 @@
             Me.chkEmpresa.AutoSize = True
             Me.chkEmpresa.Location = New System.Drawing.Point(550, -1)
             Me.chkEmpresa.Name = "chkEmpresa"
-            Me.chkEmpresa.Size = New System.Drawing.Size(68, 17)
+            Me.chkEmpresa.Size = New System.Drawing.Size(71, 17)
             Me.chkEmpresa.TabIndex = 7
             Me.chkEmpresa.Text = "ACTIVAR"
             Me.chkEmpresa.UseVisualStyleBackColor = True
@@ -170,7 +170,7 @@
             Me.lblIdEmpresa.AutoSize = True
             Me.lblIdEmpresa.Location = New System.Drawing.Point(61, 0)
             Me.lblIdEmpresa.Name = "lblIdEmpresa"
-            Me.lblIdEmpresa.Size = New System.Drawing.Size(13, 13)
+            Me.lblIdEmpresa.Size = New System.Drawing.Size(10, 13)
             Me.lblIdEmpresa.TabIndex = 6
             Me.lblIdEmpresa.Text = "."
             '
@@ -180,7 +180,7 @@
             Me.txtLlevaContabilidadEmpresa.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtLlevaContabilidadEmpresa.Location = New System.Drawing.Point(520, 140)
             Me.txtLlevaContabilidadEmpresa.Name = "txtLlevaContabilidadEmpresa"
-            Me.txtLlevaContabilidadEmpresa.Size = New System.Drawing.Size(98, 20)
+            Me.txtLlevaContabilidadEmpresa.Size = New System.Drawing.Size(98, 21)
             Me.txtLlevaContabilidadEmpresa.TabIndex = 5
             '
             'txtContribuyenteEspecialEmpresa
@@ -189,7 +189,7 @@
             Me.txtContribuyenteEspecialEmpresa.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtContribuyenteEspecialEmpresa.Location = New System.Drawing.Point(200, 140)
             Me.txtContribuyenteEspecialEmpresa.Name = "txtContribuyenteEspecialEmpresa"
-            Me.txtContribuyenteEspecialEmpresa.Size = New System.Drawing.Size(115, 20)
+            Me.txtContribuyenteEspecialEmpresa.Size = New System.Drawing.Size(115, 21)
             Me.txtContribuyenteEspecialEmpresa.TabIndex = 4
             Me.txtContribuyenteEspecialEmpresa.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
             '
@@ -199,7 +199,7 @@
             Me.txtDireccionMatrizEmpresa.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtDireccionMatrizEmpresa.Location = New System.Drawing.Point(116, 109)
             Me.txtDireccionMatrizEmpresa.Name = "txtDireccionMatrizEmpresa"
-            Me.txtDireccionMatrizEmpresa.Size = New System.Drawing.Size(502, 20)
+            Me.txtDireccionMatrizEmpresa.Size = New System.Drawing.Size(502, 21)
             Me.txtDireccionMatrizEmpresa.TabIndex = 3
             '
             'txtRucEmpresa
@@ -208,7 +208,7 @@
             Me.txtRucEmpresa.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtRucEmpresa.Location = New System.Drawing.Point(116, 16)
             Me.txtRucEmpresa.Name = "txtRucEmpresa"
-            Me.txtRucEmpresa.Size = New System.Drawing.Size(100, 20)
+            Me.txtRucEmpresa.Size = New System.Drawing.Size(100, 21)
             Me.txtRucEmpresa.TabIndex = 2
             '
             'txtRazonSocialEmpresa
@@ -217,7 +217,7 @@
             Me.txtRazonSocialEmpresa.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtRazonSocialEmpresa.Location = New System.Drawing.Point(116, 47)
             Me.txtRazonSocialEmpresa.Name = "txtRazonSocialEmpresa"
-            Me.txtRazonSocialEmpresa.Size = New System.Drawing.Size(502, 20)
+            Me.txtRazonSocialEmpresa.Size = New System.Drawing.Size(502, 21)
             Me.txtRazonSocialEmpresa.TabIndex = 1
             '
             'txtNombreComercialEmpresa
@@ -226,7 +226,7 @@
             Me.txtNombreComercialEmpresa.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtNombreComercialEmpresa.Location = New System.Drawing.Point(116, 78)
             Me.txtNombreComercialEmpresa.Name = "txtNombreComercialEmpresa"
-            Me.txtNombreComercialEmpresa.Size = New System.Drawing.Size(502, 20)
+            Me.txtNombreComercialEmpresa.Size = New System.Drawing.Size(502, 21)
             Me.txtNombreComercialEmpresa.TabIndex = 0
             '
             'gbSecuenciaComprobantes
@@ -240,7 +240,7 @@
             Me.gbSecuenciaComprobantes.Controls.Add(Me.txtSecuencialComprobanteRetencion)
             Me.gbSecuenciaComprobantes.Controls.Add(Me.txtSecuencialNotaCredito)
             Me.gbSecuenciaComprobantes.Controls.Add(Me.txtSecuencialFactura)
-            Me.gbSecuenciaComprobantes.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.gbSecuenciaComprobantes.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.gbSecuenciaComprobantes.Location = New System.Drawing.Point(2, 197)
             Me.gbSecuenciaComprobantes.Name = "gbSecuenciaComprobantes"
             Me.gbSecuenciaComprobantes.Size = New System.Drawing.Size(321, 97)
@@ -253,7 +253,7 @@
             Me.Label9.AutoSize = True
             Me.Label9.Location = New System.Drawing.Point(7, 73)
             Me.Label9.Name = "Label9"
-            Me.Label9.Size = New System.Drawing.Size(169, 13)
+            Me.Label9.Size = New System.Drawing.Size(173, 13)
             Me.Label9.TabIndex = 16
             Me.Label9.Text = "SECUENCIAL COMP. RETENCIÓN:"
             '
@@ -262,7 +262,7 @@
             Me.Label8.AutoSize = True
             Me.Label8.Location = New System.Drawing.Point(7, 47)
             Me.Label8.Name = "Label8"
-            Me.Label8.Size = New System.Drawing.Size(151, 13)
+            Me.Label8.Size = New System.Drawing.Size(155, 13)
             Me.Label8.TabIndex = 15
             Me.Label8.Text = "SECUENCIAL NOTA CRÉDITO:"
             '
@@ -271,7 +271,7 @@
             Me.Label7.AutoSize = True
             Me.Label7.Location = New System.Drawing.Point(7, 21)
             Me.Label7.Name = "Label7"
-            Me.Label7.Size = New System.Drawing.Size(121, 13)
+            Me.Label7.Size = New System.Drawing.Size(124, 13)
             Me.Label7.TabIndex = 14
             Me.Label7.Text = "SECUENCIAL FACTURA:"
             '
@@ -280,7 +280,7 @@
             Me.lblIdInformacionTributaria.AutoSize = True
             Me.lblIdInformacionTributaria.Location = New System.Drawing.Point(146, 0)
             Me.lblIdInformacionTributaria.Name = "lblIdInformacionTributaria"
-            Me.lblIdInformacionTributaria.Size = New System.Drawing.Size(13, 13)
+            Me.lblIdInformacionTributaria.Size = New System.Drawing.Size(10, 13)
             Me.lblIdInformacionTributaria.TabIndex = 7
             Me.lblIdInformacionTributaria.Text = "."
             '
@@ -289,7 +289,7 @@
             Me.chkSecuenciales.AutoSize = True
             Me.chkSecuenciales.Location = New System.Drawing.Point(244, -1)
             Me.chkSecuenciales.Name = "chkSecuenciales"
-            Me.chkSecuenciales.Size = New System.Drawing.Size(68, 17)
+            Me.chkSecuenciales.Size = New System.Drawing.Size(71, 17)
             Me.chkSecuenciales.TabIndex = 8
             Me.chkSecuenciales.Text = "ACTIVAR"
             Me.chkSecuenciales.UseVisualStyleBackColor = True
@@ -300,7 +300,7 @@
             Me.txtSecuencialComprobanteRetencion.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtSecuencialComprobanteRetencion.Location = New System.Drawing.Point(182, 70)
             Me.txtSecuencialComprobanteRetencion.Name = "txtSecuencialComprobanteRetencion"
-            Me.txtSecuencialComprobanteRetencion.Size = New System.Drawing.Size(133, 20)
+            Me.txtSecuencialComprobanteRetencion.Size = New System.Drawing.Size(133, 21)
             Me.txtSecuencialComprobanteRetencion.TabIndex = 2
             Me.txtSecuencialComprobanteRetencion.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
             '
@@ -310,7 +310,7 @@
             Me.txtSecuencialNotaCredito.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtSecuencialNotaCredito.Location = New System.Drawing.Point(182, 44)
             Me.txtSecuencialNotaCredito.Name = "txtSecuencialNotaCredito"
-            Me.txtSecuencialNotaCredito.Size = New System.Drawing.Size(133, 20)
+            Me.txtSecuencialNotaCredito.Size = New System.Drawing.Size(133, 21)
             Me.txtSecuencialNotaCredito.TabIndex = 1
             Me.txtSecuencialNotaCredito.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
             '
@@ -320,7 +320,7 @@
             Me.txtSecuencialFactura.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtSecuencialFactura.Location = New System.Drawing.Point(182, 18)
             Me.txtSecuencialFactura.Name = "txtSecuencialFactura"
-            Me.txtSecuencialFactura.Size = New System.Drawing.Size(133, 20)
+            Me.txtSecuencialFactura.Size = New System.Drawing.Size(133, 21)
             Me.txtSecuencialFactura.TabIndex = 0
             Me.txtSecuencialFactura.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
             '
@@ -400,7 +400,7 @@
             Me.gbNumeroAutorizaciones.Controls.Add(Me.txtNroAutorizacionComprobanteRetencion)
             Me.gbNumeroAutorizaciones.Controls.Add(Me.txtNroAutorizaciónNotaCredito)
             Me.gbNumeroAutorizaciones.Controls.Add(Me.txtNroAutorizacionFactura)
-            Me.gbNumeroAutorizaciones.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.gbNumeroAutorizaciones.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.gbNumeroAutorizaciones.Location = New System.Drawing.Point(323, 197)
             Me.gbNumeroAutorizaciones.Name = "gbNumeroAutorizaciones"
             Me.gbNumeroAutorizaciones.Size = New System.Drawing.Size(305, 97)
@@ -413,7 +413,7 @@
             Me.Label12.AutoSize = True
             Me.Label12.Location = New System.Drawing.Point(6, 73)
             Me.Label12.Name = "Label12"
-            Me.Label12.Size = New System.Drawing.Size(127, 13)
+            Me.Label12.Size = New System.Drawing.Size(125, 13)
             Me.Label12.TabIndex = 19
             Me.Label12.Text = "AUTORIZACIÓN SRI Nº:"
             '
@@ -422,7 +422,7 @@
             Me.Label11.AutoSize = True
             Me.Label11.Location = New System.Drawing.Point(6, 47)
             Me.Label11.Name = "Label11"
-            Me.Label11.Size = New System.Drawing.Size(127, 13)
+            Me.Label11.Size = New System.Drawing.Size(125, 13)
             Me.Label11.TabIndex = 18
             Me.Label11.Text = "AUTORIZACIÓN SRI Nº:"
             '
@@ -431,7 +431,7 @@
             Me.Label10.AutoSize = True
             Me.Label10.Location = New System.Drawing.Point(6, 21)
             Me.Label10.Name = "Label10"
-            Me.Label10.Size = New System.Drawing.Size(127, 13)
+            Me.Label10.Size = New System.Drawing.Size(125, 13)
             Me.Label10.TabIndex = 17
             Me.Label10.Text = "AUTORIZACIÓN SRI Nº:"
             '
@@ -440,7 +440,7 @@
             Me.chkNroAutorizaciones.AutoSize = True
             Me.chkNroAutorizaciones.Location = New System.Drawing.Point(225, -1)
             Me.chkNroAutorizaciones.Name = "chkNroAutorizaciones"
-            Me.chkNroAutorizaciones.Size = New System.Drawing.Size(68, 17)
+            Me.chkNroAutorizaciones.Size = New System.Drawing.Size(71, 17)
             Me.chkNroAutorizaciones.TabIndex = 8
             Me.chkNroAutorizaciones.Text = "ACTIVAR"
             Me.chkNroAutorizaciones.UseVisualStyleBackColor = True
@@ -451,7 +451,7 @@
             Me.txtNroAutorizacionComprobanteRetencion.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtNroAutorizacionComprobanteRetencion.Location = New System.Drawing.Point(139, 70)
             Me.txtNroAutorizacionComprobanteRetencion.Name = "txtNroAutorizacionComprobanteRetencion"
-            Me.txtNroAutorizacionComprobanteRetencion.Size = New System.Drawing.Size(158, 20)
+            Me.txtNroAutorizacionComprobanteRetencion.Size = New System.Drawing.Size(158, 21)
             Me.txtNroAutorizacionComprobanteRetencion.TabIndex = 2
             Me.txtNroAutorizacionComprobanteRetencion.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
             '
@@ -461,7 +461,7 @@
             Me.txtNroAutorizaciónNotaCredito.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtNroAutorizaciónNotaCredito.Location = New System.Drawing.Point(139, 44)
             Me.txtNroAutorizaciónNotaCredito.Name = "txtNroAutorizaciónNotaCredito"
-            Me.txtNroAutorizaciónNotaCredito.Size = New System.Drawing.Size(158, 20)
+            Me.txtNroAutorizaciónNotaCredito.Size = New System.Drawing.Size(158, 21)
             Me.txtNroAutorizaciónNotaCredito.TabIndex = 1
             Me.txtNroAutorizaciónNotaCredito.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
             '
@@ -471,7 +471,7 @@
             Me.txtNroAutorizacionFactura.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtNroAutorizacionFactura.Location = New System.Drawing.Point(139, 18)
             Me.txtNroAutorizacionFactura.Name = "txtNroAutorizacionFactura"
-            Me.txtNroAutorizacionFactura.Size = New System.Drawing.Size(158, 20)
+            Me.txtNroAutorizacionFactura.Size = New System.Drawing.Size(158, 21)
             Me.txtNroAutorizacionFactura.TabIndex = 0
             Me.txtNroAutorizacionFactura.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
             '
@@ -512,15 +512,6 @@
             Me.btnGuardar.Size = New System.Drawing.Size(87, 20)
             Me.btnGuardar.Text = "GUARDAR"
             '
-            'btnCancelar
-            '
-            Me.btnCancelar.Enabled = False
-            Me.btnCancelar.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnCancelar.Image = Global.syscisepro.My.Resources.Resources.cancel
-            Me.btnCancelar.Name = "btnCancelar"
-            Me.btnCancelar.Size = New System.Drawing.Size(89, 20)
-            Me.btnCancelar.Text = "CANCELAR"
-            '
             'btnModificar
             '
             Me.btnModificar.Enabled = False
@@ -529,6 +520,15 @@
             Me.btnModificar.Name = "btnModificar"
             Me.btnModificar.Size = New System.Drawing.Size(95, 20)
             Me.btnModificar.Text = "MODIFICAR"
+            '
+            'btnCancelar
+            '
+            Me.btnCancelar.Enabled = False
+            Me.btnCancelar.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.btnCancelar.Image = Global.syscisepro.My.Resources.Resources.cancel
+            Me.btnCancelar.Name = "btnCancelar"
+            Me.btnCancelar.Size = New System.Drawing.Size(89, 20)
+            Me.btnCancelar.Text = "CANCELAR"
             '
             'FormInformacionTributaria
             '

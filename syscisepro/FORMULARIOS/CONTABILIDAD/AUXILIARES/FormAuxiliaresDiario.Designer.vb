@@ -1,8 +1,8 @@
 ﻿Namespace FORMULARIOS.CONTABILIDAD.AUXILIARES
     <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
     Partial Class FormAuxiliaresDiario
-        Inherits System.Windows.Forms.Form
-
+        'Inherits System.Windows.Forms.Form
+        Inherits Krypton.Toolkit.KryptonForm
         'Form reemplaza a Dispose para limpiar la lista de componentes.
         <System.Diagnostics.DebuggerNonUserCode()> _
         Protected Overrides Sub Dispose(ByVal disposing As Boolean)
@@ -112,10 +112,10 @@
             'Label7
             '
             Me.Label7.AutoSize = True
-            Me.Label7.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label7.Location = New System.Drawing.Point(822, 13)
+            Me.Label7.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Label7.Location = New System.Drawing.Point(819, 13)
             Me.Label7.Name = "Label7"
-            Me.Label7.Size = New System.Drawing.Size(41, 13)
+            Me.Label7.Size = New System.Drawing.Size(45, 13)
             Me.Label7.TabIndex = 251
             Me.Label7.Text = "HABER:"
             '
@@ -123,19 +123,20 @@
             '
             Me.txtHaberSumaAsientos.BackColor = System.Drawing.Color.White
             Me.txtHaberSumaAsientos.Enabled = False
+            Me.txtHaberSumaAsientos.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtHaberSumaAsientos.Location = New System.Drawing.Point(863, 7)
             Me.txtHaberSumaAsientos.Name = "txtHaberSumaAsientos"
-            Me.txtHaberSumaAsientos.Size = New System.Drawing.Size(107, 22)
+            Me.txtHaberSumaAsientos.Size = New System.Drawing.Size(107, 21)
             Me.txtHaberSumaAsientos.TabIndex = 250
             Me.txtHaberSumaAsientos.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
             '
             'Label8
             '
             Me.Label8.AutoSize = True
-            Me.Label8.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Label8.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Label8.Location = New System.Drawing.Point(674, 11)
             Me.Label8.Name = "Label8"
-            Me.Label8.Size = New System.Drawing.Size(30, 13)
+            Me.Label8.Size = New System.Drawing.Size(33, 13)
             Me.Label8.TabIndex = 249
             Me.Label8.Text = "DEBE"
             '
@@ -143,49 +144,51 @@
             '
             Me.txtDebeSumaAsientos.BackColor = System.Drawing.Color.White
             Me.txtDebeSumaAsientos.Enabled = False
+            Me.txtDebeSumaAsientos.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtDebeSumaAsientos.Location = New System.Drawing.Point(709, 7)
             Me.txtDebeSumaAsientos.Name = "txtDebeSumaAsientos"
-            Me.txtDebeSumaAsientos.Size = New System.Drawing.Size(107, 22)
+            Me.txtDebeSumaAsientos.Size = New System.Drawing.Size(107, 21)
             Me.txtDebeSumaAsientos.TabIndex = 248
             Me.txtDebeSumaAsientos.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
             '
             'Label6
             '
             Me.Label6.AutoSize = True
-            Me.Label6.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label6.Location = New System.Drawing.Point(820, 343)
+            Me.Label6.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Label6.Location = New System.Drawing.Point(817, 343)
             Me.Label6.Name = "Label6"
-            Me.Label6.Size = New System.Drawing.Size(41, 13)
+            Me.Label6.Size = New System.Drawing.Size(42, 13)
             Me.Label6.TabIndex = 247
-            Me.Label6.Text = "HABER:"
+            Me.Label6.Text = "HABER"
             '
             'txtHaber
             '
             Me.txtHaber.BackColor = System.Drawing.Color.White
             Me.txtHaber.Enabled = False
+            Me.txtHaber.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtHaber.Location = New System.Drawing.Point(861, 338)
             Me.txtHaber.Name = "txtHaber"
-            Me.txtHaber.Size = New System.Drawing.Size(107, 22)
+            Me.txtHaber.Size = New System.Drawing.Size(107, 21)
             Me.txtHaber.TabIndex = 246
             Me.txtHaber.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
             '
             'Label4
             '
             Me.Label4.AutoSize = True
-            Me.Label4.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label4.Location = New System.Drawing.Point(470, 341)
+            Me.Label4.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Label4.Location = New System.Drawing.Point(461, 341)
             Me.Label4.Name = "Label4"
-            Me.Label4.Size = New System.Drawing.Size(46, 13)
+            Me.Label4.Size = New System.Drawing.Size(53, 13)
             Me.Label4.TabIndex = 245
             Me.Label4.Text = "ASIENTO"
             '
             'Label5
             '
             Me.Label5.AutoSize = True
-            Me.Label5.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label5.Location = New System.Drawing.Point(672, 342)
+            Me.Label5.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Label5.Location = New System.Drawing.Point(671, 342)
             Me.Label5.Name = "Label5"
-            Me.Label5.Size = New System.Drawing.Size(30, 13)
+            Me.Label5.Size = New System.Drawing.Size(33, 13)
             Me.Label5.TabIndex = 244
             Me.Label5.Text = "DEBE"
             '
@@ -193,9 +196,10 @@
             '
             Me.txtCantidad.BackColor = System.Drawing.Color.White
             Me.txtCantidad.Enabled = False
+            Me.txtCantidad.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtCantidad.Location = New System.Drawing.Point(517, 338)
             Me.txtCantidad.Name = "txtCantidad"
-            Me.txtCantidad.Size = New System.Drawing.Size(96, 22)
+            Me.txtCantidad.Size = New System.Drawing.Size(96, 21)
             Me.txtCantidad.TabIndex = 243
             Me.txtCantidad.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
             '
@@ -203,9 +207,10 @@
             '
             Me.txtDebe.BackColor = System.Drawing.Color.White
             Me.txtDebe.Enabled = False
+            Me.txtDebe.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtDebe.Location = New System.Drawing.Point(707, 338)
             Me.txtDebe.Name = "txtDebe"
-            Me.txtDebe.Size = New System.Drawing.Size(107, 22)
+            Me.txtDebe.Size = New System.Drawing.Size(107, 21)
             Me.txtDebe.TabIndex = 241
             Me.txtDebe.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
             '
@@ -335,10 +340,10 @@
             'Label3
             '
             Me.Label3.AutoSize = True
-            Me.Label3.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Label3.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Label3.Location = New System.Drawing.Point(3, 346)
             Me.Label3.Name = "Label3"
-            Me.Label3.Size = New System.Drawing.Size(137, 21)
+            Me.Label3.Size = New System.Drawing.Size(95, 13)
             Me.Label3.TabIndex = 229
             Me.Label3.Text = "JORNALIZACION:"
             '
@@ -413,17 +418,17 @@
             'lblHasta
             '
             Me.lblHasta.AutoSize = True
-            Me.lblHasta.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+            Me.lblHasta.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.lblHasta.Location = New System.Drawing.Point(290, 30)
             Me.lblHasta.Name = "lblHasta"
-            Me.lblHasta.Size = New System.Drawing.Size(38, 13)
+            Me.lblHasta.Size = New System.Drawing.Size(40, 13)
             Me.lblHasta.TabIndex = 216
             Me.lblHasta.Text = "Hasta:"
             '
             'lblDesde
             '
             Me.lblDesde.AutoSize = True
-            Me.lblDesde.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+            Me.lblDesde.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.lblDesde.Location = New System.Drawing.Point(15, 30)
             Me.lblDesde.Name = "lblDesde"
             Me.lblDesde.Size = New System.Drawing.Size(41, 13)
@@ -432,16 +437,18 @@
             '
             'dtpFinal
             '
+            Me.dtpFinal.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.dtpFinal.Location = New System.Drawing.Point(334, 27)
             Me.dtpFinal.Name = "dtpFinal"
-            Me.dtpFinal.Size = New System.Drawing.Size(200, 20)
+            Me.dtpFinal.Size = New System.Drawing.Size(200, 21)
             Me.dtpFinal.TabIndex = 214
             '
             'dtpInicio
             '
+            Me.dtpInicio.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.dtpInicio.Location = New System.Drawing.Point(61, 27)
             Me.dtpInicio.Name = "dtpInicio"
-            Me.dtpInicio.Size = New System.Drawing.Size(200, 20)
+            Me.dtpInicio.Size = New System.Drawing.Size(200, 21)
             Me.dtpInicio.TabIndex = 213
             '
             'FormAuxiliaresDiario

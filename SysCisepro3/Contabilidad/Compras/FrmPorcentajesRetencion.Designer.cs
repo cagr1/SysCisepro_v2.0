@@ -96,6 +96,7 @@
             // 
             // toolStrip1
             // 
+            this.toolStrip1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnBuscar,
             this.btnNuevo,
@@ -180,6 +181,7 @@
             // Label1
             // 
             this.Label1.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.Label1.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label1.Location = new System.Drawing.Point(-3, 652);
             this.Label1.Name = "Label1";
             this.Label1.Size = new System.Drawing.Size(897, 21);
@@ -190,6 +192,7 @@
             // Label24
             // 
             this.Label24.Cursor = System.Windows.Forms.Cursors.Default;
+            this.Label24.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label24.Location = new System.Drawing.Point(0, 214);
             this.Label24.Name = "Label24";
             this.Label24.Size = new System.Drawing.Size(894, 18);
@@ -207,7 +210,7 @@
             this.GroupBox1.Controls.Add(this.Label25);
             this.GroupBox1.Controls.Add(this.txtIdConcepto);
             this.GroupBox1.Controls.Add(this.Label22);
-            this.GroupBox1.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GroupBox1.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GroupBox1.Location = new System.Drawing.Point(1, 27);
             this.GroupBox1.Name = "GroupBox1";
             this.GroupBox1.Size = new System.Drawing.Size(893, 186);
@@ -262,7 +265,7 @@
             this.label18.AutoSize = true;
             this.label18.Location = new System.Drawing.Point(247, 0);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(49, 13);
+            this.label18.Size = new System.Drawing.Size(50, 13);
             this.label18.TabIndex = 246;
             this.label18.Text = "PRCN. %";
             // 
@@ -287,7 +290,7 @@
             this.txtVentaRentaEsp.Enabled = false;
             this.txtVentaRentaEsp.Location = new System.Drawing.Point(614, 98);
             this.txtVentaRentaEsp.Name = "txtVentaRentaEsp";
-            this.txtVentaRentaEsp.Size = new System.Drawing.Size(250, 20);
+            this.txtVentaRentaEsp.Size = new System.Drawing.Size(250, 21);
             this.txtVentaRentaEsp.TabIndex = 239;
             this.txtVentaRentaEsp.Text = "  ";
             // 
@@ -312,7 +315,7 @@
             this.txtCompraRentaEsp.Enabled = false;
             this.txtCompraRentaEsp.Location = new System.Drawing.Point(327, 98);
             this.txtCompraRentaEsp.Name = "txtCompraRentaEsp";
-            this.txtCompraRentaEsp.Size = new System.Drawing.Size(250, 20);
+            this.txtCompraRentaEsp.Size = new System.Drawing.Size(250, 21);
             this.txtCompraRentaEsp.TabIndex = 237;
             // 
             // btnVentaRentaExp
@@ -336,7 +339,7 @@
             this.txtVentaRentaExp.Enabled = false;
             this.txtVentaRentaExp.Location = new System.Drawing.Point(614, 77);
             this.txtVentaRentaExp.Name = "txtVentaRentaExp";
-            this.txtVentaRentaExp.Size = new System.Drawing.Size(250, 20);
+            this.txtVentaRentaExp.Size = new System.Drawing.Size(250, 21);
             this.txtVentaRentaExp.TabIndex = 235;
             // 
             // btnVentaRentaPsin
@@ -360,7 +363,7 @@
             this.txtVentaRentaPsin.Enabled = false;
             this.txtVentaRentaPsin.Location = new System.Drawing.Point(614, 56);
             this.txtVentaRentaPsin.Name = "txtVentaRentaPsin";
-            this.txtVentaRentaPsin.Size = new System.Drawing.Size(250, 20);
+            this.txtVentaRentaPsin.Size = new System.Drawing.Size(250, 21);
             this.txtVentaRentaPsin.TabIndex = 233;
             // 
             // btnCompraRentaExp
@@ -384,7 +387,7 @@
             this.txtCompraRentaExp.Enabled = false;
             this.txtCompraRentaExp.Location = new System.Drawing.Point(327, 77);
             this.txtCompraRentaExp.Name = "txtCompraRentaExp";
-            this.txtCompraRentaExp.Size = new System.Drawing.Size(250, 20);
+            this.txtCompraRentaExp.Size = new System.Drawing.Size(250, 21);
             this.txtCompraRentaExp.TabIndex = 231;
             // 
             // btnCompraRentaPsin
@@ -408,7 +411,7 @@
             this.txtCompraRentaPsin.Enabled = false;
             this.txtCompraRentaPsin.Location = new System.Drawing.Point(327, 56);
             this.txtCompraRentaPsin.Name = "txtCompraRentaPsin";
-            this.txtCompraRentaPsin.Size = new System.Drawing.Size(250, 20);
+            this.txtCompraRentaPsin.Size = new System.Drawing.Size(250, 21);
             this.txtCompraRentaPsin.TabIndex = 229;
             // 
             // btnVentaRentaPcon
@@ -432,7 +435,7 @@
             this.txtVentaRentaPcon.Enabled = false;
             this.txtVentaRentaPcon.Location = new System.Drawing.Point(614, 35);
             this.txtVentaRentaPcon.Name = "txtVentaRentaPcon";
-            this.txtVentaRentaPcon.Size = new System.Drawing.Size(250, 20);
+            this.txtVentaRentaPcon.Size = new System.Drawing.Size(250, 21);
             this.txtVentaRentaPcon.TabIndex = 227;
             // 
             // btnCompraRentaPcon
@@ -470,7 +473,7 @@
             this.txtCompraRentaPcon.Enabled = false;
             this.txtCompraRentaPcon.Location = new System.Drawing.Point(327, 35);
             this.txtCompraRentaPcon.Name = "txtCompraRentaPcon";
-            this.txtCompraRentaPcon.Size = new System.Drawing.Size(250, 20);
+            this.txtCompraRentaPcon.Size = new System.Drawing.Size(250, 21);
             this.txtCompraRentaPcon.TabIndex = 223;
             // 
             // txtVentaRentaSoc
@@ -480,7 +483,7 @@
             this.txtVentaRentaSoc.Enabled = false;
             this.txtVentaRentaSoc.Location = new System.Drawing.Point(614, 14);
             this.txtVentaRentaSoc.Name = "txtVentaRentaSoc";
-            this.txtVentaRentaSoc.Size = new System.Drawing.Size(250, 20);
+            this.txtVentaRentaSoc.Size = new System.Drawing.Size(250, 21);
             this.txtVentaRentaSoc.TabIndex = 225;
             // 
             // btnCompraRentaSoc
@@ -504,7 +507,7 @@
             this.txtCompraRentaSoc.Enabled = false;
             this.txtCompraRentaSoc.Location = new System.Drawing.Point(327, 14);
             this.txtCompraRentaSoc.Name = "txtCompraRentaSoc";
-            this.txtCompraRentaSoc.Size = new System.Drawing.Size(250, 20);
+            this.txtCompraRentaSoc.Size = new System.Drawing.Size(250, 21);
             this.txtCompraRentaSoc.TabIndex = 221;
             // 
             // label15
@@ -512,7 +515,7 @@
             this.label15.AutoSize = true;
             this.label15.Location = new System.Drawing.Point(611, 2);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(103, 13);
+            this.label15.Size = new System.Drawing.Size(111, 13);
             this.label15.TabIndex = 214;
             this.label15.Text = "CUENTA EN VENTAS";
             // 
@@ -521,7 +524,7 @@
             this.label16.AutoSize = true;
             this.label16.Location = new System.Drawing.Point(324, 2);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(109, 13);
+            this.label16.Size = new System.Drawing.Size(122, 13);
             this.label16.TabIndex = 213;
             this.label16.Text = "CUENTA EN COMPRAS";
             // 
@@ -532,7 +535,7 @@
             this.txtRentaEsp.Enabled = false;
             this.txtRentaEsp.Location = new System.Drawing.Point(250, 98);
             this.txtRentaEsp.Name = "txtRentaEsp";
-            this.txtRentaEsp.Size = new System.Drawing.Size(49, 20);
+            this.txtRentaEsp.Size = new System.Drawing.Size(49, 21);
             this.txtRentaEsp.TabIndex = 212;
             this.txtRentaEsp.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtRentaEsp.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtRentaEsp_KeyPress);
@@ -542,7 +545,7 @@
             this.label14.AutoSize = true;
             this.label14.Location = new System.Drawing.Point(11, 101);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(145, 13);
+            this.label14.Size = new System.Drawing.Size(150, 13);
             this.label14.TabIndex = 211;
             this.label14.Text = "CONTRIBUYENTE ESPECIAL:";
             // 
@@ -553,7 +556,7 @@
             this.txtRentaExp.Enabled = false;
             this.txtRentaExp.Location = new System.Drawing.Point(250, 77);
             this.txtRentaExp.Name = "txtRentaExp";
-            this.txtRentaExp.Size = new System.Drawing.Size(49, 20);
+            this.txtRentaExp.Size = new System.Drawing.Size(49, 21);
             this.txtRentaExp.TabIndex = 210;
             this.txtRentaExp.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtRentaExp.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtRentaEsp_KeyPress);
@@ -565,7 +568,7 @@
             this.txtRentaPsin.Enabled = false;
             this.txtRentaPsin.Location = new System.Drawing.Point(250, 56);
             this.txtRentaPsin.Name = "txtRentaPsin";
-            this.txtRentaPsin.Size = new System.Drawing.Size(49, 20);
+            this.txtRentaPsin.Size = new System.Drawing.Size(49, 21);
             this.txtRentaPsin.TabIndex = 209;
             this.txtRentaPsin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtRentaPsin.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtRentaEsp_KeyPress);
@@ -577,7 +580,7 @@
             this.txtRentaPcon.Enabled = false;
             this.txtRentaPcon.Location = new System.Drawing.Point(250, 35);
             this.txtRentaPcon.Name = "txtRentaPcon";
-            this.txtRentaPcon.Size = new System.Drawing.Size(49, 20);
+            this.txtRentaPcon.Size = new System.Drawing.Size(49, 21);
             this.txtRentaPcon.TabIndex = 208;
             this.txtRentaPcon.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtRentaPcon.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtRentaEsp_KeyPress);
@@ -589,7 +592,7 @@
             this.txtRentaSoc.Enabled = false;
             this.txtRentaSoc.Location = new System.Drawing.Point(250, 14);
             this.txtRentaSoc.Name = "txtRentaSoc";
-            this.txtRentaSoc.Size = new System.Drawing.Size(49, 20);
+            this.txtRentaSoc.Size = new System.Drawing.Size(49, 21);
             this.txtRentaSoc.TabIndex = 207;
             this.txtRentaSoc.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtRentaSoc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtRentaEsp_KeyPress);
@@ -599,7 +602,7 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(11, 82);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(79, 13);
+            this.label6.Size = new System.Drawing.Size(88, 13);
             this.label6.TabIndex = 206;
             this.label6.Text = "EXPORTADORA:";
             // 
@@ -608,7 +611,7 @@
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(10, 59);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(205, 13);
+            this.label8.Size = new System.Drawing.Size(212, 13);
             this.label8.TabIndex = 205;
             this.label8.Text = "PERSONA NATURAL SIN CONTABILIDAD:";
             // 
@@ -617,7 +620,7 @@
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(10, 37);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(205, 13);
+            this.label9.Size = new System.Drawing.Size(217, 13);
             this.label9.TabIndex = 204;
             this.label9.Text = "PERSONA NATURAL CON CONTABILIDAD:";
             // 
@@ -626,7 +629,7 @@
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(10, 17);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(61, 13);
+            this.label10.Size = new System.Drawing.Size(62, 13);
             this.label10.TabIndex = 203;
             this.label10.Text = "SOCIEDAD:";
             // 
@@ -657,7 +660,7 @@
             this.txtCodigo.Enabled = false;
             this.txtCodigo.Location = new System.Drawing.Point(62, 37);
             this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(56, 20);
+            this.txtCodigo.Size = new System.Drawing.Size(56, 21);
             this.txtCodigo.TabIndex = 195;
             this.txtCodigo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -666,7 +669,7 @@
             this.Label25.AutoSize = true;
             this.Label25.Location = new System.Drawing.Point(7, 40);
             this.Label25.Name = "Label25";
-            this.Label25.Size = new System.Drawing.Size(49, 13);
+            this.Label25.Size = new System.Drawing.Size(51, 13);
             this.Label25.TabIndex = 194;
             this.Label25.Text = "CÓDIGO:";
             // 
@@ -677,7 +680,7 @@
             this.txtIdConcepto.Enabled = false;
             this.txtIdConcepto.Location = new System.Drawing.Point(62, 15);
             this.txtIdConcepto.Name = "txtIdConcepto";
-            this.txtIdConcepto.Size = new System.Drawing.Size(56, 20);
+            this.txtIdConcepto.Size = new System.Drawing.Size(56, 21);
             this.txtIdConcepto.TabIndex = 28;
             // 
             // Label22
@@ -685,7 +688,7 @@
             this.Label22.AutoSize = true;
             this.Label22.Location = new System.Drawing.Point(13, 18);
             this.Label22.Name = "Label22";
-            this.Label22.Size = new System.Drawing.Size(25, 13);
+            this.Label22.Size = new System.Drawing.Size(20, 13);
             this.Label22.TabIndex = 8;
             this.Label22.Text = "ID:";
             // 
@@ -693,9 +696,10 @@
             // 
             this.Label7.AutoSize = true;
             this.Label7.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Label7.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label7.Location = new System.Drawing.Point(9, 239);
             this.Label7.Name = "Label7";
-            this.Label7.Size = new System.Drawing.Size(48, 13);
+            this.Label7.Size = new System.Drawing.Size(46, 13);
             this.Label7.TabIndex = 231;
             this.Label7.Text = "FILTRO:";
             this.Label7.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -721,7 +725,9 @@
             this.columnHeader5,
             this.columnHeader2,
             this.columnHeader6});
+            this.ListView1.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ListView1.FullRowSelect = true;
+            this.ListView1.HideSelection = false;
             this.ListView1.Location = new System.Drawing.Point(0, 262);
             this.ListView1.MultiSelect = false;
             this.ListView1.Name = "ListView1";

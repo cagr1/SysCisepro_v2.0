@@ -24,8 +24,8 @@
         <System.Diagnostics.DebuggerStepThrough()> _
         Private Sub InitializeComponent()
             Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormMantenimientoProveedorCalificado))
-            Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Me.gbProveedorCalificado = New System.Windows.Forms.GroupBox()
             Me.lblIdPaises = New System.Windows.Forms.Label()
             Me.lblIdProvincia = New System.Windows.Forms.Label()
@@ -127,7 +127,7 @@
             Me.gbProveedorCalificado.Controls.Add(Me.lblFechaActualizacion)
             Me.gbProveedorCalificado.Controls.Add(Me.dtpFechaInicio)
             Me.gbProveedorCalificado.Controls.Add(Me.lblFechaInicio)
-            Me.gbProveedorCalificado.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.gbProveedorCalificado.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.gbProveedorCalificado.Location = New System.Drawing.Point(3, 125)
             Me.gbProveedorCalificado.Name = "gbProveedorCalificado"
             Me.gbProveedorCalificado.Size = New System.Drawing.Size(699, 182)
@@ -580,10 +580,10 @@
             'lblEtiquetaContactosProveedor
             '
             Me.lblEtiquetaContactosProveedor.AutoSize = True
-            Me.lblEtiquetaContactosProveedor.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.lblEtiquetaContactosProveedor.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.lblEtiquetaContactosProveedor.Location = New System.Drawing.Point(253, 6)
             Me.lblEtiquetaContactosProveedor.Name = "lblEtiquetaContactosProveedor"
-            Me.lblEtiquetaContactosProveedor.Size = New System.Drawing.Size(185, 15)
+            Me.lblEtiquetaContactosProveedor.Size = New System.Drawing.Size(161, 13)
             Me.lblEtiquetaContactosProveedor.TabIndex = 2
             Me.lblEtiquetaContactosProveedor.Text = "CONTÁCTOS DEL PROVEEDOR"
             '
@@ -610,19 +610,19 @@
             Me.dgvContactosProveedorCalificado.AllowUserToAddRows = False
             Me.dgvContactosProveedorCalificado.AllowUserToDeleteRows = False
             Me.dgvContactosProveedorCalificado.AllowUserToResizeRows = False
-            DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-            Me.dgvContactosProveedorCalificado.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+            DataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+            Me.dgvContactosProveedorCalificado.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle3
             Me.dgvContactosProveedorCalificado.BackgroundColor = System.Drawing.Color.White
             Me.dgvContactosProveedorCalificado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
             Me.dgvContactosProveedorCalificado.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.idContactoProveedorCalificado, Me.nombresContactoProveedorCalificado, Me.apellidosContactoProveedorCalificado, Me.cargoContactoProveedorCalificado, Me.telefonoContactoProveedorCalificado, Me.celularContactoProveedorCalificado, Me.emailContactoProveedorCalificado, Me.estadoContactoProveedorCalificado, Me.idProveedorGeneral})
-            DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-            DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
-            DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
-            DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(123, Byte), Integer))
-            DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-            DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-            Me.dgvContactosProveedorCalificado.DefaultCellStyle = DataGridViewCellStyle2
+            DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+            DataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window
+            DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText
+            DataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(123, Byte), Integer))
+            DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+            DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+            Me.dgvContactosProveedorCalificado.DefaultCellStyle = DataGridViewCellStyle4
             Me.dgvContactosProveedorCalificado.Location = New System.Drawing.Point(3, 338)
             Me.dgvContactosProveedorCalificado.Name = "dgvContactosProveedorCalificado"
             Me.dgvContactosProveedorCalificado.ReadOnly = True

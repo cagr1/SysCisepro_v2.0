@@ -191,7 +191,7 @@ Namespace FORMULARIOS.CONTABILIDAD.CUENTAS_POR_PAGAR
                     MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorCisepro
                     dgvCuentasPorPagar.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
             End Select
-
+            dgvCuentasPorPagar.Font = New Font("Roboto", 8, FontStyle.Regular)
             autocompletarNombreProveedor()
             rbGeneral.Checked = True
         End Sub

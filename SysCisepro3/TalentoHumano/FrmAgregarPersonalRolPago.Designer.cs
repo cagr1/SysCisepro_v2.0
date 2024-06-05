@@ -66,7 +66,7 @@
             this.txtUbicacionPuesto.Enabled = false;
             this.txtUbicacionPuesto.Location = new System.Drawing.Point(170, 17);
             this.txtUbicacionPuesto.Name = "txtUbicacionPuesto";
-            this.txtUbicacionPuesto.Size = new System.Drawing.Size(567, 20);
+            this.txtUbicacionPuesto.Size = new System.Drawing.Size(567, 21);
             this.txtUbicacionPuesto.TabIndex = 0;
             // 
             // Button2
@@ -103,7 +103,7 @@
             this.GroupBox3.Controls.Add(this.Label21);
             this.GroupBox3.Controls.Add(this.txtUbicacionPuesto);
             this.GroupBox3.Controls.Add(this.Label23);
-            this.GroupBox3.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GroupBox3.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GroupBox3.Location = new System.Drawing.Point(2, 72);
             this.GroupBox3.Name = "GroupBox3";
             this.GroupBox3.Size = new System.Drawing.Size(770, 71);
@@ -118,7 +118,7 @@
             this.txtGrupo.Enabled = false;
             this.txtGrupo.Location = new System.Drawing.Point(654, 43);
             this.txtGrupo.Name = "txtGrupo";
-            this.txtGrupo.Size = new System.Drawing.Size(109, 20);
+            this.txtGrupo.Size = new System.Drawing.Size(109, 21);
             this.txtGrupo.TabIndex = 204;
             // 
             // lblDireccion
@@ -146,7 +146,7 @@
             this.txtCliente.Enabled = false;
             this.txtCliente.Location = new System.Drawing.Point(80, 43);
             this.txtCliente.Name = "txtCliente";
-            this.txtCliente.Size = new System.Drawing.Size(574, 20);
+            this.txtCliente.Size = new System.Drawing.Size(574, 21);
             this.txtCliente.TabIndex = 201;
             // 
             // Label28
@@ -154,7 +154,7 @@
             this.Label28.AutoSize = true;
             this.Label28.Location = new System.Drawing.Point(19, 50);
             this.Label28.Name = "Label28";
-            this.Label28.Size = new System.Drawing.Size(55, 13);
+            this.Label28.Size = new System.Drawing.Size(53, 13);
             this.Label28.TabIndex = 200;
             this.Label28.Text = "CLIENTE:";
             // 
@@ -179,7 +179,7 @@
             this.txtIdPuesto.Enabled = false;
             this.txtIdPuesto.Location = new System.Drawing.Point(44, 16);
             this.txtIdPuesto.Name = "txtIdPuesto";
-            this.txtIdPuesto.Size = new System.Drawing.Size(37, 20);
+            this.txtIdPuesto.Size = new System.Drawing.Size(37, 21);
             this.txtIdPuesto.TabIndex = 28;
             // 
             // Label21
@@ -187,7 +187,7 @@
             this.Label21.AutoSize = true;
             this.Label21.Location = new System.Drawing.Point(18, 21);
             this.Label21.Name = "Label21";
-            this.Label21.Size = new System.Drawing.Size(25, 13);
+            this.Label21.Size = new System.Drawing.Size(20, 13);
             this.Label21.TabIndex = 8;
             this.Label21.Text = "ID:";
             // 
@@ -211,7 +211,7 @@
             this.GroupBox1.Controls.Add(this.Label22);
             this.GroupBox1.Controls.Add(this.txtPersonal);
             this.GroupBox1.Controls.Add(this.Label26);
-            this.GroupBox1.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GroupBox1.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GroupBox1.Location = new System.Drawing.Point(2, 3);
             this.GroupBox1.Name = "GroupBox1";
             this.GroupBox1.Size = new System.Drawing.Size(770, 67);
@@ -226,7 +226,7 @@
             this.txtArea.Enabled = false;
             this.txtArea.Location = new System.Drawing.Point(436, 41);
             this.txtArea.Name = "txtArea";
-            this.txtArea.Size = new System.Drawing.Size(327, 20);
+            this.txtArea.Size = new System.Drawing.Size(327, 21);
             this.txtArea.TabIndex = 197;
             // 
             // Label27
@@ -245,7 +245,7 @@
             this.txtCargo.Enabled = false;
             this.txtCargo.Location = new System.Drawing.Point(59, 41);
             this.txtCargo.Name = "txtCargo";
-            this.txtCargo.Size = new System.Drawing.Size(311, 20);
+            this.txtCargo.Size = new System.Drawing.Size(311, 21);
             this.txtCargo.TabIndex = 195;
             // 
             // Label25
@@ -253,7 +253,7 @@
             this.Label25.AutoSize = true;
             this.Label25.Location = new System.Drawing.Point(13, 44);
             this.Label25.Name = "Label25";
-            this.Label25.Size = new System.Drawing.Size(43, 13);
+            this.Label25.Size = new System.Drawing.Size(47, 13);
             this.Label25.TabIndex = 194;
             this.Label25.Text = "CARGO:";
             // 
@@ -278,7 +278,7 @@
             this.txtIdPersonal.Enabled = false;
             this.txtIdPersonal.Location = new System.Drawing.Point(44, 14);
             this.txtIdPersonal.Name = "txtIdPersonal";
-            this.txtIdPersonal.Size = new System.Drawing.Size(37, 20);
+            this.txtIdPersonal.Size = new System.Drawing.Size(37, 21);
             this.txtIdPersonal.TabIndex = 28;
             // 
             // Label22
@@ -286,7 +286,7 @@
             this.Label22.AutoSize = true;
             this.Label22.Location = new System.Drawing.Point(18, 19);
             this.Label22.Name = "Label22";
-            this.Label22.Size = new System.Drawing.Size(25, 13);
+            this.Label22.Size = new System.Drawing.Size(20, 13);
             this.Label22.TabIndex = 8;
             this.Label22.Text = "ID:";
             // 
@@ -297,15 +297,15 @@
             this.txtPersonal.Enabled = false;
             this.txtPersonal.Location = new System.Drawing.Point(219, 15);
             this.txtPersonal.Name = "txtPersonal";
-            this.txtPersonal.Size = new System.Drawing.Size(518, 20);
+            this.txtPersonal.Size = new System.Drawing.Size(518, 21);
             this.txtPersonal.TabIndex = 0;
             // 
             // Label26
             // 
             this.Label26.AutoSize = true;
-            this.Label26.Location = new System.Drawing.Point(167, 18);
+            this.Label26.Location = new System.Drawing.Point(150, 18);
             this.Label26.Name = "Label26";
-            this.Label26.Size = new System.Drawing.Size(55, 13);
+            this.Label26.Size = new System.Drawing.Size(63, 13);
             this.Label26.TabIndex = 3;
             this.Label26.Text = "NOMBRES:";
             // 
@@ -322,9 +322,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(12, 154);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(216, 13);
+            this.label1.Size = new System.Drawing.Size(219, 13);
             this.label1.TabIndex = 206;
             this.label1.Text = "AGREGAR ESTE REGISTRO CON ESTADO: ";
             // 
@@ -333,6 +334,7 @@
             this.cbxEstado.BackColor = System.Drawing.Color.White;
             this.cbxEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxEstado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbxEstado.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxEstado.FormattingEnabled = true;
             this.cbxEstado.Items.AddRange(new object[] {
             "ACTIVO",

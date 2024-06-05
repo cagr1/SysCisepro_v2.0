@@ -108,6 +108,7 @@
             Me.gbBusqueda.Controls.Add(Me.txtParametroBusqueda)
             Me.gbBusqueda.Controls.Add(Me.rbPlacas)
             Me.gbBusqueda.Controls.Add(Me.rbCodigoActivo)
+            Me.gbBusqueda.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.gbBusqueda.Location = New System.Drawing.Point(3, 246)
             Me.gbBusqueda.Name = "gbBusqueda"
             Me.gbBusqueda.Size = New System.Drawing.Size(643, 60)
@@ -118,11 +119,11 @@
             'txtParametroBusqueda
             '
             Me.txtParametroBusqueda.BackColor = System.Drawing.Color.White
-            Me.txtParametroBusqueda.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtParametroBusqueda.Font = New System.Drawing.Font("Roboto", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtParametroBusqueda.ForeColor = System.Drawing.Color.Black
             Me.txtParametroBusqueda.Location = New System.Drawing.Point(259, 16)
             Me.txtParametroBusqueda.Name = "txtParametroBusqueda"
-            Me.txtParametroBusqueda.Size = New System.Drawing.Size(345, 29)
+            Me.txtParametroBusqueda.Size = New System.Drawing.Size(345, 27)
             Me.txtParametroBusqueda.TabIndex = 2
             '
             'rbPlacas
@@ -493,8 +494,8 @@
             '
             Me.GroupBox3.BackColor = System.Drawing.Color.White
             Me.GroupBox3.Controls.Add(Me.dtpSoat)
-            Me.GroupBox3.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.GroupBox3.Location = New System.Drawing.Point(652, 247)
+            Me.GroupBox3.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.GroupBox3.Location = New System.Drawing.Point(650, 246)
             Me.GroupBox3.Name = "GroupBox3"
             Me.GroupBox3.Size = New System.Drawing.Size(231, 59)
             Me.GroupBox3.TabIndex = 35

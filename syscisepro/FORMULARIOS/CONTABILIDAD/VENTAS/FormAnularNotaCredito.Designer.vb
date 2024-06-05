@@ -240,6 +240,7 @@
             '
             Me.gbBuscarNotaCredito.Controls.Add(Me.btnBuscarAsiento)
             Me.gbBuscarNotaCredito.Controls.Add(Me.txtNumeroFacturaBuscar)
+            Me.gbBuscarNotaCredito.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.gbBuscarNotaCredito.Location = New System.Drawing.Point(1, 26)
             Me.gbBuscarNotaCredito.Name = "gbBuscarNotaCredito"
             Me.gbBuscarNotaCredito.Size = New System.Drawing.Size(241, 41)
@@ -265,7 +266,7 @@
             '
             Me.txtNumeroFacturaBuscar.Location = New System.Drawing.Point(13, 15)
             Me.txtNumeroFacturaBuscar.Name = "txtNumeroFacturaBuscar"
-            Me.txtNumeroFacturaBuscar.Size = New System.Drawing.Size(105, 20)
+            Me.txtNumeroFacturaBuscar.Size = New System.Drawing.Size(105, 21)
             Me.txtNumeroFacturaBuscar.TabIndex = 0
             Me.txtNumeroFacturaBuscar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
             '

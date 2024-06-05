@@ -124,7 +124,7 @@
             this.GroupBox2.Controls.Add(this.txtObservacion);
             this.GroupBox2.Controls.Add(this.Label18);
             this.GroupBox2.Controls.Add(this.Label30);
-            this.GroupBox2.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GroupBox2.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GroupBox2.Location = new System.Drawing.Point(4, 93);
             this.GroupBox2.Name = "GroupBox2";
             this.GroupBox2.Size = new System.Drawing.Size(778, 102);
@@ -139,7 +139,7 @@
             this.txtNumDoc.Enabled = false;
             this.txtNumDoc.Location = new System.Drawing.Point(718, 76);
             this.txtNumDoc.Name = "txtNumDoc";
-            this.txtNumDoc.Size = new System.Drawing.Size(52, 20);
+            this.txtNumDoc.Size = new System.Drawing.Size(52, 21);
             this.txtNumDoc.TabIndex = 215;
             this.txtNumDoc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNumDoc_KeyPress);
             // 
@@ -148,7 +148,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(672, 79);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(49, 13);
+            this.label2.Size = new System.Drawing.Size(47, 13);
             this.label2.TabIndex = 214;
             this.label2.Text = "N° DOC:";
             // 
@@ -173,7 +173,7 @@
             this.txtSitio.Enabled = false;
             this.txtSitio.Location = new System.Drawing.Point(220, 17);
             this.txtSitio.Name = "txtSitio";
-            this.txtSitio.Size = new System.Drawing.Size(528, 20);
+            this.txtSitio.Size = new System.Drawing.Size(528, 21);
             this.txtSitio.TabIndex = 211;
             // 
             // Label23
@@ -181,7 +181,7 @@
             this.Label23.AutoSize = true;
             this.Label23.Location = new System.Drawing.Point(168, 20);
             this.Label23.Name = "Label23";
-            this.Label23.Size = new System.Drawing.Size(49, 13);
+            this.Label23.Size = new System.Drawing.Size(52, 13);
             this.Label23.TabIndex = 212;
             this.Label23.Text = "PUESTO:";
             // 
@@ -192,7 +192,7 @@
             this.dtpHasta.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpHasta.Location = new System.Drawing.Point(274, 46);
             this.dtpHasta.Name = "dtpHasta";
-            this.dtpHasta.Size = new System.Drawing.Size(207, 20);
+            this.dtpHasta.Size = new System.Drawing.Size(207, 21);
             this.dtpHasta.TabIndex = 209;
             // 
             // Label4
@@ -200,7 +200,7 @@
             this.Label4.AutoSize = true;
             this.Label4.Location = new System.Drawing.Point(252, 49);
             this.Label4.Name = "Label4";
-            this.Label4.Size = new System.Drawing.Size(25, 13);
+            this.Label4.Size = new System.Drawing.Size(23, 13);
             this.Label4.TabIndex = 210;
             this.Label4.Text = "AL:";
             // 
@@ -211,7 +211,7 @@
             this.dtpDesde.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpDesde.Location = new System.Drawing.Point(45, 46);
             this.dtpDesde.Name = "dtpDesde";
-            this.dtpDesde.Size = new System.Drawing.Size(201, 20);
+            this.dtpDesde.Size = new System.Drawing.Size(201, 21);
             this.dtpDesde.TabIndex = 207;
             // 
             // Label3
@@ -244,7 +244,7 @@
             this.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpFecha.Location = new System.Drawing.Point(45, 20);
             this.dtpFecha.Name = "dtpFecha";
-            this.dtpFecha.Size = new System.Drawing.Size(90, 20);
+            this.dtpFecha.Size = new System.Drawing.Size(90, 21);
             this.dtpFecha.TabIndex = 204;
             // 
             // Label31
@@ -252,7 +252,7 @@
             this.Label31.AutoSize = true;
             this.Label31.Location = new System.Drawing.Point(4, 23);
             this.Label31.Name = "Label31";
-            this.Label31.Size = new System.Drawing.Size(43, 13);
+            this.Label31.Size = new System.Drawing.Size(44, 13);
             this.Label31.TabIndex = 205;
             this.Label31.Text = "FECHA:";
             // 
@@ -263,7 +263,7 @@
             this.txtObservacion.Enabled = false;
             this.txtObservacion.Location = new System.Drawing.Point(60, 76);
             this.txtObservacion.Name = "txtObservacion";
-            this.txtObservacion.Size = new System.Drawing.Size(602, 20);
+            this.txtObservacion.Size = new System.Drawing.Size(602, 21);
             this.txtObservacion.TabIndex = 201;
             // 
             // Label18
@@ -280,7 +280,7 @@
             this.Label30.AutoSize = true;
             this.Label30.Location = new System.Drawing.Point(487, 49);
             this.Label30.Name = "Label30";
-            this.Label30.Size = new System.Drawing.Size(37, 13);
+            this.Label30.Size = new System.Drawing.Size(35, 13);
             this.Label30.TabIndex = 3;
             this.Label30.Text = "TIPO:";
             // 
@@ -374,7 +374,7 @@
             this.GroupBox1.Controls.Add(this.Label22);
             this.GroupBox1.Controls.Add(this.txtPersonal);
             this.GroupBox1.Controls.Add(this.Label26);
-            this.GroupBox1.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GroupBox1.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GroupBox1.Location = new System.Drawing.Point(4, 28);
             this.GroupBox1.Name = "GroupBox1";
             this.GroupBox1.Size = new System.Drawing.Size(778, 64);
@@ -389,7 +389,7 @@
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker1.Location = new System.Drawing.Point(582, 39);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(99, 20);
+            this.dateTimePicker1.Size = new System.Drawing.Size(99, 21);
             this.dateTimePicker1.TabIndex = 218;
             // 
             // label6
@@ -397,7 +397,7 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(538, 41);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(49, 13);
+            this.label6.Size = new System.Drawing.Size(43, 13);
             this.label6.TabIndex = 219;
             this.label6.Text = "F. NAC:";
             // 
@@ -408,7 +408,7 @@
             this.textBox1.Enabled = false;
             this.textBox1.Location = new System.Drawing.Point(730, 39);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(44, 20);
+            this.textBox1.Size = new System.Drawing.Size(44, 21);
             this.textBox1.TabIndex = 217;
             // 
             // label5
@@ -427,7 +427,7 @@
             this.txtArea.Enabled = false;
             this.txtArea.Location = new System.Drawing.Point(310, 39);
             this.txtArea.Name = "txtArea";
-            this.txtArea.Size = new System.Drawing.Size(217, 20);
+            this.txtArea.Size = new System.Drawing.Size(217, 21);
             this.txtArea.TabIndex = 197;
             // 
             // Label27
@@ -446,7 +446,7 @@
             this.txtCargo.Enabled = false;
             this.txtCargo.Location = new System.Drawing.Point(50, 39);
             this.txtCargo.Name = "txtCargo";
-            this.txtCargo.Size = new System.Drawing.Size(205, 20);
+            this.txtCargo.Size = new System.Drawing.Size(205, 21);
             this.txtCargo.TabIndex = 195;
             // 
             // Label25
@@ -454,7 +454,7 @@
             this.Label25.AutoSize = true;
             this.Label25.Location = new System.Drawing.Point(4, 42);
             this.Label25.Name = "Label25";
-            this.Label25.Size = new System.Drawing.Size(43, 13);
+            this.Label25.Size = new System.Drawing.Size(47, 13);
             this.Label25.TabIndex = 194;
             this.Label25.Text = "CARGO:";
             // 
@@ -479,7 +479,7 @@
             this.txtIdPersonal.Enabled = false;
             this.txtIdPersonal.Location = new System.Drawing.Point(44, 13);
             this.txtIdPersonal.Name = "txtIdPersonal";
-            this.txtIdPersonal.Size = new System.Drawing.Size(47, 20);
+            this.txtIdPersonal.Size = new System.Drawing.Size(47, 21);
             this.txtIdPersonal.TabIndex = 28;
             // 
             // Label22
@@ -487,7 +487,7 @@
             this.Label22.AutoSize = true;
             this.Label22.Location = new System.Drawing.Point(18, 18);
             this.Label22.Name = "Label22";
-            this.Label22.Size = new System.Drawing.Size(25, 13);
+            this.Label22.Size = new System.Drawing.Size(20, 13);
             this.Label22.TabIndex = 8;
             this.Label22.Text = "ID:";
             // 
@@ -498,7 +498,7 @@
             this.txtPersonal.Enabled = false;
             this.txtPersonal.Location = new System.Drawing.Point(219, 16);
             this.txtPersonal.Name = "txtPersonal";
-            this.txtPersonal.Size = new System.Drawing.Size(529, 20);
+            this.txtPersonal.Size = new System.Drawing.Size(529, 21);
             this.txtPersonal.TabIndex = 0;
             // 
             // Label26
@@ -506,7 +506,7 @@
             this.Label26.AutoSize = true;
             this.Label26.Location = new System.Drawing.Point(167, 17);
             this.Label26.Name = "Label26";
-            this.Label26.Size = new System.Drawing.Size(55, 13);
+            this.Label26.Size = new System.Drawing.Size(63, 13);
             this.Label26.TabIndex = 3;
             this.Label26.Text = "NOMBRES:";
             // 

@@ -1,8 +1,8 @@
 ﻿Namespace FORMULARIOS.FONDOS.FONDO_ROTATIVO
     <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
     Partial Class FormFondoRotativo
-        Inherits System.Windows.Forms.Form
-
+        'Inherits System.Windows.Forms.Form
+        Inherits Krypton.Toolkit.KryptonForm
         'Form reemplaza a Dispose para limpiar la lista de componentes.
         <System.Diagnostics.DebuggerNonUserCode()> _
         Protected Overrides Sub Dispose(ByVal disposing As Boolean)
@@ -96,7 +96,7 @@
             Me.lblIdFondoRotativo.AutoSize = True
             Me.lblIdFondoRotativo.Location = New System.Drawing.Point(6, 24)
             Me.lblIdFondoRotativo.Name = "lblIdFondoRotativo"
-            Me.lblIdFondoRotativo.Size = New System.Drawing.Size(62, 13)
+            Me.lblIdFondoRotativo.Size = New System.Drawing.Size(60, 13)
             Me.lblIdFondoRotativo.TabIndex = 1
             Me.lblIdFondoRotativo.Text = "ID FONDO:"
             '
@@ -105,7 +105,7 @@
             Me.lblDetalleFondoRotativo.AutoSize = True
             Me.lblDetalleFondoRotativo.Location = New System.Drawing.Point(6, 51)
             Me.lblDetalleFondoRotativo.Name = "lblDetalleFondoRotativo"
-            Me.lblDetalleFondoRotativo.Size = New System.Drawing.Size(58, 13)
+            Me.lblDetalleFondoRotativo.Size = New System.Drawing.Size(55, 13)
             Me.lblDetalleFondoRotativo.TabIndex = 2
             Me.lblDetalleFondoRotativo.Text = "DETALLE:"
             '
@@ -114,7 +114,7 @@
             Me.lblMontoFondoRotativo.AutoSize = True
             Me.lblMontoFondoRotativo.Location = New System.Drawing.Point(6, 78)
             Me.lblMontoFondoRotativo.Name = "lblMontoFondoRotativo"
-            Me.lblMontoFondoRotativo.Size = New System.Drawing.Size(50, 13)
+            Me.lblMontoFondoRotativo.Size = New System.Drawing.Size(51, 13)
             Me.lblMontoFondoRotativo.TabIndex = 3
             Me.lblMontoFondoRotativo.Text = "MONTO:"
             '
@@ -123,7 +123,7 @@
             Me.lblCtaContableFondo.AutoSize = True
             Me.lblCtaContableFondo.Location = New System.Drawing.Point(529, 23)
             Me.lblCtaContableFondo.Name = "lblCtaContableFondo"
-            Me.lblCtaContableFondo.Size = New System.Drawing.Size(94, 13)
+            Me.lblCtaContableFondo.Size = New System.Drawing.Size(93, 13)
             Me.lblCtaContableFondo.TabIndex = 4
             Me.lblCtaContableFondo.Text = "CTA. CONTABLE:"
             '
@@ -141,7 +141,7 @@
             Me.lblNivelCuenta.AutoSize = True
             Me.lblNivelCuenta.Location = New System.Drawing.Point(529, 77)
             Me.lblNivelCuenta.Name = "lblNivelCuenta"
-            Me.lblNivelCuenta.Size = New System.Drawing.Size(68, 13)
+            Me.lblNivelCuenta.Size = New System.Drawing.Size(67, 13)
             Me.lblNivelCuenta.TabIndex = 6
             Me.lblNivelCuenta.Text = "NIVEL CTA.:"
             '
@@ -152,7 +152,7 @@
             Me.txtIdFondoRotativo.Enabled = False
             Me.txtIdFondoRotativo.Location = New System.Drawing.Point(76, 21)
             Me.txtIdFondoRotativo.Name = "txtIdFondoRotativo"
-            Me.txtIdFondoRotativo.Size = New System.Drawing.Size(45, 20)
+            Me.txtIdFondoRotativo.Size = New System.Drawing.Size(45, 21)
             Me.txtIdFondoRotativo.TabIndex = 10
             '
             'txtDetalleFondoRotativo
@@ -162,7 +162,7 @@
             Me.txtDetalleFondoRotativo.Enabled = False
             Me.txtDetalleFondoRotativo.Location = New System.Drawing.Point(76, 48)
             Me.txtDetalleFondoRotativo.Name = "txtDetalleFondoRotativo"
-            Me.txtDetalleFondoRotativo.Size = New System.Drawing.Size(399, 20)
+            Me.txtDetalleFondoRotativo.Size = New System.Drawing.Size(399, 21)
             Me.txtDetalleFondoRotativo.TabIndex = 11
             '
             'txtMontoFondoRotativo
@@ -172,7 +172,7 @@
             Me.txtMontoFondoRotativo.Enabled = False
             Me.txtMontoFondoRotativo.Location = New System.Drawing.Point(76, 75)
             Me.txtMontoFondoRotativo.Name = "txtMontoFondoRotativo"
-            Me.txtMontoFondoRotativo.Size = New System.Drawing.Size(69, 20)
+            Me.txtMontoFondoRotativo.Size = New System.Drawing.Size(69, 21)
             Me.txtMontoFondoRotativo.TabIndex = 12
             '
             'txtCtaContableFondo
@@ -182,7 +182,7 @@
             Me.txtCtaContableFondo.Enabled = False
             Me.txtCtaContableFondo.Location = New System.Drawing.Point(630, 20)
             Me.txtCtaContableFondo.Name = "txtCtaContableFondo"
-            Me.txtCtaContableFondo.Size = New System.Drawing.Size(138, 20)
+            Me.txtCtaContableFondo.Size = New System.Drawing.Size(138, 21)
             Me.txtCtaContableFondo.TabIndex = 13
             '
             'pCentroCostoSolicitudFR
@@ -196,6 +196,7 @@
             Me.pCentroCostoSolicitudFR.Controls.Add(Me.lblProvincia)
             Me.pCentroCostoSolicitudFR.Controls.Add(Me.lblCanton)
             Me.pCentroCostoSolicitudFR.Controls.Add(Me.lblCentroCosto)
+            Me.pCentroCostoSolicitudFR.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.pCentroCostoSolicitudFR.Location = New System.Drawing.Point(4, 134)
             Me.pCentroCostoSolicitudFR.Name = "pCentroCostoSolicitudFR"
             Me.pCentroCostoSolicitudFR.Size = New System.Drawing.Size(789, 68)
@@ -254,7 +255,7 @@
             Me.lblParroquia.AutoSize = True
             Me.lblParroquia.Location = New System.Drawing.Point(1, 38)
             Me.lblParroquia.Name = "lblParroquia"
-            Me.lblParroquia.Size = New System.Drawing.Size(74, 13)
+            Me.lblParroquia.Size = New System.Drawing.Size(70, 13)
             Me.lblParroquia.TabIndex = 5
             Me.lblParroquia.Text = "PARROQUIA:"
             '
@@ -263,7 +264,7 @@
             Me.lblProvincia.AutoSize = True
             Me.lblProvincia.Location = New System.Drawing.Point(3, 11)
             Me.lblProvincia.Name = "lblProvincia"
-            Me.lblProvincia.Size = New System.Drawing.Size(68, 13)
+            Me.lblProvincia.Size = New System.Drawing.Size(67, 13)
             Me.lblProvincia.TabIndex = 1
             Me.lblProvincia.Text = "PROVINCIA:"
             '
@@ -281,7 +282,7 @@
             Me.lblCentroCosto.AutoSize = True
             Me.lblCentroCosto.Location = New System.Drawing.Point(432, 38)
             Me.lblCentroCosto.Name = "lblCentroCosto"
-            Me.lblCentroCosto.Size = New System.Drawing.Size(95, 13)
+            Me.lblCentroCosto.Size = New System.Drawing.Size(93, 13)
             Me.lblCentroCosto.TabIndex = 2
             Me.lblCentroCosto.Text = "CENTRO COSTO:"
             '
@@ -303,6 +304,7 @@
             Me.GroupBox1.Controls.Add(Me.lblNivelCuenta)
             Me.GroupBox1.Controls.Add(Me.txtIdFondoRotativo)
             Me.GroupBox1.Controls.Add(Me.lblTipoCuenta)
+            Me.GroupBox1.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.GroupBox1.Location = New System.Drawing.Point(4, 26)
             Me.GroupBox1.Name = "GroupBox1"
             Me.GroupBox1.Size = New System.Drawing.Size(789, 105)
@@ -343,7 +345,7 @@
             Me.txtCustodioFondo.Enabled = False
             Me.txtCustodioFondo.Location = New System.Drawing.Point(214, 21)
             Me.txtCustodioFondo.Name = "txtCustodioFondo"
-            Me.txtCustodioFondo.Size = New System.Drawing.Size(225, 20)
+            Me.txtCustodioFondo.Size = New System.Drawing.Size(225, 21)
             Me.txtCustodioFondo.TabIndex = 16
             '
             'lblCustodioFondo
@@ -351,7 +353,7 @@
             Me.lblCustodioFondo.AutoSize = True
             Me.lblCustodioFondo.Location = New System.Drawing.Point(142, 24)
             Me.lblCustodioFondo.Name = "lblCustodioFondo"
-            Me.lblCustodioFondo.Size = New System.Drawing.Size(66, 13)
+            Me.lblCustodioFondo.Size = New System.Drawing.Size(64, 13)
             Me.lblCustodioFondo.TabIndex = 15
             Me.lblCustodioFondo.Text = "CUSTODIO:"
             '

@@ -13,10 +13,11 @@ using SysCisepro3.Datos;
 using SysCisepro3.Reportes;
 using ClassLibraryCisepro3.UsuarioGeneral;
 using CrystalDecisions.CrystalReports.Engine;
+using Krypton.Toolkit;
 
 namespace SysCisepro3.TalentoHumano
 {
-    public partial class FrmDetalleAsistenciaRol : Form
+    public partial class FrmDetalleAsistenciaRol : KryptonForm
     {
         /// <summary>
         /// CISEPRO 2019
@@ -58,6 +59,7 @@ namespace SysCisepro3.TalentoHumano
                     break;
             }
             CargarDetalles();
+            
         }
 
         private void CargarDetalles()

@@ -61,7 +61,7 @@ Namespace FORMULARIOS.FONDOS.FONDO_ROTATIVO
                     MenuStrip1.ForeColor = Color.White 
                     dgvFondoRotativo.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
             End Select
-
+            dgvFondoRotativo.Font = New Font("Roboto", 8, FontStyle.Regular)
             LlenarComboCentroCostos()
 
             LlenarComboProvincias()

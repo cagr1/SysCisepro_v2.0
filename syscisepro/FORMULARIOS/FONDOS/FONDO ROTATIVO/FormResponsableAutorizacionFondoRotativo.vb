@@ -154,7 +154,7 @@ Namespace FORMULARIOS.FONDOS.FONDO_ROTATIVO
                     MenuStrip1.ForeColor = Color.White 
                     dgvResponsableAutoFR.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
             End Select
-
+            dgvResponsableAutoFR.Font = New Font("Roboto", 8, FontStyle.Regular)
             _sqlCommands = New List(Of SqlCommand)
             LlenarComboProvincias()
             LlenarComboCargo()

@@ -5,10 +5,11 @@ using ClassLibraryCisepro3.Enums;
 using ClassLibraryCisepro3.TalentoHumano;
 using SysCisepro3.Datos;
 using SysCisepro3.Properties;
+using Krypton.Toolkit;
 
 namespace SysCisepro3.TalentoHumano
 {
-    public partial class FrmBuscarPersonal : Form
+    public partial class FrmBuscarPersonal : KryptonForm
     {
         /// <summary>
         /// CISEPRO 2019

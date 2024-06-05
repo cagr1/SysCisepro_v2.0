@@ -225,28 +225,24 @@
             Me.btnGuardarMarca.BackColor = System.Drawing.Color.White
             Me.btnGuardarMarca.Enabled = False
             Me.btnGuardarMarca.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnGuardarMarca.Image = CType(resources.GetObject("btnGuardarMarca.Image"), System.Drawing.Image)
-            Me.btnGuardarMarca.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-            Me.btnGuardarMarca.Location = New System.Drawing.Point(301, 22)
+            Me.btnGuardarMarca.Image = Global.syscisepro.My.Resources.Resources.save_24dp_FILL0_wght400_GRAD0_opsz24
+            Me.btnGuardarMarca.Location = New System.Drawing.Point(275, 22)
             Me.btnGuardarMarca.Name = "btnGuardarMarca"
-            Me.btnGuardarMarca.Size = New System.Drawing.Size(75, 38)
+            Me.btnGuardarMarca.Size = New System.Drawing.Size(47, 38)
             Me.btnGuardarMarca.TabIndex = 75
-            Me.btnGuardarMarca.Text = "GUARDAR"
-            Me.btnGuardarMarca.TextAlign = System.Drawing.ContentAlignment.BottomCenter
             Me.btnGuardarMarca.UseVisualStyleBackColor = False
             '
             'btnNuevoMarca
             '
             Me.btnNuevoMarca.BackColor = System.Drawing.Color.White
             Me.btnNuevoMarca.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+            Me.btnNuevoMarca.FlatAppearance.BorderSize = 0
             Me.btnNuevoMarca.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnNuevoMarca.Image = CType(resources.GetObject("btnNuevoMarca.Image"), System.Drawing.Image)
-            Me.btnNuevoMarca.ImageAlign = System.Drawing.ContentAlignment.TopCenter
+            Me.btnNuevoMarca.Image = Global.syscisepro.My.Resources.Resources.add_circle_24dp_FILL0_wght400_GRAD0_opsz24
             Me.btnNuevoMarca.Location = New System.Drawing.Point(220, 22)
             Me.btnNuevoMarca.Name = "btnNuevoMarca"
-            Me.btnNuevoMarca.Size = New System.Drawing.Size(75, 38)
+            Me.btnNuevoMarca.Size = New System.Drawing.Size(45, 38)
             Me.btnNuevoMarca.TabIndex = 74
-            Me.btnNuevoMarca.Text = "NUEVO"
             Me.btnNuevoMarca.TextAlign = System.Drawing.ContentAlignment.BottomCenter
             Me.btnNuevoMarca.UseVisualStyleBackColor = False
             '
@@ -271,13 +267,13 @@
             '
             Me.btnVolver.BackColor = System.Drawing.Color.White
             Me.btnVolver.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnVolver.Image = Global.syscisepro.My.Resources.Resources.ok
+            Me.btnVolver.Image = Global.syscisepro.My.Resources.Resources.check_circle_24dp_FILL0_wght400_GRAD0_opsz24__1_
             Me.btnVolver.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-            Me.btnVolver.Location = New System.Drawing.Point(225, 334)
+            Me.btnVolver.Location = New System.Drawing.Point(225, 330)
             Me.btnVolver.Name = "btnVolver"
-            Me.btnVolver.Size = New System.Drawing.Size(172, 27)
+            Me.btnVolver.Size = New System.Drawing.Size(114, 32)
             Me.btnVolver.TabIndex = 76
-            Me.btnVolver.Text = "ACEPTAR Y REGRESAR"
+            Me.btnVolver.Text = "Aceptar"
             Me.btnVolver.UseVisualStyleBackColor = False
             '
             'gbMateriales
@@ -301,13 +297,12 @@
             Me.btnGuardarMaterial.BackColor = System.Drawing.Color.White
             Me.btnGuardarMaterial.Enabled = False
             Me.btnGuardarMaterial.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnGuardarMaterial.Image = CType(resources.GetObject("btnGuardarMaterial.Image"), System.Drawing.Image)
-            Me.btnGuardarMaterial.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-            Me.btnGuardarMaterial.Location = New System.Drawing.Point(302, 19)
+            Me.btnGuardarMaterial.Image = Global.syscisepro.My.Resources.Resources.save_24dp_FILL0_wght400_GRAD0_opsz24
+            Me.btnGuardarMaterial.Location = New System.Drawing.Point(276, 19)
             Me.btnGuardarMaterial.Name = "btnGuardarMaterial"
-            Me.btnGuardarMaterial.Size = New System.Drawing.Size(75, 38)
+            Me.btnGuardarMaterial.Size = New System.Drawing.Size(47, 38)
             Me.btnGuardarMaterial.TabIndex = 76
-            Me.btnGuardarMaterial.Text = "GUARDAR"
+            Me.btnGuardarMaterial.TabStop = False
             Me.btnGuardarMaterial.TextAlign = System.Drawing.ContentAlignment.BottomCenter
             Me.btnGuardarMaterial.UseVisualStyleBackColor = False
             '
@@ -325,13 +320,11 @@
             '
             Me.btnNuevoMaterial.BackColor = System.Drawing.Color.White
             Me.btnNuevoMaterial.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnNuevoMaterial.Image = CType(resources.GetObject("btnNuevoMaterial.Image"), System.Drawing.Image)
-            Me.btnNuevoMaterial.ImageAlign = System.Drawing.ContentAlignment.TopCenter
+            Me.btnNuevoMaterial.Image = Global.syscisepro.My.Resources.Resources.add_circle_24dp_FILL0_wght400_GRAD0_opsz24
             Me.btnNuevoMaterial.Location = New System.Drawing.Point(221, 19)
             Me.btnNuevoMaterial.Name = "btnNuevoMaterial"
-            Me.btnNuevoMaterial.Size = New System.Drawing.Size(75, 38)
+            Me.btnNuevoMaterial.Size = New System.Drawing.Size(45, 38)
             Me.btnNuevoMaterial.TabIndex = 75
-            Me.btnNuevoMaterial.Text = "NUEVO"
             Me.btnNuevoMaterial.TextAlign = System.Drawing.ContentAlignment.BottomCenter
             Me.btnNuevoMaterial.UseVisualStyleBackColor = False
             '
@@ -365,13 +358,11 @@
             Me.btnGuardarColor.BackColor = System.Drawing.Color.White
             Me.btnGuardarColor.Enabled = False
             Me.btnGuardarColor.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnGuardarColor.Image = CType(resources.GetObject("btnGuardarColor.Image"), System.Drawing.Image)
-            Me.btnGuardarColor.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-            Me.btnGuardarColor.Location = New System.Drawing.Point(304, 31)
+            Me.btnGuardarColor.Image = Global.syscisepro.My.Resources.Resources.save_24dp_FILL0_wght400_GRAD0_opsz24
+            Me.btnGuardarColor.Location = New System.Drawing.Point(275, 31)
             Me.btnGuardarColor.Name = "btnGuardarColor"
-            Me.btnGuardarColor.Size = New System.Drawing.Size(75, 36)
+            Me.btnGuardarColor.Size = New System.Drawing.Size(47, 36)
             Me.btnGuardarColor.TabIndex = 73
-            Me.btnGuardarColor.Text = "GUARDAR"
             Me.btnGuardarColor.TextAlign = System.Drawing.ContentAlignment.BottomCenter
             Me.btnGuardarColor.UseVisualStyleBackColor = False
             '
@@ -379,13 +370,12 @@
             '
             Me.btnNuevoColor.BackColor = System.Drawing.Color.White
             Me.btnNuevoColor.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnNuevoColor.Image = CType(resources.GetObject("btnNuevoColor.Image"), System.Drawing.Image)
+            Me.btnNuevoColor.Image = Global.syscisepro.My.Resources.Resources.add_circle_24dp_FILL0_wght400_GRAD0_opsz24
             Me.btnNuevoColor.ImageAlign = System.Drawing.ContentAlignment.TopCenter
             Me.btnNuevoColor.Location = New System.Drawing.Point(223, 31)
             Me.btnNuevoColor.Name = "btnNuevoColor"
-            Me.btnNuevoColor.Size = New System.Drawing.Size(75, 36)
+            Me.btnNuevoColor.Size = New System.Drawing.Size(42, 36)
             Me.btnNuevoColor.TabIndex = 71
-            Me.btnNuevoColor.Text = "NUEVO"
             Me.btnNuevoColor.TextAlign = System.Drawing.ContentAlignment.BottomCenter
             Me.btnNuevoColor.UseVisualStyleBackColor = False
             '

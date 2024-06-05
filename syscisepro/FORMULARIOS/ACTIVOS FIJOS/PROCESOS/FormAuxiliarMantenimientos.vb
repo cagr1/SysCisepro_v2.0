@@ -51,7 +51,8 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
                     dgvMantenimimientos.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
                     dgvAsientos.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
             End Select
-
+            dgvMantenimimientos.Font = New Font("Roboto", 8, FontStyle.Regular)
+            dgvAsientos.Font = New Font("Roboto", 8, FontStyle.Regular)
             dgvMantenimimientos.DataSource = _objMantAct.SeleccionarSolictudesMantenimientosRealizadas(_tipoCon)
         End Sub
 

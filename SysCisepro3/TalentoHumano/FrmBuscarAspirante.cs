@@ -11,10 +11,11 @@ using ClassLibraryCisepro3.DivisionGeografica;
 using SysCisepro3.Datos;
 using SysCisepro3.Properties;
 using ClassLibraryCisepro3.TalentoHumano;
+using Krypton.Toolkit;
 
 namespace SysCisepro3.TalentoHumano
 {
-    public partial class FrmBuscarAspirante : Form
+    public partial class FrmBuscarAspirante : KryptonForm
     {
         /// <summary>
         /// CISEPRO 2019

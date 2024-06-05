@@ -44,6 +44,7 @@
             'Label1
             '
             Me.Label1.AutoSize = True
+            Me.Label1.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Label1.Location = New System.Drawing.Point(489, 7)
             Me.Label1.Name = "Label1"
             Me.Label1.Size = New System.Drawing.Size(74, 13)
@@ -52,6 +53,7 @@
             '
             'cbmTipoActivo
             '
+            Me.cbmTipoActivo.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cbmTipoActivo.FormattingEnabled = True
             Me.cbmTipoActivo.Items.AddRange(New Object() {"ARMAS", "RADIOS", "VEHICULOS", "TERRENOS", "EQUIPOS DE COMPUTO", "LIBROS Y COLECCIONES", "EQUIPOS DE OFICINA", "MUEBLES DE OFICINA", "EQUIPOS DE COCINA", "EQUIPOS DE AMBIENTACION", "EQUIPOS DE COMUNICACION Y TELEFONIA", "EQUIPOS DE SEGURIDAD INDUSTRIAL", "CAMARAS DE SEGURIDAD", "GENERADORES", "CHALECOS", "SOFTWARE"})
             Me.cbmTipoActivo.Location = New System.Drawing.Point(578, 2)
