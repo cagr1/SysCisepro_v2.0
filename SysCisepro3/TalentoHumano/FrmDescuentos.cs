@@ -15,10 +15,11 @@ using SysCisepro3.Datos;
 using SysCisepro3.Properties;
 using DataTable = System.Data.DataTable;
 using Office = Microsoft.Office.Interop;
+using Krypton.Toolkit;
 
 namespace SysCisepro3.TalentoHumano
 {
-    public partial class FrmDescuentos : Form
+    public partial class FrmDescuentos : KryptonForm
     {
         /// <summary>
         /// CISEPRO 2019
@@ -57,6 +58,7 @@ namespace SysCisepro3.TalentoHumano
         private void FrmDescuentos_Load(object sender, EventArgs e)
         {
             // CARGAR ICONO Y DESIEÑO SEGUN SISTEMA 
+            
             toolStrip1.BackColor = ValidationForms.GetColorSistema(TipoCon);
             toolStrip1.ForeColor = Color.White;
             toolStrip2.BackColor = ValidationForms.GetColorSistema(TipoCon);

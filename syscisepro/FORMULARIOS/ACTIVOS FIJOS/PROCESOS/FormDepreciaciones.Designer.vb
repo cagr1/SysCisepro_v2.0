@@ -103,11 +103,13 @@
             '
             'btnBuscar
             '
+            Me.btnBuscar.FlatAppearance.BorderSize = 0
+            Me.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.btnBuscar.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.btnBuscar.Image = Global.syscisepro.My.Resources.Resources.search_24dp_FILL0_wght400_GRAD0_opsz24__2_
-            Me.btnBuscar.Location = New System.Drawing.Point(471, 14)
+            Me.btnBuscar.Location = New System.Drawing.Point(471, 16)
             Me.btnBuscar.Name = "btnBuscar"
-            Me.btnBuscar.Size = New System.Drawing.Size(37, 29)
+            Me.btnBuscar.Size = New System.Drawing.Size(25, 25)
             Me.btnBuscar.TabIndex = 11
             Me.btnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
             Me.btnBuscar.UseVisualStyleBackColor = True
@@ -155,11 +157,13 @@
             '
             'btnCargar
             '
+            Me.btnCargar.FlatAppearance.BorderSize = 0
+            Me.btnCargar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.btnCargar.Font = New System.Drawing.Font("Calibri", 8.25!)
             Me.btnCargar.Image = Global.syscisepro.My.Resources.Resources.refresh_24dp_FILL0_wght400_GRAD0_opsz24__2_
-            Me.btnCargar.Location = New System.Drawing.Point(516, 14)
+            Me.btnCargar.Location = New System.Drawing.Point(510, 16)
             Me.btnCargar.Name = "btnCargar"
-            Me.btnCargar.Size = New System.Drawing.Size(37, 29)
+            Me.btnCargar.Size = New System.Drawing.Size(25, 25)
             Me.btnCargar.TabIndex = 12
             Me.btnCargar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
             Me.btnCargar.UseVisualStyleBackColor = True
@@ -444,6 +448,10 @@
             Me.MaximizeBox = False
             Me.Name = "FormDepreciaciones"
             Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+            Me.StateActive.Border.DrawBorders = CType((((Krypton.Toolkit.PaletteDrawBorders.Top Or Krypton.Toolkit.PaletteDrawBorders.Bottom) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Left) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Right), Krypton.Toolkit.PaletteDrawBorders)
+            Me.StateActive.Border.Rounding = 5.0!
             Me.Text = "DEPRECIACIONES"
             Me.GroupBox1.ResumeLayout(False)
             Me.GroupBox1.PerformLayout()

@@ -14,10 +14,11 @@ using Microsoft.Office.Interop.Excel;
 using SysCisepro3.Datos;
 using SysCisepro3.Properties;
 using Office = Microsoft.Office.Interop;
+using Krypton.Toolkit;
 
 namespace SysCisepro3.TalentoHumano
 {
-    public partial class FrmNotificaciones : Form
+    public partial class FrmNotificaciones : KryptonForm
     {
         /// <summary>
         /// CISEPRO 2019
@@ -55,7 +56,7 @@ namespace SysCisepro3.TalentoHumano
         private void FrmNotificaciones_Load(object sender, EventArgs e)
         {
             // CARGAR ICONO Y DESIEÑO SEGUN SISTEMA 
-            toolStrip1.BackColor = ValidationForms.GetColorSistema(TipoCon);
+            //toolStrip1.BackColor = ValidationForms.GetColorSistema(TipoCon);
             toolStrip1.ForeColor = Color.White;
             Label24.BackColor = ValidationForms.GetColorSistema(TipoCon);
             Label24.ForeColor = Color.White;

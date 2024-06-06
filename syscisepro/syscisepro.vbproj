@@ -4670,6 +4670,7 @@
     <None Include="Resources\cancel_24dp_FILL0_wght400_GRAD0_opsz24.png" />
     <None Include="Resources\add_24dp_FILL0_wght400_GRAD0_opsz24.png" />
     <None Include="Resources\account_tree_24dp_FILL0_wght400_GRAD0_opsz24.png" />
+    <None Include="Resources\check_24dp_FILL0_wght400_GRAD0_opsz24.png" />
     <Content Include="Resources\combustiblex.jpg" />
   </ItemGroup>
   <ItemGroup>

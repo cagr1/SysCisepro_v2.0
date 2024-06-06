@@ -16,10 +16,11 @@ using SysCisepro3.Datos;
 using SysCisepro3.Properties;
 using DataTable = System.Data.DataTable;
 using Office = Microsoft.Office.Interop;
+using Krypton.Toolkit;
 
 namespace SysCisepro3.TalentoHumano
 {
-    public partial class FrmCuentasBancarias : Form
+    public partial class FrmCuentasBancarias : KryptonForm
     {
         /// <summary>
         /// CISEPRO 2019

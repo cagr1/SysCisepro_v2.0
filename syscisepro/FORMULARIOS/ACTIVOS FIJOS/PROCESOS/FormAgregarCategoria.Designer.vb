@@ -305,14 +305,15 @@
             Me.btnGuardarGrupo.BackColor = System.Drawing.Color.White
             Me.btnGuardarGrupo.Enabled = False
             Me.btnGuardarGrupo.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+            Me.btnGuardarGrupo.FlatAppearance.BorderSize = 0
             Me.btnGuardarGrupo.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
             Me.btnGuardarGrupo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+            Me.btnGuardarGrupo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.btnGuardarGrupo.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.btnGuardarGrupo.Image = Global.syscisepro.My.Resources.Resources.save_24dp_FILL0_wght400_GRAD0_opsz24__2_
-            Me.btnGuardarGrupo.ImageAlign = System.Drawing.ContentAlignment.TopCenter
             Me.btnGuardarGrupo.Location = New System.Drawing.Point(350, 27)
             Me.btnGuardarGrupo.Name = "btnGuardarGrupo"
-            Me.btnGuardarGrupo.Size = New System.Drawing.Size(41, 34)
+            Me.btnGuardarGrupo.Size = New System.Drawing.Size(25, 25)
             Me.btnGuardarGrupo.TabIndex = 73
             Me.btnGuardarGrupo.TextAlign = System.Drawing.ContentAlignment.BottomCenter
             Me.btnGuardarGrupo.UseVisualStyleBackColor = False
@@ -321,14 +322,15 @@
             '
             Me.btnNuevoGrupo.BackColor = System.Drawing.Color.White
             Me.btnNuevoGrupo.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+            Me.btnNuevoGrupo.FlatAppearance.BorderSize = 0
             Me.btnNuevoGrupo.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
             Me.btnNuevoGrupo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+            Me.btnNuevoGrupo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.btnNuevoGrupo.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.btnNuevoGrupo.Image = Global.syscisepro.My.Resources.Resources.add_circle_24dp_FILL0_wght400_GRAD0_opsz24__3_
-            Me.btnNuevoGrupo.ImageAlign = System.Drawing.ContentAlignment.TopCenter
             Me.btnNuevoGrupo.Location = New System.Drawing.Point(304, 27)
             Me.btnNuevoGrupo.Name = "btnNuevoGrupo"
-            Me.btnNuevoGrupo.Size = New System.Drawing.Size(41, 34)
+            Me.btnNuevoGrupo.Size = New System.Drawing.Size(25, 25)
             Me.btnNuevoGrupo.TabIndex = 71
             Me.btnNuevoGrupo.TextAlign = System.Drawing.ContentAlignment.BottomCenter
             Me.btnNuevoGrupo.UseVisualStyleBackColor = False
@@ -398,14 +400,15 @@
             Me.btnGuardarSubGrupo.BackColor = System.Drawing.Color.White
             Me.btnGuardarSubGrupo.Enabled = False
             Me.btnGuardarSubGrupo.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+            Me.btnGuardarSubGrupo.FlatAppearance.BorderSize = 0
             Me.btnGuardarSubGrupo.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
             Me.btnGuardarSubGrupo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+            Me.btnGuardarSubGrupo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.btnGuardarSubGrupo.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.btnGuardarSubGrupo.Image = Global.syscisepro.My.Resources.Resources.save_24dp_FILL0_wght400_GRAD0_opsz24__2_
-            Me.btnGuardarSubGrupo.ImageAlign = System.Drawing.ContentAlignment.TopCenter
             Me.btnGuardarSubGrupo.Location = New System.Drawing.Point(350, 26)
             Me.btnGuardarSubGrupo.Name = "btnGuardarSubGrupo"
-            Me.btnGuardarSubGrupo.Size = New System.Drawing.Size(41, 34)
+            Me.btnGuardarSubGrupo.Size = New System.Drawing.Size(25, 25)
             Me.btnGuardarSubGrupo.TabIndex = 76
             Me.btnGuardarSubGrupo.TextAlign = System.Drawing.ContentAlignment.BottomCenter
             Me.btnGuardarSubGrupo.UseVisualStyleBackColor = False
@@ -445,14 +448,15 @@
             '
             Me.btnNuevoSubGrupo.BackColor = System.Drawing.Color.White
             Me.btnNuevoSubGrupo.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+            Me.btnNuevoSubGrupo.FlatAppearance.BorderSize = 0
             Me.btnNuevoSubGrupo.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
             Me.btnNuevoSubGrupo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+            Me.btnNuevoSubGrupo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.btnNuevoSubGrupo.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.btnNuevoSubGrupo.Image = Global.syscisepro.My.Resources.Resources.add_circle_24dp_FILL0_wght400_GRAD0_opsz24__3_
-            Me.btnNuevoSubGrupo.ImageAlign = System.Drawing.ContentAlignment.TopCenter
             Me.btnNuevoSubGrupo.Location = New System.Drawing.Point(304, 26)
             Me.btnNuevoSubGrupo.Name = "btnNuevoSubGrupo"
-            Me.btnNuevoSubGrupo.Size = New System.Drawing.Size(41, 34)
+            Me.btnNuevoSubGrupo.Size = New System.Drawing.Size(25, 25)
             Me.btnNuevoSubGrupo.TabIndex = 75
             Me.btnNuevoSubGrupo.TextAlign = System.Drawing.ContentAlignment.BottomCenter
             Me.btnNuevoSubGrupo.UseVisualStyleBackColor = False
@@ -489,14 +493,15 @@
             Me.btnGuardarCategoria.BackColor = System.Drawing.Color.White
             Me.btnGuardarCategoria.Enabled = False
             Me.btnGuardarCategoria.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+            Me.btnGuardarCategoria.FlatAppearance.BorderSize = 0
             Me.btnGuardarCategoria.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
             Me.btnGuardarCategoria.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+            Me.btnGuardarCategoria.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.btnGuardarCategoria.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.btnGuardarCategoria.Image = Global.syscisepro.My.Resources.Resources.save_24dp_FILL0_wght400_GRAD0_opsz24__2_
-            Me.btnGuardarCategoria.ImageAlign = System.Drawing.ContentAlignment.TopCenter
             Me.btnGuardarCategoria.Location = New System.Drawing.Point(350, 30)
             Me.btnGuardarCategoria.Name = "btnGuardarCategoria"
-            Me.btnGuardarCategoria.Size = New System.Drawing.Size(41, 34)
+            Me.btnGuardarCategoria.Size = New System.Drawing.Size(25, 25)
             Me.btnGuardarCategoria.TabIndex = 75
             Me.btnGuardarCategoria.TextAlign = System.Drawing.ContentAlignment.BottomCenter
             Me.btnGuardarCategoria.UseVisualStyleBackColor = False
@@ -506,14 +511,15 @@
             Me.btnNuevoCategoria.BackColor = System.Drawing.Color.White
             Me.btnNuevoCategoria.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
             Me.btnNuevoCategoria.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+            Me.btnNuevoCategoria.FlatAppearance.BorderSize = 0
             Me.btnNuevoCategoria.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
             Me.btnNuevoCategoria.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+            Me.btnNuevoCategoria.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.btnNuevoCategoria.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.btnNuevoCategoria.Image = Global.syscisepro.My.Resources.Resources.add_circle_24dp_FILL0_wght400_GRAD0_opsz24__3_
-            Me.btnNuevoCategoria.ImageAlign = System.Drawing.ContentAlignment.TopCenter
             Me.btnNuevoCategoria.Location = New System.Drawing.Point(304, 30)
             Me.btnNuevoCategoria.Name = "btnNuevoCategoria"
-            Me.btnNuevoCategoria.Size = New System.Drawing.Size(41, 34)
+            Me.btnNuevoCategoria.Size = New System.Drawing.Size(25, 25)
             Me.btnNuevoCategoria.TabIndex = 74
             Me.btnNuevoCategoria.TextAlign = System.Drawing.ContentAlignment.BottomCenter
             Me.btnNuevoCategoria.UseVisualStyleBackColor = False
@@ -602,13 +608,14 @@
             Me.btnGuardarSecuencial.BackColor = System.Drawing.Color.White
             Me.btnGuardarSecuencial.Enabled = False
             Me.btnGuardarSecuencial.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+            Me.btnGuardarSecuencial.FlatAppearance.BorderSize = 0
             Me.btnGuardarSecuencial.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+            Me.btnGuardarSecuencial.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.btnGuardarSecuencial.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.btnGuardarSecuencial.Image = Global.syscisepro.My.Resources.Resources.save_24dp_FILL0_wght400_GRAD0_opsz24__2_
-            Me.btnGuardarSecuencial.ImageAlign = System.Drawing.ContentAlignment.TopCenter
             Me.btnGuardarSecuencial.Location = New System.Drawing.Point(350, 20)
             Me.btnGuardarSecuencial.Name = "btnGuardarSecuencial"
-            Me.btnGuardarSecuencial.Size = New System.Drawing.Size(41, 34)
+            Me.btnGuardarSecuencial.Size = New System.Drawing.Size(25, 25)
             Me.btnGuardarSecuencial.TabIndex = 76
             Me.btnGuardarSecuencial.TextAlign = System.Drawing.ContentAlignment.BottomCenter
             Me.btnGuardarSecuencial.UseVisualStyleBackColor = False
@@ -648,13 +655,14 @@
             '
             Me.btnNuevoSecuecial.BackColor = System.Drawing.Color.White
             Me.btnNuevoSecuecial.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+            Me.btnNuevoSecuecial.FlatAppearance.BorderSize = 0
             Me.btnNuevoSecuecial.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+            Me.btnNuevoSecuecial.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.btnNuevoSecuecial.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.btnNuevoSecuecial.Image = Global.syscisepro.My.Resources.Resources.add_circle_24dp_FILL0_wght400_GRAD0_opsz24__3_
-            Me.btnNuevoSecuecial.ImageAlign = System.Drawing.ContentAlignment.TopCenter
             Me.btnNuevoSecuecial.Location = New System.Drawing.Point(304, 20)
             Me.btnNuevoSecuecial.Name = "btnNuevoSecuecial"
-            Me.btnNuevoSecuecial.Size = New System.Drawing.Size(41, 34)
+            Me.btnNuevoSecuecial.Size = New System.Drawing.Size(25, 25)
             Me.btnNuevoSecuecial.TabIndex = 75
             Me.btnNuevoSecuecial.TextAlign = System.Drawing.ContentAlignment.BottomCenter
             Me.btnNuevoSecuecial.UseVisualStyleBackColor = False
@@ -872,6 +880,10 @@
             Me.MaximizeBox = False
             Me.Name = "FormAgregarCategoria"
             Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+            Me.StateActive.Border.DrawBorders = CType((((Krypton.Toolkit.PaletteDrawBorders.Top Or Krypton.Toolkit.PaletteDrawBorders.Bottom) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Left) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Right), Krypton.Toolkit.PaletteDrawBorders)
+            Me.StateActive.Border.Rounding = 5.0!
             Me.Text = "AGREGAR CODIGOS DE ACTIVOS FIJOS"
             Me.gbGrupo.ResumeLayout(False)
             Me.gbGrupo.PerformLayout()

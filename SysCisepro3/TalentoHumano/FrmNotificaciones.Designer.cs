@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Label1 = new System.Windows.Forms.Label();
             this.GroupBox2 = new System.Windows.Forms.GroupBox();
             this.txtNombreDenunciante = new System.Windows.Forms.TextBox();
@@ -97,7 +97,8 @@
             this.GroupBox2.Controls.Add(this.Label31);
             this.GroupBox2.Controls.Add(this.txtDetallesNotificacion);
             this.GroupBox2.Controls.Add(this.Label18);
-            this.GroupBox2.Location = new System.Drawing.Point(4, 28);
+            this.GroupBox2.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GroupBox2.Location = new System.Drawing.Point(4, 35);
             this.GroupBox2.Name = "GroupBox2";
             this.GroupBox2.Size = new System.Drawing.Size(778, 167);
             this.GroupBox2.TabIndex = 203;
@@ -111,7 +112,7 @@
             this.txtNombreDenunciante.Enabled = false;
             this.txtNombreDenunciante.Location = new System.Drawing.Point(376, 46);
             this.txtNombreDenunciante.Name = "txtNombreDenunciante";
-            this.txtNombreDenunciante.Size = new System.Drawing.Size(394, 22);
+            this.txtNombreDenunciante.Size = new System.Drawing.Size(394, 21);
             this.txtNombreDenunciante.TabIndex = 219;
             // 
             // label5
@@ -119,7 +120,7 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(248, 49);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(128, 13);
+            this.label5.Size = new System.Drawing.Size(133, 13);
             this.label5.TabIndex = 218;
             this.label5.Text = "APELLIDOS Y NOMBRES:";
             // 
@@ -131,7 +132,7 @@
             this.txtCiRuc.Location = new System.Drawing.Point(72, 46);
             this.txtCiRuc.MaxLength = 10;
             this.txtCiRuc.Name = "txtCiRuc";
-            this.txtCiRuc.Size = new System.Drawing.Size(148, 22);
+            this.txtCiRuc.Size = new System.Drawing.Size(148, 21);
             this.txtCiRuc.TabIndex = 217;
             this.txtCiRuc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNumDoc_KeyPress);
             this.txtCiRuc.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtCiRuc_KeyUp);
@@ -141,7 +142,7 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(8, 49);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(51, 13);
+            this.label4.Size = new System.Drawing.Size(50, 13);
             this.label4.TabIndex = 216;
             this.label4.Text = "CÉDULA:";
             // 
@@ -152,7 +153,7 @@
             this.txtNumDoc.Enabled = false;
             this.txtNumDoc.Location = new System.Drawing.Point(296, 16);
             this.txtNumDoc.Name = "txtNumDoc";
-            this.txtNumDoc.Size = new System.Drawing.Size(75, 22);
+            this.txtNumDoc.Size = new System.Drawing.Size(75, 21);
             this.txtNumDoc.TabIndex = 215;
             this.txtNumDoc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNumDoc_KeyPress);
             // 
@@ -161,7 +162,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(248, 19);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(49, 13);
+            this.label2.Size = new System.Drawing.Size(47, 13);
             this.label2.TabIndex = 214;
             this.label2.Text = "N° DOC:";
             // 
@@ -171,7 +172,7 @@
             this.dtpFechaNotificacion.Enabled = false;
             this.dtpFechaNotificacion.Location = new System.Drawing.Point(505, 17);
             this.dtpFechaNotificacion.Name = "dtpFechaNotificacion";
-            this.dtpFechaNotificacion.Size = new System.Drawing.Size(265, 22);
+            this.dtpFechaNotificacion.Size = new System.Drawing.Size(265, 21);
             this.dtpFechaNotificacion.TabIndex = 207;
             // 
             // Label3
@@ -179,7 +180,7 @@
             this.Label3.AutoSize = true;
             this.Label3.Location = new System.Drawing.Point(392, 20);
             this.Label3.Name = "Label3";
-            this.Label3.Size = new System.Drawing.Size(111, 13);
+            this.Label3.Size = new System.Drawing.Size(110, 13);
             this.Label3.TabIndex = 208;
             this.Label3.Text = "FEC. NOTIFICACIÓN:";
             // 
@@ -190,7 +191,7 @@
             this.dtpFechaRegistro.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpFechaRegistro.Location = new System.Drawing.Point(99, 20);
             this.dtpFechaRegistro.Name = "dtpFechaRegistro";
-            this.dtpFechaRegistro.Size = new System.Drawing.Size(90, 22);
+            this.dtpFechaRegistro.Size = new System.Drawing.Size(90, 21);
             this.dtpFechaRegistro.TabIndex = 204;
             // 
             // Label31
@@ -198,7 +199,7 @@
             this.Label31.AutoSize = true;
             this.Label31.Location = new System.Drawing.Point(3, 23);
             this.Label31.Name = "Label31";
-            this.Label31.Size = new System.Drawing.Size(99, 13);
+            this.Label31.Size = new System.Drawing.Size(100, 13);
             this.Label31.TabIndex = 205;
             this.Label31.Text = "FECHA REGISTRO:";
             // 
@@ -218,34 +219,35 @@
             this.Label18.AutoSize = true;
             this.Label18.Location = new System.Drawing.Point(8, 77);
             this.Label18.Name = "Label18";
-            this.Label18.Size = new System.Drawing.Size(52, 13);
+            this.Label18.Size = new System.Drawing.Size(55, 13);
             this.Label18.TabIndex = 200;
             this.Label18.Text = "DETALLE:";
             // 
             // dtpFechaHasta
             // 
             this.dtpFechaHasta.CustomFormat = "dddd, dd-MMM-yyyy";
-            this.dtpFechaHasta.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpFechaHasta.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpFechaHasta.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaHasta.Location = new System.Drawing.Point(687, 220);
+            this.dtpFechaHasta.Location = new System.Drawing.Point(687, 224);
             this.dtpFechaHasta.Name = "dtpFechaHasta";
-            this.dtpFechaHasta.Size = new System.Drawing.Size(93, 22);
+            this.dtpFechaHasta.Size = new System.Drawing.Size(93, 21);
             this.dtpFechaHasta.TabIndex = 200;
             // 
             // dtpFechaDesde
             // 
             this.dtpFechaDesde.CustomFormat = "dddd, dd-MMM-yyyy";
-            this.dtpFechaDesde.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpFechaDesde.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpFechaDesde.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaDesde.Location = new System.Drawing.Point(564, 220);
+            this.dtpFechaDesde.Location = new System.Drawing.Point(564, 224);
             this.dtpFechaDesde.Name = "dtpFechaDesde";
-            this.dtpFechaDesde.Size = new System.Drawing.Size(93, 22);
+            this.dtpFechaDesde.Size = new System.Drawing.Size(93, 21);
             this.dtpFechaDesde.TabIndex = 199;
             // 
             // Label24
             // 
             this.Label24.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Label24.Location = new System.Drawing.Point(4, 198);
+            this.Label24.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label24.Location = new System.Drawing.Point(4, 203);
             this.Label24.Name = "Label24";
             this.Label24.Size = new System.Drawing.Size(780, 16);
             this.Label24.TabIndex = 195;
@@ -256,8 +258,8 @@
             // 
             this.txtFiltro.BackColor = System.Drawing.Color.White;
             this.txtFiltro.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtFiltro.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFiltro.Location = new System.Drawing.Point(65, 220);
+            this.txtFiltro.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFiltro.Location = new System.Drawing.Point(65, 224);
             this.txtFiltro.Name = "txtFiltro";
             this.txtFiltro.Size = new System.Drawing.Size(379, 21);
             this.txtFiltro.TabIndex = 191;
@@ -267,9 +269,10 @@
             // 
             this.Label7.AutoSize = true;
             this.Label7.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Label7.Location = new System.Drawing.Point(11, 224);
+            this.Label7.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label7.Location = new System.Drawing.Point(11, 228);
             this.Label7.Name = "Label7";
-            this.Label7.Size = new System.Drawing.Size(45, 13);
+            this.Label7.Size = new System.Drawing.Size(46, 13);
             this.Label7.TabIndex = 190;
             this.Label7.Text = "FILTRO:";
             this.Label7.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -277,7 +280,8 @@
             // Label11
             // 
             this.Label11.AutoSize = true;
-            this.Label11.Location = new System.Drawing.Point(671, 223);
+            this.Label11.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label11.Location = new System.Drawing.Point(671, 227);
             this.Label11.Name = "Label11";
             this.Label11.Size = new System.Drawing.Size(17, 13);
             this.Label11.TabIndex = 202;
@@ -286,14 +290,16 @@
             // Label10
             // 
             this.Label10.AutoSize = true;
-            this.Label10.Location = new System.Drawing.Point(517, 223);
+            this.Label10.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label10.Location = new System.Drawing.Point(517, 227);
             this.Label10.Name = "Label10";
-            this.Label10.Size = new System.Drawing.Size(44, 13);
+            this.Label10.Size = new System.Drawing.Size(43, 13);
             this.Label10.TabIndex = 201;
             this.Label10.Text = "DESDE:";
             // 
             // toolStrip1
             // 
+            this.toolStrip1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnBuscar,
             this.btnNuevo,
@@ -303,64 +309,70 @@
             this.toolStripButton1});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(786, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(786, 31);
             this.toolStrip1.TabIndex = 214;
             this.toolStrip1.Text = "toolStrip1";
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Image = global::SysCisepro3.Properties.Resources.BuscarRegistro;
+            this.btnBuscar.Image = global::SysCisepro3.Properties.Resources.search_24dp_FILL0_wght400_GRAD0_opsz24__2_;
+            this.btnBuscar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnBuscar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(102, 22);
-            this.btnBuscar.Text = "LISTAR TODOS";
+            this.btnBuscar.Size = new System.Drawing.Size(79, 28);
+            this.btnBuscar.Text = "BUSCAR";
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // btnNuevo
             // 
-            this.btnNuevo.Image = global::SysCisepro3.Properties.Resources.NuevoRegistro;
+            this.btnNuevo.Image = global::SysCisepro3.Properties.Resources.add_circle_24dp_FILL0_wght400_GRAD0_opsz24__3_;
+            this.btnNuevo.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnNuevo.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(66, 22);
+            this.btnNuevo.Size = new System.Drawing.Size(74, 28);
             this.btnNuevo.Text = "NUEVO";
             this.btnNuevo.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
             // btnGuardar
             // 
             this.btnGuardar.Enabled = false;
-            this.btnGuardar.Image = global::SysCisepro3.Properties.Resources.GuardarRegistro;
+            this.btnGuardar.Image = global::SysCisepro3.Properties.Resources.save_24dp_FILL0_wght400_GRAD0_opsz24__2_;
+            this.btnGuardar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnGuardar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(81, 22);
+            this.btnGuardar.Size = new System.Drawing.Size(89, 28);
             this.btnGuardar.Text = "GUARDAR";
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // btnAnular
             // 
             this.btnAnular.Enabled = false;
-            this.btnAnular.Image = global::SysCisepro3.Properties.Resources.EliminarRegistro;
+            this.btnAnular.Image = global::SysCisepro3.Properties.Resources.playlist_remove_24dp_FILL0_wght400_GRAD0_opsz24__3_;
+            this.btnAnular.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnAnular.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnAnular.Name = "btnAnular";
-            this.btnAnular.Size = new System.Drawing.Size(73, 22);
+            this.btnAnular.Size = new System.Drawing.Size(81, 28);
             this.btnAnular.Text = "ANULAR";
             this.btnAnular.Click += new System.EventHandler(this.btnAnular_Click);
             // 
             // btnCancelar
             // 
             this.btnCancelar.Enabled = false;
-            this.btnCancelar.Image = global::SysCisepro3.Properties.Resources.cancel;
+            this.btnCancelar.Image = global::SysCisepro3.Properties.Resources.cancel_24dp_FILL0_wght400_GRAD0_opsz24;
+            this.btnCancelar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnCancelar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(87, 22);
+            this.btnCancelar.Size = new System.Drawing.Size(95, 28);
             this.btnCancelar.Text = "CANCELAR";
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // toolStripButton1
             // 
-            this.toolStripButton1.Image = global::SysCisepro3.Properties.Resources.excel_icon;
+            this.toolStripButton1.Image = global::SysCisepro3.Properties.Resources.icons8_excel_48;
+            this.toolStripButton1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(82, 22);
+            this.toolStripButton1.Size = new System.Drawing.Size(90, 28);
             this.toolStripButton1.Text = "EXPORTAR";
             this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click_1);
             // 
@@ -369,8 +381,8 @@
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -387,8 +399,8 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(784, 412);
             this.dataGridView1.TabIndex = 225;
@@ -403,8 +415,8 @@
             // 
             // Column3
             // 
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Column3.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Column3.DefaultCellStyle = dataGridViewCellStyle5;
             this.Column3.HeaderText = "FEC. REGISTRO";
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
@@ -466,6 +478,10 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "FrmNotificaciones";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StateActive.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.StateActive.Border.Rounding = 5F;
             this.Text = "REGISTRAR NOTIFICACIONES LEGALES";
             this.Load += new System.EventHandler(this.FrmNotificaciones_Load);
             this.GroupBox2.ResumeLayout(false);

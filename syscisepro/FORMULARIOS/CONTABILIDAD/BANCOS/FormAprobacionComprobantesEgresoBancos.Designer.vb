@@ -127,7 +127,7 @@
             Me.gbComprobanteEgresoBancos.Controls.Add(Me.lblTipoPago)
             Me.gbComprobanteEgresoBancos.Controls.Add(Me.txtConcepto)
             Me.gbComprobanteEgresoBancos.Controls.Add(Me.lblConcepto)
-            Me.gbComprobanteEgresoBancos.Location = New System.Drawing.Point(2, 69)
+            Me.gbComprobanteEgresoBancos.Location = New System.Drawing.Point(2, 78)
             Me.gbComprobanteEgresoBancos.Name = "gbComprobanteEgresoBancos"
             Me.gbComprobanteEgresoBancos.Size = New System.Drawing.Size(1111, 124)
             Me.gbComprobanteEgresoBancos.TabIndex = 46
@@ -398,45 +398,47 @@
             'MenuStrip1
             '
             Me.MenuStrip1.AllowMerge = False
+            Me.MenuStrip1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
             Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem1, Me.btnAprovar, Me.btnRechazar})
             Me.MenuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow
             Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
             Me.MenuStrip1.Name = "MenuStrip1"
             Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(7, 2, 0, 2)
-            Me.MenuStrip1.Size = New System.Drawing.Size(1115, 24)
+            Me.MenuStrip1.Size = New System.Drawing.Size(1115, 32)
             Me.MenuStrip1.TabIndex = 186
             Me.MenuStrip1.Text = "msIngresoBodega"
             '
             'ToolStripMenuItem1
             '
             Me.ToolStripMenuItem1.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.ToolStripMenuItem1.Image = Global.syscisepro.My.Resources.Resources.BuscarRegistro
+            Me.ToolStripMenuItem1.Image = Global.syscisepro.My.Resources.Resources.refresh_24dp_FILL0_wght400_GRAD0_opsz24__2_
             Me.ToolStripMenuItem1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
-            Me.ToolStripMenuItem1.Size = New System.Drawing.Size(168, 20)
+            Me.ToolStripMenuItem1.Size = New System.Drawing.Size(176, 28)
             Me.ToolStripMenuItem1.Text = "CARGAR COMPROBANTES"
             '
             'btnAprovar
             '
             Me.btnAprovar.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnAprovar.Image = Global.syscisepro.My.Resources.Resources.ok
+            Me.btnAprovar.Image = Global.syscisepro.My.Resources.Resources.check_24dp_FILL0_wght400_GRAD0_opsz24
+            Me.btnAprovar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnAprovar.Name = "btnAprovar"
-            Me.btnAprovar.Size = New System.Drawing.Size(168, 20)
+            Me.btnAprovar.Size = New System.Drawing.Size(176, 28)
             Me.btnAprovar.Text = "APROBAR COMPROBANTE"
             '
             'btnRechazar
             '
             Me.btnRechazar.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnRechazar.Image = Global.syscisepro.My.Resources.Resources.cancel
+            Me.btnRechazar.Image = Global.syscisepro.My.Resources.Resources.cancel_24dp_FILL0_wght400_GRAD0_opsz24
             Me.btnRechazar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnRechazar.Name = "btnRechazar"
-            Me.btnRechazar.Size = New System.Drawing.Size(175, 20)
+            Me.btnRechazar.Size = New System.Drawing.Size(183, 28)
             Me.btnRechazar.Text = "RECHAZAR COMPROBANTE"
             '
             'GroupBox1
             '
             Me.GroupBox1.Controls.Add(Me.dgvComprobanteEgresoBancos)
-            Me.GroupBox1.Location = New System.Drawing.Point(2, 193)
+            Me.GroupBox1.Location = New System.Drawing.Point(2, 205)
             Me.GroupBox1.Name = "GroupBox1"
             Me.GroupBox1.Size = New System.Drawing.Size(1111, 295)
             Me.GroupBox1.TabIndex = 187
@@ -451,7 +453,7 @@
             Me.gbRangoFechas.Controls.Add(Me.Label9)
             Me.gbRangoFechas.Controls.Add(Me.Label2)
             Me.gbRangoFechas.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.gbRangoFechas.Location = New System.Drawing.Point(2, 27)
+            Me.gbRangoFechas.Location = New System.Drawing.Point(5, 36)
             Me.gbRangoFechas.Name = "gbRangoFechas"
             Me.gbRangoFechas.Size = New System.Drawing.Size(1111, 41)
             Me.gbRangoFechas.TabIndex = 188
@@ -495,7 +497,7 @@
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.BackColor = System.Drawing.Color.White
-            Me.ClientSize = New System.Drawing.Size(1115, 491)
+            Me.ClientSize = New System.Drawing.Size(1115, 502)
             Me.Controls.Add(Me.gbRangoFechas)
             Me.Controls.Add(Me.GroupBox1)
             Me.Controls.Add(Me.MenuStrip1)
@@ -506,6 +508,10 @@
             Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
             Me.Name = "FormAprobacionComprobantesEgresoBancos"
             Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+            Me.StateActive.Border.DrawBorders = CType((((Krypton.Toolkit.PaletteDrawBorders.Top Or Krypton.Toolkit.PaletteDrawBorders.Bottom) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Left) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Right), Krypton.Toolkit.PaletteDrawBorders)
+            Me.StateActive.Border.Rounding = 5.0!
             Me.Text = "APROBACIÓN COMPROBANTES EGRESO"
             CType(Me.dgvComprobanteEgresoBancos, System.ComponentModel.ISupportInitialize).EndInit()
             Me.gbComprobanteEgresoBancos.ResumeLayout(False)

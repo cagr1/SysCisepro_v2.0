@@ -262,27 +262,31 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
                     dgvEmitidosCobrados.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorAsenava
                 Case TipoConexion.Seportpac
                     Icon = My.Resources.logo_s
-                    gbBanco.ForeColor = Color.White
-                    gbBanco.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
-                    gbComandos.ForeColor = Color.White
-                    gbComandos.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
-                    gbRangoFechas.ForeColor = Color.White
-                    gbRangoFechas.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
+                    'gbBanco.ForeColor = My.MySettingsProperty.Settings.ColorSeportpac
+                    'gbBanco.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
+                    'gbComandos.ForeColor = My.MySettingsProperty.Settings.ColorSeportpac
+                    'gbComandos.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
+                    'gbRangoFechas.ForeColor = My.MySettingsProperty.Settings.ColorSeportpac
+                    'gbRangoFechas.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
                     dgvChequesEmitidosAprobados.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorSeportpac
                     dgvLibroBancos.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorSeportpac
                     dgvEmitidosCobrados.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorSeportpac
                 Case Else
                     Icon = My.Resources.logo_c
-                    gbBanco.ForeColor = Color.White
-                    gbBanco.BackColor = My.MySettingsProperty.Settings.ColorCisepro
-                    gbComandos.ForeColor = Color.White
-                    gbComandos.BackColor = My.MySettingsProperty.Settings.ColorCisepro
-                    gbRangoFechas.ForeColor = Color.White
-                    gbRangoFechas.BackColor = My.MySettingsProperty.Settings.ColorCisepro
+                    'gbBanco.ForeColor = My.MySettingsProperty.Settings.ColorCisepro
+                    'gbBanco.BackColor = My.MySettingsProperty.Settings.ColorCisepro
+                    'gbComandos.ForeColor = My.MySettingsProperty.Settings.ColorCisepro
+                    'gbComandos.BackColor = My.MySettingsProperty.Settings.ColorCisepro
+                    'gbRangoFechas.ForeColor = My.MySettingsProperty.Settings.ColorCisepro
+                    'gbRangoFechas.BackColor = My.MySettingsProperty.Settings.ColorCisepro
                     dgvChequesEmitidosAprobados.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
                     dgvLibroBancos.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
                     dgvEmitidosCobrados.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
             End Select
+            dgvChequesEmitidosAprobados.Font = New Font("Roboto", 8, FontStyle.Regular)
+            dgvLibroBancos.Font = New Font("Roboto", 8, FontStyle.Regular)
+            dgvEmitidosCobrados.Font = New Font("Roboto", 8, FontStyle.Regular)
+
             tipoBusqueda = 1
             dtpDesde.Value = New DateTime(DateTime.Now.Year, DateTime.Now.Month, 1)
             LlenarComboBancos()

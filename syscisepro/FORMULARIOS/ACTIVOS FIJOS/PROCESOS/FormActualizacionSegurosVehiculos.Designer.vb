@@ -23,8 +23,8 @@
         'No lo modifique con el editor de código.
         <System.Diagnostics.DebuggerStepThrough()> _
         Private Sub InitializeComponent()
-            Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormActualizacionSegurosVehiculos))
             Me.dgvActualizacionVehiculos = New System.Windows.Forms.DataGridView()
             Me.gbBusqueda = New System.Windows.Forms.GroupBox()
@@ -81,19 +81,19 @@
             Me.dgvActualizacionVehiculos.AllowUserToAddRows = False
             Me.dgvActualizacionVehiculos.AllowUserToDeleteRows = False
             Me.dgvActualizacionVehiculos.AllowUserToResizeRows = False
-            DataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-            Me.dgvActualizacionVehiculos.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle7
+            DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+            Me.dgvActualizacionVehiculos.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
             Me.dgvActualizacionVehiculos.BackgroundColor = System.Drawing.Color.White
             Me.dgvActualizacionVehiculos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
             Me.dgvActualizacionVehiculos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-            DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-            DataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window
-            DataGridViewCellStyle8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            DataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black
-            DataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(123, Byte), Integer))
-            DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-            DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-            Me.dgvActualizacionVehiculos.DefaultCellStyle = DataGridViewCellStyle8
+            DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+            DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
+            DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black
+            DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(123, Byte), Integer))
+            DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+            DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+            Me.dgvActualizacionVehiculos.DefaultCellStyle = DataGridViewCellStyle2
             Me.dgvActualizacionVehiculos.Location = New System.Drawing.Point(2, 312)
             Me.dgvActualizacionVehiculos.MultiSelect = False
             Me.dgvActualizacionVehiculos.Name = "dgvActualizacionVehiculos"
@@ -109,7 +109,7 @@
             Me.gbBusqueda.Controls.Add(Me.rbPlacas)
             Me.gbBusqueda.Controls.Add(Me.rbCodigoActivo)
             Me.gbBusqueda.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.gbBusqueda.Location = New System.Drawing.Point(3, 246)
+            Me.gbBusqueda.Location = New System.Drawing.Point(3, 249)
             Me.gbBusqueda.Name = "gbBusqueda"
             Me.gbBusqueda.Size = New System.Drawing.Size(643, 60)
             Me.gbBusqueda.TabIndex = 1
@@ -154,7 +154,7 @@
             '
             Me.Label1.AutoSize = True
             Me.Label1.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label1.Location = New System.Drawing.Point(0, 33)
+            Me.Label1.Location = New System.Drawing.Point(1, 39)
             Me.Label1.Name = "Label1"
             Me.Label1.Size = New System.Drawing.Size(88, 13)
             Me.Label1.TabIndex = 2
@@ -164,7 +164,7 @@
             '
             Me.txtNombreActivo.Enabled = False
             Me.txtNombreActivo.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtNombreActivo.Location = New System.Drawing.Point(166, 31)
+            Me.txtNombreActivo.Location = New System.Drawing.Point(168, 38)
             Me.txtNombreActivo.Name = "txtNombreActivo"
             Me.txtNombreActivo.Size = New System.Drawing.Size(511, 21)
             Me.txtNombreActivo.TabIndex = 3
@@ -173,7 +173,7 @@
             '
             Me.txtPlacas.Enabled = False
             Me.txtPlacas.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtPlacas.Location = New System.Drawing.Point(772, 30)
+            Me.txtPlacas.Location = New System.Drawing.Point(768, 39)
             Me.txtPlacas.Name = "txtPlacas"
             Me.txtPlacas.Size = New System.Drawing.Size(111, 21)
             Me.txtPlacas.TabIndex = 5
@@ -182,7 +182,7 @@
             '
             Me.Label2.AutoSize = True
             Me.Label2.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label2.Location = New System.Drawing.Point(722, 34)
+            Me.Label2.Location = New System.Drawing.Point(719, 41)
             Me.Label2.Name = "Label2"
             Me.Label2.Size = New System.Drawing.Size(46, 13)
             Me.Label2.TabIndex = 4
@@ -192,7 +192,7 @@
             '
             Me.txtIdActivo.Enabled = False
             Me.txtIdActivo.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtIdActivo.Location = New System.Drawing.Point(91, 31)
+            Me.txtIdActivo.Location = New System.Drawing.Point(93, 38)
             Me.txtIdActivo.Name = "txtIdActivo"
             Me.txtIdActivo.Size = New System.Drawing.Size(66, 21)
             Me.txtIdActivo.TabIndex = 6
@@ -464,7 +464,7 @@
             Me.GroupBox1.Controls.Add(Me.Label11)
             Me.GroupBox1.Controls.Add(Me.dtpFechaFinalContrato)
             Me.GroupBox1.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.GroupBox1.Location = New System.Drawing.Point(2, 55)
+            Me.GroupBox1.Location = New System.Drawing.Point(2, 60)
             Me.GroupBox1.Name = "GroupBox1"
             Me.GroupBox1.Size = New System.Drawing.Size(881, 110)
             Me.GroupBox1.TabIndex = 33
@@ -483,7 +483,7 @@
             Me.GroupBox2.Controls.Add(Me.Label13)
             Me.GroupBox2.Controls.Add(Me.dtpFechaFinalDispositivo)
             Me.GroupBox2.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.GroupBox2.Location = New System.Drawing.Point(2, 171)
+            Me.GroupBox2.Location = New System.Drawing.Point(2, 174)
             Me.GroupBox2.Name = "GroupBox2"
             Me.GroupBox2.Size = New System.Drawing.Size(881, 70)
             Me.GroupBox2.TabIndex = 34
@@ -495,7 +495,7 @@
             Me.GroupBox3.BackColor = System.Drawing.Color.White
             Me.GroupBox3.Controls.Add(Me.dtpSoat)
             Me.GroupBox3.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.GroupBox3.Location = New System.Drawing.Point(650, 246)
+            Me.GroupBox3.Location = New System.Drawing.Point(650, 249)
             Me.GroupBox3.Name = "GroupBox3"
             Me.GroupBox3.Size = New System.Drawing.Size(231, 59)
             Me.GroupBox3.TabIndex = 35
@@ -510,36 +510,37 @@
             Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
             Me.MenuStrip1.Name = "MenuStrip1"
             Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(7, 2, 0, 2)
-            Me.MenuStrip1.Size = New System.Drawing.Size(884, 24)
+            Me.MenuStrip1.Size = New System.Drawing.Size(884, 32)
             Me.MenuStrip1.TabIndex = 188
             Me.MenuStrip1.Text = "msIngresoBodega"
             '
             'btnModificar
             '
             Me.btnModificar.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnModificar.Image = Global.syscisepro.My.Resources.Resources.ModificarRegistro
+            Me.btnModificar.Image = Global.syscisepro.My.Resources.Resources.edit_document_24dp_FILL0_wght400_GRAD0_opsz24__2_
             Me.btnModificar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnModificar.Name = "btnModificar"
-            Me.btnModificar.Size = New System.Drawing.Size(98, 20)
+            Me.btnModificar.Size = New System.Drawing.Size(106, 28)
             Me.btnModificar.Text = "MODIFICAR"
             '
             'btnActualizar
             '
             Me.btnActualizar.Enabled = False
             Me.btnActualizar.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnActualizar.Image = CType(resources.GetObject("btnActualizar.Image"), System.Drawing.Image)
+            Me.btnActualizar.Image = Global.syscisepro.My.Resources.Resources.save_24dp_FILL0_wght400_GRAD0_opsz24__3_
             Me.btnActualizar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnActualizar.Name = "btnActualizar"
-            Me.btnActualizar.Size = New System.Drawing.Size(84, 20)
+            Me.btnActualizar.Size = New System.Drawing.Size(92, 28)
             Me.btnActualizar.Text = "GUARDAR"
             '
             'btnCancelarUnidadMedida
             '
             Me.btnCancelarUnidadMedida.Enabled = False
             Me.btnCancelarUnidadMedida.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnCancelarUnidadMedida.Image = Global.syscisepro.My.Resources.Resources.cancel
+            Me.btnCancelarUnidadMedida.Image = Global.syscisepro.My.Resources.Resources.cancel_24dp_FILL0_wght400_GRAD0_opsz24
+            Me.btnCancelarUnidadMedida.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnCancelarUnidadMedida.Name = "btnCancelarUnidadMedida"
-            Me.btnCancelarUnidadMedida.Size = New System.Drawing.Size(91, 20)
+            Me.btnCancelarUnidadMedida.Size = New System.Drawing.Size(99, 28)
             Me.btnCancelarUnidadMedida.Text = "CANCELAR"
             '
             'FormActualizacionSegurosVehiculos

@@ -1,8 +1,8 @@
 ﻿Namespace FORMULARIOS.CONTABILIDAD.BANCOS
     <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
     Partial Class FormCargarComprobantesEgresoBanco
-        Inherits System.Windows.Forms.Form
-
+        'Inherits System.Windows.Forms.Form
+        Inherits Krypton.Toolkit.KryptonForm
         'Form reemplaza a Dispose para limpiar la lista de componentes.
         <System.Diagnostics.DebuggerNonUserCode()> _
         Protected Overrides Sub Dispose(ByVal disposing As Boolean)
@@ -57,7 +57,7 @@
             Me.GroupBox1.Controls.Add(Me.lblCodigoCta)
             Me.GroupBox1.Controls.Add(Me.txtCuentaDebe)
             Me.GroupBox1.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.GroupBox1.Location = New System.Drawing.Point(362, 27)
+            Me.GroupBox1.Location = New System.Drawing.Point(362, 36)
             Me.GroupBox1.Name = "GroupBox1"
             Me.GroupBox1.Size = New System.Drawing.Size(331, 62)
             Me.GroupBox1.TabIndex = 0
@@ -98,7 +98,7 @@
             DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
             DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
             Me.dgvComprobantesEgresoBanco.DefaultCellStyle = DataGridViewCellStyle2
-            Me.dgvComprobantesEgresoBanco.Location = New System.Drawing.Point(2, 92)
+            Me.dgvComprobantesEgresoBanco.Location = New System.Drawing.Point(2, 101)
             Me.dgvComprobantesEgresoBanco.MultiSelect = False
             Me.dgvComprobantesEgresoBanco.Name = "dgvComprobantesEgresoBanco"
             Me.dgvComprobantesEgresoBanco.RowHeadersVisible = False
@@ -112,7 +112,7 @@
             Me.gbBuscar.Controls.Add(Me.btnBuscarPersonal)
             Me.gbBuscar.Controls.Add(Me.txtRutaArchivo)
             Me.gbBuscar.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.gbBuscar.Location = New System.Drawing.Point(2, 27)
+            Me.gbBuscar.Location = New System.Drawing.Point(2, 36)
             Me.gbBuscar.Name = "gbBuscar"
             Me.gbBuscar.Size = New System.Drawing.Size(360, 62)
             Me.gbBuscar.TabIndex = 61
@@ -123,10 +123,10 @@
             '
             Me.btnBuscarPersonal.BackColor = System.Drawing.Color.White
             Me.btnBuscarPersonal.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnBuscarPersonal.Image = CType(resources.GetObject("btnBuscarPersonal.Image"), System.Drawing.Image)
-            Me.btnBuscarPersonal.Location = New System.Drawing.Point(326, 29)
+            Me.btnBuscarPersonal.Image = Global.syscisepro.My.Resources.Resources.search_24dp_FILL0_wght400_GRAD0_opsz24__2_
+            Me.btnBuscarPersonal.Location = New System.Drawing.Point(311, 26)
             Me.btnBuscarPersonal.Name = "btnBuscarPersonal"
-            Me.btnBuscarPersonal.Size = New System.Drawing.Size(29, 22)
+            Me.btnBuscarPersonal.Size = New System.Drawing.Size(41, 30)
             Me.btnBuscarPersonal.TabIndex = 60
             Me.btnBuscarPersonal.UseVisualStyleBackColor = False
             '
@@ -134,7 +134,7 @@
             '
             Me.txtRutaArchivo.Location = New System.Drawing.Point(6, 30)
             Me.txtRutaArchivo.Name = "txtRutaArchivo"
-            Me.txtRutaArchivo.Size = New System.Drawing.Size(319, 20)
+            Me.txtRutaArchivo.Size = New System.Drawing.Size(299, 20)
             Me.txtRutaArchivo.TabIndex = 59
             '
             'ofdSeleccionarArchivo
@@ -148,7 +148,7 @@
             Me.gbBanco.Controls.Add(Me.cmbCuentaBancos)
             Me.gbBanco.Controls.Add(Me.cmbBancos)
             Me.gbBanco.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.gbBanco.Location = New System.Drawing.Point(693, 27)
+            Me.gbBanco.Location = New System.Drawing.Point(693, 36)
             Me.gbBanco.Name = "gbBanco"
             Me.gbBanco.Size = New System.Drawing.Size(563, 62)
             Me.gbBanco.TabIndex = 109
@@ -202,23 +202,23 @@
             '
             'msKardex
             '
+            Me.msKardex.Font = New System.Drawing.Font("Segoe UI", 9.0!)
             Me.msKardex.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnGuardar})
             Me.msKardex.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow
             Me.msKardex.Location = New System.Drawing.Point(0, 0)
             Me.msKardex.Name = "msKardex"
             Me.msKardex.Padding = New System.Windows.Forms.Padding(7, 2, 0, 2)
-            Me.msKardex.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
-            Me.msKardex.Size = New System.Drawing.Size(1256, 24)
+            Me.msKardex.Size = New System.Drawing.Size(1256, 32)
             Me.msKardex.TabIndex = 187
             Me.msKardex.Text = "msIngresoBodega"
             '
             'btnGuardar
             '
             Me.btnGuardar.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnGuardar.Image = Global.syscisepro.My.Resources.Resources.GuardarRegistro
+            Me.btnGuardar.Image = Global.syscisepro.My.Resources.Resources.save_24dp_FILL0_wght400_GRAD0_opsz24__3_
             Me.btnGuardar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnGuardar.Name = "btnGuardar"
-            Me.btnGuardar.Size = New System.Drawing.Size(84, 20)
+            Me.btnGuardar.Size = New System.Drawing.Size(92, 28)
             Me.btnGuardar.Text = "GUARDAR"
             '
             'FormCargarComprobantesEgresoBanco
@@ -226,7 +226,7 @@
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.BackColor = System.Drawing.Color.White
-            Me.ClientSize = New System.Drawing.Size(1256, 700)
+            Me.ClientSize = New System.Drawing.Size(1256, 706)
             Me.Controls.Add(Me.msKardex)
             Me.Controls.Add(Me.gbBanco)
             Me.Controls.Add(Me.gbBuscar)
@@ -236,6 +236,10 @@
             Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
             Me.Name = "FormCargarComprobantesEgresoBanco"
             Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+            Me.StateActive.Border.DrawBorders = CType((((Krypton.Toolkit.PaletteDrawBorders.Top Or Krypton.Toolkit.PaletteDrawBorders.Bottom) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Left) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Right), Krypton.Toolkit.PaletteDrawBorders)
+            Me.StateActive.Border.Rounding = 5.0!
             Me.Text = "CARGAR COMPROBANTES EGRESO"
             Me.GroupBox1.ResumeLayout(False)
             Me.GroupBox1.PerformLayout()

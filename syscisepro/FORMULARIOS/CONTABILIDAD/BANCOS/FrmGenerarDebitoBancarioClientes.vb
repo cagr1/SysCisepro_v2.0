@@ -48,12 +48,12 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
             Select Case _tipoCon
                 Case TipoConexion.Asenava
                     Icon = My.Resources.logo_a
-                    Label8.ForeColor = My.MySettingsProperty.Settings.ColorAsenava
+                    'Label8.ForeColor = My.MySettingsProperty.Settings.ColorAsenava
                     Label9.ForeColor = Color.White
                     Label9.BackColor = My.MySettingsProperty.Settings.ColorAsenava
                     lblComprobante.ForeColor = My.MySettingsProperty.Settings.ColorAsenava 
                     msKardex.ForeColor = Color.White
-                    msKardex.BackColor = My.MySettingsProperty.Settings.ColorAsenava
+                    'msKardex.BackColor = My.MySettingsProperty.Settings.ColorAsenava
                     dgvComprobantesIngreso.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorAsenava
                     dgvDebitos.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorAsenava
                     dgvDetalleComprobate.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorAsenava
@@ -62,9 +62,9 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
                     Icon = My.Resources.logo_s
                     Label9.ForeColor = Color.White
                     Label9.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
-                    Label8.ForeColor = My.MySettingsProperty.Settings.ColorSeportpac 
+                    'Label8.ForeColor = My.MySettingsProperty.Settings.ColorSeportpac 
                     lblComprobante.ForeColor = My.MySettingsProperty.Settings.ColorSeportpac
-                    msKardex.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
+                    'msKardex.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
                     msKardex.ForeColor = Color.White
                     dgvComprobantesIngreso.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorSeportpac
                     dgvDebitos.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorSeportpac
@@ -74,9 +74,9 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
                     Icon = My.Resources.logo_c
                     Label9.ForeColor = Color.White
                     Label9.BackColor = My.MySettingsProperty.Settings.ColorCisepro
-                    Label8.ForeColor = My.MySettingsProperty.Settings.ColorCisepro
-                    lblComprobante.ForeColor = My.MySettingsProperty.Settings.ColorCisepro 
-                    msKardex.BackColor = My.MySettingsProperty.Settings.ColorCisepro
+                    'Label8.ForeColor = My.MySettingsProperty.Settings.ColorCisepro
+                    lblComprobante.ForeColor = My.MySettingsProperty.Settings.ColorCisepro
+                    'msKardex.BackColor = My.MySettingsProperty.Settings.ColorCisepro
                     msKardex.ForeColor = Color.White
                     dgvComprobantesIngreso.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
                     dgvDebitos.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro

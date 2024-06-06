@@ -277,7 +277,7 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
                     dgvEmitidosCaducados.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorAsenava
                 Case TipoConexion.Seportpac
                     Icon = My.Resources.logo_s
-                    MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
+                    'MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
                     MenuStrip1.ForeColor = Color.White
                     CrToolStripTextBox1.ForeColor = Color.White
                     CrToolStripTextBox1.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
@@ -286,7 +286,7 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
                     dgvEmitidosCaducados.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorSeportpac
                 Case Else
                     Icon = My.Resources.logo_c
-                    MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorCisepro
+                    'MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorCisepro
                     MenuStrip1.ForeColor = Color.White
                     CrToolStripTextBox1.ForeColor = Color.White
                     CrToolStripTextBox1.BackColor = My.MySettingsProperty.Settings.ColorCisepro
@@ -294,7 +294,10 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
                     dgvChequesEmitidosAprobados.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
                     dgvEmitidosCaducados.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
             End Select
-            
+            dgvEmitidosCobrados.Font = New Font("Roboto", 8, FontStyle.Regular)
+            dgvChequesEmitidosAprobados.Font = New Font("Roboto", 8, FontStyle.Regular)
+            dgvEmitidosCaducados.Font = New Font("Roboto", 8, FontStyle.Regular)
+
             LlenarComboBancos()
 
             CargarChequesEmitidosNoCobrados()

@@ -87,7 +87,7 @@
             Me.gpComandos.Controls.Add(Me.txtTotalEmitidosCobrados)
             Me.gpComandos.Controls.Add(Me.lblIdComprobanteEgresoBanco)
             Me.gpComandos.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.gpComandos.Location = New System.Drawing.Point(809, 28)
+            Me.gpComandos.Location = New System.Drawing.Point(809, 37)
             Me.gpComandos.Name = "gpComandos"
             Me.gpComandos.RightToLeft = System.Windows.Forms.RightToLeft.Yes
             Me.gpComandos.Size = New System.Drawing.Size(318, 45)
@@ -122,7 +122,7 @@
             '
             Me.lblIdComprobanteEgresoBanco.AutoSize = True
             Me.lblIdComprobanteEgresoBanco.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.lblIdComprobanteEgresoBanco.Location = New System.Drawing.Point(6, 0)
+            Me.lblIdComprobanteEgresoBanco.Location = New System.Drawing.Point(11, 0)
             Me.lblIdComprobanteEgresoBanco.Name = "lblIdComprobanteEgresoBanco"
             Me.lblIdComprobanteEgresoBanco.Size = New System.Drawing.Size(16, 13)
             Me.lblIdComprobanteEgresoBanco.TabIndex = 58
@@ -188,7 +188,7 @@
             Me.tcRevisionCheques.Controls.Add(Me.tpEmitidosCobrados)
             Me.tcRevisionCheques.Controls.Add(Me.tpCaducados)
             Me.tcRevisionCheques.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.tcRevisionCheques.Location = New System.Drawing.Point(2, 79)
+            Me.tcRevisionCheques.Location = New System.Drawing.Point(2, 84)
             Me.tcRevisionCheques.Name = "tcRevisionCheques"
             Me.tcRevisionCheques.SelectedIndex = 0
             Me.tcRevisionCheques.Size = New System.Drawing.Size(1129, 611)
@@ -322,7 +322,7 @@
             Me.gbRangoFechaBusqueda.Controls.Add(Me.dtpFechaHasta)
             Me.gbRangoFechaBusqueda.Controls.Add(Me.dtpFechaDesde)
             Me.gbRangoFechaBusqueda.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.gbRangoFechaBusqueda.Location = New System.Drawing.Point(2, 28)
+            Me.gbRangoFechaBusqueda.Location = New System.Drawing.Point(2, 37)
             Me.gbRangoFechaBusqueda.Name = "gbRangoFechaBusqueda"
             Me.gbRangoFechaBusqueda.Size = New System.Drawing.Size(251, 45)
             Me.gbRangoFechaBusqueda.TabIndex = 57
@@ -360,7 +360,7 @@
             Me.gbFechaCobroCheque.Controls.Add(Me.chkCaducado)
             Me.gbFechaCobroCheque.Controls.Add(Me.dtpFechaCobroCheque)
             Me.gbFechaCobroCheque.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.gbFechaCobroCheque.Location = New System.Drawing.Point(526, 28)
+            Me.gbFechaCobroCheque.Location = New System.Drawing.Point(526, 37)
             Me.gbFechaCobroCheque.Name = "gbFechaCobroCheque"
             Me.gbFechaCobroCheque.Size = New System.Drawing.Size(283, 45)
             Me.gbFechaCobroCheque.TabIndex = 58
@@ -392,7 +392,7 @@
             Me.gbBanco.Controls.Add(Me.cmbCuentaBancos)
             Me.gbBanco.Controls.Add(Me.cmbBancos)
             Me.gbBanco.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.gbBanco.Location = New System.Drawing.Point(253, 28)
+            Me.gbBanco.Location = New System.Drawing.Point(253, 37)
             Me.gbBanco.Name = "gbBanco"
             Me.gbBanco.Size = New System.Drawing.Size(273, 45)
             Me.gbBanco.TabIndex = 117
@@ -434,46 +434,47 @@
             '
             'MenuStrip1
             '
-            Me.MenuStrip1.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.MenuStrip1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
             Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnBuscar, Me.btnAprobar, Me.btnReporte, Me.CrToolStripTextBox1, Me.ToolStripMenuItem1, Me.btnExportar, Me.ToolStripMenuItem2})
             Me.MenuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow
             Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
             Me.MenuStrip1.Name = "MenuStrip1"
             Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(7, 2, 0, 2)
-            Me.MenuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
-            Me.MenuStrip1.Size = New System.Drawing.Size(1131, 24)
+            Me.MenuStrip1.Size = New System.Drawing.Size(1131, 32)
             Me.MenuStrip1.TabIndex = 187
             Me.MenuStrip1.Text = "msIngresoBodega"
             '
             'btnBuscar
             '
             Me.btnBuscar.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnBuscar.Image = Global.syscisepro.My.Resources.Resources.BuscarRegistro
+            Me.btnBuscar.Image = Global.syscisepro.My.Resources.Resources.search_24dp_FILL0_wght400_GRAD0_opsz24__2_
+            Me.btnBuscar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnBuscar.Name = "btnBuscar"
-            Me.btnBuscar.Size = New System.Drawing.Size(134, 20)
-            Me.btnBuscar.Text = "BUSCAR ASIENTOS"
+            Me.btnBuscar.Size = New System.Drawing.Size(90, 28)
+            Me.btnBuscar.Text = "BUSCAR "
             '
             'btnAprobar
             '
             Me.btnAprobar.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnAprobar.Image = Global.syscisepro.My.Resources.Resources.ok
+            Me.btnAprobar.Image = Global.syscisepro.My.Resources.Resources.check_24dp_FILL0_wght400_GRAD0_opsz24
             Me.btnAprobar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnAprobar.Name = "btnAprobar"
-            Me.btnAprobar.Size = New System.Drawing.Size(88, 20)
+            Me.btnAprobar.Size = New System.Drawing.Size(96, 28)
             Me.btnAprobar.Text = "APROBAR"
             '
             'btnReporte
             '
             Me.btnReporte.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnReporte.Image = Global.syscisepro.My.Resources.Resources.report
+            Me.btnReporte.Image = Global.syscisepro.My.Resources.Resources.description_24dp_FILL0_wght400_GRAD0_opsz24__2_
             Me.btnReporte.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnReporte.Name = "btnReporte"
-            Me.btnReporte.Size = New System.Drawing.Size(82, 20)
+            Me.btnReporte.Size = New System.Drawing.Size(90, 28)
             Me.btnReporte.Text = "REPORTE"
             '
             'CrToolStripTextBox1
             '
             Me.CrToolStripTextBox1.AutoSize = False
+            Me.CrToolStripTextBox1.BackColor = System.Drawing.SystemColors.ActiveCaption
             Me.CrToolStripTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None
             Me.CrToolStripTextBox1.Enabled = False
             Me.CrToolStripTextBox1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
@@ -482,32 +483,33 @@
             Me.CrToolStripTextBox1.Size = New System.Drawing.Size(100, 20)
             Me.CrToolStripTextBox1.Text = "EXPORTAR"
             Me.CrToolStripTextBox1.TextBoxTextAlign = System.Windows.Forms.HorizontalAlignment.Right
+            Me.CrToolStripTextBox1.Visible = False
             '
             'ToolStripMenuItem1
             '
             Me.ToolStripMenuItem1.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.ToolStripMenuItem1.Image = Global.syscisepro.My.Resources.Resources.excel_icon
+            Me.ToolStripMenuItem1.Image = Global.syscisepro.My.Resources.Resources.icons8_excel_48
             Me.ToolStripMenuItem1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
-            Me.ToolStripMenuItem1.Size = New System.Drawing.Size(97, 20)
+            Me.ToolStripMenuItem1.Size = New System.Drawing.Size(105, 28)
             Me.ToolStripMenuItem1.Text = "COBRADOS"
             '
             'btnExportar
             '
             Me.btnExportar.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnExportar.Image = Global.syscisepro.My.Resources.Resources.excel_icon
+            Me.btnExportar.Image = Global.syscisepro.My.Resources.Resources.icons8_excel_48
             Me.btnExportar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnExportar.Name = "btnExportar"
-            Me.btnExportar.Size = New System.Drawing.Size(118, 20)
+            Me.btnExportar.Size = New System.Drawing.Size(126, 28)
             Me.btnExportar.Text = "NO COBRADOS"
             '
             'ToolStripMenuItem2
             '
             Me.ToolStripMenuItem2.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.ToolStripMenuItem2.Image = Global.syscisepro.My.Resources.Resources.excel_icon
+            Me.ToolStripMenuItem2.Image = Global.syscisepro.My.Resources.Resources.icons8_excel_48
             Me.ToolStripMenuItem2.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.ToolStripMenuItem2.Name = "ToolStripMenuItem2"
-            Me.ToolStripMenuItem2.Size = New System.Drawing.Size(106, 20)
+            Me.ToolStripMenuItem2.Size = New System.Drawing.Size(114, 28)
             Me.ToolStripMenuItem2.Text = "CADUCADOS"
             '
             'FormRevisionChequesEmitidos
@@ -515,7 +517,7 @@
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.BackColor = System.Drawing.Color.White
-            Me.ClientSize = New System.Drawing.Size(1131, 692)
+            Me.ClientSize = New System.Drawing.Size(1131, 696)
             Me.Controls.Add(Me.MenuStrip1)
             Me.Controls.Add(Me.gbBanco)
             Me.Controls.Add(Me.tcRevisionCheques)
@@ -526,6 +528,10 @@
             Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
             Me.Name = "FormRevisionChequesEmitidos"
             Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+            Me.StateActive.Border.DrawBorders = CType((((Krypton.Toolkit.PaletteDrawBorders.Top Or Krypton.Toolkit.PaletteDrawBorders.Bottom) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Left) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Right), Krypton.Toolkit.PaletteDrawBorders)
+            Me.StateActive.Border.Rounding = 5.0!
             Me.Text = "REVISIÓN DE CHEQUES EMITIDOS"
             Me.gpComandos.ResumeLayout(False)
             Me.gpComandos.PerformLayout()

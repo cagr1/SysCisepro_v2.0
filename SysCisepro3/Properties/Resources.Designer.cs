@@ -143,6 +143,16 @@ namespace SysCisepro3.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap add_24dp_FILL0_wght400_GRAD0_opsz24 {
+            get {
+                object obj = ResourceManager.GetObject("add_24dp_FILL0_wght400_GRAD0_opsz24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap add_card_24dp_FILL0_wght400_GRAD0_opsz24 {
             get {
                 object obj = ResourceManager.GetObject("add_card_24dp_FILL0_wght400_GRAD0_opsz24", resourceCulture);
@@ -186,6 +196,16 @@ namespace SysCisepro3.Properties {
         internal static System.Drawing.Bitmap add_circle_24dp_FILL0_wght400_GRAD0_opsz24__2_ {
             get {
                 object obj = ResourceManager.GetObject("add_circle_24dp_FILL0_wght400_GRAD0_opsz24 (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap add_circle_24dp_FILL0_wght400_GRAD0_opsz24__3_ {
+            get {
+                object obj = ResourceManager.GetObject("add_circle_24dp_FILL0_wght400_GRAD0_opsz24 (3)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -893,6 +913,16 @@ namespace SysCisepro3.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap cancel_24dp_FILL0_wght400_GRAD0_opsz24 {
+            get {
+                object obj = ResourceManager.GetObject("cancel_24dp_FILL0_wght400_GRAD0_opsz24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap car {
             get {
                 object obj = ResourceManager.GetObject("car", resourceCulture);
@@ -993,6 +1023,16 @@ namespace SysCisepro3.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap check_24dp_FILL0_wght400_GRAD0_opsz24 {
+            get {
+                object obj = ResourceManager.GetObject("check_24dp_FILL0_wght400_GRAD0_opsz24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap check_circle_24dp_FILL0_wght400_GRAD0_opsz24 {
             get {
                 object obj = ResourceManager.GetObject("check_circle_24dp_FILL0_wght400_GRAD0_opsz24", resourceCulture);
@@ -1016,6 +1056,16 @@ namespace SysCisepro3.Properties {
         internal static System.Drawing.Bitmap check_circle_24dp_FILL0_wght400_GRAD0_opsz24__2_ {
             get {
                 object obj = ResourceManager.GetObject("check_circle_24dp_FILL0_wght400_GRAD0_opsz24__2_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap check_circle_24dp_FILL0_wght400_GRAD0_opsz24__3_ {
+            get {
+                object obj = ResourceManager.GetObject("check_circle_24dp_FILL0_wght400_GRAD0_opsz24 (3)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1456,6 +1506,16 @@ namespace SysCisepro3.Properties {
         internal static System.Drawing.Bitmap desktop_windows_24dp__2_ {
             get {
                 object obj = ResourceManager.GetObject("desktop_windows_24dp__2_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap do_not_disturb_on_24dp_FILL0_wght400_GRAD0_opsz24 {
+            get {
+                object obj = ResourceManager.GetObject("do_not_disturb_on_24dp_FILL0_wght400_GRAD0_opsz24", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -2096,6 +2156,16 @@ namespace SysCisepro3.Properties {
         internal static System.Drawing.Bitmap icon_people {
             get {
                 object obj = ResourceManager.GetObject("icon_people", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_excel_48 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-excel-48", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -3155,6 +3225,16 @@ namespace SysCisepro3.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap playlist_remove_24dp_FILL0_wght400_GRAD0_opsz24__3_ {
+            get {
+                object obj = ResourceManager.GetObject("playlist_remove_24dp_FILL0_wght400_GRAD0_opsz24 (3)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap point_of_sale_24dp_FILL0_wght400_GRAD0_opsz24__1_ {
             get {
                 object obj = ResourceManager.GetObject("point_of_sale_24dp_FILL0_wght400_GRAD0_opsz24__1_", resourceCulture);
@@ -3678,6 +3758,16 @@ namespace SysCisepro3.Properties {
         internal static System.Drawing.Bitmap save_24dp_FILL0_wght400_GRAD0_opsz24__2_ {
             get {
                 object obj = ResourceManager.GetObject("save_24dp_FILL0_wght400_GRAD0_opsz24__2_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap save_24dp_FILL0_wght400_GRAD0_opsz24__3_ {
+            get {
+                object obj = ResourceManager.GetObject("save_24dp_FILL0_wght400_GRAD0_opsz24 (3)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

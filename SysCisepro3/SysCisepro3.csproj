@@ -1363,6 +1363,12 @@
     <None Include="Resources\cahange_system.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\save_24dp_FILL0_wght400_GRAD0_opsz24 %283%29.png" />
+    <None Include="Resources\playlist_remove_24dp_FILL0_wght400_GRAD0_opsz24 %283%29.png" />
+    <None Include="Resources\icons8-excel-48.png" />
+    <None Include="Resources\do_not_disturb_on_24dp_FILL0_wght400_GRAD0_opsz24.png" />
+    <None Include="Resources\check_circle_24dp_FILL0_wght400_GRAD0_opsz24 %283%29.png" />
+    <None Include="Resources\check_24dp_FILL0_wght400_GRAD0_opsz24.png" />
     <None Include="Resources\local_mall_24dp_FILL0_wght400_GRAD0_opsz24.png" />
     <None Include="Resources\input_24dp_FILL0_wght400_GRAD0_opsz24.png" />
     <None Include="Resources\wallet_20dp_FILL0_wght400_GRAD0_opsz24.png" />
@@ -1743,6 +1749,9 @@
     <None Include="Resources\autorenew_20dp_FILL0_wght400_GRAD0_opsz20.png" />
     <None Include="Resources\business_24dp.png" />
     <None Include="Resources\business_center_20dp_FILL0_wght400_GRAD0_opsz20.png" />
+    <None Include="Resources\add_24dp_FILL0_wght400_GRAD0_opsz24.png" />
+    <None Include="Resources\add_circle_24dp_FILL0_wght400_GRAD0_opsz24 %283%29.png" />
+    <None Include="Resources\cancel_24dp_FILL0_wght400_GRAD0_opsz24.png" />
     <Content Include="Resources\charticon.png" />
     <None Include="Resources\tick.png" />
     <None Include="Resources\user-group-icon.png" />

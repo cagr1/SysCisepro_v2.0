@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAspirantes));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -156,55 +155,60 @@
             this.ButtonCancelar});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1014, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(1014, 31);
             this.toolStrip1.TabIndex = 216;
             this.toolStrip1.Text = "toolStrip1";
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Image = global::SysCisepro3.Properties.Resources.BuscarRegistro;
+            this.btnBuscar.Image = global::SysCisepro3.Properties.Resources.search_24dp_FILL0_wght400_GRAD0_opsz24__2_;
+            this.btnBuscar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnBuscar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(102, 22);
-            this.btnBuscar.Text = "LISTAR TODOS";
+            this.btnBuscar.Size = new System.Drawing.Size(79, 28);
+            this.btnBuscar.Text = "BUSCAR";
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // ButtonNuevoRegistro
             // 
-            this.ButtonNuevoRegistro.Image = global::SysCisepro3.Properties.Resources.NuevoRegistro;
+            this.ButtonNuevoRegistro.Image = global::SysCisepro3.Properties.Resources.add_circle_24dp_FILL0_wght400_GRAD0_opsz24__3_;
+            this.ButtonNuevoRegistro.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.ButtonNuevoRegistro.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.ButtonNuevoRegistro.Name = "ButtonNuevoRegistro";
-            this.ButtonNuevoRegistro.Size = new System.Drawing.Size(129, 22);
-            this.ButtonNuevoRegistro.Text = "NUEVO ASPIRANTE";
+            this.ButtonNuevoRegistro.Size = new System.Drawing.Size(74, 28);
+            this.ButtonNuevoRegistro.Text = "NUEVO";
             this.ButtonNuevoRegistro.Click += new System.EventHandler(this.ButtonNuevoRegistro_Click);
             // 
             // ButtonGuardar
             // 
             this.ButtonGuardar.Enabled = false;
-            this.ButtonGuardar.Image = global::SysCisepro3.Properties.Resources.GuardarRegistro;
+            this.ButtonGuardar.Image = global::SysCisepro3.Properties.Resources.save_24dp_FILL0_wght400_GRAD0_opsz24__2_;
+            this.ButtonGuardar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.ButtonGuardar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.ButtonGuardar.Name = "ButtonGuardar";
-            this.ButtonGuardar.Size = new System.Drawing.Size(81, 22);
+            this.ButtonGuardar.Size = new System.Drawing.Size(89, 28);
             this.ButtonGuardar.Text = "GUARDAR";
             this.ButtonGuardar.Click += new System.EventHandler(this.ButtonGuardar_Click);
             // 
             // ButtonModificarRegistro
             // 
             this.ButtonModificarRegistro.Enabled = false;
-            this.ButtonModificarRegistro.Image = global::SysCisepro3.Properties.Resources.ModificarRegistro;
+            this.ButtonModificarRegistro.Image = global::SysCisepro3.Properties.Resources.edit_document_24dp_FILL0_wght400_GRAD0_opsz24__2_;
+            this.ButtonModificarRegistro.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.ButtonModificarRegistro.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.ButtonModificarRegistro.Name = "ButtonModificarRegistro";
-            this.ButtonModificarRegistro.Size = new System.Drawing.Size(90, 22);
+            this.ButtonModificarRegistro.Size = new System.Drawing.Size(98, 28);
             this.ButtonModificarRegistro.Text = "MODIFICAR";
             this.ButtonModificarRegistro.Click += new System.EventHandler(this.ButtonModificarRegistro_Click);
             // 
             // ButtonCancelar
             // 
             this.ButtonCancelar.Enabled = false;
-            this.ButtonCancelar.Image = global::SysCisepro3.Properties.Resources.cancel;
+            this.ButtonCancelar.Image = global::SysCisepro3.Properties.Resources.cancel_24dp_FILL0_wght400_GRAD0_opsz24;
+            this.ButtonCancelar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.ButtonCancelar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.ButtonCancelar.Name = "ButtonCancelar";
-            this.ButtonCancelar.Size = new System.Drawing.Size(87, 22);
+            this.ButtonCancelar.Size = new System.Drawing.Size(95, 28);
             this.ButtonCancelar.Text = "CANCELAR";
             this.ButtonCancelar.Click += new System.EventHandler(this.ButtonCancelar_Click);
             // 
@@ -213,7 +217,7 @@
             this.tcPersonal.Controls.Add(this.tpDatosPersonales);
             this.tcPersonal.Controls.Add(this.tabPage1);
             this.tcPersonal.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tcPersonal.Location = new System.Drawing.Point(0, 26);
+            this.tcPersonal.Location = new System.Drawing.Point(0, 35);
             this.tcPersonal.Name = "tcPersonal";
             this.tcPersonal.SelectedIndex = 0;
             this.tcPersonal.Size = new System.Drawing.Size(1015, 584);
@@ -1372,14 +1376,14 @@
             // Button1
             // 
             this.Button1.BackColor = System.Drawing.Color.White;
+            this.Button1.FlatAppearance.BorderSize = 0;
+            this.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Button1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Button1.Image = ((System.Drawing.Image)(resources.GetObject("Button1.Image")));
-            this.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Button1.Location = new System.Drawing.Point(908, 11);
+            this.Button1.Image = global::SysCisepro3.Properties.Resources.icons8_excel_48;
+            this.Button1.Location = new System.Drawing.Point(933, 11);
             this.Button1.Name = "Button1";
-            this.Button1.Size = new System.Drawing.Size(93, 26);
+            this.Button1.Size = new System.Drawing.Size(44, 26);
             this.Button1.TabIndex = 195;
-            this.Button1.Text = "EXPORTAR";
             this.Button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Button1.UseVisualStyleBackColor = false;
             this.Button1.Click += new System.EventHandler(this.Button1_Click);
@@ -1507,6 +1511,10 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "FrmAspirantes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StateActive.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.StateActive.Border.Rounding = 5F;
             this.Text = "REGISTRO DE ASPIRANTES";
             this.Load += new System.EventHandler(this.FrmAspirantes_Load);
             this.toolStrip1.ResumeLayout(false);

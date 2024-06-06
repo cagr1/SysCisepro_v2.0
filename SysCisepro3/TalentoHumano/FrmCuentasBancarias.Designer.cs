@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCuentasBancarias));
             this.Label27 = new System.Windows.Forms.Label();
             this.txtArea = new System.Windows.Forms.TextBox();
             this.Label1 = new System.Windows.Forms.Label();
@@ -95,6 +94,7 @@
             // Label1
             // 
             this.Label1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Label1.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label1.Location = new System.Drawing.Point(1, 607);
             this.Label1.Name = "Label1";
             this.Label1.Size = new System.Drawing.Size(783, 15);
@@ -145,9 +145,10 @@
             // 
             this.btnPersonalEntra.BackColor = System.Drawing.Color.White;
             this.btnPersonalEntra.Enabled = false;
-            this.btnPersonalEntra.Image = ((System.Drawing.Image)(resources.GetObject("btnPersonalEntra.Image")));
-            this.btnPersonalEntra.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPersonalEntra.Location = new System.Drawing.Point(748, 12);
+            this.btnPersonalEntra.FlatAppearance.BorderSize = 0;
+            this.btnPersonalEntra.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPersonalEntra.Image = global::SysCisepro3.Properties.Resources.search_24dp_FILL0_wght400_GRAD0_opsz24__2_;
+            this.btnPersonalEntra.Location = new System.Drawing.Point(750, 12);
             this.btnPersonalEntra.Name = "btnPersonalEntra";
             this.btnPersonalEntra.Size = new System.Drawing.Size(26, 26);
             this.btnPersonalEntra.TabIndex = 193;
@@ -187,7 +188,7 @@
             // Label26
             // 
             this.Label26.AutoSize = true;
-            this.Label26.Location = new System.Drawing.Point(167, 17);
+            this.Label26.Location = new System.Drawing.Point(153, 20);
             this.Label26.Name = "Label26";
             this.Label26.Size = new System.Drawing.Size(63, 13);
             this.Label26.TabIndex = 3;
@@ -491,6 +492,10 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "FrmCuentasBancarias";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StateActive.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.StateActive.Border.Rounding = 5F;
             this.Text = "ADMINISTRCIÓN DE CUENTAS BANCARIAS";
             this.Load += new System.EventHandler(this.FrmCuentasBancarias_Load);
             this.GroupBox1.ResumeLayout(false);

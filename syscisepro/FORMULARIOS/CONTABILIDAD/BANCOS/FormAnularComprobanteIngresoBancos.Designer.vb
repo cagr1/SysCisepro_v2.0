@@ -120,7 +120,7 @@
             'lblIdComprobanteIngresoBanco
             '
             Me.lblIdComprobanteIngresoBanco.AutoSize = True
-            Me.lblIdComprobanteIngresoBanco.Location = New System.Drawing.Point(191, 0)
+            Me.lblIdComprobanteIngresoBanco.Location = New System.Drawing.Point(191, -2)
             Me.lblIdComprobanteIngresoBanco.Name = "lblIdComprobanteIngresoBanco"
             Me.lblIdComprobanteIngresoBanco.Size = New System.Drawing.Size(16, 13)
             Me.lblIdComprobanteIngresoBanco.TabIndex = 3

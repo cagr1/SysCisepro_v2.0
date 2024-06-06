@@ -178,13 +178,15 @@
             'btnAceptar
             '
             Me.btnAceptar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+            Me.btnAceptar.FlatAppearance.BorderSize = 0
             Me.btnAceptar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+            Me.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.btnAceptar.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Bold)
             Me.btnAceptar.Image = Global.syscisepro.My.Resources.Resources.check_circle_24dp_FILL0_wght400_GRAD0_opsz24__3_
             Me.btnAceptar.ImeMode = System.Windows.Forms.ImeMode.NoControl
-            Me.btnAceptar.Location = New System.Drawing.Point(84, 369)
+            Me.btnAceptar.Location = New System.Drawing.Point(86, 368)
             Me.btnAceptar.Name = "btnAceptar"
-            Me.btnAceptar.Size = New System.Drawing.Size(70, 29)
+            Me.btnAceptar.Size = New System.Drawing.Size(38, 30)
             Me.btnAceptar.TabIndex = 141
             Me.btnAceptar.UseVisualStyleBackColor = True
             '

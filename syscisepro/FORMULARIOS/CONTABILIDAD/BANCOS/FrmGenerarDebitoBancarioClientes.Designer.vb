@@ -238,7 +238,7 @@
             Me.tcBodega.Controls.Add(Me.tpMantenimiento)
             Me.tcBodega.Controls.Add(Me.tpReporteBodega)
             Me.tcBodega.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.tcBodega.Location = New System.Drawing.Point(1, 27)
+            Me.tcBodega.Location = New System.Drawing.Point(1, 37)
             Me.tcBodega.Name = "tcBodega"
             Me.tcBodega.SelectedIndex = 0
             Me.tcBodega.Size = New System.Drawing.Size(1193, 618)
@@ -258,6 +258,7 @@
             Me.tpMantenimiento.Controls.Add(Me.GroupBox2)
             Me.tpMantenimiento.Controls.Add(Me.dgvDebitos)
             Me.tpMantenimiento.Controls.Add(Me.GroupBox1)
+            Me.tpMantenimiento.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.tpMantenimiento.Location = New System.Drawing.Point(4, 22)
             Me.tpMantenimiento.Name = "tpMantenimiento"
             Me.tpMantenimiento.Padding = New System.Windows.Forms.Padding(3)
@@ -269,7 +270,7 @@
             'lblTotal
             '
             Me.lblTotal.AutoSize = True
-            Me.lblTotal.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.lblTotal.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.lblTotal.Location = New System.Drawing.Point(1095, 567)
             Me.lblTotal.Name = "lblTotal"
             Me.lblTotal.Size = New System.Drawing.Size(0, 13)
@@ -278,7 +279,7 @@
             'lblCant
             '
             Me.lblCant.AutoSize = True
-            Me.lblCant.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.lblCant.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.lblCant.Location = New System.Drawing.Point(917, 566)
             Me.lblCant.Name = "lblCant"
             Me.lblCant.Size = New System.Drawing.Size(0, 13)
@@ -287,17 +288,17 @@
             'Label12
             '
             Me.Label12.AutoSize = True
-            Me.Label12.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Label12.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Label12.Location = New System.Drawing.Point(1045, 567)
             Me.Label12.Name = "Label12"
-            Me.Label12.Size = New System.Drawing.Size(43, 13)
+            Me.Label12.Size = New System.Drawing.Size(45, 13)
             Me.Label12.TabIndex = 193
             Me.Label12.Text = "TOTAL:"
             '
             'Label11
             '
             Me.Label11.AutoSize = True
-            Me.Label11.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Label11.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Label11.Location = New System.Drawing.Point(816, 566)
             Me.Label11.Name = "Label11"
             Me.Label11.Size = New System.Drawing.Size(94, 13)
@@ -309,6 +310,7 @@
             Me.txtObservacion.BackColor = System.Drawing.Color.White
             Me.txtObservacion.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtObservacion.Enabled = False
+            Me.txtObservacion.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtObservacion.Location = New System.Drawing.Point(290, 563)
             Me.txtObservacion.Name = "txtObservacion"
             Me.txtObservacion.Size = New System.Drawing.Size(507, 21)
@@ -318,7 +320,7 @@
             'Label10
             '
             Me.Label10.AutoSize = True
-            Me.Label10.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Label10.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Label10.Location = New System.Drawing.Point(201, 567)
             Me.Label10.Name = "Label10"
             Me.Label10.Size = New System.Drawing.Size(85, 13)
@@ -331,12 +333,13 @@
             Me.btnAdd.Enabled = False
             Me.btnAdd.FlatAppearance.BorderSize = 0
             Me.btnAdd.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSteelBlue
+            Me.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.btnAdd.Font = New System.Drawing.Font("Calibri Light", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.btnAdd.ForeColor = System.Drawing.Color.Black
-            Me.btnAdd.Image = Global.syscisepro.My.Resources.Resources.add
-            Me.btnAdd.Location = New System.Drawing.Point(1113, 180)
+            Me.btnAdd.Image = Global.syscisepro.My.Resources.Resources.add_circle_24dp_FILL0_wght400_GRAD0_opsz24__3_
+            Me.btnAdd.Location = New System.Drawing.Point(1093, 181)
             Me.btnAdd.Name = "btnAdd"
-            Me.btnAdd.Size = New System.Drawing.Size(32, 24)
+            Me.btnAdd.Size = New System.Drawing.Size(41, 30)
             Me.btnAdd.TabIndex = 189
             Me.btnAdd.UseVisualStyleBackColor = False
             '
@@ -346,12 +349,13 @@
             Me.btnRemove.Enabled = False
             Me.btnRemove.FlatAppearance.BorderSize = 0
             Me.btnRemove.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSteelBlue
+            Me.btnRemove.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.btnRemove.Font = New System.Drawing.Font("Calibri Light", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.btnRemove.ForeColor = System.Drawing.Color.Black
-            Me.btnRemove.Image = Global.syscisepro.My.Resources.Resources.remove
-            Me.btnRemove.Location = New System.Drawing.Point(1148, 180)
+            Me.btnRemove.Image = Global.syscisepro.My.Resources.Resources.do_not_disturb_on_24dp_FILL0_wght400_GRAD0_opsz24
+            Me.btnRemove.Location = New System.Drawing.Point(1135, 182)
             Me.btnRemove.Name = "btnRemove"
-            Me.btnRemove.Size = New System.Drawing.Size(32, 24)
+            Me.btnRemove.Size = New System.Drawing.Size(41, 30)
             Me.btnRemove.TabIndex = 188
             Me.btnRemove.UseVisualStyleBackColor = False
             '
@@ -360,7 +364,7 @@
             Me.Label9.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Label9.Location = New System.Drawing.Point(6, 180)
             Me.Label9.Name = "Label9"
-            Me.Label9.Size = New System.Drawing.Size(1101, 23)
+            Me.Label9.Size = New System.Drawing.Size(1080, 23)
             Me.Label9.TabIndex = 187
             Me.Label9.Text = "DETALLE DE LA ORDEN"
             Me.Label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -403,13 +407,13 @@
             Me.dgvHoy.DefaultCellStyle = DataGridViewCellStyle4
             Me.dgvHoy.EnableHeadersVisualStyles = False
             Me.dgvHoy.GridColor = System.Drawing.Color.LightSteelBlue
-            Me.dgvHoy.Location = New System.Drawing.Point(6, 19)
+            Me.dgvHoy.Location = New System.Drawing.Point(6, 28)
             Me.dgvHoy.MultiSelect = False
             Me.dgvHoy.Name = "dgvHoy"
             Me.dgvHoy.ReadOnly = True
             Me.dgvHoy.RowHeadersVisible = False
             Me.dgvHoy.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvHoy.Size = New System.Drawing.Size(421, 147)
+            Me.dgvHoy.Size = New System.Drawing.Size(421, 138)
             Me.dgvHoy.TabIndex = 186
             '
             'DataGridViewTextBoxColumn1
@@ -446,7 +450,7 @@
             Me.dtpFiltroDesde.CustomFormat = "dddd, dd-MMM-yyyy"
             Me.dtpFiltroDesde.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.dtpFiltroDesde.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-            Me.dtpFiltroDesde.Location = New System.Drawing.Point(247, -2)
+            Me.dtpFiltroDesde.Location = New System.Drawing.Point(247, 0)
             Me.dtpFiltroDesde.Name = "dtpFiltroDesde"
             Me.dtpFiltroDesde.Size = New System.Drawing.Size(180, 22)
             Me.dtpFiltroDesde.TabIndex = 183
@@ -480,13 +484,13 @@
             DataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
             Me.dgvDebitos.DefaultCellStyle = DataGridViewCellStyle12
             Me.dgvDebitos.GridColor = System.Drawing.Color.LightSteelBlue
-            Me.dgvDebitos.Location = New System.Drawing.Point(6, 204)
+            Me.dgvDebitos.Location = New System.Drawing.Point(6, 215)
             Me.dgvDebitos.MultiSelect = False
             Me.dgvDebitos.Name = "dgvDebitos"
             Me.dgvDebitos.ReadOnly = True
             Me.dgvDebitos.RowHeadersVisible = False
             Me.dgvDebitos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvDebitos.Size = New System.Drawing.Size(1173, 353)
+            Me.dgvDebitos.Size = New System.Drawing.Size(1173, 342)
             Me.dgvDebitos.TabIndex = 185
             '
             'Column12
@@ -670,7 +674,7 @@
             'lblComprobante
             '
             Me.lblComprobante.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.lblComprobante.ForeColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(123, Byte), Integer))
+            Me.lblComprobante.ForeColor = System.Drawing.Color.Black
             Me.lblComprobante.Location = New System.Drawing.Point(7, 44)
             Me.lblComprobante.Name = "lblComprobante"
             Me.lblComprobante.Size = New System.Drawing.Size(101, 18)
@@ -681,7 +685,7 @@
             'Label8
             '
             Me.Label8.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(123, Byte), Integer))
+            Me.Label8.ForeColor = System.Drawing.Color.Black
             Me.Label8.Location = New System.Drawing.Point(4, 26)
             Me.Label8.Name = "Label8"
             Me.Label8.Size = New System.Drawing.Size(104, 17)
@@ -1157,74 +1161,80 @@
             '
             'msKardex
             '
+            Me.msKardex.Font = New System.Drawing.Font("Segoe UI", 9.0!)
             Me.msKardex.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsmNuevo, Me.tsmGuardar, Me.tsmEditar, Me.tsmCancelar, Me.btnGenerarExcel})
             Me.msKardex.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow
             Me.msKardex.Location = New System.Drawing.Point(0, 0)
             Me.msKardex.Name = "msKardex"
             Me.msKardex.Padding = New System.Windows.Forms.Padding(7, 2, 0, 2)
-            Me.msKardex.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
-            Me.msKardex.Size = New System.Drawing.Size(1194, 24)
+            Me.msKardex.Size = New System.Drawing.Size(1194, 32)
             Me.msKardex.TabIndex = 184
             Me.msKardex.Text = "msIngresoBodega"
             '
             'tsmNuevo
             '
             Me.tsmNuevo.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.tsmNuevo.Image = CType(resources.GetObject("tsmNuevo.Image"), System.Drawing.Image)
+            Me.tsmNuevo.Image = Global.syscisepro.My.Resources.Resources.add_circle_24dp_FILL0_wght400_GRAD0_opsz24__3_
             Me.tsmNuevo.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.tsmNuevo.Name = "tsmNuevo"
-            Me.tsmNuevo.Size = New System.Drawing.Size(70, 20)
+            Me.tsmNuevo.Size = New System.Drawing.Size(78, 28)
             Me.tsmNuevo.Text = "NUEVO"
             '
             'tsmGuardar
             '
             Me.tsmGuardar.Enabled = False
             Me.tsmGuardar.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.tsmGuardar.Image = CType(resources.GetObject("tsmGuardar.Image"), System.Drawing.Image)
+            Me.tsmGuardar.Image = Global.syscisepro.My.Resources.Resources.save_24dp_FILL0_wght400_GRAD0_opsz24__2_
             Me.tsmGuardar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.tsmGuardar.Name = "tsmGuardar"
-            Me.tsmGuardar.Size = New System.Drawing.Size(84, 20)
+            Me.tsmGuardar.Size = New System.Drawing.Size(92, 28)
             Me.tsmGuardar.Text = "GUARDAR"
             '
             'tsmEditar
             '
             Me.tsmEditar.Enabled = False
             Me.tsmEditar.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.tsmEditar.Image = Global.syscisepro.My.Resources.Resources.ModificarRegistro
+            Me.tsmEditar.Image = Global.syscisepro.My.Resources.Resources.edit_document_24dp_FILL0_wght400_GRAD0_opsz24__2_
+            Me.tsmEditar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.tsmEditar.Name = "tsmEditar"
-            Me.tsmEditar.Size = New System.Drawing.Size(77, 20)
+            Me.tsmEditar.Size = New System.Drawing.Size(85, 28)
             Me.tsmEditar.Text = "EDITAR"
             '
             'tsmCancelar
             '
             Me.tsmCancelar.Enabled = False
             Me.tsmCancelar.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.tsmCancelar.Image = Global.syscisepro.My.Resources.Resources.cancel
+            Me.tsmCancelar.Image = Global.syscisepro.My.Resources.Resources.cancel_24dp_FILL0_wght400_GRAD0_opsz24
+            Me.tsmCancelar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.tsmCancelar.Name = "tsmCancelar"
-            Me.tsmCancelar.Size = New System.Drawing.Size(91, 20)
+            Me.tsmCancelar.Size = New System.Drawing.Size(99, 28)
             Me.tsmCancelar.Text = "CANCELAR"
             '
             'btnGenerarExcel
             '
             Me.btnGenerarExcel.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnGenerarExcel.Image = Global.syscisepro.My.Resources.Resources.report
+            Me.btnGenerarExcel.Image = Global.syscisepro.My.Resources.Resources.description_24dp_FILL0_wght400_GRAD0_opsz24__2_
             Me.btnGenerarExcel.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnGenerarExcel.Name = "btnGenerarExcel"
-            Me.btnGenerarExcel.Size = New System.Drawing.Size(140, 20)
-            Me.btnGenerarExcel.Text = "GENERAR ARCHIVO"
+            Me.btnGenerarExcel.Size = New System.Drawing.Size(92, 28)
+            Me.btnGenerarExcel.Text = "GENERAR"
             '
             'FrmGenerarDebitoBancarioClientes
             '
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.BackColor = System.Drawing.Color.White
-            Me.ClientSize = New System.Drawing.Size(1194, 643)
+            Me.ClientSize = New System.Drawing.Size(1194, 653)
             Me.Controls.Add(Me.msKardex)
             Me.Controls.Add(Me.tcBodega)
             Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
             Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
             Me.Name = "FrmGenerarDebitoBancarioClientes"
             Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+            Me.StateActive.Border.DrawBorders = CType((((Krypton.Toolkit.PaletteDrawBorders.Top Or Krypton.Toolkit.PaletteDrawBorders.Bottom) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Left) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Right), Krypton.Toolkit.PaletteDrawBorders)
+            Me.StateActive.Border.Rounding = 5.0!
             Me.Text = "GENERAR DÉBITO BANCARIO A CLIENTES"
             Me.MenuStrip1.ResumeLayout(False)
             Me.MenuStrip1.PerformLayout()
