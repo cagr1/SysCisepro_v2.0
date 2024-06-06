@@ -95,13 +95,11 @@
             'btnFiltrar
             '
             Me.btnFiltrar.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnFiltrar.Image = CType(resources.GetObject("btnFiltrar.Image"), System.Drawing.Image)
-            Me.btnFiltrar.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-            Me.btnFiltrar.Location = New System.Drawing.Point(448, 3)
+            Me.btnFiltrar.Image = Global.syscisepro.My.Resources.Resources.search_24dp_FILL0_wght400_GRAD0_opsz24__2_
+            Me.btnFiltrar.Location = New System.Drawing.Point(458, 8)
             Me.btnFiltrar.Name = "btnFiltrar"
-            Me.btnFiltrar.Size = New System.Drawing.Size(60, 39)
+            Me.btnFiltrar.Size = New System.Drawing.Size(46, 30)
             Me.btnFiltrar.TabIndex = 4
-            Me.btnFiltrar.Text = "FILTRAR"
             Me.btnFiltrar.TextAlign = System.Drawing.ContentAlignment.BottomCenter
             Me.btnFiltrar.UseVisualStyleBackColor = True
             '
@@ -120,6 +118,10 @@
             Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
             Me.Name = "FormHistorialSegurosVehiculos"
             Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+            Me.StateActive.Border.DrawBorders = CType((((Krypton.Toolkit.PaletteDrawBorders.Top Or Krypton.Toolkit.PaletteDrawBorders.Bottom) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Left) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Right), Krypton.Toolkit.PaletteDrawBorders)
+            Me.StateActive.Border.Rounding = 5.0!
             Me.Text = "HISTORIAL DE SEGUROS DE VEHÍCULOS"
             CType(Me.dgvHistorial, System.ComponentModel.ISupportInitialize).EndInit()
             Me.ResumeLayout(False)

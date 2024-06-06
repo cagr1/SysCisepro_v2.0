@@ -124,19 +124,6 @@
     <value>122, 17</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="btnNuevoBaja.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29m
-        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAGdSURBVDhPlZM7SwNBFIWj/0EkoCAWYqPgg9gI9iJY
-        WAhWSfABsbKwsrJR0GhUsmLAxsLKKiIBV0sLS9HgT9iQF9k8Nm89zhkyMcbExIGPyW7mfHvvXdYGwCbW
-        gGBK4OjAkKCXGYUSTBWLRbNSqXxUq1W0QvwPv99/2ixRAgfDuVwOlmXVSafTSKVSiEajUhKJRKBp2g8J
-        V4/AwQOFQgGlUknuJJvNwjRNxGIxKcjn8+BDAoGAlPwSMKyggIFMJoN4PP6jHcJMLfstEG3UD/A3+1at
-        JBIJWYlhGO0FzTRKWAnnkUwmuxcQJWE7nAlFvN+1gJTLZTkXSgjv/UvAKkLPN9gOOLF+vAjXwTxm3SMX
-        fwoYUgSfrrF748JdWMOLocP34MGybwwzm3ZvRwHLdx/OI/h2guD7mXj1gPdxDb7HDQoKbQWNkoWdCYTC
-        lzKs1u2rRgFnURd8NgsUc1vDONTd2NedMrx/7/yuQFxTMi2mbInDLT+m8+AelryjONJX5ZO581rOoCYY
-        pETAV9OS8ZW+K4fHbrFs7pOu/nMAti+Htq/CgDMXBgAAAABJRU5ErkJggg==
-</value>
-  </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAwAAAAQAAEABADQFgAAxgAAAAAAAAABAAgA6yoAAJYXAAAAAAAAAQAgAOxvAACBQgAAEBAQAAEA

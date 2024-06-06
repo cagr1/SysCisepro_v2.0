@@ -1,8 +1,8 @@
 ﻿Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
     <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
     Partial Class FormDialogoNuevoActivo
-        Inherits System.Windows.Forms.Form
-
+        'Inherits System.Windows.Forms.Form
+        Inherits Krypton.Toolkit.KryptonForm
         'Form reemplaza a Dispose para limpiar la lista de componentes.
         <System.Diagnostics.DebuggerNonUserCode()> _
         Protected Overrides Sub Dispose(ByVal disposing As Boolean)
@@ -180,14 +180,12 @@
             Me.btnAceptar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
             Me.btnAceptar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
             Me.btnAceptar.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Bold)
-            Me.btnAceptar.Image = Global.syscisepro.My.Resources.Resources.ok
-            Me.btnAceptar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+            Me.btnAceptar.Image = Global.syscisepro.My.Resources.Resources.check_circle_24dp_FILL0_wght400_GRAD0_opsz24__3_
             Me.btnAceptar.ImeMode = System.Windows.Forms.ImeMode.NoControl
-            Me.btnAceptar.Location = New System.Drawing.Point(21, 376)
+            Me.btnAceptar.Location = New System.Drawing.Point(84, 369)
             Me.btnAceptar.Name = "btnAceptar"
-            Me.btnAceptar.Size = New System.Drawing.Size(195, 28)
+            Me.btnAceptar.Size = New System.Drawing.Size(70, 29)
             Me.btnAceptar.TabIndex = 141
-            Me.btnAceptar.Text = "CONTINUAR"
             Me.btnAceptar.UseVisualStyleBackColor = True
             '
             'rbEquiposComunicacion
@@ -297,6 +295,13 @@
             Me.MinimizeBox = False
             Me.Name = "FormDialogoNuevoActivo"
             Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+            Me.StateActive.Border.DrawBorders = CType((((Krypton.Toolkit.PaletteDrawBorders.Top Or Krypton.Toolkit.PaletteDrawBorders.Bottom) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Left) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Right), Krypton.Toolkit.PaletteDrawBorders)
+            Me.StateActive.Border.Rounding = 5.0!
+            Me.StateCommon.Border.DrawBorders = CType((((Krypton.Toolkit.PaletteDrawBorders.Top Or Krypton.Toolkit.PaletteDrawBorders.Bottom) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Left) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Right), Krypton.Toolkit.PaletteDrawBorders)
             Me.Text = "SELECCIONE TIPO"
             Me.ResumeLayout(False)
             Me.PerformLayout()

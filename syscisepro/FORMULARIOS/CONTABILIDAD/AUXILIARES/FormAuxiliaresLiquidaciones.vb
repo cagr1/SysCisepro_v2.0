@@ -120,14 +120,14 @@ Namespace FORMULARIOS.CONTABILIDAD.AUXILIARES
                 Case TipoConexion.Seportpac
                     Icon = My.Resources.logo_s
                     MenuStrip1.ForeColor = Color.White
-                    MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
+                    ' MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
                     dgvAsiento.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorSeportpac
                     dgvSolicitudes.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorSeportpac
                     dgvLiquidaciones.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorSeportpac
                 Case Else
                     Icon = My.Resources.logo_c
                     MenuStrip1.ForeColor = Color.White
-                    MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorCisepro
+                    'MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorCisepro
                     dgvAsiento.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
                     dgvSolicitudes.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
                     dgvLiquidaciones.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro

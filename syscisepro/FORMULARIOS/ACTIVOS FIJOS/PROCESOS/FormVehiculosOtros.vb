@@ -3,7 +3,7 @@ Imports ClassLibraryCisepro.ENUMS
 Imports ClassLibraryCisepro.INVENTARIOS.PARAMETROS
 Imports ClassLibraryCisepro.ProcesosSql
 Imports ClassLibraryCisepro.VALIDACIONES.VEHICULOS
-
+Imports Krypton.Toolkit
 Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
     ''' <summary>
     ''' CISEPRO - SEPORTPAC - ASENAVA 2019

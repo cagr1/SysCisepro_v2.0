@@ -77,10 +77,10 @@ Namespace FORMULARIOS.OPERACIONES
                     dgvBuscarUtilidades.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorAsenava
                 Case TipoConexion.Seportpac
                     Icon = My.Resources.logo_s
-                    MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
+                    'MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
                     MenuStrip1.ForeColor = Color.White
                     MenuStrip2.ForeColor = Color.White
-                    MenuStrip2.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
+                    'MenuStrip2.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
                     Label24.ForeColor = Color.White
                     Label24.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
                     Label2.ForeColor = Color.White
@@ -96,10 +96,10 @@ Namespace FORMULARIOS.OPERACIONES
                     dgvBuscarUtilidades.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorSeportpac
                 Case Else
                     Icon = My.Resources.logo_c
-                    MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorCisepro
+                    'MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorCisepro
                     MenuStrip1.ForeColor = Color.White
                     MenuStrip2.ForeColor = Color.White
-                    MenuStrip2.BackColor = My.MySettingsProperty.Settings.ColorCisepro
+                    'MenuStrip2.BackColor = My.MySettingsProperty.Settings.ColorCisepro
                     Label24.ForeColor = Color.White
                     Label24.BackColor = My.MySettingsProperty.Settings.ColorCisepro
                     Label2.ForeColor = Color.White
@@ -114,6 +114,13 @@ Namespace FORMULARIOS.OPERACIONES
                     dgvDecimo4.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
                     dgvBuscarUtilidades.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
             End Select
+            dgvDia.Font = New Font("Roboto", 8, FontStyle.Regular)
+            dgvNoche.Font = New Font("Roboto", 8, FontStyle.Regular)
+            DataGridView1.Font = New Font("Roboto", 8, FontStyle.Regular)
+            DataGridView2.Font = New Font("Roboto", 8, FontStyle.Regular)
+            dgvDecimo3.Font = New Font("Roboto", 8, FontStyle.Regular)
+            dgvDecimo4.Font = New Font("Roboto", 8, FontStyle.Regular)
+            dgvBuscarUtilidades.Font = New Font("Roboto", 8, FontStyle.Regular)
             _indices3 = New List(Of Integer)
             _indices4 = New List(Of Integer)
 

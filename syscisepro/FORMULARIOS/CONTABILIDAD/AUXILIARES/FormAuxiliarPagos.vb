@@ -111,6 +111,19 @@ Namespace FORMULARIOS.CONTABILIDAD.AUXILIARES
                     dgvComprobanteIngreso.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
                     dgvAsientoDiarioIngreso.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
             End Select
+            dgvComprobantesCompra.Font = New Font("Roboto", 8, FontStyle.Regular)
+            dgvAsientoDiarioCompra.Font = New Font("Roboto", 8, FontStyle.Regular)
+            dgvDetalleComprobanteRetencion.Font = New Font("Roboto", 8, FontStyle.Regular)
+            dgvPagosComprobantesCompra.Font = New Font("Roboto", 8, FontStyle.Regular)
+            dgvComprobanteEgresoBancos.Font = New Font("Roboto", 8, FontStyle.Regular)
+            dgvAsientoDiarioEgreso.Font = New Font("Roboto", 8, FontStyle.Regular)
+            dgvFacturaVenta.Font = New Font("Roboto", 8, FontStyle.Regular)
+            dgvAsientoDiarioVenta.Font = New Font("Roboto", 8, FontStyle.Regular)
+            dgvDetalleRetencionVenta.Font = New Font("Roboto", 8, FontStyle.Regular)
+            dgvPagosFacturaVenta.Font = New Font("Roboto", 8, FontStyle.Regular)
+            dgvComprobanteIngreso.Font = New Font("Roboto", 8, FontStyle.Regular)
+            dgvAsientoDiarioIngreso.Font = New Font("Roboto", 8, FontStyle.Regular)
+
             AutocompletarNombreProveedor()
             AutocompletarNombreCliente()
         End Sub

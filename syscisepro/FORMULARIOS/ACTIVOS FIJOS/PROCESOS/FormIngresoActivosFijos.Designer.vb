@@ -1,8 +1,8 @@
 ﻿Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
     <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
     Partial Class FormIngresoActivosFijos
-        Inherits System.Windows.Forms.Form
-
+        'Inherits System.Windows.Forms.Form
+        Inherits Krypton.Toolkit.KryptonForm
         'Form reemplaza a Dispose para limpiar la lista de componentes.
         <System.Diagnostics.DebuggerNonUserCode()> _
         Protected Overrides Sub Dispose(ByVal disposing As Boolean)
@@ -23,29 +23,29 @@
         'No lo modifique con el editor de código.
         <System.Diagnostics.DebuggerStepThrough()> _
         Private Sub InitializeComponent()
+            Dim DataGridViewCellStyle25 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle26 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormIngresoActivosFijos))
-            Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle13 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle14 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle15 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle16 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle17 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle18 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle19 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle20 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle21 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle22 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle27 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle28 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle29 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle30 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle31 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle32 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle33 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle34 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle35 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle36 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle37 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle38 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle39 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle40 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle41 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle42 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle43 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle44 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle23 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle24 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Me.gpInfActfijo = New System.Windows.Forms.GroupBox()
             Me.dtpFechaActual = New System.Windows.Forms.DateTimePicker()
             Me.bntPuesto = New System.Windows.Forms.Button()
@@ -641,58 +641,58 @@
             Me.ButtonCancelar = New System.Windows.Forms.ToolStripMenuItem()
             Me.btnAgregarCategoria = New System.Windows.Forms.ToolStripMenuItem()
             Me.btnParametros = New System.Windows.Forms.ToolStripMenuItem()
-            Me.gpInfActfijo.SuspendLayout()
-            Me.GroupBox6.SuspendLayout()
-            Me.tcDatos.SuspendLayout()
-            Me.TabPage2.SuspendLayout()
-            Me.GroupBox2.SuspendLayout()
-            Me.tcVarios.SuspendLayout()
-            Me.tpArmas.SuspendLayout()
-            CType(Me.dgvArmas, System.ComponentModel.ISupportInitialize).BeginInit()
-            CType(Me.pbArmas, System.ComponentModel.ISupportInitialize).BeginInit()
-            Me.tpRadios.SuspendLayout()
-            CType(Me.dgvRadios, System.ComponentModel.ISupportInitialize).BeginInit()
-            CType(Me.pbRadios, System.ComponentModel.ISupportInitialize).BeginInit()
-            Me.tpVehiculo.SuspendLayout()
-            Me.GroupBox7.SuspendLayout()
-            Me.GroupBox1.SuspendLayout()
-            CType(Me.pbVehiculo, System.ComponentModel.ISupportInitialize).BeginInit()
-            Me.tpTerreno.SuspendLayout()
-            CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-            Me.tpEquiposComputo.SuspendLayout()
-            CType(Me.dgvEquiposComputo, System.ComponentModel.ISupportInitialize).BeginInit()
-            Me.tpLibrosYcolecciones.SuspendLayout()
-            CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
-            Me.tpEquiposOficina.SuspendLayout()
-            CType(Me.dgvEquiposOficina, System.ComponentModel.ISupportInitialize).BeginInit()
-            CType(Me.pbEquiposOficina, System.ComponentModel.ISupportInitialize).BeginInit()
-            Me.tpMueblesOficina.SuspendLayout()
-            CType(Me.dgvMuebleOficina, System.ComponentModel.ISupportInitialize).BeginInit()
-            CType(Me.pbMueblesOficina, System.ComponentModel.ISupportInitialize).BeginInit()
-            Me.tpEquiposCocina.SuspendLayout()
-            CType(Me.dgvEquipoCocina, System.ComponentModel.ISupportInitialize).BeginInit()
-            CType(Me.pbEquiposCocina, System.ComponentModel.ISupportInitialize).BeginInit()
-            Me.TabPage4.SuspendLayout()
-            CType(Me.dgvEquipoAmbientacion, System.ComponentModel.ISupportInitialize).BeginInit()
-            CType(Me.pbEquiposAmbientacion, System.ComponentModel.ISupportInitialize).BeginInit()
-            Me.TabPage1.SuspendLayout()
-            CType(Me.dgvEquipoComunicacion, System.ComponentModel.ISupportInitialize).BeginInit()
-            CType(Me.pbEquiposComunicacion, System.ComponentModel.ISupportInitialize).BeginInit()
-            Me.tpEquiposSeguridadIndustrial.SuspendLayout()
-            CType(Me.dgvEquipoSeguridad, System.ComponentModel.ISupportInitialize).BeginInit()
-            CType(Me.pbEquiposSeguridad, System.ComponentModel.ISupportInitialize).BeginInit()
-            Me.tpCamarasSeguridad.SuspendLayout()
-            CType(Me.dgvCamara, System.ComponentModel.ISupportInitialize).BeginInit()
-            CType(Me.pbCamarasSeguridad, System.ComponentModel.ISupportInitialize).BeginInit()
-            Me.tpGeneradores.SuspendLayout()
-            CType(Me.pbGeneradores, System.ComponentModel.ISupportInitialize).BeginInit()
-            Me.tpChalecos.SuspendLayout()
-            CType(Me.dgvChaleco, System.ComponentModel.ISupportInitialize).BeginInit()
-            CType(Me.pbChaleco, System.ComponentModel.ISupportInitialize).BeginInit()
-            Me.tpSoftware.SuspendLayout()
-            CType(Me.pbSoftware, System.ComponentModel.ISupportInitialize).BeginInit()
-            Me.MenuStrip1.SuspendLayout()
-            Me.SuspendLayout()
+            Me.gpInfActfijo.SuspendLayout
+            Me.GroupBox6.SuspendLayout
+            Me.tcDatos.SuspendLayout
+            Me.TabPage2.SuspendLayout
+            Me.GroupBox2.SuspendLayout
+            Me.tcVarios.SuspendLayout
+            Me.tpArmas.SuspendLayout
+            CType(Me.dgvArmas, System.ComponentModel.ISupportInitialize).BeginInit
+            CType(Me.pbArmas, System.ComponentModel.ISupportInitialize).BeginInit
+            Me.tpRadios.SuspendLayout
+            CType(Me.dgvRadios, System.ComponentModel.ISupportInitialize).BeginInit
+            CType(Me.pbRadios, System.ComponentModel.ISupportInitialize).BeginInit
+            Me.tpVehiculo.SuspendLayout
+            Me.GroupBox7.SuspendLayout
+            Me.GroupBox1.SuspendLayout
+            CType(Me.pbVehiculo, System.ComponentModel.ISupportInitialize).BeginInit
+            Me.tpTerreno.SuspendLayout
+            CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit
+            Me.tpEquiposComputo.SuspendLayout
+            CType(Me.dgvEquiposComputo, System.ComponentModel.ISupportInitialize).BeginInit
+            Me.tpLibrosYcolecciones.SuspendLayout
+            CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit
+            Me.tpEquiposOficina.SuspendLayout
+            CType(Me.dgvEquiposOficina, System.ComponentModel.ISupportInitialize).BeginInit
+            CType(Me.pbEquiposOficina, System.ComponentModel.ISupportInitialize).BeginInit
+            Me.tpMueblesOficina.SuspendLayout
+            CType(Me.dgvMuebleOficina, System.ComponentModel.ISupportInitialize).BeginInit
+            CType(Me.pbMueblesOficina, System.ComponentModel.ISupportInitialize).BeginInit
+            Me.tpEquiposCocina.SuspendLayout
+            CType(Me.dgvEquipoCocina, System.ComponentModel.ISupportInitialize).BeginInit
+            CType(Me.pbEquiposCocina, System.ComponentModel.ISupportInitialize).BeginInit
+            Me.TabPage4.SuspendLayout
+            CType(Me.dgvEquipoAmbientacion, System.ComponentModel.ISupportInitialize).BeginInit
+            CType(Me.pbEquiposAmbientacion, System.ComponentModel.ISupportInitialize).BeginInit
+            Me.TabPage1.SuspendLayout
+            CType(Me.dgvEquipoComunicacion, System.ComponentModel.ISupportInitialize).BeginInit
+            CType(Me.pbEquiposComunicacion, System.ComponentModel.ISupportInitialize).BeginInit
+            Me.tpEquiposSeguridadIndustrial.SuspendLayout
+            CType(Me.dgvEquipoSeguridad, System.ComponentModel.ISupportInitialize).BeginInit
+            CType(Me.pbEquiposSeguridad, System.ComponentModel.ISupportInitialize).BeginInit
+            Me.tpCamarasSeguridad.SuspendLayout
+            CType(Me.dgvCamara, System.ComponentModel.ISupportInitialize).BeginInit
+            CType(Me.pbCamarasSeguridad, System.ComponentModel.ISupportInitialize).BeginInit
+            Me.tpGeneradores.SuspendLayout
+            CType(Me.pbGeneradores, System.ComponentModel.ISupportInitialize).BeginInit
+            Me.tpChalecos.SuspendLayout
+            CType(Me.dgvChaleco, System.ComponentModel.ISupportInitialize).BeginInit
+            CType(Me.pbChaleco, System.ComponentModel.ISupportInitialize).BeginInit
+            Me.tpSoftware.SuspendLayout
+            CType(Me.pbSoftware, System.ComponentModel.ISupportInitialize).BeginInit
+            Me.MenuStrip1.SuspendLayout
+            Me.SuspendLayout
             '
             'gpInfActfijo
             '
@@ -723,7 +723,7 @@
             Me.gpInfActfijo.Controls.Add(Me.lblIdActivoFijo)
             Me.gpInfActfijo.Controls.Add(Me.Label21)
             Me.gpInfActfijo.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.gpInfActfijo.Location = New System.Drawing.Point(2, 27)
+            Me.gpInfActfijo.Location = New System.Drawing.Point(2, 37)
             Me.gpInfActfijo.Name = "gpInfActfijo"
             Me.gpInfActfijo.Size = New System.Drawing.Size(1004, 654)
             Me.gpInfActfijo.TabIndex = 0
@@ -733,23 +733,22 @@
             'dtpFechaActual
             '
             Me.dtpFechaActual.Enabled = False
-            Me.dtpFechaActual.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.dtpFechaActual.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.dtpFechaActual.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
             Me.dtpFechaActual.Location = New System.Drawing.Point(486, 18)
             Me.dtpFechaActual.Name = "dtpFechaActual"
-            Me.dtpFechaActual.Size = New System.Drawing.Size(120, 22)
+            Me.dtpFechaActual.Size = New System.Drawing.Size(120, 21)
             Me.dtpFechaActual.TabIndex = 222
             '
             'bntPuesto
             '
             Me.bntPuesto.BackColor = System.Drawing.Color.White
             Me.bntPuesto.Enabled = False
-            Me.bntPuesto.Font = New System.Drawing.Font("Consolas", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.bntPuesto.Image = CType(resources.GetObject("bntPuesto.Image"), System.Drawing.Image)
-            Me.bntPuesto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-            Me.bntPuesto.Location = New System.Drawing.Point(958, 63)
+            Me.bntPuesto.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.bntPuesto.Image = Global.syscisepro.My.Resources.Resources.location_on_24dp_FILL0_wght400_GRAD0_opsz24
+            Me.bntPuesto.Location = New System.Drawing.Point(958, 64)
             Me.bntPuesto.Name = "bntPuesto"
-            Me.bntPuesto.Size = New System.Drawing.Size(26, 26)
+            Me.bntPuesto.Size = New System.Drawing.Size(34, 27)
             Me.bntPuesto.TabIndex = 221
             Me.bntPuesto.TextAlign = System.Drawing.ContentAlignment.MiddleRight
             Me.bntPuesto.UseVisualStyleBackColor = False
@@ -758,10 +757,10 @@
             '
             Me.txtSitio.BackColor = System.Drawing.Color.White
             Me.txtSitio.Enabled = False
-            Me.txtSitio.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtSitio.Location = New System.Drawing.Point(486, 65)
+            Me.txtSitio.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtSitio.Location = New System.Drawing.Point(486, 67)
             Me.txtSitio.Name = "txtSitio"
-            Me.txtSitio.Size = New System.Drawing.Size(472, 22)
+            Me.txtSitio.Size = New System.Drawing.Size(472, 21)
             Me.txtSitio.TabIndex = 220
             '
             'cbmSecuencial
@@ -771,7 +770,7 @@
             Me.cbmSecuencial.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cbmSecuencial.Enabled = False
             Me.cbmSecuencial.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-            Me.cbmSecuencial.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.cbmSecuencial.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cbmSecuencial.FormattingEnabled = True
             Me.cbmSecuencial.Location = New System.Drawing.Point(100, 81)
             Me.cbmSecuencial.Name = "cbmSecuencial"
@@ -782,49 +781,49 @@
             'Label69
             '
             Me.Label69.AutoSize = True
-            Me.Label69.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Label69.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Label69.Location = New System.Drawing.Point(26, 89)
             Me.Label69.Name = "Label69"
-            Me.Label69.Size = New System.Drawing.Size(73, 13)
+            Me.Label69.Size = New System.Drawing.Size(74, 13)
             Me.Label69.TabIndex = 74
             Me.Label69.Text = "SECUENCIAL:"
             '
             'Label172
             '
             Me.Label172.AutoSize = True
-            Me.Label172.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label172.Location = New System.Drawing.Point(418, 69)
+            Me.Label172.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Label172.Location = New System.Drawing.Point(394, 71)
             Me.Label172.Name = "Label172"
-            Me.Label172.Size = New System.Drawing.Size(33, 13)
+            Me.Label172.Size = New System.Drawing.Size(38, 13)
             Me.Label172.TabIndex = 219
             Me.Label172.Text = "SITIO:"
             '
             'dtpFechaMantenimiento
             '
             Me.dtpFechaMantenimiento.Enabled = False
-            Me.dtpFechaMantenimiento.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.dtpFechaMantenimiento.Location = New System.Drawing.Point(735, 89)
+            Me.dtpFechaMantenimiento.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.dtpFechaMantenimiento.Location = New System.Drawing.Point(735, 95)
             Me.dtpFechaMantenimiento.Name = "dtpFechaMantenimiento"
-            Me.dtpFechaMantenimiento.Size = New System.Drawing.Size(248, 22)
+            Me.dtpFechaMantenimiento.Size = New System.Drawing.Size(248, 21)
             Me.dtpFechaMantenimiento.TabIndex = 217
             '
             'lblSubGrupo
             '
             Me.lblSubGrupo.AutoSize = True
-            Me.lblSubGrupo.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.lblSubGrupo.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.lblSubGrupo.Location = New System.Drawing.Point(26, 67)
             Me.lblSubGrupo.Name = "lblSubGrupo"
-            Me.lblSubGrupo.Size = New System.Drawing.Size(67, 13)
+            Me.lblSubGrupo.Size = New System.Drawing.Size(71, 13)
             Me.lblSubGrupo.TabIndex = 66
             Me.lblSubGrupo.Text = "SUB-GRUPO:"
             '
             'lblGrupo
             '
             Me.lblGrupo.AutoSize = True
-            Me.lblGrupo.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.lblGrupo.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.lblGrupo.Location = New System.Drawing.Point(26, 45)
             Me.lblGrupo.Name = "lblGrupo"
-            Me.lblGrupo.Size = New System.Drawing.Size(43, 13)
+            Me.lblGrupo.Size = New System.Drawing.Size(47, 13)
             Me.lblGrupo.TabIndex = 65
             Me.lblGrupo.Text = "GRUPO:"
             '
@@ -835,7 +834,7 @@
             Me.cbmSubGrupo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cbmSubGrupo.Enabled = False
             Me.cbmSubGrupo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-            Me.cbmSubGrupo.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.cbmSubGrupo.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cbmSubGrupo.FormattingEnabled = True
             Me.cbmSubGrupo.Location = New System.Drawing.Point(100, 59)
             Me.cbmSubGrupo.Name = "cbmSubGrupo"
@@ -850,10 +849,10 @@
             Me.cbmMantenimiento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cbmMantenimiento.Enabled = False
             Me.cbmMantenimiento.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-            Me.cbmMantenimiento.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.cbmMantenimiento.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cbmMantenimiento.FormattingEnabled = True
             Me.cbmMantenimiento.Items.AddRange(New Object() {"SI", "NO"})
-            Me.cbmMantenimiento.Location = New System.Drawing.Point(505, 90)
+            Me.cbmMantenimiento.Location = New System.Drawing.Point(505, 95)
             Me.cbmMantenimiento.Name = "cbmMantenimiento"
             Me.cbmMantenimiento.Size = New System.Drawing.Size(62, 21)
             Me.cbmMantenimiento.TabIndex = 214
@@ -861,10 +860,10 @@
             'lblCategoria
             '
             Me.lblCategoria.AutoSize = True
-            Me.lblCategoria.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.lblCategoria.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.lblCategoria.Location = New System.Drawing.Point(26, 22)
             Me.lblCategoria.Name = "lblCategoria"
-            Me.lblCategoria.Size = New System.Drawing.Size(67, 13)
+            Me.lblCategoria.Size = New System.Drawing.Size(69, 13)
             Me.lblCategoria.TabIndex = 64
             Me.lblCategoria.Text = "CATEGORÍA:"
             '
@@ -874,7 +873,7 @@
             Me.cbmCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cbmCategoria.Enabled = False
             Me.cbmCategoria.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-            Me.cbmCategoria.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.cbmCategoria.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cbmCategoria.FormattingEnabled = True
             Me.cbmCategoria.Location = New System.Drawing.Point(100, 14)
             Me.cbmCategoria.Name = "cbmCategoria"
@@ -904,7 +903,7 @@
             Me.GroupBox6.Controls.Add(Me.txtCodigoArancel)
             Me.GroupBox6.Controls.Add(Me.Label51)
             Me.GroupBox6.Enabled = False
-            Me.GroupBox6.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.GroupBox6.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.GroupBox6.Location = New System.Drawing.Point(6, 285)
             Me.GroupBox6.Name = "GroupBox6"
             Me.GroupBox6.Size = New System.Drawing.Size(993, 76)
@@ -915,9 +914,10 @@
             'cbxVidaUtil
             '
             Me.cbxVidaUtil.AutoSize = True
+            Me.cbxVidaUtil.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cbxVidaUtil.Location = New System.Drawing.Point(883, 50)
             Me.cbxVidaUtil.Name = "cbxVidaUtil"
-            Me.cbxVidaUtil.Size = New System.Drawing.Size(103, 17)
+            Me.cbxVidaUtil.Size = New System.Drawing.Size(100, 17)
             Me.cbxVidaUtil.TabIndex = 161
             Me.cbxVidaUtil.Text = "Editar Vida Util"
             Me.cbxVidaUtil.UseVisualStyleBackColor = True
@@ -925,10 +925,10 @@
             'lblValorResidual
             '
             Me.lblValorResidual.AutoSize = True
-            Me.lblValorResidual.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.lblValorResidual.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.lblValorResidual.Location = New System.Drawing.Point(461, 50)
             Me.lblValorResidual.Name = "lblValorResidual"
-            Me.lblValorResidual.Size = New System.Drawing.Size(77, 13)
+            Me.lblValorResidual.Size = New System.Drawing.Size(78, 13)
             Me.lblValorResidual.TabIndex = 160
             Me.lblValorResidual.Text = "VALOR RESID:"
             '
@@ -936,17 +936,17 @@
             '
             Me.txtAñosVidaUtil.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
             Me.txtAñosVidaUtil.Enabled = False
-            Me.txtAñosVidaUtil.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtAñosVidaUtil.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtAñosVidaUtil.Location = New System.Drawing.Point(743, 47)
             Me.txtAñosVidaUtil.Name = "txtAñosVidaUtil"
-            Me.txtAñosVidaUtil.Size = New System.Drawing.Size(112, 22)
+            Me.txtAñosVidaUtil.Size = New System.Drawing.Size(112, 21)
             Me.txtAñosVidaUtil.TabIndex = 159
             '
             'Label3
             '
             Me.Label3.AutoSize = True
-            Me.Label3.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label3.Location = New System.Drawing.Point(682, 50)
+            Me.Label3.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Label3.Location = New System.Drawing.Point(665, 50)
             Me.Label3.Name = "Label3"
             Me.Label3.Size = New System.Drawing.Size(60, 13)
             Me.Label3.TabIndex = 158
@@ -954,10 +954,10 @@
             '
             'dtpFechaAdquisicion
             '
-            Me.dtpFechaAdquisicion.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.dtpFechaAdquisicion.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.dtpFechaAdquisicion.Location = New System.Drawing.Point(743, 19)
             Me.dtpFechaAdquisicion.Name = "dtpFechaAdquisicion"
-            Me.dtpFechaAdquisicion.Size = New System.Drawing.Size(234, 22)
+            Me.dtpFechaAdquisicion.Size = New System.Drawing.Size(234, 21)
             Me.dtpFechaAdquisicion.TabIndex = 157
             Me.dtpFechaAdquisicion.Value = New Date(2023, 11, 16, 0, 0, 0, 0)
             '
@@ -992,10 +992,10 @@
             'Label65
             '
             Me.Label65.AutoSize = True
-            Me.Label65.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Label65.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Label65.Location = New System.Drawing.Point(665, 22)
             Me.Label65.Name = "Label65"
-            Me.Label65.Size = New System.Drawing.Size(80, 13)
+            Me.Label65.Size = New System.Drawing.Size(78, 13)
             Me.Label65.TabIndex = 145
             Me.Label65.Text = "ADQUISICIÓN:"
             '
@@ -1004,26 +1004,26 @@
             Me.txtValorResidual.AllowDrop = True
             Me.txtValorResidual.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
             Me.txtValorResidual.Enabled = False
-            Me.txtValorResidual.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtValorResidual.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtValorResidual.Location = New System.Drawing.Point(545, 47)
             Me.txtValorResidual.Name = "txtValorResidual"
-            Me.txtValorResidual.Size = New System.Drawing.Size(75, 22)
+            Me.txtValorResidual.Size = New System.Drawing.Size(75, 21)
             Me.txtValorResidual.TabIndex = 144
             '
             'txtValorAdicional
             '
             Me.txtValorAdicional.BackColor = System.Drawing.Color.White
             Me.txtValorAdicional.Enabled = False
-            Me.txtValorAdicional.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtValorAdicional.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtValorAdicional.Location = New System.Drawing.Point(545, 19)
             Me.txtValorAdicional.Name = "txtValorAdicional"
-            Me.txtValorAdicional.Size = New System.Drawing.Size(75, 22)
+            Me.txtValorAdicional.Size = New System.Drawing.Size(75, 21)
             Me.txtValorAdicional.TabIndex = 142
             '
             'Label63
             '
             Me.Label63.AutoSize = True
-            Me.Label63.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Label63.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Label63.Location = New System.Drawing.Point(461, 24)
             Me.Label63.Name = "Label63"
             Me.Label63.Size = New System.Drawing.Size(72, 13)
@@ -1033,35 +1033,35 @@
             'txtValorFactura
             '
             Me.txtValorFactura.BackColor = System.Drawing.Color.White
-            Me.txtValorFactura.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtValorFactura.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtValorFactura.Location = New System.Drawing.Point(341, 45)
             Me.txtValorFactura.Name = "txtValorFactura"
-            Me.txtValorFactura.Size = New System.Drawing.Size(99, 22)
+            Me.txtValorFactura.Size = New System.Drawing.Size(99, 21)
             Me.txtValorFactura.TabIndex = 140
             '
             'Label62
             '
             Me.Label62.AutoSize = True
-            Me.Label62.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Label62.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Label62.Location = New System.Drawing.Point(257, 48)
             Me.Label62.Name = "Label62"
-            Me.Label62.Size = New System.Drawing.Size(72, 13)
+            Me.Label62.Size = New System.Drawing.Size(74, 13)
             Me.Label62.TabIndex = 139
             Me.Label62.Text = "VALOR FACT:"
             '
             'txtNumeroFactura
             '
             Me.txtNumeroFactura.BackColor = System.Drawing.Color.White
-            Me.txtNumeroFactura.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtNumeroFactura.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtNumeroFactura.Location = New System.Drawing.Point(327, 19)
             Me.txtNumeroFactura.Name = "txtNumeroFactura"
-            Me.txtNumeroFactura.Size = New System.Drawing.Size(114, 22)
+            Me.txtNumeroFactura.Size = New System.Drawing.Size(114, 21)
             Me.txtNumeroFactura.TabIndex = 138
             '
             'Label61
             '
             Me.Label61.AutoSize = True
-            Me.Label61.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Label61.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Label61.Location = New System.Drawing.Point(257, 22)
             Me.Label61.Name = "Label61"
             Me.Label61.Size = New System.Drawing.Size(72, 13)
@@ -1071,38 +1071,38 @@
             'txtOrdenCompra
             '
             Me.txtOrdenCompra.BackColor = System.Drawing.Color.White
-            Me.txtOrdenCompra.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtOrdenCompra.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtOrdenCompra.Location = New System.Drawing.Point(119, 45)
             Me.txtOrdenCompra.Name = "txtOrdenCompra"
-            Me.txtOrdenCompra.Size = New System.Drawing.Size(112, 22)
+            Me.txtOrdenCompra.Size = New System.Drawing.Size(112, 21)
             Me.txtOrdenCompra.TabIndex = 136
             '
             'Label60
             '
             Me.Label60.AutoSize = True
-            Me.Label60.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Label60.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Label60.Location = New System.Drawing.Point(6, 52)
             Me.Label60.Name = "Label60"
-            Me.Label60.Size = New System.Drawing.Size(101, 13)
+            Me.Label60.Size = New System.Drawing.Size(97, 13)
             Me.Label60.TabIndex = 135
             Me.Label60.Text = "N° ORDEN COMP.:"
             '
             'txtCodigoArancel
             '
             Me.txtCodigoArancel.BackColor = System.Drawing.Color.White
-            Me.txtCodigoArancel.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtCodigoArancel.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtCodigoArancel.Location = New System.Drawing.Point(119, 17)
             Me.txtCodigoArancel.Name = "txtCodigoArancel"
-            Me.txtCodigoArancel.Size = New System.Drawing.Size(112, 22)
+            Me.txtCodigoArancel.Size = New System.Drawing.Size(112, 21)
             Me.txtCodigoArancel.TabIndex = 134
             '
             'Label51
             '
             Me.Label51.AutoSize = True
-            Me.Label51.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Label51.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Label51.Location = New System.Drawing.Point(8, 27)
             Me.Label51.Name = "Label51"
-            Me.Label51.Size = New System.Drawing.Size(104, 13)
+            Me.Label51.Size = New System.Drawing.Size(102, 13)
             Me.Label51.TabIndex = 133
             Me.Label51.Text = "CÓDIGO ARANCEL:"
             '
@@ -1112,7 +1112,7 @@
             Me.cbmGrupo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cbmGrupo.Enabled = False
             Me.cbmGrupo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-            Me.cbmGrupo.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.cbmGrupo.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cbmGrupo.FormattingEnabled = True
             Me.cbmGrupo.Location = New System.Drawing.Point(100, 37)
             Me.cbmGrupo.Name = "cbmGrupo"
@@ -1126,7 +1126,7 @@
             Me.cbmEstadoActivoActual.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cbmEstadoActivoActual.Enabled = False
             Me.cbmEstadoActivoActual.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-            Me.cbmEstadoActivoActual.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.cbmEstadoActivoActual.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cbmEstadoActivoActual.FormattingEnabled = True
             Me.cbmEstadoActivoActual.Items.AddRange(New Object() {"BUENO", "REGULAR", "MALO"})
             Me.cbmEstadoActivoActual.Location = New System.Drawing.Point(901, 19)
@@ -1137,10 +1137,10 @@
             'lblEstadoActualACtivoFijo
             '
             Me.lblEstadoActualACtivoFijo.AutoSize = True
-            Me.lblEstadoActualACtivoFijo.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.lblEstadoActualACtivoFijo.Location = New System.Drawing.Point(834, 24)
+            Me.lblEstadoActualACtivoFijo.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.lblEstadoActualACtivoFijo.Location = New System.Drawing.Point(840, 21)
             Me.lblEstadoActualACtivoFijo.Name = "lblEstadoActualACtivoFijo"
-            Me.lblEstadoActualACtivoFijo.Size = New System.Drawing.Size(46, 13)
+            Me.lblEstadoActualACtivoFijo.Size = New System.Drawing.Size(55, 13)
             Me.lblEstadoActualACtivoFijo.TabIndex = 120
             Me.lblEstadoActualACtivoFijo.Text = "ESTADO: "
             '
@@ -1148,16 +1148,16 @@
             '
             Me.txtIdActivoFijo.BackColor = System.Drawing.Color.White
             Me.txtIdActivoFijo.Enabled = False
-            Me.txtIdActivoFijo.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtIdActivoFijo.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtIdActivoFijo.Location = New System.Drawing.Point(680, 18)
             Me.txtIdActivoFijo.Name = "txtIdActivoFijo"
-            Me.txtIdActivoFijo.Size = New System.Drawing.Size(62, 22)
+            Me.txtIdActivoFijo.Size = New System.Drawing.Size(62, 21)
             Me.txtIdActivoFijo.TabIndex = 87
             '
             'tcDatos
             '
             Me.tcDatos.Controls.Add(Me.TabPage2)
-            Me.tcDatos.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.tcDatos.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.tcDatos.Location = New System.Drawing.Point(6, 111)
             Me.tcDatos.Name = "tcDatos"
             Me.tcDatos.SelectedIndex = 0
@@ -1185,7 +1185,7 @@
             Me.TabPage2.Controls.Add(Me.cbEmpresa)
             Me.TabPage2.Controls.Add(Me.lblSucursal)
             Me.TabPage2.Controls.Add(Me.lblEmpresa)
-            Me.TabPage2.Font = New System.Drawing.Font("Calibri", 9.75!)
+            Me.TabPage2.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.TabPage2.Location = New System.Drawing.Point(4, 22)
             Me.TabPage2.Name = "TabPage2"
             Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
@@ -1205,7 +1205,7 @@
             Me.GroupBox2.Controls.Add(Me.Label42)
             Me.GroupBox2.Controls.Add(Me.Label41)
             Me.GroupBox2.Controls.Add(Me.Label40)
-            Me.GroupBox2.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.GroupBox2.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.GroupBox2.Location = New System.Drawing.Point(690, 2)
             Me.GroupBox2.Name = "GroupBox2"
             Me.GroupBox2.Size = New System.Drawing.Size(296, 141)
@@ -1250,7 +1250,7 @@
             Me.cbmCuentasActivo.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cbmCuentasActivo.FormattingEnabled = True
             Me.cbmCuentasActivo.Items.AddRange(New Object() {"PRIVATIVO", "LIBRE", "OTROS"})
-            Me.cbmCuentasActivo.Location = New System.Drawing.Point(90, 36)
+            Me.cbmCuentasActivo.Location = New System.Drawing.Point(90, 34)
             Me.cbmCuentasActivo.Name = "cbmCuentasActivo"
             Me.cbmCuentasActivo.Size = New System.Drawing.Size(205, 21)
             Me.cbmCuentasActivo.TabIndex = 284
@@ -1280,7 +1280,7 @@
             Me.txtcuentaActivo.BackColor = System.Drawing.Color.White
             Me.txtcuentaActivo.Enabled = False
             Me.txtcuentaActivo.Font = New System.Drawing.Font("Calibri", 9.75!)
-            Me.txtcuentaActivo.Location = New System.Drawing.Point(4, 35)
+            Me.txtcuentaActivo.Location = New System.Drawing.Point(4, 33)
             Me.txtcuentaActivo.Name = "txtcuentaActivo"
             Me.txtcuentaActivo.Size = New System.Drawing.Size(84, 23)
             Me.txtcuentaActivo.TabIndex = 65
@@ -1288,30 +1288,30 @@
             'Label42
             '
             Me.Label42.AutoSize = True
-            Me.Label42.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label42.Location = New System.Drawing.Point(7, 96)
+            Me.Label42.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Label42.Location = New System.Drawing.Point(7, 97)
             Me.Label42.Name = "Label42"
-            Me.Label42.Size = New System.Drawing.Size(127, 13)
+            Me.Label42.Size = New System.Drawing.Size(131, 13)
             Me.Label42.TabIndex = 65
             Me.Label42.Text = "CUENTA DEPRECIACIÓN:"
             '
             'Label41
             '
             Me.Label41.AutoSize = True
-            Me.Label41.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Label41.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Label41.Location = New System.Drawing.Point(7, 59)
             Me.Label41.Name = "Label41"
-            Me.Label41.Size = New System.Drawing.Size(91, 13)
+            Me.Label41.Size = New System.Drawing.Size(99, 13)
             Me.Label41.TabIndex = 64
             Me.Label41.Text = "CUENTA GASTOS:"
             '
             'Label40
             '
             Me.Label40.AutoSize = True
-            Me.Label40.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label40.Location = New System.Drawing.Point(7, 19)
+            Me.Label40.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Label40.Location = New System.Drawing.Point(6, 16)
             Me.Label40.Name = "Label40"
-            Me.Label40.Size = New System.Drawing.Size(91, 13)
+            Me.Label40.Size = New System.Drawing.Size(94, 13)
             Me.Label40.TabIndex = 63
             Me.Label40.Text = "CUENTA ACTIVO:"
             '
@@ -1319,19 +1319,19 @@
             '
             Me.txtNombreProvedor.BackColor = System.Drawing.Color.White
             Me.txtNombreProvedor.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-            Me.txtNombreProvedor.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtNombreProvedor.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtNombreProvedor.Location = New System.Drawing.Point(305, 72)
             Me.txtNombreProvedor.Name = "txtNombreProvedor"
-            Me.txtNombreProvedor.Size = New System.Drawing.Size(379, 22)
+            Me.txtNombreProvedor.Size = New System.Drawing.Size(379, 21)
             Me.txtNombreProvedor.TabIndex = 90
             '
             'Label11
             '
             Me.Label11.AutoSize = True
-            Me.Label11.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label11.Location = New System.Drawing.Point(309, 97)
+            Me.Label11.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Label11.Location = New System.Drawing.Point(309, 101)
             Me.Label11.Name = "Label11"
-            Me.Label11.Size = New System.Drawing.Size(136, 13)
+            Me.Label11.Size = New System.Drawing.Size(135, 13)
             Me.Label11.TabIndex = 89
             Me.Label11.Text = "NOMBRE DEL CUSTODIO:"
             '
@@ -1339,19 +1339,19 @@
             '
             Me.txtNombreCustodio.BackColor = System.Drawing.Color.White
             Me.txtNombreCustodio.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-            Me.txtNombreCustodio.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtNombreCustodio.Location = New System.Drawing.Point(305, 113)
+            Me.txtNombreCustodio.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtNombreCustodio.Location = New System.Drawing.Point(305, 117)
             Me.txtNombreCustodio.Name = "txtNombreCustodio"
-            Me.txtNombreCustodio.Size = New System.Drawing.Size(379, 22)
+            Me.txtNombreCustodio.Size = New System.Drawing.Size(379, 21)
             Me.txtNombreCustodio.TabIndex = 88
             '
             'Label10
             '
             Me.Label10.AutoSize = True
-            Me.Label10.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Label10.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Label10.Location = New System.Drawing.Point(308, 56)
             Me.Label10.Name = "Label10"
-            Me.Label10.Size = New System.Drawing.Size(140, 13)
+            Me.Label10.Size = New System.Drawing.Size(138, 13)
             Me.Label10.TabIndex = 87
             Me.Label10.Text = "NOMBRE DEL PROVEDOR:"
             '
@@ -1359,16 +1359,16 @@
             '
             Me.txtNombreActivo.BackColor = System.Drawing.Color.White
             Me.txtNombreActivo.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-            Me.txtNombreActivo.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtNombreActivo.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtNombreActivo.Location = New System.Drawing.Point(305, 33)
             Me.txtNombreActivo.Name = "txtNombreActivo"
-            Me.txtNombreActivo.Size = New System.Drawing.Size(379, 22)
+            Me.txtNombreActivo.Size = New System.Drawing.Size(379, 21)
             Me.txtNombreActivo.TabIndex = 86
             '
             'Label9
             '
             Me.Label9.AutoSize = True
-            Me.Label9.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Label9.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Label9.Location = New System.Drawing.Point(308, 17)
             Me.Label9.Name = "Label9"
             Me.Label9.Size = New System.Drawing.Size(120, 13)
@@ -1378,10 +1378,10 @@
             'txtContrato
             '
             Me.txtContrato.BackColor = System.Drawing.Color.White
-            Me.txtContrato.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtContrato.Location = New System.Drawing.Point(150, 112)
+            Me.txtContrato.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtContrato.Location = New System.Drawing.Point(150, 116)
             Me.txtContrato.Name = "txtContrato"
-            Me.txtContrato.Size = New System.Drawing.Size(149, 22)
+            Me.txtContrato.Size = New System.Drawing.Size(149, 21)
             Me.txtContrato.TabIndex = 82
             Me.txtContrato.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
             '
@@ -1390,7 +1390,7 @@
             Me.cbArea.BackColor = System.Drawing.Color.White
             Me.cbArea.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cbArea.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-            Me.cbArea.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.cbArea.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cbArea.FormattingEnabled = True
             Me.cbArea.Location = New System.Drawing.Point(150, 33)
             Me.cbArea.Name = "cbArea"
@@ -1400,17 +1400,17 @@
             'Label7
             '
             Me.Label7.AutoSize = True
-            Me.Label7.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label7.Location = New System.Drawing.Point(154, 96)
+            Me.Label7.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Label7.Location = New System.Drawing.Point(154, 100)
             Me.Label7.Name = "Label7"
-            Me.Label7.Size = New System.Drawing.Size(82, 13)
+            Me.Label7.Size = New System.Drawing.Size(83, 13)
             Me.Label7.TabIndex = 81
             Me.Label7.Text = "CONTRATO N°:"
             '
             'Label5
             '
             Me.Label5.AutoSize = True
-            Me.Label5.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Label5.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Label5.Location = New System.Drawing.Point(153, 18)
             Me.Label5.Name = "Label5"
             Me.Label5.Size = New System.Drawing.Size(37, 13)
@@ -1422,7 +1422,7 @@
             Me.cbgerencias.BackColor = System.Drawing.Color.White
             Me.cbgerencias.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cbgerencias.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-            Me.cbgerencias.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.cbgerencias.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cbgerencias.FormattingEnabled = True
             Me.cbgerencias.Location = New System.Drawing.Point(7, 72)
             Me.cbgerencias.Name = "cbgerencias"
@@ -1432,17 +1432,17 @@
             'txtCarpeta
             '
             Me.txtCarpeta.BackColor = System.Drawing.Color.White
-            Me.txtCarpeta.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtCarpeta.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtCarpeta.Location = New System.Drawing.Point(150, 72)
             Me.txtCarpeta.Name = "txtCarpeta"
-            Me.txtCarpeta.Size = New System.Drawing.Size(149, 22)
+            Me.txtCarpeta.Size = New System.Drawing.Size(149, 21)
             Me.txtCarpeta.TabIndex = 80
             Me.txtCarpeta.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
             '
             'Label4
             '
             Me.Label4.AutoSize = True
-            Me.Label4.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Label4.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Label4.Location = New System.Drawing.Point(10, 56)
             Me.Label4.Name = "Label4"
             Me.Label4.Size = New System.Drawing.Size(62, 13)
@@ -1454,9 +1454,9 @@
             Me.cbSucursal.BackColor = System.Drawing.Color.White
             Me.cbSucursal.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cbSucursal.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-            Me.cbSucursal.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.cbSucursal.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cbSucursal.FormattingEnabled = True
-            Me.cbSucursal.Location = New System.Drawing.Point(7, 111)
+            Me.cbSucursal.Location = New System.Drawing.Point(7, 115)
             Me.cbSucursal.Name = "cbSucursal"
             Me.cbSucursal.Size = New System.Drawing.Size(138, 21)
             Me.cbSucursal.TabIndex = 74
@@ -1464,10 +1464,10 @@
             'Label6
             '
             Me.Label6.AutoSize = True
-            Me.Label6.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Label6.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Label6.Location = New System.Drawing.Point(154, 57)
             Me.Label6.Name = "Label6"
-            Me.Label6.Size = New System.Drawing.Size(70, 13)
+            Me.Label6.Size = New System.Drawing.Size(73, 13)
             Me.Label6.TabIndex = 79
             Me.Label6.Text = "CARPETA N°:"
             '
@@ -1476,7 +1476,7 @@
             Me.cbEmpresa.BackColor = System.Drawing.Color.White
             Me.cbEmpresa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cbEmpresa.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-            Me.cbEmpresa.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.cbEmpresa.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cbEmpresa.FormattingEnabled = True
             Me.cbEmpresa.Location = New System.Drawing.Point(6, 33)
             Me.cbEmpresa.Name = "cbEmpresa"
@@ -1486,20 +1486,20 @@
             'lblSucursal
             '
             Me.lblSucursal.AutoSize = True
-            Me.lblSucursal.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.lblSucursal.Location = New System.Drawing.Point(10, 96)
+            Me.lblSucursal.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.lblSucursal.Location = New System.Drawing.Point(10, 100)
             Me.lblSucursal.Name = "lblSucursal"
-            Me.lblSucursal.Size = New System.Drawing.Size(64, 13)
+            Me.lblSucursal.Size = New System.Drawing.Size(65, 13)
             Me.lblSucursal.TabIndex = 72
             Me.lblSucursal.Text = "SUCURSAL:"
             '
             'lblEmpresa
             '
             Me.lblEmpresa.AutoSize = True
-            Me.lblEmpresa.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.lblEmpresa.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.lblEmpresa.Location = New System.Drawing.Point(10, 17)
             Me.lblEmpresa.Name = "lblEmpresa"
-            Me.lblEmpresa.Size = New System.Drawing.Size(58, 13)
+            Me.lblEmpresa.Size = New System.Drawing.Size(60, 13)
             Me.lblEmpresa.TabIndex = 71
             Me.lblEmpresa.Text = "EMPRESA:"
             '
@@ -1566,37 +1566,35 @@
             '
             'lblArmasCount
             '
-            Me.lblArmasCount.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-            Me.lblArmasCount.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.lblArmasCount.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
-            Me.lblArmasCount.Location = New System.Drawing.Point(450, 233)
+            Me.lblArmasCount.AutoSize = True
+            Me.lblArmasCount.ForeColor = System.Drawing.Color.MediumBlue
+            Me.lblArmasCount.Location = New System.Drawing.Point(747, 241)
             Me.lblArmasCount.Name = "lblArmasCount"
-            Me.lblArmasCount.Size = New System.Drawing.Size(533, 19)
-            Me.lblArmasCount.TabIndex = 292
+            Me.lblArmasCount.Size = New System.Drawing.Size(236, 13)
+            Me.lblArmasCount.TabIndex = 290
             Me.lblArmasCount.Text = "VERIFIQUE LAS SERIES ANTES DE GUARDAR!! "
-            Me.lblArmasCount.TextAlign = System.Drawing.ContentAlignment.MiddleRight
             '
             'dgvArmas
             '
             Me.dgvArmas.AllowUserToAddRows = False
             Me.dgvArmas.AllowUserToDeleteRows = False
             Me.dgvArmas.AllowUserToResizeRows = False
-            DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-            Me.dgvArmas.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+            DataGridViewCellStyle25.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+            Me.dgvArmas.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle25
             Me.dgvArmas.BackgroundColor = System.Drawing.Color.White
             Me.dgvArmas.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
             Me.dgvArmas.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
             Me.dgvArmas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
             Me.dgvArmas.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6, Me.Column5, Me.Column6, Me.Column7, Me.Column8, Me.Column9, Me.ValorFact, Me.ValorResi, Me.VidaUtil})
-            DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-            DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
-            DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
-            DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(123, Byte), Integer))
-            DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-            DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-            Me.dgvArmas.DefaultCellStyle = DataGridViewCellStyle2
-            Me.dgvArmas.Location = New System.Drawing.Point(450, 31)
+            DataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+            DataGridViewCellStyle26.BackColor = System.Drawing.SystemColors.Window
+            DataGridViewCellStyle26.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle26.ForeColor = System.Drawing.SystemColors.ControlText
+            DataGridViewCellStyle26.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(123, Byte), Integer))
+            DataGridViewCellStyle26.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+            DataGridViewCellStyle26.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+            Me.dgvArmas.DefaultCellStyle = DataGridViewCellStyle26
+            Me.dgvArmas.Location = New System.Drawing.Point(450, 37)
             Me.dgvArmas.MultiSelect = False
             Me.dgvArmas.Name = "dgvArmas"
             Me.dgvArmas.ReadOnly = True
@@ -1693,10 +1691,10 @@
             '
             Me.btnEliminarArma.Enabled = False
             Me.btnEliminarArma.Font = New System.Drawing.Font("Calibri", 9.75!)
-            Me.btnEliminarArma.Image = Global.syscisepro.My.Resources.Resources.remove
-            Me.btnEliminarArma.Location = New System.Drawing.Point(934, 6)
+            Me.btnEliminarArma.Image = Global.syscisepro.My.Resources.Resources.do_not_disturb_on_24dp_FILL0_wght400_GRAD0_opsz24
+            Me.btnEliminarArma.Location = New System.Drawing.Point(934, 5)
             Me.btnEliminarArma.Name = "btnEliminarArma"
-            Me.btnEliminarArma.Size = New System.Drawing.Size(49, 22)
+            Me.btnEliminarArma.Size = New System.Drawing.Size(41, 30)
             Me.btnEliminarArma.TabIndex = 288
             Me.btnEliminarArma.TextAlign = System.Drawing.ContentAlignment.BottomCenter
             Me.btnEliminarArma.UseVisualStyleBackColor = True
@@ -1705,10 +1703,10 @@
             '
             Me.btnAgregarArma.Enabled = False
             Me.btnAgregarArma.Font = New System.Drawing.Font("Calibri", 9.75!)
-            Me.btnAgregarArma.Image = Global.syscisepro.My.Resources.Resources.add
-            Me.btnAgregarArma.Location = New System.Drawing.Point(879, 6)
+            Me.btnAgregarArma.Image = Global.syscisepro.My.Resources.Resources.add_circle_24dp_FILL0_wght400_GRAD0_opsz24__3_
+            Me.btnAgregarArma.Location = New System.Drawing.Point(890, 5)
             Me.btnAgregarArma.Name = "btnAgregarArma"
-            Me.btnAgregarArma.Size = New System.Drawing.Size(49, 22)
+            Me.btnAgregarArma.Size = New System.Drawing.Size(41, 30)
             Me.btnAgregarArma.TabIndex = 287
             Me.btnAgregarArma.TextAlign = System.Drawing.ContentAlignment.BottomCenter
             Me.btnAgregarArma.UseVisualStyleBackColor = True
@@ -2032,21 +2030,21 @@
             Me.dgvRadios.AllowUserToAddRows = False
             Me.dgvRadios.AllowUserToDeleteRows = False
             Me.dgvRadios.AllowUserToResizeRows = False
-            DataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-            Me.dgvRadios.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle3
+            DataGridViewCellStyle27.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+            Me.dgvRadios.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle27
             Me.dgvRadios.BackgroundColor = System.Drawing.Color.White
             Me.dgvRadios.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
             Me.dgvRadios.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
             Me.dgvRadios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
             Me.dgvRadios.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn7, Me.GARANTIA, Me.DataGridViewTextBoxColumn8, Me.DataGridViewTextBoxColumn9, Me.DataGridViewTextBoxColumn10, Me.DataGridViewTextBoxColumn11, Me.DataGridViewTextBoxColumn12, Me.DataGridViewTextBoxColumn13, Me.DataGridViewTextBoxColumn17, Me.DataGridViewTextBoxColumn14, Me.DOCUMENTO, Me.Column17, Me.Column18, Me.Column19})
-            DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-            DataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window
-            DataGridViewCellStyle4.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText
-            DataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(123, Byte), Integer))
-            DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-            DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-            Me.dgvRadios.DefaultCellStyle = DataGridViewCellStyle4
+            DataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+            DataGridViewCellStyle28.BackColor = System.Drawing.SystemColors.Window
+            DataGridViewCellStyle28.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle28.ForeColor = System.Drawing.SystemColors.ControlText
+            DataGridViewCellStyle28.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(123, Byte), Integer))
+            DataGridViewCellStyle28.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+            DataGridViewCellStyle28.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+            Me.dgvRadios.DefaultCellStyle = DataGridViewCellStyle28
             Me.dgvRadios.Location = New System.Drawing.Point(451, 46)
             Me.dgvRadios.MultiSelect = False
             Me.dgvRadios.Name = "dgvRadios"
@@ -2146,22 +2144,21 @@
             '
             Me.btnDelRadio.Enabled = False
             Me.btnDelRadio.Font = New System.Drawing.Font("Calibri", 9.75!)
-            Me.btnDelRadio.Image = Global.syscisepro.My.Resources.Resources.remove
+            Me.btnDelRadio.Image = Global.syscisepro.My.Resources.Resources.do_not_disturb_on_24dp_FILL0_wght400_GRAD0_opsz24
             Me.btnDelRadio.Location = New System.Drawing.Point(934, 6)
             Me.btnDelRadio.Name = "btnDelRadio"
-            Me.btnDelRadio.Size = New System.Drawing.Size(49, 22)
+            Me.btnDelRadio.Size = New System.Drawing.Size(41, 30)
             Me.btnDelRadio.TabIndex = 294
-            Me.btnDelRadio.TextAlign = System.Drawing.ContentAlignment.BottomCenter
             Me.btnDelRadio.UseVisualStyleBackColor = True
             '
             'btnAddRadio
             '
             Me.btnAddRadio.Enabled = False
             Me.btnAddRadio.Font = New System.Drawing.Font("Calibri", 9.75!)
-            Me.btnAddRadio.Image = Global.syscisepro.My.Resources.Resources.add
+            Me.btnAddRadio.Image = Global.syscisepro.My.Resources.Resources.add_circle_24dp_FILL0_wght400_GRAD0_opsz24__3_
             Me.btnAddRadio.Location = New System.Drawing.Point(879, 6)
             Me.btnAddRadio.Name = "btnAddRadio"
-            Me.btnAddRadio.Size = New System.Drawing.Size(49, 22)
+            Me.btnAddRadio.Size = New System.Drawing.Size(41, 30)
             Me.btnAddRadio.TabIndex = 293
             Me.btnAddRadio.TextAlign = System.Drawing.ContentAlignment.BottomCenter
             Me.btnAddRadio.UseVisualStyleBackColor = True
@@ -3171,21 +3168,21 @@
             Me.dgvEquiposComputo.AllowUserToAddRows = False
             Me.dgvEquiposComputo.AllowUserToDeleteRows = False
             Me.dgvEquiposComputo.AllowUserToResizeRows = False
-            DataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-            Me.dgvEquiposComputo.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle5
+            DataGridViewCellStyle29.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+            Me.dgvEquiposComputo.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle29
             Me.dgvEquiposComputo.BackgroundColor = System.Drawing.Color.White
             Me.dgvEquiposComputo.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
             Me.dgvEquiposComputo.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
             Me.dgvEquiposComputo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
             Me.dgvEquiposComputo.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.columnCompEquipComp, Me.Column3, Me.Column4, Me.columnCodigo, Me.GARANTIACOMPUTO, Me.RUTACOMPUTO, Me.ValorFactComputo, Me.ValorResiComputo, Me.VidaUtilComputo, Me.venceComputo})
-            DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-            DataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window
-            DataGridViewCellStyle6.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            DataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText
-            DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(123, Byte), Integer))
-            DataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-            DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-            Me.dgvEquiposComputo.DefaultCellStyle = DataGridViewCellStyle6
+            DataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+            DataGridViewCellStyle30.BackColor = System.Drawing.SystemColors.Window
+            DataGridViewCellStyle30.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle30.ForeColor = System.Drawing.SystemColors.ControlText
+            DataGridViewCellStyle30.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(123, Byte), Integer))
+            DataGridViewCellStyle30.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+            DataGridViewCellStyle30.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+            Me.dgvEquiposComputo.DefaultCellStyle = DataGridViewCellStyle30
             Me.dgvEquiposComputo.Location = New System.Drawing.Point(3, 87)
             Me.dgvEquiposComputo.MultiSelect = False
             Me.dgvEquiposComputo.Name = "dgvEquiposComputo"
@@ -3284,13 +3281,11 @@
             '
             Me.btnEliminarEquipoComputo.Enabled = False
             Me.btnEliminarEquipoComputo.Font = New System.Drawing.Font("Calibri", 9.75!)
-            Me.btnEliminarEquipoComputo.Image = Global.syscisepro.My.Resources.Resources.remove
-            Me.btnEliminarEquipoComputo.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-            Me.btnEliminarEquipoComputo.Location = New System.Drawing.Point(901, 48)
+            Me.btnEliminarEquipoComputo.Image = Global.syscisepro.My.Resources.Resources.do_not_disturb_on_24dp_FILL0_wght400_GRAD0_opsz24
+            Me.btnEliminarEquipoComputo.Location = New System.Drawing.Point(912, 48)
             Me.btnEliminarEquipoComputo.Name = "btnEliminarEquipoComputo"
-            Me.btnEliminarEquipoComputo.Size = New System.Drawing.Size(73, 36)
+            Me.btnEliminarEquipoComputo.Size = New System.Drawing.Size(41, 30)
             Me.btnEliminarEquipoComputo.TabIndex = 66
-            Me.btnEliminarEquipoComputo.Text = "ELIMINAR"
             Me.btnEliminarEquipoComputo.TextAlign = System.Drawing.ContentAlignment.BottomCenter
             Me.btnEliminarEquipoComputo.UseVisualStyleBackColor = True
             '
@@ -3308,13 +3303,11 @@
             '
             Me.btnAgregarEquipo.Enabled = False
             Me.btnAgregarEquipo.Font = New System.Drawing.Font("Calibri", 9.75!)
-            Me.btnAgregarEquipo.Image = Global.syscisepro.My.Resources.Resources.add
-            Me.btnAgregarEquipo.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-            Me.btnAgregarEquipo.Location = New System.Drawing.Point(827, 48)
+            Me.btnAgregarEquipo.Image = Global.syscisepro.My.Resources.Resources.add_circle_24dp_FILL0_wght400_GRAD0_opsz24__3_
+            Me.btnAgregarEquipo.Location = New System.Drawing.Point(865, 48)
             Me.btnAgregarEquipo.Name = "btnAgregarEquipo"
-            Me.btnAgregarEquipo.Size = New System.Drawing.Size(68, 36)
+            Me.btnAgregarEquipo.Size = New System.Drawing.Size(41, 30)
             Me.btnAgregarEquipo.TabIndex = 65
-            Me.btnAgregarEquipo.Text = "AGREGAR"
             Me.btnAgregarEquipo.TextAlign = System.Drawing.ContentAlignment.BottomCenter
             Me.btnAgregarEquipo.UseVisualStyleBackColor = True
             '
@@ -3597,34 +3590,35 @@
             Me.lblEquiposOficinaCount.TabIndex = 304
             Me.lblEquiposOficinaCount.Text = "VERIFIQUE LAS SERIES ANTES DE GUARDAR!! "
             Me.lblEquiposOficinaCount.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+            Me.lblEquiposOficinaCount.Visible = False
             '
             'dgvEquiposOficina
             '
             Me.dgvEquiposOficina.AllowUserToAddRows = False
             Me.dgvEquiposOficina.AllowUserToDeleteRows = False
             Me.dgvEquiposOficina.AllowUserToResizeRows = False
-            DataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-            Me.dgvEquiposOficina.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle7
+            DataGridViewCellStyle31.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+            Me.dgvEquiposOficina.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle31
             Me.dgvEquiposOficina.BackgroundColor = System.Drawing.Color.White
             Me.dgvEquiposOficina.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
             Me.dgvEquiposOficina.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
             Me.dgvEquiposOficina.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
             Me.dgvEquiposOficina.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn15, Me.DataGridViewTextBoxColumn16, Me.DataGridViewTextBoxColumn20, Me.DataGridViewTextBoxColumn18, Me.DataGridViewTextBoxColumn19, Me.DataGridViewTextBoxColumn21, Me.DataGridViewTextBoxColumn22, Me.DataGridViewTextBoxColumn24, Me.GarantiaOficina, Me.rutaOficina, Me.ValorOficina, Me.ValorResOficina, Me.VidaUtilOficina, Me.venceOficina})
-            DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-            DataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window
-            DataGridViewCellStyle8.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            DataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText
-            DataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(123, Byte), Integer))
-            DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-            DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-            Me.dgvEquiposOficina.DefaultCellStyle = DataGridViewCellStyle8
-            Me.dgvEquiposOficina.Location = New System.Drawing.Point(449, 32)
+            DataGridViewCellStyle32.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+            DataGridViewCellStyle32.BackColor = System.Drawing.SystemColors.Window
+            DataGridViewCellStyle32.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle32.ForeColor = System.Drawing.SystemColors.ControlText
+            DataGridViewCellStyle32.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(123, Byte), Integer))
+            DataGridViewCellStyle32.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+            DataGridViewCellStyle32.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+            Me.dgvEquiposOficina.DefaultCellStyle = DataGridViewCellStyle32
+            Me.dgvEquiposOficina.Location = New System.Drawing.Point(449, 39)
             Me.dgvEquiposOficina.MultiSelect = False
             Me.dgvEquiposOficina.Name = "dgvEquiposOficina"
             Me.dgvEquiposOficina.ReadOnly = True
             Me.dgvEquiposOficina.RowHeadersVisible = False
             Me.dgvEquiposOficina.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvEquiposOficina.Size = New System.Drawing.Size(534, 199)
+            Me.dgvEquiposOficina.Size = New System.Drawing.Size(534, 192)
             Me.dgvEquiposOficina.TabIndex = 301
             '
             'DataGridViewTextBoxColumn15
@@ -3715,10 +3709,10 @@
             '
             Me.btnDelEquipoOficina.Enabled = False
             Me.btnDelEquipoOficina.Font = New System.Drawing.Font("Calibri", 9.75!)
-            Me.btnDelEquipoOficina.Image = Global.syscisepro.My.Resources.Resources.remove
-            Me.btnDelEquipoOficina.Location = New System.Drawing.Point(933, 7)
+            Me.btnDelEquipoOficina.Image = Global.syscisepro.My.Resources.Resources.do_not_disturb_on_24dp_FILL0_wght400_GRAD0_opsz24
+            Me.btnDelEquipoOficina.Location = New System.Drawing.Point(925, 6)
             Me.btnDelEquipoOficina.Name = "btnDelEquipoOficina"
-            Me.btnDelEquipoOficina.Size = New System.Drawing.Size(49, 22)
+            Me.btnDelEquipoOficina.Size = New System.Drawing.Size(41, 30)
             Me.btnDelEquipoOficina.TabIndex = 300
             Me.btnDelEquipoOficina.TextAlign = System.Drawing.ContentAlignment.BottomCenter
             Me.btnDelEquipoOficina.UseVisualStyleBackColor = True
@@ -3727,10 +3721,10 @@
             '
             Me.btnAddEquipoOficina.Enabled = False
             Me.btnAddEquipoOficina.Font = New System.Drawing.Font("Calibri", 9.75!)
-            Me.btnAddEquipoOficina.Image = Global.syscisepro.My.Resources.Resources.add
-            Me.btnAddEquipoOficina.Location = New System.Drawing.Point(878, 7)
+            Me.btnAddEquipoOficina.Image = Global.syscisepro.My.Resources.Resources.add_circle_24dp_FILL0_wght400_GRAD0_opsz24__3_
+            Me.btnAddEquipoOficina.Location = New System.Drawing.Point(878, 6)
             Me.btnAddEquipoOficina.Name = "btnAddEquipoOficina"
-            Me.btnAddEquipoOficina.Size = New System.Drawing.Size(49, 22)
+            Me.btnAddEquipoOficina.Size = New System.Drawing.Size(41, 30)
             Me.btnAddEquipoOficina.TabIndex = 299
             Me.btnAddEquipoOficina.TextAlign = System.Drawing.ContentAlignment.BottomCenter
             Me.btnAddEquipoOficina.UseVisualStyleBackColor = True
@@ -3940,28 +3934,28 @@
             Me.dgvMuebleOficina.AllowUserToAddRows = False
             Me.dgvMuebleOficina.AllowUserToDeleteRows = False
             Me.dgvMuebleOficina.AllowUserToResizeRows = False
-            DataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-            Me.dgvMuebleOficina.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle9
+            DataGridViewCellStyle33.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+            Me.dgvMuebleOficina.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle33
             Me.dgvMuebleOficina.BackgroundColor = System.Drawing.Color.White
             Me.dgvMuebleOficina.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
             Me.dgvMuebleOficina.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
             Me.dgvMuebleOficina.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
             Me.dgvMuebleOficina.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn23, Me.DataGridViewTextBoxColumn25, Me.DataGridViewTextBoxColumn26, Me.DataGridViewTextBoxColumn28, Me.DataGridViewTextBoxColumn29, Me.DataGridViewTextBoxColumn30, Me.DataGridViewTextBoxColumn31, Me.valorFactMuebles, Me.valorResiMuebles, Me.vidaUtilMuebles})
-            DataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-            DataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Window
-            DataGridViewCellStyle10.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            DataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.ControlText
-            DataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(123, Byte), Integer))
-            DataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-            DataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-            Me.dgvMuebleOficina.DefaultCellStyle = DataGridViewCellStyle10
-            Me.dgvMuebleOficina.Location = New System.Drawing.Point(450, 33)
+            DataGridViewCellStyle34.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+            DataGridViewCellStyle34.BackColor = System.Drawing.SystemColors.Window
+            DataGridViewCellStyle34.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle34.ForeColor = System.Drawing.SystemColors.ControlText
+            DataGridViewCellStyle34.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(123, Byte), Integer))
+            DataGridViewCellStyle34.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+            DataGridViewCellStyle34.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+            Me.dgvMuebleOficina.DefaultCellStyle = DataGridViewCellStyle34
+            Me.dgvMuebleOficina.Location = New System.Drawing.Point(450, 39)
             Me.dgvMuebleOficina.MultiSelect = False
             Me.dgvMuebleOficina.Name = "dgvMuebleOficina"
             Me.dgvMuebleOficina.ReadOnly = True
             Me.dgvMuebleOficina.RowHeadersVisible = False
             Me.dgvMuebleOficina.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvMuebleOficina.Size = New System.Drawing.Size(534, 199)
+            Me.dgvMuebleOficina.Size = New System.Drawing.Size(534, 193)
             Me.dgvMuebleOficina.TabIndex = 307
             '
             'DataGridViewTextBoxColumn23
@@ -4028,10 +4022,10 @@
             '
             Me.btnDelMuebleOficina.Enabled = False
             Me.btnDelMuebleOficina.Font = New System.Drawing.Font("Calibri", 9.75!)
-            Me.btnDelMuebleOficina.Image = Global.syscisepro.My.Resources.Resources.remove
-            Me.btnDelMuebleOficina.Location = New System.Drawing.Point(934, 8)
+            Me.btnDelMuebleOficina.Image = Global.syscisepro.My.Resources.Resources.do_not_disturb_on_24dp_FILL0_wght400_GRAD0_opsz24
+            Me.btnDelMuebleOficina.Location = New System.Drawing.Point(926, 8)
             Me.btnDelMuebleOficina.Name = "btnDelMuebleOficina"
-            Me.btnDelMuebleOficina.Size = New System.Drawing.Size(49, 22)
+            Me.btnDelMuebleOficina.Size = New System.Drawing.Size(41, 30)
             Me.btnDelMuebleOficina.TabIndex = 306
             Me.btnDelMuebleOficina.TextAlign = System.Drawing.ContentAlignment.BottomCenter
             Me.btnDelMuebleOficina.UseVisualStyleBackColor = True
@@ -4040,10 +4034,10 @@
             '
             Me.btnAddMuebleOficina.Enabled = False
             Me.btnAddMuebleOficina.Font = New System.Drawing.Font("Calibri", 9.75!)
-            Me.btnAddMuebleOficina.Image = Global.syscisepro.My.Resources.Resources.add
+            Me.btnAddMuebleOficina.Image = Global.syscisepro.My.Resources.Resources.add_circle_24dp_FILL0_wght400_GRAD0_opsz24__3_
             Me.btnAddMuebleOficina.Location = New System.Drawing.Point(879, 8)
             Me.btnAddMuebleOficina.Name = "btnAddMuebleOficina"
-            Me.btnAddMuebleOficina.Size = New System.Drawing.Size(49, 22)
+            Me.btnAddMuebleOficina.Size = New System.Drawing.Size(41, 30)
             Me.btnAddMuebleOficina.TabIndex = 305
             Me.btnAddMuebleOficina.TextAlign = System.Drawing.ContentAlignment.BottomCenter
             Me.btnAddMuebleOficina.UseVisualStyleBackColor = True
@@ -4237,28 +4231,28 @@
             Me.dgvEquipoCocina.AllowUserToAddRows = False
             Me.dgvEquipoCocina.AllowUserToDeleteRows = False
             Me.dgvEquipoCocina.AllowUserToResizeRows = False
-            DataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-            Me.dgvEquipoCocina.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle11
+            DataGridViewCellStyle35.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+            Me.dgvEquipoCocina.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle35
             Me.dgvEquipoCocina.BackgroundColor = System.Drawing.Color.White
             Me.dgvEquipoCocina.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
             Me.dgvEquipoCocina.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
             Me.dgvEquipoCocina.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
             Me.dgvEquipoCocina.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn27, Me.DataGridViewTextBoxColumn32, Me.DataGridViewTextBoxColumn33, Me.Column10, Me.DataGridViewTextBoxColumn34, Me.DataGridViewTextBoxColumn35, Me.DataGridViewTextBoxColumn36, Me.DataGridViewTextBoxColumn37, Me.valorFactCocina, Me.valorResiCocina, Me.vidaUtilCocina})
-            DataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-            DataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Window
-            DataGridViewCellStyle12.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            DataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.ControlText
-            DataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(123, Byte), Integer))
-            DataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-            DataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-            Me.dgvEquipoCocina.DefaultCellStyle = DataGridViewCellStyle12
-            Me.dgvEquipoCocina.Location = New System.Drawing.Point(446, 32)
+            DataGridViewCellStyle36.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+            DataGridViewCellStyle36.BackColor = System.Drawing.SystemColors.Window
+            DataGridViewCellStyle36.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle36.ForeColor = System.Drawing.SystemColors.ControlText
+            DataGridViewCellStyle36.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(123, Byte), Integer))
+            DataGridViewCellStyle36.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+            DataGridViewCellStyle36.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+            Me.dgvEquipoCocina.DefaultCellStyle = DataGridViewCellStyle36
+            Me.dgvEquipoCocina.Location = New System.Drawing.Point(446, 42)
             Me.dgvEquipoCocina.MultiSelect = False
             Me.dgvEquipoCocina.Name = "dgvEquipoCocina"
             Me.dgvEquipoCocina.ReadOnly = True
             Me.dgvEquipoCocina.RowHeadersVisible = False
             Me.dgvEquipoCocina.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvEquipoCocina.Size = New System.Drawing.Size(534, 199)
+            Me.dgvEquipoCocina.Size = New System.Drawing.Size(534, 189)
             Me.dgvEquipoCocina.TabIndex = 313
             '
             'DataGridViewTextBoxColumn27
@@ -4331,10 +4325,10 @@
             '
             Me.btnDellEquipoCocina.Enabled = False
             Me.btnDellEquipoCocina.Font = New System.Drawing.Font("Calibri", 9.75!)
-            Me.btnDellEquipoCocina.Image = Global.syscisepro.My.Resources.Resources.remove
-            Me.btnDellEquipoCocina.Location = New System.Drawing.Point(930, 7)
+            Me.btnDellEquipoCocina.Image = Global.syscisepro.My.Resources.Resources.do_not_disturb_on_24dp_FILL0_wght400_GRAD0_opsz24
+            Me.btnDellEquipoCocina.Location = New System.Drawing.Point(924, 7)
             Me.btnDellEquipoCocina.Name = "btnDellEquipoCocina"
-            Me.btnDellEquipoCocina.Size = New System.Drawing.Size(49, 22)
+            Me.btnDellEquipoCocina.Size = New System.Drawing.Size(41, 30)
             Me.btnDellEquipoCocina.TabIndex = 312
             Me.btnDellEquipoCocina.TextAlign = System.Drawing.ContentAlignment.BottomCenter
             Me.btnDellEquipoCocina.UseVisualStyleBackColor = True
@@ -4343,10 +4337,10 @@
             '
             Me.btnAddEquipoCocina.Enabled = False
             Me.btnAddEquipoCocina.Font = New System.Drawing.Font("Calibri", 9.75!)
-            Me.btnAddEquipoCocina.Image = Global.syscisepro.My.Resources.Resources.add
+            Me.btnAddEquipoCocina.Image = Global.syscisepro.My.Resources.Resources.add_circle_24dp_FILL0_wght400_GRAD0_opsz24__3_
             Me.btnAddEquipoCocina.Location = New System.Drawing.Point(875, 7)
             Me.btnAddEquipoCocina.Name = "btnAddEquipoCocina"
-            Me.btnAddEquipoCocina.Size = New System.Drawing.Size(49, 22)
+            Me.btnAddEquipoCocina.Size = New System.Drawing.Size(41, 30)
             Me.btnAddEquipoCocina.TabIndex = 311
             Me.btnAddEquipoCocina.TextAlign = System.Drawing.ContentAlignment.BottomCenter
             Me.btnAddEquipoCocina.UseVisualStyleBackColor = True
@@ -4564,28 +4558,28 @@
             Me.dgvEquipoAmbientacion.AllowUserToAddRows = False
             Me.dgvEquipoAmbientacion.AllowUserToDeleteRows = False
             Me.dgvEquipoAmbientacion.AllowUserToResizeRows = False
-            DataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-            Me.dgvEquipoAmbientacion.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle13
+            DataGridViewCellStyle37.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+            Me.dgvEquipoAmbientacion.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle37
             Me.dgvEquipoAmbientacion.BackgroundColor = System.Drawing.Color.White
             Me.dgvEquipoAmbientacion.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
             Me.dgvEquipoAmbientacion.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
             Me.dgvEquipoAmbientacion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
             Me.dgvEquipoAmbientacion.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn38, Me.DataGridViewTextBoxColumn39, Me.DataGridViewTextBoxColumn42, Me.DataGridViewTextBoxColumn43, Me.DataGridViewTextBoxColumn41, Me.Column11, Me.Column12, Me.Column13, Me.DataGridViewTextBoxColumn44, Me.DataGridViewTextBoxColumn40, Me.DataGridViewTextBoxColumn45, Me.valorFactAmbiente, Me.ValorResiAmbiente, Me.vidaUtilAmbiente})
-            DataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-            DataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Window
-            DataGridViewCellStyle14.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            DataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.ControlText
-            DataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(123, Byte), Integer))
-            DataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-            DataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-            Me.dgvEquipoAmbientacion.DefaultCellStyle = DataGridViewCellStyle14
-            Me.dgvEquipoAmbientacion.Location = New System.Drawing.Point(449, 33)
+            DataGridViewCellStyle38.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+            DataGridViewCellStyle38.BackColor = System.Drawing.SystemColors.Window
+            DataGridViewCellStyle38.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle38.ForeColor = System.Drawing.SystemColors.ControlText
+            DataGridViewCellStyle38.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(123, Byte), Integer))
+            DataGridViewCellStyle38.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+            DataGridViewCellStyle38.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+            Me.dgvEquipoAmbientacion.DefaultCellStyle = DataGridViewCellStyle38
+            Me.dgvEquipoAmbientacion.Location = New System.Drawing.Point(449, 38)
             Me.dgvEquipoAmbientacion.MultiSelect = False
             Me.dgvEquipoAmbientacion.Name = "dgvEquipoAmbientacion"
             Me.dgvEquipoAmbientacion.ReadOnly = True
             Me.dgvEquipoAmbientacion.RowHeadersVisible = False
             Me.dgvEquipoAmbientacion.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvEquipoAmbientacion.Size = New System.Drawing.Size(534, 199)
+            Me.dgvEquipoAmbientacion.Size = New System.Drawing.Size(534, 194)
             Me.dgvEquipoAmbientacion.TabIndex = 319
             '
             'DataGridViewTextBoxColumn38
@@ -4676,10 +4670,10 @@
             '
             Me.btnDelEquipoAmbientacion.Enabled = False
             Me.btnDelEquipoAmbientacion.Font = New System.Drawing.Font("Calibri", 9.75!)
-            Me.btnDelEquipoAmbientacion.Image = Global.syscisepro.My.Resources.Resources.remove
-            Me.btnDelEquipoAmbientacion.Location = New System.Drawing.Point(933, 8)
+            Me.btnDelEquipoAmbientacion.Image = Global.syscisepro.My.Resources.Resources.do_not_disturb_on_24dp_FILL0_wght400_GRAD0_opsz24
+            Me.btnDelEquipoAmbientacion.Location = New System.Drawing.Point(925, 6)
             Me.btnDelEquipoAmbientacion.Name = "btnDelEquipoAmbientacion"
-            Me.btnDelEquipoAmbientacion.Size = New System.Drawing.Size(49, 22)
+            Me.btnDelEquipoAmbientacion.Size = New System.Drawing.Size(41, 30)
             Me.btnDelEquipoAmbientacion.TabIndex = 318
             Me.btnDelEquipoAmbientacion.TextAlign = System.Drawing.ContentAlignment.BottomCenter
             Me.btnDelEquipoAmbientacion.UseVisualStyleBackColor = True
@@ -4688,10 +4682,10 @@
             '
             Me.btnAddEquipoAmbientacion.Enabled = False
             Me.btnAddEquipoAmbientacion.Font = New System.Drawing.Font("Calibri", 9.75!)
-            Me.btnAddEquipoAmbientacion.Image = Global.syscisepro.My.Resources.Resources.add
-            Me.btnAddEquipoAmbientacion.Location = New System.Drawing.Point(878, 8)
+            Me.btnAddEquipoAmbientacion.Image = Global.syscisepro.My.Resources.Resources.add_circle_24dp_FILL0_wght400_GRAD0_opsz24__3_
+            Me.btnAddEquipoAmbientacion.Location = New System.Drawing.Point(878, 6)
             Me.btnAddEquipoAmbientacion.Name = "btnAddEquipoAmbientacion"
-            Me.btnAddEquipoAmbientacion.Size = New System.Drawing.Size(49, 22)
+            Me.btnAddEquipoAmbientacion.Size = New System.Drawing.Size(41, 30)
             Me.btnAddEquipoAmbientacion.TabIndex = 317
             Me.btnAddEquipoAmbientacion.TextAlign = System.Drawing.ContentAlignment.BottomCenter
             Me.btnAddEquipoAmbientacion.UseVisualStyleBackColor = True
@@ -5007,28 +5001,28 @@
             Me.dgvEquipoComunicacion.AllowUserToAddRows = False
             Me.dgvEquipoComunicacion.AllowUserToDeleteRows = False
             Me.dgvEquipoComunicacion.AllowUserToResizeRows = False
-            DataGridViewCellStyle15.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-            Me.dgvEquipoComunicacion.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle15
+            DataGridViewCellStyle39.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+            Me.dgvEquipoComunicacion.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle39
             Me.dgvEquipoComunicacion.BackgroundColor = System.Drawing.Color.White
             Me.dgvEquipoComunicacion.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
             Me.dgvEquipoComunicacion.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
             Me.dgvEquipoComunicacion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
             Me.dgvEquipoComunicacion.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn46, Me.DataGridViewTextBoxColumn47, Me.DataGridViewTextBoxColumn55, Me.DataGridViewTextBoxColumn50, Me.DataGridViewTextBoxColumn48, Me.DataGridViewTextBoxColumn49, Me.DataGridViewTextBoxColumn54, Me.Column14, Me.Column15, Me.DataGridViewTextBoxColumn56, Me.GarantiaComunicacion, Me.rutaComunicacion, Me.valorFactComunica, Me.ValorResComunica, Me.vidaUtilComunica})
-            DataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-            DataGridViewCellStyle16.BackColor = System.Drawing.SystemColors.Window
-            DataGridViewCellStyle16.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            DataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.ControlText
-            DataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(123, Byte), Integer))
-            DataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-            DataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-            Me.dgvEquipoComunicacion.DefaultCellStyle = DataGridViewCellStyle16
-            Me.dgvEquipoComunicacion.Location = New System.Drawing.Point(449, 30)
+            DataGridViewCellStyle40.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+            DataGridViewCellStyle40.BackColor = System.Drawing.SystemColors.Window
+            DataGridViewCellStyle40.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle40.ForeColor = System.Drawing.SystemColors.ControlText
+            DataGridViewCellStyle40.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(123, Byte), Integer))
+            DataGridViewCellStyle40.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+            DataGridViewCellStyle40.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+            Me.dgvEquipoComunicacion.DefaultCellStyle = DataGridViewCellStyle40
+            Me.dgvEquipoComunicacion.Location = New System.Drawing.Point(449, 39)
             Me.dgvEquipoComunicacion.MultiSelect = False
             Me.dgvEquipoComunicacion.Name = "dgvEquipoComunicacion"
             Me.dgvEquipoComunicacion.ReadOnly = True
             Me.dgvEquipoComunicacion.RowHeadersVisible = False
             Me.dgvEquipoComunicacion.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvEquipoComunicacion.Size = New System.Drawing.Size(534, 199)
+            Me.dgvEquipoComunicacion.Size = New System.Drawing.Size(534, 190)
             Me.dgvEquipoComunicacion.TabIndex = 325
             '
             'DataGridViewTextBoxColumn46
@@ -5125,10 +5119,10 @@
             '
             Me.btnDelEquipoComunicacion.Enabled = False
             Me.btnDelEquipoComunicacion.Font = New System.Drawing.Font("Calibri", 9.75!)
-            Me.btnDelEquipoComunicacion.Image = Global.syscisepro.My.Resources.Resources.remove
-            Me.btnDelEquipoComunicacion.Location = New System.Drawing.Point(933, 5)
+            Me.btnDelEquipoComunicacion.Image = Global.syscisepro.My.Resources.Resources.do_not_disturb_on_24dp_FILL0_wght400_GRAD0_opsz24
+            Me.btnDelEquipoComunicacion.Location = New System.Drawing.Point(925, 5)
             Me.btnDelEquipoComunicacion.Name = "btnDelEquipoComunicacion"
-            Me.btnDelEquipoComunicacion.Size = New System.Drawing.Size(49, 22)
+            Me.btnDelEquipoComunicacion.Size = New System.Drawing.Size(41, 30)
             Me.btnDelEquipoComunicacion.TabIndex = 324
             Me.btnDelEquipoComunicacion.TextAlign = System.Drawing.ContentAlignment.BottomCenter
             Me.btnDelEquipoComunicacion.UseVisualStyleBackColor = True
@@ -5137,10 +5131,10 @@
             '
             Me.btnAddEquipoComunicacion.Enabled = False
             Me.btnAddEquipoComunicacion.Font = New System.Drawing.Font("Calibri", 9.75!)
-            Me.btnAddEquipoComunicacion.Image = Global.syscisepro.My.Resources.Resources.add
+            Me.btnAddEquipoComunicacion.Image = Global.syscisepro.My.Resources.Resources.add_circle_24dp_FILL0_wght400_GRAD0_opsz24__3_
             Me.btnAddEquipoComunicacion.Location = New System.Drawing.Point(878, 5)
             Me.btnAddEquipoComunicacion.Name = "btnAddEquipoComunicacion"
-            Me.btnAddEquipoComunicacion.Size = New System.Drawing.Size(49, 22)
+            Me.btnAddEquipoComunicacion.Size = New System.Drawing.Size(41, 30)
             Me.btnAddEquipoComunicacion.TabIndex = 323
             Me.btnAddEquipoComunicacion.TextAlign = System.Drawing.ContentAlignment.BottomCenter
             Me.btnAddEquipoComunicacion.UseVisualStyleBackColor = True
@@ -5397,28 +5391,28 @@
             Me.dgvEquipoSeguridad.AllowUserToAddRows = False
             Me.dgvEquipoSeguridad.AllowUserToDeleteRows = False
             Me.dgvEquipoSeguridad.AllowUserToResizeRows = False
-            DataGridViewCellStyle17.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-            Me.dgvEquipoSeguridad.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle17
+            DataGridViewCellStyle41.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+            Me.dgvEquipoSeguridad.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle41
             Me.dgvEquipoSeguridad.BackgroundColor = System.Drawing.Color.White
             Me.dgvEquipoSeguridad.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
             Me.dgvEquipoSeguridad.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
             Me.dgvEquipoSeguridad.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
             Me.dgvEquipoSeguridad.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn51, Me.DataGridViewTextBoxColumn52, Me.DataGridViewTextBoxColumn53, Me.DataGridViewTextBoxColumn57, Me.DataGridViewTextBoxColumn58, Me.DataGridViewTextBoxColumn59, Me.DataGridViewTextBoxColumn60, Me.DataGridViewTextBoxColumn62, Me.DataGridViewTextBoxColumn63, Me.valorFactSeguridad, Me.ValorResiSeguridad, Me.vidaUtilSeguridad})
-            DataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-            DataGridViewCellStyle18.BackColor = System.Drawing.SystemColors.Window
-            DataGridViewCellStyle18.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            DataGridViewCellStyle18.ForeColor = System.Drawing.SystemColors.ControlText
-            DataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(123, Byte), Integer))
-            DataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-            DataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-            Me.dgvEquipoSeguridad.DefaultCellStyle = DataGridViewCellStyle18
-            Me.dgvEquipoSeguridad.Location = New System.Drawing.Point(453, 31)
+            DataGridViewCellStyle42.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+            DataGridViewCellStyle42.BackColor = System.Drawing.SystemColors.Window
+            DataGridViewCellStyle42.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle42.ForeColor = System.Drawing.SystemColors.ControlText
+            DataGridViewCellStyle42.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(123, Byte), Integer))
+            DataGridViewCellStyle42.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+            DataGridViewCellStyle42.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+            Me.dgvEquipoSeguridad.DefaultCellStyle = DataGridViewCellStyle42
+            Me.dgvEquipoSeguridad.Location = New System.Drawing.Point(453, 41)
             Me.dgvEquipoSeguridad.MultiSelect = False
             Me.dgvEquipoSeguridad.Name = "dgvEquipoSeguridad"
             Me.dgvEquipoSeguridad.ReadOnly = True
             Me.dgvEquipoSeguridad.RowHeadersVisible = False
             Me.dgvEquipoSeguridad.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvEquipoSeguridad.Size = New System.Drawing.Size(534, 199)
+            Me.dgvEquipoSeguridad.Size = New System.Drawing.Size(534, 189)
             Me.dgvEquipoSeguridad.TabIndex = 331
             '
             'DataGridViewTextBoxColumn51
@@ -5497,10 +5491,10 @@
             '
             Me.btnDelEquipoSeguridad.Enabled = False
             Me.btnDelEquipoSeguridad.Font = New System.Drawing.Font("Calibri", 9.75!)
-            Me.btnDelEquipoSeguridad.Image = Global.syscisepro.My.Resources.Resources.remove
-            Me.btnDelEquipoSeguridad.Location = New System.Drawing.Point(937, 6)
+            Me.btnDelEquipoSeguridad.Image = Global.syscisepro.My.Resources.Resources.do_not_disturb_on_24dp_FILL0_wght400_GRAD0_opsz24
+            Me.btnDelEquipoSeguridad.Location = New System.Drawing.Point(931, 6)
             Me.btnDelEquipoSeguridad.Name = "btnDelEquipoSeguridad"
-            Me.btnDelEquipoSeguridad.Size = New System.Drawing.Size(49, 22)
+            Me.btnDelEquipoSeguridad.Size = New System.Drawing.Size(41, 30)
             Me.btnDelEquipoSeguridad.TabIndex = 330
             Me.btnDelEquipoSeguridad.TextAlign = System.Drawing.ContentAlignment.BottomCenter
             Me.btnDelEquipoSeguridad.UseVisualStyleBackColor = True
@@ -5509,10 +5503,10 @@
             '
             Me.btnAddEquipoSeguridad.Enabled = False
             Me.btnAddEquipoSeguridad.Font = New System.Drawing.Font("Calibri", 9.75!)
-            Me.btnAddEquipoSeguridad.Image = Global.syscisepro.My.Resources.Resources.add
+            Me.btnAddEquipoSeguridad.Image = Global.syscisepro.My.Resources.Resources.add_circle_24dp_FILL0_wght400_GRAD0_opsz24__3_
             Me.btnAddEquipoSeguridad.Location = New System.Drawing.Point(882, 6)
             Me.btnAddEquipoSeguridad.Name = "btnAddEquipoSeguridad"
-            Me.btnAddEquipoSeguridad.Size = New System.Drawing.Size(49, 22)
+            Me.btnAddEquipoSeguridad.Size = New System.Drawing.Size(41, 30)
             Me.btnAddEquipoSeguridad.TabIndex = 329
             Me.btnAddEquipoSeguridad.TextAlign = System.Drawing.ContentAlignment.BottomCenter
             Me.btnAddEquipoSeguridad.UseVisualStyleBackColor = True
@@ -5797,28 +5791,28 @@
             Me.dgvCamara.AllowUserToAddRows = False
             Me.dgvCamara.AllowUserToDeleteRows = False
             Me.dgvCamara.AllowUserToResizeRows = False
-            DataGridViewCellStyle19.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-            Me.dgvCamara.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle19
+            DataGridViewCellStyle43.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+            Me.dgvCamara.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle43
             Me.dgvCamara.BackgroundColor = System.Drawing.Color.White
             Me.dgvCamara.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
             Me.dgvCamara.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
             Me.dgvCamara.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
             Me.dgvCamara.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn61, Me.DataGridViewTextBoxColumn64, Me.DataGridViewTextBoxColumn65, Me.DataGridViewTextBoxColumn66, Me.DataGridViewTextBoxColumn67, Me.DataGridViewTextBoxColumn68, Me.DataGridViewTextBoxColumn69, Me.DataGridViewTextBoxColumn70, Me.DataGridViewTextBoxColumn71, Me.garantiaCamara, Me.rutaCamara, Me.valorFactCamara, Me.valorResiCamara, Me.vidaUtilCamara})
-            DataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-            DataGridViewCellStyle20.BackColor = System.Drawing.SystemColors.Window
-            DataGridViewCellStyle20.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            DataGridViewCellStyle20.ForeColor = System.Drawing.SystemColors.ControlText
-            DataGridViewCellStyle20.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(123, Byte), Integer))
-            DataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-            DataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-            Me.dgvCamara.DefaultCellStyle = DataGridViewCellStyle20
-            Me.dgvCamara.Location = New System.Drawing.Point(449, 33)
+            DataGridViewCellStyle44.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+            DataGridViewCellStyle44.BackColor = System.Drawing.SystemColors.Window
+            DataGridViewCellStyle44.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle44.ForeColor = System.Drawing.SystemColors.ControlText
+            DataGridViewCellStyle44.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(123, Byte), Integer))
+            DataGridViewCellStyle44.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+            DataGridViewCellStyle44.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+            Me.dgvCamara.DefaultCellStyle = DataGridViewCellStyle44
+            Me.dgvCamara.Location = New System.Drawing.Point(449, 42)
             Me.dgvCamara.MultiSelect = False
             Me.dgvCamara.Name = "dgvCamara"
             Me.dgvCamara.ReadOnly = True
             Me.dgvCamara.RowHeadersVisible = False
             Me.dgvCamara.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvCamara.Size = New System.Drawing.Size(534, 199)
+            Me.dgvCamara.Size = New System.Drawing.Size(534, 190)
             Me.dgvCamara.TabIndex = 335
             '
             'DataGridViewTextBoxColumn61
@@ -5909,10 +5903,10 @@
             '
             Me.btnDelCamara.Enabled = False
             Me.btnDelCamara.Font = New System.Drawing.Font("Calibri", 9.75!)
-            Me.btnDelCamara.Image = Global.syscisepro.My.Resources.Resources.remove
-            Me.btnDelCamara.Location = New System.Drawing.Point(933, 8)
+            Me.btnDelCamara.Image = Global.syscisepro.My.Resources.Resources.do_not_disturb_on_24dp_FILL0_wght400_GRAD0_opsz24
+            Me.btnDelCamara.Location = New System.Drawing.Point(926, 8)
             Me.btnDelCamara.Name = "btnDelCamara"
-            Me.btnDelCamara.Size = New System.Drawing.Size(49, 22)
+            Me.btnDelCamara.Size = New System.Drawing.Size(41, 30)
             Me.btnDelCamara.TabIndex = 334
             Me.btnDelCamara.TextAlign = System.Drawing.ContentAlignment.BottomCenter
             Me.btnDelCamara.UseVisualStyleBackColor = True
@@ -5921,10 +5915,10 @@
             '
             Me.btnAddCamara.Enabled = False
             Me.btnAddCamara.Font = New System.Drawing.Font("Calibri", 9.75!)
-            Me.btnAddCamara.Image = Global.syscisepro.My.Resources.Resources.add
+            Me.btnAddCamara.Image = Global.syscisepro.My.Resources.Resources.add_circle_24dp_FILL0_wght400_GRAD0_opsz24__3_
             Me.btnAddCamara.Location = New System.Drawing.Point(878, 8)
             Me.btnAddCamara.Name = "btnAddCamara"
-            Me.btnAddCamara.Size = New System.Drawing.Size(49, 22)
+            Me.btnAddCamara.Size = New System.Drawing.Size(41, 30)
             Me.btnAddCamara.TabIndex = 333
             Me.btnAddCamara.TextAlign = System.Drawing.ContentAlignment.BottomCenter
             Me.btnAddCamara.UseVisualStyleBackColor = True
@@ -6463,21 +6457,21 @@
             Me.dgvChaleco.AllowUserToAddRows = False
             Me.dgvChaleco.AllowUserToDeleteRows = False
             Me.dgvChaleco.AllowUserToResizeRows = False
-            DataGridViewCellStyle21.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-            Me.dgvChaleco.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle21
+            DataGridViewCellStyle23.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+            Me.dgvChaleco.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle23
             Me.dgvChaleco.BackgroundColor = System.Drawing.Color.White
             Me.dgvChaleco.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
             Me.dgvChaleco.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
             Me.dgvChaleco.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
             Me.dgvChaleco.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn72, Me.DataGridViewTextBoxColumn73, Me.DataGridViewTextBoxColumn74, Me.DataGridViewTextBoxColumn75, Me.DataGridViewTextBoxColumn76, Me.DataGridViewTextBoxColumn77, Me.DataGridViewTextBoxColumn78, Me.DataGridViewTextBoxColumn79, Me.DataGridViewTextBoxColumn80, Me.garantiaChaleco, Me.RutaChaleco, Me.valorFactChaleco, Me.valorResiChaleco, Me.VidaUtilChaleco, Me.venceChaleco})
-            DataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-            DataGridViewCellStyle22.BackColor = System.Drawing.SystemColors.Window
-            DataGridViewCellStyle22.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            DataGridViewCellStyle22.ForeColor = System.Drawing.SystemColors.ControlText
-            DataGridViewCellStyle22.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(123, Byte), Integer))
-            DataGridViewCellStyle22.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-            DataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-            Me.dgvChaleco.DefaultCellStyle = DataGridViewCellStyle22
+            DataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+            DataGridViewCellStyle24.BackColor = System.Drawing.SystemColors.Window
+            DataGridViewCellStyle24.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle24.ForeColor = System.Drawing.SystemColors.ControlText
+            DataGridViewCellStyle24.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(123, Byte), Integer))
+            DataGridViewCellStyle24.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+            DataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+            Me.dgvChaleco.DefaultCellStyle = DataGridViewCellStyle24
             Me.dgvChaleco.Location = New System.Drawing.Point(462, 44)
             Me.dgvChaleco.MultiSelect = False
             Me.dgvChaleco.Name = "dgvChaleco"
@@ -6581,10 +6575,10 @@
             '
             Me.btnDelChaleco.Enabled = False
             Me.btnDelChaleco.Font = New System.Drawing.Font("Calibri", 9.75!)
-            Me.btnDelChaleco.Image = Global.syscisepro.My.Resources.Resources.remove
-            Me.btnDelChaleco.Location = New System.Drawing.Point(933, 6)
+            Me.btnDelChaleco.Image = Global.syscisepro.My.Resources.Resources.do_not_disturb_on_24dp_FILL0_wght400_GRAD0_opsz24
+            Me.btnDelChaleco.Location = New System.Drawing.Point(927, 6)
             Me.btnDelChaleco.Name = "btnDelChaleco"
-            Me.btnDelChaleco.Size = New System.Drawing.Size(49, 22)
+            Me.btnDelChaleco.Size = New System.Drawing.Size(41, 30)
             Me.btnDelChaleco.TabIndex = 338
             Me.btnDelChaleco.TextAlign = System.Drawing.ContentAlignment.BottomCenter
             Me.btnDelChaleco.UseVisualStyleBackColor = True
@@ -6593,10 +6587,10 @@
             '
             Me.btnAddChaleco.Enabled = False
             Me.btnAddChaleco.Font = New System.Drawing.Font("Calibri", 9.75!)
-            Me.btnAddChaleco.Image = Global.syscisepro.My.Resources.Resources.add
+            Me.btnAddChaleco.Image = Global.syscisepro.My.Resources.Resources.add_circle_24dp_FILL0_wght400_GRAD0_opsz24__3_
             Me.btnAddChaleco.Location = New System.Drawing.Point(878, 6)
             Me.btnAddChaleco.Name = "btnAddChaleco"
-            Me.btnAddChaleco.Size = New System.Drawing.Size(49, 22)
+            Me.btnAddChaleco.Size = New System.Drawing.Size(41, 30)
             Me.btnAddChaleco.TabIndex = 337
             Me.btnAddChaleco.TextAlign = System.Drawing.ContentAlignment.BottomCenter
             Me.btnAddChaleco.UseVisualStyleBackColor = True
@@ -6640,8 +6634,8 @@
             Me.txtAdicionalChaleco.Name = "txtAdicionalChaleco"
             Me.txtAdicionalChaleco.Size = New System.Drawing.Size(170, 53)
             Me.txtAdicionalChaleco.TabIndex = 277
-            Me.txtAdicionalChaleco.Text = "Decision 584 Art. 11 Literal C. Decreto Ejecutivo 2393 Art. 11 Numeral 3, Art. 17" & _
-                "6"
+            Me.txtAdicionalChaleco.Text = "Decision 584 Art. 11 Literal C. Decreto Ejecutivo 2393 Art. 11 Numeral 3, Art. 17" &
+    "6"
             '
             'Label160
             '
@@ -6919,10 +6913,10 @@
             'Label2
             '
             Me.Label2.AutoSize = True
-            Me.Label2.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label2.Location = New System.Drawing.Point(415, 22)
+            Me.Label2.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Label2.Location = New System.Drawing.Point(394, 22)
             Me.Label2.Name = "Label2"
-            Me.Label2.Size = New System.Drawing.Size(43, 13)
+            Me.Label2.Size = New System.Drawing.Size(44, 13)
             Me.Label2.TabIndex = 8
             Me.Label2.Text = "FECHA:"
             '
@@ -6931,97 +6925,102 @@
             Me.txtResponsable.BackColor = System.Drawing.Color.White
             Me.txtResponsable.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtResponsable.Enabled = False
-            Me.txtResponsable.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtResponsable.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtResponsable.Location = New System.Drawing.Point(486, 41)
             Me.txtResponsable.Name = "txtResponsable"
-            Me.txtResponsable.Size = New System.Drawing.Size(497, 22)
+            Me.txtResponsable.Size = New System.Drawing.Size(497, 21)
             Me.txtResponsable.TabIndex = 7
             '
             'Label1
             '
             Me.Label1.AutoSize = True
-            Me.Label1.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label1.Location = New System.Drawing.Point(415, 44)
+            Me.Label1.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Label1.Location = New System.Drawing.Point(394, 49)
             Me.Label1.Name = "Label1"
-            Me.Label1.Size = New System.Drawing.Size(73, 13)
+            Me.Label1.Size = New System.Drawing.Size(86, 13)
             Me.Label1.TabIndex = 6
             Me.Label1.Text = "RESPONSABLE:"
             '
             'lblIdActivoFijo
             '
             Me.lblIdActivoFijo.AutoSize = True
-            Me.lblIdActivoFijo.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.lblIdActivoFijo.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.lblIdActivoFijo.Location = New System.Drawing.Point(655, 22)
             Me.lblIdActivoFijo.Name = "lblIdActivoFijo"
-            Me.lblIdActivoFijo.Size = New System.Drawing.Size(25, 13)
+            Me.lblIdActivoFijo.Size = New System.Drawing.Size(20, 13)
             Me.lblIdActivoFijo.TabIndex = 88
             Me.lblIdActivoFijo.Text = "ID:"
             '
             'Label21
             '
             Me.Label21.AutoSize = True
-            Me.Label21.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label21.Location = New System.Drawing.Point(416, 95)
+            Me.Label21.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Label21.Location = New System.Drawing.Point(394, 101)
             Me.Label21.Name = "Label21"
-            Me.Label21.Size = New System.Drawing.Size(88, 13)
+            Me.Label21.Size = New System.Drawing.Size(101, 13)
             Me.Label21.TabIndex = 213
             Me.Label21.Text = "MANTENIMIENTO:"
             '
             'MenuStrip1
             '
-            Me.MenuStrip1.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.MenuStrip1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
             Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnNuevo, Me.btnGuardar, Me.ButtonCancelar, Me.btnAgregarCategoria, Me.btnParametros})
             Me.MenuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow
             Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
             Me.MenuStrip1.Name = "MenuStrip1"
             Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(7, 2, 0, 2)
-            Me.MenuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
-            Me.MenuStrip1.Size = New System.Drawing.Size(1013, 24)
+            Me.MenuStrip1.Size = New System.Drawing.Size(1010, 32)
             Me.MenuStrip1.TabIndex = 185
             Me.MenuStrip1.Text = "msIngresoBodega"
             '
             'btnNuevo
             '
             Me.btnNuevo.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnNuevo.Image = CType(resources.GetObject("btnNuevo.Image"), System.Drawing.Image)
+            Me.btnNuevo.Image = Global.syscisepro.My.Resources.Resources.add_circle_24dp_FILL0_wght400_GRAD0_opsz24__3_
             Me.btnNuevo.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnNuevo.Name = "btnNuevo"
-            Me.btnNuevo.Size = New System.Drawing.Size(70, 20)
+            Me.btnNuevo.Size = New System.Drawing.Size(78, 28)
             Me.btnNuevo.Text = "NUEVO"
             '
             'btnGuardar
             '
             Me.btnGuardar.Enabled = False
             Me.btnGuardar.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnGuardar.Image = CType(resources.GetObject("btnGuardar.Image"), System.Drawing.Image)
+            Me.btnGuardar.Image = Global.syscisepro.My.Resources.Resources.save_24dp_FILL0_wght400_GRAD0_opsz24__2_
             Me.btnGuardar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnGuardar.Name = "btnGuardar"
-            Me.btnGuardar.Size = New System.Drawing.Size(84, 20)
+            Me.btnGuardar.Size = New System.Drawing.Size(92, 28)
             Me.btnGuardar.Text = "GUARDAR"
             '
             'ButtonCancelar
             '
+            Me.ButtonCancelar.AutoSize = False
             Me.ButtonCancelar.Enabled = False
             Me.ButtonCancelar.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.ButtonCancelar.Image = Global.syscisepro.My.Resources.Resources.cancel
+            Me.ButtonCancelar.Image = Global.syscisepro.My.Resources.Resources.cancel_24dp_FILL0_wght400_GRAD0_opsz24
+            Me.ButtonCancelar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.ButtonCancelar.Name = "ButtonCancelar"
-            Me.ButtonCancelar.Size = New System.Drawing.Size(91, 20)
+            Me.ButtonCancelar.Size = New System.Drawing.Size(91, 28)
             Me.ButtonCancelar.Text = "CANCELAR"
             '
             'btnAgregarCategoria
             '
+            Me.btnAgregarCategoria.AutoSize = False
             Me.btnAgregarCategoria.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnAgregarCategoria.Image = Global.syscisepro.My.Resources.Resources.cog_edit
+            Me.btnAgregarCategoria.Image = Global.syscisepro.My.Resources.Resources.settings_24dp_FILL0_wght400_GRAD0_opsz24__2_
+            Me.btnAgregarCategoria.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnAgregarCategoria.Name = "btnAgregarCategoria"
-            Me.btnAgregarCategoria.Size = New System.Drawing.Size(105, 20)
+            Me.btnAgregarCategoria.Size = New System.Drawing.Size(105, 28)
             Me.btnAgregarCategoria.Text = "CATEGORÍAS"
             '
             'btnParametros
             '
+            Me.btnParametros.AutoSize = False
             Me.btnParametros.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnParametros.Image = Global.syscisepro.My.Resources.Resources.cog_edit
+            Me.btnParametros.Image = Global.syscisepro.My.Resources.Resources.settings_24dp_FILL0_wght400_GRAD0_opsz24__2_
+            Me.btnParametros.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnParametros.Name = "btnParametros"
-            Me.btnParametros.Size = New System.Drawing.Size(105, 20)
+            Me.btnParametros.Size = New System.Drawing.Size(105, 28)
             Me.btnParametros.Text = "PARÁMETROS"
             '
             'FormIngresoActivosFijos
@@ -7031,7 +7030,7 @@
             Me.AutoScrollMargin = New System.Drawing.Size(10, 10)
             Me.BackColor = System.Drawing.Color.White
             Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-            Me.ClientSize = New System.Drawing.Size(1013, 679)
+            Me.ClientSize = New System.Drawing.Size(1010, 689)
             Me.Controls.Add(Me.MenuStrip1)
             Me.Controls.Add(Me.gpInfActfijo)
             Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
@@ -7041,81 +7040,81 @@
             Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
             Me.Text = "INGRESO DE ACTIVOS FIJOS"
             Me.gpInfActfijo.ResumeLayout(False)
-            Me.gpInfActfijo.PerformLayout()
+            Me.gpInfActfijo.PerformLayout
             Me.GroupBox6.ResumeLayout(False)
-            Me.GroupBox6.PerformLayout()
+            Me.GroupBox6.PerformLayout
             Me.tcDatos.ResumeLayout(False)
             Me.TabPage2.ResumeLayout(False)
-            Me.TabPage2.PerformLayout()
+            Me.TabPage2.PerformLayout
             Me.GroupBox2.ResumeLayout(False)
-            Me.GroupBox2.PerformLayout()
+            Me.GroupBox2.PerformLayout
             Me.tcVarios.ResumeLayout(False)
             Me.tpArmas.ResumeLayout(False)
-            Me.tpArmas.PerformLayout()
-            CType(Me.dgvArmas, System.ComponentModel.ISupportInitialize).EndInit()
-            CType(Me.pbArmas, System.ComponentModel.ISupportInitialize).EndInit()
+            Me.tpArmas.PerformLayout
+            CType(Me.dgvArmas, System.ComponentModel.ISupportInitialize).EndInit
+            CType(Me.pbArmas, System.ComponentModel.ISupportInitialize).EndInit
             Me.tpRadios.ResumeLayout(False)
-            Me.tpRadios.PerformLayout()
-            CType(Me.dgvRadios, System.ComponentModel.ISupportInitialize).EndInit()
-            CType(Me.pbRadios, System.ComponentModel.ISupportInitialize).EndInit()
+            Me.tpRadios.PerformLayout
+            CType(Me.dgvRadios, System.ComponentModel.ISupportInitialize).EndInit
+            CType(Me.pbRadios, System.ComponentModel.ISupportInitialize).EndInit
             Me.tpVehiculo.ResumeLayout(False)
-            Me.tpVehiculo.PerformLayout()
+            Me.tpVehiculo.PerformLayout
             Me.GroupBox7.ResumeLayout(False)
-            Me.GroupBox7.PerformLayout()
+            Me.GroupBox7.PerformLayout
             Me.GroupBox1.ResumeLayout(False)
-            Me.GroupBox1.PerformLayout()
-            CType(Me.pbVehiculo, System.ComponentModel.ISupportInitialize).EndInit()
+            Me.GroupBox1.PerformLayout
+            CType(Me.pbVehiculo, System.ComponentModel.ISupportInitialize).EndInit
             Me.tpTerreno.ResumeLayout(False)
-            Me.tpTerreno.PerformLayout()
-            CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+            Me.tpTerreno.PerformLayout
+            CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit
             Me.tpEquiposComputo.ResumeLayout(False)
-            Me.tpEquiposComputo.PerformLayout()
-            CType(Me.dgvEquiposComputo, System.ComponentModel.ISupportInitialize).EndInit()
+            Me.tpEquiposComputo.PerformLayout
+            CType(Me.dgvEquiposComputo, System.ComponentModel.ISupportInitialize).EndInit
             Me.tpLibrosYcolecciones.ResumeLayout(False)
-            Me.tpLibrosYcolecciones.PerformLayout()
-            CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
+            Me.tpLibrosYcolecciones.PerformLayout
+            CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit
             Me.tpEquiposOficina.ResumeLayout(False)
-            Me.tpEquiposOficina.PerformLayout()
-            CType(Me.dgvEquiposOficina, System.ComponentModel.ISupportInitialize).EndInit()
-            CType(Me.pbEquiposOficina, System.ComponentModel.ISupportInitialize).EndInit()
+            Me.tpEquiposOficina.PerformLayout
+            CType(Me.dgvEquiposOficina, System.ComponentModel.ISupportInitialize).EndInit
+            CType(Me.pbEquiposOficina, System.ComponentModel.ISupportInitialize).EndInit
             Me.tpMueblesOficina.ResumeLayout(False)
-            Me.tpMueblesOficina.PerformLayout()
-            CType(Me.dgvMuebleOficina, System.ComponentModel.ISupportInitialize).EndInit()
-            CType(Me.pbMueblesOficina, System.ComponentModel.ISupportInitialize).EndInit()
+            Me.tpMueblesOficina.PerformLayout
+            CType(Me.dgvMuebleOficina, System.ComponentModel.ISupportInitialize).EndInit
+            CType(Me.pbMueblesOficina, System.ComponentModel.ISupportInitialize).EndInit
             Me.tpEquiposCocina.ResumeLayout(False)
-            Me.tpEquiposCocina.PerformLayout()
-            CType(Me.dgvEquipoCocina, System.ComponentModel.ISupportInitialize).EndInit()
-            CType(Me.pbEquiposCocina, System.ComponentModel.ISupportInitialize).EndInit()
+            Me.tpEquiposCocina.PerformLayout
+            CType(Me.dgvEquipoCocina, System.ComponentModel.ISupportInitialize).EndInit
+            CType(Me.pbEquiposCocina, System.ComponentModel.ISupportInitialize).EndInit
             Me.TabPage4.ResumeLayout(False)
-            Me.TabPage4.PerformLayout()
-            CType(Me.dgvEquipoAmbientacion, System.ComponentModel.ISupportInitialize).EndInit()
-            CType(Me.pbEquiposAmbientacion, System.ComponentModel.ISupportInitialize).EndInit()
+            Me.TabPage4.PerformLayout
+            CType(Me.dgvEquipoAmbientacion, System.ComponentModel.ISupportInitialize).EndInit
+            CType(Me.pbEquiposAmbientacion, System.ComponentModel.ISupportInitialize).EndInit
             Me.TabPage1.ResumeLayout(False)
-            Me.TabPage1.PerformLayout()
-            CType(Me.dgvEquipoComunicacion, System.ComponentModel.ISupportInitialize).EndInit()
-            CType(Me.pbEquiposComunicacion, System.ComponentModel.ISupportInitialize).EndInit()
+            Me.TabPage1.PerformLayout
+            CType(Me.dgvEquipoComunicacion, System.ComponentModel.ISupportInitialize).EndInit
+            CType(Me.pbEquiposComunicacion, System.ComponentModel.ISupportInitialize).EndInit
             Me.tpEquiposSeguridadIndustrial.ResumeLayout(False)
-            Me.tpEquiposSeguridadIndustrial.PerformLayout()
-            CType(Me.dgvEquipoSeguridad, System.ComponentModel.ISupportInitialize).EndInit()
-            CType(Me.pbEquiposSeguridad, System.ComponentModel.ISupportInitialize).EndInit()
+            Me.tpEquiposSeguridadIndustrial.PerformLayout
+            CType(Me.dgvEquipoSeguridad, System.ComponentModel.ISupportInitialize).EndInit
+            CType(Me.pbEquiposSeguridad, System.ComponentModel.ISupportInitialize).EndInit
             Me.tpCamarasSeguridad.ResumeLayout(False)
-            Me.tpCamarasSeguridad.PerformLayout()
-            CType(Me.dgvCamara, System.ComponentModel.ISupportInitialize).EndInit()
-            CType(Me.pbCamarasSeguridad, System.ComponentModel.ISupportInitialize).EndInit()
+            Me.tpCamarasSeguridad.PerformLayout
+            CType(Me.dgvCamara, System.ComponentModel.ISupportInitialize).EndInit
+            CType(Me.pbCamarasSeguridad, System.ComponentModel.ISupportInitialize).EndInit
             Me.tpGeneradores.ResumeLayout(False)
-            Me.tpGeneradores.PerformLayout()
-            CType(Me.pbGeneradores, System.ComponentModel.ISupportInitialize).EndInit()
+            Me.tpGeneradores.PerformLayout
+            CType(Me.pbGeneradores, System.ComponentModel.ISupportInitialize).EndInit
             Me.tpChalecos.ResumeLayout(False)
-            Me.tpChalecos.PerformLayout()
-            CType(Me.dgvChaleco, System.ComponentModel.ISupportInitialize).EndInit()
-            CType(Me.pbChaleco, System.ComponentModel.ISupportInitialize).EndInit()
+            Me.tpChalecos.PerformLayout
+            CType(Me.dgvChaleco, System.ComponentModel.ISupportInitialize).EndInit
+            CType(Me.pbChaleco, System.ComponentModel.ISupportInitialize).EndInit
             Me.tpSoftware.ResumeLayout(False)
-            Me.tpSoftware.PerformLayout()
-            CType(Me.pbSoftware, System.ComponentModel.ISupportInitialize).EndInit()
+            Me.tpSoftware.PerformLayout
+            CType(Me.pbSoftware, System.ComponentModel.ISupportInitialize).EndInit
             Me.MenuStrip1.ResumeLayout(False)
-            Me.MenuStrip1.PerformLayout()
+            Me.MenuStrip1.PerformLayout
             Me.ResumeLayout(False)
-            Me.PerformLayout()
+            Me.PerformLayout
 
         End Sub
         Friend WithEvents Label2 As System.Windows.Forms.Label
@@ -7517,7 +7516,6 @@
         Friend WithEvents Column7 As System.Windows.Forms.DataGridViewTextBoxColumn
         Friend WithEvents Column8 As System.Windows.Forms.DataGridViewTextBoxColumn
         Friend WithEvents Column9 As System.Windows.Forms.DataGridViewTextBoxColumn
-        Friend WithEvents lblArmasCount As System.Windows.Forms.Label
         Friend WithEvents lblRadiosCount As System.Windows.Forms.Label
         Friend WithEvents dgvRadios As System.Windows.Forms.DataGridView
         Friend WithEvents btnDelRadio As System.Windows.Forms.Button
@@ -7713,6 +7711,6 @@
         Friend WithEvents valorFactSeguridad As System.Windows.Forms.DataGridViewTextBoxColumn
         Friend WithEvents ValorResiSeguridad As System.Windows.Forms.DataGridViewTextBoxColumn
         Friend WithEvents vidaUtilSeguridad As System.Windows.Forms.DataGridViewTextBoxColumn
-
+        Friend WithEvents lblArmasCount As Label
     End Class
 End Namespace

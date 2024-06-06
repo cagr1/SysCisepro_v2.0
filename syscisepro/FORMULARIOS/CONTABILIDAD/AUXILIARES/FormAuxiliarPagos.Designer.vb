@@ -23,7 +23,6 @@
         'No lo modifique con el editor de código.
         <System.Diagnostics.DebuggerStepThrough()> _
         Private Sub InitializeComponent()
-            Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormAuxiliarPagos))
             Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
@@ -64,6 +63,7 @@
             Dim DataGridViewCellStyle38 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim DataGridViewCellStyle39 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim DataGridViewCellStyle40 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormAuxiliarPagos))
             Me.TabControl1 = New System.Windows.Forms.TabControl()
             Me.TabPage1 = New System.Windows.Forms.TabPage()
             Me.GroupBox1 = New System.Windows.Forms.GroupBox()
@@ -230,7 +230,7 @@
             Me.TabControl1.Controls.Add(Me.TabPage1)
             Me.TabControl1.Controls.Add(Me.TabPage2)
             Me.TabControl1.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.TabControl1.Location = New System.Drawing.Point(1, 26)
+            Me.TabControl1.Location = New System.Drawing.Point(1, 36)
             Me.TabControl1.Name = "TabControl1"
             Me.TabControl1.SelectedIndex = 0
             Me.TabControl1.Size = New System.Drawing.Size(1233, 748)
@@ -474,13 +474,11 @@
             '
             Me.btnBuscar.BackColor = System.Drawing.Color.White
             Me.btnBuscar.Font = New System.Drawing.Font("Consolas", 6.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnBuscar.Image = CType(resources.GetObject("btnBuscar.Image"), System.Drawing.Image)
-            Me.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-            Me.btnBuscar.Location = New System.Drawing.Point(404, 8)
+            Me.btnBuscar.Image = Global.syscisepro.My.Resources.Resources.refresh_24dp_FILL0_wght400_GRAD0_opsz24__2_
+            Me.btnBuscar.Location = New System.Drawing.Point(448, 8)
             Me.btnBuscar.Name = "btnBuscar"
-            Me.btnBuscar.Size = New System.Drawing.Size(89, 33)
+            Me.btnBuscar.Size = New System.Drawing.Size(46, 33)
             Me.btnBuscar.TabIndex = 0
-            Me.btnBuscar.Text = "CARGAR TODO"
             Me.btnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
             Me.btnBuscar.UseVisualStyleBackColor = False
             '
@@ -496,7 +494,7 @@
             'lblIdComprobanteCompra
             '
             Me.lblIdComprobanteCompra.AutoSize = True
-            Me.lblIdComprobanteCompra.Location = New System.Drawing.Point(125, 1)
+            Me.lblIdComprobanteCompra.Location = New System.Drawing.Point(125, -1)
             Me.lblIdComprobanteCompra.Name = "lblIdComprobanteCompra"
             Me.lblIdComprobanteCompra.Size = New System.Drawing.Size(16, 13)
             Me.lblIdComprobanteCompra.TabIndex = 3
@@ -505,7 +503,7 @@
             'dtpHasta
             '
             Me.dtpHasta.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-            Me.dtpHasta.Location = New System.Drawing.Point(272, 16)
+            Me.dtpHasta.Location = New System.Drawing.Point(309, 16)
             Me.dtpHasta.Name = "dtpHasta"
             Me.dtpHasta.Size = New System.Drawing.Size(119, 21)
             Me.dtpHasta.TabIndex = 1
@@ -513,7 +511,7 @@
             'dtpDesde
             '
             Me.dtpDesde.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-            Me.dtpDesde.Location = New System.Drawing.Point(128, 16)
+            Me.dtpDesde.Location = New System.Drawing.Point(152, 16)
             Me.dtpDesde.Name = "dtpDesde"
             Me.dtpDesde.Size = New System.Drawing.Size(111, 21)
             Me.dtpDesde.TabIndex = 0
@@ -521,7 +519,7 @@
             'Label1
             '
             Me.Label1.AutoSize = True
-            Me.Label1.Location = New System.Drawing.Point(254, 19)
+            Me.Label1.Location = New System.Drawing.Point(273, 19)
             Me.Label1.Name = "Label1"
             Me.Label1.Size = New System.Drawing.Size(20, 13)
             Me.Label1.TabIndex = 2
@@ -532,7 +530,7 @@
             Me.gbAsientoDiario.BackColor = System.Drawing.Color.White
             Me.gbAsientoDiario.Controls.Add(Me.lblNumeroRegistroCompra)
             Me.gbAsientoDiario.Controls.Add(Me.dgvAsientoDiarioCompra)
-            Me.gbAsientoDiario.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.gbAsientoDiario.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.gbAsientoDiario.Location = New System.Drawing.Point(0, 445)
             Me.gbAsientoDiario.Name = "gbAsientoDiario"
             Me.gbAsientoDiario.Size = New System.Drawing.Size(720, 240)
@@ -562,7 +560,7 @@
             Me.dgvAsientoDiarioCompra.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
             DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
             DataGridViewCellStyle2.BackColor = System.Drawing.Color.White
-            DataGridViewCellStyle2.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle2.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText
             DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption
             DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
@@ -571,7 +569,7 @@
             Me.dgvAsientoDiarioCompra.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
             DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
             DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window
-            DataGridViewCellStyle3.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle3.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText
             DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(123, Byte), Integer))
             DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
@@ -579,14 +577,14 @@
             Me.dgvAsientoDiarioCompra.DefaultCellStyle = DataGridViewCellStyle3
             Me.dgvAsientoDiarioCompra.Dock = System.Windows.Forms.DockStyle.Fill
             Me.dgvAsientoDiarioCompra.GridColor = System.Drawing.SystemColors.ControlLight
-            Me.dgvAsientoDiarioCompra.Location = New System.Drawing.Point(3, 16)
+            Me.dgvAsientoDiarioCompra.Location = New System.Drawing.Point(3, 17)
             Me.dgvAsientoDiarioCompra.MultiSelect = False
             Me.dgvAsientoDiarioCompra.Name = "dgvAsientoDiarioCompra"
             Me.dgvAsientoDiarioCompra.ReadOnly = True
             Me.dgvAsientoDiarioCompra.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
             Me.dgvAsientoDiarioCompra.RowHeadersVisible = False
             Me.dgvAsientoDiarioCompra.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvAsientoDiarioCompra.Size = New System.Drawing.Size(714, 221)
+            Me.dgvAsientoDiarioCompra.Size = New System.Drawing.Size(714, 220)
             Me.dgvAsientoDiarioCompra.TabIndex = 0
             '
             'gbTotalDebeTotalHaberCompra
@@ -606,7 +604,7 @@
             '
             Me.txtTotalHaberCompra.BackColor = System.Drawing.Color.White
             Me.txtTotalHaberCompra.Enabled = False
-            Me.txtTotalHaberCompra.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtTotalHaberCompra.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtTotalHaberCompra.Location = New System.Drawing.Point(641, 10)
             Me.txtTotalHaberCompra.Name = "txtTotalHaberCompra"
             Me.txtTotalHaberCompra.Size = New System.Drawing.Size(73, 22)
@@ -618,7 +616,7 @@
             '
             Me.txtTotalDebeCompra.BackColor = System.Drawing.Color.White
             Me.txtTotalDebeCompra.Enabled = False
-            Me.txtTotalDebeCompra.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtTotalDebeCompra.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtTotalDebeCompra.Location = New System.Drawing.Point(567, 10)
             Me.txtTotalDebeCompra.Name = "txtTotalDebeCompra"
             Me.txtTotalDebeCompra.Size = New System.Drawing.Size(73, 22)
@@ -942,7 +940,7 @@
             '
             Me.txtTotalHaberEgreso.BackColor = System.Drawing.Color.White
             Me.txtTotalHaberEgreso.Enabled = False
-            Me.txtTotalHaberEgreso.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtTotalHaberEgreso.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtTotalHaberEgreso.Location = New System.Drawing.Point(423, 10)
             Me.txtTotalHaberEgreso.Name = "txtTotalHaberEgreso"
             Me.txtTotalHaberEgreso.Size = New System.Drawing.Size(73, 22)
@@ -954,7 +952,7 @@
             '
             Me.txtTotalDebeEgreso.BackColor = System.Drawing.Color.White
             Me.txtTotalDebeEgreso.Enabled = False
-            Me.txtTotalDebeEgreso.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtTotalDebeEgreso.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtTotalDebeEgreso.Location = New System.Drawing.Point(349, 10)
             Me.txtTotalDebeEgreso.Name = "txtTotalDebeEgreso"
             Me.txtTotalDebeEgreso.Size = New System.Drawing.Size(73, 22)
@@ -1002,7 +1000,7 @@
             Me.gbTipoReporte.Controls.Add(Me.rbConsorcio)
             Me.gbTipoReporte.Controls.Add(Me.rbPorCliente)
             Me.gbTipoReporte.Controls.Add(Me.rbTodo)
-            Me.gbTipoReporte.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.gbTipoReporte.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.gbTipoReporte.Location = New System.Drawing.Point(0, 0)
             Me.gbTipoReporte.Name = "gbTipoReporte"
             Me.gbTipoReporte.Size = New System.Drawing.Size(320, 44)
@@ -1015,7 +1013,7 @@
             Me.rbNroFactura.AutoSize = True
             Me.rbNroFactura.Location = New System.Drawing.Point(85, 17)
             Me.rbNroFactura.Name = "rbNroFactura"
-            Me.rbNroFactura.Size = New System.Drawing.Size(91, 17)
+            Me.rbNroFactura.Size = New System.Drawing.Size(84, 17)
             Me.rbNroFactura.TabIndex = 34
             Me.rbNroFactura.Text = "Nro Factura"
             Me.rbNroFactura.UseVisualStyleBackColor = True
@@ -1035,7 +1033,7 @@
             Me.rbPorCliente.AutoSize = True
             Me.rbPorCliente.Location = New System.Drawing.Point(6, 17)
             Me.rbPorCliente.Name = "rbPorCliente"
-            Me.rbPorCliente.Size = New System.Drawing.Size(67, 17)
+            Me.rbPorCliente.Size = New System.Drawing.Size(60, 17)
             Me.rbPorCliente.TabIndex = 1
             Me.rbPorCliente.Text = "Cliente"
             Me.rbPorCliente.UseVisualStyleBackColor = True
@@ -1168,7 +1166,7 @@
             Me.gbRangoFechaVenta.Controls.Add(Me.btnBuscarVenta)
             Me.gbRangoFechaVenta.Controls.Add(Me.dtpHastaVenta)
             Me.gbRangoFechaVenta.Controls.Add(Me.dtpDesdeVenta)
-            Me.gbRangoFechaVenta.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.gbRangoFechaVenta.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.gbRangoFechaVenta.Location = New System.Drawing.Point(724, -1)
             Me.gbRangoFechaVenta.Name = "gbRangoFechaVenta"
             Me.gbRangoFechaVenta.Size = New System.Drawing.Size(498, 44)
@@ -1181,7 +1179,7 @@
             Me.Label2.AutoSize = True
             Me.Label2.Location = New System.Drawing.Point(10, 20)
             Me.Label2.Name = "Label2"
-            Me.Label2.Size = New System.Drawing.Size(121, 13)
+            Me.Label2.Size = New System.Drawing.Size(128, 13)
             Me.Label2.TabIndex = 6
             Me.Label2.Text = "CARGAR REGISTRO DEL"
             '
@@ -1190,7 +1188,7 @@
             Me.Label22.AutoSize = True
             Me.Label22.Location = New System.Drawing.Point(258, 19)
             Me.Label22.Name = "Label22"
-            Me.Label22.Size = New System.Drawing.Size(19, 13)
+            Me.Label22.Size = New System.Drawing.Size(20, 13)
             Me.Label22.TabIndex = 5
             Me.Label22.Text = "AL"
             '
@@ -1198,13 +1196,11 @@
             '
             Me.btnBuscarVenta.BackColor = System.Drawing.Color.White
             Me.btnBuscarVenta.Font = New System.Drawing.Font("Consolas", 6.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnBuscarVenta.Image = CType(resources.GetObject("btnBuscarVenta.Image"), System.Drawing.Image)
-            Me.btnBuscarVenta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+            Me.btnBuscarVenta.Image = Global.syscisepro.My.Resources.Resources.refresh_24dp_FILL0_wght400_GRAD0_opsz24__2_
             Me.btnBuscarVenta.Location = New System.Drawing.Point(408, 9)
             Me.btnBuscarVenta.Name = "btnBuscarVenta"
-            Me.btnBuscarVenta.Size = New System.Drawing.Size(89, 33)
+            Me.btnBuscarVenta.Size = New System.Drawing.Size(46, 33)
             Me.btnBuscarVenta.TabIndex = 0
-            Me.btnBuscarVenta.Text = "CARGAR TODAS"
             Me.btnBuscarVenta.TextAlign = System.Drawing.ContentAlignment.MiddleRight
             Me.btnBuscarVenta.UseVisualStyleBackColor = False
             '
@@ -1213,15 +1209,15 @@
             Me.dtpHastaVenta.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
             Me.dtpHastaVenta.Location = New System.Drawing.Point(284, 15)
             Me.dtpHastaVenta.Name = "dtpHastaVenta"
-            Me.dtpHastaVenta.Size = New System.Drawing.Size(98, 20)
+            Me.dtpHastaVenta.Size = New System.Drawing.Size(98, 21)
             Me.dtpHastaVenta.TabIndex = 1
             '
             'dtpDesdeVenta
             '
             Me.dtpDesdeVenta.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-            Me.dtpDesdeVenta.Location = New System.Drawing.Point(137, 15)
+            Me.dtpDesdeVenta.Location = New System.Drawing.Point(145, 15)
             Me.dtpDesdeVenta.Name = "dtpDesdeVenta"
-            Me.dtpDesdeVenta.Size = New System.Drawing.Size(98, 20)
+            Me.dtpDesdeVenta.Size = New System.Drawing.Size(98, 21)
             Me.dtpDesdeVenta.TabIndex = 0
             '
             'gbClienteGeneral
@@ -1229,7 +1225,7 @@
             Me.gbClienteGeneral.BackColor = System.Drawing.Color.White
             Me.gbClienteGeneral.Controls.Add(Me.txtClienteGeneral)
             Me.gbClienteGeneral.Controls.Add(Me.lblIdClienteGeneral)
-            Me.gbClienteGeneral.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.gbClienteGeneral.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.gbClienteGeneral.Location = New System.Drawing.Point(321, 0)
             Me.gbClienteGeneral.Name = "gbClienteGeneral"
             Me.gbClienteGeneral.Size = New System.Drawing.Size(399, 44)
@@ -1243,7 +1239,7 @@
             Me.txtClienteGeneral.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtClienteGeneral.Location = New System.Drawing.Point(6, 17)
             Me.txtClienteGeneral.Name = "txtClienteGeneral"
-            Me.txtClienteGeneral.Size = New System.Drawing.Size(387, 20)
+            Me.txtClienteGeneral.Size = New System.Drawing.Size(387, 21)
             Me.txtClienteGeneral.TabIndex = 31
             '
             'lblIdClienteGeneral
@@ -1721,7 +1717,7 @@
             Me.gbTotal.Controls.Add(Me.Label7)
             Me.gbTotal.Controls.Add(Me.Label19)
             Me.gbTotal.Controls.Add(Me.Label6)
-            Me.gbTotal.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.gbTotal.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.gbTotal.Location = New System.Drawing.Point(0, 441)
             Me.gbTotal.Name = "gbTotal"
             Me.gbTotal.Size = New System.Drawing.Size(720, 50)
@@ -1865,16 +1861,17 @@
             Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnExportarPago})
             Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
             Me.MenuStrip1.Name = "MenuStrip1"
-            Me.MenuStrip1.Size = New System.Drawing.Size(1237, 24)
+            Me.MenuStrip1.Size = New System.Drawing.Size(1237, 32)
             Me.MenuStrip1.TabIndex = 1
             Me.MenuStrip1.Text = "MenuStrip1"
             '
             'btnExportarPago
             '
-            Me.btnExportarPago.Image = Global.syscisepro.My.Resources.Resources.excel_icon
+            Me.btnExportarPago.Image = Global.syscisepro.My.Resources.Resources.icons8_excel_48
             Me.btnExportarPago.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+            Me.btnExportarPago.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnExportarPago.Name = "btnExportarPago"
-            Me.btnExportarPago.Size = New System.Drawing.Size(93, 20)
+            Me.btnExportarPago.Size = New System.Drawing.Size(101, 28)
             Me.btnExportarPago.Text = " EXPORTAR"
             '
             'FormAuxiliarPagos
@@ -1882,7 +1879,7 @@
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.BackColor = System.Drawing.Color.White
-            Me.ClientSize = New System.Drawing.Size(1237, 750)
+            Me.ClientSize = New System.Drawing.Size(1237, 780)
             Me.Controls.Add(Me.TabControl1)
             Me.Controls.Add(Me.MenuStrip1)
             Me.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))

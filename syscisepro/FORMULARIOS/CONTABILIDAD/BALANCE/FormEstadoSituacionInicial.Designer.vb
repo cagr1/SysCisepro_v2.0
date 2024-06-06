@@ -1,8 +1,8 @@
 ﻿Namespace FORMULARIOS.CONTABILIDAD.BALANCE
     <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
     Partial Class FormEstadoSituacionInicial
-        Inherits System.Windows.Forms.Form
-
+        'Inherits System.Windows.Forms.Form
+        Inherits Krypton.Toolkit.KryptonForm
         'Form reemplaza a Dispose para limpiar la lista de componentes.
         <System.Diagnostics.DebuggerNonUserCode()> _
         Protected Overrides Sub Dispose(ByVal disposing As Boolean)
@@ -72,7 +72,7 @@
             Me.tcAuxiliares.Controls.Add(Me.tpActualizar)
             Me.tcAuxiliares.Controls.Add(Me.tpArbol)
             Me.tcAuxiliares.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.tcAuxiliares.Location = New System.Drawing.Point(1, 24)
+            Me.tcAuxiliares.Location = New System.Drawing.Point(1, 36)
             Me.tcAuxiliares.Name = "tcAuxiliares"
             Me.tcAuxiliares.SelectedIndex = 0
             Me.tcAuxiliares.Size = New System.Drawing.Size(984, 683)
@@ -158,7 +158,7 @@
             '
             Me.Label11.AutoSize = True
             Me.Label11.Font = New System.Drawing.Font("Consolas", 8.25!)
-            Me.Label11.Location = New System.Drawing.Point(830, 616)
+            Me.Label11.Location = New System.Drawing.Point(800, 628)
             Me.Label11.Name = "Label11"
             Me.Label11.Size = New System.Drawing.Size(55, 13)
             Me.Label11.TabIndex = 251
@@ -166,7 +166,7 @@
             '
             'txtUtilidad
             '
-            Me.txtUtilidad.Location = New System.Drawing.Point(833, 632)
+            Me.txtUtilidad.Location = New System.Drawing.Point(858, 625)
             Me.txtUtilidad.Name = "txtUtilidad"
             Me.txtUtilidad.Size = New System.Drawing.Size(106, 20)
             Me.txtUtilidad.TabIndex = 250
@@ -176,7 +176,7 @@
             '
             Me.Label10.AutoSize = True
             Me.Label10.Font = New System.Drawing.Font("Consolas", 8.25!)
-            Me.Label10.Location = New System.Drawing.Point(682, 616)
+            Me.Label10.Location = New System.Drawing.Point(585, 628)
             Me.Label10.Name = "Label10"
             Me.Label10.Size = New System.Drawing.Size(97, 13)
             Me.Label10.TabIndex = 249
@@ -184,7 +184,7 @@
             '
             'txtCapital
             '
-            Me.txtCapital.Location = New System.Drawing.Point(685, 632)
+            Me.txtCapital.Location = New System.Drawing.Point(686, 625)
             Me.txtCapital.Name = "txtCapital"
             Me.txtCapital.Size = New System.Drawing.Size(106, 20)
             Me.txtCapital.TabIndex = 248
@@ -194,7 +194,7 @@
             '
             Me.Label9.AutoSize = True
             Me.Label9.Font = New System.Drawing.Font("Consolas", 8.25!)
-            Me.Label9.Location = New System.Drawing.Point(563, 616)
+            Me.Label9.Location = New System.Drawing.Point(425, 628)
             Me.Label9.Name = "Label9"
             Me.Label9.Size = New System.Drawing.Size(43, 13)
             Me.Label9.TabIndex = 244
@@ -204,7 +204,7 @@
             '
             Me.Label8.AutoSize = True
             Me.Label8.Font = New System.Drawing.Font("Consolas", 8.25!)
-            Me.Label8.Location = New System.Drawing.Point(445, 616)
+            Me.Label8.Location = New System.Drawing.Point(253, 628)
             Me.Label8.Name = "Label8"
             Me.Label8.Size = New System.Drawing.Size(43, 13)
             Me.Label8.TabIndex = 243
@@ -212,7 +212,7 @@
             '
             'txtAcreedor
             '
-            Me.txtAcreedor.Location = New System.Drawing.Point(570, 632)
+            Me.txtAcreedor.Location = New System.Drawing.Point(471, 625)
             Me.txtAcreedor.Name = "txtAcreedor"
             Me.txtAcreedor.Size = New System.Drawing.Size(106, 20)
             Me.txtAcreedor.TabIndex = 242
@@ -220,7 +220,7 @@
             '
             'txtDeudor
             '
-            Me.txtDeudor.Location = New System.Drawing.Point(448, 632)
+            Me.txtDeudor.Location = New System.Drawing.Point(300, 625)
             Me.txtDeudor.Name = "txtDeudor"
             Me.txtDeudor.Size = New System.Drawing.Size(106, 20)
             Me.txtDeudor.TabIndex = 241
@@ -330,50 +330,50 @@
             '
             'MenuStrip1
             '
-            Me.MenuStrip1.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.MenuStrip1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
             Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnCargar, Me.btnExportar, Me.btnArbol, Me.btnReporte})
             Me.MenuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow
             Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
             Me.MenuStrip1.Name = "MenuStrip1"
             Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(7, 2, 0, 2)
-            Me.MenuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
-            Me.MenuStrip1.Size = New System.Drawing.Size(983, 24)
+            Me.MenuStrip1.Size = New System.Drawing.Size(983, 32)
             Me.MenuStrip1.TabIndex = 189
             Me.MenuStrip1.Text = "msIngresoBodega"
             '
             'btnCargar
             '
             Me.btnCargar.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnCargar.Image = Global.syscisepro.My.Resources.Resources.BuscarRegistro
+            Me.btnCargar.Image = Global.syscisepro.My.Resources.Resources.refresh_24dp_FILL0_wght400_GRAD0_opsz24__2_
+            Me.btnCargar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnCargar.Name = "btnCargar"
-            Me.btnCargar.Size = New System.Drawing.Size(81, 20)
+            Me.btnCargar.Size = New System.Drawing.Size(89, 28)
             Me.btnCargar.Text = "CARGAR"
             '
             'btnExportar
             '
             Me.btnExportar.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnExportar.Image = Global.syscisepro.My.Resources.Resources.excel_icon
+            Me.btnExportar.Image = Global.syscisepro.My.Resources.Resources.icons8_excel_48
             Me.btnExportar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnExportar.Name = "btnExportar"
-            Me.btnExportar.Size = New System.Drawing.Size(90, 20)
+            Me.btnExportar.Size = New System.Drawing.Size(98, 28)
             Me.btnExportar.Text = "EXPORTAR"
             '
             'btnArbol
             '
             Me.btnArbol.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnArbol.Image = Global.syscisepro.My.Resources.Resources.chart_organisation_add
+            Me.btnArbol.Image = Global.syscisepro.My.Resources.Resources.account_tree_24dp_FILL0_wght400_GRAD0_opsz24
             Me.btnArbol.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnArbol.Name = "btnArbol"
-            Me.btnArbol.Size = New System.Drawing.Size(72, 20)
+            Me.btnArbol.Size = New System.Drawing.Size(80, 28)
             Me.btnArbol.Text = "ÁRBOL"
             '
             'btnReporte
             '
             Me.btnReporte.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnReporte.Image = Global.syscisepro.My.Resources.Resources.GuardarRegistro
+            Me.btnReporte.Image = Global.syscisepro.My.Resources.Resources.save_24dp_FILL0_wght400_GRAD0_opsz24__3_
             Me.btnReporte.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnReporte.Name = "btnReporte"
-            Me.btnReporte.Size = New System.Drawing.Size(89, 20)
+            Me.btnReporte.Size = New System.Drawing.Size(97, 28)
             Me.btnReporte.Text = "GUARDAR"
             '
             'FormEstadoSituacionInicial
@@ -381,7 +381,7 @@
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.BackColor = System.Drawing.Color.White
-            Me.ClientSize = New System.Drawing.Size(983, 708)
+            Me.ClientSize = New System.Drawing.Size(983, 719)
             Me.Controls.Add(Me.MenuStrip1)
             Me.Controls.Add(Me.tcAuxiliares)
             Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow

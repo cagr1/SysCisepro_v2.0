@@ -121,6 +121,7 @@ Namespace FORMULARIOS.OPERACIONES
                     Label2.BackColor = My.MySettingsProperty.Settings.ColorCisepro
                     Label4.ForeColor = Color.White
                     Label4.BackColor = My.MySettingsProperty.Settings.ColorCisepro
+
                     dgvDia.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
                     dgvNoche.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
             End Select

@@ -1,8 +1,8 @@
 ﻿Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
     <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
     Partial Class FormActualizarCostosSolicitudesMantenimientos
-        Inherits System.Windows.Forms.Form
-
+        'Inherits System.Windows.Forms.Form
+        Inherits Krypton.Toolkit.KryptonForm
         'Form reemplaza a Dispose para limpiar la lista de componentes.
         <System.Diagnostics.DebuggerNonUserCode()> _
         Protected Overrides Sub Dispose(ByVal disposing As Boolean)
@@ -58,10 +58,10 @@
             'Label1
             '
             Me.Label1.AutoSize = True
-            Me.Label1.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Label1.Font = New System.Drawing.Font("Roboto", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Label1.Location = New System.Drawing.Point(-2, 2)
             Me.Label1.Name = "Label1"
-            Me.Label1.Size = New System.Drawing.Size(107, 23)
+            Me.Label1.Size = New System.Drawing.Size(103, 19)
             Me.Label1.TabIndex = 2
             Me.Label1.Text = "PENDIENTES"
             '
@@ -144,10 +144,10 @@
             'Label2
             '
             Me.Label2.AutoSize = True
-            Me.Label2.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Label2.Font = New System.Drawing.Font("Roboto", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Label2.Location = New System.Drawing.Point(545, 2)
             Me.Label2.Name = "Label2"
-            Me.Label2.Size = New System.Drawing.Size(84, 23)
+            Me.Label2.Size = New System.Drawing.Size(85, 19)
             Me.Label2.TabIndex = 208
             Me.Label2.Text = "DETALLES"
             '
@@ -192,10 +192,10 @@
             'Label3
             '
             Me.Label3.AutoSize = True
-            Me.Label3.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Label3.Font = New System.Drawing.Font("Roboto", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Label3.Location = New System.Drawing.Point(1, 190)
             Me.Label3.Name = "Label3"
-            Me.Label3.Size = New System.Drawing.Size(87, 23)
+            Me.Label3.Size = New System.Drawing.Size(84, 19)
             Me.Label3.TabIndex = 210
             Me.Label3.Text = "ASIENTOS"
             '

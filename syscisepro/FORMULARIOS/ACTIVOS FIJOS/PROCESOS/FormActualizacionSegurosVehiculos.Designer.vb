@@ -23,8 +23,8 @@
         'No lo modifique con el editor de código.
         <System.Diagnostics.DebuggerStepThrough()> _
         Private Sub InitializeComponent()
-            Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormActualizacionSegurosVehiculos))
             Me.dgvActualizacionVehiculos = New System.Windows.Forms.DataGridView()
             Me.gbBusqueda = New System.Windows.Forms.GroupBox()
@@ -81,19 +81,19 @@
             Me.dgvActualizacionVehiculos.AllowUserToAddRows = False
             Me.dgvActualizacionVehiculos.AllowUserToDeleteRows = False
             Me.dgvActualizacionVehiculos.AllowUserToResizeRows = False
-            DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-            Me.dgvActualizacionVehiculos.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+            DataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+            Me.dgvActualizacionVehiculos.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle7
             Me.dgvActualizacionVehiculos.BackgroundColor = System.Drawing.Color.White
             Me.dgvActualizacionVehiculos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
             Me.dgvActualizacionVehiculos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-            DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-            DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
-            DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            DataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black
-            DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(123, Byte), Integer))
-            DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-            DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-            Me.dgvActualizacionVehiculos.DefaultCellStyle = DataGridViewCellStyle2
+            DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+            DataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window
+            DataGridViewCellStyle8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black
+            DataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(123, Byte), Integer))
+            DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+            DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+            Me.dgvActualizacionVehiculos.DefaultCellStyle = DataGridViewCellStyle8
             Me.dgvActualizacionVehiculos.Location = New System.Drawing.Point(2, 312)
             Me.dgvActualizacionVehiculos.MultiSelect = False
             Me.dgvActualizacionVehiculos.Name = "dgvActualizacionVehiculos"
@@ -121,7 +121,7 @@
             Me.txtParametroBusqueda.BackColor = System.Drawing.Color.White
             Me.txtParametroBusqueda.Font = New System.Drawing.Font("Roboto", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtParametroBusqueda.ForeColor = System.Drawing.Color.Black
-            Me.txtParametroBusqueda.Location = New System.Drawing.Point(259, 16)
+            Me.txtParametroBusqueda.Location = New System.Drawing.Point(259, 20)
             Me.txtParametroBusqueda.Name = "txtParametroBusqueda"
             Me.txtParametroBusqueda.Size = New System.Drawing.Size(345, 27)
             Me.txtParametroBusqueda.TabIndex = 2
@@ -200,28 +200,28 @@
             'txtAseguradora
             '
             Me.txtAseguradora.Enabled = False
-            Me.txtAseguradora.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtAseguradora.Location = New System.Drawing.Point(87, 13)
+            Me.txtAseguradora.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtAseguradora.Location = New System.Drawing.Point(89, 13)
             Me.txtAseguradora.Name = "txtAseguradora"
-            Me.txtAseguradora.Size = New System.Drawing.Size(345, 21)
+            Me.txtAseguradora.Size = New System.Drawing.Size(343, 21)
             Me.txtAseguradora.TabIndex = 8
             '
             'Label3
             '
             Me.Label3.AutoSize = True
-            Me.Label3.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Label3.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Label3.ForeColor = System.Drawing.Color.Black
-            Me.Label3.Location = New System.Drawing.Point(5, 13)
+            Me.Label3.Location = New System.Drawing.Point(3, 18)
             Me.Label3.Name = "Label3"
-            Me.Label3.Size = New System.Drawing.Size(81, 13)
+            Me.Label3.Size = New System.Drawing.Size(85, 13)
             Me.Label3.TabIndex = 7
-            Me.Label3.Text = "ASEGURADORA:"
+            Me.Label3.Text = "ASEGURADORA"
             '
             'txtSeguro
             '
             Me.txtSeguro.Enabled = False
-            Me.txtSeguro.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtSeguro.Location = New System.Drawing.Point(532, 13)
+            Me.txtSeguro.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtSeguro.Location = New System.Drawing.Point(532, 12)
             Me.txtSeguro.Name = "txtSeguro"
             Me.txtSeguro.Size = New System.Drawing.Size(345, 21)
             Me.txtSeguro.TabIndex = 10
@@ -229,39 +229,39 @@
             'Label4
             '
             Me.Label4.AutoSize = True
-            Me.Label4.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Label4.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Label4.ForeColor = System.Drawing.Color.Black
-            Me.Label4.Location = New System.Drawing.Point(435, 13)
+            Me.Label4.Location = New System.Drawing.Point(439, 17)
             Me.Label4.Name = "Label4"
-            Me.Label4.Size = New System.Drawing.Size(47, 13)
+            Me.Label4.Size = New System.Drawing.Size(53, 13)
             Me.Label4.TabIndex = 9
             Me.Label4.Text = "SEGURO:"
             '
             'txtBroker
             '
             Me.txtBroker.Enabled = False
-            Me.txtBroker.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtBroker.Location = New System.Drawing.Point(87, 35)
+            Me.txtBroker.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtBroker.Location = New System.Drawing.Point(89, 36)
             Me.txtBroker.Name = "txtBroker"
-            Me.txtBroker.Size = New System.Drawing.Size(345, 21)
+            Me.txtBroker.Size = New System.Drawing.Size(343, 21)
             Me.txtBroker.TabIndex = 12
             '
             'Label5
             '
             Me.Label5.AutoSize = True
-            Me.Label5.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Label5.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Label5.ForeColor = System.Drawing.Color.Black
-            Me.Label5.Location = New System.Drawing.Point(5, 35)
+            Me.Label5.Location = New System.Drawing.Point(5, 39)
             Me.Label5.Name = "Label5"
-            Me.Label5.Size = New System.Drawing.Size(46, 13)
+            Me.Label5.Size = New System.Drawing.Size(52, 13)
             Me.Label5.TabIndex = 11
             Me.Label5.Text = "BROKER:"
             '
             'txtNroPoliza
             '
             Me.txtNroPoliza.Enabled = False
-            Me.txtNroPoliza.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtNroPoliza.Location = New System.Drawing.Point(87, 57)
+            Me.txtNroPoliza.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtNroPoliza.Location = New System.Drawing.Point(89, 59)
             Me.txtNroPoliza.Name = "txtNroPoliza"
             Me.txtNroPoliza.Size = New System.Drawing.Size(95, 21)
             Me.txtNroPoliza.TabIndex = 14
@@ -269,18 +269,18 @@
             'Label6
             '
             Me.Label6.AutoSize = True
-            Me.Label6.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label6.Location = New System.Drawing.Point(5, 57)
+            Me.Label6.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Label6.Location = New System.Drawing.Point(5, 60)
             Me.Label6.Name = "Label6"
-            Me.Label6.Size = New System.Drawing.Size(56, 13)
+            Me.Label6.Size = New System.Drawing.Size(63, 13)
             Me.Label6.TabIndex = 13
             Me.Label6.Text = "N° POLIZA:"
             '
             'txtCostoPrima
             '
             Me.txtCostoPrima.Enabled = False
-            Me.txtCostoPrima.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtCostoPrima.Location = New System.Drawing.Point(87, 79)
+            Me.txtCostoPrima.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtCostoPrima.Location = New System.Drawing.Point(89, 83)
             Me.txtCostoPrima.Name = "txtCostoPrima"
             Me.txtCostoPrima.Size = New System.Drawing.Size(95, 21)
             Me.txtCostoPrima.TabIndex = 16
@@ -288,10 +288,10 @@
             'Label7
             '
             Me.Label7.AutoSize = True
-            Me.Label7.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label7.Location = New System.Drawing.Point(5, 79)
+            Me.Label7.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Label7.Location = New System.Drawing.Point(3, 82)
             Me.Label7.Name = "Label7"
-            Me.Label7.Size = New System.Drawing.Size(74, 13)
+            Me.Label7.Size = New System.Drawing.Size(84, 13)
             Me.Label7.TabIndex = 15
             Me.Label7.Text = "COSTO PRIMA:"
             '
@@ -318,19 +318,19 @@
             'Label9
             '
             Me.Label9.AutoSize = True
-            Me.Label9.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Label9.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Label9.ForeColor = System.Drawing.Color.Black
-            Me.Label9.Location = New System.Drawing.Point(434, 30)
+            Me.Label9.Location = New System.Drawing.Point(438, 39)
             Me.Label9.Name = "Label9"
-            Me.Label9.Size = New System.Drawing.Size(70, 26)
+            Me.Label9.Size = New System.Drawing.Size(137, 13)
             Me.Label9.TabIndex = 19
-            Me.Label9.Text = "FECHA INICIO " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "CONTRATO:"
+            Me.Label9.Text = "FECHA INICIO CONTRATO"
             '
             'dtpFechaInicioContrato
             '
             Me.dtpFechaInicioContrato.Enabled = False
-            Me.dtpFechaInicioContrato.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.dtpFechaInicioContrato.Location = New System.Drawing.Point(532, 35)
+            Me.dtpFechaInicioContrato.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.dtpFechaInicioContrato.Location = New System.Drawing.Point(604, 35)
             Me.dtpFechaInicioContrato.Name = "dtpFechaInicioContrato"
             Me.dtpFechaInicioContrato.Size = New System.Drawing.Size(200, 21)
             Me.dtpFechaInicioContrato.TabIndex = 20
@@ -338,8 +338,8 @@
             'dtpFechaFinalContrato
             '
             Me.dtpFechaFinalContrato.Enabled = False
-            Me.dtpFechaFinalContrato.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.dtpFechaFinalContrato.Location = New System.Drawing.Point(532, 57)
+            Me.dtpFechaFinalContrato.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.dtpFechaFinalContrato.Location = New System.Drawing.Point(604, 59)
             Me.dtpFechaFinalContrato.Name = "dtpFechaFinalContrato"
             Me.dtpFechaFinalContrato.Size = New System.Drawing.Size(200, 21)
             Me.dtpFechaFinalContrato.TabIndex = 22
@@ -347,19 +347,19 @@
             'Label10
             '
             Me.Label10.AutoSize = True
-            Me.Label10.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Label10.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Label10.ForeColor = System.Drawing.Color.Black
-            Me.Label10.Location = New System.Drawing.Point(434, 57)
+            Me.Label10.Location = New System.Drawing.Point(438, 63)
             Me.Label10.Name = "Label10"
-            Me.Label10.Size = New System.Drawing.Size(70, 26)
+            Me.Label10.Size = New System.Drawing.Size(109, 13)
             Me.Label10.TabIndex = 21
-            Me.Label10.Text = "FECHA INICIO " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "FINAL:"
+            Me.Label10.Text = "FECHA INICIO FINAL"
             '
             'dtpFechaRenovacionContrato
             '
             Me.dtpFechaRenovacionContrato.Enabled = False
-            Me.dtpFechaRenovacionContrato.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.dtpFechaRenovacionContrato.Location = New System.Drawing.Point(532, 79)
+            Me.dtpFechaRenovacionContrato.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.dtpFechaRenovacionContrato.Location = New System.Drawing.Point(604, 82)
             Me.dtpFechaRenovacionContrato.Name = "dtpFechaRenovacionContrato"
             Me.dtpFechaRenovacionContrato.Size = New System.Drawing.Size(200, 21)
             Me.dtpFechaRenovacionContrato.TabIndex = 24
@@ -367,13 +367,13 @@
             'Label11
             '
             Me.Label11.AutoSize = True
-            Me.Label11.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Label11.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Label11.ForeColor = System.Drawing.Color.Black
-            Me.Label11.Location = New System.Drawing.Point(434, 83)
+            Me.Label11.Location = New System.Drawing.Point(438, 85)
             Me.Label11.Name = "Label11"
-            Me.Label11.Size = New System.Drawing.Size(71, 26)
+            Me.Label11.Size = New System.Drawing.Size(148, 13)
             Me.Label11.TabIndex = 23
-            Me.Label11.Text = "FECHA INICIO " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "RENOVACIÓN:"
+            Me.Label11.Text = "FECHA INICIO RENOVACIÓN"
             '
             'dtpFechaRenovacionDispositivo
             '
@@ -463,7 +463,7 @@
             Me.GroupBox1.Controls.Add(Me.dtpFechaRenovacionContrato)
             Me.GroupBox1.Controls.Add(Me.Label11)
             Me.GroupBox1.Controls.Add(Me.dtpFechaFinalContrato)
-            Me.GroupBox1.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.GroupBox1.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.GroupBox1.Location = New System.Drawing.Point(2, 55)
             Me.GroupBox1.Name = "GroupBox1"
             Me.GroupBox1.Size = New System.Drawing.Size(881, 110)
@@ -504,13 +504,12 @@
             '
             'MenuStrip1
             '
-            Me.MenuStrip1.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.MenuStrip1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
             Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnModificar, Me.btnActualizar, Me.btnCancelarUnidadMedida})
             Me.MenuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow
             Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
             Me.MenuStrip1.Name = "MenuStrip1"
             Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(7, 2, 0, 2)
-            Me.MenuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
             Me.MenuStrip1.Size = New System.Drawing.Size(884, 24)
             Me.MenuStrip1.TabIndex = 188
             Me.MenuStrip1.Text = "msIngresoBodega"

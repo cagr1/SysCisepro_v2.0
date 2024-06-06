@@ -80,7 +80,7 @@
             Me.GroupBox1.Controls.Add(Me.Label2)
             Me.GroupBox1.Controls.Add(Me.btnCargar)
             Me.GroupBox1.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.GroupBox1.Location = New System.Drawing.Point(5, 27)
+            Me.GroupBox1.Location = New System.Drawing.Point(5, 38)
             Me.GroupBox1.Name = "GroupBox1"
             Me.GroupBox1.Size = New System.Drawing.Size(998, 274)
             Me.GroupBox1.TabIndex = 9
@@ -104,13 +104,11 @@
             'btnBuscar
             '
             Me.btnBuscar.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnBuscar.Image = Global.syscisepro.My.Resources.Resources.BuscarRegistro
-            Me.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+            Me.btnBuscar.Image = Global.syscisepro.My.Resources.Resources.search_24dp_FILL0_wght400_GRAD0_opsz24__2_
             Me.btnBuscar.Location = New System.Drawing.Point(471, 14)
             Me.btnBuscar.Name = "btnBuscar"
-            Me.btnBuscar.Size = New System.Drawing.Size(66, 29)
+            Me.btnBuscar.Size = New System.Drawing.Size(37, 29)
             Me.btnBuscar.TabIndex = 11
-            Me.btnBuscar.Text = "BUSCAR"
             Me.btnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
             Me.btnBuscar.UseVisualStyleBackColor = True
             '
@@ -158,13 +156,11 @@
             'btnCargar
             '
             Me.btnCargar.Font = New System.Drawing.Font("Calibri", 8.25!)
-            Me.btnCargar.Image = Global.syscisepro.My.Resources.Resources.oki
-            Me.btnCargar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-            Me.btnCargar.Location = New System.Drawing.Point(545, 14)
+            Me.btnCargar.Image = Global.syscisepro.My.Resources.Resources.refresh_24dp_FILL0_wght400_GRAD0_opsz24__2_
+            Me.btnCargar.Location = New System.Drawing.Point(516, 14)
             Me.btnCargar.Name = "btnCargar"
-            Me.btnCargar.Size = New System.Drawing.Size(69, 29)
+            Me.btnCargar.Size = New System.Drawing.Size(37, 29)
             Me.btnCargar.TabIndex = 12
-            Me.btnCargar.Text = "CARGAR"
             Me.btnCargar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
             Me.btnCargar.UseVisualStyleBackColor = True
             '
@@ -327,7 +323,7 @@
             Me.gbDepreciaciones.Controls.Add(Me.lblFecha)
             Me.gbDepreciaciones.Controls.Add(Me.lblIdDepreciacion)
             Me.gbDepreciaciones.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.gbDepreciaciones.Location = New System.Drawing.Point(5, 307)
+            Me.gbDepreciaciones.Location = New System.Drawing.Point(5, 314)
             Me.gbDepreciaciones.Name = "gbDepreciaciones"
             Me.gbDepreciaciones.Size = New System.Drawing.Size(998, 285)
             Me.gbDepreciaciones.TabIndex = 8
@@ -396,42 +392,42 @@
             '
             'MenuStrip1
             '
-            Me.MenuStrip1.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.MenuStrip1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
             Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnDepreciar, Me.btnGuardar, Me.btnReporte})
             Me.MenuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow
             Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
             Me.MenuStrip1.Name = "MenuStrip1"
             Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(7, 2, 0, 2)
-            Me.MenuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
-            Me.MenuStrip1.Size = New System.Drawing.Size(1007, 24)
+            Me.MenuStrip1.Size = New System.Drawing.Size(1007, 32)
             Me.MenuStrip1.TabIndex = 189
             Me.MenuStrip1.Text = "msIngresoBodega"
             '
             'btnDepreciar
             '
             Me.btnDepreciar.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnDepreciar.Image = Global.syscisepro.My.Resources.Resources.EliminarRegistro
+            Me.btnDepreciar.Image = Global.syscisepro.My.Resources.Resources.playlist_remove_24dp_FILL0_wght400_GRAD0_opsz24__3_
             Me.btnDepreciar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnDepreciar.Name = "btnDepreciar"
-            Me.btnDepreciar.Size = New System.Drawing.Size(98, 20)
+            Me.btnDepreciar.Size = New System.Drawing.Size(106, 28)
             Me.btnDepreciar.Text = "DEPRECIAR"
             '
             'btnGuardar
             '
             Me.btnGuardar.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnGuardar.Image = Global.syscisepro.My.Resources.Resources.GuardarRegistro
+            Me.btnGuardar.Image = Global.syscisepro.My.Resources.Resources.save_24dp_FILL0_wght400_GRAD0_opsz24__3_
             Me.btnGuardar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnGuardar.Name = "btnGuardar"
-            Me.btnGuardar.Size = New System.Drawing.Size(84, 20)
+            Me.btnGuardar.Size = New System.Drawing.Size(92, 28)
             Me.btnGuardar.Text = "GUARDAR"
             '
             'btnReporte
             '
+            Me.btnReporte.AutoSize = False
             Me.btnReporte.Enabled = False
             Me.btnReporte.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnReporte.Image = Global.syscisepro.My.Resources.Resources.report
+            Me.btnReporte.Image = Global.syscisepro.My.Resources.Resources.description_24dp_FILL0_wght400_GRAD0_opsz24
             Me.btnReporte.Name = "btnReporte"
-            Me.btnReporte.Size = New System.Drawing.Size(84, 20)
+            Me.btnReporte.Size = New System.Drawing.Size(84, 28)
             Me.btnReporte.Text = "REPORTE"
             '
             'FormDepreciaciones
@@ -439,7 +435,7 @@
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.BackColor = System.Drawing.Color.White
-            Me.ClientSize = New System.Drawing.Size(1007, 595)
+            Me.ClientSize = New System.Drawing.Size(1007, 603)
             Me.Controls.Add(Me.MenuStrip1)
             Me.Controls.Add(Me.txtFechaActual)
             Me.Controls.Add(Me.GroupBox1)

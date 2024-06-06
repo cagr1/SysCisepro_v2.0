@@ -225,10 +225,10 @@
             Me.btnGuardarMarca.BackColor = System.Drawing.Color.White
             Me.btnGuardarMarca.Enabled = False
             Me.btnGuardarMarca.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnGuardarMarca.Image = Global.syscisepro.My.Resources.Resources.save_24dp_FILL0_wght400_GRAD0_opsz24
+            Me.btnGuardarMarca.Image = Global.syscisepro.My.Resources.Resources.save_24dp_FILL0_wght400_GRAD0_opsz24__2_
             Me.btnGuardarMarca.Location = New System.Drawing.Point(275, 22)
             Me.btnGuardarMarca.Name = "btnGuardarMarca"
-            Me.btnGuardarMarca.Size = New System.Drawing.Size(47, 38)
+            Me.btnGuardarMarca.Size = New System.Drawing.Size(41, 30)
             Me.btnGuardarMarca.TabIndex = 75
             Me.btnGuardarMarca.UseVisualStyleBackColor = False
             '
@@ -238,10 +238,10 @@
             Me.btnNuevoMarca.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
             Me.btnNuevoMarca.FlatAppearance.BorderSize = 0
             Me.btnNuevoMarca.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnNuevoMarca.Image = Global.syscisepro.My.Resources.Resources.add_circle_24dp_FILL0_wght400_GRAD0_opsz24
+            Me.btnNuevoMarca.Image = Global.syscisepro.My.Resources.Resources.add_circle_24dp_FILL0_wght400_GRAD0_opsz24__3_
             Me.btnNuevoMarca.Location = New System.Drawing.Point(220, 22)
             Me.btnNuevoMarca.Name = "btnNuevoMarca"
-            Me.btnNuevoMarca.Size = New System.Drawing.Size(45, 38)
+            Me.btnNuevoMarca.Size = New System.Drawing.Size(41, 30)
             Me.btnNuevoMarca.TabIndex = 74
             Me.btnNuevoMarca.TextAlign = System.Drawing.ContentAlignment.BottomCenter
             Me.btnNuevoMarca.UseVisualStyleBackColor = False
@@ -267,9 +267,9 @@
             '
             Me.btnVolver.BackColor = System.Drawing.Color.White
             Me.btnVolver.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnVolver.Image = Global.syscisepro.My.Resources.Resources.check_circle_24dp_FILL0_wght400_GRAD0_opsz24__1_
+            Me.btnVolver.Image = Global.syscisepro.My.Resources.Resources.check_circle_24dp_FILL0_wght400_GRAD0_opsz24__3_
             Me.btnVolver.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-            Me.btnVolver.Location = New System.Drawing.Point(225, 330)
+            Me.btnVolver.Location = New System.Drawing.Point(149, 329)
             Me.btnVolver.Name = "btnVolver"
             Me.btnVolver.Size = New System.Drawing.Size(114, 32)
             Me.btnVolver.TabIndex = 76
@@ -297,10 +297,10 @@
             Me.btnGuardarMaterial.BackColor = System.Drawing.Color.White
             Me.btnGuardarMaterial.Enabled = False
             Me.btnGuardarMaterial.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnGuardarMaterial.Image = Global.syscisepro.My.Resources.Resources.save_24dp_FILL0_wght400_GRAD0_opsz24
+            Me.btnGuardarMaterial.Image = Global.syscisepro.My.Resources.Resources.save_24dp_FILL0_wght400_GRAD0_opsz24__2_
             Me.btnGuardarMaterial.Location = New System.Drawing.Point(276, 19)
             Me.btnGuardarMaterial.Name = "btnGuardarMaterial"
-            Me.btnGuardarMaterial.Size = New System.Drawing.Size(47, 38)
+            Me.btnGuardarMaterial.Size = New System.Drawing.Size(41, 30)
             Me.btnGuardarMaterial.TabIndex = 76
             Me.btnGuardarMaterial.TabStop = False
             Me.btnGuardarMaterial.TextAlign = System.Drawing.ContentAlignment.BottomCenter
@@ -320,10 +320,10 @@
             '
             Me.btnNuevoMaterial.BackColor = System.Drawing.Color.White
             Me.btnNuevoMaterial.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnNuevoMaterial.Image = Global.syscisepro.My.Resources.Resources.add_circle_24dp_FILL0_wght400_GRAD0_opsz24
+            Me.btnNuevoMaterial.Image = Global.syscisepro.My.Resources.Resources.add_circle_24dp_FILL0_wght400_GRAD0_opsz24__3_
             Me.btnNuevoMaterial.Location = New System.Drawing.Point(221, 19)
             Me.btnNuevoMaterial.Name = "btnNuevoMaterial"
-            Me.btnNuevoMaterial.Size = New System.Drawing.Size(45, 38)
+            Me.btnNuevoMaterial.Size = New System.Drawing.Size(41, 30)
             Me.btnNuevoMaterial.TabIndex = 75
             Me.btnNuevoMaterial.TextAlign = System.Drawing.ContentAlignment.BottomCenter
             Me.btnNuevoMaterial.UseVisualStyleBackColor = False
@@ -358,10 +358,10 @@
             Me.btnGuardarColor.BackColor = System.Drawing.Color.White
             Me.btnGuardarColor.Enabled = False
             Me.btnGuardarColor.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnGuardarColor.Image = Global.syscisepro.My.Resources.Resources.save_24dp_FILL0_wght400_GRAD0_opsz24
+            Me.btnGuardarColor.Image = Global.syscisepro.My.Resources.Resources.save_24dp_FILL0_wght400_GRAD0_opsz24__2_
             Me.btnGuardarColor.Location = New System.Drawing.Point(275, 31)
             Me.btnGuardarColor.Name = "btnGuardarColor"
-            Me.btnGuardarColor.Size = New System.Drawing.Size(47, 36)
+            Me.btnGuardarColor.Size = New System.Drawing.Size(41, 30)
             Me.btnGuardarColor.TabIndex = 73
             Me.btnGuardarColor.TextAlign = System.Drawing.ContentAlignment.BottomCenter
             Me.btnGuardarColor.UseVisualStyleBackColor = False
@@ -370,11 +370,10 @@
             '
             Me.btnNuevoColor.BackColor = System.Drawing.Color.White
             Me.btnNuevoColor.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnNuevoColor.Image = Global.syscisepro.My.Resources.Resources.add_circle_24dp_FILL0_wght400_GRAD0_opsz24
-            Me.btnNuevoColor.ImageAlign = System.Drawing.ContentAlignment.TopCenter
+            Me.btnNuevoColor.Image = Global.syscisepro.My.Resources.Resources.add_circle_24dp_FILL0_wght400_GRAD0_opsz24__3_
             Me.btnNuevoColor.Location = New System.Drawing.Point(223, 31)
             Me.btnNuevoColor.Name = "btnNuevoColor"
-            Me.btnNuevoColor.Size = New System.Drawing.Size(42, 36)
+            Me.btnNuevoColor.Size = New System.Drawing.Size(41, 30)
             Me.btnNuevoColor.TabIndex = 71
             Me.btnNuevoColor.TextAlign = System.Drawing.ContentAlignment.BottomCenter
             Me.btnNuevoColor.UseVisualStyleBackColor = False

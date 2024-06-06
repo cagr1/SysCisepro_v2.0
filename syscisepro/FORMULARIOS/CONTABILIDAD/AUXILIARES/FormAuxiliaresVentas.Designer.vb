@@ -68,7 +68,7 @@
             '
             Me.tcAuxiliares.Controls.Add(Me.tpActualizar)
             Me.tcAuxiliares.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.tcAuxiliares.Location = New System.Drawing.Point(2, 28)
+            Me.tcAuxiliares.Location = New System.Drawing.Point(2, 37)
             Me.tcAuxiliares.Name = "tcAuxiliares"
             Me.tcAuxiliares.SelectedIndex = 0
             Me.tcAuxiliares.Size = New System.Drawing.Size(984, 680)
@@ -311,43 +311,45 @@
             Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
             Me.MenuStrip1.Name = "MenuStrip1"
             Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(7, 2, 0, 2)
-            Me.MenuStrip1.Size = New System.Drawing.Size(984, 24)
+            Me.MenuStrip1.Size = New System.Drawing.Size(984, 32)
             Me.MenuStrip1.TabIndex = 188
             Me.MenuStrip1.Text = "msIngresoBodega"
             '
             'btnCargar
             '
             Me.btnCargar.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnCargar.Image = Global.syscisepro.My.Resources.Resources.BuscarRegistro
+            Me.btnCargar.Image = Global.syscisepro.My.Resources.Resources.refresh_24dp_FILL0_wght400_GRAD0_opsz24__2_
+            Me.btnCargar.ImageAlign = System.Drawing.ContentAlignment.TopCenter
+            Me.btnCargar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnCargar.Name = "btnCargar"
-            Me.btnCargar.Size = New System.Drawing.Size(81, 20)
+            Me.btnCargar.Size = New System.Drawing.Size(89, 28)
             Me.btnCargar.Text = "CARGAR"
             '
             'btnExportar
             '
             Me.btnExportar.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnExportar.Image = Global.syscisepro.My.Resources.Resources.excel_icon
+            Me.btnExportar.Image = Global.syscisepro.My.Resources.Resources.icons8_excel_48
             Me.btnExportar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnExportar.Name = "btnExportar"
-            Me.btnExportar.Size = New System.Drawing.Size(134, 20)
+            Me.btnExportar.Size = New System.Drawing.Size(142, 28)
             Me.btnExportar.Text = "EXPORTAR VENTAS"
             '
             'ToolStripMenuItem1
             '
             Me.ToolStripMenuItem1.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.ToolStripMenuItem1.Image = Global.syscisepro.My.Resources.Resources.excel_icon
+            Me.ToolStripMenuItem1.Image = Global.syscisepro.My.Resources.Resources.icons8_excel_48
             Me.ToolStripMenuItem1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
-            Me.ToolStripMenuItem1.Size = New System.Drawing.Size(156, 20)
+            Me.ToolStripMenuItem1.Size = New System.Drawing.Size(164, 28)
             Me.ToolStripMenuItem1.Text = "EXPORTAR RETENCIÓN"
             '
             'ToolStripMenuItem2
             '
             Me.ToolStripMenuItem2.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.ToolStripMenuItem2.Image = Global.syscisepro.My.Resources.Resources.excel_icon
+            Me.ToolStripMenuItem2.Image = Global.syscisepro.My.Resources.Resources.icons8_excel_48
             Me.ToolStripMenuItem2.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.ToolStripMenuItem2.Name = "ToolStripMenuItem2"
-            Me.ToolStripMenuItem2.Size = New System.Drawing.Size(139, 20)
+            Me.ToolStripMenuItem2.Size = New System.Drawing.Size(147, 28)
             Me.ToolStripMenuItem2.Text = "EXPORTAR ASIENTO"
             '
             'FormAuxiliaresVentas
@@ -355,7 +357,7 @@
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.BackColor = System.Drawing.Color.White
-            Me.ClientSize = New System.Drawing.Size(984, 709)
+            Me.ClientSize = New System.Drawing.Size(984, 719)
             Me.Controls.Add(Me.MenuStrip1)
             Me.Controls.Add(Me.tcAuxiliares)
             Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow

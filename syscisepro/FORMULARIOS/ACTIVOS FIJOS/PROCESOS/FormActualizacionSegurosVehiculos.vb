@@ -233,5 +233,8 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
             MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
         End Sub
 
+        Private Sub Label9_Click(sender As Object, e As EventArgs) Handles Label9.Click
+
+        End Sub
     End Class
 End Namespace

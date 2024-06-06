@@ -102,7 +102,7 @@
             '
             Me.Label1.AutoSize = True
             Me.Label1.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label1.Location = New System.Drawing.Point(808, 34)
+            Me.Label1.Location = New System.Drawing.Point(808, 43)
             Me.Label1.Name = "Label1"
             Me.Label1.Size = New System.Drawing.Size(19, 13)
             Me.Label1.TabIndex = 0
@@ -112,7 +112,7 @@
             '
             Me.txtIdTransferencia.Enabled = False
             Me.txtIdTransferencia.Font = New System.Drawing.Font("Calibri", 9.75!)
-            Me.txtIdTransferencia.Location = New System.Drawing.Point(845, 30)
+            Me.txtIdTransferencia.Location = New System.Drawing.Point(845, 41)
             Me.txtIdTransferencia.Name = "txtIdTransferencia"
             Me.txtIdTransferencia.Size = New System.Drawing.Size(100, 23)
             Me.txtIdTransferencia.TabIndex = 1
@@ -126,7 +126,7 @@
             Me.gbParámetros.Controls.Add(Me.txtBusqueda)
             Me.gbParámetros.Controls.Add(Me.rbApellido)
             Me.gbParámetros.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.gbParámetros.Location = New System.Drawing.Point(3, 143)
+            Me.gbParámetros.Location = New System.Drawing.Point(3, 148)
             Me.gbParámetros.Name = "gbParámetros"
             Me.gbParámetros.Size = New System.Drawing.Size(1005, 133)
             Me.gbParámetros.TabIndex = 41
@@ -206,7 +206,7 @@
             '
             Me.txtIdCustodioNuevo.Enabled = False
             Me.txtIdCustodioNuevo.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtIdCustodioNuevo.Location = New System.Drawing.Point(138, 83)
+            Me.txtIdCustodioNuevo.Location = New System.Drawing.Point(138, 96)
             Me.txtIdCustodioNuevo.Name = "txtIdCustodioNuevo"
             Me.txtIdCustodioNuevo.Size = New System.Drawing.Size(85, 23)
             Me.txtIdCustodioNuevo.TabIndex = 42
@@ -215,7 +215,7 @@
             '
             Me.txtNombreCustodioNuevo.Enabled = False
             Me.txtNombreCustodioNuevo.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtNombreCustodioNuevo.Location = New System.Drawing.Point(229, 83)
+            Me.txtNombreCustodioNuevo.Location = New System.Drawing.Point(229, 96)
             Me.txtNombreCustodioNuevo.Name = "txtNombreCustodioNuevo"
             Me.txtNombreCustodioNuevo.Size = New System.Drawing.Size(337, 23)
             Me.txtNombreCustodioNuevo.TabIndex = 43
@@ -224,7 +224,7 @@
             '
             Me.Label2.AutoSize = True
             Me.Label2.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label2.Location = New System.Drawing.Point(7, 88)
+            Me.Label2.Location = New System.Drawing.Point(7, 97)
             Me.Label2.Name = "Label2"
             Me.Label2.Size = New System.Drawing.Size(108, 15)
             Me.Label2.TabIndex = 44
@@ -250,7 +250,7 @@
             Me.GroupBox1.Controls.Add(Me.txtBusquedaActivoFijo)
             Me.GroupBox1.Controls.Add(Me.rbCodigoActivo)
             Me.GroupBox1.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.GroupBox1.Location = New System.Drawing.Point(3, 278)
+            Me.GroupBox1.Location = New System.Drawing.Point(3, 288)
             Me.GroupBox1.Name = "GroupBox1"
             Me.GroupBox1.Size = New System.Drawing.Size(1005, 189)
             Me.GroupBox1.TabIndex = 42
@@ -315,13 +315,11 @@
             Me.btnEliminarActivoFijoTransferencia.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Lime
             Me.btnEliminarActivoFijoTransferencia.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.InactiveCaptionText
             Me.btnEliminarActivoFijoTransferencia.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnEliminarActivoFijoTransferencia.Image = Global.syscisepro.My.Resources.Resources.remove
-            Me.btnEliminarActivoFijoTransferencia.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-            Me.btnEliminarActivoFijoTransferencia.Location = New System.Drawing.Point(924, 24)
+            Me.btnEliminarActivoFijoTransferencia.Image = Global.syscisepro.My.Resources.Resources.do_not_disturb_on_24dp_FILL0_wght400_GRAD0_opsz24
+            Me.btnEliminarActivoFijoTransferencia.Location = New System.Drawing.Point(890, 24)
             Me.btnEliminarActivoFijoTransferencia.Name = "btnEliminarActivoFijoTransferencia"
-            Me.btnEliminarActivoFijoTransferencia.Size = New System.Drawing.Size(75, 38)
+            Me.btnEliminarActivoFijoTransferencia.Size = New System.Drawing.Size(41, 30)
             Me.btnEliminarActivoFijoTransferencia.TabIndex = 87
-            Me.btnEliminarActivoFijoTransferencia.Text = "ELIMINAR"
             Me.btnEliminarActivoFijoTransferencia.TextAlign = System.Drawing.ContentAlignment.BottomCenter
             Me.btnEliminarActivoFijoTransferencia.UseVisualStyleBackColor = False
             '
@@ -434,13 +432,11 @@
             Me.btnAgregarActivoFijo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Lime
             Me.btnAgregarActivoFijo.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.InactiveCaptionText
             Me.btnAgregarActivoFijo.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnAgregarActivoFijo.Image = Global.syscisepro.My.Resources.Resources.add
-            Me.btnAgregarActivoFijo.ImageAlign = System.Drawing.ContentAlignment.TopCenter
+            Me.btnAgregarActivoFijo.Image = Global.syscisepro.My.Resources.Resources.add_circle_24dp_FILL0_wght400_GRAD0_opsz24__3_
             Me.btnAgregarActivoFijo.Location = New System.Drawing.Point(843, 24)
             Me.btnAgregarActivoFijo.Name = "btnAgregarActivoFijo"
-            Me.btnAgregarActivoFijo.Size = New System.Drawing.Size(75, 38)
+            Me.btnAgregarActivoFijo.Size = New System.Drawing.Size(41, 30)
             Me.btnAgregarActivoFijo.TabIndex = 34
-            Me.btnAgregarActivoFijo.Text = "AGREGAR"
             Me.btnAgregarActivoFijo.TextAlign = System.Drawing.ContentAlignment.BottomCenter
             Me.btnAgregarActivoFijo.UseVisualStyleBackColor = False
             '
@@ -468,7 +464,7 @@
             Me.GroupBox2.BackColor = System.Drawing.Color.White
             Me.GroupBox2.Controls.Add(Me.dgvTransferencias)
             Me.GroupBox2.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.GroupBox2.Location = New System.Drawing.Point(3, 468)
+            Me.GroupBox2.Location = New System.Drawing.Point(3, 477)
             Me.GroupBox2.Name = "GroupBox2"
             Me.GroupBox2.Size = New System.Drawing.Size(1005, 204)
             Me.GroupBox2.TabIndex = 48
@@ -565,7 +561,7 @@
             '
             Me.txtFechaTransferencia.Enabled = False
             Me.txtFechaTransferencia.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtFechaTransferencia.Location = New System.Drawing.Point(648, 30)
+            Me.txtFechaTransferencia.Location = New System.Drawing.Point(648, 41)
             Me.txtFechaTransferencia.Name = "txtFechaTransferencia"
             Me.txtFechaTransferencia.Size = New System.Drawing.Size(130, 23)
             Me.txtFechaTransferencia.TabIndex = 49
@@ -575,7 +571,7 @@
             '
             Me.Label3.AutoSize = True
             Me.Label3.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label3.Location = New System.Drawing.Point(7, 64)
+            Me.Label3.Location = New System.Drawing.Point(7, 73)
             Me.Label3.Name = "Label3"
             Me.Label3.Size = New System.Drawing.Size(128, 15)
             Me.Label3.TabIndex = 50
@@ -585,7 +581,7 @@
             '
             Me.txtNombreCustodioAnterior.Enabled = False
             Me.txtNombreCustodioAnterior.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtNombreCustodioAnterior.Location = New System.Drawing.Point(229, 30)
+            Me.txtNombreCustodioAnterior.Location = New System.Drawing.Point(229, 41)
             Me.txtNombreCustodioAnterior.Name = "txtNombreCustodioAnterior"
             Me.txtNombreCustodioAnterior.Size = New System.Drawing.Size(337, 23)
             Me.txtNombreCustodioAnterior.TabIndex = 51
@@ -594,7 +590,7 @@
             '
             Me.txtUbicacionNueva.Enabled = False
             Me.txtUbicacionNueva.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtUbicacionNueva.Location = New System.Drawing.Point(138, 111)
+            Me.txtUbicacionNueva.Location = New System.Drawing.Point(138, 125)
             Me.txtUbicacionNueva.Name = "txtUbicacionNueva"
             Me.txtUbicacionNueva.Size = New System.Drawing.Size(428, 23)
             Me.txtUbicacionNueva.TabIndex = 53
@@ -603,7 +599,7 @@
             '
             Me.Label6.AutoSize = True
             Me.Label6.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label6.Location = New System.Drawing.Point(6, 114)
+            Me.Label6.Location = New System.Drawing.Point(6, 123)
             Me.Label6.Name = "Label6"
             Me.Label6.Size = New System.Drawing.Size(109, 15)
             Me.Label6.TabIndex = 52
@@ -613,7 +609,7 @@
             '
             Me.Label7.AutoSize = True
             Me.Label7.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label7.Location = New System.Drawing.Point(7, 38)
+            Me.Label7.Location = New System.Drawing.Point(7, 47)
             Me.Label7.Name = "Label7"
             Me.Label7.Size = New System.Drawing.Size(124, 15)
             Me.Label7.TabIndex = 56
@@ -623,7 +619,7 @@
             '
             Me.txtUbicacionAnterior.Enabled = False
             Me.txtUbicacionAnterior.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtUbicacionAnterior.Location = New System.Drawing.Point(138, 56)
+            Me.txtUbicacionAnterior.Location = New System.Drawing.Point(138, 69)
             Me.txtUbicacionAnterior.Name = "txtUbicacionAnterior"
             Me.txtUbicacionAnterior.Size = New System.Drawing.Size(428, 23)
             Me.txtUbicacionAnterior.TabIndex = 55
@@ -632,7 +628,7 @@
             '
             Me.txtIdCustodioAnterior.Enabled = False
             Me.txtIdCustodioAnterior.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtIdCustodioAnterior.Location = New System.Drawing.Point(138, 30)
+            Me.txtIdCustodioAnterior.Location = New System.Drawing.Point(138, 42)
             Me.txtIdCustodioAnterior.Name = "txtIdCustodioAnterior"
             Me.txtIdCustodioAnterior.Size = New System.Drawing.Size(85, 23)
             Me.txtIdCustodioAnterior.TabIndex = 54
@@ -641,7 +637,7 @@
             '
             Me.Label8.AutoSize = True
             Me.Label8.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label8.Location = New System.Drawing.Point(587, 34)
+            Me.Label8.Location = New System.Drawing.Point(587, 45)
             Me.Label8.Name = "Label8"
             Me.Label8.Size = New System.Drawing.Size(44, 13)
             Me.Label8.TabIndex = 57
@@ -651,7 +647,7 @@
             '
             Me.Label9.AutoSize = True
             Me.Label9.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label9.Location = New System.Drawing.Point(587, 56)
+            Me.Label9.Location = New System.Drawing.Point(587, 65)
             Me.Label9.Name = "Label9"
             Me.Label9.Size = New System.Drawing.Size(115, 15)
             Me.Label9.TabIndex = 58
@@ -661,7 +657,7 @@
             '
             Me.txtRazon.Enabled = False
             Me.txtRazon.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtRazon.Location = New System.Drawing.Point(590, 116)
+            Me.txtRazon.Location = New System.Drawing.Point(588, 125)
             Me.txtRazon.Name = "txtRazon"
             Me.txtRazon.Size = New System.Drawing.Size(418, 23)
             Me.txtRazon.TabIndex = 61
@@ -670,7 +666,7 @@
             '
             Me.Label10.AutoSize = True
             Me.Label10.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label10.Location = New System.Drawing.Point(587, 98)
+            Me.Label10.Location = New System.Drawing.Point(587, 107)
             Me.Label10.Name = "Label10"
             Me.Label10.Size = New System.Drawing.Size(47, 15)
             Me.Label10.TabIndex = 60
@@ -683,50 +679,51 @@
             Me.cbAutoriza.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.cbAutoriza.FormattingEnabled = True
             Me.cbAutoriza.Items.AddRange(New Object() {"MAYOR IGNACIO NAVARRETE GERENTE GENERAL", "ING. JOSE NAVARRETE GERENTE DE OPERACIONES", "ING. JORGE ARMIJOS GERENTE ADMINISTRATIVO"})
-            Me.cbAutoriza.Location = New System.Drawing.Point(590, 74)
+            Me.cbAutoriza.Location = New System.Drawing.Point(590, 83)
             Me.cbAutoriza.Name = "cbAutoriza"
             Me.cbAutoriza.Size = New System.Drawing.Size(418, 21)
             Me.cbAutoriza.TabIndex = 62
             '
             'MenuStrip1
             '
-            Me.MenuStrip1.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.MenuStrip1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
             Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ButtonNuevoRegistro, Me.btnGuardarTransferencia, Me.btnCancelarParametroDocumentos})
             Me.MenuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow
             Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
             Me.MenuStrip1.Name = "MenuStrip1"
             Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(7, 2, 0, 2)
-            Me.MenuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
-            Me.MenuStrip1.Size = New System.Drawing.Size(1014, 24)
+            Me.MenuStrip1.Size = New System.Drawing.Size(1012, 32)
             Me.MenuStrip1.TabIndex = 187
             Me.MenuStrip1.Text = "msIngresoBodega"
             '
             'ButtonNuevoRegistro
             '
             Me.ButtonNuevoRegistro.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.ButtonNuevoRegistro.Image = CType(resources.GetObject("ButtonNuevoRegistro.Image"), System.Drawing.Image)
+            Me.ButtonNuevoRegistro.Image = Global.syscisepro.My.Resources.Resources.add_circle_24dp_FILL0_wght400_GRAD0_opsz24__3_
             Me.ButtonNuevoRegistro.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.ButtonNuevoRegistro.Name = "ButtonNuevoRegistro"
-            Me.ButtonNuevoRegistro.Size = New System.Drawing.Size(70, 20)
+            Me.ButtonNuevoRegistro.Size = New System.Drawing.Size(78, 28)
             Me.ButtonNuevoRegistro.Text = "NUEVO"
             '
             'btnGuardarTransferencia
             '
             Me.btnGuardarTransferencia.Enabled = False
             Me.btnGuardarTransferencia.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnGuardarTransferencia.Image = CType(resources.GetObject("btnGuardarTransferencia.Image"), System.Drawing.Image)
+            Me.btnGuardarTransferencia.Image = Global.syscisepro.My.Resources.Resources.save_24dp_FILL0_wght400_GRAD0_opsz24__2_
             Me.btnGuardarTransferencia.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnGuardarTransferencia.Name = "btnGuardarTransferencia"
-            Me.btnGuardarTransferencia.Size = New System.Drawing.Size(84, 20)
+            Me.btnGuardarTransferencia.Size = New System.Drawing.Size(92, 28)
             Me.btnGuardarTransferencia.Text = "GUARDAR"
             '
             'btnCancelarParametroDocumentos
             '
+            Me.btnCancelarParametroDocumentos.AutoSize = False
             Me.btnCancelarParametroDocumentos.Enabled = False
             Me.btnCancelarParametroDocumentos.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnCancelarParametroDocumentos.Image = Global.syscisepro.My.Resources.Resources.cancel
+            Me.btnCancelarParametroDocumentos.Image = Global.syscisepro.My.Resources.Resources.cancel_24dp_FILL0_wght400_GRAD0_opsz24
+            Me.btnCancelarParametroDocumentos.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnCancelarParametroDocumentos.Name = "btnCancelarParametroDocumentos"
-            Me.btnCancelarParametroDocumentos.Size = New System.Drawing.Size(91, 20)
+            Me.btnCancelarParametroDocumentos.Size = New System.Drawing.Size(91, 28)
             Me.btnCancelarParametroDocumentos.Text = "CANCELAR"
             '
             'FormTransferenciasActivosFijos
@@ -734,7 +731,7 @@
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.BackColor = System.Drawing.Color.White
-            Me.ClientSize = New System.Drawing.Size(1014, 670)
+            Me.ClientSize = New System.Drawing.Size(1012, 688)
             Me.Controls.Add(Me.MenuStrip1)
             Me.Controls.Add(Me.cbAutoriza)
             Me.Controls.Add(Me.txtRazon)

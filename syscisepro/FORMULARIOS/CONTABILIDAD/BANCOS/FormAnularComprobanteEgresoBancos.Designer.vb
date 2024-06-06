@@ -79,7 +79,7 @@
             DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
             DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
             Me.dgvComprobanteEgresoBancos.DefaultCellStyle = DataGridViewCellStyle2
-            Me.dgvComprobanteEgresoBancos.Location = New System.Drawing.Point(2, 88)
+            Me.dgvComprobanteEgresoBancos.Location = New System.Drawing.Point(2, 97)
             Me.dgvComprobanteEgresoBancos.Name = "dgvComprobanteEgresoBancos"
             Me.dgvComprobanteEgresoBancos.RowHeadersVisible = False
             Me.dgvComprobanteEgresoBancos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
@@ -101,7 +101,7 @@
             Me.gbBanco.Controls.Add(Me.lblIdBanco)
             Me.gbBanco.Controls.Add(Me.lblIdCuentaBancos)
             Me.gbBanco.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.gbBanco.Location = New System.Drawing.Point(405, 26)
+            Me.gbBanco.Location = New System.Drawing.Point(405, 35)
             Me.gbBanco.Name = "gbBanco"
             Me.gbBanco.Size = New System.Drawing.Size(346, 60)
             Me.gbBanco.TabIndex = 121
@@ -164,7 +164,7 @@
             Me.gbNumeroCheque.BackColor = System.Drawing.Color.White
             Me.gbNumeroCheque.Controls.Add(Me.txtNumeroCheque)
             Me.gbNumeroCheque.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.gbNumeroCheque.Location = New System.Drawing.Point(311, 26)
+            Me.gbNumeroCheque.Location = New System.Drawing.Point(311, 35)
             Me.gbNumeroCheque.Name = "gbNumeroCheque"
             Me.gbNumeroCheque.Size = New System.Drawing.Size(93, 60)
             Me.gbNumeroCheque.TabIndex = 120
@@ -190,7 +190,7 @@
             Me.gbEmitidosAprobados.Controls.Add(Me.rbAprobados)
             Me.gbEmitidosAprobados.Controls.Add(Me.rbEmitidos)
             Me.gbEmitidosAprobados.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.gbEmitidosAprobados.Location = New System.Drawing.Point(2, 26)
+            Me.gbEmitidosAprobados.Location = New System.Drawing.Point(2, 35)
             Me.gbEmitidosAprobados.Name = "gbEmitidosAprobados"
             Me.gbEmitidosAprobados.Size = New System.Drawing.Size(308, 60)
             Me.gbEmitidosAprobados.TabIndex = 119
@@ -268,7 +268,7 @@
             Me.gbRangoFechas.Controls.Add(Me.dtpHasta)
             Me.gbRangoFechas.Controls.Add(Me.dtpDesde)
             Me.gbRangoFechas.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.gbRangoFechas.Location = New System.Drawing.Point(752, 26)
+            Me.gbRangoFechas.Location = New System.Drawing.Point(752, 35)
             Me.gbRangoFechas.Name = "gbRangoFechas"
             Me.gbRangoFechas.Size = New System.Drawing.Size(389, 60)
             Me.gbRangoFechas.TabIndex = 118
@@ -322,33 +322,32 @@
             '
             'msKardex
             '
-            Me.msKardex.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.msKardex.Font = New System.Drawing.Font("Segoe UI", 9.0!)
             Me.msKardex.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnBuscar, Me.btnGuardar})
             Me.msKardex.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow
             Me.msKardex.Location = New System.Drawing.Point(0, 0)
             Me.msKardex.Name = "msKardex"
             Me.msKardex.Padding = New System.Windows.Forms.Padding(7, 2, 0, 2)
-            Me.msKardex.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
-            Me.msKardex.Size = New System.Drawing.Size(1143, 24)
+            Me.msKardex.Size = New System.Drawing.Size(1143, 32)
             Me.msKardex.TabIndex = 186
             Me.msKardex.Text = "msIngresoBodega"
             '
             'btnBuscar
             '
             Me.btnBuscar.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnBuscar.Image = Global.syscisepro.My.Resources.Resources.BuscarRegistro
+            Me.btnBuscar.Image = Global.syscisepro.My.Resources.Resources.search_24dp_FILL0_wght400_GRAD0_opsz24__2_
             Me.btnBuscar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnBuscar.Name = "btnBuscar"
-            Me.btnBuscar.Size = New System.Drawing.Size(119, 20)
-            Me.btnBuscar.Text = "BUSCAR TODOS"
+            Me.btnBuscar.Size = New System.Drawing.Size(92, 28)
+            Me.btnBuscar.Text = "BUSCAR "
             '
             'btnGuardar
             '
             Me.btnGuardar.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnGuardar.Image = Global.syscisepro.My.Resources.Resources.EliminarRegistro
+            Me.btnGuardar.Image = Global.syscisepro.My.Resources.Resources.playlist_remove_24dp_FILL0_wght400_GRAD0_opsz24__3_
             Me.btnGuardar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnGuardar.Name = "btnGuardar"
-            Me.btnGuardar.Size = New System.Drawing.Size(77, 20)
+            Me.btnGuardar.Size = New System.Drawing.Size(85, 28)
             Me.btnGuardar.Text = "ANULAR"
             '
             'FormAnularComprobanteEgresoBancos
@@ -356,7 +355,7 @@
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.BackColor = System.Drawing.Color.White
-            Me.ClientSize = New System.Drawing.Size(1143, 657)
+            Me.ClientSize = New System.Drawing.Size(1143, 665)
             Me.Controls.Add(Me.msKardex)
             Me.Controls.Add(Me.gbBanco)
             Me.Controls.Add(Me.gbNumeroCheque)

@@ -80,7 +80,7 @@
             Me.tcAuxiliaresLiquidaciones.Controls.Add(Me.tpLiquidaciones)
             Me.tcAuxiliaresLiquidaciones.Controls.Add(Me.tpReporte)
             Me.tcAuxiliaresLiquidaciones.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.tcAuxiliaresLiquidaciones.Location = New System.Drawing.Point(2, 52)
+            Me.tcAuxiliaresLiquidaciones.Location = New System.Drawing.Point(2, 45)
             Me.tcAuxiliaresLiquidaciones.Name = "tcAuxiliaresLiquidaciones"
             Me.tcAuxiliaresLiquidaciones.SelectedIndex = 0
             Me.tcAuxiliaresLiquidaciones.Size = New System.Drawing.Size(984, 596)
@@ -212,7 +212,7 @@
             Me.rbFondo.AutoSize = True
             Me.rbFondo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.rbFondo.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.rbFondo.Location = New System.Drawing.Point(230, 13)
+            Me.rbFondo.Location = New System.Drawing.Point(226, 12)
             Me.rbFondo.Name = "rbFondo"
             Me.rbFondo.Size = New System.Drawing.Size(61, 17)
             Me.rbFondo.TabIndex = 234
@@ -225,7 +225,7 @@
             Me.rbCaja.Checked = True
             Me.rbCaja.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.rbCaja.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.rbCaja.Location = New System.Drawing.Point(134, 13)
+            Me.rbCaja.Location = New System.Drawing.Point(134, 11)
             Me.rbCaja.Name = "rbCaja"
             Me.rbCaja.Size = New System.Drawing.Size(51, 17)
             Me.rbCaja.TabIndex = 233
@@ -395,57 +395,57 @@
             '
             'MenuStrip1
             '
-            Me.MenuStrip1.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.MenuStrip1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
             Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnCuadrar, Me.ToolStripMenuItem1, Me.ToolStripMenuItem2, Me.ToolStripMenuItem3})
             Me.MenuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow
             Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
             Me.MenuStrip1.Name = "MenuStrip1"
             Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(7, 2, 0, 2)
-            Me.MenuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
-            Me.MenuStrip1.Size = New System.Drawing.Size(986, 24)
+            Me.MenuStrip1.Size = New System.Drawing.Size(986, 32)
             Me.MenuStrip1.TabIndex = 191
             Me.MenuStrip1.Text = "msIngresoBodega"
             '
             'btnCuadrar
             '
             Me.btnCuadrar.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnCuadrar.Image = Global.syscisepro.My.Resources.Resources.BuscarRegistro
+            Me.btnCuadrar.Image = Global.syscisepro.My.Resources.Resources.refresh_24dp_FILL0_wght400_GRAD0_opsz24__2_
+            Me.btnCuadrar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnCuadrar.Name = "btnCuadrar"
-            Me.btnCuadrar.Size = New System.Drawing.Size(81, 20)
+            Me.btnCuadrar.Size = New System.Drawing.Size(89, 28)
             Me.btnCuadrar.Text = "CARGAR"
             '
             'ToolStripMenuItem1
             '
             Me.ToolStripMenuItem1.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.ToolStripMenuItem1.Image = Global.syscisepro.My.Resources.Resources.excel_icon
+            Me.ToolStripMenuItem1.Image = Global.syscisepro.My.Resources.Resources.icons8_excel_48
             Me.ToolStripMenuItem1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
-            Me.ToolStripMenuItem1.Size = New System.Drawing.Size(179, 20)
+            Me.ToolStripMenuItem1.Size = New System.Drawing.Size(187, 28)
             Me.ToolStripMenuItem1.Text = "EXPORTAR LIQUIDACIONES"
             '
             'ToolStripMenuItem2
             '
             Me.ToolStripMenuItem2.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.ToolStripMenuItem2.Image = Global.syscisepro.My.Resources.Resources.excel_icon
+            Me.ToolStripMenuItem2.Image = Global.syscisepro.My.Resources.Resources.icons8_excel_48
             Me.ToolStripMenuItem2.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.ToolStripMenuItem2.Name = "ToolStripMenuItem2"
-            Me.ToolStripMenuItem2.Size = New System.Drawing.Size(139, 20)
+            Me.ToolStripMenuItem2.Size = New System.Drawing.Size(147, 28)
             Me.ToolStripMenuItem2.Text = "EXPORTAR ASIENTO"
             '
             'ToolStripMenuItem3
             '
             Me.ToolStripMenuItem3.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.ToolStripMenuItem3.Image = Global.syscisepro.My.Resources.Resources.excel_icon
+            Me.ToolStripMenuItem3.Image = Global.syscisepro.My.Resources.Resources.icons8_excel_48
             Me.ToolStripMenuItem3.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.ToolStripMenuItem3.Name = "ToolStripMenuItem3"
-            Me.ToolStripMenuItem3.Size = New System.Drawing.Size(162, 20)
+            Me.ToolStripMenuItem3.Size = New System.Drawing.Size(170, 28)
             Me.ToolStripMenuItem3.Text = "EXPORTAR SOLICITUDES"
             '
             'lblHasta
             '
             Me.lblHasta.AutoSize = True
             Me.lblHasta.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.lblHasta.Location = New System.Drawing.Point(282, 30)
+            Me.lblHasta.Location = New System.Drawing.Point(434, 43)
             Me.lblHasta.Name = "lblHasta"
             Me.lblHasta.Size = New System.Drawing.Size(40, 13)
             Me.lblHasta.TabIndex = 220
@@ -455,7 +455,7 @@
             '
             Me.lblDesde.AutoSize = True
             Me.lblDesde.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.lblDesde.Location = New System.Drawing.Point(7, 30)
+            Me.lblDesde.Location = New System.Drawing.Point(159, 43)
             Me.lblDesde.Name = "lblDesde"
             Me.lblDesde.Size = New System.Drawing.Size(41, 13)
             Me.lblDesde.TabIndex = 219
@@ -464,7 +464,7 @@
             'dtpFinal
             '
             Me.dtpFinal.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.dtpFinal.Location = New System.Drawing.Point(326, 27)
+            Me.dtpFinal.Location = New System.Drawing.Point(478, 40)
             Me.dtpFinal.Name = "dtpFinal"
             Me.dtpFinal.Size = New System.Drawing.Size(200, 21)
             Me.dtpFinal.TabIndex = 218
@@ -472,7 +472,7 @@
             'dtpInicio
             '
             Me.dtpInicio.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.dtpInicio.Location = New System.Drawing.Point(53, 27)
+            Me.dtpInicio.Location = New System.Drawing.Point(205, 40)
             Me.dtpInicio.Name = "dtpInicio"
             Me.dtpInicio.Size = New System.Drawing.Size(200, 21)
             Me.dtpInicio.TabIndex = 217

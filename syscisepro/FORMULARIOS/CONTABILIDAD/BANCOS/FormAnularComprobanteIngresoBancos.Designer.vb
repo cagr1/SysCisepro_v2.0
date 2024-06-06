@@ -62,7 +62,7 @@
             Me.gbBanco.Controls.Add(Me.cmbCuentaBancos)
             Me.gbBanco.Controls.Add(Me.cmbBancos)
             Me.gbBanco.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.gbBanco.Location = New System.Drawing.Point(0, 27)
+            Me.gbBanco.Location = New System.Drawing.Point(3, 37)
             Me.gbBanco.Name = "gbBanco"
             Me.gbBanco.Size = New System.Drawing.Size(386, 57)
             Me.gbBanco.TabIndex = 119
@@ -110,7 +110,7 @@
             Me.gbRangoFechas.Controls.Add(Me.dtpHasta)
             Me.gbRangoFechas.Controls.Add(Me.dtpDesde)
             Me.gbRangoFechas.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.gbRangoFechas.Location = New System.Drawing.Point(392, 27)
+            Me.gbRangoFechas.Location = New System.Drawing.Point(392, 36)
             Me.gbRangoFechas.Name = "gbRangoFechas"
             Me.gbRangoFechas.Size = New System.Drawing.Size(499, 57)
             Me.gbRangoFechas.TabIndex = 118
@@ -192,7 +192,7 @@
             'GroupBox2
             '
             Me.GroupBox2.Controls.Add(Me.dgvComprobanteEgresoBancos)
-            Me.GroupBox2.Location = New System.Drawing.Point(0, 86)
+            Me.GroupBox2.Location = New System.Drawing.Point(1, 90)
             Me.GroupBox2.Name = "GroupBox2"
             Me.GroupBox2.Size = New System.Drawing.Size(894, 585)
             Me.GroupBox2.TabIndex = 121
@@ -238,33 +238,32 @@
             '
             'msKardex
             '
-            Me.msKardex.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.msKardex.Font = New System.Drawing.Font("Segoe UI", 9.0!)
             Me.msKardex.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnBuscar, Me.btnReporte})
             Me.msKardex.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow
             Me.msKardex.Location = New System.Drawing.Point(0, 0)
             Me.msKardex.Name = "msKardex"
             Me.msKardex.Padding = New System.Windows.Forms.Padding(7, 2, 0, 2)
-            Me.msKardex.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
-            Me.msKardex.Size = New System.Drawing.Size(894, 24)
+            Me.msKardex.Size = New System.Drawing.Size(894, 32)
             Me.msKardex.TabIndex = 187
             Me.msKardex.Text = "msIngresoBodega"
             '
             'btnBuscar
             '
             Me.btnBuscar.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnBuscar.Image = Global.syscisepro.My.Resources.Resources.BuscarRegistro
+            Me.btnBuscar.Image = Global.syscisepro.My.Resources.Resources.search_24dp_FILL0_wght400_GRAD0_opsz24__2_
             Me.btnBuscar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnBuscar.Name = "btnBuscar"
-            Me.btnBuscar.Size = New System.Drawing.Size(119, 20)
-            Me.btnBuscar.Text = "BUSCAR TODOS"
+            Me.btnBuscar.Size = New System.Drawing.Size(92, 28)
+            Me.btnBuscar.Text = "BUSCAR "
             '
             'btnReporte
             '
             Me.btnReporte.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnReporte.Image = Global.syscisepro.My.Resources.Resources.EliminarRegistro
+            Me.btnReporte.Image = Global.syscisepro.My.Resources.Resources.playlist_remove_24dp_FILL0_wght400_GRAD0_opsz24__3_
             Me.btnReporte.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnReporte.Name = "btnReporte"
-            Me.btnReporte.Size = New System.Drawing.Size(77, 20)
+            Me.btnReporte.Size = New System.Drawing.Size(85, 28)
             Me.btnReporte.Text = "ANULAR"
             '
             'FormAnularComprobanteIngresoBancos
@@ -272,7 +271,7 @@
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.BackColor = System.Drawing.Color.White
-            Me.ClientSize = New System.Drawing.Size(894, 672)
+            Me.ClientSize = New System.Drawing.Size(894, 678)
             Me.Controls.Add(Me.msKardex)
             Me.Controls.Add(Me.gbBanco)
             Me.Controls.Add(Me.gbRangoFechas)

@@ -23,6 +23,7 @@
         'No lo modifique con el editor de código.
         <System.Diagnostics.DebuggerStepThrough()> _
         Private Sub InitializeComponent()
+            Me.components = New System.ComponentModel.Container()
             Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
@@ -54,6 +55,7 @@
             Me.Label3 = New System.Windows.Forms.Label()
             Me.btnNuevo = New System.Windows.Forms.Button()
             Me.btnGuardar = New System.Windows.Forms.Button()
+            Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
             Me.gbSupervisores.SuspendLayout()
             CType(Me.dgvPersonal, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.gbVehiculos.SuspendLayout()
@@ -245,14 +247,13 @@
             '
             Me.btnAgregar.Enabled = False
             Me.btnAgregar.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnAgregar.Image = Global.syscisepro.My.Resources.Resources.add
-            Me.btnAgregar.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-            Me.btnAgregar.Location = New System.Drawing.Point(849, 324)
+            Me.btnAgregar.Image = Global.syscisepro.My.Resources.Resources.add_24dp_FILL0_wght400_GRAD0_opsz24
+            Me.btnAgregar.Location = New System.Drawing.Point(842, 329)
             Me.btnAgregar.Name = "btnAgregar"
-            Me.btnAgregar.Size = New System.Drawing.Size(63, 40)
+            Me.btnAgregar.Size = New System.Drawing.Size(41, 30)
             Me.btnAgregar.TabIndex = 5
-            Me.btnAgregar.Text = "AGREGAR"
             Me.btnAgregar.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+            Me.ToolTip1.SetToolTip(Me.btnAgregar, "Agregar")
             Me.btnAgregar.UseVisualStyleBackColor = True
             '
             'txtObservacion
@@ -296,28 +297,26 @@
             'btnNuevo
             '
             Me.btnNuevo.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnNuevo.Image = CType(resources.GetObject("btnNuevo.Image"), System.Drawing.Image)
-            Me.btnNuevo.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-            Me.btnNuevo.Location = New System.Drawing.Point(780, 324)
+            Me.btnNuevo.Image = Global.syscisepro.My.Resources.Resources.add_circle_24dp_FILL0_wght400_GRAD0_opsz24__3_
+            Me.btnNuevo.Location = New System.Drawing.Point(795, 329)
             Me.btnNuevo.Name = "btnNuevo"
-            Me.btnNuevo.Size = New System.Drawing.Size(63, 40)
+            Me.btnNuevo.Size = New System.Drawing.Size(41, 30)
             Me.btnNuevo.TabIndex = 10
-            Me.btnNuevo.Text = "NUEVO"
             Me.btnNuevo.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+            Me.ToolTip1.SetToolTip(Me.btnNuevo, "Nuevo")
             Me.btnNuevo.UseVisualStyleBackColor = True
             '
             'btnGuardar
             '
             Me.btnGuardar.Enabled = False
             Me.btnGuardar.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnGuardar.Image = CType(resources.GetObject("btnGuardar.Image"), System.Drawing.Image)
-            Me.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-            Me.btnGuardar.Location = New System.Drawing.Point(918, 324)
+            Me.btnGuardar.Image = Global.syscisepro.My.Resources.Resources.save_24dp_FILL0_wght400_GRAD0_opsz24__2_
+            Me.btnGuardar.Location = New System.Drawing.Point(889, 329)
             Me.btnGuardar.Name = "btnGuardar"
-            Me.btnGuardar.Size = New System.Drawing.Size(63, 40)
+            Me.btnGuardar.Size = New System.Drawing.Size(41, 30)
             Me.btnGuardar.TabIndex = 11
-            Me.btnGuardar.Text = "GUARDAR"
             Me.btnGuardar.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+            Me.ToolTip1.SetToolTip(Me.btnGuardar, "Guardar")
             Me.btnGuardar.UseVisualStyleBackColor = True
             '
             'FormRotacionVehiculos
@@ -379,5 +378,6 @@
         Friend WithEvents Label3 As System.Windows.Forms.Label
         Friend WithEvents btnNuevo As System.Windows.Forms.Button
         Friend WithEvents btnGuardar As System.Windows.Forms.Button
+        Friend WithEvents ToolTip1 As ToolTip
     End Class
 End Namespace

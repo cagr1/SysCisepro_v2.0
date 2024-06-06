@@ -75,7 +75,8 @@
             'tcAuxiliaresDiario
             '
             Me.tcAuxiliaresDiario.Controls.Add(Me.tpDiarios)
-            Me.tcAuxiliaresDiario.Location = New System.Drawing.Point(3, 53)
+            Me.tcAuxiliaresDiario.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.tcAuxiliaresDiario.Location = New System.Drawing.Point(3, 43)
             Me.tcAuxiliaresDiario.Name = "tcAuxiliaresDiario"
             Me.tcAuxiliaresDiario.SelectedIndex = 0
             Me.tcAuxiliaresDiario.Size = New System.Drawing.Size(984, 611)
@@ -113,7 +114,7 @@
             '
             Me.Label7.AutoSize = True
             Me.Label7.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label7.Location = New System.Drawing.Point(819, 13)
+            Me.Label7.Location = New System.Drawing.Point(817, 8)
             Me.Label7.Name = "Label7"
             Me.Label7.Size = New System.Drawing.Size(45, 13)
             Me.Label7.TabIndex = 251
@@ -134,7 +135,7 @@
             '
             Me.Label8.AutoSize = True
             Me.Label8.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label8.Location = New System.Drawing.Point(674, 11)
+            Me.Label8.Location = New System.Drawing.Point(671, 9)
             Me.Label8.Name = "Label8"
             Me.Label8.Size = New System.Drawing.Size(33, 13)
             Me.Label8.TabIndex = 249
@@ -350,76 +351,76 @@
             'Label2
             '
             Me.Label2.AutoSize = True
-            Me.Label2.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label2.Location = New System.Drawing.Point(3, 12)
+            Me.Label2.Font = New System.Drawing.Font("Roboto", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Label2.Location = New System.Drawing.Point(3, 9)
             Me.Label2.Name = "Label2"
-            Me.Label2.Size = New System.Drawing.Size(59, 21)
+            Me.Label2.Size = New System.Drawing.Size(59, 19)
             Me.Label2.TabIndex = 226
             Me.Label2.Text = "LIBRO:"
             '
             'Label1
             '
             Me.Label1.AutoSize = True
-            Me.Label1.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label1.Location = New System.Drawing.Point(185, 12)
+            Me.Label1.Font = New System.Drawing.Font("Roboto", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Label1.Location = New System.Drawing.Point(190, 8)
             Me.Label1.Name = "Label1"
-            Me.Label1.Size = New System.Drawing.Size(79, 21)
+            Me.Label1.Size = New System.Drawing.Size(81, 19)
             Me.Label1.TabIndex = 225
             Me.Label1.Text = "ASIENTO:"
             '
             'MenuStrip1
             '
-            Me.MenuStrip1.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.MenuStrip1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
             Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnCuadrar, Me.ToolStripMenuItem1, Me.ToolStripMenuItem2, Me.ToolStripMenuItem3})
             Me.MenuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow
             Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
             Me.MenuStrip1.Name = "MenuStrip1"
             Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(7, 2, 0, 2)
-            Me.MenuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
-            Me.MenuStrip1.Size = New System.Drawing.Size(987, 24)
+            Me.MenuStrip1.Size = New System.Drawing.Size(987, 32)
             Me.MenuStrip1.TabIndex = 190
             Me.MenuStrip1.Text = "msIngresoBodega"
             '
             'btnCuadrar
             '
             Me.btnCuadrar.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnCuadrar.Image = Global.syscisepro.My.Resources.Resources.BuscarRegistro
+            Me.btnCuadrar.Image = Global.syscisepro.My.Resources.Resources.refresh_24dp_FILL0_wght400_GRAD0_opsz24__2_
+            Me.btnCuadrar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnCuadrar.Name = "btnCuadrar"
-            Me.btnCuadrar.Size = New System.Drawing.Size(81, 20)
+            Me.btnCuadrar.Size = New System.Drawing.Size(89, 28)
             Me.btnCuadrar.Text = "CARGAR"
             '
             'ToolStripMenuItem1
             '
             Me.ToolStripMenuItem1.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.ToolStripMenuItem1.Image = Global.syscisepro.My.Resources.Resources.excel_icon
+            Me.ToolStripMenuItem1.Image = Global.syscisepro.My.Resources.Resources.icons8_excel_48
             Me.ToolStripMenuItem1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
-            Me.ToolStripMenuItem1.Size = New System.Drawing.Size(125, 20)
+            Me.ToolStripMenuItem1.Size = New System.Drawing.Size(133, 28)
             Me.ToolStripMenuItem1.Text = "EXPORTAR LIBRO"
             '
             'ToolStripMenuItem2
             '
             Me.ToolStripMenuItem2.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.ToolStripMenuItem2.Image = Global.syscisepro.My.Resources.Resources.excel_icon
+            Me.ToolStripMenuItem2.Image = Global.syscisepro.My.Resources.Resources.icons8_excel_48
             Me.ToolStripMenuItem2.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.ToolStripMenuItem2.Name = "ToolStripMenuItem2"
-            Me.ToolStripMenuItem2.Size = New System.Drawing.Size(145, 20)
+            Me.ToolStripMenuItem2.Size = New System.Drawing.Size(153, 28)
             Me.ToolStripMenuItem2.Text = "EXPORTAR ASIENTOS"
             '
             'ToolStripMenuItem3
             '
             Me.ToolStripMenuItem3.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.ToolStripMenuItem3.Image = Global.syscisepro.My.Resources.Resources.excel_icon
+            Me.ToolStripMenuItem3.Image = Global.syscisepro.My.Resources.Resources.icons8_excel_48
             Me.ToolStripMenuItem3.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.ToolStripMenuItem3.Name = "ToolStripMenuItem3"
-            Me.ToolStripMenuItem3.Size = New System.Drawing.Size(144, 20)
+            Me.ToolStripMenuItem3.Size = New System.Drawing.Size(152, 28)
             Me.ToolStripMenuItem3.Text = "EXPORTAR DETALLES"
             '
             'lblHasta
             '
             Me.lblHasta.AutoSize = True
             Me.lblHasta.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.lblHasta.Location = New System.Drawing.Point(290, 30)
+            Me.lblHasta.Location = New System.Drawing.Point(354, 42)
             Me.lblHasta.Name = "lblHasta"
             Me.lblHasta.Size = New System.Drawing.Size(40, 13)
             Me.lblHasta.TabIndex = 216
@@ -429,7 +430,7 @@
             '
             Me.lblDesde.AutoSize = True
             Me.lblDesde.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.lblDesde.Location = New System.Drawing.Point(15, 30)
+            Me.lblDesde.Location = New System.Drawing.Point(79, 42)
             Me.lblDesde.Name = "lblDesde"
             Me.lblDesde.Size = New System.Drawing.Size(41, 13)
             Me.lblDesde.TabIndex = 215
@@ -438,17 +439,17 @@
             'dtpFinal
             '
             Me.dtpFinal.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.dtpFinal.Location = New System.Drawing.Point(334, 27)
+            Me.dtpFinal.Location = New System.Drawing.Point(398, 38)
             Me.dtpFinal.Name = "dtpFinal"
-            Me.dtpFinal.Size = New System.Drawing.Size(200, 21)
+            Me.dtpFinal.Size = New System.Drawing.Size(222, 21)
             Me.dtpFinal.TabIndex = 214
             '
             'dtpInicio
             '
             Me.dtpInicio.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.dtpInicio.Location = New System.Drawing.Point(61, 27)
+            Me.dtpInicio.Location = New System.Drawing.Point(125, 38)
             Me.dtpInicio.Name = "dtpInicio"
-            Me.dtpInicio.Size = New System.Drawing.Size(200, 21)
+            Me.dtpInicio.Size = New System.Drawing.Size(210, 21)
             Me.dtpInicio.TabIndex = 213
             '
             'FormAuxiliaresDiario

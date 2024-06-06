@@ -4241,6 +4241,11 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\icons8-excel-48.png" />
+    <None Include="Resources\do_not_disturb_on_24dp_FILL0_wght400_GRAD0_opsz24.png" />
+    <None Include="Resources\location_on_24dp_FILL0_wght400_GRAD0_opsz24.png" />
+    <None Include="Resources\save_24dp_FILL0_wght400_GRAD0_opsz24 %283%29.png" />
+    <None Include="Resources\playlist_remove_24dp_FILL0_wght400_GRAD0_opsz24 %283%29.png" />
     <None Include="Resources\work_update_24dp_FILL0_wght400_GRAD0_opsz24 %282%29.png" />
     <None Include="Resources\wallet_20dp_FILL0_wght400_GRAD0_opsz24.png" />
     <None Include="Resources\vpn_key_24dp_FILL0_wght400_GRAD0_opsz24.png" />
@@ -4660,6 +4665,11 @@
     <None Include="Resources\checklist_24dp_FILL0_wght400_GRAD0_opsz24.png" />
     <None Include="Resources\close_24dp_FILL0_wght400_GRAD0_opsz24.png" />
     <None Include="Resources\business_24dp.png" />
+    <None Include="Resources\add_circle_24dp_FILL0_wght400_GRAD0_opsz24 %283%29.png" />
+    <None Include="Resources\check_circle_24dp_FILL0_wght400_GRAD0_opsz24 %283%29.png" />
+    <None Include="Resources\cancel_24dp_FILL0_wght400_GRAD0_opsz24.png" />
+    <None Include="Resources\add_24dp_FILL0_wght400_GRAD0_opsz24.png" />
+    <None Include="Resources\account_tree_24dp_FILL0_wght400_GRAD0_opsz24.png" />
     <Content Include="Resources\combustiblex.jpg" />
   </ItemGroup>
   <ItemGroup>

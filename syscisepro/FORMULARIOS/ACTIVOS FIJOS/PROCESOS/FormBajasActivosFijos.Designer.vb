@@ -98,7 +98,7 @@
             Me.GroupBox1.Controls.Add(Me.txtBusquedaActivoFijo)
             Me.GroupBox1.Controls.Add(Me.rbCodigoActivo)
             Me.GroupBox1.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.GroupBox1.Location = New System.Drawing.Point(3, 28)
+            Me.GroupBox1.Location = New System.Drawing.Point(3, 38)
             Me.GroupBox1.Name = "GroupBox1"
             Me.GroupBox1.Size = New System.Drawing.Size(920, 220)
             Me.GroupBox1.TabIndex = 0
@@ -234,7 +234,7 @@
             Me.cbmEstadoActivo.Enabled = False
             Me.cbmEstadoActivo.FormattingEnabled = True
             Me.cbmEstadoActivo.Items.AddRange(New Object() {"OBSOLETO", "INSERVIBLE", "NINGUNO"})
-            Me.cbmEstadoActivo.Location = New System.Drawing.Point(497, 8)
+            Me.cbmEstadoActivo.Location = New System.Drawing.Point(497, 11)
             Me.cbmEstadoActivo.Name = "cbmEstadoActivo"
             Me.cbmEstadoActivo.Size = New System.Drawing.Size(143, 21)
             Me.cbmEstadoActivo.TabIndex = 56
@@ -306,7 +306,7 @@
             Me.cbmMotivo.Enabled = False
             Me.cbmMotivo.FormattingEnabled = True
             Me.cbmMotivo.Items.AddRange(New Object() {"DONACIÓN", "DESTRUCCIÓN", "VENTA", "PERDIDA"})
-            Me.cbmMotivo.Location = New System.Drawing.Point(497, 34)
+            Me.cbmMotivo.Location = New System.Drawing.Point(497, 36)
             Me.cbmMotivo.Name = "cbmMotivo"
             Me.cbmMotivo.Size = New System.Drawing.Size(143, 21)
             Me.cbmMotivo.TabIndex = 47
@@ -333,7 +333,7 @@
             '
             Me.rbNombreCustodio.AutoSize = True
             Me.rbNombreCustodio.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.rbNombreCustodio.Location = New System.Drawing.Point(74, 19)
+            Me.rbNombreCustodio.Location = New System.Drawing.Point(79, 19)
             Me.rbNombreCustodio.Name = "rbNombreCustodio"
             Me.rbNombreCustodio.Size = New System.Drawing.Size(75, 17)
             Me.rbNombreCustodio.TabIndex = 40
@@ -379,7 +379,7 @@
             DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
             DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
             Me.dgvActivosFijos.DefaultCellStyle = DataGridViewCellStyle2
-            Me.dgvActivosFijos.Location = New System.Drawing.Point(3, 254)
+            Me.dgvActivosFijos.Location = New System.Drawing.Point(3, 261)
             Me.dgvActivosFijos.MultiSelect = False
             Me.dgvActivosFijos.Name = "dgvActivosFijos"
             Me.dgvActivosFijos.RowHeadersVisible = False
@@ -389,43 +389,43 @@
             '
             'MenuStrip1
             '
-            Me.MenuStrip1.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.MenuStrip1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
             Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnNuevoBaja, Me.btnBaja, Me.btnReporte})
             Me.MenuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow
             Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
             Me.MenuStrip1.Name = "MenuStrip1"
             Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(7, 2, 0, 2)
-            Me.MenuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
-            Me.MenuStrip1.Size = New System.Drawing.Size(925, 24)
+            Me.MenuStrip1.Size = New System.Drawing.Size(925, 32)
             Me.MenuStrip1.TabIndex = 188
             Me.MenuStrip1.Text = "msIngresoBodega"
             '
             'btnNuevoBaja
             '
             Me.btnNuevoBaja.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnNuevoBaja.Image = CType(resources.GetObject("btnNuevoBaja.Image"), System.Drawing.Image)
+            Me.btnNuevoBaja.Image = Global.syscisepro.My.Resources.Resources.add_circle_24dp_FILL0_wght400_GRAD0_opsz24__3_
             Me.btnNuevoBaja.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnNuevoBaja.Name = "btnNuevoBaja"
-            Me.btnNuevoBaja.Size = New System.Drawing.Size(70, 20)
+            Me.btnNuevoBaja.Size = New System.Drawing.Size(78, 28)
             Me.btnNuevoBaja.Text = "NUEVO"
             '
             'btnBaja
             '
             Me.btnBaja.Enabled = False
             Me.btnBaja.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnBaja.Image = Global.syscisepro.My.Resources.Resources.EliminarRegistro
+            Me.btnBaja.Image = Global.syscisepro.My.Resources.Resources.playlist_remove_24dp_FILL0_wght400_GRAD0_opsz24__3_
             Me.btnBaja.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnBaja.Name = "btnBaja"
-            Me.btnBaja.Size = New System.Drawing.Size(63, 20)
+            Me.btnBaja.Size = New System.Drawing.Size(71, 28)
             Me.btnBaja.Text = "BAJA"
             '
             'btnReporte
             '
+            Me.btnReporte.AutoSize = False
             Me.btnReporte.Enabled = False
             Me.btnReporte.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnReporte.Image = Global.syscisepro.My.Resources.Resources.report
+            Me.btnReporte.Image = Global.syscisepro.My.Resources.Resources.description_24dp_FILL0_wght400_GRAD0_opsz24
             Me.btnReporte.Name = "btnReporte"
-            Me.btnReporte.Size = New System.Drawing.Size(84, 20)
+            Me.btnReporte.Size = New System.Drawing.Size(84, 28)
             Me.btnReporte.Text = "REPORTE"
             '
             'FormBajasActivosFijos
@@ -433,7 +433,7 @@
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.BackColor = System.Drawing.Color.White
-            Me.ClientSize = New System.Drawing.Size(925, 478)
+            Me.ClientSize = New System.Drawing.Size(925, 486)
             Me.Controls.Add(Me.MenuStrip1)
             Me.Controls.Add(Me.dgvActivosFijos)
             Me.Controls.Add(Me.GroupBox1)
