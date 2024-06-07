@@ -15,10 +15,10 @@ using ClassLibraryCisepro3.TalentoHumano;
 using Office = Microsoft.Office.Interop;
 using Microsoft.Office.Interop.Excel;
 using ClassLibraryCisepro3.Estaticas;
-
+using Krypton.Toolkit;
 namespace SysCisepro3.TalentoHumano
 {
-    public partial class FrmReporteGeneralNomina : Form
+    public partial class FrmReporteGeneralNomina : KryptonForm
     {
         /// <summary>
         /// CISEPRO 2019
@@ -65,7 +65,7 @@ namespace SysCisepro3.TalentoHumano
                     Icon = Resources.logo_c;
                     break;
             }
-
+            ValidationForms.SetPlaceholder(txtFiltro,"BUSCAR POR NOMBRE..");
             var f = Usuario.ObtenerFechaSola(TipoCon);
             dtpAnio.Value = new DateTime(f.Year, 1, 1);
         }

@@ -70,6 +70,7 @@ namespace SysCisepro3.TalentoHumano
                     break;
             }
             dgvPoryectos.Font = new Font("Roboto", 8, FontStyle.Regular);
+            ValidationForms.SetPlaceholder(txtFiltro, "BUSCAR PROYECTO");
         }
 
         private void btnPersonalEntra_Click(object sender, EventArgs e)

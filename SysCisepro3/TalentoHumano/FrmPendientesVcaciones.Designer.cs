@@ -33,7 +33,6 @@
             this.btnRecargar = new System.Windows.Forms.ToolStripButton();
             this.btnCancelar = new System.Windows.Forms.ToolStripButton();
             this.txtFiltro = new System.Windows.Forms.TextBox();
-            this.Label7 = new System.Windows.Forms.Label();
             this.Label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -54,30 +53,33 @@
             // toolStrip1
             // 
             this.toolStrip1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnRecargar,
             this.btnCancelar});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(986, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(986, 31);
             this.toolStrip1.TabIndex = 216;
             this.toolStrip1.Text = "toolStrip1";
             // 
             // btnRecargar
             // 
-            this.btnRecargar.Image = global::SysCisepro3.Properties.Resources.BuscarRegistro;
+            this.btnRecargar.Image = global::SysCisepro3.Properties.Resources.search_24dp_FILL0_wght400_GRAD0_opsz24__2_;
+            this.btnRecargar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnRecargar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnRecargar.Name = "btnRecargar";
-            this.btnRecargar.Size = new System.Drawing.Size(114, 22);
-            this.btnRecargar.Text = "RECARGAR VAC.";
+            this.btnRecargar.Size = new System.Drawing.Size(79, 28);
+            this.btnRecargar.Text = "BUSCAR";
             this.btnRecargar.Click += new System.EventHandler(this.btnRecargar_Click);
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Image = global::SysCisepro3.Properties.Resources.excel_icon;
+            this.btnCancelar.Image = global::SysCisepro3.Properties.Resources.icons8_excel_48;
+            this.btnCancelar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnCancelar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(82, 22);
+            this.btnCancelar.Size = new System.Drawing.Size(90, 28);
             this.btnCancelar.Text = "EXPORTAR";
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
@@ -86,22 +88,11 @@
             this.txtFiltro.BackColor = System.Drawing.Color.White;
             this.txtFiltro.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtFiltro.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFiltro.Location = new System.Drawing.Point(62, 18);
+            this.txtFiltro.Location = new System.Drawing.Point(9, 18);
             this.txtFiltro.Name = "txtFiltro";
-            this.txtFiltro.Size = new System.Drawing.Size(176, 21);
+            this.txtFiltro.Size = new System.Drawing.Size(229, 21);
             this.txtFiltro.TabIndex = 218;
             this.txtFiltro.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtFiltro_KeyUp);
-            // 
-            // Label7
-            // 
-            this.Label7.AutoSize = true;
-            this.Label7.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Label7.Location = new System.Drawing.Point(8, 22);
-            this.Label7.Name = "Label7";
-            this.Label7.Size = new System.Drawing.Size(46, 13);
-            this.Label7.TabIndex = 217;
-            this.Label7.Text = "FILTRO:";
-            this.Label7.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // Label1
             // 
@@ -123,12 +114,12 @@
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(2, 83);
+            this.dataGridView1.Location = new System.Drawing.Point(2, 90);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(984, 430);
+            this.dataGridView1.Size = new System.Drawing.Size(984, 423);
             this.dataGridView1.TabIndex = 224;
             // 
             // groupBox2
@@ -139,12 +130,11 @@
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.cbxDesde);
             this.groupBox2.Controls.Add(this.txtFiltro);
-            this.groupBox2.Controls.Add(this.Label7);
             this.groupBox2.Controls.Add(this.cbxHasta);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(3, 27);
+            this.groupBox2.Location = new System.Drawing.Point(3, 35);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(983, 50);
             this.groupBox2.TabIndex = 228;
@@ -272,6 +262,10 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "FrmPendientesVcaciones";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StateActive.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.StateActive.Border.Rounding = 5F;
             this.Text = "REPORTE PENDIENTES DE VACACIONES";
             this.Load += new System.EventHandler(this.FrmReporteVacaciones_Load);
             this.toolStrip1.ResumeLayout(false);
@@ -289,7 +283,6 @@
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton btnCancelar;
         internal System.Windows.Forms.TextBox txtFiltro;
-        internal System.Windows.Forms.Label Label7;
         internal System.Windows.Forms.Label Label1;
         public System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.ToolStripButton btnRecargar;

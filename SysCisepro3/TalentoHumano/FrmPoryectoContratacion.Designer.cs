@@ -28,12 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPoryectoContratacion));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.btnBuscar = new System.Windows.Forms.ToolStripButton();
             this.btnNuevo = new System.Windows.Forms.ToolStripButton();
@@ -57,7 +56,6 @@
             this.Label26 = new System.Windows.Forms.Label();
             this.Label27 = new System.Windows.Forms.Label();
             this.Label24 = new System.Windows.Forms.Label();
-            this.Label7 = new System.Windows.Forms.Label();
             this.txtFiltro = new System.Windows.Forms.TextBox();
             this.dgvPoryectos = new System.Windows.Forms.DataGridView();
             this.toolStrip1.SuspendLayout();
@@ -68,6 +66,7 @@
             // toolStrip1
             // 
             this.toolStrip1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnBuscar,
             this.btnNuevo,
@@ -76,55 +75,60 @@
             this.btnCancelar});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(779, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(779, 31);
             this.toolStrip1.TabIndex = 227;
             this.toolStrip1.Text = "toolStrip1";
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Image = global::SysCisepro3.Properties.Resources.BuscarRegistro;
+            this.btnBuscar.Image = global::SysCisepro3.Properties.Resources.search_24dp_FILL0_wght400_GRAD0_opsz24__2_;
+            this.btnBuscar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnBuscar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(102, 22);
-            this.btnBuscar.Text = "LISTAR TODOS";
+            this.btnBuscar.Size = new System.Drawing.Size(79, 28);
+            this.btnBuscar.Text = "BUSCAR";
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // btnNuevo
             // 
-            this.btnNuevo.Image = global::SysCisepro3.Properties.Resources.NuevoRegistro;
+            this.btnNuevo.Image = global::SysCisepro3.Properties.Resources.add_circle_24dp_FILL0_wght400_GRAD0_opsz24__3_;
+            this.btnNuevo.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnNuevo.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(66, 22);
+            this.btnNuevo.Size = new System.Drawing.Size(74, 28);
             this.btnNuevo.Text = "NUEVO";
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
             // btnGuardar
             // 
             this.btnGuardar.Enabled = false;
-            this.btnGuardar.Image = global::SysCisepro3.Properties.Resources.GuardarRegistro;
+            this.btnGuardar.Image = global::SysCisepro3.Properties.Resources.save_24dp_FILL0_wght400_GRAD0_opsz24__2_;
+            this.btnGuardar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnGuardar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(81, 22);
+            this.btnGuardar.Size = new System.Drawing.Size(89, 28);
             this.btnGuardar.Text = "GUARDAR";
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // btnModificar
             // 
             this.btnModificar.Enabled = false;
-            this.btnModificar.Image = global::SysCisepro3.Properties.Resources.ModificarRegistro;
+            this.btnModificar.Image = global::SysCisepro3.Properties.Resources.edit_document_24dp_FILL0_wght400_GRAD0_opsz24__2_;
+            this.btnModificar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnModificar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(90, 22);
+            this.btnModificar.Size = new System.Drawing.Size(98, 28);
             this.btnModificar.Text = "MODIFICAR";
             this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // btnCancelar
             // 
             this.btnCancelar.Enabled = false;
-            this.btnCancelar.Image = global::SysCisepro3.Properties.Resources.cancel;
+            this.btnCancelar.Image = global::SysCisepro3.Properties.Resources.cancel_24dp_FILL0_wght400_GRAD0_opsz24;
+            this.btnCancelar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnCancelar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(87, 22);
+            this.btnCancelar.Size = new System.Drawing.Size(95, 28);
             this.btnCancelar.Text = "CANCELAR";
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
@@ -156,7 +160,7 @@
             this.GroupBox1.Controls.Add(this.Label26);
             this.GroupBox1.Controls.Add(this.Label27);
             this.GroupBox1.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GroupBox1.Location = new System.Drawing.Point(0, 28);
+            this.GroupBox1.Location = new System.Drawing.Point(0, 34);
             this.GroupBox1.Name = "GroupBox1";
             this.GroupBox1.Size = new System.Drawing.Size(778, 90);
             this.GroupBox1.TabIndex = 229;
@@ -249,9 +253,10 @@
             // 
             this.btnCliente.BackColor = System.Drawing.Color.White;
             this.btnCliente.Enabled = false;
-            this.btnCliente.Image = ((System.Drawing.Image)(resources.GetObject("btnCliente.Image")));
-            this.btnCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCliente.Location = new System.Drawing.Point(748, 12);
+            this.btnCliente.FlatAppearance.BorderSize = 0;
+            this.btnCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCliente.Image = global::SysCisepro3.Properties.Resources.search_24dp_FILL0_wght400_GRAD0_opsz24__2_;
+            this.btnCliente.Location = new System.Drawing.Point(745, 12);
             this.btnCliente.Name = "btnCliente";
             this.btnCliente.Size = new System.Drawing.Size(26, 26);
             this.btnCliente.TabIndex = 193;
@@ -283,7 +288,7 @@
             this.txtCliente.BackColor = System.Drawing.Color.White;
             this.txtCliente.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtCliente.Enabled = false;
-            this.txtCliente.Location = new System.Drawing.Point(219, 16);
+            this.txtCliente.Location = new System.Drawing.Point(211, 15);
             this.txtCliente.Name = "txtCliente";
             this.txtCliente.Size = new System.Drawing.Size(529, 21);
             this.txtCliente.TabIndex = 0;
@@ -291,7 +296,7 @@
             // Label26
             // 
             this.Label26.AutoSize = true;
-            this.Label26.Location = new System.Drawing.Point(167, 17);
+            this.Label26.Location = new System.Drawing.Point(155, 18);
             this.Label26.Name = "Label26";
             this.Label26.Size = new System.Drawing.Size(53, 13);
             this.Label26.TabIndex = 3;
@@ -300,41 +305,29 @@
             // Label27
             // 
             this.Label27.AutoSize = true;
-            this.Label27.Location = new System.Drawing.Point(239, 42);
+            this.Label27.Location = new System.Drawing.Point(230, 43);
             this.Label27.Name = "Label27";
-            this.Label27.Size = new System.Drawing.Size(56, 13);
+            this.Label27.Size = new System.Drawing.Size(53, 13);
             this.Label27.TabIndex = 196;
-            this.Label27.Text = "NOMBRE:";
+            this.Label27.Text = "NOMBRE";
             // 
             // Label24
             // 
             this.Label24.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Label24.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label24.Location = new System.Drawing.Point(-1, 121);
+            this.Label24.Location = new System.Drawing.Point(-1, 126);
             this.Label24.Name = "Label24";
             this.Label24.Size = new System.Drawing.Size(780, 16);
             this.Label24.TabIndex = 230;
             this.Label24.Text = "PROYECTOS REGISTRADOS";
             this.Label24.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // Label7
-            // 
-            this.Label7.AutoSize = true;
-            this.Label7.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Label7.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label7.Location = new System.Drawing.Point(3, 146);
-            this.Label7.Name = "Label7";
-            this.Label7.Size = new System.Drawing.Size(46, 13);
-            this.Label7.TabIndex = 231;
-            this.Label7.Text = "FILTRO:";
-            this.Label7.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
             // txtFiltro
             // 
             this.txtFiltro.BackColor = System.Drawing.Color.White;
             this.txtFiltro.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtFiltro.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFiltro.Location = new System.Drawing.Point(50, 142);
+            this.txtFiltro.Location = new System.Drawing.Point(6, 148);
             this.txtFiltro.Name = "txtFiltro";
             this.txtFiltro.Size = new System.Drawing.Size(314, 21);
             this.txtFiltro.TabIndex = 232;
@@ -345,41 +338,41 @@
             this.dgvPoryectos.AllowUserToAddRows = false;
             this.dgvPoryectos.AllowUserToDeleteRows = false;
             this.dgvPoryectos.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgvPoryectos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgvPoryectos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvPoryectos.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.dgvPoryectos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvPoryectos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvPoryectos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dgvPoryectos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(60)))), ((int)(((byte)(123)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.GrayText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPoryectos.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(60)))), ((int)(((byte)(123)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.GrayText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPoryectos.DefaultCellStyle = dataGridViewCellStyle8;
             this.dgvPoryectos.GridColor = System.Drawing.SystemColors.AppWorkspace;
-            this.dgvPoryectos.Location = new System.Drawing.Point(0, 165);
+            this.dgvPoryectos.Location = new System.Drawing.Point(0, 173);
             this.dgvPoryectos.MultiSelect = false;
             this.dgvPoryectos.Name = "dgvPoryectos";
             this.dgvPoryectos.ReadOnly = true;
             this.dgvPoryectos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Info;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.GrayText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPoryectos.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Info;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.GrayText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPoryectos.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.dgvPoryectos.RowHeadersVisible = false;
             this.dgvPoryectos.RowHeadersWidth = 25;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPoryectos.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPoryectos.RowsDefaultCellStyle = dataGridViewCellStyle10;
             this.dgvPoryectos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvPoryectos.Size = new System.Drawing.Size(778, 375);
+            this.dgvPoryectos.Size = new System.Drawing.Size(778, 367);
             this.dgvPoryectos.TabIndex = 233;
             this.dgvPoryectos.SelectionChanged += new System.EventHandler(this.dgvPoryectos_SelectionChanged);
             // 
@@ -395,10 +388,12 @@
             this.Controls.Add(this.GroupBox1);
             this.Controls.Add(this.Label1);
             this.Controls.Add(this.toolStrip1);
-            this.Controls.Add(this.Label7);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "FrmPoryectoContratacion";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StateActive.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.StateActive.Border.Rounding = 5F;
             this.Text = "PROYECTO CONTRATACIÓN";
             this.Load += new System.EventHandler(this.FrmPoryectoContratacion_Load);
             this.toolStrip1.ResumeLayout(false);
@@ -429,7 +424,6 @@
         internal System.Windows.Forms.TextBox txtCliente;
         internal System.Windows.Forms.Label Label26;
         internal System.Windows.Forms.Label Label24;
-        internal System.Windows.Forms.Label Label7;
         internal System.Windows.Forms.TextBox txtFiltro;
         internal System.Windows.Forms.DateTimePicker dateTimePicker2;
         internal System.Windows.Forms.DateTimePicker dateTimePicker1;

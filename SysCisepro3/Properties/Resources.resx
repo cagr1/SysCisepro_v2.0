@@ -118,6 +118,9 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="banco-pichincha-logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\banco-pichincha-logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="delete_24dp_FILL0_wght400_GRAD0_opsz24__2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\delete_24dp_FILL0_wght400_GRAD0_opsz24 (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -154,8 +157,8 @@
   <data name="today_24dp_FILL0_wght400_GRAD0_opsz24__2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\today_24dp_FILL0_wght400_GRAD0_opsz24 (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="business_center_20dp_FILL0_wght400_GRAD0_opsz20" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\business_center_20dp_FILL0_wght400_GRAD0_opsz20.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="pin_drop_24dp_FILL0_wght400_GRAD0_opsz24__2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pin_drop_24dp_FILL0_wght400_GRAD0_opsz24 (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="desktop_windows_24dp__2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\desktop_windows_24dp (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -169,9 +172,6 @@
   <data name="find_in_page_24dp_FILL0_wght400_GRAD0_opsz24__1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\find_in_page_24dp_FILL0_wght400_GRAD0_opsz24 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="work_update_24dp_FILL0_wght400_GRAD0_opsz24" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\work_update_24dp_FILL0_wght400_GRAD0_opsz24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="input_24dp_FILL0_wght400_GRAD0_opsz24" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\input_24dp_FILL0_wght400_GRAD0_opsz24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -181,8 +181,8 @@
   <data name="close_24dp_FILL0_wght400_GRAD0_opsz24__1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\close_24dp_FILL0_wght400_GRAD0_opsz24 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="drive_file_move_24dp_FILL0_wght400_GRAD0_opsz24__2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\drive_file_move_24dp_FILL0_wght400_GRAD0_opsz24 (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="folder_managed_24dp_FILL0_wght400_GRAD0_opsz24__2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\folder_managed_24dp_FILL0_wght400_GRAD0_opsz24 (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="user_group_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\user-group-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -193,8 +193,8 @@
   <data name="description_24dp_FILL0_wght400_GRAD0_opsz24__2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\description_24dp_FILL0_wght400_GRAD0_opsz24 (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icon_people" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon-people.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="check_circle_24dp_FILL0_wght400_GRAD0_opsz24 (3)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\check_circle_24dp_FILL0_wght400_GRAD0_opsz24 (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="currency_exchange_20dp_FILL0_wght400_GRAD0_opsz20__1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\currency_exchange_20dp_FILL0_wght400_GRAD0_opsz20 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -214,20 +214,26 @@
   <data name="account_circle_24dp_FILL0_wght400_GRAD0_opsz24" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\account_circle_24dp_FILL0_wght400_GRAD0_opsz24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="checkbook_20dp_FILL0_wght400_GRAD0_opsz20__1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\checkbook_20dp_FILL0_wght400_GRAD0_opsz20 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="banco-pichincha-logo1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\banco-pichincha-logo1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="security_24dp_FILL0_wght400_GRAD0_opsz24__1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\security_24dp_FILL0_wght400_GRAD0_opsz24 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="arrow_back_24dp_FILL0_wght400_GRAD0_opsz24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\arrow_back_24dp_FILL0_wght400_GRAD0_opsz24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Roboto_BoldItalic" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Roboto-BoldItalic.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="add_24dp_FILL0_wght400_GRAD0_opsz24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\add_24dp_FILL0_wght400_GRAD0_opsz24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="swap_driving_apps_24dp_FILL0_wght400_GRAD0_opsz24__1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\swap_driving_apps_24dp_FILL0_wght400_GRAD0_opsz24 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="settings_24dp_FILL0_wght400_GRAD0_opsz24__2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\settings_24dp_FILL0_wght400_GRAD0_opsz24 (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="folder_delete_24dp_FILL0_wght400_GRAD0_opsz24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\folder_delete_24dp_FILL0_wght400_GRAD0_opsz24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="payments_24dp_FILL0_wght400_GRAD0_opsz24__3_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\payments_24dp_FILL0_wght400_GRAD0_opsz24 (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="login" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\login.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -253,8 +259,8 @@
   <data name="security_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\security-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="informe_bullets_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\informe-bullets-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="settings_24dp_FILL0_wght400_GRAD0_opsz24__2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\settings_24dp_FILL0_wght400_GRAD0_opsz24 (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="home_pin_24dp_FILL0_wght400_GRAD0_opsz24__1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\home_pin_24dp_FILL0_wght400_GRAD0_opsz24 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -292,11 +298,17 @@
   <data name="script_edit" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\script_edit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="invoice_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\invoice-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="content_paste_20dp_FILL0_wght400_GRAD0_opsz20__2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\content_paste_20dp_FILL0_wght400_GRAD0_opsz20 (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="menu_book_24dp_FILL0_wght400_GRAD0_opsz24__2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\menu_book_24dp_FILL0_wght400_GRAD0_opsz24 (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bm_logobm_institucional2021_principal2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bm_logobm_institucional2021_principal2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="image_24dp_FILL0_wght400_GRAD0_opsz24__2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\image_24dp_FILL0_wght400_GRAD0_opsz24 (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -327,9 +339,6 @@
   </data>
   <data name="visibility_24dp_FILL0_wght400_GRAD0_opsz24" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\visibility_24dp_FILL0_wght400_GRAD0_opsz24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="category_24dp_FILL0_wght400_GRAD0_opsz24__1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\category_24dp_FILL0_wght400_GRAD0_opsz24 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="attach_file_24dp_FILL0_wght400_GRAD0_opsz24__1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\attach_file_24dp_FILL0_wght400_GRAD0_opsz24 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -430,6 +439,9 @@
   <data name="icon_inventory" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon-inventory.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="icon_people" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-people.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="work_update_24dp_FILL0_wght400_GRAD0_opsz24__1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\work_update_24dp_FILL0_wght400_GRAD0_opsz24 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -508,8 +520,8 @@
   <data name="Roboto" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Roboto.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="payments_24dp_FILL0_wght400_GRAD0_opsz24__3_" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\payments_24dp_FILL0_wght400_GRAD0_opsz24 (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="mail_24dp_FILL0_wght400_GRAD0_opsz24__2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mail_24dp_FILL0_wght400_GRAD0_opsz24 (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="application_get" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\application_get.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -520,8 +532,14 @@
   <data name="work_update_24dp_FILL0_wght400_GRAD0_opsz24__2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\work_update_24dp_FILL0_wght400_GRAD0_opsz24 (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="account_balance_24dp_FILL0_wght400_GRAD0_opsz24__2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\account_balance_24dp_FILL0_wght400_GRAD0_opsz24 (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="quick_reference_all_24dp_FILL0_wght400_GRAD0_opsz24" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\quick_reference_all_24dp_FILL0_wght400_GRAD0_opsz24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="local_police_24dp_FILL0_wght400_GRAD0_opsz24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\local_police_24dp_FILL0_wght400_GRAD0_opsz24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="retener_list_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\retener-list-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -543,6 +561,9 @@
   </data>
   <data name="edit_calendar_24dp_FILL0_wght400_GRAD0_opsz24__2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\edit_calendar_24dp_FILL0_wght400_GRAD0_opsz24 (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Roboto_LightItalic" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Roboto-LightItalic.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="money" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\money.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -580,8 +601,8 @@
   <data name="database_table" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\database_table.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="mail_24dp_FILL0_wght400_GRAD0_opsz24__2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\mail_24dp_FILL0_wght400_GRAD0_opsz24 (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Roboto_Black" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Roboto-Black.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="cake" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cake.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -613,8 +634,8 @@
   <data name="calculator_error" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\calculator_error.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="manage_accounts_24dp_FILL0_wght400_GRAD0_opsz24__5_" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\manage_accounts_24dp_FILL0_wght400_GRAD0_opsz24 (5).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="work_update_24dp_FILL0_wght400_GRAD0_opsz24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\work_update_24dp_FILL0_wght400_GRAD0_opsz24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="list_details_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\list-details-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -628,14 +649,8 @@
   <data name="quir" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\quir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="monitoring_24dp_FILL0_wght400_GRAD0_opsz24__2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\monitoring_24dp_FILL0_wght400_GRAD0_opsz24 (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="source_environment_24dp_FILL0_wght400_GRAD0_opsz24__1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\source_environment_24dp_FILL0_wght400_GRAD0_opsz24 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="budget__2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\budget (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="playlist_remove_24dp_FILL0_wght400_GRAD0_opsz24__2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\playlist_remove_24dp_FILL0_wght400_GRAD0_opsz24 (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -649,8 +664,8 @@
   <data name="group_24dp_FILL0_wght400_GRAD0_opsz24__1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\group_24dp_FILL0_wght400_GRAD0_opsz24 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="local_police_24dp_FILL0_wght400_GRAD0_opsz24" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\local_police_24dp_FILL0_wght400_GRAD0_opsz24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="edit_24dp_FILL0_wght400_GRAD0_opsz24__2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\edit_24dp_FILL0_wght400_GRAD0_opsz24 (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="inventory_2_24dp" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\inventory_2_24dp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -709,9 +724,6 @@
   <data name="coins" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\coins.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="GuardarRegistro" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\GuardarRegistro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="book_open" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\book_open.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -745,8 +757,8 @@
   <data name="refresh_24dp_FILL0_wght400_GRAD0_opsz24__2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\refresh_24dp_FILL0_wght400_GRAD0_opsz24 (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="folder_delete_24dp_FILL0_wght400_GRAD0_opsz24" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\folder_delete_24dp_FILL0_wght400_GRAD0_opsz24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="manage_accounts_24dp_FILL0_wght400_GRAD0_opsz24__5_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\manage_accounts_24dp_FILL0_wght400_GRAD0_opsz24 (5).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="label_20dp_FILL0_wght400_GRAD0_opsz20__1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\label_20dp_FILL0_wght400_GRAD0_opsz20 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -805,14 +817,20 @@
   <data name="refresh_24dp_FILL0_wght400_GRAD0_opsz24__1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\refresh_24dp_FILL0_wght400_GRAD0_opsz24 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="print_24dp_FILL0_wght400_GRAD0_opsz24__2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\print_24dp_FILL0_wght400_GRAD0_opsz24 (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="chart_organisation_add" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\chart_organisation_add.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="find_in_page_24dp_FILL0_wght400_GRAD0_opsz24" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\find_in_page_24dp_FILL0_wght400_GRAD0_opsz24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="swap_driving_apps_24dp_FILL0_wght400_GRAD0_opsz24__2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\swap_driving_apps_24dp_FILL0_wght400_GRAD0_opsz24 (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="check_circle_24dp_FILL0_wght400_GRAD0_opsz24__1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\check_circle_24dp_FILL0_wght400_GRAD0_opsz24 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="description_24dp_FILL0_wght400_GRAD0_opsz24__1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\description_24dp_FILL0_wght400_GRAD0_opsz24 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="assured_workload_24dp_FILL0_wght400_GRAD0_opsz24__2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\assured_workload_24dp_FILL0_wght400_GRAD0_opsz24 (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -862,8 +880,14 @@
   <data name="sticky_note_2_24dp_FILL0_wght400_GRAD0_opsz24__2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\sticky_note_2_24dp_FILL0_wght400_GRAD0_opsz24 (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="cancel_24dp_FILL0_wght400_GRAD0_opsz24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cancel_24dp_FILL0_wght400_GRAD0_opsz24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="application_form_delete" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\application_form_delete.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="drive_file_move_24dp_FILL0_wght400_GRAD0_opsz24__2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\drive_file_move_24dp_FILL0_wght400_GRAD0_opsz24 (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="event_available_24dp_FILL0_wght400_GRAD0_opsz24" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\event_available_24dp_FILL0_wght400_GRAD0_opsz24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -874,17 +898,14 @@
   <data name="cen" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Roboto_Black" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Roboto-Black.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="contract_delete_20dp_FILL0_wght400_GRAD0_opsz20" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\contract_delete_20dp_FILL0_wght400_GRAD0_opsz20.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="person_remove_24dp_FILL0_wght400_GRAD0_opsz24__1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\person_remove_24dp_FILL0_wght400_GRAD0_opsz24 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="pin_drop_24dp_FILL0_wght400_GRAD0_opsz24__2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pin_drop_24dp_FILL0_wght400_GRAD0_opsz24 (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="security_24dp_FILL0_wght400_GRAD0_opsz24__1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\security_24dp_FILL0_wght400_GRAD0_opsz24 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="cen1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cen1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -895,8 +916,8 @@
   <data name="request_quote_24dp_FILL0_wght400_GRAD0_opsz24__2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\request_quote_24dp_FILL0_wght400_GRAD0_opsz24 (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Roboto_LightItalic" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Roboto-LightItalic.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="informe_bullets_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\informe-bullets-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="group_24dp_FILL0_wght400_GRAD0_opsz24" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\group_24dp_FILL0_wght400_GRAD0_opsz24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -906,9 +927,6 @@
   </data>
   <data name="map_24dp_FILL0_wght400_GRAD0_opsz24" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\map_24dp_FILL0_wght400_GRAD0_opsz24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="check_circle_24dp_FILL0_wght400_GRAD0_opsz24__1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\check_circle_24dp_FILL0_wght400_GRAD0_opsz24 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="monetization_on_24dp_FILL0_wght400_GRAD0_opsz24__1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\monetization_on_24dp_FILL0_wght400_GRAD0_opsz24 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -976,11 +994,11 @@
   <data name="image_24dp_FILL0_wght400_GRAD0_opsz24__1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\image_24dp_FILL0_wght400_GRAD0_opsz24 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="folder_managed_24dp_FILL0_wght400_GRAD0_opsz24__2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\folder_managed_24dp_FILL0_wght400_GRAD0_opsz24 (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Cisepro_Wall" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Cisepro_Wall.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="warehouse__2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\warehouse (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="application_add" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\application_add.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -1042,8 +1060,11 @@
   <data name="add_card_24dp_FILL0_wght400_GRAD0_opsz24__1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\add_card_24dp_FILL0_wght400_GRAD0_opsz24 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="print_24dp_FILL0_wght400_GRAD0_opsz24__2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\print_24dp_FILL0_wght400_GRAD0_opsz24 (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="GuardarRegistro" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GuardarRegistro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="portfolio__2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\portfolio (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="import_contacts_24dp_FILL0_wght400_GRAD0_opsz24__2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\import_contacts_24dp_FILL0_wght400_GRAD0_opsz24 (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -1075,8 +1096,8 @@
   <data name="check_circle_24dp_FILL0_wght400_GRAD0_opsz24__2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\check_circle_24dp_FILL0_wght400_GRAD0_opsz24 (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="manage_search_24dp_FILL0_wght400_GRAD0_opsz24__2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\manage_search_24dp_FILL0_wght400_GRAD0_opsz24 (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="budget__2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\budget (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="image_24dp_FILL0_wght400_GRAD0_opsz24" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\image_24dp_FILL0_wght400_GRAD0_opsz24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -1104,6 +1125,9 @@
   </data>
   <data name="folder_applications_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\folder-applications-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="arrow_forward_24dp_FILL0_wght400_GRAD0_opsz24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\arrow_forward_24dp_FILL0_wght400_GRAD0_opsz24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="SeportPac_Wall" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\SeportPac_Wall.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -1147,6 +1171,9 @@
   <data name="request_quote_24dp_FILL0_wght400_GRAD0_opsz24" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\request_quote_24dp_FILL0_wght400_GRAD0_opsz24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="icons8-excel-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-excel-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="sri" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\sri.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -1156,8 +1183,11 @@
   <data name="groups_24dp_FILL0_wght400_GRAD0_opsz24__2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\groups_24dp_FILL0_wght400_GRAD0_opsz24 (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="account_balance_24dp_FILL0_wght400_GRAD0_opsz24__2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\account_balance_24dp_FILL0_wght400_GRAD0_opsz24 (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="category_24dp_FILL0_wght400_GRAD0_opsz24__1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\category_24dp_FILL0_wght400_GRAD0_opsz24 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="do_not_disturb_on_24dp_FILL0_wght400_GRAD0_opsz24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\do_not_disturb_on_24dp_FILL0_wght400_GRAD0_opsz24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Roboto_ThinItalic" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Roboto-ThinItalic.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -1194,6 +1224,9 @@
   </data>
   <data name="shopping_cart_24dp_FILL0_wght400_GRAD0_opsz24" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\shopping_cart_24dp_FILL0_wght400_GRAD0_opsz24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Screenshot 2024-06-07 101826" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Screenshot 2024-06-07 101826.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="calculate_24dp_FILL0_wght400_GRAD0_opsz24__2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\calculate_24dp_FILL0_wght400_GRAD0_opsz24 (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -1276,14 +1309,23 @@
   <data name="briefcase" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\briefcase.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="invoice_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\invoice-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="checkbook_20dp_FILL0_wght400_GRAD0_opsz20__1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\checkbook_20dp_FILL0_wght400_GRAD0_opsz20 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="add_circle_24dp_FILL0_wght400_GRAD0_opsz24 (3)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\add_circle_24dp_FILL0_wght400_GRAD0_opsz24 (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Screenshot 2024-06-07 103559" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Screenshot 2024-06-07 103559.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="calculate_24dp_FILL0_wght400_GRAD0_opsz24__1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\calculate_24dp_FILL0_wght400_GRAD0_opsz24 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="wallet_20dp_FILL0_wght400_GRAD0_opsz20" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\wallet_20dp_FILL0_wght400_GRAD0_opsz20.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="playlist_remove_24dp_FILL0_wght400_GRAD0_opsz24 (3)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\playlist_remove_24dp_FILL0_wght400_GRAD0_opsz24 (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="check_24dp_FILL0_wght400_GRAD0_opsz24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\check_24dp_FILL0_wght400_GRAD0_opsz24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="sol_caja" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\sol_caja.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -1321,8 +1363,8 @@
   <data name="tool_box_preferences_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tool-box-preferences-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="edit_24dp_FILL0_wght400_GRAD0_opsz24__2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\edit_24dp_FILL0_wght400_GRAD0_opsz24 (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="wallet_20dp_FILL0_wght400_GRAD0_opsz20" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wallet_20dp_FILL0_wght400_GRAD0_opsz20.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="plagiarism_24dp_FILL0_wght400_GRAD0_opsz24" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\plagiarism_24dp_FILL0_wght400_GRAD0_opsz24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -1363,8 +1405,8 @@
   <data name="input_20dp__1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\input_20dp (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="local_mall_24dp_FILL0_wght400_GRAD0_opsz24" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\local_mall_24dp_FILL0_wght400_GRAD0_opsz24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="manage_search_24dp_FILL0_wght400_GRAD0_opsz24__2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\manage_search_24dp_FILL0_wght400_GRAD0_opsz24 (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="search_24dp_FILL0_wght400_GRAD0_opsz24__2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\search_24dp_FILL0_wght400_GRAD0_opsz24 (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -1372,8 +1414,8 @@
   <data name="attach_file_24dp_FILL0_wght400_GRAD0_opsz24" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\attach_file_24dp_FILL0_wght400_GRAD0_opsz24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="warehouse__2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\warehouse (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="local_mall_24dp_FILL0_wght400_GRAD0_opsz24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\local_mall_24dp_FILL0_wght400_GRAD0_opsz24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="autorenew_20dp_FILL0_wght400_GRAD0_opsz20" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\autorenew_20dp_FILL0_wght400_GRAD0_opsz20.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -1399,8 +1441,14 @@
   <data name="local_police_24dp_FILL0_wght400_GRAD0_opsz24__1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\local_police_24dp_FILL0_wght400_GRAD0_opsz24 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="business_center_20dp_FILL0_wght400_GRAD0_opsz20" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\business_center_20dp_FILL0_wght400_GRAD0_opsz20.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="person_remove_24dp_FILL0_wght400_GRAD0_opsz24__2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\person_remove_24dp_FILL0_wght400_GRAD0_opsz24 (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="swap_driving_apps_24dp_FILL0_wght400_GRAD0_opsz24__2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\swap_driving_apps_24dp_FILL0_wght400_GRAD0_opsz24 (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="calendar_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\calendar-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -1423,40 +1471,19 @@
   <data name="map_24dp_FILL0_wght400_GRAD0_opsz24__1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\map_24dp_FILL0_wght400_GRAD0_opsz24 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="portfolio__2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\portfolio (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="save_24dp_FILL0_wght400_GRAD0_opsz24 (3)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\save_24dp_FILL0_wght400_GRAD0_opsz24 (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="location_on_24dp_FILL0_wght400_GRAD0_opsz24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\location_on_24dp_FILL0_wght400_GRAD0_opsz24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Roboto_Thin" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Roboto-Thin.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="description_24dp_FILL0_wght400_GRAD0_opsz24__1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\description_24dp_FILL0_wght400_GRAD0_opsz24 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="monitoring_24dp_FILL0_wght400_GRAD0_opsz24__2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\monitoring_24dp_FILL0_wght400_GRAD0_opsz24 (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="add_24dp_FILL0_wght400_GRAD0_opsz24" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\add_24dp_FILL0_wght400_GRAD0_opsz24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="add_circle_24dp_FILL0_wght400_GRAD0_opsz24 (3)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\add_circle_24dp_FILL0_wght400_GRAD0_opsz24 (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="cancel_24dp_FILL0_wght400_GRAD0_opsz24" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cancel_24dp_FILL0_wght400_GRAD0_opsz24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="check_24dp_FILL0_wght400_GRAD0_opsz24" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\check_24dp_FILL0_wght400_GRAD0_opsz24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="check_circle_24dp_FILL0_wght400_GRAD0_opsz24 (3)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\check_circle_24dp_FILL0_wght400_GRAD0_opsz24 (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="do_not_disturb_on_24dp_FILL0_wght400_GRAD0_opsz24" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\do_not_disturb_on_24dp_FILL0_wght400_GRAD0_opsz24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icons8-excel-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8-excel-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="playlist_remove_24dp_FILL0_wght400_GRAD0_opsz24 (3)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\playlist_remove_24dp_FILL0_wght400_GRAD0_opsz24 (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="save_24dp_FILL0_wght400_GRAD0_opsz24 (3)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\save_24dp_FILL0_wght400_GRAD0_opsz24 (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="confirmation_number_24dp_FILL0_wght400_GRAD0_opsz24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\confirmation_number_24dp_FILL0_wght400_GRAD0_opsz24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

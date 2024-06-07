@@ -220,7 +220,7 @@
             this.tcPersonal.Location = new System.Drawing.Point(0, 35);
             this.tcPersonal.Name = "tcPersonal";
             this.tcPersonal.SelectedIndex = 0;
-            this.tcPersonal.Size = new System.Drawing.Size(1015, 584);
+            this.tcPersonal.Size = new System.Drawing.Size(1015, 576);
             this.tcPersonal.TabIndex = 217;
             // 
             // tpDatosPersonales
@@ -233,7 +233,7 @@
             this.tpDatosPersonales.Location = new System.Drawing.Point(4, 22);
             this.tpDatosPersonales.Name = "tpDatosPersonales";
             this.tpDatosPersonales.Padding = new System.Windows.Forms.Padding(3);
-            this.tpDatosPersonales.Size = new System.Drawing.Size(1007, 558);
+            this.tpDatosPersonales.Size = new System.Drawing.Size(1007, 550);
             this.tpDatosPersonales.TabIndex = 0;
             this.tpDatosPersonales.Text = "DATOS PERSONALES";
             // 
@@ -1450,7 +1450,7 @@
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvPersonal.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvPersonal.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvPersonal.Size = new System.Drawing.Size(1001, 213);
+            this.dgvPersonal.Size = new System.Drawing.Size(1001, 211);
             this.dgvPersonal.TabIndex = 42;
             this.dgvPersonal.SelectionChanged += new System.EventHandler(this.dgvPersonal_SelectionChanged);
             // 
@@ -1469,7 +1469,7 @@
             // 
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Size = new System.Drawing.Size(1007, 558);
+            this.tabPage1.Size = new System.Drawing.Size(1007, 550);
             this.tabPage1.TabIndex = 1;
             this.tabPage1.Text = "DOCUMENTOS";
             this.tabPage1.UseVisualStyleBackColor = true;

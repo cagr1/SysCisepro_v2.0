@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmDescuentos));
             this.tcSitios = new System.Windows.Forms.TabControl();
             this.TabPage1 = new System.Windows.Forms.TabPage();
@@ -52,7 +52,6 @@
             this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader13 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Label1 = new System.Windows.Forms.Label();
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.label17 = new System.Windows.Forms.Label();
             this.listView3 = new System.Windows.Forms.ListView();
@@ -189,6 +188,7 @@
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
+            this.Label1 = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.tcSitios.SuspendLayout();
             this.TabPage1.SuspendLayout();
@@ -217,7 +217,7 @@
             this.tcSitios.Location = new System.Drawing.Point(3, 3);
             this.tcSitios.Name = "tcSitios";
             this.tcSitios.SelectedIndex = 0;
-            this.tcSitios.Size = new System.Drawing.Size(805, 714);
+            this.tcSitios.Size = new System.Drawing.Size(805, 695);
             this.tcSitios.TabIndex = 5;
             // 
             // TabPage1
@@ -238,7 +238,7 @@
             this.TabPage1.Location = new System.Drawing.Point(4, 22);
             this.TabPage1.Name = "TabPage1";
             this.TabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.TabPage1.Size = new System.Drawing.Size(797, 688);
+            this.TabPage1.Size = new System.Drawing.Size(797, 669);
             this.TabPage1.TabIndex = 0;
             this.TabPage1.Text = "MANTENIMIENTO";
             // 
@@ -248,7 +248,7 @@
             this.MULTAS.Controls.Add(this.tabPage6);
             this.MULTAS.Controls.Add(this.tabPage7);
             this.MULTAS.Controls.Add(this.tabPage4);
-            this.MULTAS.Location = new System.Drawing.Point(5, 279);
+            this.MULTAS.Location = new System.Drawing.Point(1, 279);
             this.MULTAS.Name = "MULTAS";
             this.MULTAS.SelectedIndex = 0;
             this.MULTAS.Size = new System.Drawing.Size(812, 420);
@@ -287,7 +287,7 @@
             this.ListView1.Location = new System.Drawing.Point(1, 1);
             this.ListView1.MultiSelect = false;
             this.ListView1.Name = "ListView1";
-            this.ListView1.Size = new System.Drawing.Size(791, 383);
+            this.ListView1.Size = new System.Drawing.Size(791, 367);
             this.ListView1.TabIndex = 204;
             this.ListView1.UseCompatibleStateImageBehavior = false;
             this.ListView1.View = System.Windows.Forms.View.Details;
@@ -356,16 +356,6 @@
             // 
             this.columnHeader7.Text = "ANUAL";
             this.columnHeader7.Width = 0;
-            // 
-            // Label1
-            // 
-            this.Label1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Label1.Location = new System.Drawing.Point(19, 732);
-            this.Label1.Name = "Label1";
-            this.Label1.Size = new System.Drawing.Size(770, 18);
-            this.Label1.TabIndex = 205;
-            this.Label1.Text = "0 REGISTRO(S)";
-            this.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // tabPage6
             // 
@@ -609,8 +599,8 @@
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AllowUserToResizeRows = false;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -641,8 +631,8 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(797, 384);
             this.dataGridView1.TabIndex = 226;
@@ -1265,7 +1255,7 @@
             this.txtArea.Enabled = false;
             this.txtArea.Location = new System.Drawing.Point(436, 41);
             this.txtArea.Name = "txtArea";
-            this.txtArea.Size = new System.Drawing.Size(376, 22);
+            this.txtArea.Size = new System.Drawing.Size(358, 22);
             this.txtArea.TabIndex = 197;
             this.txtArea.Visible = false;
             // 
@@ -1286,7 +1276,7 @@
             this.txtCargo.Enabled = false;
             this.txtCargo.Location = new System.Drawing.Point(59, 41);
             this.txtCargo.Name = "txtCargo";
-            this.txtCargo.Size = new System.Drawing.Size(717, 22);
+            this.txtCargo.Size = new System.Drawing.Size(328, 22);
             this.txtCargo.TabIndex = 195;
             // 
             // Label25
@@ -1380,7 +1370,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(797, 691);
+            this.tabPage2.Size = new System.Drawing.Size(797, 669);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "PERSONAL RETIRADO";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -1390,18 +1380,18 @@
             this.dgvSecuencial.AllowUserToAddRows = false;
             this.dgvSecuencial.AllowUserToDeleteRows = false;
             this.dgvSecuencial.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgvSecuencial.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgvSecuencial.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvSecuencial.BackgroundColor = System.Drawing.Color.Azure;
             this.dgvSecuencial.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(60)))), ((int)(((byte)(123)))));
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvSecuencial.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(60)))), ((int)(((byte)(123)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvSecuencial.DefaultCellStyle = dataGridViewCellStyle4;
             this.dgvSecuencial.GridColor = System.Drawing.SystemColors.Control;
             this.dgvSecuencial.Location = new System.Drawing.Point(3, 105);
             this.dgvSecuencial.MultiSelect = false;
@@ -1410,7 +1400,7 @@
             this.dgvSecuencial.RowHeadersVisible = false;
             this.dgvSecuencial.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.dgvSecuencial.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvSecuencial.Size = new System.Drawing.Size(777, 573);
+            this.dgvSecuencial.Size = new System.Drawing.Size(777, 564);
             this.dgvSecuencial.TabIndex = 220;
             // 
             // dateTimePicker1
@@ -1489,7 +1479,7 @@
             this.tabPage5.Controls.Add(this.label15);
             this.tabPage5.Location = new System.Drawing.Point(4, 22);
             this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(827, 705);
+            this.tabPage5.Size = new System.Drawing.Size(797, 669);
             this.tabPage5.TabIndex = 2;
             this.tabPage5.Text = "DETALLES DESCUENTO BODEGA";
             this.tabPage5.UseVisualStyleBackColor = true;
@@ -1497,7 +1487,7 @@
             // label16
             // 
             this.label16.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label16.Location = new System.Drawing.Point(4, 659);
+            this.label16.Location = new System.Drawing.Point(5, 648);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(770, 18);
             this.label16.TabIndex = 226;
@@ -1513,7 +1503,7 @@
             this.toolStripButton10});
             this.toolStrip3.Location = new System.Drawing.Point(0, 0);
             this.toolStrip3.Name = "toolStrip3";
-            this.toolStrip3.Size = new System.Drawing.Size(827, 31);
+            this.toolStrip3.Size = new System.Drawing.Size(797, 31);
             this.toolStrip3.TabIndex = 225;
             this.toolStrip3.Text = "toolStrip3";
             // 
@@ -1553,7 +1543,7 @@
             this.listView2.Location = new System.Drawing.Point(3, 82);
             this.listView2.MultiSelect = false;
             this.listView2.Name = "listView2";
-            this.listView2.Size = new System.Drawing.Size(777, 574);
+            this.listView2.Size = new System.Drawing.Size(789, 562);
             this.listView2.TabIndex = 224;
             this.listView2.UseCompatibleStateImageBehavior = false;
             this.listView2.View = System.Windows.Forms.View.Details;
@@ -1663,11 +1653,21 @@
             this.label15.TabIndex = 222;
             this.label15.Text = "DESDE:";
             // 
+            // Label1
+            // 
+            this.Label1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Label1.Location = new System.Drawing.Point(10, 701);
+            this.Label1.Name = "Label1";
+            this.Label1.Size = new System.Drawing.Size(794, 18);
+            this.Label1.TabIndex = 205;
+            this.Label1.Text = "0 REGISTRO(S)";
+            this.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // FrmDescuentos
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(811, 759);
+            this.ClientSize = new System.Drawing.Size(811, 723);
             this.Controls.Add(this.tcSitios);
             this.Controls.Add(this.Label1);
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

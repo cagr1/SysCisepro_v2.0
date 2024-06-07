@@ -211,7 +211,6 @@
             this.btnSig = new System.Windows.Forms.Button();
             this.btnAnt = new System.Windows.Forms.Button();
             this.TextBox1 = new System.Windows.Forms.TextBox();
-            this.Label10 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -299,7 +298,7 @@
             this.TabControl1.Controls.Add(this.TabResumenRol);
             this.TabControl1.Controls.Add(this.tabPage1);
             this.TabControl1.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TabControl1.Location = new System.Drawing.Point(1, 28);
+            this.TabControl1.Location = new System.Drawing.Point(1, 33);
             this.TabControl1.Name = "TabControl1";
             this.TabControl1.SelectedIndex = 0;
             this.TabControl1.Size = new System.Drawing.Size(1290, 669);
@@ -322,7 +321,6 @@
             this.TabDetallesRol.Controls.Add(this.btnSig);
             this.TabDetallesRol.Controls.Add(this.btnAnt);
             this.TabDetallesRol.Controls.Add(this.TextBox1);
-            this.TabDetallesRol.Controls.Add(this.Label10);
             this.TabDetallesRol.Controls.Add(this.label12);
             this.TabDetallesRol.Controls.Add(this.label11);
             this.TabDetallesRol.Controls.Add(this.label9);
@@ -337,7 +335,7 @@
             // Label14
             // 
             this.Label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label14.Location = new System.Drawing.Point(2, 30);
+            this.Label14.Location = new System.Drawing.Point(4, 38);
             this.Label14.Name = "Label14";
             this.Label14.Size = new System.Drawing.Size(613, 15);
             this.Label14.TabIndex = 251;
@@ -445,7 +443,7 @@
             dataGridViewCellStyle62.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvDetallesRol.DefaultCellStyle = dataGridViewCellStyle62;
             this.dgvDetallesRol.GridColor = System.Drawing.SystemColors.AppWorkspace;
-            this.dgvDetallesRol.Location = new System.Drawing.Point(2, 28);
+            this.dgvDetallesRol.Location = new System.Drawing.Point(2, 35);
             this.dgvDetallesRol.MultiSelect = false;
             this.dgvDetallesRol.Name = "dgvDetallesRol";
             this.dgvDetallesRol.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -462,7 +460,7 @@
             dataGridViewCellStyle64.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvDetallesRol.RowsDefaultCellStyle = dataGridViewCellStyle64;
             this.dgvDetallesRol.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvDetallesRol.Size = new System.Drawing.Size(1280, 582);
+            this.dgvDetallesRol.Size = new System.Drawing.Size(1280, 575);
             this.dgvDetallesRol.TabIndex = 250;
             // 
             // GRP
@@ -1343,7 +1341,7 @@
             this.Label16.AutoSize = true;
             this.Label16.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label16.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.Label16.Location = new System.Drawing.Point(426, 9);
+            this.Label16.Location = new System.Drawing.Point(355, 11);
             this.Label16.Name = "Label16";
             this.Label16.Size = new System.Drawing.Size(140, 13);
             this.Label16.TabIndex = 213;
@@ -1353,13 +1351,11 @@
             // 
             this.btnSig.BackColor = System.Drawing.Color.White;
             this.btnSig.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSig.Image = global::SysCisepro3.Properties.Resources.next_icon;
-            this.btnSig.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSig.Location = new System.Drawing.Point(365, 4);
+            this.btnSig.Image = global::SysCisepro3.Properties.Resources.arrow_forward_24dp_FILL0_wght400_GRAD0_opsz24;
+            this.btnSig.Location = new System.Drawing.Point(311, 4);
             this.btnSig.Name = "btnSig";
-            this.btnSig.Size = new System.Drawing.Size(55, 24);
+            this.btnSig.Size = new System.Drawing.Size(27, 27);
             this.btnSig.TabIndex = 212;
-            this.btnSig.Text = "SIG.";
             this.btnSig.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSig.UseVisualStyleBackColor = false;
             this.btnSig.Click += new System.EventHandler(this.btnSig_Click);
@@ -1368,13 +1364,11 @@
             // 
             this.btnAnt.BackColor = System.Drawing.Color.White;
             this.btnAnt.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAnt.Image = global::SysCisepro3.Properties.Resources.preview_icon;
-            this.btnAnt.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAnt.Location = new System.Drawing.Point(310, 4);
+            this.btnAnt.Image = global::SysCisepro3.Properties.Resources.arrow_back_24dp_FILL0_wght400_GRAD0_opsz24;
+            this.btnAnt.Location = new System.Drawing.Point(278, 4);
             this.btnAnt.Name = "btnAnt";
-            this.btnAnt.Size = new System.Drawing.Size(55, 24);
+            this.btnAnt.Size = new System.Drawing.Size(27, 27);
             this.btnAnt.TabIndex = 211;
-            this.btnAnt.Text = "ANT.";
             this.btnAnt.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAnt.UseVisualStyleBackColor = false;
             this.btnAnt.Click += new System.EventHandler(this.btnAnt_Click);
@@ -1383,22 +1377,11 @@
             // 
             this.TextBox1.BackColor = System.Drawing.Color.White;
             this.TextBox1.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.TextBox1.Location = new System.Drawing.Point(57, 6);
+            this.TextBox1.Location = new System.Drawing.Point(13, 8);
             this.TextBox1.Name = "TextBox1";
             this.TextBox1.Size = new System.Drawing.Size(247, 21);
             this.TextBox1.TabIndex = 210;
             this.TextBox1.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TextBox1_KeyUp);
-            // 
-            // Label10
-            // 
-            this.Label10.AutoSize = true;
-            this.Label10.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label10.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.Label10.Location = new System.Drawing.Point(6, 9);
-            this.Label10.Name = "Label10";
-            this.Label10.Size = new System.Drawing.Size(48, 13);
-            this.Label10.TabIndex = 209;
-            this.Label10.Text = "BUSCAR:";
             // 
             // label12
             // 
@@ -2153,7 +2136,10 @@
             // 
             // toolStrip1
             // 
+            this.toolStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(235)))), ((int)(((byte)(247)))));
+            this.toolStrip1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.toolStrip1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnBuscar,
             this.btnResumen,
@@ -2164,53 +2150,59 @@
             this.toolStripButton5});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1292, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(1292, 31);
             this.toolStrip1.TabIndex = 214;
             this.toolStrip1.Text = "toolStrip1";
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Image = global::SysCisepro3.Properties.Resources.BuscarRegistro;
+            this.btnBuscar.Image = global::SysCisepro3.Properties.Resources.search_24dp_FILL0_wght400_GRAD0_opsz24__2_;
+            this.btnBuscar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnBuscar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(140, 22);
-            this.btnBuscar.Text = "SELECCIONAR ROLES";
+            this.btnBuscar.Size = new System.Drawing.Size(79, 28);
+            this.btnBuscar.Text = "BUSCAR";
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // btnResumen
             // 
-            this.btnResumen.Image = global::SysCisepro3.Properties.Resources.application_view_detail;
+            this.btnResumen.Image = global::SysCisepro3.Properties.Resources.description_24dp_FILL0_wght400_GRAD0_opsz24__2_;
+            this.btnResumen.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnResumen.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnResumen.Name = "btnResumen";
-            this.btnResumen.Size = new System.Drawing.Size(138, 22);
+            this.btnResumen.Size = new System.Drawing.Size(146, 28);
             this.btnResumen.Text = "GENERAR INFORMES";
+            this.btnResumen.ToolTipText = "INFORME";
             this.btnResumen.Click += new System.EventHandler(this.btnResumen_Click);
             // 
             // toolStripButton4
             // 
-            this.toolStripButton4.Image = global::SysCisepro3.Properties.Resources.excel_icon;
+            this.toolStripButton4.Image = global::SysCisepro3.Properties.Resources.icons8_excel_48;
+            this.toolStripButton4.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton4.Name = "toolStripButton4";
-            this.toolStripButton4.Size = new System.Drawing.Size(158, 22);
-            this.toolStripButton4.Text = "EXPORTAR ROL DE PAGO";
+            this.toolStripButton4.Size = new System.Drawing.Size(60, 28);
+            this.toolStripButton4.Text = "ROL ";
             this.toolStripButton4.Click += new System.EventHandler(this.button1_Click);
             // 
             // toolStripButton2
             // 
-            this.toolStripButton2.Image = global::SysCisepro3.Properties.Resources.excel_icon;
+            this.toolStripButton2.Image = global::SysCisepro3.Properties.Resources.icons8_excel_48;
+            this.toolStripButton2.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(136, 22);
-            this.toolStripButton2.Text = "EXPORTAR INFORME";
+            this.toolStripButton2.Size = new System.Drawing.Size(86, 28);
+            this.toolStripButton2.Text = "INFORME";
             this.toolStripButton2.Click += new System.EventHandler(this.btnInformePago_Click);
             // 
             // toolStripButton3
             // 
-            this.toolStripButton3.Image = global::SysCisepro3.Properties.Resources.excel_icon;
+            this.toolStripButton3.Image = global::SysCisepro3.Properties.Resources.icons8_excel_48;
+            this.toolStripButton3.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton3.Name = "toolStripButton3";
-            this.toolStripButton3.Size = new System.Drawing.Size(150, 22);
-            this.toolStripButton3.Text = "EXPORTAR HOR. EXTRA";
+            this.toolStripButton3.Size = new System.Drawing.Size(100, 28);
+            this.toolStripButton3.Text = "HOR. EXTRA";
             this.toolStripButton3.Click += new System.EventHandler(this.button2_Click);
             // 
             // btnFondoR
@@ -2218,7 +2210,7 @@
             this.btnFondoR.Image = global::SysCisepro3.Properties.Resources.database_table;
             this.btnFondoR.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnFondoR.Name = "btnFondoR";
-            this.btnFondoR.Size = new System.Drawing.Size(128, 22);
+            this.btnFondoR.Size = new System.Drawing.Size(128, 28);
             this.btnFondoR.Text = "BATCH HOR EXTRA";
             this.btnFondoR.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
@@ -2227,7 +2219,7 @@
             this.toolStripButton5.Image = global::SysCisepro3.Properties.Resources.database_table;
             this.toolStripButton5.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton5.Name = "toolStripButton5";
-            this.toolStripButton5.Size = new System.Drawing.Size(125, 22);
+            this.toolStripButton5.Size = new System.Drawing.Size(125, 28);
             this.toolStripButton5.Text = "BATCH FON RESER";
             this.toolStripButton5.Click += new System.EventHandler(this.toolStripButton5_Click);
             // 
@@ -2275,7 +2267,6 @@
         internal System.Windows.Forms.Button btnSig;
         internal System.Windows.Forms.Button btnAnt;
         internal System.Windows.Forms.TextBox TextBox1;
-        internal System.Windows.Forms.Label Label10;
         internal System.Windows.Forms.TabPage TabResumenRol;
         internal System.Windows.Forms.TextBox TextBox8;
         internal System.Windows.Forms.Label Label24;

@@ -142,6 +142,10 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "FrmPeriodoVacaciones";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StateActive.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.StateActive.Border.Rounding = 5F;
             this.Text = "PERÍODO VACACIONES";
             this.Load += new System.EventHandler(this.FrmPeriodoVacaciones_Load);
             this.ResumeLayout(false);

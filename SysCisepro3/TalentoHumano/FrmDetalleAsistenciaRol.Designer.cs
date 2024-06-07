@@ -71,14 +71,14 @@
             // 
             this.btnCargaBasica.BackColor = System.Drawing.Color.White;
             this.btnCargaBasica.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCargaBasica.Image = global::SysCisepro3.Properties.Resources.printer_empty;
-            this.btnCargaBasica.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnCargaBasica.Location = new System.Drawing.Point(677, 21);
+            this.btnCargaBasica.Image = global::SysCisepro3.Properties.Resources.print_24dp_FILL0_wght400_GRAD0_opsz24;
+            this.btnCargaBasica.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCargaBasica.Location = new System.Drawing.Point(677, 27);
             this.btnCargaBasica.Name = "btnCargaBasica";
-            this.btnCargaBasica.Size = new System.Drawing.Size(91, 42);
+            this.btnCargaBasica.Size = new System.Drawing.Size(91, 35);
             this.btnCargaBasica.TabIndex = 208;
-            this.btnCargaBasica.Text = "Rol Basico";
-            this.btnCargaBasica.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnCargaBasica.Text = "Basico";
+            this.btnCargaBasica.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCargaBasica.UseVisualStyleBackColor = false;
             this.btnCargaBasica.Click += new System.EventHandler(this.btnCargaBasica_Click);
             // 
@@ -86,14 +86,14 @@
             // 
             this.btnCargarPersonal.BackColor = System.Drawing.Color.White;
             this.btnCargarPersonal.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCargarPersonal.Image = global::SysCisepro3.Properties.Resources.printer_empty;
-            this.btnCargarPersonal.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnCargarPersonal.Image = global::SysCisepro3.Properties.Resources.print_24dp_FILL0_wght400_GRAD0_opsz24;
+            this.btnCargarPersonal.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCargarPersonal.Location = new System.Drawing.Point(677, 70);
             this.btnCargarPersonal.Name = "btnCargarPersonal";
-            this.btnCargarPersonal.Size = new System.Drawing.Size(91, 42);
+            this.btnCargarPersonal.Size = new System.Drawing.Size(91, 35);
             this.btnCargarPersonal.TabIndex = 207;
-            this.btnCargarPersonal.Text = "Rol Completo";
-            this.btnCargarPersonal.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnCargarPersonal.Text = "Completo";
+            this.btnCargarPersonal.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCargarPersonal.UseVisualStyleBackColor = false;
             this.btnCargarPersonal.Click += new System.EventHandler(this.btnCargarPersonal_Click);
             // 
@@ -119,7 +119,7 @@
             // Label3
             // 
             this.Label3.AutoSize = true;
-            this.Label3.Location = new System.Drawing.Point(380, 92);
+            this.Label3.Location = new System.Drawing.Point(370, 92);
             this.Label3.Name = "Label3";
             this.Label3.Size = new System.Drawing.Size(23, 13);
             this.Label3.TabIndex = 203;
@@ -137,7 +137,7 @@
             // Label5
             // 
             this.Label5.AutoSize = true;
-            this.Label5.Location = new System.Drawing.Point(372, 71);
+            this.Label5.Location = new System.Drawing.Point(367, 71);
             this.Label5.Name = "Label5";
             this.Label5.Size = new System.Drawing.Size(29, 13);
             this.Label5.TabIndex = 201;
@@ -157,7 +157,7 @@
             this.label2.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(6, 21);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(671, 35);
+            this.label2.Size = new System.Drawing.Size(630, 35);
             this.label2.TabIndex = 206;
             this.label2.Text = "ESTE LISTADO REPRESENTA LOS DÍAS DE ASISTENCIA, ATRASO, DOBLADA, FALTAS, VACACION" +
     "ES, ETC. DEL VIGILANTE SELECCIONADO EN EL RANGO DE FECHAS SELECCIONADO";
@@ -177,7 +177,7 @@
             this.ListView3.Location = new System.Drawing.Point(-5, 137);
             this.ListView3.MultiSelect = false;
             this.ListView3.Name = "ListView3";
-            this.ListView3.Size = new System.Drawing.Size(774, 379);
+            this.ListView3.Size = new System.Drawing.Size(780, 379);
             this.ListView3.TabIndex = 208;
             this.ListView3.UseCompatibleStateImageBehavior = false;
             this.ListView3.View = System.Windows.Forms.View.Details;
@@ -218,6 +218,10 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "FrmDetalleAsistenciaRol";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StateActive.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.StateActive.Border.Rounding = 5F;
             this.Text = "DETALLE DE ASISTENCIA";
             this.Load += new System.EventHandler(this.FrmDetalleAsistenciaRol_Load);
             this.GroupBox1.ResumeLayout(false);

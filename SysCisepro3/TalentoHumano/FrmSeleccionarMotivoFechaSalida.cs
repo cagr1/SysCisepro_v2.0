@@ -2,10 +2,11 @@
 using System.Windows.Forms;
 using ClassLibraryCisepro3.Enums;
 using SysCisepro3.Properties;
+using Krypton.Toolkit;
 
 namespace SysCisepro3.TalentoHumano
 {
-    public partial class FrmSeleccionarMotivoFechaSalida : Form
+    public partial class FrmSeleccionarMotivoFechaSalida : KryptonForm
     {
         /// <summary>
         /// CISEPRO 2019

@@ -175,6 +175,11 @@ namespace SysCisepro3.TalentoHumano
 
             _cuentas = new List<string>();
 
+            //Image orginalBcoPichicha = Resources.banco_pichincha_logo;
+            //Image resizeBcoPichincha = new Bitmap(orginalBcoPichicha, new Size(btnBizPichincha.Width, btnBizPichincha.Height));
+            //btnBizPichincha.Image = resizeBcoPichincha;
+            //btnBizPichincha.ImageAlign = ContentAlignment.MiddleCenter;
+            
             ComboColumnas(); 
         }
 
@@ -4233,6 +4238,11 @@ namespace SysCisepro3.TalentoHumano
                 crvReporteRol.ReportSource = null;
             }
         
+        }
+
+        private void TabResumenRol_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

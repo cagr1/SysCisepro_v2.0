@@ -62,7 +62,6 @@
             this.dtpFechaDesde = new System.Windows.Forms.DateTimePicker();
             this.Label7 = new System.Windows.Forms.Label();
             this.Label20 = new System.Windows.Forms.Label();
-            this.Label21 = new System.Windows.Forms.Label();
             this.dgvPersonal = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -91,6 +90,8 @@
             // 
             // toolStrip1
             // 
+            this.toolStrip1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnRecargar,
             this.btnCancelar,
@@ -98,25 +99,27 @@
             this.toolStripLabel2});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1052, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(1052, 31);
             this.toolStrip1.TabIndex = 218;
             this.toolStrip1.Text = "toolStrip1";
             // 
             // btnRecargar
             // 
-            this.btnRecargar.Image = global::SysCisepro3.Properties.Resources.BuscarRegistro;
+            this.btnRecargar.Image = global::SysCisepro3.Properties.Resources.search_24dp_FILL0_wght400_GRAD0_opsz24__2_;
+            this.btnRecargar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnRecargar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnRecargar.Name = "btnRecargar";
-            this.btnRecargar.Size = new System.Drawing.Size(86, 22);
+            this.btnRecargar.Size = new System.Drawing.Size(94, 28);
             this.btnRecargar.Text = "RECARGAR";
             this.btnRecargar.Click += new System.EventHandler(this.btnRecargar_Click);
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Image = global::SysCisepro3.Properties.Resources.excel_icon;
+            this.btnCancelar.Image = global::SysCisepro3.Properties.Resources.icons8_excel_48;
+            this.btnCancelar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnCancelar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(120, 22);
+            this.btnCancelar.Size = new System.Drawing.Size(128, 28);
             this.btnCancelar.Text = "EXPORTAR DATOS";
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
@@ -124,13 +127,13 @@
             // 
             this.toolStripLabel1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(0, 22);
+            this.toolStripLabel1.Size = new System.Drawing.Size(0, 28);
             // 
             // toolStripLabel2
             // 
             this.toolStripLabel2.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.toolStripLabel2.Name = "toolStripLabel2";
-            this.toolStripLabel2.Size = new System.Drawing.Size(0, 22);
+            this.toolStripLabel2.Size = new System.Drawing.Size(0, 28);
             // 
             // GroupBox1
             // 
@@ -142,9 +145,8 @@
             this.GroupBox1.Controls.Add(this.dtpFechaDesde);
             this.GroupBox1.Controls.Add(this.Label7);
             this.GroupBox1.Controls.Add(this.Label20);
-            this.GroupBox1.Controls.Add(this.Label21);
             this.GroupBox1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GroupBox1.Location = new System.Drawing.Point(0, 28);
+            this.GroupBox1.Location = new System.Drawing.Point(0, 33);
             this.GroupBox1.Name = "GroupBox1";
             this.GroupBox1.Size = new System.Drawing.Size(1052, 43);
             this.GroupBox1.TabIndex = 219;
@@ -219,15 +221,6 @@
             this.Label20.TabIndex = 225;
             this.Label20.Text = "DEL AÑO:";
             // 
-            // Label21
-            // 
-            this.Label21.AutoSize = true;
-            this.Label21.Location = new System.Drawing.Point(667, 21);
-            this.Label21.Name = "Label21";
-            this.Label21.Size = new System.Drawing.Size(107, 13);
-            this.Label21.TabIndex = 226;
-            this.Label21.Text = "FILTRAR PERSONAL:";
-            // 
             // dgvPersonal
             // 
             this.dgvPersonal.AllowUserToAddRows = false;
@@ -272,7 +265,7 @@
             dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvPersonal.DefaultCellStyle = dataGridViewCellStyle19;
             this.dgvPersonal.GridColor = System.Drawing.SystemColors.AppWorkspace;
-            this.dgvPersonal.Location = new System.Drawing.Point(0, 73);
+            this.dgvPersonal.Location = new System.Drawing.Point(0, 78);
             this.dgvPersonal.MultiSelect = false;
             this.dgvPersonal.Name = "dgvPersonal";
             this.dgvPersonal.ReadOnly = true;
@@ -290,7 +283,7 @@
             dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvPersonal.RowsDefaultCellStyle = dataGridViewCellStyle21;
             this.dgvPersonal.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvPersonal.Size = new System.Drawing.Size(1052, 560);
+            this.dgvPersonal.Size = new System.Drawing.Size(1052, 557);
             this.dgvPersonal.TabIndex = 220;
             // 
             // Column1
@@ -490,9 +483,12 @@
             this.Controls.Add(this.dgvPersonal);
             this.Controls.Add(this.GroupBox1);
             this.Controls.Add(this.toolStrip1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "FrmReporteGeneralNomina";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StateActive.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.StateActive.Border.Rounding = 5F;
             this.Text = "REPORTE GENERAL NÓMINA";
             this.Load += new System.EventHandler(this.FrmReporteGeneralNomina_Load);
             this.toolStrip1.ResumeLayout(false);
@@ -519,7 +515,6 @@
         internal System.Windows.Forms.Label Label7;
         internal System.Windows.Forms.Label Label20;
         internal System.Windows.Forms.TextBox txtFiltro;
-        internal System.Windows.Forms.Label Label21;
         internal System.Windows.Forms.DataGridView dgvPersonal;
         private System.Windows.Forms.ToolStripLabel toolStripLabel2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;

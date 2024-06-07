@@ -12,10 +12,11 @@ using Microsoft.Office.Interop.Excel;
 using SysCisepro3.Datos;
 using SysCisepro3.Properties;
 using Office = Microsoft.Office.Interop;
+using Krypton.Toolkit;
 
 namespace SysCisepro3.TalentoHumano
 {
-    public partial class FrmPendientesVcaciones : Form
+    public partial class FrmPendientesVcaciones : KryptonForm
     {
         /// <summary>
         /// CISEPRO 2019
@@ -76,6 +77,7 @@ namespace SysCisepro3.TalentoHumano
                     break;
             }
             dataGridView1.Font = new System.Drawing.Font("Roboto",8, FontStyle.Regular);
+            ValidationForms.SetPlaceholder(txtFiltro, "BUSCAR ...");
             cbxTipo.SelectedIndex = 0;
             cbxEstado.SelectedIndex = 1; 
             LlenarPeriodos();

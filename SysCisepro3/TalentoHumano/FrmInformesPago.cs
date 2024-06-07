@@ -16,10 +16,11 @@ using Font = System.Drawing.Font;
 using ClassLibraryCisepro3.Estaticas;
 using System.IO;
 using ClassLibraryCisepro3.EstructuraEmpresa;
+using Krypton.Toolkit;
 
 namespace SysCisepro3.TalentoHumano
 {
-    public partial class FrmInformesPago : Form
+    public partial class FrmInformesPago : KryptonForm
     {
         /// <summary>
         /// CISEPRO 2019
@@ -103,6 +104,9 @@ namespace SysCisepro3.TalentoHumano
             btnAnt.Tag = 0;
             btnSig.Tag = 0;
             btnResumen.Tag = null;
+
+            ValidationForms.SetPlaceholder(TextBox1, "BUSCAR...");
+
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)

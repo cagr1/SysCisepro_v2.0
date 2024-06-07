@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAgregarPersonalRolPago));
             this.txtUbicacionPuesto = new System.Windows.Forms.TextBox();
             this.Button2 = new System.Windows.Forms.Button();
             this.Label23 = new System.Windows.Forms.Label();
@@ -66,7 +65,7 @@
             this.txtUbicacionPuesto.Enabled = false;
             this.txtUbicacionPuesto.Location = new System.Drawing.Point(170, 17);
             this.txtUbicacionPuesto.Name = "txtUbicacionPuesto";
-            this.txtUbicacionPuesto.Size = new System.Drawing.Size(567, 21);
+            this.txtUbicacionPuesto.Size = new System.Drawing.Size(557, 21);
             this.txtUbicacionPuesto.TabIndex = 0;
             // 
             // Button2
@@ -161,12 +160,13 @@
             // bntPuesto
             // 
             this.bntPuesto.BackColor = System.Drawing.Color.White;
+            this.bntPuesto.FlatAppearance.BorderSize = 0;
+            this.bntPuesto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bntPuesto.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bntPuesto.Image = ((System.Drawing.Image)(resources.GetObject("bntPuesto.Image")));
-            this.bntPuesto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bntPuesto.Location = new System.Drawing.Point(737, 13);
+            this.bntPuesto.Image = global::SysCisepro3.Properties.Resources.location_on_24dp_FILL0_wght400_GRAD0_opsz24;
+            this.bntPuesto.Location = new System.Drawing.Point(733, 13);
             this.bntPuesto.Name = "bntPuesto";
-            this.bntPuesto.Size = new System.Drawing.Size(26, 26);
+            this.bntPuesto.Size = new System.Drawing.Size(27, 27);
             this.bntPuesto.TabIndex = 193;
             this.bntPuesto.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.bntPuesto.UseVisualStyleBackColor = false;
@@ -260,12 +260,13 @@
             // btnPersonal
             // 
             this.btnPersonal.BackColor = System.Drawing.Color.White;
+            this.btnPersonal.FlatAppearance.BorderSize = 0;
+            this.btnPersonal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPersonal.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPersonal.Image = ((System.Drawing.Image)(resources.GetObject("btnPersonal.Image")));
-            this.btnPersonal.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPersonal.Location = new System.Drawing.Point(737, 11);
+            this.btnPersonal.Image = global::SysCisepro3.Properties.Resources.person_24dp_FILL0_wght400_GRAD0_opsz24__2_;
+            this.btnPersonal.Location = new System.Drawing.Point(731, 11);
             this.btnPersonal.Name = "btnPersonal";
-            this.btnPersonal.Size = new System.Drawing.Size(26, 26);
+            this.btnPersonal.Size = new System.Drawing.Size(27, 27);
             this.btnPersonal.TabIndex = 193;
             this.btnPersonal.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnPersonal.UseVisualStyleBackColor = false;
@@ -297,7 +298,7 @@
             this.txtPersonal.Enabled = false;
             this.txtPersonal.Location = new System.Drawing.Point(219, 15);
             this.txtPersonal.Name = "txtPersonal";
-            this.txtPersonal.Size = new System.Drawing.Size(518, 21);
+            this.txtPersonal.Size = new System.Drawing.Size(508, 21);
             this.txtPersonal.TabIndex = 0;
             // 
             // Label26

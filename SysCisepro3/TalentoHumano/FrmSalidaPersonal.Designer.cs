@@ -56,7 +56,6 @@
             this.chkbxCredencial = new System.Windows.Forms.CheckBox();
             this.chkbxRoles = new System.Windows.Forms.CheckBox();
             this.chkbxUniformes = new System.Windows.Forms.CheckBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.txtFiltro = new System.Windows.Forms.TextBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage2 = new System.Windows.Forms.TabPage();
@@ -74,6 +73,7 @@
             // toolStrip1
             // 
             this.toolStrip1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnListar,
             this.btnGuardar,
@@ -82,53 +82,58 @@
             this.btnExportar});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(963, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(923, 31);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             // 
             // btnListar
             // 
-            this.btnListar.Image = global::SysCisepro3.Properties.Resources.BuscarRegistro;
+            this.btnListar.Image = global::SysCisepro3.Properties.Resources.search_24dp_FILL0_wght400_GRAD0_opsz24__2_;
             this.btnListar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnListar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnListar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnListar.Name = "btnListar";
-            this.btnListar.Size = new System.Drawing.Size(102, 22);
+            this.btnListar.Size = new System.Drawing.Size(110, 28);
             this.btnListar.Text = "LISTAR TODOS";
             this.btnListar.Click += new System.EventHandler(this.btnListar_Click);
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Image = global::SysCisepro3.Properties.Resources.GuardarRegistro;
+            this.btnGuardar.Image = global::SysCisepro3.Properties.Resources.save_24dp_FILL0_wght400_GRAD0_opsz24__2_;
+            this.btnGuardar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnGuardar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(81, 22);
+            this.btnGuardar.Size = new System.Drawing.Size(89, 28);
             this.btnGuardar.Text = "GUARDAR";
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // btnModificar
             // 
-            this.btnModificar.Image = global::SysCisepro3.Properties.Resources.application_edit;
+            this.btnModificar.Image = global::SysCisepro3.Properties.Resources.edit_document_24dp_FILL0_wght400_GRAD0_opsz24__2_;
+            this.btnModificar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnModificar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(90, 22);
+            this.btnModificar.Size = new System.Drawing.Size(98, 28);
             this.btnModificar.Text = "MODIFICAR";
             this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Image = global::SysCisepro3.Properties.Resources.cancel;
+            this.btnCancelar.Image = global::SysCisepro3.Properties.Resources.cancel_24dp_FILL0_wght400_GRAD0_opsz24;
+            this.btnCancelar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnCancelar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(87, 22);
+            this.btnCancelar.Size = new System.Drawing.Size(95, 28);
             this.btnCancelar.Text = "CANCELAR";
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnExportar
             // 
-            this.btnExportar.Image = global::SysCisepro3.Properties.Resources.report;
+            this.btnExportar.Image = global::SysCisepro3.Properties.Resources.description_24dp_FILL0_wght400_GRAD0_opsz24__2_;
+            this.btnExportar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnExportar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnExportar.Name = "btnExportar";
-            this.btnExportar.Size = new System.Drawing.Size(74, 22);
+            this.btnExportar.Size = new System.Drawing.Size(82, 28);
             this.btnExportar.Text = "REPORTE";
             this.btnExportar.Click += new System.EventHandler(this.btnExportar_Click);
             // 
@@ -147,7 +152,7 @@
             this.dgvPersonal.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgvPersonal.RowHeadersVisible = false;
             this.dgvPersonal.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvPersonal.Size = new System.Drawing.Size(906, 465);
+            this.dgvPersonal.Size = new System.Drawing.Size(885, 465);
             this.dgvPersonal.TabIndex = 1;
             this.dgvPersonal.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvPersonal_CellFormatting);
             this.dgvPersonal.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dgvPersonal_DataError);
@@ -213,7 +218,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(6, 113);
+            this.label8.Location = new System.Drawing.Point(5, 113);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(98, 13);
             this.label8.TabIndex = 12;
@@ -335,7 +340,7 @@
             this.groupBox2.Controls.Add(this.chkbxUniformes);
             this.groupBox2.Controls.Add(this.chkbxFichaMedica);
             this.groupBox2.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(643, 39);
+            this.groupBox2.Location = new System.Drawing.Point(617, 39);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(292, 163);
             this.groupBox2.TabIndex = 4;
@@ -378,21 +383,12 @@
             this.chkbxUniformes.Text = "Uniformes";
             this.chkbxUniformes.UseVisualStyleBackColor = true;
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(18, 184);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(55, 13);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "BUSCAR: ";
-            // 
             // txtFiltro
             // 
-            this.txtFiltro.Location = new System.Drawing.Point(93, 182);
+            this.txtFiltro.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFiltro.Location = new System.Drawing.Point(14, 186);
             this.txtFiltro.Name = "txtFiltro";
-            this.txtFiltro.Size = new System.Drawing.Size(518, 20);
+            this.txtFiltro.Size = new System.Drawing.Size(518, 21);
             this.txtFiltro.TabIndex = 6;
             this.txtFiltro.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtFiltro_KeyUp);
             // 
@@ -401,10 +397,10 @@
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabControl1.Location = new System.Drawing.Point(21, 218);
+            this.tabControl1.Location = new System.Drawing.Point(14, 212);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(914, 497);
+            this.tabControl1.Size = new System.Drawing.Size(909, 497);
             this.tabControl1.TabIndex = 7;
             // 
             // tabPage2
@@ -413,7 +409,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(906, 471);
+            this.tabPage2.Size = new System.Drawing.Size(901, 471);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "BUSQUEDA";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -424,7 +420,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(906, 471);
+            this.tabPage1.Size = new System.Drawing.Size(901, 471);
             this.tabPage1.TabIndex = 2;
             this.tabPage1.Text = "REPORTE";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -438,7 +434,7 @@
             this.crvSalida.Location = new System.Drawing.Point(3, 3);
             this.crvSalida.Name = "crvSalida";
             this.crvSalida.ShowGroupTreeButton = false;
-            this.crvSalida.Size = new System.Drawing.Size(900, 465);
+            this.crvSalida.Size = new System.Drawing.Size(895, 465);
             this.crvSalida.TabIndex = 0;
             this.crvSalida.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None;
             // 
@@ -447,16 +443,18 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(963, 719);
+            this.ClientSize = new System.Drawing.Size(923, 719);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.txtFiltro);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.toolStrip1);
             this.Name = "FrmSalidaPersonal";
-            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StateActive.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.StateActive.Border.Rounding = 5F;
             this.Text = "PROCESO SALIDA DE PERSONAL";
             this.Load += new System.EventHandler(this.FrmSalidaPersonal_Load);
             this.toolStrip1.ResumeLayout(false);
@@ -495,7 +493,6 @@
         private System.Windows.Forms.CheckBox chkbxCredencial;
         private System.Windows.Forms.CheckBox chkbxRoles;
         private System.Windows.Forms.CheckBox chkbxUniformes;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtFiltro;
         private System.Windows.Forms.ToolStripButton btnModificar;
         private System.Windows.Forms.TextBox txtIdPersonal;

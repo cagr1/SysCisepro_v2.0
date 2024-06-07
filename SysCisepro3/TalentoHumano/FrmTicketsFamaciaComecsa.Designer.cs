@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnAnular = new System.Windows.Forms.ToolStripButton();
             this.btnGuardar = new System.Windows.Forms.ToolStripButton();
             this.btnNuevo = new System.Windows.Forms.ToolStripButton();
@@ -74,7 +74,6 @@
             this.dtpFechaHasta = new System.Windows.Forms.DateTimePicker();
             this.Label10 = new System.Windows.Forms.Label();
             this.Label11 = new System.Windows.Forms.Label();
-            this.Label7 = new System.Windows.Forms.Label();
             this.cbxFiltro = new System.Windows.Forms.ComboBox();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -84,10 +83,11 @@
             // btnAnular
             // 
             this.btnAnular.Enabled = false;
-            this.btnAnular.Image = global::SysCisepro3.Properties.Resources.EliminarRegistro;
+            this.btnAnular.Image = global::SysCisepro3.Properties.Resources.do_not_disturb_on_24dp_FILL0_wght400_GRAD0_opsz24;
+            this.btnAnular.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnAnular.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnAnular.Name = "btnAnular";
-            this.btnAnular.Size = new System.Drawing.Size(73, 22);
+            this.btnAnular.Size = new System.Drawing.Size(81, 28);
             this.btnAnular.Text = "ANULAR";
             this.btnAnular.Click += new System.EventHandler(this.btnAnular_Click);
             // 
@@ -97,7 +97,7 @@
             this.btnGuardar.Image = global::SysCisepro3.Properties.Resources.GuardarRegistro;
             this.btnGuardar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(81, 22);
+            this.btnGuardar.Size = new System.Drawing.Size(81, 28);
             this.btnGuardar.Text = "GUARDAR";
             this.btnGuardar.Visible = false;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
@@ -107,23 +107,25 @@
             this.btnNuevo.Image = global::SysCisepro3.Properties.Resources.NuevoRegistro;
             this.btnNuevo.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(66, 22);
+            this.btnNuevo.Size = new System.Drawing.Size(66, 28);
             this.btnNuevo.Text = "NUEVO";
             this.btnNuevo.Visible = false;
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Image = global::SysCisepro3.Properties.Resources.BuscarRegistro;
+            this.btnBuscar.Image = global::SysCisepro3.Properties.Resources.search_24dp_FILL0_wght400_GRAD0_opsz24__2_;
+            this.btnBuscar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnBuscar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(102, 22);
+            this.btnBuscar.Size = new System.Drawing.Size(110, 28);
             this.btnBuscar.Text = "LISTAR TODOS";
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // toolStrip1
             // 
             this.toolStrip1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnBuscar,
             this.btnNuevo,
@@ -135,7 +137,7 @@
             this.ticFarmacia});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(786, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(786, 31);
             this.toolStrip1.TabIndex = 235;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -145,17 +147,18 @@
             this.btnCancelar.Image = global::SysCisepro3.Properties.Resources.cancel;
             this.btnCancelar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(87, 22);
+            this.btnCancelar.Size = new System.Drawing.Size(87, 28);
             this.btnCancelar.Text = "CANCELAR";
             this.btnCancelar.Visible = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // toolStripButton1
             // 
-            this.toolStripButton1.Image = global::SysCisepro3.Properties.Resources.excel_icon;
+            this.toolStripButton1.Image = global::SysCisepro3.Properties.Resources.icons8_excel_48;
+            this.toolStripButton1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(82, 22);
+            this.toolStripButton1.Size = new System.Drawing.Size(90, 28);
             this.toolStripButton1.Text = "EXPORTAR";
             this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
@@ -165,7 +168,7 @@
             this.ticComecsa.Image = global::SysCisepro3.Properties.Resources.tick;
             this.ticComecsa.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.ticComecsa.Name = "ticComecsa";
-            this.ticComecsa.Size = new System.Drawing.Size(122, 22);
+            this.ticComecsa.Size = new System.Drawing.Size(122, 28);
             this.ticComecsa.Text = "TICKET COMECSA";
             this.ticComecsa.Visible = false;
             this.ticComecsa.Click += new System.EventHandler(this.ticComecsa_Click);
@@ -176,7 +179,7 @@
             this.ticFarmacia.Image = global::SysCisepro3.Properties.Resources.tick;
             this.ticFarmacia.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.ticFarmacia.Name = "ticFarmacia";
-            this.ticFarmacia.Size = new System.Drawing.Size(124, 22);
+            this.ticFarmacia.Size = new System.Drawing.Size(124, 28);
             this.ticFarmacia.Text = "TICKET FARMACIA";
             this.ticFarmacia.Visible = false;
             this.ticFarmacia.Click += new System.EventHandler(this.ticFarmacia_Click);
@@ -186,18 +189,18 @@
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AllowUserToResizeRows = false;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle19;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle20.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle20.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle20.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle20;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -208,29 +211,29 @@
             this.Column6,
             this.Column7,
             this.Column8});
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle22.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle22.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle22.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle22.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle22.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle22;
             this.dataGridView1.Location = new System.Drawing.Point(0, 182);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle23.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle23.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle23.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle23;
             this.dataGridView1.RowHeadersVisible = false;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle24;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(784, 412);
             this.dataGridView1.TabIndex = 236;
@@ -245,8 +248,8 @@
             // 
             // Column2
             // 
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Column2.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column2.DefaultCellStyle = dataGridViewCellStyle21;
             this.Column2.HeaderText = "FEC. REGISTRO";
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
@@ -298,7 +301,7 @@
             // 
             this.Label1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Label1.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label1.Location = new System.Drawing.Point(1, 598);
+            this.Label1.Location = new System.Drawing.Point(1, 600);
             this.Label1.Name = "Label1";
             this.Label1.Size = new System.Drawing.Size(783, 15);
             this.Label1.TabIndex = 234;
@@ -370,7 +373,7 @@
             this.dtpFechaDesde.CustomFormat = "dddd, dd-MMM-yyyy";
             this.dtpFechaDesde.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpFechaDesde.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaDesde.Location = new System.Drawing.Point(564, 154);
+            this.dtpFechaDesde.Location = new System.Drawing.Point(564, 156);
             this.dtpFechaDesde.Name = "dtpFechaDesde";
             this.dtpFechaDesde.Size = new System.Drawing.Size(93, 21);
             this.dtpFechaDesde.TabIndex = 229;
@@ -402,7 +405,7 @@
             this.GroupBox2.Controls.Add(this.txtDetallesNotificacion);
             this.GroupBox2.Controls.Add(this.Label18);
             this.GroupBox2.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GroupBox2.Location = new System.Drawing.Point(4, 28);
+            this.GroupBox2.Location = new System.Drawing.Point(4, 35);
             this.GroupBox2.Name = "GroupBox2";
             this.GroupBox2.Size = new System.Drawing.Size(778, 101);
             this.GroupBox2.TabIndex = 233;
@@ -487,7 +490,7 @@
             // 
             this.Label24.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Label24.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label24.Location = new System.Drawing.Point(4, 132);
+            this.Label24.Location = new System.Drawing.Point(3, 136);
             this.Label24.Name = "Label24";
             this.Label24.Size = new System.Drawing.Size(780, 16);
             this.Label24.TabIndex = 228;
@@ -499,9 +502,9 @@
             this.txtFiltro.BackColor = System.Drawing.Color.White;
             this.txtFiltro.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtFiltro.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFiltro.Location = new System.Drawing.Point(59, 154);
+            this.txtFiltro.Location = new System.Drawing.Point(9, 156);
             this.txtFiltro.Name = "txtFiltro";
-            this.txtFiltro.Size = new System.Drawing.Size(279, 21);
+            this.txtFiltro.Size = new System.Drawing.Size(329, 21);
             this.txtFiltro.TabIndex = 227;
             this.txtFiltro.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtFiltro_KeyUp);
             // 
@@ -510,7 +513,7 @@
             this.dtpFechaHasta.CustomFormat = "dddd, dd-MMM-yyyy";
             this.dtpFechaHasta.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpFechaHasta.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaHasta.Location = new System.Drawing.Point(687, 154);
+            this.dtpFechaHasta.Location = new System.Drawing.Point(687, 156);
             this.dtpFechaHasta.Name = "dtpFechaHasta";
             this.dtpFechaHasta.Size = new System.Drawing.Size(93, 21);
             this.dtpFechaHasta.TabIndex = 230;
@@ -519,7 +522,7 @@
             // 
             this.Label10.AutoSize = true;
             this.Label10.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label10.Location = new System.Drawing.Point(517, 157);
+            this.Label10.Location = new System.Drawing.Point(517, 159);
             this.Label10.Name = "Label10";
             this.Label10.Size = new System.Drawing.Size(43, 13);
             this.Label10.TabIndex = 231;
@@ -529,23 +532,11 @@
             // 
             this.Label11.AutoSize = true;
             this.Label11.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label11.Location = new System.Drawing.Point(671, 157);
+            this.Label11.Location = new System.Drawing.Point(671, 159);
             this.Label11.Name = "Label11";
             this.Label11.Size = new System.Drawing.Size(17, 13);
             this.Label11.TabIndex = 232;
             this.Label11.Text = "A:";
-            // 
-            // Label7
-            // 
-            this.Label7.AutoSize = true;
-            this.Label7.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Label7.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label7.Location = new System.Drawing.Point(5, 158);
-            this.Label7.Name = "Label7";
-            this.Label7.Size = new System.Drawing.Size(46, 13);
-            this.Label7.TabIndex = 226;
-            this.Label7.Text = "FILTRO:";
-            this.Label7.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // cbxFiltro
             // 
@@ -560,7 +551,7 @@
             "TICKET COMECSA",
             "ANTICIPO EMERGENTE",
             "TICKET COMISARIATO"});
-            this.cbxFiltro.Location = new System.Drawing.Point(344, 154);
+            this.cbxFiltro.Location = new System.Drawing.Point(344, 156);
             this.cbxFiltro.Name = "cbxFiltro";
             this.cbxFiltro.Size = new System.Drawing.Size(159, 21);
             this.cbxFiltro.TabIndex = 237;
@@ -582,10 +573,12 @@
             this.Controls.Add(this.dtpFechaHasta);
             this.Controls.Add(this.Label10);
             this.Controls.Add(this.Label11);
-            this.Controls.Add(this.Label7);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "FrmTicketsFamaciaComecsa";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StateActive.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.StateActive.Border.Rounding = 5F;
             this.Text = "REGISTRAR TICKETS FARMACIA / COMECSA";
             this.Load += new System.EventHandler(this.FrmTicketsFamaciaComecsa_Load);
             this.toolStrip1.ResumeLayout(false);
@@ -628,7 +621,6 @@
         internal System.Windows.Forms.DateTimePicker dtpFechaHasta;
         internal System.Windows.Forms.Label Label10;
         internal System.Windows.Forms.Label Label11;
-        internal System.Windows.Forms.Label Label7;
         internal System.Windows.Forms.Label label6;
         internal System.Windows.Forms.ComboBox cbxTipo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;

@@ -73,7 +73,7 @@
             // 
             this.Label2.AutoSize = true;
             this.Label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label2.Location = new System.Drawing.Point(186, 77);
+            this.Label2.Location = new System.Drawing.Point(12, 74);
             this.Label2.Name = "Label2";
             this.Label2.Size = new System.Drawing.Size(246, 13);
             this.Label2.TabIndex = 8;
@@ -101,7 +101,7 @@
             this.checkBox1.AutoSize = true;
             this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBox1.ForeColor = System.Drawing.Color.Maroon;
-            this.checkBox1.Location = new System.Drawing.Point(5, 45);
+            this.checkBox1.Location = new System.Drawing.Point(15, 44);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(229, 17);
             this.checkBox1.TabIndex = 12;
@@ -125,6 +125,10 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "FrmSeleccionarMotivoFechaSalida";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StateActive.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.StateActive.Border.Rounding = 5F;
             this.Text = "SELECCIÓN FECHA DE SALIDA";
             this.Load += new System.EventHandler(this.FrmSeleccionarMotivoFechaSalida_Load);
             this.ResumeLayout(false);

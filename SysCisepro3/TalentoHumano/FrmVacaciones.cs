@@ -14,10 +14,11 @@ using ClassLibraryCisepro3.UsuarioGeneral;
 using SysCisepro3.Datos;
 using SysCisepro3.Operaciones;
 using SysCisepro3.Properties;
+using Krypton.Toolkit;
 
 namespace SysCisepro3.TalentoHumano
 {
-    public partial class FrmVacaciones : Form
+    public partial class FrmVacaciones : KryptonForm
     {
         /// <summary>
         /// CISEPRO 2019

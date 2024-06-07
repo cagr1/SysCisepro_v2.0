@@ -12,10 +12,11 @@ using SysCisepro3.Reportes;
 using System.Data; 
 using Microsoft.Office;
 using System.IO;
+using Krypton.Toolkit;
 
 namespace SysCisepro3.TalentoHumano
 {
-    public partial class FrmReportePersonalGeneral : Form
+    public partial class FrmReportePersonalGeneral : KryptonForm
     {
         /// <summary>
         /// CISEPRO 2019
@@ -96,7 +97,7 @@ namespace SysCisepro3.TalentoHumano
                     Icon = Resources.logo_c;
                     break;
             }
-
+            ValidationForms.SetPlaceholder(txtFiltro, "BUSCAR ....");
             var f = Usuario.ObtenerFechaSola(TipoCon);
 
             dtpFechaDesde.Value = new DateTime(f.Year, f.Month, 1);

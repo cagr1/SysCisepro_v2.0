@@ -27,11 +27,11 @@ using CrystalDecisions.CrystalReports.Engine;
 
 using SysCisepro3.Main;
 using Microsoft.Office.Interop.Excel;
-
+using Krypton.Toolkit;
 
 namespace SysCisepro3.TalentoHumano
 {
-    public partial class FrmSalidaPersonal : Form
+    public partial class FrmSalidaPersonal : KryptonForm
     {
         public static TipoConexion TipoCon { private get; set; }
         public static ClassUsuarioGeneral Usuario { private get; set; }
@@ -84,9 +84,9 @@ namespace SysCisepro3.TalentoHumano
                     Icon = Resources.logo_c;
                     break;
             }
+            ValidationForms.SetPlaceholder(txtFiltro, "Buscar ...");
 
 
-            
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)

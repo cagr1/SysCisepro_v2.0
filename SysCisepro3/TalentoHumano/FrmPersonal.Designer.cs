@@ -29,16 +29,16 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPersonal));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.btnBuscar = new System.Windows.Forms.ToolStripButton();
             this.ButtonNuevoRegistro = new System.Windows.Forms.ToolStripButton();
@@ -259,6 +259,7 @@
             // toolStrip1
             // 
             this.toolStrip1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnBuscar,
             this.ButtonNuevoRegistro,
@@ -269,75 +270,82 @@
             this.ButtonCancelar});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(983, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(983, 31);
             this.toolStrip1.TabIndex = 215;
             this.toolStrip1.Text = "toolStrip1";
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Image = global::SysCisepro3.Properties.Resources.BuscarRegistro;
+            this.btnBuscar.Image = global::SysCisepro3.Properties.Resources.search_24dp_FILL0_wght400_GRAD0_opsz24__2_;
+            this.btnBuscar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnBuscar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(102, 22);
-            this.btnBuscar.Text = "LISTAR TODOS";
+            this.btnBuscar.Size = new System.Drawing.Size(79, 28);
+            this.btnBuscar.Text = "BUSCAR";
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // ButtonNuevoRegistro
             // 
-            this.ButtonNuevoRegistro.Image = global::SysCisepro3.Properties.Resources.NuevoRegistro;
+            this.ButtonNuevoRegistro.Image = global::SysCisepro3.Properties.Resources.add_circle_24dp_FILL0_wght400_GRAD0_opsz24__3_;
+            this.ButtonNuevoRegistro.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.ButtonNuevoRegistro.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.ButtonNuevoRegistro.Name = "ButtonNuevoRegistro";
-            this.ButtonNuevoRegistro.Size = new System.Drawing.Size(129, 22);
-            this.ButtonNuevoRegistro.Text = "NUEVO CONTRATO";
+            this.ButtonNuevoRegistro.Size = new System.Drawing.Size(77, 28);
+            this.ButtonNuevoRegistro.Text = "NUEVO ";
             this.ButtonNuevoRegistro.Click += new System.EventHandler(this.ButtonNuevoRegistro_Click);
             // 
             // btnAspirantes
             // 
             this.btnAspirantes.Enabled = false;
-            this.btnAspirantes.Image = global::SysCisepro3.Properties.Resources.chanu;
+            this.btnAspirantes.Image = global::SysCisepro3.Properties.Resources.group_24dp_FILL0_wght400_GRAD0_opsz24;
+            this.btnAspirantes.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnAspirantes.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnAspirantes.Name = "btnAspirantes";
-            this.btnAspirantes.Size = new System.Drawing.Size(116, 22);
-            this.btnAspirantes.Text = "VER ASPIRANTES";
+            this.btnAspirantes.Size = new System.Drawing.Size(101, 28);
+            this.btnAspirantes.Text = "ASPIRANTES";
             this.btnAspirantes.Click += new System.EventHandler(this.btnAspirantes_Click);
             // 
             // ButtonGuardar
             // 
             this.ButtonGuardar.Enabled = false;
-            this.ButtonGuardar.Image = global::SysCisepro3.Properties.Resources.GuardarRegistro;
+            this.ButtonGuardar.Image = global::SysCisepro3.Properties.Resources.save_24dp_FILL0_wght400_GRAD0_opsz24__2_;
+            this.ButtonGuardar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.ButtonGuardar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.ButtonGuardar.Name = "ButtonGuardar";
-            this.ButtonGuardar.Size = new System.Drawing.Size(81, 22);
+            this.ButtonGuardar.Size = new System.Drawing.Size(89, 28);
             this.ButtonGuardar.Text = "GUARDAR";
             this.ButtonGuardar.Click += new System.EventHandler(this.ButtonGuardar_Click);
             // 
             // ButtonModificarRegistro
             // 
             this.ButtonModificarRegistro.Enabled = false;
-            this.ButtonModificarRegistro.Image = global::SysCisepro3.Properties.Resources.ModificarRegistro;
+            this.ButtonModificarRegistro.Image = global::SysCisepro3.Properties.Resources.edit_document_24dp_FILL0_wght400_GRAD0_opsz24__2_;
+            this.ButtonModificarRegistro.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.ButtonModificarRegistro.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.ButtonModificarRegistro.Name = "ButtonModificarRegistro";
-            this.ButtonModificarRegistro.Size = new System.Drawing.Size(128, 22);
-            this.ButtonModificarRegistro.Text = "MODIFICAR DATOS";
+            this.ButtonModificarRegistro.Size = new System.Drawing.Size(101, 28);
+            this.ButtonModificarRegistro.Text = "MODIFICAR ";
             this.ButtonModificarRegistro.Click += new System.EventHandler(this.ButtonModificarRegistro_Click);
             // 
             // ButtonEliminarRegistro
             // 
             this.ButtonEliminarRegistro.Enabled = false;
-            this.ButtonEliminarRegistro.Image = global::SysCisepro3.Properties.Resources.EliminarRegistro;
+            this.ButtonEliminarRegistro.Image = global::SysCisepro3.Properties.Resources.do_not_disturb_on_24dp_FILL0_wght400_GRAD0_opsz24;
+            this.ButtonEliminarRegistro.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.ButtonEliminarRegistro.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.ButtonEliminarRegistro.Name = "ButtonEliminarRegistro";
-            this.ButtonEliminarRegistro.Size = new System.Drawing.Size(147, 22);
-            this.ButtonEliminarRegistro.Text = "FINALIZAR CONTRATO";
+            this.ButtonEliminarRegistro.Size = new System.Drawing.Size(95, 28);
+            this.ButtonEliminarRegistro.Text = "FINALIZAR ";
             this.ButtonEliminarRegistro.Click += new System.EventHandler(this.ButtonEliminarRegistro_Click);
             // 
             // ButtonCancelar
             // 
             this.ButtonCancelar.Enabled = false;
-            this.ButtonCancelar.Image = global::SysCisepro3.Properties.Resources.cancel;
+            this.ButtonCancelar.Image = global::SysCisepro3.Properties.Resources.cancel_24dp_FILL0_wght400_GRAD0_opsz24;
+            this.ButtonCancelar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.ButtonCancelar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.ButtonCancelar.Name = "ButtonCancelar";
-            this.ButtonCancelar.Size = new System.Drawing.Size(87, 22);
+            this.ButtonCancelar.Size = new System.Drawing.Size(95, 28);
             this.ButtonCancelar.Text = "CANCELAR";
             this.ButtonCancelar.Click += new System.EventHandler(this.ButtonCancelar_Click);
             // 
@@ -349,10 +357,10 @@
             this.tcPersonal.Controls.Add(this.tpFoto);
             this.tcPersonal.Controls.Add(this.TabPage1);
             this.tcPersonal.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tcPersonal.Location = new System.Drawing.Point(1, 28);
+            this.tcPersonal.Location = new System.Drawing.Point(1, 33);
             this.tcPersonal.Name = "tcPersonal";
             this.tcPersonal.SelectedIndex = 0;
-            this.tcPersonal.Size = new System.Drawing.Size(1001, 427);
+            this.tcPersonal.Size = new System.Drawing.Size(982, 427);
             this.tcPersonal.TabIndex = 216;
             // 
             // tpDatosPersonales
@@ -366,7 +374,7 @@
             this.tpDatosPersonales.Location = new System.Drawing.Point(4, 22);
             this.tpDatosPersonales.Name = "tpDatosPersonales";
             this.tpDatosPersonales.Padding = new System.Windows.Forms.Padding(3);
-            this.tpDatosPersonales.Size = new System.Drawing.Size(993, 401);
+            this.tpDatosPersonales.Size = new System.Drawing.Size(974, 401);
             this.tpDatosPersonales.TabIndex = 0;
             this.tpDatosPersonales.Text = "DATOS PERSONALES";
             // 
@@ -417,6 +425,7 @@
             // 
             this.chkcredencial.AutoSize = true;
             this.chkcredencial.Enabled = false;
+            this.chkcredencial.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkcredencial.Location = new System.Drawing.Point(87, 208);
             this.chkcredencial.Name = "chkcredencial";
             this.chkcredencial.Size = new System.Drawing.Size(15, 14);
@@ -427,10 +436,10 @@
             // 
             this.label42.AutoSize = true;
             this.label42.BackColor = System.Drawing.Color.Transparent;
-            this.label42.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label42.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label42.Location = new System.Drawing.Point(9, 208);
             this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(73, 13);
+            this.label42.Size = new System.Drawing.Size(74, 13);
             this.label42.TabIndex = 187;
             this.label42.Text = "CREDENCIAL:";
             // 
@@ -438,6 +447,7 @@
             // 
             this.panelEsatdo.BackColor = System.Drawing.Color.White;
             this.panelEsatdo.Controls.Add(this.PictureBox1);
+            this.panelEsatdo.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panelEsatdo.Location = new System.Drawing.Point(389, 9);
             this.panelEsatdo.Name = "panelEsatdo";
             this.panelEsatdo.Size = new System.Drawing.Size(99, 139);
@@ -461,7 +471,7 @@
             this.cbEstadoCivil.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbEstadoCivil.Enabled = false;
             this.cbEstadoCivil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbEstadoCivil.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbEstadoCivil.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbEstadoCivil.FormattingEnabled = true;
             this.cbEstadoCivil.Items.AddRange(new object[] {
             "SOLTERO (A)",
@@ -478,10 +488,10 @@
             // 
             this.txtPeso.BackColor = System.Drawing.Color.White;
             this.txtPeso.Enabled = false;
-            this.txtPeso.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPeso.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPeso.Location = new System.Drawing.Point(222, 179);
             this.txtPeso.Name = "txtPeso";
-            this.txtPeso.Size = new System.Drawing.Size(48, 20);
+            this.txtPeso.Size = new System.Drawing.Size(48, 21);
             this.txtPeso.TabIndex = 13;
             this.txtPeso.Text = "0";
             this.txtPeso.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -492,7 +502,7 @@
             this.cbmInstruccion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbmInstruccion.Enabled = false;
             this.cbmInstruccion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbmInstruccion.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbmInstruccion.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbmInstruccion.FormattingEnabled = true;
             this.cbmInstruccion.Items.AddRange(new object[] {
             "PRIMARIA",
@@ -511,7 +521,7 @@
             this.cbmTipoSangre.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbmTipoSangre.Enabled = false;
             this.cbmTipoSangre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbmTipoSangre.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbmTipoSangre.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbmTipoSangre.FormattingEnabled = true;
             this.cbmTipoSangre.Items.AddRange(new object[] {
             "O-",
@@ -531,10 +541,10 @@
             // 
             this.txtEstatura.BackColor = System.Drawing.Color.White;
             this.txtEstatura.Enabled = false;
-            this.txtEstatura.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEstatura.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEstatura.Location = new System.Drawing.Point(367, 179);
             this.txtEstatura.Name = "txtEstatura";
-            this.txtEstatura.Size = new System.Drawing.Size(47, 20);
+            this.txtEstatura.Size = new System.Drawing.Size(47, 21);
             this.txtEstatura.TabIndex = 14;
             this.txtEstatura.Text = "0";
             this.txtEstatura.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -543,10 +553,10 @@
             // 
             this.lblTipoSangre.AutoSize = true;
             this.lblTipoSangre.BackColor = System.Drawing.Color.Transparent;
-            this.lblTipoSangre.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTipoSangre.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTipoSangre.Location = new System.Drawing.Point(9, 181);
             this.lblTipoSangre.Name = "lblTipoSangre";
-            this.lblTipoSangre.Size = new System.Drawing.Size(67, 13);
+            this.lblTipoSangre.Size = new System.Drawing.Size(65, 13);
             this.lblTipoSangre.TabIndex = 97;
             this.lblTipoSangre.Text = "T. SANGRE:";
             // 
@@ -554,7 +564,7 @@
             // 
             this.txtContrato.BackColor = System.Drawing.Color.White;
             this.txtContrato.Enabled = false;
-            this.txtContrato.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtContrato.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtContrato.Location = new System.Drawing.Point(296, 17);
             this.txtContrato.Name = "txtContrato";
             this.txtContrato.Size = new System.Drawing.Size(90, 21);
@@ -566,10 +576,10 @@
             // 
             this.lblPeso.AutoSize = true;
             this.lblPeso.BackColor = System.Drawing.Color.Transparent;
-            this.lblPeso.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPeso.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPeso.Location = new System.Drawing.Point(144, 182);
             this.lblPeso.Name = "lblPeso";
-            this.lblPeso.Size = new System.Drawing.Size(73, 13);
+            this.lblPeso.Size = new System.Drawing.Size(64, 13);
             this.lblPeso.TabIndex = 99;
             this.lblPeso.Text = "PESO (lbs):";
             // 
@@ -577,7 +587,7 @@
             // 
             this.Label6.AutoSize = true;
             this.Label6.BackColor = System.Drawing.Color.Transparent;
-            this.Label6.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label6.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label6.Location = new System.Drawing.Point(278, 181);
             this.Label6.Name = "Label6";
             this.Label6.Size = new System.Drawing.Size(85, 13);
@@ -590,10 +600,10 @@
             this.lblCédula.BackColor = System.Drawing.Color.Transparent;
             this.lblCédula.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblCédula.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblCédula.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCédula.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCédula.Location = new System.Drawing.Point(7, 20);
             this.lblCédula.Name = "lblCédula";
-            this.lblCédula.Size = new System.Drawing.Size(49, 13);
+            this.lblCédula.Size = new System.Drawing.Size(50, 13);
             this.lblCédula.TabIndex = 75;
             this.lblCédula.Text = "CÉDULA:";
             // 
@@ -601,11 +611,11 @@
             // 
             this.txtCedula.BackColor = System.Drawing.Color.White;
             this.txtCedula.Enabled = false;
-            this.txtCedula.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCedula.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCedula.Location = new System.Drawing.Point(78, 17);
             this.txtCedula.MaxLength = 10;
             this.txtCedula.Name = "txtCedula";
-            this.txtCedula.Size = new System.Drawing.Size(96, 20);
+            this.txtCedula.Size = new System.Drawing.Size(96, 21);
             this.txtCedula.TabIndex = 1;
             this.txtCedula.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtCedula_KeyUp);
             // 
@@ -613,10 +623,10 @@
             // 
             this.lblNombres.AutoSize = true;
             this.lblNombres.BackColor = System.Drawing.Color.Transparent;
-            this.lblNombres.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombres.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombres.Location = new System.Drawing.Point(7, 46);
             this.lblNombres.Name = "lblNombres";
-            this.lblNombres.Size = new System.Drawing.Size(55, 13);
+            this.lblNombres.Size = new System.Drawing.Size(63, 13);
             this.lblNombres.TabIndex = 77;
             this.lblNombres.Text = "NOMBRES:";
             // 
@@ -625,17 +635,17 @@
             this.txtNombres.BackColor = System.Drawing.Color.White;
             this.txtNombres.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtNombres.Enabled = false;
-            this.txtNombres.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombres.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombres.Location = new System.Drawing.Point(78, 43);
             this.txtNombres.Name = "txtNombres";
-            this.txtNombres.Size = new System.Drawing.Size(308, 20);
+            this.txtNombres.Size = new System.Drawing.Size(308, 21);
             this.txtNombres.TabIndex = 3;
             // 
             // lblApellidos
             // 
             this.lblApellidos.AutoSize = true;
             this.lblApellidos.BackColor = System.Drawing.Color.Transparent;
-            this.lblApellidos.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblApellidos.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblApellidos.Location = new System.Drawing.Point(7, 72);
             this.lblApellidos.Name = "lblApellidos";
             this.lblApellidos.Size = new System.Drawing.Size(67, 13);
@@ -647,20 +657,20 @@
             this.txtApellidos.BackColor = System.Drawing.Color.White;
             this.txtApellidos.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtApellidos.Enabled = false;
-            this.txtApellidos.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtApellidos.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtApellidos.Location = new System.Drawing.Point(78, 69);
             this.txtApellidos.Name = "txtApellidos";
-            this.txtApellidos.Size = new System.Drawing.Size(308, 20);
+            this.txtApellidos.Size = new System.Drawing.Size(308, 21);
             this.txtApellidos.TabIndex = 4;
             // 
             // lblSexo
             // 
             this.lblSexo.AutoSize = true;
             this.lblSexo.BackColor = System.Drawing.Color.Transparent;
-            this.lblSexo.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSexo.Location = new System.Drawing.Point(7, 104);
+            this.lblSexo.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSexo.Location = new System.Drawing.Point(7, 100);
             this.lblSexo.Name = "lblSexo";
-            this.lblSexo.Size = new System.Drawing.Size(37, 13);
+            this.lblSexo.Size = new System.Drawing.Size(38, 13);
             this.lblSexo.TabIndex = 93;
             this.lblSexo.Text = "SEXO:";
             // 
@@ -670,7 +680,7 @@
             this.cbmSexo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbmSexo.Enabled = false;
             this.cbmSexo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbmSexo.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbmSexo.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbmSexo.FormattingEnabled = true;
             this.cbmSexo.Items.AddRange(new object[] {
             "MASCULINO",
@@ -683,11 +693,11 @@
             // dtpFechaNacimiento
             // 
             this.dtpFechaNacimiento.Enabled = false;
-            this.dtpFechaNacimiento.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpFechaNacimiento.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpFechaNacimiento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpFechaNacimiento.Location = new System.Drawing.Point(212, 96);
             this.dtpFechaNacimiento.Name = "dtpFechaNacimiento";
-            this.dtpFechaNacimiento.Size = new System.Drawing.Size(86, 20);
+            this.dtpFechaNacimiento.Size = new System.Drawing.Size(86, 21);
             this.dtpFechaNacimiento.TabIndex = 6;
             this.dtpFechaNacimiento.ValueChanged += new System.EventHandler(this.dtpFechaNacimiento_ValueChanged);
             // 
@@ -695,10 +705,10 @@
             // 
             this.lblFechaNacimiento.AutoSize = true;
             this.lblFechaNacimiento.BackColor = System.Drawing.Color.Transparent;
-            this.lblFechaNacimiento.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFechaNacimiento.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFechaNacimiento.Location = new System.Drawing.Point(140, 99);
             this.lblFechaNacimiento.Name = "lblFechaNacimiento";
-            this.lblFechaNacimiento.Size = new System.Drawing.Size(73, 13);
+            this.lblFechaNacimiento.Size = new System.Drawing.Size(70, 13);
             this.lblFechaNacimiento.TabIndex = 89;
             this.lblFechaNacimiento.Text = "FEC. NACIM:";
             // 
@@ -706,10 +716,10 @@
             // 
             this.txtEdad.BackColor = System.Drawing.Color.White;
             this.txtEdad.Enabled = false;
-            this.txtEdad.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEdad.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEdad.Location = new System.Drawing.Point(339, 96);
             this.txtEdad.Name = "txtEdad";
-            this.txtEdad.Size = new System.Drawing.Size(26, 20);
+            this.txtEdad.Size = new System.Drawing.Size(26, 21);
             this.txtEdad.TabIndex = 7;
             this.txtEdad.Text = "18";
             this.txtEdad.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -718,7 +728,7 @@
             // 
             this.lblEdad.AutoSize = true;
             this.lblEdad.BackColor = System.Drawing.Color.Transparent;
-            this.lblEdad.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEdad.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEdad.Location = new System.Drawing.Point(305, 99);
             this.lblEdad.Name = "lblEdad";
             this.lblEdad.Size = new System.Drawing.Size(37, 13);
@@ -729,10 +739,10 @@
             // 
             this.txtPasaporte.BackColor = System.Drawing.Color.White;
             this.txtPasaporte.Enabled = false;
-            this.txtPasaporte.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPasaporte.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPasaporte.Location = new System.Drawing.Point(281, 122);
             this.txtPasaporte.Name = "txtPasaporte";
-            this.txtPasaporte.Size = new System.Drawing.Size(105, 20);
+            this.txtPasaporte.Size = new System.Drawing.Size(105, 21);
             this.txtPasaporte.TabIndex = 9;
             this.txtPasaporte.Text = "0";
             this.txtPasaporte.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -741,10 +751,10 @@
             // 
             this.lblPasaporte.AutoSize = true;
             this.lblPasaporte.BackColor = System.Drawing.Color.Transparent;
-            this.lblPasaporte.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPasaporte.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPasaporte.Location = new System.Drawing.Point(208, 125);
             this.lblPasaporte.Name = "lblPasaporte";
-            this.lblPasaporte.Size = new System.Drawing.Size(67, 13);
+            this.lblPasaporte.Size = new System.Drawing.Size(72, 13);
             this.lblPasaporte.TabIndex = 98;
             this.lblPasaporte.Text = "PASAPORTE:";
             // 
@@ -752,10 +762,10 @@
             // 
             this.txtLibreta.BackColor = System.Drawing.Color.White;
             this.txtLibreta.Enabled = false;
-            this.txtLibreta.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLibreta.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtLibreta.Location = new System.Drawing.Point(354, 151);
             this.txtLibreta.Name = "txtLibreta";
-            this.txtLibreta.Size = new System.Drawing.Size(116, 20);
+            this.txtLibreta.Size = new System.Drawing.Size(116, 21);
             this.txtLibreta.TabIndex = 11;
             this.txtLibreta.Text = "0";
             this.txtLibreta.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -764,20 +774,20 @@
             // 
             this.lblNroLibretaMilitar.AutoSize = true;
             this.lblNroLibretaMilitar.BackColor = System.Drawing.Color.Transparent;
-            this.lblNroLibretaMilitar.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNroLibretaMilitar.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNroLibretaMilitar.Location = new System.Drawing.Point(257, 155);
             this.lblNroLibretaMilitar.Name = "lblNroLibretaMilitar";
-            this.lblNroLibretaMilitar.Size = new System.Drawing.Size(85, 13);
+            this.lblNroLibretaMilitar.Size = new System.Drawing.Size(75, 13);
             this.lblNroLibretaMilitar.TabIndex = 96;
             this.lblNroLibretaMilitar.Text = "LIB. MILITAR:";
             // 
             // Label27
             // 
             this.Label27.AutoSize = true;
-            this.Label27.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label27.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label27.Location = new System.Drawing.Point(220, 20);
             this.Label27.Name = "Label27";
-            this.Label27.Size = new System.Drawing.Size(71, 13);
+            this.Label27.Size = new System.Drawing.Size(83, 13);
             this.Label27.TabIndex = 119;
             this.Label27.Text = "N° CONTRATO:";
             // 
@@ -785,10 +795,10 @@
             // 
             this.lblInstrucción.AutoSize = true;
             this.lblInstrucción.BackColor = System.Drawing.Color.Transparent;
-            this.lblInstrucción.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInstrucción.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblInstrucción.Location = new System.Drawing.Point(3, 153);
             this.lblInstrucción.Name = "lblInstrucción";
-            this.lblInstrucción.Size = new System.Drawing.Size(79, 13);
+            this.lblInstrucción.Size = new System.Drawing.Size(82, 13);
             this.lblInstrucción.TabIndex = 117;
             this.lblInstrucción.Text = "INSTRUCCIÓN:";
             // 
@@ -796,10 +806,10 @@
             // 
             this.Label2.AutoSize = true;
             this.Label2.BackColor = System.Drawing.Color.Transparent;
-            this.Label2.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label2.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label2.Location = new System.Drawing.Point(8, 128);
             this.Label2.Name = "Label2";
-            this.Label2.Size = new System.Drawing.Size(73, 13);
+            this.Label2.Size = new System.Drawing.Size(61, 13);
             this.Label2.TabIndex = 116;
             this.Label2.Text = "EST. CIVIL:";
             // 
@@ -808,7 +818,7 @@
             this.lblValCed.BackColor = System.Drawing.Color.Transparent;
             this.lblValCed.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblValCed.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblValCed.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblValCed.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblValCed.Location = new System.Drawing.Point(175, 18);
             this.lblValCed.Name = "lblValCed";
             this.lblValCed.Size = new System.Drawing.Size(23, 17);
@@ -819,7 +829,7 @@
             this.lblValCon.BackColor = System.Drawing.Color.Transparent;
             this.lblValCon.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblValCon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblValCon.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblValCon.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblValCon.Location = new System.Drawing.Point(381, 20);
             this.lblValCon.Name = "lblValCon";
             this.lblValCon.Size = new System.Drawing.Size(24, 18);
@@ -828,6 +838,7 @@
             // lblIdPersonal
             // 
             this.lblIdPersonal.AutoSize = true;
+            this.lblIdPersonal.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIdPersonal.Location = new System.Drawing.Point(147, 20);
             this.lblIdPersonal.Name = "lblIdPersonal";
             this.lblIdPersonal.Size = new System.Drawing.Size(13, 13);
@@ -864,7 +875,7 @@
             this.cbmProvincia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbmProvincia.Enabled = false;
             this.cbmProvincia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbmProvincia.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbmProvincia.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbmProvincia.FormattingEnabled = true;
             this.cbmProvincia.Location = new System.Drawing.Point(10, 24);
             this.cbmProvincia.Name = "cbmProvincia";
@@ -876,7 +887,7 @@
             // 
             this.lblProvincia.AutoSize = true;
             this.lblProvincia.BackColor = System.Drawing.Color.Transparent;
-            this.lblProvincia.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProvincia.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblProvincia.Location = new System.Drawing.Point(7, 9);
             this.lblProvincia.Name = "lblProvincia";
             this.lblProvincia.Size = new System.Drawing.Size(67, 13);
@@ -887,10 +898,10 @@
             // 
             this.lblCiudad.AutoSize = true;
             this.lblCiudad.BackColor = System.Drawing.Color.Transparent;
-            this.lblCiudad.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCiudad.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCiudad.Location = new System.Drawing.Point(175, 9);
             this.lblCiudad.Name = "lblCiudad";
-            this.lblCiudad.Size = new System.Drawing.Size(49, 13);
+            this.lblCiudad.Size = new System.Drawing.Size(48, 13);
             this.lblCiudad.TabIndex = 107;
             this.lblCiudad.Text = "CIUDAD:";
             // 
@@ -900,7 +911,7 @@
             this.cbmCanton.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbmCanton.Enabled = false;
             this.cbmCanton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbmCanton.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbmCanton.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbmCanton.FormattingEnabled = true;
             this.cbmCanton.Location = new System.Drawing.Point(178, 24);
             this.cbmCanton.Name = "cbmCanton";
@@ -912,10 +923,10 @@
             // 
             this.Label7.AutoSize = true;
             this.Label7.BackColor = System.Drawing.Color.Transparent;
-            this.Label7.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label7.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label7.Location = new System.Drawing.Point(341, 8);
             this.Label7.Name = "Label7";
-            this.Label7.Size = new System.Drawing.Size(67, 13);
+            this.Label7.Size = new System.Drawing.Size(70, 13);
             this.Label7.TabIndex = 127;
             this.Label7.Text = "PARROQUIA:";
             // 
@@ -924,7 +935,7 @@
             this.txtEmail.BackColor = System.Drawing.Color.White;
             this.txtEmail.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
             this.txtEmail.Enabled = false;
-            this.txtEmail.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmail.Location = new System.Drawing.Point(293, 100);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(177, 21);
@@ -934,10 +945,10 @@
             // 
             this.Label5.AutoSize = true;
             this.Label5.BackColor = System.Drawing.Color.Transparent;
-            this.Label5.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label5.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label5.Location = new System.Drawing.Point(251, 103);
             this.Label5.Name = "Label5";
-            this.Label5.Size = new System.Drawing.Size(43, 13);
+            this.Label5.Size = new System.Drawing.Size(42, 13);
             this.Label5.TabIndex = 123;
             this.Label5.Text = "EMAIL:";
             // 
@@ -947,7 +958,7 @@
             this.cbmParroquia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbmParroquia.Enabled = false;
             this.cbmParroquia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbmParroquia.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbmParroquia.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbmParroquia.FormattingEnabled = true;
             this.cbmParroquia.Location = new System.Drawing.Point(339, 24);
             this.cbmParroquia.Name = "cbmParroquia";
@@ -958,10 +969,10 @@
             // 
             this.txtTelefono.BackColor = System.Drawing.Color.White;
             this.txtTelefono.Enabled = false;
-            this.txtTelefono.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTelefono.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTelefono.Location = new System.Drawing.Point(38, 100);
             this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Size = new System.Drawing.Size(74, 20);
+            this.txtTelefono.Size = new System.Drawing.Size(74, 21);
             this.txtTelefono.TabIndex = 19;
             this.txtTelefono.Text = "0";
             this.txtTelefono.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -971,7 +982,7 @@
             this.txtDireccion.BackColor = System.Drawing.Color.White;
             this.txtDireccion.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtDireccion.Enabled = false;
-            this.txtDireccion.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDireccion.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDireccion.Location = new System.Drawing.Point(10, 62);
             this.txtDireccion.Multiline = true;
             this.txtDireccion.Name = "txtDireccion";
@@ -982,10 +993,10 @@
             // 
             this.txtMovil.BackColor = System.Drawing.Color.White;
             this.txtMovil.Enabled = false;
-            this.txtMovil.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMovil.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMovil.Location = new System.Drawing.Point(154, 101);
             this.txtMovil.Name = "txtMovil";
-            this.txtMovil.Size = new System.Drawing.Size(90, 20);
+            this.txtMovil.Size = new System.Drawing.Size(90, 21);
             this.txtMovil.TabIndex = 20;
             this.txtMovil.Text = "0";
             this.txtMovil.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -994,10 +1005,10 @@
             // 
             this.lblDirección.AutoSize = true;
             this.lblDirección.BackColor = System.Drawing.Color.Transparent;
-            this.lblDirección.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDirección.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDirección.Location = new System.Drawing.Point(7, 48);
             this.lblDirección.Name = "lblDirección";
-            this.lblDirección.Size = new System.Drawing.Size(205, 13);
+            this.lblDirección.Size = new System.Drawing.Size(198, 13);
             this.lblDirección.TabIndex = 86;
             this.lblDirección.Text = "DIRECCIÓN / REFERENCIA DOMICILIO:";
             // 
@@ -1005,10 +1016,10 @@
             // 
             this.Label3.AutoSize = true;
             this.Label3.BackColor = System.Drawing.Color.Transparent;
-            this.Label3.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label3.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label3.Location = new System.Drawing.Point(118, 104);
             this.Label3.Name = "Label3";
-            this.Label3.Size = new System.Drawing.Size(37, 13);
+            this.Label3.Size = new System.Drawing.Size(32, 13);
             this.Label3.TabIndex = 120;
             this.Label3.Text = "CEL.:";
             // 
@@ -1016,10 +1027,10 @@
             // 
             this.Label4.AutoSize = true;
             this.Label4.BackColor = System.Drawing.Color.Transparent;
-            this.Label4.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label4.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label4.Location = new System.Drawing.Point(4, 103);
             this.Label4.Name = "Label4";
-            this.Label4.Size = new System.Drawing.Size(37, 13);
+            this.Label4.Size = new System.Drawing.Size(31, 13);
             this.Label4.TabIndex = 122;
             this.Label4.Text = "TLF.:";
             // 
@@ -1043,7 +1054,7 @@
             this.GroupBox6.Controls.Add(this.Label10);
             this.GroupBox6.Controls.Add(this.Label12);
             this.GroupBox6.Controls.Add(this.lblPruebaAntidroga);
-            this.GroupBox6.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GroupBox6.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GroupBox6.Location = new System.Drawing.Point(493, -6);
             this.GroupBox6.Name = "GroupBox6";
             this.GroupBox6.Size = new System.Drawing.Size(477, 120);
@@ -1055,16 +1066,17 @@
             this.txtDocumentacion.BackColor = System.Drawing.Color.White;
             this.txtDocumentacion.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtDocumentacion.Enabled = false;
-            this.txtDocumentacion.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDocumentacion.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDocumentacion.Location = new System.Drawing.Point(172, 96);
             this.txtDocumentacion.Name = "txtDocumentacion";
-            this.txtDocumentacion.Size = new System.Drawing.Size(298, 20);
+            this.txtDocumentacion.Size = new System.Drawing.Size(298, 21);
             this.txtDocumentacion.TabIndex = 34;
             this.txtDocumentacion.Text = "NO TIENE";
             // 
             // btnDocumentacion
             // 
             this.btnDocumentacion.Enabled = false;
+            this.btnDocumentacion.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDocumentacion.Location = new System.Drawing.Point(9, 94);
             this.btnDocumentacion.Name = "btnDocumentacion";
             this.btnDocumentacion.Size = new System.Drawing.Size(157, 23);
@@ -1077,10 +1089,10 @@
             // 
             this.Label8.AutoSize = true;
             this.Label8.BackColor = System.Drawing.Color.Transparent;
-            this.Label8.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label8.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label8.Location = new System.Drawing.Point(6, 79);
             this.Label8.Name = "Label8";
-            this.Label8.Size = new System.Drawing.Size(121, 13);
+            this.Label8.Size = new System.Drawing.Size(120, 13);
             this.Label8.TabIndex = 144;
             this.Label8.Text = "CURSO DE VIGILANTE:";
             // 
@@ -1091,8 +1103,8 @@
             this.chkCursoVigilante.Cursor = System.Windows.Forms.Cursors.Hand;
             this.chkCursoVigilante.Enabled = false;
             this.chkCursoVigilante.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.chkCursoVigilante.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkCursoVigilante.Location = new System.Drawing.Point(133, 79);
+            this.chkCursoVigilante.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkCursoVigilante.Location = new System.Drawing.Point(137, 79);
             this.chkCursoVigilante.Name = "chkCursoVigilante";
             this.chkCursoVigilante.Size = new System.Drawing.Size(12, 11);
             this.chkCursoVigilante.TabIndex = 31;
@@ -1104,10 +1116,10 @@
             this.txtEmisorCursoVigilante.BackColor = System.Drawing.Color.White;
             this.txtEmisorCursoVigilante.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtEmisorCursoVigilante.Enabled = false;
-            this.txtEmisorCursoVigilante.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmisorCursoVigilante.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmisorCursoVigilante.Location = new System.Drawing.Point(269, 75);
             this.txtEmisorCursoVigilante.Name = "txtEmisorCursoVigilante";
-            this.txtEmisorCursoVigilante.Size = new System.Drawing.Size(201, 20);
+            this.txtEmisorCursoVigilante.Size = new System.Drawing.Size(201, 21);
             this.txtEmisorCursoVigilante.TabIndex = 32;
             this.txtEmisorCursoVigilante.Text = "NO TIENE";
             // 
@@ -1115,10 +1127,10 @@
             // 
             this.Label17.AutoSize = true;
             this.Label17.BackColor = System.Drawing.Color.Transparent;
-            this.Label17.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label17.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label17.Location = new System.Drawing.Point(174, 79);
             this.Label17.Name = "Label17";
-            this.Label17.Size = new System.Drawing.Size(85, 13);
+            this.Label17.Size = new System.Drawing.Size(82, 13);
             this.Label17.TabIndex = 147;
             this.Label17.Text = "(QUIEN EMITE)";
             // 
@@ -1129,8 +1141,8 @@
             this.chkHistoriaClinica.Cursor = System.Windows.Forms.Cursors.Hand;
             this.chkHistoriaClinica.Enabled = false;
             this.chkHistoriaClinica.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.chkHistoriaClinica.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkHistoriaClinica.Location = new System.Drawing.Point(133, 14);
+            this.chkHistoriaClinica.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkHistoriaClinica.Location = new System.Drawing.Point(137, 14);
             this.chkHistoriaClinica.Name = "chkHistoriaClinica";
             this.chkHistoriaClinica.Size = new System.Drawing.Size(12, 11);
             this.chkHistoriaClinica.TabIndex = 25;
@@ -1140,10 +1152,10 @@
             // 
             this.Label9.AutoSize = true;
             this.Label9.BackColor = System.Drawing.Color.Transparent;
-            this.Label9.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label9.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label9.Location = new System.Drawing.Point(6, 13);
             this.Label9.Name = "Label9";
-            this.Label9.Size = new System.Drawing.Size(109, 13);
+            this.Label9.Size = new System.Drawing.Size(104, 13);
             this.Label9.TabIndex = 133;
             this.Label9.Text = "HISTORIA CLÍNICA:\r\n";
             // 
@@ -1151,12 +1163,12 @@
             // 
             this.Label11.AutoSize = true;
             this.Label11.BackColor = System.Drawing.Color.Transparent;
-            this.Label11.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label11.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label11.Location = new System.Drawing.Point(6, 56);
             this.Label11.Name = "Label11";
-            this.Label11.Size = new System.Drawing.Size(121, 13);
+            this.Label11.Size = new System.Drawing.Size(126, 13);
             this.Label11.TabIndex = 137;
-            this.Label11.Text = "EXAMEN PSICOLÓGICO:";
+            this.Label11.Text = "EXAMEN PSICOLÓGICO";
             // 
             // chbExamenPsicologico
             // 
@@ -1165,8 +1177,8 @@
             this.chbExamenPsicologico.Cursor = System.Windows.Forms.Cursors.Hand;
             this.chbExamenPsicologico.Enabled = false;
             this.chbExamenPsicologico.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.chbExamenPsicologico.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chbExamenPsicologico.Location = new System.Drawing.Point(133, 58);
+            this.chbExamenPsicologico.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chbExamenPsicologico.Location = new System.Drawing.Point(137, 58);
             this.chbExamenPsicologico.Name = "chbExamenPsicologico";
             this.chbExamenPsicologico.Size = new System.Drawing.Size(12, 11);
             this.chbExamenPsicologico.TabIndex = 29;
@@ -1178,10 +1190,10 @@
             this.txtLugarExamenPsicologico.BackColor = System.Drawing.Color.White;
             this.txtLugarExamenPsicologico.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtLugarExamenPsicologico.Enabled = false;
-            this.txtLugarExamenPsicologico.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLugarExamenPsicologico.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtLugarExamenPsicologico.Location = new System.Drawing.Point(269, 54);
             this.txtLugarExamenPsicologico.Name = "txtLugarExamenPsicologico";
-            this.txtLugarExamenPsicologico.Size = new System.Drawing.Size(201, 20);
+            this.txtLugarExamenPsicologico.Size = new System.Drawing.Size(201, 21);
             this.txtLugarExamenPsicologico.TabIndex = 30;
             this.txtLugarExamenPsicologico.Text = "NO TIENE";
             // 
@@ -1189,10 +1201,10 @@
             // 
             this.Label13.AutoSize = true;
             this.Label13.BackColor = System.Drawing.Color.Transparent;
-            this.Label13.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label13.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label13.Location = new System.Drawing.Point(174, 58);
             this.Label13.Name = "Label13";
-            this.Label13.Size = new System.Drawing.Size(85, 13);
+            this.Label13.Size = new System.Drawing.Size(82, 13);
             this.Label13.TabIndex = 142;
             this.Label13.Text = "(QUIEN EMITE)";
             // 
@@ -1202,7 +1214,7 @@
             this.cbmPruebaAntiDroga.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbmPruebaAntiDroga.Enabled = false;
             this.cbmPruebaAntiDroga.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbmPruebaAntiDroga.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbmPruebaAntiDroga.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbmPruebaAntiDroga.FormattingEnabled = true;
             this.cbmPruebaAntiDroga.Items.AddRange(new object[] {
             "NEGATIVO",
@@ -1219,8 +1231,8 @@
             this.chbDiscapacitado.Cursor = System.Windows.Forms.Cursors.Hand;
             this.chbDiscapacitado.Enabled = false;
             this.chbDiscapacitado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.chbDiscapacitado.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chbDiscapacitado.Location = new System.Drawing.Point(133, 37);
+            this.chbDiscapacitado.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chbDiscapacitado.Location = new System.Drawing.Point(137, 37);
             this.chbDiscapacitado.Name = "chbDiscapacitado";
             this.chbDiscapacitado.Size = new System.Drawing.Size(12, 11);
             this.chbDiscapacitado.TabIndex = 27;
@@ -1232,10 +1244,10 @@
             this.txtCarnetConadis.BackColor = System.Drawing.Color.White;
             this.txtCarnetConadis.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtCarnetConadis.Enabled = false;
-            this.txtCarnetConadis.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCarnetConadis.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCarnetConadis.Location = new System.Drawing.Point(269, 33);
             this.txtCarnetConadis.Name = "txtCarnetConadis";
-            this.txtCarnetConadis.Size = new System.Drawing.Size(201, 20);
+            this.txtCarnetConadis.Size = new System.Drawing.Size(201, 21);
             this.txtCarnetConadis.TabIndex = 28;
             this.txtCarnetConadis.Text = "NO TIENE";
             // 
@@ -1243,10 +1255,10 @@
             // 
             this.Label10.AutoSize = true;
             this.Label10.BackColor = System.Drawing.Color.Transparent;
-            this.Label10.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label10.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label10.Location = new System.Drawing.Point(6, 35);
             this.Label10.Name = "Label10";
-            this.Label10.Size = new System.Drawing.Size(91, 13);
+            this.Label10.Size = new System.Drawing.Size(93, 13);
             this.Label10.TabIndex = 135;
             this.Label10.Text = "DISCAPACITADO:";
             // 
@@ -1254,10 +1266,10 @@
             // 
             this.Label12.AutoSize = true;
             this.Label12.BackColor = System.Drawing.Color.Transparent;
-            this.Label12.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label12.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label12.Location = new System.Drawing.Point(174, 38);
             this.Label12.Name = "Label12";
-            this.Label12.Size = new System.Drawing.Size(61, 13);
+            this.Label12.Size = new System.Drawing.Size(62, 13);
             this.Label12.TabIndex = 139;
             this.Label12.Text = "(CONADIS)";
             // 
@@ -1265,10 +1277,10 @@
             // 
             this.lblPruebaAntidroga.AutoSize = true;
             this.lblPruebaAntidroga.BackColor = System.Drawing.Color.Transparent;
-            this.lblPruebaAntidroga.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPruebaAntidroga.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPruebaAntidroga.Location = new System.Drawing.Point(236, 14);
             this.lblPruebaAntidroga.Name = "lblPruebaAntidroga";
-            this.lblPruebaAntidroga.Size = new System.Drawing.Size(109, 13);
+            this.lblPruebaAntidroga.Size = new System.Drawing.Size(116, 13);
             this.lblPruebaAntidroga.TabIndex = 101;
             this.lblPruebaAntidroga.Text = "PRUEBA ANTIDROGA:";
             // 
@@ -1308,7 +1320,7 @@
             this.GroupBox5.Controls.Add(this.lblSueldo);
             this.GroupBox5.Controls.Add(this.label32);
             this.GroupBox5.Controls.Add(this.label19);
-            this.GroupBox5.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GroupBox5.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GroupBox5.Location = new System.Drawing.Point(494, 109);
             this.GroupBox5.Name = "GroupBox5";
             this.GroupBox5.Size = new System.Drawing.Size(477, 296);
@@ -1318,21 +1330,21 @@
             // dateTimePicker2
             // 
             this.dateTimePicker2.Enabled = false;
-            this.dateTimePicker2.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker2.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker2.Location = new System.Drawing.Point(360, 174);
             this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(110, 20);
+            this.dateTimePicker2.Size = new System.Drawing.Size(110, 21);
             this.dateTimePicker2.TabIndex = 203;
             // 
             // dateTimePicker1
             // 
             this.dateTimePicker1.Enabled = false;
-            this.dateTimePicker1.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker1.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker1.Location = new System.Drawing.Point(79, 174);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(110, 20);
+            this.dateTimePicker1.Size = new System.Drawing.Size(110, 21);
             this.dateTimePicker1.TabIndex = 201;
             // 
             // cbxProyecto
@@ -1341,7 +1353,7 @@
             this.cbxProyecto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxProyecto.Enabled = false;
             this.cbxProyecto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbxProyecto.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxProyecto.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxProyecto.FormattingEnabled = true;
             this.cbxProyecto.Items.AddRange(new object[] {
             "POR OBRA O SERVICIO DETERMINADO DENTRO DEL GIRO DEL NEGOCIO",
@@ -1357,10 +1369,10 @@
             // 
             this.label16.AutoSize = true;
             this.label16.BackColor = System.Drawing.Color.Transparent;
-            this.label16.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.Location = new System.Drawing.Point(8, 151);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(61, 13);
+            this.label16.Size = new System.Drawing.Size(67, 13);
             this.label16.TabIndex = 199;
             this.label16.Text = "PROYECTO:";
             // 
@@ -1369,6 +1381,7 @@
             this.chkAcumulaFondo.AutoSize = true;
             this.chkAcumulaFondo.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.chkAcumulaFondo.Enabled = false;
+            this.chkAcumulaFondo.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkAcumulaFondo.Location = new System.Drawing.Point(353, 60);
             this.chkAcumulaFondo.Name = "chkAcumulaFondo";
             this.chkAcumulaFondo.Size = new System.Drawing.Size(116, 17);
@@ -1380,10 +1393,10 @@
             // 
             this.Label52.AutoSize = true;
             this.Label52.BackColor = System.Drawing.Color.Transparent;
-            this.Label52.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label52.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label52.Location = new System.Drawing.Point(7, 61);
             this.Label52.Name = "Label52";
-            this.Label52.Size = new System.Drawing.Size(103, 13);
+            this.Label52.Size = new System.Drawing.Size(105, 13);
             this.Label52.TabIndex = 198;
             this.Label52.Text = "SE PAGAN EN ROL?";
             // 
@@ -1391,6 +1404,7 @@
             // 
             this.NupExtra.DecimalPlaces = 2;
             this.NupExtra.Enabled = false;
+            this.NupExtra.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NupExtra.Increment = new decimal(new int[] {
             1,
             0,
@@ -1403,7 +1417,7 @@
             0,
             0});
             this.NupExtra.Name = "NupExtra";
-            this.NupExtra.Size = new System.Drawing.Size(74, 20);
+            this.NupExtra.Size = new System.Drawing.Size(74, 21);
             this.NupExtra.TabIndex = 48;
             this.NupExtra.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -1411,10 +1425,10 @@
             // 
             this.Label51.AutoSize = true;
             this.Label51.BackColor = System.Drawing.Color.Transparent;
-            this.Label51.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label51.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label51.Location = new System.Drawing.Point(346, 130);
             this.Label51.Name = "Label51";
-            this.Label51.Size = new System.Drawing.Size(55, 13);
+            this.Label51.Size = new System.Drawing.Size(53, 13);
             this.Label51.TabIndex = 196;
             this.Label51.Text = "EXTRA $:";
             // 
@@ -1422,6 +1436,7 @@
             // 
             this.NupSueldo.DecimalPlaces = 2;
             this.NupSueldo.Enabled = false;
+            this.NupSueldo.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NupSueldo.Increment = new decimal(new int[] {
             1,
             0,
@@ -1434,7 +1449,7 @@
             0,
             0});
             this.NupSueldo.Name = "NupSueldo";
-            this.NupSueldo.Size = new System.Drawing.Size(74, 20);
+            this.NupSueldo.Size = new System.Drawing.Size(74, 21);
             this.NupSueldo.TabIndex = 47;
             this.NupSueldo.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -1442,12 +1457,13 @@
             // 
             this.bntSitio.BackColor = System.Drawing.Color.White;
             this.bntSitio.Enabled = false;
-            this.bntSitio.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bntSitio.Image = ((System.Drawing.Image)(resources.GetObject("bntSitio.Image")));
-            this.bntSitio.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bntSitio.Location = new System.Drawing.Point(445, 195);
+            this.bntSitio.FlatAppearance.BorderSize = 0;
+            this.bntSitio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bntSitio.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bntSitio.Image = global::SysCisepro3.Properties.Resources.location_on_24dp_FILL0_wght400_GRAD0_opsz24;
+            this.bntSitio.Location = new System.Drawing.Point(442, 204);
             this.bntSitio.Name = "bntSitio";
-            this.bntSitio.Size = new System.Drawing.Size(25, 47);
+            this.bntSitio.Size = new System.Drawing.Size(27, 27);
             this.bntSitio.TabIndex = 50;
             this.bntSitio.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.bntSitio.UseVisualStyleBackColor = false;
@@ -1458,11 +1474,11 @@
             this.txtSitio.BackColor = System.Drawing.Color.White;
             this.txtSitio.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtSitio.Enabled = false;
-            this.txtSitio.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSitio.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSitio.Location = new System.Drawing.Point(79, 196);
             this.txtSitio.Multiline = true;
             this.txtSitio.Name = "txtSitio";
-            this.txtSitio.Size = new System.Drawing.Size(367, 45);
+            this.txtSitio.Size = new System.Drawing.Size(360, 45);
             this.txtSitio.TabIndex = 49;
             this.txtSitio.Text = "AUN NO SE ESPECIFICA";
             // 
@@ -1471,9 +1487,10 @@
             this.chkFondoRes.AutoSize = true;
             this.chkFondoRes.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.chkFondoRes.Enabled = false;
+            this.chkFondoRes.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkFondoRes.Location = new System.Drawing.Point(239, 59);
             this.chkFondoRes.Name = "chkFondoRes";
-            this.chkFondoRes.Size = new System.Drawing.Size(86, 17);
+            this.chkFondoRes.Size = new System.Drawing.Size(89, 17);
             this.chkFondoRes.TabIndex = 40;
             this.chkFondoRes.Text = "FONDO RES.";
             this.chkFondoRes.UseVisualStyleBackColor = true;
@@ -1483,9 +1500,10 @@
             this.chkXiv.AutoSize = true;
             this.chkXiv.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.chkXiv.Enabled = false;
+            this.chkXiv.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkXiv.Location = new System.Drawing.Point(179, 59);
             this.chkXiv.Name = "chkXiv";
-            this.chkXiv.Size = new System.Drawing.Size(44, 17);
+            this.chkXiv.Size = new System.Drawing.Size(43, 17);
             this.chkXiv.TabIndex = 39;
             this.chkXiv.Text = "XIV";
             this.chkXiv.UseVisualStyleBackColor = true;
@@ -1495,9 +1513,10 @@
             this.chkXiii.AutoSize = true;
             this.chkXiii.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.chkXiii.Enabled = false;
+            this.chkXiii.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkXiii.Location = new System.Drawing.Point(114, 59);
             this.chkXiii.Name = "chkXiii";
-            this.chkXiii.Size = new System.Drawing.Size(50, 17);
+            this.chkXiii.Size = new System.Drawing.Size(42, 17);
             this.chkXiii.TabIndex = 38;
             this.chkXiii.Text = "XIII";
             this.chkXiii.UseVisualStyleBackColor = true;
@@ -1507,27 +1526,27 @@
             this.txtObservacion.BackColor = System.Drawing.Color.White;
             this.txtObservacion.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtObservacion.Enabled = false;
-            this.txtObservacion.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtObservacion.Location = new System.Drawing.Point(79, 242);
+            this.txtObservacion.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtObservacion.Location = new System.Drawing.Point(92, 242);
             this.txtObservacion.Multiline = true;
             this.txtObservacion.Name = "txtObservacion";
-            this.txtObservacion.Size = new System.Drawing.Size(391, 51);
+            this.txtObservacion.Size = new System.Drawing.Size(360, 44);
             this.txtObservacion.TabIndex = 51;
             // 
             // Label49
             // 
             this.Label49.AutoSize = true;
-            this.Label49.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label49.Location = new System.Drawing.Point(8, 245);
+            this.Label49.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label49.Location = new System.Drawing.Point(7, 245);
             this.Label49.Name = "Label49";
-            this.Label49.Size = new System.Drawing.Size(73, 13);
+            this.Label49.Size = new System.Drawing.Size(85, 13);
             this.Label49.TabIndex = 155;
             this.Label49.Text = "OBSERVACIÓN:";
             // 
             // dtpFechaAfiliado
             // 
             this.dtpFechaAfiliado.Enabled = false;
-            this.dtpFechaAfiliado.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpFechaAfiliado.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpFechaAfiliado.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpFechaAfiliado.Location = new System.Drawing.Point(361, 10);
             this.dtpFechaAfiliado.Name = "dtpFechaAfiliado";
@@ -1538,9 +1557,10 @@
             // 
             this.chkAfiliado.AutoSize = true;
             this.chkAfiliado.Enabled = false;
+            this.chkAfiliado.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkAfiliado.Location = new System.Drawing.Point(259, 12);
             this.chkAfiliado.Name = "chkAfiliado";
-            this.chkAfiliado.Size = new System.Drawing.Size(122, 17);
+            this.chkAfiliado.Size = new System.Drawing.Size(108, 17);
             this.chkAfiliado.TabIndex = 36;
             this.chkAfiliado.Text = "AFILIADO IESS   ";
             this.chkAfiliado.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -1553,7 +1573,7 @@
             this.cbmTipoContrato.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbmTipoContrato.Enabled = false;
             this.cbmTipoContrato.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbmTipoContrato.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbmTipoContrato.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbmTipoContrato.FormattingEnabled = true;
             this.cbmTipoContrato.Items.AddRange(new object[] {
             "POR OBRA O SERVICIO DETERMINADO DENTRO DEL GIRO DEL NEGOCIO",
@@ -1568,10 +1588,10 @@
             // 
             this.Label48.AutoSize = true;
             this.Label48.BackColor = System.Drawing.Color.Transparent;
-            this.Label48.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label48.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label48.Location = new System.Drawing.Point(8, 35);
             this.Label48.Name = "Label48";
-            this.Label48.Size = new System.Drawing.Size(109, 13);
+            this.Label48.Size = new System.Drawing.Size(112, 13);
             this.Label48.TabIndex = 151;
             this.Label48.Text = "TIPO DE CONTRATO:";
             // 
@@ -1580,10 +1600,10 @@
             this.txtMotivoSalidaActual.BackColor = System.Drawing.Color.White;
             this.txtMotivoSalidaActual.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtMotivoSalidaActual.Enabled = false;
-            this.txtMotivoSalidaActual.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMotivoSalidaActual.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMotivoSalidaActual.Location = new System.Drawing.Point(229, 83);
             this.txtMotivoSalidaActual.Name = "txtMotivoSalidaActual";
-            this.txtMotivoSalidaActual.Size = new System.Drawing.Size(243, 20);
+            this.txtMotivoSalidaActual.Size = new System.Drawing.Size(243, 21);
             this.txtMotivoSalidaActual.TabIndex = 44;
             this.txtMotivoSalidaActual.Text = "EN FUNCIONES";
             // 
@@ -1591,32 +1611,32 @@
             // 
             this.lblFechaIngreso.AutoSize = true;
             this.lblFechaIngreso.BackColor = System.Drawing.Color.Transparent;
-            this.lblFechaIngreso.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFechaIngreso.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFechaIngreso.Location = new System.Drawing.Point(7, 12);
             this.lblFechaIngreso.Name = "lblFechaIngreso";
-            this.lblFechaIngreso.Size = new System.Drawing.Size(91, 13);
+            this.lblFechaIngreso.Size = new System.Drawing.Size(94, 13);
             this.lblFechaIngreso.TabIndex = 102;
             this.lblFechaIngreso.Text = "FECHA INGRESO:";
             // 
             // dtpFechaIngreso
             // 
             this.dtpFechaIngreso.Enabled = false;
-            this.dtpFechaIngreso.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpFechaIngreso.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpFechaIngreso.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpFechaIngreso.Location = new System.Drawing.Point(124, 10);
             this.dtpFechaIngreso.Name = "dtpFechaIngreso";
-            this.dtpFechaIngreso.Size = new System.Drawing.Size(110, 20);
+            this.dtpFechaIngreso.Size = new System.Drawing.Size(110, 21);
             this.dtpFechaIngreso.TabIndex = 35;
             this.dtpFechaIngreso.ValueChanged += new System.EventHandler(this.dtpFechaIngreso_ValueChanged);
             // 
             // dtpFechaSalida
             // 
             this.dtpFechaSalida.Enabled = false;
-            this.dtpFechaSalida.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpFechaSalida.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpFechaSalida.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpFechaSalida.Location = new System.Drawing.Point(123, 83);
             this.dtpFechaSalida.Name = "dtpFechaSalida";
-            this.dtpFechaSalida.Size = new System.Drawing.Size(100, 20);
+            this.dtpFechaSalida.Size = new System.Drawing.Size(100, 21);
             this.dtpFechaSalida.TabIndex = 43;
             this.dtpFechaSalida.Value = new System.DateTime(2018, 10, 17, 16, 1, 3, 0);
             this.dtpFechaSalida.ValueChanged += new System.EventHandler(this.dtpFechaSalida_ValueChanged);
@@ -1625,10 +1645,10 @@
             // 
             this.lblFechaSalida.AutoSize = true;
             this.lblFechaSalida.BackColor = System.Drawing.Color.Transparent;
-            this.lblFechaSalida.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFechaSalida.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFechaSalida.Location = new System.Drawing.Point(7, 86);
             this.lblFechaSalida.Name = "lblFechaSalida";
-            this.lblFechaSalida.Size = new System.Drawing.Size(85, 13);
+            this.lblFechaSalida.Size = new System.Drawing.Size(84, 13);
             this.lblFechaSalida.TabIndex = 103;
             this.lblFechaSalida.Text = "FECHA SALIDA:";
             // 
@@ -1637,7 +1657,7 @@
             this.chSalida.AutoSize = true;
             this.chSalida.Cursor = System.Windows.Forms.Cursors.Default;
             this.chSalida.Enabled = false;
-            this.chSalida.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chSalida.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chSalida.Location = new System.Drawing.Point(103, 86);
             this.chSalida.Name = "chSalida";
             this.chSalida.Size = new System.Drawing.Size(15, 14);
@@ -1651,7 +1671,7 @@
             this.cbCargo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbCargo.Enabled = false;
             this.cbCargo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbCargo.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbCargo.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbCargo.FormattingEnabled = true;
             this.cbCargo.Location = new System.Drawing.Point(79, 128);
             this.cbCargo.Name = "cbCargo";
@@ -1662,7 +1682,7 @@
             // 
             this.Label1.AutoSize = true;
             this.Label1.BackColor = System.Drawing.Color.Transparent;
-            this.Label1.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label1.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label1.Location = new System.Drawing.Point(6, 205);
             this.Label1.Name = "Label1";
             this.Label1.Size = new System.Drawing.Size(67, 13);
@@ -1675,7 +1695,7 @@
             this.cbArea.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbArea.Enabled = false;
             this.cbArea.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbArea.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbArea.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbArea.FormattingEnabled = true;
             this.cbArea.Location = new System.Drawing.Point(79, 106);
             this.cbArea.Name = "cbArea";
@@ -1686,8 +1706,8 @@
             // 
             this.lblArea.AutoSize = true;
             this.lblArea.BackColor = System.Drawing.Color.Transparent;
-            this.lblArea.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblArea.Location = new System.Drawing.Point(8, 109);
+            this.lblArea.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblArea.Location = new System.Drawing.Point(9, 112);
             this.lblArea.Name = "lblArea";
             this.lblArea.Size = new System.Drawing.Size(37, 13);
             this.lblArea.TabIndex = 110;
@@ -1697,10 +1717,10 @@
             // 
             this.lblCargo.AutoSize = true;
             this.lblCargo.BackColor = System.Drawing.Color.Transparent;
-            this.lblCargo.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCargo.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCargo.Location = new System.Drawing.Point(8, 131);
             this.lblCargo.Name = "lblCargo";
-            this.lblCargo.Size = new System.Drawing.Size(43, 13);
+            this.lblCargo.Size = new System.Drawing.Size(47, 13);
             this.lblCargo.TabIndex = 108;
             this.lblCargo.Text = "CARGO:";
             // 
@@ -1708,10 +1728,10 @@
             // 
             this.lblSueldo.AutoSize = true;
             this.lblSueldo.BackColor = System.Drawing.Color.Transparent;
-            this.lblSueldo.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSueldo.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSueldo.Location = new System.Drawing.Point(340, 109);
             this.lblSueldo.Name = "lblSueldo";
-            this.lblSueldo.Size = new System.Drawing.Size(61, 13);
+            this.lblSueldo.Size = new System.Drawing.Size(60, 13);
             this.lblSueldo.TabIndex = 95;
             this.lblSueldo.Text = "SUELDO $:";
             // 
@@ -1719,10 +1739,10 @@
             // 
             this.label32.AutoSize = true;
             this.label32.BackColor = System.Drawing.Color.Transparent;
-            this.label32.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label32.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label32.Location = new System.Drawing.Point(269, 177);
             this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(85, 13);
+            this.label32.Size = new System.Drawing.Size(87, 13);
             this.label32.TabIndex = 204;
             this.label32.Text = "FIN PROYECTO:";
             // 
@@ -1730,10 +1750,10 @@
             // 
             this.label19.AutoSize = true;
             this.label19.BackColor = System.Drawing.Color.Transparent;
-            this.label19.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.Location = new System.Drawing.Point(8, 177);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(67, 13);
+            this.label19.Size = new System.Drawing.Size(59, 13);
             this.label19.TabIndex = 202;
             this.label19.Text = "INICIO PR:";
             // 
@@ -1744,7 +1764,7 @@
             this.GroupBox4.Controls.Add(this.cbxTipoCuenta);
             this.GroupBox4.Controls.Add(this.txtNumCuenta);
             this.GroupBox4.Controls.Add(this.Label46);
-            this.GroupBox4.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GroupBox4.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GroupBox4.Location = new System.Drawing.Point(2, 351);
             this.GroupBox4.Name = "GroupBox4";
             this.GroupBox4.Size = new System.Drawing.Size(501, 48);
@@ -1758,7 +1778,7 @@
             this.cbxBanco.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxBanco.Enabled = false;
             this.cbxBanco.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbxBanco.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxBanco.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxBanco.FormattingEnabled = true;
             this.cbxBanco.Location = new System.Drawing.Point(40, 19);
             this.cbxBanco.Name = "cbxBanco";
@@ -1769,10 +1789,10 @@
             // 
             this.Label47.AutoSize = true;
             this.Label47.BackColor = System.Drawing.Color.Transparent;
-            this.Label47.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label47.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label47.Location = new System.Drawing.Point(1, 22);
             this.Label47.Name = "Label47";
-            this.Label47.Size = new System.Drawing.Size(43, 13);
+            this.Label47.Size = new System.Drawing.Size(47, 13);
             this.Label47.TabIndex = 128;
             this.Label47.Text = "BANCO:";
             // 
@@ -1782,7 +1802,7 @@
             this.cbxTipoCuenta.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxTipoCuenta.Enabled = false;
             this.cbxTipoCuenta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbxTipoCuenta.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxTipoCuenta.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxTipoCuenta.FormattingEnabled = true;
             this.cbxTipoCuenta.Items.AddRange(new object[] {
             "AHO",
@@ -1796,10 +1816,10 @@
             // 
             this.txtNumCuenta.BackColor = System.Drawing.Color.White;
             this.txtNumCuenta.Enabled = false;
-            this.txtNumCuenta.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNumCuenta.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNumCuenta.Location = new System.Drawing.Point(297, 18);
             this.txtNumCuenta.Name = "txtNumCuenta";
-            this.txtNumCuenta.Size = new System.Drawing.Size(126, 20);
+            this.txtNumCuenta.Size = new System.Drawing.Size(126, 21);
             this.txtNumCuenta.TabIndex = 23;
             this.txtNumCuenta.Text = "0";
             this.txtNumCuenta.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -1808,10 +1828,10 @@
             // 
             this.Label46.AutoSize = true;
             this.Label46.BackColor = System.Drawing.Color.Transparent;
-            this.Label46.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label46.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label46.Location = new System.Drawing.Point(243, 22);
             this.Label46.Name = "Label46";
-            this.Label46.Size = new System.Drawing.Size(55, 13);
+            this.Label46.Size = new System.Drawing.Size(49, 13);
             this.Label46.TabIndex = 125;
             this.Label46.Text = "N° CTA.:";
             // 
@@ -1824,7 +1844,7 @@
             this.tpDatosFamiliares.Location = new System.Drawing.Point(4, 22);
             this.tpDatosFamiliares.Name = "tpDatosFamiliares";
             this.tpDatosFamiliares.Padding = new System.Windows.Forms.Padding(3);
-            this.tpDatosFamiliares.Size = new System.Drawing.Size(1007, 405);
+            this.tpDatosFamiliares.Size = new System.Drawing.Size(974, 401);
             this.tpDatosFamiliares.TabIndex = 1;
             this.tpDatosFamiliares.Text = "DATOS FAMILIARES";
             // 
@@ -2155,7 +2175,7 @@
             this.tpReferenciasLaborales.Location = new System.Drawing.Point(4, 22);
             this.tpReferenciasLaborales.Name = "tpReferenciasLaborales";
             this.tpReferenciasLaborales.Padding = new System.Windows.Forms.Padding(3);
-            this.tpReferenciasLaborales.Size = new System.Drawing.Size(1007, 405);
+            this.tpReferenciasLaborales.Size = new System.Drawing.Size(974, 401);
             this.tpReferenciasLaborales.TabIndex = 2;
             this.tpReferenciasLaborales.Text = "REFERENCIAS LABORALES";
             // 
@@ -2404,7 +2424,7 @@
             this.tpFoto.Location = new System.Drawing.Point(4, 22);
             this.tpFoto.Name = "tpFoto";
             this.tpFoto.Padding = new System.Windows.Forms.Padding(3);
-            this.tpFoto.Size = new System.Drawing.Size(993, 401);
+            this.tpFoto.Size = new System.Drawing.Size(974, 401);
             this.tpFoto.TabIndex = 3;
             this.tpFoto.Text = "FOTOS";
             // 
@@ -2485,7 +2505,7 @@
             this.TabPage1.Controls.Add(this.DataGridView1);
             this.TabPage1.Location = new System.Drawing.Point(4, 22);
             this.TabPage1.Name = "TabPage1";
-            this.TabPage1.Size = new System.Drawing.Size(1007, 405);
+            this.TabPage1.Size = new System.Drawing.Size(974, 401);
             this.TabPage1.TabIndex = 4;
             this.TabPage1.Text = "HISTORIAL LABORAL";
             this.TabPage1.UseVisualStyleBackColor = true;
@@ -2493,14 +2513,15 @@
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.White;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.Image = global::SysCisepro3.Properties.Resources.icons8_excel_48;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(911, 3);
+            this.button2.Location = new System.Drawing.Point(871, 3);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(93, 26);
+            this.button2.Size = new System.Drawing.Size(27, 27);
             this.button2.TabIndex = 196;
-            this.button2.Text = "EXPORTAR";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -2521,40 +2542,40 @@
             this.DataGridView1.AllowUserToAddRows = false;
             this.DataGridView1.AllowUserToDeleteRows = false;
             this.DataGridView1.AllowUserToResizeRows = false;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle21;
             this.DataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.DataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle22.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle22;
             this.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(60)))), ((int)(((byte)(123)))));
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.GrayText;
-            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DataGridView1.DefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle23.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle23.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle23.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(60)))), ((int)(((byte)(123)))));
+            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.SystemColors.GrayText;
+            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DataGridView1.DefaultCellStyle = dataGridViewCellStyle23;
             this.DataGridView1.GridColor = System.Drawing.SystemColors.AppWorkspace;
             this.DataGridView1.Location = new System.Drawing.Point(2, 35);
             this.DataGridView1.MultiSelect = false;
             this.DataGridView1.Name = "DataGridView1";
             this.DataGridView1.ReadOnly = true;
             this.DataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Info;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.GrayText;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle24.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle24.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle24.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle24.SelectionBackColor = System.Drawing.SystemColors.Info;
+            dataGridViewCellStyle24.SelectionForeColor = System.Drawing.SystemColors.GrayText;
+            dataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle24;
             this.DataGridView1.RowHeadersVisible = false;
             this.DataGridView1.RowHeadersWidth = 25;
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle25.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle25.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle25;
             this.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DataGridView1.Size = new System.Drawing.Size(1002, 336);
             this.DataGridView1.TabIndex = 43;
@@ -2574,14 +2595,14 @@
             // Button1
             // 
             this.Button1.BackColor = System.Drawing.Color.White;
+            this.Button1.FlatAppearance.BorderSize = 0;
+            this.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Button1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Button1.Image = ((System.Drawing.Image)(resources.GetObject("Button1.Image")));
-            this.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Button1.Location = new System.Drawing.Point(773, 12);
+            this.Button1.Image = global::SysCisepro3.Properties.Resources.icons8_excel_48;
+            this.Button1.Location = new System.Drawing.Point(777, 12);
             this.Button1.Name = "Button1";
-            this.Button1.Size = new System.Drawing.Size(93, 26);
+            this.Button1.Size = new System.Drawing.Size(27, 27);
             this.Button1.TabIndex = 195;
-            this.Button1.Text = "EXPORTAR";
             this.Button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Button1.UseVisualStyleBackColor = false;
             this.Button1.Click += new System.EventHandler(this.Button1_Click);
@@ -2602,10 +2623,10 @@
             // 
             this.Label31.AutoSize = true;
             this.Label31.BackColor = System.Drawing.Color.Transparent;
-            this.Label31.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label31.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label31.Location = new System.Drawing.Point(7, 19);
             this.Label31.Name = "Label31";
-            this.Label31.Size = new System.Drawing.Size(49, 13);
+            this.Label31.Size = new System.Drawing.Size(52, 13);
             this.Label31.TabIndex = 121;
             this.Label31.Text = "BUSCAR:";
             // 
@@ -2614,39 +2635,39 @@
             this.dgvPersonal.AllowUserToAddRows = false;
             this.dgvPersonal.AllowUserToDeleteRows = false;
             this.dgvPersonal.AllowUserToResizeRows = false;
-            dataGridViewCellStyle16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgvPersonal.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle26.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgvPersonal.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle26;
             this.dgvPersonal.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.dgvPersonal.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
-            this.dgvPersonal.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle17;
+            this.dgvPersonal.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle27;
             this.dgvPersonal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle18.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle18.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(60)))), ((int)(((byte)(123)))));
-            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.GrayText;
-            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvPersonal.DefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle28.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle28.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle28.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle28.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(60)))), ((int)(((byte)(123)))));
+            dataGridViewCellStyle28.SelectionForeColor = System.Drawing.SystemColors.GrayText;
+            dataGridViewCellStyle28.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvPersonal.DefaultCellStyle = dataGridViewCellStyle28;
             this.dgvPersonal.GridColor = System.Drawing.SystemColors.AppWorkspace;
             this.dgvPersonal.Location = new System.Drawing.Point(3, 48);
             this.dgvPersonal.MultiSelect = false;
             this.dgvPersonal.Name = "dgvPersonal";
             this.dgvPersonal.ReadOnly = true;
             this.dgvPersonal.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle19.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle19.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle19.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.SystemColors.Info;
-            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.SystemColors.GrayText;
-            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPersonal.RowHeadersDefaultCellStyle = dataGridViewCellStyle19;
+            dataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle29.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle29.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle29.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle29.SelectionBackColor = System.Drawing.SystemColors.Info;
+            dataGridViewCellStyle29.SelectionForeColor = System.Drawing.SystemColors.GrayText;
+            dataGridViewCellStyle29.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPersonal.RowHeadersDefaultCellStyle = dataGridViewCellStyle29;
             this.dgvPersonal.RowHeadersVisible = false;
             this.dgvPersonal.RowHeadersWidth = 25;
-            dataGridViewCellStyle20.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPersonal.RowsDefaultCellStyle = dataGridViewCellStyle20;
+            dataGridViewCellStyle30.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle30.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPersonal.RowsDefaultCellStyle = dataGridViewCellStyle30;
             this.dgvPersonal.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvPersonal.Size = new System.Drawing.Size(970, 193);
             this.dgvPersonal.TabIndex = 42;

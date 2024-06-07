@@ -2,6 +2,8 @@
 using System.Data;
 using System.Drawing;
 using System.IO;
+//using System.Windows.Controls;
+using System.Windows.Forms;
 using ClassLibraryCisepro3.Enums;
 using ClassLibraryCisepro3.UsuarioGeneral; 
 using SysCisepro3.Properties;
@@ -141,6 +143,30 @@ namespace SysCisepro3.Datos
                     break;
             }
             return img;
+        }
+
+        public static void SetPlaceholder(TextBox txtBox, string placeholderText)
+        {
+            txtBox.Text = placeholderText;
+            txtBox.ForeColor = Color.Gray;
+
+            txtBox.Enter += (sender, e) =>
+            {
+                if (txtBox.Text == placeholderText)
+                {
+                    txtBox.Text = string.Empty;
+                    txtBox.ForeColor = Color.Black;
+                }
+            };
+
+            txtBox.Leave += (sender, e) =>
+            {
+                if (string.IsNullOrWhiteSpace(txtBox.Text))
+                {
+                    txtBox.Text = placeholderText;
+                    txtBox.ForeColor = Color.Gray;
+                }
+            };
         }
     }
 }

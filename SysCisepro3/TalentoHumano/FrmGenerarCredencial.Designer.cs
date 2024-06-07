@@ -28,15 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmGenerarCredencial));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripDropDownButton();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
@@ -47,6 +46,7 @@
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.ticComecsa = new System.Windows.Forms.ToolStripButton();
             this.ticFarmacia = new System.Windows.Forms.ToolStripButton();
+            this.TicComisariato = new System.Windows.Forms.ToolStripButton();
             this.gbParámetros = new System.Windows.Forms.GroupBox();
             this.Label4 = new System.Windows.Forms.Label();
             this.txtParametroBusqueda = new System.Windows.Forms.TextBox();
@@ -62,18 +62,17 @@
             this.DataGridView1 = new System.Windows.Forms.DataGridView();
             this.dgvBusquedaPersonal = new System.Windows.Forms.DataGridView();
             this.crvCredenciales = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
-            //this.axAcroPDF1 = new AxAcroPDFLib.AxAcroPDF();
-            this.TicComisariato = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1.SuspendLayout();
             this.gbParámetros.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBusquedaPersonal)).BeginInit();
-           // ((System.ComponentModel.ISupportInitialize)(this.axAcroPDF1)).BeginInit();
             this.SuspendLayout();
             // 
             // toolStrip1
             // 
+            this.toolStrip1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItem1,
             this.toolStripButton1,
@@ -82,7 +81,7 @@
             this.TicComisariato});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1097, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(1097, 31);
             this.toolStrip1.TabIndex = 216;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -94,74 +93,92 @@
             this.toolStripSeparator3,
             this.toolStripMenuItem4,
             this.cREDENCIALCISSEPToolStripMenuItem});
-            this.toolStripMenuItem1.Image = global::SysCisepro3.Properties.Resources.debit_icon;
+            this.toolStripMenuItem1.Image = global::SysCisepro3.Properties.Resources.badge_24dp_FILL0_wght400_GRAD0_opsz24;
+            this.toolStripMenuItem1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(171, 22);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(179, 28);
             this.toolStripMenuItem1.Text = "GENERAR CREDENCIALES";
             // 
             // toolStripMenuItem2
             // 
-            this.toolStripMenuItem2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItem2.Image")));
+            this.toolStripMenuItem2.Image = global::SysCisepro3.Properties.Resources.badge_24dp_FILL0_wght400_GRAD0_opsz24;
+            this.toolStripMenuItem2.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(193, 22);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(201, 30);
             this.toolStripMenuItem2.Text = "PARA VISITANTE";
             this.toolStripMenuItem2.Click += new System.EventHandler(this.pARAVISITANTEToolStripMenuItem_Click);
             // 
             // toolStripMenuItem3
             // 
-            this.toolStripMenuItem3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItem3.Image")));
+            this.toolStripMenuItem3.Image = global::SysCisepro3.Properties.Resources.badge_24dp_FILL0_wght400_GRAD0_opsz24;
+            this.toolStripMenuItem3.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(193, 22);
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(201, 30);
             this.toolStripMenuItem3.Text = "PARA PERSONAL";
             this.toolStripMenuItem3.Click += new System.EventHandler(this.pARAPERSONALToolStripMenuItem_Click);
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(190, 6);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(198, 6);
             // 
             // toolStripMenuItem4
             // 
-            this.toolStripMenuItem4.Image = global::SysCisepro3.Properties.Resources.debit_icon;
+            this.toolStripMenuItem4.Image = global::SysCisepro3.Properties.Resources.badge_24dp_FILL0_wght400_GRAD0_opsz24;
+            this.toolStripMenuItem4.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripMenuItem4.Name = "toolStripMenuItem4";
-            this.toolStripMenuItem4.Size = new System.Drawing.Size(193, 22);
+            this.toolStripMenuItem4.Size = new System.Drawing.Size(201, 30);
             this.toolStripMenuItem4.Text = "PARA LICITACIONES";
             this.toolStripMenuItem4.Click += new System.EventHandler(this.pARALICITACIONESToolStripMenuItem_Click);
             // 
             // cREDENCIALCISSEPToolStripMenuItem
             // 
-            this.cREDENCIALCISSEPToolStripMenuItem.Image = global::SysCisepro3.Properties.Resources.debit_icon;
+            this.cREDENCIALCISSEPToolStripMenuItem.Image = global::SysCisepro3.Properties.Resources.badge_24dp_FILL0_wght400_GRAD0_opsz24;
+            this.cREDENCIALCISSEPToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.cREDENCIALCISSEPToolStripMenuItem.Name = "cREDENCIALCISSEPToolStripMenuItem";
-            this.cREDENCIALCISSEPToolStripMenuItem.Size = new System.Drawing.Size(193, 22);
+            this.cREDENCIALCISSEPToolStripMenuItem.Size = new System.Drawing.Size(201, 30);
             this.cREDENCIALCISSEPToolStripMenuItem.Text = "CREDENCIAL CIS / SEP";
             this.cREDENCIALCISSEPToolStripMenuItem.Click += new System.EventHandler(this.cREDENCIALCISSEPToolStripMenuItem_Click);
             // 
             // toolStripButton1
             // 
-            this.toolStripButton1.Image = global::SysCisepro3.Properties.Resources.debit_icon;
+            this.toolStripButton1.Image = global::SysCisepro3.Properties.Resources.checkbook_20dp_FILL0_wght400_GRAD0_opsz20__2_;
+            this.toolStripButton1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(140, 22);
+            this.toolStripButton1.Size = new System.Drawing.Size(148, 28);
             this.toolStripButton1.Text = "SOLICITUD ANTICIPO";
             this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
             // ticComecsa
             // 
-            this.ticComecsa.Image = global::SysCisepro3.Properties.Resources.debit_icon;
+            this.ticComecsa.Image = global::SysCisepro3.Properties.Resources.confirmation_number_24dp_FILL0_wght400_GRAD0_opsz24;
+            this.ticComecsa.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.ticComecsa.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.ticComecsa.Name = "ticComecsa";
-            this.ticComecsa.Size = new System.Drawing.Size(122, 22);
+            this.ticComecsa.Size = new System.Drawing.Size(130, 28);
             this.ticComecsa.Text = "TICKET COMECSA";
             this.ticComecsa.Click += new System.EventHandler(this.ticComecsa_Click);
             // 
             // ticFarmacia
             // 
-            this.ticFarmacia.Image = global::SysCisepro3.Properties.Resources.debit_icon;
+            this.ticFarmacia.Image = global::SysCisepro3.Properties.Resources.confirmation_number_24dp_FILL0_wght400_GRAD0_opsz24;
+            this.ticFarmacia.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.ticFarmacia.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.ticFarmacia.Name = "ticFarmacia";
-            this.ticFarmacia.Size = new System.Drawing.Size(124, 22);
+            this.ticFarmacia.Size = new System.Drawing.Size(132, 28);
             this.ticFarmacia.Text = "TICKET FARMACIA";
             this.ticFarmacia.Click += new System.EventHandler(this.ticFarmacia_Click);
+            // 
+            // TicComisariato
+            // 
+            this.TicComisariato.Image = global::SysCisepro3.Properties.Resources.confirmation_number_24dp_FILL0_wght400_GRAD0_opsz24;
+            this.TicComisariato.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.TicComisariato.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.TicComisariato.Name = "TicComisariato";
+            this.TicComisariato.Size = new System.Drawing.Size(150, 28);
+            this.TicComisariato.Text = "TICKET COMISARIATO";
+            this.TicComisariato.Click += new System.EventHandler(this.TicComisariato_Click);
             // 
             // gbParámetros
             // 
@@ -177,7 +194,7 @@
             this.gbParámetros.Controls.Add(this.Label2);
             this.gbParámetros.Controls.Add(this.txtCodigo);
             this.gbParámetros.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbParámetros.Location = new System.Drawing.Point(1, 27);
+            this.gbParámetros.Location = new System.Drawing.Point(1, 34);
             this.gbParámetros.Name = "gbParámetros";
             this.gbParámetros.Size = new System.Drawing.Size(488, 159);
             this.gbParámetros.TabIndex = 217;
@@ -296,39 +313,39 @@
             this.DataGridView1.AllowUserToAddRows = false;
             this.DataGridView1.AllowUserToDeleteRows = false;
             this.DataGridView1.AllowUserToResizeRows = false;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.DataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.DataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(60)))), ((int)(((byte)(123)))));
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DataGridView1.DefaultCellStyle = dataGridViewCellStyle11;
-            this.DataGridView1.Location = new System.Drawing.Point(880, 29);
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(60)))), ((int)(((byte)(123)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
+            this.DataGridView1.Location = new System.Drawing.Point(880, 37);
             this.DataGridView1.MultiSelect = false;
             this.DataGridView1.Name = "DataGridView1";
             this.DataGridView1.ReadOnly = true;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.DataGridView1.RowHeadersVisible = false;
             this.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DataGridView1.Size = new System.Drawing.Size(193, 157);
@@ -340,39 +357,39 @@
             this.dgvBusquedaPersonal.AllowUserToAddRows = false;
             this.dgvBusquedaPersonal.AllowUserToDeleteRows = false;
             this.dgvBusquedaPersonal.AllowUserToResizeRows = false;
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgvBusquedaPersonal.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgvBusquedaPersonal.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvBusquedaPersonal.BackgroundColor = System.Drawing.Color.White;
             this.dgvBusquedaPersonal.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvBusquedaPersonal.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvBusquedaPersonal.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvBusquedaPersonal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(60)))), ((int)(((byte)(123)))));
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvBusquedaPersonal.DefaultCellStyle = dataGridViewCellStyle15;
-            this.dgvBusquedaPersonal.Location = new System.Drawing.Point(491, 29);
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(60)))), ((int)(((byte)(123)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvBusquedaPersonal.DefaultCellStyle = dataGridViewCellStyle7;
+            this.dgvBusquedaPersonal.Location = new System.Drawing.Point(491, 37);
             this.dgvBusquedaPersonal.MultiSelect = false;
             this.dgvBusquedaPersonal.Name = "dgvBusquedaPersonal";
             this.dgvBusquedaPersonal.ReadOnly = true;
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle16.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle16.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvBusquedaPersonal.RowHeadersDefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvBusquedaPersonal.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.dgvBusquedaPersonal.RowHeadersVisible = false;
             this.dgvBusquedaPersonal.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvBusquedaPersonal.Size = new System.Drawing.Size(390, 157);
@@ -386,7 +403,7 @@
             this.crvCredenciales.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.crvCredenciales.Cursor = System.Windows.Forms.Cursors.Default;
             this.crvCredenciales.EnableRefresh = false;
-            this.crvCredenciales.Location = new System.Drawing.Point(-2, 188);
+            this.crvCredenciales.Location = new System.Drawing.Point(-2, 195);
             this.crvCredenciales.Name = "crvCredenciales";
             this.crvCredenciales.ShowCloseButton = false;
             this.crvCredenciales.ShowCopyButton = false;
@@ -394,28 +411,9 @@
             this.crvCredenciales.ShowGroupTreeButton = false;
             this.crvCredenciales.ShowParameterPanelButton = false;
             this.crvCredenciales.ShowTextSearchButton = false;
-            this.crvCredenciales.Size = new System.Drawing.Size(1099, 505);
+            this.crvCredenciales.Size = new System.Drawing.Size(1099, 498);
             this.crvCredenciales.TabIndex = 220;
             this.crvCredenciales.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None;
-            // 
-            // axAcroPDF1
-            // 
-            //this.axAcroPDF1.Enabled = true;
-            //this.axAcroPDF1.Location = new System.Drawing.Point(3, 188);
-            //this.axAcroPDF1.Name = "axAcroPDF1";
-            //this.axAcroPDF1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axAcroPDF1.OcxState")));
-            //this.axAcroPDF1.Size = new System.Drawing.Size(1070, 505);
-            //this.axAcroPDF1.TabIndex = 221;
-            //this.axAcroPDF1.Visible = false;
-            // 
-            // TicComisariato
-            // 
-            this.TicComisariato.Image = global::SysCisepro3.Properties.Resources.debit_icon;
-            this.TicComisariato.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.TicComisariato.Name = "TicComisariato";
-            this.TicComisariato.Size = new System.Drawing.Size(142, 22);
-            this.TicComisariato.Text = "TICKET COMISARIATO";
-            this.TicComisariato.Click += new System.EventHandler(this.TicComisariato_Click);
             // 
             // FrmGenerarCredencial
             // 
@@ -428,10 +426,13 @@
             this.Controls.Add(this.dgvBusquedaPersonal);
             this.Controls.Add(this.gbParámetros);
             this.Controls.Add(this.toolStrip1);
-            //this.Controls.Add(this.axAcroPDF1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "FrmGenerarCredencial";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StateActive.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.StateActive.Border.Rounding = 5F;
             this.Text = "GENERAR CREDENCIAL";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmGenerarCredencial_FormClosing);
             this.Load += new System.EventHandler(this.FrmGenerarCredencial_Load);
@@ -442,7 +443,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBusquedaPersonal)).EndInit();
-//            ((System.ComponentModel.ISupportInitialize)(this.axAcroPDF1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

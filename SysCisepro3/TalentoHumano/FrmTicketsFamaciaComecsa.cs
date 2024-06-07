@@ -81,6 +81,7 @@ namespace SysCisepro3.TalentoHumano
             cbxFiltro.SelectedIndex = 0;
             dtpFechaRegistro.Value = Usuario.Now(TipoCon);
             dtpFechaDesde.Value = new DateTime(dtpFechaRegistro.Value.Year, dtpFechaRegistro.Value.Month, 1);
+            ValidationForms.SetPlaceholder(txtFiltro, "Buscar ...");
         }
 
         private void btnNuevo_Click(object sender, EventArgs e)

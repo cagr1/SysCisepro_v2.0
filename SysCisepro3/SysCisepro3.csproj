@@ -1363,6 +1363,12 @@
     <None Include="Resources\cahange_system.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\confirmation_number_24dp_FILL0_wght400_GRAD0_opsz24.png" />
+    <None Include="Resources\location_on_24dp_FILL0_wght400_GRAD0_opsz24.png" />
+    <None Include="Resources\Screenshot 2024-06-07 103559.png" />
+    <None Include="Resources\Screenshot 2024-06-07 101826.png" />
+    <None Include="Resources\Screenshot 2024-06-07 095727.png" />
+    <None Include="Resources\logo_bm.png" />
     <None Include="Resources\save_24dp_FILL0_wght400_GRAD0_opsz24 %283%29.png" />
     <None Include="Resources\playlist_remove_24dp_FILL0_wght400_GRAD0_opsz24 %283%29.png" />
     <None Include="Resources\icons8-excel-48.png" />
@@ -1752,6 +1758,11 @@
     <None Include="Resources\add_24dp_FILL0_wght400_GRAD0_opsz24.png" />
     <None Include="Resources\add_circle_24dp_FILL0_wght400_GRAD0_opsz24 %283%29.png" />
     <None Include="Resources\cancel_24dp_FILL0_wght400_GRAD0_opsz24.png" />
+    <None Include="Resources\arrow_back_24dp_FILL0_wght400_GRAD0_opsz24.png" />
+    <None Include="Resources\arrow_forward_24dp_FILL0_wght400_GRAD0_opsz24.png" />
+    <None Include="Resources\banco-pichincha-logo.png" />
+    <None Include="Resources\banco-pichincha-logo1.png" />
+    <None Include="Resources\bm_logobm_institucional2021_principal2.png" />
     <Content Include="Resources\charticon.png" />
     <None Include="Resources\tick.png" />
     <None Include="Resources\user-group-icon.png" />
