@@ -52,7 +52,7 @@ namespace SysCisepro3.TalentoHumano
             toolStripLabel1.BackColor = ValidationForms.GetColorSistema(TipoCon);
             toolStripLabel1.ForeColor = Color.White;
             dgvPersonal.DefaultCellStyle.SelectionBackColor = ValidationForms.GetColorSistema(TipoCon);
-
+            dgvPersonal.Font = new System.Drawing.Font("Roboto", 8,FontStyle.Regular);
             switch (TipoCon)
             {
                 case TipoConexion.Seportpac:

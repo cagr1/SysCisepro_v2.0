@@ -402,7 +402,8 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.CONSULTAS
                     Icon = My.Resources.logo_c
                     'MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorCisepro
             End Select
-            cbmTipoActivo.SelectedIndex = 0
+            'cbmTipoActivo.SelectedIndex = 0
+            cbxActivo.SelectedIndex = 0
             dgvTotalActivosFijos.Font = New Font("Roboto", 8, FontStyle.Regular)
             dgvActivosFijos.Font = New Font("Roboto", 8, FontStyle.Regular)
 
@@ -410,7 +411,7 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.CONSULTAS
 
             txtBuscar.ForeColor = ValidationForms.GetColorSistema(_tipoCon)
             txtBuscar.Font = New Font("Roboto", 9, FontStyle.Regular)
-            txtBuscar.AutoSize = False
+
             Dim validation As New ValidationForms()
             validation.SetPlaceholder(txtBuscar, "BUSCAR ACTIVO")
 
@@ -424,30 +425,51 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.CONSULTAS
 
 
         Private Sub btnReporteFondoRotativo_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnReporteFondoRotativo.Click
-            ExportarDatosExcel(dgvActivosFijos, "REPORTE DE ACTIVOS" + cbmTipoActivo.Text)
+            'ExportarDatosExcel(dgvActivosFijos, "REPORTE DE ACTIVOS" + cbmTipoActivo.Text)
+            ExportarDatosExcel(dgvActivosFijos, "REPORTE DE ACTIVOS" + cbxActivo.Text)
         End Sub
 
         Private Sub ToolStripMenuItem1_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ToolStripMenuItem1.Click
             dgvActivosFijos.DataSource = Nothing
             dgvTotalActivosFijos.DataSource = Nothing
 
-            If cbmTipoActivo.Text = "ARMAS" Then CargarArmas() '
-            If cbmTipoActivo.Text = "RADIOS" Then CargarRadios() '
-            If cbmTipoActivo.Text = "VEHICULOS" Then CargarVehiculos() '
-            If cbmTipoActivo.Text = "TERRENOS" Then CargarTerrenos() '
-            If cbmTipoActivo.Text = "EQUIPOS DE COMPUTO" Then CargarEquiposComputo() '
-            If cbmTipoActivo.Text = "LIBROS Y COLECCIONES" Then CargarLibrosColecciones() '
-            If cbmTipoActivo.Text = "EQUIPOS DE OFICINA" Then CargarEquiposOficina() '
-            If cbmTipoActivo.Text = "MUEBLES DE OFICINA" Then CargarMueblesOficina() '
-            If cbmTipoActivo.Text = "EQUIPOS DE COCINA" Then CargarEquiposCocina() '
-            If cbmTipoActivo.Text = "EQUIPOS DE AMBIENTACION" Then CargarEquiposAmbientacion() '
-            If cbmTipoActivo.Text = "EQUIPOS DE COMUNICACION Y TELEFONIA" Then CargarEquiposComunicacion() '
-            If cbmTipoActivo.Text = "EQUIPOS DE SEGURIDAD INDUSTRIAL" Then CargarEquiposSeguridad() '
-            If cbmTipoActivo.Text = "CAMARAS DE SEGURIDAD" Then CargarCamarasSeguridad() 
-            If cbmTipoActivo.Text = "GENERADORES" Then CargarGeneradores() 
-            If cbmTipoActivo.Text = "CHALECOS" Then CargarChalecos() '
-            If cbmTipoActivo.Text = "SOFTWARE" Then CargarSoftware() 
-            txtActivo.Text = cbmTipoActivo.Text
+            'If cbmTipoActivo.Text = "ARMAS" Then CargarArmas() '
+            'If cbmTipoActivo.Text = "RADIOS" Then CargarRadios() '
+            'If cbmTipoActivo.Text = "VEHICULOS" Then CargarVehiculos() '
+            'If cbmTipoActivo.Text = "TERRENOS" Then CargarTerrenos() '
+            'If cbmTipoActivo.Text = "EQUIPOS DE COMPUTO" Then CargarEquiposComputo() '
+            'If cbmTipoActivo.Text = "LIBROS Y COLECCIONES" Then CargarLibrosColecciones() '
+            'If cbmTipoActivo.Text = "EQUIPOS DE OFICINA" Then CargarEquiposOficina() '
+            'If cbmTipoActivo.Text = "MUEBLES DE OFICINA" Then CargarMueblesOficina() '
+            'If cbmTipoActivo.Text = "EQUIPOS DE COCINA" Then CargarEquiposCocina() '
+            'If cbmTipoActivo.Text = "EQUIPOS DE AMBIENTACION" Then CargarEquiposAmbientacion() '
+            'If cbmTipoActivo.Text = "EQUIPOS DE COMUNICACION Y TELEFONIA" Then CargarEquiposComunicacion() '
+            'If cbmTipoActivo.Text = "EQUIPOS DE SEGURIDAD INDUSTRIAL" Then CargarEquiposSeguridad() '
+            'If cbmTipoActivo.Text = "CAMARAS DE SEGURIDAD" Then CargarCamarasSeguridad() 
+            'If cbmTipoActivo.Text = "GENERADORES" Then CargarGeneradores() 
+            'If cbmTipoActivo.Text = "CHALECOS" Then CargarChalecos() '
+            'If cbmTipoActivo.Text = "SOFTWARE" Then CargarSoftware()
+            'txtActivo.Text = cbmTipoActivo.Text
+
+            If cbxActivo.Text = "ARMAS" Then CargarArmas() '
+            If cbxActivo.Text = "RADIOS" Then CargarRadios() '
+            If cbxActivo.Text = "VEHICULOS" Then CargarVehiculos() '
+            If cbxActivo.Text = "TERRENOS" Then CargarTerrenos() '
+            If cbxActivo.Text = "EQUIPOS DE COMPUTO" Then CargarEquiposComputo() '
+            If cbxActivo.Text = "LIBROS Y COLECCIONES" Then CargarLibrosColecciones() '
+            If cbxActivo.Text = "EQUIPOS DE OFICINA" Then CargarEquiposOficina() '
+            If cbxActivo.Text = "MUEBLES DE OFICINA" Then CargarMueblesOficina() '
+            If cbxActivo.Text = "EQUIPOS DE COCINA" Then CargarEquiposCocina() '
+            If cbxActivo.Text = "EQUIPOS DE AMBIENTACION" Then CargarEquiposAmbientacion() '
+            If cbxActivo.Text = "EQUIPOS DE COMUNICACION Y TELEFONIA" Then CargarEquiposComunicacion() '
+            If cbxActivo.Text = "EQUIPOS DE SEGURIDAD INDUSTRIAL" Then CargarEquiposSeguridad() '
+            If cbxActivo.Text = "CAMARAS DE SEGURIDAD" Then CargarCamarasSeguridad()
+            If cbxActivo.Text = "GENERADORES" Then CargarGeneradores()
+            If cbxActivo.Text = "CHALECOS" Then CargarChalecos() '
+            If cbxActivo.Text = "SOFTWARE" Then CargarSoftware()
+            txtActivo.Text = cbxActivo.Text
+
+
 
             If dgvActivosFijos.ColumnCount > 0 Then
                 dgvActivosFijos.Columns(0).Width = 50
@@ -474,8 +496,20 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.CONSULTAS
             txtCustodio.Text = dgvActivosFijos.CurrentRow.Cells(1).Value.ToString()
         End Sub
 
-        Private Sub cbmTipoActivo_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cbmTipoActivo.SelectedIndexChanged
+        Private Sub cbmTipoActivo_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
+            'ToolStripMenuItem1_Click(Nothing, Nothing)
+        End Sub
+
+        Private Sub cbxActivo_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbxActivo.SelectedIndexChanged
             ToolStripMenuItem1_Click(Nothing, Nothing)
+        End Sub
+
+        Private Sub chbxCategoria_CheckedChanged(sender As Object, e As EventArgs) Handles chbxCategoria.CheckedChanged
+            If chbxCategoria.Checked Then
+                cbxActivo.Enabled = True
+            Else
+                cbxActivo.Enabled = False
+            End If
         End Sub
     End Class
 End Namespace

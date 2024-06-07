@@ -41,16 +41,18 @@
             Me.Label4 = New System.Windows.Forms.Label()
             Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
             Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
-            Me.cbmTipoActivo = New System.Windows.Forms.ToolStripComboBox()
             Me.btnReporteFondoRotativo = New System.Windows.Forms.ToolStripMenuItem()
             Me.Label5 = New System.Windows.Forms.Label()
             Me.txtCustodio = New System.Windows.Forms.TextBox()
             Me.txtActivo = New System.Windows.Forms.TextBox()
             Me.KryptonButton1 = New ComponentFactory.Krypton.Toolkit.KryptonButton()
             Me.txtBuscar = New System.Windows.Forms.TextBox()
+            Me.chbxCategoria = New ComponentFactory.Krypton.Toolkit.KryptonCheckBox()
+            Me.cbxActivo = New ComponentFactory.Krypton.Toolkit.KryptonComboBox()
             CType(Me.dgvActivosFijos, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.dgvTotalActivosFijos, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.MenuStrip1.SuspendLayout()
+            CType(Me.cbxActivo, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.SuspendLayout()
             '
             'Label1
@@ -199,7 +201,7 @@
             'MenuStrip1
             '
             Me.MenuStrip1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-            Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem1, Me.cbmTipoActivo, Me.btnReporteFondoRotativo})
+            Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem1, Me.btnReporteFondoRotativo})
             Me.MenuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow
             Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
             Me.MenuStrip1.Name = "MenuStrip1"
@@ -217,15 +219,6 @@
             Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
             Me.ToolStripMenuItem1.Size = New System.Drawing.Size(85, 28)
             Me.ToolStripMenuItem1.Text = "BUSCAR"
-            '
-            'cbmTipoActivo
-            '
-            Me.cbmTipoActivo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-            Me.cbmTipoActivo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-            Me.cbmTipoActivo.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.cbmTipoActivo.Items.AddRange(New Object() {"ARMAS", "RADIOS", "VEHICULOS", "TERRENOS", "EQUIPOS DE COMPUTO", "LIBROS Y COLECCIONES", "EQUIPOS DE OFICINA", "MUEBLES DE OFICINA", "EQUIPOS DE COCINA", "EQUIPOS DE AMBIENTACION", "EQUIPOS DE COMUNICACION Y TELEFONIA", "EQUIPOS DE SEGURIDAD INDUSTRIAL", "CAMARAS DE SEGURIDAD", "GENERADORES", "CHALECOS", "SOFTWARE"})
-            Me.cbmTipoActivo.Name = "cbmTipoActivo"
-            Me.cbmTipoActivo.Size = New System.Drawing.Size(121, 21)
             '
             'btnReporteFondoRotativo
             '
@@ -276,12 +269,10 @@
             Me.KryptonButton1.Name = "KryptonButton1"
             Me.KryptonButton1.Size = New System.Drawing.Size(32, 32)
             Me.KryptonButton1.StateCommon.Back.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.[False]
-            Me.KryptonButton1.StateCommon.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit
             Me.KryptonButton1.StateCommon.Border.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.[False]
             Me.KryptonButton1.StateCommon.Border.DrawBorders = CType((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top Or ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) _
             Or ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) _
             Or ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right), ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)
-            Me.KryptonButton1.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit
             Me.KryptonButton1.StateCommon.Content.Padding = New System.Windows.Forms.Padding(2)
             Me.KryptonButton1.TabIndex = 247
             Me.KryptonButton1.Values.ImageStates.ImageCheckedNormal = Nothing
@@ -303,12 +294,37 @@
             Me.txtBuscar.Size = New System.Drawing.Size(194, 23)
             Me.txtBuscar.TabIndex = 248
             '
+            'chbxCategoria
+            '
+            Me.chbxCategoria.Images.CheckedNormal = Global.syscisepro.My.Resources.Resources.check_24dp_FILL0_wght400_GRAD0_opsz24
+            Me.chbxCategoria.Images.CheckedPressed = Global.syscisepro.My.Resources.Resources.check_24dp_FILL0_wght400_GRAD0_opsz24
+            Me.chbxCategoria.Images.CheckedTracking = Global.syscisepro.My.Resources.Resources.check_24dp_FILL0_wght400_GRAD0_opsz24
+            Me.chbxCategoria.Location = New System.Drawing.Point(294, 42)
+            Me.chbxCategoria.Name = "chbxCategoria"
+            Me.chbxCategoria.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem
+            Me.chbxCategoria.Size = New System.Drawing.Size(83, 20)
+            Me.chbxCategoria.StateCommon.ShortText.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.chbxCategoria.TabIndex = 249
+            Me.chbxCategoria.Values.Text = "Categorias"
+            '
+            'cbxActivo
+            '
+            Me.cbxActivo.DropDownWidth = 129
+            Me.cbxActivo.Items.AddRange(New Object() {"ARMAS", "RADIOS", "VEHICULOS", "TERRENOS", "EQUIPOS DE COMPUTO", "LIBROS Y COLECCIONES", "EQUIPOS DE OFICINA", "MUEBLES DE OFICINA", "EQUIPOS DE COCINA", "EQUIPOS DE AMBIENTACION", "EQUIPOS DE COMUNICACION Y TELEFONIA", "EQUIPOS DE SEGURIDAD INDUSTRIAL", "CAMARAS DE SEGURIDAD", "GENERADORES", "CHALECOS", "SOFTWARE"})
+            Me.cbxActivo.Location = New System.Drawing.Point(383, 41)
+            Me.cbxActivo.Name = "cbxActivo"
+            Me.cbxActivo.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem
+            Me.cbxActivo.Size = New System.Drawing.Size(129, 21)
+            Me.cbxActivo.TabIndex = 250
+            '
             'FormConsultaActivosFijos
             '
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.BackColor = System.Drawing.Color.White
             Me.ClientSize = New System.Drawing.Size(974, 599)
+            Me.Controls.Add(Me.cbxActivo)
+            Me.Controls.Add(Me.chbxCategoria)
             Me.Controls.Add(Me.txtBuscar)
             Me.Controls.Add(Me.KryptonButton1)
             Me.Controls.Add(Me.txtActivo)
@@ -328,11 +344,16 @@
             Me.MaximizeBox = False
             Me.Name = "FormConsultaActivosFijos"
             Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+            Me.StateActive.Border.DrawBorders = CType((((Krypton.Toolkit.PaletteDrawBorders.Top Or Krypton.Toolkit.PaletteDrawBorders.Bottom) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Left) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Right), Krypton.Toolkit.PaletteDrawBorders)
+            Me.StateActive.Border.Rounding = 5.0!
             Me.Text = "CONSULTA DE REGISTROS DE ACTIVOS FIJOS"
             CType(Me.dgvActivosFijos, System.ComponentModel.ISupportInitialize).EndInit()
             CType(Me.dgvTotalActivosFijos, System.ComponentModel.ISupportInitialize).EndInit()
             Me.MenuStrip1.ResumeLayout(False)
             Me.MenuStrip1.PerformLayout()
+            CType(Me.cbxActivo, System.ComponentModel.ISupportInitialize).EndInit()
             Me.ResumeLayout(False)
             Me.PerformLayout()
 
@@ -350,9 +371,10 @@
         Friend WithEvents ToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
         Friend WithEvents Label5 As System.Windows.Forms.Label
         Friend WithEvents txtCustodio As System.Windows.Forms.TextBox
-        Friend WithEvents cbmTipoActivo As System.Windows.Forms.ToolStripComboBox
         Friend WithEvents txtActivo As System.Windows.Forms.TextBox
         Friend WithEvents KryptonButton1 As ComponentFactory.Krypton.Toolkit.KryptonButton
         Friend WithEvents txtBuscar As System.Windows.Forms.TextBox
+        Friend WithEvents chbxCategoria As ComponentFactory.Krypton.Toolkit.KryptonCheckBox
+        Friend WithEvents cbxActivo As ComponentFactory.Krypton.Toolkit.KryptonComboBox
     End Class
 End Namespace
