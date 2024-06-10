@@ -52,7 +52,7 @@ namespace SysCisepro3.Contabilidad.Compras
         {
             // CARGAR ICONO Y DESIEÑO SEGUN SISTEMA 
 
-            toolStrip1.BackColor = ValidationForms.GetColorSistema(TipoCon);
+            //toolStrip1.BackColor = ValidationForms.GetColorSistema(TipoCon);
             toolStrip1.ForeColor = Color.White;
             dgvOrdenCompra.DefaultCellStyle.SelectionBackColor = ValidationForms.GetColorSistema(TipoCon);
             dgvDetalleOrdenCompra.DefaultCellStyle.SelectionBackColor = ValidationForms.GetColorSistema(TipoCon);
@@ -283,6 +283,11 @@ namespace SysCisepro3.Contabilidad.Compras
         {
             var txt = (TextBox) sender;
             e.Handled = !Validaciones.IsNumeroDecimal(e.KeyChar, txt.Text);
+        }
+
+        private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
         }
     }
 }

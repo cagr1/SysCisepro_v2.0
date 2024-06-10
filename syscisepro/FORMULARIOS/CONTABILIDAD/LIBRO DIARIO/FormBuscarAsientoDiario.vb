@@ -106,15 +106,16 @@ Namespace FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
             ' DEFINIR TIPO Y COLOR DE SISTEMA
             Select Case _tipoCon
                 Case TipoConexion.Asenava
-                    Icon = My.Resources.logo_a 
+                    Icon = My.Resources.logo_a
                     dgvAsientoDiario.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorAsenava
                 Case TipoConexion.Seportpac
-                    Icon = My.Resources.logo_s 
+                    Icon = My.Resources.logo_s
                     dgvAsientoDiario.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorSeportpac
                 Case Else
-                    Icon = My.Resources.logo_c 
+                    Icon = My.Resources.logo_c
                     dgvAsientoDiario.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
             End Select
+            dgvAsientoDiario.Font = New Font("Roboto", 8, FontStyle.Regular)
             PictureBoxErrorSumaAsiento.Visible = False ' oculta la imagen de no coinciden debe y haber
             cargarAsientoLibroDiarioBusqueda()
             sumarTotalAsientoDiarioBusqueda()

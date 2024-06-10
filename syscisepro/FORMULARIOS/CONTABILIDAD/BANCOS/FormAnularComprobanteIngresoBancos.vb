@@ -177,17 +177,17 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
                 Case TipoConexion.Asenava
                     Icon = My.Resources.logo_a
                     msKardex.ForeColor = Color.White
-                    msKardex.BackColor = My.MySettingsProperty.Settings.ColorAsenava
+                    'msKardex.BackColor = My.MySettingsProperty.Settings.ColorAsenava
                     dgvComprobanteEgresoBancos.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorAsenava
                 Case TipoConexion.Seportpac
                     Icon = My.Resources.logo_s
                     msKardex.ForeColor = Color.White
-                    msKardex.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
+                    'msKardex.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
                     dgvComprobanteEgresoBancos.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorSeportpac
                 Case Else
                     Icon = My.Resources.logo_c
                     msKardex.ForeColor = Color.White
-                    msKardex.BackColor = My.MySettingsProperty.Settings.ColorCisepro
+                    'msKardex.BackColor = My.MySettingsProperty.Settings.ColorCisepro
                     dgvComprobanteEgresoBancos.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
             End Select
             _sqlCommands = New List(Of SqlCommand)

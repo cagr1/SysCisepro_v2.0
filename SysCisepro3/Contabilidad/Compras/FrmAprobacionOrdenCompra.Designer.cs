@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.btnRecargar = new System.Windows.Forms.ToolStripButton();
             this.btnAprobarLiquidacion = new System.Windows.Forms.ToolStripButton();
@@ -73,43 +73,49 @@
             // 
             // toolStrip1
             // 
+            this.toolStrip1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnRecargar,
             this.btnAprobarLiquidacion,
             this.toolStripButton1});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1020, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(1020, 31);
             this.toolStrip1.TabIndex = 197;
             this.toolStrip1.Text = "toolStrip1";
+            this.toolStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.toolStrip1_ItemClicked);
             // 
             // btnRecargar
             // 
-            this.btnRecargar.Image = global::SysCisepro3.Properties.Resources.BuscarRegistro;
+            this.btnRecargar.Image = global::SysCisepro3.Properties.Resources.search_24dp_FILL0_wght400_GRAD0_opsz24__2_;
+            this.btnRecargar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnRecargar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnRecargar.Name = "btnRecargar";
-            this.btnRecargar.Size = new System.Drawing.Size(116, 22);
-            this.btnRecargar.Text = "RECARGAR ORD.";
+            this.btnRecargar.Size = new System.Drawing.Size(79, 28);
+            this.btnRecargar.Text = "BUSCAR";
             this.btnRecargar.Click += new System.EventHandler(this.btnRecargar_Click);
             // 
             // btnAprobarLiquidacion
             // 
             this.btnAprobarLiquidacion.Enabled = false;
-            this.btnAprobarLiquidacion.Image = global::SysCisepro3.Properties.Resources.ok;
+            this.btnAprobarLiquidacion.Image = global::SysCisepro3.Properties.Resources.check_circle_24dp_FILL0_wght400_GRAD0_opsz24__3_;
+            this.btnAprobarLiquidacion.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnAprobarLiquidacion.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnAprobarLiquidacion.Name = "btnAprobarLiquidacion";
-            this.btnAprobarLiquidacion.Size = new System.Drawing.Size(110, 22);
-            this.btnAprobarLiquidacion.Text = "APROBAR ORD.";
+            this.btnAprobarLiquidacion.Size = new System.Drawing.Size(91, 28);
+            this.btnAprobarLiquidacion.Text = "APROBAR ";
             this.btnAprobarLiquidacion.Click += new System.EventHandler(this.btnAprobarLiquidacion_Click);
             // 
             // toolStripButton1
             // 
             this.toolStripButton1.Enabled = false;
-            this.toolStripButton1.Image = global::SysCisepro3.Properties.Resources.cancel;
+            this.toolStripButton1.Image = global::SysCisepro3.Properties.Resources.cancel_24dp_FILL0_wght400_GRAD0_opsz24;
+            this.toolStripButton1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(117, 22);
-            this.toolStripButton1.Text = "RECHAZAR ORD.";
+            this.toolStripButton1.Size = new System.Drawing.Size(98, 28);
+            this.toolStripButton1.Text = "RECHAZAR ";
             this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
             // dgvOrdenCompra
@@ -117,18 +123,18 @@
             this.dgvOrdenCompra.AllowUserToAddRows = false;
             this.dgvOrdenCompra.AllowUserToDeleteRows = false;
             this.dgvOrdenCompra.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgvOrdenCompra.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgvOrdenCompra.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
             this.dgvOrdenCompra.BackgroundColor = System.Drawing.Color.White;
             this.dgvOrdenCompra.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(60)))), ((int)(((byte)(123)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvOrdenCompra.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(60)))), ((int)(((byte)(123)))));
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvOrdenCompra.DefaultCellStyle = dataGridViewCellStyle14;
             this.dgvOrdenCompra.Location = new System.Drawing.Point(4, 14);
             this.dgvOrdenCompra.MultiSelect = false;
             this.dgvOrdenCompra.Name = "dgvOrdenCompra";
@@ -165,7 +171,7 @@
             this.gbOrdenCompra.Controls.Add(this.txtIdOrdenCompra);
             this.gbOrdenCompra.Controls.Add(this.lblFechaOrdenCompra);
             this.gbOrdenCompra.Controls.Add(this.lblNroOrdenCompra);
-            this.gbOrdenCompra.Location = new System.Drawing.Point(0, 156);
+            this.gbOrdenCompra.Location = new System.Drawing.Point(0, 159);
             this.gbOrdenCompra.Name = "gbOrdenCompra";
             this.gbOrdenCompra.Size = new System.Drawing.Size(1018, 96);
             this.gbOrdenCompra.TabIndex = 199;
@@ -400,7 +406,7 @@
             // 
             this.groupBox2.BackColor = System.Drawing.Color.White;
             this.groupBox2.Controls.Add(this.dgvOrdenCompra);
-            this.groupBox2.Location = new System.Drawing.Point(2, 28);
+            this.groupBox2.Location = new System.Drawing.Point(2, 33);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(1016, 125);
             this.groupBox2.TabIndex = 201;
@@ -411,7 +417,7 @@
             // 
             this.groupBox1.BackColor = System.Drawing.Color.White;
             this.groupBox1.Controls.Add(this.dgvDetalleOrdenCompra);
-            this.groupBox1.Location = new System.Drawing.Point(2, 253);
+            this.groupBox1.Location = new System.Drawing.Point(2, 255);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(1016, 225);
             this.groupBox1.TabIndex = 202;
@@ -423,18 +429,18 @@
             this.dgvDetalleOrdenCompra.AllowUserToAddRows = false;
             this.dgvDetalleOrdenCompra.AllowUserToDeleteRows = false;
             this.dgvDetalleOrdenCompra.AllowUserToResizeRows = false;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgvDetalleOrdenCompra.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgvDetalleOrdenCompra.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle15;
             this.dgvDetalleOrdenCompra.BackgroundColor = System.Drawing.Color.White;
             this.dgvDetalleOrdenCompra.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(60)))), ((int)(((byte)(123)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvDetalleOrdenCompra.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle16.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle16.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(60)))), ((int)(((byte)(123)))));
+            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvDetalleOrdenCompra.DefaultCellStyle = dataGridViewCellStyle16;
             this.dgvDetalleOrdenCompra.Location = new System.Drawing.Point(4, 14);
             this.dgvDetalleOrdenCompra.MultiSelect = false;
             this.dgvDetalleOrdenCompra.Name = "dgvDetalleOrdenCompra";
@@ -456,9 +462,12 @@
             this.Controls.Add(this.gbOrdenCompra);
             this.Controls.Add(this.toolStrip1);
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "FrmAprobacionOrdenCompra";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StateActive.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.StateActive.Border.Rounding = 5F;
             this.Text = "APROBACIÓN DE ORDEN DE COMPRA";
             this.Load += new System.EventHandler(this.FrmAprobacionOrdenCompra_Load);
             this.toolStrip1.ResumeLayout(false);

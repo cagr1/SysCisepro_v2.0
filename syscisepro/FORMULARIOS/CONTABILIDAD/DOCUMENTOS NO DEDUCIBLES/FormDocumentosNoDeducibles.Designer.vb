@@ -1,8 +1,8 @@
 ﻿Namespace FORMULARIOS.CONTABILIDAD.DOCUMENTOS_NO_DEDUCIBLES
     <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
     Partial Class FormDocumentosNoDeducibles
-        Inherits System.Windows.Forms.Form
-
+        'Inherits System.Windows.Forms.Form
+        Inherits Krypton.Toolkit.KryptonForm
         'Form reemplaza a Dispose para limpiar la lista de componentes.
         <System.Diagnostics.DebuggerNonUserCode()> _
         Protected Overrides Sub Dispose(ByVal disposing As Boolean)
@@ -54,8 +54,8 @@
             Me.gbDocumentoNoDeducible.Controls.Add(Me.lblNumeroRecibo)
             Me.gbDocumentoNoDeducible.Controls.Add(Me.txtNumeroDocumentoNoDeducible)
             Me.gbDocumentoNoDeducible.Controls.Add(Me.lblFechaDocumentoDeducible)
-            Me.gbDocumentoNoDeducible.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.gbDocumentoNoDeducible.Location = New System.Drawing.Point(1, 24)
+            Me.gbDocumentoNoDeducible.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.gbDocumentoNoDeducible.Location = New System.Drawing.Point(1, 32)
             Me.gbDocumentoNoDeducible.Name = "gbDocumentoNoDeducible"
             Me.gbDocumentoNoDeducible.Size = New System.Drawing.Size(614, 43)
             Me.gbDocumentoNoDeducible.TabIndex = 49
@@ -65,10 +65,10 @@
             'txtValorDocumentoNoDeducible
             '
             Me.txtValorDocumentoNoDeducible.BackColor = System.Drawing.Color.White
-            Me.txtValorDocumentoNoDeducible.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtValorDocumentoNoDeducible.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtValorDocumentoNoDeducible.Location = New System.Drawing.Point(502, 13)
             Me.txtValorDocumentoNoDeducible.Name = "txtValorDocumentoNoDeducible"
-            Me.txtValorDocumentoNoDeducible.Size = New System.Drawing.Size(106, 23)
+            Me.txtValorDocumentoNoDeducible.Size = New System.Drawing.Size(106, 22)
             Me.txtValorDocumentoNoDeducible.TabIndex = 4
             Me.txtValorDocumentoNoDeducible.Text = "0.00"
             Me.txtValorDocumentoNoDeducible.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -79,17 +79,17 @@
             Me.Label2.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Label2.Location = New System.Drawing.Point(456, 18)
             Me.Label2.Name = "Label2"
-            Me.Label2.Size = New System.Drawing.Size(47, 15)
+            Me.Label2.Size = New System.Drawing.Size(46, 15)
             Me.Label2.TabIndex = 35
             Me.Label2.Text = "VALOR:"
             '
             'dtpDocumentoNoDeducible
             '
-            Me.dtpDocumentoNoDeducible.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.dtpDocumentoNoDeducible.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.dtpDocumentoNoDeducible.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
             Me.dtpDocumentoNoDeducible.Location = New System.Drawing.Point(261, 14)
             Me.dtpDocumentoNoDeducible.Name = "dtpDocumentoNoDeducible"
-            Me.dtpDocumentoNoDeducible.Size = New System.Drawing.Size(129, 23)
+            Me.dtpDocumentoNoDeducible.Size = New System.Drawing.Size(129, 22)
             Me.dtpDocumentoNoDeducible.TabIndex = 2
             '
             'lblNumeroRecibo
@@ -105,10 +105,10 @@
             'txtNumeroDocumentoNoDeducible
             '
             Me.txtNumeroDocumentoNoDeducible.BackColor = System.Drawing.Color.White
-            Me.txtNumeroDocumentoNoDeducible.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtNumeroDocumentoNoDeducible.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtNumeroDocumentoNoDeducible.Location = New System.Drawing.Point(48, 14)
             Me.txtNumeroDocumentoNoDeducible.Name = "txtNumeroDocumentoNoDeducible"
-            Me.txtNumeroDocumentoNoDeducible.Size = New System.Drawing.Size(129, 23)
+            Me.txtNumeroDocumentoNoDeducible.Size = New System.Drawing.Size(129, 22)
             Me.txtNumeroDocumentoNoDeducible.TabIndex = 1
             '
             'lblFechaDocumentoDeducible
@@ -125,8 +125,8 @@
             '
             Me.GroupBox1.BackColor = System.Drawing.Color.White
             Me.GroupBox1.Controls.Add(Me.txtDescripcionDocumentoNoDeducible)
-            Me.GroupBox1.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.GroupBox1.Location = New System.Drawing.Point(1, 111)
+            Me.GroupBox1.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.GroupBox1.Location = New System.Drawing.Point(1, 122)
             Me.GroupBox1.Name = "GroupBox1"
             Me.GroupBox1.Size = New System.Drawing.Size(614, 76)
             Me.GroupBox1.TabIndex = 50
@@ -137,7 +137,7 @@
             '
             Me.txtDescripcionDocumentoNoDeducible.BackColor = System.Drawing.Color.White
             Me.txtDescripcionDocumentoNoDeducible.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-            Me.txtDescripcionDocumentoNoDeducible.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtDescripcionDocumentoNoDeducible.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtDescripcionDocumentoNoDeducible.Location = New System.Drawing.Point(6, 17)
             Me.txtDescripcionDocumentoNoDeducible.Multiline = True
             Me.txtDescripcionDocumentoNoDeducible.Name = "txtDescripcionDocumentoNoDeducible"
@@ -149,8 +149,8 @@
             Me.gbConceptoCompra.BackColor = System.Drawing.Color.White
             Me.gbConceptoCompra.Controls.Add(Me.TextBox1)
             Me.gbConceptoCompra.Controls.Add(Me.lblCodigoCuentaConcepto)
-            Me.gbConceptoCompra.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.gbConceptoCompra.Location = New System.Drawing.Point(1, 66)
+            Me.gbConceptoCompra.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.gbConceptoCompra.Location = New System.Drawing.Point(1, 76)
             Me.gbConceptoCompra.Name = "gbConceptoCompra"
             Me.gbConceptoCompra.Size = New System.Drawing.Size(614, 45)
             Me.gbConceptoCompra.TabIndex = 85
@@ -161,10 +161,10 @@
             '
             Me.TextBox1.BackColor = System.Drawing.Color.White
             Me.TextBox1.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-            Me.TextBox1.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.TextBox1.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.TextBox1.Location = New System.Drawing.Point(6, 16)
             Me.TextBox1.Name = "TextBox1"
-            Me.TextBox1.Size = New System.Drawing.Size(602, 23)
+            Me.TextBox1.Size = New System.Drawing.Size(602, 22)
             Me.TextBox1.TabIndex = 2
             '
             'lblCodigoCuentaConcepto
@@ -172,41 +172,41 @@
             Me.lblCodigoCuentaConcepto.AutoSize = True
             Me.lblCodigoCuentaConcepto.Location = New System.Drawing.Point(81, 1)
             Me.lblCodigoCuentaConcepto.Name = "lblCodigoCuentaConcepto"
-            Me.lblCodigoCuentaConcepto.Size = New System.Drawing.Size(16, 15)
+            Me.lblCodigoCuentaConcepto.Size = New System.Drawing.Size(16, 14)
             Me.lblCodigoCuentaConcepto.TabIndex = 1
             Me.lblCodigoCuentaConcepto.Text = "..."
             '
             'MenuStrip1
             '
-            Me.MenuStrip1.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.MenuStrip1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
             Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnListo, Me.btnCancelar})
             Me.MenuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow
             Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
             Me.MenuStrip1.Name = "MenuStrip1"
             Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(7, 2, 0, 2)
-            Me.MenuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
             Me.MenuStrip1.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-            Me.MenuStrip1.Size = New System.Drawing.Size(616, 24)
+            Me.MenuStrip1.Size = New System.Drawing.Size(616, 32)
             Me.MenuStrip1.TabIndex = 184
             Me.MenuStrip1.Text = "msIngresoBodega"
             '
             'btnListo
             '
             Me.btnListo.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnListo.Image = Global.syscisepro.My.Resources.Resources.ok
+            Me.btnListo.Image = Global.syscisepro.My.Resources.Resources.check_circle_24dp_FILL0_wght400_GRAD0_opsz24__3_
             Me.btnListo.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnListo.Name = "btnListo"
             Me.btnListo.RightToLeft = System.Windows.Forms.RightToLeft.No
-            Me.btnListo.Size = New System.Drawing.Size(86, 20)
+            Me.btnListo.Size = New System.Drawing.Size(92, 28)
             Me.btnListo.Text = "ACEPTAR"
             '
             'btnCancelar
             '
             Me.btnCancelar.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnCancelar.Image = Global.syscisepro.My.Resources.Resources.cancel
+            Me.btnCancelar.Image = Global.syscisepro.My.Resources.Resources.cancel_24dp_FILL0_wght400_GRAD0_opsz24
+            Me.btnCancelar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnCancelar.Name = "btnCancelar"
             Me.btnCancelar.RightToLeft = System.Windows.Forms.RightToLeft.No
-            Me.btnCancelar.Size = New System.Drawing.Size(95, 20)
+            Me.btnCancelar.Size = New System.Drawing.Size(103, 28)
             Me.btnCancelar.Text = "CANCELAR"
             '
             'FormDocumentosNoDeducibles
@@ -214,7 +214,7 @@
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.BackColor = System.Drawing.Color.White
-            Me.ClientSize = New System.Drawing.Size(616, 187)
+            Me.ClientSize = New System.Drawing.Size(616, 196)
             Me.Controls.Add(Me.MenuStrip1)
             Me.Controls.Add(Me.gbConceptoCompra)
             Me.Controls.Add(Me.GroupBox1)
@@ -226,6 +226,10 @@
             Me.MinimizeBox = False
             Me.Name = "FormDocumentosNoDeducibles"
             Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+            Me.StateActive.Border.DrawBorders = CType((((Krypton.Toolkit.PaletteDrawBorders.Top Or Krypton.Toolkit.PaletteDrawBorders.Bottom) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Left) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Right), Krypton.Toolkit.PaletteDrawBorders)
+            Me.StateActive.Border.Rounding = 5.0!
             Me.Text = "DOCUMENTO NO DEDUCIBLES"
             Me.gbDocumentoNoDeducible.ResumeLayout(False)
             Me.gbDocumentoNoDeducible.PerformLayout()

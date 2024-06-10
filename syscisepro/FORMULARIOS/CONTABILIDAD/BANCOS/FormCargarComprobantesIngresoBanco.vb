@@ -64,21 +64,21 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
                 Case TipoConexion.Asenava
                     Icon = My.Resources.logo_a
                     msKardex.ForeColor = Color.White
-                    msKardex.BackColor = My.MySettingsProperty.Settings.ColorAsenava
+                    'msKardex.BackColor = My.MySettingsProperty.Settings.ColorAsenava
                     dgvComprobantesEgresoBanco.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorAsenava
                 Case TipoConexion.Seportpac
                     Icon = My.Resources.logo_s
                     msKardex.ForeColor = Color.White
-                    msKardex.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
+                    'msKardex.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
                     dgvComprobantesEgresoBanco.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorSeportpac
                 Case Else
                     Icon = My.Resources.logo_c
                     msKardex.ForeColor = Color.White
-                    msKardex.BackColor = My.MySettingsProperty.Settings.ColorCisepro
+                    'msKardex.BackColor = My.MySettingsProperty.Settings.ColorCisepro
                     dgvComprobantesEgresoBanco.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
             End Select
             '_sqlCommands = New List(Of SqlCommand)
-
+            dgvComprobantesEgresoBanco.Font = New Font("Roboto", 8, FontStyle.Regular)
             autocompletarPlanCuentas()
             llenarComboBancos()
             dgvComprobantesEgresoBanco.ContextMenuStrip = ContextMenuStripClicDerecho 'Asigno a la propiedad contextMenuStrip del dgv el menu creado para el clic derecho

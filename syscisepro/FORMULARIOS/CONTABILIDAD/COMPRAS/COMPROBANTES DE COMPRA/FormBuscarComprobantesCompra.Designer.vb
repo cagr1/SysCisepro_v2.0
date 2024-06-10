@@ -1,8 +1,8 @@
 ﻿Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
     <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
     Partial Class FormBuscarComprobantesCompra
-        Inherits System.Windows.Forms.Form
-
+        'Inherits System.Windows.Forms.Form
+        Inherits Krypton.Toolkit.KryptonForm
         'Form reemplaza a Dispose para limpiar la lista de componentes.
         <System.Diagnostics.DebuggerNonUserCode()> _
         Protected Overrides Sub Dispose(ByVal disposing As Boolean)
@@ -216,7 +216,7 @@
             DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
             Me.dgvComprobantesCompra.RowsDefaultCellStyle = DataGridViewCellStyle3
             Me.dgvComprobantesCompra.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvComprobantesCompra.Size = New System.Drawing.Size(1254, 488)
+            Me.dgvComprobantesCompra.Size = New System.Drawing.Size(1254, 479)
             Me.dgvComprobantesCompra.TabIndex = 96
             '
             'gbParametrosBusqueda
@@ -487,87 +487,93 @@
             '
             'MenuStrip1
             '
-            Me.MenuStrip1.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.MenuStrip1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
             Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnBuscar, Me.btnReporte, Me.btnExportar, Me.ToolStripMenuItem1, Me.GENERARCOMPROBANTEToolStripMenuItem})
             Me.MenuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow
             Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
             Me.MenuStrip1.Name = "MenuStrip1"
             Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(7, 2, 0, 2)
-            Me.MenuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
-            Me.MenuStrip1.Size = New System.Drawing.Size(1272, 24)
+            Me.MenuStrip1.Size = New System.Drawing.Size(1272, 32)
             Me.MenuStrip1.TabIndex = 183
             Me.MenuStrip1.Text = "msIngresoBodega"
             '
             'btnBuscar
             '
             Me.btnBuscar.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnBuscar.Image = Global.syscisepro.My.Resources.Resources.BuscarRegistro
+            Me.btnBuscar.Image = Global.syscisepro.My.Resources.Resources.search_24dp_FILL0_wght400_GRAD0_opsz24__2_
             Me.btnBuscar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnBuscar.Name = "btnBuscar"
-            Me.btnBuscar.Size = New System.Drawing.Size(119, 20)
-            Me.btnBuscar.Text = "LISTAR TODOS"
+            Me.btnBuscar.Size = New System.Drawing.Size(85, 28)
+            Me.btnBuscar.Text = "BUSCAR"
             '
             'btnReporte
             '
             Me.btnReporte.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnReporte.Image = Global.syscisepro.My.Resources.Resources.report
+            Me.btnReporte.Image = Global.syscisepro.My.Resources.Resources.description_24dp_FILL0_wght400_GRAD0_opsz24__2_
             Me.btnReporte.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnReporte.Name = "btnReporte"
-            Me.btnReporte.Size = New System.Drawing.Size(84, 20)
+            Me.btnReporte.Size = New System.Drawing.Size(92, 28)
             Me.btnReporte.Text = "REPORTE"
             '
             'btnExportar
             '
             Me.btnExportar.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnExportar.Image = Global.syscisepro.My.Resources.Resources.excel_icon
+            Me.btnExportar.Image = Global.syscisepro.My.Resources.Resources.icons8_excel_48
+            Me.btnExportar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnExportar.Name = "btnExportar"
-            Me.btnExportar.Size = New System.Drawing.Size(91, 20)
+            Me.btnExportar.Size = New System.Drawing.Size(99, 28)
             Me.btnExportar.Text = "EXPORTAR"
             '
             'ToolStripMenuItem1
             '
             Me.ToolStripMenuItem1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.XMLRETENCIÓNToolStripMenuItem, Me.XMLNOTACRÉDITOToolStripMenuItem})
             Me.ToolStripMenuItem1.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.ToolStripMenuItem1.Image = Global.syscisepro.My.Resources.Resources.generate_tables_icon
+            Me.ToolStripMenuItem1.Image = Global.syscisepro.My.Resources.Resources.checkbook_20dp_FILL0_wght400_GRAD0_opsz20__2_
+            Me.ToolStripMenuItem1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
-            Me.ToolStripMenuItem1.Size = New System.Drawing.Size(112, 20)
+            Me.ToolStripMenuItem1.Size = New System.Drawing.Size(120, 28)
             Me.ToolStripMenuItem1.Text = "GENERAR XML"
             '
             'XMLRETENCIÓNToolStripMenuItem
             '
-            Me.XMLRETENCIÓNToolStripMenuItem.Image = CType(resources.GetObject("XMLRETENCIÓNToolStripMenuItem.Image"), System.Drawing.Image)
+            Me.XMLRETENCIÓNToolStripMenuItem.Image = Global.syscisepro.My.Resources.Resources.checkbook_20dp_FILL0_wght400_GRAD0_opsz20__2_
+            Me.XMLRETENCIÓNToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.XMLRETENCIÓNToolStripMenuItem.Name = "XMLRETENCIÓNToolStripMenuItem"
-            Me.XMLRETENCIÓNToolStripMenuItem.Size = New System.Drawing.Size(228, 22)
+            Me.XMLRETENCIÓNToolStripMenuItem.Size = New System.Drawing.Size(236, 30)
             Me.XMLRETENCIÓNToolStripMenuItem.Text = "XML RETENCIÓN"
             '
             'XMLNOTACRÉDITOToolStripMenuItem
             '
-            Me.XMLNOTACRÉDITOToolStripMenuItem.Image = CType(resources.GetObject("XMLNOTACRÉDITOToolStripMenuItem.Image"), System.Drawing.Image)
+            Me.XMLNOTACRÉDITOToolStripMenuItem.Image = Global.syscisepro.My.Resources.Resources.checkbook_20dp_FILL0_wght400_GRAD0_opsz20__2_
+            Me.XMLNOTACRÉDITOToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.XMLNOTACRÉDITOToolStripMenuItem.Name = "XMLNOTACRÉDITOToolStripMenuItem"
-            Me.XMLNOTACRÉDITOToolStripMenuItem.Size = New System.Drawing.Size(228, 22)
+            Me.XMLNOTACRÉDITOToolStripMenuItem.Size = New System.Drawing.Size(236, 30)
             Me.XMLNOTACRÉDITOToolStripMenuItem.Text = "XML LIQUIDACIÓN COMPRA"
             '
             'GENERARCOMPROBANTEToolStripMenuItem
             '
             Me.GENERARCOMPROBANTEToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PDFLIQUIDACIONToolStripMenuItem, Me.PDFRETENCIONToolStripMenuItem})
             Me.GENERARCOMPROBANTEToolStripMenuItem.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.GENERARCOMPROBANTEToolStripMenuItem.Image = Global.syscisepro.My.Resources.Resources.report
+            Me.GENERARCOMPROBANTEToolStripMenuItem.Image = Global.syscisepro.My.Resources.Resources.description_24dp_FILL0_wght400_GRAD0_opsz24__2_
+            Me.GENERARCOMPROBANTEToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.GENERARCOMPROBANTEToolStripMenuItem.Name = "GENERARCOMPROBANTEToolStripMenuItem"
-            Me.GENERARCOMPROBANTEToolStripMenuItem.Size = New System.Drawing.Size(119, 20)
+            Me.GENERARCOMPROBANTEToolStripMenuItem.Size = New System.Drawing.Size(127, 28)
             Me.GENERARCOMPROBANTEToolStripMenuItem.Text = "GENERAR RIDE"
             '
             'PDFLIQUIDACIONToolStripMenuItem
             '
-            Me.PDFLIQUIDACIONToolStripMenuItem.Image = Global.syscisepro.My.Resources.Resources.report
+            Me.PDFLIQUIDACIONToolStripMenuItem.Image = Global.syscisepro.My.Resources.Resources.description_24dp_FILL0_wght400_GRAD0_opsz24__2_
+            Me.PDFLIQUIDACIONToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.PDFLIQUIDACIONToolStripMenuItem.Name = "PDFLIQUIDACIONToolStripMenuItem"
-            Me.PDFLIQUIDACIONToolStripMenuItem.Size = New System.Drawing.Size(179, 22)
+            Me.PDFLIQUIDACIONToolStripMenuItem.Size = New System.Drawing.Size(187, 30)
             Me.PDFLIQUIDACIONToolStripMenuItem.Text = "PDF LIQUIDACION"
             '
             'PDFRETENCIONToolStripMenuItem
             '
-            Me.PDFRETENCIONToolStripMenuItem.Image = Global.syscisepro.My.Resources.Resources.report
+            Me.PDFRETENCIONToolStripMenuItem.Image = Global.syscisepro.My.Resources.Resources.description_24dp_FILL0_wght400_GRAD0_opsz24__2_
+            Me.PDFRETENCIONToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.PDFRETENCIONToolStripMenuItem.Name = "PDFRETENCIONToolStripMenuItem"
-            Me.PDFRETENCIONToolStripMenuItem.Size = New System.Drawing.Size(179, 22)
+            Me.PDFRETENCIONToolStripMenuItem.Size = New System.Drawing.Size(187, 30)
             Me.PDFRETENCIONToolStripMenuItem.Text = "PDF RETENCION"
             '
             'ofdSeleccionarArchivo
@@ -579,10 +585,10 @@
             Me.TabControl1.Controls.Add(Me.TabPage1)
             Me.TabControl1.Controls.Add(Me.TabPage2)
             Me.TabControl1.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.TabControl1.Location = New System.Drawing.Point(0, 26)
+            Me.TabControl1.Location = New System.Drawing.Point(0, 33)
             Me.TabControl1.Name = "TabControl1"
             Me.TabControl1.SelectedIndex = 0
-            Me.TabControl1.Size = New System.Drawing.Size(1272, 584)
+            Me.TabControl1.Size = New System.Drawing.Size(1272, 575)
             Me.TabControl1.TabIndex = 82
             '
             'TabPage1
@@ -594,7 +600,7 @@
             Me.TabPage1.Location = New System.Drawing.Point(4, 22)
             Me.TabPage1.Name = "TabPage1"
             Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-            Me.TabPage1.Size = New System.Drawing.Size(1264, 558)
+            Me.TabPage1.Size = New System.Drawing.Size(1264, 549)
             Me.TabPage1.TabIndex = 0
             Me.TabPage1.Text = "CONSULTAS"
             Me.TabPage1.UseVisualStyleBackColor = True
@@ -605,7 +611,7 @@
             Me.TabPage2.Location = New System.Drawing.Point(4, 22)
             Me.TabPage2.Name = "TabPage2"
             Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-            Me.TabPage2.Size = New System.Drawing.Size(1264, 558)
+            Me.TabPage2.Size = New System.Drawing.Size(1264, 549)
             Me.TabPage2.TabIndex = 1
             Me.TabPage2.Text = "RUTAS DOCUMENTOS"
             Me.TabPage2.UseVisualStyleBackColor = True
@@ -627,19 +633,23 @@
             '
             'btnLiquidacionPath
             '
-            Me.btnLiquidacionPath.Image = Global.syscisepro.My.Resources.Resources.BuscarRegistro
+            Me.btnLiquidacionPath.FlatAppearance.BorderSize = 0
+            Me.btnLiquidacionPath.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+            Me.btnLiquidacionPath.Image = Global.syscisepro.My.Resources.Resources.search_24dp_FILL0_wght400_GRAD0_opsz24__2_
             Me.btnLiquidacionPath.Location = New System.Drawing.Point(906, 48)
             Me.btnLiquidacionPath.Name = "btnLiquidacionPath"
-            Me.btnLiquidacionPath.Size = New System.Drawing.Size(39, 23)
+            Me.btnLiquidacionPath.Size = New System.Drawing.Size(27, 27)
             Me.btnLiquidacionPath.TabIndex = 5
             Me.btnLiquidacionPath.UseVisualStyleBackColor = True
             '
             'btnRetencionPath
             '
-            Me.btnRetencionPath.Image = Global.syscisepro.My.Resources.Resources.BuscarRegistro
+            Me.btnRetencionPath.FlatAppearance.BorderSize = 0
+            Me.btnRetencionPath.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+            Me.btnRetencionPath.Image = Global.syscisepro.My.Resources.Resources.search_24dp_FILL0_wght400_GRAD0_opsz24__2_
             Me.btnRetencionPath.Location = New System.Drawing.Point(906, 20)
             Me.btnRetencionPath.Name = "btnRetencionPath"
-            Me.btnRetencionPath.Size = New System.Drawing.Size(39, 23)
+            Me.btnRetencionPath.Size = New System.Drawing.Size(27, 27)
             Me.btnRetencionPath.TabIndex = 4
             Me.btnRetencionPath.UseVisualStyleBackColor = True
             '
@@ -687,12 +697,15 @@
             Me.Controls.Add(Me.MenuStrip1)
             Me.Controls.Add(Me.gbTotal)
             Me.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
             Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
             Me.MaximizeBox = False
             Me.MinimizeBox = False
             Me.Name = "FormBuscarComprobantesCompra"
             Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+            Me.StateActive.Border.DrawBorders = CType((((Krypton.Toolkit.PaletteDrawBorders.Top Or Krypton.Toolkit.PaletteDrawBorders.Bottom) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Left) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Right), Krypton.Toolkit.PaletteDrawBorders)
+            Me.StateActive.Border.Rounding = 5.0!
             Me.Text = "BUSCAR COMPROBANTES DE COMPRA"
             Me.gbNombreComercialProveedor.ResumeLayout(False)
             Me.gbNombreComercialProveedor.PerformLayout()

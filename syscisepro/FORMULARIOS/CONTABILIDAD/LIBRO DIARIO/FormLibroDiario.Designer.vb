@@ -1,8 +1,8 @@
 ﻿Namespace FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
     <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
     Partial Class FormLibroDiario
-        Inherits System.Windows.Forms.Form
-
+        'Inherits System.Windows.Forms.Form
+        Inherits Krypton.Toolkit.KryptonForm
         'Form reemplaza a Dispose para limpiar la lista de componentes.
         <System.Diagnostics.DebuggerNonUserCode()> _
         Protected Overrides Sub Dispose(ByVal disposing As Boolean)
@@ -25,9 +25,9 @@
         Private Sub InitializeComponent()
             Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormLibroDiario))
             Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormLibroDiario))
             Me.dgvLibroDiario = New System.Windows.Forms.DataGridView()
             Me.gbDesplazamientoRegistros = New System.Windows.Forms.GroupBox()
             Me.lblIndice = New System.Windows.Forms.Label()
@@ -93,7 +93,7 @@
             Me.gbDesplazamientoRegistros.Controls.Add(Me.btnSiguienteRegistro)
             Me.gbDesplazamientoRegistros.Controls.Add(Me.btnAnteriorRegistro)
             Me.gbDesplazamientoRegistros.Controls.Add(Me.btnPrimerRegistro)
-            Me.gbDesplazamientoRegistros.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.gbDesplazamientoRegistros.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.gbDesplazamientoRegistros.Location = New System.Drawing.Point(468, 2)
             Me.gbDesplazamientoRegistros.Name = "gbDesplazamientoRegistros"
             Me.gbDesplazamientoRegistros.Size = New System.Drawing.Size(240, 71)
@@ -113,56 +113,56 @@
             'btnUltimoRegistro
             '
             Me.btnUltimoRegistro.BackColor = System.Drawing.Color.White
-            Me.btnUltimoRegistro.Font = New System.Drawing.Font("Consolas", 6.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnUltimoRegistro.Image = CType(resources.GetObject("btnUltimoRegistro.Image"), System.Drawing.Image)
+            Me.btnUltimoRegistro.Font = New System.Drawing.Font("Roboto", 6.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.btnUltimoRegistro.Image = Global.syscisepro.My.Resources.Resources.arrow_forward_24dp_FILL0_wght400_GRAD0_opsz24
             Me.btnUltimoRegistro.ImageAlign = System.Drawing.ContentAlignment.TopCenter
             Me.btnUltimoRegistro.Location = New System.Drawing.Point(176, 19)
             Me.btnUltimoRegistro.Name = "btnUltimoRegistro"
             Me.btnUltimoRegistro.Size = New System.Drawing.Size(58, 43)
             Me.btnUltimoRegistro.TabIndex = 3
-            Me.btnUltimoRegistro.Text = "ULTIMO REGISTRO"
+            Me.btnUltimoRegistro.Text = "ULTIMO "
             Me.btnUltimoRegistro.TextAlign = System.Drawing.ContentAlignment.BottomCenter
             Me.btnUltimoRegistro.UseVisualStyleBackColor = False
             '
             'btnSiguienteRegistro
             '
             Me.btnSiguienteRegistro.BackColor = System.Drawing.Color.White
-            Me.btnSiguienteRegistro.Font = New System.Drawing.Font("Consolas", 6.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnSiguienteRegistro.Image = CType(resources.GetObject("btnSiguienteRegistro.Image"), System.Drawing.Image)
+            Me.btnSiguienteRegistro.Font = New System.Drawing.Font("Roboto", 6.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.btnSiguienteRegistro.Image = Global.syscisepro.My.Resources.Resources.chevron_right_24dp_FILL0_wght400_GRAD0_opsz24
             Me.btnSiguienteRegistro.ImageAlign = System.Drawing.ContentAlignment.TopCenter
             Me.btnSiguienteRegistro.Location = New System.Drawing.Point(119, 19)
             Me.btnSiguienteRegistro.Name = "btnSiguienteRegistro"
             Me.btnSiguienteRegistro.Size = New System.Drawing.Size(58, 43)
             Me.btnSiguienteRegistro.TabIndex = 2
-            Me.btnSiguienteRegistro.Text = "SIGUIENTE REGISTRO"
+            Me.btnSiguienteRegistro.Text = "SIGUIENTE "
             Me.btnSiguienteRegistro.TextAlign = System.Drawing.ContentAlignment.BottomCenter
             Me.btnSiguienteRegistro.UseVisualStyleBackColor = False
             '
             'btnAnteriorRegistro
             '
             Me.btnAnteriorRegistro.BackColor = System.Drawing.Color.White
-            Me.btnAnteriorRegistro.Font = New System.Drawing.Font("Consolas", 6.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnAnteriorRegistro.Image = CType(resources.GetObject("btnAnteriorRegistro.Image"), System.Drawing.Image)
+            Me.btnAnteriorRegistro.Font = New System.Drawing.Font("Roboto", 6.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.btnAnteriorRegistro.Image = Global.syscisepro.My.Resources.Resources.chevron_left_24dp_FILL0_wght400_GRAD0_opsz24
             Me.btnAnteriorRegistro.ImageAlign = System.Drawing.ContentAlignment.TopCenter
             Me.btnAnteriorRegistro.Location = New System.Drawing.Point(62, 19)
             Me.btnAnteriorRegistro.Name = "btnAnteriorRegistro"
             Me.btnAnteriorRegistro.Size = New System.Drawing.Size(58, 43)
             Me.btnAnteriorRegistro.TabIndex = 1
-            Me.btnAnteriorRegistro.Text = "ANTERIOR REGISTRO"
+            Me.btnAnteriorRegistro.Text = "ANTERIOR "
             Me.btnAnteriorRegistro.TextAlign = System.Drawing.ContentAlignment.BottomCenter
             Me.btnAnteriorRegistro.UseVisualStyleBackColor = False
             '
             'btnPrimerRegistro
             '
             Me.btnPrimerRegistro.BackColor = System.Drawing.Color.White
-            Me.btnPrimerRegistro.Font = New System.Drawing.Font("Consolas", 6.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnPrimerRegistro.Image = CType(resources.GetObject("btnPrimerRegistro.Image"), System.Drawing.Image)
+            Me.btnPrimerRegistro.Font = New System.Drawing.Font("Roboto", 6.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.btnPrimerRegistro.Image = Global.syscisepro.My.Resources.Resources.arrow_back_24dp_FILL0_wght400_GRAD0_opsz24
             Me.btnPrimerRegistro.ImageAlign = System.Drawing.ContentAlignment.TopCenter
             Me.btnPrimerRegistro.Location = New System.Drawing.Point(5, 19)
             Me.btnPrimerRegistro.Name = "btnPrimerRegistro"
             Me.btnPrimerRegistro.Size = New System.Drawing.Size(58, 43)
             Me.btnPrimerRegistro.TabIndex = 0
-            Me.btnPrimerRegistro.Text = "PRIMER REGISTRO"
+            Me.btnPrimerRegistro.Text = "PRIMERO"
             Me.btnPrimerRegistro.TextAlign = System.Drawing.ContentAlignment.BottomCenter
             Me.btnPrimerRegistro.UseVisualStyleBackColor = False
             '
@@ -194,13 +194,13 @@
             '
             Me.btnCuadrarLibroDiario.BackColor = System.Drawing.Color.White
             Me.btnCuadrarLibroDiario.Font = New System.Drawing.Font("Consolas", 6.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnCuadrarLibroDiario.Image = CType(resources.GetObject("btnCuadrarLibroDiario.Image"), System.Drawing.Image)
+            Me.btnCuadrarLibroDiario.Image = Global.syscisepro.My.Resources.Resources.calculate_24dp_FILL0_wght400_GRAD0_opsz24
             Me.btnCuadrarLibroDiario.ImageAlign = System.Drawing.ContentAlignment.TopCenter
             Me.btnCuadrarLibroDiario.Location = New System.Drawing.Point(5, 19)
             Me.btnCuadrarLibroDiario.Name = "btnCuadrarLibroDiario"
             Me.btnCuadrarLibroDiario.Size = New System.Drawing.Size(58, 43)
             Me.btnCuadrarLibroDiario.TabIndex = 18
-            Me.btnCuadrarLibroDiario.Text = "CUADRAR DIARIO"
+            Me.btnCuadrarLibroDiario.Text = "CUADRAR "
             Me.btnCuadrarLibroDiario.TextAlign = System.Drawing.ContentAlignment.BottomCenter
             Me.btnCuadrarLibroDiario.UseVisualStyleBackColor = False
             '
@@ -208,13 +208,13 @@
             '
             Me.btnAjusteLibroDiario.BackColor = System.Drawing.Color.White
             Me.btnAjusteLibroDiario.Font = New System.Drawing.Font("Consolas", 6.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnAjusteLibroDiario.Image = CType(resources.GetObject("btnAjusteLibroDiario.Image"), System.Drawing.Image)
+            Me.btnAjusteLibroDiario.Image = Global.syscisepro.My.Resources.Resources.edit_24dp_FILL0_wght400_GRAD0_opsz24__2_
             Me.btnAjusteLibroDiario.ImageAlign = System.Drawing.ContentAlignment.TopCenter
             Me.btnAjusteLibroDiario.Location = New System.Drawing.Point(62, 19)
             Me.btnAjusteLibroDiario.Name = "btnAjusteLibroDiario"
             Me.btnAjusteLibroDiario.Size = New System.Drawing.Size(58, 43)
             Me.btnAjusteLibroDiario.TabIndex = 19
-            Me.btnAjusteLibroDiario.Text = "AJUSTAR DIARIO"
+            Me.btnAjusteLibroDiario.Text = "AJUSTAR "
             Me.btnAjusteLibroDiario.TextAlign = System.Drawing.ContentAlignment.BottomCenter
             Me.btnAjusteLibroDiario.UseVisualStyleBackColor = False
             '
@@ -270,7 +270,7 @@
             Me.gbComandos.Controls.Add(Me.btnCuadrarLibroDiario)
             Me.gbComandos.Controls.Add(Me.btnReporteLibroDiario)
             Me.gbComandos.Controls.Add(Me.btnGuardar)
-            Me.gbComandos.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.gbComandos.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.gbComandos.Location = New System.Drawing.Point(709, 2)
             Me.gbComandos.Name = "gbComandos"
             Me.gbComandos.Size = New System.Drawing.Size(352, 71)
@@ -282,7 +282,7 @@
             '
             Me.btnExportar.BackColor = System.Drawing.Color.White
             Me.btnExportar.Font = New System.Drawing.Font("Consolas", 6.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnExportar.Image = CType(resources.GetObject("btnExportar.Image"), System.Drawing.Image)
+            Me.btnExportar.Image = Global.syscisepro.My.Resources.Resources.icons8_excel_48
             Me.btnExportar.ImageAlign = System.Drawing.ContentAlignment.TopCenter
             Me.btnExportar.Location = New System.Drawing.Point(176, 19)
             Me.btnExportar.Name = "btnExportar"
@@ -296,7 +296,7 @@
             '
             Me.btnSalir.BackColor = System.Drawing.Color.White
             Me.btnSalir.Font = New System.Drawing.Font("Consolas", 6.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnSalir.Image = CType(resources.GetObject("btnSalir.Image"), System.Drawing.Image)
+            Me.btnSalir.Image = Global.syscisepro.My.Resources.Resources.logout_24dp_FILL0_wght400_GRAD0_opsz24
             Me.btnSalir.ImageAlign = System.Drawing.ContentAlignment.TopCenter
             Me.btnSalir.Location = New System.Drawing.Point(290, 19)
             Me.btnSalir.Name = "btnSalir"
@@ -319,13 +319,13 @@
             '
             Me.btnReporteLibroDiario.BackColor = System.Drawing.Color.White
             Me.btnReporteLibroDiario.Font = New System.Drawing.Font("Consolas", 6.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnReporteLibroDiario.Image = CType(resources.GetObject("btnReporteLibroDiario.Image"), System.Drawing.Image)
+            Me.btnReporteLibroDiario.Image = Global.syscisepro.My.Resources.Resources.description_24dp_FILL0_wght400_GRAD0_opsz24__2_
             Me.btnReporteLibroDiario.ImageAlign = System.Drawing.ContentAlignment.TopCenter
             Me.btnReporteLibroDiario.Location = New System.Drawing.Point(233, 19)
             Me.btnReporteLibroDiario.Name = "btnReporteLibroDiario"
             Me.btnReporteLibroDiario.Size = New System.Drawing.Size(58, 43)
             Me.btnReporteLibroDiario.TabIndex = 19
-            Me.btnReporteLibroDiario.Text = "REPORTE LIBRO"
+            Me.btnReporteLibroDiario.Text = "REPORTE "
             Me.btnReporteLibroDiario.TextAlign = System.Drawing.ContentAlignment.BottomCenter
             Me.btnReporteLibroDiario.UseVisualStyleBackColor = False
             '
@@ -334,13 +334,13 @@
             Me.btnGuardar.BackColor = System.Drawing.Color.White
             Me.btnGuardar.Enabled = False
             Me.btnGuardar.Font = New System.Drawing.Font("Consolas", 6.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnGuardar.Image = CType(resources.GetObject("btnGuardar.Image"), System.Drawing.Image)
+            Me.btnGuardar.Image = Global.syscisepro.My.Resources.Resources.save_24dp_FILL0_wght400_GRAD0_opsz24__2_
             Me.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.TopCenter
             Me.btnGuardar.Location = New System.Drawing.Point(119, 19)
             Me.btnGuardar.Name = "btnGuardar"
             Me.btnGuardar.Size = New System.Drawing.Size(58, 43)
             Me.btnGuardar.TabIndex = 18
-            Me.btnGuardar.Text = "GUARDAR DIARIO"
+            Me.btnGuardar.Text = "GUARDAR "
             Me.btnGuardar.TextAlign = System.Drawing.ContentAlignment.BottomCenter
             Me.btnGuardar.UseVisualStyleBackColor = False
             '
@@ -351,7 +351,7 @@
             Me.gbTotales.Controls.Add(Me.lblTotalHaber)
             Me.gbTotales.Controls.Add(Me.txtTotalDebe)
             Me.gbTotales.Controls.Add(Me.txtTotalHaber)
-            Me.gbTotales.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.gbTotales.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.gbTotales.Location = New System.Drawing.Point(708, 73)
             Me.gbTotales.Name = "gbTotales"
             Me.gbTotales.Size = New System.Drawing.Size(353, 86)
@@ -365,7 +365,7 @@
             Me.gbBuscarAsiento.Controls.Add(Me.btnBusquedaAvanzada)
             Me.gbBuscarAsiento.Controls.Add(Me.btnBuscarAsiento)
             Me.gbBuscarAsiento.Controls.Add(Me.txtBuscarAsiento)
-            Me.gbBuscarAsiento.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.gbBuscarAsiento.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.gbBuscarAsiento.Location = New System.Drawing.Point(468, 73)
             Me.gbBuscarAsiento.Name = "gbBuscarAsiento"
             Me.gbBuscarAsiento.Size = New System.Drawing.Size(240, 86)
@@ -378,7 +378,7 @@
             Me.btnBusquedaAvanzada.BackColor = System.Drawing.Color.White
             Me.btnBusquedaAvanzada.Enabled = False
             Me.btnBusquedaAvanzada.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnBusquedaAvanzada.Image = CType(resources.GetObject("btnBusquedaAvanzada.Image"), System.Drawing.Image)
+            Me.btnBusquedaAvanzada.Image = Global.syscisepro.My.Resources.Resources.find_in_page_24dp_FILL0_wght400_GRAD0_opsz24
             Me.btnBusquedaAvanzada.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
             Me.btnBusquedaAvanzada.Location = New System.Drawing.Point(119, 48)
             Me.btnBusquedaAvanzada.Name = "btnBusquedaAvanzada"
@@ -393,7 +393,7 @@
             Me.btnBuscarAsiento.BackColor = System.Drawing.Color.White
             Me.btnBuscarAsiento.Enabled = False
             Me.btnBuscarAsiento.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnBuscarAsiento.Image = CType(resources.GetObject("btnBuscarAsiento.Image"), System.Drawing.Image)
+            Me.btnBuscarAsiento.Image = Global.syscisepro.My.Resources.Resources.search_24dp_FILL0_wght400_GRAD0_opsz24__2_
             Me.btnBuscarAsiento.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
             Me.btnBuscarAsiento.Location = New System.Drawing.Point(5, 48)
             Me.btnBuscarAsiento.Name = "btnBuscarAsiento"
@@ -407,7 +407,7 @@
             '
             Me.txtBuscarAsiento.Location = New System.Drawing.Point(6, 19)
             Me.txtBuscarAsiento.Name = "txtBuscarAsiento"
-            Me.txtBuscarAsiento.Size = New System.Drawing.Size(228, 20)
+            Me.txtBuscarAsiento.Size = New System.Drawing.Size(228, 21)
             Me.txtBuscarAsiento.TabIndex = 24
             Me.txtBuscarAsiento.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
             '
@@ -423,10 +423,13 @@
             Me.Controls.Add(Me.dgvAsientosLibroDiario)
             Me.Controls.Add(Me.gbDesplazamientoRegistros)
             Me.Controls.Add(Me.dgvLibroDiario)
-            Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
             Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
             Me.Name = "FormLibroDiario"
             Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+            Me.StateActive.Border.DrawBorders = CType((((Krypton.Toolkit.PaletteDrawBorders.Top Or Krypton.Toolkit.PaletteDrawBorders.Bottom) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Left) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Right), Krypton.Toolkit.PaletteDrawBorders)
+            Me.StateActive.Border.Rounding = 5.0!
             Me.Text = "LIBRO DIARIO GENERAL"
             CType(Me.dgvLibroDiario, System.ComponentModel.ISupportInitialize).EndInit()
             Me.gbDesplazamientoRegistros.ResumeLayout(False)

@@ -1,8 +1,8 @@
 ﻿Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.ORDEN_DE_COMPRA
     <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
     Partial Class FormBuscarOrdenCompra
-        Inherits System.Windows.Forms.Form
-
+        'Inherits System.Windows.Forms.Form
+        Inherits Krypton.Toolkit.KryptonForm
         'Form reemplaza a Dispose para limpiar la lista de componentes.
         <System.Diagnostics.DebuggerNonUserCode()> _
         Protected Overrides Sub Dispose(ByVal disposing As Boolean)
@@ -69,13 +69,13 @@
             Me.dgvDetalleOrdenCompra.BackgroundColor = System.Drawing.Color.White
             Me.dgvDetalleOrdenCompra.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
             Me.dgvDetalleOrdenCompra.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-            Me.dgvDetalleOrdenCompra.Location = New System.Drawing.Point(2, 235)
+            Me.dgvDetalleOrdenCompra.Location = New System.Drawing.Point(2, 238)
             Me.dgvDetalleOrdenCompra.MultiSelect = False
             Me.dgvDetalleOrdenCompra.Name = "dgvDetalleOrdenCompra"
             Me.dgvDetalleOrdenCompra.ReadOnly = True
             Me.dgvDetalleOrdenCompra.RowHeadersVisible = False
             Me.dgvDetalleOrdenCompra.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvDetalleOrdenCompra.Size = New System.Drawing.Size(1014, 335)
+            Me.dgvDetalleOrdenCompra.Size = New System.Drawing.Size(1014, 333)
             Me.dgvDetalleOrdenCompra.TabIndex = 47
             '
             'gbOrdenCompra
@@ -105,7 +105,7 @@
             Me.gbOrdenCompra.Controls.Add(Me.lblNroOrdenCompra)
             Me.gbOrdenCompra.Controls.Add(Me.lblIdOrdenCompra)
             Me.gbOrdenCompra.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.gbOrdenCompra.Location = New System.Drawing.Point(541, 29)
+            Me.gbOrdenCompra.Location = New System.Drawing.Point(541, 35)
             Me.gbOrdenCompra.Name = "gbOrdenCompra"
             Me.gbOrdenCompra.Size = New System.Drawing.Size(475, 200)
             Me.gbOrdenCompra.TabIndex = 44
@@ -351,7 +351,7 @@
             Me.dgvOrdenCompra.BackgroundColor = System.Drawing.Color.White
             Me.dgvOrdenCompra.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
             Me.dgvOrdenCompra.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-            Me.dgvOrdenCompra.Location = New System.Drawing.Point(2, 28)
+            Me.dgvOrdenCompra.Location = New System.Drawing.Point(2, 34)
             Me.dgvOrdenCompra.MultiSelect = False
             Me.dgvOrdenCompra.Name = "dgvOrdenCompra"
             Me.dgvOrdenCompra.ReadOnly = True
@@ -362,30 +362,31 @@
             '
             'MenuStrip1
             '
+            Me.MenuStrip1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
             Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnRecargar, Me.btnReporte, Me.btnAceptar})
             Me.MenuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow
             Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
             Me.MenuStrip1.Name = "MenuStrip1"
             Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(7, 2, 0, 2)
-            Me.MenuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
-            Me.MenuStrip1.Size = New System.Drawing.Size(1018, 24)
+            Me.MenuStrip1.Size = New System.Drawing.Size(1018, 32)
             Me.MenuStrip1.TabIndex = 188
             Me.MenuStrip1.Text = "msIngresoBodega"
             '
             'btnRecargar
             '
             Me.btnRecargar.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnRecargar.Image = Global.syscisepro.My.Resources.Resources.BuscarRegistro
+            Me.btnRecargar.Image = Global.syscisepro.My.Resources.Resources.search_24dp_FILL0_wght400_GRAD0_opsz24__2_
             Me.btnRecargar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnRecargar.Name = "btnRecargar"
-            Me.btnRecargar.Size = New System.Drawing.Size(126, 20)
-            Me.btnRecargar.Text = "RECARGAR ORD."
+            Me.btnRecargar.Size = New System.Drawing.Size(85, 28)
+            Me.btnRecargar.Text = "BUSCAR"
             '
             'btnReporte
             '
-            Me.btnReporte.Image = Global.syscisepro.My.Resources.Resources.report
+            Me.btnReporte.Image = Global.syscisepro.My.Resources.Resources.description_24dp_FILL0_wght400_GRAD0_opsz24__2_
+            Me.btnReporte.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnReporte.Name = "btnReporte"
-            Me.btnReporte.Size = New System.Drawing.Size(82, 20)
+            Me.btnReporte.Size = New System.Drawing.Size(90, 28)
             Me.btnReporte.Text = "REPORTE"
             '
             'btnAceptar
@@ -408,10 +409,14 @@
             Me.Controls.Add(Me.dgvDetalleOrdenCompra)
             Me.Controls.Add(Me.gbOrdenCompra)
             Me.Controls.Add(Me.dgvOrdenCompra)
-            Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
             Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
             Me.Name = "FormBuscarOrdenCompra"
             Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+            Me.StateActive.Border.DrawBorders = CType((((Krypton.Toolkit.PaletteDrawBorders.Top Or Krypton.Toolkit.PaletteDrawBorders.Bottom) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Left) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Right), Krypton.Toolkit.PaletteDrawBorders)
+            Me.StateActive.Border.ImageAlign = Krypton.Toolkit.PaletteRectangleAlign.Local
+            Me.StateActive.Border.Rounding = 5.0!
             Me.Text = "BUSCAR ORDEN DE COMPRA"
             CType(Me.dgvDetalleOrdenCompra, System.ComponentModel.ISupportInitialize).EndInit()
             Me.gbOrdenCompra.ResumeLayout(False)

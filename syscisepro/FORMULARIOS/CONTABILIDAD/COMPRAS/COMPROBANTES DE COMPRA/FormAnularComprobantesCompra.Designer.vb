@@ -1,8 +1,8 @@
 ﻿Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
     <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
     Partial Class FormAnularComprobantesCompra
-        Inherits System.Windows.Forms.Form
-
+        'Inherits System.Windows.Forms.Form
+        Inherits Krypton.Toolkit.KryptonForm
         'Form reemplaza a Dispose para limpiar la lista de componentes.
         <System.Diagnostics.DebuggerNonUserCode()> _
         Protected Overrides Sub Dispose(ByVal disposing As Boolean)
@@ -56,8 +56,8 @@
             Me.gbNombreComercialProveedor.BackColor = System.Drawing.Color.White
             Me.gbNombreComercialProveedor.Controls.Add(Me.txtNombreComercialProveedorGeneral)
             Me.gbNombreComercialProveedor.Controls.Add(Me.lblIdProveedorGeneral)
-            Me.gbNombreComercialProveedor.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.gbNombreComercialProveedor.Location = New System.Drawing.Point(574, 27)
+            Me.gbNombreComercialProveedor.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.gbNombreComercialProveedor.Location = New System.Drawing.Point(574, 35)
             Me.gbNombreComercialProveedor.Name = "gbNombreComercialProveedor"
             Me.gbNombreComercialProveedor.Size = New System.Drawing.Size(580, 42)
             Me.gbNombreComercialProveedor.TabIndex = 107
@@ -79,7 +79,7 @@
             Me.lblIdProveedorGeneral.AutoSize = True
             Me.lblIdProveedorGeneral.Location = New System.Drawing.Point(74, -1)
             Me.lblIdProveedorGeneral.Name = "lblIdProveedorGeneral"
-            Me.lblIdProveedorGeneral.Size = New System.Drawing.Size(25, 13)
+            Me.lblIdProveedorGeneral.Size = New System.Drawing.Size(16, 13)
             Me.lblIdProveedorGeneral.TabIndex = 76
             Me.lblIdProveedorGeneral.Text = "..."
             '
@@ -90,10 +90,10 @@
             Me.GroupBox1.Controls.Add(Me.Label6)
             Me.GroupBox1.Controls.Add(Me.Label1)
             Me.GroupBox1.Controls.Add(Me.dgvComprobantesCompra)
-            Me.GroupBox1.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.GroupBox1.Location = New System.Drawing.Point(0, 70)
+            Me.GroupBox1.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.GroupBox1.Location = New System.Drawing.Point(0, 78)
             Me.GroupBox1.Name = "GroupBox1"
-            Me.GroupBox1.Size = New System.Drawing.Size(1154, 494)
+            Me.GroupBox1.Size = New System.Drawing.Size(1154, 488)
             Me.GroupBox1.TabIndex = 111
             Me.GroupBox1.TabStop = False
             Me.GroupBox1.Text = "COMPROBANTES DE COMPRA"
@@ -101,27 +101,27 @@
             'lblEstadoComprobanteCompra
             '
             Me.lblEstadoComprobanteCompra.AutoSize = True
-            Me.lblEstadoComprobanteCompra.Location = New System.Drawing.Point(206, 0)
+            Me.lblEstadoComprobanteCompra.Location = New System.Drawing.Point(225, 0)
             Me.lblEstadoComprobanteCompra.Name = "lblEstadoComprobanteCompra"
-            Me.lblEstadoComprobanteCompra.Size = New System.Drawing.Size(25, 13)
+            Me.lblEstadoComprobanteCompra.Size = New System.Drawing.Size(16, 13)
             Me.lblEstadoComprobanteCompra.TabIndex = 94
             Me.lblEstadoComprobanteCompra.Text = "..."
             '
             'Label6
             '
             Me.Label6.AutoSize = True
-            Me.Label6.Location = New System.Drawing.Point(187, 0)
+            Me.Label6.Location = New System.Drawing.Point(204, 0)
             Me.Label6.Name = "Label6"
-            Me.Label6.Size = New System.Drawing.Size(13, 13)
+            Me.Label6.Size = New System.Drawing.Size(12, 13)
             Me.Label6.TabIndex = 93
             Me.Label6.Text = "/"
             '
             'Label1
             '
             Me.Label1.AutoSize = True
-            Me.Label1.Location = New System.Drawing.Point(153, 0)
+            Me.Label1.Location = New System.Drawing.Point(179, 0)
             Me.Label1.Name = "Label1"
-            Me.Label1.Size = New System.Drawing.Size(25, 13)
+            Me.Label1.Size = New System.Drawing.Size(16, 13)
             Me.Label1.TabIndex = 29
             Me.Label1.Text = "..."
             '
@@ -139,21 +139,21 @@
             Me.dgvComprobantesCompra.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.chk})
             DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
             DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
-            DataGridViewCellStyle2.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle2.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
             DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(123, Byte), Integer))
             DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
             DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
             Me.dgvComprobantesCompra.DefaultCellStyle = DataGridViewCellStyle2
             Me.dgvComprobantesCompra.Dock = System.Windows.Forms.DockStyle.Fill
-            Me.dgvComprobantesCompra.Location = New System.Drawing.Point(3, 16)
+            Me.dgvComprobantesCompra.Location = New System.Drawing.Point(3, 17)
             Me.dgvComprobantesCompra.MultiSelect = False
             Me.dgvComprobantesCompra.Name = "dgvComprobantesCompra"
             Me.dgvComprobantesCompra.RowHeadersVisible = False
             DataGridViewCellStyle3.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.dgvComprobantesCompra.RowsDefaultCellStyle = DataGridViewCellStyle3
             Me.dgvComprobantesCompra.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvComprobantesCompra.Size = New System.Drawing.Size(1148, 475)
+            Me.dgvComprobantesCompra.Size = New System.Drawing.Size(1148, 468)
             Me.dgvComprobantesCompra.TabIndex = 86
             '
             'chk
@@ -164,28 +164,30 @@
             '
             'MenuStrip1
             '
+            Me.MenuStrip1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
             Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem1, Me.btnAnular})
             Me.MenuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow
             Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
             Me.MenuStrip1.Name = "MenuStrip1"
             Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(7, 2, 0, 2)
-            Me.MenuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
-            Me.MenuStrip1.Size = New System.Drawing.Size(1154, 24)
+            Me.MenuStrip1.Size = New System.Drawing.Size(1154, 32)
             Me.MenuStrip1.TabIndex = 188
             Me.MenuStrip1.Text = "msIngresoBodega"
             '
             'ToolStripMenuItem1
             '
-            Me.ToolStripMenuItem1.Image = Global.syscisepro.My.Resources.Resources.BuscarRegistro
+            Me.ToolStripMenuItem1.Image = Global.syscisepro.My.Resources.Resources.search_24dp_FILL0_wght400_GRAD0_opsz24__2_
+            Me.ToolStripMenuItem1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
-            Me.ToolStripMenuItem1.Size = New System.Drawing.Size(177, 20)
-            Me.ToolStripMenuItem1.Text = "CARGAR COMPROBANTES"
+            Me.ToolStripMenuItem1.Size = New System.Drawing.Size(87, 28)
+            Me.ToolStripMenuItem1.Text = "BUSCAR"
             '
             'btnAnular
             '
-            Me.btnAnular.Image = Global.syscisepro.My.Resources.Resources.EliminarRegistro
+            Me.btnAnular.Image = Global.syscisepro.My.Resources.Resources.cancel_24dp_FILL0_wght400_GRAD0_opsz24
+            Me.btnAnular.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnAnular.Name = "btnAnular"
-            Me.btnAnular.Size = New System.Drawing.Size(81, 20)
+            Me.btnAnular.Size = New System.Drawing.Size(89, 28)
             Me.btnAnular.Text = "ANULAR"
             '
             'gbRnagoFechas
@@ -196,7 +198,7 @@
             Me.gbRnagoFechas.Controls.Add(Me.lblHasta)
             Me.gbRnagoFechas.Controls.Add(Me.dtpAsientoHasta)
             Me.gbRnagoFechas.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.gbRnagoFechas.Location = New System.Drawing.Point(0, 26)
+            Me.gbRnagoFechas.Location = New System.Drawing.Point(0, 34)
             Me.gbRnagoFechas.Name = "gbRnagoFechas"
             Me.gbRnagoFechas.Size = New System.Drawing.Size(568, 43)
             Me.gbRnagoFechas.TabIndex = 189
@@ -249,12 +251,15 @@
             Me.Controls.Add(Me.MenuStrip1)
             Me.Controls.Add(Me.GroupBox1)
             Me.Controls.Add(Me.gbNombreComercialProveedor)
-            Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
             Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
             Me.MaximizeBox = False
             Me.MinimizeBox = False
             Me.Name = "FormAnularComprobantesCompra"
             Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+            Me.StateActive.Border.DrawBorders = CType((((Krypton.Toolkit.PaletteDrawBorders.Top Or Krypton.Toolkit.PaletteDrawBorders.Bottom) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Left) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Right), Krypton.Toolkit.PaletteDrawBorders)
+            Me.StateActive.Border.Rounding = 5.0!
             Me.Text = "ANULAR COMPROBANTES DE COMPRA"
             Me.gbNombreComercialProveedor.ResumeLayout(False)
             Me.gbNombreComercialProveedor.PerformLayout()

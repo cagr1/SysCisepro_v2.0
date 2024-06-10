@@ -1,8 +1,8 @@
 ﻿Namespace FORMULARIOS.CONTABILIDAD.SRI
     <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
     Partial Class FormInformacionTributaria
-        Inherits System.Windows.Forms.Form
-
+        'Inherits System.Windows.Forms.Form
+        Inherits Krypton.Toolkit.KryptonForm
         'Form reemplaza a Dispose para limpiar la lista de componentes.
         <System.Diagnostics.DebuggerNonUserCode()> _
         Protected Overrides Sub Dispose(ByVal disposing As Boolean)
@@ -94,7 +94,7 @@
             Me.gbEmpresa.Controls.Add(Me.txtRazonSocialEmpresa)
             Me.gbEmpresa.Controls.Add(Me.txtNombreComercialEmpresa)
             Me.gbEmpresa.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.gbEmpresa.Location = New System.Drawing.Point(2, 24)
+            Me.gbEmpresa.Location = New System.Drawing.Point(2, 33)
             Me.gbEmpresa.Name = "gbEmpresa"
             Me.gbEmpresa.Size = New System.Drawing.Size(626, 173)
             Me.gbEmpresa.TabIndex = 0
@@ -241,7 +241,7 @@
             Me.gbSecuenciaComprobantes.Controls.Add(Me.txtSecuencialNotaCredito)
             Me.gbSecuenciaComprobantes.Controls.Add(Me.txtSecuencialFactura)
             Me.gbSecuenciaComprobantes.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.gbSecuenciaComprobantes.Location = New System.Drawing.Point(2, 197)
+            Me.gbSecuenciaComprobantes.Location = New System.Drawing.Point(2, 207)
             Me.gbSecuenciaComprobantes.Name = "gbSecuenciaComprobantes"
             Me.gbSecuenciaComprobantes.Size = New System.Drawing.Size(321, 97)
             Me.gbSecuenciaComprobantes.TabIndex = 1
@@ -287,7 +287,7 @@
             'chkSecuenciales
             '
             Me.chkSecuenciales.AutoSize = True
-            Me.chkSecuenciales.Location = New System.Drawing.Point(244, -1)
+            Me.chkSecuenciales.Location = New System.Drawing.Point(220, -1)
             Me.chkSecuenciales.Name = "chkSecuenciales"
             Me.chkSecuenciales.Size = New System.Drawing.Size(71, 17)
             Me.chkSecuenciales.TabIndex = 8
@@ -332,8 +332,8 @@
             Me.GroupBox1.Controls.Add(Me.chkImpuestos)
             Me.GroupBox1.Controls.Add(Me.txtPorcentajeICE)
             Me.GroupBox1.Controls.Add(Me.txtPorcentajeIVA)
-            Me.GroupBox1.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.GroupBox1.Location = New System.Drawing.Point(2, 294)
+            Me.GroupBox1.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.GroupBox1.Location = New System.Drawing.Point(2, 304)
             Me.GroupBox1.Name = "GroupBox1"
             Me.GroupBox1.Size = New System.Drawing.Size(626, 46)
             Me.GroupBox1.TabIndex = 2
@@ -345,7 +345,7 @@
             Me.Label14.AutoSize = True
             Me.Label14.Location = New System.Drawing.Point(327, 19)
             Me.Label14.Name = "Label14"
-            Me.Label14.Size = New System.Drawing.Size(97, 13)
+            Me.Label14.Size = New System.Drawing.Size(98, 13)
             Me.Label14.TabIndex = 11
             Me.Label14.Text = "PORCENTAJE ICE:"
             '
@@ -354,7 +354,7 @@
             Me.Label13.AutoSize = True
             Me.Label13.Location = New System.Drawing.Point(7, 19)
             Me.Label13.Name = "Label13"
-            Me.Label13.Size = New System.Drawing.Size(97, 13)
+            Me.Label13.Size = New System.Drawing.Size(99, 13)
             Me.Label13.TabIndex = 10
             Me.Label13.Text = "PORCENTAJE IVA:"
             '
@@ -363,7 +363,7 @@
             Me.chkImpuestos.AutoSize = True
             Me.chkImpuestos.Location = New System.Drawing.Point(550, -1)
             Me.chkImpuestos.Name = "chkImpuestos"
-            Me.chkImpuestos.Size = New System.Drawing.Size(68, 17)
+            Me.chkImpuestos.Size = New System.Drawing.Size(71, 17)
             Me.chkImpuestos.TabIndex = 8
             Me.chkImpuestos.Text = "ACTIVAR"
             Me.chkImpuestos.UseVisualStyleBackColor = True
@@ -374,7 +374,7 @@
             Me.txtPorcentajeICE.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtPorcentajeICE.Location = New System.Drawing.Point(460, 16)
             Me.txtPorcentajeICE.Name = "txtPorcentajeICE"
-            Me.txtPorcentajeICE.Size = New System.Drawing.Size(78, 20)
+            Me.txtPorcentajeICE.Size = New System.Drawing.Size(78, 21)
             Me.txtPorcentajeICE.TabIndex = 1
             Me.txtPorcentajeICE.Text = "% ICE"
             Me.txtPorcentajeICE.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -385,7 +385,7 @@
             Me.txtPorcentajeIVA.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtPorcentajeIVA.Location = New System.Drawing.Point(116, 16)
             Me.txtPorcentajeIVA.Name = "txtPorcentajeIVA"
-            Me.txtPorcentajeIVA.Size = New System.Drawing.Size(78, 20)
+            Me.txtPorcentajeIVA.Size = New System.Drawing.Size(78, 21)
             Me.txtPorcentajeIVA.TabIndex = 0
             Me.txtPorcentajeIVA.Text = "% IVA"
             Me.txtPorcentajeIVA.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -401,7 +401,7 @@
             Me.gbNumeroAutorizaciones.Controls.Add(Me.txtNroAutorizaciónNotaCredito)
             Me.gbNumeroAutorizaciones.Controls.Add(Me.txtNroAutorizacionFactura)
             Me.gbNumeroAutorizaciones.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.gbNumeroAutorizaciones.Location = New System.Drawing.Point(323, 197)
+            Me.gbNumeroAutorizaciones.Location = New System.Drawing.Point(323, 198)
             Me.gbNumeroAutorizaciones.Name = "gbNumeroAutorizaciones"
             Me.gbNumeroAutorizaciones.Size = New System.Drawing.Size(305, 97)
             Me.gbNumeroAutorizaciones.TabIndex = 3
@@ -486,48 +486,52 @@
             '
             'MenuStrip1
             '
+            Me.MenuStrip1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
             Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnNuevo, Me.btnGuardar, Me.btnModificar, Me.btnCancelar})
             Me.MenuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow
             Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
             Me.MenuStrip1.Name = "MenuStrip1"
             Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(7, 2, 0, 2)
-            Me.MenuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
-            Me.MenuStrip1.Size = New System.Drawing.Size(629, 24)
+            Me.MenuStrip1.Size = New System.Drawing.Size(629, 32)
             Me.MenuStrip1.TabIndex = 188
             Me.MenuStrip1.Text = "msIngresoBodega"
             '
             'btnNuevo
             '
-            Me.btnNuevo.Image = Global.syscisepro.My.Resources.Resources.NuevoRegistro
+            Me.btnNuevo.Image = Global.syscisepro.My.Resources.Resources.add_circle_24dp_FILL0_wght400_GRAD0_opsz24__3_
+            Me.btnNuevo.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnNuevo.Name = "btnNuevo"
-            Me.btnNuevo.Size = New System.Drawing.Size(74, 20)
+            Me.btnNuevo.Size = New System.Drawing.Size(82, 28)
             Me.btnNuevo.Text = "NUEVO"
             '
             'btnGuardar
             '
             Me.btnGuardar.Enabled = False
             Me.btnGuardar.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnGuardar.Image = Global.syscisepro.My.Resources.Resources.GuardarRegistro
+            Me.btnGuardar.Image = Global.syscisepro.My.Resources.Resources.save_24dp_FILL0_wght400_GRAD0_opsz24__2_
+            Me.btnGuardar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnGuardar.Name = "btnGuardar"
-            Me.btnGuardar.Size = New System.Drawing.Size(87, 20)
+            Me.btnGuardar.Size = New System.Drawing.Size(95, 28)
             Me.btnGuardar.Text = "GUARDAR"
             '
             'btnModificar
             '
             Me.btnModificar.Enabled = False
             Me.btnModificar.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnModificar.Image = Global.syscisepro.My.Resources.Resources.ModificarRegistro
+            Me.btnModificar.Image = Global.syscisepro.My.Resources.Resources.edit_note_24dp_FILL0_wght400_GRAD0_opsz24__2_
+            Me.btnModificar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnModificar.Name = "btnModificar"
-            Me.btnModificar.Size = New System.Drawing.Size(95, 20)
+            Me.btnModificar.Size = New System.Drawing.Size(103, 28)
             Me.btnModificar.Text = "MODIFICAR"
             '
             'btnCancelar
             '
             Me.btnCancelar.Enabled = False
             Me.btnCancelar.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnCancelar.Image = Global.syscisepro.My.Resources.Resources.cancel
+            Me.btnCancelar.Image = Global.syscisepro.My.Resources.Resources.cancel_24dp_FILL0_wght400_GRAD0_opsz24
+            Me.btnCancelar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnCancelar.Name = "btnCancelar"
-            Me.btnCancelar.Size = New System.Drawing.Size(89, 20)
+            Me.btnCancelar.Size = New System.Drawing.Size(97, 28)
             Me.btnCancelar.Text = "CANCELAR"
             '
             'FormInformacionTributaria
@@ -535,17 +539,20 @@
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.BackColor = System.Drawing.Color.White
-            Me.ClientSize = New System.Drawing.Size(629, 342)
+            Me.ClientSize = New System.Drawing.Size(629, 353)
             Me.Controls.Add(Me.MenuStrip1)
             Me.Controls.Add(Me.gbNumeroAutorizaciones)
             Me.Controls.Add(Me.GroupBox1)
             Me.Controls.Add(Me.gbSecuenciaComprobantes)
             Me.Controls.Add(Me.gbEmpresa)
             Me.Controls.Add(Me.dgvEmpresa)
-            Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
             Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
             Me.Name = "FormInformacionTributaria"
             Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+            Me.StateActive.Border.DrawBorders = CType((((Krypton.Toolkit.PaletteDrawBorders.Top Or Krypton.Toolkit.PaletteDrawBorders.Bottom) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Left) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Right), Krypton.Toolkit.PaletteDrawBorders)
+            Me.StateActive.Border.Rounding = 5.0!
             Me.Text = "INFORMACIÓN TRIBUTARIA"
             Me.gbEmpresa.ResumeLayout(False)
             Me.gbEmpresa.PerformLayout()

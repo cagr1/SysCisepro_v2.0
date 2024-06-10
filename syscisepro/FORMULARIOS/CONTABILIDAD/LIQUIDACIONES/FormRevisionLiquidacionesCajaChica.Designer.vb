@@ -341,7 +341,7 @@
             Me.gbLiquidacion.Controls.Add(Me.lblReposicionLiquidacion)
             Me.gbLiquidacion.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.gbLiquidacion.ForeColor = System.Drawing.Color.Black
-            Me.gbLiquidacion.Location = New System.Drawing.Point(-1, 26)
+            Me.gbLiquidacion.Location = New System.Drawing.Point(-1, 33)
             Me.gbLiquidacion.Name = "gbLiquidacion"
             Me.gbLiquidacion.Size = New System.Drawing.Size(1003, 198)
             Me.gbLiquidacion.TabIndex = 50
@@ -539,7 +539,7 @@
             Me.GroupBox1.Controls.Add(Me.chkSeleccionarTodo)
             Me.GroupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.GroupBox1.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.GroupBox1.Location = New System.Drawing.Point(-1, 226)
+            Me.GroupBox1.Location = New System.Drawing.Point(-1, 230)
             Me.GroupBox1.Name = "GroupBox1"
             Me.GroupBox1.Size = New System.Drawing.Size(1003, 430)
             Me.GroupBox1.TabIndex = 61
@@ -551,7 +551,7 @@
             Me.txtTotalRegistros.BackColor = System.Drawing.Color.White
             Me.txtTotalRegistros.Enabled = False
             Me.txtTotalRegistros.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtTotalRegistros.Location = New System.Drawing.Point(479, 0)
+            Me.txtTotalRegistros.Location = New System.Drawing.Point(485, 1)
             Me.txtTotalRegistros.Name = "txtTotalRegistros"
             Me.txtTotalRegistros.Size = New System.Drawing.Size(100, 21)
             Me.txtTotalRegistros.TabIndex = 55
@@ -690,26 +690,27 @@
             Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
             Me.MenuStrip1.Name = "MenuStrip1"
             Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(7, 2, 0, 2)
-            Me.MenuStrip1.Size = New System.Drawing.Size(1003, 24)
+            Me.MenuStrip1.Size = New System.Drawing.Size(1002, 32)
             Me.MenuStrip1.TabIndex = 185
             Me.MenuStrip1.Text = "msIngresoBodega"
             '
             'btnRecargar
             '
             Me.btnRecargar.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnRecargar.Image = Global.syscisepro.My.Resources.Resources.BuscarRegistro
+            Me.btnRecargar.Image = Global.syscisepro.My.Resources.Resources.search_24dp_FILL0_wght400_GRAD0_opsz24__2_
             Me.btnRecargar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnRecargar.Name = "btnRecargar"
-            Me.btnRecargar.Size = New System.Drawing.Size(133, 20)
-            Me.btnRecargar.Text = "RECARGAR LIQU."
+            Me.btnRecargar.Size = New System.Drawing.Size(85, 28)
+            Me.btnRecargar.Text = "BUSCAR"
             '
             'btnAprobarLiquidación
             '
             Me.btnAprobarLiquidación.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnAprobarLiquidación.Image = Global.syscisepro.My.Resources.Resources.ok
+            Me.btnAprobarLiquidación.Image = Global.syscisepro.My.Resources.Resources.check_circle_24dp_FILL0_wght400_GRAD0_opsz24__2_
+            Me.btnAprobarLiquidación.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnAprobarLiquidación.Name = "btnAprobarLiquidación"
-            Me.btnAprobarLiquidación.Size = New System.Drawing.Size(175, 20)
-            Me.btnAprobarLiquidación.Text = "FINALIZAR Y LIQUIDAR"
+            Me.btnAprobarLiquidación.Size = New System.Drawing.Size(183, 28)
+            Me.btnAprobarLiquidación.Text = "FINALIZAR / LIQUIDAR"
             '
             'FormRevisionLiquidacionesCajaChica
             '
@@ -717,17 +718,20 @@
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.AutoScroll = True
             Me.BackColor = System.Drawing.Color.White
-            Me.ClientSize = New System.Drawing.Size(1003, 657)
+            Me.ClientSize = New System.Drawing.Size(1023, 674)
             Me.Controls.Add(Me.MenuStrip1)
             Me.Controls.Add(Me.GroupBox1)
             Me.Controls.Add(Me.gbLiquidacion)
             Me.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
             Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
             Me.MaximizeBox = False
             Me.MinimizeBox = False
             Me.Name = "FormRevisionLiquidacionesCajaChica"
             Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+            Me.StateActive.Border.DrawBorders = CType((((Krypton.Toolkit.PaletteDrawBorders.Top Or Krypton.Toolkit.PaletteDrawBorders.Bottom) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Left) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Right), Krypton.Toolkit.PaletteDrawBorders)
+            Me.StateActive.Border.Rounding = 5.0!
             Me.Text = "REVISION DE LIQUIDACIONES CAJA CHICA"
             CType(Me.dgvLiquidacionesCajaChica, System.ComponentModel.ISupportInitialize).EndInit()
             Me.gbLiquidacion.ResumeLayout(False)

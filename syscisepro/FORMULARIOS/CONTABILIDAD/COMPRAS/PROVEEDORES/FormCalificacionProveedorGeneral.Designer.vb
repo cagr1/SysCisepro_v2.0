@@ -103,6 +103,7 @@
             Me.gbFechaEvaluacionProveedores.Controls.Add(Me.lblIdPersonal)
             Me.gbFechaEvaluacionProveedores.Controls.Add(Me.lblIdProveedorGeneral)
             Me.gbFechaEvaluacionProveedores.Controls.Add(Me.lblProveedorEvaluado)
+            Me.gbFechaEvaluacionProveedores.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.gbFechaEvaluacionProveedores.Location = New System.Drawing.Point(2, 3)
             Me.gbFechaEvaluacionProveedores.Name = "gbFechaEvaluacionProveedores"
             Me.gbFechaEvaluacionProveedores.Size = New System.Drawing.Size(699, 69)
@@ -150,7 +151,7 @@
             Me.lblEtiquetaFechaCalificacion.AutoSize = True
             Me.lblEtiquetaFechaCalificacion.Location = New System.Drawing.Point(135, 0)
             Me.lblEtiquetaFechaCalificacion.Name = "lblEtiquetaFechaCalificacion"
-            Me.lblEtiquetaFechaCalificacion.Size = New System.Drawing.Size(138, 13)
+            Me.lblEtiquetaFechaCalificacion.Size = New System.Drawing.Size(135, 13)
             Me.lblEtiquetaFechaCalificacion.TabIndex = 1
             Me.lblEtiquetaFechaCalificacion.Text = "FECHA DE CALIFICACIÓN:"
             '
@@ -165,28 +166,28 @@
             '
             'txtNombrePersonal
             '
-            Me.txtNombrePersonal.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtNombrePersonal.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtNombrePersonal.Location = New System.Drawing.Point(180, 43)
             Me.txtNombrePersonal.Name = "txtNombrePersonal"
-            Me.txtNombrePersonal.Size = New System.Drawing.Size(450, 21)
+            Me.txtNombrePersonal.Size = New System.Drawing.Size(450, 22)
             Me.txtNombrePersonal.TabIndex = 5
             '
             'lblResponsableEvaluacion
             '
             Me.lblResponsableEvaluacion.AutoSize = True
-            Me.lblResponsableEvaluacion.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.lblResponsableEvaluacion.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.lblResponsableEvaluacion.Location = New System.Drawing.Point(4, 46)
             Me.lblResponsableEvaluacion.Name = "lblResponsableEvaluacion"
-            Me.lblResponsableEvaluacion.Size = New System.Drawing.Size(176, 15)
+            Me.lblResponsableEvaluacion.Size = New System.Drawing.Size(167, 14)
             Me.lblResponsableEvaluacion.TabIndex = 4
             Me.lblResponsableEvaluacion.Text = "RESPONSABLE EVALUACIÓN:"
             '
             'txtNombreComercialProveedorGeneral
             '
-            Me.txtNombreComercialProveedorGeneral.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtNombreComercialProveedorGeneral.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtNombreComercialProveedorGeneral.Location = New System.Drawing.Point(180, 19)
             Me.txtNombreComercialProveedorGeneral.Name = "txtNombreComercialProveedorGeneral"
-            Me.txtNombreComercialProveedorGeneral.Size = New System.Drawing.Size(450, 21)
+            Me.txtNombreComercialProveedorGeneral.Size = New System.Drawing.Size(450, 22)
             Me.txtNombreComercialProveedorGeneral.TabIndex = 5
             '
             'lblIdPersonal
@@ -210,10 +211,10 @@
             'lblProveedorEvaluado
             '
             Me.lblProveedorEvaluado.AutoSize = True
-            Me.lblProveedorEvaluado.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.lblProveedorEvaluado.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.lblProveedorEvaluado.Location = New System.Drawing.Point(4, 22)
             Me.lblProveedorEvaluado.Name = "lblProveedorEvaluado"
-            Me.lblProveedorEvaluado.Size = New System.Drawing.Size(152, 15)
+            Me.lblProveedorEvaluado.Size = New System.Drawing.Size(142, 14)
             Me.lblProveedorEvaluado.TabIndex = 4
             Me.lblProveedorEvaluado.Text = "PROVEEDOR EVALUADO:"
             '
@@ -224,6 +225,7 @@
             Me.Panel6.Controls.Add(Me.cmbPregunta6CalificacionProveedor)
             Me.Panel6.Controls.Add(Me.txtPregunta6CalificacionProveedor)
             Me.Panel6.Controls.Add(Me.lblPregunta6CalificacionProveedores)
+            Me.Panel6.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Panel6.Location = New System.Drawing.Point(2, 303)
             Me.Panel6.Name = "Panel6"
             Me.Panel6.Size = New System.Drawing.Size(699, 47)
@@ -232,18 +234,18 @@
             'cmbPregunta6CalificacionProveedor
             '
             Me.cmbPregunta6CalificacionProveedor.DropDownWidth = 500
-            Me.cmbPregunta6CalificacionProveedor.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.cmbPregunta6CalificacionProveedor.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cmbPregunta6CalificacionProveedor.FormattingEnabled = True
             Me.cmbPregunta6CalificacionProveedor.Items.AddRange(New Object() {"(   0% ) - NO DISPONE", "( 10% ) - SI DISPONE"})
             Me.cmbPregunta6CalificacionProveedor.Location = New System.Drawing.Point(16, 20)
             Me.cmbPregunta6CalificacionProveedor.Name = "cmbPregunta6CalificacionProveedor"
-            Me.cmbPregunta6CalificacionProveedor.Size = New System.Drawing.Size(393, 23)
+            Me.cmbPregunta6CalificacionProveedor.Size = New System.Drawing.Size(393, 22)
             Me.cmbPregunta6CalificacionProveedor.TabIndex = 2
             Me.cmbPregunta6CalificacionProveedor.Text = "Seleccione una opción"
             '
             'txtPregunta6CalificacionProveedor
             '
-            Me.txtPregunta6CalificacionProveedor.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtPregunta6CalificacionProveedor.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtPregunta6CalificacionProveedor.Location = New System.Drawing.Point(615, 3)
             Me.txtPregunta6CalificacionProveedor.Multiline = True
             Me.txtPregunta6CalificacionProveedor.Name = "txtPregunta6CalificacionProveedor"
@@ -269,6 +271,7 @@
             Me.Panel5.Controls.Add(Me.cmbPregunta5CalificacionProveedor)
             Me.Panel5.Controls.Add(Me.txtPregunta5CalificacionProveedor)
             Me.Panel5.Controls.Add(Me.lblPregunta5CalificacionProveedores)
+            Me.Panel5.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Panel5.Location = New System.Drawing.Point(2, 257)
             Me.Panel5.Name = "Panel5"
             Me.Panel5.Size = New System.Drawing.Size(699, 47)
@@ -277,18 +280,18 @@
             'cmbPregunta5CalificacionProveedor
             '
             Me.cmbPregunta5CalificacionProveedor.DropDownWidth = 500
-            Me.cmbPregunta5CalificacionProveedor.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.cmbPregunta5CalificacionProveedor.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cmbPregunta5CalificacionProveedor.FormattingEnabled = True
             Me.cmbPregunta5CalificacionProveedor.Items.AddRange(New Object() {"(   0% ) - MAYOR A 8 DÍAS", "(   5% ) - HASTA 8 DÍAS", "( 10% ) - INMEDIATA"})
             Me.cmbPregunta5CalificacionProveedor.Location = New System.Drawing.Point(16, 20)
             Me.cmbPregunta5CalificacionProveedor.Name = "cmbPregunta5CalificacionProveedor"
-            Me.cmbPregunta5CalificacionProveedor.Size = New System.Drawing.Size(393, 23)
+            Me.cmbPregunta5CalificacionProveedor.Size = New System.Drawing.Size(393, 22)
             Me.cmbPregunta5CalificacionProveedor.TabIndex = 2
             Me.cmbPregunta5CalificacionProveedor.Text = "Seleccione una opción"
             '
             'txtPregunta5CalificacionProveedor
             '
-            Me.txtPregunta5CalificacionProveedor.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtPregunta5CalificacionProveedor.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtPregunta5CalificacionProveedor.Location = New System.Drawing.Point(615, 3)
             Me.txtPregunta5CalificacionProveedor.Multiline = True
             Me.txtPregunta5CalificacionProveedor.Name = "txtPregunta5CalificacionProveedor"
@@ -314,6 +317,7 @@
             Me.Panel4.Controls.Add(Me.cmbPregunta4CalificacionProveedor)
             Me.Panel4.Controls.Add(Me.txtPregunta4CalificacionProveedor)
             Me.Panel4.Controls.Add(Me.lblPregunta4CalificacionProveedores)
+            Me.Panel4.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Panel4.Location = New System.Drawing.Point(2, 211)
             Me.Panel4.Name = "Panel4"
             Me.Panel4.Size = New System.Drawing.Size(699, 47)
@@ -322,18 +326,18 @@
             'cmbPregunta4CalificacionProveedor
             '
             Me.cmbPregunta4CalificacionProveedor.DropDownWidth = 500
-            Me.cmbPregunta4CalificacionProveedor.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.cmbPregunta4CalificacionProveedor.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cmbPregunta4CalificacionProveedor.FormattingEnabled = True
             Me.cmbPregunta4CalificacionProveedor.Items.AddRange(New Object() {"(   0% ) - CRÉDITO NO APLICA", "( 15% ) - CRÉDITO HASTA 15 DÍAS", "( 20% ) - CRÉDITO MAYOR A 15 DIÁS HSTA 30 DÍAS", "( 25% ) - CRÉDITO MAYOR A 30 DÍAS"})
             Me.cmbPregunta4CalificacionProveedor.Location = New System.Drawing.Point(16, 20)
             Me.cmbPregunta4CalificacionProveedor.Name = "cmbPregunta4CalificacionProveedor"
-            Me.cmbPregunta4CalificacionProveedor.Size = New System.Drawing.Size(393, 23)
+            Me.cmbPregunta4CalificacionProveedor.Size = New System.Drawing.Size(393, 22)
             Me.cmbPregunta4CalificacionProveedor.TabIndex = 2
             Me.cmbPregunta4CalificacionProveedor.Text = "Seleccione una opción"
             '
             'txtPregunta4CalificacionProveedor
             '
-            Me.txtPregunta4CalificacionProveedor.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtPregunta4CalificacionProveedor.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtPregunta4CalificacionProveedor.Location = New System.Drawing.Point(615, 3)
             Me.txtPregunta4CalificacionProveedor.Multiline = True
             Me.txtPregunta4CalificacionProveedor.Name = "txtPregunta4CalificacionProveedor"
@@ -359,6 +363,7 @@
             Me.Panel3.Controls.Add(Me.cmbPregunta3CalificacionProveedor)
             Me.Panel3.Controls.Add(Me.txtPregunta3CalificacionProveedor)
             Me.Panel3.Controls.Add(Me.lblPregunta3CalificacionProveedores)
+            Me.Panel3.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Panel3.Location = New System.Drawing.Point(2, 165)
             Me.Panel3.Name = "Panel3"
             Me.Panel3.Size = New System.Drawing.Size(699, 47)
@@ -367,18 +372,18 @@
             'cmbPregunta3CalificacionProveedor
             '
             Me.cmbPregunta3CalificacionProveedor.DropDownWidth = 500
-            Me.cmbPregunta3CalificacionProveedor.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.cmbPregunta3CalificacionProveedor.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cmbPregunta3CalificacionProveedor.FormattingEnabled = True
             Me.cmbPregunta3CalificacionProveedor.Items.AddRange(New Object() {"(   0% ) - MALA", "( 20% ) - BUENA"})
             Me.cmbPregunta3CalificacionProveedor.Location = New System.Drawing.Point(16, 20)
             Me.cmbPregunta3CalificacionProveedor.Name = "cmbPregunta3CalificacionProveedor"
-            Me.cmbPregunta3CalificacionProveedor.Size = New System.Drawing.Size(393, 23)
+            Me.cmbPregunta3CalificacionProveedor.Size = New System.Drawing.Size(393, 22)
             Me.cmbPregunta3CalificacionProveedor.TabIndex = 2
             Me.cmbPregunta3CalificacionProveedor.Text = "Seleccione una opción"
             '
             'txtPregunta3CalificacionProveedor
             '
-            Me.txtPregunta3CalificacionProveedor.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtPregunta3CalificacionProveedor.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtPregunta3CalificacionProveedor.Location = New System.Drawing.Point(616, 3)
             Me.txtPregunta3CalificacionProveedor.Multiline = True
             Me.txtPregunta3CalificacionProveedor.Name = "txtPregunta3CalificacionProveedor"
@@ -404,6 +409,7 @@
             Me.Panel2.Controls.Add(Me.cmbPregunta2CalificacionProveedor)
             Me.Panel2.Controls.Add(Me.txtPregunta2CalificacionProveedor)
             Me.Panel2.Controls.Add(Me.lblPregunta2CalificacionProveedores)
+            Me.Panel2.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Panel2.Location = New System.Drawing.Point(2, 119)
             Me.Panel2.Name = "Panel2"
             Me.Panel2.Size = New System.Drawing.Size(699, 47)
@@ -412,18 +418,18 @@
             'cmbPregunta2CalificacionProveedor
             '
             Me.cmbPregunta2CalificacionProveedor.DropDownWidth = 500
-            Me.cmbPregunta2CalificacionProveedor.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.cmbPregunta2CalificacionProveedor.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cmbPregunta2CalificacionProveedor.FormattingEnabled = True
             Me.cmbPregunta2CalificacionProveedor.Items.AddRange(New Object() {"(   0% ) - NO PRESENTA", "( 15% ) - DISPONE DE ALGUNO PRODUCTOS O SERVICIOS", "( 25% ) - DISPONE DE TODOS LOS PRODUCTOS Y SERVICIOS"})
             Me.cmbPregunta2CalificacionProveedor.Location = New System.Drawing.Point(16, 19)
             Me.cmbPregunta2CalificacionProveedor.Name = "cmbPregunta2CalificacionProveedor"
-            Me.cmbPregunta2CalificacionProveedor.Size = New System.Drawing.Size(393, 23)
+            Me.cmbPregunta2CalificacionProveedor.Size = New System.Drawing.Size(393, 22)
             Me.cmbPregunta2CalificacionProveedor.TabIndex = 2
             Me.cmbPregunta2CalificacionProveedor.Text = "Seleccione una opción"
             '
             'txtPregunta2CalificacionProveedor
             '
-            Me.txtPregunta2CalificacionProveedor.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtPregunta2CalificacionProveedor.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtPregunta2CalificacionProveedor.Location = New System.Drawing.Point(615, 3)
             Me.txtPregunta2CalificacionProveedor.Multiline = True
             Me.txtPregunta2CalificacionProveedor.Name = "txtPregunta2CalificacionProveedor"
@@ -449,6 +455,7 @@
             Me.Panel1.Controls.Add(Me.cmbPregunta1CalificacionProveedor)
             Me.Panel1.Controls.Add(Me.txtPregunta1CalificacionProveedor)
             Me.Panel1.Controls.Add(Me.lblPregunta1CalificacionProveedores)
+            Me.Panel1.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Panel1.Location = New System.Drawing.Point(2, 73)
             Me.Panel1.Name = "Panel1"
             Me.Panel1.Size = New System.Drawing.Size(699, 47)
@@ -457,18 +464,18 @@
             'cmbPregunta1CalificacionProveedor
             '
             Me.cmbPregunta1CalificacionProveedor.DropDownWidth = 500
-            Me.cmbPregunta1CalificacionProveedor.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.cmbPregunta1CalificacionProveedor.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cmbPregunta1CalificacionProveedor.FormattingEnabled = True
             Me.cmbPregunta1CalificacionProveedor.Items.AddRange(New Object() {"(   0% ) - NO PRESENTA", "( 10% ) - SI PRESENTA"})
             Me.cmbPregunta1CalificacionProveedor.Location = New System.Drawing.Point(16, 19)
             Me.cmbPregunta1CalificacionProveedor.Name = "cmbPregunta1CalificacionProveedor"
-            Me.cmbPregunta1CalificacionProveedor.Size = New System.Drawing.Size(393, 23)
+            Me.cmbPregunta1CalificacionProveedor.Size = New System.Drawing.Size(393, 22)
             Me.cmbPregunta1CalificacionProveedor.TabIndex = 2
             Me.cmbPregunta1CalificacionProveedor.Text = "Seleccione una opción"
             '
             'txtPregunta1CalificacionProveedor
             '
-            Me.txtPregunta1CalificacionProveedor.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtPregunta1CalificacionProveedor.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtPregunta1CalificacionProveedor.Location = New System.Drawing.Point(615, 3)
             Me.txtPregunta1CalificacionProveedor.Multiline = True
             Me.txtPregunta1CalificacionProveedor.Name = "txtPregunta1CalificacionProveedor"
@@ -496,6 +503,7 @@
             Me.Panel12.Controls.Add(Me.Label3)
             Me.Panel12.Controls.Add(Me.txtTotalCalificacionProveedor)
             Me.Panel12.Controls.Add(Me.Label5)
+            Me.Panel12.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Panel12.Location = New System.Drawing.Point(2, 349)
             Me.Panel12.Name = "Panel12"
             Me.Panel12.Size = New System.Drawing.Size(699, 64)
@@ -531,7 +539,7 @@
             '
             'txtTotalCalificacionProveedor
             '
-            Me.txtTotalCalificacionProveedor.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtTotalCalificacionProveedor.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtTotalCalificacionProveedor.Location = New System.Drawing.Point(615, 4)
             Me.txtTotalCalificacionProveedor.Multiline = True
             Me.txtTotalCalificacionProveedor.Name = "txtTotalCalificacionProveedor"
@@ -561,19 +569,19 @@
             '
             'txtObservacionesCalificacionProveedores
             '
-            Me.txtObservacionesCalificacionProveedores.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtObservacionesCalificacionProveedores.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtObservacionesCalificacionProveedores.Location = New System.Drawing.Point(16, 19)
             Me.txtObservacionesCalificacionProveedores.Name = "txtObservacionesCalificacionProveedores"
-            Me.txtObservacionesCalificacionProveedores.Size = New System.Drawing.Size(659, 21)
+            Me.txtObservacionesCalificacionProveedores.Size = New System.Drawing.Size(659, 22)
             Me.txtObservacionesCalificacionProveedores.TabIndex = 1
             '
             'lblObservacionesCalificacion
             '
             Me.lblObservacionesCalificacion.AutoSize = True
-            Me.lblObservacionesCalificacion.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.lblObservacionesCalificacion.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.lblObservacionesCalificacion.Location = New System.Drawing.Point(3, 3)
             Me.lblObservacionesCalificacion.Name = "lblObservacionesCalificacion"
-            Me.lblObservacionesCalificacion.Size = New System.Drawing.Size(298, 13)
+            Me.lblObservacionesCalificacion.Size = New System.Drawing.Size(309, 14)
             Me.lblObservacionesCalificacion.TabIndex = 0
             Me.lblObservacionesCalificacion.Text = "CERTIFICACIONES SISTEMAS DE GESTION DE CALIDAD:"
             '

@@ -1,8 +1,8 @@
 ﻿Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.PROVEEDORES
     <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
     Partial Class FormMantenimientoProveedorCalificado
-        Inherits System.Windows.Forms.Form
-
+        'Inherits System.Windows.Forms.Form
+        Inherits Krypton.Toolkit.KryptonForm
         'Form reemplaza a Dispose para limpiar la lista de componentes.
         <System.Diagnostics.DebuggerNonUserCode()> _
         Protected Overrides Sub Dispose(ByVal disposing As Boolean)
@@ -23,9 +23,9 @@
         'No lo modifique con el editor de código.
         <System.Diagnostics.DebuggerStepThrough()> _
         Private Sub InitializeComponent()
+            Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormMantenimientoProveedorCalificado))
-            Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Me.gbProveedorCalificado = New System.Windows.Forms.GroupBox()
             Me.lblIdPaises = New System.Windows.Forms.Label()
             Me.lblIdProvincia = New System.Windows.Forms.Label()
@@ -128,7 +128,7 @@
             Me.gbProveedorCalificado.Controls.Add(Me.dtpFechaInicio)
             Me.gbProveedorCalificado.Controls.Add(Me.lblFechaInicio)
             Me.gbProveedorCalificado.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.gbProveedorCalificado.Location = New System.Drawing.Point(3, 125)
+            Me.gbProveedorCalificado.Location = New System.Drawing.Point(3, 134)
             Me.gbProveedorCalificado.Name = "gbProveedorCalificado"
             Me.gbProveedorCalificado.Size = New System.Drawing.Size(699, 182)
             Me.gbProveedorCalificado.TabIndex = 0
@@ -463,7 +463,7 @@
             Me.gbProveedor.Controls.Add(Me.lblNombreComercialProveedorGeneral)
             Me.gbProveedor.Controls.Add(Me.txtNombreComercialProveedorGeneral)
             Me.gbProveedor.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.gbProveedor.Location = New System.Drawing.Point(3, 26)
+            Me.gbProveedor.Location = New System.Drawing.Point(3, 34)
             Me.gbProveedor.Name = "gbProveedor"
             Me.gbProveedor.Size = New System.Drawing.Size(699, 99)
             Me.gbProveedor.TabIndex = 25
@@ -472,13 +472,13 @@
             '
             'btnBuscarProveedorCalificado
             '
-            Me.btnBuscarProveedorCalificado.Image = CType(resources.GetObject("btnBuscarProveedorCalificado.Image"), System.Drawing.Image)
-            Me.btnBuscarProveedorCalificado.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+            Me.btnBuscarProveedorCalificado.FlatAppearance.BorderSize = 0
+            Me.btnBuscarProveedorCalificado.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+            Me.btnBuscarProveedorCalificado.Image = Global.syscisepro.My.Resources.Resources.search_24dp_FILL0_wght400_GRAD0_opsz24__2_
             Me.btnBuscarProveedorCalificado.Location = New System.Drawing.Point(619, 14)
             Me.btnBuscarProveedorCalificado.Name = "btnBuscarProveedorCalificado"
-            Me.btnBuscarProveedorCalificado.Size = New System.Drawing.Size(75, 23)
+            Me.btnBuscarProveedorCalificado.Size = New System.Drawing.Size(44, 23)
             Me.btnBuscarProveedorCalificado.TabIndex = 24
-            Me.btnBuscarProveedorCalificado.Text = "Buscar"
             Me.btnBuscarProveedorCalificado.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
             Me.btnBuscarProveedorCalificado.UseVisualStyleBackColor = True
             '
@@ -572,7 +572,7 @@
             Me.panelAgregarEliminar.Controls.Add(Me.lblEtiquetaContactosProveedor)
             Me.panelAgregarEliminar.Controls.Add(Me.btnEliminar)
             Me.panelAgregarEliminar.Controls.Add(Me.btnAgregar)
-            Me.panelAgregarEliminar.Location = New System.Drawing.Point(3, 309)
+            Me.panelAgregarEliminar.Location = New System.Drawing.Point(3, 316)
             Me.panelAgregarEliminar.Name = "panelAgregarEliminar"
             Me.panelAgregarEliminar.Size = New System.Drawing.Size(699, 26)
             Me.panelAgregarEliminar.TabIndex = 29
@@ -589,19 +589,23 @@
             '
             'btnEliminar
             '
-            Me.btnEliminar.Image = CType(resources.GetObject("btnEliminar.Image"), System.Drawing.Image)
-            Me.btnEliminar.Location = New System.Drawing.Point(665, 0)
+            Me.btnEliminar.FlatAppearance.BorderSize = 0
+            Me.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+            Me.btnEliminar.Image = Global.syscisepro.My.Resources.Resources.do_not_disturb_on_24dp_FILL0_wght400_GRAD0_opsz24
+            Me.btnEliminar.Location = New System.Drawing.Point(665, -1)
             Me.btnEliminar.Name = "btnEliminar"
-            Me.btnEliminar.Size = New System.Drawing.Size(32, 25)
+            Me.btnEliminar.Size = New System.Drawing.Size(27, 27)
             Me.btnEliminar.TabIndex = 1
             Me.btnEliminar.UseVisualStyleBackColor = True
             '
             'btnAgregar
             '
-            Me.btnAgregar.Image = CType(resources.GetObject("btnAgregar.Image"), System.Drawing.Image)
-            Me.btnAgregar.Location = New System.Drawing.Point(634, 0)
+            Me.btnAgregar.FlatAppearance.BorderSize = 0
+            Me.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+            Me.btnAgregar.Image = Global.syscisepro.My.Resources.Resources.add_circle_24dp_FILL0_wght400_GRAD0_opsz24__3_
+            Me.btnAgregar.Location = New System.Drawing.Point(634, -1)
             Me.btnAgregar.Name = "btnAgregar"
-            Me.btnAgregar.Size = New System.Drawing.Size(32, 25)
+            Me.btnAgregar.Size = New System.Drawing.Size(27, 27)
             Me.btnAgregar.TabIndex = 0
             Me.btnAgregar.UseVisualStyleBackColor = True
             '
@@ -610,20 +614,20 @@
             Me.dgvContactosProveedorCalificado.AllowUserToAddRows = False
             Me.dgvContactosProveedorCalificado.AllowUserToDeleteRows = False
             Me.dgvContactosProveedorCalificado.AllowUserToResizeRows = False
-            DataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-            Me.dgvContactosProveedorCalificado.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle3
+            DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+            Me.dgvContactosProveedorCalificado.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
             Me.dgvContactosProveedorCalificado.BackgroundColor = System.Drawing.Color.White
             Me.dgvContactosProveedorCalificado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
             Me.dgvContactosProveedorCalificado.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.idContactoProveedorCalificado, Me.nombresContactoProveedorCalificado, Me.apellidosContactoProveedorCalificado, Me.cargoContactoProveedorCalificado, Me.telefonoContactoProveedorCalificado, Me.celularContactoProveedorCalificado, Me.emailContactoProveedorCalificado, Me.estadoContactoProveedorCalificado, Me.idProveedorGeneral})
-            DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-            DataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window
-            DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText
-            DataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(123, Byte), Integer))
-            DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-            DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-            Me.dgvContactosProveedorCalificado.DefaultCellStyle = DataGridViewCellStyle4
-            Me.dgvContactosProveedorCalificado.Location = New System.Drawing.Point(3, 338)
+            DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+            DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
+            DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
+            DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(123, Byte), Integer))
+            DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+            DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+            Me.dgvContactosProveedorCalificado.DefaultCellStyle = DataGridViewCellStyle2
+            Me.dgvContactosProveedorCalificado.Location = New System.Drawing.Point(3, 344)
             Me.dgvContactosProveedorCalificado.Name = "dgvContactosProveedorCalificado"
             Me.dgvContactosProveedorCalificado.ReadOnly = True
             Me.dgvContactosProveedorCalificado.RowHeadersVisible = False
@@ -687,19 +691,19 @@
             '
             'MenuStrip1
             '
+            Me.MenuStrip1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
             Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnNuevoProveedorCalificado, Me.btnGuardarProveedorCalificado, Me.btnCancelarProveedorCalificado})
             Me.MenuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow
             Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
             Me.MenuStrip1.Name = "MenuStrip1"
             Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(7, 2, 0, 2)
-            Me.MenuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
-            Me.MenuStrip1.Size = New System.Drawing.Size(704, 24)
+            Me.MenuStrip1.Size = New System.Drawing.Size(704, 32)
             Me.MenuStrip1.TabIndex = 189
             Me.MenuStrip1.Text = "msIngresoBodega"
             '
             'btnNuevoProveedorCalificado
             '
-            Me.btnNuevoProveedorCalificado.Image = Global.syscisepro.My.Resources.Resources.NuevoRegistro
+            Me.btnNuevoProveedorCalificado.Image = Global.syscisepro.My.Resources.Resources.add_circle_24dp_FILL0_wght400_GRAD0_opsz24__3_
             Me.btnNuevoProveedorCalificado.Name = "btnNuevoProveedorCalificado"
             Me.btnNuevoProveedorCalificado.Size = New System.Drawing.Size(74, 20)
             Me.btnNuevoProveedorCalificado.Text = "NUEVO"
@@ -708,18 +712,20 @@
             '
             Me.btnGuardarProveedorCalificado.Enabled = False
             Me.btnGuardarProveedorCalificado.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnGuardarProveedorCalificado.Image = Global.syscisepro.My.Resources.Resources.GuardarRegistro
+            Me.btnGuardarProveedorCalificado.Image = Global.syscisepro.My.Resources.Resources.save_24dp_FILL0_wght400_GRAD0_opsz24__2_
+            Me.btnGuardarProveedorCalificado.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnGuardarProveedorCalificado.Name = "btnGuardarProveedorCalificado"
-            Me.btnGuardarProveedorCalificado.Size = New System.Drawing.Size(87, 20)
+            Me.btnGuardarProveedorCalificado.Size = New System.Drawing.Size(95, 28)
             Me.btnGuardarProveedorCalificado.Text = "GUARDAR"
             '
             'btnCancelarProveedorCalificado
             '
             Me.btnCancelarProveedorCalificado.Enabled = False
             Me.btnCancelarProveedorCalificado.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnCancelarProveedorCalificado.Image = Global.syscisepro.My.Resources.Resources.cancel
+            Me.btnCancelarProveedorCalificado.Image = Global.syscisepro.My.Resources.Resources.cancel_24dp_FILL0_wght400_GRAD0_opsz24
+            Me.btnCancelarProveedorCalificado.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnCancelarProveedorCalificado.Name = "btnCancelarProveedorCalificado"
-            Me.btnCancelarProveedorCalificado.Size = New System.Drawing.Size(89, 20)
+            Me.btnCancelarProveedorCalificado.Size = New System.Drawing.Size(97, 28)
             Me.btnCancelarProveedorCalificado.Text = "CANCELAR"
             '
             'FormMantenimientoProveedorCalificado
@@ -727,16 +733,19 @@
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.BackColor = System.Drawing.Color.White
-            Me.ClientSize = New System.Drawing.Size(704, 520)
+            Me.ClientSize = New System.Drawing.Size(704, 526)
             Me.Controls.Add(Me.MenuStrip1)
             Me.Controls.Add(Me.dgvContactosProveedorCalificado)
             Me.Controls.Add(Me.panelAgregarEliminar)
             Me.Controls.Add(Me.gbProveedor)
             Me.Controls.Add(Me.gbProveedorCalificado)
-            Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
             Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
             Me.Name = "FormMantenimientoProveedorCalificado"
             Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+            Me.StateActive.Border.DrawBorders = CType((((Krypton.Toolkit.PaletteDrawBorders.Top Or Krypton.Toolkit.PaletteDrawBorders.Bottom) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Left) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Right), Krypton.Toolkit.PaletteDrawBorders)
+            Me.StateActive.Border.Rounding = 5.0!
             Me.Text = "MANTENIMIENTO PROVEEDOR CALIFICADO"
             Me.gbProveedorCalificado.ResumeLayout(False)
             Me.gbProveedorCalificado.PerformLayout()

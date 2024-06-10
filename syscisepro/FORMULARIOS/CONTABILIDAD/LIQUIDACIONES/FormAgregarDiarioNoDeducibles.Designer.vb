@@ -1,8 +1,8 @@
 ﻿Namespace FORMULARIOS.CONTABILIDAD.LIQUIDACIONES
     <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
     Partial Class FormAgregarDiarioNoDeducibles
-        Inherits System.Windows.Forms.Form
-
+        'Inherits System.Windows.Forms.Form
+        Inherits Krypton.Toolkit.KryptonForm
         'Form reemplaza a Dispose para limpiar la lista de componentes.
         <System.Diagnostics.DebuggerNonUserCode()> _
         Protected Overrides Sub Dispose(ByVal disposing As Boolean)
@@ -63,7 +63,7 @@
             Me.gbRegistro.Controls.Add(Me.txtDetalleAsiento)
             Me.gbRegistro.Controls.Add(Me.txtValorHaberAsiento)
             Me.gbRegistro.Controls.Add(Me.txtValorDebeAsiento)
-            Me.gbRegistro.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.gbRegistro.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.gbRegistro.Location = New System.Drawing.Point(1, 62)
             Me.gbRegistro.Name = "gbRegistro"
             Me.gbRegistro.Size = New System.Drawing.Size(594, 183)
@@ -73,125 +73,133 @@
             '
             'txtConceptoAsiento
             '
-            Me.txtConceptoAsiento.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtConceptoAsiento.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtConceptoAsiento.Location = New System.Drawing.Point(297, 46)
             Me.txtConceptoAsiento.Name = "txtConceptoAsiento"
-            Me.txtConceptoAsiento.Size = New System.Drawing.Size(289, 22)
+            Me.txtConceptoAsiento.Size = New System.Drawing.Size(289, 21)
             Me.txtConceptoAsiento.TabIndex = 35
             '
             'cmbCentroCosto
             '
+            Me.cmbCentroCosto.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cmbCentroCosto.FormattingEnabled = True
             Me.cmbCentroCosto.Location = New System.Drawing.Point(9, 152)
             Me.cmbCentroCosto.Name = "cmbCentroCosto"
-            Me.cmbCentroCosto.Size = New System.Drawing.Size(399, 22)
+            Me.cmbCentroCosto.Size = New System.Drawing.Size(399, 21)
             Me.cmbCentroCosto.TabIndex = 34
             '
             'lblValorHaberAsiento
             '
             Me.lblValorHaberAsiento.AutoSize = True
+            Me.lblValorHaberAsiento.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.lblValorHaberAsiento.Location = New System.Drawing.Point(503, 135)
             Me.lblValorHaberAsiento.Name = "lblValorHaberAsiento"
-            Me.lblValorHaberAsiento.Size = New System.Drawing.Size(42, 14)
+            Me.lblValorHaberAsiento.Size = New System.Drawing.Size(42, 13)
             Me.lblValorHaberAsiento.TabIndex = 32
             Me.lblValorHaberAsiento.Text = "HABER"
             '
             'lblValorDebeAsiento
             '
             Me.lblValorDebeAsiento.AutoSize = True
+            Me.lblValorDebeAsiento.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.lblValorDebeAsiento.Location = New System.Drawing.Point(414, 135)
             Me.lblValorDebeAsiento.Name = "lblValorDebeAsiento"
-            Me.lblValorDebeAsiento.Size = New System.Drawing.Size(35, 14)
+            Me.lblValorDebeAsiento.Size = New System.Drawing.Size(33, 13)
             Me.lblValorDebeAsiento.TabIndex = 31
             Me.lblValorDebeAsiento.Text = "DEBE"
             '
             'lblCentroCosto
             '
             Me.lblCentroCosto.AutoSize = True
+            Me.lblCentroCosto.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.lblCentroCosto.Location = New System.Drawing.Point(6, 135)
             Me.lblCentroCosto.Name = "lblCentroCosto"
-            Me.lblCentroCosto.Size = New System.Drawing.Size(91, 14)
+            Me.lblCentroCosto.Size = New System.Drawing.Size(90, 13)
             Me.lblCentroCosto.TabIndex = 30
             Me.lblCentroCosto.Text = "CENTRO COSTO"
             '
             'lblDetalleAsiento
             '
             Me.lblDetalleAsiento.AutoSize = True
+            Me.lblDetalleAsiento.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.lblDetalleAsiento.Location = New System.Drawing.Point(6, 82)
             Me.lblDetalleAsiento.Name = "lblDetalleAsiento"
-            Me.lblDetalleAsiento.Size = New System.Drawing.Size(56, 14)
+            Me.lblDetalleAsiento.Size = New System.Drawing.Size(52, 13)
             Me.lblDetalleAsiento.TabIndex = 26
             Me.lblDetalleAsiento.Text = "DETALLE"
             '
             'lblConceptoAsiento
             '
             Me.lblConceptoAsiento.AutoSize = True
+            Me.lblConceptoAsiento.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.lblConceptoAsiento.Location = New System.Drawing.Point(294, 27)
             Me.lblConceptoAsiento.Name = "lblConceptoAsiento"
-            Me.lblConceptoAsiento.Size = New System.Drawing.Size(63, 14)
+            Me.lblConceptoAsiento.Size = New System.Drawing.Size(65, 13)
             Me.lblConceptoAsiento.TabIndex = 24
             Me.lblConceptoAsiento.Text = "CONCEPTO"
             '
             'lblNombreCuentaAsiento
             '
             Me.lblNombreCuentaAsiento.AutoSize = True
+            Me.lblNombreCuentaAsiento.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.lblNombreCuentaAsiento.Location = New System.Drawing.Point(115, 27)
             Me.lblNombreCuentaAsiento.Name = "lblNombreCuentaAsiento"
-            Me.lblNombreCuentaAsiento.Size = New System.Drawing.Size(98, 14)
+            Me.lblNombreCuentaAsiento.Size = New System.Drawing.Size(98, 13)
             Me.lblNombreCuentaAsiento.TabIndex = 23
             Me.lblNombreCuentaAsiento.Text = "NOMBRE CUENTA"
             '
             'lblNumeroCuentaAsiento
             '
             Me.lblNumeroCuentaAsiento.AutoSize = True
+            Me.lblNumeroCuentaAsiento.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.lblNumeroCuentaAsiento.Location = New System.Drawing.Point(6, 27)
             Me.lblNumeroCuentaAsiento.Name = "lblNumeroCuentaAsiento"
-            Me.lblNumeroCuentaAsiento.Size = New System.Drawing.Size(63, 14)
+            Me.lblNumeroCuentaAsiento.Size = New System.Drawing.Size(59, 13)
             Me.lblNumeroCuentaAsiento.TabIndex = 22
             Me.lblNumeroCuentaAsiento.Text = "# CUENTA"
             '
             'txtCodCuentaAsiento
             '
-            Me.txtCodCuentaAsiento.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtCodCuentaAsiento.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtCodCuentaAsiento.Location = New System.Drawing.Point(5, 46)
             Me.txtCodCuentaAsiento.Name = "txtCodCuentaAsiento"
-            Me.txtCodCuentaAsiento.Size = New System.Drawing.Size(103, 22)
+            Me.txtCodCuentaAsiento.Size = New System.Drawing.Size(103, 21)
             Me.txtCodCuentaAsiento.TabIndex = 4
             Me.txtCodCuentaAsiento.Text = "# CUENTA"
             '
             'txtNombreCuentaAsiento
             '
-            Me.txtNombreCuentaAsiento.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtNombreCuentaAsiento.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtNombreCuentaAsiento.Location = New System.Drawing.Point(114, 46)
             Me.txtNombreCuentaAsiento.Name = "txtNombreCuentaAsiento"
-            Me.txtNombreCuentaAsiento.Size = New System.Drawing.Size(174, 22)
+            Me.txtNombreCuentaAsiento.Size = New System.Drawing.Size(174, 21)
             Me.txtNombreCuentaAsiento.TabIndex = 5
             Me.txtNombreCuentaAsiento.Text = "NOM CUENTA"
             '
             'txtDetalleAsiento
             '
-            Me.txtDetalleAsiento.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtDetalleAsiento.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtDetalleAsiento.Location = New System.Drawing.Point(6, 99)
             Me.txtDetalleAsiento.Name = "txtDetalleAsiento"
-            Me.txtDetalleAsiento.Size = New System.Drawing.Size(581, 22)
+            Me.txtDetalleAsiento.Size = New System.Drawing.Size(581, 21)
             Me.txtDetalleAsiento.TabIndex = 7
             Me.txtDetalleAsiento.Text = "DETALLE"
             '
             'txtValorHaberAsiento
             '
-            Me.txtValorHaberAsiento.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtValorHaberAsiento.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtValorHaberAsiento.Location = New System.Drawing.Point(503, 152)
             Me.txtValorHaberAsiento.Name = "txtValorHaberAsiento"
-            Me.txtValorHaberAsiento.Size = New System.Drawing.Size(83, 22)
+            Me.txtValorHaberAsiento.Size = New System.Drawing.Size(83, 21)
             Me.txtValorHaberAsiento.TabIndex = 13
             Me.txtValorHaberAsiento.Text = "0.00"
             '
             'txtValorDebeAsiento
             '
-            Me.txtValorDebeAsiento.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtValorDebeAsiento.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtValorDebeAsiento.Location = New System.Drawing.Point(414, 152)
             Me.txtValorDebeAsiento.Name = "txtValorDebeAsiento"
-            Me.txtValorDebeAsiento.Size = New System.Drawing.Size(83, 22)
+            Me.txtValorDebeAsiento.Size = New System.Drawing.Size(83, 21)
             Me.txtValorDebeAsiento.TabIndex = 12
             Me.txtValorDebeAsiento.Text = "0.00"
             '
@@ -200,7 +208,7 @@
             Me.gbComandos.BackColor = System.Drawing.Color.White
             Me.gbComandos.Controls.Add(Me.btnCancelar)
             Me.gbComandos.Controls.Add(Me.btnEnviar)
-            Me.gbComandos.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.gbComandos.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.gbComandos.Location = New System.Drawing.Point(1, 2)
             Me.gbComandos.Name = "gbComandos"
             Me.gbComandos.Size = New System.Drawing.Size(594, 60)
@@ -214,13 +222,11 @@
             Me.btnCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel
             Me.btnCancelar.Enabled = False
             Me.btnCancelar.Font = New System.Drawing.Font("Consolas", 6.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnCancelar.Image = CType(resources.GetObject("btnCancelar.Image"), System.Drawing.Image)
-            Me.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.TopCenter
+            Me.btnCancelar.Image = Global.syscisepro.My.Resources.Resources.cancel_24dp_FILL0_wght400_GRAD0_opsz24
             Me.btnCancelar.Location = New System.Drawing.Point(531, 12)
             Me.btnCancelar.Name = "btnCancelar"
             Me.btnCancelar.Size = New System.Drawing.Size(58, 43)
             Me.btnCancelar.TabIndex = 20
-            Me.btnCancelar.Text = "CANCELAR SALIR"
             Me.btnCancelar.TextAlign = System.Drawing.ContentAlignment.BottomCenter
             Me.btnCancelar.UseVisualStyleBackColor = False
             '
@@ -230,13 +236,11 @@
             Me.btnEnviar.DialogResult = System.Windows.Forms.DialogResult.OK
             Me.btnEnviar.Enabled = False
             Me.btnEnviar.Font = New System.Drawing.Font("Consolas", 6.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnEnviar.Image = CType(resources.GetObject("btnEnviar.Image"), System.Drawing.Image)
-            Me.btnEnviar.ImageAlign = System.Drawing.ContentAlignment.TopCenter
+            Me.btnEnviar.Image = Global.syscisepro.My.Resources.Resources.check_circle_24dp_FILL0_wght400_GRAD0_opsz24__3_
             Me.btnEnviar.Location = New System.Drawing.Point(474, 12)
             Me.btnEnviar.Name = "btnEnviar"
             Me.btnEnviar.Size = New System.Drawing.Size(58, 43)
             Me.btnEnviar.TabIndex = 19
-            Me.btnEnviar.Text = "REVISION CORRECTA"
             Me.btnEnviar.TextAlign = System.Drawing.ContentAlignment.BottomCenter
             Me.btnEnviar.UseVisualStyleBackColor = False
             '
@@ -254,6 +258,10 @@
             Me.MinimizeBox = False
             Me.Name = "FormAgregarDiarioNoDeducibles"
             Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+            Me.StateActive.Border.DrawBorders = CType((((Krypton.Toolkit.PaletteDrawBorders.Top Or Krypton.Toolkit.PaletteDrawBorders.Bottom) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Left) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Right), Krypton.Toolkit.PaletteDrawBorders)
+            Me.StateActive.Border.Rounding = 5.0!
             Me.Text = "AGREGAR NO DEDUCIBLES A LIBRO DIARIO"
             Me.gbRegistro.ResumeLayout(False)
             Me.gbRegistro.PerformLayout()

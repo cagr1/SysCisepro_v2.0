@@ -1,8 +1,8 @@
 ﻿Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
     <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
     Partial Class FormPagoComprobantesCompra
-        Inherits System.Windows.Forms.Form
-
+        'Inherits System.Windows.Forms.Form
+        Inherits Krypton.Toolkit.KryptonForm
         'Form reemplaza a Dispose para limpiar la lista de componentes.
         <System.Diagnostics.DebuggerNonUserCode()> _
         Protected Overrides Sub Dispose(ByVal disposing As Boolean)
@@ -120,8 +120,8 @@
             Me.gbNuevoPagoComprobanteCompra.Controls.Add(Me.lblSeparador1)
             Me.gbNuevoPagoComprobanteCompra.Controls.Add(Me.Label1)
             Me.gbNuevoPagoComprobanteCompra.Controls.Add(Me.Label2)
-            Me.gbNuevoPagoComprobanteCompra.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.gbNuevoPagoComprobanteCompra.Location = New System.Drawing.Point(812, 26)
+            Me.gbNuevoPagoComprobanteCompra.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.gbNuevoPagoComprobanteCompra.Location = New System.Drawing.Point(812, 33)
             Me.gbNuevoPagoComprobanteCompra.Name = "gbNuevoPagoComprobanteCompra"
             Me.gbNuevoPagoComprobanteCompra.Size = New System.Drawing.Size(305, 168)
             Me.gbNuevoPagoComprobanteCompra.TabIndex = 86
@@ -142,7 +142,7 @@
             Me.lblNuevoSaldoComprobanteCompra.AutoSize = True
             Me.lblNuevoSaldoComprobanteCompra.Location = New System.Drawing.Point(6, 141)
             Me.lblNuevoSaldoComprobanteCompra.Name = "lblNuevoSaldoComprobanteCompra"
-            Me.lblNuevoSaldoComprobanteCompra.Size = New System.Drawing.Size(173, 13)
+            Me.lblNuevoSaldoComprobanteCompra.Size = New System.Drawing.Size(169, 13)
             Me.lblNuevoSaldoComprobanteCompra.TabIndex = 7
             Me.lblNuevoSaldoComprobanteCompra.Text = "NUEVO SALDO COMP. COMPRA:"
             '
@@ -151,7 +151,7 @@
             Me.lblMontoPagoComprobanteCompra.AutoSize = True
             Me.lblMontoPagoComprobanteCompra.Location = New System.Drawing.Point(6, 102)
             Me.lblMontoPagoComprobanteCompra.Name = "lblMontoPagoComprobanteCompra"
-            Me.lblMontoPagoComprobanteCompra.Size = New System.Drawing.Size(185, 13)
+            Me.lblMontoPagoComprobanteCompra.Size = New System.Drawing.Size(184, 13)
             Me.lblMontoPagoComprobanteCompra.TabIndex = 6
             Me.lblMontoPagoComprobanteCompra.Text = "MONTO A PAGAR COMP. COMPRA:"
             '
@@ -160,7 +160,7 @@
             Me.lblSaldoAnteriorComprobanteCompra.AutoSize = True
             Me.lblSaldoAnteriorComprobanteCompra.Location = New System.Drawing.Point(6, 64)
             Me.lblSaldoAnteriorComprobanteCompra.Name = "lblSaldoAnteriorComprobanteCompra"
-            Me.lblSaldoAnteriorComprobanteCompra.Size = New System.Drawing.Size(188, 13)
+            Me.lblSaldoAnteriorComprobanteCompra.Size = New System.Drawing.Size(186, 13)
             Me.lblSaldoAnteriorComprobanteCompra.TabIndex = 5
             Me.lblSaldoAnteriorComprobanteCompra.Text = "SALDO ANTERIOR COMP. COMPRA:"
             '
@@ -169,7 +169,7 @@
             Me.lblNumeroPagoComprobanteCompra.AutoSize = True
             Me.lblNumeroPagoComprobanteCompra.Location = New System.Drawing.Point(6, 27)
             Me.lblNumeroPagoComprobanteCompra.Name = "lblNumeroPagoComprobanteCompra"
-            Me.lblNumeroPagoComprobanteCompra.Size = New System.Drawing.Size(153, 13)
+            Me.lblNumeroPagoComprobanteCompra.Size = New System.Drawing.Size(150, 13)
             Me.lblNumeroPagoComprobanteCompra.TabIndex = 4
             Me.lblNumeroPagoComprobanteCompra.Text = "NRO PAGO COMP. COMPRA:"
             '
@@ -258,7 +258,7 @@
             Me.GroupBox2.BackColor = System.Drawing.Color.White
             Me.GroupBox2.Controls.Add(Me.dgvPagosComprobantesCompra)
             Me.GroupBox2.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.GroupBox2.Location = New System.Drawing.Point(812, 194)
+            Me.GroupBox2.Location = New System.Drawing.Point(812, 201)
             Me.GroupBox2.Name = "GroupBox2"
             Me.GroupBox2.Size = New System.Drawing.Size(305, 389)
             Me.GroupBox2.TabIndex = 87
@@ -304,8 +304,8 @@
             Me.GroupBox1.Controls.Add(Me.Label6)
             Me.GroupBox1.Controls.Add(Me.lblIdComprobanteCompra)
             Me.GroupBox1.Controls.Add(Me.dgvComprobantesCompra)
-            Me.GroupBox1.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.GroupBox1.Location = New System.Drawing.Point(1, 88)
+            Me.GroupBox1.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.GroupBox1.Location = New System.Drawing.Point(1, 97)
             Me.GroupBox1.Name = "GroupBox1"
             Me.GroupBox1.Size = New System.Drawing.Size(811, 495)
             Me.GroupBox1.TabIndex = 88
@@ -321,7 +321,7 @@
             Me.gbDatosComprobanteCompra.Controls.Add(Me.Label27)
             Me.gbDatosComprobanteCompra.Controls.Add(Me.Label28)
             Me.gbDatosComprobanteCompra.Controls.Add(Me.Label30)
-            Me.gbDatosComprobanteCompra.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.gbDatosComprobanteCompra.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.gbDatosComprobanteCompra.Location = New System.Drawing.Point(9, 14)
             Me.gbDatosComprobanteCompra.Name = "gbDatosComprobanteCompra"
             Me.gbDatosComprobanteCompra.Size = New System.Drawing.Size(170, 83)
@@ -334,7 +334,7 @@
             Me.lblTipoComprobanteCompra.AutoSize = True
             Me.lblTipoComprobanteCompra.Location = New System.Drawing.Point(55, 52)
             Me.lblTipoComprobanteCompra.Name = "lblTipoComprobanteCompra"
-            Me.lblTipoComprobanteCompra.Size = New System.Drawing.Size(25, 13)
+            Me.lblTipoComprobanteCompra.Size = New System.Drawing.Size(16, 13)
             Me.lblTipoComprobanteCompra.TabIndex = 25
             Me.lblTipoComprobanteCompra.Text = "..."
             Me.lblTipoComprobanteCompra.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -344,7 +344,7 @@
             Me.lblFechaComprobanteCompra.AutoSize = True
             Me.lblFechaComprobanteCompra.Location = New System.Drawing.Point(55, 34)
             Me.lblFechaComprobanteCompra.Name = "lblFechaComprobanteCompra"
-            Me.lblFechaComprobanteCompra.Size = New System.Drawing.Size(67, 13)
+            Me.lblFechaComprobanteCompra.Size = New System.Drawing.Size(65, 13)
             Me.lblFechaComprobanteCompra.TabIndex = 23
             Me.lblFechaComprobanteCompra.Text = "00/00/0000"
             Me.lblFechaComprobanteCompra.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -402,7 +402,7 @@
             Me.gbComprobanteRetencion.Controls.Add(Me.Label16)
             Me.gbComprobanteRetencion.Controls.Add(Me.Label17)
             Me.gbComprobanteRetencion.Controls.Add(Me.Label18)
-            Me.gbComprobanteRetencion.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.gbComprobanteRetencion.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.gbComprobanteRetencion.Location = New System.Drawing.Point(492, 14)
             Me.gbComprobanteRetencion.Name = "gbComprobanteRetencion"
             Me.gbComprobanteRetencion.Size = New System.Drawing.Size(311, 83)
@@ -417,7 +417,7 @@
             Me.txtTotalComprobanteRetencion.Enabled = False
             Me.txtTotalComprobanteRetencion.Location = New System.Drawing.Point(234, 52)
             Me.txtTotalComprobanteRetencion.Name = "txtTotalComprobanteRetencion"
-            Me.txtTotalComprobanteRetencion.Size = New System.Drawing.Size(56, 13)
+            Me.txtTotalComprobanteRetencion.Size = New System.Drawing.Size(56, 14)
             Me.txtTotalComprobanteRetencion.TabIndex = 35
             Me.txtTotalComprobanteRetencion.Text = "0.00"
             Me.txtTotalComprobanteRetencion.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -429,7 +429,7 @@
             Me.txtValorRetencionIVA.Enabled = False
             Me.txtValorRetencionIVA.Location = New System.Drawing.Point(234, 34)
             Me.txtValorRetencionIVA.Name = "txtValorRetencionIVA"
-            Me.txtValorRetencionIVA.Size = New System.Drawing.Size(56, 13)
+            Me.txtValorRetencionIVA.Size = New System.Drawing.Size(56, 14)
             Me.txtValorRetencionIVA.TabIndex = 34
             Me.txtValorRetencionIVA.Text = "0.00"
             Me.txtValorRetencionIVA.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -441,7 +441,7 @@
             Me.txtValorRetencionFuente.Enabled = False
             Me.txtValorRetencionFuente.Location = New System.Drawing.Point(234, 16)
             Me.txtValorRetencionFuente.Name = "txtValorRetencionFuente"
-            Me.txtValorRetencionFuente.Size = New System.Drawing.Size(56, 13)
+            Me.txtValorRetencionFuente.Size = New System.Drawing.Size(56, 14)
             Me.txtValorRetencionFuente.TabIndex = 33
             Me.txtValorRetencionFuente.Text = "0.00"
             Me.txtValorRetencionFuente.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -452,7 +452,7 @@
             Me.lblFechaComprobanteRetencion.Enabled = False
             Me.lblFechaComprobanteRetencion.Location = New System.Drawing.Point(48, 34)
             Me.lblFechaComprobanteRetencion.Name = "lblFechaComprobanteRetencion"
-            Me.lblFechaComprobanteRetencion.Size = New System.Drawing.Size(67, 13)
+            Me.lblFechaComprobanteRetencion.Size = New System.Drawing.Size(65, 13)
             Me.lblFechaComprobanteRetencion.TabIndex = 23
             Me.lblFechaComprobanteRetencion.Text = "00/00/0000"
             Me.lblFechaComprobanteRetencion.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -533,7 +533,7 @@
             Me.gbValoresComprobanteCompra.Controls.Add(Me.lblSubtotal12OrdenCompra)
             Me.gbValoresComprobanteCompra.Controls.Add(Me.txtSubtotal12)
             Me.gbValoresComprobanteCompra.Controls.Add(Me.txtSubtotal0)
-            Me.gbValoresComprobanteCompra.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.gbValoresComprobanteCompra.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.gbValoresComprobanteCompra.Location = New System.Drawing.Point(180, 14)
             Me.gbValoresComprobanteCompra.Name = "gbValoresComprobanteCompra"
             Me.gbValoresComprobanteCompra.Size = New System.Drawing.Size(311, 83)
@@ -548,7 +548,7 @@
             Me.txtTotalComprobanteCompra.Enabled = False
             Me.txtTotalComprobanteCompra.Location = New System.Drawing.Point(232, 52)
             Me.txtTotalComprobanteCompra.Name = "txtTotalComprobanteCompra"
-            Me.txtTotalComprobanteCompra.Size = New System.Drawing.Size(59, 13)
+            Me.txtTotalComprobanteCompra.Size = New System.Drawing.Size(59, 14)
             Me.txtTotalComprobanteCompra.TabIndex = 32
             Me.txtTotalComprobanteCompra.Text = "0.00"
             Me.txtTotalComprobanteCompra.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -580,7 +580,7 @@
             Me.txtIvaComprobanteCompra.Enabled = False
             Me.txtIvaComprobanteCompra.Location = New System.Drawing.Point(232, 34)
             Me.txtIvaComprobanteCompra.Name = "txtIvaComprobanteCompra"
-            Me.txtIvaComprobanteCompra.Size = New System.Drawing.Size(59, 13)
+            Me.txtIvaComprobanteCompra.Size = New System.Drawing.Size(59, 14)
             Me.txtIvaComprobanteCompra.TabIndex = 31
             Me.txtIvaComprobanteCompra.Text = "0.00"
             Me.txtIvaComprobanteCompra.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -612,7 +612,7 @@
             Me.txtSubtotalComprobanteCompra.Enabled = False
             Me.txtSubtotalComprobanteCompra.Location = New System.Drawing.Point(232, 16)
             Me.txtSubtotalComprobanteCompra.Name = "txtSubtotalComprobanteCompra"
-            Me.txtSubtotalComprobanteCompra.Size = New System.Drawing.Size(59, 13)
+            Me.txtSubtotalComprobanteCompra.Size = New System.Drawing.Size(59, 14)
             Me.txtSubtotalComprobanteCompra.TabIndex = 30
             Me.txtSubtotalComprobanteCompra.Text = "0.00"
             Me.txtSubtotalComprobanteCompra.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -634,7 +634,7 @@
             Me.txtDescuento.Enabled = False
             Me.txtDescuento.Location = New System.Drawing.Point(91, 52)
             Me.txtDescuento.Name = "txtDescuento"
-            Me.txtDescuento.Size = New System.Drawing.Size(59, 13)
+            Me.txtDescuento.Size = New System.Drawing.Size(59, 14)
             Me.txtDescuento.TabIndex = 29
             Me.txtDescuento.Text = "0.00"
             Me.txtDescuento.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -656,7 +656,7 @@
             Me.txtSubtotal12.Enabled = False
             Me.txtSubtotal12.Location = New System.Drawing.Point(91, 16)
             Me.txtSubtotal12.Name = "txtSubtotal12"
-            Me.txtSubtotal12.Size = New System.Drawing.Size(59, 13)
+            Me.txtSubtotal12.Size = New System.Drawing.Size(59, 14)
             Me.txtSubtotal12.TabIndex = 27
             Me.txtSubtotal12.Text = "0.00"
             Me.txtSubtotal12.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -668,7 +668,7 @@
             Me.txtSubtotal0.Enabled = False
             Me.txtSubtotal0.Location = New System.Drawing.Point(91, 34)
             Me.txtSubtotal0.Name = "txtSubtotal0"
-            Me.txtSubtotal0.Size = New System.Drawing.Size(59, 13)
+            Me.txtSubtotal0.Size = New System.Drawing.Size(59, 14)
             Me.txtSubtotal0.TabIndex = 28
             Me.txtSubtotal0.Text = "0.00"
             Me.txtSubtotal0.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -687,7 +687,7 @@
             Me.Label6.AutoSize = True
             Me.Label6.Location = New System.Drawing.Point(211, 0)
             Me.Label6.Name = "Label6"
-            Me.Label6.Size = New System.Drawing.Size(11, 13)
+            Me.Label6.Size = New System.Drawing.Size(12, 13)
             Me.Label6.TabIndex = 93
             Me.Label6.Text = "/"
             '
@@ -712,7 +712,7 @@
             Me.dgvComprobantesCompra.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
             DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
             DataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window
-            DataGridViewCellStyle5.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle5.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             DataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText
             DataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(123, Byte), Integer))
             DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
@@ -734,8 +734,8 @@
             Me.gbNombreComercialProveedor.BackColor = System.Drawing.Color.White
             Me.gbNombreComercialProveedor.Controls.Add(Me.txtNombreComercialProveedorGeneral)
             Me.gbNombreComercialProveedor.Controls.Add(Me.lblIdProveedorGeneral)
-            Me.gbNombreComercialProveedor.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.gbNombreComercialProveedor.Location = New System.Drawing.Point(1, 26)
+            Me.gbNombreComercialProveedor.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.gbNombreComercialProveedor.Location = New System.Drawing.Point(1, 33)
             Me.gbNombreComercialProveedor.Name = "gbNombreComercialProveedor"
             Me.gbNombreComercialProveedor.Size = New System.Drawing.Size(811, 62)
             Me.gbNombreComercialProveedor.TabIndex = 90
@@ -783,48 +783,52 @@
             '
             'MenuStrip1
             '
+            Me.MenuStrip1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
             Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnNuevo, Me.btnGuardar, Me.btnModificar, Me.btnCancelar})
             Me.MenuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow
             Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
             Me.MenuStrip1.Name = "MenuStrip1"
             Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(7, 2, 0, 2)
-            Me.MenuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
-            Me.MenuStrip1.Size = New System.Drawing.Size(1119, 24)
+            Me.MenuStrip1.Size = New System.Drawing.Size(1117, 32)
             Me.MenuStrip1.TabIndex = 188
             Me.MenuStrip1.Text = "msIngresoBodega"
             '
             'btnNuevo
             '
-            Me.btnNuevo.Image = Global.syscisepro.My.Resources.Resources.NuevoRegistro
+            Me.btnNuevo.Image = Global.syscisepro.My.Resources.Resources.add_circle_24dp_FILL0_wght400_GRAD0_opsz24__3_
+            Me.btnNuevo.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnNuevo.Name = "btnNuevo"
-            Me.btnNuevo.Size = New System.Drawing.Size(74, 20)
+            Me.btnNuevo.Size = New System.Drawing.Size(82, 28)
             Me.btnNuevo.Text = "NUEVO"
             '
             'btnGuardar
             '
             Me.btnGuardar.Enabled = False
             Me.btnGuardar.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnGuardar.Image = Global.syscisepro.My.Resources.Resources.GuardarRegistro
+            Me.btnGuardar.Image = Global.syscisepro.My.Resources.Resources.save_24dp_FILL0_wght400_GRAD0_opsz24__2_
+            Me.btnGuardar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnGuardar.Name = "btnGuardar"
-            Me.btnGuardar.Size = New System.Drawing.Size(87, 20)
+            Me.btnGuardar.Size = New System.Drawing.Size(95, 28)
             Me.btnGuardar.Text = "GUARDAR"
             '
             'btnModificar
             '
             Me.btnModificar.Enabled = False
             Me.btnModificar.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnModificar.Image = Global.syscisepro.My.Resources.Resources.ModificarRegistro
+            Me.btnModificar.Image = Global.syscisepro.My.Resources.Resources.edit_24dp_FILL0_wght400_GRAD0_opsz24__2_
+            Me.btnModificar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnModificar.Name = "btnModificar"
-            Me.btnModificar.Size = New System.Drawing.Size(95, 20)
+            Me.btnModificar.Size = New System.Drawing.Size(103, 28)
             Me.btnModificar.Text = "MODIFICAR"
             '
             'btnCancelar
             '
             Me.btnCancelar.Enabled = False
             Me.btnCancelar.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnCancelar.Image = Global.syscisepro.My.Resources.Resources.cancel
+            Me.btnCancelar.Image = Global.syscisepro.My.Resources.Resources.cancel_24dp_FILL0_wght400_GRAD0_opsz24
+            Me.btnCancelar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnCancelar.Name = "btnCancelar"
-            Me.btnCancelar.Size = New System.Drawing.Size(89, 20)
+            Me.btnCancelar.Size = New System.Drawing.Size(97, 28)
             Me.btnCancelar.Text = "CANCELAR"
             '
             'FormPagoComprobantesCompra
@@ -832,7 +836,7 @@
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.BackColor = System.Drawing.Color.White
-            Me.ClientSize = New System.Drawing.Size(1119, 584)
+            Me.ClientSize = New System.Drawing.Size(1117, 591)
             Me.Controls.Add(Me.MenuStrip1)
             Me.Controls.Add(Me.gbNombreComercialProveedor)
             Me.Controls.Add(Me.GroupBox1)
@@ -844,6 +848,10 @@
             Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
             Me.Name = "FormPagoComprobantesCompra"
             Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+            Me.StateActive.Border.DrawBorders = CType((((Krypton.Toolkit.PaletteDrawBorders.Top Or Krypton.Toolkit.PaletteDrawBorders.Bottom) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Left) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Right), Krypton.Toolkit.PaletteDrawBorders)
+            Me.StateActive.Border.Rounding = 5.0!
             Me.Text = "REGISTROS DE PAGOS DE COMPROBANTES DE COMPRA"
             Me.gbNuevoPagoComprobanteCompra.ResumeLayout(False)
             Me.gbNuevoPagoComprobanteCompra.PerformLayout()

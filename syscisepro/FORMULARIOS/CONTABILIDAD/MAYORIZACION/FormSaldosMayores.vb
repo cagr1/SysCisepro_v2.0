@@ -622,6 +622,7 @@ Namespace FORMULARIOS.CONTABILIDAD.MAYORIZACION
                     MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorCisepro
                     dgvCuentas.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
             End Select
+            dgvCuentas.Font = New Font("Roboto", 8, FontStyle.Regular)
             _sqlCommands = New List(Of SqlCommand)
             _hoy = ValidationForms.FechaActual(_tipoCon)
 

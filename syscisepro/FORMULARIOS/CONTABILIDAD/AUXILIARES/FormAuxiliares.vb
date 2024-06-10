@@ -236,7 +236,7 @@ Namespace FORMULARIOS.CONTABILIDAD.AUXILIARES
                 Case TipoConexion.Asenava
                     Icon = My.Resources.logo_a
                     MenuStrip1.ForeColor = Color.White
-                    MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorAsenava
+                    'MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorAsenava
                     dgvAsientosDiario.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorAsenava
                 Case TipoConexion.Seportpac
                     Icon = My.Resources.logo_s

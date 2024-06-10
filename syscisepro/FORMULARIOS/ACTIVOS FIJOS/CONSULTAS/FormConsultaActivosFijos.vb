@@ -511,5 +511,9 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.CONSULTAS
                 cbxActivo.Enabled = False
             End If
         End Sub
+
+        Private Sub btnBuscar_Click(sender As Object, e As EventArgs) Handles btnBuscar.Click
+
+        End Sub
     End Class
 End Namespace

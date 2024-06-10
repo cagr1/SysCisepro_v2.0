@@ -269,7 +269,7 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
                 Case TipoConexion.Asenava
                     Icon = My.Resources.logo_a
                     MenuStrip1.ForeColor = Color.White
-                    MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorAsenava
+                    'MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorAsenava
                     CrToolStripTextBox1.ForeColor = Color.White
                     CrToolStripTextBox1.BackColor = My.MySettingsProperty.Settings.ColorAsenava
                     dgvEmitidosCobrados.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorAsenava

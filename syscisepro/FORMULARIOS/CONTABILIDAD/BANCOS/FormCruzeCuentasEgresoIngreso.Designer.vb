@@ -920,7 +920,7 @@
             Me.gbBotonesAgregarEditar.Controls.Add(Me.btnEditarValores)
             Me.gbBotonesAgregarEditar.Controls.Add(Me.btnAgregarConceptoComprobante)
             Me.gbBotonesAgregarEditar.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.gbBotonesAgregarEditar.Location = New System.Drawing.Point(1002, 358)
+            Me.gbBotonesAgregarEditar.Location = New System.Drawing.Point(1002, 359)
             Me.gbBotonesAgregarEditar.Name = "gbBotonesAgregarEditar"
             Me.gbBotonesAgregarEditar.Size = New System.Drawing.Size(167, 43)
             Me.gbBotonesAgregarEditar.TabIndex = 116
@@ -1183,7 +1183,6 @@
             Me.Controls.Add(Me.gbPagosFacturaVenta)
             Me.Controls.Add(Me.gbFacturaVenta)
             Me.Controls.Add(Me.gbClienteGeneral)
-            Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
             Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
             Me.Name = "FormCruzeCuentasEgresoIngreso"
             Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen

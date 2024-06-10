@@ -785,6 +785,18 @@ Namespace FORMULARIOS.CONTABILIDAD.SRI
                     dgvDetalleComprobanteRetencionCompra.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
                     dgvDetalleComprobanteRetencionVenta.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
             End Select
+            dgvComprobanteRetencionCompra.Font = New Font("Roboto", 8.25, FontStyle.Regular)
+            dgvAnexoCompras.Font = New Font("Roboto", 8.25, FontStyle.Regular)
+            dgvAnexoRetencionIVA.Font = New Font("Roboto", 8.25, FontStyle.Regular)
+            dgvAnexoRetencionesEfectuaron.Font = New Font("Roboto", 8.25, FontStyle.Regular)
+            dgvAnexoRetencionesFuente.Font = New Font("Roboto", 8.25, FontStyle.Regular)
+            dgvAnexoVentas.Font = New Font("Roboto", 8.25, FontStyle.Regular)
+            dgvComprobanteCompra.Font = New Font("Roboto", 8.25, FontStyle.Regular)
+            dgvComprobantesAnulados.Font = New Font("Roboto", 8.25, FontStyle.Regular)
+            dgvDatosAgrupadosVentas.Font = New Font("Roboto", 8.25, FontStyle.Regular)
+            dgvDetalleComprobanteRetencionCompra.Font = New Font("Roboto", 8.25, FontStyle.Regular)
+            dgvDetalleComprobanteRetencionVenta.Font = New Font("Roboto", 8.25, FontStyle.Regular)
+
         End Sub
     End Class
 End Namespace

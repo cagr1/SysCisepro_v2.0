@@ -594,7 +594,6 @@
             Me.Controls.Add(Me.gbComandos)
             Me.Controls.Add(Me.GroupBox3)
             Me.Controls.Add(Me.GroupBox2)
-            Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
             Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
             Me.Name = "FormLibroBancos"
             Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen

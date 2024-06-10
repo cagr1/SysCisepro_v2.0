@@ -23,9 +23,9 @@
         'No lo modifique con el editor de código.
         <System.Diagnostics.DebuggerStepThrough()> _
         Private Sub InitializeComponent()
-            Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormMantenimientoUsuario))
             Me.Label1 = New System.Windows.Forms.Label()
             Me.txtIdUsuario = New System.Windows.Forms.TextBox()
@@ -215,80 +215,82 @@
             Me.dgvUsuarios.AllowUserToAddRows = False
             Me.dgvUsuarios.AllowUserToDeleteRows = False
             Me.dgvUsuarios.AllowUserToResizeRows = False
-            DataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-            Me.dgvUsuarios.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle7
+            DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+            Me.dgvUsuarios.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
             Me.dgvUsuarios.BackgroundColor = System.Drawing.Color.White
             Me.dgvUsuarios.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
             Me.dgvUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-            DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-            DataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window
-            DataGridViewCellStyle8.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            DataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText
-            DataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(123, Byte), Integer))
-            DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-            DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-            Me.dgvUsuarios.DefaultCellStyle = DataGridViewCellStyle8
+            DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+            DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
+            DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
+            DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(123, Byte), Integer))
+            DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+            DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+            Me.dgvUsuarios.DefaultCellStyle = DataGridViewCellStyle2
             Me.dgvUsuarios.Location = New System.Drawing.Point(0, 146)
             Me.dgvUsuarios.MultiSelect = False
             Me.dgvUsuarios.Name = "dgvUsuarios"
             Me.dgvUsuarios.RowHeadersVisible = False
-            DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-            Me.dgvUsuarios.RowsDefaultCellStyle = DataGridViewCellStyle9
+            DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+            Me.dgvUsuarios.RowsDefaultCellStyle = DataGridViewCellStyle3
             Me.dgvUsuarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
             Me.dgvUsuarios.Size = New System.Drawing.Size(743, 292)
             Me.dgvUsuarios.TabIndex = 18
             '
             'msKardex
             '
+            Me.msKardex.Font = New System.Drawing.Font("Segoe UI", 9.0!)
             Me.msKardex.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem1, Me.tsmNuevo, Me.tsmGuardar, Me.ToolStripMenuItem2, Me.tsmCancelar})
             Me.msKardex.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow
             Me.msKardex.Location = New System.Drawing.Point(0, 0)
             Me.msKardex.Name = "msKardex"
             Me.msKardex.Padding = New System.Windows.Forms.Padding(7, 2, 0, 2)
-            Me.msKardex.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
-            Me.msKardex.Size = New System.Drawing.Size(743, 24)
+            Me.msKardex.Size = New System.Drawing.Size(743, 32)
             Me.msKardex.TabIndex = 181
             Me.msKardex.Text = "msIngresoBodega"
             '
             'ToolStripMenuItem1
             '
             Me.ToolStripMenuItem1.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.ToolStripMenuItem1.Image = Global.syscisepro.My.Resources.Resources.BuscarRegistro
+            Me.ToolStripMenuItem1.Image = Global.syscisepro.My.Resources.Resources.search_24dp_FILL0_wght400_GRAD0_opsz24__2_
             Me.ToolStripMenuItem1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
-            Me.ToolStripMenuItem1.Size = New System.Drawing.Size(140, 20)
-            Me.ToolStripMenuItem1.Text = "LISTAR USUARIOS"
+            Me.ToolStripMenuItem1.Size = New System.Drawing.Size(85, 28)
+            Me.ToolStripMenuItem1.Text = "BUSCAR"
             '
             'tsmNuevo
             '
-            Me.tsmNuevo.Image = CType(resources.GetObject("tsmNuevo.Image"), System.Drawing.Image)
+            Me.tsmNuevo.Image = Global.syscisepro.My.Resources.Resources.add_circle_24dp_FILL0_wght400_GRAD0_opsz24__3_
             Me.tsmNuevo.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.tsmNuevo.Name = "tsmNuevo"
-            Me.tsmNuevo.Size = New System.Drawing.Size(74, 20)
+            Me.tsmNuevo.Size = New System.Drawing.Size(82, 28)
             Me.tsmNuevo.Text = "NUEVO"
             '
             'tsmGuardar
             '
-            Me.tsmGuardar.Image = Global.syscisepro.My.Resources.Resources.GuardarRegistro
+            Me.tsmGuardar.Image = Global.syscisepro.My.Resources.Resources.save_24dp_FILL0_wght400_GRAD0_opsz24__2_
             Me.tsmGuardar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.tsmGuardar.Name = "tsmGuardar"
-            Me.tsmGuardar.Size = New System.Drawing.Size(89, 20)
+            Me.tsmGuardar.Size = New System.Drawing.Size(97, 28)
             Me.tsmGuardar.Text = "GUARDAR"
             '
             'ToolStripMenuItem2
             '
             Me.ToolStripMenuItem2.Enabled = False
-            Me.ToolStripMenuItem2.Image = Global.syscisepro.My.Resources.Resources.ModificarRegistro
+            Me.ToolStripMenuItem2.Image = Global.syscisepro.My.Resources.Resources.edit_document_24dp_FILL0_wght400_GRAD0_opsz24__2_
+            Me.ToolStripMenuItem2.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.ToolStripMenuItem2.Name = "ToolStripMenuItem2"
-            Me.ToolStripMenuItem2.Size = New System.Drawing.Size(72, 20)
+            Me.ToolStripMenuItem2.Size = New System.Drawing.Size(80, 28)
             Me.ToolStripMenuItem2.Text = "EDITAR"
             '
             'tsmCancelar
             '
             Me.tsmCancelar.Enabled = False
-            Me.tsmCancelar.Image = Global.syscisepro.My.Resources.Resources.cancel
+            Me.tsmCancelar.Image = Global.syscisepro.My.Resources.Resources.cancel_24dp_FILL0_wght400_GRAD0_opsz24
+            Me.tsmCancelar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.tsmCancelar.Name = "tsmCancelar"
-            Me.tsmCancelar.Size = New System.Drawing.Size(95, 20)
+            Me.tsmCancelar.Size = New System.Drawing.Size(103, 28)
             Me.tsmCancelar.Text = "CANCELAR"
             '
             'Label7
@@ -304,12 +306,13 @@
             '
             Me.btnPersonal.BackColor = System.Drawing.Color.White
             Me.btnPersonal.Enabled = False
+            Me.btnPersonal.FlatAppearance.BorderSize = 0
+            Me.btnPersonal.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.btnPersonal.Font = New System.Drawing.Font("Consolas", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnPersonal.Image = CType(resources.GetObject("btnPersonal.Image"), System.Drawing.Image)
-            Me.btnPersonal.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+            Me.btnPersonal.Image = Global.syscisepro.My.Resources.Resources.search_24dp_FILL0_wght400_GRAD0_opsz24__2_
             Me.btnPersonal.Location = New System.Drawing.Point(710, 57)
             Me.btnPersonal.Name = "btnPersonal"
-            Me.btnPersonal.Size = New System.Drawing.Size(26, 26)
+            Me.btnPersonal.Size = New System.Drawing.Size(27, 27)
             Me.btnPersonal.TabIndex = 194
             Me.btnPersonal.TextAlign = System.Drawing.ContentAlignment.MiddleRight
             Me.btnPersonal.UseVisualStyleBackColor = False
@@ -388,6 +391,10 @@
             Me.MinimizeBox = False
             Me.Name = "FormMantenimientoUsuario"
             Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+            Me.StateActive.Border.DrawBorders = CType((((Krypton.Toolkit.PaletteDrawBorders.Top Or Krypton.Toolkit.PaletteDrawBorders.Bottom) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Left) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Right), Krypton.Toolkit.PaletteDrawBorders)
+            Me.StateActive.Border.Rounding = 5.0!
             Me.Text = "MANTENIMIENTO DE USUARIOS DEL SISTEMA"
             CType(Me.dgvUsuarios, System.ComponentModel.ISupportInitialize).EndInit()
             Me.msKardex.ResumeLayout(False)

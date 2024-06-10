@@ -413,6 +413,26 @@ Namespace My.Resources
         '''<summary>
         '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property arrow_back_24dp_FILL0_wght400_GRAD0_opsz24() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("arrow_back_24dp_FILL0_wght400_GRAD0_opsz24", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property arrow_forward_24dp_FILL0_wght400_GRAD0_opsz24() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("arrow_forward_24dp_FILL0_wght400_GRAD0_opsz24", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property assured_workload_24dp_FILL0_wght400_GRAD0_opsz24() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("assured_workload_24dp_FILL0_wght400_GRAD0_opsz24", resourceCulture)
@@ -986,6 +1006,26 @@ Namespace My.Resources
         Friend ReadOnly Property checklist_24dp_FILL0_wght400_GRAD0_opsz24__2_() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("checklist_24dp_FILL0_wght400_GRAD0_opsz24__2_", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property chevron_left_24dp_FILL0_wght400_GRAD0_opsz24() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("chevron_left_24dp_FILL0_wght400_GRAD0_opsz24", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property chevron_right_24dp_FILL0_wght400_GRAD0_opsz24() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("chevron_right_24dp_FILL0_wght400_GRAD0_opsz24", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
@@ -2397,6 +2437,16 @@ Namespace My.Resources
             Get
                 Dim obj As Object = ResourceManager.GetObject("logo_s", resourceCulture)
                 Return CType(obj,System.Drawing.Icon)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property logout_24dp_FILL0_wght400_GRAD0_opsz24() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("logout_24dp_FILL0_wght400_GRAD0_opsz24", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
         

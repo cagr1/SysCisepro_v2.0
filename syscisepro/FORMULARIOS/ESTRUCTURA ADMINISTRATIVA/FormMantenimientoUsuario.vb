@@ -287,16 +287,16 @@ Namespace FORMULARIOS.ESTRUCTURA_ADMINISTRATIVA
                 Case TipoConexion.Asenava
                     Icon = My.Resources.logo_a
                     msKardex.ForeColor = Color.White
-                    msKardex.BackColor = My.MySettingsProperty.Settings.ColorAsenava
+                    'msKardex.BackColor = My.MySettingsProperty.Settings.ColorAsenava
                     dgvUsuarios.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorSeportpac
                 Case TipoConexion.Seportpac
                     Icon = My.Resources.logo_s
-                    msKardex.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
+                    'msKardex.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
                     msKardex.ForeColor = Color.White
                     dgvUsuarios.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorSeportpac
                 Case Else
                     Icon = My.Resources.logo_c
-                    msKardex.BackColor = My.MySettingsProperty.Settings.ColorCisepro
+                    'msKardex.BackColor = My.MySettingsProperty.Settings.ColorCisepro
                     msKardex.ForeColor = Color.White
                     dgvUsuarios.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
             End Select

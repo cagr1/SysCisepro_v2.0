@@ -246,7 +246,6 @@
             Me.Controls.Add(Me.dgvComprobantesEgresoBanco)
             Me.Controls.Add(Me.GroupBox1)
             Me.Controls.Add(Me.dgvFacturaVenta)
-            Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
             Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
             Me.Name = "FormCargarComprobantesIngresoBanco"
             Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen

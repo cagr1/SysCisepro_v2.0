@@ -1,8 +1,8 @@
 ﻿Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.ORDEN_DE_COMPRA
     <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
     Partial Class FormOrdenCompra
-        Inherits System.Windows.Forms.Form
-
+        'Inherits System.Windows.Forms.Form
+        Inherits Krypton.Toolkit.KryptonForm
         'Form reemplaza a Dispose para limpiar la lista de componentes.
         <System.Diagnostics.DebuggerNonUserCode()> _
         Protected Overrides Sub Dispose(ByVal disposing As Boolean)
@@ -23,12 +23,12 @@
         'No lo modifique con el editor de código.
         <System.Diagnostics.DebuggerStepThrough()> _
         Private Sub InitializeComponent()
-            Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormOrdenCompra))
-            Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Me.gbProveedor = New System.Windows.Forms.GroupBox()
             Me.lblIdProveedorGeneral = New System.Windows.Forms.Label()
             Me.lblRucCiProveedorGeneral = New System.Windows.Forms.Label()
@@ -64,6 +64,7 @@
             Me.cantidadProductoServicio = New System.Windows.Forms.DataGridViewTextBoxColumn()
             Me.valorUnitarioProductoServicio = New System.Windows.Forms.DataGridViewTextBoxColumn()
             Me.valorTotalProductoServicio = New System.Windows.Forms.DataGridViewTextBoxColumn()
+            Me.IVA = New System.Windows.Forms.DataGridViewTextBoxColumn()
             Me.panelDetalle = New System.Windows.Forms.Panel()
             Me.btnEliminar = New System.Windows.Forms.Button()
             Me.lblDetalleSolicitud = New System.Windows.Forms.Label()
@@ -101,7 +102,6 @@
             Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
             Me.GroupBox3 = New System.Windows.Forms.GroupBox()
             Me.dgvDetalleRequisicionProductoServicio = New System.Windows.Forms.DataGridView()
-            Me.IVA = New System.Windows.Forms.DataGridViewTextBoxColumn()
             Me.gbProveedor.SuspendLayout()
             Me.gbOrdenCompraCabecera.SuspendLayout()
             CType(Me.dgvDetalleOrdenCompra, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -131,8 +131,8 @@
             Me.gbProveedor.Controls.Add(Me.lblDireccionProveedorGeneral)
             Me.gbProveedor.Controls.Add(Me.lblNombreComercialProveedorGeneral)
             Me.gbProveedor.Controls.Add(Me.txtNombreComercialProveedorGeneral)
-            Me.gbProveedor.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.gbProveedor.Location = New System.Drawing.Point(2, 74)
+            Me.gbProveedor.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.gbProveedor.Location = New System.Drawing.Point(2, 79)
             Me.gbProveedor.Name = "gbProveedor"
             Me.gbProveedor.Size = New System.Drawing.Size(458, 70)
             Me.gbProveedor.TabIndex = 0
@@ -144,7 +144,7 @@
             Me.lblIdProveedorGeneral.AutoSize = True
             Me.lblIdProveedorGeneral.Location = New System.Drawing.Point(425, 0)
             Me.lblIdProveedorGeneral.Name = "lblIdProveedorGeneral"
-            Me.lblIdProveedorGeneral.Size = New System.Drawing.Size(25, 13)
+            Me.lblIdProveedorGeneral.Size = New System.Drawing.Size(16, 13)
             Me.lblIdProveedorGeneral.TabIndex = 42
             Me.lblIdProveedorGeneral.Text = "..."
             Me.lblIdProveedorGeneral.Visible = False
@@ -152,10 +152,10 @@
             'lblRucCiProveedorGeneral
             '
             Me.lblRucCiProveedorGeneral.AutoSize = True
-            Me.lblRucCiProveedorGeneral.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.lblRucCiProveedorGeneral.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.lblRucCiProveedorGeneral.Location = New System.Drawing.Point(288, 20)
             Me.lblRucCiProveedorGeneral.Name = "lblRucCiProveedorGeneral"
-            Me.lblRucCiProveedorGeneral.Size = New System.Drawing.Size(61, 13)
+            Me.lblRucCiProveedorGeneral.Size = New System.Drawing.Size(52, 13)
             Me.lblRucCiProveedorGeneral.TabIndex = 24
             Me.lblRucCiProveedorGeneral.Text = "RUC / CI:"
             '
@@ -163,29 +163,29 @@
             '
             Me.txtTelefono1ProveedorGeneral.BackColor = System.Drawing.Color.White
             Me.txtTelefono1ProveedorGeneral.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-            Me.txtTelefono1ProveedorGeneral.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtTelefono1ProveedorGeneral.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtTelefono1ProveedorGeneral.Location = New System.Drawing.Point(349, 43)
             Me.txtTelefono1ProveedorGeneral.Name = "txtTelefono1ProveedorGeneral"
-            Me.txtTelefono1ProveedorGeneral.Size = New System.Drawing.Size(97, 20)
+            Me.txtTelefono1ProveedorGeneral.Size = New System.Drawing.Size(97, 21)
             Me.txtTelefono1ProveedorGeneral.TabIndex = 31
             '
             'txtRucCiProveedorGeneral
             '
             Me.txtRucCiProveedorGeneral.BackColor = System.Drawing.Color.White
             Me.txtRucCiProveedorGeneral.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-            Me.txtRucCiProveedorGeneral.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtRucCiProveedorGeneral.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtRucCiProveedorGeneral.Location = New System.Drawing.Point(349, 17)
             Me.txtRucCiProveedorGeneral.Name = "txtRucCiProveedorGeneral"
-            Me.txtRucCiProveedorGeneral.Size = New System.Drawing.Size(97, 20)
+            Me.txtRucCiProveedorGeneral.Size = New System.Drawing.Size(97, 21)
             Me.txtRucCiProveedorGeneral.TabIndex = 25
             '
             'lblTelefono1ProveedorGeneral
             '
             Me.lblTelefono1ProveedorGeneral.AutoSize = True
-            Me.lblTelefono1ProveedorGeneral.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.lblTelefono1ProveedorGeneral.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.lblTelefono1ProveedorGeneral.Location = New System.Drawing.Point(289, 46)
             Me.lblTelefono1ProveedorGeneral.Name = "lblTelefono1ProveedorGeneral"
-            Me.lblTelefono1ProveedorGeneral.Size = New System.Drawing.Size(61, 13)
+            Me.lblTelefono1ProveedorGeneral.Size = New System.Drawing.Size(65, 13)
             Me.lblTelefono1ProveedorGeneral.TabIndex = 30
             Me.lblTelefono1ProveedorGeneral.Text = "TELEFONO:"
             '
@@ -193,29 +193,29 @@
             '
             Me.txtDireccionProveedorGeneral.BackColor = System.Drawing.Color.White
             Me.txtDireccionProveedorGeneral.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-            Me.txtDireccionProveedorGeneral.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtDireccionProveedorGeneral.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtDireccionProveedorGeneral.Location = New System.Drawing.Point(52, 43)
             Me.txtDireccionProveedorGeneral.Name = "txtDireccionProveedorGeneral"
-            Me.txtDireccionProveedorGeneral.Size = New System.Drawing.Size(234, 20)
+            Me.txtDireccionProveedorGeneral.Size = New System.Drawing.Size(234, 21)
             Me.txtDireccionProveedorGeneral.TabIndex = 29
             '
             'lblDireccionProveedorGeneral
             '
             Me.lblDireccionProveedorGeneral.AutoSize = True
-            Me.lblDireccionProveedorGeneral.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.lblDireccionProveedorGeneral.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.lblDireccionProveedorGeneral.Location = New System.Drawing.Point(3, 46)
             Me.lblDireccionProveedorGeneral.Name = "lblDireccionProveedorGeneral"
-            Me.lblDireccionProveedorGeneral.Size = New System.Drawing.Size(49, 13)
+            Me.lblDireccionProveedorGeneral.Size = New System.Drawing.Size(43, 13)
             Me.lblDireccionProveedorGeneral.TabIndex = 28
             Me.lblDireccionProveedorGeneral.Text = "DIREC.:"
             '
             'lblNombreComercialProveedorGeneral
             '
             Me.lblNombreComercialProveedorGeneral.AutoSize = True
-            Me.lblNombreComercialProveedorGeneral.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.lblNombreComercialProveedorGeneral.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.lblNombreComercialProveedorGeneral.Location = New System.Drawing.Point(3, 20)
             Me.lblNombreComercialProveedorGeneral.Name = "lblNombreComercialProveedorGeneral"
-            Me.lblNombreComercialProveedorGeneral.Size = New System.Drawing.Size(49, 13)
+            Me.lblNombreComercialProveedorGeneral.Size = New System.Drawing.Size(45, 13)
             Me.lblNombreComercialProveedorGeneral.TabIndex = 26
             Me.lblNombreComercialProveedorGeneral.Text = "SR(ES):"
             '
@@ -223,49 +223,49 @@
             '
             Me.txtNombreComercialProveedorGeneral.BackColor = System.Drawing.Color.White
             Me.txtNombreComercialProveedorGeneral.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-            Me.txtNombreComercialProveedorGeneral.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtNombreComercialProveedorGeneral.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtNombreComercialProveedorGeneral.Location = New System.Drawing.Point(52, 17)
             Me.txtNombreComercialProveedorGeneral.Name = "txtNombreComercialProveedorGeneral"
-            Me.txtNombreComercialProveedorGeneral.Size = New System.Drawing.Size(234, 20)
+            Me.txtNombreComercialProveedorGeneral.Size = New System.Drawing.Size(234, 21)
             Me.txtNombreComercialProveedorGeneral.TabIndex = 0
             '
             'txtContribuyenteEspecialProveedorGeneral
             '
             Me.txtContribuyenteEspecialProveedorGeneral.BackColor = System.Drawing.Color.White
             Me.txtContribuyenteEspecialProveedorGeneral.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-            Me.txtContribuyenteEspecialProveedorGeneral.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtContribuyenteEspecialProveedorGeneral.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtContribuyenteEspecialProveedorGeneral.Location = New System.Drawing.Point(117, 17)
             Me.txtContribuyenteEspecialProveedorGeneral.Name = "txtContribuyenteEspecialProveedorGeneral"
-            Me.txtContribuyenteEspecialProveedorGeneral.Size = New System.Drawing.Size(32, 20)
+            Me.txtContribuyenteEspecialProveedorGeneral.Size = New System.Drawing.Size(32, 21)
             Me.txtContribuyenteEspecialProveedorGeneral.TabIndex = 40
             '
             'txtLlevaContabilidadProveedorGeneral
             '
             Me.txtLlevaContabilidadProveedorGeneral.BackColor = System.Drawing.Color.White
             Me.txtLlevaContabilidadProveedorGeneral.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-            Me.txtLlevaContabilidadProveedorGeneral.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtLlevaContabilidadProveedorGeneral.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtLlevaContabilidadProveedorGeneral.Location = New System.Drawing.Point(256, 17)
             Me.txtLlevaContabilidadProveedorGeneral.Name = "txtLlevaContabilidadProveedorGeneral"
-            Me.txtLlevaContabilidadProveedorGeneral.Size = New System.Drawing.Size(32, 20)
+            Me.txtLlevaContabilidadProveedorGeneral.Size = New System.Drawing.Size(32, 21)
             Me.txtLlevaContabilidadProveedorGeneral.TabIndex = 39
             '
             'lblContribuyenteEspecialProveedorGeneral
             '
             Me.lblContribuyenteEspecialProveedorGeneral.AutoSize = True
-            Me.lblContribuyenteEspecialProveedorGeneral.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.lblContribuyenteEspecialProveedorGeneral.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.lblContribuyenteEspecialProveedorGeneral.Location = New System.Drawing.Point(2, 20)
             Me.lblContribuyenteEspecialProveedorGeneral.Name = "lblContribuyenteEspecialProveedorGeneral"
-            Me.lblContribuyenteEspecialProveedorGeneral.Size = New System.Drawing.Size(115, 13)
+            Me.lblContribuyenteEspecialProveedorGeneral.Size = New System.Drawing.Size(112, 13)
             Me.lblContribuyenteEspecialProveedorGeneral.TabIndex = 38
             Me.lblContribuyenteEspecialProveedorGeneral.Text = "CONTRIB. ESPECIAL:"
             '
             'lblContabilidadProveedorGeneral
             '
             Me.lblContabilidadProveedorGeneral.AutoSize = True
-            Me.lblContabilidadProveedorGeneral.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.lblContabilidadProveedorGeneral.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.lblContabilidadProveedorGeneral.Location = New System.Drawing.Point(165, 20)
             Me.lblContabilidadProveedorGeneral.Name = "lblContabilidadProveedorGeneral"
-            Me.lblContabilidadProveedorGeneral.Size = New System.Drawing.Size(85, 13)
+            Me.lblContabilidadProveedorGeneral.Size = New System.Drawing.Size(89, 13)
             Me.lblContabilidadProveedorGeneral.TabIndex = 36
             Me.lblContabilidadProveedorGeneral.Text = "LLEVA CONTAB:"
             '
@@ -283,29 +283,29 @@
             '
             Me.txtNombreCiudad.BackColor = System.Drawing.Color.White
             Me.txtNombreCiudad.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-            Me.txtNombreCiudad.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtNombreCiudad.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtNombreCiudad.Location = New System.Drawing.Point(51, 42)
             Me.txtNombreCiudad.Name = "txtNombreCiudad"
-            Me.txtNombreCiudad.Size = New System.Drawing.Size(98, 20)
+            Me.txtNombreCiudad.Size = New System.Drawing.Size(98, 21)
             Me.txtNombreCiudad.TabIndex = 35
             '
             'txtEmailProveedorGeneral
             '
             Me.txtEmailProveedorGeneral.BackColor = System.Drawing.Color.White
             Me.txtEmailProveedorGeneral.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-            Me.txtEmailProveedorGeneral.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtEmailProveedorGeneral.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtEmailProveedorGeneral.Location = New System.Drawing.Point(198, 43)
             Me.txtEmailProveedorGeneral.Name = "txtEmailProveedorGeneral"
-            Me.txtEmailProveedorGeneral.Size = New System.Drawing.Size(90, 20)
+            Me.txtEmailProveedorGeneral.Size = New System.Drawing.Size(90, 21)
             Me.txtEmailProveedorGeneral.TabIndex = 33
             '
             'lblEmailProveedorGeneral
             '
             Me.lblEmailProveedorGeneral.AutoSize = True
-            Me.lblEmailProveedorGeneral.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.lblEmailProveedorGeneral.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.lblEmailProveedorGeneral.Location = New System.Drawing.Point(152, 46)
             Me.lblEmailProveedorGeneral.Name = "lblEmailProveedorGeneral"
-            Me.lblEmailProveedorGeneral.Size = New System.Drawing.Size(49, 13)
+            Me.lblEmailProveedorGeneral.Size = New System.Drawing.Size(45, 13)
             Me.lblEmailProveedorGeneral.TabIndex = 32
             Me.lblEmailProveedorGeneral.Text = "E-MAIL:"
             '
@@ -321,8 +321,8 @@
             Me.gbOrdenCompraCabecera.Controls.Add(Me.txtIdOrdenCompra)
             Me.gbOrdenCompraCabecera.Controls.Add(Me.lblIdOrdenCompra)
             Me.gbOrdenCompraCabecera.Controls.Add(Me.chkReq)
-            Me.gbOrdenCompraCabecera.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.gbOrdenCompraCabecera.Location = New System.Drawing.Point(2, 29)
+            Me.gbOrdenCompraCabecera.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.gbOrdenCompraCabecera.Location = New System.Drawing.Point(2, 34)
             Me.gbOrdenCompraCabecera.Name = "gbOrdenCompraCabecera"
             Me.gbOrdenCompraCabecera.Size = New System.Drawing.Size(752, 42)
             Me.gbOrdenCompraCabecera.TabIndex = 1
@@ -332,20 +332,20 @@
             'Label3
             '
             Me.Label3.AutoSize = True
-            Me.Label3.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Label3.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Label3.Location = New System.Drawing.Point(617, 17)
             Me.Label3.Name = "Label3"
-            Me.Label3.Size = New System.Drawing.Size(25, 13)
+            Me.Label3.Size = New System.Drawing.Size(28, 13)
             Me.Label3.TabIndex = 43
             Me.Label3.Text = "###"
             '
             'lblIdCiudad
             '
             Me.lblIdCiudad.AutoSize = True
-            Me.lblIdCiudad.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.lblIdCiudad.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.lblIdCiudad.Location = New System.Drawing.Point(178, 16)
             Me.lblIdCiudad.Name = "lblIdCiudad"
-            Me.lblIdCiudad.Size = New System.Drawing.Size(25, 13)
+            Me.lblIdCiudad.Size = New System.Drawing.Size(16, 13)
             Me.lblIdCiudad.TabIndex = 41
             Me.lblIdCiudad.Text = "..."
             Me.lblIdCiudad.Visible = False
@@ -353,10 +353,10 @@
             'lblValorContribuyenteEspecial
             '
             Me.lblValorContribuyenteEspecial.AutoSize = True
-            Me.lblValorContribuyenteEspecial.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.lblValorContribuyenteEspecial.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.lblValorContribuyenteEspecial.Location = New System.Drawing.Point(158, 16)
             Me.lblValorContribuyenteEspecial.Name = "lblValorContribuyenteEspecial"
-            Me.lblValorContribuyenteEspecial.Size = New System.Drawing.Size(25, 13)
+            Me.lblValorContribuyenteEspecial.Size = New System.Drawing.Size(16, 13)
             Me.lblValorContribuyenteEspecial.TabIndex = 40
             Me.lblValorContribuyenteEspecial.Text = "..."
             Me.lblValorContribuyenteEspecial.Visible = False
@@ -364,10 +364,10 @@
             'lblValorLlevacontabilidad
             '
             Me.lblValorLlevacontabilidad.AutoSize = True
-            Me.lblValorLlevacontabilidad.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.lblValorLlevacontabilidad.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.lblValorLlevacontabilidad.Location = New System.Drawing.Point(135, 16)
             Me.lblValorLlevacontabilidad.Name = "lblValorLlevacontabilidad"
-            Me.lblValorLlevacontabilidad.Size = New System.Drawing.Size(25, 13)
+            Me.lblValorLlevacontabilidad.Size = New System.Drawing.Size(16, 13)
             Me.lblValorLlevacontabilidad.TabIndex = 39
             Me.lblValorLlevacontabilidad.Text = "..."
             Me.lblValorLlevacontabilidad.Visible = False
@@ -376,19 +376,19 @@
             '
             Me.txtFechaOrdenCompra.BackColor = System.Drawing.Color.White
             Me.txtFechaOrdenCompra.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-            Me.txtFechaOrdenCompra.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtFechaOrdenCompra.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtFechaOrdenCompra.Location = New System.Drawing.Point(273, 12)
             Me.txtFechaOrdenCompra.Name = "txtFechaOrdenCompra"
-            Me.txtFechaOrdenCompra.Size = New System.Drawing.Size(187, 20)
+            Me.txtFechaOrdenCompra.Size = New System.Drawing.Size(187, 21)
             Me.txtFechaOrdenCompra.TabIndex = 37
             '
             'lblFechaOrdenCompra
             '
             Me.lblFechaOrdenCompra.AutoSize = True
-            Me.lblFechaOrdenCompra.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.lblFechaOrdenCompra.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.lblFechaOrdenCompra.Location = New System.Drawing.Point(224, 15)
             Me.lblFechaOrdenCompra.Name = "lblFechaOrdenCompra"
-            Me.lblFechaOrdenCompra.Size = New System.Drawing.Size(43, 13)
+            Me.lblFechaOrdenCompra.Size = New System.Drawing.Size(44, 13)
             Me.lblFechaOrdenCompra.TabIndex = 36
             Me.lblFechaOrdenCompra.Text = "FECHA:"
             '
@@ -396,19 +396,19 @@
             '
             Me.txtIdOrdenCompra.BackColor = System.Drawing.Color.White
             Me.txtIdOrdenCompra.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-            Me.txtIdOrdenCompra.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtIdOrdenCompra.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtIdOrdenCompra.Location = New System.Drawing.Point(53, 13)
             Me.txtIdOrdenCompra.Name = "txtIdOrdenCompra"
-            Me.txtIdOrdenCompra.Size = New System.Drawing.Size(68, 20)
+            Me.txtIdOrdenCompra.Size = New System.Drawing.Size(68, 21)
             Me.txtIdOrdenCompra.TabIndex = 35
             '
             'lblIdOrdenCompra
             '
             Me.lblIdOrdenCompra.AutoSize = True
-            Me.lblIdOrdenCompra.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.lblIdOrdenCompra.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.lblIdOrdenCompra.Location = New System.Drawing.Point(3, 16)
             Me.lblIdOrdenCompra.Name = "lblIdOrdenCompra"
-            Me.lblIdOrdenCompra.Size = New System.Drawing.Size(49, 13)
+            Me.lblIdOrdenCompra.Size = New System.Drawing.Size(43, 13)
             Me.lblIdOrdenCompra.TabIndex = 34
             Me.lblIdOrdenCompra.Text = "N°: OC-"
             '
@@ -416,9 +416,10 @@
             '
             Me.chkReq.AutoSize = True
             Me.chkReq.Enabled = False
+            Me.chkReq.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.chkReq.Location = New System.Drawing.Point(496, 15)
             Me.chkReq.Name = "chkReq"
-            Me.chkReq.Size = New System.Drawing.Size(122, 17)
+            Me.chkReq.Size = New System.Drawing.Size(106, 17)
             Me.chkReq.TabIndex = 44
             Me.chkReq.Text = "Con requisición:"
             Me.chkReq.UseVisualStyleBackColor = True
@@ -428,21 +429,21 @@
             Me.dgvDetalleOrdenCompra.AllowUserToDeleteRows = False
             Me.dgvDetalleOrdenCompra.AllowUserToOrderColumns = True
             Me.dgvDetalleOrdenCompra.AllowUserToResizeRows = False
-            DataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-            Me.dgvDetalleOrdenCompra.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle6
+            DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+            Me.dgvDetalleOrdenCompra.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
             Me.dgvDetalleOrdenCompra.BackgroundColor = System.Drawing.Color.White
             Me.dgvDetalleOrdenCompra.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
             Me.dgvDetalleOrdenCompra.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
             Me.dgvDetalleOrdenCompra.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.idItem, Me.nombreProductoServicio, Me.unidadMedida, Me.cantidadProductoServicio, Me.valorUnitarioProductoServicio, Me.valorTotalProductoServicio, Me.IVA})
-            DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-            DataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window
-            DataGridViewCellStyle8.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            DataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText
-            DataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(123, Byte), Integer))
-            DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-            DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-            Me.dgvDetalleOrdenCompra.DefaultCellStyle = DataGridViewCellStyle8
-            Me.dgvDetalleOrdenCompra.Location = New System.Drawing.Point(2, 182)
+            DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+            DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window
+            DataGridViewCellStyle3.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText
+            DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(123, Byte), Integer))
+            DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+            DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+            Me.dgvDetalleOrdenCompra.DefaultCellStyle = DataGridViewCellStyle3
+            Me.dgvDetalleOrdenCompra.Location = New System.Drawing.Point(2, 187)
             Me.dgvDetalleOrdenCompra.Name = "dgvDetalleOrdenCompra"
             Me.dgvDetalleOrdenCompra.RowHeadersVisible = False
             Me.dgvDetalleOrdenCompra.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
@@ -458,8 +459,8 @@
             '
             'nombreProductoServicio
             '
-            DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-            Me.nombreProductoServicio.DefaultCellStyle = DataGridViewCellStyle7
+            DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+            Me.nombreProductoServicio.DefaultCellStyle = DataGridViewCellStyle2
             Me.nombreProductoServicio.HeaderText = "PRODUCTO/SERVICIO"
             Me.nombreProductoServicio.Name = "nombreProductoServicio"
             Me.nombreProductoServicio.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
@@ -491,14 +492,19 @@
             Me.valorTotalProductoServicio.ReadOnly = True
             Me.valorTotalProductoServicio.Width = 105
             '
+            'IVA
+            '
+            Me.IVA.HeaderText = "IVA"
+            Me.IVA.Name = "IVA"
+            '
             'panelDetalle
             '
             Me.panelDetalle.BackColor = System.Drawing.Color.White
             Me.panelDetalle.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
             Me.panelDetalle.Controls.Add(Me.btnEliminar)
             Me.panelDetalle.Controls.Add(Me.lblDetalleSolicitud)
-            Me.panelDetalle.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.panelDetalle.Location = New System.Drawing.Point(2, 148)
+            Me.panelDetalle.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.panelDetalle.Location = New System.Drawing.Point(2, 153)
             Me.panelDetalle.Name = "panelDetalle"
             Me.panelDetalle.Size = New System.Drawing.Size(752, 33)
             Me.panelDetalle.TabIndex = 36
@@ -506,20 +512,22 @@
             'btnEliminar
             '
             Me.btnEliminar.BackColor = System.Drawing.Color.White
-            Me.btnEliminar.Image = CType(resources.GetObject("btnEliminar.Image"), System.Drawing.Image)
-            Me.btnEliminar.Location = New System.Drawing.Point(718, 2)
+            Me.btnEliminar.FlatAppearance.BorderSize = 0
+            Me.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+            Me.btnEliminar.Image = Global.syscisepro.My.Resources.Resources.do_not_disturb_on_24dp_FILL0_wght400_GRAD0_opsz24
+            Me.btnEliminar.Location = New System.Drawing.Point(717, 2)
             Me.btnEliminar.Name = "btnEliminar"
-            Me.btnEliminar.Size = New System.Drawing.Size(32, 28)
+            Me.btnEliminar.Size = New System.Drawing.Size(28, 28)
             Me.btnEliminar.TabIndex = 19
             Me.btnEliminar.UseVisualStyleBackColor = False
             '
             'lblDetalleSolicitud
             '
             Me.lblDetalleSolicitud.AutoSize = True
-            Me.lblDetalleSolicitud.Font = New System.Drawing.Font("Consolas", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.lblDetalleSolicitud.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.lblDetalleSolicitud.Location = New System.Drawing.Point(267, 7)
             Me.lblDetalleSolicitud.Name = "lblDetalleSolicitud"
-            Me.lblDetalleSolicitud.Size = New System.Drawing.Size(192, 18)
+            Me.lblDetalleSolicitud.Size = New System.Drawing.Size(156, 13)
             Me.lblDetalleSolicitud.TabIndex = 17
             Me.lblDetalleSolicitud.Text = "DETALLE ORDEN DE COMPRA"
             '
@@ -527,8 +535,8 @@
             '
             Me.gbObservaciones.BackColor = System.Drawing.Color.White
             Me.gbObservaciones.Controls.Add(Me.txtObservacionesOrdenCompra)
-            Me.gbObservaciones.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.gbObservaciones.Location = New System.Drawing.Point(2, 610)
+            Me.gbObservaciones.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.gbObservaciones.Location = New System.Drawing.Point(2, 615)
             Me.gbObservaciones.Name = "gbObservaciones"
             Me.gbObservaciones.Size = New System.Drawing.Size(521, 47)
             Me.gbObservaciones.TabIndex = 37
@@ -539,18 +547,18 @@
             '
             Me.txtObservacionesOrdenCompra.BackColor = System.Drawing.Color.White
             Me.txtObservacionesOrdenCompra.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-            Me.txtObservacionesOrdenCompra.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtObservacionesOrdenCompra.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtObservacionesOrdenCompra.Location = New System.Drawing.Point(10, 19)
             Me.txtObservacionesOrdenCompra.Name = "txtObservacionesOrdenCompra"
-            Me.txtObservacionesOrdenCompra.Size = New System.Drawing.Size(499, 20)
+            Me.txtObservacionesOrdenCompra.Size = New System.Drawing.Size(499, 21)
             Me.txtObservacionesOrdenCompra.TabIndex = 5
             '
             'gbTipoPago
             '
             Me.gbTipoPago.BackColor = System.Drawing.Color.White
             Me.gbTipoPago.Controls.Add(Me.cmbTipoPagoOrdenCompra)
-            Me.gbTipoPago.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.gbTipoPago.Location = New System.Drawing.Point(263, 566)
+            Me.gbTipoPago.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.gbTipoPago.Location = New System.Drawing.Point(263, 572)
             Me.gbTipoPago.Name = "gbTipoPago"
             Me.gbTipoPago.Size = New System.Drawing.Size(260, 44)
             Me.gbTipoPago.TabIndex = 3
@@ -562,6 +570,7 @@
             Me.cmbTipoPagoOrdenCompra.BackColor = System.Drawing.Color.White
             Me.cmbTipoPagoOrdenCompra.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cmbTipoPagoOrdenCompra.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+            Me.cmbTipoPagoOrdenCompra.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cmbTipoPagoOrdenCompra.FormattingEnabled = True
             Me.cmbTipoPagoOrdenCompra.Items.AddRange(New Object() {"EFECTIVO", "CHEQUE", "NOTA DE CRÉDITO"})
             Me.cmbTipoPagoOrdenCompra.Location = New System.Drawing.Point(10, 15)
@@ -573,8 +582,8 @@
             '
             Me.gbFormaPago.BackColor = System.Drawing.Color.White
             Me.gbFormaPago.Controls.Add(Me.cmbFormaPagoOrdenCompra)
-            Me.gbFormaPago.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.gbFormaPago.Location = New System.Drawing.Point(2, 566)
+            Me.gbFormaPago.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.gbFormaPago.Location = New System.Drawing.Point(2, 571)
             Me.gbFormaPago.Name = "gbFormaPago"
             Me.gbFormaPago.Size = New System.Drawing.Size(261, 44)
             Me.gbFormaPago.TabIndex = 2
@@ -586,6 +595,7 @@
             Me.cmbFormaPagoOrdenCompra.BackColor = System.Drawing.Color.White
             Me.cmbFormaPagoOrdenCompra.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cmbFormaPagoOrdenCompra.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+            Me.cmbFormaPagoOrdenCompra.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cmbFormaPagoOrdenCompra.FormattingEnabled = True
             Me.cmbFormaPagoOrdenCompra.Items.AddRange(New Object() {"CRÉDITO", "CONTADO"})
             Me.cmbFormaPagoOrdenCompra.Location = New System.Drawing.Point(10, 15)
@@ -598,10 +608,10 @@
             '
             Me.txtSon.BackColor = System.Drawing.Color.White
             Me.txtSon.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-            Me.txtSon.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtSon.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtSon.Location = New System.Drawing.Point(10, 17)
             Me.txtSon.Name = "txtSon"
-            Me.txtSon.Size = New System.Drawing.Size(499, 22)
+            Me.txtSon.Size = New System.Drawing.Size(499, 21)
             Me.txtSon.TabIndex = 1
             '
             'gbOrdenCompraValores
@@ -617,7 +627,8 @@
             Me.gbOrdenCompraValores.Controls.Add(Me.lblDescuentoOrdenCompra)
             Me.gbOrdenCompraValores.Controls.Add(Me.lblSubtotal0OrdenCompra)
             Me.gbOrdenCompraValores.Controls.Add(Me.lblSubtotal12OrdenCompra)
-            Me.gbOrdenCompraValores.Location = New System.Drawing.Point(523, 521)
+            Me.gbOrdenCompraValores.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.gbOrdenCompraValores.Location = New System.Drawing.Point(523, 526)
             Me.gbOrdenCompraValores.Name = "gbOrdenCompraValores"
             Me.gbOrdenCompraValores.Size = New System.Drawing.Size(231, 136)
             Me.gbOrdenCompraValores.TabIndex = 38
@@ -627,10 +638,10 @@
             '
             Me.txtTotalOrdenCompra.BackColor = System.Drawing.Color.White
             Me.txtTotalOrdenCompra.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-            Me.txtTotalOrdenCompra.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtTotalOrdenCompra.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtTotalOrdenCompra.Location = New System.Drawing.Point(118, 102)
             Me.txtTotalOrdenCompra.Name = "txtTotalOrdenCompra"
-            Me.txtTotalOrdenCompra.Size = New System.Drawing.Size(93, 20)
+            Me.txtTotalOrdenCompra.Size = New System.Drawing.Size(93, 21)
             Me.txtTotalOrdenCompra.TabIndex = 9
             Me.txtTotalOrdenCompra.Text = "0.00"
             Me.txtTotalOrdenCompra.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -639,10 +650,10 @@
             '
             Me.txtIvaOrdenCompra.BackColor = System.Drawing.Color.White
             Me.txtIvaOrdenCompra.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-            Me.txtIvaOrdenCompra.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtIvaOrdenCompra.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtIvaOrdenCompra.Location = New System.Drawing.Point(118, 79)
             Me.txtIvaOrdenCompra.Name = "txtIvaOrdenCompra"
-            Me.txtIvaOrdenCompra.Size = New System.Drawing.Size(93, 20)
+            Me.txtIvaOrdenCompra.Size = New System.Drawing.Size(93, 21)
             Me.txtIvaOrdenCompra.TabIndex = 8
             Me.txtIvaOrdenCompra.Text = "0.00"
             Me.txtIvaOrdenCompra.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -652,10 +663,10 @@
             Me.txtDescuentoOrdenCompra.BackColor = System.Drawing.Color.White
             Me.txtDescuentoOrdenCompra.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtDescuentoOrdenCompra.Enabled = False
-            Me.txtDescuentoOrdenCompra.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtDescuentoOrdenCompra.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtDescuentoOrdenCompra.Location = New System.Drawing.Point(118, 56)
             Me.txtDescuentoOrdenCompra.Name = "txtDescuentoOrdenCompra"
-            Me.txtDescuentoOrdenCompra.Size = New System.Drawing.Size(93, 20)
+            Me.txtDescuentoOrdenCompra.Size = New System.Drawing.Size(93, 21)
             Me.txtDescuentoOrdenCompra.TabIndex = 7
             Me.txtDescuentoOrdenCompra.Text = "0.00"
             Me.txtDescuentoOrdenCompra.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -664,10 +675,10 @@
             '
             Me.txtSubtotal0OrdenCompra.BackColor = System.Drawing.Color.White
             Me.txtSubtotal0OrdenCompra.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-            Me.txtSubtotal0OrdenCompra.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtSubtotal0OrdenCompra.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtSubtotal0OrdenCompra.Location = New System.Drawing.Point(118, 33)
             Me.txtSubtotal0OrdenCompra.Name = "txtSubtotal0OrdenCompra"
-            Me.txtSubtotal0OrdenCompra.Size = New System.Drawing.Size(93, 20)
+            Me.txtSubtotal0OrdenCompra.Size = New System.Drawing.Size(93, 21)
             Me.txtSubtotal0OrdenCompra.TabIndex = 6
             Me.txtSubtotal0OrdenCompra.Text = "0.00"
             Me.txtSubtotal0OrdenCompra.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -676,10 +687,10 @@
             '
             Me.txtSubtotal12OrdenCompra.BackColor = System.Drawing.Color.White
             Me.txtSubtotal12OrdenCompra.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-            Me.txtSubtotal12OrdenCompra.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtSubtotal12OrdenCompra.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtSubtotal12OrdenCompra.Location = New System.Drawing.Point(118, 10)
             Me.txtSubtotal12OrdenCompra.Name = "txtSubtotal12OrdenCompra"
-            Me.txtSubtotal12OrdenCompra.Size = New System.Drawing.Size(93, 20)
+            Me.txtSubtotal12OrdenCompra.Size = New System.Drawing.Size(93, 21)
             Me.txtSubtotal12OrdenCompra.TabIndex = 5
             Me.txtSubtotal12OrdenCompra.Text = "0.00"
             Me.txtSubtotal12OrdenCompra.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -687,50 +698,50 @@
             'lblTotalOrdenCompra
             '
             Me.lblTotalOrdenCompra.AutoSize = True
-            Me.lblTotalOrdenCompra.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.lblTotalOrdenCompra.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.lblTotalOrdenCompra.Location = New System.Drawing.Point(30, 105)
             Me.lblTotalOrdenCompra.Name = "lblTotalOrdenCompra"
-            Me.lblTotalOrdenCompra.Size = New System.Drawing.Size(43, 13)
+            Me.lblTotalOrdenCompra.Size = New System.Drawing.Size(45, 13)
             Me.lblTotalOrdenCompra.TabIndex = 4
             Me.lblTotalOrdenCompra.Text = "TOTAL:"
             '
             'lblIvaOrdenCompra
             '
             Me.lblIvaOrdenCompra.AutoSize = True
-            Me.lblIvaOrdenCompra.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.lblIvaOrdenCompra.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.lblIvaOrdenCompra.Location = New System.Drawing.Point(30, 82)
             Me.lblIvaOrdenCompra.Name = "lblIvaOrdenCompra"
-            Me.lblIvaOrdenCompra.Size = New System.Drawing.Size(67, 13)
+            Me.lblIvaOrdenCompra.Size = New System.Drawing.Size(58, 13)
             Me.lblIvaOrdenCompra.TabIndex = 3
             Me.lblIvaOrdenCompra.Text = "IVA (12%):"
             '
             'lblDescuentoOrdenCompra
             '
             Me.lblDescuentoOrdenCompra.AutoSize = True
-            Me.lblDescuentoOrdenCompra.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.lblDescuentoOrdenCompra.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.lblDescuentoOrdenCompra.Location = New System.Drawing.Point(30, 59)
             Me.lblDescuentoOrdenCompra.Name = "lblDescuentoOrdenCompra"
-            Me.lblDescuentoOrdenCompra.Size = New System.Drawing.Size(67, 13)
+            Me.lblDescuentoOrdenCompra.Size = New System.Drawing.Size(73, 13)
             Me.lblDescuentoOrdenCompra.TabIndex = 2
             Me.lblDescuentoOrdenCompra.Text = "DESCUENTO:"
             '
             'lblSubtotal0OrdenCompra
             '
             Me.lblSubtotal0OrdenCompra.AutoSize = True
-            Me.lblSubtotal0OrdenCompra.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.lblSubtotal0OrdenCompra.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.lblSubtotal0OrdenCompra.Location = New System.Drawing.Point(30, 36)
             Me.lblSubtotal0OrdenCompra.Name = "lblSubtotal0OrdenCompra"
-            Me.lblSubtotal0OrdenCompra.Size = New System.Drawing.Size(73, 13)
+            Me.lblSubtotal0OrdenCompra.Size = New System.Drawing.Size(75, 13)
             Me.lblSubtotal0OrdenCompra.TabIndex = 1
             Me.lblSubtotal0OrdenCompra.Text = "SUBTOTAL 0:"
             '
             'lblSubtotal12OrdenCompra
             '
             Me.lblSubtotal12OrdenCompra.AutoSize = True
-            Me.lblSubtotal12OrdenCompra.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.lblSubtotal12OrdenCompra.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.lblSubtotal12OrdenCompra.Location = New System.Drawing.Point(30, 13)
             Me.lblSubtotal12OrdenCompra.Name = "lblSubtotal12OrdenCompra"
-            Me.lblSubtotal12OrdenCompra.Size = New System.Drawing.Size(79, 13)
+            Me.lblSubtotal12OrdenCompra.Size = New System.Drawing.Size(81, 13)
             Me.lblSubtotal12OrdenCompra.TabIndex = 0
             Me.lblSubtotal12OrdenCompra.Text = "SUBTOTAL 12:"
             '
@@ -745,8 +756,8 @@
             Me.gbDatos.Controls.Add(Me.lblCiudad)
             Me.gbDatos.Controls.Add(Me.txtLlevaContabilidadProveedorGeneral)
             Me.gbDatos.Controls.Add(Me.txtNombreCiudad)
-            Me.gbDatos.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.gbDatos.Location = New System.Drawing.Point(460, 74)
+            Me.gbDatos.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.gbDatos.Location = New System.Drawing.Point(460, 79)
             Me.gbDatos.Name = "gbDatos"
             Me.gbDatos.Size = New System.Drawing.Size(294, 70)
             Me.gbDatos.TabIndex = 44
@@ -756,8 +767,8 @@
             '
             Me.GroupBox1.BackColor = System.Drawing.Color.White
             Me.GroupBox1.Controls.Add(Me.txtSon)
-            Me.GroupBox1.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.GroupBox1.Location = New System.Drawing.Point(2, 521)
+            Me.GroupBox1.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.GroupBox1.Location = New System.Drawing.Point(2, 526)
             Me.GroupBox1.Name = "GroupBox1"
             Me.GroupBox1.Size = New System.Drawing.Size(521, 45)
             Me.GroupBox1.TabIndex = 45
@@ -766,39 +777,42 @@
             '
             'MenuStrip1
             '
+            Me.MenuStrip1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
             Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnNuevo, Me.btnGuardar, Me.btnCancelar})
             Me.MenuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow
             Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
             Me.MenuStrip1.Name = "MenuStrip1"
             Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(7, 2, 0, 2)
-            Me.MenuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
-            Me.MenuStrip1.Size = New System.Drawing.Size(1074, 24)
+            Me.MenuStrip1.Size = New System.Drawing.Size(1074, 32)
             Me.MenuStrip1.TabIndex = 187
             Me.MenuStrip1.Text = "msIngresoBodega"
             '
             'btnNuevo
             '
-            Me.btnNuevo.Image = Global.syscisepro.My.Resources.Resources.NuevoRegistro
+            Me.btnNuevo.Image = Global.syscisepro.My.Resources.Resources.add_circle_24dp_FILL0_wght400_GRAD0_opsz24__3_
+            Me.btnNuevo.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnNuevo.Name = "btnNuevo"
-            Me.btnNuevo.Size = New System.Drawing.Size(74, 20)
+            Me.btnNuevo.Size = New System.Drawing.Size(82, 28)
             Me.btnNuevo.Text = "NUEVO"
             '
             'btnGuardar
             '
             Me.btnGuardar.Enabled = False
             Me.btnGuardar.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnGuardar.Image = Global.syscisepro.My.Resources.Resources.GuardarRegistro
+            Me.btnGuardar.Image = Global.syscisepro.My.Resources.Resources.save_24dp_FILL0_wght400_GRAD0_opsz24__2_
+            Me.btnGuardar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnGuardar.Name = "btnGuardar"
-            Me.btnGuardar.Size = New System.Drawing.Size(87, 20)
+            Me.btnGuardar.Size = New System.Drawing.Size(95, 28)
             Me.btnGuardar.Text = "GUARDAR"
             '
             'btnCancelar
             '
             Me.btnCancelar.Enabled = False
             Me.btnCancelar.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnCancelar.Image = Global.syscisepro.My.Resources.Resources.cancel
+            Me.btnCancelar.Image = Global.syscisepro.My.Resources.Resources.cancel_24dp_FILL0_wght400_GRAD0_opsz24
+            Me.btnCancelar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnCancelar.Name = "btnCancelar"
-            Me.btnCancelar.Size = New System.Drawing.Size(89, 20)
+            Me.btnCancelar.Size = New System.Drawing.Size(97, 28)
             Me.btnCancelar.Text = "CANCELAR"
             '
             'GroupBox2
@@ -806,7 +820,8 @@
             Me.GroupBox2.BackColor = System.Drawing.Color.White
             Me.GroupBox2.Controls.Add(Me.Label1)
             Me.GroupBox2.Controls.Add(Me.dgvRequisicionProductoServicio)
-            Me.GroupBox2.Location = New System.Drawing.Point(760, 27)
+            Me.GroupBox2.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.GroupBox2.Location = New System.Drawing.Point(760, 33)
             Me.GroupBox2.Name = "GroupBox2"
             Me.GroupBox2.Size = New System.Drawing.Size(314, 228)
             Me.GroupBox2.TabIndex = 188
@@ -828,8 +843,8 @@
             Me.dgvRequisicionProductoServicio.AllowUserToAddRows = False
             Me.dgvRequisicionProductoServicio.AllowUserToDeleteRows = False
             Me.dgvRequisicionProductoServicio.AllowUserToResizeRows = False
-            DataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-            Me.dgvRequisicionProductoServicio.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle9
+            DataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+            Me.dgvRequisicionProductoServicio.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle4
             Me.dgvRequisicionProductoServicio.BackgroundColor = System.Drawing.Color.White
             Me.dgvRequisicionProductoServicio.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
             Me.dgvRequisicionProductoServicio.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
@@ -886,7 +901,7 @@
             '
             Me.GroupBox3.BackColor = System.Drawing.Color.White
             Me.GroupBox3.Controls.Add(Me.dgvDetalleRequisicionProductoServicio)
-            Me.GroupBox3.Location = New System.Drawing.Point(760, 261)
+            Me.GroupBox3.Location = New System.Drawing.Point(760, 267)
             Me.GroupBox3.Name = "GroupBox3"
             Me.GroupBox3.Size = New System.Drawing.Size(314, 396)
             Me.GroupBox3.TabIndex = 189
@@ -899,8 +914,8 @@
             Me.dgvDetalleRequisicionProductoServicio.AllowUserToDeleteRows = False
             Me.dgvDetalleRequisicionProductoServicio.AllowUserToOrderColumns = True
             Me.dgvDetalleRequisicionProductoServicio.AllowUserToResizeRows = False
-            DataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-            Me.dgvDetalleRequisicionProductoServicio.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle10
+            DataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+            Me.dgvDetalleRequisicionProductoServicio.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle5
             Me.dgvDetalleRequisicionProductoServicio.BackgroundColor = System.Drawing.Color.White
             Me.dgvDetalleRequisicionProductoServicio.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
             Me.dgvDetalleRequisicionProductoServicio.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
@@ -911,17 +926,12 @@
             Me.dgvDetalleRequisicionProductoServicio.Size = New System.Drawing.Size(302, 377)
             Me.dgvDetalleRequisicionProductoServicio.TabIndex = 3
             '
-            'IVA
-            '
-            Me.IVA.HeaderText = "IVA"
-            Me.IVA.Name = "IVA"
-            '
             'FormOrdenCompra
             '
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.BackColor = System.Drawing.Color.White
-            Me.ClientSize = New System.Drawing.Size(1074, 661)
+            Me.ClientSize = New System.Drawing.Size(1074, 664)
             Me.Controls.Add(Me.GroupBox3)
             Me.Controls.Add(Me.GroupBox2)
             Me.Controls.Add(Me.MenuStrip1)
@@ -936,10 +946,13 @@
             Me.Controls.Add(Me.gbOrdenCompraCabecera)
             Me.Controls.Add(Me.gbProveedor)
             Me.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
             Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
             Me.Name = "FormOrdenCompra"
             Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+            Me.StateActive.Border.DrawBorders = CType((((Krypton.Toolkit.PaletteDrawBorders.Top Or Krypton.Toolkit.PaletteDrawBorders.Bottom) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Left) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Right), Krypton.Toolkit.PaletteDrawBorders)
+            Me.StateActive.Border.Rounding = 5.0!
             Me.Text = "ORDEN DE COMPRA"
             Me.gbProveedor.ResumeLayout(False)
             Me.gbProveedor.PerformLayout()

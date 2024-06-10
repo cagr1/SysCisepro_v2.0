@@ -87,37 +87,37 @@
             'lblHasta
             '
             Me.lblHasta.AutoSize = True
-            Me.lblHasta.Font = New System.Drawing.Font("Consolas", 8.25!)
+            Me.lblHasta.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.lblHasta.Location = New System.Drawing.Point(5, 29)
             Me.lblHasta.Name = "lblHasta"
-            Me.lblHasta.Size = New System.Drawing.Size(43, 13)
+            Me.lblHasta.Size = New System.Drawing.Size(40, 13)
             Me.lblHasta.TabIndex = 216
             Me.lblHasta.Text = "Hasta:"
             '
             'lblDesde
             '
             Me.lblDesde.AutoSize = True
-            Me.lblDesde.Font = New System.Drawing.Font("Consolas", 8.25!)
+            Me.lblDesde.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.lblDesde.Location = New System.Drawing.Point(4, 6)
             Me.lblDesde.Name = "lblDesde"
-            Me.lblDesde.Size = New System.Drawing.Size(43, 13)
+            Me.lblDesde.Size = New System.Drawing.Size(41, 13)
             Me.lblDesde.TabIndex = 215
             Me.lblDesde.Text = "Desde:"
             '
             'dtpFinal
             '
-            Me.dtpFinal.Font = New System.Drawing.Font("Consolas", 8.25!)
+            Me.dtpFinal.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.dtpFinal.Location = New System.Drawing.Point(46, 26)
             Me.dtpFinal.Name = "dtpFinal"
-            Me.dtpFinal.Size = New System.Drawing.Size(230, 20)
+            Me.dtpFinal.Size = New System.Drawing.Size(230, 21)
             Me.dtpFinal.TabIndex = 214
             '
             'dtpInicio
             '
-            Me.dtpInicio.Font = New System.Drawing.Font("Consolas", 8.25!)
-            Me.dtpInicio.Location = New System.Drawing.Point(46, 3)
+            Me.dtpInicio.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.dtpInicio.Location = New System.Drawing.Point(46, 5)
             Me.dtpInicio.Name = "dtpInicio"
-            Me.dtpInicio.Size = New System.Drawing.Size(230, 20)
+            Me.dtpInicio.Size = New System.Drawing.Size(230, 21)
             Me.dtpInicio.TabIndex = 213
             '
             'dgvMayoresPadres
@@ -139,10 +139,10 @@
             'Label1
             '
             Me.Label1.AutoSize = True
-            Me.Label1.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Label1.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Label1.Location = New System.Drawing.Point(17, 10)
             Me.Label1.Name = "Label1"
-            Me.Label1.Size = New System.Drawing.Size(49, 13)
+            Me.Label1.Size = New System.Drawing.Size(52, 13)
             Me.Label1.TabIndex = 218
             Me.Label1.Text = "CUENTA:"
             '
@@ -150,10 +150,10 @@
             '
             Me.txtCuentaPadre.BackColor = System.Drawing.Color.White
             Me.txtCuentaPadre.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-            Me.txtCuentaPadre.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtCuentaPadre.Location = New System.Drawing.Point(65, 6)
+            Me.txtCuentaPadre.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtCuentaPadre.Location = New System.Drawing.Point(65, 8)
             Me.txtCuentaPadre.Name = "txtCuentaPadre"
-            Me.txtCuentaPadre.Size = New System.Drawing.Size(590, 20)
+            Me.txtCuentaPadre.Size = New System.Drawing.Size(590, 21)
             Me.txtCuentaPadre.TabIndex = 217
             '
             'dgvMayoresHijos
@@ -175,7 +175,7 @@
             DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
             DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
             Me.dgvMayoresHijos.DefaultCellStyle = DataGridViewCellStyle4
-            Me.dgvMayoresHijos.Location = New System.Drawing.Point(0, 80)
+            Me.dgvMayoresHijos.Location = New System.Drawing.Point(0, 91)
             Me.dgvMayoresHijos.MultiSelect = False
             Me.dgvMayoresHijos.Name = "dgvMayoresHijos"
             Me.dgvMayoresHijos.ReadOnly = True
@@ -199,10 +199,10 @@
             'Label13
             '
             Me.Label13.AutoSize = True
-            Me.Label13.Font = New System.Drawing.Font("Consolas", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Label13.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Label13.Location = New System.Drawing.Point(399, 3)
             Me.Label13.Name = "Label13"
-            Me.Label13.Size = New System.Drawing.Size(153, 19)
+            Me.Label13.Size = New System.Drawing.Size(109, 13)
             Me.Label13.TabIndex = 231
             Me.Label13.Text = "DETALLE DE MAYOR"
             '
@@ -226,20 +226,20 @@
             Me.txtSaldo.BackColor = System.Drawing.Color.White
             Me.txtSaldo.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtSaldo.Enabled = False
-            Me.txtSaldo.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtSaldo.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtSaldo.Location = New System.Drawing.Point(810, 4)
             Me.txtSaldo.Name = "txtSaldo"
-            Me.txtSaldo.Size = New System.Drawing.Size(131, 20)
+            Me.txtSaldo.Size = New System.Drawing.Size(131, 21)
             Me.txtSaldo.TabIndex = 287
             Me.txtSaldo.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
             '
             'Label14
             '
             Me.Label14.AutoSize = True
-            Me.Label14.Font = New System.Drawing.Font("Consolas", 8.25!)
-            Me.Label14.Location = New System.Drawing.Point(772, 8)
+            Me.Label14.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Label14.Location = New System.Drawing.Point(766, 8)
             Me.Label14.Name = "Label14"
-            Me.Label14.Size = New System.Drawing.Size(37, 13)
+            Me.Label14.Size = New System.Drawing.Size(42, 13)
             Me.Label14.TabIndex = 288
             Me.Label14.Text = "SALDO"
             '
@@ -248,20 +248,20 @@
             Me.txtAcreedorRegistros.BackColor = System.Drawing.Color.White
             Me.txtAcreedorRegistros.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtAcreedorRegistros.Enabled = False
-            Me.txtAcreedorRegistros.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtAcreedorRegistros.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtAcreedorRegistros.Location = New System.Drawing.Point(611, 4)
             Me.txtAcreedorRegistros.Name = "txtAcreedorRegistros"
-            Me.txtAcreedorRegistros.Size = New System.Drawing.Size(122, 20)
+            Me.txtAcreedorRegistros.Size = New System.Drawing.Size(122, 21)
             Me.txtAcreedorRegistros.TabIndex = 278
             Me.txtAcreedorRegistros.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
             '
             'Label18
             '
             Me.Label18.AutoSize = True
-            Me.Label18.Font = New System.Drawing.Font("Consolas", 8.25!)
-            Me.Label18.Location = New System.Drawing.Point(550, 8)
+            Me.Label18.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Label18.Location = New System.Drawing.Point(548, 8)
             Me.Label18.Name = "Label18"
-            Me.Label18.Size = New System.Drawing.Size(55, 13)
+            Me.Label18.Size = New System.Drawing.Size(62, 13)
             Me.Label18.TabIndex = 280
             Me.Label18.Text = "ACREEDOR"
             '
@@ -270,20 +270,20 @@
             Me.txtDeudorRegistros.BackColor = System.Drawing.Color.White
             Me.txtDeudorRegistros.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtDeudorRegistros.Enabled = False
-            Me.txtDeudorRegistros.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtDeudorRegistros.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtDeudorRegistros.Location = New System.Drawing.Point(408, 4)
             Me.txtDeudorRegistros.Name = "txtDeudorRegistros"
-            Me.txtDeudorRegistros.Size = New System.Drawing.Size(122, 20)
+            Me.txtDeudorRegistros.Size = New System.Drawing.Size(122, 21)
             Me.txtDeudorRegistros.TabIndex = 277
             Me.txtDeudorRegistros.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
             '
             'Label19
             '
             Me.Label19.AutoSize = True
-            Me.Label19.Font = New System.Drawing.Font("Consolas", 8.25!)
+            Me.Label19.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Label19.Location = New System.Drawing.Point(359, 8)
             Me.Label19.Name = "Label19"
-            Me.Label19.Size = New System.Drawing.Size(43, 13)
+            Me.Label19.Size = New System.Drawing.Size(49, 13)
             Me.Label19.TabIndex = 279
             Me.Label19.Text = "DEUDOR"
             '
@@ -300,10 +300,10 @@
             'Label10
             '
             Me.Label10.AutoSize = True
-            Me.Label10.Font = New System.Drawing.Font("Consolas", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Label10.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Label10.Location = New System.Drawing.Point(435, 3)
             Me.Label10.Name = "Label10"
-            Me.Label10.Size = New System.Drawing.Size(72, 19)
+            Me.Label10.Size = New System.Drawing.Size(53, 13)
             Me.Label10.TabIndex = 231
             Me.Label10.Text = "ASIENTO"
             '
@@ -327,20 +327,20 @@
             Me.txtSaldoAsiento.BackColor = System.Drawing.Color.White
             Me.txtSaldoAsiento.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtSaldoAsiento.Enabled = False
-            Me.txtSaldoAsiento.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtSaldoAsiento.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtSaldoAsiento.Location = New System.Drawing.Point(810, 4)
             Me.txtSaldoAsiento.Name = "txtSaldoAsiento"
-            Me.txtSaldoAsiento.Size = New System.Drawing.Size(131, 20)
+            Me.txtSaldoAsiento.Size = New System.Drawing.Size(131, 21)
             Me.txtSaldoAsiento.TabIndex = 289
             Me.txtSaldoAsiento.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
             '
             'Label15
             '
             Me.Label15.AutoSize = True
-            Me.Label15.Font = New System.Drawing.Font("Consolas", 8.25!)
+            Me.Label15.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Label15.Location = New System.Drawing.Point(767, 8)
             Me.Label15.Name = "Label15"
-            Me.Label15.Size = New System.Drawing.Size(37, 13)
+            Me.Label15.Size = New System.Drawing.Size(42, 13)
             Me.Label15.TabIndex = 290
             Me.Label15.Text = "SALDO"
             '
@@ -349,20 +349,20 @@
             Me.txtAcreedorAsiento.BackColor = System.Drawing.Color.White
             Me.txtAcreedorAsiento.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtAcreedorAsiento.Enabled = False
-            Me.txtAcreedorAsiento.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtAcreedorAsiento.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtAcreedorAsiento.Location = New System.Drawing.Point(611, 4)
             Me.txtAcreedorAsiento.Name = "txtAcreedorAsiento"
-            Me.txtAcreedorAsiento.Size = New System.Drawing.Size(122, 20)
+            Me.txtAcreedorAsiento.Size = New System.Drawing.Size(122, 21)
             Me.txtAcreedorAsiento.TabIndex = 282
             Me.txtAcreedorAsiento.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
             '
             'Label11
             '
             Me.Label11.AutoSize = True
-            Me.Label11.Font = New System.Drawing.Font("Consolas", 8.25!)
+            Me.Label11.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Label11.Location = New System.Drawing.Point(550, 8)
             Me.Label11.Name = "Label11"
-            Me.Label11.Size = New System.Drawing.Size(55, 13)
+            Me.Label11.Size = New System.Drawing.Size(62, 13)
             Me.Label11.TabIndex = 284
             Me.Label11.Text = "ACREEDOR"
             '
@@ -371,20 +371,20 @@
             Me.txtDeudorAsiento.BackColor = System.Drawing.Color.White
             Me.txtDeudorAsiento.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtDeudorAsiento.Enabled = False
-            Me.txtDeudorAsiento.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtDeudorAsiento.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtDeudorAsiento.Location = New System.Drawing.Point(408, 4)
             Me.txtDeudorAsiento.Name = "txtDeudorAsiento"
-            Me.txtDeudorAsiento.Size = New System.Drawing.Size(122, 20)
+            Me.txtDeudorAsiento.Size = New System.Drawing.Size(122, 21)
             Me.txtDeudorAsiento.TabIndex = 281
             Me.txtDeudorAsiento.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
             '
             'Label12
             '
             Me.Label12.AutoSize = True
-            Me.Label12.Font = New System.Drawing.Font("Consolas", 8.25!)
+            Me.Label12.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Label12.Location = New System.Drawing.Point(359, 8)
             Me.Label12.Name = "Label12"
-            Me.Label12.Size = New System.Drawing.Size(43, 13)
+            Me.Label12.Size = New System.Drawing.Size(49, 13)
             Me.Label12.TabIndex = 283
             Me.Label12.Text = "DEUDOR"
             '
@@ -458,7 +458,7 @@
             Me.Panel1.Controls.Add(Me.lblDesde)
             Me.Panel1.Controls.Add(Me.lblHasta)
             Me.Panel1.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Panel1.Location = New System.Drawing.Point(0, 25)
+            Me.Panel1.Location = New System.Drawing.Point(0, 34)
             Me.Panel1.Name = "Panel1"
             Me.Panel1.Size = New System.Drawing.Size(282, 52)
             Me.Panel1.TabIndex = 287
@@ -471,7 +471,7 @@
             Me.Panel2.Controls.Add(Me.Label1)
             Me.Panel2.Controls.Add(Me.dgvMayoresPadres)
             Me.Panel2.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Panel2.Location = New System.Drawing.Point(288, 25)
+            Me.Panel2.Location = New System.Drawing.Point(288, 36)
             Me.Panel2.Name = "Panel2"
             Me.Panel2.Size = New System.Drawing.Size(660, 52)
             Me.Panel2.TabIndex = 287
@@ -489,43 +489,47 @@
             '
             'MenuStrip1
             '
+            Me.MenuStrip1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
             Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnCargar, Me.btnMayores, Me.btnExportar, Me.REPORTEASIENTOToolStripMenuItem})
             Me.MenuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow
             Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
             Me.MenuStrip1.Name = "MenuStrip1"
             Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(7, 2, 0, 2)
-            Me.MenuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
-            Me.MenuStrip1.Size = New System.Drawing.Size(944, 24)
+            Me.MenuStrip1.Size = New System.Drawing.Size(944, 32)
             Me.MenuStrip1.TabIndex = 288
             Me.MenuStrip1.Text = "msIngresoBodega"
             '
             'btnCargar
             '
-            Me.btnCargar.Image = Global.syscisepro.My.Resources.Resources.BuscarRegistro
+            Me.btnCargar.Image = Global.syscisepro.My.Resources.Resources.search_24dp_FILL0_wght400_GRAD0_opsz24__2_
+            Me.btnCargar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnCargar.Name = "btnCargar"
-            Me.btnCargar.Size = New System.Drawing.Size(81, 20)
-            Me.btnCargar.Text = "CARGAR"
+            Me.btnCargar.Size = New System.Drawing.Size(87, 28)
+            Me.btnCargar.Text = "BUSCAR"
             '
             'btnMayores
             '
-            Me.btnMayores.Image = Global.syscisepro.My.Resources.Resources.excel_icon
+            Me.btnMayores.Image = Global.syscisepro.My.Resources.Resources.icons8_excel_48
+            Me.btnMayores.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnMayores.Name = "btnMayores"
-            Me.btnMayores.Size = New System.Drawing.Size(138, 20)
-            Me.btnMayores.Text = "EXPORTAR DETALLE"
+            Me.btnMayores.Size = New System.Drawing.Size(88, 28)
+            Me.btnMayores.Text = "DETALLE"
             '
             'btnExportar
             '
-            Me.btnExportar.Image = Global.syscisepro.My.Resources.Resources.excel_icon
+            Me.btnExportar.Image = Global.syscisepro.My.Resources.Resources.icons8_excel_48
+            Me.btnExportar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnExportar.Name = "btnExportar"
-            Me.btnExportar.Size = New System.Drawing.Size(139, 20)
-            Me.btnExportar.Text = "EXPORTAR ASIENTO"
+            Me.btnExportar.Size = New System.Drawing.Size(89, 28)
+            Me.btnExportar.Text = "ASIENTO"
             '
             'REPORTEASIENTOToolStripMenuItem
             '
-            Me.REPORTEASIENTOToolStripMenuItem.Image = Global.syscisepro.My.Resources.Resources.report
+            Me.REPORTEASIENTOToolStripMenuItem.Image = Global.syscisepro.My.Resources.Resources.description_24dp_FILL0_wght400_GRAD0_opsz24__2_
+            Me.REPORTEASIENTOToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.REPORTEASIENTOToolStripMenuItem.Name = "REPORTEASIENTOToolStripMenuItem"
-            Me.REPORTEASIENTOToolStripMenuItem.Size = New System.Drawing.Size(106, 20)
-            Me.REPORTEASIENTOToolStripMenuItem.Text = "REPORTE PDF"
+            Me.REPORTEASIENTOToolStripMenuItem.Size = New System.Drawing.Size(93, 28)
+            Me.REPORTEASIENTOToolStripMenuItem.Text = "REPORTE "
             '
             'FormMayorizacion
             '
@@ -546,6 +550,10 @@
             Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
             Me.Name = "FormMayorizacion"
             Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+            Me.StateActive.Border.DrawBorders = CType((((Krypton.Toolkit.PaletteDrawBorders.Top Or Krypton.Toolkit.PaletteDrawBorders.Bottom) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Left) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Right), Krypton.Toolkit.PaletteDrawBorders)
+            Me.StateActive.Border.Rounding = 5.0!
             Me.Text = "MAYORIZACION"
             CType(Me.dgvMayoresPadres, System.ComponentModel.ISupportInitialize).EndInit()
             CType(Me.dgvMayoresHijos, System.ComponentModel.ISupportInitialize).EndInit()

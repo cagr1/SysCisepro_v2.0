@@ -62,7 +62,7 @@ Namespace FORMULARIOS.CONTABILIDAD.SRI
                 Case TipoConexion.Seportpac
                     Icon = My.Resources.logo_s
                     MenuStrip1.ForeColor = Color.White
-                    MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
+                    'MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
                     dgvVentasATS.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorSeportpac
                     dgvNotasCredito.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorSeportpac
                     dgvComprasATS.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorSeportpac
@@ -70,13 +70,16 @@ Namespace FORMULARIOS.CONTABILIDAD.SRI
                 Case Else
                     Icon = My.Resources.logo_c
                     MenuStrip1.ForeColor = Color.White
-                    MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorCisepro
+                    'MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorCisepro
                     dgvVentasATS.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
                     dgvNotasCredito.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
                     dgvComprasATS.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
                     dgvCodigosRetencionCompras.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
             End Select
-
+            dgvVentasATS.Font = New Font("Roboto", 8, FontStyle.Regular)
+            dgvNotasCredito.Font = New Font("Roboto", 8, FontStyle.Regular)
+            dgvComprasATS.Font = New Font("Roboto", 8, FontStyle.Regular)
+            dgvCodigosRetencionCompras.Font = New Font("Roboto", 8, FontStyle.Regular)
             btnCargar.Enabled = False
             btnGenerarXML.Enabled = False
         End Sub

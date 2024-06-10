@@ -1,8 +1,8 @@
 ﻿Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
     <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
     Partial Class FormAjustarComprobantesRetencionCompras
-        Inherits System.Windows.Forms.Form
-
+        'Inherits System.Windows.Forms.Form
+        Inherits Krypton.Toolkit.KryptonForm
         'Form reemplaza a Dispose para limpiar la lista de componentes.
         <System.Diagnostics.DebuggerNonUserCode()> _
         Protected Overrides Sub Dispose(ByVal disposing As Boolean)
@@ -281,7 +281,7 @@
             Me.gbNombreComercialProveedor.Controls.Add(Me.txtNombreComercialProveedorGeneral)
             Me.gbNombreComercialProveedor.Controls.Add(Me.lblIdProveedorGeneral)
             Me.gbNombreComercialProveedor.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.gbNombreComercialProveedor.Location = New System.Drawing.Point(0, 29)
+            Me.gbNombreComercialProveedor.Location = New System.Drawing.Point(0, 34)
             Me.gbNombreComercialProveedor.Name = "gbNombreComercialProveedor"
             Me.gbNombreComercialProveedor.Size = New System.Drawing.Size(710, 42)
             Me.gbNombreComercialProveedor.TabIndex = 94
@@ -340,7 +340,7 @@
             Me.txtNombreComercialProveedorGeneral.BackColor = System.Drawing.Color.White
             Me.txtNombreComercialProveedorGeneral.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtNombreComercialProveedorGeneral.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtNombreComercialProveedorGeneral.Location = New System.Drawing.Point(9, 16)
+            Me.txtNombreComercialProveedorGeneral.Location = New System.Drawing.Point(9, 17)
             Me.txtNombreComercialProveedorGeneral.Name = "txtNombreComercialProveedorGeneral"
             Me.txtNombreComercialProveedorGeneral.Size = New System.Drawing.Size(554, 20)
             Me.txtNombreComercialProveedorGeneral.TabIndex = 2
@@ -362,7 +362,7 @@
             Me.GroupBox1.Controls.Add(Me.lblIdComprobanteCompra)
             Me.GroupBox1.Controls.Add(Me.dgvComprobantesCompra)
             Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.GroupBox1.Location = New System.Drawing.Point(0, 72)
+            Me.GroupBox1.Location = New System.Drawing.Point(0, 77)
             Me.GroupBox1.Name = "GroupBox1"
             Me.GroupBox1.Size = New System.Drawing.Size(710, 242)
             Me.GroupBox1.TabIndex = 96
@@ -436,7 +436,7 @@
             Me.gbDatosComprobanteCompra.Controls.Add(Me.Label27)
             Me.gbDatosComprobanteCompra.Controls.Add(Me.Label28)
             Me.gbDatosComprobanteCompra.Controls.Add(Me.Label30)
-            Me.gbDatosComprobanteCompra.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.gbDatosComprobanteCompra.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.gbDatosComprobanteCompra.Location = New System.Drawing.Point(0, 406)
             Me.gbDatosComprobanteCompra.Name = "gbDatosComprobanteCompra"
             Me.gbDatosComprobanteCompra.Size = New System.Drawing.Size(199, 74)
@@ -450,7 +450,7 @@
             Me.dtpFechaEmisionComprobanteCompra.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
             Me.dtpFechaEmisionComprobanteCompra.Location = New System.Drawing.Point(64, 32)
             Me.dtpFechaEmisionComprobanteCompra.Name = "dtpFechaEmisionComprobanteCompra"
-            Me.dtpFechaEmisionComprobanteCompra.Size = New System.Drawing.Size(129, 20)
+            Me.dtpFechaEmisionComprobanteCompra.Size = New System.Drawing.Size(129, 21)
             Me.dtpFechaEmisionComprobanteCompra.TabIndex = 26
             '
             'lblTipoComprobanteCompra
@@ -458,7 +458,7 @@
             Me.lblTipoComprobanteCompra.AutoSize = True
             Me.lblTipoComprobanteCompra.Location = New System.Drawing.Point(61, 55)
             Me.lblTipoComprobanteCompra.Name = "lblTipoComprobanteCompra"
-            Me.lblTipoComprobanteCompra.Size = New System.Drawing.Size(25, 13)
+            Me.lblTipoComprobanteCompra.Size = New System.Drawing.Size(16, 13)
             Me.lblTipoComprobanteCompra.TabIndex = 25
             Me.lblTipoComprobanteCompra.Text = "..."
             Me.lblTipoComprobanteCompra.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -468,7 +468,7 @@
             Me.lblFechaComprobanteCompra.AutoSize = True
             Me.lblFechaComprobanteCompra.Location = New System.Drawing.Point(61, 34)
             Me.lblFechaComprobanteCompra.Name = "lblFechaComprobanteCompra"
-            Me.lblFechaComprobanteCompra.Size = New System.Drawing.Size(67, 13)
+            Me.lblFechaComprobanteCompra.Size = New System.Drawing.Size(65, 13)
             Me.lblFechaComprobanteCompra.TabIndex = 23
             Me.lblFechaComprobanteCompra.Text = "00/00/0000"
             Me.lblFechaComprobanteCompra.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -529,7 +529,7 @@
             Me.gbValoresComprobanteCompra.Controls.Add(Me.txtSubtotal12)
             Me.gbValoresComprobanteCompra.Controls.Add(Me.txtSubtotal0)
             Me.gbValoresComprobanteCompra.Enabled = False
-            Me.gbValoresComprobanteCompra.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.gbValoresComprobanteCompra.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.gbValoresComprobanteCompra.Location = New System.Drawing.Point(203, 406)
             Me.gbValoresComprobanteCompra.Name = "gbValoresComprobanteCompra"
             Me.gbValoresComprobanteCompra.Size = New System.Drawing.Size(507, 74)
@@ -543,7 +543,7 @@
             Me.txtTotalComprobanteCompra.Enabled = False
             Me.txtTotalComprobanteCompra.Location = New System.Drawing.Point(419, 49)
             Me.txtTotalComprobanteCompra.Name = "txtTotalComprobanteCompra"
-            Me.txtTotalComprobanteCompra.Size = New System.Drawing.Size(79, 20)
+            Me.txtTotalComprobanteCompra.Size = New System.Drawing.Size(79, 21)
             Me.txtTotalComprobanteCompra.TabIndex = 32
             Me.txtTotalComprobanteCompra.Text = "0.00"
             Me.txtTotalComprobanteCompra.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -574,7 +574,7 @@
             Me.txtIvaComprobanteCompra.Enabled = False
             Me.txtIvaComprobanteCompra.Location = New System.Drawing.Point(419, 31)
             Me.txtIvaComprobanteCompra.Name = "txtIvaComprobanteCompra"
-            Me.txtIvaComprobanteCompra.Size = New System.Drawing.Size(79, 20)
+            Me.txtIvaComprobanteCompra.Size = New System.Drawing.Size(79, 21)
             Me.txtIvaComprobanteCompra.TabIndex = 31
             Me.txtIvaComprobanteCompra.Text = "0.00"
             Me.txtIvaComprobanteCompra.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -605,7 +605,7 @@
             Me.txtSubtotalComprobanteCompra.Enabled = False
             Me.txtSubtotalComprobanteCompra.Location = New System.Drawing.Point(419, 13)
             Me.txtSubtotalComprobanteCompra.Name = "txtSubtotalComprobanteCompra"
-            Me.txtSubtotalComprobanteCompra.Size = New System.Drawing.Size(79, 20)
+            Me.txtSubtotalComprobanteCompra.Size = New System.Drawing.Size(79, 21)
             Me.txtSubtotalComprobanteCompra.TabIndex = 30
             Me.txtSubtotalComprobanteCompra.Text = "0.00"
             Me.txtSubtotalComprobanteCompra.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -626,7 +626,7 @@
             Me.txtDescuento.Enabled = False
             Me.txtDescuento.Location = New System.Drawing.Point(184, 50)
             Me.txtDescuento.Name = "txtDescuento"
-            Me.txtDescuento.Size = New System.Drawing.Size(83, 20)
+            Me.txtDescuento.Size = New System.Drawing.Size(83, 21)
             Me.txtDescuento.TabIndex = 29
             Me.txtDescuento.Text = "0.00"
             Me.txtDescuento.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -647,7 +647,7 @@
             Me.txtSubtotal12.Enabled = False
             Me.txtSubtotal12.Location = New System.Drawing.Point(184, 14)
             Me.txtSubtotal12.Name = "txtSubtotal12"
-            Me.txtSubtotal12.Size = New System.Drawing.Size(83, 20)
+            Me.txtSubtotal12.Size = New System.Drawing.Size(83, 21)
             Me.txtSubtotal12.TabIndex = 27
             Me.txtSubtotal12.Text = "0.00"
             Me.txtSubtotal12.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -658,7 +658,7 @@
             Me.txtSubtotal0.Enabled = False
             Me.txtSubtotal0.Location = New System.Drawing.Point(184, 32)
             Me.txtSubtotal0.Name = "txtSubtotal0"
-            Me.txtSubtotal0.Size = New System.Drawing.Size(83, 20)
+            Me.txtSubtotal0.Size = New System.Drawing.Size(83, 21)
             Me.txtSubtotal0.TabIndex = 28
             Me.txtSubtotal0.Text = "0.00"
             Me.txtSubtotal0.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -683,21 +683,22 @@
             '
             'MenuStrip1
             '
+            Me.MenuStrip1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
             Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem1})
             Me.MenuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow
             Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
             Me.MenuStrip1.Name = "MenuStrip1"
             Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(7, 2, 0, 2)
-            Me.MenuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
-            Me.MenuStrip1.Size = New System.Drawing.Size(709, 24)
+            Me.MenuStrip1.Size = New System.Drawing.Size(709, 32)
             Me.MenuStrip1.TabIndex = 188
             Me.MenuStrip1.Text = "msIngresoBodega"
             '
             'ToolStripMenuItem1
             '
-            Me.ToolStripMenuItem1.Image = Global.syscisepro.My.Resources.Resources.EliminarRegistro
+            Me.ToolStripMenuItem1.Image = Global.syscisepro.My.Resources.Resources.do_not_disturb_on_24dp_FILL0_wght400_GRAD0_opsz24
+            Me.ToolStripMenuItem1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
-            Me.ToolStripMenuItem1.Size = New System.Drawing.Size(81, 20)
+            Me.ToolStripMenuItem1.Size = New System.Drawing.Size(89, 28)
             Me.ToolStripMenuItem1.Text = "ANULAR"
             '
             'dgvComprobanteRetencion
@@ -856,12 +857,15 @@
             Me.Controls.Add(Me.lblNumeroRegistroVenta)
             Me.Controls.Add(Me.dgvPagosFacturaCompra)
             Me.Controls.Add(Me.dgvAsientoDiarioCompra)
-            Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
             Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
             Me.MaximizeBox = False
             Me.MinimizeBox = False
             Me.Name = "FormAjustarComprobantesRetencionCompras"
             Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+            Me.StateActive.Border.DrawBorders = CType((((Krypton.Toolkit.PaletteDrawBorders.Top Or Krypton.Toolkit.PaletteDrawBorders.Bottom) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Left) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Right), Krypton.Toolkit.PaletteDrawBorders)
+            Me.StateActive.Border.Rounding = 5.0!
             Me.Text = "ANULAR COMPROBANTES DE RETENCIÓN COMPRAS"
             Me.gbRetencion.ResumeLayout(False)
             Me.gbRetencion.PerformLayout()

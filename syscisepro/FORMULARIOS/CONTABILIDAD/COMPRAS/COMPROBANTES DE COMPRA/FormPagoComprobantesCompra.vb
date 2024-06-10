@@ -238,7 +238,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
                 Case TipoConexion.Asenava
                     Icon = My.Resources.logo_a
                     MenuStrip1.ForeColor = Color.White
-                    MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorAsenava
+                    'MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorAsenava
                     dgvComprobantesCompra.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorAsenava
                     dgvComprobanteRetencion.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorAsenava
                     dgvDetalleComprobanteRetencion.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorAsenava
@@ -246,7 +246,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
                 Case TipoConexion.Seportpac
                     Icon = My.Resources.logo_s
                     MenuStrip1.ForeColor = Color.White
-                    MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
+                    'MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
                     dgvComprobantesCompra.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorSeportpac
                     dgvComprobanteRetencion.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorSeportpac
                     dgvDetalleComprobanteRetencion.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorSeportpac
@@ -254,12 +254,16 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
                 Case Else
                     Icon = My.Resources.logo_c
                     MenuStrip1.ForeColor = Color.White
-                    MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorCisepro
+                    'MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorCisepro
                     dgvComprobantesCompra.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
                     dgvComprobanteRetencion.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
                     dgvDetalleComprobanteRetencion.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
                     dgvPagosComprobantesCompra.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
             End Select
+            dgvComprobantesCompra.Font = New Font("Roboto", 8, FontStyle.Regular)
+            dgvComprobanteRetencion.Font = New Font("Roboto", 8, FontStyle.Regular)
+            dgvDetalleComprobanteRetencion.Font = New Font("Roboto", 8, FontStyle.Regular)
+            dgvPagosComprobantesCompra.Font = New Font("Roboto", 8, FontStyle.Regular)
             autocompletarNombreProveedor()
             deshabilitadoInicio()
         End Sub

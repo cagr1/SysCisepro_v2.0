@@ -77,26 +77,22 @@
             '
             Me.btnBuscar.BackColor = System.Drawing.Color.Transparent
             Me.btnBuscar.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnBuscar.Image = Global.syscisepro.My.Resources.Resources.BuscarRegistro
-            Me.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.TopCenter
+            Me.btnBuscar.Image = Global.syscisepro.My.Resources.Resources.search_24dp_FILL0_wght400_GRAD0_opsz24__2_
             Me.btnBuscar.Location = New System.Drawing.Point(327, 4)
             Me.btnBuscar.Name = "btnBuscar"
-            Me.btnBuscar.Size = New System.Drawing.Size(69, 40)
+            Me.btnBuscar.Size = New System.Drawing.Size(47, 40)
             Me.btnBuscar.TabIndex = 4
-            Me.btnBuscar.Text = "BUSCAR"
             Me.btnBuscar.TextAlign = System.Drawing.ContentAlignment.BottomCenter
             Me.btnBuscar.UseVisualStyleBackColor = False
             '
             'btnActualizar
             '
             Me.btnActualizar.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnActualizar.Image = Global.syscisepro.My.Resources.Resources.oki
-            Me.btnActualizar.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-            Me.btnActualizar.Location = New System.Drawing.Point(402, 4)
+            Me.btnActualizar.Image = Global.syscisepro.My.Resources.Resources.refresh_24dp_FILL0_wght400_GRAD0_opsz24__2_
+            Me.btnActualizar.Location = New System.Drawing.Point(380, 4)
             Me.btnActualizar.Name = "btnActualizar"
-            Me.btnActualizar.Size = New System.Drawing.Size(69, 40)
+            Me.btnActualizar.Size = New System.Drawing.Size(47, 40)
             Me.btnActualizar.TabIndex = 5
-            Me.btnActualizar.Text = "CARGAR"
             Me.btnActualizar.TextAlign = System.Drawing.ContentAlignment.BottomCenter
             Me.btnActualizar.UseVisualStyleBackColor = True
             '
@@ -189,6 +185,10 @@
             Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
             Me.Name = "FormReporteActivoFijoPorCustodio"
             Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+            Me.StateActive.Border.DrawBorders = CType((((Krypton.Toolkit.PaletteDrawBorders.Top Or Krypton.Toolkit.PaletteDrawBorders.Bottom) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Left) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Right), Krypton.Toolkit.PaletteDrawBorders)
+            Me.StateActive.Border.Rounding = 5.0!
             Me.Text = "REPORTE DE ACTIVO FIJO POR CUSTODIO"
             Me.scReporteActivoFijoCustodio.Panel1.ResumeLayout(False)
             Me.scReporteActivoFijoCustodio.Panel1.PerformLayout()

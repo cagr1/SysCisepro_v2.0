@@ -62,7 +62,7 @@
             Me.dgvRequisicionProductoServicio.BackgroundColor = System.Drawing.Color.White
             Me.dgvRequisicionProductoServicio.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
             Me.dgvRequisicionProductoServicio.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-            Me.dgvRequisicionProductoServicio.Location = New System.Drawing.Point(2, 32)
+            Me.dgvRequisicionProductoServicio.Location = New System.Drawing.Point(2, 33)
             Me.dgvRequisicionProductoServicio.Name = "dgvRequisicionProductoServicio"
             Me.dgvRequisicionProductoServicio.RowHeadersVisible = False
             Me.dgvRequisicionProductoServicio.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
@@ -83,7 +83,7 @@
             Me.gbRequisicion.Controls.Add(Me.txtNombrePersonal)
             Me.gbRequisicion.Controls.Add(Me.lblRealizadoPor)
             Me.gbRequisicion.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.gbRequisicion.Location = New System.Drawing.Point(541, 32)
+            Me.gbRequisicion.Location = New System.Drawing.Point(541, 34)
             Me.gbRequisicion.Name = "gbRequisicion"
             Me.gbRequisicion.Size = New System.Drawing.Size(439, 150)
             Me.gbRequisicion.TabIndex = 1
@@ -215,68 +215,68 @@
             '
             'MenuStrip1
             '
-            Me.MenuStrip1.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.MenuStrip1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
             Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnRecargar, Me.btnAprovar, Me.btnRechazar, Me.btnModificar, Me.btnGuardar, Me.btnCancelar})
             Me.MenuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow
             Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
             Me.MenuStrip1.Name = "MenuStrip1"
             Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(7, 2, 0, 2)
-            Me.MenuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
-            Me.MenuStrip1.Size = New System.Drawing.Size(982, 24)
+            Me.MenuStrip1.Size = New System.Drawing.Size(982, 32)
             Me.MenuStrip1.TabIndex = 184
             Me.MenuStrip1.Text = "msIngresoBodega"
             '
             'btnRecargar
             '
             Me.btnRecargar.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnRecargar.Image = Global.syscisepro.My.Resources.Resources.BuscarRegistro
+            Me.btnRecargar.Image = Global.syscisepro.My.Resources.Resources.search_24dp_FILL0_wght400_GRAD0_opsz24__2_
             Me.btnRecargar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnRecargar.Name = "btnRecargar"
-            Me.btnRecargar.Size = New System.Drawing.Size(126, 20)
-            Me.btnRecargar.Text = "RECARGAR REQ."
+            Me.btnRecargar.Size = New System.Drawing.Size(85, 28)
+            Me.btnRecargar.Text = "BUSCAR"
             '
             'btnAprovar
             '
             Me.btnAprovar.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnAprovar.Image = Global.syscisepro.My.Resources.Resources.ok
+            Me.btnAprovar.Image = Global.syscisepro.My.Resources.Resources.check_circle_24dp_FILL0_wght400_GRAD0_opsz24__3_
             Me.btnAprovar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnAprovar.Name = "btnAprovar"
-            Me.btnAprovar.Size = New System.Drawing.Size(84, 20)
+            Me.btnAprovar.Size = New System.Drawing.Size(92, 28)
             Me.btnAprovar.Text = "APROBAR"
             '
             'btnRechazar
             '
             Me.btnRechazar.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnRechazar.Image = Global.syscisepro.My.Resources.Resources.remove
+            Me.btnRechazar.Image = Global.syscisepro.My.Resources.Resources.do_not_disturb_on_24dp_FILL0_wght400_GRAD0_opsz24
             Me.btnRechazar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnRechazar.Name = "btnRechazar"
-            Me.btnRechazar.Size = New System.Drawing.Size(90, 20)
+            Me.btnRechazar.Size = New System.Drawing.Size(98, 28)
             Me.btnRechazar.Text = "RECHAZAR"
             '
             'btnModificar
             '
             Me.btnModificar.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnModificar.Image = Global.syscisepro.My.Resources.Resources.ModificarRegistro
+            Me.btnModificar.Image = Global.syscisepro.My.Resources.Resources.edit_document_24dp_FILL0_wght400_GRAD0_opsz24__2_
             Me.btnModificar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnModificar.Name = "btnModificar"
-            Me.btnModificar.Size = New System.Drawing.Size(95, 20)
+            Me.btnModificar.Size = New System.Drawing.Size(103, 28)
             Me.btnModificar.Text = "MODIFICAR"
             '
             'btnGuardar
             '
             Me.btnGuardar.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnGuardar.Image = CType(resources.GetObject("btnGuardar.Image"), System.Drawing.Image)
+            Me.btnGuardar.Image = Global.syscisepro.My.Resources.Resources.save_24dp_FILL0_wght400_GRAD0_opsz24__2_
             Me.btnGuardar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnGuardar.Name = "btnGuardar"
-            Me.btnGuardar.Size = New System.Drawing.Size(87, 20)
+            Me.btnGuardar.Size = New System.Drawing.Size(95, 28)
             Me.btnGuardar.Text = "GUARDAR"
             '
             'btnCancelar
             '
             Me.btnCancelar.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnCancelar.Image = Global.syscisepro.My.Resources.Resources.cancel
+            Me.btnCancelar.Image = Global.syscisepro.My.Resources.Resources.cancel_24dp_FILL0_wght400_GRAD0_opsz24
+            Me.btnCancelar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnCancelar.Name = "btnCancelar"
-            Me.btnCancelar.Size = New System.Drawing.Size(89, 20)
+            Me.btnCancelar.Size = New System.Drawing.Size(97, 28)
             Me.btnCancelar.Text = "CANCELAR"
             '
             'FormAprovacionRequisicion
@@ -290,10 +290,13 @@
             Me.Controls.Add(Me.gbRequisicion)
             Me.Controls.Add(Me.dgvRequisicionProductoServicio)
             Me.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
             Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
             Me.Name = "FormAprovacionRequisicion"
             Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+            Me.StateActive.Border.DrawBorders = CType((((Krypton.Toolkit.PaletteDrawBorders.Top Or Krypton.Toolkit.PaletteDrawBorders.Bottom) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Left) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Right), Krypton.Toolkit.PaletteDrawBorders)
+            Me.StateActive.Border.Rounding = 5.0!
             Me.Text = "APROBACIÓN DE REQUISICIÓN DE PRODUCTO/SERVICIO"
             CType(Me.dgvRequisicionProductoServicio, System.ComponentModel.ISupportInitialize).EndInit()
             Me.gbRequisicion.ResumeLayout(False)

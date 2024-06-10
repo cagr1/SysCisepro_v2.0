@@ -754,10 +754,13 @@
             Me.Controls.Add(Me.gbParámetros)
             Me.Controls.Add(Me.txtIdTransferencia)
             Me.Controls.Add(Me.Label1)
-            Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
             Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
             Me.Name = "FormTransferenciasActivosFijos"
             Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+            Me.StateActive.Border.DrawBorders = CType((((Krypton.Toolkit.PaletteDrawBorders.Top Or Krypton.Toolkit.PaletteDrawBorders.Bottom) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Left) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Right), Krypton.Toolkit.PaletteDrawBorders)
+            Me.StateActive.Border.Rounding = 5.0!
             Me.Text = "TRANSFERENCIA DE ACTIVOS FIJOS"
             Me.gbParámetros.ResumeLayout(False)
             Me.gbParámetros.PerformLayout()

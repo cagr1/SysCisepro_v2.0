@@ -94,7 +94,7 @@
             Me.gbLiquidacion.Controls.Add(Me.txtTotalLiquidacion)
             Me.gbLiquidacion.Controls.Add(Me.txtFechaLiquidacion)
             Me.gbLiquidacion.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.gbLiquidacion.Location = New System.Drawing.Point(2, 96)
+            Me.gbLiquidacion.Location = New System.Drawing.Point(2, 102)
             Me.gbLiquidacion.Name = "gbLiquidacion"
             Me.gbLiquidacion.Size = New System.Drawing.Size(909, 42)
             Me.gbLiquidacion.TabIndex = 19
@@ -290,7 +290,7 @@
             DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
             DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
             Me.dgvLiquidacionesPendientes.DefaultCellStyle = DataGridViewCellStyle5
-            Me.dgvLiquidacionesPendientes.Location = New System.Drawing.Point(0, 25)
+            Me.dgvLiquidacionesPendientes.Location = New System.Drawing.Point(0, 32)
             Me.dgvLiquidacionesPendientes.MultiSelect = False
             Me.dgvLiquidacionesPendientes.Name = "dgvLiquidacionesPendientes"
             Me.dgvLiquidacionesPendientes.RowHeadersVisible = False
@@ -366,7 +366,7 @@
             Me.gbNoDeducibles.Controls.Add(Me.chkSeleccionarTodoNoDeducibles)
             Me.gbNoDeducibles.Controls.Add(Me.dgvSolicitudFonoRotativoNoDeducible)
             Me.gbNoDeducibles.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.gbNoDeducibles.Location = New System.Drawing.Point(2, 144)
+            Me.gbNoDeducibles.Location = New System.Drawing.Point(2, 145)
             Me.gbNoDeducibles.Name = "gbNoDeducibles"
             Me.gbNoDeducibles.Size = New System.Drawing.Size(909, 257)
             Me.gbNoDeducibles.TabIndex = 32
@@ -389,9 +389,9 @@
             Me.gbDeducibles.Controls.Add(Me.chkSeleccionarTodo)
             Me.gbDeducibles.Controls.Add(Me.dgvSolicitudFondoRotativo)
             Me.gbDeducibles.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.gbDeducibles.Location = New System.Drawing.Point(2, 403)
+            Me.gbDeducibles.Location = New System.Drawing.Point(2, 406)
             Me.gbDeducibles.Name = "gbDeducibles"
-            Me.gbDeducibles.Size = New System.Drawing.Size(909, 250)
+            Me.gbDeducibles.Size = New System.Drawing.Size(903, 250)
             Me.gbDeducibles.TabIndex = 33
             Me.gbDeducibles.TabStop = False
             Me.gbDeducibles.Text = "DEDUCIBLES"
@@ -441,49 +441,51 @@
             '
             'MenuStrip1
             '
-            Me.MenuStrip1.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.MenuStrip1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
             Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnRecargar, Me.btnAgregarDiarioNoDeducibles, Me.btnAgregarDiarioDeducibles, Me.btnFinRevision})
             Me.MenuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow
             Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
             Me.MenuStrip1.Name = "MenuStrip1"
             Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(7, 2, 0, 2)
-            Me.MenuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
-            Me.MenuStrip1.Size = New System.Drawing.Size(907, 24)
+            Me.MenuStrip1.Size = New System.Drawing.Size(907, 32)
             Me.MenuStrip1.TabIndex = 184
             Me.MenuStrip1.Text = "msIngresoBodega"
             '
             'btnRecargar
             '
             Me.btnRecargar.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnRecargar.Image = Global.syscisepro.My.Resources.Resources.BuscarRegistro
+            Me.btnRecargar.Image = Global.syscisepro.My.Resources.Resources.search_24dp_FILL0_wght400_GRAD0_opsz24__2_
             Me.btnRecargar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnRecargar.Name = "btnRecargar"
-            Me.btnRecargar.Size = New System.Drawing.Size(126, 20)
-            Me.btnRecargar.Text = "RECARGAR LIQU."
+            Me.btnRecargar.Size = New System.Drawing.Size(88, 28)
+            Me.btnRecargar.Text = "BUSCAR"
             '
             'btnAgregarDiarioNoDeducibles
             '
             Me.btnAgregarDiarioNoDeducibles.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnAgregarDiarioNoDeducibles.Image = CType(resources.GetObject("btnAgregarDiarioNoDeducibles.Image"), System.Drawing.Image)
+            Me.btnAgregarDiarioNoDeducibles.Image = Global.syscisepro.My.Resources.Resources.add_circle_24dp_FILL0_wght400_GRAD0_opsz24__3_
+            Me.btnAgregarDiarioNoDeducibles.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnAgregarDiarioNoDeducibles.Name = "btnAgregarDiarioNoDeducibles"
-            Me.btnAgregarDiarioNoDeducibles.Size = New System.Drawing.Size(180, 20)
-            Me.btnAgregarDiarioNoDeducibles.Text = "AGREGAR NO DEDUCIBLES"
+            Me.btnAgregarDiarioNoDeducibles.Size = New System.Drawing.Size(132, 28)
+            Me.btnAgregarDiarioNoDeducibles.Text = "NO DEDUCIBLES"
             '
             'btnAgregarDiarioDeducibles
             '
             Me.btnAgregarDiarioDeducibles.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnAgregarDiarioDeducibles.Image = CType(resources.GetObject("btnAgregarDiarioDeducibles.Image"), System.Drawing.Image)
+            Me.btnAgregarDiarioDeducibles.Image = Global.syscisepro.My.Resources.Resources.add_circle_24dp_FILL0_wght400_GRAD0_opsz24__3_
+            Me.btnAgregarDiarioDeducibles.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnAgregarDiarioDeducibles.Name = "btnAgregarDiarioDeducibles"
-            Me.btnAgregarDiarioDeducibles.Size = New System.Drawing.Size(160, 20)
-            Me.btnAgregarDiarioDeducibles.Text = "AGREGAR DEDUCIBLES"
+            Me.btnAgregarDiarioDeducibles.Size = New System.Drawing.Size(112, 28)
+            Me.btnAgregarDiarioDeducibles.Text = "DEDUCIBLES"
             '
             'btnFinRevision
             '
             Me.btnFinRevision.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnFinRevision.Image = Global.syscisepro.My.Resources.Resources.oki
+            Me.btnFinRevision.Image = Global.syscisepro.My.Resources.Resources.check_circle_24dp_FILL0_wght400_GRAD0_opsz24__2_
+            Me.btnFinRevision.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnFinRevision.Name = "btnFinRevision"
-            Me.btnFinRevision.Size = New System.Drawing.Size(157, 20)
-            Me.btnFinRevision.Text = "FINALIZAR Y LIQUIDAR"
+            Me.btnFinRevision.Size = New System.Drawing.Size(163, 28)
+            Me.btnFinRevision.Text = "FINALIZAR / LIQUIDAR"
             '
             'FormRevisionLiquidaciones
             '
@@ -499,10 +501,13 @@
             Me.Controls.Add(Me.gbDeducibles)
             Me.Controls.Add(Me.dgvLiquidacionesPendientes)
             Me.Controls.Add(Me.gbLiquidacion)
-            Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
             Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
             Me.Name = "FormRevisionLiquidaciones"
             Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+            Me.StateActive.Border.DrawBorders = CType((((Krypton.Toolkit.PaletteDrawBorders.Top Or Krypton.Toolkit.PaletteDrawBorders.Bottom) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Left) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Right), Krypton.Toolkit.PaletteDrawBorders)
+            Me.StateActive.Border.Rounding = 5.0!
             Me.Text = "REVISION DE LIQUIDACIONES"
             Me.gbLiquidacion.ResumeLayout(False)
             Me.gbLiquidacion.PerformLayout()

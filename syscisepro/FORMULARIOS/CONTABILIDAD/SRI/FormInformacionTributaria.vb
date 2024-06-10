@@ -248,17 +248,18 @@ Namespace FORMULARIOS.CONTABILIDAD.SRI
             Select Case _tipoCon
                 Case TipoConexion.Asenava
                     Icon = My.Resources.logo_a
-                    MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorAsenava
+                    'MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorAsenava
                     MenuStrip1.ForeColor = Color.White
                 Case TipoConexion.Seportpac
                     Icon = My.Resources.logo_s
-                    MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
+                    'MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
                     MenuStrip1.ForeColor = Color.White
                 Case Else
                     Icon = My.Resources.logo_c
-                    MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorCisepro
+                    'MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorCisepro
                     MenuStrip1.ForeColor = Color.White
             End Select
+
             deshabilitadoInicio()
             cargarEmpresaInformacionTributaria()
             If dgvEmpresa.RowCount > 0 Then

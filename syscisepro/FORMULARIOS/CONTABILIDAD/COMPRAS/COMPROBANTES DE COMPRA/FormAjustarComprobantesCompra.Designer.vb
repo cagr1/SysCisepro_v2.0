@@ -1,8 +1,8 @@
 ﻿Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
     <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
     Partial Class FormAjustarComprobantesCompra
-        Inherits System.Windows.Forms.Form
-
+        'Inherits System.Windows.Forms.Form
+        Inherits Krypton.Toolkit.KryptonForm
         'Form reemplaza a Dispose para limpiar la lista de componentes.
         <System.Diagnostics.DebuggerNonUserCode()> _
         Protected Overrides Sub Dispose(ByVal disposing As Boolean)
@@ -101,7 +101,7 @@
             Me.gbNombreComercialProveedor.Controls.Add(Me.lblIdComprobanteCompra)
             Me.gbNombreComercialProveedor.Controls.Add(Me.Label6)
             Me.gbNombreComercialProveedor.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.gbNombreComercialProveedor.Location = New System.Drawing.Point(2, 25)
+            Me.gbNombreComercialProveedor.Location = New System.Drawing.Point(2, 34)
             Me.gbNombreComercialProveedor.Name = "gbNombreComercialProveedor"
             Me.gbNombreComercialProveedor.Size = New System.Drawing.Size(811, 54)
             Me.gbNombreComercialProveedor.TabIndex = 93
@@ -167,7 +167,7 @@
             Me.GroupBox1.Controls.Add(Me.gbValoresComprobanteCompra)
             Me.GroupBox1.Controls.Add(Me.gbDatosComprobanteCompra)
             Me.GroupBox1.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.GroupBox1.Location = New System.Drawing.Point(2, 82)
+            Me.GroupBox1.Location = New System.Drawing.Point(2, 89)
             Me.GroupBox1.Name = "GroupBox1"
             Me.GroupBox1.Size = New System.Drawing.Size(811, 526)
             Me.GroupBox1.TabIndex = 92
@@ -687,40 +687,43 @@
             '
             'MenuStrip1
             '
+            Me.MenuStrip1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
             Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnModificar, Me.btnGuardar, Me.btnCancelar})
             Me.MenuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow
             Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
             Me.MenuStrip1.Name = "MenuStrip1"
             Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(7, 2, 0, 2)
-            Me.MenuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
-            Me.MenuStrip1.Size = New System.Drawing.Size(818, 24)
+            Me.MenuStrip1.Size = New System.Drawing.Size(818, 32)
             Me.MenuStrip1.TabIndex = 187
             Me.MenuStrip1.Text = "msIngresoBodega"
             '
             'btnModificar
             '
             Me.btnModificar.Enabled = False
-            Me.btnModificar.Image = Global.syscisepro.My.Resources.Resources.ModificarRegistro
+            Me.btnModificar.Image = Global.syscisepro.My.Resources.Resources.edit_document_24dp_FILL0_wght400_GRAD0_opsz24__2_
+            Me.btnModificar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnModificar.Name = "btnModificar"
-            Me.btnModificar.Size = New System.Drawing.Size(98, 20)
+            Me.btnModificar.Size = New System.Drawing.Size(106, 28)
             Me.btnModificar.Text = "MODIFICAR"
             '
             'btnGuardar
             '
             Me.btnGuardar.Enabled = False
             Me.btnGuardar.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnGuardar.Image = Global.syscisepro.My.Resources.Resources.GuardarRegistro
+            Me.btnGuardar.Image = Global.syscisepro.My.Resources.Resources.save_24dp_FILL0_wght400_GRAD0_opsz24__3_
+            Me.btnGuardar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnGuardar.Name = "btnGuardar"
-            Me.btnGuardar.Size = New System.Drawing.Size(87, 20)
+            Me.btnGuardar.Size = New System.Drawing.Size(95, 28)
             Me.btnGuardar.Text = "GUARDAR"
             '
             'btnCancelar
             '
             Me.btnCancelar.Enabled = False
             Me.btnCancelar.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnCancelar.Image = Global.syscisepro.My.Resources.Resources.cancel
+            Me.btnCancelar.Image = Global.syscisepro.My.Resources.Resources.cancel_24dp_FILL0_wght400_GRAD0_opsz24
+            Me.btnCancelar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnCancelar.Name = "btnCancelar"
-            Me.btnCancelar.Size = New System.Drawing.Size(89, 20)
+            Me.btnCancelar.Size = New System.Drawing.Size(97, 28)
             Me.btnCancelar.Text = "CANCELAR"
             '
             'FormAjustarComprobantesCompra
@@ -728,16 +731,19 @@
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.BackColor = System.Drawing.Color.White
-            Me.ClientSize = New System.Drawing.Size(818, 612)
+            Me.ClientSize = New System.Drawing.Size(818, 614)
             Me.Controls.Add(Me.GroupBox1)
             Me.Controls.Add(Me.MenuStrip1)
             Me.Controls.Add(Me.gbNombreComercialProveedor)
             Me.Controls.Add(Me.dgvComprobanteRetencion)
             Me.Controls.Add(Me.dgvDetalleComprobanteRetencion)
-            Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
             Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
             Me.Name = "FormAjustarComprobantesCompra"
             Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+            Me.StateActive.Border.DrawBorders = CType((((Krypton.Toolkit.PaletteDrawBorders.Top Or Krypton.Toolkit.PaletteDrawBorders.Bottom) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Left) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Right), Krypton.Toolkit.PaletteDrawBorders)
+            Me.StateActive.Border.Rounding = 5.0!
             Me.Text = "AJUSTAR COMPROBANTE DE COMPRA"
             Me.gbNombreComercialProveedor.ResumeLayout(False)
             Me.gbNombreComercialProveedor.PerformLayout()

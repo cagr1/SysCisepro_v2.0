@@ -248,6 +248,8 @@ Namespace FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
                     dgvLibroDiario.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
                     dgvAsientosLibroDiario.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
             End Select
+            dgvAsientosLibroDiario.Font = New Font("Roboto", 8, FontStyle.Regular)
+            dgvLibroDiario.Font = New Font("Roboto", 8, FontStyle.Regular)
             cargarLibroDiario()
             cargarDatosAsientoLibroDiarioXIdLibro()
         End Sub

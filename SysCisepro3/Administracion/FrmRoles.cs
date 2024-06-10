@@ -12,10 +12,11 @@ using syscisepro;
 using SysCisepro3.Datos;
 using SysCisepro3.Properties;
 using SysCisepro3.Reportes;
+using Krypton.Toolkit;
 
 namespace SysCisepro3.Administracion
 {
-    public partial class FrmRoles : Form
+    public partial class FrmRoles : KryptonForm
     {
 
 
@@ -46,9 +47,9 @@ namespace SysCisepro3.Administracion
 
         private void FrmRoles_Load_1(object sender, EventArgs e)
         {
-            menuStrip1.BackColor = ValidationForms.GetColorSistema(TipoCon);
+            //menuStrip1.BackColor = ValidationForms.GetColorSistema(TipoCon);
             menuStrip1.ForeColor = Color.White;
-            menuStrip2.BackColor = ValidationForms.GetColorSistema(TipoCon);
+            //menuStrip2.BackColor = ValidationForms.GetColorSistema(TipoCon);
             menuStrip2.ForeColor = Color.White;
 
 
@@ -64,6 +65,8 @@ namespace SysCisepro3.Administracion
                     Icon = Resources.logo_c;
                     break;
             }
+            dgvPermisos.Font = new Font("Roboto", 8, FontStyle.Regular);
+            dgvRoles.Font = new Font("Roboto", 8, FontStyle.Regular);
 
             CargarRoles();
             CargarRolesPermiso();

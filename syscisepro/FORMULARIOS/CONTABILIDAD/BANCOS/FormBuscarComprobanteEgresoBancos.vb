@@ -54,7 +54,7 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
                 Case TipoConexion.Asenava
                     Icon = My.Resources.logo_a
                     MenuStrip1.ForeColor = Color.White
-                    MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorAsenava
+                    'MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorAsenava
                     dgvComprobanteEgresoBancos.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorAsenava
                 Case TipoConexion.Seportpac
                     Icon = My.Resources.logo_s
@@ -68,7 +68,7 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
                     dgvComprobanteEgresoBancos.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
             End Select
             '_sqlCommands = New List(Of SqlCommand)
-
+            dgvComprobanteEgresoBancos.Font = New Font("Roboto", 8, FontStyle.Regular)
             LlenarComboBancos()
             'autocompletarNombreCliente()
         End Sub

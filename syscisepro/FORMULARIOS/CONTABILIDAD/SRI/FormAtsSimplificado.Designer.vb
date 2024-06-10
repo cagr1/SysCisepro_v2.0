@@ -1,8 +1,8 @@
 ﻿Namespace FORMULARIOS.CONTABILIDAD.SRI
     <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
     Partial Class FormAtsSimplificado
-        Inherits System.Windows.Forms.Form
-
+        'Inherits System.Windows.Forms.Form
+        Inherits Krypton.Toolkit.KryptonForm
         'Form reemplaza a Dispose para limpiar la lista de componentes.
         <System.Diagnostics.DebuggerNonUserCode()> _
         Protected Overrides Sub Dispose(ByVal disposing As Boolean)
@@ -441,8 +441,8 @@
             Me.gbRangoFechas.Controls.Add(Me.Label1)
             Me.gbRangoFechas.Controls.Add(Me.dtpFechaHasta)
             Me.gbRangoFechas.Controls.Add(Me.dtpFechaDesde)
-            Me.gbRangoFechas.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.gbRangoFechas.Location = New System.Drawing.Point(1, 22)
+            Me.gbRangoFechas.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.gbRangoFechas.Location = New System.Drawing.Point(1, 34)
             Me.gbRangoFechas.Name = "gbRangoFechas"
             Me.gbRangoFechas.Size = New System.Drawing.Size(1071, 44)
             Me.gbRangoFechas.TabIndex = 106
@@ -453,7 +453,7 @@
             Me.Label95.AutoSize = True
             Me.Label95.Location = New System.Drawing.Point(8, 18)
             Me.Label95.Name = "Label95"
-            Me.Label95.Size = New System.Drawing.Size(103, 13)
+            Me.Label95.Size = New System.Drawing.Size(110, 13)
             Me.Label95.TabIndex = 3
             Me.Label95.Text = "CARGAR DATOS DEL"
             '
@@ -462,7 +462,7 @@
             Me.Label1.AutoSize = True
             Me.Label1.Location = New System.Drawing.Point(419, 18)
             Me.Label1.Name = "Label1"
-            Me.Label1.Size = New System.Drawing.Size(19, 13)
+            Me.Label1.Size = New System.Drawing.Size(20, 13)
             Me.Label1.TabIndex = 2
             Me.Label1.Text = "AL"
             '
@@ -470,14 +470,14 @@
             '
             Me.dtpFechaHasta.Location = New System.Drawing.Point(444, 14)
             Me.dtpFechaHasta.Name = "dtpFechaHasta"
-            Me.dtpFechaHasta.Size = New System.Drawing.Size(274, 20)
+            Me.dtpFechaHasta.Size = New System.Drawing.Size(274, 21)
             Me.dtpFechaHasta.TabIndex = 1
             '
             'dtpFechaDesde
             '
-            Me.dtpFechaDesde.Location = New System.Drawing.Point(117, 14)
+            Me.dtpFechaDesde.Location = New System.Drawing.Point(124, 14)
             Me.dtpFechaDesde.Name = "dtpFechaDesde"
-            Me.dtpFechaDesde.Size = New System.Drawing.Size(274, 20)
+            Me.dtpFechaDesde.Size = New System.Drawing.Size(274, 21)
             Me.dtpFechaDesde.TabIndex = 0
             '
             'lblIdComprobanteCompra
@@ -496,8 +496,8 @@
             Me.tcATSSimplificado.Controls.Add(Me.tpComprasATS)
             Me.tcATSSimplificado.Controls.Add(Me.tpCodigosRetencionCompras)
             Me.tcATSSimplificado.Controls.Add(Me.tpResumenATS)
-            Me.tcATSSimplificado.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.tcATSSimplificado.Location = New System.Drawing.Point(-1, 68)
+            Me.tcATSSimplificado.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.tcATSSimplificado.Location = New System.Drawing.Point(-1, 79)
             Me.tcATSSimplificado.Name = "tcATSSimplificado"
             Me.tcATSSimplificado.SelectedIndex = 0
             Me.tcATSSimplificado.Size = New System.Drawing.Size(1077, 628)
@@ -533,7 +533,7 @@
             Me.dgvVentasATS.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
             DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
             DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
-            DataGridViewCellStyle2.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle2.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
             DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(123, Byte), Integer))
             DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
@@ -582,7 +582,7 @@
             Me.Label83.BackColor = System.Drawing.Color.White
             Me.Label83.Location = New System.Drawing.Point(731, 60)
             Me.Label83.Name = "Label83"
-            Me.Label83.Size = New System.Drawing.Size(49, 13)
+            Me.Label83.Size = New System.Drawing.Size(42, 13)
             Me.Label83.TabIndex = 19
             Me.Label83.Text = "IVA 14:"
             '
@@ -593,7 +593,7 @@
             Me.txtIva14FacturaVentas.Location = New System.Drawing.Point(786, 57)
             Me.txtIva14FacturaVentas.Name = "txtIva14FacturaVentas"
             Me.txtIva14FacturaVentas.ReadOnly = True
-            Me.txtIva14FacturaVentas.Size = New System.Drawing.Size(72, 20)
+            Me.txtIva14FacturaVentas.Size = New System.Drawing.Size(72, 21)
             Me.txtIva14FacturaVentas.TabIndex = 18
             Me.txtIva14FacturaVentas.Text = "0.00"
             Me.txtIva14FacturaVentas.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -604,7 +604,7 @@
             Me.Label84.BackColor = System.Drawing.Color.White
             Me.Label84.Location = New System.Drawing.Point(731, 14)
             Me.Label84.Name = "Label84"
-            Me.Label84.Size = New System.Drawing.Size(49, 13)
+            Me.Label84.Size = New System.Drawing.Size(39, 13)
             Me.Label84.TabIndex = 17
             Me.Label84.Text = "IVA  0:"
             '
@@ -615,7 +615,7 @@
             Me.TextBox101.Location = New System.Drawing.Point(786, 11)
             Me.TextBox101.Name = "TextBox101"
             Me.TextBox101.ReadOnly = True
-            Me.TextBox101.Size = New System.Drawing.Size(72, 20)
+            Me.TextBox101.Size = New System.Drawing.Size(72, 21)
             Me.TextBox101.TabIndex = 16
             Me.TextBox101.Text = "0.00"
             Me.TextBox101.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -626,7 +626,7 @@
             Me.Label85.BackColor = System.Drawing.Color.White
             Me.Label85.Location = New System.Drawing.Point(731, 37)
             Me.Label85.Name = "Label85"
-            Me.Label85.Size = New System.Drawing.Size(49, 13)
+            Me.Label85.Size = New System.Drawing.Size(42, 13)
             Me.Label85.TabIndex = 15
             Me.Label85.Text = "IVA 12:"
             '
@@ -637,7 +637,7 @@
             Me.txtIva12FacturaVentas.Location = New System.Drawing.Point(786, 34)
             Me.txtIva12FacturaVentas.Name = "txtIva12FacturaVentas"
             Me.txtIva12FacturaVentas.ReadOnly = True
-            Me.txtIva12FacturaVentas.Size = New System.Drawing.Size(72, 20)
+            Me.txtIva12FacturaVentas.Size = New System.Drawing.Size(72, 21)
             Me.txtIva12FacturaVentas.TabIndex = 14
             Me.txtIva12FacturaVentas.Text = "0.00"
             Me.txtIva12FacturaVentas.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -648,7 +648,7 @@
             Me.Label82.BackColor = System.Drawing.Color.White
             Me.Label82.Location = New System.Drawing.Point(540, 60)
             Me.Label82.Name = "Label82"
-            Me.Label82.Size = New System.Drawing.Size(79, 13)
+            Me.Label82.Size = New System.Drawing.Size(81, 13)
             Me.Label82.TabIndex = 13
             Me.Label82.Text = "SUBTOTAL 14:"
             '
@@ -659,7 +659,7 @@
             Me.txtSubtotal14FacturaVentas.Location = New System.Drawing.Point(625, 57)
             Me.txtSubtotal14FacturaVentas.Name = "txtSubtotal14FacturaVentas"
             Me.txtSubtotal14FacturaVentas.ReadOnly = True
-            Me.txtSubtotal14FacturaVentas.Size = New System.Drawing.Size(72, 20)
+            Me.txtSubtotal14FacturaVentas.Size = New System.Drawing.Size(72, 21)
             Me.txtSubtotal14FacturaVentas.TabIndex = 12
             Me.txtSubtotal14FacturaVentas.Text = "0.00"
             Me.txtSubtotal14FacturaVentas.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -670,7 +670,7 @@
             Me.Label42.BackColor = System.Drawing.Color.White
             Me.Label42.Location = New System.Drawing.Point(546, 14)
             Me.Label42.Name = "Label42"
-            Me.Label42.Size = New System.Drawing.Size(73, 13)
+            Me.Label42.Size = New System.Drawing.Size(75, 13)
             Me.Label42.TabIndex = 11
             Me.Label42.Text = "SUBTOTAL 0:"
             '
@@ -681,7 +681,7 @@
             Me.txtSubtotal0FacturaVentas.Location = New System.Drawing.Point(625, 11)
             Me.txtSubtotal0FacturaVentas.Name = "txtSubtotal0FacturaVentas"
             Me.txtSubtotal0FacturaVentas.ReadOnly = True
-            Me.txtSubtotal0FacturaVentas.Size = New System.Drawing.Size(72, 20)
+            Me.txtSubtotal0FacturaVentas.Size = New System.Drawing.Size(72, 21)
             Me.txtSubtotal0FacturaVentas.TabIndex = 10
             Me.txtSubtotal0FacturaVentas.Text = "0.00"
             Me.txtSubtotal0FacturaVentas.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -692,7 +692,7 @@
             Me.Label41.BackColor = System.Drawing.Color.White
             Me.Label41.Location = New System.Drawing.Point(540, 37)
             Me.Label41.Name = "Label41"
-            Me.Label41.Size = New System.Drawing.Size(79, 13)
+            Me.Label41.Size = New System.Drawing.Size(81, 13)
             Me.Label41.TabIndex = 9
             Me.Label41.Text = "SUBTOTAL 12:"
             '
@@ -703,7 +703,7 @@
             Me.txtSubtotal12FacturaVentas.Location = New System.Drawing.Point(625, 34)
             Me.txtSubtotal12FacturaVentas.Name = "txtSubtotal12FacturaVentas"
             Me.txtSubtotal12FacturaVentas.ReadOnly = True
-            Me.txtSubtotal12FacturaVentas.Size = New System.Drawing.Size(72, 20)
+            Me.txtSubtotal12FacturaVentas.Size = New System.Drawing.Size(72, 21)
             Me.txtSubtotal12FacturaVentas.TabIndex = 8
             Me.txtSubtotal12FacturaVentas.Text = "0.00"
             Me.txtSubtotal12FacturaVentas.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -714,7 +714,7 @@
             Me.Label40.BackColor = System.Drawing.Color.White
             Me.Label40.Location = New System.Drawing.Point(356, 14)
             Me.Label40.Name = "Label40"
-            Me.Label40.Size = New System.Drawing.Size(67, 13)
+            Me.Label40.Size = New System.Drawing.Size(73, 13)
             Me.Label40.TabIndex = 7
             Me.Label40.Text = "DESCUENTO:"
             '
@@ -725,7 +725,7 @@
             Me.txtDescuentoFacturaVentas.Location = New System.Drawing.Point(429, 11)
             Me.txtDescuentoFacturaVentas.Name = "txtDescuentoFacturaVentas"
             Me.txtDescuentoFacturaVentas.ReadOnly = True
-            Me.txtDescuentoFacturaVentas.Size = New System.Drawing.Size(72, 20)
+            Me.txtDescuentoFacturaVentas.Size = New System.Drawing.Size(72, 21)
             Me.txtDescuentoFacturaVentas.TabIndex = 6
             Me.txtDescuentoFacturaVentas.Text = "0.00"
             Me.txtDescuentoFacturaVentas.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -736,7 +736,7 @@
             Me.Label39.BackColor = System.Drawing.Color.White
             Me.Label39.Location = New System.Drawing.Point(890, 14)
             Me.Label39.Name = "Label39"
-            Me.Label39.Size = New System.Drawing.Size(61, 13)
+            Me.Label39.Size = New System.Drawing.Size(66, 13)
             Me.Label39.TabIndex = 5
             Me.Label39.Text = "SUBTOTAL:"
             '
@@ -747,7 +747,7 @@
             Me.txtSubtotalFacturaVentas.Location = New System.Drawing.Point(957, 11)
             Me.txtSubtotalFacturaVentas.Name = "txtSubtotalFacturaVentas"
             Me.txtSubtotalFacturaVentas.ReadOnly = True
-            Me.txtSubtotalFacturaVentas.Size = New System.Drawing.Size(72, 20)
+            Me.txtSubtotalFacturaVentas.Size = New System.Drawing.Size(72, 21)
             Me.txtSubtotalFacturaVentas.TabIndex = 4
             Me.txtSubtotalFacturaVentas.Text = "0.00"
             Me.txtSubtotalFacturaVentas.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -758,7 +758,7 @@
             Me.Label38.BackColor = System.Drawing.Color.White
             Me.Label38.Location = New System.Drawing.Point(920, 37)
             Me.Label38.Name = "Label38"
-            Me.Label38.Size = New System.Drawing.Size(31, 13)
+            Me.Label38.Size = New System.Drawing.Size(27, 13)
             Me.Label38.TabIndex = 3
             Me.Label38.Text = "IVA:"
             '
@@ -769,7 +769,7 @@
             Me.txtIvaFacturaVentas.Location = New System.Drawing.Point(957, 34)
             Me.txtIvaFacturaVentas.Name = "txtIvaFacturaVentas"
             Me.txtIvaFacturaVentas.ReadOnly = True
-            Me.txtIvaFacturaVentas.Size = New System.Drawing.Size(72, 20)
+            Me.txtIvaFacturaVentas.Size = New System.Drawing.Size(72, 21)
             Me.txtIvaFacturaVentas.TabIndex = 2
             Me.txtIvaFacturaVentas.Text = "0.00"
             Me.txtIvaFacturaVentas.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -780,7 +780,7 @@
             Me.Label37.BackColor = System.Drawing.Color.White
             Me.Label37.Location = New System.Drawing.Point(908, 60)
             Me.Label37.Name = "Label37"
-            Me.Label37.Size = New System.Drawing.Size(43, 13)
+            Me.Label37.Size = New System.Drawing.Size(45, 13)
             Me.Label37.TabIndex = 1
             Me.Label37.Text = "TOTAL:"
             '
@@ -791,7 +791,7 @@
             Me.txtTotalFacturaVentas.Location = New System.Drawing.Point(957, 57)
             Me.txtTotalFacturaVentas.Name = "txtTotalFacturaVentas"
             Me.txtTotalFacturaVentas.ReadOnly = True
-            Me.txtTotalFacturaVentas.Size = New System.Drawing.Size(72, 20)
+            Me.txtTotalFacturaVentas.Size = New System.Drawing.Size(72, 21)
             Me.txtTotalFacturaVentas.TabIndex = 0
             Me.txtTotalFacturaVentas.Text = "0.00"
             Me.txtTotalFacturaVentas.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -985,7 +985,7 @@
             Me.Label87.BackColor = System.Drawing.Color.White
             Me.Label87.Location = New System.Drawing.Point(731, 64)
             Me.Label87.Name = "Label87"
-            Me.Label87.Size = New System.Drawing.Size(49, 13)
+            Me.Label87.Size = New System.Drawing.Size(42, 13)
             Me.Label87.TabIndex = 25
             Me.Label87.Text = "IVA 14:"
             '
@@ -996,7 +996,7 @@
             Me.txtIva14NotaCredito.Location = New System.Drawing.Point(786, 61)
             Me.txtIva14NotaCredito.Name = "txtIva14NotaCredito"
             Me.txtIva14NotaCredito.ReadOnly = True
-            Me.txtIva14NotaCredito.Size = New System.Drawing.Size(72, 20)
+            Me.txtIva14NotaCredito.Size = New System.Drawing.Size(72, 21)
             Me.txtIva14NotaCredito.TabIndex = 24
             Me.txtIva14NotaCredito.Text = "0.00"
             Me.txtIva14NotaCredito.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -1007,7 +1007,7 @@
             Me.Label88.BackColor = System.Drawing.Color.White
             Me.Label88.Location = New System.Drawing.Point(731, 14)
             Me.Label88.Name = "Label88"
-            Me.Label88.Size = New System.Drawing.Size(49, 13)
+            Me.Label88.Size = New System.Drawing.Size(39, 13)
             Me.Label88.TabIndex = 23
             Me.Label88.Text = "IVA  0:"
             '
@@ -1018,7 +1018,7 @@
             Me.txtIva0NotaCredito.Location = New System.Drawing.Point(786, 11)
             Me.txtIva0NotaCredito.Name = "txtIva0NotaCredito"
             Me.txtIva0NotaCredito.ReadOnly = True
-            Me.txtIva0NotaCredito.Size = New System.Drawing.Size(72, 20)
+            Me.txtIva0NotaCredito.Size = New System.Drawing.Size(72, 21)
             Me.txtIva0NotaCredito.TabIndex = 22
             Me.txtIva0NotaCredito.Text = "0.00"
             Me.txtIva0NotaCredito.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -1029,7 +1029,7 @@
             Me.Label89.BackColor = System.Drawing.Color.White
             Me.Label89.Location = New System.Drawing.Point(731, 39)
             Me.Label89.Name = "Label89"
-            Me.Label89.Size = New System.Drawing.Size(49, 13)
+            Me.Label89.Size = New System.Drawing.Size(42, 13)
             Me.Label89.TabIndex = 21
             Me.Label89.Text = "IVA 12:"
             '
@@ -1040,7 +1040,7 @@
             Me.txtIva12NotaCredito.Location = New System.Drawing.Point(786, 36)
             Me.txtIva12NotaCredito.Name = "txtIva12NotaCredito"
             Me.txtIva12NotaCredito.ReadOnly = True
-            Me.txtIva12NotaCredito.Size = New System.Drawing.Size(72, 20)
+            Me.txtIva12NotaCredito.Size = New System.Drawing.Size(72, 21)
             Me.txtIva12NotaCredito.TabIndex = 20
             Me.txtIva12NotaCredito.Text = "0.00"
             Me.txtIva12NotaCredito.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -1051,7 +1051,7 @@
             Me.Label86.BackColor = System.Drawing.Color.White
             Me.Label86.Location = New System.Drawing.Point(540, 64)
             Me.Label86.Name = "Label86"
-            Me.Label86.Size = New System.Drawing.Size(79, 13)
+            Me.Label86.Size = New System.Drawing.Size(81, 13)
             Me.Label86.TabIndex = 13
             Me.Label86.Text = "SUBTOTAL 14:"
             '
@@ -1062,7 +1062,7 @@
             Me.txtSubtotal14NotaCredito.Location = New System.Drawing.Point(625, 61)
             Me.txtSubtotal14NotaCredito.Name = "txtSubtotal14NotaCredito"
             Me.txtSubtotal14NotaCredito.ReadOnly = True
-            Me.txtSubtotal14NotaCredito.Size = New System.Drawing.Size(72, 20)
+            Me.txtSubtotal14NotaCredito.Size = New System.Drawing.Size(72, 21)
             Me.txtSubtotal14NotaCredito.TabIndex = 12
             Me.txtSubtotal14NotaCredito.Text = "0.00"
             Me.txtSubtotal14NotaCredito.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -1073,7 +1073,7 @@
             Me.Label49.BackColor = System.Drawing.Color.White
             Me.Label49.Location = New System.Drawing.Point(546, 14)
             Me.Label49.Name = "Label49"
-            Me.Label49.Size = New System.Drawing.Size(73, 13)
+            Me.Label49.Size = New System.Drawing.Size(75, 13)
             Me.Label49.TabIndex = 11
             Me.Label49.Text = "SUBTOTAL 0:"
             '
@@ -1084,7 +1084,7 @@
             Me.txtSubtotal0NotaCredito.Location = New System.Drawing.Point(625, 11)
             Me.txtSubtotal0NotaCredito.Name = "txtSubtotal0NotaCredito"
             Me.txtSubtotal0NotaCredito.ReadOnly = True
-            Me.txtSubtotal0NotaCredito.Size = New System.Drawing.Size(72, 20)
+            Me.txtSubtotal0NotaCredito.Size = New System.Drawing.Size(72, 21)
             Me.txtSubtotal0NotaCredito.TabIndex = 10
             Me.txtSubtotal0NotaCredito.Text = "0.00"
             Me.txtSubtotal0NotaCredito.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -1095,7 +1095,7 @@
             Me.lblSubtotalIva.BackColor = System.Drawing.Color.White
             Me.lblSubtotalIva.Location = New System.Drawing.Point(540, 39)
             Me.lblSubtotalIva.Name = "lblSubtotalIva"
-            Me.lblSubtotalIva.Size = New System.Drawing.Size(79, 13)
+            Me.lblSubtotalIva.Size = New System.Drawing.Size(81, 13)
             Me.lblSubtotalIva.TabIndex = 9
             Me.lblSubtotalIva.Text = "SUBTOTAL 12:"
             '
@@ -1106,7 +1106,7 @@
             Me.txtSubtotal12NotaCredito.Location = New System.Drawing.Point(625, 36)
             Me.txtSubtotal12NotaCredito.Name = "txtSubtotal12NotaCredito"
             Me.txtSubtotal12NotaCredito.ReadOnly = True
-            Me.txtSubtotal12NotaCredito.Size = New System.Drawing.Size(72, 20)
+            Me.txtSubtotal12NotaCredito.Size = New System.Drawing.Size(72, 21)
             Me.txtSubtotal12NotaCredito.TabIndex = 8
             Me.txtSubtotal12NotaCredito.Text = "0.00"
             Me.txtSubtotal12NotaCredito.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -1117,7 +1117,7 @@
             Me.Label52.BackColor = System.Drawing.Color.White
             Me.Label52.Location = New System.Drawing.Point(890, 14)
             Me.Label52.Name = "Label52"
-            Me.Label52.Size = New System.Drawing.Size(61, 13)
+            Me.Label52.Size = New System.Drawing.Size(66, 13)
             Me.Label52.TabIndex = 5
             Me.Label52.Text = "SUBTOTAL:"
             '
@@ -1128,7 +1128,7 @@
             Me.txtSubtotalNotaCredito.Location = New System.Drawing.Point(957, 11)
             Me.txtSubtotalNotaCredito.Name = "txtSubtotalNotaCredito"
             Me.txtSubtotalNotaCredito.ReadOnly = True
-            Me.txtSubtotalNotaCredito.Size = New System.Drawing.Size(72, 20)
+            Me.txtSubtotalNotaCredito.Size = New System.Drawing.Size(72, 21)
             Me.txtSubtotalNotaCredito.TabIndex = 4
             Me.txtSubtotalNotaCredito.Text = "0.00"
             Me.txtSubtotalNotaCredito.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -1139,7 +1139,7 @@
             Me.Label53.BackColor = System.Drawing.Color.White
             Me.Label53.Location = New System.Drawing.Point(920, 39)
             Me.Label53.Name = "Label53"
-            Me.Label53.Size = New System.Drawing.Size(31, 13)
+            Me.Label53.Size = New System.Drawing.Size(27, 13)
             Me.Label53.TabIndex = 3
             Me.Label53.Text = "IVA:"
             '
@@ -1150,7 +1150,7 @@
             Me.txtIvaNotaCredito.Location = New System.Drawing.Point(957, 36)
             Me.txtIvaNotaCredito.Name = "txtIvaNotaCredito"
             Me.txtIvaNotaCredito.ReadOnly = True
-            Me.txtIvaNotaCredito.Size = New System.Drawing.Size(72, 20)
+            Me.txtIvaNotaCredito.Size = New System.Drawing.Size(72, 21)
             Me.txtIvaNotaCredito.TabIndex = 2
             Me.txtIvaNotaCredito.Text = "0.00"
             Me.txtIvaNotaCredito.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -1161,7 +1161,7 @@
             Me.Label54.BackColor = System.Drawing.Color.White
             Me.Label54.Location = New System.Drawing.Point(908, 64)
             Me.Label54.Name = "Label54"
-            Me.Label54.Size = New System.Drawing.Size(43, 13)
+            Me.Label54.Size = New System.Drawing.Size(45, 13)
             Me.Label54.TabIndex = 1
             Me.Label54.Text = "TOTAL:"
             '
@@ -1172,7 +1172,7 @@
             Me.txtTotalNotaCredito.Location = New System.Drawing.Point(957, 61)
             Me.txtTotalNotaCredito.Name = "txtTotalNotaCredito"
             Me.txtTotalNotaCredito.ReadOnly = True
-            Me.txtTotalNotaCredito.Size = New System.Drawing.Size(72, 20)
+            Me.txtTotalNotaCredito.Size = New System.Drawing.Size(72, 21)
             Me.txtTotalNotaCredito.TabIndex = 0
             Me.txtTotalNotaCredito.Text = "0.00"
             Me.txtTotalNotaCredito.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -1324,7 +1324,7 @@
             Me.Label91.AutoSize = True
             Me.Label91.Location = New System.Drawing.Point(731, 66)
             Me.Label91.Name = "Label91"
-            Me.Label91.Size = New System.Drawing.Size(49, 13)
+            Me.Label91.Size = New System.Drawing.Size(42, 13)
             Me.Label91.TabIndex = 25
             Me.Label91.Text = "IVA 14:"
             '
@@ -1334,7 +1334,7 @@
             Me.txtIva14Compras.Location = New System.Drawing.Point(786, 63)
             Me.txtIva14Compras.Name = "txtIva14Compras"
             Me.txtIva14Compras.ReadOnly = True
-            Me.txtIva14Compras.Size = New System.Drawing.Size(72, 20)
+            Me.txtIva14Compras.Size = New System.Drawing.Size(72, 21)
             Me.txtIva14Compras.TabIndex = 24
             Me.txtIva14Compras.Text = "0.00"
             Me.txtIva14Compras.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -1344,7 +1344,7 @@
             Me.Label92.AutoSize = True
             Me.Label92.Location = New System.Drawing.Point(731, 14)
             Me.Label92.Name = "Label92"
-            Me.Label92.Size = New System.Drawing.Size(49, 13)
+            Me.Label92.Size = New System.Drawing.Size(39, 13)
             Me.Label92.TabIndex = 23
             Me.Label92.Text = "IVA  0:"
             '
@@ -1354,7 +1354,7 @@
             Me.txtIva0Compras.Location = New System.Drawing.Point(786, 11)
             Me.txtIva0Compras.Name = "txtIva0Compras"
             Me.txtIva0Compras.ReadOnly = True
-            Me.txtIva0Compras.Size = New System.Drawing.Size(72, 20)
+            Me.txtIva0Compras.Size = New System.Drawing.Size(72, 21)
             Me.txtIva0Compras.TabIndex = 22
             Me.txtIva0Compras.Text = "0.00"
             Me.txtIva0Compras.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -1364,7 +1364,7 @@
             Me.Label93.AutoSize = True
             Me.Label93.Location = New System.Drawing.Point(731, 40)
             Me.Label93.Name = "Label93"
-            Me.Label93.Size = New System.Drawing.Size(49, 13)
+            Me.Label93.Size = New System.Drawing.Size(42, 13)
             Me.Label93.TabIndex = 21
             Me.Label93.Text = "IVA 12:"
             '
@@ -1374,7 +1374,7 @@
             Me.txtIva12Compras.Location = New System.Drawing.Point(786, 37)
             Me.txtIva12Compras.Name = "txtIva12Compras"
             Me.txtIva12Compras.ReadOnly = True
-            Me.txtIva12Compras.Size = New System.Drawing.Size(72, 20)
+            Me.txtIva12Compras.Size = New System.Drawing.Size(72, 21)
             Me.txtIva12Compras.TabIndex = 20
             Me.txtIva12Compras.Text = "0.00"
             Me.txtIva12Compras.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -1384,7 +1384,7 @@
             Me.Label90.AutoSize = True
             Me.Label90.Location = New System.Drawing.Point(540, 66)
             Me.Label90.Name = "Label90"
-            Me.Label90.Size = New System.Drawing.Size(79, 13)
+            Me.Label90.Size = New System.Drawing.Size(81, 13)
             Me.Label90.TabIndex = 13
             Me.Label90.Text = "SUBTOTAL 14:"
             '
@@ -1394,7 +1394,7 @@
             Me.txtSubtotal14Compras.Location = New System.Drawing.Point(625, 63)
             Me.txtSubtotal14Compras.Name = "txtSubtotal14Compras"
             Me.txtSubtotal14Compras.ReadOnly = True
-            Me.txtSubtotal14Compras.Size = New System.Drawing.Size(72, 20)
+            Me.txtSubtotal14Compras.Size = New System.Drawing.Size(72, 21)
             Me.txtSubtotal14Compras.TabIndex = 12
             Me.txtSubtotal14Compras.Text = "0.00"
             Me.txtSubtotal14Compras.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -1404,7 +1404,7 @@
             Me.Label43.AutoSize = True
             Me.Label43.Location = New System.Drawing.Point(546, 14)
             Me.Label43.Name = "Label43"
-            Me.Label43.Size = New System.Drawing.Size(73, 13)
+            Me.Label43.Size = New System.Drawing.Size(75, 13)
             Me.Label43.TabIndex = 11
             Me.Label43.Text = "SUBTOTAL 0:"
             '
@@ -1414,7 +1414,7 @@
             Me.txtSubtotal0Compras.Location = New System.Drawing.Point(625, 11)
             Me.txtSubtotal0Compras.Name = "txtSubtotal0Compras"
             Me.txtSubtotal0Compras.ReadOnly = True
-            Me.txtSubtotal0Compras.Size = New System.Drawing.Size(72, 20)
+            Me.txtSubtotal0Compras.Size = New System.Drawing.Size(72, 21)
             Me.txtSubtotal0Compras.TabIndex = 10
             Me.txtSubtotal0Compras.Text = "0.00"
             Me.txtSubtotal0Compras.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -1424,7 +1424,7 @@
             Me.Label44.AutoSize = True
             Me.Label44.Location = New System.Drawing.Point(540, 40)
             Me.Label44.Name = "Label44"
-            Me.Label44.Size = New System.Drawing.Size(79, 13)
+            Me.Label44.Size = New System.Drawing.Size(81, 13)
             Me.Label44.TabIndex = 9
             Me.Label44.Text = "SUBTOTAL 12:"
             '
@@ -1434,7 +1434,7 @@
             Me.txtSubtotal12Compras.Location = New System.Drawing.Point(625, 37)
             Me.txtSubtotal12Compras.Name = "txtSubtotal12Compras"
             Me.txtSubtotal12Compras.ReadOnly = True
-            Me.txtSubtotal12Compras.Size = New System.Drawing.Size(72, 20)
+            Me.txtSubtotal12Compras.Size = New System.Drawing.Size(72, 21)
             Me.txtSubtotal12Compras.TabIndex = 8
             Me.txtSubtotal12Compras.Text = "0.00"
             Me.txtSubtotal12Compras.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -1444,7 +1444,7 @@
             Me.Label45.AutoSize = True
             Me.Label45.Location = New System.Drawing.Point(342, 14)
             Me.Label45.Name = "Label45"
-            Me.Label45.Size = New System.Drawing.Size(67, 13)
+            Me.Label45.Size = New System.Drawing.Size(73, 13)
             Me.Label45.TabIndex = 7
             Me.Label45.Text = "DESCUENTO:"
             '
@@ -1454,7 +1454,7 @@
             Me.txtDescuentoCompras.Location = New System.Drawing.Point(415, 11)
             Me.txtDescuentoCompras.Name = "txtDescuentoCompras"
             Me.txtDescuentoCompras.ReadOnly = True
-            Me.txtDescuentoCompras.Size = New System.Drawing.Size(72, 20)
+            Me.txtDescuentoCompras.Size = New System.Drawing.Size(72, 21)
             Me.txtDescuentoCompras.TabIndex = 6
             Me.txtDescuentoCompras.Text = "0.00"
             Me.txtDescuentoCompras.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -1464,7 +1464,7 @@
             Me.Label46.AutoSize = True
             Me.Label46.Location = New System.Drawing.Point(890, 14)
             Me.Label46.Name = "Label46"
-            Me.Label46.Size = New System.Drawing.Size(61, 13)
+            Me.Label46.Size = New System.Drawing.Size(66, 13)
             Me.Label46.TabIndex = 5
             Me.Label46.Text = "SUBTOTAL:"
             '
@@ -1474,7 +1474,7 @@
             Me.txtSubtotalCompras.Location = New System.Drawing.Point(957, 11)
             Me.txtSubtotalCompras.Name = "txtSubtotalCompras"
             Me.txtSubtotalCompras.ReadOnly = True
-            Me.txtSubtotalCompras.Size = New System.Drawing.Size(72, 20)
+            Me.txtSubtotalCompras.Size = New System.Drawing.Size(72, 21)
             Me.txtSubtotalCompras.TabIndex = 4
             Me.txtSubtotalCompras.Text = "0.00"
             Me.txtSubtotalCompras.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -1484,7 +1484,7 @@
             Me.Label47.AutoSize = True
             Me.Label47.Location = New System.Drawing.Point(920, 40)
             Me.Label47.Name = "Label47"
-            Me.Label47.Size = New System.Drawing.Size(31, 13)
+            Me.Label47.Size = New System.Drawing.Size(27, 13)
             Me.Label47.TabIndex = 3
             Me.Label47.Text = "IVA:"
             '
@@ -1494,7 +1494,7 @@
             Me.txtIvaCompras.Location = New System.Drawing.Point(957, 37)
             Me.txtIvaCompras.Name = "txtIvaCompras"
             Me.txtIvaCompras.ReadOnly = True
-            Me.txtIvaCompras.Size = New System.Drawing.Size(72, 20)
+            Me.txtIvaCompras.Size = New System.Drawing.Size(72, 21)
             Me.txtIvaCompras.TabIndex = 2
             Me.txtIvaCompras.Text = "0.00"
             Me.txtIvaCompras.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -1504,7 +1504,7 @@
             Me.Label48.AutoSize = True
             Me.Label48.Location = New System.Drawing.Point(908, 66)
             Me.Label48.Name = "Label48"
-            Me.Label48.Size = New System.Drawing.Size(43, 13)
+            Me.Label48.Size = New System.Drawing.Size(45, 13)
             Me.Label48.TabIndex = 1
             Me.Label48.Text = "TOTAL:"
             '
@@ -1514,7 +1514,7 @@
             Me.txtTotalCompras.Location = New System.Drawing.Point(957, 63)
             Me.txtTotalCompras.Name = "txtTotalCompras"
             Me.txtTotalCompras.ReadOnly = True
-            Me.txtTotalCompras.Size = New System.Drawing.Size(72, 20)
+            Me.txtTotalCompras.Size = New System.Drawing.Size(72, 21)
             Me.txtTotalCompras.TabIndex = 0
             Me.txtTotalCompras.Text = "0.00"
             Me.txtTotalCompras.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -1722,7 +1722,7 @@
             Me.Label68.AutoSize = True
             Me.Label68.Location = New System.Drawing.Point(468, 20)
             Me.Label68.Name = "Label68"
-            Me.Label68.Size = New System.Drawing.Size(91, 13)
+            Me.Label68.Size = New System.Drawing.Size(80, 13)
             Me.Label68.TabIndex = 104
             Me.Label68.Text = "Valor Retenido"
             '
@@ -1731,7 +1731,7 @@
             Me.Label70.AutoSize = True
             Me.Label70.Location = New System.Drawing.Point(119, 20)
             Me.Label70.Name = "Label70"
-            Me.Label70.Size = New System.Drawing.Size(133, 13)
+            Me.Label70.Size = New System.Drawing.Size(122, 13)
             Me.Label70.TabIndex = 103
             Me.Label70.Text = "Concepto de Retención"
             '
@@ -1740,7 +1740,7 @@
             Me.Label67.AutoSize = True
             Me.Label67.Location = New System.Drawing.Point(183, 70)
             Me.Label67.Name = "Label67"
-            Me.Label67.Size = New System.Drawing.Size(211, 13)
+            Me.Label67.Size = New System.Drawing.Size(216, 13)
             Me.Label67.TabIndex = 23
             Me.Label67.Text = "VALOR DE RENTA QUE LE HAN RETENIDO"
             '
@@ -1751,7 +1751,7 @@
             Me.TextBox99.Location = New System.Drawing.Point(484, 70)
             Me.TextBox99.Name = "TextBox99"
             Me.TextBox99.ReadOnly = True
-            Me.TextBox99.Size = New System.Drawing.Size(71, 13)
+            Me.TextBox99.Size = New System.Drawing.Size(71, 14)
             Me.TextBox99.TabIndex = 22
             Me.TextBox99.Text = "0.00"
             Me.TextBox99.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -1761,7 +1761,7 @@
             Me.Label66.AutoSize = True
             Me.Label66.Location = New System.Drawing.Point(183, 45)
             Me.Label66.Name = "Label66"
-            Me.Label66.Size = New System.Drawing.Size(199, 13)
+            Me.Label66.Size = New System.Drawing.Size(198, 13)
             Me.Label66.TabIndex = 21
             Me.Label66.Text = "VALOR DE IVA QUE LE HAN RETENIDO"
             '
@@ -1772,7 +1772,7 @@
             Me.TextBox98.Location = New System.Drawing.Point(484, 45)
             Me.TextBox98.Name = "TextBox98"
             Me.TextBox98.ReadOnly = True
-            Me.TextBox98.Size = New System.Drawing.Size(71, 13)
+            Me.TextBox98.Size = New System.Drawing.Size(71, 14)
             Me.TextBox98.TabIndex = 20
             Me.TextBox98.Text = "0.00"
             Me.TextBox98.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -1782,7 +1782,7 @@
             Me.Label32.AutoSize = True
             Me.Label32.Location = New System.Drawing.Point(263, 95)
             Me.Label32.Name = "Label32"
-            Me.Label32.Size = New System.Drawing.Size(37, 13)
+            Me.Label32.Size = New System.Drawing.Size(42, 13)
             Me.Label32.TabIndex = 19
             Me.Label32.Text = "TOTAL"
             '
@@ -1793,18 +1793,18 @@
             Me.TextBox76.Location = New System.Drawing.Point(484, 95)
             Me.TextBox76.Name = "TextBox76"
             Me.TextBox76.ReadOnly = True
-            Me.TextBox76.Size = New System.Drawing.Size(71, 13)
+            Me.TextBox76.Size = New System.Drawing.Size(71, 14)
             Me.TextBox76.TabIndex = 18
             Me.TextBox76.Text = "0.00"
             Me.TextBox76.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
             '
             'ShapeContainer6
             '
-            Me.ShapeContainer6.Location = New System.Drawing.Point(3, 16)
+            Me.ShapeContainer6.Location = New System.Drawing.Point(3, 17)
             Me.ShapeContainer6.Margin = New System.Windows.Forms.Padding(0)
             Me.ShapeContainer6.Name = "ShapeContainer6"
             Me.ShapeContainer6.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.LineShape50, Me.LineShape49, Me.LineShape48, Me.LineShape47, Me.LineShape46})
-            Me.ShapeContainer6.Size = New System.Drawing.Size(565, 135)
+            Me.ShapeContainer6.Size = New System.Drawing.Size(565, 134)
             Me.ShapeContainer6.TabIndex = 105
             Me.ShapeContainer6.TabStop = False
             '
@@ -1886,7 +1886,7 @@
             Me.TextBox100.Location = New System.Drawing.Point(406, 120)
             Me.TextBox100.Name = "TextBox100"
             Me.TextBox100.ReadOnly = True
-            Me.TextBox100.Size = New System.Drawing.Size(68, 13)
+            Me.TextBox100.Size = New System.Drawing.Size(68, 14)
             Me.TextBox100.TabIndex = 105
             Me.TextBox100.Text = "0.00"
             Me.TextBox100.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -1896,7 +1896,7 @@
             Me.Label94.AutoSize = True
             Me.Label94.Location = New System.Drawing.Point(153, 120)
             Me.Label94.Name = "Label94"
-            Me.Label94.Size = New System.Drawing.Size(109, 13)
+            Me.Label94.Size = New System.Drawing.Size(110, 13)
             Me.Label94.TabIndex = 104
             Me.Label94.Text = "RETENCIÓN IVA 50%"
             '
@@ -1905,7 +1905,7 @@
             Me.Label31.AutoSize = True
             Me.Label31.Location = New System.Drawing.Point(360, 20)
             Me.Label31.Name = "Label31"
-            Me.Label31.Size = New System.Drawing.Size(91, 13)
+            Me.Label31.Size = New System.Drawing.Size(80, 13)
             Me.Label31.TabIndex = 102
             Me.Label31.Text = "Valor Retenido"
             '
@@ -1914,7 +1914,7 @@
             Me.Label50.AutoSize = True
             Me.Label50.Location = New System.Drawing.Point(87, 20)
             Me.Label50.Name = "Label50"
-            Me.Label50.Size = New System.Drawing.Size(133, 13)
+            Me.Label50.Size = New System.Drawing.Size(122, 13)
             Me.Label50.TabIndex = 101
             Me.Label50.Text = "Concepto de Retención"
             '
@@ -1923,7 +1923,7 @@
             Me.Label80.AutoSize = True
             Me.Label80.Location = New System.Drawing.Point(275, 195)
             Me.Label80.Name = "Label80"
-            Me.Label80.Size = New System.Drawing.Size(43, 13)
+            Me.Label80.Size = New System.Drawing.Size(45, 13)
             Me.Label80.TabIndex = 44
             Me.Label80.Text = "TOTAL:"
             '
@@ -1934,7 +1934,7 @@
             Me.TextBox90.Location = New System.Drawing.Point(406, 45)
             Me.TextBox90.Name = "TextBox90"
             Me.TextBox90.ReadOnly = True
-            Me.TextBox90.Size = New System.Drawing.Size(68, 13)
+            Me.TextBox90.Size = New System.Drawing.Size(68, 14)
             Me.TextBox90.TabIndex = 43
             Me.TextBox90.Text = "0.00"
             Me.TextBox90.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -1946,7 +1946,7 @@
             Me.TextBox91.Location = New System.Drawing.Point(406, 70)
             Me.TextBox91.Name = "TextBox91"
             Me.TextBox91.ReadOnly = True
-            Me.TextBox91.Size = New System.Drawing.Size(68, 13)
+            Me.TextBox91.Size = New System.Drawing.Size(68, 14)
             Me.TextBox91.TabIndex = 42
             Me.TextBox91.Text = "0.00"
             Me.TextBox91.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -1956,7 +1956,7 @@
             Me.Label58.AutoSize = True
             Me.Label58.Location = New System.Drawing.Point(153, 45)
             Me.Label58.Name = "Label58"
-            Me.Label58.Size = New System.Drawing.Size(109, 13)
+            Me.Label58.Size = New System.Drawing.Size(110, 13)
             Me.Label58.TabIndex = 41
             Me.Label58.Text = "RETENCIÓN IVA 10%"
             '
@@ -1965,7 +1965,7 @@
             Me.Label59.AutoSize = True
             Me.Label59.Location = New System.Drawing.Point(153, 70)
             Me.Label59.Name = "Label59"
-            Me.Label59.Size = New System.Drawing.Size(109, 13)
+            Me.Label59.Size = New System.Drawing.Size(110, 13)
             Me.Label59.TabIndex = 40
             Me.Label59.Text = "RETENCIÓN IVA 20%"
             '
@@ -1976,7 +1976,7 @@
             Me.TextBox75.Location = New System.Drawing.Point(406, 195)
             Me.TextBox75.Name = "TextBox75"
             Me.TextBox75.ReadOnly = True
-            Me.TextBox75.Size = New System.Drawing.Size(68, 13)
+            Me.TextBox75.Size = New System.Drawing.Size(68, 14)
             Me.TextBox75.TabIndex = 38
             Me.TextBox75.Text = "0.00"
             Me.TextBox75.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -1988,7 +1988,7 @@
             Me.TextBox65.Location = New System.Drawing.Point(406, 170)
             Me.TextBox65.Name = "TextBox65"
             Me.TextBox65.ReadOnly = True
-            Me.TextBox65.Size = New System.Drawing.Size(68, 13)
+            Me.TextBox65.Size = New System.Drawing.Size(68, 14)
             Me.TextBox65.TabIndex = 37
             Me.TextBox65.Text = "0.00"
             Me.TextBox65.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -1998,7 +1998,7 @@
             Me.Label27.AutoSize = True
             Me.Label27.Location = New System.Drawing.Point(154, 170)
             Me.Label27.Name = "Label27"
-            Me.Label27.Size = New System.Drawing.Size(115, 13)
+            Me.Label27.Size = New System.Drawing.Size(116, 13)
             Me.Label27.TabIndex = 36
             Me.Label27.Text = "RETENCIÓN IVA 100%"
             '
@@ -2009,7 +2009,7 @@
             Me.TextBox63.Location = New System.Drawing.Point(406, 145)
             Me.TextBox63.Name = "TextBox63"
             Me.TextBox63.ReadOnly = True
-            Me.TextBox63.Size = New System.Drawing.Size(68, 13)
+            Me.TextBox63.Size = New System.Drawing.Size(68, 14)
             Me.TextBox63.TabIndex = 35
             Me.TextBox63.Text = "0.00"
             Me.TextBox63.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -2021,7 +2021,7 @@
             Me.TextBox64.Location = New System.Drawing.Point(406, 95)
             Me.TextBox64.Name = "TextBox64"
             Me.TextBox64.ReadOnly = True
-            Me.TextBox64.Size = New System.Drawing.Size(68, 13)
+            Me.TextBox64.Size = New System.Drawing.Size(68, 14)
             Me.TextBox64.TabIndex = 34
             Me.TextBox64.Text = "0.00"
             Me.TextBox64.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -2031,7 +2031,7 @@
             Me.Label25.AutoSize = True
             Me.Label25.Location = New System.Drawing.Point(154, 145)
             Me.Label25.Name = "Label25"
-            Me.Label25.Size = New System.Drawing.Size(109, 13)
+            Me.Label25.Size = New System.Drawing.Size(110, 13)
             Me.Label25.TabIndex = 33
             Me.Label25.Text = "RETENCIÓN IVA 70%"
             '
@@ -2040,17 +2040,17 @@
             Me.Label26.AutoSize = True
             Me.Label26.Location = New System.Drawing.Point(154, 95)
             Me.Label26.Name = "Label26"
-            Me.Label26.Size = New System.Drawing.Size(109, 13)
+            Me.Label26.Size = New System.Drawing.Size(110, 13)
             Me.Label26.TabIndex = 32
             Me.Label26.Text = "RETENCIÓN IVA 30%"
             '
             'ShapeContainer5
             '
-            Me.ShapeContainer5.Location = New System.Drawing.Point(3, 16)
+            Me.ShapeContainer5.Location = New System.Drawing.Point(3, 17)
             Me.ShapeContainer5.Margin = New System.Windows.Forms.Padding(0)
             Me.ShapeContainer5.Name = "ShapeContainer5"
             Me.ShapeContainer5.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.LineShape55, Me.LineShape45, Me.LineShape44, Me.LineShape43, Me.LineShape42, Me.LineShape41, Me.LineShape40, Me.LineShape39, Me.LineShape38})
-            Me.ShapeContainer5.Size = New System.Drawing.Size(489, 210)
+            Me.ShapeContainer5.Size = New System.Drawing.Size(489, 209)
             Me.ShapeContainer5.TabIndex = 103
             Me.ShapeContainer5.TabStop = False
             '
@@ -2179,7 +2179,7 @@
             Me.Label76.AutoSize = True
             Me.Label76.Location = New System.Drawing.Point(516, 10)
             Me.Label76.Name = "Label76"
-            Me.Label76.Size = New System.Drawing.Size(37, 26)
+            Me.Label76.Size = New System.Drawing.Size(33, 26)
             Me.Label76.TabIndex = 37
             Me.Label76.Text = "Valor" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "IVA"
             '
@@ -2188,7 +2188,7 @@
             Me.Label77.AutoSize = True
             Me.Label77.Location = New System.Drawing.Point(351, 10)
             Me.Label77.Name = "Label77"
-            Me.Label77.Size = New System.Drawing.Size(61, 26)
+            Me.Label77.Size = New System.Drawing.Size(52, 26)
             Me.Label77.TabIndex = 36
             Me.Label77.Text = "BI tarifa" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "dif de 0%"
             '
@@ -2197,7 +2197,7 @@
             Me.Label78.AutoSize = True
             Me.Label78.Location = New System.Drawing.Point(429, 10)
             Me.Label78.Name = "Label78"
-            Me.Label78.Size = New System.Drawing.Size(67, 26)
+            Me.Label78.Size = New System.Drawing.Size(58, 26)
             Me.Label78.TabIndex = 35
             Me.Label78.Text = "No objeto " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "de IVA"
             '
@@ -2206,7 +2206,7 @@
             Me.Label79.AutoSize = True
             Me.Label79.Location = New System.Drawing.Point(301, 10)
             Me.Label79.Name = "Label79"
-            Me.Label79.Size = New System.Drawing.Size(49, 13)
+            Me.Label79.Size = New System.Drawing.Size(47, 13)
             Me.Label79.TabIndex = 34
             Me.Label79.Text = "Nro Reg"
             '
@@ -2217,7 +2217,7 @@
             Me.TextBox71.Location = New System.Drawing.Point(432, 95)
             Me.TextBox71.Name = "TextBox71"
             Me.TextBox71.ReadOnly = True
-            Me.TextBox71.Size = New System.Drawing.Size(58, 13)
+            Me.TextBox71.Size = New System.Drawing.Size(58, 14)
             Me.TextBox71.TabIndex = 25
             Me.TextBox71.Text = "0.00"
             Me.TextBox71.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -2229,7 +2229,7 @@
             Me.TextBox72.Location = New System.Drawing.Point(499, 95)
             Me.TextBox72.Name = "TextBox72"
             Me.TextBox72.ReadOnly = True
-            Me.TextBox72.Size = New System.Drawing.Size(64, 13)
+            Me.TextBox72.Size = New System.Drawing.Size(64, 14)
             Me.TextBox72.TabIndex = 27
             Me.TextBox72.Text = "0.00"
             Me.TextBox72.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -2241,7 +2241,7 @@
             Me.TextBox73.Location = New System.Drawing.Point(305, 95)
             Me.TextBox73.Name = "TextBox73"
             Me.TextBox73.ReadOnly = True
-            Me.TextBox73.Size = New System.Drawing.Size(43, 13)
+            Me.TextBox73.Size = New System.Drawing.Size(43, 14)
             Me.TextBox73.TabIndex = 24
             Me.TextBox73.Text = "0"
             Me.TextBox73.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -2253,7 +2253,7 @@
             Me.TextBox74.Location = New System.Drawing.Point(354, 95)
             Me.TextBox74.Name = "TextBox74"
             Me.TextBox74.ReadOnly = True
-            Me.TextBox74.Size = New System.Drawing.Size(67, 13)
+            Me.TextBox74.Size = New System.Drawing.Size(67, 14)
             Me.TextBox74.TabIndex = 26
             Me.TextBox74.Text = "0.00"
             Me.TextBox74.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -2265,7 +2265,7 @@
             Me.TextBox55.Location = New System.Drawing.Point(499, 70)
             Me.TextBox55.Name = "TextBox55"
             Me.TextBox55.ReadOnly = True
-            Me.TextBox55.Size = New System.Drawing.Size(64, 13)
+            Me.TextBox55.Size = New System.Drawing.Size(64, 14)
             Me.TextBox55.TabIndex = 23
             Me.TextBox55.Text = "0.00"
             Me.TextBox55.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -2277,7 +2277,7 @@
             Me.TextBox56.Location = New System.Drawing.Point(499, 45)
             Me.TextBox56.Name = "TextBox56"
             Me.TextBox56.ReadOnly = True
-            Me.TextBox56.Size = New System.Drawing.Size(64, 13)
+            Me.TextBox56.Size = New System.Drawing.Size(64, 14)
             Me.TextBox56.TabIndex = 22
             Me.TextBox56.Text = "0.00"
             Me.TextBox56.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -2289,7 +2289,7 @@
             Me.TextBox57.Location = New System.Drawing.Point(354, 70)
             Me.TextBox57.Name = "TextBox57"
             Me.TextBox57.ReadOnly = True
-            Me.TextBox57.Size = New System.Drawing.Size(67, 13)
+            Me.TextBox57.Size = New System.Drawing.Size(67, 14)
             Me.TextBox57.TabIndex = 21
             Me.TextBox57.Text = "0.00"
             Me.TextBox57.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -2301,7 +2301,7 @@
             Me.TextBox58.Location = New System.Drawing.Point(354, 45)
             Me.TextBox58.Name = "TextBox58"
             Me.TextBox58.ReadOnly = True
-            Me.TextBox58.Size = New System.Drawing.Size(67, 13)
+            Me.TextBox58.Size = New System.Drawing.Size(67, 14)
             Me.TextBox58.TabIndex = 20
             Me.TextBox58.Text = "0.00"
             Me.TextBox58.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -2313,7 +2313,7 @@
             Me.TextBox59.Location = New System.Drawing.Point(432, 70)
             Me.TextBox59.Name = "TextBox59"
             Me.TextBox59.ReadOnly = True
-            Me.TextBox59.Size = New System.Drawing.Size(59, 13)
+            Me.TextBox59.Size = New System.Drawing.Size(59, 14)
             Me.TextBox59.TabIndex = 19
             Me.TextBox59.Text = "0.00"
             Me.TextBox59.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -2325,7 +2325,7 @@
             Me.TextBox60.Location = New System.Drawing.Point(432, 45)
             Me.TextBox60.Name = "TextBox60"
             Me.TextBox60.ReadOnly = True
-            Me.TextBox60.Size = New System.Drawing.Size(59, 13)
+            Me.TextBox60.Size = New System.Drawing.Size(59, 14)
             Me.TextBox60.TabIndex = 18
             Me.TextBox60.Text = "0.00"
             Me.TextBox60.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -2337,7 +2337,7 @@
             Me.TextBox61.Location = New System.Drawing.Point(305, 70)
             Me.TextBox61.Name = "TextBox61"
             Me.TextBox61.ReadOnly = True
-            Me.TextBox61.Size = New System.Drawing.Size(43, 13)
+            Me.TextBox61.Size = New System.Drawing.Size(43, 14)
             Me.TextBox61.TabIndex = 17
             Me.TextBox61.Text = "0"
             Me.TextBox61.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -2349,7 +2349,7 @@
             Me.TextBox62.Location = New System.Drawing.Point(305, 45)
             Me.TextBox62.Name = "TextBox62"
             Me.TextBox62.ReadOnly = True
-            Me.TextBox62.Size = New System.Drawing.Size(43, 13)
+            Me.TextBox62.Size = New System.Drawing.Size(43, 14)
             Me.TextBox62.TabIndex = 16
             Me.TextBox62.Text = "0"
             Me.TextBox62.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -2359,7 +2359,7 @@
             Me.Label23.AutoSize = True
             Me.Label23.Location = New System.Drawing.Point(2, 70)
             Me.Label23.Name = "Label23"
-            Me.Label23.Size = New System.Drawing.Size(295, 13)
+            Me.Label23.Size = New System.Drawing.Size(319, 13)
             Me.Label23.TabIndex = 15
             Me.Label23.Text = "DOCUMENTOS AUTORIZADOS EN VENTAS EXCEPTO ND Y NC"
             '
@@ -2368,17 +2368,17 @@
             Me.Label24.AutoSize = True
             Me.Label24.Location = New System.Drawing.Point(2, 45)
             Me.Label24.Name = "Label24"
-            Me.Label24.Size = New System.Drawing.Size(103, 13)
+            Me.Label24.Size = New System.Drawing.Size(108, 13)
             Me.Label24.TabIndex = 14
             Me.Label24.Text = "NOTAS DE CRÉDITO"
             '
             'ShapeContainer2
             '
-            Me.ShapeContainer2.Location = New System.Drawing.Point(3, 16)
+            Me.ShapeContainer2.Location = New System.Drawing.Point(3, 17)
             Me.ShapeContainer2.Margin = New System.Windows.Forms.Padding(0)
             Me.ShapeContainer2.Name = "ShapeContainer2"
             Me.ShapeContainer2.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.LineShape52, Me.LineShape17, Me.LineShape16, Me.LineShape15, Me.LineShape14, Me.LineShape13, Me.LineShape12, Me.LineShape11})
-            Me.ShapeContainer2.Size = New System.Drawing.Size(565, 96)
+            Me.ShapeContainer2.Size = New System.Drawing.Size(565, 95)
             Me.ShapeContainer2.TabIndex = 38
             Me.ShapeContainer2.TabStop = False
             '
@@ -2571,7 +2571,7 @@
             Me.TextBox103.Location = New System.Drawing.Point(268, 311)
             Me.TextBox103.Name = "TextBox103"
             Me.TextBox103.ReadOnly = True
-            Me.TextBox103.Size = New System.Drawing.Size(60, 13)
+            Me.TextBox103.Size = New System.Drawing.Size(60, 14)
             Me.TextBox103.TabIndex = 106
             Me.TextBox103.Text = "0.00"
             Me.TextBox103.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -2581,7 +2581,7 @@
             Me.Label97.AutoSize = True
             Me.Label97.Location = New System.Drawing.Point(271, 294)
             Me.Label97.Name = "Label97"
-            Me.Label97.Size = New System.Drawing.Size(61, 13)
+            Me.Label97.Size = New System.Drawing.Size(51, 13)
             Me.Label97.TabIndex = 105
             Me.Label97.Text = "T. 1.75%:"
             '
@@ -2592,7 +2592,7 @@
             Me.TextBox102.Location = New System.Drawing.Point(415, 318)
             Me.TextBox102.Name = "TextBox102"
             Me.TextBox102.ReadOnly = True
-            Me.TextBox102.Size = New System.Drawing.Size(60, 13)
+            Me.TextBox102.Size = New System.Drawing.Size(60, 14)
             Me.TextBox102.TabIndex = 104
             Me.TextBox102.Text = "0.00"
             Me.TextBox102.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -2602,7 +2602,7 @@
             Me.Label96.AutoSize = True
             Me.Label96.Location = New System.Drawing.Point(349, 318)
             Me.Label96.Name = "Label96"
-            Me.Label96.Size = New System.Drawing.Size(61, 13)
+            Me.Label96.Size = New System.Drawing.Size(51, 13)
             Me.Label96.TabIndex = 103
             Me.Label96.Text = "T. 2.75%:"
             '
@@ -2611,7 +2611,7 @@
             Me.Label73.AutoSize = True
             Me.Label73.Location = New System.Drawing.Point(419, 20)
             Me.Label73.Name = "Label73"
-            Me.Label73.Size = New System.Drawing.Size(37, 13)
+            Me.Label73.Size = New System.Drawing.Size(33, 13)
             Me.Label73.TabIndex = 101
             Me.Label73.Text = "Valor"
             '
@@ -2620,7 +2620,7 @@
             Me.Label74.AutoSize = True
             Me.Label74.Location = New System.Drawing.Point(339, 20)
             Me.Label74.Name = "Label74"
-            Me.Label74.Size = New System.Drawing.Size(61, 13)
+            Me.Label74.Size = New System.Drawing.Size(57, 13)
             Me.Label74.TabIndex = 100
             Me.Label74.Text = "Base Imp."
             '
@@ -2629,7 +2629,7 @@
             Me.Label75.AutoSize = True
             Me.Label75.Location = New System.Drawing.Point(286, 20)
             Me.Label75.Name = "Label75"
-            Me.Label75.Size = New System.Drawing.Size(49, 13)
+            Me.Label75.Size = New System.Drawing.Size(47, 13)
             Me.Label75.TabIndex = 99
             Me.Label75.Text = "Nro Reg"
             '
@@ -2638,7 +2638,7 @@
             Me.Label72.AutoSize = True
             Me.Label72.Location = New System.Drawing.Point(173, 20)
             Me.Label72.Name = "Label72"
-            Me.Label72.Size = New System.Drawing.Size(37, 13)
+            Me.Label72.Size = New System.Drawing.Size(33, 13)
             Me.Label72.TabIndex = 98
             Me.Label72.Text = "Valor"
             '
@@ -2647,7 +2647,7 @@
             Me.Label71.AutoSize = True
             Me.Label71.Location = New System.Drawing.Point(100, 20)
             Me.Label71.Name = "Label71"
-            Me.Label71.Size = New System.Drawing.Size(61, 13)
+            Me.Label71.Size = New System.Drawing.Size(57, 13)
             Me.Label71.TabIndex = 97
             Me.Label71.Text = "Base Imp."
             '
@@ -2656,7 +2656,7 @@
             Me.Label33.AutoSize = True
             Me.Label33.Location = New System.Drawing.Point(44, 20)
             Me.Label33.Name = "Label33"
-            Me.Label33.Size = New System.Drawing.Size(49, 13)
+            Me.Label33.Size = New System.Drawing.Size(47, 13)
             Me.Label33.TabIndex = 96
             Me.Label33.Text = "Nro Reg"
             '
@@ -2677,7 +2677,7 @@
             Me.TextBox89.Location = New System.Drawing.Point(195, 320)
             Me.TextBox89.Name = "TextBox89"
             Me.TextBox89.ReadOnly = True
-            Me.TextBox89.Size = New System.Drawing.Size(60, 13)
+            Me.TextBox89.Size = New System.Drawing.Size(60, 14)
             Me.TextBox89.TabIndex = 70
             Me.TextBox89.Text = "0.00"
             Me.TextBox89.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -2689,7 +2689,7 @@
             Me.TextBox95.Location = New System.Drawing.Point(408, 195)
             Me.TextBox95.Name = "TextBox95"
             Me.TextBox95.ReadOnly = True
-            Me.TextBox95.Size = New System.Drawing.Size(65, 13)
+            Me.TextBox95.Size = New System.Drawing.Size(65, 14)
             Me.TextBox95.TabIndex = 93
             Me.TextBox95.Text = "0.00"
             Me.TextBox95.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -2701,7 +2701,7 @@
             Me.TextBox88.Location = New System.Drawing.Point(60, 320)
             Me.TextBox88.Name = "TextBox88"
             Me.TextBox88.ReadOnly = True
-            Me.TextBox88.Size = New System.Drawing.Size(60, 13)
+            Me.TextBox88.Size = New System.Drawing.Size(60, 14)
             Me.TextBox88.TabIndex = 69
             Me.TextBox88.Text = "0.00"
             Me.TextBox88.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -2713,7 +2713,7 @@
             Me.TextBox87.Location = New System.Drawing.Point(195, 295)
             Me.TextBox87.Name = "TextBox87"
             Me.TextBox87.ReadOnly = True
-            Me.TextBox87.Size = New System.Drawing.Size(60, 13)
+            Me.TextBox87.Size = New System.Drawing.Size(60, 14)
             Me.TextBox87.TabIndex = 68
             Me.TextBox87.Text = "0.00"
             Me.TextBox87.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -2725,7 +2725,7 @@
             Me.TextBox96.Location = New System.Drawing.Point(338, 195)
             Me.TextBox96.Name = "TextBox96"
             Me.TextBox96.ReadOnly = True
-            Me.TextBox96.Size = New System.Drawing.Size(65, 13)
+            Me.TextBox96.Size = New System.Drawing.Size(65, 14)
             Me.TextBox96.TabIndex = 92
             Me.TextBox96.Text = "0.00"
             Me.TextBox96.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -2737,7 +2737,7 @@
             Me.TextBox86.Location = New System.Drawing.Point(60, 295)
             Me.TextBox86.Name = "TextBox86"
             Me.TextBox86.ReadOnly = True
-            Me.TextBox86.Size = New System.Drawing.Size(60, 13)
+            Me.TextBox86.Size = New System.Drawing.Size(60, 14)
             Me.TextBox86.TabIndex = 67
             Me.TextBox86.Text = "0.00"
             Me.TextBox86.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -2749,7 +2749,7 @@
             Me.TextBox97.Location = New System.Drawing.Point(290, 195)
             Me.TextBox97.Name = "TextBox97"
             Me.TextBox97.ReadOnly = True
-            Me.TextBox97.Size = New System.Drawing.Size(43, 13)
+            Me.TextBox97.Size = New System.Drawing.Size(43, 14)
             Me.TextBox97.TabIndex = 91
             Me.TextBox97.Text = "0"
             Me.TextBox97.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -2759,7 +2759,7 @@
             Me.Label57.AutoSize = True
             Me.Label57.Location = New System.Drawing.Point(130, 320)
             Me.Label57.Name = "Label57"
-            Me.Label57.Size = New System.Drawing.Size(67, 13)
+            Me.Label57.Size = New System.Drawing.Size(58, 13)
             Me.Label57.TabIndex = 4
             Me.Label57.Text = "Total 10%:"
             '
@@ -2778,7 +2778,7 @@
             Me.Label56.AutoSize = True
             Me.Label56.Location = New System.Drawing.Point(3, 320)
             Me.Label56.Name = "Label56"
-            Me.Label56.Size = New System.Drawing.Size(61, 13)
+            Me.Label56.Size = New System.Drawing.Size(52, 13)
             Me.Label56.TabIndex = 3
             Me.Label56.Text = "Total 8%:"
             '
@@ -2789,7 +2789,7 @@
             Me.TextBox92.Location = New System.Drawing.Point(167, 220)
             Me.TextBox92.Name = "TextBox92"
             Me.TextBox92.ReadOnly = True
-            Me.TextBox92.Size = New System.Drawing.Size(65, 13)
+            Me.TextBox92.Size = New System.Drawing.Size(65, 14)
             Me.TextBox92.TabIndex = 89
             Me.TextBox92.Text = "0.00"
             Me.TextBox92.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -2799,7 +2799,7 @@
             Me.Label55.AutoSize = True
             Me.Label55.Location = New System.Drawing.Point(130, 295)
             Me.Label55.Name = "Label55"
-            Me.Label55.Size = New System.Drawing.Size(61, 13)
+            Me.Label55.Size = New System.Drawing.Size(52, 13)
             Me.Label55.TabIndex = 2
             Me.Label55.Text = "Total 2%:"
             '
@@ -2810,7 +2810,7 @@
             Me.TextBox93.Location = New System.Drawing.Point(97, 220)
             Me.TextBox93.Name = "TextBox93"
             Me.TextBox93.ReadOnly = True
-            Me.TextBox93.Size = New System.Drawing.Size(65, 13)
+            Me.TextBox93.Size = New System.Drawing.Size(65, 14)
             Me.TextBox93.TabIndex = 88
             Me.TextBox93.Text = "0.00"
             Me.TextBox93.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -2822,7 +2822,7 @@
             Me.TextBox94.Location = New System.Drawing.Point(49, 220)
             Me.TextBox94.Name = "TextBox94"
             Me.TextBox94.ReadOnly = True
-            Me.TextBox94.Size = New System.Drawing.Size(43, 13)
+            Me.TextBox94.Size = New System.Drawing.Size(43, 14)
             Me.TextBox94.TabIndex = 87
             Me.TextBox94.Text = "0"
             Me.TextBox94.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -2844,7 +2844,7 @@
             Me.TextBox77.Location = New System.Drawing.Point(406, 295)
             Me.TextBox77.Name = "TextBox77"
             Me.TextBox77.ReadOnly = True
-            Me.TextBox77.Size = New System.Drawing.Size(68, 13)
+            Me.TextBox77.Size = New System.Drawing.Size(68, 14)
             Me.TextBox77.TabIndex = 84
             Me.TextBox77.Text = "0.00"
             Me.TextBox77.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -2856,7 +2856,7 @@
             Me.TextBox9.Location = New System.Drawing.Point(49, 45)
             Me.TextBox9.Name = "TextBox9"
             Me.TextBox9.ReadOnly = True
-            Me.TextBox9.Size = New System.Drawing.Size(43, 13)
+            Me.TextBox9.Size = New System.Drawing.Size(43, 14)
             Me.TextBox9.TabIndex = 15
             Me.TextBox9.Text = "0"
             Me.TextBox9.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -2868,7 +2868,7 @@
             Me.TextBox28.Location = New System.Drawing.Point(408, 270)
             Me.TextBox28.Name = "TextBox28"
             Me.TextBox28.ReadOnly = True
-            Me.TextBox28.Size = New System.Drawing.Size(65, 13)
+            Me.TextBox28.Size = New System.Drawing.Size(65, 14)
             Me.TextBox28.TabIndex = 83
             Me.TextBox28.Text = "0.00"
             Me.TextBox28.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -2890,7 +2890,7 @@
             Me.TextBox29.Location = New System.Drawing.Point(408, 245)
             Me.TextBox29.Name = "TextBox29"
             Me.TextBox29.ReadOnly = True
-            Me.TextBox29.Size = New System.Drawing.Size(65, 13)
+            Me.TextBox29.Size = New System.Drawing.Size(65, 14)
             Me.TextBox29.TabIndex = 82
             Me.TextBox29.Text = "0.00"
             Me.TextBox29.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -2902,7 +2902,7 @@
             Me.TextBox30.Location = New System.Drawing.Point(408, 220)
             Me.TextBox30.Name = "TextBox30"
             Me.TextBox30.ReadOnly = True
-            Me.TextBox30.Size = New System.Drawing.Size(65, 13)
+            Me.TextBox30.Size = New System.Drawing.Size(65, 14)
             Me.TextBox30.TabIndex = 81
             Me.TextBox30.Text = "0.00"
             Me.TextBox30.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -2914,7 +2914,7 @@
             Me.TextBox31.Location = New System.Drawing.Point(338, 270)
             Me.TextBox31.Name = "TextBox31"
             Me.TextBox31.ReadOnly = True
-            Me.TextBox31.Size = New System.Drawing.Size(65, 13)
+            Me.TextBox31.Size = New System.Drawing.Size(65, 14)
             Me.TextBox31.TabIndex = 80
             Me.TextBox31.Text = "0.00"
             Me.TextBox31.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -2926,7 +2926,7 @@
             Me.TextBox32.Location = New System.Drawing.Point(338, 245)
             Me.TextBox32.Name = "TextBox32"
             Me.TextBox32.ReadOnly = True
-            Me.TextBox32.Size = New System.Drawing.Size(65, 13)
+            Me.TextBox32.Size = New System.Drawing.Size(65, 14)
             Me.TextBox32.TabIndex = 79
             Me.TextBox32.Text = "0.00"
             Me.TextBox32.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -2938,7 +2938,7 @@
             Me.TextBox33.Location = New System.Drawing.Point(338, 220)
             Me.TextBox33.Name = "TextBox33"
             Me.TextBox33.ReadOnly = True
-            Me.TextBox33.Size = New System.Drawing.Size(65, 13)
+            Me.TextBox33.Size = New System.Drawing.Size(65, 14)
             Me.TextBox33.TabIndex = 78
             Me.TextBox33.Text = "0.00"
             Me.TextBox33.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -2950,7 +2950,7 @@
             Me.TextBox34.Location = New System.Drawing.Point(290, 270)
             Me.TextBox34.Name = "TextBox34"
             Me.TextBox34.ReadOnly = True
-            Me.TextBox34.Size = New System.Drawing.Size(43, 13)
+            Me.TextBox34.Size = New System.Drawing.Size(43, 14)
             Me.TextBox34.TabIndex = 77
             Me.TextBox34.Text = "0"
             Me.TextBox34.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -2962,7 +2962,7 @@
             Me.TextBox35.Location = New System.Drawing.Point(290, 245)
             Me.TextBox35.Name = "TextBox35"
             Me.TextBox35.ReadOnly = True
-            Me.TextBox35.Size = New System.Drawing.Size(43, 13)
+            Me.TextBox35.Size = New System.Drawing.Size(43, 14)
             Me.TextBox35.TabIndex = 76
             Me.TextBox35.Text = "0"
             Me.TextBox35.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -2974,7 +2974,7 @@
             Me.TextBox36.Location = New System.Drawing.Point(290, 220)
             Me.TextBox36.Name = "TextBox36"
             Me.TextBox36.ReadOnly = True
-            Me.TextBox36.Size = New System.Drawing.Size(43, 13)
+            Me.TextBox36.Size = New System.Drawing.Size(43, 14)
             Me.TextBox36.TabIndex = 75
             Me.TextBox36.Text = "0"
             Me.TextBox36.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -3016,7 +3016,7 @@
             Me.TextBox37.Location = New System.Drawing.Point(408, 95)
             Me.TextBox37.Name = "TextBox37"
             Me.TextBox37.ReadOnly = True
-            Me.TextBox37.Size = New System.Drawing.Size(65, 13)
+            Me.TextBox37.Size = New System.Drawing.Size(65, 14)
             Me.TextBox37.TabIndex = 71
             Me.TextBox37.Text = "0.00"
             Me.TextBox37.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -3028,7 +3028,7 @@
             Me.TextBox38.Location = New System.Drawing.Point(408, 70)
             Me.TextBox38.Name = "TextBox38"
             Me.TextBox38.ReadOnly = True
-            Me.TextBox38.Size = New System.Drawing.Size(65, 13)
+            Me.TextBox38.Size = New System.Drawing.Size(65, 14)
             Me.TextBox38.TabIndex = 70
             Me.TextBox38.Text = "0.00"
             Me.TextBox38.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -3040,7 +3040,7 @@
             Me.TextBox39.Location = New System.Drawing.Point(408, 45)
             Me.TextBox39.Name = "TextBox39"
             Me.TextBox39.ReadOnly = True
-            Me.TextBox39.Size = New System.Drawing.Size(65, 13)
+            Me.TextBox39.Size = New System.Drawing.Size(65, 14)
             Me.TextBox39.TabIndex = 69
             Me.TextBox39.Text = "0.00"
             Me.TextBox39.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -3052,7 +3052,7 @@
             Me.TextBox40.Location = New System.Drawing.Point(338, 95)
             Me.TextBox40.Name = "TextBox40"
             Me.TextBox40.ReadOnly = True
-            Me.TextBox40.Size = New System.Drawing.Size(65, 13)
+            Me.TextBox40.Size = New System.Drawing.Size(65, 14)
             Me.TextBox40.TabIndex = 68
             Me.TextBox40.Text = "0.00"
             Me.TextBox40.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -3064,7 +3064,7 @@
             Me.TextBox41.Location = New System.Drawing.Point(338, 70)
             Me.TextBox41.Name = "TextBox41"
             Me.TextBox41.ReadOnly = True
-            Me.TextBox41.Size = New System.Drawing.Size(65, 13)
+            Me.TextBox41.Size = New System.Drawing.Size(65, 14)
             Me.TextBox41.TabIndex = 67
             Me.TextBox41.Text = "0.00"
             Me.TextBox41.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -3076,7 +3076,7 @@
             Me.TextBox42.Location = New System.Drawing.Point(338, 45)
             Me.TextBox42.Name = "TextBox42"
             Me.TextBox42.ReadOnly = True
-            Me.TextBox42.Size = New System.Drawing.Size(65, 13)
+            Me.TextBox42.Size = New System.Drawing.Size(65, 14)
             Me.TextBox42.TabIndex = 66
             Me.TextBox42.Text = "0.00"
             Me.TextBox42.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -3088,7 +3088,7 @@
             Me.TextBox43.Location = New System.Drawing.Point(290, 95)
             Me.TextBox43.Name = "TextBox43"
             Me.TextBox43.ReadOnly = True
-            Me.TextBox43.Size = New System.Drawing.Size(43, 13)
+            Me.TextBox43.Size = New System.Drawing.Size(43, 14)
             Me.TextBox43.TabIndex = 65
             Me.TextBox43.Text = "0"
             Me.TextBox43.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -3100,7 +3100,7 @@
             Me.TextBox44.Location = New System.Drawing.Point(290, 70)
             Me.TextBox44.Name = "TextBox44"
             Me.TextBox44.ReadOnly = True
-            Me.TextBox44.Size = New System.Drawing.Size(43, 13)
+            Me.TextBox44.Size = New System.Drawing.Size(43, 14)
             Me.TextBox44.TabIndex = 64
             Me.TextBox44.Text = "0"
             Me.TextBox44.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -3112,7 +3112,7 @@
             Me.TextBox45.Location = New System.Drawing.Point(290, 45)
             Me.TextBox45.Name = "TextBox45"
             Me.TextBox45.ReadOnly = True
-            Me.TextBox45.Size = New System.Drawing.Size(43, 13)
+            Me.TextBox45.Size = New System.Drawing.Size(43, 14)
             Me.TextBox45.TabIndex = 63
             Me.TextBox45.Text = "0"
             Me.TextBox45.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -3154,7 +3154,7 @@
             Me.TextBox46.Location = New System.Drawing.Point(167, 170)
             Me.TextBox46.Name = "TextBox46"
             Me.TextBox46.ReadOnly = True
-            Me.TextBox46.Size = New System.Drawing.Size(65, 13)
+            Me.TextBox46.Size = New System.Drawing.Size(65, 14)
             Me.TextBox46.TabIndex = 59
             Me.TextBox46.Text = "0.00"
             Me.TextBox46.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -3166,7 +3166,7 @@
             Me.TextBox47.Location = New System.Drawing.Point(167, 145)
             Me.TextBox47.Name = "TextBox47"
             Me.TextBox47.ReadOnly = True
-            Me.TextBox47.Size = New System.Drawing.Size(65, 13)
+            Me.TextBox47.Size = New System.Drawing.Size(65, 14)
             Me.TextBox47.TabIndex = 58
             Me.TextBox47.Text = "0.00"
             Me.TextBox47.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -3178,7 +3178,7 @@
             Me.TextBox48.Location = New System.Drawing.Point(167, 120)
             Me.TextBox48.Name = "TextBox48"
             Me.TextBox48.ReadOnly = True
-            Me.TextBox48.Size = New System.Drawing.Size(65, 13)
+            Me.TextBox48.Size = New System.Drawing.Size(65, 14)
             Me.TextBox48.TabIndex = 57
             Me.TextBox48.Text = "0.00"
             Me.TextBox48.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -3190,7 +3190,7 @@
             Me.TextBox49.Location = New System.Drawing.Point(97, 170)
             Me.TextBox49.Name = "TextBox49"
             Me.TextBox49.ReadOnly = True
-            Me.TextBox49.Size = New System.Drawing.Size(65, 13)
+            Me.TextBox49.Size = New System.Drawing.Size(65, 14)
             Me.TextBox49.TabIndex = 56
             Me.TextBox49.Text = "0.00"
             Me.TextBox49.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -3202,7 +3202,7 @@
             Me.TextBox50.Location = New System.Drawing.Point(97, 145)
             Me.TextBox50.Name = "TextBox50"
             Me.TextBox50.ReadOnly = True
-            Me.TextBox50.Size = New System.Drawing.Size(65, 13)
+            Me.TextBox50.Size = New System.Drawing.Size(65, 14)
             Me.TextBox50.TabIndex = 55
             Me.TextBox50.Text = "0.00"
             Me.TextBox50.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -3214,7 +3214,7 @@
             Me.TextBox51.Location = New System.Drawing.Point(97, 120)
             Me.TextBox51.Name = "TextBox51"
             Me.TextBox51.ReadOnly = True
-            Me.TextBox51.Size = New System.Drawing.Size(65, 13)
+            Me.TextBox51.Size = New System.Drawing.Size(65, 14)
             Me.TextBox51.TabIndex = 54
             Me.TextBox51.Text = "0.00"
             Me.TextBox51.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -3226,7 +3226,7 @@
             Me.TextBox52.Location = New System.Drawing.Point(49, 170)
             Me.TextBox52.Name = "TextBox52"
             Me.TextBox52.ReadOnly = True
-            Me.TextBox52.Size = New System.Drawing.Size(43, 13)
+            Me.TextBox52.Size = New System.Drawing.Size(43, 14)
             Me.TextBox52.TabIndex = 53
             Me.TextBox52.Text = "0"
             Me.TextBox52.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -3238,7 +3238,7 @@
             Me.TextBox53.Location = New System.Drawing.Point(49, 145)
             Me.TextBox53.Name = "TextBox53"
             Me.TextBox53.ReadOnly = True
-            Me.TextBox53.Size = New System.Drawing.Size(43, 13)
+            Me.TextBox53.Size = New System.Drawing.Size(43, 14)
             Me.TextBox53.TabIndex = 52
             Me.TextBox53.Text = "0"
             Me.TextBox53.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -3250,7 +3250,7 @@
             Me.TextBox54.Location = New System.Drawing.Point(49, 120)
             Me.TextBox54.Name = "TextBox54"
             Me.TextBox54.ReadOnly = True
-            Me.TextBox54.Size = New System.Drawing.Size(43, 13)
+            Me.TextBox54.Size = New System.Drawing.Size(43, 14)
             Me.TextBox54.TabIndex = 51
             Me.TextBox54.Text = "0"
             Me.TextBox54.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -3292,7 +3292,7 @@
             Me.TextBox19.Location = New System.Drawing.Point(408, 170)
             Me.TextBox19.Name = "TextBox19"
             Me.TextBox19.ReadOnly = True
-            Me.TextBox19.Size = New System.Drawing.Size(65, 13)
+            Me.TextBox19.Size = New System.Drawing.Size(65, 14)
             Me.TextBox19.TabIndex = 47
             Me.TextBox19.Text = "0.00"
             Me.TextBox19.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -3304,7 +3304,7 @@
             Me.TextBox20.Location = New System.Drawing.Point(408, 145)
             Me.TextBox20.Name = "TextBox20"
             Me.TextBox20.ReadOnly = True
-            Me.TextBox20.Size = New System.Drawing.Size(65, 13)
+            Me.TextBox20.Size = New System.Drawing.Size(65, 14)
             Me.TextBox20.TabIndex = 46
             Me.TextBox20.Text = "0.00"
             Me.TextBox20.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -3316,7 +3316,7 @@
             Me.TextBox21.Location = New System.Drawing.Point(408, 120)
             Me.TextBox21.Name = "TextBox21"
             Me.TextBox21.ReadOnly = True
-            Me.TextBox21.Size = New System.Drawing.Size(65, 13)
+            Me.TextBox21.Size = New System.Drawing.Size(65, 14)
             Me.TextBox21.TabIndex = 45
             Me.TextBox21.Text = "0.00"
             Me.TextBox21.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -3328,7 +3328,7 @@
             Me.TextBox22.Location = New System.Drawing.Point(338, 170)
             Me.TextBox22.Name = "TextBox22"
             Me.TextBox22.ReadOnly = True
-            Me.TextBox22.Size = New System.Drawing.Size(65, 13)
+            Me.TextBox22.Size = New System.Drawing.Size(65, 14)
             Me.TextBox22.TabIndex = 44
             Me.TextBox22.Text = "0.00"
             Me.TextBox22.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -3340,7 +3340,7 @@
             Me.TextBox23.Location = New System.Drawing.Point(338, 145)
             Me.TextBox23.Name = "TextBox23"
             Me.TextBox23.ReadOnly = True
-            Me.TextBox23.Size = New System.Drawing.Size(65, 13)
+            Me.TextBox23.Size = New System.Drawing.Size(65, 14)
             Me.TextBox23.TabIndex = 43
             Me.TextBox23.Text = "0.00"
             Me.TextBox23.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -3352,7 +3352,7 @@
             Me.TextBox24.Location = New System.Drawing.Point(338, 120)
             Me.TextBox24.Name = "TextBox24"
             Me.TextBox24.ReadOnly = True
-            Me.TextBox24.Size = New System.Drawing.Size(65, 13)
+            Me.TextBox24.Size = New System.Drawing.Size(65, 14)
             Me.TextBox24.TabIndex = 42
             Me.TextBox24.Text = "0.00"
             Me.TextBox24.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -3364,7 +3364,7 @@
             Me.TextBox25.Location = New System.Drawing.Point(290, 170)
             Me.TextBox25.Name = "TextBox25"
             Me.TextBox25.ReadOnly = True
-            Me.TextBox25.Size = New System.Drawing.Size(43, 13)
+            Me.TextBox25.Size = New System.Drawing.Size(43, 14)
             Me.TextBox25.TabIndex = 41
             Me.TextBox25.Text = "0"
             Me.TextBox25.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -3376,7 +3376,7 @@
             Me.TextBox26.Location = New System.Drawing.Point(290, 145)
             Me.TextBox26.Name = "TextBox26"
             Me.TextBox26.ReadOnly = True
-            Me.TextBox26.Size = New System.Drawing.Size(43, 13)
+            Me.TextBox26.Size = New System.Drawing.Size(43, 14)
             Me.TextBox26.TabIndex = 40
             Me.TextBox26.Text = "0"
             Me.TextBox26.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -3388,7 +3388,7 @@
             Me.TextBox27.Location = New System.Drawing.Point(290, 121)
             Me.TextBox27.Name = "TextBox27"
             Me.TextBox27.ReadOnly = True
-            Me.TextBox27.Size = New System.Drawing.Size(43, 13)
+            Me.TextBox27.Size = New System.Drawing.Size(43, 14)
             Me.TextBox27.TabIndex = 39
             Me.TextBox27.Text = "0"
             Me.TextBox27.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -3430,7 +3430,7 @@
             Me.TextBox10.Location = New System.Drawing.Point(167, 270)
             Me.TextBox10.Name = "TextBox10"
             Me.TextBox10.ReadOnly = True
-            Me.TextBox10.Size = New System.Drawing.Size(65, 13)
+            Me.TextBox10.Size = New System.Drawing.Size(65, 14)
             Me.TextBox10.TabIndex = 35
             Me.TextBox10.Text = "0.00"
             Me.TextBox10.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -3442,7 +3442,7 @@
             Me.TextBox11.Location = New System.Drawing.Point(167, 245)
             Me.TextBox11.Name = "TextBox11"
             Me.TextBox11.ReadOnly = True
-            Me.TextBox11.Size = New System.Drawing.Size(65, 13)
+            Me.TextBox11.Size = New System.Drawing.Size(65, 14)
             Me.TextBox11.TabIndex = 34
             Me.TextBox11.Text = "0.00"
             Me.TextBox11.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -3454,7 +3454,7 @@
             Me.TextBox12.Location = New System.Drawing.Point(167, 195)
             Me.TextBox12.Name = "TextBox12"
             Me.TextBox12.ReadOnly = True
-            Me.TextBox12.Size = New System.Drawing.Size(65, 13)
+            Me.TextBox12.Size = New System.Drawing.Size(65, 14)
             Me.TextBox12.TabIndex = 33
             Me.TextBox12.Text = "0.00"
             Me.TextBox12.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -3466,7 +3466,7 @@
             Me.TextBox13.Location = New System.Drawing.Point(97, 270)
             Me.TextBox13.Name = "TextBox13"
             Me.TextBox13.ReadOnly = True
-            Me.TextBox13.Size = New System.Drawing.Size(65, 13)
+            Me.TextBox13.Size = New System.Drawing.Size(65, 14)
             Me.TextBox13.TabIndex = 32
             Me.TextBox13.Text = "0.00"
             Me.TextBox13.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -3478,7 +3478,7 @@
             Me.TextBox14.Location = New System.Drawing.Point(97, 245)
             Me.TextBox14.Name = "TextBox14"
             Me.TextBox14.ReadOnly = True
-            Me.TextBox14.Size = New System.Drawing.Size(65, 13)
+            Me.TextBox14.Size = New System.Drawing.Size(65, 14)
             Me.TextBox14.TabIndex = 31
             Me.TextBox14.Text = "0.00"
             Me.TextBox14.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -3490,7 +3490,7 @@
             Me.TextBox15.Location = New System.Drawing.Point(97, 195)
             Me.TextBox15.Name = "TextBox15"
             Me.TextBox15.ReadOnly = True
-            Me.TextBox15.Size = New System.Drawing.Size(65, 13)
+            Me.TextBox15.Size = New System.Drawing.Size(65, 14)
             Me.TextBox15.TabIndex = 30
             Me.TextBox15.Text = "0.00"
             Me.TextBox15.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -3502,7 +3502,7 @@
             Me.TextBox16.Location = New System.Drawing.Point(49, 270)
             Me.TextBox16.Name = "TextBox16"
             Me.TextBox16.ReadOnly = True
-            Me.TextBox16.Size = New System.Drawing.Size(43, 13)
+            Me.TextBox16.Size = New System.Drawing.Size(43, 14)
             Me.TextBox16.TabIndex = 29
             Me.TextBox16.Text = "0"
             Me.TextBox16.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -3514,7 +3514,7 @@
             Me.TextBox17.Location = New System.Drawing.Point(49, 245)
             Me.TextBox17.Name = "TextBox17"
             Me.TextBox17.ReadOnly = True
-            Me.TextBox17.Size = New System.Drawing.Size(43, 13)
+            Me.TextBox17.Size = New System.Drawing.Size(43, 14)
             Me.TextBox17.TabIndex = 28
             Me.TextBox17.Text = "0"
             Me.TextBox17.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -3526,7 +3526,7 @@
             Me.TextBox18.Location = New System.Drawing.Point(49, 195)
             Me.TextBox18.Name = "TextBox18"
             Me.TextBox18.ReadOnly = True
-            Me.TextBox18.Size = New System.Drawing.Size(43, 13)
+            Me.TextBox18.Size = New System.Drawing.Size(43, 14)
             Me.TextBox18.TabIndex = 27
             Me.TextBox18.Text = "0"
             Me.TextBox18.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -3568,7 +3568,7 @@
             Me.TextBox1.Location = New System.Drawing.Point(167, 95)
             Me.TextBox1.Name = "TextBox1"
             Me.TextBox1.ReadOnly = True
-            Me.TextBox1.Size = New System.Drawing.Size(65, 13)
+            Me.TextBox1.Size = New System.Drawing.Size(65, 14)
             Me.TextBox1.TabIndex = 23
             Me.TextBox1.Text = "0.00"
             Me.TextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -3580,7 +3580,7 @@
             Me.TextBox2.Location = New System.Drawing.Point(167, 70)
             Me.TextBox2.Name = "TextBox2"
             Me.TextBox2.ReadOnly = True
-            Me.TextBox2.Size = New System.Drawing.Size(65, 13)
+            Me.TextBox2.Size = New System.Drawing.Size(65, 14)
             Me.TextBox2.TabIndex = 22
             Me.TextBox2.Text = "0.00"
             Me.TextBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -3592,7 +3592,7 @@
             Me.TextBox3.Location = New System.Drawing.Point(167, 45)
             Me.TextBox3.Name = "TextBox3"
             Me.TextBox3.ReadOnly = True
-            Me.TextBox3.Size = New System.Drawing.Size(65, 13)
+            Me.TextBox3.Size = New System.Drawing.Size(65, 14)
             Me.TextBox3.TabIndex = 21
             Me.TextBox3.Text = "0.00"
             Me.TextBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -3604,7 +3604,7 @@
             Me.TextBox4.Location = New System.Drawing.Point(97, 95)
             Me.TextBox4.Name = "TextBox4"
             Me.TextBox4.ReadOnly = True
-            Me.TextBox4.Size = New System.Drawing.Size(65, 13)
+            Me.TextBox4.Size = New System.Drawing.Size(65, 14)
             Me.TextBox4.TabIndex = 20
             Me.TextBox4.Text = "0.00"
             Me.TextBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -3616,7 +3616,7 @@
             Me.TextBox5.Location = New System.Drawing.Point(97, 70)
             Me.TextBox5.Name = "TextBox5"
             Me.TextBox5.ReadOnly = True
-            Me.TextBox5.Size = New System.Drawing.Size(65, 13)
+            Me.TextBox5.Size = New System.Drawing.Size(65, 14)
             Me.TextBox5.TabIndex = 19
             Me.TextBox5.Text = "0.00"
             Me.TextBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -3628,7 +3628,7 @@
             Me.TextBox6.Location = New System.Drawing.Point(97, 45)
             Me.TextBox6.Name = "TextBox6"
             Me.TextBox6.ReadOnly = True
-            Me.TextBox6.Size = New System.Drawing.Size(65, 13)
+            Me.TextBox6.Size = New System.Drawing.Size(65, 14)
             Me.TextBox6.TabIndex = 18
             Me.TextBox6.Text = "0.00"
             Me.TextBox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -3640,7 +3640,7 @@
             Me.TextBox7.Location = New System.Drawing.Point(49, 95)
             Me.TextBox7.Name = "TextBox7"
             Me.TextBox7.ReadOnly = True
-            Me.TextBox7.Size = New System.Drawing.Size(43, 13)
+            Me.TextBox7.Size = New System.Drawing.Size(43, 14)
             Me.TextBox7.TabIndex = 17
             Me.TextBox7.Text = "0"
             Me.TextBox7.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -3652,7 +3652,7 @@
             Me.TextBox8.Location = New System.Drawing.Point(49, 70)
             Me.TextBox8.Name = "TextBox8"
             Me.TextBox8.ReadOnly = True
-            Me.TextBox8.Size = New System.Drawing.Size(43, 13)
+            Me.TextBox8.Size = New System.Drawing.Size(43, 14)
             Me.TextBox8.TabIndex = 16
             Me.TextBox8.Text = "0"
             Me.TextBox8.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -3682,17 +3682,17 @@
             Me.Label51.AutoSize = True
             Me.Label51.Location = New System.Drawing.Point(3, 295)
             Me.Label51.Name = "Label51"
-            Me.Label51.Size = New System.Drawing.Size(61, 13)
+            Me.Label51.Size = New System.Drawing.Size(52, 13)
             Me.Label51.TabIndex = 1
             Me.Label51.Text = "Total 1%:"
             '
             'ShapeContainer4
             '
-            Me.ShapeContainer4.Location = New System.Drawing.Point(3, 16)
+            Me.ShapeContainer4.Location = New System.Drawing.Point(3, 17)
             Me.ShapeContainer4.Margin = New System.Windows.Forms.Padding(0)
             Me.ShapeContainer4.Name = "ShapeContainer4"
             Me.ShapeContainer4.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.LineShape37, Me.LineShape36, Me.LineShape35, Me.LineShape34, Me.LineShape33, Me.LineShape32, Me.LineShape31, Me.LineShape30, Me.LineShape29, Me.LineShape28, Me.LineShape27, Me.LineShape26, Me.LineShape25, Me.LineShape24, Me.LineShape23, Me.LineShape22, Me.LineShape21, Me.LineShape20, Me.LineShape19})
-            Me.ShapeContainer4.Size = New System.Drawing.Size(489, 321)
+            Me.ShapeContainer4.Size = New System.Drawing.Size(489, 320)
             Me.ShapeContainer4.TabIndex = 102
             Me.ShapeContainer4.TabStop = False
             '
@@ -3926,7 +3926,7 @@
             Me.Label63.AutoSize = True
             Me.Label63.Location = New System.Drawing.Point(512, 10)
             Me.Label63.Name = "Label63"
-            Me.Label63.Size = New System.Drawing.Size(37, 26)
+            Me.Label63.Size = New System.Drawing.Size(33, 26)
             Me.Label63.TabIndex = 33
             Me.Label63.Text = "Valor" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "IVA"
             '
@@ -3935,7 +3935,7 @@
             Me.Label62.AutoSize = True
             Me.Label62.Location = New System.Drawing.Point(351, 10)
             Me.Label62.Name = "Label62"
-            Me.Label62.Size = New System.Drawing.Size(61, 26)
+            Me.Label62.Size = New System.Drawing.Size(52, 26)
             Me.Label62.TabIndex = 32
             Me.Label62.Text = "BI tarifa" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "dif de 0%"
             '
@@ -3944,7 +3944,7 @@
             Me.Label61.AutoSize = True
             Me.Label61.Location = New System.Drawing.Point(429, 10)
             Me.Label61.Name = "Label61"
-            Me.Label61.Size = New System.Drawing.Size(61, 26)
+            Me.Label61.Size = New System.Drawing.Size(57, 26)
             Me.Label61.TabIndex = 31
             Me.Label61.Text = "No Objeto" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "de IVA"
             '
@@ -3953,7 +3953,7 @@
             Me.Label60.AutoSize = True
             Me.Label60.Location = New System.Drawing.Point(301, 10)
             Me.Label60.Name = "Label60"
-            Me.Label60.Size = New System.Drawing.Size(49, 13)
+            Me.Label60.Size = New System.Drawing.Size(47, 13)
             Me.Label60.TabIndex = 30
             Me.Label60.Text = "Nro Reg"
             '
@@ -3962,7 +3962,7 @@
             Me.Label35.AutoSize = True
             Me.Label35.Location = New System.Drawing.Point(2, 145)
             Me.Label35.Name = "Label35"
-            Me.Label35.Size = New System.Drawing.Size(97, 13)
+            Me.Label35.Size = New System.Drawing.Size(101, 13)
             Me.Label35.TabIndex = 29
             Me.Label35.Text = "NOTAS DE DEBITO"
             '
@@ -3971,7 +3971,7 @@
             Me.Label34.AutoSize = True
             Me.Label34.Location = New System.Drawing.Point(2, 120)
             Me.Label34.Name = "Label34"
-            Me.Label34.Size = New System.Drawing.Size(103, 13)
+            Me.Label34.Size = New System.Drawing.Size(108, 13)
             Me.Label34.TabIndex = 28
             Me.Label34.Text = "NOTAS DE CREDITO"
             '
@@ -3982,7 +3982,7 @@
             Me.TextBox82.Location = New System.Drawing.Point(499, 145)
             Me.TextBox82.Name = "TextBox82"
             Me.TextBox82.ReadOnly = True
-            Me.TextBox82.Size = New System.Drawing.Size(64, 13)
+            Me.TextBox82.Size = New System.Drawing.Size(64, 14)
             Me.TextBox82.TabIndex = 27
             Me.TextBox82.Text = "0.00"
             Me.TextBox82.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -3994,7 +3994,7 @@
             Me.TextBox83.Location = New System.Drawing.Point(351, 145)
             Me.TextBox83.Name = "TextBox83"
             Me.TextBox83.ReadOnly = True
-            Me.TextBox83.Size = New System.Drawing.Size(70, 13)
+            Me.TextBox83.Size = New System.Drawing.Size(70, 14)
             Me.TextBox83.TabIndex = 26
             Me.TextBox83.Text = "0.00"
             Me.TextBox83.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -4006,7 +4006,7 @@
             Me.TextBox84.Location = New System.Drawing.Point(427, 145)
             Me.TextBox84.Name = "TextBox84"
             Me.TextBox84.ReadOnly = True
-            Me.TextBox84.Size = New System.Drawing.Size(64, 13)
+            Me.TextBox84.Size = New System.Drawing.Size(64, 14)
             Me.TextBox84.TabIndex = 25
             Me.TextBox84.Text = "0.00"
             Me.TextBox84.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -4018,7 +4018,7 @@
             Me.TextBox85.Location = New System.Drawing.Point(305, 145)
             Me.TextBox85.Name = "TextBox85"
             Me.TextBox85.ReadOnly = True
-            Me.TextBox85.Size = New System.Drawing.Size(43, 13)
+            Me.TextBox85.Size = New System.Drawing.Size(43, 14)
             Me.TextBox85.TabIndex = 24
             Me.TextBox85.Text = "0"
             Me.TextBox85.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -4030,7 +4030,7 @@
             Me.TextBox78.Location = New System.Drawing.Point(499, 120)
             Me.TextBox78.Name = "TextBox78"
             Me.TextBox78.ReadOnly = True
-            Me.TextBox78.Size = New System.Drawing.Size(64, 13)
+            Me.TextBox78.Size = New System.Drawing.Size(64, 14)
             Me.TextBox78.TabIndex = 23
             Me.TextBox78.Text = "0.00"
             Me.TextBox78.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -4042,7 +4042,7 @@
             Me.TextBox79.Location = New System.Drawing.Point(351, 120)
             Me.TextBox79.Name = "TextBox79"
             Me.TextBox79.ReadOnly = True
-            Me.TextBox79.Size = New System.Drawing.Size(70, 13)
+            Me.TextBox79.Size = New System.Drawing.Size(70, 14)
             Me.TextBox79.TabIndex = 22
             Me.TextBox79.Text = "0.00"
             Me.TextBox79.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -4054,7 +4054,7 @@
             Me.TextBox80.Location = New System.Drawing.Point(427, 120)
             Me.TextBox80.Name = "TextBox80"
             Me.TextBox80.ReadOnly = True
-            Me.TextBox80.Size = New System.Drawing.Size(64, 13)
+            Me.TextBox80.Size = New System.Drawing.Size(64, 14)
             Me.TextBox80.TabIndex = 21
             Me.TextBox80.Text = "0.00"
             Me.TextBox80.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -4066,7 +4066,7 @@
             Me.TextBox81.Location = New System.Drawing.Point(305, 120)
             Me.TextBox81.Name = "TextBox81"
             Me.TextBox81.ReadOnly = True
-            Me.TextBox81.Size = New System.Drawing.Size(43, 13)
+            Me.TextBox81.Size = New System.Drawing.Size(43, 14)
             Me.TextBox81.TabIndex = 20
             Me.TextBox81.Text = "0"
             Me.TextBox81.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -4078,7 +4078,7 @@
             Me.TextBox69.Location = New System.Drawing.Point(427, 170)
             Me.TextBox69.Name = "TextBox69"
             Me.TextBox69.ReadOnly = True
-            Me.TextBox69.Size = New System.Drawing.Size(64, 13)
+            Me.TextBox69.Size = New System.Drawing.Size(64, 14)
             Me.TextBox69.TabIndex = 16
             Me.TextBox69.Text = "0.00"
             Me.TextBox69.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -4090,7 +4090,7 @@
             Me.lblIvaTotalCompras.Location = New System.Drawing.Point(499, 170)
             Me.lblIvaTotalCompras.Name = "lblIvaTotalCompras"
             Me.lblIvaTotalCompras.ReadOnly = True
-            Me.lblIvaTotalCompras.Size = New System.Drawing.Size(64, 13)
+            Me.lblIvaTotalCompras.Size = New System.Drawing.Size(64, 14)
             Me.lblIvaTotalCompras.TabIndex = 18
             Me.lblIvaTotalCompras.Text = "0.00"
             Me.lblIvaTotalCompras.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -4102,7 +4102,7 @@
             Me.TextBox70.Location = New System.Drawing.Point(305, 170)
             Me.TextBox70.Name = "TextBox70"
             Me.TextBox70.ReadOnly = True
-            Me.TextBox70.Size = New System.Drawing.Size(43, 13)
+            Me.TextBox70.Size = New System.Drawing.Size(43, 14)
             Me.TextBox70.TabIndex = 15
             Me.TextBox70.Text = "0"
             Me.TextBox70.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -4114,7 +4114,7 @@
             Me.txtIvaNotaVentaCompras.Location = New System.Drawing.Point(499, 70)
             Me.txtIvaNotaVentaCompras.Name = "txtIvaNotaVentaCompras"
             Me.txtIvaNotaVentaCompras.ReadOnly = True
-            Me.txtIvaNotaVentaCompras.Size = New System.Drawing.Size(64, 13)
+            Me.txtIvaNotaVentaCompras.Size = New System.Drawing.Size(64, 14)
             Me.txtIvaNotaVentaCompras.TabIndex = 14
             Me.txtIvaNotaVentaCompras.Text = "0.00"
             Me.txtIvaNotaVentaCompras.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -4126,7 +4126,7 @@
             Me.TextBox68.Location = New System.Drawing.Point(351, 170)
             Me.TextBox68.Name = "TextBox68"
             Me.TextBox68.ReadOnly = True
-            Me.TextBox68.Size = New System.Drawing.Size(70, 13)
+            Me.TextBox68.Size = New System.Drawing.Size(70, 14)
             Me.TextBox68.TabIndex = 17
             Me.TextBox68.Text = "0.00"
             Me.TextBox68.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -4138,7 +4138,7 @@
             Me.txtIvaLiquidacionCompras.Location = New System.Drawing.Point(499, 95)
             Me.txtIvaLiquidacionCompras.Name = "txtIvaLiquidacionCompras"
             Me.txtIvaLiquidacionCompras.ReadOnly = True
-            Me.txtIvaLiquidacionCompras.Size = New System.Drawing.Size(64, 13)
+            Me.txtIvaLiquidacionCompras.Size = New System.Drawing.Size(64, 14)
             Me.txtIvaLiquidacionCompras.TabIndex = 13
             Me.txtIvaLiquidacionCompras.Text = "0.00"
             Me.txtIvaLiquidacionCompras.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -4150,7 +4150,7 @@
             Me.txtIvaFacturasCompras.Location = New System.Drawing.Point(499, 45)
             Me.txtIvaFacturasCompras.Name = "txtIvaFacturasCompras"
             Me.txtIvaFacturasCompras.ReadOnly = True
-            Me.txtIvaFacturasCompras.Size = New System.Drawing.Size(64, 13)
+            Me.txtIvaFacturasCompras.Size = New System.Drawing.Size(64, 14)
             Me.txtIvaFacturasCompras.TabIndex = 12
             Me.txtIvaFacturasCompras.Text = "0.00"
             Me.txtIvaFacturasCompras.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -4162,7 +4162,7 @@
             Me.txtTarifa12NotaVentaCompras.Location = New System.Drawing.Point(351, 70)
             Me.txtTarifa12NotaVentaCompras.Name = "txtTarifa12NotaVentaCompras"
             Me.txtTarifa12NotaVentaCompras.ReadOnly = True
-            Me.txtTarifa12NotaVentaCompras.Size = New System.Drawing.Size(70, 13)
+            Me.txtTarifa12NotaVentaCompras.Size = New System.Drawing.Size(70, 14)
             Me.txtTarifa12NotaVentaCompras.TabIndex = 11
             Me.txtTarifa12NotaVentaCompras.Text = "0.00"
             Me.txtTarifa12NotaVentaCompras.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -4174,7 +4174,7 @@
             Me.txtTarifa12LiquidacionCompras.Location = New System.Drawing.Point(351, 95)
             Me.txtTarifa12LiquidacionCompras.Name = "txtTarifa12LiquidacionCompras"
             Me.txtTarifa12LiquidacionCompras.ReadOnly = True
-            Me.txtTarifa12LiquidacionCompras.Size = New System.Drawing.Size(70, 13)
+            Me.txtTarifa12LiquidacionCompras.Size = New System.Drawing.Size(70, 14)
             Me.txtTarifa12LiquidacionCompras.TabIndex = 10
             Me.txtTarifa12LiquidacionCompras.Text = "0.00"
             Me.txtTarifa12LiquidacionCompras.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -4186,7 +4186,7 @@
             Me.txtTarifa12FacturasCompras.Location = New System.Drawing.Point(351, 45)
             Me.txtTarifa12FacturasCompras.Name = "txtTarifa12FacturasCompras"
             Me.txtTarifa12FacturasCompras.ReadOnly = True
-            Me.txtTarifa12FacturasCompras.Size = New System.Drawing.Size(70, 13)
+            Me.txtTarifa12FacturasCompras.Size = New System.Drawing.Size(70, 14)
             Me.txtTarifa12FacturasCompras.TabIndex = 9
             Me.txtTarifa12FacturasCompras.Text = "0.00"
             Me.txtTarifa12FacturasCompras.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -4198,7 +4198,7 @@
             Me.txtTarifa0NotaVentaCompras.Location = New System.Drawing.Point(427, 70)
             Me.txtTarifa0NotaVentaCompras.Name = "txtTarifa0NotaVentaCompras"
             Me.txtTarifa0NotaVentaCompras.ReadOnly = True
-            Me.txtTarifa0NotaVentaCompras.Size = New System.Drawing.Size(64, 13)
+            Me.txtTarifa0NotaVentaCompras.Size = New System.Drawing.Size(64, 14)
             Me.txtTarifa0NotaVentaCompras.TabIndex = 8
             Me.txtTarifa0NotaVentaCompras.Text = "0.00"
             Me.txtTarifa0NotaVentaCompras.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -4210,7 +4210,7 @@
             Me.txtTarifa0LiquidacionCompras.Location = New System.Drawing.Point(427, 95)
             Me.txtTarifa0LiquidacionCompras.Name = "txtTarifa0LiquidacionCompras"
             Me.txtTarifa0LiquidacionCompras.ReadOnly = True
-            Me.txtTarifa0LiquidacionCompras.Size = New System.Drawing.Size(64, 13)
+            Me.txtTarifa0LiquidacionCompras.Size = New System.Drawing.Size(64, 14)
             Me.txtTarifa0LiquidacionCompras.TabIndex = 7
             Me.txtTarifa0LiquidacionCompras.Text = "0.00"
             Me.txtTarifa0LiquidacionCompras.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -4222,7 +4222,7 @@
             Me.txtTarifa0FacturaCompras.Location = New System.Drawing.Point(427, 45)
             Me.txtTarifa0FacturaCompras.Name = "txtTarifa0FacturaCompras"
             Me.txtTarifa0FacturaCompras.ReadOnly = True
-            Me.txtTarifa0FacturaCompras.Size = New System.Drawing.Size(64, 13)
+            Me.txtTarifa0FacturaCompras.Size = New System.Drawing.Size(64, 14)
             Me.txtTarifa0FacturaCompras.TabIndex = 6
             Me.txtTarifa0FacturaCompras.Text = "0.00"
             Me.txtTarifa0FacturaCompras.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -4234,7 +4234,7 @@
             Me.txtNroRegistrosNotasVentaCompras.Location = New System.Drawing.Point(305, 70)
             Me.txtNroRegistrosNotasVentaCompras.Name = "txtNroRegistrosNotasVentaCompras"
             Me.txtNroRegistrosNotasVentaCompras.ReadOnly = True
-            Me.txtNroRegistrosNotasVentaCompras.Size = New System.Drawing.Size(43, 13)
+            Me.txtNroRegistrosNotasVentaCompras.Size = New System.Drawing.Size(43, 14)
             Me.txtNroRegistrosNotasVentaCompras.TabIndex = 5
             Me.txtNroRegistrosNotasVentaCompras.Text = "0"
             Me.txtNroRegistrosNotasVentaCompras.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -4246,7 +4246,7 @@
             Me.txtNroRegistrosLiquidacionCompras.Location = New System.Drawing.Point(305, 95)
             Me.txtNroRegistrosLiquidacionCompras.Name = "txtNroRegistrosLiquidacionCompras"
             Me.txtNroRegistrosLiquidacionCompras.ReadOnly = True
-            Me.txtNroRegistrosLiquidacionCompras.Size = New System.Drawing.Size(43, 13)
+            Me.txtNroRegistrosLiquidacionCompras.Size = New System.Drawing.Size(43, 14)
             Me.txtNroRegistrosLiquidacionCompras.TabIndex = 4
             Me.txtNroRegistrosLiquidacionCompras.Text = "0"
             Me.txtNroRegistrosLiquidacionCompras.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -4258,7 +4258,7 @@
             Me.txtNroRegistrosFacturasCompras.Location = New System.Drawing.Point(305, 45)
             Me.txtNroRegistrosFacturasCompras.Name = "txtNroRegistrosFacturasCompras"
             Me.txtNroRegistrosFacturasCompras.ReadOnly = True
-            Me.txtNroRegistrosFacturasCompras.Size = New System.Drawing.Size(43, 13)
+            Me.txtNroRegistrosFacturasCompras.Size = New System.Drawing.Size(43, 14)
             Me.txtNroRegistrosFacturasCompras.TabIndex = 3
             Me.txtNroRegistrosFacturasCompras.Text = "0"
             Me.txtNroRegistrosFacturasCompras.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -4268,7 +4268,7 @@
             Me.Label4.AutoSize = True
             Me.Label4.Location = New System.Drawing.Point(2, 70)
             Me.Label4.Name = "Label4"
-            Me.Label4.Size = New System.Drawing.Size(91, 13)
+            Me.Label4.Size = New System.Drawing.Size(98, 13)
             Me.Label4.TabIndex = 2
             Me.Label4.Text = "NOTAS DE VENTA"
             '
@@ -4277,7 +4277,7 @@
             Me.Label3.AutoSize = True
             Me.Label3.Location = New System.Drawing.Point(2, 95)
             Me.Label3.Name = "Label3"
-            Me.Label3.Size = New System.Drawing.Size(289, 13)
+            Me.Label3.Size = New System.Drawing.Size(298, 13)
             Me.Label3.TabIndex = 1
             Me.Label3.Text = "LIQUIDACIÓN DE COMPRAS OPRESTACIÓN DE SERVICIOS"
             '
@@ -4286,17 +4286,17 @@
             Me.Label2.AutoSize = True
             Me.Label2.Location = New System.Drawing.Point(2, 45)
             Me.Label2.Name = "Label2"
-            Me.Label2.Size = New System.Drawing.Size(55, 13)
+            Me.Label2.Size = New System.Drawing.Size(61, 13)
             Me.Label2.TabIndex = 0
             Me.Label2.Text = "FACTURAS"
             '
             'ShapeContainer1
             '
-            Me.ShapeContainer1.Location = New System.Drawing.Point(3, 16)
+            Me.ShapeContainer1.Location = New System.Drawing.Point(3, 17)
             Me.ShapeContainer1.Margin = New System.Windows.Forms.Padding(0)
             Me.ShapeContainer1.Name = "ShapeContainer1"
             Me.ShapeContainer1.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.LineShape51, Me.LineShape10, Me.LineShape9, Me.LineShape8, Me.LineShape7, Me.LineShape6, Me.LineShape5, Me.LineShape4, Me.LineShape3, Me.LineShape2, Me.LineShape1})
-            Me.ShapeContainer1.Size = New System.Drawing.Size(565, 205)
+            Me.ShapeContainer1.Size = New System.Drawing.Size(565, 204)
             Me.ShapeContainer1.TabIndex = 34
             Me.ShapeContainer1.TabStop = False
             '
@@ -4417,7 +4417,7 @@
             Me.Label81.AutoSize = True
             Me.Label81.Location = New System.Drawing.Point(515, 20)
             Me.Label81.Name = "Label81"
-            Me.Label81.Size = New System.Drawing.Size(49, 13)
+            Me.Label81.Size = New System.Drawing.Size(47, 13)
             Me.Label81.TabIndex = 35
             Me.Label81.Text = "Nro Reg"
             '
@@ -4426,7 +4426,7 @@
             Me.Label28.AutoSize = True
             Me.Label28.Location = New System.Drawing.Point(3, 45)
             Me.Label28.Name = "Label28"
-            Me.Label28.Size = New System.Drawing.Size(331, 13)
+            Me.Label28.Size = New System.Drawing.Size(358, 13)
             Me.Label28.TabIndex = 17
             Me.Label28.Text = "TOTAL DE COMPROBANTES ANULADOS EN EL PERIODO INFORMADO"
             '
@@ -4445,11 +4445,11 @@
             '
             'ShapeContainer3
             '
-            Me.ShapeContainer3.Location = New System.Drawing.Point(3, 16)
+            Me.ShapeContainer3.Location = New System.Drawing.Point(3, 17)
             Me.ShapeContainer3.Margin = New System.Windows.Forms.Padding(0)
             Me.ShapeContainer3.Name = "ShapeContainer3"
             Me.ShapeContainer3.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.LineShape54, Me.LineShape53, Me.LineShape18})
-            Me.ShapeContainer3.Size = New System.Drawing.Size(565, 56)
+            Me.ShapeContainer3.Size = New System.Drawing.Size(565, 55)
             Me.ShapeContainer3.TabIndex = 18
             Me.ShapeContainer3.TabStop = False
             '
@@ -4482,41 +4482,41 @@
             '
             'MenuStrip1
             '
-            Me.MenuStrip1.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.MenuStrip1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
             Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnBuscar, Me.btnCargar, Me.btnGenerarXML, Me.btnReporte})
             Me.MenuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow
             Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
             Me.MenuStrip1.Name = "MenuStrip1"
             Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(7, 2, 0, 2)
-            Me.MenuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
-            Me.MenuStrip1.Size = New System.Drawing.Size(1076, 24)
+            Me.MenuStrip1.Size = New System.Drawing.Size(1076, 32)
             Me.MenuStrip1.TabIndex = 187
             Me.MenuStrip1.Text = "msIngresoBodega"
             '
             'btnBuscar
             '
             Me.btnBuscar.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnBuscar.Image = Global.syscisepro.My.Resources.Resources.BuscarRegistro
+            Me.btnBuscar.Image = Global.syscisepro.My.Resources.Resources.search_24dp_FILL0_wght400_GRAD0_opsz24__2_
+            Me.btnBuscar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnBuscar.Name = "btnBuscar"
-            Me.btnBuscar.Size = New System.Drawing.Size(79, 20)
+            Me.btnBuscar.Size = New System.Drawing.Size(87, 28)
             Me.btnBuscar.Text = "BUSCAR"
             '
             'btnCargar
             '
             Me.btnCargar.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnCargar.Image = Global.syscisepro.My.Resources.Resources.cog_error
+            Me.btnCargar.Image = Global.syscisepro.My.Resources.Resources.refresh_24dp_FILL0_wght400_GRAD0_opsz24__2_
             Me.btnCargar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnCargar.Name = "btnCargar"
-            Me.btnCargar.Size = New System.Drawing.Size(81, 20)
+            Me.btnCargar.Size = New System.Drawing.Size(89, 28)
             Me.btnCargar.Text = "CARGAR"
             '
             'btnGenerarXML
             '
             Me.btnGenerarXML.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnGenerarXML.Image = Global.syscisepro.My.Resources.Resources.generate_tables_icon
+            Me.btnGenerarXML.Image = Global.syscisepro.My.Resources.Resources.checkbook_20dp_FILL0_wght400_GRAD0_opsz20__2_
             Me.btnGenerarXML.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnGenerarXML.Name = "btnGenerarXML"
-            Me.btnGenerarXML.Size = New System.Drawing.Size(113, 20)
+            Me.btnGenerarXML.Size = New System.Drawing.Size(121, 28)
             Me.btnGenerarXML.Text = "GENERAR XML"
             '
             'btnReporte
@@ -4538,12 +4538,15 @@
             Me.Controls.Add(Me.MenuStrip1)
             Me.Controls.Add(Me.tcATSSimplificado)
             Me.Controls.Add(Me.gbRangoFechas)
-            Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
             Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
             Me.MaximizeBox = False
             Me.MinimizeBox = False
             Me.Name = "FormAtsSimplificado"
             Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+            Me.StateActive.Border.DrawBorders = CType((((Krypton.Toolkit.PaletteDrawBorders.Top Or Krypton.Toolkit.PaletteDrawBorders.Bottom) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Left) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Right), Krypton.Toolkit.PaletteDrawBorders)
+            Me.StateActive.Border.Rounding = 5.0!
             Me.Text = "ATS SIMPLIFICADO"
             Me.gbRangoFechas.ResumeLayout(False)
             Me.gbRangoFechas.PerformLayout()

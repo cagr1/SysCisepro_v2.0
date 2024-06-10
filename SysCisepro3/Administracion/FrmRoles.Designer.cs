@@ -140,7 +140,7 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvRoles.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvRoles.Location = new System.Drawing.Point(6, 103);
+            this.dgvRoles.Location = new System.Drawing.Point(6, 108);
             this.dgvRoles.MultiSelect = false;
             this.dgvRoles.Name = "dgvRoles";
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -196,7 +196,8 @@
             this.groupBox1.Controls.Add(this.txtDescripcion);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.txtTipoRol);
-            this.groupBox1.Location = new System.Drawing.Point(6, 30);
+            this.groupBox1.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(6, 37);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(722, 67);
             this.groupBox1.TabIndex = 1;
@@ -208,7 +209,7 @@
             this.txtId.Enabled = false;
             this.txtId.Location = new System.Drawing.Point(43, 30);
             this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(100, 20);
+            this.txtId.Size = new System.Drawing.Size(100, 21);
             this.txtId.TabIndex = 7;
             // 
             // label3
@@ -216,7 +217,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(16, 34);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(21, 13);
+            this.label3.Size = new System.Drawing.Size(20, 13);
             this.label3.TabIndex = 6;
             this.label3.Text = "ID:";
             // 
@@ -236,7 +237,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(377, 34);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(80, 13);
+            this.label2.Size = new System.Drawing.Size(77, 13);
             this.label2.TabIndex = 3;
             this.label2.Text = "DESCRIPCION";
             // 
@@ -245,7 +246,7 @@
             this.txtDescripcion.Enabled = false;
             this.txtDescripcion.Location = new System.Drawing.Point(463, 31);
             this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(159, 20);
+            this.txtDescripcion.Size = new System.Drawing.Size(159, 21);
             this.txtDescripcion.TabIndex = 2;
             // 
             // label1
@@ -262,11 +263,12 @@
             this.txtTipoRol.Enabled = false;
             this.txtTipoRol.Location = new System.Drawing.Point(189, 31);
             this.txtTipoRol.Name = "txtTipoRol";
-            this.txtTipoRol.Size = new System.Drawing.Size(161, 20);
+            this.txtTipoRol.Size = new System.Drawing.Size(161, 21);
             this.txtTipoRol.TabIndex = 0;
             // 
             // menuStrip1
             // 
+            this.menuStrip1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.vERTODOSToolStripMenuItem,
             this.nUEVOToolStripMenuItem,
@@ -275,49 +277,54 @@
             this.cANCELARToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(3, 3);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(731, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(731, 32);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // vERTODOSToolStripMenuItem
             // 
-            this.vERTODOSToolStripMenuItem.Image = global::SysCisepro3.Properties.Resources.BuscarRegistro;
+            this.vERTODOSToolStripMenuItem.Image = global::SysCisepro3.Properties.Resources.search_24dp_FILL0_wght400_GRAD0_opsz24__2_;
+            this.vERTODOSToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.vERTODOSToolStripMenuItem.Name = "vERTODOSToolStripMenuItem";
-            this.vERTODOSToolStripMenuItem.Size = new System.Drawing.Size(95, 20);
-            this.vERTODOSToolStripMenuItem.Text = "VER TODOS";
+            this.vERTODOSToolStripMenuItem.Size = new System.Drawing.Size(87, 28);
+            this.vERTODOSToolStripMenuItem.Text = "BUSCAR";
             this.vERTODOSToolStripMenuItem.Click += new System.EventHandler(this.vERTODOSToolStripMenuItem_Click);
             // 
             // nUEVOToolStripMenuItem
             // 
-            this.nUEVOToolStripMenuItem.Image = global::SysCisepro3.Properties.Resources.NuevoRegistro;
+            this.nUEVOToolStripMenuItem.Image = global::SysCisepro3.Properties.Resources.add_circle_24dp_FILL0_wght400_GRAD0_opsz24__3_;
+            this.nUEVOToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.nUEVOToolStripMenuItem.Name = "nUEVOToolStripMenuItem";
-            this.nUEVOToolStripMenuItem.Size = new System.Drawing.Size(74, 20);
+            this.nUEVOToolStripMenuItem.Size = new System.Drawing.Size(82, 28);
             this.nUEVOToolStripMenuItem.Text = "NUEVO";
             this.nUEVOToolStripMenuItem.Click += new System.EventHandler(this.nUEVOToolStripMenuItem_Click);
             // 
             // gUARDARToolStripMenuItem
             // 
             this.gUARDARToolStripMenuItem.Enabled = false;
-            this.gUARDARToolStripMenuItem.Image = global::SysCisepro3.Properties.Resources.GuardarRegistro;
+            this.gUARDARToolStripMenuItem.Image = global::SysCisepro3.Properties.Resources.save_24dp_FILL0_wght400_GRAD0_opsz24__2_;
+            this.gUARDARToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.gUARDARToolStripMenuItem.Name = "gUARDARToolStripMenuItem";
-            this.gUARDARToolStripMenuItem.Size = new System.Drawing.Size(89, 20);
+            this.gUARDARToolStripMenuItem.Size = new System.Drawing.Size(97, 28);
             this.gUARDARToolStripMenuItem.Text = "GUARDAR";
             this.gUARDARToolStripMenuItem.Click += new System.EventHandler(this.gUARDARToolStripMenuItem_Click);
             // 
             // aCTUALIZARToolStripMenuItem
             // 
-            this.aCTUALIZARToolStripMenuItem.Image = global::SysCisepro3.Properties.Resources.refresh;
+            this.aCTUALIZARToolStripMenuItem.Image = global::SysCisepro3.Properties.Resources.refresh_24dp_FILL0_wght400_GRAD0_opsz24__2_;
+            this.aCTUALIZARToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.aCTUALIZARToolStripMenuItem.Name = "aCTUALIZARToolStripMenuItem";
-            this.aCTUALIZARToolStripMenuItem.Size = new System.Drawing.Size(104, 20);
+            this.aCTUALIZARToolStripMenuItem.Size = new System.Drawing.Size(112, 28);
             this.aCTUALIZARToolStripMenuItem.Text = "ACTUALIZAR";
             this.aCTUALIZARToolStripMenuItem.Click += new System.EventHandler(this.aCTUALIZARToolStripMenuItem_Click);
             // 
             // cANCELARToolStripMenuItem
             // 
             this.cANCELARToolStripMenuItem.Enabled = false;
-            this.cANCELARToolStripMenuItem.Image = global::SysCisepro3.Properties.Resources.cancel;
+            this.cANCELARToolStripMenuItem.Image = global::SysCisepro3.Properties.Resources.cancel_24dp_FILL0_wght400_GRAD0_opsz24;
+            this.cANCELARToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.cANCELARToolStripMenuItem.Name = "cANCELARToolStripMenuItem";
-            this.cANCELARToolStripMenuItem.Size = new System.Drawing.Size(95, 20);
+            this.cANCELARToolStripMenuItem.Size = new System.Drawing.Size(103, 28);
             this.cANCELARToolStripMenuItem.Text = "CANCELAR";
             this.cANCELARToolStripMenuItem.Click += new System.EventHandler(this.cANCELARToolStripMenuItem_Click);
             // 
@@ -462,39 +469,43 @@
             // 
             // menuStrip2
             // 
+            this.menuStrip2.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.menuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.gUARDARPERMISOSToolStripMenuItem1,
             this.aCTUALIZARPERMISOSToolStripMenuItem1,
             this.cANCELARPERMISOSToolStripMenuItem1});
             this.menuStrip2.Location = new System.Drawing.Point(3, 3);
             this.menuStrip2.Name = "menuStrip2";
-            this.menuStrip2.Size = new System.Drawing.Size(731, 24);
+            this.menuStrip2.Size = new System.Drawing.Size(731, 32);
             this.menuStrip2.TabIndex = 0;
             this.menuStrip2.Text = "menuStrip2";
             // 
             // gUARDARPERMISOSToolStripMenuItem1
             // 
             this.gUARDARPERMISOSToolStripMenuItem1.Enabled = false;
-            this.gUARDARPERMISOSToolStripMenuItem1.Image = global::SysCisepro3.Properties.Resources.GuardarRegistro;
+            this.gUARDARPERMISOSToolStripMenuItem1.Image = global::SysCisepro3.Properties.Resources.save_24dp_FILL0_wght400_GRAD0_opsz24__2_;
+            this.gUARDARPERMISOSToolStripMenuItem1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.gUARDARPERMISOSToolStripMenuItem1.Name = "gUARDARPERMISOSToolStripMenuItem1";
-            this.gUARDARPERMISOSToolStripMenuItem1.Size = new System.Drawing.Size(92, 20);
+            this.gUARDARPERMISOSToolStripMenuItem1.Size = new System.Drawing.Size(100, 28);
             this.gUARDARPERMISOSToolStripMenuItem1.Text = "GUARDAR ";
             this.gUARDARPERMISOSToolStripMenuItem1.Click += new System.EventHandler(this.gUARDARPERMISOSToolStripMenuItem1_Click);
             // 
             // aCTUALIZARPERMISOSToolStripMenuItem1
             // 
-            this.aCTUALIZARPERMISOSToolStripMenuItem1.Image = global::SysCisepro3.Properties.Resources.refresh;
+            this.aCTUALIZARPERMISOSToolStripMenuItem1.Image = global::SysCisepro3.Properties.Resources.refresh_24dp_FILL0_wght400_GRAD0_opsz24__2_;
+            this.aCTUALIZARPERMISOSToolStripMenuItem1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.aCTUALIZARPERMISOSToolStripMenuItem1.Name = "aCTUALIZARPERMISOSToolStripMenuItem1";
-            this.aCTUALIZARPERMISOSToolStripMenuItem1.Size = new System.Drawing.Size(104, 20);
+            this.aCTUALIZARPERMISOSToolStripMenuItem1.Size = new System.Drawing.Size(112, 28);
             this.aCTUALIZARPERMISOSToolStripMenuItem1.Text = "ACTUALIZAR";
             this.aCTUALIZARPERMISOSToolStripMenuItem1.Click += new System.EventHandler(this.aCTUALIZARPERMISOSToolStripMenuItem1_Click);
             // 
             // cANCELARPERMISOSToolStripMenuItem1
             // 
             this.cANCELARPERMISOSToolStripMenuItem1.Enabled = false;
-            this.cANCELARPERMISOSToolStripMenuItem1.Image = global::SysCisepro3.Properties.Resources.cancel;
+            this.cANCELARPERMISOSToolStripMenuItem1.Image = global::SysCisepro3.Properties.Resources.cancel_24dp_FILL0_wght400_GRAD0_opsz24;
+            this.cANCELARPERMISOSToolStripMenuItem1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.cANCELARPERMISOSToolStripMenuItem1.Name = "cANCELARPERMISOSToolStripMenuItem1";
-            this.cANCELARPERMISOSToolStripMenuItem1.Size = new System.Drawing.Size(95, 20);
+            this.cANCELARPERMISOSToolStripMenuItem1.Size = new System.Drawing.Size(103, 28);
             this.cANCELARPERMISOSToolStripMenuItem1.Text = "CANCELAR";
             this.cANCELARPERMISOSToolStripMenuItem1.Click += new System.EventHandler(this.cANCELARPERMISOSToolStripMenuItem1_Click);
             // 
@@ -517,6 +528,10 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "FrmRoles";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StateActive.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.StateActive.Border.Rounding = 5F;
             this.Text = "ROLES Y PERMISOS";
             this.Load += new System.EventHandler(this.FrmRoles_Load_1);
             this.tabControl1.ResumeLayout(false);

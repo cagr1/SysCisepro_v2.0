@@ -55,19 +55,20 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.PROVEEDORES
                 Case TipoConexion.Asenava
                     Icon = My.Resources.logo_a
                     msKardex.ForeColor = Color.White
-                    msKardex.BackColor = My.MySettingsProperty.Settings.ColorAsenava
+                    'msKardex.BackColor = My.MySettingsProperty.Settings.ColorAsenava
                     dgvProveedoresGeneral.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorAsenava
                 Case TipoConexion.Seportpac
                     Icon = My.Resources.logo_s
                     msKardex.ForeColor = Color.White
-                    msKardex.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
+                    'msKardex.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
                     dgvProveedoresGeneral.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorSeportpac
                 Case Else
                     Icon = My.Resources.logo_c
                     msKardex.ForeColor = Color.White
-                    msKardex.BackColor = My.MySettingsProperty.Settings.ColorCisepro
+                    'msKardex.BackColor = My.MySettingsProperty.Settings.ColorCisepro
                     dgvProveedoresGeneral.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
             End Select
+            dgvProveedoresGeneral.Font = New Font("Roboto", 8, FontStyle.Regular)
             _sqlCommands = New List(Of SqlCommand)
             cbxCiruc.SelectedIndex = 0
             DeshabilitadoInicio()

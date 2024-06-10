@@ -1,8 +1,8 @@
 ﻿Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.PROVEEDORES
     <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
     Partial Class FormBuscarProveedorCalificado
-        Inherits System.Windows.Forms.Form
-
+        'Inherits System.Windows.Forms.Form
+        Inherits Krypton.Toolkit.KryptonForm
         'Form reemplaza a Dispose para limpiar la lista de componentes.
         <System.Diagnostics.DebuggerNonUserCode()> _
         Protected Overrides Sub Dispose(ByVal disposing As Boolean)
@@ -47,12 +47,12 @@
             Me.gbParámetros.Size = New System.Drawing.Size(700, 50)
             Me.gbParámetros.TabIndex = 48
             Me.gbParámetros.TabStop = False
-            Me.gbParámetros.Text = "PARÁMETROS DE BUSQUEDA"
+            Me.gbParámetros.Text = "BUSQUEDA"
             '
             'rb
             '
             Me.rb.AutoSize = True
-            Me.rb.Location = New System.Drawing.Point(99, 20)
+            Me.rb.Location = New System.Drawing.Point(79, 21)
             Me.rb.Name = "rb"
             Me.rb.Size = New System.Drawing.Size(109, 18)
             Me.rb.TabIndex = 39
@@ -63,7 +63,7 @@
             '
             Me.txtBusqueda.BackColor = System.Drawing.Color.White
             Me.txtBusqueda.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-            Me.txtBusqueda.Location = New System.Drawing.Point(214, 19)
+            Me.txtBusqueda.Location = New System.Drawing.Point(193, 19)
             Me.txtBusqueda.Name = "txtBusqueda"
             Me.txtBusqueda.Size = New System.Drawing.Size(480, 22)
             Me.txtBusqueda.TabIndex = 35
@@ -118,6 +118,10 @@
             Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
             Me.Name = "FormBuscarProveedorCalificado"
             Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+            Me.StateActive.Border.DrawBorders = CType((((Krypton.Toolkit.PaletteDrawBorders.Top Or Krypton.Toolkit.PaletteDrawBorders.Bottom) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Left) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Right), Krypton.Toolkit.PaletteDrawBorders)
+            Me.StateActive.Border.Rounding = 5.0!
             Me.Text = "BUSCAR PROVEEDOR CALIFICADO"
             Me.gbParámetros.ResumeLayout(False)
             Me.gbParámetros.PerformLayout()

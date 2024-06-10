@@ -64,7 +64,7 @@
             Me.gbTipoReporte.Controls.Add(Me.dtpDesde)
             Me.gbTipoReporte.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.gbTipoReporte.ForeColor = System.Drawing.Color.Black
-            Me.gbTipoReporte.Location = New System.Drawing.Point(-1, 26)
+            Me.gbTipoReporte.Location = New System.Drawing.Point(-1, 35)
             Me.gbTipoReporte.Name = "gbTipoReporte"
             Me.gbTipoReporte.Size = New System.Drawing.Size(818, 40)
             Me.gbTipoReporte.TabIndex = 50
@@ -160,6 +160,7 @@
             '
             'ChkTodos
             '
+            Me.ChkTodos.BackColor = System.Drawing.Color.FromArgb(CType(CType(187, Byte), Integer), CType(CType(206, Byte), Integer), CType(CType(230, Byte), Integer))
             Me.ChkTodos.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.ChkTodos.Location = New System.Drawing.Point(707, 4)
             Me.ChkTodos.Name = "ChkTodos"
@@ -173,11 +174,11 @@
             Me.txtTotalCuentasPorCobrar.BackColor = System.Drawing.Color.White
             Me.txtTotalCuentasPorCobrar.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtTotalCuentasPorCobrar.Enabled = False
-            Me.txtTotalCuentasPorCobrar.Font = New System.Drawing.Font("Consolas", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtTotalCuentasPorCobrar.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtTotalCuentasPorCobrar.Location = New System.Drawing.Point(717, 489)
             Me.txtTotalCuentasPorCobrar.Name = "txtTotalCuentasPorCobrar"
             Me.txtTotalCuentasPorCobrar.ReadOnly = True
-            Me.txtTotalCuentasPorCobrar.Size = New System.Drawing.Size(95, 23)
+            Me.txtTotalCuentasPorCobrar.Size = New System.Drawing.Size(95, 21)
             Me.txtTotalCuentasPorCobrar.TabIndex = 117
             Me.txtTotalCuentasPorCobrar.Text = "0.00"
             Me.txtTotalCuentasPorCobrar.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -185,9 +186,10 @@
             'Label8
             '
             Me.Label8.AutoSize = True
+            Me.Label8.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Label8.Location = New System.Drawing.Point(630, 493)
             Me.Label8.Name = "Label8"
-            Me.Label8.Size = New System.Drawing.Size(84, 13)
+            Me.Label8.Size = New System.Drawing.Size(83, 13)
             Me.Label8.TabIndex = 118
             Me.Label8.Text = "TOTAL SALDO:"
             '
@@ -210,13 +212,13 @@
             DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
             Me.dgvCuentasPorCobrar.DefaultCellStyle = DataGridViewCellStyle2
             Me.dgvCuentasPorCobrar.GridColor = System.Drawing.SystemColors.ControlLightLight
-            Me.dgvCuentasPorCobrar.Location = New System.Drawing.Point(0, 65)
+            Me.dgvCuentasPorCobrar.Location = New System.Drawing.Point(0, 76)
             Me.dgvCuentasPorCobrar.MultiSelect = False
             Me.dgvCuentasPorCobrar.Name = "dgvCuentasPorCobrar"
             Me.dgvCuentasPorCobrar.ReadOnly = True
             Me.dgvCuentasPorCobrar.RowHeadersVisible = False
             Me.dgvCuentasPorCobrar.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvCuentasPorCobrar.Size = New System.Drawing.Size(816, 422)
+            Me.dgvCuentasPorCobrar.Size = New System.Drawing.Size(816, 407)
             Me.dgvCuentasPorCobrar.TabIndex = 119
             '
             'dgvCliente
@@ -231,39 +233,40 @@
             '
             'MenuStrip1
             '
-            Me.MenuStrip1.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.MenuStrip1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
             Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnCargarSitios, Me.btnExportarSitio, Me.REPORTEASIENTOToolStripMenuItem})
             Me.MenuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow
             Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
             Me.MenuStrip1.Name = "MenuStrip1"
             Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(7, 2, 0, 2)
-            Me.MenuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
-            Me.MenuStrip1.Size = New System.Drawing.Size(817, 24)
+            Me.MenuStrip1.Size = New System.Drawing.Size(817, 32)
             Me.MenuStrip1.TabIndex = 183
             Me.MenuStrip1.Text = "msIngresoBodega"
             '
             'btnCargarSitios
             '
             Me.btnCargarSitios.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnCargarSitios.Image = Global.syscisepro.My.Resources.Resources.BuscarRegistro
+            Me.btnCargarSitios.Image = Global.syscisepro.My.Resources.Resources.search_24dp_FILL0_wght400_GRAD0_opsz24__2_
             Me.btnCargarSitios.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnCargarSitios.Name = "btnCargarSitios"
-            Me.btnCargarSitios.Size = New System.Drawing.Size(119, 20)
-            Me.btnCargarSitios.Text = "BUSCAR TODOS"
+            Me.btnCargarSitios.Size = New System.Drawing.Size(92, 28)
+            Me.btnCargarSitios.Text = "BUSCAR "
             '
             'btnExportarSitio
             '
             Me.btnExportarSitio.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnExportarSitio.Image = CType(resources.GetObject("btnExportarSitio.Image"), System.Drawing.Image)
+            Me.btnExportarSitio.Image = Global.syscisepro.My.Resources.Resources.icons8_excel_48
+            Me.btnExportarSitio.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnExportarSitio.Name = "btnExportarSitio"
-            Me.btnExportarSitio.Size = New System.Drawing.Size(91, 20)
+            Me.btnExportarSitio.Size = New System.Drawing.Size(99, 28)
             Me.btnExportarSitio.Text = "EXPORTAR"
             '
             'REPORTEASIENTOToolStripMenuItem
             '
-            Me.REPORTEASIENTOToolStripMenuItem.Image = Global.syscisepro.My.Resources.Resources.report
+            Me.REPORTEASIENTOToolStripMenuItem.Image = Global.syscisepro.My.Resources.Resources.description_24dp_FILL0_wght400_GRAD0_opsz24__2_
+            Me.REPORTEASIENTOToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.REPORTEASIENTOToolStripMenuItem.Name = "REPORTEASIENTOToolStripMenuItem"
-            Me.REPORTEASIENTOToolStripMenuItem.Size = New System.Drawing.Size(101, 20)
+            Me.REPORTEASIENTOToolStripMenuItem.Size = New System.Drawing.Size(114, 28)
             Me.REPORTEASIENTOToolStripMenuItem.Text = "REPORTE PDF"
             '
             'FrmCuentasCobrarGeneralMin
@@ -283,6 +286,10 @@
             Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
             Me.Name = "FrmCuentasCobrarGeneralMin"
             Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+            Me.StateActive.Border.DrawBorders = CType((((Krypton.Toolkit.PaletteDrawBorders.Top Or Krypton.Toolkit.PaletteDrawBorders.Bottom) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Left) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Right), Krypton.Toolkit.PaletteDrawBorders)
+            Me.StateActive.Border.Rounding = 5.0!
             Me.Text = "RESUMEN GENERAL DE CUENTAS POR COBRAR"
             Me.gbTipoReporte.ResumeLayout(False)
             Me.gbTipoReporte.PerformLayout()

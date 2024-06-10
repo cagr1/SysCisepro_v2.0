@@ -4241,6 +4241,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\logout_24dp_FILL0_wght400_GRAD0_opsz24.png" />
     <None Include="Resources\icons8-excel-48.png" />
     <None Include="Resources\do_not_disturb_on_24dp_FILL0_wght400_GRAD0_opsz24.png" />
     <None Include="Resources\location_on_24dp_FILL0_wght400_GRAD0_opsz24.png" />
@@ -4671,6 +4672,10 @@
     <None Include="Resources\add_24dp_FILL0_wght400_GRAD0_opsz24.png" />
     <None Include="Resources\account_tree_24dp_FILL0_wght400_GRAD0_opsz24.png" />
     <None Include="Resources\check_24dp_FILL0_wght400_GRAD0_opsz24.png" />
+    <None Include="Resources\arrow_back_24dp_FILL0_wght400_GRAD0_opsz24.png" />
+    <None Include="Resources\arrow_forward_24dp_FILL0_wght400_GRAD0_opsz24.png" />
+    <None Include="Resources\chevron_left_24dp_FILL0_wght400_GRAD0_opsz24.png" />
+    <None Include="Resources\chevron_right_24dp_FILL0_wght400_GRAD0_opsz24.png" />
     <Content Include="Resources\combustiblex.jpg" />
   </ItemGroup>
   <ItemGroup>

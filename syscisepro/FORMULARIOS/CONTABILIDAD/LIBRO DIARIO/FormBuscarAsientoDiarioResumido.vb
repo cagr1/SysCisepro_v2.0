@@ -94,7 +94,8 @@ Namespace FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
                     Icon = My.Resources.logo_c
                     dgvAsientoDiario.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
             End Select
-            cargarAsientoLibroDiarioBusqueda()
+            dgvAsientoDiario.Font = New Font("Roboto", 9, FontStyle.Regular)
+            CargarAsientoLibroDiarioBusqueda()
             sumarTotalAsientoDiarioBusqueda()
         End Sub
     End Class

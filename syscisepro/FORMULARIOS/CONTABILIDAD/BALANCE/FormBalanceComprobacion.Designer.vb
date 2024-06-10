@@ -387,6 +387,10 @@
             Me.MinimizeBox = False
             Me.Name = "FormBalanceComprobacion"
             Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+            Me.StateActive.Border.DrawBorders = CType((((Krypton.Toolkit.PaletteDrawBorders.Top Or Krypton.Toolkit.PaletteDrawBorders.Bottom) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Left) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Right), Krypton.Toolkit.PaletteDrawBorders)
+            Me.StateActive.Border.Rounding = 5.0!
             Me.Text = "BALANCE DE COMPROBACIÓN"
             Me.tcAuxiliares.ResumeLayout(False)
             Me.tpActualizar.ResumeLayout(False)

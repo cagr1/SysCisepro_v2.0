@@ -1,8 +1,8 @@
 ﻿Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.ORDEN_DE_COMPRA
     <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
     Partial Class FormReporteOrdenCompra
-        Inherits System.Windows.Forms.Form
-
+        'Inherits System.Windows.Forms.Form
+        Inherits Krypton.Toolkit.KryptonForm
         'Form reemplaza a Dispose para limpiar la lista de componentes.
         <System.Diagnostics.DebuggerNonUserCode()> _
         Protected Overrides Sub Dispose(ByVal disposing As Boolean)
@@ -45,6 +45,7 @@
             'Label2
             '
             Me.Label2.AutoSize = True
+            Me.Label2.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Label2.Location = New System.Drawing.Point(596, 9)
             Me.Label2.Name = "Label2"
             Me.Label2.Size = New System.Drawing.Size(12, 13)
@@ -54,6 +55,7 @@
             'Label1
             '
             Me.Label1.AutoSize = True
+            Me.Label1.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Label1.Location = New System.Drawing.Point(637, 9)
             Me.Label1.Name = "Label1"
             Me.Label1.Size = New System.Drawing.Size(12, 13)
@@ -63,6 +65,7 @@
             'lblIdOrdenCompra
             '
             Me.lblIdOrdenCompra.AutoSize = True
+            Me.lblIdOrdenCompra.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.lblIdOrdenCompra.Location = New System.Drawing.Point(610, 9)
             Me.lblIdOrdenCompra.Name = "lblIdOrdenCompra"
             Me.lblIdOrdenCompra.Size = New System.Drawing.Size(25, 13)
@@ -83,6 +86,10 @@
             Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
             Me.Name = "FormReporteOrdenCompra"
             Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+            Me.StateActive.Border.DrawBorders = CType((((Krypton.Toolkit.PaletteDrawBorders.Top Or Krypton.Toolkit.PaletteDrawBorders.Bottom) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Left) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Right), Krypton.Toolkit.PaletteDrawBorders)
+            Me.StateActive.Border.Rounding = 5.0!
             Me.Text = "REPORTE ORDEN DE COMPRA"
             Me.ResumeLayout(False)
             Me.PerformLayout()

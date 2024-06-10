@@ -1,8 +1,8 @@
 ﻿Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.PROVEEDORES
     <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
     Partial Class FormBuscarEvaluacionProveedor
-        Inherits System.Windows.Forms.Form
-
+        'Inherits System.Windows.Forms.Form
+        Inherits Krypton.Toolkit.KryptonForm
         'Form reemplaza a Dispose para limpiar la lista de componentes.
         <System.Diagnostics.DebuggerNonUserCode()> _
         Protected Overrides Sub Dispose(ByVal disposing As Boolean)
@@ -61,7 +61,7 @@
             Me.dgvEvaluacionProveedor.BackgroundColor = System.Drawing.Color.White
             Me.dgvEvaluacionProveedor.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
             Me.dgvEvaluacionProveedor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-            Me.dgvEvaluacionProveedor.Location = New System.Drawing.Point(2, 88)
+            Me.dgvEvaluacionProveedor.Location = New System.Drawing.Point(2, 97)
             Me.dgvEvaluacionProveedor.MultiSelect = False
             Me.dgvEvaluacionProveedor.Name = "dgvEvaluacionProveedor"
             Me.dgvEvaluacionProveedor.ReadOnly = True
@@ -77,10 +77,10 @@
             Me.gbNombreComercialProveedor.BackColor = System.Drawing.Color.White
             Me.gbNombreComercialProveedor.Controls.Add(Me.txtNombreComercialProveedorGeneral)
             Me.gbNombreComercialProveedor.Controls.Add(Me.lblIdProveedorGeneral)
-            Me.gbNombreComercialProveedor.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.gbNombreComercialProveedor.Location = New System.Drawing.Point(184, 25)
+            Me.gbNombreComercialProveedor.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.gbNombreComercialProveedor.Location = New System.Drawing.Point(190, 34)
             Me.gbNombreComercialProveedor.Name = "gbNombreComercialProveedor"
-            Me.gbNombreComercialProveedor.Size = New System.Drawing.Size(586, 61)
+            Me.gbNombreComercialProveedor.Size = New System.Drawing.Size(580, 61)
             Me.gbNombreComercialProveedor.TabIndex = 106
             Me.gbNombreComercialProveedor.TabStop = False
             Me.gbNombreComercialProveedor.Text = "PROVEEDOR"
@@ -111,8 +111,8 @@
             Me.gbRangoFechas.Controls.Add(Me.Label1)
             Me.gbRangoFechas.Controls.Add(Me.dtpFechaHasta)
             Me.gbRangoFechas.Controls.Add(Me.dtpFechaDesde)
-            Me.gbRangoFechas.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.gbRangoFechas.Location = New System.Drawing.Point(770, 25)
+            Me.gbRangoFechas.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.gbRangoFechas.Location = New System.Drawing.Point(770, 34)
             Me.gbRangoFechas.Name = "gbRangoFechas"
             Me.gbRangoFechas.Size = New System.Drawing.Size(248, 61)
             Me.gbRangoFechas.TabIndex = 109
@@ -124,7 +124,7 @@
             Me.lblIdEvaluacionProveedor.AutoSize = True
             Me.lblIdEvaluacionProveedor.Location = New System.Drawing.Point(211, -1)
             Me.lblIdEvaluacionProveedor.Name = "lblIdEvaluacionProveedor"
-            Me.lblIdEvaluacionProveedor.Size = New System.Drawing.Size(25, 13)
+            Me.lblIdEvaluacionProveedor.Size = New System.Drawing.Size(16, 13)
             Me.lblIdEvaluacionProveedor.TabIndex = 3
             Me.lblIdEvaluacionProveedor.Text = "..."
             '
@@ -142,7 +142,7 @@
             Me.dtpFechaHasta.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
             Me.dtpFechaHasta.Location = New System.Drawing.Point(136, 24)
             Me.dtpFechaHasta.Name = "dtpFechaHasta"
-            Me.dtpFechaHasta.Size = New System.Drawing.Size(103, 20)
+            Me.dtpFechaHasta.Size = New System.Drawing.Size(103, 21)
             Me.dtpFechaHasta.TabIndex = 1
             '
             'dtpFechaDesde
@@ -150,7 +150,7 @@
             Me.dtpFechaDesde.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
             Me.dtpFechaDesde.Location = New System.Drawing.Point(9, 24)
             Me.dtpFechaDesde.Name = "dtpFechaDesde"
-            Me.dtpFechaDesde.Size = New System.Drawing.Size(103, 20)
+            Me.dtpFechaDesde.Size = New System.Drawing.Size(103, 21)
             Me.dtpFechaDesde.TabIndex = 0
             '
             'gbParametrosBusqueda
@@ -160,10 +160,10 @@
             Me.gbParametrosBusqueda.Controls.Add(Me.rbServicios)
             Me.gbParametrosBusqueda.Controls.Add(Me.rbProductos)
             Me.gbParametrosBusqueda.Controls.Add(Me.rbProveedor)
-            Me.gbParametrosBusqueda.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.gbParametrosBusqueda.Location = New System.Drawing.Point(2, 25)
+            Me.gbParametrosBusqueda.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.gbParametrosBusqueda.Location = New System.Drawing.Point(2, 34)
             Me.gbParametrosBusqueda.Name = "gbParametrosBusqueda"
-            Me.gbParametrosBusqueda.Size = New System.Drawing.Size(182, 61)
+            Me.gbParametrosBusqueda.Size = New System.Drawing.Size(190, 61)
             Me.gbParametrosBusqueda.TabIndex = 108
             Me.gbParametrosBusqueda.TabStop = False
             Me.gbParametrosBusqueda.Text = "TIPO BUSQUEDA"
@@ -174,7 +174,7 @@
             Me.rbTodo.Checked = True
             Me.rbTodo.Location = New System.Drawing.Point(101, 37)
             Me.rbTodo.Name = "rbTodo"
-            Me.rbTodo.Size = New System.Drawing.Size(49, 17)
+            Me.rbTodo.Size = New System.Drawing.Size(55, 17)
             Me.rbTodo.TabIndex = 3
             Me.rbTodo.TabStop = True
             Me.rbTodo.Text = "TODO"
@@ -185,7 +185,7 @@
             Me.rbServicios.AutoSize = True
             Me.rbServicios.Location = New System.Drawing.Point(10, 37)
             Me.rbServicios.Name = "rbServicios"
-            Me.rbServicios.Size = New System.Drawing.Size(79, 17)
+            Me.rbServicios.Size = New System.Drawing.Size(80, 17)
             Me.rbServicios.TabIndex = 2
             Me.rbServicios.Text = "SERVICIOS"
             Me.rbServicios.UseVisualStyleBackColor = True
@@ -195,7 +195,7 @@
             Me.rbProductos.AutoSize = True
             Me.rbProductos.Location = New System.Drawing.Point(10, 17)
             Me.rbProductos.Name = "rbProductos"
-            Me.rbProductos.Size = New System.Drawing.Size(85, 17)
+            Me.rbProductos.Size = New System.Drawing.Size(90, 17)
             Me.rbProductos.TabIndex = 1
             Me.rbProductos.Text = "MATERIALES"
             Me.rbProductos.UseVisualStyleBackColor = True
@@ -205,44 +205,47 @@
             Me.rbProveedor.AutoSize = True
             Me.rbProveedor.Location = New System.Drawing.Point(101, 17)
             Me.rbProveedor.Name = "rbProveedor"
-            Me.rbProveedor.Size = New System.Drawing.Size(79, 17)
+            Me.rbProveedor.Size = New System.Drawing.Size(88, 17)
             Me.rbProveedor.TabIndex = 0
             Me.rbProveedor.Text = "PROVEEDOR"
             Me.rbProveedor.UseVisualStyleBackColor = True
             '
             'MenuStrip1
             '
+            Me.MenuStrip1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
             Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnBuscar, Me.btnReporte, Me.btnCancelarProveedorGeneral})
             Me.MenuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow
             Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
             Me.MenuStrip1.Name = "MenuStrip1"
             Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(7, 2, 0, 2)
-            Me.MenuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
-            Me.MenuStrip1.Size = New System.Drawing.Size(1020, 24)
+            Me.MenuStrip1.Size = New System.Drawing.Size(1020, 32)
             Me.MenuStrip1.TabIndex = 191
             Me.MenuStrip1.Text = "msIngresoBodega"
             '
             'btnBuscar
             '
-            Me.btnBuscar.Image = Global.syscisepro.My.Resources.Resources.BuscarRegistro
+            Me.btnBuscar.Image = Global.syscisepro.My.Resources.Resources.search_24dp_FILL0_wght400_GRAD0_opsz24__2_
+            Me.btnBuscar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnBuscar.Name = "btnBuscar"
-            Me.btnBuscar.Size = New System.Drawing.Size(79, 20)
+            Me.btnBuscar.Size = New System.Drawing.Size(87, 28)
             Me.btnBuscar.Text = "BUSCAR"
             '
             'btnReporte
             '
             Me.btnReporte.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnReporte.Image = Global.syscisepro.My.Resources.Resources.report
+            Me.btnReporte.Image = Global.syscisepro.My.Resources.Resources.description_24dp_FILL0_wght400_GRAD0_opsz24__2_
+            Me.btnReporte.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnReporte.Name = "btnReporte"
-            Me.btnReporte.Size = New System.Drawing.Size(82, 20)
+            Me.btnReporte.Size = New System.Drawing.Size(90, 28)
             Me.btnReporte.Text = "REPORTE"
             '
             'btnCancelarProveedorGeneral
             '
             Me.btnCancelarProveedorGeneral.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnCancelarProveedorGeneral.Image = Global.syscisepro.My.Resources.Resources.excel_icon
+            Me.btnCancelarProveedorGeneral.Image = Global.syscisepro.My.Resources.Resources.icons8_excel_48
+            Me.btnCancelarProveedorGeneral.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnCancelarProveedorGeneral.Name = "btnCancelarProveedorGeneral"
-            Me.btnCancelarProveedorGeneral.Size = New System.Drawing.Size(88, 20)
+            Me.btnCancelarProveedorGeneral.Size = New System.Drawing.Size(96, 28)
             Me.btnCancelarProveedorGeneral.Text = "EXPORTAR"
             '
             'FormBuscarEvaluacionProveedor
@@ -250,7 +253,7 @@
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.BackColor = System.Drawing.Color.White
-            Me.ClientSize = New System.Drawing.Size(1020, 620)
+            Me.ClientSize = New System.Drawing.Size(1020, 627)
             Me.Controls.Add(Me.MenuStrip1)
             Me.Controls.Add(Me.dgvEvaluacionProveedor)
             Me.Controls.Add(Me.gbNombreComercialProveedor)
@@ -260,6 +263,10 @@
             Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
             Me.Name = "FormBuscarEvaluacionProveedor"
             Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+            Me.StateActive.Border.DrawBorders = CType((((Krypton.Toolkit.PaletteDrawBorders.Top Or Krypton.Toolkit.PaletteDrawBorders.Bottom) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Left) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Right), Krypton.Toolkit.PaletteDrawBorders)
+            Me.StateActive.Border.Rounding = 5.0!
             Me.Text = "BUSCAR EVALUACION DE PROVEEDOR"
             CType(Me.dgvEvaluacionProveedor, System.ComponentModel.ISupportInitialize).EndInit()
             Me.gbNombreComercialProveedor.ResumeLayout(False)

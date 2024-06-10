@@ -1026,7 +1026,6 @@
             Me.Controls.Add(Me.dgvCompEgresoPagosCompCompra)
             Me.Controls.Add(Me.GroupBox2)
             Me.Controls.Add(Me.gbTotalDebeHaber)
-            Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
             Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
             Me.Name = "FormComprobanteEgresoBanco"
             Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen

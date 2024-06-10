@@ -1,8 +1,8 @@
 ﻿Namespace FORMULARIOS.CONTABILIDAD.MAYORIZACION
     <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
     Partial Class FormSaldosMayores
-        Inherits System.Windows.Forms.Form
-
+        'Inherits System.Windows.Forms.Form
+        Inherits Krypton.Toolkit.KryptonForm
         'Form reemplaza a Dispose para limpiar la lista de componentes.
         <System.Diagnostics.DebuggerNonUserCode()> _
         Protected Overrides Sub Dispose(ByVal disposing As Boolean)
@@ -78,10 +78,10 @@
             'tcSaldos
             '
             Me.tcSaldos.Controls.Add(Me.tpCuentas)
-            Me.tcSaldos.Location = New System.Drawing.Point(-4, 56)
+            Me.tcSaldos.Location = New System.Drawing.Point(-4, 72)
             Me.tcSaldos.Name = "tcSaldos"
             Me.tcSaldos.SelectedIndex = 0
-            Me.tcSaldos.Size = New System.Drawing.Size(1018, 577)
+            Me.tcSaldos.Size = New System.Drawing.Size(1018, 549)
             Me.tcSaldos.SizeMode = System.Windows.Forms.TabSizeMode.FillToRight
             Me.tcSaldos.TabIndex = 0
             '
@@ -92,7 +92,7 @@
             Me.tpCuentas.Location = New System.Drawing.Point(4, 22)
             Me.tpCuentas.Name = "tpCuentas"
             Me.tpCuentas.Padding = New System.Windows.Forms.Padding(3)
-            Me.tpCuentas.Size = New System.Drawing.Size(1010, 551)
+            Me.tpCuentas.Size = New System.Drawing.Size(1010, 523)
             Me.tpCuentas.TabIndex = 0
             Me.tpCuentas.Text = "PLAN DE CUENTAS"
             Me.tpCuentas.UseVisualStyleBackColor = True
@@ -132,7 +132,7 @@
             Me.dgvCuentas.ReadOnly = True
             Me.dgvCuentas.RowHeadersVisible = False
             Me.dgvCuentas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvCuentas.Size = New System.Drawing.Size(1004, 545)
+            Me.dgvCuentas.Size = New System.Drawing.Size(1004, 517)
             Me.dgvCuentas.TabIndex = 194
             '
             'nodo
@@ -160,7 +160,7 @@
             Me.GroupBox1.Controls.Add(Me.lblHasta)
             Me.GroupBox1.Controls.Add(Me.lblDesde)
             Me.GroupBox1.Controls.Add(Me.Label1)
-            Me.GroupBox1.Location = New System.Drawing.Point(3, 21)
+            Me.GroupBox1.Location = New System.Drawing.Point(3, 33)
             Me.GroupBox1.Name = "GroupBox1"
             Me.GroupBox1.Size = New System.Drawing.Size(1003, 37)
             Me.GroupBox1.TabIndex = 1
@@ -250,7 +250,7 @@
             Me.GroupBox2.Controls.Add(Me.Label9)
             Me.GroupBox2.Controls.Add(Me.Label4)
             Me.GroupBox2.Controls.Add(Me.Label22)
-            Me.GroupBox2.Location = New System.Drawing.Point(3, 627)
+            Me.GroupBox2.Location = New System.Drawing.Point(3, 618)
             Me.GroupBox2.Name = "GroupBox2"
             Me.GroupBox2.Size = New System.Drawing.Size(1003, 110)
             Me.GroupBox2.TabIndex = 2
@@ -486,42 +486,42 @@
             '
             'MenuStrip1
             '
-            Me.MenuStrip1.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.MenuStrip1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
             Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnBuscar, Me.btnExportar, Me.btnAsientoInicial})
             Me.MenuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow
             Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
             Me.MenuStrip1.Name = "MenuStrip1"
             Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(7, 2, 0, 2)
-            Me.MenuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
-            Me.MenuStrip1.Size = New System.Drawing.Size(1008, 24)
+            Me.MenuStrip1.Size = New System.Drawing.Size(1008, 32)
             Me.MenuStrip1.TabIndex = 190
             Me.MenuStrip1.Text = "msIngresoBodega"
             '
             'btnBuscar
             '
             Me.btnBuscar.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnBuscar.Image = Global.syscisepro.My.Resources.Resources.BuscarRegistro
+            Me.btnBuscar.Image = Global.syscisepro.My.Resources.Resources.search_24dp_FILL0_wght400_GRAD0_opsz24__2_
+            Me.btnBuscar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnBuscar.Name = "btnBuscar"
-            Me.btnBuscar.Size = New System.Drawing.Size(81, 20)
-            Me.btnBuscar.Text = "CARGAR"
+            Me.btnBuscar.Size = New System.Drawing.Size(87, 28)
+            Me.btnBuscar.Text = "BUSCAR"
             '
             'btnExportar
             '
             Me.btnExportar.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnExportar.Image = Global.syscisepro.My.Resources.Resources.excel_icon
+            Me.btnExportar.Image = Global.syscisepro.My.Resources.Resources.icons8_excel_48
             Me.btnExportar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnExportar.Name = "btnExportar"
-            Me.btnExportar.Size = New System.Drawing.Size(90, 20)
+            Me.btnExportar.Size = New System.Drawing.Size(98, 28)
             Me.btnExportar.Text = "EXPORTAR"
             '
             'btnAsientoInicial
             '
             Me.btnAsientoInicial.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnAsientoInicial.Image = Global.syscisepro.My.Resources.Resources.informe_bullets_icon
+            Me.btnAsientoInicial.Image = Global.syscisepro.My.Resources.Resources.list_24dp__2_
             Me.btnAsientoInicial.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnAsientoInicial.Name = "btnAsientoInicial"
-            Me.btnAsientoInicial.Size = New System.Drawing.Size(135, 20)
-            Me.btnAsientoInicial.Text = "GENERAR ASIENTO"
+            Me.btnAsientoInicial.Size = New System.Drawing.Size(94, 28)
+            Me.btnAsientoInicial.Text = "GENERAR"
             '
             'FormSaldosMayores
             '
@@ -537,6 +537,10 @@
             Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
             Me.Name = "FormSaldosMayores"
             Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+            Me.StateActive.Border.DrawBorders = CType((((Krypton.Toolkit.PaletteDrawBorders.Top Or Krypton.Toolkit.PaletteDrawBorders.Bottom) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Left) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Right), Krypton.Toolkit.PaletteDrawBorders)
+            Me.StateActive.Border.Rounding = 5.0!
             Me.Text = "ESTABLECER ESTADO DE SITUACIÓN INICIAL"
             Me.tcSaldos.ResumeLayout(False)
             Me.tpCuentas.ResumeLayout(False)

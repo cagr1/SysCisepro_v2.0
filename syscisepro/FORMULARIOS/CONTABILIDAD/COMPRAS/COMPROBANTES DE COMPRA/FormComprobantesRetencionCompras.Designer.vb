@@ -1,8 +1,8 @@
 ﻿Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
     <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
     Partial Class FormComprobantesRetencionCompras
-        Inherits System.Windows.Forms.Form
-
+        'Inherits System.Windows.Forms.Form
+        Inherits Krypton.Toolkit.KryptonForm
         'Form reemplaza a Dispose para limpiar la lista de componentes.
         <System.Diagnostics.DebuggerNonUserCode()> _
         Protected Overrides Sub Dispose(ByVal disposing As Boolean)
@@ -25,8 +25,6 @@
         Private Sub InitializeComponent()
             Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
@@ -36,18 +34,9 @@
             Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormComprobantesRetencionCompras))
+            Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim DataGridViewCellStyle13 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle14 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle15 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle16 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle17 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle18 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle19 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle20 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle21 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle22 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle23 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle24 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Me.gbRetencion = New System.Windows.Forms.GroupBox()
             Me.dgvDetalleComprobanteRetencion = New System.Windows.Forms.DataGridView()
             Me.EjercicioFiscal = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -178,7 +167,7 @@
             Me.gbRetencion.Controls.Add(Me.lblNroRetencion)
             Me.gbRetencion.Controls.Add(Me.lblFechaRetencion)
             Me.gbRetencion.Enabled = False
-            Me.gbRetencion.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.gbRetencion.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.gbRetencion.Location = New System.Drawing.Point(0, 457)
             Me.gbRetencion.Name = "gbRetencion"
             Me.gbRetencion.Size = New System.Drawing.Size(710, 230)
@@ -197,31 +186,15 @@
             Me.dgvDetalleComprobanteRetencion.BorderStyle = System.Windows.Forms.BorderStyle.None
             Me.dgvDetalleComprobanteRetencion.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
             DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-            DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle2.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
             Me.dgvDetalleComprobanteRetencion.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
             Me.dgvDetalleComprobanteRetencion.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.EjercicioFiscal, Me.CodigoRetencion, Me.BaseImponible, Me.Impuesto, Me.PorcentajeRetencion, Me.ValorRetenido, Me.Column1, Me.Column2})
-            DataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-            DataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Window
-            DataGridViewCellStyle11.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            DataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.ControlText
-            DataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight
-            DataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-            DataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-            Me.dgvDetalleComprobanteRetencion.DefaultCellStyle = DataGridViewCellStyle11
             Me.dgvDetalleComprobanteRetencion.GridColor = System.Drawing.SystemColors.ControlLight
             Me.dgvDetalleComprobanteRetencion.Location = New System.Drawing.Point(3, 87)
             Me.dgvDetalleComprobanteRetencion.MultiSelect = False
             Me.dgvDetalleComprobanteRetencion.Name = "dgvDetalleComprobanteRetencion"
             Me.dgvDetalleComprobanteRetencion.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-            DataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-            DataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Control
-            DataGridViewCellStyle12.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            DataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText
-            DataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight
-            DataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-            DataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-            Me.dgvDetalleComprobanteRetencion.RowHeadersDefaultCellStyle = DataGridViewCellStyle12
             Me.dgvDetalleComprobanteRetencion.RowHeadersVisible = False
             Me.dgvDetalleComprobanteRetencion.RowTemplate.DefaultCellStyle.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.dgvDetalleComprobanteRetencion.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
@@ -490,7 +463,7 @@
             Me.txtNumAutoSRIComprobanteRetencion.Enabled = False
             Me.txtNumAutoSRIComprobanteRetencion.Location = New System.Drawing.Point(79, 14)
             Me.txtNumAutoSRIComprobanteRetencion.Name = "txtNumAutoSRIComprobanteRetencion"
-            Me.txtNumAutoSRIComprobanteRetencion.Size = New System.Drawing.Size(117, 20)
+            Me.txtNumAutoSRIComprobanteRetencion.Size = New System.Drawing.Size(117, 21)
             Me.txtNumAutoSRIComprobanteRetencion.TabIndex = 85
             Me.txtNumAutoSRIComprobanteRetencion.Text = "1113541356"
             '
@@ -528,7 +501,7 @@
             Me.lblTotalRetencion.AutoSize = True
             Me.lblTotalRetencion.Location = New System.Drawing.Point(503, 204)
             Me.lblTotalRetencion.Name = "lblTotalRetencion"
-            Me.lblTotalRetencion.Size = New System.Drawing.Size(111, 13)
+            Me.lblTotalRetencion.Size = New System.Drawing.Size(108, 13)
             Me.lblTotalRetencion.TabIndex = 44
             Me.lblTotalRetencion.Text = "TOTAL RETENCIÓN:"
             '
@@ -584,8 +557,8 @@
             Me.gbNombreComercialProveedor.Controls.Add(Me.lblRucProveedorGeneral)
             Me.gbNombreComercialProveedor.Controls.Add(Me.txtNombreComercialProveedorGeneral)
             Me.gbNombreComercialProveedor.Controls.Add(Me.lblIdProveedorGeneral)
-            Me.gbNombreComercialProveedor.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.gbNombreComercialProveedor.Location = New System.Drawing.Point(0, 29)
+            Me.gbNombreComercialProveedor.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.gbNombreComercialProveedor.Location = New System.Drawing.Point(0, 34)
             Me.gbNombreComercialProveedor.Name = "gbNombreComercialProveedor"
             Me.gbNombreComercialProveedor.Size = New System.Drawing.Size(710, 42)
             Me.gbNombreComercialProveedor.TabIndex = 94
@@ -626,7 +599,7 @@
             Me.Label9.AutoSize = True
             Me.Label9.Location = New System.Drawing.Point(152, -1)
             Me.Label9.Name = "Label9"
-            Me.Label9.Size = New System.Drawing.Size(33, 13)
+            Me.Label9.Size = New System.Drawing.Size(31, 13)
             Me.Label9.TabIndex = 78
             Me.Label9.Text = "RUC:"
             '
@@ -643,10 +616,10 @@
             '
             Me.txtNombreComercialProveedorGeneral.BackColor = System.Drawing.Color.White
             Me.txtNombreComercialProveedorGeneral.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-            Me.txtNombreComercialProveedorGeneral.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtNombreComercialProveedorGeneral.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtNombreComercialProveedorGeneral.Location = New System.Drawing.Point(9, 16)
             Me.txtNombreComercialProveedorGeneral.Name = "txtNombreComercialProveedorGeneral"
-            Me.txtNombreComercialProveedorGeneral.Size = New System.Drawing.Size(559, 20)
+            Me.txtNombreComercialProveedorGeneral.Size = New System.Drawing.Size(559, 21)
             Me.txtNombreComercialProveedorGeneral.TabIndex = 2
             '
             'lblIdProveedorGeneral
@@ -665,35 +638,11 @@
             Me.dgvComprobanteRetencion.AllowUserToResizeColumns = False
             Me.dgvComprobanteRetencion.AllowUserToResizeRows = False
             Me.dgvComprobanteRetencion.BackgroundColor = System.Drawing.Color.White
-            DataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-            DataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Control
-            DataGridViewCellStyle13.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            DataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.WindowText
-            DataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight
-            DataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-            DataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-            Me.dgvComprobanteRetencion.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle13
             Me.dgvComprobanteRetencion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-            DataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-            DataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Window
-            DataGridViewCellStyle14.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            DataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.ControlText
-            DataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight
-            DataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-            DataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-            Me.dgvComprobanteRetencion.DefaultCellStyle = DataGridViewCellStyle14
             Me.dgvComprobanteRetencion.Location = New System.Drawing.Point(208, 267)
             Me.dgvComprobanteRetencion.MultiSelect = False
             Me.dgvComprobanteRetencion.Name = "dgvComprobanteRetencion"
             Me.dgvComprobanteRetencion.ReadOnly = True
-            DataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-            DataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.Control
-            DataGridViewCellStyle15.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            DataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.WindowText
-            DataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.Highlight
-            DataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-            DataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-            Me.dgvComprobanteRetencion.RowHeadersDefaultCellStyle = DataGridViewCellStyle15
             Me.dgvComprobanteRetencion.RowHeadersVisible = False
             Me.dgvComprobanteRetencion.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
             Me.dgvComprobanteRetencion.Size = New System.Drawing.Size(441, 86)
@@ -710,8 +659,8 @@
             Me.GroupBox1.Controls.Add(Me.dgvComprobanteRetencion)
             Me.GroupBox1.Controls.Add(Me.dgvPagosComprobanteCompra)
             Me.GroupBox1.Controls.Add(Me.dgvAsientoComprobanteCompra)
-            Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.GroupBox1.Location = New System.Drawing.Point(0, 72)
+            Me.GroupBox1.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.GroupBox1.Location = New System.Drawing.Point(0, 76)
             Me.GroupBox1.Name = "GroupBox1"
             Me.GroupBox1.Size = New System.Drawing.Size(710, 290)
             Me.GroupBox1.TabIndex = 96
@@ -750,29 +699,29 @@
             Me.dgvComprobantesCompra.AllowUserToAddRows = False
             Me.dgvComprobantesCompra.AllowUserToDeleteRows = False
             Me.dgvComprobantesCompra.AllowUserToResizeRows = False
-            DataGridViewCellStyle16.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-            Me.dgvComprobantesCompra.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle16
+            DataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+            Me.dgvComprobantesCompra.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle11
             Me.dgvComprobantesCompra.BackgroundColor = System.Drawing.Color.White
             Me.dgvComprobantesCompra.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
             Me.dgvComprobantesCompra.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-            DataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-            DataGridViewCellStyle17.BackColor = System.Drawing.SystemColors.Window
-            DataGridViewCellStyle17.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            DataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.ControlText
-            DataGridViewCellStyle17.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(123, Byte), Integer))
-            DataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-            DataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-            Me.dgvComprobantesCompra.DefaultCellStyle = DataGridViewCellStyle17
+            DataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+            DataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Window
+            DataGridViewCellStyle12.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.ControlText
+            DataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(123, Byte), Integer))
+            DataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+            DataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+            Me.dgvComprobantesCompra.DefaultCellStyle = DataGridViewCellStyle12
             Me.dgvComprobantesCompra.Dock = System.Windows.Forms.DockStyle.Fill
-            Me.dgvComprobantesCompra.Location = New System.Drawing.Point(3, 16)
+            Me.dgvComprobantesCompra.Location = New System.Drawing.Point(3, 17)
             Me.dgvComprobantesCompra.MultiSelect = False
             Me.dgvComprobantesCompra.Name = "dgvComprobantesCompra"
             Me.dgvComprobantesCompra.ReadOnly = True
             Me.dgvComprobantesCompra.RowHeadersVisible = False
-            DataGridViewCellStyle18.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.dgvComprobantesCompra.RowsDefaultCellStyle = DataGridViewCellStyle18
+            DataGridViewCellStyle13.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.dgvComprobantesCompra.RowsDefaultCellStyle = DataGridViewCellStyle13
             Me.dgvComprobantesCompra.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvComprobantesCompra.Size = New System.Drawing.Size(704, 271)
+            Me.dgvComprobantesCompra.Size = New System.Drawing.Size(704, 270)
             Me.dgvComprobantesCompra.TabIndex = 86
             '
             'dgvPagosComprobanteCompra
@@ -782,35 +731,11 @@
             Me.dgvPagosComprobanteCompra.AllowUserToResizeColumns = False
             Me.dgvPagosComprobanteCompra.AllowUserToResizeRows = False
             Me.dgvPagosComprobanteCompra.BackgroundColor = System.Drawing.Color.White
-            DataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-            DataGridViewCellStyle19.BackColor = System.Drawing.SystemColors.Control
-            DataGridViewCellStyle19.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            DataGridViewCellStyle19.ForeColor = System.Drawing.SystemColors.WindowText
-            DataGridViewCellStyle19.SelectionBackColor = System.Drawing.SystemColors.Highlight
-            DataGridViewCellStyle19.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-            DataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-            Me.dgvPagosComprobanteCompra.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle19
             Me.dgvPagosComprobanteCompra.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-            DataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-            DataGridViewCellStyle20.BackColor = System.Drawing.SystemColors.Window
-            DataGridViewCellStyle20.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            DataGridViewCellStyle20.ForeColor = System.Drawing.SystemColors.ControlText
-            DataGridViewCellStyle20.SelectionBackColor = System.Drawing.SystemColors.Highlight
-            DataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-            DataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-            Me.dgvPagosComprobanteCompra.DefaultCellStyle = DataGridViewCellStyle20
             Me.dgvPagosComprobanteCompra.Location = New System.Drawing.Point(206, 19)
             Me.dgvPagosComprobanteCompra.MultiSelect = False
             Me.dgvPagosComprobanteCompra.Name = "dgvPagosComprobanteCompra"
             Me.dgvPagosComprobanteCompra.ReadOnly = True
-            DataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-            DataGridViewCellStyle21.BackColor = System.Drawing.SystemColors.Control
-            DataGridViewCellStyle21.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            DataGridViewCellStyle21.ForeColor = System.Drawing.SystemColors.WindowText
-            DataGridViewCellStyle21.SelectionBackColor = System.Drawing.SystemColors.Highlight
-            DataGridViewCellStyle21.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-            DataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-            Me.dgvPagosComprobanteCompra.RowHeadersDefaultCellStyle = DataGridViewCellStyle21
             Me.dgvPagosComprobanteCompra.RowHeadersVisible = False
             Me.dgvPagosComprobanteCompra.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
             Me.dgvPagosComprobanteCompra.Size = New System.Drawing.Size(441, 86)
@@ -824,35 +749,11 @@
             Me.dgvAsientoComprobanteCompra.AllowUserToResizeColumns = False
             Me.dgvAsientoComprobanteCompra.AllowUserToResizeRows = False
             Me.dgvAsientoComprobanteCompra.BackgroundColor = System.Drawing.Color.White
-            DataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-            DataGridViewCellStyle22.BackColor = System.Drawing.SystemColors.Control
-            DataGridViewCellStyle22.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            DataGridViewCellStyle22.ForeColor = System.Drawing.SystemColors.WindowText
-            DataGridViewCellStyle22.SelectionBackColor = System.Drawing.SystemColors.Highlight
-            DataGridViewCellStyle22.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-            DataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-            Me.dgvAsientoComprobanteCompra.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle22
             Me.dgvAsientoComprobanteCompra.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-            DataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-            DataGridViewCellStyle23.BackColor = System.Drawing.SystemColors.Window
-            DataGridViewCellStyle23.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            DataGridViewCellStyle23.ForeColor = System.Drawing.SystemColors.ControlText
-            DataGridViewCellStyle23.SelectionBackColor = System.Drawing.SystemColors.Highlight
-            DataGridViewCellStyle23.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-            DataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-            Me.dgvAsientoComprobanteCompra.DefaultCellStyle = DataGridViewCellStyle23
             Me.dgvAsientoComprobanteCompra.Location = New System.Drawing.Point(206, 111)
             Me.dgvAsientoComprobanteCompra.MultiSelect = False
             Me.dgvAsientoComprobanteCompra.Name = "dgvAsientoComprobanteCompra"
             Me.dgvAsientoComprobanteCompra.ReadOnly = True
-            DataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-            DataGridViewCellStyle24.BackColor = System.Drawing.SystemColors.Control
-            DataGridViewCellStyle24.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            DataGridViewCellStyle24.ForeColor = System.Drawing.SystemColors.WindowText
-            DataGridViewCellStyle24.SelectionBackColor = System.Drawing.SystemColors.Highlight
-            DataGridViewCellStyle24.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-            DataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-            Me.dgvAsientoComprobanteCompra.RowHeadersDefaultCellStyle = DataGridViewCellStyle24
             Me.dgvAsientoComprobanteCompra.RowHeadersVisible = False
             Me.dgvAsientoComprobanteCompra.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
             Me.dgvAsientoComprobanteCompra.Size = New System.Drawing.Size(441, 147)
@@ -872,7 +773,7 @@
             Me.gbDatosComprobanteCompra.Controls.Add(Me.Label27)
             Me.gbDatosComprobanteCompra.Controls.Add(Me.Label28)
             Me.gbDatosComprobanteCompra.Controls.Add(Me.Label30)
-            Me.gbDatosComprobanteCompra.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.gbDatosComprobanteCompra.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.gbDatosComprobanteCompra.Location = New System.Drawing.Point(0, 364)
             Me.gbDatosComprobanteCompra.Name = "gbDatosComprobanteCompra"
             Me.gbDatosComprobanteCompra.Size = New System.Drawing.Size(208, 90)
@@ -920,7 +821,7 @@
             Me.dtpFechaEmisionComprobanteCompra.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
             Me.dtpFechaEmisionComprobanteCompra.Location = New System.Drawing.Point(64, 49)
             Me.dtpFechaEmisionComprobanteCompra.Name = "dtpFechaEmisionComprobanteCompra"
-            Me.dtpFechaEmisionComprobanteCompra.Size = New System.Drawing.Size(135, 20)
+            Me.dtpFechaEmisionComprobanteCompra.Size = New System.Drawing.Size(135, 21)
             Me.dtpFechaEmisionComprobanteCompra.TabIndex = 26
             '
             'lblTipoComprobanteCompra
@@ -928,7 +829,7 @@
             Me.lblTipoComprobanteCompra.AutoSize = True
             Me.lblTipoComprobanteCompra.Location = New System.Drawing.Point(61, 72)
             Me.lblTipoComprobanteCompra.Name = "lblTipoComprobanteCompra"
-            Me.lblTipoComprobanteCompra.Size = New System.Drawing.Size(25, 13)
+            Me.lblTipoComprobanteCompra.Size = New System.Drawing.Size(16, 13)
             Me.lblTipoComprobanteCompra.TabIndex = 25
             Me.lblTipoComprobanteCompra.Text = "..."
             Me.lblTipoComprobanteCompra.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -938,7 +839,7 @@
             Me.lblFechaComprobanteCompra.AutoSize = True
             Me.lblFechaComprobanteCompra.Location = New System.Drawing.Point(61, 51)
             Me.lblFechaComprobanteCompra.Name = "lblFechaComprobanteCompra"
-            Me.lblFechaComprobanteCompra.Size = New System.Drawing.Size(67, 13)
+            Me.lblFechaComprobanteCompra.Size = New System.Drawing.Size(65, 13)
             Me.lblFechaComprobanteCompra.TabIndex = 23
             Me.lblFechaComprobanteCompra.Text = "00/00/0000"
             Me.lblFechaComprobanteCompra.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -998,7 +899,7 @@
             Me.gbValoresComprobanteCompra.Controls.Add(Me.lblSubtotal12OrdenCompra)
             Me.gbValoresComprobanteCompra.Controls.Add(Me.txtSubtotal12)
             Me.gbValoresComprobanteCompra.Controls.Add(Me.txtSubtotal0)
-            Me.gbValoresComprobanteCompra.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.gbValoresComprobanteCompra.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.gbValoresComprobanteCompra.Location = New System.Drawing.Point(214, 364)
             Me.gbValoresComprobanteCompra.Name = "gbValoresComprobanteCompra"
             Me.gbValoresComprobanteCompra.Size = New System.Drawing.Size(382, 90)
@@ -1012,7 +913,7 @@
             Me.txtTotalComprobanteCompra.Enabled = False
             Me.txtTotalComprobanteCompra.Location = New System.Drawing.Point(289, 64)
             Me.txtTotalComprobanteCompra.Name = "txtTotalComprobanteCompra"
-            Me.txtTotalComprobanteCompra.Size = New System.Drawing.Size(59, 20)
+            Me.txtTotalComprobanteCompra.Size = New System.Drawing.Size(59, 21)
             Me.txtTotalComprobanteCompra.TabIndex = 32
             Me.txtTotalComprobanteCompra.Text = "0.00"
             Me.txtTotalComprobanteCompra.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -1043,7 +944,7 @@
             Me.txtIvaComprobanteCompra.Enabled = False
             Me.txtIvaComprobanteCompra.Location = New System.Drawing.Point(289, 42)
             Me.txtIvaComprobanteCompra.Name = "txtIvaComprobanteCompra"
-            Me.txtIvaComprobanteCompra.Size = New System.Drawing.Size(59, 20)
+            Me.txtIvaComprobanteCompra.Size = New System.Drawing.Size(59, 21)
             Me.txtIvaComprobanteCompra.TabIndex = 31
             Me.txtIvaComprobanteCompra.Text = "0.00"
             Me.txtIvaComprobanteCompra.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -1074,7 +975,7 @@
             Me.txtSubtotalComprobanteCompra.Enabled = False
             Me.txtSubtotalComprobanteCompra.Location = New System.Drawing.Point(289, 19)
             Me.txtSubtotalComprobanteCompra.Name = "txtSubtotalComprobanteCompra"
-            Me.txtSubtotalComprobanteCompra.Size = New System.Drawing.Size(59, 20)
+            Me.txtSubtotalComprobanteCompra.Size = New System.Drawing.Size(59, 21)
             Me.txtSubtotalComprobanteCompra.TabIndex = 30
             Me.txtSubtotalComprobanteCompra.Text = "0.00"
             Me.txtSubtotalComprobanteCompra.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -1095,7 +996,7 @@
             Me.txtDescuento.Enabled = False
             Me.txtDescuento.Location = New System.Drawing.Point(119, 64)
             Me.txtDescuento.Name = "txtDescuento"
-            Me.txtDescuento.Size = New System.Drawing.Size(59, 20)
+            Me.txtDescuento.Size = New System.Drawing.Size(59, 21)
             Me.txtDescuento.TabIndex = 29
             Me.txtDescuento.Text = "0.00"
             Me.txtDescuento.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -1116,7 +1017,7 @@
             Me.txtSubtotal12.Enabled = False
             Me.txtSubtotal12.Location = New System.Drawing.Point(119, 19)
             Me.txtSubtotal12.Name = "txtSubtotal12"
-            Me.txtSubtotal12.Size = New System.Drawing.Size(59, 20)
+            Me.txtSubtotal12.Size = New System.Drawing.Size(59, 21)
             Me.txtSubtotal12.TabIndex = 27
             Me.txtSubtotal12.Text = "0.00"
             Me.txtSubtotal12.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -1127,7 +1028,7 @@
             Me.txtSubtotal0.Enabled = False
             Me.txtSubtotal0.Location = New System.Drawing.Point(119, 42)
             Me.txtSubtotal0.Name = "txtSubtotal0"
-            Me.txtSubtotal0.Size = New System.Drawing.Size(59, 20)
+            Me.txtSubtotal0.Size = New System.Drawing.Size(59, 21)
             Me.txtSubtotal0.TabIndex = 28
             Me.txtSubtotal0.Text = "0.00"
             Me.txtSubtotal0.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -1154,47 +1055,51 @@
             '
             'MenuStrip1
             '
+            Me.MenuStrip1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
             Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnNuevo, Me.btnGuardar, Me.btnCancelar, Me.btnGenerarXML})
             Me.MenuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow
             Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
             Me.MenuStrip1.Name = "MenuStrip1"
             Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(7, 2, 0, 2)
-            Me.MenuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
-            Me.MenuStrip1.Size = New System.Drawing.Size(710, 24)
+            Me.MenuStrip1.Size = New System.Drawing.Size(710, 32)
             Me.MenuStrip1.TabIndex = 188
             Me.MenuStrip1.Text = "msIngresoBodega"
             '
             'btnNuevo
             '
-            Me.btnNuevo.Image = Global.syscisepro.My.Resources.Resources.NuevoRegistro
+            Me.btnNuevo.Image = Global.syscisepro.My.Resources.Resources.add_circle_24dp_FILL0_wght400_GRAD0_opsz24__3_
+            Me.btnNuevo.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnNuevo.Name = "btnNuevo"
-            Me.btnNuevo.Size = New System.Drawing.Size(74, 20)
+            Me.btnNuevo.Size = New System.Drawing.Size(82, 28)
             Me.btnNuevo.Text = "NUEVO"
             '
             'btnGuardar
             '
             Me.btnGuardar.Enabled = False
             Me.btnGuardar.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnGuardar.Image = Global.syscisepro.My.Resources.Resources.GuardarRegistro
+            Me.btnGuardar.Image = Global.syscisepro.My.Resources.Resources.save_24dp_FILL0_wght400_GRAD0_opsz24__2_
+            Me.btnGuardar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnGuardar.Name = "btnGuardar"
-            Me.btnGuardar.Size = New System.Drawing.Size(87, 20)
+            Me.btnGuardar.Size = New System.Drawing.Size(95, 28)
             Me.btnGuardar.Text = "GUARDAR"
             '
             'btnCancelar
             '
             Me.btnCancelar.Enabled = False
             Me.btnCancelar.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnCancelar.Image = Global.syscisepro.My.Resources.Resources.cancel
+            Me.btnCancelar.Image = Global.syscisepro.My.Resources.Resources.cancel_24dp_FILL0_wght400_GRAD0_opsz24
+            Me.btnCancelar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnCancelar.Name = "btnCancelar"
-            Me.btnCancelar.Size = New System.Drawing.Size(89, 20)
+            Me.btnCancelar.Size = New System.Drawing.Size(97, 28)
             Me.btnCancelar.Text = "CANCELAR"
             '
             'btnGenerarXML
             '
             Me.btnGenerarXML.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnGenerarXML.Image = Global.syscisepro.My.Resources.Resources.generate_tables_icon
+            Me.btnGenerarXML.Image = Global.syscisepro.My.Resources.Resources.checkbook_20dp_FILL0_wght400_GRAD0_opsz20__2_
+            Me.btnGenerarXML.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnGenerarXML.Name = "btnGenerarXML"
-            Me.btnGenerarXML.Size = New System.Drawing.Size(108, 20)
+            Me.btnGenerarXML.Size = New System.Drawing.Size(116, 28)
             Me.btnGenerarXML.Text = "GENERAR XML"
             '
             'gbParametrosBusqueda
@@ -1205,7 +1110,7 @@
             Me.gbParametrosBusqueda.Controls.Add(Me.rbFondoRotativo)
             Me.gbParametrosBusqueda.Controls.Add(Me.lblEstadoDetalleComprabanteRetencionCompra)
             Me.gbParametrosBusqueda.Controls.Add(Me.lblIdDetalleComprobanteRetencionCompra)
-            Me.gbParametrosBusqueda.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.gbParametrosBusqueda.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.gbParametrosBusqueda.Location = New System.Drawing.Point(602, 364)
             Me.gbParametrosBusqueda.Name = "gbParametrosBusqueda"
             Me.gbParametrosBusqueda.Size = New System.Drawing.Size(107, 90)
@@ -1220,7 +1125,7 @@
             Me.rbCompras.Enabled = False
             Me.rbCompras.Location = New System.Drawing.Point(15, 59)
             Me.rbCompras.Name = "rbCompras"
-            Me.rbCompras.Size = New System.Drawing.Size(67, 17)
+            Me.rbCompras.Size = New System.Drawing.Size(78, 17)
             Me.rbCompras.TabIndex = 2
             Me.rbCompras.TabStop = True
             Me.rbCompras.Text = "COMPRAS"
@@ -1232,7 +1137,7 @@
             Me.rbCajaChica.Enabled = False
             Me.rbCajaChica.Location = New System.Drawing.Point(15, 42)
             Me.rbCajaChica.Name = "rbCajaChica"
-            Me.rbCajaChica.Size = New System.Drawing.Size(49, 17)
+            Me.rbCajaChica.Size = New System.Drawing.Size(52, 17)
             Me.rbCajaChica.TabIndex = 1
             Me.rbCajaChica.TabStop = True
             Me.rbCajaChica.Text = "CAJA"
@@ -1244,7 +1149,7 @@
             Me.rbFondoRotativo.Enabled = False
             Me.rbFondoRotativo.Location = New System.Drawing.Point(15, 24)
             Me.rbFondoRotativo.Name = "rbFondoRotativo"
-            Me.rbFondoRotativo.Size = New System.Drawing.Size(55, 17)
+            Me.rbFondoRotativo.Size = New System.Drawing.Size(62, 17)
             Me.rbFondoRotativo.TabIndex = 0
             Me.rbFondoRotativo.TabStop = True
             Me.rbFondoRotativo.Text = "FONDO"
@@ -1263,12 +1168,15 @@
             Me.Controls.Add(Me.GroupBox1)
             Me.Controls.Add(Me.gbValoresComprobanteCompra)
             Me.Controls.Add(Me.gbNombreComercialProveedor)
-            Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
             Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
             Me.MaximizeBox = False
             Me.MinimizeBox = False
             Me.Name = "FormComprobantesRetencionCompras"
             Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+            Me.StateActive.Border.DrawBorders = CType((((Krypton.Toolkit.PaletteDrawBorders.Top Or Krypton.Toolkit.PaletteDrawBorders.Bottom) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Left) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Right), Krypton.Toolkit.PaletteDrawBorders)
+            Me.StateActive.Border.Rounding = 5.0!
             Me.Text = "AJUSTAR COMPROBANTES DE RETENCIÓN COMPRAS"
             Me.gbRetencion.ResumeLayout(False)
             Me.gbRetencion.PerformLayout()

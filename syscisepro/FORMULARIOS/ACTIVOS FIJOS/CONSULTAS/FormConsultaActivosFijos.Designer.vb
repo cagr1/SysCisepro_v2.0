@@ -45,7 +45,7 @@
             Me.Label5 = New System.Windows.Forms.Label()
             Me.txtCustodio = New System.Windows.Forms.TextBox()
             Me.txtActivo = New System.Windows.Forms.TextBox()
-            Me.KryptonButton1 = New ComponentFactory.Krypton.Toolkit.KryptonButton()
+            Me.btnBuscar = New ComponentFactory.Krypton.Toolkit.KryptonButton()
             Me.txtBuscar = New System.Windows.Forms.TextBox()
             Me.chbxCategoria = New ComponentFactory.Krypton.Toolkit.KryptonCheckBox()
             Me.cbxActivo = New ComponentFactory.Krypton.Toolkit.KryptonComboBox()
@@ -261,28 +261,28 @@
             Me.txtActivo.TabIndex = 245
             Me.txtActivo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
             '
-            'KryptonButton1
+            'btnBuscar
             '
-            Me.KryptonButton1.AutoSize = True
-            Me.KryptonButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-            Me.KryptonButton1.Location = New System.Drawing.Point(220, 36)
-            Me.KryptonButton1.Name = "KryptonButton1"
-            Me.KryptonButton1.Size = New System.Drawing.Size(32, 32)
-            Me.KryptonButton1.StateCommon.Back.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.[False]
-            Me.KryptonButton1.StateCommon.Border.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.[False]
-            Me.KryptonButton1.StateCommon.Border.DrawBorders = CType((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top Or ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) _
+            Me.btnBuscar.AutoSize = True
+            Me.btnBuscar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+            Me.btnBuscar.Location = New System.Drawing.Point(220, 36)
+            Me.btnBuscar.Name = "btnBuscar"
+            Me.btnBuscar.Size = New System.Drawing.Size(32, 32)
+            Me.btnBuscar.StateCommon.Back.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.[False]
+            Me.btnBuscar.StateCommon.Border.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.[False]
+            Me.btnBuscar.StateCommon.Border.DrawBorders = CType((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top Or ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) _
             Or ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) _
             Or ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right), ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)
-            Me.KryptonButton1.StateCommon.Content.Padding = New System.Windows.Forms.Padding(2)
-            Me.KryptonButton1.TabIndex = 247
-            Me.KryptonButton1.Values.ImageStates.ImageCheckedNormal = Nothing
-            Me.KryptonButton1.Values.ImageStates.ImageCheckedPressed = Nothing
-            Me.KryptonButton1.Values.ImageStates.ImageCheckedTracking = Nothing
-            Me.KryptonButton1.Values.ImageStates.ImageDisabled = Global.syscisepro.My.Resources.Resources.search_24dp_FILL0_wght400_GRAD0_opsz24__2_
-            Me.KryptonButton1.Values.ImageStates.ImageNormal = Global.syscisepro.My.Resources.Resources.search_24dp_FILL0_wght400_GRAD0_opsz24__2_
-            Me.KryptonButton1.Values.ImageStates.ImagePressed = Global.syscisepro.My.Resources.Resources.search_24dp_FILL0_wght400_GRAD0_opsz40
-            Me.KryptonButton1.Values.ImageStates.ImageTracking = Global.syscisepro.My.Resources.Resources.search_24dp_FILL0_wght400_GRAD0_opsz40
-            Me.KryptonButton1.Values.Text = ""
+            Me.btnBuscar.StateCommon.Content.Padding = New System.Windows.Forms.Padding(2)
+            Me.btnBuscar.TabIndex = 247
+            Me.btnBuscar.Values.ImageStates.ImageCheckedNormal = Nothing
+            Me.btnBuscar.Values.ImageStates.ImageCheckedPressed = Nothing
+            Me.btnBuscar.Values.ImageStates.ImageCheckedTracking = Nothing
+            Me.btnBuscar.Values.ImageStates.ImageDisabled = Global.syscisepro.My.Resources.Resources.search_24dp_FILL0_wght400_GRAD0_opsz24__2_
+            Me.btnBuscar.Values.ImageStates.ImageNormal = Global.syscisepro.My.Resources.Resources.search_24dp_FILL0_wght400_GRAD0_opsz24__2_
+            Me.btnBuscar.Values.ImageStates.ImagePressed = Global.syscisepro.My.Resources.Resources.search_24dp_FILL0_wght400_GRAD0_opsz40
+            Me.btnBuscar.Values.ImageStates.ImageTracking = Global.syscisepro.My.Resources.Resources.search_24dp_FILL0_wght400_GRAD0_opsz40
+            Me.btnBuscar.Values.Text = ""
             '
             'txtBuscar
             '
@@ -326,7 +326,7 @@
             Me.Controls.Add(Me.cbxActivo)
             Me.Controls.Add(Me.chbxCategoria)
             Me.Controls.Add(Me.txtBuscar)
-            Me.Controls.Add(Me.KryptonButton1)
+            Me.Controls.Add(Me.btnBuscar)
             Me.Controls.Add(Me.txtActivo)
             Me.Controls.Add(Me.txtCustodio)
             Me.Controls.Add(Me.Label5)
@@ -372,7 +372,7 @@
         Friend WithEvents Label5 As System.Windows.Forms.Label
         Friend WithEvents txtCustodio As System.Windows.Forms.TextBox
         Friend WithEvents txtActivo As System.Windows.Forms.TextBox
-        Friend WithEvents KryptonButton1 As ComponentFactory.Krypton.Toolkit.KryptonButton
+        Friend WithEvents btnBuscar As ComponentFactory.Krypton.Toolkit.KryptonButton
         Friend WithEvents txtBuscar As System.Windows.Forms.TextBox
         Friend WithEvents chbxCategoria As ComponentFactory.Krypton.Toolkit.KryptonCheckBox
         Friend WithEvents cbxActivo As ComponentFactory.Krypton.Toolkit.KryptonComboBox

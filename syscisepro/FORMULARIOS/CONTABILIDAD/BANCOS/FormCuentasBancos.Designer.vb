@@ -310,7 +310,6 @@
             Me.Controls.Add(Me.dgvCuentasBancos)
             Me.Controls.Add(Me.Panel1)
             Me.Controls.Add(Me.gbCuentaBancos)
-            Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
             Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
             Me.Name = "FormCuentasBancos"
             Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen

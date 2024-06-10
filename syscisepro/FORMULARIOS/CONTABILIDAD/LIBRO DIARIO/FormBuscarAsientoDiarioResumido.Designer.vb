@@ -1,8 +1,8 @@
 ﻿Namespace FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
     <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
     Partial Class FormBuscarAsientoDiarioResumido
-        Inherits System.Windows.Forms.Form
-
+        'Inherits System.Windows.Forms.Form
+        Inherits Krypton.Toolkit.KryptonForm
         'Form reemplaza a Dispose para limpiar la lista de componentes.
         <System.Diagnostics.DebuggerNonUserCode()> _
         Protected Overrides Sub Dispose(ByVal disposing As Boolean)
@@ -54,10 +54,10 @@
             'txtTotalHaber
             '
             Me.txtTotalHaber.Enabled = False
-            Me.txtTotalHaber.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtTotalHaber.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtTotalHaber.Location = New System.Drawing.Point(780, 10)
             Me.txtTotalHaber.Name = "txtTotalHaber"
-            Me.txtTotalHaber.Size = New System.Drawing.Size(88, 22)
+            Me.txtTotalHaber.Size = New System.Drawing.Size(88, 21)
             Me.txtTotalHaber.TabIndex = 35
             Me.txtTotalHaber.Text = "0.00"
             Me.txtTotalHaber.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -65,10 +65,10 @@
             'txtTotalDebe
             '
             Me.txtTotalDebe.Enabled = False
-            Me.txtTotalDebe.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtTotalDebe.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtTotalDebe.Location = New System.Drawing.Point(683, 10)
             Me.txtTotalDebe.Name = "txtTotalDebe"
-            Me.txtTotalDebe.Size = New System.Drawing.Size(88, 22)
+            Me.txtTotalDebe.Size = New System.Drawing.Size(88, 21)
             Me.txtTotalDebe.TabIndex = 36
             Me.txtTotalDebe.Text = "0.00"
             Me.txtTotalDebe.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -76,9 +76,10 @@
             'lblTotal
             '
             Me.lblTotal.AutoSize = True
+            Me.lblTotal.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.lblTotal.Location = New System.Drawing.Point(628, 14)
             Me.lblTotal.Name = "lblTotal"
-            Me.lblTotal.Size = New System.Drawing.Size(49, 13)
+            Me.lblTotal.Size = New System.Drawing.Size(48, 13)
             Me.lblTotal.TabIndex = 34
             Me.lblTotal.Text = "TOTAL :"
             '
@@ -87,7 +88,7 @@
             Me.gbAsientoDiario.BackColor = System.Drawing.Color.White
             Me.gbAsientoDiario.Controls.Add(Me.lblNumeroRegistro)
             Me.gbAsientoDiario.Controls.Add(Me.dgvAsientoDiario)
-            Me.gbAsientoDiario.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.gbAsientoDiario.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.gbAsientoDiario.Location = New System.Drawing.Point(3, 3)
             Me.gbAsientoDiario.Name = "gbAsientoDiario"
             Me.gbAsientoDiario.Size = New System.Drawing.Size(877, 256)
@@ -116,20 +117,20 @@
             Me.dgvAsientoDiario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
             DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
             DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
-            DataGridViewCellStyle2.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle2.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
             DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(123, Byte), Integer))
             DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
             DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
             Me.dgvAsientoDiario.DefaultCellStyle = DataGridViewCellStyle2
             Me.dgvAsientoDiario.Dock = System.Windows.Forms.DockStyle.Fill
-            Me.dgvAsientoDiario.Location = New System.Drawing.Point(3, 16)
+            Me.dgvAsientoDiario.Location = New System.Drawing.Point(3, 17)
             Me.dgvAsientoDiario.MultiSelect = False
             Me.dgvAsientoDiario.Name = "dgvAsientoDiario"
             Me.dgvAsientoDiario.ReadOnly = True
             Me.dgvAsientoDiario.RowHeadersVisible = False
             Me.dgvAsientoDiario.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvAsientoDiario.Size = New System.Drawing.Size(871, 237)
+            Me.dgvAsientoDiario.Size = New System.Drawing.Size(871, 236)
             Me.dgvAsientoDiario.TabIndex = 0
             '
             'FormBuscarAsientoDiarioResumido
@@ -140,10 +141,13 @@
             Me.ClientSize = New System.Drawing.Size(883, 298)
             Me.Controls.Add(Me.gbTotalDebeTotalHaber)
             Me.Controls.Add(Me.gbAsientoDiario)
-            Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
             Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
             Me.Name = "FormBuscarAsientoDiarioResumido"
             Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+            Me.StateActive.Border.DrawBorders = CType((((Krypton.Toolkit.PaletteDrawBorders.Top Or Krypton.Toolkit.PaletteDrawBorders.Bottom) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Left) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Right), Krypton.Toolkit.PaletteDrawBorders)
+            Me.StateActive.Border.Rounding = 5.0!
             Me.Text = "ASIENTO DIARIO"
             Me.gbTotalDebeTotalHaber.ResumeLayout(False)
             Me.gbTotalDebeTotalHaber.PerformLayout()

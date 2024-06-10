@@ -56,7 +56,7 @@
             Me.GroupBox1.BackColor = System.Drawing.Color.White
             Me.GroupBox1.Controls.Add(Me.lblCodigoCta)
             Me.GroupBox1.Controls.Add(Me.txtCuentaDebe)
-            Me.GroupBox1.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.GroupBox1.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.GroupBox1.Location = New System.Drawing.Point(362, 36)
             Me.GroupBox1.Name = "GroupBox1"
             Me.GroupBox1.Size = New System.Drawing.Size(331, 62)
@@ -77,7 +77,7 @@
             '
             Me.txtCuentaDebe.Location = New System.Drawing.Point(11, 30)
             Me.txtCuentaDebe.Name = "txtCuentaDebe"
-            Me.txtCuentaDebe.Size = New System.Drawing.Size(309, 20)
+            Me.txtCuentaDebe.Size = New System.Drawing.Size(309, 21)
             Me.txtCuentaDebe.TabIndex = 58
             '
             'dgvComprobantesEgresoBanco
@@ -111,7 +111,7 @@
             Me.gbBuscar.BackColor = System.Drawing.Color.White
             Me.gbBuscar.Controls.Add(Me.btnBuscarPersonal)
             Me.gbBuscar.Controls.Add(Me.txtRutaArchivo)
-            Me.gbBuscar.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.gbBuscar.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.gbBuscar.Location = New System.Drawing.Point(2, 36)
             Me.gbBuscar.Name = "gbBuscar"
             Me.gbBuscar.Size = New System.Drawing.Size(360, 62)
@@ -134,7 +134,7 @@
             '
             Me.txtRutaArchivo.Location = New System.Drawing.Point(6, 30)
             Me.txtRutaArchivo.Name = "txtRutaArchivo"
-            Me.txtRutaArchivo.Size = New System.Drawing.Size(299, 20)
+            Me.txtRutaArchivo.Size = New System.Drawing.Size(299, 21)
             Me.txtRutaArchivo.TabIndex = 59
             '
             'ofdSeleccionarArchivo
@@ -147,7 +147,7 @@
             Me.gbBanco.Controls.Add(Me.Label10)
             Me.gbBanco.Controls.Add(Me.cmbCuentaBancos)
             Me.gbBanco.Controls.Add(Me.cmbBancos)
-            Me.gbBanco.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.gbBanco.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.gbBanco.Location = New System.Drawing.Point(693, 36)
             Me.gbBanco.Name = "gbBanco"
             Me.gbBanco.Size = New System.Drawing.Size(563, 62)
@@ -160,7 +160,7 @@
             Me.Label10.AutoSize = True
             Me.Label10.Location = New System.Drawing.Point(233, 0)
             Me.Label10.Name = "Label10"
-            Me.Label10.Size = New System.Drawing.Size(61, 13)
+            Me.Label10.Size = New System.Drawing.Size(62, 13)
             Me.Label10.TabIndex = 34
             Me.Label10.Text = "CA/CC/TA:"
             '
@@ -232,7 +232,6 @@
             Me.Controls.Add(Me.gbBuscar)
             Me.Controls.Add(Me.dgvComprobantesEgresoBanco)
             Me.Controls.Add(Me.GroupBox1)
-            Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
             Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
             Me.Name = "FormCargarComprobantesEgresoBanco"
             Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen

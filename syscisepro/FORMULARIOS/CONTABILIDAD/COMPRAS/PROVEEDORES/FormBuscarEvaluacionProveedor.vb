@@ -161,6 +161,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.PROVEEDORES
                     MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorCisepro
                     dgvEvaluacionProveedor.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
             End Select
+            dgvEvaluacionProveedor.Font = New Font("Roboto", 8, FontStyle.Regular)
             autocompletarNombreProveedor()
             gbNombreComercialProveedor.Enabled = False
         End Sub

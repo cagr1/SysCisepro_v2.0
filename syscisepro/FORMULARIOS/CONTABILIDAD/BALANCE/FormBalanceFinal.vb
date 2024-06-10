@@ -47,15 +47,15 @@ Namespace FORMULARIOS.CONTABILIDAD.BALANCE
                 Case TipoConexion.Seportpac
                     Icon = My.Resources.logo_s
                     MenuStrip1.ForeColor = Color.White
-                    MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorSeportpac 
+                    'MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorSeportpac 
                     dgvMayores.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorSeportpac
                 Case Else
                     Icon = My.Resources.logo_c
                     MenuStrip1.ForeColor = Color.White
-                    MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorCisepro 
+                    'MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorCisepro 
                     dgvMayores.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
             End Select
-
+            dgvMayores.Font = New Font("Roboto", 8, FontStyle.Regular)
             dgvMayores.ContextMenuStrip = Me.ContextMenuStripClicDerecho
             cbNivel.SelectedIndex = 0
         End Sub

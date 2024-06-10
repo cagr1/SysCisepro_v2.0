@@ -524,7 +524,6 @@
             Me.Controls.Add(Me.gbFechaCobroCheque)
             Me.Controls.Add(Me.gbRangoFechaBusqueda)
             Me.Controls.Add(Me.gpComandos)
-            Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
             Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
             Me.Name = "FormRevisionChequesEmitidos"
             Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen

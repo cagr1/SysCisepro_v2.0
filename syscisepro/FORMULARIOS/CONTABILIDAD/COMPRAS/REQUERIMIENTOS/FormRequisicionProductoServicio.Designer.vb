@@ -1,8 +1,8 @@
 ﻿Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.REQUERIMIENTOS
     <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
     Partial Class FormRequisicionProductoServicio
-        Inherits System.Windows.Forms.Form
-
+        'Inherits System.Windows.Forms.Form
+        Inherits Krypton.Toolkit.KryptonForm
         'Form reemplaza a Dispose para limpiar la lista de componentes.
         <System.Diagnostics.DebuggerNonUserCode()> _
         Protected Overrides Sub Dispose(ByVal disposing As Boolean)
@@ -23,9 +23,9 @@
         'No lo modifique con el editor de código.
         <System.Diagnostics.DebuggerStepThrough()> _
         Private Sub InitializeComponent()
-            Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormRequisicionProductoServicio))
             Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormRequisicionProductoServicio))
             Me.gbCabecera = New System.Windows.Forms.GroupBox()
             Me.txtIdRequisicionProductoServicio = New System.Windows.Forms.TextBox()
             Me.btnBuscarPersonal = New System.Windows.Forms.Button()
@@ -76,6 +76,7 @@
             Me.gbCabecera.Controls.Add(Me.lblRealizadoPor)
             Me.gbCabecera.Controls.Add(Me.lblPlazoEntrega)
             Me.gbCabecera.Controls.Add(Me.lblDias)
+            Me.gbCabecera.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.gbCabecera.Location = New System.Drawing.Point(2, 26)
             Me.gbCabecera.Name = "gbCabecera"
             Me.gbCabecera.Size = New System.Drawing.Size(761, 80)
@@ -88,13 +89,13 @@
             Me.txtIdRequisicionProductoServicio.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtIdRequisicionProductoServicio.Location = New System.Drawing.Point(28, 13)
             Me.txtIdRequisicionProductoServicio.Name = "txtIdRequisicionProductoServicio"
-            Me.txtIdRequisicionProductoServicio.Size = New System.Drawing.Size(42, 22)
+            Me.txtIdRequisicionProductoServicio.Size = New System.Drawing.Size(42, 21)
             Me.txtIdRequisicionProductoServicio.TabIndex = 13
             '
             'btnBuscarPersonal
             '
             Me.btnBuscarPersonal.BackColor = System.Drawing.Color.White
-            Me.btnBuscarPersonal.Image = CType(resources.GetObject("btnBuscarPersonal.Image"), System.Drawing.Image)
+            Me.btnBuscarPersonal.Image = Global.syscisepro.My.Resources.Resources.search_24dp_FILL0_wght400_GRAD0_opsz24__2_
             Me.btnBuscarPersonal.Location = New System.Drawing.Point(730, 10)
             Me.btnBuscarPersonal.Name = "btnBuscarPersonal"
             Me.btnBuscarPersonal.Size = New System.Drawing.Size(26, 26)
@@ -108,7 +109,7 @@
             Me.txtEntregaNumeroDias.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtEntregaNumeroDias.Location = New System.Drawing.Point(424, 49)
             Me.txtEntregaNumeroDias.Name = "txtEntregaNumeroDias"
-            Me.txtEntregaNumeroDias.Size = New System.Drawing.Size(32, 22)
+            Me.txtEntregaNumeroDias.Size = New System.Drawing.Size(32, 21)
             Me.txtEntregaNumeroDias.TabIndex = 10
             '
             'rbEntregaNormal
@@ -117,7 +118,7 @@
             Me.rbEntregaNormal.Checked = True
             Me.rbEntregaNormal.Location = New System.Drawing.Point(190, 50)
             Me.rbEntregaNormal.Name = "rbEntregaNormal"
-            Me.rbEntregaNormal.Size = New System.Drawing.Size(122, 17)
+            Me.rbEntregaNormal.Size = New System.Drawing.Size(123, 17)
             Me.rbEntregaNormal.TabIndex = 8
             Me.rbEntregaNormal.TabStop = True
             Me.rbEntregaNormal.Text = "ENTREGA NORMAL"
@@ -128,7 +129,7 @@
             Me.rbEntregaUrgente.AutoSize = True
             Me.rbEntregaUrgente.Location = New System.Drawing.Point(28, 50)
             Me.rbEntregaUrgente.Name = "rbEntregaUrgente"
-            Me.rbEntregaUrgente.Size = New System.Drawing.Size(125, 17)
+            Me.rbEntregaUrgente.Size = New System.Drawing.Size(126, 17)
             Me.rbEntregaUrgente.TabIndex = 7
             Me.rbEntregaUrgente.Text = "ENTREGA URGENTE"
             Me.rbEntregaUrgente.UseVisualStyleBackColor = True
@@ -139,7 +140,7 @@
             Me.txtNombrePersonal.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtNombrePersonal.Location = New System.Drawing.Point(365, 13)
             Me.txtNombrePersonal.Name = "txtNombrePersonal"
-            Me.txtNombrePersonal.Size = New System.Drawing.Size(365, 22)
+            Me.txtNombrePersonal.Size = New System.Drawing.Size(359, 21)
             Me.txtNombrePersonal.TabIndex = 3
             '
             'txtFechaRequisicionProducto
@@ -148,7 +149,7 @@
             Me.txtFechaRequisicionProducto.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtFechaRequisicionProducto.Location = New System.Drawing.Point(134, 13)
             Me.txtFechaRequisicionProducto.Name = "txtFechaRequisicionProducto"
-            Me.txtFechaRequisicionProducto.Size = New System.Drawing.Size(118, 22)
+            Me.txtFechaRequisicionProducto.Size = New System.Drawing.Size(118, 21)
             Me.txtFechaRequisicionProducto.TabIndex = 1
             '
             'lblIdPersonal
@@ -192,7 +193,7 @@
             Me.lblPlazoEntrega.AutoSize = True
             Me.lblPlazoEntrega.Location = New System.Drawing.Point(362, 52)
             Me.lblPlazoEntrega.Name = "lblPlazoEntrega"
-            Me.lblPlazoEntrega.Size = New System.Drawing.Size(61, 13)
+            Me.lblPlazoEntrega.Size = New System.Drawing.Size(63, 13)
             Me.lblPlazoEntrega.TabIndex = 9
             Me.lblPlazoEntrega.Text = "PLAZO      ["
             '
@@ -208,10 +209,12 @@
             'btnEliminar
             '
             Me.btnEliminar.BackColor = System.Drawing.Color.White
-            Me.btnEliminar.Image = CType(resources.GetObject("btnEliminar.Image"), System.Drawing.Image)
-            Me.btnEliminar.Location = New System.Drawing.Point(729, 2)
+            Me.btnEliminar.FlatAppearance.BorderSize = 0
+            Me.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+            Me.btnEliminar.Image = Global.syscisepro.My.Resources.Resources.do_not_disturb_on_24dp_FILL0_wght400_GRAD0_opsz24
+            Me.btnEliminar.Location = New System.Drawing.Point(729, 0)
             Me.btnEliminar.Name = "btnEliminar"
-            Me.btnEliminar.Size = New System.Drawing.Size(29, 22)
+            Me.btnEliminar.Size = New System.Drawing.Size(27, 27)
             Me.btnEliminar.TabIndex = 3
             Me.btnEliminar.UseVisualStyleBackColor = False
             '
@@ -296,42 +299,41 @@
             '
             'MenuStrip1
             '
-            Me.MenuStrip1.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.MenuStrip1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
             Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnNuevo, Me.btnGuardar, Me.btnCancelar})
             Me.MenuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow
             Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
             Me.MenuStrip1.Name = "MenuStrip1"
             Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(7, 2, 0, 2)
-            Me.MenuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
-            Me.MenuStrip1.Size = New System.Drawing.Size(765, 24)
+            Me.MenuStrip1.Size = New System.Drawing.Size(765, 32)
             Me.MenuStrip1.TabIndex = 187
             Me.MenuStrip1.Text = "msIngresoBodega"
             '
             'btnNuevo
             '
             Me.btnNuevo.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnNuevo.Image = Global.syscisepro.My.Resources.Resources.NuevoRegistro
+            Me.btnNuevo.Image = Global.syscisepro.My.Resources.Resources.add_circle_24dp_FILL0_wght400_GRAD0_opsz24__3_
             Me.btnNuevo.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnNuevo.Name = "btnNuevo"
-            Me.btnNuevo.Size = New System.Drawing.Size(74, 20)
+            Me.btnNuevo.Size = New System.Drawing.Size(82, 28)
             Me.btnNuevo.Text = "NUEVO"
             '
             'btnGuardar
             '
             Me.btnGuardar.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnGuardar.Image = Global.syscisepro.My.Resources.Resources.GuardarRegistro
+            Me.btnGuardar.Image = Global.syscisepro.My.Resources.Resources.save_24dp_FILL0_wght400_GRAD0_opsz24__2_
             Me.btnGuardar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnGuardar.Name = "btnGuardar"
-            Me.btnGuardar.Size = New System.Drawing.Size(89, 20)
+            Me.btnGuardar.Size = New System.Drawing.Size(97, 28)
             Me.btnGuardar.Text = "GUARDAR"
             '
             'btnCancelar
             '
             Me.btnCancelar.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnCancelar.Image = Global.syscisepro.My.Resources.Resources.cancel
+            Me.btnCancelar.Image = Global.syscisepro.My.Resources.Resources.cancel_24dp_FILL0_wght400_GRAD0_opsz24
             Me.btnCancelar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnCancelar.Name = "btnCancelar"
-            Me.btnCancelar.Size = New System.Drawing.Size(95, 20)
+            Me.btnCancelar.Size = New System.Drawing.Size(103, 28)
             Me.btnCancelar.Text = "CANCELAR"
             '
             'FormRequisicionProductoServicio
@@ -345,10 +347,13 @@
             Me.Controls.Add(Me.dgvDetalleRequisicionPS)
             Me.Controls.Add(Me.gbCabecera)
             Me.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
             Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
             Me.Name = "FormRequisicionProductoServicio"
             Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+            Me.StateActive.Border.DrawBorders = CType((((Krypton.Toolkit.PaletteDrawBorders.Top Or Krypton.Toolkit.PaletteDrawBorders.Bottom) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Left) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Right), Krypton.Toolkit.PaletteDrawBorders)
+            Me.StateActive.Border.Rounding = 5.0!
             Me.Text = "REQUISICIÓN DE PRODUCTO / SERVICIO"
             Me.gbCabecera.ResumeLayout(False)
             Me.gbCabecera.PerformLayout()

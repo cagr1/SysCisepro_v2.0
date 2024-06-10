@@ -1,7 +1,8 @@
 ﻿Namespace FORMULARIOS.CONTABILIDAD.SRI
     <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
     Partial Class FormAnexoTransaccional
-        Inherits System.Windows.Forms.Form
+        'Inherits System.Windows.Forms.Form
+        Inherits Krypton.Toolkit.KryptonForm
 
         'Form reemplaza a Dispose para limpiar la lista de componentes.
         <System.Diagnostics.DebuggerNonUserCode()> _
@@ -23,7 +24,6 @@
         'No lo modifique con el editor de código.
         <System.Diagnostics.DebuggerStepThrough()> _
         Private Sub InitializeComponent()
-            Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormAnexoTransaccional))
             Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
@@ -40,6 +40,7 @@
             Dim DataGridViewCellStyle13 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim DataGridViewCellStyle14 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim DataGridViewCellStyle15 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormAnexoTransaccional))
             Me.gpComandos = New System.Windows.Forms.GroupBox()
             Me.txtTotalVentas = New System.Windows.Forms.TextBox()
             Me.lblIdFacturaVenta = New System.Windows.Forms.Label()
@@ -316,7 +317,7 @@
             Me.btnCancelar.BackColor = System.Drawing.Color.White
             Me.btnCancelar.Enabled = False
             Me.btnCancelar.Font = New System.Drawing.Font("Consolas", 6.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnCancelar.Image = CType(resources.GetObject("btnCancelar.Image"), System.Drawing.Image)
+            Me.btnCancelar.Image = Global.syscisepro.My.Resources.Resources.cancel_24dp_FILL0_wght400_GRAD0_opsz24
             Me.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.TopCenter
             Me.btnCancelar.Location = New System.Drawing.Point(691, 9)
             Me.btnCancelar.Name = "btnCancelar"
@@ -331,7 +332,7 @@
             Me.btnGuardar.BackColor = System.Drawing.Color.White
             Me.btnGuardar.Enabled = False
             Me.btnGuardar.Font = New System.Drawing.Font("Consolas", 6.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnGuardar.Image = CType(resources.GetObject("btnGuardar.Image"), System.Drawing.Image)
+            Me.btnGuardar.Image = Global.syscisepro.My.Resources.Resources.save_24dp_FILL0_wght400_GRAD0_opsz24__2_
             Me.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.TopCenter
             Me.btnGuardar.Location = New System.Drawing.Point(748, 9)
             Me.btnGuardar.Name = "btnGuardar"
@@ -346,7 +347,7 @@
             Me.btnModificar.BackColor = System.Drawing.Color.White
             Me.btnModificar.Enabled = False
             Me.btnModificar.Font = New System.Drawing.Font("Consolas", 6.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnModificar.Image = CType(resources.GetObject("btnModificar.Image"), System.Drawing.Image)
+            Me.btnModificar.Image = Global.syscisepro.My.Resources.Resources.edit_document_24dp_FILL0_wght400_GRAD0_opsz24__2_
             Me.btnModificar.ImageAlign = System.Drawing.ContentAlignment.TopCenter
             Me.btnModificar.Location = New System.Drawing.Point(634, 9)
             Me.btnModificar.Name = "btnModificar"
@@ -361,7 +362,7 @@
             Me.btnNuevo.BackColor = System.Drawing.Color.White
             Me.btnNuevo.Enabled = False
             Me.btnNuevo.Font = New System.Drawing.Font("Consolas", 6.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnNuevo.Image = CType(resources.GetObject("btnNuevo.Image"), System.Drawing.Image)
+            Me.btnNuevo.Image = Global.syscisepro.My.Resources.Resources.add_circle_24dp_FILL0_wght400_GRAD0_opsz24__3_
             Me.btnNuevo.ImageAlign = System.Drawing.ContentAlignment.TopCenter
             Me.btnNuevo.Location = New System.Drawing.Point(577, 9)
             Me.btnNuevo.Name = "btnNuevo"
@@ -379,7 +380,7 @@
             Me.GroupBox5.Controls.Add(Me.dtpFechaHasta)
             Me.GroupBox5.Controls.Add(Me.btnCargar)
             Me.GroupBox5.Controls.Add(Me.btnGenerarXML)
-            Me.GroupBox5.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.GroupBox5.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.GroupBox5.Location = New System.Drawing.Point(1, 2)
             Me.GroupBox5.Name = "GroupBox5"
             Me.GroupBox5.Size = New System.Drawing.Size(407, 59)
@@ -419,7 +420,7 @@
             '
             Me.btnCargar.BackColor = System.Drawing.Color.White
             Me.btnCargar.Font = New System.Drawing.Font("Consolas", 6.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnCargar.Image = CType(resources.GetObject("btnCargar.Image"), System.Drawing.Image)
+            Me.btnCargar.Image = Global.syscisepro.My.Resources.Resources.refresh_24dp_FILL0_wght400_GRAD0_opsz24__2_
             Me.btnCargar.ImageAlign = System.Drawing.ContentAlignment.TopCenter
             Me.btnCargar.Location = New System.Drawing.Point(275, 9)
             Me.btnCargar.Name = "btnCargar"
@@ -433,13 +434,13 @@
             '
             Me.btnGenerarXML.BackColor = System.Drawing.Color.White
             Me.btnGenerarXML.Font = New System.Drawing.Font("Consolas", 6.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnGenerarXML.Image = CType(resources.GetObject("btnGenerarXML.Image"), System.Drawing.Image)
+            Me.btnGenerarXML.Image = Global.syscisepro.My.Resources.Resources.checkbook_20dp_FILL0_wght400_GRAD0_opsz20__2_
             Me.btnGenerarXML.ImageAlign = System.Drawing.ContentAlignment.TopCenter
             Me.btnGenerarXML.Location = New System.Drawing.Point(332, 9)
             Me.btnGenerarXML.Name = "btnGenerarXML"
             Me.btnGenerarXML.Size = New System.Drawing.Size(58, 43)
             Me.btnGenerarXML.TabIndex = 56
-            Me.btnGenerarXML.Text = "GENERAR XML"
+            Me.btnGenerarXML.Text = "GENERAR"
             Me.btnGenerarXML.TextAlign = System.Drawing.ContentAlignment.BottomCenter
             Me.btnGenerarXML.UseVisualStyleBackColor = False
             '
@@ -472,7 +473,7 @@
             Me.panelDetalle.BackColor = System.Drawing.Color.White
             Me.panelDetalle.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
             Me.panelDetalle.Controls.Add(Me.Label1)
-            Me.panelDetalle.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.panelDetalle.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.panelDetalle.Location = New System.Drawing.Point(1, 61)
             Me.panelDetalle.Name = "panelDetalle"
             Me.panelDetalle.Size = New System.Drawing.Size(610, 30)
@@ -535,6 +536,7 @@
             Me.Panel1.BackColor = System.Drawing.Color.White
             Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
             Me.Panel1.Controls.Add(Me.Label2)
+            Me.Panel1.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Panel1.Location = New System.Drawing.Point(1, 281)
             Me.Panel1.Name = "Panel1"
             Me.Panel1.Size = New System.Drawing.Size(610, 30)
@@ -555,6 +557,7 @@
             Me.Panel4.BackColor = System.Drawing.Color.White
             Me.Panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
             Me.Panel4.Controls.Add(Me.Label5)
+            Me.Panel4.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Panel4.Location = New System.Drawing.Point(614, 281)
             Me.Panel4.Name = "Panel4"
             Me.Panel4.Size = New System.Drawing.Size(610, 30)
@@ -590,9 +593,10 @@
             '
             'txtTotalBITarifa0Compras
             '
+            Me.txtTotalBITarifa0Compras.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtTotalBITarifa0Compras.Location = New System.Drawing.Point(301, 259)
             Me.txtTotalBITarifa0Compras.Name = "txtTotalBITarifa0Compras"
-            Me.txtTotalBITarifa0Compras.Size = New System.Drawing.Size(90, 20)
+            Me.txtTotalBITarifa0Compras.Size = New System.Drawing.Size(90, 21)
             Me.txtTotalBITarifa0Compras.TabIndex = 169
             Me.txtTotalBITarifa0Compras.Text = "0.00"
             Me.txtTotalBITarifa0Compras.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -647,9 +651,10 @@
             '
             'txtTotalValorIVACompras
             '
+            Me.txtTotalValorIVACompras.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtTotalValorIVACompras.Location = New System.Drawing.Point(514, 259)
             Me.txtTotalValorIVACompras.Name = "txtTotalValorIVACompras"
-            Me.txtTotalValorIVACompras.Size = New System.Drawing.Size(90, 20)
+            Me.txtTotalValorIVACompras.Size = New System.Drawing.Size(90, 21)
             Me.txtTotalValorIVACompras.TabIndex = 161
             Me.txtTotalValorIVACompras.Text = "0.00"
             Me.txtTotalValorIVACompras.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -676,18 +681,19 @@
             'Label6
             '
             Me.Label6.AutoSize = True
-            Me.Label6.Font = New System.Drawing.Font("Consolas", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Label6.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Label6.Location = New System.Drawing.Point(94, 5)
             Me.Label6.Name = "Label6"
-            Me.Label6.Size = New System.Drawing.Size(440, 18)
+            Me.Label6.Size = New System.Drawing.Size(342, 13)
             Me.Label6.TabIndex = 18
             Me.Label6.Text = "RESUMEN DE RETENCIONES QUE LE EFECTUARON EN EL PERIODO"
             '
             'txtTotalBITarifa12Compras
             '
+            Me.txtTotalBITarifa12Compras.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtTotalBITarifa12Compras.Location = New System.Drawing.Point(407, 259)
             Me.txtTotalBITarifa12Compras.Name = "txtTotalBITarifa12Compras"
-            Me.txtTotalBITarifa12Compras.Size = New System.Drawing.Size(90, 20)
+            Me.txtTotalBITarifa12Compras.Size = New System.Drawing.Size(90, 21)
             Me.txtTotalBITarifa12Compras.TabIndex = 167
             Me.txtTotalBITarifa12Compras.Text = "0.00"
             Me.txtTotalBITarifa12Compras.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -821,18 +827,19 @@
             'Label3
             '
             Me.Label3.AutoSize = True
-            Me.Label3.Font = New System.Drawing.Font("Consolas", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Label3.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Label3.Location = New System.Drawing.Point(222, 5)
             Me.Label3.Name = "Label3"
-            Me.Label3.Size = New System.Drawing.Size(176, 18)
+            Me.Label3.Size = New System.Drawing.Size(156, 13)
             Me.Label3.TabIndex = 18
             Me.Label3.Text = "COMPROBANTES ANULADOS"
             '
             'txtTotalBaseImponibleFuente
             '
+            Me.txtTotalBaseImponibleFuente.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtTotalBaseImponibleFuente.Location = New System.Drawing.Point(1021, 259)
             Me.txtTotalBaseImponibleFuente.Name = "txtTotalBaseImponibleFuente"
-            Me.txtTotalBaseImponibleFuente.Size = New System.Drawing.Size(90, 20)
+            Me.txtTotalBaseImponibleFuente.Size = New System.Drawing.Size(90, 21)
             Me.txtTotalBaseImponibleFuente.TabIndex = 164
             Me.txtTotalBaseImponibleFuente.Text = "0.00"
             Me.txtTotalBaseImponibleFuente.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -842,6 +849,7 @@
             Me.Panel3.BackColor = System.Drawing.Color.White
             Me.Panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
             Me.Panel3.Controls.Add(Me.Label4)
+            Me.Panel3.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Panel3.Location = New System.Drawing.Point(614, 61)
             Me.Panel3.Name = "Panel3"
             Me.Panel3.Size = New System.Drawing.Size(610, 30)
@@ -892,10 +900,13 @@
             Me.Controls.Add(Me.Panel2)
             Me.Controls.Add(Me.txtTotalBaseImponibleFuente)
             Me.Controls.Add(Me.Panel3)
-            Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
             Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
             Me.Name = "FormAnexoTransaccional"
             Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+            Me.StateActive.Border.DrawBorders = CType((((Krypton.Toolkit.PaletteDrawBorders.Top Or Krypton.Toolkit.PaletteDrawBorders.Bottom) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Left) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Right), Krypton.Toolkit.PaletteDrawBorders)
+            Me.StateActive.Border.Rounding = 5.0!
             Me.Text = "GENERAR ANEXO TRANSACCIONAL"
             Me.gpComandos.ResumeLayout(False)
             Me.gpComandos.PerformLayout()

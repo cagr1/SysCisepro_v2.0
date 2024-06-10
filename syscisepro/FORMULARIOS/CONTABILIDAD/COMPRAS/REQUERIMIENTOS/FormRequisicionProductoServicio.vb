@@ -50,25 +50,26 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.REQUERIMIENTOS
                 Case TipoConexion.Asenava
                     Icon = My.Resources.logo_s
                     MenuStrip1.ForeColor = Color.White
-                    MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorAsenava
+                    'MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorAsenava
                     panelDetalle.ForeColor = Color.White
                     panelDetalle.BackColor = My.MySettingsProperty.Settings.ColorAsenava
                     dgvDetalleRequisicionPS.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorAsenava
                 Case TipoConexion.Seportpac
                     Icon = My.Resources.logo_s
                     MenuStrip1.ForeColor = Color.White
-                    MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
+                    'MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
                     panelDetalle.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
                     panelDetalle.ForeColor = Color.White
                     dgvDetalleRequisicionPS.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorSeportpac
                 Case Else
                     Icon = My.Resources.logo_c
                     MenuStrip1.ForeColor = Color.White
-                    MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorCisepro
+                    'MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorCisepro
                     panelDetalle.BackColor = My.MySettingsProperty.Settings.ColorCisepro
                     panelDetalle.ForeColor = Color.White
                     dgvDetalleRequisicionPS.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
             End Select
+            dgvDetalleRequisicionPS.Font = New Font("Roboto", 8, FontStyle.Regular)
             _sqlCommands = New List(Of SqlCommand)
             DeshabilitadoInicio()
         End Sub

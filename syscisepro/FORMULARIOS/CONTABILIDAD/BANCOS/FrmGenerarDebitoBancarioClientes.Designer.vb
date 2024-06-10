@@ -1227,7 +1227,6 @@
             Me.ClientSize = New System.Drawing.Size(1194, 653)
             Me.Controls.Add(Me.msKardex)
             Me.Controls.Add(Me.tcBodega)
-            Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
             Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
             Me.Name = "FrmGenerarDebitoBancarioClientes"
             Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen

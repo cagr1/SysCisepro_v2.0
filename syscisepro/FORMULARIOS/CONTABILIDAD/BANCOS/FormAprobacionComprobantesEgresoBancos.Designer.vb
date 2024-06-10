@@ -414,8 +414,8 @@
             Me.ToolStripMenuItem1.Image = Global.syscisepro.My.Resources.Resources.refresh_24dp_FILL0_wght400_GRAD0_opsz24__2_
             Me.ToolStripMenuItem1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
-            Me.ToolStripMenuItem1.Size = New System.Drawing.Size(176, 28)
-            Me.ToolStripMenuItem1.Text = "CARGAR COMPROBANTES"
+            Me.ToolStripMenuItem1.Size = New System.Drawing.Size(92, 28)
+            Me.ToolStripMenuItem1.Text = "CARGAR "
             '
             'btnAprovar
             '
@@ -423,8 +423,8 @@
             Me.btnAprovar.Image = Global.syscisepro.My.Resources.Resources.check_24dp_FILL0_wght400_GRAD0_opsz24
             Me.btnAprovar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnAprovar.Name = "btnAprovar"
-            Me.btnAprovar.Size = New System.Drawing.Size(176, 28)
-            Me.btnAprovar.Text = "APROBAR COMPROBANTE"
+            Me.btnAprovar.Size = New System.Drawing.Size(99, 28)
+            Me.btnAprovar.Text = "APROBAR "
             '
             'btnRechazar
             '
@@ -432,8 +432,8 @@
             Me.btnRechazar.Image = Global.syscisepro.My.Resources.Resources.cancel_24dp_FILL0_wght400_GRAD0_opsz24
             Me.btnRechazar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnRechazar.Name = "btnRechazar"
-            Me.btnRechazar.Size = New System.Drawing.Size(183, 28)
-            Me.btnRechazar.Text = "RECHAZAR COMPROBANTE"
+            Me.btnRechazar.Size = New System.Drawing.Size(106, 28)
+            Me.btnRechazar.Text = "RECHAZAR "
             '
             'GroupBox1
             '
@@ -452,7 +452,7 @@
             Me.gbRangoFechas.Controls.Add(Me.dtpFechaDesde)
             Me.gbRangoFechas.Controls.Add(Me.Label9)
             Me.gbRangoFechas.Controls.Add(Me.Label2)
-            Me.gbRangoFechas.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.gbRangoFechas.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.gbRangoFechas.Location = New System.Drawing.Point(5, 36)
             Me.gbRangoFechas.Name = "gbRangoFechas"
             Me.gbRangoFechas.Size = New System.Drawing.Size(1111, 41)
@@ -464,14 +464,14 @@
             '
             Me.dtpFechaHasta.Location = New System.Drawing.Point(332, 15)
             Me.dtpFechaHasta.Name = "dtpFechaHasta"
-            Me.dtpFechaHasta.Size = New System.Drawing.Size(234, 20)
+            Me.dtpFechaHasta.Size = New System.Drawing.Size(234, 21)
             Me.dtpFechaHasta.TabIndex = 1
             '
             'dtpFechaDesde
             '
             Me.dtpFechaDesde.Location = New System.Drawing.Point(47, 15)
             Me.dtpFechaDesde.Name = "dtpFechaDesde"
-            Me.dtpFechaDesde.Size = New System.Drawing.Size(234, 20)
+            Me.dtpFechaDesde.Size = New System.Drawing.Size(234, 21)
             Me.dtpFechaDesde.TabIndex = 0
             '
             'Label9
@@ -479,7 +479,7 @@
             Me.Label9.AutoSize = True
             Me.Label9.Location = New System.Drawing.Point(17, 18)
             Me.Label9.Name = "Label9"
-            Me.Label9.Size = New System.Drawing.Size(31, 13)
+            Me.Label9.Size = New System.Drawing.Size(29, 13)
             Me.Label9.TabIndex = 3
             Me.Label9.Text = "DEL:"
             '
@@ -488,7 +488,7 @@
             Me.Label2.AutoSize = True
             Me.Label2.Location = New System.Drawing.Point(307, 18)
             Me.Label2.Name = "Label2"
-            Me.Label2.Size = New System.Drawing.Size(25, 13)
+            Me.Label2.Size = New System.Drawing.Size(23, 13)
             Me.Label2.TabIndex = 2
             Me.Label2.Text = "AL:"
             '

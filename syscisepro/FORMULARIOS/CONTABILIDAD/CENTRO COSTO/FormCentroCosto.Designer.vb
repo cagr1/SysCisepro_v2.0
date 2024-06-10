@@ -153,70 +153,71 @@
             '
             'MenuStrip1
             '
-            Me.MenuStrip1.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.MenuStrip1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
             Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnBuscarAsiento, Me.btnNuevoCentroCosto, Me.btnGuardarCentroCosto, Me.btnModificarCentroCosto, Me.btnReporteCentroCosto, Me.btnReporte, Me.btnExportar})
             Me.MenuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow
             Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
             Me.MenuStrip1.Name = "MenuStrip1"
             Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(7, 2, 0, 2)
-            Me.MenuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
-            Me.MenuStrip1.Size = New System.Drawing.Size(707, 24)
+            Me.MenuStrip1.Size = New System.Drawing.Size(707, 32)
             Me.MenuStrip1.TabIndex = 210
             Me.MenuStrip1.Text = "msIngresoBodega"
             '
             'btnBuscarAsiento
             '
             Me.btnBuscarAsiento.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnBuscarAsiento.Image = Global.syscisepro.My.Resources.Resources.BuscarRegistro
+            Me.btnBuscarAsiento.Image = Global.syscisepro.My.Resources.Resources.search_24dp_FILL0_wght400_GRAD0_opsz24__2_
             Me.btnBuscarAsiento.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnBuscarAsiento.Name = "btnBuscarAsiento"
-            Me.btnBuscarAsiento.Size = New System.Drawing.Size(119, 20)
-            Me.btnBuscarAsiento.Text = "LISTAR TODOS"
+            Me.btnBuscarAsiento.Size = New System.Drawing.Size(85, 28)
+            Me.btnBuscarAsiento.Text = "BUSCAR"
             '
             'btnNuevoCentroCosto
             '
             Me.btnNuevoCentroCosto.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnNuevoCentroCosto.Image = CType(resources.GetObject("btnNuevoCentroCosto.Image"), System.Drawing.Image)
+            Me.btnNuevoCentroCosto.Image = Global.syscisepro.My.Resources.Resources.add_circle_24dp_FILL0_wght400_GRAD0_opsz24__3_
             Me.btnNuevoCentroCosto.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnNuevoCentroCosto.Name = "btnNuevoCentroCosto"
-            Me.btnNuevoCentroCosto.Size = New System.Drawing.Size(70, 20)
+            Me.btnNuevoCentroCosto.Size = New System.Drawing.Size(78, 28)
             Me.btnNuevoCentroCosto.Text = "NUEVO"
             '
             'btnGuardarCentroCosto
             '
             Me.btnGuardarCentroCosto.Enabled = False
             Me.btnGuardarCentroCosto.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnGuardarCentroCosto.Image = CType(resources.GetObject("btnGuardarCentroCosto.Image"), System.Drawing.Image)
+            Me.btnGuardarCentroCosto.Image = Global.syscisepro.My.Resources.Resources.save_24dp_FILL0_wght400_GRAD0_opsz24__2_
             Me.btnGuardarCentroCosto.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnGuardarCentroCosto.Name = "btnGuardarCentroCosto"
-            Me.btnGuardarCentroCosto.Size = New System.Drawing.Size(84, 20)
+            Me.btnGuardarCentroCosto.Size = New System.Drawing.Size(92, 28)
             Me.btnGuardarCentroCosto.Text = "GUARDAR"
             '
             'btnModificarCentroCosto
             '
             Me.btnModificarCentroCosto.Enabled = False
             Me.btnModificarCentroCosto.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnModificarCentroCosto.Image = Global.syscisepro.My.Resources.Resources.ModificarRegistro
+            Me.btnModificarCentroCosto.Image = Global.syscisepro.My.Resources.Resources.edit_document_24dp_FILL0_wght400_GRAD0_opsz24__2_
+            Me.btnModificarCentroCosto.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnModificarCentroCosto.Name = "btnModificarCentroCosto"
-            Me.btnModificarCentroCosto.Size = New System.Drawing.Size(105, 20)
+            Me.btnModificarCentroCosto.Size = New System.Drawing.Size(113, 28)
             Me.btnModificarCentroCosto.Text = "ACTUALIZAR"
             '
             'btnReporteCentroCosto
             '
             Me.btnReporteCentroCosto.Enabled = False
             Me.btnReporteCentroCosto.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnReporteCentroCosto.Image = Global.syscisepro.My.Resources.Resources.cancel
+            Me.btnReporteCentroCosto.Image = Global.syscisepro.My.Resources.Resources.cancel_24dp_FILL0_wght400_GRAD0_opsz24
+            Me.btnReporteCentroCosto.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnReporteCentroCosto.Name = "btnReporteCentroCosto"
-            Me.btnReporteCentroCosto.Size = New System.Drawing.Size(91, 20)
+            Me.btnReporteCentroCosto.Size = New System.Drawing.Size(99, 28)
             Me.btnReporteCentroCosto.Text = "CANCELAR"
             '
             'btnReporte
             '
             Me.btnReporte.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnReporte.Image = Global.syscisepro.My.Resources.Resources.report
+            Me.btnReporte.Image = Global.syscisepro.My.Resources.Resources.description_24dp_FILL0_wght400_GRAD0_opsz24__2_
             Me.btnReporte.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnReporte.Name = "btnReporte"
-            Me.btnReporte.Size = New System.Drawing.Size(84, 20)
+            Me.btnReporte.Size = New System.Drawing.Size(92, 28)
             Me.btnReporte.Text = "REPORTE"
             '
             'btnExportar
@@ -238,11 +239,14 @@
             Me.Controls.Add(Me.MenuStrip1)
             Me.Controls.Add(Me.GroupBox1)
             Me.Controls.Add(Me.dgvCentroCosto)
-            Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
             Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
             Me.MaximizeBox = False
             Me.Name = "FormCentroCosto"
             Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+            Me.StateActive.Border.DrawBorders = CType((((Krypton.Toolkit.PaletteDrawBorders.Top Or Krypton.Toolkit.PaletteDrawBorders.Bottom) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Left) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Right), Krypton.Toolkit.PaletteDrawBorders)
+            Me.StateActive.Border.Rounding = 5.0!
             Me.Text = "DEFINICION DE CENTROS DE COSTO"
             CType(Me.dgvCentroCosto, System.ComponentModel.ISupportInitialize).EndInit()
             Me.GroupBox1.ResumeLayout(False)

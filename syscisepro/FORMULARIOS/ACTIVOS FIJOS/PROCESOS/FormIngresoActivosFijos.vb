@@ -2477,6 +2477,7 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
                     'MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
                     MenuStrip1.ForeColor = Color.White
                     dgvEquiposComputo.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorSeportpac
+
                 Case Else
                     Icon = My.Resources.logo_c
                     'MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorCisepro

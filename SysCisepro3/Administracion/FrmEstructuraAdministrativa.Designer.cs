@@ -171,6 +171,7 @@
             this.tpGerencia.Controls.Add(this.lblCodigoGerencia);
             this.tpGerencia.Controls.Add(this.lblIdGerencia);
             this.tpGerencia.Controls.Add(this.dgvGerencia);
+            this.tpGerencia.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tpGerencia.Location = new System.Drawing.Point(4, 22);
             this.tpGerencia.Name = "tpGerencia";
             this.tpGerencia.Padding = new System.Windows.Forms.Padding(3);
@@ -181,6 +182,8 @@
             // 
             // toolStrip1
             // 
+            this.toolStrip1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnCargarGerencia,
             this.btnNuevoGerencia,
@@ -199,8 +202,8 @@
             this.btnCargarGerencia.Image = global::SysCisepro3.Properties.Resources.BuscarRegistro;
             this.btnCargarGerencia.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnCargarGerencia.Name = "btnCargarGerencia";
-            this.btnCargarGerencia.Size = new System.Drawing.Size(86, 22);
-            this.btnCargarGerencia.Text = "VER TODAS";
+            this.btnCargarGerencia.Size = new System.Drawing.Size(71, 22);
+            this.btnCargarGerencia.Text = "BUSCAR";
             this.btnCargarGerencia.Click += new System.EventHandler(this.btnCargarGerencia_Click);
             // 
             // btnNuevoGerencia
@@ -268,7 +271,7 @@
             this.lblSucursal.AutoSize = true;
             this.lblSucursal.Location = new System.Drawing.Point(157, 72);
             this.lblSucursal.Name = "lblSucursal";
-            this.lblSucursal.Size = new System.Drawing.Size(64, 13);
+            this.lblSucursal.Size = new System.Drawing.Size(65, 13);
             this.lblSucursal.TabIndex = 10;
             this.lblSucursal.Text = "SUCURSAL:";
             // 
@@ -291,7 +294,7 @@
             this.txtCodigoGerencia.Enabled = false;
             this.txtCodigoGerencia.Location = new System.Drawing.Point(66, 68);
             this.txtCodigoGerencia.Name = "txtCodigoGerencia";
-            this.txtCodigoGerencia.Size = new System.Drawing.Size(71, 22);
+            this.txtCodigoGerencia.Size = new System.Drawing.Size(71, 21);
             this.txtCodigoGerencia.TabIndex = 6;
             // 
             // txtIdGerencia
@@ -301,7 +304,7 @@
             this.txtIdGerencia.Enabled = false;
             this.txtIdGerencia.Location = new System.Drawing.Point(66, 40);
             this.txtIdGerencia.Name = "txtIdGerencia";
-            this.txtIdGerencia.Size = new System.Drawing.Size(44, 22);
+            this.txtIdGerencia.Size = new System.Drawing.Size(44, 21);
             this.txtIdGerencia.TabIndex = 5;
             this.txtIdGerencia.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -321,7 +324,7 @@
             this.lblNombreEmpresa.AutoSize = true;
             this.lblNombreEmpresa.Location = new System.Drawing.Point(157, 44);
             this.lblNombreEmpresa.Name = "lblNombreEmpresa";
-            this.lblNombreEmpresa.Size = new System.Drawing.Size(58, 13);
+            this.lblNombreEmpresa.Size = new System.Drawing.Size(60, 13);
             this.lblNombreEmpresa.TabIndex = 3;
             this.lblNombreEmpresa.Text = "EMPRESA:";
             // 
@@ -339,7 +342,7 @@
             this.lblCodigoGerencia.AutoSize = true;
             this.lblCodigoGerencia.Location = new System.Drawing.Point(6, 71);
             this.lblCodigoGerencia.Name = "lblCodigoGerencia";
-            this.lblCodigoGerencia.Size = new System.Drawing.Size(54, 13);
+            this.lblCodigoGerencia.Size = new System.Drawing.Size(51, 13);
             this.lblCodigoGerencia.TabIndex = 1;
             this.lblCodigoGerencia.Text = "CODIGO:";
             // 
@@ -348,7 +351,7 @@
             this.lblIdGerencia.AutoSize = true;
             this.lblIdGerencia.Location = new System.Drawing.Point(9, 45);
             this.lblIdGerencia.Name = "lblIdGerencia";
-            this.lblIdGerencia.Size = new System.Drawing.Size(21, 13);
+            this.lblIdGerencia.Size = new System.Drawing.Size(20, 13);
             this.lblIdGerencia.TabIndex = 1;
             this.lblIdGerencia.Text = "ID:";
             // 
@@ -364,7 +367,7 @@
             this.dgvGerencia.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(60)))), ((int)(((byte)(123)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -402,6 +405,7 @@
             // 
             // toolStrip2
             // 
+            this.toolStrip2.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.toolStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnCargarGerencias,
             this.btnNuevoGerencias,
@@ -601,6 +605,7 @@
             // 
             // toolStrip3
             // 
+            this.toolStrip3.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.toolStrip3.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnCargarAreas,
             this.btnNuevoAreas,
@@ -800,6 +805,7 @@
             // 
             // toolStrip4
             // 
+            this.toolStrip4.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.toolStrip4.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnCargarSeccion,
             this.btnNuevaSeccion,
@@ -999,6 +1005,7 @@
             // 
             // toolStrip5
             // 
+            this.toolStrip5.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.toolStrip5.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnCargarSubSeccion,
             this.btnNuevoSubSeccion,
@@ -1187,6 +1194,10 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "FrmEstructuraAdministrativa";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StateActive.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.StateActive.Border.Rounding = 5F;
             this.Text = "ESTRUCTURA ADMINISTRATIVA";
             this.Load += new System.EventHandler(this.FrmEstructuraAdministrativa_Load);
             this.tcEstructuraAdministrativa.ResumeLayout(false);

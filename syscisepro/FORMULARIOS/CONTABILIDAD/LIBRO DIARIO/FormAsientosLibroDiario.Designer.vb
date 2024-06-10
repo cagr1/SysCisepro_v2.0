@@ -1,8 +1,8 @@
 ﻿Namespace FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
     <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
     Partial Class FormAsientosLibroDiario
-        Inherits System.Windows.Forms.Form
-
+        'Inherits System.Windows.Forms.Form
+        Inherits Krypton.Toolkit.KryptonForm
         'Form reemplaza a Dispose para limpiar la lista de componentes.
         <System.Diagnostics.DebuggerNonUserCode()> _
         Protected Overrides Sub Dispose(ByVal disposing As Boolean)
@@ -87,8 +87,8 @@
             Me.gbRnagoFechas.Controls.Add(Me.dtpAsientoDesde)
             Me.gbRnagoFechas.Controls.Add(Me.lblHasta)
             Me.gbRnagoFechas.Controls.Add(Me.dtpAsientoHasta)
-            Me.gbRnagoFechas.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.gbRnagoFechas.Location = New System.Drawing.Point(328, 26)
+            Me.gbRnagoFechas.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.gbRnagoFechas.Location = New System.Drawing.Point(328, 34)
             Me.gbRnagoFechas.Name = "gbRnagoFechas"
             Me.gbRnagoFechas.Size = New System.Drawing.Size(205, 50)
             Me.gbRnagoFechas.TabIndex = 133
@@ -195,9 +195,9 @@
             Me.GroupBox1.BackColor = System.Drawing.Color.White
             Me.GroupBox1.Controls.Add(Me.dgvAsientosDiario)
             Me.GroupBox1.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.GroupBox1.Location = New System.Drawing.Point(0, 77)
+            Me.GroupBox1.Location = New System.Drawing.Point(0, 88)
             Me.GroupBox1.Name = "GroupBox1"
-            Me.GroupBox1.Size = New System.Drawing.Size(1225, 531)
+            Me.GroupBox1.Size = New System.Drawing.Size(1225, 513)
             Me.GroupBox1.TabIndex = 136
             Me.GroupBox1.TabStop = False
             '
@@ -247,7 +247,7 @@
             DataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
             Me.dgvAsientosDiario.RowsDefaultCellStyle = DataGridViewCellStyle10
             Me.dgvAsientosDiario.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvAsientosDiario.Size = New System.Drawing.Size(1219, 509)
+            Me.dgvAsientosDiario.Size = New System.Drawing.Size(1219, 491)
             Me.dgvAsientosDiario.TabIndex = 126
             '
             'rbCuenta
@@ -255,7 +255,7 @@
             Me.rbCuenta.AutoSize = True
             Me.rbCuenta.Location = New System.Drawing.Point(82, 17)
             Me.rbCuenta.Name = "rbCuenta"
-            Me.rbCuenta.Size = New System.Drawing.Size(66, 17)
+            Me.rbCuenta.Size = New System.Drawing.Size(67, 17)
             Me.rbCuenta.TabIndex = 3
             Me.rbCuenta.TabStop = True
             Me.rbCuenta.Text = "CUENTA"
@@ -267,8 +267,8 @@
             Me.gbTipoBusqueda.Controls.Add(Me.rbCuenta)
             Me.gbTipoBusqueda.Controls.Add(Me.rbFecha)
             Me.gbTipoBusqueda.Controls.Add(Me.rbNumero)
-            Me.gbTipoBusqueda.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.gbTipoBusqueda.Location = New System.Drawing.Point(0, 26)
+            Me.gbTipoBusqueda.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.gbTipoBusqueda.Location = New System.Drawing.Point(0, 34)
             Me.gbTipoBusqueda.Name = "gbTipoBusqueda"
             Me.gbTipoBusqueda.Size = New System.Drawing.Size(223, 50)
             Me.gbTipoBusqueda.TabIndex = 135
@@ -292,7 +292,7 @@
             Me.rbNumero.AutoSize = True
             Me.rbNumero.Location = New System.Drawing.Point(5, 17)
             Me.rbNumero.Name = "rbNumero"
-            Me.rbNumero.Size = New System.Drawing.Size(69, 17)
+            Me.rbNumero.Size = New System.Drawing.Size(71, 17)
             Me.rbNumero.TabIndex = 1
             Me.rbNumero.TabStop = True
             Me.rbNumero.Text = "ASIENTO"
@@ -303,8 +303,8 @@
             Me.gbComandos.BackColor = System.Drawing.Color.White
             Me.gbComandos.Controls.Add(Me.txtCuentaNueva)
             Me.gbComandos.Controls.Add(Me.Label2)
-            Me.gbComandos.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.gbComandos.Location = New System.Drawing.Point(532, 26)
+            Me.gbComandos.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.gbComandos.Location = New System.Drawing.Point(532, 34)
             Me.gbComandos.Name = "gbComandos"
             Me.gbComandos.Size = New System.Drawing.Size(693, 50)
             Me.gbComandos.TabIndex = 131
@@ -318,7 +318,7 @@
             Me.txtCuentaNueva.Enabled = False
             Me.txtCuentaNueva.Location = New System.Drawing.Point(56, 19)
             Me.txtCuentaNueva.Name = "txtCuentaNueva"
-            Me.txtCuentaNueva.Size = New System.Drawing.Size(627, 22)
+            Me.txtCuentaNueva.Size = New System.Drawing.Size(627, 21)
             Me.txtCuentaNueva.TabIndex = 58
             '
             'Label2
@@ -347,8 +347,8 @@
             '
             Me.gbNumeroAsiento.BackColor = System.Drawing.Color.White
             Me.gbNumeroAsiento.Controls.Add(Me.txtNumeroAsientoBuscar)
-            Me.gbNumeroAsiento.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.gbNumeroAsiento.Location = New System.Drawing.Point(223, 26)
+            Me.gbNumeroAsiento.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.gbNumeroAsiento.Location = New System.Drawing.Point(223, 34)
             Me.gbNumeroAsiento.Name = "gbNumeroAsiento"
             Me.gbNumeroAsiento.Size = New System.Drawing.Size(105, 50)
             Me.gbNumeroAsiento.TabIndex = 132
@@ -357,94 +357,97 @@
             '
             'MenuStrip1
             '
-            Me.MenuStrip1.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.MenuStrip1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
             Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnBuscarAsiento, Me.btnGuardar, Me.btnAnular, Me.ToolStripMenuItem1, Me.btnReporte, Me.btnExportar})
             Me.MenuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow
             Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
             Me.MenuStrip1.Name = "MenuStrip1"
             Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(7, 2, 0, 2)
-            Me.MenuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
-            Me.MenuStrip1.Size = New System.Drawing.Size(1227, 24)
+            Me.MenuStrip1.Size = New System.Drawing.Size(1227, 32)
             Me.MenuStrip1.TabIndex = 186
             Me.MenuStrip1.Text = "msIngresoBodega"
             '
             'btnBuscarAsiento
             '
             Me.btnBuscarAsiento.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnBuscarAsiento.Image = Global.syscisepro.My.Resources.Resources.BuscarRegistro
+            Me.btnBuscarAsiento.Image = Global.syscisepro.My.Resources.Resources.search_24dp_FILL0_wght400_GRAD0_opsz24__2_
+            Me.btnBuscarAsiento.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnBuscarAsiento.Name = "btnBuscarAsiento"
-            Me.btnBuscarAsiento.Size = New System.Drawing.Size(136, 20)
-            Me.btnBuscarAsiento.Text = "CARGAR ASIENTOS"
+            Me.btnBuscarAsiento.Size = New System.Drawing.Size(87, 28)
+            Me.btnBuscarAsiento.Text = "BUSCAR"
             '
             'btnGuardar
             '
             Me.btnGuardar.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnGuardar.Image = Global.syscisepro.My.Resources.Resources.GuardarRegistro
+            Me.btnGuardar.Image = Global.syscisepro.My.Resources.Resources.save_24dp_FILL0_wght400_GRAD0_opsz24__2_
             Me.btnGuardar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnGuardar.Name = "btnGuardar"
-            Me.btnGuardar.Size = New System.Drawing.Size(144, 20)
-            Me.btnGuardar.Text = "GUARDAR ASIENTOS"
+            Me.btnGuardar.Size = New System.Drawing.Size(100, 28)
+            Me.btnGuardar.Text = "GUARDAR "
             '
             'btnAnular
             '
             Me.btnAnular.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnAnular.Image = Global.syscisepro.My.Resources.Resources.EliminarRegistro
+            Me.btnAnular.Image = Global.syscisepro.My.Resources.Resources.do_not_disturb_on_24dp_FILL0_wght400_GRAD0_opsz24
             Me.btnAnular.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnAnular.Name = "btnAnular"
-            Me.btnAnular.Size = New System.Drawing.Size(136, 20)
-            Me.btnAnular.Text = "ANULAR ASIENTOS"
+            Me.btnAnular.Size = New System.Drawing.Size(92, 28)
+            Me.btnAnular.Text = "ANULAR "
             '
             'ToolStripMenuItem1
             '
             Me.ToolStripMenuItem1.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.ToolStripMenuItem1.Image = Global.syscisepro.My.Resources.Resources.cancel
+            Me.ToolStripMenuItem1.Image = Global.syscisepro.My.Resources.Resources.cancel_24dp_FILL0_wght400_GRAD0_opsz24
             Me.ToolStripMenuItem1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
-            Me.ToolStripMenuItem1.Size = New System.Drawing.Size(95, 20)
+            Me.ToolStripMenuItem1.Size = New System.Drawing.Size(103, 28)
             Me.ToolStripMenuItem1.Text = "CANCELAR"
             '
             'btnReporte
             '
             Me.btnReporte.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.REPORTEASIENTOToolStripMenuItem, Me.TODOSLOSASIENTOSToolStripMenuItem})
             Me.btnReporte.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnReporte.Image = Global.syscisepro.My.Resources.Resources.report
+            Me.btnReporte.Image = Global.syscisepro.My.Resources.Resources.description_24dp_FILL0_wght400_GRAD0_opsz24__2_
             Me.btnReporte.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnReporte.Name = "btnReporte"
-            Me.btnReporte.Size = New System.Drawing.Size(82, 20)
+            Me.btnReporte.Size = New System.Drawing.Size(90, 28)
             Me.btnReporte.Text = "REPORTE"
             '
             'REPORTEASIENTOToolStripMenuItem
             '
-            Me.REPORTEASIENTOToolStripMenuItem.Image = Global.syscisepro.My.Resources.Resources.report
+            Me.REPORTEASIENTOToolStripMenuItem.Image = Global.syscisepro.My.Resources.Resources.description_24dp_FILL0_wght400_GRAD0_opsz24__2_
+            Me.REPORTEASIENTOToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.REPORTEASIENTOToolStripMenuItem.Name = "REPORTEASIENTOToolStripMenuItem"
-            Me.REPORTEASIENTOToolStripMenuItem.Size = New System.Drawing.Size(190, 22)
+            Me.REPORTEASIENTOToolStripMenuItem.Size = New System.Drawing.Size(198, 30)
             Me.REPORTEASIENTOToolStripMenuItem.Text = "REPORTE ASIENTO"
             '
             'TODOSLOSASIENTOSToolStripMenuItem
             '
-            Me.TODOSLOSASIENTOSToolStripMenuItem.Image = Global.syscisepro.My.Resources.Resources.report
+            Me.TODOSLOSASIENTOSToolStripMenuItem.Image = Global.syscisepro.My.Resources.Resources.description_24dp_FILL0_wght400_GRAD0_opsz24__2_
+            Me.TODOSLOSASIENTOSToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.TODOSLOSASIENTOSToolStripMenuItem.Name = "TODOSLOSASIENTOSToolStripMenuItem"
-            Me.TODOSLOSASIENTOSToolStripMenuItem.Size = New System.Drawing.Size(190, 22)
+            Me.TODOSLOSASIENTOSToolStripMenuItem.Size = New System.Drawing.Size(198, 30)
             Me.TODOSLOSASIENTOSToolStripMenuItem.Text = "TODOS LOS ASIENTOS"
             '
             'btnExportar
             '
             Me.btnExportar.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnExportar.Image = Global.syscisepro.My.Resources.Resources.excel_icon
+            Me.btnExportar.Image = Global.syscisepro.My.Resources.Resources.icons8_excel_48
             Me.btnExportar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnExportar.Name = "btnExportar"
-            Me.btnExportar.Size = New System.Drawing.Size(90, 20)
+            Me.btnExportar.Size = New System.Drawing.Size(98, 28)
             Me.btnExportar.Text = "EXPORTAR"
             '
             'CheckBox1
             '
             Me.CheckBox1.AutoSize = True
+            Me.CheckBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(187, Byte), Integer), CType(CType(206, Byte), Integer), CType(CType(230, Byte), Integer))
             Me.CheckBox1.Location = New System.Drawing.Point(1059, 5)
             Me.CheckBox1.Name = "CheckBox1"
             Me.CheckBox1.Size = New System.Drawing.Size(156, 17)
             Me.CheckBox1.TabIndex = 187
             Me.CheckBox1.Text = "OCULTAR CUENTAS $ 0.00"
-            Me.CheckBox1.UseVisualStyleBackColor = True
+            Me.CheckBox1.UseVisualStyleBackColor = False
             '
             'FormAsientosLibroDiario
             '
@@ -467,6 +470,10 @@
             Me.MinimizeBox = False
             Me.Name = "FormAsientosLibroDiario"
             Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+            Me.StateActive.Border.DrawBorders = CType((((Krypton.Toolkit.PaletteDrawBorders.Top Or Krypton.Toolkit.PaletteDrawBorders.Bottom) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Left) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Right), Krypton.Toolkit.PaletteDrawBorders)
+            Me.StateActive.Border.Rounding = 5.0!
             Me.Text = "ASIENTOS LIBRO DIARIO GENERAL"
             Me.gbRnagoFechas.ResumeLayout(False)
             Me.gbRnagoFechas.PerformLayout()
