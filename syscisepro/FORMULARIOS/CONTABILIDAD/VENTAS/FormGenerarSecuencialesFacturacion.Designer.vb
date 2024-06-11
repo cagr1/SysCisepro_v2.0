@@ -68,9 +68,10 @@
             Me.gbDatos.Controls.Add(Me.Label1)
             Me.gbDatos.Controls.Add(Me.txtCantidadFacturaSecuencial)
             Me.gbDatos.Controls.Add(Me.lblIdFacturaSecuencial)
-            Me.gbDatos.Location = New System.Drawing.Point(1, 26)
+            Me.gbDatos.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.gbDatos.Location = New System.Drawing.Point(1, 33)
             Me.gbDatos.Name = "gbDatos"
-            Me.gbDatos.Size = New System.Drawing.Size(610, 147)
+            Me.gbDatos.Size = New System.Drawing.Size(610, 134)
             Me.gbDatos.TabIndex = 33
             Me.gbDatos.TabStop = False
             Me.gbDatos.Text = "SECUENCIALES"
@@ -80,7 +81,7 @@
             Me.Label6.AutoSize = True
             Me.Label6.Location = New System.Drawing.Point(10, 100)
             Me.Label6.Name = "Label6"
-            Me.Label6.Size = New System.Drawing.Size(96, 13)
+            Me.Label6.Size = New System.Drawing.Size(98, 13)
             Me.Label6.TabIndex = 12
             Me.Label6.Text = "OBSERVACIONES:"
             '
@@ -90,7 +91,7 @@
             Me.txtObservacionesFacturaSecuenciales.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtObservacionesFacturaSecuenciales.Location = New System.Drawing.Point(108, 97)
             Me.txtObservacionesFacturaSecuenciales.Name = "txtObservacionesFacturaSecuenciales"
-            Me.txtObservacionesFacturaSecuenciales.Size = New System.Drawing.Size(492, 22)
+            Me.txtObservacionesFacturaSecuenciales.Size = New System.Drawing.Size(492, 21)
             Me.txtObservacionesFacturaSecuenciales.TabIndex = 11
             Me.txtObservacionesFacturaSecuenciales.Text = "..."
             '
@@ -99,7 +100,7 @@
             Me.Label5.AutoSize = True
             Me.Label5.Location = New System.Drawing.Point(421, 61)
             Me.Label5.Name = "Label5"
-            Me.Label5.Size = New System.Drawing.Size(64, 13)
+            Me.Label5.Size = New System.Drawing.Size(66, 13)
             Me.Label5.TabIndex = 10
             Me.Label5.Text = "SEC. FINAL:"
             '
@@ -109,7 +110,7 @@
             Me.txtFinalFacturaSecuencial.Location = New System.Drawing.Point(500, 58)
             Me.txtFinalFacturaSecuencial.Name = "txtFinalFacturaSecuencial"
             Me.txtFinalFacturaSecuencial.ReadOnly = True
-            Me.txtFinalFacturaSecuencial.Size = New System.Drawing.Size(100, 22)
+            Me.txtFinalFacturaSecuencial.Size = New System.Drawing.Size(100, 21)
             Me.txtFinalFacturaSecuencial.TabIndex = 9
             Me.txtFinalFacturaSecuencial.Text = "0"
             Me.txtFinalFacturaSecuencial.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -119,7 +120,7 @@
             Me.Label4.AutoSize = True
             Me.Label4.Location = New System.Drawing.Point(199, 61)
             Me.Label4.Name = "Label4"
-            Me.Label4.Size = New System.Drawing.Size(71, 13)
+            Me.Label4.Size = New System.Drawing.Size(73, 13)
             Me.Label4.TabIndex = 8
             Me.Label4.Text = "SEC. INICIAL:"
             '
@@ -129,7 +130,7 @@
             Me.txtInicialFacturaSecuencial.Location = New System.Drawing.Point(290, 58)
             Me.txtInicialFacturaSecuencial.Name = "txtInicialFacturaSecuencial"
             Me.txtInicialFacturaSecuencial.ReadOnly = True
-            Me.txtInicialFacturaSecuencial.Size = New System.Drawing.Size(100, 22)
+            Me.txtInicialFacturaSecuencial.Size = New System.Drawing.Size(100, 21)
             Me.txtInicialFacturaSecuencial.TabIndex = 7
             Me.txtInicialFacturaSecuencial.Text = "0"
             Me.txtInicialFacturaSecuencial.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -139,7 +140,7 @@
             Me.Label3.AutoSize = True
             Me.Label3.Location = New System.Drawing.Point(11, 61)
             Me.Label3.Name = "Label3"
-            Me.Label3.Size = New System.Drawing.Size(64, 13)
+            Me.Label3.Size = New System.Drawing.Size(63, 13)
             Me.Label3.TabIndex = 6
             Me.Label3.Text = "CANTIDAD:"
             '
@@ -158,7 +159,7 @@
             Me.Label2.AutoSize = True
             Me.Label2.Location = New System.Drawing.Point(421, 24)
             Me.Label2.Name = "Label2"
-            Me.Label2.Size = New System.Drawing.Size(116, 13)
+            Me.Label2.Size = New System.Drawing.Size(117, 13)
             Me.Label2.TabIndex = 4
             Me.Label2.Text = "ULTIMO SECUENCIAL:"
             '
@@ -166,7 +167,7 @@
             '
             Me.dtpFechaFacturaSecuenciales.Location = New System.Drawing.Point(108, 20)
             Me.dtpFechaFacturaSecuenciales.Name = "dtpFechaFacturaSecuenciales"
-            Me.dtpFechaFacturaSecuenciales.Size = New System.Drawing.Size(282, 22)
+            Me.dtpFechaFacturaSecuenciales.Size = New System.Drawing.Size(282, 21)
             Me.dtpFechaFacturaSecuenciales.TabIndex = 3
             '
             'Label1
@@ -183,7 +184,7 @@
             Me.txtCantidadFacturaSecuencial.BackColor = System.Drawing.Color.White
             Me.txtCantidadFacturaSecuencial.Location = New System.Drawing.Point(108, 58)
             Me.txtCantidadFacturaSecuencial.Name = "txtCantidadFacturaSecuencial"
-            Me.txtCantidadFacturaSecuencial.Size = New System.Drawing.Size(64, 22)
+            Me.txtCantidadFacturaSecuencial.Size = New System.Drawing.Size(64, 21)
             Me.txtCantidadFacturaSecuencial.TabIndex = 1
             Me.txtCantidadFacturaSecuencial.Text = "0"
             Me.txtCantidadFacturaSecuencial.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -199,8 +200,8 @@
             '
             'Label7
             '
-            Me.Label7.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label7.Location = New System.Drawing.Point(0, 173)
+            Me.Label7.Font = New System.Drawing.Font("Roboto", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Label7.Location = New System.Drawing.Point(0, 168)
             Me.Label7.Name = "Label7"
             Me.Label7.Size = New System.Drawing.Size(612, 20)
             Me.Label7.TabIndex = 6
@@ -225,7 +226,7 @@
             DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
             DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
             Me.dgvFacturaSecuenciales.DefaultCellStyle = DataGridViewCellStyle2
-            Me.dgvFacturaSecuenciales.Location = New System.Drawing.Point(1, 196)
+            Me.dgvFacturaSecuenciales.Location = New System.Drawing.Point(1, 190)
             Me.dgvFacturaSecuenciales.Name = "dgvFacturaSecuenciales"
             Me.dgvFacturaSecuenciales.ReadOnly = True
             Me.dgvFacturaSecuenciales.RowHeadersVisible = False
@@ -241,42 +242,44 @@
             Me.msKardex.Location = New System.Drawing.Point(0, 0)
             Me.msKardex.Name = "msKardex"
             Me.msKardex.Padding = New System.Windows.Forms.Padding(7, 2, 0, 2)
-            Me.msKardex.Size = New System.Drawing.Size(612, 24)
+            Me.msKardex.Size = New System.Drawing.Size(612, 32)
             Me.msKardex.TabIndex = 181
             Me.msKardex.Text = "msIngresoBodega"
             '
             'btnNuevo
             '
             Me.btnNuevo.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnNuevo.Image = Global.syscisepro.My.Resources.Resources.NuevoRegistro
+            Me.btnNuevo.Image = Global.syscisepro.My.Resources.Resources.add_circle_24dp_FILL0_wght400_GRAD0_opsz24__3_
             Me.btnNuevo.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnNuevo.Name = "btnNuevo"
-            Me.btnNuevo.Size = New System.Drawing.Size(70, 20)
+            Me.btnNuevo.Size = New System.Drawing.Size(78, 28)
             Me.btnNuevo.Text = "NUEVO"
             '
             'btnGuardar
             '
             Me.btnGuardar.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnGuardar.Image = Global.syscisepro.My.Resources.Resources.GuardarRegistro
+            Me.btnGuardar.Image = Global.syscisepro.My.Resources.Resources.save_24dp_FILL0_wght400_GRAD0_opsz24__2_
             Me.btnGuardar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnGuardar.Name = "btnGuardar"
-            Me.btnGuardar.Size = New System.Drawing.Size(84, 20)
+            Me.btnGuardar.Size = New System.Drawing.Size(92, 28)
             Me.btnGuardar.Text = "GUARDAR"
             '
             'btnCancelar
             '
             Me.btnCancelar.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnCancelar.Image = Global.syscisepro.My.Resources.Resources.cancel
+            Me.btnCancelar.Image = Global.syscisepro.My.Resources.Resources.cancel_24dp_FILL0_wght400_GRAD0_opsz24
+            Me.btnCancelar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnCancelar.Name = "btnCancelar"
-            Me.btnCancelar.Size = New System.Drawing.Size(91, 20)
+            Me.btnCancelar.Size = New System.Drawing.Size(99, 28)
             Me.btnCancelar.Text = "CANCELAR"
             '
             'btnReporte
             '
             Me.btnReporte.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnReporte.Image = Global.syscisepro.My.Resources.Resources.excel_icon
+            Me.btnReporte.Image = Global.syscisepro.My.Resources.Resources.icons8_excel_48
+            Me.btnReporte.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnReporte.Name = "btnReporte"
-            Me.btnReporte.Size = New System.Drawing.Size(91, 20)
+            Me.btnReporte.Size = New System.Drawing.Size(99, 28)
             Me.btnReporte.Text = "EXPORTAR"
             '
             'FormGenerarSecuencialesFacturacion
@@ -290,10 +293,13 @@
             Me.Controls.Add(Me.dgvFacturaSecuenciales)
             Me.Controls.Add(Me.gbDatos)
             Me.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
             Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
             Me.Name = "FormGenerarSecuencialesFacturacion"
             Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+            Me.StateActive.Border.DrawBorders = CType((((Krypton.Toolkit.PaletteDrawBorders.Top Or Krypton.Toolkit.PaletteDrawBorders.Bottom) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Left) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Right), Krypton.Toolkit.PaletteDrawBorders)
+            Me.StateActive.Border.Rounding = 5.0!
             Me.Text = "GENERAR SECUENCIALES FACTURACION"
             Me.gbDatos.ResumeLayout(False)
             Me.gbDatos.PerformLayout()

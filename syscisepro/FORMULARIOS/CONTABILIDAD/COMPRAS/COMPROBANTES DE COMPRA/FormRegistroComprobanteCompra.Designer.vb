@@ -23,21 +23,21 @@
         'No lo modifique con el editor de código.
         <System.Diagnostics.DebuggerStepThrough()> _
         Private Sub InitializeComponent()
-            Dim DataGridViewCellStyle46 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle47 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle48 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle49 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle50 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle51 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle52 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle53 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle54 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle55 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle56 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle57 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle60 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle58 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle59 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle31 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle32 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle33 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle34 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle35 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle36 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle37 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle38 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle39 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle40 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle41 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle42 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle45 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle43 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle44 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Me.gpComandos = New System.Windows.Forms.GroupBox()
             Me.lblEtiquetaIdComprobanteCompra = New System.Windows.Forms.Label()
             Me.lblIdComprobanteCompra = New System.Windows.Forms.Label()
@@ -304,7 +304,7 @@
             Me.gbTipoComprobanteCompra.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.gbTipoComprobanteCompra.Location = New System.Drawing.Point(1, 32)
             Me.gbTipoComprobanteCompra.Name = "gbTipoComprobanteCompra"
-            Me.gbTipoComprobanteCompra.Size = New System.Drawing.Size(427, 48)
+            Me.gbTipoComprobanteCompra.Size = New System.Drawing.Size(427, 45)
             Me.gbTipoComprobanteCompra.TabIndex = 46
             Me.gbTipoComprobanteCompra.TabStop = False
             Me.gbTipoComprobanteCompra.Text = "TIPO DE COMPROBANTE"
@@ -532,10 +532,10 @@
             Me.GroupBox1.BackColor = System.Drawing.Color.White
             Me.GroupBox1.Controls.Add(Me.dgvDetalleComprobanteRetencion)
             Me.GroupBox1.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.GroupBox1.Location = New System.Drawing.Point(1, 588)
+            Me.GroupBox1.Location = New System.Drawing.Point(1, 589)
             Me.GroupBox1.Name = "GroupBox1"
             Me.GroupBox1.Padding = New System.Windows.Forms.Padding(2, 2, 2, 3)
-            Me.GroupBox1.Size = New System.Drawing.Size(789, 103)
+            Me.GroupBox1.Size = New System.Drawing.Size(789, 113)
             Me.GroupBox1.TabIndex = 70
             Me.GroupBox1.TabStop = False
             '
@@ -544,15 +544,15 @@
             Me.dgvDetalleComprobanteRetencion.AllowUserToAddRows = False
             Me.dgvDetalleComprobanteRetencion.AllowUserToDeleteRows = False
             Me.dgvDetalleComprobanteRetencion.AllowUserToResizeRows = False
-            DataGridViewCellStyle46.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-            Me.dgvDetalleComprobanteRetencion.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle46
+            DataGridViewCellStyle31.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+            Me.dgvDetalleComprobanteRetencion.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle31
             Me.dgvDetalleComprobanteRetencion.BackgroundColor = System.Drawing.Color.White
             Me.dgvDetalleComprobanteRetencion.BorderStyle = System.Windows.Forms.BorderStyle.None
             Me.dgvDetalleComprobanteRetencion.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
-            DataGridViewCellStyle47.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-            DataGridViewCellStyle47.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            DataGridViewCellStyle47.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-            Me.dgvDetalleComprobanteRetencion.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle47
+            DataGridViewCellStyle32.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+            DataGridViewCellStyle32.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle32.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+            Me.dgvDetalleComprobanteRetencion.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle32
             Me.dgvDetalleComprobanteRetencion.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.EjercicioFiscal, Me.CodigoRetencion, Me.BaseImponible, Me.Impuesto, Me.PorcentajeRetencion, Me.ValorRetenido, Me.Column1, Me.Column2})
             Me.dgvDetalleComprobanteRetencion.Dock = System.Windows.Forms.DockStyle.Fill
             Me.dgvDetalleComprobanteRetencion.GridColor = System.Drawing.SystemColors.ControlLight
@@ -563,13 +563,13 @@
             Me.dgvDetalleComprobanteRetencion.RowHeadersVisible = False
             Me.dgvDetalleComprobanteRetencion.RowTemplate.DefaultCellStyle.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.dgvDetalleComprobanteRetencion.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvDetalleComprobanteRetencion.Size = New System.Drawing.Size(785, 83)
+            Me.dgvDetalleComprobanteRetencion.Size = New System.Drawing.Size(785, 93)
             Me.dgvDetalleComprobanteRetencion.TabIndex = 49
             '
             'EjercicioFiscal
             '
-            DataGridViewCellStyle48.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.EjercicioFiscal.DefaultCellStyle = DataGridViewCellStyle48
+            DataGridViewCellStyle33.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.EjercicioFiscal.DefaultCellStyle = DataGridViewCellStyle33
             Me.EjercicioFiscal.HeaderText = "AÑO"
             Me.EjercicioFiscal.Name = "EjercicioFiscal"
             Me.EjercicioFiscal.ReadOnly = True
@@ -578,8 +578,8 @@
             '
             'CodigoRetencion
             '
-            DataGridViewCellStyle49.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.CodigoRetencion.DefaultCellStyle = DataGridViewCellStyle49
+            DataGridViewCellStyle34.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.CodigoRetencion.DefaultCellStyle = DataGridViewCellStyle34
             Me.CodigoRetencion.HeaderText = "CODIGO"
             Me.CodigoRetencion.Name = "CodigoRetencion"
             Me.CodigoRetencion.ReadOnly = True
@@ -588,8 +588,8 @@
             '
             'BaseImponible
             '
-            DataGridViewCellStyle50.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.BaseImponible.DefaultCellStyle = DataGridViewCellStyle50
+            DataGridViewCellStyle35.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.BaseImponible.DefaultCellStyle = DataGridViewCellStyle35
             Me.BaseImponible.HeaderText = "BASE IMPONIBLE"
             Me.BaseImponible.Name = "BaseImponible"
             Me.BaseImponible.ReadOnly = True
@@ -598,8 +598,8 @@
             '
             'Impuesto
             '
-            DataGridViewCellStyle51.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Impuesto.DefaultCellStyle = DataGridViewCellStyle51
+            DataGridViewCellStyle36.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Impuesto.DefaultCellStyle = DataGridViewCellStyle36
             Me.Impuesto.HeaderText = "IMPUESTO"
             Me.Impuesto.Name = "Impuesto"
             Me.Impuesto.ReadOnly = True
@@ -608,8 +608,8 @@
             '
             'PorcentajeRetencion
             '
-            DataGridViewCellStyle52.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.PorcentajeRetencion.DefaultCellStyle = DataGridViewCellStyle52
+            DataGridViewCellStyle37.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.PorcentajeRetencion.DefaultCellStyle = DataGridViewCellStyle37
             Me.PorcentajeRetencion.HeaderText = "%"
             Me.PorcentajeRetencion.Name = "PorcentajeRetencion"
             Me.PorcentajeRetencion.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
@@ -617,8 +617,8 @@
             '
             'ValorRetenido
             '
-            DataGridViewCellStyle53.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.ValorRetenido.DefaultCellStyle = DataGridViewCellStyle53
+            DataGridViewCellStyle38.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.ValorRetenido.DefaultCellStyle = DataGridViewCellStyle38
             Me.ValorRetenido.HeaderText = "VALOR"
             Me.ValorRetenido.Name = "ValorRetenido"
             Me.ValorRetenido.ReadOnly = True
@@ -627,16 +627,16 @@
             '
             'Column1
             '
-            DataGridViewCellStyle54.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-            Me.Column1.DefaultCellStyle = DataGridViewCellStyle54
+            DataGridViewCellStyle39.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+            Me.Column1.DefaultCellStyle = DataGridViewCellStyle39
             Me.Column1.HeaderText = "CODIGO"
             Me.Column1.Name = "Column1"
             Me.Column1.ReadOnly = True
             '
             'Column2
             '
-            DataGridViewCellStyle55.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-            Me.Column2.DefaultCellStyle = DataGridViewCellStyle55
+            DataGridViewCellStyle40.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+            Me.Column2.DefaultCellStyle = DataGridViewCellStyle40
             Me.Column2.HeaderText = "CUENTA"
             Me.Column2.Name = "Column2"
             Me.Column2.ReadOnly = True
@@ -1444,9 +1444,10 @@
             Me.gbTipoEmision.Controls.Add(Me.gbConceptoCompra)
             Me.gbTipoEmision.Enabled = False
             Me.gbTipoEmision.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.gbTipoEmision.ForeColor = System.Drawing.Color.White
             Me.gbTipoEmision.Location = New System.Drawing.Point(448, -3)
             Me.gbTipoEmision.Name = "gbTipoEmision"
-            Me.gbTipoEmision.Size = New System.Drawing.Size(349, 34)
+            Me.gbTipoEmision.Size = New System.Drawing.Size(340, 33)
             Me.gbTipoEmision.TabIndex = 88
             Me.gbTipoEmision.TabStop = False
             '
@@ -1454,7 +1455,8 @@
             '
             Me.rbTipoEmisionIndisponibilidadSistema.AutoSize = True
             Me.rbTipoEmisionIndisponibilidadSistema.Enabled = False
-            Me.rbTipoEmisionIndisponibilidadSistema.Location = New System.Drawing.Point(160, 9)
+            Me.rbTipoEmisionIndisponibilidadSistema.ForeColor = System.Drawing.Color.White
+            Me.rbTipoEmisionIndisponibilidadSistema.Location = New System.Drawing.Point(160, 11)
             Me.rbTipoEmisionIndisponibilidadSistema.Name = "rbTipoEmisionIndisponibilidadSistema"
             Me.rbTipoEmisionIndisponibilidadSistema.Size = New System.Drawing.Size(133, 17)
             Me.rbTipoEmisionIndisponibilidadSistema.TabIndex = 6
@@ -1466,6 +1468,7 @@
             Me.rbTipoEmisionNormal.AutoSize = True
             Me.rbTipoEmisionNormal.Checked = True
             Me.rbTipoEmisionNormal.Enabled = False
+            Me.rbTipoEmisionNormal.ForeColor = System.Drawing.Color.White
             Me.rbTipoEmisionNormal.Location = New System.Drawing.Point(91, 9)
             Me.rbTipoEmisionNormal.Name = "rbTipoEmisionNormal"
             Me.rbTipoEmisionNormal.Size = New System.Drawing.Size(61, 17)
@@ -1478,6 +1481,7 @@
             '
             Me.Label20.AutoSize = True
             Me.Label20.Font = New System.Drawing.Font("Consolas", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Label20.ForeColor = System.Drawing.Color.White
             Me.Label20.Location = New System.Drawing.Point(14, 9)
             Me.Label20.Name = "Label20"
             Me.Label20.Size = New System.Drawing.Size(63, 15)
@@ -1491,9 +1495,10 @@
             Me.gbTipoAnbiente.Controls.Add(Me.rbPruebas)
             Me.gbTipoAnbiente.Enabled = False
             Me.gbTipoAnbiente.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.gbTipoAnbiente.ForeColor = System.Drawing.Color.White
             Me.gbTipoAnbiente.Location = New System.Drawing.Point(220, -3)
             Me.gbTipoAnbiente.Name = "gbTipoAnbiente"
-            Me.gbTipoAnbiente.Size = New System.Drawing.Size(228, 34)
+            Me.gbTipoAnbiente.Size = New System.Drawing.Size(228, 33)
             Me.gbTipoAnbiente.TabIndex = 89
             Me.gbTipoAnbiente.TabStop = False
             '
@@ -1502,7 +1507,8 @@
             Me.rbProduccion.AutoSize = True
             Me.rbProduccion.Checked = True
             Me.rbProduccion.Enabled = False
-            Me.rbProduccion.Location = New System.Drawing.Point(139, 9)
+            Me.rbProduccion.ForeColor = System.Drawing.Color.White
+            Me.rbProduccion.Location = New System.Drawing.Point(139, 10)
             Me.rbProduccion.Name = "rbProduccion"
             Me.rbProduccion.Size = New System.Drawing.Size(85, 17)
             Me.rbProduccion.TabIndex = 4
@@ -1514,7 +1520,8 @@
             '
             Me.Label18.AutoSize = True
             Me.Label18.Font = New System.Drawing.Font("Consolas", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label18.Location = New System.Drawing.Point(4, 9)
+            Me.Label18.ForeColor = System.Drawing.Color.White
+            Me.Label18.Location = New System.Drawing.Point(4, 11)
             Me.Label18.Name = "Label18"
             Me.Label18.Size = New System.Drawing.Size(70, 15)
             Me.Label18.TabIndex = 15
@@ -1524,7 +1531,8 @@
             '
             Me.rbPruebas.AutoSize = True
             Me.rbPruebas.Enabled = False
-            Me.rbPruebas.Location = New System.Drawing.Point(74, 9)
+            Me.rbPruebas.ForeColor = System.Drawing.Color.White
+            Me.rbPruebas.Location = New System.Drawing.Point(74, 11)
             Me.rbPruebas.Name = "rbPruebas"
             Me.rbPruebas.Size = New System.Drawing.Size(67, 17)
             Me.rbPruebas.TabIndex = 3
@@ -1538,6 +1546,7 @@
             Me.gbPtoEmision.Controls.Add(Me.rbPtoEmision001)
             Me.gbPtoEmision.Enabled = False
             Me.gbPtoEmision.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.gbPtoEmision.ForeColor = System.Drawing.Color.White
             Me.gbPtoEmision.Location = New System.Drawing.Point(1, -3)
             Me.gbPtoEmision.Name = "gbPtoEmision"
             Me.gbPtoEmision.Size = New System.Drawing.Size(220, 34)
@@ -1548,6 +1557,7 @@
             '
             Me.Label19.AutoSize = True
             Me.Label19.Font = New System.Drawing.Font("Consolas", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Label19.ForeColor = System.Drawing.Color.White
             Me.Label19.Location = New System.Drawing.Point(4, 9)
             Me.Label19.Name = "Label19"
             Me.Label19.Size = New System.Drawing.Size(91, 15)
@@ -1558,6 +1568,7 @@
             '
             Me.rbPtoEmision002.AutoSize = True
             Me.rbPtoEmision002.Checked = True
+            Me.rbPtoEmision002.ForeColor = System.Drawing.Color.White
             Me.rbPtoEmision002.Location = New System.Drawing.Point(141, 9)
             Me.rbPtoEmision002.Name = "rbPtoEmision002"
             Me.rbPtoEmision002.Size = New System.Drawing.Size(43, 17)
@@ -1569,6 +1580,7 @@
             'rbPtoEmision001
             '
             Me.rbPtoEmision001.AutoSize = True
+            Me.rbPtoEmision001.ForeColor = System.Drawing.Color.White
             Me.rbPtoEmision001.Location = New System.Drawing.Point(98, 9)
             Me.rbPtoEmision001.Name = "rbPtoEmision001"
             Me.rbPtoEmision001.Size = New System.Drawing.Size(43, 17)
@@ -1632,24 +1644,24 @@
             '
             Me.dgvAsientosDiario.AllowUserToDeleteRows = False
             Me.dgvAsientosDiario.AllowUserToResizeRows = False
-            DataGridViewCellStyle56.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-            Me.dgvAsientosDiario.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle56
+            DataGridViewCellStyle41.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+            Me.dgvAsientosDiario.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle41
             Me.dgvAsientosDiario.BackgroundColor = System.Drawing.Color.White
             Me.dgvAsientosDiario.BorderStyle = System.Windows.Forms.BorderStyle.None
             Me.dgvAsientosDiario.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
-            DataGridViewCellStyle57.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-            DataGridViewCellStyle57.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            DataGridViewCellStyle57.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-            Me.dgvAsientosDiario.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle57
+            DataGridViewCellStyle42.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+            DataGridViewCellStyle42.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle42.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+            Me.dgvAsientosDiario.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle42
             Me.dgvAsientosDiario.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.eliminarItem, Me.CODIGO, Me.CUENTA, Me.VALOR, Me.IVA, Me.PORCENTAJE})
-            DataGridViewCellStyle60.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-            DataGridViewCellStyle60.BackColor = System.Drawing.SystemColors.Window
-            DataGridViewCellStyle60.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            DataGridViewCellStyle60.ForeColor = System.Drawing.SystemColors.ControlText
-            DataGridViewCellStyle60.SelectionBackColor = System.Drawing.SystemColors.Highlight
-            DataGridViewCellStyle60.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-            DataGridViewCellStyle60.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-            Me.dgvAsientosDiario.DefaultCellStyle = DataGridViewCellStyle60
+            DataGridViewCellStyle45.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+            DataGridViewCellStyle45.BackColor = System.Drawing.SystemColors.Window
+            DataGridViewCellStyle45.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle45.ForeColor = System.Drawing.SystemColors.ControlText
+            DataGridViewCellStyle45.SelectionBackColor = System.Drawing.SystemColors.Highlight
+            DataGridViewCellStyle45.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+            DataGridViewCellStyle45.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+            Me.dgvAsientosDiario.DefaultCellStyle = DataGridViewCellStyle45
             Me.dgvAsientosDiario.Dock = System.Windows.Forms.DockStyle.Fill
             Me.dgvAsientosDiario.GridColor = System.Drawing.SystemColors.ControlLight
             Me.dgvAsientosDiario.Location = New System.Drawing.Point(2, 17)
@@ -1662,12 +1674,12 @@
             '
             'eliminarItem
             '
-            DataGridViewCellStyle58.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-            DataGridViewCellStyle58.BackColor = System.Drawing.Color.DarkRed
-            DataGridViewCellStyle58.ForeColor = System.Drawing.Color.White
-            DataGridViewCellStyle58.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
-            DataGridViewCellStyle58.SelectionForeColor = System.Drawing.Color.White
-            Me.eliminarItem.DefaultCellStyle = DataGridViewCellStyle58
+            DataGridViewCellStyle43.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+            DataGridViewCellStyle43.BackColor = System.Drawing.Color.DarkRed
+            DataGridViewCellStyle43.ForeColor = System.Drawing.Color.White
+            DataGridViewCellStyle43.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
+            DataGridViewCellStyle43.SelectionForeColor = System.Drawing.Color.White
+            Me.eliminarItem.DefaultCellStyle = DataGridViewCellStyle43
             Me.eliminarItem.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.eliminarItem.HeaderText = "SUPR"
             Me.eliminarItem.Name = "eliminarItem"
@@ -1686,8 +1698,8 @@
             '
             'CUENTA
             '
-            DataGridViewCellStyle59.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-            Me.CUENTA.DefaultCellStyle = DataGridViewCellStyle59
+            DataGridViewCellStyle44.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+            Me.CUENTA.DefaultCellStyle = DataGridViewCellStyle44
             Me.CUENTA.HeaderText = "CUENTA"
             Me.CUENTA.Name = "CUENTA"
             Me.CUENTA.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
@@ -1716,7 +1728,7 @@
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.AutoScroll = True
-            Me.ClientSize = New System.Drawing.Size(792, 694)
+            Me.ClientSize = New System.Drawing.Size(792, 706)
             Me.Controls.Add(Me.gbRetencion)
             Me.Controls.Add(Me.gbObservaciones)
             Me.Controls.Add(Me.gbNombreComercialProveedor)

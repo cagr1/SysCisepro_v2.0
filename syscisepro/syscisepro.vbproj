@@ -4241,6 +4241,11 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\send_24dp.png" />
+    <None Include="Resources\record_voice_over_24dp.png" />
+    <None Include="Resources\voice_over_off_24dp.png" />
+    <None Include="Resources\person_edit_24dp_FILL0_wght400_GRAD0_opsz24.png" />
+    <None Include="Resources\person_cancel_24dp_FILL0_wght400_GRAD0_opsz24.png" />
     <None Include="Resources\logout_24dp_FILL0_wght400_GRAD0_opsz24.png" />
     <None Include="Resources\icons8-excel-48.png" />
     <None Include="Resources\do_not_disturb_on_24dp_FILL0_wght400_GRAD0_opsz24.png" />

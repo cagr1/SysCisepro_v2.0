@@ -1,8 +1,8 @@
 ﻿Namespace FORMULARIOS.CONTABILIDAD.VENTAS
     <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
     Partial Class FormAnularNotaCredito
-        Inherits System.Windows.Forms.Form
-
+        'Inherits System.Windows.Forms.Form
+        Inherits Krypton.Toolkit.KryptonForm
         'Form reemplaza a Dispose para limpiar la lista de componentes.
         <System.Diagnostics.DebuggerNonUserCode()> _
         Protected Overrides Sub Dispose(ByVal disposing As Boolean)
@@ -69,7 +69,7 @@
             Me.gbClienteGeneral.Controls.Add(Me.lblIdClienteGeneral)
             Me.gbClienteGeneral.Controls.Add(Me.txtNombreComercialCliente)
             Me.gbClienteGeneral.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.gbClienteGeneral.Location = New System.Drawing.Point(248, 26)
+            Me.gbClienteGeneral.Location = New System.Drawing.Point(244, 35)
             Me.gbClienteGeneral.Name = "gbClienteGeneral"
             Me.gbClienteGeneral.Size = New System.Drawing.Size(649, 41)
             Me.gbClienteGeneral.TabIndex = 107
@@ -155,7 +155,7 @@
             Me.gbFacturaVenta.Controls.Add(Me.dgvNotaCredito)
             Me.gbFacturaVenta.Controls.Add(Me.dgvPagosFacturaVenta)
             Me.gbFacturaVenta.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.gbFacturaVenta.Location = New System.Drawing.Point(1, 68)
+            Me.gbFacturaVenta.Location = New System.Drawing.Point(1, 76)
             Me.gbFacturaVenta.Name = "gbFacturaVenta"
             Me.gbFacturaVenta.Size = New System.Drawing.Size(896, 685)
             Me.gbFacturaVenta.TabIndex = 104
@@ -241,7 +241,7 @@
             Me.gbBuscarNotaCredito.Controls.Add(Me.btnBuscarAsiento)
             Me.gbBuscarNotaCredito.Controls.Add(Me.txtNumeroFacturaBuscar)
             Me.gbBuscarNotaCredito.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.gbBuscarNotaCredito.Location = New System.Drawing.Point(1, 26)
+            Me.gbBuscarNotaCredito.Location = New System.Drawing.Point(1, 34)
             Me.gbBuscarNotaCredito.Name = "gbBuscarNotaCredito"
             Me.gbBuscarNotaCredito.Size = New System.Drawing.Size(241, 41)
             Me.gbBuscarNotaCredito.TabIndex = 95
@@ -251,14 +251,14 @@
             'btnBuscarAsiento
             '
             Me.btnBuscarAsiento.BackColor = System.Drawing.Color.White
+            Me.btnBuscarAsiento.FlatAppearance.BorderSize = 0
+            Me.btnBuscarAsiento.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.btnBuscarAsiento.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnBuscarAsiento.Image = CType(resources.GetObject("btnBuscarAsiento.Image"), System.Drawing.Image)
-            Me.btnBuscarAsiento.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-            Me.btnBuscarAsiento.Location = New System.Drawing.Point(124, 13)
+            Me.btnBuscarAsiento.Image = Global.syscisepro.My.Resources.Resources.search_24dp_FILL0_wght400_GRAD0_opsz24__2_
+            Me.btnBuscarAsiento.Location = New System.Drawing.Point(135, 10)
             Me.btnBuscarAsiento.Name = "btnBuscarAsiento"
-            Me.btnBuscarAsiento.Size = New System.Drawing.Size(84, 23)
+            Me.btnBuscarAsiento.Size = New System.Drawing.Size(28, 28)
             Me.btnBuscarAsiento.TabIndex = 26
-            Me.btnBuscarAsiento.Text = "BUSCAR #"
             Me.btnBuscarAsiento.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
             Me.btnBuscarAsiento.UseVisualStyleBackColor = False
             '
@@ -272,29 +272,31 @@
             '
             'MenuStrip1
             '
+            Me.MenuStrip1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
             Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem1, Me.btnGuardar})
             Me.MenuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow
             Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
             Me.MenuStrip1.Name = "MenuStrip1"
             Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(7, 2, 0, 2)
-            Me.MenuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
-            Me.MenuStrip1.Size = New System.Drawing.Size(897, 24)
+            Me.MenuStrip1.Size = New System.Drawing.Size(897, 32)
             Me.MenuStrip1.TabIndex = 190
             Me.MenuStrip1.Text = "msIngresoBodega"
             '
             'ToolStripMenuItem1
             '
-            Me.ToolStripMenuItem1.Image = Global.syscisepro.My.Resources.Resources.BuscarRegistro
+            Me.ToolStripMenuItem1.Image = Global.syscisepro.My.Resources.Resources.search_24dp_FILL0_wght400_GRAD0_opsz24__2_
+            Me.ToolStripMenuItem1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
-            Me.ToolStripMenuItem1.Size = New System.Drawing.Size(140, 20)
-            Me.ToolStripMenuItem1.Text = "CARGAR FACTURAS"
+            Me.ToolStripMenuItem1.Size = New System.Drawing.Size(87, 28)
+            Me.ToolStripMenuItem1.Text = "BUSCAR"
             '
             'btnGuardar
             '
             Me.btnGuardar.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnGuardar.Image = Global.syscisepro.My.Resources.Resources.EliminarRegistro
+            Me.btnGuardar.Image = Global.syscisepro.My.Resources.Resources.do_not_disturb_on_24dp_FILL0_wght400_GRAD0_opsz24
+            Me.btnGuardar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnGuardar.Name = "btnGuardar"
-            Me.btnGuardar.Size = New System.Drawing.Size(77, 20)
+            Me.btnGuardar.Size = New System.Drawing.Size(85, 28)
             Me.btnGuardar.Text = "ANULAR"
             '
             'FormAnularNotaCredito
@@ -302,15 +304,18 @@
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.BackColor = System.Drawing.Color.White
-            Me.ClientSize = New System.Drawing.Size(897, 754)
+            Me.ClientSize = New System.Drawing.Size(897, 758)
             Me.Controls.Add(Me.gbBuscarNotaCredito)
             Me.Controls.Add(Me.MenuStrip1)
             Me.Controls.Add(Me.gbClienteGeneral)
             Me.Controls.Add(Me.gbFacturaVenta)
-            Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
             Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
             Me.Name = "FormAnularNotaCredito"
             Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+            Me.StateActive.Border.DrawBorders = CType((((Krypton.Toolkit.PaletteDrawBorders.Top Or Krypton.Toolkit.PaletteDrawBorders.Bottom) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Left) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Right), Krypton.Toolkit.PaletteDrawBorders)
+            Me.StateActive.Border.Rounding = 5.0!
             Me.Text = "ANULAR NOTA CRÉDITO"
             Me.gbClienteGeneral.ResumeLayout(False)
             Me.gbClienteGeneral.PerformLayout()

@@ -1,8 +1,8 @@
 ﻿Namespace FORMULARIOS.CONTABILIDAD.VENTAS
     <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
     Partial Class FormReporteVentas
-        Inherits System.Windows.Forms.Form
-
+        'Inherits System.Windows.Forms.Form
+        Inherits Krypton.Toolkit.KryptonForm
         'Form reemplaza a Dispose para limpiar la lista de componentes.
         <System.Diagnostics.DebuggerNonUserCode()> _
         Protected Overrides Sub Dispose(ByVal disposing As Boolean)
@@ -43,7 +43,7 @@
             Me.GroupBox1.Controls.Add(Me.Label2)
             Me.GroupBox1.Controls.Add(Me.Label1)
             Me.GroupBox1.Dock = System.Windows.Forms.DockStyle.Top
-            Me.GroupBox1.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.GroupBox1.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.GroupBox1.Location = New System.Drawing.Point(0, 0)
             Me.GroupBox1.Name = "GroupBox1"
             Me.GroupBox1.Size = New System.Drawing.Size(1018, 48)
@@ -55,16 +55,16 @@
             Me.lblFechaFinal.AutoSize = True
             Me.lblFechaFinal.Location = New System.Drawing.Point(225, 16)
             Me.lblFechaFinal.Name = "lblFechaFinal"
-            Me.lblFechaFinal.Size = New System.Drawing.Size(67, 13)
+            Me.lblFechaFinal.Size = New System.Drawing.Size(41, 13)
             Me.lblFechaFinal.TabIndex = 8
             Me.lblFechaFinal.Text = "../../...."
             '
             'lblFechaInicial
             '
             Me.lblFechaInicial.AutoSize = True
-            Me.lblFechaInicial.Location = New System.Drawing.Point(49, 16)
+            Me.lblFechaInicial.Location = New System.Drawing.Point(51, 16)
             Me.lblFechaInicial.Name = "lblFechaInicial"
-            Me.lblFechaInicial.Size = New System.Drawing.Size(67, 13)
+            Me.lblFechaInicial.Size = New System.Drawing.Size(41, 13)
             Me.lblFechaInicial.TabIndex = 7
             Me.lblFechaInicial.Text = "../../...."
             '
@@ -73,7 +73,7 @@
             Me.Label2.AutoSize = True
             Me.Label2.Location = New System.Drawing.Point(6, 16)
             Me.Label2.Name = "Label2"
-            Me.Label2.Size = New System.Drawing.Size(37, 13)
+            Me.Label2.Size = New System.Drawing.Size(38, 13)
             Me.Label2.TabIndex = 6
             Me.Label2.Text = "Desde"
             '
@@ -122,6 +122,10 @@
             Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
             Me.Name = "FormReporteVentas"
             Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+            Me.StateActive.Border.DrawBorders = CType((((Krypton.Toolkit.PaletteDrawBorders.Top Or Krypton.Toolkit.PaletteDrawBorders.Bottom) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Left) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Right), Krypton.Toolkit.PaletteDrawBorders)
+            Me.StateActive.Border.Rounding = 5.0!
             Me.Text = "REPORTE DE VENTAS"
             Me.GroupBox1.ResumeLayout(False)
             Me.GroupBox1.PerformLayout()

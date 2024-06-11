@@ -355,7 +355,7 @@ Namespace FORMULARIOS.OPERACIONES
                 ' lista libre hoy
                 DataGridView1.Rows.Clear()
                 For Each lrow As DataRow In datosl.Rows
-                    DataGridView1.Rows.Add(lrow.Item(0), lrow.Item(1), lrow.Item(2), lrow.Item(3), lrow.Item(4), lrow.Item(5), String.Empty) 
+                    DataGridView1.Rows.Add(lrow.Item(0), lrow.Item(1), lrow.Item(2), lrow.Item(3), lrow.Item(4), lrow.Item(5), String.Empty)
                 Next
 
                 ' ver en el dia
@@ -572,7 +572,7 @@ Namespace FORMULARIOS.OPERACIONES
                 End With
                 _sqlCommands.Add(_objAsignacionPersonal.RegistararNuevoAsignacionPersonalComman())
 
-                
+
                 Dim multas As Integer = _objAsignacionPersonal.BuscarMultasParaSancionxId(_tipoCon, CInt(row.Cells(3).Value), fechaDesde, fechaHasta)
                 Dim Valor1 As Integer = _objRegistroSancion.ActualizarValorSancion(_tipoCon, CInt(row.Cells(3).Value), fechaDesde, fechaHasta, CInt(row.Cells(2).Value))
                 Dim Valor2 As Decimal = _objRegistroSancion.ValorSancion(_tipoCon)
@@ -651,7 +651,7 @@ Namespace FORMULARIOS.OPERACIONES
 
                 End If
 
-                
+
                 'Registro de Multas x Atrasos
 
                 Dim time As String = row.Cells(11).Value.ToString()
@@ -723,7 +723,7 @@ Namespace FORMULARIOS.OPERACIONES
                 id += 1
             Next
 
-            
+
 
 
 
@@ -755,7 +755,7 @@ Namespace FORMULARIOS.OPERACIONES
                 End With
                 _sqlCommands.Add(_objAsignacionPersonal.RegistararNuevoAsignacionPersonalComman())
 
-                
+
                 Dim multas As Integer = _objAsignacionPersonal.BuscarMultasParaSancionxId(_tipoCon, CInt(row.Cells(3).Value), fechaDesde, fechaHasta)
                 Dim Valor1 As Integer = _objRegistroSancion.ActualizarValorSancion(_tipoCon, CInt(row.Cells(3).Value), fechaDesde, fechaHasta, CInt(row.Cells(2).Value))
                 Dim Valor2 As Decimal = _objRegistroSancion.ValorSancion(_tipoCon)
@@ -836,7 +836,7 @@ Namespace FORMULARIOS.OPERACIONES
                         _sqlCommands.Add(_objRegistroDescuento.NuevoRegistroDescuentoCommands())
 
                     End If
-                    
+
                     id += 1
                 End If
 
@@ -911,7 +911,7 @@ Namespace FORMULARIOS.OPERACIONES
             Next
 
 
-             
+
 
             Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, String.Empty)
             MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
@@ -1088,7 +1088,7 @@ Namespace FORMULARIOS.OPERACIONES
                         dgvDia.CurrentRow.Cells(11).Style.BackColor = dgvDia.CurrentRow.Cells(0).Style.BackColor
                         dgvDia.CurrentRow.Tag = tg(0) & "|" & tg(1) & "|" & tg(2) & "|" & 0
                     Else
-                        If dgvDia.CurrentRow.Cells(10).Value = "ASISTENCIA" Then                            
+                        If dgvDia.CurrentRow.Cells(10).Value = "ASISTENCIA" Then
                             dgvDia.CurrentRow.Cells(11).Value = ValidationForms.FechaActual(_tipoCon).ToString("HH:mm")
                             dgvDia.CurrentRow.Cells(11).Style.BackColor = Color.FromArgb(255, 34, 139, 34)
                         Else
@@ -1634,8 +1634,8 @@ Namespace FORMULARIOS.OPERACIONES
         End Sub
 
         Private Function NumToCharExcel(ByVal i As Integer) As String
-            Dim data() = {"A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "AA", "AB", "AC", "AD", "AE", "AF", "AG", "AH", "AI", "AJ", _
-                          "AK", "AL", "AM", "AN", "AO", "AP", "AQ", "AR", "AS", "AT", "AU", "AV", "AW", "AX", "AY", "AZ", "BA", "BB", "BC", "BD", "BE", "BF", "BG", "BH", "BI", "BJ", "BK", "BL", "BM", "BN", "BO", "BP", _
+            Dim data() = {"A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "AA", "AB", "AC", "AD", "AE", "AF", "AG", "AH", "AI", "AJ",
+                          "AK", "AL", "AM", "AN", "AO", "AP", "AQ", "AR", "AS", "AT", "AU", "AV", "AW", "AX", "AY", "AZ", "BA", "BB", "BC", "BD", "BE", "BF", "BG", "BH", "BI", "BJ", "BK", "BL", "BM", "BN", "BO", "BP",
                           "BQ", "BR", "BS", "BT", "BU", "BV", "BW", "BX", "BY", "BZ"}
             Return data(i)
         End Function
@@ -1976,7 +1976,7 @@ Namespace FORMULARIOS.OPERACIONES
 
             _hoy = ValidationForms.FechaActual(_tipoCon)
 
-            If _hoy > DateTimePicker5.Value.AddDays(2).AddHours(2) Then
+            If Not Admin And _hoy > DateTimePicker5.Value.AddDays(2).AddHours(2) Then
                 MessageBox.Show("HAN PASADO MÁS DE 48H, NO SE PUEDE MODIFICAR EL REPORTE CORRESPONDIENTE!!", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
                 Return
             End If
@@ -2036,7 +2036,7 @@ Namespace FORMULARIOS.OPERACIONES
 
             _hoy = ValidationForms.FechaActual(_tipoCon)
 
-            If _hoy > DateTimePicker5.Value.AddDays(2).AddHours(2) Then
+            If Not Admin And _hoy > DateTimePicker5.Value.AddDays(2).AddHours(2) Then
                 MessageBox.Show("HAN PASADO MÁS DE 48H, NO SE PUEDE MODIFICAR EL REPORTE CORRESPONDIENTE!!", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
                 Return
             End If

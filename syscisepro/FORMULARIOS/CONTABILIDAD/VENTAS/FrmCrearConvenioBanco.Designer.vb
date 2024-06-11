@@ -1,8 +1,8 @@
 ﻿Namespace FORMULARIOS.CONTABILIDAD.VENTAS
     <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
     Partial Class FrmCrearConvenioBanco
-        Inherits System.Windows.Forms.Form
-
+        'Inherits System.Windows.Forms.Form
+        Inherits Krypton.Toolkit.KryptonForm
         'Form reemplaza a Dispose para limpiar la lista de componentes.
         <System.Diagnostics.DebuggerNonUserCode()> _
         Protected Overrides Sub Dispose(ByVal disposing As Boolean)
@@ -188,24 +188,28 @@
             '
             'Button2
             '
+            Me.Button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(83, Byte), Integer), CType(CType(156, Byte), Integer))
             Me.Button2.DialogResult = System.Windows.Forms.DialogResult.OK
             Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Button2.ForeColor = System.Drawing.Color.White
             Me.Button2.Location = New System.Drawing.Point(613, 159)
             Me.Button2.Name = "Button2"
             Me.Button2.Size = New System.Drawing.Size(75, 23)
             Me.Button2.TabIndex = 10
             Me.Button2.Text = "ACEPTAR"
-            Me.Button2.UseVisualStyleBackColor = True
+            Me.Button2.UseVisualStyleBackColor = False
             '
             'Button1
             '
+            Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(0, Byte), Integer))
             Me.Button1.DialogResult = System.Windows.Forms.DialogResult.Cancel
+            Me.Button1.ForeColor = System.Drawing.Color.White
             Me.Button1.Location = New System.Drawing.Point(532, 159)
             Me.Button1.Name = "Button1"
             Me.Button1.Size = New System.Drawing.Size(75, 23)
             Me.Button1.TabIndex = 9
             Me.Button1.Text = "CANCELAR"
-            Me.Button1.UseVisualStyleBackColor = True
+            Me.Button1.UseVisualStyleBackColor = False
             '
             'GroupBox3
             '
@@ -277,6 +281,10 @@
             Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
             Me.Name = "FrmCrearConvenioBanco"
             Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+            Me.StateActive.Border.DrawBorders = CType((((Krypton.Toolkit.PaletteDrawBorders.Top Or Krypton.Toolkit.PaletteDrawBorders.Bottom) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Left) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Right), Krypton.Toolkit.PaletteDrawBorders)
+            Me.StateActive.Border.Rounding = 5.0!
             Me.Text = "AGREAR DETALLE CONVENIO DÉBITO BANCO"
             Me.GroupBox3.ResumeLayout(False)
             Me.GroupBox3.PerformLayout()

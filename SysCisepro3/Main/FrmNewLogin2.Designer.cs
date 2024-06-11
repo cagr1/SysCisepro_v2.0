@@ -158,21 +158,21 @@
             this.materialCard1.Controls.Add(this.txtPassword);
             this.materialCard1.Depth = 0;
             this.materialCard1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialCard1.Location = new System.Drawing.Point(-2, 2);
+            this.materialCard1.Location = new System.Drawing.Point(-2, -5);
             this.materialCard1.Margin = new System.Windows.Forms.Padding(14);
             this.materialCard1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialCard1.Name = "materialCard1";
             this.materialCard1.Padding = new System.Windows.Forms.Padding(14);
-            this.materialCard1.Size = new System.Drawing.Size(414, 455);
+            this.materialCard1.Size = new System.Drawing.Size(414, 462);
             this.materialCard1.TabIndex = 15;
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImage = global::SysCisepro3.Properties.Resources.wp9764031;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(403, 2);
+            this.pictureBox1.Location = new System.Drawing.Point(403, -5);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(397, 455);
+            this.pictureBox1.Size = new System.Drawing.Size(397, 462);
             this.pictureBox1.TabIndex = 16;
             this.pictureBox1.TabStop = false;
             // 
@@ -193,7 +193,7 @@
             this.StateCommon.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | Krypton.Toolkit.PaletteDrawBorders.Left) 
             | Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.Text = "FrmNewLogin2";
+            this.Text = "Bienvenido!!";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmNewLogin2_FormClosing);
             this.Load += new System.EventHandler(this.FrmNewLogin2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbxCisepro)).EndInit();

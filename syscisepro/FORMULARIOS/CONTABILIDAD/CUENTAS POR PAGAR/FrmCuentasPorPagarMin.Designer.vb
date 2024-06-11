@@ -109,7 +109,7 @@
             Me.gbNombreComercialProveedor.Controls.Add(Me.lblIdProveedorGeneral)
             Me.gbNombreComercialProveedor.Controls.Add(Me.dgvProveedorGeneral)
             Me.gbNombreComercialProveedor.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.gbNombreComercialProveedor.Location = New System.Drawing.Point(191, 34)
+            Me.gbNombreComercialProveedor.Location = New System.Drawing.Point(191, 35)
             Me.gbNombreComercialProveedor.Name = "gbNombreComercialProveedor"
             Me.gbNombreComercialProveedor.Size = New System.Drawing.Size(289, 61)
             Me.gbNombreComercialProveedor.TabIndex = 95
@@ -173,7 +173,7 @@
             Me.gbRangoFechas.Controls.Add(Me.dtpHasta)
             Me.gbRangoFechas.Controls.Add(Me.dtpDesde)
             Me.gbRangoFechas.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.gbRangoFechas.Location = New System.Drawing.Point(480, 34)
+            Me.gbRangoFechas.Location = New System.Drawing.Point(480, 35)
             Me.gbRangoFechas.Name = "gbRangoFechas"
             Me.gbRangoFechas.Size = New System.Drawing.Size(229, 61)
             Me.gbRangoFechas.TabIndex = 116

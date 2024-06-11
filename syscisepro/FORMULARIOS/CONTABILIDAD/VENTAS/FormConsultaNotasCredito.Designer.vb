@@ -118,7 +118,7 @@
             Me.gbRangoFechas.Controls.Add(Me.Label1)
             Me.gbRangoFechas.Controls.Add(Me.dtpFechaHasta)
             Me.gbRangoFechas.Controls.Add(Me.dtpFechaDesde)
-            Me.gbRangoFechas.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.gbRangoFechas.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.gbRangoFechas.Location = New System.Drawing.Point(931, 7)
             Me.gbRangoFechas.Name = "gbRangoFechas"
             Me.gbRangoFechas.Size = New System.Drawing.Size(222, 61)
@@ -131,7 +131,7 @@
             Me.lblIdFacturaVenta.AutoSize = True
             Me.lblIdFacturaVenta.Location = New System.Drawing.Point(191, 1)
             Me.lblIdFacturaVenta.Name = "lblIdFacturaVenta"
-            Me.lblIdFacturaVenta.Size = New System.Drawing.Size(25, 13)
+            Me.lblIdFacturaVenta.Size = New System.Drawing.Size(16, 13)
             Me.lblIdFacturaVenta.TabIndex = 4
             Me.lblIdFacturaVenta.Text = "..."
             '
@@ -149,7 +149,7 @@
             Me.dtpFechaHasta.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
             Me.dtpFechaHasta.Location = New System.Drawing.Point(118, 24)
             Me.dtpFechaHasta.Name = "dtpFechaHasta"
-            Me.dtpFechaHasta.Size = New System.Drawing.Size(98, 20)
+            Me.dtpFechaHasta.Size = New System.Drawing.Size(98, 21)
             Me.dtpFechaHasta.TabIndex = 1
             '
             'dtpFechaDesde
@@ -157,7 +157,7 @@
             Me.dtpFechaDesde.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
             Me.dtpFechaDesde.Location = New System.Drawing.Point(5, 24)
             Me.dtpFechaDesde.Name = "dtpFechaDesde"
-            Me.dtpFechaDesde.Size = New System.Drawing.Size(98, 20)
+            Me.dtpFechaDesde.Size = New System.Drawing.Size(98, 21)
             Me.dtpFechaDesde.TabIndex = 0
             '
             'gbClienteGeneral
@@ -165,7 +165,7 @@
             Me.gbClienteGeneral.BackColor = System.Drawing.Color.White
             Me.gbClienteGeneral.Controls.Add(Me.txtClienteGeneral)
             Me.gbClienteGeneral.Controls.Add(Me.lblIdClienteGeneral)
-            Me.gbClienteGeneral.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.gbClienteGeneral.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.gbClienteGeneral.Location = New System.Drawing.Point(202, 7)
             Me.gbClienteGeneral.Name = "gbClienteGeneral"
             Me.gbClienteGeneral.Size = New System.Drawing.Size(589, 61)
@@ -179,7 +179,7 @@
             Me.txtClienteGeneral.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtClienteGeneral.Location = New System.Drawing.Point(6, 24)
             Me.txtClienteGeneral.Name = "txtClienteGeneral"
-            Me.txtClienteGeneral.Size = New System.Drawing.Size(577, 20)
+            Me.txtClienteGeneral.Size = New System.Drawing.Size(577, 21)
             Me.txtClienteGeneral.TabIndex = 31
             '
             'lblIdClienteGeneral
@@ -226,7 +226,7 @@
             Me.dgvNotaCredito.ReadOnly = True
             Me.dgvNotaCredito.RowHeadersVisible = False
             Me.dgvNotaCredito.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvNotaCredito.Size = New System.Drawing.Size(1286, 527)
+            Me.dgvNotaCredito.Size = New System.Drawing.Size(1286, 518)
             Me.dgvNotaCredito.TabIndex = 102
             '
             'gbTotal
@@ -343,10 +343,10 @@
             Me.gbEstadoFactura.Controls.Add(Me.rbTodas)
             Me.gbEstadoFactura.Controls.Add(Me.rbAnuladas)
             Me.gbEstadoFactura.Controls.Add(Me.rbActivas)
-            Me.gbEstadoFactura.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.gbEstadoFactura.Location = New System.Drawing.Point(796, 7)
+            Me.gbEstadoFactura.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.gbEstadoFactura.Location = New System.Drawing.Point(791, 7)
             Me.gbEstadoFactura.Name = "gbEstadoFactura"
-            Me.gbEstadoFactura.Size = New System.Drawing.Size(130, 61)
+            Me.gbEstadoFactura.Size = New System.Drawing.Size(139, 61)
             Me.gbEstadoFactura.TabIndex = 108
             Me.gbEstadoFactura.TabStop = False
             Me.gbEstadoFactura.Text = "ESTADO FACTURA"
@@ -357,7 +357,7 @@
             Me.rbTodas.Checked = True
             Me.rbTodas.Location = New System.Drawing.Point(74, 18)
             Me.rbTodas.Name = "rbTodas"
-            Me.rbTodas.Size = New System.Drawing.Size(55, 17)
+            Me.rbTodas.Size = New System.Drawing.Size(61, 17)
             Me.rbTodas.TabIndex = 2
             Me.rbTodas.TabStop = True
             Me.rbTodas.Text = "TODAS"
@@ -368,7 +368,7 @@
             Me.rbAnuladas.AutoSize = True
             Me.rbAnuladas.Location = New System.Drawing.Point(4, 36)
             Me.rbAnuladas.Name = "rbAnuladas"
-            Me.rbAnuladas.Size = New System.Drawing.Size(73, 17)
+            Me.rbAnuladas.Size = New System.Drawing.Size(81, 17)
             Me.rbAnuladas.TabIndex = 1
             Me.rbAnuladas.Text = "ANULADAS"
             Me.rbAnuladas.UseVisualStyleBackColor = True
@@ -378,7 +378,7 @@
             Me.rbActivas.AutoSize = True
             Me.rbActivas.Location = New System.Drawing.Point(4, 18)
             Me.rbActivas.Name = "rbActivas"
-            Me.rbActivas.Size = New System.Drawing.Size(67, 17)
+            Me.rbActivas.Size = New System.Drawing.Size(70, 17)
             Me.rbActivas.TabIndex = 0
             Me.rbActivas.Text = "ACTIVAS"
             Me.rbActivas.UseVisualStyleBackColor = True
@@ -390,7 +390,7 @@
             Me.gbTipoReporte.Controls.Add(Me.rbConsorcio)
             Me.gbTipoReporte.Controls.Add(Me.rbPorCliente)
             Me.gbTipoReporte.Controls.Add(Me.rbTodo)
-            Me.gbTipoReporte.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.gbTipoReporte.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.gbTipoReporte.Location = New System.Drawing.Point(5, 6)
             Me.gbTipoReporte.Name = "gbTipoReporte"
             Me.gbTipoReporte.Size = New System.Drawing.Size(191, 61)
@@ -403,7 +403,7 @@
             Me.rbNroNotaCredito.AutoSize = True
             Me.rbNroNotaCredito.Location = New System.Drawing.Point(96, 18)
             Me.rbNroNotaCredito.Name = "rbNroNotaCredito"
-            Me.rbNroNotaCredito.Size = New System.Drawing.Size(73, 17)
+            Me.rbNroNotaCredito.Size = New System.Drawing.Size(70, 17)
             Me.rbNroNotaCredito.TabIndex = 34
             Me.rbNroNotaCredito.Text = "Nro Nota"
             Me.rbNroNotaCredito.UseVisualStyleBackColor = True
@@ -423,7 +423,7 @@
             Me.rbPorCliente.AutoSize = True
             Me.rbPorCliente.Location = New System.Drawing.Point(6, 18)
             Me.rbPorCliente.Name = "rbPorCliente"
-            Me.rbPorCliente.Size = New System.Drawing.Size(91, 17)
+            Me.rbPorCliente.Size = New System.Drawing.Size(80, 17)
             Me.rbPorCliente.TabIndex = 1
             Me.rbPorCliente.Text = "Por Cliente"
             Me.rbPorCliente.UseVisualStyleBackColor = True
@@ -448,52 +448,57 @@
             Me.GroupBox1.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.GroupBox1.Location = New System.Drawing.Point(7, 132)
             Me.GroupBox1.Name = "GroupBox1"
-            Me.GroupBox1.Size = New System.Drawing.Size(1292, 546)
+            Me.GroupBox1.Size = New System.Drawing.Size(1292, 537)
             Me.GroupBox1.TabIndex = 110
             Me.GroupBox1.TabStop = False
             '
             'MenuStrip1
             '
+            Me.MenuStrip1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
             Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnBuscar, Me.btnExportar, Me.btnSalir, Me.GENERARRIDEToolStripMenuItem})
             Me.MenuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow
             Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
             Me.MenuStrip1.Name = "MenuStrip1"
             Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(7, 2, 0, 2)
-            Me.MenuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
-            Me.MenuStrip1.Size = New System.Drawing.Size(1294, 24)
+            Me.MenuStrip1.Size = New System.Drawing.Size(1294, 32)
             Me.MenuStrip1.TabIndex = 191
             Me.MenuStrip1.Text = "msIngresoBodega"
             '
             'btnBuscar
             '
-            Me.btnBuscar.Image = Global.syscisepro.My.Resources.Resources.BuscarRegistro
+            Me.btnBuscar.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.btnBuscar.Image = Global.syscisepro.My.Resources.Resources.search_24dp_FILL0_wght400_GRAD0_opsz24__2_
+            Me.btnBuscar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnBuscar.Name = "btnBuscar"
-            Me.btnBuscar.Size = New System.Drawing.Size(79, 20)
+            Me.btnBuscar.Size = New System.Drawing.Size(84, 28)
             Me.btnBuscar.Text = "BUSCAR"
             '
             'btnExportar
             '
             Me.btnExportar.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnExportar.Image = Global.syscisepro.My.Resources.Resources.excel_icon
+            Me.btnExportar.Image = Global.syscisepro.My.Resources.Resources.icons8_excel_48
+            Me.btnExportar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnExportar.Name = "btnExportar"
-            Me.btnExportar.Size = New System.Drawing.Size(88, 20)
+            Me.btnExportar.Size = New System.Drawing.Size(96, 28)
             Me.btnExportar.Text = "EXPORTAR"
             '
             'btnSalir
             '
             Me.btnSalir.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnSalir.Image = Global.syscisepro.My.Resources.Resources.generate_tables_icon
+            Me.btnSalir.Image = Global.syscisepro.My.Resources.Resources.checkbook_20dp_FILL0_wght400_GRAD0_opsz20__2_
+            Me.btnSalir.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnSalir.Name = "btnSalir"
-            Me.btnSalir.Size = New System.Drawing.Size(108, 20)
+            Me.btnSalir.Size = New System.Drawing.Size(116, 28)
             Me.btnSalir.Text = "GENERAR XML"
             '
             'GENERARRIDEToolStripMenuItem
             '
             Me.GENERARRIDEToolStripMenuItem.Font = New System.Drawing.Font("Segoe UI", 8.0!)
-            Me.GENERARRIDEToolStripMenuItem.Image = Global.syscisepro.My.Resources.Resources.report
+            Me.GENERARRIDEToolStripMenuItem.Image = Global.syscisepro.My.Resources.Resources.description_24dp_FILL0_wght400_GRAD0_opsz24__2_
+            Me.GENERARRIDEToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.GENERARRIDEToolStripMenuItem.Name = "GENERARRIDEToolStripMenuItem"
-            Me.GENERARRIDEToolStripMenuItem.Size = New System.Drawing.Size(111, 20)
-            Me.GENERARRIDEToolStripMenuItem.Text = "GENERAR RIDE"
+            Me.GENERARRIDEToolStripMenuItem.Size = New System.Drawing.Size(67, 28)
+            Me.GENERARRIDEToolStripMenuItem.Text = "RIDE"
             '
             'ofdSeleccionarArchivo
             '
@@ -504,7 +509,7 @@
             Me.TabControl1.Controls.Add(Me.TabPage1)
             Me.TabControl1.Controls.Add(Me.TabPage2)
             Me.TabControl1.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.TabControl1.Location = New System.Drawing.Point(1, 24)
+            Me.TabControl1.Location = New System.Drawing.Point(1, 32)
             Me.TabControl1.Name = "TabControl1"
             Me.TabControl1.SelectedIndex = 0
             Me.TabControl1.Size = New System.Drawing.Size(1288, 106)
@@ -543,7 +548,7 @@
             Me.GroupBox2.Controls.Add(Me.btnNotaCreditoPath)
             Me.GroupBox2.Controls.Add(Me.txtNotaCreditoPath)
             Me.GroupBox2.Controls.Add(Me.Label9)
-            Me.GroupBox2.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.GroupBox2.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.GroupBox2.Location = New System.Drawing.Point(3, 6)
             Me.GroupBox2.Name = "GroupBox2"
             Me.GroupBox2.Size = New System.Drawing.Size(1150, 68)
@@ -553,10 +558,12 @@
             '
             'btnNotaCreditoPath
             '
-            Me.btnNotaCreditoPath.Image = Global.syscisepro.My.Resources.Resources.BuscarRegistro
-            Me.btnNotaCreditoPath.Location = New System.Drawing.Point(771, 25)
+            Me.btnNotaCreditoPath.FlatAppearance.BorderSize = 0
+            Me.btnNotaCreditoPath.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+            Me.btnNotaCreditoPath.Image = Global.syscisepro.My.Resources.Resources.search_24dp_FILL0_wght400_GRAD0_opsz24__2_
+            Me.btnNotaCreditoPath.Location = New System.Drawing.Point(751, 22)
             Me.btnNotaCreditoPath.Name = "btnNotaCreditoPath"
-            Me.btnNotaCreditoPath.Size = New System.Drawing.Size(44, 23)
+            Me.btnNotaCreditoPath.Size = New System.Drawing.Size(28, 28)
             Me.btnNotaCreditoPath.TabIndex = 2
             Me.btnNotaCreditoPath.UseVisualStyleBackColor = True
             '
@@ -565,7 +572,7 @@
             Me.txtNotaCreditoPath.Enabled = False
             Me.txtNotaCreditoPath.Location = New System.Drawing.Point(121, 25)
             Me.txtNotaCreditoPath.Name = "txtNotaCreditoPath"
-            Me.txtNotaCreditoPath.Size = New System.Drawing.Size(621, 20)
+            Me.txtNotaCreditoPath.Size = New System.Drawing.Size(621, 21)
             Me.txtNotaCreditoPath.TabIndex = 1
             '
             'Label9
@@ -589,10 +596,13 @@
             Me.Controls.Add(Me.GroupBox1)
             Me.Controls.Add(Me.gbTotal)
             Me.Controls.Add(Me.dgvCliente)
-            Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
             Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
             Me.Name = "FormConsultaNotasCredito"
             Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+            Me.StateActive.Border.DrawBorders = CType((((Krypton.Toolkit.PaletteDrawBorders.Top Or Krypton.Toolkit.PaletteDrawBorders.Bottom) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Left) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Right), Krypton.Toolkit.PaletteDrawBorders)
+            Me.StateActive.Border.Rounding = 5.0!
             Me.Text = "CONSULTA NOTAS DE CREDITO"
             Me.gbNumeroFactura.ResumeLayout(False)
             Me.gbNumeroFactura.PerformLayout()

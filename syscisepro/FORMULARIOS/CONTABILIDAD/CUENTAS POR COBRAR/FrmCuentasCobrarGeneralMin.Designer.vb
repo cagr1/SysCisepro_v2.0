@@ -282,7 +282,6 @@
             Me.Controls.Add(Me.Label8)
             Me.Controls.Add(Me.gbTipoReporte)
             Me.Controls.Add(Me.dgvCliente)
-            Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
             Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
             Me.Name = "FrmCuentasCobrarGeneralMin"
             Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen

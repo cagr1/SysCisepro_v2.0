@@ -264,21 +264,21 @@ Namespace FORMULARIOS.CONTABILIDAD.CUENTAS_POR_COBRAR
                     MenuStrip1.ForeColor = Color.White
                     'MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorAsenava
                     ChkTodos.ForeColor = Color.White
-                    ChkTodos.BackColor = My.MySettingsProperty.Settings.ColorAsenava
+                    'ChkTodos.BackColor = My.MySettingsProperty.Settings.ColorAsenava
                     dgvCuentasPorCobrar.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorAsenava
                 Case TipoConexion.Seportpac
                     Icon = My.Resources.logo_s
                     'MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
                     MenuStrip1.ForeColor = Color.White
                     ChkTodos.ForeColor = Color.White
-                    ChkTodos.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
+                    'ChkTodos.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
                     dgvCuentasPorCobrar.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorSeportpac
                 Case Else
                     Icon = My.Resources.logo_c
                     'MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorCisepro
                     MenuStrip1.ForeColor = Color.White
                     ChkTodos.ForeColor = Color.White
-                    ChkTodos.BackColor = My.MySettingsProperty.Settings.ColorCisepro
+                    'ChkTodos.BackColor = My.MySettingsProperty.Settings.ColorCisepro
                     dgvCuentasPorCobrar.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
             End Select
             dgvCuentasPorCobrar.Font = New Font("Roboto", 8, FontStyle.Regular)

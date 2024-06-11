@@ -24,19 +24,19 @@
         <System.Diagnostics.DebuggerStepThrough()> _
         Private Sub InitializeComponent()
             Me.components = New System.ComponentModel.Container()
-            Dim DataGridViewCellStyle61 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle62 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle65 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle66 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormMantenimientoClientes))
-            Dim DataGridViewCellStyle67 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle68 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle69 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle70 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle63 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle64 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle71 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle72 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Me.gbDatosClienteGeneral = New System.Windows.Forms.GroupBox()
             Me.Label12 = New System.Windows.Forms.Label()
             Me.cmbTipoIdentificacion = New System.Windows.Forms.ComboBox()
@@ -164,6 +164,7 @@
             Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
             Me.ToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
             Me.ToolStripMenuItem4 = New System.Windows.Forms.ToolStripMenuItem()
+            Me.AGREGARSITIOToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
             Me.GroupBox1 = New System.Windows.Forms.GroupBox()
             Me.ComboBox1 = New System.Windows.Forms.ComboBox()
             Me.Label22 = New System.Windows.Forms.Label()
@@ -245,7 +246,6 @@
             Me.ToolStripMenuItem7 = New System.Windows.Forms.ToolStripMenuItem()
             Me.ToolStripMenuItem13 = New System.Windows.Forms.ToolStripMenuItem()
             Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
-            Me.AGREGARSITIOToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
             Me.gbDatosClienteGeneral.SuspendLayout()
             Me.GroupBox7.SuspendLayout()
             Me.gbOligadoLlevarContabilidad.SuspendLayout()
@@ -298,7 +298,7 @@
             Me.gbDatosClienteGeneral.Controls.Add(Me.GroupBox7)
             Me.gbDatosClienteGeneral.Controls.Add(Me.txtNombreRazonSocialClienteGeneral)
             Me.gbDatosClienteGeneral.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.gbDatosClienteGeneral.Location = New System.Drawing.Point(6, 26)
+            Me.gbDatosClienteGeneral.Location = New System.Drawing.Point(6, 37)
             Me.gbDatosClienteGeneral.Name = "gbDatosClienteGeneral"
             Me.gbDatosClienteGeneral.Size = New System.Drawing.Size(580, 89)
             Me.gbDatosClienteGeneral.TabIndex = 29
@@ -500,7 +500,7 @@
             Me.gbOligadoLlevarContabilidad.Controls.Add(Me.rbNOLlevaContabilidad)
             Me.gbOligadoLlevarContabilidad.Controls.Add(Me.rbSILlevaContabilidad)
             Me.gbOligadoLlevarContabilidad.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.gbOligadoLlevarContabilidad.Location = New System.Drawing.Point(592, 72)
+            Me.gbOligadoLlevarContabilidad.Location = New System.Drawing.Point(592, 83)
             Me.gbOligadoLlevarContabilidad.Name = "gbOligadoLlevarContabilidad"
             Me.gbOligadoLlevarContabilidad.Size = New System.Drawing.Size(186, 43)
             Me.gbOligadoLlevarContabilidad.TabIndex = 30
@@ -546,7 +546,7 @@
             Me.txtDireccionUbicacionClienteGeneral.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtDireccionUbicacionClienteGeneral.Location = New System.Drawing.Point(153, 37)
             Me.txtDireccionUbicacionClienteGeneral.Name = "txtDireccionUbicacionClienteGeneral"
-            Me.txtDireccionUbicacionClienteGeneral.Size = New System.Drawing.Size(421, 20)
+            Me.txtDireccionUbicacionClienteGeneral.Size = New System.Drawing.Size(421, 21)
             Me.txtDireccionUbicacionClienteGeneral.TabIndex = 3
             '
             'txtDireccionFacturacionClienteGeneral
@@ -556,7 +556,7 @@
             Me.txtDireccionFacturacionClienteGeneral.Enabled = False
             Me.txtDireccionFacturacionClienteGeneral.Location = New System.Drawing.Point(153, 61)
             Me.txtDireccionFacturacionClienteGeneral.Name = "txtDireccionFacturacionClienteGeneral"
-            Me.txtDireccionFacturacionClienteGeneral.Size = New System.Drawing.Size(421, 20)
+            Me.txtDireccionFacturacionClienteGeneral.Size = New System.Drawing.Size(421, 21)
             Me.txtDireccionFacturacionClienteGeneral.TabIndex = 4
             '
             'txtCiudad
@@ -565,7 +565,7 @@
             Me.txtCiudad.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtCiudad.Location = New System.Drawing.Point(153, 13)
             Me.txtCiudad.Name = "txtCiudad"
-            Me.txtCiudad.Size = New System.Drawing.Size(104, 20)
+            Me.txtCiudad.Size = New System.Drawing.Size(104, 21)
             Me.txtCiudad.TabIndex = 5
             '
             'gbDireccionClienteGeneral
@@ -580,8 +580,8 @@
             Me.gbDireccionClienteGeneral.Controls.Add(Me.txtDireccionUbicacionClienteGeneral)
             Me.gbDireccionClienteGeneral.Controls.Add(Me.txtDireccionFacturacionClienteGeneral)
             Me.gbDireccionClienteGeneral.Controls.Add(Me.lblIdCiudad)
-            Me.gbDireccionClienteGeneral.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.gbDireccionClienteGeneral.Location = New System.Drawing.Point(6, 114)
+            Me.gbDireccionClienteGeneral.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.gbDireccionClienteGeneral.Location = New System.Drawing.Point(6, 125)
             Me.gbDireccionClienteGeneral.Name = "gbDireccionClienteGeneral"
             Me.gbDireccionClienteGeneral.Size = New System.Drawing.Size(580, 89)
             Me.gbDireccionClienteGeneral.TabIndex = 6
@@ -594,16 +594,16 @@
             Me.txtConsorcioGrupo.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtConsorcioGrupo.Location = New System.Drawing.Point(402, 13)
             Me.txtConsorcioGrupo.Name = "txtConsorcioGrupo"
-            Me.txtConsorcioGrupo.Size = New System.Drawing.Size(172, 20)
+            Me.txtConsorcioGrupo.Size = New System.Drawing.Size(172, 21)
             Me.txtConsorcioGrupo.TabIndex = 10
             Me.txtConsorcioGrupo.Text = "SIN GRUPO"
             '
             'Label13
             '
             Me.Label13.AutoSize = True
-            Me.Label13.Location = New System.Drawing.Point(296, 16)
+            Me.Label13.Location = New System.Drawing.Point(280, 17)
             Me.Label13.Name = "Label13"
-            Me.Label13.Size = New System.Drawing.Size(109, 13)
+            Me.Label13.Size = New System.Drawing.Size(118, 13)
             Me.Label13.TabIndex = 11
             Me.Label13.Text = "CONSORCIO/ GRUPO:"
             '
@@ -612,7 +612,7 @@
             Me.Label6.AutoSize = True
             Me.Label6.Location = New System.Drawing.Point(8, 64)
             Me.Label6.Name = "Label6"
-            Me.Label6.Size = New System.Drawing.Size(139, 13)
+            Me.Label6.Size = New System.Drawing.Size(142, 13)
             Me.Label6.TabIndex = 8
             Me.Label6.Text = "DIRECCIÓN FACTURACIÓN:"
             '
@@ -621,7 +621,7 @@
             Me.Label5.AutoSize = True
             Me.Label5.Location = New System.Drawing.Point(8, 40)
             Me.Label5.Name = "Label5"
-            Me.Label5.Size = New System.Drawing.Size(127, 13)
+            Me.Label5.Size = New System.Drawing.Size(126, 13)
             Me.Label5.TabIndex = 7
             Me.Label5.Text = "DIRECCIÓN UBICACIÓN:"
             '
@@ -630,7 +630,7 @@
             Me.Label4.AutoSize = True
             Me.Label4.Location = New System.Drawing.Point(8, 16)
             Me.Label4.Name = "Label4"
-            Me.Label4.Size = New System.Drawing.Size(49, 13)
+            Me.Label4.Size = New System.Drawing.Size(48, 13)
             Me.Label4.TabIndex = 6
             Me.Label4.Text = "CIUDAD:"
             '
@@ -639,7 +639,7 @@
             Me.lblIdCiudad.AutoSize = True
             Me.lblIdCiudad.Location = New System.Drawing.Point(235, 15)
             Me.lblIdCiudad.Name = "lblIdCiudad"
-            Me.lblIdCiudad.Size = New System.Drawing.Size(25, 13)
+            Me.lblIdCiudad.Size = New System.Drawing.Size(16, 13)
             Me.lblIdCiudad.TabIndex = 9
             Me.lblIdCiudad.Text = "..."
             '
@@ -651,7 +651,7 @@
             Me.gbInformacionContacto.Controls.Add(Me.txtContactoClienteGeneral)
             Me.gbInformacionContacto.Controls.Add(Me.txtEmailClienteGeneral)
             Me.gbInformacionContacto.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.gbInformacionContacto.Location = New System.Drawing.Point(7, 201)
+            Me.gbInformacionContacto.Location = New System.Drawing.Point(7, 215)
             Me.gbInformacionContacto.Name = "gbInformacionContacto"
             Me.gbInformacionContacto.Size = New System.Drawing.Size(579, 65)
             Me.gbInformacionContacto.TabIndex = 7
@@ -728,7 +728,7 @@
             Me.gbIngresoObservaciones.Controls.Add(Me.Label11)
             Me.gbIngresoObservaciones.Controls.Add(Me.txtObservaciones)
             Me.gbIngresoObservaciones.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.gbIngresoObservaciones.Location = New System.Drawing.Point(6, 264)
+            Me.gbIngresoObservaciones.Location = New System.Drawing.Point(6, 280)
             Me.gbIngresoObservaciones.Name = "gbIngresoObservaciones"
             Me.gbIngresoObservaciones.Size = New System.Drawing.Size(769, 62)
             Me.gbIngresoObservaciones.TabIndex = 31
@@ -822,7 +822,7 @@
             Me.gbNroResolucionContEspecial.Controls.Add(Me.rbSiContribuyenteEspecial)
             Me.gbNroResolucionContEspecial.Controls.Add(Me.txtnroResContEspecial)
             Me.gbNroResolucionContEspecial.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.gbNroResolucionContEspecial.Location = New System.Drawing.Point(592, 26)
+            Me.gbNroResolucionContEspecial.Location = New System.Drawing.Point(592, 37)
             Me.gbNroResolucionContEspecial.Name = "gbNroResolucionContEspecial"
             Me.gbNroResolucionContEspecial.Size = New System.Drawing.Size(186, 46)
             Me.gbNroResolucionContEspecial.TabIndex = 32
@@ -856,7 +856,7 @@
             Me.gbFechaIngresoClienteGeneral.BackColor = System.Drawing.Color.White
             Me.gbFechaIngresoClienteGeneral.Controls.Add(Me.dtpFechaIngresoClienteGeneral)
             Me.gbFechaIngresoClienteGeneral.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.gbFechaIngresoClienteGeneral.Location = New System.Drawing.Point(592, 114)
+            Me.gbFechaIngresoClienteGeneral.Location = New System.Drawing.Point(592, 125)
             Me.gbFechaIngresoClienteGeneral.Name = "gbFechaIngresoClienteGeneral"
             Me.gbFechaIngresoClienteGeneral.Size = New System.Drawing.Size(186, 43)
             Me.gbFechaIngresoClienteGeneral.TabIndex = 33
@@ -868,7 +868,7 @@
             Me.gbTipoClienteGeneral.BackColor = System.Drawing.Color.White
             Me.gbTipoClienteGeneral.Controls.Add(Me.cmbTipoCliente)
             Me.gbTipoClienteGeneral.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.gbTipoClienteGeneral.Location = New System.Drawing.Point(592, 157)
+            Me.gbTipoClienteGeneral.Location = New System.Drawing.Point(592, 168)
             Me.gbTipoClienteGeneral.Name = "gbTipoClienteGeneral"
             Me.gbTipoClienteGeneral.Size = New System.Drawing.Size(186, 46)
             Me.gbTipoClienteGeneral.TabIndex = 34
@@ -902,7 +902,7 @@
             Me.gbTelefonos.Controls.Add(Me.txtTelefono2ClienteGeneral)
             Me.gbTelefonos.Controls.Add(Me.Label8)
             Me.gbTelefonos.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.gbTelefonos.Location = New System.Drawing.Point(592, 201)
+            Me.gbTelefonos.Location = New System.Drawing.Point(592, 215)
             Me.gbTelefonos.Name = "gbTelefonos"
             Me.gbTelefonos.Size = New System.Drawing.Size(184, 65)
             Me.gbTelefonos.TabIndex = 35
@@ -914,27 +914,27 @@
             Me.dgvClienteGeneral.AllowUserToAddRows = False
             Me.dgvClienteGeneral.AllowUserToDeleteRows = False
             Me.dgvClienteGeneral.AllowUserToResizeRows = False
-            DataGridViewCellStyle61.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-            Me.dgvClienteGeneral.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle61
+            DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+            Me.dgvClienteGeneral.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
             Me.dgvClienteGeneral.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
             Me.dgvClienteGeneral.BackgroundColor = System.Drawing.Color.White
             Me.dgvClienteGeneral.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
             Me.dgvClienteGeneral.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-            DataGridViewCellStyle62.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-            DataGridViewCellStyle62.BackColor = System.Drawing.SystemColors.Window
-            DataGridViewCellStyle62.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            DataGridViewCellStyle62.ForeColor = System.Drawing.SystemColors.ControlText
-            DataGridViewCellStyle62.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(123, Byte), Integer))
-            DataGridViewCellStyle62.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-            DataGridViewCellStyle62.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-            Me.dgvClienteGeneral.DefaultCellStyle = DataGridViewCellStyle62
+            DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+            DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
+            DataGridViewCellStyle2.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
+            DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(123, Byte), Integer))
+            DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+            DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+            Me.dgvClienteGeneral.DefaultCellStyle = DataGridViewCellStyle2
             Me.dgvClienteGeneral.GridColor = System.Drawing.SystemColors.ControlDarkDark
-            Me.dgvClienteGeneral.Location = New System.Drawing.Point(7, 473)
+            Me.dgvClienteGeneral.Location = New System.Drawing.Point(7, 494)
             Me.dgvClienteGeneral.MultiSelect = False
             Me.dgvClienteGeneral.Name = "dgvClienteGeneral"
             Me.dgvClienteGeneral.RowHeadersVisible = False
             Me.dgvClienteGeneral.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvClienteGeneral.Size = New System.Drawing.Size(771, 187)
+            Me.dgvClienteGeneral.Size = New System.Drawing.Size(771, 166)
             Me.dgvClienteGeneral.TabIndex = 36
             '
             'txtBuscarCliente
@@ -942,7 +942,7 @@
             Me.txtBuscarCliente.BackColor = System.Drawing.Color.White
             Me.txtBuscarCliente.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtBuscarCliente.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtBuscarCliente.Location = New System.Drawing.Point(51, 451)
+            Me.txtBuscarCliente.Location = New System.Drawing.Point(51, 470)
             Me.txtBuscarCliente.Name = "txtBuscarCliente"
             Me.txtBuscarCliente.Size = New System.Drawing.Size(727, 21)
             Me.txtBuscarCliente.TabIndex = 0
@@ -992,10 +992,10 @@
             Me.gbConvenioBancario.Controls.Add(Me.btnAdd)
             Me.gbConvenioBancario.Controls.Add(Me.btnRemove)
             Me.gbConvenioBancario.Controls.Add(Me.DataGridView1)
-            Me.gbConvenioBancario.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.gbConvenioBancario.Location = New System.Drawing.Point(8, 329)
+            Me.gbConvenioBancario.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.gbConvenioBancario.Location = New System.Drawing.Point(8, 343)
             Me.gbConvenioBancario.Name = "gbConvenioBancario"
-            Me.gbConvenioBancario.Size = New System.Drawing.Size(769, 117)
+            Me.gbConvenioBancario.Size = New System.Drawing.Size(769, 121)
             Me.gbConvenioBancario.TabIndex = 189
             Me.gbConvenioBancario.TabStop = False
             Me.gbConvenioBancario.Text = "CONVENIO DÉBITO BANCARIO"
@@ -1005,12 +1005,13 @@
             Me.btnAdd.Enabled = False
             Me.btnAdd.FlatAppearance.BorderSize = 0
             Me.btnAdd.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSteelBlue
+            Me.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.btnAdd.Font = New System.Drawing.Font("Calibri Light", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.btnAdd.ForeColor = System.Drawing.Color.Black
-            Me.btnAdd.Image = Global.syscisepro.My.Resources.Resources.add
-            Me.btnAdd.Location = New System.Drawing.Point(709, 2)
+            Me.btnAdd.Image = Global.syscisepro.My.Resources.Resources.add_circle_24dp_FILL0_wght400_GRAD0_opsz24__3_
+            Me.btnAdd.Location = New System.Drawing.Point(709, 0)
             Me.btnAdd.Name = "btnAdd"
-            Me.btnAdd.Size = New System.Drawing.Size(29, 21)
+            Me.btnAdd.Size = New System.Drawing.Size(26, 26)
             Me.btnAdd.TabIndex = 191
             Me.btnAdd.UseVisualStyleBackColor = False
             '
@@ -1019,12 +1020,13 @@
             Me.btnRemove.Enabled = False
             Me.btnRemove.FlatAppearance.BorderSize = 0
             Me.btnRemove.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSteelBlue
+            Me.btnRemove.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.btnRemove.Font = New System.Drawing.Font("Calibri Light", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.btnRemove.ForeColor = System.Drawing.Color.Black
-            Me.btnRemove.Image = Global.syscisepro.My.Resources.Resources.remove
-            Me.btnRemove.Location = New System.Drawing.Point(738, 2)
+            Me.btnRemove.Image = Global.syscisepro.My.Resources.Resources.do_not_disturb_on_24dp_FILL0_wght400_GRAD0_opsz24
+            Me.btnRemove.Location = New System.Drawing.Point(738, 0)
             Me.btnRemove.Name = "btnRemove"
-            Me.btnRemove.Size = New System.Drawing.Size(29, 21)
+            Me.btnRemove.Size = New System.Drawing.Size(26, 26)
             Me.btnRemove.TabIndex = 190
             Me.btnRemove.UseVisualStyleBackColor = False
             '
@@ -1033,23 +1035,23 @@
             Me.DataGridView1.AllowUserToAddRows = False
             Me.DataGridView1.AllowUserToDeleteRows = False
             Me.DataGridView1.AllowUserToResizeRows = False
-            DataGridViewCellStyle65.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-            Me.DataGridView1.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle65
+            DataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+            Me.DataGridView1.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle3
             Me.DataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
             Me.DataGridView1.BackgroundColor = System.Drawing.Color.White
             Me.DataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
             Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
             Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5, Me.Column6, Me.Column7, Me.Column8, Me.Column9, Me.Column10})
-            DataGridViewCellStyle66.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-            DataGridViewCellStyle66.BackColor = System.Drawing.SystemColors.Window
-            DataGridViewCellStyle66.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            DataGridViewCellStyle66.ForeColor = System.Drawing.SystemColors.ControlText
-            DataGridViewCellStyle66.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(123, Byte), Integer))
-            DataGridViewCellStyle66.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-            DataGridViewCellStyle66.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-            Me.DataGridView1.DefaultCellStyle = DataGridViewCellStyle66
+            DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+            DataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window
+            DataGridViewCellStyle4.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText
+            DataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(123, Byte), Integer))
+            DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+            DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+            Me.DataGridView1.DefaultCellStyle = DataGridViewCellStyle4
             Me.DataGridView1.GridColor = System.Drawing.SystemColors.ControlDarkDark
-            Me.DataGridView1.Location = New System.Drawing.Point(1, 23)
+            Me.DataGridView1.Location = New System.Drawing.Point(1, 26)
             Me.DataGridView1.MultiSelect = False
             Me.DataGridView1.Name = "DataGridView1"
             Me.DataGridView1.ReadOnly = True
@@ -1132,85 +1134,88 @@
             '
             'msKardex
             '
-            Me.msKardex.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.msKardex.Font = New System.Drawing.Font("Segoe UI", 9.0!)
             Me.msKardex.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem1, Me.btnNuevo, Me.btnGuardar, Me.btnModificar, Me.btnAnular, Me.btnCancelar, Me.ToolStripMenuItem3})
             Me.msKardex.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow
             Me.msKardex.Location = New System.Drawing.Point(3, 3)
             Me.msKardex.Name = "msKardex"
             Me.msKardex.Padding = New System.Windows.Forms.Padding(7, 2, 0, 2)
-            Me.msKardex.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
-            Me.msKardex.Size = New System.Drawing.Size(778, 24)
+            Me.msKardex.Size = New System.Drawing.Size(778, 32)
             Me.msKardex.TabIndex = 180
             Me.msKardex.Text = "msIngresoBodega"
             '
             'ToolStripMenuItem1
             '
             Me.ToolStripMenuItem1.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.ToolStripMenuItem1.Image = Global.syscisepro.My.Resources.Resources.BuscarRegistro
+            Me.ToolStripMenuItem1.Image = Global.syscisepro.My.Resources.Resources.search_24dp_FILL0_wght400_GRAD0_opsz24__2_
             Me.ToolStripMenuItem1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
-            Me.ToolStripMenuItem1.Size = New System.Drawing.Size(140, 20)
-            Me.ToolStripMenuItem1.Text = "LISTAR CLIENTES"
+            Me.ToolStripMenuItem1.Size = New System.Drawing.Size(85, 28)
+            Me.ToolStripMenuItem1.Text = "BUSCAR"
             '
             'btnNuevo
             '
             Me.btnNuevo.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnNuevo.Image = CType(resources.GetObject("btnNuevo.Image"), System.Drawing.Image)
+            Me.btnNuevo.Image = Global.syscisepro.My.Resources.Resources.add_circle_24dp_FILL0_wght400_GRAD0_opsz24__3_
             Me.btnNuevo.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnNuevo.Name = "btnNuevo"
-            Me.btnNuevo.Size = New System.Drawing.Size(70, 20)
+            Me.btnNuevo.Size = New System.Drawing.Size(78, 28)
             Me.btnNuevo.Text = "NUEVO"
             '
             'btnGuardar
             '
             Me.btnGuardar.Enabled = False
             Me.btnGuardar.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnGuardar.Image = CType(resources.GetObject("btnGuardar.Image"), System.Drawing.Image)
+            Me.btnGuardar.Image = Global.syscisepro.My.Resources.Resources.save_24dp_FILL0_wght400_GRAD0_opsz24__2_
             Me.btnGuardar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnGuardar.Name = "btnGuardar"
-            Me.btnGuardar.Size = New System.Drawing.Size(84, 20)
+            Me.btnGuardar.Size = New System.Drawing.Size(92, 28)
             Me.btnGuardar.Text = "GUARDAR"
             '
             'btnModificar
             '
             Me.btnModificar.Enabled = False
             Me.btnModificar.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnModificar.Image = Global.syscisepro.My.Resources.Resources.ModificarRegistro
+            Me.btnModificar.Image = Global.syscisepro.My.Resources.Resources.edit_document_24dp_FILL0_wght400_GRAD0_opsz24__2_
+            Me.btnModificar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnModificar.Name = "btnModificar"
-            Me.btnModificar.Size = New System.Drawing.Size(105, 20)
+            Me.btnModificar.Size = New System.Drawing.Size(113, 28)
             Me.btnModificar.Text = "ACTUALIZAR"
             '
             'btnAnular
             '
             Me.btnAnular.Enabled = False
             Me.btnAnular.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnAnular.Image = Global.syscisepro.My.Resources.Resources.EliminarRegistro
+            Me.btnAnular.Image = Global.syscisepro.My.Resources.Resources.do_not_disturb_on_24dp_FILL0_wght400_GRAD0_opsz24
+            Me.btnAnular.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnAnular.Name = "btnAnular"
-            Me.btnAnular.Size = New System.Drawing.Size(77, 20)
+            Me.btnAnular.Size = New System.Drawing.Size(85, 28)
             Me.btnAnular.Text = "ANULAR"
             '
             'btnCancelar
             '
             Me.btnCancelar.Enabled = False
             Me.btnCancelar.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnCancelar.Image = Global.syscisepro.My.Resources.Resources.cancel
+            Me.btnCancelar.Image = Global.syscisepro.My.Resources.Resources.cancel_24dp_FILL0_wght400_GRAD0_opsz24
+            Me.btnCancelar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnCancelar.Name = "btnCancelar"
-            Me.btnCancelar.Size = New System.Drawing.Size(91, 20)
+            Me.btnCancelar.Size = New System.Drawing.Size(99, 28)
             Me.btnCancelar.Text = "CANCELAR"
             '
             'ToolStripMenuItem3
             '
             Me.ToolStripMenuItem3.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.ToolStripMenuItem3.Image = Global.syscisepro.My.Resources.Resources.excel_icon
+            Me.ToolStripMenuItem3.Image = Global.syscisepro.My.Resources.Resources.icons8_excel_48
+            Me.ToolStripMenuItem3.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.ToolStripMenuItem3.Name = "ToolStripMenuItem3"
-            Me.ToolStripMenuItem3.Size = New System.Drawing.Size(91, 20)
+            Me.ToolStripMenuItem3.Size = New System.Drawing.Size(99, 28)
             Me.ToolStripMenuItem3.Text = "EXPORTAR"
             '
             'Label21
             '
             Me.Label21.AutoSize = True
             Me.Label21.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label21.Location = New System.Drawing.Point(4, 454)
+            Me.Label21.Location = New System.Drawing.Point(4, 474)
             Me.Label21.Name = "Label21"
             Me.Label21.Size = New System.Drawing.Size(46, 13)
             Me.Label21.TabIndex = 40
@@ -1235,7 +1240,7 @@
             Me.GroupBox6.Controls.Add(Me.Button2)
             Me.GroupBox6.Controls.Add(Me.DataGridView3)
             Me.GroupBox6.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.GroupBox6.Location = New System.Drawing.Point(1, 106)
+            Me.GroupBox6.Location = New System.Drawing.Point(1, 109)
             Me.GroupBox6.Name = "GroupBox6"
             Me.GroupBox6.Size = New System.Drawing.Size(782, 554)
             Me.GroupBox6.TabIndex = 190
@@ -1260,23 +1265,23 @@
             '
             Me.DataGridView3.AllowUserToDeleteRows = False
             Me.DataGridView3.AllowUserToResizeRows = False
-            DataGridViewCellStyle67.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-            Me.DataGridView3.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle67
+            DataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+            Me.DataGridView3.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle5
             Me.DataGridView3.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
             Me.DataGridView3.BackgroundColor = System.Drawing.Color.White
             Me.DataGridView3.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
             Me.DataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
             Me.DataGridView3.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.Column11})
-            DataGridViewCellStyle68.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-            DataGridViewCellStyle68.BackColor = System.Drawing.SystemColors.Window
-            DataGridViewCellStyle68.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            DataGridViewCellStyle68.ForeColor = System.Drawing.SystemColors.ControlText
-            DataGridViewCellStyle68.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(123, Byte), Integer))
-            DataGridViewCellStyle68.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-            DataGridViewCellStyle68.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-            Me.DataGridView3.DefaultCellStyle = DataGridViewCellStyle68
+            DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+            DataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window
+            DataGridViewCellStyle6.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText
+            DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(123, Byte), Integer))
+            DataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+            DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+            Me.DataGridView3.DefaultCellStyle = DataGridViewCellStyle6
             Me.DataGridView3.GridColor = System.Drawing.SystemColors.ControlDarkDark
-            Me.DataGridView3.Location = New System.Drawing.Point(1, 25)
+            Me.DataGridView3.Location = New System.Drawing.Point(1, 27)
             Me.DataGridView3.MultiSelect = False
             Me.DataGridView3.Name = "DataGridView3"
             Me.DataGridView3.RowHeadersVisible = False
@@ -1308,7 +1313,7 @@
             Me.GroupBox5.Controls.Add(Me.TextBox12)
             Me.GroupBox5.Controls.Add(Me.TextBox13)
             Me.GroupBox5.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.GroupBox5.Location = New System.Drawing.Point(2, 30)
+            Me.GroupBox5.Location = New System.Drawing.Point(2, 37)
             Me.GroupBox5.Name = "GroupBox5"
             Me.GroupBox5.Size = New System.Drawing.Size(781, 70)
             Me.GroupBox5.TabIndex = 182
@@ -1382,52 +1387,53 @@
             '
             'MenuStrip5
             '
-            Me.MenuStrip5.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.MenuStrip5.Font = New System.Drawing.Font("Segoe UI", 9.0!)
             Me.MenuStrip5.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem9, Me.ToolStripMenuItem14, Me.ToolStripMenuItem11, Me.ToolStripMenuItem16})
             Me.MenuStrip5.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow
             Me.MenuStrip5.Location = New System.Drawing.Point(3, 3)
             Me.MenuStrip5.Name = "MenuStrip5"
             Me.MenuStrip5.Padding = New System.Windows.Forms.Padding(7, 2, 0, 2)
-            Me.MenuStrip5.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
-            Me.MenuStrip5.Size = New System.Drawing.Size(778, 24)
+            Me.MenuStrip5.Size = New System.Drawing.Size(778, 32)
             Me.MenuStrip5.TabIndex = 181
             Me.MenuStrip5.Text = "msIngresoBodega"
             '
             'ToolStripMenuItem9
             '
             Me.ToolStripMenuItem9.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.ToolStripMenuItem9.Image = Global.syscisepro.My.Resources.Resources.BuscarRegistro
+            Me.ToolStripMenuItem9.Image = Global.syscisepro.My.Resources.Resources.search_24dp_FILL0_wght400_GRAD0_opsz24__2_
             Me.ToolStripMenuItem9.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.ToolStripMenuItem9.Name = "ToolStripMenuItem9"
-            Me.ToolStripMenuItem9.Size = New System.Drawing.Size(161, 20)
-            Me.ToolStripMenuItem9.Text = "LISTAR DIRECCIONES"
+            Me.ToolStripMenuItem9.Size = New System.Drawing.Size(85, 28)
+            Me.ToolStripMenuItem9.Text = "BUSCAR"
             '
             'ToolStripMenuItem14
             '
             Me.ToolStripMenuItem14.Enabled = False
             Me.ToolStripMenuItem14.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.ToolStripMenuItem14.Image = Global.syscisepro.My.Resources.Resources.ModificarRegistro
+            Me.ToolStripMenuItem14.Image = Global.syscisepro.My.Resources.Resources.edit_document_24dp_FILL0_wght400_GRAD0_opsz24__2_
+            Me.ToolStripMenuItem14.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.ToolStripMenuItem14.Name = "ToolStripMenuItem14"
-            Me.ToolStripMenuItem14.Size = New System.Drawing.Size(105, 20)
+            Me.ToolStripMenuItem14.Size = New System.Drawing.Size(113, 28)
             Me.ToolStripMenuItem14.Text = "ACTUALIZAR"
             '
             'ToolStripMenuItem11
             '
             Me.ToolStripMenuItem11.Enabled = False
             Me.ToolStripMenuItem11.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.ToolStripMenuItem11.Image = CType(resources.GetObject("ToolStripMenuItem11.Image"), System.Drawing.Image)
+            Me.ToolStripMenuItem11.Image = Global.syscisepro.My.Resources.Resources.save_24dp_FILL0_wght400_GRAD0_opsz24__2_
             Me.ToolStripMenuItem11.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.ToolStripMenuItem11.Name = "ToolStripMenuItem11"
-            Me.ToolStripMenuItem11.Size = New System.Drawing.Size(84, 20)
+            Me.ToolStripMenuItem11.Size = New System.Drawing.Size(92, 28)
             Me.ToolStripMenuItem11.Text = "GUARDAR"
             '
             'ToolStripMenuItem16
             '
             Me.ToolStripMenuItem16.Enabled = False
             Me.ToolStripMenuItem16.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.ToolStripMenuItem16.Image = Global.syscisepro.My.Resources.Resources.cancel
+            Me.ToolStripMenuItem16.Image = Global.syscisepro.My.Resources.Resources.cancel_24dp_FILL0_wght400_GRAD0_opsz24
+            Me.ToolStripMenuItem16.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.ToolStripMenuItem16.Name = "ToolStripMenuItem16"
-            Me.ToolStripMenuItem16.Size = New System.Drawing.Size(91, 20)
+            Me.ToolStripMenuItem16.Size = New System.Drawing.Size(99, 28)
             Me.ToolStripMenuItem16.Text = "CANCELAR"
             '
             'TabPage2
@@ -1449,27 +1455,27 @@
             '
             Me.dgvSitios.AllowUserToAddRows = False
             Me.dgvSitios.AllowUserToDeleteRows = False
-            DataGridViewCellStyle69.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-            Me.dgvSitios.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle69
+            DataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+            Me.dgvSitios.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle7
             Me.dgvSitios.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
             Me.dgvSitios.BackgroundColor = System.Drawing.Color.White
             Me.dgvSitios.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
             Me.dgvSitios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-            DataGridViewCellStyle70.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-            DataGridViewCellStyle70.BackColor = System.Drawing.SystemColors.Window
-            DataGridViewCellStyle70.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            DataGridViewCellStyle70.ForeColor = System.Drawing.SystemColors.ControlText
-            DataGridViewCellStyle70.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(123, Byte), Integer))
-            DataGridViewCellStyle70.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-            DataGridViewCellStyle70.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-            Me.dgvSitios.DefaultCellStyle = DataGridViewCellStyle70
+            DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+            DataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window
+            DataGridViewCellStyle8.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText
+            DataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(123, Byte), Integer))
+            DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+            DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+            Me.dgvSitios.DefaultCellStyle = DataGridViewCellStyle8
             Me.dgvSitios.GridColor = System.Drawing.SystemColors.ControlDarkDark
-            Me.dgvSitios.Location = New System.Drawing.Point(5, 252)
+            Me.dgvSitios.Location = New System.Drawing.Point(5, 255)
             Me.dgvSitios.MultiSelect = False
             Me.dgvSitios.Name = "dgvSitios"
             Me.dgvSitios.RowHeadersVisible = False
             Me.dgvSitios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvSitios.Size = New System.Drawing.Size(776, 408)
+            Me.dgvSitios.Size = New System.Drawing.Size(776, 405)
             Me.dgvSitios.TabIndex = 184
             '
             'GroupBox2
@@ -1493,7 +1499,7 @@
             Me.GroupBox2.Controls.Add(Me.lblCiudad)
             Me.GroupBox2.Controls.Add(Me.Label28)
             Me.GroupBox2.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.GroupBox2.Location = New System.Drawing.Point(3, 100)
+            Me.GroupBox2.Location = New System.Drawing.Point(3, 102)
             Me.GroupBox2.Name = "GroupBox2"
             Me.GroupBox2.Size = New System.Drawing.Size(778, 129)
             Me.GroupBox2.TabIndex = 186
@@ -1700,33 +1706,44 @@
             '
             'MenuStrip1
             '
-            Me.MenuStrip1.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.MenuStrip1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
             Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem2, Me.ToolStripMenuItem4, Me.AGREGARSITIOToolStripMenuItem})
             Me.MenuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow
             Me.MenuStrip1.Location = New System.Drawing.Point(3, 3)
             Me.MenuStrip1.Name = "MenuStrip1"
             Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(7, 2, 0, 2)
-            Me.MenuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
-            Me.MenuStrip1.Size = New System.Drawing.Size(778, 24)
+            Me.MenuStrip1.Size = New System.Drawing.Size(778, 32)
             Me.MenuStrip1.TabIndex = 181
             Me.MenuStrip1.Text = "msIngresoBodega"
             '
             'ToolStripMenuItem2
             '
             Me.ToolStripMenuItem2.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.ToolStripMenuItem2.Image = Global.syscisepro.My.Resources.Resources.BuscarRegistro
+            Me.ToolStripMenuItem2.Image = Global.syscisepro.My.Resources.Resources.search_24dp_FILL0_wght400_GRAD0_opsz24__2_
             Me.ToolStripMenuItem2.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.ToolStripMenuItem2.Name = "ToolStripMenuItem2"
-            Me.ToolStripMenuItem2.Size = New System.Drawing.Size(133, 20)
-            Me.ToolStripMenuItem2.Text = "MOSTRAR SITIOS"
+            Me.ToolStripMenuItem2.Size = New System.Drawing.Size(85, 28)
+            Me.ToolStripMenuItem2.Text = "BUSCAR"
             '
             'ToolStripMenuItem4
             '
             Me.ToolStripMenuItem4.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.ToolStripMenuItem4.Image = Global.syscisepro.My.Resources.Resources.excel_icon
+            Me.ToolStripMenuItem4.Image = Global.syscisepro.My.Resources.Resources.icons8_excel_48
+            Me.ToolStripMenuItem4.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.ToolStripMenuItem4.Name = "ToolStripMenuItem4"
-            Me.ToolStripMenuItem4.Size = New System.Drawing.Size(91, 20)
+            Me.ToolStripMenuItem4.Size = New System.Drawing.Size(99, 28)
             Me.ToolStripMenuItem4.Text = "EXPORTAR"
+            '
+            'AGREGARSITIOToolStripMenuItem
+            '
+            Me.AGREGARSITIOToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+            Me.AGREGARSITIOToolStripMenuItem.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.AGREGARSITIOToolStripMenuItem.Image = Global.syscisepro.My.Resources.Resources.add_circle_24dp_FILL0_wght400_GRAD0_opsz24__3_
+            Me.AGREGARSITIOToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+            Me.AGREGARSITIOToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+            Me.AGREGARSITIOToolStripMenuItem.Name = "AGREGARSITIOToolStripMenuItem"
+            Me.AGREGARSITIOToolStripMenuItem.Size = New System.Drawing.Size(134, 28)
+            Me.AGREGARSITIOToolStripMenuItem.Text = "AGREGAR SITIO"
             '
             'GroupBox1
             '
@@ -1740,7 +1757,7 @@
             Me.GroupBox1.Controls.Add(Me.TextBox2)
             Me.GroupBox1.Controls.Add(Me.TextBox3)
             Me.GroupBox1.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.GroupBox1.Location = New System.Drawing.Point(3, 30)
+            Me.GroupBox1.Location = New System.Drawing.Point(3, 36)
             Me.GroupBox1.Name = "GroupBox1"
             Me.GroupBox1.Size = New System.Drawing.Size(778, 64)
             Me.GroupBox1.TabIndex = 30
@@ -1857,10 +1874,10 @@
             Me.ListView3.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader24, Me.ColumnHeader25, Me.ColumnHeader26, Me.ColumnHeader27, Me.ColumnHeader28, Me.ColumnHeader29, Me.ColumnHeader30, Me.ColumnHeader31, Me.ColumnHeader32, Me.ColumnHeader33, Me.ColumnHeader34, Me.ColumnHeader35, Me.ColumnHeader36, Me.ColumnHeader37, Me.ColumnHeader38})
             Me.ListView3.FullRowSelect = True
             Me.ListView3.HideSelection = False
-            Me.ListView3.Location = New System.Drawing.Point(3, 72)
+            Me.ListView3.Location = New System.Drawing.Point(3, 84)
             Me.ListView3.MultiSelect = False
             Me.ListView3.Name = "ListView3"
-            Me.ListView3.Size = New System.Drawing.Size(778, 587)
+            Me.ListView3.Size = New System.Drawing.Size(778, 575)
             Me.ListView3.TabIndex = 209
             Me.ListView3.UseCompatibleStateImageBehavior = False
             Me.ListView3.View = System.Windows.Forms.View.Details
@@ -1950,7 +1967,7 @@
             Me.GroupBox4.Controls.Add(Me.Label41)
             Me.GroupBox4.Controls.Add(Me.Label42)
             Me.GroupBox4.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.GroupBox4.Location = New System.Drawing.Point(2, 25)
+            Me.GroupBox4.Location = New System.Drawing.Point(2, 34)
             Me.GroupBox4.Name = "GroupBox4"
             Me.GroupBox4.Size = New System.Drawing.Size(780, 47)
             Me.GroupBox4.TabIndex = 206
@@ -1995,7 +2012,7 @@
             'Label41
             '
             Me.Label41.AutoSize = True
-            Me.Label41.Location = New System.Drawing.Point(301, 22)
+            Me.Label41.Location = New System.Drawing.Point(297, 22)
             Me.Label41.Name = "Label41"
             Me.Label41.Size = New System.Drawing.Size(23, 13)
             Me.Label41.TabIndex = 203
@@ -2004,7 +2021,7 @@
             'Label42
             '
             Me.Label42.AutoSize = True
-            Me.Label42.Location = New System.Drawing.Point(583, 8)
+            Me.Label42.Location = New System.Drawing.Point(583, 4)
             Me.Label42.Name = "Label42"
             Me.Label42.Size = New System.Drawing.Size(46, 13)
             Me.Label42.TabIndex = 205
@@ -2012,33 +2029,33 @@
             '
             'MenuStrip4
             '
-            Me.MenuStrip4.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.MenuStrip4.Font = New System.Drawing.Font("Segoe UI", 9.0!)
             Me.MenuStrip4.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem8, Me.ToolStripMenuItem12})
             Me.MenuStrip4.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow
             Me.MenuStrip4.Location = New System.Drawing.Point(0, 0)
             Me.MenuStrip4.Name = "MenuStrip4"
             Me.MenuStrip4.Padding = New System.Windows.Forms.Padding(7, 2, 0, 2)
-            Me.MenuStrip4.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
-            Me.MenuStrip4.Size = New System.Drawing.Size(784, 24)
+            Me.MenuStrip4.Size = New System.Drawing.Size(784, 32)
             Me.MenuStrip4.TabIndex = 205
             Me.MenuStrip4.Text = "msIngresoBodega"
             '
             'ToolStripMenuItem8
             '
             Me.ToolStripMenuItem8.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.ToolStripMenuItem8.Image = Global.syscisepro.My.Resources.Resources.BuscarRegistro
+            Me.ToolStripMenuItem8.Image = Global.syscisepro.My.Resources.Resources.search_24dp_FILL0_wght400_GRAD0_opsz24__2_
             Me.ToolStripMenuItem8.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.ToolStripMenuItem8.Name = "ToolStripMenuItem8"
-            Me.ToolStripMenuItem8.Size = New System.Drawing.Size(245, 20)
-            Me.ToolStripMenuItem8.Text = "CARGAR DETALLES DE LOS PUESTOS"
+            Me.ToolStripMenuItem8.Size = New System.Drawing.Size(85, 28)
+            Me.ToolStripMenuItem8.Text = "BUSCAR"
             '
             'ToolStripMenuItem12
             '
             Me.ToolStripMenuItem12.Enabled = False
             Me.ToolStripMenuItem12.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.ToolStripMenuItem12.Image = CType(resources.GetObject("ToolStripMenuItem12.Image"), System.Drawing.Image)
+            Me.ToolStripMenuItem12.Image = Global.syscisepro.My.Resources.Resources.icons8_excel_48
+            Me.ToolStripMenuItem12.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.ToolStripMenuItem12.Name = "ToolStripMenuItem12"
-            Me.ToolStripMenuItem12.Size = New System.Drawing.Size(91, 20)
+            Me.ToolStripMenuItem12.Size = New System.Drawing.Size(99, 28)
             Me.ToolStripMenuItem12.Text = "EXPORTAR"
             '
             'TabPage3
@@ -2078,7 +2095,7 @@
             Me.TextBox8.BackColor = System.Drawing.Color.White
             Me.TextBox8.Enabled = False
             Me.TextBox8.Font = New System.Drawing.Font("Consolas", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.TextBox8.Location = New System.Drawing.Point(687, 634)
+            Me.TextBox8.Location = New System.Drawing.Point(680, 634)
             Me.TextBox8.Name = "TextBox8"
             Me.TextBox8.Size = New System.Drawing.Size(97, 23)
             Me.TextBox8.TabIndex = 207
@@ -2188,7 +2205,7 @@
             'dtpFechaHasta
             '
             Me.dtpFechaHasta.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-            Me.dtpFechaHasta.Location = New System.Drawing.Point(638, 99)
+            Me.dtpFechaHasta.Location = New System.Drawing.Point(637, 100)
             Me.dtpFechaHasta.Name = "dtpFechaHasta"
             Me.dtpFechaHasta.Size = New System.Drawing.Size(142, 21)
             Me.dtpFechaHasta.TabIndex = 191
@@ -2196,7 +2213,7 @@
             'dtpFechaDesde
             '
             Me.dtpFechaDesde.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-            Me.dtpFechaDesde.Location = New System.Drawing.Point(458, 99)
+            Me.dtpFechaDesde.Location = New System.Drawing.Point(461, 101)
             Me.dtpFechaDesde.Name = "dtpFechaDesde"
             Me.dtpFechaDesde.Size = New System.Drawing.Size(128, 21)
             Me.dtpFechaDesde.TabIndex = 190
@@ -2205,32 +2222,32 @@
             '
             Me.dgvFacturaVenta.AllowUserToAddRows = False
             Me.dgvFacturaVenta.AllowUserToDeleteRows = False
-            DataGridViewCellStyle63.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-            Me.dgvFacturaVenta.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle63
+            DataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+            Me.dgvFacturaVenta.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle9
             Me.dgvFacturaVenta.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
             Me.dgvFacturaVenta.BackgroundColor = System.Drawing.Color.White
             Me.dgvFacturaVenta.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
             Me.dgvFacturaVenta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-            DataGridViewCellStyle64.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-            DataGridViewCellStyle64.BackColor = System.Drawing.SystemColors.Window
-            DataGridViewCellStyle64.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            DataGridViewCellStyle64.ForeColor = System.Drawing.SystemColors.ControlText
-            DataGridViewCellStyle64.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(123, Byte), Integer))
-            DataGridViewCellStyle64.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-            DataGridViewCellStyle64.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-            Me.dgvFacturaVenta.DefaultCellStyle = DataGridViewCellStyle64
+            DataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+            DataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Window
+            DataGridViewCellStyle10.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.ControlText
+            DataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(123, Byte), Integer))
+            DataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+            DataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+            Me.dgvFacturaVenta.DefaultCellStyle = DataGridViewCellStyle10
             Me.dgvFacturaVenta.GridColor = System.Drawing.SystemColors.ControlDarkDark
-            Me.dgvFacturaVenta.Location = New System.Drawing.Point(4, 120)
+            Me.dgvFacturaVenta.Location = New System.Drawing.Point(4, 124)
             Me.dgvFacturaVenta.MultiSelect = False
             Me.dgvFacturaVenta.Name = "dgvFacturaVenta"
             Me.dgvFacturaVenta.RowHeadersVisible = False
             Me.dgvFacturaVenta.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvFacturaVenta.Size = New System.Drawing.Size(776, 482)
+            Me.dgvFacturaVenta.Size = New System.Drawing.Size(776, 473)
             Me.dgvFacturaVenta.TabIndex = 189
             '
             'Label30
             '
-            Me.Label30.Location = New System.Drawing.Point(5, 100)
+            Me.Label30.Location = New System.Drawing.Point(5, 102)
             Me.Label30.Name = "Label30"
             Me.Label30.Size = New System.Drawing.Size(776, 18)
             Me.Label30.TabIndex = 188
@@ -2253,7 +2270,7 @@
             Me.GroupBox3.Controls.Add(Me.Label19)
             Me.GroupBox3.Controls.Add(Me.TextBox6)
             Me.GroupBox3.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.GroupBox3.Location = New System.Drawing.Point(3, 30)
+            Me.GroupBox3.Location = New System.Drawing.Point(3, 37)
             Me.GroupBox3.Name = "GroupBox3"
             Me.GroupBox3.Size = New System.Drawing.Size(778, 64)
             Me.GroupBox3.TabIndex = 183
@@ -2375,32 +2392,32 @@
             '
             'MenuStrip2
             '
-            Me.MenuStrip2.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.MenuStrip2.Font = New System.Drawing.Font("Segoe UI", 9.0!)
             Me.MenuStrip2.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem5, Me.ToolStripMenuItem6})
             Me.MenuStrip2.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow
             Me.MenuStrip2.Location = New System.Drawing.Point(3, 3)
             Me.MenuStrip2.Name = "MenuStrip2"
             Me.MenuStrip2.Padding = New System.Windows.Forms.Padding(7, 2, 0, 2)
-            Me.MenuStrip2.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
-            Me.MenuStrip2.Size = New System.Drawing.Size(778, 24)
+            Me.MenuStrip2.Size = New System.Drawing.Size(778, 32)
             Me.MenuStrip2.TabIndex = 182
             Me.MenuStrip2.Text = "msIngresoBodega"
             '
             'ToolStripMenuItem5
             '
             Me.ToolStripMenuItem5.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.ToolStripMenuItem5.Image = Global.syscisepro.My.Resources.Resources.BuscarRegistro
+            Me.ToolStripMenuItem5.Image = Global.syscisepro.My.Resources.Resources.search_24dp_FILL0_wght400_GRAD0_opsz24__2_
             Me.ToolStripMenuItem5.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.ToolStripMenuItem5.Name = "ToolStripMenuItem5"
-            Me.ToolStripMenuItem5.Size = New System.Drawing.Size(112, 20)
-            Me.ToolStripMenuItem5.Text = "CARGAR TODO"
+            Me.ToolStripMenuItem5.Size = New System.Drawing.Size(85, 28)
+            Me.ToolStripMenuItem5.Text = "BUSCAR"
             '
             'ToolStripMenuItem6
             '
             Me.ToolStripMenuItem6.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.ToolStripMenuItem6.Image = Global.syscisepro.My.Resources.Resources.excel_icon
+            Me.ToolStripMenuItem6.Image = Global.syscisepro.My.Resources.Resources.icons8_excel_48
+            Me.ToolStripMenuItem6.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.ToolStripMenuItem6.Name = "ToolStripMenuItem6"
-            Me.ToolStripMenuItem6.Size = New System.Drawing.Size(91, 20)
+            Me.ToolStripMenuItem6.Size = New System.Drawing.Size(99, 28)
             Me.ToolStripMenuItem6.Text = "EXPORTAR"
             '
             'Label33
@@ -2476,7 +2493,7 @@
             Me.TextBox9.BackColor = System.Drawing.Color.White
             Me.TextBox9.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.TextBox9.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.TextBox9.Location = New System.Drawing.Point(51, 31)
+            Me.TextBox9.Location = New System.Drawing.Point(51, 39)
             Me.TextBox9.Name = "TextBox9"
             Me.TextBox9.Size = New System.Drawing.Size(727, 20)
             Me.TextBox9.TabIndex = 182
@@ -2485,33 +2502,33 @@
             '
             Me.DataGridView2.AllowUserToAddRows = False
             Me.DataGridView2.AllowUserToDeleteRows = False
-            DataGridViewCellStyle71.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-            Me.DataGridView2.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle71
+            DataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+            Me.DataGridView2.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle11
             Me.DataGridView2.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
             Me.DataGridView2.BackgroundColor = System.Drawing.Color.White
             Me.DataGridView2.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
             Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-            DataGridViewCellStyle72.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-            DataGridViewCellStyle72.BackColor = System.Drawing.SystemColors.Window
-            DataGridViewCellStyle72.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            DataGridViewCellStyle72.ForeColor = System.Drawing.SystemColors.ControlText
-            DataGridViewCellStyle72.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(123, Byte), Integer))
-            DataGridViewCellStyle72.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-            DataGridViewCellStyle72.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-            Me.DataGridView2.DefaultCellStyle = DataGridViewCellStyle72
+            DataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+            DataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Window
+            DataGridViewCellStyle12.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.ControlText
+            DataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(123, Byte), Integer))
+            DataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+            DataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+            Me.DataGridView2.DefaultCellStyle = DataGridViewCellStyle12
             Me.DataGridView2.GridColor = System.Drawing.SystemColors.ControlDarkDark
-            Me.DataGridView2.Location = New System.Drawing.Point(7, 53)
+            Me.DataGridView2.Location = New System.Drawing.Point(7, 63)
             Me.DataGridView2.MultiSelect = False
             Me.DataGridView2.Name = "DataGridView2"
             Me.DataGridView2.RowHeadersVisible = False
             Me.DataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.DataGridView2.Size = New System.Drawing.Size(771, 606)
+            Me.DataGridView2.Size = New System.Drawing.Size(771, 596)
             Me.DataGridView2.TabIndex = 183
             '
             'Label39
             '
             Me.Label39.AutoSize = True
-            Me.Label39.Location = New System.Drawing.Point(4, 34)
+            Me.Label39.Location = New System.Drawing.Point(4, 42)
             Me.Label39.Name = "Label39"
             Me.Label39.Size = New System.Drawing.Size(46, 13)
             Me.Label39.TabIndex = 184
@@ -2519,42 +2536,33 @@
             '
             'MenuStrip3
             '
-            Me.MenuStrip3.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.MenuStrip3.Font = New System.Drawing.Font("Segoe UI", 9.0!)
             Me.MenuStrip3.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem7, Me.ToolStripMenuItem13})
             Me.MenuStrip3.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow
             Me.MenuStrip3.Location = New System.Drawing.Point(3, 3)
             Me.MenuStrip3.Name = "MenuStrip3"
             Me.MenuStrip3.Padding = New System.Windows.Forms.Padding(7, 2, 0, 2)
-            Me.MenuStrip3.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
-            Me.MenuStrip3.Size = New System.Drawing.Size(778, 24)
+            Me.MenuStrip3.Size = New System.Drawing.Size(778, 32)
             Me.MenuStrip3.TabIndex = 181
             Me.MenuStrip3.Text = "msIngresoBodega"
             '
             'ToolStripMenuItem7
             '
             Me.ToolStripMenuItem7.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.ToolStripMenuItem7.Image = Global.syscisepro.My.Resources.Resources.BuscarRegistro
+            Me.ToolStripMenuItem7.Image = Global.syscisepro.My.Resources.Resources.search_24dp_FILL0_wght400_GRAD0_opsz24__2_
             Me.ToolStripMenuItem7.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.ToolStripMenuItem7.Name = "ToolStripMenuItem7"
-            Me.ToolStripMenuItem7.Size = New System.Drawing.Size(119, 20)
-            Me.ToolStripMenuItem7.Text = "LISTAR TODOS"
+            Me.ToolStripMenuItem7.Size = New System.Drawing.Size(85, 28)
+            Me.ToolStripMenuItem7.Text = "BUSCAR"
             '
             'ToolStripMenuItem13
             '
             Me.ToolStripMenuItem13.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.ToolStripMenuItem13.Image = Global.syscisepro.My.Resources.Resources.excel_icon
+            Me.ToolStripMenuItem13.Image = Global.syscisepro.My.Resources.Resources.icons8_excel_48
+            Me.ToolStripMenuItem13.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.ToolStripMenuItem13.Name = "ToolStripMenuItem13"
-            Me.ToolStripMenuItem13.Size = New System.Drawing.Size(91, 20)
+            Me.ToolStripMenuItem13.Size = New System.Drawing.Size(99, 28)
             Me.ToolStripMenuItem13.Text = "EXPORTAR"
-            '
-            'AGREGARSITIOToolStripMenuItem
-            '
-            Me.AGREGARSITIOToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-            Me.AGREGARSITIOToolStripMenuItem.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.AGREGARSITIOToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-            Me.AGREGARSITIOToolStripMenuItem.Name = "AGREGARSITIOToolStripMenuItem"
-            Me.AGREGARSITIOToolStripMenuItem.Size = New System.Drawing.Size(110, 18)
-            Me.AGREGARSITIOToolStripMenuItem.Text = "AGREGAR SITIO"
             '
             'FormMantenimientoClientes
             '
@@ -2563,10 +2571,13 @@
             Me.BackColor = System.Drawing.Color.White
             Me.ClientSize = New System.Drawing.Size(794, 696)
             Me.Controls.Add(Me.TabControl1)
-            Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
             Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
             Me.Name = "FormMantenimientoClientes"
             Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+            Me.StateActive.Border.DrawBorders = CType((((Krypton.Toolkit.PaletteDrawBorders.Top Or Krypton.Toolkit.PaletteDrawBorders.Bottom) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Left) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Right), Krypton.Toolkit.PaletteDrawBorders)
+            Me.StateActive.Border.Rounding = 5.0!
             Me.Text = "MANTENIMIENTO DE CLIENTES"
             Me.gbDatosClienteGeneral.ResumeLayout(False)
             Me.gbDatosClienteGeneral.PerformLayout()
