@@ -1,5 +1,6 @@
 ﻿Imports ClassLibraryCisepro.ACTIVOS_FIJOS.TIPOS_DE_ACTIVOS
 Imports ClassLibraryCisepro.ENUMS
+Imports syscisepro.DATOS
 
 Namespace FORMULARIOS.FONDOS.FONDO_CAJA_CHICA
     ''' <summary>
@@ -82,9 +83,11 @@ Namespace FORMULARIOS.FONDOS.FONDO_CAJA_CHICA
                     Icon = My.Resources.logo_c
                     dgvVehiculos.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
             End Select
-
+            dgvVehiculos.Font = New Font("Roboto", 8, FontStyle.Regular)
             CargarVehiculo(String.Empty)
-            txtNombresRecibe.Focus()
+            Dim validation As New ValidationForms()
+            validation.SetPlaceholder(txtNombresRecibe, "BUSCAR ACTIVO")
+            'txtNombresRecibe.Focus()
         End Sub
 
         Private Sub dgvVehiculos_CellDoubleClick(ByVal sender As System.Object, ByVal e As Windows.Forms.DataGridViewCellEventArgs) Handles dgvVehiculos.CellDoubleClick

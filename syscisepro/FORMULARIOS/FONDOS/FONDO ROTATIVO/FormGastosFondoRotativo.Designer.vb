@@ -1,8 +1,8 @@
 ﻿Namespace FORMULARIOS.FONDOS.FONDO_ROTATIVO
     <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
     Partial Class FormGastosFondoRotativo
-        Inherits System.Windows.Forms.Form
-
+        'Inherits System.Windows.Forms.Form
+        Inherits Krypton.Toolkit.KryptonForm
         'Form reemplaza a Dispose para limpiar la lista de componentes.
         <System.Diagnostics.DebuggerNonUserCode()> _
         Protected Overrides Sub Dispose(ByVal disposing As Boolean)
@@ -64,7 +64,7 @@
             Me.lblNombreGastoFR.AutoSize = True
             Me.lblNombreGastoFR.Location = New System.Drawing.Point(10, 53)
             Me.lblNombreGastoFR.Name = "lblNombreGastoFR"
-            Me.lblNombreGastoFR.Size = New System.Drawing.Size(52, 13)
+            Me.lblNombreGastoFR.Size = New System.Drawing.Size(55, 13)
             Me.lblNombreGastoFR.TabIndex = 11
             Me.lblNombreGastoFR.Text = "DETALLE:"
             '
@@ -73,7 +73,7 @@
             Me.lblCtaContableGastosFR.AutoSize = True
             Me.lblCtaContableGastosFR.Location = New System.Drawing.Point(265, 25)
             Me.lblCtaContableGastosFR.Name = "lblCtaContableGastosFR"
-            Me.lblCtaContableGastosFR.Size = New System.Drawing.Size(88, 13)
+            Me.lblCtaContableGastosFR.Size = New System.Drawing.Size(93, 13)
             Me.lblCtaContableGastosFR.TabIndex = 12
             Me.lblCtaContableGastosFR.Text = "CTA. CONTABLE:"
             '
@@ -83,7 +83,7 @@
             Me.txtIdGastosFR.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtIdGastosFR.Location = New System.Drawing.Point(114, 23)
             Me.txtIdGastosFR.Name = "txtIdGastosFR"
-            Me.txtIdGastosFR.Size = New System.Drawing.Size(120, 22)
+            Me.txtIdGastosFR.Size = New System.Drawing.Size(120, 21)
             Me.txtIdGastosFR.TabIndex = 13
             '
             'txtNombreGastoFR
@@ -92,7 +92,7 @@
             Me.txtNombreGastoFR.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtNombreGastoFR.Location = New System.Drawing.Point(114, 50)
             Me.txtNombreGastoFR.Name = "txtNombreGastoFR"
-            Me.txtNombreGastoFR.Size = New System.Drawing.Size(366, 22)
+            Me.txtNombreGastoFR.Size = New System.Drawing.Size(366, 21)
             Me.txtNombreGastoFR.TabIndex = 14
             '
             'txtCtaContableGastoFR
@@ -101,7 +101,7 @@
             Me.txtCtaContableGastoFR.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtCtaContableGastoFR.Location = New System.Drawing.Point(360, 22)
             Me.txtCtaContableGastoFR.Name = "txtCtaContableGastoFR"
-            Me.txtCtaContableGastoFR.Size = New System.Drawing.Size(120, 22)
+            Me.txtCtaContableGastoFR.Size = New System.Drawing.Size(120, 21)
             Me.txtCtaContableGastoFR.TabIndex = 15
             '
             'dgvGastosFondoRotativo
@@ -122,12 +122,12 @@
             DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
             DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
             Me.dgvGastosFondoRotativo.DefaultCellStyle = DataGridViewCellStyle2
-            Me.dgvGastosFondoRotativo.Location = New System.Drawing.Point(2, 103)
+            Me.dgvGastosFondoRotativo.Location = New System.Drawing.Point(2, 113)
             Me.dgvGastosFondoRotativo.MultiSelect = False
             Me.dgvGastosFondoRotativo.Name = "dgvGastosFondoRotativo"
             Me.dgvGastosFondoRotativo.RowHeadersVisible = False
             Me.dgvGastosFondoRotativo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvGastosFondoRotativo.Size = New System.Drawing.Size(718, 319)
+            Me.dgvGastosFondoRotativo.Size = New System.Drawing.Size(718, 314)
             Me.dgvGastosFondoRotativo.TabIndex = 16
             '
             'gbConcepto
@@ -138,7 +138,8 @@
             Me.gbConcepto.Controls.Add(Me.lblCtaContableGastosFR)
             Me.gbConcepto.Controls.Add(Me.txtIdGastosFR)
             Me.gbConcepto.Controls.Add(Me.txtNombreGastoFR)
-            Me.gbConcepto.Location = New System.Drawing.Point(234, 25)
+            Me.gbConcepto.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.gbConcepto.Location = New System.Drawing.Point(234, 35)
             Me.gbConcepto.Name = "gbConcepto"
             Me.gbConcepto.Size = New System.Drawing.Size(486, 77)
             Me.gbConcepto.TabIndex = 17
@@ -151,7 +152,8 @@
             Me.gpActividad.Controls.Add(Me.lblCtaContableActividad)
             Me.gpActividad.Controls.Add(Me.txtDetalleActividad)
             Me.gpActividad.Controls.Add(Me.lblDetalleActividad)
-            Me.gpActividad.Location = New System.Drawing.Point(2, 25)
+            Me.gpActividad.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.gpActividad.Location = New System.Drawing.Point(2, 35)
             Me.gpActividad.Name = "gpActividad"
             Me.gpActividad.Size = New System.Drawing.Size(232, 77)
             Me.gpActividad.TabIndex = 18
@@ -165,7 +167,7 @@
             Me.txtCtaContableActividad.Enabled = False
             Me.txtCtaContableActividad.Location = New System.Drawing.Point(104, 49)
             Me.txtCtaContableActividad.Name = "txtCtaContableActividad"
-            Me.txtCtaContableActividad.Size = New System.Drawing.Size(122, 22)
+            Me.txtCtaContableActividad.Size = New System.Drawing.Size(122, 21)
             Me.txtCtaContableActividad.TabIndex = 3
             Me.txtCtaContableActividad.Text = "1.1.1.2"
             Me.txtCtaContableActividad.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
@@ -175,7 +177,7 @@
             Me.lblCtaContableActividad.AutoSize = True
             Me.lblCtaContableActividad.Location = New System.Drawing.Point(6, 52)
             Me.lblCtaContableActividad.Name = "lblCtaContableActividad"
-            Me.lblCtaContableActividad.Size = New System.Drawing.Size(85, 13)
+            Me.lblCtaContableActividad.Size = New System.Drawing.Size(90, 13)
             Me.lblCtaContableActividad.TabIndex = 2
             Me.lblCtaContableActividad.Text = "CTA CONTABLE:"
             '
@@ -186,7 +188,7 @@
             Me.txtDetalleActividad.Enabled = False
             Me.txtDetalleActividad.Location = New System.Drawing.Point(104, 21)
             Me.txtDetalleActividad.Name = "txtDetalleActividad"
-            Me.txtDetalleActividad.Size = New System.Drawing.Size(122, 22)
+            Me.txtDetalleActividad.Size = New System.Drawing.Size(122, 21)
             Me.txtDetalleActividad.TabIndex = 1
             Me.txtDetalleActividad.Text = "FONDO ROTATIVO"
             Me.txtDetalleActividad.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
@@ -196,57 +198,58 @@
             Me.lblDetalleActividad.AutoSize = True
             Me.lblDetalleActividad.Location = New System.Drawing.Point(6, 24)
             Me.lblDetalleActividad.Name = "lblDetalleActividad"
-            Me.lblDetalleActividad.Size = New System.Drawing.Size(52, 13)
+            Me.lblDetalleActividad.Size = New System.Drawing.Size(55, 13)
             Me.lblDetalleActividad.TabIndex = 0
             Me.lblDetalleActividad.Text = "DETALLE:"
             '
             'MenuStrip1
             '
-            Me.MenuStrip1.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.MenuStrip1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
             Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnNuevoGastosFondoRotativo, Me.btnGuardarGastosFondoRotativo, Me.btnCancelarGastosFondoRotativo, Me.btnReporte})
             Me.MenuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow
             Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
             Me.MenuStrip1.Name = "MenuStrip1"
             Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(7, 2, 0, 2)
-            Me.MenuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
-            Me.MenuStrip1.Size = New System.Drawing.Size(722, 24)
+            Me.MenuStrip1.Size = New System.Drawing.Size(722, 32)
             Me.MenuStrip1.TabIndex = 184
             Me.MenuStrip1.Text = "msIngresoBodega"
             '
             'btnNuevoGastosFondoRotativo
             '
             Me.btnNuevoGastosFondoRotativo.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnNuevoGastosFondoRotativo.Image = CType(resources.GetObject("btnNuevoGastosFondoRotativo.Image"), System.Drawing.Image)
+            Me.btnNuevoGastosFondoRotativo.Image = Global.syscisepro.My.Resources.Resources.add_circle_24dp_FILL0_wght400_GRAD0_opsz24__3_
             Me.btnNuevoGastosFondoRotativo.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnNuevoGastosFondoRotativo.Name = "btnNuevoGastosFondoRotativo"
-            Me.btnNuevoGastosFondoRotativo.Size = New System.Drawing.Size(73, 20)
+            Me.btnNuevoGastosFondoRotativo.Size = New System.Drawing.Size(81, 28)
             Me.btnNuevoGastosFondoRotativo.Text = "NUEVO"
             '
             'btnGuardarGastosFondoRotativo
             '
             Me.btnGuardarGastosFondoRotativo.Enabled = False
             Me.btnGuardarGastosFondoRotativo.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnGuardarGastosFondoRotativo.Image = CType(resources.GetObject("btnGuardarGastosFondoRotativo.Image"), System.Drawing.Image)
+            Me.btnGuardarGastosFondoRotativo.Image = Global.syscisepro.My.Resources.Resources.save_24dp_FILL0_wght400_GRAD0_opsz24__2_
             Me.btnGuardarGastosFondoRotativo.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnGuardarGastosFondoRotativo.Name = "btnGuardarGastosFondoRotativo"
-            Me.btnGuardarGastosFondoRotativo.Size = New System.Drawing.Size(87, 20)
+            Me.btnGuardarGastosFondoRotativo.Size = New System.Drawing.Size(95, 28)
             Me.btnGuardarGastosFondoRotativo.Text = "GUARDAR"
             '
             'btnCancelarGastosFondoRotativo
             '
             Me.btnCancelarGastosFondoRotativo.Enabled = False
             Me.btnCancelarGastosFondoRotativo.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnCancelarGastosFondoRotativo.Image = Global.syscisepro.My.Resources.Resources.cancel
+            Me.btnCancelarGastosFondoRotativo.Image = Global.syscisepro.My.Resources.Resources.cancel_24dp_FILL0_wght400_GRAD0_opsz24
+            Me.btnCancelarGastosFondoRotativo.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnCancelarGastosFondoRotativo.Name = "btnCancelarGastosFondoRotativo"
-            Me.btnCancelarGastosFondoRotativo.Size = New System.Drawing.Size(89, 20)
+            Me.btnCancelarGastosFondoRotativo.Size = New System.Drawing.Size(97, 28)
             Me.btnCancelarGastosFondoRotativo.Text = "CANCELAR"
             '
             'btnReporte
             '
             Me.btnReporte.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnReporte.Image = Global.syscisepro.My.Resources.Resources.report
+            Me.btnReporte.Image = Global.syscisepro.My.Resources.Resources.description_24dp_FILL0_wght400_GRAD0_opsz24__2_
+            Me.btnReporte.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnReporte.Name = "btnReporte"
-            Me.btnReporte.Size = New System.Drawing.Size(82, 20)
+            Me.btnReporte.Size = New System.Drawing.Size(90, 28)
             Me.btnReporte.Text = "REPORTE"
             '
             'FormGastosFondoRotativo
@@ -260,11 +263,14 @@
             Me.Controls.Add(Me.gbConcepto)
             Me.Controls.Add(Me.dgvGastosFondoRotativo)
             Me.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
             Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
             Me.MaximizeBox = False
             Me.Name = "FormGastosFondoRotativo"
             Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+            Me.StateActive.Border.DrawBorders = CType((((Krypton.Toolkit.PaletteDrawBorders.Top Or Krypton.Toolkit.PaletteDrawBorders.Bottom) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Left) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Right), Krypton.Toolkit.PaletteDrawBorders)
+            Me.StateActive.Border.Rounding = 5.0!
             Me.Text = "CONCEPTOS DE FONDO ROTATIVO"
             CType(Me.dgvGastosFondoRotativo, System.ComponentModel.ISupportInitialize).EndInit()
             Me.gbConcepto.ResumeLayout(False)

@@ -30,7 +30,7 @@ namespace SysCisepro3.TalentoHumano
         {
             // CARGAR ICONO Y DESIEÑO SEGUN SISTEMA 
             BackColor = ValidationForms.GetColorSistema(TipoCon);
-            Label1.ForeColor = Color.White;
+            //Label1.ForeColor = Color.White;
             Label2.ForeColor = Color.White;
             dataGridView1.DefaultCellStyle.SelectionBackColor = ValidationForms.GetColorSistema(TipoCon);
             switch (TipoCon)
@@ -45,8 +45,8 @@ namespace SysCisepro3.TalentoHumano
                     Icon = Resources.logo_c; 
                     break;
             }
-
-            txtParametrobusqueda.Focus();
+            ValidationForms.SetPlaceholder(txtParametrobusqueda, "BUSCAR PERSONAL");
+            //txtParametrobusqueda.Focus();
         }
 
         private void txtParametrobusqueda_KeyUp(object sender, KeyEventArgs e)

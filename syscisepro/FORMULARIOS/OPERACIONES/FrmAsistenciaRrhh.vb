@@ -59,9 +59,9 @@ Namespace FORMULARIOS.OPERACIONES
                 Case TipoConexion.Asenava
                     Icon = My.Resources.logo_a
                     MenuStrip1.ForeColor = Color.White
-                    MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorAsenava
+                    'MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorAsenava
                     MenuStrip2.ForeColor = Color.White
-                    MenuStrip2.BackColor = My.MySettingsProperty.Settings.ColorAsenava
+                    'MenuStrip2.BackColor = My.MySettingsProperty.Settings.ColorAsenava
                     Label24.ForeColor = Color.White
                     Label24.BackColor = My.MySettingsProperty.Settings.ColorAsenava
                     Label2.ForeColor = Color.White

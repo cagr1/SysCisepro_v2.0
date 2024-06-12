@@ -72,12 +72,12 @@
             DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
             DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
             Me.dgvLiquidacionFondoRotativo.DefaultCellStyle = DataGridViewCellStyle2
-            Me.dgvLiquidacionFondoRotativo.Location = New System.Drawing.Point(1, 73)
+            Me.dgvLiquidacionFondoRotativo.Location = New System.Drawing.Point(1, 82)
             Me.dgvLiquidacionFondoRotativo.MultiSelect = False
             Me.dgvLiquidacionFondoRotativo.Name = "dgvLiquidacionFondoRotativo"
             Me.dgvLiquidacionFondoRotativo.RowHeadersVisible = False
             Me.dgvLiquidacionFondoRotativo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvLiquidacionFondoRotativo.Size = New System.Drawing.Size(1015, 490)
+            Me.dgvLiquidacionFondoRotativo.Size = New System.Drawing.Size(1015, 481)
             Me.dgvLiquidacionFondoRotativo.TabIndex = 0
             '
             'lblIdLiquidacionFondoRotativo
@@ -243,7 +243,7 @@
             Me.gbLiquidacion.Controls.Add(Me.lblGastosLiquidacion)
             Me.gbLiquidacion.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.gbLiquidacion.ForeColor = System.Drawing.Color.Black
-            Me.gbLiquidacion.Location = New System.Drawing.Point(-1, 25)
+            Me.gbLiquidacion.Location = New System.Drawing.Point(-1, 34)
             Me.gbLiquidacion.Name = "gbLiquidacion"
             Me.gbLiquidacion.Size = New System.Drawing.Size(1017, 48)
             Me.gbLiquidacion.TabIndex = 16
@@ -252,38 +252,38 @@
             '
             'Button1
             '
-            Me.Button1.Image = Global.syscisepro.My.Resources.Resources.report
-            Me.Button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-            Me.Button1.Location = New System.Drawing.Point(943, 7)
+            Me.Button1.Image = Global.syscisepro.My.Resources.Resources.description_24dp_FILL0_wght400_GRAD0_opsz24__2_
+            Me.Button1.Location = New System.Drawing.Point(960, 10)
             Me.Button1.Name = "Button1"
-            Me.Button1.Size = New System.Drawing.Size(73, 40)
+            Me.Button1.Size = New System.Drawing.Size(47, 34)
             Me.Button1.TabIndex = 15
-            Me.Button1.Text = "REPORTE"
             Me.Button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter
             Me.Button1.UseVisualStyleBackColor = True
             '
             'MenuStrip1
             '
+            Me.MenuStrip1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
             Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem1})
             Me.MenuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow
             Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
             Me.MenuStrip1.Name = "MenuStrip1"
             Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(7, 2, 0, 2)
-            Me.MenuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
-            Me.MenuStrip1.Size = New System.Drawing.Size(1018, 24)
+            Me.MenuStrip1.Size = New System.Drawing.Size(1018, 32)
             Me.MenuStrip1.TabIndex = 189
             Me.MenuStrip1.Text = "msIngresoBodega"
             '
             'ToolStripMenuItem1
             '
-            Me.ToolStripMenuItem1.Image = Global.syscisepro.My.Resources.Resources.BuscarRegistro
+            Me.ToolStripMenuItem1.Image = Global.syscisepro.My.Resources.Resources.search_24dp_FILL0_wght400_GRAD0_opsz24__2_
+            Me.ToolStripMenuItem1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
-            Me.ToolStripMenuItem1.Size = New System.Drawing.Size(170, 20)
-            Me.ToolStripMenuItem1.Text = "CARGAR LIQUIDACIONES"
+            Me.ToolStripMenuItem1.Size = New System.Drawing.Size(87, 28)
+            Me.ToolStripMenuItem1.Text = "BUSCAR"
             '
             'Label1
             '
             Me.Label1.AutoSize = True
+            Me.Label1.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(247, Byte), Integer))
             Me.Label1.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Label1.Location = New System.Drawing.Point(191, 6)
             Me.Label1.Name = "Label1"
@@ -310,6 +310,7 @@
             'Label2
             '
             Me.Label2.AutoSize = True
+            Me.Label2.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(247, Byte), Integer))
             Me.Label2.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Label2.Location = New System.Drawing.Point(460, 6)
             Me.Label2.Name = "Label2"
@@ -330,10 +331,13 @@
             Me.Controls.Add(Me.MenuStrip1)
             Me.Controls.Add(Me.gbLiquidacion)
             Me.Controls.Add(Me.dgvLiquidacionFondoRotativo)
-            Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
             Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
             Me.Name = "FormBuscarLiquidacionFondoRotativo"
             Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+            Me.StateActive.Border.DrawBorders = CType((((Krypton.Toolkit.PaletteDrawBorders.Top Or Krypton.Toolkit.PaletteDrawBorders.Bottom) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Left) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Right), Krypton.Toolkit.PaletteDrawBorders)
+            Me.StateActive.Border.Rounding = 5.0!
             Me.Text = "BUSCAR LIQUIDACION FONDO ROTATIVO"
             CType(Me.dgvLiquidacionFondoRotativo, System.ComponentModel.ISupportInitialize).EndInit()
             Me.gbLiquidacion.ResumeLayout(False)

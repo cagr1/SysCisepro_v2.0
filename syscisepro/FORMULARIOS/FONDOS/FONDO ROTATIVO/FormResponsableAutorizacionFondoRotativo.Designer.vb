@@ -109,13 +109,13 @@
             DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
             DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
             Me.dgvResponsableAutoFR.DefaultCellStyle = DataGridViewCellStyle2
-            Me.dgvResponsableAutoFR.Location = New System.Drawing.Point(1, 144)
+            Me.dgvResponsableAutoFR.Location = New System.Drawing.Point(1, 155)
             Me.dgvResponsableAutoFR.MultiSelect = False
             Me.dgvResponsableAutoFR.Name = "dgvResponsableAutoFR"
             Me.dgvResponsableAutoFR.ReadOnly = True
             Me.dgvResponsableAutoFR.RowHeadersVisible = False
             Me.dgvResponsableAutoFR.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvResponsableAutoFR.Size = New System.Drawing.Size(769, 198)
+            Me.dgvResponsableAutoFR.Size = New System.Drawing.Size(769, 189)
             Me.dgvResponsableAutoFR.TabIndex = 19
             '
             'txtIdResponsableAutoFR
@@ -173,7 +173,7 @@
             Me.pCentroCostoSolicitudFR.Controls.Add(Me.lblProvincia)
             Me.pCentroCostoSolicitudFR.Controls.Add(Me.lblCanton)
             Me.pCentroCostoSolicitudFR.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.pCentroCostoSolicitudFR.Location = New System.Drawing.Point(2, 102)
+            Me.pCentroCostoSolicitudFR.Location = New System.Drawing.Point(2, 113)
             Me.pCentroCostoSolicitudFR.Name = "pCentroCostoSolicitudFR"
             Me.pCentroCostoSolicitudFR.Size = New System.Drawing.Size(768, 41)
             Me.pCentroCostoSolicitudFR.TabIndex = 27
@@ -263,7 +263,7 @@
             Me.gbResponsable.Controls.Add(Me.txtCIResponsableAutoFR)
             Me.gbResponsable.Controls.Add(Me.txtNombreResponsableAutoFR)
             Me.gbResponsable.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.gbResponsable.Location = New System.Drawing.Point(4, 26)
+            Me.gbResponsable.Location = New System.Drawing.Point(4, 34)
             Me.gbResponsable.Name = "gbResponsable"
             Me.gbResponsable.Size = New System.Drawing.Size(764, 76)
             Me.gbResponsable.TabIndex = 30
@@ -272,43 +272,43 @@
             '
             'MenuStrip1
             '
-            Me.MenuStrip1.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.MenuStrip1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
             Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnNuevoResponsableAutoFondoRotativo, Me.btnGuardarResponsableAutoFR, Me.btnCancelarResponsableAutoFR})
             Me.MenuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow
             Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
             Me.MenuStrip1.Name = "MenuStrip1"
             Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(7, 2, 0, 2)
-            Me.MenuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
-            Me.MenuStrip1.Size = New System.Drawing.Size(771, 24)
+            Me.MenuStrip1.Size = New System.Drawing.Size(771, 32)
             Me.MenuStrip1.TabIndex = 185
             Me.MenuStrip1.Text = "msIngresoBodega"
             '
             'btnNuevoResponsableAutoFondoRotativo
             '
             Me.btnNuevoResponsableAutoFondoRotativo.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnNuevoResponsableAutoFondoRotativo.Image = CType(resources.GetObject("btnNuevoResponsableAutoFondoRotativo.Image"), System.Drawing.Image)
+            Me.btnNuevoResponsableAutoFondoRotativo.Image = Global.syscisepro.My.Resources.Resources.add_circle_24dp_FILL0_wght400_GRAD0_opsz24__3_
             Me.btnNuevoResponsableAutoFondoRotativo.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnNuevoResponsableAutoFondoRotativo.Name = "btnNuevoResponsableAutoFondoRotativo"
-            Me.btnNuevoResponsableAutoFondoRotativo.Size = New System.Drawing.Size(73, 20)
+            Me.btnNuevoResponsableAutoFondoRotativo.Size = New System.Drawing.Size(81, 28)
             Me.btnNuevoResponsableAutoFondoRotativo.Text = "NUEVO"
             '
             'btnGuardarResponsableAutoFR
             '
             Me.btnGuardarResponsableAutoFR.Enabled = False
             Me.btnGuardarResponsableAutoFR.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnGuardarResponsableAutoFR.Image = CType(resources.GetObject("btnGuardarResponsableAutoFR.Image"), System.Drawing.Image)
+            Me.btnGuardarResponsableAutoFR.Image = Global.syscisepro.My.Resources.Resources.save_24dp_FILL0_wght400_GRAD0_opsz24__2_
             Me.btnGuardarResponsableAutoFR.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnGuardarResponsableAutoFR.Name = "btnGuardarResponsableAutoFR"
-            Me.btnGuardarResponsableAutoFR.Size = New System.Drawing.Size(87, 20)
+            Me.btnGuardarResponsableAutoFR.Size = New System.Drawing.Size(95, 28)
             Me.btnGuardarResponsableAutoFR.Text = "GUARDAR"
             '
             'btnCancelarResponsableAutoFR
             '
             Me.btnCancelarResponsableAutoFR.Enabled = False
             Me.btnCancelarResponsableAutoFR.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnCancelarResponsableAutoFR.Image = Global.syscisepro.My.Resources.Resources.cancel
+            Me.btnCancelarResponsableAutoFR.Image = Global.syscisepro.My.Resources.Resources.cancel_24dp_FILL0_wght400_GRAD0_opsz24
+            Me.btnCancelarResponsableAutoFR.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnCancelarResponsableAutoFR.Name = "btnCancelarResponsableAutoFR"
-            Me.btnCancelarResponsableAutoFR.Size = New System.Drawing.Size(89, 20)
+            Me.btnCancelarResponsableAutoFR.Size = New System.Drawing.Size(97, 28)
             Me.btnCancelarResponsableAutoFR.Text = "CANCELAR"
             '
             'FormResponsableAutorizacionFondoRotativo
@@ -321,11 +321,14 @@
             Me.Controls.Add(Me.gbResponsable)
             Me.Controls.Add(Me.pCentroCostoSolicitudFR)
             Me.Controls.Add(Me.dgvResponsableAutoFR)
-            Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
             Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
             Me.MaximizeBox = False
             Me.Name = "FormResponsableAutorizacionFondoRotativo"
             Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+            Me.StateActive.Border.DrawBorders = CType((((Krypton.Toolkit.PaletteDrawBorders.Top Or Krypton.Toolkit.PaletteDrawBorders.Bottom) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Left) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Right), Krypton.Toolkit.PaletteDrawBorders)
+            Me.StateActive.Border.Rounding = 5.0!
             Me.Text = "RESPONSABLES AUTORIZACION DE FONDO ROTATIVO"
             CType(Me.dgvResponsableAutoFR, System.ComponentModel.ISupportInitialize).EndInit()
             Me.pCentroCostoSolicitudFR.ResumeLayout(False)

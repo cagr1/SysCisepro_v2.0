@@ -79,14 +79,14 @@ Namespace FORMULARIOS.INVENTARIOS.PROCESO
                 Case TipoConexion.Asenava
                     Icon = My.Resources.logo_a
                     msKardex.ForeColor = Color.White
-                    msKardex.BackColor = My.MySettingsProperty.Settings.ColorAsenava
+                    'msKardex.BackColor = My.MySettingsProperty.Settings.ColorAsenava
                     dgvControl.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorAsenava
                     dgvTotales.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorAsenava
                     dgvCustodios.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorAsenava
                     pbFoto.Image = My.Resources.Cisepro_Wall
                 Case TipoConexion.Seportpac
                     Icon = My.Resources.logo_s
-                    msKardex.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
+                    'msKardex.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
                     msKardex.ForeColor = Color.White
                     pbFoto.Image = My.Resources.SeportPac_Wall
                     dgvControl.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorSeportpac
@@ -94,14 +94,16 @@ Namespace FORMULARIOS.INVENTARIOS.PROCESO
                     dgvCustodios.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorSeportpac
                 Case Else
                     Icon = My.Resources.logo_c
-                    msKardex.BackColor = My.MySettingsProperty.Settings.ColorCisepro
+                    'msKardex.BackColor = My.MySettingsProperty.Settings.ColorCisepro
                     msKardex.ForeColor = Color.White
                     pbFoto.Image = My.Resources.Cisepro_Wall
                     dgvControl.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
                     dgvTotales.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
                     dgvCustodios.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
             End Select
-
+            dgvControl.Font = New Font("Roboto", 8, FontStyle.Regular)
+            dgvTotales.Font = New Font("Roboto", 8, FontStyle.Regular)
+            dgvCustodios.Font = New Font("Roboto", 8, FontStyle.Regular)
             dtpDesde.Value = ValidationForms.FechaActual(_tipoCon)
             dtpHasta.Value = dtpDesde.Value
 

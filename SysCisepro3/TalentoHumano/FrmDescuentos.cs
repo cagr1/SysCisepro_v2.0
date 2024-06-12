@@ -59,11 +59,11 @@ namespace SysCisepro3.TalentoHumano
         {
             // CARGAR ICONO Y DESIEÑO SEGUN SISTEMA 
             
-            toolStrip1.BackColor = ValidationForms.GetColorSistema(TipoCon);
+            //toolStrip1.BackColor = ValidationForms.GetColorSistema(TipoCon);
             toolStrip1.ForeColor = Color.White;
-            toolStrip2.BackColor = ValidationForms.GetColorSistema(TipoCon);
+            //toolStrip2.BackColor = ValidationForms.GetColorSistema(TipoCon);
             toolStrip2.ForeColor = Color.White;
-            toolStrip3.BackColor = ValidationForms.GetColorSistema(TipoCon);
+            //toolStrip3.BackColor = ValidationForms.GetColorSistema(TipoCon);
             toolStrip3.ForeColor = Color.White;
             Label24.BackColor = ValidationForms.GetColorSistema(TipoCon);
             Label24.ForeColor = Color.White;
@@ -83,6 +83,8 @@ namespace SysCisepro3.TalentoHumano
                     dgvSecuencial.DefaultCellStyle.SelectionBackColor = Settings.Default.ColorCisepro;
                     break;
             }
+            dataGridView1.Font = new System.Drawing.Font("Roboto", 8, FontStyle.Regular);
+            dgvSecuencial.Font = new System.Drawing.Font("Roboto", 8, FontStyle.Regular);
 
             dtpFecha.Value = Usuario.Now(TipoCon);
             dtpFechaDesde.Value = dtpFecha.Value;

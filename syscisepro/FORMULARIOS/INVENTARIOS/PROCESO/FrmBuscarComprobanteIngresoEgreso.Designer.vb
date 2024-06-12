@@ -1,8 +1,8 @@
 ﻿Namespace FORMULARIOS.INVENTARIOS.PROCESO
     <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
     Partial Class FrmBuscarComprobanteIngresoEgreso
-        Inherits System.Windows.Forms.Form
-
+        'Inherits System.Windows.Forms.Form
+        Inherits Krypton.Toolkit.KryptonForm
         'Form reemplaza a Dispose para limpiar la lista de componentes.
         <System.Diagnostics.DebuggerNonUserCode()> _
         Protected Overrides Sub Dispose(ByVal disposing As Boolean)
@@ -62,7 +62,7 @@
             Me.txtParametrobusqueda.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtParametrobusqueda.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtParametrobusqueda.ForeColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(123, Byte), Integer))
-            Me.txtParametrobusqueda.Location = New System.Drawing.Point(61, 2)
+            Me.txtParametrobusqueda.Location = New System.Drawing.Point(61, 3)
             Me.txtParametrobusqueda.Name = "txtParametrobusqueda"
             Me.txtParametrobusqueda.Size = New System.Drawing.Size(99, 23)
             Me.txtParametrobusqueda.TabIndex = 5
@@ -94,6 +94,7 @@
             Me.ListView1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
             Me.ListView1.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader1, Me.ColumnHeader4, Me.ColumnHeader3, Me.ColumnHeader5, Me.ColumnHeader6, Me.ColumnHeader7, Me.ColumnHeader2})
             Me.ListView1.FullRowSelect = True
+            Me.ListView1.HideSelection = False
             Me.ListView1.Location = New System.Drawing.Point(0, 29)
             Me.ListView1.MultiSelect = False
             Me.ListView1.Name = "ListView1"
@@ -138,7 +139,9 @@
             '
             Me.ListView2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
             Me.ListView2.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader8, Me.ColumnHeader15, Me.ColumnHeader16, Me.ColumnHeader17, Me.ColumnHeader19, Me.ColumnHeader20, Me.ColumnHeader21, Me.ColumnHeader18})
+            Me.ListView2.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.ListView2.FullRowSelect = True
+            Me.ListView2.HideSelection = False
             Me.ListView2.Location = New System.Drawing.Point(0, 29)
             Me.ListView2.MultiSelect = False
             Me.ListView2.Name = "ListView2"

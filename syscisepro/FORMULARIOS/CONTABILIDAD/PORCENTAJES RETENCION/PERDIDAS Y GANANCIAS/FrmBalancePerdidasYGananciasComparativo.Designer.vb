@@ -1,8 +1,8 @@
 ﻿Namespace FORMULARIOS.CONTABILIDAD.PERDIDAS_Y_GANANCIAS
     <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
     Partial Class FrmBalancePerdidasYGananciasComparativo
-        Inherits System.Windows.Forms.Form
-
+        'Inherits System.Windows.Forms.Form
+        Inherits Krypton.Toolkit.KryptonForm
         'Form reemplaza a Dispose para limpiar la lista de componentes.
         <System.Diagnostics.DebuggerNonUserCode()> _
         Protected Overrides Sub Dispose(ByVal disposing As Boolean)
@@ -59,8 +59,8 @@
             Me.GroupBox1.Controls.Add(Me.dtpFechaHasta)
             Me.GroupBox1.Controls.Add(Me.dtpFechaDesde)
             Me.GroupBox1.Controls.Add(Me.Label24)
-            Me.GroupBox1.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.GroupBox1.Location = New System.Drawing.Point(0, 26)
+            Me.GroupBox1.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.GroupBox1.Location = New System.Drawing.Point(0, 33)
             Me.GroupBox1.Name = "GroupBox1"
             Me.GroupBox1.Size = New System.Drawing.Size(1073, 45)
             Me.GroupBox1.TabIndex = 119
@@ -70,22 +70,22 @@
             'Label1
             '
             Me.Label1.AutoSize = True
-            Me.Label1.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Label1.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Label1.Location = New System.Drawing.Point(138, 18)
             Me.Label1.Name = "Label1"
-            Me.Label1.Size = New System.Drawing.Size(67, 13)
+            Me.Label1.Size = New System.Drawing.Size(71, 13)
             Me.Label1.TabIndex = 2
             Me.Label1.Text = "MES CORTE:"
             '
             'dtpFechaHasta
             '
             Me.dtpFechaHasta.CustomFormat = "MMMM - yyyy"
-            Me.dtpFechaHasta.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.dtpFechaHasta.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.dtpFechaHasta.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-            Me.dtpFechaHasta.Location = New System.Drawing.Point(211, 16)
+            Me.dtpFechaHasta.Location = New System.Drawing.Point(202, 16)
             Me.dtpFechaHasta.Name = "dtpFechaHasta"
             Me.dtpFechaHasta.ShowUpDown = True
-            Me.dtpFechaHasta.Size = New System.Drawing.Size(161, 20)
+            Me.dtpFechaHasta.Size = New System.Drawing.Size(161, 21)
             Me.dtpFechaHasta.TabIndex = 1
             '
             'dtpFechaDesde
@@ -104,7 +104,7 @@
             'Label24
             '
             Me.Label24.AutoSize = True
-            Me.Label24.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Label24.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Label24.Location = New System.Drawing.Point(87, 22)
             Me.Label24.Name = "Label24"
             Me.Label24.Size = New System.Drawing.Size(37, 13)
@@ -138,7 +138,7 @@
             DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
             DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
             Me.dgvIngresos.DefaultCellStyle = DataGridViewCellStyle3
-            Me.dgvIngresos.Location = New System.Drawing.Point(1, 83)
+            Me.dgvIngresos.Location = New System.Drawing.Point(1, 92)
             Me.dgvIngresos.Name = "dgvIngresos"
             Me.dgvIngresos.ReadOnly = True
             Me.dgvIngresos.RowHeadersVisible = False
@@ -150,8 +150,9 @@
             'Label2
             '
             Me.Label2.BackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(123, Byte), Integer))
+            Me.Label2.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Label2.ForeColor = System.Drawing.Color.White
-            Me.Label2.Location = New System.Drawing.Point(2, 71)
+            Me.Label2.Location = New System.Drawing.Point(2, 79)
             Me.Label2.Name = "Label2"
             Me.Label2.Size = New System.Drawing.Size(1069, 12)
             Me.Label2.TabIndex = 228
@@ -160,8 +161,9 @@
             'Label3
             '
             Me.Label3.BackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(123, Byte), Integer))
+            Me.Label3.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Label3.ForeColor = System.Drawing.Color.White
-            Me.Label3.Location = New System.Drawing.Point(1, 294)
+            Me.Label3.Location = New System.Drawing.Point(1, 300)
             Me.Label3.Name = "Label3"
             Me.Label3.Size = New System.Drawing.Size(1072, 12)
             Me.Label3.TabIndex = 230
@@ -193,7 +195,7 @@
             DataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText
             DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
             Me.dgvEgresos.DefaultCellStyle = DataGridViewCellStyle6
-            Me.dgvEgresos.Location = New System.Drawing.Point(1, 306)
+            Me.dgvEgresos.Location = New System.Drawing.Point(1, 313)
             Me.dgvEgresos.Name = "dgvEgresos"
             Me.dgvEgresos.ReadOnly = True
             Me.dgvEgresos.RowHeadersVisible = False
@@ -209,7 +211,7 @@
             'PictureBox1
             '
             Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-            Me.PictureBox1.Location = New System.Drawing.Point(1, 71)
+            Me.PictureBox1.Location = New System.Drawing.Point(1, 76)
             Me.PictureBox1.Name = "PictureBox1"
             Me.PictureBox1.Size = New System.Drawing.Size(1073, 433)
             Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
@@ -219,42 +221,46 @@
             '
             'MenuStrip1
             '
+            Me.MenuStrip1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
             Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnBuscarMensual, Me.Button1, Me.Button2, Me.Button3})
             Me.MenuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow
             Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
             Me.MenuStrip1.Name = "MenuStrip1"
             Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(7, 2, 0, 2)
-            Me.MenuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
-            Me.MenuStrip1.Size = New System.Drawing.Size(1074, 24)
+            Me.MenuStrip1.Size = New System.Drawing.Size(1074, 32)
             Me.MenuStrip1.TabIndex = 291
             Me.MenuStrip1.Text = "msIngresoBodega"
             '
             'btnBuscarMensual
             '
-            Me.btnBuscarMensual.Image = Global.syscisepro.My.Resources.Resources.BuscarRegistro
+            Me.btnBuscarMensual.Image = Global.syscisepro.My.Resources.Resources.search_24dp_FILL0_wght400_GRAD0_opsz24__2_
+            Me.btnBuscarMensual.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnBuscarMensual.Name = "btnBuscarMensual"
-            Me.btnBuscarMensual.Size = New System.Drawing.Size(81, 20)
+            Me.btnBuscarMensual.Size = New System.Drawing.Size(89, 28)
             Me.btnBuscarMensual.Text = "CARGAR"
             '
             'Button1
             '
-            Me.Button1.Image = Global.syscisepro.My.Resources.Resources.excel_icon
+            Me.Button1.Image = Global.syscisepro.My.Resources.Resources.icons8_excel_48
+            Me.Button1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.Button1.Name = "Button1"
-            Me.Button1.Size = New System.Drawing.Size(143, 20)
-            Me.Button1.Text = "EXPORTAR GENERAL"
+            Me.Button1.Size = New System.Drawing.Size(93, 28)
+            Me.Button1.Text = "GENERAL"
             '
             'Button2
             '
-            Me.Button2.Image = Global.syscisepro.My.Resources.Resources.excel_icon
+            Me.Button2.Image = Global.syscisepro.My.Resources.Resources.icons8_excel_48
+            Me.Button2.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.Button2.Name = "Button2"
-            Me.Button2.Size = New System.Drawing.Size(89, 20)
+            Me.Button2.Size = New System.Drawing.Size(97, 28)
             Me.Button2.Text = "INGRESOS"
             '
             'Button3
             '
-            Me.Button3.Image = Global.syscisepro.My.Resources.Resources.excel_icon
+            Me.Button3.Image = Global.syscisepro.My.Resources.Resources.icons8_excel_48
+            Me.Button3.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.Button3.Name = "Button3"
-            Me.Button3.Size = New System.Drawing.Size(83, 20)
+            Me.Button3.Size = New System.Drawing.Size(91, 28)
             Me.Button3.Text = "EGRESOS"
             '
             'FrmBalancePerdidasYGananciasComparativo
@@ -262,7 +268,7 @@
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.BackColor = System.Drawing.Color.White
-            Me.ClientSize = New System.Drawing.Size(1074, 507)
+            Me.ClientSize = New System.Drawing.Size(1074, 512)
             Me.Controls.Add(Me.MenuStrip1)
             Me.Controls.Add(Me.PictureBox1)
             Me.Controls.Add(Me.Label3)
@@ -274,6 +280,10 @@
             Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
             Me.Name = "FrmBalancePerdidasYGananciasComparativo"
             Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+            Me.StateActive.Border.DrawBorders = CType((((Krypton.Toolkit.PaletteDrawBorders.Top Or Krypton.Toolkit.PaletteDrawBorders.Bottom) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Left) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Right), Krypton.Toolkit.PaletteDrawBorders)
+            Me.StateActive.Border.Rounding = 5.0!
             Me.Text = "ESTADO DE PERDIDAS Y GANANCIAS"
             Me.GroupBox1.ResumeLayout(False)
             Me.GroupBox1.PerformLayout()

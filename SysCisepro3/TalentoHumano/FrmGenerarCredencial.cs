@@ -123,7 +123,7 @@ namespace SysCisepro3.TalentoHumano
 
         private void FrmGenerarCredencial_Load(object sender, EventArgs e)
         {
-            toolStrip1.BackColor = ValidationForms.GetColorSistema(TipoCon);
+            //toolStrip1.BackColor = ValidationForms.GetColorSistema(TipoCon);
             toolStrip1.ForeColor = Color.White;
             dgvBusquedaPersonal.DefaultCellStyle.SelectionBackColor = ValidationForms.GetColorSistema(TipoCon);
             DataGridView1.DefaultCellStyle.SelectionBackColor = ValidationForms.GetColorSistema(TipoCon);
@@ -145,6 +145,8 @@ namespace SysCisepro3.TalentoHumano
             }
             crvCredenciales.Visible = true;
             //axAcroPDF1.Visible = false;
+            DataGridView1.Font = new Font("Roboto", 8, FontStyle.Regular);
+            dgvBusquedaPersonal.Font = new Font("Roboto", 8, FontStyle.Regular);
         }
 
         private void txtParametroBusqueda_KeyUp(object sender, KeyEventArgs e)

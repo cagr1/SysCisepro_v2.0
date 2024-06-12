@@ -422,9 +422,9 @@ Namespace FORMULARIOS.INVENTARIOS.PROCESO
                 Case TipoConexion.Asenava
                     Icon = My.Resources.logo_a
                     MenuStrip1.ForeColor = Color.White
-                    MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorAsenava
+                    'MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorAsenava
                     msKardex.ForeColor = Color.White
-                    msKardex.BackColor = My.MySettingsProperty.Settings.ColorAsenava
+                    'msKardex.BackColor = My.MySettingsProperty.Settings.ColorAsenava
                     Label3.ForeColor = Color.White
                     Label3.BackColor = My.MySettingsProperty.Settings.ColorAsenava
                     Button1.ForeColor = Color.White
@@ -434,10 +434,10 @@ Namespace FORMULARIOS.INVENTARIOS.PROCESO
                     dgvCasilleros.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorAsenava
                 Case TipoConexion.Seportpac
                     Icon = My.Resources.logo_s
-                    MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
+                    'MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
                     MenuStrip1.ForeColor = Color.White
                     msKardex.ForeColor = Color.White
-                    msKardex.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
+                    'msKardex.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
                     Label3.ForeColor = Color.White
                     Label3.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
                     Button1.ForeColor = Color.White
@@ -447,10 +447,10 @@ Namespace FORMULARIOS.INVENTARIOS.PROCESO
                     dgvCasilleros.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorSeportpac
                 Case Else
                     Icon = My.Resources.logo_c
-                    MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorCisepro
+                    'MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorCisepro
                     MenuStrip1.ForeColor = Color.White
                     msKardex.ForeColor = Color.White
-                    msKardex.BackColor = My.MySettingsProperty.Settings.ColorCisepro
+                    'msKardex.BackColor = My.MySettingsProperty.Settings.ColorCisepro
                     Label3.ForeColor = Color.White
                     Label3.BackColor = My.MySettingsProperty.Settings.ColorCisepro
                     Button1.ForeColor = Color.White
@@ -459,7 +459,9 @@ Namespace FORMULARIOS.INVENTARIOS.PROCESO
                     dgvGrupoItem.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
                     dgvCasilleros.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
             End Select
-
+            dgvCategoriaItem.Font = New Font("Roboto", 8, FontStyle.Regular)
+            dgvGrupoItem.Font = New Font("Roboto", 8, FontStyle.Regular)
+            dgvCasilleros.Font = New Font("Roboto", 8, FontStyle.Regular)
             _sqlCommands = New List(Of SqlCommand)
         End Sub
     End Class

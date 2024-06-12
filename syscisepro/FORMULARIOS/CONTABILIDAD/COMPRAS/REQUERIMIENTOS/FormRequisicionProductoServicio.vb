@@ -209,6 +209,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.REQUERIMIENTOS
             If itemName Is Nothing Then Return
             itemName.CharacterCasing = CharacterCasing.Upper
             itemName.AutoCompleteMode = AutoCompleteMode.None
+            RemoveHandler itemName.KeyPress, AddressOf ItemQuantity_KeyPress 'cambio
             If dgvDetalleRequisicionPS.CurrentCell.ColumnIndex = 1 Then
                 itemName.AutoCompleteCustomSource = _objetoSecuencialItem.Autocompletar(_tipoCon)
                 itemName.AutoCompleteMode = AutoCompleteMode.Suggest

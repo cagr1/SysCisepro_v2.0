@@ -1,8 +1,8 @@
 ﻿Namespace FORMULARIOS.FONDOS.FONDO_ROTATIVO
     <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
     Partial Class FormSolicitudFondoRotativo
-        Inherits System.Windows.Forms.Form
-
+        'Inherits System.Windows.Forms.Form
+        Inherits Krypton.Toolkit.KryptonForm
         'Form reemplaza a Dispose para limpiar la lista de componentes.
         <System.Diagnostics.DebuggerNonUserCode()> _
         Protected Overrides Sub Dispose(ByVal disposing As Boolean)
@@ -25,18 +25,18 @@
         Private Sub InitializeComponent()
             Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle13 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormSolicitudFondoRotativo))
             Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle13 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormSolicitudFondoRotativo))
             Me.lblNumeroSolicitudFR = New System.Windows.Forms.Label()
             Me.txtNroSolicitudFR = New System.Windows.Forms.TextBox()
             Me.lblFechaSolicitudFR = New System.Windows.Forms.Label()
@@ -74,6 +74,14 @@
             Me.dtpFechaEmisionComprobanteCompra = New System.Windows.Forms.DateTimePicker()
             Me.dtpComprobanteRetencion = New System.Windows.Forms.DateTimePicker()
             Me.dgvDetallesRetencion = New System.Windows.Forms.DataGridView()
+            Me.EjercicioFiscal = New System.Windows.Forms.DataGridViewTextBoxColumn()
+            Me.CodigoRetencion = New System.Windows.Forms.DataGridViewTextBoxColumn()
+            Me.BaseImponible = New System.Windows.Forms.DataGridViewTextBoxColumn()
+            Me.Impuesto = New System.Windows.Forms.DataGridViewTextBoxColumn()
+            Me.PorcentajeRetencion = New System.Windows.Forms.DataGridViewTextBoxColumn()
+            Me.ValorRetenido = New System.Windows.Forms.DataGridViewTextBoxColumn()
+            Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+            Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
             Me.gbReceptorDinero = New System.Windows.Forms.GroupBox()
             Me.btnBuscarPersonal = New System.Windows.Forms.Button()
             Me.txtReceptorDineroSolicitud = New System.Windows.Forms.TextBox()
@@ -140,14 +148,6 @@
             Me.Label3 = New System.Windows.Forms.Label()
             Me.lblMontoAsignado = New System.Windows.Forms.Label()
             Me.Label30 = New System.Windows.Forms.Label()
-            Me.EjercicioFiscal = New System.Windows.Forms.DataGridViewTextBoxColumn()
-            Me.CodigoRetencion = New System.Windows.Forms.DataGridViewTextBoxColumn()
-            Me.BaseImponible = New System.Windows.Forms.DataGridViewTextBoxColumn()
-            Me.Impuesto = New System.Windows.Forms.DataGridViewTextBoxColumn()
-            Me.PorcentajeRetencion = New System.Windows.Forms.DataGridViewTextBoxColumn()
-            Me.ValorRetenido = New System.Windows.Forms.DataGridViewTextBoxColumn()
-            Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-            Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
             Me.gpAutorizacionFondoRotativo.SuspendLayout()
             Me.gpValorGastoSolicitudFR.SuspendLayout()
             Me.gbDetalleGasto.SuspendLayout()
@@ -199,51 +199,51 @@
             'lblParroquia
             '
             Me.lblParroquia.AutoSize = True
-            Me.lblParroquia.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.lblParroquia.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.lblParroquia.ForeColor = System.Drawing.Color.Black
             Me.lblParroquia.Location = New System.Drawing.Point(724, 48)
             Me.lblParroquia.Name = "lblParroquia"
-            Me.lblParroquia.Size = New System.Drawing.Size(71, 13)
+            Me.lblParroquia.Size = New System.Drawing.Size(70, 13)
             Me.lblParroquia.TabIndex = 5
             Me.lblParroquia.Text = "PARROQUIA:"
             '
             'lblConceptoDetalleFR
             '
             Me.lblConceptoDetalleFR.AutoSize = True
-            Me.lblConceptoDetalleFR.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.lblConceptoDetalleFR.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.lblConceptoDetalleFR.ForeColor = System.Drawing.Color.Black
             Me.lblConceptoDetalleFR.Location = New System.Drawing.Point(207, 21)
             Me.lblConceptoDetalleFR.Name = "lblConceptoDetalleFR"
-            Me.lblConceptoDetalleFR.Size = New System.Drawing.Size(67, 13)
+            Me.lblConceptoDetalleFR.Size = New System.Drawing.Size(68, 13)
             Me.lblConceptoDetalleFR.TabIndex = 4
             Me.lblConceptoDetalleFR.Text = "CONCEPTO:"
             '
             'lblCanton
             '
             Me.lblCanton.AutoSize = True
-            Me.lblCanton.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.lblCanton.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.lblCanton.ForeColor = System.Drawing.Color.Black
             Me.lblCanton.Location = New System.Drawing.Point(362, 48)
             Me.lblCanton.Name = "lblCanton"
-            Me.lblCanton.Size = New System.Drawing.Size(54, 13)
+            Me.lblCanton.Size = New System.Drawing.Size(55, 13)
             Me.lblCanton.TabIndex = 3
             Me.lblCanton.Text = "CANTON:"
             '
             'lblCentroCosto
             '
             Me.lblCentroCosto.AutoSize = True
-            Me.lblCentroCosto.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.lblCentroCosto.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.lblCentroCosto.ForeColor = System.Drawing.Color.Black
             Me.lblCentroCosto.Location = New System.Drawing.Point(649, 21)
             Me.lblCentroCosto.Name = "lblCentroCosto"
-            Me.lblCentroCosto.Size = New System.Drawing.Size(92, 13)
+            Me.lblCentroCosto.Size = New System.Drawing.Size(93, 13)
             Me.lblCentroCosto.TabIndex = 2
             Me.lblCentroCosto.Text = "CENTRO COSTO:"
             '
             'lblProvincia
             '
             Me.lblProvincia.AutoSize = True
-            Me.lblProvincia.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.lblProvincia.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.lblProvincia.ForeColor = System.Drawing.Color.Black
             Me.lblProvincia.Location = New System.Drawing.Point(5, 48)
             Me.lblProvincia.Name = "lblProvincia"
@@ -254,11 +254,11 @@
             'lblActividadDetalleFR
             '
             Me.lblActividadDetalleFR.AutoSize = True
-            Me.lblActividadDetalleFR.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.lblActividadDetalleFR.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.lblActividadDetalleFR.ForeColor = System.Drawing.Color.Black
             Me.lblActividadDetalleFR.Location = New System.Drawing.Point(9, 22)
             Me.lblActividadDetalleFR.Name = "lblActividadDetalleFR"
-            Me.lblActividadDetalleFR.Size = New System.Drawing.Size(66, 13)
+            Me.lblActividadDetalleFR.Size = New System.Drawing.Size(65, 13)
             Me.lblActividadDetalleFR.TabIndex = 0
             Me.lblActividadDetalleFR.Text = "ACTIVIDAD:"
             '
@@ -268,7 +268,7 @@
             Me.cmbCentroCosto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cmbCentroCosto.Enabled = False
             Me.cmbCentroCosto.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-            Me.cmbCentroCosto.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.cmbCentroCosto.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cmbCentroCosto.ForeColor = System.Drawing.Color.Black
             Me.cmbCentroCosto.FormattingEnabled = True
             Me.cmbCentroCosto.Location = New System.Drawing.Point(745, 18)
@@ -282,7 +282,7 @@
             Me.cmbParroquia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cmbParroquia.Enabled = False
             Me.cmbParroquia.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-            Me.cmbParroquia.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.cmbParroquia.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cmbParroquia.ForeColor = System.Drawing.Color.Black
             Me.cmbParroquia.FormattingEnabled = True
             Me.cmbParroquia.Location = New System.Drawing.Point(803, 45)
@@ -296,7 +296,7 @@
             Me.cmbCanton.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cmbCanton.Enabled = False
             Me.cmbCanton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-            Me.cmbCanton.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.cmbCanton.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cmbCanton.ForeColor = System.Drawing.Color.Black
             Me.cmbCanton.FormattingEnabled = True
             Me.cmbCanton.Location = New System.Drawing.Point(422, 45)
@@ -310,7 +310,7 @@
             Me.cmbProvincia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cmbProvincia.Enabled = False
             Me.cmbProvincia.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-            Me.cmbProvincia.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.cmbProvincia.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cmbProvincia.ForeColor = System.Drawing.Color.Black
             Me.cmbProvincia.FormattingEnabled = True
             Me.cmbProvincia.Location = New System.Drawing.Point(82, 45)
@@ -324,7 +324,7 @@
             Me.cmbConcepto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cmbConcepto.Enabled = False
             Me.cmbConcepto.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-            Me.cmbConcepto.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.cmbConcepto.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cmbConcepto.ForeColor = System.Drawing.Color.Black
             Me.cmbConcepto.FormattingEnabled = True
             Me.cmbConcepto.Location = New System.Drawing.Point(276, 18)
@@ -336,10 +336,11 @@
             '
             Me.txtActividadDetalleFR.BackColor = System.Drawing.Color.White
             Me.txtActividadDetalleFR.Enabled = False
+            Me.txtActividadDetalleFR.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtActividadDetalleFR.ForeColor = System.Drawing.Color.Black
             Me.txtActividadDetalleFR.Location = New System.Drawing.Point(82, 19)
             Me.txtActividadDetalleFR.Name = "txtActividadDetalleFR"
-            Me.txtActividadDetalleFR.Size = New System.Drawing.Size(84, 22)
+            Me.txtActividadDetalleFR.Size = New System.Drawing.Size(84, 21)
             Me.txtActividadDetalleFR.TabIndex = 3
             Me.txtActividadDetalleFR.Text = "101010102"
             Me.txtActividadDetalleFR.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
@@ -348,10 +349,10 @@
             '
             Me.txtCodHaber.BackColor = System.Drawing.Color.White
             Me.txtCodHaber.Enabled = False
-            Me.txtCodHaber.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtCodHaber.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtCodHaber.Location = New System.Drawing.Point(197, 38)
             Me.txtCodHaber.Name = "txtCodHaber"
-            Me.txtCodHaber.Size = New System.Drawing.Size(84, 23)
+            Me.txtCodHaber.Size = New System.Drawing.Size(84, 21)
             Me.txtCodHaber.TabIndex = 14
             Me.txtCodHaber.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
             '
@@ -359,30 +360,30 @@
             '
             Me.txtCodDebe.BackColor = System.Drawing.Color.White
             Me.txtCodDebe.Enabled = False
-            Me.txtCodDebe.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtCodDebe.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtCodDebe.Location = New System.Drawing.Point(43, 38)
             Me.txtCodDebe.Name = "txtCodDebe"
-            Me.txtCodDebe.Size = New System.Drawing.Size(84, 23)
+            Me.txtCodDebe.Size = New System.Drawing.Size(84, 21)
             Me.txtCodDebe.TabIndex = 13
             Me.txtCodDebe.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
             '
             'lblCodHaber
             '
             Me.lblCodHaber.AutoSize = True
-            Me.lblCodHaber.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.lblCodHaber.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.lblCodHaber.Location = New System.Drawing.Point(199, 23)
             Me.lblCodHaber.Name = "lblCodHaber"
-            Me.lblCodHaber.Size = New System.Drawing.Size(77, 15)
+            Me.lblCodHaber.Size = New System.Drawing.Size(72, 13)
             Me.lblCodHaber.TabIndex = 1
             Me.lblCodHaber.Text = "COD. HABER:"
             '
             'lblCodDebe
             '
             Me.lblCodDebe.AutoSize = True
-            Me.lblCodDebe.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.lblCodDebe.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.lblCodDebe.Location = New System.Drawing.Point(47, 23)
             Me.lblCodDebe.Name = "lblCodDebe"
-            Me.lblCodDebe.Size = New System.Drawing.Size(68, 15)
+            Me.lblCodDebe.Size = New System.Drawing.Size(63, 13)
             Me.lblCodDebe.TabIndex = 0
             Me.lblCodDebe.Text = "COD. DEBE:"
             '
@@ -397,7 +398,7 @@
             Me.gpAutorizacionFondoRotativo.Controls.Add(Me.lblNombreResponsbleAutoFR)
             Me.gpAutorizacionFondoRotativo.Controls.Add(Me.txtCIResponsableAutoFR)
             Me.gpAutorizacionFondoRotativo.Controls.Add(Me.lblCIResponsableAutoFR)
-            Me.gpAutorizacionFondoRotativo.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.gpAutorizacionFondoRotativo.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.gpAutorizacionFondoRotativo.Location = New System.Drawing.Point(2, 134)
             Me.gpAutorizacionFondoRotativo.Name = "gpAutorizacionFondoRotativo"
             Me.gpAutorizacionFondoRotativo.Size = New System.Drawing.Size(670, 75)
@@ -409,20 +410,20 @@
             '
             Me.txtApellidoResponsableAutoFR.BackColor = System.Drawing.Color.White
             Me.txtApellidoResponsableAutoFR.Enabled = False
-            Me.txtApellidoResponsableAutoFR.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtApellidoResponsableAutoFR.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtApellidoResponsableAutoFR.Location = New System.Drawing.Point(418, 47)
             Me.txtApellidoResponsableAutoFR.Name = "txtApellidoResponsableAutoFR"
-            Me.txtApellidoResponsableAutoFR.Size = New System.Drawing.Size(247, 22)
+            Me.txtApellidoResponsableAutoFR.Size = New System.Drawing.Size(247, 21)
             Me.txtApellidoResponsableAutoFR.TabIndex = 12
             Me.txtApellidoResponsableAutoFR.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
             '
             'lblApellidoResponsableAutoFR
             '
             Me.lblApellidoResponsableAutoFR.AutoSize = True
-            Me.lblApellidoResponsableAutoFR.Font = New System.Drawing.Font("Segoe UI Semibold", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.lblApellidoResponsableAutoFR.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.lblApellidoResponsableAutoFR.Location = New System.Drawing.Point(342, 50)
             Me.lblApellidoResponsableAutoFR.Name = "lblApellidoResponsableAutoFR"
-            Me.lblApellidoResponsableAutoFR.Size = New System.Drawing.Size(58, 13)
+            Me.lblApellidoResponsableAutoFR.Size = New System.Drawing.Size(60, 13)
             Me.lblApellidoResponsableAutoFR.TabIndex = 6
             Me.lblApellidoResponsableAutoFR.Text = "APELLIDO:"
             '
@@ -432,7 +433,7 @@
             Me.cmbCargoResponsableAutoFR.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cmbCargoResponsableAutoFR.Enabled = False
             Me.cmbCargoResponsableAutoFR.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-            Me.cmbCargoResponsableAutoFR.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.cmbCargoResponsableAutoFR.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cmbCargoResponsableAutoFR.FormattingEnabled = True
             Me.cmbCargoResponsableAutoFR.Location = New System.Drawing.Point(71, 20)
             Me.cmbCargoResponsableAutoFR.Name = "cmbCargoResponsableAutoFR"
@@ -442,7 +443,7 @@
             'lblCargoResponsableAutoFR
             '
             Me.lblCargoResponsableAutoFR.AutoSize = True
-            Me.lblCargoResponsableAutoFR.Font = New System.Drawing.Font("Segoe UI Semibold", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.lblCargoResponsableAutoFR.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.lblCargoResponsableAutoFR.Location = New System.Drawing.Point(7, 23)
             Me.lblCargoResponsableAutoFR.Name = "lblCargoResponsableAutoFR"
             Me.lblCargoResponsableAutoFR.Size = New System.Drawing.Size(47, 13)
@@ -453,17 +454,17 @@
             '
             Me.txtNombreResponsableAutoFR.BackColor = System.Drawing.Color.White
             Me.txtNombreResponsableAutoFR.Enabled = False
-            Me.txtNombreResponsableAutoFR.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtNombreResponsableAutoFR.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtNombreResponsableAutoFR.Location = New System.Drawing.Point(71, 47)
             Me.txtNombreResponsableAutoFR.Name = "txtNombreResponsableAutoFR"
-            Me.txtNombreResponsableAutoFR.Size = New System.Drawing.Size(244, 22)
+            Me.txtNombreResponsableAutoFR.Size = New System.Drawing.Size(244, 21)
             Me.txtNombreResponsableAutoFR.TabIndex = 11
             Me.txtNombreResponsableAutoFR.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
             '
             'lblNombreResponsbleAutoFR
             '
             Me.lblNombreResponsbleAutoFR.AutoSize = True
-            Me.lblNombreResponsbleAutoFR.Font = New System.Drawing.Font("Segoe UI Semibold", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.lblNombreResponsbleAutoFR.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.lblNombreResponsbleAutoFR.Location = New System.Drawing.Point(7, 50)
             Me.lblNombreResponsbleAutoFR.Name = "lblNombreResponsbleAutoFR"
             Me.lblNombreResponsbleAutoFR.Size = New System.Drawing.Size(56, 13)
@@ -474,20 +475,20 @@
             '
             Me.txtCIResponsableAutoFR.BackColor = System.Drawing.Color.White
             Me.txtCIResponsableAutoFR.Enabled = False
-            Me.txtCIResponsableAutoFR.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtCIResponsableAutoFR.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtCIResponsableAutoFR.Location = New System.Drawing.Point(418, 20)
             Me.txtCIResponsableAutoFR.Name = "txtCIResponsableAutoFR"
-            Me.txtCIResponsableAutoFR.Size = New System.Drawing.Size(113, 22)
+            Me.txtCIResponsableAutoFR.Size = New System.Drawing.Size(113, 21)
             Me.txtCIResponsableAutoFR.TabIndex = 10
             Me.txtCIResponsableAutoFR.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
             '
             'lblCIResponsableAutoFR
             '
             Me.lblCIResponsableAutoFR.AutoSize = True
-            Me.lblCIResponsableAutoFR.Font = New System.Drawing.Font("Segoe UI Semibold", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.lblCIResponsableAutoFR.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.lblCIResponsableAutoFR.Location = New System.Drawing.Point(342, 23)
             Me.lblCIResponsableAutoFR.Name = "lblCIResponsableAutoFR"
-            Me.lblCIResponsableAutoFR.Size = New System.Drawing.Size(54, 13)
+            Me.lblCIResponsableAutoFR.Size = New System.Drawing.Size(53, 13)
             Me.lblCIResponsableAutoFR.TabIndex = 0
             Me.lblCIResponsableAutoFR.Text = "CEDULA :"
             '
@@ -495,6 +496,7 @@
             '
             Me.gpValorGastoSolicitudFR.BackColor = System.Drawing.Color.White
             Me.gpValorGastoSolicitudFR.Controls.Add(Me.txtValorSolicitudFR)
+            Me.gpValorGastoSolicitudFR.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.gpValorGastoSolicitudFR.Location = New System.Drawing.Point(276, 265)
             Me.gpValorGastoSolicitudFR.Name = "gpValorGastoSolicitudFR"
             Me.gpValorGastoSolicitudFR.Size = New System.Drawing.Size(112, 65)
@@ -506,10 +508,10 @@
             '
             Me.txtValorSolicitudFR.BackColor = System.Drawing.Color.White
             Me.txtValorSolicitudFR.Enabled = False
-            Me.txtValorSolicitudFR.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtValorSolicitudFR.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtValorSolicitudFR.Location = New System.Drawing.Point(13, 24)
             Me.txtValorSolicitudFR.Name = "txtValorSolicitudFR"
-            Me.txtValorSolicitudFR.Size = New System.Drawing.Size(87, 23)
+            Me.txtValorSolicitudFR.Size = New System.Drawing.Size(87, 21)
             Me.txtValorSolicitudFR.TabIndex = 21
             Me.txtValorSolicitudFR.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
             '
@@ -518,7 +520,7 @@
             Me.gbDetalleGasto.Anchor = System.Windows.Forms.AnchorStyles.Top
             Me.gbDetalleGasto.BackColor = System.Drawing.Color.White
             Me.gbDetalleGasto.Controls.Add(Me.txtDetalleSolicitudFR)
-            Me.gbDetalleGasto.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.gbDetalleGasto.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.gbDetalleGasto.Location = New System.Drawing.Point(389, 265)
             Me.gbDetalleGasto.Name = "gbDetalleGasto"
             Me.gbDetalleGasto.Size = New System.Drawing.Size(611, 65)
@@ -531,7 +533,7 @@
             Me.txtDetalleSolicitudFR.BackColor = System.Drawing.Color.White
             Me.txtDetalleSolicitudFR.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtDetalleSolicitudFR.Enabled = False
-            Me.txtDetalleSolicitudFR.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtDetalleSolicitudFR.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtDetalleSolicitudFR.Location = New System.Drawing.Point(6, 16)
             Me.txtDetalleSolicitudFR.Multiline = True
             Me.txtDetalleSolicitudFR.Name = "txtDetalleSolicitudFR"
@@ -549,7 +551,7 @@
             Me.gbReferencia.Controls.Add(Me.dtpComprobanteRetencion)
             Me.gbReferencia.Controls.Add(Me.dgvDetallesRetencion)
             Me.gbReferencia.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.gbReferencia.Location = New System.Drawing.Point(1, 20)
+            Me.gbReferencia.Location = New System.Drawing.Point(1, 26)
             Me.gbReferencia.Name = "gbReferencia"
             Me.gbReferencia.Size = New System.Drawing.Size(999, 42)
             Me.gbReferencia.TabIndex = 19
@@ -607,765 +609,6 @@
             Me.dgvDetallesRetencion.Size = New System.Drawing.Size(704, 85)
             Me.dgvDetallesRetencion.TabIndex = 54
             Me.dgvDetallesRetencion.Visible = False
-            '
-            'gbReceptorDinero
-            '
-            Me.gbReceptorDinero.BackColor = System.Drawing.Color.White
-            Me.gbReceptorDinero.Controls.Add(Me.btnBuscarPersonal)
-            Me.gbReceptorDinero.Controls.Add(Me.txtReceptorDineroSolicitud)
-            Me.gbReceptorDinero.Controls.Add(Me.txtCIReceptorDinero)
-            Me.gbReceptorDinero.Controls.Add(Me.lblNombreReceptorReciboFR)
-            Me.gbReceptorDinero.Controls.Add(Me.lblCIReceptorReciboFR)
-            Me.gbReceptorDinero.Controls.Add(Me.dgvAsientosDiario)
-            Me.gbReceptorDinero.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.gbReceptorDinero.Location = New System.Drawing.Point(2, 211)
-            Me.gbReceptorDinero.Name = "gbReceptorDinero"
-            Me.gbReceptorDinero.Size = New System.Drawing.Size(998, 53)
-            Me.gbReceptorDinero.TabIndex = 20
-            Me.gbReceptorDinero.TabStop = False
-            Me.gbReceptorDinero.Text = "RECEPTOR DEL DINERO"
-            '
-            'btnBuscarPersonal
-            '
-            Me.btnBuscarPersonal.BackColor = System.Drawing.Color.White
-            Me.btnBuscarPersonal.Enabled = False
-            Me.btnBuscarPersonal.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnBuscarPersonal.Image = Global.syscisepro.My.Resources.Resources.personnel_light_icon
-            Me.btnBuscarPersonal.Location = New System.Drawing.Point(294, 18)
-            Me.btnBuscarPersonal.Name = "btnBuscarPersonal"
-            Me.btnBuscarPersonal.Size = New System.Drawing.Size(32, 23)
-            Me.btnBuscarPersonal.TabIndex = 16
-            Me.btnBuscarPersonal.Text = "..."
-            Me.btnBuscarPersonal.UseVisualStyleBackColor = False
-            '
-            'txtReceptorDineroSolicitud
-            '
-            Me.txtReceptorDineroSolicitud.BackColor = System.Drawing.Color.White
-            Me.txtReceptorDineroSolicitud.Enabled = False
-            Me.txtReceptorDineroSolicitud.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtReceptorDineroSolicitud.Location = New System.Drawing.Point(513, 19)
-            Me.txtReceptorDineroSolicitud.Name = "txtReceptorDineroSolicitud"
-            Me.txtReceptorDineroSolicitud.Size = New System.Drawing.Size(423, 22)
-            Me.txtReceptorDineroSolicitud.TabIndex = 17
-            Me.txtReceptorDineroSolicitud.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-            '
-            'txtCIReceptorDinero
-            '
-            Me.txtCIReceptorDinero.BackColor = System.Drawing.Color.White
-            Me.txtCIReceptorDinero.Enabled = False
-            Me.txtCIReceptorDinero.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtCIReceptorDinero.Location = New System.Drawing.Point(181, 19)
-            Me.txtCIReceptorDinero.Name = "txtCIReceptorDinero"
-            Me.txtCIReceptorDinero.Size = New System.Drawing.Size(113, 22)
-            Me.txtCIReceptorDinero.TabIndex = 15
-            '
-            'lblNombreReceptorReciboFR
-            '
-            Me.lblNombreReceptorReciboFR.AutoSize = True
-            Me.lblNombreReceptorReciboFR.Font = New System.Drawing.Font("Segoe UI Semibold", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.lblNombreReceptorReciboFR.Location = New System.Drawing.Point(450, 22)
-            Me.lblNombreReceptorReciboFR.Name = "lblNombreReceptorReciboFR"
-            Me.lblNombreReceptorReciboFR.Size = New System.Drawing.Size(56, 13)
-            Me.lblNombreReceptorReciboFR.TabIndex = 7
-            Me.lblNombreReceptorReciboFR.Text = "NOMBRE:"
-            '
-            'lblCIReceptorReciboFR
-            '
-            Me.lblCIReceptorReciboFR.AutoSize = True
-            Me.lblCIReceptorReciboFR.Font = New System.Drawing.Font("Segoe UI Semibold", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.lblCIReceptorReciboFR.Location = New System.Drawing.Point(68, 22)
-            Me.lblCIReceptorReciboFR.Name = "lblCIReceptorReciboFR"
-            Me.lblCIReceptorReciboFR.Size = New System.Drawing.Size(111, 13)
-            Me.lblCIReceptorReciboFR.TabIndex = 6
-            Me.lblCIReceptorReciboFR.Text = "CEDULA IDENTIDAD:"
-            '
-            'dgvAsientosDiario
-            '
-            Me.dgvAsientosDiario.AllowUserToAddRows = False
-            Me.dgvAsientosDiario.AllowUserToDeleteRows = False
-            DataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-            Me.dgvAsientosDiario.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle9
-            Me.dgvAsientosDiario.BackgroundColor = System.Drawing.Color.White
-            Me.dgvAsientosDiario.BorderStyle = System.Windows.Forms.BorderStyle.None
-            Me.dgvAsientosDiario.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
-            DataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-            DataGridViewCellStyle10.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            DataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-            Me.dgvAsientosDiario.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle10
-            Me.dgvAsientosDiario.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.eliminarItem, Me.CODIGO, Me.CUENTA, Me.VALOR, Me.IVA})
-            DataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-            DataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Window
-            DataGridViewCellStyle13.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            DataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.ControlText
-            DataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight
-            DataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-            DataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-            Me.dgvAsientosDiario.DefaultCellStyle = DataGridViewCellStyle13
-            Me.dgvAsientosDiario.GridColor = System.Drawing.SystemColors.ControlLight
-            Me.dgvAsientosDiario.Location = New System.Drawing.Point(341, 13)
-            Me.dgvAsientosDiario.MultiSelect = False
-            Me.dgvAsientosDiario.Name = "dgvAsientosDiario"
-            Me.dgvAsientosDiario.ReadOnly = True
-            Me.dgvAsientosDiario.RowHeadersVisible = False
-            Me.dgvAsientosDiario.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvAsientosDiario.Size = New System.Drawing.Size(514, 28)
-            Me.dgvAsientosDiario.TabIndex = 55
-            Me.dgvAsientosDiario.Visible = False
-            '
-            'eliminarItem
-            '
-            DataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-            DataGridViewCellStyle11.BackColor = System.Drawing.Color.DarkRed
-            DataGridViewCellStyle11.ForeColor = System.Drawing.Color.White
-            DataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
-            DataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.White
-            Me.eliminarItem.DefaultCellStyle = DataGridViewCellStyle11
-            Me.eliminarItem.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-            Me.eliminarItem.HeaderText = "SUPR"
-            Me.eliminarItem.Name = "eliminarItem"
-            Me.eliminarItem.ReadOnly = True
-            Me.eliminarItem.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-            Me.eliminarItem.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
-            Me.eliminarItem.Text = "(X)"
-            Me.eliminarItem.ToolTipText = "Eliminar Fila"
-            Me.eliminarItem.UseColumnTextForButtonValue = True
-            Me.eliminarItem.Width = 40
-            '
-            'CODIGO
-            '
-            Me.CODIGO.HeaderText = "CODIGO"
-            Me.CODIGO.Name = "CODIGO"
-            Me.CODIGO.ReadOnly = True
-            Me.CODIGO.Width = 95
-            '
-            'CUENTA
-            '
-            DataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-            Me.CUENTA.DefaultCellStyle = DataGridViewCellStyle12
-            Me.CUENTA.HeaderText = "CUENTA"
-            Me.CUENTA.Name = "CUENTA"
-            Me.CUENTA.ReadOnly = True
-            Me.CUENTA.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-            Me.CUENTA.Width = 225
-            '
-            'VALOR
-            '
-            Me.VALOR.HeaderText = "VALOR"
-            Me.VALOR.Name = "VALOR"
-            Me.VALOR.ReadOnly = True
-            Me.VALOR.Width = 80
-            '
-            'IVA
-            '
-            Me.IVA.HeaderText = "IVA"
-            Me.IVA.Name = "IVA"
-            Me.IVA.ReadOnly = True
-            Me.IVA.Width = 35
-            '
-            'GroupBox1
-            '
-            Me.GroupBox1.BackColor = System.Drawing.Color.White
-            Me.GroupBox1.Controls.Add(Me.txtCodDebe)
-            Me.GroupBox1.Controls.Add(Me.lblCodDebe)
-            Me.GroupBox1.Controls.Add(Me.lblCodHaber)
-            Me.GroupBox1.Controls.Add(Me.txtCodHaber)
-            Me.GroupBox1.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.GroupBox1.Location = New System.Drawing.Point(678, 136)
-            Me.GroupBox1.Name = "GroupBox1"
-            Me.GroupBox1.Size = New System.Drawing.Size(322, 73)
-            Me.GroupBox1.TabIndex = 39
-            Me.GroupBox1.TabStop = False
-            Me.GroupBox1.Text = "CONTABILIZACIÓN"
-            '
-            'gbDocumento
-            '
-            Me.gbDocumento.BackColor = System.Drawing.Color.White
-            Me.gbDocumento.Controls.Add(Me.lblNroDocumento)
-            Me.gbDocumento.Controls.Add(Me.txtNroDocumento)
-            Me.gbDocumento.Controls.Add(Me.btnDocumento)
-            Me.gbDocumento.Controls.Add(Me.cmbNombreParametroDocumentos)
-            Me.gbDocumento.Location = New System.Drawing.Point(2, 265)
-            Me.gbDocumento.Name = "gbDocumento"
-            Me.gbDocumento.Size = New System.Drawing.Size(273, 65)
-            Me.gbDocumento.TabIndex = 40
-            Me.gbDocumento.TabStop = False
-            Me.gbDocumento.Text = "DOCUMENTO:"
-            '
-            'lblNroDocumento
-            '
-            Me.lblNroDocumento.AutoSize = True
-            Me.lblNroDocumento.Location = New System.Drawing.Point(9, 42)
-            Me.lblNroDocumento.Name = "lblNroDocumento"
-            Me.lblNroDocumento.Size = New System.Drawing.Size(22, 13)
-            Me.lblNroDocumento.TabIndex = 56
-            Me.lblNroDocumento.Text = "N°:"
-            '
-            'txtNroDocumento
-            '
-            Me.txtNroDocumento.BackColor = System.Drawing.Color.White
-            Me.txtNroDocumento.Enabled = False
-            Me.txtNroDocumento.Location = New System.Drawing.Point(37, 39)
-            Me.txtNroDocumento.Name = "txtNroDocumento"
-            Me.txtNroDocumento.Size = New System.Drawing.Size(159, 22)
-            Me.txtNroDocumento.TabIndex = 19
-            '
-            'btnDocumento
-            '
-            Me.btnDocumento.BackColor = System.Drawing.Color.White
-            Me.btnDocumento.Enabled = False
-            Me.btnDocumento.FlatAppearance.BorderSize = 0
-            Me.btnDocumento.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnDocumento.Image = CType(resources.GetObject("btnDocumento.Image"), System.Drawing.Image)
-            Me.btnDocumento.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-            Me.btnDocumento.Location = New System.Drawing.Point(202, 10)
-            Me.btnDocumento.Name = "btnDocumento"
-            Me.btnDocumento.Size = New System.Drawing.Size(67, 50)
-            Me.btnDocumento.TabIndex = 20
-            Me.btnDocumento.Text = "CARGAR DOCUM."
-            Me.btnDocumento.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-            Me.btnDocumento.UseVisualStyleBackColor = False
-            '
-            'cmbNombreParametroDocumentos
-            '
-            Me.cmbNombreParametroDocumentos.BackColor = System.Drawing.Color.White
-            Me.cmbNombreParametroDocumentos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-            Me.cmbNombreParametroDocumentos.Enabled = False
-            Me.cmbNombreParametroDocumentos.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-            Me.cmbNombreParametroDocumentos.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.cmbNombreParametroDocumentos.FormattingEnabled = True
-            Me.cmbNombreParametroDocumentos.Location = New System.Drawing.Point(12, 14)
-            Me.cmbNombreParametroDocumentos.Name = "cmbNombreParametroDocumentos"
-            Me.cmbNombreParametroDocumentos.Size = New System.Drawing.Size(184, 23)
-            Me.cmbNombreParametroDocumentos.TabIndex = 18
-            '
-            'MenuStrip1
-            '
-            Me.MenuStrip1.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnNuevoSolicitudFR, Me.btnGuardarSolicitudFR, Me.btnCancelarSolicitudFR})
-            Me.MenuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow
-            Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
-            Me.MenuStrip1.Name = "MenuStrip1"
-            Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(7, 2, 0, 2)
-            Me.MenuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
-            Me.MenuStrip1.Size = New System.Drawing.Size(1001, 24)
-            Me.MenuStrip1.TabIndex = 183
-            Me.MenuStrip1.Text = "msIngresoBodega"
-            '
-            'btnNuevoSolicitudFR
-            '
-            Me.btnNuevoSolicitudFR.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnNuevoSolicitudFR.Image = CType(resources.GetObject("btnNuevoSolicitudFR.Image"), System.Drawing.Image)
-            Me.btnNuevoSolicitudFR.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-            Me.btnNuevoSolicitudFR.Name = "btnNuevoSolicitudFR"
-            Me.btnNuevoSolicitudFR.Size = New System.Drawing.Size(73, 20)
-            Me.btnNuevoSolicitudFR.Text = "NUEVO"
-            '
-            'btnGuardarSolicitudFR
-            '
-            Me.btnGuardarSolicitudFR.Enabled = False
-            Me.btnGuardarSolicitudFR.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnGuardarSolicitudFR.Image = CType(resources.GetObject("btnGuardarSolicitudFR.Image"), System.Drawing.Image)
-            Me.btnGuardarSolicitudFR.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-            Me.btnGuardarSolicitudFR.Name = "btnGuardarSolicitudFR"
-            Me.btnGuardarSolicitudFR.Size = New System.Drawing.Size(87, 20)
-            Me.btnGuardarSolicitudFR.Text = "GUARDAR"
-            '
-            'btnCancelarSolicitudFR
-            '
-            Me.btnCancelarSolicitudFR.Enabled = False
-            Me.btnCancelarSolicitudFR.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnCancelarSolicitudFR.Image = Global.syscisepro.My.Resources.Resources.cancel
-            Me.btnCancelarSolicitudFR.Name = "btnCancelarSolicitudFR"
-            Me.btnCancelarSolicitudFR.Size = New System.Drawing.Size(89, 20)
-            Me.btnCancelarSolicitudFR.Text = "CANCELAR"
-            '
-            'GroupBox2
-            '
-            Me.GroupBox2.Anchor = System.Windows.Forms.AnchorStyles.Top
-            Me.GroupBox2.BackColor = System.Drawing.Color.White
-            Me.GroupBox2.Controls.Add(Me.lblActividadDetalleFR)
-            Me.GroupBox2.Controls.Add(Me.lblCentroCosto)
-            Me.GroupBox2.Controls.Add(Me.lblCanton)
-            Me.GroupBox2.Controls.Add(Me.lblProvincia)
-            Me.GroupBox2.Controls.Add(Me.lblConceptoDetalleFR)
-            Me.GroupBox2.Controls.Add(Me.cmbCentroCosto)
-            Me.GroupBox2.Controls.Add(Me.lblParroquia)
-            Me.GroupBox2.Controls.Add(Me.cmbParroquia)
-            Me.GroupBox2.Controls.Add(Me.txtActividadDetalleFR)
-            Me.GroupBox2.Controls.Add(Me.cmbCanton)
-            Me.GroupBox2.Controls.Add(Me.cmbConcepto)
-            Me.GroupBox2.Controls.Add(Me.cmbProvincia)
-            Me.GroupBox2.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.GroupBox2.Location = New System.Drawing.Point(1, 63)
-            Me.GroupBox2.Name = "GroupBox2"
-            Me.GroupBox2.Size = New System.Drawing.Size(999, 71)
-            Me.GroupBox2.TabIndex = 184
-            Me.GroupBox2.TabStop = False
-            Me.GroupBox2.Text = "CENTRO COSTO DEL GASTO"
-            '
-            'GroupBox3
-            '
-            Me.GroupBox3.Controls.Add(Me.chkCombustible)
-            Me.GroupBox3.Controls.Add(Me.PictureBox1)
-            Me.GroupBox3.Controls.Add(Me.txtFechaControl)
-            Me.GroupBox3.Controls.Add(Me.gbLlegadaVehiculo)
-            Me.GroupBox3.Controls.Add(Me.gbVehiculo)
-            Me.GroupBox3.Controls.Add(Me.txtTotalKmControlC)
-            Me.GroupBox3.Controls.Add(Me.lblTotaKmControlC)
-            Me.GroupBox3.Controls.Add(Me.gpSalidaVehiculo)
-            Me.GroupBox3.Controls.Add(Me.cbmCombustible)
-            Me.GroupBox3.Controls.Add(Me.lblFechaControlC)
-            Me.GroupBox3.Controls.Add(Me.txtMotivoControlC)
-            Me.GroupBox3.Controls.Add(Me.lblClaseGasolinaControlC)
-            Me.GroupBox3.Controls.Add(Me.txtDestinoControlC)
-            Me.GroupBox3.Controls.Add(Me.lblMotivoControlC)
-            Me.GroupBox3.Controls.Add(Me.txtValorControl)
-            Me.GroupBox3.Controls.Add(Me.lblDestinoControlC)
-            Me.GroupBox3.Controls.Add(Me.lblValorControlC)
-            Me.GroupBox3.Enabled = False
-            Me.GroupBox3.Location = New System.Drawing.Point(1, 332)
-            Me.GroupBox3.Name = "GroupBox3"
-            Me.GroupBox3.Size = New System.Drawing.Size(997, 178)
-            Me.GroupBox3.TabIndex = 185
-            Me.GroupBox3.TabStop = False
-            '
-            'chkCombustible
-            '
-            Me.chkCombustible.AutoSize = True
-            Me.chkCombustible.BackColor = System.Drawing.Color.White
-            Me.chkCombustible.Enabled = False
-            Me.chkCombustible.Location = New System.Drawing.Point(6, 0)
-            Me.chkCombustible.Name = "chkCombustible"
-            Me.chkCombustible.Size = New System.Drawing.Size(169, 17)
-            Me.chkCombustible.TabIndex = 23
-            Me.chkCombustible.Text = "CONTROL DE COMBUSTIBLE"
-            Me.chkCombustible.UseVisualStyleBackColor = False
-            '
-            'PictureBox1
-            '
-            Me.PictureBox1.BackgroundImage = CType(resources.GetObject("PictureBox1.BackgroundImage"), System.Drawing.Image)
-            Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-            Me.PictureBox1.Location = New System.Drawing.Point(772, 15)
-            Me.PictureBox1.Name = "PictureBox1"
-            Me.PictureBox1.Size = New System.Drawing.Size(219, 154)
-            Me.PictureBox1.TabIndex = 35
-            Me.PictureBox1.TabStop = False
-            '
-            'txtFechaControl
-            '
-            Me.txtFechaControl.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-            Me.txtFechaControl.Location = New System.Drawing.Point(63, 23)
-            Me.txtFechaControl.Name = "txtFechaControl"
-            Me.txtFechaControl.Size = New System.Drawing.Size(99, 22)
-            Me.txtFechaControl.TabIndex = 24
-            '
-            'gbLlegadaVehiculo
-            '
-            Me.gbLlegadaVehiculo.BackColor = System.Drawing.Color.White
-            Me.gbLlegadaVehiculo.Controls.Add(Me.dtpHoraLlegadaVehiculo)
-            Me.gbLlegadaVehiculo.Controls.Add(Me.dtpFechaLlegadaVehiculo)
-            Me.gbLlegadaVehiculo.Controls.Add(Me.txtKmLlegadaVehiculo)
-            Me.gbLlegadaVehiculo.Controls.Add(Me.LblKilometrajeLlegadaVehiculo)
-            Me.gbLlegadaVehiculo.Controls.Add(Me.lblHoraLlegadaVehiculo)
-            Me.gbLlegadaVehiculo.Controls.Add(Me.lblFechaLlegadaVehiculo)
-            Me.gbLlegadaVehiculo.Location = New System.Drawing.Point(423, 77)
-            Me.gbLlegadaVehiculo.Name = "gbLlegadaVehiculo"
-            Me.gbLlegadaVehiculo.Size = New System.Drawing.Size(165, 95)
-            Me.gbLlegadaVehiculo.TabIndex = 32
-            Me.gbLlegadaVehiculo.TabStop = False
-            Me.gbLlegadaVehiculo.Text = "LLEGADA"
-            '
-            'dtpHoraLlegadaVehiculo
-            '
-            Me.dtpHoraLlegadaVehiculo.Format = System.Windows.Forms.DateTimePickerFormat.Time
-            Me.dtpHoraLlegadaVehiculo.Location = New System.Drawing.Point(49, 42)
-            Me.dtpHoraLlegadaVehiculo.Name = "dtpHoraLlegadaVehiculo"
-            Me.dtpHoraLlegadaVehiculo.ShowUpDown = True
-            Me.dtpHoraLlegadaVehiculo.Size = New System.Drawing.Size(110, 22)
-            Me.dtpHoraLlegadaVehiculo.TabIndex = 36
-            '
-            'dtpFechaLlegadaVehiculo
-            '
-            Me.dtpFechaLlegadaVehiculo.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-            Me.dtpFechaLlegadaVehiculo.Location = New System.Drawing.Point(49, 19)
-            Me.dtpFechaLlegadaVehiculo.Name = "dtpFechaLlegadaVehiculo"
-            Me.dtpFechaLlegadaVehiculo.Size = New System.Drawing.Size(110, 22)
-            Me.dtpFechaLlegadaVehiculo.TabIndex = 35
-            '
-            'txtKmLlegadaVehiculo
-            '
-            Me.txtKmLlegadaVehiculo.BackColor = System.Drawing.Color.White
-            Me.txtKmLlegadaVehiculo.Location = New System.Drawing.Point(49, 65)
-            Me.txtKmLlegadaVehiculo.Name = "txtKmLlegadaVehiculo"
-            Me.txtKmLlegadaVehiculo.Size = New System.Drawing.Size(110, 22)
-            Me.txtKmLlegadaVehiculo.TabIndex = 37
-            Me.txtKmLlegadaVehiculo.Text = "0"
-            '
-            'LblKilometrajeLlegadaVehiculo
-            '
-            Me.LblKilometrajeLlegadaVehiculo.AutoSize = True
-            Me.LblKilometrajeLlegadaVehiculo.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.LblKilometrajeLlegadaVehiculo.Location = New System.Drawing.Point(8, 68)
-            Me.LblKilometrajeLlegadaVehiculo.Name = "LblKilometrajeLlegadaVehiculo"
-            Me.LblKilometrajeLlegadaVehiculo.Size = New System.Drawing.Size(32, 13)
-            Me.LblKilometrajeLlegadaVehiculo.TabIndex = 2
-            Me.LblKilometrajeLlegadaVehiculo.Text = "KM'S:"
-            '
-            'lblHoraLlegadaVehiculo
-            '
-            Me.lblHoraLlegadaVehiculo.AutoSize = True
-            Me.lblHoraLlegadaVehiculo.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.lblHoraLlegadaVehiculo.Location = New System.Drawing.Point(8, 45)
-            Me.lblHoraLlegadaVehiculo.Name = "lblHoraLlegadaVehiculo"
-            Me.lblHoraLlegadaVehiculo.Size = New System.Drawing.Size(36, 13)
-            Me.lblHoraLlegadaVehiculo.TabIndex = 1
-            Me.lblHoraLlegadaVehiculo.Text = "HORA:"
-            '
-            'lblFechaLlegadaVehiculo
-            '
-            Me.lblFechaLlegadaVehiculo.AutoSize = True
-            Me.lblFechaLlegadaVehiculo.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.lblFechaLlegadaVehiculo.Location = New System.Drawing.Point(8, 22)
-            Me.lblFechaLlegadaVehiculo.Name = "lblFechaLlegadaVehiculo"
-            Me.lblFechaLlegadaVehiculo.Size = New System.Drawing.Size(39, 13)
-            Me.lblFechaLlegadaVehiculo.TabIndex = 0
-            Me.lblFechaLlegadaVehiculo.Text = "FECHA:"
-            '
-            'gbVehiculo
-            '
-            Me.gbVehiculo.BackColor = System.Drawing.Color.White
-            Me.gbVehiculo.Controls.Add(Me.txtIdActivoFijo)
-            Me.gbVehiculo.Controls.Add(Me.btnBuscarVehiculo)
-            Me.gbVehiculo.Controls.Add(Me.lblIdActivo)
-            Me.gbVehiculo.Controls.Add(Me.txtPlacaVehiculo)
-            Me.gbVehiculo.Controls.Add(Me.txtModeloVehiculo)
-            Me.gbVehiculo.Controls.Add(Me.txtMarcaVehiculo)
-            Me.gbVehiculo.Controls.Add(Me.lblPlacaVehiculo)
-            Me.gbVehiculo.Controls.Add(Me.lblModeloVehiculo)
-            Me.gbVehiculo.Controls.Add(Me.lblMarcaVehiculo)
-            Me.gbVehiculo.Font = New System.Drawing.Font("Calibri", 8.25!)
-            Me.gbVehiculo.Location = New System.Drawing.Point(6, 77)
-            Me.gbVehiculo.Name = "gbVehiculo"
-            Me.gbVehiculo.Size = New System.Drawing.Size(411, 95)
-            Me.gbVehiculo.TabIndex = 33
-            Me.gbVehiculo.TabStop = False
-            Me.gbVehiculo.Text = "VEHICULO"
-            '
-            'txtIdActivoFijo
-            '
-            Me.txtIdActivoFijo.BackColor = System.Drawing.Color.White
-            Me.txtIdActivoFijo.Enabled = False
-            Me.txtIdActivoFijo.Location = New System.Drawing.Point(57, 24)
-            Me.txtIdActivoFijo.Name = "txtIdActivoFijo"
-            Me.txtIdActivoFijo.Size = New System.Drawing.Size(115, 21)
-            Me.txtIdActivoFijo.TabIndex = 30
-            Me.txtIdActivoFijo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-            '
-            'btnBuscarVehiculo
-            '
-            Me.btnBuscarVehiculo.Cursor = System.Windows.Forms.Cursors.Hand
-            Me.btnBuscarVehiculo.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-            Me.btnBuscarVehiculo.Location = New System.Drawing.Point(172, 23)
-            Me.btnBuscarVehiculo.Name = "btnBuscarVehiculo"
-            Me.btnBuscarVehiculo.Size = New System.Drawing.Size(26, 24)
-            Me.btnBuscarVehiculo.TabIndex = 32
-            Me.btnBuscarVehiculo.Text = "..."
-            Me.btnBuscarVehiculo.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-            Me.btnBuscarVehiculo.UseVisualStyleBackColor = True
-            '
-            'lblIdActivo
-            '
-            Me.lblIdActivo.AutoSize = True
-            Me.lblIdActivo.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.lblIdActivo.Location = New System.Drawing.Point(10, 25)
-            Me.lblIdActivo.Name = "lblIdActivo"
-            Me.lblIdActivo.Size = New System.Drawing.Size(43, 13)
-            Me.lblIdActivo.TabIndex = 6
-            Me.lblIdActivo.Text = "ACTIVO:"
-            '
-            'txtPlacaVehiculo
-            '
-            Me.txtPlacaVehiculo.BackColor = System.Drawing.Color.White
-            Me.txtPlacaVehiculo.Enabled = False
-            Me.txtPlacaVehiculo.Location = New System.Drawing.Point(261, 53)
-            Me.txtPlacaVehiculo.Name = "txtPlacaVehiculo"
-            Me.txtPlacaVehiculo.Size = New System.Drawing.Size(141, 21)
-            Me.txtPlacaVehiculo.TabIndex = 34
-            Me.txtPlacaVehiculo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-            '
-            'txtModeloVehiculo
-            '
-            Me.txtModeloVehiculo.BackColor = System.Drawing.Color.White
-            Me.txtModeloVehiculo.Enabled = False
-            Me.txtModeloVehiculo.Location = New System.Drawing.Point(261, 24)
-            Me.txtModeloVehiculo.Name = "txtModeloVehiculo"
-            Me.txtModeloVehiculo.Size = New System.Drawing.Size(141, 21)
-            Me.txtModeloVehiculo.TabIndex = 33
-            Me.txtModeloVehiculo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-            '
-            'txtMarcaVehiculo
-            '
-            Me.txtMarcaVehiculo.BackColor = System.Drawing.Color.White
-            Me.txtMarcaVehiculo.Enabled = False
-            Me.txtMarcaVehiculo.Location = New System.Drawing.Point(57, 53)
-            Me.txtMarcaVehiculo.Name = "txtMarcaVehiculo"
-            Me.txtMarcaVehiculo.Size = New System.Drawing.Size(141, 21)
-            Me.txtMarcaVehiculo.TabIndex = 31
-            Me.txtMarcaVehiculo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-            '
-            'lblPlacaVehiculo
-            '
-            Me.lblPlacaVehiculo.AutoSize = True
-            Me.lblPlacaVehiculo.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.lblPlacaVehiculo.Location = New System.Drawing.Point(218, 56)
-            Me.lblPlacaVehiculo.Name = "lblPlacaVehiculo"
-            Me.lblPlacaVehiculo.Size = New System.Drawing.Size(39, 13)
-            Me.lblPlacaVehiculo.TabIndex = 2
-            Me.lblPlacaVehiculo.Text = "PLACA:"
-            '
-            'lblModeloVehiculo
-            '
-            Me.lblModeloVehiculo.AutoSize = True
-            Me.lblModeloVehiculo.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.lblModeloVehiculo.Location = New System.Drawing.Point(214, 27)
-            Me.lblModeloVehiculo.Name = "lblModeloVehiculo"
-            Me.lblModeloVehiculo.Size = New System.Drawing.Size(50, 13)
-            Me.lblModeloVehiculo.TabIndex = 1
-            Me.lblModeloVehiculo.Text = "MODELO:"
-            '
-            'lblMarcaVehiculo
-            '
-            Me.lblMarcaVehiculo.AutoSize = True
-            Me.lblMarcaVehiculo.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.lblMarcaVehiculo.Location = New System.Drawing.Point(10, 56)
-            Me.lblMarcaVehiculo.Name = "lblMarcaVehiculo"
-            Me.lblMarcaVehiculo.Size = New System.Drawing.Size(43, 13)
-            Me.lblMarcaVehiculo.TabIndex = 0
-            Me.lblMarcaVehiculo.Text = "MARCA:"
-            '
-            'txtTotalKmControlC
-            '
-            Me.txtTotalKmControlC.BackColor = System.Drawing.Color.White
-            Me.txtTotalKmControlC.Enabled = False
-            Me.txtTotalKmControlC.Location = New System.Drawing.Point(712, 51)
-            Me.txtTotalKmControlC.Name = "txtTotalKmControlC"
-            Me.txtTotalKmControlC.Size = New System.Drawing.Size(47, 22)
-            Me.txtTotalKmControlC.TabIndex = 29
-            Me.txtTotalKmControlC.Text = "0"
-            Me.txtTotalKmControlC.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-            '
-            'lblTotaKmControlC
-            '
-            Me.lblTotaKmControlC.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.lblTotaKmControlC.Location = New System.Drawing.Point(715, 18)
-            Me.lblTotaKmControlC.Name = "lblTotaKmControlC"
-            Me.lblTotaKmControlC.Size = New System.Drawing.Size(40, 32)
-            Me.lblTotaKmControlC.TabIndex = 20
-            Me.lblTotaKmControlC.Text = "TOTAL KM's:"
-            Me.lblTotaKmControlC.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-            '
-            'gpSalidaVehiculo
-            '
-            Me.gpSalidaVehiculo.BackColor = System.Drawing.Color.White
-            Me.gpSalidaVehiculo.Controls.Add(Me.dtpHoraSalidaVehiculo)
-            Me.gpSalidaVehiculo.Controls.Add(Me.dtpFechaSalidaVehiculo)
-            Me.gpSalidaVehiculo.Controls.Add(Me.txtKmSalidaVehiculo)
-            Me.gpSalidaVehiculo.Controls.Add(Me.lblKilometrajeSalidaVehiculo)
-            Me.gpSalidaVehiculo.Controls.Add(Me.lblHoraSalidaVehiculo)
-            Me.gpSalidaVehiculo.Controls.Add(Me.lblFechaSalidaVehiculo)
-            Me.gpSalidaVehiculo.Location = New System.Drawing.Point(594, 77)
-            Me.gpSalidaVehiculo.Name = "gpSalidaVehiculo"
-            Me.gpSalidaVehiculo.Size = New System.Drawing.Size(165, 95)
-            Me.gpSalidaVehiculo.TabIndex = 31
-            Me.gpSalidaVehiculo.TabStop = False
-            Me.gpSalidaVehiculo.Text = "SALIDA"
-            '
-            'dtpHoraSalidaVehiculo
-            '
-            Me.dtpHoraSalidaVehiculo.Format = System.Windows.Forms.DateTimePickerFormat.Time
-            Me.dtpHoraSalidaVehiculo.Location = New System.Drawing.Point(46, 42)
-            Me.dtpHoraSalidaVehiculo.Name = "dtpHoraSalidaVehiculo"
-            Me.dtpHoraSalidaVehiculo.ShowUpDown = True
-            Me.dtpHoraSalidaVehiculo.Size = New System.Drawing.Size(110, 22)
-            Me.dtpHoraSalidaVehiculo.TabIndex = 39
-            '
-            'dtpFechaSalidaVehiculo
-            '
-            Me.dtpFechaSalidaVehiculo.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-            Me.dtpFechaSalidaVehiculo.Location = New System.Drawing.Point(46, 19)
-            Me.dtpFechaSalidaVehiculo.Name = "dtpFechaSalidaVehiculo"
-            Me.dtpFechaSalidaVehiculo.Size = New System.Drawing.Size(110, 22)
-            Me.dtpFechaSalidaVehiculo.TabIndex = 38
-            '
-            'txtKmSalidaVehiculo
-            '
-            Me.txtKmSalidaVehiculo.BackColor = System.Drawing.Color.White
-            Me.txtKmSalidaVehiculo.Location = New System.Drawing.Point(46, 65)
-            Me.txtKmSalidaVehiculo.Name = "txtKmSalidaVehiculo"
-            Me.txtKmSalidaVehiculo.Size = New System.Drawing.Size(110, 22)
-            Me.txtKmSalidaVehiculo.TabIndex = 40
-            Me.txtKmSalidaVehiculo.Text = "0"
-            '
-            'lblKilometrajeSalidaVehiculo
-            '
-            Me.lblKilometrajeSalidaVehiculo.AutoSize = True
-            Me.lblKilometrajeSalidaVehiculo.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.lblKilometrajeSalidaVehiculo.Location = New System.Drawing.Point(6, 68)
-            Me.lblKilometrajeSalidaVehiculo.Name = "lblKilometrajeSalidaVehiculo"
-            Me.lblKilometrajeSalidaVehiculo.Size = New System.Drawing.Size(32, 13)
-            Me.lblKilometrajeSalidaVehiculo.TabIndex = 2
-            Me.lblKilometrajeSalidaVehiculo.Text = "KM'S:"
-            '
-            'lblHoraSalidaVehiculo
-            '
-            Me.lblHoraSalidaVehiculo.AutoSize = True
-            Me.lblHoraSalidaVehiculo.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.lblHoraSalidaVehiculo.Location = New System.Drawing.Point(6, 45)
-            Me.lblHoraSalidaVehiculo.Name = "lblHoraSalidaVehiculo"
-            Me.lblHoraSalidaVehiculo.Size = New System.Drawing.Size(36, 13)
-            Me.lblHoraSalidaVehiculo.TabIndex = 1
-            Me.lblHoraSalidaVehiculo.Text = "HORA:"
-            '
-            'lblFechaSalidaVehiculo
-            '
-            Me.lblFechaSalidaVehiculo.AutoSize = True
-            Me.lblFechaSalidaVehiculo.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.lblFechaSalidaVehiculo.Location = New System.Drawing.Point(6, 22)
-            Me.lblFechaSalidaVehiculo.Name = "lblFechaSalidaVehiculo"
-            Me.lblFechaSalidaVehiculo.Size = New System.Drawing.Size(39, 13)
-            Me.lblFechaSalidaVehiculo.TabIndex = 0
-            Me.lblFechaSalidaVehiculo.Text = "FECHA:"
-            '
-            'cbmCombustible
-            '
-            Me.cbmCombustible.BackColor = System.Drawing.Color.White
-            Me.cbmCombustible.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-            Me.cbmCombustible.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-            Me.cbmCombustible.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.cbmCombustible.FormattingEnabled = True
-            Me.cbmCombustible.Location = New System.Drawing.Point(342, 24)
-            Me.cbmCombustible.Name = "cbmCombustible"
-            Me.cbmCombustible.Size = New System.Drawing.Size(175, 21)
-            Me.cbmCombustible.TabIndex = 25
-            '
-            'lblFechaControlC
-            '
-            Me.lblFechaControlC.AutoSize = True
-            Me.lblFechaControlC.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.lblFechaControlC.Location = New System.Drawing.Point(15, 27)
-            Me.lblFechaControlC.Name = "lblFechaControlC"
-            Me.lblFechaControlC.Size = New System.Drawing.Size(39, 13)
-            Me.lblFechaControlC.TabIndex = 4
-            Me.lblFechaControlC.Text = "FECHA:"
-            '
-            'txtMotivoControlC
-            '
-            Me.txtMotivoControlC.BackColor = System.Drawing.Color.White
-            Me.txtMotivoControlC.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-            Me.txtMotivoControlC.Location = New System.Drawing.Point(414, 51)
-            Me.txtMotivoControlC.Name = "txtMotivoControlC"
-            Me.txtMotivoControlC.Size = New System.Drawing.Size(283, 22)
-            Me.txtMotivoControlC.TabIndex = 28
-            '
-            'lblClaseGasolinaControlC
-            '
-            Me.lblClaseGasolinaControlC.AutoSize = True
-            Me.lblClaseGasolinaControlC.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.lblClaseGasolinaControlC.Location = New System.Drawing.Point(262, 28)
-            Me.lblClaseGasolinaControlC.Name = "lblClaseGasolinaControlC"
-            Me.lblClaseGasolinaControlC.Size = New System.Drawing.Size(74, 13)
-            Me.lblClaseGasolinaControlC.TabIndex = 14
-            Me.lblClaseGasolinaControlC.Text = "COMBUSTIBLE:"
-            '
-            'txtDestinoControlC
-            '
-            Me.txtDestinoControlC.BackColor = System.Drawing.Color.White
-            Me.txtDestinoControlC.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-            Me.txtDestinoControlC.Location = New System.Drawing.Point(63, 51)
-            Me.txtDestinoControlC.Name = "txtDestinoControlC"
-            Me.txtDestinoControlC.Size = New System.Drawing.Size(289, 22)
-            Me.txtDestinoControlC.TabIndex = 27
-            '
-            'lblMotivoControlC
-            '
-            Me.lblMotivoControlC.AutoSize = True
-            Me.lblMotivoControlC.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.lblMotivoControlC.Location = New System.Drawing.Point(370, 55)
-            Me.lblMotivoControlC.Name = "lblMotivoControlC"
-            Me.lblMotivoControlC.Size = New System.Drawing.Size(47, 13)
-            Me.lblMotivoControlC.TabIndex = 17
-            Me.lblMotivoControlC.Text = "MOTIVO:"
-            '
-            'txtValorControl
-            '
-            Me.txtValorControl.BackColor = System.Drawing.Color.White
-            Me.txtValorControl.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtValorControl.ForeColor = System.Drawing.Color.Black
-            Me.txtValorControl.Location = New System.Drawing.Point(614, 25)
-            Me.txtValorControl.Name = "txtValorControl"
-            Me.txtValorControl.Size = New System.Drawing.Size(83, 21)
-            Me.txtValorControl.TabIndex = 26
-            Me.txtValorControl.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-            '
-            'lblDestinoControlC
-            '
-            Me.lblDestinoControlC.AutoSize = True
-            Me.lblDestinoControlC.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.lblDestinoControlC.Location = New System.Drawing.Point(14, 55)
-            Me.lblDestinoControlC.Name = "lblDestinoControlC"
-            Me.lblDestinoControlC.Size = New System.Drawing.Size(49, 13)
-            Me.lblDestinoControlC.TabIndex = 16
-            Me.lblDestinoControlC.Text = "DESTINO:"
-            '
-            'lblValorControlC
-            '
-            Me.lblValorControlC.AutoSize = True
-            Me.lblValorControlC.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.lblValorControlC.Location = New System.Drawing.Point(569, 28)
-            Me.lblValorControlC.Name = "lblValorControlC"
-            Me.lblValorControlC.Size = New System.Drawing.Size(39, 13)
-            Me.lblValorControlC.TabIndex = 15
-            Me.lblValorControlC.Text = "VALOR:"
-            '
-            'lblMontoFondoRotativo
-            '
-            Me.lblMontoFondoRotativo.AutoSize = True
-            Me.lblMontoFondoRotativo.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.lblMontoFondoRotativo.Location = New System.Drawing.Point(930, 5)
-            Me.lblMontoFondoRotativo.Name = "lblMontoFondoRotativo"
-            Me.lblMontoFondoRotativo.Size = New System.Drawing.Size(38, 15)
-            Me.lblMontoFondoRotativo.TabIndex = 188
-            Me.lblMontoFondoRotativo.Text = "00.00"
-            '
-            'Label3
-            '
-            Me.Label3.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label3.Location = New System.Drawing.Point(812, 3)
-            Me.Label3.Name = "Label3"
-            Me.Label3.Size = New System.Drawing.Size(126, 19)
-            Me.Label3.TabIndex = 191
-            Me.Label3.Text = "VALOR DISPONIBLE:"
-            Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-            '
-            'lblMontoAsignado
-            '
-            Me.lblMontoAsignado.AutoSize = True
-            Me.lblMontoAsignado.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.lblMontoAsignado.Location = New System.Drawing.Point(696, 4)
-            Me.lblMontoAsignado.Name = "lblMontoAsignado"
-            Me.lblMontoAsignado.Size = New System.Drawing.Size(38, 15)
-            Me.lblMontoAsignado.TabIndex = 190
-            Me.lblMontoAsignado.Text = "00.00"
-            '
-            'Label30
-            '
-            Me.Label30.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label30.Location = New System.Drawing.Point(577, 2)
-            Me.Label30.Name = "Label30"
-            Me.Label30.Size = New System.Drawing.Size(126, 19)
-            Me.Label30.TabIndex = 189
-            Me.Label30.Text = "MONTO ASIGNADO:"
-            Me.Label30.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
             '
             'EjercicioFiscal
             '
@@ -1439,6 +682,785 @@
             Me.Column2.Name = "Column2"
             Me.Column2.ReadOnly = True
             '
+            'gbReceptorDinero
+            '
+            Me.gbReceptorDinero.BackColor = System.Drawing.Color.White
+            Me.gbReceptorDinero.Controls.Add(Me.btnBuscarPersonal)
+            Me.gbReceptorDinero.Controls.Add(Me.txtReceptorDineroSolicitud)
+            Me.gbReceptorDinero.Controls.Add(Me.txtCIReceptorDinero)
+            Me.gbReceptorDinero.Controls.Add(Me.lblNombreReceptorReciboFR)
+            Me.gbReceptorDinero.Controls.Add(Me.lblCIReceptorReciboFR)
+            Me.gbReceptorDinero.Controls.Add(Me.dgvAsientosDiario)
+            Me.gbReceptorDinero.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.gbReceptorDinero.Location = New System.Drawing.Point(2, 211)
+            Me.gbReceptorDinero.Name = "gbReceptorDinero"
+            Me.gbReceptorDinero.Size = New System.Drawing.Size(998, 53)
+            Me.gbReceptorDinero.TabIndex = 20
+            Me.gbReceptorDinero.TabStop = False
+            Me.gbReceptorDinero.Text = "RECEPTOR DEL DINERO"
+            '
+            'btnBuscarPersonal
+            '
+            Me.btnBuscarPersonal.BackColor = System.Drawing.Color.White
+            Me.btnBuscarPersonal.Enabled = False
+            Me.btnBuscarPersonal.FlatAppearance.BorderSize = 0
+            Me.btnBuscarPersonal.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+            Me.btnBuscarPersonal.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.btnBuscarPersonal.Image = Global.syscisepro.My.Resources.Resources.search_24dp_FILL0_wght400_GRAD0_opsz40
+            Me.btnBuscarPersonal.Location = New System.Drawing.Point(300, 16)
+            Me.btnBuscarPersonal.Name = "btnBuscarPersonal"
+            Me.btnBuscarPersonal.Size = New System.Drawing.Size(28, 28)
+            Me.btnBuscarPersonal.TabIndex = 16
+            Me.btnBuscarPersonal.UseVisualStyleBackColor = False
+            '
+            'txtReceptorDineroSolicitud
+            '
+            Me.txtReceptorDineroSolicitud.BackColor = System.Drawing.Color.White
+            Me.txtReceptorDineroSolicitud.Enabled = False
+            Me.txtReceptorDineroSolicitud.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtReceptorDineroSolicitud.Location = New System.Drawing.Point(513, 19)
+            Me.txtReceptorDineroSolicitud.Name = "txtReceptorDineroSolicitud"
+            Me.txtReceptorDineroSolicitud.Size = New System.Drawing.Size(423, 21)
+            Me.txtReceptorDineroSolicitud.TabIndex = 17
+            Me.txtReceptorDineroSolicitud.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+            '
+            'txtCIReceptorDinero
+            '
+            Me.txtCIReceptorDinero.BackColor = System.Drawing.Color.White
+            Me.txtCIReceptorDinero.Enabled = False
+            Me.txtCIReceptorDinero.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtCIReceptorDinero.Location = New System.Drawing.Point(181, 19)
+            Me.txtCIReceptorDinero.Name = "txtCIReceptorDinero"
+            Me.txtCIReceptorDinero.Size = New System.Drawing.Size(113, 22)
+            Me.txtCIReceptorDinero.TabIndex = 15
+            '
+            'lblNombreReceptorReciboFR
+            '
+            Me.lblNombreReceptorReciboFR.AutoSize = True
+            Me.lblNombreReceptorReciboFR.Font = New System.Drawing.Font("Segoe UI Semibold", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.lblNombreReceptorReciboFR.Location = New System.Drawing.Point(450, 22)
+            Me.lblNombreReceptorReciboFR.Name = "lblNombreReceptorReciboFR"
+            Me.lblNombreReceptorReciboFR.Size = New System.Drawing.Size(56, 13)
+            Me.lblNombreReceptorReciboFR.TabIndex = 7
+            Me.lblNombreReceptorReciboFR.Text = "NOMBRE:"
+            '
+            'lblCIReceptorReciboFR
+            '
+            Me.lblCIReceptorReciboFR.AutoSize = True
+            Me.lblCIReceptorReciboFR.Font = New System.Drawing.Font("Segoe UI Semibold", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.lblCIReceptorReciboFR.Location = New System.Drawing.Point(68, 22)
+            Me.lblCIReceptorReciboFR.Name = "lblCIReceptorReciboFR"
+            Me.lblCIReceptorReciboFR.Size = New System.Drawing.Size(111, 13)
+            Me.lblCIReceptorReciboFR.TabIndex = 6
+            Me.lblCIReceptorReciboFR.Text = "CEDULA IDENTIDAD:"
+            '
+            'dgvAsientosDiario
+            '
+            Me.dgvAsientosDiario.AllowUserToAddRows = False
+            Me.dgvAsientosDiario.AllowUserToDeleteRows = False
+            DataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+            Me.dgvAsientosDiario.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle9
+            Me.dgvAsientosDiario.BackgroundColor = System.Drawing.Color.White
+            Me.dgvAsientosDiario.BorderStyle = System.Windows.Forms.BorderStyle.None
+            Me.dgvAsientosDiario.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
+            DataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+            DataGridViewCellStyle10.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+            Me.dgvAsientosDiario.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle10
+            Me.dgvAsientosDiario.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.eliminarItem, Me.CODIGO, Me.CUENTA, Me.VALOR, Me.IVA})
+            DataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+            DataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Window
+            DataGridViewCellStyle13.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.ControlText
+            DataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight
+            DataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+            DataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+            Me.dgvAsientosDiario.DefaultCellStyle = DataGridViewCellStyle13
+            Me.dgvAsientosDiario.GridColor = System.Drawing.SystemColors.ControlLight
+            Me.dgvAsientosDiario.Location = New System.Drawing.Point(341, 13)
+            Me.dgvAsientosDiario.MultiSelect = False
+            Me.dgvAsientosDiario.Name = "dgvAsientosDiario"
+            Me.dgvAsientosDiario.ReadOnly = True
+            Me.dgvAsientosDiario.RowHeadersVisible = False
+            Me.dgvAsientosDiario.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+            Me.dgvAsientosDiario.Size = New System.Drawing.Size(514, 28)
+            Me.dgvAsientosDiario.TabIndex = 55
+            Me.dgvAsientosDiario.Visible = False
+            '
+            'eliminarItem
+            '
+            DataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+            DataGridViewCellStyle11.BackColor = System.Drawing.Color.DarkRed
+            DataGridViewCellStyle11.ForeColor = System.Drawing.Color.White
+            DataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
+            DataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.White
+            Me.eliminarItem.DefaultCellStyle = DataGridViewCellStyle11
+            Me.eliminarItem.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+            Me.eliminarItem.HeaderText = "SUPR"
+            Me.eliminarItem.Name = "eliminarItem"
+            Me.eliminarItem.ReadOnly = True
+            Me.eliminarItem.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+            Me.eliminarItem.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
+            Me.eliminarItem.Text = "(X)"
+            Me.eliminarItem.ToolTipText = "Eliminar Fila"
+            Me.eliminarItem.UseColumnTextForButtonValue = True
+            Me.eliminarItem.Width = 40
+            '
+            'CODIGO
+            '
+            Me.CODIGO.HeaderText = "CODIGO"
+            Me.CODIGO.Name = "CODIGO"
+            Me.CODIGO.ReadOnly = True
+            Me.CODIGO.Width = 95
+            '
+            'CUENTA
+            '
+            DataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+            Me.CUENTA.DefaultCellStyle = DataGridViewCellStyle12
+            Me.CUENTA.HeaderText = "CUENTA"
+            Me.CUENTA.Name = "CUENTA"
+            Me.CUENTA.ReadOnly = True
+            Me.CUENTA.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+            Me.CUENTA.Width = 225
+            '
+            'VALOR
+            '
+            Me.VALOR.HeaderText = "VALOR"
+            Me.VALOR.Name = "VALOR"
+            Me.VALOR.ReadOnly = True
+            Me.VALOR.Width = 80
+            '
+            'IVA
+            '
+            Me.IVA.HeaderText = "IVA"
+            Me.IVA.Name = "IVA"
+            Me.IVA.ReadOnly = True
+            Me.IVA.Width = 35
+            '
+            'GroupBox1
+            '
+            Me.GroupBox1.BackColor = System.Drawing.Color.White
+            Me.GroupBox1.Controls.Add(Me.txtCodDebe)
+            Me.GroupBox1.Controls.Add(Me.lblCodDebe)
+            Me.GroupBox1.Controls.Add(Me.lblCodHaber)
+            Me.GroupBox1.Controls.Add(Me.txtCodHaber)
+            Me.GroupBox1.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.GroupBox1.Location = New System.Drawing.Point(678, 136)
+            Me.GroupBox1.Name = "GroupBox1"
+            Me.GroupBox1.Size = New System.Drawing.Size(322, 73)
+            Me.GroupBox1.TabIndex = 39
+            Me.GroupBox1.TabStop = False
+            Me.GroupBox1.Text = "CONTABILIZACIÓN"
+            '
+            'gbDocumento
+            '
+            Me.gbDocumento.BackColor = System.Drawing.Color.White
+            Me.gbDocumento.Controls.Add(Me.lblNroDocumento)
+            Me.gbDocumento.Controls.Add(Me.txtNroDocumento)
+            Me.gbDocumento.Controls.Add(Me.btnDocumento)
+            Me.gbDocumento.Controls.Add(Me.cmbNombreParametroDocumentos)
+            Me.gbDocumento.Location = New System.Drawing.Point(2, 265)
+            Me.gbDocumento.Name = "gbDocumento"
+            Me.gbDocumento.Size = New System.Drawing.Size(273, 65)
+            Me.gbDocumento.TabIndex = 40
+            Me.gbDocumento.TabStop = False
+            Me.gbDocumento.Text = "DOCUMENTO:"
+            '
+            'lblNroDocumento
+            '
+            Me.lblNroDocumento.AutoSize = True
+            Me.lblNroDocumento.Location = New System.Drawing.Point(9, 42)
+            Me.lblNroDocumento.Name = "lblNroDocumento"
+            Me.lblNroDocumento.Size = New System.Drawing.Size(22, 13)
+            Me.lblNroDocumento.TabIndex = 56
+            Me.lblNroDocumento.Text = "N°:"
+            '
+            'txtNroDocumento
+            '
+            Me.txtNroDocumento.BackColor = System.Drawing.Color.White
+            Me.txtNroDocumento.Enabled = False
+            Me.txtNroDocumento.Location = New System.Drawing.Point(37, 39)
+            Me.txtNroDocumento.Name = "txtNroDocumento"
+            Me.txtNroDocumento.Size = New System.Drawing.Size(159, 22)
+            Me.txtNroDocumento.TabIndex = 19
+            '
+            'btnDocumento
+            '
+            Me.btnDocumento.BackColor = System.Drawing.Color.White
+            Me.btnDocumento.Enabled = False
+            Me.btnDocumento.FlatAppearance.BorderSize = 0
+            Me.btnDocumento.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.btnDocumento.Image = Global.syscisepro.My.Resources.Resources.upload_24dp_FILL0_wght400_GRAD0_opsz24__2_
+            Me.btnDocumento.ImageAlign = System.Drawing.ContentAlignment.TopCenter
+            Me.btnDocumento.Location = New System.Drawing.Point(202, 14)
+            Me.btnDocumento.Name = "btnDocumento"
+            Me.btnDocumento.Size = New System.Drawing.Size(60, 46)
+            Me.btnDocumento.TabIndex = 20
+            Me.btnDocumento.Text = "CARGAR "
+            Me.btnDocumento.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+            Me.btnDocumento.UseVisualStyleBackColor = False
+            '
+            'cmbNombreParametroDocumentos
+            '
+            Me.cmbNombreParametroDocumentos.BackColor = System.Drawing.Color.White
+            Me.cmbNombreParametroDocumentos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+            Me.cmbNombreParametroDocumentos.Enabled = False
+            Me.cmbNombreParametroDocumentos.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+            Me.cmbNombreParametroDocumentos.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.cmbNombreParametroDocumentos.FormattingEnabled = True
+            Me.cmbNombreParametroDocumentos.Location = New System.Drawing.Point(12, 14)
+            Me.cmbNombreParametroDocumentos.Name = "cmbNombreParametroDocumentos"
+            Me.cmbNombreParametroDocumentos.Size = New System.Drawing.Size(184, 21)
+            Me.cmbNombreParametroDocumentos.TabIndex = 18
+            '
+            'MenuStrip1
+            '
+            Me.MenuStrip1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+            Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnNuevoSolicitudFR, Me.btnGuardarSolicitudFR, Me.btnCancelarSolicitudFR})
+            Me.MenuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow
+            Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
+            Me.MenuStrip1.Name = "MenuStrip1"
+            Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(7, 2, 0, 2)
+            Me.MenuStrip1.Size = New System.Drawing.Size(1001, 32)
+            Me.MenuStrip1.TabIndex = 183
+            Me.MenuStrip1.Text = "msIngresoBodega"
+            '
+            'btnNuevoSolicitudFR
+            '
+            Me.btnNuevoSolicitudFR.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.btnNuevoSolicitudFR.Image = Global.syscisepro.My.Resources.Resources.add_circle_24dp_FILL0_wght400_GRAD0_opsz24__3_
+            Me.btnNuevoSolicitudFR.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+            Me.btnNuevoSolicitudFR.Name = "btnNuevoSolicitudFR"
+            Me.btnNuevoSolicitudFR.Size = New System.Drawing.Size(81, 28)
+            Me.btnNuevoSolicitudFR.Text = "NUEVO"
+            '
+            'btnGuardarSolicitudFR
+            '
+            Me.btnGuardarSolicitudFR.Enabled = False
+            Me.btnGuardarSolicitudFR.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.btnGuardarSolicitudFR.Image = Global.syscisepro.My.Resources.Resources.save_24dp_FILL0_wght400_GRAD0_opsz24__2_
+            Me.btnGuardarSolicitudFR.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+            Me.btnGuardarSolicitudFR.Name = "btnGuardarSolicitudFR"
+            Me.btnGuardarSolicitudFR.Size = New System.Drawing.Size(95, 28)
+            Me.btnGuardarSolicitudFR.Text = "GUARDAR"
+            '
+            'btnCancelarSolicitudFR
+            '
+            Me.btnCancelarSolicitudFR.Enabled = False
+            Me.btnCancelarSolicitudFR.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.btnCancelarSolicitudFR.Image = Global.syscisepro.My.Resources.Resources.cancel_24dp_FILL0_wght400_GRAD0_opsz24
+            Me.btnCancelarSolicitudFR.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+            Me.btnCancelarSolicitudFR.Name = "btnCancelarSolicitudFR"
+            Me.btnCancelarSolicitudFR.Size = New System.Drawing.Size(97, 28)
+            Me.btnCancelarSolicitudFR.Text = "CANCELAR"
+            '
+            'GroupBox2
+            '
+            Me.GroupBox2.Anchor = System.Windows.Forms.AnchorStyles.Top
+            Me.GroupBox2.BackColor = System.Drawing.Color.White
+            Me.GroupBox2.Controls.Add(Me.lblActividadDetalleFR)
+            Me.GroupBox2.Controls.Add(Me.lblCentroCosto)
+            Me.GroupBox2.Controls.Add(Me.lblCanton)
+            Me.GroupBox2.Controls.Add(Me.lblProvincia)
+            Me.GroupBox2.Controls.Add(Me.lblConceptoDetalleFR)
+            Me.GroupBox2.Controls.Add(Me.cmbCentroCosto)
+            Me.GroupBox2.Controls.Add(Me.lblParroquia)
+            Me.GroupBox2.Controls.Add(Me.cmbParroquia)
+            Me.GroupBox2.Controls.Add(Me.txtActividadDetalleFR)
+            Me.GroupBox2.Controls.Add(Me.cmbCanton)
+            Me.GroupBox2.Controls.Add(Me.cmbConcepto)
+            Me.GroupBox2.Controls.Add(Me.cmbProvincia)
+            Me.GroupBox2.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.GroupBox2.Location = New System.Drawing.Point(1, 63)
+            Me.GroupBox2.Name = "GroupBox2"
+            Me.GroupBox2.Size = New System.Drawing.Size(999, 71)
+            Me.GroupBox2.TabIndex = 184
+            Me.GroupBox2.TabStop = False
+            Me.GroupBox2.Text = "CENTRO COSTO DEL GASTO"
+            '
+            'GroupBox3
+            '
+            Me.GroupBox3.Controls.Add(Me.chkCombustible)
+            Me.GroupBox3.Controls.Add(Me.PictureBox1)
+            Me.GroupBox3.Controls.Add(Me.txtFechaControl)
+            Me.GroupBox3.Controls.Add(Me.gbLlegadaVehiculo)
+            Me.GroupBox3.Controls.Add(Me.gbVehiculo)
+            Me.GroupBox3.Controls.Add(Me.txtTotalKmControlC)
+            Me.GroupBox3.Controls.Add(Me.lblTotaKmControlC)
+            Me.GroupBox3.Controls.Add(Me.gpSalidaVehiculo)
+            Me.GroupBox3.Controls.Add(Me.cbmCombustible)
+            Me.GroupBox3.Controls.Add(Me.lblFechaControlC)
+            Me.GroupBox3.Controls.Add(Me.txtMotivoControlC)
+            Me.GroupBox3.Controls.Add(Me.lblClaseGasolinaControlC)
+            Me.GroupBox3.Controls.Add(Me.txtDestinoControlC)
+            Me.GroupBox3.Controls.Add(Me.lblMotivoControlC)
+            Me.GroupBox3.Controls.Add(Me.txtValorControl)
+            Me.GroupBox3.Controls.Add(Me.lblDestinoControlC)
+            Me.GroupBox3.Controls.Add(Me.lblValorControlC)
+            Me.GroupBox3.Enabled = False
+            Me.GroupBox3.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.GroupBox3.Location = New System.Drawing.Point(1, 332)
+            Me.GroupBox3.Name = "GroupBox3"
+            Me.GroupBox3.Size = New System.Drawing.Size(997, 178)
+            Me.GroupBox3.TabIndex = 185
+            Me.GroupBox3.TabStop = False
+            '
+            'chkCombustible
+            '
+            Me.chkCombustible.AutoSize = True
+            Me.chkCombustible.BackColor = System.Drawing.Color.White
+            Me.chkCombustible.Enabled = False
+            Me.chkCombustible.Location = New System.Drawing.Point(6, 0)
+            Me.chkCombustible.Name = "chkCombustible"
+            Me.chkCombustible.Size = New System.Drawing.Size(171, 17)
+            Me.chkCombustible.TabIndex = 23
+            Me.chkCombustible.Text = "CONTROL DE COMBUSTIBLE"
+            Me.chkCombustible.UseVisualStyleBackColor = False
+            '
+            'PictureBox1
+            '
+            Me.PictureBox1.BackgroundImage = CType(resources.GetObject("PictureBox1.BackgroundImage"), System.Drawing.Image)
+            Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+            Me.PictureBox1.Location = New System.Drawing.Point(772, 15)
+            Me.PictureBox1.Name = "PictureBox1"
+            Me.PictureBox1.Size = New System.Drawing.Size(219, 154)
+            Me.PictureBox1.TabIndex = 35
+            Me.PictureBox1.TabStop = False
+            '
+            'txtFechaControl
+            '
+            Me.txtFechaControl.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+            Me.txtFechaControl.Location = New System.Drawing.Point(63, 23)
+            Me.txtFechaControl.Name = "txtFechaControl"
+            Me.txtFechaControl.Size = New System.Drawing.Size(99, 21)
+            Me.txtFechaControl.TabIndex = 24
+            '
+            'gbLlegadaVehiculo
+            '
+            Me.gbLlegadaVehiculo.BackColor = System.Drawing.Color.White
+            Me.gbLlegadaVehiculo.Controls.Add(Me.dtpHoraLlegadaVehiculo)
+            Me.gbLlegadaVehiculo.Controls.Add(Me.dtpFechaLlegadaVehiculo)
+            Me.gbLlegadaVehiculo.Controls.Add(Me.txtKmLlegadaVehiculo)
+            Me.gbLlegadaVehiculo.Controls.Add(Me.LblKilometrajeLlegadaVehiculo)
+            Me.gbLlegadaVehiculo.Controls.Add(Me.lblHoraLlegadaVehiculo)
+            Me.gbLlegadaVehiculo.Controls.Add(Me.lblFechaLlegadaVehiculo)
+            Me.gbLlegadaVehiculo.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.gbLlegadaVehiculo.Location = New System.Drawing.Point(423, 77)
+            Me.gbLlegadaVehiculo.Name = "gbLlegadaVehiculo"
+            Me.gbLlegadaVehiculo.Size = New System.Drawing.Size(165, 95)
+            Me.gbLlegadaVehiculo.TabIndex = 32
+            Me.gbLlegadaVehiculo.TabStop = False
+            Me.gbLlegadaVehiculo.Text = "LLEGADA"
+            '
+            'dtpHoraLlegadaVehiculo
+            '
+            Me.dtpHoraLlegadaVehiculo.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.dtpHoraLlegadaVehiculo.Format = System.Windows.Forms.DateTimePickerFormat.Time
+            Me.dtpHoraLlegadaVehiculo.Location = New System.Drawing.Point(49, 42)
+            Me.dtpHoraLlegadaVehiculo.Name = "dtpHoraLlegadaVehiculo"
+            Me.dtpHoraLlegadaVehiculo.ShowUpDown = True
+            Me.dtpHoraLlegadaVehiculo.Size = New System.Drawing.Size(110, 21)
+            Me.dtpHoraLlegadaVehiculo.TabIndex = 36
+            '
+            'dtpFechaLlegadaVehiculo
+            '
+            Me.dtpFechaLlegadaVehiculo.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.dtpFechaLlegadaVehiculo.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+            Me.dtpFechaLlegadaVehiculo.Location = New System.Drawing.Point(49, 19)
+            Me.dtpFechaLlegadaVehiculo.Name = "dtpFechaLlegadaVehiculo"
+            Me.dtpFechaLlegadaVehiculo.Size = New System.Drawing.Size(110, 21)
+            Me.dtpFechaLlegadaVehiculo.TabIndex = 35
+            '
+            'txtKmLlegadaVehiculo
+            '
+            Me.txtKmLlegadaVehiculo.BackColor = System.Drawing.Color.White
+            Me.txtKmLlegadaVehiculo.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtKmLlegadaVehiculo.Location = New System.Drawing.Point(49, 65)
+            Me.txtKmLlegadaVehiculo.Name = "txtKmLlegadaVehiculo"
+            Me.txtKmLlegadaVehiculo.Size = New System.Drawing.Size(110, 21)
+            Me.txtKmLlegadaVehiculo.TabIndex = 37
+            Me.txtKmLlegadaVehiculo.Text = "0"
+            '
+            'LblKilometrajeLlegadaVehiculo
+            '
+            Me.LblKilometrajeLlegadaVehiculo.AutoSize = True
+            Me.LblKilometrajeLlegadaVehiculo.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.LblKilometrajeLlegadaVehiculo.Location = New System.Drawing.Point(8, 68)
+            Me.LblKilometrajeLlegadaVehiculo.Name = "LblKilometrajeLlegadaVehiculo"
+            Me.LblKilometrajeLlegadaVehiculo.Size = New System.Drawing.Size(32, 13)
+            Me.LblKilometrajeLlegadaVehiculo.TabIndex = 2
+            Me.LblKilometrajeLlegadaVehiculo.Text = "KM'S:"
+            '
+            'lblHoraLlegadaVehiculo
+            '
+            Me.lblHoraLlegadaVehiculo.AutoSize = True
+            Me.lblHoraLlegadaVehiculo.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.lblHoraLlegadaVehiculo.Location = New System.Drawing.Point(8, 45)
+            Me.lblHoraLlegadaVehiculo.Name = "lblHoraLlegadaVehiculo"
+            Me.lblHoraLlegadaVehiculo.Size = New System.Drawing.Size(36, 13)
+            Me.lblHoraLlegadaVehiculo.TabIndex = 1
+            Me.lblHoraLlegadaVehiculo.Text = "HORA:"
+            '
+            'lblFechaLlegadaVehiculo
+            '
+            Me.lblFechaLlegadaVehiculo.AutoSize = True
+            Me.lblFechaLlegadaVehiculo.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.lblFechaLlegadaVehiculo.Location = New System.Drawing.Point(8, 22)
+            Me.lblFechaLlegadaVehiculo.Name = "lblFechaLlegadaVehiculo"
+            Me.lblFechaLlegadaVehiculo.Size = New System.Drawing.Size(44, 13)
+            Me.lblFechaLlegadaVehiculo.TabIndex = 0
+            Me.lblFechaLlegadaVehiculo.Text = "FECHA:"
+            '
+            'gbVehiculo
+            '
+            Me.gbVehiculo.BackColor = System.Drawing.Color.White
+            Me.gbVehiculo.Controls.Add(Me.txtIdActivoFijo)
+            Me.gbVehiculo.Controls.Add(Me.btnBuscarVehiculo)
+            Me.gbVehiculo.Controls.Add(Me.lblIdActivo)
+            Me.gbVehiculo.Controls.Add(Me.txtPlacaVehiculo)
+            Me.gbVehiculo.Controls.Add(Me.txtModeloVehiculo)
+            Me.gbVehiculo.Controls.Add(Me.txtMarcaVehiculo)
+            Me.gbVehiculo.Controls.Add(Me.lblPlacaVehiculo)
+            Me.gbVehiculo.Controls.Add(Me.lblModeloVehiculo)
+            Me.gbVehiculo.Controls.Add(Me.lblMarcaVehiculo)
+            Me.gbVehiculo.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.gbVehiculo.Location = New System.Drawing.Point(6, 77)
+            Me.gbVehiculo.Name = "gbVehiculo"
+            Me.gbVehiculo.Size = New System.Drawing.Size(411, 95)
+            Me.gbVehiculo.TabIndex = 33
+            Me.gbVehiculo.TabStop = False
+            Me.gbVehiculo.Text = "VEHICULO"
+            '
+            'txtIdActivoFijo
+            '
+            Me.txtIdActivoFijo.BackColor = System.Drawing.Color.White
+            Me.txtIdActivoFijo.Enabled = False
+            Me.txtIdActivoFijo.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtIdActivoFijo.Location = New System.Drawing.Point(57, 24)
+            Me.txtIdActivoFijo.Name = "txtIdActivoFijo"
+            Me.txtIdActivoFijo.Size = New System.Drawing.Size(115, 21)
+            Me.txtIdActivoFijo.TabIndex = 30
+            Me.txtIdActivoFijo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+            '
+            'btnBuscarVehiculo
+            '
+            Me.btnBuscarVehiculo.Cursor = System.Windows.Forms.Cursors.Hand
+            Me.btnBuscarVehiculo.ImageAlign = System.Drawing.ContentAlignment.TopCenter
+            Me.btnBuscarVehiculo.Location = New System.Drawing.Point(172, 23)
+            Me.btnBuscarVehiculo.Name = "btnBuscarVehiculo"
+            Me.btnBuscarVehiculo.Size = New System.Drawing.Size(26, 24)
+            Me.btnBuscarVehiculo.TabIndex = 32
+            Me.btnBuscarVehiculo.Text = "..."
+            Me.btnBuscarVehiculo.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+            Me.btnBuscarVehiculo.UseVisualStyleBackColor = True
+            '
+            'lblIdActivo
+            '
+            Me.lblIdActivo.AutoSize = True
+            Me.lblIdActivo.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.lblIdActivo.Location = New System.Drawing.Point(10, 25)
+            Me.lblIdActivo.Name = "lblIdActivo"
+            Me.lblIdActivo.Size = New System.Drawing.Size(43, 13)
+            Me.lblIdActivo.TabIndex = 6
+            Me.lblIdActivo.Text = "ACTIVO:"
+            '
+            'txtPlacaVehiculo
+            '
+            Me.txtPlacaVehiculo.BackColor = System.Drawing.Color.White
+            Me.txtPlacaVehiculo.Enabled = False
+            Me.txtPlacaVehiculo.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtPlacaVehiculo.Location = New System.Drawing.Point(261, 53)
+            Me.txtPlacaVehiculo.Name = "txtPlacaVehiculo"
+            Me.txtPlacaVehiculo.Size = New System.Drawing.Size(141, 21)
+            Me.txtPlacaVehiculo.TabIndex = 34
+            Me.txtPlacaVehiculo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+            '
+            'txtModeloVehiculo
+            '
+            Me.txtModeloVehiculo.BackColor = System.Drawing.Color.White
+            Me.txtModeloVehiculo.Enabled = False
+            Me.txtModeloVehiculo.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtModeloVehiculo.Location = New System.Drawing.Point(261, 24)
+            Me.txtModeloVehiculo.Name = "txtModeloVehiculo"
+            Me.txtModeloVehiculo.Size = New System.Drawing.Size(141, 21)
+            Me.txtModeloVehiculo.TabIndex = 33
+            Me.txtModeloVehiculo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+            '
+            'txtMarcaVehiculo
+            '
+            Me.txtMarcaVehiculo.BackColor = System.Drawing.Color.White
+            Me.txtMarcaVehiculo.Enabled = False
+            Me.txtMarcaVehiculo.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtMarcaVehiculo.Location = New System.Drawing.Point(57, 53)
+            Me.txtMarcaVehiculo.Name = "txtMarcaVehiculo"
+            Me.txtMarcaVehiculo.Size = New System.Drawing.Size(141, 21)
+            Me.txtMarcaVehiculo.TabIndex = 31
+            Me.txtMarcaVehiculo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+            '
+            'lblPlacaVehiculo
+            '
+            Me.lblPlacaVehiculo.AutoSize = True
+            Me.lblPlacaVehiculo.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.lblPlacaVehiculo.Location = New System.Drawing.Point(218, 56)
+            Me.lblPlacaVehiculo.Name = "lblPlacaVehiculo"
+            Me.lblPlacaVehiculo.Size = New System.Drawing.Size(39, 13)
+            Me.lblPlacaVehiculo.TabIndex = 2
+            Me.lblPlacaVehiculo.Text = "PLACA:"
+            '
+            'lblModeloVehiculo
+            '
+            Me.lblModeloVehiculo.AutoSize = True
+            Me.lblModeloVehiculo.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.lblModeloVehiculo.Location = New System.Drawing.Point(214, 27)
+            Me.lblModeloVehiculo.Name = "lblModeloVehiculo"
+            Me.lblModeloVehiculo.Size = New System.Drawing.Size(50, 13)
+            Me.lblModeloVehiculo.TabIndex = 1
+            Me.lblModeloVehiculo.Text = "MODELO:"
+            '
+            'lblMarcaVehiculo
+            '
+            Me.lblMarcaVehiculo.AutoSize = True
+            Me.lblMarcaVehiculo.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.lblMarcaVehiculo.Location = New System.Drawing.Point(10, 56)
+            Me.lblMarcaVehiculo.Name = "lblMarcaVehiculo"
+            Me.lblMarcaVehiculo.Size = New System.Drawing.Size(43, 13)
+            Me.lblMarcaVehiculo.TabIndex = 0
+            Me.lblMarcaVehiculo.Text = "MARCA:"
+            '
+            'txtTotalKmControlC
+            '
+            Me.txtTotalKmControlC.BackColor = System.Drawing.Color.White
+            Me.txtTotalKmControlC.Enabled = False
+            Me.txtTotalKmControlC.Location = New System.Drawing.Point(712, 51)
+            Me.txtTotalKmControlC.Name = "txtTotalKmControlC"
+            Me.txtTotalKmControlC.Size = New System.Drawing.Size(47, 21)
+            Me.txtTotalKmControlC.TabIndex = 29
+            Me.txtTotalKmControlC.Text = "0"
+            Me.txtTotalKmControlC.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+            '
+            'lblTotaKmControlC
+            '
+            Me.lblTotaKmControlC.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.lblTotaKmControlC.Location = New System.Drawing.Point(715, 18)
+            Me.lblTotaKmControlC.Name = "lblTotaKmControlC"
+            Me.lblTotaKmControlC.Size = New System.Drawing.Size(40, 32)
+            Me.lblTotaKmControlC.TabIndex = 20
+            Me.lblTotaKmControlC.Text = "TOTAL KM's:"
+            Me.lblTotaKmControlC.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+            '
+            'gpSalidaVehiculo
+            '
+            Me.gpSalidaVehiculo.BackColor = System.Drawing.Color.White
+            Me.gpSalidaVehiculo.Controls.Add(Me.dtpHoraSalidaVehiculo)
+            Me.gpSalidaVehiculo.Controls.Add(Me.dtpFechaSalidaVehiculo)
+            Me.gpSalidaVehiculo.Controls.Add(Me.txtKmSalidaVehiculo)
+            Me.gpSalidaVehiculo.Controls.Add(Me.lblKilometrajeSalidaVehiculo)
+            Me.gpSalidaVehiculo.Controls.Add(Me.lblHoraSalidaVehiculo)
+            Me.gpSalidaVehiculo.Controls.Add(Me.lblFechaSalidaVehiculo)
+            Me.gpSalidaVehiculo.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.gpSalidaVehiculo.Location = New System.Drawing.Point(594, 77)
+            Me.gpSalidaVehiculo.Name = "gpSalidaVehiculo"
+            Me.gpSalidaVehiculo.Size = New System.Drawing.Size(165, 95)
+            Me.gpSalidaVehiculo.TabIndex = 31
+            Me.gpSalidaVehiculo.TabStop = False
+            Me.gpSalidaVehiculo.Text = "SALIDA"
+            '
+            'dtpHoraSalidaVehiculo
+            '
+            Me.dtpHoraSalidaVehiculo.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.dtpHoraSalidaVehiculo.Format = System.Windows.Forms.DateTimePickerFormat.Time
+            Me.dtpHoraSalidaVehiculo.Location = New System.Drawing.Point(46, 42)
+            Me.dtpHoraSalidaVehiculo.Name = "dtpHoraSalidaVehiculo"
+            Me.dtpHoraSalidaVehiculo.ShowUpDown = True
+            Me.dtpHoraSalidaVehiculo.Size = New System.Drawing.Size(110, 21)
+            Me.dtpHoraSalidaVehiculo.TabIndex = 39
+            '
+            'dtpFechaSalidaVehiculo
+            '
+            Me.dtpFechaSalidaVehiculo.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.dtpFechaSalidaVehiculo.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+            Me.dtpFechaSalidaVehiculo.Location = New System.Drawing.Point(46, 19)
+            Me.dtpFechaSalidaVehiculo.Name = "dtpFechaSalidaVehiculo"
+            Me.dtpFechaSalidaVehiculo.Size = New System.Drawing.Size(110, 21)
+            Me.dtpFechaSalidaVehiculo.TabIndex = 38
+            '
+            'txtKmSalidaVehiculo
+            '
+            Me.txtKmSalidaVehiculo.BackColor = System.Drawing.Color.White
+            Me.txtKmSalidaVehiculo.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtKmSalidaVehiculo.Location = New System.Drawing.Point(46, 65)
+            Me.txtKmSalidaVehiculo.Name = "txtKmSalidaVehiculo"
+            Me.txtKmSalidaVehiculo.Size = New System.Drawing.Size(110, 21)
+            Me.txtKmSalidaVehiculo.TabIndex = 40
+            Me.txtKmSalidaVehiculo.Text = "0"
+            '
+            'lblKilometrajeSalidaVehiculo
+            '
+            Me.lblKilometrajeSalidaVehiculo.AutoSize = True
+            Me.lblKilometrajeSalidaVehiculo.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.lblKilometrajeSalidaVehiculo.Location = New System.Drawing.Point(6, 68)
+            Me.lblKilometrajeSalidaVehiculo.Name = "lblKilometrajeSalidaVehiculo"
+            Me.lblKilometrajeSalidaVehiculo.Size = New System.Drawing.Size(32, 13)
+            Me.lblKilometrajeSalidaVehiculo.TabIndex = 2
+            Me.lblKilometrajeSalidaVehiculo.Text = "KM'S:"
+            '
+            'lblHoraSalidaVehiculo
+            '
+            Me.lblHoraSalidaVehiculo.AutoSize = True
+            Me.lblHoraSalidaVehiculo.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.lblHoraSalidaVehiculo.Location = New System.Drawing.Point(6, 45)
+            Me.lblHoraSalidaVehiculo.Name = "lblHoraSalidaVehiculo"
+            Me.lblHoraSalidaVehiculo.Size = New System.Drawing.Size(36, 13)
+            Me.lblHoraSalidaVehiculo.TabIndex = 1
+            Me.lblHoraSalidaVehiculo.Text = "HORA:"
+            '
+            'lblFechaSalidaVehiculo
+            '
+            Me.lblFechaSalidaVehiculo.AutoSize = True
+            Me.lblFechaSalidaVehiculo.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.lblFechaSalidaVehiculo.Location = New System.Drawing.Point(6, 22)
+            Me.lblFechaSalidaVehiculo.Name = "lblFechaSalidaVehiculo"
+            Me.lblFechaSalidaVehiculo.Size = New System.Drawing.Size(39, 13)
+            Me.lblFechaSalidaVehiculo.TabIndex = 0
+            Me.lblFechaSalidaVehiculo.Text = "FECHA:"
+            '
+            'cbmCombustible
+            '
+            Me.cbmCombustible.BackColor = System.Drawing.Color.White
+            Me.cbmCombustible.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+            Me.cbmCombustible.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+            Me.cbmCombustible.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.cbmCombustible.FormattingEnabled = True
+            Me.cbmCombustible.Location = New System.Drawing.Point(342, 24)
+            Me.cbmCombustible.Name = "cbmCombustible"
+            Me.cbmCombustible.Size = New System.Drawing.Size(175, 21)
+            Me.cbmCombustible.TabIndex = 25
+            '
+            'lblFechaControlC
+            '
+            Me.lblFechaControlC.AutoSize = True
+            Me.lblFechaControlC.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.lblFechaControlC.Location = New System.Drawing.Point(15, 27)
+            Me.lblFechaControlC.Name = "lblFechaControlC"
+            Me.lblFechaControlC.Size = New System.Drawing.Size(39, 13)
+            Me.lblFechaControlC.TabIndex = 4
+            Me.lblFechaControlC.Text = "FECHA:"
+            '
+            'txtMotivoControlC
+            '
+            Me.txtMotivoControlC.BackColor = System.Drawing.Color.White
+            Me.txtMotivoControlC.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+            Me.txtMotivoControlC.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtMotivoControlC.Location = New System.Drawing.Point(414, 51)
+            Me.txtMotivoControlC.Name = "txtMotivoControlC"
+            Me.txtMotivoControlC.Size = New System.Drawing.Size(283, 21)
+            Me.txtMotivoControlC.TabIndex = 28
+            '
+            'lblClaseGasolinaControlC
+            '
+            Me.lblClaseGasolinaControlC.AutoSize = True
+            Me.lblClaseGasolinaControlC.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.lblClaseGasolinaControlC.Location = New System.Drawing.Point(262, 28)
+            Me.lblClaseGasolinaControlC.Name = "lblClaseGasolinaControlC"
+            Me.lblClaseGasolinaControlC.Size = New System.Drawing.Size(74, 13)
+            Me.lblClaseGasolinaControlC.TabIndex = 14
+            Me.lblClaseGasolinaControlC.Text = "COMBUSTIBLE:"
+            '
+            'txtDestinoControlC
+            '
+            Me.txtDestinoControlC.BackColor = System.Drawing.Color.White
+            Me.txtDestinoControlC.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+            Me.txtDestinoControlC.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtDestinoControlC.Location = New System.Drawing.Point(63, 51)
+            Me.txtDestinoControlC.Name = "txtDestinoControlC"
+            Me.txtDestinoControlC.Size = New System.Drawing.Size(289, 21)
+            Me.txtDestinoControlC.TabIndex = 27
+            '
+            'lblMotivoControlC
+            '
+            Me.lblMotivoControlC.AutoSize = True
+            Me.lblMotivoControlC.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.lblMotivoControlC.Location = New System.Drawing.Point(370, 55)
+            Me.lblMotivoControlC.Name = "lblMotivoControlC"
+            Me.lblMotivoControlC.Size = New System.Drawing.Size(47, 13)
+            Me.lblMotivoControlC.TabIndex = 17
+            Me.lblMotivoControlC.Text = "MOTIVO:"
+            '
+            'txtValorControl
+            '
+            Me.txtValorControl.BackColor = System.Drawing.Color.White
+            Me.txtValorControl.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtValorControl.ForeColor = System.Drawing.Color.Black
+            Me.txtValorControl.Location = New System.Drawing.Point(614, 25)
+            Me.txtValorControl.Name = "txtValorControl"
+            Me.txtValorControl.Size = New System.Drawing.Size(83, 21)
+            Me.txtValorControl.TabIndex = 26
+            Me.txtValorControl.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+            '
+            'lblDestinoControlC
+            '
+            Me.lblDestinoControlC.AutoSize = True
+            Me.lblDestinoControlC.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.lblDestinoControlC.Location = New System.Drawing.Point(14, 55)
+            Me.lblDestinoControlC.Name = "lblDestinoControlC"
+            Me.lblDestinoControlC.Size = New System.Drawing.Size(49, 13)
+            Me.lblDestinoControlC.TabIndex = 16
+            Me.lblDestinoControlC.Text = "DESTINO:"
+            '
+            'lblValorControlC
+            '
+            Me.lblValorControlC.AutoSize = True
+            Me.lblValorControlC.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.lblValorControlC.Location = New System.Drawing.Point(569, 28)
+            Me.lblValorControlC.Name = "lblValorControlC"
+            Me.lblValorControlC.Size = New System.Drawing.Size(39, 13)
+            Me.lblValorControlC.TabIndex = 15
+            Me.lblValorControlC.Text = "VALOR:"
+            '
+            'lblMontoFondoRotativo
+            '
+            Me.lblMontoFondoRotativo.AutoSize = True
+            Me.lblMontoFondoRotativo.BackColor = System.Drawing.Color.FromArgb(CType(CType(189, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(232, Byte), Integer))
+            Me.lblMontoFondoRotativo.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.lblMontoFondoRotativo.Location = New System.Drawing.Point(930, 7)
+            Me.lblMontoFondoRotativo.Name = "lblMontoFondoRotativo"
+            Me.lblMontoFondoRotativo.Size = New System.Drawing.Size(34, 13)
+            Me.lblMontoFondoRotativo.TabIndex = 188
+            Me.lblMontoFondoRotativo.Text = "00.00"
+            '
+            'Label3
+            '
+            Me.Label3.BackColor = System.Drawing.Color.FromArgb(CType(CType(189, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(232, Byte), Integer))
+            Me.Label3.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Label3.Location = New System.Drawing.Point(812, 3)
+            Me.Label3.Name = "Label3"
+            Me.Label3.Size = New System.Drawing.Size(126, 19)
+            Me.Label3.TabIndex = 191
+            Me.Label3.Text = "VALOR DISPONIBLE:"
+            Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+            '
+            'lblMontoAsignado
+            '
+            Me.lblMontoAsignado.AutoSize = True
+            Me.lblMontoAsignado.BackColor = System.Drawing.Color.FromArgb(CType(CType(189, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(232, Byte), Integer))
+            Me.lblMontoAsignado.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.lblMontoAsignado.Location = New System.Drawing.Point(696, 6)
+            Me.lblMontoAsignado.Name = "lblMontoAsignado"
+            Me.lblMontoAsignado.Size = New System.Drawing.Size(34, 13)
+            Me.lblMontoAsignado.TabIndex = 190
+            Me.lblMontoAsignado.Text = "00.00"
+            '
+            'Label30
+            '
+            Me.Label30.BackColor = System.Drawing.Color.FromArgb(CType(CType(189, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(232, Byte), Integer))
+            Me.Label30.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Label30.Location = New System.Drawing.Point(577, 2)
+            Me.Label30.Name = "Label30"
+            Me.Label30.Size = New System.Drawing.Size(126, 19)
+            Me.Label30.TabIndex = 189
+            Me.Label30.Text = "MONTO ASIGNADO:"
+            Me.Label30.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+            '
             'FormSolicitudFondoRotativo
             '
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1451,7 +1473,6 @@
             Me.Controls.Add(Me.Label30)
             Me.Controls.Add(Me.GroupBox2)
             Me.Controls.Add(Me.MenuStrip1)
-            Me.Controls.Add(Me.gbReferencia)
             Me.Controls.Add(Me.GroupBox1)
             Me.Controls.Add(Me.gbReceptorDinero)
             Me.Controls.Add(Me.gbDetalleGasto)
@@ -1459,13 +1480,17 @@
             Me.Controls.Add(Me.gpAutorizacionFondoRotativo)
             Me.Controls.Add(Me.GroupBox3)
             Me.Controls.Add(Me.gbDocumento)
+            Me.Controls.Add(Me.gbReferencia)
             Me.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
             Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
             Me.MaximizeBox = False
             Me.MinimizeBox = False
             Me.Name = "FormSolicitudFondoRotativo"
             Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+            Me.StateActive.Border.DrawBorders = CType((((Krypton.Toolkit.PaletteDrawBorders.Top Or Krypton.Toolkit.PaletteDrawBorders.Bottom) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Left) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Right), Krypton.Toolkit.PaletteDrawBorders)
+            Me.StateActive.Border.Rounding = 5.0!
             Me.Text = "SOLICITUD DE FONDO ROTATIVO"
             Me.gpAutorizacionFondoRotativo.ResumeLayout(False)
             Me.gpAutorizacionFondoRotativo.PerformLayout()

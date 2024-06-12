@@ -1,8 +1,8 @@
 ﻿Namespace FORMULARIOS.FONDOS.FONDO_ROTATIVO
     <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
     Partial Class FormLiquidacionFondoRotativo
-        Inherits System.Windows.Forms.Form
-
+        'Inherits System.Windows.Forms.Form
+        Inherits Krypton.Toolkit.KryptonForm
         'Form reemplaza a Dispose para limpiar la lista de componentes.
         <System.Diagnostics.DebuggerNonUserCode()> _
         Protected Overrides Sub Dispose(ByVal disposing As Boolean)
@@ -125,7 +125,7 @@
             Me.lblParroquia.AutoSize = True
             Me.lblParroquia.Location = New System.Drawing.Point(754, 11)
             Me.lblParroquia.Name = "lblParroquia"
-            Me.lblParroquia.Size = New System.Drawing.Size(71, 13)
+            Me.lblParroquia.Size = New System.Drawing.Size(70, 13)
             Me.lblParroquia.TabIndex = 5
             Me.lblParroquia.Text = "PARROQUIA:"
             '
@@ -143,7 +143,7 @@
             Me.lblCanton.AutoSize = True
             Me.lblCanton.Location = New System.Drawing.Point(439, 11)
             Me.lblCanton.Name = "lblCanton"
-            Me.lblCanton.Size = New System.Drawing.Size(54, 13)
+            Me.lblCanton.Size = New System.Drawing.Size(55, 13)
             Me.lblCanton.TabIndex = 3
             Me.lblCanton.Text = "CANTON:"
             '
@@ -169,7 +169,7 @@
             Me.dgvLiquidacionFondoRotativo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
             DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
             DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
-            DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle2.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
             DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(123, Byte), Integer))
             DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
@@ -374,67 +374,73 @@
             '
             'MenuStrip1
             '
+            Me.MenuStrip1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
             Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnCargar, Me.btnLiquidacionFondoRotativo, Me.btnGuardarSolicitudFR, Me.btnCancelarSolicitudFR, Me.btnAnularSolicitud})
             Me.MenuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow
             Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
             Me.MenuStrip1.Name = "MenuStrip1"
             Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(7, 2, 0, 2)
-            Me.MenuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
-            Me.MenuStrip1.Size = New System.Drawing.Size(1219, 24)
+            Me.MenuStrip1.Size = New System.Drawing.Size(1219, 32)
             Me.MenuStrip1.TabIndex = 188
             Me.MenuStrip1.Text = "msIngresoBodega"
             '
             'btnCargar
             '
-            Me.btnCargar.Image = Global.syscisepro.My.Resources.Resources.BuscarRegistro
+            Me.btnCargar.Image = Global.syscisepro.My.Resources.Resources.search_24dp_FILL0_wght400_GRAD0_opsz24__2_
+            Me.btnCargar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnCargar.Name = "btnCargar"
-            Me.btnCargar.Size = New System.Drawing.Size(153, 20)
-            Me.btnCargar.Text = "CARGAR SOLICITUDES"
+            Me.btnCargar.Size = New System.Drawing.Size(87, 28)
+            Me.btnCargar.Text = "BUSCAR"
             '
             'btnLiquidacionFondoRotativo
             '
             Me.btnLiquidacionFondoRotativo.Enabled = False
             Me.btnLiquidacionFondoRotativo.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnLiquidacionFondoRotativo.Image = Global.syscisepro.My.Resources.Resources.ModificarRegistro
+            Me.btnLiquidacionFondoRotativo.Image = Global.syscisepro.My.Resources.Resources.edit_document_24dp_FILL0_wght400_GRAD0_opsz24__2_
+            Me.btnLiquidacionFondoRotativo.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnLiquidacionFondoRotativo.Name = "btnLiquidacionFondoRotativo"
-            Me.btnLiquidacionFondoRotativo.Size = New System.Drawing.Size(84, 20)
+            Me.btnLiquidacionFondoRotativo.Size = New System.Drawing.Size(92, 28)
             Me.btnLiquidacionFondoRotativo.Text = "LIQUIDAR"
             '
             'btnGuardarSolicitudFR
             '
             Me.btnGuardarSolicitudFR.Enabled = False
             Me.btnGuardarSolicitudFR.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnGuardarSolicitudFR.Image = Global.syscisepro.My.Resources.Resources.GuardarRegistro
+            Me.btnGuardarSolicitudFR.Image = Global.syscisepro.My.Resources.Resources.save_24dp_FILL0_wght400_GRAD0_opsz24__2_
+            Me.btnGuardarSolicitudFR.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnGuardarSolicitudFR.Name = "btnGuardarSolicitudFR"
-            Me.btnGuardarSolicitudFR.Size = New System.Drawing.Size(87, 20)
+            Me.btnGuardarSolicitudFR.Size = New System.Drawing.Size(95, 28)
             Me.btnGuardarSolicitudFR.Text = "GUARDAR"
             '
             'btnCancelarSolicitudFR
             '
             Me.btnCancelarSolicitudFR.Enabled = False
             Me.btnCancelarSolicitudFR.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnCancelarSolicitudFR.Image = Global.syscisepro.My.Resources.Resources.cancel
+            Me.btnCancelarSolicitudFR.Image = Global.syscisepro.My.Resources.Resources.cancel_24dp_FILL0_wght400_GRAD0_opsz24
+            Me.btnCancelarSolicitudFR.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnCancelarSolicitudFR.Name = "btnCancelarSolicitudFR"
-            Me.btnCancelarSolicitudFR.Size = New System.Drawing.Size(89, 20)
+            Me.btnCancelarSolicitudFR.Size = New System.Drawing.Size(97, 28)
             Me.btnCancelarSolicitudFR.Text = "CANCELAR"
             '
             'btnAnularSolicitud
             '
             Me.btnAnularSolicitud.Enabled = False
             Me.btnAnularSolicitud.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnAnularSolicitud.Image = Global.syscisepro.My.Resources.Resources.EliminarRegistro
+            Me.btnAnularSolicitud.Image = Global.syscisepro.My.Resources.Resources.do_not_disturb_on_24dp_FILL0_wght400_GRAD0_opsz24
+            Me.btnAnularSolicitud.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnAnularSolicitud.Name = "btnAnularSolicitud"
-            Me.btnAnularSolicitud.Size = New System.Drawing.Size(215, 20)
-            Me.btnAnularSolicitud.Text = "ANULAR DOCUMENTO / SOLICITUD"
+            Me.btnAnularSolicitud.Size = New System.Drawing.Size(88, 28)
+            Me.btnAnularSolicitud.Text = "ANULAR "
             '
             'TabControl1
             '
             Me.TabControl1.Controls.Add(Me.TabPage1)
             Me.TabControl1.Controls.Add(Me.TabPage2)
-            Me.TabControl1.Location = New System.Drawing.Point(1, 27)
+            Me.TabControl1.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.TabControl1.Location = New System.Drawing.Point(1, 34)
             Me.TabControl1.Name = "TabControl1"
             Me.TabControl1.SelectedIndex = 0
-            Me.TabControl1.Size = New System.Drawing.Size(1218, 623)
+            Me.TabControl1.Size = New System.Drawing.Size(1218, 614)
             Me.TabControl1.TabIndex = 189
             '
             'TabPage1
@@ -451,7 +457,7 @@
             Me.TabPage1.Location = New System.Drawing.Point(4, 22)
             Me.TabPage1.Name = "TabPage1"
             Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-            Me.TabPage1.Size = New System.Drawing.Size(1210, 597)
+            Me.TabPage1.Size = New System.Drawing.Size(1210, 588)
             Me.TabPage1.TabIndex = 0
             Me.TabPage1.Text = "LIQUIDACIÓN"
             Me.TabPage1.UseVisualStyleBackColor = True
@@ -465,7 +471,7 @@
             Me.TabPage2.Location = New System.Drawing.Point(4, 22)
             Me.TabPage2.Name = "TabPage2"
             Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-            Me.TabPage2.Size = New System.Drawing.Size(1210, 597)
+            Me.TabPage2.Size = New System.Drawing.Size(1210, 588)
             Me.TabPage2.TabIndex = 1
             Me.TabPage2.Text = "REPORTE"
             Me.TabPage2.UseVisualStyleBackColor = True
@@ -484,7 +490,7 @@
             '
             Me.txtIdLiquidacionBusqueda.Location = New System.Drawing.Point(1031, 6)
             Me.txtIdLiquidacionBusqueda.Name = "txtIdLiquidacionBusqueda"
-            Me.txtIdLiquidacionBusqueda.Size = New System.Drawing.Size(95, 22)
+            Me.txtIdLiquidacionBusqueda.Size = New System.Drawing.Size(95, 21)
             Me.txtIdLiquidacionBusqueda.TabIndex = 6
             '
             'Label6
@@ -492,7 +498,7 @@
             Me.Label6.AutoSize = True
             Me.Label6.Location = New System.Drawing.Point(938, 11)
             Me.Label6.Name = "Label6"
-            Me.Label6.Size = New System.Drawing.Size(93, 13)
+            Me.Label6.Size = New System.Drawing.Size(90, 13)
             Me.Label6.TabIndex = 5
             Me.Label6.Text = "ID LIQUIDACIÓN:"
             '
@@ -504,7 +510,7 @@
             Me.crvLiquidacion.Dock = System.Windows.Forms.DockStyle.Fill
             Me.crvLiquidacion.Location = New System.Drawing.Point(3, 3)
             Me.crvLiquidacion.Name = "crvLiquidacion"
-            Me.crvLiquidacion.Size = New System.Drawing.Size(1204, 591)
+            Me.crvLiquidacion.Size = New System.Drawing.Size(1204, 582)
             Me.crvLiquidacion.TabIndex = 1
             Me.crvLiquidacion.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None
             '
@@ -517,10 +523,13 @@
             Me.Controls.Add(Me.TabControl1)
             Me.Controls.Add(Me.MenuStrip1)
             Me.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
             Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
             Me.Name = "FormLiquidacionFondoRotativo"
             Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+            Me.StateActive.Border.DrawBorders = CType((((Krypton.Toolkit.PaletteDrawBorders.Top Or Krypton.Toolkit.PaletteDrawBorders.Bottom) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Left) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Right), Krypton.Toolkit.PaletteDrawBorders)
+            Me.StateActive.Border.Rounding = 5.0!
             Me.Text = "LIQUIDACION DE FONDO ROTATIVO"
             Me.pCentroCostoControlCFR.ResumeLayout(False)
             Me.pCentroCostoControlCFR.PerformLayout()

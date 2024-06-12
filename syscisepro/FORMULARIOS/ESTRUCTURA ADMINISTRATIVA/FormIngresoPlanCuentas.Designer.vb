@@ -1,8 +1,8 @@
 ﻿Namespace FORMULARIOS.ESTRUCTURA_ADMINISTRATIVA
     <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
     Partial Class FormIngresoPlanCuentas
-        Inherits System.Windows.Forms.Form
-
+        'Inherits System.Windows.Forms.Form
+        Inherits Krypton.Toolkit.KryptonForm
         'Form reemplaza a Dispose para limpiar la lista de componentes.
         <System.Diagnostics.DebuggerNonUserCode()> _
         Protected Overrides Sub Dispose(ByVal disposing As Boolean)
@@ -356,9 +356,10 @@
             '
             'ListBox1
             '
+            Me.ListBox1.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.ListBox1.FormattingEnabled = True
             Me.ListBox1.Items.AddRange(New Object() {"1. ESTADO DE SITUCION FINANCIERA", "", "2. ESTADO DE RESULTADO INTEGRAL", "", "3. ESTADO DE FLUJOS DE EFECTIVOS", "", "4. ESTADO DE CAMBIOS EN EL PATRIMONIO"})
-            Me.ListBox1.Location = New System.Drawing.Point(725, 25)
+            Me.ListBox1.Location = New System.Drawing.Point(725, 32)
             Me.ListBox1.Name = "ListBox1"
             Me.ListBox1.Size = New System.Drawing.Size(286, 95)
             Me.ListBox1.TabIndex = 201
@@ -380,7 +381,8 @@
             Me.GroupBox3.Controls.Add(Me.rbCuenta)
             Me.GroupBox3.Controls.Add(Me.rbTodas)
             Me.GroupBox3.Controls.Add(Me.txtBuscar)
-            Me.GroupBox3.Location = New System.Drawing.Point(1, 119)
+            Me.GroupBox3.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.GroupBox3.Location = New System.Drawing.Point(1, 129)
             Me.GroupBox3.Name = "GroupBox3"
             Me.GroupBox3.Size = New System.Drawing.Size(1011, 45)
             Me.GroupBox3.TabIndex = 206
@@ -392,7 +394,7 @@
             Me.rbCodigo.AutoSize = True
             Me.rbCodigo.Location = New System.Drawing.Point(132, 17)
             Me.rbCodigo.Name = "rbCodigo"
-            Me.rbCodigo.Size = New System.Drawing.Size(83, 17)
+            Me.rbCodigo.Size = New System.Drawing.Size(79, 17)
             Me.rbCodigo.TabIndex = 207
             Me.rbCodigo.TabStop = True
             Me.rbCodigo.Text = "Por Código"
@@ -403,7 +405,7 @@
             Me.rbCuenta.AutoSize = True
             Me.rbCuenta.Location = New System.Drawing.Point(281, 17)
             Me.rbCuenta.Name = "rbCuenta"
-            Me.rbCuenta.Size = New System.Drawing.Size(82, 17)
+            Me.rbCuenta.Size = New System.Drawing.Size(80, 17)
             Me.rbCuenta.TabIndex = 206
             Me.rbCuenta.TabStop = True
             Me.rbCuenta.Text = "Por Cuenta"
@@ -444,7 +446,8 @@
             Me.GroupBox4.Controls.Add(Me.cbmNivel)
             Me.GroupBox4.Controls.Add(Me.Label7)
             Me.GroupBox4.Controls.Add(Me.Label8)
-            Me.GroupBox4.Location = New System.Drawing.Point(2, 24)
+            Me.GroupBox4.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.GroupBox4.Location = New System.Drawing.Point(2, 33)
             Me.GroupBox4.Name = "GroupBox4"
             Me.GroupBox4.Size = New System.Drawing.Size(718, 96)
             Me.GroupBox4.TabIndex = 207
@@ -461,70 +464,71 @@
             '
             'MenuStrip1
             '
-            Me.MenuStrip1.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.MenuStrip1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
             Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnBuscarAsiento, Me.btnNuevo, Me.btnGuardar, Me.btnModificar, Me.btnCancelar, Me.btnExportar})
             Me.MenuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow
             Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
             Me.MenuStrip1.Name = "MenuStrip1"
             Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(7, 2, 0, 2)
-            Me.MenuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
-            Me.MenuStrip1.Size = New System.Drawing.Size(1012, 24)
+            Me.MenuStrip1.Size = New System.Drawing.Size(1012, 32)
             Me.MenuStrip1.TabIndex = 209
             Me.MenuStrip1.Text = "msIngresoBodega"
             '
             'btnBuscarAsiento
             '
             Me.btnBuscarAsiento.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnBuscarAsiento.Image = Global.syscisepro.My.Resources.Resources.BuscarRegistro
+            Me.btnBuscarAsiento.Image = Global.syscisepro.My.Resources.Resources.search_24dp_FILL0_wght400_GRAD0_opsz24__2_
             Me.btnBuscarAsiento.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnBuscarAsiento.Name = "btnBuscarAsiento"
-            Me.btnBuscarAsiento.Size = New System.Drawing.Size(119, 20)
-            Me.btnBuscarAsiento.Text = "LISTAR TODOS"
+            Me.btnBuscarAsiento.Size = New System.Drawing.Size(85, 28)
+            Me.btnBuscarAsiento.Text = "BUSCAR"
             '
             'btnNuevo
             '
             Me.btnNuevo.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnNuevo.Image = CType(resources.GetObject("btnNuevo.Image"), System.Drawing.Image)
+            Me.btnNuevo.Image = Global.syscisepro.My.Resources.Resources.add_circle_24dp_FILL0_wght400_GRAD0_opsz24__3_
             Me.btnNuevo.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnNuevo.Name = "btnNuevo"
-            Me.btnNuevo.Size = New System.Drawing.Size(70, 20)
+            Me.btnNuevo.Size = New System.Drawing.Size(78, 28)
             Me.btnNuevo.Text = "NUEVO"
             '
             'btnGuardar
             '
             Me.btnGuardar.Enabled = False
             Me.btnGuardar.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnGuardar.Image = CType(resources.GetObject("btnGuardar.Image"), System.Drawing.Image)
+            Me.btnGuardar.Image = Global.syscisepro.My.Resources.Resources.save_24dp_FILL0_wght400_GRAD0_opsz24__2_
             Me.btnGuardar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnGuardar.Name = "btnGuardar"
-            Me.btnGuardar.Size = New System.Drawing.Size(84, 20)
+            Me.btnGuardar.Size = New System.Drawing.Size(92, 28)
             Me.btnGuardar.Text = "GUARDAR"
             '
             'btnModificar
             '
             Me.btnModificar.Enabled = False
             Me.btnModificar.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnModificar.Image = Global.syscisepro.My.Resources.Resources.ModificarRegistro
+            Me.btnModificar.Image = Global.syscisepro.My.Resources.Resources.edit_document_24dp_FILL0_wght400_GRAD0_opsz24__2_
+            Me.btnModificar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnModificar.Name = "btnModificar"
-            Me.btnModificar.Size = New System.Drawing.Size(105, 20)
+            Me.btnModificar.Size = New System.Drawing.Size(113, 28)
             Me.btnModificar.Text = "ACTUALIZAR"
             '
             'btnCancelar
             '
             Me.btnCancelar.Enabled = False
             Me.btnCancelar.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnCancelar.Image = Global.syscisepro.My.Resources.Resources.cancel
+            Me.btnCancelar.Image = Global.syscisepro.My.Resources.Resources.cancel_24dp_FILL0_wght400_GRAD0_opsz24
+            Me.btnCancelar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnCancelar.Name = "btnCancelar"
-            Me.btnCancelar.Size = New System.Drawing.Size(91, 20)
+            Me.btnCancelar.Size = New System.Drawing.Size(99, 28)
             Me.btnCancelar.Text = "CANCELAR"
             '
             'btnExportar
             '
             Me.btnExportar.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnExportar.Image = Global.syscisepro.My.Resources.Resources.excel_icon
+            Me.btnExportar.Image = Global.syscisepro.My.Resources.Resources.icons8_excel_48
             Me.btnExportar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnExportar.Name = "btnExportar"
-            Me.btnExportar.Size = New System.Drawing.Size(91, 20)
+            Me.btnExportar.Size = New System.Drawing.Size(99, 28)
             Me.btnExportar.Text = "EXPORTAR"
             '
             'FormIngresoPlanCuentas
@@ -539,10 +543,13 @@
             Me.Controls.Add(Me.ListBox1)
             Me.Controls.Add(Me.GroupBox5)
             Me.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
             Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
             Me.Name = "FormIngresoPlanCuentas"
             Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+            Me.StateActive.Border.DrawBorders = CType((((Krypton.Toolkit.PaletteDrawBorders.Top Or Krypton.Toolkit.PaletteDrawBorders.Bottom) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Left) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Right), Krypton.Toolkit.PaletteDrawBorders)
+            Me.StateActive.Border.Rounding = 5.0!
             Me.Text = "MANTENIMIENTO DE PLAN DE CUENTAS"
             CType(Me.dgvPlanDeCuentas, System.ComponentModel.ISupportInitialize).EndInit()
             Me.GroupBox3.ResumeLayout(False)

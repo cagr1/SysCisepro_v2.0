@@ -160,6 +160,7 @@
             Me.GroupBox1.Controls.Add(Me.lblHasta)
             Me.GroupBox1.Controls.Add(Me.lblDesde)
             Me.GroupBox1.Controls.Add(Me.Label1)
+            Me.GroupBox1.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.GroupBox1.Location = New System.Drawing.Point(3, 33)
             Me.GroupBox1.Name = "GroupBox1"
             Me.GroupBox1.Size = New System.Drawing.Size(1003, 37)
@@ -180,19 +181,19 @@
             'dtpFinal
             '
             Me.dtpFinal.Enabled = False
-            Me.dtpFinal.Font = New System.Drawing.Font("Consolas", 8.25!)
+            Me.dtpFinal.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.dtpFinal.Location = New System.Drawing.Point(611, 11)
             Me.dtpFinal.Name = "dtpFinal"
-            Me.dtpFinal.Size = New System.Drawing.Size(254, 20)
+            Me.dtpFinal.Size = New System.Drawing.Size(254, 21)
             Me.dtpFinal.TabIndex = 253
             '
             'dtpInicio
             '
             Me.dtpInicio.Enabled = False
-            Me.dtpInicio.Font = New System.Drawing.Font("Consolas", 8.25!)
+            Me.dtpInicio.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.dtpInicio.Location = New System.Drawing.Point(288, 11)
             Me.dtpInicio.Name = "dtpInicio"
-            Me.dtpInicio.Size = New System.Drawing.Size(254, 20)
+            Me.dtpInicio.Size = New System.Drawing.Size(254, 21)
             Me.dtpInicio.TabIndex = 252
             '
             'lblHasta

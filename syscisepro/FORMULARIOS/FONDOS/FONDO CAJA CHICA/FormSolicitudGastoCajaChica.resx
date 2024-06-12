@@ -117,48 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="EjercicioFiscal.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="CodigoRetencion.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="BaseImponible.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Impuesto.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="PorcentajeRetencion.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="ValorRetenido.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Column1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Column2.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="btnDocumento.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAApZJREFUOE+l
-        kMtPE1EUh29MRJKamJjO0rhxZ0xc+g+4RmPYsEAW4kJj1BCiYoJKJFGidMZWy6MFfEGgoFBQHg1QBKEv
-        bAHbMqW8WmqhQ6Gl0OLMvXOcEUqaoLjwJl/OzMm53/nlovZ+J9XUNUp9Mjsos9Wt7DBPUrVGF/Wmx0WN
-        jHsos13CJlc3Neb0Ki2uaalOK51TrLK83nQcWbwRxHIJ5AtvIBvLoTHvCpqY5dDEPIdcc6vI7pfwyZVD
-        88txFOK2UCCSQGvxJKrqZhG6qXPA//BboG2Z2v46Edpe20jxA+4Yf71hiS/vCPMYYziIPUH+/V78VG/D
-        XDQhsOGkUKgPCvdawoIoEuEnjwVCiCQTBKbDC2mETIHJuohNlgBeWI4TKQX5NrdBxiX+tDWTPYH8wxh3
-        zHTGlvT3QmSTxDYTYrovs09wECMWm0i/0oNKRcMTVRUYOvtEub8/wW6KNJ5gTHzb2AwFpUZRmT8JN+oC
-        +Nhlt3ihyCDqX7//d4LOvkG4+rgNUI5HPFPsEUE6p4u9BF3ykYIHbVBS1Z2RIGNzmpfaGjhxbZycuuMn
-        OZV+/Kg5QHKez5KzD2fJydseqFDXHpyApmk4V/p9O1cTIHRnCMsJytt/kCt1IXz+WYBXMcyOIJ7CsJYU
-        JDCsS1hnVmHQEwVttQ5u1big5ON6snFkhZcF7faIUNGznix5x4JKo90R/I2W7lHQ1LdCtSkMw+64fB8s
-        3hi0WqNQ22gEumkAkHwKy3oVBWU9itwig+JiUZdidSWmiE4Gj0rzR14wTFe1rsHxxc5uBZc48C1wKcMH
-        o0OtVn8es1oPIWnosDy4S5Zch/zxrBmpr2vty3Ya7iLpLfJUqkpWfhOGpuWal1rsRwNDw9m/ACbTDXGZ
-        9EhuAAAAAElFTkSuQmCC
-</value>
-  </data>
   <data name="PictureBox1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         /9j/4AAQSkZJRgABAQEAAAAAAAD/2wBDAAkGBxISEhUSEhMVFhUVFRgWFRYXFRcXFRUWFxUXFxUVFRUY
@@ -327,6 +286,30 @@
     <value>True</value>
   </metadata>
   <metadata name="IVA.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="EjercicioFiscal.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="CodigoRetencion.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="BaseImponible.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Impuesto.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="PorcentajeRetencion.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="ValorRetenido.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Column1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Column2.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <metadata name="MenuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">

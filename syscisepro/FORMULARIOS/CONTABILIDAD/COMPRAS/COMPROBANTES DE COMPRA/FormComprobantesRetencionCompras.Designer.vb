@@ -33,10 +33,10 @@
             Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormComprobantesRetencionCompras))
             Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim DataGridViewCellStyle13 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormComprobantesRetencionCompras))
             Me.gbRetencion = New System.Windows.Forms.GroupBox()
             Me.dgvDetalleComprobanteRetencion = New System.Windows.Forms.DataGridView()
             Me.EjercicioFiscal = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -439,7 +439,7 @@
             'btnEliminarImpuesto
             '
             Me.btnEliminarImpuesto.BackColor = System.Drawing.Color.White
-            Me.btnEliminarImpuesto.Image = CType(resources.GetObject("btnEliminarImpuesto.Image"), System.Drawing.Image)
+            Me.btnEliminarImpuesto.Image = Global.syscisepro.My.Resources.Resources.do_not_disturb_on_24dp_FILL0_wght400_GRAD0_opsz24
             Me.btnEliminarImpuesto.Location = New System.Drawing.Point(672, 9)
             Me.btnEliminarImpuesto.Name = "btnEliminarImpuesto"
             Me.btnEliminarImpuesto.Size = New System.Drawing.Size(32, 28)
@@ -449,7 +449,7 @@
             'btnAgregarImpuesto
             '
             Me.btnAgregarImpuesto.BackColor = System.Drawing.Color.White
-            Me.btnAgregarImpuesto.Image = CType(resources.GetObject("btnAgregarImpuesto.Image"), System.Drawing.Image)
+            Me.btnAgregarImpuesto.Image = Global.syscisepro.My.Resources.Resources.add_circle_24dp_FILL0_wght400_GRAD0_opsz24__3_
             Me.btnAgregarImpuesto.Location = New System.Drawing.Point(641, 9)
             Me.btnAgregarImpuesto.Name = "btnAgregarImpuesto"
             Me.btnAgregarImpuesto.Size = New System.Drawing.Size(32, 28)

@@ -55,7 +55,7 @@
             Me.gbRegistro.Controls.Add(Me.txtCodCuentaAsiento)
             Me.gbRegistro.Controls.Add(Me.txtNombreCuentaAsiento)
             Me.gbRegistro.Controls.Add(Me.txtDetalleAsiento)
-            Me.gbRegistro.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.gbRegistro.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.gbRegistro.Location = New System.Drawing.Point(-1, 0)
             Me.gbRegistro.Name = "gbRegistro"
             Me.gbRegistro.Size = New System.Drawing.Size(647, 141)
@@ -67,11 +67,11 @@
             '
             Me.txtConcepto.BackColor = System.Drawing.Color.White
             Me.txtConcepto.Enabled = False
-            Me.txtConcepto.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtConcepto.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtConcepto.ForeColor = System.Drawing.Color.Black
-            Me.txtConcepto.Location = New System.Drawing.Point(68, 81)
+            Me.txtConcepto.Location = New System.Drawing.Point(80, 81)
             Me.txtConcepto.Name = "txtConcepto"
-            Me.txtConcepto.Size = New System.Drawing.Size(570, 22)
+            Me.txtConcepto.Size = New System.Drawing.Size(558, 22)
             Me.txtConcepto.TabIndex = 36
             Me.txtConcepto.Text = "OTROS GASTOS NO DEDUCIBLES"
             '
@@ -79,7 +79,7 @@
             '
             Me.txtCajaChica.BackColor = System.Drawing.Color.White
             Me.txtCajaChica.Enabled = False
-            Me.txtCajaChica.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtCajaChica.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtCajaChica.ForeColor = System.Drawing.Color.Black
             Me.txtCajaChica.Location = New System.Drawing.Point(348, 23)
             Me.txtCajaChica.Name = "txtCajaChica"
@@ -105,12 +105,12 @@
             'cbmCentroCosto
             '
             Me.cbmCentroCosto.BackColor = System.Drawing.Color.White
-            Me.cbmCentroCosto.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.cbmCentroCosto.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cbmCentroCosto.ForeColor = System.Drawing.Color.Black
             Me.cbmCentroCosto.FormattingEnabled = True
-            Me.cbmCentroCosto.Location = New System.Drawing.Point(68, 23)
+            Me.cbmCentroCosto.Location = New System.Drawing.Point(80, 23)
             Me.cbmCentroCosto.Name = "cbmCentroCosto"
-            Me.cbmCentroCosto.Size = New System.Drawing.Size(274, 22)
+            Me.cbmCentroCosto.Size = New System.Drawing.Size(262, 22)
             Me.cbmCentroCosto.TabIndex = 31
             '
             'lblCentroCosto
@@ -167,11 +167,11 @@
             '
             Me.txtCodCuentaAsiento.BackColor = System.Drawing.Color.White
             Me.txtCodCuentaAsiento.Enabled = False
-            Me.txtCodCuentaAsiento.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtCodCuentaAsiento.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtCodCuentaAsiento.ForeColor = System.Drawing.Color.Black
-            Me.txtCodCuentaAsiento.Location = New System.Drawing.Point(68, 52)
+            Me.txtCodCuentaAsiento.Location = New System.Drawing.Point(80, 52)
             Me.txtCodCuentaAsiento.Name = "txtCodCuentaAsiento"
-            Me.txtCodCuentaAsiento.Size = New System.Drawing.Size(103, 22)
+            Me.txtCodCuentaAsiento.Size = New System.Drawing.Size(91, 22)
             Me.txtCodCuentaAsiento.TabIndex = 4
             Me.txtCodCuentaAsiento.Text = "520228"
             '
@@ -179,7 +179,7 @@
             '
             Me.txtNombreCuentaAsiento.BackColor = System.Drawing.Color.White
             Me.txtNombreCuentaAsiento.Enabled = False
-            Me.txtNombreCuentaAsiento.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtNombreCuentaAsiento.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtNombreCuentaAsiento.ForeColor = System.Drawing.Color.Black
             Me.txtNombreCuentaAsiento.Location = New System.Drawing.Point(230, 52)
             Me.txtNombreCuentaAsiento.Name = "txtNombreCuentaAsiento"
@@ -190,11 +190,11 @@
             'txtDetalleAsiento
             '
             Me.txtDetalleAsiento.BackColor = System.Drawing.Color.White
-            Me.txtDetalleAsiento.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtDetalleAsiento.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtDetalleAsiento.ForeColor = System.Drawing.Color.Black
-            Me.txtDetalleAsiento.Location = New System.Drawing.Point(68, 110)
+            Me.txtDetalleAsiento.Location = New System.Drawing.Point(80, 110)
             Me.txtDetalleAsiento.Name = "txtDetalleAsiento"
-            Me.txtDetalleAsiento.Size = New System.Drawing.Size(572, 22)
+            Me.txtDetalleAsiento.Size = New System.Drawing.Size(560, 22)
             Me.txtDetalleAsiento.TabIndex = 7
             Me.txtDetalleAsiento.Text = "DETALLE UNIFICADO"
             '

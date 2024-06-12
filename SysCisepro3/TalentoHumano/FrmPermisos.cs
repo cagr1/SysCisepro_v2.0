@@ -69,7 +69,7 @@ namespace SysCisepro3.TalentoHumano
         private void FrmPermisos_Load(object sender, EventArgs e)
         {
             // CARGAR ICONO Y DESIEÑO SEGUN SISTEMA 
-            toolStrip1.BackColor = ValidationForms.GetColorSistema(TipoCon);
+            //toolStrip1.BackColor = ValidationForms.GetColorSistema(TipoCon);
             toolStrip1.ForeColor = Color.White;
             Label1.BackColor = ValidationForms.GetColorSistema(TipoCon);
             Label24.BackColor = ValidationForms.GetColorSistema(TipoCon);
@@ -87,6 +87,7 @@ namespace SysCisepro3.TalentoHumano
                     Icon = Resources.logo_c; 
                     break;
             }
+
 
             dtpFecha.Value = Usuario.Now(TipoCon);
             dtpFechaDesde.Value = new DateTime(dtpFecha.Value.Year, dtpFecha.Value.Month, 1);

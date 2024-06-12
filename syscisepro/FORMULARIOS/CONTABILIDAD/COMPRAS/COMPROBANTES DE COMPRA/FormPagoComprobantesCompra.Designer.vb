@@ -844,7 +844,6 @@
             Me.Controls.Add(Me.gbNuevoPagoComprobanteCompra)
             Me.Controls.Add(Me.dgvDetalleComprobanteRetencion)
             Me.Controls.Add(Me.dgvComprobanteRetencion)
-            Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
             Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
             Me.Name = "FormPagoComprobantesCompra"
             Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen

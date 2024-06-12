@@ -176,7 +176,7 @@ Namespace FORMULARIOS.CONTABILIDAD.PERDIDAS_Y_GANANCIAS
                 Case TipoConexion.Asenava
                     Icon = My.Resources.logo_a
                     MenuStrip1.ForeColor = Color.White
-                    MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorAsenava
+                    'MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorAsenava
                     Label2.ForeColor = Color.White
                     Label2.BackColor = My.MySettingsProperty.Settings.ColorAsenava
                     Label3.ForeColor = Color.White
@@ -185,7 +185,7 @@ Namespace FORMULARIOS.CONTABILIDAD.PERDIDAS_Y_GANANCIAS
                     dgvIngresos.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorAsenava
                 Case TipoConexion.Seportpac
                     Icon = My.Resources.logo_s
-                    MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
+                    'MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
                     MenuStrip1.ForeColor = Color.White
                     Label2.ForeColor = Color.White
                     Label2.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
@@ -195,7 +195,7 @@ Namespace FORMULARIOS.CONTABILIDAD.PERDIDAS_Y_GANANCIAS
                     dgvIngresos.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorSeportpac
                 Case Else
                     Icon = My.Resources.logo_c
-                    MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorCisepro
+                    'MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorCisepro
                     MenuStrip1.ForeColor = Color.White
                     Label2.ForeColor = Color.White
                     Label2.BackColor = My.MySettingsProperty.Settings.ColorCisepro
@@ -204,6 +204,8 @@ Namespace FORMULARIOS.CONTABILIDAD.PERDIDAS_Y_GANANCIAS
                     dgvEgresos.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
                     dgvIngresos.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
             End Select
+            dgvEgresos.Font = New Font("Roboto", 8, FontStyle.Regular)
+            dgvIngresos.Font = New Font("Roboto", 8, FontStyle.Regular)
             dtpFechaHasta.Value = Convert.ToDateTime(dtpFechaHasta.Value.Year & "/" & dtpFechaHasta.Value.Month & "/1")
         End Sub
 

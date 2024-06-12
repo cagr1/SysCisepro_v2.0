@@ -66,7 +66,7 @@ namespace SysCisepro3.TalentoHumano
         private void FrmVacaciones_Load(object sender, EventArgs e)
         {
             // CARGAR ICONO Y DESIEÑO SEGUN SISTEMA 
-            toolStrip1.BackColor = ValidationForms.GetColorSistema(TipoCon);
+            //toolStrip1.BackColor = ValidationForms.GetColorSistema(TipoCon);
             toolStrip1.ForeColor = Color.White;
             dataGridView1.DefaultCellStyle.SelectionBackColor = ValidationForms.GetColorSistema(TipoCon);
             dataGridView2.DefaultCellStyle.SelectionBackColor = ValidationForms.GetColorSistema(TipoCon);

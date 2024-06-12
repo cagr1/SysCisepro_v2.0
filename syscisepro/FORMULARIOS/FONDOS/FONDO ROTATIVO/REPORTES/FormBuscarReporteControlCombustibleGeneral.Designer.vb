@@ -331,7 +331,7 @@
             Me.gbControl1.Controls.Add(Me.lblIdVehiculo)
             Me.gbControl1.Controls.Add(Me.lblIdRubro)
             Me.gbControl1.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.gbControl1.Location = New System.Drawing.Point(2, 29)
+            Me.gbControl1.Location = New System.Drawing.Point(2, 35)
             Me.gbControl1.Name = "gbControl1"
             Me.gbControl1.Size = New System.Drawing.Size(467, 161)
             Me.gbControl1.TabIndex = 45
@@ -347,7 +347,7 @@
             Me.gbControl2.Controls.Add(Me.txtKmSalidaVehiculo)
             Me.gbControl2.Controls.Add(Me.lblIdSalidaVehiculo)
             Me.gbControl2.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.gbControl2.Location = New System.Drawing.Point(470, 121)
+            Me.gbControl2.Location = New System.Drawing.Point(470, 126)
             Me.gbControl2.Name = "gbControl2"
             Me.gbControl2.Size = New System.Drawing.Size(195, 69)
             Me.gbControl2.TabIndex = 46
@@ -363,7 +363,7 @@
             Me.GroupBox1.Controls.Add(Me.txtFechaLlegadaVehiculo)
             Me.GroupBox1.Controls.Add(Me.lblIdLlegadaVehiculo)
             Me.GroupBox1.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.GroupBox1.Location = New System.Drawing.Point(668, 121)
+            Me.GroupBox1.Location = New System.Drawing.Point(668, 126)
             Me.GroupBox1.Name = "GroupBox1"
             Me.GroupBox1.Size = New System.Drawing.Size(195, 69)
             Me.GroupBox1.TabIndex = 48
@@ -417,30 +417,32 @@
             '
             'MenuStrip1
             '
+            Me.MenuStrip1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
             Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem1, Me.btnReporte})
             Me.MenuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow
             Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
             Me.MenuStrip1.Name = "MenuStrip1"
             Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(7, 2, 0, 2)
-            Me.MenuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
-            Me.MenuStrip1.Size = New System.Drawing.Size(864, 24)
+            Me.MenuStrip1.Size = New System.Drawing.Size(864, 32)
             Me.MenuStrip1.TabIndex = 190
             Me.MenuStrip1.Text = "msIngresoBodega"
             '
             'ToolStripMenuItem1
             '
             Me.ToolStripMenuItem1.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.ToolStripMenuItem1.Image = Global.syscisepro.My.Resources.Resources.BuscarRegistro
+            Me.ToolStripMenuItem1.Image = Global.syscisepro.My.Resources.Resources.search_24dp_FILL0_wght400_GRAD0_opsz24__2_
+            Me.ToolStripMenuItem1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
-            Me.ToolStripMenuItem1.Size = New System.Drawing.Size(78, 20)
+            Me.ToolStripMenuItem1.Size = New System.Drawing.Size(86, 28)
             Me.ToolStripMenuItem1.Text = "CARGAR"
             '
             'btnReporte
             '
             Me.btnReporte.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnReporte.Image = Global.syscisepro.My.Resources.Resources.report
+            Me.btnReporte.Image = Global.syscisepro.My.Resources.Resources.description_24dp_FILL0_wght400_GRAD0_opsz24__2_
+            Me.btnReporte.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnReporte.Name = "btnReporte"
-            Me.btnReporte.Size = New System.Drawing.Size(82, 20)
+            Me.btnReporte.Size = New System.Drawing.Size(90, 28)
             Me.btnReporte.Text = "REPORTE"
             '
             'PictureBox1
@@ -506,10 +508,13 @@
             Me.Controls.Add(Me.gbControl1)
             Me.Controls.Add(Me.dgvControlCombustible)
             Me.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
             Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
             Me.Name = "FormBuscarReporteControlCombustibleGeneral"
             Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+            Me.StateActive.Border.DrawBorders = CType((((Krypton.Toolkit.PaletteDrawBorders.Top Or Krypton.Toolkit.PaletteDrawBorders.Bottom) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Left) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Right), Krypton.Toolkit.PaletteDrawBorders)
+            Me.StateActive.Border.Rounding = 5.0!
             Me.Text = "REPORTE CONTROL COMBUSTIBLE"
             CType(Me.dgvControlCombustible, System.ComponentModel.ISupportInitialize).EndInit()
             Me.gbControl1.ResumeLayout(False)

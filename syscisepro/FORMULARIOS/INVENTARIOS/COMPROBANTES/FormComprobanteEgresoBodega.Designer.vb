@@ -1,8 +1,8 @@
 ﻿Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
     <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
     Partial Class FormComprobanteEgresoBodega
-        Inherits System.Windows.Forms.Form
-
+        'Inherits System.Windows.Forms.Form
+        Inherits Krypton.Toolkit.KryptonForm
         'Form reemplaza a Dispose para limpiar la lista de componentes.
         <System.Diagnostics.DebuggerNonUserCode()> _
         Protected Overrides Sub Dispose(ByVal disposing As Boolean)
@@ -24,22 +24,22 @@
         <System.Diagnostics.DebuggerStepThrough()> _
         Private Sub InitializeComponent()
             Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormComprobanteEgresoBodega))
-            Dim DataGridViewCellStyle17 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle18 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle19 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle20 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle21 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle22 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle23 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle24 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle25 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle26 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle27 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle28 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle29 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle30 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle31 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle32 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle13 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle14 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle15 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle16 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Me.tbComprobanteIngresoBodega = New System.Windows.Forms.TabControl()
             Me.tpRegistro = New System.Windows.Forms.TabPage()
             Me.txtRazon = New System.Windows.Forms.TextBox()
@@ -148,7 +148,6 @@
             Me.crvComprobante = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
             Me.TabPage2 = New System.Windows.Forms.TabPage()
             Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-            Me.Label11 = New System.Windows.Forms.Label()
             Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
             Me.tsmNuevo = New System.Windows.Forms.ToolStripMenuItem()
             Me.tsmGuardar = New System.Windows.Forms.ToolStripMenuItem()
@@ -188,11 +187,11 @@
             Me.tbComprobanteIngresoBodega.Controls.Add(Me.tpRegistro)
             Me.tbComprobanteIngresoBodega.Controls.Add(Me.tpConsultar)
             Me.tbComprobanteIngresoBodega.Controls.Add(Me.tpReporte)
-            Me.tbComprobanteIngresoBodega.Font = New System.Drawing.Font("Consolas", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.tbComprobanteIngresoBodega.Location = New System.Drawing.Point(2, 27)
+            Me.tbComprobanteIngresoBodega.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.tbComprobanteIngresoBodega.Location = New System.Drawing.Point(2, 34)
             Me.tbComprobanteIngresoBodega.Name = "tbComprobanteIngresoBodega"
             Me.tbComprobanteIngresoBodega.SelectedIndex = 0
-            Me.tbComprobanteIngresoBodega.Size = New System.Drawing.Size(1268, 590)
+            Me.tbComprobanteIngresoBodega.Size = New System.Drawing.Size(1268, 582)
             Me.tbComprobanteIngresoBodega.TabIndex = 1
             '
             'tpRegistro
@@ -235,10 +234,10 @@
             Me.tpRegistro.Controls.Add(Me.Label5)
             Me.tpRegistro.Controls.Add(Me.lblProveedor)
             Me.tpRegistro.Controls.Add(Me.Label10)
-            Me.tpRegistro.Location = New System.Drawing.Point(4, 24)
+            Me.tpRegistro.Location = New System.Drawing.Point(4, 22)
             Me.tpRegistro.Name = "tpRegistro"
             Me.tpRegistro.Padding = New System.Windows.Forms.Padding(3)
-            Me.tpRegistro.Size = New System.Drawing.Size(1260, 562)
+            Me.tpRegistro.Size = New System.Drawing.Size(1260, 556)
             Me.tpRegistro.TabIndex = 0
             Me.tpRegistro.Text = "REGISTRO"
             '
@@ -247,7 +246,7 @@
             Me.txtRazon.BackColor = System.Drawing.Color.White
             Me.txtRazon.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtRazon.Enabled = False
-            Me.txtRazon.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtRazon.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtRazon.ForeColor = System.Drawing.Color.Black
             Me.txtRazon.Location = New System.Drawing.Point(1019, 132)
             Me.txtRazon.Multiline = True
@@ -274,7 +273,7 @@
             Me.txtUbicacion.BackColor = System.Drawing.Color.White
             Me.txtUbicacion.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtUbicacion.Enabled = False
-            Me.txtUbicacion.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtUbicacion.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtUbicacion.ForeColor = System.Drawing.Color.Black
             Me.txtUbicacion.Location = New System.Drawing.Point(439, 164)
             Me.txtUbicacion.Multiline = True
@@ -287,11 +286,11 @@
             Me.txtRecibe.BackColor = System.Drawing.Color.White
             Me.txtRecibe.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtRecibe.Enabled = False
-            Me.txtRecibe.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtRecibe.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtRecibe.ForeColor = System.Drawing.Color.Black
             Me.txtRecibe.Location = New System.Drawing.Point(6, 171)
             Me.txtRecibe.Name = "txtRecibe"
-            Me.txtRecibe.Size = New System.Drawing.Size(390, 22)
+            Me.txtRecibe.Size = New System.Drawing.Size(390, 21)
             Me.txtRecibe.TabIndex = 15
             '
             'cbmProvincia
@@ -300,7 +299,7 @@
             Me.cbmProvincia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cbmProvincia.Enabled = False
             Me.cbmProvincia.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-            Me.cbmProvincia.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.cbmProvincia.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cbmProvincia.ForeColor = System.Drawing.Color.Black
             Me.cbmProvincia.FormattingEnabled = True
             Me.cbmProvincia.Location = New System.Drawing.Point(439, 27)
@@ -348,7 +347,7 @@
             Me.gbBusquedaArticulo.Controls.Add(Me.lblIdKardex)
             Me.gbBusquedaArticulo.Controls.Add(Me.lblIdArticulo)
             Me.gbBusquedaArticulo.Enabled = False
-            Me.gbBusquedaArticulo.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.gbBusquedaArticulo.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.gbBusquedaArticulo.Location = New System.Drawing.Point(2, 202)
             Me.gbBusquedaArticulo.Name = "gbBusquedaArticulo"
             Me.gbBusquedaArticulo.Size = New System.Drawing.Size(1254, 357)
@@ -384,11 +383,13 @@
             '
             Me.btnSerie.BackColor = System.Drawing.Color.White
             Me.btnSerie.Enabled = False
-            Me.btnSerie.Font = New System.Drawing.Font("Consolas", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnSerie.Image = CType(resources.GetObject("btnSerie.Image"), System.Drawing.Image)
-            Me.btnSerie.Location = New System.Drawing.Point(393, 46)
+            Me.btnSerie.FlatAppearance.BorderSize = 0
+            Me.btnSerie.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+            Me.btnSerie.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.btnSerie.Image = Global.syscisepro.My.Resources.Resources.search_24dp_FILL0_wght400_GRAD0_opsz40
+            Me.btnSerie.Location = New System.Drawing.Point(397, 46)
             Me.btnSerie.Name = "btnSerie"
-            Me.btnSerie.Size = New System.Drawing.Size(26, 25)
+            Me.btnSerie.Size = New System.Drawing.Size(26, 26)
             Me.btnSerie.TabIndex = 196
             Me.btnSerie.TextAlign = System.Drawing.ContentAlignment.MiddleRight
             Me.btnSerie.UseVisualStyleBackColor = False
@@ -396,33 +397,33 @@
             'txtSerie
             '
             Me.txtSerie.BackColor = System.Drawing.Color.White
-            Me.txtSerie.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtSerie.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtSerie.ForeColor = System.Drawing.Color.Black
             Me.txtSerie.Location = New System.Drawing.Point(293, 47)
             Me.txtSerie.Name = "txtSerie"
-            Me.txtSerie.Size = New System.Drawing.Size(101, 23)
+            Me.txtSerie.Size = New System.Drawing.Size(101, 21)
             Me.txtSerie.TabIndex = 163
             Me.txtSerie.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
             '
             'Label16
             '
             Me.Label16.AutoSize = True
-            Me.Label16.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Label16.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Label16.ForeColor = System.Drawing.Color.Black
             Me.Label16.Location = New System.Drawing.Point(293, 32)
             Me.Label16.Name = "Label16"
-            Me.Label16.Size = New System.Drawing.Size(40, 15)
+            Me.Label16.Size = New System.Drawing.Size(39, 13)
             Me.Label16.TabIndex = 164
             Me.Label16.Text = "SERIE:"
             '
             'Label15
             '
             Me.Label15.AutoSize = True
-            Me.Label15.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Label15.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Label15.ForeColor = System.Drawing.Color.Black
             Me.Label15.Location = New System.Drawing.Point(733, 33)
             Me.Label15.Name = "Label15"
-            Me.Label15.Size = New System.Drawing.Size(45, 15)
+            Me.Label15.Size = New System.Drawing.Size(45, 13)
             Me.Label15.TabIndex = 162
             Me.Label15.Text = "TOTAL:"
             Me.Label15.TextAlign = System.Drawing.ContentAlignment.TopCenter
@@ -432,23 +433,23 @@
             Me.nudTotal.BackColor = System.Drawing.Color.White
             Me.nudTotal.DecimalPlaces = 2
             Me.nudTotal.Enabled = False
-            Me.nudTotal.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.nudTotal.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.nudTotal.ForeColor = System.Drawing.Color.Black
             Me.nudTotal.Location = New System.Drawing.Point(732, 48)
             Me.nudTotal.Maximum = New Decimal(New Integer() {100000, 0, 0, 0})
             Me.nudTotal.Name = "nudTotal"
-            Me.nudTotal.Size = New System.Drawing.Size(85, 23)
+            Me.nudTotal.Size = New System.Drawing.Size(85, 21)
             Me.nudTotal.TabIndex = 161
             Me.nudTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
             '
             'Label7
             '
             Me.Label7.AutoSize = True
-            Me.Label7.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Label7.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Label7.ForeColor = System.Drawing.Color.Black
             Me.Label7.Location = New System.Drawing.Point(492, 33)
             Me.Label7.Name = "Label7"
-            Me.Label7.Size = New System.Drawing.Size(50, 15)
+            Me.Label7.Size = New System.Drawing.Size(48, 13)
             Me.Label7.TabIndex = 160
             Me.Label7.Text = "VALOR.:"
             Me.Label7.TextAlign = System.Drawing.ContentAlignment.TopCenter
@@ -457,12 +458,12 @@
             '
             Me.nudValor.BackColor = System.Drawing.Color.White
             Me.nudValor.DecimalPlaces = 2
-            Me.nudValor.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.nudValor.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.nudValor.ForeColor = System.Drawing.Color.Black
             Me.nudValor.Location = New System.Drawing.Point(492, 48)
             Me.nudValor.Maximum = New Decimal(New Integer() {100000, 0, 0, 0})
             Me.nudValor.Name = "nudValor"
-            Me.nudValor.Size = New System.Drawing.Size(85, 23)
+            Me.nudValor.Size = New System.Drawing.Size(85, 21)
             Me.nudValor.TabIndex = 159
             Me.nudValor.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
             '
@@ -470,13 +471,13 @@
             '
             Me.tsmEliminar.BackColor = System.Drawing.Color.White
             Me.tsmEliminar.Enabled = False
-            Me.tsmEliminar.Image = Global.syscisepro.My.Resources.Resources.remove
-            Me.tsmEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-            Me.tsmEliminar.Location = New System.Drawing.Point(1159, 46)
+            Me.tsmEliminar.FlatAppearance.BorderSize = 0
+            Me.tsmEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+            Me.tsmEliminar.Image = Global.syscisepro.My.Resources.Resources.do_not_disturb_on_24dp_FILL0_wght400_GRAD0_opsz24
+            Me.tsmEliminar.Location = New System.Drawing.Point(1207, 35)
             Me.tsmEliminar.Name = "tsmEliminar"
-            Me.tsmEliminar.Size = New System.Drawing.Size(91, 26)
+            Me.tsmEliminar.Size = New System.Drawing.Size(28, 28)
             Me.tsmEliminar.TabIndex = 158
-            Me.tsmEliminar.Text = "QUITAR"
             Me.tsmEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
             Me.tsmEliminar.UseVisualStyleBackColor = False
             '
@@ -484,13 +485,13 @@
             '
             Me.tsmAgregar.BackColor = System.Drawing.Color.White
             Me.tsmAgregar.Enabled = False
-            Me.tsmAgregar.Image = Global.syscisepro.My.Resources.Resources.add
-            Me.tsmAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-            Me.tsmAgregar.Location = New System.Drawing.Point(1159, 18)
+            Me.tsmAgregar.FlatAppearance.BorderSize = 0
+            Me.tsmAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+            Me.tsmAgregar.Image = Global.syscisepro.My.Resources.Resources.add_circle_24dp_FILL0_wght400_GRAD0_opsz24__3_
+            Me.tsmAgregar.Location = New System.Drawing.Point(1173, 35)
             Me.tsmAgregar.Name = "tsmAgregar"
-            Me.tsmAgregar.Size = New System.Drawing.Size(90, 26)
+            Me.tsmAgregar.Size = New System.Drawing.Size(28, 28)
             Me.tsmAgregar.TabIndex = 157
-            Me.tsmAgregar.Text = "AGREGAR"
             Me.tsmAgregar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
             Me.tsmAgregar.UseVisualStyleBackColor = False
             '
@@ -498,7 +499,7 @@
             '
             Me.txtObservacion.BackColor = System.Drawing.Color.White
             Me.txtObservacion.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-            Me.txtObservacion.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtObservacion.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtObservacion.ForeColor = System.Drawing.Color.Black
             Me.txtObservacion.Location = New System.Drawing.Point(823, 35)
             Me.txtObservacion.MaxLength = 255
@@ -511,11 +512,11 @@
             'Label9
             '
             Me.Label9.AutoSize = True
-            Me.Label9.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Label9.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Label9.ForeColor = System.Drawing.Color.Black
             Me.Label9.Location = New System.Drawing.Point(823, 19)
             Me.Label9.Name = "Label9"
-            Me.Label9.Size = New System.Drawing.Size(90, 15)
+            Me.Label9.Size = New System.Drawing.Size(85, 13)
             Me.Label9.TabIndex = 155
             Me.Label9.Text = "OBSERVACIÓN:"
             '
@@ -524,13 +525,13 @@
             Me.cmbObservacionCalidad.BackColor = System.Drawing.Color.White
             Me.cmbObservacionCalidad.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cmbObservacionCalidad.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-            Me.cmbObservacionCalidad.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.cmbObservacionCalidad.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cmbObservacionCalidad.ForeColor = System.Drawing.Color.Black
             Me.cmbObservacionCalidad.FormattingEnabled = True
             Me.cmbObservacionCalidad.Items.AddRange(New Object() {"-- ESTADO --", "NUEVO", "BUEN ESTADO", "REGULAR ESTADO", "MAL ESTADO (DAR BAJA)"})
             Me.cmbObservacionCalidad.Location = New System.Drawing.Point(583, 48)
             Me.cmbObservacionCalidad.Name = "cmbObservacionCalidad"
-            Me.cmbObservacionCalidad.Size = New System.Drawing.Size(148, 23)
+            Me.cmbObservacionCalidad.Size = New System.Drawing.Size(148, 21)
             Me.cmbObservacionCalidad.TabIndex = 153
             '
             'dgvSecuencial
@@ -538,12 +539,12 @@
             Me.dgvSecuencial.AllowUserToAddRows = False
             Me.dgvSecuencial.AllowUserToDeleteRows = False
             Me.dgvSecuencial.AllowUserToResizeRows = False
-            DataGridViewCellStyle17.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-            Me.dgvSecuencial.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle17
+            DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+            Me.dgvSecuencial.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
             Me.dgvSecuencial.BackgroundColor = System.Drawing.Color.White
             Me.dgvSecuencial.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
-            DataGridViewCellStyle18.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.dgvSecuencial.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle18
+            DataGridViewCellStyle2.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.dgvSecuencial.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
             Me.dgvSecuencial.ColumnHeadersHeight = 26
             Me.dgvSecuencial.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.CODIGO, Me.NOMBRE, Me.CANTIDAD, Me.VALOR, Me.TOTAL, Me.OBSERVACION, Me.DETALLES, Me.NUMERO_KARDEX, Me.DETALLE_KARDEX, Me.VALOR_UNITARIO_ANTERIOR, Me.VALOR_TOTAL_ANTERIOR, Me.SALDO, Me.CANTIDAD_SALDO, Me.VALOR_UNITARIO_SALDO, Me.ID_SECUENCIAL})
             Me.dgvSecuencial.GridColor = System.Drawing.Color.Black
@@ -553,14 +554,14 @@
             Me.dgvSecuencial.ReadOnly = True
             Me.dgvSecuencial.RowHeadersVisible = False
             Me.dgvSecuencial.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvSecuencial.Size = New System.Drawing.Size(1244, 278)
+            Me.dgvSecuencial.Size = New System.Drawing.Size(1244, 273)
             Me.dgvSecuencial.TabIndex = 152
             '
             'CODIGO
             '
-            DataGridViewCellStyle19.BackColor = System.Drawing.Color.LightGray
-            DataGridViewCellStyle19.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.CODIGO.DefaultCellStyle = DataGridViewCellStyle19
+            DataGridViewCellStyle3.BackColor = System.Drawing.Color.LightGray
+            DataGridViewCellStyle3.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.CODIGO.DefaultCellStyle = DataGridViewCellStyle3
             Me.CODIGO.HeaderText = "CÓD."
             Me.CODIGO.Name = "CODIGO"
             Me.CODIGO.ReadOnly = True
@@ -575,8 +576,8 @@
             '
             'CANTIDAD
             '
-            DataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-            Me.CANTIDAD.DefaultCellStyle = DataGridViewCellStyle20
+            DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+            Me.CANTIDAD.DefaultCellStyle = DataGridViewCellStyle4
             Me.CANTIDAD.HeaderText = "CANT."
             Me.CANTIDAD.Name = "CANTIDAD"
             Me.CANTIDAD.ReadOnly = True
@@ -584,8 +585,8 @@
             '
             'VALOR
             '
-            DataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-            Me.VALOR.DefaultCellStyle = DataGridViewCellStyle21
+            DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+            Me.VALOR.DefaultCellStyle = DataGridViewCellStyle5
             Me.VALOR.HeaderText = "VALOR"
             Me.VALOR.Name = "VALOR"
             Me.VALOR.ReadOnly = True
@@ -614,8 +615,8 @@
             '
             'NUMERO_KARDEX
             '
-            DataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-            Me.NUMERO_KARDEX.DefaultCellStyle = DataGridViewCellStyle22
+            DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+            Me.NUMERO_KARDEX.DefaultCellStyle = DataGridViewCellStyle6
             Me.NUMERO_KARDEX.HeaderText = "N° KAR."
             Me.NUMERO_KARDEX.Name = "NUMERO_KARDEX"
             Me.NUMERO_KARDEX.ReadOnly = True
@@ -623,8 +624,8 @@
             '
             'DETALLE_KARDEX
             '
-            DataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-            Me.DETALLE_KARDEX.DefaultCellStyle = DataGridViewCellStyle23
+            DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+            Me.DETALLE_KARDEX.DefaultCellStyle = DataGridViewCellStyle7
             Me.DETALLE_KARDEX.HeaderText = "DETALLE"
             Me.DETALLE_KARDEX.Name = "DETALLE_KARDEX"
             Me.DETALLE_KARDEX.ReadOnly = True
@@ -632,8 +633,8 @@
             '
             'VALOR_UNITARIO_ANTERIOR
             '
-            DataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-            Me.VALOR_UNITARIO_ANTERIOR.DefaultCellStyle = DataGridViewCellStyle24
+            DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+            Me.VALOR_UNITARIO_ANTERIOR.DefaultCellStyle = DataGridViewCellStyle8
             Me.VALOR_UNITARIO_ANTERIOR.HeaderText = "V.U. ANTERIOR"
             Me.VALOR_UNITARIO_ANTERIOR.Name = "VALOR_UNITARIO_ANTERIOR"
             Me.VALOR_UNITARIO_ANTERIOR.ReadOnly = True
@@ -641,8 +642,8 @@
             '
             'VALOR_TOTAL_ANTERIOR
             '
-            DataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-            Me.VALOR_TOTAL_ANTERIOR.DefaultCellStyle = DataGridViewCellStyle25
+            DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+            Me.VALOR_TOTAL_ANTERIOR.DefaultCellStyle = DataGridViewCellStyle9
             Me.VALOR_TOTAL_ANTERIOR.HeaderText = "V.T. ANTERIOR"
             Me.VALOR_TOTAL_ANTERIOR.Name = "VALOR_TOTAL_ANTERIOR"
             Me.VALOR_TOTAL_ANTERIOR.ReadOnly = True
@@ -651,9 +652,9 @@
             '
             'SALDO
             '
-            DataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-            DataGridViewCellStyle26.BackColor = System.Drawing.Color.WhiteSmoke
-            Me.SALDO.DefaultCellStyle = DataGridViewCellStyle26
+            DataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+            DataGridViewCellStyle10.BackColor = System.Drawing.Color.WhiteSmoke
+            Me.SALDO.DefaultCellStyle = DataGridViewCellStyle10
             Me.SALDO.HeaderText = "SALDO"
             Me.SALDO.Name = "SALDO"
             Me.SALDO.ReadOnly = True
@@ -685,7 +686,7 @@
             'lblOpcion
             '
             Me.lblOpcion.AutoSize = True
-            Me.lblOpcion.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.lblOpcion.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.lblOpcion.ForeColor = System.Drawing.Color.Black
             Me.lblOpcion.Location = New System.Drawing.Point(489, 18)
             Me.lblOpcion.Name = "lblOpcion"
@@ -695,12 +696,12 @@
             'nudCantidad
             '
             Me.nudCantidad.BackColor = System.Drawing.Color.White
-            Me.nudCantidad.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.nudCantidad.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.nudCantidad.ForeColor = System.Drawing.Color.Black
             Me.nudCantidad.Location = New System.Drawing.Point(428, 48)
             Me.nudCantidad.Maximum = New Decimal(New Integer() {100000, 0, 0, 0})
             Me.nudCantidad.Name = "nudCantidad"
-            Me.nudCantidad.Size = New System.Drawing.Size(61, 23)
+            Me.nudCantidad.Size = New System.Drawing.Size(61, 21)
             Me.nudCantidad.TabIndex = 2
             Me.nudCantidad.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
             Me.nudCantidad.Value = New Decimal(New Integer() {1, 0, 0, 0})
@@ -708,11 +709,11 @@
             'Label17
             '
             Me.Label17.AutoSize = True
-            Me.Label17.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Label17.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Label17.ForeColor = System.Drawing.Color.Black
             Me.Label17.Location = New System.Drawing.Point(433, 32)
             Me.Label17.Name = "Label17"
-            Me.Label17.Size = New System.Drawing.Size(43, 15)
+            Me.Label17.Size = New System.Drawing.Size(41, 13)
             Me.Label17.TabIndex = 28
             Me.Label17.Text = "CANT.:"
             Me.Label17.TextAlign = System.Drawing.ContentAlignment.TopCenter
@@ -720,11 +721,11 @@
             'lblObservacionCalidad
             '
             Me.lblObservacionCalidad.AutoSize = True
-            Me.lblObservacionCalidad.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.lblObservacionCalidad.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.lblObservacionCalidad.ForeColor = System.Drawing.Color.Black
             Me.lblObservacionCalidad.Location = New System.Drawing.Point(580, 33)
             Me.lblObservacionCalidad.Name = "lblObservacionCalidad"
-            Me.lblObservacionCalidad.Size = New System.Drawing.Size(114, 15)
+            Me.lblObservacionCalidad.Size = New System.Drawing.Size(104, 13)
             Me.lblObservacionCalidad.TabIndex = 26
             Me.lblObservacionCalidad.Text = "ESTADO / CALIDAD"
             '
@@ -732,11 +733,11 @@
             '
             Me.txtCodigoArticulo.BackColor = System.Drawing.Color.White
             Me.txtCodigoArticulo.Enabled = False
-            Me.txtCodigoArticulo.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtCodigoArticulo.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtCodigoArticulo.ForeColor = System.Drawing.Color.Black
             Me.txtCodigoArticulo.Location = New System.Drawing.Point(180, 47)
             Me.txtCodigoArticulo.Name = "txtCodigoArticulo"
-            Me.txtCodigoArticulo.Size = New System.Drawing.Size(107, 23)
+            Me.txtCodigoArticulo.Size = New System.Drawing.Size(107, 21)
             Me.txtCodigoArticulo.TabIndex = 3
             Me.txtCodigoArticulo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
             Me.txtCodigoArticulo.Visible = False
@@ -744,11 +745,11 @@
             'Label12
             '
             Me.Label12.AutoSize = True
-            Me.Label12.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Label12.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Label12.ForeColor = System.Drawing.Color.Black
             Me.Label12.Location = New System.Drawing.Point(177, 31)
             Me.Label12.Name = "Label12"
-            Me.Label12.Size = New System.Drawing.Size(56, 15)
+            Me.Label12.Size = New System.Drawing.Size(51, 13)
             Me.Label12.TabIndex = 20
             Me.Label12.Text = "CÓDIGO:"
             Me.Label12.Visible = False
@@ -757,33 +758,33 @@
             '
             Me.txtArticulo.BackColor = System.Drawing.Color.White
             Me.txtArticulo.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-            Me.txtArticulo.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtArticulo.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtArticulo.ForeColor = System.Drawing.Color.Black
             Me.txtArticulo.Location = New System.Drawing.Point(6, 47)
             Me.txtArticulo.Name = "txtArticulo"
-            Me.txtArticulo.Size = New System.Drawing.Size(281, 23)
+            Me.txtArticulo.Size = New System.Drawing.Size(281, 21)
             Me.txtArticulo.TabIndex = 0
             Me.txtArticulo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
             '
             'lblArticulo
             '
             Me.lblArticulo.AutoSize = True
-            Me.lblArticulo.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.lblArticulo.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.lblArticulo.ForeColor = System.Drawing.Color.Black
             Me.lblArticulo.Location = New System.Drawing.Point(9, 31)
             Me.lblArticulo.Name = "lblArticulo"
-            Me.lblArticulo.Size = New System.Drawing.Size(113, 15)
+            Me.lblArticulo.Size = New System.Drawing.Size(107, 13)
             Me.lblArticulo.TabIndex = 7
             Me.lblArticulo.Text = "BUSCAR ARTÍCULO:"
             '
             'lblIdDetalleKardex
             '
             Me.lblIdDetalleKardex.AutoSize = True
-            Me.lblIdDetalleKardex.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.lblIdDetalleKardex.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.lblIdDetalleKardex.ForeColor = System.Drawing.Color.DodgerBlue
             Me.lblIdDetalleKardex.Location = New System.Drawing.Point(191, 51)
             Me.lblIdDetalleKardex.Name = "lblIdDetalleKardex"
-            Me.lblIdDetalleKardex.Size = New System.Drawing.Size(13, 15)
+            Me.lblIdDetalleKardex.Size = New System.Drawing.Size(13, 13)
             Me.lblIdDetalleKardex.TabIndex = 149
             Me.lblIdDetalleKardex.Text = "0"
             Me.lblIdDetalleKardex.Visible = False
@@ -791,11 +792,11 @@
             'lblIdKardex
             '
             Me.lblIdKardex.AutoSize = True
-            Me.lblIdKardex.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.lblIdKardex.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.lblIdKardex.ForeColor = System.Drawing.Color.DodgerBlue
             Me.lblIdKardex.Location = New System.Drawing.Point(239, 51)
             Me.lblIdKardex.Name = "lblIdKardex"
-            Me.lblIdKardex.Size = New System.Drawing.Size(13, 15)
+            Me.lblIdKardex.Size = New System.Drawing.Size(13, 13)
             Me.lblIdKardex.TabIndex = 141
             Me.lblIdKardex.Text = "0"
             Me.lblIdKardex.Visible = False
@@ -803,11 +804,11 @@
             'lblIdArticulo
             '
             Me.lblIdArticulo.AutoSize = True
-            Me.lblIdArticulo.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.lblIdArticulo.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.lblIdArticulo.ForeColor = System.Drawing.Color.DodgerBlue
             Me.lblIdArticulo.Location = New System.Drawing.Point(136, 51)
             Me.lblIdArticulo.Name = "lblIdArticulo"
-            Me.lblIdArticulo.Size = New System.Drawing.Size(13, 15)
+            Me.lblIdArticulo.Size = New System.Drawing.Size(13, 13)
             Me.lblIdArticulo.TabIndex = 36
             Me.lblIdArticulo.Text = "0"
             Me.lblIdArticulo.Visible = False
@@ -826,20 +827,20 @@
             '
             Me.txtNumero.BackColor = System.Drawing.Color.White
             Me.txtNumero.Enabled = False
-            Me.txtNumero.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtNumero.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtNumero.Location = New System.Drawing.Point(6, 28)
             Me.txtNumero.Name = "txtNumero"
-            Me.txtNumero.Size = New System.Drawing.Size(103, 22)
+            Me.txtNumero.Size = New System.Drawing.Size(103, 21)
             Me.txtNumero.TabIndex = 6
             Me.txtNumero.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
             '
             'lblBodega
             '
             Me.lblBodega.AutoSize = True
-            Me.lblBodega.Font = New System.Drawing.Font("Segoe UI Semibold", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.lblBodega.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.lblBodega.Location = New System.Drawing.Point(127, 10)
             Me.lblBodega.Name = "lblBodega"
-            Me.lblBodega.Size = New System.Drawing.Size(54, 13)
+            Me.lblBodega.Size = New System.Drawing.Size(53, 13)
             Me.lblBodega.TabIndex = 9
             Me.lblBodega.Text = "BODEGA:"
             '
@@ -848,30 +849,30 @@
             Me.txtProveedores.BackColor = System.Drawing.Color.White
             Me.txtProveedores.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtProveedores.Enabled = False
-            Me.txtProveedores.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtProveedores.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtProveedores.ForeColor = System.Drawing.Color.Black
             Me.txtProveedores.Location = New System.Drawing.Point(439, 123)
             Me.txtProveedores.Name = "txtProveedores"
-            Me.txtProveedores.Size = New System.Drawing.Size(548, 22)
+            Me.txtProveedores.Size = New System.Drawing.Size(548, 21)
             Me.txtProveedores.TabIndex = 14
             '
             'Label8
             '
             Me.Label8.AutoSize = True
-            Me.Label8.Font = New System.Drawing.Font("Segoe UI Semibold", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Label8.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Label8.Location = New System.Drawing.Point(344, 108)
             Me.Label8.Name = "Label8"
-            Me.Label8.Size = New System.Drawing.Size(52, 13)
+            Me.Label8.Size = New System.Drawing.Size(51, 13)
             Me.Label8.TabIndex = 63
             Me.Label8.Text = "CÓDIGO:"
             '
             'lblRazon
             '
             Me.lblRazon.AutoSize = True
-            Me.lblRazon.Font = New System.Drawing.Font("Segoe UI Semibold", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.lblRazon.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.lblRazon.Location = New System.Drawing.Point(1016, 117)
             Me.lblRazon.Name = "lblRazon"
-            Me.lblRazon.Size = New System.Drawing.Size(99, 13)
+            Me.lblRazon.Size = New System.Drawing.Size(101, 13)
             Me.lblRazon.TabIndex = 42
             Me.lblRazon.Text = "RAZÓN / MOTIVO:"
             '
@@ -881,7 +882,7 @@
             Me.cmbBodega.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cmbBodega.Enabled = False
             Me.cmbBodega.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-            Me.cmbBodega.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.cmbBodega.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cmbBodega.FormattingEnabled = True
             Me.cmbBodega.Location = New System.Drawing.Point(130, 27)
             Me.cmbBodega.Name = "cmbBodega"
@@ -891,10 +892,10 @@
             'lblProvincia
             '
             Me.lblProvincia.AutoSize = True
-            Me.lblProvincia.Font = New System.Drawing.Font("Segoe UI Semibold", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.lblProvincia.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.lblProvincia.Location = New System.Drawing.Point(436, 10)
             Me.lblProvincia.Name = "lblProvincia"
-            Me.lblProvincia.Size = New System.Drawing.Size(66, 13)
+            Me.lblProvincia.Size = New System.Drawing.Size(67, 13)
             Me.lblProvincia.TabIndex = 51
             Me.lblProvincia.Text = "PROVINCIA:"
             '
@@ -902,11 +903,11 @@
             '
             Me.txtCódigo.BackColor = System.Drawing.Color.White
             Me.txtCódigo.Enabled = False
-            Me.txtCódigo.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtCódigo.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtCódigo.ForeColor = System.Drawing.Color.Black
             Me.txtCódigo.Location = New System.Drawing.Point(348, 123)
             Me.txtCódigo.Name = "txtCódigo"
-            Me.txtCódigo.Size = New System.Drawing.Size(53, 22)
+            Me.txtCódigo.Size = New System.Drawing.Size(53, 21)
             Me.txtCódigo.TabIndex = 13
             Me.txtCódigo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
             '
@@ -916,7 +917,7 @@
             Me.cbmCanton.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cbmCanton.Enabled = False
             Me.cbmCanton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-            Me.cbmCanton.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.cbmCanton.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cbmCanton.ForeColor = System.Drawing.Color.Black
             Me.cbmCanton.FormattingEnabled = True
             Me.cbmCanton.Location = New System.Drawing.Point(734, 28)
@@ -927,10 +928,10 @@
             'lblCiudad
             '
             Me.lblCiudad.AutoSize = True
-            Me.lblCiudad.Font = New System.Drawing.Font("Segoe UI Semibold", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.lblCiudad.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.lblCiudad.Location = New System.Drawing.Point(731, 13)
             Me.lblCiudad.Name = "lblCiudad"
-            Me.lblCiudad.Size = New System.Drawing.Size(51, 13)
+            Me.lblCiudad.Size = New System.Drawing.Size(48, 13)
             Me.lblCiudad.TabIndex = 52
             Me.lblCiudad.Text = "CIUDAD:"
             '
@@ -940,7 +941,7 @@
             Me.cbmParroquia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cbmParroquia.Enabled = False
             Me.cbmParroquia.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-            Me.cbmParroquia.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.cbmParroquia.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cbmParroquia.ForeColor = System.Drawing.Color.Black
             Me.cbmParroquia.FormattingEnabled = True
             Me.cbmParroquia.Location = New System.Drawing.Point(1019, 27)
@@ -954,7 +955,7 @@
             Me.cmbConceptos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cmbConceptos.Enabled = False
             Me.cmbConceptos.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-            Me.cmbConceptos.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.cmbConceptos.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cmbConceptos.ForeColor = System.Drawing.Color.Black
             Me.cmbConceptos.FormattingEnabled = True
             Me.cmbConceptos.Location = New System.Drawing.Point(6, 124)
@@ -978,7 +979,7 @@
             Me.cbmCentroCosto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cbmCentroCosto.Enabled = False
             Me.cbmCentroCosto.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-            Me.cbmCentroCosto.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.cbmCentroCosto.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cbmCentroCosto.ForeColor = System.Drawing.Color.Black
             Me.cbmCentroCosto.FormattingEnabled = True
             Me.cbmCentroCosto.Location = New System.Drawing.Point(441, 74)
@@ -989,7 +990,7 @@
             'lblParroquia
             '
             Me.lblParroquia.AutoSize = True
-            Me.lblParroquia.Font = New System.Drawing.Font("Segoe UI Semibold", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.lblParroquia.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.lblParroquia.Location = New System.Drawing.Point(1016, 13)
             Me.lblParroquia.Name = "lblParroquia"
             Me.lblParroquia.Size = New System.Drawing.Size(70, 13)
@@ -1002,7 +1003,7 @@
             Me.cbmEgreso.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cbmEgreso.Enabled = False
             Me.cbmEgreso.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-            Me.cbmEgreso.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.cbmEgreso.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cbmEgreso.ForeColor = System.Drawing.Color.Black
             Me.cbmEgreso.FormattingEnabled = True
             Me.cbmEgreso.Items.AddRange(New Object() {"EGRESO"})
@@ -1014,17 +1015,17 @@
             'lblCentroCosto
             '
             Me.lblCentroCosto.AutoSize = True
-            Me.lblCentroCosto.Font = New System.Drawing.Font("Segoe UI Semibold", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.lblCentroCosto.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.lblCentroCosto.Location = New System.Drawing.Point(438, 56)
             Me.lblCentroCosto.Name = "lblCentroCosto"
-            Me.lblCentroCosto.Size = New System.Drawing.Size(107, 13)
+            Me.lblCentroCosto.Size = New System.Drawing.Size(109, 13)
             Me.lblCentroCosto.TabIndex = 57
             Me.lblCentroCosto.Text = "CENTRO DE COSTO:"
             '
             'Label1
             '
             Me.Label1.AutoSize = True
-            Me.Label1.Font = New System.Drawing.Font("Segoe UI Semibold", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Label1.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Label1.Location = New System.Drawing.Point(1093, 57)
             Me.Label1.Name = "Label1"
             Me.Label1.Size = New System.Drawing.Size(44, 13)
@@ -1034,10 +1035,10 @@
             'lblActividad
             '
             Me.lblActividad.AutoSize = True
-            Me.lblActividad.Font = New System.Drawing.Font("Segoe UI Semibold", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.lblActividad.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.lblActividad.Location = New System.Drawing.Point(731, 56)
             Me.lblActividad.Name = "lblActividad"
-            Me.lblActividad.Size = New System.Drawing.Size(66, 13)
+            Me.lblActividad.Size = New System.Drawing.Size(65, 13)
             Me.lblActividad.TabIndex = 47
             Me.lblActividad.Text = "ACTIVIDAD:"
             '
@@ -1045,31 +1046,31 @@
             '
             Me.dtpFecha.CustomFormat = "dddd, dd-MMM-yyyy"
             Me.dtpFecha.Enabled = False
-            Me.dtpFecha.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.dtpFecha.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.Custom
             Me.dtpFecha.Location = New System.Drawing.Point(1090, 73)
             Me.dtpFecha.Name = "dtpFecha"
-            Me.dtpFecha.Size = New System.Drawing.Size(159, 22)
+            Me.dtpFecha.Size = New System.Drawing.Size(159, 21)
             Me.dtpFecha.TabIndex = 7
             '
             'txtNombre
             '
             Me.txtNombre.BackColor = System.Drawing.Color.White
             Me.txtNombre.Enabled = False
-            Me.txtNombre.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtNombre.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtNombre.Location = New System.Drawing.Point(6, 74)
             Me.txtNombre.Name = "txtNombre"
-            Me.txtNombre.Size = New System.Drawing.Size(294, 22)
+            Me.txtNombre.Size = New System.Drawing.Size(294, 21)
             Me.txtNombre.TabIndex = 9
             '
             'txtCedula
             '
             Me.txtCedula.BackColor = System.Drawing.Color.White
             Me.txtCedula.Enabled = False
-            Me.txtCedula.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtCedula.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtCedula.Location = New System.Drawing.Point(301, 74)
             Me.txtCedula.Name = "txtCedula"
-            Me.txtCedula.Size = New System.Drawing.Size(99, 22)
+            Me.txtCedula.Size = New System.Drawing.Size(99, 21)
             Me.txtCedula.TabIndex = 10
             Me.txtCedula.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
             '
@@ -1086,7 +1087,7 @@
             'Label4
             '
             Me.Label4.AutoSize = True
-            Me.Label4.Font = New System.Drawing.Font("Segoe UI Semibold", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Label4.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Label4.Location = New System.Drawing.Point(1016, 55)
             Me.Label4.Name = "Label4"
             Me.Label4.Size = New System.Drawing.Size(33, 13)
@@ -1097,10 +1098,10 @@
             '
             Me.txtNroDocumento.BackColor = System.Drawing.Color.White
             Me.txtNroDocumento.Enabled = False
-            Me.txtNroDocumento.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtNroDocumento.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtNroDocumento.Location = New System.Drawing.Point(1019, 73)
             Me.txtNroDocumento.Name = "txtNroDocumento"
-            Me.txtNroDocumento.Size = New System.Drawing.Size(68, 22)
+            Me.txtNroDocumento.Size = New System.Drawing.Size(68, 21)
             Me.txtNroDocumento.TabIndex = 15
             Me.txtNroDocumento.Text = "S/N"
             Me.txtNroDocumento.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
@@ -1111,7 +1112,7 @@
             Me.cmbDocumento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cmbDocumento.Enabled = False
             Me.cmbDocumento.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-            Me.cmbDocumento.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.cmbDocumento.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cmbDocumento.FormattingEnabled = True
             Me.cmbDocumento.Location = New System.Drawing.Point(840, 73)
             Me.cmbDocumento.Name = "cmbDocumento"
@@ -1121,30 +1122,30 @@
             'Label5
             '
             Me.Label5.AutoSize = True
-            Me.Label5.Font = New System.Drawing.Font("Segoe UI Semibold", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Label5.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Label5.Location = New System.Drawing.Point(837, 56)
             Me.Label5.Name = "Label5"
-            Me.Label5.Size = New System.Drawing.Size(79, 13)
+            Me.Label5.Size = New System.Drawing.Size(78, 13)
             Me.Label5.TabIndex = 12
             Me.Label5.Text = "DOCUMENTO:"
             '
             'lblProveedor
             '
             Me.lblProveedor.AutoSize = True
-            Me.lblProveedor.Font = New System.Drawing.Font("Segoe UI Semibold", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.lblProveedor.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.lblProveedor.Location = New System.Drawing.Point(440, 110)
             Me.lblProveedor.Name = "lblProveedor"
-            Me.lblProveedor.Size = New System.Drawing.Size(132, 13)
+            Me.lblProveedor.Size = New System.Drawing.Size(133, 13)
             Me.lblProveedor.TabIndex = 51
             Me.lblProveedor.Text = "PROVEEDOR / ENTREGA:"
             '
             'Label10
             '
             Me.Label10.AutoSize = True
-            Me.Label10.Font = New System.Drawing.Font("Segoe UI Semibold", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Label10.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Label10.Location = New System.Drawing.Point(439, 151)
             Me.Label10.Name = "Label10"
-            Me.Label10.Size = New System.Drawing.Size(171, 13)
+            Me.Label10.Size = New System.Drawing.Size(174, 13)
             Me.Label10.TabIndex = 66
             Me.Label10.Text = "UBICACIÓN / CLIENTE / PUESTO:"
             '
@@ -1155,10 +1156,10 @@
             Me.tpConsultar.Controls.Add(Me.gbDetalleComprobante)
             Me.tpConsultar.Controls.Add(Me.gbNumeroFactura)
             Me.tpConsultar.Controls.Add(Me.gbRangoFechas)
-            Me.tpConsultar.Location = New System.Drawing.Point(4, 24)
+            Me.tpConsultar.Location = New System.Drawing.Point(4, 22)
             Me.tpConsultar.Name = "tpConsultar"
             Me.tpConsultar.Padding = New System.Windows.Forms.Padding(3)
-            Me.tpConsultar.Size = New System.Drawing.Size(1260, 562)
+            Me.tpConsultar.Size = New System.Drawing.Size(1260, 556)
             Me.tpConsultar.TabIndex = 1
             Me.tpConsultar.Text = "CONSULTAR"
             '
@@ -1167,7 +1168,7 @@
             Me.gbComprobante.BackColor = System.Drawing.Color.White
             Me.gbComprobante.Controls.Add(Me.btnExportarComprobantes)
             Me.gbComprobante.Controls.Add(Me.dgvComprobantesEgreso)
-            Me.gbComprobante.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.gbComprobante.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.gbComprobante.Location = New System.Drawing.Point(3, 52)
             Me.gbComprobante.Name = "gbComprobante"
             Me.gbComprobante.Size = New System.Drawing.Size(1254, 224)
@@ -1178,13 +1179,11 @@
             'btnExportarComprobantes
             '
             Me.btnExportarComprobantes.BackColor = System.Drawing.Color.White
-            Me.btnExportarComprobantes.Image = CType(resources.GetObject("btnExportarComprobantes.Image"), System.Drawing.Image)
-            Me.btnExportarComprobantes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-            Me.btnExportarComprobantes.Location = New System.Drawing.Point(1160, 7)
+            Me.btnExportarComprobantes.Image = Global.syscisepro.My.Resources.Resources.icons8_excel_48
+            Me.btnExportarComprobantes.Location = New System.Drawing.Point(1202, 7)
             Me.btnExportarComprobantes.Name = "btnExportarComprobantes"
-            Me.btnExportarComprobantes.Size = New System.Drawing.Size(91, 26)
+            Me.btnExportarComprobantes.Size = New System.Drawing.Size(26, 26)
             Me.btnExportarComprobantes.TabIndex = 146
-            Me.btnExportarComprobantes.Text = "EXPORTAR"
             Me.btnExportarComprobantes.TextAlign = System.Drawing.ContentAlignment.MiddleRight
             Me.btnExportarComprobantes.UseVisualStyleBackColor = False
             '
@@ -1193,28 +1192,28 @@
             Me.dgvComprobantesEgreso.AllowUserToAddRows = False
             Me.dgvComprobantesEgreso.AllowUserToDeleteRows = False
             Me.dgvComprobantesEgreso.AllowUserToResizeRows = False
-            DataGridViewCellStyle27.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-            Me.dgvComprobantesEgreso.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle27
+            DataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+            Me.dgvComprobantesEgreso.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle11
             Me.dgvComprobantesEgreso.BackgroundColor = System.Drawing.Color.White
             Me.dgvComprobantesEgreso.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedHorizontal
             Me.dgvComprobantesEgreso.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-            DataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-            DataGridViewCellStyle28.BackColor = System.Drawing.SystemColors.Control
-            DataGridViewCellStyle28.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            DataGridViewCellStyle28.ForeColor = System.Drawing.SystemColors.WindowText
-            DataGridViewCellStyle28.SelectionBackColor = System.Drawing.SystemColors.Highlight
-            DataGridViewCellStyle28.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-            DataGridViewCellStyle28.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-            Me.dgvComprobantesEgreso.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle28
+            DataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+            DataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Control
+            DataGridViewCellStyle12.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText
+            DataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight
+            DataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+            DataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+            Me.dgvComprobantesEgreso.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle12
             Me.dgvComprobantesEgreso.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-            DataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-            DataGridViewCellStyle29.BackColor = System.Drawing.SystemColors.Window
-            DataGridViewCellStyle29.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            DataGridViewCellStyle29.ForeColor = System.Drawing.SystemColors.ControlText
-            DataGridViewCellStyle29.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(123, Byte), Integer))
-            DataGridViewCellStyle29.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-            DataGridViewCellStyle29.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-            Me.dgvComprobantesEgreso.DefaultCellStyle = DataGridViewCellStyle29
+            DataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+            DataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Window
+            DataGridViewCellStyle13.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.ControlText
+            DataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(123, Byte), Integer))
+            DataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+            DataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+            Me.dgvComprobantesEgreso.DefaultCellStyle = DataGridViewCellStyle13
             Me.dgvComprobantesEgreso.GridColor = System.Drawing.Color.Black
             Me.dgvComprobantesEgreso.Location = New System.Drawing.Point(4, 33)
             Me.dgvComprobantesEgreso.MultiSelect = False
@@ -1231,7 +1230,7 @@
             Me.gbDetalleComprobante.BackColor = System.Drawing.Color.White
             Me.gbDetalleComprobante.Controls.Add(Me.btnExportarDetalleComprobante)
             Me.gbDetalleComprobante.Controls.Add(Me.dgvDetalleComprobate)
-            Me.gbDetalleComprobante.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.gbDetalleComprobante.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.gbDetalleComprobante.Location = New System.Drawing.Point(3, 282)
             Me.gbDetalleComprobante.Name = "gbDetalleComprobante"
             Me.gbDetalleComprobante.Size = New System.Drawing.Size(1254, 277)
@@ -1242,13 +1241,11 @@
             'btnExportarDetalleComprobante
             '
             Me.btnExportarDetalleComprobante.BackColor = System.Drawing.Color.White
-            Me.btnExportarDetalleComprobante.Image = CType(resources.GetObject("btnExportarDetalleComprobante.Image"), System.Drawing.Image)
-            Me.btnExportarDetalleComprobante.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-            Me.btnExportarDetalleComprobante.Location = New System.Drawing.Point(1162, 7)
+            Me.btnExportarDetalleComprobante.Image = Global.syscisepro.My.Resources.Resources.icons8_excel_48
+            Me.btnExportarDetalleComprobante.Location = New System.Drawing.Point(1202, 6)
             Me.btnExportarDetalleComprobante.Name = "btnExportarDetalleComprobante"
-            Me.btnExportarDetalleComprobante.Size = New System.Drawing.Size(89, 26)
+            Me.btnExportarDetalleComprobante.Size = New System.Drawing.Size(26, 26)
             Me.btnExportarDetalleComprobante.TabIndex = 154
-            Me.btnExportarDetalleComprobante.Text = "EXPORTAR"
             Me.btnExportarDetalleComprobante.TextAlign = System.Drawing.ContentAlignment.MiddleRight
             Me.btnExportarDetalleComprobante.UseVisualStyleBackColor = False
             '
@@ -1257,28 +1254,28 @@
             Me.dgvDetalleComprobate.AllowUserToAddRows = False
             Me.dgvDetalleComprobate.AllowUserToDeleteRows = False
             Me.dgvDetalleComprobate.AllowUserToResizeRows = False
-            DataGridViewCellStyle30.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-            Me.dgvDetalleComprobate.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle30
+            DataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+            Me.dgvDetalleComprobate.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle14
             Me.dgvDetalleComprobate.BackgroundColor = System.Drawing.Color.White
             Me.dgvDetalleComprobate.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedHorizontal
             Me.dgvDetalleComprobate.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-            DataGridViewCellStyle31.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-            DataGridViewCellStyle31.BackColor = System.Drawing.SystemColors.Control
-            DataGridViewCellStyle31.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            DataGridViewCellStyle31.ForeColor = System.Drawing.SystemColors.WindowText
-            DataGridViewCellStyle31.SelectionBackColor = System.Drawing.SystemColors.Highlight
-            DataGridViewCellStyle31.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-            DataGridViewCellStyle31.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-            Me.dgvDetalleComprobate.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle31
+            DataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+            DataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.Control
+            DataGridViewCellStyle15.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.WindowText
+            DataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.Highlight
+            DataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+            DataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+            Me.dgvDetalleComprobate.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle15
             Me.dgvDetalleComprobate.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-            DataGridViewCellStyle32.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-            DataGridViewCellStyle32.BackColor = System.Drawing.SystemColors.Window
-            DataGridViewCellStyle32.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            DataGridViewCellStyle32.ForeColor = System.Drawing.SystemColors.ControlText
-            DataGridViewCellStyle32.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(123, Byte), Integer))
-            DataGridViewCellStyle32.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-            DataGridViewCellStyle32.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-            Me.dgvDetalleComprobate.DefaultCellStyle = DataGridViewCellStyle32
+            DataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+            DataGridViewCellStyle16.BackColor = System.Drawing.SystemColors.Window
+            DataGridViewCellStyle16.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.ControlText
+            DataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(123, Byte), Integer))
+            DataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+            DataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+            Me.dgvDetalleComprobate.DefaultCellStyle = DataGridViewCellStyle16
             Me.dgvDetalleComprobate.GridColor = System.Drawing.Color.Black
             Me.dgvDetalleComprobate.Location = New System.Drawing.Point(4, 33)
             Me.dgvDetalleComprobate.MultiSelect = False
@@ -1325,7 +1322,7 @@
             Me.chkTodos.CheckState = System.Windows.Forms.CheckState.Checked
             Me.chkTodos.Location = New System.Drawing.Point(164, -2)
             Me.chkTodos.Name = "chkTodos"
-            Me.chkTodos.Size = New System.Drawing.Size(61, 19)
+            Me.chkTodos.Size = New System.Drawing.Size(56, 17)
             Me.chkTodos.TabIndex = 9
             Me.chkTodos.Text = "Todos"
             Me.chkTodos.UseVisualStyleBackColor = True
@@ -1333,13 +1330,11 @@
             'btnBuscar
             '
             Me.btnBuscar.BackColor = System.Drawing.Color.White
-            Me.btnBuscar.Image = CType(resources.GetObject("btnBuscar.Image"), System.Drawing.Image)
-            Me.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-            Me.btnBuscar.Location = New System.Drawing.Point(729, 14)
+            Me.btnBuscar.Image = Global.syscisepro.My.Resources.Resources.search_24dp_FILL0_wght400_GRAD0_opsz24__2_
+            Me.btnBuscar.Location = New System.Drawing.Point(730, 11)
             Me.btnBuscar.Name = "btnBuscar"
-            Me.btnBuscar.Size = New System.Drawing.Size(75, 26)
+            Me.btnBuscar.Size = New System.Drawing.Size(30, 30)
             Me.btnBuscar.TabIndex = 0
-            Me.btnBuscar.Text = "BUSCAR"
             Me.btnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
             Me.btnBuscar.UseVisualStyleBackColor = False
             '
@@ -1360,7 +1355,7 @@
             Me.rbtNum.Enabled = False
             Me.rbtNum.Location = New System.Drawing.Point(7, 18)
             Me.rbtNum.Name = "rbtNum"
-            Me.rbtNum.Size = New System.Drawing.Size(81, 19)
+            Me.rbtNum.Size = New System.Drawing.Size(72, 17)
             Me.rbtNum.TabIndex = 10
             Me.rbtNum.TabStop = True
             Me.rbtNum.Text = "N° Comp:"
@@ -1372,7 +1367,7 @@
             Me.rbtDet.Enabled = False
             Me.rbtDet.Location = New System.Drawing.Point(216, 18)
             Me.rbtDet.Name = "rbtDet"
-            Me.rbtDet.Size = New System.Drawing.Size(81, 19)
+            Me.rbtDet.Size = New System.Drawing.Size(63, 17)
             Me.rbtDet.TabIndex = 12
             Me.rbtDet.TabStop = True
             Me.rbtDet.Text = "Detalle:"
@@ -1397,7 +1392,7 @@
             Me.Label13.AutoSize = True
             Me.Label13.Location = New System.Drawing.Point(8, 20)
             Me.Label13.Name = "Label13"
-            Me.Label13.Size = New System.Drawing.Size(28, 15)
+            Me.Label13.Size = New System.Drawing.Size(23, 13)
             Me.Label13.TabIndex = 5
             Me.Label13.Text = "De:"
             '
@@ -1406,38 +1401,38 @@
             Me.Label14.AutoSize = True
             Me.Label14.Location = New System.Drawing.Point(218, 20)
             Me.Label14.Name = "Label14"
-            Me.Label14.Size = New System.Drawing.Size(21, 15)
+            Me.Label14.Size = New System.Drawing.Size(16, 13)
             Me.Label14.TabIndex = 4
             Me.Label14.Text = "a:"
             '
             'dtpFechaHasta
             '
             Me.dtpFechaHasta.CustomFormat = "dddd, dd-MMM-yyyy"
-            Me.dtpFechaHasta.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.dtpFechaHasta.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.dtpFechaHasta.Format = System.Windows.Forms.DateTimePickerFormat.Custom
             Me.dtpFechaHasta.Location = New System.Drawing.Point(237, 17)
             Me.dtpFechaHasta.Name = "dtpFechaHasta"
-            Me.dtpFechaHasta.Size = New System.Drawing.Size(180, 20)
+            Me.dtpFechaHasta.Size = New System.Drawing.Size(180, 21)
             Me.dtpFechaHasta.TabIndex = 1
             '
             'dtpFechaDesde
             '
             Me.dtpFechaDesde.CustomFormat = "dddd, dd-MMM-yyyy"
-            Me.dtpFechaDesde.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.dtpFechaDesde.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.dtpFechaDesde.Format = System.Windows.Forms.DateTimePickerFormat.Custom
             Me.dtpFechaDesde.Location = New System.Drawing.Point(33, 17)
             Me.dtpFechaDesde.Name = "dtpFechaDesde"
-            Me.dtpFechaDesde.Size = New System.Drawing.Size(168, 20)
+            Me.dtpFechaDesde.Size = New System.Drawing.Size(168, 21)
             Me.dtpFechaDesde.TabIndex = 0
             '
             'tpReporte
             '
             Me.tpReporte.BackColor = System.Drawing.Color.White
             Me.tpReporte.Controls.Add(Me.TabControl1)
-            Me.tpReporte.Location = New System.Drawing.Point(4, 24)
+            Me.tpReporte.Location = New System.Drawing.Point(4, 22)
             Me.tpReporte.Name = "tpReporte"
             Me.tpReporte.Padding = New System.Windows.Forms.Padding(3)
-            Me.tpReporte.Size = New System.Drawing.Size(1260, 562)
+            Me.tpReporte.Size = New System.Drawing.Size(1260, 556)
             Me.tpReporte.TabIndex = 2
             Me.tpReporte.Text = "REPORTE"
             '
@@ -1457,10 +1452,10 @@
             Me.TabPage1.Controls.Add(Me.Label3)
             Me.TabPage1.Controls.Add(Me.txtIdComprobante)
             Me.TabPage1.Controls.Add(Me.crvComprobante)
-            Me.TabPage1.Location = New System.Drawing.Point(4, 24)
+            Me.TabPage1.Location = New System.Drawing.Point(4, 22)
             Me.TabPage1.Name = "TabPage1"
             Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-            Me.TabPage1.Size = New System.Drawing.Size(1250, 529)
+            Me.TabPage1.Size = New System.Drawing.Size(1250, 531)
             Me.TabPage1.TabIndex = 0
             Me.TabPage1.Text = "Comprobante"
             Me.TabPage1.UseVisualStyleBackColor = True
@@ -1484,7 +1479,7 @@
             Me.Label3.BackColor = System.Drawing.Color.White
             Me.Label3.Location = New System.Drawing.Point(945, 12)
             Me.Label3.Name = "Label3"
-            Me.Label3.Size = New System.Drawing.Size(91, 15)
+            Me.Label3.Size = New System.Drawing.Size(92, 13)
             Me.Label3.TabIndex = 5
             Me.Label3.Text = "COMPROBANTE:"
             '
@@ -1492,7 +1487,7 @@
             '
             Me.txtIdComprobante.Location = New System.Drawing.Point(1042, 8)
             Me.txtIdComprobante.Name = "txtIdComprobante"
-            Me.txtIdComprobante.Size = New System.Drawing.Size(110, 23)
+            Me.txtIdComprobante.Size = New System.Drawing.Size(110, 21)
             Me.txtIdComprobante.TabIndex = 6
             Me.txtIdComprobante.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
             '
@@ -1512,10 +1507,10 @@
             'TabPage2
             '
             Me.TabPage2.Controls.Add(Me.PictureBox1)
-            Me.TabPage2.Location = New System.Drawing.Point(4, 24)
+            Me.TabPage2.Location = New System.Drawing.Point(4, 22)
             Me.TabPage2.Name = "TabPage2"
             Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-            Me.TabPage2.Size = New System.Drawing.Size(1250, 529)
+            Me.TabPage2.Size = New System.Drawing.Size(1250, 531)
             Me.TabPage2.TabIndex = 1
             Me.TabPage2.Text = "Imagen Adjunta"
             Me.TabPage2.UseVisualStyleBackColor = True
@@ -1525,64 +1520,58 @@
             Me.PictureBox1.Dock = System.Windows.Forms.DockStyle.Fill
             Me.PictureBox1.Location = New System.Drawing.Point(3, 3)
             Me.PictureBox1.Name = "PictureBox1"
-            Me.PictureBox1.Size = New System.Drawing.Size(1244, 523)
+            Me.PictureBox1.Size = New System.Drawing.Size(1244, 525)
             Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
             Me.PictureBox1.TabIndex = 0
             Me.PictureBox1.TabStop = False
             '
-            'Label11
-            '
-            Me.Label11.AutoSize = True
-            Me.Label11.Font = New System.Drawing.Font("Consolas", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label11.Location = New System.Drawing.Point(887, 0)
-            Me.Label11.Name = "Label11"
-            Me.Label11.Size = New System.Drawing.Size(382, 24)
-            Me.Label11.TabIndex = 7
-            Me.Label11.Text = "COMPROBANTE DE EGRESO DE BODEGA"
-            '
             'MenuStrip1
             '
+            Me.MenuStrip1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
             Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsmNuevo, Me.tsmGuardar, Me.tsmCancelar, Me.tsmActualizar})
             Me.MenuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow
             Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
             Me.MenuStrip1.Name = "MenuStrip1"
             Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(8, 2, 0, 2)
-            Me.MenuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
-            Me.MenuStrip1.Size = New System.Drawing.Size(1270, 24)
+            Me.MenuStrip1.Size = New System.Drawing.Size(1270, 32)
             Me.MenuStrip1.TabIndex = 187
             Me.MenuStrip1.Text = "msIngresoBodega"
             '
             'tsmNuevo
             '
-            Me.tsmNuevo.Image = Global.syscisepro.My.Resources.Resources.NuevoRegistro
+            Me.tsmNuevo.Image = Global.syscisepro.My.Resources.Resources.add_circle_24dp_FILL0_wght400_GRAD0_opsz24__3_
+            Me.tsmNuevo.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.tsmNuevo.Name = "tsmNuevo"
-            Me.tsmNuevo.Size = New System.Drawing.Size(74, 20)
+            Me.tsmNuevo.Size = New System.Drawing.Size(82, 28)
             Me.tsmNuevo.Text = "NUEVO"
             '
             'tsmGuardar
             '
             Me.tsmGuardar.Enabled = False
             Me.tsmGuardar.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.tsmGuardar.Image = Global.syscisepro.My.Resources.Resources.GuardarRegistro
+            Me.tsmGuardar.Image = Global.syscisepro.My.Resources.Resources.save_24dp_FILL0_wght400_GRAD0_opsz24__2_
+            Me.tsmGuardar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.tsmGuardar.Name = "tsmGuardar"
-            Me.tsmGuardar.Size = New System.Drawing.Size(87, 20)
+            Me.tsmGuardar.Size = New System.Drawing.Size(95, 28)
             Me.tsmGuardar.Text = "GUARDAR"
             '
             'tsmCancelar
             '
             Me.tsmCancelar.Enabled = False
             Me.tsmCancelar.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.tsmCancelar.Image = Global.syscisepro.My.Resources.Resources.cancel
+            Me.tsmCancelar.Image = Global.syscisepro.My.Resources.Resources.cancel_24dp_FILL0_wght400_GRAD0_opsz24
+            Me.tsmCancelar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.tsmCancelar.Name = "tsmCancelar"
-            Me.tsmCancelar.Size = New System.Drawing.Size(89, 20)
+            Me.tsmCancelar.Size = New System.Drawing.Size(97, 28)
             Me.tsmCancelar.Text = "CANCELAR"
             '
             'tsmActualizar
             '
             Me.tsmActualizar.Enabled = False
-            Me.tsmActualizar.Image = Global.syscisepro.My.Resources.Resources.page_edit
+            Me.tsmActualizar.Image = Global.syscisepro.My.Resources.Resources.refresh_24dp_FILL0_wght400_GRAD0_opsz24__2_
+            Me.tsmActualizar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.tsmActualizar.Name = "tsmActualizar"
-            Me.tsmActualizar.Size = New System.Drawing.Size(104, 20)
+            Me.tsmActualizar.Size = New System.Drawing.Size(112, 28)
             Me.tsmActualizar.Text = "ACTUALIZAR"
             '
             'lblIdKardex2
@@ -1651,16 +1640,18 @@
             Me.Controls.Add(Me.lblDetKardex)
             Me.Controls.Add(Me.lblDetaComp)
             Me.Controls.Add(Me.lblIdKardex2)
-            Me.Controls.Add(Me.Label11)
             Me.Controls.Add(Me.MenuStrip1)
             Me.Controls.Add(Me.tbComprobanteIngresoBodega)
             Me.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
             Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
             Me.MaximizeBox = False
             Me.MinimizeBox = False
             Me.Name = "FormComprobanteEgresoBodega"
             Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+            Me.StateActive.Border.DrawBorders = CType((((Krypton.Toolkit.PaletteDrawBorders.Top Or Krypton.Toolkit.PaletteDrawBorders.Bottom) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Left) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Right), Krypton.Toolkit.PaletteDrawBorders)
+            Me.StateActive.Border.Rounding = 5.0!
             Me.Text = "REGISTRO DE COMPROBANTE DE EGRESO A BODEGA"
             Me.tbComprobanteIngresoBodega.ResumeLayout(False)
             Me.tpRegistro.ResumeLayout(False)
@@ -1761,7 +1752,6 @@
         Friend WithEvents cbmProvincia As System.Windows.Forms.ComboBox
         Friend WithEvents Label9 As System.Windows.Forms.Label
         Friend WithEvents txtObservacion As System.Windows.Forms.TextBox
-        Friend WithEvents Label11 As System.Windows.Forms.Label
         Friend WithEvents Label13 As System.Windows.Forms.Label
         Friend WithEvents Label14 As System.Windows.Forms.Label
         Friend WithEvents btnExportarComprobantes As System.Windows.Forms.Button

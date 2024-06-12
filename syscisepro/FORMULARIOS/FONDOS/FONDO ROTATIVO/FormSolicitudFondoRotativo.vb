@@ -146,39 +146,39 @@ Namespace FORMULARIOS.FONDOS.FONDO_ROTATIVO
                 Case TipoConexion.Asenava
                     Icon = My.Resources.logo_s
                     MenuStrip1.ForeColor = Color.White
-                    MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorAsenava
-                    Label3.ForeColor = Color.White
-                    Label3.BackColor = My.MySettingsProperty.Settings.ColorAsenava
-                    Label30.ForeColor = Color.White
-                    Label30.BackColor = My.MySettingsProperty.Settings.ColorAsenava
-                    lblMontoAsignado.ForeColor = Color.White
-                    lblMontoAsignado.BackColor = My.MySettingsProperty.Settings.ColorAsenava
-                    lblMontoFondoRotativo.ForeColor = Color.White
-                    lblMontoFondoRotativo.BackColor = My.MySettingsProperty.Settings.ColorAsenava
+                    'MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorAsenava
+                    'Label3.ForeColor = Color.White
+                    'Label3.BackColor = My.MySettingsProperty.Settings.ColorAsenava
+                    'Label30.ForeColor = Color.White
+                    'Label30.BackColor = My.MySettingsProperty.Settings.ColorAsenava
+                    'lblMontoAsignado.ForeColor = Color.White
+                    'lblMontoAsignado.BackColor = My.MySettingsProperty.Settings.ColorAsenava
+                    'lblMontoFondoRotativo.ForeColor = Color.White
+                    'lblMontoFondoRotativo.BackColor = My.MySettingsProperty.Settings.ColorAsenava
                 Case TipoConexion.Seportpac
                     Icon = My.Resources.logo_s
-                    MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
+                    'MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
                     MenuStrip1.ForeColor = Color.White
-                    Label3.ForeColor = Color.White
-                    Label3.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
-                    Label30.ForeColor = Color.White
-                    Label30.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
-                    lblMontoAsignado.ForeColor = Color.White
-                    lblMontoAsignado.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
-                    lblMontoFondoRotativo.ForeColor = Color.White
-                    lblMontoFondoRotativo.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
+                    'Label3.ForeColor = Color.White
+                    'Label3.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
+                    'Label30.ForeColor = Color.White
+                    'Label30.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
+                    'lblMontoAsignado.ForeColor = Color.White
+                    'lblMontoAsignado.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
+                    'lblMontoFondoRotativo.ForeColor = Color.White
+                    'lblMontoFondoRotativo.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
                 Case Else
                     Icon = My.Resources.logo_c
-                    MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorCisepro
+                    'MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorCisepro
                     MenuStrip1.ForeColor = Color.White
-                    Label3.ForeColor = Color.White
-                    Label3.BackColor = My.MySettingsProperty.Settings.ColorCisepro
-                    Label30.ForeColor = Color.White
-                    Label30.BackColor = My.MySettingsProperty.Settings.ColorCisepro
-                    lblMontoAsignado.ForeColor = Color.White
-                    lblMontoAsignado.BackColor = My.MySettingsProperty.Settings.ColorCisepro
-                    lblMontoFondoRotativo.ForeColor = Color.White
-                    lblMontoFondoRotativo.BackColor = My.MySettingsProperty.Settings.ColorCisepro
+                    'Label3.ForeColor = Color.White
+                    'Label3.BackColor = My.MySettingsProperty.Settings.ColorCisepro
+                    'Label30.ForeColor = Color.White
+                    'Label30.BackColor = My.MySettingsProperty.Settings.ColorCisepro
+                    'lblMontoAsignado.ForeColor = Color.White
+                    'lblMontoAsignado.BackColor = My.MySettingsProperty.Settings.ColorCisepro
+                    'lblMontoFondoRotativo.ForeColor = Color.White
+                    'lblMontoFondoRotativo.BackColor = My.MySettingsProperty.Settings.ColorCisepro
             End Select
 
             _sqlCommands = New List(Of SqlCommand)

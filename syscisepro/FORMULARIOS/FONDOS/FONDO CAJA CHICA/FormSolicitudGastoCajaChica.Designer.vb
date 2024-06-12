@@ -1,8 +1,8 @@
 ﻿Namespace FORMULARIOS.FONDOS.FONDO_CAJA_CHICA
     <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
     Partial Class FormSolicitudGastoCajaChica
-        Inherits System.Windows.Forms.Form
-
+        'Inherits System.Windows.Forms.Form
+        Inherits Krypton.Toolkit.KryptonForm
         'Form reemplaza a Dispose para limpiar la lista de componentes.
         <System.Diagnostics.DebuggerNonUserCode()> _
         Protected Overrides Sub Dispose(ByVal disposing As Boolean)
@@ -24,19 +24,19 @@
         <System.Diagnostics.DebuggerStepThrough()> _
         Private Sub InitializeComponent()
             Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormSolicitudGastoCajaChica))
-            Dim DataGridViewCellStyle22 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle23 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle26 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle24 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle25 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle14 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle15 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle16 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle17 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle18 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle19 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle20 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle21 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle13 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Me.btnControlCombustible = New System.Windows.Forms.Button()
             Me.txtTexto = New System.Windows.Forms.TextBox()
             Me.tcSolicitudCajaChica = New System.Windows.Forms.TabControl()
@@ -199,7 +199,8 @@
             '
             Me.tcSolicitudCajaChica.Controls.Add(Me.tpSolicitud)
             Me.tcSolicitudCajaChica.Controls.Add(Me.tpReporteCombustible)
-            Me.tcSolicitudCajaChica.Location = New System.Drawing.Point(2, 27)
+            Me.tcSolicitudCajaChica.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.tcSolicitudCajaChica.Location = New System.Drawing.Point(2, 33)
             Me.tcSolicitudCajaChica.Name = "tcSolicitudCajaChica"
             Me.tcSolicitudCajaChica.SelectedIndex = 0
             Me.tcSolicitudCajaChica.Size = New System.Drawing.Size(1007, 493)
@@ -237,7 +238,7 @@
             Me.txtFecha.Enabled = False
             Me.txtFecha.Location = New System.Drawing.Point(451, 12)
             Me.txtFecha.Name = "txtFecha"
-            Me.txtFecha.Size = New System.Drawing.Size(247, 22)
+            Me.txtFecha.Size = New System.Drawing.Size(247, 21)
             Me.txtFecha.TabIndex = 3
             '
             'gbRetenciones
@@ -261,13 +262,13 @@
             Me.btnDocumento.Enabled = False
             Me.btnDocumento.FlatAppearance.BorderSize = 0
             Me.btnDocumento.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnDocumento.Image = CType(resources.GetObject("btnDocumento.Image"), System.Drawing.Image)
+            Me.btnDocumento.Image = Global.syscisepro.My.Resources.Resources.upload_24dp_FILL0_wght400_GRAD0_opsz24__2_
             Me.btnDocumento.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-            Me.btnDocumento.Location = New System.Drawing.Point(209, 24)
+            Me.btnDocumento.Location = New System.Drawing.Point(214, 24)
             Me.btnDocumento.Name = "btnDocumento"
-            Me.btnDocumento.Size = New System.Drawing.Size(75, 52)
+            Me.btnDocumento.Size = New System.Drawing.Size(64, 44)
             Me.btnDocumento.TabIndex = 22
-            Me.btnDocumento.Text = "CARGAR" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "DOCUMENTO"
+            Me.btnDocumento.Text = "CARGAR" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
             Me.btnDocumento.TextAlign = System.Drawing.ContentAlignment.BottomCenter
             Me.btnDocumento.UseVisualStyleBackColor = False
             '
@@ -286,7 +287,7 @@
             Me.txtNroDocumento.Enabled = False
             Me.txtNroDocumento.Location = New System.Drawing.Point(56, 24)
             Me.txtNroDocumento.Name = "txtNroDocumento"
-            Me.txtNroDocumento.Size = New System.Drawing.Size(151, 22)
+            Me.txtNroDocumento.Size = New System.Drawing.Size(151, 21)
             Me.txtNroDocumento.TabIndex = 20
             '
             'cbmParametrosDocumentos
@@ -306,7 +307,7 @@
             Me.lblCodigo.AutoSize = True
             Me.lblCodigo.Location = New System.Drawing.Point(17, 55)
             Me.lblCodigo.Name = "lblCodigo"
-            Me.lblCodigo.Size = New System.Drawing.Size(72, 13)
+            Me.lblCodigo.Size = New System.Drawing.Size(66, 13)
             Me.lblCodigo.TabIndex = 19
             Me.lblCodigo.Text = "CÓD. DOCU:"
             '
@@ -315,7 +316,7 @@
             Me.lblCaja.AutoSize = True
             Me.lblCaja.Location = New System.Drawing.Point(121, 15)
             Me.lblCaja.Name = "lblCaja"
-            Me.lblCaja.Size = New System.Drawing.Size(33, 13)
+            Me.lblCaja.Size = New System.Drawing.Size(34, 13)
             Me.lblCaja.TabIndex = 46
             Me.lblCaja.Text = "CAJA"
             '
@@ -336,7 +337,7 @@
             Me.lblAutoriza.AutoSize = True
             Me.lblAutoriza.Location = New System.Drawing.Point(715, 16)
             Me.lblAutoriza.Name = "lblAutoriza"
-            Me.lblAutoriza.Size = New System.Drawing.Size(62, 13)
+            Me.lblAutoriza.Size = New System.Drawing.Size(63, 13)
             Me.lblAutoriza.TabIndex = 10
             Me.lblAutoriza.Text = "AUTORIZA:"
             '
@@ -413,7 +414,7 @@
             Me.txtFechaControl.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
             Me.txtFechaControl.Location = New System.Drawing.Point(63, 23)
             Me.txtFechaControl.Name = "txtFechaControl"
-            Me.txtFechaControl.Size = New System.Drawing.Size(99, 22)
+            Me.txtFechaControl.Size = New System.Drawing.Size(99, 21)
             Me.txtFechaControl.TabIndex = 24
             '
             'gbLlegadaVehiculo
@@ -438,7 +439,7 @@
             Me.dtpHoraLlegadaVehiculo.Location = New System.Drawing.Point(49, 42)
             Me.dtpHoraLlegadaVehiculo.Name = "dtpHoraLlegadaVehiculo"
             Me.dtpHoraLlegadaVehiculo.ShowUpDown = True
-            Me.dtpHoraLlegadaVehiculo.Size = New System.Drawing.Size(110, 22)
+            Me.dtpHoraLlegadaVehiculo.Size = New System.Drawing.Size(110, 21)
             Me.dtpHoraLlegadaVehiculo.TabIndex = 36
             '
             'dtpFechaLlegadaVehiculo
@@ -446,7 +447,7 @@
             Me.dtpFechaLlegadaVehiculo.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
             Me.dtpFechaLlegadaVehiculo.Location = New System.Drawing.Point(49, 19)
             Me.dtpFechaLlegadaVehiculo.Name = "dtpFechaLlegadaVehiculo"
-            Me.dtpFechaLlegadaVehiculo.Size = New System.Drawing.Size(110, 22)
+            Me.dtpFechaLlegadaVehiculo.Size = New System.Drawing.Size(110, 21)
             Me.dtpFechaLlegadaVehiculo.TabIndex = 35
             '
             'txtKmLlegadaVehiculo
@@ -454,7 +455,7 @@
             Me.txtKmLlegadaVehiculo.BackColor = System.Drawing.Color.White
             Me.txtKmLlegadaVehiculo.Location = New System.Drawing.Point(49, 65)
             Me.txtKmLlegadaVehiculo.Name = "txtKmLlegadaVehiculo"
-            Me.txtKmLlegadaVehiculo.Size = New System.Drawing.Size(110, 22)
+            Me.txtKmLlegadaVehiculo.Size = New System.Drawing.Size(110, 21)
             Me.txtKmLlegadaVehiculo.TabIndex = 37
             Me.txtKmLlegadaVehiculo.Text = "0"
             '
@@ -606,7 +607,7 @@
             Me.txtTotalKmControlC.Enabled = False
             Me.txtTotalKmControlC.Location = New System.Drawing.Point(712, 51)
             Me.txtTotalKmControlC.Name = "txtTotalKmControlC"
-            Me.txtTotalKmControlC.Size = New System.Drawing.Size(47, 22)
+            Me.txtTotalKmControlC.Size = New System.Drawing.Size(47, 21)
             Me.txtTotalKmControlC.TabIndex = 29
             Me.txtTotalKmControlC.Text = "0"
             Me.txtTotalKmControlC.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
@@ -643,7 +644,7 @@
             Me.dtpHoraSalidaVehiculo.Location = New System.Drawing.Point(46, 42)
             Me.dtpHoraSalidaVehiculo.Name = "dtpHoraSalidaVehiculo"
             Me.dtpHoraSalidaVehiculo.ShowUpDown = True
-            Me.dtpHoraSalidaVehiculo.Size = New System.Drawing.Size(110, 22)
+            Me.dtpHoraSalidaVehiculo.Size = New System.Drawing.Size(110, 21)
             Me.dtpHoraSalidaVehiculo.TabIndex = 39
             '
             'dtpFechaSalidaVehiculo
@@ -651,7 +652,7 @@
             Me.dtpFechaSalidaVehiculo.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
             Me.dtpFechaSalidaVehiculo.Location = New System.Drawing.Point(46, 19)
             Me.dtpFechaSalidaVehiculo.Name = "dtpFechaSalidaVehiculo"
-            Me.dtpFechaSalidaVehiculo.Size = New System.Drawing.Size(110, 22)
+            Me.dtpFechaSalidaVehiculo.Size = New System.Drawing.Size(110, 21)
             Me.dtpFechaSalidaVehiculo.TabIndex = 38
             '
             'txtKmSalidaVehiculo
@@ -659,7 +660,7 @@
             Me.txtKmSalidaVehiculo.BackColor = System.Drawing.Color.White
             Me.txtKmSalidaVehiculo.Location = New System.Drawing.Point(46, 65)
             Me.txtKmSalidaVehiculo.Name = "txtKmSalidaVehiculo"
-            Me.txtKmSalidaVehiculo.Size = New System.Drawing.Size(110, 22)
+            Me.txtKmSalidaVehiculo.Size = New System.Drawing.Size(110, 21)
             Me.txtKmSalidaVehiculo.TabIndex = 40
             Me.txtKmSalidaVehiculo.Text = "0"
             '
@@ -700,7 +701,7 @@
             Me.chkCombustible.Enabled = False
             Me.chkCombustible.Location = New System.Drawing.Point(8, 0)
             Me.chkCombustible.Name = "chkCombustible"
-            Me.chkCombustible.Size = New System.Drawing.Size(169, 17)
+            Me.chkCombustible.Size = New System.Drawing.Size(171, 17)
             Me.chkCombustible.TabIndex = 23
             Me.chkCombustible.Text = "CONTROL DE COMBUSTIBLE"
             Me.chkCombustible.UseVisualStyleBackColor = False
@@ -733,7 +734,7 @@
             Me.txtMotivoControlC.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtMotivoControlC.Location = New System.Drawing.Point(414, 51)
             Me.txtMotivoControlC.Name = "txtMotivoControlC"
-            Me.txtMotivoControlC.Size = New System.Drawing.Size(283, 22)
+            Me.txtMotivoControlC.Size = New System.Drawing.Size(283, 21)
             Me.txtMotivoControlC.TabIndex = 28
             '
             'lblClaseGasolinaControlC
@@ -752,7 +753,7 @@
             Me.txtDestinoControlC.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtDestinoControlC.Location = New System.Drawing.Point(63, 51)
             Me.txtDestinoControlC.Name = "txtDestinoControlC"
-            Me.txtDestinoControlC.Size = New System.Drawing.Size(289, 22)
+            Me.txtDestinoControlC.Size = New System.Drawing.Size(289, 21)
             Me.txtDestinoControlC.TabIndex = 27
             '
             'lblMotivoControlC
@@ -823,7 +824,7 @@
             Me.Label4.ForeColor = System.Drawing.Color.Black
             Me.Label4.Location = New System.Drawing.Point(397, 2)
             Me.Label4.Name = "Label4"
-            Me.Label4.Size = New System.Drawing.Size(117, 13)
+            Me.Label4.Size = New System.Drawing.Size(122, 13)
             Me.Label4.TabIndex = 20
             Me.Label4.Text = "RESPONSABLE RECIBE"
             '
@@ -843,7 +844,7 @@
             Me.Label21.AutoSize = True
             Me.Label21.Location = New System.Drawing.Point(399, 52)
             Me.Label21.Name = "Label21"
-            Me.Label21.Size = New System.Drawing.Size(62, 13)
+            Me.Label21.Size = New System.Drawing.Size(63, 13)
             Me.Label21.TabIndex = 9
             Me.Label21.Text = "NOMBRES:"
             '
@@ -854,7 +855,7 @@
             Me.txtNombresRecibe.ForeColor = System.Drawing.Color.Black
             Me.txtNombresRecibe.Location = New System.Drawing.Point(464, 49)
             Me.txtNombresRecibe.Name = "txtNombresRecibe"
-            Me.txtNombresRecibe.Size = New System.Drawing.Size(305, 22)
+            Me.txtNombresRecibe.Size = New System.Drawing.Size(305, 21)
             Me.txtNombresRecibe.TabIndex = 15
             '
             'txtNombresEntrega
@@ -864,7 +865,7 @@
             Me.txtNombresEntrega.ForeColor = System.Drawing.Color.Black
             Me.txtNombresEntrega.Location = New System.Drawing.Point(68, 49)
             Me.txtNombresEntrega.Name = "txtNombresEntrega"
-            Me.txtNombresEntrega.Size = New System.Drawing.Size(309, 22)
+            Me.txtNombresEntrega.Size = New System.Drawing.Size(309, 21)
             Me.txtNombresEntrega.TabIndex = 12
             '
             'Label19
@@ -872,7 +873,7 @@
             Me.Label19.AutoSize = True
             Me.Label19.Location = New System.Drawing.Point(399, 24)
             Me.Label19.Name = "Label19"
-            Me.Label19.Size = New System.Drawing.Size(51, 13)
+            Me.Label19.Size = New System.Drawing.Size(50, 13)
             Me.Label19.TabIndex = 5
             Me.Label19.Text = "CÉDULA:"
             '
@@ -881,7 +882,7 @@
             Me.Label18.AutoSize = True
             Me.Label18.Location = New System.Drawing.Point(6, 24)
             Me.Label18.Name = "Label18"
-            Me.Label18.Size = New System.Drawing.Size(51, 13)
+            Me.Label18.Size = New System.Drawing.Size(50, 13)
             Me.Label18.TabIndex = 4
             Me.Label18.Text = "CÉDULA:"
             '
@@ -892,7 +893,7 @@
             Me.txtCedulaRecibe.ForeColor = System.Drawing.Color.Black
             Me.txtCedulaRecibe.Location = New System.Drawing.Point(464, 21)
             Me.txtCedulaRecibe.Name = "txtCedulaRecibe"
-            Me.txtCedulaRecibe.Size = New System.Drawing.Size(83, 22)
+            Me.txtCedulaRecibe.Size = New System.Drawing.Size(83, 21)
             Me.txtCedulaRecibe.TabIndex = 14
             '
             'txtCedulaEntrega
@@ -902,7 +903,7 @@
             Me.txtCedulaEntrega.ForeColor = System.Drawing.Color.Black
             Me.txtCedulaEntrega.Location = New System.Drawing.Point(68, 21)
             Me.txtCedulaEntrega.Name = "txtCedulaEntrega"
-            Me.txtCedulaEntrega.Size = New System.Drawing.Size(102, 22)
+            Me.txtCedulaEntrega.Size = New System.Drawing.Size(102, 21)
             Me.txtCedulaEntrega.TabIndex = 11
             '
             'Label16
@@ -911,7 +912,7 @@
             Me.Label16.ForeColor = System.Drawing.Color.Black
             Me.Label16.Location = New System.Drawing.Point(2, 2)
             Me.Label16.Name = "Label16"
-            Me.Label16.Size = New System.Drawing.Size(130, 13)
+            Me.Label16.Size = New System.Drawing.Size(135, 13)
             Me.Label16.TabIndex = 0
             Me.Label16.Text = "RESPONSABLE ENTREGA"
             '
@@ -920,7 +921,7 @@
             Me.Label20.AutoSize = True
             Me.Label20.Location = New System.Drawing.Point(5, 52)
             Me.Label20.Name = "Label20"
-            Me.Label20.Size = New System.Drawing.Size(62, 13)
+            Me.Label20.Size = New System.Drawing.Size(63, 13)
             Me.Label20.TabIndex = 7
             Me.Label20.Text = "NOMBRES:"
             '
@@ -944,7 +945,7 @@
             Me.lblDetalle.AutoSize = True
             Me.lblDetalle.Location = New System.Drawing.Point(11, 51)
             Me.lblDetalle.Name = "lblDetalle"
-            Me.lblDetalle.Size = New System.Drawing.Size(52, 13)
+            Me.lblDetalle.Size = New System.Drawing.Size(55, 13)
             Me.lblDetalle.TabIndex = 17
             Me.lblDetalle.Text = "DETALLE:"
             '
@@ -964,7 +965,7 @@
             Me.lblValorGasto.AutoSize = True
             Me.lblValorGasto.Location = New System.Drawing.Point(11, 21)
             Me.lblValorGasto.Name = "lblValorGasto"
-            Me.lblValorGasto.Size = New System.Drawing.Size(44, 13)
+            Me.lblValorGasto.Size = New System.Drawing.Size(45, 13)
             Me.lblValorGasto.TabIndex = 15
             Me.lblValorGasto.Text = "VALOR:"
             '
@@ -983,24 +984,24 @@
             '
             Me.dgvAsientosDiario.AllowUserToAddRows = False
             Me.dgvAsientosDiario.AllowUserToDeleteRows = False
-            DataGridViewCellStyle22.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-            Me.dgvAsientosDiario.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle22
+            DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+            Me.dgvAsientosDiario.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
             Me.dgvAsientosDiario.BackgroundColor = System.Drawing.Color.White
             Me.dgvAsientosDiario.BorderStyle = System.Windows.Forms.BorderStyle.None
             Me.dgvAsientosDiario.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
-            DataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-            DataGridViewCellStyle23.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            DataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-            Me.dgvAsientosDiario.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle23
+            DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+            DataGridViewCellStyle2.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+            Me.dgvAsientosDiario.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
             Me.dgvAsientosDiario.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.eliminarItem, Me.CODIGO, Me.CUENTA, Me.VALOR, Me.IVA})
-            DataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-            DataGridViewCellStyle26.BackColor = System.Drawing.SystemColors.Window
-            DataGridViewCellStyle26.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            DataGridViewCellStyle26.ForeColor = System.Drawing.SystemColors.ControlText
-            DataGridViewCellStyle26.SelectionBackColor = System.Drawing.SystemColors.Highlight
-            DataGridViewCellStyle26.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-            DataGridViewCellStyle26.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-            Me.dgvAsientosDiario.DefaultCellStyle = DataGridViewCellStyle26
+            DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+            DataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window
+            DataGridViewCellStyle5.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText
+            DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
+            DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+            DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+            Me.dgvAsientosDiario.DefaultCellStyle = DataGridViewCellStyle5
             Me.dgvAsientosDiario.GridColor = System.Drawing.SystemColors.ControlLight
             Me.dgvAsientosDiario.Location = New System.Drawing.Point(183, 14)
             Me.dgvAsientosDiario.MultiSelect = False
@@ -1014,12 +1015,12 @@
             '
             'eliminarItem
             '
-            DataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-            DataGridViewCellStyle24.BackColor = System.Drawing.Color.DarkRed
-            DataGridViewCellStyle24.ForeColor = System.Drawing.Color.White
-            DataGridViewCellStyle24.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
-            DataGridViewCellStyle24.SelectionForeColor = System.Drawing.Color.White
-            Me.eliminarItem.DefaultCellStyle = DataGridViewCellStyle24
+            DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+            DataGridViewCellStyle3.BackColor = System.Drawing.Color.DarkRed
+            DataGridViewCellStyle3.ForeColor = System.Drawing.Color.White
+            DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
+            DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White
+            Me.eliminarItem.DefaultCellStyle = DataGridViewCellStyle3
             Me.eliminarItem.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.eliminarItem.HeaderText = "SUPR"
             Me.eliminarItem.Name = "eliminarItem"
@@ -1040,8 +1041,8 @@
             '
             'CUENTA
             '
-            DataGridViewCellStyle25.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-            Me.CUENTA.DefaultCellStyle = DataGridViewCellStyle25
+            DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+            Me.CUENTA.DefaultCellStyle = DataGridViewCellStyle4
             Me.CUENTA.HeaderText = "CUENTA"
             Me.CUENTA.Name = "CUENTA"
             Me.CUENTA.ReadOnly = True
@@ -1081,7 +1082,7 @@
             Me.Label14.AutoSize = True
             Me.Label14.Location = New System.Drawing.Point(146, 28)
             Me.Label14.Name = "Label14"
-            Me.Label14.Size = New System.Drawing.Size(41, 13)
+            Me.Label14.Size = New System.Drawing.Size(42, 13)
             Me.Label14.TabIndex = 21
             Me.Label14.Text = "HABER"
             '
@@ -1092,7 +1093,7 @@
             Me.txtCodigoHaber.ForeColor = System.Drawing.Color.White
             Me.txtCodigoHaber.Location = New System.Drawing.Point(120, 49)
             Me.txtCodigoHaber.Name = "txtCodigoHaber"
-            Me.txtCodigoHaber.Size = New System.Drawing.Size(93, 22)
+            Me.txtCodigoHaber.Size = New System.Drawing.Size(93, 21)
             Me.txtCodigoHaber.TabIndex = 17
             Me.txtCodigoHaber.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
             '
@@ -1112,7 +1113,7 @@
             Me.txtCodigoDebe.ForeColor = System.Drawing.Color.White
             Me.txtCodigoDebe.Location = New System.Drawing.Point(7, 49)
             Me.txtCodigoDebe.Name = "txtCodigoDebe"
-            Me.txtCodigoDebe.Size = New System.Drawing.Size(93, 22)
+            Me.txtCodigoDebe.Size = New System.Drawing.Size(93, 21)
             Me.txtCodigoDebe.TabIndex = 16
             Me.txtCodigoDebe.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
             '
@@ -1122,7 +1123,7 @@
             Me.txtNumeroSolicitud.Enabled = False
             Me.txtNumeroSolicitud.Location = New System.Drawing.Point(31, 11)
             Me.txtNumeroSolicitud.Name = "txtNumeroSolicitud"
-            Me.txtNumeroSolicitud.Size = New System.Drawing.Size(66, 22)
+            Me.txtNumeroSolicitud.Size = New System.Drawing.Size(66, 21)
             Me.txtNumeroSolicitud.TabIndex = 1
             '
             'gbDatos
@@ -1165,7 +1166,7 @@
             Me.txtActividad.Enabled = False
             Me.txtActividad.Location = New System.Drawing.Point(71, 18)
             Me.txtActividad.Name = "txtActividad"
-            Me.txtActividad.Size = New System.Drawing.Size(79, 22)
+            Me.txtActividad.Size = New System.Drawing.Size(79, 21)
             Me.txtActividad.TabIndex = 5
             Me.txtActividad.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
             '
@@ -1222,7 +1223,7 @@
             Me.lblConcepto.AutoSize = True
             Me.lblConcepto.Location = New System.Drawing.Point(200, 21)
             Me.lblConcepto.Name = "lblConcepto"
-            Me.lblConcepto.Size = New System.Drawing.Size(67, 13)
+            Me.lblConcepto.Size = New System.Drawing.Size(68, 13)
             Me.lblConcepto.TabIndex = 5
             Me.lblConcepto.Text = "CONCEPTO:"
             '
@@ -1231,7 +1232,7 @@
             Me.lblParroquia.AutoSize = True
             Me.lblParroquia.Location = New System.Drawing.Point(718, 48)
             Me.lblParroquia.Name = "lblParroquia"
-            Me.lblParroquia.Size = New System.Drawing.Size(71, 13)
+            Me.lblParroquia.Size = New System.Drawing.Size(70, 13)
             Me.lblParroquia.TabIndex = 4
             Me.lblParroquia.Text = "PARROQUIA:"
             '
@@ -1240,7 +1241,7 @@
             Me.lblCiudad.AutoSize = True
             Me.lblCiudad.Location = New System.Drawing.Point(376, 50)
             Me.lblCiudad.Name = "lblCiudad"
-            Me.lblCiudad.Size = New System.Drawing.Size(54, 13)
+            Me.lblCiudad.Size = New System.Drawing.Size(55, 13)
             Me.lblCiudad.TabIndex = 3
             Me.lblCiudad.Text = "CANTÓN:"
             '
@@ -1249,7 +1250,7 @@
             Me.lblCentroCosto.AutoSize = True
             Me.lblCentroCosto.Location = New System.Drawing.Point(693, 19)
             Me.lblCentroCosto.Name = "lblCentroCosto"
-            Me.lblCentroCosto.Size = New System.Drawing.Size(92, 13)
+            Me.lblCentroCosto.Size = New System.Drawing.Size(93, 13)
             Me.lblCentroCosto.TabIndex = 2
             Me.lblCentroCosto.Text = "CENTRO COSTO:"
             '
@@ -1267,7 +1268,7 @@
             Me.Label2.AutoSize = True
             Me.Label2.Location = New System.Drawing.Point(7, 22)
             Me.Label2.Name = "Label2"
-            Me.Label2.Size = New System.Drawing.Size(66, 13)
+            Me.Label2.Size = New System.Drawing.Size(65, 13)
             Me.Label2.TabIndex = 0
             Me.Label2.Text = "ACTIVIDAD:"
             '
@@ -1286,7 +1287,7 @@
             Me.dtpComprobanteRetencion.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
             Me.dtpComprobanteRetencion.Location = New System.Drawing.Point(518, 12)
             Me.dtpComprobanteRetencion.Name = "dtpComprobanteRetencion"
-            Me.dtpComprobanteRetencion.Size = New System.Drawing.Size(88, 22)
+            Me.dtpComprobanteRetencion.Size = New System.Drawing.Size(88, 21)
             Me.dtpComprobanteRetencion.TabIndex = 45
             Me.dtpComprobanteRetencion.Visible = False
             '
@@ -1296,7 +1297,7 @@
             Me.dtpFechaEmisionComprobanteCompra.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
             Me.dtpFechaEmisionComprobanteCompra.Location = New System.Drawing.Point(454, 12)
             Me.dtpFechaEmisionComprobanteCompra.Name = "dtpFechaEmisionComprobanteCompra"
-            Me.dtpFechaEmisionComprobanteCompra.Size = New System.Drawing.Size(82, 22)
+            Me.dtpFechaEmisionComprobanteCompra.Size = New System.Drawing.Size(82, 21)
             Me.dtpFechaEmisionComprobanteCompra.TabIndex = 44
             Me.dtpFechaEmisionComprobanteCompra.Visible = False
             '
@@ -1304,18 +1305,18 @@
             '
             Me.dgvDetallesRetencion.AllowUserToAddRows = False
             Me.dgvDetallesRetencion.AllowUserToDeleteRows = False
-            DataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-            Me.dgvDetallesRetencion.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle14
+            DataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+            Me.dgvDetallesRetencion.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle6
             Me.dgvDetallesRetencion.BackgroundColor = System.Drawing.Color.White
             Me.dgvDetallesRetencion.BorderStyle = System.Windows.Forms.BorderStyle.None
             Me.dgvDetallesRetencion.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
-            DataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-            DataGridViewCellStyle15.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            DataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-            Me.dgvDetallesRetencion.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle15
+            DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+            DataGridViewCellStyle7.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+            Me.dgvDetallesRetencion.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle7
             Me.dgvDetallesRetencion.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.EjercicioFiscal, Me.CodigoRetencion, Me.BaseImponible, Me.Impuesto, Me.PorcentajeRetencion, Me.ValorRetenido, Me.Column1, Me.Column2})
             Me.dgvDetallesRetencion.GridColor = System.Drawing.SystemColors.ControlLight
-            Me.dgvDetallesRetencion.Location = New System.Drawing.Point(37, 4)
+            Me.dgvDetallesRetencion.Location = New System.Drawing.Point(37, 8)
             Me.dgvDetallesRetencion.MultiSelect = False
             Me.dgvDetallesRetencion.Name = "dgvDetallesRetencion"
             Me.dgvDetallesRetencion.ReadOnly = True
@@ -1329,8 +1330,8 @@
             '
             'EjercicioFiscal
             '
-            DataGridViewCellStyle16.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.EjercicioFiscal.DefaultCellStyle = DataGridViewCellStyle16
+            DataGridViewCellStyle8.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.EjercicioFiscal.DefaultCellStyle = DataGridViewCellStyle8
             Me.EjercicioFiscal.HeaderText = "EJ. FISCAL"
             Me.EjercicioFiscal.Name = "EjercicioFiscal"
             Me.EjercicioFiscal.ReadOnly = True
@@ -1339,8 +1340,8 @@
             '
             'CodigoRetencion
             '
-            DataGridViewCellStyle17.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.CodigoRetencion.DefaultCellStyle = DataGridViewCellStyle17
+            DataGridViewCellStyle9.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.CodigoRetencion.DefaultCellStyle = DataGridViewCellStyle9
             Me.CodigoRetencion.HeaderText = "CODIGO"
             Me.CodigoRetencion.Name = "CodigoRetencion"
             Me.CodigoRetencion.ReadOnly = True
@@ -1349,8 +1350,8 @@
             '
             'BaseImponible
             '
-            DataGridViewCellStyle18.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.BaseImponible.DefaultCellStyle = DataGridViewCellStyle18
+            DataGridViewCellStyle10.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.BaseImponible.DefaultCellStyle = DataGridViewCellStyle10
             Me.BaseImponible.HeaderText = "BASE IMPONIBLE"
             Me.BaseImponible.Name = "BaseImponible"
             Me.BaseImponible.ReadOnly = True
@@ -1359,8 +1360,8 @@
             '
             'Impuesto
             '
-            DataGridViewCellStyle19.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Impuesto.DefaultCellStyle = DataGridViewCellStyle19
+            DataGridViewCellStyle11.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Impuesto.DefaultCellStyle = DataGridViewCellStyle11
             Me.Impuesto.HeaderText = "IMPUESTO"
             Me.Impuesto.Name = "Impuesto"
             Me.Impuesto.ReadOnly = True
@@ -1369,8 +1370,8 @@
             '
             'PorcentajeRetencion
             '
-            DataGridViewCellStyle20.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.PorcentajeRetencion.DefaultCellStyle = DataGridViewCellStyle20
+            DataGridViewCellStyle12.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.PorcentajeRetencion.DefaultCellStyle = DataGridViewCellStyle12
             Me.PorcentajeRetencion.HeaderText = "%"
             Me.PorcentajeRetencion.Name = "PorcentajeRetencion"
             Me.PorcentajeRetencion.ReadOnly = True
@@ -1379,8 +1380,8 @@
             '
             'ValorRetenido
             '
-            DataGridViewCellStyle21.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.ValorRetenido.DefaultCellStyle = DataGridViewCellStyle21
+            DataGridViewCellStyle13.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.ValorRetenido.DefaultCellStyle = DataGridViewCellStyle13
             Me.ValorRetenido.HeaderText = "VALOR"
             Me.ValorRetenido.Name = "ValorRetenido"
             Me.ValorRetenido.ReadOnly = True
@@ -1417,7 +1418,7 @@
             Me.txtNumControl.BackColor = System.Drawing.Color.White
             Me.txtNumControl.Location = New System.Drawing.Point(829, 7)
             Me.txtNumControl.Name = "txtNumControl"
-            Me.txtNumControl.Size = New System.Drawing.Size(79, 22)
+            Me.txtNumControl.Size = New System.Drawing.Size(79, 21)
             Me.txtNumControl.TabIndex = 6
             Me.txtNumControl.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
             '
@@ -1446,7 +1447,8 @@
             '
             'Label30
             '
-            Me.Label30.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Label30.BackColor = System.Drawing.Color.FromArgb(CType(CType(189, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(232, Byte), Integer))
+            Me.Label30.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Label30.Location = New System.Drawing.Point(379, 2)
             Me.Label30.Name = "Label30"
             Me.Label30.Size = New System.Drawing.Size(126, 19)
@@ -1456,64 +1458,70 @@
             '
             'MenuStrip1
             '
+            Me.MenuStrip1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
             Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnNuevo, Me.btnGuardar, Me.btnCancelar})
             Me.MenuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow
             Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
             Me.MenuStrip1.Name = "MenuStrip1"
             Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(7, 2, 0, 2)
-            Me.MenuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
-            Me.MenuStrip1.Size = New System.Drawing.Size(1009, 24)
+            Me.MenuStrip1.Size = New System.Drawing.Size(1009, 32)
             Me.MenuStrip1.TabIndex = 186
             Me.MenuStrip1.Text = "msIngresoBodega"
             '
             'btnNuevo
             '
-            Me.btnNuevo.Image = Global.syscisepro.My.Resources.Resources.NuevoRegistro
+            Me.btnNuevo.Image = Global.syscisepro.My.Resources.Resources.add_circle_24dp_FILL0_wght400_GRAD0_opsz24__3_
+            Me.btnNuevo.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnNuevo.Name = "btnNuevo"
-            Me.btnNuevo.Size = New System.Drawing.Size(74, 20)
+            Me.btnNuevo.Size = New System.Drawing.Size(82, 28)
             Me.btnNuevo.Text = "NUEVO"
             '
             'btnGuardar
             '
             Me.btnGuardar.Enabled = False
             Me.btnGuardar.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnGuardar.Image = Global.syscisepro.My.Resources.Resources.GuardarRegistro
+            Me.btnGuardar.Image = Global.syscisepro.My.Resources.Resources.save_24dp_FILL0_wght400_GRAD0_opsz24__2_
+            Me.btnGuardar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnGuardar.Name = "btnGuardar"
-            Me.btnGuardar.Size = New System.Drawing.Size(87, 20)
+            Me.btnGuardar.Size = New System.Drawing.Size(95, 28)
             Me.btnGuardar.Text = "GUARDAR"
             '
             'btnCancelar
             '
             Me.btnCancelar.Enabled = False
             Me.btnCancelar.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnCancelar.Image = Global.syscisepro.My.Resources.Resources.cancel
+            Me.btnCancelar.Image = Global.syscisepro.My.Resources.Resources.cancel_24dp_FILL0_wght400_GRAD0_opsz24
+            Me.btnCancelar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnCancelar.Name = "btnCancelar"
-            Me.btnCancelar.Size = New System.Drawing.Size(89, 20)
+            Me.btnCancelar.Size = New System.Drawing.Size(97, 28)
             Me.btnCancelar.Text = "CANCELAR"
             '
             'lblMontoCajaChica
             '
             Me.lblMontoCajaChica.AutoSize = True
-            Me.lblMontoCajaChica.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.lblMontoCajaChica.BackColor = System.Drawing.Color.FromArgb(CType(CType(189, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(232, Byte), Integer))
+            Me.lblMontoCajaChica.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.lblMontoCajaChica.Location = New System.Drawing.Point(732, 5)
             Me.lblMontoCajaChica.Name = "lblMontoCajaChica"
-            Me.lblMontoCajaChica.Size = New System.Drawing.Size(38, 15)
+            Me.lblMontoCajaChica.Size = New System.Drawing.Size(34, 13)
             Me.lblMontoCajaChica.TabIndex = 21
             Me.lblMontoCajaChica.Text = "00.00"
             '
             'lblMontoAsignado
             '
             Me.lblMontoAsignado.AutoSize = True
-            Me.lblMontoAsignado.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.lblMontoAsignado.BackColor = System.Drawing.Color.FromArgb(CType(CType(189, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(232, Byte), Integer))
+            Me.lblMontoAsignado.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.lblMontoAsignado.Location = New System.Drawing.Point(498, 4)
             Me.lblMontoAsignado.Name = "lblMontoAsignado"
-            Me.lblMontoAsignado.Size = New System.Drawing.Size(38, 15)
+            Me.lblMontoAsignado.Size = New System.Drawing.Size(34, 13)
             Me.lblMontoAsignado.TabIndex = 27
             Me.lblMontoAsignado.Text = "00.00"
             '
             'Label3
             '
-            Me.Label3.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Label3.BackColor = System.Drawing.Color.FromArgb(CType(CType(189, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(232, Byte), Integer))
+            Me.Label3.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Label3.Location = New System.Drawing.Point(614, 3)
             Me.Label3.Name = "Label3"
             Me.Label3.Size = New System.Drawing.Size(126, 19)
@@ -1523,7 +1531,8 @@
             '
             'Label6
             '
-            Me.Label6.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Label6.BackColor = System.Drawing.Color.FromArgb(CType(CType(189, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(232, Byte), Integer))
+            Me.Label6.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Label6.Location = New System.Drawing.Point(828, 3)
             Me.Label6.Name = "Label6"
             Me.Label6.Size = New System.Drawing.Size(126, 19)
@@ -1534,10 +1543,11 @@
             'lblMontoPorTransaccion
             '
             Me.lblMontoPorTransaccion.AutoSize = True
-            Me.lblMontoPorTransaccion.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.lblMontoPorTransaccion.BackColor = System.Drawing.Color.FromArgb(CType(CType(189, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(232, Byte), Integer))
+            Me.lblMontoPorTransaccion.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.lblMontoPorTransaccion.Location = New System.Drawing.Point(940, 6)
             Me.lblMontoPorTransaccion.Name = "lblMontoPorTransaccion"
-            Me.lblMontoPorTransaccion.Size = New System.Drawing.Size(38, 15)
+            Me.lblMontoPorTransaccion.Size = New System.Drawing.Size(34, 13)
             Me.lblMontoPorTransaccion.TabIndex = 189
             Me.lblMontoPorTransaccion.Text = "00.00"
             '
@@ -1558,12 +1568,15 @@
             Me.Controls.Add(Me.txtTexto)
             Me.Controls.Add(Me.btnControlCombustible)
             Me.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
             Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
             Me.MaximizeBox = False
             Me.MinimizeBox = False
             Me.Name = "FormSolicitudGastoCajaChica"
             Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+            Me.StateActive.Border.DrawBorders = CType((((Krypton.Toolkit.PaletteDrawBorders.Top Or Krypton.Toolkit.PaletteDrawBorders.Bottom) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Left) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Right), Krypton.Toolkit.PaletteDrawBorders)
+            Me.StateActive.Border.Rounding = 5.0!
             Me.Text = "SOLICITUD DE GASTO CAJA CHICA"
             Me.tcSolicitudCajaChica.ResumeLayout(False)
             Me.tpSolicitud.ResumeLayout(False)

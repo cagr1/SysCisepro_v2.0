@@ -80,10 +80,10 @@
             Me.tcAutorizaciones.Controls.Add(Me.tpAutorizaciones)
             Me.tcAutorizaciones.Controls.Add(Me.tpReporte)
             Me.tcAutorizaciones.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.tcAutorizaciones.Location = New System.Drawing.Point(0, 27)
+            Me.tcAutorizaciones.Location = New System.Drawing.Point(0, 34)
             Me.tcAutorizaciones.Name = "tcAutorizaciones"
             Me.tcAutorizaciones.SelectedIndex = 0
-            Me.tcAutorizaciones.Size = New System.Drawing.Size(1010, 665)
+            Me.tcAutorizaciones.Size = New System.Drawing.Size(1010, 651)
             Me.tcAutorizaciones.TabIndex = 0
             '
             'tpAutorizaciones
@@ -95,7 +95,7 @@
             Me.tpAutorizaciones.Location = New System.Drawing.Point(4, 22)
             Me.tpAutorizaciones.Name = "tpAutorizaciones"
             Me.tpAutorizaciones.Padding = New System.Windows.Forms.Padding(3)
-            Me.tpAutorizaciones.Size = New System.Drawing.Size(1002, 639)
+            Me.tpAutorizaciones.Size = New System.Drawing.Size(1002, 625)
             Me.tpAutorizaciones.TabIndex = 0
             Me.tpAutorizaciones.Text = "AUTORIZACIONES"
             '
@@ -115,7 +115,7 @@
             Me.gbParametrosAutorizaciones.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.gbParametrosAutorizaciones.Location = New System.Drawing.Point(6, 246)
             Me.gbParametrosAutorizaciones.Name = "gbParametrosAutorizaciones"
-            Me.gbParametrosAutorizaciones.Size = New System.Drawing.Size(990, 390)
+            Me.gbParametrosAutorizaciones.Size = New System.Drawing.Size(990, 379)
             Me.gbParametrosAutorizaciones.TabIndex = 9
             Me.gbParametrosAutorizaciones.TabStop = False
             Me.gbParametrosAutorizaciones.Text = "PARÁMETROS AUTORIZACIONES"
@@ -237,7 +237,7 @@
             Me.dgvParametroAutorizaciones.ReadOnly = True
             Me.dgvParametroAutorizaciones.RowHeadersVisible = False
             Me.dgvParametroAutorizaciones.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvParametroAutorizaciones.Size = New System.Drawing.Size(975, 336)
+            Me.dgvParametroAutorizaciones.Size = New System.Drawing.Size(975, 328)
             Me.dgvParametroAutorizaciones.TabIndex = 8
             '
             'GroupBox1
@@ -492,24 +492,23 @@
             '
             'MenuStrip1
             '
-            Me.MenuStrip1.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.MenuStrip1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
             Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnReporte})
             Me.MenuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow
             Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
             Me.MenuStrip1.Name = "MenuStrip1"
             Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(7, 2, 0, 2)
-            Me.MenuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
-            Me.MenuStrip1.Size = New System.Drawing.Size(1009, 24)
+            Me.MenuStrip1.Size = New System.Drawing.Size(1009, 32)
             Me.MenuStrip1.TabIndex = 200
             Me.MenuStrip1.Text = "msIngresoBodega"
             '
             'btnReporte
             '
             Me.btnReporte.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnReporte.Image = Global.syscisepro.My.Resources.Resources.report
+            Me.btnReporte.Image = Global.syscisepro.My.Resources.Resources.description_24dp_FILL0_wght400_GRAD0_opsz24__2_
             Me.btnReporte.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnReporte.Name = "btnReporte"
-            Me.btnReporte.Size = New System.Drawing.Size(84, 20)
+            Me.btnReporte.Size = New System.Drawing.Size(92, 28)
             Me.btnReporte.Text = "REPORTE"
             '
             'FormParametrosAutorizacionesCajaChica
@@ -520,10 +519,13 @@
             Me.ClientSize = New System.Drawing.Size(1009, 688)
             Me.Controls.Add(Me.MenuStrip1)
             Me.Controls.Add(Me.tcAutorizaciones)
-            Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
             Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
             Me.Name = "FormParametrosAutorizacionesCajaChica"
             Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+            Me.StateActive.Border.DrawBorders = CType((((Krypton.Toolkit.PaletteDrawBorders.Top Or Krypton.Toolkit.PaletteDrawBorders.Bottom) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Left) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Right), Krypton.Toolkit.PaletteDrawBorders)
+            Me.StateActive.Border.Rounding = 5.0!
             Me.Text = "MANTENIMIENTO DE PARÁMETROS DE AUTORIZACIONES DE CAJA CHICA"
             Me.tcAutorizaciones.ResumeLayout(False)
             Me.tpAutorizaciones.ResumeLayout(False)

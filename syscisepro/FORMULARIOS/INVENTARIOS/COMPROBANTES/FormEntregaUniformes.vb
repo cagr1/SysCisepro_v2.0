@@ -94,7 +94,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                     Label10.ForeColor = My.MySettingsProperty.Settings.ColorAsenava
                     Label10.Text = Label10.Text.Replace("CISEPRO", "ASENAVA")
                     MenuStrip1.ForeColor = Color.White
-                    MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorAsenava
+                    'MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorAsenava
                     Label25.ForeColor = Color.White
                     Label25.BackColor = My.MySettingsProperty.Settings.ColorAsenava
                     lblTotalUniformes.ForeColor = Color.White
@@ -108,7 +108,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                     Label10.Text = Label10.Text.Replace("CISEPRO", "SEPORTPAC")
                     Label1.ForeColor = My.MySettingsProperty.Settings.ColorSeportpac
                     Label10.ForeColor = My.MySettingsProperty.Settings.ColorSeportpac
-                    MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
+                    'MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
                     MenuStrip1.ForeColor = Color.White
                     Label25.ForeColor = Color.White
                     Label25.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
@@ -122,7 +122,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                     Icon = My.Resources.logo_c
                     Label1.ForeColor = My.MySettingsProperty.Settings.ColorCisepro
                     Label10.ForeColor = My.MySettingsProperty.Settings.ColorCisepro
-                    MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorCisepro
+                    'MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorCisepro
                     MenuStrip1.ForeColor = Color.White
                     Label25.ForeColor = Color.White
                     Label25.BackColor = My.MySettingsProperty.Settings.ColorCisepro
@@ -133,7 +133,9 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                     dgvDetalleComprobate.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
                     pbImagen.Image = My.Resources.Cisepro_wall_min
             End Select
-
+            dgvSecuencial.Font = New Font("Roboto", 8, FontStyle.Regular)
+            dgvComprobantesIngreso.Font = New Font("Roboto", 8, FontStyle.Regular)
+            dgvDetalleComprobate.Font = New Font("Roboto", 8, FontStyle.Regular)
             _sqlCommands = New List(Of SqlCommand)
         End Sub
         Private Sub tsmNuevo_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles tsmNuevo.Click

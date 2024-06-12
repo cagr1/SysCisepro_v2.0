@@ -81,7 +81,7 @@ namespace SysCisepro3.TalentoHumano
         private void FrmInformesPago_Load(object sender, EventArgs e)
         {
             // CARGAR ICONO Y DESIEÑO SEGUN SISTEMA 
-            toolStrip1.BackColor = ValidationForms.GetColorSistema(TipoCon);
+            //toolStrip1.BackColor = ValidationForms.GetColorSistema(TipoCon);
             toolStrip1.ForeColor = Color.White;
             Label14.BackColor = ValidationForms.GetColorSistema(TipoCon);
             Label14.ForeColor = Color.White;
@@ -100,6 +100,9 @@ namespace SysCisepro3.TalentoHumano
                     Icon = Resources.logo_c;
                     break;
             }
+            dgvDetallesRol.Font = new Font("Roboto", 8, FontStyle.Regular);
+            dgvInformePago.Font = new Font("Roboto", 8, FontStyle.Regular);
+            dgvHorasExtra.Font = new Font("Roboto", 8, FontStyle.Regular);
 
             btnAnt.Tag = 0;
             btnSig.Tag = 0;

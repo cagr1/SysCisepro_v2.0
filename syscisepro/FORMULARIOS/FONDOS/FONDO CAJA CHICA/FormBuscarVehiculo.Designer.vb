@@ -1,8 +1,8 @@
 ﻿Namespace FORMULARIOS.FONDOS.FONDO_CAJA_CHICA
     <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
     Partial Class FormBuscarVehiculo
-        Inherits System.Windows.Forms.Form
-
+        'Inherits System.Windows.Forms.Form
+        Inherits Krypton.Toolkit.KryptonForm
         'Form reemplaza a Dispose para limpiar la lista de componentes.
         <System.Diagnostics.DebuggerNonUserCode()> _
         Protected Overrides Sub Dispose(ByVal disposing As Boolean)
@@ -27,7 +27,6 @@
             Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormBuscarVehiculo))
             Me.dgvVehiculos = New System.Windows.Forms.DataGridView()
-            Me.Label1 = New System.Windows.Forms.Label()
             Me.txtNombresRecibe = New System.Windows.Forms.TextBox()
             CType(Me.dgvVehiculos, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.SuspendLayout()
@@ -58,23 +57,13 @@
             Me.dgvVehiculos.Size = New System.Drawing.Size(855, 288)
             Me.dgvVehiculos.TabIndex = 2
             '
-            'Label1
-            '
-            Me.Label1.AutoSize = True
-            Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label1.Location = New System.Drawing.Point(12, 9)
-            Me.Label1.Name = "Label1"
-            Me.Label1.Size = New System.Drawing.Size(127, 13)
-            Me.Label1.TabIndex = 6
-            Me.Label1.Text = "BUSCAR VEHÍCULO:"
-            '
             'txtNombresRecibe
             '
             Me.txtNombresRecibe.BackColor = System.Drawing.Color.White
             Me.txtNombresRecibe.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtNombresRecibe.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtNombresRecibe.ForeColor = System.Drawing.Color.Black
-            Me.txtNombresRecibe.Location = New System.Drawing.Point(145, 3)
+            Me.txtNombresRecibe.Location = New System.Drawing.Point(6, 3)
             Me.txtNombresRecibe.Name = "txtNombresRecibe"
             Me.txtNombresRecibe.Size = New System.Drawing.Size(713, 21)
             Me.txtNombresRecibe.TabIndex = 9
@@ -86,12 +75,15 @@
             Me.BackColor = System.Drawing.Color.White
             Me.ClientSize = New System.Drawing.Size(861, 319)
             Me.Controls.Add(Me.txtNombresRecibe)
-            Me.Controls.Add(Me.Label1)
             Me.Controls.Add(Me.dgvVehiculos)
             Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
             Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
             Me.Name = "FormBuscarVehiculo"
             Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+            Me.StateActive.Border.DrawBorders = CType((((Krypton.Toolkit.PaletteDrawBorders.Top Or Krypton.Toolkit.PaletteDrawBorders.Bottom) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Left) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Right), Krypton.Toolkit.PaletteDrawBorders)
+            Me.StateActive.Border.Rounding = 5.0!
             Me.Text = "BUSCAR VEHÍCULO"
             CType(Me.dgvVehiculos, System.ComponentModel.ISupportInitialize).EndInit()
             Me.ResumeLayout(False)
@@ -99,7 +91,6 @@
 
         End Sub
         Friend WithEvents dgvVehiculos As System.Windows.Forms.DataGridView
-        Friend WithEvents Label1 As System.Windows.Forms.Label
         Friend WithEvents txtNombresRecibe As System.Windows.Forms.TextBox
     End Class
 End Namespace

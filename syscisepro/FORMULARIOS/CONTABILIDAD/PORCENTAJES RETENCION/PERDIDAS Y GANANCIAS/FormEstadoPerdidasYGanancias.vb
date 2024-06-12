@@ -406,7 +406,7 @@ Namespace FORMULARIOS.CONTABILIDAD.PERDIDAS_Y_GANANCIAS
                 Case TipoConexion.Asenava
                     Icon = My.Resources.logo_a
                     MenuStrip1.ForeColor = Color.White
-                    MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorAsenava
+                    'MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorAsenava
                     Label22.ForeColor = Color.White
                     Label22.BackColor = My.MySettingsProperty.Settings.ColorAsenava
                     dgvEgresos.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorAsenava
@@ -414,7 +414,7 @@ Namespace FORMULARIOS.CONTABILIDAD.PERDIDAS_Y_GANANCIAS
                 Case TipoConexion.Seportpac
                     Icon = My.Resources.logo_s
                     MenuStrip1.ForeColor = Color.White
-                    MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
+                    'MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
                     Label22.ForeColor = Color.White
                     Label22.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
                     dgvEgresos.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorSeportpac
@@ -422,13 +422,14 @@ Namespace FORMULARIOS.CONTABILIDAD.PERDIDAS_Y_GANANCIAS
                 Case Else
                     Icon = My.Resources.logo_c
                     MenuStrip1.ForeColor = Color.White
-                    MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorCisepro
+                    'MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorCisepro
                     Label22.ForeColor = Color.White
                     Label22.BackColor = My.MySettingsProperty.Settings.ColorCisepro
                     dgvEgresos.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
                     dgvIngresos.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
             End Select
-
+            dgvEgresos.Font = New Font("Roboto", 8, FontStyle.Regular)
+            dgvIngresos.Font = New Font("Roboto", 8, FontStyle.Regular)
             Me.dgvIngresos.ContextMenuStrip = Me.ContextMenuStripClicDerecho
             Me.dgvEgresos.ContextMenuStrip = Me.ContextMenuStripClicDerechoEgresos
             cbNivel.SelectedIndex = 0

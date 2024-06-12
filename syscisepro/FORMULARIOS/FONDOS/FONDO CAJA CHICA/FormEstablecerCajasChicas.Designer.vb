@@ -77,10 +77,10 @@
             Me.tcDatos.Controls.Add(Me.tpDatos)
             Me.tcDatos.Controls.Add(Me.tpReporte)
             Me.tcDatos.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.tcDatos.Location = New System.Drawing.Point(3, 30)
+            Me.tcDatos.Location = New System.Drawing.Point(3, 34)
             Me.tcDatos.Name = "tcDatos"
             Me.tcDatos.SelectedIndex = 0
-            Me.tcDatos.Size = New System.Drawing.Size(886, 484)
+            Me.tcDatos.Size = New System.Drawing.Size(886, 481)
             Me.tcDatos.TabIndex = 0
             '
             'tpDatos
@@ -117,7 +117,7 @@
             Me.tpDatos.Location = New System.Drawing.Point(4, 22)
             Me.tpDatos.Name = "tpDatos"
             Me.tpDatos.Padding = New System.Windows.Forms.Padding(3)
-            Me.tpDatos.Size = New System.Drawing.Size(878, 458)
+            Me.tpDatos.Size = New System.Drawing.Size(878, 455)
             Me.tpDatos.TabIndex = 0
             Me.tpDatos.Text = "DATOS"
             '
@@ -169,10 +169,12 @@
             '
             Me.btnBuscarCustodio.Cursor = System.Windows.Forms.Cursors.Hand
             Me.btnBuscarCustodio.Enabled = False
-            Me.btnBuscarCustodio.Image = Global.syscisepro.My.Resources.Resources.BuscarRegistro
-            Me.btnBuscarCustodio.Location = New System.Drawing.Point(413, 4)
+            Me.btnBuscarCustodio.FlatAppearance.BorderSize = 0
+            Me.btnBuscarCustodio.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+            Me.btnBuscarCustodio.Image = Global.syscisepro.My.Resources.Resources.search_24dp_FILL0_wght400_GRAD0_opsz24__2_
+            Me.btnBuscarCustodio.Location = New System.Drawing.Point(413, 2)
             Me.btnBuscarCustodio.Name = "btnBuscarCustodio"
-            Me.btnBuscarCustodio.Size = New System.Drawing.Size(29, 23)
+            Me.btnBuscarCustodio.Size = New System.Drawing.Size(28, 28)
             Me.btnBuscarCustodio.TabIndex = 44
             Me.btnBuscarCustodio.UseVisualStyleBackColor = True
             '
@@ -473,72 +475,71 @@
             '
             'MenuStrip1
             '
-            Me.MenuStrip1.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.MenuStrip1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
             Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem1, Me.btnNuevaCaja, Me.btnGuardar, Me.btnModificar, Me.btnCancelar, Me.btnReporte})
             Me.MenuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow
             Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
             Me.MenuStrip1.Name = "MenuStrip1"
             Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(7, 2, 0, 2)
-            Me.MenuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
-            Me.MenuStrip1.Size = New System.Drawing.Size(893, 24)
+            Me.MenuStrip1.Size = New System.Drawing.Size(893, 32)
             Me.MenuStrip1.TabIndex = 198
             Me.MenuStrip1.Text = "msIngresoBodega"
             '
             'ToolStripMenuItem1
             '
             Me.ToolStripMenuItem1.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.ToolStripMenuItem1.Image = Global.syscisepro.My.Resources.Resources.BuscarRegistro
+            Me.ToolStripMenuItem1.Image = Global.syscisepro.My.Resources.Resources.search_24dp_FILL0_wght400_GRAD0_opsz24__2_
             Me.ToolStripMenuItem1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
-            Me.ToolStripMenuItem1.Size = New System.Drawing.Size(119, 20)
-            Me.ToolStripMenuItem1.Text = "LISTAR TODOS"
+            Me.ToolStripMenuItem1.Size = New System.Drawing.Size(85, 28)
+            Me.ToolStripMenuItem1.Text = "BUSCAR"
             '
             'btnNuevaCaja
             '
             Me.btnNuevaCaja.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnNuevaCaja.Image = Global.syscisepro.My.Resources.Resources.NuevoRegistro
+            Me.btnNuevaCaja.Image = Global.syscisepro.My.Resources.Resources.add_circle_24dp_FILL0_wght400_GRAD0_opsz24__3_
             Me.btnNuevaCaja.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnNuevaCaja.Name = "btnNuevaCaja"
-            Me.btnNuevaCaja.Size = New System.Drawing.Size(70, 20)
+            Me.btnNuevaCaja.Size = New System.Drawing.Size(78, 28)
             Me.btnNuevaCaja.Text = "NUEVO"
             '
             'btnGuardar
             '
             Me.btnGuardar.Enabled = False
             Me.btnGuardar.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnGuardar.Image = Global.syscisepro.My.Resources.Resources.GuardarRegistro
+            Me.btnGuardar.Image = Global.syscisepro.My.Resources.Resources.save_24dp_FILL0_wght400_GRAD0_opsz24__2_
             Me.btnGuardar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnGuardar.Name = "btnGuardar"
-            Me.btnGuardar.Size = New System.Drawing.Size(84, 20)
+            Me.btnGuardar.Size = New System.Drawing.Size(92, 28)
             Me.btnGuardar.Text = "GUARDAR"
             '
             'btnModificar
             '
             Me.btnModificar.Enabled = False
             Me.btnModificar.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnModificar.Image = Global.syscisepro.My.Resources.Resources.ModificarRegistro
+            Me.btnModificar.Image = Global.syscisepro.My.Resources.Resources.edit_document_24dp_FILL0_wght400_GRAD0_opsz24__2_
             Me.btnModificar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnModificar.Name = "btnModificar"
-            Me.btnModificar.Size = New System.Drawing.Size(98, 20)
+            Me.btnModificar.Size = New System.Drawing.Size(106, 28)
             Me.btnModificar.Text = "MODIFICAR"
             '
             'btnCancelar
             '
             Me.btnCancelar.Enabled = False
             Me.btnCancelar.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnCancelar.Image = Global.syscisepro.My.Resources.Resources.cancel
+            Me.btnCancelar.Image = Global.syscisepro.My.Resources.Resources.cancel_24dp_FILL0_wght400_GRAD0_opsz24
             Me.btnCancelar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnCancelar.Name = "btnCancelar"
-            Me.btnCancelar.Size = New System.Drawing.Size(91, 20)
+            Me.btnCancelar.Size = New System.Drawing.Size(99, 28)
             Me.btnCancelar.Text = "CANCELAR"
             '
             'btnReporte
             '
             Me.btnReporte.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnReporte.Image = Global.syscisepro.My.Resources.Resources.report
+            Me.btnReporte.Image = Global.syscisepro.My.Resources.Resources.description_24dp_FILL0_wght400_GRAD0_opsz24__2_
             Me.btnReporte.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnReporte.Name = "btnReporte"
-            Me.btnReporte.Size = New System.Drawing.Size(84, 20)
+            Me.btnReporte.Size = New System.Drawing.Size(92, 28)
             Me.btnReporte.Text = "REPORTE"
             '
             'FormEstablecerCajasChicas
@@ -549,10 +550,13 @@
             Me.ClientSize = New System.Drawing.Size(893, 517)
             Me.Controls.Add(Me.MenuStrip1)
             Me.Controls.Add(Me.tcDatos)
-            Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
             Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
             Me.Name = "FormEstablecerCajasChicas"
             Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+            Me.StateActive.Border.DrawBorders = CType((((Krypton.Toolkit.PaletteDrawBorders.Top Or Krypton.Toolkit.PaletteDrawBorders.Bottom) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Left) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Right), Krypton.Toolkit.PaletteDrawBorders)
+            Me.StateActive.Border.Rounding = 5.0!
             Me.Text = "ESTABLECER CAJAS CHICAS"
             Me.tcDatos.ResumeLayout(False)
             Me.tpDatos.ResumeLayout(False)

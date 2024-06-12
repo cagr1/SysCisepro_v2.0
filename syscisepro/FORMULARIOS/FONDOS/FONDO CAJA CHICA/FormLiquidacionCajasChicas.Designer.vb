@@ -1,8 +1,8 @@
 ﻿Namespace FORMULARIOS.FONDOS.FONDO_CAJA_CHICA
     <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
     Partial Class FormLiquidacionCajasChicas
-        Inherits System.Windows.Forms.Form
-
+        'Inherits System.Windows.Forms.Form
+        Inherits Krypton.Toolkit.KryptonForm
         'Form reemplaza a Dispose para limpiar la lista de componentes.
         <System.Diagnostics.DebuggerNonUserCode()> _
         Protected Overrides Sub Dispose(ByVal disposing As Boolean)
@@ -85,10 +85,10 @@
             '
             Me.tcLiquidar.Controls.Add(Me.tpLiquidar)
             Me.tcLiquidar.Controls.Add(Me.TabPage2)
-            Me.tcLiquidar.Location = New System.Drawing.Point(2, 25)
+            Me.tcLiquidar.Location = New System.Drawing.Point(2, 33)
             Me.tcLiquidar.Name = "tcLiquidar"
             Me.tcLiquidar.SelectedIndex = 0
-            Me.tcLiquidar.Size = New System.Drawing.Size(1011, 605)
+            Me.tcLiquidar.Size = New System.Drawing.Size(1011, 601)
             Me.tcLiquidar.TabIndex = 0
             '
             'tpLiquidar
@@ -115,7 +115,7 @@
             Me.tpLiquidar.Location = New System.Drawing.Point(4, 22)
             Me.tpLiquidar.Name = "tpLiquidar"
             Me.tpLiquidar.Padding = New System.Windows.Forms.Padding(3)
-            Me.tpLiquidar.Size = New System.Drawing.Size(1003, 579)
+            Me.tpLiquidar.Size = New System.Drawing.Size(1003, 575)
             Me.tpLiquidar.TabIndex = 0
             Me.tpLiquidar.Text = "LIQUIDAR"
             '
@@ -458,7 +458,7 @@
             DataGridViewCellStyle4.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.dgvLiquidacionFondoCajaChica.RowsDefaultCellStyle = DataGridViewCellStyle4
             Me.dgvLiquidacionFondoCajaChica.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvLiquidacionFondoCajaChica.Size = New System.Drawing.Size(1003, 477)
+            Me.dgvLiquidacionFondoCajaChica.Size = New System.Drawing.Size(1003, 479)
             Me.dgvLiquidacionFondoCajaChica.TabIndex = 48
             '
             'Label4
@@ -559,57 +559,62 @@
             '
             'MenuStrip1
             '
+            Me.MenuStrip1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
             Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnCargar, Me.btnAnularSolicitud, Me.btnLiquidacionFondoCCH, Me.btnGuardarSolicitudCCH, Me.btnCancelar})
             Me.MenuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow
             Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
             Me.MenuStrip1.Name = "MenuStrip1"
             Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(7, 2, 0, 2)
-            Me.MenuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
-            Me.MenuStrip1.Size = New System.Drawing.Size(1012, 24)
+            Me.MenuStrip1.Size = New System.Drawing.Size(1012, 32)
             Me.MenuStrip1.TabIndex = 187
             Me.MenuStrip1.Text = "msIngresoBodega"
             '
             'btnCargar
             '
-            Me.btnCargar.Image = Global.syscisepro.My.Resources.Resources.BuscarRegistro
+            Me.btnCargar.Image = Global.syscisepro.My.Resources.Resources.search_24dp_FILL0_wght400_GRAD0_opsz24__2_
+            Me.btnCargar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnCargar.Name = "btnCargar"
-            Me.btnCargar.Size = New System.Drawing.Size(153, 20)
-            Me.btnCargar.Text = "CARGAR SOLICITUDES"
+            Me.btnCargar.Size = New System.Drawing.Size(87, 28)
+            Me.btnCargar.Text = "BUSCAR"
             '
             'btnAnularSolicitud
             '
             Me.btnAnularSolicitud.Enabled = False
             Me.btnAnularSolicitud.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnAnularSolicitud.Image = Global.syscisepro.My.Resources.Resources.EliminarRegistro
+            Me.btnAnularSolicitud.Image = Global.syscisepro.My.Resources.Resources.do_not_disturb_on_24dp_FILL0_wght400_GRAD0_opsz24
+            Me.btnAnularSolicitud.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnAnularSolicitud.Name = "btnAnularSolicitud"
-            Me.btnAnularSolicitud.Size = New System.Drawing.Size(215, 20)
-            Me.btnAnularSolicitud.Text = "ANULAR DOCUMENTO / SOLICITUD"
+            Me.btnAnularSolicitud.Size = New System.Drawing.Size(88, 28)
+            Me.btnAnularSolicitud.Text = "ANULAR "
             '
             'btnLiquidacionFondoCCH
             '
             Me.btnLiquidacionFondoCCH.Enabled = False
             Me.btnLiquidacionFondoCCH.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnLiquidacionFondoCCH.Image = Global.syscisepro.My.Resources.Resources.ModificarRegistro
+            Me.btnLiquidacionFondoCCH.Image = Global.syscisepro.My.Resources.Resources.edit_note_24dp_FILL0_wght400_GRAD0_opsz24__2_
+            Me.btnLiquidacionFondoCCH.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnLiquidacionFondoCCH.Name = "btnLiquidacionFondoCCH"
-            Me.btnLiquidacionFondoCCH.Size = New System.Drawing.Size(84, 20)
+            Me.btnLiquidacionFondoCCH.Size = New System.Drawing.Size(92, 28)
             Me.btnLiquidacionFondoCCH.Text = "LIQUIDAR"
             '
             'btnGuardarSolicitudCCH
             '
             Me.btnGuardarSolicitudCCH.Enabled = False
             Me.btnGuardarSolicitudCCH.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnGuardarSolicitudCCH.Image = Global.syscisepro.My.Resources.Resources.GuardarRegistro
+            Me.btnGuardarSolicitudCCH.Image = Global.syscisepro.My.Resources.Resources.save_24dp_FILL0_wght400_GRAD0_opsz24__2_
+            Me.btnGuardarSolicitudCCH.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnGuardarSolicitudCCH.Name = "btnGuardarSolicitudCCH"
-            Me.btnGuardarSolicitudCCH.Size = New System.Drawing.Size(87, 20)
+            Me.btnGuardarSolicitudCCH.Size = New System.Drawing.Size(95, 28)
             Me.btnGuardarSolicitudCCH.Text = "GUARDAR"
             '
             'btnCancelar
             '
             Me.btnCancelar.Enabled = False
             Me.btnCancelar.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnCancelar.Image = Global.syscisepro.My.Resources.Resources.cancel
+            Me.btnCancelar.Image = Global.syscisepro.My.Resources.Resources.cancel_24dp_FILL0_wght400_GRAD0_opsz24
+            Me.btnCancelar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnCancelar.Name = "btnCancelar"
-            Me.btnCancelar.Size = New System.Drawing.Size(89, 20)
+            Me.btnCancelar.Size = New System.Drawing.Size(97, 28)
             Me.btnCancelar.Text = "CANCELAR"
             '
             'FormLiquidacionCajasChicas
@@ -621,12 +626,15 @@
             Me.Controls.Add(Me.MenuStrip1)
             Me.Controls.Add(Me.tcLiquidar)
             Me.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
             Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
             Me.MaximizeBox = False
             Me.MinimizeBox = False
             Me.Name = "FormLiquidacionCajasChicas"
             Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+            Me.StateActive.Border.DrawBorders = CType((((Krypton.Toolkit.PaletteDrawBorders.Top Or Krypton.Toolkit.PaletteDrawBorders.Bottom) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Left) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Right), Krypton.Toolkit.PaletteDrawBorders)
+            Me.StateActive.Border.Rounding = 5.0!
             Me.Text = "LIQUIDACIÓN DE CAJA CHICA"
             Me.tcLiquidar.ResumeLayout(False)
             Me.tpLiquidar.ResumeLayout(False)

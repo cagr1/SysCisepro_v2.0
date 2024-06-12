@@ -320,7 +320,8 @@ Namespace FORMULARIOS.INVENTARIOS.PROCESO
                     rbtCliente.ForeColor = Color.White
                     rbtPersonal.ForeColor = Color.White
                     dgvCustodios.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
-            End Select 
+            End Select
+            dgvCustodios.Font = New Font("Roboto", 8, FontStyle.Regular)
         End Sub
 
     End Class

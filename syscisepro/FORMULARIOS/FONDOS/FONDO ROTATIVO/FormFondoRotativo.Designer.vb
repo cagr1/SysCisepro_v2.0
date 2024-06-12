@@ -82,7 +82,7 @@
             DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
             DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
             Me.dgvFondoRotativo.DefaultCellStyle = DataGridViewCellStyle2
-            Me.dgvFondoRotativo.Location = New System.Drawing.Point(4, 205)
+            Me.dgvFondoRotativo.Location = New System.Drawing.Point(4, 207)
             Me.dgvFondoRotativo.MultiSelect = False
             Me.dgvFondoRotativo.Name = "dgvFondoRotativo"
             Me.dgvFondoRotativo.ReadOnly = True
@@ -197,7 +197,7 @@
             Me.pCentroCostoSolicitudFR.Controls.Add(Me.lblCanton)
             Me.pCentroCostoSolicitudFR.Controls.Add(Me.lblCentroCosto)
             Me.pCentroCostoSolicitudFR.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.pCentroCostoSolicitudFR.Location = New System.Drawing.Point(4, 134)
+            Me.pCentroCostoSolicitudFR.Location = New System.Drawing.Point(4, 137)
             Me.pCentroCostoSolicitudFR.Name = "pCentroCostoSolicitudFR"
             Me.pCentroCostoSolicitudFR.Size = New System.Drawing.Size(789, 68)
             Me.pCentroCostoSolicitudFR.TabIndex = 14
@@ -305,7 +305,7 @@
             Me.GroupBox1.Controls.Add(Me.txtIdFondoRotativo)
             Me.GroupBox1.Controls.Add(Me.lblTipoCuenta)
             Me.GroupBox1.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.GroupBox1.Location = New System.Drawing.Point(4, 26)
+            Me.GroupBox1.Location = New System.Drawing.Point(4, 33)
             Me.GroupBox1.Name = "GroupBox1"
             Me.GroupBox1.Size = New System.Drawing.Size(789, 105)
             Me.GroupBox1.TabIndex = 15
@@ -369,13 +369,13 @@
             '
             'MenuStrip1
             '
+            Me.MenuStrip1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
             Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnNuevoFondoRotativo, Me.btnModificarFondoRotativo, Me.btnGuardarFondoRotativo, Me.btnCancelarFondoRotativo, Me.btnReporteFondoRotativo})
             Me.MenuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow
             Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
             Me.MenuStrip1.Name = "MenuStrip1"
             Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(7, 2, 0, 2)
-            Me.MenuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
-            Me.MenuStrip1.Size = New System.Drawing.Size(798, 24)
+            Me.MenuStrip1.Size = New System.Drawing.Size(798, 32)
             Me.MenuStrip1.TabIndex = 189
             Me.MenuStrip1.Text = "msIngresoBodega"
             '
@@ -420,9 +420,10 @@
             'btnReporteFondoRotativo
             '
             Me.btnReporteFondoRotativo.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnReporteFondoRotativo.Image = Global.syscisepro.My.Resources.Resources.report
+            Me.btnReporteFondoRotativo.Image = Global.syscisepro.My.Resources.Resources.description_24dp_FILL0_wght400_GRAD0_opsz24__2_
+            Me.btnReporteFondoRotativo.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnReporteFondoRotativo.Name = "btnReporteFondoRotativo"
-            Me.btnReporteFondoRotativo.Size = New System.Drawing.Size(82, 20)
+            Me.btnReporteFondoRotativo.Size = New System.Drawing.Size(90, 28)
             Me.btnReporteFondoRotativo.Text = "REPORTE"
             '
             'FormFondoRotativo
@@ -435,10 +436,13 @@
             Me.Controls.Add(Me.GroupBox1)
             Me.Controls.Add(Me.pCentroCostoSolicitudFR)
             Me.Controls.Add(Me.dgvFondoRotativo)
-            Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
             Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
             Me.Name = "FormFondoRotativo"
             Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+            Me.StateActive.Border.DrawBorders = CType((((Krypton.Toolkit.PaletteDrawBorders.Top Or Krypton.Toolkit.PaletteDrawBorders.Bottom) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Left) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Right), Krypton.Toolkit.PaletteDrawBorders)
+            Me.StateActive.Border.Rounding = 5.0!
             Me.Text = "DEFINICION FONDO ROTATIVO"
             CType(Me.dgvFondoRotativo, System.ComponentModel.ISupportInitialize).EndInit()
             Me.pCentroCostoSolicitudFR.ResumeLayout(False)

@@ -115,6 +115,8 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
                     dgvComprobantesCompra.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
                     dgvDetalleComprobanteRetencion.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
             End Select
+            dgvAsientoComprobanteCompra.Font = New Font("Roboto", 8, FontStyle.Regular)
+            dgvDetalleComprobanteRetencion.Font = New Font("Roboto", 8, FontStyle.Regular)
             _sqlCommands = New List(Of SqlCommand)
             cmbBienServicio.SelectedIndex = 0
             dtpMes.Value = New DateTime(DateTime.Now.Year, DateTime.Now.Month, 1)

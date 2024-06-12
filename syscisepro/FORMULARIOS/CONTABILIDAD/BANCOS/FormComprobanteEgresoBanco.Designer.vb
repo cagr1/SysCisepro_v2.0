@@ -137,20 +137,20 @@
             'lblNumeroComprobanteEgreso
             '
             Me.lblNumeroComprobanteEgreso.AutoSize = True
-            Me.lblNumeroComprobanteEgreso.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.lblNumeroComprobanteEgreso.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.lblNumeroComprobanteEgreso.Location = New System.Drawing.Point(9, 23)
             Me.lblNumeroComprobanteEgreso.Name = "lblNumeroComprobanteEgreso"
-            Me.lblNumeroComprobanteEgreso.Size = New System.Drawing.Size(73, 13)
+            Me.lblNumeroComprobanteEgreso.Size = New System.Drawing.Size(61, 13)
             Me.lblNumeroComprobanteEgreso.TabIndex = 1
             Me.lblNumeroComprobanteEgreso.Text = "NRO :  CE -"
             '
             'lblFechaComprobante
             '
             Me.lblFechaComprobante.AutoSize = True
-            Me.lblFechaComprobante.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.lblFechaComprobante.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.lblFechaComprobante.Location = New System.Drawing.Point(172, 26)
             Me.lblFechaComprobante.Name = "lblFechaComprobante"
-            Me.lblFechaComprobante.Size = New System.Drawing.Size(43, 13)
+            Me.lblFechaComprobante.Size = New System.Drawing.Size(44, 13)
             Me.lblFechaComprobante.TabIndex = 2
             Me.lblFechaComprobante.Text = "FECHA:"
             '
@@ -175,17 +175,17 @@
             'lblActividad
             '
             Me.lblActividad.AutoSize = True
-            Me.lblActividad.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.lblActividad.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.lblActividad.Location = New System.Drawing.Point(532, 23)
             Me.lblActividad.Name = "lblActividad"
-            Me.lblActividad.Size = New System.Drawing.Size(73, 13)
+            Me.lblActividad.Size = New System.Drawing.Size(68, 13)
             Me.lblActividad.TabIndex = 5
             Me.lblActividad.Text = "ACTIVIDAD :"
             '
             'lblTipoPago
             '
             Me.lblTipoPago.AutoSize = True
-            Me.lblTipoPago.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.lblTipoPago.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.lblTipoPago.Location = New System.Drawing.Point(7, 23)
             Me.lblTipoPago.Name = "lblTipoPago"
             Me.lblTipoPago.Size = New System.Drawing.Size(67, 13)
@@ -195,10 +195,10 @@
             'lblRazonComprobanteEgreso
             '
             Me.lblRazonComprobanteEgreso.AutoSize = True
-            Me.lblRazonComprobanteEgreso.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.lblRazonComprobanteEgreso.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.lblRazonComprobanteEgreso.Location = New System.Drawing.Point(285, 45)
             Me.lblRazonComprobanteEgreso.Name = "lblRazonComprobanteEgreso"
-            Me.lblRazonComprobanteEgreso.Size = New System.Drawing.Size(49, 13)
+            Me.lblRazonComprobanteEgreso.Size = New System.Drawing.Size(50, 13)
             Me.lblRazonComprobanteEgreso.TabIndex = 8
             Me.lblRazonComprobanteEgreso.Text = "RAZON :"
             '
@@ -232,10 +232,10 @@
             'txtNumeroComprobanteEgresoBanco
             '
             Me.txtNumeroComprobanteEgresoBanco.BackColor = System.Drawing.Color.White
-            Me.txtNumeroComprobanteEgresoBanco.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtNumeroComprobanteEgresoBanco.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtNumeroComprobanteEgresoBanco.Location = New System.Drawing.Point(81, 20)
             Me.txtNumeroComprobanteEgresoBanco.Name = "txtNumeroComprobanteEgresoBanco"
-            Me.txtNumeroComprobanteEgresoBanco.Size = New System.Drawing.Size(52, 20)
+            Me.txtNumeroComprobanteEgresoBanco.Size = New System.Drawing.Size(52, 21)
             Me.txtNumeroComprobanteEgresoBanco.TabIndex = 13
             '
             'txtPagadoA
@@ -252,10 +252,10 @@
             Me.txtActividad.BackColor = System.Drawing.Color.White
             Me.txtActividad.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtActividad.Enabled = False
-            Me.txtActividad.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtActividad.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtActividad.Location = New System.Drawing.Point(611, 20)
             Me.txtActividad.Name = "txtActividad"
-            Me.txtActividad.Size = New System.Drawing.Size(125, 20)
+            Me.txtActividad.Size = New System.Drawing.Size(125, 21)
             Me.txtActividad.TabIndex = 15
             Me.txtActividad.Text = "1010102"
             '
@@ -263,10 +263,10 @@
             '
             Me.txtRazonComprobanteEgresoBanco.BackColor = System.Drawing.Color.White
             Me.txtRazonComprobanteEgresoBanco.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-            Me.txtRazonComprobanteEgresoBanco.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtRazonComprobanteEgresoBanco.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtRazonComprobanteEgresoBanco.Location = New System.Drawing.Point(340, 42)
             Me.txtRazonComprobanteEgresoBanco.Name = "txtRazonComprobanteEgresoBanco"
-            Me.txtRazonComprobanteEgresoBanco.Size = New System.Drawing.Size(394, 20)
+            Me.txtRazonComprobanteEgresoBanco.Size = New System.Drawing.Size(394, 21)
             Me.txtRazonComprobanteEgresoBanco.TabIndex = 17
             '
             'txtRucCi
@@ -357,7 +357,7 @@
             Me.cmbTipoPago.BackColor = System.Drawing.Color.White
             Me.cmbTipoPago.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cmbTipoPago.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-            Me.cmbTipoPago.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.cmbTipoPago.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cmbTipoPago.FormattingEnabled = True
             Me.cmbTipoPago.Items.AddRange(New Object() {"CHEQUE", "EFECTIVO", "CREDITO A CUENTA", "NOTA DE CREDITO", "NOTA DE DEBITO"})
             Me.cmbTipoPago.Location = New System.Drawing.Point(87, 20)
@@ -432,10 +432,10 @@
             '
             'dtpFechaComprobanteEgreso
             '
-            Me.dtpFechaComprobanteEgreso.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.dtpFechaComprobanteEgreso.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.dtpFechaComprobanteEgreso.Location = New System.Drawing.Point(224, 20)
             Me.dtpFechaComprobanteEgreso.Name = "dtpFechaComprobanteEgreso"
-            Me.dtpFechaComprobanteEgreso.Size = New System.Drawing.Size(253, 20)
+            Me.dtpFechaComprobanteEgreso.Size = New System.Drawing.Size(253, 21)
             Me.dtpFechaComprobanteEgreso.TabIndex = 21
             '
             'lblIdComprobanteEgresoBancos
@@ -539,10 +539,10 @@
             'lblValorComprobanteEgreso
             '
             Me.lblValorComprobanteEgreso.AutoSize = True
-            Me.lblValorComprobanteEgreso.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.lblValorComprobanteEgreso.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.lblValorComprobanteEgreso.Location = New System.Drawing.Point(508, 23)
             Me.lblValorComprobanteEgreso.Name = "lblValorComprobanteEgreso"
-            Me.lblValorComprobanteEgreso.Size = New System.Drawing.Size(43, 13)
+            Me.lblValorComprobanteEgreso.Size = New System.Drawing.Size(45, 13)
             Me.lblValorComprobanteEgreso.TabIndex = 28
             Me.lblValorComprobanteEgreso.Text = "VALOR:"
             '
@@ -550,10 +550,10 @@
             '
             Me.txtValorComprobanteEgresoBancos.BackColor = System.Drawing.Color.White
             Me.txtValorComprobanteEgresoBancos.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-            Me.txtValorComprobanteEgresoBancos.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtValorComprobanteEgresoBancos.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtValorComprobanteEgresoBancos.Location = New System.Drawing.Point(563, 20)
             Me.txtValorComprobanteEgresoBancos.Name = "txtValorComprobanteEgresoBancos"
-            Me.txtValorComprobanteEgresoBancos.Size = New System.Drawing.Size(106, 20)
+            Me.txtValorComprobanteEgresoBancos.Size = New System.Drawing.Size(106, 21)
             Me.txtValorComprobanteEgresoBancos.TabIndex = 29
             Me.txtValorComprobanteEgresoBancos.Text = "0.00"
             Me.txtValorComprobanteEgresoBancos.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -581,19 +581,19 @@
             '
             Me.txtConceptoComprobanteEgreso.BackColor = System.Drawing.Color.White
             Me.txtConceptoComprobanteEgreso.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-            Me.txtConceptoComprobanteEgreso.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtConceptoComprobanteEgreso.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtConceptoComprobanteEgreso.Location = New System.Drawing.Point(92, 42)
             Me.txtConceptoComprobanteEgreso.Name = "txtConceptoComprobanteEgreso"
-            Me.txtConceptoComprobanteEgreso.Size = New System.Drawing.Size(168, 20)
+            Me.txtConceptoComprobanteEgreso.Size = New System.Drawing.Size(168, 21)
             Me.txtConceptoComprobanteEgreso.TabIndex = 37
             '
             'Label2
             '
             Me.Label2.AutoSize = True
-            Me.Label2.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Label2.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Label2.Location = New System.Drawing.Point(6, 45)
             Me.Label2.Name = "Label2"
-            Me.Label2.Size = New System.Drawing.Size(61, 13)
+            Me.Label2.Size = New System.Drawing.Size(68, 13)
             Me.Label2.TabIndex = 36
             Me.Label2.Text = "CONCEPTO:"
             '
@@ -649,10 +649,10 @@
             '
             Me.lblCentroCosto.AutoSize = True
             Me.lblCentroCosto.Enabled = False
-            Me.lblCentroCosto.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.lblCentroCosto.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.lblCentroCosto.Location = New System.Drawing.Point(6, 15)
             Me.lblCentroCosto.Name = "lblCentroCosto"
-            Me.lblCentroCosto.Size = New System.Drawing.Size(85, 13)
+            Me.lblCentroCosto.Size = New System.Drawing.Size(93, 13)
             Me.lblCentroCosto.TabIndex = 28
             Me.lblCentroCosto.Text = "CENTRO COSTO:"
             '

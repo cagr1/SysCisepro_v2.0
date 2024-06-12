@@ -57,7 +57,7 @@ Namespace INVENTARIOS.UNIFORMES
             Dim pars = New List(Of Object())
             pars.Add(New Object() {"ID_UNIFORMES", SqlDbType.Int, idl})
             Dim liqi = ComandosSql.SeleccionarQueryWithParamsToDataAdapter(tipoCon, "BuscarRegistroEntregaUniformesXid", True, pars)
-            Dim acti = ComandosSql.SeleccionarQueryToDataAdapter(tipoCon, "SELECT * FROM dbo.DETALLE_UNIFORMES", False) 
+            Dim acti = ComandosSql.SeleccionarQueryToDataAdapter(tipoCon, "SELECT * FROM dbo.DETALLE_UNIFORMES where ESTADO_DETALLE_UNIFORMES = 1", False)
             Dim empr = ComandosSql.SeleccionarQueryToDataAdapter(tipoCon, "SELECT * FROM dbo.KARDEX", False) 
             Dim pers = ComandosSql.SeleccionarQueryToDataAdapter(tipoCon, "SELECT * FROM dbo.SECUENCIAL_ITEM", False) 
 
