@@ -54,11 +54,11 @@
             // 
             this.txtParametrobusqueda.BackColor = System.Drawing.Color.White;
             this.txtParametrobusqueda.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtParametrobusqueda.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtParametrobusqueda.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtParametrobusqueda.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(60)))), ((int)(((byte)(123)))));
             this.txtParametrobusqueda.Location = new System.Drawing.Point(59, 4);
             this.txtParametrobusqueda.Name = "txtParametrobusqueda";
-            this.txtParametrobusqueda.Size = new System.Drawing.Size(295, 23);
+            this.txtParametrobusqueda.Size = new System.Drawing.Size(295, 21);
             this.txtParametrobusqueda.TabIndex = 19;
             this.txtParametrobusqueda.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtParametrobusqueda_KeyUp);
             // 
@@ -81,7 +81,9 @@
             this.ColumnHeader1,
             this.ColumnHeader4,
             this.ColumnHeader3});
+            this.listView1.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listView1.FullRowSelect = true;
+            this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(2, 32);
             this.listView1.MultiSelect = false;
             this.listView1.Name = "listView1";
@@ -122,7 +124,7 @@
             this.cbxTipoCuenta.BackColor = System.Drawing.Color.White;
             this.cbxTipoCuenta.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxTipoCuenta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbxTipoCuenta.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxTipoCuenta.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxTipoCuenta.FormattingEnabled = true;
             this.cbxTipoCuenta.Items.AddRange(new object[] {
             "-- TODOS --",
@@ -153,6 +155,10 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "FrmBuscarPlanCuentas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StateActive.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.StateActive.Border.Rounding = 5F;
             this.Text = "BUSCAR CUENTAS CONTABLES";
             this.Load += new System.EventHandler(this.FrmBuscarPlanCuentas_Load);
             this.ResumeLayout(false);

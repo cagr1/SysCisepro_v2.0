@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmTomarFoto));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.btnBuscar = new System.Windows.Forms.ToolStripButton();
@@ -55,6 +56,7 @@
             this.pbPerfil = new System.Windows.Forms.PictureBox();
             this.ofdAbrirImagen = new System.Windows.Forms.OpenFileDialog();
             this.videoSourceFoto = new AForge.Controls.VideoSourcePlayer();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbFotoCortadaFrontal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).BeginInit();
@@ -145,6 +147,7 @@
             this.Button1.Size = new System.Drawing.Size(44, 38);
             this.Button1.TabIndex = 232;
             this.Button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.toolTip1.SetToolTip(this.Button1, "Eliminar");
             this.Button1.UseVisualStyleBackColor = true;
             this.Button1.Click += new System.EventHandler(this.Button1_Click);
             // 
@@ -167,6 +170,7 @@
             this.btnAbrirFrontal.Size = new System.Drawing.Size(44, 38);
             this.btnAbrirFrontal.TabIndex = 230;
             this.btnAbrirFrontal.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.toolTip1.SetToolTip(this.btnAbrirFrontal, "Abrir");
             this.btnAbrirFrontal.UseVisualStyleBackColor = true;
             this.btnAbrirFrontal.Click += new System.EventHandler(this.btnAbrirFrontal_Click);
             // 
@@ -190,6 +194,7 @@
             this.btn180.Size = new System.Drawing.Size(44, 38);
             this.btn180.TabIndex = 224;
             this.btn180.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.toolTip1.SetToolTip(this.btn180, "Giro 180");
             this.btn180.UseVisualStyleBackColor = true;
             this.btn180.Click += new System.EventHandler(this.btn180_Click);
             // 
@@ -203,6 +208,7 @@
             this.btn90.Size = new System.Drawing.Size(44, 38);
             this.btn90.TabIndex = 223;
             this.btn90.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.toolTip1.SetToolTip(this.btn90, "Giro 90");
             this.btn90.UseVisualStyleBackColor = true;
             this.btn90.Click += new System.EventHandler(this.btn90_Click);
             // 
@@ -215,6 +221,7 @@
             this.btnVertical.Size = new System.Drawing.Size(44, 38);
             this.btnVertical.TabIndex = 222;
             this.btnVertical.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.toolTip1.SetToolTip(this.btnVertical, "Vertical");
             this.btnVertical.UseVisualStyleBackColor = true;
             this.btnVertical.Click += new System.EventHandler(this.btnVertical_Click);
             // 
@@ -227,6 +234,7 @@
             this.btnHorizontal.Size = new System.Drawing.Size(44, 38);
             this.btnHorizontal.TabIndex = 221;
             this.btnHorizontal.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.toolTip1.SetToolTip(this.btnHorizontal, "Horizontal");
             this.btnHorizontal.UseVisualStyleBackColor = true;
             this.btnHorizontal.Click += new System.EventHandler(this.btnHorizontal_Click);
             // 
@@ -251,6 +259,7 @@
             this.Button2.Size = new System.Drawing.Size(44, 38);
             this.Button2.TabIndex = 245;
             this.Button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.toolTip1.SetToolTip(this.Button2, "Eliminar");
             this.Button2.UseVisualStyleBackColor = true;
             this.Button2.Click += new System.EventHandler(this.Button2_Click);
             // 
@@ -273,6 +282,7 @@
             this.btnAbrirPerfil.Size = new System.Drawing.Size(44, 38);
             this.btnAbrirPerfil.TabIndex = 243;
             this.btnAbrirPerfil.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.toolTip1.SetToolTip(this.btnAbrirPerfil, "Abrir");
             this.btnAbrirPerfil.UseVisualStyleBackColor = true;
             this.btnAbrirPerfil.Click += new System.EventHandler(this.btnAbrirPerfil_Click);
             // 
@@ -296,6 +306,7 @@
             this.btn180Perfil.Size = new System.Drawing.Size(44, 38);
             this.btn180Perfil.TabIndex = 237;
             this.btn180Perfil.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.toolTip1.SetToolTip(this.btn180Perfil, "Giro 180");
             this.btn180Perfil.UseVisualStyleBackColor = true;
             this.btn180Perfil.Click += new System.EventHandler(this.btn180Perfil_Click);
             // 
@@ -308,6 +319,7 @@
             this.btn90Perfil.Size = new System.Drawing.Size(44, 38);
             this.btn90Perfil.TabIndex = 236;
             this.btn90Perfil.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.toolTip1.SetToolTip(this.btn90Perfil, "Giro 90");
             this.btn90Perfil.UseVisualStyleBackColor = true;
             this.btn90Perfil.Click += new System.EventHandler(this.btn90Perfil_Click);
             // 
@@ -320,6 +332,7 @@
             this.btnVerticalPerfil.Size = new System.Drawing.Size(44, 38);
             this.btnVerticalPerfil.TabIndex = 235;
             this.btnVerticalPerfil.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.toolTip1.SetToolTip(this.btnVerticalPerfil, "Vertical");
             this.btnVerticalPerfil.UseVisualStyleBackColor = true;
             this.btnVerticalPerfil.Click += new System.EventHandler(this.btnVerticalPerfil_Click);
             // 
@@ -332,6 +345,7 @@
             this.btnHorizontalPerfil.Size = new System.Drawing.Size(44, 38);
             this.btnHorizontalPerfil.TabIndex = 234;
             this.btnHorizontalPerfil.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.toolTip1.SetToolTip(this.btnHorizontalPerfil, "Horizontal");
             this.btnHorizontalPerfil.UseVisualStyleBackColor = true;
             this.btnHorizontalPerfil.Click += new System.EventHandler(this.btnHorizontalPerfil_Click);
             // 
@@ -437,5 +451,6 @@
         internal System.Windows.Forms.PictureBox pbPerfil;
         internal System.Windows.Forms.OpenFileDialog ofdAbrirImagen;
         private AForge.Controls.VideoSourcePlayer videoSourceFoto;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

@@ -45,6 +45,7 @@ namespace SysCisepro3.TalentoHumano
                     Icon = Resources.logo_c; 
                     break;
             }
+            dataGridView1.Font = new Font("Roboto", 8, FontStyle.Regular);
             ValidationForms.SetPlaceholder(txtParametrobusqueda, "BUSCAR PERSONAL");
             //txtParametrobusqueda.Focus();
         }

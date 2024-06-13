@@ -1,8 +1,8 @@
 ﻿Namespace FORMULARIOS.OPERACIONES
     <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
     Partial Class FrmEditarRegistroPorgramacion
-        Inherits System.Windows.Forms.Form
-
+        'Inherits System.Windows.Forms.Form
+        Inherits Krypton.Toolkit.KryptonForm
         'Form reemplaza a Dispose para limpiar la lista de componentes.
         <System.Diagnostics.DebuggerNonUserCode()> _
         Protected Overrides Sub Dispose(ByVal disposing As Boolean)
@@ -197,7 +197,7 @@
             Me.GroupBox2.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.GroupBox2.Location = New System.Drawing.Point(1, 88)
             Me.GroupBox2.Name = "GroupBox2"
-            Me.GroupBox2.Size = New System.Drawing.Size(770, 150)
+            Me.GroupBox2.Size = New System.Drawing.Size(770, 153)
             Me.GroupBox2.TabIndex = 196
             Me.GroupBox2.TabStop = False
             Me.GroupBox2.Text = "DATOS DEL HORARIO DE TRABAJO ASIGNADO"
@@ -219,7 +219,7 @@
             'Label32
             '
             Me.Label32.AutoSize = True
-            Me.Label32.Location = New System.Drawing.Point(458, 125)
+            Me.Label32.Location = New System.Drawing.Point(453, 125)
             Me.Label32.Name = "Label32"
             Me.Label32.Size = New System.Drawing.Size(35, 13)
             Me.Label32.TabIndex = 216
@@ -231,7 +231,7 @@
             Me.txtNumHorario.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtNumHorario.Enabled = False
             Me.txtNumHorario.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtNumHorario.Location = New System.Drawing.Point(56, 93)
+            Me.txtNumHorario.Location = New System.Drawing.Point(56, 98)
             Me.txtNumHorario.Name = "txtNumHorario"
             Me.txtNumHorario.Size = New System.Drawing.Size(65, 20)
             Me.txtNumHorario.TabIndex = 215
@@ -257,7 +257,7 @@
             'Label20
             '
             Me.Label20.AutoSize = True
-            Me.Label20.Location = New System.Drawing.Point(458, 100)
+            Me.Label20.Location = New System.Drawing.Point(447, 103)
             Me.Label20.Name = "Label20"
             Me.Label20.Size = New System.Drawing.Size(58, 13)
             Me.Label20.TabIndex = 213
@@ -284,7 +284,7 @@
             '
             Me.txtDetalle.BackColor = System.Drawing.Color.White
             Me.txtDetalle.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-            Me.txtDetalle.Location = New System.Drawing.Point(56, 123)
+            Me.txtDetalle.Location = New System.Drawing.Point(56, 125)
             Me.txtDetalle.Name = "txtDetalle"
             Me.txtDetalle.Size = New System.Drawing.Size(387, 21)
             Me.txtDetalle.TabIndex = 209
@@ -292,7 +292,7 @@
             'Label29
             '
             Me.Label29.AutoSize = True
-            Me.Label29.Location = New System.Drawing.Point(3, 126)
+            Me.Label29.Location = New System.Drawing.Point(2, 129)
             Me.Label29.Name = "Label29"
             Me.Label29.Size = New System.Drawing.Size(55, 13)
             Me.Label29.TabIndex = 208
@@ -310,12 +310,13 @@
             'bntHorarios
             '
             Me.bntHorarios.BackColor = System.Drawing.Color.White
+            Me.bntHorarios.FlatAppearance.BorderSize = 0
+            Me.bntHorarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.bntHorarios.Font = New System.Drawing.Font("Consolas", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.bntHorarios.Image = Global.syscisepro.My.Resources.Resources.BuscarRegistro
-            Me.bntHorarios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+            Me.bntHorarios.Image = Global.syscisepro.My.Resources.Resources.search_24dp_FILL0_wght400_GRAD0_opsz24__2_
             Me.bntHorarios.Location = New System.Drawing.Point(737, 17)
             Me.bntHorarios.Name = "bntHorarios"
-            Me.bntHorarios.Size = New System.Drawing.Size(26, 26)
+            Me.bntHorarios.Size = New System.Drawing.Size(27, 27)
             Me.bntHorarios.TabIndex = 194
             Me.bntHorarios.TextAlign = System.Drawing.ContentAlignment.MiddleRight
             Me.bntHorarios.UseVisualStyleBackColor = False
@@ -742,31 +743,35 @@
             '
             'Button2
             '
+            Me.Button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(75, Byte), Integer), CType(CType(166, Byte), Integer), CType(CType(79, Byte), Integer))
             Me.Button2.DialogResult = System.Windows.Forms.DialogResult.OK
             Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Button2.Location = New System.Drawing.Point(686, 241)
+            Me.Button2.ForeColor = System.Drawing.Color.White
+            Me.Button2.Location = New System.Drawing.Point(686, 247)
             Me.Button2.Name = "Button2"
             Me.Button2.Size = New System.Drawing.Size(75, 23)
             Me.Button2.TabIndex = 199
             Me.Button2.Text = "ACEPTAR"
-            Me.Button2.UseVisualStyleBackColor = True
+            Me.Button2.UseVisualStyleBackColor = False
             '
             'Button1
             '
+            Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(58, Byte), Integer))
             Me.Button1.DialogResult = System.Windows.Forms.DialogResult.Cancel
-            Me.Button1.Location = New System.Drawing.Point(605, 241)
+            Me.Button1.ForeColor = System.Drawing.Color.White
+            Me.Button1.Location = New System.Drawing.Point(605, 247)
             Me.Button1.Name = "Button1"
             Me.Button1.Size = New System.Drawing.Size(75, 23)
             Me.Button1.TabIndex = 198
             Me.Button1.Text = "CANCELAR"
-            Me.Button1.UseVisualStyleBackColor = True
+            Me.Button1.UseVisualStyleBackColor = False
             '
             'FrmEditarRegistroPorgramacion
             '
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.BackColor = System.Drawing.Color.White
-            Me.ClientSize = New System.Drawing.Size(773, 271)
+            Me.ClientSize = New System.Drawing.Size(773, 281)
             Me.Controls.Add(Me.Button2)
             Me.Controls.Add(Me.Button1)
             Me.Controls.Add(Me.GroupBox3)
@@ -775,7 +780,11 @@
             Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
             Me.Name = "FrmEditarRegistroPorgramacion"
             Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-            Me.Text = "MODOFICAR REGISTRO DE PROGRAMACIÓN"
+            Me.StateActive.Border.DrawBorders = CType((((Krypton.Toolkit.PaletteDrawBorders.Top Or Krypton.Toolkit.PaletteDrawBorders.Bottom) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Left) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Right), Krypton.Toolkit.PaletteDrawBorders)
+            Me.StateActive.Border.Rounding = 5.0!
+            Me.Text = "MODIFICAR REGISTRO DE PROGRAMACIÓN"
             Me.GroupBox3.ResumeLayout(False)
             Me.GroupBox3.PerformLayout()
             Me.GroupBox2.ResumeLayout(False)

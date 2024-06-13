@@ -39,6 +39,7 @@
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.chbxActivar = new System.Windows.Forms.CheckBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtFiltro = new System.Windows.Forms.TextBox();
             this.lblsitio = new System.Windows.Forms.Label();
@@ -50,7 +51,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.cbxGrupo = new System.Windows.Forms.ComboBox();
             this.dgvsitios = new System.Windows.Forms.DataGridView();
-            this.chbxActivar = new System.Windows.Forms.CheckBox();
             this.toolStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvsitios)).BeginInit();
@@ -58,46 +58,50 @@
             // 
             // toolStrip1
             // 
+            this.toolStrip1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnReload,
             this.btnExportar,
             this.toolStripLabel1});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1102, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(1077, 31);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             this.toolStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.toolStrip1_ItemClicked);
             // 
             // btnReload
             // 
-            this.btnReload.Image = global::SysCisepro3.Properties.Resources.BuscarRegistro;
+            this.btnReload.Image = global::SysCisepro3.Properties.Resources.search_24dp_FILL0_wght400_GRAD0_opsz24__2_;
+            this.btnReload.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnReload.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnReload.Name = "btnReload";
-            this.btnReload.Size = new System.Drawing.Size(86, 22);
-            this.btnReload.Text = "RECARGAR";
+            this.btnReload.Size = new System.Drawing.Size(79, 28);
+            this.btnReload.Text = "BUSCAR";
             this.btnReload.Click += new System.EventHandler(this.btnReload_Click);
             // 
             // btnExportar
             // 
-            this.btnExportar.Image = global::SysCisepro3.Properties.Resources.excel_icon;
+            this.btnExportar.Image = global::SysCisepro3.Properties.Resources.icons8_excel_48;
+            this.btnExportar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnExportar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnExportar.Name = "btnExportar";
-            this.btnExportar.Size = new System.Drawing.Size(120, 22);
-            this.btnExportar.Text = "EXPORTAR DATOS";
+            this.btnExportar.Size = new System.Drawing.Size(93, 28);
+            this.btnExportar.Text = "EXPORTAR ";
             this.btnExportar.Click += new System.EventHandler(this.toolStripButton2_Click_1);
             // 
             // toolStripLabel1
             // 
             this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(0, 22);
+            this.toolStripLabel1.Size = new System.Drawing.Size(0, 28);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(126, 28);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(49, 13);
+            this.label1.Size = new System.Drawing.Size(47, 13);
             this.label1.TabIndex = 1;
             this.label1.Text = "GRUPO:";
             // 
@@ -115,19 +119,31 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.cbxGrupo);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(21, 28);
+            this.groupBox1.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(0, 33);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1055, 84);
+            this.groupBox1.Size = new System.Drawing.Size(1076, 84);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "LUGAR SITIO";
+            // 
+            // chbxActivar
+            // 
+            this.chbxActivar.AutoSize = true;
+            this.chbxActivar.Location = new System.Drawing.Point(9, 28);
+            this.chbxActivar.Name = "chbxActivar";
+            this.chbxActivar.Size = new System.Drawing.Size(71, 17);
+            this.chbxActivar.TabIndex = 12;
+            this.chbxActivar.Text = "ACTIVAR";
+            this.chbxActivar.UseVisualStyleBackColor = true;
+            this.chbxActivar.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(6, 61);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(54, 13);
+            this.label5.Size = new System.Drawing.Size(52, 13);
             this.label5.TabIndex = 11;
             this.label5.Text = "BUSCAR:";
             // 
@@ -135,7 +151,7 @@
             // 
             this.txtFiltro.Location = new System.Drawing.Point(66, 58);
             this.txtFiltro.Name = "txtFiltro";
-            this.txtFiltro.Size = new System.Drawing.Size(421, 20);
+            this.txtFiltro.Size = new System.Drawing.Size(421, 21);
             this.txtFiltro.TabIndex = 10;
             this.txtFiltro.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtFiltro_KeyUp);
             // 
@@ -163,7 +179,7 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(390, 28);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(80, 13);
+            this.label4.Size = new System.Drawing.Size(77, 13);
             this.label4.TabIndex = 7;
             this.label4.Text = "SITIO - RIVER:";
             // 
@@ -171,14 +187,14 @@
             // 
             this.dtpHasta.Location = new System.Drawing.Point(817, 58);
             this.dtpHasta.Name = "dtpHasta";
-            this.dtpHasta.Size = new System.Drawing.Size(200, 20);
+            this.dtpHasta.Size = new System.Drawing.Size(200, 21);
             this.dtpHasta.TabIndex = 6;
             // 
             // dtpDesde
             // 
-            this.dtpDesde.Location = new System.Drawing.Point(579, 58);
+            this.dtpDesde.Location = new System.Drawing.Point(573, 58);
             this.dtpDesde.Name = "dtpDesde";
-            this.dtpDesde.Size = new System.Drawing.Size(170, 20);
+            this.dtpDesde.Size = new System.Drawing.Size(170, 21);
             this.dtpDesde.TabIndex = 5;
             // 
             // label3
@@ -195,7 +211,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(516, 61);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(47, 13);
+            this.label2.Size = new System.Drawing.Size(43, 13);
             this.label2.TabIndex = 3;
             this.label2.Text = "DESDE:";
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -237,7 +253,7 @@
             dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvsitios.DefaultCellStyle = dataGridViewCellStyle13;
-            this.dgvsitios.Location = new System.Drawing.Point(21, 118);
+            this.dgvsitios.Location = new System.Drawing.Point(0, 118);
             this.dgvsitios.MultiSelect = false;
             this.dgvsitios.Name = "dgvsitios";
             this.dgvsitios.ReadOnly = true;
@@ -254,31 +270,20 @@
             dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvsitios.RowsDefaultCellStyle = dataGridViewCellStyle15;
             this.dgvsitios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvsitios.Size = new System.Drawing.Size(1055, 341);
+            this.dgvsitios.Size = new System.Drawing.Size(1076, 341);
             this.dgvsitios.TabIndex = 42;
-            // 
-            // chbxActivar
-            // 
-            this.chbxActivar.AutoSize = true;
-            this.chbxActivar.Location = new System.Drawing.Point(9, 28);
-            this.chbxActivar.Name = "chbxActivar";
-            this.chbxActivar.Size = new System.Drawing.Size(72, 17);
-            this.chbxActivar.TabIndex = 12;
-            this.chbxActivar.Text = "ACTIVAR";
-            this.chbxActivar.UseVisualStyleBackColor = true;
-            this.chbxActivar.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // FrmReporteSitioBodega
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1102, 500);
+            this.ClientSize = new System.Drawing.Size(1077, 500);
             this.Controls.Add(this.dgvsitios);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.toolStrip1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "FrmReporteSitioBodega";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Sitio de Trabajo";
             this.Load += new System.EventHandler(this.FrmReporteSitioBodega_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();

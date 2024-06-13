@@ -47,7 +47,7 @@ namespace SysCisepro3.TalentoHumano
         private void FrmReporteGeneralNomina_Load(object sender, EventArgs e)
         {
             // CARGAR ICONO Y DESIEÑO SEGUN SISTEMA 
-            toolStrip1.BackColor = ValidationForms.GetColorSistema(TipoCon);
+            //toolStrip1.BackColor = ValidationForms.GetColorSistema(TipoCon);
             toolStrip1.ForeColor = Color.White;
             toolStripLabel1.BackColor = ValidationForms.GetColorSistema(TipoCon);
             toolStripLabel1.ForeColor = Color.White;
@@ -65,6 +65,7 @@ namespace SysCisepro3.TalentoHumano
                     Icon = Resources.logo_c;
                     break;
             }
+            dgvPersonal.Font = new System.Drawing.Font("Roboto", 8, FontStyle.Regular);
             ValidationForms.SetPlaceholder(txtFiltro,"BUSCAR POR NOMBRE..");
             var f = Usuario.ObtenerFechaSola(TipoCon);
             dtpAnio.Value = new DateTime(f.Year, 1, 1);

@@ -39,30 +39,35 @@
             // 
             // Button2
             // 
+            this.Button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(166)))), ((int)(((byte)(79)))));
             this.Button2.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.Button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Button2.ForeColor = System.Drawing.Color.White;
             this.Button2.Location = new System.Drawing.Point(351, 157);
             this.Button2.Name = "Button2";
             this.Button2.Size = new System.Drawing.Size(75, 23);
             this.Button2.TabIndex = 11;
             this.Button2.Text = "ACEPTAR";
-            this.Button2.UseVisualStyleBackColor = true;
+            this.Button2.UseVisualStyleBackColor = false;
             this.Button2.Click += new System.EventHandler(this.Button2_Click);
             // 
             // Button1
             // 
+            this.Button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(62)))), ((int)(((byte)(58)))));
             this.Button1.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.Button1.ForeColor = System.Drawing.Color.White;
             this.Button1.Location = new System.Drawing.Point(270, 157);
             this.Button1.Name = "Button1";
             this.Button1.Size = new System.Drawing.Size(75, 23);
             this.Button1.TabIndex = 10;
             this.Button1.Text = "CANCELAR";
-            this.Button1.UseVisualStyleBackColor = true;
+            this.Button1.UseVisualStyleBackColor = false;
             // 
             // TextBox1
             // 
             this.TextBox1.BackColor = System.Drawing.Color.White;
             this.TextBox1.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.TextBox1.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TextBox1.Location = new System.Drawing.Point(6, 90);
             this.TextBox1.Multiline = true;
             this.TextBox1.Name = "TextBox1";
@@ -72,38 +77,39 @@
             // Label2
             // 
             this.Label2.AutoSize = true;
-            this.Label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label2.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label2.Location = new System.Drawing.Point(12, 74);
             this.Label2.Name = "Label2";
-            this.Label2.Size = new System.Drawing.Size(246, 13);
+            this.Label2.Size = new System.Drawing.Size(208, 13);
             this.Label2.TabIndex = 8;
             this.Label2.Text = "MOTIVO DE RENUNCIA / OBSERVACIÓN";
             // 
             // DateTimePicker1
             // 
+            this.DateTimePicker1.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DateTimePicker1.Location = new System.Drawing.Point(169, 4);
             this.DateTimePicker1.Name = "DateTimePicker1";
-            this.DateTimePicker1.Size = new System.Drawing.Size(200, 20);
+            this.DateTimePicker1.Size = new System.Drawing.Size(200, 21);
             this.DateTimePicker1.TabIndex = 7;
             // 
             // Label1
             // 
             this.Label1.AutoSize = true;
-            this.Label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label1.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label1.Location = new System.Drawing.Point(2, 9);
             this.Label1.Name = "Label1";
-            this.Label1.Size = new System.Drawing.Size(161, 13);
+            this.Label1.Size = new System.Drawing.Size(135, 13);
             this.Label1.TabIndex = 6;
             this.Label1.Text = "FECHA AVISO DE SALIDA:";
             // 
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox1.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBox1.ForeColor = System.Drawing.Color.Maroon;
             this.checkBox1.Location = new System.Drawing.Point(15, 44);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(229, 17);
+            this.checkBox1.Size = new System.Drawing.Size(194, 17);
             this.checkBox1.TabIndex = 12;
             this.checkBox1.Text = "NO SE PRESENTÓ EN EL PUESTO";
             this.checkBox1.UseVisualStyleBackColor = true;

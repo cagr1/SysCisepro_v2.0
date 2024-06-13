@@ -167,10 +167,10 @@
             '
             Me.TabControl1.Controls.Add(Me.TabPage2)
             Me.TabControl1.Controls.Add(Me.TabPage3)
-            Me.TabControl1.Location = New System.Drawing.Point(8, 311)
+            Me.TabControl1.Location = New System.Drawing.Point(8, 317)
             Me.TabControl1.Name = "TabControl1"
             Me.TabControl1.SelectedIndex = 0
-            Me.TabControl1.Size = New System.Drawing.Size(765, 349)
+            Me.TabControl1.Size = New System.Drawing.Size(765, 343)
             Me.TabControl1.TabIndex = 207
             '
             'TabPage2
@@ -179,7 +179,7 @@
             Me.TabPage2.Location = New System.Drawing.Point(4, 22)
             Me.TabPage2.Name = "TabPage2"
             Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-            Me.TabPage2.Size = New System.Drawing.Size(757, 323)
+            Me.TabPage2.Size = New System.Drawing.Size(757, 317)
             Me.TabPage2.TabIndex = 0
             Me.TabPage2.Text = "NORMAL"
             Me.TabPage2.UseVisualStyleBackColor = True
@@ -273,7 +273,7 @@
             Me.TabPage3.Location = New System.Drawing.Point(4, 22)
             Me.TabPage3.Name = "TabPage3"
             Me.TabPage3.Padding = New System.Windows.Forms.Padding(3)
-            Me.TabPage3.Size = New System.Drawing.Size(757, 323)
+            Me.TabPage3.Size = New System.Drawing.Size(757, 317)
             Me.TabPage3.TabIndex = 1
             Me.TabPage3.Text = "AGRUPADOS"
             Me.TabPage3.UseVisualStyleBackColor = True
@@ -290,7 +290,7 @@
             Me.dgvSanciones.Name = "dgvSanciones"
             Me.dgvSanciones.RowHeadersVisible = False
             Me.dgvSanciones.ShowEditingIcon = False
-            Me.dgvSanciones.Size = New System.Drawing.Size(754, 335)
+            Me.dgvSanciones.Size = New System.Drawing.Size(754, 314)
             Me.dgvSanciones.TabIndex = 0
             '
             'Label2
@@ -333,7 +333,7 @@
             Me.GroupBox2.Controls.Add(Me.txtSancion)
             Me.GroupBox2.Controls.Add(Me.Label30)
             Me.GroupBox2.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.GroupBox2.Location = New System.Drawing.Point(2, 165)
+            Me.GroupBox2.Location = New System.Drawing.Point(2, 174)
             Me.GroupBox2.Name = "GroupBox2"
             Me.GroupBox2.Size = New System.Drawing.Size(778, 99)
             Me.GroupBox2.TabIndex = 203
@@ -396,7 +396,7 @@
             'Label31
             '
             Me.Label31.AutoSize = True
-            Me.Label31.Location = New System.Drawing.Point(103, 18)
+            Me.Label31.Location = New System.Drawing.Point(98, 18)
             Me.Label31.Name = "Label31"
             Me.Label31.Size = New System.Drawing.Size(44, 13)
             Me.Label31.TabIndex = 205
@@ -406,9 +406,10 @@
             '
             Me.bntSanciones.BackColor = System.Drawing.Color.White
             Me.bntSanciones.Enabled = False
+            Me.bntSanciones.FlatAppearance.BorderSize = 0
+            Me.bntSanciones.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.bntSanciones.Font = New System.Drawing.Font("Consolas", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.bntSanciones.Image = Global.syscisepro.My.Resources.Resources.BuscarRegistro
-            Me.bntSanciones.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+            Me.bntSanciones.Image = Global.syscisepro.My.Resources.Resources.search_24dp_FILL0_wght400_GRAD0_opsz24__2_
             Me.bntSanciones.Location = New System.Drawing.Point(749, 13)
             Me.bntSanciones.Name = "bntSanciones"
             Me.bntSanciones.Size = New System.Drawing.Size(26, 26)
@@ -440,7 +441,7 @@
             Me.txtValor.BackColor = System.Drawing.Color.White
             Me.txtValor.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtValor.Enabled = False
-            Me.txtValor.Location = New System.Drawing.Point(716, 16)
+            Me.txtValor.Location = New System.Drawing.Point(713, 16)
             Me.txtValor.Name = "txtValor"
             Me.txtValor.Size = New System.Drawing.Size(33, 21)
             Me.txtValor.TabIndex = 199
@@ -478,7 +479,7 @@
             Me.txtSancion.BackColor = System.Drawing.Color.White
             Me.txtSancion.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtSancion.Enabled = False
-            Me.txtSancion.Location = New System.Drawing.Point(479, 16)
+            Me.txtSancion.Location = New System.Drawing.Point(473, 16)
             Me.txtSancion.Name = "txtSancion"
             Me.txtSancion.Size = New System.Drawing.Size(238, 21)
             Me.txtSancion.TabIndex = 0
@@ -486,7 +487,7 @@
             'Label30
             '
             Me.Label30.AutoSize = True
-            Me.Label30.Location = New System.Drawing.Point(429, 20)
+            Me.Label30.Location = New System.Drawing.Point(415, 20)
             Me.Label30.Name = "Label30"
             Me.Label30.Size = New System.Drawing.Size(58, 13)
             Me.Label30.TabIndex = 3
@@ -497,7 +498,7 @@
             Me.dtpFechaHasta.CustomFormat = "dddd, dd-MMM-yyyy"
             Me.dtpFechaHasta.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.dtpFechaHasta.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-            Me.dtpFechaHasta.Location = New System.Drawing.Point(675, 285)
+            Me.dtpFechaHasta.Location = New System.Drawing.Point(675, 294)
             Me.dtpFechaHasta.Name = "dtpFechaHasta"
             Me.dtpFechaHasta.Size = New System.Drawing.Size(93, 22)
             Me.dtpFechaHasta.TabIndex = 200
@@ -507,7 +508,7 @@
             Me.dtpFechaDesde.CustomFormat = "dddd, dd-MMM-yyyy"
             Me.dtpFechaDesde.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.dtpFechaDesde.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-            Me.dtpFechaDesde.Location = New System.Drawing.Point(552, 285)
+            Me.dtpFechaDesde.Location = New System.Drawing.Point(552, 294)
             Me.dtpFechaDesde.Name = "dtpFechaDesde"
             Me.dtpFechaDesde.Size = New System.Drawing.Size(93, 22)
             Me.dtpFechaDesde.TabIndex = 199
@@ -515,7 +516,7 @@
             'Label24
             '
             Me.Label24.Cursor = System.Windows.Forms.Cursors.Hand
-            Me.Label24.Location = New System.Drawing.Point(1, 267)
+            Me.Label24.Location = New System.Drawing.Point(1, 274)
             Me.Label24.Name = "Label24"
             Me.Label24.Size = New System.Drawing.Size(780, 16)
             Me.Label24.TabIndex = 195
@@ -532,7 +533,7 @@
             Me.GroupBox3.Controls.Add(Me.txtUbicacionPuesto)
             Me.GroupBox3.Controls.Add(Me.Label23)
             Me.GroupBox3.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.GroupBox3.Location = New System.Drawing.Point(4, 96)
+            Me.GroupBox3.Location = New System.Drawing.Point(4, 104)
             Me.GroupBox3.Name = "GroupBox3"
             Me.GroupBox3.Size = New System.Drawing.Size(778, 69)
             Me.GroupBox3.TabIndex = 194
@@ -601,7 +602,7 @@
             Me.txtFiltro.BackColor = System.Drawing.Color.White
             Me.txtFiltro.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtFiltro.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtFiltro.Location = New System.Drawing.Point(62, 286)
+            Me.txtFiltro.Location = New System.Drawing.Point(62, 293)
             Me.txtFiltro.Name = "txtFiltro"
             Me.txtFiltro.Size = New System.Drawing.Size(456, 21)
             Me.txtFiltro.TabIndex = 191
@@ -610,7 +611,7 @@
             '
             Me.Label7.AutoSize = True
             Me.Label7.Cursor = System.Windows.Forms.Cursors.Hand
-            Me.Label7.Location = New System.Drawing.Point(8, 290)
+            Me.Label7.Location = New System.Drawing.Point(8, 296)
             Me.Label7.Name = "Label7"
             Me.Label7.Size = New System.Drawing.Size(46, 13)
             Me.Label7.TabIndex = 190
@@ -630,7 +631,7 @@
             Me.GroupBox1.Controls.Add(Me.txtPersonal)
             Me.GroupBox1.Controls.Add(Me.Label26)
             Me.GroupBox1.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.GroupBox1.Location = New System.Drawing.Point(3, 29)
+            Me.GroupBox1.Location = New System.Drawing.Point(3, 37)
             Me.GroupBox1.Name = "GroupBox1"
             Me.GroupBox1.Size = New System.Drawing.Size(778, 67)
             Me.GroupBox1.TabIndex = 183
@@ -660,9 +661,10 @@
             '
             Me.btnPersonalEntra.BackColor = System.Drawing.Color.White
             Me.btnPersonalEntra.Enabled = False
+            Me.btnPersonalEntra.FlatAppearance.BorderSize = 0
+            Me.btnPersonalEntra.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.btnPersonalEntra.Font = New System.Drawing.Font("Consolas", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnPersonalEntra.Image = CType(resources.GetObject("btnPersonalEntra.Image"), System.Drawing.Image)
-            Me.btnPersonalEntra.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+            Me.btnPersonalEntra.Image = Global.syscisepro.My.Resources.Resources.search_24dp_FILL0_wght400_GRAD0_opsz24__2_
             Me.btnPersonalEntra.Location = New System.Drawing.Point(741, 12)
             Me.btnPersonalEntra.Name = "btnPersonalEntra"
             Me.btnPersonalEntra.Size = New System.Drawing.Size(26, 26)
@@ -710,83 +712,86 @@
             '
             'MenuStrip1
             '
-            Me.MenuStrip1.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.MenuStrip1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
             Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem1, Me.btnNuevo, Me.btnGuardar, Me.btnAnular, Me.btnCancelar, Me.ToolStripMenuItem2, Me.AGRUPADOSToolStripMenuItem})
             Me.MenuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow
             Me.MenuStrip1.Location = New System.Drawing.Point(3, 3)
             Me.MenuStrip1.Name = "MenuStrip1"
             Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(7, 2, 0, 2)
-            Me.MenuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
-            Me.MenuStrip1.Size = New System.Drawing.Size(777, 24)
+            Me.MenuStrip1.Size = New System.Drawing.Size(777, 32)
             Me.MenuStrip1.TabIndex = 182
             Me.MenuStrip1.Text = "msIngresoBodega"
             '
             'ToolStripMenuItem1
             '
             Me.ToolStripMenuItem1.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.ToolStripMenuItem1.Image = Global.syscisepro.My.Resources.Resources.BuscarRegistro
+            Me.ToolStripMenuItem1.Image = Global.syscisepro.My.Resources.Resources.search_24dp_FILL0_wght400_GRAD0_opsz24__2_
             Me.ToolStripMenuItem1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
-            Me.ToolStripMenuItem1.Size = New System.Drawing.Size(119, 20)
-            Me.ToolStripMenuItem1.Text = "LISTAR TODOS"
+            Me.ToolStripMenuItem1.Size = New System.Drawing.Size(85, 28)
+            Me.ToolStripMenuItem1.Text = "BUSCAR"
             '
             'btnNuevo
             '
             Me.btnNuevo.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnNuevo.Image = CType(resources.GetObject("btnNuevo.Image"), System.Drawing.Image)
+            Me.btnNuevo.Image = Global.syscisepro.My.Resources.Resources.add_circle_24dp_FILL0_wght400_GRAD0_opsz24__3_
             Me.btnNuevo.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnNuevo.Name = "btnNuevo"
-            Me.btnNuevo.Size = New System.Drawing.Size(70, 20)
+            Me.btnNuevo.Size = New System.Drawing.Size(78, 28)
             Me.btnNuevo.Text = "NUEVO"
             '
             'btnGuardar
             '
             Me.btnGuardar.Enabled = False
             Me.btnGuardar.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnGuardar.Image = CType(resources.GetObject("btnGuardar.Image"), System.Drawing.Image)
+            Me.btnGuardar.Image = Global.syscisepro.My.Resources.Resources.save_24dp_FILL0_wght400_GRAD0_opsz24__2_
             Me.btnGuardar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnGuardar.Name = "btnGuardar"
-            Me.btnGuardar.Size = New System.Drawing.Size(84, 20)
+            Me.btnGuardar.Size = New System.Drawing.Size(92, 28)
             Me.btnGuardar.Text = "GUARDAR"
             '
             'btnAnular
             '
             Me.btnAnular.Enabled = False
             Me.btnAnular.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnAnular.Image = Global.syscisepro.My.Resources.Resources.EliminarRegistro
+            Me.btnAnular.Image = Global.syscisepro.My.Resources.Resources.do_not_disturb_on_24dp_FILL0_wght400_GRAD0_opsz24
+            Me.btnAnular.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnAnular.Name = "btnAnular"
-            Me.btnAnular.Size = New System.Drawing.Size(77, 20)
+            Me.btnAnular.Size = New System.Drawing.Size(85, 28)
             Me.btnAnular.Text = "ANULAR"
             '
             'btnCancelar
             '
             Me.btnCancelar.Enabled = False
             Me.btnCancelar.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnCancelar.Image = Global.syscisepro.My.Resources.Resources.cancel
+            Me.btnCancelar.Image = Global.syscisepro.My.Resources.Resources.cancel_24dp_FILL0_wght400_GRAD0_opsz24
+            Me.btnCancelar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnCancelar.Name = "btnCancelar"
-            Me.btnCancelar.Size = New System.Drawing.Size(91, 20)
+            Me.btnCancelar.Size = New System.Drawing.Size(99, 28)
             Me.btnCancelar.Text = "CANCELAR"
             '
             'ToolStripMenuItem2
             '
             Me.ToolStripMenuItem2.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.ToolStripMenuItem2.Image = Global.syscisepro.My.Resources.Resources.excel_icon
+            Me.ToolStripMenuItem2.Image = Global.syscisepro.My.Resources.Resources.icons8_excel_48
+            Me.ToolStripMenuItem2.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.ToolStripMenuItem2.Name = "ToolStripMenuItem2"
-            Me.ToolStripMenuItem2.Size = New System.Drawing.Size(91, 20)
+            Me.ToolStripMenuItem2.Size = New System.Drawing.Size(99, 28)
             Me.ToolStripMenuItem2.Text = "EXPORTAR"
             '
             'AGRUPADOSToolStripMenuItem
             '
             Me.AGRUPADOSToolStripMenuItem.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.AGRUPADOSToolStripMenuItem.Image = Global.syscisepro.My.Resources.Resources.excel_icon
+            Me.AGRUPADOSToolStripMenuItem.Image = Global.syscisepro.My.Resources.Resources.icons8_excel_48
+            Me.AGRUPADOSToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.AGRUPADOSToolStripMenuItem.Name = "AGRUPADOSToolStripMenuItem"
-            Me.AGRUPADOSToolStripMenuItem.Size = New System.Drawing.Size(98, 20)
+            Me.AGRUPADOSToolStripMenuItem.Size = New System.Drawing.Size(106, 28)
             Me.AGRUPADOSToolStripMenuItem.Text = "AGRUPADOS"
             '
             'Label11
             '
             Me.Label11.AutoSize = True
-            Me.Label11.Location = New System.Drawing.Point(659, 288)
+            Me.Label11.Location = New System.Drawing.Point(659, 297)
             Me.Label11.Name = "Label11"
             Me.Label11.Size = New System.Drawing.Size(17, 13)
             Me.Label11.TabIndex = 202
@@ -795,7 +800,7 @@
             'Label10
             '
             Me.Label10.AutoSize = True
-            Me.Label10.Location = New System.Drawing.Point(529, 288)
+            Me.Label10.Location = New System.Drawing.Point(529, 297)
             Me.Label10.Name = "Label10"
             Me.Label10.Size = New System.Drawing.Size(23, 13)
             Me.Label10.TabIndex = 201
@@ -808,10 +813,13 @@
             Me.BackColor = System.Drawing.Color.White
             Me.ClientSize = New System.Drawing.Size(791, 710)
             Me.Controls.Add(Me.tcSitios)
-            Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
             Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
             Me.Name = "FrmRegistrarSancionPersonal"
             Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+            Me.StateActive.Border.DrawBorders = CType((((Krypton.Toolkit.PaletteDrawBorders.Top Or Krypton.Toolkit.PaletteDrawBorders.Bottom) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Left) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Right), Krypton.Toolkit.PaletteDrawBorders)
+            Me.StateActive.Border.Rounding = 5.0!
             Me.Text = "SANCIONES AL PERSONAL"
             Me.tcSitios.ResumeLayout(False)
             Me.TabPage1.ResumeLayout(False)

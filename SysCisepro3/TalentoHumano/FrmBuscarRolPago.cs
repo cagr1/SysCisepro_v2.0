@@ -64,7 +64,7 @@ namespace SysCisepro3.TalentoHumano
                     Icon = Resources.logo_c; 
                     break;
             }
-
+            dgvRoles.Font = new Font("Roboto", 8, FontStyle.Regular);
             var f = Usuario.Now(TipoCon);
             dtpFechaDesde.Value = new DateTime(f.Year, f.Month, 1, 0, 0, 0);
             dtpFechaHasta.Value = new DateTime(f.Year, f.Month, f.Day, 23, 59, 59);

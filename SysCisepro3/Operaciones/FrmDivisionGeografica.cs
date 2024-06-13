@@ -9,10 +9,11 @@ using ClassLibraryCisepro3.ProcesosSql;
 using ClassLibraryCisepro3.UsuarioGeneral;
 using SysCisepro3.Datos;
 using SysCisepro3.Properties;
+using Krypton.Toolkit;
 
 namespace SysCisepro3.Operaciones
 {
-    public partial class FrmDivisionGeografica : Form
+    public partial class FrmDivisionGeografica : KryptonForm
     {
         /// <summary>
         /// CISEPRO 2019
@@ -52,11 +53,11 @@ namespace SysCisepro3.Operaciones
         {
             // CARGAR ICONO Y DESIEÑO SEGUN SISTEMA 
 
-            toolStrip1.BackColor = ValidationForms.GetColorSistema(TipoCon);
+            //toolStrip1.BackColor = ValidationForms.GetColorSistema(TipoCon);
             toolStrip1.ForeColor = Color.White;
-            MenuStrip1.BackColor = ValidationForms.GetColorSistema(TipoCon);
+            //MenuStrip1.BackColor = ValidationForms.GetColorSistema(TipoCon);
             MenuStrip1.ForeColor = Color.White;
-            MenuStrip2.BackColor = ValidationForms.GetColorSistema(TipoCon);
+            //MenuStrip2.BackColor = ValidationForms.GetColorSistema(TipoCon);
             MenuStrip2.ForeColor = Color.White;
             dgvProvincias.DefaultCellStyle.SelectionBackColor = ValidationForms.GetColorSistema(TipoCon);
             dgvCiudades.DefaultCellStyle.SelectionBackColor = ValidationForms.GetColorSistema(TipoCon);
@@ -73,7 +74,9 @@ namespace SysCisepro3.Operaciones
                     Icon = Resources.logo_c; 
                     break;
             }
-
+            dgvProvincias.Font = new Font("Roboto", 8, FontStyle.Regular);
+            dgvCiudades.Font = new Font("Roboto", 8, FontStyle.Regular);
+            dgvParroquias.Font = new Font("Roboto", 8, FontStyle.Regular);
             CargarProvincias();
         }
 

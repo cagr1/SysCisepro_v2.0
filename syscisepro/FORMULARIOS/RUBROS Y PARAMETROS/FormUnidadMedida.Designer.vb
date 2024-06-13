@@ -1,8 +1,8 @@
 ﻿Namespace FORMULARIOS.RUBROS_Y_PARAMETROS
     <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
     Partial Class FormUnidadMedida
-        Inherits System.Windows.Forms.Form
-
+        'Inherits System.Windows.Forms.Form
+        Inherits Krypton.Toolkit.KryptonForm
         'Form reemplaza a Dispose para limpiar la lista de componentes.
         <System.Diagnostics.DebuggerNonUserCode()> _
         Protected Overrides Sub Dispose(ByVal disposing As Boolean)
@@ -53,9 +53,9 @@
             Me.gbUnidadMedida.Controls.Add(Me.lblDetalleUnidadMedida)
             Me.gbUnidadMedida.Controls.Add(Me.txtIdUnidadMedida)
             Me.gbUnidadMedida.Controls.Add(Me.lblIdUnidadMedida)
-            Me.gbUnidadMedida.Location = New System.Drawing.Point(5, 27)
+            Me.gbUnidadMedida.Location = New System.Drawing.Point(5, 34)
             Me.gbUnidadMedida.Name = "gbUnidadMedida"
-            Me.gbUnidadMedida.Size = New System.Drawing.Size(352, 113)
+            Me.gbUnidadMedida.Size = New System.Drawing.Size(384, 113)
             Me.gbUnidadMedida.TabIndex = 0
             Me.gbUnidadMedida.TabStop = False
             '
@@ -131,63 +131,64 @@
             DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
             DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
             Me.dgvUnidadMedida.DefaultCellStyle = DataGridViewCellStyle2
-            Me.dgvUnidadMedida.Location = New System.Drawing.Point(5, 144)
+            Me.dgvUnidadMedida.Location = New System.Drawing.Point(0, 150)
             Me.dgvUnidadMedida.MultiSelect = False
             Me.dgvUnidadMedida.Name = "dgvUnidadMedida"
             Me.dgvUnidadMedida.ReadOnly = True
             Me.dgvUnidadMedida.RowHeadersVisible = False
             Me.dgvUnidadMedida.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvUnidadMedida.Size = New System.Drawing.Size(352, 171)
+            Me.dgvUnidadMedida.Size = New System.Drawing.Size(389, 170)
             Me.dgvUnidadMedida.TabIndex = 16
             '
             'MenuStrip1
             '
-            Me.MenuStrip1.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.MenuStrip1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
             Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnNuevoUnidadMedida, Me.btnGuardarUnidadMedida, Me.btnModificarUnidadMedida, Me.btnCancelarUnidadMedida})
             Me.MenuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow
             Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
             Me.MenuStrip1.Name = "MenuStrip1"
             Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(7, 2, 0, 2)
-            Me.MenuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
-            Me.MenuStrip1.Size = New System.Drawing.Size(362, 24)
+            Me.MenuStrip1.Size = New System.Drawing.Size(389, 32)
             Me.MenuStrip1.TabIndex = 186
             Me.MenuStrip1.Text = "msIngresoBodega"
             '
             'btnNuevoUnidadMedida
             '
             Me.btnNuevoUnidadMedida.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnNuevoUnidadMedida.Image = CType(resources.GetObject("btnNuevoUnidadMedida.Image"), System.Drawing.Image)
+            Me.btnNuevoUnidadMedida.Image = Global.syscisepro.My.Resources.Resources.add_circle_24dp_FILL0_wght400_GRAD0_opsz24__3_
             Me.btnNuevoUnidadMedida.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnNuevoUnidadMedida.Name = "btnNuevoUnidadMedida"
-            Me.btnNuevoUnidadMedida.Size = New System.Drawing.Size(70, 20)
+            Me.btnNuevoUnidadMedida.Size = New System.Drawing.Size(78, 28)
             Me.btnNuevoUnidadMedida.Text = "NUEVO"
             '
             'btnGuardarUnidadMedida
             '
             Me.btnGuardarUnidadMedida.Enabled = False
             Me.btnGuardarUnidadMedida.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnGuardarUnidadMedida.Image = CType(resources.GetObject("btnGuardarUnidadMedida.Image"), System.Drawing.Image)
+            Me.btnGuardarUnidadMedida.Image = Global.syscisepro.My.Resources.Resources.save_24dp_FILL0_wght400_GRAD0_opsz24__2_
             Me.btnGuardarUnidadMedida.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnGuardarUnidadMedida.Name = "btnGuardarUnidadMedida"
-            Me.btnGuardarUnidadMedida.Size = New System.Drawing.Size(84, 20)
+            Me.btnGuardarUnidadMedida.Size = New System.Drawing.Size(92, 28)
             Me.btnGuardarUnidadMedida.Text = "GUARDAR"
             '
             'btnModificarUnidadMedida
             '
             Me.btnModificarUnidadMedida.Enabled = False
             Me.btnModificarUnidadMedida.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnModificarUnidadMedida.Image = Global.syscisepro.My.Resources.Resources.ModificarRegistro
+            Me.btnModificarUnidadMedida.Image = Global.syscisepro.My.Resources.Resources.edit_document_24dp_FILL0_wght400_GRAD0_opsz24__2_
+            Me.btnModificarUnidadMedida.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnModificarUnidadMedida.Name = "btnModificarUnidadMedida"
-            Me.btnModificarUnidadMedida.Size = New System.Drawing.Size(105, 20)
+            Me.btnModificarUnidadMedida.Size = New System.Drawing.Size(113, 28)
             Me.btnModificarUnidadMedida.Text = "ACTUALIZAR"
             '
             'btnCancelarUnidadMedida
             '
             Me.btnCancelarUnidadMedida.Enabled = False
             Me.btnCancelarUnidadMedida.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnCancelarUnidadMedida.Image = Global.syscisepro.My.Resources.Resources.cancel
+            Me.btnCancelarUnidadMedida.Image = Global.syscisepro.My.Resources.Resources.cancel_24dp_FILL0_wght400_GRAD0_opsz24
+            Me.btnCancelarUnidadMedida.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnCancelarUnidadMedida.Name = "btnCancelarUnidadMedida"
-            Me.btnCancelarUnidadMedida.Size = New System.Drawing.Size(91, 20)
+            Me.btnCancelarUnidadMedida.Size = New System.Drawing.Size(99, 28)
             Me.btnCancelarUnidadMedida.Text = "CANCELAR"
             '
             'FormUnidadMedida
@@ -195,7 +196,7 @@
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.BackColor = System.Drawing.Color.White
-            Me.ClientSize = New System.Drawing.Size(362, 320)
+            Me.ClientSize = New System.Drawing.Size(389, 320)
             Me.Controls.Add(Me.MenuStrip1)
             Me.Controls.Add(Me.dgvUnidadMedida)
             Me.Controls.Add(Me.gbUnidadMedida)
@@ -204,6 +205,10 @@
             Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
             Me.Name = "FormUnidadMedida"
             Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+            Me.StateActive.Border.DrawBorders = CType((((Krypton.Toolkit.PaletteDrawBorders.Top Or Krypton.Toolkit.PaletteDrawBorders.Bottom) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Left) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Right), Krypton.Toolkit.PaletteDrawBorders)
+            Me.StateActive.Border.Rounding = 5.0!
             Me.Text = "UNIDAD DE MEDIDA"
             Me.gbUnidadMedida.ResumeLayout(False)
             Me.gbUnidadMedida.PerformLayout()

@@ -50,7 +50,7 @@ namespace SysCisepro3.TalentoHumano
                     Icon = Resources.logo_c;
                     break;
             }
-
+            dgvAspirante.Font  = new Font("Roboto", 8,FontStyle.Regular);
             txtParametrobusqueda.Focus();
         }
 

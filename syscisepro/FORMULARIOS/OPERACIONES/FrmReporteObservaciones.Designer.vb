@@ -1,8 +1,8 @@
 ﻿Namespace FORMULARIOS.OPERACIONES
     <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
     Partial Class FrmReporteObservaciones
-        Inherits System.Windows.Forms.Form
-
+        'Inherits System.Windows.Forms.Form
+        Inherits Krypton.Toolkit.KryptonForm
         'Form reemplaza a Dispose para limpiar la lista de componentes.
         <System.Diagnostics.DebuggerNonUserCode()> _
         Protected Overrides Sub Dispose(ByVal disposing As Boolean)
@@ -44,7 +44,7 @@
             Me.GroupBox4.Controls.Add(Me.Label16)
             Me.GroupBox4.Controls.Add(Me.DateTimePicker5)
             Me.GroupBox4.Controls.Add(Me.Label1)
-            Me.GroupBox4.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.GroupBox4.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.GroupBox4.Location = New System.Drawing.Point(-2, 0)
             Me.GroupBox4.Name = "GroupBox4"
             Me.GroupBox4.Size = New System.Drawing.Size(619, 44)
@@ -65,7 +65,7 @@
             Me.Label16.AutoSize = True
             Me.Label16.Location = New System.Drawing.Point(13, 21)
             Me.Label16.Name = "Label16"
-            Me.Label16.Size = New System.Drawing.Size(67, 13)
+            Me.Label16.Size = New System.Drawing.Size(65, 13)
             Me.Label16.TabIndex = 205
             Me.Label16.Text = "VIGILANTE:"
             '
@@ -74,7 +74,7 @@
             Me.DateTimePicker5.Enabled = False
             Me.DateTimePicker5.Location = New System.Drawing.Point(361, 15)
             Me.DateTimePicker5.Name = "DateTimePicker5"
-            Me.DateTimePicker5.Size = New System.Drawing.Size(248, 20)
+            Me.DateTimePicker5.Size = New System.Drawing.Size(248, 21)
             Me.DateTimePicker5.TabIndex = 204
             '
             'Label1
@@ -82,7 +82,7 @@
             Me.Label1.AutoSize = True
             Me.Label1.Location = New System.Drawing.Point(320, 17)
             Me.Label1.Name = "Label1"
-            Me.Label1.Size = New System.Drawing.Size(43, 13)
+            Me.Label1.Size = New System.Drawing.Size(44, 13)
             Me.Label1.TabIndex = 206
             Me.Label1.Text = "FECHA:"
             '
@@ -90,10 +90,11 @@
             '
             Me.txtObservaciones.BackColor = System.Drawing.Color.White
             Me.txtObservaciones.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-            Me.txtObservaciones.Location = New System.Drawing.Point(-1, 61)
+            Me.txtObservaciones.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtObservaciones.Location = New System.Drawing.Point(-1, 73)
             Me.txtObservaciones.Multiline = True
             Me.txtObservaciones.Name = "txtObservaciones"
-            Me.txtObservaciones.Size = New System.Drawing.Size(619, 115)
+            Me.txtObservaciones.Size = New System.Drawing.Size(619, 103)
             Me.txtObservaciones.TabIndex = 203
             '
             'Label2
@@ -107,24 +108,28 @@
             '
             'Button2
             '
+            Me.Button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(75, Byte), Integer), CType(CType(166, Byte), Integer), CType(CType(79, Byte), Integer))
             Me.Button2.DialogResult = System.Windows.Forms.DialogResult.OK
             Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Button2.ForeColor = System.Drawing.Color.White
             Me.Button2.Location = New System.Drawing.Point(533, 182)
             Me.Button2.Name = "Button2"
             Me.Button2.Size = New System.Drawing.Size(75, 23)
             Me.Button2.TabIndex = 208
             Me.Button2.Text = "ACEPTAR"
-            Me.Button2.UseVisualStyleBackColor = True
+            Me.Button2.UseVisualStyleBackColor = False
             '
             'Button1
             '
+            Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(58, Byte), Integer))
             Me.Button1.DialogResult = System.Windows.Forms.DialogResult.Cancel
+            Me.Button1.ForeColor = System.Drawing.Color.White
             Me.Button1.Location = New System.Drawing.Point(452, 182)
             Me.Button1.Name = "Button1"
             Me.Button1.Size = New System.Drawing.Size(75, 23)
             Me.Button1.TabIndex = 207
             Me.Button1.Text = "CANCELAR"
-            Me.Button1.UseVisualStyleBackColor = True
+            Me.Button1.UseVisualStyleBackColor = False
             '
             'Label4
             '
@@ -160,6 +165,10 @@
             Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
             Me.Name = "FrmReporteObservaciones"
             Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+            Me.StateActive.Border.DrawBorders = CType((((Krypton.Toolkit.PaletteDrawBorders.Top Or Krypton.Toolkit.PaletteDrawBorders.Bottom) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Left) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Right), Krypton.Toolkit.PaletteDrawBorders)
+            Me.StateActive.Border.Rounding = 5.0!
             Me.Text = "OBSERVACIONES POR VIGILANTE"
             Me.GroupBox4.ResumeLayout(False)
             Me.GroupBox4.PerformLayout()

@@ -1,8 +1,8 @@
 ﻿Namespace FORMULARIOS.RUBROS_Y_PARAMETROS
     <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
     Partial Class FormRubros
-        Inherits System.Windows.Forms.Form
-
+        'Inherits System.Windows.Forms.Form
+        Inherits Krypton.Toolkit.KryptonForm
         'Form reemplaza a Dispose para limpiar la lista de componentes.
         <System.Diagnostics.DebuggerNonUserCode()> _
         Protected Overrides Sub Dispose(ByVal disposing As Boolean)
@@ -92,9 +92,9 @@
             Me.Label1.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Label1.Location = New System.Drawing.Point(140, 47)
             Me.Label1.Name = "Label1"
-            Me.Label1.Size = New System.Drawing.Size(64, 13)
+            Me.Label1.Size = New System.Drawing.Size(63, 13)
             Me.Label1.TabIndex = 4
-            Me.Label1.Text = "VALOR y %:"
+            Me.Label1.Text = "VALOR / %:"
             '
             'txtValorRubro
             '
@@ -116,13 +116,13 @@
             Me.dgvRubrosFondoRotativo.BackgroundColor = System.Drawing.Color.White
             Me.dgvRubrosFondoRotativo.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
             Me.dgvRubrosFondoRotativo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-            Me.dgvRubrosFondoRotativo.Location = New System.Drawing.Point(4, 105)
+            Me.dgvRubrosFondoRotativo.Location = New System.Drawing.Point(0, 109)
             Me.dgvRubrosFondoRotativo.MultiSelect = False
             Me.dgvRubrosFondoRotativo.Name = "dgvRubrosFondoRotativo"
             Me.dgvRubrosFondoRotativo.ReadOnly = True
             Me.dgvRubrosFondoRotativo.RowHeadersVisible = False
             Me.dgvRubrosFondoRotativo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvRubrosFondoRotativo.Size = New System.Drawing.Size(360, 148)
+            Me.dgvRubrosFondoRotativo.Size = New System.Drawing.Size(391, 148)
             Me.dgvRubrosFondoRotativo.TabIndex = 6
             '
             'gbReferencia
@@ -134,60 +134,62 @@
             Me.gbReferencia.Controls.Add(Me.txtValorRubro)
             Me.gbReferencia.Controls.Add(Me.Label1)
             Me.gbReferencia.Controls.Add(Me.lblRubro)
-            Me.gbReferencia.Location = New System.Drawing.Point(5, 27)
+            Me.gbReferencia.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.gbReferencia.Location = New System.Drawing.Point(0, 34)
             Me.gbReferencia.Name = "gbReferencia"
-            Me.gbReferencia.Size = New System.Drawing.Size(359, 72)
+            Me.gbReferencia.Size = New System.Drawing.Size(391, 72)
             Me.gbReferencia.TabIndex = 9
             Me.gbReferencia.TabStop = False
             '
             'MenuStrip1
             '
-            Me.MenuStrip1.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.MenuStrip1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
             Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnNuevoRubroFondoRotativo, Me.btnGuardarRubroFondoRotativo, Me.btnModificarRubroFondoRotativo, Me.btnCancelarRubroFondorotativo})
             Me.MenuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow
             Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
             Me.MenuStrip1.Name = "MenuStrip1"
             Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(7, 2, 0, 2)
-            Me.MenuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
-            Me.MenuStrip1.Size = New System.Drawing.Size(370, 24)
+            Me.MenuStrip1.Size = New System.Drawing.Size(391, 32)
             Me.MenuStrip1.TabIndex = 185
             Me.MenuStrip1.Text = "msIngresoBodega"
             '
             'btnNuevoRubroFondoRotativo
             '
             Me.btnNuevoRubroFondoRotativo.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnNuevoRubroFondoRotativo.Image = CType(resources.GetObject("btnNuevoRubroFondoRotativo.Image"), System.Drawing.Image)
+            Me.btnNuevoRubroFondoRotativo.Image = Global.syscisepro.My.Resources.Resources.add_circle_24dp_FILL0_wght400_GRAD0_opsz24__3_
             Me.btnNuevoRubroFondoRotativo.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnNuevoRubroFondoRotativo.Name = "btnNuevoRubroFondoRotativo"
-            Me.btnNuevoRubroFondoRotativo.Size = New System.Drawing.Size(70, 20)
+            Me.btnNuevoRubroFondoRotativo.Size = New System.Drawing.Size(78, 28)
             Me.btnNuevoRubroFondoRotativo.Text = "NUEVO"
             '
             'btnGuardarRubroFondoRotativo
             '
             Me.btnGuardarRubroFondoRotativo.Enabled = False
             Me.btnGuardarRubroFondoRotativo.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnGuardarRubroFondoRotativo.Image = CType(resources.GetObject("btnGuardarRubroFondoRotativo.Image"), System.Drawing.Image)
+            Me.btnGuardarRubroFondoRotativo.Image = Global.syscisepro.My.Resources.Resources.save_24dp_FILL0_wght400_GRAD0_opsz24__2_
             Me.btnGuardarRubroFondoRotativo.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnGuardarRubroFondoRotativo.Name = "btnGuardarRubroFondoRotativo"
-            Me.btnGuardarRubroFondoRotativo.Size = New System.Drawing.Size(84, 20)
+            Me.btnGuardarRubroFondoRotativo.Size = New System.Drawing.Size(92, 28)
             Me.btnGuardarRubroFondoRotativo.Text = "GUARDAR"
             '
             'btnModificarRubroFondoRotativo
             '
             Me.btnModificarRubroFondoRotativo.Enabled = False
             Me.btnModificarRubroFondoRotativo.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnModificarRubroFondoRotativo.Image = Global.syscisepro.My.Resources.Resources.ModificarRegistro
+            Me.btnModificarRubroFondoRotativo.Image = Global.syscisepro.My.Resources.Resources.edit_document_24dp_FILL0_wght400_GRAD0_opsz24__2_
+            Me.btnModificarRubroFondoRotativo.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnModificarRubroFondoRotativo.Name = "btnModificarRubroFondoRotativo"
-            Me.btnModificarRubroFondoRotativo.Size = New System.Drawing.Size(105, 20)
+            Me.btnModificarRubroFondoRotativo.Size = New System.Drawing.Size(113, 28)
             Me.btnModificarRubroFondoRotativo.Text = "ACTUALIZAR"
             '
             'btnCancelarRubroFondorotativo
             '
             Me.btnCancelarRubroFondorotativo.Enabled = False
             Me.btnCancelarRubroFondorotativo.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnCancelarRubroFondorotativo.Image = Global.syscisepro.My.Resources.Resources.cancel
+            Me.btnCancelarRubroFondorotativo.Image = Global.syscisepro.My.Resources.Resources.cancel_24dp_FILL0_wght400_GRAD0_opsz24
+            Me.btnCancelarRubroFondorotativo.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnCancelarRubroFondorotativo.Name = "btnCancelarRubroFondorotativo"
-            Me.btnCancelarRubroFondorotativo.Size = New System.Drawing.Size(91, 20)
+            Me.btnCancelarRubroFondorotativo.Size = New System.Drawing.Size(99, 28)
             Me.btnCancelarRubroFondorotativo.Text = "CANCELAR"
             '
             'FormRubros
@@ -195,7 +197,7 @@
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.BackColor = System.Drawing.Color.White
-            Me.ClientSize = New System.Drawing.Size(370, 257)
+            Me.ClientSize = New System.Drawing.Size(391, 257)
             Me.Controls.Add(Me.MenuStrip1)
             Me.Controls.Add(Me.gbReferencia)
             Me.Controls.Add(Me.dgvRubrosFondoRotativo)
@@ -205,7 +207,11 @@
             Me.MaximizeBox = False
             Me.Name = "FormRubros"
             Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-            Me.Text = "CLACULOS"
+            Me.StateActive.Border.DrawBorders = CType((((Krypton.Toolkit.PaletteDrawBorders.Top Or Krypton.Toolkit.PaletteDrawBorders.Bottom) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Left) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Right), Krypton.Toolkit.PaletteDrawBorders)
+            Me.StateActive.Border.Rounding = 5.0!
+            Me.Text = "CALCULOS"
             CType(Me.dgvRubrosFondoRotativo, System.ComponentModel.ISupportInitialize).EndInit()
             Me.gbReferencia.ResumeLayout(False)
             Me.gbReferencia.PerformLayout()

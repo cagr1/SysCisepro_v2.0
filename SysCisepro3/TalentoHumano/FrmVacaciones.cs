@@ -82,7 +82,8 @@ namespace SysCisepro3.TalentoHumano
                     Icon = Resources.logo_c; 
                     break;
             }
-
+            dataGridView1.Font = new Font("Roboto", 8, FontStyle.Regular);
+            dataGridView2.Font = new Font("Roboto", 8, FontStyle.Regular);
             dtpFecha.Value = Usuario.Now(TipoCon);
             dtpDesde.Value = new DateTime(dtpFecha.Value.Year, dtpFecha.Value.Month, 1, 0, 0, 0);
             dtpHasta.Value = new DateTime(dtpFecha.Value.Year, dtpFecha.Value.Month, 1, 0, 0, 0);

@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmDivisionGeografica));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -84,6 +83,8 @@
             // 
             // toolStrip1
             // 
+            this.toolStrip1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnCargarProvincias,
             this.btnNuevoProvincia,
@@ -92,55 +93,60 @@
             this.btnCancelarProvincia});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(943, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(943, 31);
             this.toolStrip1.TabIndex = 196;
             this.toolStrip1.Text = "toolStrip1";
             // 
             // btnCargarProvincias
             // 
-            this.btnCargarProvincias.Image = ((System.Drawing.Image)(resources.GetObject("btnCargarProvincias.Image")));
+            this.btnCargarProvincias.Image = global::SysCisepro3.Properties.Resources.search_24dp_FILL0_wght400_GRAD0_opsz24__2_;
+            this.btnCargarProvincias.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnCargarProvincias.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnCargarProvincias.Name = "btnCargarProvincias";
-            this.btnCargarProvincias.Size = new System.Drawing.Size(86, 22);
+            this.btnCargarProvincias.Size = new System.Drawing.Size(94, 28);
             this.btnCargarProvincias.Text = "VER TODAS";
             this.btnCargarProvincias.Click += new System.EventHandler(this.btnCargarProvincias_Click);
             // 
             // btnNuevoProvincia
             // 
-            this.btnNuevoProvincia.Image = ((System.Drawing.Image)(resources.GetObject("btnNuevoProvincia.Image")));
+            this.btnNuevoProvincia.Image = global::SysCisepro3.Properties.Resources.add_circle_24dp_FILL0_wght400_GRAD0_opsz24__3_;
+            this.btnNuevoProvincia.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnNuevoProvincia.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnNuevoProvincia.Name = "btnNuevoProvincia";
-            this.btnNuevoProvincia.Size = new System.Drawing.Size(66, 22);
+            this.btnNuevoProvincia.Size = new System.Drawing.Size(74, 28);
             this.btnNuevoProvincia.Text = "NUEVO";
             this.btnNuevoProvincia.Click += new System.EventHandler(this.btnNuevoProvincia_Click);
             // 
             // btnGuardarProvincia
             // 
             this.btnGuardarProvincia.Enabled = false;
-            this.btnGuardarProvincia.Image = ((System.Drawing.Image)(resources.GetObject("btnGuardarProvincia.Image")));
+            this.btnGuardarProvincia.Image = global::SysCisepro3.Properties.Resources.save_24dp_FILL0_wght400_GRAD0_opsz24__2_;
+            this.btnGuardarProvincia.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnGuardarProvincia.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnGuardarProvincia.Name = "btnGuardarProvincia";
-            this.btnGuardarProvincia.Size = new System.Drawing.Size(81, 22);
+            this.btnGuardarProvincia.Size = new System.Drawing.Size(89, 28);
             this.btnGuardarProvincia.Text = "GUARDAR";
             this.btnGuardarProvincia.Click += new System.EventHandler(this.btnGuardarProvincia_Click);
             // 
             // btnModificarProvincia
             // 
             this.btnModificarProvincia.Enabled = false;
-            this.btnModificarProvincia.Image = ((System.Drawing.Image)(resources.GetObject("btnModificarProvincia.Image")));
+            this.btnModificarProvincia.Image = global::SysCisepro3.Properties.Resources.edit_document_24dp_FILL0_wght400_GRAD0_opsz24__2_;
+            this.btnModificarProvincia.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnModificarProvincia.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnModificarProvincia.Name = "btnModificarProvincia";
-            this.btnModificarProvincia.Size = new System.Drawing.Size(90, 22);
+            this.btnModificarProvincia.Size = new System.Drawing.Size(98, 28);
             this.btnModificarProvincia.Text = "MODIFICAR";
             this.btnModificarProvincia.Click += new System.EventHandler(this.btnModificarProvincia_Click);
             // 
             // btnCancelarProvincia
             // 
             this.btnCancelarProvincia.Enabled = false;
-            this.btnCancelarProvincia.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelarProvincia.Image")));
+            this.btnCancelarProvincia.Image = global::SysCisepro3.Properties.Resources.cancel_24dp_FILL0_wght400_GRAD0_opsz24;
+            this.btnCancelarProvincia.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnCancelarProvincia.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnCancelarProvincia.Name = "btnCancelarProvincia";
-            this.btnCancelarProvincia.Size = new System.Drawing.Size(87, 22);
+            this.btnCancelarProvincia.Size = new System.Drawing.Size(95, 28);
             this.btnCancelarProvincia.Text = "CANCELAR";
             this.btnCancelarProvincia.Click += new System.EventHandler(this.btnCancelarProvincia_Click);
             // 
@@ -149,7 +155,7 @@
             this.txtNombreParroquia.BackColor = System.Drawing.Color.White;
             this.txtNombreParroquia.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtNombreParroquia.Enabled = false;
-            this.txtNombreParroquia.Location = new System.Drawing.Point(197, 43);
+            this.txtNombreParroquia.Location = new System.Drawing.Point(195, 70);
             this.txtNombreParroquia.Multiline = true;
             this.txtNombreParroquia.Name = "txtNombreParroquia";
             this.txtNombreParroquia.Size = new System.Drawing.Size(232, 21);
@@ -158,18 +164,18 @@
             // Label8
             // 
             this.Label8.AutoSize = true;
-            this.Label8.Location = new System.Drawing.Point(134, 47);
+            this.Label8.Location = new System.Drawing.Point(132, 74);
             this.Label8.Name = "Label8";
-            this.Label8.Size = new System.Drawing.Size(57, 13);
+            this.Label8.Size = new System.Drawing.Size(56, 13);
             this.Label8.TabIndex = 26;
             this.Label8.Text = "NOMBRE:";
             // 
             // Label9
             // 
             this.Label9.AutoSize = true;
-            this.Label9.Location = new System.Drawing.Point(18, 47);
+            this.Label9.Location = new System.Drawing.Point(16, 74);
             this.Label9.Name = "Label9";
-            this.Label9.Size = new System.Drawing.Size(21, 13);
+            this.Label9.Size = new System.Drawing.Size(20, 13);
             this.Label9.TabIndex = 25;
             this.Label9.Text = "ID:";
             // 
@@ -177,8 +183,8 @@
             // 
             this.txtIdCiudades.BackColor = System.Drawing.Color.White;
             this.txtIdCiudades.Enabled = false;
-            this.txtIdCiudades.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIdCiudades.Location = new System.Drawing.Point(32, 43);
+            this.txtIdCiudades.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIdCiudades.Location = new System.Drawing.Point(32, 71);
             this.txtIdCiudades.Name = "txtIdCiudades";
             this.txtIdCiudades.Size = new System.Drawing.Size(64, 21);
             this.txtIdCiudades.TabIndex = 7;
@@ -187,9 +193,9 @@
             // 
             this.txtIdParroquia.BackColor = System.Drawing.Color.White;
             this.txtIdParroquia.Enabled = false;
-            this.txtIdParroquia.Location = new System.Drawing.Point(45, 44);
+            this.txtIdParroquia.Location = new System.Drawing.Point(43, 71);
             this.txtIdParroquia.Name = "txtIdParroquia";
-            this.txtIdParroquia.Size = new System.Drawing.Size(68, 20);
+            this.txtIdParroquia.Size = new System.Drawing.Size(68, 21);
             this.txtIdParroquia.TabIndex = 28;
             // 
             // btnCancelarParroquia
@@ -197,9 +203,10 @@
             this.btnCancelarParroquia.Enabled = false;
             this.btnCancelarParroquia.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelarParroquia.ForeColor = System.Drawing.Color.White;
-            this.btnCancelarParroquia.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelarParroquia.Image")));
+            this.btnCancelarParroquia.Image = global::SysCisepro3.Properties.Resources.cancel_24dp_FILL0_wght400_GRAD0_opsz24;
+            this.btnCancelarParroquia.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnCancelarParroquia.Name = "btnCancelarParroquia";
-            this.btnCancelarParroquia.Size = new System.Drawing.Size(91, 20);
+            this.btnCancelarParroquia.Size = new System.Drawing.Size(99, 28);
             this.btnCancelarParroquia.Text = "CANCELAR";
             this.btnCancelarParroquia.Click += new System.EventHandler(this.btnCancelarParroquia_Click);
             // 
@@ -208,19 +215,19 @@
             this.btnGuardarParroquia.Enabled = false;
             this.btnGuardarParroquia.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardarParroquia.ForeColor = System.Drawing.Color.White;
-            this.btnGuardarParroquia.Image = ((System.Drawing.Image)(resources.GetObject("btnGuardarParroquia.Image")));
+            this.btnGuardarParroquia.Image = global::SysCisepro3.Properties.Resources.save_24dp_FILL0_wght400_GRAD0_opsz24__2_;
             this.btnGuardarParroquia.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnGuardarParroquia.Name = "btnGuardarParroquia";
-            this.btnGuardarParroquia.Size = new System.Drawing.Size(84, 20);
+            this.btnGuardarParroquia.Size = new System.Drawing.Size(92, 28);
             this.btnGuardarParroquia.Text = "GUARDAR";
             this.btnGuardarParroquia.Click += new System.EventHandler(this.btnGuardarParroquia_Click);
             // 
             // pbDivision
             // 
-            this.pbDivision.Image = ((System.Drawing.Image)(resources.GetObject("pbDivision.Image")));
-            this.pbDivision.Location = new System.Drawing.Point(548, 28);
+            this.pbDivision.Image = global::SysCisepro3.Properties.Resources.mapa_de_ecuador_con_sus_provincias_1;
+            this.pbDivision.Location = new System.Drawing.Point(513, 39);
             this.pbDivision.Name = "pbDivision";
-            this.pbDivision.Size = new System.Drawing.Size(336, 220);
+            this.pbDivision.Size = new System.Drawing.Size(392, 209);
             this.pbDivision.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbDivision.TabIndex = 203;
             this.pbDivision.TabStop = false;
@@ -230,10 +237,10 @@
             this.btnGuardarCiudad.Enabled = false;
             this.btnGuardarCiudad.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardarCiudad.ForeColor = System.Drawing.Color.White;
-            this.btnGuardarCiudad.Image = ((System.Drawing.Image)(resources.GetObject("btnGuardarCiudad.Image")));
+            this.btnGuardarCiudad.Image = global::SysCisepro3.Properties.Resources.save_24dp_FILL0_wght400_GRAD0_opsz24__2_;
             this.btnGuardarCiudad.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnGuardarCiudad.Name = "btnGuardarCiudad";
-            this.btnGuardarCiudad.Size = new System.Drawing.Size(84, 20);
+            this.btnGuardarCiudad.Size = new System.Drawing.Size(92, 28);
             this.btnGuardarCiudad.Text = "GUARDAR";
             this.btnGuardarCiudad.Click += new System.EventHandler(this.btnGuardarCiudad_Click);
             // 
@@ -241,10 +248,10 @@
             // 
             this.btnNuevoCiudad.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNuevoCiudad.ForeColor = System.Drawing.Color.White;
-            this.btnNuevoCiudad.Image = ((System.Drawing.Image)(resources.GetObject("btnNuevoCiudad.Image")));
+            this.btnNuevoCiudad.Image = global::SysCisepro3.Properties.Resources.add_circle_24dp_FILL0_wght400_GRAD0_opsz24__3_;
             this.btnNuevoCiudad.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnNuevoCiudad.Name = "btnNuevoCiudad";
-            this.btnNuevoCiudad.Size = new System.Drawing.Size(70, 20);
+            this.btnNuevoCiudad.Size = new System.Drawing.Size(78, 28);
             this.btnNuevoCiudad.Text = "NUEVO";
             this.btnNuevoCiudad.Click += new System.EventHandler(this.btnNuevoCiudad_Click);
             // 
@@ -252,16 +259,18 @@
             // 
             this.btnCargarCiudades.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCargarCiudades.ForeColor = System.Drawing.Color.White;
-            this.btnCargarCiudades.Image = ((System.Drawing.Image)(resources.GetObject("btnCargarCiudades.Image")));
+            this.btnCargarCiudades.Image = global::SysCisepro3.Properties.Resources.search_24dp_FILL0_wght400_GRAD0_opsz24__2_;
             this.btnCargarCiudades.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnCargarCiudades.Name = "btnCargarCiudades";
-            this.btnCargarCiudades.Size = new System.Drawing.Size(98, 20);
-            this.btnCargarCiudades.Text = "VER TODAS";
+            this.btnCargarCiudades.Size = new System.Drawing.Size(85, 28);
+            this.btnCargarCiudades.Text = "BUSCAR";
             this.btnCargarCiudades.Click += new System.EventHandler(this.btnCargarCiudades_Click);
             // 
             // MenuStrip1
             // 
-            this.MenuStrip1.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MenuStrip1.AutoSize = false;
+            this.MenuStrip1.Dock = System.Windows.Forms.DockStyle.None;
+            this.MenuStrip1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.MenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnCargarCiudades,
             this.btnNuevoCiudad,
@@ -272,8 +281,7 @@
             this.MenuStrip1.Location = new System.Drawing.Point(3, 16);
             this.MenuStrip1.Name = "MenuStrip1";
             this.MenuStrip1.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
-            this.MenuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.MenuStrip1.Size = new System.Drawing.Size(461, 24);
+            this.MenuStrip1.Size = new System.Drawing.Size(467, 42);
             this.MenuStrip1.TabIndex = 184;
             this.MenuStrip1.Text = "msIngresoBodega";
             // 
@@ -282,9 +290,10 @@
             this.btnModificarCiudad.Enabled = false;
             this.btnModificarCiudad.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModificarCiudad.ForeColor = System.Drawing.Color.White;
-            this.btnModificarCiudad.Image = ((System.Drawing.Image)(resources.GetObject("btnModificarCiudad.Image")));
+            this.btnModificarCiudad.Image = global::SysCisepro3.Properties.Resources.edit_document_24dp_FILL0_wght400_GRAD0_opsz24__2_;
+            this.btnModificarCiudad.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnModificarCiudad.Name = "btnModificarCiudad";
-            this.btnModificarCiudad.Size = new System.Drawing.Size(98, 20);
+            this.btnModificarCiudad.Size = new System.Drawing.Size(106, 28);
             this.btnModificarCiudad.Text = "MODIFICAR";
             this.btnModificarCiudad.Click += new System.EventHandler(this.btnModificarCiudad_Click);
             // 
@@ -293,9 +302,10 @@
             this.btnCancelarCiudad.Enabled = false;
             this.btnCancelarCiudad.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelarCiudad.ForeColor = System.Drawing.Color.White;
-            this.btnCancelarCiudad.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelarCiudad.Image")));
+            this.btnCancelarCiudad.Image = global::SysCisepro3.Properties.Resources.cancel_24dp_FILL0_wght400_GRAD0_opsz24;
+            this.btnCancelarCiudad.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnCancelarCiudad.Name = "btnCancelarCiudad";
-            this.btnCancelarCiudad.Size = new System.Drawing.Size(91, 20);
+            this.btnCancelarCiudad.Size = new System.Drawing.Size(99, 28);
             this.btnCancelarCiudad.Text = "CANCELAR";
             this.btnCancelarCiudad.Click += new System.EventHandler(this.btnCancelarCiudad_Click);
             // 
@@ -307,9 +317,10 @@
             this.gbCantones.Controls.Add(this.txtNombreCiudades);
             this.gbCantones.Controls.Add(this.txtIdCiudades);
             this.gbCantones.Controls.Add(this.dgvCiudades);
-            this.gbCantones.Location = new System.Drawing.Point(3, 253);
+            this.gbCantones.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbCantones.Location = new System.Drawing.Point(0, 256);
             this.gbCantones.Name = "gbCantones";
-            this.gbCantones.Size = new System.Drawing.Size(467, 350);
+            this.gbCantones.Size = new System.Drawing.Size(467, 364);
             this.gbCantones.TabIndex = 204;
             this.gbCantones.TabStop = false;
             this.gbCantones.Text = "CANTONES";
@@ -317,8 +328,8 @@
             // Label1
             // 
             this.Label1.AutoSize = true;
-            this.Label1.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label1.Location = new System.Drawing.Point(6, 46);
+            this.Label1.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label1.Location = new System.Drawing.Point(6, 74);
             this.Label1.Name = "Label1";
             this.Label1.Size = new System.Drawing.Size(20, 13);
             this.Label1.TabIndex = 4;
@@ -327,10 +338,10 @@
             // Label2
             // 
             this.Label2.AutoSize = true;
-            this.Label2.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label2.Location = new System.Drawing.Point(122, 46);
+            this.Label2.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label2.Location = new System.Drawing.Point(122, 74);
             this.Label2.Name = "Label2";
-            this.Label2.Size = new System.Drawing.Size(50, 13);
+            this.Label2.Size = new System.Drawing.Size(56, 13);
             this.Label2.TabIndex = 5;
             this.Label2.Text = "NOMBRE:";
             // 
@@ -339,8 +350,8 @@
             this.txtNombreCiudades.BackColor = System.Drawing.Color.White;
             this.txtNombreCiudades.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtNombreCiudades.Enabled = false;
-            this.txtNombreCiudades.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombreCiudades.Location = new System.Drawing.Point(178, 43);
+            this.txtNombreCiudades.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombreCiudades.Location = new System.Drawing.Point(178, 71);
             this.txtNombreCiudades.Multiline = true;
             this.txtNombreCiudades.Name = "txtNombreCiudades";
             this.txtNombreCiudades.Size = new System.Drawing.Size(230, 21);
@@ -358,18 +369,18 @@
             this.dgvCiudades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(60)))), ((int)(((byte)(123)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvCiudades.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvCiudades.Location = new System.Drawing.Point(3, 70);
+            this.dgvCiudades.Location = new System.Drawing.Point(3, 102);
             this.dgvCiudades.Name = "dgvCiudades";
             this.dgvCiudades.ReadOnly = true;
             this.dgvCiudades.RowHeadersVisible = false;
             this.dgvCiudades.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvCiudades.Size = new System.Drawing.Size(458, 273);
+            this.dgvCiudades.Size = new System.Drawing.Size(458, 231);
             this.dgvCiudades.TabIndex = 8;
             this.dgvCiudades.SelectionChanged += new System.EventHandler(this.dgvCiudades_SelectionChanged);
             // 
@@ -377,10 +388,10 @@
             // 
             this.btnNuevaParroquia.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNuevaParroquia.ForeColor = System.Drawing.Color.White;
-            this.btnNuevaParroquia.Image = ((System.Drawing.Image)(resources.GetObject("btnNuevaParroquia.Image")));
+            this.btnNuevaParroquia.Image = global::SysCisepro3.Properties.Resources.add_circle_24dp_FILL0_wght400_GRAD0_opsz24__3_;
             this.btnNuevaParroquia.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnNuevaParroquia.Name = "btnNuevaParroquia";
-            this.btnNuevaParroquia.Size = new System.Drawing.Size(70, 20);
+            this.btnNuevaParroquia.Size = new System.Drawing.Size(78, 28);
             this.btnNuevaParroquia.Text = "NUEVO";
             this.btnNuevaParroquia.Click += new System.EventHandler(this.btnNuevaParroquia_Click);
             // 
@@ -388,11 +399,11 @@
             // 
             this.btnCargarParroquias.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCargarParroquias.ForeColor = System.Drawing.Color.White;
-            this.btnCargarParroquias.Image = ((System.Drawing.Image)(resources.GetObject("btnCargarParroquias.Image")));
+            this.btnCargarParroquias.Image = global::SysCisepro3.Properties.Resources.search_24dp_FILL0_wght400_GRAD0_opsz24__2_;
             this.btnCargarParroquias.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnCargarParroquias.Name = "btnCargarParroquias";
-            this.btnCargarParroquias.Size = new System.Drawing.Size(98, 20);
-            this.btnCargarParroquias.Text = "VER TODAS";
+            this.btnCargarParroquias.Size = new System.Drawing.Size(85, 28);
+            this.btnCargarParroquias.Text = "BUSCAR";
             this.btnCargarParroquias.Click += new System.EventHandler(this.btnCargarParroquias_Click);
             // 
             // GroupBox1
@@ -403,7 +414,8 @@
             this.GroupBox1.Controls.Add(this.dgvParroquias);
             this.GroupBox1.Controls.Add(this.Label8);
             this.GroupBox1.Controls.Add(this.txtIdParroquia);
-            this.GroupBox1.Location = new System.Drawing.Point(476, 253);
+            this.GroupBox1.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GroupBox1.Location = new System.Drawing.Point(470, 256);
             this.GroupBox1.Name = "GroupBox1";
             this.GroupBox1.Size = new System.Drawing.Size(466, 350);
             this.GroupBox1.TabIndex = 202;
@@ -412,7 +424,9 @@
             // 
             // MenuStrip2
             // 
-            this.MenuStrip2.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MenuStrip2.AutoSize = false;
+            this.MenuStrip2.Dock = System.Windows.Forms.DockStyle.None;
+            this.MenuStrip2.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.MenuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnCargarParroquias,
             this.btnNuevaParroquia,
@@ -423,8 +437,7 @@
             this.MenuStrip2.Location = new System.Drawing.Point(3, 16);
             this.MenuStrip2.Name = "MenuStrip2";
             this.MenuStrip2.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
-            this.MenuStrip2.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.MenuStrip2.Size = new System.Drawing.Size(460, 24);
+            this.MenuStrip2.Size = new System.Drawing.Size(471, 42);
             this.MenuStrip2.TabIndex = 185;
             this.MenuStrip2.Text = "msIngresoBodega";
             // 
@@ -433,9 +446,10 @@
             this.btnModificarParroquia.Enabled = false;
             this.btnModificarParroquia.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModificarParroquia.ForeColor = System.Drawing.Color.White;
-            this.btnModificarParroquia.Image = ((System.Drawing.Image)(resources.GetObject("btnModificarParroquia.Image")));
+            this.btnModificarParroquia.Image = global::SysCisepro3.Properties.Resources.edit_document_24dp_FILL0_wght400_GRAD0_opsz24__2_;
+            this.btnModificarParroquia.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnModificarParroquia.Name = "btnModificarParroquia";
-            this.btnModificarParroquia.Size = new System.Drawing.Size(98, 20);
+            this.btnModificarParroquia.Size = new System.Drawing.Size(106, 28);
             this.btnModificarParroquia.Text = "MODIFICAR";
             this.btnModificarParroquia.Click += new System.EventHandler(this.btnModificarParroquia_Click);
             // 
@@ -451,18 +465,18 @@
             this.dgvParroquias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(60)))), ((int)(((byte)(123)))));
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvParroquias.DefaultCellStyle = dataGridViewCellStyle4;
-            this.dgvParroquias.Location = new System.Drawing.Point(3, 70);
+            this.dgvParroquias.Location = new System.Drawing.Point(3, 102);
             this.dgvParroquias.Name = "dgvParroquias";
             this.dgvParroquias.ReadOnly = true;
             this.dgvParroquias.RowHeadersVisible = false;
             this.dgvParroquias.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvParroquias.Size = new System.Drawing.Size(457, 273);
+            this.dgvParroquias.Size = new System.Drawing.Size(457, 231);
             this.dgvParroquias.TabIndex = 23;
             this.dgvParroquias.SelectionChanged += new System.EventHandler(this.dgvParroquias_SelectionChanged);
             // 
@@ -470,9 +484,10 @@
             // 
             this.txtIdProvincia.BackColor = System.Drawing.Color.White;
             this.txtIdProvincia.Enabled = false;
-            this.txtIdProvincia.Location = new System.Drawing.Point(36, 31);
+            this.txtIdProvincia.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIdProvincia.Location = new System.Drawing.Point(35, 42);
             this.txtIdProvincia.Name = "txtIdProvincia";
-            this.txtIdProvincia.Size = new System.Drawing.Size(44, 20);
+            this.txtIdProvincia.Size = new System.Drawing.Size(44, 21);
             this.txtIdProvincia.TabIndex = 201;
             // 
             // txtNombreProvincia
@@ -480,7 +495,8 @@
             this.txtNombreProvincia.BackColor = System.Drawing.Color.White;
             this.txtNombreProvincia.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtNombreProvincia.Enabled = false;
-            this.txtNombreProvincia.Location = new System.Drawing.Point(160, 31);
+            this.txtNombreProvincia.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombreProvincia.Location = new System.Drawing.Point(160, 42);
             this.txtNombreProvincia.Multiline = true;
             this.txtNombreProvincia.Name = "txtNombreProvincia";
             this.txtNombreProvincia.Size = new System.Drawing.Size(251, 25);
@@ -489,18 +505,20 @@
             // Label4
             // 
             this.Label4.AutoSize = true;
-            this.Label4.Location = new System.Drawing.Point(97, 34);
+            this.Label4.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label4.Location = new System.Drawing.Point(98, 45);
             this.Label4.Name = "Label4";
-            this.Label4.Size = new System.Drawing.Size(57, 13);
+            this.Label4.Size = new System.Drawing.Size(56, 13);
             this.Label4.TabIndex = 199;
             this.Label4.Text = "NOMBRE:";
             // 
             // Label5
             // 
             this.Label5.AutoSize = true;
-            this.Label5.Location = new System.Drawing.Point(9, 34);
+            this.Label5.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label5.Location = new System.Drawing.Point(9, 45);
             this.Label5.Name = "Label5";
-            this.Label5.Size = new System.Drawing.Size(21, 13);
+            this.Label5.Size = new System.Drawing.Size(20, 13);
             this.Label5.TabIndex = 198;
             this.Label5.Text = "ID:";
             // 
@@ -522,12 +540,12 @@
             dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvProvincias.DefaultCellStyle = dataGridViewCellStyle6;
-            this.dgvProvincias.Location = new System.Drawing.Point(3, 60);
+            this.dgvProvincias.Location = new System.Drawing.Point(3, 73);
             this.dgvProvincias.Name = "dgvProvincias";
             this.dgvProvincias.ReadOnly = true;
             this.dgvProvincias.RowHeadersVisible = false;
             this.dgvProvincias.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvProvincias.Size = new System.Drawing.Size(431, 190);
+            this.dgvProvincias.Size = new System.Drawing.Size(431, 177);
             this.dgvProvincias.TabIndex = 197;
             this.dgvProvincias.SelectionChanged += new System.EventHandler(this.dgvProvincias_SelectionChanged);
             // 
@@ -536,7 +554,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(943, 604);
+            this.ClientSize = new System.Drawing.Size(943, 593);
             this.Controls.Add(this.pbDivision);
             this.Controls.Add(this.gbCantones);
             this.Controls.Add(this.GroupBox1);

@@ -105,6 +105,7 @@ namespace SysCisepro3.TalentoHumano
                     break;
             }
             cbxFiltro.SelectedIndex = 0;
+            dgvPersonal.Font = new System.Drawing.Font("Roboto", 8, FontStyle.Regular);
 
             CargarProvincias();
             txtFiltro.Focus();

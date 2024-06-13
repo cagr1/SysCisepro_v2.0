@@ -24,7 +24,6 @@
         'No lo modifique con el editor de código.
         <System.Diagnostics.DebuggerStepThrough()>
         Private Sub InitializeComponent()
-            Me.components = New System.ComponentModel.Container()
             Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
@@ -48,15 +47,6 @@
             Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmReporteAsistencia))
             Me.tcSitios = New System.Windows.Forms.TabControl()
             Me.TabPage1 = New System.Windows.Forms.TabPage()
-            Me.Panel3 = New System.Windows.Forms.Panel()
-            Me.MenuStrip3 = New System.Windows.Forms.MenuStrip()
-            Me.btnAgregar = New System.Windows.Forms.ToolStripMenuItem()
-            Me.btnCambiar = New System.Windows.Forms.ToolStripMenuItem()
-            Me.ToolStripMenuItem3 = New System.Windows.Forms.ToolStripMenuItem()
-            Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
-            Me.btnQuitar = New System.Windows.Forms.ToolStripMenuItem()
-            Me.btnAddRad = New System.Windows.Forms.ToolStripMenuItem()
-            Me.ToolStripMenuItem6 = New System.Windows.Forms.ToolStripMenuItem()
             Me.Panel1 = New System.Windows.Forms.Panel()
             Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
             Me.REPORTESToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -129,6 +119,15 @@
             Me.Label16 = New System.Windows.Forms.Label()
             Me.Label24 = New System.Windows.Forms.Label()
             Me.Panel2 = New System.Windows.Forms.Panel()
+            Me.Panel3 = New System.Windows.Forms.Panel()
+            Me.MenuStrip3 = New System.Windows.Forms.MenuStrip()
+            Me.btnAgregar = New System.Windows.Forms.ToolStripMenuItem()
+            Me.btnCambiar = New System.Windows.Forms.ToolStripMenuItem()
+            Me.ToolStripMenuItem3 = New System.Windows.Forms.ToolStripMenuItem()
+            Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+            Me.btnQuitar = New System.Windows.Forms.ToolStripMenuItem()
+            Me.btnAddRad = New System.Windows.Forms.ToolStripMenuItem()
+            Me.ToolStripMenuItem6 = New System.Windows.Forms.ToolStripMenuItem()
             Me.TabPage4 = New System.Windows.Forms.TabPage()
             Me.TextBox1 = New System.Windows.Forms.TextBox()
             Me.ListView3 = New System.Windows.Forms.ListView()
@@ -158,11 +157,8 @@
             Me.Label3 = New System.Windows.Forms.Label()
             Me.DateTimePicker7 = New System.Windows.Forms.DateTimePicker()
             Me.Label5 = New System.Windows.Forms.Label()
-            Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
             Me.tcSitios.SuspendLayout()
             Me.TabPage1.SuspendLayout()
-            Me.Panel3.SuspendLayout()
-            Me.MenuStrip3.SuspendLayout()
             Me.Panel1.SuspendLayout()
             Me.MenuStrip1.SuspendLayout()
             Me.MenuStrip2.SuspendLayout()
@@ -174,6 +170,8 @@
             Me.TabPage5.SuspendLayout()
             CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.GroupBox4.SuspendLayout()
+            Me.Panel3.SuspendLayout()
+            Me.MenuStrip3.SuspendLayout()
             Me.TabPage4.SuspendLayout()
             Me.GroupBox1.SuspendLayout()
             Me.SuspendLayout()
@@ -192,110 +190,19 @@
             'TabPage1
             '
             Me.TabPage1.BackColor = System.Drawing.Color.White
-            Me.TabPage1.Controls.Add(Me.Panel3)
+            Me.TabPage1.CausesValidation = False
             Me.TabPage1.Controls.Add(Me.Panel1)
             Me.TabPage1.Controls.Add(Me.TabControl1)
             Me.TabPage1.Controls.Add(Me.GroupBox4)
             Me.TabPage1.Controls.Add(Me.Label24)
             Me.TabPage1.Controls.Add(Me.Panel2)
+            Me.TabPage1.Controls.Add(Me.Panel3)
             Me.TabPage1.Location = New System.Drawing.Point(4, 22)
             Me.TabPage1.Name = "TabPage1"
             Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
             Me.TabPage1.Size = New System.Drawing.Size(1263, 645)
             Me.TabPage1.TabIndex = 0
             Me.TabPage1.Text = "MANTENIMIENTO"
-            '
-            'Panel3
-            '
-            Me.Panel3.Controls.Add(Me.MenuStrip3)
-            Me.Panel3.Location = New System.Drawing.Point(562, 88)
-            Me.Panel3.Name = "Panel3"
-            Me.Panel3.Size = New System.Drawing.Size(700, 42)
-            Me.Panel3.TabIndex = 217
-            '
-            'MenuStrip3
-            '
-            Me.MenuStrip3.AutoSize = False
-            Me.MenuStrip3.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(247, Byte), Integer))
-            Me.MenuStrip3.Dock = System.Windows.Forms.DockStyle.None
-            Me.MenuStrip3.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-            Me.MenuStrip3.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnAgregar, Me.btnCambiar, Me.ToolStripMenuItem3, Me.ToolStripMenuItem1, Me.btnQuitar, Me.btnAddRad, Me.ToolStripMenuItem6})
-            Me.MenuStrip3.Location = New System.Drawing.Point(0, 2)
-            Me.MenuStrip3.Name = "MenuStrip3"
-            Me.MenuStrip3.Size = New System.Drawing.Size(700, 38)
-            Me.MenuStrip3.TabIndex = 1
-            Me.MenuStrip3.Text = "MenuStrip3"
-            '
-            'btnAgregar
-            '
-            Me.btnAgregar.AutoToolTip = True
-            Me.btnAgregar.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnAgregar.ForeColor = System.Drawing.Color.Black
-            Me.btnAgregar.Image = Global.syscisepro.My.Resources.Resources.person_add_24dp_FILL0_wght400_GRAD0_opsz24
-            Me.btnAgregar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-            Me.btnAgregar.Name = "btnAgregar"
-            Me.btnAgregar.Size = New System.Drawing.Size(36, 34)
-            Me.btnAgregar.ToolTipText = "Agregar"
-            '
-            'btnCambiar
-            '
-            Me.btnCambiar.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnCambiar.ForeColor = System.Drawing.Color.Black
-            Me.btnCambiar.Image = Global.syscisepro.My.Resources.Resources.person_edit_24dp_FILL0_wght400_GRAD0_opsz24
-            Me.btnCambiar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-            Me.btnCambiar.Name = "btnCambiar"
-            Me.btnCambiar.Size = New System.Drawing.Size(36, 34)
-            Me.btnCambiar.ToolTipText = "cambiar nombre"
-            '
-            'ToolStripMenuItem3
-            '
-            Me.ToolStripMenuItem3.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.ToolStripMenuItem3.ForeColor = System.Drawing.Color.Black
-            Me.ToolStripMenuItem3.Image = Global.syscisepro.My.Resources.Resources.location_on_24dp_FILL0_wght400_GRAD0_opsz24
-            Me.ToolStripMenuItem3.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-            Me.ToolStripMenuItem3.Name = "ToolStripMenuItem3"
-            Me.ToolStripMenuItem3.Size = New System.Drawing.Size(36, 34)
-            Me.ToolStripMenuItem3.ToolTipText = "river"
-            '
-            'ToolStripMenuItem1
-            '
-            Me.ToolStripMenuItem1.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.ToolStripMenuItem1.ForeColor = System.Drawing.Color.Black
-            Me.ToolStripMenuItem1.Image = Global.syscisepro.My.Resources.Resources.calendar_month_24dp_FILL0_wght400_GRAD0_opsz24__2_
-            Me.ToolStripMenuItem1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-            Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
-            Me.ToolStripMenuItem1.Size = New System.Drawing.Size(36, 34)
-            Me.ToolStripMenuItem1.ToolTipText = "turno"
-            '
-            'btnQuitar
-            '
-            Me.btnQuitar.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnQuitar.ForeColor = System.Drawing.Color.Black
-            Me.btnQuitar.Image = Global.syscisepro.My.Resources.Resources.person_cancel_24dp_FILL0_wght400_GRAD0_opsz24
-            Me.btnQuitar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-            Me.btnQuitar.Name = "btnQuitar"
-            Me.btnQuitar.Size = New System.Drawing.Size(36, 34)
-            Me.btnQuitar.ToolTipText = "quitar"
-            '
-            'btnAddRad
-            '
-            Me.btnAddRad.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnAddRad.ForeColor = System.Drawing.Color.Black
-            Me.btnAddRad.Image = Global.syscisepro.My.Resources.Resources.record_voice_over_24dp
-            Me.btnAddRad.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-            Me.btnAddRad.Name = "btnAddRad"
-            Me.btnAddRad.Size = New System.Drawing.Size(36, 34)
-            Me.btnAddRad.ToolTipText = "rep +"
-            '
-            'ToolStripMenuItem6
-            '
-            Me.ToolStripMenuItem6.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.ToolStripMenuItem6.ForeColor = System.Drawing.Color.Black
-            Me.ToolStripMenuItem6.Image = Global.syscisepro.My.Resources.Resources.voice_over_off_24dp
-            Me.ToolStripMenuItem6.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-            Me.ToolStripMenuItem6.Name = "ToolStripMenuItem6"
-            Me.ToolStripMenuItem6.Size = New System.Drawing.Size(36, 34)
-            Me.ToolStripMenuItem6.ToolTipText = "rep -"
             '
             'Panel1
             '
@@ -339,7 +246,7 @@
             Me.NOVEDADESACBMToolStripMenuItem.Image = Global.syscisepro.My.Resources.Resources.icons8_excel_48
             Me.NOVEDADESACBMToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.NOVEDADESACBMToolStripMenuItem.Name = "NOVEDADESACBMToolStripMenuItem"
-            Me.NOVEDADESACBMToolStripMenuItem.Size = New System.Drawing.Size(206, 30)
+            Me.NOVEDADESACBMToolStripMenuItem.Size = New System.Drawing.Size(208, 30)
             Me.NOVEDADESACBMToolStripMenuItem.Text = "NOVEDADES A / C B.M."
             '
             'REPORTESDERADIOToolStripMenuItem
@@ -347,20 +254,20 @@
             Me.REPORTESDERADIOToolStripMenuItem.Image = Global.syscisepro.My.Resources.Resources.icons8_excel_48
             Me.REPORTESDERADIOToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.REPORTESDERADIOToolStripMenuItem.Name = "REPORTESDERADIOToolStripMenuItem"
-            Me.REPORTESDERADIOToolStripMenuItem.Size = New System.Drawing.Size(206, 30)
+            Me.REPORTESDERADIOToolStripMenuItem.Size = New System.Drawing.Size(208, 30)
             Me.REPORTESDERADIOToolStripMenuItem.Text = "SANCIONES / MULTAS"
             '
             'ToolStripSeparator1
             '
             Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
-            Me.ToolStripSeparator1.Size = New System.Drawing.Size(203, 6)
+            Me.ToolStripSeparator1.Size = New System.Drawing.Size(205, 6)
             '
             'EXPORTARDATOSToolStripMenuItem
             '
             Me.EXPORTARDATOSToolStripMenuItem.Image = Global.syscisepro.My.Resources.Resources.icons8_excel_48
             Me.EXPORTARDATOSToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.EXPORTARDATOSToolStripMenuItem.Name = "EXPORTARDATOSToolStripMenuItem"
-            Me.EXPORTARDATOSToolStripMenuItem.Size = New System.Drawing.Size(206, 30)
+            Me.EXPORTARDATOSToolStripMenuItem.Size = New System.Drawing.Size(208, 30)
             Me.EXPORTARDATOSToolStripMenuItem.Text = "EXPORTAR DATOS"
             '
             'GUARDARCAMBIOSToolStripMenuItem
@@ -1032,11 +939,11 @@
             '
             'Label24
             '
-            Me.Label24.Cursor = System.Windows.Forms.Cursors.Hand
+            Me.Label24.Cursor = System.Windows.Forms.Cursors.Arrow
             Me.Label24.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label24.Location = New System.Drawing.Point(0, 89)
+            Me.Label24.Location = New System.Drawing.Point(0, 90)
             Me.Label24.Name = "Label24"
-            Me.Label24.Size = New System.Drawing.Size(559, 39)
+            Me.Label24.Size = New System.Drawing.Size(596, 39)
             Me.Label24.TabIndex = 195
             Me.Label24.Text = "PERSONAL ASIGNADO A PUESTOS DE TRABAJO SEGÚN PROGRAMACIÓN"
             Me.Label24.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -1047,6 +954,100 @@
             Me.Panel2.Name = "Panel2"
             Me.Panel2.Size = New System.Drawing.Size(242, 26)
             Me.Panel2.TabIndex = 216
+            '
+            'Panel3
+            '
+            Me.Panel3.Controls.Add(Me.MenuStrip3)
+            Me.Panel3.Location = New System.Drawing.Point(596, 88)
+            Me.Panel3.Name = "Panel3"
+            Me.Panel3.Size = New System.Drawing.Size(666, 42)
+            Me.Panel3.TabIndex = 217
+            '
+            'MenuStrip3
+            '
+            Me.MenuStrip3.AutoSize = False
+            Me.MenuStrip3.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(247, Byte), Integer))
+            Me.MenuStrip3.Dock = System.Windows.Forms.DockStyle.None
+            Me.MenuStrip3.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+            Me.MenuStrip3.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnAgregar, Me.btnCambiar, Me.ToolStripMenuItem3, Me.ToolStripMenuItem1, Me.btnQuitar, Me.btnAddRad, Me.ToolStripMenuItem6})
+            Me.MenuStrip3.Location = New System.Drawing.Point(3, 2)
+            Me.MenuStrip3.Name = "MenuStrip3"
+            Me.MenuStrip3.ShowItemToolTips = True
+            Me.MenuStrip3.Size = New System.Drawing.Size(663, 38)
+            Me.MenuStrip3.TabIndex = 0
+            Me.MenuStrip3.Text = "MenuStrip3"
+            '
+            'btnAgregar
+            '
+            Me.btnAgregar.AutoSize = False
+            Me.btnAgregar.AutoToolTip = True
+            Me.btnAgregar.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.btnAgregar.ForeColor = System.Drawing.Color.Black
+            Me.btnAgregar.Image = Global.syscisepro.My.Resources.Resources.person_add_24dp_FILL0_wght400_GRAD0_opsz24
+            Me.btnAgregar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+            Me.btnAgregar.Name = "btnAgregar"
+            Me.btnAgregar.Size = New System.Drawing.Size(36, 34)
+            Me.btnAgregar.ToolTipText = "Agregar"
+            '
+            'btnCambiar
+            '
+            Me.btnCambiar.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.btnCambiar.ForeColor = System.Drawing.Color.Black
+            Me.btnCambiar.Image = Global.syscisepro.My.Resources.Resources.person_edit_24dp_FILL0_wght400_GRAD0_opsz24
+            Me.btnCambiar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+            Me.btnCambiar.Name = "btnCambiar"
+            Me.btnCambiar.Size = New System.Drawing.Size(36, 34)
+            Me.btnCambiar.ToolTipText = "cambiar nombre"
+            '
+            'ToolStripMenuItem3
+            '
+            Me.ToolStripMenuItem3.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.ToolStripMenuItem3.ForeColor = System.Drawing.Color.Black
+            Me.ToolStripMenuItem3.Image = Global.syscisepro.My.Resources.Resources.location_on_24dp_FILL0_wght400_GRAD0_opsz24
+            Me.ToolStripMenuItem3.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+            Me.ToolStripMenuItem3.Name = "ToolStripMenuItem3"
+            Me.ToolStripMenuItem3.Size = New System.Drawing.Size(36, 34)
+            Me.ToolStripMenuItem3.ToolTipText = "river"
+            '
+            'ToolStripMenuItem1
+            '
+            Me.ToolStripMenuItem1.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.ToolStripMenuItem1.ForeColor = System.Drawing.Color.Black
+            Me.ToolStripMenuItem1.Image = Global.syscisepro.My.Resources.Resources.calendar_month_24dp_FILL0_wght400_GRAD0_opsz24__2_
+            Me.ToolStripMenuItem1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+            Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
+            Me.ToolStripMenuItem1.Size = New System.Drawing.Size(36, 34)
+            Me.ToolStripMenuItem1.ToolTipText = "turno"
+            '
+            'btnQuitar
+            '
+            Me.btnQuitar.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.btnQuitar.ForeColor = System.Drawing.Color.Black
+            Me.btnQuitar.Image = Global.syscisepro.My.Resources.Resources.person_cancel_24dp_FILL0_wght400_GRAD0_opsz24
+            Me.btnQuitar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+            Me.btnQuitar.Name = "btnQuitar"
+            Me.btnQuitar.Size = New System.Drawing.Size(36, 34)
+            Me.btnQuitar.ToolTipText = "quitar"
+            '
+            'btnAddRad
+            '
+            Me.btnAddRad.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.btnAddRad.ForeColor = System.Drawing.Color.Black
+            Me.btnAddRad.Image = Global.syscisepro.My.Resources.Resources.record_voice_over_24dp
+            Me.btnAddRad.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+            Me.btnAddRad.Name = "btnAddRad"
+            Me.btnAddRad.Size = New System.Drawing.Size(36, 34)
+            Me.btnAddRad.ToolTipText = "rep +"
+            '
+            'ToolStripMenuItem6
+            '
+            Me.ToolStripMenuItem6.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.ToolStripMenuItem6.ForeColor = System.Drawing.Color.Black
+            Me.ToolStripMenuItem6.Image = Global.syscisepro.My.Resources.Resources.voice_over_off_24dp
+            Me.ToolStripMenuItem6.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+            Me.ToolStripMenuItem6.Name = "ToolStripMenuItem6"
+            Me.ToolStripMenuItem6.Size = New System.Drawing.Size(36, 34)
+            Me.ToolStripMenuItem6.ToolTipText = "rep -"
             '
             'TabPage4
             '
@@ -1290,13 +1291,6 @@
             Me.Label5.TabIndex = 201
             Me.Label5.Text = "DEL:"
             '
-            'ToolTip1
-            '
-            Me.ToolTip1.AutoPopDelay = 5000
-            Me.ToolTip1.InitialDelay = 1000
-            Me.ToolTip1.ReshowDelay = 300
-            Me.ToolTip1.ShowAlways = True
-            '
             'FrmReporteAsistencia
             '
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1319,9 +1313,6 @@
             Me.tcSitios.ResumeLayout(False)
             Me.TabPage1.ResumeLayout(False)
             Me.TabPage1.PerformLayout()
-            Me.Panel3.ResumeLayout(False)
-            Me.MenuStrip3.ResumeLayout(False)
-            Me.MenuStrip3.PerformLayout()
             Me.Panel1.ResumeLayout(False)
             Me.Panel1.PerformLayout()
             Me.MenuStrip1.ResumeLayout(False)
@@ -1337,6 +1328,9 @@
             CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
             Me.GroupBox4.ResumeLayout(False)
             Me.GroupBox4.PerformLayout()
+            Me.Panel3.ResumeLayout(False)
+            Me.MenuStrip3.ResumeLayout(False)
+            Me.MenuStrip3.PerformLayout()
             Me.TabPage4.ResumeLayout(False)
             Me.TabPage4.PerformLayout()
             Me.GroupBox1.ResumeLayout(False)
@@ -1397,22 +1391,13 @@
         Friend WithEvents ToolStripSeparator1 As System.Windows.Forms.ToolStripSeparator
         Friend WithEvents EXPORTARDATOSToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
         Friend WithEvents GUARDARCAMBIOSToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-        Friend WithEvents Panel3 As System.Windows.Forms.Panel
-        Friend WithEvents MenuStrip3 As System.Windows.Forms.MenuStrip
-        Friend WithEvents btnAgregar As System.Windows.Forms.ToolStripMenuItem
-        Friend WithEvents btnCambiar As System.Windows.Forms.ToolStripMenuItem
-        Friend WithEvents btnQuitar As System.Windows.Forms.ToolStripMenuItem
-        Friend WithEvents btnAddRad As System.Windows.Forms.ToolStripMenuItem
-        Friend WithEvents ToolStripMenuItem6 As System.Windows.Forms.ToolStripMenuItem
         Friend WithEvents Label7 As System.Windows.Forms.Label
         Friend WithEvents Label8 As System.Windows.Forms.Label
-        Friend WithEvents ToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
         Friend WithEvents Label4 As System.Windows.Forms.Label
         Friend WithEvents ColumnHeader1 As System.Windows.Forms.ColumnHeader
         Friend WithEvents ColumnHeader2 As System.Windows.Forms.ColumnHeader
         Friend WithEvents ColumnHeader3 As System.Windows.Forms.ColumnHeader
         Friend WithEvents ColumnHeader4 As System.Windows.Forms.ColumnHeader
-        Friend WithEvents ToolStripMenuItem3 As System.Windows.Forms.ToolStripMenuItem
         Friend WithEvents Column15 As System.Windows.Forms.DataGridViewTextBoxColumn
         Friend WithEvents RIVER As System.Windows.Forms.DataGridViewTextBoxColumn
         Friend WithEvents Column1 As System.Windows.Forms.DataGridViewTextBoxColumn
@@ -1456,6 +1441,14 @@
         Friend WithEvents DataGridViewTextBoxColumn21 As System.Windows.Forms.DataGridViewTextBoxColumn
         Friend WithEvents DataGridViewTextBoxColumn23 As System.Windows.Forms.DataGridViewTextBoxColumn
         Friend WithEvents Column5 As System.Windows.Forms.DataGridViewTextBoxColumn
-        Friend WithEvents ToolTip1 As ToolTip
+        Friend WithEvents Panel3 As Panel
+        Friend WithEvents MenuStrip3 As MenuStrip
+        Friend WithEvents btnAgregar As ToolStripMenuItem
+        Friend WithEvents btnCambiar As ToolStripMenuItem
+        Friend WithEvents ToolStripMenuItem3 As ToolStripMenuItem
+        Friend WithEvents ToolStripMenuItem1 As ToolStripMenuItem
+        Friend WithEvents btnQuitar As ToolStripMenuItem
+        Friend WithEvents btnAddRad As ToolStripMenuItem
+        Friend WithEvents ToolStripMenuItem6 As ToolStripMenuItem
     End Class
 End Namespace

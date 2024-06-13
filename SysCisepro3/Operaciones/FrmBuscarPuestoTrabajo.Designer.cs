@@ -30,10 +30,6 @@
         {
             this.Label1 = new System.Windows.Forms.Label();
             this.ListView1 = new System.Windows.Forms.ListView();
-            this.Label3 = new System.Windows.Forms.Label();
-            this.txtParametrobusqueda = new System.Windows.Forms.TextBox();
-            this.Label2 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -53,6 +49,10 @@
             this.columnHeader17 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader18 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader19 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Label3 = new System.Windows.Forms.Label();
+            this.txtParametrobusqueda = new System.Windows.Forms.TextBox();
+            this.Label2 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // Label1
@@ -89,7 +89,9 @@
             this.columnHeader17,
             this.columnHeader18,
             this.columnHeader19});
+            this.ListView1.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ListView1.FullRowSelect = true;
+            this.ListView1.HideSelection = false;
             this.ListView1.Location = new System.Drawing.Point(2, 27);
             this.ListView1.MultiSelect = false;
             this.ListView1.Name = "ListView1";
@@ -98,51 +100,6 @@
             this.ListView1.UseCompatibleStateImageBehavior = false;
             this.ListView1.View = System.Windows.Forms.View.Details;
             this.ListView1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.ListView1_MouseDoubleClick);
-            // 
-            // Label3
-            // 
-            this.Label3.AutoSize = true;
-            this.Label3.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label3.ForeColor = System.Drawing.Color.White;
-            this.Label3.Location = new System.Drawing.Point(507, 6);
-            this.Label3.Name = "Label3";
-            this.Label3.Size = new System.Drawing.Size(0, 14);
-            this.Label3.TabIndex = 20;
-            // 
-            // txtParametrobusqueda
-            // 
-            this.txtParametrobusqueda.BackColor = System.Drawing.Color.White;
-            this.txtParametrobusqueda.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtParametrobusqueda.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtParametrobusqueda.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(60)))), ((int)(((byte)(123)))));
-            this.txtParametrobusqueda.Location = new System.Drawing.Point(58, 2);
-            this.txtParametrobusqueda.Name = "txtParametrobusqueda";
-            this.txtParametrobusqueda.Size = new System.Drawing.Size(295, 23);
-            this.txtParametrobusqueda.TabIndex = 17;
-            this.txtParametrobusqueda.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtParametrobusqueda_KeyUp);
-            // 
-            // Label2
-            // 
-            this.Label2.AutoSize = true;
-            this.Label2.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label2.ForeColor = System.Drawing.Color.White;
-            this.Label2.Location = new System.Drawing.Point(376, 6);
-            this.Label2.Name = "Label2";
-            this.Label2.Size = new System.Drawing.Size(130, 14);
-            this.Label2.TabIndex = 19;
-            this.Label2.Text = "CLIENTE SELECCIONADO:";
-            // 
-            // label4
-            // 
-            this.label4.BackColor = System.Drawing.Color.White;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(12, 161);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(835, 68);
-            this.label4.TabIndex = 22;
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label4.Visible = false;
             // 
             // columnHeader1
             // 
@@ -239,6 +196,51 @@
             this.columnHeader19.Text = "CLIENTE";
             this.columnHeader19.Width = 300;
             // 
+            // Label3
+            // 
+            this.Label3.AutoSize = true;
+            this.Label3.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label3.ForeColor = System.Drawing.Color.White;
+            this.Label3.Location = new System.Drawing.Point(507, 6);
+            this.Label3.Name = "Label3";
+            this.Label3.Size = new System.Drawing.Size(0, 14);
+            this.Label3.TabIndex = 20;
+            // 
+            // txtParametrobusqueda
+            // 
+            this.txtParametrobusqueda.BackColor = System.Drawing.Color.White;
+            this.txtParametrobusqueda.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtParametrobusqueda.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtParametrobusqueda.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(60)))), ((int)(((byte)(123)))));
+            this.txtParametrobusqueda.Location = new System.Drawing.Point(58, 2);
+            this.txtParametrobusqueda.Name = "txtParametrobusqueda";
+            this.txtParametrobusqueda.Size = new System.Drawing.Size(295, 23);
+            this.txtParametrobusqueda.TabIndex = 17;
+            this.txtParametrobusqueda.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtParametrobusqueda_KeyUp);
+            // 
+            // Label2
+            // 
+            this.Label2.AutoSize = true;
+            this.Label2.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label2.ForeColor = System.Drawing.Color.White;
+            this.Label2.Location = new System.Drawing.Point(376, 6);
+            this.Label2.Name = "Label2";
+            this.Label2.Size = new System.Drawing.Size(130, 14);
+            this.Label2.TabIndex = 19;
+            this.Label2.Text = "CLIENTE SELECCIONADO:";
+            // 
+            // label4
+            // 
+            this.label4.BackColor = System.Drawing.Color.White;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.Location = new System.Drawing.Point(12, 161);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(835, 68);
+            this.label4.TabIndex = 22;
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label4.Visible = false;
+            // 
             // FrmBuscarPuestoTrabajo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -254,6 +256,10 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "FrmBuscarPuestoTrabajo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StateActive.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.StateActive.Border.Rounding = 5F;
             this.Text = "BUSCAR SITIO TRABAJO";
             this.Load += new System.EventHandler(this.FrmBuscarPuestoTrabajo_Load);
             this.ResumeLayout(false);

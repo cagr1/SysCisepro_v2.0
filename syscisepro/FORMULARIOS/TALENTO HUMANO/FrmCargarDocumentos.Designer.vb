@@ -1,8 +1,8 @@
 ﻿Namespace FORMULARIOS.TALENTO_HUMANO
     <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
     Partial Class FrmCargarDocumentos
-        Inherits System.Windows.Forms.Form
-
+        'Inherits System.Windows.Forms.Form
+        Inherits Krypton.Toolkit.KryptonForm
         'Form reemplaza a Dispose para limpiar la lista de componentes.
         <System.Diagnostics.DebuggerNonUserCode()> _
         Protected Overrides Sub Dispose(ByVal disposing As Boolean)
@@ -38,31 +38,35 @@
             '
             'Button2
             '
+            Me.Button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(75, Byte), Integer), CType(CType(166, Byte), Integer), CType(CType(79, Byte), Integer))
             Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Button2.ForeColor = System.Drawing.Color.White
             Me.Button2.Location = New System.Drawing.Point(542, 61)
             Me.Button2.Name = "Button2"
             Me.Button2.Size = New System.Drawing.Size(75, 23)
             Me.Button2.TabIndex = 7
             Me.Button2.Text = "ACEPTAR"
-            Me.Button2.UseVisualStyleBackColor = True
+            Me.Button2.UseVisualStyleBackColor = False
             '
             'Button1
             '
+            Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(58, Byte), Integer))
             Me.Button1.DialogResult = System.Windows.Forms.DialogResult.Cancel
+            Me.Button1.ForeColor = System.Drawing.Color.White
             Me.Button1.Location = New System.Drawing.Point(461, 61)
             Me.Button1.Name = "Button1"
             Me.Button1.Size = New System.Drawing.Size(75, 23)
             Me.Button1.TabIndex = 6
             Me.Button1.Text = "CANCELAR"
-            Me.Button1.UseVisualStyleBackColor = True
+            Me.Button1.UseVisualStyleBackColor = False
             '
             'Label1
             '
             Me.Label1.AutoSize = True
-            Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Label1.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Label1.Location = New System.Drawing.Point(12, 9)
             Me.Label1.Name = "Label1"
-            Me.Label1.Size = New System.Drawing.Size(144, 13)
+            Me.Label1.Size = New System.Drawing.Size(122, 13)
             Me.Label1.TabIndex = 8
             Me.Label1.Text = "TIPO DE DOCUMENTO:"
             '
@@ -70,6 +74,7 @@
             '
             Me.ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.ComboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+            Me.ComboBox1.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.ComboBox1.FormattingEnabled = True
             Me.ComboBox1.Items.AddRange(New Object() {"CÉDULA & VOTACIÓN", "LIBRETA MILITAR", "CONTRATO", "OTRO"})
             Me.ComboBox1.Location = New System.Drawing.Point(159, 6)
@@ -80,27 +85,29 @@
             'Label2
             '
             Me.Label2.AutoSize = True
-            Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Label2.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Label2.Location = New System.Drawing.Point(12, 36)
             Me.Label2.Name = "Label2"
-            Me.Label2.Size = New System.Drawing.Size(127, 13)
+            Me.Label2.Size = New System.Drawing.Size(105, 13)
             Me.Label2.TabIndex = 10
             Me.Label2.Text = "RUTA / DIRECCIÓN:"
             '
             'TextBox1
             '
             Me.TextBox1.Enabled = False
+            Me.TextBox1.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.TextBox1.Location = New System.Drawing.Point(159, 33)
             Me.TextBox1.Name = "TextBox1"
-            Me.TextBox1.Size = New System.Drawing.Size(431, 20)
+            Me.TextBox1.Size = New System.Drawing.Size(431, 21)
             Me.TextBox1.TabIndex = 11
             '
             'bntHorarios
             '
             Me.bntHorarios.BackColor = System.Drawing.Color.White
+            Me.bntHorarios.FlatAppearance.BorderSize = 0
+            Me.bntHorarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.bntHorarios.Font = New System.Drawing.Font("Consolas", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.bntHorarios.Image = Global.syscisepro.My.Resources.Resources.BuscarRegistro
-            Me.bntHorarios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+            Me.bntHorarios.Image = Global.syscisepro.My.Resources.Resources.search_24dp_FILL0_wght400_GRAD0_opsz24__2_
             Me.bntHorarios.Location = New System.Drawing.Point(591, 29)
             Me.bntHorarios.Name = "bntHorarios"
             Me.bntHorarios.Size = New System.Drawing.Size(26, 26)
@@ -112,9 +119,10 @@
             '
             Me.TextBox2.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.TextBox2.Enabled = False
+            Me.TextBox2.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.TextBox2.Location = New System.Drawing.Point(452, 6)
             Me.TextBox2.Name = "TextBox2"
-            Me.TextBox2.Size = New System.Drawing.Size(165, 20)
+            Me.TextBox2.Size = New System.Drawing.Size(165, 21)
             Me.TextBox2.TabIndex = 196
             '
             'OpenFileDialog1
@@ -149,6 +157,10 @@
             Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
             Me.Name = "FrmCargarDocumentos"
             Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+            Me.StateActive.Border.DrawBorders = CType((((Krypton.Toolkit.PaletteDrawBorders.Top Or Krypton.Toolkit.PaletteDrawBorders.Bottom) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Left) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Right), Krypton.Toolkit.PaletteDrawBorders)
+            Me.StateActive.Border.Rounding = 5.0!
             Me.Text = "CARGAR DOCUMENTOS"
             Me.ResumeLayout(False)
             Me.PerformLayout()

@@ -5,10 +5,10 @@ using ClassLibraryCisepro3.Contabilidad.Proveedores;
 using ClassLibraryCisepro3.Enums;
 using SysCisepro3.Datos;
 using SysCisepro3.Properties;
-
+using Krypton.Toolkit;
 namespace SysCisepro3.Contabilidad.Compras
 {
-    public partial class FrmBuscarProveedor : Form
+    public partial class FrmBuscarProveedor : KryptonForm
     {
         /// <summary>
         /// CISEPRO 2019
@@ -42,7 +42,7 @@ namespace SysCisepro3.Contabilidad.Compras
                     Icon = Resources.logo_c; 
                     break;
             }
-
+            dataGridView1.Font = new Font("Roboto", 8, FontStyle.Regular);
             txtParametrobusqueda.Focus();
         }
 

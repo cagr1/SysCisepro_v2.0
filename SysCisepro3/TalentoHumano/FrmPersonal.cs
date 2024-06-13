@@ -92,7 +92,7 @@ namespace SysCisepro3.TalentoHumano
 
         private void FormPersonal_Load(object sender, EventArgs e)
         {
-            toolStrip1.BackColor = ValidationForms.GetColorSistema(TipoCon);
+            //toolStrip1.BackColor = ValidationForms.GetColorSistema(TipoCon);
             toolStrip1.ForeColor = Color.White;
             DataGridView1.DefaultCellStyle.SelectionBackColor = ValidationForms.GetColorSistema(TipoCon);
             dgvPersonal.DefaultCellStyle.SelectionBackColor = ValidationForms.GetColorSistema(TipoCon);
@@ -108,7 +108,8 @@ namespace SysCisepro3.TalentoHumano
                     Icon = Resources.logo_c;
                     break;
             }
-
+            DataGridView1.Font = new System.Drawing.Font("Roboto", 8, FontStyle.Regular);
+            dgvPersonal.Font = new System.Drawing.Font("Roboto", 8, FontStyle.Regular);
             pbFoto.Image = Resources._default;
             pbPerfil.Image = Resources._default;
             PictureBox1.Image = Resources._default;

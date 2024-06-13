@@ -106,7 +106,7 @@ Namespace FORMULARIOS.OPERACIONES
                     BackColor = My.MySettingsProperty.Settings.ColorCisepro
                     dgvCustodios.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
             End Select
-
+            dgvCustodios.Font = New Font("Roboto", 8, FontStyle.Regular)
             CargarPersonalGeneralOperaciones(txtParametrobusqueda.Text.Trim)
         End Sub
     End Class

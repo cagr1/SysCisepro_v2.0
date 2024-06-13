@@ -7,10 +7,11 @@ using ClassLibraryCisepro3.DivisionGeografica;
 using ClassLibraryCisepro3.Enums;
 using SysCisepro3.Datos;
 using SysCisepro3.Properties;
+using Krypton.Toolkit;
 
 namespace SysCisepro3.Operaciones
 {
-    public partial class FrmBuscarPuestoTrabajo : Form
+    public partial class FrmBuscarPuestoTrabajo : KryptonForm
     {
         /// <summary>
         /// CISEPRO 2019

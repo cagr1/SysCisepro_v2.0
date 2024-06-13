@@ -147,6 +147,7 @@
             // toolStrip1
             // 
             this.toolStrip1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnBuscar,
             this.ButtonNuevoRegistro,
@@ -216,7 +217,7 @@
             // 
             this.tcPersonal.Controls.Add(this.tpDatosPersonales);
             this.tcPersonal.Controls.Add(this.tabPage1);
-            this.tcPersonal.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tcPersonal.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tcPersonal.Location = new System.Drawing.Point(0, 35);
             this.tcPersonal.Name = "tcPersonal";
             this.tcPersonal.SelectedIndex = 0;
@@ -257,7 +258,7 @@
             this.GroupBox1.Controls.Add(this.lblFechaNacimiento);
             this.GroupBox1.Controls.Add(this.lblSexo);
             this.GroupBox1.Controls.Add(this.lblInstrucción);
-            this.GroupBox1.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GroupBox1.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GroupBox1.Location = new System.Drawing.Point(0, -6);
             this.GroupBox1.Name = "GroupBox1";
             this.GroupBox1.Size = new System.Drawing.Size(528, 124);
@@ -269,7 +270,7 @@
             this.lblValCed.BackColor = System.Drawing.Color.Transparent;
             this.lblValCed.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblValCed.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblValCed.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblValCed.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblValCed.Location = new System.Drawing.Point(163, 18);
             this.lblValCed.Name = "lblValCed";
             this.lblValCed.Size = new System.Drawing.Size(23, 17);
@@ -281,7 +282,7 @@
             this.cbEstadoCivil.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbEstadoCivil.Enabled = false;
             this.cbEstadoCivil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbEstadoCivil.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbEstadoCivil.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbEstadoCivil.FormattingEnabled = true;
             this.cbEstadoCivil.Items.AddRange(new object[] {
             "SOLTERO (A)",
@@ -300,7 +301,7 @@
             this.cbmInstruccion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbmInstruccion.Enabled = false;
             this.cbmInstruccion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbmInstruccion.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbmInstruccion.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbmInstruccion.FormattingEnabled = true;
             this.cbmInstruccion.Items.AddRange(new object[] {
             "PRIMARIA",
@@ -319,10 +320,10 @@
             this.lblCédula.BackColor = System.Drawing.Color.Transparent;
             this.lblCédula.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblCédula.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblCédula.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCédula.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCédula.Location = new System.Drawing.Point(7, 20);
             this.lblCédula.Name = "lblCédula";
-            this.lblCédula.Size = new System.Drawing.Size(49, 13);
+            this.lblCédula.Size = new System.Drawing.Size(50, 13);
             this.lblCédula.TabIndex = 75;
             this.lblCédula.Text = "CÉDULA:";
             // 
@@ -331,11 +332,11 @@
             this.txtCedula.BackColor = System.Drawing.Color.White;
             this.txtCedula.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtCedula.Enabled = false;
-            this.txtCedula.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCedula.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCedula.Location = new System.Drawing.Point(78, 17);
             this.txtCedula.MaxLength = 10;
             this.txtCedula.Name = "txtCedula";
-            this.txtCedula.Size = new System.Drawing.Size(84, 20);
+            this.txtCedula.Size = new System.Drawing.Size(84, 21);
             this.txtCedula.TabIndex = 1;
             this.txtCedula.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtCedula_KeyUp);
             // 
@@ -343,10 +344,10 @@
             // 
             this.lblNombres.AutoSize = true;
             this.lblNombres.BackColor = System.Drawing.Color.Transparent;
-            this.lblNombres.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombres.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombres.Location = new System.Drawing.Point(7, 46);
             this.lblNombres.Name = "lblNombres";
-            this.lblNombres.Size = new System.Drawing.Size(55, 13);
+            this.lblNombres.Size = new System.Drawing.Size(63, 13);
             this.lblNombres.TabIndex = 77;
             this.lblNombres.Text = "NOMBRES:";
             // 
@@ -355,17 +356,17 @@
             this.txtNombres.BackColor = System.Drawing.Color.White;
             this.txtNombres.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtNombres.Enabled = false;
-            this.txtNombres.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombres.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombres.Location = new System.Drawing.Point(78, 43);
             this.txtNombres.Name = "txtNombres";
-            this.txtNombres.Size = new System.Drawing.Size(446, 20);
+            this.txtNombres.Size = new System.Drawing.Size(446, 21);
             this.txtNombres.TabIndex = 3;
             // 
             // lblApellidos
             // 
             this.lblApellidos.AutoSize = true;
             this.lblApellidos.BackColor = System.Drawing.Color.Transparent;
-            this.lblApellidos.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblApellidos.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblApellidos.Location = new System.Drawing.Point(7, 72);
             this.lblApellidos.Name = "lblApellidos";
             this.lblApellidos.Size = new System.Drawing.Size(67, 13);
@@ -377,10 +378,10 @@
             this.txtApellidos.BackColor = System.Drawing.Color.White;
             this.txtApellidos.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtApellidos.Enabled = false;
-            this.txtApellidos.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtApellidos.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtApellidos.Location = new System.Drawing.Point(78, 69);
             this.txtApellidos.Name = "txtApellidos";
-            this.txtApellidos.Size = new System.Drawing.Size(446, 20);
+            this.txtApellidos.Size = new System.Drawing.Size(446, 21);
             this.txtApellidos.TabIndex = 4;
             // 
             // cbmSexo
@@ -389,7 +390,7 @@
             this.cbmSexo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbmSexo.Enabled = false;
             this.cbmSexo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbmSexo.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbmSexo.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbmSexo.FormattingEnabled = true;
             this.cbmSexo.Items.AddRange(new object[] {
             "M",
@@ -402,11 +403,11 @@
             // dtpFechaNacimiento
             // 
             this.dtpFechaNacimiento.Enabled = false;
-            this.dtpFechaNacimiento.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpFechaNacimiento.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpFechaNacimiento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpFechaNacimiento.Location = new System.Drawing.Point(367, 17);
             this.dtpFechaNacimiento.Name = "dtpFechaNacimiento";
-            this.dtpFechaNacimiento.Size = new System.Drawing.Size(86, 20);
+            this.dtpFechaNacimiento.Size = new System.Drawing.Size(86, 21);
             this.dtpFechaNacimiento.TabIndex = 6;
             this.dtpFechaNacimiento.ValueChanged += new System.EventHandler(this.dtpFechaNacimiento_ValueChanged);
             // 
@@ -414,10 +415,10 @@
             // 
             this.txtEdad.BackColor = System.Drawing.Color.White;
             this.txtEdad.Enabled = false;
-            this.txtEdad.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEdad.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEdad.Location = new System.Drawing.Point(498, 17);
             this.txtEdad.Name = "txtEdad";
-            this.txtEdad.Size = new System.Drawing.Size(26, 20);
+            this.txtEdad.Size = new System.Drawing.Size(26, 21);
             this.txtEdad.TabIndex = 7;
             this.txtEdad.Text = "18";
             this.txtEdad.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -426,16 +427,17 @@
             // 
             this.Label2.AutoSize = true;
             this.Label2.BackColor = System.Drawing.Color.Transparent;
-            this.Label2.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label2.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label2.Location = new System.Drawing.Point(7, 100);
             this.Label2.Name = "Label2";
-            this.Label2.Size = new System.Drawing.Size(73, 13);
+            this.Label2.Size = new System.Drawing.Size(61, 13);
             this.Label2.TabIndex = 116;
             this.Label2.Text = "EST. CIVIL:";
             // 
             // lblAspirante
             // 
             this.lblAspirante.AutoSize = true;
+            this.lblAspirante.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAspirante.Location = new System.Drawing.Point(147, 20);
             this.lblAspirante.Name = "lblAspirante";
             this.lblAspirante.Size = new System.Drawing.Size(13, 13);
@@ -447,8 +449,8 @@
             // 
             this.lblEdad.AutoSize = true;
             this.lblEdad.BackColor = System.Drawing.Color.Transparent;
-            this.lblEdad.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEdad.Location = new System.Drawing.Point(465, 20);
+            this.lblEdad.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEdad.Location = new System.Drawing.Point(459, 20);
             this.lblEdad.Name = "lblEdad";
             this.lblEdad.Size = new System.Drawing.Size(37, 13);
             this.lblEdad.TabIndex = 100;
@@ -458,10 +460,10 @@
             // 
             this.lblFechaNacimiento.AutoSize = true;
             this.lblFechaNacimiento.BackColor = System.Drawing.Color.Transparent;
-            this.lblFechaNacimiento.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFechaNacimiento.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFechaNacimiento.Location = new System.Drawing.Point(308, 20);
             this.lblFechaNacimiento.Name = "lblFechaNacimiento";
-            this.lblFechaNacimiento.Size = new System.Drawing.Size(61, 13);
+            this.lblFechaNacimiento.Size = new System.Drawing.Size(57, 13);
             this.lblFechaNacimiento.TabIndex = 89;
             this.lblFechaNacimiento.Text = "FEC. NAC:";
             // 
@@ -469,10 +471,10 @@
             // 
             this.lblSexo.AutoSize = true;
             this.lblSexo.BackColor = System.Drawing.Color.Transparent;
-            this.lblSexo.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSexo.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSexo.Location = new System.Drawing.Point(203, 20);
             this.lblSexo.Name = "lblSexo";
-            this.lblSexo.Size = new System.Drawing.Size(37, 13);
+            this.lblSexo.Size = new System.Drawing.Size(38, 13);
             this.lblSexo.TabIndex = 93;
             this.lblSexo.Text = "SEXO:";
             // 
@@ -480,10 +482,10 @@
             // 
             this.lblInstrucción.AutoSize = true;
             this.lblInstrucción.BackColor = System.Drawing.Color.Transparent;
-            this.lblInstrucción.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInstrucción.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblInstrucción.Location = new System.Drawing.Point(231, 99);
             this.lblInstrucción.Name = "lblInstrucción";
-            this.lblInstrucción.Size = new System.Drawing.Size(79, 13);
+            this.lblInstrucción.Size = new System.Drawing.Size(82, 13);
             this.lblInstrucción.TabIndex = 117;
             this.lblInstrucción.Text = "INSTRUCCIÓN:";
             // 
@@ -534,7 +536,7 @@
             this.GroupBox6.Controls.Add(this.Label11);
             this.GroupBox6.Controls.Add(this.txtAfis);
             this.GroupBox6.Controls.Add(this.label16);
-            this.GroupBox6.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GroupBox6.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GroupBox6.Location = new System.Drawing.Point(528, -6);
             this.GroupBox6.Name = "GroupBox6";
             this.GroupBox6.Size = new System.Drawing.Size(477, 311);
@@ -559,10 +561,10 @@
             this.txtDocumentos.BackColor = System.Drawing.Color.White;
             this.txtDocumentos.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtDocumentos.Enabled = false;
-            this.txtDocumentos.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDocumentos.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDocumentos.Location = new System.Drawing.Point(166, 280);
             this.txtDocumentos.Name = "txtDocumentos";
-            this.txtDocumentos.Size = new System.Drawing.Size(283, 20);
+            this.txtDocumentos.Size = new System.Drawing.Size(283, 21);
             this.txtDocumentos.TabIndex = 248;
             this.txtDocumentos.Text = "NO TIENE";
             // 
@@ -570,10 +572,10 @@
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(10, 285);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(115, 13);
+            this.label4.Size = new System.Drawing.Size(131, 13);
             this.label4.TabIndex = 247;
             this.label4.Text = "CARGAR DOCUMENTOS:";
             // 
@@ -584,7 +586,7 @@
             this.chkPoligrafica.Cursor = System.Windows.Forms.Cursors.Hand;
             this.chkPoligrafica.Enabled = false;
             this.chkPoligrafica.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.chkPoligrafica.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkPoligrafica.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkPoligrafica.Location = new System.Drawing.Point(166, 221);
             this.chkPoligrafica.Name = "chkPoligrafica";
             this.chkPoligrafica.Size = new System.Drawing.Size(12, 11);
@@ -596,10 +598,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(6, 11);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(127, 13);
+            this.label1.Size = new System.Drawing.Size(124, 13);
             this.label1.TabIndex = 149;
             this.label1.Text = "CEDULA DE IDENTIDAD:";
             // 
@@ -625,7 +627,7 @@
             this.chkVotacion.Enabled = false;
             this.chkVotacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.chkVotacion.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkVotacion.Location = new System.Drawing.Point(316, 13);
+            this.chkVotacion.Location = new System.Drawing.Point(317, 12);
             this.chkVotacion.Name = "chkVotacion";
             this.chkVotacion.Size = new System.Drawing.Size(12, 11);
             this.chkVotacion.TabIndex = 150;
@@ -636,10 +638,10 @@
             this.txtAntecedentes.BackColor = System.Drawing.Color.White;
             this.txtAntecedentes.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtAntecedentes.Enabled = false;
-            this.txtAntecedentes.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAntecedentes.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAntecedentes.Location = new System.Drawing.Point(184, 91);
             this.txtAntecedentes.Name = "txtAntecedentes";
-            this.txtAntecedentes.Size = new System.Drawing.Size(289, 20);
+            this.txtAntecedentes.Size = new System.Drawing.Size(289, 21);
             this.txtAntecedentes.TabIndex = 222;
             this.txtAntecedentes.Text = "NO TIENE";
             // 
@@ -648,10 +650,10 @@
             this.txtPoligrafica.BackColor = System.Drawing.Color.White;
             this.txtPoligrafica.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtPoligrafica.Enabled = false;
-            this.txtPoligrafica.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPoligrafica.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPoligrafica.Location = new System.Drawing.Point(184, 217);
             this.txtPoligrafica.Name = "txtPoligrafica";
-            this.txtPoligrafica.Size = new System.Drawing.Size(289, 20);
+            this.txtPoligrafica.Size = new System.Drawing.Size(289, 21);
             this.txtPoligrafica.TabIndex = 245;
             this.txtPoligrafica.Text = "NO TIENE";
             // 
@@ -659,10 +661,10 @@
             // 
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(178, 11);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(133, 13);
+            this.label6.Size = new System.Drawing.Size(136, 13);
             this.label6.TabIndex = 151;
             this.label6.Text = "CERTIFICADO VOTACIÓN:";
             // 
@@ -670,10 +672,10 @@
             // 
             this.label21.AutoSize = true;
             this.label21.BackColor = System.Drawing.Color.Transparent;
-            this.label21.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label21.Location = new System.Drawing.Point(9, 198);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(127, 13);
+            this.label21.Size = new System.Drawing.Size(124, 13);
             this.label21.TabIndex = 236;
             this.label21.Text = "TÍTULO DE BACHILLER:";
             // 
@@ -696,10 +698,10 @@
             this.txtPiscologico.BackColor = System.Drawing.Color.White;
             this.txtPiscologico.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtPiscologico.Enabled = false;
-            this.txtPiscologico.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPiscologico.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPiscologico.Location = new System.Drawing.Point(184, 133);
             this.txtPiscologico.Name = "txtPiscologico";
-            this.txtPiscologico.Size = new System.Drawing.Size(289, 20);
+            this.txtPiscologico.Size = new System.Drawing.Size(289, 21);
             this.txtPiscologico.TabIndex = 228;
             this.txtPiscologico.Text = "NO TIENE";
             // 
@@ -707,10 +709,10 @@
             // 
             this.label14.AutoSize = true;
             this.label14.BackColor = System.Drawing.Color.Transparent;
-            this.label14.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.Location = new System.Drawing.Point(351, 11);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(103, 13);
+            this.label14.Size = new System.Drawing.Size(99, 13);
             this.label14.TabIndex = 219;
             this.label14.Text = "LIBRETA MILITAR:";
             // 
@@ -719,10 +721,10 @@
             this.txtBachiller.BackColor = System.Drawing.Color.White;
             this.txtBachiller.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtBachiller.Enabled = false;
-            this.txtBachiller.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBachiller.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBachiller.Location = new System.Drawing.Point(184, 196);
             this.txtBachiller.Name = "txtBachiller";
-            this.txtBachiller.Size = new System.Drawing.Size(289, 20);
+            this.txtBachiller.Size = new System.Drawing.Size(289, 21);
             this.txtBachiller.TabIndex = 237;
             this.txtBachiller.Text = "NO TIENE";
             // 
@@ -731,10 +733,10 @@
             this.txtDiscapacitado.BackColor = System.Drawing.Color.White;
             this.txtDiscapacitado.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtDiscapacitado.Enabled = false;
-            this.txtDiscapacitado.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDiscapacitado.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDiscapacitado.Location = new System.Drawing.Point(184, 28);
             this.txtDiscapacitado.Name = "txtDiscapacitado";
-            this.txtDiscapacitado.Size = new System.Drawing.Size(289, 20);
+            this.txtDiscapacitado.Size = new System.Drawing.Size(289, 21);
             this.txtDiscapacitado.TabIndex = 28;
             this.txtDiscapacitado.Text = "NO TIENE";
             // 
@@ -742,10 +744,10 @@
             // 
             this.label17.AutoSize = true;
             this.label17.BackColor = System.Drawing.Color.Transparent;
-            this.label17.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.Location = new System.Drawing.Point(10, 219);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(121, 13);
+            this.label17.Size = new System.Drawing.Size(123, 13);
             this.label17.TabIndex = 246;
             this.label17.Text = "PRUEBA POLIGRAFICA:";
             // 
@@ -756,7 +758,7 @@
             this.chkDiscapacitado.Cursor = System.Windows.Forms.Cursors.Hand;
             this.chkDiscapacitado.Enabled = false;
             this.chkDiscapacitado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.chkDiscapacitado.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkDiscapacitado.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkDiscapacitado.Location = new System.Drawing.Point(166, 32);
             this.chkDiscapacitado.Name = "chkDiscapacitado";
             this.chkDiscapacitado.Size = new System.Drawing.Size(12, 11);
@@ -768,10 +770,10 @@
             // 
             this.label18.AutoSize = true;
             this.label18.BackColor = System.Drawing.Color.Transparent;
-            this.label18.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.Location = new System.Drawing.Point(9, 135);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(121, 13);
+            this.label18.Size = new System.Drawing.Size(129, 13);
             this.label18.TabIndex = 227;
             this.label18.Text = "EXÁMEN PSICOLÓGICO:";
             // 
@@ -779,10 +781,10 @@
             // 
             this.Label10.AutoSize = true;
             this.Label10.BackColor = System.Drawing.Color.Transparent;
-            this.Label10.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label10.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label10.Location = new System.Drawing.Point(10, 30);
             this.Label10.Name = "Label10";
-            this.Label10.Size = new System.Drawing.Size(91, 13);
+            this.Label10.Size = new System.Drawing.Size(93, 13);
             this.Label10.TabIndex = 135;
             this.Label10.Text = "DISCAPACITADO:";
             // 
@@ -793,7 +795,7 @@
             this.chkBachiller.Cursor = System.Windows.Forms.Cursors.Hand;
             this.chkBachiller.Enabled = false;
             this.chkBachiller.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.chkBachiller.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkBachiller.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkBachiller.Location = new System.Drawing.Point(166, 200);
             this.chkBachiller.Name = "chkBachiller";
             this.chkBachiller.Size = new System.Drawing.Size(12, 11);
@@ -805,10 +807,10 @@
             // 
             this.label12.AutoSize = true;
             this.label12.BackColor = System.Drawing.Color.Transparent;
-            this.label12.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.Location = new System.Drawing.Point(10, 263);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(97, 13);
+            this.label12.Size = new System.Drawing.Size(95, 13);
             this.label12.TabIndex = 243;
             this.label12.Text = "TIENE VEHÍCULO:";
             // 
@@ -819,7 +821,7 @@
             this.chkCertificadoTrabajo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.chkCertificadoTrabajo.Enabled = false;
             this.chkCertificadoTrabajo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.chkCertificadoTrabajo.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkCertificadoTrabajo.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkCertificadoTrabajo.Location = new System.Drawing.Point(166, 158);
             this.chkCertificadoTrabajo.Name = "chkCertificadoTrabajo";
             this.chkCertificadoTrabajo.Size = new System.Drawing.Size(12, 11);
@@ -834,7 +836,7 @@
             this.chkVehiculo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.chkVehiculo.Enabled = false;
             this.chkVehiculo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.chkVehiculo.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkVehiculo.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkVehiculo.Location = new System.Drawing.Point(166, 263);
             this.chkVehiculo.Name = "chkVehiculo";
             this.chkVehiculo.Size = new System.Drawing.Size(12, 11);
@@ -847,10 +849,10 @@
             this.txtEmisorCursoVigilante.BackColor = System.Drawing.Color.White;
             this.txtEmisorCursoVigilante.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtEmisorCursoVigilante.Enabled = false;
-            this.txtEmisorCursoVigilante.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmisorCursoVigilante.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmisorCursoVigilante.Location = new System.Drawing.Point(184, 49);
             this.txtEmisorCursoVigilante.Name = "txtEmisorCursoVigilante";
-            this.txtEmisorCursoVigilante.Size = new System.Drawing.Size(289, 20);
+            this.txtEmisorCursoVigilante.Size = new System.Drawing.Size(289, 21);
             this.txtEmisorCursoVigilante.TabIndex = 32;
             this.txtEmisorCursoVigilante.Text = "NO TIENE";
             // 
@@ -861,7 +863,7 @@
             this.chkPiscologico.Cursor = System.Windows.Forms.Cursors.Hand;
             this.chkPiscologico.Enabled = false;
             this.chkPiscologico.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.chkPiscologico.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkPiscologico.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkPiscologico.Location = new System.Drawing.Point(166, 137);
             this.chkPiscologico.Name = "chkPiscologico";
             this.chkPiscologico.Size = new System.Drawing.Size(12, 11);
@@ -876,7 +878,7 @@
             this.chkCredencial.Cursor = System.Windows.Forms.Cursors.Hand;
             this.chkCredencial.Enabled = false;
             this.chkCredencial.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.chkCredencial.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkCredencial.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkCredencial.Location = new System.Drawing.Point(166, 74);
             this.chkCredencial.Name = "chkCredencial";
             this.chkCredencial.Size = new System.Drawing.Size(12, 11);
@@ -891,7 +893,7 @@
             this.chkAntecedentes.Cursor = System.Windows.Forms.Cursors.Hand;
             this.chkAntecedentes.Enabled = false;
             this.chkAntecedentes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.chkAntecedentes.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkAntecedentes.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkAntecedentes.Location = new System.Drawing.Point(166, 95);
             this.chkAntecedentes.Name = "chkAntecedentes";
             this.chkAntecedentes.Size = new System.Drawing.Size(12, 11);
@@ -904,10 +906,10 @@
             this.txtRecomendaciones.BackColor = System.Drawing.Color.White;
             this.txtRecomendaciones.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtRecomendaciones.Enabled = false;
-            this.txtRecomendaciones.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRecomendaciones.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRecomendaciones.Location = new System.Drawing.Point(184, 175);
             this.txtRecomendaciones.Name = "txtRecomendaciones";
-            this.txtRecomendaciones.Size = new System.Drawing.Size(289, 20);
+            this.txtRecomendaciones.Size = new System.Drawing.Size(289, 21);
             this.txtRecomendaciones.TabIndex = 234;
             this.txtRecomendaciones.Text = "NO TIENE";
             // 
@@ -915,10 +917,10 @@
             // 
             this.Label8.AutoSize = true;
             this.Label8.BackColor = System.Drawing.Color.Transparent;
-            this.Label8.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label8.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label8.Location = new System.Drawing.Point(10, 53);
             this.Label8.Name = "Label8";
-            this.Label8.Size = new System.Drawing.Size(121, 13);
+            this.Label8.Size = new System.Drawing.Size(120, 13);
             this.Label8.TabIndex = 144;
             this.Label8.Text = "CURSO DE VIGILANTE:";
             // 
@@ -927,10 +929,10 @@
             this.txtVehiculo.BackColor = System.Drawing.Color.White;
             this.txtVehiculo.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtVehiculo.Enabled = false;
-            this.txtVehiculo.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtVehiculo.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtVehiculo.Location = new System.Drawing.Point(184, 259);
             this.txtVehiculo.Name = "txtVehiculo";
-            this.txtVehiculo.Size = new System.Drawing.Size(289, 20);
+            this.txtVehiculo.Size = new System.Drawing.Size(289, 21);
             this.txtVehiculo.TabIndex = 242;
             this.txtVehiculo.Text = "NO TIENE";
             // 
@@ -941,7 +943,7 @@
             this.chkCursoVigilante.Cursor = System.Windows.Forms.Cursors.Hand;
             this.chkCursoVigilante.Enabled = false;
             this.chkCursoVigilante.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.chkCursoVigilante.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkCursoVigilante.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkCursoVigilante.Location = new System.Drawing.Point(166, 53);
             this.chkCursoVigilante.Name = "chkCursoVigilante";
             this.chkCursoVigilante.Size = new System.Drawing.Size(12, 11);
@@ -954,10 +956,10 @@
             this.txtNoViolencia.BackColor = System.Drawing.Color.White;
             this.txtNoViolencia.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtNoViolencia.Enabled = false;
-            this.txtNoViolencia.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNoViolencia.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNoViolencia.Location = new System.Drawing.Point(184, 112);
             this.txtNoViolencia.Name = "txtNoViolencia";
-            this.txtNoViolencia.Size = new System.Drawing.Size(289, 20);
+            this.txtNoViolencia.Size = new System.Drawing.Size(289, 21);
             this.txtNoViolencia.TabIndex = 225;
             this.txtNoViolencia.Text = "NO TIENE";
             // 
@@ -966,10 +968,10 @@
             this.txtCredencial.BackColor = System.Drawing.Color.White;
             this.txtCredencial.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtCredencial.Enabled = false;
-            this.txtCredencial.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCredencial.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCredencial.Location = new System.Drawing.Point(184, 70);
             this.txtCredencial.Name = "txtCredencial";
-            this.txtCredencial.Size = new System.Drawing.Size(289, 20);
+            this.txtCredencial.Size = new System.Drawing.Size(289, 21);
             this.txtCredencial.TabIndex = 240;
             this.txtCredencial.Text = "NO TIENE";
             // 
@@ -980,7 +982,7 @@
             this.chkRecomendaciones.Cursor = System.Windows.Forms.Cursors.Hand;
             this.chkRecomendaciones.Enabled = false;
             this.chkRecomendaciones.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.chkRecomendaciones.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkRecomendaciones.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkRecomendaciones.Location = new System.Drawing.Point(166, 179);
             this.chkRecomendaciones.Name = "chkRecomendaciones";
             this.chkRecomendaciones.Size = new System.Drawing.Size(12, 11);
@@ -992,10 +994,10 @@
             // 
             this.label22.AutoSize = true;
             this.label22.BackColor = System.Drawing.Color.Transparent;
-            this.label22.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label22.Location = new System.Drawing.Point(9, 72);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(133, 13);
+            this.label22.Size = new System.Drawing.Size(132, 13);
             this.label22.TabIndex = 239;
             this.label22.Text = "SICOCEP Y CREDENCIAL:";
             // 
@@ -1003,10 +1005,10 @@
             // 
             this.label19.AutoSize = true;
             this.label19.BackColor = System.Drawing.Color.Transparent;
-            this.label19.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.Location = new System.Drawing.Point(9, 156);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(127, 13);
+            this.label19.Size = new System.Drawing.Size(130, 13);
             this.label19.TabIndex = 230;
             this.label19.Text = "CERTIFICADO TRABAJO:";
             // 
@@ -1014,10 +1016,10 @@
             // 
             this.label20.AutoSize = true;
             this.label20.BackColor = System.Drawing.Color.Transparent;
-            this.label20.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.Location = new System.Drawing.Point(9, 177);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(145, 13);
+            this.label20.Size = new System.Drawing.Size(161, 13);
             this.label20.TabIndex = 233;
             this.label20.Text = "RECOMENDACIÓN PERSONAL:";
             // 
@@ -1025,10 +1027,10 @@
             // 
             this.label15.AutoSize = true;
             this.label15.BackColor = System.Drawing.Color.Transparent;
-            this.label15.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.Location = new System.Drawing.Point(9, 93);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(133, 13);
+            this.label15.Size = new System.Drawing.Size(142, 13);
             this.label15.TabIndex = 221;
             this.label15.Text = "ANTECEDENTES PENALES:";
             // 
@@ -1039,7 +1041,7 @@
             this.chkNoViolencia.Cursor = System.Windows.Forms.Cursors.Hand;
             this.chkNoViolencia.Enabled = false;
             this.chkNoViolencia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.chkNoViolencia.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkNoViolencia.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkNoViolencia.Location = new System.Drawing.Point(166, 116);
             this.chkNoViolencia.Name = "chkNoViolencia";
             this.chkNoViolencia.Size = new System.Drawing.Size(12, 11);
@@ -1054,7 +1056,7 @@
             this.chkAfis.Cursor = System.Windows.Forms.Cursors.Hand;
             this.chkAfis.Enabled = false;
             this.chkAfis.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.chkAfis.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkAfis.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkAfis.Location = new System.Drawing.Point(166, 242);
             this.chkAfis.Name = "chkAfis";
             this.chkAfis.Size = new System.Drawing.Size(12, 11);
@@ -1067,10 +1069,10 @@
             this.txtCertificadoTrabajo.BackColor = System.Drawing.Color.White;
             this.txtCertificadoTrabajo.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtCertificadoTrabajo.Enabled = false;
-            this.txtCertificadoTrabajo.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCertificadoTrabajo.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCertificadoTrabajo.Location = new System.Drawing.Point(184, 154);
             this.txtCertificadoTrabajo.Name = "txtCertificadoTrabajo";
-            this.txtCertificadoTrabajo.Size = new System.Drawing.Size(289, 20);
+            this.txtCertificadoTrabajo.Size = new System.Drawing.Size(289, 21);
             this.txtCertificadoTrabajo.TabIndex = 231;
             this.txtCertificadoTrabajo.Text = "NO TIENE";
             // 
@@ -1078,10 +1080,10 @@
             // 
             this.Label11.AutoSize = true;
             this.Label11.BackColor = System.Drawing.Color.Transparent;
-            this.Label11.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label11.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label11.Location = new System.Drawing.Point(10, 240);
             this.Label11.Name = "Label11";
-            this.Label11.Size = new System.Drawing.Size(109, 13);
+            this.Label11.Size = new System.Drawing.Size(104, 13);
             this.Label11.TabIndex = 137;
             this.Label11.Text = "CERTIFICADO AFIS:";
             // 
@@ -1090,10 +1092,10 @@
             this.txtAfis.BackColor = System.Drawing.Color.White;
             this.txtAfis.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtAfis.Enabled = false;
-            this.txtAfis.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAfis.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAfis.Location = new System.Drawing.Point(184, 238);
             this.txtAfis.Name = "txtAfis";
-            this.txtAfis.Size = new System.Drawing.Size(289, 20);
+            this.txtAfis.Size = new System.Drawing.Size(289, 21);
             this.txtAfis.TabIndex = 30;
             this.txtAfis.Text = "NO TIENE";
             // 
@@ -1101,10 +1103,10 @@
             // 
             this.label16.AutoSize = true;
             this.label16.BackColor = System.Drawing.Color.Transparent;
-            this.label16.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.Location = new System.Drawing.Point(9, 114);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(157, 13);
+            this.label16.Size = new System.Drawing.Size(155, 13);
             this.label16.TabIndex = 224;
             this.label16.Text = "CERTIFICADO NO VIOLENCIA:";
             // 
@@ -1127,7 +1129,7 @@
             this.GroupBox3.Controls.Add(this.lblDirección);
             this.GroupBox3.Controls.Add(this.label23);
             this.GroupBox3.Controls.Add(this.Label3);
-            this.GroupBox3.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GroupBox3.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GroupBox3.Location = new System.Drawing.Point(0, 114);
             this.GroupBox3.Name = "GroupBox3";
             this.GroupBox3.Size = new System.Drawing.Size(528, 191);
@@ -1140,7 +1142,7 @@
             this.cbmPara.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbmPara.Enabled = false;
             this.cbmPara.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbmPara.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbmPara.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbmPara.FormattingEnabled = true;
             this.cbmPara.Items.AddRange(new object[] {
             "CIUDAD",
@@ -1157,7 +1159,7 @@
             this.txtDireccion.BackColor = System.Drawing.Color.White;
             this.txtDireccion.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtDireccion.Enabled = false;
-            this.txtDireccion.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDireccion.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDireccion.Location = new System.Drawing.Point(12, 108);
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(510, 21);
@@ -1168,7 +1170,7 @@
             this.txtObservacion.BackColor = System.Drawing.Color.White;
             this.txtObservacion.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtObservacion.Enabled = false;
-            this.txtObservacion.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtObservacion.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtObservacion.Location = new System.Drawing.Point(12, 147);
             this.txtObservacion.Multiline = true;
             this.txtObservacion.Name = "txtObservacion";
@@ -1179,10 +1181,10 @@
             // 
             this.label13.AutoSize = true;
             this.label13.BackColor = System.Drawing.Color.Transparent;
-            this.label13.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.Location = new System.Drawing.Point(9, 133);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(145, 13);
+            this.label13.Size = new System.Drawing.Size(148, 13);
             this.label13.TabIndex = 129;
             this.label13.Text = "DETALLES / OBSERVACION:";
             // 
@@ -1192,7 +1194,7 @@
             this.cbmProvincia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbmProvincia.Enabled = false;
             this.cbmProvincia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbmProvincia.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbmProvincia.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbmProvincia.FormattingEnabled = true;
             this.cbmProvincia.Location = new System.Drawing.Point(12, 58);
             this.cbmProvincia.Name = "cbmProvincia";
@@ -1204,7 +1206,7 @@
             // 
             this.lblProvincia.AutoSize = true;
             this.lblProvincia.BackColor = System.Drawing.Color.Transparent;
-            this.lblProvincia.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProvincia.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblProvincia.Location = new System.Drawing.Point(9, 43);
             this.lblProvincia.Name = "lblProvincia";
             this.lblProvincia.Size = new System.Drawing.Size(67, 13);
@@ -1215,10 +1217,10 @@
             // 
             this.lblCiudad.AutoSize = true;
             this.lblCiudad.BackColor = System.Drawing.Color.Transparent;
-            this.lblCiudad.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCiudad.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCiudad.Location = new System.Drawing.Point(191, 43);
             this.lblCiudad.Name = "lblCiudad";
-            this.lblCiudad.Size = new System.Drawing.Size(49, 13);
+            this.lblCiudad.Size = new System.Drawing.Size(48, 13);
             this.lblCiudad.TabIndex = 107;
             this.lblCiudad.Text = "CIUDAD:";
             // 
@@ -1228,7 +1230,7 @@
             this.cbmCanton.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbmCanton.Enabled = false;
             this.cbmCanton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbmCanton.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbmCanton.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbmCanton.FormattingEnabled = true;
             this.cbmCanton.Location = new System.Drawing.Point(194, 58);
             this.cbmCanton.Name = "cbmCanton";
@@ -1240,10 +1242,10 @@
             // 
             this.Label7.AutoSize = true;
             this.Label7.BackColor = System.Drawing.Color.Transparent;
-            this.Label7.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label7.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label7.Location = new System.Drawing.Point(369, 42);
             this.Label7.Name = "Label7";
-            this.Label7.Size = new System.Drawing.Size(67, 13);
+            this.Label7.Size = new System.Drawing.Size(70, 13);
             this.Label7.TabIndex = 127;
             this.Label7.Text = "PARROQUIA:";
             // 
@@ -1252,7 +1254,7 @@
             this.txtEmail.BackColor = System.Drawing.Color.White;
             this.txtEmail.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
             this.txtEmail.Enabled = false;
-            this.txtEmail.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmail.Location = new System.Drawing.Point(305, 10);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(217, 21);
@@ -1262,10 +1264,10 @@
             // 
             this.Label5.AutoSize = true;
             this.Label5.BackColor = System.Drawing.Color.Transparent;
-            this.Label5.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label5.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label5.Location = new System.Drawing.Point(264, 13);
             this.Label5.Name = "Label5";
-            this.Label5.Size = new System.Drawing.Size(43, 13);
+            this.Label5.Size = new System.Drawing.Size(42, 13);
             this.Label5.TabIndex = 123;
             this.Label5.Text = "EMAIL:";
             // 
@@ -1275,7 +1277,7 @@
             this.cbmParroquia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbmParroquia.Enabled = false;
             this.cbmParroquia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbmParroquia.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbmParroquia.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbmParroquia.FormattingEnabled = true;
             this.cbmParroquia.Location = new System.Drawing.Point(372, 58);
             this.cbmParroquia.Name = "cbmParroquia";
@@ -1287,10 +1289,10 @@
             this.txtTelefono.BackColor = System.Drawing.Color.White;
             this.txtTelefono.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtTelefono.Enabled = false;
-            this.txtTelefono.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTelefono.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTelefono.Location = new System.Drawing.Point(154, 10);
             this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Size = new System.Drawing.Size(76, 20);
+            this.txtTelefono.Size = new System.Drawing.Size(76, 21);
             this.txtTelefono.TabIndex = 19;
             this.txtTelefono.Text = "0";
             this.txtTelefono.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -1300,10 +1302,10 @@
             this.txtMovil.BackColor = System.Drawing.Color.White;
             this.txtMovil.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtMovil.Enabled = false;
-            this.txtMovil.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMovil.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMovil.Location = new System.Drawing.Point(77, 10);
             this.txtMovil.Name = "txtMovil";
-            this.txtMovil.Size = new System.Drawing.Size(76, 20);
+            this.txtMovil.Size = new System.Drawing.Size(76, 21);
             this.txtMovil.TabIndex = 20;
             this.txtMovil.Text = "0";
             this.txtMovil.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -1312,10 +1314,10 @@
             // 
             this.lblDirección.AutoSize = true;
             this.lblDirección.BackColor = System.Drawing.Color.Transparent;
-            this.lblDirección.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDirección.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDirección.Location = new System.Drawing.Point(9, 92);
             this.lblDirección.Name = "lblDirección";
-            this.lblDirección.Size = new System.Drawing.Size(205, 13);
+            this.lblDirección.Size = new System.Drawing.Size(198, 13);
             this.lblDirección.TabIndex = 86;
             this.lblDirección.Text = "DIRECCIÓN / REFERENCIA DOMICILIO:";
             // 
@@ -1323,10 +1325,10 @@
             // 
             this.label23.AutoSize = true;
             this.label23.BackColor = System.Drawing.Color.Transparent;
-            this.label23.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label23.Location = new System.Drawing.Point(405, 146);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(91, 13);
+            this.label23.Size = new System.Drawing.Size(98, 13);
             this.label23.TabIndex = 131;
             this.label23.Text = "APROBADO PARA:";
             // 
@@ -1334,10 +1336,10 @@
             // 
             this.Label3.AutoSize = true;
             this.Label3.BackColor = System.Drawing.Color.Transparent;
-            this.Label3.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label3.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label3.Location = new System.Drawing.Point(2, 14);
             this.Label3.Name = "Label3";
-            this.Label3.Size = new System.Drawing.Size(79, 13);
+            this.Label3.Size = new System.Drawing.Size(64, 13);
             this.Label3.TabIndex = 120;
             this.Label3.Text = "TLF. / CEL.:";
             // 
@@ -1360,7 +1362,7 @@
             this.cbxFiltro.BackColor = System.Drawing.Color.White;
             this.cbxFiltro.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxFiltro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbxFiltro.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxFiltro.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxFiltro.FormattingEnabled = true;
             this.cbxFiltro.Items.AddRange(new object[] {
             "-- TODOS --",
@@ -1392,10 +1394,10 @@
             // 
             this.txtFiltro.BackColor = System.Drawing.Color.White;
             this.txtFiltro.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtFiltro.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFiltro.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFiltro.Location = new System.Drawing.Point(49, 11);
             this.txtFiltro.Name = "txtFiltro";
-            this.txtFiltro.Size = new System.Drawing.Size(356, 20);
+            this.txtFiltro.Size = new System.Drawing.Size(356, 21);
             this.txtFiltro.TabIndex = 122;
             this.txtFiltro.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtFiltro_KeyUp);
             // 
@@ -1403,10 +1405,10 @@
             // 
             this.Label31.AutoSize = true;
             this.Label31.BackColor = System.Drawing.Color.Transparent;
-            this.Label31.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label31.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label31.Location = new System.Drawing.Point(2, 13);
             this.Label31.Name = "Label31";
-            this.Label31.Size = new System.Drawing.Size(49, 13);
+            this.Label31.Size = new System.Drawing.Size(52, 13);
             this.Label31.TabIndex = 121;
             this.Label31.Text = "BUSCAR:";
             // 
@@ -1419,12 +1421,12 @@
             this.dgvPersonal.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvPersonal.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.dgvPersonal.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgvPersonal.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvPersonal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(60)))), ((int)(((byte)(123)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.GrayText;
@@ -1438,7 +1440,7 @@
             this.dgvPersonal.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Info;
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.GrayText;
@@ -1458,10 +1460,10 @@
             // 
             this.label24.AutoSize = true;
             this.label24.BackColor = System.Drawing.Color.Transparent;
-            this.label24.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label24.Location = new System.Drawing.Point(440, 14);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(43, 13);
+            this.label24.Size = new System.Drawing.Size(45, 13);
             this.label24.TabIndex = 196;
             this.label24.Text = "ESTDO:";
             // 

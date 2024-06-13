@@ -779,9 +779,9 @@ Namespace FORMULARIOS.DIVISION_GEOGRÁFICA
         Private Sub FormSitiosTrabajo_Load(ByVal sender As System.Object, ByVal e As EventArgs) Handles MyBase.Load
             ' DEFINIR TIPO Y COLOR DE SISTEMA
             MenuStrip2.ForeColor = Color.White
-            MenuStrip2.BackColor = ValidationForms.GetColorSistema(_tipoCon)
+            'MenuStrip2.BackColor = ValidationForms.GetColorSistema(_tipoCon)
             MenuStrip1.ForeColor = Color.White
-            MenuStrip1.BackColor = ValidationForms.GetColorSistema(_tipoCon)
+            'MenuStrip1.BackColor = ValidationForms.GetColorSistema(_tipoCon)
             Label24.ForeColor = Color.White
             Label24.BackColor = ValidationForms.GetColorSistema(_tipoCon)
             Label32.ForeColor = Color.White

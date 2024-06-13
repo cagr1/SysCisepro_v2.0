@@ -13,10 +13,11 @@ using SysCisepro3.Datos;
 using SysCisepro3.Properties;
 using SysCisepro3.Reportes;
 using SysCisepro3.TalentoHumano;
+using Krypton.Toolkit; 
 
 namespace SysCisepro3.Inventarios
 {
-    public partial class FrmBodega : Form
+    public partial class FrmBodega : KryptonForm
     {
         /// <summary>
         /// CISEPRO 2019
@@ -56,7 +57,7 @@ namespace SysCisepro3.Inventarios
         {
             // CARGAR ICONO Y DESIEÑO SEGUN SISTEMA 
 
-            msKardex.BackColor = ValidationForms.GetColorSistema(TipoCon);
+            //msKardex.BackColor = ValidationForms.GetColorSistema(TipoCon);
             msKardex.ForeColor = Color.White;
             dgvBodega.DefaultCellStyle.SelectionBackColor = ValidationForms.GetColorSistema(TipoCon);
             switch (TipoCon)
@@ -71,6 +72,7 @@ namespace SysCisepro3.Inventarios
                     Icon = Resources.logo_c;
                     break;
             }
+            dgvBodega.Font = new Font("Roboto", 8, FontStyle.Regular);
         }
 
         private void ToolStripMenuItem1_Click(object sender, EventArgs e)

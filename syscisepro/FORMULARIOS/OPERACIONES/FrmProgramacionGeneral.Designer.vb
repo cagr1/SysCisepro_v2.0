@@ -193,15 +193,14 @@
             '
             Me.btnNoSitiosProgramacion.BackColor = System.Drawing.Color.White
             Me.btnNoSitiosProgramacion.Enabled = False
-            Me.btnNoSitiosProgramacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.btnNoSitiosProgramacion.Font = New System.Drawing.Font("Consolas", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnNoSitiosProgramacion.Image = Global.syscisepro.My.Resources.Resources.world_warning_icon
+            Me.btnNoSitiosProgramacion.Image = Global.syscisepro.My.Resources.Resources.map_24dp_FILL0_wght400_GRAD0_opsz24
             Me.btnNoSitiosProgramacion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-            Me.btnNoSitiosProgramacion.Location = New System.Drawing.Point(800, 3)
+            Me.btnNoSitiosProgramacion.Location = New System.Drawing.Point(893, 6)
             Me.btnNoSitiosProgramacion.Name = "btnNoSitiosProgramacion"
-            Me.btnNoSitiosProgramacion.Size = New System.Drawing.Size(199, 23)
+            Me.btnNoSitiosProgramacion.Size = New System.Drawing.Size(101, 26)
             Me.btnNoSitiosProgramacion.TabIndex = 206
-            Me.btnNoSitiosProgramacion.Text = "SITIOS NO PROGRAMACIÓN"
+            Me.btnNoSitiosProgramacion.Text = "SITIOS "
             Me.btnNoSitiosProgramacion.TextAlign = System.Drawing.ContentAlignment.MiddleRight
             Me.btnNoSitiosProgramacion.UseVisualStyleBackColor = False
             '
@@ -209,15 +208,14 @@
             '
             Me.btnNoProgramacion.BackColor = System.Drawing.Color.White
             Me.btnNoProgramacion.Enabled = False
-            Me.btnNoProgramacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.btnNoProgramacion.Font = New System.Drawing.Font("Consolas", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnNoProgramacion.Image = Global.syscisepro.My.Resources.Resources.personnel_light_icon
+            Me.btnNoProgramacion.Image = Global.syscisepro.My.Resources.Resources.group_24dp_FILL0_wght400_GRAD0_opsz24
             Me.btnNoProgramacion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-            Me.btnNoProgramacion.Location = New System.Drawing.Point(599, 3)
+            Me.btnNoProgramacion.Location = New System.Drawing.Point(791, 6)
             Me.btnNoProgramacion.Name = "btnNoProgramacion"
-            Me.btnNoProgramacion.Size = New System.Drawing.Size(199, 23)
+            Me.btnNoProgramacion.Size = New System.Drawing.Size(96, 26)
             Me.btnNoProgramacion.TabIndex = 200
-            Me.btnNoProgramacion.Text = "PERSONAL NO PROGRAMACIÓN"
+            Me.btnNoProgramacion.Text = "PERSONAL"
             Me.btnNoProgramacion.TextAlign = System.Drawing.ContentAlignment.MiddleRight
             Me.btnNoProgramacion.UseVisualStyleBackColor = False
             '
@@ -225,14 +223,14 @@
             '
             Me.btnAdd.BackColor = System.Drawing.Color.White
             Me.btnAdd.Enabled = False
+            Me.btnAdd.FlatAppearance.BorderSize = 0
+            Me.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.btnAdd.Font = New System.Drawing.Font("Consolas", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnAdd.Image = Global.syscisepro.My.Resources.Resources.add
-            Me.btnAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-            Me.btnAdd.Location = New System.Drawing.Point(847, 311)
+            Me.btnAdd.Image = Global.syscisepro.My.Resources.Resources.add_circle_24dp_FILL0_wght400_GRAD0_opsz24__3_
+            Me.btnAdd.Location = New System.Drawing.Point(931, 324)
             Me.btnAdd.Name = "btnAdd"
-            Me.btnAdd.Size = New System.Drawing.Size(80, 26)
+            Me.btnAdd.Size = New System.Drawing.Size(26, 26)
             Me.btnAdd.TabIndex = 200
-            Me.btnAdd.Text = "AGREGAR"
             Me.btnAdd.TextAlign = System.Drawing.ContentAlignment.MiddleRight
             Me.btnAdd.UseVisualStyleBackColor = False
             '
@@ -255,7 +253,7 @@
             Me.GroupBox3.Controls.Add(Me.txtSitio)
             Me.GroupBox3.Controls.Add(Me.Label23)
             Me.GroupBox3.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.GroupBox3.Location = New System.Drawing.Point(3, 72)
+            Me.GroupBox3.Location = New System.Drawing.Point(3, 85)
             Me.GroupBox3.Name = "GroupBox3"
             Me.GroupBox3.Size = New System.Drawing.Size(995, 70)
             Me.GroupBox3.TabIndex = 194
@@ -373,12 +371,13 @@
             '
             Me.bntPuesto.BackColor = System.Drawing.Color.White
             Me.bntPuesto.Enabled = False
+            Me.bntPuesto.FlatAppearance.BorderSize = 0
+            Me.bntPuesto.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.bntPuesto.Font = New System.Drawing.Font("Consolas", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.bntPuesto.Image = CType(resources.GetObject("bntPuesto.Image"), System.Drawing.Image)
-            Me.bntPuesto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+            Me.bntPuesto.Image = Global.syscisepro.My.Resources.Resources.search_24dp_FILL0_wght400_GRAD0_opsz24__2_
             Me.bntPuesto.Location = New System.Drawing.Point(963, 11)
             Me.bntPuesto.Name = "bntPuesto"
-            Me.bntPuesto.Size = New System.Drawing.Size(26, 26)
+            Me.bntPuesto.Size = New System.Drawing.Size(28, 28)
             Me.bntPuesto.TabIndex = 193
             Me.bntPuesto.TextAlign = System.Drawing.ContentAlignment.MiddleRight
             Me.bntPuesto.UseVisualStyleBackColor = False
@@ -427,14 +426,14 @@
             '
             Me.btnRemove.BackColor = System.Drawing.Color.White
             Me.btnRemove.Enabled = False
+            Me.btnRemove.FlatAppearance.BorderSize = 0
+            Me.btnRemove.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.btnRemove.Font = New System.Drawing.Font("Consolas", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnRemove.Image = Global.syscisepro.My.Resources.Resources.remove
-            Me.btnRemove.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-            Me.btnRemove.Location = New System.Drawing.Point(926, 311)
+            Me.btnRemove.Image = Global.syscisepro.My.Resources.Resources.do_not_disturb_on_24dp_FILL0_wght400_GRAD0_opsz24
+            Me.btnRemove.Location = New System.Drawing.Point(966, 324)
             Me.btnRemove.Name = "btnRemove"
-            Me.btnRemove.Size = New System.Drawing.Size(73, 26)
+            Me.btnRemove.Size = New System.Drawing.Size(26, 26)
             Me.btnRemove.TabIndex = 199
-            Me.btnRemove.Text = "QUITAR"
             Me.btnRemove.TextAlign = System.Drawing.ContentAlignment.MiddleRight
             Me.btnRemove.UseVisualStyleBackColor = False
             '
@@ -444,7 +443,7 @@
             Me.ListView1.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader2, Me.ColumnHeader3, Me.ColumnHeader6, Me.ColumnHeader8, Me.ColumnHeader10, Me.ColumnHeader11, Me.ColumnHeader12, Me.ColumnHeader13, Me.ColumnHeader14, Me.ColumnHeader15, Me.ColumnHeader16, Me.ColumnHeader17, Me.ColumnHeader18, Me.ColumnHeader19, Me.ColumnHeader1, Me.ColumnHeader4, Me.ColumnHeader5, Me.ColumnHeader7})
             Me.ListView1.FullRowSelect = True
             Me.ListView1.HideSelection = False
-            Me.ListView1.Location = New System.Drawing.Point(0, 339)
+            Me.ListView1.Location = New System.Drawing.Point(0, 350)
             Me.ListView1.MultiSelect = False
             Me.ListView1.Name = "ListView1"
             Me.ListView1.Size = New System.Drawing.Size(998, 324)
@@ -562,7 +561,7 @@
             Me.cbmSitio.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.cbmSitio.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cbmSitio.FormattingEnabled = True
-            Me.cbmSitio.Location = New System.Drawing.Point(558, 336)
+            Me.cbmSitio.Location = New System.Drawing.Point(558, 351)
             Me.cbmSitio.Name = "cbmSitio"
             Me.cbmSitio.Size = New System.Drawing.Size(400, 21)
             Me.cbmSitio.TabIndex = 205
@@ -579,7 +578,7 @@
             Me.GroupBox4.Controls.Add(Me.Label17)
             Me.GroupBox4.Controls.Add(Me.Label16)
             Me.GroupBox4.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.GroupBox4.Location = New System.Drawing.Point(3, 26)
+            Me.GroupBox4.Location = New System.Drawing.Point(3, 37)
             Me.GroupBox4.Name = "GroupBox4"
             Me.GroupBox4.Size = New System.Drawing.Size(996, 47)
             Me.GroupBox4.TabIndex = 201
@@ -598,7 +597,7 @@
             'Label19
             '
             Me.Label19.AutoSize = True
-            Me.Label19.Location = New System.Drawing.Point(694, 16)
+            Me.Label19.Location = New System.Drawing.Point(687, 16)
             Me.Label19.Name = "Label19"
             Me.Label19.Size = New System.Drawing.Size(46, 13)
             Me.Label19.TabIndex = 203
@@ -619,7 +618,7 @@
             Me.TextBox3.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.TextBox3.Enabled = False
             Me.TextBox3.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.TextBox3.Location = New System.Drawing.Point(30, 15)
+            Me.TextBox3.Location = New System.Drawing.Point(34, 15)
             Me.TextBox3.Name = "TextBox3"
             Me.TextBox3.Size = New System.Drawing.Size(50, 20)
             Me.TextBox3.TabIndex = 28
@@ -648,7 +647,7 @@
             'Label17
             '
             Me.Label17.AutoSize = True
-            Me.Label17.Location = New System.Drawing.Point(341, 17)
+            Me.Label17.Location = New System.Drawing.Point(338, 17)
             Me.Label17.Name = "Label17"
             Me.Label17.Size = New System.Drawing.Size(43, 13)
             Me.Label17.TabIndex = 201
@@ -657,7 +656,7 @@
             'Label16
             '
             Me.Label16.AutoSize = True
-            Me.Label16.Location = New System.Drawing.Point(136, 19)
+            Me.Label16.Location = New System.Drawing.Point(131, 19)
             Me.Label16.Name = "Label16"
             Me.Label16.Size = New System.Drawing.Size(33, 13)
             Me.Label16.TabIndex = 199
@@ -706,7 +705,7 @@
             Me.GroupBox2.Controls.Add(Me.Label1)
             Me.GroupBox2.Controls.Add(Me.chkLunes)
             Me.GroupBox2.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.GroupBox2.Location = New System.Drawing.Point(4, 140)
+            Me.GroupBox2.Location = New System.Drawing.Point(4, 156)
             Me.GroupBox2.Name = "GroupBox2"
             Me.GroupBox2.Size = New System.Drawing.Size(995, 85)
             Me.GroupBox2.TabIndex = 187
@@ -728,7 +727,7 @@
             'Label7
             '
             Me.Label7.AutoSize = True
-            Me.Label7.Location = New System.Drawing.Point(11, 30)
+            Me.Label7.Location = New System.Drawing.Point(11, 26)
             Me.Label7.Name = "Label7"
             Me.Label7.Size = New System.Drawing.Size(73, 13)
             Me.Label7.TabIndex = 196
@@ -747,12 +746,13 @@
             '
             Me.bntHorarios.BackColor = System.Drawing.Color.White
             Me.bntHorarios.Enabled = False
+            Me.bntHorarios.FlatAppearance.BorderSize = 0
+            Me.bntHorarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.bntHorarios.Font = New System.Drawing.Font("Consolas", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.bntHorarios.Image = CType(resources.GetObject("bntHorarios.Image"), System.Drawing.Image)
-            Me.bntHorarios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+            Me.bntHorarios.Image = Global.syscisepro.My.Resources.Resources.search_24dp_FILL0_wght400_GRAD0_opsz24__2_
             Me.bntHorarios.Location = New System.Drawing.Point(962, 11)
             Me.bntHorarios.Name = "bntHorarios"
-            Me.bntHorarios.Size = New System.Drawing.Size(26, 26)
+            Me.bntHorarios.Size = New System.Drawing.Size(28, 28)
             Me.bntHorarios.TabIndex = 194
             Me.bntHorarios.TextAlign = System.Drawing.ContentAlignment.MiddleRight
             Me.bntHorarios.UseVisualStyleBackColor = False
@@ -801,7 +801,7 @@
             '
             Me.chkDomingo.AutoSize = True
             Me.chkDomingo.Enabled = False
-            Me.chkDomingo.Location = New System.Drawing.Point(850, 19)
+            Me.chkDomingo.Location = New System.Drawing.Point(850, 16)
             Me.chkDomingo.Name = "chkDomingo"
             Me.chkDomingo.Size = New System.Drawing.Size(78, 17)
             Me.chkDomingo.TabIndex = 38
@@ -852,7 +852,7 @@
             '
             Me.chkSabado.AutoSize = True
             Me.chkSabado.Enabled = False
-            Me.chkSabado.Location = New System.Drawing.Point(740, 19)
+            Me.chkSabado.Location = New System.Drawing.Point(740, 16)
             Me.chkSabado.Name = "chkSabado"
             Me.chkSabado.Size = New System.Drawing.Size(69, 17)
             Me.chkSabado.TabIndex = 33
@@ -903,7 +903,7 @@
             '
             Me.chkViernes.AutoSize = True
             Me.chkViernes.Enabled = False
-            Me.chkViernes.Location = New System.Drawing.Point(621, 19)
+            Me.chkViernes.Location = New System.Drawing.Point(621, 16)
             Me.chkViernes.Name = "chkViernes"
             Me.chkViernes.Size = New System.Drawing.Size(70, 17)
             Me.chkViernes.TabIndex = 28
@@ -954,7 +954,7 @@
             '
             Me.chkJueves.AutoSize = True
             Me.chkJueves.Enabled = False
-            Me.chkJueves.Location = New System.Drawing.Point(501, 19)
+            Me.chkJueves.Location = New System.Drawing.Point(501, 16)
             Me.chkJueves.Name = "chkJueves"
             Me.chkJueves.Size = New System.Drawing.Size(65, 17)
             Me.chkJueves.TabIndex = 23
@@ -1005,7 +1005,7 @@
             '
             Me.chkMiercoles.AutoSize = True
             Me.chkMiercoles.Enabled = False
-            Me.chkMiercoles.Location = New System.Drawing.Point(379, 20)
+            Me.chkMiercoles.Location = New System.Drawing.Point(379, 17)
             Me.chkMiercoles.Name = "chkMiercoles"
             Me.chkMiercoles.Size = New System.Drawing.Size(86, 17)
             Me.chkMiercoles.TabIndex = 18
@@ -1056,7 +1056,7 @@
             '
             Me.chkMartes.AutoSize = True
             Me.chkMartes.Enabled = False
-            Me.chkMartes.Location = New System.Drawing.Point(253, 20)
+            Me.chkMartes.Location = New System.Drawing.Point(253, 18)
             Me.chkMartes.Name = "chkMartes"
             Me.chkMartes.Size = New System.Drawing.Size(70, 17)
             Me.chkMartes.TabIndex = 13
@@ -1107,7 +1107,7 @@
             '
             Me.chkLunes.AutoSize = True
             Me.chkLunes.Enabled = False
-            Me.chkLunes.Location = New System.Drawing.Point(121, 19)
+            Me.chkLunes.Location = New System.Drawing.Point(126, 17)
             Me.chkLunes.Name = "chkLunes"
             Me.chkLunes.Size = New System.Drawing.Size(60, 17)
             Me.chkLunes.TabIndex = 0
@@ -1135,7 +1135,7 @@
             Me.GroupBox1.Controls.Add(Me.txtPersonal)
             Me.GroupBox1.Controls.Add(Me.Label26)
             Me.GroupBox1.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.GroupBox1.Location = New System.Drawing.Point(2, 223)
+            Me.GroupBox1.Location = New System.Drawing.Point(2, 241)
             Me.GroupBox1.Name = "GroupBox1"
             Me.GroupBox1.Size = New System.Drawing.Size(996, 87)
             Me.GroupBox1.TabIndex = 183
@@ -1169,7 +1169,7 @@
             '
             Me.dtpHastaP.CustomFormat = "MMMM yyyy"
             Me.dtpHastaP.Enabled = False
-            Me.dtpHastaP.Location = New System.Drawing.Point(394, 38)
+            Me.dtpHastaP.Location = New System.Drawing.Point(406, 38)
             Me.dtpHastaP.Name = "dtpHastaP"
             Me.dtpHastaP.Size = New System.Drawing.Size(255, 21)
             Me.dtpHastaP.TabIndex = 206
@@ -1187,7 +1187,7 @@
             '
             Me.dtpDesdeP.CustomFormat = "DDDD, dd/MMMM/yyyy"
             Me.dtpDesdeP.Enabled = False
-            Me.dtpDesdeP.Location = New System.Drawing.Point(55, 38)
+            Me.dtpDesdeP.Location = New System.Drawing.Point(84, 38)
             Me.dtpDesdeP.Name = "dtpDesdeP"
             Me.dtpDesdeP.Size = New System.Drawing.Size(255, 21)
             Me.dtpDesdeP.TabIndex = 204
@@ -1253,7 +1253,7 @@
             'Label25
             '
             Me.Label25.AutoSize = True
-            Me.Label25.Location = New System.Drawing.Point(23, 41)
+            Me.Label25.Location = New System.Drawing.Point(87, 41)
             Me.Label25.Name = "Label25"
             Me.Label25.Size = New System.Drawing.Size(47, 13)
             Me.Label25.TabIndex = 194
@@ -1264,12 +1264,13 @@
             '
             Me.btnPersonal.BackColor = System.Drawing.Color.White
             Me.btnPersonal.Enabled = False
+            Me.btnPersonal.FlatAppearance.BorderSize = 0
+            Me.btnPersonal.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.btnPersonal.Font = New System.Drawing.Font("Consolas", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnPersonal.Image = CType(resources.GetObject("btnPersonal.Image"), System.Drawing.Image)
-            Me.btnPersonal.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+            Me.btnPersonal.Image = Global.syscisepro.My.Resources.Resources.search_24dp_FILL0_wght400_GRAD0_opsz24__2_
             Me.btnPersonal.Location = New System.Drawing.Point(964, 9)
             Me.btnPersonal.Name = "btnPersonal"
-            Me.btnPersonal.Size = New System.Drawing.Size(26, 26)
+            Me.btnPersonal.Size = New System.Drawing.Size(28, 28)
             Me.btnPersonal.TabIndex = 193
             Me.btnPersonal.TextAlign = System.Drawing.ContentAlignment.MiddleRight
             Me.btnPersonal.UseVisualStyleBackColor = False
@@ -1308,7 +1309,7 @@
             'Label26
             '
             Me.Label26.AutoSize = True
-            Me.Label26.Location = New System.Drawing.Point(130, 17)
+            Me.Label26.Location = New System.Drawing.Point(113, 17)
             Me.Label26.Name = "Label26"
             Me.Label26.Size = New System.Drawing.Size(63, 13)
             Me.Label26.TabIndex = 3
@@ -1316,77 +1317,79 @@
             '
             'MenuStrip1
             '
-            Me.MenuStrip1.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.MenuStrip1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
             Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem1, Me.btnNuevo, Me.btnGuardar, Me.btnEditar, Me.btnCancelar, Me.btnMesAnterior})
             Me.MenuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow
             Me.MenuStrip1.Location = New System.Drawing.Point(3, 3)
             Me.MenuStrip1.Name = "MenuStrip1"
             Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(7, 2, 0, 2)
-            Me.MenuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
-            Me.MenuStrip1.Size = New System.Drawing.Size(996, 24)
+            Me.MenuStrip1.Size = New System.Drawing.Size(996, 32)
             Me.MenuStrip1.TabIndex = 182
             Me.MenuStrip1.Text = "msIngresoBodega"
             '
             'ToolStripMenuItem1
             '
             Me.ToolStripMenuItem1.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.ToolStripMenuItem1.Image = Global.syscisepro.My.Resources.Resources.BuscarRegistro
+            Me.ToolStripMenuItem1.Image = Global.syscisepro.My.Resources.Resources.search_24dp_FILL0_wght400_GRAD0_opsz24__2_
             Me.ToolStripMenuItem1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
-            Me.ToolStripMenuItem1.Size = New System.Drawing.Size(147, 20)
-            Me.ToolStripMenuItem1.Text = "VER PROGRAMACIÓN"
+            Me.ToolStripMenuItem1.Size = New System.Drawing.Size(85, 28)
+            Me.ToolStripMenuItem1.Text = "BUSCAR"
             '
             'btnNuevo
             '
             Me.btnNuevo.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnNuevo.Image = Global.syscisepro.My.Resources.Resources.NuevoRegistro
+            Me.btnNuevo.Image = Global.syscisepro.My.Resources.Resources.add_circle_24dp_FILL0_wght400_GRAD0_opsz24__3_
             Me.btnNuevo.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnNuevo.Name = "btnNuevo"
-            Me.btnNuevo.Size = New System.Drawing.Size(70, 20)
+            Me.btnNuevo.Size = New System.Drawing.Size(78, 28)
             Me.btnNuevo.Text = "NUEVO"
             '
             'btnGuardar
             '
             Me.btnGuardar.Enabled = False
             Me.btnGuardar.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnGuardar.Image = Global.syscisepro.My.Resources.Resources.GuardarRegistro
+            Me.btnGuardar.Image = Global.syscisepro.My.Resources.Resources.save_24dp_FILL0_wght400_GRAD0_opsz24__2_
             Me.btnGuardar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnGuardar.Name = "btnGuardar"
-            Me.btnGuardar.Size = New System.Drawing.Size(84, 20)
+            Me.btnGuardar.Size = New System.Drawing.Size(92, 28)
             Me.btnGuardar.Text = "GUARDAR"
             '
             'btnEditar
             '
             Me.btnEditar.Enabled = False
             Me.btnEditar.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnEditar.Image = Global.syscisepro.My.Resources.Resources.ModificarRegistro
+            Me.btnEditar.Image = Global.syscisepro.My.Resources.Resources.edit_document_24dp_FILL0_wght400_GRAD0_opsz24__2_
+            Me.btnEditar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnEditar.Name = "btnEditar"
-            Me.btnEditar.Size = New System.Drawing.Size(77, 20)
+            Me.btnEditar.Size = New System.Drawing.Size(85, 28)
             Me.btnEditar.Text = "EDITAR"
             '
             'btnCancelar
             '
             Me.btnCancelar.Enabled = False
             Me.btnCancelar.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnCancelar.Image = Global.syscisepro.My.Resources.Resources.cancel
+            Me.btnCancelar.Image = Global.syscisepro.My.Resources.Resources.cancel_24dp_FILL0_wght400_GRAD0_opsz24
+            Me.btnCancelar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnCancelar.Name = "btnCancelar"
-            Me.btnCancelar.Size = New System.Drawing.Size(91, 20)
+            Me.btnCancelar.Size = New System.Drawing.Size(99, 28)
             Me.btnCancelar.Text = "CANCELAR"
             '
             'btnMesAnterior
             '
             Me.btnMesAnterior.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnMesAnterior.Image = Global.syscisepro.My.Resources.Resources.report
+            Me.btnMesAnterior.Image = Global.syscisepro.My.Resources.Resources.description_24dp_FILL0_wght400_GRAD0_opsz24__2_
+            Me.btnMesAnterior.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnMesAnterior.Name = "btnMesAnterior"
-            Me.btnMesAnterior.Size = New System.Drawing.Size(91, 20)
+            Me.btnMesAnterior.Size = New System.Drawing.Size(99, 28)
             Me.btnMesAnterior.Text = "MES ANT."
             '
             'Label24
             '
             Me.Label24.Cursor = System.Windows.Forms.Cursors.Hand
-            Me.Label24.Location = New System.Drawing.Point(0, 312)
+            Me.Label24.Location = New System.Drawing.Point(0, 326)
             Me.Label24.Name = "Label24"
-            Me.Label24.Size = New System.Drawing.Size(936, 24)
+            Me.Label24.Size = New System.Drawing.Size(916, 24)
             Me.Label24.TabIndex = 195
             Me.Label24.Text = "PERSONAL ASIGNADO A PUESTOS DE TRABAJO SEGÚN PROGRAMACIÓN"
             Me.Label24.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -1407,16 +1410,16 @@
             '
             'btnReporte
             '
-            Me.btnReporte.BackColor = System.Drawing.Color.White
+            Me.btnReporte.BackColor = System.Drawing.Color.FromArgb(CType(CType(189, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(232, Byte), Integer))
+            Me.btnReporte.FlatAppearance.BorderSize = 0
+            Me.btnReporte.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.btnReporte.Font = New System.Drawing.Font("Consolas", 6.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.btnReporte.ForeColor = System.Drawing.Color.Black
-            Me.btnReporte.Image = Global.syscisepro.My.Resources.Resources.BuscarRegistro
-            Me.btnReporte.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-            Me.btnReporte.Location = New System.Drawing.Point(825, 5)
+            Me.btnReporte.Image = Global.syscisepro.My.Resources.Resources.search_24dp_FILL0_wght400_GRAD0_opsz24__2_
+            Me.btnReporte.Location = New System.Drawing.Point(799, 5)
             Me.btnReporte.Name = "btnReporte"
-            Me.btnReporte.Size = New System.Drawing.Size(171, 25)
+            Me.btnReporte.Size = New System.Drawing.Size(26, 26)
             Me.btnReporte.TabIndex = 191
-            Me.btnReporte.Text = "CARGAR REPORTE PROGRAMACIÓN"
             Me.btnReporte.TextAlign = System.Drawing.ContentAlignment.MiddleRight
             Me.btnReporte.UseVisualStyleBackColor = False
             '
@@ -1424,7 +1427,7 @@
             '
             Me.DateTimePicker3.CustomFormat = "MMMM yyyy"
             Me.DateTimePicker3.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-            Me.DateTimePicker3.Location = New System.Drawing.Point(698, 7)
+            Me.DateTimePicker3.Location = New System.Drawing.Point(672, 7)
             Me.DateTimePicker3.Name = "DateTimePicker3"
             Me.DateTimePicker3.ShowUpDown = True
             Me.DateTimePicker3.Size = New System.Drawing.Size(121, 21)
@@ -1433,7 +1436,8 @@
             'Label30
             '
             Me.Label30.AutoSize = True
-            Me.Label30.Location = New System.Drawing.Point(662, 11)
+            Me.Label30.BackColor = System.Drawing.Color.FromArgb(CType(CType(189, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(232, Byte), Integer))
+            Me.Label30.Location = New System.Drawing.Point(636, 11)
             Me.Label30.Name = "Label30"
             Me.Label30.Size = New System.Drawing.Size(33, 13)
             Me.Label30.TabIndex = 201
@@ -1458,10 +1462,13 @@
             Me.BackColor = System.Drawing.Color.White
             Me.ClientSize = New System.Drawing.Size(1012, 696)
             Me.Controls.Add(Me.tcSitios)
-            Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
             Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
             Me.Name = "FrmProgramacionGeneral"
             Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+            Me.StateActive.Border.DrawBorders = CType((((Krypton.Toolkit.PaletteDrawBorders.Top Or Krypton.Toolkit.PaletteDrawBorders.Bottom) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Left) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Right), Krypton.Toolkit.PaletteDrawBorders)
+            Me.StateActive.Border.Rounding = 5.0!
             Me.Text = "PROGRAMACIÓN GENERAL"
             Me.tcSitios.ResumeLayout(False)
             Me.TabPage1.ResumeLayout(False)

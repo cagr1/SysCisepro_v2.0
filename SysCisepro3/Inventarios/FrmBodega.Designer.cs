@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmBodega));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tcBodega = new System.Windows.Forms.TabControl();
@@ -90,6 +89,7 @@
             this.tpMantenimiento.Controls.Add(this.lblUbicación);
             this.tpMantenimiento.Controls.Add(this.Label1);
             this.tpMantenimiento.Controls.Add(this.lblNombreBodega);
+            this.tpMantenimiento.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tpMantenimiento.Location = new System.Drawing.Point(4, 22);
             this.tpMantenimiento.Name = "tpMantenimiento";
             this.tpMantenimiento.Padding = new System.Windows.Forms.Padding(3);
@@ -100,6 +100,7 @@
             // 
             // msKardex
             // 
+            this.msKardex.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.msKardex.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ToolStripMenuItem1,
             this.tsmNuevo,
@@ -111,28 +112,27 @@
             this.msKardex.Location = new System.Drawing.Point(3, 3);
             this.msKardex.Name = "msKardex";
             this.msKardex.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
-            this.msKardex.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.msKardex.Size = new System.Drawing.Size(985, 24);
+            this.msKardex.Size = new System.Drawing.Size(985, 32);
             this.msKardex.TabIndex = 179;
             this.msKardex.Text = "msIngresoBodega";
             // 
             // ToolStripMenuItem1
             // 
             this.ToolStripMenuItem1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ToolStripMenuItem1.Image = global::SysCisepro3.Properties.Resources.BuscarRegistro;
+            this.ToolStripMenuItem1.Image = global::SysCisepro3.Properties.Resources.search_24dp_FILL0_wght400_GRAD0_opsz24__2_;
             this.ToolStripMenuItem1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.ToolStripMenuItem1.Name = "ToolStripMenuItem1";
-            this.ToolStripMenuItem1.Size = new System.Drawing.Size(125, 20);
-            this.ToolStripMenuItem1.Text = "LISTAR BODEGAS";
+            this.ToolStripMenuItem1.Size = new System.Drawing.Size(87, 28);
+            this.ToolStripMenuItem1.Text = "BUSCAR";
             this.ToolStripMenuItem1.Click += new System.EventHandler(this.ToolStripMenuItem1_Click);
             // 
             // tsmNuevo
             // 
             this.tsmNuevo.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tsmNuevo.Image = ((System.Drawing.Image)(resources.GetObject("tsmNuevo.Image")));
+            this.tsmNuevo.Image = global::SysCisepro3.Properties.Resources.add_circle_24dp_FILL0_wght400_GRAD0_opsz24__3_;
             this.tsmNuevo.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tsmNuevo.Name = "tsmNuevo";
-            this.tsmNuevo.Size = new System.Drawing.Size(74, 20);
+            this.tsmNuevo.Size = new System.Drawing.Size(82, 28);
             this.tsmNuevo.Text = "NUEVO";
             this.tsmNuevo.Click += new System.EventHandler(this.tsmNuevo_Click);
             // 
@@ -140,10 +140,10 @@
             // 
             this.tsmGuardar.Enabled = false;
             this.tsmGuardar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tsmGuardar.Image = ((System.Drawing.Image)(resources.GetObject("tsmGuardar.Image")));
+            this.tsmGuardar.Image = global::SysCisepro3.Properties.Resources.save_24dp_FILL0_wght400_GRAD0_opsz24__2_;
             this.tsmGuardar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tsmGuardar.Name = "tsmGuardar";
-            this.tsmGuardar.Size = new System.Drawing.Size(89, 20);
+            this.tsmGuardar.Size = new System.Drawing.Size(97, 28);
             this.tsmGuardar.Text = "GUARDAR";
             this.tsmGuardar.Click += new System.EventHandler(this.tsmGuardar_Click);
             // 
@@ -151,9 +151,10 @@
             // 
             this.tsmActualizar.Enabled = false;
             this.tsmActualizar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tsmActualizar.Image = global::SysCisepro3.Properties.Resources.ModificarRegistro;
+            this.tsmActualizar.Image = global::SysCisepro3.Properties.Resources.edit_document_24dp_FILL0_wght400_GRAD0_opsz24__2_;
+            this.tsmActualizar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tsmActualizar.Name = "tsmActualizar";
-            this.tsmActualizar.Size = new System.Drawing.Size(104, 20);
+            this.tsmActualizar.Size = new System.Drawing.Size(112, 28);
             this.tsmActualizar.Text = "ACTUALIZAR";
             this.tsmActualizar.Click += new System.EventHandler(this.tsmActualizar_Click);
             // 
@@ -161,20 +162,21 @@
             // 
             this.tsmCancelar.Enabled = false;
             this.tsmCancelar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tsmCancelar.Image = global::SysCisepro3.Properties.Resources.cancel;
+            this.tsmCancelar.Image = global::SysCisepro3.Properties.Resources.cancel_24dp_FILL0_wght400_GRAD0_opsz24;
+            this.tsmCancelar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tsmCancelar.Name = "tsmCancelar";
-            this.tsmCancelar.Size = new System.Drawing.Size(95, 20);
+            this.tsmCancelar.Size = new System.Drawing.Size(103, 28);
             this.tsmCancelar.Text = "CANCELAR";
             this.tsmCancelar.Click += new System.EventHandler(this.tsmCancelar_Click);
             // 
             // ToolStripMenuItem2
             // 
             this.ToolStripMenuItem2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ToolStripMenuItem2.Image = global::SysCisepro3.Properties.Resources.report;
+            this.ToolStripMenuItem2.Image = global::SysCisepro3.Properties.Resources.description_24dp_FILL0_wght400_GRAD0_opsz24__2_;
             this.ToolStripMenuItem2.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.ToolStripMenuItem2.Name = "ToolStripMenuItem2";
-            this.ToolStripMenuItem2.Size = new System.Drawing.Size(136, 20);
-            this.ToolStripMenuItem2.Text = "GENERAR REPORTE";
+            this.ToolStripMenuItem2.Size = new System.Drawing.Size(90, 28);
+            this.ToolStripMenuItem2.Text = "REPORTE";
             this.ToolStripMenuItem2.Click += new System.EventHandler(this.ToolStripMenuItem2_Click);
             // 
             // txtTelefono
@@ -194,12 +196,13 @@
             this.btnBuscarCustodio.Enabled = false;
             this.btnBuscarCustodio.FlatAppearance.BorderSize = 0;
             this.btnBuscarCustodio.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSteelBlue;
+            this.btnBuscarCustodio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscarCustodio.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscarCustodio.ForeColor = System.Drawing.Color.Black;
-            this.btnBuscarCustodio.Image = global::SysCisepro3.Properties.Resources.BuscarRegistro;
+            this.btnBuscarCustodio.Image = global::SysCisepro3.Properties.Resources.search_24dp_FILL0_wght400_GRAD0_opsz24__2_;
             this.btnBuscarCustodio.Location = new System.Drawing.Point(410, 69);
             this.btnBuscarCustodio.Name = "btnBuscarCustodio";
-            this.btnBuscarCustodio.Size = new System.Drawing.Size(31, 26);
+            this.btnBuscarCustodio.Size = new System.Drawing.Size(26, 26);
             this.btnBuscarCustodio.TabIndex = 55;
             this.btnBuscarCustodio.UseVisualStyleBackColor = false;
             this.btnBuscarCustodio.Click += new System.EventHandler(this.btnBuscarCustodio_Click);
@@ -216,7 +219,7 @@
             this.dgvBodega.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -385,6 +388,10 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "FrmBodega";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StateActive.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.StateActive.Border.Rounding = 5F;
             this.Text = "REGISTRO BODEGAS";
             this.Load += new System.EventHandler(this.FrmBodega_Load);
             this.tcBodega.ResumeLayout(false);

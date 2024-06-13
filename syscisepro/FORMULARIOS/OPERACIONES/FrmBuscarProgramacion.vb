@@ -96,7 +96,7 @@ Namespace FORMULARIOS.OPERACIONES
                     BackColor = My.MySettingsProperty.Settings.ColorCisepro
                     dgvCustodios.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
             End Select
-
+            dgvCustodios.Font = New Font("Roboto", 9, FontStyle.Regular)
             dtpMes.Value = New Date(dtpMes.Value.Year, dtpMes.Value.Month, 1)
             CargarClienteGeneral()
         End Sub

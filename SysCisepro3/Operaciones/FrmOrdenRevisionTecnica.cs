@@ -16,10 +16,11 @@ using ClassLibraryCisepro3.TalentoHumano;
 using syscisepro.FORMULARIOS.INVENTARIOS.PROCESO;
 using ClassLibraryCisepro3.ProcesosSql;
 using ClassLibraryCisepro3.Operaciones;
+using Krypton.Toolkit;
 
 namespace SysCisepro3.Operaciones
 {
-    public partial class FrmOrdenRevisionTecnica : Form
+    public partial class FrmOrdenRevisionTecnica : KryptonForm
     {
         /// <summary>
         /// CISEPRO 2019
@@ -56,7 +57,7 @@ namespace SysCisepro3.Operaciones
         private void FrmOrdenRevisionTecnica_Load(object sender, EventArgs e)
         {
             // CARGAR ICONO Y DESIEÑO SEGUN SISTEMA 
-            toolStrip1.BackColor = ValidationForms.GetColorSistema(TipoCon);
+            //toolStrip1.BackColor = ValidationForms.GetColorSistema(TipoCon);
             toolStrip1.ForeColor = Color.White;
             Label24.BackColor = ValidationForms.GetColorSistema(TipoCon);
             Label24.ForeColor = Color.White;
@@ -76,7 +77,8 @@ namespace SysCisepro3.Operaciones
                     Icon = Resources.logo_c;
                     break;
             }
-
+            dataGridView1.Font = new Font("Roboto", 8, FontStyle.Regular);
+            dgvDetallesOrden.Font = new Font("Roboto", 8, FontStyle.Regular);
             _hoy = Usuario.Now(TipoCon);
             cbxFiltro.SelectedIndex = 0;
             dtpFechaDesde.Value = new DateTime(_hoy.Year, _hoy.Month, 1);

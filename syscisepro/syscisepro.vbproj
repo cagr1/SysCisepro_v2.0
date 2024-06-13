@@ -4241,6 +4241,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\contract_24dp_FILL0_wght400_GRAD0_opsz24.png" />
     <None Include="Resources\send_24dp.png" />
     <None Include="Resources\record_voice_over_24dp.png" />
     <None Include="Resources\voice_over_off_24dp.png" />

@@ -38,7 +38,6 @@
             this.btnCancelar = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.Label1 = new System.Windows.Forms.Label();
-            this.Label24 = new System.Windows.Forms.Label();
             this.GroupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label18 = new System.Windows.Forms.Label();
@@ -97,6 +96,7 @@
             // toolStrip1
             // 
             this.toolStrip1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnBuscar,
             this.btnNuevo,
@@ -107,74 +107,81 @@
             this.toolStripButton1});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(894, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(897, 31);
             this.toolStrip1.TabIndex = 227;
             this.toolStrip1.Text = "toolStrip1";
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Image = global::SysCisepro3.Properties.Resources.BuscarRegistro;
+            this.btnBuscar.Image = global::SysCisepro3.Properties.Resources.search_24dp_FILL0_wght400_GRAD0_opsz24__2_;
+            this.btnBuscar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnBuscar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(102, 22);
-            this.btnBuscar.Text = "LISTAR TODOS";
+            this.btnBuscar.Size = new System.Drawing.Size(79, 28);
+            this.btnBuscar.Text = "BUSCAR";
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // btnNuevo
             // 
-            this.btnNuevo.Image = global::SysCisepro3.Properties.Resources.NuevoRegistro;
+            this.btnNuevo.Image = global::SysCisepro3.Properties.Resources.add_circle_24dp_FILL0_wght400_GRAD0_opsz24__3_;
+            this.btnNuevo.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnNuevo.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(66, 22);
+            this.btnNuevo.Size = new System.Drawing.Size(74, 28);
             this.btnNuevo.Text = "NUEVO";
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
             // btnGuardar
             // 
             this.btnGuardar.Enabled = false;
-            this.btnGuardar.Image = global::SysCisepro3.Properties.Resources.GuardarRegistro;
+            this.btnGuardar.Image = global::SysCisepro3.Properties.Resources.save_24dp_FILL0_wght400_GRAD0_opsz24__2_;
+            this.btnGuardar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnGuardar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(81, 22);
+            this.btnGuardar.Size = new System.Drawing.Size(89, 28);
             this.btnGuardar.Text = "GUARDAR";
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // btnModificar
             // 
             this.btnModificar.Enabled = false;
-            this.btnModificar.Image = global::SysCisepro3.Properties.Resources.ModificarRegistro;
+            this.btnModificar.Image = global::SysCisepro3.Properties.Resources.edit_document_24dp_FILL0_wght400_GRAD0_opsz24__2_;
+            this.btnModificar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnModificar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(90, 22);
+            this.btnModificar.Size = new System.Drawing.Size(98, 28);
             this.btnModificar.Text = "MODIFICAR";
             this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // btnAnular
             // 
             this.btnAnular.Enabled = false;
-            this.btnAnular.Image = global::SysCisepro3.Properties.Resources.EliminarRegistro;
+            this.btnAnular.Image = global::SysCisepro3.Properties.Resources.do_not_disturb_on_24dp_FILL0_wght400_GRAD0_opsz24;
+            this.btnAnular.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnAnular.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnAnular.Name = "btnAnular";
-            this.btnAnular.Size = new System.Drawing.Size(80, 22);
+            this.btnAnular.Size = new System.Drawing.Size(88, 28);
             this.btnAnular.Text = "ELIMINAR";
             this.btnAnular.Click += new System.EventHandler(this.btnAnular_Click);
             // 
             // btnCancelar
             // 
             this.btnCancelar.Enabled = false;
-            this.btnCancelar.Image = global::SysCisepro3.Properties.Resources.cancel;
+            this.btnCancelar.Image = global::SysCisepro3.Properties.Resources.cancel_24dp_FILL0_wght400_GRAD0_opsz24;
+            this.btnCancelar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnCancelar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(87, 22);
+            this.btnCancelar.Size = new System.Drawing.Size(95, 28);
             this.btnCancelar.Text = "CANCELAR";
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // toolStripButton1
             // 
-            this.toolStripButton1.Image = global::SysCisepro3.Properties.Resources.excel_icon;
+            this.toolStripButton1.Image = global::SysCisepro3.Properties.Resources.icons8_excel_48;
+            this.toolStripButton1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(82, 22);
+            this.toolStripButton1.Size = new System.Drawing.Size(90, 28);
             this.toolStripButton1.Text = "EXPORTAR";
             this.toolStripButton1.Visible = false;
             // 
@@ -182,23 +189,12 @@
             // 
             this.Label1.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.Label1.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label1.Location = new System.Drawing.Point(-3, 652);
+            this.Label1.Location = new System.Drawing.Point(-3, 675);
             this.Label1.Name = "Label1";
-            this.Label1.Size = new System.Drawing.Size(897, 21);
+            this.Label1.Size = new System.Drawing.Size(892, 21);
             this.Label1.TabIndex = 228;
             this.Label1.Text = "0 REGISTRO(S)";
             this.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // Label24
-            // 
-            this.Label24.Cursor = System.Windows.Forms.Cursors.Default;
-            this.Label24.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label24.Location = new System.Drawing.Point(0, 214);
-            this.Label24.Name = "Label24";
-            this.Label24.Size = new System.Drawing.Size(894, 18);
-            this.Label24.TabIndex = 229;
-            this.Label24.Text = "PORCENTAJES DE RETENCIÓN REGISTRADOS";
-            this.Label24.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // GroupBox1
             // 
@@ -211,9 +207,9 @@
             this.GroupBox1.Controls.Add(this.txtIdConcepto);
             this.GroupBox1.Controls.Add(this.Label22);
             this.GroupBox1.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GroupBox1.Location = new System.Drawing.Point(1, 27);
+            this.GroupBox1.Location = new System.Drawing.Point(1, 35);
             this.GroupBox1.Name = "GroupBox1";
-            this.GroupBox1.Size = new System.Drawing.Size(893, 186);
+            this.GroupBox1.Size = new System.Drawing.Size(893, 220);
             this.GroupBox1.TabIndex = 230;
             this.GroupBox1.TabStop = false;
             this.GroupBox1.Text = "DATOS / CONCEPTO O PAGO";
@@ -253,9 +249,9 @@
             this.groupBox3.Controls.Add(this.label8);
             this.groupBox3.Controls.Add(this.label9);
             this.groupBox3.Controls.Add(this.label10);
-            this.groupBox3.Location = new System.Drawing.Point(1, 63);
+            this.groupBox3.Location = new System.Drawing.Point(1, 74);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(890, 122);
+            this.groupBox3.Size = new System.Drawing.Size(890, 140);
             this.groupBox3.TabIndex = 199;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "RETENCIÓN RENTA";
@@ -273,11 +269,12 @@
             // 
             this.btnVentaRentaEsp.BackColor = System.Drawing.Color.White;
             this.btnVentaRentaEsp.Enabled = false;
+            this.btnVentaRentaEsp.FlatAppearance.BorderSize = 0;
+            this.btnVentaRentaEsp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVentaRentaEsp.Image = ((System.Drawing.Image)(resources.GetObject("btnVentaRentaEsp.Image")));
-            this.btnVentaRentaEsp.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnVentaRentaEsp.Location = new System.Drawing.Point(863, 96);
+            this.btnVentaRentaEsp.Location = new System.Drawing.Point(863, 109);
             this.btnVentaRentaEsp.Name = "btnVentaRentaEsp";
-            this.btnVentaRentaEsp.Size = new System.Drawing.Size(24, 24);
+            this.btnVentaRentaEsp.Size = new System.Drawing.Size(26, 26);
             this.btnVentaRentaEsp.TabIndex = 240;
             this.btnVentaRentaEsp.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnVentaRentaEsp.UseVisualStyleBackColor = false;
@@ -288,7 +285,7 @@
             this.txtVentaRentaEsp.BackColor = System.Drawing.Color.White;
             this.txtVentaRentaEsp.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtVentaRentaEsp.Enabled = false;
-            this.txtVentaRentaEsp.Location = new System.Drawing.Point(614, 98);
+            this.txtVentaRentaEsp.Location = new System.Drawing.Point(614, 110);
             this.txtVentaRentaEsp.Name = "txtVentaRentaEsp";
             this.txtVentaRentaEsp.Size = new System.Drawing.Size(250, 21);
             this.txtVentaRentaEsp.TabIndex = 239;
@@ -298,11 +295,13 @@
             // 
             this.btnCompraRentaEsp.BackColor = System.Drawing.Color.White;
             this.btnCompraRentaEsp.Enabled = false;
+            this.btnCompraRentaEsp.FlatAppearance.BorderSize = 0;
+            this.btnCompraRentaEsp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCompraRentaEsp.Image = ((System.Drawing.Image)(resources.GetObject("btnCompraRentaEsp.Image")));
             this.btnCompraRentaEsp.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCompraRentaEsp.Location = new System.Drawing.Point(576, 96);
+            this.btnCompraRentaEsp.Location = new System.Drawing.Point(579, 107);
             this.btnCompraRentaEsp.Name = "btnCompraRentaEsp";
-            this.btnCompraRentaEsp.Size = new System.Drawing.Size(24, 24);
+            this.btnCompraRentaEsp.Size = new System.Drawing.Size(26, 26);
             this.btnCompraRentaEsp.TabIndex = 238;
             this.btnCompraRentaEsp.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCompraRentaEsp.UseVisualStyleBackColor = false;
@@ -313,7 +312,7 @@
             this.txtCompraRentaEsp.BackColor = System.Drawing.Color.White;
             this.txtCompraRentaEsp.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtCompraRentaEsp.Enabled = false;
-            this.txtCompraRentaEsp.Location = new System.Drawing.Point(327, 98);
+            this.txtCompraRentaEsp.Location = new System.Drawing.Point(327, 110);
             this.txtCompraRentaEsp.Name = "txtCompraRentaEsp";
             this.txtCompraRentaEsp.Size = new System.Drawing.Size(250, 21);
             this.txtCompraRentaEsp.TabIndex = 237;
@@ -322,11 +321,12 @@
             // 
             this.btnVentaRentaExp.BackColor = System.Drawing.Color.White;
             this.btnVentaRentaExp.Enabled = false;
+            this.btnVentaRentaExp.FlatAppearance.BorderSize = 0;
+            this.btnVentaRentaExp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVentaRentaExp.Image = ((System.Drawing.Image)(resources.GetObject("btnVentaRentaExp.Image")));
-            this.btnVentaRentaExp.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnVentaRentaExp.Location = new System.Drawing.Point(863, 75);
+            this.btnVentaRentaExp.Location = new System.Drawing.Point(863, 83);
             this.btnVentaRentaExp.Name = "btnVentaRentaExp";
-            this.btnVentaRentaExp.Size = new System.Drawing.Size(24, 24);
+            this.btnVentaRentaExp.Size = new System.Drawing.Size(26, 26);
             this.btnVentaRentaExp.TabIndex = 236;
             this.btnVentaRentaExp.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnVentaRentaExp.UseVisualStyleBackColor = false;
@@ -337,7 +337,7 @@
             this.txtVentaRentaExp.BackColor = System.Drawing.Color.White;
             this.txtVentaRentaExp.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtVentaRentaExp.Enabled = false;
-            this.txtVentaRentaExp.Location = new System.Drawing.Point(614, 77);
+            this.txtVentaRentaExp.Location = new System.Drawing.Point(614, 86);
             this.txtVentaRentaExp.Name = "txtVentaRentaExp";
             this.txtVentaRentaExp.Size = new System.Drawing.Size(250, 21);
             this.txtVentaRentaExp.TabIndex = 235;
@@ -346,11 +346,12 @@
             // 
             this.btnVentaRentaPsin.BackColor = System.Drawing.Color.White;
             this.btnVentaRentaPsin.Enabled = false;
+            this.btnVentaRentaPsin.FlatAppearance.BorderSize = 0;
+            this.btnVentaRentaPsin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVentaRentaPsin.Image = ((System.Drawing.Image)(resources.GetObject("btnVentaRentaPsin.Image")));
-            this.btnVentaRentaPsin.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnVentaRentaPsin.Location = new System.Drawing.Point(863, 54);
+            this.btnVentaRentaPsin.Location = new System.Drawing.Point(863, 60);
             this.btnVentaRentaPsin.Name = "btnVentaRentaPsin";
-            this.btnVentaRentaPsin.Size = new System.Drawing.Size(24, 24);
+            this.btnVentaRentaPsin.Size = new System.Drawing.Size(26, 26);
             this.btnVentaRentaPsin.TabIndex = 234;
             this.btnVentaRentaPsin.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnVentaRentaPsin.UseVisualStyleBackColor = false;
@@ -361,7 +362,7 @@
             this.txtVentaRentaPsin.BackColor = System.Drawing.Color.White;
             this.txtVentaRentaPsin.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtVentaRentaPsin.Enabled = false;
-            this.txtVentaRentaPsin.Location = new System.Drawing.Point(614, 56);
+            this.txtVentaRentaPsin.Location = new System.Drawing.Point(614, 60);
             this.txtVentaRentaPsin.Name = "txtVentaRentaPsin";
             this.txtVentaRentaPsin.Size = new System.Drawing.Size(250, 21);
             this.txtVentaRentaPsin.TabIndex = 233;
@@ -370,11 +371,13 @@
             // 
             this.btnCompraRentaExp.BackColor = System.Drawing.Color.White;
             this.btnCompraRentaExp.Enabled = false;
+            this.btnCompraRentaExp.FlatAppearance.BorderSize = 0;
+            this.btnCompraRentaExp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCompraRentaExp.Image = ((System.Drawing.Image)(resources.GetObject("btnCompraRentaExp.Image")));
             this.btnCompraRentaExp.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCompraRentaExp.Location = new System.Drawing.Point(576, 75);
+            this.btnCompraRentaExp.Location = new System.Drawing.Point(579, 82);
             this.btnCompraRentaExp.Name = "btnCompraRentaExp";
-            this.btnCompraRentaExp.Size = new System.Drawing.Size(24, 24);
+            this.btnCompraRentaExp.Size = new System.Drawing.Size(26, 26);
             this.btnCompraRentaExp.TabIndex = 232;
             this.btnCompraRentaExp.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCompraRentaExp.UseVisualStyleBackColor = false;
@@ -385,7 +388,7 @@
             this.txtCompraRentaExp.BackColor = System.Drawing.Color.White;
             this.txtCompraRentaExp.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtCompraRentaExp.Enabled = false;
-            this.txtCompraRentaExp.Location = new System.Drawing.Point(327, 77);
+            this.txtCompraRentaExp.Location = new System.Drawing.Point(327, 86);
             this.txtCompraRentaExp.Name = "txtCompraRentaExp";
             this.txtCompraRentaExp.Size = new System.Drawing.Size(250, 21);
             this.txtCompraRentaExp.TabIndex = 231;
@@ -394,11 +397,13 @@
             // 
             this.btnCompraRentaPsin.BackColor = System.Drawing.Color.White;
             this.btnCompraRentaPsin.Enabled = false;
+            this.btnCompraRentaPsin.FlatAppearance.BorderSize = 0;
+            this.btnCompraRentaPsin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCompraRentaPsin.Image = ((System.Drawing.Image)(resources.GetObject("btnCompraRentaPsin.Image")));
             this.btnCompraRentaPsin.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCompraRentaPsin.Location = new System.Drawing.Point(576, 54);
+            this.btnCompraRentaPsin.Location = new System.Drawing.Point(579, 59);
             this.btnCompraRentaPsin.Name = "btnCompraRentaPsin";
-            this.btnCompraRentaPsin.Size = new System.Drawing.Size(24, 24);
+            this.btnCompraRentaPsin.Size = new System.Drawing.Size(26, 26);
             this.btnCompraRentaPsin.TabIndex = 230;
             this.btnCompraRentaPsin.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCompraRentaPsin.UseVisualStyleBackColor = false;
@@ -409,7 +414,7 @@
             this.txtCompraRentaPsin.BackColor = System.Drawing.Color.White;
             this.txtCompraRentaPsin.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtCompraRentaPsin.Enabled = false;
-            this.txtCompraRentaPsin.Location = new System.Drawing.Point(327, 56);
+            this.txtCompraRentaPsin.Location = new System.Drawing.Point(327, 61);
             this.txtCompraRentaPsin.Name = "txtCompraRentaPsin";
             this.txtCompraRentaPsin.Size = new System.Drawing.Size(250, 21);
             this.txtCompraRentaPsin.TabIndex = 229;
@@ -418,11 +423,12 @@
             // 
             this.btnVentaRentaPcon.BackColor = System.Drawing.Color.White;
             this.btnVentaRentaPcon.Enabled = false;
+            this.btnVentaRentaPcon.FlatAppearance.BorderSize = 0;
+            this.btnVentaRentaPcon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVentaRentaPcon.Image = ((System.Drawing.Image)(resources.GetObject("btnVentaRentaPcon.Image")));
-            this.btnVentaRentaPcon.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnVentaRentaPcon.Location = new System.Drawing.Point(863, 33);
+            this.btnVentaRentaPcon.Location = new System.Drawing.Point(863, 35);
             this.btnVentaRentaPcon.Name = "btnVentaRentaPcon";
-            this.btnVentaRentaPcon.Size = new System.Drawing.Size(24, 24);
+            this.btnVentaRentaPcon.Size = new System.Drawing.Size(26, 26);
             this.btnVentaRentaPcon.TabIndex = 228;
             this.btnVentaRentaPcon.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnVentaRentaPcon.UseVisualStyleBackColor = false;
@@ -433,7 +439,7 @@
             this.txtVentaRentaPcon.BackColor = System.Drawing.Color.White;
             this.txtVentaRentaPcon.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtVentaRentaPcon.Enabled = false;
-            this.txtVentaRentaPcon.Location = new System.Drawing.Point(614, 35);
+            this.txtVentaRentaPcon.Location = new System.Drawing.Point(614, 38);
             this.txtVentaRentaPcon.Name = "txtVentaRentaPcon";
             this.txtVentaRentaPcon.Size = new System.Drawing.Size(250, 21);
             this.txtVentaRentaPcon.TabIndex = 227;
@@ -442,11 +448,13 @@
             // 
             this.btnCompraRentaPcon.BackColor = System.Drawing.Color.White;
             this.btnCompraRentaPcon.Enabled = false;
+            this.btnCompraRentaPcon.FlatAppearance.BorderSize = 0;
+            this.btnCompraRentaPcon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCompraRentaPcon.Image = ((System.Drawing.Image)(resources.GetObject("btnCompraRentaPcon.Image")));
             this.btnCompraRentaPcon.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCompraRentaPcon.Location = new System.Drawing.Point(576, 33);
+            this.btnCompraRentaPcon.Location = new System.Drawing.Point(579, 37);
             this.btnCompraRentaPcon.Name = "btnCompraRentaPcon";
-            this.btnCompraRentaPcon.Size = new System.Drawing.Size(24, 24);
+            this.btnCompraRentaPcon.Size = new System.Drawing.Size(26, 26);
             this.btnCompraRentaPcon.TabIndex = 224;
             this.btnCompraRentaPcon.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCompraRentaPcon.UseVisualStyleBackColor = false;
@@ -456,11 +464,12 @@
             // 
             this.btnVentaRentaSoc.BackColor = System.Drawing.Color.White;
             this.btnVentaRentaSoc.Enabled = false;
+            this.btnVentaRentaSoc.FlatAppearance.BorderSize = 0;
+            this.btnVentaRentaSoc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVentaRentaSoc.Image = ((System.Drawing.Image)(resources.GetObject("btnVentaRentaSoc.Image")));
-            this.btnVentaRentaSoc.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnVentaRentaSoc.Location = new System.Drawing.Point(863, 11);
             this.btnVentaRentaSoc.Name = "btnVentaRentaSoc";
-            this.btnVentaRentaSoc.Size = new System.Drawing.Size(24, 24);
+            this.btnVentaRentaSoc.Size = new System.Drawing.Size(26, 26);
             this.btnVentaRentaSoc.TabIndex = 226;
             this.btnVentaRentaSoc.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnVentaRentaSoc.UseVisualStyleBackColor = false;
@@ -471,7 +480,7 @@
             this.txtCompraRentaPcon.BackColor = System.Drawing.Color.White;
             this.txtCompraRentaPcon.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtCompraRentaPcon.Enabled = false;
-            this.txtCompraRentaPcon.Location = new System.Drawing.Point(327, 35);
+            this.txtCompraRentaPcon.Location = new System.Drawing.Point(327, 38);
             this.txtCompraRentaPcon.Name = "txtCompraRentaPcon";
             this.txtCompraRentaPcon.Size = new System.Drawing.Size(250, 21);
             this.txtCompraRentaPcon.TabIndex = 223;
@@ -490,11 +499,13 @@
             // 
             this.btnCompraRentaSoc.BackColor = System.Drawing.Color.White;
             this.btnCompraRentaSoc.Enabled = false;
+            this.btnCompraRentaSoc.FlatAppearance.BorderSize = 0;
+            this.btnCompraRentaSoc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCompraRentaSoc.Image = ((System.Drawing.Image)(resources.GetObject("btnCompraRentaSoc.Image")));
             this.btnCompraRentaSoc.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCompraRentaSoc.Location = new System.Drawing.Point(576, 12);
+            this.btnCompraRentaSoc.Location = new System.Drawing.Point(579, 12);
             this.btnCompraRentaSoc.Name = "btnCompraRentaSoc";
-            this.btnCompraRentaSoc.Size = new System.Drawing.Size(24, 24);
+            this.btnCompraRentaSoc.Size = new System.Drawing.Size(26, 26);
             this.btnCompraRentaSoc.TabIndex = 222;
             this.btnCompraRentaSoc.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCompraRentaSoc.UseVisualStyleBackColor = false;
@@ -533,7 +544,7 @@
             this.txtRentaEsp.BackColor = System.Drawing.Color.White;
             this.txtRentaEsp.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtRentaEsp.Enabled = false;
-            this.txtRentaEsp.Location = new System.Drawing.Point(250, 98);
+            this.txtRentaEsp.Location = new System.Drawing.Point(250, 112);
             this.txtRentaEsp.Name = "txtRentaEsp";
             this.txtRentaEsp.Size = new System.Drawing.Size(49, 21);
             this.txtRentaEsp.TabIndex = 212;
@@ -554,7 +565,7 @@
             this.txtRentaExp.BackColor = System.Drawing.Color.White;
             this.txtRentaExp.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtRentaExp.Enabled = false;
-            this.txtRentaExp.Location = new System.Drawing.Point(250, 77);
+            this.txtRentaExp.Location = new System.Drawing.Point(250, 88);
             this.txtRentaExp.Name = "txtRentaExp";
             this.txtRentaExp.Size = new System.Drawing.Size(49, 21);
             this.txtRentaExp.TabIndex = 210;
@@ -566,7 +577,7 @@
             this.txtRentaPsin.BackColor = System.Drawing.Color.White;
             this.txtRentaPsin.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtRentaPsin.Enabled = false;
-            this.txtRentaPsin.Location = new System.Drawing.Point(250, 56);
+            this.txtRentaPsin.Location = new System.Drawing.Point(250, 65);
             this.txtRentaPsin.Name = "txtRentaPsin";
             this.txtRentaPsin.Size = new System.Drawing.Size(49, 21);
             this.txtRentaPsin.TabIndex = 209;
@@ -578,7 +589,7 @@
             this.txtRentaPcon.BackColor = System.Drawing.Color.White;
             this.txtRentaPcon.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtRentaPcon.Enabled = false;
-            this.txtRentaPcon.Location = new System.Drawing.Point(250, 35);
+            this.txtRentaPcon.Location = new System.Drawing.Point(250, 39);
             this.txtRentaPcon.Name = "txtRentaPcon";
             this.txtRentaPcon.Size = new System.Drawing.Size(49, 21);
             this.txtRentaPcon.TabIndex = 208;
@@ -697,7 +708,7 @@
             this.Label7.AutoSize = true;
             this.Label7.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Label7.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label7.Location = new System.Drawing.Point(9, 239);
+            this.Label7.Location = new System.Drawing.Point(9, 265);
             this.Label7.Name = "Label7";
             this.Label7.Size = new System.Drawing.Size(46, 13);
             this.Label7.TabIndex = 231;
@@ -709,7 +720,7 @@
             this.txtFiltro.BackColor = System.Drawing.Color.White;
             this.txtFiltro.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtFiltro.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFiltro.Location = new System.Drawing.Point(63, 235);
+            this.txtFiltro.Location = new System.Drawing.Point(63, 261);
             this.txtFiltro.Name = "txtFiltro";
             this.txtFiltro.Size = new System.Drawing.Size(829, 21);
             this.txtFiltro.TabIndex = 232;
@@ -728,7 +739,7 @@
             this.ListView1.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ListView1.FullRowSelect = true;
             this.ListView1.HideSelection = false;
-            this.ListView1.Location = new System.Drawing.Point(0, 262);
+            this.ListView1.Location = new System.Drawing.Point(0, 287);
             this.ListView1.MultiSelect = false;
             this.ListView1.Name = "ListView1";
             this.ListView1.Size = new System.Drawing.Size(892, 387);
@@ -773,17 +784,20 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(894, 671);
+            this.ClientSize = new System.Drawing.Size(897, 695);
             this.Controls.Add(this.ListView1);
             this.Controls.Add(this.Label7);
             this.Controls.Add(this.txtFiltro);
             this.Controls.Add(this.GroupBox1);
-            this.Controls.Add(this.Label24);
             this.Controls.Add(this.Label1);
             this.Controls.Add(this.toolStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "FrmPorcentajesRetencion";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StateActive.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.StateActive.Border.Rounding = 5F;
             this.Text = "PORCENTAJES DE RETENCIÓN DEL IMPUESTO A LA RENTA";
             this.Load += new System.EventHandler(this.FrmPorcentajesRetencion_Load);
             this.toolStrip1.ResumeLayout(false);
@@ -807,7 +821,6 @@
         private System.Windows.Forms.ToolStripButton btnAnular;
         private System.Windows.Forms.ToolStripButton btnCancelar;
         internal System.Windows.Forms.Label Label1;
-        internal System.Windows.Forms.Label Label24;
         internal System.Windows.Forms.GroupBox GroupBox1;
         internal System.Windows.Forms.TextBox txtConcepto;
         internal System.Windows.Forms.Label Label27;

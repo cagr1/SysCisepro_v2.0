@@ -7,10 +7,11 @@ using ClassLibraryCisepro3.Contabilidad.PlanDeCuentas;
 using ClassLibraryCisepro3.Enums;
 using SysCisepro3.Datos;
 using SysCisepro3.Properties;
+using Krypton.Toolkit;
 
 namespace SysCisepro3.Contabilidad
 {
-    public partial class FrmBuscarPlanCuentas : Form
+    public partial class FrmBuscarPlanCuentas : KryptonForm
     {
         /// <summary>
         /// CISEPRO 2019

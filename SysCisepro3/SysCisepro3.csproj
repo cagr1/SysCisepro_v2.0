@@ -1363,6 +1363,7 @@
     <None Include="Resources\cahange_system.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\mapa-de-ecuador-con-sus-provincias-1.jpg" />
     <None Include="Resources\contract_24dp_FILL0_wght400_GRAD0_opsz24.png" />
     <None Include="Resources\rotate_right_24dp_FILL0_wght400_GRAD0_opsz24.png" />
     <None Include="Resources\rotate_left_24dp_FILL0_wght400_GRAD0_opsz24.png" />

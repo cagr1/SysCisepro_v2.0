@@ -1,8 +1,8 @@
 ﻿Namespace FORMULARIOS.RUBROS_Y_PARAMETROS
     <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
     Partial Class FormParametrosDocumentos
-        Inherits System.Windows.Forms.Form
-
+        'Inherits System.Windows.Forms.Form
+        Inherits Krypton.Toolkit.KryptonForm
         'Form reemplaza a Dispose para limpiar la lista de componentes.
         <System.Diagnostics.DebuggerNonUserCode()> _
         Protected Overrides Sub Dispose(ByVal disposing As Boolean)
@@ -63,13 +63,13 @@
             DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
             DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
             Me.dgvParametrosDocumentos.DefaultCellStyle = DataGridViewCellStyle2
-            Me.dgvParametrosDocumentos.Location = New System.Drawing.Point(2, 129)
+            Me.dgvParametrosDocumentos.Location = New System.Drawing.Point(2, 136)
             Me.dgvParametrosDocumentos.MultiSelect = False
             Me.dgvParametrosDocumentos.Name = "dgvParametrosDocumentos"
             Me.dgvParametrosDocumentos.ReadOnly = True
             Me.dgvParametrosDocumentos.RowHeadersVisible = False
             Me.dgvParametrosDocumentos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvParametrosDocumentos.Size = New System.Drawing.Size(390, 223)
+            Me.dgvParametrosDocumentos.Size = New System.Drawing.Size(390, 218)
             Me.dgvParametrosDocumentos.TabIndex = 15
             '
             'txtIdParametro
@@ -159,7 +159,7 @@
             Me.gbReferencia.Controls.Add(Me.txtIdParametro)
             Me.gbReferencia.Controls.Add(Me.rbDeducible)
             Me.gbReferencia.Controls.Add(Me.txtDetalleParametro)
-            Me.gbReferencia.Location = New System.Drawing.Point(2, 27)
+            Me.gbReferencia.Location = New System.Drawing.Point(2, 33)
             Me.gbReferencia.Name = "gbReferencia"
             Me.gbReferencia.Size = New System.Drawing.Size(390, 100)
             Me.gbReferencia.TabIndex = 22
@@ -167,52 +167,53 @@
             '
             'MenuStrip1
             '
-            Me.MenuStrip1.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.MenuStrip1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
             Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnNuevoParametroDocumentos, Me.btnGuardarParametroDocumentos, Me.btnModificarParametroDocumentos, Me.btnCancelarParametroDocumentos})
             Me.MenuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow
             Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
             Me.MenuStrip1.Name = "MenuStrip1"
             Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(7, 2, 0, 2)
-            Me.MenuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
-            Me.MenuStrip1.Size = New System.Drawing.Size(394, 24)
+            Me.MenuStrip1.Size = New System.Drawing.Size(394, 32)
             Me.MenuStrip1.TabIndex = 186
             Me.MenuStrip1.Text = "msIngresoBodega"
             '
             'btnNuevoParametroDocumentos
             '
             Me.btnNuevoParametroDocumentos.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnNuevoParametroDocumentos.Image = CType(resources.GetObject("btnNuevoParametroDocumentos.Image"), System.Drawing.Image)
+            Me.btnNuevoParametroDocumentos.Image = Global.syscisepro.My.Resources.Resources.add_circle_24dp_FILL0_wght400_GRAD0_opsz24__3_
             Me.btnNuevoParametroDocumentos.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnNuevoParametroDocumentos.Name = "btnNuevoParametroDocumentos"
-            Me.btnNuevoParametroDocumentos.Size = New System.Drawing.Size(70, 20)
+            Me.btnNuevoParametroDocumentos.Size = New System.Drawing.Size(78, 28)
             Me.btnNuevoParametroDocumentos.Text = "NUEVO"
             '
             'btnGuardarParametroDocumentos
             '
             Me.btnGuardarParametroDocumentos.Enabled = False
             Me.btnGuardarParametroDocumentos.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnGuardarParametroDocumentos.Image = CType(resources.GetObject("btnGuardarParametroDocumentos.Image"), System.Drawing.Image)
+            Me.btnGuardarParametroDocumentos.Image = Global.syscisepro.My.Resources.Resources.save_24dp_FILL0_wght400_GRAD0_opsz24__2_
             Me.btnGuardarParametroDocumentos.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnGuardarParametroDocumentos.Name = "btnGuardarParametroDocumentos"
-            Me.btnGuardarParametroDocumentos.Size = New System.Drawing.Size(84, 20)
+            Me.btnGuardarParametroDocumentos.Size = New System.Drawing.Size(92, 28)
             Me.btnGuardarParametroDocumentos.Text = "GUARDAR"
             '
             'btnModificarParametroDocumentos
             '
             Me.btnModificarParametroDocumentos.Enabled = False
             Me.btnModificarParametroDocumentos.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnModificarParametroDocumentos.Image = Global.syscisepro.My.Resources.Resources.ModificarRegistro
+            Me.btnModificarParametroDocumentos.Image = Global.syscisepro.My.Resources.Resources.edit_document_24dp_FILL0_wght400_GRAD0_opsz24__2_
+            Me.btnModificarParametroDocumentos.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnModificarParametroDocumentos.Name = "btnModificarParametroDocumentos"
-            Me.btnModificarParametroDocumentos.Size = New System.Drawing.Size(105, 20)
+            Me.btnModificarParametroDocumentos.Size = New System.Drawing.Size(113, 28)
             Me.btnModificarParametroDocumentos.Text = "ACTUALIZAR"
             '
             'btnCancelarParametroDocumentos
             '
             Me.btnCancelarParametroDocumentos.Enabled = False
             Me.btnCancelarParametroDocumentos.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnCancelarParametroDocumentos.Image = Global.syscisepro.My.Resources.Resources.cancel
+            Me.btnCancelarParametroDocumentos.Image = Global.syscisepro.My.Resources.Resources.cancel_24dp_FILL0_wght400_GRAD0_opsz24
+            Me.btnCancelarParametroDocumentos.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnCancelarParametroDocumentos.Name = "btnCancelarParametroDocumentos"
-            Me.btnCancelarParametroDocumentos.Size = New System.Drawing.Size(91, 20)
+            Me.btnCancelarParametroDocumentos.Size = New System.Drawing.Size(99, 28)
             Me.btnCancelarParametroDocumentos.Text = "CANCELAR"
             '
             'FormParametrosDocumentos
@@ -229,6 +230,10 @@
             Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
             Me.Name = "FormParametrosDocumentos"
             Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+            Me.StateActive.Border.DrawBorders = CType((((Krypton.Toolkit.PaletteDrawBorders.Top Or Krypton.Toolkit.PaletteDrawBorders.Bottom) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Left) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Right), Krypton.Toolkit.PaletteDrawBorders)
+            Me.StateActive.Border.Rounding = 5.0!
             Me.Text = "PARAMETROS DE DOCUMENTOS"
             CType(Me.dgvParametrosDocumentos, System.ComponentModel.ISupportInitialize).EndInit()
             Me.gbReferencia.ResumeLayout(False)

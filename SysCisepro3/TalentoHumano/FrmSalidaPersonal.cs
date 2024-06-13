@@ -68,7 +68,7 @@ namespace SysCisepro3.TalentoHumano
 
         private void FrmSalidaPersonal_Load(object sender, EventArgs e)
         {
-            toolStrip1.BackColor = ValidationForms.GetColorSistema(TipoCon);
+            //toolStrip1.BackColor = ValidationForms.GetColorSistema(TipoCon);
             toolStrip1.ForeColor = Color.White;
 
             
@@ -84,6 +84,7 @@ namespace SysCisepro3.TalentoHumano
                     Icon = Resources.logo_c;
                     break;
             }
+            dgvPersonal.Font = new Font("Roboto", 8, FontStyle.Regular);    
             ValidationForms.SetPlaceholder(txtFiltro, "Buscar ...");
 
 

@@ -17,10 +17,11 @@ using SysCisepro3.Reportes;
 using DataTable = System.Data.DataTable;
 using Office = Microsoft.Office.Interop;
 using System.Text.RegularExpressions;
+using Krypton.Toolkit;
 
 namespace SysCisepro3.TalentoHumano
 {
-    public partial class FrmReporteVacaciones : Form
+    public partial class FrmReporteVacaciones : KryptonForm
     {
         /// <summary>
         /// CISEPRO 2019

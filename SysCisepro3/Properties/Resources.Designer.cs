@@ -2855,6 +2855,16 @@ namespace SysCisepro3.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap mapa_de_ecuador_con_sus_provincias_1 {
+            get {
+                object obj = ResourceManager.GetObject("mapa-de-ecuador-con-sus-provincias-1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap menu_book_24dp_FILL0_wght400_GRAD0_opsz24 {
             get {
                 object obj = ResourceManager.GetObject("menu_book_24dp_FILL0_wght400_GRAD0_opsz24", resourceCulture);

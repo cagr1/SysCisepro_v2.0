@@ -16,13 +16,14 @@ using SysCisepro3.Main;
 using ClassLibraryCisepro3.Enums;
 using SysCisepro3.Datos;
 using SysCisepro3.Properties;
+using Krypton.Toolkit;
 
 
 
 
 namespace SysCisepro3.Bodega
 {
-    public partial class FrmReporteSitioBodega : Form
+    public partial class FrmReporteSitioBodega : KryptonForm
     {
         public static TipoConexion TipoCon { private get; set; }
         public static ClassUsuarioGeneral Usuario { private get; set; }
@@ -63,7 +64,7 @@ namespace SysCisepro3.Bodega
             toolStripLabel1.BackColor = ValidationForms.GetColorSistema(TipoCon);
             toolStripLabel1.ForeColor = Color.White;
             dgvsitios.DefaultCellStyle.SelectionBackColor = ValidationForms.GetColorSistema(TipoCon);
-            dgvsitios.DefaultCellStyle.SelectionBackColor = ValidationForms.GetColorSistema(TipoCon);
+            
 
             switch (TipoCon)
             {
@@ -77,7 +78,7 @@ namespace SysCisepro3.Bodega
                     Icon = Resources.logo_c;
                     break;
             }
-
+            dgvsitios.Font = new Font("Roboto", 8, FontStyle.Regular);
             var f = Usuario.ObtenerFechaSola(TipoCon);
 
 

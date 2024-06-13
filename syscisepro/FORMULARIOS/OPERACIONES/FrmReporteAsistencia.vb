@@ -127,6 +127,7 @@ Namespace FORMULARIOS.OPERACIONES
             End Select
 
             _hoy = ValidationForms.FechaActual(_tipoCon)
+            Me.btnAgregar.ToolTipText = "Agregar Vigilante"
 
             dtpMes.Value = New Date(_hoy.Year, _hoy.Month, 1)
             Text += " " & ValidationForms.NombreCompany(_tipoCon)

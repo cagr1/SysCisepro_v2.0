@@ -152,9 +152,10 @@
             'bntPuesto
             '
             Me.bntPuesto.BackColor = System.Drawing.Color.White
+            Me.bntPuesto.FlatAppearance.BorderSize = 0
+            Me.bntPuesto.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.bntPuesto.Font = New System.Drawing.Font("Consolas", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.bntPuesto.Image = CType(resources.GetObject("bntPuesto.Image"), System.Drawing.Image)
-            Me.bntPuesto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+            Me.bntPuesto.Image = Global.syscisepro.My.Resources.Resources.location_on_24dp_FILL0_wght400_GRAD0_opsz24
             Me.bntPuesto.Location = New System.Drawing.Point(737, 13)
             Me.bntPuesto.Name = "bntPuesto"
             Me.bntPuesto.Size = New System.Drawing.Size(26, 26)
@@ -245,7 +246,7 @@
             Me.GroupBox2.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.GroupBox2.Location = New System.Drawing.Point(1, 143)
             Me.GroupBox2.Name = "GroupBox2"
-            Me.GroupBox2.Size = New System.Drawing.Size(770, 93)
+            Me.GroupBox2.Size = New System.Drawing.Size(770, 95)
             Me.GroupBox2.TabIndex = 196
             Me.GroupBox2.TabStop = False
             Me.GroupBox2.Text = "DATOS DEL HORARIO DE TRABAJO ASIGNADO"
@@ -721,7 +722,7 @@
             Me.btnPersonal.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.btnPersonal.Font = New System.Drawing.Font("Consolas", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.btnPersonal.Image = Global.syscisepro.My.Resources.Resources.person_add_24dp_FILL0_wght400_GRAD0_opsz24
-            Me.btnPersonal.Location = New System.Drawing.Point(737, 11)
+            Me.btnPersonal.Location = New System.Drawing.Point(739, 11)
             Me.btnPersonal.Name = "btnPersonal"
             Me.btnPersonal.Size = New System.Drawing.Size(26, 26)
             Me.btnPersonal.TabIndex = 193
@@ -752,7 +753,7 @@
             Me.txtPersonal.BackColor = System.Drawing.Color.White
             Me.txtPersonal.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtPersonal.Enabled = False
-            Me.txtPersonal.Location = New System.Drawing.Point(219, 15)
+            Me.txtPersonal.Location = New System.Drawing.Point(213, 15)
             Me.txtPersonal.Name = "txtPersonal"
             Me.txtPersonal.Size = New System.Drawing.Size(518, 21)
             Me.txtPersonal.TabIndex = 0
@@ -760,7 +761,7 @@
             'Label26
             '
             Me.Label26.AutoSize = True
-            Me.Label26.Location = New System.Drawing.Point(158, 18)
+            Me.Label26.Location = New System.Drawing.Point(145, 18)
             Me.Label26.Name = "Label26"
             Me.Label26.Size = New System.Drawing.Size(63, 13)
             Me.Label26.TabIndex = 3
@@ -772,7 +773,7 @@
             Me.Button2.DialogResult = System.Windows.Forms.DialogResult.OK
             Me.Button2.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Button2.ForeColor = System.Drawing.Color.White
-            Me.Button2.Location = New System.Drawing.Point(693, 237)
+            Me.Button2.Location = New System.Drawing.Point(693, 244)
             Me.Button2.Name = "Button2"
             Me.Button2.Size = New System.Drawing.Size(75, 23)
             Me.Button2.TabIndex = 199
@@ -785,7 +786,7 @@
             Me.Button1.DialogResult = System.Windows.Forms.DialogResult.Cancel
             Me.Button1.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Button1.ForeColor = System.Drawing.Color.White
-            Me.Button1.Location = New System.Drawing.Point(612, 237)
+            Me.Button1.Location = New System.Drawing.Point(612, 244)
             Me.Button1.Name = "Button1"
             Me.Button1.Size = New System.Drawing.Size(75, 23)
             Me.Button1.TabIndex = 198
@@ -797,7 +798,7 @@
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.BackColor = System.Drawing.Color.White
-            Me.ClientSize = New System.Drawing.Size(773, 264)
+            Me.ClientSize = New System.Drawing.Size(773, 271)
             Me.Controls.Add(Me.Button2)
             Me.Controls.Add(Me.Button1)
             Me.Controls.Add(Me.GroupBox3)

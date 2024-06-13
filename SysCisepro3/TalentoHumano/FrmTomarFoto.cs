@@ -38,7 +38,7 @@ namespace SysCisepro3.TalentoHumano
 
         private void FrmTomarFoto_Load(object sender, EventArgs e)
         {
-            toolStrip1.BackColor = ValidationForms.GetColorSistema(TipoCon);
+            //toolStrip1.BackColor = ValidationForms.GetColorSistema(TipoCon);
             toolStrip1.ForeColor = Color.White; 
             switch (TipoCon)
             {

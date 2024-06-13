@@ -221,6 +221,7 @@
             // toolStrip1
             // 
             this.toolStrip1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnBuscar,
             this.btnNuevo,
@@ -230,55 +231,60 @@
             this.toolStripButton1});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(895, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(895, 31);
             this.toolStrip1.TabIndex = 234;
             this.toolStrip1.Text = "toolStrip1";
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Image = global::SysCisepro3.Properties.Resources.BuscarRegistro;
+            this.btnBuscar.Image = global::SysCisepro3.Properties.Resources.search_24dp_FILL0_wght400_GRAD0_opsz24__2_;
+            this.btnBuscar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnBuscar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(102, 22);
-            this.btnBuscar.Text = "LISTAR TODOS";
+            this.btnBuscar.Size = new System.Drawing.Size(79, 28);
+            this.btnBuscar.Text = "BUSCAR";
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // btnNuevo
             // 
-            this.btnNuevo.Image = global::SysCisepro3.Properties.Resources.NuevoRegistro;
+            this.btnNuevo.Image = global::SysCisepro3.Properties.Resources.add_circle_24dp_FILL0_wght400_GRAD0_opsz24__3_;
+            this.btnNuevo.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnNuevo.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(66, 22);
+            this.btnNuevo.Size = new System.Drawing.Size(74, 28);
             this.btnNuevo.Text = "NUEVO";
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
             // btnGuardar
             // 
             this.btnGuardar.Enabled = false;
-            this.btnGuardar.Image = global::SysCisepro3.Properties.Resources.GuardarRegistro;
+            this.btnGuardar.Image = global::SysCisepro3.Properties.Resources.save_24dp_FILL0_wght400_GRAD0_opsz24__2_;
+            this.btnGuardar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnGuardar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(81, 22);
+            this.btnGuardar.Size = new System.Drawing.Size(89, 28);
             this.btnGuardar.Text = "GUARDAR";
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // btnModificar
             // 
             this.btnModificar.Enabled = false;
-            this.btnModificar.Image = global::SysCisepro3.Properties.Resources.ModificarRegistro;
+            this.btnModificar.Image = global::SysCisepro3.Properties.Resources.edit_document_24dp_FILL0_wght400_GRAD0_opsz24__2_;
+            this.btnModificar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnModificar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(90, 22);
+            this.btnModificar.Size = new System.Drawing.Size(98, 28);
             this.btnModificar.Text = "MODIFICAR";
             this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // btnCancelar
             // 
             this.btnCancelar.Enabled = false;
-            this.btnCancelar.Image = global::SysCisepro3.Properties.Resources.cancel;
+            this.btnCancelar.Image = global::SysCisepro3.Properties.Resources.cancel_24dp_FILL0_wght400_GRAD0_opsz24;
+            this.btnCancelar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnCancelar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(87, 22);
+            this.btnCancelar.Size = new System.Drawing.Size(95, 28);
             this.btnCancelar.Text = "CANCELAR";
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
@@ -287,7 +293,7 @@
             this.toolStripButton1.Image = global::SysCisepro3.Properties.Resources.excel_icon;
             this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(82, 22);
+            this.toolStripButton1.Size = new System.Drawing.Size(82, 28);
             this.toolStripButton1.Text = "EXPORTAR";
             this.toolStripButton1.Visible = false;
             // 
@@ -327,7 +333,7 @@
             this.groupBox3.Controls.Add(this.label9);
             this.groupBox3.Controls.Add(this.label10);
             this.groupBox3.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(1, 31);
+            this.groupBox3.Location = new System.Drawing.Point(1, 33);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(894, 125);
             this.groupBox3.TabIndex = 199;
@@ -347,11 +353,12 @@
             // 
             this.btnVentaBienEsp.BackColor = System.Drawing.Color.White;
             this.btnVentaBienEsp.Enabled = false;
+            this.btnVentaBienEsp.FlatAppearance.BorderSize = 0;
+            this.btnVentaBienEsp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVentaBienEsp.Image = ((System.Drawing.Image)(resources.GetObject("btnVentaBienEsp.Image")));
-            this.btnVentaBienEsp.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnVentaBienEsp.Location = new System.Drawing.Point(867, 96);
             this.btnVentaBienEsp.Name = "btnVentaBienEsp";
-            this.btnVentaBienEsp.Size = new System.Drawing.Size(24, 24);
+            this.btnVentaBienEsp.Size = new System.Drawing.Size(25, 25);
             this.btnVentaBienEsp.TabIndex = 240;
             this.btnVentaBienEsp.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnVentaBienEsp.UseVisualStyleBackColor = false;
@@ -371,11 +378,12 @@
             // 
             this.btnCompraBienEsp.BackColor = System.Drawing.Color.White;
             this.btnCompraBienEsp.Enabled = false;
+            this.btnCompraBienEsp.FlatAppearance.BorderSize = 0;
+            this.btnCompraBienEsp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCompraBienEsp.Image = ((System.Drawing.Image)(resources.GetObject("btnCompraBienEsp.Image")));
-            this.btnCompraBienEsp.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCompraBienEsp.Location = new System.Drawing.Point(580, 96);
             this.btnCompraBienEsp.Name = "btnCompraBienEsp";
-            this.btnCompraBienEsp.Size = new System.Drawing.Size(24, 24);
+            this.btnCompraBienEsp.Size = new System.Drawing.Size(25, 25);
             this.btnCompraBienEsp.TabIndex = 238;
             this.btnCompraBienEsp.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCompraBienEsp.UseVisualStyleBackColor = false;
@@ -395,11 +403,12 @@
             // 
             this.btnVentaBienExp.BackColor = System.Drawing.Color.White;
             this.btnVentaBienExp.Enabled = false;
+            this.btnVentaBienExp.FlatAppearance.BorderSize = 0;
+            this.btnVentaBienExp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVentaBienExp.Image = ((System.Drawing.Image)(resources.GetObject("btnVentaBienExp.Image")));
-            this.btnVentaBienExp.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnVentaBienExp.Location = new System.Drawing.Point(867, 75);
             this.btnVentaBienExp.Name = "btnVentaBienExp";
-            this.btnVentaBienExp.Size = new System.Drawing.Size(24, 24);
+            this.btnVentaBienExp.Size = new System.Drawing.Size(25, 25);
             this.btnVentaBienExp.TabIndex = 236;
             this.btnVentaBienExp.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnVentaBienExp.UseVisualStyleBackColor = false;
@@ -419,11 +428,12 @@
             // 
             this.btnVentaBienPsin.BackColor = System.Drawing.Color.White;
             this.btnVentaBienPsin.Enabled = false;
+            this.btnVentaBienPsin.FlatAppearance.BorderSize = 0;
+            this.btnVentaBienPsin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVentaBienPsin.Image = ((System.Drawing.Image)(resources.GetObject("btnVentaBienPsin.Image")));
-            this.btnVentaBienPsin.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnVentaBienPsin.Location = new System.Drawing.Point(867, 54);
             this.btnVentaBienPsin.Name = "btnVentaBienPsin";
-            this.btnVentaBienPsin.Size = new System.Drawing.Size(24, 24);
+            this.btnVentaBienPsin.Size = new System.Drawing.Size(25, 25);
             this.btnVentaBienPsin.TabIndex = 234;
             this.btnVentaBienPsin.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnVentaBienPsin.UseVisualStyleBackColor = false;
@@ -443,11 +453,12 @@
             // 
             this.btnCompraBienExp.BackColor = System.Drawing.Color.White;
             this.btnCompraBienExp.Enabled = false;
+            this.btnCompraBienExp.FlatAppearance.BorderSize = 0;
+            this.btnCompraBienExp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCompraBienExp.Image = ((System.Drawing.Image)(resources.GetObject("btnCompraBienExp.Image")));
-            this.btnCompraBienExp.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCompraBienExp.Location = new System.Drawing.Point(580, 75);
             this.btnCompraBienExp.Name = "btnCompraBienExp";
-            this.btnCompraBienExp.Size = new System.Drawing.Size(24, 24);
+            this.btnCompraBienExp.Size = new System.Drawing.Size(25, 25);
             this.btnCompraBienExp.TabIndex = 232;
             this.btnCompraBienExp.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCompraBienExp.UseVisualStyleBackColor = false;
@@ -467,11 +478,12 @@
             // 
             this.btnCompraBienPsin.BackColor = System.Drawing.Color.White;
             this.btnCompraBienPsin.Enabled = false;
+            this.btnCompraBienPsin.FlatAppearance.BorderSize = 0;
+            this.btnCompraBienPsin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCompraBienPsin.Image = ((System.Drawing.Image)(resources.GetObject("btnCompraBienPsin.Image")));
-            this.btnCompraBienPsin.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCompraBienPsin.Location = new System.Drawing.Point(580, 54);
             this.btnCompraBienPsin.Name = "btnCompraBienPsin";
-            this.btnCompraBienPsin.Size = new System.Drawing.Size(24, 24);
+            this.btnCompraBienPsin.Size = new System.Drawing.Size(25, 25);
             this.btnCompraBienPsin.TabIndex = 230;
             this.btnCompraBienPsin.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCompraBienPsin.UseVisualStyleBackColor = false;
@@ -491,11 +503,12 @@
             // 
             this.btnVentaBienPcon.BackColor = System.Drawing.Color.White;
             this.btnVentaBienPcon.Enabled = false;
+            this.btnVentaBienPcon.FlatAppearance.BorderSize = 0;
+            this.btnVentaBienPcon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVentaBienPcon.Image = ((System.Drawing.Image)(resources.GetObject("btnVentaBienPcon.Image")));
-            this.btnVentaBienPcon.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnVentaBienPcon.Location = new System.Drawing.Point(867, 33);
             this.btnVentaBienPcon.Name = "btnVentaBienPcon";
-            this.btnVentaBienPcon.Size = new System.Drawing.Size(24, 24);
+            this.btnVentaBienPcon.Size = new System.Drawing.Size(25, 25);
             this.btnVentaBienPcon.TabIndex = 228;
             this.btnVentaBienPcon.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnVentaBienPcon.UseVisualStyleBackColor = false;
@@ -515,11 +528,12 @@
             // 
             this.btnCompraBienPcon.BackColor = System.Drawing.Color.White;
             this.btnCompraBienPcon.Enabled = false;
+            this.btnCompraBienPcon.FlatAppearance.BorderSize = 0;
+            this.btnCompraBienPcon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCompraBienPcon.Image = ((System.Drawing.Image)(resources.GetObject("btnCompraBienPcon.Image")));
-            this.btnCompraBienPcon.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCompraBienPcon.Location = new System.Drawing.Point(580, 33);
             this.btnCompraBienPcon.Name = "btnCompraBienPcon";
-            this.btnCompraBienPcon.Size = new System.Drawing.Size(24, 24);
+            this.btnCompraBienPcon.Size = new System.Drawing.Size(25, 25);
             this.btnCompraBienPcon.TabIndex = 224;
             this.btnCompraBienPcon.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCompraBienPcon.UseVisualStyleBackColor = false;
@@ -529,11 +543,12 @@
             // 
             this.btnVentaBienSoc.BackColor = System.Drawing.Color.White;
             this.btnVentaBienSoc.Enabled = false;
+            this.btnVentaBienSoc.FlatAppearance.BorderSize = 0;
+            this.btnVentaBienSoc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVentaBienSoc.Image = ((System.Drawing.Image)(resources.GetObject("btnVentaBienSoc.Image")));
-            this.btnVentaBienSoc.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnVentaBienSoc.Location = new System.Drawing.Point(867, 11);
             this.btnVentaBienSoc.Name = "btnVentaBienSoc";
-            this.btnVentaBienSoc.Size = new System.Drawing.Size(24, 24);
+            this.btnVentaBienSoc.Size = new System.Drawing.Size(25, 25);
             this.btnVentaBienSoc.TabIndex = 226;
             this.btnVentaBienSoc.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnVentaBienSoc.UseVisualStyleBackColor = false;
@@ -563,11 +578,12 @@
             // 
             this.btnCompraBienSoc.BackColor = System.Drawing.Color.White;
             this.btnCompraBienSoc.Enabled = false;
+            this.btnCompraBienSoc.FlatAppearance.BorderSize = 0;
+            this.btnCompraBienSoc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCompraBienSoc.Image = ((System.Drawing.Image)(resources.GetObject("btnCompraBienSoc.Image")));
-            this.btnCompraBienSoc.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCompraBienSoc.Location = new System.Drawing.Point(580, 12);
             this.btnCompraBienSoc.Name = "btnCompraBienSoc";
-            this.btnCompraBienSoc.Size = new System.Drawing.Size(24, 24);
+            this.btnCompraBienSoc.Size = new System.Drawing.Size(25, 25);
             this.btnCompraBienSoc.TabIndex = 222;
             this.btnCompraBienSoc.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCompraBienSoc.UseVisualStyleBackColor = false;
@@ -742,7 +758,7 @@
             this.groupBox1.Controls.Add(this.label13);
             this.groupBox1.Controls.Add(this.label17);
             this.groupBox1.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(1, 158);
+            this.groupBox1.Location = new System.Drawing.Point(1, 160);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(894, 125);
             this.groupBox1.TabIndex = 241;
@@ -762,11 +778,12 @@
             // 
             this.btnVentaServiEsp.BackColor = System.Drawing.Color.White;
             this.btnVentaServiEsp.Enabled = false;
+            this.btnVentaServiEsp.FlatAppearance.BorderSize = 0;
+            this.btnVentaServiEsp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVentaServiEsp.Image = ((System.Drawing.Image)(resources.GetObject("btnVentaServiEsp.Image")));
-            this.btnVentaServiEsp.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnVentaServiEsp.Location = new System.Drawing.Point(867, 96);
             this.btnVentaServiEsp.Name = "btnVentaServiEsp";
-            this.btnVentaServiEsp.Size = new System.Drawing.Size(24, 24);
+            this.btnVentaServiEsp.Size = new System.Drawing.Size(25, 25);
             this.btnVentaServiEsp.TabIndex = 240;
             this.btnVentaServiEsp.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnVentaServiEsp.UseVisualStyleBackColor = false;
@@ -786,11 +803,12 @@
             // 
             this.btnCompraServiEsp.BackColor = System.Drawing.Color.White;
             this.btnCompraServiEsp.Enabled = false;
+            this.btnCompraServiEsp.FlatAppearance.BorderSize = 0;
+            this.btnCompraServiEsp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCompraServiEsp.Image = ((System.Drawing.Image)(resources.GetObject("btnCompraServiEsp.Image")));
-            this.btnCompraServiEsp.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCompraServiEsp.Location = new System.Drawing.Point(580, 96);
             this.btnCompraServiEsp.Name = "btnCompraServiEsp";
-            this.btnCompraServiEsp.Size = new System.Drawing.Size(24, 24);
+            this.btnCompraServiEsp.Size = new System.Drawing.Size(25, 25);
             this.btnCompraServiEsp.TabIndex = 238;
             this.btnCompraServiEsp.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCompraServiEsp.UseVisualStyleBackColor = false;
@@ -810,11 +828,12 @@
             // 
             this.btnVentaServiExp.BackColor = System.Drawing.Color.White;
             this.btnVentaServiExp.Enabled = false;
+            this.btnVentaServiExp.FlatAppearance.BorderSize = 0;
+            this.btnVentaServiExp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVentaServiExp.Image = ((System.Drawing.Image)(resources.GetObject("btnVentaServiExp.Image")));
-            this.btnVentaServiExp.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnVentaServiExp.Location = new System.Drawing.Point(867, 75);
             this.btnVentaServiExp.Name = "btnVentaServiExp";
-            this.btnVentaServiExp.Size = new System.Drawing.Size(24, 24);
+            this.btnVentaServiExp.Size = new System.Drawing.Size(25, 25);
             this.btnVentaServiExp.TabIndex = 236;
             this.btnVentaServiExp.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnVentaServiExp.UseVisualStyleBackColor = false;
@@ -834,11 +853,12 @@
             // 
             this.btnVentaServiPsin.BackColor = System.Drawing.Color.White;
             this.btnVentaServiPsin.Enabled = false;
+            this.btnVentaServiPsin.FlatAppearance.BorderSize = 0;
+            this.btnVentaServiPsin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVentaServiPsin.Image = ((System.Drawing.Image)(resources.GetObject("btnVentaServiPsin.Image")));
-            this.btnVentaServiPsin.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnVentaServiPsin.Location = new System.Drawing.Point(867, 54);
             this.btnVentaServiPsin.Name = "btnVentaServiPsin";
-            this.btnVentaServiPsin.Size = new System.Drawing.Size(24, 24);
+            this.btnVentaServiPsin.Size = new System.Drawing.Size(25, 25);
             this.btnVentaServiPsin.TabIndex = 234;
             this.btnVentaServiPsin.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnVentaServiPsin.UseVisualStyleBackColor = false;
@@ -858,11 +878,12 @@
             // 
             this.btnCompraServiExp.BackColor = System.Drawing.Color.White;
             this.btnCompraServiExp.Enabled = false;
+            this.btnCompraServiExp.FlatAppearance.BorderSize = 0;
+            this.btnCompraServiExp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCompraServiExp.Image = ((System.Drawing.Image)(resources.GetObject("btnCompraServiExp.Image")));
-            this.btnCompraServiExp.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCompraServiExp.Location = new System.Drawing.Point(580, 75);
             this.btnCompraServiExp.Name = "btnCompraServiExp";
-            this.btnCompraServiExp.Size = new System.Drawing.Size(24, 24);
+            this.btnCompraServiExp.Size = new System.Drawing.Size(25, 25);
             this.btnCompraServiExp.TabIndex = 232;
             this.btnCompraServiExp.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCompraServiExp.UseVisualStyleBackColor = false;
@@ -882,11 +903,12 @@
             // 
             this.btnCompraServiPsin.BackColor = System.Drawing.Color.White;
             this.btnCompraServiPsin.Enabled = false;
+            this.btnCompraServiPsin.FlatAppearance.BorderSize = 0;
+            this.btnCompraServiPsin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCompraServiPsin.Image = ((System.Drawing.Image)(resources.GetObject("btnCompraServiPsin.Image")));
-            this.btnCompraServiPsin.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCompraServiPsin.Location = new System.Drawing.Point(580, 54);
             this.btnCompraServiPsin.Name = "btnCompraServiPsin";
-            this.btnCompraServiPsin.Size = new System.Drawing.Size(24, 24);
+            this.btnCompraServiPsin.Size = new System.Drawing.Size(25, 25);
             this.btnCompraServiPsin.TabIndex = 230;
             this.btnCompraServiPsin.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCompraServiPsin.UseVisualStyleBackColor = false;
@@ -906,11 +928,12 @@
             // 
             this.btnVentaServiPcon.BackColor = System.Drawing.Color.White;
             this.btnVentaServiPcon.Enabled = false;
+            this.btnVentaServiPcon.FlatAppearance.BorderSize = 0;
+            this.btnVentaServiPcon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVentaServiPcon.Image = ((System.Drawing.Image)(resources.GetObject("btnVentaServiPcon.Image")));
-            this.btnVentaServiPcon.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnVentaServiPcon.Location = new System.Drawing.Point(867, 33);
             this.btnVentaServiPcon.Name = "btnVentaServiPcon";
-            this.btnVentaServiPcon.Size = new System.Drawing.Size(24, 24);
+            this.btnVentaServiPcon.Size = new System.Drawing.Size(25, 25);
             this.btnVentaServiPcon.TabIndex = 228;
             this.btnVentaServiPcon.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnVentaServiPcon.UseVisualStyleBackColor = false;
@@ -930,11 +953,12 @@
             // 
             this.btnCompraServiPcon.BackColor = System.Drawing.Color.White;
             this.btnCompraServiPcon.Enabled = false;
+            this.btnCompraServiPcon.FlatAppearance.BorderSize = 0;
+            this.btnCompraServiPcon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCompraServiPcon.Image = ((System.Drawing.Image)(resources.GetObject("btnCompraServiPcon.Image")));
-            this.btnCompraServiPcon.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCompraServiPcon.Location = new System.Drawing.Point(580, 33);
             this.btnCompraServiPcon.Name = "btnCompraServiPcon";
-            this.btnCompraServiPcon.Size = new System.Drawing.Size(24, 24);
+            this.btnCompraServiPcon.Size = new System.Drawing.Size(25, 25);
             this.btnCompraServiPcon.TabIndex = 224;
             this.btnCompraServiPcon.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCompraServiPcon.UseVisualStyleBackColor = false;
@@ -944,11 +968,12 @@
             // 
             this.btnVentaServiSoc.BackColor = System.Drawing.Color.White;
             this.btnVentaServiSoc.Enabled = false;
+            this.btnVentaServiSoc.FlatAppearance.BorderSize = 0;
+            this.btnVentaServiSoc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVentaServiSoc.Image = ((System.Drawing.Image)(resources.GetObject("btnVentaServiSoc.Image")));
-            this.btnVentaServiSoc.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnVentaServiSoc.Location = new System.Drawing.Point(867, 11);
             this.btnVentaServiSoc.Name = "btnVentaServiSoc";
-            this.btnVentaServiSoc.Size = new System.Drawing.Size(24, 24);
+            this.btnVentaServiSoc.Size = new System.Drawing.Size(25, 25);
             this.btnVentaServiSoc.TabIndex = 226;
             this.btnVentaServiSoc.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnVentaServiSoc.UseVisualStyleBackColor = false;
@@ -978,11 +1003,12 @@
             // 
             this.btnCompraServiSoc.BackColor = System.Drawing.Color.White;
             this.btnCompraServiSoc.Enabled = false;
+            this.btnCompraServiSoc.FlatAppearance.BorderSize = 0;
+            this.btnCompraServiSoc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCompraServiSoc.Image = ((System.Drawing.Image)(resources.GetObject("btnCompraServiSoc.Image")));
-            this.btnCompraServiSoc.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCompraServiSoc.Location = new System.Drawing.Point(580, 12);
             this.btnCompraServiSoc.Name = "btnCompraServiSoc";
-            this.btnCompraServiSoc.Size = new System.Drawing.Size(24, 24);
+            this.btnCompraServiSoc.Size = new System.Drawing.Size(25, 25);
             this.btnCompraServiSoc.TabIndex = 222;
             this.btnCompraServiSoc.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCompraServiSoc.UseVisualStyleBackColor = false;
@@ -1133,6 +1159,10 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "FrmPorcentajesRetencionIva";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StateActive.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.StateActive.Border.Rounding = 5F;
             this.Text = "PORCENTAJES DE RETENCIÓN DEL IMPUESTO AL VALOR AGREGADO";
             this.Load += new System.EventHandler(this.FrmPorcentajesRetencionIva_Load);
             this.toolStrip1.ResumeLayout(false);

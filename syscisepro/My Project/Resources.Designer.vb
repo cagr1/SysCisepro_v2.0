@@ -1163,6 +1163,16 @@ Namespace My.Resources
         '''<summary>
         '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property contract_24dp_FILL0_wght400_GRAD0_opsz24() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("contract_24dp_FILL0_wght400_GRAD0_opsz24", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property contract_delete_20dp_FILL0_wght400_GRAD0_opsz20() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("contract_delete_20dp_FILL0_wght400_GRAD0_opsz20", resourceCulture)
