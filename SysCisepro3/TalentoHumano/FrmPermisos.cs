@@ -165,22 +165,22 @@ namespace SysCisepro3.TalentoHumano
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show(@"Desea guardar el registro actual?",
-                   "MENSAJE DELL SISTEMA", MessageBoxButtons.YesNo, MessageBoxIcon.Question) !=
+            if (KryptonMessageBox.Show(@"Desea guardar el registro actual?",
+                   "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) !=
                DialogResult.Yes) return;
 
             if (txtIdPersonal.Text.Trim().Length == 0 || txtSitio.Text.Trim().Length == 0 || txtObservacion.Text.Trim().Length == 0 ||
                 string.IsNullOrEmpty(cbmMotivo.Text))
             {
-                MessageBox.Show(@"Debe definir los datos y tipo de permiso para guardar!",
-                    "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                KryptonMessageBox.Show(@"Debe definir los datos y tipo de permiso para guardar!",
+                    "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
                 return;
             }
 
             if (dtpDesde.Value > dtpHasta.Value)
             {
-                MessageBox.Show(@"La fecha de inicio debe ser mayor o igual a la fecha fin!",
-                    "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                KryptonMessageBox.Show(@"La fecha de inicio debe ser mayor o igual a la fecha fin!",
+                    "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
                 return;
             }
 
@@ -236,14 +236,14 @@ namespace SysCisepro3.TalentoHumano
 
                 CargarAsignaciones(string.Empty, _objRegistroPermisoPersonal.IdRegistro);
             }
-            MessageBox.Show((string)res[1], "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            KryptonMessageBox.Show((string)res[1], "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
         }
 
         private void btnAnular_Click(object sender, EventArgs e)
         {
             if (listView2.Items.Count == 0 || dtpFecha.Tag == null) return;
 
-            if (MessageBox.Show(@"Desea anular el registro seleccioando?", "MENSAJE DELL SISTEMA", MessageBoxButtons.YesNo, MessageBoxIcon.Question) != DialogResult.Yes) return;
+            if (KryptonMessageBox.Show(@"Desea anular el registro seleccioando?", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) != DialogResult.Yes) return;
 
             _sqlCommands.Clear();
 
@@ -272,7 +272,7 @@ namespace SysCisepro3.TalentoHumano
                 txtFiltro.Clear();
                 CargarAsignaciones(string.Empty, 0);
             }
-            MessageBox.Show((string)res[1], "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            KryptonMessageBox.Show((string)res[1], "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -374,7 +374,7 @@ namespace SysCisepro3.TalentoHumano
             catch (Exception ex)
             {
                 listView2.Items.Clear();
-                MessageBox.Show(@"Error al cargar detalles: " + ex.Message, "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                KryptonMessageBox.Show(@"Error al cargar detalles: " + ex.Message, "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
             }
         }
 
@@ -514,7 +514,7 @@ namespace SysCisepro3.TalentoHumano
             btnCancelar.Enabled = false;
             cbmMotivo.SelectedIndex = 0;
             Label1.Text = @"0 REGISTRO(S)";
-            MessageBox.Show(@"Para registrar detalle de VACACONES utlize la opción correspondiente del sistema!", "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            KryptonMessageBox.Show(@"Para registrar detalle de VACACONES utlize la opción correspondiente del sistema!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
         }
 
         private void txtNumDoc_KeyPress(object sender, KeyPressEventArgs e)
@@ -526,7 +526,7 @@ namespace SysCisepro3.TalentoHumano
         {
             if (listView2.Items.Count == 0)
             {
-                MessageBox.Show(@"NO HAY DATOS PARA EXPORTAR!", "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                KryptonMessageBox.Show(@"NO HAY DATOS PARA EXPORTAR!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
                 return;
             }
 
@@ -622,11 +622,11 @@ namespace SysCisepro3.TalentoHumano
                 app.Visible = true;
                 app.DisplayAlerts = true;
                 //workbook.SaveAs(sfd.FileName, XlFileFormat.xlWorkbookNormal, Type.Missing, Type.Missing, Type.Missing, Type.Missing, XlSaveAsAccessMode.xlExclusive, Type.Missing, Type.Missing, Type.Missing, Type.Missing);
-                MessageBox.Show(@"ARCHIVO generado correctamente!", "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                KryptonMessageBox.Show(@"ARCHIVO generado correctamente!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
             }
             catch
             {
-                MessageBox.Show(@"HUBO UN PROBLEMA AL EXPORTAR DATOS!", "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                KryptonMessageBox.Show(@"HUBO UN PROBLEMA AL EXPORTAR DATOS!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error);
             }
         }
 
@@ -648,8 +648,8 @@ namespace SysCisepro3.TalentoHumano
             
             ListViewItem data = listView2.SelectedItems[0];
             
-            if (MessageBox.Show(@"El registro seleccionado corresponde a la solicitud n° " + data.SubItems[0].Text.ToString() + @" de permisos. Desea IMPRIMIR la solicitud correspondiente?",
-                   "MENSAJE DELL SISTEMA", MessageBoxButtons.YesNo, MessageBoxIcon.Question) !=
+            if (KryptonMessageBox.Show(@"El registro seleccionado corresponde a la solicitud n° " + data.SubItems[0].Text.ToString() + @" de permisos. Desea IMPRIMIR la solicitud correspondiente?",
+                   "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) !=
                DialogResult.Yes) return;
             if (data == null) return;
             
@@ -709,8 +709,8 @@ namespace SysCisepro3.TalentoHumano
             }
             catch (Exception ex)
             {
-                MessageBox.Show(@"Error al generar solicitud. Por favor, contácte al administrador!",
-                    "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                KryptonMessageBox.Show(@"Error al generar solicitud. Por favor, contácte al administrador!",
+                    "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
             }
 
             //try
@@ -760,8 +760,8 @@ namespace SysCisepro3.TalentoHumano
             //}
             //catch (Exception)
             //{
-            //    MessageBox.Show(@"Error al generar solicitud. Por favor, contácte al administrador!",
-            //        "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //    KryptonMessageBox.Show(@"Error al generar solicitud. Por favor, contácte al administrador!",
+            //        "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
             //}
 
 

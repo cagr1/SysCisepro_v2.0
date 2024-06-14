@@ -8,6 +8,7 @@ Imports ClassLibraryCisepro.ProcesosSql
 Imports Microsoft.Office.Interop
 Imports syscisepro.DATOS
 Imports syscisepro.FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
+Imports Krypton.Toolkit
 
 Namespace FORMULARIOS.CONTABILIDAD.VENTAS
     ''' <summary>
@@ -155,7 +156,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                     End If
                 End If
             Catch ex As Exception
-                MsgBox("CARGAR DATOS FACTURA." & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "MENSAJE DE EXCEPCIÓN")
+                KryptonMessageBox.Show("CARGAR DATOS FACTURA." & vbNewLine & ex.Message.ToString, "MENSAJE DE EXCEPCIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Warning)
             End Try
         End Sub
 
@@ -170,9 +171,9 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                 End If
             Next
             If validarFacturacion = 1 Then
-                MsgBox("HAY FACTURAS POR APROBAR", MsgBoxStyle.Information, "MENSAJE DE INFORMACIÓN")
+                KryptonMessageBox.Show("HAY FACTURAS POR APROBAR", "MENSAJE DE INFORMACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
             Else
-                MsgBox("NO HAY FACTURAS POR APROBAR", MsgBoxStyle.Information, "MENSAJE DE INFORMACIÓN")
+                KryptonMessageBox.Show("NO HAY FACTURAS POR APROBAR", "MENSAJE DE INFORMACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
             End If
         End Sub
 

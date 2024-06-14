@@ -310,10 +310,10 @@
             this.lblUsuario,
             this.toolStripStatusLabel6,
             this.lblFecha});
-            this.statusStrip.Location = new System.Drawing.Point(0, 533);
+            this.statusStrip.Location = new System.Drawing.Point(0, 691);
             this.statusStrip.Name = "statusStrip";
             this.statusStrip.Padding = new System.Windows.Forms.Padding(1, 0, 16, 0);
-            this.statusStrip.Size = new System.Drawing.Size(1475, 22);
+            this.statusStrip.Size = new System.Drawing.Size(1236, 22);
             this.statusStrip.TabIndex = 2;
             this.statusStrip.Text = "StatusStrip";
             // 
@@ -334,7 +334,7 @@
             // toolStripStatusLabel3
             // 
             this.toolStripStatusLabel3.Name = "toolStripStatusLabel3";
-            this.toolStripStatusLabel3.Size = new System.Drawing.Size(897, 17);
+            this.toolStripStatusLabel3.Size = new System.Drawing.Size(658, 17);
             this.toolStripStatusLabel3.Spring = true;
             // 
             // toolStripStatusLabel4
@@ -393,7 +393,7 @@
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Padding = new System.Windows.Forms.Padding(0);
             this.toolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.toolStrip1.Size = new System.Drawing.Size(1475, 50);
+            this.toolStrip1.Size = new System.Drawing.Size(1236, 50);
             this.toolStrip1.TabIndex = 6;
             this.toolStrip1.Text = "toolStrip1";
             this.toolStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.toolStrip1_ItemClicked);
@@ -784,7 +784,7 @@
             // toolStripSeparator7
             // 
             this.toolStripSeparator7.Name = "toolStripSeparator7";
-            this.toolStripSeparator7.Size = new System.Drawing.Size(312, 6);
+            this.toolStripSeparator7.Size = new System.Drawing.Size(320, 6);
             // 
             // cONSULTASToolStripMenuItem
             // 
@@ -905,7 +905,7 @@
             // toolStripSeparator37
             // 
             this.toolStripSeparator37.Name = "toolStripSeparator37";
-            this.toolStripSeparator37.Size = new System.Drawing.Size(312, 6);
+            this.toolStripSeparator37.Size = new System.Drawing.Size(320, 6);
             // 
             // rEPORTESToolStripMenuItem
             // 
@@ -1785,7 +1785,7 @@
             this.sRIToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sRIToolStripMenuItem.Image = global::SysCisepro3.Properties.Resources.sri;
             this.sRIToolStripMenuItem.Name = "sRIToolStripMenuItem";
-            this.sRIToolStripMenuItem.Size = new System.Drawing.Size(247, 22);
+            this.sRIToolStripMenuItem.Size = new System.Drawing.Size(255, 30);
             this.sRIToolStripMenuItem.Text = "SRI";
             // 
             // iNFORMACIONDELAEMPRESAToolStripMenuItem1
@@ -1843,7 +1843,7 @@
             // toolStripSeparator35
             // 
             this.toolStripSeparator35.Name = "toolStripSeparator35";
-            this.toolStripSeparator35.Size = new System.Drawing.Size(244, 6);
+            this.toolStripSeparator35.Size = new System.Drawing.Size(252, 6);
             // 
             // cUENTASPORPAGARToolStripMenuItem
             // 
@@ -2001,14 +2001,14 @@
             // toolStripSeparator23
             // 
             this.toolStripSeparator23.Name = "toolStripSeparator23";
-            this.toolStripSeparator23.Size = new System.Drawing.Size(244, 6);
+            this.toolStripSeparator23.Size = new System.Drawing.Size(252, 6);
             // 
             // eSTADODESITUACIONINICIALToolStripMenuItem
             // 
             this.eSTADODESITUACIONINICIALToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.eSTADODESITUACIONINICIALToolStripMenuItem.Image = global::SysCisepro3.Properties.Resources.application_side_boxes;
             this.eSTADODESITUACIONINICIALToolStripMenuItem.Name = "eSTADODESITUACIONINICIALToolStripMenuItem";
-            this.eSTADODESITUACIONINICIALToolStripMenuItem.Size = new System.Drawing.Size(247, 22);
+            this.eSTADODESITUACIONINICIALToolStripMenuItem.Size = new System.Drawing.Size(255, 30);
             this.eSTADODESITUACIONINICIALToolStripMenuItem.Text = "ESTADO DE SITUACION INICIAL (X)";
             this.eSTADODESITUACIONINICIALToolStripMenuItem.Visible = false;
             this.eSTADODESITUACIONINICIALToolStripMenuItem.Click += new System.EventHandler(this.eSTADODESITUACIONINICIALToolStripMenuItem_Click);
@@ -2253,7 +2253,7 @@
             // toolStripSeparator4
             // 
             this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(289, 6);
+            this.toolStripSeparator4.Size = new System.Drawing.Size(297, 6);
             // 
             // dESCUENTOSPERSONALToolStripMenuItem
             // 
@@ -2299,7 +2299,7 @@
             // toolStripSeparator25
             // 
             this.toolStripSeparator25.Name = "toolStripSeparator25";
-            this.toolStripSeparator25.Size = new System.Drawing.Size(289, 6);
+            this.toolStripSeparator25.Size = new System.Drawing.Size(297, 6);
             // 
             // rEPORTESToolStripMenuItem1
             // 
@@ -2409,7 +2409,7 @@
             // toolStripSeparator26
             // 
             this.toolStripSeparator26.Name = "toolStripSeparator26";
-            this.toolStripSeparator26.Size = new System.Drawing.Size(288, 6);
+            this.toolStripSeparator26.Size = new System.Drawing.Size(296, 6);
             // 
             // rEPORTEASISTENCIAToolStripMenuItem
             // 
@@ -2444,7 +2444,7 @@
             // toolStripSeparator27
             // 
             this.toolStripSeparator27.Name = "toolStripSeparator27";
-            this.toolStripSeparator27.Size = new System.Drawing.Size(288, 6);
+            this.toolStripSeparator27.Size = new System.Drawing.Size(296, 6);
             // 
             // dEFINICIÓNDEHORARIOSHORASEXTRAToolStripMenuItem
             // 
@@ -2469,7 +2469,7 @@
             // toolStripSeparator28
             // 
             this.toolStripSeparator28.Name = "toolStripSeparator28";
-            this.toolStripSeparator28.Size = new System.Drawing.Size(288, 6);
+            this.toolStripSeparator28.Size = new System.Drawing.Size(296, 6);
             // 
             // iNGRESOSSALIDASDELPERSONALToolStripMenuItem
             // 
@@ -2524,7 +2524,7 @@
             // toolStripSeparator29
             // 
             this.toolStripSeparator29.Name = "toolStripSeparator29";
-            this.toolStripSeparator29.Size = new System.Drawing.Size(221, 6);
+            this.toolStripSeparator29.Size = new System.Drawing.Size(229, 6);
             // 
             // cATEGORÍASGRUPOSToolStripMenuItem
             // 
@@ -2569,7 +2569,7 @@
             // toolStripSeparator30
             // 
             this.toolStripSeparator30.Name = "toolStripSeparator30";
-            this.toolStripSeparator30.Size = new System.Drawing.Size(221, 6);
+            this.toolStripSeparator30.Size = new System.Drawing.Size(229, 6);
             // 
             // aSIGNARPROVEEDORAITEMToolStripMenuItem
             // 
@@ -2757,8 +2757,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1475, 555);
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.ClientSize = new System.Drawing.Size(1236, 713);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.statusStrip);
             this.DoubleBuffered = true;
@@ -2783,7 +2784,6 @@
             | Krypton.Toolkit.PaletteDrawBorders.Left) 
             | Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.Text = " ";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MdiParentMain_FormClosing);
             this.Load += new System.EventHandler(this.MdiParentMain_Load);
             this.statusStrip.ResumeLayout(false);

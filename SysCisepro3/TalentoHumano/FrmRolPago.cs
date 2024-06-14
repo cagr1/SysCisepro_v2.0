@@ -277,13 +277,13 @@ namespace SysCisepro3.TalentoHumano
                 CargarDetallesRol(Convert.ToInt32(lblIdRol.Text));
 
                 if (Convert.ToInt32(frm.dgvRoles.CurrentRow.Cells[11].Value) == 2)
-                    MessageBox.Show(@"El ROL DE PAGO seleccionado ya está VALIDADO, no se puede realizar cambios sobre el mismo!", "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    KryptonMessageBox.Show("El ROL DE PAGO seleccionado ya está VALIDADO, no se puede realizar cambios sobre el mismo!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
 
                 btnResumen.Enabled = true;
             }
             catch (Exception ex)
             {
-                MessageBox.Show(@"Ocurrió un problema al seleccionar el ROL DE PAGO! Por favor, contácte al administrador", "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                KryptonMessageBox.Show(@"Ocurrió un problema al seleccionar el ROL DE PAGO! Por favor, contácte al administrador", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
             }
         }
 
@@ -446,7 +446,7 @@ namespace SysCisepro3.TalentoHumano
             }
             catch (Exception ex)
             {
-                MessageBox.Show(@"Ocurrió un problema al cargar los detalles del ROL DE PAGO! Por favor, contácte al administrador", "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                KryptonMessageBox.Show(@"Ocurrió un problema al cargar los detalles del ROL DE PAGO! Por favor, contácte al administrador", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
             }
         }
 
@@ -507,23 +507,23 @@ namespace SysCisepro3.TalentoHumano
         {
             if (dgvDetallesRol.RowCount == 0)
             {
-                MessageBox.Show(@"No se generó ningún detalle en el ROL DE PAGO del período seleccionado!", "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                KryptonMessageBox.Show(@"No se generó ningún detalle en el ROL DE PAGO del período seleccionado!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
                 return;
             }
 
-            if (MessageBox.Show(@"Desea guardar los cambios realizados?",
-                    "MENSAJE DEL SISTEMA", MessageBoxButtons.YesNo, MessageBoxIcon.Question) !=
+            if (KryptonMessageBox.Show(@"Desea guardar los cambios realizados?",
+                    "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) !=
                 DialogResult.Yes) return;
 
             if (cbxQuincena.SelectedIndex == 1 && cbxTipo.SelectedIndex == 0 && cbxGrupo.Text.Trim().Length == 0)
             {
-                MessageBox.Show(@"Por favor, seleccione el grupo al que desea general rol de pago!", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                KryptonMessageBox.Show(@"Por favor, seleccione el grupo al que desea general rol de pago!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
                 return;
             }
 
             if (lblEstado.Text.Equals("VALIDADO"))
             {
-                MessageBox.Show(@"El ROL DE PAGO seleccionado ya está VALIDADO, no se puede realizar cambios sobre el mismo!", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                KryptonMessageBox.Show(@"El ROL DE PAGO seleccionado ya está VALIDADO, no se puede realizar cambios sobre el mismo!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
                 return;
             }
 
@@ -712,14 +712,14 @@ namespace SysCisepro3.TalentoHumano
                 if (cbxQuincena.SelectedIndex == 1) msg = ValidationForms.MesEnLetras(dtpMesAnio.Value.Month) + " DEL " + dtpMesAnio.Value.Year;
                 msg = "El ROL DE PAGO " + cbxTipo.Text.Trim() + " de " + msg + " fue generado correctamente";
             }
-            MessageBox.Show(msg, "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            KryptonMessageBox.Show(msg, "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
         }
 
         private void btnActualizar_Click(object sender, EventArgs e)
         {
             if (_estado == 0 && lblEstado.Text.Equals("VALIDADO"))
             {
-                MessageBox.Show(@"El ROL DE PAGO seleccionado ya está VALIDADO, no se puede realizar cambios sobre el mismo!", "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                KryptonMessageBox.Show(@"El ROL DE PAGO seleccionado ya está VALIDADO, no se puede realizar cambios sobre el mismo!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
                 return;
             }
 
@@ -750,8 +750,8 @@ namespace SysCisepro3.TalentoHumano
 
         private void btnValidar_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show(@"Está seguro que desea validar el ROL DE PAGO actual? Una vez validado ya no podrá hacer cambios en el mismo",
-                "MENSAJE DELL SISTEMA", MessageBoxButtons.YesNo, MessageBoxIcon.Question) != DialogResult.Yes)
+            if (KryptonMessageBox.Show(@"Está seguro que desea validar el ROL DE PAGO actual? Una vez validado ya no podrá hacer cambios en el mismo",
+                "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) != DialogResult.Yes)
             {
                 return;
             }
@@ -783,13 +783,13 @@ namespace SysCisepro3.TalentoHumano
                 if (cbxQuincena.SelectedIndex == 1) msg = ValidationForms.MesEnLetras(dtpMesAnio.Value.Month) + " DEL " + dtpMesAnio.Value.Year;
                 msg = "El ROL DE PAGO " + cbxTipo.Text.Trim() + " de " + msg + " fue validado correctamente";
             }
-            MessageBox.Show(msg, "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            KryptonMessageBox.Show(msg, "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
         }
 
         private void btnAnular_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show(@"Está seguro que desea anular el ROL DE PAGO actual? Tenga en cuenta que esta acción no es reversible",
-                "MENSAJE DELL SISTEMA", MessageBoxButtons.YesNo, MessageBoxIcon.Question) != DialogResult.Yes)
+            if (KryptonMessageBox.Show(@"Está seguro que desea anular el ROL DE PAGO actual? Tenga en cuenta que esta acción no es reversible",
+                "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) != DialogResult.Yes)
             {
                 return;
             }
@@ -821,7 +821,7 @@ namespace SysCisepro3.TalentoHumano
                 if (cbxQuincena.SelectedIndex == 1) msg = ValidationForms.MesEnLetras(dtpMesAnio.Value.Month) + " DEL " + dtpMesAnio.Value.Year;
                 msg = "El ROL DE PAGO " + cbxTipo.Text.Trim() + " de " + msg + " fue anulado correctamente";
             }
-            MessageBox.Show(msg, "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            KryptonMessageBox.Show(msg, "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -989,8 +989,8 @@ namespace SysCisepro3.TalentoHumano
             //    {
             //        if (!Usuario.TipoUsuario.Equals("ADMINISTRADOR"))
             //        {
-            //            if (MessageBox.Show(@"Se solicta permiso de Administrador  ya que no podrá hacer cambios en el mismo",
-            //             "MENSAJE DELL SISTEMA", MessageBoxButtons.YesNo, MessageBoxIcon.Question) != DialogResult.Yes)
+            //            if (KryptonMessageBox.Show(@"Se solicta permiso de Administrador  ya que no podrá hacer cambios en el mismo",
+            //             "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) != DialogResult.Yes)
             //            {
             //                dgvDetallesRol.CancelEdit();
             //                dgvDetallesRol.Rows[e.RowIndex].Cells[e.ColumnIndex].Style.BackColor = Color.Red;
@@ -1028,13 +1028,13 @@ namespace SysCisepro3.TalentoHumano
         {
             if (cbxQuincena.SelectedIndex == 1 && cbxTipo.SelectedIndex == 0 && cbxGrupo.Text.Trim().Length == 0)
             {
-                MessageBox.Show(@"Por favor, seleccione el grupo al que desea general rol de pago!", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                KryptonMessageBox.Show(@"Por favor, seleccione el grupo al que desea general rol de pago!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
                 return;
             }
 
             if (dgvDetallesRol.RowCount != 0)
-                if (MessageBox.Show(@"Ya se generó la nómina de personal, si acepta se volverá a cargar con los valores por defecto para dicha nómina, perdiendo los cambios que ha realizado hasta el momento. Quiere cargar de nuevo los datos?",
-                        "MENSAJE DELL SISTEMA", MessageBoxButtons.YesNo, MessageBoxIcon.Question) !=
+                if (KryptonMessageBox.Show(@"Ya se generó la nómina de personal, si acepta se volverá a cargar con los valores por defecto para dicha nómina, perdiendo los cambios que ha realizado hasta el momento. Quiere cargar de nuevo los datos?",
+                        "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) !=
                     DialogResult.Yes) return;
 
             dtpMesAnio.Enabled = false;
@@ -2540,8 +2540,8 @@ namespace SysCisepro3.TalentoHumano
             if (dgvDetallesRol.SelectedRows[0].Cells[1].Value == null || dgvDetallesRol.SelectedRows[0].Cells[1].Value.ToString().Trim().Length == 0) return;
             if (Convert.ToInt32(dgvDetallesRol.SelectedRows[0].Cells[1].Value) == 0) return;
 
-            if (MessageBox.Show(@"Seguro que desea quitar este registro", "MENSAJE DELL SISTEMA", MessageBoxButtons.YesNo,
-                    MessageBoxIcon.Question) != DialogResult.Yes) return;
+            if (KryptonMessageBox.Show(@"Seguro que desea quitar este registro", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.YesNo,
+                    KryptonMessageBoxIcon.Question) != DialogResult.Yes) return;
 
             var i = dgvDetallesRol.SelectedRows[0].Index;
             var n = Convert.ToInt32(dgvDetallesRol.SelectedRows[0].Cells[2].Value);
@@ -2583,14 +2583,14 @@ namespace SysCisepro3.TalentoHumano
 
             if ((dgvInformePago.CurrentRow.Cells[5].Tag + "").Trim().Length == 0)
             {
-                if ((MessageBox.Show(@"Seguro que desa marcar a " + dgvInformePago.CurrentRow.Cells[5].Value + @" como retenido?", "MENSAJE DELL SISTEMA", MessageBoxButtons.YesNo, MessageBoxIcon.Question) != DialogResult.Yes))
+                if ((KryptonMessageBox.Show(@"Seguro que desa marcar a " + dgvInformePago.CurrentRow.Cells[5].Value + @" como retenido?", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) != DialogResult.Yes))
                     return;
                 dgvInformePago.CurrentRow.Cells[5].Tag = "R";
                 dgvInformePago.CurrentRow.Cells[5].Style.BackColor = Color.DarkOrange;
             }
             else
             {
-                if ((MessageBox.Show(dgvInformePago.CurrentRow.Cells[5].Value + @" consta como retenido, desea marcarlo como habilitado para informe de pago?", "MENSAJE DELL SISTEMA", MessageBoxButtons.YesNo, MessageBoxIcon.Question) != DialogResult.Yes))
+                if ((KryptonMessageBox.Show(dgvInformePago.CurrentRow.Cells[5].Value + @" consta como retenido, desea marcarlo como habilitado para informe de pago?", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) != DialogResult.Yes))
                     return;
                 dgvInformePago.CurrentRow.Cells[5].Style.BackColor = dgvInformePago.CurrentRow.Cells[0].Style.BackColor;
                 dgvInformePago.CurrentRow.Cells[5].Tag = null;
@@ -2614,7 +2614,7 @@ namespace SysCisepro3.TalentoHumano
         {
             if (cbxQuincena.SelectedIndex == 0)
             {
-                MessageBox.Show(@"INGRESOS / DESCUENTOS no está habilitado en los pagos de quincena!!", "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                KryptonMessageBox.Show(@"INGRESOS / DESCUENTOS no está habilitado en los pagos de quincena!!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
                 return;
             }
 
@@ -2691,7 +2691,7 @@ namespace SysCisepro3.TalentoHumano
             var bancos = _objBancos.SeleccionarRegistrosBancosRolesDict(TipoCon);
             if (bancos.Count == 0)
             {
-                MessageBox.Show(@"No se ha cargado la información de los bancos. Por favor, contácte al administrador!", "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                KryptonMessageBox.Show(@"No se ha cargado la información de los bancos. Por favor, contácte al administrador!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
                 return;
             }
 
@@ -2834,7 +2834,7 @@ namespace SysCisepro3.TalentoHumano
             if (_rep)
             { 
                 var cad = _cuentas.Where(cuenta => cuenta.Contains("|")).Aggregate(string.Empty, (current, cuenta) => current + (cuenta + "\n"));
-                MessageBox.Show(@"Las siguientes cuentas están repetidas!!\n" + cad, "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                KryptonMessageBox.Show(@"Las siguientes cuentas están repetidas!!\n" + cad, "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Warning);
             }
 
             btnRetener.Enabled = true;
@@ -2847,13 +2847,13 @@ namespace SysCisepro3.TalentoHumano
         {
             if (_rep)
             {
-                MessageBox.Show(@"NO SE PUEDE EXPORTAR DEBIDO A QUE EXISTEN CUENTAS REPETIDAS! POR FAVOR, REALICE LA VERIFICACIÓN DE LAS CUENTAS", "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                KryptonMessageBox.Show(@"NO SE PUEDE EXPORTAR DEBIDO A QUE EXISTEN CUENTAS REPETIDAS! POR FAVOR, REALICE LA VERIFICACIÓN DE LAS CUENTAS", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
                 return;
             }
 
             if (dgvInformePago.RowCount == 0)
             {
-                MessageBox.Show(@"NO HAY DATOS PARA EXPORTAR!", "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                KryptonMessageBox.Show(@"NO HAY DATOS PARA EXPORTAR!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
                 return;
             }
 
@@ -2918,11 +2918,11 @@ namespace SysCisepro3.TalentoHumano
 
                 }
                 objWriter.Close();
-                MessageBox.Show(@"Archivo generado correctamente", "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                KryptonMessageBox.Show(@"Archivo generado correctamente", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
             }
             catch
             {
-                MessageBox.Show(@"HUBO UN PROBLEMA AL EXPORTAR DATOS!", "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                KryptonMessageBox.Show(@"HUBO UN PROBLEMA AL EXPORTAR DATOS!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error);
             }
         }
 
@@ -2930,12 +2930,12 @@ namespace SysCisepro3.TalentoHumano
         {
             if (_rep)
             {
-                MessageBox.Show(@"NO SE PUEDE EXPORTAR DEBIDO A QUE EXISTEN CUENTAS REPETIDAS! POR FAVOR, REALICE LA VERIFICACIÓN DE LAS CUENTAS", "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                KryptonMessageBox.Show(@"NO SE PUEDE EXPORTAR DEBIDO A QUE EXISTEN CUENTAS REPETIDAS! POR FAVOR, REALICE LA VERIFICACIÓN DE LAS CUENTAS", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
                 return;
             }
             if (dgvInformePago.RowCount == 0)
             {
-                MessageBox.Show(@"NO HAY DATOS PARA EXPORTAR!", "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                KryptonMessageBox.Show(@"NO HAY DATOS PARA EXPORTAR!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
                 return;
             }
 
@@ -2994,11 +2994,11 @@ namespace SysCisepro3.TalentoHumano
                         (TipoCon == TipoConexion.Cisepro ? "00652" : TipoCon == TipoConexion.Seportpac ? "05839" : string.Empty));
                 }
                 objWriter.Close();
-                MessageBox.Show(@"Archivo generado correctamente", "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                KryptonMessageBox.Show(@"Archivo generado correctamente", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
             }
             catch
             {
-                MessageBox.Show(@"HUBO UN PROBLEMA AL EXPORTAR DATOS!", "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                KryptonMessageBox.Show(@"HUBO UN PROBLEMA AL EXPORTAR DATOS!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error);
             }
         }
 
@@ -3006,13 +3006,13 @@ namespace SysCisepro3.TalentoHumano
         {
             if (_rep)
             {
-                MessageBox.Show(@"NO SE PUEDE EXPORTAR DEBIDO A QUE EXISTEN CUENTAS REPETIDAS! POR FAVOR, REALICE LA VERIFICACIÓN DE LAS CUENTAS", "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                KryptonMessageBox.Show(@"NO SE PUEDE EXPORTAR DEBIDO A QUE EXISTEN CUENTAS REPETIDAS! POR FAVOR, REALICE LA VERIFICACIÓN DE LAS CUENTAS", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
                 return;
             }
 
             if (dgvInformePago.RowCount == 0)
             {
-                MessageBox.Show(@"NO HAY DATOS PARA EXPORTAR!", "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                KryptonMessageBox.Show(@"NO HAY DATOS PARA EXPORTAR!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
                 return;
             }
 
@@ -3066,11 +3066,11 @@ namespace SysCisepro3.TalentoHumano
                         );
                 }
                 objWriter.Close();
-                MessageBox.Show(@"Archivo generado correctamente", "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                KryptonMessageBox.Show(@"Archivo generado correctamente", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
             }
             catch
             {
-                MessageBox.Show(@"HUBO UN PROBLEMA AL EXPORTAR DATOS!", "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                KryptonMessageBox.Show(@"HUBO UN PROBLEMA AL EXPORTAR DATOS!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error);
             }
         }
 
@@ -3078,7 +3078,7 @@ namespace SysCisepro3.TalentoHumano
         {
             if (dgvDetallesRol.RowCount == 0)
             {
-                MessageBox.Show(@"NO HAY DATOS PARA EXPORTAR!", "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                KryptonMessageBox.Show(@"NO HAY DATOS PARA EXPORTAR!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
                 return;
             }
 
@@ -3192,11 +3192,11 @@ namespace SysCisepro3.TalentoHumano
                 app.DisplayAlerts = false;
                 app.Visible = true;
                 workbook.SaveAs(sfd.FileName, XlFileFormat.xlWorkbookNormal, Type.Missing, Type.Missing, Type.Missing, Type.Missing, XlSaveAsAccessMode.xlExclusive, Type.Missing, Type.Missing, Type.Missing, Type.Missing);
-                MessageBox.Show(@"ROL DE PAGO generado correctamente!", "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                KryptonMessageBox.Show(@"ROL DE PAGO generado correctamente!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
             }
             catch
             {
-                MessageBox.Show(@"HUBO UN PROBLEMA AL EXPORTAR DATOS!", "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                KryptonMessageBox.Show(@"HUBO UN PROBLEMA AL EXPORTAR DATOS!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error);
             }
         }
 
@@ -3204,7 +3204,7 @@ namespace SysCisepro3.TalentoHumano
         {
             if (dgvInformePago.RowCount == 0)
             {
-                MessageBox.Show(@"NO HAY DATOS PARA EXPORTAR!", "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                KryptonMessageBox.Show(@"NO HAY DATOS PARA EXPORTAR!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
                 return;
             }
 
@@ -3763,12 +3763,12 @@ namespace SysCisepro3.TalentoHumano
                 app.DisplayAlerts = false;
                 app.Visible = true;
                 workbook.SaveAs(sfd.FileName, XlFileFormat.xlWorkbookNormal, Type.Missing, Type.Missing, Type.Missing, Type.Missing, XlSaveAsAccessMode.xlExclusive, Type.Missing, Type.Missing, Type.Missing, Type.Missing);
-                MessageBox.Show(@"INFORME DE PAGO generado correctamente!", "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                KryptonMessageBox.Show(@"INFORME DE PAGO generado correctamente!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
             }
             catch
             {
-                MessageBox.Show(@"HUBO UN PROBLEMA AL GENERAR INFORME DE PAGO!", "MENSAJE DELL SISTEMA",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                KryptonMessageBox.Show(@"HUBO UN PROBLEMA AL GENERAR INFORME DE PAGO!", "MENSAJE DEL SISTEMA",
+                    KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error);
             }
         }
 
@@ -3802,7 +3802,7 @@ namespace SysCisepro3.TalentoHumano
         {
             if (!cbxGrupo.Text.Trim().Equals("GENERAL"))
             {
-                MessageBox.Show(@"ESTA OPCIÓN SÓLO ES VÁLIDA PARA ROL DE PAGOS GENERAL!", "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                KryptonMessageBox.Show(@"ESTA OPCIÓN SÓLO ES VÁLIDA PARA ROL DE PAGOS GENERAL!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error);
                 return;
             }
             if (dgvDetallesRol.CurrentRow == null) return;
@@ -3813,12 +3813,12 @@ namespace SysCisepro3.TalentoHumano
 
             if (dgvDetallesRol.SelectedRows[0].Cells[75].Value.ToString().Trim().Equals("0"))
             {
-                MessageBox.Show(@"ESTA OPCIÓN SÓLO ES VÁLIDA PARA REGISTROS DEL PERSONAL ACTIVO!", "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                KryptonMessageBox.Show(@"ESTA OPCIÓN SÓLO ES VÁLIDA PARA REGISTROS DEL PERSONAL ACTIVO!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error);
                 return;
             }
 
-            if (MessageBox.Show(@"Seguro que desea cambiar el puesto para: " + dgvDetallesRol.SelectedRows[0].Cells[5].Value + @"?", "MENSAJE DELL SISTEMA", MessageBoxButtons.YesNo,
-                    MessageBoxIcon.Question) != DialogResult.Yes) return;
+            if (KryptonMessageBox.Show(@"Seguro que desea cambiar el puesto para: " + dgvDetallesRol.SelectedRows[0].Cells[5].Value + @"?", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.YesNo,
+                    KryptonMessageBoxIcon.Question) != DialogResult.Yes) return;
 
             _frmBuscarPuestoTrabajo = new FrmBuscarPuestoTrabajo { Label3 = { Text = @"SELECCIONE EL PUESTO CORRESPONDIENTE" }, TipoCon = TipoCon };
             try
@@ -3872,8 +3872,8 @@ namespace SysCisepro3.TalentoHumano
             }
             catch
             {
-                MessageBox.Show(@"HUBO UN PROBLEMA AL CAMBIAR DE PUESTO!", "MENSAJE DELL SISTEMA",
-                      MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                KryptonMessageBox.Show(@"HUBO UN PROBLEMA AL CAMBIAR DE PUESTO!", "MENSAJE DEL SISTEMA",
+                      KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation);
             }
         }
 
@@ -3894,13 +3894,13 @@ namespace SysCisepro3.TalentoHumano
                 var ex = dgvDetallesRol.Rows.Cast<DataGridViewRow>().Any(row => (row.Cells[1].Value + "").Trim().Equals(_frmAgregarPersonalRol.txtIdPersonal.Text.Trim()));
                 if (ex)
                 {
-                    MessageBox.Show(_frmAgregarPersonalRol.txtPersonal.Text.Trim() + @" YA SE ENCUENTRA AGREGADO EN EL ROL DE PAGO!", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    KryptonMessageBox.Show(_frmAgregarPersonalRol.txtPersonal.Text.Trim() + @" YA SE ENCUENTRA AGREGADO EN EL ROL DE PAGO!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation);
                     return;
                 }
 
                 if (cbxQuincena.SelectedIndex == 0 && _frmAgregarPersonalRol.cbxEstado.SelectedIndex == 1)
                 {
-                    MessageBox.Show("NO SE PERMITE 'RETIRADOS' EN ROL QUINCENA, POR FAVOR AGRÉGUELO COMO 'ACTIVO' O CONTACTE AL ADMINISTRADOR!", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    KryptonMessageBox.Show("NO SE PERMITE 'RETIRADOS' EN ROL QUINCENA, POR FAVOR AGRÉGUELO COMO 'ACTIVO' O CONTACTE AL ADMINISTRADOR!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation);
                     return;
                 }
                  
@@ -4086,13 +4086,13 @@ namespace SysCisepro3.TalentoHumano
                         _cantRol += 1;
                         Label14.Text = @"DETALLES GENERALES ROL DE PAGO - " + _cantRol + @" REGISTRO(S) EN TOTAL";
                     }
-                    else MessageBox.Show(@"HUBO UN PROBLEMA AL AGREGAR FILA!", "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    else KryptonMessageBox.Show(@"HUBO UN PROBLEMA AL AGREGAR FILA!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation);
                 }
-                else MessageBox.Show(@"HUBO UN PROBLEMA AL CARGAR DATOS PERSONALES (CONTRATO / CUENTA BANCARIA)!", "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                else KryptonMessageBox.Show(@"HUBO UN PROBLEMA AL CARGAR DATOS PERSONALES (CONTRATO / CUENTA BANCARIA)!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation);
             }
             catch
             {
-                MessageBox.Show(@"HUBO UN PROBLEMA AL REALIZAR ESTA ACCIÓN!!", "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                KryptonMessageBox.Show(@"HUBO UN PROBLEMA AL REALIZAR ESTA ACCIÓN!!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation);
             }
         }
 
@@ -4133,7 +4133,7 @@ namespace SysCisepro3.TalentoHumano
             }
             catch
             {
-                MessageBox.Show(@"HUBO UN PROBLEMA AL MOSTRAR DETALLE DE ASISTENCIA!!", "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                KryptonMessageBox.Show(@"HUBO UN PROBLEMA AL MOSTRAR DETALLE DE ASISTENCIA!!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation);
             }
         }
 

@@ -137,28 +137,28 @@ namespace SysCisepro3.TalentoHumano
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show(@"Desea guardar el registro actual?",
-                   "MENSAJE DELL SISTEMA", MessageBoxButtons.YesNo, MessageBoxIcon.Question) !=
+            if (KryptonMessageBox.Show(@"Desea guardar el registro actual?",
+                   "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) !=
                DialogResult.Yes) return;
 
             if (dataGridView2.RowCount == 0)
             {
-                MessageBox.Show(@"Debe definir los detalles y días de vacaciones para guardar!",
-                    "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                KryptonMessageBox.Show(@"Debe definir los detalles y días de vacaciones para guardar!",
+                    "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
                 return;
             }
 
             if (txtIdPersonal.Text.Trim().Length == 0 || txtSitio.Text.Trim().Length == 0 || txtDias.Text.Trim().Length == 0)
             {
-                MessageBox.Show(@"Debe definir los datos y días de vacaciones para guardar!",
-                    "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                KryptonMessageBox.Show(@"Debe definir los datos y días de vacaciones para guardar!",
+                    "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
                 return;
             }
 
             if (dtpDesde.Value > dtpHasta.Value)
             {
-                MessageBox.Show(@"La fecha SALIDA no puede ser mayor que la fecha de ENTRADA!",
-                    "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                KryptonMessageBox.Show(@"La fecha SALIDA no puede ser mayor que la fecha de ENTRADA!",
+                    "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
                 return;
             }
 
@@ -235,7 +235,7 @@ namespace SysCisepro3.TalentoHumano
 
                 LlenarDetalleVacaciones(Convert.ToInt32(txtIdPersonal.Text.Trim()));
             }
-            MessageBox.Show((string)res[1], "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            KryptonMessageBox.Show((string)res[1], "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -429,7 +429,7 @@ namespace SysCisepro3.TalentoHumano
 
                     txtNumDoc.Focus();
                 //}
-                //else MessageBox.Show(@"Aún no se ha cumplido el tiempo mínimo para aplicar VACACIONES!!", "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //else KryptonMessageBox.Show(@"Aún no se ha cumplido el tiempo mínimo para aplicar VACACIONES!!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
             }
             catch
             {
@@ -470,7 +470,7 @@ namespace SysCisepro3.TalentoHumano
                 txtDias.Text = @"0";
                 txtPendientes.Text = @"0";
                 btnAgregar.Enabled = false;
-                MessageBox.Show(@"La fecha SALIDA no puede ser mayor que la fecha de ENTRADA!", "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                KryptonMessageBox.Show(@"La fecha SALIDA no puede ser mayor que la fecha de ENTRADA!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
                 return;
             }
 
@@ -479,7 +479,7 @@ namespace SysCisepro3.TalentoHumano
                 txtDias.Text = @"0";
                 txtPendientes.Text = @"0";
                 btnAgregar.Enabled = false;
-                MessageBox.Show(@"El número de días no debe ser mayor a los días pendientes para el período seleccionado!", "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                KryptonMessageBox.Show(@"El número de días no debe ser mayor a los días pendientes para el período seleccionado!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
                 return;
             }
 
@@ -503,13 +503,13 @@ namespace SysCisepro3.TalentoHumano
 
             if (ex)
             {
-                MessageBox.Show(@"El detalle ya fue agregado a la lista!", "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                KryptonMessageBox.Show(@"El detalle ya fue agregado a la lista!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
                 return;
             }
 
             if (dtpDesde.Value == dtpHasta.Value)
             {
-                MessageBox.Show(@"Verifique la fecha de SALIDA - ENTRADA!", "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                KryptonMessageBox.Show(@"Verifique la fecha de SALIDA - ENTRADA!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
                 return;
             }
 

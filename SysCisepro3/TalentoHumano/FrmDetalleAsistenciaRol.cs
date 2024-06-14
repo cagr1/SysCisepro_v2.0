@@ -145,7 +145,7 @@ namespace SysCisepro3.TalentoHumano
             catch 
             {
                 ListView3.Items.Clear();
-                MessageBox.Show(@"HUBO UN PROBLEMA AL MOSTRAR DETALLE DE ASISTENCIA!!", "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                KryptonMessageBox.Show(@"HUBO UN PROBLEMA AL MOSTRAR DETALLE DE ASISTENCIA!!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation);
             }
         }
 
@@ -229,8 +229,8 @@ namespace SysCisepro3.TalentoHumano
             }
             catch (Exception)
             {
-                MessageBox.Show(@"Error al generar solicitud. Por favor, contácte al administrador!",
-                    "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                KryptonMessageBox.Show(@"Error al generar solicitud. Por favor, contácte al administrador!",
+                    "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
             }
         }
 
@@ -316,8 +316,8 @@ namespace SysCisepro3.TalentoHumano
             }
             catch (Exception)
             {
-                MessageBox.Show(@"Error al generar solicitud. Por favor, contácte al administrador!",
-                    "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                KryptonMessageBox.Show(@"Error al generar solicitud. Por favor, contácte al administrador!",
+                    "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
             }
         }
     

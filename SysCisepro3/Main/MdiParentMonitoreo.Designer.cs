@@ -212,8 +212,9 @@
             this.toolStripDropDownButton1.AutoSize = false;
             this.toolStripDropDownButton1.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStripDropDownButton1.ForeColor = System.Drawing.Color.White;
-            this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
+            this.toolStripDropDownButton1.Image = global::SysCisepro3.Properties.Resources.location_on_24dp_FILL0_wght400_GRAD0_opsz24;
             this.toolStripDropDownButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.toolStripDropDownButton1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
             this.toolStripDropDownButton1.ShowDropDownArrow = false;
@@ -227,8 +228,9 @@
             this.toolStripDropDownButton2.AutoSize = false;
             this.toolStripDropDownButton2.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStripDropDownButton2.ForeColor = System.Drawing.Color.White;
-            this.toolStripDropDownButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton2.Image")));
+            this.toolStripDropDownButton2.Image = global::SysCisepro3.Properties.Resources.map_24dp_FILL0_wght400_GRAD0_opsz24;
             this.toolStripDropDownButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.toolStripDropDownButton2.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripDropDownButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton2.Name = "toolStripDropDownButton2";
             this.toolStripDropDownButton2.ShowDropDownArrow = false;
@@ -242,8 +244,9 @@
             this.toolStripDropDownButton3.AutoSize = false;
             this.toolStripDropDownButton3.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStripDropDownButton3.ForeColor = System.Drawing.Color.White;
-            this.toolStripDropDownButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton3.Image")));
+            this.toolStripDropDownButton3.Image = global::SysCisepro3.Properties.Resources.edit_calendar_24dp_FILL0_wght400_GRAD0_opsz24__2_;
             this.toolStripDropDownButton3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.toolStripDropDownButton3.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripDropDownButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton3.Name = "toolStripDropDownButton3";
             this.toolStripDropDownButton3.ShowDropDownArrow = false;
@@ -257,8 +260,9 @@
             this.toolStripDropDownButton4.AutoSize = false;
             this.toolStripDropDownButton4.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStripDropDownButton4.ForeColor = System.Drawing.Color.White;
-            this.toolStripDropDownButton4.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton4.Image")));
+            this.toolStripDropDownButton4.Image = global::SysCisepro3.Properties.Resources.checkbook_20dp_FILL0_wght400_GRAD0_opsz20__2_;
             this.toolStripDropDownButton4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.toolStripDropDownButton4.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripDropDownButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton4.Name = "toolStripDropDownButton4";
             this.toolStripDropDownButton4.ShowDropDownArrow = false;
@@ -272,8 +276,9 @@
             this.toolStripDropDownButton5.AutoSize = false;
             this.toolStripDropDownButton5.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStripDropDownButton5.ForeColor = System.Drawing.Color.White;
-            this.toolStripDropDownButton5.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton5.Image")));
+            this.toolStripDropDownButton5.Image = global::SysCisepro3.Properties.Resources.rule_folder_24dp_FILL0_wght400_GRAD0_opsz24__2_;
             this.toolStripDropDownButton5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.toolStripDropDownButton5.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripDropDownButton5.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton5.Name = "toolStripDropDownButton5";
             this.toolStripDropDownButton5.ShowDropDownArrow = false;
@@ -287,8 +292,9 @@
             this.toolStripDropDownButton7.AutoSize = false;
             this.toolStripDropDownButton7.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStripDropDownButton7.ForeColor = System.Drawing.Color.White;
-            this.toolStripDropDownButton7.Image = global::SysCisepro3.Properties.Resources.retener_list_icon;
+            this.toolStripDropDownButton7.Image = global::SysCisepro3.Properties.Resources.calendar_month_24dp_FILL0_wght400_GRAD0_opsz24__2_;
             this.toolStripDropDownButton7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.toolStripDropDownButton7.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripDropDownButton7.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton7.Name = "toolStripDropDownButton7";
             this.toolStripDropDownButton7.ShowDropDownArrow = false;
@@ -302,8 +308,9 @@
             this.toolStripDropDownButton6.AutoSize = false;
             this.toolStripDropDownButton6.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStripDropDownButton6.ForeColor = System.Drawing.Color.White;
-            this.toolStripDropDownButton6.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton6.Image")));
+            this.toolStripDropDownButton6.Image = global::SysCisepro3.Properties.Resources.rule_folder_24dp_FILL0_wght400_GRAD0_opsz24__2_;
             this.toolStripDropDownButton6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.toolStripDropDownButton6.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripDropDownButton6.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton6.Name = "toolStripDropDownButton6";
             this.toolStripDropDownButton6.ShowDropDownArrow = false;
@@ -322,8 +329,9 @@
             this.rEPORTEToolStripMenuItem});
             this.toolStripDropDownButton15.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStripDropDownButton15.ForeColor = System.Drawing.Color.White;
-            this.toolStripDropDownButton15.Image = global::SysCisepro3.Properties.Resources.chanu;
+            this.toolStripDropDownButton15.Image = global::SysCisepro3.Properties.Resources.description_24dp_FILL0_wght400_GRAD0_opsz24__2_;
             this.toolStripDropDownButton15.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.toolStripDropDownButton15.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripDropDownButton15.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton15.Name = "toolStripDropDownButton15";
             this.toolStripDropDownButton15.ShowDropDownArrow = false;
@@ -333,30 +341,33 @@
             // 
             // iNGRESOSSALIDASToolStripMenuItem
             // 
-            this.iNGRESOSSALIDASToolStripMenuItem.Image = global::SysCisepro3.Properties.Resources.report;
+            this.iNGRESOSSALIDASToolStripMenuItem.Image = global::SysCisepro3.Properties.Resources.description_24dp_FILL0_wght400_GRAD0_opsz24__2_;
+            this.iNGRESOSSALIDASToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.iNGRESOSSALIDASToolStripMenuItem.Name = "iNGRESOSSALIDASToolStripMenuItem";
-            this.iNGRESOSSALIDASToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
+            this.iNGRESOSSALIDASToolStripMenuItem.Size = new System.Drawing.Size(222, 30);
             this.iNGRESOSSALIDASToolStripMenuItem.Text = "INGRESOS / SALIDAS";
             this.iNGRESOSSALIDASToolStripMenuItem.Click += new System.EventHandler(this.iNGRESOSSALIDASToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(202, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(219, 6);
             // 
             // pENDIENTESDEVACACIONESToolStripMenuItem
             // 
-            this.pENDIENTESDEVACACIONESToolStripMenuItem.Image = global::SysCisepro3.Properties.Resources.row_delete_icon;
+            this.pENDIENTESDEVACACIONESToolStripMenuItem.Image = global::SysCisepro3.Properties.Resources.description_24dp_FILL0_wght400_GRAD0_opsz24__2_;
+            this.pENDIENTESDEVACACIONESToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.pENDIENTESDEVACACIONESToolStripMenuItem.Name = "pENDIENTESDEVACACIONESToolStripMenuItem";
-            this.pENDIENTESDEVACACIONESToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
+            this.pENDIENTESDEVACACIONESToolStripMenuItem.Size = new System.Drawing.Size(222, 30);
             this.pENDIENTESDEVACACIONESToolStripMenuItem.Text = "PENDIENTES VACACIONES";
             this.pENDIENTESDEVACACIONESToolStripMenuItem.Click += new System.EventHandler(this.pENDIENTESDEVACACIONESToolStripMenuItem_Click);
             // 
             // rEPORTEToolStripMenuItem
             // 
-            this.rEPORTEToolStripMenuItem.Image = global::SysCisepro3.Properties.Resources.report;
+            this.rEPORTEToolStripMenuItem.Image = global::SysCisepro3.Properties.Resources.description_24dp_FILL0_wght400_GRAD0_opsz24__2_;
+            this.rEPORTEToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.rEPORTEToolStripMenuItem.Name = "rEPORTEToolStripMenuItem";
-            this.rEPORTEToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
+            this.rEPORTEToolStripMenuItem.Size = new System.Drawing.Size(222, 30);
             this.rEPORTEToolStripMenuItem.Text = "REPORTE GENERAL";
             this.rEPORTEToolStripMenuItem.Click += new System.EventHandler(this.rEPORTEToolStripMenuItem_Click);
             // 
@@ -387,8 +398,9 @@
             this.toolStripDropDownButton8.AutoSize = false;
             this.toolStripDropDownButton8.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStripDropDownButton8.ForeColor = System.Drawing.Color.White;
-            this.toolStripDropDownButton8.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton8.Image")));
+            this.toolStripDropDownButton8.Image = global::SysCisepro3.Properties.Resources.location_on_24dp_FILL0_wght400_GRAD0_opsz24;
             this.toolStripDropDownButton8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.toolStripDropDownButton8.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripDropDownButton8.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton8.Name = "toolStripDropDownButton8";
             this.toolStripDropDownButton8.ShowDropDownArrow = false;
@@ -402,8 +414,9 @@
             this.toolStripDropDownButton9.AutoSize = false;
             this.toolStripDropDownButton9.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStripDropDownButton9.ForeColor = System.Drawing.Color.White;
-            this.toolStripDropDownButton9.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton9.Image")));
+            this.toolStripDropDownButton9.Image = global::SysCisepro3.Properties.Resources.map_24dp_FILL0_wght400_GRAD0_opsz24;
             this.toolStripDropDownButton9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.toolStripDropDownButton9.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripDropDownButton9.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton9.Name = "toolStripDropDownButton9";
             this.toolStripDropDownButton9.ShowDropDownArrow = false;
@@ -417,8 +430,9 @@
             this.toolStripDropDownButton10.AutoSize = false;
             this.toolStripDropDownButton10.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStripDropDownButton10.ForeColor = System.Drawing.Color.White;
-            this.toolStripDropDownButton10.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton10.Image")));
+            this.toolStripDropDownButton10.Image = global::SysCisepro3.Properties.Resources.edit_calendar_24dp_FILL0_wght400_GRAD0_opsz24__2_;
             this.toolStripDropDownButton10.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.toolStripDropDownButton10.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripDropDownButton10.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton10.Name = "toolStripDropDownButton10";
             this.toolStripDropDownButton10.ShowDropDownArrow = false;
@@ -432,8 +446,9 @@
             this.toolStripDropDownButton11.AutoSize = false;
             this.toolStripDropDownButton11.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStripDropDownButton11.ForeColor = System.Drawing.Color.White;
-            this.toolStripDropDownButton11.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton11.Image")));
+            this.toolStripDropDownButton11.Image = global::SysCisepro3.Properties.Resources.checkbook_20dp_FILL0_wght400_GRAD0_opsz20__2_;
             this.toolStripDropDownButton11.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.toolStripDropDownButton11.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripDropDownButton11.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton11.Name = "toolStripDropDownButton11";
             this.toolStripDropDownButton11.ShowDropDownArrow = false;
@@ -447,8 +462,9 @@
             this.toolStripDropDownButton12.AutoSize = false;
             this.toolStripDropDownButton12.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStripDropDownButton12.ForeColor = System.Drawing.Color.White;
-            this.toolStripDropDownButton12.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton12.Image")));
+            this.toolStripDropDownButton12.Image = global::SysCisepro3.Properties.Resources.rule_folder_24dp_FILL0_wght400_GRAD0_opsz24__2_;
             this.toolStripDropDownButton12.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.toolStripDropDownButton12.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripDropDownButton12.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton12.Name = "toolStripDropDownButton12";
             this.toolStripDropDownButton12.ShowDropDownArrow = false;
@@ -462,8 +478,9 @@
             this.toolStripDropDownButton14.AutoSize = false;
             this.toolStripDropDownButton14.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStripDropDownButton14.ForeColor = System.Drawing.Color.White;
-            this.toolStripDropDownButton14.Image = global::SysCisepro3.Properties.Resources.retener_list_icon;
+            this.toolStripDropDownButton14.Image = global::SysCisepro3.Properties.Resources.calendar_month_24dp_FILL0_wght400_GRAD0_opsz24__2_;
             this.toolStripDropDownButton14.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.toolStripDropDownButton14.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripDropDownButton14.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton14.Name = "toolStripDropDownButton14";
             this.toolStripDropDownButton14.ShowDropDownArrow = false;
@@ -477,8 +494,9 @@
             this.toolStripDropDownButton13.AutoSize = false;
             this.toolStripDropDownButton13.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStripDropDownButton13.ForeColor = System.Drawing.Color.White;
-            this.toolStripDropDownButton13.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton13.Image")));
+            this.toolStripDropDownButton13.Image = global::SysCisepro3.Properties.Resources.rule_folder_24dp_FILL0_wght400_GRAD0_opsz24__2_;
             this.toolStripDropDownButton13.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.toolStripDropDownButton13.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripDropDownButton13.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton13.Name = "toolStripDropDownButton13";
             this.toolStripDropDownButton13.ShowDropDownArrow = false;
@@ -496,8 +514,9 @@
             this.pENDIENTESVACACIONESToolStripMenuItem});
             this.toolStripDropDownButton16.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStripDropDownButton16.ForeColor = System.Drawing.Color.White;
-            this.toolStripDropDownButton16.Image = global::SysCisepro3.Properties.Resources.chanu;
+            this.toolStripDropDownButton16.Image = global::SysCisepro3.Properties.Resources.description_24dp_FILL0_wght400_GRAD0_opsz24__2_;
             this.toolStripDropDownButton16.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.toolStripDropDownButton16.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripDropDownButton16.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton16.Name = "toolStripDropDownButton16";
             this.toolStripDropDownButton16.ShowDropDownArrow = false;
@@ -507,22 +526,24 @@
             // 
             // iNGRESOSSALIDASToolStripMenuItem1
             // 
-            this.iNGRESOSSALIDASToolStripMenuItem1.Image = global::SysCisepro3.Properties.Resources.report;
+            this.iNGRESOSSALIDASToolStripMenuItem1.Image = global::SysCisepro3.Properties.Resources.description_24dp_FILL0_wght400_GRAD0_opsz24__2_;
+            this.iNGRESOSSALIDASToolStripMenuItem1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.iNGRESOSSALIDASToolStripMenuItem1.Name = "iNGRESOSSALIDASToolStripMenuItem1";
-            this.iNGRESOSSALIDASToolStripMenuItem1.Size = new System.Drawing.Size(205, 22);
+            this.iNGRESOSSALIDASToolStripMenuItem1.Size = new System.Drawing.Size(222, 30);
             this.iNGRESOSSALIDASToolStripMenuItem1.Text = "INGRESOS / SALIDAS ";
             this.iNGRESOSSALIDASToolStripMenuItem1.Click += new System.EventHandler(this.iNGRESOSSALIDASToolStripMenuItem1_Click);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(202, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(219, 6);
             // 
             // pENDIENTESVACACIONESToolStripMenuItem
             // 
-            this.pENDIENTESVACACIONESToolStripMenuItem.Image = global::SysCisepro3.Properties.Resources.row_delete_icon;
+            this.pENDIENTESVACACIONESToolStripMenuItem.Image = global::SysCisepro3.Properties.Resources.description_24dp_FILL0_wght400_GRAD0_opsz24__2_;
+            this.pENDIENTESVACACIONESToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.pENDIENTESVACACIONESToolStripMenuItem.Name = "pENDIENTESVACACIONESToolStripMenuItem";
-            this.pENDIENTESVACACIONESToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
+            this.pENDIENTESVACACIONESToolStripMenuItem.Size = new System.Drawing.Size(222, 30);
             this.pENDIENTESVACACIONESToolStripMenuItem.Text = "PENDIENTES VACACIONES";
             this.pENDIENTESVACACIONESToolStripMenuItem.Click += new System.EventHandler(this.pENDIENTESVACACIONESToolStripMenuItem_Click);
             // 
@@ -564,7 +585,7 @@
             this.StateActive.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | Krypton.Toolkit.PaletteDrawBorders.Left) 
             | Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.StateActive.Border.Rounding = 20F;
+            this.StateActive.Border.Rounding = 10F;
             this.StateCommon.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | Krypton.Toolkit.PaletteDrawBorders.Left) 
             | Krypton.Toolkit.PaletteDrawBorders.Right)));

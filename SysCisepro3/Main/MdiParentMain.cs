@@ -101,6 +101,8 @@ namespace SysCisepro3.Main
             _objDetalleVacaciones = new ClassDetalleVacaciones();
             _objChaleco = new ClassChaleco();
             ObjPermiso = new ClassPermisosUsuario();
+            this.BackgroundImage = Resources.Your_paragraph_text;
+            this.BackgroundImageLayout = ImageLayout.Stretch;
         }
 
         private void DefinirTipoSistema()
@@ -128,6 +130,14 @@ namespace SysCisepro3.Main
             toolStripStatusLabel6.ForeColor = ValidationForms.GetColorSistema(TipoCon);
             lblFecha.ForeColor = ValidationForms.GetColorSistema(TipoCon);
             Text = Validaciones.NombreCompany(TipoCon) + @" - MENÚ PRINICIPAL";
+            statusStrip.BackColor = ValidationForms.GetColorSistema(TipoCon);
+            toolStripStatusLabel1.ForeColor = Color.White;
+            lblVersion.ForeColor = Color.White;
+            toolStripStatusLabel4.ForeColor = Color.White;
+            lblUsuario.ForeColor = Color.White;
+            toolStripStatusLabel6.ForeColor = Color.White;
+            lblFecha.ForeColor = Color.White;
+
             switch (TipoCon)
             {
                 case TipoConexion.Seportpac:
@@ -662,10 +672,10 @@ namespace SysCisepro3.Main
             // CARGAR ICONO Y DESIEÑO SEGUN SISTEMA
             DefinirTipoSistema();             
             timer1.Start();
+            
+            //Image image = Resources.Your_paragraph_text__2_;
+            // AdjustImageToFit(pictureBox1, image);
 
-            
-            
-            
 
         }
 
@@ -1517,11 +1527,14 @@ namespace SysCisepro3.Main
         }
         private void rOLDEPAGOSToolStripMenuItem_Click(object sender, EventArgs e)
         {
+           this.BringToFront();
             FrmRolPago.Instancia.MdiParent = this;
             FrmRolPago.TipoCon = TipoCon;
             FrmRolPago.Usuario = ObjUsuario;
             FrmRolPago.Instancia.Show();
             FrmRolPago.Instancia.BringToFront();
+            
+
         }
         private void toolStripMenuItem3_Click(object sender, EventArgs e)
         {
@@ -1963,7 +1976,41 @@ namespace SysCisepro3.Main
             FrmRoles.Instancia.BringToFront();
         }
 
-       
+        private void AdjustImageToFit(PictureBox pbx, Image image)
+        {
+            pbx.BackgroundImageLayout = ImageLayout.None;
+            pbx.Paint += (sender, e) =>
+            {
+                PictureBox pb = sender as PictureBox;
+                e.Graphics.Clear(pb.BackColor);
+                if (image != null)
+                {
+                    // Calculate the aspect ratio
+                    float aspectRatio = (float)image.Width / image.Height;
+                    int newWidth, newHeight;
+
+                    // Determine new dimensions based on aspect ratio
+                    if (pb.Width / (float)pb.Height > aspectRatio)
+                    {
+                        newWidth = (int)(pb.Height * aspectRatio);
+                        newHeight = pb.Height;
+                    }
+                    else
+                    {
+                        newWidth = pb.Width;
+                        newHeight = (int)(pb.Width / aspectRatio);
+                    }
+
+                    // Calculate position to center the image
+                    int posX = (pb.Width - newWidth) / 2;
+                    int posY = (pb.Height - newHeight) / 2;
+
+                    e.Graphics.DrawImage(image, new Rectangle(posX, posY, newWidth, newHeight));
+                }
+            };
+        }
+
+
 
     }
 }

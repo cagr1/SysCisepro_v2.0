@@ -121,14 +121,14 @@ namespace SysCisepro3.Operaciones
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show(@"Desea guardar la orden técnica actual?",
-                   "MENSAJE DELL SISTEMA", MessageBoxButtons.YesNo, MessageBoxIcon.Question) !=
+            if (KryptonMessageBox.Show(@"Desea guardar la orden técnica actual?",
+                   "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) !=
                DialogResult.Yes) return;
 
             if (txtCiRuc.Text.Trim().Length == 0 || txtNombreSolicitante.Text.Trim().Length == 0 || txtClienteSolicitante.Text.Trim().Length == 0)
             {
-                MessageBox.Show(@"Debe definir los datos de la orden técnicapara guardar!",
-                    "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                KryptonMessageBox.Show(@"Debe definir los datos de la orden técnicapara guardar!",
+                    "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
                 return;
             }
 
@@ -188,14 +188,14 @@ namespace SysCisepro3.Operaciones
 
                 CargarMantenimientos();
             }
-            MessageBox.Show((string)res[1], "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            KryptonMessageBox.Show((string)res[1], "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
         }
 
         private void btnAnular_Click(object sender, EventArgs e)
         {
             if (dataGridView1.RowCount == 0) return;
             if (dataGridView1.CurrentRow == null) return;
-            if (MessageBox.Show(@"Desea anular la orden seleccioando?", "MENSAJE DELL SISTEMA", MessageBoxButtons.YesNo, MessageBoxIcon.Question) != DialogResult.Yes) return;
+            if (KryptonMessageBox.Show(@"Desea anular la orden seleccioando?", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) != DialogResult.Yes) return;
 
             _sqlCommands.Clear();
 
@@ -224,7 +224,7 @@ namespace SysCisepro3.Operaciones
                 txtFiltro.Clear();
                 CargarMantenimientos();
             }
-            MessageBox.Show((string)res[1], "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            KryptonMessageBox.Show((string)res[1], "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -292,7 +292,7 @@ namespace SysCisepro3.Operaciones
             catch (Exception ex)
             {
                 dataGridView1.Rows.Clear();
-                MessageBox.Show(@"Error al cargar ordenes: " + ex.Message, "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                KryptonMessageBox.Show(@"Error al cargar ordenes: " + ex.Message, "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
             }
         }
 
@@ -307,7 +307,7 @@ namespace SysCisepro3.Operaciones
             catch (Exception ex)
             {
                 dgvDetallesOrden.Rows.Clear();
-                MessageBox.Show(@"Error al cargar detalles orden: " + ex.Message, "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                KryptonMessageBox.Show(@"Error al cargar detalles orden: " + ex.Message, "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
             }
         }
 

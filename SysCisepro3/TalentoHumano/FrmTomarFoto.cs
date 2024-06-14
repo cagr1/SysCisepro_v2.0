@@ -72,7 +72,7 @@ namespace SysCisepro3.TalentoHumano
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, @"Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                KryptonMessageBox.Show(ex.Message, @"Error", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error);
             }
 
         }
@@ -110,7 +110,7 @@ namespace SysCisepro3.TalentoHumano
                 }
                 else
                 { 
-                MessageBox.Show("No se pudo cargar la imagen", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                KryptonMessageBox.Show("No se pudo cargar la imagen", "Error", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error);
                 }
 
 
@@ -148,7 +148,7 @@ namespace SysCisepro3.TalentoHumano
 
                 else
                 {
-                    MessageBox.Show("No se pudo cargar la imagen", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    KryptonMessageBox.Show("No se pudo cargar la imagen", "Error", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error);
                 }
                                 
                
@@ -256,7 +256,7 @@ namespace SysCisepro3.TalentoHumano
             }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(@"Surgio un Error, faltan elegir las coordenadas!", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    KryptonMessageBox.Show(@"Surgio un Error, faltan elegir las coordenadas!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
                 }
 
            
@@ -279,7 +279,7 @@ namespace SysCisepro3.TalentoHumano
             }
             catch
             {
-                MessageBox.Show(@"Surgio un Error, faltan elegir las coordenadas!", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                KryptonMessageBox.Show(@"Surgio un Error, faltan elegir las coordenadas!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
             }
         }
 
@@ -336,7 +336,7 @@ namespace SysCisepro3.TalentoHumano
 
             catch (Exception ex)
             {
-                MessageBox.Show("Error running Python script: " + ex.Message);
+                KryptonMessageBox.Show("Error running Python script: " + ex.Message);
             }
 
 
@@ -349,7 +349,7 @@ namespace SysCisepro3.TalentoHumano
 
             if (videoDevices.Count == 0)
             {
-                MessageBox.Show("No video devices found.");
+                KryptonMessageBox.Show("No video devices found.");
                 return;
             }
 

@@ -266,7 +266,7 @@ namespace SysCisepro3.TalentoHumano
             {
                 ListView1.Items.Clear();
                 dataGridView1.Rows.Clear();
-                MessageBox.Show(@"Error al cargar detalles: " + ex.Message, "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                KryptonMessageBox.Show(@"Error al cargar detalles: " + ex.Message, "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
             }
         }
 
@@ -417,8 +417,8 @@ namespace SysCisepro3.TalentoHumano
                 var msg = @"Está seguro que desea anular el registro seleccionado?";
                 if (chkAnual.Checked) msg = @"El descuento seleccionado corresponde a un débito anual. Está seguro que desea anular los descuentos registrados?";
 
-                if (MessageBox.Show(msg, @"MENSAJE DEL SISTEMA",
-                        MessageBoxButtons.YesNo, MessageBoxIcon.Question) != DialogResult.Yes) return;
+                if (KryptonMessageBox.Show(msg, @"MENSAJE DEL SISTEMA",
+                        KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) != DialogResult.Yes) return;
 
                 _sqlCommands.Clear();
 
@@ -463,12 +463,12 @@ namespace SysCisepro3.TalentoHumano
 
                     //CargarAsignaciones(0);
                 }
-                MessageBox.Show((string)res[1], "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                KryptonMessageBox.Show((string)res[1], "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
-                MessageBox.Show(@"ERROR AL GUARDAR PERMISO DE TRABAJO: " + ex.Message, @"MENSAJE DE VALIDACIÓN",
-                    MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                KryptonMessageBox.Show(@"ERROR AL GUARDAR PERMISO DE TRABAJO: " + ex.Message, @"MENSAJE DE VALIDACIÓN",
+                    KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Asterisk);
             }
         }
 
@@ -595,22 +595,22 @@ namespace SysCisepro3.TalentoHumano
             if (chkMensual.Checked) msg = @"El descuento se procesara mensualmente, Está seguro que desea guardar los cambios realizados?";
             if (chkAnual.Checked) msg = @"El descuento se procesará para cada mes del año seleccionado. Está seguro que desea guardar los cambios realizados?";
 
-            if (MessageBox.Show(msg, @"MENSAJE DEL SISTEMA", MessageBoxButtons.YesNo, MessageBoxIcon.Question) != DialogResult.Yes) return;
+            if (KryptonMessageBox.Show(msg, @"MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) != DialogResult.Yes) return;
             if (txtIdPersonal.Text.Trim().Length == 0 || string.IsNullOrEmpty(cbmMotivo.Text) || txtValor.Text.Trim().Length == 0 )
             {
-                MessageBox.Show(@"Debe definir los datos y tipo de movimiento para guardar!", @"MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                KryptonMessageBox.Show(@"Debe definir los datos y tipo de movimiento para guardar!", @"MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation);
                 return;
             }
 
             //if (int.Parse(txtCuota.Text) < 1 || int.Parse(txtCuota.Text) > 11)
             //{
-            //    MessageBox.Show(@"Solo valido hasta 11 meses!", @"MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            //    KryptonMessageBox.Show(@"Solo valido hasta 11 meses!", @"MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation);
             //    return;
             //}
 
             //if (int.Parse(txtCuota.Text) < 1 || int.Parse(txtCuota.Text) > 24)
             //{
-            //    MessageBox.Show(@"Solo valido hasta 24 meses!", @"MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            //    KryptonMessageBox.Show(@"Solo valido hasta 24 meses!", @"MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation);
             //    return;
             //}
             _sqlCommands.Clear();
@@ -823,7 +823,7 @@ namespace SysCisepro3.TalentoHumano
                 _estadoAccion = 0;
                 //CargarAsignaciones(_objRegistroDescuento.IdRegistro);
             }
-            MessageBox.Show((string)res[1], "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            KryptonMessageBox.Show((string)res[1], "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
         }
 
         private void btnPersonalEntra_Click(object sender, EventArgs e)
@@ -852,7 +852,7 @@ namespace SysCisepro3.TalentoHumano
         {
             if (ListView1.Items.Count == 0)
             {
-                MessageBox.Show(@"NO HAY DATOS PARA EXPORTAR!", "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                KryptonMessageBox.Show(@"NO HAY DATOS PARA EXPORTAR!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
                 return;
             }
 
@@ -941,11 +941,11 @@ namespace SysCisepro3.TalentoHumano
                 app.DisplayAlerts = false;
                 app.Visible = true;
                 app.DisplayAlerts = true;
-                MessageBox.Show(@"ARCHIVO generado correctamente!", "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                KryptonMessageBox.Show(@"ARCHIVO generado correctamente!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
             }
             catch
             {
-                MessageBox.Show(@"HUBO UN PROBLEMA AL EXPORTAR DATOS!", "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                KryptonMessageBox.Show(@"HUBO UN PROBLEMA AL EXPORTAR DATOS!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error);
             }
         }
 
@@ -987,7 +987,7 @@ namespace SysCisepro3.TalentoHumano
         {
             if (dgvSecuencial.Rows.Count == 0)
             {
-                MessageBox.Show(@"NO HAY DATOS PARA EXPORTAR!", "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                KryptonMessageBox.Show(@"NO HAY DATOS PARA EXPORTAR!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
                 return;
             }
 
@@ -1076,11 +1076,11 @@ namespace SysCisepro3.TalentoHumano
                 app.DisplayAlerts = false;
                 app.Visible = true;
                 app.DisplayAlerts = true;
-                MessageBox.Show(@"ARCHIVO generado correctamente!", "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                KryptonMessageBox.Show(@"ARCHIVO generado correctamente!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
             }
             catch
             {
-                MessageBox.Show(@"HUBO UN PROBLEMA AL EXPORTAR DATOS!", "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                KryptonMessageBox.Show(@"HUBO UN PROBLEMA AL EXPORTAR DATOS!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error);
             }
         }
 
@@ -1157,7 +1157,7 @@ namespace SysCisepro3.TalentoHumano
             {
                 ListView1.Items.Clear();
                 dataGridView1.Rows.Clear();
-                MessageBox.Show(@"Error al cargar resumen: " + ex.Message, "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                KryptonMessageBox.Show(@"Error al cargar resumen: " + ex.Message, "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
             }
         }
 
@@ -1165,7 +1165,7 @@ namespace SysCisepro3.TalentoHumano
         {
             if (dataGridView1.RowCount == 0)
             {
-                MessageBox.Show(@"NO HAY DATOS PARA EXPORTAR!", "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                KryptonMessageBox.Show(@"NO HAY DATOS PARA EXPORTAR!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
                 return;
             }
 
@@ -1251,11 +1251,11 @@ namespace SysCisepro3.TalentoHumano
                 app.Visible = true;
                 app.DisplayAlerts = true;
                 //workbook.SaveAs(sfd.FileName, XlFileFormat.xlWorkbookNormal, Type.Missing, Type.Missing, Type.Missing, Type.Missing, XlSaveAsAccessMode.xlExclusive, Type.Missing, Type.Missing, Type.Missing, Type.Missing);
-                MessageBox.Show(@"ARCHIVO generado correctamente!", "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                KryptonMessageBox.Show(@"ARCHIVO generado correctamente!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
             }
             catch
             {
-                MessageBox.Show(@"HUBO UN PROBLEMA AL EXPORTAR DATOS!", "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                KryptonMessageBox.Show(@"HUBO UN PROBLEMA AL EXPORTAR DATOS!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error);
             }
         }
 
@@ -1345,7 +1345,7 @@ namespace SysCisepro3.TalentoHumano
             catch (Exception ex)
             {
                 listView2.Items.Clear();
-                MessageBox.Show(@"Error al cargar detalle descuentos: " + ex.Message, "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                KryptonMessageBox.Show(@"Error al cargar detalle descuentos: " + ex.Message, "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation);
             }
         }
 
@@ -1359,7 +1359,7 @@ namespace SysCisepro3.TalentoHumano
         {
             if (listView2.Items.Count == 0)
             {
-                MessageBox.Show(@"NO HAY DATOS PARA EXPORTAR!", "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                KryptonMessageBox.Show(@"NO HAY DATOS PARA EXPORTAR!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
                 return;
             }
 
@@ -1446,11 +1446,11 @@ namespace SysCisepro3.TalentoHumano
                 app.DisplayAlerts = false;
                 app.Visible = true;
                 app.DisplayAlerts = true;
-                MessageBox.Show(@"ARCHIVO generado correctamente!", "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                KryptonMessageBox.Show(@"ARCHIVO generado correctamente!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
             }
             catch
             {
-                MessageBox.Show(@"HUBO UN PROBLEMA AL EXPORTAR DATOS!", "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                KryptonMessageBox.Show(@"HUBO UN PROBLEMA AL EXPORTAR DATOS!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error);
             }
         }
 
@@ -1458,7 +1458,7 @@ namespace SysCisepro3.TalentoHumano
         {
             if (listView3.Items.Count == 0)
             {
-                MessageBox.Show(@"NO HAY DATOS PARA EXPORTAR!", "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                KryptonMessageBox.Show(@"NO HAY DATOS PARA EXPORTAR!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
                 return;
             }
 
@@ -1547,11 +1547,11 @@ namespace SysCisepro3.TalentoHumano
                 app.DisplayAlerts = false;
                 app.Visible = true;
                 app.DisplayAlerts = true;
-                MessageBox.Show(@"ARCHIVO generado correctamente!", "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                KryptonMessageBox.Show(@"ARCHIVO generado correctamente!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
             }
             catch
             {
-                MessageBox.Show(@"HUBO UN PROBLEMA AL EXPORTAR DATOS!", "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                KryptonMessageBox.Show(@"HUBO UN PROBLEMA AL EXPORTAR DATOS!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error);
             }
         }
 
@@ -1559,7 +1559,7 @@ namespace SysCisepro3.TalentoHumano
         {
             if (listView4.Items.Count == 0)
             {
-                MessageBox.Show(@"NO HAY DATOS PARA EXPORTAR!", "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                KryptonMessageBox.Show(@"NO HAY DATOS PARA EXPORTAR!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
                 return;
             }
 
@@ -1648,11 +1648,11 @@ namespace SysCisepro3.TalentoHumano
                 app.DisplayAlerts = false;
                 app.Visible = true;
                 app.DisplayAlerts = true;
-                MessageBox.Show(@"ARCHIVO generado correctamente!", "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                KryptonMessageBox.Show(@"ARCHIVO generado correctamente!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
             }
             catch
             {
-                MessageBox.Show(@"HUBO UN PROBLEMA AL EXPORTAR DATOS!", "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                KryptonMessageBox.Show(@"HUBO UN PROBLEMA AL EXPORTAR DATOS!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error);
             }
         }
 
@@ -1740,7 +1740,7 @@ namespace SysCisepro3.TalentoHumano
         {
             //if ( (Int32.Parse(txtValorPago.Text)) > (Int32.Parse(txtValor.Text)) )
             //{
-            //    MessageBox.Show(@"Cuota no puede ser mayor a Valor!", @"MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            //    KryptonMessageBox.Show(@"Cuota no puede ser mayor a Valor!", @"MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation);
             //    return;
             //}
 
@@ -1779,17 +1779,17 @@ namespace SysCisepro3.TalentoHumano
         //    #region prestamo
         //    var msg = @"Está seguro que desea guardar los cambios realizados?";
         //    if (chkMensual.Checked) msg = @"El descuento se procesará para cada mes del año seleccionado. Está seguro que desea guardar los cambios realizados?";
-        //    if (MessageBox.Show(msg, @"MENSAJE DEL SISTEMA", MessageBoxButtons.YesNo, MessageBoxIcon.Question) != DialogResult.Yes) return;
+        //    if (KryptonMessageBox.Show(msg, @"MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) != DialogResult.Yes) return;
 
         //    if (txtIdPersonal.Text.Trim().Length == 0 || txtValor.Text.Trim().Length == 0 || txtCuota.Text.Trim().Length == 0 || txtValorPago.Text.Trim().Length == 0)
         //    {
-        //        MessageBox.Show(@"Debe definir los datos y tipo de movimiento para guardar!", @"MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+        //        KryptonMessageBox.Show(@"Debe definir los datos y tipo de movimiento para guardar!", @"MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation);
         //        return;
         //    }
 
         //    if (int.Parse(txtCuota.Text) < 1 || int.Parse(txtCuota.Text) > 11)
         //    {
-        //        MessageBox.Show(@"Solo valido hasta 11 meses!", @"MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+        //        KryptonMessageBox.Show(@"Solo valido hasta 11 meses!", @"MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation);
         //        return;
         //    }
         //    _sqlCommands.Clear();
@@ -1886,7 +1886,7 @@ namespace SysCisepro3.TalentoHumano
         //        _estadoAccion = 0;
         //        //CargarAsignaciones(_objRegistroDescuento.IdRegistro);
         //    }
-        //    MessageBox.Show((string)res[1], "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        //    KryptonMessageBox.Show((string)res[1], "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
 
             
 

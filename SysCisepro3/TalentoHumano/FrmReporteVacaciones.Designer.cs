@@ -135,10 +135,11 @@
             // toolStripButton1
             // 
             this.toolStripButton1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.toolStripButton1.Image = global::SysCisepro3.Properties.Resources.calendapermi;
+            this.toolStripButton1.Image = global::SysCisepro3.Properties.Resources.calendar_month_24dp_FILL0_wght400_GRAD0_opsz24__2_;
+            this.toolStripButton1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(109, 28);
+            this.toolStripButton1.Size = new System.Drawing.Size(117, 28);
             this.toolStripButton1.Text = "CAM. PERÍODO";
             this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
