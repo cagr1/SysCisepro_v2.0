@@ -413,7 +413,7 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.CONSULTAS
             txtBuscar.Font = New Font("Roboto", 9, FontStyle.Regular)
 
             Dim validation As New ValidationForms()
-            validation.SetPlaceholder(txtBuscar, "BUSCAR ACTIVO")
+            validation.SetPlaceholder(txtBuscar, "Buscar Activo por Serie o Nombre")
 
 
 
@@ -510,9 +510,30 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.CONSULTAS
             Else
                 cbxActivo.Enabled = False
             End If
+            txtBuscar.Clear()
         End Sub
 
         Private Sub btnBuscar_Click(sender As Object, e As EventArgs) Handles btnBuscar.Click
+            dgvActivosFijos.DataSource = Nothing
+            dgvTotalActivosFijos.DataSource = Nothing
+            If txtBuscar.Text.Count() > 0 Then
+                dgvActivosFijos.DataSource = _objActivo.SeleccionarActivoFijoPorSerieNombreActivo(_tipoCon, txtBuscar.Text.Trim())
+
+                dgvActivosFijos.AutoResizeColumns()
+                dgvActivosFijos.AutoResizeRows()
+                Sumar()
+                CargarValoresActivos()
+            End If
+        End Sub
+
+        Private Sub txtBuscar_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtBuscar.KeyPress
+
+        End Sub
+
+        Private Sub txtBuscar_KeyDown(sender As Object, e As KeyEventArgs) Handles txtBuscar.KeyDown
+            If e.KeyCode = Keys.Enter Then
+                btnBuscar_Click(Nothing, Nothing)
+            End If
 
         End Sub
     End Class

@@ -1363,6 +1363,7 @@
     <None Include="Resources\cahange_system.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Seport_wall.png" />
     <None Include="Resources\Your paragraph text2.png" />
     <None Include="Resources\Your paragraph text %282%29.png" />
     <None Include="Resources\mapa-de-ecuador-con-sus-provincias-1.jpg" />

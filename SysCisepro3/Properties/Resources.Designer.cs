@@ -4045,6 +4045,16 @@ namespace SysCisepro3.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Seport_wall {
+            get {
+                object obj = ResourceManager.GetObject("Seport_wall", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap SeportPac_Wall {
             get {
                 object obj = ResourceManager.GetObject("SeportPac_Wall", resourceCulture);

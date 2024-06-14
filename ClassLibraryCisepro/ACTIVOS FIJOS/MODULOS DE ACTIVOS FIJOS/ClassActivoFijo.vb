@@ -459,6 +459,12 @@ Namespace ACTIVOS_FIJOS.MODULOS_DE_ACTIVOS_FIJOS
             pars.Add(New Object() {"SERIE", SqlDbType.NVarChar, serie})
             Return ComandosSql.SeleccionarQueryWithParamsToDataTable(tipoCon, "buscarIdActivoActivoFijoPorNombreActivo", True, pars)
         End Function
+
+        Public Function SeleccionarActivoFijoPorSerieNombreActivo(ByVal tipoCon As TipoConexion, ByVal filtro As String) As DataTable
+            Dim pars = New List(Of Object())
+            pars.Add(New Object() {"@filtro", SqlDbType.NVarChar, filtro})
+            Return ComandosSql.SeleccionarQueryWithParamsToDataTable(tipoCon, "sp_seleecionarActivoFijoxSeriexNombre", True, pars)
+        End Function
     End Class
 End Namespace
 

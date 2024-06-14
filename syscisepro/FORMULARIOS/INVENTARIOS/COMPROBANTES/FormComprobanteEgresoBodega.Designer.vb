@@ -23,7 +23,6 @@
         'No lo modifique con el editor de código.
         <System.Diagnostics.DebuggerStepThrough()> _
         Private Sub InitializeComponent()
-            Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormComprobanteEgresoBodega))
             Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
@@ -40,6 +39,7 @@
             Dim DataGridViewCellStyle14 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim DataGridViewCellStyle15 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim DataGridViewCellStyle16 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormComprobanteEgresoBodega))
             Me.tbComprobanteIngresoBodega = New System.Windows.Forms.TabControl()
             Me.tpRegistro = New System.Windows.Forms.TabPage()
             Me.txtRazon = New System.Windows.Forms.TextBox()
@@ -258,12 +258,14 @@
             '
             Me.bntPuesto.BackColor = System.Drawing.Color.White
             Me.bntPuesto.Enabled = False
+            Me.bntPuesto.FlatAppearance.BorderSize = 0
+            Me.bntPuesto.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.bntPuesto.Font = New System.Drawing.Font("Consolas", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.bntPuesto.Image = CType(resources.GetObject("bntPuesto.Image"), System.Drawing.Image)
+            Me.bntPuesto.Image = Global.syscisepro.My.Resources.Resources.search_24dp_FILL0_wght400_GRAD0_opsz40
             Me.bntPuesto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-            Me.bntPuesto.Location = New System.Drawing.Point(964, 163)
+            Me.bntPuesto.Location = New System.Drawing.Point(970, 171)
             Me.bntPuesto.Name = "bntPuesto"
-            Me.bntPuesto.Size = New System.Drawing.Size(26, 44)
+            Me.bntPuesto.Size = New System.Drawing.Size(28, 28)
             Me.bntPuesto.TabIndex = 195
             Me.bntPuesto.TextAlign = System.Drawing.ContentAlignment.MiddleRight
             Me.bntPuesto.UseVisualStyleBackColor = False

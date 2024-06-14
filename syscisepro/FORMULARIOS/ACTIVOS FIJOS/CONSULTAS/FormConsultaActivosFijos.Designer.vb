@@ -310,6 +310,7 @@
             'cbxActivo
             '
             Me.cbxActivo.DropDownWidth = 129
+            Me.cbxActivo.Enabled = False
             Me.cbxActivo.Items.AddRange(New Object() {"ARMAS", "RADIOS", "VEHICULOS", "TERRENOS", "EQUIPOS DE COMPUTO", "LIBROS Y COLECCIONES", "EQUIPOS DE OFICINA", "MUEBLES DE OFICINA", "EQUIPOS DE COCINA", "EQUIPOS DE AMBIENTACION", "EQUIPOS DE COMUNICACION Y TELEFONIA", "EQUIPOS DE SEGURIDAD INDUSTRIAL", "CAMARAS DE SEGURIDAD", "GENERADORES", "CHALECOS", "SOFTWARE"})
             Me.cbxActivo.Location = New System.Drawing.Point(383, 41)
             Me.cbxActivo.Name = "cbxActivo"

@@ -101,8 +101,7 @@ namespace SysCisepro3.Main
             _objDetalleVacaciones = new ClassDetalleVacaciones();
             _objChaleco = new ClassChaleco();
             ObjPermiso = new ClassPermisosUsuario();
-            this.BackgroundImage = Resources.Your_paragraph_text;
-            this.BackgroundImageLayout = ImageLayout.Stretch;
+            
         }
 
         private void DefinirTipoSistema()
@@ -143,6 +142,8 @@ namespace SysCisepro3.Main
                 case TipoConexion.Seportpac:
                     Icon = Resources.logo_s;
                     tslLogo.BackgroundImage = Resources.SeportPac_Wall;
+                    this.BackgroundImage = Resources.Seport_wall;
+                    this.BackgroundImageLayout = ImageLayout.Stretch;
                     break;
                 case TipoConexion.Asenava:
                     Icon = Resources.logo_a;
@@ -151,6 +152,8 @@ namespace SysCisepro3.Main
                 default: // CISEPRO
                     Icon = Resources.logo_c;
                     tslLogo.BackgroundImage = Resources.Cisepro_Wall;
+                    this.BackgroundImage = Resources.Your_paragraph_text;
+                    this.BackgroundImageLayout = ImageLayout.Stretch;
                     break;
             }
 
