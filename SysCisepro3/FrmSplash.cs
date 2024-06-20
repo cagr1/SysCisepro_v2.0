@@ -15,7 +15,7 @@ namespace SysCisepro3
         private readonly int _tiempoNotificacion; // TIEMPO PARA NOTIFICACION
 
         private FrmLogin _loginForm;
-        private FrmNewLogin _newLoginForm;
+        private FrmNewLogin2 _newLoginForm;
 
         public FrmSplash(TipoConexion tipoCon, int tiempoNotificacion)
         {
@@ -95,7 +95,7 @@ namespace SysCisepro3
             //_loginForm = new FrmLogin { TipoCon = _tipoCon, TiempoNotificacion = _tiempoNotificacion };
             //_loginForm.Show();
 
-            _newLoginForm = new FrmNewLogin();
+            _newLoginForm = new FrmNewLogin2();
             _newLoginForm.Show();
         }
     }

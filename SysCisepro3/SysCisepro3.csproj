@@ -405,12 +405,6 @@
     <Compile Include="Main\FrmLogin.Designer.cs">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Main\FrmNewLogin.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Main\FrmNewLogin.Designer.cs">
-      <DependentUpon>FrmNewLogin.cs</DependentUpon>
-    </Compile>
     <Compile Include="Main\FrmNewLogin2.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -745,9 +739,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Main\FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Main\FrmNewLogin.resx">
-      <DependentUpon>FrmNewLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main\FrmNewLogin2.resx">
       <DependentUpon>FrmNewLogin2.cs</DependentUpon>

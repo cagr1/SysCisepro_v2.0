@@ -507,6 +507,7 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.CONSULTAS
         Private Sub chbxCategoria_CheckedChanged(sender As Object, e As EventArgs) Handles chbxCategoria.CheckedChanged
             If chbxCategoria.Checked Then
                 cbxActivo.Enabled = True
+
             Else
                 cbxActivo.Enabled = False
             End If

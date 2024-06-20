@@ -17,6 +17,7 @@ Imports ClassLibraryCisepro.VALIDACIONES
 Imports syscisepro.DATOS
 Imports syscisepro.FORMULARIOS.INVENTARIOS.PROCESO
 Imports System.Text
+Imports Krypton.Toolkit
 
 Namespace FORMULARIOS.CONTABILIDAD.VENTAS
     ''' <summary>
@@ -701,11 +702,13 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
         Private Sub dgvDetalleFacturaVenta_CellValueChanged(ByVal sender As System.Object, ByVal e As Windows.Forms.DataGridViewCellEventArgs) Handles dgvDetalleFacturaVenta.CellValueChanged
             If dgvDetalleFacturaVenta.RowCount = 0 Or dgvDetalleFacturaVenta.CurrentRow Is Nothing Then Return
             Try
+
                 Dim cantidad = If(dgvDetalleFacturaVenta.CurrentRow.Cells(3).Value.ToString().Trim().Length = 0, 0, CDec(dgvDetalleFacturaVenta.CurrentRow.Cells(3).Value))
                 Dim valorUnitario = If(dgvDetalleFacturaVenta.CurrentRow.Cells(4).Value.ToString().Trim().Length = 0, 0, CDec(dgvDetalleFacturaVenta.CurrentRow.Cells(4).Value))
-                Dim valorDescuento = If(dgvDetalleFacturaVenta.CurrentRow.Cells(5).Value.ToString().Trim().Length = 0, 0, CDec(dgvDetalleFacturaVenta.CurrentRow.Cells(5).Value))
-                Dim valorTotal = (cantidad * valorUnitario) - valorDescuento  ' calcula el valor total del item
-                dgvDetalleFacturaVenta.CurrentRow.Cells(6).Value = valorTotal ' asigna el valor a la casilla
+                    Dim valorDescuento = If(dgvDetalleFacturaVenta.CurrentRow.Cells(5).Value.ToString().Trim().Length = 0, 0, CDec(dgvDetalleFacturaVenta.CurrentRow.Cells(5).Value))
+                    Dim valorTotal = (cantidad * valorUnitario) - valorDescuento  ' calcula el valor total del item
+                    dgvDetalleFacturaVenta.CurrentRow.Cells(6).Value = valorTotal ' asigna el valor a la casilla
+
             Catch
                 If dgvDetalleFacturaVenta.CurrentRow Is Nothing Then Return
                 If dgvDetalleFacturaVenta.CurrentRow.IsNewRow Then Return

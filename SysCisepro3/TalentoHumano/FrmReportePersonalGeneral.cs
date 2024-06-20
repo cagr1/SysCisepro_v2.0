@@ -112,7 +112,8 @@ namespace SysCisepro3.TalentoHumano
             comboBox2.SelectedIndex = 2;
             comboBox1.SelectedIndex = 0;
 
-            
+            dataGridView1.Columns[3].DefaultCellStyle.Format = "dd/MM/yyyy";
+            dataGridView1.Columns[5].DefaultCellStyle.Format = "dd/MM/yyyy";
 
         }
 
@@ -183,7 +184,7 @@ namespace SysCisepro3.TalentoHumano
 
                 try
                 {                    
-                    if (dataGridView1.Columns[3] != null) dataGridView1.Columns[3].DefaultCellStyle.Format = "g";
+                   // if (dataGridView1.Columns[3] != null) dataGridView1.Columns[3].DefaultCellStyle.Format = "g";
 
                     var dx = string.Empty;
                     foreach (DataGridViewRow row in dgvPersonal.Rows)
@@ -241,13 +242,13 @@ namespace SysCisepro3.TalentoHumano
                         
                         // datos seguro
                         dataGridView1.Rows.Add(
-                            row.Cells[0].Value.ToString().Trim(),
-                            row.Cells[1].Value.ToString().Trim(),
-                            row.Cells[2].Value.ToString().Trim(),
-                            row.Cells[5].Value.ToString().Trim(),
+                            row.Cells[0].Value.ToString().Trim(),//id
+                            row.Cells[1].Value.ToString().Trim(),//cedula
+                            row.Cells[2].Value.ToString().Trim(),//nombres
+                            row.Cells[5].Value.ToString().Trim(),//fnac
                             "ECUATORIANA",
-                            row.Cells[7].Value.ToString().Trim(),
-                            row.Cells[11].Value.ToString().Trim());
+                            row.Cells[7].Value.ToString().Trim(),//fingre
+                            row.Cells[11].Value.ToString().Trim());//cargo
 
 
                         // datos pichincha
@@ -477,7 +478,12 @@ namespace SysCisepro3.TalentoHumano
                         //    worksheet.Cells[head, y] = ((f.Day < 10) ? "0" + f.Day : "" + f.Day) + "/" + ((f.Month < 10) ? "0" + f.Month : "" + f.Month) + "/" + f.Year;
                         //}
                         //else 
+                       
+
+
+
                         worksheet.Cells[head, y] = row.Cells[j].Value.ToString();
+
 
                         worksheet.Cells[head, y].Borders(Microsoft.Office.Interop.Excel.XlBordersIndex.xlEdgeLeft).LineStyle = Microsoft.Office.Interop.Excel.XlLineStyle.xlContinuous;
                         worksheet.Cells[head, y].Borders(Microsoft.Office.Interop.Excel.XlBordersIndex.xlEdgeRight).LineStyle = Microsoft.Office.Interop.Excel.XlLineStyle.xlContinuous;

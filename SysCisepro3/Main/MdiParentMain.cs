@@ -640,6 +640,9 @@ namespace SysCisepro3.Main
             //    tsContabilidad.Visible = true;
             //    tsOperaciones.Visible = false;
             //    tsBodega.Visible = true;
+                if (ObjUsuario.Datos.Equals("ELENA ARTEAGA CORO"))
+                    btnChange.Visible = true;
+                else
                 btnChange.Visible = false;
                tsRecursoHumano.DropDownItems["dESCUENTOSPERSONALToolStripMenuItem"].Visible = ObjUsuario.Datos.Equals("MONICA ARMIJOS") || ObjUsuario.Datos.Equals("MARJORIE LOOR") || ObjUsuario.Datos.Equals("NATALIA");
             }

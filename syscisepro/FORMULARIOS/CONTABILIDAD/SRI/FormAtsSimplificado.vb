@@ -146,6 +146,8 @@ Namespace FORMULARIOS.CONTABILIDAD.SRI
                 dgvComprasATS.Columns(18).DefaultCellStyle.Alignment = DataGridViewContentAlignment.BottomLeft
                 dgvComprasATS.Columns(19).HeaderText = "TIP PRO"
                 dgvComprasATS.Columns(19).DefaultCellStyle.Alignment = DataGridViewContentAlignment.BottomLeft
+                dgvComprasATS.Columns(20).HeaderText = "SUBTOTAL 5%"
+                dgvComprasATS.Columns(20).DefaultCellStyle.Alignment = DataGridViewContentAlignment.BottomLeft
 
                 dgvComprasATS.ReadOnly = True
                 dgvComprasATS.AutoResizeColumns()
@@ -515,6 +517,7 @@ Namespace FORMULARIOS.CONTABILIDAD.SRI
             Dim nroRegistrosFacturasCompras = 0
             Dim tarifa0FacturasCompras As Decimal = 0
             Dim tarifa12FacturasCompras As Decimal = 0
+            Dim tarifa5FacturasCompras As Decimal = 0
             Dim ivaFacturasCompras As Decimal = 0
             Dim nroRegistrosLiquidacionCompras = 0
             Dim tarifa0LiquidacionCompras As Decimal = 0
@@ -609,6 +612,7 @@ Namespace FORMULARIOS.CONTABILIDAD.SRI
                     nroRegistrosFacturasCompras = nroRegistrosFacturasCompras + 1
                     tarifa0FacturasCompras = tarifa0FacturasCompras + dgvComprasATS.Rows(indiceCompCompra).Cells(9).Value
                     tarifa12FacturasCompras = tarifa12FacturasCompras + dgvComprasATS.Rows(indiceCompCompra).Cells(8).Value
+                    tarifa5FacturasCompras = tarifa5FacturasCompras + dgvComprasATS.Rows(indiceCompCompra).Cells(20).Value
                     ivaFacturasCompras = ivaFacturasCompras + dgvComprasATS.Rows(indiceCompCompra).Cells(12).Value
                     If _comprasFacturas = "" Then
                         _comprasFacturas = dgvComprasATS.Rows(indiceCompCompra).Cells(0).Value.ToString
@@ -790,7 +794,7 @@ Namespace FORMULARIOS.CONTABILIDAD.SRI
             'compras
             txtNroRegistrosFacturasCompras.Text = nroRegistrosFacturasCompras
             txtTarifa0FacturaCompras.Text = tarifa0FacturasCompras
-            txtTarifa12FacturasCompras.Text = tarifa12FacturasCompras
+            txtTarifa12FacturasCompras.Text = tarifa12FacturasCompras + tarifa5FacturasCompras
             txtIvaFacturasCompras.Text = ivaFacturasCompras
 
             txtNroRegistrosLiquidacionCompras.Text = nroRegistrosLiquidacionCompras : txtTarifa0LiquidacionCompras.Text = tarifa0LiquidacionCompras : txtTarifa12LiquidacionCompras.Text = tarifa12LiquidacionCompras : txtIvaLiquidacionCompras.Text = ivaLiquidacionCompras

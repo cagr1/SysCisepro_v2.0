@@ -332,7 +332,7 @@
             Me.dgvFacturaVenta.RowHeadersVisible = False
             Me.dgvFacturaVenta.RowHeadersWidth = 25
             Me.dgvFacturaVenta.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvFacturaVenta.Size = New System.Drawing.Size(1272, 502)
+            Me.dgvFacturaVenta.Size = New System.Drawing.Size(1272, 509)
             Me.dgvFacturaVenta.TabIndex = 51
             '
             'dtpFechaDesde
@@ -538,7 +538,7 @@
             Me.GroupBox1.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.GroupBox1.Location = New System.Drawing.Point(0, 3)
             Me.GroupBox1.Name = "GroupBox1"
-            Me.GroupBox1.Size = New System.Drawing.Size(1278, 521)
+            Me.GroupBox1.Size = New System.Drawing.Size(1278, 528)
             Me.GroupBox1.TabIndex = 106
             Me.GroupBox1.TabStop = False
             '
@@ -586,7 +586,7 @@
             Me.REPORTEDEVENTASToolStripMenuItem.Image = Global.syscisepro.My.Resources.Resources.description_24dp_FILL0_wght400_GRAD0_opsz24__2_
             Me.REPORTEDEVENTASToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.REPORTEDEVENTASToolStripMenuItem.Name = "REPORTEDEVENTASToolStripMenuItem"
-            Me.REPORTEDEVENTASToolStripMenuItem.Size = New System.Drawing.Size(206, 30)
+            Me.REPORTEDEVENTASToolStripMenuItem.Size = New System.Drawing.Size(202, 30)
             Me.REPORTEDEVENTASToolStripMenuItem.Text = "REPORTE DE VENTAS"
             '
             'ESTADÍSTICOToolStripMenuItem
@@ -594,7 +594,7 @@
             Me.ESTADÍSTICOToolStripMenuItem.Image = Global.syscisepro.My.Resources.Resources.finance_mode_24dp_FILL0_wght400_GRAD0_opsz24__2_
             Me.ESTADÍSTICOToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.ESTADÍSTICOToolStripMenuItem.Name = "ESTADÍSTICOToolStripMenuItem"
-            Me.ESTADÍSTICOToolStripMenuItem.Size = New System.Drawing.Size(206, 30)
+            Me.ESTADÍSTICOToolStripMenuItem.Size = New System.Drawing.Size(202, 30)
             Me.ESTADÍSTICOToolStripMenuItem.Text = "RESÚMEN ESTADÍSTICO"
             '
             'btnExportar

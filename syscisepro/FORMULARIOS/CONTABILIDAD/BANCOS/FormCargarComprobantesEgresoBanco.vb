@@ -7,6 +7,7 @@ Imports ClassLibraryCisepro.CONTABILIDAD.PLAN_DE_CUENTAS
 Imports ClassLibraryCisepro.ENUMS
 Imports System.Data.SqlClient
 Imports ClassLibraryCisepro.ProcesosSql
+Imports Excel = Microsoft.Office.Interop.Excel
 
 Namespace FORMULARIOS.CONTABILIDAD.BANCOS
     ''' <summary>
@@ -73,7 +74,7 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
                     'msKardex.BackColor = My.MySettingsProperty.Settings.ColorCisepro
                     dgvComprobantesEgresoBanco.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
             End Select
-            dgvComprobantesEgresoBanco.Font = New Font("Roboto", 8, FontStyle.Regular)
+            dgvComprobantesEgresoBanco.Font = New System.Drawing.Font("Roboto", 8, FontStyle.Regular)
             _sqlCommands = New List(Of SqlCommand)
             AutocompletarPlanCuentas()
             LlenarComboBancos()
@@ -111,8 +112,8 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
                 cmbCuentaBancos.DataSource = Nothing
             End Try
         End Sub
-        Private Sub dgvComprobantesEgresoBanco_MouseDown(ByVal sender As System.Object, ByVal e As Windows.Forms.MouseEventArgs) Handles dgvComprobantesEgresoBanco.MouseDown
-            If e.Button <> Windows.Forms.MouseButtons.Right Then Return
+        Private Sub dgvComprobantesEgresoBanco_MouseDown(ByVal sender As System.Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles dgvComprobantesEgresoBanco.MouseDown
+            If e.Button <> MouseButtons.Right Then Return
             dgvComprobantesEgresoBanco.Rows(dgvComprobantesEgresoBanco.CurrentCell.RowIndex.ToString()).Selected = True
         End Sub
         Private Sub ToolStripMenuItemEliminar_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ToolStripMenuItemEliminar.Click
@@ -122,7 +123,7 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
             End If
 
             Dim lsMensage As String = "¿Esta seguro de querer eliminar este Registro" & vbCrLf & dgvComprobantesEgresoBanco.CurrentRow().Cells(2).Value.ToString()
-            If MessageBox.Show(lsMensage, "", MessageBoxButtons.YesNo, MessageBoxIcon.Information, MessageBoxDefaultButton.Button2, MessageBoxOptions.ServiceNotification) = Windows.Forms.DialogResult.No Then
+            If MessageBox.Show(lsMensage, "", MessageBoxButtons.YesNo, MessageBoxIcon.Information, MessageBoxDefaultButton.Button2, MessageBoxOptions.ServiceNotification) = DialogResult.No Then
                 Return
             End If
             dgvComprobantesEgresoBanco.Rows.RemoveAt(dgvComprobantesEgresoBanco.CurrentRow.Index)
@@ -142,7 +143,7 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
             Try
                 ofdSeleccionarArchivo.Filter = "Archivos de Excel (*.xls;*.xlsx)|*.xls;*.xlsx"
                 ofdSeleccionarArchivo.Title = "Seleccione el archivo de Excel"
-                If ofdSeleccionarArchivo.ShowDialog() = Windows.Forms.DialogResult.OK Then
+                If ofdSeleccionarArchivo.ShowDialog() = System.Windows.Forms.DialogResult.OK Then
                     txtRutaArchivo.Text = ofdSeleccionarArchivo.FileName
                     ImportarArchivoDeExcel(txtRutaArchivo.Text)
                     ValidarCheques()
@@ -152,23 +153,48 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
             End Try
         End Sub
         Private Sub ImportarArchivoDeExcel(ByVal archivoImportar As String)
-            Dim conexion As OleDbConnection
-            Dim dtSet As DataSet
-            Dim misqlDa As OleDbDataAdapter
-            Dim enlace As BindingSource
-            Dim consulta As String
+            Dim excelApp As New Excel.Application()
+            Dim workbook As Excel.Workbook = Nothing
+            Dim worksheet As Excel.Worksheet = Nothing
+            Dim Range As Excel.Range = Nothing
+
+            'Dim conexion As OleDbConnection
+            'Dim dtSet As DataSet
+            'Dim misqlDa As OleDbDataAdapter
+            'Dim enlace As BindingSource
+            'Dim consulta As String
             Try
-                conexion = New OleDbConnection("provider=Microsoft.ACE.OLEDB.12.0;Data Source='" & archivoImportar & "';Extended Properties=Excel 12.0;")
-                conexion.Open()
-                consulta = "select FECHA, RUC_CI, NOMBRE_RECEPTOR, CONCEPTO, RAZON_COMPROBANTE, VALOR, BANCO, CUENTA, NUMERO_CHEQUE from [COMPROBANTE_EGRESO_BANCOS$]"
-                misqlDa = New OleDbDataAdapter(consulta, conexion)
-                dtSet = New DataSet()
-                enlace = New BindingSource()
-                misqlDa.Fill(dtSet, "COMPROBANTE_EGRESO")
-                enlace.DataSource = dtSet
-                enlace.DataMember = "COMPROBANTE_EGRESO"
-                dgvComprobantesEgresoBanco.DataSource = enlace
-                conexion.Close()
+                'conexion = New OleDbConnection("provider=Microsoft.ACE.OLEDB.12.0;Data Source='" & archivoImportar & "';Extended Properties=Excel 12.0;")
+                'conexion.Open()
+                ''consulta = "select FECHA, RUC_CI, NOMBRE_RECEPTOR, CONCEPTO, RAZON_COMPROBANTE, VALOR, BANCO, CUENTA, NUMERO_CHEQUE from [COMPROBANTE_EGRESO_BANCOS$]"
+                'misqlDa = New OleDbDataAdapter(consulta, conexion)
+                'dtSet = New DataSet()
+                'enlace = New BindingSource()
+                'misqlDa.Fill(dtSet, "COMPROBANTE_EGRESO")
+                'enlace.DataSource = dtSet
+                'enlace.DataMember = "COMPROBANTE_EGRESO"
+                'dgvComprobantesEgresoBanco.DataSource = enlace
+                'conexion.Close()
+
+                workbook = excelApp.Workbooks.Open(archivoImportar)
+                worksheet = CType(workbook.Sheets(1), Excel.Worksheet)
+                Range = worksheet.UsedRange
+
+                Dim dt As New DataTable()
+
+                For col = 1 To Range.Columns.Count
+                    dt.Columns.Add(New DataColumn(Range.Cells(1, col).Value))
+                Next
+
+                For row = 2 To Range.Rows.Count
+                    Dim dr As DataRow = dt.NewRow()
+                    For col = 1 To Range.Columns.Count
+                        dr(col - 1) = Range.Cells(row, col).Value
+                    Next
+                    dt.Rows.Add(dr)
+                Next
+
+                dgvComprobantesEgresoBanco.DataSource = dt
                 _validarimportacion = 1
             Catch ex As Exception
                 MsgBox("LOS DATOS DE LA HOJA DE EXCEL NO SON CORRECTOS." & vbNewLine & "POR FAVOR REVISE QUE EL FORMATO SEA EL ESTABLECIDO." & vbNewLine & ex.Message, MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")

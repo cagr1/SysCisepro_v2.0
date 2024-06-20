@@ -7,6 +7,8 @@ Imports ClassLibraryCisepro.CONTABILIDAD.VENTAS
 Imports ClassLibraryCisepro.ENUMS
 Imports System.Data.SqlClient
 Imports ClassLibraryCisepro.ProcesosSql
+Imports Excel = Microsoft.Office.Interop.Excel
+
 
 Namespace FORMULARIOS.CONTABILIDAD.BANCOS
     ''' <summary>
@@ -55,7 +57,7 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
 
         'Dim _sqlCommands As List(Of SqlCommand)
         Public validarimportacion As Integer = 0
-        Dim validarNumeroFactura As Integer = 0 
+        Dim validarNumeroFactura As Integer = 0
         Public varIdLibroDiario As Int64 
 
         Private Sub FormCargarComprobantesIngresoBanco_Load(ByVal sender As System.Object, ByVal e As EventArgs) Handles MyBase.Load
@@ -78,7 +80,7 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
                     dgvComprobantesEgresoBanco.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
             End Select
             '_sqlCommands = New List(Of SqlCommand)
-            dgvComprobantesEgresoBanco.Font = New Font("Roboto", 8, FontStyle.Regular)
+            dgvComprobantesEgresoBanco.Font = New System.Drawing.Font("Roboto", 8, FontStyle.Regular)
             autocompletarPlanCuentas()
             llenarComboBancos()
             dgvComprobantesEgresoBanco.ContextMenuStrip = ContextMenuStripClicDerecho 'Asigno a la propiedad contextMenuStrip del dgv el menu creado para el clic derecho
@@ -115,8 +117,8 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
                 cmbCuentaBancos.DataSource = Nothing
             End Try
         End Sub
-        Private Sub dgvComprobantesEgresoBanco_MouseDown(ByVal sender As System.Object, ByVal e As Windows.Forms.MouseEventArgs) Handles dgvComprobantesEgresoBanco.MouseDown
-            If e.Button <> Windows.Forms.MouseButtons.Right Then Return
+        Private Sub dgvComprobantesEgresoBanco_MouseDown(ByVal sender As System.Object, ByVal e As MouseEventArgs) Handles dgvComprobantesEgresoBanco.MouseDown
+            If e.Button <> MouseButtons.Right Then Return
             dgvComprobantesEgresoBanco.Rows(dgvComprobantesEgresoBanco.CurrentCell.RowIndex.ToString()).Selected = True
         End Sub
         Private Sub ToolStripMenuItemEliminar_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ToolStripMenuItemEliminar.Click
@@ -126,7 +128,7 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
             End If
 
             Dim lsMensage As String = "¿Esta seguro de querer eliminar este Registro" & vbCrLf & dgvComprobantesEgresoBanco.CurrentRow().Cells(2).Value.ToString()
-            If MessageBox.Show(lsMensage, "", MessageBoxButtons.YesNo, MessageBoxIcon.Information, MessageBoxDefaultButton.Button2, MessageBoxOptions.ServiceNotification) = Windows.Forms.DialogResult.No Then
+            If MessageBox.Show(lsMensage, "", MessageBoxButtons.YesNo, MessageBoxIcon.Information, MessageBoxDefaultButton.Button2, MessageBoxOptions.ServiceNotification) = DialogResult.No Then
                 Return
             End If
             dgvComprobantesEgresoBanco.Rows.RemoveAt(dgvComprobantesEgresoBanco.CurrentRow.Index)
@@ -146,7 +148,7 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
             Try
                 ofdSeleccionarArchivo.Filter = "Archivos de Excel (*.xls;*.xlsx)|*.xls;*.xlsx"
                 ofdSeleccionarArchivo.Title = "Seleccione el archivo de Excel"
-                If ofdSeleccionarArchivo.ShowDialog() = Windows.Forms.DialogResult.OK Then
+                If ofdSeleccionarArchivo.ShowDialog() = DialogResult.OK Then
                     txtRutaArchivo.Text = ofdSeleccionarArchivo.FileName
                     ImportarArchivoDeExcel(txtRutaArchivo.Text)
                     validarNumeroFacturaCanceladas()
@@ -156,24 +158,49 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
             End Try
         End Sub
         Private Sub ImportarArchivoDeExcel(ByVal archivoImportar As String)
-            Dim Conexion As OleDbConnection
-            Dim DtSet As DataSet
-            Dim misqlDa As OleDbDataAdapter
-            Dim Enlace As BindingSource
-            Dim Consulta As String
+            'Dim Conexion As OleDbConnection
+            'Dim DtSet As DataSet
+            'Dim misqlDa As OleDbDataAdapter
+            'Dim Enlace As BindingSource
+            'Dim Consulta As String
+            Dim excelApp As New Excel.Application()
+            Dim workbook As Excel.Workbook = Nothing
+            Dim worksheet As Excel.Worksheet = Nothing
+            Dim Range As Excel.Range = Nothing
+
             Try
-                Consulta = ""
-                Conexion = New OleDbConnection("provider=Microsoft.ACE.OLEDB.12.0;Data Source='" & archivoImportar & "';Extended Properties=Excel 12.0;")
-                Conexion.Open()
-                Consulta = "select FORMA_PAGO, BANCO_CHEQUE_RECIBIDO, CTA_CHEQUE_RECIBIDO, NUMERO_CHEQUE_RECIBIDO, FECHA, CLIENTE, RAZON, NUMERO_FACTURA, VALOR, BANCO_DEPOSITO, CTA_DEPOSITO from [COMPROBANTE_INGRESO$]"
-                misqlDa = New OleDbDataAdapter(Consulta, Conexion)
-                DtSet = New DataSet()
-                Enlace = New BindingSource()
-                misqlDa.Fill(DtSet, "COMPROBANTE_INGRESO")
-                Enlace.DataSource = DtSet
-                Enlace.DataMember = "COMPROBANTE_INGRESO"
-                dgvComprobantesEgresoBanco.DataSource = Enlace
-                Conexion.Close()
+                'Consulta = ""
+                'Conexion = New OleDbConnection("provider=Microsoft.ACE.OLEDB.12.0;Data Source='" & archivoImportar & "';Extended Properties=Excel 12.0;")
+                'Conexion.Open()
+                'Consulta = "select FORMA_PAGO, BANCO_CHEQUE_RECIBIDO, CTA_CHEQUE_RECIBIDO, NUMERO_CHEQUE_RECIBIDO, FECHA, CLIENTE, RAZON, NUMERO_FACTURA, VALOR, BANCO_DEPOSITO, CTA_DEPOSITO from [COMPROBANTE_INGRESO$]"
+                'misqlDa = New OleDbDataAdapter(Consulta, Conexion)
+                'DtSet = New DataSet()
+                'Enlace = New BindingSource()
+                'misqlDa.Fill(DtSet, "COMPROBANTE_INGRESO")
+                'Enlace.DataSource = DtSet
+                'Enlace.DataMember = "COMPROBANTE_INGRESO"
+                'dgvComprobantesEgresoBanco.DataSource = Enlace
+                'Conexion.Close()
+                workbook = excelApp.Workbooks.Open(archivoImportar)
+                worksheet = CType(workbook.Sheets(1), Excel.Worksheet)
+                Range = worksheet.UsedRange
+
+                Dim dt As New DataTable()
+
+                For col = 1 To Range.Columns.Count
+                    dt.Columns.Add(New DataColumn(Range.Cells(1, col).Value))
+                Next
+
+                For row = 2 To Range.Rows.Count
+                    Dim dr As DataRow = dt.NewRow()
+                    For col = 1 To Range.Columns.Count
+                        dr(col - 1) = Range.Cells(row, col).Value
+                    Next
+                    dt.Rows.Add(dr)
+                Next
+
+                dgvComprobantesEgresoBanco.DataSource = dt
+
                 validarimportacion = 1
             Catch ex As Exception
                 MsgBox("LAS COLUMNAS O EL NOMBRE DE LA HOJA NO COINCIDEN. POR FAVOR REVISE QUE EL FORMATO SEA EL ESTABLECIDO." & vbNewLine & " " & vbNewLine & "NOMBRE DE LA HOJA:  COMPROBANTE_INGRESO" & vbNewLine & " " & vbNewLine & "COLUMNAS: FORMA_PAGO,  BANCO_CHEQUE_RECIBIDO,  CTA_CHEQUE_RECIBIDO,  NUMERO_CHEQUE_RECIBIDO,  FECHA,CLIENTE,  RAZON,  NUMERO_FACTURA,  VALOR,  BANCO_DEPOSITO,  CTA_DEPOSITO", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
