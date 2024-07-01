@@ -3436,7 +3436,7 @@ namespace SysCisepro3.TalentoHumano
 
                 worksheetpm.Range["C" + (head + 3) + ":D" + (head + 3)].Merge();
                 worksheetpm.Range["C" + (head + 3) + ":D" + (head + 3)].Cells.HorizontalAlignment = XlHAlign.xlHAlignCenter;
-                worksheetpm.Range["C" + (head + 3) + ":D" + (head + 3)].Value = TipoCon == TipoConexion.Cisepro ? "ING. MÓNICA ARMIJOS B." : TipoCon == TipoConexion.Seportpac ? "ING. MA. KATHERINE ALVARADO A." : "";
+                worksheetpm.Range["C" + (head + 3) + ":D" + (head + 3)].Value = TipoCon == TipoConexion.Cisepro ? "JESSICA MITE" : TipoCon == TipoConexion.Seportpac ? "ING. MA. KATHERINE ALVARADO A." : "";
                 worksheetpm.Range["C" + (head + 4) + ":D" + (head + 4)].Merge();
                 worksheetpm.Range["C" + (head + 4) + ":D" + (head + 4)].Cells.HorizontalAlignment = XlHAlign.xlHAlignCenter;
                 worksheetpm.Range["C" + (head + 4) + ":D" + (head + 4)].Value = "ASISTENTE DE RECURSOS HUMANOS";
@@ -3499,7 +3499,7 @@ namespace SysCisepro3.TalentoHumano
 
                 worksheetp.Range["C" + (head + 3) + ":D" + (head + 3)].Merge();
                 worksheetp.Range["C" + (head + 3) + ":D" + (head + 3)].Cells.HorizontalAlignment = XlHAlign.xlHAlignCenter;
-                worksheetp.Range["C" + (head + 3) + ":D" + (head + 3)].Value = TipoCon == TipoConexion.Cisepro ? "ING. MÓNICA ARMIJOS B." : TipoCon == TipoConexion.Seportpac ? "ING. MA. KATHERINE ALVARADO A." : "";
+                worksheetp.Range["C" + (head + 3) + ":D" + (head + 3)].Value = TipoCon == TipoConexion.Cisepro ? "JESSICA MITE" : TipoCon == TipoConexion.Seportpac ? "ING. MA. KATHERINE ALVARADO A." : "";
                 worksheetp.Range["C" + (head + 4) + ":D" + (head + 4)].Merge();
                 worksheetp.Range["C" + (head + 4) + ":D" + (head + 4)].Cells.HorizontalAlignment = XlHAlign.xlHAlignCenter;
                 worksheetp.Range["C" + (head + 4) + ":D" + (head + 4)].Value = "ASISTENTE DE RECURSOS HUMANOS";
@@ -3567,7 +3567,7 @@ namespace SysCisepro3.TalentoHumano
 
                 worksheetc.Range["C" + (head + 3) + ":D" + (head + 3)].Merge();
                 worksheetc.Range["C" + (head + 3) + ":D" + (head + 3)].Cells.HorizontalAlignment = XlHAlign.xlHAlignCenter;
-                worksheetc.Range["C" + (head + 3) + ":D" + (head + 3)].Value = TipoCon == TipoConexion.Cisepro ? "ING. MÓNICA ARMIJOS B." : TipoCon == TipoConexion.Seportpac ? "ING. MA. KATHERINE ALVARADO A." : "";
+                worksheetc.Range["C" + (head + 3) + ":D" + (head + 3)].Value = TipoCon == TipoConexion.Cisepro ? "JESSICA MITE" : TipoCon == TipoConexion.Seportpac ? "ING. MA. KATHERINE ALVARADO A." : "";
                 worksheetc.Range["C" + (head + 4) + ":D" + (head + 4)].Merge();
                 worksheetc.Range["C" + (head + 4) + ":D" + (head + 4)].Cells.HorizontalAlignment = XlHAlign.xlHAlignCenter;
                 worksheetc.Range["C" + (head + 4) + ":D" + (head + 4)].Value = "ASISTENTE DE RECURSOS HUMANOS";
@@ -3634,7 +3634,7 @@ namespace SysCisepro3.TalentoHumano
 
                 worksheetr.Range["C" + (head + 3) + ":D" + (head + 3)].Merge();
                 worksheetr.Range["C" + (head + 3) + ":D" + (head + 3)].Cells.HorizontalAlignment = XlHAlign.xlHAlignCenter;
-                worksheetr.Range["C" + (head + 3) + ":D" + (head + 3)].Value = TipoCon == TipoConexion.Cisepro ? "ING. MÓNICA ARMIJOS B." : TipoCon == TipoConexion.Seportpac ? "ING. MA. KATHERINE ALVARADO A." : "";
+                worksheetr.Range["C" + (head + 3) + ":D" + (head + 3)].Value = TipoCon == TipoConexion.Cisepro ? "JESSICA MITE" : TipoCon == TipoConexion.Seportpac ? "ING. MA. KATHERINE ALVARADO A." : "";
                 worksheetr.Range["C" + (head + 4) + ":D" + (head + 4)].Merge();
                 worksheetr.Range["C" + (head + 4) + ":D" + (head + 4)].Cells.HorizontalAlignment = XlHAlign.xlHAlignCenter;
                 worksheetr.Range["C" + (head + 4) + ":D" + (head + 4)].Value = "ASISTENTE DE RECURSOS HUMANOS";
@@ -3699,7 +3699,7 @@ namespace SysCisepro3.TalentoHumano
 
                 worksheetm.Range["C" + (hr + 15) + ":D" + (hr + 15)].Merge();
                 worksheetm.Range["C" + (hr + 15) + ":D" + (hr + 15)].Cells.HorizontalAlignment = XlHAlign.xlHAlignCenter;
-                worksheetm.Range["C" + (hr + 15) + ":D" + (hr + 15)].Value = TipoCon == TipoConexion.Cisepro ? "ING. MÓNICA ARMIJOS B." : TipoCon == TipoConexion.Seportpac ? "ING. MA. KATHERINE ALVARADO A." : "";
+                worksheetm.Range["C" + (hr + 15) + ":D" + (hr + 15)].Value = TipoCon == TipoConexion.Cisepro ? "JESSICA MITE" : TipoCon == TipoConexion.Seportpac ? "ING. MA. KATHERINE ALVARADO A." : "";
                 worksheetm.Range["C" + (hr + 16) + ":D" + (hr + 16)].Merge();
                 worksheetm.Range["C" + (hr + 16) + ":D" + (hr + 16)].Cells.HorizontalAlignment = XlHAlign.xlHAlignCenter;
                 worksheetm.Range["C" + (hr + 16) + ":D" + (hr + 16)].Value = "ASISTENTE DE RECURSOS HUMANOS";
