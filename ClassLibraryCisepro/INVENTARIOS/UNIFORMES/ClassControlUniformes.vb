@@ -129,7 +129,18 @@ Namespace INVENTARIOS.UNIFORMES
                 .Parameters.AddWithValue("@ESTADO", SqlDbType.Int).Value = Estado
                 .Parameters.AddWithValue("@ID_DETALLE_KARDEX", SqlDbType.BigInt).Value = IdDetalleKardex
 
-                
+
+            End With
+            Return comando
+        End Function
+
+        Public Function AnularControlCommand() As SqlCommand
+            Dim comando = New SqlCommand
+            With comando
+                .CommandType = CommandType.StoredProcedure
+                .CommandText = "sp_anularControlUniformes"
+                .Parameters.AddWithValue("@ID_CONTROL", SqlDbType.BigInt).Value = IdControl
+
             End With
             Return comando
         End Function

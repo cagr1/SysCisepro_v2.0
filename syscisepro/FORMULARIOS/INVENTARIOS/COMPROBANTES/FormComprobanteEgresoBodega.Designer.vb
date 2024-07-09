@@ -159,6 +159,8 @@
             Me.lblComp = New System.Windows.Forms.Label()
             Me.lblIdSecuencial = New System.Windows.Forms.Label()
             Me.lblCantidadSaldo = New System.Windows.Forms.Label()
+            Me.lbldetalle = New System.Windows.Forms.Label()
+            Me.tmsEliminar = New System.Windows.Forms.ToolStripMenuItem()
             Me.tbComprobanteIngresoBodega.SuspendLayout()
             Me.tpRegistro.SuspendLayout()
             Me.gbBusquedaArticulo.SuspendLayout()
@@ -348,6 +350,7 @@
             Me.gbBusquedaArticulo.Controls.Add(Me.lblIdDetalleKardex)
             Me.gbBusquedaArticulo.Controls.Add(Me.lblIdKardex)
             Me.gbBusquedaArticulo.Controls.Add(Me.lblIdArticulo)
+            Me.gbBusquedaArticulo.Controls.Add(Me.lbldetalle)
             Me.gbBusquedaArticulo.Enabled = False
             Me.gbBusquedaArticulo.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.gbBusquedaArticulo.Location = New System.Drawing.Point(2, 202)
@@ -401,7 +404,7 @@
             Me.txtSerie.BackColor = System.Drawing.Color.White
             Me.txtSerie.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtSerie.ForeColor = System.Drawing.Color.Black
-            Me.txtSerie.Location = New System.Drawing.Point(293, 47)
+            Me.txtSerie.Location = New System.Drawing.Point(293, 48)
             Me.txtSerie.Name = "txtSerie"
             Me.txtSerie.Size = New System.Drawing.Size(101, 21)
             Me.txtSerie.TabIndex = 163
@@ -737,7 +740,7 @@
             Me.txtCodigoArticulo.Enabled = False
             Me.txtCodigoArticulo.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtCodigoArticulo.ForeColor = System.Drawing.Color.Black
-            Me.txtCodigoArticulo.Location = New System.Drawing.Point(180, 47)
+            Me.txtCodigoArticulo.Location = New System.Drawing.Point(180, 48)
             Me.txtCodigoArticulo.Name = "txtCodigoArticulo"
             Me.txtCodigoArticulo.Size = New System.Drawing.Size(107, 21)
             Me.txtCodigoArticulo.TabIndex = 3
@@ -762,7 +765,7 @@
             Me.txtArticulo.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtArticulo.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtArticulo.ForeColor = System.Drawing.Color.Black
-            Me.txtArticulo.Location = New System.Drawing.Point(6, 47)
+            Me.txtArticulo.Location = New System.Drawing.Point(6, 48)
             Me.txtArticulo.Name = "txtArticulo"
             Me.txtArticulo.Size = New System.Drawing.Size(281, 21)
             Me.txtArticulo.TabIndex = 0
@@ -1530,7 +1533,7 @@
             'MenuStrip1
             '
             Me.MenuStrip1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-            Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsmNuevo, Me.tsmGuardar, Me.tsmCancelar, Me.tsmActualizar})
+            Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsmNuevo, Me.tsmGuardar, Me.tsmCancelar, Me.tsmActualizar, Me.tmsEliminar})
             Me.MenuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow
             Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
             Me.MenuStrip1.Name = "MenuStrip1"
@@ -1629,6 +1632,25 @@
             Me.lblCantidadSaldo.Size = New System.Drawing.Size(0, 13)
             Me.lblCantidadSaldo.TabIndex = 193
             Me.lblCantidadSaldo.Visible = False
+            '
+            'lbldetalle
+            '
+            Me.lbldetalle.AutoSize = True
+            Me.lbldetalle.ForeColor = System.Drawing.SystemColors.Highlight
+            Me.lbldetalle.Location = New System.Drawing.Point(27, 53)
+            Me.lbldetalle.Name = "lbldetalle"
+            Me.lbldetalle.Size = New System.Drawing.Size(13, 13)
+            Me.lbldetalle.TabIndex = 218
+            Me.lbldetalle.Text = "0"
+            '
+            'tmsEliminar
+            '
+            Me.tmsEliminar.Enabled = False
+            Me.tmsEliminar.Image = Global.syscisepro.My.Resources.Resources.do_not_disturb_on_24dp_FILL0_wght400_GRAD0_opsz24
+            Me.tmsEliminar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+            Me.tmsEliminar.Name = "tmsEliminar"
+            Me.tmsEliminar.Size = New System.Drawing.Size(89, 28)
+            Me.tmsEliminar.Text = "ANULAR"
             '
             'FormComprobanteEgresoBodega
             '
@@ -1805,5 +1827,7 @@
         Friend WithEvents lblComp As System.Windows.Forms.Label
         Friend WithEvents lblIdSecuencial As System.Windows.Forms.Label
         Friend WithEvents lblCantidadSaldo As System.Windows.Forms.Label
+        Friend WithEvents lbldetalle As Label
+        Friend WithEvents tmsEliminar As ToolStripMenuItem
     End Class
 End Namespace

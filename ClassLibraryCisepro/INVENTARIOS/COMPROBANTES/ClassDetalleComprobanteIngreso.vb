@@ -38,7 +38,7 @@ Namespace INVENTARIOS.COMPROBANTES
                 .Parameters.AddWithValue("@OBSERVACION", SqlDbType.NVarChar).Value = ObservacionDetalleSerial
             End With
             Return comando
-        End Function 
+        End Function
 
         Public Function ModificarDetalleComprobanteIngresoBodegaCommand() As SqlCommand
             Dim comando = New SqlCommand
@@ -52,6 +52,16 @@ Namespace INVENTARIOS.COMPROBANTES
                 .Parameters.AddWithValue("@ID_COMPROBANTE", SqlDbType.NVarChar).Value = IdComprobante
                 .Parameters.AddWithValue("@ESTADO_DETALLE", SqlDbType.Int).Value = Estado
                 .Parameters.AddWithValue("@OBSERVACION", SqlDbType.NVarChar).Value = ObservacionDetalleSerial
+            End With
+            Return comando
+        End Function
+
+        Public Function anularDetalleComprobanteIngresoBodegaCommand() As SqlCommand
+            Dim comando = New SqlCommand
+            With comando
+                .CommandType = CommandType.StoredProcedure
+                .CommandText = "sp_anularDetalleComprobanteIngresoBodega"
+                .Parameters.AddWithValue("@ID_DETALLE_COMPROBANTE", SqlDbType.BigInt).Value = IdDetalle
             End With
             Return comando
         End Function

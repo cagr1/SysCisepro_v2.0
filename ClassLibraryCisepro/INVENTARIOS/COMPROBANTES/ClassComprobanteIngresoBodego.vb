@@ -93,7 +93,19 @@ Namespace INVENTARIOS.COMPROBANTES
             End With
             Return comando
         End Function
-         
+
+
+        Public Function AnularRegistroComprobanteIngresoBodegaCommand() As SqlCommand
+            Dim comando = New SqlCommand
+            With comando
+                .CommandType = CommandType.StoredProcedure
+                .CommandText = "sp_anularComprobanteIngresoBodega"
+                .Parameters.AddWithValue("@ID_COMPROBANTE", SqlDbType.NVarChar).Value = Id
+
+            End With
+            Return comando
+        End Function
+
         Public Function SeleccionarComprobanteIngresoxIdCompronanteIngreso(ByVal tipoCon As TipoConexion, ByVal idComprobante As String) As DataSet
             Dim pars = New List(Of Object())
             pars.Add(New Object() {"ID_COMPROBANTE", SqlDbType.VarChar, idComprobante})
@@ -152,7 +164,8 @@ Namespace INVENTARIOS.COMPROBANTES
             Dim pars = New List(Of Object())
             pars.Add(New Object() {"FECHA_INICIAL", SqlDbType.DateTime, parametroFechaInicial})
             pars.Add(New Object() {"FECHA_FINAL", SqlDbType.DateTime, parametroFechaFinal})
-            Return ComandosSql.SeleccionarQueryWithParamsToDataTable(tipoCon, "SeleccionarComprobanteIngresoBodegaxRengoFechas", True, pars) 
+            Return ComandosSql.SeleccionarQueryWithParamsToDataTable(tipoCon, "sp_seleccionarComprobanteIngresoxRangoFechas", True, pars)
+
         End Function
 
         Public Function SeleccionarDetallesComprobantesIngreso(ByVal tipoCon As TipoConexion, ByVal parametroBusqueda As String) As DataTable

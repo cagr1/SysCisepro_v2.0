@@ -19,6 +19,7 @@ Imports ClassLibraryCisepro.ProcesosSql
 Imports ClassLibraryCisepro.TALENTO_HUMANO
 Imports ClassLibraryCisepro.USUARIOS_DEL_SISTEMA
 Imports ClassLibraryCisepro.VALIDACIONES
+Imports Krypton.Toolkit
 Imports Microsoft.Office.Interop
 Imports syscisepro.DATOS
 Imports syscisepro.FORMULARIOS.INVENTARIOS.PROCESO
@@ -162,6 +163,8 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
             tsmNuevo.Enabled = False
             tsmGuardar.Enabled = True
             tsmCancelar.Enabled = True
+            tsmActualizar.Enabled = False
+            tmsEliminar.Enabled = False
 
             Limpiar()
             _botonSeleccionadoSitio = 1 ' CONTROL INGRESO
@@ -195,6 +198,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
             lblIdArticulo.Text = 0
             lblIdDetalleKardex.Text = 0
             lblIdKardex.Text = 0
+            lbldetalle.Text = 0
 
             _detalleKardex = Nothing
             dgvSecuencial.Rows.Clear()
@@ -349,7 +353,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                     _detalleKardex = _objKardex.BuscarUltimoMoviminetoKardexXIdKardex(_tipoCon, lblIdKardex.Text, lblIdDetalleKardex.Text)
 
                     txtCodigoArticulo.Text = _objSecuencialItem.BuscarCodigoSecuencialItemxNombreSecuencial(_tipoCon, txtArticulo.Text.Trim.ToUpper)
-                    nudCantidad.Value = 1
+                    ' nudCantidad.Value = 1
                     nudValor.Value = _objSecuencialItem.BuscarPvpSecuencialItemXIdSecuencialItem(_tipoCon, lblIdArticulo.Text)
                     cmbObservacionCalidad.SelectedIndex = 0
                     tsmAgregar.Enabled = True
@@ -401,24 +405,25 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
 
             Dim cant = CInt(nudCantidad.Value)
             Dim val = CDbl(nudValor.Value)
-            If Not ValidarKardexRepetidos(CLng(lblIdKardex.Text)) Then
+            lbldetalle.Text = txtSerie.Text
+            If Not ValidarKardexRepetidos(CLng(lblIdKardex.Text), lbldetalle.Text) Then
 
-                Dim fila As String() = _
+                Dim fila As String() =
                     {
-                        txtCodigoArticulo.Text, _
-                        txtArticulo.Text, _
-                        cant, _
-                        val, _
-                        cant * val, _
-                        cmbObservacionCalidad.Text, _
-                        txtObservacion.Text & " - SERIE: " & If(txtSerie.Text.Trim().Length = 0, "-", txtSerie.Text.Trim()), _
-                        _detalleKardex.Rows(0)(0).ToString(), _
-                        _detalleKardex.Rows(0)(9).ToString(), _
-                        If(_detalleKardex.Rows(0)(12).ToString().Equals("INGRESO"), CDbl(_detalleKardex.Rows(0)(14).ToString()), CDbl(_detalleKardex.Rows(0)(17).ToString())), _
-                        If(_detalleKardex.Rows(0)(12).ToString().Equals("INGRESO"), CDbl(_detalleKardex.Rows(0)(15).ToString()), CDbl(_detalleKardex.Rows(0)(18).ToString())), _
-                        CDbl(_detalleKardex.Rows(0)(19).ToString()) - cant, _
-                        val, _
-                        (CDbl(_detalleKardex.Rows(0)(19).ToString()) - cant) * val, _
+                        txtCodigoArticulo.Text,
+                        txtArticulo.Text,
+                        cant,
+                        val,
+                        cant * val,
+                        cmbObservacionCalidad.Text,
+                        txtObservacion.Text & " - SERIE: " & If(txtSerie.Text.Trim().Length = 0, "-", txtSerie.Text.Trim()),
+                        _detalleKardex.Rows(0)(0).ToString(),
+                        _detalleKardex.Rows(0)(9).ToString(),
+                        If(_detalleKardex.Rows(0)(12).ToString().Equals("INGRESO"), CDbl(_detalleKardex.Rows(0)(14).ToString()), CDbl(_detalleKardex.Rows(0)(17).ToString())),
+                        If(_detalleKardex.Rows(0)(12).ToString().Equals("INGRESO"), CDbl(_detalleKardex.Rows(0)(15).ToString()), CDbl(_detalleKardex.Rows(0)(18).ToString())),
+                        CDbl(_detalleKardex.Rows(0)(19).ToString()) - cant,
+                        val,
+                        (CDbl(_detalleKardex.Rows(0)(19).ToString()) - cant) * val,
                         _detalleKardex.Rows(0)(1).ToString()
                     }
 
@@ -444,8 +449,8 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
             End If
         End Sub
 
-        Private Function ValidarKardexRepetidos(ByVal idKardex As Int64) As Boolean
-            'Dim contarRepetidos = 0
+        Private Function ValidarKardexRepetidos(ByVal idKardex As Int64, ByVal detalle As String) As Boolean
+            Dim contarRepetidos = 0
             'Try
             '    For indice = 0 To dgvSecuencial.RowCount - 1 Step 1
             '        If dgvSecuencial.Rows.Item(indice).Cells("NUMERO_KARDEX").Value = idKardex Then
@@ -456,7 +461,34 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
             'Catch
             '    Return False
             'End Try
-            Return False
+            'Return False
+
+            Try
+                For indice = 0 To dgvSecuencial.RowCount - 1
+
+
+                    Dim compareDetalle As String = dgvSecuencial.Rows.Item(indice).Cells("DETALLES").Value.ToString()
+                    Dim compareSerie As String = ""
+
+
+                    If compareDetalle.Contains("SERIE:") Then
+                        compareSerie = compareDetalle.Substring(compareDetalle.IndexOf("SERIE:") + 6).Trim()
+                    End If
+
+                    If dgvSecuencial.Rows.Item(indice).Cells("NUMERO_KARDEX").Value = idKardex And detalle = compareSerie Then
+                        contarRepetidos += 1
+                    End If
+
+
+                    'If dgvSecuencial.Rows.Item(indice).Cells("NUMERO_KARDEX").Value = idKardex AndAlso serie = detalle Then
+                    '    contarRepetidos += 1
+                    'End If
+
+                Next
+                Return contarRepetidos > 0
+            Catch
+                Return False
+            End Try
         End Function
 
         Private Sub tsmEliminar_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles tsmEliminar.Click
@@ -468,6 +500,8 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
         Private Sub btnBuscar_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnBuscar.Click
             CargarComprobantesEgreso()
             tsmActualizar.Enabled = True
+            tmsEliminar.Enabled = True
+            tsmCancelar.Enabled = True
         End Sub
 
         Private Sub CargarComprobantesEgreso()
@@ -484,6 +518,13 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                         dgvComprobantesEgreso.DataSource = _objCompEgr.SeleccionarComprobanteEgresoBodegaxDetalle(_tipoCon, txtDetail.Text.Trim)
                     End If
                 End If
+
+                For Each row In dgvComprobantesEgreso.Rows
+                    If row.Cells("SITIO DE TRABAJO").Value.ToString() = "SIN SITIO" Then
+                        row.DefaultCellStyle.BackColor = Color.LightCoral
+                        row.DefaultCellStyle.ForeColor = Color.DarkRed
+                    End If
+                Next
 
                 dgvComprobantesEgreso.AutoResizeColumns()
                 dgvComprobantesEgreso.AutoResizeRows()
@@ -502,6 +543,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
             tsmGuardar.Enabled = False
             tsmCancelar.Enabled = False
             tsmActualizar.Enabled = False
+            tsmEliminar.Enabled = False
         End Sub
         Private Sub tsmGuardar_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles tsmGuardar.Click
            
@@ -512,7 +554,14 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
             If _botonSeleccionadoSitio = 1 Then
 
                 If dgvSecuencial.RowCount = 0 Then
-                    MsgBox("POR FAVOR, INGRESE LOS ITEMS DEL COMPROBANTES PARA GUARDAR", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+
+                    KryptonMessageBox.Show("POR FAVOR, INGRESE LOS ITEMS DEL COMPROBANTES PARA GUARDAR", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
+                    Return
+                End If
+
+                If CInt(txtUbicacion.Tag) = 0 Then
+                    KryptonMessageBox.Show("POR FAVOR, SELECCIONE UN SITIO DE TRABAJO", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
+
                     Return
                 End If
 
@@ -637,7 +686,13 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                 txtIdComprobante.Text = txtNumero.Text
                 tbComprobanteIngresoBodega.SelectedIndex = 2
             End If
-            MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
+            Dim messageIcon As KryptonMessageBoxIcon
+            If res(0) Then
+                messageIcon = KryptonMessageBoxIcon.Information
+            Else
+                messageIcon = KryptonMessageBoxIcon.Exclamation
+            End If
+            KryptonMessageBox.Show(res(1), "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, messageIcon)
         End Sub
 
         Private Sub chkNumeroComprobante_CheckedChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles chkTodos.CheckedChanged
@@ -896,15 +951,15 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                     Dim s = frm.dgvActivosFijos.CurrentRow.Cells(6).Value.ToString().Split(".")
                     txtSerie.Text = s(s.Length - 1)
 
-                    nudCantidad.Value = 1
-                    nudCantidad.Enabled = False
+                    'nudCantidad.Value = 1
+                    'nudCantidad.Enabled = False
 
                     cmbObservacionCalidad.SelectedIndex = 2
                     txtObservacion.Text = "OK"
                 End If
             Catch
                 txtSerie.Text = "S/N"
-                nudCantidad.Value = 1
+                'nudCantidad.Value = 1
                 cmbObservacionCalidad.SelectedIndex = 2
             End Try
         End Sub
@@ -1157,6 +1212,57 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
 
         End Sub
 
+        Private Sub ModificarComprobanteEgresoAnular()
+            If MessageBox.Show("DESEA ANULAR EL REGISTRO?", "MENSAJE DEL SISTEMA", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> DialogResult.Yes Then Return
+
+
+            _sqlCommands.Clear()
+
+            With _objCompEgr
+                .Id = lblComp.Text  'Id Comprobante 
+            End With
+            _sqlCommands.Add(_objCompEgr.AnularRegistroComprobanteEgresoBodegaCommand())
+
+            Dim result As DataTable = _objControl.SeleccionarIdControlUniformes(_tipoCon, lblComp.Text, lblDetKardex.Text)
+
+
+            If result.Rows.Count > 0 Then
+                Dim idcon As Long = Convert.ToInt64(result.Rows(0)("ID_CONTROL"))
+
+                With _objControl
+                    .IdControl = idcon
+                End With
+                _sqlCommands.Add(_objControl.AnularControlCommand())
+
+            End If
+
+            With _objDetCompEgr
+                .IdDetalle = lblDetaComp.Text
+            End With
+            _sqlCommands.Add(_objDetCompEgr.anularDetalleComprobanteEgresoBodegaCommand())
+
+            With _objDetalleKardex
+                .Id = lblDetKardex.Text
+            End With
+            _sqlCommands.Add(_objDetalleKardex.AnularRegistroDetalleKardexCommand())
+
+            Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, String.Empty)
+            If res(0) Then
+                tsmNuevo.Enabled = False
+                tsmGuardar.Enabled = False
+                tsmCancelar.Enabled = False
+            End If
+
+            Dim messageIcon As KryptonMessageBoxIcon
+            If res(0) Then
+                messageIcon = KryptonMessageBoxIcon.Information
+            Else
+                messageIcon = KryptonMessageBoxIcon.Exclamation
+            End If
+
+            KryptonMessageBox.Show(res(1), "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, messageIcon)
+        End Sub
+
         Private Sub tsmActualizar_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles tsmActualizar.Click
 
 
@@ -1173,6 +1279,21 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                 MsgBox("SELECCIONE UN REGISTRO A MODIFICAR", MsgBoxStyle.Information, "MENSAJE")
             End If
 
+        End Sub
+
+        Private Sub tmsEliminar_Click(sender As Object, e As EventArgs) Handles tmsEliminar.Click
+
+            If dgvComprobantesEgreso.CurrentRow Is Nothing Then
+                KryptonMessageBox.Show("No hay datos para anular!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
+                Return
+            Else
+
+                ModificarComprobanteEgresoAnular()
+                dgvComprobantesEgreso.DataSource = Nothing
+                dgvDetalleComprobate.DataSource = Nothing
+
+                Return
+            End If
         End Sub
     End Class
 End Namespace

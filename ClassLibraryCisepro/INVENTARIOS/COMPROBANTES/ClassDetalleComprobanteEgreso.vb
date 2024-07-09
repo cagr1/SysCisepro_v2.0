@@ -54,6 +54,16 @@ Namespace INVENTARIOS.COMPROBANTES
             End With
             Return comando
         End Function
+
+        Public Function anularDetalleComprobanteEgresoBodegaCommand() As SqlCommand
+            Dim comando = New SqlCommand
+            With comando
+                .CommandType = CommandType.StoredProcedure
+                .CommandText = "sp_anularDetalleComprobanteEgresoBodega"
+                .Parameters.AddWithValue("@ID_DETALLE_COMPROBANTE", SqlDbType.BigInt).Value = IdDetalle
+            End With
+            Return comando
+        End Function
     End Class
 End Namespace
 

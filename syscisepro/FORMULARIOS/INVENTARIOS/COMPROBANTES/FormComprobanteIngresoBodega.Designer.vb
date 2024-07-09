@@ -112,13 +112,14 @@
             Me.Label26 = New System.Windows.Forms.Label()
             Me.Label27 = New System.Windows.Forms.Label()
             Me.txtCodigoArticulo = New System.Windows.Forms.TextBox()
-            Me.Label28 = New System.Windows.Forms.Label()
             Me.txtArticulo = New System.Windows.Forms.TextBox()
+            Me.Label28 = New System.Windows.Forms.Label()
             Me.Label29 = New System.Windows.Forms.Label()
             Me.lblIdDetalleKardex = New System.Windows.Forms.Label()
             Me.lblIdKardex = New System.Windows.Forms.Label()
             Me.lblIdArticulo = New System.Windows.Forms.Label()
             Me.lblOpcion = New System.Windows.Forms.Label()
+            Me.lblDetalle = New System.Windows.Forms.Label()
             Me.Label5 = New System.Windows.Forms.Label()
             Me.Label1 = New System.Windows.Forms.Label()
             Me.lblRazon = New System.Windows.Forms.Label()
@@ -155,6 +156,7 @@
             Me.tsmGuardar = New System.Windows.Forms.ToolStripMenuItem()
             Me.tsmCancelar = New System.Windows.Forms.ToolStripMenuItem()
             Me.TmsActualizar = New System.Windows.Forms.ToolStripMenuItem()
+            Me.TmsEliminar = New System.Windows.Forms.ToolStripMenuItem()
             Me.lblCantidadSaldo = New System.Windows.Forms.Label()
             Me.lblComp = New System.Windows.Forms.Label()
             Me.lblDetaComp = New System.Windows.Forms.Label()
@@ -162,8 +164,6 @@
             Me.lblIdKardex2 = New System.Windows.Forms.Label()
             Me.lblIdSecuencial = New System.Windows.Forms.Label()
             Me.lblCantidadInicial = New System.Windows.Forms.Label()
-            Me.lblDetalle = New System.Windows.Forms.Label()
-            Me.TmsEliminar = New System.Windows.Forms.ToolStripMenuItem()
             Me.tbComprobanteIngresoBodega.SuspendLayout()
             Me.tpRegistro.SuspendLayout()
             Me.gbBusquedaArticulo.SuspendLayout()
@@ -1059,18 +1059,6 @@
             Me.txtCodigoArticulo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
             Me.txtCodigoArticulo.Visible = False
             '
-            'Label28
-            '
-            Me.Label28.AutoSize = True
-            Me.Label28.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label28.ForeColor = System.Drawing.Color.Black
-            Me.Label28.Location = New System.Drawing.Point(191, 27)
-            Me.Label28.Name = "Label28"
-            Me.Label28.Size = New System.Drawing.Size(51, 13)
-            Me.Label28.TabIndex = 163
-            Me.Label28.Text = "CÓDIGO:"
-            Me.Label28.Visible = False
-            '
             'txtArticulo
             '
             Me.txtArticulo.BackColor = System.Drawing.Color.White
@@ -1082,6 +1070,18 @@
             Me.txtArticulo.Size = New System.Drawing.Size(317, 21)
             Me.txtArticulo.TabIndex = 159
             Me.txtArticulo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+            '
+            'Label28
+            '
+            Me.Label28.AutoSize = True
+            Me.Label28.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Label28.ForeColor = System.Drawing.Color.Black
+            Me.Label28.Location = New System.Drawing.Point(191, 27)
+            Me.Label28.Name = "Label28"
+            Me.Label28.Size = New System.Drawing.Size(51, 13)
+            Me.Label28.TabIndex = 163
+            Me.Label28.Text = "CÓDIGO:"
+            Me.Label28.Visible = False
             '
             'Label29
             '
@@ -1139,6 +1139,16 @@
             Me.lblOpcion.Name = "lblOpcion"
             Me.lblOpcion.Size = New System.Drawing.Size(0, 13)
             Me.lblOpcion.TabIndex = 150
+            '
+            'lblDetalle
+            '
+            Me.lblDetalle.AutoSize = True
+            Me.lblDetalle.ForeColor = System.Drawing.SystemColors.Highlight
+            Me.lblDetalle.Location = New System.Drawing.Point(43, 51)
+            Me.lblDetalle.Name = "lblDetalle"
+            Me.lblDetalle.Size = New System.Drawing.Size(13, 13)
+            Me.lblDetalle.TabIndex = 202
+            Me.lblDetalle.Text = "0"
             '
             'Label5
             '
@@ -1607,6 +1617,15 @@
             Me.TmsActualizar.Size = New System.Drawing.Size(112, 28)
             Me.TmsActualizar.Text = "ACTUALIZAR"
             '
+            'TmsEliminar
+            '
+            Me.TmsEliminar.Enabled = False
+            Me.TmsEliminar.Image = Global.syscisepro.My.Resources.Resources.do_not_disturb_on_24dp_FILL0_wght400_GRAD0_opsz24
+            Me.TmsEliminar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+            Me.TmsEliminar.Name = "TmsEliminar"
+            Me.TmsEliminar.Size = New System.Drawing.Size(89, 28)
+            Me.TmsEliminar.Text = "ANULAR"
+            '
             'lblCantidadSaldo
             '
             Me.lblCantidadSaldo.AutoSize = True
@@ -1669,25 +1688,6 @@
             Me.lblCantidadInicial.Size = New System.Drawing.Size(0, 13)
             Me.lblCantidadInicial.TabIndex = 196
             Me.lblCantidadInicial.Visible = False
-            '
-            'lblDetalle
-            '
-            Me.lblDetalle.AutoSize = True
-            Me.lblDetalle.ForeColor = System.Drawing.SystemColors.Highlight
-            Me.lblDetalle.Location = New System.Drawing.Point(43, 51)
-            Me.lblDetalle.Name = "lblDetalle"
-            Me.lblDetalle.Size = New System.Drawing.Size(13, 13)
-            Me.lblDetalle.TabIndex = 202
-            Me.lblDetalle.Text = "0"
-            '
-            'TmsEliminar
-            '
-            Me.TmsEliminar.Enabled = False
-            Me.TmsEliminar.Image = Global.syscisepro.My.Resources.Resources.do_not_disturb_on_24dp_FILL0_wght400_GRAD0_opsz24
-            Me.TmsEliminar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-            Me.TmsEliminar.Name = "TmsEliminar"
-            Me.TmsEliminar.Size = New System.Drawing.Size(89, 28)
-            Me.TmsEliminar.Text = "ANULAR"
             '
             'FormComprobanteIngresoBodega
             '

@@ -170,7 +170,7 @@ Namespace INVENTARIOS.COMPROBANTES
             Dim pars = New List(Of Object())
             pars.Add(New Object() {"FECHA_INICIAL", SqlDbType.DateTime, parametroFechaInicial})
             pars.Add(New Object() {"FECHA_FINAL", SqlDbType.DateTime, parametroFechaFinal})
-            Return ComandosSql.SeleccionarQueryWithParamsToDataTable(tipoCon, "SeleccionarComprobanteEgresoBodegaxRengoFechas", True, pars) 
+            Return ComandosSql.SeleccionarQueryWithParamsToDataTable(tipoCon, "sp_seleccionarComprobanteEgresoxRangoFechas", True, pars)
         End Function
 
         Public Function SeleccionarDetallesComprobantesEgreso(ByVal tipoCon As TipoConexion, ByVal parametroBusqueda As String) As DataTable
@@ -191,6 +191,19 @@ Namespace INVENTARIOS.COMPROBANTES
 
         End Function
 
+        Public Function AnularRegistroComprobanteEgresoBodegaCommand() As SqlCommand
+            Dim comando = New SqlCommand
+            With comando
+                .CommandType = CommandType.StoredProcedure
+                .CommandText = "sp_anularComprobanteEgresoBodega"
+                .Parameters.AddWithValue("@ID_COMPROBANTE", SqlDbType.NVarChar).Value = Id
+
+            End With
+            Return comando
+        End Function
+
+
+
 
         'Public Function AnularRegistroDetalleComprobantePorId(ByVal idc As String) As SqlCommand
         '    Dim comando = New SqlCommand
@@ -201,6 +214,6 @@ Namespace INVENTARIOS.COMPROBANTES
         '    End With
         '    Return comando
         'End Function
-         
+
     End Class
 End Namespace

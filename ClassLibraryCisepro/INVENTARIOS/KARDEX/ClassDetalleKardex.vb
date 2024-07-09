@@ -104,6 +104,21 @@ Namespace INVENTARIOS.KARDEX
             Return comando
         End Function
 
+        Public Function AnularRegistroDetalleKardexCommand() As SqlCommand
+            Dim comando As New SqlCommand()
+            Try
+                With comando
+                    .CommandType = CommandType.StoredProcedure
+                    .CommandText = "sp_anularRegistroDetalleKardex"
+                    .Parameters.AddWithValue("@ID_DETALLE", SqlDbType.BigInt).Value = Id
+
+                End With
+            Catch
+                comando = Nothing
+            End Try
+            Return comando
+        End Function
+
 
         'Public Function NuevoRegistroDetalleKardex() As SqlCommand
         '    Dim comando = New SqlCommand
@@ -129,6 +144,6 @@ Namespace INVENTARIOS.KARDEX
         '    End With
         '    Return comando
         'End Function
-          
+
     End Class
 End Namespace

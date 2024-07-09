@@ -140,7 +140,6 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
             For Each row As DataGridViewRow In dgvFacturaVenta.Rows
                 If row.Cells("EST").Value = 0 Then
                     row.DefaultCellStyle.BackColor = Color.LightCoral
-                    row.DefaultCellStyle.ForeColor = Color.DarkRed
                 End If
             Next
 
