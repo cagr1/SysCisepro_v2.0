@@ -110,7 +110,7 @@ Namespace INVENTARIOS.UNIFORMES
             pars.Add(New Object() {"idcomp", SqlDbType.VarChar, Idcomp})
             'pars.Add(New Object() {"idper", SqlDbType.Int, idper})
             pars.Add(New Object() {"iddetkar", SqlDbType.BigInt, idkar})
-            Return ComandosSql.SeleccionarQueryWithParamsToDataTable(tipoCon, "seleccionarIdControlUniformes", True, pars)
+            Return ComandosSql.SeleccionarQueryWithParamsToDataTable(tipoCon, "sleccionarIdControlUniformes", True, pars)
 
 
         End Function

@@ -162,6 +162,8 @@
             Me.lblIdKardex2 = New System.Windows.Forms.Label()
             Me.lblIdSecuencial = New System.Windows.Forms.Label()
             Me.lblCantidadInicial = New System.Windows.Forms.Label()
+            Me.lblDetalle = New System.Windows.Forms.Label()
+            Me.TmsEliminar = New System.Windows.Forms.ToolStripMenuItem()
             Me.tbComprobanteIngresoBodega.SuspendLayout()
             Me.tpRegistro.SuspendLayout()
             Me.gbBusquedaArticulo.SuspendLayout()
@@ -685,16 +687,17 @@
             Me.gbBusquedaArticulo.Controls.Add(Me.Label26)
             Me.gbBusquedaArticulo.Controls.Add(Me.Label27)
             Me.gbBusquedaArticulo.Controls.Add(Me.txtCodigoArticulo)
-            Me.gbBusquedaArticulo.Controls.Add(Me.Label28)
             Me.gbBusquedaArticulo.Controls.Add(Me.txtArticulo)
+            Me.gbBusquedaArticulo.Controls.Add(Me.Label28)
             Me.gbBusquedaArticulo.Controls.Add(Me.Label29)
             Me.gbBusquedaArticulo.Controls.Add(Me.lblIdDetalleKardex)
             Me.gbBusquedaArticulo.Controls.Add(Me.lblIdKardex)
             Me.gbBusquedaArticulo.Controls.Add(Me.lblIdArticulo)
             Me.gbBusquedaArticulo.Controls.Add(Me.lblOpcion)
+            Me.gbBusquedaArticulo.Controls.Add(Me.lblDetalle)
             Me.gbBusquedaArticulo.Enabled = False
             Me.gbBusquedaArticulo.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.gbBusquedaArticulo.Location = New System.Drawing.Point(3, 215)
+            Me.gbBusquedaArticulo.Location = New System.Drawing.Point(11, 230)
             Me.gbBusquedaArticulo.Name = "gbBusquedaArticulo"
             Me.gbBusquedaArticulo.Size = New System.Drawing.Size(1255, 342)
             Me.gbBusquedaArticulo.TabIndex = 148
@@ -1049,7 +1052,7 @@
             Me.txtCodigoArticulo.Enabled = False
             Me.txtCodigoArticulo.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtCodigoArticulo.ForeColor = System.Drawing.Color.Black
-            Me.txtCodigoArticulo.Location = New System.Drawing.Point(194, 43)
+            Me.txtCodigoArticulo.Location = New System.Drawing.Point(194, 42)
             Me.txtCodigoArticulo.Name = "txtCodigoArticulo"
             Me.txtCodigoArticulo.Size = New System.Drawing.Size(129, 21)
             Me.txtCodigoArticulo.TabIndex = 161
@@ -1074,7 +1077,7 @@
             Me.txtArticulo.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtArticulo.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtArticulo.ForeColor = System.Drawing.Color.Black
-            Me.txtArticulo.Location = New System.Drawing.Point(6, 43)
+            Me.txtArticulo.Location = New System.Drawing.Point(6, 42)
             Me.txtArticulo.Name = "txtArticulo"
             Me.txtArticulo.Size = New System.Drawing.Size(317, 21)
             Me.txtArticulo.TabIndex = 159
@@ -1536,10 +1539,10 @@
             'TabPage2
             '
             Me.TabPage2.Controls.Add(Me.PictureBox1)
-            Me.TabPage2.Location = New System.Drawing.Point(4, 24)
+            Me.TabPage2.Location = New System.Drawing.Point(4, 22)
             Me.TabPage2.Name = "TabPage2"
             Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-            Me.TabPage2.Size = New System.Drawing.Size(1248, 527)
+            Me.TabPage2.Size = New System.Drawing.Size(1248, 529)
             Me.TabPage2.TabIndex = 1
             Me.TabPage2.Text = "Imagen Adjunta"
             Me.TabPage2.UseVisualStyleBackColor = True
@@ -1549,7 +1552,7 @@
             Me.PictureBox1.Dock = System.Windows.Forms.DockStyle.Fill
             Me.PictureBox1.Location = New System.Drawing.Point(3, 3)
             Me.PictureBox1.Name = "PictureBox1"
-            Me.PictureBox1.Size = New System.Drawing.Size(1242, 521)
+            Me.PictureBox1.Size = New System.Drawing.Size(1242, 523)
             Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
             Me.PictureBox1.TabIndex = 1
             Me.PictureBox1.TabStop = False
@@ -1557,14 +1560,14 @@
             'MenuStrip1
             '
             Me.MenuStrip1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-            Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsmNuevo, Me.tsmGuardar, Me.tsmCancelar, Me.TmsActualizar})
+            Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsmNuevo, Me.tsmGuardar, Me.tsmCancelar, Me.TmsActualizar, Me.TmsEliminar})
             Me.MenuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow
             Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
             Me.MenuStrip1.Name = "MenuStrip1"
             Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(8, 2, 0, 2)
             Me.MenuStrip1.Size = New System.Drawing.Size(1270, 32)
             Me.MenuStrip1.TabIndex = 189
-            Me.MenuStrip1.Text = "msIngresoBodega"
+            Me.MenuStrip1.Text = "ELIMINAR"
             '
             'tsmNuevo
             '
@@ -1666,6 +1669,25 @@
             Me.lblCantidadInicial.Size = New System.Drawing.Size(0, 13)
             Me.lblCantidadInicial.TabIndex = 196
             Me.lblCantidadInicial.Visible = False
+            '
+            'lblDetalle
+            '
+            Me.lblDetalle.AutoSize = True
+            Me.lblDetalle.ForeColor = System.Drawing.SystemColors.Highlight
+            Me.lblDetalle.Location = New System.Drawing.Point(43, 51)
+            Me.lblDetalle.Name = "lblDetalle"
+            Me.lblDetalle.Size = New System.Drawing.Size(13, 13)
+            Me.lblDetalle.TabIndex = 202
+            Me.lblDetalle.Text = "0"
+            '
+            'TmsEliminar
+            '
+            Me.TmsEliminar.Enabled = False
+            Me.TmsEliminar.Image = Global.syscisepro.My.Resources.Resources.do_not_disturb_on_24dp_FILL0_wght400_GRAD0_opsz24
+            Me.TmsEliminar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+            Me.TmsEliminar.Name = "TmsEliminar"
+            Me.TmsEliminar.Size = New System.Drawing.Size(89, 28)
+            Me.TmsEliminar.Text = "ANULAR"
             '
             'FormComprobanteIngresoBodega
             '
@@ -1845,5 +1867,7 @@
         Friend WithEvents lblIdKardex2 As System.Windows.Forms.Label
         Friend WithEvents lblIdSecuencial As System.Windows.Forms.Label
         Friend WithEvents lblCantidadInicial As System.Windows.Forms.Label
+        Friend WithEvents lblDetalle As Label
+        Friend WithEvents TmsEliminar As ToolStripMenuItem
     End Class
 End Namespace

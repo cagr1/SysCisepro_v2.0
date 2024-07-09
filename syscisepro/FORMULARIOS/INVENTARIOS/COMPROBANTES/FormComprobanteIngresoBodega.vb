@@ -21,6 +21,7 @@ Imports ClassLibraryCisepro.VALIDACIONES
 Imports Microsoft.Office.Interop
 Imports syscisepro.DATOS
 Imports syscisepro.FORMULARIOS.INVENTARIOS.PROCESO
+Imports Krypton.Toolkit
 
 Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
     ''' <summary>
@@ -217,6 +218,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
             lblIdArticulo.Text = 0
             lblIdDetalleKardex.Text = 0
             lblIdKardex.Text = 0
+            lblDetalle.Text = 0
             _detalleKardex = Nothing
             dgvSecuencial.Rows.Clear()
         End Sub
@@ -340,10 +342,11 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                 lblIdArticulo.Text = _objSecuencialItem.BuscarIdSecuencialItemXNombreSecuencialItem(_tipoCon, txtArticulo.Text.Trim)
                 lblIdKardex.Text = _objKardex.BuscarKardexPorIdSecuencialItem(_tipoCon, lblIdArticulo.Text.Trim)
                 lblIdDetalleKardex.Text = _objDetalleKardex.BuscarMayorIdDetalleKardexxIdKardex(_tipoCon, lblIdKardex.Text)
+
                 If CInt(lblIdKardex.Text) > 0 Then
                     _detalleKardex = _objKardex.BuscarUltimoMoviminetoKardexXIdKardex(_tipoCon, lblIdKardex.Text, lblIdDetalleKardex.Text)
                     txtCodigoArticulo.Text = _objSecuencialItem.BuscarCodigoSecuencialItemxNombreSecuencial(_tipoCon, txtArticulo.Text.Trim.ToUpper)
-                    nudCantidad.Value = 1
+                    'nudCantidad.Value = 1
                     nudValor.Value = _objSecuencialItem.BuscarCostoSecuencialItemXIdSecuencialItem(_tipoCon, lblIdArticulo.Text)
                     cmbObservacionCalidad.SelectedIndex = 0
                     tsmAgregar.Enabled = True
@@ -393,27 +396,27 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                 MsgBox("POR FAVOR, SELECCIONE LA OBSERVACIÓN DE CALIDAD PARA ESTE ITEM", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÒN")
                 Return
             End If
-
+            lblDetalle.Text = txtSerie.Text
             Dim cant = CInt(nudCantidad.Value)
             Dim val = CDbl(nudValor.Value)
-            If Not ValidarKardexRepetidos(CLng(lblIdKardex.Text)) Then
+            If Not ValidarKardexRepetidos(CLng(lblIdKardex.Text), lblDetalle.Text) Then
 
-                Dim fila As String() = _
+                Dim fila As String() =
                     {
-                        txtCodigoArticulo.Text, _
-                        txtArticulo.Text, _
-                        cant, _
-                        val, _
-                        cant * val, _
-                        cmbObservacionCalidad.Text, _
-                        txtObservacion.Text & " - SERIE: " & If(txtSerie.Text.Trim().Length = 0, "-", txtSerie.Text.Trim()), _
-                        _detalleKardex.Rows(0)(0).ToString(), _
-                        _detalleKardex.Rows(0)(9).ToString(), _
-                        If(_detalleKardex.Rows(0)(12).ToString().Equals("INGRESO"), CDbl(_detalleKardex.Rows(0)(14).ToString()), CDbl(_detalleKardex.Rows(0)(17).ToString())), _
-                        If(_detalleKardex.Rows(0)(12).ToString().Equals("INGRESO"), CDbl(_detalleKardex.Rows(0)(15).ToString()), CDbl(_detalleKardex.Rows(0)(18).ToString())), _
-                        CDbl(_detalleKardex.Rows(0)(19).ToString()) - cant, _
-                        val, _
-                        (CDbl(_detalleKardex.Rows(0)(19).ToString()) - cant) * val, _
+                        txtCodigoArticulo.Text,
+                        txtArticulo.Text,
+                        cant,
+                        val,
+                        cant * val,
+                        cmbObservacionCalidad.Text,
+                        txtObservacion.Text & " - SERIE: " & If(txtSerie.Text.Trim().Length = 0, "-", txtSerie.Text.Trim()),
+                        _detalleKardex.Rows(0)(0).ToString(),
+                        _detalleKardex.Rows(0)(9).ToString(),
+                        If(_detalleKardex.Rows(0)(12).ToString().Equals("INGRESO"), CDbl(_detalleKardex.Rows(0)(14).ToString()), CDbl(_detalleKardex.Rows(0)(17).ToString())),
+                        If(_detalleKardex.Rows(0)(12).ToString().Equals("INGRESO"), CDbl(_detalleKardex.Rows(0)(15).ToString()), CDbl(_detalleKardex.Rows(0)(18).ToString())),
+                        CDbl(_detalleKardex.Rows(0)(19).ToString()) - cant,
+                        val,
+                        (CDbl(_detalleKardex.Rows(0)(19).ToString()) - cant) * val,
                         _detalleKardex.Rows(0)(1).ToString()
                     }
                 dgvSecuencial.Rows.Add(fila)
@@ -438,13 +441,48 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
             End If
         End Sub
 
-        Private Function ValidarKardexRepetidos(ByVal idKardex As Int64) As Boolean
+        'Private Function ValidarKardexRepetidos(ByVal idKardex As Int64, ByVal idDetalle As String) As Boolean
+        Private Function ValidarKardexRepetidosCompra(ByVal idKardex As Int64) As Boolean
             Dim contarRepetidos = 0
+            'AndAlso dgvSecuencial.Rows.Item(indice).Cells("DETALLE_KARDEX").Value
             Try
                 For indice = 0 To dgvSecuencial.RowCount - 1 Step 1
                     If dgvSecuencial.Rows.Item(indice).Cells("NUMERO_KARDEX").Value = idKardex Then
                         contarRepetidos += 1
                     End If
+                Next
+                Return contarRepetidos > 0
+            Catch
+                Return False
+            End Try
+        End Function
+
+        Private Function ValidarKardexRepetidos(ByVal idKardex As Int64, ByVal detalle As String) As Boolean
+            Dim contarRepetidos = 0
+            'AndAlso dgvSecuencial.Rows.Item(indice).Cells("DETALLE_KARDEX").Value
+
+
+            Try
+                For indice = 0 To dgvSecuencial.RowCount - 1
+
+
+                    Dim compareDetalle As String = dgvSecuencial.Rows.Item(indice).Cells("DETALLES").Value.ToString()
+                    Dim compareSerie As String = ""
+
+
+                    If compareDetalle.Contains("SERIE:") Then
+                        compareSerie = compareDetalle.Substring(compareDetalle.IndexOf("SERIE:") + 6).Trim()
+                    End If
+
+                    If dgvSecuencial.Rows.Item(indice).Cells("NUMERO_KARDEX").Value = idKardex And detalle = compareSerie Then
+                        contarRepetidos += 1
+                    End If
+
+
+                    'If dgvSecuencial.Rows.Item(indice).Cells("NUMERO_KARDEX").Value = idKardex AndAlso serie = detalle Then
+                    '    contarRepetidos += 1
+                    'End If
+
                 Next
                 Return contarRepetidos > 0
             Catch
@@ -460,6 +498,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
         Private Sub btnBuscar_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnBuscar.Click
             CargarComprobantesEgreso()
             TmsActualizar.Enabled = True
+            TmsEliminar.Enabled = True
         End Sub
 
         Private Sub CargarComprobantesEgreso()
@@ -495,6 +534,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
             tsmGuardar.Enabled = False
             tsmCancelar.Enabled = False
             TmsActualizar.Enabled = False
+            TmsEliminar.Enabled = False
         End Sub
         Private Sub tsmGuardar_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles tsmGuardar.Click
             If chkReq.Checked And lblOrdenCompra.Text.Equals("###") Then
@@ -502,7 +542,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                 Return
             End If
 
-            
+
 
             If MessageBox.Show("DESEA GUARDAR LOS CAMBIOS?", "MENSAJE DEL SISTEMA", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> DialogResult.Yes Then Return
 
@@ -645,6 +685,10 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                 txtNroComprobante.Text = _objCompIng.Id
                 txtIdComprobante.Text = txtNroComprobante.Text
                 tbComprobanteIngresoBodega.SelectedIndex = 2
+                tsmNuevo.Enabled = True
+                tsmGuardar.Enabled = False
+                tsmCancelar.Enabled = False
+                TmsActualizar.Enabled = True
             End If
             MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
         End Sub
@@ -862,7 +906,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
             Try
                 If frm.ShowDialog = vbOK Then
                     txtUbicacion.Tag = frm.ListView1.SelectedItems(0).SubItems(0).Text.Trim ' ids
-                    txtUbicacion.Text = "CLIENTE: " & frm.ListView1.SelectedItems(0).Group.Header.Trim & vbNewLine & _
+                    txtUbicacion.Text = "CLIENTE: " & frm.ListView1.SelectedItems(0).Group.Header.Trim & vbNewLine &
                         "PUESTO: " & frm.ListView1.SelectedItems(0).SubItems(2).Text.Trim
                 End If
             Catch
@@ -881,15 +925,15 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                     Dim s = frm.dgvActivosFijos.CurrentRow.Cells(6).Value.ToString().Split(".")
                     txtSerie.Text = s(s.Length - 1)
 
-                    nudCantidad.Value = 1
-                    nudCantidad.Enabled = False
+                    'nudCantidad.Value = 1
+                    'nudCantidad.Enabled = False
 
                     cmbObservacionCalidad.SelectedIndex = 2
                     txtObservacion.Text = "OK"
                 End If
             Catch
                 txtSerie.Text = "S/N"
-                nudCantidad.Value = 1
+                ' nudCantidad.Value = 1
                 cmbObservacionCalidad.SelectedIndex = 2
             End Try
         End Sub
@@ -935,29 +979,29 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
 
                 ' cargar items
                 For Each row As DataGridViewRow In oc.dgvDetalleOrdenCompra.Rows
-                    If Not ValidarKardexRepetidos(CLng(row.Cells(9).Value)) Then
+                    If Not ValidarKardexRepetidosCompra(CLng(row.Cells(9).Value)) Then
                         Dim dk = _objDetalleKardex.BuscarMayorIdDetalleKardexxIdKardex(_tipoCon, CLng(row.Cells(9).Value))
                         _detalleKardex = _objKardex.BuscarUltimoMoviminetoKardexXIdKardex(_tipoCon, CLng(row.Cells(9).Value), dk)
 
                         Dim cant = CInt(row.Cells(3).Value)
                         Dim val = CDbl(row.Cells(4).Value)
 
-                        Dim fila As String() = _
+                        Dim fila As String() =
                             {
                             row.Cells(12).Value,
                             row.Cells(1).Value,
-                            cant, _
-                            val, _
-                            cant * val, _
-                            "NUEVO", _
-                            "OK - SERIE: " & If(row.Cells(11).Value.ToString.Trim().Length = 0, "-", row.Cells(11).Value.ToString.Trim()), _
-                            _detalleKardex.Rows(0)(0).ToString(), _
-                            _detalleKardex.Rows(0)(9).ToString(), _
-                            If(_detalleKardex.Rows(0)(12).ToString().Equals("INGRESO"), CDbl(_detalleKardex.Rows(0)(14).ToString()), CDbl(_detalleKardex.Rows(0)(17).ToString())), _
-                            If(_detalleKardex.Rows(0)(12).ToString().Equals("INGRESO"), CDbl(_detalleKardex.Rows(0)(15).ToString()), CDbl(_detalleKardex.Rows(0)(18).ToString())), _
-                            CDbl(_detalleKardex.Rows(0)(19).ToString()) - cant, _
-                            val, _
-                            (CDbl(_detalleKardex.Rows(0)(19).ToString()) - cant) * val, _
+                            cant,
+                            val,
+                            cant * val,
+                            "NUEVO",
+                            "OK - SERIE: " & If(row.Cells(11).Value.ToString.Trim().Length = 0, "-", row.Cells(11).Value.ToString.Trim()),
+                            _detalleKardex.Rows(0)(0).ToString(),
+                            _detalleKardex.Rows(0)(9).ToString(),
+                            If(_detalleKardex.Rows(0)(12).ToString().Equals("INGRESO"), CDbl(_detalleKardex.Rows(0)(14).ToString()), CDbl(_detalleKardex.Rows(0)(17).ToString())),
+                            If(_detalleKardex.Rows(0)(12).ToString().Equals("INGRESO"), CDbl(_detalleKardex.Rows(0)(15).ToString()), CDbl(_detalleKardex.Rows(0)(18).ToString())),
+                            CDbl(_detalleKardex.Rows(0)(19).ToString()) - cant,
+                            val,
+                            (CDbl(_detalleKardex.Rows(0)(19).ToString()) - cant) * val,
                             _detalleKardex.Rows(0)(1).ToString()
                             }
                         dgvSecuencial.Rows.Add(fila)
@@ -1013,6 +1057,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
             tsmNuevo.Enabled = False
             tsmGuardar.Enabled = True
             tsmCancelar.Enabled = True
+            TmsEliminar.Enabled = False
             _botonSeleccionadoSitio = 2
             txtProveedores.Text = _objPer.BuscarApellidosNombresPersonalXIdPersonal(_tipoCon, _objPer.BuscarIdPersonalXIdUsuario(_tipoCon, IdUsuario))
 
@@ -1020,8 +1065,9 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                 HabilitarIngresos(True)
                 tsmAgregar.Enabled = False
             Else
-                tsmEliminar.Enabled = False
+
                 MsgBox("SELECCIONE UN REGISTRO A MODIFICAR", MsgBoxStyle.Information, "MENSAJE")
+
             End If
         End Sub
 
@@ -1087,8 +1133,8 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
             Dim toIngre = cant * val
             Dim saldoTotal = Convert.ToInt32(lblCantidadSaldo.Text)
             Dim CantidadIngreso = Convert.ToInt32(dgvDetalleComprobate.CurrentRow.Cells.Item(8).Value)
-            
-            
+
+
             Dim result As DataTable = _objControl.SeleccionarIdControlUniformes(_tipoCon, lblComp.Text, lblDetaKardex.Text)
 
 
@@ -1215,7 +1261,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                 With _objKardex
                     .Id = lblIdKardex2.Text
                     .IdsecuencialItem = lblIdSecuencial.Text
-                    .Cantidad = 
+                    .Cantidad =
                     .Fecha = dtpFecha.Value
                     .Estado = 1
                 End With
@@ -1224,6 +1270,55 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
 
         End Sub
 
+        Private Sub ModificarComprobanteIngresoAnular()
 
+            If MessageBox.Show("DESEA ANULAR EL REGISTRO?", "MENSAJE DEL SISTEMA", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> DialogResult.Yes Then Return
+
+            _sqlCommands.Clear()
+
+            With _objCompIng
+                .Id = lblComp.Text  'Id Comprobante 
+                .Fecha = dtpFecha.Value
+                .Estado = 0
+
+            End With
+            _sqlCommands.Add(_objCompIng.ModificarRegistroComprobanteIngresoBodegaCommand())
+
+            Dim result As DataTable = _objControl.SeleccionarIdControlUniformes(_tipoCon, lblComp.Text, lblDetaKardex.Text)
+
+
+            If result.Rows.Count > 0 Then
+                Dim idcon As Long = Convert.ToInt64(result.Rows(0)("ID_CONTROL"))
+
+                With _objControl
+                    .IdControl = idcon
+                    .Fecha = dtpFecha.Value
+                    .Estado = 1
+                    .IdDetalleKardex = lblDetaKardex.Text
+                End With
+                _sqlCommands.Add(_objControl.ModificarControlCommand())
+
+            End If
+
+
+
+
+        End Sub
+
+        Private Sub TmsEliminar_Click(sender As Object, e As EventArgs) Handles TmsEliminar.Click
+            tsmNuevo.Enabled = False
+            tsmGuardar.Enabled = False
+            tsmCancelar.Enabled = False
+
+
+            If dgvComprobantesIngreso.CurrentRow Is Nothing Then
+                KryptonMessageBox.Show("No hay datos para anular!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
+                Return
+            Else
+                _botonSeleccionadoSitio = 3
+                ModificarComprobanteIngresoAnular()
+            End If
+
+        End Sub
     End Class
 End Namespace
