@@ -17,6 +17,7 @@ Imports ClassLibraryCisepro.DIVISION_GEOGRÁFICA
 Imports ClassLibraryCisepro.CONTABILIDAD.BANCOS.AUDITORIA
 Imports System.Diagnostics
 Imports System.IO
+Imports Krypton.Toolkit
 
 Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
     ''' <summary>
@@ -156,7 +157,8 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
                     Case 15 : HabilitarCamposSoftware(True, True)
                     Case Else
                         Show()
-                        MessageBox.Show("DEBE SELECCIONAR UN TIPO DE ACTIVO!!", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                        'MessageBox.Show("DEBE SELECCIONAR UN TIPO DE ACTIVO!!", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                        KryptonMessageBox.Show("DEBE SELECCIONAR UN TIPO DE ACTIVO!!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                         Return
                 End Select
 
@@ -1436,7 +1438,10 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
                 txtGarantiaComputo.Clear()
                 dgvEquiposComputo.Refresh()
             Else
-                MsgBox("No se puede agregar el componente sino completa todos los parámetros necesarios", MsgBoxStyle.Information, "Mensaje de Información")
+
+                KryptonMessageBox.Show("No se puede agregar el componente sino completa todos los parámetros necesarios", "Mensaje de Información", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
+
+
             End If
         End Sub
 
@@ -1742,7 +1747,8 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
 
         Private Sub btnGuardar_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnGuardar.Click
             If Not ValidacionParametrosGenerales() Then
-                MessageBox.Show("DEBE LLENAR TODOS LOS DATOS GENERALES DEL ACTIVO FIJO!!", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                'MessageBox.Show("DEBE LLENAR TODOS LOS DATOS GENERALES DEL ACTIVO FIJO!!", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                KryptonMessageBox.Show("DEBE LLENAR TODOS LOS DATOS GENERALES DEL ACTIVO FIJO!!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
                 Return
             End If
 
@@ -1759,7 +1765,8 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
             Select Case _formDialogoNuevoActivo.Tipo
                 Case 0 '"ARMAS"
                     If dgvArmas.RowCount = 0 Then
-                        MessageBox.Show("DEBE LLENAR TODOS LOS DATOS DE LAS ARMAS!!", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                        'MessageBox.Show("DEBE LLENAR TODOS LOS DATOS DE LAS ARMAS!!", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                        KryptonMessageBox.Show("DEBE LLENAR TODOS LOS DATOS DE LAS ARMAS!!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
                         Return
                     End If
 
@@ -1792,7 +1799,8 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
 
                 Case 1 '"RADIOS"
                     If dgvRadios.RowCount = 0 Then
-                        MessageBox.Show("DEBE LLENAR TODOS LOS DATOS DE LAS RADIOS!!", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                        'MessageBox.Show("DEBE LLENAR TODOS LOS DATOS DE LAS RADIOS!!", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                        KryptonMessageBox.Show("DEBE LLENAR TODOS LOS DATOS DE LAS RADIOS!!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
                         Return
                     End If
 
@@ -1838,7 +1846,8 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
 
                 Case 2 '"VEHÍCULOS"
                     If Not ValidacionParametrosVehiculos() Then
-                        MessageBox.Show("DEBE LLENAR TODOS LOS DATOS DEL VEHÍCULO!!", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                        'MessageBox.Show("DEBE LLENAR TODOS LOS DATOS DEL VEHÍCULO!!", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                        KryptonMessageBox.Show("DEBE LLENAR TODOS LOS DATOS DEL VEHÍCULO!!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
                         Return
                     End If
 
@@ -1898,7 +1907,8 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
 
                 Case 3 '"TERRENOS"
                     If Not ValidacionParametrosTerrenos() Then
-                        MessageBox.Show("DEBE LLENAR TODOS LOS DATOS DEL TERERNO!!", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                        'MessageBox.Show("DEBE LLENAR TODOS LOS DATOS DEL TERERNO!!", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                        KryptonMessageBox.Show("DEBE LLENAR TODOS LOS DATOS DEL TERRENO!!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
                         Return
                     End If
 
@@ -1917,7 +1927,8 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
 
                 Case 4 '"EQUIPOS DE COMPUTO"
                     If dgvEquiposComputo.RowCount = 0 Then
-                        MessageBox.Show("DEBE LLENAR TODOS LOS DATOS DE LOS EQUIPOS DE COMPUTO!!", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                        'MessageBox.Show("DEBE LLENAR TODOS LOS DATOS DE LOS EQUIPOS DE COMPUTO!!", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                        KryptonMessageBox.Show("DEBE LLENAR TODOS LOS DATOS DE LOS EQUIPOS DE COMPUTO!!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
                         Return
                     End If
 
@@ -1963,7 +1974,8 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
 
                 Case 5 '"LIBROS Y COLECCIONES"
                     If Not ValidacionParametrosLibrosyColecciones() Then
-                        MessageBox.Show("DEBE LLENAR TODOS LOS DATOS DE LOS LIBROS Y COLECCIONES!!", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                        'MessageBox.Show("DEBE LLENAR TODOS LOS DATOS DE LOS LIBROS Y COLECCIONES!!", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                        KryptonMessageBox.Show("DEBE LLENAR TODOS LOS DATOS DE LOS LIBROS Y COLECCIONES!!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
                         Return
                     End If
 
@@ -1983,7 +1995,8 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
 
                 Case 6 '"EQUIPOS DE OFICINA"
                     If dgvEquiposOficina.RowCount = 0 Then
-                        MessageBox.Show("DEBE LLENAR TODOS LOS DATOS DE LOS EQUIPOS DE OFICINA!!", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                        'MessageBox.Show("DEBE LLENAR TODOS LOS DATOS DE LOS EQUIPOS DE OFICINA!!", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                        KryptonMessageBox.Show("DEBE LLENAR TODOS LOS DATOS DE LOS EQUIPOS DE OFICINA!!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
                         Return
                     End If
 
@@ -2029,7 +2042,8 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
 
                 Case 7 '"MUEBLES DE OFICINA"
                     If dgvMuebleOficina.RowCount = 0 Then
-                        MessageBox.Show("DEBE LLENAR TODOS LOS DATOS DE LOS MUEBLES!!", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                        'MessageBox.Show("DEBE LLENAR TODOS LOS DATOS DE LOS MUEBLES!!", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                        KryptonMessageBox.Show("DEBE LLENAR TODOS LOS DATOS DE LOS MUEBLES!!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
                         Return
                     End If
 
@@ -2057,7 +2071,8 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
 
                 Case 8 '"EQUIPOS DE COCINA"
                     If dgvEquipoCocina.RowCount = 0 Then
-                        MessageBox.Show("DEBE LLENAR TODOS LOS DATOS DE LOS EQUIPOS!!", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                        'MessageBox.Show("DEBE LLENAR TODOS LOS DATOS DE LOS EQUIPOS!!", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                        KryptonMessageBox.Show("DEBE LLENAR TODOS LOS DATOS DE LOS EQUIPOS!!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
                         Return
                     End If
 
@@ -2086,7 +2101,8 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
 
                 Case 9 '"EQUIPOS DE AMBIENTACIÓN"
                     If dgvEquipoAmbientacion.RowCount = 0 Then
-                        MessageBox.Show("DEBE LLENAR TODOS LOS DATOS DE LOS EQUIPOS!!", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                        'MessageBox.Show("DEBE LLENAR TODOS LOS DATOS DE LOS EQUIPOS!!", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                        KryptonMessageBox.Show("DEBE LLENAR TODOS LOS DATOS DE LOS EQUIPOS!!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
                         Return
                     End If
 
@@ -2118,7 +2134,8 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
 
                 Case 10 '"EQUIPOS DE COMUNICACIÓN Y TELEFONÍA"
                     If dgvEquipoComunicacion.RowCount = 0 Then
-                        MessageBox.Show("DEBE LLENAR TODOS LOS DATOS DE LOS EQUIPOS!!", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                        'MessageBox.Show("DEBE LLENAR TODOS LOS DATOS DE LOS EQUIPOS!!", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                        KryptonMessageBox.Show("DEBE LLENAR TODOS LOS DATOS DE LOS EQUIPOS!!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
                         Return
                     End If
 
@@ -2178,7 +2195,8 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
 
                 Case 11 '"EQUIPOS DE SEGURIDAD INDUSTRIAL"
                     If dgvEquipoSeguridad.RowCount = 0 Then
-                        MessageBox.Show("DEBE LLENAR TODOS LOS DATOS DE LOS EQUIPOS DE SEGURIDAD!!", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                        'MessageBox.Show("DEBE LLENAR TODOS LOS DATOS DE LOS EQUIPOS DE SEGURIDAD!!", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                        KryptonMessageBox.Show("DEBE LLENAR TODOS LOS DATOS DE LOS EQUIPOS DE SEGURIDAD!!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
                         Return
                     End If
 
@@ -2210,7 +2228,8 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
 
                 Case 12 '"CAMARAS DE SEGURIDAD"
                     If dgvCamara.RowCount = 0 Then
-                        MessageBox.Show("DEBE LLENAR TODOS LOS DATOS DE LAS CAMARAS DE SEGURIDAD!!", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                        'MessageBox.Show("DEBE LLENAR TODOS LOS DATOS DE LAS CAMARAS DE SEGURIDAD!!", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                        KryptonMessageBox.Show("DEBE LLENAR TODOS LOS DATOS DE LAS CAMARAS DE SEGURIDAD!!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
                         Return
                     End If
 
@@ -2256,7 +2275,8 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
 
                 Case 13 '"GENERADORES"
                     If Not ValidacionParametrosGeneradores() Then
-                        MessageBox.Show("DEBE LLENAR TODOS LOS DATOS DEL GENERADOR!!", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                        'MessageBox.Show("DEBE LLENAR TODOS LOS DATOS DEL GENERADOR!!", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                        KryptonMessageBox.Show("DEBE LLENAR TODOS LOS DATOS DEL GENERADOR!!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
                         Return
                     End If
 
@@ -2283,7 +2303,8 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
 
                 Case 14 '"CHALECOS"
                     If dgvChaleco.RowCount = 0 Then
-                        MessageBox.Show("DEBE LLENAR TODOS LOS DATOS DE LOS CHALECOS!!", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                        'MessageBox.Show("DEBE LLENAR TODOS LOS DATOS DE LOS CHALECOS!!", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                        KryptonMessageBox.Show("DEBE LLENAR TODOS LOS DATOS DE LOS CHALECOS!!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
                         Return
                     End If
 
@@ -2330,7 +2351,8 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
 
                 Case 15 '"SOFTWARE"
                     If Not ValidacionParametrosSoftware() Then
-                        MessageBox.Show("DEBE LLENAR TODOS LOS DATOS DEL SOFTWARE!!", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                        'MessageBox.Show("DEBE LLENAR TODOS LOS DATOS DEL SOFTWARE!!", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                        KryptonMessageBox.Show("DEBE LLENAR TODOS LOS DATOS DEL SOFTWARE!!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
                         Return
                     End If
 
@@ -2394,7 +2416,15 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
                 ButtonCancelar.Enabled = False
 
             End If
-            MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
+            'MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
+            Dim messageIcon As KryptonMessageBoxIcon
+            If res(0) Then
+                messageIcon = KryptonMessageBoxIcon.Information
+            Else
+                messageIcon = KryptonMessageBoxIcon.Exclamation
+            End If
+            KryptonMessageBox.Show(res(1), "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, messageIcon)
+
         End Sub
 
         Private Sub ButtonCancelar_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ButtonCancelar.Click
@@ -2514,7 +2544,8 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
 
                 lblArmasCount.Text = "VERIFIQUE LAS SERIES ANTES DE GUARDAR!!        " & dgvArmas.RowCount & " ARMAS EN TOTAL!"
             Else
-                MessageBox.Show("DEBE LLENAR TODOS LOS DATOS GENERALES DEL ARMA!!", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                'MessageBox.Show("DEBE LLENAR TODOS LOS DATOS GENERALES DEL ARMA!!", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                KryptonMessageBox.Show("DEBE LLENAR TODOS LOS DATOS GENERALES DEL ARMA!!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
             End If
         End Sub
 
@@ -2550,7 +2581,8 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
 
                 lblRadiosCount.Text = "VERIFIQUE LAS SERIES ANTES DE GUARDAR!!        " & dgvArmas.RowCount & " RADIOS EN TOTAL!"
             Else
-                MessageBox.Show("DEBE LLENAR TODOS LOS DATOS GENERALES DEL RADIO!!", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                'MessageBox.Show("DEBE LLENAR TODOS LOS DATOS GENERALES DEL RADIO!!", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                KryptonMessageBox.Show("DEBE LLENAR TODOS LOS DATOS GENERALES DEL RADIO!!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
             End If
         End Sub
 
@@ -2585,7 +2617,8 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
 
                 lblEquiposOficinaCount.Text = "VERIFIQUE LAS SERIES ANTES DE GUARDAR!!        " & dgvEquiposOficina.RowCount & " EQUIPOS EN TOTAL!"
             Else
-                MessageBox.Show("DEBE LLENAR TODOS LOS DATOS GENERALES DEL EQUIPO!!", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                'MessageBox.Show("DEBE LLENAR TODOS LOS DATOS GENERALES DEL EQUIPO!!", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                KryptonMessageBox.Show("DEBE LLENAR TODOS LOS DATOS GENERALES DEL EQUIPO!!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
             End If
         End Sub
 
@@ -2619,7 +2652,8 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
 
                 lblMuebleOficinaCount.Text = "VERIFIQUE LAS SERIES ANTES DE GUARDAR!!        " & dgvMuebleOficina.RowCount & " MUEBLES EN TOTAL!"
             Else
-                MessageBox.Show("DEBE LLENAR TODOS LOS DATOS GENERALES DEL EQUIPO!!", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                'MessageBox.Show("DEBE LLENAR TODOS LOS DATOS GENERALES DEL EQUIPO!!", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                KryptonMessageBox.Show("DEBE LLENAR TODOS LOS DATOS GENERALES DEL EQUIPO!!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
             End If
         End Sub
 
@@ -2654,7 +2688,8 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
 
                 lblEquipoCocinaCount.Text = "VERIFIQUE LAS SERIES ANTES DE GUARDAR!!        " & dgvEquipoCocina.RowCount & " EQUIPOS EN TOTAL!"
             Else
-                MessageBox.Show("DEBE LLENAR TODOS LOS DATOS GENERALES DEL EQUIPO!!", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                'MessageBox.Show("DEBE LLENAR TODOS LOS DATOS GENERALES DEL EQUIPO!!", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                KryptonMessageBox.Show("DEBE LLENAR TODOS LOS DATOS GENERALES DEL EQUIPO!!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
             End If
         End Sub
 
@@ -2693,7 +2728,8 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
 
                 lblEquipoAmbientacionCount.Text = "VERIFIQUE LAS SERIES ANTES DE GUARDAR!!        " & dgvEquipoAmbientacion.RowCount & " EQUIPOS EN TOTAL!"
             Else
-                MessageBox.Show("DEBE LLENAR TODOS LOS DATOS GENERALES DEL EQUIPO!!", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                'MessageBox.Show("DEBE LLENAR TODOS LOS DATOS GENERALES DEL EQUIPO!!", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                KryptonMessageBox.Show("DEBE LLENAR TODOS LOS DATOS GENERALES DEL EQUIPO!!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
             End If
         End Sub
 
@@ -2730,7 +2766,8 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
 
                 lblEquipoComunicacionCount.Text = "VERIFIQUE LAS SERIES ANTES DE GUARDAR!!        " & dgvEquipoComunicacion.RowCount & " EQUIPOS EN TOTAL!"
             Else
-                MessageBox.Show("DEBE LLENAR TODOS LOS DATOS GENERALES DEL EQUIPO!!", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                'MessageBox.Show("DEBE LLENAR TODOS LOS DATOS GENERALES DEL EQUIPO!!", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                KryptonMessageBox.Show("DEBE LLENAR TODOS LOS DATOS GENERALES DEL EQUIPO!!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
             End If
         End Sub
 
@@ -2767,7 +2804,8 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
 
                 lblEquipoSeguridadCount.Text = "VERIFIQUE LAS SERIES ANTES DE GUARDAR!!        " & dgvEquipoSeguridad.RowCount & " EQUIPOS EN TOTAL!"
             Else
-                MessageBox.Show("DEBE LLENAR TODOS LOS DATOS GENERALES DEL EQUIPO!!", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                'MessageBox.Show("DEBE LLENAR TODOS LOS DATOS GENERALES DEL EQUIPO!!", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                KryptonMessageBox.Show("DEBE LLENAR TODOS LOS DATOS GENERALES DEL EQUIPO!!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
             End If
         End Sub
 
@@ -2805,7 +2843,8 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
 
                 lblCamaraCount.Text = "VERIFIQUE LAS SERIES ANTES DE GUARDAR!!        " & dgvCamara.RowCount & " EQUIPOS EN TOTAL!"
             Else
-                MessageBox.Show("DEBE LLENAR TODOS LOS DATOS GENERALES DEL EQUIPO!!", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                'MessageBox.Show("DEBE LLENAR TODOS LOS DATOS GENERALES DEL EQUIPO!!", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                KryptonMessageBox.Show("DEBE LLENAR TODOS LOS DATOS GENERALES DEL EQUIPO!!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
             End If
         End Sub
 
@@ -2842,7 +2881,8 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
 
                 lblChalecoCount.Text = "VERIFIQUE LAS SERIES ANTES DE GUARDAR!!        " & dgvChaleco.RowCount & " CHALECOS EN TOTAL!"
             Else
-                MessageBox.Show("DEBE LLENAR TODOS LOS DATOS GENERALES DEL EQUIPO!!", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                'MessageBox.Show("DEBE LLENAR TODOS LOS DATOS GENERALES DEL EQUIPO!!", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                KryptonMessageBox.Show("DEBE LLENAR TODOS LOS DATOS GENERALES DEL EQUIPO!!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
             End If
         End Sub
 
@@ -2902,7 +2942,8 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
                     End If
                 End Using
             Catch ex As Exception
-                MessageBox.Show("Error opening PDF: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                'MessageBox.Show("Error opening PDF: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                KryptonMessageBox.Show("Error abriendo PDF: " & ex.Message, "Error", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
 
         End Sub
@@ -2928,7 +2969,8 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
                     End If
                 End Using
             Catch ex As Exception
-                MessageBox.Show("Error opening PDF: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                'MessageBox.Show("Error opening PDF: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                KryptonMessageBox.Show("Error abriendo PDF: " & ex.Message, "Error", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
 
@@ -2953,7 +2995,8 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
                     End If
                 End Using
             Catch ex As Exception
-                MessageBox.Show("Error opening PDF: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                'MessageBox.Show("Error opening PDF: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                KryptonMessageBox.Show("Error abriendo PDF: " & ex.Message, "Error", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
 
@@ -2978,7 +3021,8 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
                     End If
                 End Using
             Catch ex As Exception
-                MessageBox.Show("Error opening PDF: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                'MessageBox.Show("Error opening PDF: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                KryptonMessageBox.Show("Error abriendo PDF: " & ex.Message, "Error", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
 
@@ -3003,7 +3047,8 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
                     End If
                 End Using
             Catch ex As Exception
-                MessageBox.Show("Error opening PDF: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                'MessageBox.Show("Error opening PDF: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                KryptonMessageBox.Show("Error abriendo PDF: " & ex.Message, "Error", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
 
@@ -3028,7 +3073,8 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
                     End If
                 End Using
             Catch ex As Exception
-                MessageBox.Show("Error opening PDF: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                'MessageBox.Show("Error opening PDF: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                KryptonMessageBox.Show("Error abriendo PDF: " & ex.Message, "Error", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
 

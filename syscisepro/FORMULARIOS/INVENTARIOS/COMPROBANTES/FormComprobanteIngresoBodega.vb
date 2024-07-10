@@ -140,6 +140,8 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
             dgvComprobantesIngreso.Font = New System.Drawing.Font("Roboto", 8, FontStyle.Regular)
             dgvDetalleComprobate.Font = New System.Drawing.Font("Roboto", 8, FontStyle.Regular)
             _sqlCommands = New List(Of SqlCommand)
+            Label14.Text = "0  REGISTRO(S) - TOTAL"
+            'pbFoto.TabStop = False
         End Sub
         Private Sub tsmNuevo_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles tsmNuevo.Click
             AutocompletarRecibe()
@@ -223,6 +225,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
             lblDetalle.Text = 0
             _detalleKardex = Nothing
             dgvSecuencial.Rows.Clear()
+            Label14.Text = "0  REGISTRO(S) - TOTAL"
         End Sub
 
         Private Sub CargarBodegas()
@@ -438,6 +441,8 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                 _detalleKardex = Nothing
                 tsmAgregar.Enabled = False
                 tsmEliminar.Enabled = True
+
+                Label14.Text = dgvSecuencial.Rows.Count & " REGISTRO(S) - TOTAL"
             Else
                 MsgBox("NO SE PUEDE AGREGAR UN ITEM REPETIDO", MsgBoxStyle.Information, "MENSAJE DE VALIDACIÒN")
             End If
@@ -949,8 +954,8 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                     'nudCantidad.Value = 1
                     'nudCantidad.Enabled = False
 
-                    cmbObservacionCalidad.SelectedIndex = 2
-                    txtObservacion.Text = "OK"
+                    'cmbObservacionCalidad.SelectedIndex = 2
+                    'txtObservacion.Text = "OK"
                 End If
             Catch
                 txtSerie.Text = "S/N"

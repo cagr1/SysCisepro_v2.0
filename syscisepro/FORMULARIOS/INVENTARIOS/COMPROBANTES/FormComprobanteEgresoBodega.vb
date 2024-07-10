@@ -199,6 +199,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
             lblIdDetalleKardex.Text = 0
             lblIdKardex.Text = 0
             lbldetalle.Text = 0
+            Label11.Text = "0 REGISTRO(S) - TOTAL"
 
             _detalleKardex = Nothing
             dgvSecuencial.Rows.Clear()
@@ -444,6 +445,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                 txtSerie.Clear()
                 tsmAgregar.Enabled = False
                 tsmEliminar.Enabled = True
+                Label11.Text = dgvSecuencial.Rows.Count & " REGISTRO(S) - TOTAL"
             Else
                 MsgBox("NO SE PUEDE AGREGAR UN ITEM REPETIDO", MsgBoxStyle.Information, "MENSAJE DE VALIDACIÒN")
             End If

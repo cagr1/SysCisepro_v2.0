@@ -164,6 +164,7 @@
             Me.lblIdKardex2 = New System.Windows.Forms.Label()
             Me.lblIdSecuencial = New System.Windows.Forms.Label()
             Me.lblCantidadInicial = New System.Windows.Forms.Label()
+            Me.Label14 = New System.Windows.Forms.Label()
             Me.tbComprobanteIngresoBodega.SuspendLayout()
             Me.tpRegistro.SuspendLayout()
             Me.gbBusquedaArticulo.SuspendLayout()
@@ -195,7 +196,7 @@
             Me.tbComprobanteIngresoBodega.Location = New System.Drawing.Point(1, 33)
             Me.tbComprobanteIngresoBodega.Name = "tbComprobanteIngresoBodega"
             Me.tbComprobanteIngresoBodega.SelectedIndex = 0
-            Me.tbComprobanteIngresoBodega.Size = New System.Drawing.Size(1269, 588)
+            Me.tbComprobanteIngresoBodega.Size = New System.Drawing.Size(1269, 615)
             Me.tbComprobanteIngresoBodega.SizeMode = System.Windows.Forms.TabSizeMode.Fixed
             Me.tbComprobanteIngresoBodega.TabIndex = 0
             '
@@ -246,7 +247,7 @@
             Me.tpRegistro.Location = New System.Drawing.Point(4, 22)
             Me.tpRegistro.Name = "tpRegistro"
             Me.tpRegistro.Padding = New System.Windows.Forms.Padding(3)
-            Me.tpRegistro.Size = New System.Drawing.Size(1261, 562)
+            Me.tpRegistro.Size = New System.Drawing.Size(1261, 589)
             Me.tpRegistro.TabIndex = 0
             Me.tpRegistro.Text = "REGISTRO"
             '
@@ -256,7 +257,7 @@
             Me.btnOrdenCompra.Location = New System.Drawing.Point(1226, 198)
             Me.btnOrdenCompra.Name = "btnOrdenCompra"
             Me.btnOrdenCompra.Size = New System.Drawing.Size(26, 26)
-            Me.btnOrdenCompra.TabIndex = 197
+            Me.btnOrdenCompra.TabIndex = 117
             Me.btnOrdenCompra.Tag = "1"
             Me.btnOrdenCompra.Text = "..."
             Me.btnOrdenCompra.UseVisualStyleBackColor = True
@@ -278,7 +279,7 @@
             Me.chkReq.Location = New System.Drawing.Point(1086, 202)
             Me.chkReq.Name = "chkReq"
             Me.chkReq.Size = New System.Drawing.Size(108, 21)
-            Me.chkReq.TabIndex = 196
+            Me.chkReq.TabIndex = 116
             Me.chkReq.Text = "ÓRDEN C. N°:"
             Me.chkReq.UseVisualStyleBackColor = True
             '
@@ -293,7 +294,7 @@
             Me.bntPuesto.Location = New System.Drawing.Point(966, 183)
             Me.bntPuesto.Name = "bntPuesto"
             Me.bntPuesto.Size = New System.Drawing.Size(26, 26)
-            Me.bntPuesto.TabIndex = 194
+            Me.bntPuesto.TabIndex = 114
             Me.bntPuesto.TextAlign = System.Drawing.ContentAlignment.MiddleRight
             Me.bntPuesto.UseVisualStyleBackColor = False
             '
@@ -308,7 +309,7 @@
             Me.txtRazon.Multiline = True
             Me.txtRazon.Name = "txtRazon"
             Me.txtRazon.Size = New System.Drawing.Size(256, 71)
-            Me.txtRazon.TabIndex = 186
+            Me.txtRazon.TabIndex = 112
             '
             'txtUbicacion
             '
@@ -321,7 +322,7 @@
             Me.txtUbicacion.Multiline = True
             Me.txtUbicacion.Name = "txtUbicacion"
             Me.txtUbicacion.Size = New System.Drawing.Size(520, 47)
-            Me.txtUbicacion.TabIndex = 185
+            Me.txtUbicacion.TabIndex = 115
             '
             'txtRecibe
             '
@@ -333,7 +334,7 @@
             Me.txtRecibe.Location = New System.Drawing.Point(11, 177)
             Me.txtRecibe.Name = "txtRecibe"
             Me.txtRecibe.Size = New System.Drawing.Size(390, 21)
-            Me.txtRecibe.TabIndex = 182
+            Me.txtRecibe.TabIndex = 113
             '
             'Label6
             '
@@ -355,7 +356,7 @@
             Me.txtProveedores.Location = New System.Drawing.Point(442, 122)
             Me.txtProveedores.Name = "txtProveedores"
             Me.txtProveedores.Size = New System.Drawing.Size(548, 21)
-            Me.txtProveedores.TabIndex = 178
+            Me.txtProveedores.TabIndex = 111
             '
             'Label2
             '
@@ -391,7 +392,7 @@
             Me.cmbConceptos.Location = New System.Drawing.Point(9, 122)
             Me.cmbConceptos.Name = "cmbConceptos"
             Me.cmbConceptos.Size = New System.Drawing.Size(340, 21)
-            Me.cmbConceptos.TabIndex = 176
+            Me.cmbConceptos.TabIndex = 110
             '
             'Label4
             '
@@ -415,7 +416,7 @@
             Me.cbmProvincia.Location = New System.Drawing.Point(442, 27)
             Me.cbmProvincia.Name = "cbmProvincia"
             Me.cbmProvincia.Size = New System.Drawing.Size(258, 21)
-            Me.cbmProvincia.TabIndex = 175
+            Me.cbmProvincia.TabIndex = 102
             '
             'Label13
             '
@@ -435,7 +436,7 @@
             Me.txtNroComprobante.Location = New System.Drawing.Point(9, 28)
             Me.txtNroComprobante.Name = "txtNroComprobante"
             Me.txtNroComprobante.Size = New System.Drawing.Size(103, 21)
-            Me.txtNroComprobante.TabIndex = 159
+            Me.txtNroComprobante.TabIndex = 100
             Me.txtNroComprobante.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
             '
             'Label15
@@ -459,7 +460,7 @@
             Me.cmbBodega.Location = New System.Drawing.Point(133, 27)
             Me.cmbBodega.Name = "cmbBodega"
             Me.cmbBodega.Size = New System.Drawing.Size(270, 21)
-            Me.cmbBodega.TabIndex = 162
+            Me.cmbBodega.TabIndex = 101
             '
             'Label16
             '
@@ -483,7 +484,7 @@
             Me.cbmCanton.Location = New System.Drawing.Point(737, 28)
             Me.cbmCanton.Name = "cbmCanton"
             Me.cbmCanton.Size = New System.Drawing.Size(253, 21)
-            Me.cbmCanton.TabIndex = 153
+            Me.cbmCanton.TabIndex = 103
             '
             'Label18
             '
@@ -507,7 +508,7 @@
             Me.cbmParroquia.Location = New System.Drawing.Point(1022, 27)
             Me.cbmParroquia.Name = "cbmParroquia"
             Me.cbmParroquia.Size = New System.Drawing.Size(230, 21)
-            Me.cbmParroquia.TabIndex = 154
+            Me.cbmParroquia.TabIndex = 104
             '
             'cbmCentroCosto
             '
@@ -521,7 +522,7 @@
             Me.cbmCentroCosto.Location = New System.Drawing.Point(444, 74)
             Me.cbmCentroCosto.Name = "cbmCentroCosto"
             Me.cbmCentroCosto.Size = New System.Drawing.Size(256, 21)
-            Me.cbmCentroCosto.TabIndex = 155
+            Me.cbmCentroCosto.TabIndex = 106
             '
             'Label19
             '
@@ -546,7 +547,7 @@
             Me.cbmIngreso.Location = New System.Drawing.Point(737, 74)
             Me.cbmIngreso.Name = "cbmIngreso"
             Me.cbmIngreso.Size = New System.Drawing.Size(100, 21)
-            Me.cbmIngreso.TabIndex = 156
+            Me.cbmIngreso.TabIndex = 107
             '
             'Label20
             '
@@ -587,7 +588,7 @@
             Me.dtpFecha.Location = New System.Drawing.Point(1078, 56)
             Me.dtpFecha.Name = "dtpFecha"
             Me.dtpFecha.Size = New System.Drawing.Size(174, 22)
-            Me.dtpFecha.TabIndex = 161
+            Me.dtpFecha.TabIndex = 109
             '
             'txtNombre
             '
@@ -597,7 +598,7 @@
             Me.txtNombre.Location = New System.Drawing.Point(9, 74)
             Me.txtNombre.Name = "txtNombre"
             Me.txtNombre.Size = New System.Drawing.Size(294, 21)
-            Me.txtNombre.TabIndex = 163
+            Me.txtNombre.TabIndex = 105
             '
             'txtCedula
             '
@@ -654,7 +655,7 @@
             Me.cmbDocumento.Location = New System.Drawing.Point(843, 73)
             Me.cmbDocumento.Name = "cmbDocumento"
             Me.cmbDocumento.Size = New System.Drawing.Size(147, 21)
-            Me.cmbDocumento.TabIndex = 157
+            Me.cmbDocumento.TabIndex = 108
             '
             'Label25
             '
@@ -669,6 +670,7 @@
             'gbBusquedaArticulo
             '
             Me.gbBusquedaArticulo.BackColor = System.Drawing.Color.White
+            Me.gbBusquedaArticulo.Controls.Add(Me.Label14)
             Me.gbBusquedaArticulo.Controls.Add(Me.pbFoto)
             Me.gbBusquedaArticulo.Controls.Add(Me.Label17)
             Me.gbBusquedaArticulo.Controls.Add(Me.btnSerie)
@@ -699,7 +701,7 @@
             Me.gbBusquedaArticulo.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.gbBusquedaArticulo.Location = New System.Drawing.Point(11, 230)
             Me.gbBusquedaArticulo.Name = "gbBusquedaArticulo"
-            Me.gbBusquedaArticulo.Size = New System.Drawing.Size(1255, 342)
+            Me.gbBusquedaArticulo.Size = New System.Drawing.Size(1255, 359)
             Me.gbBusquedaArticulo.TabIndex = 148
             Me.gbBusquedaArticulo.TabStop = False
             Me.gbBusquedaArticulo.Text = "DETALLE DEL COMPROBANTE DE INGRESO"
@@ -739,7 +741,7 @@
             Me.btnSerie.Location = New System.Drawing.Point(436, 37)
             Me.btnSerie.Name = "btnSerie"
             Me.btnSerie.Size = New System.Drawing.Size(28, 28)
-            Me.btnSerie.TabIndex = 199
+            Me.btnSerie.TabIndex = 119
             Me.btnSerie.TextAlign = System.Drawing.ContentAlignment.MiddleRight
             Me.btnSerie.UseVisualStyleBackColor = False
             '
@@ -751,7 +753,7 @@
             Me.txtSerie.Location = New System.Drawing.Point(329, 43)
             Me.txtSerie.Name = "txtSerie"
             Me.txtSerie.Size = New System.Drawing.Size(101, 21)
-            Me.txtSerie.TabIndex = 197
+            Me.txtSerie.TabIndex = 120
             Me.txtSerie.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
             '
             'Label12
@@ -787,7 +789,7 @@
             Me.nudValor.Maximum = New Decimal(New Integer() {100000, 0, 0, 0})
             Me.nudValor.Name = "nudValor"
             Me.nudValor.Size = New System.Drawing.Size(85, 21)
-            Me.nudValor.TabIndex = 176
+            Me.nudValor.TabIndex = 123
             Me.nudValor.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
             '
             'dgvSecuencial
@@ -809,7 +811,7 @@
             Me.dgvSecuencial.Name = "dgvSecuencial"
             Me.dgvSecuencial.RowHeadersVisible = False
             Me.dgvSecuencial.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvSecuencial.Size = New System.Drawing.Size(1244, 269)
+            Me.dgvSecuencial.Size = New System.Drawing.Size(1244, 256)
             Me.dgvSecuencial.TabIndex = 175
             '
             'CODIGO
@@ -944,7 +946,7 @@
             Me.tsmEliminar.Location = New System.Drawing.Point(1197, 32)
             Me.tsmEliminar.Name = "tsmEliminar"
             Me.tsmEliminar.Size = New System.Drawing.Size(28, 28)
-            Me.tsmEliminar.TabIndex = 174
+            Me.tsmEliminar.TabIndex = 126
             Me.tsmEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
             Me.tsmEliminar.UseVisualStyleBackColor = False
             '
@@ -956,7 +958,7 @@
             Me.tsmAgregar.Location = New System.Drawing.Point(1163, 32)
             Me.tsmAgregar.Name = "tsmAgregar"
             Me.tsmAgregar.Size = New System.Drawing.Size(28, 28)
-            Me.tsmAgregar.TabIndex = 173
+            Me.tsmAgregar.TabIndex = 125
             Me.tsmAgregar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
             Me.tsmAgregar.UseVisualStyleBackColor = False
             '
@@ -971,7 +973,7 @@
             Me.txtObservacion.Multiline = True
             Me.txtObservacion.Name = "txtObservacion"
             Me.txtObservacion.Size = New System.Drawing.Size(222, 38)
-            Me.txtObservacion.TabIndex = 172
+            Me.txtObservacion.TabIndex = 124
             Me.txtObservacion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
             '
             'Label8
@@ -997,7 +999,7 @@
             Me.cmbObservacionCalidad.Location = New System.Drawing.Point(494, 43)
             Me.cmbObservacionCalidad.Name = "cmbObservacionCalidad"
             Me.cmbObservacionCalidad.Size = New System.Drawing.Size(148, 21)
-            Me.cmbObservacionCalidad.TabIndex = 170
+            Me.cmbObservacionCalidad.TabIndex = 121
             '
             'Label10
             '
@@ -1019,7 +1021,7 @@
             Me.nudCantidad.Maximum = New Decimal(New Integer() {100000, 0, 0, 0})
             Me.nudCantidad.Name = "nudCantidad"
             Me.nudCantidad.Size = New System.Drawing.Size(61, 21)
-            Me.nudCantidad.TabIndex = 160
+            Me.nudCantidad.TabIndex = 122
             Me.nudCantidad.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
             Me.nudCantidad.Value = New Decimal(New Integer() {1, 0, 0, 0})
             '
@@ -1068,7 +1070,7 @@
             Me.txtArticulo.Location = New System.Drawing.Point(6, 42)
             Me.txtArticulo.Name = "txtArticulo"
             Me.txtArticulo.Size = New System.Drawing.Size(317, 21)
-            Me.txtArticulo.TabIndex = 159
+            Me.txtArticulo.TabIndex = 118
             Me.txtArticulo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
             '
             'Label28
@@ -1689,12 +1691,22 @@
             Me.lblCantidadInicial.TabIndex = 196
             Me.lblCantidadInicial.Visible = False
             '
+            'Label14
+            '
+            Me.Label14.AutoSize = True
+            Me.Label14.Font = New System.Drawing.Font("Roboto", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Label14.ForeColor = System.Drawing.SystemColors.Highlight
+            Me.Label14.Location = New System.Drawing.Point(596, 333)
+            Me.Label14.Name = "Label14"
+            Me.Label14.Size = New System.Drawing.Size(0, 15)
+            Me.Label14.TabIndex = 203
+            '
             'FormComprobanteIngresoBodega
             '
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.BackColor = System.Drawing.Color.White
-            Me.ClientSize = New System.Drawing.Size(1270, 616)
+            Me.ClientSize = New System.Drawing.Size(1270, 650)
             Me.Controls.Add(Me.lblCantidadInicial)
             Me.Controls.Add(Me.lblIdSecuencial)
             Me.Controls.Add(Me.lblIdKardex2)
@@ -1869,5 +1881,6 @@
         Friend WithEvents lblCantidadInicial As System.Windows.Forms.Label
         Friend WithEvents lblDetalle As Label
         Friend WithEvents TmsEliminar As ToolStripMenuItem
+        Friend WithEvents Label14 As Label
     End Class
 End Namespace
