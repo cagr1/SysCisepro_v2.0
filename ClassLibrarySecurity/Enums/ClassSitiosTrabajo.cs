@@ -153,7 +153,7 @@ namespace ClassLibraryCisepro3.DivisionGeografica
                         JOIN SECUENCIAL_ITEM SI ON SI.ID_SECUENCIAL_ITEM = K.ID_SECUENCIAL_ITEM
                         JOIN SITIOS_TRABAJO ST ON ST.ID_SITIO_TRABAJO = CIB.ID_SITIO_TRABAJO 
                         WHERE DK.ESTADO > 0 AND CIB.ESTADO > 0 AND DCIB.ESTADO_DETALLE > 0 AND DK.CANTIDAD_INGRESO > 0
-                        AND dk.FECHA BETWEEN @fechad AND @fechah AND st.GRUPO like @grupo 
+                        AND dk.FECHA BETWEEN @fechad AND @fechah AND st.GRUPO like @grupo A
                         AND DCIB.ID_KARDEX = K.ID_KARDEX
                         UNION 
                         SELECT DK.ID_COMPROBANTE, dk.FECHA, DK.CANTIDAD_EGRESO AS CANTIDAD, 'E' TIPO, dk.ID_KARDEX , DCEB.OBSERVACION AS SERIE, SI.NOMBRE_SECUENCIAL_ITEM, CEB.RAZON, ST.NOMBRE_SITIO_TRABAJO  AS SITIO_TRABAJO
@@ -223,7 +223,7 @@ namespace ClassLibraryCisepro3.DivisionGeografica
                         JOIN SECUENCIAL_ITEM SI ON SI.ID_SECUENCIAL_ITEM = K.ID_SECUENCIAL_ITEM
                         JOIN SITIOS_TRABAJO ST ON ST.ID_SITIO_TRABAJO = CIB.ID_SITIO_TRABAJO 
                         WHERE DK.ESTADO > 0 AND CIB.ESTADO > 0 AND DCIB.ESTADO_DETALLE > 0 AND DK.CANTIDAD_INGRESO > 0
-                        AND dk.FECHA BETWEEN @fechad AND @fechah AND (st.GRUPO  like '%'+ @filtro + '%' OR st.RIVER like '%'+ @filtro + '%'  OR st.NOMBRE_SITIO_TRABAJO like  '%'+ @filtro + '%')
+                        AND dk.FECHA BETWEEN @fechad AND @fechah AND (st.GRUPO  like '%'+ @filtro + '%' OR st.RIVER like '%'+ @filtro + '%'  OR st.NOMBRE_SITIO_TRABAJO like  '%'+ @filtro + '%' OR DCIB.OBSERVACION like  '%'+ @filtro + '%')
                         AND DCIB.ID_KARDEX = K.ID_KARDEX
                         UNION 
                         SELECT DK.ID_COMPROBANTE, dk.FECHA, DK.CANTIDAD_EGRESO AS CANTIDAD, 'E' TIPO, dk.ID_KARDEX , DCEB.OBSERVACION AS SERIE, SI.NOMBRE_SECUENCIAL_ITEM, CEB.RAZON, ST.NOMBRE_SITIO_TRABAJO  AS SITIO_TRABAJO, ST.RIVER as RIVER
@@ -234,7 +234,7 @@ namespace ClassLibraryCisepro3.DivisionGeografica
                         JOIN SECUENCIAL_ITEM SI ON SI.ID_SECUENCIAL_ITEM = K.ID_SECUENCIAL_ITEM
                         JOIN SITIOS_TRABAJO ST ON ST.ID_SITIO_TRABAJO = CEB.ID_SITIO_TRABAJO 
                         WHERE DK.ESTADO > 0 AND CEB.ESTADO > 0 AND DCEB.ESTADO_DETALLE > 0 AND DK.CANTIDAD_EGRESO > 0
-                        AND dk.FECHA BETWEEN @fechad AND @fechah and (st.GRUPO  like '%'+ @filtro + '%' OR st.RIVER like '%'+ @filtro + '%'  OR st.NOMBRE_SITIO_TRABAJO like  '%'+ @filtro + '%')
+                        AND dk.FECHA BETWEEN @fechad AND @fechah and (st.GRUPO  like '%'+ @filtro + '%' OR st.RIVER like '%'+ @filtro + '%'  OR st.NOMBRE_SITIO_TRABAJO like  '%'+ @filtro + '%' OR DCEB.OBSERVACION like '%'+ @filtro + '%')
                         AND DCEB.ID_KARDEX = K.ID_KARDEX
                         ORDER BY DK.FECHA";
 

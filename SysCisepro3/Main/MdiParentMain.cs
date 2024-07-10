@@ -91,6 +91,7 @@ namespace SysCisepro3.Main
         public MdiParentMain()
         {
             InitializeComponent();
+            IsMdiContainer = true;
             _anios = new List<int>();
             _data = new DataTable();
             _data2 = new DataTable();
@@ -209,8 +210,9 @@ namespace SysCisepro3.Main
                 tsRecursoHumano.DropDownItems["dESCUENTOSPERSONALToolStripMenuItem"].Visible = ObjUsuario.Datos.Equals("JORGE AGUIRRE VEGA") || ObjUsuario.Datos.Equals("GALLARDO ROMERO CARLOS ALBERTO") || ObjUsuario.Datos.Equals("NATALIA VIVAS");
                 sITIOSDETRABAJOTOLSTRPIMENUITEM.Visible = true;
             }
-
             #region Menu
+
+            #region Menu 1 Administracion
             // Menu 1 Administracion 
             tsAdministracion.Visible = ObjPermiso.BuscarMenuUnoUsuario(TipoCon, ObjUsuario.IdRol,1);
             
@@ -244,6 +246,9 @@ namespace SysCisepro3.Main
             SetTool(pARÁMETROSToolStripMenuItem, "Roboto", 9);
             rOLESYPERMISOSToolStripMenuItem.Visible = ObjPermiso.BuscarMenuTresUsuario(TipoCon, ObjUsuario.IdRol,1,6,9);
             SetTool(rOLESYPERMISOSToolStripMenuItem, "Roboto", 9);
+            #endregion
+
+            #region Menu Activos Fijos
             // Menu 2  Activos Fijos  
             tsActivosFijos.Visible = ObjPermiso.BuscarMenuUnoUsuario(TipoCon, ObjUsuario.IdRol,2);
             iNGRESOToolStripMenuItem.Visible = ObjPermiso.BuscarMenuDosUsuario(TipoCon, ObjUsuario.IdRol,2,7);
@@ -312,7 +317,9 @@ namespace SysCisepro3.Main
             SetTool(rEPORTEDEACTIVOSFIJOSINGRESADOSToolStripMenuItem, "Roboto", 9);
             rEPORTEDEBAJASREALIZADASToolStripMenuItem.Visible = ObjPermiso.BuscarMenuTresUsuario(TipoCon, ObjUsuario.IdRol,2,15,33);
             SetTool(rEPORTEDEBAJASREALIZADASToolStripMenuItem, "Roboto", 9);
+            #endregion
 
+            #region Menu 3 Fondos
             // Menu 3 Fondos
             tsFondos.Visible = ObjPermiso.BuscarMenuUnoUsuario(TipoCon, ObjUsuario.IdRol,3);
             fONDODECAJACHICAToolStripMenuItem.Visible = ObjPermiso.BuscarMenuDosUsuario(TipoCon, ObjUsuario.IdRol,3,16);
@@ -345,7 +352,9 @@ namespace SysCisepro3.Main
             SetTool(rEPORTESOLICITUDESFONDOROTATIVOToolStripMenuItem, "Roboto", 9);
             rEPORTECONTROLCOMBUSTIBLEToolStripMenuItem.Visible = ObjPermiso.BuscarMenuTresUsuario(TipoCon, ObjUsuario.IdRol,3,17,46);
             SetTool(rEPORTECONTROLCOMBUSTIBLEToolStripMenuItem, "Roboto", 9);
-            
+            #endregion
+
+            #region Menu 4 Contabilidad
             //Menu 4 Contabilidad
             tsContabilidad.Visible = ObjPermiso.BuscarMenuUnoUsuario(TipoCon, ObjUsuario.IdRol, 4);
             lIBRODIARIOGENERALToolStripMenuItem.Visible = ObjPermiso.BuscarMenuDosUsuario(TipoCon, ObjUsuario.IdRol,4,18);
@@ -509,10 +518,12 @@ namespace SysCisepro3.Main
             eSTADODEPÉRDIDASYGANANCIASToolStripMenuItem.Visible = ObjPermiso.BuscarMenuTresUsuario(TipoCon, ObjUsuario.IdRol, 4, 30, 113);
             SetTool(eSTADODEPÉRDIDASYGANANCIASToolStripMenuItem, "Roboto", 9);
             bALANCEFINALToolStripMenuItem.Visible = ObjPermiso.BuscarMenuTresUsuario(TipoCon, ObjUsuario.IdRol, 4, 30, 114);
-            SetTool(bALANCEFINALToolStripMenuItem, "Roboto", 9);        
-           
+            SetTool(bALANCEFINALToolStripMenuItem, "Roboto", 9);
 
-            
+            #endregion
+
+            #region Menu 5 RRHH
+
             //Menu 5 RRHH
 
             tsRecursoHumano.Visible = ObjPermiso.BuscarMenuUnoUsuario(TipoCon, ObjUsuario.IdRol, 5);
@@ -558,7 +569,10 @@ namespace SysCisepro3.Main
             SetTool(rESÚMENPAGOSNÓMINAToolStripMenuItem, "Roboto", 9);
             cUMPLEAÑEROSToolStripMenuItem1.Visible = ObjPermiso.BuscarMenuTresUsuario(TipoCon, ObjUsuario.IdRol, 5, 41, 124); 
             SetTool(cUMPLEAÑEROSToolStripMenuItem1, "Roboto", 9);
-            
+
+            #endregion
+
+            #region Menu 6 Operaciones
             // Menu 6 Operaciones
 
             tsOperaciones.Visible = ObjPermiso.BuscarMenuUnoUsuario(TipoCon, ObjUsuario.IdRol, 6);
@@ -583,6 +597,9 @@ namespace SysCisepro3.Main
             iNGRESOSSALIDASDELPERSONALToolStripMenuItem1.Visible = ObjPermiso.BuscarMenuTresUsuario(TipoCon, ObjUsuario.IdRol, 6, 50, 125); 
             SetTool(iNGRESOSSALIDASDELPERSONALToolStripMenuItem1, "Roboto", 9);
 
+            #endregion
+
+            #region Menu 7 Bodega
             // Menu 7 Bodega
 
             tsBodega.Visible = ObjPermiso.BuscarMenuUnoUsuario(TipoCon, ObjUsuario.IdRol, 7);
@@ -612,6 +629,8 @@ namespace SysCisepro3.Main
             SetTool(cONTROLPORPERSONALToolStripMenuItem1, "Roboto", 9);
             rEPORTESITIOTRABAJOToolStripMenuItem.Visible = ObjPermiso.BuscarMenuTresUsuario(TipoCon, ObjUsuario.IdRol, 7, 58, 130);
             SetTool(rEPORTESITIOTRABAJOToolStripMenuItem, "Roboto", 9);
+
+            #endregion
 
             #endregion Menu
 
@@ -765,6 +784,7 @@ namespace SysCisepro3.Main
         #region ADMINISTRACION
         private void mODIFICARESTRUCTURAADMINISTRATIVAToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            
             FrmEstructuraAdministrativa.Instancia.MdiParent = this;
             FrmEstructuraAdministrativa.TipoCon = TipoCon;
             FrmEstructuraAdministrativa.Usuario = ObjUsuario;
@@ -781,6 +801,7 @@ namespace SysCisepro3.Main
         }
         private void aPROBACIÓNDEORDENDECOMPRAToolStripMenuItem_Click(object sender, EventArgs e)
         {
+
             FrmAprobacionOrdenCompra.Instancia.MdiParent = this;
             FrmAprobacionOrdenCompra.TipoCon = TipoCon;
             FrmAprobacionOrdenCompra.Usuario = ObjUsuario;
@@ -1674,6 +1695,7 @@ namespace SysCisepro3.Main
         {
             Form f = new syscisepro.FORMULARIOS.INVENTARIOS.COMPROBANTES.FormComprobanteIngresoBodega { MdiParent = this, TipoCox = TipoCox, IdUsuario = ObjUsuario.IdUsuario };
             f.Show();
+            f.BringToFront();
         }
         private void eNTREGADEUNIFORMESToolStripMenuItem_Click(object sender, EventArgs e)
         {

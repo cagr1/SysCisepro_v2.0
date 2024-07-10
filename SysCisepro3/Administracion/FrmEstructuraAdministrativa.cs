@@ -79,6 +79,9 @@ namespace SysCisepro3.Administracion
             _rptSubSeccion = new crSubSecciones();
 
             _frmReportes = new FrmVisualizadorReportes();
+           this.Resize += new EventHandler(FrmEstructuraAdministrativa_Resize);
+
+
         }
 
         private void FrmEstructuraAdministrativa_Load(object sender, EventArgs e)
@@ -113,6 +116,9 @@ namespace SysCisepro3.Administracion
             }
             
             LlenarCombos();
+
+            //Width = this.ClientSize.Width - 150;
+            //Height = this.ClientSize.Height - 250;
         }
 
         private void LlenarCombos()
@@ -1043,6 +1049,11 @@ namespace SysCisepro3.Administracion
             {
                 MessageBox.Show(@"Error al generar reporte!", "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+        }
+
+        private void FrmEstructuraAdministrativa_Resize(object sender, EventArgs e)
+        {
+           
         }
     }
 }

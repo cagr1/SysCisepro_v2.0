@@ -548,9 +548,11 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
             tsmEliminar.Enabled = False
         End Sub
         Private Sub tsmGuardar_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles tsmGuardar.Click
-           
 
-            If MessageBox.Show("DESEA GUARDAR LOS CAMBIOS?", "MENSAJE DEL SISTEMA", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> DialogResult.Yes Then Return
+
+
+            'If MessageBox.Show("DESEA GUARDAR LOS CAMBIOS?", "MENSAJE DEL SISTEMA", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> DialogResult.Yes Then Return
+            If KryptonMessageBox.Show("DESEA GUARDAR LOS CAMBIOS?", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) <> DialogResult.Yes Then Return
 
             _sqlCommands.Clear()
             If _botonSeleccionadoSitio = 1 Then
