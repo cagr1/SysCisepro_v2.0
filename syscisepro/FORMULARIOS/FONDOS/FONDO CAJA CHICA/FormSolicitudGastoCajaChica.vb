@@ -20,6 +20,8 @@ Imports syscisepro.FORMULARIOS.INVENTARIOS.PROCESO
 Imports ClassLibraryCisepro.CONTABILIDAD.COMPROBANTES_ELECTRONICOS
 Imports System.Xml
 Imports System.Text
+Imports ClassLibraryCisepro.CONTABILIDAD.VENTAS
+Imports Krypton.Toolkit
 
 Namespace FORMULARIOS.FONDOS.FONDO_CAJA_CHICA
     ''' <summary>
@@ -67,6 +69,7 @@ Namespace FORMULARIOS.FONDOS.FONDO_CAJA_CHICA
         ReadOnly _objetoAts As New ClassAnexoTransaccional
         ReadOnly _validacionesNumeros As New ClassNumerico
         ReadOnly _validacionesDecimales As New ClassDecimal
+        ReadOnly _objetoClienteGeneral As New ClassClienteGeneral
 
         Dim _objetoInformacionTributaria As ClassInformacionTributaria
         Dim _objetoDocumentoNoDeducible As ClassDocumentoNoDeducible
@@ -83,6 +86,7 @@ Namespace FORMULARIOS.FONDOS.FONDO_CAJA_CHICA
 
         Dim _formDocumentoNoDeducible As FormDocumentosNoDeducibles
         Dim _formComprobanteCompra As FormRegistroComprobanteCompra
+
 
         '=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= COMPROBANTE DE COMPRA =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
         Dim _idProveedorGeneral As Int64
@@ -196,6 +200,7 @@ Namespace FORMULARIOS.FONDOS.FONDO_CAJA_CHICA
                     'lblMontoPorTransaccion.BackColor = My.MySettingsProperty.Settings.ColorCisepro
             End Select
             _sqlCommands = New List(Of SqlCommand)
+            AutocompletarNombreCliente()
         End Sub
         Private Sub LimpiarVariables()
             _tipoAmbiente = 0
@@ -256,11 +261,20 @@ Namespace FORMULARIOS.FONDOS.FONDO_CAJA_CHICA
             cbmParametrosDocumentos.Enabled = detalle
             btnDocumento.Enabled = detalle
             txtDetalleGasto.Enabled = detalle
+            txtNombreComercialCliente.Enabled = detalle
 
             GroupBox1.Enabled = detalle
             chkCombustible.Enabled = detalle
         End Sub
-
+        Private Sub AutocompletarNombreCliente()
+            Try
+                txtNombreComercialCliente.AutoCompleteCustomSource = _objetoClienteGeneral.Autocompletar(_tipoCon)
+                txtNombreComercialCliente.AutoCompleteMode = AutoCompleteMode.Suggest
+                txtNombreComercialCliente.AutoCompleteSource = AutoCompleteSource.CustomSource
+            Catch
+                txtNombreComercialCliente.AutoCompleteCustomSource = Nothing
+            End Try
+        End Sub
         Private Sub btnNuevo_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnNuevo.Click
             btnNuevo.Enabled = False
             btnGuardar.Enabled = True
@@ -550,6 +564,7 @@ Namespace FORMULARIOS.FONDOS.FONDO_CAJA_CHICA
             txtNumeroSolicitud.Clear()
             txtDetalleGasto.Clear()
             txtNroDocumento.Clear()
+            txtNombreComercialCliente.Clear()
         End Sub
 
         Private Sub LimpiarParametrosControlCombustible()
@@ -836,7 +851,13 @@ Namespace FORMULARIOS.FONDOS.FONDO_CAJA_CHICA
 
         Private Sub btnGuardar_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnGuardar.Click
             If txtDetalleGasto.Text.Trim().Equals("...") Or txtDetalleGasto.Text.Length < 6 Then
-                MsgBox("DEBE AGREGAR LA OBSERVACIÓN O DETALLE DEL DOCUMENTO!")
+                'MsgBox("DEBE AGREGAR LA OBSERVACIÓN O DETALLE DEL DOCUMENTO!")
+                KryptonMessageBox.Show("DEBE AGREGAR LA OBSERVACIÓN O DETALLE DEL DOCUMENTO!", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
+                Return
+            End If
+
+            If txtNombreComercialCliente.Text.Length < 0 Then
+                KryptonMessageBox.Show("DEBE AGREGAR EL NOMBRE DEL CLIENTE O PROVEEDOR!", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
                 Return
             End If
 
@@ -1093,6 +1114,8 @@ Namespace FORMULARIOS.FONDOS.FONDO_CAJA_CHICA
                 .IdLiquidacion = 0
                 '.IdComprobanteCompra = _objetoComprobantesCompra.IdComprobante + 1
                 .IdComprobanteCompra = If(cbmParametrosDocumentos.Tag.ToString() = "DEDUCIBLE", _objetoComprobantesCompra.IdComprobante, _objetoDocumentoNoDeducible.IdDocumentoNo)
+                .NombreCliente = txtNombreComercialCliente.Text.ToUpper.Trim
+
             End With
             _sqlCommands.Add(_objSolicitudCajaChica.NuevaSolicitudCajaChicaCommand())
             Auditoria("SOLICITUD DE CAJA CHICA ID: " & _objSolicitudCajaChica.IdSolitud & ", N° " & _objSolicitudCajaChica.Numero & _
@@ -1554,5 +1577,12 @@ Namespace FORMULARIOS.FONDOS.FONDO_CAJA_CHICA
         Private Sub cbmCajasChicas_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cbmCajasChicas.SelectedIndexChanged
 
         End Sub
+
+        Private Sub txtNombreComercialCliente_KeyUp(sender As Object, e As KeyEventArgs) Handles txtNombreComercialCliente.KeyUp
+
+        End Sub
+
+
+
     End Class
 End Namespace

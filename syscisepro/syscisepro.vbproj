@@ -339,6 +339,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSetComprobanteIngresoBancos.xsd</DependentUpon>
     </Compile>
+    <Compile Include="FORMULARIOS\CONJUNTO DE DATOS\REPORTE CAJA CHICA\dsLiquidacionCC.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsLiquidacionCC.xsd</DependentUpon>
+    </Compile>
     <Compile Include="FORMULARIOS\CONJUNTO DE DATOS\REPORTE DE INVENTARIOS\dsBodegas.vb">
       <DependentUpon>dsBodegas.xsd</DependentUpon>
     </Compile>
@@ -2136,6 +2141,12 @@
       <DependentUpon>crControlCombustibleCajaChica.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="REPORTES\FONDO CAJA CHICA\crLiquidacionCajaChicaNew.vb">
+      <DependentUpon>crLiquidacionCajaChicaNew.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Include="REPORTES\FONDO CAJA CHICA\crLiquidacionCajaChica.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -3369,6 +3380,10 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>crControlCombustibleCajaChica.vb</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="REPORTES\FONDO CAJA CHICA\crLiquidacionCajaChicaNew.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crLiquidacionCajaChicaNew.vb</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="REPORTES\FONDO CAJA CHICA\crLiquidacionCajaChica.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>crLiquidacionCajaChica.vb</LastGenOutput>
@@ -3732,6 +3747,17 @@
     </None>
     <None Include="FORMULARIOS\CONJUNTO DE DATOS\REPORTE BANCOS\DataSetComprobanteIngresoBancos.xss">
       <DependentUpon>DataSetComprobanteIngresoBancos.xsd</DependentUpon>
+    </None>
+    <None Include="FORMULARIOS\CONJUNTO DE DATOS\REPORTE CAJA CHICA\dsLiquidacionCC.xsc">
+      <DependentUpon>dsLiquidacionCC.xsd</DependentUpon>
+    </None>
+    <None Include="FORMULARIOS\CONJUNTO DE DATOS\REPORTE CAJA CHICA\dsLiquidacionCC.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsLiquidacionCC.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="FORMULARIOS\CONJUNTO DE DATOS\REPORTE CAJA CHICA\dsLiquidacionCC.xss">
+      <DependentUpon>dsLiquidacionCC.xsd</DependentUpon>
     </None>
     <None Include="FORMULARIOS\CONJUNTO DE DATOS\REPORTE DE INVENTARIOS\dsComprobante.xsc">
       <DependentUpon>dsComprobante.xsd</DependentUpon>

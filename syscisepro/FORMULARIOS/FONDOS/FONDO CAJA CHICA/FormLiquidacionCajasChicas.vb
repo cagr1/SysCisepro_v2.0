@@ -54,6 +54,7 @@ Namespace FORMULARIOS.FONDOS.FONDO_CAJA_CHICA
         ReadOnly _objParroquias As New ClassParroquias
 
         ReadOnly _crLiquidacionCajaChica As New crLiquidacionCajaChica
+        ReadOnly _crLiquidacionCajaChicaNew As New crLiquidacionCajaChicaNew
 
         Dim _objAuditoria As New ClassAuditoriaGeneral
         Dim _objSolicitudCajaChica As New ClassSolicitudCajaChica
@@ -201,6 +202,8 @@ Namespace FORMULARIOS.FONDOS.FONDO_CAJA_CHICA
             dgvLiquidacionFondoCajaChica.Columns(13).HeaderText = "CENTRO COSTO"
             dgvLiquidacionFondoCajaChica.Columns(13).Width = 180
             dgvLiquidacionFondoCajaChica.Columns(14).HeaderText = "CUENTA"
+            dgvLiquidacionFondoCajaChica.Columns(17).Width = 200
+            dgvLiquidacionFondoCajaChica.Columns(17).HeaderText = "CLIENTE"
             dgvLiquidacionFondoCajaChica.ReadOnly = True
 
         End Sub
@@ -358,9 +361,11 @@ Namespace FORMULARIOS.FONDOS.FONDO_CAJA_CHICA
 
         Private Sub bntCargar_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles bntCargar.Click
             Try
-                _crLiquidacionCajaChica.SetDataSource(_objLiquidacionCajaChica.BuscarSolicitudesFondoCajaChicaPorIdLiquidacion(_tipoCon, txtIdLiquidacionBusqueda.Text))
-                _crLiquidacionCajaChica.SetParameterValue("img", ValidationForms.NombreLogo(_tipoCon, Application.StartupPath))
-                crvLiquidacion.ReportSource = _crLiquidacionCajaChica
+                '_crLiquidacionCajaChica.SetDataSource(_objLiquidacionCajaChica.BuscarSolicitudesFondoCajaChicaPorIdLiquidacion(_tipoCon, txtIdLiquidacionBusqueda.Text))
+                '_crLiquidacionCajaChica.SetParameterValue("img", ValidationForms.NombreLogo(_tipoCon, Application.StartupPath))
+                _crLiquidacionCajaChicaNew.SetDataSource(_objLiquidacionCajaChica.BuscarSolicitudesFondoCajaChicaPorIdLiquidacion(_tipoCon, txtIdLiquidacionBusqueda.Text))
+                _crLiquidacionCajaChicaNew.SetParameterValue("img", ValidationForms.NombreLogo(_tipoCon, Application.StartupPath))
+                crvLiquidacion.ReportSource = _crLiquidacionCajaChicaNew
                 crvLiquidacion.Zoom(2)
                 crvLiquidacion.Refresh()
             Catch ex As Exception

@@ -120,22 +120,22 @@ namespace SysCisepro3.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=192.168.0.137;Initial Catalog=SYSCISEPRO;Persist Security Info=True;U" +
-            "ser ID=syscisepro;Password=syscisepro")]
-        public string SysCiseproConnectionString {
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=videomonitoreo;Initial Catalog=SYSSEPORTPAC;Persist Security Info=Tru" +
+            "e;User ID=syscisepro;Password=syscisepro;TrustServerCertificate=True")]
+        public string SYSSEPORTPACConnectionString {
             get {
-                return ((string)(this["SysCiseproConnectionString"]));
+                return ((string)(this["SYSSEPORTPACConnectionString"]));
             }
         }
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=videomonitoreo;Initial Catalog=SYSSEPORTPAC;Persist Security Info=Tru" +
-            "e;User ID=syscisepro;Password=syscisepro;TrustServerCertificate=True")]
-        public string SYSSEPORTPACConnectionString {
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=192.168.0.137;Initial Catalog=SYSCISEPRO;Persist Security Info=True;U" +
+            "ser ID=syscisepro;Password=syscisepro")]
+        public string SysCiseproConnectionString {
             get {
-                return ((string)(this["SYSSEPORTPACConnectionString"]));
+                return ((string)(this["SysCiseproConnectionString"]));
             }
         }
     }

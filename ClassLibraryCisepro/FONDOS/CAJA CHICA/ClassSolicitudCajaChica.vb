@@ -32,9 +32,10 @@ Namespace FONDOS.CAJA_CHICA
         Public IdParametroDocumento As Integer
         Public NroParametroDocumento As String
         Public IdPersonal As Integer
-        Public IdLiquidacion As Integer 
+        Public IdLiquidacion As Integer
         Public IdComprobanteCompra As Int64
-         
+        Public NombreCliente As String
+
         Public Function BuscarMayorIdSolicitudCajaChica(ByVal tipoCon As TipoConexion) As Integer
             Dim data = ComandosSql.SeleccionarQueryToDataTable(tipoCon, "BuscarMayorIdSolicitudCajaChica", True) 
             Return If(data.Rows.Count = 0, 0, If(IsDBNull(data.Rows(0)(0)), 0, CInt(data.Rows(0)(0))))
@@ -126,6 +127,7 @@ Namespace FONDOS.CAJA_CHICA
                 .Parameters.AddWithValue("@ID_PERSONAL", SqlDbType.Int).Value = IdPersonal
                 .Parameters.AddWithValue("@ID_LIQUIDACION", SqlDbType.Int).Value = IdLiquidacion
                 .Parameters.AddWithValue("@ID_COMPROBANTE", SqlDbType.BigInt).Value = IdComprobanteCompra
+                .Parameters.AddWithValue("@NOMBRE_CLIENTE", SqlDbType.NVarChar).Value = NombreCliente
             End With
             Return comando
         End Function
