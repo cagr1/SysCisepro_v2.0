@@ -856,7 +856,7 @@ Namespace FORMULARIOS.FONDOS.FONDO_CAJA_CHICA
                 Return
             End If
 
-            If txtNombreComercialCliente.Text.Length < 0 Then
+            If txtNombreComercialCliente.Text.Length = 0 Then
                 KryptonMessageBox.Show("DEBE AGREGAR EL NOMBRE DEL CLIENTE O PROVEEDOR!", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
                 Return
             End If

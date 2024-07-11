@@ -20,6 +20,8 @@ Imports syscisepro.FORMULARIOS.INVENTARIOS.PROCESO
 Imports ClassLibraryCisepro.CONTABILIDAD.COMPROBANTES_ELECTRONICOS
 Imports System.Xml
 Imports System.Text
+Imports ClassLibraryCisepro.CONTABILIDAD.VENTAS
+Imports Krypton.Toolkit
 
 Namespace FORMULARIOS.FONDOS.FONDO_ROTATIVO
     ''' <summary>
@@ -80,6 +82,7 @@ Namespace FORMULARIOS.FONDOS.FONDO_ROTATIVO
         Dim _formDocumentoNoDeducible As FormDocumentosNoDeducibles
         Dim _formComprobanteCompra As FormRegistroComprobanteCompra
         ReadOnly _objetoComprobantesElectronicos As New ClassDocumentosElectronicos
+        ReadOnly _objetoClienteGeneral As New ClassClienteGeneral
 
         '=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= COMPROBANTE DE COMPRA =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
         Dim _idProveedorGeneral As Int64
@@ -182,6 +185,7 @@ Namespace FORMULARIOS.FONDOS.FONDO_ROTATIVO
             End Select
 
             _sqlCommands = New List(Of SqlCommand)
+            AutocompletarNombreCliente()
         End Sub
         Private Sub LimpiarVariables()
             _tipoAmbiente = 0
@@ -217,6 +221,15 @@ Namespace FORMULARIOS.FONDOS.FONDO_ROTATIVO
             _validarLlenarDocumento = 0
         End Sub
 
+        Private Sub AutocompletarNombreCliente()
+            Try
+                txtNombreComercialCliente.AutoCompleteCustomSource = _objetoClienteGeneral.Autocompletar(_tipoCon)
+                txtNombreComercialCliente.AutoCompleteMode = AutoCompleteMode.Suggest
+                txtNombreComercialCliente.AutoCompleteSource = AutoCompleteSource.CustomSource
+            Catch
+                txtNombreComercialCliente.AutoCompleteCustomSource = Nothing
+            End Try
+        End Sub
         Private Sub DeshabilitadoInicio()
             txtFechaSolicitudFR.Enabled = False
 
@@ -266,6 +279,7 @@ Namespace FORMULARIOS.FONDOS.FONDO_ROTATIVO
             btnGuardarSolicitudFR.Enabled = True
             btnDocumento.Enabled = True
             btnCancelarSolicitudFR.Enabled = True
+            txtNombreComercialCliente.Enabled = True
         End Sub
 
         Private Sub LimpiarParametros()
@@ -283,6 +297,7 @@ Namespace FORMULARIOS.FONDOS.FONDO_ROTATIVO
 
             txtCodDebe.Clear()
             txtCodHaber.Clear()
+            txtNombreComercialCliente.Clear()
         End Sub
 
         Private Sub btnNuevo_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnNuevoSolicitudFR.Click
@@ -688,14 +703,21 @@ Namespace FORMULARIOS.FONDOS.FONDO_ROTATIVO
                     If chkCombustible.Checked Then txtValorControl.Text = txtValorSolicitudFR.Text
                 Catch ex As Exception
                     _validarLlenarDocumento = 0
-                    MsgBox(ex.ToString & vbNewLine & "Por favor, vuelva a ingresar los datos del documento!", MsgBoxStyle.Critical, "MENSAJE DE EXCEPCIÓN")
+                    'MsgBox(ex.ToString & vbNewLine & "Por favor, vuelva a ingresar los datos del documento!", MsgBoxStyle.Critical, "MENSAJE DE EXCEPCIÓN")
+                    KryptonMessageBox.Show(ex.ToString & vbNewLine & "Por favor, vuelva a ingresar los datos del documento!", "MENSAJE DE EXCEPCIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
                 End Try
             End If
         End Sub
 
         Private Sub btnGuardar_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnGuardarSolicitudFR.Click
             If txtDetalleSolicitudFR.Text.Trim().Equals("...") Or txtDetalleSolicitudFR.Text.Length < 6 Then
-                MsgBox("DEBE AGREGAR LA OBSERVACIÓN O DETALLE DEL DOCUMENTO!")
+                'MsgBox("DEBE AGREGAR LA OBSERVACIÓN O DETALLE DEL DOCUMENTO!")
+                KryptonMessageBox.Show("DEBE AGREGAR LA OBSERVACIÓN O DETALLE DEL DOCUMENTO!", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
+                Return
+            End If
+
+            If txtNombreComercialCliente.Text.Length = 0 Then
+                KryptonMessageBox.Show("DEBE AGREGAR EL NOMBRE DEL CLIENTE O PROVEEDOR!", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
                 Return
             End If
 
@@ -703,21 +725,19 @@ Namespace FORMULARIOS.FONDOS.FONDO_ROTATIVO
             If Not ValidarNumeroComprobanteRepetidoProveedor() Then Return
             If Not ValidarNumeroComprobanteRetencionRepetido() Then Return
             If Not ValidarNumeroComprobanteLiquidacionRepetido() Then Return
-
             If chkCombustible.Checked And Not ValidacionParametrosCombustible() Then
-                MsgBox("NO OLVIDE INGRESAR LOS DATOS DEL CONTROL DE COMBUSTIBLE!")
+                'MsgBox("NO OLVIDE INGRESAR LOS DATOS DEL CONTROL DE COMBUSTIBLE!")
+                KryptonMessageBox.Show("NO OLVIDE INGRESAR LOS DATOS DEL CONTROL DE COMBUSTIBLE!", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
                 Return
             End If
 
             If ValidacionParametros() = True Then
-
                 If _validarLlenarDocumento = 1 Then
 
                     If CDbl(txtValorSolicitudFR.Text) > CDbl(lblMontoFondoRotativo.Text) Then
                         MsgBox("No se puede procesar un valor mayor al valor disponible en fondo rotativo ($" & lblMontoFondoRotativo.Text & ")! Por favor, realice una reposición", MsgBoxStyle.Information, "MENSAJE DE INFORMACIÓN")
                         Return
                     End If
-
                     _sqlCommands.Clear()
 
                     _objAuditoria.FechaAuditoria = _objAuditoria.FechaExactaAuditoria(_tipoCon)
@@ -725,7 +745,6 @@ Namespace FORMULARIOS.FONDOS.FONDO_ROTATIVO
                     _objAuditoria.FormularioAuditoria = Text.Trim
                     _objAuditoria.EstadoAuditoria = 1
                     _objAuditoria.IdUsuarioAuditoria = IdUsuario
-
                     If cmbNombreParametroDocumentos.Tag.ToString() = "DEDUCIBLE" Then
 
                         If _objetoAts.ValidarCompraConDeclaracion(_tipoCon, dtpFechaEmisionComprobanteCompra.Value) Then
@@ -735,13 +754,9 @@ Namespace FORMULARIOS.FONDOS.FONDO_ROTATIVO
                             ' AAUXILIARES ID
                             _objetoSolicitudFondoRotativo.IdSolicitud = _objetoSolicitudFondoRotativo.BuscarMayorIdSolicitudFondoRotativo(_tipoCon) + 1
                             _objetoComprobantesCompra.IdComprobante = _objetoComprobantesCompra.BuscarMayorIdComprobanteCompra(_tipoCon) + 1
-
                             GuardarComprobanteCompra()
-
                             GuardarRegistroSolicitudFondoRotativoNuevo()
-
                             ActualizarMontoFondo()
-
                             If _validarComprobanteRetencion = 1 Then
                                 If _ptoEmisionRetencion = "002" Then
                                     Dim ep = _objetoInformacionTributaria.SeleccionarRegistrosInformacionTributaria(_tipoCon)
@@ -761,7 +776,7 @@ Namespace FORMULARIOS.FONDOS.FONDO_ROTATIVO
 
                                 'FACTURA 01, NOTA DE CRÉDITO 04, NOTA DE DÉBITO 05, GUÍA DE REMISIÓN 06, COMPROBANTE DE RETENCIÓN 07
                                 _claveAccesoRetencion = ValidationForms.GenerarClaveAccesoComprobantesElectronicos("07", dtpComprobanteRetencion.Value, _rucEmpresaCisepro,
-                                                                                                         _tipoAmbiente, _establecimientoRetencion, _ptoEmisionRetencion,
+_tipoAmbiente, _establecimientoRetencion, _ptoEmisionRetencion,
                                                                                                          _secuencialRetencion, _tipoEmision)
                                 If _claveAccesoRetencion.ToString.Length = 49 Then ' si la clave de acceso para la retencion electronica es valida
                                     If _ptoEmisionRetencion = "002" Then ActualizarSecuencial() ' actualiza el secuencial de comprobante de retencion electronico
@@ -772,12 +787,10 @@ Namespace FORMULARIOS.FONDOS.FONDO_ROTATIVO
                                     Return
                                 End If
                             End If
-
                             If _validarComprobanteLiqCompra = 1 Then
                                 If _ptoEmisionLiqCompra = "002" Then
                                     Dim ep = _objetoInformacionTributaria.SeleccionarRegistrosInformacionTributaria(_tipoCon)
                                     _secuencialLiqCompra = CLng(ep.Rows(0)(22).ToString()) + 1
-
                                     Select Case _secuencialLiqCompra.Length
                                         Case 1 : _secuencialLiqCompra = "00000000" + _secuencialLiqCompra
                                         Case 2 : _secuencialLiqCompra = "0000000" + _secuencialLiqCompra
@@ -793,7 +806,7 @@ Namespace FORMULARIOS.FONDOS.FONDO_ROTATIVO
 
                                 'FACTURA 01, NOTA DE CRÉDITO 04, NOTA DE DÉBITO 05, GUÍA DE REMISIÓN 06, COMPROBANTE DE RETENCIÓN 07
                                 _claveAccesoLiqCompra = ValidationForms.GenerarClaveAccesoComprobantesElectronicos("03", dtpFechaEmisionComprobanteCompra.Value, _rucEmpresaCisepro,
-                                                                                                         _tipoAmbiente, _establecimientoLiqCompra, _ptoEmisionLiqCompra,
+_tipoAmbiente, _establecimientoLiqCompra, _ptoEmisionLiqCompra,
                                                                                                          _secuencialLiqCompra, _tipoEmision)
 
                                 If _claveAccesoLiqCompra.ToString.Length = 49 Then ' si la clave de acceso para la retencion electronica es valida
@@ -803,14 +816,12 @@ Namespace FORMULARIOS.FONDOS.FONDO_ROTATIVO
                                     Return
                                 End If
                             End If
-
                         End If
                     ElseIf cmbNombreParametroDocumentos.Tag = "NO DEDUCIBLE" Then
 
                         ' AAUXILIARES ID
                         _objetoSolicitudFondoRotativo.IdSolicitud = _objetoSolicitudFondoRotativo.BuscarMayorIdSolicitudFondoRotativo(_tipoCon) + 1
                         _objetoDocumentoNoDeducible.IdDocumentoNo = _objetoDocumentoNoDeducible.BuscarMayorIdDocumentoNoDeducible(_tipoCon) + 1
-
                         GuardarRegistroSolicitudFondoRotativoNuevo()
                         GuardarDocumentoNoDeducible()
 
@@ -825,10 +836,8 @@ Namespace FORMULARIOS.FONDOS.FONDO_ROTATIVO
                             Return
                         End If
                     End If
-
                     Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, String.Empty)
                     If res(0) Then
-
                         If _validarComprobanteRetencion = 1 And _ptoEmisionRetencion = "002" Then ExportarXml()
                         If _validarComprobanteLiqCompra = 1 And _ptoEmisionLiqCompra = "002" Then ExportarXmlLiquidacionCompra()
 
@@ -836,13 +845,13 @@ Namespace FORMULARIOS.FONDOS.FONDO_ROTATIVO
 
                         txtNroSolicitudFR.Tag = _objetoSolicitudFondoRotativo.IdSolicitud
                         txtNroSolicitudFR.Text = _objetoSolicitudFondoRotativo.NroDocumentoSolicitud
-
                         btnNuevoSolicitudFR.Enabled = True
                         btnDocumento.Enabled = False
                         btnGuardarSolicitudFR.Enabled = False
                         btnCancelarSolicitudFR.Enabled = False
                         DeshabilitadoInicio()
-
+                    Else
+                        MsgBox("NO SE PUEDE GUARDAR." & vbNewLine & "NO SE HAN LLENADO LOS DATOS DEL DOCUMENTO.", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
                     End If
                     MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
 
@@ -854,7 +863,6 @@ Namespace FORMULARIOS.FONDOS.FONDO_ROTATIVO
                 txtValorSolicitudFR.Focus()
             End If
         End Sub
-
         Private Function ValidarNumeroComprobanteRepetidoProveedor()
             If cmbNombreParametroDocumentos.Tag.ToString() = "DEDUCIBLE" Then
                 Dim n = _objetoComprobantesCompra.BuscarNumeroComprobanteXIdProveedorNumeroComprobante(_tipoCon, _idProveedorGeneral, _numeroComprobanteCompra.Trim.ToString)
@@ -868,7 +876,6 @@ Namespace FORMULARIOS.FONDOS.FONDO_ROTATIVO
                 Return True
             End If
         End Function
-
         Private Function ValidarNumeroComprobanteRetencionRepetido()
             If cmbNombreParametroDocumentos.Tag.ToString() = "DEDUCIBLE" Then
                 If _numComprobanteRetencion <> "001001000000001" Then
@@ -882,7 +889,6 @@ Namespace FORMULARIOS.FONDOS.FONDO_ROTATIVO
             End If
             Return True
         End Function
-
         Private Function ValidarNumeroComprobanteLiquidacionRepetido()
             If cmbNombreParametroDocumentos.Tag = "DEDUCIBLE" Then
                 If _objetoComprobantesRetencion.ExisteNumeroComprobanteLiquidacionCompra(_tipoCon, _numeroComprobanteCompra, _idProveedorGeneral) Then
@@ -893,7 +899,6 @@ Namespace FORMULARIOS.FONDOS.FONDO_ROTATIVO
             End If
             Return True
         End Function
-
         Private Function ValidacionParametros() As Boolean
             Return (txtActividadDetalleFR.Text <> "" And cmbConcepto.SelectedValue > 0 And cmbProvincia.SelectedValue > 0 And cmbCanton.SelectedValue > 0 And cmbParroquia.SelectedValue > 0 And cmbCentroCosto.SelectedValue > 0 _
                And cmbCargoResponsableAutoFR.SelectedValue > 0 And txtCIResponsableAutoFR.Text <> "" And txtApellidoResponsableAutoFR.Text <> "" And txtNombreResponsableAutoFR.Text <> "" _
@@ -941,7 +946,7 @@ Namespace FORMULARIOS.FONDOS.FONDO_ROTATIVO
                 End If
             End With
             _sqlCommands.Add(_objetoSolicitudFondoRotativo.NuevoRegistroSolicitudForndoRotativoCommand())
-            Auditoria("SOLICITUD DE FONDO ROTATIVO ID: " & _objetoSolicitudFondoRotativo.IdSolicitud & ", N° " & _objetoSolicitudFondoRotativo.NumeroSolicitud & _
+            Auditoria("SOLICITUD DE FONDO ROTATIVO ID: " & _objetoSolicitudFondoRotativo.IdSolicitud & ", N° " & _objetoSolicitudFondoRotativo.NumeroSolicitud &
             ", FECHA: " & _objetoSolicitudFondoRotativo.FechaSolicitud & ", VALOR: " & _objetoSolicitudFondoRotativo.ValorSolicitud)
 
 
@@ -982,8 +987,8 @@ Namespace FORMULARIOS.FONDOS.FONDO_ROTATIVO
                     .Idprog = 0
                 End With
                 _sqlCommands.Add(_objRegistroDescuento.NuevoRegistroDescuentoCommands())
-                Auditoria("SOLICITUD DE FONDO ROTATIVO ID: " & _objetoSolicitudFondoRotativo.IdSolicitud & ", N° " & _objetoSolicitudFondoRotativo.NumeroSolicitud & _
-                ", FECHA: " & _objetoSolicitudFondoRotativo.FechaSolicitud & ", VALOR: " & _objetoSolicitudFondoRotativo.ValorSolicitud & ", ANTICIPO EMERGENTE A: " & _
+                Auditoria("SOLICITUD DE FONDO ROTATIVO ID: " & _objetoSolicitudFondoRotativo.IdSolicitud & ", N° " & _objetoSolicitudFondoRotativo.NumeroSolicitud &
+                ", FECHA: " & _objetoSolicitudFondoRotativo.FechaSolicitud & ", VALOR: " & _objetoSolicitudFondoRotativo.ValorSolicitud & ", ANTICIPO EMERGENTE A: " &
                 _objRegistroDescuento.IdPersonal & ", VALOR: " & _objRegistroDescuento.Valor)
 
                 With _objetoHistorial
@@ -1027,8 +1032,8 @@ Namespace FORMULARIOS.FONDOS.FONDO_ROTATIVO
                 .IdSolicitudCaja = 0 '===> id de caja chica
             End With
             _sqlCommands.Add(_objetoDocumentoNoDeducible.NuevoRegistroDocumentoNoDeducibleCommand())
-            Auditoria("SOLICITUD DE FONDO ROTATIVO ID: " & _objetoSolicitudFondoRotativo.IdSolicitud & ", DOCUMENTO NO DEDUCIBLE " & _
-               "ID: " & _objetoDocumentoNoDeducible.IdDocumentoNo & ", N°: " & _objetoDocumentoNoDeducible.NumeroDocumentoNo & ", FECHA: " & _objetoDocumentoNoDeducible.FechaDocumentoNo & _
+            Auditoria("SOLICITUD DE FONDO ROTATIVO ID: " & _objetoSolicitudFondoRotativo.IdSolicitud & ", DOCUMENTO NO DEDUCIBLE " &
+               "ID: " & _objetoDocumentoNoDeducible.IdDocumentoNo & ", N°: " & _objetoDocumentoNoDeducible.NumeroDocumentoNo & ", FECHA: " & _objetoDocumentoNoDeducible.FechaDocumentoNo &
                "VALOR: " & _objetoDocumentoNoDeducible.ValorDocumentoNo)
         End Sub
 
@@ -1075,8 +1080,8 @@ Namespace FORMULARIOS.FONDOS.FONDO_ROTATIVO
                 .IdLlegada = _objLlegada.IdLlegadaVehiculo
             End With
             _sqlCommands.Add(_objetoControlcombustible.NuevoRegistroControlCombustiblesCommand())
-            Auditoria("SOLICITUD DE FONDO ROTATIVO ID: " & _objetoSolicitudFondoRotativo.IdSolicitud & ", CONTROL COMBUSTIBLE " & _
-               "ID: " & _objetoControlcombustible.IdControl & ", FECHA: " & _objetoControlcombustible.FechaControl & ", VALOR: " & _objetoControlcombustible.ValorControl & _
+            Auditoria("SOLICITUD DE FONDO ROTATIVO ID: " & _objetoSolicitudFondoRotativo.IdSolicitud & ", CONTROL COMBUSTIBLE " &
+               "ID: " & _objetoControlcombustible.IdControl & ", FECHA: " & _objetoControlcombustible.FechaControl & ", VALOR: " & _objetoControlcombustible.ValorControl &
                "DESTINO: " & _objetoControlcombustible.DestinoControl)
         End Sub
 
@@ -1148,8 +1153,8 @@ Namespace FORMULARIOS.FONDOS.FONDO_ROTATIVO
                 .IdComprobanteCompra = _objetoComprobantesCompra.IdComprobante
             End With
             _sqlCommands.Add(_objetoComprobantesRetencion.NuevoRegistroComprobanteRetencionCompraCommand())
-            Auditoria("SOLICITUD DE FONDO ROTATIVO ID: " & _objetoSolicitudFondoRotativo.IdSolicitud & ", COMPROBANTE DE RETENCIÓN " & _
-                "ID: " & _objetoComprobantesRetencion.IdComprobanteRetencion & ", N°: " & _objetoComprobantesRetencion.NumeroComprobanteRetencion & ", FECHA: " & _objetoComprobantesRetencion.FechaEmisionComprobanteRetencion & _
+            Auditoria("SOLICITUD DE FONDO ROTATIVO ID: " & _objetoSolicitudFondoRotativo.IdSolicitud & ", COMPROBANTE DE RETENCIÓN " &
+                "ID: " & _objetoComprobantesRetencion.IdComprobanteRetencion & ", N°: " & _objetoComprobantesRetencion.NumeroComprobanteRetencion & ", FECHA: " & _objetoComprobantesRetencion.FechaEmisionComprobanteRetencion &
                 "VALOR: " & _objetoComprobantesRetencion.TotalComprobanteRetencion)
         End Sub
 
@@ -1363,7 +1368,7 @@ Namespace FORMULARIOS.FONDOS.FONDO_ROTATIVO
                 Dim totalSinImpuesto As Decimal
 
                 Dim numeroFactura = _establecimientoLiqCompra & "-" & _ptoEmisionLiqCompra & "-" & _secuencialLiqCompra
-                 
+
                 Dim ruta As String
                 Select Case _tipoCon
                     Case TipoConexion.Asenava
