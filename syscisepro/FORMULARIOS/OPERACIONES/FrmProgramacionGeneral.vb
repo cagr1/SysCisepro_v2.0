@@ -36,8 +36,8 @@ Namespace FORMULARIOS.OPERACIONES
         Dim _sqlCommands As List(Of SqlCommand)
         Public IdUsuario As Integer
 
-        ReadOnly _crSitiosCisepro As New rptHorariosProgramacion 
-
+        'ReadOnly _crSitiosCisepro As New rptHorariosProgramacion
+        ReadOnly _crSitiosCisepro As New rptHorariosProgramacionNew
         ReadOnly _objProgramacionOps As New ClassProgramacionOperaciones
         ReadOnly _objdetaProgramacionOps As New ClassDetallesProgramacion
 
@@ -500,11 +500,24 @@ Namespace FORMULARIOS.OPERACIONES
                     Return
                 End If
 
-                Dim ds As New dsOperaciones
+                'Dim ds As New dsOperaciones
+                Dim ds As New dsOperaciones2
+                'For Each item As ListViewItem In ListView1.Items
+                '    ds.Tables("PROGRAMACION_GENERAL").Rows.Add(item.SubItems(0).Text, item.SubItems(1).Text,
+                '                                               item.SubItems(2).Text, "", item.SubItems(3).Text,
+                '                                               item.SubItems(4).Text, item.SubItems(5).Text, item.SubItems(6).Text,
+                '                                               If(item.SubItems(7).Text.Trim.Equals("00:00 ~ 00:00"), "D", item.SubItems(7).Text.Trim),
+                '                                               If(item.SubItems(8).Text.Trim.Equals("00:00 ~ 00:00"), "D", item.SubItems(8).Text.Trim),
+                '                                               If(item.SubItems(9).Text.Trim.Equals("00:00 ~ 00:00"), "D", item.SubItems(9).Text.Trim),
+                '                                               If(item.SubItems(10).Text.Trim.Equals("00:00 ~ 00:00"), "D", item.SubItems(10).Text.Trim),
+                '                                               If(item.SubItems(11).Text.Trim.Equals("00:00 ~ 00:00"), "D", item.SubItems(11).Text.Trim),
+                '                                               If(item.SubItems(12).Text.Trim.Equals("00:00 ~ 00:00"), "D", item.SubItems(12).Text.Trim),
+                '                                               If(item.SubItems(13).Text.Trim.Equals("00:00 ~ 00:00"), "D", item.SubItems(13).Text.Trim),
+                '                                               item.SubItems(2).Text, item.SubItems(14).Text)
+                'Next
                 For Each item As ListViewItem In ListView1.Items
                     ds.Tables("PROGRAMACION_GENERAL").Rows.Add(item.SubItems(0).Text, item.SubItems(1).Text,
-                                                               item.SubItems(2).Text, "", item.SubItems(3).Text,
-                                                               item.SubItems(4).Text, item.SubItems(5).Text, item.SubItems(6).Text,
+                                                               item.SubItems(2).Text, item.SubItems(3).Text,
                                                                If(item.SubItems(7).Text.Trim.Equals("00:00 ~ 00:00"), "D", item.SubItems(7).Text.Trim),
                                                                If(item.SubItems(8).Text.Trim.Equals("00:00 ~ 00:00"), "D", item.SubItems(8).Text.Trim),
                                                                If(item.SubItems(9).Text.Trim.Equals("00:00 ~ 00:00"), "D", item.SubItems(9).Text.Trim),
@@ -512,8 +525,11 @@ Namespace FORMULARIOS.OPERACIONES
                                                                If(item.SubItems(11).Text.Trim.Equals("00:00 ~ 00:00"), "D", item.SubItems(11).Text.Trim),
                                                                If(item.SubItems(12).Text.Trim.Equals("00:00 ~ 00:00"), "D", item.SubItems(12).Text.Trim),
                                                                If(item.SubItems(13).Text.Trim.Equals("00:00 ~ 00:00"), "D", item.SubItems(13).Text.Trim),
-                                                               item.SubItems(2).Text, item.SubItems(14).Text)
+                                                               item.SubItems(15).Text, item.SubItems(16).Text)
                 Next
+
+
+
 
                 _crSitiosCisepro.SetDataSource(ds.Tables("PROGRAMACION_GENERAL"))
                 _crSitiosCisepro.SetParameterValue("img", ValidationForms.NombreLogo(_tipoCon, Application.StartupPath))
@@ -568,7 +584,7 @@ Namespace FORMULARIOS.OPERACIONES
                         Next
                         ListView1.Items.Add(lst)
                     Next
-
+                    'ListView1.Sort()
                     btnNuevo.Enabled = True
                     btnGuardar.Enabled = False
                     btnCancelar.Enabled = False

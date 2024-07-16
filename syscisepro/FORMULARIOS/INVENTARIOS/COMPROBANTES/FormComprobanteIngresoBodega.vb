@@ -532,7 +532,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                     End If
                 Next
 
-
+                dgvComprobantesIngreso.Columns(17).Visible = False
                 dgvComprobantesIngreso.AutoResizeColumns()
                 dgvComprobantesIngreso.AutoResizeRows()
 
@@ -838,12 +838,13 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
 
 
 
-
+            txtRecibe.Text = dgvComprobantesIngreso.CurrentRow.Cells.Item(13).Value + " - " + dgvComprobantesIngreso.CurrentRow.Cells.Item(17).Value.ToString()
             txtCodigo.Text = dgvComprobantesIngreso.CurrentRow.Cells.Item(5).Value ' 
             cmbConceptos.Text = dgvComprobantesIngreso.CurrentRow.Cells.Item(6).Value
             txtProveedores.Text = dgvComprobantesIngreso.CurrentRow.Cells.Item(14).Value.ToString()
-            txtUbicacion.Text = dgvComprobantesIngreso.CurrentRow.Cells.Item(15).Value
-            txtRecibe.Text = dgvComprobantesIngreso.CurrentRow.Cells.Item(13).Value
+            UpdateUbicacion(dgvComprobantesIngreso.CurrentRow.Cells.Item(17).Value.ToString())
+
+
             txtRazon.Text = dgvComprobantesIngreso.CurrentRow.Cells.Item(12).Value
             cmbDocumento.Text = dgvComprobantesIngreso.CurrentRow.Cells.Item(16).Value ' id_parametro_documento
 
@@ -955,7 +956,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                     'nudCantidad.Enabled = False
 
                     'cmbObservacionCalidad.SelectedIndex = 2
-                    'txtObservacion.Text = "OK"
+                    txtObservacion.Text = "OK"
                 End If
             Catch
                 txtSerie.Text = "S/N"
@@ -1131,28 +1132,31 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
 
         Private Sub ModicificarComprobanteIngreso()
 
+            Try
 
-
-            With _objCompIng
-                .Id = lblComp.Text  'Id Comprobante 
-                .Fecha = dtpFecha.Value
-                .NroParametroDocumento = txtNroDocumento.Text
-                .IdBodega = cmbBodega.SelectedValue
-                .IdActividad = 1
-                .IdConcepto = cmbConceptos.SelectedValue
-                .IdProvincias = cbmProvincia.SelectedValue
-                .IdCiudad = cbmCanton.SelectedValue
-                .IdParroquias = cbmParroquia.SelectedValue
-                .IdCentroCosto = cbmCentroCosto.SelectedValue
-                .IdParametroDocumento = cmbDocumento.SelectedValue
-                .Estado = 1
-                .Razon = txtRazon.Text.ToUpper
-                .IdPersonal = If(txtRecibe.Tag Is Nothing, txtRecibe.Text.Split("-")(1).Trim(), CType(txtRecibe.Tag, Integer))
-                .IdEmpresa = 1
-                .Cliente = txtUbicacion.Text.Trim
-                .SitioTrabajo = CInt(txtUbicacion.Tag)
-            End With
-            _sqlCommands.Add(_objCompIng.ModificarRegistroComprobanteIngresoBodegaCommand())
+                With _objCompIng
+                    .Id = lblComp.Text  'Id Comprobante 
+                    .Fecha = dtpFecha.Value
+                    .NroParametroDocumento = txtNroDocumento.Text
+                    .IdBodega = cmbBodega.SelectedValue
+                    .IdActividad = 1
+                    .IdConcepto = cmbConceptos.SelectedValue
+                    .IdProvincias = cbmProvincia.SelectedValue
+                    .IdCiudad = cbmCanton.SelectedValue
+                    .IdParroquias = cbmParroquia.SelectedValue
+                    .IdCentroCosto = cbmCentroCosto.SelectedValue
+                    .IdParametroDocumento = cmbDocumento.SelectedValue
+                    .Estado = 1
+                    .Razon = txtRazon.Text.ToUpper
+                    .IdPersonal = If(txtRecibe.Tag Is Nothing, txtRecibe.Text.Split("-")(1).Trim(), CType(txtRecibe.Tag, Integer))
+                    .IdEmpresa = 1
+                    .Cliente = txtUbicacion.Text.Trim
+                    .SitioTrabajo = CInt(txtUbicacion.Tag)
+                End With
+                _sqlCommands.Add(_objCompIng.ModificarRegistroComprobanteIngresoBodegaCommand())
+            Catch ex As Exception
+                KryptonMessageBox.Show("ERROR AL MODIFICAR COMPROBANTE DE INGRESO DE BODEGA" & vbNewLine & ex.Message, "MENSAJE DE INFORMACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+            End Try
 
             Dim cant = CInt(nudCantidad.Value)
             Dim val = CDbl(nudValor.Value)
@@ -1165,133 +1169,166 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
 
 
             If result.Rows.Count > 0 Then
-                Dim idcon As Long = Convert.ToInt64(result.Rows(0)("ID_CONTROL"))
+                Try
+                    Dim idcon As Long = Convert.ToInt64(result.Rows(0)("ID_CONTROL"))
 
-                With _objControl
-                    .IdControl = idcon
-                    .IdPersonal = If(txtRecibe.Tag Is Nothing, txtRecibe.Text.Split("-")(1).Trim(), CType(txtRecibe.Tag, Integer))
-                    .IdComprobante = Convert.ToString(lblComp.Text)
-                    .Cantidad = cant
-                    .Fecha = dtpFecha.Value
-                    .IdActividad = 1
-                    .Estado = 1
-                    .IdDetalleKardex = lblDetaKardex.Text
-                End With
-                _sqlCommands.Add(_objControl.ModificarControlCommand())
-
+                    With _objControl
+                        .IdControl = idcon
+                        .IdPersonal = If(txtRecibe.Tag Is Nothing, txtRecibe.Text.Split("-")(1).Trim(), CType(txtRecibe.Tag, Integer))
+                        .IdComprobante = Convert.ToString(lblComp.Text)
+                        .Cantidad = cant
+                        .Fecha = dtpFecha.Value
+                        .IdActividad = 1
+                        .Estado = 1
+                        .IdDetalleKardex = lblDetaKardex.Text
+                    End With
+                    _sqlCommands.Add(_objControl.ModificarControlCommand())
+                Catch ex As Exception
+                    KryptonMessageBox.Show("ERROR AL MODIFICAR CONTROL DE UNIFORMES" & vbNewLine & ex.Message, "MENSAJE DE INFORMACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+                End Try
             End If
 
 
-            With _objDetCompIng
-                .IdDetalle = lblDetaComp.Text
-                .IdKardex = lblIdKardex2.Text
-                .IdDetalleKardex = lblDetaKardex.Text
-                .ObservacionCalidadDetalle = cmbObservacionCalidad.Text.ToUpper
-                .ObservacionDetalleSerial = txtObservacion.Text.ToUpper
-                .IdComprobante = lblComp.Text
-                .Estado = 1
-            End With
-            _sqlCommands.Add(_objDetCompIng.ModificarDetalleComprobanteIngresoBodegaCommand())
+
+            Try
+                With _objDetCompIng
+                    .IdDetalle = lblDetaComp.Text
+                    .IdKardex = lblIdKardex2.Text
+                    .IdDetalleKardex = lblDetaKardex.Text
+                    .ObservacionCalidadDetalle = cmbObservacionCalidad.Text.ToUpper
+                    .ObservacionDetalleSerial = txtObservacion.Text.ToUpper & " - SERIE: " & If(txtSerie.Text.Trim().Length = 0, "-", txtSerie.Text.Trim())
+                    .IdComprobante = lblComp.Text
+                    .Estado = 1
+                End With
+                _sqlCommands.Add(_objDetCompIng.ModificarDetalleComprobanteIngresoBodegaCommand())
+
+            Catch ex As Exception
+                KryptonMessageBox.Show("ERROR AL MODIFICAR DETALLE DE COMPROBANTE DE INGRESO DE BODEGA" & vbNewLine & ex.Message, "MENSAJE DE INFORMACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+            End Try
 
             If CantidadIngreso > cant Then
+                Try
+                    With _objDetalleKardex
+                        .Id = lblDetaKardex.Text
+                        .IdActividad = 1
+                        .IdConcepto = cmbConceptos.SelectedValue
+                        .CantidadIngreso = cant
+                        .ValorUnitarioIngreso = val
+                        .ValorTotalIngreso = toIngre
+                        .CantidadEgreso = 0.0
+                        .ValorUnitarioEgreso = 0.0
+                        .ValorTotalEgreso = 0.0
+                        .CantidadSaldo = saldoTotal - (CantidadIngreso - cant)
+                        .ValorUnitarioSaldo = val
+                        .ValorTotalSaldo = (saldoTotal - (CantidadIngreso - cant)) * val
+                        .Fecha = dtpFecha.Value
+                        .IdKardex = Convert.ToInt64(lblIdKardex2.Text)
+                        .Estado = 1
+                        .NroComprobante = lblComp.Text
 
-                With _objDetalleKardex
-                    .Id = lblDetaKardex.Text
-                    .IdActividad = 1
-                    .IdConcepto = cmbConceptos.SelectedValue
-                    .CantidadIngreso = cant
-                    .ValorUnitarioIngreso = val
-                    .ValorTotalIngreso = toIngre
-                    .CantidadEgreso = 0.0
-                    .ValorUnitarioEgreso = 0.0
-                    .ValorTotalEgreso = 0.0
-                    .CantidadSaldo = saldoTotal - (CantidadIngreso - cant)
-                    .ValorUnitarioSaldo = val
-                    .ValorTotalSaldo = (saldoTotal - (CantidadIngreso - cant)) * val
-                    .Fecha = dtpFecha.Value
-                    .IdKardex = Convert.ToInt64(lblIdKardex2.Text)
-                    .Estado = 1
-                    .NroComprobante = lblComp.Text
+                    End With
+                    _sqlCommands.Add(_objDetalleKardex.ModificarDetalleKardexCommand())
 
-                End With
-                _sqlCommands.Add(_objDetalleKardex.ModificarDetalleKardexCommand())
+                Catch ex As Exception
+                    KryptonMessageBox.Show("ERROR AL MODIFICAR DETALLE DE KARDEX" & vbNewLine & ex.Message, "MENSAJE DE INFORMACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+                End Try
 
-
-                With _objKardex
-                    .Id = lblIdKardex2.Text
-                    .IdsecuencialItem = lblIdSecuencial.Text
-                    .Cantidad = saldoTotal - (CantidadIngreso - cant)
-                    .Fecha = dtpFecha.Value
-                    .Estado = 1
-                End With
-                _sqlCommands.Add(_objKardex.ModificarCantidadKardexCommand)
+                Try
+                    With _objKardex
+                        .Id = lblIdKardex2.Text
+                        .IdsecuencialItem = lblIdSecuencial.Text
+                        .Cantidad = saldoTotal - (CantidadIngreso - cant)
+                        .Fecha = dtpFecha.Value
+                        .Estado = 1
+                    End With
+                    _sqlCommands.Add(_objKardex.ModificarCantidadKardexCommand)
+                Catch ex As Exception
+                    KryptonMessageBox.Show("ERROR AL MODIFICAR KARDEX" & vbNewLine & ex.Message, "MENSAJE DE INFORMACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+                End Try
 
             ElseIf CantidadIngreso < cant Then
 
-                With _objDetalleKardex
-                    .Id = lblDetaKardex.Text
-                    .IdActividad = 1
-                    .IdConcepto = cmbConceptos.SelectedValue
-                    .CantidadIngreso = cant
-                    .ValorUnitarioIngreso = val
-                    .ValorTotalIngreso = toIngre
-                    .CantidadEgreso = 0.0
-                    .ValorUnitarioEgreso = 0.0
-                    .ValorTotalEgreso = 0.0
-                    .CantidadSaldo = saldoTotal + (cant - CantidadIngreso)
-                    .ValorUnitarioSaldo = val
-                    .ValorTotalSaldo = (saldoTotal + (cant - CantidadIngreso)) * cant
-                    .Fecha = dtpFecha.Value
-                    .IdKardex = Convert.ToInt64(lblIdKardex2.Text)
-                    .Estado = 1
-                    .NroComprobante = lblComp.Text
+                Try
+                    With _objDetalleKardex
+                        .Id = lblDetaKardex.Text
+                        .IdActividad = 1
+                        .IdConcepto = cmbConceptos.SelectedValue
+                        .CantidadIngreso = cant
+                        .ValorUnitarioIngreso = val
+                        .ValorTotalIngreso = toIngre
+                        .CantidadEgreso = 0.0
+                        .ValorUnitarioEgreso = 0.0
+                        .ValorTotalEgreso = 0.0
+                        .CantidadSaldo = saldoTotal + (cant - CantidadIngreso)
+                        .ValorUnitarioSaldo = val
+                        .ValorTotalSaldo = (saldoTotal + (cant - CantidadIngreso)) * cant
+                        .Fecha = dtpFecha.Value
+                        .IdKardex = Convert.ToInt64(lblIdKardex2.Text)
+                        .Estado = 1
+                        .NroComprobante = lblComp.Text
 
-                End With
-                _sqlCommands.Add(_objDetalleKardex.ModificarDetalleKardexCommand())
+                    End With
+                    _sqlCommands.Add(_objDetalleKardex.ModificarDetalleKardexCommand())
 
-                With _objKardex
-                    .Id = lblIdKardex2.Text
-                    .IdsecuencialItem = lblIdSecuencial.Text
-                    .Cantidad = saldoTotal + (cant - CantidadIngreso)
-                    .Fecha = dtpFecha.Value
-                    .Estado = 1
-                End With
-                _sqlCommands.Add(_objKardex.ModificarCantidadKardexCommand)
+                Catch ex As Exception
+                    KryptonMessageBox.Show("ERROR AL MODIFICAR DETALLE DE KARDEX" & vbNewLine & ex.Message, "MENSAJE DE INFORMACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+                End Try
+
+                Try
+                    With _objKardex
+                        .Id = lblIdKardex2.Text
+                        .IdsecuencialItem = lblIdSecuencial.Text
+                        .Cantidad = saldoTotal + (cant - CantidadIngreso)
+                        .Fecha = dtpFecha.Value
+                        .Estado = 1
+                    End With
+                    _sqlCommands.Add(_objKardex.ModificarCantidadKardexCommand)
+                Catch ex As Exception
+                    KryptonMessageBox.Show("ERROR AL MODIFICAR KARDEX" & vbNewLine & ex.Message, "MENSAJE DE INFORMACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+                End Try
 
             ElseIf CantidadIngreso = cant Then
 
-                With _objDetalleKardex
-                    .Id = lblDetaKardex.Text
-                    .IdActividad = 1
-                    .IdConcepto = cmbConceptos.SelectedValue
-                    .CantidadIngreso = cant
-                    .ValorUnitarioIngreso = val
-                    .ValorTotalIngreso = toIngre
-                    .CantidadEgreso = 0.0
-                    .ValorUnitarioEgreso = 0.0
-                    .ValorTotalEgreso = 0.0
-                    .CantidadSaldo = saldoTotal
-                    .ValorUnitarioSaldo = val
-                    .ValorTotalSaldo = saldoTotal * val
-                    .Fecha = dtpFecha.Value
-                    .IdKardex = Convert.ToInt64(lblIdKardex2.Text)
-                    .Estado = 1
-                    .NroComprobante = lblComp.Text
+                Try
+                    With _objDetalleKardex
+                        .Id = lblDetaKardex.Text
+                        .IdActividad = 1
+                        .IdConcepto = cmbConceptos.SelectedValue
+                        .CantidadIngreso = cant
+                        .ValorUnitarioIngreso = val
+                        .ValorTotalIngreso = toIngre
+                        .CantidadEgreso = 0.0
+                        .ValorUnitarioEgreso = 0.0
+                        .ValorTotalEgreso = 0.0
+                        .CantidadSaldo = saldoTotal
+                        .ValorUnitarioSaldo = val
+                        .ValorTotalSaldo = saldoTotal * val
+                        .Fecha = dtpFecha.Value
+                        .IdKardex = Convert.ToInt64(lblIdKardex2.Text)
+                        .Estado = 1
+                        .NroComprobante = lblComp.Text
 
-                End With
-                _sqlCommands.Add(_objDetalleKardex.ModificarDetalleKardexCommand())
+                    End With
+                    _sqlCommands.Add(_objDetalleKardex.ModificarDetalleKardexCommand())
 
+                Catch ex As Exception
+                    KryptonMessageBox.Show("ERROR AL MODIFICAR DETALLE DE KARDEX" & vbNewLine & ex.Message, "MENSAJE DE INFORMACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+                End Try
 
+                Try
 
+                    With _objKardex
+                        .Id = lblIdKardex2.Text
+                        .IdsecuencialItem = lblIdSecuencial.Text
+                        .Cantidad = saldoTotal
+                        .Fecha = dtpFecha.Value
+                        .Estado = 1
+                    End With
+                    _sqlCommands.Add(_objKardex.ModificarCantidadKardexCommand)
+                Catch ex As Exception
+                    KryptonMessageBox.Show("ERROR AL MODIFICAR KARDEX" & vbNewLine & ex.Message, "MENSAJE DE INFORMACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+                End Try
 
-                With _objKardex
-                    .Id = lblIdKardex2.Text
-                    .IdsecuencialItem = lblIdSecuencial.Text
-                    .Cantidad =
-                    .Fecha = dtpFecha.Value
-                    .Estado = 1
-                End With
-                _sqlCommands.Add(_objKardex.ModificarCantidadKardexCommand)
             End If
 
         End Sub
@@ -1364,6 +1401,47 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
 
                 Return
             End If
+        End Sub
+
+        Private Sub txtRecibe_KeyUp(sender As Object, e As KeyEventArgs)
+
+        End Sub
+
+        Private Sub txtRecibe_KeyUp_1(sender As Object, e As KeyEventArgs) Handles txtRecibe.KeyUp
+            If e.KeyCode <> Keys.Enter Then Return
+            Try
+                Dim idPer As String = txtRecibe.Text.Split("-")(1).Trim()
+                UpdateUbicacion(idPer)
+                Dim sitio = _objSitioTrabajo.SeleccionarSitiosFullClientexIdPersonal2(_tipoCon, idPer)
+            Catch
+
+                txtUbicacion.Clear()
+            End Try
+        End Sub
+
+
+        Private Sub UpdateUbicacion(idPer As String)
+            Try
+                'Dim idPer As String = ""
+                'idPer = txtRecibe.Text.Split("-")(1).Trim()
+
+                Dim sitio = _objSitioTrabajo.SeleccionarSitiosFullClientexIdPersonal2(_tipoCon, idPer)
+
+
+                If sitio.Rows.Count = 0 Then
+                    txtUbicacion.Clear()
+
+                Else
+                    Dim parts() As String = sitio.Rows(0).Item(0).ToString().Split("|"c)
+                    If parts.Length = 3 Then
+                        txtUbicacion.Tag = parts(0)
+                        txtUbicacion.Text = "CLIENTE: " & parts(2) & vbCrLf & "PUESTO: " & parts(1)
+                    End If
+                End If
+            Catch
+
+                txtUbicacion.Clear()
+            End Try
         End Sub
     End Class
 End Namespace

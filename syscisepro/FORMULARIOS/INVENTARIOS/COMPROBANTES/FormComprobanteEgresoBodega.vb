@@ -75,6 +75,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
         ReadOnly _objKardex As New ClassKardex
         ReadOnly _objDetalleKardex As New ClassDetalleKardex
         ReadOnly _objActivoFIjo As New ClassActivoFijo
+        ReadOnly _objSitioTrabajo As New ClassSitiosTrabajo
 
 
         ReadOnly _objFoto As New ClassFoto
@@ -203,6 +204,8 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
 
             _detalleKardex = Nothing
             dgvSecuencial.Rows.Clear()
+            dgvComprobantesEgreso.DataSource = Nothing
+            dgvDetalleComprobate.DataSource = Nothing
         End Sub
 
         Private Sub HabilitarIngresos(ByVal cmbBodegaV As Boolean)
@@ -531,6 +534,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                 dgvComprobantesEgreso.AutoResizeColumns()
                 dgvComprobantesEgreso.AutoResizeRows()
                 dgvComprobantesEgreso.ReadOnly = True
+                dgvComprobantesEgreso.Columns(17).Visible = False
             Catch
                 dgvComprobantesEgreso.DataSource = Nothing
                 dgvDetalleComprobate.DataSource = Nothing
@@ -828,10 +832,10 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
             cmbConceptos.Text = dgvComprobantesEgreso.CurrentRow.Cells.Item(6).Value
             txtProveedores.Text = dgvComprobantesEgreso.CurrentRow.Cells.Item(14).Value.ToString()
             txtUbicacion.Text = dgvComprobantesEgreso.CurrentRow.Cells.Item(15).Value
-            txtRecibe.Text = dgvComprobantesEgreso.CurrentRow.Cells.Item(13).Value
+            txtRecibe.Text = dgvComprobantesEgreso.CurrentRow.Cells.Item(13).Value + " - " + dgvComprobantesEgreso.CurrentRow.Cells.Item(17).Value.ToString()
             txtRazon.Text = dgvComprobantesEgreso.CurrentRow.Cells.Item(12).Value
             cmbDocumento.Text = dgvComprobantesEgreso.CurrentRow.Cells.Item(16).Value ' id_parametro_documento
-
+            UpdateUbicacion(dgvComprobantesEgreso.CurrentRow.Cells.Item(17).Value.ToString())
 
             'Label28.Text = ListView1.SelectedItems(0).SubItems(0).Text
         End Sub
@@ -1107,7 +1111,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                 .IdKardex = lblIdKardex2.Text
                 .IdDetalleKardex = lblDetKardex.Text
                 .ObservacionCalidad = cmbObservacionCalidad.Text.ToUpper
-                .ObservacionDetalle = txtObservacion.Text.ToUpper
+                .ObservacionDetalle = txtObservacion.Text.ToUpper & " - SERIE: " & If(txtSerie.Text.Trim().Length = 0, "-", txtSerie.Text.Trim())
                 .IdComprobante = lblComp.Text
                 .Estado = 1
             End With
@@ -1298,6 +1302,42 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
 
                 Return
             End If
+        End Sub
+
+        Private Sub txtRecibe_KeyUp(sender As Object, e As KeyEventArgs) Handles txtRecibe.KeyUp
+            If e.KeyCode <> Keys.Enter Then Return
+            Try
+                Dim idPer As String = txtRecibe.Text.Split("-")(1).Trim()
+                UpdateUbicacion(idPer)
+                Dim sitio = _objSitioTrabajo.SeleccionarSitiosFullClientexIdPersonal2(_tipoCon, idPer)
+            Catch
+
+                txtUbicacion.Clear()
+            End Try
+        End Sub
+
+        Private Sub UpdateUbicacion(idPer As String)
+            Try
+                'Dim idPer As String = ""
+                'idPer = txtRecibe.Text.Split("-")(1).Trim()
+
+                Dim sitio = _objSitioTrabajo.SeleccionarSitiosFullClientexIdPersonal2(_tipoCon, idPer)
+
+
+                If sitio.Rows.Count = 0 Then
+                    txtUbicacion.Clear()
+
+                Else
+                    Dim parts() As String = sitio.Rows(0).Item(0).ToString().Split("|"c)
+                    If parts.Length = 3 Then
+                        txtUbicacion.Tag = parts(0)
+                        txtUbicacion.Text = "CLIENTE: " & parts(2) & vbCrLf & "PUESTO: " & parts(1)
+                    End If
+                End If
+            Catch
+
+                txtUbicacion.Clear()
+            End Try
         End Sub
     End Class
 End Namespace

@@ -1673,6 +1673,19 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DsLiquidacionesCajaFondo.xsd</DependentUpon>
     </Compile>
+    <Compile Include="REPORTES\2019\dsLiquidacionFondoRotativoNew.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsLiquidacionFondoRotativoNew.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTES\2019\dsOperaciones2.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsOperaciones2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTES\2019\dsOperaciones2.vb">
+      <DependentUpon>dsOperaciones2.xsd</DependentUpon>
+    </Compile>
     <Compile Include="REPORTES\ACTIVOS FIJOS\ADHESIVOS DE ACTIVOS FIJO\crSotfware.vb">
       <DependentUpon>crSotfware.rpt</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -2165,6 +2178,12 @@
       <DependentUpon>crControlCombustible.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="REPORTES\FONDO ROTATIVO\crLiquidacionFondoRotativoNew.vb">
+      <DependentUpon>crLiquidacionFondoRotativoNew.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Include="REPORTES\FONDO ROTATIVO\crLiquidacionFondoRotativo.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -2254,6 +2273,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>rptHorariosOperacion.rpt</DependentUpon>
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTES\OPERACIONES\rptHorariosProgramacionNew1.vb">
+      <DependentUpon>rptHorariosProgramacionNew.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="REPORTES\OPERACIONES\rptHorariosProgramacion.vb">
       <AutoGen>True</AutoGen>
@@ -3396,6 +3421,10 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>crControlCombustible.vb</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="REPORTES\FONDO ROTATIVO\crLiquidacionFondoRotativoNew.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crLiquidacionFondoRotativoNew.vb</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="REPORTES\FONDO ROTATIVO\crLiquidacionFondoRotativo.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>crLiquidacionFondoRotativo.vb</LastGenOutput>
@@ -3455,6 +3484,10 @@
     <EmbeddedResource Include="REPORTES\OPERACIONES\rptHorariosOperacion.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>rptHorariosOperacion.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTES\OPERACIONES\rptHorariosProgramacionNew.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptHorariosProgramacionNew1.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="REPORTES\OPERACIONES\rptHorariosProgramacion.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
@@ -4267,6 +4300,28 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="REPORTES\2019\dsLiquidacionFondoRotativoNew.xsc">
+      <DependentUpon>dsLiquidacionFondoRotativoNew.xsd</DependentUpon>
+    </None>
+    <None Include="REPORTES\2019\dsLiquidacionFondoRotativoNew.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsLiquidacionFondoRotativoNew.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="REPORTES\2019\dsLiquidacionFondoRotativoNew.xss">
+      <DependentUpon>dsLiquidacionFondoRotativoNew.xsd</DependentUpon>
+    </None>
+    <None Include="REPORTES\2019\dsOperaciones2.xsc">
+      <DependentUpon>dsOperaciones2.xsd</DependentUpon>
+    </None>
+    <None Include="REPORTES\2019\dsOperaciones2.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsOperaciones2.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="REPORTES\2019\dsOperaciones2.xss">
+      <DependentUpon>dsOperaciones2.xsd</DependentUpon>
+    </None>
     <None Include="Resources\contract_24dp_FILL0_wght400_GRAD0_opsz24.png" />
     <None Include="Resources\send_24dp.png" />
     <None Include="Resources\record_voice_over_24dp.png" />

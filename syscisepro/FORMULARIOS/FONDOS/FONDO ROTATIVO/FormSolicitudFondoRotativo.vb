@@ -249,6 +249,7 @@ Namespace FORMULARIOS.FONDOS.FONDO_ROTATIVO
             txtValorSolicitudFR.Enabled = False
             txtDetalleSolicitudFR.Enabled = False
             cmbNombreParametroDocumentos.Enabled = False
+            txtNombreComercialCliente.Enabled = False
 
             btnNuevoSolicitudFR.Enabled = True
             btnGuardarSolicitudFR.Enabled = False
@@ -944,6 +945,7 @@ _tipoAmbiente, _establecimientoLiqCompra, _ptoEmisionLiqCompra,
                     .IdDocumento = _objetoDocumentoNoDeducible.IdDocumentoNo
                     .NumeroDocumento = _numeroDocumentoNoDeducible 'guarda el numero de documento no deducible para mostrar en la liquidación
                 End If
+                .NombreCliente = txtNombreComercialCliente.Text
             End With
             _sqlCommands.Add(_objetoSolicitudFondoRotativo.NuevoRegistroSolicitudForndoRotativoCommand())
             Auditoria("SOLICITUD DE FONDO ROTATIVO ID: " & _objetoSolicitudFondoRotativo.IdSolicitud & ", N° " & _objetoSolicitudFondoRotativo.NumeroSolicitud &

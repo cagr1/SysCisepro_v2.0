@@ -49,6 +49,7 @@
             Me.cbmProvincia = New System.Windows.Forms.ComboBox()
             Me.lblRecibe = New System.Windows.Forms.Label()
             Me.gbBusquedaArticulo = New System.Windows.Forms.GroupBox()
+            Me.Label11 = New System.Windows.Forms.Label()
             Me.pbFoto = New System.Windows.Forms.PictureBox()
             Me.Label27 = New System.Windows.Forms.Label()
             Me.btnSerie = New System.Windows.Forms.Button()
@@ -161,7 +162,6 @@
             Me.lblComp = New System.Windows.Forms.Label()
             Me.lblIdSecuencial = New System.Windows.Forms.Label()
             Me.lblCantidadSaldo = New System.Windows.Forms.Label()
-            Me.Label11 = New System.Windows.Forms.Label()
             Me.tbComprobanteIngresoBodega.SuspendLayout()
             Me.tpRegistro.SuspendLayout()
             Me.gbBusquedaArticulo.SuspendLayout()
@@ -361,6 +361,16 @@
             Me.gbBusquedaArticulo.TabIndex = 148
             Me.gbBusquedaArticulo.TabStop = False
             Me.gbBusquedaArticulo.Text = "DETALLE DEL COMPROBANTE DE EGRESO"
+            '
+            'Label11
+            '
+            Me.Label11.AutoSize = True
+            Me.Label11.Font = New System.Drawing.Font("Roboto", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Label11.ForeColor = System.Drawing.SystemColors.Highlight
+            Me.Label11.Location = New System.Drawing.Point(607, 361)
+            Me.Label11.Name = "Label11"
+            Me.Label11.Size = New System.Drawing.Size(0, 15)
+            Me.Label11.TabIndex = 219
             '
             'pbFoto
             '
@@ -1177,7 +1187,7 @@
             Me.tpConsultar.Location = New System.Drawing.Point(4, 22)
             Me.tpConsultar.Name = "tpConsultar"
             Me.tpConsultar.Padding = New System.Windows.Forms.Padding(3)
-            Me.tpConsultar.Size = New System.Drawing.Size(1260, 556)
+            Me.tpConsultar.Size = New System.Drawing.Size(1260, 594)
             Me.tpConsultar.TabIndex = 1
             Me.tpConsultar.Text = "CONSULTAR"
             '
@@ -1450,7 +1460,7 @@
             Me.tpReporte.Location = New System.Drawing.Point(4, 22)
             Me.tpReporte.Name = "tpReporte"
             Me.tpReporte.Padding = New System.Windows.Forms.Padding(3)
-            Me.tpReporte.Size = New System.Drawing.Size(1260, 556)
+            Me.tpReporte.Size = New System.Drawing.Size(1260, 594)
             Me.tpReporte.TabIndex = 2
             Me.tpReporte.Text = "REPORTE"
             '
@@ -1654,16 +1664,6 @@
             Me.lblCantidadSaldo.Size = New System.Drawing.Size(0, 13)
             Me.lblCantidadSaldo.TabIndex = 193
             Me.lblCantidadSaldo.Visible = False
-            '
-            'Label11
-            '
-            Me.Label11.AutoSize = True
-            Me.Label11.Font = New System.Drawing.Font("Roboto", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label11.ForeColor = System.Drawing.SystemColors.Highlight
-            Me.Label11.Location = New System.Drawing.Point(607, 361)
-            Me.Label11.Name = "Label11"
-            Me.Label11.Size = New System.Drawing.Size(0, 15)
-            Me.Label11.TabIndex = 219
             '
             'FormComprobanteEgresoBodega
             '

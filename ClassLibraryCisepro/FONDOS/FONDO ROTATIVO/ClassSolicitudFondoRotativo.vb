@@ -32,6 +32,7 @@ Namespace FONDOS.FONDO_ROTATIVO
         Public TipoDocumento As String
         Public IdDocumento As String
         Public NumeroDocumento As String
+        Public NombreCliente As String
 
         Public Function SeleccionarRegistrosLiquidacionSolicitudfondoRotativo(ByVal tipoCon As TipoConexion) As DataTable
             Return ComandosSql.SeleccionarQueryToDataTable(tipoCon, "SeleccionarRegistrosLiquidacionSolicitudfondoRotativo", True)
@@ -107,6 +108,7 @@ Namespace FONDOS.FONDO_ROTATIVO
                 .Parameters.AddWithValue("@TIPO_DOCUMENTO", SqlDbType.NVarChar).Value = TipoDocumento
                 .Parameters.AddWithValue("@ID_DOCUMENTO", SqlDbType.NVarChar).Value = IdDocumento
                 .Parameters.AddWithValue("@NUMERO_DOCUMENTO", SqlDbType.NVarChar).Value = NumeroDocumento
+                .Parameters.AddWithValue("@NOMBRE_CLIENTE", SqlDbType.NVarChar).Value = NombreCliente
             End With
             Return comando
         End Function

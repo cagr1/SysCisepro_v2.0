@@ -44,6 +44,7 @@ Namespace FORMULARIOS.FONDOS.FONDO_ROTATIVO
         Public IdUsuario As Integer
 
         ReadOnly _crLiquidacionFondoRotativo As New crLiquidacionFondoRotativo
+        ReadOnly _crLiquidacionFondoRotativoNew As New crLiquidacionFondoRotativoNew
 
         ReadOnly _objetoProvincias As New ClassProvincias
         ReadOnly _objetoCiudades As New ClassCiudades
@@ -186,6 +187,7 @@ Namespace FORMULARIOS.FONDOS.FONDO_ROTATIVO
                 dgvLiquidacionFondoRotativo.Columns(9).HeaderText = "N° DOC."
                 dgvLiquidacionFondoRotativo.Columns(10).Visible = False ' ID DOC
                 dgvLiquidacionFondoRotativo.Columns(11).Visible = False ' TIPO DOC
+                dgvLiquidacionFondoRotativo.Columns(12).HeaderText = "CLIENTE" ' ID SOLICITUD
                 dgvLiquidacionFondoRotativo.ReadOnly = True
 
 
@@ -382,15 +384,15 @@ Namespace FORMULARIOS.FONDOS.FONDO_ROTATIVO
         Private Sub bntCargar_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnReporte.Click
             Try
                 Dim liq = _objetoLiquidacionFondoRotativo.SeleccionarLiquidacionFondoRotativoXid(_tipoCon, CInt(txtIdLiquidacionBusqueda.Text))
-                _crLiquidacionFondoRotativo.SetDataSource(_objetoLiquidacionFondoRotativo.ReporteFondoRotativoPorIdLiquidacion(_tipoCon, CInt(txtIdLiquidacionBusqueda.Text)))
-                _crLiquidacionFondoRotativo.SetParameterValue("idliquidacion", liq.Rows(0)(0))
-                _crLiquidacionFondoRotativo.SetParameterValue("fecha", CDate(liq.Rows(0)(1)).ToLongDateString())
-                _crLiquidacionFondoRotativo.SetParameterValue("fondo", CDec(liq.Rows(0)(3)).ToString("N"))
-                _crLiquidacionFondoRotativo.SetParameterValue("saldo", CDec(liq.Rows(0)(5)).ToString("N"))
-                _crLiquidacionFondoRotativo.SetParameterValue("reposicion", CDec(liq.Rows(0)(6)).ToString("N"))
-                _crLiquidacionFondoRotativo.SetParameterValue("total", CDec(liq.Rows(0)(2)).ToString("N"))
-                _crLiquidacionFondoRotativo.SetParameterValue("img", ValidationForms.NombreLogo(_tipoCon, Application.StartupPath))
-                crvLiquidacion.ReportSource = _crLiquidacionFondoRotativo
+                _crLiquidacionFondoRotativoNew.SetDataSource(_objetoLiquidacionFondoRotativo.ReporteFondoRotativoPorIdLiquidacion(_tipoCon, CInt(txtIdLiquidacionBusqueda.Text)))
+                _crLiquidacionFondoRotativoNew.SetParameterValue("idliquidacion", liq.Rows(0)(0))
+                _crLiquidacionFondoRotativoNew.SetParameterValue("fecha", CDate(liq.Rows(0)(1)).ToLongDateString())
+                _crLiquidacionFondoRotativoNew.SetParameterValue("fondo", CDec(liq.Rows(0)(3)).ToString("N"))
+                _crLiquidacionFondoRotativoNew.SetParameterValue("saldo", CDec(liq.Rows(0)(5)).ToString("N"))
+                _crLiquidacionFondoRotativoNew.SetParameterValue("reposicion", CDec(liq.Rows(0)(6)).ToString("N"))
+                _crLiquidacionFondoRotativoNew.SetParameterValue("total", CDec(liq.Rows(0)(2)).ToString("N"))
+                _crLiquidacionFondoRotativoNew.SetParameterValue("img", ValidationForms.NombreLogo(_tipoCon, Application.StartupPath))
+                crvLiquidacion.ReportSource = _crLiquidacionFondoRotativoNew
                 crvLiquidacion.Zoom(2)
             Catch ex As Exception
                 crvLiquidacion.ReportSource = Nothing

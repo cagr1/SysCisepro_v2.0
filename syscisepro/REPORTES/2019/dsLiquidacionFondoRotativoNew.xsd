@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<xs:schema id="DsLiquidacionesCajaFondo" targetNamespace="http://tempuri.org/DsLiquidacionesCajaFondo.xsd" xmlns:mstns="http://tempuri.org/DsLiquidacionesCajaFondo.xsd" xmlns="http://tempuri.org/DsLiquidacionesCajaFondo.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+<xs:schema id="dsLiquidacionFondoRotativoNew" targetNamespace="http://tempuri.org/dsLiquidacionFondoRotativoNew.xsd" xmlns:mstns="http://tempuri.org/dsLiquidacionFondoRotativoNew.xsd" xmlns="http://tempuri.org/dsLiquidacionFondoRotativoNew.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
   <xs:annotation>
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
@@ -9,10 +9,10 @@
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="DsLiquidacionesCajaFondo" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_UserDSName="DsLiquidacionesCajaFondo" msprop:Generator_DataSetName="DsLiquidacionesCajaFondo">
+  <xs:element name="dsLiquidacionFondoRotativoNew" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_UserDSName="dsLiquidacionFondoRotativoNew" msprop:Generator_DataSetName="dsLiquidacionFondoRotativoNew">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="LIQUIDACIONES_FONDO_ROTATIVO" msprop:Generator_RowClassName="LIQUIDACIONES_FONDO_ROTATIVORow" msprop:Generator_RowEvHandlerName="LIQUIDACIONES_FONDO_ROTATIVORowChangeEventHandler" msprop:Generator_RowDeletedName="LIQUIDACIONES_FONDO_ROTATIVORowDeleted" msprop:Generator_RowDeletingName="LIQUIDACIONES_FONDO_ROTATIVORowDeleting" msprop:Generator_RowEvArgName="LIQUIDACIONES_FONDO_ROTATIVORowChangeEvent" msprop:Generator_TablePropName="LIQUIDACIONES_FONDO_ROTATIVO" msprop:Generator_RowChangedName="LIQUIDACIONES_FONDO_ROTATIVORowChanged" msprop:Generator_RowChangingName="LIQUIDACIONES_FONDO_ROTATIVORowChanging" msprop:Generator_TableClassName="LIQUIDACIONES_FONDO_ROTATIVODataTable" msprop:Generator_UserTableName="LIQUIDACIONES_FONDO_ROTATIVO" msprop:Generator_TableVarName="tableLIQUIDACIONES_FONDO_ROTATIVO">
+        <xs:element name="LIQUIDACIONES_FONDO_ROTATIVO" msprop:Generator_RowEvHandlerName="LIQUIDACIONES_FONDO_ROTATIVORowChangeEventHandler" msprop:Generator_RowDeletedName="LIQUIDACIONES_FONDO_ROTATIVORowDeleted" msprop:Generator_RowDeletingName="LIQUIDACIONES_FONDO_ROTATIVORowDeleting" msprop:Generator_RowEvArgName="LIQUIDACIONES_FONDO_ROTATIVORowChangeEvent" msprop:Generator_TablePropName="LIQUIDACIONES_FONDO_ROTATIVO" msprop:Generator_RowChangedName="LIQUIDACIONES_FONDO_ROTATIVORowChanged" msprop:Generator_RowChangingName="LIQUIDACIONES_FONDO_ROTATIVORowChanging" msprop:Generator_TableClassName="LIQUIDACIONES_FONDO_ROTATIVODataTable" msprop:Generator_RowClassName="LIQUIDACIONES_FONDO_ROTATIVORow" msprop:Generator_TableVarName="tableLIQUIDACIONES_FONDO_ROTATIVO" msprop:Generator_UserTableName="LIQUIDACIONES_FONDO_ROTATIVO">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="NRO" msprop:Generator_ColumnPropNameInRow="NRO" msprop:Generator_ColumnPropNameInTable="NROColumn" msprop:Generator_ColumnVarNameInTable="columnNRO" msprop:Generator_UserColumnName="NRO" type="xs:string" minOccurs="0" />

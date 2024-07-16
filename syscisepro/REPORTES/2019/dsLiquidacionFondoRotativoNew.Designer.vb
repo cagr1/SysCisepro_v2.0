@@ -20,9 +20,9 @@ Option Explicit On
  Global.System.ComponentModel.DesignerCategoryAttribute("code"),  _
  Global.System.ComponentModel.ToolboxItem(true),  _
  Global.System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema"),  _
- Global.System.Xml.Serialization.XmlRootAttribute("DsLiquidacionesCajaFondo"),  _
+ Global.System.Xml.Serialization.XmlRootAttribute("dsLiquidacionFondoRotativoNew"),  _
  Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")>  _
-Partial Public Class DsLiquidacionesCajaFondo
+Partial Public Class dsLiquidacionFondoRotativoNew
     Inherits Global.System.Data.DataSet
     
     Private tableLIQUIDACIONES_FONDO_ROTATIVO As LIQUIDACIONES_FONDO_ROTATIVODataTable
@@ -128,7 +128,7 @@ Partial Public Class DsLiquidacionesCajaFondo
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
     Public Overrides Function Clone() As Global.System.Data.DataSet
-        Dim cln As DsLiquidacionesCajaFondo = CType(MyBase.Clone,DsLiquidacionesCajaFondo)
+        Dim cln As dsLiquidacionFondoRotativoNew = CType(MyBase.Clone,dsLiquidacionFondoRotativoNew)
         cln.InitVars
         cln.SchemaSerializationMode = Me.SchemaSerializationMode
         Return cln
@@ -199,9 +199,9 @@ Partial Public Class DsLiquidacionesCajaFondo
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
     Private Sub InitClass()
-        Me.DataSetName = "DsLiquidacionesCajaFondo"
+        Me.DataSetName = "dsLiquidacionFondoRotativoNew"
         Me.Prefix = ""
-        Me.Namespace = "http://tempuri.org/DsLiquidacionesCajaFondo.xsd"
+        Me.Namespace = "http://tempuri.org/dsLiquidacionFondoRotativoNew.xsd"
         Me.EnforceConstraints = true
         Me.SchemaSerializationMode = Global.System.Data.SchemaSerializationMode.IncludeSchema
         Me.tableLIQUIDACIONES_FONDO_ROTATIVO = New LIQUIDACIONES_FONDO_ROTATIVODataTable()
@@ -225,7 +225,7 @@ Partial Public Class DsLiquidacionesCajaFondo
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
     Public Shared Function GetTypedDataSetSchema(ByVal xs As Global.System.Xml.Schema.XmlSchemaSet) As Global.System.Xml.Schema.XmlSchemaComplexType
-        Dim ds As DsLiquidacionesCajaFondo = New DsLiquidacionesCajaFondo()
+        Dim ds As dsLiquidacionFondoRotativoNew = New dsLiquidacionFondoRotativoNew()
         Dim type As Global.System.Xml.Schema.XmlSchemaComplexType = New Global.System.Xml.Schema.XmlSchemaComplexType()
         Dim sequence As Global.System.Xml.Schema.XmlSchemaSequence = New Global.System.Xml.Schema.XmlSchemaSequence()
         Dim any As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
@@ -556,7 +556,7 @@ Partial Public Class DsLiquidacionesCajaFondo
         Public Shared Function GetTypedTableSchema(ByVal xs As Global.System.Xml.Schema.XmlSchemaSet) As Global.System.Xml.Schema.XmlSchemaComplexType
             Dim type As Global.System.Xml.Schema.XmlSchemaComplexType = New Global.System.Xml.Schema.XmlSchemaComplexType()
             Dim sequence As Global.System.Xml.Schema.XmlSchemaSequence = New Global.System.Xml.Schema.XmlSchemaSequence()
-            Dim ds As DsLiquidacionesCajaFondo = New DsLiquidacionesCajaFondo()
+            Dim ds As dsLiquidacionFondoRotativoNew = New dsLiquidacionFondoRotativoNew()
             Dim any1 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
             any1.Namespace = "http://www.w3.org/2001/XMLSchema"
             any1.MinOccurs = New Decimal(0)

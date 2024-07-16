@@ -87,7 +87,7 @@ Namespace FONDOS.FONDO_ROTATIVO
         Public Function ReporteFondoRotativoPorIdLiquidacion(ByVal tipoCon As TipoConexion, ByVal idl As Integer) As DataTable
             Dim pars = New List(Of Object())
             pars.Add(New Object() {"ID_LIQUIDACION", SqlDbType.Int, idl})
-            Return ComandosSql.SeleccionarQueryWithParamsToDataTable(tipoCon, "select str(s.id_solicitud_fr) NRO, c.nombre_gastos_fr CONCEPTO, s.detalle_solicitud_fr DETALLE, p.apellidos + ' ' + p.nombres RECEPTOR, s.tipo_documento TIPDOC, s.id_documento NDOC, s.valor_solicitud_fr VALOR from solicitud_fondo_rotativo s  join gastos_fondo_rotativo c on c.id_gastos_fr=s.id_gastos_fr join personal p on s.id_personal = p.id_personal where s.id_liquidacion_fr = @ID_LIQUIDACION;", False, pars)
+            Return ComandosSql.SeleccionarQueryWithParamsToDataTable(tipoCon, "select str(s.id_solicitud_fr) NRO, c.nombre_gastos_fr CONCEPTO, s.detalle_solicitud_fr DETALLE, p.apellidos + ' ' + p.nombres RECEPTOR, s.tipo_documento TIPDOC, s.id_documento NDOC, s.valor_solicitud_fr VALOR, s.NOMBRE_RAZON_SOCIAL_CLIENTE_GENERAL CLIENTE from solicitud_fondo_rotativo s  join gastos_fondo_rotativo c on c.id_gastos_fr=s.id_gastos_fr join personal p on s.id_personal = p.id_personal where s.id_liquidacion_fr = @ID_LIQUIDACION;", False, pars)
         End Function
     End Class
 End Namespace

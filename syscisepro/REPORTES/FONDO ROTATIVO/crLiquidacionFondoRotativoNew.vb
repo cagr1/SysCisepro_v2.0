@@ -18,7 +18,7 @@ Imports System
 Imports System.ComponentModel
 
 
-Public Class crLiquidacionFondoRotativo
+Public Class crLiquidacionFondoRotativoNew
     Inherits ReportClass
     
     Public Sub New()
@@ -27,7 +27,7 @@ Public Class crLiquidacionFondoRotativo
     
     Public Overrides Property ResourceName() As String
         Get
-            Return "crLiquidacionFondoRotativo.rpt"
+            Return "crLiquidacionFondoRotativoNew.rpt"
         End Get
         Set
             'Do nothing
@@ -45,7 +45,7 @@ Public Class crLiquidacionFondoRotativo
     
     Public Overrides Property FullResourceName() As String
         Get
-            Return "syscisepro.crLiquidacionFondoRotativo.rpt"
+            Return "syscisepro.crLiquidacionFondoRotativoNew.rpt"
         End Get
         Set
             'Do nothing
@@ -150,7 +150,7 @@ Public Class crLiquidacionFondoRotativo
 End Class
 
 <System.Drawing.ToolboxBitmapAttribute(GetType(CrystalDecisions.[Shared].ExportOptions), "report.bmp")>  _
-Public Class CachedcrLiquidacionFondoRotativo
+Public Class CachedcrLiquidacionFondoRotativoNew
     Inherits Component
     Implements ICachedReport
     
@@ -192,7 +192,7 @@ Public Class CachedcrLiquidacionFondoRotativo
     End Property
     
     Public Overridable Function CreateReport() As CrystalDecisions.CrystalReports.Engine.ReportDocument Implements CrystalDecisions.ReportSource.ICachedReport.CreateReport
-        Dim rpt As crLiquidacionFondoRotativo = New crLiquidacionFondoRotativo()
+        Dim rpt As crLiquidacionFondoRotativoNew = New crLiquidacionFondoRotativoNew()
         rpt.Site = Me.Site
         Return rpt
     End Function

@@ -20,12 +20,12 @@ Option Explicit On
  Global.System.ComponentModel.DesignerCategoryAttribute("code"),  _
  Global.System.ComponentModel.ToolboxItem(true),  _
  Global.System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema"),  _
- Global.System.Xml.Serialization.XmlRootAttribute("DsLiquidacionesCajaFondo"),  _
+ Global.System.Xml.Serialization.XmlRootAttribute("dsOperaciones2"),  _
  Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")>  _
-Partial Public Class DsLiquidacionesCajaFondo
+Partial Public Class dsOperaciones2
     Inherits Global.System.Data.DataSet
     
-    Private tableLIQUIDACIONES_FONDO_ROTATIVO As LIQUIDACIONES_FONDO_ROTATIVODataTable
+    Private tablePROGRAMACION_GENERAL As PROGRAMACION_GENERALDataTable
     
     Private _schemaSerializationMode As Global.System.Data.SchemaSerializationMode = Global.System.Data.SchemaSerializationMode.IncludeSchema
     
@@ -56,8 +56,8 @@ Partial Public Class DsLiquidacionesCajaFondo
         If (Me.DetermineSchemaSerializationMode(info, context) = Global.System.Data.SchemaSerializationMode.IncludeSchema) Then
             Dim ds As Global.System.Data.DataSet = New Global.System.Data.DataSet()
             ds.ReadXmlSchema(New Global.System.Xml.XmlTextReader(New Global.System.IO.StringReader(strSchema)))
-            If (Not (ds.Tables("LIQUIDACIONES_FONDO_ROTATIVO")) Is Nothing) Then
-                MyBase.Tables.Add(New LIQUIDACIONES_FONDO_ROTATIVODataTable(ds.Tables("LIQUIDACIONES_FONDO_ROTATIVO")))
+            If (Not (ds.Tables("PROGRAMACION_GENERAL")) Is Nothing) Then
+                MyBase.Tables.Add(New PROGRAMACION_GENERALDataTable(ds.Tables("PROGRAMACION_GENERAL")))
             End If
             Me.DataSetName = ds.DataSetName
             Me.Prefix = ds.Prefix
@@ -80,9 +80,9 @@ Partial Public Class DsLiquidacionesCajaFondo
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
      Global.System.ComponentModel.Browsable(false),  _
      Global.System.ComponentModel.DesignerSerializationVisibility(Global.System.ComponentModel.DesignerSerializationVisibility.Content)>  _
-    Public ReadOnly Property LIQUIDACIONES_FONDO_ROTATIVO() As LIQUIDACIONES_FONDO_ROTATIVODataTable
+    Public ReadOnly Property PROGRAMACION_GENERAL() As PROGRAMACION_GENERALDataTable
         Get
-            Return Me.tableLIQUIDACIONES_FONDO_ROTATIVO
+            Return Me.tablePROGRAMACION_GENERAL
         End Get
     End Property
     
@@ -128,7 +128,7 @@ Partial Public Class DsLiquidacionesCajaFondo
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
     Public Overrides Function Clone() As Global.System.Data.DataSet
-        Dim cln As DsLiquidacionesCajaFondo = CType(MyBase.Clone,DsLiquidacionesCajaFondo)
+        Dim cln As dsOperaciones2 = CType(MyBase.Clone,dsOperaciones2)
         cln.InitVars
         cln.SchemaSerializationMode = Me.SchemaSerializationMode
         Return cln
@@ -153,8 +153,8 @@ Partial Public Class DsLiquidacionesCajaFondo
             Me.Reset
             Dim ds As Global.System.Data.DataSet = New Global.System.Data.DataSet()
             ds.ReadXml(reader)
-            If (Not (ds.Tables("LIQUIDACIONES_FONDO_ROTATIVO")) Is Nothing) Then
-                MyBase.Tables.Add(New LIQUIDACIONES_FONDO_ROTATIVODataTable(ds.Tables("LIQUIDACIONES_FONDO_ROTATIVO")))
+            If (Not (ds.Tables("PROGRAMACION_GENERAL")) Is Nothing) Then
+                MyBase.Tables.Add(New PROGRAMACION_GENERALDataTable(ds.Tables("PROGRAMACION_GENERAL")))
             End If
             Me.DataSetName = ds.DataSetName
             Me.Prefix = ds.Prefix
@@ -188,10 +188,10 @@ Partial Public Class DsLiquidacionesCajaFondo
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
     Friend Overloads Sub InitVars(ByVal initTable As Boolean)
-        Me.tableLIQUIDACIONES_FONDO_ROTATIVO = CType(MyBase.Tables("LIQUIDACIONES_FONDO_ROTATIVO"),LIQUIDACIONES_FONDO_ROTATIVODataTable)
+        Me.tablePROGRAMACION_GENERAL = CType(MyBase.Tables("PROGRAMACION_GENERAL"),PROGRAMACION_GENERALDataTable)
         If (initTable = true) Then
-            If (Not (Me.tableLIQUIDACIONES_FONDO_ROTATIVO) Is Nothing) Then
-                Me.tableLIQUIDACIONES_FONDO_ROTATIVO.InitVars
+            If (Not (Me.tablePROGRAMACION_GENERAL) Is Nothing) Then
+                Me.tablePROGRAMACION_GENERAL.InitVars
             End If
         End If
     End Sub
@@ -199,18 +199,18 @@ Partial Public Class DsLiquidacionesCajaFondo
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
     Private Sub InitClass()
-        Me.DataSetName = "DsLiquidacionesCajaFondo"
+        Me.DataSetName = "dsOperaciones2"
         Me.Prefix = ""
-        Me.Namespace = "http://tempuri.org/DsLiquidacionesCajaFondo.xsd"
+        Me.Namespace = "http://tempuri.org/dsOperaciones2.xsd"
         Me.EnforceConstraints = true
         Me.SchemaSerializationMode = Global.System.Data.SchemaSerializationMode.IncludeSchema
-        Me.tableLIQUIDACIONES_FONDO_ROTATIVO = New LIQUIDACIONES_FONDO_ROTATIVODataTable()
-        MyBase.Tables.Add(Me.tableLIQUIDACIONES_FONDO_ROTATIVO)
+        Me.tablePROGRAMACION_GENERAL = New PROGRAMACION_GENERALDataTable()
+        MyBase.Tables.Add(Me.tablePROGRAMACION_GENERAL)
     End Sub
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-    Private Function ShouldSerializeLIQUIDACIONES_FONDO_ROTATIVO() As Boolean
+    Private Function ShouldSerializePROGRAMACION_GENERAL() As Boolean
         Return false
     End Function
     
@@ -225,7 +225,7 @@ Partial Public Class DsLiquidacionesCajaFondo
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
     Public Shared Function GetTypedDataSetSchema(ByVal xs As Global.System.Xml.Schema.XmlSchemaSet) As Global.System.Xml.Schema.XmlSchemaComplexType
-        Dim ds As DsLiquidacionesCajaFondo = New DsLiquidacionesCajaFondo()
+        Dim ds As dsOperaciones2 = New dsOperaciones2()
         Dim type As Global.System.Xml.Schema.XmlSchemaComplexType = New Global.System.Xml.Schema.XmlSchemaComplexType()
         Dim sequence As Global.System.Xml.Schema.XmlSchemaSequence = New Global.System.Xml.Schema.XmlSchemaSequence()
         Dim any As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
@@ -273,37 +273,47 @@ Partial Public Class DsLiquidacionesCajaFondo
     End Function
     
     <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-    Public Delegate Sub LIQUIDACIONES_FONDO_ROTATIVORowChangeEventHandler(ByVal sender As Object, ByVal e As LIQUIDACIONES_FONDO_ROTATIVORowChangeEvent)
+    Public Delegate Sub PROGRAMACION_GENERALRowChangeEventHandler(ByVal sender As Object, ByVal e As PROGRAMACION_GENERALRowChangeEvent)
     
     '''<summary>
     '''Represents the strongly named DataTable class.
     '''</summary>
     <Global.System.Serializable(),  _
      Global.System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")>  _
-    Partial Public Class LIQUIDACIONES_FONDO_ROTATIVODataTable
-        Inherits Global.System.Data.TypedTableBase(Of LIQUIDACIONES_FONDO_ROTATIVORow)
+    Partial Public Class PROGRAMACION_GENERALDataTable
+        Inherits Global.System.Data.TypedTableBase(Of PROGRAMACION_GENERALRow)
         
-        Private columnNRO As Global.System.Data.DataColumn
+        Private columnIDP As Global.System.Data.DataColumn
         
-        Private columnCONCEPTO As Global.System.Data.DataColumn
+        Private columnPERSONAL As Global.System.Data.DataColumn
         
-        Private columnDETALLE As Global.System.Data.DataColumn
+        Private columnIDS As Global.System.Data.DataColumn
         
-        Private columnRECEPTOR As Global.System.Data.DataColumn
+        Private columnSITIO As Global.System.Data.DataColumn
         
-        Private columnTIPDOC As Global.System.Data.DataColumn
+        Private columnLUNES As Global.System.Data.DataColumn
         
-        Private columnNDOC As Global.System.Data.DataColumn
+        Private columnMARTES As Global.System.Data.DataColumn
         
-        Private columnVALOR As Global.System.Data.DataColumn
+        Private columnMIERCOLES As Global.System.Data.DataColumn
         
-        Private columnCLIENTE As Global.System.Data.DataColumn
+        Private columnJUEVES As Global.System.Data.DataColumn
+        
+        Private columnVIERNES As Global.System.Data.DataColumn
+        
+        Private columnSABADO As Global.System.Data.DataColumn
+        
+        Private columnDOMINGO As Global.System.Data.DataColumn
+        
+        Private columnINICIA As Global.System.Data.DataColumn
+        
+        Private columnTERMINA As Global.System.Data.DataColumn
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Public Sub New()
             MyBase.New
-            Me.TableName = "LIQUIDACIONES_FONDO_ROTATIVO"
+            Me.TableName = "PROGRAMACION_GENERAL"
             Me.BeginInit
             Me.InitClass
             Me.EndInit
@@ -336,65 +346,105 @@ Partial Public Class DsLiquidacionesCajaFondo
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public ReadOnly Property NROColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property IDPColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnNRO
+                Return Me.columnIDP
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public ReadOnly Property CONCEPTOColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property PERSONALColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnCONCEPTO
+                Return Me.columnPERSONAL
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public ReadOnly Property DETALLEColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property IDSColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnDETALLE
+                Return Me.columnIDS
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public ReadOnly Property RECEPTORColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property SITIOColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnRECEPTOR
+                Return Me.columnSITIO
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public ReadOnly Property TIPDOCColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property LUNESColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnTIPDOC
+                Return Me.columnLUNES
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public ReadOnly Property NDOCColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property MARTESColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnNDOC
+                Return Me.columnMARTES
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public ReadOnly Property VALORColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property MIERCOLESColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnVALOR
+                Return Me.columnMIERCOLES
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public ReadOnly Property CLIENTEColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property JUEVESColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnCLIENTE
+                Return Me.columnJUEVES
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property VIERNESColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnVIERNES
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property SABADOColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnSABADO
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property DOMINGOColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnDOMINGO
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property INICIAColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnINICIA
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property TERMINAColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnTERMINA
             End Get
         End Property
         
@@ -409,44 +459,44 @@ Partial Public Class DsLiquidacionesCajaFondo
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Default ReadOnly Property Item(ByVal index As Integer) As LIQUIDACIONES_FONDO_ROTATIVORow
+        Public Default ReadOnly Property Item(ByVal index As Integer) As PROGRAMACION_GENERALRow
             Get
-                Return CType(Me.Rows(index),LIQUIDACIONES_FONDO_ROTATIVORow)
+                Return CType(Me.Rows(index),PROGRAMACION_GENERALRow)
             End Get
         End Property
         
         <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Event LIQUIDACIONES_FONDO_ROTATIVORowChanging As LIQUIDACIONES_FONDO_ROTATIVORowChangeEventHandler
+        Public Event PROGRAMACION_GENERALRowChanging As PROGRAMACION_GENERALRowChangeEventHandler
         
         <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Event LIQUIDACIONES_FONDO_ROTATIVORowChanged As LIQUIDACIONES_FONDO_ROTATIVORowChangeEventHandler
+        Public Event PROGRAMACION_GENERALRowChanged As PROGRAMACION_GENERALRowChangeEventHandler
         
         <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Event LIQUIDACIONES_FONDO_ROTATIVORowDeleting As LIQUIDACIONES_FONDO_ROTATIVORowChangeEventHandler
+        Public Event PROGRAMACION_GENERALRowDeleting As PROGRAMACION_GENERALRowChangeEventHandler
         
         <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Event LIQUIDACIONES_FONDO_ROTATIVORowDeleted As LIQUIDACIONES_FONDO_ROTATIVORowChangeEventHandler
+        Public Event PROGRAMACION_GENERALRowDeleted As PROGRAMACION_GENERALRowChangeEventHandler
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Overloads Sub AddLIQUIDACIONES_FONDO_ROTATIVORow(ByVal row As LIQUIDACIONES_FONDO_ROTATIVORow)
+        Public Overloads Sub AddPROGRAMACION_GENERALRow(ByVal row As PROGRAMACION_GENERALRow)
             Me.Rows.Add(row)
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Overloads Function AddLIQUIDACIONES_FONDO_ROTATIVORow(ByVal NRO As String, ByVal CONCEPTO As String, ByVal DETALLE As String, ByVal RECEPTOR As String, ByVal TIPDOC As String, ByVal NDOC As String, ByVal VALOR As String, ByVal CLIENTE As String) As LIQUIDACIONES_FONDO_ROTATIVORow
-            Dim rowLIQUIDACIONES_FONDO_ROTATIVORow As LIQUIDACIONES_FONDO_ROTATIVORow = CType(Me.NewRow,LIQUIDACIONES_FONDO_ROTATIVORow)
-            Dim columnValuesArray() As Object = New Object() {NRO, CONCEPTO, DETALLE, RECEPTOR, TIPDOC, NDOC, VALOR, CLIENTE}
-            rowLIQUIDACIONES_FONDO_ROTATIVORow.ItemArray = columnValuesArray
-            Me.Rows.Add(rowLIQUIDACIONES_FONDO_ROTATIVORow)
-            Return rowLIQUIDACIONES_FONDO_ROTATIVORow
+        Public Overloads Function AddPROGRAMACION_GENERALRow(ByVal IDP As String, ByVal PERSONAL As String, ByVal IDS As String, ByVal SITIO As String, ByVal LUNES As String, ByVal MARTES As String, ByVal MIERCOLES As String, ByVal JUEVES As String, ByVal VIERNES As String, ByVal SABADO As String, ByVal DOMINGO As String, ByVal INICIA As String, ByVal TERMINA As String) As PROGRAMACION_GENERALRow
+            Dim rowPROGRAMACION_GENERALRow As PROGRAMACION_GENERALRow = CType(Me.NewRow,PROGRAMACION_GENERALRow)
+            Dim columnValuesArray() As Object = New Object() {IDP, PERSONAL, IDS, SITIO, LUNES, MARTES, MIERCOLES, JUEVES, VIERNES, SABADO, DOMINGO, INICIA, TERMINA}
+            rowPROGRAMACION_GENERALRow.ItemArray = columnValuesArray
+            Me.Rows.Add(rowPROGRAMACION_GENERALRow)
+            Return rowPROGRAMACION_GENERALRow
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Public Overrides Function Clone() As Global.System.Data.DataTable
-            Dim cln As LIQUIDACIONES_FONDO_ROTATIVODataTable = CType(MyBase.Clone,LIQUIDACIONES_FONDO_ROTATIVODataTable)
+            Dim cln As PROGRAMACION_GENERALDataTable = CType(MyBase.Clone,PROGRAMACION_GENERALDataTable)
             cln.InitVars
             Return cln
         End Function
@@ -454,67 +504,82 @@ Partial Public Class DsLiquidacionesCajaFondo
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Protected Overrides Function CreateInstance() As Global.System.Data.DataTable
-            Return New LIQUIDACIONES_FONDO_ROTATIVODataTable()
+            Return New PROGRAMACION_GENERALDataTable()
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Friend Sub InitVars()
-            Me.columnNRO = MyBase.Columns("NRO")
-            Me.columnCONCEPTO = MyBase.Columns("CONCEPTO")
-            Me.columnDETALLE = MyBase.Columns("DETALLE")
-            Me.columnRECEPTOR = MyBase.Columns("RECEPTOR")
-            Me.columnTIPDOC = MyBase.Columns("TIPDOC")
-            Me.columnNDOC = MyBase.Columns("NDOC")
-            Me.columnVALOR = MyBase.Columns("VALOR")
-            Me.columnCLIENTE = MyBase.Columns("CLIENTE")
+            Me.columnIDP = MyBase.Columns("IDP")
+            Me.columnPERSONAL = MyBase.Columns("PERSONAL")
+            Me.columnIDS = MyBase.Columns("IDS")
+            Me.columnSITIO = MyBase.Columns("SITIO")
+            Me.columnLUNES = MyBase.Columns("LUNES")
+            Me.columnMARTES = MyBase.Columns("MARTES")
+            Me.columnMIERCOLES = MyBase.Columns("MIERCOLES")
+            Me.columnJUEVES = MyBase.Columns("JUEVES")
+            Me.columnVIERNES = MyBase.Columns("VIERNES")
+            Me.columnSABADO = MyBase.Columns("SABADO")
+            Me.columnDOMINGO = MyBase.Columns("DOMINGO")
+            Me.columnINICIA = MyBase.Columns("INICIA")
+            Me.columnTERMINA = MyBase.Columns("TERMINA")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Private Sub InitClass()
-            Me.columnNRO = New Global.System.Data.DataColumn("NRO", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnNRO)
-            Me.columnCONCEPTO = New Global.System.Data.DataColumn("CONCEPTO", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnCONCEPTO)
-            Me.columnDETALLE = New Global.System.Data.DataColumn("DETALLE", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnDETALLE)
-            Me.columnRECEPTOR = New Global.System.Data.DataColumn("RECEPTOR", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnRECEPTOR)
-            Me.columnTIPDOC = New Global.System.Data.DataColumn("TIPDOC", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnTIPDOC)
-            Me.columnNDOC = New Global.System.Data.DataColumn("NDOC", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnNDOC)
-            Me.columnVALOR = New Global.System.Data.DataColumn("VALOR", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnVALOR)
-            Me.columnCLIENTE = New Global.System.Data.DataColumn("CLIENTE", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnCLIENTE)
+            Me.columnIDP = New Global.System.Data.DataColumn("IDP", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnIDP)
+            Me.columnPERSONAL = New Global.System.Data.DataColumn("PERSONAL", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnPERSONAL)
+            Me.columnIDS = New Global.System.Data.DataColumn("IDS", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnIDS)
+            Me.columnSITIO = New Global.System.Data.DataColumn("SITIO", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnSITIO)
+            Me.columnLUNES = New Global.System.Data.DataColumn("LUNES", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnLUNES)
+            Me.columnMARTES = New Global.System.Data.DataColumn("MARTES", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnMARTES)
+            Me.columnMIERCOLES = New Global.System.Data.DataColumn("MIERCOLES", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnMIERCOLES)
+            Me.columnJUEVES = New Global.System.Data.DataColumn("JUEVES", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnJUEVES)
+            Me.columnVIERNES = New Global.System.Data.DataColumn("VIERNES", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnVIERNES)
+            Me.columnSABADO = New Global.System.Data.DataColumn("SABADO", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnSABADO)
+            Me.columnDOMINGO = New Global.System.Data.DataColumn("DOMINGO", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnDOMINGO)
+            Me.columnINICIA = New Global.System.Data.DataColumn("INICIA", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnINICIA)
+            Me.columnTERMINA = New Global.System.Data.DataColumn("TERMINA", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnTERMINA)
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Function NewLIQUIDACIONES_FONDO_ROTATIVORow() As LIQUIDACIONES_FONDO_ROTATIVORow
-            Return CType(Me.NewRow,LIQUIDACIONES_FONDO_ROTATIVORow)
+        Public Function NewPROGRAMACION_GENERALRow() As PROGRAMACION_GENERALRow
+            Return CType(Me.NewRow,PROGRAMACION_GENERALRow)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Protected Overrides Function NewRowFromBuilder(ByVal builder As Global.System.Data.DataRowBuilder) As Global.System.Data.DataRow
-            Return New LIQUIDACIONES_FONDO_ROTATIVORow(builder)
+            Return New PROGRAMACION_GENERALRow(builder)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Protected Overrides Function GetRowType() As Global.System.Type
-            Return GetType(LIQUIDACIONES_FONDO_ROTATIVORow)
+            Return GetType(PROGRAMACION_GENERALRow)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Protected Overrides Sub OnRowChanged(ByVal e As Global.System.Data.DataRowChangeEventArgs)
             MyBase.OnRowChanged(e)
-            If (Not (Me.LIQUIDACIONES_FONDO_ROTATIVORowChangedEvent) Is Nothing) Then
-                RaiseEvent LIQUIDACIONES_FONDO_ROTATIVORowChanged(Me, New LIQUIDACIONES_FONDO_ROTATIVORowChangeEvent(CType(e.Row,LIQUIDACIONES_FONDO_ROTATIVORow), e.Action))
+            If (Not (Me.PROGRAMACION_GENERALRowChangedEvent) Is Nothing) Then
+                RaiseEvent PROGRAMACION_GENERALRowChanged(Me, New PROGRAMACION_GENERALRowChangeEvent(CType(e.Row,PROGRAMACION_GENERALRow), e.Action))
             End If
         End Sub
         
@@ -522,8 +587,8 @@ Partial Public Class DsLiquidacionesCajaFondo
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Protected Overrides Sub OnRowChanging(ByVal e As Global.System.Data.DataRowChangeEventArgs)
             MyBase.OnRowChanging(e)
-            If (Not (Me.LIQUIDACIONES_FONDO_ROTATIVORowChangingEvent) Is Nothing) Then
-                RaiseEvent LIQUIDACIONES_FONDO_ROTATIVORowChanging(Me, New LIQUIDACIONES_FONDO_ROTATIVORowChangeEvent(CType(e.Row,LIQUIDACIONES_FONDO_ROTATIVORow), e.Action))
+            If (Not (Me.PROGRAMACION_GENERALRowChangingEvent) Is Nothing) Then
+                RaiseEvent PROGRAMACION_GENERALRowChanging(Me, New PROGRAMACION_GENERALRowChangeEvent(CType(e.Row,PROGRAMACION_GENERALRow), e.Action))
             End If
         End Sub
         
@@ -531,8 +596,8 @@ Partial Public Class DsLiquidacionesCajaFondo
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Protected Overrides Sub OnRowDeleted(ByVal e As Global.System.Data.DataRowChangeEventArgs)
             MyBase.OnRowDeleted(e)
-            If (Not (Me.LIQUIDACIONES_FONDO_ROTATIVORowDeletedEvent) Is Nothing) Then
-                RaiseEvent LIQUIDACIONES_FONDO_ROTATIVORowDeleted(Me, New LIQUIDACIONES_FONDO_ROTATIVORowChangeEvent(CType(e.Row,LIQUIDACIONES_FONDO_ROTATIVORow), e.Action))
+            If (Not (Me.PROGRAMACION_GENERALRowDeletedEvent) Is Nothing) Then
+                RaiseEvent PROGRAMACION_GENERALRowDeleted(Me, New PROGRAMACION_GENERALRowChangeEvent(CType(e.Row,PROGRAMACION_GENERALRow), e.Action))
             End If
         End Sub
         
@@ -540,14 +605,14 @@ Partial Public Class DsLiquidacionesCajaFondo
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Protected Overrides Sub OnRowDeleting(ByVal e As Global.System.Data.DataRowChangeEventArgs)
             MyBase.OnRowDeleting(e)
-            If (Not (Me.LIQUIDACIONES_FONDO_ROTATIVORowDeletingEvent) Is Nothing) Then
-                RaiseEvent LIQUIDACIONES_FONDO_ROTATIVORowDeleting(Me, New LIQUIDACIONES_FONDO_ROTATIVORowChangeEvent(CType(e.Row,LIQUIDACIONES_FONDO_ROTATIVORow), e.Action))
+            If (Not (Me.PROGRAMACION_GENERALRowDeletingEvent) Is Nothing) Then
+                RaiseEvent PROGRAMACION_GENERALRowDeleting(Me, New PROGRAMACION_GENERALRowChangeEvent(CType(e.Row,PROGRAMACION_GENERALRow), e.Action))
             End If
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Sub RemoveLIQUIDACIONES_FONDO_ROTATIVORow(ByVal row As LIQUIDACIONES_FONDO_ROTATIVORow)
+        Public Sub RemovePROGRAMACION_GENERALRow(ByVal row As PROGRAMACION_GENERALRow)
             Me.Rows.Remove(row)
         End Sub
         
@@ -556,7 +621,7 @@ Partial Public Class DsLiquidacionesCajaFondo
         Public Shared Function GetTypedTableSchema(ByVal xs As Global.System.Xml.Schema.XmlSchemaSet) As Global.System.Xml.Schema.XmlSchemaComplexType
             Dim type As Global.System.Xml.Schema.XmlSchemaComplexType = New Global.System.Xml.Schema.XmlSchemaComplexType()
             Dim sequence As Global.System.Xml.Schema.XmlSchemaSequence = New Global.System.Xml.Schema.XmlSchemaSequence()
-            Dim ds As DsLiquidacionesCajaFondo = New DsLiquidacionesCajaFondo()
+            Dim ds As dsOperaciones2 = New dsOperaciones2()
             Dim any1 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
             any1.Namespace = "http://www.w3.org/2001/XMLSchema"
             any1.MinOccurs = New Decimal(0)
@@ -574,7 +639,7 @@ Partial Public Class DsLiquidacionesCajaFondo
             type.Attributes.Add(attribute1)
             Dim attribute2 As Global.System.Xml.Schema.XmlSchemaAttribute = New Global.System.Xml.Schema.XmlSchemaAttribute()
             attribute2.Name = "tableTypeName"
-            attribute2.FixedValue = "LIQUIDACIONES_FONDO_ROTATIVODataTable"
+            attribute2.FixedValue = "PROGRAMACION_GENERALDataTable"
             type.Attributes.Add(attribute2)
             type.Particle = sequence
             Dim dsSchema As Global.System.Xml.Schema.XmlSchema = ds.GetSchemaSerializable
@@ -621,240 +686,367 @@ Partial Public Class DsLiquidacionesCajaFondo
     '''<summary>
     '''Represents strongly named DataRow class.
     '''</summary>
-    Partial Public Class LIQUIDACIONES_FONDO_ROTATIVORow
+    Partial Public Class PROGRAMACION_GENERALRow
         Inherits Global.System.Data.DataRow
         
-        Private tableLIQUIDACIONES_FONDO_ROTATIVO As LIQUIDACIONES_FONDO_ROTATIVODataTable
+        Private tablePROGRAMACION_GENERAL As PROGRAMACION_GENERALDataTable
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Friend Sub New(ByVal rb As Global.System.Data.DataRowBuilder)
             MyBase.New(rb)
-            Me.tableLIQUIDACIONES_FONDO_ROTATIVO = CType(Me.Table,LIQUIDACIONES_FONDO_ROTATIVODataTable)
+            Me.tablePROGRAMACION_GENERAL = CType(Me.Table,PROGRAMACION_GENERALDataTable)
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Property NRO() As String
+        Public Property IDP() As String
             Get
                 Try 
-                    Return CType(Me(Me.tableLIQUIDACIONES_FONDO_ROTATIVO.NROColumn),String)
+                    Return CType(Me(Me.tablePROGRAMACION_GENERAL.IDPColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'NRO' de la tabla 'LIQUIDACIONES_FONDO_ROTATIVO' es DBNull"& _ 
-                            ".", e)
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'IDP' de la tabla 'PROGRAMACION_GENERAL' es DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tableLIQUIDACIONES_FONDO_ROTATIVO.NROColumn) = value
+                Me(Me.tablePROGRAMACION_GENERAL.IDPColumn) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Property CONCEPTO() As String
+        Public Property PERSONAL() As String
             Get
                 Try 
-                    Return CType(Me(Me.tableLIQUIDACIONES_FONDO_ROTATIVO.CONCEPTOColumn),String)
+                    Return CType(Me(Me.tablePROGRAMACION_GENERAL.PERSONALColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'CONCEPTO' de la tabla 'LIQUIDACIONES_FONDO_ROTATIVO' es D"& _ 
-                            "BNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'PERSONAL' de la tabla 'PROGRAMACION_GENERAL' es DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tableLIQUIDACIONES_FONDO_ROTATIVO.CONCEPTOColumn) = value
+                Me(Me.tablePROGRAMACION_GENERAL.PERSONALColumn) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Property DETALLE() As String
+        Public Property IDS() As String
             Get
                 Try 
-                    Return CType(Me(Me.tableLIQUIDACIONES_FONDO_ROTATIVO.DETALLEColumn),String)
+                    Return CType(Me(Me.tablePROGRAMACION_GENERAL.IDSColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'DETALLE' de la tabla 'LIQUIDACIONES_FONDO_ROTATIVO' es DB"& _ 
-                            "Null.", e)
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'IDS' de la tabla 'PROGRAMACION_GENERAL' es DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tableLIQUIDACIONES_FONDO_ROTATIVO.DETALLEColumn) = value
+                Me(Me.tablePROGRAMACION_GENERAL.IDSColumn) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Property RECEPTOR() As String
+        Public Property SITIO() As String
             Get
                 Try 
-                    Return CType(Me(Me.tableLIQUIDACIONES_FONDO_ROTATIVO.RECEPTORColumn),String)
+                    Return CType(Me(Me.tablePROGRAMACION_GENERAL.SITIOColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'RECEPTOR' de la tabla 'LIQUIDACIONES_FONDO_ROTATIVO' es D"& _ 
-                            "BNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'SITIO' de la tabla 'PROGRAMACION_GENERAL' es DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tableLIQUIDACIONES_FONDO_ROTATIVO.RECEPTORColumn) = value
+                Me(Me.tablePROGRAMACION_GENERAL.SITIOColumn) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Property TIPDOC() As String
+        Public Property LUNES() As String
             Get
                 Try 
-                    Return CType(Me(Me.tableLIQUIDACIONES_FONDO_ROTATIVO.TIPDOCColumn),String)
+                    Return CType(Me(Me.tablePROGRAMACION_GENERAL.LUNESColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'TIPDOC' de la tabla 'LIQUIDACIONES_FONDO_ROTATIVO' es DBN"& _ 
-                            "ull.", e)
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'LUNES' de la tabla 'PROGRAMACION_GENERAL' es DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tableLIQUIDACIONES_FONDO_ROTATIVO.TIPDOCColumn) = value
+                Me(Me.tablePROGRAMACION_GENERAL.LUNESColumn) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Property NDOC() As String
+        Public Property MARTES() As String
             Get
                 Try 
-                    Return CType(Me(Me.tableLIQUIDACIONES_FONDO_ROTATIVO.NDOCColumn),String)
+                    Return CType(Me(Me.tablePROGRAMACION_GENERAL.MARTESColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'NDOC' de la tabla 'LIQUIDACIONES_FONDO_ROTATIVO' es DBNul"& _ 
-                            "l.", e)
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'MARTES' de la tabla 'PROGRAMACION_GENERAL' es DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tableLIQUIDACIONES_FONDO_ROTATIVO.NDOCColumn) = value
+                Me(Me.tablePROGRAMACION_GENERAL.MARTESColumn) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Property VALOR() As String
+        Public Property MIERCOLES() As String
             Get
                 Try 
-                    Return CType(Me(Me.tableLIQUIDACIONES_FONDO_ROTATIVO.VALORColumn),String)
+                    Return CType(Me(Me.tablePROGRAMACION_GENERAL.MIERCOLESColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'VALOR' de la tabla 'LIQUIDACIONES_FONDO_ROTATIVO' es DBNu"& _ 
-                            "ll.", e)
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'MIERCOLES' de la tabla 'PROGRAMACION_GENERAL' es DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tableLIQUIDACIONES_FONDO_ROTATIVO.VALORColumn) = value
+                Me(Me.tablePROGRAMACION_GENERAL.MIERCOLESColumn) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Property CLIENTE() As String
+        Public Property JUEVES() As String
             Get
                 Try 
-                    Return CType(Me(Me.tableLIQUIDACIONES_FONDO_ROTATIVO.CLIENTEColumn),String)
+                    Return CType(Me(Me.tablePROGRAMACION_GENERAL.JUEVESColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'CLIENTE' de la tabla 'LIQUIDACIONES_FONDO_ROTATIVO' es DB"& _ 
-                            "Null.", e)
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'JUEVES' de la tabla 'PROGRAMACION_GENERAL' es DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tableLIQUIDACIONES_FONDO_ROTATIVO.CLIENTEColumn) = value
+                Me(Me.tablePROGRAMACION_GENERAL.JUEVESColumn) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Function IsNRONull() As Boolean
-            Return Me.IsNull(Me.tableLIQUIDACIONES_FONDO_ROTATIVO.NROColumn)
+        Public Property VIERNES() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tablePROGRAMACION_GENERAL.VIERNESColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'VIERNES' de la tabla 'PROGRAMACION_GENERAL' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablePROGRAMACION_GENERAL.VIERNESColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property SABADO() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tablePROGRAMACION_GENERAL.SABADOColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'SABADO' de la tabla 'PROGRAMACION_GENERAL' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablePROGRAMACION_GENERAL.SABADOColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property DOMINGO() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tablePROGRAMACION_GENERAL.DOMINGOColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'DOMINGO' de la tabla 'PROGRAMACION_GENERAL' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablePROGRAMACION_GENERAL.DOMINGOColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property INICIA() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tablePROGRAMACION_GENERAL.INICIAColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'INICIA' de la tabla 'PROGRAMACION_GENERAL' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablePROGRAMACION_GENERAL.INICIAColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property TERMINA() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tablePROGRAMACION_GENERAL.TERMINAColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'TERMINA' de la tabla 'PROGRAMACION_GENERAL' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablePROGRAMACION_GENERAL.TERMINAColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsIDPNull() As Boolean
+            Return Me.IsNull(Me.tablePROGRAMACION_GENERAL.IDPColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Sub SetNRONull()
-            Me(Me.tableLIQUIDACIONES_FONDO_ROTATIVO.NROColumn) = Global.System.Convert.DBNull
+        Public Sub SetIDPNull()
+            Me(Me.tablePROGRAMACION_GENERAL.IDPColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Function IsCONCEPTONull() As Boolean
-            Return Me.IsNull(Me.tableLIQUIDACIONES_FONDO_ROTATIVO.CONCEPTOColumn)
+        Public Function IsPERSONALNull() As Boolean
+            Return Me.IsNull(Me.tablePROGRAMACION_GENERAL.PERSONALColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Sub SetCONCEPTONull()
-            Me(Me.tableLIQUIDACIONES_FONDO_ROTATIVO.CONCEPTOColumn) = Global.System.Convert.DBNull
+        Public Sub SetPERSONALNull()
+            Me(Me.tablePROGRAMACION_GENERAL.PERSONALColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Function IsDETALLENull() As Boolean
-            Return Me.IsNull(Me.tableLIQUIDACIONES_FONDO_ROTATIVO.DETALLEColumn)
+        Public Function IsIDSNull() As Boolean
+            Return Me.IsNull(Me.tablePROGRAMACION_GENERAL.IDSColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Sub SetDETALLENull()
-            Me(Me.tableLIQUIDACIONES_FONDO_ROTATIVO.DETALLEColumn) = Global.System.Convert.DBNull
+        Public Sub SetIDSNull()
+            Me(Me.tablePROGRAMACION_GENERAL.IDSColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Function IsRECEPTORNull() As Boolean
-            Return Me.IsNull(Me.tableLIQUIDACIONES_FONDO_ROTATIVO.RECEPTORColumn)
+        Public Function IsSITIONull() As Boolean
+            Return Me.IsNull(Me.tablePROGRAMACION_GENERAL.SITIOColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Sub SetRECEPTORNull()
-            Me(Me.tableLIQUIDACIONES_FONDO_ROTATIVO.RECEPTORColumn) = Global.System.Convert.DBNull
+        Public Sub SetSITIONull()
+            Me(Me.tablePROGRAMACION_GENERAL.SITIOColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Function IsTIPDOCNull() As Boolean
-            Return Me.IsNull(Me.tableLIQUIDACIONES_FONDO_ROTATIVO.TIPDOCColumn)
+        Public Function IsLUNESNull() As Boolean
+            Return Me.IsNull(Me.tablePROGRAMACION_GENERAL.LUNESColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Sub SetTIPDOCNull()
-            Me(Me.tableLIQUIDACIONES_FONDO_ROTATIVO.TIPDOCColumn) = Global.System.Convert.DBNull
+        Public Sub SetLUNESNull()
+            Me(Me.tablePROGRAMACION_GENERAL.LUNESColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Function IsNDOCNull() As Boolean
-            Return Me.IsNull(Me.tableLIQUIDACIONES_FONDO_ROTATIVO.NDOCColumn)
+        Public Function IsMARTESNull() As Boolean
+            Return Me.IsNull(Me.tablePROGRAMACION_GENERAL.MARTESColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Sub SetNDOCNull()
-            Me(Me.tableLIQUIDACIONES_FONDO_ROTATIVO.NDOCColumn) = Global.System.Convert.DBNull
+        Public Sub SetMARTESNull()
+            Me(Me.tablePROGRAMACION_GENERAL.MARTESColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Function IsVALORNull() As Boolean
-            Return Me.IsNull(Me.tableLIQUIDACIONES_FONDO_ROTATIVO.VALORColumn)
+        Public Function IsMIERCOLESNull() As Boolean
+            Return Me.IsNull(Me.tablePROGRAMACION_GENERAL.MIERCOLESColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Sub SetVALORNull()
-            Me(Me.tableLIQUIDACIONES_FONDO_ROTATIVO.VALORColumn) = Global.System.Convert.DBNull
+        Public Sub SetMIERCOLESNull()
+            Me(Me.tablePROGRAMACION_GENERAL.MIERCOLESColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Function IsCLIENTENull() As Boolean
-            Return Me.IsNull(Me.tableLIQUIDACIONES_FONDO_ROTATIVO.CLIENTEColumn)
+        Public Function IsJUEVESNull() As Boolean
+            Return Me.IsNull(Me.tablePROGRAMACION_GENERAL.JUEVESColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Sub SetCLIENTENull()
-            Me(Me.tableLIQUIDACIONES_FONDO_ROTATIVO.CLIENTEColumn) = Global.System.Convert.DBNull
+        Public Sub SetJUEVESNull()
+            Me(Me.tablePROGRAMACION_GENERAL.JUEVESColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsVIERNESNull() As Boolean
+            Return Me.IsNull(Me.tablePROGRAMACION_GENERAL.VIERNESColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetVIERNESNull()
+            Me(Me.tablePROGRAMACION_GENERAL.VIERNESColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsSABADONull() As Boolean
+            Return Me.IsNull(Me.tablePROGRAMACION_GENERAL.SABADOColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetSABADONull()
+            Me(Me.tablePROGRAMACION_GENERAL.SABADOColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsDOMINGONull() As Boolean
+            Return Me.IsNull(Me.tablePROGRAMACION_GENERAL.DOMINGOColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetDOMINGONull()
+            Me(Me.tablePROGRAMACION_GENERAL.DOMINGOColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsINICIANull() As Boolean
+            Return Me.IsNull(Me.tablePROGRAMACION_GENERAL.INICIAColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetINICIANull()
+            Me(Me.tablePROGRAMACION_GENERAL.INICIAColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsTERMINANull() As Boolean
+            Return Me.IsNull(Me.tablePROGRAMACION_GENERAL.TERMINAColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetTERMINANull()
+            Me(Me.tablePROGRAMACION_GENERAL.TERMINAColumn) = Global.System.Convert.DBNull
         End Sub
     End Class
     
@@ -862,16 +1054,16 @@ Partial Public Class DsLiquidacionesCajaFondo
     '''Row event argument class
     '''</summary>
     <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-    Public Class LIQUIDACIONES_FONDO_ROTATIVORowChangeEvent
+    Public Class PROGRAMACION_GENERALRowChangeEvent
         Inherits Global.System.EventArgs
         
-        Private eventRow As LIQUIDACIONES_FONDO_ROTATIVORow
+        Private eventRow As PROGRAMACION_GENERALRow
         
         Private eventAction As Global.System.Data.DataRowAction
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Sub New(ByVal row As LIQUIDACIONES_FONDO_ROTATIVORow, ByVal action As Global.System.Data.DataRowAction)
+        Public Sub New(ByVal row As PROGRAMACION_GENERALRow, ByVal action As Global.System.Data.DataRowAction)
             MyBase.New
             Me.eventRow = row
             Me.eventAction = action
@@ -879,7 +1071,7 @@ Partial Public Class DsLiquidacionesCajaFondo
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public ReadOnly Property Row() As LIQUIDACIONES_FONDO_ROTATIVORow
+        Public ReadOnly Property Row() As PROGRAMACION_GENERALRow
             Get
                 Return Me.eventRow
             End Get
