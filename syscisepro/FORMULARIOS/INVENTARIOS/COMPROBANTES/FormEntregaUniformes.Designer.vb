@@ -130,7 +130,6 @@
             Me.pbImagen = New System.Windows.Forms.PictureBox()
             Me.Label10 = New System.Windows.Forms.Label()
             Me.tpConsultar = New System.Windows.Forms.TabPage()
-            Me.btnExportarComprobantes = New System.Windows.Forms.Button()
             Me.gbNumeroFactura = New System.Windows.Forms.GroupBox()
             Me.chkTodos = New System.Windows.Forms.CheckBox()
             Me.rbtDet = New System.Windows.Forms.RadioButton()
@@ -139,6 +138,7 @@
             Me.Button1 = New System.Windows.Forms.Button()
             Me.txtNroComprobante = New System.Windows.Forms.TextBox()
             Me.gbComprobante = New System.Windows.Forms.GroupBox()
+            Me.btnExportarComprobantes = New System.Windows.Forms.Button()
             Me.dgvComprobantesIngreso = New System.Windows.Forms.DataGridView()
             Me.gbDetalleComprobante = New System.Windows.Forms.GroupBox()
             Me.btnExportarDetalleComprobante = New System.Windows.Forms.Button()
@@ -543,7 +543,7 @@
             Me.gbBusquedaArticulo.Controls.Add(Me.lblIdKardex)
             Me.gbBusquedaArticulo.Controls.Add(Me.lblIdArticulo)
             Me.gbBusquedaArticulo.Enabled = False
-            Me.gbBusquedaArticulo.Location = New System.Drawing.Point(3, 179)
+            Me.gbBusquedaArticulo.Location = New System.Drawing.Point(11, 179)
             Me.gbBusquedaArticulo.Name = "gbBusquedaArticulo"
             Me.gbBusquedaArticulo.Size = New System.Drawing.Size(1253, 403)
             Me.gbBusquedaArticulo.TabIndex = 178
@@ -1207,7 +1207,7 @@
             Me.Label10.BackColor = System.Drawing.Color.White
             Me.Label10.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Label10.ForeColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(123, Byte), Integer))
-            Me.Label10.Location = New System.Drawing.Point(834, 36)
+            Me.Label10.Location = New System.Drawing.Point(832, 35)
             Me.Label10.Name = "Label10"
             Me.Label10.Size = New System.Drawing.Size(418, 81)
             Me.Label10.TabIndex = 179
@@ -1227,17 +1227,6 @@
             Me.tpConsultar.Size = New System.Drawing.Size(1259, 585)
             Me.tpConsultar.TabIndex = 1
             Me.tpConsultar.Text = "CONSULTAR"
-            '
-            'btnExportarComprobantes
-            '
-            Me.btnExportarComprobantes.BackColor = System.Drawing.Color.White
-            Me.btnExportarComprobantes.Font = New System.Drawing.Font("Consolas", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnExportarComprobantes.Image = Global.syscisepro.My.Resources.Resources.icons8_excel_48
-            Me.btnExportarComprobantes.Location = New System.Drawing.Point(1152, 4)
-            Me.btnExportarComprobantes.Name = "btnExportarComprobantes"
-            Me.btnExportarComprobantes.Size = New System.Drawing.Size(27, 27)
-            Me.btnExportarComprobantes.TabIndex = 154
-            Me.btnExportarComprobantes.UseVisualStyleBackColor = False
             '
             'gbNumeroFactura
             '
@@ -1342,6 +1331,17 @@
             Me.gbComprobante.TabIndex = 151
             Me.gbComprobante.TabStop = False
             Me.gbComprobante.Text = "COMPROBANTE"
+            '
+            'btnExportarComprobantes
+            '
+            Me.btnExportarComprobantes.BackColor = System.Drawing.Color.White
+            Me.btnExportarComprobantes.Font = New System.Drawing.Font("Consolas", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.btnExportarComprobantes.Image = Global.syscisepro.My.Resources.Resources.icons8_excel_48
+            Me.btnExportarComprobantes.Location = New System.Drawing.Point(1152, 4)
+            Me.btnExportarComprobantes.Name = "btnExportarComprobantes"
+            Me.btnExportarComprobantes.Size = New System.Drawing.Size(27, 27)
+            Me.btnExportarComprobantes.TabIndex = 154
+            Me.btnExportarComprobantes.UseVisualStyleBackColor = False
             '
             'dgvComprobantesIngreso
             '

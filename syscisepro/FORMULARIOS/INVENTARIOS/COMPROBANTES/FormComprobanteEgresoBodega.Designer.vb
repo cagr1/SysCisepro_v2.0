@@ -1,10 +1,10 @@
 ﻿Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
-    <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+    <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
     Partial Class FormComprobanteEgresoBodega
         'Inherits System.Windows.Forms.Form
         Inherits Krypton.Toolkit.KryptonForm
         'Form reemplaza a Dispose para limpiar la lista de componentes.
-        <System.Diagnostics.DebuggerNonUserCode()> _
+        <System.Diagnostics.DebuggerNonUserCode()>
         Protected Overrides Sub Dispose(ByVal disposing As Boolean)
             Try
                 If disposing AndAlso components IsNot Nothing Then
@@ -21,7 +21,7 @@
         'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
         'Se puede modificar usando el Diseñador de Windows Forms.  
         'No lo modifique con el editor de código.
-        <System.Diagnostics.DebuggerStepThrough()> _
+        <System.Diagnostics.DebuggerStepThrough()>
         Private Sub InitializeComponent()
             Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
@@ -42,6 +42,8 @@
             Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormComprobanteEgresoBodega))
             Me.tbComprobanteIngresoBodega = New System.Windows.Forms.TabControl()
             Me.tpRegistro = New System.Windows.Forms.TabPage()
+            Me.Label18 = New System.Windows.Forms.Label()
+            Me.txtCedulaRecibe = New System.Windows.Forms.TextBox()
             Me.txtRazon = New System.Windows.Forms.TextBox()
             Me.bntPuesto = New System.Windows.Forms.Button()
             Me.txtUbicacion = New System.Windows.Forms.TextBox()
@@ -150,6 +152,19 @@
             Me.crvComprobante = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
             Me.TabPage2 = New System.Windows.Forms.TabPage()
             Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+            Me.TabPage3 = New System.Windows.Forms.TabPage()
+            Me.KryptonGroupBox4 = New ComponentFactory.Krypton.Toolkit.KryptonGroupBox()
+            Me.KryptonDataGridView1 = New ComponentFactory.Krypton.Toolkit.KryptonDataGridView()
+            Me.KryptonGroupBox3 = New ComponentFactory.Krypton.Toolkit.KryptonGroupBox()
+            Me.dgvComprobantesEgresoReingreso = New ComponentFactory.Krypton.Toolkit.KryptonDataGridView()
+            Me.KryptonGroupBox1 = New ComponentFactory.Krypton.Toolkit.KryptonGroupBox()
+            Me.KryptonLabel2 = New ComponentFactory.Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel1 = New ComponentFactory.Krypton.Toolkit.KryptonLabel()
+            Me.dtpHasta = New ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker()
+            Me.dtpDesde = New ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker()
+            Me.KryptonGroupBox2 = New ComponentFactory.Krypton.Toolkit.KryptonGroupBox()
+            Me.btnBusqueda = New ComponentFactory.Krypton.Toolkit.KryptonButton()
+            Me.txtBusqueda = New System.Windows.Forms.TextBox()
             Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
             Me.tsmNuevo = New System.Windows.Forms.ToolStripMenuItem()
             Me.tsmGuardar = New System.Windows.Forms.ToolStripMenuItem()
@@ -182,6 +197,25 @@
             Me.TabPage1.SuspendLayout()
             Me.TabPage2.SuspendLayout()
             CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+            Me.TabPage3.SuspendLayout()
+            CType(Me.KryptonGroupBox4, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType(Me.KryptonGroupBox4.Panel, System.ComponentModel.ISupportInitialize).BeginInit()
+            Me.KryptonGroupBox4.Panel.SuspendLayout()
+            Me.KryptonGroupBox4.SuspendLayout()
+            CType(Me.KryptonDataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType(Me.KryptonGroupBox3, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType(Me.KryptonGroupBox3.Panel, System.ComponentModel.ISupportInitialize).BeginInit()
+            Me.KryptonGroupBox3.Panel.SuspendLayout()
+            Me.KryptonGroupBox3.SuspendLayout()
+            CType(Me.dgvComprobantesEgresoReingreso, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType(Me.KryptonGroupBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType(Me.KryptonGroupBox1.Panel, System.ComponentModel.ISupportInitialize).BeginInit()
+            Me.KryptonGroupBox1.Panel.SuspendLayout()
+            Me.KryptonGroupBox1.SuspendLayout()
+            CType(Me.KryptonGroupBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType(Me.KryptonGroupBox2.Panel, System.ComponentModel.ISupportInitialize).BeginInit()
+            Me.KryptonGroupBox2.Panel.SuspendLayout()
+            Me.KryptonGroupBox2.SuspendLayout()
             Me.MenuStrip1.SuspendLayout()
             Me.SuspendLayout()
             '
@@ -190,6 +224,7 @@
             Me.tbComprobanteIngresoBodega.Controls.Add(Me.tpRegistro)
             Me.tbComprobanteIngresoBodega.Controls.Add(Me.tpConsultar)
             Me.tbComprobanteIngresoBodega.Controls.Add(Me.tpReporte)
+            Me.tbComprobanteIngresoBodega.Controls.Add(Me.TabPage3)
             Me.tbComprobanteIngresoBodega.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.tbComprobanteIngresoBodega.Location = New System.Drawing.Point(2, 34)
             Me.tbComprobanteIngresoBodega.Name = "tbComprobanteIngresoBodega"
@@ -200,6 +235,8 @@
             'tpRegistro
             '
             Me.tpRegistro.BackColor = System.Drawing.Color.White
+            Me.tpRegistro.Controls.Add(Me.Label18)
+            Me.tpRegistro.Controls.Add(Me.txtCedulaRecibe)
             Me.tpRegistro.Controls.Add(Me.txtRazon)
             Me.tpRegistro.Controls.Add(Me.bntPuesto)
             Me.tpRegistro.Controls.Add(Me.txtUbicacion)
@@ -244,6 +281,23 @@
             Me.tpRegistro.TabIndex = 0
             Me.tpRegistro.Text = "REGISTRO"
             '
+            'Label18
+            '
+            Me.Label18.AutoSize = True
+            Me.Label18.Location = New System.Drawing.Point(439, 154)
+            Me.Label18.Name = "Label18"
+            Me.Label18.Size = New System.Drawing.Size(47, 13)
+            Me.Label18.TabIndex = 150
+            Me.Label18.Text = "CEDULA"
+            '
+            'txtCedulaRecibe
+            '
+            Me.txtCedulaRecibe.Enabled = False
+            Me.txtCedulaRecibe.Location = New System.Drawing.Point(438, 171)
+            Me.txtCedulaRecibe.Name = "txtCedulaRecibe"
+            Me.txtCedulaRecibe.Size = New System.Drawing.Size(100, 21)
+            Me.txtCedulaRecibe.TabIndex = 149
+            '
             'txtRazon
             '
             Me.txtRazon.BackColor = System.Drawing.Color.White
@@ -280,10 +334,10 @@
             Me.txtUbicacion.Enabled = False
             Me.txtUbicacion.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtUbicacion.ForeColor = System.Drawing.Color.Black
-            Me.txtUbicacion.Location = New System.Drawing.Point(439, 164)
+            Me.txtUbicacion.Location = New System.Drawing.Point(585, 164)
             Me.txtUbicacion.Multiline = True
             Me.txtUbicacion.Name = "txtUbicacion"
-            Me.txtUbicacion.Size = New System.Drawing.Size(525, 43)
+            Me.txtUbicacion.Size = New System.Drawing.Size(379, 43)
             Me.txtUbicacion.TabIndex = 117
             '
             'txtRecibe
@@ -1171,7 +1225,7 @@
             '
             Me.Label10.AutoSize = True
             Me.Label10.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label10.Location = New System.Drawing.Point(439, 151)
+            Me.Label10.Location = New System.Drawing.Point(586, 148)
             Me.Label10.Name = "Label10"
             Me.Label10.Size = New System.Drawing.Size(174, 13)
             Me.Label10.TabIndex = 66
@@ -1553,6 +1607,148 @@
             Me.PictureBox1.TabIndex = 0
             Me.PictureBox1.TabStop = False
             '
+            'TabPage3
+            '
+            Me.TabPage3.Controls.Add(Me.KryptonGroupBox4)
+            Me.TabPage3.Controls.Add(Me.KryptonGroupBox3)
+            Me.TabPage3.Controls.Add(Me.KryptonGroupBox1)
+            Me.TabPage3.Controls.Add(Me.KryptonGroupBox2)
+            Me.TabPage3.Location = New System.Drawing.Point(4, 22)
+            Me.TabPage3.Name = "TabPage3"
+            Me.TabPage3.Padding = New System.Windows.Forms.Padding(3)
+            Me.TabPage3.Size = New System.Drawing.Size(1260, 594)
+            Me.TabPage3.TabIndex = 3
+            Me.TabPage3.Text = "REINGRESO"
+            Me.TabPage3.UseVisualStyleBackColor = True
+            '
+            'KryptonGroupBox4
+            '
+            Me.KryptonGroupBox4.Location = New System.Drawing.Point(6, 294)
+            Me.KryptonGroupBox4.Name = "KryptonGroupBox4"
+            '
+            'KryptonGroupBox4.Panel
+            '
+            Me.KryptonGroupBox4.Panel.Controls.Add(Me.KryptonDataGridView1)
+            Me.KryptonGroupBox4.Size = New System.Drawing.Size(1246, 300)
+            Me.KryptonGroupBox4.TabIndex = 151
+            Me.KryptonGroupBox4.Values.Heading = "Detalle"
+            '
+            'KryptonDataGridView1
+            '
+            Me.KryptonDataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+            Me.KryptonDataGridView1.Location = New System.Drawing.Point(3, 3)
+            Me.KryptonDataGridView1.Name = "KryptonDataGridView1"
+            Me.KryptonDataGridView1.Size = New System.Drawing.Size(1236, 257)
+            Me.KryptonDataGridView1.TabIndex = 0
+            '
+            'KryptonGroupBox3
+            '
+            Me.KryptonGroupBox3.Location = New System.Drawing.Point(6, 68)
+            Me.KryptonGroupBox3.Name = "KryptonGroupBox3"
+            '
+            'KryptonGroupBox3.Panel
+            '
+            Me.KryptonGroupBox3.Panel.Controls.Add(Me.dgvComprobantesEgresoReingreso)
+            Me.KryptonGroupBox3.Size = New System.Drawing.Size(1246, 224)
+            Me.KryptonGroupBox3.TabIndex = 150
+            Me.KryptonGroupBox3.Values.Heading = "Comprobante"
+            '
+            'dgvComprobantesEgresoReingreso
+            '
+            Me.dgvComprobantesEgresoReingreso.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+            Me.dgvComprobantesEgresoReingreso.Location = New System.Drawing.Point(4, 3)
+            Me.dgvComprobantesEgresoReingreso.Name = "dgvComprobantesEgresoReingreso"
+            Me.dgvComprobantesEgresoReingreso.Size = New System.Drawing.Size(1235, 187)
+            Me.dgvComprobantesEgresoReingreso.TabIndex = 0
+            '
+            'KryptonGroupBox1
+            '
+            Me.KryptonGroupBox1.Location = New System.Drawing.Point(6, 3)
+            Me.KryptonGroupBox1.Name = "KryptonGroupBox1"
+            '
+            'KryptonGroupBox1.Panel
+            '
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel2)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel1)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.dtpHasta)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.dtpDesde)
+            Me.KryptonGroupBox1.Size = New System.Drawing.Size(508, 62)
+            Me.KryptonGroupBox1.TabIndex = 148
+            Me.KryptonGroupBox1.Values.Heading = "Fechas"
+            '
+            'KryptonLabel2
+            '
+            Me.KryptonLabel2.Location = New System.Drawing.Point(247, 9)
+            Me.KryptonLabel2.Name = "KryptonLabel2"
+            Me.KryptonLabel2.Size = New System.Drawing.Size(18, 20)
+            Me.KryptonLabel2.TabIndex = 9
+            Me.KryptonLabel2.Values.Text = "A"
+            '
+            'KryptonLabel1
+            '
+            Me.KryptonLabel1.Location = New System.Drawing.Point(4, 9)
+            Me.KryptonLabel1.Name = "KryptonLabel1"
+            Me.KryptonLabel1.Size = New System.Drawing.Size(26, 20)
+            Me.KryptonLabel1.TabIndex = 8
+            Me.KryptonLabel1.Values.Text = "De"
+            '
+            'dtpHasta
+            '
+            Me.dtpHasta.Location = New System.Drawing.Point(271, 9)
+            Me.dtpHasta.Name = "dtpHasta"
+            Me.dtpHasta.Size = New System.Drawing.Size(203, 21)
+            Me.dtpHasta.TabIndex = 7
+            '
+            'dtpDesde
+            '
+            Me.dtpDesde.Location = New System.Drawing.Point(32, 9)
+            Me.dtpDesde.Name = "dtpDesde"
+            Me.dtpDesde.Size = New System.Drawing.Size(203, 21)
+            Me.dtpDesde.TabIndex = 6
+            '
+            'KryptonGroupBox2
+            '
+            Me.KryptonGroupBox2.Location = New System.Drawing.Point(519, 3)
+            Me.KryptonGroupBox2.Name = "KryptonGroupBox2"
+            '
+            'KryptonGroupBox2.Panel
+            '
+            Me.KryptonGroupBox2.Panel.Controls.Add(Me.btnBusqueda)
+            Me.KryptonGroupBox2.Panel.Controls.Add(Me.txtBusqueda)
+            Me.KryptonGroupBox2.Size = New System.Drawing.Size(341, 62)
+            Me.KryptonGroupBox2.TabIndex = 149
+            Me.KryptonGroupBox2.Values.Heading = "Busqueda"
+            '
+            'btnBusqueda
+            '
+            Me.btnBusqueda.AutoSize = True
+            Me.btnBusqueda.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+            Me.btnBusqueda.Location = New System.Drawing.Point(286, 3)
+            Me.btnBusqueda.Name = "btnBusqueda"
+            Me.btnBusqueda.Size = New System.Drawing.Size(32, 32)
+            Me.btnBusqueda.StateCommon.Back.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.[False]
+            Me.btnBusqueda.StateCommon.Border.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.[False]
+            Me.btnBusqueda.StateCommon.Border.DrawBorders = CType((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top Or ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) _
+            Or ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) _
+            Or ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right), ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)
+            Me.btnBusqueda.StateCommon.Content.Padding = New System.Windows.Forms.Padding(2)
+            Me.btnBusqueda.TabIndex = 248
+            Me.btnBusqueda.Values.ImageStates.ImageCheckedNormal = Nothing
+            Me.btnBusqueda.Values.ImageStates.ImageCheckedPressed = Nothing
+            Me.btnBusqueda.Values.ImageStates.ImageCheckedTracking = Nothing
+            Me.btnBusqueda.Values.ImageStates.ImageDisabled = Global.syscisepro.My.Resources.Resources.search_24dp_FILL0_wght400_GRAD0_opsz24__2_
+            Me.btnBusqueda.Values.ImageStates.ImageNormal = Global.syscisepro.My.Resources.Resources.search_24dp_FILL0_wght400_GRAD0_opsz24__2_
+            Me.btnBusqueda.Values.ImageStates.ImagePressed = Global.syscisepro.My.Resources.Resources.search_24dp_FILL0_wght400_GRAD0_opsz40
+            Me.btnBusqueda.Values.ImageStates.ImageTracking = Global.syscisepro.My.Resources.Resources.search_24dp_FILL0_wght400_GRAD0_opsz40
+            Me.btnBusqueda.Values.Text = ""
+            '
+            'txtBusqueda
+            '
+            Me.txtBusqueda.Location = New System.Drawing.Point(12, 8)
+            Me.txtBusqueda.Name = "txtBusqueda"
+            Me.txtBusqueda.Size = New System.Drawing.Size(264, 21)
+            Me.txtBusqueda.TabIndex = 0
+            '
             'MenuStrip1
             '
             Me.MenuStrip1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
@@ -1715,6 +1911,27 @@
             Me.TabPage1.PerformLayout()
             Me.TabPage2.ResumeLayout(False)
             CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+            Me.TabPage3.ResumeLayout(False)
+            CType(Me.KryptonGroupBox4.Panel, System.ComponentModel.ISupportInitialize).EndInit()
+            Me.KryptonGroupBox4.Panel.ResumeLayout(False)
+            CType(Me.KryptonGroupBox4, System.ComponentModel.ISupportInitialize).EndInit()
+            Me.KryptonGroupBox4.ResumeLayout(False)
+            CType(Me.KryptonDataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+            CType(Me.KryptonGroupBox3.Panel, System.ComponentModel.ISupportInitialize).EndInit()
+            Me.KryptonGroupBox3.Panel.ResumeLayout(False)
+            CType(Me.KryptonGroupBox3, System.ComponentModel.ISupportInitialize).EndInit()
+            Me.KryptonGroupBox3.ResumeLayout(False)
+            CType(Me.dgvComprobantesEgresoReingreso, System.ComponentModel.ISupportInitialize).EndInit()
+            CType(Me.KryptonGroupBox1.Panel, System.ComponentModel.ISupportInitialize).EndInit()
+            Me.KryptonGroupBox1.Panel.ResumeLayout(False)
+            Me.KryptonGroupBox1.Panel.PerformLayout()
+            CType(Me.KryptonGroupBox1, System.ComponentModel.ISupportInitialize).EndInit()
+            Me.KryptonGroupBox1.ResumeLayout(False)
+            CType(Me.KryptonGroupBox2.Panel, System.ComponentModel.ISupportInitialize).EndInit()
+            Me.KryptonGroupBox2.Panel.ResumeLayout(False)
+            Me.KryptonGroupBox2.Panel.PerformLayout()
+            CType(Me.KryptonGroupBox2, System.ComponentModel.ISupportInitialize).EndInit()
+            Me.KryptonGroupBox2.ResumeLayout(False)
             Me.MenuStrip1.ResumeLayout(False)
             Me.MenuStrip1.PerformLayout()
             Me.ResumeLayout(False)
@@ -1843,5 +2060,20 @@
         Friend WithEvents lbldetalle As Label
         Friend WithEvents tmsEliminar As ToolStripMenuItem
         Friend WithEvents Label11 As Label
+        Friend WithEvents TabPage3 As TabPage
+        Friend WithEvents dtpHasta As ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker
+        Friend WithEvents dtpDesde As ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker
+        Friend WithEvents KryptonGroupBox1 As ComponentFactory.Krypton.Toolkit.KryptonGroupBox
+        Friend WithEvents KryptonLabel2 As ComponentFactory.Krypton.Toolkit.KryptonLabel
+        Friend WithEvents KryptonLabel1 As ComponentFactory.Krypton.Toolkit.KryptonLabel
+        Friend WithEvents KryptonGroupBox2 As ComponentFactory.Krypton.Toolkit.KryptonGroupBox
+        Friend WithEvents txtBusqueda As TextBox
+        Friend WithEvents btnBusqueda As ComponentFactory.Krypton.Toolkit.KryptonButton
+        Friend WithEvents KryptonGroupBox3 As ComponentFactory.Krypton.Toolkit.KryptonGroupBox
+        Friend WithEvents dgvComprobantesEgresoReingreso As ComponentFactory.Krypton.Toolkit.KryptonDataGridView
+        Friend WithEvents KryptonGroupBox4 As ComponentFactory.Krypton.Toolkit.KryptonGroupBox
+        Friend WithEvents KryptonDataGridView1 As ComponentFactory.Krypton.Toolkit.KryptonDataGridView
+        Friend WithEvents Label18 As Label
+        Friend WithEvents txtCedulaRecibe As TextBox
     End Class
 End Namespace

@@ -537,5 +537,9 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.CONSULTAS
             End If
 
         End Sub
+
+        Private Sub txtBuscar_TextChanged(sender As Object, e As EventArgs) Handles txtBuscar.TextChanged
+
+        End Sub
     End Class
 End Namespace

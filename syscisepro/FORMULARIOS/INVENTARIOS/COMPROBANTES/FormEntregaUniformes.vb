@@ -393,7 +393,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                 End With
                 _sqlCommands.Add(_objFoto.NuevoRegistroFotoCommands())
             End If
-
+            'descontar si tiene descuento con idkardex
             ' descontar total uniformes rol
             With _objRegistroDescuento
                 .IdRegistro = _objRegistroDescuento.BuscarMayorIdRegistroDescuento(_tipoCon) + 1
@@ -404,7 +404,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                 .Anio = dtpRolPago.Value.Year
                 .IdRol = 0
                 .Tipo = 9 ' DESCUENTO EQ. SEG. / BODEGA
-                .Observacion = "ENTREGA DE UNFIROMES (EQ. SEG. / BODEGA) AL SR(A): " & txtRecibe.Text & ", " & txtObservacionEntrega.Text.Trim
+                .Observacion = "ENTREGA DE UNIFORMES (EQ. SEG. / BODEGA) AL SR(A): " & txtRecibe.Text & ", " & txtObservacionEntrega.Text.Trim
                 .Valor = CDbl(lblTotalUniformes.Text.Trim.Split("$")(1).Trim())
                 .Tipot = "DESCUENTO EQ. SEG. / BODEGA"
                 .Idprog = 0
@@ -736,6 +736,10 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
         End Sub
 
         Private Sub dgvSecuencial_CellContentClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles dgvSecuencial.CellContentClick
+
+        End Sub
+
+        Private Sub Label10_Click(sender As Object, e As EventArgs) Handles Label10.Click
 
         End Sub
     End Class

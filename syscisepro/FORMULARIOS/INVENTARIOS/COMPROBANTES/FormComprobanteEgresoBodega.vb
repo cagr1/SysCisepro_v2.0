@@ -76,6 +76,8 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
         ReadOnly _objDetalleKardex As New ClassDetalleKardex
         ReadOnly _objActivoFIjo As New ClassActivoFijo
         ReadOnly _objSitioTrabajo As New ClassSitiosTrabajo
+        ReadOnly _objEntrega As New ClassEntregaUniformes
+        ReadOnly _objRegistroDescuento As New ClassDescuentosPersonal
 
 
         ReadOnly _objFoto As New ClassFoto
@@ -138,6 +140,13 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
             dgvSecuencial.Font = New Font("Roboto", 8, FontStyle.Regular)
             dgvComprobantesEgreso.Font = New Font("Roboto", 8, FontStyle.Regular)
             dgvDetalleComprobate.Font = New Font("Roboto", 8, FontStyle.Regular)
+            txtBusqueda.ForeColor = ValidationForms.GetColorSistema(_tipoCon)
+            txtBusqueda.Font = New Font("Roboto", 9, FontStyle.Regular)
+
+            Dim validation As New ValidationForms()
+            validation.SetPlaceholder(txtBusqueda, "Buscar Activo por Serie o Nombre")
+
+
             _sqlCommands = New List(Of SqlCommand)
         End Sub
 
@@ -201,6 +210,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
             lblIdKardex.Text = 0
             lbldetalle.Text = 0
             Label11.Text = "0 REGISTRO(S) - TOTAL"
+            txtCedulaRecibe.Clear()
 
             _detalleKardex = Nothing
             dgvSecuencial.Rows.Clear()
@@ -225,6 +235,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
             bntPuesto.Enabled = cmbBodegaV
             btnSerie.Enabled = cmbBodegaV
             pbFoto.Enabled = cmbBodegaV
+            txtCedulaRecibe.Enabled = cmbBodegaV
         End Sub
 
         Private Sub CargarBodegas()
@@ -562,59 +573,111 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
             If _botonSeleccionadoSitio = 1 Then
 
                 If dgvSecuencial.RowCount = 0 Then
-
                     KryptonMessageBox.Show("POR FAVOR, INGRESE LOS ITEMS DEL COMPROBANTES PARA GUARDAR", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                     Return
                 End If
 
                 If CInt(txtUbicacion.Tag) = 0 Then
                     KryptonMessageBox.Show("POR FAVOR, SELECCIONE UN SITIO DE TRABAJO", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
-
                     Return
                 End If
 
                 Dim cantidadPrendasLleva = 0
-                With _objCompEgr
 
-                    .Id = (_objSerie.Serie(_objCompEgr.BuscarMayorIdComprobanteEgresoBodega(_tipoCon) + 1))
-                    .Fecha = dtpFecha.Value
-                    .Nro = txtNroDocumento.Text
-                    .IdBodega = cmbBodega.SelectedValue
-                    .IdActividad = 2
-                    .IdConcepto = cmbConceptos.SelectedValue
-                    .IdProvincias = cbmProvincia.SelectedValue
-                    .IdCiudad = cbmCanton.SelectedValue
-                    .IdParroquias = cbmParroquia.SelectedValue
-                    .IdCentroCosto = cbmCentroCosto.SelectedValue
-                    .IdParametroDocumento = cmbDocumento.SelectedValue
-                    .Estado = 1
-                    .Razon = txtRazon.Text.ToUpper
-                    .IdPersonal = If(txtRecibe.Tag Is Nothing, txtRecibe.Text.Split("-")(1).Trim(), CType(txtRecibe.Tag, Integer))
-                    .Cliente = txtUbicacion.Text.Trim
-                    .IdEmpresa = 1
-                    .SitioTrabajo = CInt(txtUbicacion.Tag)
-                End With
-                _sqlCommands.Add(_objCompEgr.NuevoRegistroComprobanteEgresoBodegaCommand())
-
-                If Not pbFoto.Image Is Nothing Then
-                    With _objFoto
-                        .IdFoto = .BuscarMayorIdFoto(_tipoCon) + 1
-                        .Aux = "EGRESO BODEGA"
-                        .Imagen = ValidationForms.ImageToBytes(pbFoto.Image)
-                        .IdAux = _objCompEgr.Id
+                If cmbBodega.SelectedValue = 1 Then
+                    With _objEntrega
+                        .Id = .BuscarMayorIdEntregaUniforme(_tipoCon) + 1
+                        .Codigo = "RE-3.8.1-2"
+                        .Version = "003"
+                        .Fecha = dtpFecha.Value
+                        .Nombre = txtRecibe.Text.ToUpper.Trim
+                        .Cedula = txtCedula.Text.Trim
+                        .Cliente = txtUbicacion.Text.ToUpper.Trim
+                        .FechaIngreso = dtpFecha.Value
+                        .Realizado = "ING. JOSÉ NAVARRETE M."
+                        .Revisado = "ING. KAREN NAVARRETE M"
+                        .Aprobado = "MYR(R) IGNACIO NAVARRETE L"
+                        .Registrado = txtNombre.Text.ToUpper.Trim
+                        .Estado = 1
+                        .Observacion = txtRazon.Text.ToUpper.Trim
                     End With
-                    _sqlCommands.Add(_objFoto.NuevoRegistroFotoCommands())
+                    _sqlCommands.Add(_objEntrega.NuevoRegistroEntregaUniformesCommand())
+
                 End If
 
+                With _objCompEgr
 
-                Dim iddk = _objDetalleKardex.BuscarMayorIdDetalleKardex(_tipoCon) + 1
-                Dim idce = _objDetCompEgr.BuscarMayorIdDetalleComprobanteEgresoBodega(_tipoCon) + 1
+                        .Id = (_objSerie.Serie(_objCompEgr.BuscarMayorIdComprobanteEgresoBodega(_tipoCon) + 1))
+                        .Fecha = dtpFecha.Value
+                        .Nro = txtNroDocumento.Text
+                        .IdBodega = cmbBodega.SelectedValue
+                        .IdActividad = 2
+                        .IdConcepto = cmbConceptos.SelectedValue
+                        .IdProvincias = cbmProvincia.SelectedValue
+                        .IdCiudad = cbmCanton.SelectedValue
+                        .IdParroquias = cbmParroquia.SelectedValue
+                        .IdCentroCosto = cbmCentroCosto.SelectedValue
+                        .IdParametroDocumento = cmbDocumento.SelectedValue
+                        .Estado = 1
+                        .Razon = txtRazon.Text.ToUpper
+                        .IdPersonal = If(txtRecibe.Tag Is Nothing, txtRecibe.Text.Split("-")(1).Trim(), CType(txtRecibe.Tag, Integer))
+                        .Cliente = txtUbicacion.Text.Trim
+                        .IdEmpresa = 1
+                        .SitioTrabajo = CInt(txtUbicacion.Tag)
+                    End With
+                    _sqlCommands.Add(_objCompEgr.NuevoRegistroComprobanteEgresoBodegaCommand())
 
-                Dim idu = _objControl.BuscarMayorIdControlUniformes(_tipoCon) + 1
+                    If Not pbFoto.Image Is Nothing Then
+                        With _objFoto
+                            .IdFoto = .BuscarMayorIdFoto(_tipoCon) + 1
+                            .Aux = "EGRESO BODEGA"
+                            .Imagen = ValidationForms.ImageToBytes(pbFoto.Image)
+                            .IdAux = _objCompEgr.Id
+                        End With
+                        _sqlCommands.Add(_objFoto.NuevoRegistroFotoCommands())
+                    End If
 
-                Dim idd = _objDetalleEgresoPuesto.BuscarMayorIdRegistroDetalleComprobante(_tipoCon) + 1
 
-                For indice = 0 To dgvSecuencial.RowCount - 1
+                    Dim iddk = _objDetalleKardex.BuscarMayorIdDetalleKardex(_tipoCon) + 1
+                    Dim idce = _objDetCompEgr.BuscarMayorIdDetalleComprobanteEgresoBodega(_tipoCon) + 1
+                    Dim idu = _objControl.BuscarMayorIdControlUniformes(_tipoCon) + 1
+                    Dim idd = _objDetalleEgresoPuesto.BuscarMayorIdRegistroDetalleComprobante(_tipoCon) + 1
+
+                Try
+
+
+
+
+                    For indice = 0 To dgvSecuencial.RowCount - 1
+
+                    'Control por cada celda 
+                    For Each row As DataGridViewRow In dgvSecuencial.Rows
+                        Dim idKdex = row.Cells("NUMERO_KARDEX").Value
+                        If idKdex > 0 Then
+                                Dim para As String = idKdex.ToString()
+                                Dim valor As Int32 = _objSecuencialItem.BuscarDescuentoSecuencialItem(_tipoCon, para)
+                                If valor > 0 Then
+                                    With _objRegistroDescuento
+                                        .IdRegistro = _objRegistroDescuento.BuscarMayorIdRegistroDescuento(_tipoCon) + 1
+                                        .IdPersonal = If(txtRecibe.Tag Is Nothing, txtRecibe.Text.Split("-")(1).Trim(), CType(txtRecibe.Tag, Integer))
+                                        .Fecha = _objEntrega.Fecha
+                                        .Procesado = 0
+                                        .Mes = dtpFecha.Value.Month
+                                        .Anio = dtpDesde.Value.Year
+                                        .IdRol = 0
+                                        .Tipo = 9 ' DESCUENTO EQ. SEG. / BODEGA
+                                        .Observacion = "ENTREGA DE UNIFORMES (EQ. SEG. / BODEGA) AL SR(A): " & txtRecibe.Text & ", " & row.Cells("NOMBRE").Value.ToString()
+                                        .Valor = CDbl(row.Cells("VALOR").Value)
+                                        .Tipot = "DESCUENTO EQ. SEG. / BODEGA"
+                                        .Idprog = 0
+                                    End With
+                                    _sqlCommands.Add(_objRegistroDescuento.NuevoRegistroDescuentoCommands())
+                                End If
+                            End If
+                    Next
+
+
+
                     With _objDetalleKardex
                         .Id = iddk
                         .IdActividad = 2
@@ -685,8 +748,13 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                     idce += 1
                     idu += 1
                 Next
+                Catch ex As Exception
+                    KryptonMessageBox.Show("Error al guardar los datos:" & ex.Message, "ERROR", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+
+                    Return
+                End Try
             ElseIf _botonSeleccionadoSitio = 2 Then
-                ModicificarComprobanteEgreso()
+                    ModicificarComprobanteEgreso()
             End If
             Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, String.Empty)
             If res(0) Then
@@ -1308,10 +1376,14 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
             If e.KeyCode <> Keys.Enter Then Return
             Try
                 Dim idPer As String = txtRecibe.Text.Split("-")(1).Trim()
+                txtCedula.Text = _objPer.BuscarCedulaPersonalXIdPersonal(_tipoCon, idPer)
+                'write the value of cedula in the textbox txtCedula
                 UpdateUbicacion(idPer)
-                Dim sitio = _objSitioTrabajo.SeleccionarSitiosFullClientexIdPersonal2(_tipoCon, idPer)
-            Catch
+                MsgBox("Personal encontrado" & txtCedulaRecibe.Text, MsgBoxStyle.Information, "MENSAJE DE VALIDACIÒN")
 
+            Catch
+                txtCedula.Tag = Nothing
+                txtCedula.Clear()
                 txtUbicacion.Clear()
             End Try
         End Sub
@@ -1325,7 +1397,11 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
 
 
                 If sitio.Rows.Count = 0 Then
-                    txtUbicacion.Clear()
+
+                    sitio = _objSitioTrabajo.SeleccionarSitiosClientexIdPersonal3(_tipoCon, idPer)
+                    Dim par() As String = sitio.Rows(0).Item(0).ToString().Split("|"c)
+                    txtUbicacion.Text = "CLIENTE: " & par(0) & vbCrLf & "PUESTO:" & par(1)
+                    txtUbicacion.Tag = 1
 
                 Else
                     Dim parts() As String = sitio.Rows(0).Item(0).ToString().Split("|"c)
@@ -1334,10 +1410,23 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                         txtUbicacion.Text = "CLIENTE: " & parts(2) & vbCrLf & "PUESTO: " & parts(1)
                     End If
                 End If
-            Catch
-
+            Catch ex As Exception
+                MsgBox("Error al cargar la ubicación del personal: " & ex.Message, MsgBoxStyle.Information, "MENSAJE DE VALIDACIÒN")
                 txtUbicacion.Clear()
             End Try
+        End Sub
+
+        Private Sub btnBusqueda_Click(sender As Object, e As EventArgs) Handles btnBusqueda.Click
+            CargarReingreso(txtBusqueda.Text)
+
+        End Sub
+
+        Private Sub CargarReingreso(ByVal filtro As String)
+            Dim fechaDesde = dtpFechaDesde.Value.Day.ToString & "-" & dtpFechaDesde.Value.Month.ToString & "-" & dtpFechaDesde.Value.Year.ToString & " 00:00:00"
+            Dim fechaHasta = dtpFechaHasta.Value.Day.ToString & "-" & dtpFechaHasta.Value.Month.ToString & "-" & dtpFechaHasta.Value.Year.ToString & " 23:59:59"
+
+            'dgvComprobantesEgreso.DataSource = _objCompEgr.SeleccionarComprobanteEgresoBodegaxRengoFechasReingreso(_tipoCon, fechaDesde, fechaHasta)
+
         End Sub
     End Class
 End Namespace

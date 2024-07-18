@@ -277,8 +277,8 @@ Namespace FORMULARIOS.INVENTARIOS.PROCESO
                 cbmColor.SelectedValue = item.Rows(0).Item(7)
 
                 cbmUnidadDeMedida.SelectedValue = item.Rows(0).Item(8)
-                cbmCategoría.SelectedValue = item.Rows(0).Item(17)
-                cbmGrupo.SelectedValue = item.Rows(0).Item(16)
+                cbmCategoría.SelectedValue = item.Rows(0).Item(18)
+                cbmGrupo.SelectedValue = item.Rows(0).Item(17)
                 cbmSubGrupo.SelectedValue = item.Rows(0).Item(12)
 
                 lblIdSecuencial.Text = item.Rows(0).Item(0)
@@ -287,14 +287,18 @@ Namespace FORMULARIOS.INVENTARIOS.PROCESO
                 txtDescripción.BackColor = Color.White
 
                 txtCosto.Text = item.Rows(0).Item(13)
-                txtPvp.Text = item.Rows(0).Item(18)
+                txtPvp.Text = item.Rows(0).Item(19)
                 txtSerie.Text = item.Rows(0).Item(15) & ""
+                chbxDescuento.Checked = If(IsDBNull(item.Rows(0).Item(16)), False, Convert.ToBoolean(item.Rows(0).Item(16)))
 
                 tsmModificar.Enabled = dgvSecuencial.RowCount > 0 And Not dgvSecuencial.CurrentRow Is Nothing
                 tsmAjustar.Enabled = dgvSecuencial.RowCount > 0 And Not dgvSecuencial.CurrentRow Is Nothing
-            Catch
+            Catch ex As Exception
                 txtDescripción.Text = "Error al cargar item"
                 txtDescripción.BackColor = Color.Salmon
+                'show the error message
+                MsgBox(ex.Message, MsgBoxStyle.Critical, "Error")
+
             End Try
         End Sub
 
@@ -341,6 +345,7 @@ Namespace FORMULARIOS.INVENTARIOS.PROCESO
             txtCosto.Enabled = cbmMarcaI
             txtPvp.Enabled = cbmMarcaI
             txtSerie.Enabled = cbmMarcaI
+            chbxDescuento.Enabled = cbmMarcaI
 
             lblCrearMarca.Enabled = cbmMarcaI
             lblCrearModelo.Enabled = cbmMarcaI
@@ -356,6 +361,7 @@ Namespace FORMULARIOS.INVENTARIOS.PROCESO
         Private Sub tsmModificar_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles tsmModificar.Click
             txtCosto.Enabled = True
             txtPvp.Enabled = True
+            chbxDescuento.Enabled = True
 
             tsmNuevo.Enabled = False
             tsmGuardar.Enabled = True
@@ -562,6 +568,7 @@ Namespace FORMULARIOS.INVENTARIOS.PROCESO
                         .IdSubGrupo = cbmSubGrupo.SelectedValue
                         .Costo = If(txtCosto.Text.Trim.Length = 0, 0, CDec(txtCosto.Text))
                         .Pvp = If(txtPvp.Text.Trim.Length = 0, 0, CDec(txtPvp.Text))
+                        .Descuento = If(chbxDescuento.Checked, 1, 0)
                         '.nuevaSecuencialItem()
                     End With
                     _sqlCommands.Add(_objSecuencial.NuevaSecuencialItemCommand())
@@ -572,6 +579,8 @@ Namespace FORMULARIOS.INVENTARIOS.PROCESO
                         .Fecha = _objSecuencial.Fecha
                         .Cantidad = 0
                         .Estado = 1
+
+
                         '.NuevoRegistroKardex()
                     End With
                     _sqlCommands.Add(_objKardex.NuevoRegistroKardexCommand())
@@ -603,6 +612,7 @@ Namespace FORMULARIOS.INVENTARIOS.PROCESO
                         .Id = lblIdSecuencial.Text
                         .Costo = If(txtCosto.Text.Trim.Length = 0, 0, CDec(txtCosto.Text))
                         .Pvp = If(txtPvp.Text.Trim.Length = 0, 0, CDec(txtPvp.Text))
+                        .Descuento = If(chbxDescuento.Checked, 1, 0)
                     End With
                     _sqlCommands.Add(_objSecuencial.ModificarPreciosCommand())
 
@@ -617,6 +627,7 @@ Namespace FORMULARIOS.INVENTARIOS.PROCESO
                             .Fecha = Date.Now
                             .Cantidad = 0
                             .Estado = 1
+
                             '.NuevoRegistroKardex()
                         End With
                         _sqlCommands.Add(_objKardex.NuevoRegistroKardexCommand())

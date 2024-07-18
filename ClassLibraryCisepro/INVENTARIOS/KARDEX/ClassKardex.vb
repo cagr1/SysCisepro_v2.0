@@ -14,7 +14,8 @@ Namespace INVENTARIOS.KARDEX
         Public IdsecuencialItem As Int64
         Public Fecha As DateTime
         Public Cantidad As Integer
-        Public Estado As Integer 
+        Public Estado As Integer
+
 
         Public Function SeleccionarKardexCreadosBuscarDetalle(ByVal tipoCon As TipoConexion, ByVal parametroBusqueda As String) As DataTable
             Dim pars = New List(Of Object())
@@ -152,6 +153,7 @@ Namespace INVENTARIOS.KARDEX
                 .Parameters.AddWithValue("@FECHA", SqlDbType.DateTime).Value = Fecha
                 .Parameters.AddWithValue("@CANTIDAD", SqlDbType.Int).Value = Cantidad
                 .Parameters.AddWithValue("@ESTADO", SqlDbType.Int).Value = Estado
+
             End With
             Return comando
         End Function

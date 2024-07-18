@@ -133,6 +133,11 @@ Namespace DIVISION_GEOGRÁFICA
             Return ComandosSql.SeleccionarQueryWithParamsToDataTable(tipoCon, "select top 1 si.nombre_sitio_trabajo+ ' (' + cl.nompre_razon_social_cliente_general  + ')' + ' DEL ' + convert(varchar(10), dp.fecha_desde, 103) + '      AL ' + convert(varchar(10), dp.fecha_hasta, 103) from detalle_programacion dp  join sitios_trabajo si on dp.id_puesto=si.id_sitio_trabajo join cliente_general cl on si.id_cliente_general=cl.id_cliente_general where dp.id_personal = @IDP order by dp.id_programacion desc, dp.fecha_desde desc", False, pars)
         End Function
 
+        Public Function SeleccionarSitiosClientexIdPersonal3(ByVal tipoCon As TipoConexion, ByVal idper As String) As DataTable
+            Dim pars = New List(Of Object())
+            pars.Add(New Object() {"IDP", SqlDbType.Int, idper})
+            Return ComandosSql.SeleccionarQueryWithParamsToDataTable(tipoCon, "select nombre_sitio_trabajo + '|' + cl.nompre_razon_social_cliente_general from personal pe join sitios_trabajo st on pe.ubicacion = st.id_sitio_trabajo join cliente_general cl on st.id_cliente_general = cl.id_cliente_general where pe.id_personal = @idp", False, pars)
+        End Function
         Public Function SeleccionarSitiosFullClientexIdPersonal2(ByVal tipoCon As TipoConexion, ByVal idper As String) As DataTable
             Dim pars = New List(Of Object())
             pars.Add(New Object() {"idp", SqlDbType.Int, idper})

@@ -25,8 +25,8 @@
         Private Sub InitializeComponent()
             Me.components = New System.ComponentModel.Container()
             Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormProductosBodega))
-            Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Me.cbmCategoría = New System.Windows.Forms.ComboBox()
             Me.lblCategoría = New System.Windows.Forms.Label()
             Me.cbmGrupo = New System.Windows.Forms.ComboBox()
@@ -87,6 +87,7 @@
             Me.Label4 = New System.Windows.Forms.Label()
             Me.tpReporte = New System.Windows.Forms.TabPage()
             Me.crvInventarios = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
+            Me.chbxDescuento = New System.Windows.Forms.CheckBox()
             Me.tcProducto.SuspendLayout()
             Me.tpIngreso.SuspendLayout()
             Me.msKardex.SuspendLayout()
@@ -371,6 +372,7 @@
             '
             'tpIngreso
             '
+            Me.tpIngreso.Controls.Add(Me.chbxDescuento)
             Me.tpIngreso.Controls.Add(Me.txtSerie)
             Me.tpIngreso.Controls.Add(Me.Label7)
             Me.tpIngreso.Controls.Add(Me.cbmSubGrupo2)
@@ -443,7 +445,7 @@
             '
             Me.Label7.AutoSize = True
             Me.Label7.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label7.Location = New System.Drawing.Point(666, 115)
+            Me.Label7.Location = New System.Drawing.Point(662, 115)
             Me.Label7.Name = "Label7"
             Me.Label7.Size = New System.Drawing.Size(39, 13)
             Me.Label7.TabIndex = 201
@@ -458,7 +460,7 @@
             Me.cbmSubGrupo2.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cbmSubGrupo2.ForeColor = System.Drawing.Color.Black
             Me.cbmSubGrupo2.FormattingEnabled = True
-            Me.cbmSubGrupo2.Location = New System.Drawing.Point(520, 182)
+            Me.cbmSubGrupo2.Location = New System.Drawing.Point(520, 187)
             Me.cbmSubGrupo2.Name = "cbmSubGrupo2"
             Me.cbmSubGrupo2.Size = New System.Drawing.Size(120, 21)
             Me.cbmSubGrupo2.TabIndex = 200
@@ -472,7 +474,7 @@
             Me.cbmGrupo2.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cbmGrupo2.ForeColor = System.Drawing.Color.Black
             Me.cbmGrupo2.FormattingEnabled = True
-            Me.cbmGrupo2.Location = New System.Drawing.Point(311, 182)
+            Me.cbmGrupo2.Location = New System.Drawing.Point(311, 187)
             Me.cbmGrupo2.Name = "cbmGrupo2"
             Me.cbmGrupo2.Size = New System.Drawing.Size(120, 21)
             Me.cbmGrupo2.TabIndex = 198
@@ -486,7 +488,7 @@
             Me.cbmCategoria2.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cbmCategoria2.ForeColor = System.Drawing.Color.Black
             Me.cbmCategoria2.FormattingEnabled = True
-            Me.cbmCategoria2.Location = New System.Drawing.Point(124, 182)
+            Me.cbmCategoria2.Location = New System.Drawing.Point(124, 187)
             Me.cbmCategoria2.Name = "cbmCategoria2"
             Me.cbmCategoria2.Size = New System.Drawing.Size(120, 21)
             Me.cbmCategoria2.TabIndex = 196
@@ -497,7 +499,7 @@
             Me.TextBox1.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.TextBox1.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.TextBox1.ForeColor = System.Drawing.Color.Black
-            Me.TextBox1.Location = New System.Drawing.Point(707, 182)
+            Me.TextBox1.Location = New System.Drawing.Point(707, 187)
             Me.TextBox1.Name = "TextBox1"
             Me.TextBox1.Size = New System.Drawing.Size(249, 21)
             Me.TextBox1.TabIndex = 194
@@ -506,7 +508,7 @@
             '
             Me.Label2.AutoSize = True
             Me.Label2.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label2.Location = New System.Drawing.Point(662, 185)
+            Me.Label2.Location = New System.Drawing.Point(662, 190)
             Me.Label2.Name = "Label2"
             Me.Label2.Size = New System.Drawing.Size(46, 13)
             Me.Label2.TabIndex = 193
@@ -764,7 +766,7 @@
             '
             Me.lblValor.AutoSize = True
             Me.lblValor.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.lblValor.Location = New System.Drawing.Point(666, 141)
+            Me.lblValor.Location = New System.Drawing.Point(662, 141)
             Me.lblValor.Name = "lblValor"
             Me.lblValor.Size = New System.Drawing.Size(47, 13)
             Me.lblValor.TabIndex = 165
@@ -775,27 +777,27 @@
             Me.dgvSecuencial.AllowUserToAddRows = False
             Me.dgvSecuencial.AllowUserToDeleteRows = False
             Me.dgvSecuencial.AllowUserToResizeRows = False
-            DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-            Me.dgvSecuencial.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+            DataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+            Me.dgvSecuencial.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle5
             Me.dgvSecuencial.BackgroundColor = System.Drawing.Color.White
             Me.dgvSecuencial.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
-            DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-            DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
-            DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
-            DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(123, Byte), Integer))
-            DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-            DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-            Me.dgvSecuencial.DefaultCellStyle = DataGridViewCellStyle2
+            DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+            DataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window
+            DataGridViewCellStyle6.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText
+            DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(123, Byte), Integer))
+            DataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+            DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+            Me.dgvSecuencial.DefaultCellStyle = DataGridViewCellStyle6
             Me.dgvSecuencial.GridColor = System.Drawing.SystemColors.Control
-            Me.dgvSecuencial.Location = New System.Drawing.Point(6, 206)
+            Me.dgvSecuencial.Location = New System.Drawing.Point(6, 211)
             Me.dgvSecuencial.MultiSelect = False
             Me.dgvSecuencial.Name = "dgvSecuencial"
             Me.dgvSecuencial.ReadOnly = True
             Me.dgvSecuencial.RowHeadersVisible = False
             Me.dgvSecuencial.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders
             Me.dgvSecuencial.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvSecuencial.Size = New System.Drawing.Size(952, 451)
+            Me.dgvSecuencial.Size = New System.Drawing.Size(952, 446)
             Me.dgvSecuencial.TabIndex = 128
             '
             'Label3
@@ -825,7 +827,7 @@
             '
             Me.Label5.AutoSize = True
             Me.Label5.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label5.Location = New System.Drawing.Point(268, 186)
+            Me.Label5.Location = New System.Drawing.Point(268, 191)
             Me.Label5.Name = "Label5"
             Me.Label5.Size = New System.Drawing.Size(44, 13)
             Me.Label5.TabIndex = 197
@@ -835,7 +837,7 @@
             '
             Me.Label6.AutoSize = True
             Me.Label6.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label6.Location = New System.Drawing.Point(453, 186)
+            Me.Label6.Location = New System.Drawing.Point(453, 191)
             Me.Label6.Name = "Label6"
             Me.Label6.Size = New System.Drawing.Size(68, 13)
             Me.Label6.TabIndex = 199
@@ -845,7 +847,7 @@
             '
             Me.Label4.AutoSize = True
             Me.Label4.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label4.Location = New System.Drawing.Point(11, 186)
+            Me.Label4.Location = New System.Drawing.Point(11, 191)
             Me.Label4.Name = "Label4"
             Me.Label4.Size = New System.Drawing.Size(111, 13)
             Me.Label4.TabIndex = 195
@@ -873,6 +875,18 @@
             Me.crvInventarios.Size = New System.Drawing.Size(958, 657)
             Me.crvInventarios.TabIndex = 0
             Me.crvInventarios.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None
+            '
+            'chbxDescuento
+            '
+            Me.chbxDescuento.AutoSize = True
+            Me.chbxDescuento.Enabled = False
+            Me.chbxDescuento.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.chbxDescuento.Location = New System.Drawing.Point(665, 163)
+            Me.chbxDescuento.Name = "chbxDescuento"
+            Me.chbxDescuento.Size = New System.Drawing.Size(116, 18)
+            Me.chbxDescuento.TabIndex = 205
+            Me.chbxDescuento.Text = "Lleva descuento?"
+            Me.chbxDescuento.UseVisualStyleBackColor = True
             '
             'FormProductosBodega
             '
@@ -961,5 +975,6 @@
         Friend WithEvents Label7 As System.Windows.Forms.Label
         Friend WithEvents btnExportarGrupos As System.Windows.Forms.ToolStripMenuItem
         Friend WithEvents tsmAjustar As System.Windows.Forms.ToolStripMenuItem
+        Friend WithEvents chbxDescuento As CheckBox
     End Class
 End Namespace

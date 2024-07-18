@@ -173,6 +173,14 @@ Namespace INVENTARIOS.COMPROBANTES
             Return ComandosSql.SeleccionarQueryWithParamsToDataTable(tipoCon, "sp_seleccionarComprobanteEgresoxRangoFechas", True, pars)
         End Function
 
+        Public Function SeleccionarComprobanteEgresoBodegaxRengoFechasReingreso(ByVal tipoCon As TipoConexion, ByVal parametroFechaInicial As DateTime, ByVal parametroFechaFinal As DateTime, ByVal filtro As String) As DataTable
+            Dim pars = New List(Of Object())
+            pars.Add(New Object() {"FECHA_INICIAL", SqlDbType.DateTime, parametroFechaInicial})
+            pars.Add(New Object() {"FECHA_FINAL", SqlDbType.DateTime, parametroFechaFinal})
+            pars.Add(New Object() {"FILTRO", SqlDbType.VarChar, filtro})
+            Return ComandosSql.SeleccionarQueryWithParamsToDataTable(tipoCon, "sp_seleccionarComprobanteEgresoxRangoFechasReingreso", True, pars)
+        End Function
+
         Public Function SeleccionarDetallesComprobantesEgreso(ByVal tipoCon As TipoConexion, ByVal parametroBusqueda As String) As DataTable
             Dim pars = New List(Of Object())
             pars.Add(New Object() {"ID_COMPROBANTE", SqlDbType.VarChar, parametroBusqueda})

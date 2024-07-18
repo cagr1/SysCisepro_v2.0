@@ -27,6 +27,7 @@ Namespace INVENTARIOS.ITEMS
         Public IdLote As Int64
         Public Costo As Decimal
         Public Pvp As Decimal
+        Public Descuento As Integer
 
         Public Function ContarMayorIdSubGrupoxIdSubGrupoItem(ByVal tipoCon As TipoConexion, ByVal idSubGrupoItem As Integer) As Integer
             Dim pars = New List(Of Object())
@@ -56,6 +57,7 @@ Namespace INVENTARIOS.ITEMS
                 .Parameters.AddWithValue("@ID_LOTE", SqlDbType.BigInt).Value = IdLote
                 .Parameters.AddWithValue("@COSTO", SqlDbType.Decimal).Value = Costo
                 .Parameters.AddWithValue("@PVP", SqlDbType.Decimal).Value = Pvp
+                .Parameters.AddWithValue("@DESCUENTO", SqlDbType.Int).Value = Descuento
             End With
             Return comando
         End Function
@@ -126,7 +128,14 @@ Namespace INVENTARIOS.ITEMS
         End Function
 
         Public Function BuscarNombreSecuencialItem(ByVal tipoCon As TipoConexion) As DataTable
-            Return ComandosSql.SeleccionarQueryToDataTable(tipoCon, "buscarNombreSecuencialItem", True) 
+            Return ComandosSql.SeleccionarQueryToDataTable(tipoCon, "buscarNombreSecuencialItem", True)
+        End Function
+
+        Public Function BuscarDescuentoSecuencialItem(ByVal tipoCon As TipoConexion, ByVal parametroBusqueda As String) As Integer
+            Dim pars = New List(Of Object())
+            pars.Add(New Object() {"@KARDEX", SqlDbType.VarChar, parametroBusqueda})
+            Dim data = ComandosSql.SeleccionarQueryWithParamsToDataTable(tipoCon, "sp_buscarDescuentoSecuencialItem", True, pars)
+            Return If(data.Rows.Count = 0, 0, If(IsDBNull(data.Rows(0)(0)), 0, CInt(data.Rows(0)(0))))
         End Function
 
         Public Function Autocompletar(ByVal tipoCon As TipoConexion) As AutoCompleteStringCollection
@@ -166,6 +175,7 @@ Namespace INVENTARIOS.ITEMS
                 .Parameters.AddWithValue("@ID_SECUENCIAL_ITEM", SqlDbType.BigInt).Value = Id
                 .Parameters.AddWithValue("@COSTO", SqlDbType.Decimal).Value = Costo
                 .Parameters.AddWithValue("@PVP", SqlDbType.Decimal).Value = Pvp
+                .Parameters.AddWithValue("@DESCUENTO", SqlDbType.Int).Value = Descuento
             End With
             Return comando
         End Function
