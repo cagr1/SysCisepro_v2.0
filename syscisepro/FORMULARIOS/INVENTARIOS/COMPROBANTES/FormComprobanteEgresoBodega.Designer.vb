@@ -146,6 +146,7 @@
             Me.tpReporte = New System.Windows.Forms.TabPage()
             Me.TabControl1 = New System.Windows.Forms.TabControl()
             Me.TabPage1 = New System.Windows.Forms.TabPage()
+            Me.btnUniformes = New System.Windows.Forms.Button()
             Me.Button1 = New System.Windows.Forms.Button()
             Me.Label3 = New System.Windows.Forms.Label()
             Me.txtIdComprobante = New System.Windows.Forms.TextBox()
@@ -292,6 +293,7 @@
             '
             'txtCedulaRecibe
             '
+            Me.txtCedulaRecibe.BackColor = System.Drawing.Color.White
             Me.txtCedulaRecibe.Enabled = False
             Me.txtCedulaRecibe.Location = New System.Drawing.Point(438, 171)
             Me.txtCedulaRecibe.Name = "txtCedulaRecibe"
@@ -1530,6 +1532,7 @@
             '
             'TabPage1
             '
+            Me.TabPage1.Controls.Add(Me.btnUniformes)
             Me.TabPage1.Controls.Add(Me.Button1)
             Me.TabPage1.Controls.Add(Me.Label3)
             Me.TabPage1.Controls.Add(Me.txtIdComprobante)
@@ -1542,16 +1545,28 @@
             Me.TabPage1.Text = "Comprobante"
             Me.TabPage1.UseVisualStyleBackColor = True
             '
+            'btnUniformes
+            '
+            Me.btnUniformes.Image = Global.syscisepro.My.Resources.Resources.description_24dp_FILL0_wght400_GRAD0_opsz24__2_
+            Me.btnUniformes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+            Me.btnUniformes.Location = New System.Drawing.Point(1117, 4)
+            Me.btnUniformes.Name = "btnUniformes"
+            Me.btnUniformes.Size = New System.Drawing.Size(126, 30)
+            Me.btnUniformes.TabIndex = 153
+            Me.btnUniformes.Text = "UNIFORMES"
+            Me.btnUniformes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+            Me.btnUniformes.UseVisualStyleBackColor = True
+            '
             'Button1
             '
-            Me.Button1.Font = New System.Drawing.Font("Consolas", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Button1.Image = Global.syscisepro.My.Resources.Resources.BuscarRegistro
+            Me.Button1.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Button1.Image = Global.syscisepro.My.Resources.Resources.description_24dp_FILL0_wght400_GRAD0_opsz24__2_
             Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-            Me.Button1.Location = New System.Drawing.Point(1152, 8)
+            Me.Button1.Location = New System.Drawing.Point(988, 4)
             Me.Button1.Name = "Button1"
-            Me.Button1.Size = New System.Drawing.Size(90, 23)
+            Me.Button1.Size = New System.Drawing.Size(126, 30)
             Me.Button1.TabIndex = 8
-            Me.Button1.Text = "CARGAR"
+            Me.Button1.Text = "COMPROBANTE"
             Me.Button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
             Me.Button1.UseVisualStyleBackColor = True
             '
@@ -1559,7 +1574,7 @@
             '
             Me.Label3.AutoSize = True
             Me.Label3.BackColor = System.Drawing.Color.White
-            Me.Label3.Location = New System.Drawing.Point(945, 12)
+            Me.Label3.Location = New System.Drawing.Point(743, 14)
             Me.Label3.Name = "Label3"
             Me.Label3.Size = New System.Drawing.Size(92, 13)
             Me.Label3.TabIndex = 5
@@ -1567,7 +1582,7 @@
             '
             'txtIdComprobante
             '
-            Me.txtIdComprobante.Location = New System.Drawing.Point(1042, 8)
+            Me.txtIdComprobante.Location = New System.Drawing.Point(851, 10)
             Me.txtIdComprobante.Name = "txtIdComprobante"
             Me.txtIdComprobante.Size = New System.Drawing.Size(110, 21)
             Me.txtIdComprobante.TabIndex = 6
@@ -2075,5 +2090,6 @@
         Friend WithEvents KryptonDataGridView1 As ComponentFactory.Krypton.Toolkit.KryptonDataGridView
         Friend WithEvents Label18 As Label
         Friend WithEvents txtCedulaRecibe As TextBox
+        Friend WithEvents btnUniformes As Button
     End Class
 End Namespace

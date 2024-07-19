@@ -78,7 +78,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
         ReadOnly _objSitioTrabajo As New ClassSitiosTrabajo
         ReadOnly _objEntrega As New ClassEntregaUniformes
         ReadOnly _objRegistroDescuento As New ClassDescuentosPersonal
-
+        ReadOnly _crComprobanteUniforme As New crComprobanteEgresoUniformes
 
         ReadOnly _objFoto As New ClassFoto
 
@@ -235,7 +235,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
             bntPuesto.Enabled = cmbBodegaV
             btnSerie.Enabled = cmbBodegaV
             pbFoto.Enabled = cmbBodegaV
-            txtCedulaRecibe.Enabled = cmbBodegaV
+
         End Sub
 
         Private Sub CargarBodegas()
@@ -591,7 +591,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                         .Version = "003"
                         .Fecha = dtpFecha.Value
                         .Nombre = txtRecibe.Text.ToUpper.Trim
-                        .Cedula = txtCedula.Text.Trim
+                        .Cedula = txtCedulaRecibe.Text.Trim
                         .Cliente = txtUbicacion.Text.ToUpper.Trim
                         .FechaIngreso = dtpFecha.Value
                         .Realizado = "ING. JOSÉ NAVARRETE M."
@@ -650,35 +650,35 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
 
                     For indice = 0 To dgvSecuencial.RowCount - 1
 
-                    'Control por cada celda 
-                    For Each row As DataGridViewRow In dgvSecuencial.Rows
+                        'Control por cada celda 
+                        'Dim idKdex = Row.Cells("NUMERO_KARDEX").Value
+                        Dim row As DataGridViewRow = dgvSecuencial.Rows(indice)
                         Dim idKdex = row.Cells("NUMERO_KARDEX").Value
                         If idKdex > 0 Then
-                                Dim para As String = idKdex.ToString()
-                                Dim valor As Int32 = _objSecuencialItem.BuscarDescuentoSecuencialItem(_tipoCon, para)
-                                If valor > 0 Then
-                                    With _objRegistroDescuento
-                                        .IdRegistro = _objRegistroDescuento.BuscarMayorIdRegistroDescuento(_tipoCon) + 1
-                                        .IdPersonal = If(txtRecibe.Tag Is Nothing, txtRecibe.Text.Split("-")(1).Trim(), CType(txtRecibe.Tag, Integer))
-                                        .Fecha = _objEntrega.Fecha
-                                        .Procesado = 0
-                                        .Mes = dtpFecha.Value.Month
-                                        .Anio = dtpDesde.Value.Year
-                                        .IdRol = 0
-                                        .Tipo = 9 ' DESCUENTO EQ. SEG. / BODEGA
-                                        .Observacion = "ENTREGA DE UNIFORMES (EQ. SEG. / BODEGA) AL SR(A): " & txtRecibe.Text & ", " & row.Cells("NOMBRE").Value.ToString()
-                                        .Valor = CDbl(row.Cells("VALOR").Value)
-                                        .Tipot = "DESCUENTO EQ. SEG. / BODEGA"
-                                        .Idprog = 0
-                                    End With
-                                    _sqlCommands.Add(_objRegistroDescuento.NuevoRegistroDescuentoCommands())
-                                End If
+                            Dim para As String = idKdex.ToString()
+                            Dim valor As Int32 = _objSecuencialItem.BuscarDescuentoSecuencialItem(_tipoCon, para)
+                            If valor > 0 Then
+                                With _objRegistroDescuento
+                                    .IdRegistro = _objRegistroDescuento.BuscarMayorIdRegistroDescuento(_tipoCon) + 1
+                                    .IdPersonal = If(txtRecibe.Tag Is Nothing, txtRecibe.Text.Split("-")(1).Trim(), CType(txtRecibe.Tag, Integer))
+                                    .Fecha = _objEntrega.Fecha
+                                    .Procesado = 0
+                                    .Mes = dtpFecha.Value.Month
+                                    .Anio = dtpDesde.Value.Year
+                                    .IdRol = 0
+                                    .Tipo = 9 ' DESCUENTO EQ. SEG. / BODEGA
+                                    .Observacion = "ENTREGA DE UNIFORMES (EQ. SEG. / BODEGA) AL SR(A): " & txtRecibe.Text & ", " & row.Cells("NOMBRE").Value.ToString()
+                                    .Valor = CDbl(row.Cells("VALOR").Value)
+                                    .Tipot = "DESCUENTO EQ. SEG. / BODEGA"
+                                    .Idprog = 0
+                                End With
+                                _sqlCommands.Add(_objRegistroDescuento.NuevoRegistroDescuentoCommands())
                             End If
-                    Next
+                        End If
 
 
 
-                    With _objDetalleKardex
+                        With _objDetalleKardex
                         .Id = iddk
                         .IdActividad = 2
                         .IdConcepto = cmbConceptos.SelectedValue
@@ -1132,9 +1132,29 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
 
             Dim result As DataTable = _objControl.SeleccionarIdControlUniformes(_tipoCon, lblComp.Text, lblDetKardex.Text)
 
+            'If cmbBodega.SelectedValue = 1 Then
+            '    With _objEntrega
+            '        .Id = .BuscarMayorIdEntregaUniforme(_tipoCon) + 1
+            '        .Codigo = "RE-3.8.1-2"
+            '        .Version = "003"
+            '        .Fecha = dtpFecha.Value
+            '        .Nombre = txtRecibe.Text.ToUpper.Trim
+            '        .Cedula = txtCedulaRecibe.Text.Trim
+            '        .Cliente = txtUbicacion.Text.ToUpper.Trim
+            '        .FechaIngreso = dtpFecha.Value
+            '        .Realizado = "ING. JOSÉ NAVARRETE M."
+            '        .Revisado = "ING. KAREN NAVARRETE M"
+            '        .Aprobado = "MYR(R) IGNACIO NAVARRETE L"
+            '        .Registrado = txtNombre.Text.ToUpper.Trim
+            '        .Estado = 1
+            '        .Observacion = txtRazon.Text.ToUpper.Trim
+            '    End With
+            '    _sqlCommands.Add(_objEntrega.NuevoRegistroEntregaUniformesCommand())
+
+            'End If
+
 
             With _objCompEgr
-                
 
                 .Id = lblComp.Text
                 .Fecha = dtpFecha.Value
@@ -1376,14 +1396,12 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
             If e.KeyCode <> Keys.Enter Then Return
             Try
                 Dim idPer As String = txtRecibe.Text.Split("-")(1).Trim()
-                txtCedula.Text = _objPer.BuscarCedulaPersonalXIdPersonal(_tipoCon, idPer)
-                'write the value of cedula in the textbox txtCedula
+                txtCedulaRecibe.Text = _objPer.BuscarCedulaPersonalXIdPersonal(_tipoCon, idPer)
                 UpdateUbicacion(idPer)
-                MsgBox("Personal encontrado" & txtCedulaRecibe.Text, MsgBoxStyle.Information, "MENSAJE DE VALIDACIÒN")
 
             Catch
-                txtCedula.Tag = Nothing
-                txtCedula.Clear()
+
+                txtCedulaRecibe.Clear()
                 txtUbicacion.Clear()
             End Try
         End Sub
@@ -1428,5 +1446,24 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
             'dgvComprobantesEgreso.DataSource = _objCompEgr.SeleccionarComprobanteEgresoBodegaxRengoFechasReingreso(_tipoCon, fechaDesde, fechaHasta)
 
         End Sub
+
+        Private Sub btnUniformes_Click(sender As Object, e As EventArgs) Handles btnUniformes.Click
+            ConectarReporteComprobanteEgresoUniforme(txtIdComprobante.Text.Trim)
+        End Sub
+
+        Private Sub ConectarReporteComprobanteEgresoUniforme(ByVal idComprobante As String)
+            Try
+                _crComprobanteUniforme.SetDataSource(_objCompEgr.SeleccionarComprobanteEgresoxIdComprobanteEgreso(_tipoCon, idComprobante))
+                _crComprobanteUniforme.SetParameterValue("img", ValidationForms.NombreLogo(_tipoCon, Application.StartupPath))
+                _crComprobanteUniforme.SetParameterValue("ubicacion", _objCompEgr.BuscarClienteByIdComprobanteEgresoBodega(_tipoCon, idComprobante))
+                _crComprobanteUniforme.SetParameterValue("cisepro", ValidationForms.NombreCompany(_tipoCon))
+                crvComprobante.ReportSource = _crComprobanteUniforme
+                crvComprobante.Zoom(100)
+                crvComprobante.Refresh()
+            Catch
+                crvComprobante.ReportSource = Nothing
+            End Try
+        End Sub
+
     End Class
 End Namespace

@@ -2202,6 +2202,12 @@
       <DependentUpon>crBodegaKardex.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="REPORTES\INVENTARIOS\crComprobanteEgresoUniformes.vb">
+      <DependentUpon>crComprobanteEgresoUniformes.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Include="REPORTES\INVENTARIOS\crConceptoInventario.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -3437,13 +3443,17 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>crBodegaKardex.vb</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="REPORTES\INVENTARIOS\crComprobanteEgresoUniformes.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crComprobanteEgresoUniformes.vb</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="REPORTES\INVENTARIOS\crConceptoInventario.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>crConceptoInventario.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="REPORTES\INVENTARIOS\crEntregaUNIFORMES.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>crEntregaUNIFORMES.vb</LastGenOutput>
+      <LastGenOutput>crEntregaUNIFORMES1.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="REPORTES\INVENTARIOS\crComprobanteEgreso.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>

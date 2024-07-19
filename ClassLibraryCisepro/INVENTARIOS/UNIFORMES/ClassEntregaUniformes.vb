@@ -53,6 +53,29 @@ Namespace INVENTARIOS.UNIFORMES
             Return comando
         End Function
 
+        Public Function ActualizarRegistroEntregaUniformesCommand() As SqlCommand
+            Dim comando = New SqlCommand
+            With comando
+                .CommandType = CommandType.StoredProcedure
+                .CommandText = "ActualizarRegistroEntregaUniformes"
+                .Parameters.AddWithValue("@ID_UNIFORMES", SqlDbType.BigInt).Value = Id
+                .Parameters.AddWithValue("@CODIGO_UNIFORMES", SqlDbType.NVarChar).Value = Codigo
+                .Parameters.AddWithValue("@VERSION_UNIFORMES", SqlDbType.NVarChar).Value = Version
+                .Parameters.AddWithValue("@FECHA_UNIFORMES", SqlDbType.DateTime).Value = Fecha
+                .Parameters.AddWithValue("@NOMBRE_UNIFORMES", SqlDbType.NVarChar).Value = Nombre
+                .Parameters.AddWithValue("@CEDULA_UNIFORMES", SqlDbType.NVarChar).Value = Cedula
+                .Parameters.AddWithValue("@CLIENTE_UNIFORMES", SqlDbType.NVarChar).Value = Cliente
+                .Parameters.AddWithValue("@FECHA_INGRESO_UNIFORMES", SqlDbType.DateTime).Value = FechaIngreso
+                .Parameters.AddWithValue("@REALIZADO_UNIFORMES", SqlDbType.NVarChar).Value = Realizado
+                .Parameters.AddWithValue("@REVISADO_UNIFORMES", SqlDbType.NVarChar).Value = Revisado
+                .Parameters.AddWithValue("@APROBADO_UNIFORMES", SqlDbType.NVarChar).Value = Aprobado
+                .Parameters.AddWithValue("@REGISTRADO_UNIFORMES", SqlDbType.NVarChar).Value = Registrado
+                .Parameters.AddWithValue("@ESTADO_UNIFORMES", SqlDbType.Int).Value = Estado
+                .Parameters.AddWithValue("@OBSERVACION_UNIFORMES", SqlDbType.NVarChar).Value = Observacion
+            End With
+            Return comando
+        End Function
+
         Public Function BuscarRegistroEntregaUniformesXid(ByVal tipoCon As TipoConexion, ByVal idl As Int64) As DataSet
             Dim pars = New List(Of Object())
             pars.Add(New Object() {"ID_UNIFORMES", SqlDbType.Int, idl})
