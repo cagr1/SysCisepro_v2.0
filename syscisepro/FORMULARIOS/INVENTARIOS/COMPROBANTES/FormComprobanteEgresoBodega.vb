@@ -140,11 +140,11 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
             dgvSecuencial.Font = New Font("Roboto", 8, FontStyle.Regular)
             dgvComprobantesEgreso.Font = New Font("Roboto", 8, FontStyle.Regular)
             dgvDetalleComprobate.Font = New Font("Roboto", 8, FontStyle.Regular)
-            txtBusqueda.ForeColor = ValidationForms.GetColorSistema(_tipoCon)
-            txtBusqueda.Font = New Font("Roboto", 9, FontStyle.Regular)
 
+            txtFiltro.ForeColor = ValidationForms.GetColorSistema(_tipoCon)
+            txtFiltro.Font = New Font("Roboto", 9, FontStyle.Regular)
             Dim validation As New ValidationForms()
-            validation.SetPlaceholder(txtBusqueda, "Buscar Activo por Serie o Nombre")
+            validation.SetPlaceholder(txtFiltro, "Buscar por Sitio o Nombre")
 
 
             _sqlCommands = New List(Of SqlCommand)
@@ -198,6 +198,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
             txtRecibe.Clear()
             txtUbicacion.Clear()
             txtRazon.Clear()
+
 
             txtArticulo.Clear()
             txtCodigoArticulo.Clear()
@@ -513,27 +514,30 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
             tsmEliminar.Enabled = dgvSecuencial.RowCount > 0
         End Sub
 
-        Private Sub btnBuscar_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnBuscar.Click
-            CargarComprobantesEgreso()
+        Private Sub btnBuscar_Click(ByVal sender As System.Object, ByVal e As EventArgs)
+            'CargarComprobantesEgreso()
             tsmActualizar.Enabled = True
             tmsEliminar.Enabled = True
             tsmCancelar.Enabled = True
         End Sub
 
-        Private Sub CargarComprobantesEgreso()
+
+
+        Private Sub CargarComprobantesEgreso(ByVal Filtro As String)
             Try
                 Dim fechaDesde = dtpFechaDesde.Value.Day.ToString & "-" & dtpFechaDesde.Value.Month.ToString & "-" & dtpFechaDesde.Value.Year.ToString & " 00:00:00"
                 Dim fechaHasta = dtpFechaHasta.Value.Day.ToString & "-" & dtpFechaHasta.Value.Month.ToString & "-" & dtpFechaHasta.Value.Year.ToString & " 23:59:59"
 
-                If chkTodos.Checked Then
-                    dgvComprobantesEgreso.DataSource = _objCompEgr.SeleccionarComprobanteEgresoBodegaxRengoFechas(_tipoCon, fechaDesde, fechaHasta)
-                Else
-                    If rbtNum.Checked Then
-                        dgvComprobantesEgreso.DataSource = _objCompEgr.SeleccionarComprobanteEgresoBodegaxNroComprobante(_tipoCon, txtNroComprobante.Text.Trim)
-                    Else
-                        dgvComprobantesEgreso.DataSource = _objCompEgr.SeleccionarComprobanteEgresoBodegaxDetalle(_tipoCon, txtDetail.Text.Trim)
-                    End If
-                End If
+                dgvComprobantesEgreso.DataSource = _objCompEgr.SeleccionarComprobanteEgresoBodegaxRengoFechas(_tipoCon, fechaDesde, fechaHasta, Filtro)
+                'If chkTodos.Checked Then
+                '    dgvComprobantesEgreso.DataSource = _objCompEgr.SeleccionarComprobanteEgresoBodegaxRengoFechas(_tipoCon, fechaDesde, fechaHasta)
+                'Else
+                '    If rbtNum.Checked Then
+                '        dgvComprobantesEgreso.DataSource = _objCompEgr.SeleccionarComprobanteEgresoBodegaxNroComprobante(_tipoCon, txtNroComprobante.Text.Trim)
+                '    Else
+                '        dgvComprobantesEgreso.DataSource = _objCompEgr.SeleccionarComprobanteEgresoBodegaxDetalle(_tipoCon, txtDetail.Text.Trim)
+                '    End If
+                'End If
 
                 For Each row In dgvComprobantesEgreso.Rows
                     If row.Cells("SITIO DE TRABAJO").Value.ToString() = "SIN SITIO" Then
@@ -561,6 +565,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
             tsmCancelar.Enabled = False
             tsmActualizar.Enabled = False
             tsmEliminar.Enabled = False
+            tsmReingreso.Enabled = False
         End Sub
         Private Sub tsmGuardar_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles tsmGuardar.Click
 
@@ -607,41 +612,41 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
 
                 With _objCompEgr
 
-                        .Id = (_objSerie.Serie(_objCompEgr.BuscarMayorIdComprobanteEgresoBodega(_tipoCon) + 1))
-                        .Fecha = dtpFecha.Value
-                        .Nro = txtNroDocumento.Text
-                        .IdBodega = cmbBodega.SelectedValue
-                        .IdActividad = 2
-                        .IdConcepto = cmbConceptos.SelectedValue
-                        .IdProvincias = cbmProvincia.SelectedValue
-                        .IdCiudad = cbmCanton.SelectedValue
-                        .IdParroquias = cbmParroquia.SelectedValue
-                        .IdCentroCosto = cbmCentroCosto.SelectedValue
-                        .IdParametroDocumento = cmbDocumento.SelectedValue
-                        .Estado = 1
-                        .Razon = txtRazon.Text.ToUpper
-                        .IdPersonal = If(txtRecibe.Tag Is Nothing, txtRecibe.Text.Split("-")(1).Trim(), CType(txtRecibe.Tag, Integer))
-                        .Cliente = txtUbicacion.Text.Trim
-                        .IdEmpresa = 1
-                        .SitioTrabajo = CInt(txtUbicacion.Tag)
+                    .Id = (_objSerie.Serie(_objCompEgr.BuscarMayorIdComprobanteEgresoBodega(_tipoCon) + 1))
+                    .Fecha = dtpFecha.Value
+                    .Nro = txtNroDocumento.Text
+                    .IdBodega = cmbBodega.SelectedValue
+                    .IdActividad = 2
+                    .IdConcepto = cmbConceptos.SelectedValue
+                    .IdProvincias = cbmProvincia.SelectedValue
+                    .IdCiudad = cbmCanton.SelectedValue
+                    .IdParroquias = cbmParroquia.SelectedValue
+                    .IdCentroCosto = cbmCentroCosto.SelectedValue
+                    .IdParametroDocumento = cmbDocumento.SelectedValue
+                    .Estado = 1
+                    .Razon = txtRazon.Text.ToUpper
+                    .IdPersonal = If(txtRecibe.Tag Is Nothing, txtRecibe.Text.Split("-")(1).Trim(), CType(txtRecibe.Tag, Integer))
+                    .Cliente = txtUbicacion.Text.Trim
+                    .IdEmpresa = 1
+                    .SitioTrabajo = CInt(txtUbicacion.Tag)
+                End With
+                _sqlCommands.Add(_objCompEgr.NuevoRegistroComprobanteEgresoBodegaCommand())
+
+                If Not pbFoto.Image Is Nothing Then
+                    With _objFoto
+                        .IdFoto = .BuscarMayorIdFoto(_tipoCon) + 1
+                        .Aux = "EGRESO BODEGA"
+                        .Imagen = ValidationForms.ImageToBytes(pbFoto.Image)
+                        .IdAux = _objCompEgr.Id
                     End With
-                    _sqlCommands.Add(_objCompEgr.NuevoRegistroComprobanteEgresoBodegaCommand())
-
-                    If Not pbFoto.Image Is Nothing Then
-                        With _objFoto
-                            .IdFoto = .BuscarMayorIdFoto(_tipoCon) + 1
-                            .Aux = "EGRESO BODEGA"
-                            .Imagen = ValidationForms.ImageToBytes(pbFoto.Image)
-                            .IdAux = _objCompEgr.Id
-                        End With
-                        _sqlCommands.Add(_objFoto.NuevoRegistroFotoCommands())
-                    End If
+                    _sqlCommands.Add(_objFoto.NuevoRegistroFotoCommands())
+                End If
 
 
-                    Dim iddk = _objDetalleKardex.BuscarMayorIdDetalleKardex(_tipoCon) + 1
-                    Dim idce = _objDetCompEgr.BuscarMayorIdDetalleComprobanteEgresoBodega(_tipoCon) + 1
-                    Dim idu = _objControl.BuscarMayorIdControlUniformes(_tipoCon) + 1
-                    Dim idd = _objDetalleEgresoPuesto.BuscarMayorIdRegistroDetalleComprobante(_tipoCon) + 1
+                Dim iddk = _objDetalleKardex.BuscarMayorIdDetalleKardex(_tipoCon) + 1
+                Dim idce = _objDetCompEgr.BuscarMayorIdDetalleComprobanteEgresoBodega(_tipoCon) + 1
+                Dim idu = _objControl.BuscarMayorIdControlUniformes(_tipoCon) + 1
+                Dim idd = _objDetalleEgresoPuesto.BuscarMayorIdRegistroDetalleComprobante(_tipoCon) + 1
 
                 Try
 
@@ -664,7 +669,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                                     .Fecha = _objEntrega.Fecha
                                     .Procesado = 0
                                     .Mes = dtpFecha.Value.Month
-                                    .Anio = dtpDesde.Value.Year
+                                    .Anio = dtpFecha.Value.Year
                                     .IdRol = 0
                                     .Tipo = 9 ' DESCUENTO EQ. SEG. / BODEGA
                                     .Observacion = "ENTREGA DE UNIFORMES (EQ. SEG. / BODEGA) AL SR(A): " & txtRecibe.Text & ", " & row.Cells("NOMBRE").Value.ToString()
@@ -679,82 +684,82 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
 
 
                         With _objDetalleKardex
-                        .Id = iddk
-                        .IdActividad = 2
-                        .IdConcepto = cmbConceptos.SelectedValue
-                        .CantidadIngreso = 0.0
-                        .ValorUnitarioIngreso = 0.0
-                        .ValorTotalIngreso = 0.0
-                        .CantidadEgreso = CInt(dgvSecuencial.Rows.Item(indice).Cells("CANTIDAD").Value.ToString.ToUpper)
-                        .ValorUnitarioEgreso = CDec(dgvSecuencial.Rows.Item(indice).Cells("VALOR").Value.ToString.ToUpper)
-                        .ValorTotalEgreso = CDec(dgvSecuencial.Rows.Item(indice).Cells("TOTAL").Value.ToString.ToUpper)
-                        .CantidadSaldo = dgvSecuencial.Rows.Item(indice).Cells("CANTIDAD_SALDO").Value.ToString.ToUpper
-                        .ValorUnitarioSaldo = CDec(dgvSecuencial.Rows.Item(indice).Cells("VALOR_UNITARIO_SALDO").Value.ToString.ToUpper)
-                        .ValorTotalSaldo = CDec(dgvSecuencial.Rows.Item(indice).Cells("SALDO").Value.ToString.ToUpper)
-                        .Fecha = _objCompEgr.Fecha
-                        .IdKardex = CLng(dgvSecuencial.Rows.Item(indice).Cells("NUMERO_KARDEX").Value.ToString.ToUpper)
-                        .Estado = 1
-                        .NroComprobante = _objCompEgr.Id
-                        cantidadPrendasLleva = dgvSecuencial.Rows.Item(indice).Cells("CANTIDAD").Value
-                    End With
-                    _sqlCommands.Add(_objDetalleKardex.NuevoRegistroDetalleKardexCommand())
+                            .Id = iddk
+                            .IdActividad = 2
+                            .IdConcepto = cmbConceptos.SelectedValue
+                            .CantidadIngreso = 0.0
+                            .ValorUnitarioIngreso = 0.0
+                            .ValorTotalIngreso = 0.0
+                            .CantidadEgreso = CInt(dgvSecuencial.Rows.Item(indice).Cells("CANTIDAD").Value.ToString.ToUpper)
+                            .ValorUnitarioEgreso = CDec(dgvSecuencial.Rows.Item(indice).Cells("VALOR").Value.ToString.ToUpper)
+                            .ValorTotalEgreso = CDec(dgvSecuencial.Rows.Item(indice).Cells("TOTAL").Value.ToString.ToUpper)
+                            .CantidadSaldo = dgvSecuencial.Rows.Item(indice).Cells("CANTIDAD_SALDO").Value.ToString.ToUpper
+                            .ValorUnitarioSaldo = CDec(dgvSecuencial.Rows.Item(indice).Cells("VALOR_UNITARIO_SALDO").Value.ToString.ToUpper)
+                            .ValorTotalSaldo = CDec(dgvSecuencial.Rows.Item(indice).Cells("SALDO").Value.ToString.ToUpper)
+                            .Fecha = _objCompEgr.Fecha
+                            .IdKardex = CLng(dgvSecuencial.Rows.Item(indice).Cells("NUMERO_KARDEX").Value.ToString.ToUpper)
+                            .Estado = 1
+                            .NroComprobante = _objCompEgr.Id
+                            cantidadPrendasLleva = dgvSecuencial.Rows.Item(indice).Cells("CANTIDAD").Value
+                        End With
+                        _sqlCommands.Add(_objDetalleKardex.NuevoRegistroDetalleKardexCommand())
 
-                    With _objDetCompEgr
-                        .IdDetalle = idce
-                        .IdKardex = CLng(dgvSecuencial.Rows.Item(indice).Cells("NUMERO_KARDEX").Value.ToString.ToUpper)
-                        .IdDetalleKardex = _objDetalleKardex.Id
-                        .ObservacionCalidad = dgvSecuencial.Rows.Item(indice).Cells("OBSERVACION").Value.ToString.ToUpper
-                        .ObservacionDetalle = dgvSecuencial.Rows.Item(indice).Cells("DETALLES").Value.ToString.ToUpper
-                        .IdComprobante = _objCompEgr.Id
-                        .Estado = 1
-                    End With
-                    _sqlCommands.Add(_objDetCompEgr.NuevoRegistroDetalleComprobanteEgresoBodegaCommand())
+                        With _objDetCompEgr
+                            .IdDetalle = idce
+                            .IdKardex = CLng(dgvSecuencial.Rows.Item(indice).Cells("NUMERO_KARDEX").Value.ToString.ToUpper)
+                            .IdDetalleKardex = _objDetalleKardex.Id
+                            .ObservacionCalidad = dgvSecuencial.Rows.Item(indice).Cells("OBSERVACION").Value.ToString.ToUpper
+                            .ObservacionDetalle = dgvSecuencial.Rows.Item(indice).Cells("DETALLES").Value.ToString.ToUpper
+                            .IdComprobante = _objCompEgr.Id
+                            .Estado = 1
+                        End With
+                        _sqlCommands.Add(_objDetCompEgr.NuevoRegistroDetalleComprobanteEgresoBodegaCommand())
 
-                    ' PUESTO   -   DETALLE
-                    With _objDetalleEgresoPuesto
-                        .Id = idd
-                        .IdSitio = CInt(txtUbicacion.Tag)
-                        .IdDetalle = idce
-                        .Fecha = dtpFecha.Value
-                        .Tipo = "EGRESO"
-                        .Estado = 1
-                        .Serie = dgvSecuencial.Rows.Item(indice).Tag.ToString
-                    End With
-                    _sqlCommands.Add(_objDetalleEgresoPuesto.NuevoRegistroDetalleComprobanteEgresoSitioCommand())
-                    idd += 1
+                        ' PUESTO   -   DETALLE
+                        With _objDetalleEgresoPuesto
+                            .Id = idd
+                            .IdSitio = CInt(txtUbicacion.Tag)
+                            .IdDetalle = idce
+                            .Fecha = dtpFecha.Value
+                            .Tipo = "EGRESO"
+                            .Estado = 1
+                            .Serie = dgvSecuencial.Rows.Item(indice).Tag.ToString
+                        End With
+                        _sqlCommands.Add(_objDetalleEgresoPuesto.NuevoRegistroDetalleComprobanteEgresoSitioCommand())
+                        idd += 1
 
-                    With _objKardex
-                        .Id = CLng(dgvSecuencial.Rows.Item(indice).Cells("NUMERO_KARDEX").Value)
-                        .IdsecuencialItem = CLng(dgvSecuencial.Rows.Item(indice).Cells("ID_SECUENCIAL").Value)
-                        .Cantidad = CInt(dgvSecuencial.Rows.Item(indice).Cells("CANTIDAD_SALDO").Value)
-                        .Fecha = _objCompEgr.Fecha
-                        .Estado = 1
-                    End With
-                    _sqlCommands.Add(_objKardex.ModificarCantidadKardexCommand())
+                        With _objKardex
+                            .Id = CLng(dgvSecuencial.Rows.Item(indice).Cells("NUMERO_KARDEX").Value)
+                            .IdsecuencialItem = CLng(dgvSecuencial.Rows.Item(indice).Cells("ID_SECUENCIAL").Value)
+                            .Cantidad = CInt(dgvSecuencial.Rows.Item(indice).Cells("CANTIDAD_SALDO").Value)
+                            .Fecha = _objCompEgr.Fecha
+                            .Estado = 1
+                        End With
+                        _sqlCommands.Add(_objKardex.ModificarCantidadKardexCommand())
 
-                    With _objControl
-                        .IdControl = idu
-                        .IdPersonal = If(txtRecibe.Tag Is Nothing, txtRecibe.Text.Split("-")(1).Trim(), CType(txtRecibe.Tag, Integer))
-                        .IdComprobante = _objCompEgr.Id
-                        .Cantidad = cantidadPrendasLleva
-                        .Fecha = _objCompEgr.Fecha
-                        .IdActividad = 2
-                        .Estado = 1
-                        .IdDetalleKardex = _objDetalleKardex.Id
-                    End With
-                    _sqlCommands.Add(_objControl.NuevoRegistroControlUniformesCommand())
+                        With _objControl
+                            .IdControl = idu
+                            .IdPersonal = If(txtRecibe.Tag Is Nothing, txtRecibe.Text.Split("-")(1).Trim(), CType(txtRecibe.Tag, Integer))
+                            .IdComprobante = _objCompEgr.Id
+                            .Cantidad = cantidadPrendasLleva
+                            .Fecha = _objCompEgr.Fecha
+                            .IdActividad = 2
+                            .Estado = 1
+                            .IdDetalleKardex = _objDetalleKardex.Id
+                        End With
+                        _sqlCommands.Add(_objControl.NuevoRegistroControlUniformesCommand())
 
-                    iddk += 1
-                    idce += 1
-                    idu += 1
-                Next
+                        iddk += 1
+                        idce += 1
+                        idu += 1
+                    Next
                 Catch ex As Exception
                     KryptonMessageBox.Show("Error al guardar los datos:" & ex.Message, "ERROR", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
 
                     Return
                 End Try
             ElseIf _botonSeleccionadoSitio = 2 Then
-                    ModicificarComprobanteEgreso()
+                ModicificarComprobanteEgreso()
             End If
             Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, String.Empty)
             If res(0) Then
@@ -769,31 +774,40 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                 messageIcon = KryptonMessageBoxIcon.Exclamation
             End If
             KryptonMessageBox.Show(res(1), "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, messageIcon)
+            HabilitarIngresos(False)
+            Limpiar()
+            tsmNuevo.Enabled = True
+            tsmGuardar.Enabled = False
+            tsmCancelar.Enabled = False
+            tsmActualizar.Enabled = False
+            tsmEliminar.Enabled = False
+            tsmReingreso.Enabled = False
+
         End Sub
 
-        Private Sub chkNumeroComprobante_CheckedChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles chkTodos.CheckedChanged
-            If chkTodos.Checked Then
-                txtNroComprobante.Enabled = False
-                txtDetail.Enabled = False
-                rbtNum.Enabled = False
-                rbtDet.Enabled = False
-                rbtNum.Checked = False
-                rbtDet.Checked = False
-            Else
-                txtNroComprobante.Enabled = True
-                txtDetail.Enabled = False
-                rbtNum.Enabled = True
-                rbtDet.Enabled = True
-                rbtNum.Checked = True
-                rbtDet.Checked = False
-            End If
-            txtNroComprobante.Clear()
-            txtDetail.Clear()
-        End Sub
+        'Private Sub chkNumeroComprobante_CheckedChanged(ByVal sender As System.Object, ByVal e As EventArgs)
+        '    If chkTodos.Checked Then
+        '        txtNroComprobante.Enabled = False
+        '        txtDetail.Enabled = False
+        '        rbtNum.Enabled = False
+        '        rbtDet.Enabled = False
+        '        rbtNum.Checked = False
+        '        rbtDet.Checked = False
+        '    Else
+        '        txtNroComprobante.Enabled = True
+        '        txtDetail.Enabled = False
+        '        rbtNum.Enabled = True
+        '        rbtDet.Enabled = True
+        '        rbtNum.Checked = True
+        '        rbtDet.Checked = False
+        '    End If
+        '    txtNroComprobante.Clear()
+        '    txtDetail.Clear()
+        'End Sub
         Private Sub btnExportarComprobantes_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnExportarComprobantes.Click
             ExportarDatosExcel(dgvComprobantesEgreso, "COMPROBANTES DE EGRESO DE BODEGA ")
         End Sub
-        Private Sub btnExportarDetalleComprobante_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnExportarDetalleComprobante.Click
+        Private Sub btnExportarDetalleComprobante_Click(ByVal sender As System.Object, ByVal e As EventArgs)
             ExportarDatosExcel(dgvDetalleComprobate, "DETALLE DE COMPROABANTE DE EGRESO N°: " & CType(dgvComprobantesEgreso.CurrentRow.Cells.Item(0).Value, String))
         End Sub
 
@@ -966,24 +980,24 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                 crvComprobante.ReportSource = Nothing
             End Try
         End Sub
-        Private Sub rbtNum_CheckedChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles rbtNum.CheckedChanged
-            If rbtNum.Checked Then
-                txtDetail.Clear()
-                txtNroComprobante.Clear()
-                txtNroComprobante.Focus()
-            End If
-            txtNroComprobante.Enabled = rbtNum.Checked
-            txtDetail.Enabled = rbtDet.Checked
-        End Sub
-        Private Sub rbtDet_CheckedChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles rbtDet.CheckedChanged
-            If rbtDet.Checked Then
-                txtDetail.Clear()
-                txtNroComprobante.Clear()
-                txtDetail.Focus()
-            End If
-            txtNroComprobante.Enabled = rbtNum.Checked
-            txtDetail.Enabled = rbtDet.Checked
-        End Sub
+        'Private Sub rbtNum_CheckedChanged(ByVal sender As System.Object, ByVal e As EventArgs)
+        '    If rbtNum.Checked Then
+        '        txtDetail.Clear()
+        '        txtNroComprobante.Clear()
+        '        txtNroComprobante.Focus()
+        '    End If
+        '    txtNroComprobante.Enabled = rbtNum.Checked
+        '    txtDetail.Enabled = rbtDet.Checked
+        'End Sub
+        'Private Sub rbtDet_CheckedChanged(ByVal sender As System.Object, ByVal e As EventArgs)
+        '    If rbtDet.Checked Then
+        '        txtDetail.Clear()
+        '        txtNroComprobante.Clear()
+        '        txtDetail.Focus()
+        '    End If
+        '    txtNroComprobante.Enabled = rbtNum.Checked
+        '    txtDetail.Enabled = rbtDet.Checked
+        'End Sub
 
         Private Sub nudCantidad_ValueChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles nudCantidad.ValueChanged
             CalcuarTotal()
@@ -1365,6 +1379,9 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
             tsmNuevo.Enabled = False
             tsmGuardar.Enabled = True
             tsmCancelar.Enabled = True
+            tsmEliminar.Enabled = False
+            tsmReingreso.Enabled = False
+
             _botonSeleccionadoSitio = 2
             txtProveedores.Text = _objPer.BuscarApellidosNombresPersonalXIdPersonal(_tipoCon, _objPer.BuscarIdPersonalXIdUsuario(_tipoCon, IdUsuario))
             If txtNumero.Text.Trim().Length > 0 Then
@@ -1434,8 +1451,8 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
             End Try
         End Sub
 
-        Private Sub btnBusqueda_Click(sender As Object, e As EventArgs) Handles btnBusqueda.Click
-            CargarReingreso(txtBusqueda.Text)
+        Private Sub btnBusqueda_Click(sender As Object, e As EventArgs)
+            ' CargarReingreso(txtBusqueda.Text)
 
         End Sub
 
@@ -1453,17 +1470,40 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
 
         Private Sub ConectarReporteComprobanteEgresoUniforme(ByVal idComprobante As String)
             Try
-                _crComprobanteUniforme.SetDataSource(_objCompEgr.SeleccionarComprobanteEgresoxIdComprobanteEgreso(_tipoCon, idComprobante))
-                _crComprobanteUniforme.SetParameterValue("img", ValidationForms.NombreLogo(_tipoCon, Application.StartupPath))
-                _crComprobanteUniforme.SetParameterValue("ubicacion", _objCompEgr.BuscarClienteByIdComprobanteEgresoBodega(_tipoCon, idComprobante))
-                _crComprobanteUniforme.SetParameterValue("cisepro", ValidationForms.NombreCompany(_tipoCon))
-                crvComprobante.ReportSource = _crComprobanteUniforme
-                crvComprobante.Zoom(100)
-                crvComprobante.Refresh()
+                If cmbBodega.SelectedValue = 1 Then
+                    _crComprobanteUniforme.SetDataSource(_objCompEgr.SeleccionarComprobanteEgresoxIdComprobanteEgreso(_tipoCon, idComprobante))
+                    _crComprobanteUniforme.SetParameterValue("img", ValidationForms.NombreLogo(_tipoCon, Application.StartupPath))
+                    _crComprobanteUniforme.SetParameterValue("ubicacion", _objCompEgr.BuscarClienteByIdComprobanteEgresoBodega(_tipoCon, idComprobante))
+                    _crComprobanteUniforme.SetParameterValue("cisepro", ValidationForms.NombreCompany(_tipoCon))
+                    crvComprobante.ReportSource = _crComprobanteUniforme
+                    crvComprobante.Zoom(100)
+                    crvComprobante.Refresh()
+                Else
+                    KryptonMessageBox.Show("EL COMPROBANTE NO CORRESPONDE A UNIFORMES", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
+                    Return
+                End If
+
             Catch
                 crvComprobante.ReportSource = Nothing
             End Try
         End Sub
 
+        Private Sub btnBuscarModi_Click(sender As Object, e As EventArgs) Handles btnBuscarModi.Click
+
+            If txtFiltro.Text = "Buscar por Sitio o Nombre" Then
+                txtFiltro.Text = ""
+
+            End If
+            CargarComprobantesEgreso(txtFiltro.Text)
+            tsmNuevo.Enabled = False
+            tsmActualizar.Enabled = True
+            tmsEliminar.Enabled = True
+            tsmCancelar.Enabled = True
+            tsmReingreso.Enabled = True
+        End Sub
+
+        Private Sub txtFiltro_Enter(sender As Object, e As EventArgs) Handles txtFiltro.Enter
+
+        End Sub
     End Class
 End Namespace
