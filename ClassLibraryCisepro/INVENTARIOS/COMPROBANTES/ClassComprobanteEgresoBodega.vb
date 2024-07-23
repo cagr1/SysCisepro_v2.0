@@ -188,6 +188,11 @@ Namespace INVENTARIOS.COMPROBANTES
             Return ComandosSql.SeleccionarQueryWithParamsToDataTable(tipoCon, "seleccionarDetallesComprobantesEgreso2", True, pars) 
         End Function
 
+        Public Function SeleccionarDetallesComprobantesReingreso(ByVal tipoCon As TipoConexion, ByVal parametroBusqueda As String) As DataTable
+            Dim pars = New List(Of Object())
+            pars.Add(New Object() {"ID_COMPROBANTE", SqlDbType.VarChar, parametroBusqueda})
+            Return ComandosSql.SeleccionarQueryWithParamsToDataTable(tipoCon, "sp_seleccionarDetallesComprobantesEgreso", True, pars)
+        End Function
 
         Public Function SeleccionarSerieByIdDetalleComprobanteEgresoBodega(ByVal tipoCon As TipoConexion, ByVal idComprobante As String, ByVal iddetcomp As String, ByVal idkar As String) As DataTable
             Dim pars = New List(Of Object())

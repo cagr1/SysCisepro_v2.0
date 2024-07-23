@@ -326,6 +326,7 @@ Namespace FORMULARIOS.FONDOS.FONDO_CAJA_CHICA
 
                     EliminarSolicitudesCajaChica()
 
+
                     Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, String.Empty)
                     If res(0) Then
 

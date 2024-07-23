@@ -4310,6 +4310,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\do_not_disturb_on_24dp_000000_FILL0_wght400_GRAD0_opsz24.png" />
     <None Include="REPORTES\2019\dsLiquidacionFondoRotativoNew.xsc">
       <DependentUpon>dsLiquidacionFondoRotativoNew.xsd</DependentUpon>
     </None>

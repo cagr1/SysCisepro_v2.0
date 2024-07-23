@@ -922,8 +922,9 @@ namespace SysCisepro3.TalentoHumano
                         }
                     }
                 }
-
-                var res = ComandosSql.ProcesarTransacciones(TipoCon, _sqlCommands, "REGISTRAR PERSONAL");
+                var user = Usuario.Datos.ToString();
+                var nombre = $"REGISTRO PERSONAL: {user}";
+                var res = ComandosSql.ProcesarTransacciones(TipoCon, _sqlCommands, nombre);
 
                 if ((bool)res[0])
                 {
@@ -1660,7 +1661,9 @@ namespace SysCisepro3.TalentoHumano
                 new DateTime(fechaSal.Year, fechaSal.Month, fechaSal.Day, f.Hour, f.Minute, f.Second),
                 _objMotivoFechaSalida.checkBox1.Checked);
 
-            var res = ComandosSql.ProcesarTransacciones(TipoCon, _sqlCommands, "REGISTRAR PERSONAL");
+            var user = Usuario.Datos.ToString();
+            var nombre = $"ELIMINADO POR: {user}";
+            var res = ComandosSql.ProcesarTransacciones(TipoCon, _sqlCommands, nombre);
 
             if ((bool)res[0])
             {

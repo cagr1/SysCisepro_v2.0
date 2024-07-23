@@ -3,6 +3,7 @@ Imports ClassLibraryCisepro.CONTABILIDAD.VENTAS
 Imports ClassLibraryCisepro.ENUMS
 Imports ClassLibraryCisepro.ESTRUCTURA_EMPRESA
 Imports ClassLibraryCisepro.ProcesosSql
+Imports ClassLibraryCisepro.USUARIOS_DEL_SISTEMA
 
 Namespace FORMULARIOS.CONTABILIDAD.VENTAS
     ''' <summary>
@@ -38,7 +39,8 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
         ReadOnly _objetoFacturaVenta As New ClassFacturaVenta
         ReadOnly _objetoClienteGeneral As New ClassClienteGeneral
         ReadOnly _objetoEmpresa As New ClassEmpresa
-         
+        ReadOnly _objUser As New ClassUsuarioGeneral
+
         Dim _porcentajeIva As Integer = 0
         Dim _guiaRemisionFactura As String = ""
         Dim _tipoPagoFactura As String = ""
@@ -167,7 +169,10 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
 
                 ModificarFacturaVenta()
 
-                Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, String.Empty)
+
+                Dim user As String = _objUser.DatosUsuario.ToString()
+                Dim nombreU As String = "AJUSTE-FACTURA " & user
+                Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, nombreU)
                 If res(0) Then
                     LimpiarParametros()
                     DeshabilitadoInicio()

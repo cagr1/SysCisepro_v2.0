@@ -686,8 +686,10 @@ namespace SysCisepro3.TalentoHumano
                 _objContratos.ExtSal = _objDetaRolPago.ExtSal;
                 _sqlCommands.Add(_objContratos.ModificarContratoParametrosRolCommand());
             }
-             
-            var res = ComandosSql.ProcesarTransacciones(TipoCon, _sqlCommands, "ROL DE PAGO");
+
+            var user = Usuario.Datos.ToString();
+            var nombre = $"ROL POR: {user}";
+            var res = ComandosSql.ProcesarTransacciones(TipoCon, _sqlCommands, nombre);
             var msg = res[1].ToString();
             if ((bool)res[0])
             {
@@ -758,9 +760,11 @@ namespace SysCisepro3.TalentoHumano
             _sqlCommands.Clear();
 
             _objRolPago.FechaValidacion = Usuario.Now(TipoCon);
-            _sqlCommands.Add(_objRolPago.ValidarByIdRolPagoCommand(Convert.ToInt32(lblIdRol.Text)));     
-             
-            var res = ComandosSql.ProcesarTransacciones(TipoCon, _sqlCommands, "ROL DE PAGO");
+            _sqlCommands.Add(_objRolPago.ValidarByIdRolPagoCommand(Convert.ToInt32(lblIdRol.Text)));
+
+            var user = Usuario.Datos.ToString();
+            var nombre = $"ROL VALIDADO: {user}";
+            var res = ComandosSql.ProcesarTransacciones(TipoCon, _sqlCommands, nombre);
             var msg = res[1].ToString();
             if ((bool)res[0])
             {
@@ -798,7 +802,9 @@ namespace SysCisepro3.TalentoHumano
             _objRolPago.FechaValidacion = Usuario.Now(TipoCon);
             _sqlCommands.Add(_objRolPago.AnularByIdRolPagoCommand(Convert.ToInt32(lblIdRol.Text)));
 
-            var res = ComandosSql.ProcesarTransacciones(TipoCon, _sqlCommands, "ROL DE PAGO");
+            var user = Usuario.Datos.ToString();
+            var nombre = $"ROL ANULADO: {user}";
+            var res = ComandosSql.ProcesarTransacciones(TipoCon, _sqlCommands, nombre);
             var msg = res[1].ToString();
             if ((bool)res[0])
             {
@@ -2603,7 +2609,9 @@ namespace SysCisepro3.TalentoHumano
             _objRolPago.Retenidos = retenidos;
             _sqlCommands.Add(_objRolPago.GuardarRetenidosRolPagoCommand());
 
-            var res = ComandosSql.ProcesarTransacciones(TipoCon, _sqlCommands, "ROL DE PAGO");
+            var user = Usuario.Datos.ToString();
+            var nombre = $"ROL DETENIDO: {user}";
+            var res = ComandosSql.ProcesarTransacciones(TipoCon, _sqlCommands, nombre);
             if ((bool)res[0]) return;
 
             dgvInformePago.CurrentRow.Cells[5].Style.BackColor = dgvInformePago.CurrentRow.Cells[0].Style.BackColor;

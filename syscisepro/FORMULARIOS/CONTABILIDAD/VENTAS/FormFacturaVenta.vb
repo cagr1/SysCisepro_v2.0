@@ -18,6 +18,7 @@ Imports syscisepro.DATOS
 Imports syscisepro.FORMULARIOS.INVENTARIOS.PROCESO
 Imports System.Text
 Imports Krypton.Toolkit
+Imports ClassLibraryCisepro.USUARIOS_DEL_SISTEMA
 
 Namespace FORMULARIOS.CONTABILIDAD.VENTAS
     ''' <summary>
@@ -74,6 +75,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
         ReadOnly _objetoComprobantesElectronicos As New ClassDocumentosElectronicos
 
         ReadOnly _objetoDireccionesFacturacion As New ClassDireccionesFacturacion
+        ReadOnly _objUser As New ClassUsuarioGeneral
 
         Dim _varIdAsiento As Integer
 
@@ -852,12 +854,16 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                                 End If
                             End If
 
-                            Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, String.Empty)
+                            Dim user As String = _objUser.DatosUsuario.ToString()
+                            Dim nombreU As String = "FACTURA " & user
+                            Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, nombreU)
                             If res(0) Then
                                 If lblPtoEmisionFacturaEmpresa.Text = "002" Then ExportarXml()
                                 DeshabilitadoInicio() ' bloquea los campos
                             End If
                             MsgBox(If(res(0), res(1) & vbNewLine & "XML GENERADO CORRECTAMENTE" & If(resx, " - XML GUARDADO", " - XML NO GUARDADO!"), res(1)), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
+
+
 
                         Else
                             MsgBox("NO SE PUEDE GUARDAR." & vbNewLine & ", EL ASIENTO NO CUADRA. REVISE EL ASIENTO DE DIARIO, SUBTOTAL, IVA Y TOTAL DE LA FACTURA.", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")

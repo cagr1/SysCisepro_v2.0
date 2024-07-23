@@ -241,7 +241,9 @@ namespace SysCisepro3.Contabilidad.Compras
             _objOrdenCompra.EstadoOrdencompraGeneral = 0;
             _sqlCommands.Add(_objOrdenCompra.ActualizarEstadoOrdenCompra());
 
-            var res = ComandosSql.ProcesarTransacciones(TipoCon, _sqlCommands, "RECHAZAR ÓRDEN DE COMPRA");
+            var user = Usuario.Datos.ToString();
+            var nombre = $"ORDEN-COMPRA-RECHAZADA: {user}";
+            var res = ComandosSql.ProcesarTransacciones(TipoCon, _sqlCommands, nombre);
 
             if ((bool)res[0]) btnRecargar.PerformClick();
             MessageBox.Show((string)res[1], "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -273,7 +275,9 @@ namespace SysCisepro3.Contabilidad.Compras
             _objOrdenCompra.ActualizarEstadoOrdenCompra();
             _sqlCommands.Add(_objOrdenCompra.ActualizarEstadoOrdenCompra());
 
-            var res = ComandosSql.ProcesarTransacciones(TipoCon, _sqlCommands, "APROBAR ÓRDEN DE COMPRA");
+            var user = Usuario.Datos.ToString();
+            var nombre = $"ORDEN-COMPRA-APROBADA: {user}";
+            var res = ComandosSql.ProcesarTransacciones(TipoCon, _sqlCommands, nombre);
 
             if ((bool)res[0]) btnRecargar.PerformClick();
             MessageBox.Show((string)res[1], "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);

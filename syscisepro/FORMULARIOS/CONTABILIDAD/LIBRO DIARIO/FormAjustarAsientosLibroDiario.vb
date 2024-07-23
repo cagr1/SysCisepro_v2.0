@@ -14,6 +14,7 @@ Imports syscisepro.DATOS
 Imports syscisepro.FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO.REPORTES
 Imports syscisepro.FORMULARIOS.INVENTARIOS.PROCESO
 Imports Krypton.Toolkit
+Imports ClassLibraryCisepro.USUARIOS_DEL_SISTEMA
 
 Namespace FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
     ''' <summary>
@@ -60,6 +61,7 @@ Namespace FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
         ReadOnly _objetoBanco As New ClassBancos
         ReadOnly _objetoCuentasBancos As New ClassCuentasBancos
 
+        ReadOnly _objUser As New ClassUsuarioGeneral
         Private _parametroBusqueda As Integer = 0
         Private _botonseleccionado As Integer = 0
          
@@ -630,6 +632,7 @@ Namespace FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
             _sqlCommands.Clear()
 
             If _botonseleccionado = 1 Then
+
                 _objetoLibroDiario.IdLibroDiario = _objetoLibroDiario.BuscarMayorIdLibroDiario(_tipoCon)
 
                 With _objetoNumeroRegistro
@@ -644,12 +647,28 @@ Namespace FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
                 ModificarRegistroAsientoDiario()
             End If
 
-            Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, String.Empty)
+            Dim user As String = _objUser.DatosUsuario.ToString()
+            Dim nombreU As String = ""
+
+            If _botonseleccionado = 1 Then
+                nombreU = "LIBRO-DIARIO-NUEVO " & user
+            ElseIf _botonseleccionado = 2 Then
+                nombreU = "LIBRO-DIARIO-EDITADO " & user
+            End If
+
+            Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, nombreU)
             If res(0) Then
                 DeshabilitadoInicio()
                 LimpiarParametros()
             End If
-            MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
+            'MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
+            Dim messageIcon As KryptonMessageBoxIcon
+            If res(0) Then
+                messageIcon = KryptonMessageBoxIcon.Information
+            Else
+                messageIcon = KryptonMessageBoxIcon.Exclamation
+            End If
+            KryptonMessageBox.Show(res(1), "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, messageIcon)
             CargarNumeroRegistroAsientoLibroDiario()
         End Sub          
         Private Sub NuevoRegistroAsientoDiario()

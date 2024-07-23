@@ -84,7 +84,10 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
 
         ReadOnly _objDetalleEgresoPuesto As New ClassDetalleBodegaSitio
 
+        ReadOnly _objCompIng As New ClassComprobanteIngresoBodego
+
         Dim _detalleKardex As New DataTable
+        Dim _detalleKardexIngreso As New DataTable
         Dim _botonSeleccionadoSitio As Integer = 0
 
         Private Sub AutocompletarRecibe()
@@ -104,6 +107,13 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
             txtArticulo.AutoCompleteMode = AutoCompleteMode.Suggest
             txtArticulo.AutoCompleteSource = AutoCompleteSource.CustomSource
         End Sub
+
+        Private Sub AutoCompletarArticuloIngreso()
+            txtArticuloIngreso.AutoCompleteCustomSource = _objSecuencialItem.Autocompletar(_tipoCon)
+            txtArticuloIngreso.AutoCompleteMode = AutoCompleteMode.Suggest
+            txtArticuloIngreso.AutoCompleteSource = AutoCompleteSource.CustomSource
+        End Sub
+
 
         Private Sub FormComprobanteEgresoBodega_Load(ByVal sender As System.Object, ByVal e As EventArgs) Handles MyBase.Load
             ' DEFINIR TIPO Y COLOR DE SISTEMA
@@ -175,6 +185,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
             tsmCancelar.Enabled = True
             tsmActualizar.Enabled = False
             tmsEliminar.Enabled = False
+            tsmReingreso.Enabled = False
 
             Limpiar()
             _botonSeleccionadoSitio = 1 ' CONTROL INGRESO
@@ -213,8 +224,21 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
             Label11.Text = "0 REGISTRO(S) - TOTAL"
             txtCedulaRecibe.Clear()
 
+            txtArticuloIngreso.Clear()
+            txtSerieIngreso.Clear()
+            lblIdArticuloIngreso.Text = 0
+            lblIdDetalleKardexIngreso.Text = 0
+            lblIdKardexIngreso.Text = 0
+            nudCantidadIngreso.Value = 0
+            nudValorIngreso.Value = 0
+            nudTotalIngreso.Value = 0
+            cbxCalidadIngreso.SelectedIndex = 0
+            txtObservacionesIngreso.Clear()
+
             _detalleKardex = Nothing
+            _detalleKardexIngreso = Nothing
             dgvSecuencial.Rows.Clear()
+            dgvDetalleComprobanteIngreso.Rows.Clear()
             dgvComprobantesEgreso.DataSource = Nothing
             dgvDetalleComprobate.DataSource = Nothing
         End Sub
@@ -404,12 +428,12 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
             End Try
         End Sub
         Private Sub tsmAgregar_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles tsmAgregar.Click
-            If _detalleKardex Is Nothing Then
+            If _detalleKardexIngreso Is Nothing Then
                 MsgBox("POR FAVOR, SELECCIONE UN ITEM PARA AGREGAR A LA LISTA!", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÒN")
                 Return
             End If
 
-            If _detalleKardex.Rows.Count = 0 Then
+            If _detalleKardexIngreso.Rows.Count = 0 Then
                 MsgBox("POR FAVOR, SELECCIONE UN ITEM PARA AGREGAR A LA LISTA!", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÒN")
                 Return
             End If
@@ -502,6 +526,21 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                     'End If
 
                 Next
+
+                For indice = 0 To dgvDetalleComprobanteIngreso.RowCount - 1
+                    Dim compareDetalle As String = dgvDetalleComprobanteIngreso.Rows.Item(indice).Cells("DETALLES").Value.ToString()
+                    Dim compareSerie As String = ""
+
+                    If compareDetalle.Contains("SERIE:") Then
+                        compareSerie = compareDetalle.Substring(compareDetalle.IndexOf("SERIE:") + 6).Trim()
+                    End If
+
+                    If dgvDetalleComprobanteIngreso.Rows.Item(indice).Cells("NUMERO_KARDEX").Value = idKardex And detalle = compareSerie Then
+                        contarRepetidos += 1
+                    End If
+                Next
+
+
                 Return contarRepetidos > 0
             Catch
                 Return False
@@ -566,6 +605,45 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
             tsmActualizar.Enabled = False
             tsmEliminar.Enabled = False
             tsmReingreso.Enabled = False
+
+            lblArticuloTitulo.Visible = False
+            lblArticuloTitulo.SendToBack()
+            txtArticuloIngreso.Visible = False
+            txtArticuloIngreso.SendToBack()
+            lblSerieTitulo.Visible = False
+            lblSerieTitulo.SendToBack()
+            txtSerieIngreso.Visible = False
+            txtSerieIngreso.SendToBack()
+            btnBuscarReingreso.Visible = False
+            btnBuscarReingreso.SendToBack()
+            lblCantidadTitulo.Visible = False
+            lblCantidadTitulo.SendToBack()
+            nudCantidadIngreso.Visible = False
+            nudCantidadIngreso.SendToBack()
+            lblValorTitulo.Visible = False
+            lblValorTitulo.SendToBack()
+            nudValorIngreso.Visible = False
+            nudValorIngreso.SendToBack()
+            lblTotalTitulo.Visible = False
+            lblTotalTitulo.SendToBack()
+            nudTotalIngreso.Visible = False
+            nudTotalIngreso.SendToBack()
+            cbxCalidadIngreso.Visible = False
+            cbxCalidadIngreso.SendToBack()
+            lblObservacionesTitulo.Visible = False
+            lblObservacionesTitulo.SendToBack()
+            txtObservacionesIngreso.Visible = False
+            txtObservacionesIngreso.SendToBack()
+            btnAgregarIngreso.Visible = False
+            btnAgregarIngreso.SendToBack()
+            btnEliminaringreso.Visible = False
+            btnEliminaringreso.SendToBack()
+            dgvDetalleComprobanteIngreso.Visible = False
+            dgvDetalleComprobanteIngreso.SendToBack()
+
+
+
+
         End Sub
         Private Sub tsmGuardar_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles tsmGuardar.Click
 
@@ -760,8 +838,12 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                 End Try
             ElseIf _botonSeleccionadoSitio = 2 Then
                 ModicificarComprobanteEgreso()
+            Else
+                ReingresoComprante()
             End If
-            Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, String.Empty)
+            Dim user As String = _objUser.DatosUsuario.ToString()
+            Dim nombreU As String = "COMPROBANTE POR " & user
+            Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, nombreU)
             If res(0) Then
                 txtNumero.Text = _objCompEgr.Id
                 txtIdComprobante.Text = txtNumero.Text
@@ -881,7 +963,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
         Private Sub dgvComprobantesEgreso_SelectionChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles dgvComprobantesEgreso.SelectionChanged
             If dgvComprobantesEgreso.Rows.Count = 0 Or dgvComprobantesEgreso.CurrentRow Is Nothing Then Return
             CargarDetalleComprobante(dgvComprobantesEgreso.CurrentRow.Cells.Item(0).Value)
-
+            CargarDetalleComprobanteIngreso(dgvComprobantesEgreso.CurrentRow.Cells.Item(0).Value)
             CargarBodegas()
             AutocompletarRecibe()
             AutocompletarProveedores()
@@ -1011,6 +1093,12 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
             If nudCantidad.Text.Trim().Length = 0 Then nudCantidad.Value = 0
             If nudValor.Text.Trim().Length = 0 Then nudValor.Value = 0
             nudTotal.Value = CInt(nudCantidad.Value) * CDec(nudValor.Value)
+        End Sub
+
+        Private Sub CalcularTotalIngreso()
+            If nudCantidadIngreso.Text.Trim().Length = 0 Then nudCantidadIngreso.Value = 0
+            If nudValorIngreso.Text.Trim().Length = 0 Then nudValorIngreso.Value = 0
+            nudTotalIngreso.Value = CInt(nudCantidadIngreso.Value) * CDec(nudValorIngreso.Value)
         End Sub
 
         Private Sub bntPuesto_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles bntPuesto.Click
@@ -1504,6 +1592,292 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
 
         Private Sub txtFiltro_Enter(sender As Object, e As EventArgs) Handles txtFiltro.Enter
 
+        End Sub
+
+        Private Sub tsmReingreso_Click(sender As Object, e As EventArgs) Handles tsmReingreso.Click
+            _botonSeleccionadoSitio = 3
+            tsmNuevo.Enabled = False
+            tsmGuardar.Enabled = True
+            tsmCancelar.Enabled = True
+            tsmActualizar.Enabled = False
+            tmsEliminar.Enabled = False
+
+            AutoCompletarArticuloIngreso()
+
+            lblArticuloTitulo.Visible = True
+            lblArticuloTitulo.BringToFront()
+            txtArticuloIngreso.Visible = True
+            txtArticuloIngreso.BringToFront()
+            lblSerieTitulo.Visible = True
+            lblSerieTitulo.BringToFront()
+            txtSerieIngreso.Visible = True
+            txtSerieIngreso.BringToFront()
+            btnBuscarReingreso.Visible = True
+            btnBuscarReingreso.BringToFront()
+            lblCantidadTitulo.Visible = True
+            lblCantidadTitulo.BringToFront()
+            nudCantidadIngreso.Visible = True
+            nudCantidadIngreso.BringToFront()
+            lblValorTitulo.Visible = True
+            lblValorTitulo.BringToFront()
+            nudValorIngreso.Visible = True
+            nudValorIngreso.BringToFront()
+            cbxCalidadIngreso.Visible = True
+            cbxCalidadIngreso.BringToFront()
+            lblTotalTitulo.Visible = True
+            lblTotalTitulo.BringToFront()
+            nudTotalIngreso.Visible = True
+            nudTotalIngreso.BringToFront()
+            lblObservacionesTitulo.Visible = True
+            lblObservacionesTitulo.BringToFront()
+            txtObservacionesIngreso.Visible = True
+            txtObservacionesIngreso.BringToFront()
+            btnAgregarIngreso.Visible = True
+            btnAgregarIngreso.BringToFront()
+            btnEliminaringreso.Visible = True
+            btnEliminaringreso.BringToFront()
+            dgvDetalleComprobanteIngreso.Visible = True
+            dgvDetalleComprobanteIngreso.BringToFront()
+
+
+        End Sub
+
+        Public Sub ReingresoComprante()
+
+        End Sub
+
+        Private Sub btnAgregarIngreso_Click(sender As Object, e As EventArgs) Handles btnAgregarIngreso.Click
+            If _detalleKardexIngreso Is Nothing Then
+                KryptonMessageBox.Show("POR FAVOR, SELECCIONE UN ITEM PARA AGREGAR A LA LISTA!", "MENSAJE DE VALIDACIÒN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+                Return
+            End If
+
+            If _detalleKardexIngreso.Rows.Count = 0 Then
+                KryptonMessageBox.Show("POR FAVOR, SELECCIONE UN ITEM PARA AGREGAR A LA LISTA!", "MENSAJE DE VALIDACIÒN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+                Return
+            End If
+
+            If cbxCalidadIngreso.SelectedIndex = 0 Then
+                KryptonMessageBox.Show("POR FAVOR, SELECCIONE LA OBSERVACIÓN DE CALIDAD PARA ESTE ITEM", "MENSAJE DE VALIDACIÒN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+                Return
+            End If
+
+            Dim cant = CInt(nudCantidadIngreso.Value)
+            Dim val = CDbl(nudValorIngreso.Value)
+            lbldetalleIngreso.Text = txtSerieIngreso.Text
+            If Not ValidarKardexRepetidos(CLng(lblIdKardexIngreso.Text), lbldetalleIngreso.Text) Then
+
+                Dim fila As String() =
+                    {
+                        lblIdKardexIngreso.Text,
+                        txtArticuloIngreso.Text,
+                        lblIdArticuloIngreso.Text,
+                        cant,
+                        val,
+                        nudTotalIngreso.ToString(),
+                        cbxCalidadIngreso.Text,
+                        txtObservacionesIngreso.Text & " - SERIE: " & If(txtSerieIngreso.Text.Trim().Length = 0, "-", txtSerieIngreso.Text.Trim()),
+                        _detalleKardex.Rows(0)(9).ToString(),'id detalle kardex
+                        If(_detalleKardex.Rows(0)(12).ToString().Equals("INGRESO"), CDbl(_detalleKardex.Rows(0)(14).ToString()), CDbl(_detalleKardex.Rows(0)(17).ToString())),
+                        If(_detalleKardex.Rows(0)(12).ToString().Equals("INGRESO"), CDbl(_detalleKardex.Rows(0)(15).ToString()), CDbl(_detalleKardex.Rows(0)(18).ToString())),
+                        CDbl(_detalleKardex.Rows(0)(19).ToString()) - cant,
+                        val,
+                        (CDbl(_detalleKardex.Rows(0)(19).ToString()) - cant) * val,
+                        _detalleKardex.Rows(0)(1).ToString()
+                    }
+
+                dgvSecuencial.Rows.Add(fila)
+                dgvSecuencial.Rows(dgvSecuencial.RowCount - 1).Tag = If(txtSerie.Text.Trim().Length = 0, "-", txtSerie.Text.Trim())
+
+                txtArticulo.Clear()
+                txtCodigoArticulo.Clear()
+                cmbObservacionCalidad.SelectedIndex = 0
+                nudCantidad.Value = 0
+                nudValor.Value = 0
+                txtObservacion.Clear()
+                lblIdArticulo.Text = 0
+                lblIdDetalleKardex.Text = 0
+                lblIdKardex.Text = 0
+                _detalleKardex = Nothing
+                nudCantidad.Enabled = True
+                txtSerie.Clear()
+                tsmAgregar.Enabled = False
+                tsmEliminar.Enabled = True
+                Label11.Text = dgvSecuencial.Rows.Count & " REGISTRO(S) - TOTAL"
+            Else
+                MsgBox("NO SE PUEDE AGREGAR UN ITEM REPETIDO", MsgBoxStyle.Information, "MENSAJE DE VALIDACIÒN")
+            End If
+        End Sub
+
+        Private Sub CargarDetalleComprobanteIngreso(ByVal id As String)
+
+            'Try
+            '    dgvDetalleComprobanteIngreso.DataSource = _objCompEgr.SeleccionarDetallesComprobantesReingreso(_tipoCon, id)
+
+            '    dgvDetalleComprobanteIngreso.Columns(0).Name = "ID_KAR"
+            '    dgvDetalleComprobanteIngreso.Columns(1).Name = "NOMBRE_INGRESO"
+            '    dgvDetalleComprobanteIngreso.Columns(2).Name = "ID_SECUENCIAL_INGRESO"
+            '    dgvDetalleComprobanteIngreso.Columns(3).Name = "CANTIDAD_INGRESO"
+            '    dgvDetalleComprobanteIngreso.Columns(4).Name = "VALOR_INGRESO"
+            '    dgvDetalleComprobanteIngreso.Columns(5).Name = "TOTAL_INGRESO"
+            '    dgvDetalleComprobanteIngreso.Columns(6).Name = "OBSERVACION_INGRESO"
+            '    dgvDetalleComprobanteIngreso.Columns(7).Name = "DETALLE_INGRESO"
+            '    dgvDetalleComprobanteIngreso.Columns(8).Name = "VALOR_UNITARIO_ANTERIOR_INGRESO"
+            '    dgvDetalleComprobanteIngreso.Columns(9).Name = "VALOR_TOTAL_ANTERIOR_INGRESO"
+            '    dgvDetalleComprobanteIngreso.Columns(10).Name = "SALDO_INGRESO"
+            '    dgvDetalleComprobanteIngreso.Columns(11).Name = "FECHA_INGRESO"
+            '    dgvDetalleComprobanteIngreso.Columns(12).Name = "CODIGO_CONCEPTO_INGRESO"
+            '    dgvDetalleComprobanteIngreso.Columns(13).Name = "CANTIDAD_INICIAL_INGRESO"
+            '    dgvDetalleComprobanteIngreso.Columns(14).Name = "CANTIDAD_TOTAL"
+
+
+
+            '    dgvDetalleComprobanteIngreso.AutoResizeRows()
+            '    dgvDetalleComprobanteIngreso.AutoResizeColumns()
+            '    'dgvDetalleComprobate.ReadOnly = True
+
+
+
+            'Catch
+            '    dgvDetalleComprobanteIngreso.DataSource = Nothing
+            'End Try
+            Try
+                dgvDetalleComprobanteIngreso.Rows.Clear()
+
+
+
+
+                Dim dataTable As DataTable = _objCompEgr.SeleccionarDetallesComprobantesReingreso(_tipoCon, id)
+
+
+                For Each row As DataRow In dataTable.Rows
+                    Dim rowIndex As Integer = dgvDetalleComprobanteIngreso.Rows.Add()
+                    Dim dgvRow As DataGridViewRow = dgvDetalleComprobanteIngreso.Rows(rowIndex)
+
+                    dgvRow.Cells("ID_KAR").Value = row("ID_KAR")
+                    dgvRow.Cells("NOMBRE_INGRESO").Value = row("NOMBRE_INGRESO")
+                    dgvRow.Cells("ID_SECUENCIAL_INGRESO").Value = row("ID_SECUENCIAL_INGRESO")
+                    dgvRow.Cells("CANTIDAD_INGRESO").Value = row("CANTIDAD_INGRESO")
+                    dgvRow.Cells("VALOR_INGRESO").Value = row("VALOR_INGRESO")
+                    dgvRow.Cells("TOTAL_INGRESO").Value = row("TOTAL_INGRESO")
+                    dgvRow.Cells("OBSERVACION_INGRESO").Value = row("OBSERVACION_INGRESO")
+                    dgvRow.Cells("DETALLES_INGRESO").Value = row("DETALLE_INGRESO")
+                    dgvRow.Cells("VALOR_UNITARIO_ANTERIOR_INGRESO").Value = row("VALOR_UNITARIO_ANTERIOR_INGRESO")
+                    dgvRow.Cells("VALOR_TOTAL_ANTERIOR_INGRESO").Value = row("VALOR_TOTAL_ANTERIOR_INGRESO")
+                    dgvRow.Cells("SALDO_INGRESO").Value = row("SALDO_INGRESO")
+                    dgvRow.Cells("FECHA_INGRESO").Value = row("FECHA_INGRESO")
+                    dgvRow.Cells("CODIGO_CONCEPTO_INGRESO").Value = row("CODIGO_CONCEPTO_INGRESO")
+                    dgvRow.Cells("CONCEPTO_INVENTARIO").Value = row("CONCEPTO_INVENTARIO")
+                    dgvRow.Cells("CANTIDAD_INICIAL_INGRESO").Value = row("CANTIDAD_INICIAL_INGRESO")
+                    dgvRow.Cells("CANTIDAD_TOTAL_INGRESO").Value = row("CANTIDAD_TOTAL")
+                Next
+
+
+
+                dgvDetalleComprobanteIngreso.AutoResizeColumns()
+                dgvDetalleComprobanteIngreso.AutoResizeRows()
+
+            Catch ex As Exception
+                MessageBox.Show("Error: " & ex.Message)
+            dgvDetalleComprobanteIngreso.DataSource = Nothing
+            End Try
+
+        End Sub
+
+        Private Sub dgvDetalleComprobanteIngreso_CellValueChanged(sender As Object, e As DataGridViewCellEventArgs) Handles dgvDetalleComprobanteIngreso.CellValueChanged
+            'If dgvDetalleComprobanteIngreso.RowCount = 0 Or dgvDetalleComprobanteIngreso.CurrentRow Is Nothing Then Return
+            'If dgvDetalleComprobanteIngreso.Columns(e.ColumnIndex).Name = "CANTIDAD_INGRESO" Or dgvDetalleComprobanteIngreso.Columns(e.ColumnIndex).Name = "VALOR_INGRESO" Then
+            '    Dim cant = CInt(dgvDetalleComprobanteIngreso.CurrentRow.Cells.Item(3).Value)
+            '    Dim val = CDbl(dgvDetalleComprobanteIngreso.CurrentRow.Cells.Item(4).Value)
+            '    Dim toEgre = cant * val
+            '    dgvDetalleComprobanteIngreso.CurrentRow.Cells.Item(5).Value = toEgre
+            'End If
+        End Sub
+
+        Private Sub dgvDetalleComprobanteIngreso_SelectionChanged(sender As Object, e As EventArgs) Handles dgvDetalleComprobanteIngreso.SelectionChanged
+            'If dgvDetalleComprobate.Rows.Count = 0 Or dgvDetalleComprobate.CurrentRow Is Nothing Then Return
+
+
+            'Dim serieResult As String = ""
+            'Dim dataTable = _objCompEgr.SeleccionarSerieByIdDetalleComprobanteEgresoBodega(_tipoCon, CType(dgvDetalleComprobate.CurrentRow.Cells.Item(0).Value.ToString(), String), CType(dgvDetalleComprobate.CurrentRow.Cells.Item(1).Value.ToString(), String), CType(dgvDetalleComprobate.CurrentRow.Cells.Item(2).Value.ToString(), String))
+
+            'If dataTable.Rows.Count > 0 AndAlso dataTable.Rows(0)("SERIE") IsNot DBNull.Value Then
+            '    Dim serieInfo As String = dataTable.Rows(0)("SERIE").ToString()
+            '    Dim index As Integer = serieInfo.IndexOf(":")
+
+            '    If index <> -1 AndAlso index < serieInfo.Length - 1 Then
+            '        serieResult = serieInfo.Substring(index + 1).Trim()
+            '    End If
+            'End If
+
+            'txtSerieIngreso.Text = serieResult
+            'nudCantidadIngreso.Value = dgvDetalleComprobate.CurrentRow.Cells.Item(8).Value ' cantidad egreso
+            'nudValorIngreso.Value = dgvDetalleComprobate.CurrentRow.Cells.Item(9).Value ' valor egreso
+            'nudTotalIngreso.Value = dgvDetalleComprobate.CurrentRow.Cells.Item(10).Value
+            'lblIdKardexIngreso.Text = dgvDetalleComprobate.CurrentRow.Cells.Item(2).Value ' Id kardex
+            'lblDetaComp.Text = dgvDetalleComprobate.CurrentRow.Cells.Item(1).Value ' Id Detalle comprobante
+            ''cmbObservacionCalidad.Text = dgvDetalleComprobate.CurrentRow.Cells.Item(6).Value
+            'txtArticulo.Text = dgvDetalleComprobate.CurrentRow.Cells.Item(3).Value
+            'txtObservacion.Text = dgvDetalleComprobate.CurrentRow.Cells.Item(7).Value
+            'lblDetKardex.Text = dgvDetalleComprobate.CurrentRow.Cells.Item(5).Value ' Id detalle kardex
+            'lblComp.Text = dgvDetalleComprobate.CurrentRow.Cells.Item(0).Value 'ID de comprobante
+            'lblIdSecuencial.Text = dgvDetalleComprobate.CurrentRow.Cells.Item(16).Value ' Id Secuencial 
+            'lblCantidadSaldo.Text = dgvDetalleComprobate.CurrentRow.Cells.Item(17).Value ' cantidad_saldo 
+
+        End Sub
+
+        Private Sub txtArticuloIngreso_KeyUp(sender As Object, e As KeyEventArgs) Handles txtArticuloIngreso.KeyUp
+            If e.KeyCode <> Keys.Enter Then Return
+            Try
+                lblIdArticuloIngreso.Text = _objSecuencialItem.BuscarIdSecuencialItemXNombreSecuencialItem(_tipoCon, txtArticuloIngreso.Text.Trim)
+                lblIdKardexIngreso.Text = _objKardex.BuscarKardexPorIdSecuencialItem(_tipoCon, lblIdArticuloIngreso.Text.Trim)
+                lblIdDetalleKardexIngreso.Text = _objDetalleKardex.BuscarMayorIdDetalleKardexxIdKardex(_tipoCon, lblIdKardexIngreso.Text)
+
+                If CInt(lblIdKardexIngreso.Text) > 0 Then
+                    _detalleKardexIngreso = _objKardex.BuscarUltimoMoviminetoKardexXIdKardex(_tipoCon, lblIdKardexIngreso.Text, lblIdDetalleKardexIngreso.Text)
+
+
+                    ' nudCantidad.Value = 1
+                    nudValorIngreso.Value = _objSecuencialItem.BuscarPvpSecuencialItemXIdSecuencialItem(_tipoCon, lblIdArticuloIngreso.Text)
+                    cbxCalidadIngreso.SelectedIndex = 0
+                    btnAgregarIngreso.Enabled = True
+                Else
+                    _detalleKardexIngreso = Nothing
+                    nudValorIngreso.Value = 0
+                    cbxCalidadIngreso.SelectedIndex = 0
+                    nudCantidadIngreso.Value = 0
+                    nudTotalIngreso.Value = 0
+                    txtObservacionesIngreso.Clear()
+                    lblIdArticuloIngreso.Text = 0
+                    lblIdDetalleKardexIngreso.Text = 0
+                    lblIdKardexIngreso.Text = 0
+                    btnAgregarIngreso.Enabled = False
+                    btnEliminaringreso.Enabled = dgvDetalleComprobanteIngreso.RowCount > 0
+                    KryptonMessageBox.Show("EL ITEM SELECCIONADO NO EXISTE EN EL SISTEMA. DEBE CREAR EL ITEM EN LA OPCIÓN 'BODEGA / ARTÍCULOS Y PRODUCTOS' Y LUEGO REGISTAR EL 'COMPROBANTE DE INGRESO' CORRESPONDIENTE!!!", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
+                End If
+                CalcuarTotal()
+            Catch
+                nudValorIngreso.Value = 0
+                lblIdArticuloIngreso.Text = 0
+                lblIdKardexIngreso.Text = 0
+                lblIdDetalleKardexIngreso.Text = 0
+                _detalleKardexIngreso = Nothing
+                txtArticuloIngreso.Clear()
+                cbxCalidadIngreso.SelectedIndex = 0
+                nudCantidadIngreso.Value = 0
+                CalcuarTotal()
+                txtObservacionesIngreso.Clear()
+                KryptonMessageBox.Show("OCURRIÓ UN PROBLEMA AL SELECCIONAR ARTÍCULOS. POR FAVOR, CONTÁCTE AL ADMINISTRADOR!!!", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
+            End Try
+
+        End Sub
+
+        Private Sub nudCantidadIngreso_ValueChanged(sender As Object, e As EventArgs) Handles nudCantidadIngreso.ValueChanged
+            CalcularTotalIngreso()
+        End Sub
+
+        Private Sub nudValorIngreso_ValueChanged(sender As Object, e As EventArgs) Handles nudValorIngreso.ValueChanged
+            CalcularTotalIngreso()
         End Sub
     End Class
 End Namespace

@@ -18,6 +18,7 @@ Imports ClassLibraryCisepro.CONTABILIDAD.BANCOS.AUDITORIA
 Imports System.Diagnostics
 Imports System.IO
 Imports Krypton.Toolkit
+Imports ClassLibraryCisepro.USUARIOS_DEL_SISTEMA
 
 Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
     ''' <summary>
@@ -93,7 +94,7 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
         ReadOnly _objProveedor As New ClassProveedores
         ReadOnly _objPersonal As New ClassPersonal
 
-
+        ReadOnly _objUser As New ClassUsuarioGeneral
         ReadOnly _validacionesNumeros As New ClassNumerico
         ReadOnly _validacionesDecimal As New ClassDecimal
         ReadOnly _validacionesAlfanumerica As New ClassAlfanumerico
@@ -2373,7 +2374,9 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
 
             If EsDialogo Then DialogResult = DialogResult.OK
 
-            Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, String.Empty)
+            Dim user As String = _objUser.DatosUsuario.ToString()
+            Dim nombreU As String = "ACTIVO INGRESADO: " & user
+            Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, nombreU)
             If res(0) Then
                 Select Case _formDialogoNuevoActivo.Tipo
                     Case 0 '"ARMAS"

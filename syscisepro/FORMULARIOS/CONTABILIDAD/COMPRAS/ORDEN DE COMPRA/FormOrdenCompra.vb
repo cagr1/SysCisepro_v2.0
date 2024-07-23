@@ -11,6 +11,7 @@ Imports ClassLibraryCisepro.INVENTARIOS.ITEMS
 Imports ClassLibraryCisepro.ProcesosSql
 Imports ClassLibraryCisepro.VALIDACIONES
 Imports syscisepro.DATOS
+Imports ClassLibraryCisepro.USUARIOS_DEL_SISTEMA
 
 Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.ORDEN_DE_COMPRA
     ''' <summary>
@@ -58,7 +59,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.ORDEN_DE_COMPRA
         ReadOnly _validacionesAlfabetica As New ClassAlfabetico
         ReadOnly _validacionesDecimales As New ClassDecimal
         ReadOnly _validacionesConversion As New ClassConversion
-
+        ReadOnly _objUser As New ClassUsuarioGeneral
         Private Sub FormOrdenCompra_Load(ByVal sender As System.Object, ByVal e As EventArgs) Handles MyBase.Load
             ' DEFINIR TIPO Y COLOR DE SISTEMA
             Select Case _tipoCon
@@ -314,8 +315,9 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.ORDEN_DE_COMPRA
                         AprovarRequisicionProductoServicio(id)
                     Next
                 End If
-
-                Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, String.Empty)
+                Dim user As String = _objUser.DatosUsuario.ToString()
+                Dim nombreU As String = "ORDEN-COMPRA " & user
+                Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, nombreU)
                 If res(0) Then
                     ' DEJA EL FORMULARIO EN SU ESTADO INICIAL
                     DeshabilitadoInicio()

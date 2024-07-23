@@ -215,7 +215,9 @@ namespace SysCisepro3.TalentoHumano
             _objHistorialLaboral.IdSitioAuxHistoriaLaboral = 0;
             _sqlCommands.Add(_objHistorialLaboral.RegistrarNuevoHistorialLaboralCommand());
 
-            var res = ComandosSql.ProcesarTransacciones(TipoCon, _sqlCommands, "GUARDAR PERMISO");
+            var user = Usuario.Datos.ToString();
+            var nombre = $"PERMISO POR: {user}";
+            var res = ComandosSql.ProcesarTransacciones(TipoCon, _sqlCommands, nombre);
 
             if ((bool)res[0])
             {
@@ -251,7 +253,9 @@ namespace SysCisepro3.TalentoHumano
             _objRegistroPermisoPersonal.Estado = 0;
             _sqlCommands.Add(_objRegistroPermisoPersonal.AnularRegistroPermisoCommand());
 
-            var res = ComandosSql.ProcesarTransacciones(TipoCon, _sqlCommands, "ANULAR PERMISO");
+            var user = Usuario.Datos.ToString();
+            var nombre = $"PERMISO ANULADO: {user}";
+            var res = ComandosSql.ProcesarTransacciones(TipoCon, _sqlCommands, nombre);
 
             if ((bool)res[0])
             {

@@ -16,6 +16,7 @@ Imports syscisepro.DATOS
 Imports ClassLibraryCisepro.CONTABILIDAD.COMPROBANTES_ELECTRONICOS
 Imports System.Xml
 Imports System.Text
+Imports ClassLibraryCisepro.USUARIOS_DEL_SISTEMA
 
 Namespace FORMULARIOS.CONTABILIDAD.VENTAS
     ''' <summary>
@@ -68,6 +69,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
         ReadOnly _validacionesAlfanumerica As New ClassAlfanumerico
         ReadOnly _validacionesDecimales As New ClassDecimal
         ReadOnly _objetoComprobantesElectronicos As New ClassDocumentosElectronicos
+        ReadOnly _objUser As New ClassUsuarioGeneral
         Private resx = False
 
         Dim _varIdAsiento As Integer
@@ -520,7 +522,9 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                             NuevoRegistroAsientoDiarioCxc()
 
 
-                            Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, String.Empty)
+                            Dim user As String = _objUser.DatosUsuario.ToString()
+                            Dim nombreU As String = "NOTA-CREDITO-ANULADA " & user
+                            Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, nombreU)
                             If res(0) Then
                                 If _ptoEmisionNotaCredito = "002" Then ExportarXml() ' exporta la factura electónica a formato XML
                                 DeshabilitadoInicio()

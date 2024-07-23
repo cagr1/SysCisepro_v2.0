@@ -298,7 +298,7 @@ Namespace FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
         Private Sub btnCuadrarLibroDiario_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnCuadrarLibroDiario.Click
             Try
                 If dgvAsientosLibroDiario.Rows.Count < 2 Then
-                    MsgBox("NO HAY ASINETOS REGISTRADOS EN ESTE DIARIO", MsgBoxStyle.Information, "MENSAJE DE INFORMACION")
+                    MsgBox("NO HAY ASIENTOS REGISTRADOS EN ESTE DIARIO", MsgBoxStyle.Information, "MENSAJE DE INFORMACION")
                 Else
                     sumaTotalDebe()
                     sumaTotalHaber()

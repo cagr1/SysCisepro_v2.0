@@ -309,7 +309,9 @@ namespace SysCisepro3.TalentoHumano
             _objCuentaPersonal.Tipo = cbxTipoCuenta.Text;
             _sqlCommands.Add(_objCuentaPersonal.RegistrarNuevoCuentaBancoPersonalCommand());
 
-            var res =  ComandosSql.ProcesarTransacciones(TipoCon,_sqlCommands, "GUARDAR CUENTA BANCO") ;
+            var user = Usuario.Datos.ToString();
+            var nombre = $"INGRESO CUENTA-BANCO: {user}";
+            var res =  ComandosSql.ProcesarTransacciones(TipoCon,_sqlCommands, nombre) ;
 
             if ((bool)res[0])
             {
@@ -349,7 +351,9 @@ namespace SysCisepro3.TalentoHumano
             _objCuentaPersonal.Tipo = "AHO";
             _sqlCommands.Add(_objCuentaPersonal.RegistrarNuevoCuentaBancoPersonalCommand());
 
-            var res =  ComandosSql.ProcesarTransacciones(TipoCon,_sqlCommands, "GUARDAR CUENTA BANCO") ;
+            var user = Usuario.Datos.ToString();
+            var nombre = $"CUENTA-BANCO ANULADA: {user}";
+            var res =  ComandosSql.ProcesarTransacciones(TipoCon,_sqlCommands, nombre) ;
 
             if ((bool)res[0])
             {

@@ -4,6 +4,7 @@ Imports ClassLibraryCisepro.CONTABILIDAD.LIBRO_DIARIO
 Imports ClassLibraryCisepro.CONTABILIDAD.VENTAS
 Imports ClassLibraryCisepro.ENUMS
 Imports ClassLibraryCisepro.ProcesosSql
+Imports ClassLibraryCisepro.USUARIOS_DEL_SISTEMA
 
 Namespace FORMULARIOS.CONTABILIDAD.VENTAS
     ''' <summary>
@@ -41,7 +42,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
         ReadOnly _objetoNumeroRegistroAsientoNotaCredito As New ClassNumeroRegistroAsientoNotaCreditoVenta
         ReadOnly _objetoClienteGeneral As New ClassClienteGeneral
         ReadOnly _objetoAsientoLibroDiario As New ClassAsientosLibroDiario
-
+        ReadOnly _objUser As New ClassUsuarioGeneral
         Dim _total As Decimal
         Dim _idFacturaVenta As Integer
         Dim _notSelect As List(Of Integer)
@@ -197,7 +198,9 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
             ActualizarPagosFacturaVenta()
             AnularAsientoLibroDiarioXNumeroRegistro()
 
-            Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, String.Empty)
+            Dim user As String = _objUser.DatosUsuario.ToString()
+            Dim nombreU As String = "NOTA-CREDITO-ANULADA " & user
+            Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, nombreU)
             If res(0) Then ToolStripMenuItem1_Click(Nothing, Nothing)
             MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
 

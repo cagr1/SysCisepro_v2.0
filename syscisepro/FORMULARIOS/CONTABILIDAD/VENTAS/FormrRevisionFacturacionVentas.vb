@@ -9,6 +9,7 @@ Imports Microsoft.Office.Interop
 Imports syscisepro.DATOS
 Imports syscisepro.FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
 Imports Krypton.Toolkit
+Imports ClassLibraryCisepro.USUARIOS_DEL_SISTEMA
 
 Namespace FORMULARIOS.CONTABILIDAD.VENTAS
     ''' <summary>
@@ -46,6 +47,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
         ReadOnly _objetoComprobanteRetencionCompraVenta As New ClassComprobantesRetencionCompraVenta
         ReadOnly _objetoDetalleComprobantesRetencionVenta As New ClassDetalleComprobantesRetencionVenta
         ReadOnly _objetoNumeroRegistroAsientoFacturaVenta As New ClassNumeroRegistroAsientoFacturaVenta
+        ReadOnly _objUser As New ClassUsuarioGeneral
 
         Private _idComprobanteRetencionVenta As Int64
         Dim _fechaInicial As Date
@@ -486,8 +488,9 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                         _sqlCommands.Add(_objetoFacturasVentas.ActualizarEstadoFacturaVenta)
                     End If
                 Next
-
-                Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, String.Empty)
+                Dim user As String = _objUser.DatosUsuario.ToString()
+                Dim nombreU As String = "REVISION-FACTURA-VENTA " & user
+                Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, nombreU)
                 If res(0) Then
                     CargarFacturasMesActual()
                     btnAprovar.Enabled = True

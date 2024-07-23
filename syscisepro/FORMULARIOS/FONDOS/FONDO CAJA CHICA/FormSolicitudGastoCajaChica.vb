@@ -22,6 +22,7 @@ Imports System.Xml
 Imports System.Text
 Imports ClassLibraryCisepro.CONTABILIDAD.VENTAS
 Imports Krypton.Toolkit
+Imports ClassLibraryCisepro.USUARIOS_DEL_SISTEMA
 
 Namespace FORMULARIOS.FONDOS.FONDO_CAJA_CHICA
     ''' <summary>
@@ -70,6 +71,7 @@ Namespace FORMULARIOS.FONDOS.FONDO_CAJA_CHICA
         ReadOnly _validacionesNumeros As New ClassNumerico
         ReadOnly _validacionesDecimales As New ClassDecimal
         ReadOnly _objetoClienteGeneral As New ClassClienteGeneral
+        ReadOnly _objUser As New ClassUsuarioGeneral
 
         Dim _objetoInformacionTributaria As ClassInformacionTributaria
         Dim _objetoDocumentoNoDeducible As ClassDocumentoNoDeducible
@@ -988,7 +990,9 @@ Namespace FORMULARIOS.FONDOS.FONDO_CAJA_CHICA
                         End If
                     End If
 
-                    Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, String.Empty)
+                    Dim user As String = _objUser.DatosUsuario.ToString()
+                    Dim nombreU As String = "SOLICITUD-CAJA-CHICA " & user
+                    Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, nombreU)
                     If res(0) Then
 
                         If _validarComprobanteRetencion = 1 And _ptoEmisionRetencion = "002" Then ExportarXml()
