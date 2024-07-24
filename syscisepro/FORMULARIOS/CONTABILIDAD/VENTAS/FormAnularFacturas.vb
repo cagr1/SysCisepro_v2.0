@@ -5,7 +5,7 @@ Imports ClassLibraryCisepro.CONTABILIDAD.LIBRO_DIARIO
 Imports ClassLibraryCisepro.CONTABILIDAD.VENTAS
 Imports ClassLibraryCisepro.ENUMS
 Imports ClassLibraryCisepro.ProcesosSql
-Imports ClassLibraryCisepro.USUARIOS_DEL_SISTEMA
+
 
 Namespace FORMULARIOS.CONTABILIDAD.VENTAS
     ''' <summary>
@@ -37,6 +37,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
         End Property
         Dim _sqlCommands As List(Of SqlCommand)
         Public IdUsuario As Integer
+        Public UserName As String
 
         ReadOnly _objetoNotaCredito As New ClassNotaCredito
         ReadOnly _objetoNumeroRegistroAsientoNotaCredito As New ClassNumeroRegistroAsientoNotaCreditoVenta
@@ -47,7 +48,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
         ReadOnly _objetoDetalleComprobantesRetencionVenta As New ClassDetalleComprobantesRetencionVenta
         ReadOnly _objetoClienteGeneral As New ClassClienteGeneral
         ReadOnly _objetoAsientoLibroDiario As New ClassAsientosLibroDiario
-        ReadOnly _objUser As New ClassUsuarioGeneral
+
         Dim _idFacturaVenta As Integer
         Dim _notSelect As List(Of Integer)
 
@@ -287,8 +288,8 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
             ActualizarEstadoRetencionVenta() 'actualizar estado retención y detalle
             ActualizarEstadoNotaCredito() ' actualizar estado notade crédito y asiento
 
-            Dim user As String = _objUser.DatosUsuario.ToString()
-            Dim nombreU As String = "FACTURA-ANULADA " & user
+
+            Dim nombreU As String = "FACTURA-ANULADA " & UserName
             Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, nombreU)
             If res(0) Then btnNuevo_Click(Nothing, Nothing)
             MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")

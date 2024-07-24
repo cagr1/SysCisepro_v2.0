@@ -810,7 +810,7 @@ namespace SysCisepro3.Main
         }
         private void aPROBACIÓNDECOMPROBANTESEGRESOBANCOSToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var f = new syscisepro.FORMULARIOS.CONTABILIDAD.BANCOS.FormAprobacionComprobantesEgresoBancos { MdiParent = this, TipoCox = TipoCox, IdUsuario = ObjUsuario.IdUsuario };
+            var f = new syscisepro.FORMULARIOS.CONTABILIDAD.BANCOS.FormAprobacionComprobantesEgresoBancos { MdiParent = this, TipoCox = TipoCox, IdUsuario = ObjUsuario.IdUsuario, UserName = ObjUsuario.Datos };
             f.Show();
         }
         private void lIQUIDACIÓNFONDOROTATIVOToolStripMenuItem_Click(object sender, EventArgs e)
@@ -858,7 +858,7 @@ namespace SysCisepro3.Main
         #region ACTIVOS FIJOS
         private void iNGRESODEACTIVOSFIJOSToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form f = new syscisepro.FORMULARIOS.ACTIVOS_FIJOS.PROCESOS.FormIngresoActivosFijos { MdiParent = this, TipoCox = TipoCox, IdUsuario = ObjUsuario.IdUsuario };
+            Form f = new syscisepro.FORMULARIOS.ACTIVOS_FIJOS.PROCESOS.FormIngresoActivosFijos { MdiParent = this, TipoCox = TipoCox, IdUsuario = ObjUsuario.IdUsuario, UserName = ObjUsuario.Datos };
             f.Show();
         }
         private void iNGRESODEVEHICULOSDIRECTIVOSYSUPERVICIONESToolStripMenuItem_Click(object sender, EventArgs e)
@@ -1042,12 +1042,12 @@ namespace SysCisepro3.Main
         #region FONDOS
         private void sOLICITUDDEGASTOCAJACHICAToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form f = new syscisepro.FORMULARIOS.FONDOS.FONDO_CAJA_CHICA.FormSolicitudGastoCajaChica { MdiParent = this, TipoCox = TipoCox, IdUsuario = ObjUsuario.IdUsuario, RutaDocsElec = Settings.Default.RutaDocsElec };
+            Form f = new syscisepro.FORMULARIOS.FONDOS.FONDO_CAJA_CHICA.FormSolicitudGastoCajaChica { MdiParent = this, TipoCox = TipoCox, IdUsuario = ObjUsuario.IdUsuario, RutaDocsElec = Settings.Default.RutaDocsElec, UserName = ObjUsuario.Datos };
             f.Show();
         }
         private void lIQUIDACIÓNDECAJACHICAToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            Form f = new syscisepro.FORMULARIOS.FONDOS.FONDO_CAJA_CHICA.FormLiquidacionCajasChicas { MdiParent = this, TipoCox = TipoCox, IdUsuario = ObjUsuario.IdUsuario };
+            Form f = new syscisepro.FORMULARIOS.FONDOS.FONDO_CAJA_CHICA.FormLiquidacionCajasChicas { MdiParent = this, TipoCox = TipoCox, IdUsuario = ObjUsuario.IdUsuario, UserName = ObjUsuario.Datos  };
             f.Show();
         }
         private void sOLICITUDDEFONDOROTATIVOToolStripMenuItem_Click(object sender, EventArgs e)
@@ -1067,12 +1067,12 @@ namespace SysCisepro3.Main
         }
         private void sOLICITUDDEFONDOROTATIVOToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            Form f = new syscisepro.FORMULARIOS.FONDOS.FONDO_ROTATIVO.FormSolicitudFondoRotativo { MdiParent = this, TipoCox = TipoCox, IdUsuario = ObjUsuario.IdUsuario, RutaDocsElec = Settings.Default.RutaDocsElec };
+            Form f = new syscisepro.FORMULARIOS.FONDOS.FONDO_ROTATIVO.FormSolicitudFondoRotativo { MdiParent = this, TipoCox = TipoCox, IdUsuario = ObjUsuario.IdUsuario, RutaDocsElec = Settings.Default.RutaDocsElec, UserName = ObjUsuario.Datos };
             f.Show();
         }
         private void lIQUIDACIONFONDOROTATIVOToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form f = new syscisepro.FORMULARIOS.FONDOS.FONDO_ROTATIVO.FormLiquidacionFondoRotativo { MdiParent = this, TipoCox = TipoCox, IdUsuario = ObjUsuario.IdUsuario };
+            Form f = new syscisepro.FORMULARIOS.FONDOS.FONDO_ROTATIVO.FormLiquidacionFondoRotativo { MdiParent = this, TipoCox = TipoCox, IdUsuario = ObjUsuario.IdUsuario, UserName = ObjUsuario.Datos };
             f.Show();
         }
         private void dEFINIRFONDOROTATIVOToolStripMenuItem_Click(object sender, EventArgs e)
@@ -1110,12 +1110,12 @@ namespace SysCisepro3.Main
         #region CONTABILIDAD
         private void vERLIBRODIARIOGENERALToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form f = new syscisepro.FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO.FormAsientosLibroDiario { MdiParent = this, TipoCox = TipoCox, IsAdmin = IsAdmin };
+            Form f = new syscisepro.FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO.FormAsientosLibroDiario { MdiParent = this, TipoCox = TipoCox, IsAdmin = IsAdmin, UserName = ObjUsuario.Datos };
             f.Show();
         }
         private void nUEVOAJUSTEASIENTODEDIARIOToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form f = new syscisepro.FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO.FormAjustarAsientosLibroDiario { MdiParent = this, TipoCox = TipoCox };
+            Form f = new syscisepro.FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO.FormAjustarAsientosLibroDiario { MdiParent = this, TipoCox = TipoCox, UserName = ObjUsuario.Datos };
             f.Show();
         }
         private void mANTENIMIENTODEPLANDECUENTASToolStripMenuItem_Click(object sender, EventArgs e)
@@ -1135,22 +1135,22 @@ namespace SysCisepro3.Main
         }
         private void lIQUIDACIONESFONDOROTATIVOToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form f = new syscisepro.FORMULARIOS.CONTABILIDAD.LIQUIDACIONES.FormRevisionLiquidaciones { MdiParent = this, TipoCox = TipoCox, IdUsuario = ObjUsuario.IdUsuario };
+            Form f = new syscisepro.FORMULARIOS.CONTABILIDAD.LIQUIDACIONES.FormRevisionLiquidaciones { MdiParent = this, TipoCox = TipoCox, IdUsuario = ObjUsuario.IdUsuario, UserName = ObjUsuario.Datos };
             f.Show();
         }
         private void lIQUIDACIONESFONDOCAJACHICAToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form f = new syscisepro.FORMULARIOS.CONTABILIDAD.LIQUIDACIONES.FormRevisionLiquidacionesCajaChica { MdiParent = this, TipoCox = TipoCox, IdUsuario = ObjUsuario.IdUsuario };
+            Form f = new syscisepro.FORMULARIOS.CONTABILIDAD.LIQUIDACIONES.FormRevisionLiquidacionesCajaChica { MdiParent = this, TipoCox = TipoCox, IdUsuario = ObjUsuario.IdUsuario, UserName = ObjUsuario.Datos };
             f.Show();
         }
         private void cOMPROBANTEDEEGRESOToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form f = new syscisepro.FORMULARIOS.CONTABILIDAD.BANCOS.FormComprobanteEgresoBanco { MdiParent = this, TipoCox = TipoCox, IdUsuario = ObjUsuario.IdUsuario };
+            Form f = new syscisepro.FORMULARIOS.CONTABILIDAD.BANCOS.FormComprobanteEgresoBanco { MdiParent = this, TipoCox = TipoCox, IdUsuario = ObjUsuario.IdUsuario, UserName = ObjUsuario.Datos };
             f.Show();
         }
         private void cOMPROBANTEDEINGRESOToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form f = new syscisepro.FORMULARIOS.CONTABILIDAD.BANCOS.FormComprobanteIngresoBanco { MdiParent = this, TipoCox = TipoCox, IdUsuario = ObjUsuario.IdUsuario };
+            Form f = new syscisepro.FORMULARIOS.CONTABILIDAD.BANCOS.FormComprobanteIngresoBanco { MdiParent = this, TipoCox = TipoCox, IdUsuario = ObjUsuario.IdUsuario, UserName = ObjUsuario.Datos };
             f.Show();
         }
         private void rEVISIÓNCHEQUESEMITIDOSToolStripMenuItem_Click(object sender, EventArgs e)
@@ -1185,12 +1185,12 @@ namespace SysCisepro3.Main
         }
         private void aNULARCOMPROBANTESDEEGRESOToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form f = new syscisepro.FORMULARIOS.CONTABILIDAD.BANCOS.FormAnularComprobanteEgresoBancos { MdiParent = this, TipoCox = TipoCox, IdUsuario = ObjUsuario.IdUsuario };
+            Form f = new syscisepro.FORMULARIOS.CONTABILIDAD.BANCOS.FormAnularComprobanteEgresoBancos { MdiParent = this, TipoCox = TipoCox, IdUsuario = ObjUsuario.IdUsuario, UserName = ObjUsuario.Datos };
             f.Show();
         }
         private void aNULARCOMPROBANTESDEINGRESOToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form f = new syscisepro.FORMULARIOS.CONTABILIDAD.BANCOS.FormAnularComprobanteIngresoBancos { MdiParent = this, TipoCox = TipoCox, IdUsuario = ObjUsuario.IdUsuario };
+            Form f = new syscisepro.FORMULARIOS.CONTABILIDAD.BANCOS.FormAnularComprobanteIngresoBancos { MdiParent = this, TipoCox = TipoCox, IdUsuario = ObjUsuario.IdUsuario, UserName = ObjUsuario.Datos };
             f.Show();
         }
         private void cARGARCOMPROBANTESDEEGRESOToolStripMenuItem_Click(object sender, EventArgs e)
@@ -1215,17 +1215,17 @@ namespace SysCisepro3.Main
         }
         private void rEQUISICIÓNDEPRODUCTOSSERVICIOSToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form f = new syscisepro.FORMULARIOS.CONTABILIDAD.COMPRAS.REQUERIMIENTOS.FormRequisicionProductoServicio { MdiParent = this, TipoCox = TipoCox, IdUsuario = ObjUsuario.IdUsuario };
+            Form f = new syscisepro.FORMULARIOS.CONTABILIDAD.COMPRAS.REQUERIMIENTOS.FormRequisicionProductoServicio { MdiParent = this, TipoCox = TipoCox, IdUsuario = ObjUsuario.IdUsuario, UserName = ObjUsuario.Datos };
             f.Show();
         }
         private void aPROBACIÓNDEREQUISICIÓNDEPRODUCTOSERVICIOToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form f = new syscisepro.FORMULARIOS.CONTABILIDAD.COMPRAS.REQUERIMIENTOS.FormAprovacionRequisicion { MdiParent = this, TipoCox = TipoCox, IdUsuario = ObjUsuario.IdUsuario };
+            Form f = new syscisepro.FORMULARIOS.CONTABILIDAD.COMPRAS.REQUERIMIENTOS.FormAprovacionRequisicion { MdiParent = this, TipoCox = TipoCox, IdUsuario = ObjUsuario.IdUsuario, UserName = ObjUsuario.Datos };
             f.Show();
         }
         private void nUEVAORDENDECOMPRAToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form f = new syscisepro.FORMULARIOS.CONTABILIDAD.COMPRAS.ORDEN_DE_COMPRA.FormOrdenCompra { MdiParent = this, TipoCox = TipoCox, IdUsuario = ObjUsuario.IdUsuario };
+            Form f = new syscisepro.FORMULARIOS.CONTABILIDAD.COMPRAS.ORDEN_DE_COMPRA.FormOrdenCompra { MdiParent = this, TipoCox = TipoCox, IdUsuario = ObjUsuario.IdUsuario, UserName = ObjUsuario.Datos };
             f.Show();
         }
         private void bUSCARORDENDECOMPRAToolStripMenuItem_Click(object sender, EventArgs e)
@@ -1235,12 +1235,12 @@ namespace SysCisepro3.Main
         }
         private void rEGISTRODECOMPROBANTESDECOMPRAToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form f = new syscisepro.FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA.FormRegistroComprobanteCompra { MdiParent = this, TipoCox = TipoCox, IdUsuario = ObjUsuario.IdUsuario, RutaDocsElec = Settings.Default.RutaDocsElec };
+            Form f = new syscisepro.FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA.FormRegistroComprobanteCompra { MdiParent = this, TipoCox = TipoCox, IdUsuario = ObjUsuario.IdUsuario, RutaDocsElec = Settings.Default.RutaDocsElec, UserName = ObjUsuario.Datos };
             f.Show();
         }
         private void aJUSTARCOMPROBANTESCOMPRAToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form f = new syscisepro.FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA.FormAjustarComprobantesCompra { MdiParent = this, TipoCox = TipoCox, IdUsuario = ObjUsuario.IdUsuario };
+            Form f = new syscisepro.FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA.FormAjustarComprobantesCompra { MdiParent = this, TipoCox = TipoCox, IdUsuario = ObjUsuario.IdUsuario, UserName = ObjUsuario.Datos };
             f.Show();
         }
         private void bUSCARCOMPROBANTESDECOMPRAToolStripMenuItem_Click(object sender, EventArgs e)
@@ -1250,17 +1250,17 @@ namespace SysCisepro3.Main
         }
         private void aNULARCOMPROBANTESDECOMPRAToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form f = new syscisepro.FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA.FormAnularComprobantesCompra { MdiParent = this, TipoCox = TipoCox, IdUsuario = ObjUsuario.IdUsuario };
+            Form f = new syscisepro.FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA.FormAnularComprobantesCompra { MdiParent = this, TipoCox = TipoCox, IdUsuario = ObjUsuario.IdUsuario, UserName = ObjUsuario.Datos };
             f.Show();
         } 
         private void toolStripMenuItem5_Click(object sender, EventArgs e)
         {
-            Form f = new syscisepro.FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA.FormComprobantesRetencionCompras { MdiParent = this, TipoCox = TipoCox, IdUsuario = ObjUsuario.IdUsuario, RutaDocsElec = Settings.Default.RutaDocsElec };
+            Form f = new syscisepro.FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA.FormComprobantesRetencionCompras { MdiParent = this, TipoCox = TipoCox, IdUsuario = ObjUsuario.IdUsuario, RutaDocsElec = Settings.Default.RutaDocsElec, UserName = ObjUsuario.Datos };
             f.Show();
         } 
         private void aJUSTARCOMPROBANTESDERETENCIÓNToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form f = new syscisepro.FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA.FormAjustarComprobantesRetencionCompras { MdiParent = this, TipoCox = TipoCox, IdUsuario = ObjUsuario.IdUsuario };            
+            Form f = new syscisepro.FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA.FormAjustarComprobantesRetencionCompras { MdiParent = this, TipoCox = TipoCox, IdUsuario = ObjUsuario.IdUsuario, UserName = ObjUsuario.Datos };            
             f.Show();
         }
         private void rEGISTRODEPAGOSACOMPROBANTESDECOMPRAToolStripMenuItem_Click(object sender, EventArgs e)
@@ -1305,27 +1305,27 @@ namespace SysCisepro3.Main
         }
         private void fACTURACIONToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form f = new syscisepro.FORMULARIOS.CONTABILIDAD.VENTAS.FormFacturaVenta { MdiParent = this, TipoCox = TipoCox, IdUsuario = ObjUsuario.IdUsuario, RutaDocsElec = Settings.Default.RutaDocsElec };
+            Form f = new syscisepro.FORMULARIOS.CONTABILIDAD.VENTAS.FormFacturaVenta { MdiParent = this, TipoCox = TipoCox, IdUsuario = ObjUsuario.IdUsuario, RutaDocsElec = Settings.Default.RutaDocsElec, UserName = ObjUsuario.Datos };
             f.Show();
         }
         private void aJUSTARFACTURASToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form f = new syscisepro.FORMULARIOS.CONTABILIDAD.VENTAS.FormAjustarFacturasVenta { MdiParent = this, TipoCox = TipoCox, IdUsuario = ObjUsuario.IdUsuario };
+            Form f = new syscisepro.FORMULARIOS.CONTABILIDAD.VENTAS.FormAjustarFacturasVenta { MdiParent = this, TipoCox = TipoCox, IdUsuario = ObjUsuario.IdUsuario, UserName = ObjUsuario.Datos };
             f.Show();
         }
         private void aNULARFACTURASToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form f = new syscisepro.FORMULARIOS.CONTABILIDAD.VENTAS.FormAnularFacturas { MdiParent = this, TipoCox = TipoCox, IdUsuario = ObjUsuario.IdUsuario };
+            Form f = new syscisepro.FORMULARIOS.CONTABILIDAD.VENTAS.FormAnularFacturas { MdiParent = this, TipoCox = TipoCox, IdUsuario = ObjUsuario.IdUsuario, UserName = ObjUsuario.Datos };
             f.Show();
         }
         private void rEGISTRORETENCIONESDEFACTURASEMITIDASToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form f = new syscisepro.FORMULARIOS.CONTABILIDAD.VENTAS.FormRegistroComprobanteRetencionVenta { MdiParent = this, TipoCox = TipoCox, IdUsuario = ObjUsuario.IdUsuario };
+            Form f = new syscisepro.FORMULARIOS.CONTABILIDAD.VENTAS.FormRegistroComprobanteRetencionVenta { MdiParent = this, TipoCox = TipoCox, IdUsuario = ObjUsuario.IdUsuario, UserName = ObjUsuario.Datos };
             f.Show();
         }
         private void aJUSTARRETENCIONESDEFACTURASEMITIDASToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form f = new syscisepro.FORMULARIOS.CONTABILIDAD.VENTAS.FormAjustarComprobantesRetencionVentas { MdiParent = this, TipoCox = TipoCox, IdUsuario = ObjUsuario.IdUsuario };
+            Form f = new syscisepro.FORMULARIOS.CONTABILIDAD.VENTAS.FormAjustarComprobantesRetencionVentas { MdiParent = this, TipoCox = TipoCox, IdUsuario = ObjUsuario.IdUsuario, UserName = ObjUsuario.Datos };
             f.Show();
         }
         private void cONSULTADEFACTURASToolStripMenuItem_Click(object sender, EventArgs e)
@@ -1340,12 +1340,12 @@ namespace SysCisepro3.Main
         }
         private void nOTADECRÉDITOToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form f = new syscisepro.FORMULARIOS.CONTABILIDAD.VENTAS.FormNotaCredito { MdiParent = this, TipoCox = TipoCox, IdUsuario = ObjUsuario.IdUsuario, RutaDocsElec = Settings.Default.RutaDocsElec };
+            Form f = new syscisepro.FORMULARIOS.CONTABILIDAD.VENTAS.FormNotaCredito { MdiParent = this, TipoCox = TipoCox, IdUsuario = ObjUsuario.IdUsuario, RutaDocsElec = Settings.Default.RutaDocsElec, UserName = ObjUsuario.Datos };
             f.Show();
         }
         private void aNULARNOTADECRÉDITOToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form f = new syscisepro.FORMULARIOS.CONTABILIDAD.VENTAS.FormAnularNotaCredito { MdiParent = this, TipoCox = TipoCox, IdUsuario = ObjUsuario.IdUsuario };
+            Form f = new syscisepro.FORMULARIOS.CONTABILIDAD.VENTAS.FormAnularNotaCredito { MdiParent = this, TipoCox = TipoCox, IdUsuario = ObjUsuario.IdUsuario, UserName = ObjUsuario.Datos };
             f.Show();
         }
         private void cONSULTADENOTASDECRÉDITOToolStripMenuItem_Click(object sender, EventArgs e)

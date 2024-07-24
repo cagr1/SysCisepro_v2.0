@@ -10,7 +10,7 @@ Imports ClassLibraryCisepro.CONTABILIDAD.VENTAS
 Imports ClassLibraryCisepro.ENUMS
 Imports ClassLibraryCisepro.ProcesosSql
 Imports syscisepro.FORMULARIOS.CONTABILIDAD.PORCENTAJES_RETENCION
-Imports ClassLibraryCisepro.USUARIOS_DEL_SISTEMA
+
 
 Namespace FORMULARIOS.CONTABILIDAD.VENTAS
     ''' <summary>
@@ -42,7 +42,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
         End Property
         Dim _sqlCommands As List(Of SqlCommand)
         Public IdUsuario As Integer
-
+        Public UserName As String
         ReadOnly _objetoFacturaVenta As New ClassFacturaVenta
         ReadOnly _objetoPagosFacturaVenta As New ClassPagosFacturaVenta
         ReadOnly _objetoNumeroRegistroAsientoFacturaVenta As New ClassNumeroRegistroAsientoFacturaVenta
@@ -59,7 +59,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
         ReadOnly _objetoAsientoLibroDiario As New ClassAsientosLibroDiario
         ReadOnly _objetoPlanCuentas As New ClassPlanDeCuentas
         ReadOnly _objetoCentroCosto As New ClassCentroCosto
-        ReadOnly _objUser As New ClassUsuarioGeneral
+
         Dim _validarRenta As Integer = 0
 
         Dim _busacarNumeroFactura As Integer = 0 ' para difereciar al cargar datos de grilla
@@ -517,8 +517,8 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                             ActualizarRegistroAsientoDiarioCxc()
                             GuardarRegistroPagosFacturaVenta()
 
-                            Dim user As String = _objUser.DatosUsuario.ToString()
-                            Dim nombreU As String = "COMPROBANTE-RETENCION " & user
+
+                            Dim nombreU As String = "COMPROBANTE-RETENCION " & UserName
                             Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, nombreU)
                             If res(0) Then
                                 LimpiarParametros()

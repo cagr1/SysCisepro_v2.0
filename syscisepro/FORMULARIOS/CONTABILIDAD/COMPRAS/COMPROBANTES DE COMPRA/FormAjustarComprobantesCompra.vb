@@ -12,6 +12,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
     ''' </summary>
     Public Class FormAjustarComprobantesCompra
         Private _tipoCon As TipoConexion
+        Public UserName As String
         Property TipoCox As Integer
             Get
                 Select Case _tipoCon
@@ -266,8 +267,8 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
 
                     ModificarComprobanteCompra()
 
-                    Dim user As String = _objUser.DatosUsuario.ToString()
-                    Dim nombreU As String = "AJUSTAR COMPROBANTE COMPRA " & user
+
+                    Dim nombreU As String = "AJUSTAR COMPROBANTE COMPRA " & UserName
                     Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, nombreU)
                     If res(0) Then
 

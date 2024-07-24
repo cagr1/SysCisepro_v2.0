@@ -313,7 +313,15 @@ namespace SysCisepro3.TalentoHumano
                   
                  }
 
-                     var res = ComandosSql.ProcesarTransacciones(TipoCon, _sqlCommands, "SALIDA PERSONAL");
+                string user = Usuario.Datos.ToString();
+                string nombreU = "";
+
+                if (_estado == 1)
+                    nombreU = $"REGISTRO SALIDA: {user}";
+                else if (_estado == 2)
+                    nombreU = $"MODIFICACION SALIDA: {user}";
+
+                var res = ComandosSql.ProcesarTransacciones(TipoCon, _sqlCommands, nombreU);
                      if ((bool)res[0])
                      {
                          _estado = 0;
@@ -321,15 +329,18 @@ namespace SysCisepro3.TalentoHumano
                          CargarPersonal(txtFiltro.Text.Trim());
                          dgvPersonal_SelectionChanged(null, null);
                      }
-                     MessageBox.Show((string)res[1], "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
-             
-             }
+                     //MessageBox.Show((string)res[1], "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                KryptonMessageBox.Show((string)res[1], "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+
+
+            }
              else 
                  
-                MessageBox.Show(@"No se puede guardar debido a que no ha llenado todos los campos necesarios!",
-                    "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+               // MessageBox.Show(@"No se puede guardar debido a que no ha llenado todos los campos necesarios!","MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            KryptonMessageBox.Show(@"No se puede guardar debido a que no ha llenado todos los campos necesarios!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
 
-         }
+
+        }
 
          private void GuardarNuevoRegistroSalidaPersonal()
          {

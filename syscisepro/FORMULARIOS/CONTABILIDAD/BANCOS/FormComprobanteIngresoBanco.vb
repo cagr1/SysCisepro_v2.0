@@ -42,7 +42,7 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
             End Set
         End Property
         Public IdUsuario As Integer
-
+        Public UserName As String
         ReadOnly _objetoComprobanteIngresoBancos As New ClassComprobanteIngresoBanco
         ReadOnly _objetoConceptosComprobanteIngresoBancos As New ClassConceptosComprobanteIngresoBancos
         ReadOnly _objetoCentroCosto As New ClassCentroCosto
@@ -744,7 +744,8 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
                                     End If
                                 End If
 
-                                Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, String.Empty)
+                                Dim nombreU As String = "COMPROBANTE INGRESO BANCO " & UserName
+                                Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, nombreU)
                                 If res(0) Then
 
                                     ' DEJA EL FORMULARIO EN SU ESTADO INICIAL

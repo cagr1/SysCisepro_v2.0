@@ -22,7 +22,8 @@ Imports System.Xml
 Imports System.Text
 Imports ClassLibraryCisepro.CONTABILIDAD.VENTAS
 Imports Krypton.Toolkit
-Imports ClassLibraryCisepro.USUARIOS_DEL_SISTEMA
+
+
 
 Namespace FORMULARIOS.FONDOS.FONDO_CAJA_CHICA
     ''' <summary>
@@ -54,6 +55,7 @@ Namespace FORMULARIOS.FONDOS.FONDO_CAJA_CHICA
         End Property
         Dim _sqlCommands As List(Of SqlCommand)
         Public IdUsuario As Integer
+        Public UserName As String
 
         ReadOnly _crControlcombustible As New crControlCombustibleCajaChica
         ReadOnly _objetoDetalleRetencionPlanCuentas As New ClassDetalleRetencionPlanCuentas
@@ -71,7 +73,7 @@ Namespace FORMULARIOS.FONDOS.FONDO_CAJA_CHICA
         ReadOnly _validacionesNumeros As New ClassNumerico
         ReadOnly _validacionesDecimales As New ClassDecimal
         ReadOnly _objetoClienteGeneral As New ClassClienteGeneral
-        ReadOnly _objUser As New ClassUsuarioGeneral
+
 
         Dim _objetoInformacionTributaria As ClassInformacionTributaria
         Dim _objetoDocumentoNoDeducible As ClassDocumentoNoDeducible
@@ -149,6 +151,7 @@ Namespace FORMULARIOS.FONDOS.FONDO_CAJA_CHICA
         Dim _validarComprobanteLiqCompra As Integer '=== 0 --> NO HAY COMPROBANTE / 1--> SI HAY COMPROBANTE
         Dim _validarLlenarDocumento As Integer  '=== 0 --> NO HAY COMPROBANTE / 1--> SI HAY COMPROBANTE
 
+
         Private Sub FormSolicitudGastoCajaChica_Load(ByVal sender As System.Object, ByVal e As EventArgs) Handles MyBase.Load
             ' DEFINIR TIPO Y COLOR DE SISTEMA
             Select Case _tipoCon
@@ -204,6 +207,8 @@ Namespace FORMULARIOS.FONDOS.FONDO_CAJA_CHICA
             _sqlCommands = New List(Of SqlCommand)
             AutocompletarNombreCliente()
         End Sub
+
+
         Private Sub LimpiarVariables()
             _tipoAmbiente = 0
             _tipoEmision = 0
@@ -990,8 +995,8 @@ Namespace FORMULARIOS.FONDOS.FONDO_CAJA_CHICA
                         End If
                     End If
 
-                    Dim user As String = _objUser.DatosUsuario.ToString()
-                    Dim nombreU As String = "SOLICITUD-CAJA-CHICA " & user
+
+                    Dim nombreU As String = "SOLICITUD-CAJA-CHICA " & UserName
                     Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, nombreU)
                     If res(0) Then
 
@@ -1015,7 +1020,16 @@ Namespace FORMULARIOS.FONDOS.FONDO_CAJA_CHICA
                         Habilitar(False)
 
                     End If
-                    MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
+
+                    'MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
+                    Dim messageIcon As KryptonMessageBoxIcon
+                    If res(0) Then
+                        messageIcon = KryptonMessageBoxIcon.Information
+                    Else
+                        messageIcon = KryptonMessageBoxIcon.Exclamation
+                    End If
+                    KryptonMessageBox.Show(res(1), "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, messageIcon)
+
 
                 Else
                     MsgBox("NO SE PUEDE GUARDAR." & vbNewLine & "NO SE HAN LLENADO LOS DATOS DEL COMPROBANTE / FACTURA.", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")

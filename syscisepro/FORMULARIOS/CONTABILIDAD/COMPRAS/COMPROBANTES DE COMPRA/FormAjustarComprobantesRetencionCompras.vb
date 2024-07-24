@@ -11,7 +11,7 @@ Imports ClassLibraryCisepro.CONTABILIDAD.RETENCIONES_EMITIDAS
 Imports syscisepro.FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
 Imports ClassLibraryCisepro.CONTABILIDAD.VENTAS
 Imports ClassLibraryCisepro.CONTABILIDAD.LIBRO_DIARIO
-Imports ClassLibraryCisepro.USUARIOS_DEL_SISTEMA
+
 
 Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
     ''' <summary>
@@ -44,6 +44,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
         End Property
 
         Public IdUsuario As Integer
+        Public UserName As String
         Dim _sqlCommands As List(Of SqlCommand)
 
         ReadOnly _objetoComprobantesCompra As New ClassComprobantesCompra
@@ -59,7 +60,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
         ReadOnly _objetoConceptos As New ClassConceptosPago
         ReadOnly _objetoPorcentajes As New ClassPorcentajes
         ReadOnly _objetoContribuyente As New ClassContribuyenteRetenido
-        ReadOnly _objUser As New ClassUsuarioGeneral
+
 
         Private Sub FormAjustarComprobantesRetencionCompras_Load(ByVal sender As System.Object, ByVal e As EventArgs) Handles MyBase.Load
             ' DEFINIR TIPO Y COLOR DE SISTEMA
@@ -407,8 +408,8 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
                         End If
                     End If
 
-                    Dim user As String = _objUser.DatosUsuario.ToString()
-                    Dim nombreU As String = "ANULAR COMPROBANTE RETENCION COMPRA " & user
+
+                    Dim nombreU As String = "ANULAR COMPROBANTE RETENCION COMPRA " & UserName
                     Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, String.Empty)
                     If res(0) Then
                         LimpiarParametrosRetencion()

@@ -8,7 +8,7 @@ Imports ClassLibraryCisepro.ENUMS
 Imports ClassLibraryCisepro.ProcesosSql
 Imports syscisepro.FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
 Imports ClassLibraryCisepro.CONTABILIDAD.RETENCIONES_EMITIDAS
-Imports ClassLibraryCisepro.USUARIOS_DEL_SISTEMA
+
 
 Namespace FORMULARIOS.CONTABILIDAD.VENTAS
     ''' <summary>
@@ -41,7 +41,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
 
         Dim _sqlCommands As List(Of SqlCommand)
         Public IdUsuario As Integer
-
+        Public UserName As String
         ReadOnly _objetoFacturaVenta As New ClassFacturaVenta
         ReadOnly _objetoPagosFacturaVenta As New ClassPagosFacturaVenta
         ReadOnly _objetoNumeroRegistroAsientoFacturaVenta As New ClassNumeroRegistroAsientoFacturaVenta
@@ -55,7 +55,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
         ReadOnly _objetoConceptos As New ClassConceptosPago
         ReadOnly _objetoPorcentajes As New ClassPorcentajes
         ReadOnly _objetoContribuyente As New ClassContribuyenteRetenido
-        ReadOnly _objUser As New ClassUsuarioGeneral
+
 
         Private Sub FormAjustarComprobantesRetencionVentas_Load(ByVal sender As System.Object, ByVal e As EventArgs) Handles MyBase.Load
             ' DEFINIR TIPO Y COLOR DE SISTEMA
@@ -471,8 +471,8 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                         .IdFactura = lblIdFacturaVenta.Text
                     End With
                     _sqlCommands.Add(_objetoPagosFacturaVenta.AnularPagoRetencionFacturaVentaByIdFacturaVenta)
-                    Dim user As String = _objUser.DatosUsuario.ToString()
-                    Dim nombreU As String = "ANULACION COMPROBANTES RETENCION VENTAS " & user
+
+                    Dim nombreU As String = "ANULACION COMPROBANTES RETENCION VENTAS " & UserName
                     Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, nombreU)
                     If res(0) Then
                         LimpiarParametrosRetencion()

@@ -23,7 +23,7 @@ Imports ClassLibraryCisepro.CONTABILIDAD.COMPROBANTES_ELECTRONICOS
 Imports System.Text
 Imports syscisepro.FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
 Imports syscisepro.FORMULARIOS.CONTABILIDAD.PORCENTAJES_RETENCION
-Imports ClassLibraryCisepro.USUARIOS_DEL_SISTEMA
+
 
 
 Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
@@ -33,6 +33,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
     Public Class FormRegistroComprobanteCompra
 
         Private _tipoCon As TipoConexion
+        Public UserName As String
         Property TipoCox As Integer
             Private Get
                 Select Case _tipoCon
@@ -83,7 +84,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
         ReadOnly _objetoPorcentajes As New ClassPorcentajes
         ReadOnly _objetoAts As New ClassAnexoTransaccional
         ReadOnly _objetoComprobantesElectronicos As New ClassDocumentosElectronicos
-        ReadOnly _objUser As New ClassUsuarioGeneral
+
 
         '=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= LIBRO  DIARIO =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
         ReadOnly _objetoLibroDiario As New ClassLibroDiario
@@ -1261,8 +1262,8 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
                     End If
 
 
-                    Dim user As String = _objUser.DatosUsuario.ToString()
-                    Dim nombreU As String = "REGISTRO-COMPROBANTE-COMPRA " & user
+
+                    Dim nombreU As String = "REGISTRO-COMPROBANTE-COMPRA " & UserName
                     Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, nombreU)
                     If res(0) Then
                         _estado = 0

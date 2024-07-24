@@ -7,6 +7,7 @@ Imports ClassLibraryCisepro.ProcesosSql
 Imports syscisepro.DATOS
 Imports syscisepro.FORMULARIOS.INVENTARIOS.PROCESO
 Imports ClassLibraryCisepro.VALIDACIONES
+Imports Microsoft.VisualBasic.ApplicationServices
 
 Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.REQUERIMIENTOS
     ''' <summary>
@@ -37,6 +38,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.REQUERIMIENTOS
             End Set
         End Property
         Public IdUsuario As Integer
+        Public UserName As String
         Dim _sqlCommands As List(Of SqlCommand)
 
         ReadOnly _objVal As New ClassNumerico
@@ -233,7 +235,8 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.REQUERIMIENTOS
                     GuardarRegistroRequisicionProductoServicio()
                     GuardarRegistroDetalleRequisicionProductoServicio()
 
-                    Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, String.Empty)
+                    Dim nombreU As String = "Requisicion Producto Servicio: " & UserName
+                    Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, nombreU)
                     If res(0) Then
                         DeshabilitadoInicio()
                     End If

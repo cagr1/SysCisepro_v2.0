@@ -37,6 +37,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
             End Set
         End Property
         Public IdUsuario As Integer
+        Public UserName As String
         Dim _notSelect As List(Of Integer)
 
         ReadOnly _objetoComprobantesCompra As New ClassComprobantesCompra
@@ -176,8 +177,8 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
 
                 ActualizarEstadoComprobanteCompra()
 
-                Dim user As String = _objUser.DatosUsuario.ToString()
-                Dim nombreU As String = "ANULAR COMPROBANTE COMPRA " & user
+
+                Dim nombreU As String = "ANULAR COMPROBANTE COMPRA " & UserName
                 Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, String.Empty)
                 If res(0) Then
                     CargarComprobantesCompra()

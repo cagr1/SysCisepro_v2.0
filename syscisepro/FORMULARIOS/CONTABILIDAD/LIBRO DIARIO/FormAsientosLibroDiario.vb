@@ -4,10 +4,11 @@ Imports ClassLibraryCisepro.CONTABILIDAD.PLAN_DE_CUENTAS
 Imports ClassLibraryCisepro.ENUMS
 Imports ClassLibraryCisepro.ProcesosSql
 Imports ClassLibraryCisepro.VALIDACIONES
+Imports Krypton.Toolkit
 Imports Microsoft.Office.Interop
 Imports syscisepro.DATOS
 Imports syscisepro.FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO.REPORTES
-Imports ClassLibraryCisepro.USUARIOS_DEL_SISTEMA
+
 
 Namespace FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
     ''' <summary>
@@ -38,7 +39,7 @@ Namespace FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
             End Set
         End Property
 
-
+        Public UserName As String
         Private admin As Boolean
         Public Property IsAdmin() As Boolean
             Get
@@ -61,7 +62,7 @@ Namespace FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
         ReadOnly _objetoAsientoLibroDiario As New ClassAsientosLibroDiario
         ReadOnly _objetoAjustarAsientos As New ClassAjustarAsientosLibroDiario
         ReadOnly _objetoPlanCuentas As New ClassPlanDeCuentas
-        ReadOnly _objUser As New ClassUsuarioGeneral
+
 
         Private Sub AutocompletarPlanCuentas()
             Try
@@ -402,11 +403,18 @@ Namespace FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
                         Return
                     End If
 
-                    Dim user As String = _objUser.DatosUsuario.ToString()
-                    Dim nombreU As String = "AJUSTE EN BUSQUEDA LIBRO DIARIO " & user
+
+                    Dim nombreU As String = "AJUSTE EN BUSQUEDA LIBRO DIARIO " & UserName
                     Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, String.Empty)
                     If res(0) Then btnBuscarAsiento.PerformClick()
-                    MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
+                    'MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
+                    Dim messageIcon As KryptonMessageBoxIcon
+                    If res(0) Then
+                        messageIcon = KryptonMessageBoxIcon.Information
+                    Else
+                        messageIcon = KryptonMessageBoxIcon.Exclamation
+                    End If
+                    KryptonMessageBox.Show(res(1), "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, messageIcon)
 
                 Else
                     MsgBox("NO SE PUEDE GUARDAR." & vbNewLine & "LOS VALORES DE EL DEBE Y EL HABER NO COINCIDEN POR FAVOR REVISE LAS TRANSACCIONES.", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACION")
@@ -498,14 +506,21 @@ Namespace FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
                     _sqlCommands.Add(_objetoAsientoLibroDiario.ModificarRegistroAsientoLibroDiarioCommand())
                 Next
 
-                Dim user As String = _objUser.DatosUsuario.ToString()
-                Dim nombreU As String = "ANULACION EN BSUQUEDA LIBRO DIARIO " & user
+
+                Dim nombreU As String = "ANULACION EN BUSQUEDA LIBRO DIARIO " & UserName
                 Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, nombreU)
                 If res(0) Then btnBuscarAsiento.PerformClick()
-                MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
-
+                'MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
+                Dim messageIcon As KryptonMessageBoxIcon
+                If res(0) Then
+                    messageIcon = KryptonMessageBoxIcon.Information
+                Else
+                    messageIcon = KryptonMessageBoxIcon.Exclamation
+                End If
+                KryptonMessageBox.Show(res(1), "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, messageIcon)
             Catch ex As Exception
-                MsgBox("NO SE PUEDE GUARDAR." & ex.Message, MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACION")
+                'MsgBox("NO SE PUEDE GUARDAR." & ex.Message, MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACION")
+                KryptonMessageBox.Show("NO SE PUEDE GUARDAR " & ex.Message, "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
 
         End Sub

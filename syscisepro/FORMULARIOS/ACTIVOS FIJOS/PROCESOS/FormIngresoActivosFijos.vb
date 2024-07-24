@@ -107,7 +107,7 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
         Dim _porcentajeDepreciacion As Decimal
         Dim _valorDepreciacion As Decimal
         Public pdfFilePath As String
-
+        Public UserName As String
 
         'Public Sub New()
 
@@ -2374,8 +2374,8 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
 
             If EsDialogo Then DialogResult = DialogResult.OK
 
-            Dim user As String = _objUser.DatosUsuario.ToString()
-            Dim nombreU As String = "ACTIVO INGRESADO: " & user
+
+            Dim nombreU As String = "ACTIVO INGRESADO: " & UserName
             Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, nombreU)
             If res(0) Then
                 Select Case _formDialogoNuevoActivo.Tipo

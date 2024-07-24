@@ -22,7 +22,7 @@ Imports System.Xml
 Imports System.Text
 Imports ClassLibraryCisepro.CONTABILIDAD.VENTAS
 Imports Krypton.Toolkit
-Imports ClassLibraryCisepro.USUARIOS_DEL_SISTEMA
+
 
 Namespace FORMULARIOS.FONDOS.FONDO_ROTATIVO
     ''' <summary>
@@ -54,6 +54,7 @@ Namespace FORMULARIOS.FONDOS.FONDO_ROTATIVO
         End Property
         Dim _sqlCommands As List(Of SqlCommand)
         Public IdUsuario As Integer
+        Public UserName As String
         ReadOnly _objetoGastosFondoRotativo As New ClassGastosFondoRotativo
         ReadOnly _objetoProvincias As New ClassProvincias
         ReadOnly _objetoCiudades As New ClassCiudades
@@ -84,7 +85,7 @@ Namespace FORMULARIOS.FONDOS.FONDO_ROTATIVO
         Dim _formComprobanteCompra As FormRegistroComprobanteCompra
         ReadOnly _objetoComprobantesElectronicos As New ClassDocumentosElectronicos
         ReadOnly _objetoClienteGeneral As New ClassClienteGeneral
-        ReadOnly _objUser As New ClassUsuarioGeneral
+
 
         '=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= COMPROBANTE DE COMPRA =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
         Dim _idProveedorGeneral As Int64
@@ -840,8 +841,8 @@ _tipoAmbiente, _establecimientoLiqCompra, _ptoEmisionLiqCompra,
                         End If
                     End If
 
-                    Dim user As String = _objUser.DatosUsuario.ToString()
-                    Dim nombreU As String = "SOLICITUD-FONDO-ROTATIVO " & user
+
+                    Dim nombreU As String = "SOLICITUD-FONDO-ROTATIVO " & UserName
                     Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, nombreU)
                     If res(0) Then
                         If _validarComprobanteRetencion = 1 And _ptoEmisionRetencion = "002" Then ExportarXml()
@@ -859,13 +860,23 @@ _tipoAmbiente, _establecimientoLiqCompra, _ptoEmisionLiqCompra,
                     Else
                         MsgBox("NO SE PUEDE GUARDAR." & vbNewLine & "NO SE HAN LLENADO LOS DATOS DEL DOCUMENTO.", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
                     End If
-                    MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
+                    'MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
+
+                    Dim messageIcon As KryptonMessageBoxIcon
+                    If res(0) Then
+                        messageIcon = KryptonMessageBoxIcon.Information
+                    Else
+                        messageIcon = KryptonMessageBoxIcon.Exclamation
+                    End If
+                    KryptonMessageBox.Show(res(1), "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, messageIcon)
 
                 Else
-                    MsgBox("NO SE PUEDE GUARDAR." & vbNewLine & "NO SE HAN LLENADO LOS DATOS DEL DOCUMENTO.", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                    'MsgBox("NO SE PUEDE GUARDAR." & vbNewLine & "NO SE HAN LLENADO LOS DATOS DEL DOCUMENTO.", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                    KryptonMessageBox.Show("NO SE PUEDE GUARDAR." & vbNewLine & "NO SE HAN LLENADO LOS DATOS DEL DOCUMENTO.", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
                 End If
             Else
-                MsgBox("NO SE PUEDE GUARDAR." & vbNewLine & "NO SE HAN LLENADO TODOS LOS CAMPOS NECESARIOS.", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                'MsgBox("NO SE PUEDE GUARDAR." & vbNewLine & "NO SE HAN LLENADO TODOS LOS CAMPOS NECESARIOS.", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                KryptonMessageBox.Show("NO SE PUEDE GUARDAR." & vbNewLine & "NO SE HAN LLENADO TODOS LOS CAMPOS NECESARIOS.", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
                 txtValorSolicitudFR.Focus()
             End If
         End Sub

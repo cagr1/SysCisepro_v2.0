@@ -18,7 +18,7 @@ Imports syscisepro.DATOS
 Imports syscisepro.FORMULARIOS.INVENTARIOS.PROCESO
 Imports System.Text
 Imports Krypton.Toolkit
-Imports ClassLibraryCisepro.USUARIOS_DEL_SISTEMA
+
 
 Namespace FORMULARIOS.CONTABILIDAD.VENTAS
     ''' <summary>
@@ -51,6 +51,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
         End Property
         Dim _sqlCommands As List(Of SqlCommand)
         Public IdUsuario As Integer
+        Public UserName As String
 
         ReadOnly _objetoEmpresa As New ClassEmpresa
         ReadOnly _objetoInformacionTributaria As New ClassInformacionTributaria
@@ -75,7 +76,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
         ReadOnly _objetoComprobantesElectronicos As New ClassDocumentosElectronicos
 
         ReadOnly _objetoDireccionesFacturacion As New ClassDireccionesFacturacion
-        ReadOnly _objUser As New ClassUsuarioGeneral
+
 
         Dim _varIdAsiento As Integer
 
@@ -854,8 +855,8 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                                 End If
                             End If
 
-                            Dim user As String = _objUser.DatosUsuario.ToString()
-                            Dim nombreU As String = "FACTURA " & user
+
+                            Dim nombreU As String = "FACTURA " & UserName
                             Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, nombreU)
                             If res(0) Then
                                 If lblPtoEmisionFacturaEmpresa.Text = "002" Then ExportarXml()

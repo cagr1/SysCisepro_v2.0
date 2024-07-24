@@ -54,6 +54,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
         End Property
         Dim _sqlCommands As List(Of SqlCommand)
         Public IdUsuario As Integer
+        Public UserName As String
 
         ReadOnly _objControl As New ClassControlUniformes
         ReadOnly _objSerie As New ClassGenerarSerie
@@ -428,12 +429,12 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
             End Try
         End Sub
         Private Sub tsmAgregar_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles tsmAgregar.Click
-            If _detalleKardexIngreso Is Nothing Then
+            If _detalleKardex Is Nothing Then
                 MsgBox("POR FAVOR, SELECCIONE UN ITEM PARA AGREGAR A LA LISTA!", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÒN")
                 Return
             End If
 
-            If _detalleKardexIngreso.Rows.Count = 0 Then
+            If _detalleKardex.Rows.Count = 0 Then
                 MsgBox("POR FAVOR, SELECCIONE UN ITEM PARA AGREGAR A LA LISTA!", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÒN")
                 Return
             End If
@@ -841,14 +842,24 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
             Else
                 ReingresoComprante()
             End If
-            Dim user As String = _objUser.DatosUsuario.ToString()
-            Dim nombreU As String = "COMPROBANTE EGRESO " & user
+
+            Dim nombreU As String = ""
+
+            If _botonSeleccionadoSitio = 1 Then
+                nombreU = "COMPROBANTE EGRESO " & UserName
+            ElseIf _botonSeleccionadoSitio = 2 Then
+                nombreU = "MODIFICACIÓN COMPROBANTE EGRESO " & UserName
+            ElseIf _botonSeleccionadoSitio = 3 Then
+                nombreU = "REINGRESO COMPROBANTE EGRESO " & UserName
+            End If
+
             Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, nombreU)
             If res(0) Then
                 txtNumero.Text = _objCompEgr.Id
                 txtIdComprobante.Text = txtNumero.Text
                 tbComprobanteIngresoBodega.SelectedIndex = 2
             End If
+
             Dim messageIcon As KryptonMessageBoxIcon
             If res(0) Then
                 messageIcon = KryptonMessageBoxIcon.Information

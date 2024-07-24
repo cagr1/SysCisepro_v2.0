@@ -34,6 +34,7 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
             End Set
         End Property
         Public IdUsuario As Integer
+        Public UserName As String
         Dim _sqlCommands As List(Of SqlCommand)
 
         ReadOnly _objetoComprobanteIngreso As New ClassComprobanteIngresoBanco
@@ -210,8 +211,8 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
                 _sqlCommands.Clear()
 
                 AnularComprobanteIngresoBancos()
-
-                Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, String.Empty)
+                Dim nombreU As String = "ANULAR COMPROBANTE INGRESO BANCOS " & UserName
+                Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, nombreU)
                 If res(0) Then
                     LlenarComboCuentasBancos()
                     CargarComprobanteIngresoBancos()

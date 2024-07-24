@@ -1,6 +1,7 @@
 ﻿Imports System.Data.SqlClient
 Imports System.Drawing 
 Imports System.Windows.Forms
+Imports System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel
 Imports ClassLibraryCisepro.CONTABILIDAD.BANCOS
 Imports ClassLibraryCisepro.CONTABILIDAD.BANCOS.AUDITORIA
 Imports ClassLibraryCisepro.CONTABILIDAD.CENTRO_DE_COSTOS
@@ -47,6 +48,7 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
 
         Dim _dataPagos As Dictionary(Of String, String)
         Public IdUsuario As Integer
+        Public UserName As String
         Private _existeNumero As Boolean
 
         ReadOnly _objetoComprobanteEgresoBancos As New ClassComprobanteEgresoBanco
@@ -68,13 +70,13 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
         ReadOnly _objetoCompEgresoPagosCompCompra As New ClassCompEgresoPagosCompCompra
         ReadOnly _validacionesNumeros As New ClassNumerico
         ReadOnly _validacionesDecimales As New ClassDecimal
-         
+
         Dim _valorFinalCheque As Decimal = 0
-         
+
         Dim _numerosFacturas() As String
         Dim _cantidadFacturas As Integer
         Dim _nroFilasEgreso = 0
-         
+
         Private Sub FormComprobanteEgresoBanco_Load(ByVal sender As System.Object, ByVal e As EventArgs) Handles MyBase.Load
             ' DEFINIR TIPO Y COLOR DE SISTEMA
             Select Case _tipoCon
@@ -88,14 +90,14 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
                 Case TipoConexion.Seportpac
                     Icon = My.Resources.logo_s
                     'MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
-                    MenuStrip1.ForeColor = Color.White  
+                    MenuStrip1.ForeColor = Color.White
                     dgvComprobantesCompra.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorSeportpac
                     dgvComprobanteEgresoBanco.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorSeportpac
                     dgvPagosComprobantesCompra.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorSeportpac
                 Case Else
                     Icon = My.Resources.logo_c
                     'MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorCisepro
-                    MenuStrip1.ForeColor = Color.White  
+                    MenuStrip1.ForeColor = Color.White
                     dgvComprobantesCompra.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
                     dgvComprobanteEgresoBanco.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
                     dgvPagosComprobantesCompra.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
@@ -109,10 +111,10 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
             CargarGrillaComprobanteEgresoBancos()
             LlenarCuentasContables()
             LlenarComboCentroCosto()
-            llenarComboBancos() 
-            deshabilitadoInicio()
+            LlenarComboBancos()
+            DeshabilitadoInicio()
 
-            autocompletarNombreProveedor()
+            AutocompletarNombreProveedor()
 
             dgvComprobanteEgresoBanco.ContextMenuStrip = ContextMenuStripClicDerecho 'Asigno a la propiedad contextMenuStrip del dgv el menu creado para el clic derecho
         End Sub
@@ -121,7 +123,7 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
                 Dim data = _objetoPlanCuentas.SeleccionarCuentasYDetallePlanDeCuentas(_tipoCon)
                 cmbCuentasContables.DataSource = data
                 cmbCuentasContables.DisplayMember = data.Columns(0).ToString
-                cmbCuentasContables.ValueMember = data.Columns(1).ToString 
+                cmbCuentasContables.ValueMember = data.Columns(1).ToString
             Catch
                 cmbCuentasContables.DataSource = Nothing
             End Try
@@ -228,9 +230,8 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
             End Try
         End Sub
         Private Sub btnNuevoComprobanteEgresoBancos_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnNuevo.Click
-
-            habilitadoNuevo()
-            limpiarParametros()
+            HabilitadoNuevo()
+            LimpiarParametros()
             txtFacturaReceptor.Text = "0"
 
             LlenarComboCentroCosto()
@@ -273,7 +274,7 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
         Private Sub LimpiarParametros()
             Try
                 dgvComprobantesCompra.DataSource = Nothing
-                dgvPagosComprobantesCompra.DataSource = Nothing 
+                dgvPagosComprobantesCompra.DataSource = Nothing
                 dgvComprobanteEgresoBanco.Rows.Clear()
                 dgvCompEgresoPagosCompCompra.Rows.Clear()
                 lblIdComprobanteEgresoBancos.Text = "..."
@@ -305,12 +306,12 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
             End Try
         End Sub
         Private Sub chkTransferenciaInterna_CheckedChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles chkTransferenciaInterna.CheckedChanged
-            txtConceptoComprobanteEgreso.Text = If(chkTransferenciaInterna.Checked, "TRANSFERENCIA INTERNA", String.Empty) 
+            txtConceptoComprobanteEgreso.Text = If(chkTransferenciaInterna.Checked, "TRANSFERENCIA INTERNA", String.Empty)
         End Sub
         Private Sub btnAgregarConceptoComprobante_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnAgregarConceptoComprobante.Click
             If txtRazonComprobanteEgresoBanco.Text <> "" Then
-                agregarConceptosComprobanteEgreso()
-                sumarTotalDebeHaber()
+                AgregarConceptosComprobanteEgreso()
+                SumarTotalDebeHaber()
             Else
                 MsgBox("POR FAVOR INGRESE UNA RAZÓN DE PAGO", MsgBoxStyle.Information, "MENSAJE DE INFORMACIÓN")
                 txtRazonComprobanteEgresoBanco.Focus()
@@ -320,7 +321,7 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
 
             Dim respuesta = InputBox("INGRESE EL VALOR DEL COMPROBANTE", "VALOR COMPROBANTE", txtValorComprobanteEgresoBancos.Text)
             If respuesta.Trim().Length = 0 Then Return
-             
+
             If IsNumeric(respuesta) Then
 
                 dgvComprobanteEgresoBanco.Rows.Add()
@@ -443,8 +444,8 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
             End If
         End Sub
         Private Sub btnCancelarComprobanteEgresoBancos_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnCancelar.Click
-            deshabilitadoInicio()
-            limpiarParametros()
+            DeshabilitadoInicio()
+            LimpiarParametros()
         End Sub
         Private Sub txtRucCi_KeyPress(ByVal sender As System.Object, ByVal e As Windows.Forms.KeyPressEventArgs) Handles txtRucCi.KeyPress
             e.Handled = Not _validacionesNumeros.EsNumero(e.KeyChar)
@@ -464,14 +465,14 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
                 lblIdProveedorGeneral.Text = "..."
                 txtPagadoA.Clear()
             End Try
-             
-            cargarDatosProveedor()
-            cargarComprobantesCompra()
+
+            CargarDatosProveedor()
+            CargarComprobantesCompra()
         End Sub
         Private Sub CargarDatosProveedor()
             Try
                 Dim pro = _objetoProveedorGeneral.BuscarProveedorGeneralXNombre(_tipoCon, txtNombreComercialProveedor.Text)
-                If pro.Rows.Count = 0 Then Return 
+                If pro.Rows.Count = 0 Then Return
                 lblIdProveedorGeneral.Text = pro.Rows(0)(0)
                 txtRucCi.Text = pro.Rows(0)(2)
             Catch ex As Exception
@@ -498,16 +499,16 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
                     txtNombreComercialProveedor.Enabled = True
                     gbComprobantesCompra.Enabled = True
                     gbPagosComprobanteCompra.Enabled = True
-                    txtConceptoComprobanteEgreso.Text = "PAGO A PROVEEDOR" 
-                Else 
+                    txtConceptoComprobanteEgreso.Text = "PAGO A PROVEEDOR"
+                Else
                     gbComprobantesCompra.Enabled = False
                     gbPagosComprobanteCompra.Enabled = False
-                    txtConceptoComprobanteEgreso.Text = "" 
+                    txtConceptoComprobanteEgreso.Text = ""
                 End If
             Else
-                chkActivar.Checked = False 
+                chkActivar.Checked = False
                 gbComprobantesCompra.Enabled = False
-                gbPagosComprobanteCompra.Enabled = False 
+                gbPagosComprobanteCompra.Enabled = False
                 MsgBox("POR FAVOR PRIMERO ESCOJA UNA CTA. CONTABLE", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
             End If
         End Sub
@@ -521,14 +522,14 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
             Catch
                 lblIdProveedorGeneral.Text = "..."
             End Try
-             
-            CargarDatosProveedor() 
-            CargarComprobantesCompra() 
+
+            CargarDatosProveedor()
+            CargarComprobantesCompra()
         End Sub
-       
+
 
         Private Sub dgvComprobanteEgresoBanco_CellValidated(ByVal sender As System.Object, ByVal e As Windows.Forms.DataGridViewCellEventArgs) Handles dgvComprobanteEgresoBanco.CellValidated
-            sumarTotalDebeHaber()
+            SumarTotalDebeHaber()
         End Sub
         Private Sub dgvComprobanteEgresoBanco_EditingControlShowing(ByVal sender As System.Object, ByVal e As Windows.Forms.DataGridViewEditingControlShowingEventArgs) Handles dgvComprobanteEgresoBanco.EditingControlShowing
             Dim itemType = TryCast(e.Control, TextBox)
@@ -539,9 +540,9 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
                 Case 0
                     e.Handled = Not _validacionesNumeros.EsNumero(e.KeyChar)
                 Case 4
-                    e.Handled = Not  _validacionesDecimales.EsDecimal(e.KeyChar) 
+                    e.Handled = Not _validacionesDecimales.EsDecimal(e.KeyChar)
                 Case 5
-                    e.Handled = Not  _validacionesDecimales.EsDecimal(e.KeyChar)  
+                    e.Handled = Not _validacionesDecimales.EsDecimal(e.KeyChar)
             End Select
         End Sub
         Private Sub ToolStripMenuItemEliminar_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ToolStripMenuItemEliminar.Click
@@ -556,14 +557,14 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
                         Return
                 End Select
 
-                Dim loFila As DataGridViewRow = dgvComprobanteEgresoBanco.CurrentRow() 
+                Dim loFila As DataGridViewRow = dgvComprobanteEgresoBanco.CurrentRow()
                 If MessageBox.Show("¿Esta seguro de querer eliminar este Registro" & vbCrLf & loFila.Cells(2).Value.ToString(), "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> Windows.Forms.DialogResult.Yes Then Return
-                
+
                 dgvComprobanteEgresoBanco.Rows.RemoveAt(dgvComprobanteEgresoBanco.CurrentRow.Index)
                 SumarTotalDebeHaber()
             Catch ex As Exception
                 MessageBox.Show(ex.Message, "", MessageBoxButtons.OK, MessageBoxIcon.Information)
-            End Try 
+            End Try
         End Sub
         Private Sub cmbTipoPago_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles cmbTipoPago.SelectedIndexChanged
             If cmbTipoPago.Text = "NOTA DE CREDITO" Or cmbTipoPago.Text = "NOTA DE DEBITO" Or cmbTipoPago.Text = "CREDITO A CUENTA" Then
@@ -572,7 +573,7 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
             Else
                 txtNumeroCheque.Enabled = True
             End If
-        End Sub 
+        End Sub
         Private Sub CargarPagosComprobantesCompra()
             Try
                 dgvPagosComprobantesCompra.DataSource = _objetoPagosComprobantesCompra.SeleccionarPagosComrpobantesCompraXIdComprobante(_tipoCon, lblIdComprobanteCompra.Text)
@@ -591,7 +592,7 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
                 dgvPagosComprobantesCompra.Columns(6).HeaderText = "ID CC"
                 dgvPagosComprobantesCompra.Columns(6).DefaultCellStyle.Alignment = DataGridViewContentAlignment.BottomLeft
                 dgvPagosComprobantesCompra.AutoResizeColumns()
-                dgvPagosComprobantesCompra.AutoResizeRows() 
+                dgvPagosComprobantesCompra.AutoResizeRows()
                 dgvPagosComprobantesCompra.EditMode = DataGridViewEditMode.EditProgrammatically
             Catch ex As Exception
                 MsgBox("METODO CARGAR PAGOS COMPROBANTES DE COMPRA" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "MENSAJE DE EXCEPCIÓN")
@@ -686,7 +687,7 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
         End Function
         Private Function ValidacionParametros() As Boolean
             Return txtFacturaReceptor.Text <> "" And txtRucCi.Text <> "" And txtPagadoA.Text <> "" And txtActividad.Text <> "" And txtConceptoComprobanteEgreso.Text <> "" And txtRazonComprobanteEgresoBanco.Text <> "" And txtValorComprobanteEgresoBancos.Text <> "" _
-               And txtNumeroCheque.Text <> "" And txtTotalDebe.Text <> "" And txtTotalHaber.Text <> "" 
+               And txtNumeroCheque.Text <> "" And txtTotalDebe.Text <> "" And txtTotalHaber.Text <> ""
         End Function
         Private Sub btnGuardarComprobanteEgresoBancos_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnGuardar.Click
             If ValidarFecha() Then
@@ -706,25 +707,27 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
                             .NumeroAnterior = .BuscarMayorNumeroAnterior(_tipoCon) + 1
                         End With
                         _sqlCommands.Add(_objetoNumeroRegistro.NuevoNumeroRegistroAsientoLibroDiarioCommand())
-                         
+
                         ' GUARDA EL COMPROBANTE DE EGRESO
-                        guardarRegistroComprobanteEgresoBancos()
+                        GuardarRegistroComprobanteEgresoBancos()
 
                         ' GUARDA EL CHEQUE EMITIDO
-                        If cmbTipoPago.Text = "CHEQUE" Then guardarRegistroChequeEmitido()
+                        If cmbTipoPago.Text = "CHEQUE" Then GuardarRegistroChequeEmitido()
 
                         ' GUARDA EL PAGO A  COMPROBONATES DE COMPRA A PROVEEDOR EN CASO DE QUE HUBIESE
-                        guardarRegistroPagosComprobanteCompra()
+                        GuardarRegistroPagosComprobanteCompra()
 
                         ' GUARDA LOS ASIENTOS DEL LIBRO DIARIO
-                        nuevoRegistroAsientoDiarioComprobanteEgresoBancos()
+                        NuevoRegistroAsientoDiarioComprobanteEgresoBancos()
 
                         ' GUARDA LOS LOS REGISTROS PARA ENLAZAR EL COMPROBANTE DE EGRESO CON EL DIARIO
-                        guardarNumeroRegistroAsientoComprobanteEgreso()
- 
-                        Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, String.Empty)
+                        GuardarNumeroRegistroAsientoComprobanteEgreso()
+
+                        ' GUARDA LOS REGISTROS EN LA BASE DE DATOS
+                        Dim nombreU As String = "COMPROBANTE EGRESO BANCO " & UserName
+                        Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, nombreU)
                         If res(0) Then
-                            
+
                             ' DEJA EL FORMULARIO EN SU ESTADO INICIAL
                             DeshabilitadoInicio()
 

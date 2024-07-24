@@ -47,6 +47,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
             End Set
         End Property
         Public IdUsuario As Integer
+        Public UserName As String
         Dim _sqlCommands As List(Of SqlCommand)
 
         ReadOnly _objetoComprobantesCompra As New ClassComprobantesCompra
@@ -505,8 +506,8 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
                             Return
                         End If
                     End If
-                    Dim user As String = _objUser.DatosUsuario.ToString()
-                    Dim nombreU As String = "AJUSTE-COMPROBANTE-RETENCION " & user
+
+                    Dim nombreU As String = "AJUSTE-COMPROBANTE-RETENCION " & UserName
                     Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, nombreU)
                     If res(0) Then
                         LimpiarParametrosRetencion()

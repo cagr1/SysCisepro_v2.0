@@ -14,7 +14,7 @@ Imports syscisepro.DATOS
 Imports syscisepro.FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO.REPORTES
 Imports syscisepro.FORMULARIOS.INVENTARIOS.PROCESO
 Imports Krypton.Toolkit
-Imports ClassLibraryCisepro.USUARIOS_DEL_SISTEMA
+
 
 Namespace FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
     ''' <summary>
@@ -46,7 +46,7 @@ Namespace FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
             End Set
         End Property
         Dim _sqlCommands As List(Of SqlCommand)
-
+        Public UserName As String
         ReadOnly _objetoNumerico As New ClassNumerico
         ReadOnly _objetoDecimal As New ClassDecimal
         ReadOnly _objetoEmpresa As New ClassEmpresa
@@ -61,7 +61,7 @@ Namespace FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
         ReadOnly _objetoBanco As New ClassBancos
         ReadOnly _objetoCuentasBancos As New ClassCuentasBancos
 
-        ReadOnly _objUser As New ClassUsuarioGeneral
+
         Private _parametroBusqueda As Integer = 0
         Private _botonseleccionado As Integer = 0
          
@@ -647,13 +647,13 @@ Namespace FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
                 ModificarRegistroAsientoDiario()
             End If
 
-            Dim user As String = _objUser.DatosUsuario.ToString()
+
             Dim nombreU As String = ""
 
             If _botonseleccionado = 1 Then
-                nombreU = "LIBRO-DIARIO-NUEVO " & user
+                nombreU = "LIBRO-DIARIO-NUEVO " & UserName
             ElseIf _botonseleccionado = 2 Then
-                nombreU = "LIBRO-DIARIO-EDITADO " & user
+                nombreU = "LIBRO-DIARIO-EDITADO " & UserName
             End If
 
             Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, nombreU)

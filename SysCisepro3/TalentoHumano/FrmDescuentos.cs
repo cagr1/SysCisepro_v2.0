@@ -797,6 +797,7 @@ namespace SysCisepro3.TalentoHumano
             _objHistorialLaboral.IdPersonalHistoriaLaboral = Convert.ToInt32(txtIdPersonal.Text.Trim());
             _objHistorialLaboral.IdSitioHistoriaLaboral = string.Empty;
             _sqlCommands.Add(_objHistorialLaboral.RegistrarNuevoHistorialLaboralCommand());
+            
             string user = Usuario.Datos.ToString();
             string nombreU = $"DESCUENTO: {user}";
             var res = ComandosSql.ProcesarTransacciones(TipoCon, _sqlCommands, nombreU);

@@ -10,8 +10,9 @@ Imports ClassLibraryCisepro.ESTRUCTURA_EMPRESA
 Imports ClassLibraryCisepro.INVENTARIOS.ITEMS
 Imports ClassLibraryCisepro.ProcesosSql
 Imports ClassLibraryCisepro.VALIDACIONES
+Imports Microsoft.VisualBasic.ApplicationServices
 Imports syscisepro.DATOS
-Imports ClassLibraryCisepro.USUARIOS_DEL_SISTEMA
+
 
 Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.ORDEN_DE_COMPRA
     ''' <summary>
@@ -41,8 +42,9 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.ORDEN_DE_COMPRA
                         _tipoCon = TipoConexion.Cisepro
                 End Select
             End Set
-        End Property 
+        End Property
         Public IdUsuario As Integer
+        Public UserName As String
         Dim _sqlCommands As List(Of SqlCommand)
 
         ReadOnly _objetoOrdenCompra As New ClassOrdenCompra
@@ -59,7 +61,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.ORDEN_DE_COMPRA
         ReadOnly _validacionesAlfabetica As New ClassAlfabetico
         ReadOnly _validacionesDecimales As New ClassDecimal
         ReadOnly _validacionesConversion As New ClassConversion
-        ReadOnly _objUser As New ClassUsuarioGeneral
+
         Private Sub FormOrdenCompra_Load(ByVal sender As System.Object, ByVal e As EventArgs) Handles MyBase.Load
             ' DEFINIR TIPO Y COLOR DE SISTEMA
             Select Case _tipoCon
@@ -90,8 +92,8 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.ORDEN_DE_COMPRA
             dgvRequisicionProductoServicio.Font = New Font("Roboto", 8, FontStyle.Regular)
             dgvDetalleRequisicionProductoServicio.Font = New Font("Roboto", 8, FontStyle.Regular)
             AddHandler dgvDetalleOrdenCompra.CellValueChanged, AddressOf dgvDetalleOrdenCompra_CellValueChanged
-            autocompletarNombreProveedor()
-            DeshabilitadoInicio()            
+            AutocompletarNombreProveedor()
+            DeshabilitadoInicio()
         End Sub
         Public Sub DeshabilitadoInicio()
             chkReq.Enabled = False
@@ -245,7 +247,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.ORDEN_DE_COMPRA
         End Sub
         Private Sub txtNombreComercialProveedorGeneral_KeyUp(ByVal sender As System.Object, ByVal e As Windows.Forms.KeyEventArgs) Handles txtNombreComercialProveedorGeneral.KeyUp
             If e.KeyCode <> Keys.Enter Then Return
-            cargarDatosProveedor()
+            CargarDatosProveedor()
         End Sub
         Public Sub CargarDatosProveedor()
             Try
@@ -276,9 +278,9 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.ORDEN_DE_COMPRA
                     Return
                 End If
             Next
-            dgvDetalleOrdenCompra.Rows.Add(dgvDetalleRequisicionProductoServicio.CurrentRow.Cells(8).Value.ToString, _
-                                           dgvDetalleRequisicionProductoServicio.CurrentRow.Cells(1).Value.ToString, _
-                                           dgvDetalleRequisicionProductoServicio.CurrentRow.Cells(2).Value.ToString, _
+            dgvDetalleOrdenCompra.Rows.Add(dgvDetalleRequisicionProductoServicio.CurrentRow.Cells(8).Value.ToString,
+                                           dgvDetalleRequisicionProductoServicio.CurrentRow.Cells(1).Value.ToString,
+                                           dgvDetalleRequisicionProductoServicio.CurrentRow.Cells(2).Value.ToString,
                                            dgvDetalleRequisicionProductoServicio.CurrentRow.Cells(3).Value.ToString)
         End Sub
         Private Sub btnEliminar_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnEliminar.Click
@@ -315,8 +317,8 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.ORDEN_DE_COMPRA
                         AprovarRequisicionProductoServicio(id)
                     Next
                 End If
-                Dim user As String = _objUser.DatosUsuario.ToString()
-                Dim nombreU As String = "ORDEN-COMPRA " & user
+
+                Dim nombreU As String = "ORDEN-COMPRA " & UserName
                 Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, nombreU)
                 If res(0) Then
                     ' DEJA EL FORMULARIO EN SU ESTADO INICIAL
@@ -338,7 +340,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.ORDEN_DE_COMPRA
             If String.IsNullOrEmpty(req) Then req = "###"
             If req.EndsWith("-") Then req = req.Substring(0, req.Length - 2)
             Label3.Text = req
-        End Sub        
+        End Sub
         Private Sub dgvDetalleOrdenCompra_CellValueChanged(ByVal sender As System.Object, ByVal e As Windows.Forms.DataGridViewCellEventArgs) Handles dgvDetalleOrdenCompra.CellValueChanged
             Try
                 Dim cant, valor As Decimal
@@ -359,10 +361,10 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.ORDEN_DE_COMPRA
             Catch ex As Exception
                 dgvDetalleOrdenCompra.CurrentRow.Cells(5).Value = 0
             End Try
-        End Sub        
+        End Sub
         Private Sub dgvDetalleOrdenCompra_CellEndEdit(ByVal sender As System.Object, ByVal e As Windows.Forms.DataGridViewCellEventArgs) Handles dgvDetalleOrdenCompra.CellEndEdit
             dgvDetalleOrdenCompra.Rows(e.RowIndex).ErrorText = [String].Empty
-            buscarIdItemDetalleOrdenCompra()
+            BuscarIdItemDetalleOrdenCompra()
         End Sub
         Public Sub BuscarIdItemDetalleOrdenCompra()
             Try
@@ -446,7 +448,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.ORDEN_DE_COMPRA
             End Try
         End Sub
         Private Sub dgvDetalleOrdenCompra_CellValidated(ByVal sender As System.Object, ByVal e As Windows.Forms.DataGridViewCellEventArgs) Handles dgvDetalleOrdenCompra.CellValidated
-            calcularTotalesOrdenCompra()
+            CalcularTotalesOrdenCompra()
         End Sub
         Private Sub dgvDetalleOrdenCompra_CellValidating(ByVal sender As System.Object, ByVal e As Windows.Forms.DataGridViewCellValidatingEventArgs) Handles dgvDetalleOrdenCompra.CellValidating
             If dgvDetalleOrdenCompra.Columns(e.ColumnIndex).Name = "valorUnitarioProductoServicio" Then
@@ -475,7 +477,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.ORDEN_DE_COMPRA
                 Case 4
                     e.Handled = Not _validacionesDecimales.EsDecimal(e.KeyChar)
             End Select
-        End Sub        
+        End Sub
         Public Function ValidarParametros() As Boolean
             Return txtNombreComercialProveedorGeneral.Text <> "" And dgvDetalleOrdenCompra.RowCount > 0 And cmbFormaPagoOrdenCompra.SelectedIndex >= 0 And cmbTipoPagoOrdenCompra.SelectedIndex >= 0
         End Function
@@ -513,8 +515,8 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.ORDEN_DE_COMPRA
             End Try
         End Sub
         Private Sub btnCancelar_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnCancelar.Click
-            limpiarParametros()
-            deshabilitadoInicio()
+            LimpiarParametros()
+            DeshabilitadoInicio()
         End Sub     
         Private Sub lblValorLlevacontabilidad_TextChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles lblValorLlevacontabilidad.TextChanged
             If lblValorLlevacontabilidad.Text = "0" Then

@@ -8,7 +8,8 @@ Imports Microsoft.Office.Interop
 Imports syscisepro.DATOS
 Imports syscisepro.FORMULARIOS.INVENTARIOS.PROCESO
 Imports ClassLibraryCisepro.DIVISION_GEOGRÁFICA
-Imports ClassLibraryCisepro.USUARIOS_DEL_SISTEMA
+Imports Krypton.Toolkit
+
 
 Namespace FORMULARIOS.OPERACIONES
     ''' <summary>
@@ -51,7 +52,7 @@ Namespace FORMULARIOS.OPERACIONES
 
         ReadOnly _objRegistroDescuento As New ClassDescuentosPersonal
         ReadOnly _objSitioTrabajo As New ClassSitiosTrabajo
-        ReadOnly _objUsuario As New ClassUsuarioGeneral
+
 
         Dim _frmDetail As FrmReporteObservaciones
 
@@ -916,7 +917,14 @@ Namespace FORMULARIOS.OPERACIONES
 
             Dim nombreU As String = "REPORTE ASISTENCIA " & UserName
             Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, nombreU)
-            MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
+            'MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
+            Dim messageIcon As KryptonMessageBoxIcon
+            If res(0) Then
+                messageIcon = KryptonMessageBoxIcon.Information
+            Else
+                messageIcon = KryptonMessageBoxIcon.Exclamation
+            End If
+            KryptonMessageBox.Show(res(1), "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, messageIcon)
         End Sub
 
         Private Function NumeroRiver(ByVal rivers As String) As Integer

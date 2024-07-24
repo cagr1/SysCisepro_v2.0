@@ -9,7 +9,7 @@ Imports ClassLibraryCisepro.ENUMS
 Imports ClassLibraryCisepro.FONDOS.FONDO_ROTATIVO
 Imports ClassLibraryCisepro.ProcesosSql
 Imports ClassLibraryCisepro.CONTABILIDAD.RETENCIONES_EMITIDAS
-Imports ClassLibraryCisepro.USUARIOS_DEL_SISTEMA
+
 
 Namespace FORMULARIOS.CONTABILIDAD.LIQUIDACIONES
 
@@ -42,7 +42,7 @@ Namespace FORMULARIOS.CONTABILIDAD.LIQUIDACIONES
         End Property
 
         Public IdUsuario As Integer
-
+        Public UserName As String
         ReadOnly _objetoFondoRotativo As New ClassFondoRotativo
         ReadOnly _objetoAuxiliarFondoRotativo As New ClassAuxiliarFondoRotativo
         ReadOnly _objetoLiquidacionFondoRotativo As New ClassLiquidacionFondoRotativo
@@ -61,7 +61,7 @@ Namespace FORMULARIOS.CONTABILIDAD.LIQUIDACIONES
         ReadOnly _objetoDetalleComprobanteRetencionCompra As New ClassDetalleComprobantesRetencion
         ReadOnly _objetoComprobanteRetencionCompraVenta As New ClassComprobantesRetencionCompraVenta
         ReadOnly _objetoPorcentajes As New ClassPorcentajes
-        ReadOnly _objUser As New ClassUsuarioGeneral
+
 
         Dim _valDebe As Decimal
         Dim _valHaber As Decimal
@@ -345,8 +345,8 @@ Namespace FORMULARIOS.CONTABILIDAD.LIQUIDACIONES
                     Return
                 End If
 
-                Dim user As String = _objUser.DatosUsuario.ToString()
-                Dim nombreU As String = "REVISION-LIQUIDACIONES " & user
+
+                Dim nombreU As String = "REVISION-LIQUIDACIONES " & UserName
                 Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, nombreU)
                 If res(0) Then
                     LimpiarParametros()

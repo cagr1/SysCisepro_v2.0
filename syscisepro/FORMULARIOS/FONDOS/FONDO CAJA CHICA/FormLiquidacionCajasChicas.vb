@@ -9,7 +9,7 @@ Imports syscisepro.DATOS
 Imports ClassLibraryCisepro.CONTABILIDAD.COMPRAS.COMPROBANTES_COMPRA
 Imports ClassLibraryCisepro.CONTABILIDAD.COMPROBANTES_RETENCION
 Imports ClassLibraryCisepro.CONTABILIDAD.DOCUMENTOS_NO_DEDUCIBLES
-Imports ClassLibraryCisepro.USUARIOS_DEL_SISTEMA
+
 
 Namespace FORMULARIOS.FONDOS.FONDO_CAJA_CHICA
     ''' <summary>
@@ -41,7 +41,7 @@ Namespace FORMULARIOS.FONDOS.FONDO_CAJA_CHICA
         End Property
         Dim _sqlCommands As List(Of SqlCommand)
         Public IdUsuario As Integer
-
+        Public UserName As String
 
         Dim _gasto As Decimal
         Dim _saldo As Decimal
@@ -65,7 +65,7 @@ Namespace FORMULARIOS.FONDOS.FONDO_CAJA_CHICA
         ReadOnly _objetoComprobantesCompra As New ClassComprobantesCompra
         ReadOnly _objetoComprobantesRetencion As New ClassComprobantesRetencion
         ReadOnly _objetoDetalleComprobantesRetencion As New ClassDetalleComprobantesRetencion
-        ReadOnly _objUser As New ClassUsuarioGeneral
+
         Dim _objetoDocumentoNoDeducible As New ClassDocumentoNoDeducible
 
 
@@ -328,8 +328,8 @@ Namespace FORMULARIOS.FONDOS.FONDO_CAJA_CHICA
 
                     EliminarSolicitudesCajaChica()
 
-                    Dim user As String = _objUser.DatosUsuario.ToString()
-                    Dim nombreU As String = "lIQUIDACION-CAJA-CHICA " & user
+
+                    Dim nombreU As String = "lIQUIDACION-CAJA-CHICA " & UserName
                     Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, nombreU)
                     If res(0) Then
 
@@ -419,8 +419,8 @@ Namespace FORMULARIOS.FONDOS.FONDO_CAJA_CHICA
                 _objAuxiliarCajaChica.IdCajaChica = CInt(dgvLiquidacionFondoCajaChica.CurrentRow.Cells(16).Value)
                 _objAuxiliarCajaChica.MontoCajaChica = CDec(dgvLiquidacionFondoCajaChica.CurrentRow.Cells(4).Value)
                 _sqlCommands.Add(_objAuxiliarCajaChica.ActualizarMontosCajaChica2Command)
-                Dim user As String = _objUser.DatosUsuario.ToString()
-                Dim nombreU As String = "LIQUIDACION-CAJA-CHICA-ANULADA " & user
+
+                Dim nombreU As String = "LIQUIDACION-CAJA-CHICA-ANULADA " & UserName
                 Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, nombreU)
                 If res(0) Then btnCargar_Click(Nothing, Nothing)
                 MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")

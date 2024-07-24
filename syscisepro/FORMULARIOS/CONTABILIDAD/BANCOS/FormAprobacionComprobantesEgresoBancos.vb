@@ -1,4 +1,5 @@
 ﻿Imports System.Data.SqlClient
+Imports System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel
 Imports ClassLibraryCisepro.CONTABILIDAD.BANCOS
 Imports ClassLibraryCisepro.CONTABILIDAD.BANCOS.AUDITORIA
 Imports ClassLibraryCisepro.ENUMS
@@ -36,7 +37,7 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
         End Property
         Dim _sqlCommands As List(Of SqlCommand)
         Public IdUsuario As Integer
-
+        Public UserName As String
 
         ReadOnly _objetoComprobanteEgreso As New ClassComprobanteEgresoBanco
         ReadOnly _objetoChequesEmitidos As New ClassChequesEmitidosCxp
@@ -126,15 +127,15 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
         End Sub
 
         Private Sub dgvComprobanteEgresoBancos_CellDoubleClick(ByVal sender As System.Object, ByVal e As Windows.Forms.DataGridViewCellEventArgs) Handles dgvComprobanteEgresoBancos.CellDoubleClick
-            If dgvComprobanteEgresoBancos.Rows.Count = 0 Or dgvComprobanteEgresoBancos.CurrentRow Is Nothing Then Return 
+            If dgvComprobanteEgresoBancos.Rows.Count = 0 Or dgvComprobanteEgresoBancos.CurrentRow Is Nothing Then Return
             Try
                 Dim formAsientoDiario As New FormBuscarAsientoDiarioResumido
                 formAsientoDiario.TipoCox = TipoCox
                 If dgvComprobanteEgresoBancos.CurrentRow.Cells.Item(0).Value Is DBNull.Value Then
                     txtNumeroComprobanteEgreso.Text = ""
                 Else
-                    txtNumeroComprobanteEgreso.Text = dgvComprobanteEgresoBancos.CurrentRow.Cells.Item(0).Value 
-                    formAsientoDiario.numeroRegsitroBusqueda = _objetoNumeroRegistroAsientoCompEgreso.BuscarNumeroRegistroAsientoPorIdComprobanteEgreso(_tipoCon, txtNumeroComprobanteEgreso.Text)
+                    txtNumeroComprobanteEgreso.Text = dgvComprobanteEgresoBancos.CurrentRow.Cells.Item(0).Value
+                    formAsientoDiario.NumeroRegsitroBusqueda = _objetoNumeroRegistroAsientoCompEgreso.BuscarNumeroRegistroAsientoPorIdComprobanteEgreso(_tipoCon, txtNumeroComprobanteEgreso.Text)
                     DialogResult = formAsientoDiario.ShowDialog
                 End If
             Catch ex As Exception
@@ -157,6 +158,7 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
             AprobarComprobanteEgresoBancos()
             AprobarChequeEmitido()
 
+            Dim nombreU As String = "APROBACION COMPROBANTES EGRESO " & UserName
             Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, String.Empty)
             If res(0) Then CargarComprobanteEgresoBancos()
             MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")

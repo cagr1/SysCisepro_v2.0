@@ -10,7 +10,7 @@ Imports ClassLibraryCisepro.FONDOS.CAJA_CHICA
 Imports ClassLibraryCisepro.ProcesosSql
 Imports ClassLibraryCisepro.TALENTO_HUMANO
 Imports ClassLibraryCisepro.CONTABILIDAD.RETENCIONES_EMITIDAS
-Imports ClassLibraryCisepro.USUARIOS_DEL_SISTEMA
+
 
 Namespace FORMULARIOS.CONTABILIDAD.LIQUIDACIONES
 
@@ -43,7 +43,7 @@ Namespace FORMULARIOS.CONTABILIDAD.LIQUIDACIONES
         End Property
 
         Public IdUsuario As Integer
-
+        Public UserName As String
         ReadOnly _objLiquidacionCajaChica As New ClassLiquidacionCajaChica
         ReadOnly _objetoPlanCuentas As New ClassPlanDeCuentas
         ReadOnly _objSolicitudesCajaChica As New ClassSolicitudCajaChica
@@ -62,7 +62,7 @@ Namespace FORMULARIOS.CONTABILIDAD.LIQUIDACIONES
         ReadOnly _objetoDetalleComprobanteRetencionCompra As New ClassDetalleComprobantesRetencion
         ReadOnly _objetoComprobanteRetencionCompraVenta As New ClassComprobantesRetencionCompraVenta
         ReadOnly _objetoPorcentajes As New ClassPorcentajes
-        ReadOnly _objUser As New ClassUsuarioGeneral
+
 
         Dim _valDebe = 0
         Dim _valHaber = 0
@@ -479,8 +479,8 @@ Namespace FORMULARIOS.CONTABILIDAD.LIQUIDACIONES
                     Return
                 End If
 
-                Dim user As String = _objUser.DatosUsuario.ToString()
-                Dim nombreU As String = "REVISION-LIQUIDACION-CAJA-CHICA " & user
+
+                Dim nombreU As String = "REVISION-LIQUIDACION-CAJA-CHICA " & UserName
                 Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, nombreU)
                 If res(0) Then
                     LimpiarParametros()
