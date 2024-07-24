@@ -922,9 +922,17 @@ namespace SysCisepro3.TalentoHumano
                         }
                     }
                 }
-                var user = Usuario.Datos.ToString();
-                var nombre = $"REGISTRO PERSONAL: {user}";
-                var res = ComandosSql.ProcesarTransacciones(TipoCon, _sqlCommands, nombre);
+                string user = Usuario.Datos.ToString();
+                string nombreU = String.Empty;
+                if (_estado ==1)
+                    nombreU = $"REGISTRO PERSONAL: {user} - CONTRATO: {txtContrato.Text.Trim()}";
+                else if (_estado == 2)
+                    nombreU = $"MODIFICACIÓN PERSONAL: {user} - CONTRATO: {txtContrato.Text.Trim()}";
+                else if (_estado == 3)
+                    nombreU = $"REINGRESO PERSONAL: {user} - CONTRATO: {txtContrato.Text.Trim()}";
+
+
+                var res = ComandosSql.ProcesarTransacciones(TipoCon, _sqlCommands, nombreU);
 
                 if ((bool)res[0])
                 {

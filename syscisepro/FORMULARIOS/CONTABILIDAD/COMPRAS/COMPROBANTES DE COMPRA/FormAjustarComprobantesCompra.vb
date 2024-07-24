@@ -4,6 +4,7 @@ Imports ClassLibraryCisepro.CONTABILIDAD.COMPRAS.PROVEEDORES
 Imports ClassLibraryCisepro.CONTABILIDAD.COMPROBANTES_RETENCION
 Imports ClassLibraryCisepro.ENUMS
 Imports ClassLibraryCisepro.ProcesosSql
+Imports ClassLibraryCisepro.USUARIOS_DEL_SISTEMA
 
 Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
     ''' <summary>
@@ -35,9 +36,10 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
         End Property 
         Public IdUsuario As Integer
 
-        ReadOnly _objetoComprobantesCompra As New ClassComprobantesCompra 
+        ReadOnly _objetoComprobantesCompra As New ClassComprobantesCompra
         ReadOnly _objetoProveedorGeneral As New ClassProveedores
-         
+        ReadOnly _objUser As New ClassUsuarioGeneral
+
         Dim _sqlCommands As List(Of SqlCommand)
 
         Private Sub FormAjustarComprobantesCompra_Load(ByVal sender As System.Object, ByVal e As EventArgs) Handles MyBase.Load
@@ -264,7 +266,9 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
 
                     ModificarComprobanteCompra()
 
-                    Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, String.Empty)
+                    Dim user As String = _objUser.DatosUsuario.ToString()
+                    Dim nombreU As String = "AJUSTAR COMPROBANTE COMPRA " & user
+                    Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, nombreU)
                     If res(0) Then
 
                         btnModificar.Enabled = True

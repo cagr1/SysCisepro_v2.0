@@ -10,6 +10,7 @@ Imports ClassLibraryCisepro.CONTABILIDAD.COMPRAS.COMPROBANTES_COMPRA
 Imports ClassLibraryCisepro.CONTABILIDAD.COMPROBANTES_RETENCION
 Imports ClassLibraryCisepro.CONTABILIDAD.DOCUMENTOS_NO_DEDUCIBLES
 Imports ClassLibraryCisepro.TALENTO_HUMANO
+Imports ClassLibraryCisepro.USUARIOS_DEL_SISTEMA
 
 Namespace FORMULARIOS.FONDOS.FONDO_ROTATIVO
     ''' <summary>
@@ -61,6 +62,7 @@ Namespace FORMULARIOS.FONDOS.FONDO_ROTATIVO
         ReadOnly _objetoComprobantesCompra As New ClassComprobantesCompra
         ReadOnly _objetoComprobantesRetencion As New ClassComprobantesRetencion
         ReadOnly _objetoDetalleComprobantesRetencion As New ClassDetalleComprobantesRetencion
+        ReadOnly _objUser As New ClassUsuarioGeneral
         Dim _objetoDocumentoNoDeducible As New ClassDocumentoNoDeducible
 
         Private Sub FormLiquidacionFondoRotativo_Load(ByVal sender As System.Object, ByVal e As EventArgs) Handles MyBase.Load
@@ -343,6 +345,8 @@ Namespace FORMULARIOS.FONDOS.FONDO_ROTATIVO
                     ActualizarMontoFondo()
                     ActualizarRegistroSolicitudFondoRotativo()
 
+                    Dim user As String = _objUser.DatosUsuario.ToString()
+                    Dim nombreU As String = "LIQUIDACION-FONDO-ROTATIVO " & user
                     Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, String.Empty)
                     If res(0) Then
                         txtIdLiquidacion.Text = _objetoLiquidacionFondoRotativo.IdLiquidacion
@@ -461,7 +465,9 @@ Namespace FORMULARIOS.FONDOS.FONDO_ROTATIVO
                 _objetoAuxiliarFondoRotativo.MontoFondo = CDec(dgvLiquidacionFondoRotativo.CurrentRow.Cells(8).Value)
                 _sqlCommands.Add(_objetoAuxiliarFondoRotativo.ActualizarMontoAuxiliarFondoRotativoCommand2)
 
-                Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, String.Empty)
+                Dim user As String = _objUser.DatosUsuario.ToString()
+                Dim nombreU As String = "LIQUIDACION-FONDO-ROTATIVO-ANULADA " & user
+                Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, nombreU)
                 If res(0) Then ToolStripMenuItem1_Click(Nothing, Nothing)
                 MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
 

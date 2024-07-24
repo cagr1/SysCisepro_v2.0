@@ -5,6 +5,7 @@ Imports ClassLibraryCisepro.ENUMS
 Imports ClassLibraryCisepro.ProcesosSql
 Imports ClassLibraryCisepro.VALIDACIONES
 Imports syscisepro.DATOS
+Imports ClassLibraryCisepro.USUARIOS_DEL_SISTEMA
 
 Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.REQUERIMIENTOS
     ''' <summary>
@@ -40,6 +41,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.REQUERIMIENTOS
         ReadOnly _objetoRequisicionProductoServicio As New ClassRequisicionProductoServicio
         ReadOnly _objetoDetalleRequisicionProductoServicio As New ClassDetalleRequisicionProductoServicio
         ReadOnly _validacionesNumeros As New ClassNumerico
+        ReadOnly _objUser As New ClassUsuarioGeneral
         Dim _sqlCommands As List(Of SqlCommand)
 
         Private Sub FormAprovacionRequisicion_Load(ByVal sender As System.Object, ByVal e As EventArgs) Handles MyBase.Load
@@ -257,7 +259,8 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.REQUERIMIENTOS
 
                     aprovarRequisicionProductoServicio()
                     aprobarDetalleRequisicionProductoServicio()
-
+                    Dim user As String = _objUser.DatosUsuario.ToString()
+                    Dim nombreU As String = "APROBACION-REQUISICION: " & user
                     Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, String.Empty)
                     If res(0) Then
                         limpiarParametros()

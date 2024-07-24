@@ -22,6 +22,7 @@ Imports System.Xml
 Imports System.Text
 Imports ClassLibraryCisepro.CONTABILIDAD.VENTAS
 Imports Krypton.Toolkit
+Imports ClassLibraryCisepro.USUARIOS_DEL_SISTEMA
 
 Namespace FORMULARIOS.FONDOS.FONDO_ROTATIVO
     ''' <summary>
@@ -83,6 +84,7 @@ Namespace FORMULARIOS.FONDOS.FONDO_ROTATIVO
         Dim _formComprobanteCompra As FormRegistroComprobanteCompra
         ReadOnly _objetoComprobantesElectronicos As New ClassDocumentosElectronicos
         ReadOnly _objetoClienteGeneral As New ClassClienteGeneral
+        ReadOnly _objUser As New ClassUsuarioGeneral
 
         '=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= COMPROBANTE DE COMPRA =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
         Dim _idProveedorGeneral As Int64
@@ -837,7 +839,10 @@ _tipoAmbiente, _establecimientoLiqCompra, _ptoEmisionLiqCompra,
                             Return
                         End If
                     End If
-                    Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, String.Empty)
+
+                    Dim user As String = _objUser.DatosUsuario.ToString()
+                    Dim nombreU As String = "SOLICITUD-FONDO-ROTATIVO " & user
+                    Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, nombreU)
                     If res(0) Then
                         If _validarComprobanteRetencion = 1 And _ptoEmisionRetencion = "002" Then ExportarXml()
                         If _validarComprobanteLiqCompra = 1 And _ptoEmisionLiqCompra = "002" Then ExportarXmlLiquidacionCompra()

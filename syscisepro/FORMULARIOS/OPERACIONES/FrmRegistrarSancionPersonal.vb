@@ -9,6 +9,7 @@ Imports syscisepro.FORMULARIOS.INVENTARIOS.PROCESO
 Imports Microsoft.Office.Interop
 Imports syscisepro.DATOS
 Imports Krypton.Toolkit
+Imports ClassLibraryCisepro.USUARIOS_DEL_SISTEMA
 
 Namespace FORMULARIOS.OPERACIONES
     ''' <summary>
@@ -50,6 +51,7 @@ Namespace FORMULARIOS.OPERACIONES
 
         ReadOnly _objProgramacionOps As New ClassProgramacionOperaciones
         ReadOnly _objRegistroDescuento As New ClassDescuentosPersonal
+        ReadOnly _objUser As New ClassUsuarioGeneral
 
         Dim _sqlCommands As List(Of SqlCommand)
 
@@ -304,7 +306,10 @@ Namespace FORMULARIOS.OPERACIONES
                 End With
                 _sqlCommands.Add(_objRegistroDescuento.NuevoRegistroDescuentoCommands())
 
-                Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, String.Empty)
+
+                Dim user As String = _objUser.DatosUsuario.ToString()
+                Dim nombreU As String = "REGISTRO SANCION " & user
+                Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, nombreU)
                 If res(0) Then
                     btnPersonalEntra.Enabled = False
                     btnNuevo.Enabled = True
@@ -351,7 +356,9 @@ Namespace FORMULARIOS.OPERACIONES
                 _objRegistroDescuento.IdRegistro = dtpFecha.Tag.ToString
                 _sqlCommands.Add(_objRegistroDescuento.AnularRegistroDescuentoCommand())
 
-                Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, String.Empty)
+                Dim user As String = _objUser.DatosUsuario.ToString()
+                Dim nombreU As String = "SANCION ANULADA " & user
+                Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, nombreU)
                 If res(0) Then
                     btnPersonalEntra.Enabled = False
                     txtSancion.Enabled = False

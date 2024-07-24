@@ -265,7 +265,7 @@
             '
             'ColumnHeader14
             '
-            Me.ColumnHeader14.Text = "MULTADOR"
+            Me.ColumnHeader14.Text = "REGISTRADO"
             '
             'TabPage3
             '

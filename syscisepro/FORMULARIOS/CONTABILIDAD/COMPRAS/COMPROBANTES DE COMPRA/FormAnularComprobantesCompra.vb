@@ -6,6 +6,7 @@ Imports ClassLibraryCisepro.CONTABILIDAD.LIBRO_DIARIO
 Imports ClassLibraryCisepro.CONTABILIDAD.SRI
 Imports ClassLibraryCisepro.ENUMS
 Imports ClassLibraryCisepro.ProcesosSql
+Imports ClassLibraryCisepro.USUARIOS_DEL_SISTEMA
 
 Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
     ''' <summary>
@@ -46,6 +47,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
         ReadOnly _objetoNumeroRegistroAsientoComprobanteCompra As New ClassNumeroRegistroAsientoComprobanteCompra
         ReadOnly _objetoAts As New ClassAnexoTransaccional
         ReadOnly _objetoAsientoLibroDiario As New ClassAsientosLibroDiario
+        ReadOnly _objUser As New ClassUsuarioGeneral
 
         Dim _sqlCommands As List(Of SqlCommand)
 
@@ -174,6 +176,8 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
 
                 ActualizarEstadoComprobanteCompra()
 
+                Dim user As String = _objUser.DatosUsuario.ToString()
+                Dim nombreU As String = "ANULAR COMPROBANTE COMPRA " & user
                 Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, String.Empty)
                 If res(0) Then
                     CargarComprobantesCompra()

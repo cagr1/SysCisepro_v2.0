@@ -15,6 +15,7 @@ Imports ClassLibraryCisepro.CONTABILIDAD.CENTRO_DE_COSTOS
 Imports System.Xml
 Imports System.Text
 Imports syscisepro.FORMULARIOS.CONTABILIDAD.PORCENTAJES_RETENCION
+Imports ClassLibraryCisepro.USUARIOS_DEL_SISTEMA
 
 Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
     ''' <summary>
@@ -68,6 +69,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
         ReadOnly _objetoComprobanteRetencionCompraVenta As New ClassComprobantesRetencionCompraVenta
         ReadOnly _objetoPlanCuentas As New ClassPlanDeCuentas
         ReadOnly _objetoCentroCosto As New ClassCentroCosto
+        ReadOnly _objUser As New ClassUsuarioGeneral
 
 
         Dim _idld = 0
@@ -503,8 +505,9 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
                             Return
                         End If
                     End If
-
-                    Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, String.Empty)
+                    Dim user As String = _objUser.DatosUsuario.ToString()
+                    Dim nombreU As String = "AJUSTE-COMPROBANTE-RETENCION " & user
+                    Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, nombreU)
                     If res(0) Then
                         LimpiarParametrosRetencion()
 

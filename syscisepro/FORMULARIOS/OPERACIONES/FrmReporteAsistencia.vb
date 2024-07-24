@@ -914,7 +914,8 @@ Namespace FORMULARIOS.OPERACIONES
 
 
 
-            Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, String.Empty)
+            Dim nombreU As String = "REPORTE ASISTENCIA " & UserName
+            Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, nombreU)
             MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
         End Sub
 

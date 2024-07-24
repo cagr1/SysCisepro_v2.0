@@ -7,6 +7,7 @@ Imports ClassLibraryCisepro.VALIDACIONES
 Imports Microsoft.Office.Interop
 Imports syscisepro.DATOS
 Imports syscisepro.FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO.REPORTES
+Imports ClassLibraryCisepro.USUARIOS_DEL_SISTEMA
 
 Namespace FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
     ''' <summary>
@@ -47,12 +48,12 @@ Namespace FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
                 admin = value
             End Set
         End Property
-         
+
         Dim _sqlCommands As List(Of SqlCommand)
 
         Dim _fechaDesde As String = ""
         Dim _fechaHasta As String = ""
- 
+
         ReadOnly _validacionesNumeros As New ClassNumerico
         ReadOnly _validacionesDecimales As New ClassDecimal
         ReadOnly _validacionesTexto As New ClassAlfanumerico
@@ -60,7 +61,7 @@ Namespace FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
         ReadOnly _objetoAsientoLibroDiario As New ClassAsientosLibroDiario
         ReadOnly _objetoAjustarAsientos As New ClassAjustarAsientosLibroDiario
         ReadOnly _objetoPlanCuentas As New ClassPlanDeCuentas
-
+        ReadOnly _objUser As New ClassUsuarioGeneral
 
         Private Sub AutocompletarPlanCuentas()
             Try
@@ -108,7 +109,7 @@ Namespace FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
         End Sub
 
         Private Sub CargarAsientoLibroDiario()
-            Try 
+            Try
                 _fechaDesde = dtpAsientoDesde.Value.Day.ToString & "-" & dtpAsientoDesde.Value.Month.ToString & "-" & dtpAsientoDesde.Value.Year.ToString & " 00:00:00"
                 _fechaHasta = dtpAsientoHasta.Value.Day.ToString & "-" & dtpAsientoHasta.Value.Month.ToString & "-" & dtpAsientoHasta.Value.Year.ToString & " 23:59:59"
 
@@ -258,7 +259,7 @@ Namespace FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
                 txtCuentaNueva.Enabled = True
                 txtCuentaNueva.Focus()
             End If
-        End Sub         
+        End Sub
 
         Private Sub txtNumeroAsientoBuscar_KeyUp(ByVal sender As System.Object, ByVal e As KeyEventArgs) Handles txtNumeroAsientoBuscar.KeyUp
             If e.KeyCode <> 13 Then Return
@@ -268,7 +269,7 @@ Namespace FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
         Private Sub txtNumeroAsientoBuscar_KeyPress(ByVal sender As System.Object, ByVal e As KeyPressEventArgs) Handles txtNumeroAsientoBuscar.KeyPress
             e.Handled = Not _validacionesNumeros.EsNumero(e.KeyChar)
         End Sub
-         
+
         Private Sub ExportarDatosExcel(ByVal titulo As String, ByVal sname As String, ByVal desde As DateTime, ByVal hasta As DateTime)
             Try
                 Dim fec = ValidationForms.FechaActual(_tipoCon)
@@ -378,19 +379,19 @@ Namespace FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
                         End If
 
                         With _objetoAsientoLibroDiario
-                            .idAsiento = dgvAsientosDiario.Rows(indice).Cells(0).Value
-                            .fechaAsiento = dgvAsientosDiario.Rows(indice).Cells(1).Value
-                            .codigoCuentaAsiento = dgvAsientosDiario.Rows(indice).Cells(2).Value
-                            .nombreCuentaAsiento = dgvAsientosDiario.Rows(indice).Cells(3).Value
+                            .IdAsiento = dgvAsientosDiario.Rows(indice).Cells(0).Value
+                            .FechaAsiento = dgvAsientosDiario.Rows(indice).Cells(1).Value
+                            .CodigoCuentaAsiento = dgvAsientosDiario.Rows(indice).Cells(2).Value
+                            .NombreCuentaAsiento = dgvAsientosDiario.Rows(indice).Cells(3).Value
                             .ConceptoAsiento = dgvAsientosDiario.Rows(indice).Cells(4).Value.ToString.ToUpper
-                            .detalleTransaccionAsiento = dgvAsientosDiario.Rows(indice).Cells(5).Value.ToString.ToUpper
-                            .valorDebeAsiento = dgvAsientosDiario.Rows(indice).Cells(6).Value
-                            .valorHaberAsiento = dgvAsientosDiario.Rows(indice).Cells(7).Value
-                            .numeroRegistroAsiento = dgvAsientosDiario.Rows(indice).Cells(8).Value
-                            .debeHaberAsiento = dgvAsientosDiario.Rows(indice).Cells(9).Value
-                            .conciliarAsiento = 1
-                            .estadoAsiento = dgvAsientosDiario.Rows(indice).Cells(11).Value
-                            .idLibroDiario = dgvAsientosDiario.Rows(indice).Cells(12).Value
+                            .DetalleTransaccionAsiento = dgvAsientosDiario.Rows(indice).Cells(5).Value.ToString.ToUpper
+                            .ValorDebeAsiento = dgvAsientosDiario.Rows(indice).Cells(6).Value
+                            .ValorHaberAsiento = dgvAsientosDiario.Rows(indice).Cells(7).Value
+                            .NumeroRegistroAsiento = dgvAsientosDiario.Rows(indice).Cells(8).Value
+                            .DebeHaberAsiento = dgvAsientosDiario.Rows(indice).Cells(9).Value
+                            .ConciliarAsiento = 1
+                            .EstadoAsiento = dgvAsientosDiario.Rows(indice).Cells(11).Value
+                            .IdLibroDiario = dgvAsientosDiario.Rows(indice).Cells(12).Value
                             '.ModificarRegistroAsientoLibroDiario()
                         End With
                         _sqlCommands.Add(_objetoAsientoLibroDiario.ModificarRegistroAsientoLibroDiarioCommand())
@@ -401,10 +402,12 @@ Namespace FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
                         Return
                     End If
 
+                    Dim user As String = _objUser.DatosUsuario.ToString()
+                    Dim nombreU As String = "AJUSTE EN BUSQUEDA LIBRO DIARIO " & user
                     Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, String.Empty)
                     If res(0) Then btnBuscarAsiento.PerformClick()
                     MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
-                     
+
                 Else
                     MsgBox("NO SE PUEDE GUARDAR." & vbNewLine & "LOS VALORES DE EL DEBE Y EL HABER NO COINCIDEN POR FAVOR REVISE LAS TRANSACCIONES.", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACION")
                 End If
@@ -412,7 +415,7 @@ Namespace FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
 
             End Try
         End Sub
-         
+
         Private Sub dgvAsientosDiario_EditingControlShowing(ByVal sender As System.Object, ByVal e As DataGridViewEditingControlShowingEventArgs) Handles dgvAsientosDiario.EditingControlShowing
             Dim tBox = CType(e.Control, Windows.Forms.TextBox)
             tBox.CharacterCasing = CharacterCasing.Upper
@@ -468,7 +471,7 @@ Namespace FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
                 MsgBox("POR FAVOR REVISE LAS TRANSACCIONES, DEBE SELECCIONAR UNA TRANSACCIÓN PARA ANULAR", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACION")
                 Return
             End If
-             
+
             If MessageBox.Show("DESEA ANULAR EL ASIENTO SELECCIONADO?", "MENSAJE DEL SISTEMA", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> DialogResult.Yes Then Return
 
             Try
@@ -477,25 +480,27 @@ Namespace FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
                 For indice = 0 To dgvAsientosDiario.RowCount - 1
                     dgvAsientosDiario.Rows(indice).Cells("EST").Value = 0
                     With _objetoAsientoLibroDiario
-                        .idAsiento = dgvAsientosDiario.Rows(indice).Cells(0).Value
-                        .fechaAsiento = dgvAsientosDiario.Rows(indice).Cells(1).Value
-                        .codigoCuentaAsiento = dgvAsientosDiario.Rows(indice).Cells(2).Value
-                        .nombreCuentaAsiento = dgvAsientosDiario.Rows(indice).Cells(3).Value
+                        .IdAsiento = dgvAsientosDiario.Rows(indice).Cells(0).Value
+                        .FechaAsiento = dgvAsientosDiario.Rows(indice).Cells(1).Value
+                        .CodigoCuentaAsiento = dgvAsientosDiario.Rows(indice).Cells(2).Value
+                        .NombreCuentaAsiento = dgvAsientosDiario.Rows(indice).Cells(3).Value
                         .ConceptoAsiento = dgvAsientosDiario.Rows(indice).Cells(4).Value.ToString.ToUpper
-                        .detalleTransaccionAsiento = dgvAsientosDiario.Rows(indice).Cells(5).Value.ToString.ToUpper 
-                        .valorDebeAsiento = dgvAsientosDiario.Rows(indice).Cells(6).Value
-                        .valorHaberAsiento = dgvAsientosDiario.Rows(indice).Cells(7).Value
-                        .numeroRegistroAsiento = dgvAsientosDiario.Rows(indice).Cells(8).Value
-                        .debeHaberAsiento = dgvAsientosDiario.Rows(indice).Cells(9).Value
-                        .conciliarAsiento = 1
-                        .estadoAsiento = dgvAsientosDiario.Rows(indice).Cells(11).Value
-                        .idLibroDiario = dgvAsientosDiario.Rows(indice).Cells(12).Value
+                        .DetalleTransaccionAsiento = dgvAsientosDiario.Rows(indice).Cells(5).Value.ToString.ToUpper
+                        .ValorDebeAsiento = dgvAsientosDiario.Rows(indice).Cells(6).Value
+                        .ValorHaberAsiento = dgvAsientosDiario.Rows(indice).Cells(7).Value
+                        .NumeroRegistroAsiento = dgvAsientosDiario.Rows(indice).Cells(8).Value
+                        .DebeHaberAsiento = dgvAsientosDiario.Rows(indice).Cells(9).Value
+                        .ConciliarAsiento = 1
+                        .EstadoAsiento = dgvAsientosDiario.Rows(indice).Cells(11).Value
+                        .IdLibroDiario = dgvAsientosDiario.Rows(indice).Cells(12).Value
                         '.ModificarRegistroAsientoLibroDiario()
                     End With
                     _sqlCommands.Add(_objetoAsientoLibroDiario.ModificarRegistroAsientoLibroDiarioCommand())
                 Next
-                
-                Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, String.Empty)
+
+                Dim user As String = _objUser.DatosUsuario.ToString()
+                Dim nombreU As String = "ANULACION EN BSUQUEDA LIBRO DIARIO " & user
+                Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, nombreU)
                 If res(0) Then btnBuscarAsiento.PerformClick()
                 MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
 

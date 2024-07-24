@@ -346,7 +346,7 @@ Namespace FORMULARIOS.CONTABILIDAD.LIQUIDACIONES
                 End If
 
                 Dim user As String = _objUser.DatosUsuario.ToString()
-                Dim nombreU As String = "REVISION-LIQUIDACION " & user
+                Dim nombreU As String = "REVISION-LIQUIDACIONES " & user
                 Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, nombreU)
                 If res(0) Then
                     LimpiarParametros()

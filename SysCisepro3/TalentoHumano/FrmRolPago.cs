@@ -687,9 +687,16 @@ namespace SysCisepro3.TalentoHumano
                 _sqlCommands.Add(_objContratos.ModificarContratoParametrosRolCommand());
             }
 
-            var user = Usuario.Datos.ToString();
-            var nombre = $"ROL POR: {user}";
-            var res = ComandosSql.ProcesarTransacciones(TipoCon, _sqlCommands, nombre);
+
+            string user = Usuario.Datos.ToString();
+            string nombreU = String.Empty;
+            if (_estado == 1 )
+                nombreU = $"ROL DE PAGO GENERADO: {user}";
+
+            else if (_estado == 2)
+                nombreU = $"ROL DE PAGO MODIFICADO: {user}";
+
+            var res = ComandosSql.ProcesarTransacciones(TipoCon, _sqlCommands, nombreU);
             var msg = res[1].ToString();
             if ((bool)res[0])
             {

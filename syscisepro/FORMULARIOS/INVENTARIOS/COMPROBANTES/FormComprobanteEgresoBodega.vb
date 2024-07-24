@@ -842,7 +842,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                 ReingresoComprante()
             End If
             Dim user As String = _objUser.DatosUsuario.ToString()
-            Dim nombreU As String = "COMPROBANTE POR " & user
+            Dim nombreU As String = "COMPROBANTE EGRESO " & user
             Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, nombreU)
             If res(0) Then
                 txtNumero.Text = _objCompEgr.Id
