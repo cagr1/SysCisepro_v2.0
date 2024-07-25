@@ -94,7 +94,7 @@
             Me.gbNumeroFactura.BackColor = System.Drawing.Color.White
             Me.gbNumeroFactura.Controls.Add(Me.txtNumeroFacturaBuscar)
             Me.gbNumeroFactura.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.gbNumeroFactura.Location = New System.Drawing.Point(1157, 8)
+            Me.gbNumeroFactura.Location = New System.Drawing.Point(954, 8)
             Me.gbNumeroFactura.Name = "gbNumeroFactura"
             Me.gbNumeroFactura.Size = New System.Drawing.Size(117, 61)
             Me.gbNumeroFactura.TabIndex = 101
@@ -119,7 +119,7 @@
             Me.gbRangoFechas.Controls.Add(Me.dtpFechaHasta)
             Me.gbRangoFechas.Controls.Add(Me.dtpFechaDesde)
             Me.gbRangoFechas.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.gbRangoFechas.Location = New System.Drawing.Point(931, 7)
+            Me.gbRangoFechas.Location = New System.Drawing.Point(728, 7)
             Me.gbRangoFechas.Name = "gbRangoFechas"
             Me.gbRangoFechas.Size = New System.Drawing.Size(222, 61)
             Me.gbRangoFechas.TabIndex = 98
@@ -168,7 +168,7 @@
             Me.gbClienteGeneral.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.gbClienteGeneral.Location = New System.Drawing.Point(202, 7)
             Me.gbClienteGeneral.Name = "gbClienteGeneral"
-            Me.gbClienteGeneral.Size = New System.Drawing.Size(589, 61)
+            Me.gbClienteGeneral.Size = New System.Drawing.Size(382, 61)
             Me.gbClienteGeneral.TabIndex = 97
             Me.gbClienteGeneral.TabStop = False
             Me.gbClienteGeneral.Text = "CLIENTES"
@@ -179,7 +179,7 @@
             Me.txtClienteGeneral.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtClienteGeneral.Location = New System.Drawing.Point(6, 24)
             Me.txtClienteGeneral.Name = "txtClienteGeneral"
-            Me.txtClienteGeneral.Size = New System.Drawing.Size(577, 21)
+            Me.txtClienteGeneral.Size = New System.Drawing.Size(357, 21)
             Me.txtClienteGeneral.TabIndex = 31
             '
             'lblIdClienteGeneral
@@ -226,7 +226,7 @@
             Me.dgvNotaCredito.ReadOnly = True
             Me.dgvNotaCredito.RowHeadersVisible = False
             Me.dgvNotaCredito.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvNotaCredito.Size = New System.Drawing.Size(1286, 518)
+            Me.dgvNotaCredito.Size = New System.Drawing.Size(1080, 456)
             Me.dgvNotaCredito.TabIndex = 102
             '
             'gbTotal
@@ -239,16 +239,16 @@
             Me.gbTotal.Controls.Add(Me.Label4)
             Me.gbTotal.Controls.Add(Me.txtTotalFacturas)
             Me.gbTotal.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.gbTotal.Location = New System.Drawing.Point(1, 631)
+            Me.gbTotal.Location = New System.Drawing.Point(1, 609)
             Me.gbTotal.Name = "gbTotal"
-            Me.gbTotal.Size = New System.Drawing.Size(1292, 44)
+            Me.gbTotal.Size = New System.Drawing.Size(1092, 44)
             Me.gbTotal.TabIndex = 103
             Me.gbTotal.TabStop = False
             '
             'lblSubtotalIva
             '
             Me.lblSubtotalIva.AutoSize = True
-            Me.lblSubtotalIva.Location = New System.Drawing.Point(724, 20)
+            Me.lblSubtotalIva.Location = New System.Drawing.Point(506, 20)
             Me.lblSubtotalIva.Name = "lblSubtotalIva"
             Me.lblSubtotalIva.Size = New System.Drawing.Size(85, 13)
             Me.lblSubtotalIva.TabIndex = 9
@@ -257,7 +257,7 @@
             'txtTotalSubtotal
             '
             Me.txtTotalSubtotal.Font = New System.Drawing.Font("Consolas", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtTotalSubtotal.Location = New System.Drawing.Point(815, 15)
+            Me.txtTotalSubtotal.Location = New System.Drawing.Point(597, 15)
             Me.txtTotalSubtotal.Name = "txtTotalSubtotal"
             Me.txtTotalSubtotal.Size = New System.Drawing.Size(89, 23)
             Me.txtTotalSubtotal.TabIndex = 8
@@ -267,7 +267,7 @@
             'lblIva
             '
             Me.lblIva.AutoSize = True
-            Me.lblIva.Location = New System.Drawing.Point(913, 20)
+            Me.lblIva.Location = New System.Drawing.Point(695, 20)
             Me.lblIva.Name = "lblIva"
             Me.lblIva.Size = New System.Drawing.Size(61, 13)
             Me.lblIva.TabIndex = 7
@@ -276,7 +276,7 @@
             'txtTotalIVA
             '
             Me.txtTotalIVA.Font = New System.Drawing.Font("Consolas", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtTotalIVA.Location = New System.Drawing.Point(978, 15)
+            Me.txtTotalIVA.Location = New System.Drawing.Point(760, 15)
             Me.txtTotalIVA.Name = "txtTotalIVA"
             Me.txtTotalIVA.Size = New System.Drawing.Size(89, 23)
             Me.txtTotalIVA.TabIndex = 6
@@ -286,7 +286,7 @@
             'Label4
             '
             Me.Label4.AutoSize = True
-            Me.Label4.Location = New System.Drawing.Point(1071, 20)
+            Me.Label4.Location = New System.Drawing.Point(853, 20)
             Me.Label4.Name = "Label4"
             Me.Label4.Size = New System.Drawing.Size(121, 13)
             Me.Label4.TabIndex = 5
@@ -295,7 +295,7 @@
             'txtTotalFacturas
             '
             Me.txtTotalFacturas.Font = New System.Drawing.Font("Consolas", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtTotalFacturas.Location = New System.Drawing.Point(1197, 15)
+            Me.txtTotalFacturas.Location = New System.Drawing.Point(979, 15)
             Me.txtTotalFacturas.Name = "txtTotalFacturas"
             Me.txtTotalFacturas.Size = New System.Drawing.Size(89, 23)
             Me.txtTotalFacturas.TabIndex = 4
@@ -319,10 +319,10 @@
             Me.dgvDetalleFacturaVenta.AllowUserToAddRows = False
             Me.dgvDetalleFacturaVenta.AllowUserToDeleteRows = False
             Me.dgvDetalleFacturaVenta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-            Me.dgvDetalleFacturaVenta.Location = New System.Drawing.Point(11, 192)
+            Me.dgvDetalleFacturaVenta.Location = New System.Drawing.Point(9, 192)
             Me.dgvDetalleFacturaVenta.Name = "dgvDetalleFacturaVenta"
             Me.dgvDetalleFacturaVenta.ReadOnly = True
-            Me.dgvDetalleFacturaVenta.Size = New System.Drawing.Size(1270, 181)
+            Me.dgvDetalleFacturaVenta.Size = New System.Drawing.Size(1041, 181)
             Me.dgvDetalleFacturaVenta.TabIndex = 106
             '
             'dgvCliente
@@ -344,7 +344,7 @@
             Me.gbEstadoFactura.Controls.Add(Me.rbAnuladas)
             Me.gbEstadoFactura.Controls.Add(Me.rbActivas)
             Me.gbEstadoFactura.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.gbEstadoFactura.Location = New System.Drawing.Point(791, 7)
+            Me.gbEstadoFactura.Location = New System.Drawing.Point(588, 7)
             Me.gbEstadoFactura.Name = "gbEstadoFactura"
             Me.gbEstadoFactura.Size = New System.Drawing.Size(139, 61)
             Me.gbEstadoFactura.TabIndex = 108
@@ -448,7 +448,7 @@
             Me.GroupBox1.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.GroupBox1.Location = New System.Drawing.Point(7, 132)
             Me.GroupBox1.Name = "GroupBox1"
-            Me.GroupBox1.Size = New System.Drawing.Size(1292, 537)
+            Me.GroupBox1.Size = New System.Drawing.Size(1086, 475)
             Me.GroupBox1.TabIndex = 110
             Me.GroupBox1.TabStop = False
             '
@@ -460,7 +460,7 @@
             Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
             Me.MenuStrip1.Name = "MenuStrip1"
             Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(7, 2, 0, 2)
-            Me.MenuStrip1.Size = New System.Drawing.Size(1294, 32)
+            Me.MenuStrip1.Size = New System.Drawing.Size(1097, 32)
             Me.MenuStrip1.TabIndex = 191
             Me.MenuStrip1.Text = "msIngresoBodega"
             '
@@ -512,7 +512,7 @@
             Me.TabControl1.Location = New System.Drawing.Point(1, 32)
             Me.TabControl1.Name = "TabControl1"
             Me.TabControl1.SelectedIndex = 0
-            Me.TabControl1.Size = New System.Drawing.Size(1288, 106)
+            Me.TabControl1.Size = New System.Drawing.Size(1092, 106)
             Me.TabControl1.TabIndex = 192
             '
             'TabPage1
@@ -526,7 +526,7 @@
             Me.TabPage1.Location = New System.Drawing.Point(4, 22)
             Me.TabPage1.Name = "TabPage1"
             Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-            Me.TabPage1.Size = New System.Drawing.Size(1280, 80)
+            Me.TabPage1.Size = New System.Drawing.Size(1084, 80)
             Me.TabPage1.TabIndex = 0
             Me.TabPage1.Text = "CONSULTA"
             Me.TabPage1.UseVisualStyleBackColor = True
@@ -589,7 +589,7 @@
             '
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-            Me.ClientSize = New System.Drawing.Size(1294, 675)
+            Me.ClientSize = New System.Drawing.Size(1097, 661)
             Me.Controls.Add(Me.TabControl1)
             Me.Controls.Add(Me.MenuStrip1)
             Me.Controls.Add(Me.dgvFacturaVenta)

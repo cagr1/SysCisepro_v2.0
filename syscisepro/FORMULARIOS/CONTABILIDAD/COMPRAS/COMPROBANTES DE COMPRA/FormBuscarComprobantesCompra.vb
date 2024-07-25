@@ -167,6 +167,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
                     MenuStrip1.ForeColor = Color.White
                     dgvComprobantesCompra.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
             End Select
+            dgvComprobantesCompra.Font = New Drawing.Font("Roboto", 7, FontStyle.Regular)
             _sqlCommands = New List(Of SqlCommand)
             AutocompletarNombreProveedor()
 

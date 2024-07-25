@@ -36,6 +36,14 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmDescuentos));
             this.tcSitios = new System.Windows.Forms.TabControl();
             this.TabPage1 = new System.Windows.Forms.TabPage();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.dtpFechaHasta = new System.Windows.Forms.DateTimePicker();
+            this.Label10 = new System.Windows.Forms.Label();
+            this.cbxFiltro = new System.Windows.Forms.ComboBox();
+            this.Label11 = new System.Windows.Forms.Label();
+            this.Label7 = new System.Windows.Forms.Label();
+            this.txtFiltro = new System.Windows.Forms.TextBox();
+            this.dtpFechaDesde = new System.Windows.Forms.DateTimePicker();
             this.MULTAS = new System.Windows.Forms.TabControl();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.ListView1 = new System.Windows.Forms.ListView();
@@ -108,7 +116,6 @@
             this.Column16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label8 = new System.Windows.Forms.Label();
-            this.cbxFiltro = new System.Windows.Forms.ComboBox();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.ToolStripMenuItem1 = new System.Windows.Forms.ToolStripButton();
             this.btnNuevo = new System.Windows.Forms.ToolStripButton();
@@ -143,11 +150,6 @@
             this.Label6 = new System.Windows.Forms.Label();
             this.Label3 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.dtpFechaHasta = new System.Windows.Forms.DateTimePicker();
-            this.dtpFechaDesde = new System.Windows.Forms.DateTimePicker();
-            this.Label24 = new System.Windows.Forms.Label();
-            this.txtFiltro = new System.Windows.Forms.TextBox();
-            this.Label7 = new System.Windows.Forms.Label();
             this.GroupBox1 = new System.Windows.Forms.GroupBox();
             this.txtArea = new System.Windows.Forms.TextBox();
             this.Label27 = new System.Windows.Forms.Label();
@@ -158,8 +160,6 @@
             this.Label22 = new System.Windows.Forms.Label();
             this.txtPersonal = new System.Windows.Forms.TextBox();
             this.Label26 = new System.Windows.Forms.Label();
-            this.Label11 = new System.Windows.Forms.Label();
-            this.Label10 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.dgvSecuencial = new System.Windows.Forms.DataGridView();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
@@ -192,6 +192,7 @@
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.tcSitios.SuspendLayout();
             this.TabPage1.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.MULTAS.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.tabPage6.SuspendLayout();
@@ -217,30 +218,112 @@
             this.tcSitios.Location = new System.Drawing.Point(3, 3);
             this.tcSitios.Name = "tcSitios";
             this.tcSitios.SelectedIndex = 0;
-            this.tcSitios.Size = new System.Drawing.Size(805, 695);
+            this.tcSitios.Size = new System.Drawing.Size(805, 667);
             this.tcSitios.TabIndex = 5;
             // 
             // TabPage1
             // 
             this.TabPage1.BackColor = System.Drawing.Color.White;
+            this.TabPage1.Controls.Add(this.groupBox3);
             this.TabPage1.Controls.Add(this.MULTAS);
-            this.TabPage1.Controls.Add(this.cbxFiltro);
             this.TabPage1.Controls.Add(this.toolStrip1);
             this.TabPage1.Controls.Add(this.GroupBox2);
-            this.TabPage1.Controls.Add(this.dtpFechaHasta);
-            this.TabPage1.Controls.Add(this.dtpFechaDesde);
-            this.TabPage1.Controls.Add(this.Label24);
-            this.TabPage1.Controls.Add(this.txtFiltro);
-            this.TabPage1.Controls.Add(this.Label7);
             this.TabPage1.Controls.Add(this.GroupBox1);
-            this.TabPage1.Controls.Add(this.Label11);
-            this.TabPage1.Controls.Add(this.Label10);
             this.TabPage1.Location = new System.Drawing.Point(4, 22);
             this.TabPage1.Name = "TabPage1";
             this.TabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.TabPage1.Size = new System.Drawing.Size(797, 669);
+            this.TabPage1.Size = new System.Drawing.Size(797, 641);
             this.TabPage1.TabIndex = 0;
             this.TabPage1.Text = "MANTENIMIENTO";
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.dtpFechaHasta);
+            this.groupBox3.Controls.Add(this.Label10);
+            this.groupBox3.Controls.Add(this.cbxFiltro);
+            this.groupBox3.Controls.Add(this.Label11);
+            this.groupBox3.Controls.Add(this.Label7);
+            this.groupBox3.Controls.Add(this.txtFiltro);
+            this.groupBox3.Controls.Add(this.dtpFechaDesde);
+            this.groupBox3.Location = new System.Drawing.Point(4, 210);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(790, 44);
+            this.groupBox3.TabIndex = 218;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Detalles Descuento";
+            // 
+            // dtpFechaHasta
+            // 
+            this.dtpFechaHasta.CustomFormat = "dddd, dd-MMM-yyyy";
+            this.dtpFechaHasta.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpFechaHasta.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpFechaHasta.Location = new System.Drawing.Point(669, 16);
+            this.dtpFechaHasta.Name = "dtpFechaHasta";
+            this.dtpFechaHasta.Size = new System.Drawing.Size(93, 22);
+            this.dtpFechaHasta.TabIndex = 200;
+            // 
+            // Label10
+            // 
+            this.Label10.AutoSize = true;
+            this.Label10.Location = new System.Drawing.Point(493, 21);
+            this.Label10.Name = "Label10";
+            this.Label10.Size = new System.Drawing.Size(43, 13);
+            this.Label10.TabIndex = 201;
+            this.Label10.Text = "DESDE:";
+            // 
+            // cbxFiltro
+            // 
+            this.cbxFiltro.BackColor = System.Drawing.Color.White;
+            this.cbxFiltro.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxFiltro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbxFiltro.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxFiltro.FormattingEnabled = true;
+            this.cbxFiltro.Location = new System.Drawing.Point(268, 14);
+            this.cbxFiltro.Name = "cbxFiltro";
+            this.cbxFiltro.Size = new System.Drawing.Size(175, 21);
+            this.cbxFiltro.TabIndex = 216;
+            this.cbxFiltro.SelectedIndexChanged += new System.EventHandler(this.cbxFiltro_SelectedIndexChanged);
+            // 
+            // Label11
+            // 
+            this.Label11.AutoSize = true;
+            this.Label11.Location = new System.Drawing.Point(643, 21);
+            this.Label11.Name = "Label11";
+            this.Label11.Size = new System.Drawing.Size(17, 13);
+            this.Label11.TabIndex = 202;
+            this.Label11.Text = "A:";
+            // 
+            // Label7
+            // 
+            this.Label7.AutoSize = true;
+            this.Label7.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Label7.Location = new System.Drawing.Point(7, 17);
+            this.Label7.Name = "Label7";
+            this.Label7.Size = new System.Drawing.Size(46, 13);
+            this.Label7.TabIndex = 190;
+            this.Label7.Text = "FILTRO:";
+            this.Label7.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // txtFiltro
+            // 
+            this.txtFiltro.BackColor = System.Drawing.Color.White;
+            this.txtFiltro.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtFiltro.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFiltro.Location = new System.Drawing.Point(60, 15);
+            this.txtFiltro.Name = "txtFiltro";
+            this.txtFiltro.Size = new System.Drawing.Size(188, 21);
+            this.txtFiltro.TabIndex = 191;
+            this.txtFiltro.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtFiltro_KeyUp);
+            // 
+            // dtpFechaDesde
+            // 
+            this.dtpFechaDesde.CustomFormat = "dddd, dd-MMM-yyyy";
+            this.dtpFechaDesde.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpFechaDesde.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpFechaDesde.Location = new System.Drawing.Point(543, 16);
+            this.dtpFechaDesde.Name = "dtpFechaDesde";
+            this.dtpFechaDesde.Size = new System.Drawing.Size(93, 22);
+            this.dtpFechaDesde.TabIndex = 199;
             // 
             // MULTAS
             // 
@@ -248,10 +331,10 @@
             this.MULTAS.Controls.Add(this.tabPage6);
             this.MULTAS.Controls.Add(this.tabPage7);
             this.MULTAS.Controls.Add(this.tabPage4);
-            this.MULTAS.Location = new System.Drawing.Point(1, 279);
+            this.MULTAS.Location = new System.Drawing.Point(1, 257);
             this.MULTAS.Name = "MULTAS";
             this.MULTAS.SelectedIndex = 0;
-            this.MULTAS.Size = new System.Drawing.Size(812, 420);
+            this.MULTAS.Size = new System.Drawing.Size(796, 378);
             this.MULTAS.TabIndex = 217;
             // 
             // tabPage3
@@ -260,7 +343,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(804, 394);
+            this.tabPage3.Size = new System.Drawing.Size(788, 352);
             this.tabPage3.TabIndex = 0;
             this.tabPage3.Text = "DESCUENTOS DETALLADOS";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -287,7 +370,7 @@
             this.ListView1.Location = new System.Drawing.Point(1, 1);
             this.ListView1.MultiSelect = false;
             this.ListView1.Name = "ListView1";
-            this.ListView1.Size = new System.Drawing.Size(791, 367);
+            this.ListView1.Size = new System.Drawing.Size(781, 351);
             this.ListView1.TabIndex = 204;
             this.ListView1.UseCompatibleStateImageBehavior = false;
             this.ListView1.View = System.Windows.Forms.View.Details;
@@ -363,7 +446,7 @@
             this.tabPage6.Controls.Add(this.listView3);
             this.tabPage6.Location = new System.Drawing.Point(4, 22);
             this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Size = new System.Drawing.Size(804, 394);
+            this.tabPage6.Size = new System.Drawing.Size(788, 352);
             this.tabPage6.TabIndex = 2;
             this.tabPage6.Text = "--> DESCUENTOS BODEGA";
             this.tabPage6.UseVisualStyleBackColor = true;
@@ -400,7 +483,7 @@
             this.listView3.Location = new System.Drawing.Point(2, 3);
             this.listView3.MultiSelect = false;
             this.listView3.Name = "listView3";
-            this.listView3.Size = new System.Drawing.Size(799, 410);
+            this.listView3.Size = new System.Drawing.Size(780, 346);
             this.listView3.TabIndex = 205;
             this.listView3.UseCompatibleStateImageBehavior = false;
             this.listView3.View = System.Windows.Forms.View.Details;
@@ -476,7 +559,7 @@
             this.tabPage7.Controls.Add(this.listView4);
             this.tabPage7.Location = new System.Drawing.Point(4, 22);
             this.tabPage7.Name = "tabPage7";
-            this.tabPage7.Size = new System.Drawing.Size(804, 394);
+            this.tabPage7.Size = new System.Drawing.Size(788, 352);
             this.tabPage7.TabIndex = 3;
             this.tabPage7.Text = "--> OTROS DESCUENTOS";
             this.tabPage7.UseVisualStyleBackColor = true;
@@ -513,7 +596,7 @@
             this.listView4.Location = new System.Drawing.Point(2, 2);
             this.listView4.MultiSelect = false;
             this.listView4.Name = "listView4";
-            this.listView4.Size = new System.Drawing.Size(799, 410);
+            this.listView4.Size = new System.Drawing.Size(783, 354);
             this.listView4.TabIndex = 206;
             this.listView4.UseCompatibleStateImageBehavior = false;
             this.listView4.View = System.Windows.Forms.View.Details;
@@ -589,7 +672,7 @@
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(804, 394);
+            this.tabPage4.Size = new System.Drawing.Size(788, 352);
             this.tabPage4.TabIndex = 1;
             this.tabPage4.Text = "RESÚMEN";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -634,7 +717,7 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(797, 384);
+            this.dataGridView1.Size = new System.Drawing.Size(781, 356);
             this.dataGridView1.TabIndex = 226;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -776,19 +859,6 @@
             this.label8.TabIndex = 206;
             this.label8.Text = "0 REGISTRO(S)";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // cbxFiltro
-            // 
-            this.cbxFiltro.BackColor = System.Drawing.Color.White;
-            this.cbxFiltro.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbxFiltro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbxFiltro.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbxFiltro.FormattingEnabled = true;
-            this.cbxFiltro.Location = new System.Drawing.Point(307, 251);
-            this.cbxFiltro.Name = "cbxFiltro";
-            this.cbxFiltro.Size = new System.Drawing.Size(197, 21);
-            this.cbxFiltro.TabIndex = 216;
-            this.cbxFiltro.SelectedIndexChanged += new System.EventHandler(this.cbxFiltro_SelectedIndexChanged);
             // 
             // toolStrip1
             // 
@@ -932,13 +1002,13 @@
             this.GroupBox2.Controls.Add(this.Label6);
             this.GroupBox2.Controls.Add(this.Label3);
             this.GroupBox2.Controls.Add(this.label9);
-            this.GroupBox2.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GroupBox2.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GroupBox2.Location = new System.Drawing.Point(2, 104);
             this.GroupBox2.Name = "GroupBox2";
-            this.GroupBox2.Size = new System.Drawing.Size(813, 118);
+            this.GroupBox2.Size = new System.Drawing.Size(795, 104);
             this.GroupBox2.TabIndex = 203;
             this.GroupBox2.TabStop = false;
-            this.GroupBox2.Text = "DATOS DEL DESCUENTO";
+            this.GroupBox2.Text = "Datos del descuento";
             // 
             // lblCuota
             // 
@@ -953,7 +1023,7 @@
             // 
             this.chkMensual.AutoSize = true;
             this.chkMensual.Enabled = false;
-            this.chkMensual.Location = new System.Drawing.Point(89, 55);
+            this.chkMensual.Location = new System.Drawing.Point(89, 50);
             this.chkMensual.Name = "chkMensual";
             this.chkMensual.Size = new System.Drawing.Size(15, 14);
             this.chkMensual.TabIndex = 226;
@@ -964,18 +1034,18 @@
             // label29
             // 
             this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(5, 55);
+            this.label29.Location = new System.Drawing.Point(5, 50);
             this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(60, 13);
+            this.label29.Size = new System.Drawing.Size(61, 13);
             this.label29.TabIndex = 225;
             this.label29.Text = "MENSUAL:";
             // 
             // txtValorPago
             // 
             this.txtValorPago.Enabled = false;
-            this.txtValorPago.Location = new System.Drawing.Point(553, 52);
+            this.txtValorPago.Location = new System.Drawing.Point(553, 47);
             this.txtValorPago.Name = "txtValorPago";
-            this.txtValorPago.Size = new System.Drawing.Size(68, 22);
+            this.txtValorPago.Size = new System.Drawing.Size(68, 21);
             this.txtValorPago.TabIndex = 224;
             this.txtValorPago.TextChanged += new System.EventHandler(this.txtValorPago_TextChanged);
             this.txtValorPago.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtValorPago_KeyPress);
@@ -984,7 +1054,7 @@
             // label28
             // 
             this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(486, 56);
+            this.label28.Location = new System.Drawing.Point(486, 51);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(46, 13);
             this.label28.TabIndex = 223;
@@ -993,18 +1063,18 @@
             // txtIdPrestamo
             // 
             this.txtIdPrestamo.Enabled = false;
-            this.txtIdPrestamo.Location = new System.Drawing.Point(393, 52);
+            this.txtIdPrestamo.Location = new System.Drawing.Point(393, 47);
             this.txtIdPrestamo.Name = "txtIdPrestamo";
-            this.txtIdPrestamo.Size = new System.Drawing.Size(68, 22);
+            this.txtIdPrestamo.Size = new System.Drawing.Size(68, 21);
             this.txtIdPrestamo.TabIndex = 222;
             this.txtIdPrestamo.MouseHover += new System.EventHandler(this.txtIdPrestamo_MouseHover);
             // 
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(283, 56);
+            this.label21.Location = new System.Drawing.Point(283, 51);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(80, 13);
+            this.label21.Size = new System.Drawing.Size(82, 13);
             this.label21.TabIndex = 221;
             this.label21.Text = "ID PRESTAMO:";
             this.label21.Click += new System.EventHandler(this.label21_Click);
@@ -1012,9 +1082,9 @@
             // txtCuota
             // 
             this.txtCuota.Enabled = false;
-            this.txtCuota.Location = new System.Drawing.Point(207, 52);
+            this.txtCuota.Location = new System.Drawing.Point(207, 47);
             this.txtCuota.Name = "txtCuota";
-            this.txtCuota.Size = new System.Drawing.Size(45, 22);
+            this.txtCuota.Size = new System.Drawing.Size(45, 21);
             this.txtCuota.TabIndex = 220;
             this.txtCuota.TextChanged += new System.EventHandler(this.txtCuota_TextChanged);
             this.txtCuota.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCuota_KeyPress);
@@ -1023,9 +1093,9 @@
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(152, 55);
+            this.label20.Location = new System.Drawing.Point(152, 50);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(44, 13);
+            this.label20.Size = new System.Drawing.Size(46, 13);
             this.label20.TabIndex = 219;
             this.label20.Text = "MESES:";
             // 
@@ -1033,7 +1103,7 @@
             // 
             this.chkAnual.AutoSize = true;
             this.chkAnual.Enabled = false;
-            this.chkAnual.Location = new System.Drawing.Point(542, 83);
+            this.chkAnual.Location = new System.Drawing.Point(542, 77);
             this.chkAnual.Name = "chkAnual";
             this.chkAnual.Size = new System.Drawing.Size(61, 17);
             this.chkAnual.TabIndex = 218;
@@ -1048,7 +1118,7 @@
             this.txtValor.Enabled = false;
             this.txtValor.Location = new System.Drawing.Point(553, 18);
             this.txtValor.Name = "txtValor";
-            this.txtValor.Size = new System.Drawing.Size(68, 22);
+            this.txtValor.Size = new System.Drawing.Size(68, 21);
             this.txtValor.TabIndex = 216;
             this.txtValor.TextChanged += new System.EventHandler(this.txtValor_TextChanged);
             this.txtValor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtValor_KeyPress);
@@ -1074,7 +1144,7 @@
             this.Label2.AutoSize = true;
             this.Label2.Location = new System.Drawing.Point(639, 21);
             this.Label2.Name = "Label2";
-            this.Label2.Size = new System.Drawing.Size(28, 13);
+            this.Label2.Size = new System.Drawing.Size(30, 13);
             this.Label2.TabIndex = 214;
             this.Label2.Text = "EST:";
             // 
@@ -1083,10 +1153,10 @@
             this.dtpRolPago.CustomFormat = "MMMM yyyy";
             this.dtpRolPago.Enabled = false;
             this.dtpRolPago.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpRolPago.Location = new System.Drawing.Point(657, 82);
+            this.dtpRolPago.Location = new System.Drawing.Point(657, 76);
             this.dtpRolPago.Name = "dtpRolPago";
             this.dtpRolPago.ShowUpDown = true;
-            this.dtpRolPago.Size = new System.Drawing.Size(122, 22);
+            this.dtpRolPago.Size = new System.Drawing.Size(122, 21);
             this.dtpRolPago.TabIndex = 212;
             // 
             // cbmMotivo
@@ -1109,7 +1179,7 @@
             this.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpFecha.Location = new System.Drawing.Point(46, 18);
             this.dtpFecha.Name = "dtpFecha";
-            this.dtpFecha.Size = new System.Drawing.Size(90, 22);
+            this.dtpFecha.Size = new System.Drawing.Size(90, 21);
             this.dtpFecha.TabIndex = 204;
             // 
             // Label31
@@ -1126,17 +1196,17 @@
             this.txtObservacion.BackColor = System.Drawing.Color.White;
             this.txtObservacion.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtObservacion.Enabled = false;
-            this.txtObservacion.Location = new System.Drawing.Point(58, 80);
+            this.txtObservacion.Location = new System.Drawing.Point(58, 74);
             this.txtObservacion.Name = "txtObservacion";
-            this.txtObservacion.Size = new System.Drawing.Size(405, 22);
+            this.txtObservacion.Size = new System.Drawing.Size(405, 21);
             this.txtObservacion.TabIndex = 201;
             // 
             // Label18
             // 
             this.Label18.AutoSize = true;
-            this.Label18.Location = new System.Drawing.Point(5, 84);
+            this.Label18.Location = new System.Drawing.Point(5, 78);
             this.Label18.Name = "Label18";
-            this.Label18.Size = new System.Drawing.Size(52, 13);
+            this.Label18.Size = new System.Drawing.Size(55, 13);
             this.Label18.TabIndex = 200;
             this.Label18.Text = "DETALLE:";
             // 
@@ -1145,14 +1215,14 @@
             this.Label30.AutoSize = true;
             this.Label30.Location = new System.Drawing.Point(152, 22);
             this.Label30.Name = "Label30";
-            this.Label30.Size = new System.Drawing.Size(54, 13);
+            this.Label30.Size = new System.Drawing.Size(53, 13);
             this.Label30.TabIndex = 3;
             this.Label30.Text = "MOTIVO:";
             // 
             // Label6
             // 
             this.Label6.AutoSize = true;
-            this.Label6.Location = new System.Drawing.Point(603, 84);
+            this.Label6.Location = new System.Drawing.Point(603, 78);
             this.Label6.Name = "Label6";
             this.Label6.Size = new System.Drawing.Size(48, 13);
             this.Label6.TabIndex = 211;
@@ -1163,70 +1233,18 @@
             this.Label3.AutoSize = true;
             this.Label3.Location = new System.Drawing.Point(488, 23);
             this.Label3.Name = "Label3";
-            this.Label3.Size = new System.Drawing.Size(44, 13);
+            this.Label3.Size = new System.Drawing.Size(45, 13);
             this.Label3.TabIndex = 215;
             this.Label3.Text = "VALOR:";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(469, 84);
+            this.label9.Location = new System.Drawing.Point(469, 78);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(65, 13);
+            this.label9.Size = new System.Drawing.Size(66, 13);
             this.label9.TabIndex = 217;
             this.label9.Text = "PROCESAR:";
-            // 
-            // dtpFechaHasta
-            // 
-            this.dtpFechaHasta.CustomFormat = "dddd, dd-MMM-yyyy";
-            this.dtpFechaHasta.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpFechaHasta.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaHasta.Location = new System.Drawing.Point(699, 253);
-            this.dtpFechaHasta.Name = "dtpFechaHasta";
-            this.dtpFechaHasta.Size = new System.Drawing.Size(93, 22);
-            this.dtpFechaHasta.TabIndex = 200;
-            // 
-            // dtpFechaDesde
-            // 
-            this.dtpFechaDesde.CustomFormat = "dddd, dd-MMM-yyyy";
-            this.dtpFechaDesde.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpFechaDesde.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaDesde.Location = new System.Drawing.Point(573, 253);
-            this.dtpFechaDesde.Name = "dtpFechaDesde";
-            this.dtpFechaDesde.Size = new System.Drawing.Size(93, 22);
-            this.dtpFechaDesde.TabIndex = 199;
-            // 
-            // Label24
-            // 
-            this.Label24.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Label24.Location = new System.Drawing.Point(18, 228);
-            this.Label24.Name = "Label24";
-            this.Label24.Size = new System.Drawing.Size(780, 16);
-            this.Label24.TabIndex = 195;
-            this.Label24.Text = "DETALLE DE DESCUENOS DEL PERSONAL";
-            this.Label24.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // txtFiltro
-            // 
-            this.txtFiltro.BackColor = System.Drawing.Color.White;
-            this.txtFiltro.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtFiltro.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFiltro.Location = new System.Drawing.Point(67, 252);
-            this.txtFiltro.Name = "txtFiltro";
-            this.txtFiltro.Size = new System.Drawing.Size(233, 21);
-            this.txtFiltro.TabIndex = 191;
-            this.txtFiltro.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtFiltro_KeyUp);
-            // 
-            // Label7
-            // 
-            this.Label7.AutoSize = true;
-            this.Label7.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Label7.Location = new System.Drawing.Point(12, 254);
-            this.Label7.Name = "Label7";
-            this.Label7.Size = new System.Drawing.Size(46, 13);
-            this.Label7.TabIndex = 190;
-            this.Label7.Text = "FILTRO:";
-            this.Label7.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // GroupBox1
             // 
@@ -1240,13 +1258,13 @@
             this.GroupBox1.Controls.Add(this.Label22);
             this.GroupBox1.Controls.Add(this.txtPersonal);
             this.GroupBox1.Controls.Add(this.Label26);
-            this.GroupBox1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GroupBox1.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GroupBox1.Location = new System.Drawing.Point(3, 35);
             this.GroupBox1.Name = "GroupBox1";
             this.GroupBox1.Size = new System.Drawing.Size(812, 67);
             this.GroupBox1.TabIndex = 183;
             this.GroupBox1.TabStop = false;
-            this.GroupBox1.Text = "DATOS DE PERSONAL";
+            this.GroupBox1.Text = "Datos del personal";
             // 
             // txtArea
             // 
@@ -1255,7 +1273,7 @@
             this.txtArea.Enabled = false;
             this.txtArea.Location = new System.Drawing.Point(436, 41);
             this.txtArea.Name = "txtArea";
-            this.txtArea.Size = new System.Drawing.Size(358, 22);
+            this.txtArea.Size = new System.Drawing.Size(358, 21);
             this.txtArea.TabIndex = 197;
             this.txtArea.Visible = false;
             // 
@@ -1276,15 +1294,15 @@
             this.txtCargo.Enabled = false;
             this.txtCargo.Location = new System.Drawing.Point(59, 41);
             this.txtCargo.Name = "txtCargo";
-            this.txtCargo.Size = new System.Drawing.Size(328, 22);
+            this.txtCargo.Size = new System.Drawing.Size(328, 21);
             this.txtCargo.TabIndex = 195;
             // 
             // Label25
             // 
             this.Label25.AutoSize = true;
-            this.Label25.Location = new System.Drawing.Point(13, 44);
+            this.Label25.Location = new System.Drawing.Point(11, 44);
             this.Label25.Name = "Label25";
-            this.Label25.Size = new System.Drawing.Size(48, 13);
+            this.Label25.Size = new System.Drawing.Size(47, 13);
             this.Label25.TabIndex = 194;
             this.Label25.Text = "CARGO:";
             // 
@@ -1311,15 +1329,15 @@
             this.txtIdPersonal.Enabled = false;
             this.txtIdPersonal.Location = new System.Drawing.Point(44, 14);
             this.txtIdPersonal.Name = "txtIdPersonal";
-            this.txtIdPersonal.Size = new System.Drawing.Size(47, 22);
+            this.txtIdPersonal.Size = new System.Drawing.Size(47, 21);
             this.txtIdPersonal.TabIndex = 28;
             // 
             // Label22
             // 
             this.Label22.AutoSize = true;
-            this.Label22.Location = new System.Drawing.Point(18, 19);
+            this.Label22.Location = new System.Drawing.Point(11, 19);
             this.Label22.Name = "Label22";
-            this.Label22.Size = new System.Drawing.Size(21, 13);
+            this.Label22.Size = new System.Drawing.Size(20, 13);
             this.Label22.TabIndex = 8;
             this.Label22.Text = "ID:";
             // 
@@ -1330,7 +1348,7 @@
             this.txtPersonal.Enabled = false;
             this.txtPersonal.Location = new System.Drawing.Point(219, 17);
             this.txtPersonal.Name = "txtPersonal";
-            this.txtPersonal.Size = new System.Drawing.Size(529, 22);
+            this.txtPersonal.Size = new System.Drawing.Size(529, 21);
             this.txtPersonal.TabIndex = 0;
             // 
             // Label26
@@ -1338,27 +1356,9 @@
             this.Label26.AutoSize = true;
             this.Label26.Location = new System.Drawing.Point(159, 20);
             this.Label26.Name = "Label26";
-            this.Label26.Size = new System.Drawing.Size(62, 13);
+            this.Label26.Size = new System.Drawing.Size(63, 13);
             this.Label26.TabIndex = 3;
             this.Label26.Text = "NOMBRES:";
-            // 
-            // Label11
-            // 
-            this.Label11.AutoSize = true;
-            this.Label11.Location = new System.Drawing.Point(673, 258);
-            this.Label11.Name = "Label11";
-            this.Label11.Size = new System.Drawing.Size(17, 13);
-            this.Label11.TabIndex = 202;
-            this.Label11.Text = "A:";
-            // 
-            // Label10
-            // 
-            this.Label10.AutoSize = true;
-            this.Label10.Location = new System.Drawing.Point(523, 258);
-            this.Label10.Name = "Label10";
-            this.Label10.Size = new System.Drawing.Size(43, 13);
-            this.Label10.TabIndex = 201;
-            this.Label10.Text = "DESDE:";
             // 
             // tabPage2
             // 
@@ -1370,7 +1370,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(797, 669);
+            this.tabPage2.Size = new System.Drawing.Size(797, 656);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "PERSONAL RETIRADO";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -1479,7 +1479,7 @@
             this.tabPage5.Controls.Add(this.label15);
             this.tabPage5.Location = new System.Drawing.Point(4, 22);
             this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(797, 669);
+            this.tabPage5.Size = new System.Drawing.Size(797, 656);
             this.tabPage5.TabIndex = 2;
             this.tabPage5.Text = "DETALLES DESCUENTO BODEGA";
             this.tabPage5.UseVisualStyleBackColor = true;
@@ -1656,7 +1656,7 @@
             // Label1
             // 
             this.Label1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Label1.Location = new System.Drawing.Point(10, 701);
+            this.Label1.Location = new System.Drawing.Point(10, 669);
             this.Label1.Name = "Label1";
             this.Label1.Size = new System.Drawing.Size(794, 18);
             this.Label1.TabIndex = 205;
@@ -1667,7 +1667,7 @@
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(811, 723);
+            this.ClientSize = new System.Drawing.Size(811, 690);
             this.Controls.Add(this.tcSitios);
             this.Controls.Add(this.Label1);
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1681,7 +1681,8 @@
             this.Load += new System.EventHandler(this.FrmDescuentos_Load);
             this.tcSitios.ResumeLayout(false);
             this.TabPage1.ResumeLayout(false);
-            this.TabPage1.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.MULTAS.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
             this.tabPage6.ResumeLayout(false);
@@ -1726,7 +1727,6 @@
         internal System.Windows.Forms.Label Label2;
         internal System.Windows.Forms.DateTimePicker dtpFechaHasta;
         internal System.Windows.Forms.DateTimePicker dtpFechaDesde;
-        internal System.Windows.Forms.Label Label24;
         internal System.Windows.Forms.TextBox txtFiltro;
         internal System.Windows.Forms.Label Label7;
         internal System.Windows.Forms.GroupBox GroupBox1;
@@ -1865,5 +1865,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column16;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column17;
         internal System.Windows.Forms.Label label8;
+        private System.Windows.Forms.GroupBox groupBox3;
     }
 }

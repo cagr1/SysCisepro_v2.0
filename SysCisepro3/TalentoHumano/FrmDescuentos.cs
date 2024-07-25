@@ -65,8 +65,8 @@ namespace SysCisepro3.TalentoHumano
             toolStrip2.ForeColor = Color.White;
             //toolStrip3.BackColor = ValidationForms.GetColorSistema(TipoCon);
             toolStrip3.ForeColor = Color.White;
-            Label24.BackColor = ValidationForms.GetColorSistema(TipoCon);
-            Label24.ForeColor = Color.White;
+            //Label24.BackColor = ValidationForms.GetColorSistema(TipoCon);
+            //Label24.ForeColor = Color.White;
             dataGridView1.DefaultCellStyle.SelectionBackColor = ValidationForms.GetColorSistema(TipoCon);
             switch (TipoCon)
             {

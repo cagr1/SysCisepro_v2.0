@@ -184,7 +184,7 @@
             Me.tcSitios.Location = New System.Drawing.Point(2, 2)
             Me.tcSitios.Name = "tcSitios"
             Me.tcSitios.SelectedIndex = 0
-            Me.tcSitios.Size = New System.Drawing.Size(1271, 671)
+            Me.tcSitios.Size = New System.Drawing.Size(1200, 671)
             Me.tcSitios.TabIndex = 2
             '
             'TabPage1
@@ -200,7 +200,7 @@
             Me.TabPage1.Location = New System.Drawing.Point(4, 22)
             Me.TabPage1.Name = "TabPage1"
             Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-            Me.TabPage1.Size = New System.Drawing.Size(1263, 645)
+            Me.TabPage1.Size = New System.Drawing.Size(1192, 645)
             Me.TabPage1.TabIndex = 0
             Me.TabPage1.Text = "MANTENIMIENTO"
             '
@@ -213,9 +213,9 @@
             Me.Panel1.Controls.Add(Me.Label7)
             Me.Panel1.Controls.Add(Me.DateTimePicker4)
             Me.Panel1.Controls.Add(Me.MenuStrip2)
-            Me.Panel1.Location = New System.Drawing.Point(0, 0)
+            Me.Panel1.Location = New System.Drawing.Point(5, 0)
             Me.Panel1.Name = "Panel1"
-            Me.Panel1.Size = New System.Drawing.Size(1262, 39)
+            Me.Panel1.Size = New System.Drawing.Size(1150, 39)
             Me.Panel1.TabIndex = 215
             '
             'MenuStrip1
@@ -225,9 +225,9 @@
             Me.MenuStrip1.Dock = System.Windows.Forms.DockStyle.None
             Me.MenuStrip1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
             Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.REPORTESToolStripMenuItem, Me.GUARDARCAMBIOSToolStripMenuItem})
-            Me.MenuStrip1.Location = New System.Drawing.Point(1018, 3)
+            Me.MenuStrip1.Location = New System.Drawing.Point(895, 2)
             Me.MenuStrip1.Name = "MenuStrip1"
-            Me.MenuStrip1.Size = New System.Drawing.Size(244, 36)
+            Me.MenuStrip1.Size = New System.Drawing.Size(255, 36)
             Me.MenuStrip1.TabIndex = 1
             Me.MenuStrip1.Text = "MenuStrip1"
             '
@@ -246,7 +246,7 @@
             Me.NOVEDADESACBMToolStripMenuItem.Image = Global.syscisepro.My.Resources.Resources.icons8_excel_48
             Me.NOVEDADESACBMToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.NOVEDADESACBMToolStripMenuItem.Name = "NOVEDADESACBMToolStripMenuItem"
-            Me.NOVEDADESACBMToolStripMenuItem.Size = New System.Drawing.Size(208, 30)
+            Me.NOVEDADESACBMToolStripMenuItem.Size = New System.Drawing.Size(206, 30)
             Me.NOVEDADESACBMToolStripMenuItem.Text = "NOVEDADES A / C B.M."
             '
             'REPORTESDERADIOToolStripMenuItem
@@ -254,20 +254,20 @@
             Me.REPORTESDERADIOToolStripMenuItem.Image = Global.syscisepro.My.Resources.Resources.icons8_excel_48
             Me.REPORTESDERADIOToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.REPORTESDERADIOToolStripMenuItem.Name = "REPORTESDERADIOToolStripMenuItem"
-            Me.REPORTESDERADIOToolStripMenuItem.Size = New System.Drawing.Size(208, 30)
+            Me.REPORTESDERADIOToolStripMenuItem.Size = New System.Drawing.Size(206, 30)
             Me.REPORTESDERADIOToolStripMenuItem.Text = "SANCIONES / MULTAS"
             '
             'ToolStripSeparator1
             '
             Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
-            Me.ToolStripSeparator1.Size = New System.Drawing.Size(205, 6)
+            Me.ToolStripSeparator1.Size = New System.Drawing.Size(203, 6)
             '
             'EXPORTARDATOSToolStripMenuItem
             '
             Me.EXPORTARDATOSToolStripMenuItem.Image = Global.syscisepro.My.Resources.Resources.icons8_excel_48
             Me.EXPORTARDATOSToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.EXPORTARDATOSToolStripMenuItem.Name = "EXPORTARDATOSToolStripMenuItem"
-            Me.EXPORTARDATOSToolStripMenuItem.Size = New System.Drawing.Size(208, 30)
+            Me.EXPORTARDATOSToolStripMenuItem.Size = New System.Drawing.Size(206, 30)
             Me.EXPORTARDATOSToolStripMenuItem.Text = "EXPORTAR DATOS"
             '
             'GUARDARCAMBIOSToolStripMenuItem
@@ -338,10 +338,10 @@
             Me.TabControl1.Controls.Add(Me.TabPage3)
             Me.TabControl1.Controls.Add(Me.TabPage5)
             Me.TabControl1.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.TabControl1.Location = New System.Drawing.Point(3, 130)
+            Me.TabControl1.Location = New System.Drawing.Point(-1, 130)
             Me.TabControl1.Name = "TabControl1"
             Me.TabControl1.SelectedIndex = 0
-            Me.TabControl1.Size = New System.Drawing.Size(1259, 510)
+            Me.TabControl1.Size = New System.Drawing.Size(1232, 510)
             Me.TabControl1.TabIndex = 209
             '
             'TabPage2
@@ -350,7 +350,7 @@
             Me.TabPage2.Location = New System.Drawing.Point(4, 22)
             Me.TabPage2.Name = "TabPage2"
             Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-            Me.TabPage2.Size = New System.Drawing.Size(1251, 484)
+            Me.TabPage2.Size = New System.Drawing.Size(1224, 484)
             Me.TabPage2.TabIndex = 0
             Me.TabPage2.Text = "DÍA"
             Me.TabPage2.UseVisualStyleBackColor = True
@@ -382,7 +382,7 @@
             Me.dgvDia.Name = "dgvDia"
             Me.dgvDia.RowHeadersVisible = False
             Me.dgvDia.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvDia.Size = New System.Drawing.Size(1246, 478)
+            Me.dgvDia.Size = New System.Drawing.Size(1146, 478)
             Me.dgvDia.TabIndex = 202
             '
             'Column15
@@ -538,7 +538,7 @@
             Me.TabPage3.Location = New System.Drawing.Point(4, 22)
             Me.TabPage3.Name = "TabPage3"
             Me.TabPage3.Padding = New System.Windows.Forms.Padding(3)
-            Me.TabPage3.Size = New System.Drawing.Size(1251, 484)
+            Me.TabPage3.Size = New System.Drawing.Size(1224, 484)
             Me.TabPage3.TabIndex = 1
             Me.TabPage3.Text = "NOCHE"
             Me.TabPage3.UseVisualStyleBackColor = True
@@ -570,7 +570,7 @@
             Me.dgvNoche.Name = "dgvNoche"
             Me.dgvNoche.RowHeadersVisible = False
             Me.dgvNoche.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvNoche.Size = New System.Drawing.Size(1246, 478)
+            Me.dgvNoche.Size = New System.Drawing.Size(1150, 478)
             Me.dgvNoche.TabIndex = 203
             '
             'DataGridViewTextBoxColumn1
@@ -728,7 +728,7 @@
             Me.TabPage5.Location = New System.Drawing.Point(4, 22)
             Me.TabPage5.Name = "TabPage5"
             Me.TabPage5.Padding = New System.Windows.Forms.Padding(3)
-            Me.TabPage5.Size = New System.Drawing.Size(1251, 484)
+            Me.TabPage5.Size = New System.Drawing.Size(1224, 484)
             Me.TabPage5.TabIndex = 2
             Me.TabPage5.Text = "DÍA LIBRE"
             Me.TabPage5.UseVisualStyleBackColor = True
@@ -755,12 +755,12 @@
             DataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
             Me.DataGridView1.DefaultCellStyle = DataGridViewCellStyle20
             Me.DataGridView1.GridColor = System.Drawing.SystemColors.ControlDarkDark
-            Me.DataGridView1.Location = New System.Drawing.Point(2, 3)
+            Me.DataGridView1.Location = New System.Drawing.Point(3, 3)
             Me.DataGridView1.MultiSelect = False
             Me.DataGridView1.Name = "DataGridView1"
             Me.DataGridView1.RowHeadersVisible = False
             Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.DataGridView1.Size = New System.Drawing.Size(1246, 478)
+            Me.DataGridView1.Size = New System.Drawing.Size(1149, 478)
             Me.DataGridView1.TabIndex = 204
             '
             'DataGridViewTextBoxColumn10
@@ -866,15 +866,15 @@
             '
             Me.DateTimePicker2.CustomFormat = "MMMM yyyy"
             Me.DateTimePicker2.Enabled = False
-            Me.DateTimePicker2.Location = New System.Drawing.Point(996, 17)
+            Me.DateTimePicker2.Location = New System.Drawing.Point(925, 17)
             Me.DateTimePicker2.Name = "DateTimePicker2"
-            Me.DateTimePicker2.Size = New System.Drawing.Size(255, 21)
+            Me.DateTimePicker2.Size = New System.Drawing.Size(227, 21)
             Me.DateTimePicker2.TabIndex = 202
             '
             'Label19
             '
             Me.Label19.AutoSize = True
-            Me.Label19.Location = New System.Drawing.Point(979, 20)
+            Me.Label19.Location = New System.Drawing.Point(905, 20)
             Me.Label19.Name = "Label19"
             Me.Label19.Size = New System.Drawing.Size(17, 13)
             Me.Label19.TabIndex = 203
@@ -884,7 +884,7 @@
             '
             Me.DateTimePicker1.CustomFormat = "MMMM yyyy"
             Me.DateTimePicker1.Enabled = False
-            Me.DateTimePicker1.Location = New System.Drawing.Point(696, 17)
+            Me.DateTimePicker1.Location = New System.Drawing.Point(642, 17)
             Me.DateTimePicker1.Name = "DateTimePicker1"
             Me.DateTimePicker1.Size = New System.Drawing.Size(255, 21)
             Me.DateTimePicker1.TabIndex = 200
@@ -913,16 +913,16 @@
             Me.dtpMes.CustomFormat = "MMMM yyyy"
             Me.dtpMes.Enabled = False
             Me.dtpMes.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-            Me.dtpMes.Location = New System.Drawing.Point(508, 19)
+            Me.dtpMes.Location = New System.Drawing.Point(491, 19)
             Me.dtpMes.Name = "dtpMes"
             Me.dtpMes.ShowUpDown = True
-            Me.dtpMes.Size = New System.Drawing.Size(121, 21)
+            Me.dtpMes.Size = New System.Drawing.Size(110, 21)
             Me.dtpMes.TabIndex = 198
             '
             'Label17
             '
             Me.Label17.AutoSize = True
-            Me.Label17.Location = New System.Drawing.Point(667, 20)
+            Me.Label17.Location = New System.Drawing.Point(612, 20)
             Me.Label17.Name = "Label17"
             Me.Label17.Size = New System.Drawing.Size(29, 13)
             Me.Label17.TabIndex = 201
@@ -931,7 +931,7 @@
             'Label16
             '
             Me.Label16.AutoSize = True
-            Me.Label16.Location = New System.Drawing.Point(474, 23)
+            Me.Label16.Location = New System.Drawing.Point(456, 23)
             Me.Label16.Name = "Label16"
             Me.Label16.Size = New System.Drawing.Size(33, 13)
             Me.Label16.TabIndex = 199
@@ -943,14 +943,14 @@
             Me.Label24.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Label24.Location = New System.Drawing.Point(0, 90)
             Me.Label24.Name = "Label24"
-            Me.Label24.Size = New System.Drawing.Size(596, 39)
+            Me.Label24.Size = New System.Drawing.Size(533, 39)
             Me.Label24.TabIndex = 195
             Me.Label24.Text = "PERSONAL ASIGNADO A PUESTOS DE TRABAJO SEGÚN PROGRAMACIÓN"
             Me.Label24.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
             '
             'Panel2
             '
-            Me.Panel2.Location = New System.Drawing.Point(1021, 0)
+            Me.Panel2.Location = New System.Drawing.Point(892, 0)
             Me.Panel2.Name = "Panel2"
             Me.Panel2.Size = New System.Drawing.Size(242, 26)
             Me.Panel2.TabIndex = 216
@@ -958,9 +958,9 @@
             'Panel3
             '
             Me.Panel3.Controls.Add(Me.MenuStrip3)
-            Me.Panel3.Location = New System.Drawing.Point(596, 88)
+            Me.Panel3.Location = New System.Drawing.Point(536, 88)
             Me.Panel3.Name = "Panel3"
-            Me.Panel3.Size = New System.Drawing.Size(666, 42)
+            Me.Panel3.Size = New System.Drawing.Size(619, 42)
             Me.Panel3.TabIndex = 217
             '
             'MenuStrip3
@@ -970,10 +970,10 @@
             Me.MenuStrip3.Dock = System.Windows.Forms.DockStyle.None
             Me.MenuStrip3.Font = New System.Drawing.Font("Segoe UI", 9.0!)
             Me.MenuStrip3.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnAgregar, Me.btnCambiar, Me.ToolStripMenuItem3, Me.ToolStripMenuItem1, Me.btnQuitar, Me.btnAddRad, Me.ToolStripMenuItem6})
-            Me.MenuStrip3.Location = New System.Drawing.Point(3, 2)
+            Me.MenuStrip3.Location = New System.Drawing.Point(0, 2)
             Me.MenuStrip3.Name = "MenuStrip3"
             Me.MenuStrip3.ShowItemToolTips = True
-            Me.MenuStrip3.Size = New System.Drawing.Size(663, 38)
+            Me.MenuStrip3.Size = New System.Drawing.Size(640, 38)
             Me.MenuStrip3.TabIndex = 0
             Me.MenuStrip3.Text = "MenuStrip3"
             '
@@ -1059,7 +1059,7 @@
             Me.TabPage4.Controls.Add(Me.GroupBox1)
             Me.TabPage4.Location = New System.Drawing.Point(4, 22)
             Me.TabPage4.Name = "TabPage4"
-            Me.TabPage4.Size = New System.Drawing.Size(1263, 645)
+            Me.TabPage4.Size = New System.Drawing.Size(1192, 645)
             Me.TabPage4.TabIndex = 1
             Me.TabPage4.Text = "REPORTES"
             Me.TabPage4.UseVisualStyleBackColor = True
@@ -1079,10 +1079,10 @@
             Me.ListView3.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader11, Me.ColumnHeader14, Me.ColumnHeader15, Me.ColumnHeader16, Me.ColumnHeader18, Me.ColumnHeader5, Me.ColumnHeader6})
             Me.ListView3.FullRowSelect = True
             Me.ListView3.HideSelection = False
-            Me.ListView3.Location = New System.Drawing.Point(557, 82)
+            Me.ListView3.Location = New System.Drawing.Point(555, 82)
             Me.ListView3.MultiSelect = False
             Me.ListView3.Name = "ListView3"
-            Me.ListView3.Size = New System.Drawing.Size(705, 563)
+            Me.ListView3.Size = New System.Drawing.Size(590, 563)
             Me.ListView3.TabIndex = 207
             Me.ListView3.UseCompatibleStateImageBehavior = False
             Me.ListView3.View = System.Windows.Forms.View.Details
@@ -1131,7 +1131,7 @@
             Me.ListView1.Location = New System.Drawing.Point(1, 82)
             Me.ListView1.MultiSelect = False
             Me.ListView1.Name = "ListView1"
-            Me.ListView1.Size = New System.Drawing.Size(550, 563)
+            Me.ListView1.Size = New System.Drawing.Size(550, 560)
             Me.ListView1.TabIndex = 205
             Me.ListView1.UseCompatibleStateImageBehavior = False
             Me.ListView1.View = System.Windows.Forms.View.Details
@@ -1191,10 +1191,10 @@
             Me.Label2.Cursor = System.Windows.Forms.Cursors.Hand
             Me.Label2.Location = New System.Drawing.Point(3, 58)
             Me.Label2.Name = "Label2"
-            Me.Label2.Size = New System.Drawing.Size(572, 24)
+            Me.Label2.Size = New System.Drawing.Size(597, 24)
             Me.Label2.TabIndex = 203
-            Me.Label2.Text = "BUSCAR:                                                            ASISTENCIA POR" &
-    " PUESTO, VIGILANTE  Y DÍAS TRABAJADOS"
+            Me.Label2.Text = "BUSCAR:                                                                      ASIS" &
+    "TENCIA POR PUESTO, VIGILANTE  Y DÍAS TRABAJADOS"
             Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
             '
             'GroupBox1
@@ -1208,9 +1208,9 @@
             Me.GroupBox1.Controls.Add(Me.DateTimePicker7)
             Me.GroupBox1.Controls.Add(Me.Label5)
             Me.GroupBox1.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.GroupBox1.Location = New System.Drawing.Point(3, 3)
+            Me.GroupBox1.Location = New System.Drawing.Point(6, 3)
             Me.GroupBox1.Name = "GroupBox1"
-            Me.GroupBox1.Size = New System.Drawing.Size(1257, 52)
+            Me.GroupBox1.Size = New System.Drawing.Size(1139, 52)
             Me.GroupBox1.TabIndex = 202
             Me.GroupBox1.TabStop = False
             Me.GroupBox1.Text = "REPORTE DE ASISTENCIA, POR PUESTO Y DÍAS TRABAJADOS:"
@@ -1221,7 +1221,7 @@
             Me.Button10.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Button10.Image = Global.syscisepro.My.Resources.Resources.icons8_excel_48
             Me.Button10.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-            Me.Button10.Location = New System.Drawing.Point(1130, 12)
+            Me.Button10.Location = New System.Drawing.Point(1037, 12)
             Me.Button10.Name = "Button10"
             Me.Button10.Size = New System.Drawing.Size(92, 35)
             Me.Button10.TabIndex = 211
@@ -1235,7 +1235,7 @@
             Me.Button7.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Button7.Image = Global.syscisepro.My.Resources.Resources.icons8_excel_48
             Me.Button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-            Me.Button7.Location = New System.Drawing.Point(1022, 13)
+            Me.Button7.Location = New System.Drawing.Point(939, 13)
             Me.Button7.Name = "Button7"
             Me.Button7.Size = New System.Drawing.Size(92, 35)
             Me.Button7.TabIndex = 209
@@ -1279,7 +1279,7 @@
             Me.DateTimePicker7.CustomFormat = "MMMM yyyy"
             Me.DateTimePicker7.Location = New System.Drawing.Point(39, 19)
             Me.DateTimePicker7.Name = "DateTimePicker7"
-            Me.DateTimePicker7.Size = New System.Drawing.Size(255, 21)
+            Me.DateTimePicker7.Size = New System.Drawing.Size(227, 21)
             Me.DateTimePicker7.TabIndex = 200
             '
             'Label5
@@ -1296,7 +1296,7 @@
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.BackColor = System.Drawing.Color.White
-            Me.ClientSize = New System.Drawing.Size(1274, 673)
+            Me.ClientSize = New System.Drawing.Size(1163, 673)
             Me.Controls.Add(Me.tcSitios)
             Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
             Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
