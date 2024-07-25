@@ -233,7 +233,7 @@
             Me.dgvDetalleRequisicionPS.Name = "dgvDetalleRequisicionPS"
             Me.dgvDetalleRequisicionPS.RowHeadersVisible = False
             Me.dgvDetalleRequisicionPS.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvDetalleRequisicionPS.Size = New System.Drawing.Size(761, 364)
+            Me.dgvDetalleRequisicionPS.Size = New System.Drawing.Size(756, 364)
             Me.dgvDetalleRequisicionPS.TabIndex = 3
             '
             'idItem

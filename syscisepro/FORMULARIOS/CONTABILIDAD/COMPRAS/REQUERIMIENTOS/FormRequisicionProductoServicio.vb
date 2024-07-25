@@ -273,8 +273,10 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.REQUERIMIENTOS
                     .IdSecuencialItem = dgvDetalleRequisicionPS.Rows(indice).Cells(0).Value
                     .UmedidaDetalleRequisicioPs = dgvDetalleRequisicionPS.Rows(indice).Cells(2).Value
                     .CantidadDetalleRequisicioPs = dgvDetalleRequisicionPS.Rows(indice).Cells(3).Value
-                    .EspecificacionesDetalleRequisicioPs = dgvDetalleRequisicionPS.Rows(indice).Cells(4).Value.ToString.ToUpper
-                    .ObservaionesDetalleRequisicioPs = dgvDetalleRequisicionPS.Rows(indice).Cells(5).Value.ToString.ToUpper
+                    '.EspecificacionesDetalleRequisicioPs = dgvDetalleRequisicionPS.Rows(indice).Cells(4).Value.ToString.ToUpper
+                    '.ObservaionesDetalleRequisicioPs = dgvDetalleRequisicionPS.Rows(indice).Cells(5).Value.ToString.ToUpper
+                    .EspecificacionesDetalleRequisicioPs = If(String.IsNullOrEmpty(dgvDetalleRequisicionPS.Rows(indice).Cells(4).Value?.ToString()), "-", dgvDetalleRequisicionPS.Rows(indice).Cells(4).Value.ToString().ToUpper())
+                    .ObservaionesDetalleRequisicioPs = If(String.IsNullOrEmpty(dgvDetalleRequisicionPS.Rows(indice).Cells(5).Value?.ToString()), "-", dgvDetalleRequisicionPS.Rows(indice).Cells(5).Value.ToString().ToUpper())
                     .EstadoDetalleRequisicioPs = 1
                     .IdRequisicioPs = txtIdRequisicionProductoServicio.Text
                 End With
