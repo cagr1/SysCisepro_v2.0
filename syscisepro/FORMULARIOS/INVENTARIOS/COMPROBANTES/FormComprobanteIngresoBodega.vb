@@ -640,9 +640,9 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                         .CantidadIngreso = CInt(dgvSecuencial.Rows.Item(indice).Cells("CANTIDAD").Value.ToString.ToUpper)
                         .ValorUnitarioIngreso = CDec(dgvSecuencial.Rows.Item(indice).Cells("VALOR").Value.ToString.ToUpper)
                         .ValorTotalIngreso = CDec(dgvSecuencial.Rows.Item(indice).Cells("TOTAL").Value.ToString.ToUpper)
-                        .CantidadSaldo = dgvSecuencial.Rows.Item(indice).Cells("CANTIDAD_SALDO").Value.ToString.ToUpper
-                        .ValorUnitarioSaldo = CDec(dgvSecuencial.Rows.Item(indice).Cells("VALOR_UNITARIO_SALDO").Value.ToString.ToUpper)
-                        .ValorTotalSaldo = CDec(dgvSecuencial.Rows.Item(indice).Cells("SALDO").Value.ToString.ToUpper)
+                        .CantidadSaldo = dgvSecuencial.Rows.Item(indice).Cells("SALDO").Value.ToString.ToUpper 'SALDO
+                        .ValorUnitarioSaldo = CDec(dgvSecuencial.Rows.Item(indice).Cells("CANTIDAD_SALDO").Value.ToString.ToUpper) 'CANTIDAD_SALDO
+                        .ValorTotalSaldo = CDec(dgvSecuencial.Rows.Item(indice).Cells("VALOR_UNITARIO_SALDO").Value.ToString.ToUpper) 'VALOR_UNITARIO_SALDO
                         .Fecha = _objCompIng.Fecha
                         .IdKardex = CLng(dgvSecuencial.Rows.Item(indice).Cells("NUMERO_KARDEX").Value.ToString.ToUpper)
                         .Estado = 1
