@@ -140,7 +140,7 @@
             Me.gbRangoFechas = New System.Windows.Forms.GroupBox()
             Me.Label13 = New System.Windows.Forms.Label()
             Me.Label14 = New System.Windows.Forms.Label()
-            Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+            Me.gbxDetalles = New System.Windows.Forms.GroupBox()
             Me.gbxIngreso = New ComponentFactory.Krypton.Toolkit.KryptonGroupBox()
             Me.dgvDetalleComprobanteIngreso = New ComponentFactory.Krypton.Toolkit.KryptonDataGridView()
             Me.ID_KAR = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -228,7 +228,7 @@
             Me.gbComprobante.SuspendLayout()
             CType(Me.dgvComprobantesEgreso, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.gbRangoFechas.SuspendLayout()
-            Me.GroupBox1.SuspendLayout()
+            Me.gbxDetalles.SuspendLayout()
             CType(Me.gbxIngreso, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.gbxIngreso.Panel, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.gbxIngreso.Panel.SuspendLayout()
@@ -1271,11 +1271,12 @@
             'tpConsultar
             '
             Me.tpConsultar.BackColor = System.Drawing.Color.White
+            Me.tpConsultar.Controls.Add(Me.gbxIngreso)
             Me.tpConsultar.Controls.Add(Me.KryptonGroupBox6)
             Me.tpConsultar.Controls.Add(Me.KryptonGroupBox5)
             Me.tpConsultar.Controls.Add(Me.gbComprobante)
             Me.tpConsultar.Controls.Add(Me.gbRangoFechas)
-            Me.tpConsultar.Controls.Add(Me.GroupBox1)
+            Me.tpConsultar.Controls.Add(Me.gbxDetalles)
             Me.tpConsultar.Location = New System.Drawing.Point(4, 22)
             Me.tpConsultar.Name = "tpConsultar"
             Me.tpConsultar.Padding = New System.Windows.Forms.Padding(3)
@@ -1470,20 +1471,19 @@
             Me.Label14.TabIndex = 4
             Me.Label14.Text = "a:"
             '
-            'GroupBox1
+            'gbxDetalles
             '
-            Me.GroupBox1.Controls.Add(Me.gbxIngreso)
-            Me.GroupBox1.Controls.Add(Me.dgvDetalleComprobate)
-            Me.GroupBox1.Location = New System.Drawing.Point(3, 283)
-            Me.GroupBox1.Name = "GroupBox1"
-            Me.GroupBox1.Size = New System.Drawing.Size(1108, 280)
-            Me.GroupBox1.TabIndex = 155
-            Me.GroupBox1.TabStop = False
-            Me.GroupBox1.Text = "Detalles"
+            Me.gbxDetalles.Controls.Add(Me.dgvDetalleComprobate)
+            Me.gbxDetalles.Location = New System.Drawing.Point(7, 278)
+            Me.gbxDetalles.Name = "gbxDetalles"
+            Me.gbxDetalles.Size = New System.Drawing.Size(1108, 280)
+            Me.gbxDetalles.TabIndex = 155
+            Me.gbxDetalles.TabStop = False
+            Me.gbxDetalles.Text = "Detalles"
             '
             'gbxIngreso
             '
-            Me.gbxIngreso.Location = New System.Drawing.Point(-2, -7)
+            Me.gbxIngreso.Location = New System.Drawing.Point(24, 275)
             Me.gbxIngreso.Name = "gbxIngreso"
             '
             'gbxIngreso.Panel
@@ -1513,7 +1513,7 @@
             Me.gbxIngreso.Panel.Controls.Add(Me.lblIdArticuloIngreso)
             Me.gbxIngreso.Panel.Controls.Add(Me.lbldetalleIngreso)
             Me.gbxIngreso.Panel.Controls.Add(Me.txtCodigoIngreso)
-            Me.gbxIngreso.Size = New System.Drawing.Size(1118, 285)
+            Me.gbxIngreso.Size = New System.Drawing.Size(1108, 325)
             Me.gbxIngreso.TabIndex = 154
             Me.gbxIngreso.Values.Heading = "Detalles"
             '
@@ -1534,7 +1534,7 @@
             Me.dgvDetalleComprobanteIngreso.Name = "dgvDetalleComprobanteIngreso"
             Me.dgvDetalleComprobanteIngreso.RowHeadersVisible = False
             Me.dgvDetalleComprobanteIngreso.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvDetalleComprobanteIngreso.Size = New System.Drawing.Size(1091, 178)
+            Me.dgvDetalleComprobanteIngreso.Size = New System.Drawing.Size(1091, 238)
             Me.dgvDetalleComprobanteIngreso.TabIndex = 258
             Me.dgvDetalleComprobanteIngreso.Visible = False
             '
@@ -1643,7 +1643,7 @@
             '
             'btnEliminaringreso
             '
-            Me.btnEliminaringreso.Location = New System.Drawing.Point(1064, 25)
+            Me.btnEliminaringreso.Location = New System.Drawing.Point(1063, 25)
             Me.btnEliminaringreso.Name = "btnEliminaringreso"
             Me.btnEliminaringreso.Size = New System.Drawing.Size(34, 25)
             Me.btnEliminaringreso.StateCommon.Back.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.[False]
@@ -2287,7 +2287,7 @@
             CType(Me.dgvComprobantesEgreso, System.ComponentModel.ISupportInitialize).EndInit()
             Me.gbRangoFechas.ResumeLayout(False)
             Me.gbRangoFechas.PerformLayout()
-            Me.GroupBox1.ResumeLayout(False)
+            Me.gbxDetalles.ResumeLayout(False)
             CType(Me.gbxIngreso.Panel, System.ComponentModel.ISupportInitialize).EndInit()
             Me.gbxIngreso.Panel.ResumeLayout(False)
             Me.gbxIngreso.Panel.PerformLayout()
@@ -2458,7 +2458,7 @@
         Friend WithEvents btnEliminaringreso As ComponentFactory.Krypton.Toolkit.KryptonButton
         Friend WithEvents dgvDetalleComprobanteIngreso As ComponentFactory.Krypton.Toolkit.KryptonDataGridView
         Friend WithEvents lbldetalleIngreso As Label
-        Friend WithEvents GroupBox1 As GroupBox
+        Friend WithEvents gbxDetalles As GroupBox
         Friend WithEvents GroupBox2 As GroupBox
         Friend WithEvents Label10 As Label
         Friend WithEvents ID_KAR As DataGridViewTextBoxColumn

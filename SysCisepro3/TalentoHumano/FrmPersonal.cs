@@ -1290,7 +1290,9 @@ namespace SysCisepro3.TalentoHumano
             HabilitarRegistro(true, false);
             _estado = 2;
 
-            CargarProyectos(false);
+            //CargarProyectos(false);
+            
+
 
             txtContrato.Enabled = false;
             cbmTipoContrato.Enabled = true;
@@ -1886,6 +1888,11 @@ namespace SysCisepro3.TalentoHumano
         private void dgvPersonal_CellClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void cbxProyecto_SelectedIndexChanged(object sender, EventArgs e)
+        {
+           
         }
     }
 }

@@ -1363,6 +1363,7 @@
             this.cbxProyecto.Name = "cbxProyecto";
             this.cbxProyecto.Size = new System.Drawing.Size(360, 21);
             this.cbxProyecto.TabIndex = 200;
+            this.cbxProyecto.SelectedIndexChanged += new System.EventHandler(this.cbxProyecto_SelectedIndexChanged);
             this.cbxProyecto.SelectedValueChanged += new System.EventHandler(this.cbxProyecto_SelectedValueChanged);
             // 
             // label16
@@ -1844,7 +1845,7 @@
             this.tpDatosFamiliares.Location = new System.Drawing.Point(4, 22);
             this.tpDatosFamiliares.Name = "tpDatosFamiliares";
             this.tpDatosFamiliares.Padding = new System.Windows.Forms.Padding(3);
-            this.tpDatosFamiliares.Size = new System.Drawing.Size(974, 401);
+            this.tpDatosFamiliares.Size = new System.Drawing.Size(946, 401);
             this.tpDatosFamiliares.TabIndex = 1;
             this.tpDatosFamiliares.Text = "DATOS FAMILIARES";
             // 
@@ -2175,7 +2176,7 @@
             this.tpReferenciasLaborales.Location = new System.Drawing.Point(4, 22);
             this.tpReferenciasLaborales.Name = "tpReferenciasLaborales";
             this.tpReferenciasLaborales.Padding = new System.Windows.Forms.Padding(3);
-            this.tpReferenciasLaborales.Size = new System.Drawing.Size(974, 401);
+            this.tpReferenciasLaborales.Size = new System.Drawing.Size(946, 401);
             this.tpReferenciasLaborales.TabIndex = 2;
             this.tpReferenciasLaborales.Text = "REFERENCIAS LABORALES";
             // 
@@ -2424,7 +2425,7 @@
             this.tpFoto.Location = new System.Drawing.Point(4, 22);
             this.tpFoto.Name = "tpFoto";
             this.tpFoto.Padding = new System.Windows.Forms.Padding(3);
-            this.tpFoto.Size = new System.Drawing.Size(974, 401);
+            this.tpFoto.Size = new System.Drawing.Size(946, 401);
             this.tpFoto.TabIndex = 3;
             this.tpFoto.Text = "FOTOS";
             // 
@@ -2505,7 +2506,7 @@
             this.TabPage1.Controls.Add(this.DataGridView1);
             this.TabPage1.Location = new System.Drawing.Point(4, 22);
             this.TabPage1.Name = "TabPage1";
-            this.TabPage1.Size = new System.Drawing.Size(974, 401);
+            this.TabPage1.Size = new System.Drawing.Size(946, 401);
             this.TabPage1.TabIndex = 4;
             this.TabPage1.Text = "HISTORIAL LABORAL";
             this.TabPage1.UseVisualStyleBackColor = true;
