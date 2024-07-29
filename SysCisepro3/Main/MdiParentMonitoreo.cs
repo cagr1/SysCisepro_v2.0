@@ -8,7 +8,9 @@ using ClassLibraryCisepro3.UsuarioGeneral;
 using SysCisepro3.Properties;
 using SysCisepro3.TalentoHumano;
 using SysCisepro3.Operaciones;
+using syscisepro.FORMULARIOS.CONTABILIDAD.COMPRAS.REQUERIMIENTOS;
 using Krypton.Toolkit;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 namespace SysCisepro3.Main
 {
     public partial class MdiParentMonitoreo : KryptonForm
@@ -454,6 +456,28 @@ namespace SysCisepro3.Main
             FrmReportePersonalGeneral.Usuario = ObjUsuario;
             FrmReportePersonalGeneral.Instancia.Show();
             FrmReportePersonalGeneral.Instancia.BringToFront();
-        } 
+        }
+
+        private void toolStripLabel4_Click(object sender, EventArgs e)
+        {
+           
+
+
+            
+        }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            _tag = "REQUERIMIENTOS_C";
+            if (ExisteForm(_tag)) GetForm(_tag).BringToFront();
+            else
+            {
+
+                Form f = new FormRequisicionProductoServicio { Tag = _tag, IdUsuario = ObjUsuario.IdUsuario, UserName = ObjUsuario.Datos };
+                _formularios.Add(_tag, f);
+                f.FormClosing += FormOnFormClosing;
+                f.Show();
+            }
+        }
     }
 }

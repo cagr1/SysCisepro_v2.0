@@ -310,7 +310,7 @@
             this.lblUsuario,
             this.toolStripStatusLabel6,
             this.lblFecha});
-            this.statusStrip.Location = new System.Drawing.Point(0, 772);
+            this.statusStrip.Location = new System.Drawing.Point(0, 789);
             this.statusStrip.Name = "statusStrip";
             this.statusStrip.Padding = new System.Windows.Forms.Padding(1, 0, 16, 0);
             this.statusStrip.Size = new System.Drawing.Size(1512, 22);
@@ -2762,7 +2762,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(1512, 794);
+            this.ClientSize = new System.Drawing.Size(1512, 811);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.statusStrip);
             this.DoubleBuffered = true;

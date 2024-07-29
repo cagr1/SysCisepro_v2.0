@@ -90,7 +90,7 @@
             Me.gpComandos.Location = New System.Drawing.Point(809, 37)
             Me.gpComandos.Name = "gpComandos"
             Me.gpComandos.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-            Me.gpComandos.Size = New System.Drawing.Size(318, 45)
+            Me.gpComandos.Size = New System.Drawing.Size(202, 45)
             Me.gpComandos.TabIndex = 45
             Me.gpComandos.TabStop = False
             '
@@ -162,7 +162,7 @@
             Me.dgvChequesEmitidosAprobados.Name = "dgvChequesEmitidosAprobados"
             Me.dgvChequesEmitidosAprobados.RowHeadersVisible = False
             Me.dgvChequesEmitidosAprobados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvChequesEmitidosAprobados.Size = New System.Drawing.Size(1115, 576)
+            Me.dgvChequesEmitidosAprobados.Size = New System.Drawing.Size(1083, 547)
             Me.dgvChequesEmitidosAprobados.TabIndex = 46
             '
             'CHK
@@ -191,7 +191,7 @@
             Me.tcRevisionCheques.Location = New System.Drawing.Point(2, 84)
             Me.tcRevisionCheques.Name = "tcRevisionCheques"
             Me.tcRevisionCheques.SelectedIndex = 0
-            Me.tcRevisionCheques.Size = New System.Drawing.Size(1129, 611)
+            Me.tcRevisionCheques.Size = New System.Drawing.Size(1094, 582)
             Me.tcRevisionCheques.TabIndex = 57
             '
             'tpEmitidosNoCobrados
@@ -202,7 +202,7 @@
             Me.tpEmitidosNoCobrados.Location = New System.Drawing.Point(4, 22)
             Me.tpEmitidosNoCobrados.Name = "tpEmitidosNoCobrados"
             Me.tpEmitidosNoCobrados.Padding = New System.Windows.Forms.Padding(3)
-            Me.tpEmitidosNoCobrados.Size = New System.Drawing.Size(1121, 585)
+            Me.tpEmitidosNoCobrados.Size = New System.Drawing.Size(1086, 556)
             Me.tpEmitidosNoCobrados.TabIndex = 0
             Me.tpEmitidosNoCobrados.Text = "EMITIDOS NO COBRADOS GENERAL"
             '
@@ -214,7 +214,7 @@
             Me.tpEmitidosCobrados.Location = New System.Drawing.Point(4, 22)
             Me.tpEmitidosCobrados.Name = "tpEmitidosCobrados"
             Me.tpEmitidosCobrados.Padding = New System.Windows.Forms.Padding(3)
-            Me.tpEmitidosCobrados.Size = New System.Drawing.Size(1121, 585)
+            Me.tpEmitidosCobrados.Size = New System.Drawing.Size(1086, 556)
             Me.tpEmitidosCobrados.TabIndex = 1
             Me.tpEmitidosCobrados.Text = "EMITIDOS COBRADOS GENERAL"
             '
@@ -253,7 +253,7 @@
             Me.dgvEmitidosCobrados.ReadOnly = True
             Me.dgvEmitidosCobrados.RowHeadersVisible = False
             Me.dgvEmitidosCobrados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvEmitidosCobrados.Size = New System.Drawing.Size(1115, 576)
+            Me.dgvEmitidosCobrados.Size = New System.Drawing.Size(1077, 547)
             Me.dgvEmitidosCobrados.TabIndex = 0
             '
             'gbTotalEmitidosCobrados
@@ -273,7 +273,7 @@
             Me.tpCaducados.Location = New System.Drawing.Point(4, 22)
             Me.tpCaducados.Name = "tpCaducados"
             Me.tpCaducados.Padding = New System.Windows.Forms.Padding(3)
-            Me.tpCaducados.Size = New System.Drawing.Size(1121, 585)
+            Me.tpCaducados.Size = New System.Drawing.Size(1086, 556)
             Me.tpCaducados.TabIndex = 2
             Me.tpCaducados.Text = "EMITIDOS CADUCADOS"
             Me.tpCaducados.UseVisualStyleBackColor = True
@@ -312,7 +312,7 @@
             Me.dgvEmitidosCaducados.ReadOnly = True
             Me.dgvEmitidosCaducados.RowHeadersVisible = False
             Me.dgvEmitidosCaducados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvEmitidosCaducados.Size = New System.Drawing.Size(1115, 573)
+            Me.dgvEmitidosCaducados.Size = New System.Drawing.Size(1077, 543)
             Me.dgvEmitidosCaducados.TabIndex = 1
             '
             'gbRangoFechaBusqueda
@@ -440,7 +440,7 @@
             Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
             Me.MenuStrip1.Name = "MenuStrip1"
             Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(7, 2, 0, 2)
-            Me.MenuStrip1.Size = New System.Drawing.Size(1131, 32)
+            Me.MenuStrip1.Size = New System.Drawing.Size(1099, 32)
             Me.MenuStrip1.TabIndex = 187
             Me.MenuStrip1.Text = "msIngresoBodega"
             '
@@ -517,7 +517,7 @@
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.BackColor = System.Drawing.Color.White
-            Me.ClientSize = New System.Drawing.Size(1131, 696)
+            Me.ClientSize = New System.Drawing.Size(1099, 667)
             Me.Controls.Add(Me.MenuStrip1)
             Me.Controls.Add(Me.gbBanco)
             Me.Controls.Add(Me.tcRevisionCheques)

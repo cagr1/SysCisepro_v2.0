@@ -1887,12 +1887,14 @@ namespace SysCisepro3.Main
                         Console.WriteLine(ex.Message);
                     }
                 }
-                if (Settings.Default.Usuario.Equals("NATALIA") || Settings.Default.Usuario.Equals("MAGDALENA") || Settings.Default.Usuario.Equals("MARMIJOS"))
+                if (Settings.Default.Usuario.Equals("NATALIA") || Settings.Default.Usuario.Equals("MAGDALENA") || Settings.Default.Usuario.Equals("MARMIJOS") || Settings.Default.Usuario.Equals("ERIKA"))
                 {
                     _data = _objChaleco.SeleccionarChalecosxCaducar(TipoCon);
                     _tipoNoficicacion = 7;
                     notifyIcon1.BalloonTipText = @"ALERTA!!! Aviso por chalecos que estan a punto de expirar su permiso. Por favor, verifique la información correspondiente.";
                 }
+
+
 
                 if (_data.Rows.Count > 0) notifyIcon1.ShowBalloonTip(10000);
             }

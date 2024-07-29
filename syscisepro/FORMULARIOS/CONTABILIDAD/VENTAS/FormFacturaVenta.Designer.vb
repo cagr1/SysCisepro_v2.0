@@ -190,7 +190,7 @@
             Me.gbValores.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.gbValores.Location = New System.Drawing.Point(609, 397)
             Me.gbValores.Name = "gbValores"
-            Me.gbValores.Size = New System.Drawing.Size(213, 157)
+            Me.gbValores.Size = New System.Drawing.Size(180, 157)
             Me.gbValores.TabIndex = 71
             Me.gbValores.TabStop = False
             '
@@ -219,10 +219,10 @@
             Me.txtDescuento.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtDescuento.Enabled = False
             Me.txtDescuento.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtDescuento.Location = New System.Drawing.Point(108, 43)
+            Me.txtDescuento.Location = New System.Drawing.Point(98, 43)
             Me.txtDescuento.Name = "txtDescuento"
             Me.txtDescuento.ReadOnly = True
-            Me.txtDescuento.Size = New System.Drawing.Size(95, 23)
+            Me.txtDescuento.Size = New System.Drawing.Size(75, 23)
             Me.txtDescuento.TabIndex = 18
             Me.txtDescuento.Text = "0.00"
             Me.txtDescuento.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -233,10 +233,10 @@
             Me.txtSubtotal0.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtSubtotal0.Enabled = False
             Me.txtSubtotal0.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtSubtotal0.Location = New System.Drawing.Point(108, 43)
+            Me.txtSubtotal0.Location = New System.Drawing.Point(98, 43)
             Me.txtSubtotal0.Name = "txtSubtotal0"
             Me.txtSubtotal0.ReadOnly = True
-            Me.txtSubtotal0.Size = New System.Drawing.Size(95, 23)
+            Me.txtSubtotal0.Size = New System.Drawing.Size(75, 23)
             Me.txtSubtotal0.TabIndex = 17
             Me.txtSubtotal0.Text = "0.00"
             Me.txtSubtotal0.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -248,10 +248,10 @@
             Me.txtSubtotal12.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtSubtotal12.Enabled = False
             Me.txtSubtotal12.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtSubtotal12.Location = New System.Drawing.Point(108, 16)
+            Me.txtSubtotal12.Location = New System.Drawing.Point(98, 16)
             Me.txtSubtotal12.Name = "txtSubtotal12"
             Me.txtSubtotal12.ReadOnly = True
-            Me.txtSubtotal12.Size = New System.Drawing.Size(95, 23)
+            Me.txtSubtotal12.Size = New System.Drawing.Size(75, 23)
             Me.txtSubtotal12.TabIndex = 16
             Me.txtSubtotal12.Text = "0.00"
             Me.txtSubtotal12.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -262,10 +262,10 @@
             Me.txtTotal.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtTotal.Enabled = False
             Me.txtTotal.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtTotal.Location = New System.Drawing.Point(108, 124)
+            Me.txtTotal.Location = New System.Drawing.Point(98, 124)
             Me.txtTotal.Name = "txtTotal"
             Me.txtTotal.ReadOnly = True
-            Me.txtTotal.Size = New System.Drawing.Size(95, 23)
+            Me.txtTotal.Size = New System.Drawing.Size(75, 23)
             Me.txtTotal.TabIndex = 21
             Me.txtTotal.Text = "0.00"
             Me.txtTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -276,10 +276,10 @@
             Me.txtSubTotal.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtSubTotal.Enabled = False
             Me.txtSubTotal.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtSubTotal.Location = New System.Drawing.Point(108, 70)
+            Me.txtSubTotal.Location = New System.Drawing.Point(98, 70)
             Me.txtSubTotal.Name = "txtSubTotal"
             Me.txtSubTotal.ReadOnly = True
-            Me.txtSubTotal.Size = New System.Drawing.Size(95, 23)
+            Me.txtSubTotal.Size = New System.Drawing.Size(75, 23)
             Me.txtSubTotal.TabIndex = 19
             Me.txtSubTotal.Text = "0.00"
             Me.txtSubTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -320,10 +320,10 @@
             Me.txtIva.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtIva.Enabled = False
             Me.txtIva.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtIva.Location = New System.Drawing.Point(108, 97)
+            Me.txtIva.Location = New System.Drawing.Point(98, 97)
             Me.txtIva.Name = "txtIva"
             Me.txtIva.ReadOnly = True
-            Me.txtIva.Size = New System.Drawing.Size(95, 23)
+            Me.txtIva.Size = New System.Drawing.Size(75, 23)
             Me.txtIva.TabIndex = 20
             Me.txtIva.Text = "0.00"
             Me.txtIva.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -370,7 +370,7 @@
             Me.gbNumeracion.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.gbNumeracion.Location = New System.Drawing.Point(573, 67)
             Me.gbNumeracion.Name = "gbNumeracion"
-            Me.gbNumeracion.Size = New System.Drawing.Size(248, 65)
+            Me.gbNumeracion.Size = New System.Drawing.Size(216, 65)
             Me.gbNumeracion.TabIndex = 74
             Me.gbNumeracion.TabStop = False
             '
@@ -645,15 +645,15 @@
             '
             'txtGuiaRemisionFacturaVenta
             '
-            Me.txtGuiaRemisionFacturaVenta.Location = New System.Drawing.Point(17, 41)
+            Me.txtGuiaRemisionFacturaVenta.Location = New System.Drawing.Point(19, 41)
             Me.txtGuiaRemisionFacturaVenta.Name = "txtGuiaRemisionFacturaVenta"
-            Me.txtGuiaRemisionFacturaVenta.Size = New System.Drawing.Size(192, 20)
+            Me.txtGuiaRemisionFacturaVenta.Size = New System.Drawing.Size(132, 20)
             Me.txtGuiaRemisionFacturaVenta.TabIndex = 9
             '
             'Label15
             '
             Me.Label15.AutoSize = True
-            Me.Label15.Location = New System.Drawing.Point(15, 21)
+            Me.Label15.Location = New System.Drawing.Point(11, 21)
             Me.Label15.Name = "Label15"
             Me.Label15.Size = New System.Drawing.Size(91, 13)
             Me.Label15.TabIndex = 10
@@ -662,9 +662,9 @@
             'dtpFechaEmisionFacturaVenta
             '
             Me.dtpFechaEmisionFacturaVenta.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-            Me.dtpFechaEmisionFacturaVenta.Location = New System.Drawing.Point(17, 41)
+            Me.dtpFechaEmisionFacturaVenta.Location = New System.Drawing.Point(10, 41)
             Me.dtpFechaEmisionFacturaVenta.Name = "dtpFechaEmisionFacturaVenta"
-            Me.dtpFechaEmisionFacturaVenta.Size = New System.Drawing.Size(192, 20)
+            Me.dtpFechaEmisionFacturaVenta.Size = New System.Drawing.Size(172, 20)
             Me.dtpFechaEmisionFacturaVenta.TabIndex = 11
             '
             'gbFecha
@@ -677,14 +677,14 @@
             Me.gbFecha.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.gbFecha.Location = New System.Drawing.Point(600, 128)
             Me.gbFecha.Name = "gbFecha"
-            Me.gbFecha.Size = New System.Drawing.Size(221, 70)
+            Me.gbFecha.Size = New System.Drawing.Size(189, 70)
             Me.gbFecha.TabIndex = 76
             Me.gbFecha.TabStop = False
             '
             'lblIdFacturaVenta
             '
             Me.lblIdFacturaVenta.AutoSize = True
-            Me.lblIdFacturaVenta.Location = New System.Drawing.Point(183, 4)
+            Me.lblIdFacturaVenta.Location = New System.Drawing.Point(136, 4)
             Me.lblIdFacturaVenta.Name = "lblIdFacturaVenta"
             Me.lblIdFacturaVenta.Size = New System.Drawing.Size(25, 13)
             Me.lblIdFacturaVenta.TabIndex = 4
@@ -698,7 +698,7 @@
             Me.panelDetalle.ForeColor = System.Drawing.Color.White
             Me.panelDetalle.Location = New System.Drawing.Point(1, 200)
             Me.panelDetalle.Name = "panelDetalle"
-            Me.panelDetalle.Size = New System.Drawing.Size(821, 21)
+            Me.panelDetalle.Size = New System.Drawing.Size(788, 21)
             Me.panelDetalle.TabIndex = 78
             '
             'lblDetalleSolicitud
@@ -745,7 +745,7 @@
             Me.dgvDetalleFacturaVenta.Name = "dgvDetalleFacturaVenta"
             Me.dgvDetalleFacturaVenta.RowHeadersVisible = False
             Me.dgvDetalleFacturaVenta.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvDetalleFacturaVenta.Size = New System.Drawing.Size(817, 159)
+            Me.dgvDetalleFacturaVenta.Size = New System.Drawing.Size(785, 159)
             Me.dgvDetalleFacturaVenta.TabIndex = 79
             '
             'eliminarItem
@@ -1012,9 +1012,9 @@
             Me.gbTipoAnbiente.Controls.Add(Me.rbProduccion)
             Me.gbTipoAnbiente.Controls.Add(Me.rbPruebas)
             Me.gbTipoAnbiente.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.gbTipoAnbiente.Location = New System.Drawing.Point(361, 34)
+            Me.gbTipoAnbiente.Location = New System.Drawing.Point(290, 34)
             Me.gbTipoAnbiente.Name = "gbTipoAnbiente"
-            Me.gbTipoAnbiente.Size = New System.Drawing.Size(360, 32)
+            Me.gbTipoAnbiente.Size = New System.Drawing.Size(291, 32)
             Me.gbTipoAnbiente.TabIndex = 87
             Me.gbTipoAnbiente.TabStop = False
             '
@@ -1032,7 +1032,7 @@
             '
             Me.rbProduccion.AutoSize = True
             Me.rbProduccion.Checked = True
-            Me.rbProduccion.Location = New System.Drawing.Point(232, 11)
+            Me.rbProduccion.Location = New System.Drawing.Point(179, 11)
             Me.rbProduccion.Name = "rbProduccion"
             Me.rbProduccion.Size = New System.Drawing.Size(94, 17)
             Me.rbProduccion.TabIndex = 1
@@ -1043,7 +1043,7 @@
             'rbPruebas
             '
             Me.rbPruebas.AutoSize = True
-            Me.rbPruebas.Location = New System.Drawing.Point(126, 11)
+            Me.rbPruebas.Location = New System.Drawing.Point(103, 11)
             Me.rbPruebas.Name = "rbPruebas"
             Me.rbPruebas.Size = New System.Drawing.Size(73, 17)
             Me.rbPruebas.TabIndex = 0
@@ -1056,7 +1056,7 @@
             Me.gbTipoEmision.Controls.Add(Me.rbTipoEmisionNormal)
             Me.gbTipoEmision.Controls.Add(Me.Label20)
             Me.gbTipoEmision.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.gbTipoEmision.Location = New System.Drawing.Point(721, 34)
+            Me.gbTipoEmision.Location = New System.Drawing.Point(585, 34)
             Me.gbTipoEmision.Name = "gbTipoEmision"
             Me.gbTipoEmision.Size = New System.Drawing.Size(364, 32)
             Me.gbTipoEmision.TabIndex = 15
@@ -1133,7 +1133,7 @@
             Me.GroupBox2.Location = New System.Drawing.Point(0, 220)
             Me.GroupBox2.Name = "GroupBox2"
             Me.GroupBox2.Padding = New System.Windows.Forms.Padding(2)
-            Me.GroupBox2.Size = New System.Drawing.Size(821, 178)
+            Me.GroupBox2.Size = New System.Drawing.Size(789, 178)
             Me.GroupBox2.TabIndex = 91
             Me.GroupBox2.TabStop = False
             '
@@ -1142,7 +1142,7 @@
             Me.GroupBox3.BackColor = System.Drawing.Color.White
             Me.GroupBox3.Controls.Add(Me.dgvFacturaVenta)
             Me.GroupBox3.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.GroupBox3.Location = New System.Drawing.Point(824, 67)
+            Me.GroupBox3.Location = New System.Drawing.Point(795, 67)
             Me.GroupBox3.Name = "GroupBox3"
             Me.GroupBox3.Size = New System.Drawing.Size(261, 631)
             Me.GroupBox3.TabIndex = 92
@@ -1156,7 +1156,7 @@
             Me.GroupBox4.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.GroupBox4.Location = New System.Drawing.Point(1, 573)
             Me.GroupBox4.Name = "GroupBox4"
-            Me.GroupBox4.Size = New System.Drawing.Size(821, 125)
+            Me.GroupBox4.Size = New System.Drawing.Size(788, 125)
             Me.GroupBox4.TabIndex = 93
             Me.GroupBox4.TabStop = False
             '
@@ -1190,7 +1190,7 @@
             DataGridViewCellStyle12.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.dgvAsientoDiarioFactura.RowsDefaultCellStyle = DataGridViewCellStyle12
             Me.dgvAsientoDiarioFactura.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvAsientoDiarioFactura.Size = New System.Drawing.Size(815, 106)
+            Me.dgvAsientoDiarioFactura.Size = New System.Drawing.Size(782, 106)
             Me.dgvAsientoDiarioFactura.TabIndex = 28
             '
             'CODIGO
@@ -1280,7 +1280,7 @@
             Me.gbPtoEmision.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.gbPtoEmision.Location = New System.Drawing.Point(0, 34)
             Me.gbPtoEmision.Name = "gbPtoEmision"
-            Me.gbPtoEmision.Size = New System.Drawing.Size(361, 32)
+            Me.gbPtoEmision.Size = New System.Drawing.Size(286, 32)
             Me.gbPtoEmision.TabIndex = 88
             Me.gbPtoEmision.TabStop = False
             '
@@ -1302,7 +1302,7 @@
             Me.Panel1.ForeColor = System.Drawing.Color.White
             Me.Panel1.Location = New System.Drawing.Point(1, 554)
             Me.Panel1.Name = "Panel1"
-            Me.Panel1.Size = New System.Drawing.Size(821, 22)
+            Me.Panel1.Size = New System.Drawing.Size(788, 22)
             Me.Panel1.TabIndex = 79
             '
             'cbxConvenio
@@ -1405,7 +1405,7 @@
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.BackColor = System.Drawing.Color.White
-            Me.ClientSize = New System.Drawing.Size(1086, 702)
+            Me.ClientSize = New System.Drawing.Size(1060, 702)
             Me.Controls.Add(Me.MenuStrip1)
             Me.Controls.Add(Me.gbPtoEmision)
             Me.Controls.Add(Me.GroupBox5)

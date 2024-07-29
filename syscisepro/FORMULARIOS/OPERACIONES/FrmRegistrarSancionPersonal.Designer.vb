@@ -382,7 +382,7 @@
             Me.txtCant.Location = New System.Drawing.Point(53, 44)
             Me.txtCant.Name = "txtCant"
             Me.txtCant.Size = New System.Drawing.Size(55, 21)
-            Me.txtCant.TabIndex = 206
+            Me.txtCant.TabIndex = 112
             '
             'dtpFecha
             '
@@ -391,7 +391,7 @@
             Me.dtpFecha.Location = New System.Drawing.Point(144, 15)
             Me.dtpFecha.Name = "dtpFecha"
             Me.dtpFecha.Size = New System.Drawing.Size(261, 21)
-            Me.dtpFecha.TabIndex = 204
+            Me.dtpFecha.TabIndex = 110
             '
             'Label31
             '
@@ -413,7 +413,7 @@
             Me.bntSanciones.Location = New System.Drawing.Point(749, 13)
             Me.bntSanciones.Name = "bntSanciones"
             Me.bntSanciones.Size = New System.Drawing.Size(26, 26)
-            Me.bntSanciones.TabIndex = 202
+            Me.bntSanciones.TabIndex = 111
             Me.bntSanciones.TextAlign = System.Drawing.ContentAlignment.MiddleRight
             Me.bntSanciones.UseVisualStyleBackColor = False
             '
@@ -425,7 +425,7 @@
             Me.txtObservacion.Location = New System.Drawing.Point(351, 43)
             Me.txtObservacion.Name = "txtObservacion"
             Me.txtObservacion.Size = New System.Drawing.Size(424, 21)
-            Me.txtObservacion.TabIndex = 201
+            Me.txtObservacion.TabIndex = 113
             '
             'Label18
             '

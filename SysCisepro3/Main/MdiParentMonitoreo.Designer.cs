@@ -53,7 +53,6 @@
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.pENDIENTESDEVACACIONESToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.rEPORTEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripLabel4 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripDropDownButton8 = new System.Windows.Forms.ToolStripDropDownButton();
             this.toolStripDropDownButton9 = new System.Windows.Forms.ToolStripDropDownButton();
@@ -69,6 +68,9 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
+            this.toolStripSeparator = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.statusStrip.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -167,7 +169,8 @@
             this.toolStripDropDownButton7,
             this.toolStripDropDownButton6,
             this.toolStripDropDownButton15,
-            this.toolStripLabel4,
+            this.toolStripButton1,
+            this.toolStripSeparator4,
             this.toolStripLabel1,
             this.toolStripDropDownButton8,
             this.toolStripDropDownButton9,
@@ -176,7 +179,8 @@
             this.toolStripDropDownButton12,
             this.toolStripDropDownButton14,
             this.toolStripDropDownButton13,
-            this.toolStripDropDownButton16});
+            this.toolStripDropDownButton16,
+            this.toolStripSeparator});
             this.toolStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.VerticalStackWithOverflow;
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
@@ -371,16 +375,6 @@
             this.rEPORTEToolStripMenuItem.Text = "REPORTE GENERAL";
             this.rEPORTEToolStripMenuItem.Click += new System.EventHandler(this.rEPORTEToolStripMenuItem_Click);
             // 
-            // toolStripLabel4
-            // 
-            this.toolStripLabel4.AutoSize = false;
-            this.toolStripLabel4.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripLabel4.ForeColor = System.Drawing.Color.White;
-            this.toolStripLabel4.Name = "toolStripLabel4";
-            this.toolStripLabel4.Size = new System.Drawing.Size(180, 26);
-            this.toolStripLabel4.Text = "   ";
-            this.toolStripLabel4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
             // toolStripLabel1
             // 
             this.toolStripLabel1.AutoSize = false;
@@ -529,21 +523,21 @@
             this.iNGRESOSSALIDASToolStripMenuItem1.Image = global::SysCisepro3.Properties.Resources.description_24dp_FILL0_wght400_GRAD0_opsz24__2_;
             this.iNGRESOSSALIDASToolStripMenuItem1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.iNGRESOSSALIDASToolStripMenuItem1.Name = "iNGRESOSSALIDASToolStripMenuItem1";
-            this.iNGRESOSSALIDASToolStripMenuItem1.Size = new System.Drawing.Size(222, 30);
+            this.iNGRESOSSALIDASToolStripMenuItem1.Size = new System.Drawing.Size(213, 30);
             this.iNGRESOSSALIDASToolStripMenuItem1.Text = "INGRESOS / SALIDAS ";
             this.iNGRESOSSALIDASToolStripMenuItem1.Click += new System.EventHandler(this.iNGRESOSSALIDASToolStripMenuItem1_Click);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(219, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(210, 6);
             // 
             // pENDIENTESVACACIONESToolStripMenuItem
             // 
             this.pENDIENTESVACACIONESToolStripMenuItem.Image = global::SysCisepro3.Properties.Resources.description_24dp_FILL0_wght400_GRAD0_opsz24__2_;
             this.pENDIENTESVACACIONESToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.pENDIENTESVACACIONESToolStripMenuItem.Name = "pENDIENTESVACACIONESToolStripMenuItem";
-            this.pENDIENTESVACACIONESToolStripMenuItem.Size = new System.Drawing.Size(222, 30);
+            this.pENDIENTESVACACIONESToolStripMenuItem.Size = new System.Drawing.Size(213, 30);
             this.pENDIENTESVACACIONESToolStripMenuItem.Text = "PENDIENTES VACACIONES";
             this.pENDIENTESVACACIONESToolStripMenuItem.Click += new System.EventHandler(this.pENDIENTESVACACIONESToolStripMenuItem_Click);
             // 
@@ -568,6 +562,28 @@
             this.notifyIcon1.Visible = true;
             this.notifyIcon1.BalloonTipClicked += new System.EventHandler(this.notifyIcon1_BalloonTipClicked);
             this.notifyIcon1.Click += new System.EventHandler(this.notifyIcon1_Click);
+            // 
+            // toolStripSeparator
+            // 
+            this.toolStripSeparator.Name = "toolStripSeparator";
+            this.toolStripSeparator.Size = new System.Drawing.Size(188, 6);
+            // 
+            // toolStripSeparator4
+            // 
+            this.toolStripSeparator4.Name = "toolStripSeparator4";
+            this.toolStripSeparator4.Size = new System.Drawing.Size(188, 6);
+            // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.toolStripButton1.Image = global::SysCisepro3.Properties.Resources.list_24dp__2_;
+            this.toolStripButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.toolStripButton1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(188, 28);
+            this.toolStripButton1.Text = "REQUISICION PRODUCTO";
+            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
             // MdiParentMonitoreo
             // 
@@ -624,7 +640,6 @@
         private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton11;
         private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton12;
         private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton13;
-        private System.Windows.Forms.ToolStripLabel toolStripLabel4;
         private System.Windows.Forms.ToolStripLabel toolStripLabel5;
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
         private System.Windows.Forms.Panel panel1;
@@ -642,5 +657,8 @@
         private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton7;
         private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton14;
         private System.Windows.Forms.ToolStripMenuItem rEPORTEToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
+        private System.Windows.Forms.ToolStripButton toolStripButton1;
     }
 }

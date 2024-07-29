@@ -1868,12 +1868,47 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
         End Sub
 
         Private Sub txtSerie_TextChanged(sender As Object, e As EventArgs) Handles txtSerie.TextChanged
-            Dim condicion As String = "EGRESO"
+            Dim idkardex = Convert.ToInt32(lblIdKardex.Text)
+
             If txtSerie.Text.Trim().Length > 0 Then
-                _objDetCompEgr.BuscarSerieRepetida(_tipoCon, txtSerie.Text, condicion)
+                Try
+                    Dim data As DataTable = _objDetCompEgr.BuscarSerieRepetida(_tipoCon, txtSerie.Text, idkardex)
+                    If data IsNot Nothing AndAlso data.Rows.Count > 0 Then
+                        Dim last As DataRow = data.Rows(data.Rows.Count - 1)
+                        If Convert.ToInt32(last("ID_ACTIVIDAD")) = 2 Then
+                            KryptonMessageBox.Show("LA SERIE YA FUE UTILIZADA EN UN EGRESO", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
+                            txtSerie.Clear()
+                            Return
+                        End If
+                    End If
+                Catch ex As Exception
+                    KryptonMessageBox.Show("OCURRIÓ UN PROBLEMA AL BUSCAR LA SERIE. POR FAVOR, CONTÁCTE AL ADMINISTRADOR!!!", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
+
+                End Try
             End If
+
+
         End Sub
 
+        Private Sub txtSerieIngreso_TextChanged(sender As Object, e As EventArgs) Handles txtSerieIngreso.TextChanged
+            Dim idkardex = Convert.ToInt32(lblIdKardexIngreso.Text)
 
+            If txtSerieIngreso.Text.Trim().Length > 0 Then
+                Try
+                    Dim data As DataTable = _objDetCompEgr.BuscarSerieRepetida(_tipoCon, txtSerieIngreso.Text, idkardex)
+                    If data IsNot Nothing AndAlso data.Rows.Count > 0 Then
+                        Dim last As DataRow = data.Rows(data.Rows.Count - 1)
+                        If Convert.ToInt32(last("ID_ACTIVIDAD")) = 1 Then
+                            KryptonMessageBox.Show("LA SERIE YA FUE UTILIZADA EN UN INGRESO", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
+                            txtSerie.Clear()
+                            Return
+                        End If
+                    End If
+                Catch ex As Exception
+                    KryptonMessageBox.Show("OCURRIÓ UN PROBLEMA AL BUSCAR LA SERIE. POR FAVOR, CONTÁCTE AL ADMINISTRADOR!!!", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
+
+                End Try
+            End If
+        End Sub
     End Class
 End Namespace
