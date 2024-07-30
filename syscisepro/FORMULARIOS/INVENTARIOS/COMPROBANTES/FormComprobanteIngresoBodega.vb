@@ -640,8 +640,8 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                         .CantidadIngreso = CInt(dgvSecuencial.Rows.Item(indice).Cells("CANTIDAD").Value.ToString.ToUpper)
                         .ValorUnitarioIngreso = CDec(dgvSecuencial.Rows.Item(indice).Cells("VALOR").Value.ToString.ToUpper)
                         .ValorTotalIngreso = CDec(dgvSecuencial.Rows.Item(indice).Cells("TOTAL").Value.ToString.ToUpper)
-                        .CantidadSaldo = dgvSecuencial.Rows.Item(indice).Cells("SALDO").Value.ToString.ToUpper 'SALDO
-                        .ValorUnitarioSaldo = CDec(dgvSecuencial.Rows.Item(indice).Cells("CANTIDAD_SALDO").Value.ToString.ToUpper) 'CANTIDAD_SALDO
+                        .CantidadSaldo = dgvSecuencial.Rows.Item(indice).Cells("SALDO").Value.ToString.ToUpper 'de CANTIDAD_SALDO a SALDO
+                        .ValorUnitarioSaldo = CDec(dgvSecuencial.Rows.Item(indice).Cells("CANTIDAD_SALDO").Value.ToString.ToUpper) 'de CANTIDAD_SALDO a  
                         .ValorTotalSaldo = CDec(dgvSecuencial.Rows.Item(indice).Cells("VALOR_UNITARIO_SALDO").Value.ToString.ToUpper) 'VALOR_UNITARIO_SALDO
                         .Fecha = _objCompIng.Fecha
                         .IdKardex = CLng(dgvSecuencial.Rows.Item(indice).Cells("NUMERO_KARDEX").Value.ToString.ToUpper)
@@ -676,7 +676,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                     With _objKardex
                         .Id = CLng(dgvSecuencial.Rows.Item(indice).Cells("NUMERO_KARDEX").Value)
                         .IdsecuencialItem = CLng(dgvSecuencial.Rows.Item(indice).Cells("ID_SECUENCIAL").Value)
-                        .Cantidad = CInt(dgvSecuencial.Rows.Item(indice).Cells("CANTIDAD_SALDO").Value)
+                        .Cantidad = CInt(dgvSecuencial.Rows.Item(indice).Cells("SALDO").Value) 'de CANTIDAD_SALDO a SALDO
                         .Fecha = _objCompIng.Fecha
                         .Estado = 1
                     End With
@@ -1442,6 +1442,28 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
 
                 txtUbicacion.Clear()
             End Try
+        End Sub
+
+        Private Sub txtSerie_TextChanged(sender As Object, e As EventArgs) Handles txtSerie.TextChanged
+            Dim idkardex = Convert.ToInt32(lblIdKardex.Text)
+
+            If txtSerie.Text.Trim().Length > 0 Then
+                Try
+                    Dim data As DataTable = _objDetCompIng.BuscarSerieRepetida(_tipoCon, txtSerie.Text, idkardex)
+                    If data IsNot Nothing AndAlso data.Rows.Count > 0 Then
+                        Dim last As DataRow = data.Rows(data.Rows.Count - 1)
+                        If Convert.ToInt32(last("ID_ACTIVIDAD")) = 1 Then
+                            KryptonMessageBox.Show("LA SERIE YA FUE UTILIZADA EN UN INGRESO", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
+                            txtSerie.Clear()
+                            Return
+                        End If
+                    End If
+                Catch ex As Exception
+                    KryptonMessageBox.Show("OCURRIÓ UN PROBLEMA AL BUSCAR LA SERIE. POR FAVOR, CONTÁCTE AL ADMINISTRADOR!!!", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
+
+                End Try
+            End If
+
         End Sub
     End Class
 End Namespace

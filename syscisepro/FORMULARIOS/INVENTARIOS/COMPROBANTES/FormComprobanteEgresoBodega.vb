@@ -80,6 +80,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
         ReadOnly _objEntrega As New ClassEntregaUniformes
         ReadOnly _objRegistroDescuento As New ClassDescuentosPersonal
         ReadOnly _crComprobanteUniforme As New crComprobanteEgresoUniformes
+        ReadOnly _objDetalle As New ClassDetalleUniforme
 
         ' Para Reingreso
         ReadOnly _objCompIng As New ClassComprobanteIngresoBodego
@@ -616,7 +617,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
             tsmGuardar.Enabled = False
             tsmCancelar.Enabled = False
             tsmActualizar.Enabled = False
-            tsmEliminar.Enabled = False
+            tmsEliminar.Enabled = False
             tsmReingreso.Enabled = False
 
             lblArticuloTitulo.Visible = False
@@ -653,6 +654,8 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
             btnEliminaringreso.SendToBack()
             dgvDetalleComprobanteIngreso.Visible = False
             dgvDetalleComprobanteIngreso.SendToBack()
+            gbxIngreso.SendToBack()
+            dgvDetalleComprobate.BringToFront()
 
 
 
@@ -736,11 +739,11 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
 
                 Dim iddk = _objDetalleKardex.BuscarMayorIdDetalleKardex(_tipoCon) + 1
                 Dim idce = _objDetCompEgr.BuscarMayorIdDetalleComprobanteEgresoBodega(_tipoCon) + 1
-                Dim idu = _objControl.BuscarMayorIdControlUniformes(_tipoCon) + 1
+                Dim idcu = _objControl.BuscarMayorIdControlUniformes(_tipoCon) + 1
                 Dim idd = _objDetalleEgresoPuesto.BuscarMayorIdRegistroDetalleComprobante(_tipoCon) + 1
+                Dim iddu = _objDetalle.BuscarMayorIdDetalleUniformes(_tipoCon) + 1
 
                 Try
-
 
                     For indice = 0 To dgvSecuencial.RowCount - 1
 
@@ -770,7 +773,20 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                             End If
                         End If
 
-
+                        If cmbBodega.SelectedValue = 1 Then
+                            With _objDetalle
+                                .IdDetalle = iddu
+                                .IdKardex = CType(dgvSecuencial.Rows.Item(indice).Cells("NUMERO_KARDEX").Value.ToString.ToUpper, Int64)
+                                .IdDetalleKardex = _objDetalleKardex.Id
+                                .ObservacionEstado = dgvSecuencial.Rows.Item(indice).Cells("OBSERVACION").Value.ToString.ToUpper
+                                .Cantidad = CType(dgvSecuencial.Rows.Item(indice).Cells("CANTIDAD").Value.ToString.ToUpper, Integer)
+                                .Estado = 1
+                                .FechaRenovacion = dtpFecha.Value
+                                .IdUniformes = _objEntrega.Id
+                                .ObservacionDetalle = dgvSecuencial.Rows.Item(indice).Cells("DETALLES").Value.ToString.ToUpper
+                            End With
+                            _sqlCommands.Add(_objDetalle.NuevoRegistroDetalleUniformesCommand())
+                        End If
 
                         With _objDetalleKardex
                             .Id = iddk
@@ -784,7 +800,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                             .ValorTotalEgreso = CDec(dgvSecuencial.Rows.Item(indice).Cells("TOTAL").Value.ToString.ToUpper)
                             .CantidadSaldo = dgvSecuencial.Rows.Item(indice).Cells("SALDO").Value.ToString.ToUpper 'de CANTIDAD_SALDO a SALDO
                             .ValorUnitarioSaldo = CDec(dgvSecuencial.Rows.Item(indice).Cells("CANTIDAD_SALDO").Value.ToString.ToUpper) 'de VALOR_UNITARIO_SALDO a CANTIDAD_SALDO
-                            .ValorTotalSaldo = CDec(dgvSecuencial.Rows.Item(indice).Cells("VALOR_UNITARIO_SALDO").Value.ToString.ToUpper) 'de SALDO aVALOR_UNITARIO_SALDO
+                            .ValorTotalSaldo = CDec(dgvSecuencial.Rows.Item(indice).Cells("VALOR_UNITARIO_SALDO").Value.ToString.ToUpper) 'de SALDO a VALOR_UNITARIO_SALDO
                             .Fecha = _objCompEgr.Fecha
                             .IdKardex = CLng(dgvSecuencial.Rows.Item(indice).Cells("NUMERO_KARDEX").Value.ToString.ToUpper)
                             .Estado = 1
@@ -815,7 +831,6 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                             .Serie = dgvSecuencial.Rows.Item(indice).Tag.ToString
                         End With
                         _sqlCommands.Add(_objDetalleEgresoPuesto.NuevoRegistroDetalleComprobanteEgresoSitioCommand())
-                        idd += 1
 
                         With _objKardex
                             .Id = CLng(dgvSecuencial.Rows.Item(indice).Cells("NUMERO_KARDEX").Value)
@@ -827,7 +842,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                         _sqlCommands.Add(_objKardex.ModificarCantidadKardexCommand())
 
                         With _objControl
-                            .IdControl = idu
+                            .IdControl = idcu
                             .IdPersonal = If(txtRecibe.Tag Is Nothing, txtRecibe.Text.Split("-")(1).Trim(), CType(txtRecibe.Tag, Integer))
                             .IdComprobante = _objCompEgr.Id
                             .Cantidad = cantidadPrendasLleva
@@ -838,9 +853,14 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                         End With
                         _sqlCommands.Add(_objControl.NuevoRegistroControlUniformesCommand())
 
+
+
                         iddk += 1
                         idce += 1
-                        idu += 1
+                        idcu += 1
+                        idd += 1
+                        iddu += 1
+
                     Next
                 Catch ex As Exception
                     KryptonMessageBox.Show("Error al guardar los datos:" & ex.Message, "ERROR", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)

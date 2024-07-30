@@ -360,6 +360,18 @@ Namespace FORMULARIOS.INVENTARIOS.PROCESO
                 dgvKardex.DataSource = _objKardex.SeleccionarKardexCreadosBuscarDetalle(_tipoCon, txtBuscarKardex.Text.Trim)
                 dgvKardex.AutoResizeColumns()
                 dgvKardex.AutoResizeRows()
+
+                For Each row In dgvKardex.Rows
+                    Dim cantidad As Integer = Convert.ToInt32(row.Cells("CANTIDAD").Value)
+                    If cantidad >= 10 And cantidad <= 30 Then
+                        row.DefaultCellStyle.BackColor = Color.Orange
+                        row.DefaultCellStyle.ForeColor = Color.Black
+                    ElseIf cantidad >= 1 And cantidad < 10 Then
+                        row.DefaultCellStyle.BackColor = Color.Red
+                        row.DefaultCellStyle.ForeColor = Color.White
+                    End If
+
+                Next
                 dgvKardex.Columns(0).Width = 50
                 dgvKardex.Columns(1).Width = 70
                 dgvKardex.Columns(2).Width = 350

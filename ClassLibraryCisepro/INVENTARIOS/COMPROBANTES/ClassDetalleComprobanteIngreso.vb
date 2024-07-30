@@ -65,6 +65,13 @@ Namespace INVENTARIOS.COMPROBANTES
             End With
             Return comando
         End Function
+
+        Public Function BuscarSerieRepetida(ByVal tipoCon As TipoConexion, ByVal filtro As String, ByVal id As Int32) As DataTable
+            Dim pars = New List(Of Object())
+            pars.Add(New Object() {"@FILTRO", SqlDbType.VarChar, filtro})
+            pars.Add(New Object() {"@IDKARDEX", SqlDbType.Int, id})
+            Return ComandosSql.SeleccionarQueryWithParamsToDataTable(tipoCon, "sp_buscarSeriesRepetidasComprobantes", True, pars)
+        End Function
     End Class
 End Namespace
 
