@@ -87,7 +87,7 @@
             Me.gpComandos.Controls.Add(Me.txtTotalEmitidosCobrados)
             Me.gpComandos.Controls.Add(Me.lblIdComprobanteEgresoBanco)
             Me.gpComandos.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.gpComandos.Location = New System.Drawing.Point(809, 37)
+            Me.gpComandos.Location = New System.Drawing.Point(736, 37)
             Me.gpComandos.Name = "gpComandos"
             Me.gpComandos.RightToLeft = System.Windows.Forms.RightToLeft.Yes
             Me.gpComandos.Size = New System.Drawing.Size(202, 45)
@@ -157,12 +157,12 @@
             DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
             DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
             Me.dgvChequesEmitidosAprobados.DefaultCellStyle = DataGridViewCellStyle3
-            Me.dgvChequesEmitidosAprobados.Location = New System.Drawing.Point(3, 3)
+            Me.dgvChequesEmitidosAprobados.Location = New System.Drawing.Point(3, 4)
             Me.dgvChequesEmitidosAprobados.MultiSelect = False
             Me.dgvChequesEmitidosAprobados.Name = "dgvChequesEmitidosAprobados"
             Me.dgvChequesEmitidosAprobados.RowHeadersVisible = False
             Me.dgvChequesEmitidosAprobados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvChequesEmitidosAprobados.Size = New System.Drawing.Size(1083, 547)
+            Me.dgvChequesEmitidosAprobados.Size = New System.Drawing.Size(929, 470)
             Me.dgvChequesEmitidosAprobados.TabIndex = 46
             '
             'CHK
@@ -188,10 +188,10 @@
             Me.tcRevisionCheques.Controls.Add(Me.tpEmitidosCobrados)
             Me.tcRevisionCheques.Controls.Add(Me.tpCaducados)
             Me.tcRevisionCheques.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.tcRevisionCheques.Location = New System.Drawing.Point(2, 84)
+            Me.tcRevisionCheques.Location = New System.Drawing.Point(2, 83)
             Me.tcRevisionCheques.Name = "tcRevisionCheques"
             Me.tcRevisionCheques.SelectedIndex = 0
-            Me.tcRevisionCheques.Size = New System.Drawing.Size(1094, 582)
+            Me.tcRevisionCheques.Size = New System.Drawing.Size(949, 503)
             Me.tcRevisionCheques.TabIndex = 57
             '
             'tpEmitidosNoCobrados
@@ -202,7 +202,7 @@
             Me.tpEmitidosNoCobrados.Location = New System.Drawing.Point(4, 22)
             Me.tpEmitidosNoCobrados.Name = "tpEmitidosNoCobrados"
             Me.tpEmitidosNoCobrados.Padding = New System.Windows.Forms.Padding(3)
-            Me.tpEmitidosNoCobrados.Size = New System.Drawing.Size(1086, 556)
+            Me.tpEmitidosNoCobrados.Size = New System.Drawing.Size(941, 477)
             Me.tpEmitidosNoCobrados.TabIndex = 0
             Me.tpEmitidosNoCobrados.Text = "EMITIDOS NO COBRADOS GENERAL"
             '
@@ -214,7 +214,7 @@
             Me.tpEmitidosCobrados.Location = New System.Drawing.Point(4, 22)
             Me.tpEmitidosCobrados.Name = "tpEmitidosCobrados"
             Me.tpEmitidosCobrados.Padding = New System.Windows.Forms.Padding(3)
-            Me.tpEmitidosCobrados.Size = New System.Drawing.Size(1086, 556)
+            Me.tpEmitidosCobrados.Size = New System.Drawing.Size(941, 477)
             Me.tpEmitidosCobrados.TabIndex = 1
             Me.tpEmitidosCobrados.Text = "EMITIDOS COBRADOS GENERAL"
             '
@@ -247,13 +247,13 @@
             DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
             Me.dgvEmitidosCobrados.DefaultCellStyle = DataGridViewCellStyle6
             Me.dgvEmitidosCobrados.GridColor = System.Drawing.SystemColors.Control
-            Me.dgvEmitidosCobrados.Location = New System.Drawing.Point(3, 3)
+            Me.dgvEmitidosCobrados.Location = New System.Drawing.Point(3, 5)
             Me.dgvEmitidosCobrados.MultiSelect = False
             Me.dgvEmitidosCobrados.Name = "dgvEmitidosCobrados"
             Me.dgvEmitidosCobrados.ReadOnly = True
             Me.dgvEmitidosCobrados.RowHeadersVisible = False
             Me.dgvEmitidosCobrados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvEmitidosCobrados.Size = New System.Drawing.Size(1077, 547)
+            Me.dgvEmitidosCobrados.Size = New System.Drawing.Size(929, 469)
             Me.dgvEmitidosCobrados.TabIndex = 0
             '
             'gbTotalEmitidosCobrados
@@ -273,7 +273,7 @@
             Me.tpCaducados.Location = New System.Drawing.Point(4, 22)
             Me.tpCaducados.Name = "tpCaducados"
             Me.tpCaducados.Padding = New System.Windows.Forms.Padding(3)
-            Me.tpCaducados.Size = New System.Drawing.Size(1086, 556)
+            Me.tpCaducados.Size = New System.Drawing.Size(941, 477)
             Me.tpCaducados.TabIndex = 2
             Me.tpCaducados.Text = "EMITIDOS CADUCADOS"
             Me.tpCaducados.UseVisualStyleBackColor = True
@@ -306,13 +306,13 @@
             DataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText
             DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
             Me.dgvEmitidosCaducados.DefaultCellStyle = DataGridViewCellStyle9
-            Me.dgvEmitidosCaducados.Location = New System.Drawing.Point(3, 6)
+            Me.dgvEmitidosCaducados.Location = New System.Drawing.Point(3, 5)
             Me.dgvEmitidosCaducados.MultiSelect = False
             Me.dgvEmitidosCaducados.Name = "dgvEmitidosCaducados"
             Me.dgvEmitidosCaducados.ReadOnly = True
             Me.dgvEmitidosCaducados.RowHeadersVisible = False
             Me.dgvEmitidosCaducados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvEmitidosCaducados.Size = New System.Drawing.Size(1077, 543)
+            Me.dgvEmitidosCaducados.Size = New System.Drawing.Size(929, 460)
             Me.dgvEmitidosCaducados.TabIndex = 1
             '
             'gbRangoFechaBusqueda
@@ -362,7 +362,7 @@
             Me.gbFechaCobroCheque.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.gbFechaCobroCheque.Location = New System.Drawing.Point(526, 37)
             Me.gbFechaCobroCheque.Name = "gbFechaCobroCheque"
-            Me.gbFechaCobroCheque.Size = New System.Drawing.Size(283, 45)
+            Me.gbFechaCobroCheque.Size = New System.Drawing.Size(205, 45)
             Me.gbFechaCobroCheque.TabIndex = 58
             Me.gbFechaCobroCheque.TabStop = False
             Me.gbFechaCobroCheque.Text = "FECHA DE COBRO"
@@ -440,7 +440,7 @@
             Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
             Me.MenuStrip1.Name = "MenuStrip1"
             Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(7, 2, 0, 2)
-            Me.MenuStrip1.Size = New System.Drawing.Size(1099, 32)
+            Me.MenuStrip1.Size = New System.Drawing.Size(951, 32)
             Me.MenuStrip1.TabIndex = 187
             Me.MenuStrip1.Text = "msIngresoBodega"
             '
@@ -517,7 +517,7 @@
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.BackColor = System.Drawing.Color.White
-            Me.ClientSize = New System.Drawing.Size(1099, 667)
+            Me.ClientSize = New System.Drawing.Size(951, 587)
             Me.Controls.Add(Me.MenuStrip1)
             Me.Controls.Add(Me.gbBanco)
             Me.Controls.Add(Me.tcRevisionCheques)

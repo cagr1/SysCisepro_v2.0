@@ -38,7 +38,7 @@
             Me.crvReporteLiquidacion.Dock = System.Windows.Forms.DockStyle.Fill
             Me.crvReporteLiquidacion.Location = New System.Drawing.Point(0, 0)
             Me.crvReporteLiquidacion.Name = "crvReporteLiquidacion"
-            Me.crvReporteLiquidacion.Size = New System.Drawing.Size(1223, 582)
+            Me.crvReporteLiquidacion.Size = New System.Drawing.Size(934, 582)
             Me.crvReporteLiquidacion.TabIndex = 0
             Me.crvReporteLiquidacion.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None
             '
@@ -74,7 +74,7 @@
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.BackColor = System.Drawing.Color.White
-            Me.ClientSize = New System.Drawing.Size(1223, 582)
+            Me.ClientSize = New System.Drawing.Size(934, 582)
             Me.Controls.Add(Me.Label2)
             Me.Controls.Add(Me.Label1)
             Me.Controls.Add(Me.lblIdLiquidacionFondoRotativo)

@@ -827,7 +827,8 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
 
             'cmbConcepto.Text = dgvAsientoBuscado.CurrentRow.Cells.Item(4).Value
 
-            txtNroComprobante.Text = dgvComprobantesIngreso.CurrentRow.Cells.Item(0).Value.ToString().Trim() 'Id_comprobante_ingreso  
+            txtNroComprobante.Text = dgvComprobantesIngreso.CurrentRow.Cells.Item(0).Value.ToString().Trim() 'Id_comprobante_ingreso
+            txtIdComprobante.Text = dgvComprobantesIngreso.CurrentRow.Cells.Item(0).Value.ToString().Trim() 'Id_comprobante_ingreso
             cmbBodega.Text = dgvComprobantesIngreso.CurrentRow.Cells.Item(3).Value ' Id_bodega
             cbmProvincia.Text = dgvComprobantesIngreso.CurrentRow.Cells.Item(7).Value ' Id_provincia
             cbmCanton.Text = dgvComprobantesIngreso.CurrentRow.Cells.Item(8).Value ' Id_ciudad

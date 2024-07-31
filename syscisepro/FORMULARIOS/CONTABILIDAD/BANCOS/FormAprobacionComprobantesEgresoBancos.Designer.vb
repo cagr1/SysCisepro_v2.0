@@ -95,7 +95,7 @@
             Me.dgvComprobanteEgresoBancos.ReadOnly = True
             Me.dgvComprobanteEgresoBancos.RowHeadersVisible = False
             Me.dgvComprobanteEgresoBancos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvComprobanteEgresoBancos.Size = New System.Drawing.Size(1050, 277)
+            Me.dgvComprobanteEgresoBancos.Size = New System.Drawing.Size(901, 277)
             Me.dgvComprobanteEgresoBancos.TabIndex = 44
             '
             'gbComprobanteEgresoBancos
@@ -129,7 +129,7 @@
             Me.gbComprobanteEgresoBancos.Controls.Add(Me.lblConcepto)
             Me.gbComprobanteEgresoBancos.Location = New System.Drawing.Point(2, 78)
             Me.gbComprobanteEgresoBancos.Name = "gbComprobanteEgresoBancos"
-            Me.gbComprobanteEgresoBancos.Size = New System.Drawing.Size(1053, 124)
+            Me.gbComprobanteEgresoBancos.Size = New System.Drawing.Size(913, 124)
             Me.gbComprobanteEgresoBancos.TabIndex = 46
             Me.gbComprobanteEgresoBancos.TabStop = False
             Me.gbComprobanteEgresoBancos.Text = "COMPROBANTE DE EGRESO"
@@ -137,7 +137,7 @@
             'Label1
             '
             Me.Label1.AutoSize = True
-            Me.Label1.Location = New System.Drawing.Point(816, 20)
+            Me.Label1.Location = New System.Drawing.Point(743, 20)
             Me.Label1.Name = "Label1"
             Me.Label1.Size = New System.Drawing.Size(47, 13)
             Me.Label1.TabIndex = 45
@@ -148,11 +148,11 @@
             Me.txtRazon.BackColor = System.Drawing.Color.White
             Me.txtRazon.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtRazon.Enabled = False
-            Me.txtRazon.Location = New System.Drawing.Point(869, 17)
+            Me.txtRazon.Location = New System.Drawing.Point(745, 36)
             Me.txtRazon.Multiline = True
             Me.txtRazon.Name = "txtRazon"
             Me.txtRazon.ReadOnly = True
-            Me.txtRazon.Size = New System.Drawing.Size(172, 98)
+            Me.txtRazon.Size = New System.Drawing.Size(159, 79)
             Me.txtRazon.TabIndex = 46
             '
             'lblNumeroComprobante
@@ -189,16 +189,16 @@
             Me.txtActividad.BackColor = System.Drawing.Color.White
             Me.txtActividad.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtActividad.Enabled = False
-            Me.txtActividad.Location = New System.Drawing.Point(319, 17)
+            Me.txtActividad.Location = New System.Drawing.Point(304, 17)
             Me.txtActividad.Name = "txtActividad"
             Me.txtActividad.ReadOnly = True
-            Me.txtActividad.Size = New System.Drawing.Size(278, 22)
+            Me.txtActividad.Size = New System.Drawing.Size(216, 22)
             Me.txtActividad.TabIndex = 30
             '
             'lblActividad
             '
             Me.lblActividad.AutoSize = True
-            Me.lblActividad.Location = New System.Drawing.Point(238, 20)
+            Me.lblActividad.Location = New System.Drawing.Point(230, 20)
             Me.lblActividad.Name = "lblActividad"
             Me.lblActividad.Size = New System.Drawing.Size(72, 13)
             Me.lblActividad.TabIndex = 29
@@ -220,7 +220,7 @@
             Me.txtNumeroCheque.BackColor = System.Drawing.Color.White
             Me.txtNumeroCheque.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtNumeroCheque.Enabled = False
-            Me.txtNumeroCheque.Location = New System.Drawing.Point(670, 69)
+            Me.txtNumeroCheque.Location = New System.Drawing.Point(597, 69)
             Me.txtNumeroCheque.Name = "txtNumeroCheque"
             Me.txtNumeroCheque.ReadOnly = True
             Me.txtNumeroCheque.Size = New System.Drawing.Size(133, 22)
@@ -238,7 +238,7 @@
             'lblNumeroCheque
             '
             Me.lblNumeroCheque.AutoSize = True
-            Me.lblNumeroCheque.Location = New System.Drawing.Point(603, 72)
+            Me.lblNumeroCheque.Location = New System.Drawing.Point(530, 72)
             Me.lblNumeroCheque.Name = "lblNumeroCheque"
             Me.lblNumeroCheque.Size = New System.Drawing.Size(69, 13)
             Me.lblNumeroCheque.TabIndex = 41
@@ -260,7 +260,7 @@
             Me.txtValorComprobante.BackColor = System.Drawing.Color.White
             Me.txtValorComprobante.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtValorComprobante.Enabled = False
-            Me.txtValorComprobante.Location = New System.Drawing.Point(670, 95)
+            Me.txtValorComprobante.Location = New System.Drawing.Point(597, 95)
             Me.txtValorComprobante.Name = "txtValorComprobante"
             Me.txtValorComprobante.ReadOnly = True
             Me.txtValorComprobante.Size = New System.Drawing.Size(133, 22)
@@ -278,7 +278,7 @@
             'lblValorComprobante
             '
             Me.lblValorComprobante.AutoSize = True
-            Me.lblValorComprobante.Location = New System.Drawing.Point(603, 98)
+            Me.lblValorComprobante.Location = New System.Drawing.Point(530, 98)
             Me.lblValorComprobante.Name = "lblValorComprobante"
             Me.lblValorComprobante.Size = New System.Drawing.Size(53, 13)
             Me.lblValorComprobante.TabIndex = 39
@@ -300,7 +300,7 @@
             Me.txtCuenta.BackColor = System.Drawing.Color.White
             Me.txtCuenta.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtCuenta.Enabled = False
-            Me.txtCuenta.Location = New System.Drawing.Point(670, 43)
+            Me.txtCuenta.Location = New System.Drawing.Point(597, 43)
             Me.txtCuenta.Name = "txtCuenta"
             Me.txtCuenta.ReadOnly = True
             Me.txtCuenta.Size = New System.Drawing.Size(133, 22)
@@ -309,7 +309,7 @@
             'lblCuenta
             '
             Me.lblCuenta.AutoSize = True
-            Me.lblCuenta.Location = New System.Drawing.Point(603, 46)
+            Me.lblCuenta.Location = New System.Drawing.Point(530, 46)
             Me.lblCuenta.Name = "lblCuenta"
             Me.lblCuenta.Size = New System.Drawing.Size(54, 13)
             Me.lblCuenta.TabIndex = 37
@@ -320,7 +320,7 @@
             Me.txtBanco.BackColor = System.Drawing.Color.White
             Me.txtBanco.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtBanco.Enabled = False
-            Me.txtBanco.Location = New System.Drawing.Point(670, 17)
+            Me.txtBanco.Location = New System.Drawing.Point(597, 17)
             Me.txtBanco.Name = "txtBanco"
             Me.txtBanco.ReadOnly = True
             Me.txtBanco.Size = New System.Drawing.Size(133, 22)
@@ -329,7 +329,7 @@
             'lblPagadoA
             '
             Me.lblPagadoA.AutoSize = True
-            Me.lblPagadoA.Location = New System.Drawing.Point(238, 98)
+            Me.lblPagadoA.Location = New System.Drawing.Point(230, 98)
             Me.lblPagadoA.Name = "lblPagadoA"
             Me.lblPagadoA.Size = New System.Drawing.Size(67, 13)
             Me.lblPagadoA.TabIndex = 27
@@ -338,7 +338,7 @@
             'lblBanco
             '
             Me.lblBanco.AutoSize = True
-            Me.lblBanco.Location = New System.Drawing.Point(603, 20)
+            Me.lblBanco.Location = New System.Drawing.Point(530, 20)
             Me.lblBanco.Name = "lblBanco"
             Me.lblBanco.Size = New System.Drawing.Size(50, 13)
             Me.lblBanco.TabIndex = 35
@@ -349,10 +349,10 @@
             Me.txtPagadoA.BackColor = System.Drawing.Color.White
             Me.txtPagadoA.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtPagadoA.Enabled = False
-            Me.txtPagadoA.Location = New System.Drawing.Point(318, 95)
+            Me.txtPagadoA.Location = New System.Drawing.Point(303, 95)
             Me.txtPagadoA.Name = "txtPagadoA"
             Me.txtPagadoA.ReadOnly = True
-            Me.txtPagadoA.Size = New System.Drawing.Size(279, 22)
+            Me.txtPagadoA.Size = New System.Drawing.Size(217, 22)
             Me.txtPagadoA.TabIndex = 28
             '
             'txtTipoPago
@@ -360,16 +360,16 @@
             Me.txtTipoPago.BackColor = System.Drawing.Color.White
             Me.txtTipoPago.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtTipoPago.Enabled = False
-            Me.txtTipoPago.Location = New System.Drawing.Point(319, 69)
+            Me.txtTipoPago.Location = New System.Drawing.Point(304, 69)
             Me.txtTipoPago.Name = "txtTipoPago"
             Me.txtTipoPago.ReadOnly = True
-            Me.txtTipoPago.Size = New System.Drawing.Size(278, 22)
+            Me.txtTipoPago.Size = New System.Drawing.Size(216, 22)
             Me.txtTipoPago.TabIndex = 34
             '
             'lblTipoPago
             '
             Me.lblTipoPago.AutoSize = True
-            Me.lblTipoPago.Location = New System.Drawing.Point(238, 72)
+            Me.lblTipoPago.Location = New System.Drawing.Point(230, 72)
             Me.lblTipoPago.Name = "lblTipoPago"
             Me.lblTipoPago.Size = New System.Drawing.Size(69, 13)
             Me.lblTipoPago.TabIndex = 33
@@ -380,16 +380,16 @@
             Me.txtConcepto.BackColor = System.Drawing.Color.White
             Me.txtConcepto.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtConcepto.Enabled = False
-            Me.txtConcepto.Location = New System.Drawing.Point(319, 43)
+            Me.txtConcepto.Location = New System.Drawing.Point(304, 43)
             Me.txtConcepto.Name = "txtConcepto"
             Me.txtConcepto.ReadOnly = True
-            Me.txtConcepto.Size = New System.Drawing.Size(278, 22)
+            Me.txtConcepto.Size = New System.Drawing.Size(216, 22)
             Me.txtConcepto.TabIndex = 32
             '
             'lblConcepto
             '
             Me.lblConcepto.AutoSize = True
-            Me.lblConcepto.Location = New System.Drawing.Point(238, 46)
+            Me.lblConcepto.Location = New System.Drawing.Point(230, 46)
             Me.lblConcepto.Name = "lblConcepto"
             Me.lblConcepto.Size = New System.Drawing.Size(70, 13)
             Me.lblConcepto.TabIndex = 31
@@ -404,7 +404,7 @@
             Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
             Me.MenuStrip1.Name = "MenuStrip1"
             Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(7, 2, 0, 2)
-            Me.MenuStrip1.Size = New System.Drawing.Size(1063, 32)
+            Me.MenuStrip1.Size = New System.Drawing.Size(919, 32)
             Me.MenuStrip1.TabIndex = 186
             Me.MenuStrip1.Text = "msIngresoBodega"
             '
@@ -440,7 +440,7 @@
             Me.GroupBox1.Controls.Add(Me.dgvComprobanteEgresoBancos)
             Me.GroupBox1.Location = New System.Drawing.Point(2, 205)
             Me.GroupBox1.Name = "GroupBox1"
-            Me.GroupBox1.Size = New System.Drawing.Size(1059, 295)
+            Me.GroupBox1.Size = New System.Drawing.Size(913, 295)
             Me.GroupBox1.TabIndex = 187
             Me.GroupBox1.TabStop = False
             Me.GroupBox1.Text = "DETALLES DE LA ÓRDEN"
@@ -455,7 +455,7 @@
             Me.gbRangoFechas.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.gbRangoFechas.Location = New System.Drawing.Point(6, 36)
             Me.gbRangoFechas.Name = "gbRangoFechas"
-            Me.gbRangoFechas.Size = New System.Drawing.Size(1037, 41)
+            Me.gbRangoFechas.Size = New System.Drawing.Size(579, 41)
             Me.gbRangoFechas.TabIndex = 188
             Me.gbRangoFechas.TabStop = False
             Me.gbRangoFechas.Text = "CARGAR COMPROBANTES DESDE LA FECHA"
@@ -497,7 +497,7 @@
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.BackColor = System.Drawing.Color.White
-            Me.ClientSize = New System.Drawing.Size(1063, 502)
+            Me.ClientSize = New System.Drawing.Size(919, 502)
             Me.Controls.Add(Me.gbRangoFechas)
             Me.Controls.Add(Me.GroupBox1)
             Me.Controls.Add(Me.MenuStrip1)

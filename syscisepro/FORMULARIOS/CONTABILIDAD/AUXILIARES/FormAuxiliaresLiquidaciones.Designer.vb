@@ -83,7 +83,7 @@
             Me.tcAuxiliaresLiquidaciones.Location = New System.Drawing.Point(2, 45)
             Me.tcAuxiliaresLiquidaciones.Name = "tcAuxiliaresLiquidaciones"
             Me.tcAuxiliaresLiquidaciones.SelectedIndex = 0
-            Me.tcAuxiliaresLiquidaciones.Size = New System.Drawing.Size(984, 596)
+            Me.tcAuxiliaresLiquidaciones.Size = New System.Drawing.Size(825, 596)
             Me.tcAuxiliaresLiquidaciones.TabIndex = 1
             '
             'tpLiquidaciones
@@ -104,7 +104,7 @@
             Me.tpLiquidaciones.Location = New System.Drawing.Point(4, 22)
             Me.tpLiquidaciones.Name = "tpLiquidaciones"
             Me.tpLiquidaciones.Padding = New System.Windows.Forms.Padding(3)
-            Me.tpLiquidaciones.Size = New System.Drawing.Size(976, 570)
+            Me.tpLiquidaciones.Size = New System.Drawing.Size(817, 570)
             Me.tpLiquidaciones.TabIndex = 0
             Me.tpLiquidaciones.Text = "FONDOS"
             Me.tpLiquidaciones.UseVisualStyleBackColor = True
@@ -113,7 +113,7 @@
             '
             Me.Label6.AutoSize = True
             Me.Label6.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label6.Location = New System.Drawing.Point(834, 205)
+            Me.Label6.Location = New System.Drawing.Point(585, 205)
             Me.Label6.Name = "Label6"
             Me.Label6.Size = New System.Drawing.Size(37, 13)
             Me.Label6.TabIndex = 250
@@ -123,7 +123,7 @@
             '
             Me.Label7.AutoSize = True
             Me.Label7.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label7.Location = New System.Drawing.Point(694, 205)
+            Me.Label7.Location = New System.Drawing.Point(445, 205)
             Me.Label7.Name = "Label7"
             Me.Label7.Size = New System.Drawing.Size(31, 13)
             Me.Label7.TabIndex = 249
@@ -134,7 +134,7 @@
             Me.txtHaber.BackColor = System.Drawing.Color.White
             Me.txtHaber.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtHaber.Enabled = False
-            Me.txtHaber.Location = New System.Drawing.Point(877, 200)
+            Me.txtHaber.Location = New System.Drawing.Point(628, 200)
             Me.txtHaber.Name = "txtHaber"
             Me.txtHaber.Size = New System.Drawing.Size(94, 23)
             Me.txtHaber.TabIndex = 248
@@ -145,7 +145,7 @@
             Me.txtDebe.BackColor = System.Drawing.Color.White
             Me.txtDebe.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtDebe.Enabled = False
-            Me.txtDebe.Location = New System.Drawing.Point(731, 200)
+            Me.txtDebe.Location = New System.Drawing.Point(482, 200)
             Me.txtDebe.Name = "txtDebe"
             Me.txtDebe.Size = New System.Drawing.Size(94, 23)
             Me.txtDebe.TabIndex = 246
@@ -185,7 +185,7 @@
             DataGridViewCellStyle4.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.dgvAsiento.RowsDefaultCellStyle = DataGridViewCellStyle4
             Me.dgvAsiento.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvAsiento.Size = New System.Drawing.Size(967, 343)
+            Me.dgvAsiento.Size = New System.Drawing.Size(805, 343)
             Me.dgvAsiento.TabIndex = 245
             '
             'Label5
@@ -286,7 +286,7 @@
             DataGridViewCellStyle8.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.dgvLiquidaciones.RowsDefaultCellStyle = DataGridViewCellStyle8
             Me.dgvLiquidaciones.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvLiquidaciones.Size = New System.Drawing.Size(967, 162)
+            Me.dgvLiquidaciones.Size = New System.Drawing.Size(805, 162)
             Me.dgvLiquidaciones.TabIndex = 223
             '
             'tpReporte
@@ -300,7 +300,7 @@
             Me.tpReporte.Location = New System.Drawing.Point(4, 22)
             Me.tpReporte.Name = "tpReporte"
             Me.tpReporte.Padding = New System.Windows.Forms.Padding(3)
-            Me.tpReporte.Size = New System.Drawing.Size(976, 570)
+            Me.tpReporte.Size = New System.Drawing.Size(817, 570)
             Me.tpReporte.TabIndex = 1
             Me.tpReporte.Text = "SOLICITUDES"
             Me.tpReporte.UseVisualStyleBackColor = True
@@ -309,7 +309,7 @@
             '
             Me.Label4.AutoSize = True
             Me.Label4.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label4.Location = New System.Drawing.Point(622, 10)
+            Me.Label4.Location = New System.Drawing.Point(411, 10)
             Me.Label4.Name = "Label4"
             Me.Label4.Size = New System.Drawing.Size(55, 13)
             Me.Label4.TabIndex = 260
@@ -319,7 +319,7 @@
             '
             Me.Label1.AutoSize = True
             Me.Label1.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label1.Location = New System.Drawing.Point(834, 10)
+            Me.Label1.Location = New System.Drawing.Point(623, 10)
             Me.Label1.Name = "Label1"
             Me.Label1.Size = New System.Drawing.Size(37, 13)
             Me.Label1.TabIndex = 259
@@ -330,7 +330,7 @@
             Me.txtCantidad.BackColor = System.Drawing.Color.White
             Me.txtCantidad.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtCantidad.Enabled = False
-            Me.txtCantidad.Location = New System.Drawing.Point(683, 7)
+            Me.txtCantidad.Location = New System.Drawing.Point(472, 7)
             Me.txtCantidad.Name = "txtCantidad"
             Me.txtCantidad.Size = New System.Drawing.Size(94, 21)
             Me.txtCantidad.TabIndex = 258
@@ -341,7 +341,7 @@
             Me.txtTotal.BackColor = System.Drawing.Color.White
             Me.txtTotal.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtTotal.Enabled = False
-            Me.txtTotal.Location = New System.Drawing.Point(874, 6)
+            Me.txtTotal.Location = New System.Drawing.Point(663, 6)
             Me.txtTotal.Name = "txtTotal"
             Me.txtTotal.Size = New System.Drawing.Size(94, 21)
             Me.txtTotal.TabIndex = 257
@@ -380,7 +380,7 @@
             DataGridViewCellStyle12.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.dgvSolicitudes.RowsDefaultCellStyle = DataGridViewCellStyle12
             Me.dgvSolicitudes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvSolicitudes.Size = New System.Drawing.Size(967, 534)
+            Me.dgvSolicitudes.Size = New System.Drawing.Size(804, 534)
             Me.dgvSolicitudes.TabIndex = 256
             '
             'Label3
@@ -401,7 +401,7 @@
             Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
             Me.MenuStrip1.Name = "MenuStrip1"
             Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(7, 2, 0, 2)
-            Me.MenuStrip1.Size = New System.Drawing.Size(986, 32)
+            Me.MenuStrip1.Size = New System.Drawing.Size(830, 32)
             Me.MenuStrip1.TabIndex = 191
             Me.MenuStrip1.Text = "msIngresoBodega"
             '
@@ -482,7 +482,7 @@
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.BackColor = System.Drawing.Color.White
-            Me.ClientSize = New System.Drawing.Size(986, 650)
+            Me.ClientSize = New System.Drawing.Size(830, 650)
             Me.Controls.Add(Me.lblHasta)
             Me.Controls.Add(Me.lblDesde)
             Me.Controls.Add(Me.dtpFinal)

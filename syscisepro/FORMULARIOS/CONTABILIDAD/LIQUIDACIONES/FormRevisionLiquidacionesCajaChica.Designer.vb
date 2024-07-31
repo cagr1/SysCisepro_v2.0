@@ -541,7 +541,7 @@
             Me.GroupBox1.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.GroupBox1.Location = New System.Drawing.Point(-1, 230)
             Me.GroupBox1.Name = "GroupBox1"
-            Me.GroupBox1.Size = New System.Drawing.Size(1003, 430)
+            Me.GroupBox1.Size = New System.Drawing.Size(1003, 374)
             Me.GroupBox1.TabIndex = 61
             Me.GroupBox1.TabStop = False
             Me.GroupBox1.Text = "SOLICITUDES"
@@ -588,7 +588,7 @@
             Me.dgvSolicitudes.Name = "dgvSolicitudes"
             Me.dgvSolicitudes.RowHeadersVisible = False
             Me.dgvSolicitudes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvSolicitudes.Size = New System.Drawing.Size(998, 402)
+            Me.dgvSolicitudes.Size = New System.Drawing.Size(998, 340)
             Me.dgvSolicitudes.TabIndex = 53
             '
             'DataGridViewCheckBoxColumn1
@@ -614,7 +614,7 @@
             DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText
             DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
             Me.dgvDetalleComprobanteRetencionCompra.DefaultCellStyle = DataGridViewCellStyle8
-            Me.dgvDetalleComprobanteRetencionCompra.Location = New System.Drawing.Point(815, 295)
+            Me.dgvDetalleComprobanteRetencionCompra.Location = New System.Drawing.Point(815, 228)
             Me.dgvDetalleComprobanteRetencionCompra.Name = "dgvDetalleComprobanteRetencionCompra"
             Me.dgvDetalleComprobanteRetencionCompra.ReadOnly = True
             Me.dgvDetalleComprobanteRetencionCompra.RowHeadersVisible = False
@@ -690,7 +690,7 @@
             Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
             Me.MenuStrip1.Name = "MenuStrip1"
             Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(7, 2, 0, 2)
-            Me.MenuStrip1.Size = New System.Drawing.Size(1013, 32)
+            Me.MenuStrip1.Size = New System.Drawing.Size(1005, 32)
             Me.MenuStrip1.TabIndex = 185
             Me.MenuStrip1.Text = "msIngresoBodega"
             '
@@ -718,7 +718,7 @@
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.AutoScroll = True
             Me.BackColor = System.Drawing.Color.White
-            Me.ClientSize = New System.Drawing.Size(1013, 674)
+            Me.ClientSize = New System.Drawing.Size(1005, 600)
             Me.Controls.Add(Me.MenuStrip1)
             Me.Controls.Add(Me.GroupBox1)
             Me.Controls.Add(Me.gbLiquidacion)

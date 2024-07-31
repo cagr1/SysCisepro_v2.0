@@ -96,7 +96,7 @@
             Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
             Me.MenuStrip1.Name = "MenuStrip1"
             Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(7, 2, 0, 2)
-            Me.MenuStrip1.Size = New System.Drawing.Size(1197, 32)
+            Me.MenuStrip1.Size = New System.Drawing.Size(1043, 32)
             Me.MenuStrip1.TabIndex = 191
             Me.MenuStrip1.Text = "msIngresoBodega"
             '
@@ -134,9 +134,9 @@
             Me.gbTotal.Controls.Add(Me.Label3)
             Me.gbTotal.Controls.Add(Me.Label4)
             Me.gbTotal.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.gbTotal.Location = New System.Drawing.Point(12, 609)
+            Me.gbTotal.Location = New System.Drawing.Point(11, 579)
             Me.gbTotal.Name = "gbTotal"
-            Me.gbTotal.Size = New System.Drawing.Size(1179, 44)
+            Me.gbTotal.Size = New System.Drawing.Size(1027, 44)
             Me.gbTotal.TabIndex = 196
             Me.gbTotal.TabStop = False
             '
@@ -144,7 +144,7 @@
             '
             Me.txtTotalNotaCredito.BackColor = System.Drawing.Color.White
             Me.txtTotalNotaCredito.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtTotalNotaCredito.Location = New System.Drawing.Point(760, 15)
+            Me.txtTotalNotaCredito.Location = New System.Drawing.Point(601, 15)
             Me.txtTotalNotaCredito.Name = "txtTotalNotaCredito"
             Me.txtTotalNotaCredito.ReadOnly = True
             Me.txtTotalNotaCredito.Size = New System.Drawing.Size(95, 21)
@@ -156,7 +156,7 @@
             '
             Me.Label9.AutoSize = True
             Me.Label9.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label9.Location = New System.Drawing.Point(687, 13)
+            Me.Label9.Location = New System.Drawing.Point(528, 13)
             Me.Label9.Name = "Label9"
             Me.Label9.Size = New System.Drawing.Size(75, 26)
             Me.Label9.TabIndex = 14
@@ -166,7 +166,7 @@
             '
             Me.txtTotalCuentasPorCobrar.BackColor = System.Drawing.Color.White
             Me.txtTotalCuentasPorCobrar.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtTotalCuentasPorCobrar.Location = New System.Drawing.Point(1071, 15)
+            Me.txtTotalCuentasPorCobrar.Location = New System.Drawing.Point(912, 15)
             Me.txtTotalCuentasPorCobrar.Name = "txtTotalCuentasPorCobrar"
             Me.txtTotalCuentasPorCobrar.ReadOnly = True
             Me.txtTotalCuentasPorCobrar.Size = New System.Drawing.Size(95, 21)
@@ -178,7 +178,7 @@
             '
             Me.txtTotalAbonado.BackColor = System.Drawing.Color.White
             Me.txtTotalAbonado.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtTotalAbonado.Location = New System.Drawing.Point(923, 15)
+            Me.txtTotalAbonado.Location = New System.Drawing.Point(764, 15)
             Me.txtTotalAbonado.Name = "txtTotalAbonado"
             Me.txtTotalAbonado.ReadOnly = True
             Me.txtTotalAbonado.Size = New System.Drawing.Size(95, 21)
@@ -190,7 +190,7 @@
             '
             Me.txtTotalFacturas.BackColor = System.Drawing.Color.White
             Me.txtTotalFacturas.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtTotalFacturas.Location = New System.Drawing.Point(247, 15)
+            Me.txtTotalFacturas.Location = New System.Drawing.Point(88, 15)
             Me.txtTotalFacturas.Name = "txtTotalFacturas"
             Me.txtTotalFacturas.ReadOnly = True
             Me.txtTotalFacturas.Size = New System.Drawing.Size(95, 21)
@@ -202,7 +202,7 @@
             '
             Me.txtTotalRetencion.BackColor = System.Drawing.Color.White
             Me.txtTotalRetencion.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtTotalRetencion.Location = New System.Drawing.Point(419, 15)
+            Me.txtTotalRetencion.Location = New System.Drawing.Point(260, 15)
             Me.txtTotalRetencion.Name = "txtTotalRetencion"
             Me.txtTotalRetencion.ReadOnly = True
             Me.txtTotalRetencion.Size = New System.Drawing.Size(95, 21)
@@ -214,7 +214,7 @@
             '
             Me.Label2.AutoSize = True
             Me.Label2.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label2.Location = New System.Drawing.Point(524, 13)
+            Me.Label2.Location = New System.Drawing.Point(365, 13)
             Me.Label2.Name = "Label2"
             Me.Label2.Size = New System.Drawing.Size(53, 26)
             Me.Label2.TabIndex = 1
@@ -224,7 +224,7 @@
             '
             Me.txtTotalACobrar.BackColor = System.Drawing.Color.White
             Me.txtTotalACobrar.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtTotalACobrar.Location = New System.Drawing.Point(575, 15)
+            Me.txtTotalACobrar.Location = New System.Drawing.Point(416, 15)
             Me.txtTotalACobrar.Name = "txtTotalACobrar"
             Me.txtTotalACobrar.ReadOnly = True
             Me.txtTotalACobrar.Size = New System.Drawing.Size(95, 21)
@@ -236,7 +236,7 @@
             '
             Me.Label8.AutoSize = True
             Me.Label8.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label8.Location = New System.Drawing.Point(1029, 13)
+            Me.Label8.Location = New System.Drawing.Point(870, 13)
             Me.Label8.Name = "Label8"
             Me.Label8.Size = New System.Drawing.Size(45, 26)
             Me.Label8.TabIndex = 12
@@ -246,7 +246,7 @@
             '
             Me.Label1.AutoSize = True
             Me.Label1.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label1.Location = New System.Drawing.Point(868, 13)
+            Me.Label1.Location = New System.Drawing.Point(709, 13)
             Me.Label1.Name = "Label1"
             Me.Label1.Size = New System.Drawing.Size(62, 26)
             Me.Label1.TabIndex = 11
@@ -256,7 +256,7 @@
             '
             Me.Label3.AutoSize = True
             Me.Label3.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label3.Location = New System.Drawing.Point(353, 13)
+            Me.Label3.Location = New System.Drawing.Point(194, 13)
             Me.Label3.Name = "Label3"
             Me.Label3.Size = New System.Drawing.Size(70, 26)
             Me.Label3.TabIndex = 3
@@ -266,7 +266,7 @@
             '
             Me.Label4.AutoSize = True
             Me.Label4.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label4.Location = New System.Drawing.Point(170, 13)
+            Me.Label4.Location = New System.Drawing.Point(11, 13)
             Me.Label4.Name = "Label4"
             Me.Label4.Size = New System.Drawing.Size(83, 26)
             Me.Label4.TabIndex = 5
@@ -425,7 +425,7 @@
             Me.dgvCuentasPorCobrar.ReadOnly = True
             Me.dgvCuentasPorCobrar.RowHeadersVisible = False
             Me.dgvCuentasPorCobrar.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvCuentasPorCobrar.Size = New System.Drawing.Size(1190, 527)
+            Me.dgvCuentasPorCobrar.Size = New System.Drawing.Size(1030, 500)
             Me.dgvCuentasPorCobrar.TabIndex = 195
             '
             'Column1
@@ -562,7 +562,7 @@
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.BackColor = System.Drawing.Color.White
-            Me.ClientSize = New System.Drawing.Size(1197, 655)
+            Me.ClientSize = New System.Drawing.Size(1043, 627)
             Me.Controls.Add(Me.MenuStrip1)
             Me.Controls.Add(Me.gbTotal)
             Me.Controls.Add(Me.gbTipoReporte)

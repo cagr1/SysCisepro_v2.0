@@ -74,10 +74,10 @@
             Me.tcAuxiliares.Controls.Add(Me.tpActualizar)
             Me.tcAuxiliares.Controls.Add(Me.tpArbol)
             Me.tcAuxiliares.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.tcAuxiliares.Location = New System.Drawing.Point(0, 38)
+            Me.tcAuxiliares.Location = New System.Drawing.Point(0, 35)
             Me.tcAuxiliares.Name = "tcAuxiliares"
             Me.tcAuxiliares.SelectedIndex = 0
-            Me.tcAuxiliares.Size = New System.Drawing.Size(1008, 706)
+            Me.tcAuxiliares.Size = New System.Drawing.Size(884, 706)
             Me.tcAuxiliares.TabIndex = 1
             '
             'tpActualizar
@@ -97,7 +97,7 @@
             Me.tpActualizar.Location = New System.Drawing.Point(4, 22)
             Me.tpActualizar.Name = "tpActualizar"
             Me.tpActualizar.Padding = New System.Windows.Forms.Padding(3)
-            Me.tpActualizar.Size = New System.Drawing.Size(1000, 680)
+            Me.tpActualizar.Size = New System.Drawing.Size(876, 680)
             Me.tpActualizar.TabIndex = 0
             Me.tpActualizar.Text = "MAYORES"
             '
@@ -116,7 +116,7 @@
             Me.GroupBox1.Controls.Add(Me.cbNivel)
             Me.GroupBox1.Controls.Add(Me.Label10)
             Me.GroupBox1.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.GroupBox1.Location = New System.Drawing.Point(620, -6)
+            Me.GroupBox1.Location = New System.Drawing.Point(495, -6)
             Me.GroupBox1.Name = "GroupBox1"
             Me.GroupBox1.Size = New System.Drawing.Size(377, 43)
             Me.GroupBox1.TabIndex = 248
@@ -233,7 +233,7 @@
             DataGridViewCellStyle5.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.dgvMayores.RowsDefaultCellStyle = DataGridViewCellStyle5
             Me.dgvMayores.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvMayores.Size = New System.Drawing.Size(1000, 610)
+            Me.dgvMayores.Size = New System.Drawing.Size(872, 610)
             Me.dgvMayores.TabIndex = 225
             '
             'nodo
@@ -254,9 +254,9 @@
             'dtpFinal
             '
             Me.dtpFinal.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.dtpFinal.Location = New System.Drawing.Point(367, 6)
+            Me.dtpFinal.Location = New System.Drawing.Point(291, 6)
             Me.dtpFinal.Name = "dtpFinal"
-            Me.dtpFinal.Size = New System.Drawing.Size(247, 21)
+            Me.dtpFinal.Size = New System.Drawing.Size(196, 21)
             Me.dtpFinal.TabIndex = 210
             '
             'dtpInicio
@@ -264,7 +264,7 @@
             Me.dtpInicio.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.dtpInicio.Location = New System.Drawing.Point(45, 6)
             Me.dtpInicio.Name = "dtpInicio"
-            Me.dtpInicio.Size = New System.Drawing.Size(247, 21)
+            Me.dtpInicio.Size = New System.Drawing.Size(190, 21)
             Me.dtpInicio.TabIndex = 209
             '
             'lblDesde
@@ -283,7 +283,7 @@
             Me.lblHasta.AutoSize = True
             Me.lblHasta.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.lblHasta.ForeColor = System.Drawing.SystemColors.ControlText
-            Me.lblHasta.Location = New System.Drawing.Point(325, 10)
+            Me.lblHasta.Location = New System.Drawing.Point(249, 10)
             Me.lblHasta.Name = "lblHasta"
             Me.lblHasta.Size = New System.Drawing.Size(40, 13)
             Me.lblHasta.TabIndex = 212
@@ -295,7 +295,7 @@
             Me.tpArbol.Location = New System.Drawing.Point(4, 22)
             Me.tpArbol.Name = "tpArbol"
             Me.tpArbol.Padding = New System.Windows.Forms.Padding(3)
-            Me.tpArbol.Size = New System.Drawing.Size(1000, 680)
+            Me.tpArbol.Size = New System.Drawing.Size(876, 680)
             Me.tpArbol.TabIndex = 1
             Me.tpArbol.Text = "ARBOL"
             Me.tpArbol.UseVisualStyleBackColor = True
@@ -305,7 +305,7 @@
             Me.tvBalanceComprobacion.Dock = System.Windows.Forms.DockStyle.Fill
             Me.tvBalanceComprobacion.Location = New System.Drawing.Point(3, 3)
             Me.tvBalanceComprobacion.Name = "tvBalanceComprobacion"
-            Me.tvBalanceComprobacion.Size = New System.Drawing.Size(994, 674)
+            Me.tvBalanceComprobacion.Size = New System.Drawing.Size(870, 674)
             Me.tvBalanceComprobacion.TabIndex = 0
             '
             'ContextMenuStripClicDerecho
@@ -344,7 +344,7 @@
             Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
             Me.MenuStrip1.Name = "MenuStrip1"
             Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(7, 2, 0, 2)
-            Me.MenuStrip1.Size = New System.Drawing.Size(1008, 32)
+            Me.MenuStrip1.Size = New System.Drawing.Size(885, 32)
             Me.MenuStrip1.TabIndex = 289
             Me.MenuStrip1.Text = "msIngresoBodega"
             '
@@ -377,7 +377,7 @@
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.BackColor = System.Drawing.Color.White
-            Me.ClientSize = New System.Drawing.Size(1008, 739)
+            Me.ClientSize = New System.Drawing.Size(885, 739)
             Me.Controls.Add(Me.MenuStrip1)
             Me.Controls.Add(Me.tcAuxiliares)
             Me.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))

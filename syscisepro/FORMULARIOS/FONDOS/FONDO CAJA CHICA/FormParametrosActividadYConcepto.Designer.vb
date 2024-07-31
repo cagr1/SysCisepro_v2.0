@@ -67,7 +67,7 @@
             Me.tcParametros.Location = New System.Drawing.Point(2, 33)
             Me.tcParametros.Name = "tcParametros"
             Me.tcParametros.SelectedIndex = 0
-            Me.tcParametros.Size = New System.Drawing.Size(1041, 483)
+            Me.tcParametros.Size = New System.Drawing.Size(963, 483)
             Me.tcParametros.TabIndex = 0
             '
             'tpActividades
@@ -79,7 +79,7 @@
             Me.tpActividades.Location = New System.Drawing.Point(4, 22)
             Me.tpActividades.Name = "tpActividades"
             Me.tpActividades.Padding = New System.Windows.Forms.Padding(3)
-            Me.tpActividades.Size = New System.Drawing.Size(1033, 457)
+            Me.tpActividades.Size = New System.Drawing.Size(955, 457)
             Me.tpActividades.TabIndex = 0
             Me.tpActividades.Text = "ACTIVIDADES"
             '
@@ -95,7 +95,7 @@
             Me.GroupBox2.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.GroupBox2.Location = New System.Drawing.Point(239, 4)
             Me.GroupBox2.Name = "GroupBox2"
-            Me.GroupBox2.Size = New System.Drawing.Size(790, 66)
+            Me.GroupBox2.Size = New System.Drawing.Size(691, 66)
             Me.GroupBox2.TabIndex = 8
             Me.GroupBox2.TabStop = False
             Me.GroupBox2.Text = "CONCEPTO"
@@ -107,7 +107,7 @@
             Me.cbmPlanCuentas.Enabled = False
             Me.cbmPlanCuentas.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.cbmPlanCuentas.FormattingEnabled = True
-            Me.cbmPlanCuentas.Location = New System.Drawing.Point(480, 33)
+            Me.cbmPlanCuentas.Location = New System.Drawing.Point(350, 33)
             Me.cbmPlanCuentas.Name = "cbmPlanCuentas"
             Me.cbmPlanCuentas.Size = New System.Drawing.Size(250, 21)
             Me.cbmPlanCuentas.TabIndex = 13
@@ -115,7 +115,7 @@
             'lblCuentaGastos
             '
             Me.lblCuentaGastos.AutoSize = True
-            Me.lblCuentaGastos.Location = New System.Drawing.Point(736, 38)
+            Me.lblCuentaGastos.Location = New System.Drawing.Point(606, 38)
             Me.lblCuentaGastos.Name = "lblCuentaGastos"
             Me.lblCuentaGastos.Size = New System.Drawing.Size(52, 13)
             Me.lblCuentaGastos.TabIndex = 12
@@ -124,7 +124,7 @@
             'Label5
             '
             Me.Label5.AutoSize = True
-            Me.Label5.Location = New System.Drawing.Point(477, 17)
+            Me.Label5.Location = New System.Drawing.Point(347, 17)
             Me.Label5.Name = "Label5"
             Me.Label5.Size = New System.Drawing.Size(103, 13)
             Me.Label5.TabIndex = 10
@@ -135,7 +135,7 @@
             Me.txtCtaContable.BackColor = System.Drawing.Color.White
             Me.txtCtaContable.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtCtaContable.Enabled = False
-            Me.txtCtaContable.Location = New System.Drawing.Point(371, 33)
+            Me.txtCtaContable.Location = New System.Drawing.Point(241, 33)
             Me.txtCtaContable.Name = "txtCtaContable"
             Me.txtCtaContable.Size = New System.Drawing.Size(103, 21)
             Me.txtCtaContable.TabIndex = 9
@@ -143,7 +143,7 @@
             'Label4
             '
             Me.Label4.AutoSize = True
-            Me.Label4.Location = New System.Drawing.Point(368, 17)
+            Me.Label4.Location = New System.Drawing.Point(238, 17)
             Me.Label4.Name = "Label4"
             Me.Label4.Size = New System.Drawing.Size(108, 13)
             Me.Label4.TabIndex = 8
@@ -156,7 +156,7 @@
             Me.txtDetalle.Enabled = False
             Me.txtDetalle.Location = New System.Drawing.Point(9, 33)
             Me.txtDetalle.Name = "txtDetalle"
-            Me.txtDetalle.Size = New System.Drawing.Size(356, 21)
+            Me.txtDetalle.Size = New System.Drawing.Size(223, 21)
             Me.txtDetalle.TabIndex = 5
             '
             'Label1
@@ -191,7 +191,7 @@
             Me.dgvGastosCajaChica.Name = "dgvGastosCajaChica"
             Me.dgvGastosCajaChica.RowHeadersVisible = False
             Me.dgvGastosCajaChica.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvGastosCajaChica.Size = New System.Drawing.Size(1027, 379)
+            Me.dgvGastosCajaChica.Size = New System.Drawing.Size(945, 379)
             Me.dgvGastosCajaChica.TabIndex = 7
             '
             'GroupBox1
@@ -269,7 +269,7 @@
             Me.tpReporte.Location = New System.Drawing.Point(4, 22)
             Me.tpReporte.Name = "tpReporte"
             Me.tpReporte.Padding = New System.Windows.Forms.Padding(3)
-            Me.tpReporte.Size = New System.Drawing.Size(1033, 459)
+            Me.tpReporte.Size = New System.Drawing.Size(1033, 457)
             Me.tpReporte.TabIndex = 1
             Me.tpReporte.Text = "REPORTE"
             '
@@ -281,7 +281,7 @@
             Me.crvActividades.Dock = System.Windows.Forms.DockStyle.Fill
             Me.crvActividades.Location = New System.Drawing.Point(3, 3)
             Me.crvActividades.Name = "crvActividades"
-            Me.crvActividades.Size = New System.Drawing.Size(1027, 453)
+            Me.crvActividades.Size = New System.Drawing.Size(1027, 451)
             Me.crvActividades.TabIndex = 0
             Me.crvActividades.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None
             '
@@ -293,7 +293,7 @@
             Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
             Me.MenuStrip1.Name = "MenuStrip1"
             Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(7, 2, 0, 2)
-            Me.MenuStrip1.Size = New System.Drawing.Size(1042, 32)
+            Me.MenuStrip1.Size = New System.Drawing.Size(965, 32)
             Me.MenuStrip1.TabIndex = 199
             Me.MenuStrip1.Text = "msIngresoBodega"
             '
@@ -340,7 +340,7 @@
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.BackColor = System.Drawing.Color.White
-            Me.ClientSize = New System.Drawing.Size(1042, 515)
+            Me.ClientSize = New System.Drawing.Size(965, 515)
             Me.Controls.Add(Me.MenuStrip1)
             Me.Controls.Add(Me.tcParametros)
             Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)

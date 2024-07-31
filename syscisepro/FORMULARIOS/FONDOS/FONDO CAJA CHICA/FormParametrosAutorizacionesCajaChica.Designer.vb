@@ -23,11 +23,12 @@
         'No lo modifique con el editor de código.
         <System.Diagnostics.DebuggerStepThrough()> _
         Private Sub InitializeComponent()
-            Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormParametrosAutorizacionesCajaChica))
+            Me.components = New System.ComponentModel.Container()
             Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormParametrosAutorizacionesCajaChica))
             Me.tcAutorizaciones = New System.Windows.Forms.TabControl()
             Me.tpAutorizaciones = New System.Windows.Forms.TabPage()
             Me.gbParametrosAutorizaciones = New System.Windows.Forms.GroupBox()
@@ -64,6 +65,7 @@
             Me.crvAutorizaciones = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
             Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
             Me.btnReporte = New System.Windows.Forms.ToolStripMenuItem()
+            Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
             Me.tcAutorizaciones.SuspendLayout()
             Me.tpAutorizaciones.SuspendLayout()
             Me.gbParametrosAutorizaciones.SuspendLayout()
@@ -83,7 +85,7 @@
             Me.tcAutorizaciones.Location = New System.Drawing.Point(0, 34)
             Me.tcAutorizaciones.Name = "tcAutorizaciones"
             Me.tcAutorizaciones.SelectedIndex = 0
-            Me.tcAutorizaciones.Size = New System.Drawing.Size(1010, 651)
+            Me.tcAutorizaciones.Size = New System.Drawing.Size(951, 592)
             Me.tcAutorizaciones.TabIndex = 0
             '
             'tpAutorizaciones
@@ -95,7 +97,7 @@
             Me.tpAutorizaciones.Location = New System.Drawing.Point(4, 22)
             Me.tpAutorizaciones.Name = "tpAutorizaciones"
             Me.tpAutorizaciones.Padding = New System.Windows.Forms.Padding(3)
-            Me.tpAutorizaciones.Size = New System.Drawing.Size(1002, 625)
+            Me.tpAutorizaciones.Size = New System.Drawing.Size(943, 566)
             Me.tpAutorizaciones.TabIndex = 0
             Me.tpAutorizaciones.Text = "AUTORIZACIONES"
             '
@@ -115,7 +117,7 @@
             Me.gbParametrosAutorizaciones.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.gbParametrosAutorizaciones.Location = New System.Drawing.Point(6, 246)
             Me.gbParametrosAutorizaciones.Name = "gbParametrosAutorizaciones"
-            Me.gbParametrosAutorizaciones.Size = New System.Drawing.Size(990, 379)
+            Me.gbParametrosAutorizaciones.Size = New System.Drawing.Size(934, 313)
             Me.gbParametrosAutorizaciones.TabIndex = 9
             Me.gbParametrosAutorizaciones.TabStop = False
             Me.gbParametrosAutorizaciones.Text = "PARÁMETROS AUTORIZACIONES"
@@ -125,7 +127,7 @@
             Me.txtCiudadResponsable.BackColor = System.Drawing.Color.White
             Me.txtCiudadResponsable.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtCiudadResponsable.Enabled = False
-            Me.txtCiudadResponsable.Location = New System.Drawing.Point(577, 17)
+            Me.txtCiudadResponsable.Location = New System.Drawing.Point(556, 17)
             Me.txtCiudadResponsable.Name = "txtCiudadResponsable"
             Me.txtCiudadResponsable.Size = New System.Drawing.Size(222, 21)
             Me.txtCiudadResponsable.TabIndex = 18
@@ -133,7 +135,7 @@
             'Label8
             '
             Me.Label8.AutoSize = True
-            Me.Label8.Location = New System.Drawing.Point(525, 20)
+            Me.Label8.Location = New System.Drawing.Point(499, 20)
             Me.Label8.Name = "Label8"
             Me.Label8.Size = New System.Drawing.Size(46, 13)
             Me.Label8.TabIndex = 17
@@ -180,21 +182,22 @@
             'btnActualizar
             '
             Me.btnActualizar.FlatAppearance.BorderSize = 0
+            Me.btnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.btnActualizar.ForeColor = System.Drawing.Color.Black
-            Me.btnActualizar.Image = CType(resources.GetObject("btnActualizar.Image"), System.Drawing.Image)
+            Me.btnActualizar.Image = Global.syscisepro.My.Resources.Resources.refresh_24dp_FILL0_wght400_GRAD0_opsz24__2_
             Me.btnActualizar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-            Me.btnActualizar.Location = New System.Drawing.Point(901, 13)
+            Me.btnActualizar.Location = New System.Drawing.Point(874, 13)
             Me.btnActualizar.Name = "btnActualizar"
-            Me.btnActualizar.Size = New System.Drawing.Size(83, 26)
+            Me.btnActualizar.Size = New System.Drawing.Size(36, 26)
             Me.btnActualizar.TabIndex = 13
-            Me.btnActualizar.Text = "ACTUALIZAR"
             Me.btnActualizar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+            Me.ToolTip1.SetToolTip(Me.btnActualizar, "Actualizar")
             Me.btnActualizar.UseVisualStyleBackColor = True
             '
             'rbInactivo
             '
             Me.rbInactivo.AutoSize = True
-            Me.rbInactivo.Location = New System.Drawing.Point(818, 25)
+            Me.rbInactivo.Location = New System.Drawing.Point(788, 25)
             Me.rbInactivo.Name = "rbInactivo"
             Me.rbInactivo.Size = New System.Drawing.Size(68, 17)
             Me.rbInactivo.TabIndex = 10
@@ -205,7 +208,7 @@
             '
             Me.rbActivo.AutoSize = True
             Me.rbActivo.Checked = True
-            Me.rbActivo.Location = New System.Drawing.Point(818, 8)
+            Me.rbActivo.Location = New System.Drawing.Point(788, 8)
             Me.rbActivo.Name = "rbActivo"
             Me.rbActivo.Size = New System.Drawing.Size(58, 17)
             Me.rbActivo.TabIndex = 9
@@ -231,13 +234,13 @@
             DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
             DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
             Me.dgvParametroAutorizaciones.DefaultCellStyle = DataGridViewCellStyle2
-            Me.dgvParametroAutorizaciones.Location = New System.Drawing.Point(9, 45)
+            Me.dgvParametroAutorizaciones.Location = New System.Drawing.Point(4, 45)
             Me.dgvParametroAutorizaciones.MultiSelect = False
             Me.dgvParametroAutorizaciones.Name = "dgvParametroAutorizaciones"
             Me.dgvParametroAutorizaciones.ReadOnly = True
             Me.dgvParametroAutorizaciones.RowHeadersVisible = False
             Me.dgvParametroAutorizaciones.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvParametroAutorizaciones.Size = New System.Drawing.Size(975, 328)
+            Me.dgvParametroAutorizaciones.Size = New System.Drawing.Size(927, 260)
             Me.dgvParametroAutorizaciones.TabIndex = 8
             '
             'GroupBox1
@@ -250,7 +253,7 @@
             Me.GroupBox1.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.GroupBox1.Location = New System.Drawing.Point(6, 3)
             Me.GroupBox1.Name = "GroupBox1"
-            Me.GroupBox1.Size = New System.Drawing.Size(990, 160)
+            Me.GroupBox1.Size = New System.Drawing.Size(934, 160)
             Me.GroupBox1.TabIndex = 8
             Me.GroupBox1.TabStop = False
             Me.GroupBox1.Text = "BUSCAR AUTORIZADOR"
@@ -301,7 +304,7 @@
             Me.dgvPersonal.ReadOnly = True
             Me.dgvPersonal.RowHeadersVisible = False
             Me.dgvPersonal.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvPersonal.Size = New System.Drawing.Size(975, 112)
+            Me.dgvPersonal.Size = New System.Drawing.Size(919, 112)
             Me.dgvPersonal.TabIndex = 5
             '
             'txtParametroBusqueda
@@ -310,7 +313,7 @@
             Me.txtParametroBusqueda.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtParametroBusqueda.Location = New System.Drawing.Point(169, 15)
             Me.txtParametroBusqueda.Name = "txtParametroBusqueda"
-            Me.txtParametroBusqueda.Size = New System.Drawing.Size(815, 21)
+            Me.txtParametroBusqueda.Size = New System.Drawing.Size(392, 21)
             Me.txtParametroBusqueda.TabIndex = 4
             '
             'gbDatos
@@ -331,7 +334,7 @@
             Me.gbDatos.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.gbDatos.Location = New System.Drawing.Point(6, 162)
             Me.gbDatos.Name = "gbDatos"
-            Me.gbDatos.Size = New System.Drawing.Size(990, 78)
+            Me.gbDatos.Size = New System.Drawing.Size(934, 78)
             Me.gbDatos.TabIndex = 7
             Me.gbDatos.TabStop = False
             Me.gbDatos.Text = "DATOS GENERALES:"
@@ -339,14 +342,14 @@
             'Button1
             '
             Me.Button1.FlatAppearance.BorderSize = 0
+            Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.Button1.ForeColor = System.Drawing.Color.Black
-            Me.Button1.Image = Global.syscisepro.My.Resources.Resources.GuardarRegistro
+            Me.Button1.Image = Global.syscisepro.My.Resources.Resources.save_24dp_FILL0_wght400_GRAD0_opsz24__2_
             Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-            Me.Button1.Location = New System.Drawing.Point(901, 16)
+            Me.Button1.Location = New System.Drawing.Point(827, 16)
             Me.Button1.Name = "Button1"
-            Me.Button1.Size = New System.Drawing.Size(83, 26)
+            Me.Button1.Size = New System.Drawing.Size(39, 26)
             Me.Button1.TabIndex = 19
-            Me.Button1.Text = "GUARDAR"
             Me.Button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
             Me.Button1.UseVisualStyleBackColor = True
             '
@@ -355,7 +358,7 @@
             Me.cbmParroquias.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cbmParroquias.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.cbmParroquias.FormattingEnabled = True
-            Me.cbmParroquias.Location = New System.Drawing.Point(780, 51)
+            Me.cbmParroquias.Location = New System.Drawing.Point(673, 47)
             Me.cbmParroquias.Name = "cbmParroquias"
             Me.cbmParroquias.Size = New System.Drawing.Size(204, 21)
             Me.cbmParroquias.TabIndex = 14
@@ -363,7 +366,7 @@
             'Label9
             '
             Me.Label9.AutoSize = True
-            Me.Label9.Location = New System.Drawing.Point(714, 54)
+            Me.Label9.Location = New System.Drawing.Point(588, 54)
             Me.Label9.Name = "Label9"
             Me.Label9.Size = New System.Drawing.Size(60, 13)
             Me.Label9.TabIndex = 13
@@ -394,7 +397,7 @@
             Me.txtNombres.BackColor = System.Drawing.Color.White
             Me.txtNombres.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtNombres.Enabled = False
-            Me.txtNombres.Location = New System.Drawing.Point(321, 18)
+            Me.txtNombres.Location = New System.Drawing.Point(267, 17)
             Me.txtNombres.Name = "txtNombres"
             Me.txtNombres.Size = New System.Drawing.Size(308, 21)
             Me.txtNombres.TabIndex = 7
@@ -403,7 +406,7 @@
             'Label4
             '
             Me.Label4.AutoSize = True
-            Me.Label4.Location = New System.Drawing.Point(264, 23)
+            Me.Label4.Location = New System.Drawing.Point(195, 20)
             Me.Label4.Name = "Label4"
             Me.Label4.Size = New System.Drawing.Size(55, 13)
             Me.Label4.TabIndex = 6
@@ -414,7 +417,7 @@
             Me.txtCedula.BackColor = System.Drawing.Color.White
             Me.txtCedula.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtCedula.Enabled = False
-            Me.txtCedula.Location = New System.Drawing.Point(743, 20)
+            Me.txtCedula.Location = New System.Drawing.Point(673, 20)
             Me.txtCedula.Name = "txtCedula"
             Me.txtCedula.Size = New System.Drawing.Size(110, 21)
             Me.txtCedula.TabIndex = 5
@@ -423,7 +426,7 @@
             'Label3
             '
             Me.Label3.AutoSize = True
-            Me.Label3.Location = New System.Drawing.Point(691, 25)
+            Me.Label3.Location = New System.Drawing.Point(591, 25)
             Me.Label3.Name = "Label3"
             Me.Label3.Size = New System.Drawing.Size(46, 13)
             Me.Label3.TabIndex = 4
@@ -434,7 +437,7 @@
             Me.cbmCiudad.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cbmCiudad.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.cbmCiudad.FormattingEnabled = True
-            Me.cbmCiudad.Location = New System.Drawing.Point(412, 51)
+            Me.cbmCiudad.Location = New System.Drawing.Point(321, 51)
             Me.cbmCiudad.Name = "cbmCiudad"
             Me.cbmCiudad.Size = New System.Drawing.Size(217, 21)
             Me.cbmCiudad.TabIndex = 3
@@ -442,7 +445,7 @@
             'Label1
             '
             Me.Label1.AutoSize = True
-            Me.Label1.Location = New System.Drawing.Point(10, 54)
+            Me.Label1.Location = New System.Drawing.Point(6, 54)
             Me.Label1.Name = "Label1"
             Me.Label1.Size = New System.Drawing.Size(60, 13)
             Me.Label1.TabIndex = 0
@@ -453,15 +456,15 @@
             Me.cbmProvincias.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cbmProvincias.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.cbmProvincias.FormattingEnabled = True
-            Me.cbmProvincias.Location = New System.Drawing.Point(78, 51)
+            Me.cbmProvincias.Location = New System.Drawing.Point(69, 51)
             Me.cbmProvincias.Name = "cbmProvincias"
-            Me.cbmProvincias.Size = New System.Drawing.Size(219, 21)
+            Me.cbmProvincias.Size = New System.Drawing.Size(181, 21)
             Me.cbmProvincias.TabIndex = 2
             '
             'Label2
             '
             Me.Label2.AutoSize = True
-            Me.Label2.Location = New System.Drawing.Point(360, 54)
+            Me.Label2.Location = New System.Drawing.Point(264, 59)
             Me.Label2.Name = "Label2"
             Me.Label2.Size = New System.Drawing.Size(46, 13)
             Me.Label2.TabIndex = 1
@@ -474,7 +477,7 @@
             Me.tpReporte.Location = New System.Drawing.Point(4, 22)
             Me.tpReporte.Name = "tpReporte"
             Me.tpReporte.Padding = New System.Windows.Forms.Padding(3)
-            Me.tpReporte.Size = New System.Drawing.Size(1002, 639)
+            Me.tpReporte.Size = New System.Drawing.Size(1002, 625)
             Me.tpReporte.TabIndex = 1
             Me.tpReporte.Text = "REPORTE"
             '
@@ -486,7 +489,7 @@
             Me.crvAutorizaciones.Dock = System.Windows.Forms.DockStyle.Fill
             Me.crvAutorizaciones.Location = New System.Drawing.Point(3, 3)
             Me.crvAutorizaciones.Name = "crvAutorizaciones"
-            Me.crvAutorizaciones.Size = New System.Drawing.Size(996, 633)
+            Me.crvAutorizaciones.Size = New System.Drawing.Size(996, 619)
             Me.crvAutorizaciones.TabIndex = 0
             Me.crvAutorizaciones.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None
             '
@@ -498,7 +501,7 @@
             Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
             Me.MenuStrip1.Name = "MenuStrip1"
             Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(7, 2, 0, 2)
-            Me.MenuStrip1.Size = New System.Drawing.Size(1009, 32)
+            Me.MenuStrip1.Size = New System.Drawing.Size(951, 32)
             Me.MenuStrip1.TabIndex = 200
             Me.MenuStrip1.Text = "msIngresoBodega"
             '
@@ -516,7 +519,7 @@
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.BackColor = System.Drawing.Color.White
-            Me.ClientSize = New System.Drawing.Size(1009, 688)
+            Me.ClientSize = New System.Drawing.Size(951, 621)
             Me.Controls.Add(Me.MenuStrip1)
             Me.Controls.Add(Me.tcAutorizaciones)
             Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -580,5 +583,6 @@
         Friend WithEvents MenuStrip1 As System.Windows.Forms.MenuStrip
         Friend WithEvents btnReporte As System.Windows.Forms.ToolStripMenuItem
         Friend WithEvents Button1 As System.Windows.Forms.Button
+        Friend WithEvents ToolTip1 As ToolTip
     End Class
 End Namespace

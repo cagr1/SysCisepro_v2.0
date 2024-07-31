@@ -79,7 +79,7 @@
             Me.dgvBancos.ReadOnly = True
             Me.dgvBancos.RowHeadersVisible = False
             Me.dgvBancos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvBancos.Size = New System.Drawing.Size(721, 231)
+            Me.dgvBancos.Size = New System.Drawing.Size(608, 231)
             Me.dgvBancos.TabIndex = 17
             '
             'msKardex
@@ -90,7 +90,7 @@
             Me.msKardex.Location = New System.Drawing.Point(0, 0)
             Me.msKardex.Name = "msKardex"
             Me.msKardex.Padding = New System.Windows.Forms.Padding(7, 2, 0, 2)
-            Me.msKardex.Size = New System.Drawing.Size(723, 32)
+            Me.msKardex.Size = New System.Drawing.Size(614, 32)
             Me.msKardex.TabIndex = 185
             Me.msKardex.Text = "msIngresoBodega"
             '
@@ -156,7 +156,7 @@
             '
             Me.lblEmail.AutoSize = True
             Me.lblEmail.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.lblEmail.Location = New System.Drawing.Point(513, 98)
+            Me.lblEmail.Location = New System.Drawing.Point(400, 98)
             Me.lblEmail.Name = "lblEmail"
             Me.lblEmail.Size = New System.Drawing.Size(51, 13)
             Me.lblEmail.TabIndex = 7
@@ -169,14 +169,14 @@
             Me.txtNombreBanco.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtNombreBanco.Location = New System.Drawing.Point(78, 43)
             Me.txtNombreBanco.Name = "txtNombreBanco"
-            Me.txtNombreBanco.Size = New System.Drawing.Size(410, 21)
+            Me.txtNombreBanco.Size = New System.Drawing.Size(315, 21)
             Me.txtNombreBanco.TabIndex = 9
             '
             'lblFax
             '
             Me.lblFax.AutoSize = True
             Me.lblFax.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.lblFax.Location = New System.Drawing.Point(513, 72)
+            Me.lblFax.Location = New System.Drawing.Point(400, 72)
             Me.lblFax.Name = "lblFax"
             Me.lblFax.Size = New System.Drawing.Size(74, 13)
             Me.lblFax.TabIndex = 6
@@ -186,7 +186,7 @@
             '
             Me.lblTelefonos.AutoSize = True
             Me.lblTelefonos.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.lblTelefonos.Location = New System.Drawing.Point(513, 46)
+            Me.lblTelefonos.Location = New System.Drawing.Point(400, 46)
             Me.lblTelefonos.Name = "lblTelefonos"
             Me.lblTelefonos.Size = New System.Drawing.Size(68, 13)
             Me.lblTelefonos.TabIndex = 5
@@ -200,7 +200,7 @@
             Me.txtDireccionBanco.Location = New System.Drawing.Point(78, 69)
             Me.txtDireccionBanco.Multiline = True
             Me.txtDireccionBanco.Name = "txtDireccionBanco"
-            Me.txtDireccionBanco.Size = New System.Drawing.Size(410, 20)
+            Me.txtDireccionBanco.Size = New System.Drawing.Size(315, 20)
             Me.txtDireccionBanco.TabIndex = 11
             '
             'lblOficialCredito
@@ -220,7 +220,7 @@
             Me.txtOficialCreditoBanco.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtOficialCreditoBanco.Location = New System.Drawing.Point(141, 95)
             Me.txtOficialCreditoBanco.Name = "txtOficialCreditoBanco"
-            Me.txtOficialCreditoBanco.Size = New System.Drawing.Size(347, 21)
+            Me.txtOficialCreditoBanco.Size = New System.Drawing.Size(252, 21)
             Me.txtOficialCreditoBanco.TabIndex = 12
             '
             'lblDireccionBanco
@@ -238,7 +238,7 @@
             Me.txtTelefonoBanco.BackColor = System.Drawing.Color.White
             Me.txtTelefonoBanco.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtTelefonoBanco.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtTelefonoBanco.Location = New System.Drawing.Point(599, 43)
+            Me.txtTelefonoBanco.Location = New System.Drawing.Point(486, 43)
             Me.txtTelefonoBanco.Name = "txtTelefonoBanco"
             Me.txtTelefonoBanco.Size = New System.Drawing.Size(114, 21)
             Me.txtTelefonoBanco.TabIndex = 13
@@ -248,7 +248,7 @@
             Me.txtFaxBanco.BackColor = System.Drawing.Color.White
             Me.txtFaxBanco.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtFaxBanco.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtFaxBanco.Location = New System.Drawing.Point(599, 69)
+            Me.txtFaxBanco.Location = New System.Drawing.Point(486, 69)
             Me.txtFaxBanco.Name = "txtFaxBanco"
             Me.txtFaxBanco.Size = New System.Drawing.Size(114, 21)
             Me.txtFaxBanco.TabIndex = 14
@@ -268,7 +268,7 @@
             Me.txtEMailBanco.BackColor = System.Drawing.Color.White
             Me.txtEMailBanco.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtEMailBanco.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtEMailBanco.Location = New System.Drawing.Point(599, 95)
+            Me.txtEMailBanco.Location = New System.Drawing.Point(486, 95)
             Me.txtEMailBanco.Name = "txtEMailBanco"
             Me.txtEMailBanco.Size = New System.Drawing.Size(114, 21)
             Me.txtEMailBanco.TabIndex = 15
@@ -325,7 +325,7 @@
             Me.gpBancos.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.gpBancos.Location = New System.Drawing.Point(1, 36)
             Me.gpBancos.Name = "gpBancos"
-            Me.gpBancos.Size = New System.Drawing.Size(721, 122)
+            Me.gpBancos.Size = New System.Drawing.Size(608, 122)
             Me.gpBancos.TabIndex = 16
             Me.gpBancos.TabStop = False
             Me.gpBancos.Text = "BANCOS"
@@ -335,7 +335,7 @@
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.BackColor = System.Drawing.Color.White
-            Me.ClientSize = New System.Drawing.Size(723, 393)
+            Me.ClientSize = New System.Drawing.Size(614, 393)
             Me.Controls.Add(Me.msKardex)
             Me.Controls.Add(Me.dgvBancos)
             Me.Controls.Add(Me.gpBancos)

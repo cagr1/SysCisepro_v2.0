@@ -75,7 +75,7 @@
             Me.tcAuxiliares.Location = New System.Drawing.Point(1, 36)
             Me.tcAuxiliares.Name = "tcAuxiliares"
             Me.tcAuxiliares.SelectedIndex = 0
-            Me.tcAuxiliares.Size = New System.Drawing.Size(984, 683)
+            Me.tcAuxiliares.Size = New System.Drawing.Size(984, 601)
             Me.tcAuxiliares.TabIndex = 3
             '
             'tpActualizar
@@ -98,7 +98,7 @@
             Me.tpActualizar.Location = New System.Drawing.Point(4, 22)
             Me.tpActualizar.Name = "tpActualizar"
             Me.tpActualizar.Padding = New System.Windows.Forms.Padding(3)
-            Me.tpActualizar.Size = New System.Drawing.Size(976, 657)
+            Me.tpActualizar.Size = New System.Drawing.Size(976, 575)
             Me.tpActualizar.TabIndex = 0
             Me.tpActualizar.Text = "MAYORES"
             Me.tpActualizar.UseVisualStyleBackColor = True
@@ -118,7 +118,7 @@
             Me.GroupBox1.Controls.Add(Me.cbNivel)
             Me.GroupBox1.Controls.Add(Me.Label12)
             Me.GroupBox1.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.GroupBox1.Location = New System.Drawing.Point(638, -4)
+            Me.GroupBox1.Location = New System.Drawing.Point(480, -4)
             Me.GroupBox1.Name = "GroupBox1"
             Me.GroupBox1.Size = New System.Drawing.Size(332, 35)
             Me.GroupBox1.TabIndex = 254
@@ -157,72 +157,76 @@
             'Label11
             '
             Me.Label11.AutoSize = True
-            Me.Label11.Font = New System.Drawing.Font("Consolas", 8.25!)
-            Me.Label11.Location = New System.Drawing.Point(800, 628)
+            Me.Label11.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Label11.Location = New System.Drawing.Point(800, 544)
             Me.Label11.Name = "Label11"
-            Me.Label11.Size = New System.Drawing.Size(55, 13)
+            Me.Label11.Size = New System.Drawing.Size(54, 13)
             Me.Label11.TabIndex = 251
             Me.Label11.Text = "UTILIDAD"
             '
             'txtUtilidad
             '
-            Me.txtUtilidad.Location = New System.Drawing.Point(858, 625)
+            Me.txtUtilidad.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtUtilidad.Location = New System.Drawing.Point(858, 541)
             Me.txtUtilidad.Name = "txtUtilidad"
-            Me.txtUtilidad.Size = New System.Drawing.Size(106, 20)
+            Me.txtUtilidad.Size = New System.Drawing.Size(106, 21)
             Me.txtUtilidad.TabIndex = 250
             Me.txtUtilidad.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
             '
             'Label10
             '
             Me.Label10.AutoSize = True
-            Me.Label10.Font = New System.Drawing.Font("Consolas", 8.25!)
-            Me.Label10.Location = New System.Drawing.Point(585, 628)
+            Me.Label10.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Label10.Location = New System.Drawing.Point(585, 544)
             Me.Label10.Name = "Label10"
-            Me.Label10.Size = New System.Drawing.Size(97, 13)
+            Me.Label10.Size = New System.Drawing.Size(105, 13)
             Me.Label10.TabIndex = 249
             Me.Label10.Text = "PATRIMONIO NETO"
             '
             'txtCapital
             '
-            Me.txtCapital.Location = New System.Drawing.Point(686, 625)
+            Me.txtCapital.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtCapital.Location = New System.Drawing.Point(686, 541)
             Me.txtCapital.Name = "txtCapital"
-            Me.txtCapital.Size = New System.Drawing.Size(106, 20)
+            Me.txtCapital.Size = New System.Drawing.Size(106, 21)
             Me.txtCapital.TabIndex = 248
             Me.txtCapital.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
             '
             'Label9
             '
             Me.Label9.AutoSize = True
-            Me.Label9.Font = New System.Drawing.Font("Consolas", 8.25!)
-            Me.Label9.Location = New System.Drawing.Point(425, 628)
+            Me.Label9.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Label9.Location = New System.Drawing.Point(425, 544)
             Me.Label9.Name = "Label9"
-            Me.Label9.Size = New System.Drawing.Size(43, 13)
+            Me.Label9.Size = New System.Drawing.Size(45, 13)
             Me.Label9.TabIndex = 244
             Me.Label9.Text = "PASIVO"
             '
             'Label8
             '
             Me.Label8.AutoSize = True
-            Me.Label8.Font = New System.Drawing.Font("Consolas", 8.25!)
-            Me.Label8.Location = New System.Drawing.Point(253, 628)
+            Me.Label8.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Label8.Location = New System.Drawing.Point(253, 544)
             Me.Label8.Name = "Label8"
-            Me.Label8.Size = New System.Drawing.Size(43, 13)
+            Me.Label8.Size = New System.Drawing.Size(46, 13)
             Me.Label8.TabIndex = 243
             Me.Label8.Text = "ACTIVO"
             '
             'txtAcreedor
             '
-            Me.txtAcreedor.Location = New System.Drawing.Point(471, 625)
+            Me.txtAcreedor.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtAcreedor.Location = New System.Drawing.Point(471, 541)
             Me.txtAcreedor.Name = "txtAcreedor"
-            Me.txtAcreedor.Size = New System.Drawing.Size(106, 20)
+            Me.txtAcreedor.Size = New System.Drawing.Size(106, 21)
             Me.txtAcreedor.TabIndex = 242
             Me.txtAcreedor.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
             '
             'txtDeudor
             '
-            Me.txtDeudor.Location = New System.Drawing.Point(300, 625)
+            Me.txtDeudor.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtDeudor.Location = New System.Drawing.Point(300, 541)
             Me.txtDeudor.Name = "txtDeudor"
-            Me.txtDeudor.Size = New System.Drawing.Size(106, 20)
+            Me.txtDeudor.Size = New System.Drawing.Size(106, 21)
             Me.txtDeudor.TabIndex = 241
             Me.txtDeudor.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
             '
@@ -253,14 +257,14 @@
             DataGridViewCellStyle3.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.dgvMayores.RowsDefaultCellStyle = DataGridViewCellStyle3
             Me.dgvMayores.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvMayores.Size = New System.Drawing.Size(964, 580)
+            Me.dgvMayores.Size = New System.Drawing.Size(964, 493)
             Me.dgvMayores.TabIndex = 225
             '
             'lblHasta
             '
             Me.lblHasta.AutoSize = True
             Me.lblHasta.Font = New System.Drawing.Font("Consolas", 8.25!)
-            Me.lblHasta.Location = New System.Drawing.Point(330, 11)
+            Me.lblHasta.Location = New System.Drawing.Point(172, 11)
             Me.lblHasta.Name = "lblHasta"
             Me.lblHasta.Size = New System.Drawing.Size(43, 13)
             Me.lblHasta.TabIndex = 212
@@ -279,17 +283,19 @@
             'dtpFinal
             '
             Me.dtpFinal.Font = New System.Drawing.Font("Consolas", 8.25!)
-            Me.dtpFinal.Location = New System.Drawing.Point(378, 8)
+            Me.dtpFinal.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+            Me.dtpFinal.Location = New System.Drawing.Point(220, 8)
             Me.dtpFinal.Name = "dtpFinal"
-            Me.dtpFinal.Size = New System.Drawing.Size(254, 20)
+            Me.dtpFinal.Size = New System.Drawing.Size(121, 20)
             Me.dtpFinal.TabIndex = 210
             '
             'dtpInicio
             '
             Me.dtpInicio.Font = New System.Drawing.Font("Consolas", 8.25!)
+            Me.dtpInicio.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
             Me.dtpInicio.Location = New System.Drawing.Point(48, 8)
             Me.dtpInicio.Name = "dtpInicio"
-            Me.dtpInicio.Size = New System.Drawing.Size(254, 20)
+            Me.dtpInicio.Size = New System.Drawing.Size(114, 20)
             Me.dtpInicio.TabIndex = 209
             '
             'tpArbol
@@ -298,7 +304,7 @@
             Me.tpArbol.Location = New System.Drawing.Point(4, 22)
             Me.tpArbol.Name = "tpArbol"
             Me.tpArbol.Padding = New System.Windows.Forms.Padding(3)
-            Me.tpArbol.Size = New System.Drawing.Size(976, 657)
+            Me.tpArbol.Size = New System.Drawing.Size(976, 575)
             Me.tpArbol.TabIndex = 1
             Me.tpArbol.Text = "ARBOL"
             Me.tpArbol.UseVisualStyleBackColor = True
@@ -307,7 +313,7 @@
             '
             Me.tvBalanceComprobacion.Location = New System.Drawing.Point(6, 6)
             Me.tvBalanceComprobacion.Name = "tvBalanceComprobacion"
-            Me.tvBalanceComprobacion.Size = New System.Drawing.Size(964, 668)
+            Me.tvBalanceComprobacion.Size = New System.Drawing.Size(964, 563)
             Me.tvBalanceComprobacion.TabIndex = 0
             '
             'ContextMenuStripClicDerecho
@@ -381,7 +387,7 @@
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.BackColor = System.Drawing.Color.White
-            Me.ClientSize = New System.Drawing.Size(983, 719)
+            Me.ClientSize = New System.Drawing.Size(983, 628)
             Me.Controls.Add(Me.MenuStrip1)
             Me.Controls.Add(Me.tcAuxiliares)
             Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)

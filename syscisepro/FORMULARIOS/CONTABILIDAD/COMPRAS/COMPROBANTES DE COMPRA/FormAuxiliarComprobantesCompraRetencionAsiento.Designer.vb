@@ -82,7 +82,7 @@
             Me.GroupBox1.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.GroupBox1.Location = New System.Drawing.Point(2, 76)
             Me.GroupBox1.Name = "GroupBox1"
-            Me.GroupBox1.Size = New System.Drawing.Size(961, 272)
+            Me.GroupBox1.Size = New System.Drawing.Size(756, 238)
             Me.GroupBox1.TabIndex = 97
             Me.GroupBox1.TabStop = False
             Me.GroupBox1.Text = "COMPROBANTES DE COMPRA"
@@ -158,7 +158,7 @@
             DataGridViewCellStyle3.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.dgvComprobantesCompra.RowsDefaultCellStyle = DataGridViewCellStyle3
             Me.dgvComprobantesCompra.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvComprobantesCompra.Size = New System.Drawing.Size(950, 251)
+            Me.dgvComprobantesCompra.Size = New System.Drawing.Size(745, 218)
             Me.dgvComprobantesCompra.TabIndex = 86
             '
             'gbRetencion
@@ -172,9 +172,9 @@
             Me.gbRetencion.Controls.Add(Me.lblIdDetalleComprobanteRetencionCompra)
             Me.gbRetencion.Controls.Add(Me.dgvComprobanteRetencion)
             Me.gbRetencion.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.gbRetencion.Location = New System.Drawing.Point(2, 351)
+            Me.gbRetencion.Location = New System.Drawing.Point(2, 316)
             Me.gbRetencion.Name = "gbRetencion"
-            Me.gbRetencion.Size = New System.Drawing.Size(961, 138)
+            Me.gbRetencion.Size = New System.Drawing.Size(756, 138)
             Me.gbRetencion.TabIndex = 98
             Me.gbRetencion.TabStop = False
             Me.gbRetencion.Text = "RETENCIÓN"
@@ -229,7 +229,7 @@
             Me.dgvDetalleComprobanteRetencion.RowHeadersVisible = False
             Me.dgvDetalleComprobanteRetencion.RowTemplate.DefaultCellStyle.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.dgvDetalleComprobanteRetencion.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvDetalleComprobanteRetencion.Size = New System.Drawing.Size(950, 116)
+            Me.dgvDetalleComprobanteRetencion.Size = New System.Drawing.Size(745, 116)
             Me.dgvDetalleComprobanteRetencion.TabIndex = 53
             '
             'lblEstadoDetalleComprabanteRetencionCompra
@@ -275,9 +275,9 @@
             Me.gbAsientoDiario.Controls.Add(Me.lblNumeroRegistro)
             Me.gbAsientoDiario.Controls.Add(Me.dgvAsientoDiario)
             Me.gbAsientoDiario.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.gbAsientoDiario.Location = New System.Drawing.Point(2, 489)
+            Me.gbAsientoDiario.Location = New System.Drawing.Point(2, 454)
             Me.gbAsientoDiario.Name = "gbAsientoDiario"
-            Me.gbAsientoDiario.Size = New System.Drawing.Size(961, 191)
+            Me.gbAsientoDiario.Size = New System.Drawing.Size(756, 191)
             Me.gbAsientoDiario.TabIndex = 99
             Me.gbAsientoDiario.TabStop = False
             Me.gbAsientoDiario.Text = "ASIENTO DE DIARIO:"
@@ -315,7 +315,7 @@
             Me.dgvAsientoDiario.ReadOnly = True
             Me.dgvAsientoDiario.RowHeadersVisible = False
             Me.dgvAsientoDiario.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvAsientoDiario.Size = New System.Drawing.Size(947, 167)
+            Me.dgvAsientoDiario.Size = New System.Drawing.Size(742, 167)
             Me.dgvAsientoDiario.TabIndex = 0
             '
             'gbRangoFechas
@@ -327,7 +327,7 @@
             Me.gbRangoFechas.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.gbRangoFechas.Location = New System.Drawing.Point(2, 34)
             Me.gbRangoFechas.Name = "gbRangoFechas"
-            Me.gbRangoFechas.Size = New System.Drawing.Size(961, 40)
+            Me.gbRangoFechas.Size = New System.Drawing.Size(756, 40)
             Me.gbRangoFechas.TabIndex = 105
             Me.gbRangoFechas.TabStop = False
             Me.gbRangoFechas.Text = "RANGO DE FECHAS"
@@ -365,7 +365,7 @@
             Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
             Me.MenuStrip1.Name = "MenuStrip1"
             Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(7, 2, 0, 2)
-            Me.MenuStrip1.Size = New System.Drawing.Size(967, 32)
+            Me.MenuStrip1.Size = New System.Drawing.Size(763, 32)
             Me.MenuStrip1.TabIndex = 189
             Me.MenuStrip1.Text = "msIngresoBodega"
             '
@@ -410,7 +410,7 @@
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.BackColor = System.Drawing.Color.White
-            Me.ClientSize = New System.Drawing.Size(967, 682)
+            Me.ClientSize = New System.Drawing.Size(763, 650)
             Me.Controls.Add(Me.MenuStrip1)
             Me.Controls.Add(Me.gbRangoFechas)
             Me.Controls.Add(Me.gbAsientoDiario)

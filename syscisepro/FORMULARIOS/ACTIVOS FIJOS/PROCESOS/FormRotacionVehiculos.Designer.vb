@@ -70,7 +70,7 @@
             Me.gbSupervisores.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.gbSupervisores.Location = New System.Drawing.Point(5, 4)
             Me.gbSupervisores.Name = "gbSupervisores"
-            Me.gbSupervisores.Size = New System.Drawing.Size(988, 152)
+            Me.gbSupervisores.Size = New System.Drawing.Size(786, 152)
             Me.gbSupervisores.TabIndex = 1
             Me.gbSupervisores.TabStop = False
             Me.gbSupervisores.Text = "SUPERVISORES"
@@ -98,7 +98,7 @@
             Me.dgvPersonal.Name = "dgvPersonal"
             Me.dgvPersonal.RowHeadersVisible = False
             Me.dgvPersonal.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvPersonal.Size = New System.Drawing.Size(976, 128)
+            Me.dgvPersonal.Size = New System.Drawing.Size(771, 128)
             Me.dgvPersonal.TabIndex = 1
             '
             'gbVehiculos
@@ -107,7 +107,7 @@
             Me.gbVehiculos.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.gbVehiculos.Location = New System.Drawing.Point(5, 155)
             Me.gbVehiculos.Name = "gbVehiculos"
-            Me.gbVehiculos.Size = New System.Drawing.Size(988, 141)
+            Me.gbVehiculos.Size = New System.Drawing.Size(786, 141)
             Me.gbVehiculos.TabIndex = 2
             Me.gbVehiculos.TabStop = False
             Me.gbVehiculos.Text = "VEHICULOS"
@@ -135,14 +135,14 @@
             Me.dgvVehiculos.Name = "dgvVehiculos"
             Me.dgvVehiculos.RowHeadersVisible = False
             Me.dgvVehiculos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvVehiculos.Size = New System.Drawing.Size(976, 116)
+            Me.dgvVehiculos.Size = New System.Drawing.Size(771, 116)
             Me.dgvVehiculos.TabIndex = 1
             '
             'Label1
             '
             Me.Label1.AutoSize = True
             Me.Label1.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label1.Location = New System.Drawing.Point(730, 307)
+            Me.Label1.Location = New System.Drawing.Point(511, 304)
             Me.Label1.Name = "Label1"
             Me.Label1.Size = New System.Drawing.Size(118, 13)
             Me.Label1.TabIndex = 3
@@ -152,7 +152,7 @@
             '
             Me.txtFechaRotacion.Enabled = False
             Me.txtFechaRotacion.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtFechaRotacion.Location = New System.Drawing.Point(858, 300)
+            Me.txtFechaRotacion.Location = New System.Drawing.Point(650, 301)
             Me.txtFechaRotacion.Name = "txtFechaRotacion"
             Me.txtFechaRotacion.Size = New System.Drawing.Size(132, 21)
             Me.txtFechaRotacion.TabIndex = 4
@@ -162,7 +162,7 @@
             Me.gbRotaciones.Controls.Add(Me.dgvRotaciones)
             Me.gbRotaciones.Location = New System.Drawing.Point(5, 358)
             Me.gbRotaciones.Name = "gbRotaciones"
-            Me.gbRotaciones.Size = New System.Drawing.Size(988, 229)
+            Me.gbRotaciones.Size = New System.Drawing.Size(786, 229)
             Me.gbRotaciones.TabIndex = 3
             Me.gbRotaciones.TabStop = False
             Me.gbRotaciones.Text = "ROTACIONES"
@@ -189,7 +189,7 @@
             Me.dgvRotaciones.Name = "dgvRotaciones"
             Me.dgvRotaciones.RowHeadersVisible = False
             Me.dgvRotaciones.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvRotaciones.Size = New System.Drawing.Size(976, 204)
+            Me.dgvRotaciones.Size = New System.Drawing.Size(771, 204)
             Me.dgvRotaciones.TabIndex = 1
             '
             'ID_ROTACION
@@ -248,7 +248,7 @@
             Me.btnAgregar.Enabled = False
             Me.btnAgregar.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.btnAgregar.Image = Global.syscisepro.My.Resources.Resources.add_24dp_FILL0_wght400_GRAD0_opsz24
-            Me.btnAgregar.Location = New System.Drawing.Point(842, 329)
+            Me.btnAgregar.Location = New System.Drawing.Point(694, 329)
             Me.btnAgregar.Name = "btnAgregar"
             Me.btnAgregar.Size = New System.Drawing.Size(41, 30)
             Me.btnAgregar.TabIndex = 5
@@ -261,7 +261,7 @@
             Me.txtObservacion.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtObservacion.Location = New System.Drawing.Point(101, 338)
             Me.txtObservacion.Name = "txtObservacion"
-            Me.txtObservacion.Size = New System.Drawing.Size(624, 21)
+            Me.txtObservacion.Size = New System.Drawing.Size(397, 21)
             Me.txtObservacion.TabIndex = 7
             Me.txtObservacion.Text = "NINGUNA"
             '
@@ -298,7 +298,7 @@
             '
             Me.btnNuevo.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.btnNuevo.Image = Global.syscisepro.My.Resources.Resources.add_circle_24dp_FILL0_wght400_GRAD0_opsz24__3_
-            Me.btnNuevo.Location = New System.Drawing.Point(795, 329)
+            Me.btnNuevo.Location = New System.Drawing.Point(647, 329)
             Me.btnNuevo.Name = "btnNuevo"
             Me.btnNuevo.Size = New System.Drawing.Size(41, 30)
             Me.btnNuevo.TabIndex = 10
@@ -311,7 +311,7 @@
             Me.btnGuardar.Enabled = False
             Me.btnGuardar.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.btnGuardar.Image = Global.syscisepro.My.Resources.Resources.save_24dp_FILL0_wght400_GRAD0_opsz24__2_
-            Me.btnGuardar.Location = New System.Drawing.Point(889, 329)
+            Me.btnGuardar.Location = New System.Drawing.Point(741, 329)
             Me.btnGuardar.Name = "btnGuardar"
             Me.btnGuardar.Size = New System.Drawing.Size(41, 30)
             Me.btnGuardar.TabIndex = 11
@@ -324,7 +324,7 @@
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.BackColor = System.Drawing.Color.White
-            Me.ClientSize = New System.Drawing.Size(997, 589)
+            Me.ClientSize = New System.Drawing.Size(794, 589)
             Me.Controls.Add(Me.btnGuardar)
             Me.Controls.Add(Me.btnNuevo)
             Me.Controls.Add(Me.txtIdRotacion)

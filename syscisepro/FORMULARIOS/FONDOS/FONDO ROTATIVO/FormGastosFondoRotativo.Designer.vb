@@ -71,7 +71,7 @@
             'lblCtaContableGastosFR
             '
             Me.lblCtaContableGastosFR.AutoSize = True
-            Me.lblCtaContableGastosFR.Location = New System.Drawing.Point(265, 25)
+            Me.lblCtaContableGastosFR.Location = New System.Drawing.Point(218, 25)
             Me.lblCtaContableGastosFR.Name = "lblCtaContableGastosFR"
             Me.lblCtaContableGastosFR.Size = New System.Drawing.Size(93, 13)
             Me.lblCtaContableGastosFR.TabIndex = 12
@@ -81,7 +81,7 @@
             '
             Me.txtIdGastosFR.BackColor = System.Drawing.Color.White
             Me.txtIdGastosFR.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-            Me.txtIdGastosFR.Location = New System.Drawing.Point(114, 23)
+            Me.txtIdGastosFR.Location = New System.Drawing.Point(92, 23)
             Me.txtIdGastosFR.Name = "txtIdGastosFR"
             Me.txtIdGastosFR.Size = New System.Drawing.Size(120, 21)
             Me.txtIdGastosFR.TabIndex = 13
@@ -90,18 +90,18 @@
             '
             Me.txtNombreGastoFR.BackColor = System.Drawing.Color.White
             Me.txtNombreGastoFR.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-            Me.txtNombreGastoFR.Location = New System.Drawing.Point(114, 50)
+            Me.txtNombreGastoFR.Location = New System.Drawing.Point(90, 50)
             Me.txtNombreGastoFR.Name = "txtNombreGastoFR"
-            Me.txtNombreGastoFR.Size = New System.Drawing.Size(366, 21)
+            Me.txtNombreGastoFR.Size = New System.Drawing.Size(175, 21)
             Me.txtNombreGastoFR.TabIndex = 14
             '
             'txtCtaContableGastoFR
             '
             Me.txtCtaContableGastoFR.BackColor = System.Drawing.Color.White
             Me.txtCtaContableGastoFR.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-            Me.txtCtaContableGastoFR.Location = New System.Drawing.Point(360, 22)
+            Me.txtCtaContableGastoFR.Location = New System.Drawing.Point(312, 22)
             Me.txtCtaContableGastoFR.Name = "txtCtaContableGastoFR"
-            Me.txtCtaContableGastoFR.Size = New System.Drawing.Size(120, 21)
+            Me.txtCtaContableGastoFR.Size = New System.Drawing.Size(95, 21)
             Me.txtCtaContableGastoFR.TabIndex = 15
             '
             'dgvGastosFondoRotativo
@@ -127,7 +127,7 @@
             Me.dgvGastosFondoRotativo.Name = "dgvGastosFondoRotativo"
             Me.dgvGastosFondoRotativo.RowHeadersVisible = False
             Me.dgvGastosFondoRotativo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvGastosFondoRotativo.Size = New System.Drawing.Size(718, 314)
+            Me.dgvGastosFondoRotativo.Size = New System.Drawing.Size(644, 311)
             Me.dgvGastosFondoRotativo.TabIndex = 16
             '
             'gbConcepto
@@ -141,7 +141,7 @@
             Me.gbConcepto.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.gbConcepto.Location = New System.Drawing.Point(234, 35)
             Me.gbConcepto.Name = "gbConcepto"
-            Me.gbConcepto.Size = New System.Drawing.Size(486, 77)
+            Me.gbConcepto.Size = New System.Drawing.Size(412, 77)
             Me.gbConcepto.TabIndex = 17
             Me.gbConcepto.TabStop = False
             Me.gbConcepto.Text = "CONCEPTO"
@@ -210,7 +210,7 @@
             Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
             Me.MenuStrip1.Name = "MenuStrip1"
             Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(7, 2, 0, 2)
-            Me.MenuStrip1.Size = New System.Drawing.Size(722, 32)
+            Me.MenuStrip1.Size = New System.Drawing.Size(650, 32)
             Me.MenuStrip1.TabIndex = 184
             Me.MenuStrip1.Text = "msIngresoBodega"
             '
@@ -257,7 +257,7 @@
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.BackColor = System.Drawing.Color.White
-            Me.ClientSize = New System.Drawing.Size(722, 426)
+            Me.ClientSize = New System.Drawing.Size(650, 426)
             Me.Controls.Add(Me.MenuStrip1)
             Me.Controls.Add(Me.gpActividad)
             Me.Controls.Add(Me.gbConcepto)

@@ -280,6 +280,7 @@
             DataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
             Me.dgvLiquidacionesPendientes.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle4
             Me.dgvLiquidacionesPendientes.BackgroundColor = System.Drawing.Color.White
+            Me.dgvLiquidacionesPendientes.BorderStyle = System.Windows.Forms.BorderStyle.None
             Me.dgvLiquidacionesPendientes.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
             Me.dgvLiquidacionesPendientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
             DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
@@ -290,12 +291,12 @@
             DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
             DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
             Me.dgvLiquidacionesPendientes.DefaultCellStyle = DataGridViewCellStyle5
-            Me.dgvLiquidacionesPendientes.Location = New System.Drawing.Point(0, 32)
+            Me.dgvLiquidacionesPendientes.Location = New System.Drawing.Point(1, 34)
             Me.dgvLiquidacionesPendientes.MultiSelect = False
             Me.dgvLiquidacionesPendientes.Name = "dgvLiquidacionesPendientes"
             Me.dgvLiquidacionesPendientes.RowHeadersVisible = False
             Me.dgvLiquidacionesPendientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvLiquidacionesPendientes.Size = New System.Drawing.Size(905, 68)
+            Me.dgvLiquidacionesPendientes.Size = New System.Drawing.Size(905, 65)
             Me.dgvLiquidacionesPendientes.TabIndex = 22
             '
             'chkSeleccionarTodo
@@ -349,7 +350,7 @@
             DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
             Me.dgvSolicitudFonoRotativoNoDeducible.RowsDefaultCellStyle = DataGridViewCellStyle8
             Me.dgvSolicitudFonoRotativoNoDeducible.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvSolicitudFonoRotativoNoDeducible.Size = New System.Drawing.Size(897, 235)
+            Me.dgvSolicitudFonoRotativoNoDeducible.Size = New System.Drawing.Size(897, 195)
             Me.dgvSolicitudFonoRotativoNoDeducible.TabIndex = 29
             '
             'DataGridViewCheckBoxColumn1
@@ -368,7 +369,7 @@
             Me.gbNoDeducibles.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.gbNoDeducibles.Location = New System.Drawing.Point(2, 145)
             Me.gbNoDeducibles.Name = "gbNoDeducibles"
-            Me.gbNoDeducibles.Size = New System.Drawing.Size(909, 257)
+            Me.gbNoDeducibles.Size = New System.Drawing.Size(909, 222)
             Me.gbNoDeducibles.TabIndex = 32
             Me.gbNoDeducibles.TabStop = False
             Me.gbNoDeducibles.Text = "NO DEDUCIBLES"
@@ -389,7 +390,7 @@
             Me.gbDeducibles.Controls.Add(Me.chkSeleccionarTodo)
             Me.gbDeducibles.Controls.Add(Me.dgvSolicitudFondoRotativo)
             Me.gbDeducibles.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.gbDeducibles.Location = New System.Drawing.Point(2, 406)
+            Me.gbDeducibles.Location = New System.Drawing.Point(2, 371)
             Me.gbDeducibles.Name = "gbDeducibles"
             Me.gbDeducibles.Size = New System.Drawing.Size(903, 250)
             Me.gbDeducibles.TabIndex = 33
@@ -492,7 +493,7 @@
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.BackColor = System.Drawing.Color.White
-            Me.ClientSize = New System.Drawing.Size(907, 656)
+            Me.ClientSize = New System.Drawing.Size(907, 623)
             Me.Controls.Add(Me.gbNoDeducibles)
             Me.Controls.Add(Me.MenuStrip1)
             Me.Controls.Add(Me.dgvDetalleComprobanteRetencionCompra)

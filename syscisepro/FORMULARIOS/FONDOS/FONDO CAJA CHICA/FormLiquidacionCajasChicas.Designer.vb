@@ -88,7 +88,7 @@
             Me.tcLiquidar.Location = New System.Drawing.Point(2, 33)
             Me.tcLiquidar.Name = "tcLiquidar"
             Me.tcLiquidar.SelectedIndex = 0
-            Me.tcLiquidar.Size = New System.Drawing.Size(1011, 601)
+            Me.tcLiquidar.Size = New System.Drawing.Size(1011, 559)
             Me.tcLiquidar.TabIndex = 0
             '
             'tpLiquidar
@@ -115,7 +115,7 @@
             Me.tpLiquidar.Location = New System.Drawing.Point(4, 22)
             Me.tpLiquidar.Name = "tpLiquidar"
             Me.tpLiquidar.Padding = New System.Windows.Forms.Padding(3)
-            Me.tpLiquidar.Size = New System.Drawing.Size(1003, 575)
+            Me.tpLiquidar.Size = New System.Drawing.Size(1003, 533)
             Me.tpLiquidar.TabIndex = 0
             Me.tpLiquidar.Text = "LIQUIDAR"
             '
@@ -124,7 +124,7 @@
             Me.Label5.AutoSize = True
             Me.Label5.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Label5.ForeColor = System.Drawing.Color.Green
-            Me.Label5.Location = New System.Drawing.Point(867, 550)
+            Me.Label5.Location = New System.Drawing.Point(867, 505)
             Me.Label5.Name = "Label5"
             Me.Label5.Size = New System.Drawing.Size(13, 13)
             Me.Label5.TabIndex = 66
@@ -136,7 +136,7 @@
             Me.txtReposicionFondoCajaChica.Enabled = False
             Me.txtReposicionFondoCajaChica.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtReposicionFondoCajaChica.ForeColor = System.Drawing.Color.Black
-            Me.txtReposicionFondoCajaChica.Location = New System.Drawing.Point(626, 548)
+            Me.txtReposicionFondoCajaChica.Location = New System.Drawing.Point(626, 503)
             Me.txtReposicionFondoCajaChica.Name = "txtReposicionFondoCajaChica"
             Me.txtReposicionFondoCajaChica.Size = New System.Drawing.Size(90, 23)
             Me.txtReposicionFondoCajaChica.TabIndex = 60
@@ -150,7 +150,7 @@
             Me.txtsaldoFondoCajaChica.Enabled = False
             Me.txtsaldoFondoCajaChica.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtsaldoFondoCajaChica.ForeColor = System.Drawing.Color.Black
-            Me.txtsaldoFondoCajaChica.Location = New System.Drawing.Point(239, 547)
+            Me.txtsaldoFondoCajaChica.Location = New System.Drawing.Point(239, 502)
             Me.txtsaldoFondoCajaChica.Name = "txtsaldoFondoCajaChica"
             Me.txtsaldoFondoCajaChica.Size = New System.Drawing.Size(74, 23)
             Me.txtsaldoFondoCajaChica.TabIndex = 59
@@ -163,7 +163,7 @@
             Me.txtGastosFondoCajaChica.Enabled = False
             Me.txtGastosFondoCajaChica.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtGastosFondoCajaChica.ForeColor = System.Drawing.Color.Black
-            Me.txtGastosFondoCajaChica.Location = New System.Drawing.Point(415, 547)
+            Me.txtGastosFondoCajaChica.Location = New System.Drawing.Point(415, 502)
             Me.txtGastosFondoCajaChica.Name = "txtGastosFondoCajaChica"
             Me.txtGastosFondoCajaChica.Size = New System.Drawing.Size(90, 23)
             Me.txtGastosFondoCajaChica.TabIndex = 58
@@ -176,7 +176,7 @@
             Me.txtFondoCajaChica.Enabled = False
             Me.txtFondoCajaChica.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtFondoCajaChica.ForeColor = System.Drawing.Color.Black
-            Me.txtFondoCajaChica.Location = New System.Drawing.Point(72, 548)
+            Me.txtFondoCajaChica.Location = New System.Drawing.Point(72, 503)
             Me.txtFondoCajaChica.Name = "txtFondoCajaChica"
             Me.txtFondoCajaChica.Size = New System.Drawing.Size(69, 23)
             Me.txtFondoCajaChica.TabIndex = 57
@@ -187,7 +187,7 @@
             '
             Me.lblCantidadReposicionFondoRotativo.AutoSize = True
             Me.lblCantidadReposicionFondoRotativo.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.lblCantidadReposicionFondoRotativo.Location = New System.Drawing.Point(536, 553)
+            Me.lblCantidadReposicionFondoRotativo.Location = New System.Drawing.Point(536, 508)
             Me.lblCantidadReposicionFondoRotativo.Name = "lblCantidadReposicionFondoRotativo"
             Me.lblCantidadReposicionFondoRotativo.Size = New System.Drawing.Size(77, 13)
             Me.lblCantidadReposicionFondoRotativo.TabIndex = 56
@@ -197,7 +197,7 @@
             '
             Me.lblSaldoFondoRotativo.AutoSize = True
             Me.lblSaldoFondoRotativo.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.lblSaldoFondoRotativo.Location = New System.Drawing.Point(173, 551)
+            Me.lblSaldoFondoRotativo.Location = New System.Drawing.Point(173, 506)
             Me.lblSaldoFondoRotativo.Name = "lblSaldoFondoRotativo"
             Me.lblSaldoFondoRotativo.Size = New System.Drawing.Size(48, 13)
             Me.lblSaldoFondoRotativo.TabIndex = 55
@@ -207,7 +207,7 @@
             '
             Me.lblCantidadGastosFondoRotativo.AutoSize = True
             Me.lblCantidadGastosFondoRotativo.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.lblCantidadGastosFondoRotativo.Location = New System.Drawing.Point(346, 551)
+            Me.lblCantidadGastosFondoRotativo.Location = New System.Drawing.Point(346, 506)
             Me.lblCantidadGastosFondoRotativo.Name = "lblCantidadGastosFondoRotativo"
             Me.lblCantidadGastosFondoRotativo.Size = New System.Drawing.Size(54, 13)
             Me.lblCantidadGastosFondoRotativo.TabIndex = 54
@@ -217,7 +217,7 @@
             '
             Me.lblCantidadFondoRotativo.AutoSize = True
             Me.lblCantidadFondoRotativo.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.lblCantidadFondoRotativo.Location = New System.Drawing.Point(7, 551)
+            Me.lblCantidadFondoRotativo.Location = New System.Drawing.Point(7, 506)
             Me.lblCantidadFondoRotativo.Name = "lblCantidadFondoRotativo"
             Me.lblCantidadFondoRotativo.Size = New System.Drawing.Size(53, 13)
             Me.lblCantidadFondoRotativo.TabIndex = 53
@@ -227,7 +227,7 @@
             '
             Me.lblTotalLiquidacion.AutoSize = True
             Me.lblTotalLiquidacion.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.lblTotalLiquidacion.Location = New System.Drawing.Point(817, 551)
+            Me.lblTotalLiquidacion.Location = New System.Drawing.Point(817, 506)
             Me.lblTotalLiquidacion.Name = "lblTotalLiquidacion"
             Me.lblTotalLiquidacion.Size = New System.Drawing.Size(44, 13)
             Me.lblTotalLiquidacion.TabIndex = 50
@@ -239,7 +239,7 @@
             Me.txtTotalLiquidacion.Enabled = False
             Me.txtTotalLiquidacion.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtTotalLiquidacion.ForeColor = System.Drawing.Color.Black
-            Me.txtTotalLiquidacion.Location = New System.Drawing.Point(884, 546)
+            Me.txtTotalLiquidacion.Location = New System.Drawing.Point(884, 501)
             Me.txtTotalLiquidacion.Name = "txtTotalLiquidacion"
             Me.txtTotalLiquidacion.Size = New System.Drawing.Size(110, 23)
             Me.txtTotalLiquidacion.TabIndex = 49
@@ -458,7 +458,7 @@
             DataGridViewCellStyle4.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.dgvLiquidacionFondoCajaChica.RowsDefaultCellStyle = DataGridViewCellStyle4
             Me.dgvLiquidacionFondoCajaChica.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvLiquidacionFondoCajaChica.Size = New System.Drawing.Size(1003, 479)
+            Me.dgvLiquidacionFondoCajaChica.Size = New System.Drawing.Size(1003, 437)
             Me.dgvLiquidacionFondoCajaChica.TabIndex = 48
             '
             'Label4
@@ -466,7 +466,7 @@
             Me.Label4.AutoSize = True
             Me.Label4.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Label4.ForeColor = System.Drawing.Color.Green
-            Me.Label4.Location = New System.Drawing.Point(614, 554)
+            Me.Label4.Location = New System.Drawing.Point(614, 509)
             Me.Label4.Name = "Label4"
             Me.Label4.Size = New System.Drawing.Size(13, 13)
             Me.Label4.TabIndex = 65
@@ -477,7 +477,7 @@
             Me.Label3.AutoSize = True
             Me.Label3.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Label3.ForeColor = System.Drawing.Color.Green
-            Me.Label3.Location = New System.Drawing.Point(227, 551)
+            Me.Label3.Location = New System.Drawing.Point(227, 506)
             Me.Label3.Name = "Label3"
             Me.Label3.Size = New System.Drawing.Size(13, 13)
             Me.Label3.TabIndex = 64
@@ -488,7 +488,7 @@
             Me.Label2.AutoSize = True
             Me.Label2.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Label2.ForeColor = System.Drawing.Color.Green
-            Me.Label2.Location = New System.Drawing.Point(403, 551)
+            Me.Label2.Location = New System.Drawing.Point(403, 506)
             Me.Label2.Name = "Label2"
             Me.Label2.Size = New System.Drawing.Size(13, 13)
             Me.Label2.TabIndex = 63
@@ -499,7 +499,7 @@
             Me.Label22.AutoSize = True
             Me.Label22.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Label22.ForeColor = System.Drawing.Color.Green
-            Me.Label22.Location = New System.Drawing.Point(61, 552)
+            Me.Label22.Location = New System.Drawing.Point(61, 507)
             Me.Label22.Name = "Label22"
             Me.Label22.Size = New System.Drawing.Size(13, 13)
             Me.Label22.TabIndex = 62
@@ -515,7 +515,7 @@
             Me.TabPage2.Location = New System.Drawing.Point(4, 22)
             Me.TabPage2.Name = "TabPage2"
             Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-            Me.TabPage2.Size = New System.Drawing.Size(1003, 579)
+            Me.TabPage2.Size = New System.Drawing.Size(1003, 575)
             Me.TabPage2.TabIndex = 1
             Me.TabPage2.Text = "REPORTE"
             '
@@ -553,7 +553,7 @@
             Me.crvLiquidacion.Dock = System.Windows.Forms.DockStyle.Fill
             Me.crvLiquidacion.Location = New System.Drawing.Point(3, 3)
             Me.crvLiquidacion.Name = "crvLiquidacion"
-            Me.crvLiquidacion.Size = New System.Drawing.Size(997, 573)
+            Me.crvLiquidacion.Size = New System.Drawing.Size(997, 569)
             Me.crvLiquidacion.TabIndex = 0
             Me.crvLiquidacion.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None
             '
@@ -622,7 +622,7 @@
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.BackColor = System.Drawing.Color.White
-            Me.ClientSize = New System.Drawing.Size(1012, 631)
+            Me.ClientSize = New System.Drawing.Size(1012, 594)
             Me.Controls.Add(Me.MenuStrip1)
             Me.Controls.Add(Me.tcLiquidar)
             Me.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))

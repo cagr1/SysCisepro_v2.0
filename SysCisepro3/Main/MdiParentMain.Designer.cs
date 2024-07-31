@@ -310,10 +310,10 @@
             this.lblUsuario,
             this.toolStripStatusLabel6,
             this.lblFecha});
-            this.statusStrip.Location = new System.Drawing.Point(0, 789);
+            this.statusStrip.Location = new System.Drawing.Point(0, 727);
             this.statusStrip.Name = "statusStrip";
             this.statusStrip.Padding = new System.Windows.Forms.Padding(1, 0, 16, 0);
-            this.statusStrip.Size = new System.Drawing.Size(1512, 22);
+            this.statusStrip.Size = new System.Drawing.Size(1284, 22);
             this.statusStrip.TabIndex = 2;
             this.statusStrip.Text = "StatusStrip";
             // 
@@ -334,7 +334,7 @@
             // toolStripStatusLabel3
             // 
             this.toolStripStatusLabel3.Name = "toolStripStatusLabel3";
-            this.toolStripStatusLabel3.Size = new System.Drawing.Size(934, 17);
+            this.toolStripStatusLabel3.Size = new System.Drawing.Size(706, 17);
             this.toolStripStatusLabel3.Spring = true;
             // 
             // toolStripStatusLabel4
@@ -393,7 +393,7 @@
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Padding = new System.Windows.Forms.Padding(0);
             this.toolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.toolStrip1.Size = new System.Drawing.Size(1512, 50);
+            this.toolStrip1.Size = new System.Drawing.Size(1284, 50);
             this.toolStrip1.TabIndex = 6;
             this.toolStrip1.Text = "toolStrip1";
             this.toolStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.toolStrip1_ItemClicked);
@@ -2762,7 +2762,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(1512, 811);
+            this.ClientSize = new System.Drawing.Size(1284, 749);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.statusStrip);
             this.DoubleBuffered = true;
@@ -2787,6 +2787,7 @@
             | Krypton.Toolkit.PaletteDrawBorders.Left) 
             | Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.Text = " ";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MdiParentMain_FormClosing);
             this.Load += new System.EventHandler(this.MdiParentMain_Load);
             this.statusStrip.ResumeLayout(false);

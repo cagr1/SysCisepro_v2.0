@@ -71,7 +71,7 @@
             Me.tcAuxiliares.Location = New System.Drawing.Point(2, 37)
             Me.tcAuxiliares.Name = "tcAuxiliares"
             Me.tcAuxiliares.SelectedIndex = 0
-            Me.tcAuxiliares.Size = New System.Drawing.Size(984, 680)
+            Me.tcAuxiliares.Size = New System.Drawing.Size(794, 680)
             Me.tcAuxiliares.TabIndex = 2
             '
             'tpActualizar
@@ -87,7 +87,7 @@
             Me.tpActualizar.Location = New System.Drawing.Point(4, 22)
             Me.tpActualizar.Name = "tpActualizar"
             Me.tpActualizar.Padding = New System.Windows.Forms.Padding(3)
-            Me.tpActualizar.Size = New System.Drawing.Size(976, 654)
+            Me.tpActualizar.Size = New System.Drawing.Size(786, 654)
             Me.tpActualizar.TabIndex = 0
             Me.tpActualizar.Text = "COMPROBANTES"
             Me.tpActualizar.UseVisualStyleBackColor = True
@@ -100,7 +100,7 @@
             Me.gbAsientoDiario.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.gbAsientoDiario.Location = New System.Drawing.Point(2, 461)
             Me.gbAsientoDiario.Name = "gbAsientoDiario"
-            Me.gbAsientoDiario.Size = New System.Drawing.Size(971, 191)
+            Me.gbAsientoDiario.Size = New System.Drawing.Size(776, 191)
             Me.gbAsientoDiario.TabIndex = 227
             Me.gbAsientoDiario.TabStop = False
             Me.gbAsientoDiario.Text = "ASIENTO DE DIARIO:"
@@ -138,7 +138,7 @@
             Me.dgvAsientoDiario.ReadOnly = True
             Me.dgvAsientoDiario.RowHeadersVisible = False
             Me.dgvAsientoDiario.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvAsientoDiario.Size = New System.Drawing.Size(965, 167)
+            Me.dgvAsientoDiario.Size = New System.Drawing.Size(767, 167)
             Me.dgvAsientoDiario.TabIndex = 0
             '
             'gbRetencion
@@ -154,7 +154,7 @@
             Me.gbRetencion.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.gbRetencion.Location = New System.Drawing.Point(2, 323)
             Me.gbRetencion.Name = "gbRetencion"
-            Me.gbRetencion.Size = New System.Drawing.Size(971, 138)
+            Me.gbRetencion.Size = New System.Drawing.Size(776, 138)
             Me.gbRetencion.TabIndex = 226
             Me.gbRetencion.TabStop = False
             Me.gbRetencion.Text = "RETENCIÓN"
@@ -209,7 +209,7 @@
             Me.dgvDetalleComprobanteRetencion.RowHeadersVisible = False
             Me.dgvDetalleComprobanteRetencion.RowTemplate.DefaultCellStyle.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.dgvDetalleComprobanteRetencion.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvDetalleComprobanteRetencion.Size = New System.Drawing.Size(965, 116)
+            Me.dgvDetalleComprobanteRetencion.Size = New System.Drawing.Size(767, 116)
             Me.dgvDetalleComprobanteRetencion.TabIndex = 53
             '
             'lblEstadoDetalleComprabanteRetencionCompra
@@ -264,7 +264,7 @@
             Me.dgvFacturas.ReadOnly = True
             Me.dgvFacturas.RowHeadersVisible = False
             Me.dgvFacturas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvFacturas.Size = New System.Drawing.Size(964, 290)
+            Me.dgvFacturas.Size = New System.Drawing.Size(772, 290)
             Me.dgvFacturas.TabIndex = 225
             '
             'lblHasta
@@ -311,7 +311,7 @@
             Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
             Me.MenuStrip1.Name = "MenuStrip1"
             Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(7, 2, 0, 2)
-            Me.MenuStrip1.Size = New System.Drawing.Size(984, 32)
+            Me.MenuStrip1.Size = New System.Drawing.Size(797, 32)
             Me.MenuStrip1.TabIndex = 188
             Me.MenuStrip1.Text = "msIngresoBodega"
             '
@@ -357,7 +357,7 @@
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.BackColor = System.Drawing.Color.White
-            Me.ClientSize = New System.Drawing.Size(984, 719)
+            Me.ClientSize = New System.Drawing.Size(797, 719)
             Me.Controls.Add(Me.MenuStrip1)
             Me.Controls.Add(Me.tcAuxiliares)
             Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow

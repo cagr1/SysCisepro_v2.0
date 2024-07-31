@@ -157,7 +157,7 @@
             Me.gbFacturaVenta.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.gbFacturaVenta.Location = New System.Drawing.Point(1, 76)
             Me.gbFacturaVenta.Name = "gbFacturaVenta"
-            Me.gbFacturaVenta.Size = New System.Drawing.Size(896, 685)
+            Me.gbFacturaVenta.Size = New System.Drawing.Size(896, 499)
             Me.gbFacturaVenta.TabIndex = 104
             Me.gbFacturaVenta.TabStop = False
             Me.gbFacturaVenta.Text = "NOTA DE CRÉDITO"
@@ -215,7 +215,7 @@
             DataGridViewCellStyle3.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.dgvNotaCredito.RowsDefaultCellStyle = DataGridViewCellStyle3
             Me.dgvNotaCredito.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvNotaCredito.Size = New System.Drawing.Size(890, 666)
+            Me.dgvNotaCredito.Size = New System.Drawing.Size(890, 480)
             Me.dgvNotaCredito.TabIndex = 86
             '
             'chk
@@ -304,7 +304,7 @@
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.BackColor = System.Drawing.Color.White
-            Me.ClientSize = New System.Drawing.Size(897, 758)
+            Me.ClientSize = New System.Drawing.Size(897, 575)
             Me.Controls.Add(Me.gbBuscarNotaCredito)
             Me.Controls.Add(Me.MenuStrip1)
             Me.Controls.Add(Me.gbClienteGeneral)

@@ -200,7 +200,7 @@
             Me.dgvCuentasPorCobrar.ReadOnly = True
             Me.dgvCuentasPorCobrar.RowHeadersVisible = False
             Me.dgvCuentasPorCobrar.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvCuentasPorCobrar.Size = New System.Drawing.Size(1040, 540)
+            Me.dgvCuentasPorCobrar.Size = New System.Drawing.Size(1040, 443)
             Me.dgvCuentasPorCobrar.TabIndex = 0
             '
             'txtTotalCuentasPorCobrar
@@ -245,7 +245,7 @@
             Me.gbTotal.Controls.Add(Me.Label3)
             Me.gbTotal.Controls.Add(Me.Label4)
             Me.gbTotal.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.gbTotal.Location = New System.Drawing.Point(4, 628)
+            Me.gbTotal.Location = New System.Drawing.Point(4, 542)
             Me.gbTotal.Name = "gbTotal"
             Me.gbTotal.Size = New System.Drawing.Size(1037, 44)
             Me.gbTotal.TabIndex = 101
@@ -518,7 +518,7 @@
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.AutoSize = True
             Me.BackColor = System.Drawing.Color.White
-            Me.ClientSize = New System.Drawing.Size(1046, 672)
+            Me.ClientSize = New System.Drawing.Size(1046, 589)
             Me.Controls.Add(Me.gbClienteGeneral)
             Me.Controls.Add(Me.MenuStrip1)
             Me.Controls.Add(Me.dgvCuentasPorCobrar)

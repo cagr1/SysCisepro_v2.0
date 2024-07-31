@@ -157,7 +157,7 @@
             'lblPagadoA
             '
             Me.lblPagadoA.AutoSize = True
-            Me.lblPagadoA.Location = New System.Drawing.Point(231, 23)
+            Me.lblPagadoA.Location = New System.Drawing.Point(194, 23)
             Me.lblPagadoA.Name = "lblPagadoA"
             Me.lblPagadoA.Size = New System.Drawing.Size(63, 13)
             Me.lblPagadoA.TabIndex = 3
@@ -176,7 +176,7 @@
             '
             Me.lblActividad.AutoSize = True
             Me.lblActividad.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.lblActividad.Location = New System.Drawing.Point(406, 23)
+            Me.lblActividad.Location = New System.Drawing.Point(318, 23)
             Me.lblActividad.Name = "lblActividad"
             Me.lblActividad.Size = New System.Drawing.Size(68, 13)
             Me.lblActividad.TabIndex = 5
@@ -196,7 +196,7 @@
             '
             Me.lblRazonComprobanteEgreso.AutoSize = True
             Me.lblRazonComprobanteEgreso.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.lblRazonComprobanteEgreso.Location = New System.Drawing.Point(274, 45)
+            Me.lblRazonComprobanteEgreso.Location = New System.Drawing.Point(230, 45)
             Me.lblRazonComprobanteEgreso.Name = "lblRazonComprobanteEgreso"
             Me.lblRazonComprobanteEgreso.Size = New System.Drawing.Size(50, 13)
             Me.lblRazonComprobanteEgreso.TabIndex = 8
@@ -214,16 +214,16 @@
             'lblTipoCuenta
             '
             Me.lblTipoCuenta.AutoSize = True
-            Me.lblTipoCuenta.Location = New System.Drawing.Point(178, 23)
+            Me.lblTipoCuenta.Location = New System.Drawing.Point(174, 23)
             Me.lblTipoCuenta.Name = "lblTipoCuenta"
-            Me.lblTipoCuenta.Size = New System.Drawing.Size(88, 13)
+            Me.lblTipoCuenta.Size = New System.Drawing.Size(34, 13)
             Me.lblTipoCuenta.TabIndex = 10
-            Me.lblTipoCuenta.Text = "NRO CC/CA/TC:"
+            Me.lblTipoCuenta.Text = " CTA:"
             '
             'lblNumeroCheque
             '
             Me.lblNumeroCheque.AutoSize = True
-            Me.lblNumeroCheque.Location = New System.Drawing.Point(383, 23)
+            Me.lblNumeroCheque.Location = New System.Drawing.Point(312, 23)
             Me.lblNumeroCheque.Name = "lblNumeroCheque"
             Me.lblNumeroCheque.Size = New System.Drawing.Size(59, 13)
             Me.lblNumeroCheque.TabIndex = 11
@@ -242,9 +242,9 @@
             '
             Me.txtPagadoA.BackColor = System.Drawing.Color.White
             Me.txtPagadoA.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-            Me.txtPagadoA.Location = New System.Drawing.Point(295, 20)
+            Me.txtPagadoA.Location = New System.Drawing.Point(261, 20)
             Me.txtPagadoA.Name = "txtPagadoA"
-            Me.txtPagadoA.Size = New System.Drawing.Size(264, 21)
+            Me.txtPagadoA.Size = New System.Drawing.Size(193, 21)
             Me.txtPagadoA.TabIndex = 14
             '
             'txtActividad
@@ -253,7 +253,7 @@
             Me.txtActividad.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtActividad.Enabled = False
             Me.txtActividad.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtActividad.Location = New System.Drawing.Point(470, 20)
+            Me.txtActividad.Location = New System.Drawing.Point(382, 20)
             Me.txtActividad.Name = "txtActividad"
             Me.txtActividad.Size = New System.Drawing.Size(125, 21)
             Me.txtActividad.TabIndex = 15
@@ -264,9 +264,9 @@
             Me.txtRazonComprobanteEgresoBanco.BackColor = System.Drawing.Color.White
             Me.txtRazonComprobanteEgresoBanco.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtRazonComprobanteEgresoBanco.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtRazonComprobanteEgresoBanco.Location = New System.Drawing.Point(326, 42)
+            Me.txtRazonComprobanteEgresoBanco.Location = New System.Drawing.Point(299, 42)
             Me.txtRazonComprobanteEgresoBanco.Name = "txtRazonComprobanteEgresoBanco"
-            Me.txtRazonComprobanteEgresoBanco.Size = New System.Drawing.Size(262, 21)
+            Me.txtRazonComprobanteEgresoBanco.Size = New System.Drawing.Size(155, 21)
             Me.txtRazonComprobanteEgresoBanco.TabIndex = 17
             '
             'txtRucCi
@@ -275,14 +275,14 @@
             Me.txtRucCi.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtRucCi.Location = New System.Drawing.Point(88, 20)
             Me.txtRucCi.Name = "txtRucCi"
-            Me.txtRucCi.Size = New System.Drawing.Size(135, 21)
+            Me.txtRucCi.Size = New System.Drawing.Size(101, 21)
             Me.txtRucCi.TabIndex = 20
             '
             'txtNumeroCheque
             '
             Me.txtNumeroCheque.BackColor = System.Drawing.Color.White
             Me.txtNumeroCheque.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-            Me.txtNumeroCheque.Location = New System.Drawing.Point(441, 20)
+            Me.txtNumeroCheque.Location = New System.Drawing.Point(369, 20)
             Me.txtNumeroCheque.Name = "txtNumeroCheque"
             Me.txtNumeroCheque.Size = New System.Drawing.Size(79, 21)
             Me.txtNumeroCheque.TabIndex = 23
@@ -301,7 +301,7 @@
             Me.gbBanco.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.gbBanco.Location = New System.Drawing.Point(0, 325)
             Me.gbBanco.Name = "gbBanco"
-            Me.gbBanco.Size = New System.Drawing.Size(614, 52)
+            Me.gbBanco.Size = New System.Drawing.Size(519, 52)
             Me.gbBanco.TabIndex = 24
             Me.gbBanco.TabStop = False
             Me.gbBanco.Text = "BANCO"
@@ -311,9 +311,9 @@
             Me.btnEditarValores.BackColor = System.Drawing.Color.White
             Me.btnEditarValores.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.btnEditarValores.Image = Global.syscisepro.My.Resources.Resources.edit_24dp_FILL0_wght400_GRAD0_opsz24__2_
-            Me.btnEditarValores.Location = New System.Drawing.Point(566, 18)
+            Me.btnEditarValores.Location = New System.Drawing.Point(484, 18)
             Me.btnEditarValores.Name = "btnEditarValores"
-            Me.btnEditarValores.Size = New System.Drawing.Size(41, 30)
+            Me.btnEditarValores.Size = New System.Drawing.Size(30, 30)
             Me.btnEditarValores.TabIndex = 33
             Me.btnEditarValores.UseVisualStyleBackColor = False
             '
@@ -322,9 +322,9 @@
             Me.btnAgregarBancosComprobante.BackColor = System.Drawing.Color.White
             Me.btnAgregarBancosComprobante.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.btnAgregarBancosComprobante.Image = Global.syscisepro.My.Resources.Resources.add_circle_24dp_FILL0_wght400_GRAD0_opsz24__3_
-            Me.btnAgregarBancosComprobante.Location = New System.Drawing.Point(525, 18)
+            Me.btnAgregarBancosComprobante.Location = New System.Drawing.Point(452, 18)
             Me.btnAgregarBancosComprobante.Name = "btnAgregarBancosComprobante"
-            Me.btnAgregarBancosComprobante.Size = New System.Drawing.Size(41, 30)
+            Me.btnAgregarBancosComprobante.Size = New System.Drawing.Size(30, 30)
             Me.btnAgregarBancosComprobante.TabIndex = 32
             Me.btnAgregarBancosComprobante.UseVisualStyleBackColor = False
             '
@@ -335,9 +335,9 @@
             Me.cmbCuentaBancos.DropDownWidth = 130
             Me.cmbCuentaBancos.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.cmbCuentaBancos.FormattingEnabled = True
-            Me.cmbCuentaBancos.Location = New System.Drawing.Point(266, 19)
+            Me.cmbCuentaBancos.Location = New System.Drawing.Point(212, 19)
             Me.cmbCuentaBancos.Name = "cmbCuentaBancos"
-            Me.cmbCuentaBancos.Size = New System.Drawing.Size(113, 21)
+            Me.cmbCuentaBancos.Size = New System.Drawing.Size(93, 21)
             Me.cmbCuentaBancos.TabIndex = 29
             '
             'cmbBancos
@@ -349,7 +349,7 @@
             Me.cmbBancos.FormattingEnabled = True
             Me.cmbBancos.Location = New System.Drawing.Point(67, 20)
             Me.cmbBancos.Name = "cmbBancos"
-            Me.cmbBancos.Size = New System.Drawing.Size(106, 21)
+            Me.cmbBancos.Size = New System.Drawing.Size(105, 21)
             Me.cmbBancos.TabIndex = 25
             '
             'cmbTipoPago
@@ -378,7 +378,7 @@
             Me.gbReceptor.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.gbReceptor.Location = New System.Drawing.Point(0, 187)
             Me.gbReceptor.Name = "gbReceptor"
-            Me.gbReceptor.Size = New System.Drawing.Size(614, 85)
+            Me.gbReceptor.Size = New System.Drawing.Size(519, 85)
             Me.gbReceptor.TabIndex = 25
             Me.gbReceptor.TabStop = False
             Me.gbReceptor.Text = "RECEPTOR"
@@ -388,7 +388,7 @@
             Me.btnBuscarPersonal.BackColor = System.Drawing.Color.White
             Me.btnBuscarPersonal.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.btnBuscarPersonal.Image = Global.syscisepro.My.Resources.Resources.search_24dp_FILL0_wght400_GRAD0_opsz24__2_
-            Me.btnBuscarPersonal.Location = New System.Drawing.Point(567, 14)
+            Me.btnBuscarPersonal.Location = New System.Drawing.Point(469, 14)
             Me.btnBuscarPersonal.Name = "btnBuscarPersonal"
             Me.btnBuscarPersonal.Size = New System.Drawing.Size(41, 30)
             Me.btnBuscarPersonal.TabIndex = 25
@@ -400,7 +400,7 @@
             Me.txtFacturaReceptor.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtFacturaReceptor.Location = New System.Drawing.Point(88, 50)
             Me.txtFacturaReceptor.Name = "txtFacturaReceptor"
-            Me.txtFacturaReceptor.Size = New System.Drawing.Size(519, 21)
+            Me.txtFacturaReceptor.Size = New System.Drawing.Size(422, 21)
             Me.txtFacturaReceptor.TabIndex = 22
             '
             'lblFacturaAPagar
@@ -425,7 +425,7 @@
             Me.gbCabecera.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.gbCabecera.Location = New System.Drawing.Point(-1, 35)
             Me.gbCabecera.Name = "gbCabecera"
-            Me.gbCabecera.Size = New System.Drawing.Size(615, 62)
+            Me.gbCabecera.Size = New System.Drawing.Size(520, 62)
             Me.gbCabecera.TabIndex = 26
             Me.gbCabecera.TabStop = False
             Me.gbCabecera.Text = "CABECERA:"
@@ -486,7 +486,7 @@
             DataGridViewCellStyle6.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.dgvComprobanteEgresoBanco.RowsDefaultCellStyle = DataGridViewCellStyle6
             Me.dgvComprobanteEgresoBanco.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvComprobanteEgresoBanco.Size = New System.Drawing.Size(608, 179)
+            Me.dgvComprobanteEgresoBanco.Size = New System.Drawing.Size(513, 179)
             Me.dgvComprobanteEgresoBanco.TabIndex = 27
             '
             'CODIGO
@@ -541,7 +541,7 @@
             '
             Me.lblValorComprobanteEgreso.AutoSize = True
             Me.lblValorComprobanteEgreso.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.lblValorComprobanteEgreso.Location = New System.Drawing.Point(392, 23)
+            Me.lblValorComprobanteEgreso.Location = New System.Drawing.Point(339, 23)
             Me.lblValorComprobanteEgreso.Name = "lblValorComprobanteEgreso"
             Me.lblValorComprobanteEgreso.Size = New System.Drawing.Size(45, 13)
             Me.lblValorComprobanteEgreso.TabIndex = 28
@@ -552,7 +552,7 @@
             Me.txtValorComprobanteEgresoBancos.BackColor = System.Drawing.Color.White
             Me.txtValorComprobanteEgresoBancos.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtValorComprobanteEgresoBancos.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtValorComprobanteEgresoBancos.Location = New System.Drawing.Point(446, 20)
+            Me.txtValorComprobanteEgresoBancos.Location = New System.Drawing.Point(397, 20)
             Me.txtValorComprobanteEgresoBancos.Name = "txtValorComprobanteEgresoBancos"
             Me.txtValorComprobanteEgresoBancos.Size = New System.Drawing.Size(106, 21)
             Me.txtValorComprobanteEgresoBancos.TabIndex = 29
@@ -575,7 +575,7 @@
             Me.pCentroCosto.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.pCentroCosto.Location = New System.Drawing.Point(0, 99)
             Me.pCentroCosto.Name = "pCentroCosto"
-            Me.pCentroCosto.Size = New System.Drawing.Size(614, 87)
+            Me.pCentroCosto.Size = New System.Drawing.Size(519, 87)
             Me.pCentroCosto.TabIndex = 30
             '
             'txtConceptoComprobanteEgreso
@@ -585,7 +585,7 @@
             Me.txtConceptoComprobanteEgreso.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtConceptoComprobanteEgreso.Location = New System.Drawing.Point(92, 42)
             Me.txtConceptoComprobanteEgreso.Name = "txtConceptoComprobanteEgreso"
-            Me.txtConceptoComprobanteEgreso.Size = New System.Drawing.Size(168, 21)
+            Me.txtConceptoComprobanteEgreso.Size = New System.Drawing.Size(129, 21)
             Me.txtConceptoComprobanteEgreso.TabIndex = 37
             '
             'Label2
@@ -602,7 +602,7 @@
             '
             Me.Label1.AutoSize = True
             Me.Label1.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label1.Location = New System.Drawing.Point(272, 15)
+            Me.Label1.Location = New System.Drawing.Point(228, 15)
             Me.Label1.Name = "Label1"
             Me.Label1.Size = New System.Drawing.Size(93, 13)
             Me.Label1.TabIndex = 35
@@ -617,9 +617,9 @@
             Me.cmbCuentasContables.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cmbCuentasContables.FormattingEnabled = True
             Me.cmbCuentasContables.IntegralHeight = False
-            Me.cmbCuentasContables.Location = New System.Drawing.Point(367, 12)
+            Me.cmbCuentasContables.Location = New System.Drawing.Point(323, 12)
             Me.cmbCuentasContables.Name = "cmbCuentasContables"
-            Me.cmbCuentasContables.Size = New System.Drawing.Size(172, 21)
+            Me.cmbCuentasContables.Size = New System.Drawing.Size(131, 21)
             Me.cmbCuentasContables.TabIndex = 31
             '
             'btnAgregarConceptoComprobante
@@ -627,7 +627,7 @@
             Me.btnAgregarConceptoComprobante.BackColor = System.Drawing.Color.White
             Me.btnAgregarConceptoComprobante.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.btnAgregarConceptoComprobante.Image = Global.syscisepro.My.Resources.Resources.add_circle_24dp_FILL0_wght400_GRAD0_opsz24__3_
-            Me.btnAgregarConceptoComprobante.Location = New System.Drawing.Point(542, 10)
+            Me.btnAgregarConceptoComprobante.Location = New System.Drawing.Point(465, 4)
             Me.btnAgregarConceptoComprobante.Name = "btnAgregarConceptoComprobante"
             Me.btnAgregarConceptoComprobante.Size = New System.Drawing.Size(41, 30)
             Me.btnAgregarConceptoComprobante.TabIndex = 23
@@ -643,7 +643,7 @@
             Me.cmbCentroCosto.FormattingEnabled = True
             Me.cmbCentroCosto.Location = New System.Drawing.Point(92, 12)
             Me.cmbCentroCosto.Name = "cmbCentroCosto"
-            Me.cmbCentroCosto.Size = New System.Drawing.Size(168, 21)
+            Me.cmbCentroCosto.Size = New System.Drawing.Size(129, 21)
             Me.cmbCentroCosto.TabIndex = 29
             '
             'lblCentroCosto
@@ -673,7 +673,7 @@
             Me.txtTotalHaber.BackColor = System.Drawing.Color.White
             Me.txtTotalHaber.BorderStyle = System.Windows.Forms.BorderStyle.None
             Me.txtTotalHaber.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtTotalHaber.Location = New System.Drawing.Point(505, 14)
+            Me.txtTotalHaber.Location = New System.Drawing.Point(413, 14)
             Me.txtTotalHaber.Name = "txtTotalHaber"
             Me.txtTotalHaber.Size = New System.Drawing.Size(89, 14)
             Me.txtTotalHaber.TabIndex = 32
@@ -685,7 +685,7 @@
             Me.txtTotalDebe.BackColor = System.Drawing.Color.White
             Me.txtTotalDebe.BorderStyle = System.Windows.Forms.BorderStyle.None
             Me.txtTotalDebe.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtTotalDebe.Location = New System.Drawing.Point(409, 14)
+            Me.txtTotalDebe.Location = New System.Drawing.Point(317, 14)
             Me.txtTotalDebe.Name = "txtTotalDebe"
             Me.txtTotalDebe.Size = New System.Drawing.Size(89, 14)
             Me.txtTotalDebe.TabIndex = 33
@@ -696,7 +696,7 @@
             '
             Me.lblTotal.AutoSize = True
             Me.lblTotal.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.lblTotal.Location = New System.Drawing.Point(359, 15)
+            Me.lblTotal.Location = New System.Drawing.Point(267, 15)
             Me.lblTotal.Name = "lblTotal"
             Me.lblTotal.Size = New System.Drawing.Size(48, 13)
             Me.lblTotal.TabIndex = 30
@@ -712,7 +712,7 @@
             Me.GroupBox1.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.GroupBox1.Location = New System.Drawing.Point(0, 272)
             Me.GroupBox1.Name = "GroupBox1"
-            Me.GroupBox1.Size = New System.Drawing.Size(614, 53)
+            Me.GroupBox1.Size = New System.Drawing.Size(519, 53)
             Me.GroupBox1.TabIndex = 34
             Me.GroupBox1.TabStop = False
             '
@@ -723,9 +723,9 @@
             Me.gbProveedor.Controls.Add(Me.lblIdProveedorGeneral)
             Me.gbProveedor.Controls.Add(Me.txtNombreComercialProveedor)
             Me.gbProveedor.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.gbProveedor.Location = New System.Drawing.Point(615, 35)
+            Me.gbProveedor.Location = New System.Drawing.Point(520, 35)
             Me.gbProveedor.Name = "gbProveedor"
-            Me.gbProveedor.Size = New System.Drawing.Size(355, 62)
+            Me.gbProveedor.Size = New System.Drawing.Size(325, 62)
             Me.gbProveedor.TabIndex = 35
             Me.gbProveedor.TabStop = False
             Me.gbProveedor.Text = "PROVEEDOR:"
@@ -733,7 +733,7 @@
             'chkActivar
             '
             Me.chkActivar.AutoSize = True
-            Me.chkActivar.Location = New System.Drawing.Point(277, 0)
+            Me.chkActivar.Location = New System.Drawing.Point(227, 0)
             Me.chkActivar.Name = "chkActivar"
             Me.chkActivar.Size = New System.Drawing.Size(61, 17)
             Me.chkActivar.TabIndex = 2
@@ -755,7 +755,7 @@
             Me.txtNombreComercialProveedor.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtNombreComercialProveedor.Location = New System.Drawing.Point(6, 19)
             Me.txtNombreComercialProveedor.Name = "txtNombreComercialProveedor"
-            Me.txtNombreComercialProveedor.Size = New System.Drawing.Size(335, 21)
+            Me.txtNombreComercialProveedor.Size = New System.Drawing.Size(305, 21)
             Me.txtNombreComercialProveedor.TabIndex = 0
             '
             'gbComprobantesCompra
@@ -765,9 +765,9 @@
             Me.gbComprobantesCompra.Controls.Add(Me.dgvComprobantesCompra)
             Me.gbComprobantesCompra.Enabled = False
             Me.gbComprobantesCompra.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.gbComprobantesCompra.Location = New System.Drawing.Point(615, 99)
+            Me.gbComprobantesCompra.Location = New System.Drawing.Point(520, 99)
             Me.gbComprobantesCompra.Name = "gbComprobantesCompra"
-            Me.gbComprobantesCompra.Size = New System.Drawing.Size(355, 317)
+            Me.gbComprobantesCompra.Size = New System.Drawing.Size(325, 317)
             Me.gbComprobantesCompra.TabIndex = 36
             Me.gbComprobantesCompra.TabStop = False
             Me.gbComprobantesCompra.Text = "COMPROBANTES COMPRA"
@@ -819,7 +819,7 @@
             DataGridViewCellStyle10.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.dgvComprobantesCompra.RowsDefaultCellStyle = DataGridViewCellStyle10
             Me.dgvComprobantesCompra.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvComprobantesCompra.Size = New System.Drawing.Size(349, 297)
+            Me.dgvComprobantesCompra.Size = New System.Drawing.Size(319, 297)
             Me.dgvComprobantesCompra.TabIndex = 0
             '
             'chk
@@ -834,9 +834,9 @@
             Me.gbPagosComprobanteCompra.Controls.Add(Me.dgvPagosComprobantesCompra)
             Me.gbPagosComprobanteCompra.Enabled = False
             Me.gbPagosComprobanteCompra.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.gbPagosComprobanteCompra.Location = New System.Drawing.Point(615, 416)
+            Me.gbPagosComprobanteCompra.Location = New System.Drawing.Point(520, 416)
             Me.gbPagosComprobanteCompra.Name = "gbPagosComprobanteCompra"
-            Me.gbPagosComprobanteCompra.Size = New System.Drawing.Size(357, 194)
+            Me.gbPagosComprobanteCompra.Size = New System.Drawing.Size(325, 194)
             Me.gbPagosComprobanteCompra.TabIndex = 88
             Me.gbPagosComprobanteCompra.TabStop = False
             Me.gbPagosComprobanteCompra.Text = "PAGOS POR COMPROBANTE"
@@ -877,7 +877,7 @@
             DataGridViewCellStyle14.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.dgvPagosComprobantesCompra.RowsDefaultCellStyle = DataGridViewCellStyle14
             Me.dgvPagosComprobantesCompra.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvPagosComprobantesCompra.Size = New System.Drawing.Size(351, 174)
+            Me.dgvPagosComprobantesCompra.Size = New System.Drawing.Size(319, 174)
             Me.dgvPagosComprobantesCompra.TabIndex = 0
             '
             'gbTotalDebeHaber
@@ -889,7 +889,7 @@
             Me.gbTotalDebeHaber.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.gbTotalDebeHaber.Location = New System.Drawing.Point(-1, 571)
             Me.gbTotalDebeHaber.Name = "gbTotalDebeHaber"
-            Me.gbTotalDebeHaber.Size = New System.Drawing.Size(615, 38)
+            Me.gbTotalDebeHaber.Size = New System.Drawing.Size(520, 38)
             Me.gbTotalDebeHaber.TabIndex = 90
             Me.gbTotalDebeHaber.TabStop = False
             '
@@ -900,7 +900,7 @@
             Me.dgvCompEgresoPagosCompCompra.BackgroundColor = System.Drawing.SystemColors.ControlLight
             Me.dgvCompEgresoPagosCompCompra.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
             Me.dgvCompEgresoPagosCompCompra.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ID_CE, Me.ID_CC_, Me.ID_PCC, Me.MONTO_PCC, Me.NRO_REG_ASIENTO})
-            Me.dgvCompEgresoPagosCompCompra.Location = New System.Drawing.Point(733, 391)
+            Me.dgvCompEgresoPagosCompCompra.Location = New System.Drawing.Point(605, 391)
             Me.dgvCompEgresoPagosCompCompra.Name = "dgvCompEgresoPagosCompCompra"
             Me.dgvCompEgresoPagosCompCompra.ReadOnly = True
             Me.dgvCompEgresoPagosCompCompra.Size = New System.Drawing.Size(228, 172)
@@ -956,7 +956,7 @@
             Me.GroupBox2.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.GroupBox2.Location = New System.Drawing.Point(0, 377)
             Me.GroupBox2.Name = "GroupBox2"
-            Me.GroupBox2.Size = New System.Drawing.Size(614, 198)
+            Me.GroupBox2.Size = New System.Drawing.Size(519, 198)
             Me.GroupBox2.TabIndex = 92
             Me.GroupBox2.TabStop = False
             '
@@ -968,7 +968,7 @@
             Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
             Me.MenuStrip1.Name = "MenuStrip1"
             Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(7, 2, 0, 2)
-            Me.MenuStrip1.Size = New System.Drawing.Size(973, 32)
+            Me.MenuStrip1.Size = New System.Drawing.Size(846, 32)
             Me.MenuStrip1.TabIndex = 210
             Me.MenuStrip1.Text = "msIngresoBodega"
             '
@@ -1014,7 +1014,7 @@
             '
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-            Me.ClientSize = New System.Drawing.Size(973, 613)
+            Me.ClientSize = New System.Drawing.Size(846, 613)
             Me.Controls.Add(Me.gbProveedor)
             Me.Controls.Add(Me.MenuStrip1)
             Me.Controls.Add(Me.gbPagosComprobanteCompra)

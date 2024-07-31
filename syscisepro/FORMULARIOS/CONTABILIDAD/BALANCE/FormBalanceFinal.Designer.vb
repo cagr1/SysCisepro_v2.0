@@ -75,10 +75,10 @@
             Me.tcAuxiliares.Controls.Add(Me.tpActualizar)
             Me.tcAuxiliares.Controls.Add(Me.tpArbol)
             Me.tcAuxiliares.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.tcAuxiliares.Location = New System.Drawing.Point(0, 36)
+            Me.tcAuxiliares.Location = New System.Drawing.Point(-5, 36)
             Me.tcAuxiliares.Name = "tcAuxiliares"
             Me.tcAuxiliares.SelectedIndex = 0
-            Me.tcAuxiliares.Size = New System.Drawing.Size(1018, 633)
+            Me.tcAuxiliares.Size = New System.Drawing.Size(927, 633)
             Me.tcAuxiliares.SizeMode = System.Windows.Forms.TabSizeMode.Fixed
             Me.tcAuxiliares.TabIndex = 2
             '
@@ -95,7 +95,7 @@
             Me.tpActualizar.Location = New System.Drawing.Point(4, 22)
             Me.tpActualizar.Name = "tpActualizar"
             Me.tpActualizar.Padding = New System.Windows.Forms.Padding(3)
-            Me.tpActualizar.Size = New System.Drawing.Size(1010, 607)
+            Me.tpActualizar.Size = New System.Drawing.Size(919, 607)
             Me.tpActualizar.TabIndex = 0
             Me.tpActualizar.Text = "MAYORES"
             '
@@ -105,7 +105,7 @@
             Me.GroupBox1.Controls.Add(Me.cbNivel)
             Me.GroupBox1.Controls.Add(Me.Label1)
             Me.GroupBox1.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.GroupBox1.Location = New System.Drawing.Point(631, -4)
+            Me.GroupBox1.Location = New System.Drawing.Point(335, -4)
             Me.GroupBox1.Name = "GroupBox1"
             Me.GroupBox1.Size = New System.Drawing.Size(377, 43)
             Me.GroupBox1.TabIndex = 258
@@ -147,17 +147,19 @@
             'dtpFinal
             '
             Me.dtpFinal.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.dtpFinal.Location = New System.Drawing.Point(369, 8)
+            Me.dtpFinal.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+            Me.dtpFinal.Location = New System.Drawing.Point(210, 8)
             Me.dtpFinal.Name = "dtpFinal"
-            Me.dtpFinal.Size = New System.Drawing.Size(247, 21)
+            Me.dtpFinal.Size = New System.Drawing.Size(110, 21)
             Me.dtpFinal.TabIndex = 255
             '
             'dtpInicio
             '
             Me.dtpInicio.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.dtpInicio.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
             Me.dtpInicio.Location = New System.Drawing.Point(47, 8)
             Me.dtpInicio.Name = "dtpInicio"
-            Me.dtpInicio.Size = New System.Drawing.Size(247, 21)
+            Me.dtpInicio.Size = New System.Drawing.Size(103, 21)
             Me.dtpInicio.TabIndex = 254
             '
             'lblDesde
@@ -165,7 +167,7 @@
             Me.lblDesde.AutoSize = True
             Me.lblDesde.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.lblDesde.ForeColor = System.Drawing.SystemColors.ControlText
-            Me.lblDesde.Location = New System.Drawing.Point(5, 10)
+            Me.lblDesde.Location = New System.Drawing.Point(6, 14)
             Me.lblDesde.Name = "lblDesde"
             Me.lblDesde.Size = New System.Drawing.Size(41, 13)
             Me.lblDesde.TabIndex = 256
@@ -176,7 +178,7 @@
             Me.lblHasta.AutoSize = True
             Me.lblHasta.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.lblHasta.ForeColor = System.Drawing.SystemColors.ControlText
-            Me.lblHasta.Location = New System.Drawing.Point(327, 12)
+            Me.lblHasta.Location = New System.Drawing.Point(167, 12)
             Me.lblHasta.Name = "lblHasta"
             Me.lblHasta.Size = New System.Drawing.Size(40, 13)
             Me.lblHasta.TabIndex = 257
@@ -216,7 +218,7 @@
             DataGridViewCellStyle4.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.dgvMayores.RowsDefaultCellStyle = DataGridViewCellStyle4
             Me.dgvMayores.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvMayores.Size = New System.Drawing.Size(1010, 513)
+            Me.dgvMayores.Size = New System.Drawing.Size(916, 513)
             Me.dgvMayores.TabIndex = 225
             '
             'nodo
@@ -239,7 +241,7 @@
             Me.GroupBox2.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.GroupBox2.Location = New System.Drawing.Point(0, 558)
             Me.GroupBox2.Name = "GroupBox2"
-            Me.GroupBox2.Size = New System.Drawing.Size(1010, 46)
+            Me.GroupBox2.Size = New System.Drawing.Size(916, 46)
             Me.GroupBox2.TabIndex = 253
             Me.GroupBox2.TabStop = False
             '
@@ -256,7 +258,7 @@
             '
             Me.txtUtilidad.BackColor = System.Drawing.Color.White
             Me.txtUtilidad.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtUtilidad.Location = New System.Drawing.Point(891, 16)
+            Me.txtUtilidad.Location = New System.Drawing.Point(793, 16)
             Me.txtUtilidad.Name = "txtUtilidad"
             Me.txtUtilidad.ReadOnly = True
             Me.txtUtilidad.Size = New System.Drawing.Size(113, 21)
@@ -267,7 +269,7 @@
             '
             Me.lblUtilidadPerdida.AutoSize = True
             Me.lblUtilidadPerdida.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.lblUtilidadPerdida.Location = New System.Drawing.Point(830, 21)
+            Me.lblUtilidadPerdida.Location = New System.Drawing.Point(732, 21)
             Me.lblUtilidadPerdida.Name = "lblUtilidadPerdida"
             Me.lblUtilidadPerdida.Size = New System.Drawing.Size(54, 13)
             Me.lblUtilidadPerdida.TabIndex = 251
@@ -278,7 +280,7 @@
             Me.txtDeudor.BackColor = System.Drawing.Color.White
             Me.txtDeudor.Enabled = False
             Me.txtDeudor.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtDeudor.Location = New System.Drawing.Point(144, 16)
+            Me.txtDeudor.Location = New System.Drawing.Point(139, 16)
             Me.txtDeudor.Name = "txtDeudor"
             Me.txtDeudor.Size = New System.Drawing.Size(113, 21)
             Me.txtDeudor.TabIndex = 241
@@ -289,7 +291,7 @@
             Me.txtAcreedor.BackColor = System.Drawing.Color.White
             Me.txtAcreedor.Enabled = False
             Me.txtAcreedor.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtAcreedor.Location = New System.Drawing.Point(370, 16)
+            Me.txtAcreedor.Location = New System.Drawing.Point(328, 16)
             Me.txtAcreedor.Name = "txtAcreedor"
             Me.txtAcreedor.Size = New System.Drawing.Size(113, 21)
             Me.txtAcreedor.TabIndex = 242
@@ -299,7 +301,7 @@
             '
             Me.Label10.AutoSize = True
             Me.Label10.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label10.Location = New System.Drawing.Point(529, 20)
+            Me.Label10.Location = New System.Drawing.Point(487, 20)
             Me.Label10.Name = "Label10"
             Me.Label10.Size = New System.Drawing.Size(105, 13)
             Me.Label10.TabIndex = 249
@@ -309,7 +311,7 @@
             '
             Me.Label8.AutoSize = True
             Me.Label8.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label8.Location = New System.Drawing.Point(92, 21)
+            Me.Label8.Location = New System.Drawing.Point(87, 21)
             Me.Label8.Name = "Label8"
             Me.Label8.Size = New System.Drawing.Size(46, 13)
             Me.Label8.TabIndex = 243
@@ -320,7 +322,7 @@
             Me.txtCapital.BackColor = System.Drawing.Color.White
             Me.txtCapital.Enabled = False
             Me.txtCapital.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtCapital.Location = New System.Drawing.Point(638, 15)
+            Me.txtCapital.Location = New System.Drawing.Point(596, 15)
             Me.txtCapital.Name = "txtCapital"
             Me.txtCapital.Size = New System.Drawing.Size(113, 21)
             Me.txtCapital.TabIndex = 248
@@ -330,7 +332,7 @@
             '
             Me.Label9.AutoSize = True
             Me.Label9.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label9.Location = New System.Drawing.Point(320, 21)
+            Me.Label9.Location = New System.Drawing.Point(278, 21)
             Me.Label9.Name = "Label9"
             Me.Label9.Size = New System.Drawing.Size(45, 13)
             Me.Label9.TabIndex = 244
@@ -343,7 +345,7 @@
             Me.tpArbol.Location = New System.Drawing.Point(4, 22)
             Me.tpArbol.Name = "tpArbol"
             Me.tpArbol.Padding = New System.Windows.Forms.Padding(3)
-            Me.tpArbol.Size = New System.Drawing.Size(1010, 607)
+            Me.tpArbol.Size = New System.Drawing.Size(919, 607)
             Me.tpArbol.TabIndex = 1
             Me.tpArbol.Text = "ARBOL"
             '
@@ -352,7 +354,7 @@
             Me.tvBalanceComprobacion.Dock = System.Windows.Forms.DockStyle.Fill
             Me.tvBalanceComprobacion.Location = New System.Drawing.Point(3, 3)
             Me.tvBalanceComprobacion.Name = "tvBalanceComprobacion"
-            Me.tvBalanceComprobacion.Size = New System.Drawing.Size(1004, 601)
+            Me.tvBalanceComprobacion.Size = New System.Drawing.Size(913, 601)
             Me.tvBalanceComprobacion.TabIndex = 0
             '
             'ContextMenuStripClicDerecho
@@ -381,7 +383,7 @@
             Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
             Me.MenuStrip1.Name = "MenuStrip1"
             Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(7, 2, 0, 2)
-            Me.MenuStrip1.Size = New System.Drawing.Size(1018, 32)
+            Me.MenuStrip1.Size = New System.Drawing.Size(922, 32)
             Me.MenuStrip1.TabIndex = 290
             Me.MenuStrip1.Text = "msIngresoBodega"
             '
@@ -414,7 +416,7 @@
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.BackColor = System.Drawing.Color.White
-            Me.ClientSize = New System.Drawing.Size(1018, 663)
+            Me.ClientSize = New System.Drawing.Size(922, 663)
             Me.Controls.Add(Me.MenuStrip1)
             Me.Controls.Add(Me.tcAuxiliares)
             Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow

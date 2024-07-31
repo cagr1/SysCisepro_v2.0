@@ -147,7 +147,7 @@
             Me.dgvMarcas.ReadOnly = True
             Me.dgvMarcas.RowHeadersVisible = False
             Me.dgvMarcas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvMarcas.Size = New System.Drawing.Size(359, 108)
+            Me.dgvMarcas.Size = New System.Drawing.Size(306, 108)
             Me.dgvMarcas.TabIndex = 19
             '
             'dgvMateriales
@@ -174,7 +174,7 @@
             Me.dgvMateriales.ReadOnly = True
             Me.dgvMateriales.RowHeadersVisible = False
             Me.dgvMateriales.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvMateriales.Size = New System.Drawing.Size(359, 126)
+            Me.dgvMateriales.Size = New System.Drawing.Size(306, 126)
             Me.dgvMateriales.TabIndex = 18
             '
             'dgvColores
@@ -201,7 +201,7 @@
             Me.dgvColores.ReadOnly = True
             Me.dgvColores.RowHeadersVisible = False
             Me.dgvColores.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvColores.Size = New System.Drawing.Size(359, 113)
+            Me.dgvColores.Size = New System.Drawing.Size(306, 113)
             Me.dgvColores.TabIndex = 17
             '
             'gbMarcas
@@ -401,7 +401,7 @@
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.BackColor = System.Drawing.Color.White
-            Me.ClientSize = New System.Drawing.Size(762, 365)
+            Me.ClientSize = New System.Drawing.Size(718, 365)
             Me.Controls.Add(Me.btnVolver)
             Me.Controls.Add(Me.dgvMarcas)
             Me.Controls.Add(Me.dgvMateriales)

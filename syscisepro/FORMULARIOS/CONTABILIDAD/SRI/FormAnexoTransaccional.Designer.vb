@@ -151,7 +151,7 @@
             Me.gpComandos.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.gpComandos.Location = New System.Drawing.Point(408, 2)
             Me.gpComandos.Name = "gpComandos"
-            Me.gpComandos.Size = New System.Drawing.Size(816, 59)
+            Me.gpComandos.Size = New System.Drawing.Size(578, 59)
             Me.gpComandos.TabIndex = 48
             Me.gpComandos.TabStop = False
             Me.gpComandos.Text = "COMANDOS"
@@ -319,7 +319,7 @@
             Me.btnCancelar.Font = New System.Drawing.Font("Consolas", 6.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.btnCancelar.Image = Global.syscisepro.My.Resources.Resources.cancel_24dp_FILL0_wght400_GRAD0_opsz24
             Me.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-            Me.btnCancelar.Location = New System.Drawing.Point(691, 9)
+            Me.btnCancelar.Location = New System.Drawing.Point(432, 9)
             Me.btnCancelar.Name = "btnCancelar"
             Me.btnCancelar.Size = New System.Drawing.Size(58, 43)
             Me.btnCancelar.TabIndex = 52
@@ -334,7 +334,7 @@
             Me.btnGuardar.Font = New System.Drawing.Font("Consolas", 6.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.btnGuardar.Image = Global.syscisepro.My.Resources.Resources.save_24dp_FILL0_wght400_GRAD0_opsz24__2_
             Me.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-            Me.btnGuardar.Location = New System.Drawing.Point(748, 9)
+            Me.btnGuardar.Location = New System.Drawing.Point(489, 9)
             Me.btnGuardar.Name = "btnGuardar"
             Me.btnGuardar.Size = New System.Drawing.Size(58, 43)
             Me.btnGuardar.TabIndex = 53
@@ -349,7 +349,7 @@
             Me.btnModificar.Font = New System.Drawing.Font("Consolas", 6.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.btnModificar.Image = Global.syscisepro.My.Resources.Resources.edit_document_24dp_FILL0_wght400_GRAD0_opsz24__2_
             Me.btnModificar.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-            Me.btnModificar.Location = New System.Drawing.Point(634, 9)
+            Me.btnModificar.Location = New System.Drawing.Point(375, 9)
             Me.btnModificar.Name = "btnModificar"
             Me.btnModificar.Size = New System.Drawing.Size(58, 43)
             Me.btnModificar.TabIndex = 51
@@ -364,7 +364,7 @@
             Me.btnNuevo.Font = New System.Drawing.Font("Consolas", 6.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.btnNuevo.Image = Global.syscisepro.My.Resources.Resources.add_circle_24dp_FILL0_wght400_GRAD0_opsz24__3_
             Me.btnNuevo.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-            Me.btnNuevo.Location = New System.Drawing.Point(577, 9)
+            Me.btnNuevo.Location = New System.Drawing.Point(318, 9)
             Me.btnNuevo.Name = "btnNuevo"
             Me.btnNuevo.Size = New System.Drawing.Size(58, 43)
             Me.btnNuevo.TabIndex = 50
@@ -465,7 +465,7 @@
             Me.dgvAnexoCompras.Name = "dgvAnexoCompras"
             Me.dgvAnexoCompras.RowHeadersVisible = False
             Me.dgvAnexoCompras.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvAnexoCompras.Size = New System.Drawing.Size(610, 163)
+            Me.dgvAnexoCompras.Size = New System.Drawing.Size(497, 163)
             Me.dgvAnexoCompras.TabIndex = 158
             '
             'panelDetalle
@@ -476,22 +476,22 @@
             Me.panelDetalle.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.panelDetalle.Location = New System.Drawing.Point(1, 61)
             Me.panelDetalle.Name = "panelDetalle"
-            Me.panelDetalle.Size = New System.Drawing.Size(610, 30)
+            Me.panelDetalle.Size = New System.Drawing.Size(496, 30)
             Me.panelDetalle.TabIndex = 170
             '
             'Label1
             '
             Me.Label1.AutoSize = True
-            Me.Label1.Font = New System.Drawing.Font("Consolas", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Label1.Font = New System.Drawing.Font("Roboto", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Label1.Location = New System.Drawing.Point(258, 6)
             Me.Label1.Name = "Label1"
-            Me.Label1.Size = New System.Drawing.Size(64, 18)
+            Me.Label1.Size = New System.Drawing.Size(78, 18)
             Me.Label1.TabIndex = 17
             Me.Label1.Text = "COMPRAS"
             '
             'txtTotalValorRetenidoFuente
             '
-            Me.txtTotalValorRetenidoFuente.Location = New System.Drawing.Point(1127, 259)
+            Me.txtTotalValorRetenidoFuente.Location = New System.Drawing.Point(893, 259)
             Me.txtTotalValorRetenidoFuente.Name = "txtTotalValorRetenidoFuente"
             Me.txtTotalValorRetenidoFuente.Size = New System.Drawing.Size(90, 20)
             Me.txtTotalValorRetenidoFuente.TabIndex = 160
@@ -519,12 +519,12 @@
             Me.dgvComprobantesAnulados.Name = "dgvComprobantesAnulados"
             Me.dgvComprobantesAnulados.RowHeadersVisible = False
             Me.dgvComprobantesAnulados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvComprobantesAnulados.Size = New System.Drawing.Size(610, 95)
+            Me.dgvComprobantesAnulados.Size = New System.Drawing.Size(496, 95)
             Me.dgvComprobantesAnulados.TabIndex = 180
             '
             'txtTotalBITarifa12Ventas
             '
-            Me.txtTotalBITarifa12Ventas.Location = New System.Drawing.Point(302, 406)
+            Me.txtTotalBITarifa12Ventas.Location = New System.Drawing.Point(188, 406)
             Me.txtTotalBITarifa12Ventas.Name = "txtTotalBITarifa12Ventas"
             Me.txtTotalBITarifa12Ventas.Size = New System.Drawing.Size(90, 20)
             Me.txtTotalBITarifa12Ventas.TabIndex = 166
@@ -539,16 +539,16 @@
             Me.Panel1.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Panel1.Location = New System.Drawing.Point(1, 281)
             Me.Panel1.Name = "Panel1"
-            Me.Panel1.Size = New System.Drawing.Size(610, 30)
+            Me.Panel1.Size = New System.Drawing.Size(496, 30)
             Me.Panel1.TabIndex = 171
             '
             'Label2
             '
             Me.Label2.AutoSize = True
-            Me.Label2.Font = New System.Drawing.Font("Consolas", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Label2.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Label2.Location = New System.Drawing.Point(261, 7)
             Me.Label2.Name = "Label2"
-            Me.Label2.Size = New System.Drawing.Size(56, 18)
+            Me.Label2.Size = New System.Drawing.Size(49, 13)
             Me.Label2.TabIndex = 18
             Me.Label2.Text = "VENTAS"
             '
@@ -558,24 +558,24 @@
             Me.Panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
             Me.Panel4.Controls.Add(Me.Label5)
             Me.Panel4.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Panel4.Location = New System.Drawing.Point(614, 281)
+            Me.Panel4.Location = New System.Drawing.Point(500, 281)
             Me.Panel4.Name = "Panel4"
-            Me.Panel4.Size = New System.Drawing.Size(610, 30)
+            Me.Panel4.Size = New System.Drawing.Size(486, 30)
             Me.Panel4.TabIndex = 176
             '
             'Label5
             '
             Me.Label5.AutoSize = True
-            Me.Label5.Font = New System.Drawing.Font("Consolas", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Label5.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Label5.Location = New System.Drawing.Point(195, 6)
             Me.Label5.Name = "Label5"
-            Me.Label5.Size = New System.Drawing.Size(248, 18)
+            Me.Label5.Size = New System.Drawing.Size(185, 13)
             Me.Label5.TabIndex = 18
             Me.Label5.Text = "RETENCIÓN EN LA FUENTE DEL IVA"
             '
             'txtTotalValorRetenidoRetecioneEfectuaron
             '
-            Me.txtTotalValorRetenidoRetecioneEfectuaron.Location = New System.Drawing.Point(1127, 560)
+            Me.txtTotalValorRetenidoRetecioneEfectuaron.Location = New System.Drawing.Point(892, 560)
             Me.txtTotalValorRetenidoRetecioneEfectuaron.Name = "txtTotalValorRetenidoRetecioneEfectuaron"
             Me.txtTotalValorRetenidoRetecioneEfectuaron.Size = New System.Drawing.Size(90, 20)
             Me.txtTotalValorRetenidoRetecioneEfectuaron.TabIndex = 178
@@ -584,7 +584,7 @@
             '
             'txtTotalBINoIVAVentas
             '
-            Me.txtTotalBINoIVAVentas.Location = New System.Drawing.Point(408, 406)
+            Me.txtTotalBINoIVAVentas.Location = New System.Drawing.Point(294, 406)
             Me.txtTotalBINoIVAVentas.Name = "txtTotalBINoIVAVentas"
             Me.txtTotalBINoIVAVentas.Size = New System.Drawing.Size(90, 20)
             Me.txtTotalBINoIVAVentas.TabIndex = 163
@@ -594,7 +594,7 @@
             'txtTotalBITarifa0Compras
             '
             Me.txtTotalBITarifa0Compras.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtTotalBITarifa0Compras.Location = New System.Drawing.Point(301, 259)
+            Me.txtTotalBITarifa0Compras.Location = New System.Drawing.Point(187, 259)
             Me.txtTotalBITarifa0Compras.Name = "txtTotalBITarifa0Compras"
             Me.txtTotalBITarifa0Compras.Size = New System.Drawing.Size(90, 21)
             Me.txtTotalBITarifa0Compras.TabIndex = 169
@@ -618,11 +618,11 @@
             DataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText
             DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
             Me.dgvAnexoRetencionesEfectuaron.DefaultCellStyle = DataGridViewCellStyle6
-            Me.dgvAnexoRetencionesEfectuaron.Location = New System.Drawing.Point(614, 464)
+            Me.dgvAnexoRetencionesEfectuaron.Location = New System.Drawing.Point(500, 464)
             Me.dgvAnexoRetencionesEfectuaron.Name = "dgvAnexoRetencionesEfectuaron"
             Me.dgvAnexoRetencionesEfectuaron.RowHeadersVisible = False
             Me.dgvAnexoRetencionesEfectuaron.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvAnexoRetencionesEfectuaron.Size = New System.Drawing.Size(610, 95)
+            Me.dgvAnexoRetencionesEfectuaron.Size = New System.Drawing.Size(486, 95)
             Me.dgvAnexoRetencionesEfectuaron.TabIndex = 177
             '
             'dgvAnexoRetencionesFuente
@@ -642,17 +642,17 @@
             DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText
             DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
             Me.dgvAnexoRetencionesFuente.DefaultCellStyle = DataGridViewCellStyle8
-            Me.dgvAnexoRetencionesFuente.Location = New System.Drawing.Point(614, 90)
+            Me.dgvAnexoRetencionesFuente.Location = New System.Drawing.Point(500, 90)
             Me.dgvAnexoRetencionesFuente.Name = "dgvAnexoRetencionesFuente"
             Me.dgvAnexoRetencionesFuente.RowHeadersVisible = False
             Me.dgvAnexoRetencionesFuente.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvAnexoRetencionesFuente.Size = New System.Drawing.Size(610, 163)
+            Me.dgvAnexoRetencionesFuente.Size = New System.Drawing.Size(486, 163)
             Me.dgvAnexoRetencionesFuente.TabIndex = 157
             '
             'txtTotalValorIVACompras
             '
             Me.txtTotalValorIVACompras.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtTotalValorIVACompras.Location = New System.Drawing.Point(514, 259)
+            Me.txtTotalValorIVACompras.Location = New System.Drawing.Point(400, 259)
             Me.txtTotalValorIVACompras.Name = "txtTotalValorIVACompras"
             Me.txtTotalValorIVACompras.Size = New System.Drawing.Size(90, 21)
             Me.txtTotalValorIVACompras.TabIndex = 161
@@ -661,7 +661,7 @@
             '
             'txtTotalBITarifa0Ventas
             '
-            Me.txtTotalBITarifa0Ventas.Location = New System.Drawing.Point(196, 406)
+            Me.txtTotalBITarifa0Ventas.Location = New System.Drawing.Point(82, 406)
             Me.txtTotalBITarifa0Ventas.Name = "txtTotalBITarifa0Ventas"
             Me.txtTotalBITarifa0Ventas.Size = New System.Drawing.Size(90, 20)
             Me.txtTotalBITarifa0Ventas.TabIndex = 168
@@ -673,9 +673,9 @@
             Me.Panel5.BackColor = System.Drawing.Color.White
             Me.Panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
             Me.Panel5.Controls.Add(Me.Label6)
-            Me.Panel5.Location = New System.Drawing.Point(614, 435)
+            Me.Panel5.Location = New System.Drawing.Point(500, 435)
             Me.Panel5.Name = "Panel5"
-            Me.Panel5.Size = New System.Drawing.Size(610, 30)
+            Me.Panel5.Size = New System.Drawing.Size(486, 30)
             Me.Panel5.TabIndex = 179
             '
             'Label6
@@ -691,7 +691,7 @@
             'txtTotalBITarifa12Compras
             '
             Me.txtTotalBITarifa12Compras.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtTotalBITarifa12Compras.Location = New System.Drawing.Point(407, 259)
+            Me.txtTotalBITarifa12Compras.Location = New System.Drawing.Point(293, 259)
             Me.txtTotalBITarifa12Compras.Name = "txtTotalBITarifa12Compras"
             Me.txtTotalBITarifa12Compras.Size = New System.Drawing.Size(90, 21)
             Me.txtTotalBITarifa12Compras.TabIndex = 167
@@ -716,11 +716,11 @@
             DataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText
             DataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
             Me.dgvAnexoRetencionIVA.DefaultCellStyle = DataGridViewCellStyle11
-            Me.dgvAnexoRetencionIVA.Location = New System.Drawing.Point(614, 310)
+            Me.dgvAnexoRetencionIVA.Location = New System.Drawing.Point(500, 310)
             Me.dgvAnexoRetencionIVA.Name = "dgvAnexoRetencionIVA"
             Me.dgvAnexoRetencionIVA.RowHeadersVisible = False
             Me.dgvAnexoRetencionIVA.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvAnexoRetencionIVA.Size = New System.Drawing.Size(610, 95)
+            Me.dgvAnexoRetencionIVA.Size = New System.Drawing.Size(486, 95)
             Me.dgvAnexoRetencionIVA.TabIndex = 174
             '
             'OPERACION_RI
@@ -742,7 +742,7 @@
             '
             'txtTotalValorRetenidoIVA
             '
-            Me.txtTotalValorRetenidoIVA.Location = New System.Drawing.Point(1127, 406)
+            Me.txtTotalValorRetenidoIVA.Location = New System.Drawing.Point(892, 406)
             Me.txtTotalValorRetenidoIVA.Name = "txtTotalValorRetenidoIVA"
             Me.txtTotalValorRetenidoIVA.Size = New System.Drawing.Size(90, 20)
             Me.txtTotalValorRetenidoIVA.TabIndex = 175
@@ -751,7 +751,7 @@
             '
             'txtTotalValorIVAVentas
             '
-            Me.txtTotalValorIVAVentas.Location = New System.Drawing.Point(514, 406)
+            Me.txtTotalValorIVAVentas.Location = New System.Drawing.Point(400, 406)
             Me.txtTotalValorIVAVentas.Name = "txtTotalValorIVAVentas"
             Me.txtTotalValorIVAVentas.Size = New System.Drawing.Size(90, 20)
             Me.txtTotalValorIVAVentas.TabIndex = 162
@@ -780,7 +780,7 @@
             Me.dgvAnexoVentas.Name = "dgvAnexoVentas"
             Me.dgvAnexoVentas.RowHeadersVisible = False
             Me.dgvAnexoVentas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvAnexoVentas.Size = New System.Drawing.Size(610, 95)
+            Me.dgvAnexoVentas.Size = New System.Drawing.Size(497, 95)
             Me.dgvAnexoVentas.TabIndex = 159
             '
             'TRANSACCION
@@ -821,7 +821,7 @@
             Me.Panel2.Controls.Add(Me.Label3)
             Me.Panel2.Location = New System.Drawing.Point(1, 435)
             Me.Panel2.Name = "Panel2"
-            Me.Panel2.Size = New System.Drawing.Size(610, 30)
+            Me.Panel2.Size = New System.Drawing.Size(497, 30)
             Me.Panel2.TabIndex = 172
             '
             'Label3
@@ -837,7 +837,7 @@
             'txtTotalBaseImponibleFuente
             '
             Me.txtTotalBaseImponibleFuente.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtTotalBaseImponibleFuente.Location = New System.Drawing.Point(1021, 259)
+            Me.txtTotalBaseImponibleFuente.Location = New System.Drawing.Point(787, 259)
             Me.txtTotalBaseImponibleFuente.Name = "txtTotalBaseImponibleFuente"
             Me.txtTotalBaseImponibleFuente.Size = New System.Drawing.Size(90, 21)
             Me.txtTotalBaseImponibleFuente.TabIndex = 164
@@ -850,18 +850,18 @@
             Me.Panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
             Me.Panel3.Controls.Add(Me.Label4)
             Me.Panel3.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Panel3.Location = New System.Drawing.Point(614, 61)
+            Me.Panel3.Location = New System.Drawing.Point(500, 61)
             Me.Panel3.Name = "Panel3"
-            Me.Panel3.Size = New System.Drawing.Size(610, 30)
+            Me.Panel3.Size = New System.Drawing.Size(486, 30)
             Me.Panel3.TabIndex = 173
             '
             'Label4
             '
             Me.Label4.AutoSize = True
-            Me.Label4.Font = New System.Drawing.Font("Consolas", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Label4.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Label4.Location = New System.Drawing.Point(116, 5)
             Me.Label4.Name = "Label4"
-            Me.Label4.Size = New System.Drawing.Size(384, 18)
+            Me.Label4.Size = New System.Drawing.Size(294, 13)
             Me.Label4.TabIndex = 18
             Me.Label4.Text = "RETENCIONES EN LA FUENTE DE IMPUESTO A LA RENTA"
             '
@@ -874,7 +874,7 @@
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.BackColor = System.Drawing.Color.White
-            Me.ClientSize = New System.Drawing.Size(1226, 584)
+            Me.ClientSize = New System.Drawing.Size(993, 584)
             Me.Controls.Add(Me.GroupBox5)
             Me.Controls.Add(Me.gpComandos)
             Me.Controls.Add(Me.dgvAnexoCompras)

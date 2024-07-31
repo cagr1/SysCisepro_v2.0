@@ -25,7 +25,6 @@
         Private Sub InitializeComponent()
             Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormIngresoActivosFijos))
             Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
@@ -46,6 +45,7 @@
             Dim DataGridViewCellStyle20 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim DataGridViewCellStyle21 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim DataGridViewCellStyle22 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormIngresoActivosFijos))
             Me.gpInfActfijo = New System.Windows.Forms.GroupBox()
             Me.dtpFechaActual = New System.Windows.Forms.DateTimePicker()
             Me.bntPuesto = New System.Windows.Forms.Button()
@@ -152,7 +152,6 @@
             Me.txtPermisoFuncionamiento = New System.Windows.Forms.TextBox()
             Me.Label13 = New System.Windows.Forms.Label()
             Me.Label12 = New System.Windows.Forms.Label()
-            Me.pbArmas = New System.Windows.Forms.PictureBox()
             Me.lblPerFunComConj = New System.Windows.Forms.Label()
             Me.lblPerOtorMinGob = New System.Windows.Forms.Label()
             Me.Label173 = New System.Windows.Forms.Label()
@@ -194,7 +193,6 @@
             Me.lblModelo = New System.Windows.Forms.Label()
             Me.txtSerieRadio = New System.Windows.Forms.TextBox()
             Me.lblSerie = New System.Windows.Forms.Label()
-            Me.pbRadios = New System.Windows.Forms.PictureBox()
             Me.tpVehiculo = New System.Windows.Forms.TabPage()
             Me.chNingunDispositivo = New System.Windows.Forms.CheckBox()
             Me.GroupBox7 = New System.Windows.Forms.GroupBox()
@@ -224,32 +222,18 @@
             Me.Label47 = New System.Windows.Forms.Label()
             Me.chNingunSeguro = New System.Windows.Forms.CheckBox()
             Me.dtpSoat = New System.Windows.Forms.DateTimePicker()
-            Me.Label8 = New System.Windows.Forms.Label()
             Me.txtTipoVehiculo = New System.Windows.Forms.TextBox()
-            Me.Label34 = New System.Windows.Forms.Label()
             Me.txtChasisVehiculo = New System.Windows.Forms.TextBox()
-            Me.Label33 = New System.Windows.Forms.Label()
             Me.txtCapacidadVehiculo = New System.Windows.Forms.TextBox()
-            Me.Label32 = New System.Windows.Forms.Label()
             Me.txtCilindrajeVehiculo = New System.Windows.Forms.TextBox()
-            Me.Label31 = New System.Windows.Forms.Label()
             Me.txtMotorVehiculo = New System.Windows.Forms.TextBox()
-            Me.Label30 = New System.Windows.Forms.Label()
             Me.txtPlacaVehiculo = New System.Windows.Forms.TextBox()
-            Me.Label29 = New System.Windows.Forms.Label()
-            Me.Label28 = New System.Windows.Forms.Label()
             Me.cbmAnoFabricacionVehiculo = New System.Windows.Forms.ComboBox()
-            Me.Label27 = New System.Windows.Forms.Label()
-            Me.Label26 = New System.Windows.Forms.Label()
             Me.txtModeloVehiculo = New System.Windows.Forms.TextBox()
             Me.cbmEstadoVehiculo = New System.Windows.Forms.ComboBox()
             Me.cbmColorVehiculo = New System.Windows.Forms.ComboBox()
             Me.cbmMarcaVehiculo = New System.Windows.Forms.ComboBox()
-            Me.Label24 = New System.Windows.Forms.Label()
             Me.txtSerieVehiculo = New System.Windows.Forms.TextBox()
-            Me.Label25 = New System.Windows.Forms.Label()
-            Me.pbVehiculo = New System.Windows.Forms.PictureBox()
-            Me.Label23 = New System.Windows.Forms.Label()
             Me.tpTerreno = New System.Windows.Forms.TabPage()
             Me.txtEstadoTerreno = New System.Windows.Forms.TextBox()
             Me.Label70 = New System.Windows.Forms.Label()
@@ -257,7 +241,6 @@
             Me.Label68 = New System.Windows.Forms.Label()
             Me.txtMedidaTerreno = New System.Windows.Forms.TextBox()
             Me.Label66 = New System.Windows.Forms.Label()
-            Me.PictureBox1 = New System.Windows.Forms.PictureBox()
             Me.tpEquiposComputo = New System.Windows.Forms.TabPage()
             Me.txtGarantiaComputo = New System.Windows.Forms.TextBox()
             Me.dtpCaducidadComputo = New System.Windows.Forms.DateTimePicker()
@@ -290,7 +273,6 @@
             Me.txtModeloEquipoComputo = New System.Windows.Forms.TextBox()
             Me.Label75 = New System.Windows.Forms.Label()
             Me.tpLibrosYcolecciones = New System.Windows.Forms.TabPage()
-            Me.PictureBox3 = New System.Windows.Forms.PictureBox()
             Me.cbmAñosEdicionLibros = New System.Windows.Forms.ComboBox()
             Me.Label43 = New System.Windows.Forms.Label()
             Me.Label44 = New System.Windows.Forms.Label()
@@ -323,7 +305,6 @@
             Me.venceOficina = New System.Windows.Forms.DataGridViewTextBoxColumn()
             Me.btnDelEquipoOficina = New System.Windows.Forms.Button()
             Me.btnAddEquipoOficina = New System.Windows.Forms.Button()
-            Me.pbEquiposOficina = New System.Windows.Forms.PictureBox()
             Me.Label102 = New System.Windows.Forms.Label()
             Me.txtSerieEquiposOficina = New System.Windows.Forms.TextBox()
             Me.cbmAñosEquiposOficina = New System.Windows.Forms.ComboBox()
@@ -353,7 +334,6 @@
             Me.vidaUtilMuebles = New System.Windows.Forms.DataGridViewTextBoxColumn()
             Me.btnDelMuebleOficina = New System.Windows.Forms.Button()
             Me.btnAddMuebleOficina = New System.Windows.Forms.Button()
-            Me.pbMueblesOficina = New System.Windows.Forms.PictureBox()
             Me.cbmAñosMueblesOficina = New System.Windows.Forms.ComboBox()
             Me.Label90 = New System.Windows.Forms.Label()
             Me.Label97 = New System.Windows.Forms.Label()
@@ -382,7 +362,6 @@
             Me.vidaUtilCocina = New System.Windows.Forms.DataGridViewTextBoxColumn()
             Me.btnDellEquipoCocina = New System.Windows.Forms.Button()
             Me.btnAddEquipoCocina = New System.Windows.Forms.Button()
-            Me.pbEquiposCocina = New System.Windows.Forms.PictureBox()
             Me.Label103 = New System.Windows.Forms.Label()
             Me.txtSerieEquiposCocina = New System.Windows.Forms.TextBox()
             Me.cbmAñosEquiposCocina = New System.Windows.Forms.ComboBox()
@@ -420,7 +399,6 @@
             Me.Label119 = New System.Windows.Forms.Label()
             Me.txtVoltajeEquiposAmbientacion = New System.Windows.Forms.TextBox()
             Me.txtAmperajeEquiposAmbientacion = New System.Windows.Forms.TextBox()
-            Me.pbEquiposAmbientacion = New System.Windows.Forms.PictureBox()
             Me.Label110 = New System.Windows.Forms.Label()
             Me.txtSerieEquiposAmbientacion = New System.Windows.Forms.TextBox()
             Me.cbmAñosEquiposAmbientacion = New System.Windows.Forms.ComboBox()
@@ -478,7 +456,6 @@
             Me.cbmColorEquiposComunicacion = New System.Windows.Forms.ComboBox()
             Me.Label128 = New System.Windows.Forms.Label()
             Me.cbmEstadoEquiposComunicacion = New System.Windows.Forms.ComboBox()
-            Me.pbEquiposComunicacion = New System.Windows.Forms.PictureBox()
             Me.tpEquiposSeguridadIndustrial = New System.Windows.Forms.TabPage()
             Me.lblEquipoSeguridadCount = New System.Windows.Forms.Label()
             Me.dgvEquipoSeguridad = New System.Windows.Forms.DataGridView()
@@ -511,7 +488,6 @@
             Me.cbmColorEquipoSeguridad = New System.Windows.Forms.ComboBox()
             Me.Label136 = New System.Windows.Forms.Label()
             Me.cbmEstadoEquipoSeguridad = New System.Windows.Forms.ComboBox()
-            Me.pbEquiposSeguridad = New System.Windows.Forms.PictureBox()
             Me.Label137 = New System.Windows.Forms.Label()
             Me.tpCamarasSeguridad = New System.Windows.Forms.TabPage()
             Me.txtGarantiaCamara = New System.Windows.Forms.TextBox()
@@ -553,7 +529,6 @@
             Me.cbmColorCamarasSeguridad = New System.Windows.Forms.ComboBox()
             Me.Label145 = New System.Windows.Forms.Label()
             Me.cbmEstadoCamarasSeguridad = New System.Windows.Forms.ComboBox()
-            Me.pbCamarasSeguridad = New System.Windows.Forms.PictureBox()
             Me.tpGeneradores = New System.Windows.Forms.TabPage()
             Me.Label158 = New System.Windows.Forms.Label()
             Me.txtAdicionalGeneradores = New System.Windows.Forms.TextBox()
@@ -577,7 +552,6 @@
             Me.cbmColorGeneradores = New System.Windows.Forms.ComboBox()
             Me.Label157 = New System.Windows.Forms.Label()
             Me.cbmEstadoGeneradores = New System.Windows.Forms.ComboBox()
-            Me.pbGeneradores = New System.Windows.Forms.PictureBox()
             Me.tpChalecos = New System.Windows.Forms.TabPage()
             Me.txtGarantiaChaleco = New System.Windows.Forms.TextBox()
             Me.chkGarantiaChaleco = New System.Windows.Forms.CheckBox()
@@ -619,7 +593,6 @@
             Me.cbmColorChaleco = New System.Windows.Forms.ComboBox()
             Me.Label166 = New System.Windows.Forms.Label()
             Me.cbmEstadoChaleco = New System.Windows.Forms.ComboBox()
-            Me.pbChaleco = New System.Windows.Forms.PictureBox()
             Me.tpSoftware = New System.Windows.Forms.TabPage()
             Me.txtProvedorSoftware = New System.Windows.Forms.TextBox()
             Me.Label171 = New System.Windows.Forms.Label()
@@ -629,7 +602,6 @@
             Me.Label169 = New System.Windows.Forms.Label()
             Me.txtDetalleSoftware = New System.Windows.Forms.TextBox()
             Me.Label168 = New System.Windows.Forms.Label()
-            Me.pbSoftware = New System.Windows.Forms.PictureBox()
             Me.Label2 = New System.Windows.Forms.Label()
             Me.txtResponsable = New System.Windows.Forms.TextBox()
             Me.Label1 = New System.Windows.Forms.Label()
@@ -641,58 +613,61 @@
             Me.ButtonCancelar = New System.Windows.Forms.ToolStripMenuItem()
             Me.btnAgregarCategoria = New System.Windows.Forms.ToolStripMenuItem()
             Me.btnParametros = New System.Windows.Forms.ToolStripMenuItem()
-            Me.gpInfActfijo.SuspendLayout
-            Me.GroupBox6.SuspendLayout
-            Me.tcDatos.SuspendLayout
-            Me.TabPage2.SuspendLayout
-            Me.GroupBox2.SuspendLayout
-            Me.tcVarios.SuspendLayout
-            Me.tpArmas.SuspendLayout
-            CType(Me.dgvArmas, System.ComponentModel.ISupportInitialize).BeginInit
-            CType(Me.pbArmas, System.ComponentModel.ISupportInitialize).BeginInit
-            Me.tpRadios.SuspendLayout
-            CType(Me.dgvRadios, System.ComponentModel.ISupportInitialize).BeginInit
-            CType(Me.pbRadios, System.ComponentModel.ISupportInitialize).BeginInit
-            Me.tpVehiculo.SuspendLayout
-            Me.GroupBox7.SuspendLayout
-            Me.GroupBox1.SuspendLayout
-            CType(Me.pbVehiculo, System.ComponentModel.ISupportInitialize).BeginInit
-            Me.tpTerreno.SuspendLayout
-            CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit
-            Me.tpEquiposComputo.SuspendLayout
-            CType(Me.dgvEquiposComputo, System.ComponentModel.ISupportInitialize).BeginInit
-            Me.tpLibrosYcolecciones.SuspendLayout
-            CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit
-            Me.tpEquiposOficina.SuspendLayout
-            CType(Me.dgvEquiposOficina, System.ComponentModel.ISupportInitialize).BeginInit
-            CType(Me.pbEquiposOficina, System.ComponentModel.ISupportInitialize).BeginInit
-            Me.tpMueblesOficina.SuspendLayout
-            CType(Me.dgvMuebleOficina, System.ComponentModel.ISupportInitialize).BeginInit
-            CType(Me.pbMueblesOficina, System.ComponentModel.ISupportInitialize).BeginInit
-            Me.tpEquiposCocina.SuspendLayout
-            CType(Me.dgvEquipoCocina, System.ComponentModel.ISupportInitialize).BeginInit
-            CType(Me.pbEquiposCocina, System.ComponentModel.ISupportInitialize).BeginInit
-            Me.TabPage4.SuspendLayout
-            CType(Me.dgvEquipoAmbientacion, System.ComponentModel.ISupportInitialize).BeginInit
-            CType(Me.pbEquiposAmbientacion, System.ComponentModel.ISupportInitialize).BeginInit
-            Me.TabPage1.SuspendLayout
-            CType(Me.dgvEquipoComunicacion, System.ComponentModel.ISupportInitialize).BeginInit
-            CType(Me.pbEquiposComunicacion, System.ComponentModel.ISupportInitialize).BeginInit
-            Me.tpEquiposSeguridadIndustrial.SuspendLayout
-            CType(Me.dgvEquipoSeguridad, System.ComponentModel.ISupportInitialize).BeginInit
-            CType(Me.pbEquiposSeguridad, System.ComponentModel.ISupportInitialize).BeginInit
-            Me.tpCamarasSeguridad.SuspendLayout
-            CType(Me.dgvCamara, System.ComponentModel.ISupportInitialize).BeginInit
-            CType(Me.pbCamarasSeguridad, System.ComponentModel.ISupportInitialize).BeginInit
-            Me.tpGeneradores.SuspendLayout
-            CType(Me.pbGeneradores, System.ComponentModel.ISupportInitialize).BeginInit
-            Me.tpChalecos.SuspendLayout
-            CType(Me.dgvChaleco, System.ComponentModel.ISupportInitialize).BeginInit
-            CType(Me.pbChaleco, System.ComponentModel.ISupportInitialize).BeginInit
-            Me.tpSoftware.SuspendLayout
-            CType(Me.pbSoftware, System.ComponentModel.ISupportInitialize).BeginInit
-            Me.MenuStrip1.SuspendLayout
-            Me.SuspendLayout
+            Me.KryptonGroupBox1 = New ComponentFactory.Krypton.Toolkit.KryptonGroupBox()
+            Me.KryptonLabel1 = New ComponentFactory.Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel2 = New ComponentFactory.Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel3 = New ComponentFactory.Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel4 = New ComponentFactory.Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel5 = New ComponentFactory.Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel6 = New ComponentFactory.Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel7 = New ComponentFactory.Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel8 = New ComponentFactory.Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel9 = New ComponentFactory.Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel10 = New ComponentFactory.Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel11 = New ComponentFactory.Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel12 = New ComponentFactory.Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel13 = New ComponentFactory.Krypton.Toolkit.KryptonLabel()
+            Me.gpInfActfijo.SuspendLayout()
+            Me.GroupBox6.SuspendLayout()
+            Me.tcDatos.SuspendLayout()
+            Me.TabPage2.SuspendLayout()
+            Me.GroupBox2.SuspendLayout()
+            Me.tcVarios.SuspendLayout()
+            Me.tpArmas.SuspendLayout()
+            CType(Me.dgvArmas, System.ComponentModel.ISupportInitialize).BeginInit()
+            Me.tpRadios.SuspendLayout()
+            CType(Me.dgvRadios, System.ComponentModel.ISupportInitialize).BeginInit()
+            Me.tpVehiculo.SuspendLayout()
+            Me.GroupBox7.SuspendLayout()
+            Me.GroupBox1.SuspendLayout()
+            Me.tpTerreno.SuspendLayout()
+            Me.tpEquiposComputo.SuspendLayout()
+            CType(Me.dgvEquiposComputo, System.ComponentModel.ISupportInitialize).BeginInit()
+            Me.tpLibrosYcolecciones.SuspendLayout()
+            Me.tpEquiposOficina.SuspendLayout()
+            CType(Me.dgvEquiposOficina, System.ComponentModel.ISupportInitialize).BeginInit()
+            Me.tpMueblesOficina.SuspendLayout()
+            CType(Me.dgvMuebleOficina, System.ComponentModel.ISupportInitialize).BeginInit()
+            Me.tpEquiposCocina.SuspendLayout()
+            CType(Me.dgvEquipoCocina, System.ComponentModel.ISupportInitialize).BeginInit()
+            Me.TabPage4.SuspendLayout()
+            CType(Me.dgvEquipoAmbientacion, System.ComponentModel.ISupportInitialize).BeginInit()
+            Me.TabPage1.SuspendLayout()
+            CType(Me.dgvEquipoComunicacion, System.ComponentModel.ISupportInitialize).BeginInit()
+            Me.tpEquiposSeguridadIndustrial.SuspendLayout()
+            CType(Me.dgvEquipoSeguridad, System.ComponentModel.ISupportInitialize).BeginInit()
+            Me.tpCamarasSeguridad.SuspendLayout()
+            CType(Me.dgvCamara, System.ComponentModel.ISupportInitialize).BeginInit()
+            Me.tpGeneradores.SuspendLayout()
+            Me.tpChalecos.SuspendLayout()
+            CType(Me.dgvChaleco, System.ComponentModel.ISupportInitialize).BeginInit()
+            Me.tpSoftware.SuspendLayout()
+            Me.MenuStrip1.SuspendLayout()
+            CType(Me.KryptonGroupBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType(Me.KryptonGroupBox1.Panel, System.ComponentModel.ISupportInitialize).BeginInit()
+            Me.KryptonGroupBox1.Panel.SuspendLayout()
+            Me.KryptonGroupBox1.SuspendLayout()
+            Me.SuspendLayout()
             '
             'gpInfActfijo
             '
@@ -735,7 +710,7 @@
             Me.dtpFechaActual.Enabled = False
             Me.dtpFechaActual.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.dtpFechaActual.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-            Me.dtpFechaActual.Location = New System.Drawing.Point(486, 18)
+            Me.dtpFechaActual.Location = New System.Drawing.Point(423, 18)
             Me.dtpFechaActual.Name = "dtpFechaActual"
             Me.dtpFechaActual.Size = New System.Drawing.Size(120, 21)
             Me.dtpFechaActual.TabIndex = 222
@@ -748,7 +723,7 @@
             Me.bntPuesto.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.bntPuesto.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.bntPuesto.Image = Global.syscisepro.My.Resources.Resources.location_on_24dp_FILL0_wght400_GRAD0_opsz24
-            Me.bntPuesto.Location = New System.Drawing.Point(960, 65)
+            Me.bntPuesto.Location = New System.Drawing.Point(786, 65)
             Me.bntPuesto.Name = "bntPuesto"
             Me.bntPuesto.Size = New System.Drawing.Size(25, 25)
             Me.bntPuesto.TabIndex = 221
@@ -760,9 +735,9 @@
             Me.txtSitio.BackColor = System.Drawing.Color.White
             Me.txtSitio.Enabled = False
             Me.txtSitio.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtSitio.Location = New System.Drawing.Point(486, 67)
+            Me.txtSitio.Location = New System.Drawing.Point(423, 67)
             Me.txtSitio.Name = "txtSitio"
-            Me.txtSitio.Size = New System.Drawing.Size(472, 21)
+            Me.txtSitio.Size = New System.Drawing.Size(352, 21)
             Me.txtSitio.TabIndex = 220
             '
             'cbmSecuencial
@@ -794,7 +769,7 @@
             '
             Me.Label172.AutoSize = True
             Me.Label172.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label172.Location = New System.Drawing.Point(394, 71)
+            Me.Label172.Location = New System.Drawing.Point(331, 71)
             Me.Label172.Name = "Label172"
             Me.Label172.Size = New System.Drawing.Size(38, 13)
             Me.Label172.TabIndex = 219
@@ -804,7 +779,7 @@
             '
             Me.dtpFechaMantenimiento.Enabled = False
             Me.dtpFechaMantenimiento.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.dtpFechaMantenimiento.Location = New System.Drawing.Point(735, 95)
+            Me.dtpFechaMantenimiento.Location = New System.Drawing.Point(527, 94)
             Me.dtpFechaMantenimiento.Name = "dtpFechaMantenimiento"
             Me.dtpFechaMantenimiento.Size = New System.Drawing.Size(248, 21)
             Me.dtpFechaMantenimiento.TabIndex = 217
@@ -854,7 +829,7 @@
             Me.cbmMantenimiento.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cbmMantenimiento.FormattingEnabled = True
             Me.cbmMantenimiento.Items.AddRange(New Object() {"SI", "NO"})
-            Me.cbmMantenimiento.Location = New System.Drawing.Point(505, 95)
+            Me.cbmMantenimiento.Location = New System.Drawing.Point(442, 95)
             Me.cbmMantenimiento.Name = "cbmMantenimiento"
             Me.cbmMantenimiento.Size = New System.Drawing.Size(62, 21)
             Me.cbmMantenimiento.TabIndex = 214
@@ -908,7 +883,7 @@
             Me.GroupBox6.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.GroupBox6.Location = New System.Drawing.Point(6, 285)
             Me.GroupBox6.Name = "GroupBox6"
-            Me.GroupBox6.Size = New System.Drawing.Size(993, 76)
+            Me.GroupBox6.Size = New System.Drawing.Size(878, 76)
             Me.GroupBox6.TabIndex = 73
             Me.GroupBox6.TabStop = False
             Me.GroupBox6.Text = "DATOS CONTABLES"
@@ -917,7 +892,7 @@
             '
             Me.cbxVidaUtil.AutoSize = True
             Me.cbxVidaUtil.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.cbxVidaUtil.Location = New System.Drawing.Point(883, 50)
+            Me.cbxVidaUtil.Location = New System.Drawing.Point(773, 50)
             Me.cbxVidaUtil.Name = "cbxVidaUtil"
             Me.cbxVidaUtil.Size = New System.Drawing.Size(100, 17)
             Me.cbxVidaUtil.TabIndex = 161
@@ -928,7 +903,7 @@
             '
             Me.lblValorResidual.AutoSize = True
             Me.lblValorResidual.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.lblValorResidual.Location = New System.Drawing.Point(461, 50)
+            Me.lblValorResidual.Location = New System.Drawing.Point(394, 50)
             Me.lblValorResidual.Name = "lblValorResidual"
             Me.lblValorResidual.Size = New System.Drawing.Size(78, 13)
             Me.lblValorResidual.TabIndex = 160
@@ -939,7 +914,7 @@
             Me.txtAñosVidaUtil.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
             Me.txtAñosVidaUtil.Enabled = False
             Me.txtAñosVidaUtil.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtAñosVidaUtil.Location = New System.Drawing.Point(743, 47)
+            Me.txtAñosVidaUtil.Location = New System.Drawing.Point(633, 47)
             Me.txtAñosVidaUtil.Name = "txtAñosVidaUtil"
             Me.txtAñosVidaUtil.Size = New System.Drawing.Size(112, 21)
             Me.txtAñosVidaUtil.TabIndex = 159
@@ -948,7 +923,7 @@
             '
             Me.Label3.AutoSize = True
             Me.Label3.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label3.Location = New System.Drawing.Point(665, 50)
+            Me.Label3.Location = New System.Drawing.Point(555, 50)
             Me.Label3.Name = "Label3"
             Me.Label3.Size = New System.Drawing.Size(60, 13)
             Me.Label3.TabIndex = 158
@@ -957,9 +932,10 @@
             'dtpFechaAdquisicion
             '
             Me.dtpFechaAdquisicion.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.dtpFechaAdquisicion.Location = New System.Drawing.Point(743, 19)
+            Me.dtpFechaAdquisicion.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+            Me.dtpFechaAdquisicion.Location = New System.Drawing.Point(633, 19)
             Me.dtpFechaAdquisicion.Name = "dtpFechaAdquisicion"
-            Me.dtpFechaAdquisicion.Size = New System.Drawing.Size(234, 21)
+            Me.dtpFechaAdquisicion.Size = New System.Drawing.Size(128, 21)
             Me.dtpFechaAdquisicion.TabIndex = 157
             Me.dtpFechaAdquisicion.Value = New Date(2023, 11, 16, 0, 0, 0, 0)
             '
@@ -995,7 +971,7 @@
             '
             Me.Label65.AutoSize = True
             Me.Label65.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label65.Location = New System.Drawing.Point(665, 22)
+            Me.Label65.Location = New System.Drawing.Point(555, 22)
             Me.Label65.Name = "Label65"
             Me.Label65.Size = New System.Drawing.Size(78, 13)
             Me.Label65.TabIndex = 145
@@ -1007,7 +983,7 @@
             Me.txtValorResidual.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
             Me.txtValorResidual.Enabled = False
             Me.txtValorResidual.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtValorResidual.Location = New System.Drawing.Point(545, 47)
+            Me.txtValorResidual.Location = New System.Drawing.Point(476, 47)
             Me.txtValorResidual.Name = "txtValorResidual"
             Me.txtValorResidual.Size = New System.Drawing.Size(75, 21)
             Me.txtValorResidual.TabIndex = 144
@@ -1017,7 +993,7 @@
             Me.txtValorAdicional.BackColor = System.Drawing.Color.White
             Me.txtValorAdicional.Enabled = False
             Me.txtValorAdicional.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtValorAdicional.Location = New System.Drawing.Point(545, 19)
+            Me.txtValorAdicional.Location = New System.Drawing.Point(476, 19)
             Me.txtValorAdicional.Name = "txtValorAdicional"
             Me.txtValorAdicional.Size = New System.Drawing.Size(75, 21)
             Me.txtValorAdicional.TabIndex = 142
@@ -1026,7 +1002,7 @@
             '
             Me.Label63.AutoSize = True
             Me.Label63.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label63.Location = New System.Drawing.Point(461, 24)
+            Me.Label63.Location = New System.Drawing.Point(393, 24)
             Me.Label63.Name = "Label63"
             Me.Label63.Size = New System.Drawing.Size(72, 13)
             Me.Label63.TabIndex = 141
@@ -1036,16 +1012,16 @@
             '
             Me.txtValorFactura.BackColor = System.Drawing.Color.White
             Me.txtValorFactura.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtValorFactura.Location = New System.Drawing.Point(341, 45)
+            Me.txtValorFactura.Location = New System.Drawing.Point(300, 45)
             Me.txtValorFactura.Name = "txtValorFactura"
-            Me.txtValorFactura.Size = New System.Drawing.Size(99, 21)
+            Me.txtValorFactura.Size = New System.Drawing.Size(88, 21)
             Me.txtValorFactura.TabIndex = 140
             '
             'Label62
             '
             Me.Label62.AutoSize = True
             Me.Label62.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label62.Location = New System.Drawing.Point(257, 48)
+            Me.Label62.Location = New System.Drawing.Point(216, 48)
             Me.Label62.Name = "Label62"
             Me.Label62.Size = New System.Drawing.Size(74, 13)
             Me.Label62.TabIndex = 139
@@ -1055,16 +1031,16 @@
             '
             Me.txtNumeroFactura.BackColor = System.Drawing.Color.White
             Me.txtNumeroFactura.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtNumeroFactura.Location = New System.Drawing.Point(327, 19)
+            Me.txtNumeroFactura.Location = New System.Drawing.Point(300, 19)
             Me.txtNumeroFactura.Name = "txtNumeroFactura"
-            Me.txtNumeroFactura.Size = New System.Drawing.Size(114, 21)
+            Me.txtNumeroFactura.Size = New System.Drawing.Size(88, 21)
             Me.txtNumeroFactura.TabIndex = 138
             '
             'Label61
             '
             Me.Label61.AutoSize = True
             Me.Label61.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label61.Location = New System.Drawing.Point(257, 22)
+            Me.Label61.Location = New System.Drawing.Point(216, 22)
             Me.Label61.Name = "Label61"
             Me.Label61.Size = New System.Drawing.Size(72, 13)
             Me.Label61.TabIndex = 137
@@ -1076,7 +1052,7 @@
             Me.txtOrdenCompra.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtOrdenCompra.Location = New System.Drawing.Point(119, 45)
             Me.txtOrdenCompra.Name = "txtOrdenCompra"
-            Me.txtOrdenCompra.Size = New System.Drawing.Size(112, 21)
+            Me.txtOrdenCompra.Size = New System.Drawing.Size(93, 21)
             Me.txtOrdenCompra.TabIndex = 136
             '
             'Label60
@@ -1095,7 +1071,7 @@
             Me.txtCodigoArancel.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtCodigoArancel.Location = New System.Drawing.Point(119, 17)
             Me.txtCodigoArancel.Name = "txtCodigoArancel"
-            Me.txtCodigoArancel.Size = New System.Drawing.Size(112, 21)
+            Me.txtCodigoArancel.Size = New System.Drawing.Size(93, 21)
             Me.txtCodigoArancel.TabIndex = 134
             '
             'Label51
@@ -1131,7 +1107,7 @@
             Me.cbmEstadoActivoActual.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cbmEstadoActivoActual.FormattingEnabled = True
             Me.cbmEstadoActivoActual.Items.AddRange(New Object() {"BUENO", "REGULAR", "MALO"})
-            Me.cbmEstadoActivoActual.Location = New System.Drawing.Point(901, 19)
+            Me.cbmEstadoActivoActual.Location = New System.Drawing.Point(711, 19)
             Me.cbmEstadoActivoActual.Name = "cbmEstadoActivoActual"
             Me.cbmEstadoActivoActual.Size = New System.Drawing.Size(82, 21)
             Me.cbmEstadoActivoActual.TabIndex = 212
@@ -1140,7 +1116,7 @@
             '
             Me.lblEstadoActualACtivoFijo.AutoSize = True
             Me.lblEstadoActualACtivoFijo.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.lblEstadoActualACtivoFijo.Location = New System.Drawing.Point(840, 21)
+            Me.lblEstadoActualACtivoFijo.Location = New System.Drawing.Point(650, 21)
             Me.lblEstadoActualACtivoFijo.Name = "lblEstadoActualACtivoFijo"
             Me.lblEstadoActualACtivoFijo.Size = New System.Drawing.Size(55, 13)
             Me.lblEstadoActualACtivoFijo.TabIndex = 120
@@ -1151,7 +1127,7 @@
             Me.txtIdActivoFijo.BackColor = System.Drawing.Color.White
             Me.txtIdActivoFijo.Enabled = False
             Me.txtIdActivoFijo.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtIdActivoFijo.Location = New System.Drawing.Point(680, 18)
+            Me.txtIdActivoFijo.Location = New System.Drawing.Point(578, 18)
             Me.txtIdActivoFijo.Name = "txtIdActivoFijo"
             Me.txtIdActivoFijo.Size = New System.Drawing.Size(62, 21)
             Me.txtIdActivoFijo.TabIndex = 87
@@ -1160,10 +1136,10 @@
             '
             Me.tcDatos.Controls.Add(Me.TabPage2)
             Me.tcDatos.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.tcDatos.Location = New System.Drawing.Point(6, 111)
+            Me.tcDatos.Location = New System.Drawing.Point(2, 118)
             Me.tcDatos.Name = "tcDatos"
             Me.tcDatos.SelectedIndex = 0
-            Me.tcDatos.Size = New System.Drawing.Size(997, 172)
+            Me.tcDatos.Size = New System.Drawing.Size(882, 172)
             Me.tcDatos.TabIndex = 71
             '
             'TabPage2
@@ -1191,7 +1167,7 @@
             Me.TabPage2.Location = New System.Drawing.Point(4, 22)
             Me.TabPage2.Name = "TabPage2"
             Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-            Me.TabPage2.Size = New System.Drawing.Size(989, 146)
+            Me.TabPage2.Size = New System.Drawing.Size(874, 146)
             Me.TabPage2.TabIndex = 0
             Me.TabPage2.Text = "DATOS GENERALES"
             Me.TabPage2.UseVisualStyleBackColor = True
@@ -1208,7 +1184,7 @@
             Me.GroupBox2.Controls.Add(Me.Label41)
             Me.GroupBox2.Controls.Add(Me.Label40)
             Me.GroupBox2.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.GroupBox2.Location = New System.Drawing.Point(690, 2)
+            Me.GroupBox2.Location = New System.Drawing.Point(557, 2)
             Me.GroupBox2.Name = "GroupBox2"
             Me.GroupBox2.Size = New System.Drawing.Size(296, 141)
             Me.GroupBox2.TabIndex = 107
@@ -1324,7 +1300,7 @@
             Me.txtNombreProvedor.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtNombreProvedor.Location = New System.Drawing.Point(305, 72)
             Me.txtNombreProvedor.Name = "txtNombreProvedor"
-            Me.txtNombreProvedor.Size = New System.Drawing.Size(379, 21)
+            Me.txtNombreProvedor.Size = New System.Drawing.Size(246, 21)
             Me.txtNombreProvedor.TabIndex = 90
             '
             'Label11
@@ -1344,7 +1320,7 @@
             Me.txtNombreCustodio.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtNombreCustodio.Location = New System.Drawing.Point(305, 117)
             Me.txtNombreCustodio.Name = "txtNombreCustodio"
-            Me.txtNombreCustodio.Size = New System.Drawing.Size(379, 21)
+            Me.txtNombreCustodio.Size = New System.Drawing.Size(246, 21)
             Me.txtNombreCustodio.TabIndex = 88
             '
             'Label10
@@ -1364,7 +1340,7 @@
             Me.txtNombreActivo.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtNombreActivo.Location = New System.Drawing.Point(305, 33)
             Me.txtNombreActivo.Name = "txtNombreActivo"
-            Me.txtNombreActivo.Size = New System.Drawing.Size(379, 21)
+            Me.txtNombreActivo.Size = New System.Drawing.Size(246, 21)
             Me.txtNombreActivo.TabIndex = 86
             '
             'Label9
@@ -1527,7 +1503,7 @@
             Me.tcVarios.Location = New System.Drawing.Point(6, 364)
             Me.tcVarios.Name = "tcVarios"
             Me.tcVarios.SelectedIndex = 0
-            Me.tcVarios.Size = New System.Drawing.Size(997, 286)
+            Me.tcVarios.Size = New System.Drawing.Size(878, 286)
             Me.tcVarios.TabIndex = 69
             '
             'tpArmas
@@ -1553,7 +1529,6 @@
             Me.tpArmas.Controls.Add(Me.txtPermisoFuncionamiento)
             Me.tpArmas.Controls.Add(Me.Label13)
             Me.tpArmas.Controls.Add(Me.Label12)
-            Me.tpArmas.Controls.Add(Me.pbArmas)
             Me.tpArmas.Controls.Add(Me.lblPerFunComConj)
             Me.tpArmas.Controls.Add(Me.lblPerOtorMinGob)
             Me.tpArmas.Controls.Add(Me.Label173)
@@ -1561,7 +1536,7 @@
             Me.tpArmas.Location = New System.Drawing.Point(4, 22)
             Me.tpArmas.Name = "tpArmas"
             Me.tpArmas.Padding = New System.Windows.Forms.Padding(3)
-            Me.tpArmas.Size = New System.Drawing.Size(989, 260)
+            Me.tpArmas.Size = New System.Drawing.Size(870, 260)
             Me.tpArmas.TabIndex = 4
             Me.tpArmas.Text = "ARMAS"
             Me.tpArmas.UseVisualStyleBackColor = True
@@ -1570,7 +1545,7 @@
             '
             Me.lblArmasCount.AutoSize = True
             Me.lblArmasCount.ForeColor = System.Drawing.Color.MediumBlue
-            Me.lblArmasCount.Location = New System.Drawing.Point(747, 241)
+            Me.lblArmasCount.Location = New System.Drawing.Point(623, 241)
             Me.lblArmasCount.Name = "lblArmasCount"
             Me.lblArmasCount.Size = New System.Drawing.Size(236, 13)
             Me.lblArmasCount.TabIndex = 290
@@ -1596,13 +1571,13 @@
             DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
             DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
             Me.dgvArmas.DefaultCellStyle = DataGridViewCellStyle2
-            Me.dgvArmas.Location = New System.Drawing.Point(450, 37)
+            Me.dgvArmas.Location = New System.Drawing.Point(299, 37)
             Me.dgvArmas.MultiSelect = False
             Me.dgvArmas.Name = "dgvArmas"
             Me.dgvArmas.ReadOnly = True
             Me.dgvArmas.RowHeadersVisible = False
             Me.dgvArmas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvArmas.Size = New System.Drawing.Size(534, 199)
+            Me.dgvArmas.Size = New System.Drawing.Size(560, 199)
             Me.dgvArmas.TabIndex = 289
             '
             'DataGridViewTextBoxColumn1
@@ -1696,7 +1671,7 @@
             Me.btnEliminarArma.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.btnEliminarArma.Font = New System.Drawing.Font("Calibri", 9.75!)
             Me.btnEliminarArma.Image = Global.syscisepro.My.Resources.Resources.do_not_disturb_on_24dp_FILL0_wght400_GRAD0_opsz24
-            Me.btnEliminarArma.Location = New System.Drawing.Point(951, 6)
+            Me.btnEliminarArma.Location = New System.Drawing.Point(827, 6)
             Me.btnEliminarArma.Name = "btnEliminarArma"
             Me.btnEliminarArma.Size = New System.Drawing.Size(25, 25)
             Me.btnEliminarArma.TabIndex = 288
@@ -1710,7 +1685,7 @@
             Me.btnAgregarArma.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.btnAgregarArma.Font = New System.Drawing.Font("Calibri", 9.75!)
             Me.btnAgregarArma.Image = Global.syscisepro.My.Resources.Resources.add_circle_24dp_FILL0_wght400_GRAD0_opsz24__3_
-            Me.btnAgregarArma.Location = New System.Drawing.Point(920, 6)
+            Me.btnAgregarArma.Location = New System.Drawing.Point(796, 6)
             Me.btnAgregarArma.Name = "btnAgregarArma"
             Me.btnAgregarArma.Size = New System.Drawing.Size(25, 25)
             Me.btnAgregarArma.TabIndex = 287
@@ -1756,9 +1731,10 @@
             '
             Me.dtpCaducidadMatricula.Enabled = False
             Me.dtpCaducidadMatricula.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.dtpCaducidadMatricula.Location = New System.Drawing.Point(203, 232)
+            Me.dtpCaducidadMatricula.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+            Me.dtpCaducidadMatricula.Location = New System.Drawing.Point(189, 232)
             Me.dtpCaducidadMatricula.Name = "dtpCaducidadMatricula"
-            Me.dtpCaducidadMatricula.Size = New System.Drawing.Size(241, 22)
+            Me.dtpCaducidadMatricula.Size = New System.Drawing.Size(104, 22)
             Me.dtpCaducidadMatricula.TabIndex = 134
             Me.dtpCaducidadMatricula.Value = New Date(2023, 11, 15, 0, 0, 0, 0)
             '
@@ -1767,9 +1743,10 @@
             Me.dtpCaducidadTenencia.CalendarTitleForeColor = System.Drawing.SystemColors.Control
             Me.dtpCaducidadTenencia.Enabled = False
             Me.dtpCaducidadTenencia.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.dtpCaducidadTenencia.Location = New System.Drawing.Point(203, 172)
+            Me.dtpCaducidadTenencia.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+            Me.dtpCaducidadTenencia.Location = New System.Drawing.Point(189, 172)
             Me.dtpCaducidadTenencia.Name = "dtpCaducidadTenencia"
-            Me.dtpCaducidadTenencia.Size = New System.Drawing.Size(241, 22)
+            Me.dtpCaducidadTenencia.Size = New System.Drawing.Size(102, 22)
             Me.dtpCaducidadTenencia.TabIndex = 133
             Me.dtpCaducidadTenencia.Value = New Date(2023, 11, 15, 0, 0, 0, 0)
             '
@@ -1779,7 +1756,7 @@
             Me.Label19.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.Label19.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Label19.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-            Me.Label19.Location = New System.Drawing.Point(125, 239)
+            Me.Label19.Location = New System.Drawing.Point(111, 239)
             Me.Label19.Name = "Label19"
             Me.Label19.Size = New System.Drawing.Size(73, 13)
             Me.Label19.TabIndex = 131
@@ -1791,7 +1768,7 @@
             Me.Label20.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.Label20.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Label20.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-            Me.Label20.Location = New System.Drawing.Point(124, 176)
+            Me.Label20.Location = New System.Drawing.Point(110, 176)
             Me.Label20.Name = "Label20"
             Me.Label20.Size = New System.Drawing.Size(73, 13)
             Me.Label20.TabIndex = 130
@@ -1801,9 +1778,10 @@
             '
             Me.dtpAceptacionMatricula.Enabled = False
             Me.dtpAceptacionMatricula.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.dtpAceptacionMatricula.Location = New System.Drawing.Point(203, 208)
+            Me.dtpAceptacionMatricula.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+            Me.dtpAceptacionMatricula.Location = New System.Drawing.Point(189, 208)
             Me.dtpAceptacionMatricula.Name = "dtpAceptacionMatricula"
-            Me.dtpAceptacionMatricula.Size = New System.Drawing.Size(241, 22)
+            Me.dtpAceptacionMatricula.Size = New System.Drawing.Size(104, 22)
             Me.dtpAceptacionMatricula.TabIndex = 128
             Me.dtpAceptacionMatricula.Value = New Date(2023, 11, 15, 0, 0, 0, 0)
             '
@@ -1812,9 +1790,10 @@
             Me.dtpAceptacionTenencia.CalendarTitleForeColor = System.Drawing.SystemColors.Control
             Me.dtpAceptacionTenencia.Enabled = False
             Me.dtpAceptacionTenencia.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.dtpAceptacionTenencia.Location = New System.Drawing.Point(203, 148)
+            Me.dtpAceptacionTenencia.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+            Me.dtpAceptacionTenencia.Location = New System.Drawing.Point(189, 148)
             Me.dtpAceptacionTenencia.Name = "dtpAceptacionTenencia"
-            Me.dtpAceptacionTenencia.Size = New System.Drawing.Size(241, 22)
+            Me.dtpAceptacionTenencia.Size = New System.Drawing.Size(102, 22)
             Me.dtpAceptacionTenencia.TabIndex = 127
             Me.dtpAceptacionTenencia.Value = New Date(2023, 11, 15, 0, 0, 0, 0)
             '
@@ -1824,7 +1803,7 @@
             Me.Label15.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.Label15.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Label15.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-            Me.Label15.Location = New System.Drawing.Point(125, 215)
+            Me.Label15.Location = New System.Drawing.Point(111, 215)
             Me.Label15.Name = "Label15"
             Me.Label15.Size = New System.Drawing.Size(75, 13)
             Me.Label15.TabIndex = 125
@@ -1836,7 +1815,7 @@
             Me.Label17.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.Label17.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Label17.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-            Me.Label17.Location = New System.Drawing.Point(124, 155)
+            Me.Label17.Location = New System.Drawing.Point(110, 155)
             Me.Label17.Name = "Label17"
             Me.Label17.Size = New System.Drawing.Size(75, 13)
             Me.Label17.TabIndex = 124
@@ -1912,16 +1891,6 @@
             Me.Label12.TabIndex = 118
             Me.Label12.Text = "TENENCIA N°:"
             '
-            'pbArmas
-            '
-            Me.pbArmas.Image = CType(resources.GetObject("pbArmas.Image"), System.Drawing.Image)
-            Me.pbArmas.Location = New System.Drawing.Point(231, 8)
-            Me.pbArmas.Name = "pbArmas"
-            Me.pbArmas.Size = New System.Drawing.Size(214, 134)
-            Me.pbArmas.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-            Me.pbArmas.TabIndex = 137
-            Me.pbArmas.TabStop = False
-            '
             'lblPerFunComConj
             '
             Me.lblPerFunComConj.AutoSize = True
@@ -1980,12 +1949,11 @@
             Me.tpRadios.Controls.Add(Me.lblModelo)
             Me.tpRadios.Controls.Add(Me.txtSerieRadio)
             Me.tpRadios.Controls.Add(Me.lblSerie)
-            Me.tpRadios.Controls.Add(Me.pbRadios)
             Me.tpRadios.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.tpRadios.Location = New System.Drawing.Point(4, 22)
             Me.tpRadios.Name = "tpRadios"
             Me.tpRadios.Padding = New System.Windows.Forms.Padding(3)
-            Me.tpRadios.Size = New System.Drawing.Size(989, 260)
+            Me.tpRadios.Size = New System.Drawing.Size(870, 260)
             Me.tpRadios.TabIndex = 5
             Me.tpRadios.Text = "RADIOS"
             Me.tpRadios.UseVisualStyleBackColor = True
@@ -1993,7 +1961,7 @@
             'txtGarantia
             '
             Me.txtGarantia.Enabled = False
-            Me.txtGarantia.Location = New System.Drawing.Point(541, 16)
+            Me.txtGarantia.Location = New System.Drawing.Point(413, 16)
             Me.txtGarantia.Name = "txtGarantia"
             Me.txtGarantia.Size = New System.Drawing.Size(100, 22)
             Me.txtGarantia.TabIndex = 301
@@ -2002,7 +1970,7 @@
             '
             Me.chkGarantiaRadio.AutoSize = True
             Me.chkGarantiaRadio.Enabled = False
-            Me.chkGarantiaRadio.Location = New System.Drawing.Point(450, 18)
+            Me.chkGarantiaRadio.Location = New System.Drawing.Point(301, 18)
             Me.chkGarantiaRadio.Name = "chkGarantiaRadio"
             Me.chkGarantiaRadio.Size = New System.Drawing.Size(79, 17)
             Me.chkGarantiaRadio.TabIndex = 300
@@ -2012,7 +1980,7 @@
             'btnGarantiaRadio
             '
             Me.btnGarantiaRadio.Enabled = False
-            Me.btnGarantiaRadio.Location = New System.Drawing.Point(661, 14)
+            Me.btnGarantiaRadio.Location = New System.Drawing.Point(533, 14)
             Me.btnGarantiaRadio.Name = "btnGarantiaRadio"
             Me.btnGarantiaRadio.Size = New System.Drawing.Size(33, 23)
             Me.btnGarantiaRadio.TabIndex = 299
@@ -2024,7 +1992,7 @@
             Me.lblRadiosCount.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.lblRadiosCount.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.lblRadiosCount.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
-            Me.lblRadiosCount.Location = New System.Drawing.Point(450, 233)
+            Me.lblRadiosCount.Location = New System.Drawing.Point(346, 233)
             Me.lblRadiosCount.Name = "lblRadiosCount"
             Me.lblRadiosCount.Size = New System.Drawing.Size(533, 19)
             Me.lblRadiosCount.TabIndex = 298
@@ -2051,13 +2019,13 @@
             DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
             DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
             Me.dgvRadios.DefaultCellStyle = DataGridViewCellStyle4
-            Me.dgvRadios.Location = New System.Drawing.Point(451, 46)
+            Me.dgvRadios.Location = New System.Drawing.Point(321, 46)
             Me.dgvRadios.MultiSelect = False
             Me.dgvRadios.Name = "dgvRadios"
             Me.dgvRadios.ReadOnly = True
             Me.dgvRadios.RowHeadersVisible = False
             Me.dgvRadios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvRadios.Size = New System.Drawing.Size(534, 199)
+            Me.dgvRadios.Size = New System.Drawing.Size(534, 184)
             Me.dgvRadios.TabIndex = 295
             '
             'DataGridViewTextBoxColumn7
@@ -2153,7 +2121,7 @@
             Me.btnDelRadio.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.btnDelRadio.Font = New System.Drawing.Font("Calibri", 9.75!)
             Me.btnDelRadio.Image = Global.syscisepro.My.Resources.Resources.do_not_disturb_on_24dp_FILL0_wght400_GRAD0_opsz24
-            Me.btnDelRadio.Location = New System.Drawing.Point(952, 7)
+            Me.btnDelRadio.Location = New System.Drawing.Point(824, 7)
             Me.btnDelRadio.Name = "btnDelRadio"
             Me.btnDelRadio.Size = New System.Drawing.Size(25, 25)
             Me.btnDelRadio.TabIndex = 294
@@ -2166,7 +2134,7 @@
             Me.btnAddRadio.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.btnAddRadio.Font = New System.Drawing.Font("Calibri", 9.75!)
             Me.btnAddRadio.Image = Global.syscisepro.My.Resources.Resources.add_circle_24dp_FILL0_wght400_GRAD0_opsz24__3_
-            Me.btnAddRadio.Location = New System.Drawing.Point(921, 7)
+            Me.btnAddRadio.Location = New System.Drawing.Point(793, 7)
             Me.btnAddRadio.Name = "btnAddRadio"
             Me.btnAddRadio.Size = New System.Drawing.Size(25, 25)
             Me.btnAddRadio.TabIndex = 293
@@ -2178,7 +2146,7 @@
             Me.txtModeloRadio.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtModeloRadio.Enabled = False
             Me.txtModeloRadio.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtModeloRadio.Location = New System.Drawing.Point(97, 43)
+            Me.txtModeloRadio.Location = New System.Drawing.Point(76, 43)
             Me.txtModeloRadio.Name = "txtModeloRadio"
             Me.txtModeloRadio.Size = New System.Drawing.Size(130, 22)
             Me.txtModeloRadio.TabIndex = 141
@@ -2191,7 +2159,7 @@
             Me.cbmEstadoRadio.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cbmEstadoRadio.FormattingEnabled = True
             Me.cbmEstadoRadio.Items.AddRange(New Object() {"BUENO", "REGULAR", "MALO"})
-            Me.cbmEstadoRadio.Location = New System.Drawing.Point(116, 101)
+            Me.cbmEstadoRadio.Location = New System.Drawing.Point(95, 101)
             Me.cbmEstadoRadio.Name = "cbmEstadoRadio"
             Me.cbmEstadoRadio.Size = New System.Drawing.Size(111, 21)
             Me.cbmEstadoRadio.TabIndex = 138
@@ -2202,9 +2170,10 @@
             Me.dtpFecPerRadioCaducidad.CalendarTitleBackColor = System.Drawing.SystemColors.ActiveBorder
             Me.dtpFecPerRadioCaducidad.Enabled = False
             Me.dtpFecPerRadioCaducidad.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.dtpFecPerRadioCaducidad.Location = New System.Drawing.Point(164, 223)
+            Me.dtpFecPerRadioCaducidad.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+            Me.dtpFecPerRadioCaducidad.Location = New System.Drawing.Point(143, 223)
             Me.dtpFecPerRadioCaducidad.Name = "dtpFecPerRadioCaducidad"
-            Me.dtpFecPerRadioCaducidad.Size = New System.Drawing.Size(245, 22)
+            Me.dtpFecPerRadioCaducidad.Size = New System.Drawing.Size(107, 22)
             Me.dtpFecPerRadioCaducidad.TabIndex = 141
             Me.dtpFecPerRadioCaducidad.Value = New Date(2020, 2, 7, 0, 0, 0, 0)
             '
@@ -2212,7 +2181,7 @@
             '
             Me.lblEstado.AutoSize = True
             Me.lblEstado.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.lblEstado.Location = New System.Drawing.Point(29, 109)
+            Me.lblEstado.Location = New System.Drawing.Point(8, 109)
             Me.lblEstado.Name = "lblEstado"
             Me.lblEstado.Size = New System.Drawing.Size(51, 13)
             Me.lblEstado.TabIndex = 137
@@ -2224,7 +2193,7 @@
             Me.Label18.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.Label18.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Label18.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
-            Me.Label18.Location = New System.Drawing.Point(29, 226)
+            Me.Label18.Location = New System.Drawing.Point(8, 226)
             Me.Label18.Name = "Label18"
             Me.Label18.Size = New System.Drawing.Size(127, 13)
             Me.Label18.TabIndex = 140
@@ -2237,9 +2206,10 @@
             Me.dtpFecPerUsoRadioAceptacion.CalendarTitleForeColor = System.Drawing.Color.AliceBlue
             Me.dtpFecPerUsoRadioAceptacion.Enabled = False
             Me.dtpFecPerUsoRadioAceptacion.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.dtpFecPerUsoRadioAceptacion.Location = New System.Drawing.Point(164, 197)
+            Me.dtpFecPerUsoRadioAceptacion.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+            Me.dtpFecPerUsoRadioAceptacion.Location = New System.Drawing.Point(143, 197)
             Me.dtpFecPerUsoRadioAceptacion.Name = "dtpFecPerUsoRadioAceptacion"
-            Me.dtpFecPerUsoRadioAceptacion.Size = New System.Drawing.Size(245, 22)
+            Me.dtpFecPerUsoRadioAceptacion.Size = New System.Drawing.Size(107, 22)
             Me.dtpFecPerUsoRadioAceptacion.TabIndex = 139
             Me.dtpFecPerUsoRadioAceptacion.Value = New Date(2020, 2, 7, 0, 0, 0, 0)
             '
@@ -2249,7 +2219,7 @@
             Me.Label16.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.Label16.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Label16.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
-            Me.Label16.Location = New System.Drawing.Point(29, 197)
+            Me.Label16.Location = New System.Drawing.Point(8, 197)
             Me.Label16.Name = "Label16"
             Me.Label16.Size = New System.Drawing.Size(129, 13)
             Me.Label16.TabIndex = 138
@@ -2261,7 +2231,7 @@
             Me.Label14.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.Label14.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Label14.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
-            Me.Label14.Location = New System.Drawing.Point(29, 168)
+            Me.Label14.Location = New System.Drawing.Point(8, 168)
             Me.Label14.Name = "Label14"
             Me.Label14.Size = New System.Drawing.Size(169, 13)
             Me.Label14.TabIndex = 137
@@ -2271,7 +2241,7 @@
             '
             Me.lblColor.AutoSize = True
             Me.lblColor.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.lblColor.Location = New System.Drawing.Point(29, 138)
+            Me.lblColor.Location = New System.Drawing.Point(8, 138)
             Me.lblColor.Name = "lblColor"
             Me.lblColor.Size = New System.Drawing.Size(47, 13)
             Me.lblColor.TabIndex = 128
@@ -2284,7 +2254,7 @@
             Me.cbmColoresRadio.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.cbmColoresRadio.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cbmColoresRadio.FormattingEnabled = True
-            Me.cbmColoresRadio.Location = New System.Drawing.Point(116, 130)
+            Me.cbmColoresRadio.Location = New System.Drawing.Point(95, 130)
             Me.cbmColoresRadio.Name = "cbmColoresRadio"
             Me.cbmColoresRadio.Size = New System.Drawing.Size(111, 21)
             Me.cbmColoresRadio.TabIndex = 129
@@ -2296,9 +2266,9 @@
             Me.txtNumeroPermisoUsoRadio.Enabled = False
             Me.txtNumeroPermisoUsoRadio.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtNumeroPermisoUsoRadio.ForeColor = System.Drawing.SystemColors.WindowText
-            Me.txtNumeroPermisoUsoRadio.Location = New System.Drawing.Point(209, 164)
+            Me.txtNumeroPermisoUsoRadio.Location = New System.Drawing.Point(188, 164)
             Me.txtNumeroPermisoUsoRadio.Name = "txtNumeroPermisoUsoRadio"
-            Me.txtNumeroPermisoUsoRadio.Size = New System.Drawing.Size(200, 22)
+            Me.txtNumeroPermisoUsoRadio.Size = New System.Drawing.Size(106, 22)
             Me.txtNumeroPermisoUsoRadio.TabIndex = 136
             Me.txtNumeroPermisoUsoRadio.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
             '
@@ -2306,7 +2276,7 @@
             '
             Me.lblMarca.AutoSize = True
             Me.lblMarca.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.lblMarca.Location = New System.Drawing.Point(29, 22)
+            Me.lblMarca.Location = New System.Drawing.Point(8, 22)
             Me.lblMarca.Name = "lblMarca"
             Me.lblMarca.Size = New System.Drawing.Size(48, 13)
             Me.lblMarca.TabIndex = 102
@@ -2319,7 +2289,7 @@
             Me.cbmMarcaRadio.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.cbmMarcaRadio.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cbmMarcaRadio.FormattingEnabled = True
-            Me.cbmMarcaRadio.Location = New System.Drawing.Point(97, 14)
+            Me.cbmMarcaRadio.Location = New System.Drawing.Point(76, 14)
             Me.cbmMarcaRadio.Name = "cbmMarcaRadio"
             Me.cbmMarcaRadio.Size = New System.Drawing.Size(130, 21)
             Me.cbmMarcaRadio.TabIndex = 104
@@ -2328,7 +2298,7 @@
             '
             Me.lblModelo.AutoSize = True
             Me.lblModelo.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.lblModelo.Location = New System.Drawing.Point(29, 51)
+            Me.lblModelo.Location = New System.Drawing.Point(8, 51)
             Me.lblModelo.Name = "lblModelo"
             Me.lblModelo.Size = New System.Drawing.Size(57, 13)
             Me.lblModelo.TabIndex = 105
@@ -2339,7 +2309,7 @@
             Me.txtSerieRadio.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtSerieRadio.Enabled = False
             Me.txtSerieRadio.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtSerieRadio.Location = New System.Drawing.Point(97, 72)
+            Me.txtSerieRadio.Location = New System.Drawing.Point(76, 72)
             Me.txtSerieRadio.Name = "txtSerieRadio"
             Me.txtSerieRadio.Size = New System.Drawing.Size(130, 22)
             Me.txtSerieRadio.TabIndex = 108
@@ -2348,60 +2318,24 @@
             '
             Me.lblSerie.AutoSize = True
             Me.lblSerie.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.lblSerie.Location = New System.Drawing.Point(29, 80)
+            Me.lblSerie.Location = New System.Drawing.Point(8, 80)
             Me.lblSerie.Name = "lblSerie"
             Me.lblSerie.Size = New System.Drawing.Size(38, 13)
             Me.lblSerie.TabIndex = 107
             Me.lblSerie.Text = "SERIE:"
             '
-            'pbRadios
-            '
-            Me.pbRadios.Image = CType(resources.GetObject("pbRadios.Image"), System.Drawing.Image)
-            Me.pbRadios.Location = New System.Drawing.Point(256, 51)
-            Me.pbRadios.Name = "pbRadios"
-            Me.pbRadios.Size = New System.Drawing.Size(153, 107)
-            Me.pbRadios.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-            Me.pbRadios.TabIndex = 142
-            Me.pbRadios.TabStop = False
-            '
             'tpVehiculo
             '
+            Me.tpVehiculo.Controls.Add(Me.KryptonGroupBox1)
             Me.tpVehiculo.Controls.Add(Me.chNingunDispositivo)
             Me.tpVehiculo.Controls.Add(Me.GroupBox7)
             Me.tpVehiculo.Controls.Add(Me.GroupBox1)
             Me.tpVehiculo.Controls.Add(Me.chNingunSeguro)
-            Me.tpVehiculo.Controls.Add(Me.dtpSoat)
-            Me.tpVehiculo.Controls.Add(Me.Label8)
-            Me.tpVehiculo.Controls.Add(Me.txtTipoVehiculo)
-            Me.tpVehiculo.Controls.Add(Me.Label34)
-            Me.tpVehiculo.Controls.Add(Me.txtChasisVehiculo)
-            Me.tpVehiculo.Controls.Add(Me.Label33)
-            Me.tpVehiculo.Controls.Add(Me.txtCapacidadVehiculo)
-            Me.tpVehiculo.Controls.Add(Me.Label32)
-            Me.tpVehiculo.Controls.Add(Me.txtCilindrajeVehiculo)
-            Me.tpVehiculo.Controls.Add(Me.Label31)
-            Me.tpVehiculo.Controls.Add(Me.txtMotorVehiculo)
-            Me.tpVehiculo.Controls.Add(Me.Label30)
-            Me.tpVehiculo.Controls.Add(Me.txtPlacaVehiculo)
-            Me.tpVehiculo.Controls.Add(Me.Label29)
-            Me.tpVehiculo.Controls.Add(Me.Label28)
-            Me.tpVehiculo.Controls.Add(Me.cbmAnoFabricacionVehiculo)
-            Me.tpVehiculo.Controls.Add(Me.Label27)
-            Me.tpVehiculo.Controls.Add(Me.Label26)
-            Me.tpVehiculo.Controls.Add(Me.txtModeloVehiculo)
-            Me.tpVehiculo.Controls.Add(Me.cbmEstadoVehiculo)
-            Me.tpVehiculo.Controls.Add(Me.cbmColorVehiculo)
-            Me.tpVehiculo.Controls.Add(Me.cbmMarcaVehiculo)
-            Me.tpVehiculo.Controls.Add(Me.Label24)
-            Me.tpVehiculo.Controls.Add(Me.txtSerieVehiculo)
-            Me.tpVehiculo.Controls.Add(Me.Label25)
-            Me.tpVehiculo.Controls.Add(Me.pbVehiculo)
-            Me.tpVehiculo.Controls.Add(Me.Label23)
             Me.tpVehiculo.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.tpVehiculo.Location = New System.Drawing.Point(4, 22)
             Me.tpVehiculo.Name = "tpVehiculo"
             Me.tpVehiculo.Padding = New System.Windows.Forms.Padding(3)
-            Me.tpVehiculo.Size = New System.Drawing.Size(989, 260)
+            Me.tpVehiculo.Size = New System.Drawing.Size(870, 260)
             Me.tpVehiculo.TabIndex = 2
             Me.tpVehiculo.Text = "VEHICULO"
             Me.tpVehiculo.UseVisualStyleBackColor = True
@@ -2414,11 +2348,11 @@
             Me.chNingunDispositivo.Enabled = False
             Me.chNingunDispositivo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.chNingunDispositivo.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.chNingunDispositivo.Location = New System.Drawing.Point(496, 108)
+            Me.chNingunDispositivo.Location = New System.Drawing.Point(426, 8)
             Me.chNingunDispositivo.Name = "chNingunDispositivo"
-            Me.chNingunDispositivo.Size = New System.Drawing.Size(199, 17)
+            Me.chNingunDispositivo.Size = New System.Drawing.Size(112, 17)
             Me.chNingunDispositivo.TabIndex = 195
-            Me.chNingunDispositivo.Text = "NINGUN DISPOSITIVO SEGURIDAD"
+            Me.chNingunDispositivo.Text = "SIN DISPOSITIVO "
             Me.chNingunDispositivo.UseVisualStyleBackColor = False
             '
             'GroupBox7
@@ -2433,9 +2367,9 @@
             Me.GroupBox7.Enabled = False
             Me.GroupBox7.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.GroupBox7.ForeColor = System.Drawing.Color.Black
-            Me.GroupBox7.Location = New System.Drawing.Point(372, 132)
+            Me.GroupBox7.Location = New System.Drawing.Point(411, 28)
             Me.GroupBox7.Name = "GroupBox7"
-            Me.GroupBox7.Size = New System.Drawing.Size(331, 119)
+            Me.GroupBox7.Size = New System.Drawing.Size(207, 119)
             Me.GroupBox7.TabIndex = 194
             Me.GroupBox7.TabStop = False
             Me.GroupBox7.Text = "DISPOSITIVOS DE SEGURIDAD"
@@ -2448,15 +2382,16 @@
             Me.txtDispositivoSeguridad.Location = New System.Drawing.Point(6, 16)
             Me.txtDispositivoSeguridad.Multiline = True
             Me.txtDispositivoSeguridad.Name = "txtDispositivoSeguridad"
-            Me.txtDispositivoSeguridad.Size = New System.Drawing.Size(318, 21)
+            Me.txtDispositivoSeguridad.Size = New System.Drawing.Size(192, 21)
             Me.txtDispositivoSeguridad.TabIndex = 155
             '
             'dtpInicioContratoDispositivoSeguridad
             '
             Me.dtpInicioContratoDispositivoSeguridad.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.dtpInicioContratoDispositivoSeguridad.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
             Me.dtpInicioContratoDispositivoSeguridad.Location = New System.Drawing.Point(110, 43)
             Me.dtpInicioContratoDispositivoSeguridad.Name = "dtpInicioContratoDispositivoSeguridad"
-            Me.dtpInicioContratoDispositivoSeguridad.Size = New System.Drawing.Size(215, 22)
+            Me.dtpInicioContratoDispositivoSeguridad.Size = New System.Drawing.Size(88, 22)
             Me.dtpInicioContratoDispositivoSeguridad.TabIndex = 130
             Me.dtpInicioContratoDispositivoSeguridad.Value = New Date(2020, 2, 7, 11, 43, 51, 0)
             '
@@ -2485,9 +2420,10 @@
             'dtpFinalContratoDispositivoSeguridad
             '
             Me.dtpFinalContratoDispositivoSeguridad.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.dtpFinalContratoDispositivoSeguridad.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
             Me.dtpFinalContratoDispositivoSeguridad.Location = New System.Drawing.Point(108, 66)
             Me.dtpFinalContratoDispositivoSeguridad.Name = "dtpFinalContratoDispositivoSeguridad"
-            Me.dtpFinalContratoDispositivoSeguridad.Size = New System.Drawing.Size(217, 22)
+            Me.dtpFinalContratoDispositivoSeguridad.Size = New System.Drawing.Size(90, 22)
             Me.dtpFinalContratoDispositivoSeguridad.TabIndex = 143
             Me.dtpFinalContratoDispositivoSeguridad.Value = New Date(2020, 2, 7, 11, 43, 51, 0)
             '
@@ -2505,9 +2441,10 @@
             'dtpRenovacionContratoDispositivoSeguridad
             '
             Me.dtpRenovacionContratoDispositivoSeguridad.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.dtpRenovacionContratoDispositivoSeguridad.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
             Me.dtpRenovacionContratoDispositivoSeguridad.Location = New System.Drawing.Point(108, 89)
             Me.dtpRenovacionContratoDispositivoSeguridad.Name = "dtpRenovacionContratoDispositivoSeguridad"
-            Me.dtpRenovacionContratoDispositivoSeguridad.Size = New System.Drawing.Size(217, 22)
+            Me.dtpRenovacionContratoDispositivoSeguridad.Size = New System.Drawing.Size(90, 22)
             Me.dtpRenovacionContratoDispositivoSeguridad.TabIndex = 145
             Me.dtpRenovacionContratoDispositivoSeguridad.Value = New Date(2020, 2, 7, 11, 43, 51, 0)
             '
@@ -2531,9 +2468,9 @@
             Me.GroupBox1.Controls.Add(Me.Label47)
             Me.GroupBox1.Enabled = False
             Me.GroupBox1.ForeColor = System.Drawing.Color.Black
-            Me.GroupBox1.Location = New System.Drawing.Point(6, 58)
+            Me.GroupBox1.Location = New System.Drawing.Point(622, 28)
             Me.GroupBox1.Name = "GroupBox1"
-            Me.GroupBox1.Size = New System.Drawing.Size(361, 195)
+            Me.GroupBox1.Size = New System.Drawing.Size(245, 226)
             Me.GroupBox1.TabIndex = 193
             Me.GroupBox1.TabStop = False
             Me.GroupBox1.Text = "SEGURO"
@@ -2555,7 +2492,7 @@
             Me.txtNroPoliza.BackColor = System.Drawing.Color.White
             Me.txtNroPoliza.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtNroPoliza.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtNroPoliza.Location = New System.Drawing.Point(97, 92)
+            Me.txtNroPoliza.Location = New System.Drawing.Point(107, 91)
             Me.txtNroPoliza.Name = "txtNroPoliza"
             Me.txtNroPoliza.Size = New System.Drawing.Size(88, 22)
             Me.txtNroPoliza.TabIndex = 138
@@ -2565,7 +2502,7 @@
             Me.Label55.AutoSize = True
             Me.Label55.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Label55.ForeColor = System.Drawing.Color.Black
-            Me.Label55.Location = New System.Drawing.Point(201, 94)
+            Me.Label55.Location = New System.Drawing.Point(11, 123)
             Me.Label55.Name = "Label55"
             Me.Label55.Size = New System.Drawing.Size(82, 13)
             Me.Label55.TabIndex = 146
@@ -2576,7 +2513,7 @@
             Me.txtCostoPrima.BackColor = System.Drawing.Color.White
             Me.txtCostoPrima.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtCostoPrima.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtCostoPrima.Location = New System.Drawing.Point(286, 92)
+            Me.txtCostoPrima.Location = New System.Drawing.Point(107, 116)
             Me.txtCostoPrima.Name = "txtCostoPrima"
             Me.txtCostoPrima.Size = New System.Drawing.Size(66, 22)
             Me.txtCostoPrima.TabIndex = 147
@@ -2584,9 +2521,10 @@
             'dtpFechaInicioContratoPoliza
             '
             Me.dtpFechaInicioContratoPoliza.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.dtpFechaInicioContratoPoliza.Location = New System.Drawing.Point(107, 120)
+            Me.dtpFechaInicioContratoPoliza.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+            Me.dtpFechaInicioContratoPoliza.Location = New System.Drawing.Point(107, 144)
             Me.dtpFechaInicioContratoPoliza.Name = "dtpFechaInicioContratoPoliza"
-            Me.dtpFechaInicioContratoPoliza.Size = New System.Drawing.Size(245, 22)
+            Me.dtpFechaInicioContratoPoliza.Size = New System.Drawing.Size(135, 22)
             Me.dtpFechaInicioContratoPoliza.TabIndex = 148
             Me.dtpFechaInicioContratoPoliza.Value = New Date(2020, 2, 7, 11, 43, 51, 0)
             '
@@ -2595,7 +2533,7 @@
             Me.Label58.AutoSize = True
             Me.Label58.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Label58.ForeColor = System.Drawing.Color.Black
-            Me.Label58.Location = New System.Drawing.Point(5, 128)
+            Me.Label58.Location = New System.Drawing.Point(5, 152)
             Me.Label58.Name = "Label58"
             Me.Label58.Size = New System.Drawing.Size(100, 13)
             Me.Label58.TabIndex = 149
@@ -2606,7 +2544,7 @@
             Me.Label57.AutoSize = True
             Me.Label57.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Label57.ForeColor = System.Drawing.Color.Black
-            Me.Label57.Location = New System.Drawing.Point(5, 152)
+            Me.Label57.Location = New System.Drawing.Point(5, 176)
             Me.Label57.Name = "Label57"
             Me.Label57.Size = New System.Drawing.Size(99, 13)
             Me.Label57.TabIndex = 150
@@ -2615,9 +2553,10 @@
             'dtpFechaFinalContratoPoliza
             '
             Me.dtpFechaFinalContratoPoliza.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.dtpFechaFinalContratoPoliza.Location = New System.Drawing.Point(107, 144)
+            Me.dtpFechaFinalContratoPoliza.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+            Me.dtpFechaFinalContratoPoliza.Location = New System.Drawing.Point(107, 168)
             Me.dtpFechaFinalContratoPoliza.Name = "dtpFechaFinalContratoPoliza"
-            Me.dtpFechaFinalContratoPoliza.Size = New System.Drawing.Size(245, 22)
+            Me.dtpFechaFinalContratoPoliza.Size = New System.Drawing.Size(135, 22)
             Me.dtpFechaFinalContratoPoliza.TabIndex = 151
             Me.dtpFechaFinalContratoPoliza.Value = New Date(2020, 2, 7, 11, 43, 51, 0)
             '
@@ -2626,7 +2565,7 @@
             Me.Label56.AutoSize = True
             Me.Label56.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Label56.ForeColor = System.Drawing.Color.Black
-            Me.Label56.Location = New System.Drawing.Point(5, 174)
+            Me.Label56.Location = New System.Drawing.Point(5, 198)
             Me.Label56.Name = "Label56"
             Me.Label56.Size = New System.Drawing.Size(80, 13)
             Me.Label56.TabIndex = 152
@@ -2635,9 +2574,10 @@
             'dtpFechaRenovacionContratoPoliza
             '
             Me.dtpFechaRenovacionContratoPoliza.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.dtpFechaRenovacionContratoPoliza.Location = New System.Drawing.Point(107, 168)
+            Me.dtpFechaRenovacionContratoPoliza.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+            Me.dtpFechaRenovacionContratoPoliza.Location = New System.Drawing.Point(107, 192)
             Me.dtpFechaRenovacionContratoPoliza.Name = "dtpFechaRenovacionContratoPoliza"
-            Me.dtpFechaRenovacionContratoPoliza.Size = New System.Drawing.Size(245, 22)
+            Me.dtpFechaRenovacionContratoPoliza.Size = New System.Drawing.Size(135, 22)
             Me.dtpFechaRenovacionContratoPoliza.TabIndex = 153
             Me.dtpFechaRenovacionContratoPoliza.Value = New Date(2020, 2, 7, 11, 43, 51, 0)
             '
@@ -2646,9 +2586,9 @@
             Me.txtAseguradoraNombre.BackColor = System.Drawing.Color.White
             Me.txtAseguradoraNombre.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtAseguradoraNombre.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtAseguradoraNombre.Location = New System.Drawing.Point(97, 14)
+            Me.txtAseguradoraNombre.Location = New System.Drawing.Point(107, 14)
             Me.txtAseguradoraNombre.Name = "txtAseguradoraNombre"
-            Me.txtAseguradoraNombre.Size = New System.Drawing.Size(255, 22)
+            Me.txtAseguradoraNombre.Size = New System.Drawing.Size(133, 22)
             Me.txtAseguradoraNombre.TabIndex = 132
             '
             'Label49
@@ -2667,9 +2607,9 @@
             Me.txtBroker.BackColor = System.Drawing.Color.White
             Me.txtBroker.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtBroker.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtBroker.Location = New System.Drawing.Point(97, 40)
+            Me.txtBroker.Location = New System.Drawing.Point(107, 40)
             Me.txtBroker.Name = "txtBroker"
-            Me.txtBroker.Size = New System.Drawing.Size(255, 22)
+            Me.txtBroker.Size = New System.Drawing.Size(133, 22)
             Me.txtBroker.TabIndex = 136
             '
             'Label48
@@ -2687,9 +2627,9 @@
             '
             Me.txtSeguro.BackColor = System.Drawing.Color.White
             Me.txtSeguro.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtSeguro.Location = New System.Drawing.Point(97, 65)
+            Me.txtSeguro.Location = New System.Drawing.Point(107, 65)
             Me.txtSeguro.Name = "txtSeguro"
-            Me.txtSeguro.Size = New System.Drawing.Size(255, 22)
+            Me.txtSeguro.Size = New System.Drawing.Size(133, 22)
             Me.txtSeguro.TabIndex = 134
             '
             'Label47
@@ -2711,7 +2651,7 @@
             Me.chNingunSeguro.Enabled = False
             Me.chNingunSeguro.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.chNingunSeguro.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.chNingunSeguro.Location = New System.Drawing.Point(372, 107)
+            Me.chNingunSeguro.Location = New System.Drawing.Point(637, 8)
             Me.chNingunSeguro.Name = "chNingunSeguro"
             Me.chNingunSeguro.Size = New System.Drawing.Size(120, 17)
             Me.chNingunSeguro.TabIndex = 192
@@ -2722,151 +2662,72 @@
             '
             Me.dtpSoat.Enabled = False
             Me.dtpSoat.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.dtpSoat.Location = New System.Drawing.Point(48, 6)
+            Me.dtpSoat.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+            Me.dtpSoat.Location = New System.Drawing.Point(62, 7)
             Me.dtpSoat.Name = "dtpSoat"
-            Me.dtpSoat.Size = New System.Drawing.Size(211, 22)
+            Me.dtpSoat.Size = New System.Drawing.Size(101, 22)
             Me.dtpSoat.TabIndex = 191
             Me.dtpSoat.Value = New Date(2020, 2, 7, 11, 43, 51, 0)
-            '
-            'Label8
-            '
-            Me.Label8.AutoSize = True
-            Me.Label8.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label8.Location = New System.Drawing.Point(6, 7)
-            Me.Label8.Name = "Label8"
-            Me.Label8.Size = New System.Drawing.Size(37, 13)
-            Me.Label8.TabIndex = 191
-            Me.Label8.Text = "SOAT:"
             '
             'txtTipoVehiculo
             '
             Me.txtTipoVehiculo.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtTipoVehiculo.Enabled = False
             Me.txtTipoVehiculo.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtTipoVehiculo.Location = New System.Drawing.Point(235, 34)
+            Me.txtTipoVehiculo.Location = New System.Drawing.Point(120, 68)
             Me.txtTipoVehiculo.Name = "txtTipoVehiculo"
             Me.txtTipoVehiculo.Size = New System.Drawing.Size(43, 22)
             Me.txtTipoVehiculo.TabIndex = 180
-            '
-            'Label34
-            '
-            Me.Label34.AutoSize = True
-            Me.Label34.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label34.Location = New System.Drawing.Point(867, 11)
-            Me.Label34.Name = "Label34"
-            Me.Label34.Size = New System.Drawing.Size(34, 13)
-            Me.Label34.TabIndex = 179
-            Me.Label34.Text = "TIPO:"
             '
             'txtChasisVehiculo
             '
             Me.txtChasisVehiculo.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtChasisVehiculo.Enabled = False
             Me.txtChasisVehiculo.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtChasisVehiculo.Location = New System.Drawing.Point(602, 7)
+            Me.txtChasisVehiculo.Location = New System.Drawing.Point(252, 36)
             Me.txtChasisVehiculo.Name = "txtChasisVehiculo"
             Me.txtChasisVehiculo.Size = New System.Drawing.Size(104, 22)
             Me.txtChasisVehiculo.TabIndex = 178
-            '
-            'Label33
-            '
-            Me.Label33.AutoSize = True
-            Me.Label33.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label33.Location = New System.Drawing.Point(556, 11)
-            Me.Label33.Name = "Label33"
-            Me.Label33.Size = New System.Drawing.Size(47, 13)
-            Me.Label33.TabIndex = 177
-            Me.Label33.Text = "CHASIS:"
             '
             'txtCapacidadVehiculo
             '
             Me.txtCapacidadVehiculo.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtCapacidadVehiculo.Enabled = False
             Me.txtCapacidadVehiculo.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtCapacidadVehiculo.Location = New System.Drawing.Point(902, 7)
+            Me.txtCapacidadVehiculo.Location = New System.Drawing.Point(251, 129)
             Me.txtCapacidadVehiculo.Name = "txtCapacidadVehiculo"
-            Me.txtCapacidadVehiculo.Size = New System.Drawing.Size(79, 22)
+            Me.txtCapacidadVehiculo.Size = New System.Drawing.Size(104, 22)
             Me.txtCapacidadVehiculo.TabIndex = 176
-            '
-            'Label32
-            '
-            Me.Label32.AutoSize = True
-            Me.Label32.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label32.Location = New System.Drawing.Point(170, 37)
-            Me.Label32.Name = "Label32"
-            Me.Label32.Size = New System.Drawing.Size(69, 13)
-            Me.Label32.TabIndex = 175
-            Me.Label32.Text = "CAPACIDAD:"
             '
             'txtCilindrajeVehiculo
             '
             Me.txtCilindrajeVehiculo.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtCilindrajeVehiculo.Enabled = False
             Me.txtCilindrajeVehiculo.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtCilindrajeVehiculo.Location = New System.Drawing.Point(74, 31)
+            Me.txtCilindrajeVehiculo.Location = New System.Drawing.Point(88, 36)
             Me.txtCilindrajeVehiculo.Name = "txtCilindrajeVehiculo"
             Me.txtCilindrajeVehiculo.Size = New System.Drawing.Size(75, 22)
             Me.txtCilindrajeVehiculo.TabIndex = 174
-            '
-            'Label31
-            '
-            Me.Label31.AutoSize = True
-            Me.Label31.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label31.Location = New System.Drawing.Point(8, 34)
-            Me.Label31.Name = "Label31"
-            Me.Label31.Size = New System.Drawing.Size(69, 13)
-            Me.Label31.TabIndex = 173
-            Me.Label31.Text = "CILINDRAJE:"
             '
             'txtMotorVehiculo
             '
             Me.txtMotorVehiculo.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtMotorVehiculo.Enabled = False
             Me.txtMotorVehiculo.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtMotorVehiculo.Location = New System.Drawing.Point(757, 7)
+            Me.txtMotorVehiculo.Location = New System.Drawing.Point(251, 68)
             Me.txtMotorVehiculo.Name = "txtMotorVehiculo"
             Me.txtMotorVehiculo.Size = New System.Drawing.Size(104, 22)
             Me.txtMotorVehiculo.TabIndex = 172
-            '
-            'Label30
-            '
-            Me.Label30.AutoSize = True
-            Me.Label30.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label30.Location = New System.Drawing.Point(709, 11)
-            Me.Label30.Name = "Label30"
-            Me.Label30.Size = New System.Drawing.Size(50, 13)
-            Me.Label30.TabIndex = 171
-            Me.Label30.Text = "MOTOR:"
             '
             'txtPlacaVehiculo
             '
             Me.txtPlacaVehiculo.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtPlacaVehiculo.Enabled = False
             Me.txtPlacaVehiculo.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtPlacaVehiculo.Location = New System.Drawing.Point(312, 7)
+            Me.txtPlacaVehiculo.Location = New System.Drawing.Point(83, 101)
             Me.txtPlacaVehiculo.Name = "txtPlacaVehiculo"
-            Me.txtPlacaVehiculo.Size = New System.Drawing.Size(83, 22)
+            Me.txtPlacaVehiculo.Size = New System.Drawing.Size(80, 22)
             Me.txtPlacaVehiculo.TabIndex = 170
-            '
-            'Label29
-            '
-            Me.Label29.AutoSize = True
-            Me.Label29.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label29.Location = New System.Drawing.Point(265, 11)
-            Me.Label29.Name = "Label29"
-            Me.Label29.Size = New System.Drawing.Size(48, 13)
-            Me.Label29.TabIndex = 169
-            Me.Label29.Text = "PLACAS:"
-            '
-            'Label28
-            '
-            Me.Label28.AutoSize = True
-            Me.Label28.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label28.Location = New System.Drawing.Point(382, 67)
-            Me.Label28.Name = "Label28"
-            Me.Label28.Size = New System.Drawing.Size(51, 13)
-            Me.Label28.TabIndex = 168
-            Me.Label28.Text = "ESTADO:"
             '
             'cbmAnoFabricacionVehiculo
             '
@@ -2875,39 +2736,19 @@
             Me.cbmAnoFabricacionVehiculo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.cbmAnoFabricacionVehiculo.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cbmAnoFabricacionVehiculo.FormattingEnabled = True
-            Me.cbmAnoFabricacionVehiculo.Location = New System.Drawing.Point(649, 65)
+            Me.cbmAnoFabricacionVehiculo.Location = New System.Drawing.Point(251, 164)
             Me.cbmAnoFabricacionVehiculo.Name = "cbmAnoFabricacionVehiculo"
             Me.cbmAnoFabricacionVehiculo.Size = New System.Drawing.Size(70, 21)
             Me.cbmAnoFabricacionVehiculo.TabIndex = 167
-            '
-            'Label27
-            '
-            Me.Label27.AutoSize = True
-            Me.Label27.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label27.Location = New System.Drawing.Point(569, 71)
-            Me.Label27.Name = "Label27"
-            Me.Label27.Size = New System.Drawing.Size(72, 13)
-            Me.Label27.TabIndex = 166
-            Me.Label27.Text = "AÑO DE FAB."
-            '
-            'Label26
-            '
-            Me.Label26.AutoSize = True
-            Me.Label26.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label26.Location = New System.Drawing.Point(821, 36)
-            Me.Label26.Name = "Label26"
-            Me.Label26.Size = New System.Drawing.Size(47, 13)
-            Me.Label26.TabIndex = 165
-            Me.Label26.Text = "COLOR:"
             '
             'txtModeloVehiculo
             '
             Me.txtModeloVehiculo.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtModeloVehiculo.Enabled = False
             Me.txtModeloVehiculo.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtModeloVehiculo.Location = New System.Drawing.Point(336, 34)
+            Me.txtModeloVehiculo.Location = New System.Drawing.Point(62, 164)
             Me.txtModeloVehiculo.Name = "txtModeloVehiculo"
-            Me.txtModeloVehiculo.Size = New System.Drawing.Size(215, 22)
+            Me.txtModeloVehiculo.Size = New System.Drawing.Size(101, 22)
             Me.txtModeloVehiculo.TabIndex = 164
             '
             'cbmEstadoVehiculo
@@ -2919,7 +2760,7 @@
             Me.cbmEstadoVehiculo.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cbmEstadoVehiculo.FormattingEnabled = True
             Me.cbmEstadoVehiculo.Items.AddRange(New Object() {"BUENO", "REGULAR", "MALO"})
-            Me.cbmEstadoVehiculo.Location = New System.Drawing.Point(432, 65)
+            Me.cbmEstadoVehiculo.Location = New System.Drawing.Point(251, 7)
             Me.cbmEstadoVehiculo.Name = "cbmEstadoVehiculo"
             Me.cbmEstadoVehiculo.Size = New System.Drawing.Size(112, 21)
             Me.cbmEstadoVehiculo.TabIndex = 163
@@ -2931,9 +2772,9 @@
             Me.cbmColorVehiculo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.cbmColorVehiculo.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cbmColorVehiculo.FormattingEnabled = True
-            Me.cbmColorVehiculo.Location = New System.Drawing.Point(868, 33)
+            Me.cbmColorVehiculo.Location = New System.Drawing.Point(62, 198)
             Me.cbmColorVehiculo.Name = "cbmColorVehiculo"
-            Me.cbmColorVehiculo.Size = New System.Drawing.Size(112, 21)
+            Me.cbmColorVehiculo.Size = New System.Drawing.Size(101, 21)
             Me.cbmColorVehiculo.TabIndex = 162
             '
             'cbmMarcaVehiculo
@@ -2943,60 +2784,20 @@
             Me.cbmMarcaVehiculo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.cbmMarcaVehiculo.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cbmMarcaVehiculo.FormattingEnabled = True
-            Me.cbmMarcaVehiculo.Location = New System.Drawing.Point(602, 33)
+            Me.cbmMarcaVehiculo.Location = New System.Drawing.Point(252, 101)
             Me.cbmMarcaVehiculo.Name = "cbmMarcaVehiculo"
-            Me.cbmMarcaVehiculo.Size = New System.Drawing.Size(213, 21)
+            Me.cbmMarcaVehiculo.Size = New System.Drawing.Size(112, 21)
             Me.cbmMarcaVehiculo.TabIndex = 158
-            '
-            'Label24
-            '
-            Me.Label24.AutoSize = True
-            Me.Label24.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label24.Location = New System.Drawing.Point(283, 39)
-            Me.Label24.Name = "Label24"
-            Me.Label24.Size = New System.Drawing.Size(57, 13)
-            Me.Label24.TabIndex = 159
-            Me.Label24.Text = "MODELO:"
             '
             'txtSerieVehiculo
             '
             Me.txtSerieVehiculo.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtSerieVehiculo.Enabled = False
             Me.txtSerieVehiculo.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtSerieVehiculo.Location = New System.Drawing.Point(435, 7)
+            Me.txtSerieVehiculo.Location = New System.Drawing.Point(62, 131)
             Me.txtSerieVehiculo.Name = "txtSerieVehiculo"
-            Me.txtSerieVehiculo.Size = New System.Drawing.Size(117, 22)
+            Me.txtSerieVehiculo.Size = New System.Drawing.Size(101, 22)
             Me.txtSerieVehiculo.TabIndex = 161
-            '
-            'Label25
-            '
-            Me.Label25.AutoSize = True
-            Me.Label25.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label25.Location = New System.Drawing.Point(398, 11)
-            Me.Label25.Name = "Label25"
-            Me.Label25.Size = New System.Drawing.Size(38, 13)
-            Me.Label25.TabIndex = 160
-            Me.Label25.Text = "SERIE:"
-            '
-            'pbVehiculo
-            '
-            Me.pbVehiculo.Image = CType(resources.GetObject("pbVehiculo.Image"), System.Drawing.Image)
-            Me.pbVehiculo.Location = New System.Drawing.Point(713, 98)
-            Me.pbVehiculo.Name = "pbVehiculo"
-            Me.pbVehiculo.Size = New System.Drawing.Size(264, 154)
-            Me.pbVehiculo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-            Me.pbVehiculo.TabIndex = 156
-            Me.pbVehiculo.TabStop = False
-            '
-            'Label23
-            '
-            Me.Label23.AutoSize = True
-            Me.Label23.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label23.Location = New System.Drawing.Point(557, 37)
-            Me.Label23.Name = "Label23"
-            Me.Label23.Size = New System.Drawing.Size(48, 13)
-            Me.Label23.TabIndex = 157
-            Me.Label23.Text = "MARCA:"
             '
             'tpTerreno
             '
@@ -3006,12 +2807,11 @@
             Me.tpTerreno.Controls.Add(Me.Label68)
             Me.tpTerreno.Controls.Add(Me.txtMedidaTerreno)
             Me.tpTerreno.Controls.Add(Me.Label66)
-            Me.tpTerreno.Controls.Add(Me.PictureBox1)
             Me.tpTerreno.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.tpTerreno.Location = New System.Drawing.Point(4, 22)
             Me.tpTerreno.Name = "tpTerreno"
             Me.tpTerreno.Padding = New System.Windows.Forms.Padding(3)
-            Me.tpTerreno.Size = New System.Drawing.Size(989, 260)
+            Me.tpTerreno.Size = New System.Drawing.Size(870, 260)
             Me.tpTerreno.TabIndex = 6
             Me.tpTerreno.Text = "TERRENOS"
             Me.tpTerreno.UseVisualStyleBackColor = True
@@ -3042,7 +2842,7 @@
             Me.txtUbicacionTerreno.Location = New System.Drawing.Point(89, 95)
             Me.txtUbicacionTerreno.Multiline = True
             Me.txtUbicacionTerreno.Name = "txtUbicacionTerreno"
-            Me.txtUbicacionTerreno.Size = New System.Drawing.Size(535, 52)
+            Me.txtUbicacionTerreno.Size = New System.Drawing.Size(353, 52)
             Me.txtUbicacionTerreno.TabIndex = 147
             '
             'Label68
@@ -3075,16 +2875,6 @@
             Me.Label66.TabIndex = 144
             Me.Label66.Text = "MEDIDA:"
             '
-            'PictureBox1
-            '
-            Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-            Me.PictureBox1.Location = New System.Drawing.Point(688, 28)
-            Me.PictureBox1.Name = "PictureBox1"
-            Me.PictureBox1.Size = New System.Drawing.Size(258, 190)
-            Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-            Me.PictureBox1.TabIndex = 143
-            Me.PictureBox1.TabStop = False
-            '
             'tpEquiposComputo
             '
             Me.tpEquiposComputo.Controls.Add(Me.txtGarantiaComputo)
@@ -3109,7 +2899,7 @@
             Me.tpEquiposComputo.Location = New System.Drawing.Point(4, 22)
             Me.tpEquiposComputo.Name = "tpEquiposComputo"
             Me.tpEquiposComputo.Padding = New System.Windows.Forms.Padding(3)
-            Me.tpEquiposComputo.Size = New System.Drawing.Size(989, 260)
+            Me.tpEquiposComputo.Size = New System.Drawing.Size(870, 260)
             Me.tpEquiposComputo.TabIndex = 0
             Me.tpEquiposComputo.Text = "EQUIPOS DE COMPUTO"
             Me.tpEquiposComputo.UseVisualStyleBackColor = True
@@ -3117,7 +2907,7 @@
             'txtGarantiaComputo
             '
             Me.txtGarantiaComputo.Enabled = False
-            Me.txtGarantiaComputo.Location = New System.Drawing.Point(780, 10)
+            Me.txtGarantiaComputo.Location = New System.Drawing.Point(721, 10)
             Me.txtGarantiaComputo.Name = "txtGarantiaComputo"
             Me.txtGarantiaComputo.Size = New System.Drawing.Size(100, 22)
             Me.txtGarantiaComputo.TabIndex = 305
@@ -3125,7 +2915,7 @@
             'dtpCaducidadComputo
             '
             Me.dtpCaducidadComputo.Enabled = False
-            Me.dtpCaducidadComputo.Location = New System.Drawing.Point(644, 52)
+            Me.dtpCaducidadComputo.Location = New System.Drawing.Point(622, 45)
             Me.dtpCaducidadComputo.Name = "dtpCaducidadComputo"
             Me.dtpCaducidadComputo.Size = New System.Drawing.Size(156, 22)
             Me.dtpCaducidadComputo.TabIndex = 304
@@ -3136,7 +2926,7 @@
             Me.Label35.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.Label35.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Label35.ForeColor = System.Drawing.Color.Black
-            Me.Label35.Location = New System.Drawing.Point(565, 59)
+            Me.Label35.Location = New System.Drawing.Point(543, 47)
             Me.Label35.Name = "Label35"
             Me.Label35.Size = New System.Drawing.Size(73, 13)
             Me.Label35.TabIndex = 303
@@ -3146,7 +2936,7 @@
             '
             Me.chkGarantiaComputo.AutoSize = True
             Me.chkGarantiaComputo.Enabled = False
-            Me.chkGarantiaComputo.Location = New System.Drawing.Point(690, 15)
+            Me.chkGarantiaComputo.Location = New System.Drawing.Point(638, 15)
             Me.chkGarantiaComputo.Name = "chkGarantiaComputo"
             Me.chkGarantiaComputo.Size = New System.Drawing.Size(79, 17)
             Me.chkGarantiaComputo.TabIndex = 302
@@ -3156,7 +2946,7 @@
             'btnGarantiaComputo
             '
             Me.btnGarantiaComputo.Enabled = False
-            Me.btnGarantiaComputo.Location = New System.Drawing.Point(928, 11)
+            Me.btnGarantiaComputo.Location = New System.Drawing.Point(825, 11)
             Me.btnGarantiaComputo.Name = "btnGarantiaComputo"
             Me.btnGarantiaComputo.Size = New System.Drawing.Size(33, 23)
             Me.btnGarantiaComputo.TabIndex = 301
@@ -3167,7 +2957,7 @@
             '
             Me.Label77.AutoSize = True
             Me.Label77.Font = New System.Drawing.Font("Calibri", 9.75!)
-            Me.Label77.Location = New System.Drawing.Point(394, 59)
+            Me.Label77.Location = New System.Drawing.Point(372, 47)
             Me.Label77.Name = "Label77"
             Me.Label77.Size = New System.Drawing.Size(47, 15)
             Me.Label77.TabIndex = 172
@@ -3193,13 +2983,13 @@
             DataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText
             DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
             Me.dgvEquiposComputo.DefaultCellStyle = DataGridViewCellStyle6
-            Me.dgvEquiposComputo.Location = New System.Drawing.Point(3, 87)
+            Me.dgvEquiposComputo.Location = New System.Drawing.Point(3, 77)
             Me.dgvEquiposComputo.MultiSelect = False
             Me.dgvEquiposComputo.Name = "dgvEquiposComputo"
             Me.dgvEquiposComputo.ReadOnly = True
             Me.dgvEquiposComputo.RowHeadersVisible = False
             Me.dgvEquiposComputo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvEquiposComputo.Size = New System.Drawing.Size(980, 173)
+            Me.dgvEquiposComputo.Size = New System.Drawing.Size(854, 173)
             Me.dgvEquiposComputo.TabIndex = 64
             '
             'Column1
@@ -3282,7 +3072,7 @@
             Me.cbmColorEquipoComputo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.cbmColorEquipoComputo.Font = New System.Drawing.Font("Calibri", 9.75!)
             Me.cbmColorEquipoComputo.FormattingEnabled = True
-            Me.cbmColorEquipoComputo.Location = New System.Drawing.Point(445, 55)
+            Me.cbmColorEquipoComputo.Location = New System.Drawing.Point(423, 43)
             Me.cbmColorEquipoComputo.Name = "cbmColorEquipoComputo"
             Me.cbmColorEquipoComputo.Size = New System.Drawing.Size(112, 23)
             Me.cbmColorEquipoComputo.TabIndex = 171
@@ -3294,7 +3084,7 @@
             Me.btnEliminarEquipoComputo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.btnEliminarEquipoComputo.Font = New System.Drawing.Font("Calibri", 9.75!)
             Me.btnEliminarEquipoComputo.Image = Global.syscisepro.My.Resources.Resources.do_not_disturb_on_24dp_FILL0_wght400_GRAD0_opsz24
-            Me.btnEliminarEquipoComputo.Location = New System.Drawing.Point(949, 48)
+            Me.btnEliminarEquipoComputo.Location = New System.Drawing.Point(819, 36)
             Me.btnEliminarEquipoComputo.Name = "btnEliminarEquipoComputo"
             Me.btnEliminarEquipoComputo.Size = New System.Drawing.Size(25, 25)
             Me.btnEliminarEquipoComputo.TabIndex = 66
@@ -3305,7 +3095,7 @@
             '
             Me.Label76.AutoSize = True
             Me.Label76.Font = New System.Drawing.Font("Calibri", 9.75!)
-            Me.Label76.Location = New System.Drawing.Point(507, 15)
+            Me.Label76.Location = New System.Drawing.Point(454, 15)
             Me.Label76.Name = "Label76"
             Me.Label76.Size = New System.Drawing.Size(51, 15)
             Me.Label76.TabIndex = 170
@@ -3318,7 +3108,7 @@
             Me.btnAgregarEquipo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.btnAgregarEquipo.Font = New System.Drawing.Font("Calibri", 9.75!)
             Me.btnAgregarEquipo.Image = Global.syscisepro.My.Resources.Resources.add_circle_24dp_FILL0_wght400_GRAD0_opsz24__3_
-            Me.btnAgregarEquipo.Location = New System.Drawing.Point(918, 48)
+            Me.btnAgregarEquipo.Location = New System.Drawing.Point(788, 36)
             Me.btnAgregarEquipo.Name = "btnAgregarEquipo"
             Me.btnAgregarEquipo.Size = New System.Drawing.Size(25, 25)
             Me.btnAgregarEquipo.TabIndex = 65
@@ -3334,7 +3124,7 @@
             Me.cbmEstadoEquipoComputo.Font = New System.Drawing.Font("Calibri", 9.75!)
             Me.cbmEstadoEquipoComputo.FormattingEnabled = True
             Me.cbmEstadoEquipoComputo.Items.AddRange(New Object() {"BUENO", "REGULAR", "MALO"})
-            Me.cbmEstadoEquipoComputo.Location = New System.Drawing.Point(564, 11)
+            Me.cbmEstadoEquipoComputo.Location = New System.Drawing.Point(514, 11)
             Me.cbmEstadoEquipoComputo.Name = "cbmEstadoEquipoComputo"
             Me.cbmEstadoEquipoComputo.Size = New System.Drawing.Size(112, 23)
             Me.cbmEstadoEquipoComputo.TabIndex = 169
@@ -3356,7 +3146,7 @@
             Me.cbmMarcaEquipoComputo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.cbmMarcaEquipoComputo.Font = New System.Drawing.Font("Calibri", 9.75!)
             Me.cbmMarcaEquipoComputo.FormattingEnabled = True
-            Me.cbmMarcaEquipoComputo.Location = New System.Drawing.Point(105, 11)
+            Me.cbmMarcaEquipoComputo.Location = New System.Drawing.Point(62, 11)
             Me.cbmMarcaEquipoComputo.Name = "cbmMarcaEquipoComputo"
             Me.cbmMarcaEquipoComputo.Size = New System.Drawing.Size(157, 23)
             Me.cbmMarcaEquipoComputo.TabIndex = 148
@@ -3365,7 +3155,7 @@
             '
             Me.Label74.AutoSize = True
             Me.Label74.Font = New System.Drawing.Font("Calibri", 9.75!)
-            Me.Label74.Location = New System.Drawing.Point(268, 15)
+            Me.Label74.Location = New System.Drawing.Point(233, 15)
             Me.Label74.Name = "Label74"
             Me.Label74.Size = New System.Drawing.Size(58, 15)
             Me.Label74.TabIndex = 144
@@ -3376,9 +3166,9 @@
             Me.txtComponenteEquipoComputo.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtComponenteEquipoComputo.Enabled = False
             Me.txtComponenteEquipoComputo.Font = New System.Drawing.Font("Calibri", 9.75!)
-            Me.txtComponenteEquipoComputo.Location = New System.Drawing.Point(105, 55)
+            Me.txtComponenteEquipoComputo.Location = New System.Drawing.Point(105, 43)
             Me.txtComponenteEquipoComputo.Name = "txtComponenteEquipoComputo"
-            Me.txtComponenteEquipoComputo.Size = New System.Drawing.Size(267, 23)
+            Me.txtComponenteEquipoComputo.Size = New System.Drawing.Size(254, 23)
             Me.txtComponenteEquipoComputo.TabIndex = 147
             '
             'txtModeloEquipoComputo
@@ -3386,16 +3176,16 @@
             Me.txtModeloEquipoComputo.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtModeloEquipoComputo.Enabled = False
             Me.txtModeloEquipoComputo.Font = New System.Drawing.Font("Calibri", 9.75!)
-            Me.txtModeloEquipoComputo.Location = New System.Drawing.Point(340, 11)
+            Me.txtModeloEquipoComputo.Location = New System.Drawing.Point(295, 11)
             Me.txtModeloEquipoComputo.Name = "txtModeloEquipoComputo"
-            Me.txtModeloEquipoComputo.Size = New System.Drawing.Size(157, 23)
+            Me.txtModeloEquipoComputo.Size = New System.Drawing.Size(145, 23)
             Me.txtModeloEquipoComputo.TabIndex = 145
             '
             'Label75
             '
             Me.Label75.AutoSize = True
             Me.Label75.Font = New System.Drawing.Font("Calibri", 9.75!)
-            Me.Label75.Location = New System.Drawing.Point(12, 59)
+            Me.Label75.Location = New System.Drawing.Point(12, 47)
             Me.Label75.Name = "Label75"
             Me.Label75.Size = New System.Drawing.Size(87, 15)
             Me.Label75.TabIndex = 146
@@ -3403,7 +3193,6 @@
             '
             'tpLibrosYcolecciones
             '
-            Me.tpLibrosYcolecciones.Controls.Add(Me.PictureBox3)
             Me.tpLibrosYcolecciones.Controls.Add(Me.cbmAñosEdicionLibros)
             Me.tpLibrosYcolecciones.Controls.Add(Me.Label43)
             Me.tpLibrosYcolecciones.Controls.Add(Me.Label44)
@@ -3415,20 +3204,10 @@
             Me.tpLibrosYcolecciones.Location = New System.Drawing.Point(4, 22)
             Me.tpLibrosYcolecciones.Name = "tpLibrosYcolecciones"
             Me.tpLibrosYcolecciones.Padding = New System.Windows.Forms.Padding(3)
-            Me.tpLibrosYcolecciones.Size = New System.Drawing.Size(989, 260)
+            Me.tpLibrosYcolecciones.Size = New System.Drawing.Size(870, 260)
             Me.tpLibrosYcolecciones.TabIndex = 1
             Me.tpLibrosYcolecciones.Text = "LIBROS Y COLECCIONES"
             Me.tpLibrosYcolecciones.UseVisualStyleBackColor = True
-            '
-            'PictureBox3
-            '
-            Me.PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), System.Drawing.Image)
-            Me.PictureBox3.Location = New System.Drawing.Point(604, 85)
-            Me.PictureBox3.Name = "PictureBox3"
-            Me.PictureBox3.Size = New System.Drawing.Size(148, 96)
-            Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-            Me.PictureBox3.TabIndex = 143
-            Me.PictureBox3.TabStop = False
             '
             'cbmAñosEdicionLibros
             '
@@ -3437,7 +3216,7 @@
             Me.cbmAñosEdicionLibros.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.cbmAñosEdicionLibros.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cbmAñosEdicionLibros.FormattingEnabled = True
-            Me.cbmAñosEdicionLibros.Location = New System.Drawing.Point(457, 138)
+            Me.cbmAñosEdicionLibros.Location = New System.Drawing.Point(372, 138)
             Me.cbmAñosEdicionLibros.Name = "cbmAñosEdicionLibros"
             Me.cbmAñosEdicionLibros.Size = New System.Drawing.Size(101, 21)
             Me.cbmAñosEdicionLibros.TabIndex = 168
@@ -3446,7 +3225,7 @@
             '
             Me.Label43.AutoSize = True
             Me.Label43.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label43.Location = New System.Drawing.Point(190, 88)
+            Me.Label43.Location = New System.Drawing.Point(105, 88)
             Me.Label43.Name = "Label43"
             Me.Label43.Size = New System.Drawing.Size(63, 13)
             Me.Label43.TabIndex = 101
@@ -3456,7 +3235,7 @@
             '
             Me.Label44.AutoSize = True
             Me.Label44.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label44.Location = New System.Drawing.Point(191, 115)
+            Me.Label44.Location = New System.Drawing.Point(106, 115)
             Me.Label44.Name = "Label44"
             Me.Label44.Size = New System.Drawing.Size(46, 13)
             Me.Label44.TabIndex = 102
@@ -3466,7 +3245,7 @@
             '
             Me.txtTomos.Enabled = False
             Me.txtTomos.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtTomos.Location = New System.Drawing.Point(266, 138)
+            Me.txtTomos.Location = New System.Drawing.Point(181, 138)
             Me.txtTomos.Name = "txtTomos"
             Me.txtTomos.Size = New System.Drawing.Size(57, 22)
             Me.txtTomos.TabIndex = 107
@@ -3475,7 +3254,7 @@
             '
             Me.Label45.AutoSize = True
             Me.Label45.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label45.Location = New System.Drawing.Point(191, 141)
+            Me.Label45.Location = New System.Drawing.Point(106, 141)
             Me.Label45.Name = "Label45"
             Me.Label45.Size = New System.Drawing.Size(49, 13)
             Me.Label45.TabIndex = 103
@@ -3485,7 +3264,7 @@
             '
             Me.txtAutor.Enabled = False
             Me.txtAutor.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtAutor.Location = New System.Drawing.Point(266, 112)
+            Me.txtAutor.Location = New System.Drawing.Point(181, 112)
             Me.txtAutor.Name = "txtAutor"
             Me.txtAutor.Size = New System.Drawing.Size(292, 22)
             Me.txtAutor.TabIndex = 106
@@ -3494,7 +3273,7 @@
             '
             Me.Label46.AutoSize = True
             Me.Label46.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label46.Location = New System.Drawing.Point(373, 141)
+            Me.Label46.Location = New System.Drawing.Point(288, 141)
             Me.Label46.Name = "Label46"
             Me.Label46.Size = New System.Drawing.Size(78, 13)
             Me.Label46.TabIndex = 104
@@ -3504,7 +3283,7 @@
             '
             Me.txtEditorial.Enabled = False
             Me.txtEditorial.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtEditorial.Location = New System.Drawing.Point(266, 85)
+            Me.txtEditorial.Location = New System.Drawing.Point(181, 85)
             Me.txtEditorial.Name = "txtEditorial"
             Me.txtEditorial.Size = New System.Drawing.Size(292, 22)
             Me.txtEditorial.TabIndex = 105
@@ -3520,7 +3299,6 @@
             Me.tpEquiposOficina.Controls.Add(Me.dgvEquiposOficina)
             Me.tpEquiposOficina.Controls.Add(Me.btnDelEquipoOficina)
             Me.tpEquiposOficina.Controls.Add(Me.btnAddEquipoOficina)
-            Me.tpEquiposOficina.Controls.Add(Me.pbEquiposOficina)
             Me.tpEquiposOficina.Controls.Add(Me.Label102)
             Me.tpEquiposOficina.Controls.Add(Me.txtSerieEquiposOficina)
             Me.tpEquiposOficina.Controls.Add(Me.cbmAñosEquiposOficina)
@@ -3539,7 +3317,7 @@
             Me.tpEquiposOficina.Location = New System.Drawing.Point(4, 22)
             Me.tpEquiposOficina.Name = "tpEquiposOficina"
             Me.tpEquiposOficina.Padding = New System.Windows.Forms.Padding(3)
-            Me.tpEquiposOficina.Size = New System.Drawing.Size(989, 260)
+            Me.tpEquiposOficina.Size = New System.Drawing.Size(870, 260)
             Me.tpEquiposOficina.TabIndex = 7
             Me.tpEquiposOficina.Text = "EQUIPOS DE OFICINA"
             Me.tpEquiposOficina.UseVisualStyleBackColor = True
@@ -3547,7 +3325,7 @@
             'txtGarantiaOficina
             '
             Me.txtGarantiaOficina.Enabled = False
-            Me.txtGarantiaOficina.Location = New System.Drawing.Point(323, 10)
+            Me.txtGarantiaOficina.Location = New System.Drawing.Point(348, 10)
             Me.txtGarantiaOficina.Name = "txtGarantiaOficina"
             Me.txtGarantiaOficina.Size = New System.Drawing.Size(79, 22)
             Me.txtGarantiaOficina.TabIndex = 309
@@ -3576,7 +3354,7 @@
             '
             Me.chkGarantiaOficina.AutoSize = True
             Me.chkGarantiaOficina.Enabled = False
-            Me.chkGarantiaOficina.Location = New System.Drawing.Point(244, 15)
+            Me.chkGarantiaOficina.Location = New System.Drawing.Point(269, 15)
             Me.chkGarantiaOficina.Name = "chkGarantiaOficina"
             Me.chkGarantiaOficina.Size = New System.Drawing.Size(79, 17)
             Me.chkGarantiaOficina.TabIndex = 306
@@ -3586,7 +3364,7 @@
             'btnGarantiaOficina
             '
             Me.btnGarantiaOficina.Enabled = False
-            Me.btnGarantiaOficina.Location = New System.Drawing.Point(408, 10)
+            Me.btnGarantiaOficina.Location = New System.Drawing.Point(433, 10)
             Me.btnGarantiaOficina.Name = "btnGarantiaOficina"
             Me.btnGarantiaOficina.Size = New System.Drawing.Size(33, 23)
             Me.btnGarantiaOficina.TabIndex = 305
@@ -3598,7 +3376,7 @@
             Me.lblEquiposOficinaCount.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.lblEquiposOficinaCount.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.lblEquiposOficinaCount.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
-            Me.lblEquiposOficinaCount.Location = New System.Drawing.Point(449, 234)
+            Me.lblEquiposOficinaCount.Location = New System.Drawing.Point(262, 234)
             Me.lblEquiposOficinaCount.Name = "lblEquiposOficinaCount"
             Me.lblEquiposOficinaCount.Size = New System.Drawing.Size(533, 19)
             Me.lblEquiposOficinaCount.TabIndex = 304
@@ -3626,7 +3404,7 @@
             DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText
             DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
             Me.dgvEquiposOficina.DefaultCellStyle = DataGridViewCellStyle8
-            Me.dgvEquiposOficina.Location = New System.Drawing.Point(449, 39)
+            Me.dgvEquiposOficina.Location = New System.Drawing.Point(261, 39)
             Me.dgvEquiposOficina.MultiSelect = False
             Me.dgvEquiposOficina.Name = "dgvEquiposOficina"
             Me.dgvEquiposOficina.ReadOnly = True
@@ -3726,7 +3504,7 @@
             Me.btnDelEquipoOficina.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.btnDelEquipoOficina.Font = New System.Drawing.Font("Calibri", 9.75!)
             Me.btnDelEquipoOficina.Image = Global.syscisepro.My.Resources.Resources.do_not_disturb_on_24dp_FILL0_wght400_GRAD0_opsz24
-            Me.btnDelEquipoOficina.Location = New System.Drawing.Point(949, 6)
+            Me.btnDelEquipoOficina.Location = New System.Drawing.Point(759, 6)
             Me.btnDelEquipoOficina.Name = "btnDelEquipoOficina"
             Me.btnDelEquipoOficina.Size = New System.Drawing.Size(25, 25)
             Me.btnDelEquipoOficina.TabIndex = 300
@@ -3740,22 +3518,12 @@
             Me.btnAddEquipoOficina.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.btnAddEquipoOficina.Font = New System.Drawing.Font("Calibri", 9.75!)
             Me.btnAddEquipoOficina.Image = Global.syscisepro.My.Resources.Resources.add_circle_24dp_FILL0_wght400_GRAD0_opsz24__3_
-            Me.btnAddEquipoOficina.Location = New System.Drawing.Point(917, 6)
+            Me.btnAddEquipoOficina.Location = New System.Drawing.Point(727, 6)
             Me.btnAddEquipoOficina.Name = "btnAddEquipoOficina"
             Me.btnAddEquipoOficina.Size = New System.Drawing.Size(25, 25)
             Me.btnAddEquipoOficina.TabIndex = 299
             Me.btnAddEquipoOficina.TextAlign = System.Drawing.ContentAlignment.BottomCenter
             Me.btnAddEquipoOficina.UseVisualStyleBackColor = True
-            '
-            'pbEquiposOficina
-            '
-            Me.pbEquiposOficina.Image = CType(resources.GetObject("pbEquiposOficina.Image"), System.Drawing.Image)
-            Me.pbEquiposOficina.Location = New System.Drawing.Point(242, 45)
-            Me.pbEquiposOficina.Name = "pbEquiposOficina"
-            Me.pbEquiposOficina.Size = New System.Drawing.Size(202, 205)
-            Me.pbEquiposOficina.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-            Me.pbEquiposOficina.TabIndex = 196
-            Me.pbEquiposOficina.TabStop = False
             '
             'Label102
             '
@@ -3913,7 +3681,6 @@
             Me.tpMueblesOficina.Controls.Add(Me.dgvMuebleOficina)
             Me.tpMueblesOficina.Controls.Add(Me.btnDelMuebleOficina)
             Me.tpMueblesOficina.Controls.Add(Me.btnAddMuebleOficina)
-            Me.tpMueblesOficina.Controls.Add(Me.pbMueblesOficina)
             Me.tpMueblesOficina.Controls.Add(Me.cbmAñosMueblesOficina)
             Me.tpMueblesOficina.Controls.Add(Me.Label90)
             Me.tpMueblesOficina.Controls.Add(Me.Label97)
@@ -3930,7 +3697,7 @@
             Me.tpMueblesOficina.Location = New System.Drawing.Point(4, 22)
             Me.tpMueblesOficina.Name = "tpMueblesOficina"
             Me.tpMueblesOficina.Padding = New System.Windows.Forms.Padding(3)
-            Me.tpMueblesOficina.Size = New System.Drawing.Size(989, 260)
+            Me.tpMueblesOficina.Size = New System.Drawing.Size(994, 260)
             Me.tpMueblesOficina.TabIndex = 8
             Me.tpMueblesOficina.Text = "MUEBLES DE OFICINA"
             Me.tpMueblesOficina.UseVisualStyleBackColor = True
@@ -3940,7 +3707,7 @@
             Me.lblMuebleOficinaCount.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.lblMuebleOficinaCount.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.lblMuebleOficinaCount.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
-            Me.lblMuebleOficinaCount.Location = New System.Drawing.Point(450, 235)
+            Me.lblMuebleOficinaCount.Location = New System.Drawing.Point(282, 235)
             Me.lblMuebleOficinaCount.Name = "lblMuebleOficinaCount"
             Me.lblMuebleOficinaCount.Size = New System.Drawing.Size(533, 19)
             Me.lblMuebleOficinaCount.TabIndex = 310
@@ -3967,7 +3734,7 @@
             DataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText
             DataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
             Me.dgvMuebleOficina.DefaultCellStyle = DataGridViewCellStyle10
-            Me.dgvMuebleOficina.Location = New System.Drawing.Point(450, 39)
+            Me.dgvMuebleOficina.Location = New System.Drawing.Point(260, 39)
             Me.dgvMuebleOficina.MultiSelect = False
             Me.dgvMuebleOficina.Name = "dgvMuebleOficina"
             Me.dgvMuebleOficina.ReadOnly = True
@@ -4043,7 +3810,7 @@
             Me.btnDelMuebleOficina.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.btnDelMuebleOficina.Font = New System.Drawing.Font("Calibri", 9.75!)
             Me.btnDelMuebleOficina.Image = Global.syscisepro.My.Resources.Resources.do_not_disturb_on_24dp_FILL0_wght400_GRAD0_opsz24
-            Me.btnDelMuebleOficina.Location = New System.Drawing.Point(951, 8)
+            Me.btnDelMuebleOficina.Location = New System.Drawing.Point(759, 8)
             Me.btnDelMuebleOficina.Name = "btnDelMuebleOficina"
             Me.btnDelMuebleOficina.Size = New System.Drawing.Size(25, 25)
             Me.btnDelMuebleOficina.TabIndex = 306
@@ -4057,22 +3824,12 @@
             Me.btnAddMuebleOficina.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.btnAddMuebleOficina.Font = New System.Drawing.Font("Calibri", 9.75!)
             Me.btnAddMuebleOficina.Image = Global.syscisepro.My.Resources.Resources.add_circle_24dp_FILL0_wght400_GRAD0_opsz24__3_
-            Me.btnAddMuebleOficina.Location = New System.Drawing.Point(914, 8)
+            Me.btnAddMuebleOficina.Location = New System.Drawing.Point(722, 8)
             Me.btnAddMuebleOficina.Name = "btnAddMuebleOficina"
             Me.btnAddMuebleOficina.Size = New System.Drawing.Size(25, 25)
             Me.btnAddMuebleOficina.TabIndex = 305
             Me.btnAddMuebleOficina.TextAlign = System.Drawing.ContentAlignment.BottomCenter
             Me.btnAddMuebleOficina.UseVisualStyleBackColor = True
-            '
-            'pbMueblesOficina
-            '
-            Me.pbMueblesOficina.Image = CType(resources.GetObject("pbMueblesOficina.Image"), System.Drawing.Image)
-            Me.pbMueblesOficina.Location = New System.Drawing.Point(253, 6)
-            Me.pbMueblesOficina.Name = "pbMueblesOficina"
-            Me.pbMueblesOficina.Size = New System.Drawing.Size(195, 248)
-            Me.pbMueblesOficina.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-            Me.pbMueblesOficina.TabIndex = 206
-            Me.pbMueblesOficina.TabStop = False
             '
             'cbmAñosMueblesOficina
             '
@@ -4212,7 +3969,6 @@
             Me.tpEquiposCocina.Controls.Add(Me.dgvEquipoCocina)
             Me.tpEquiposCocina.Controls.Add(Me.btnDellEquipoCocina)
             Me.tpEquiposCocina.Controls.Add(Me.btnAddEquipoCocina)
-            Me.tpEquiposCocina.Controls.Add(Me.pbEquiposCocina)
             Me.tpEquiposCocina.Controls.Add(Me.Label103)
             Me.tpEquiposCocina.Controls.Add(Me.txtSerieEquiposCocina)
             Me.tpEquiposCocina.Controls.Add(Me.cbmAñosEquiposCocina)
@@ -4231,7 +3987,7 @@
             Me.tpEquiposCocina.Location = New System.Drawing.Point(4, 22)
             Me.tpEquiposCocina.Name = "tpEquiposCocina"
             Me.tpEquiposCocina.Padding = New System.Windows.Forms.Padding(3)
-            Me.tpEquiposCocina.Size = New System.Drawing.Size(989, 260)
+            Me.tpEquiposCocina.Size = New System.Drawing.Size(994, 260)
             Me.tpEquiposCocina.TabIndex = 9
             Me.tpEquiposCocina.Text = "EQUIPOS DE COCINA"
             Me.tpEquiposCocina.UseVisualStyleBackColor = True
@@ -4241,7 +3997,7 @@
             Me.lblEquipoCocinaCount.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.lblEquipoCocinaCount.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.lblEquipoCocinaCount.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
-            Me.lblEquipoCocinaCount.Location = New System.Drawing.Point(446, 234)
+            Me.lblEquipoCocinaCount.Location = New System.Drawing.Point(249, 234)
             Me.lblEquipoCocinaCount.Name = "lblEquipoCocinaCount"
             Me.lblEquipoCocinaCount.Size = New System.Drawing.Size(533, 19)
             Me.lblEquipoCocinaCount.TabIndex = 316
@@ -4268,7 +4024,7 @@
             DataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText
             DataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
             Me.dgvEquipoCocina.DefaultCellStyle = DataGridViewCellStyle12
-            Me.dgvEquipoCocina.Location = New System.Drawing.Point(446, 42)
+            Me.dgvEquipoCocina.Location = New System.Drawing.Point(249, 42)
             Me.dgvEquipoCocina.MultiSelect = False
             Me.dgvEquipoCocina.Name = "dgvEquipoCocina"
             Me.dgvEquipoCocina.ReadOnly = True
@@ -4350,7 +4106,7 @@
             Me.btnDellEquipoCocina.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.btnDellEquipoCocina.Font = New System.Drawing.Font("Calibri", 9.75!)
             Me.btnDellEquipoCocina.Image = Global.syscisepro.My.Resources.Resources.do_not_disturb_on_24dp_FILL0_wght400_GRAD0_opsz24
-            Me.btnDellEquipoCocina.Location = New System.Drawing.Point(949, 7)
+            Me.btnDellEquipoCocina.Location = New System.Drawing.Point(752, 7)
             Me.btnDellEquipoCocina.Name = "btnDellEquipoCocina"
             Me.btnDellEquipoCocina.Size = New System.Drawing.Size(25, 25)
             Me.btnDellEquipoCocina.TabIndex = 312
@@ -4364,22 +4120,12 @@
             Me.btnAddEquipoCocina.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.btnAddEquipoCocina.Font = New System.Drawing.Font("Calibri", 9.75!)
             Me.btnAddEquipoCocina.Image = Global.syscisepro.My.Resources.Resources.add_circle_24dp_FILL0_wght400_GRAD0_opsz24__3_
-            Me.btnAddEquipoCocina.Location = New System.Drawing.Point(917, 7)
+            Me.btnAddEquipoCocina.Location = New System.Drawing.Point(720, 7)
             Me.btnAddEquipoCocina.Name = "btnAddEquipoCocina"
             Me.btnAddEquipoCocina.Size = New System.Drawing.Size(25, 25)
             Me.btnAddEquipoCocina.TabIndex = 311
             Me.btnAddEquipoCocina.TextAlign = System.Drawing.ContentAlignment.BottomCenter
             Me.btnAddEquipoCocina.UseVisualStyleBackColor = True
-            '
-            'pbEquiposCocina
-            '
-            Me.pbEquiposCocina.Image = CType(resources.GetObject("pbEquiposCocina.Image"), System.Drawing.Image)
-            Me.pbEquiposCocina.Location = New System.Drawing.Point(234, 11)
-            Me.pbEquiposCocina.Name = "pbEquiposCocina"
-            Me.pbEquiposCocina.Size = New System.Drawing.Size(208, 239)
-            Me.pbEquiposCocina.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-            Me.pbEquiposCocina.TabIndex = 210
-            Me.pbEquiposCocina.TabStop = False
             '
             'Label103
             '
@@ -4542,7 +4288,6 @@
             Me.TabPage4.Controls.Add(Me.Label119)
             Me.TabPage4.Controls.Add(Me.txtVoltajeEquiposAmbientacion)
             Me.TabPage4.Controls.Add(Me.txtAmperajeEquiposAmbientacion)
-            Me.TabPage4.Controls.Add(Me.pbEquiposAmbientacion)
             Me.TabPage4.Controls.Add(Me.Label110)
             Me.TabPage4.Controls.Add(Me.txtSerieEquiposAmbientacion)
             Me.TabPage4.Controls.Add(Me.cbmAñosEquiposAmbientacion)
@@ -4562,7 +4307,7 @@
             Me.TabPage4.Location = New System.Drawing.Point(4, 22)
             Me.TabPage4.Name = "TabPage4"
             Me.TabPage4.Padding = New System.Windows.Forms.Padding(3)
-            Me.TabPage4.Size = New System.Drawing.Size(989, 260)
+            Me.TabPage4.Size = New System.Drawing.Size(994, 260)
             Me.TabPage4.TabIndex = 10
             Me.TabPage4.Text = "EQUIPOS DE AMBIENTACION"
             Me.TabPage4.UseVisualStyleBackColor = True
@@ -4572,7 +4317,7 @@
             Me.lblEquipoAmbientacionCount.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.lblEquipoAmbientacionCount.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.lblEquipoAmbientacionCount.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
-            Me.lblEquipoAmbientacionCount.Location = New System.Drawing.Point(449, 235)
+            Me.lblEquipoAmbientacionCount.Location = New System.Drawing.Point(267, 235)
             Me.lblEquipoAmbientacionCount.Name = "lblEquipoAmbientacionCount"
             Me.lblEquipoAmbientacionCount.Size = New System.Drawing.Size(533, 19)
             Me.lblEquipoAmbientacionCount.TabIndex = 322
@@ -4599,7 +4344,7 @@
             DataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText
             DataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
             Me.dgvEquipoAmbientacion.DefaultCellStyle = DataGridViewCellStyle14
-            Me.dgvEquipoAmbientacion.Location = New System.Drawing.Point(449, 38)
+            Me.dgvEquipoAmbientacion.Location = New System.Drawing.Point(267, 38)
             Me.dgvEquipoAmbientacion.MultiSelect = False
             Me.dgvEquipoAmbientacion.Name = "dgvEquipoAmbientacion"
             Me.dgvEquipoAmbientacion.ReadOnly = True
@@ -4699,7 +4444,7 @@
             Me.btnDelEquipoAmbientacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.btnDelEquipoAmbientacion.Font = New System.Drawing.Font("Calibri", 9.75!)
             Me.btnDelEquipoAmbientacion.Image = Global.syscisepro.My.Resources.Resources.do_not_disturb_on_24dp_FILL0_wght400_GRAD0_opsz24
-            Me.btnDelEquipoAmbientacion.Location = New System.Drawing.Point(950, 7)
+            Me.btnDelEquipoAmbientacion.Location = New System.Drawing.Point(768, 7)
             Me.btnDelEquipoAmbientacion.Name = "btnDelEquipoAmbientacion"
             Me.btnDelEquipoAmbientacion.Size = New System.Drawing.Size(25, 25)
             Me.btnDelEquipoAmbientacion.TabIndex = 318
@@ -4713,7 +4458,7 @@
             Me.btnAddEquipoAmbientacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.btnAddEquipoAmbientacion.Font = New System.Drawing.Font("Calibri", 9.75!)
             Me.btnAddEquipoAmbientacion.Image = Global.syscisepro.My.Resources.Resources.add_circle_24dp_FILL0_wght400_GRAD0_opsz24__3_
-            Me.btnAddEquipoAmbientacion.Location = New System.Drawing.Point(916, 7)
+            Me.btnAddEquipoAmbientacion.Location = New System.Drawing.Point(734, 7)
             Me.btnAddEquipoAmbientacion.Name = "btnAddEquipoAmbientacion"
             Me.btnAddEquipoAmbientacion.Size = New System.Drawing.Size(25, 25)
             Me.btnAddEquipoAmbientacion.TabIndex = 317
@@ -4725,17 +4470,17 @@
             Me.txtTipoEquiposAmbientacion.BackColor = System.Drawing.Color.White
             Me.txtTipoEquiposAmbientacion.Enabled = False
             Me.txtTipoEquiposAmbientacion.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtTipoEquiposAmbientacion.Location = New System.Drawing.Point(256, 171)
+            Me.txtTipoEquiposAmbientacion.Location = New System.Drawing.Point(331, 5)
             Me.txtTipoEquiposAmbientacion.Multiline = True
             Me.txtTipoEquiposAmbientacion.Name = "txtTipoEquiposAmbientacion"
-            Me.txtTipoEquiposAmbientacion.Size = New System.Drawing.Size(185, 69)
+            Me.txtTipoEquiposAmbientacion.Size = New System.Drawing.Size(185, 29)
             Me.txtTipoEquiposAmbientacion.TabIndex = 231
             '
             'Label119
             '
             Me.Label119.AutoSize = True
             Me.Label119.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label119.Location = New System.Drawing.Point(253, 158)
+            Me.Label119.Location = New System.Drawing.Point(270, 16)
             Me.Label119.Name = "Label119"
             Me.Label119.Size = New System.Drawing.Size(34, 13)
             Me.Label119.TabIndex = 230
@@ -4760,16 +4505,6 @@
             Me.txtAmperajeEquiposAmbientacion.Name = "txtAmperajeEquiposAmbientacion"
             Me.txtAmperajeEquiposAmbientacion.Size = New System.Drawing.Size(43, 22)
             Me.txtAmperajeEquiposAmbientacion.TabIndex = 226
-            '
-            'pbEquiposAmbientacion
-            '
-            Me.pbEquiposAmbientacion.Image = CType(resources.GetObject("pbEquiposAmbientacion.Image"), System.Drawing.Image)
-            Me.pbEquiposAmbientacion.Location = New System.Drawing.Point(256, 6)
-            Me.pbEquiposAmbientacion.Name = "pbEquiposAmbientacion"
-            Me.pbEquiposAmbientacion.Size = New System.Drawing.Size(185, 146)
-            Me.pbEquiposAmbientacion.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-            Me.pbEquiposAmbientacion.TabIndex = 225
-            Me.pbEquiposAmbientacion.TabStop = False
             '
             'Label110
             '
@@ -4975,12 +4710,11 @@
             Me.TabPage1.Controls.Add(Me.cbmColorEquiposComunicacion)
             Me.TabPage1.Controls.Add(Me.Label128)
             Me.TabPage1.Controls.Add(Me.cbmEstadoEquiposComunicacion)
-            Me.TabPage1.Controls.Add(Me.pbEquiposComunicacion)
             Me.TabPage1.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.TabPage1.Location = New System.Drawing.Point(4, 22)
             Me.TabPage1.Name = "TabPage1"
             Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-            Me.TabPage1.Size = New System.Drawing.Size(989, 260)
+            Me.TabPage1.Size = New System.Drawing.Size(994, 260)
             Me.TabPage1.TabIndex = 11
             Me.TabPage1.Text = "EQUIPOS DE COMUNICACIÓN Y TELEFONÍA"
             Me.TabPage1.UseVisualStyleBackColor = True
@@ -4988,7 +4722,7 @@
             'txtGarantiaComunicacion
             '
             Me.txtGarantiaComunicacion.Enabled = False
-            Me.txtGarantiaComunicacion.Location = New System.Drawing.Point(534, 6)
+            Me.txtGarantiaComunicacion.Location = New System.Drawing.Point(373, 36)
             Me.txtGarantiaComunicacion.Name = "txtGarantiaComunicacion"
             Me.txtGarantiaComunicacion.Size = New System.Drawing.Size(100, 22)
             Me.txtGarantiaComunicacion.TabIndex = 343
@@ -4997,7 +4731,7 @@
             '
             Me.chkGarantiaComunicacion.AutoSize = True
             Me.chkGarantiaComunicacion.Enabled = False
-            Me.chkGarantiaComunicacion.Location = New System.Drawing.Point(451, 10)
+            Me.chkGarantiaComunicacion.Location = New System.Drawing.Point(266, 41)
             Me.chkGarantiaComunicacion.Name = "chkGarantiaComunicacion"
             Me.chkGarantiaComunicacion.Size = New System.Drawing.Size(79, 17)
             Me.chkGarantiaComunicacion.TabIndex = 342
@@ -5007,7 +4741,7 @@
             'btnGarantiaComunicacion
             '
             Me.btnGarantiaComunicacion.Enabled = False
-            Me.btnGarantiaComunicacion.Location = New System.Drawing.Point(664, 5)
+            Me.btnGarantiaComunicacion.Location = New System.Drawing.Point(514, 39)
             Me.btnGarantiaComunicacion.Name = "btnGarantiaComunicacion"
             Me.btnGarantiaComunicacion.Size = New System.Drawing.Size(33, 23)
             Me.btnGarantiaComunicacion.TabIndex = 341
@@ -5019,9 +4753,9 @@
             Me.lblEquipoComunicacionCount.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.lblEquipoComunicacionCount.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.lblEquipoComunicacionCount.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
-            Me.lblEquipoComunicacionCount.Location = New System.Drawing.Point(449, 232)
+            Me.lblEquipoComunicacionCount.Location = New System.Drawing.Point(265, 238)
             Me.lblEquipoComunicacionCount.Name = "lblEquipoComunicacionCount"
-            Me.lblEquipoComunicacionCount.Size = New System.Drawing.Size(533, 19)
+            Me.lblEquipoComunicacionCount.Size = New System.Drawing.Size(517, 19)
             Me.lblEquipoComunicacionCount.TabIndex = 328
             Me.lblEquipoComunicacionCount.Text = "VERIFIQUE LAS SERIES ANTES DE GUARDAR!! "
             Me.lblEquipoComunicacionCount.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -5046,13 +4780,13 @@
             DataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText
             DataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
             Me.dgvEquipoComunicacion.DefaultCellStyle = DataGridViewCellStyle16
-            Me.dgvEquipoComunicacion.Location = New System.Drawing.Point(449, 39)
+            Me.dgvEquipoComunicacion.Location = New System.Drawing.Point(264, 64)
             Me.dgvEquipoComunicacion.MultiSelect = False
             Me.dgvEquipoComunicacion.Name = "dgvEquipoComunicacion"
             Me.dgvEquipoComunicacion.ReadOnly = True
             Me.dgvEquipoComunicacion.RowHeadersVisible = False
             Me.dgvEquipoComunicacion.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvEquipoComunicacion.Size = New System.Drawing.Size(534, 190)
+            Me.dgvEquipoComunicacion.Size = New System.Drawing.Size(518, 172)
             Me.dgvEquipoComunicacion.TabIndex = 325
             '
             'DataGridViewTextBoxColumn46
@@ -5152,7 +4886,7 @@
             Me.btnDelEquipoComunicacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.btnDelEquipoComunicacion.Font = New System.Drawing.Font("Calibri", 9.75!)
             Me.btnDelEquipoComunicacion.Image = Global.syscisepro.My.Resources.Resources.do_not_disturb_on_24dp_FILL0_wght400_GRAD0_opsz24
-            Me.btnDelEquipoComunicacion.Location = New System.Drawing.Point(949, 7)
+            Me.btnDelEquipoComunicacion.Location = New System.Drawing.Point(732, 33)
             Me.btnDelEquipoComunicacion.Name = "btnDelEquipoComunicacion"
             Me.btnDelEquipoComunicacion.Size = New System.Drawing.Size(25, 25)
             Me.btnDelEquipoComunicacion.TabIndex = 324
@@ -5166,7 +4900,7 @@
             Me.btnAddEquipoComunicacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.btnAddEquipoComunicacion.Font = New System.Drawing.Font("Calibri", 9.75!)
             Me.btnAddEquipoComunicacion.Image = Global.syscisepro.My.Resources.Resources.add_circle_24dp_FILL0_wght400_GRAD0_opsz24__3_
-            Me.btnAddEquipoComunicacion.Location = New System.Drawing.Point(918, 7)
+            Me.btnAddEquipoComunicacion.Location = New System.Drawing.Point(701, 33)
             Me.btnAddEquipoComunicacion.Name = "btnAddEquipoComunicacion"
             Me.btnAddEquipoComunicacion.Size = New System.Drawing.Size(25, 25)
             Me.btnAddEquipoComunicacion.TabIndex = 323
@@ -5178,9 +4912,9 @@
             Me.dtpFinaLPermisoFrecuencia.Enabled = False
             Me.dtpFinaLPermisoFrecuencia.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.dtpFinaLPermisoFrecuencia.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-            Me.dtpFinaLPermisoFrecuencia.Location = New System.Drawing.Point(259, 217)
+            Me.dtpFinaLPermisoFrecuencia.Location = New System.Drawing.Point(618, 5)
             Me.dtpFinaLPermisoFrecuencia.Name = "dtpFinaLPermisoFrecuencia"
-            Me.dtpFinaLPermisoFrecuencia.Size = New System.Drawing.Size(184, 22)
+            Me.dtpFinaLPermisoFrecuencia.Size = New System.Drawing.Size(108, 22)
             Me.dtpFinaLPermisoFrecuencia.TabIndex = 229
             Me.dtpFinaLPermisoFrecuencia.Value = New Date(2020, 2, 7, 0, 0, 0, 0)
             '
@@ -5189,9 +4923,9 @@
             Me.dtpInicioPermisoFrecuencia.Enabled = False
             Me.dtpInicioPermisoFrecuencia.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.dtpInicioPermisoFrecuencia.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-            Me.dtpInicioPermisoFrecuencia.Location = New System.Drawing.Point(259, 147)
+            Me.dtpInicioPermisoFrecuencia.Location = New System.Drawing.Point(382, 4)
             Me.dtpInicioPermisoFrecuencia.Name = "dtpInicioPermisoFrecuencia"
-            Me.dtpInicioPermisoFrecuencia.Size = New System.Drawing.Size(184, 22)
+            Me.dtpInicioPermisoFrecuencia.Size = New System.Drawing.Size(96, 22)
             Me.dtpInicioPermisoFrecuencia.TabIndex = 228
             Me.dtpInicioPermisoFrecuencia.Value = New Date(2020, 2, 7, 0, 0, 0, 0)
             '
@@ -5199,21 +4933,21 @@
             '
             Me.Label130.AutoSize = True
             Me.Label130.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label130.Location = New System.Drawing.Point(256, 180)
+            Me.Label130.Location = New System.Drawing.Point(504, 12)
             Me.Label130.Name = "Label130"
-            Me.Label130.Size = New System.Drawing.Size(111, 26)
+            Me.Label130.Size = New System.Drawing.Size(107, 13)
             Me.Label130.TabIndex = 227
-            Me.Label130.Text = "FINAL DEL PERMISO " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "DE LA FRECUENCIA:"
+            Me.Label130.Text = "FINAL FRECUENCIA:"
             '
             'Label129
             '
             Me.Label129.AutoSize = True
             Me.Label129.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label129.Location = New System.Drawing.Point(256, 108)
+            Me.Label129.Location = New System.Drawing.Point(265, 12)
             Me.Label129.Name = "Label129"
-            Me.Label129.Size = New System.Drawing.Size(115, 26)
+            Me.Label129.Size = New System.Drawing.Size(111, 13)
             Me.Label129.TabIndex = 226
-            Me.Label129.Text = "INICIO DEL PERMISO " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "DE LA FRECUENCIA:"
+            Me.Label129.Text = "INICIO FRECUENCIA:"
             '
             'Label122
             '
@@ -5366,16 +5100,6 @@
             Me.cbmEstadoEquiposComunicacion.Size = New System.Drawing.Size(157, 21)
             Me.cbmEstadoEquiposComunicacion.TabIndex = 211
             '
-            'pbEquiposComunicacion
-            '
-            Me.pbEquiposComunicacion.Image = CType(resources.GetObject("pbEquiposComunicacion.Image"), System.Drawing.Image)
-            Me.pbEquiposComunicacion.Location = New System.Drawing.Point(256, 3)
-            Me.pbEquiposComunicacion.Name = "pbEquiposComunicacion"
-            Me.pbEquiposComunicacion.Size = New System.Drawing.Size(189, 102)
-            Me.pbEquiposComunicacion.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-            Me.pbEquiposComunicacion.TabIndex = 225
-            Me.pbEquiposComunicacion.TabStop = False
-            '
             'tpEquiposSeguridadIndustrial
             '
             Me.tpEquiposSeguridadIndustrial.Controls.Add(Me.lblEquipoSeguridadCount)
@@ -5397,13 +5121,12 @@
             Me.tpEquiposSeguridadIndustrial.Controls.Add(Me.cbmColorEquipoSeguridad)
             Me.tpEquiposSeguridadIndustrial.Controls.Add(Me.Label136)
             Me.tpEquiposSeguridadIndustrial.Controls.Add(Me.cbmEstadoEquipoSeguridad)
-            Me.tpEquiposSeguridadIndustrial.Controls.Add(Me.pbEquiposSeguridad)
             Me.tpEquiposSeguridadIndustrial.Controls.Add(Me.Label137)
             Me.tpEquiposSeguridadIndustrial.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.tpEquiposSeguridadIndustrial.Location = New System.Drawing.Point(4, 22)
             Me.tpEquiposSeguridadIndustrial.Name = "tpEquiposSeguridadIndustrial"
             Me.tpEquiposSeguridadIndustrial.Padding = New System.Windows.Forms.Padding(3)
-            Me.tpEquiposSeguridadIndustrial.Size = New System.Drawing.Size(989, 260)
+            Me.tpEquiposSeguridadIndustrial.Size = New System.Drawing.Size(994, 260)
             Me.tpEquiposSeguridadIndustrial.TabIndex = 12
             Me.tpEquiposSeguridadIndustrial.Text = "EQUIPOS DE SEGURIDAD INDUSTRIAL"
             Me.tpEquiposSeguridadIndustrial.UseVisualStyleBackColor = True
@@ -5413,7 +5136,7 @@
             Me.lblEquipoSeguridadCount.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.lblEquipoSeguridadCount.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.lblEquipoSeguridadCount.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
-            Me.lblEquipoSeguridadCount.Location = New System.Drawing.Point(453, 233)
+            Me.lblEquipoSeguridadCount.Location = New System.Drawing.Point(267, 227)
             Me.lblEquipoSeguridadCount.Name = "lblEquipoSeguridadCount"
             Me.lblEquipoSeguridadCount.Size = New System.Drawing.Size(533, 19)
             Me.lblEquipoSeguridadCount.TabIndex = 332
@@ -5440,7 +5163,7 @@
             DataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText
             DataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
             Me.dgvEquipoSeguridad.DefaultCellStyle = DataGridViewCellStyle18
-            Me.dgvEquipoSeguridad.Location = New System.Drawing.Point(453, 41)
+            Me.dgvEquipoSeguridad.Location = New System.Drawing.Point(267, 35)
             Me.dgvEquipoSeguridad.MultiSelect = False
             Me.dgvEquipoSeguridad.Name = "dgvEquipoSeguridad"
             Me.dgvEquipoSeguridad.ReadOnly = True
@@ -5528,7 +5251,7 @@
             Me.btnDelEquipoSeguridad.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.btnDelEquipoSeguridad.Font = New System.Drawing.Font("Calibri", 9.75!)
             Me.btnDelEquipoSeguridad.Image = Global.syscisepro.My.Resources.Resources.do_not_disturb_on_24dp_FILL0_wght400_GRAD0_opsz24
-            Me.btnDelEquipoSeguridad.Location = New System.Drawing.Point(952, 7)
+            Me.btnDelEquipoSeguridad.Location = New System.Drawing.Point(766, 5)
             Me.btnDelEquipoSeguridad.Name = "btnDelEquipoSeguridad"
             Me.btnDelEquipoSeguridad.Size = New System.Drawing.Size(25, 25)
             Me.btnDelEquipoSeguridad.TabIndex = 330
@@ -5542,7 +5265,7 @@
             Me.btnAddEquipoSeguridad.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.btnAddEquipoSeguridad.Font = New System.Drawing.Font("Calibri", 9.75!)
             Me.btnAddEquipoSeguridad.Image = Global.syscisepro.My.Resources.Resources.add_circle_24dp_FILL0_wght400_GRAD0_opsz24__3_
-            Me.btnAddEquipoSeguridad.Location = New System.Drawing.Point(919, 7)
+            Me.btnAddEquipoSeguridad.Location = New System.Drawing.Point(733, 5)
             Me.btnAddEquipoSeguridad.Name = "btnAddEquipoSeguridad"
             Me.btnAddEquipoSeguridad.Size = New System.Drawing.Size(25, 25)
             Me.btnAddEquipoSeguridad.TabIndex = 329
@@ -5553,10 +5276,10 @@
             '
             Me.txtAdicionalEquipoSeguridad.Enabled = False
             Me.txtAdicionalEquipoSeguridad.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtAdicionalEquipoSeguridad.Location = New System.Drawing.Point(74, 199)
+            Me.txtAdicionalEquipoSeguridad.Location = New System.Drawing.Point(340, 4)
             Me.txtAdicionalEquipoSeguridad.Multiline = True
             Me.txtAdicionalEquipoSeguridad.Name = "txtAdicionalEquipoSeguridad"
-            Me.txtAdicionalEquipoSeguridad.Size = New System.Drawing.Size(373, 46)
+            Me.txtAdicionalEquipoSeguridad.Size = New System.Drawing.Size(351, 25)
             Me.txtAdicionalEquipoSeguridad.TabIndex = 241
             '
             'Label73
@@ -5709,21 +5432,11 @@
             Me.cbmEstadoEquipoSeguridad.Size = New System.Drawing.Size(157, 21)
             Me.cbmEstadoEquipoSeguridad.TabIndex = 226
             '
-            'pbEquiposSeguridad
-            '
-            Me.pbEquiposSeguridad.Image = CType(resources.GetObject("pbEquiposSeguridad.Image"), System.Drawing.Image)
-            Me.pbEquiposSeguridad.Location = New System.Drawing.Point(256, 8)
-            Me.pbEquiposSeguridad.Name = "pbEquiposSeguridad"
-            Me.pbEquiposSeguridad.Size = New System.Drawing.Size(192, 183)
-            Me.pbEquiposSeguridad.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-            Me.pbEquiposSeguridad.TabIndex = 240
-            Me.pbEquiposSeguridad.TabStop = False
-            '
             'Label137
             '
             Me.Label137.AutoSize = True
             Me.Label137.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label137.Location = New System.Drawing.Point(9, 204)
+            Me.Label137.Location = New System.Drawing.Point(267, 10)
             Me.Label137.Name = "Label137"
             Me.Label137.Size = New System.Drawing.Size(67, 13)
             Me.Label137.TabIndex = 242
@@ -5756,11 +5469,10 @@
             Me.tpCamarasSeguridad.Controls.Add(Me.cbmColorCamarasSeguridad)
             Me.tpCamarasSeguridad.Controls.Add(Me.Label145)
             Me.tpCamarasSeguridad.Controls.Add(Me.cbmEstadoCamarasSeguridad)
-            Me.tpCamarasSeguridad.Controls.Add(Me.pbCamarasSeguridad)
             Me.tpCamarasSeguridad.Location = New System.Drawing.Point(4, 22)
             Me.tpCamarasSeguridad.Name = "tpCamarasSeguridad"
             Me.tpCamarasSeguridad.Padding = New System.Windows.Forms.Padding(3)
-            Me.tpCamarasSeguridad.Size = New System.Drawing.Size(989, 260)
+            Me.tpCamarasSeguridad.Size = New System.Drawing.Size(994, 260)
             Me.tpCamarasSeguridad.TabIndex = 13
             Me.tpCamarasSeguridad.Text = "CAMARAS DE SEGURIDAD"
             Me.tpCamarasSeguridad.UseVisualStyleBackColor = True
@@ -5798,7 +5510,7 @@
             '
             Me.Label37.AutoSize = True
             Me.Label37.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label37.Location = New System.Drawing.Point(240, 42)
+            Me.Label37.Location = New System.Drawing.Point(460, 15)
             Me.Label37.Name = "Label37"
             Me.Label37.Size = New System.Drawing.Size(73, 13)
             Me.Label37.TabIndex = 338
@@ -5807,9 +5519,10 @@
             'dtpCaducidadCamara
             '
             Me.dtpCaducidadCamara.Enabled = False
-            Me.dtpCaducidadCamara.Location = New System.Drawing.Point(315, 37)
+            Me.dtpCaducidadCamara.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+            Me.dtpCaducidadCamara.Location = New System.Drawing.Point(535, 10)
             Me.dtpCaducidadCamara.Name = "dtpCaducidadCamara"
-            Me.dtpCaducidadCamara.Size = New System.Drawing.Size(122, 21)
+            Me.dtpCaducidadCamara.Size = New System.Drawing.Size(85, 21)
             Me.dtpCaducidadCamara.TabIndex = 337
             '
             'lblCamaraCount
@@ -5817,7 +5530,7 @@
             Me.lblCamaraCount.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.lblCamaraCount.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.lblCamaraCount.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
-            Me.lblCamaraCount.Location = New System.Drawing.Point(449, 235)
+            Me.lblCamaraCount.Location = New System.Drawing.Point(249, 232)
             Me.lblCamaraCount.Name = "lblCamaraCount"
             Me.lblCamaraCount.Size = New System.Drawing.Size(533, 19)
             Me.lblCamaraCount.TabIndex = 336
@@ -5844,7 +5557,7 @@
             DataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText
             DataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
             Me.dgvCamara.DefaultCellStyle = DataGridViewCellStyle20
-            Me.dgvCamara.Location = New System.Drawing.Point(449, 42)
+            Me.dgvCamara.Location = New System.Drawing.Point(249, 39)
             Me.dgvCamara.MultiSelect = False
             Me.dgvCamara.Name = "dgvCamara"
             Me.dgvCamara.ReadOnly = True
@@ -5944,7 +5657,7 @@
             Me.btnDelCamara.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.btnDelCamara.Font = New System.Drawing.Font("Calibri", 9.75!)
             Me.btnDelCamara.Image = Global.syscisepro.My.Resources.Resources.do_not_disturb_on_24dp_FILL0_wght400_GRAD0_opsz24
-            Me.btnDelCamara.Location = New System.Drawing.Point(952, 9)
+            Me.btnDelCamara.Location = New System.Drawing.Point(752, 6)
             Me.btnDelCamara.Name = "btnDelCamara"
             Me.btnDelCamara.Size = New System.Drawing.Size(25, 25)
             Me.btnDelCamara.TabIndex = 334
@@ -5958,7 +5671,7 @@
             Me.btnAddCamara.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.btnAddCamara.Font = New System.Drawing.Font("Calibri", 9.75!)
             Me.btnAddCamara.Image = Global.syscisepro.My.Resources.Resources.add_circle_24dp_FILL0_wght400_GRAD0_opsz24__3_
-            Me.btnAddCamara.Location = New System.Drawing.Point(922, 9)
+            Me.btnAddCamara.Location = New System.Drawing.Point(722, 6)
             Me.btnAddCamara.Name = "btnAddCamara"
             Me.btnAddCamara.Size = New System.Drawing.Size(25, 25)
             Me.btnAddCamara.TabIndex = 333
@@ -6135,16 +5848,6 @@
             Me.cbmEstadoCamarasSeguridad.Size = New System.Drawing.Size(146, 21)
             Me.cbmEstadoCamarasSeguridad.TabIndex = 243
             '
-            'pbCamarasSeguridad
-            '
-            Me.pbCamarasSeguridad.Image = CType(resources.GetObject("pbCamarasSeguridad.Image"), System.Drawing.Image)
-            Me.pbCamarasSeguridad.Location = New System.Drawing.Point(242, 78)
-            Me.pbCamarasSeguridad.Name = "pbCamarasSeguridad"
-            Me.pbCamarasSeguridad.Size = New System.Drawing.Size(203, 176)
-            Me.pbCamarasSeguridad.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-            Me.pbCamarasSeguridad.TabIndex = 257
-            Me.pbCamarasSeguridad.TabStop = False
-            '
             'tpGeneradores
             '
             Me.tpGeneradores.Controls.Add(Me.Label158)
@@ -6169,11 +5872,10 @@
             Me.tpGeneradores.Controls.Add(Me.cbmColorGeneradores)
             Me.tpGeneradores.Controls.Add(Me.Label157)
             Me.tpGeneradores.Controls.Add(Me.cbmEstadoGeneradores)
-            Me.tpGeneradores.Controls.Add(Me.pbGeneradores)
             Me.tpGeneradores.Location = New System.Drawing.Point(4, 22)
             Me.tpGeneradores.Name = "tpGeneradores"
             Me.tpGeneradores.Padding = New System.Windows.Forms.Padding(3)
-            Me.tpGeneradores.Size = New System.Drawing.Size(989, 260)
+            Me.tpGeneradores.Size = New System.Drawing.Size(994, 260)
             Me.tpGeneradores.TabIndex = 14
             Me.tpGeneradores.Text = "GENERADORES"
             Me.tpGeneradores.UseVisualStyleBackColor = True
@@ -6406,16 +6108,6 @@
             Me.cbmEstadoGeneradores.Size = New System.Drawing.Size(157, 21)
             Me.cbmEstadoGeneradores.TabIndex = 234
             '
-            'pbGeneradores
-            '
-            Me.pbGeneradores.Image = CType(resources.GetObject("pbGeneradores.Image"), System.Drawing.Image)
-            Me.pbGeneradores.Location = New System.Drawing.Point(687, 29)
-            Me.pbGeneradores.Name = "pbGeneradores"
-            Me.pbGeneradores.Size = New System.Drawing.Size(258, 190)
-            Me.pbGeneradores.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-            Me.pbGeneradores.TabIndex = 248
-            Me.pbGeneradores.TabStop = False
-            '
             'tpChalecos
             '
             Me.tpChalecos.Controls.Add(Me.txtGarantiaChaleco)
@@ -6443,12 +6135,11 @@
             Me.tpChalecos.Controls.Add(Me.cbmColorChaleco)
             Me.tpChalecos.Controls.Add(Me.Label166)
             Me.tpChalecos.Controls.Add(Me.cbmEstadoChaleco)
-            Me.tpChalecos.Controls.Add(Me.pbChaleco)
             Me.tpChalecos.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.tpChalecos.Location = New System.Drawing.Point(4, 22)
             Me.tpChalecos.Name = "tpChalecos"
             Me.tpChalecos.Padding = New System.Windows.Forms.Padding(3)
-            Me.tpChalecos.Size = New System.Drawing.Size(989, 260)
+            Me.tpChalecos.Size = New System.Drawing.Size(994, 260)
             Me.tpChalecos.TabIndex = 15
             Me.tpChalecos.Text = "CHALECOS"
             Me.tpChalecos.UseVisualStyleBackColor = True
@@ -6487,7 +6178,7 @@
             Me.lblChalecoCount.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.lblChalecoCount.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.lblChalecoCount.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
-            Me.lblChalecoCount.Location = New System.Drawing.Point(449, 233)
+            Me.lblChalecoCount.Location = New System.Drawing.Point(269, 233)
             Me.lblChalecoCount.Name = "lblChalecoCount"
             Me.lblChalecoCount.Size = New System.Drawing.Size(533, 19)
             Me.lblChalecoCount.TabIndex = 340
@@ -6514,7 +6205,7 @@
             DataGridViewCellStyle22.SelectionForeColor = System.Drawing.SystemColors.HighlightText
             DataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
             Me.dgvChaleco.DefaultCellStyle = DataGridViewCellStyle22
-            Me.dgvChaleco.Location = New System.Drawing.Point(462, 44)
+            Me.dgvChaleco.Location = New System.Drawing.Point(282, 44)
             Me.dgvChaleco.MultiSelect = False
             Me.dgvChaleco.Name = "dgvChaleco"
             Me.dgvChaleco.ReadOnly = True
@@ -6620,7 +6311,7 @@
             Me.btnDelChaleco.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.btnDelChaleco.Font = New System.Drawing.Font("Calibri", 9.75!)
             Me.btnDelChaleco.Image = Global.syscisepro.My.Resources.Resources.do_not_disturb_on_24dp_FILL0_wght400_GRAD0_opsz24
-            Me.btnDelChaleco.Location = New System.Drawing.Point(951, 7)
+            Me.btnDelChaleco.Location = New System.Drawing.Point(771, 7)
             Me.btnDelChaleco.Name = "btnDelChaleco"
             Me.btnDelChaleco.Size = New System.Drawing.Size(25, 25)
             Me.btnDelChaleco.TabIndex = 338
@@ -6634,7 +6325,7 @@
             Me.btnAddChaleco.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.btnAddChaleco.Font = New System.Drawing.Font("Calibri", 9.75!)
             Me.btnAddChaleco.Image = Global.syscisepro.My.Resources.Resources.add_circle_24dp_FILL0_wght400_GRAD0_opsz24__3_
-            Me.btnAddChaleco.Location = New System.Drawing.Point(917, 7)
+            Me.btnAddChaleco.Location = New System.Drawing.Point(737, 7)
             Me.btnAddChaleco.Name = "btnAddChaleco"
             Me.btnAddChaleco.Size = New System.Drawing.Size(25, 25)
             Me.btnAddChaleco.TabIndex = 337
@@ -6710,7 +6401,7 @@
             Me.cbmAñosChaleco.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cbmAñosChaleco.FormattingEnabled = True
             Me.cbmAñosChaleco.Items.AddRange(New Object() {"1990", "1991", "1992", "1993", "1994", "1995", "1996", "1997", "1998", "1999", "2000", "2001", "2002", "2003", "2004", "2005", "2006", "2007", "2008", "2009", "2010", "2011", "2012"})
-            Me.cbmAñosChaleco.Location = New System.Drawing.Point(367, 36)
+            Me.cbmAñosChaleco.Location = New System.Drawing.Point(565, 12)
             Me.cbmAñosChaleco.Name = "cbmAñosChaleco"
             Me.cbmAñosChaleco.Size = New System.Drawing.Size(89, 21)
             Me.cbmAñosChaleco.TabIndex = 273
@@ -6719,7 +6410,7 @@
             '
             Me.Label161.AutoSize = True
             Me.Label161.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label161.Location = New System.Drawing.Point(267, 44)
+            Me.Label161.Location = New System.Drawing.Point(514, 17)
             Me.Label161.Name = "Label161"
             Me.Label161.Size = New System.Drawing.Size(40, 13)
             Me.Label161.TabIndex = 272
@@ -6834,16 +6525,6 @@
             Me.cbmEstadoChaleco.Size = New System.Drawing.Size(157, 21)
             Me.cbmEstadoChaleco.TabIndex = 262
             '
-            'pbChaleco
-            '
-            Me.pbChaleco.Image = CType(resources.GetObject("pbChaleco.Image"), System.Drawing.Image)
-            Me.pbChaleco.Location = New System.Drawing.Point(270, 81)
-            Me.pbChaleco.Name = "pbChaleco"
-            Me.pbChaleco.Size = New System.Drawing.Size(186, 162)
-            Me.pbChaleco.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-            Me.pbChaleco.TabIndex = 276
-            Me.pbChaleco.TabStop = False
-            '
             'tpSoftware
             '
             Me.tpSoftware.Controls.Add(Me.txtProvedorSoftware)
@@ -6854,12 +6535,11 @@
             Me.tpSoftware.Controls.Add(Me.Label169)
             Me.tpSoftware.Controls.Add(Me.txtDetalleSoftware)
             Me.tpSoftware.Controls.Add(Me.Label168)
-            Me.tpSoftware.Controls.Add(Me.pbSoftware)
             Me.tpSoftware.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.tpSoftware.Location = New System.Drawing.Point(4, 22)
             Me.tpSoftware.Name = "tpSoftware"
             Me.tpSoftware.Padding = New System.Windows.Forms.Padding(3)
-            Me.tpSoftware.Size = New System.Drawing.Size(989, 260)
+            Me.tpSoftware.Size = New System.Drawing.Size(870, 260)
             Me.tpSoftware.TabIndex = 16
             Me.tpSoftware.Text = "SOFTWARE"
             Me.tpSoftware.UseVisualStyleBackColor = True
@@ -6946,21 +6626,11 @@
             Me.Label168.TabIndex = 278
             Me.Label168.Text = "DETALLE:"
             '
-            'pbSoftware
-            '
-            Me.pbSoftware.Image = CType(resources.GetObject("pbSoftware.Image"), System.Drawing.Image)
-            Me.pbSoftware.Location = New System.Drawing.Point(675, 31)
-            Me.pbSoftware.Name = "pbSoftware"
-            Me.pbSoftware.Size = New System.Drawing.Size(258, 190)
-            Me.pbSoftware.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-            Me.pbSoftware.TabIndex = 277
-            Me.pbSoftware.TabStop = False
-            '
             'Label2
             '
             Me.Label2.AutoSize = True
             Me.Label2.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label2.Location = New System.Drawing.Point(394, 22)
+            Me.Label2.Location = New System.Drawing.Point(331, 22)
             Me.Label2.Name = "Label2"
             Me.Label2.Size = New System.Drawing.Size(44, 13)
             Me.Label2.TabIndex = 8
@@ -6972,16 +6642,16 @@
             Me.txtResponsable.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtResponsable.Enabled = False
             Me.txtResponsable.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtResponsable.Location = New System.Drawing.Point(486, 41)
+            Me.txtResponsable.Location = New System.Drawing.Point(423, 41)
             Me.txtResponsable.Name = "txtResponsable"
-            Me.txtResponsable.Size = New System.Drawing.Size(497, 21)
+            Me.txtResponsable.Size = New System.Drawing.Size(352, 21)
             Me.txtResponsable.TabIndex = 7
             '
             'Label1
             '
             Me.Label1.AutoSize = True
             Me.Label1.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label1.Location = New System.Drawing.Point(394, 49)
+            Me.Label1.Location = New System.Drawing.Point(331, 49)
             Me.Label1.Name = "Label1"
             Me.Label1.Size = New System.Drawing.Size(86, 13)
             Me.Label1.TabIndex = 6
@@ -6991,7 +6661,7 @@
             '
             Me.lblIdActivoFijo.AutoSize = True
             Me.lblIdActivoFijo.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.lblIdActivoFijo.Location = New System.Drawing.Point(655, 22)
+            Me.lblIdActivoFijo.Location = New System.Drawing.Point(553, 22)
             Me.lblIdActivoFijo.Name = "lblIdActivoFijo"
             Me.lblIdActivoFijo.Size = New System.Drawing.Size(20, 13)
             Me.lblIdActivoFijo.TabIndex = 88
@@ -7001,7 +6671,7 @@
             '
             Me.Label21.AutoSize = True
             Me.Label21.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label21.Location = New System.Drawing.Point(394, 101)
+            Me.Label21.Location = New System.Drawing.Point(331, 101)
             Me.Label21.Name = "Label21"
             Me.Label21.Size = New System.Drawing.Size(101, 13)
             Me.Label21.TabIndex = 213
@@ -7015,7 +6685,7 @@
             Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
             Me.MenuStrip1.Name = "MenuStrip1"
             Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(7, 2, 0, 2)
-            Me.MenuStrip1.Size = New System.Drawing.Size(1010, 32)
+            Me.MenuStrip1.Size = New System.Drawing.Size(897, 32)
             Me.MenuStrip1.TabIndex = 185
             Me.MenuStrip1.Text = "msIngresoBodega"
             '
@@ -7069,6 +6739,147 @@
             Me.btnParametros.Size = New System.Drawing.Size(105, 28)
             Me.btnParametros.Text = "PARÁMETROS"
             '
+            'KryptonGroupBox1
+            '
+            Me.KryptonGroupBox1.Location = New System.Drawing.Point(7, 4)
+            Me.KryptonGroupBox1.Name = "KryptonGroupBox1"
+            '
+            'KryptonGroupBox1.Panel
+            '
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel13)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel12)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel11)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel10)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel9)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel8)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.cbmColorVehiculo)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.cbmAnoFabricacionVehiculo)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel7)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel6)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.txtCapacidadVehiculo)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel5)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel4)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel3)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.txtMotorVehiculo)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.txtChasisVehiculo)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel2)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.cbmMarcaVehiculo)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel1)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.dtpSoat)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.txtCilindrajeVehiculo)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.txtTipoVehiculo)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.txtPlacaVehiculo)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.txtSerieVehiculo)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.txtModeloVehiculo)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.cbmEstadoVehiculo)
+            Me.KryptonGroupBox1.Size = New System.Drawing.Size(400, 250)
+            Me.KryptonGroupBox1.TabIndex = 196
+            Me.KryptonGroupBox1.Values.Heading = "Detalles"
+            '
+            'KryptonLabel1
+            '
+            Me.KryptonLabel1.Location = New System.Drawing.Point(10, 9)
+            Me.KryptonLabel1.Name = "KryptonLabel1"
+            Me.KryptonLabel1.Size = New System.Drawing.Size(41, 20)
+            Me.KryptonLabel1.TabIndex = 192
+            Me.KryptonLabel1.Values.Text = "SOAT"
+            '
+            'KryptonLabel2
+            '
+            Me.KryptonLabel2.Location = New System.Drawing.Point(10, 36)
+            Me.KryptonLabel2.Name = "KryptonLabel2"
+            Me.KryptonLabel2.Size = New System.Drawing.Size(61, 20)
+            Me.KryptonLabel2.TabIndex = 193
+            Me.KryptonLabel2.Values.Text = "Cilindraje"
+            '
+            'KryptonLabel3
+            '
+            Me.KryptonLabel3.Location = New System.Drawing.Point(10, 70)
+            Me.KryptonLabel3.Name = "KryptonLabel3"
+            Me.KryptonLabel3.Size = New System.Drawing.Size(68, 20)
+            Me.KryptonLabel3.TabIndex = 194
+            Me.KryptonLabel3.Values.Text = "Capacidad"
+            '
+            'KryptonLabel4
+            '
+            Me.KryptonLabel4.Location = New System.Drawing.Point(10, 98)
+            Me.KryptonLabel4.Name = "KryptonLabel4"
+            Me.KryptonLabel4.Size = New System.Drawing.Size(44, 20)
+            Me.KryptonLabel4.TabIndex = 195
+            Me.KryptonLabel4.Values.Text = "Placas"
+            '
+            'KryptonLabel5
+            '
+            Me.KryptonLabel5.Location = New System.Drawing.Point(10, 129)
+            Me.KryptonLabel5.Name = "KryptonLabel5"
+            Me.KryptonLabel5.Size = New System.Drawing.Size(37, 20)
+            Me.KryptonLabel5.TabIndex = 196
+            Me.KryptonLabel5.Values.Text = "Serie"
+            '
+            'KryptonLabel6
+            '
+            Me.KryptonLabel6.Location = New System.Drawing.Point(10, 164)
+            Me.KryptonLabel6.Name = "KryptonLabel6"
+            Me.KryptonLabel6.Size = New System.Drawing.Size(53, 20)
+            Me.KryptonLabel6.TabIndex = 197
+            Me.KryptonLabel6.Values.Text = "Modelo"
+            '
+            'KryptonLabel7
+            '
+            Me.KryptonLabel7.Location = New System.Drawing.Point(198, 9)
+            Me.KryptonLabel7.Name = "KryptonLabel7"
+            Me.KryptonLabel7.Size = New System.Drawing.Size(47, 20)
+            Me.KryptonLabel7.TabIndex = 198
+            Me.KryptonLabel7.Values.Text = "Estado"
+            '
+            'KryptonLabel8
+            '
+            Me.KryptonLabel8.Location = New System.Drawing.Point(198, 36)
+            Me.KryptonLabel8.Name = "KryptonLabel8"
+            Me.KryptonLabel8.Size = New System.Drawing.Size(45, 20)
+            Me.KryptonLabel8.TabIndex = 199
+            Me.KryptonLabel8.Values.Text = "Chasis"
+            '
+            'KryptonLabel9
+            '
+            Me.KryptonLabel9.Location = New System.Drawing.Point(198, 70)
+            Me.KryptonLabel9.Name = "KryptonLabel9"
+            Me.KryptonLabel9.Size = New System.Drawing.Size(45, 20)
+            Me.KryptonLabel9.TabIndex = 200
+            Me.KryptonLabel9.Values.Text = "Motor"
+            '
+            'KryptonLabel10
+            '
+            Me.KryptonLabel10.Location = New System.Drawing.Point(198, 99)
+            Me.KryptonLabel10.Name = "KryptonLabel10"
+            Me.KryptonLabel10.Size = New System.Drawing.Size(44, 20)
+            Me.KryptonLabel10.TabIndex = 201
+            Me.KryptonLabel10.Values.Text = "Marca"
+            '
+            'KryptonLabel11
+            '
+            Me.KryptonLabel11.Location = New System.Drawing.Point(199, 131)
+            Me.KryptonLabel11.Name = "KryptonLabel11"
+            Me.KryptonLabel11.Size = New System.Drawing.Size(34, 20)
+            Me.KryptonLabel11.TabIndex = 202
+            Me.KryptonLabel11.Values.Text = "Tipo"
+            '
+            'KryptonLabel12
+            '
+            Me.KryptonLabel12.Location = New System.Drawing.Point(198, 164)
+            Me.KryptonLabel12.Name = "KryptonLabel12"
+            Me.KryptonLabel12.Size = New System.Drawing.Size(33, 20)
+            Me.KryptonLabel12.TabIndex = 203
+            Me.KryptonLabel12.Values.Text = "Año"
+            '
+            'KryptonLabel13
+            '
+            Me.KryptonLabel13.Location = New System.Drawing.Point(10, 199)
+            Me.KryptonLabel13.Name = "KryptonLabel13"
+            Me.KryptonLabel13.Size = New System.Drawing.Size(40, 20)
+            Me.KryptonLabel13.TabIndex = 204
+            Me.KryptonLabel13.Values.Text = "Color"
+            '
             'FormIngresoActivosFijos
             '
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -7076,7 +6887,7 @@
             Me.AutoScrollMargin = New System.Drawing.Size(10, 10)
             Me.BackColor = System.Drawing.Color.White
             Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-            Me.ClientSize = New System.Drawing.Size(1010, 689)
+            Me.ClientSize = New System.Drawing.Size(897, 689)
             Me.Controls.Add(Me.MenuStrip1)
             Me.Controls.Add(Me.gpInfActfijo)
             Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
@@ -7090,81 +6901,71 @@
             Me.StateActive.Border.Rounding = 5.0!
             Me.Text = "INGRESO DE ACTIVOS FIJOS"
             Me.gpInfActfijo.ResumeLayout(False)
-            Me.gpInfActfijo.PerformLayout
+            Me.gpInfActfijo.PerformLayout()
             Me.GroupBox6.ResumeLayout(False)
-            Me.GroupBox6.PerformLayout
+            Me.GroupBox6.PerformLayout()
             Me.tcDatos.ResumeLayout(False)
             Me.TabPage2.ResumeLayout(False)
-            Me.TabPage2.PerformLayout
+            Me.TabPage2.PerformLayout()
             Me.GroupBox2.ResumeLayout(False)
-            Me.GroupBox2.PerformLayout
+            Me.GroupBox2.PerformLayout()
             Me.tcVarios.ResumeLayout(False)
             Me.tpArmas.ResumeLayout(False)
-            Me.tpArmas.PerformLayout
-            CType(Me.dgvArmas, System.ComponentModel.ISupportInitialize).EndInit
-            CType(Me.pbArmas, System.ComponentModel.ISupportInitialize).EndInit
+            Me.tpArmas.PerformLayout()
+            CType(Me.dgvArmas, System.ComponentModel.ISupportInitialize).EndInit()
             Me.tpRadios.ResumeLayout(False)
-            Me.tpRadios.PerformLayout
-            CType(Me.dgvRadios, System.ComponentModel.ISupportInitialize).EndInit
-            CType(Me.pbRadios, System.ComponentModel.ISupportInitialize).EndInit
+            Me.tpRadios.PerformLayout()
+            CType(Me.dgvRadios, System.ComponentModel.ISupportInitialize).EndInit()
             Me.tpVehiculo.ResumeLayout(False)
-            Me.tpVehiculo.PerformLayout
+            Me.tpVehiculo.PerformLayout()
             Me.GroupBox7.ResumeLayout(False)
-            Me.GroupBox7.PerformLayout
+            Me.GroupBox7.PerformLayout()
             Me.GroupBox1.ResumeLayout(False)
-            Me.GroupBox1.PerformLayout
-            CType(Me.pbVehiculo, System.ComponentModel.ISupportInitialize).EndInit
+            Me.GroupBox1.PerformLayout()
             Me.tpTerreno.ResumeLayout(False)
-            Me.tpTerreno.PerformLayout
-            CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit
+            Me.tpTerreno.PerformLayout()
             Me.tpEquiposComputo.ResumeLayout(False)
-            Me.tpEquiposComputo.PerformLayout
-            CType(Me.dgvEquiposComputo, System.ComponentModel.ISupportInitialize).EndInit
+            Me.tpEquiposComputo.PerformLayout()
+            CType(Me.dgvEquiposComputo, System.ComponentModel.ISupportInitialize).EndInit()
             Me.tpLibrosYcolecciones.ResumeLayout(False)
-            Me.tpLibrosYcolecciones.PerformLayout
-            CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit
+            Me.tpLibrosYcolecciones.PerformLayout()
             Me.tpEquiposOficina.ResumeLayout(False)
-            Me.tpEquiposOficina.PerformLayout
-            CType(Me.dgvEquiposOficina, System.ComponentModel.ISupportInitialize).EndInit
-            CType(Me.pbEquiposOficina, System.ComponentModel.ISupportInitialize).EndInit
+            Me.tpEquiposOficina.PerformLayout()
+            CType(Me.dgvEquiposOficina, System.ComponentModel.ISupportInitialize).EndInit()
             Me.tpMueblesOficina.ResumeLayout(False)
-            Me.tpMueblesOficina.PerformLayout
-            CType(Me.dgvMuebleOficina, System.ComponentModel.ISupportInitialize).EndInit
-            CType(Me.pbMueblesOficina, System.ComponentModel.ISupportInitialize).EndInit
+            Me.tpMueblesOficina.PerformLayout()
+            CType(Me.dgvMuebleOficina, System.ComponentModel.ISupportInitialize).EndInit()
             Me.tpEquiposCocina.ResumeLayout(False)
-            Me.tpEquiposCocina.PerformLayout
-            CType(Me.dgvEquipoCocina, System.ComponentModel.ISupportInitialize).EndInit
-            CType(Me.pbEquiposCocina, System.ComponentModel.ISupportInitialize).EndInit
+            Me.tpEquiposCocina.PerformLayout()
+            CType(Me.dgvEquipoCocina, System.ComponentModel.ISupportInitialize).EndInit()
             Me.TabPage4.ResumeLayout(False)
-            Me.TabPage4.PerformLayout
-            CType(Me.dgvEquipoAmbientacion, System.ComponentModel.ISupportInitialize).EndInit
-            CType(Me.pbEquiposAmbientacion, System.ComponentModel.ISupportInitialize).EndInit
+            Me.TabPage4.PerformLayout()
+            CType(Me.dgvEquipoAmbientacion, System.ComponentModel.ISupportInitialize).EndInit()
             Me.TabPage1.ResumeLayout(False)
-            Me.TabPage1.PerformLayout
-            CType(Me.dgvEquipoComunicacion, System.ComponentModel.ISupportInitialize).EndInit
-            CType(Me.pbEquiposComunicacion, System.ComponentModel.ISupportInitialize).EndInit
+            Me.TabPage1.PerformLayout()
+            CType(Me.dgvEquipoComunicacion, System.ComponentModel.ISupportInitialize).EndInit()
             Me.tpEquiposSeguridadIndustrial.ResumeLayout(False)
-            Me.tpEquiposSeguridadIndustrial.PerformLayout
-            CType(Me.dgvEquipoSeguridad, System.ComponentModel.ISupportInitialize).EndInit
-            CType(Me.pbEquiposSeguridad, System.ComponentModel.ISupportInitialize).EndInit
+            Me.tpEquiposSeguridadIndustrial.PerformLayout()
+            CType(Me.dgvEquipoSeguridad, System.ComponentModel.ISupportInitialize).EndInit()
             Me.tpCamarasSeguridad.ResumeLayout(False)
-            Me.tpCamarasSeguridad.PerformLayout
-            CType(Me.dgvCamara, System.ComponentModel.ISupportInitialize).EndInit
-            CType(Me.pbCamarasSeguridad, System.ComponentModel.ISupportInitialize).EndInit
+            Me.tpCamarasSeguridad.PerformLayout()
+            CType(Me.dgvCamara, System.ComponentModel.ISupportInitialize).EndInit()
             Me.tpGeneradores.ResumeLayout(False)
-            Me.tpGeneradores.PerformLayout
-            CType(Me.pbGeneradores, System.ComponentModel.ISupportInitialize).EndInit
+            Me.tpGeneradores.PerformLayout()
             Me.tpChalecos.ResumeLayout(False)
-            Me.tpChalecos.PerformLayout
-            CType(Me.dgvChaleco, System.ComponentModel.ISupportInitialize).EndInit
-            CType(Me.pbChaleco, System.ComponentModel.ISupportInitialize).EndInit
+            Me.tpChalecos.PerformLayout()
+            CType(Me.dgvChaleco, System.ComponentModel.ISupportInitialize).EndInit()
             Me.tpSoftware.ResumeLayout(False)
-            Me.tpSoftware.PerformLayout
-            CType(Me.pbSoftware, System.ComponentModel.ISupportInitialize).EndInit
+            Me.tpSoftware.PerformLayout()
             Me.MenuStrip1.ResumeLayout(False)
-            Me.MenuStrip1.PerformLayout
+            Me.MenuStrip1.PerformLayout()
+            CType(Me.KryptonGroupBox1.Panel, System.ComponentModel.ISupportInitialize).EndInit()
+            Me.KryptonGroupBox1.Panel.ResumeLayout(False)
+            Me.KryptonGroupBox1.Panel.PerformLayout()
+            CType(Me.KryptonGroupBox1, System.ComponentModel.ISupportInitialize).EndInit()
+            Me.KryptonGroupBox1.ResumeLayout(False)
             Me.ResumeLayout(False)
-            Me.PerformLayout
+            Me.PerformLayout()
 
         End Sub
         Friend WithEvents Label2 As System.Windows.Forms.Label
@@ -7287,45 +7088,29 @@
         Friend WithEvents txtAñosVidaUtil As System.Windows.Forms.TextBox
         Friend WithEvents Label3 As System.Windows.Forms.Label
         Friend WithEvents dtpFechaAdquisicion As System.Windows.Forms.DateTimePicker
-        Friend WithEvents pbArmas As System.Windows.Forms.PictureBox
         Friend WithEvents tpRadios As System.Windows.Forms.TabPage
-        Friend WithEvents pbRadios As System.Windows.Forms.PictureBox
         Friend WithEvents dtpFecPerRadioCaducidad As System.Windows.Forms.DateTimePicker
         Friend WithEvents Label18 As System.Windows.Forms.Label
         Friend WithEvents dtpFecPerUsoRadioAceptacion As System.Windows.Forms.DateTimePicker
         Friend WithEvents Label16 As System.Windows.Forms.Label
         Friend WithEvents Label14 As System.Windows.Forms.Label
         Friend WithEvents txtNumeroPermisoUsoRadio As System.Windows.Forms.TextBox
-        Friend WithEvents PictureBox3 As System.Windows.Forms.PictureBox
-        Friend WithEvents pbVehiculo As System.Windows.Forms.PictureBox
         Private WithEvents gpInfActfijo As System.Windows.Forms.GroupBox
         Friend WithEvents txtIdActivoFijo As System.Windows.Forms.TextBox
         Friend WithEvents txtSerieArmas As System.Windows.Forms.TextBox
         Friend WithEvents Label22 As System.Windows.Forms.Label
         Friend WithEvents txtTipoVehiculo As System.Windows.Forms.TextBox
-        Friend WithEvents Label34 As System.Windows.Forms.Label
         Friend WithEvents txtChasisVehiculo As System.Windows.Forms.TextBox
-        Friend WithEvents Label33 As System.Windows.Forms.Label
         Friend WithEvents txtCapacidadVehiculo As System.Windows.Forms.TextBox
-        Friend WithEvents Label32 As System.Windows.Forms.Label
         Friend WithEvents txtCilindrajeVehiculo As System.Windows.Forms.TextBox
-        Friend WithEvents Label31 As System.Windows.Forms.Label
         Friend WithEvents txtMotorVehiculo As System.Windows.Forms.TextBox
-        Friend WithEvents Label30 As System.Windows.Forms.Label
         Friend WithEvents txtPlacaVehiculo As System.Windows.Forms.TextBox
-        Friend WithEvents Label29 As System.Windows.Forms.Label
-        Friend WithEvents Label28 As System.Windows.Forms.Label
         Friend WithEvents cbmAnoFabricacionVehiculo As System.Windows.Forms.ComboBox
-        Friend WithEvents Label27 As System.Windows.Forms.Label
-        Friend WithEvents Label26 As System.Windows.Forms.Label
         Friend WithEvents txtModeloVehiculo As System.Windows.Forms.TextBox
         Friend WithEvents cbmEstadoVehiculo As System.Windows.Forms.ComboBox
         Friend WithEvents cbmColorVehiculo As System.Windows.Forms.ComboBox
-        Friend WithEvents Label23 As System.Windows.Forms.Label
         Friend WithEvents cbmMarcaVehiculo As System.Windows.Forms.ComboBox
-        Friend WithEvents Label24 As System.Windows.Forms.Label
         Friend WithEvents txtSerieVehiculo As System.Windows.Forms.TextBox
-        Friend WithEvents Label25 As System.Windows.Forms.Label
         Friend WithEvents tpTerreno As System.Windows.Forms.TabPage
         Friend WithEvents txtEstadoTerreno As System.Windows.Forms.TextBox
         Friend WithEvents Label70 As System.Windows.Forms.Label
@@ -7333,7 +7118,6 @@
         Friend WithEvents Label68 As System.Windows.Forms.Label
         Friend WithEvents txtMedidaTerreno As System.Windows.Forms.TextBox
         Friend WithEvents Label66 As System.Windows.Forms.Label
-        Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
         Friend WithEvents Label77 As System.Windows.Forms.Label
         Friend WithEvents cbmColorEquipoComputo As System.Windows.Forms.ComboBox
         Friend WithEvents Label76 As System.Windows.Forms.Label
@@ -7389,10 +7173,6 @@
         Friend WithEvents cbmColorEquiposCocina As System.Windows.Forms.ComboBox
         Friend WithEvents Label109 As System.Windows.Forms.Label
         Friend WithEvents cbmEstadoEquiposCocina As System.Windows.Forms.ComboBox
-        Friend WithEvents pbEquiposOficina As System.Windows.Forms.PictureBox
-        Friend WithEvents pbMueblesOficina As System.Windows.Forms.PictureBox
-        Friend WithEvents pbEquiposCocina As System.Windows.Forms.PictureBox
-        Friend WithEvents pbEquiposAmbientacion As System.Windows.Forms.PictureBox
         Friend WithEvents Label110 As System.Windows.Forms.Label
         Friend WithEvents txtSerieEquiposAmbientacion As System.Windows.Forms.TextBox
         Friend WithEvents cbmAñosEquiposAmbientacion As System.Windows.Forms.ComboBox
@@ -7418,7 +7198,6 @@
         Friend WithEvents dtpInicioPermisoFrecuencia As System.Windows.Forms.DateTimePicker
         Friend WithEvents Label130 As System.Windows.Forms.Label
         Friend WithEvents Label129 As System.Windows.Forms.Label
-        Friend WithEvents pbEquiposComunicacion As System.Windows.Forms.PictureBox
         Friend WithEvents Label122 As System.Windows.Forms.Label
         Friend WithEvents txtSerieEquiposComunicacion As System.Windows.Forms.TextBox
         Friend WithEvents cbmAñosEquiposComunicacion As System.Windows.Forms.ComboBox
@@ -7436,7 +7215,6 @@
         Friend WithEvents tpCamarasSeguridad As System.Windows.Forms.TabPage
         Friend WithEvents Label138 As System.Windows.Forms.Label
         Friend WithEvents txtAdicionalCamarasSeguridad As System.Windows.Forms.TextBox
-        Friend WithEvents pbCamarasSeguridad As System.Windows.Forms.PictureBox
         Friend WithEvents Label139 As System.Windows.Forms.Label
         Friend WithEvents txtSerieCamarasSeguridad As System.Windows.Forms.TextBox
         Friend WithEvents cbmAñosCamarasSeguridad As System.Windows.Forms.ComboBox
@@ -7458,7 +7236,6 @@
         Friend WithEvents Label149 As System.Windows.Forms.Label
         Friend WithEvents Label150 As System.Windows.Forms.Label
         Friend WithEvents txtAmperajeGeneradores As System.Windows.Forms.TextBox
-        Friend WithEvents pbGeneradores As System.Windows.Forms.PictureBox
         Friend WithEvents Label151 As System.Windows.Forms.Label
         Friend WithEvents txtSerieGeneradores As System.Windows.Forms.TextBox
         Friend WithEvents cbmAñosGeneradores As System.Windows.Forms.ComboBox
@@ -7480,7 +7257,6 @@
         Friend WithEvents Label167 As System.Windows.Forms.Label
         Friend WithEvents Label159 As System.Windows.Forms.Label
         Friend WithEvents txtAdicionalChaleco As System.Windows.Forms.TextBox
-        Friend WithEvents pbChaleco As System.Windows.Forms.PictureBox
         Friend WithEvents Label160 As System.Windows.Forms.Label
         Friend WithEvents txtSerieChaleco As System.Windows.Forms.TextBox
         Friend WithEvents cbmAñosChaleco As System.Windows.Forms.ComboBox
@@ -7504,14 +7280,12 @@
         Friend WithEvents Label169 As System.Windows.Forms.Label
         Friend WithEvents txtDetalleSoftware As System.Windows.Forms.TextBox
         Friend WithEvents Label168 As System.Windows.Forms.Label
-        Friend WithEvents pbSoftware As System.Windows.Forms.PictureBox
         Friend WithEvents cbmCuentasActivo As System.Windows.Forms.ComboBox
         Friend WithEvents cbmCuentaDepreciacion As System.Windows.Forms.ComboBox
         Friend WithEvents cbmCuentaGastos As System.Windows.Forms.ComboBox
         Friend WithEvents cbmEstadoActivoActual As System.Windows.Forms.ComboBox
         Friend WithEvents lblEstadoActualACtivoFijo As System.Windows.Forms.Label
         Friend WithEvents dtpSoat As System.Windows.Forms.DateTimePicker
-        Friend WithEvents Label8 As System.Windows.Forms.Label
         Friend WithEvents chNingunSeguro As System.Windows.Forms.CheckBox
         Friend WithEvents GroupBox7 As System.Windows.Forms.GroupBox
         Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
@@ -7538,7 +7312,6 @@
         Friend WithEvents cbmColorEquipoSeguridad As System.Windows.Forms.ComboBox
         Friend WithEvents Label136 As System.Windows.Forms.Label
         Friend WithEvents cbmEstadoEquipoSeguridad As System.Windows.Forms.ComboBox
-        Friend WithEvents pbEquiposSeguridad As System.Windows.Forms.PictureBox
         Friend WithEvents Label173 As System.Windows.Forms.Label
         Friend WithEvents cbxOrigen As System.Windows.Forms.ComboBox
         Friend WithEvents Label13 As System.Windows.Forms.Label
@@ -7762,5 +7535,19 @@
         Friend WithEvents ValorResiSeguridad As System.Windows.Forms.DataGridViewTextBoxColumn
         Friend WithEvents vidaUtilSeguridad As System.Windows.Forms.DataGridViewTextBoxColumn
         Friend WithEvents lblArmasCount As Label
+        Friend WithEvents KryptonGroupBox1 As ComponentFactory.Krypton.Toolkit.KryptonGroupBox
+        Friend WithEvents KryptonLabel5 As ComponentFactory.Krypton.Toolkit.KryptonLabel
+        Friend WithEvents KryptonLabel4 As ComponentFactory.Krypton.Toolkit.KryptonLabel
+        Friend WithEvents KryptonLabel3 As ComponentFactory.Krypton.Toolkit.KryptonLabel
+        Friend WithEvents KryptonLabel2 As ComponentFactory.Krypton.Toolkit.KryptonLabel
+        Friend WithEvents KryptonLabel1 As ComponentFactory.Krypton.Toolkit.KryptonLabel
+        Friend WithEvents KryptonLabel12 As ComponentFactory.Krypton.Toolkit.KryptonLabel
+        Friend WithEvents KryptonLabel11 As ComponentFactory.Krypton.Toolkit.KryptonLabel
+        Friend WithEvents KryptonLabel10 As ComponentFactory.Krypton.Toolkit.KryptonLabel
+        Friend WithEvents KryptonLabel9 As ComponentFactory.Krypton.Toolkit.KryptonLabel
+        Friend WithEvents KryptonLabel8 As ComponentFactory.Krypton.Toolkit.KryptonLabel
+        Friend WithEvents KryptonLabel7 As ComponentFactory.Krypton.Toolkit.KryptonLabel
+        Friend WithEvents KryptonLabel6 As ComponentFactory.Krypton.Toolkit.KryptonLabel
+        Friend WithEvents KryptonLabel13 As ComponentFactory.Krypton.Toolkit.KryptonLabel
     End Class
 End Namespace

@@ -84,7 +84,7 @@
             Me.pCentroCostoControlCFR.Controls.Add(Me.lblCanton)
             Me.pCentroCostoControlCFR.Location = New System.Drawing.Point(1, 47)
             Me.pCentroCostoControlCFR.Name = "pCentroCostoControlCFR"
-            Me.pCentroCostoControlCFR.Size = New System.Drawing.Size(1208, 41)
+            Me.pCentroCostoControlCFR.Size = New System.Drawing.Size(1081, 41)
             Me.pCentroCostoControlCFR.TabIndex = 11
             '
             'cmbParroquia
@@ -93,7 +93,7 @@
             Me.cmbParroquia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cmbParroquia.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.cmbParroquia.FormattingEnabled = True
-            Me.cmbParroquia.Location = New System.Drawing.Point(840, 8)
+            Me.cmbParroquia.Location = New System.Drawing.Point(792, 8)
             Me.cmbParroquia.Name = "cmbParroquia"
             Me.cmbParroquia.Size = New System.Drawing.Size(240, 21)
             Me.cmbParroquia.TabIndex = 27
@@ -104,7 +104,7 @@
             Me.cmbCanton.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cmbCanton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.cmbCanton.FormattingEnabled = True
-            Me.cmbCanton.Location = New System.Drawing.Point(504, 8)
+            Me.cmbCanton.Location = New System.Drawing.Point(471, 8)
             Me.cmbCanton.Name = "cmbCanton"
             Me.cmbCanton.Size = New System.Drawing.Size(211, 21)
             Me.cmbCanton.TabIndex = 26
@@ -123,7 +123,7 @@
             'lblParroquia
             '
             Me.lblParroquia.AutoSize = True
-            Me.lblParroquia.Location = New System.Drawing.Point(754, 11)
+            Me.lblParroquia.Location = New System.Drawing.Point(707, 11)
             Me.lblParroquia.Name = "lblParroquia"
             Me.lblParroquia.Size = New System.Drawing.Size(70, 13)
             Me.lblParroquia.TabIndex = 5
@@ -141,7 +141,7 @@
             'lblCanton
             '
             Me.lblCanton.AutoSize = True
-            Me.lblCanton.Location = New System.Drawing.Point(439, 11)
+            Me.lblCanton.Location = New System.Drawing.Point(412, 11)
             Me.lblCanton.Name = "lblCanton"
             Me.lblCanton.Size = New System.Drawing.Size(55, 13)
             Me.lblCanton.TabIndex = 3
@@ -180,7 +180,7 @@
             Me.dgvLiquidacionFondoRotativo.ReadOnly = True
             Me.dgvLiquidacionFondoRotativo.RowHeadersVisible = False
             Me.dgvLiquidacionFondoRotativo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvLiquidacionFondoRotativo.Size = New System.Drawing.Size(1206, 457)
+            Me.dgvLiquidacionFondoRotativo.Size = New System.Drawing.Size(1058, 414)
             Me.dgvLiquidacionFondoRotativo.TabIndex = 14
             '
             'txtTotalLiquidacion
@@ -188,7 +188,7 @@
             Me.txtTotalLiquidacion.BackColor = System.Drawing.Color.White
             Me.txtTotalLiquidacion.Enabled = False
             Me.txtTotalLiquidacion.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtTotalLiquidacion.Location = New System.Drawing.Point(1111, 13)
+            Me.txtTotalLiquidacion.Location = New System.Drawing.Point(979, 13)
             Me.txtTotalLiquidacion.Name = "txtTotalLiquidacion"
             Me.txtTotalLiquidacion.ReadOnly = True
             Me.txtTotalLiquidacion.Size = New System.Drawing.Size(85, 23)
@@ -200,7 +200,7 @@
             '
             Me.lblTotalLiquidacion.AutoSize = True
             Me.lblTotalLiquidacion.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.lblTotalLiquidacion.Location = New System.Drawing.Point(1058, 19)
+            Me.lblTotalLiquidacion.Location = New System.Drawing.Point(926, 19)
             Me.lblTotalLiquidacion.Name = "lblTotalLiquidacion"
             Me.lblTotalLiquidacion.Size = New System.Drawing.Size(46, 13)
             Me.lblTotalLiquidacion.TabIndex = 16
@@ -356,9 +356,9 @@
             Me.GroupBox1.Controls.Add(Me.txtCantidadGastosFondoRotativo)
             Me.GroupBox1.Controls.Add(Me.txtCantidadFondoRotativo)
             Me.GroupBox1.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.GroupBox1.Location = New System.Drawing.Point(2, 547)
+            Me.GroupBox1.Location = New System.Drawing.Point(2, 507)
             Me.GroupBox1.Name = "GroupBox1"
-            Me.GroupBox1.Size = New System.Drawing.Size(1207, 47)
+            Me.GroupBox1.Size = New System.Drawing.Size(1080, 47)
             Me.GroupBox1.TabIndex = 30
             Me.GroupBox1.TabStop = False
             '
@@ -380,7 +380,7 @@
             Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
             Me.MenuStrip1.Name = "MenuStrip1"
             Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(7, 2, 0, 2)
-            Me.MenuStrip1.Size = New System.Drawing.Size(1219, 32)
+            Me.MenuStrip1.Size = New System.Drawing.Size(1075, 32)
             Me.MenuStrip1.TabIndex = 188
             Me.MenuStrip1.Text = "msIngresoBodega"
             '
@@ -440,7 +440,7 @@
             Me.TabControl1.Location = New System.Drawing.Point(1, 34)
             Me.TabControl1.Name = "TabControl1"
             Me.TabControl1.SelectedIndex = 0
-            Me.TabControl1.Size = New System.Drawing.Size(1218, 614)
+            Me.TabControl1.Size = New System.Drawing.Size(1074, 587)
             Me.TabControl1.TabIndex = 189
             '
             'TabPage1
@@ -457,7 +457,7 @@
             Me.TabPage1.Location = New System.Drawing.Point(4, 22)
             Me.TabPage1.Name = "TabPage1"
             Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-            Me.TabPage1.Size = New System.Drawing.Size(1210, 588)
+            Me.TabPage1.Size = New System.Drawing.Size(1066, 561)
             Me.TabPage1.TabIndex = 0
             Me.TabPage1.Text = "LIQUIDACIÓN"
             Me.TabPage1.UseVisualStyleBackColor = True
@@ -471,7 +471,7 @@
             Me.TabPage2.Location = New System.Drawing.Point(4, 22)
             Me.TabPage2.Name = "TabPage2"
             Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-            Me.TabPage2.Size = New System.Drawing.Size(1210, 588)
+            Me.TabPage2.Size = New System.Drawing.Size(1066, 561)
             Me.TabPage2.TabIndex = 1
             Me.TabPage2.Text = "REPORTE"
             Me.TabPage2.UseVisualStyleBackColor = True
@@ -479,7 +479,7 @@
             'btnReporte
             '
             Me.btnReporte.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-            Me.btnReporte.Location = New System.Drawing.Point(1127, 6)
+            Me.btnReporte.Location = New System.Drawing.Point(983, 6)
             Me.btnReporte.Name = "btnReporte"
             Me.btnReporte.Size = New System.Drawing.Size(75, 23)
             Me.btnReporte.TabIndex = 7
@@ -488,7 +488,7 @@
             '
             'txtIdLiquidacionBusqueda
             '
-            Me.txtIdLiquidacionBusqueda.Location = New System.Drawing.Point(1031, 6)
+            Me.txtIdLiquidacionBusqueda.Location = New System.Drawing.Point(878, 6)
             Me.txtIdLiquidacionBusqueda.Name = "txtIdLiquidacionBusqueda"
             Me.txtIdLiquidacionBusqueda.Size = New System.Drawing.Size(95, 21)
             Me.txtIdLiquidacionBusqueda.TabIndex = 6
@@ -496,7 +496,8 @@
             'Label6
             '
             Me.Label6.AutoSize = True
-            Me.Label6.Location = New System.Drawing.Point(938, 11)
+            Me.Label6.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(247, Byte), Integer))
+            Me.Label6.Location = New System.Drawing.Point(779, 9)
             Me.Label6.Name = "Label6"
             Me.Label6.Size = New System.Drawing.Size(90, 13)
             Me.Label6.TabIndex = 5
@@ -510,7 +511,7 @@
             Me.crvLiquidacion.Dock = System.Windows.Forms.DockStyle.Fill
             Me.crvLiquidacion.Location = New System.Drawing.Point(3, 3)
             Me.crvLiquidacion.Name = "crvLiquidacion"
-            Me.crvLiquidacion.Size = New System.Drawing.Size(1204, 582)
+            Me.crvLiquidacion.Size = New System.Drawing.Size(1060, 555)
             Me.crvLiquidacion.TabIndex = 1
             Me.crvLiquidacion.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None
             '
@@ -519,7 +520,7 @@
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.BackColor = System.Drawing.Color.White
-            Me.ClientSize = New System.Drawing.Size(1219, 650)
+            Me.ClientSize = New System.Drawing.Size(1075, 617)
             Me.Controls.Add(Me.TabControl1)
             Me.Controls.Add(Me.MenuStrip1)
             Me.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))

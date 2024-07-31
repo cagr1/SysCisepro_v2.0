@@ -60,9 +60,9 @@
             Me.gbBanco.Controls.Add(Me.Label10)
             Me.gbBanco.Controls.Add(Me.cmbBancos)
             Me.gbBanco.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.gbBanco.Location = New System.Drawing.Point(562, 36)
+            Me.gbBanco.Location = New System.Drawing.Point(486, 36)
             Me.gbBanco.Name = "gbBanco"
-            Me.gbBanco.Size = New System.Drawing.Size(400, 62)
+            Me.gbBanco.Size = New System.Drawing.Size(332, 51)
             Me.gbBanco.TabIndex = 114
             Me.gbBanco.TabStop = False
             Me.gbBanco.Text = "BANCO: "
@@ -74,7 +74,7 @@
             Me.cmbCuentaBancos.DropDownWidth = 130
             Me.cmbCuentaBancos.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.cmbCuentaBancos.FormattingEnabled = True
-            Me.cmbCuentaBancos.Location = New System.Drawing.Point(240, 30)
+            Me.cmbCuentaBancos.Location = New System.Drawing.Point(174, 22)
             Me.cmbCuentaBancos.Name = "cmbCuentaBancos"
             Me.cmbCuentaBancos.Size = New System.Drawing.Size(152, 21)
             Me.cmbCuentaBancos.TabIndex = 35
@@ -82,7 +82,7 @@
             'Label10
             '
             Me.Label10.AutoSize = True
-            Me.Label10.Location = New System.Drawing.Point(237, 0)
+            Me.Label10.Location = New System.Drawing.Point(171, 0)
             Me.Label10.Name = "Label10"
             Me.Label10.Size = New System.Drawing.Size(62, 13)
             Me.Label10.TabIndex = 34
@@ -95,9 +95,9 @@
             Me.cmbBancos.DropDownWidth = 140
             Me.cmbBancos.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.cmbBancos.FormattingEnabled = True
-            Me.cmbBancos.Location = New System.Drawing.Point(9, 29)
+            Me.cmbBancos.Location = New System.Drawing.Point(9, 19)
             Me.cmbBancos.Name = "cmbBancos"
-            Me.cmbBancos.Size = New System.Drawing.Size(205, 21)
+            Me.cmbBancos.Size = New System.Drawing.Size(146, 21)
             Me.cmbBancos.TabIndex = 25
             '
             'gbBuscar
@@ -108,7 +108,7 @@
             Me.gbBuscar.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.gbBuscar.Location = New System.Drawing.Point(2, 36)
             Me.gbBuscar.Name = "gbBuscar"
-            Me.gbBuscar.Size = New System.Drawing.Size(281, 62)
+            Me.gbBuscar.Size = New System.Drawing.Size(281, 51)
             Me.gbBuscar.TabIndex = 113
             Me.gbBuscar.TabStop = False
             Me.gbBuscar.Text = "BUSCAR"
@@ -118,7 +118,7 @@
             Me.btnBuscarPersonal.BackColor = System.Drawing.Color.White
             Me.btnBuscarPersonal.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.btnBuscarPersonal.Image = Global.syscisepro.My.Resources.Resources.search_24dp_FILL0_wght400_GRAD0_opsz24__2_
-            Me.btnBuscarPersonal.Location = New System.Drawing.Point(230, 26)
+            Me.btnBuscarPersonal.Location = New System.Drawing.Point(230, 14)
             Me.btnBuscarPersonal.Name = "btnBuscarPersonal"
             Me.btnBuscarPersonal.Size = New System.Drawing.Size(41, 30)
             Me.btnBuscarPersonal.TabIndex = 60
@@ -126,7 +126,7 @@
             '
             'txtRutaArchivo
             '
-            Me.txtRutaArchivo.Location = New System.Drawing.Point(6, 30)
+            Me.txtRutaArchivo.Location = New System.Drawing.Point(6, 19)
             Me.txtRutaArchivo.Name = "txtRutaArchivo"
             Me.txtRutaArchivo.Size = New System.Drawing.Size(218, 21)
             Me.txtRutaArchivo.TabIndex = 59
@@ -149,12 +149,12 @@
             DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
             DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
             Me.dgvComprobantesEgresoBanco.DefaultCellStyle = DataGridViewCellStyle2
-            Me.dgvComprobantesEgresoBanco.Location = New System.Drawing.Point(2, 104)
+            Me.dgvComprobantesEgresoBanco.Location = New System.Drawing.Point(2, 90)
             Me.dgvComprobantesEgresoBanco.MultiSelect = False
             Me.dgvComprobantesEgresoBanco.Name = "dgvComprobantesEgresoBanco"
             Me.dgvComprobantesEgresoBanco.RowHeadersVisible = False
             Me.dgvComprobantesEgresoBanco.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvComprobantesEgresoBanco.Size = New System.Drawing.Size(1018, 597)
+            Me.dgvComprobantesEgresoBanco.Size = New System.Drawing.Size(816, 486)
             Me.dgvComprobantesEgresoBanco.TabIndex = 112
             '
             'GroupBox1
@@ -165,7 +165,7 @@
             Me.GroupBox1.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.GroupBox1.Location = New System.Drawing.Point(288, 36)
             Me.GroupBox1.Name = "GroupBox1"
-            Me.GroupBox1.Size = New System.Drawing.Size(271, 62)
+            Me.GroupBox1.Size = New System.Drawing.Size(193, 51)
             Me.GroupBox1.TabIndex = 110
             Me.GroupBox1.TabStop = False
             Me.GroupBox1.Text = "CTA. HABER"
@@ -173,7 +173,7 @@
             'lblCodigoCta
             '
             Me.lblCodigoCta.AutoSize = True
-            Me.lblCodigoCta.Location = New System.Drawing.Point(8, 14)
+            Me.lblCodigoCta.Location = New System.Drawing.Point(105, 0)
             Me.lblCodigoCta.Name = "lblCodigoCta"
             Me.lblCodigoCta.Size = New System.Drawing.Size(13, 13)
             Me.lblCodigoCta.TabIndex = 59
@@ -181,9 +181,9 @@
             '
             'txtCuentaDebe
             '
-            Me.txtCuentaDebe.Location = New System.Drawing.Point(11, 30)
+            Me.txtCuentaDebe.Location = New System.Drawing.Point(11, 21)
             Me.txtCuentaDebe.Name = "txtCuentaDebe"
-            Me.txtCuentaDebe.Size = New System.Drawing.Size(251, 21)
+            Me.txtCuentaDebe.Size = New System.Drawing.Size(172, 21)
             Me.txtCuentaDebe.TabIndex = 58
             '
             'dgvFacturaVenta
@@ -191,10 +191,10 @@
             Me.dgvFacturaVenta.AllowUserToAddRows = False
             Me.dgvFacturaVenta.AllowUserToDeleteRows = False
             Me.dgvFacturaVenta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-            Me.dgvFacturaVenta.Location = New System.Drawing.Point(-20, 109)
+            Me.dgvFacturaVenta.Location = New System.Drawing.Point(14, 109)
             Me.dgvFacturaVenta.Name = "dgvFacturaVenta"
             Me.dgvFacturaVenta.ReadOnly = True
-            Me.dgvFacturaVenta.Size = New System.Drawing.Size(1040, 53)
+            Me.dgvFacturaVenta.Size = New System.Drawing.Size(786, 53)
             Me.dgvFacturaVenta.TabIndex = 115
             '
             'ContextMenuStripClicDerecho
@@ -221,7 +221,7 @@
             Me.msKardex.Location = New System.Drawing.Point(0, 0)
             Me.msKardex.Name = "msKardex"
             Me.msKardex.Padding = New System.Windows.Forms.Padding(7, 2, 0, 2)
-            Me.msKardex.Size = New System.Drawing.Size(1027, 32)
+            Me.msKardex.Size = New System.Drawing.Size(819, 32)
             Me.msKardex.TabIndex = 188
             Me.msKardex.Text = "msIngresoBodega"
             '
@@ -239,7 +239,7 @@
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.BackColor = System.Drawing.Color.White
-            Me.ClientSize = New System.Drawing.Size(1027, 704)
+            Me.ClientSize = New System.Drawing.Size(819, 581)
             Me.Controls.Add(Me.msKardex)
             Me.Controls.Add(Me.gbBanco)
             Me.Controls.Add(Me.gbBuscar)

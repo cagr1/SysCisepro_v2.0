@@ -87,31 +87,32 @@ Namespace FORMULARIOS.FONDOS.FONDO_ROTATIVO
                     Icon = My.Resources.logo_a
                     MenuStrip1.ForeColor = Color.White
                     'MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorAsenava
-                    Label1.ForeColor = Color.White
+                    'Label1.ForeColor = Color.White
                     'Label1.BackColor = My.MySettingsProperty.Settings.ColorAsenava
-                    Label2.ForeColor = Color.White
+                    'Label2.ForeColor = Color.White
                     'Label2.BackColor = My.MySettingsProperty.Settings.ColorAsenava
                     dgvLiquidacionFondoRotativo.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorAsenava
                 Case TipoConexion.Seportpac
                     Icon = My.Resources.logo_s
                     'MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
                     MenuStrip1.ForeColor = Color.White
-                    Label1.ForeColor = Color.White
+                    'Label1.ForeColor = Color.White
                     'Label1.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
-                    Label2.ForeColor = Color.White
+                    'Label2.ForeColor = Color.White
                     'Label2.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
                     dgvLiquidacionFondoRotativo.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorSeportpac
                 Case Else
                     Icon = My.Resources.logo_c
                     'MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorCisepro
                     MenuStrip1.ForeColor = Color.White
-                    Label1.ForeColor = Color.White
+                    'Label1.ForeColor = Color.White
                     'Label1.BackColor = My.MySettingsProperty.Settings.ColorCisepro
-                    Label2.ForeColor = Color.White
+                    'Label2.ForeColor = Color.White
                     'Label2.BackColor = My.MySettingsProperty.Settings.ColorCisepro
                     dgvLiquidacionFondoRotativo.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
             End Select
             dgvLiquidacionFondoRotativo.Font = New Font("Roboto", 8, FontStyle.Regular)
+
         End Sub
 
         Private Sub dgvLiquidacionFondoRotativo_SelectionChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles dgvLiquidacionFondoRotativo.SelectionChanged

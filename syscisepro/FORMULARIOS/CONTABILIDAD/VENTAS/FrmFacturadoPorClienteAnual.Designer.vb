@@ -23,8 +23,8 @@
         'No lo modifique con el editor de código.
         <System.Diagnostics.DebuggerStepThrough()> _
         Private Sub InitializeComponent()
-            Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Me.gbClienteGeneral = New System.Windows.Forms.GroupBox()
             Me.txtNombreComercialClienteGeneral = New System.Windows.Forms.TextBox()
             Me.lblIdClienteGeneral = New System.Windows.Forms.Label()
@@ -55,7 +55,7 @@
             Me.gbClienteGeneral.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.gbClienteGeneral.Location = New System.Drawing.Point(1, 23)
             Me.gbClienteGeneral.Name = "gbClienteGeneral"
-            Me.gbClienteGeneral.Size = New System.Drawing.Size(599, 60)
+            Me.gbClienteGeneral.Size = New System.Drawing.Size(512, 60)
             Me.gbClienteGeneral.TabIndex = 100
             Me.gbClienteGeneral.TabStop = False
             Me.gbClienteGeneral.Text = "CLIENTE"
@@ -68,7 +68,7 @@
             Me.txtNombreComercialClienteGeneral.ForeColor = System.Drawing.SystemColors.ControlText
             Me.txtNombreComercialClienteGeneral.Location = New System.Drawing.Point(139, 24)
             Me.txtNombreComercialClienteGeneral.Name = "txtNombreComercialClienteGeneral"
-            Me.txtNombreComercialClienteGeneral.Size = New System.Drawing.Size(456, 20)
+            Me.txtNombreComercialClienteGeneral.Size = New System.Drawing.Size(364, 20)
             Me.txtNombreComercialClienteGeneral.TabIndex = 2
             '
             'lblIdClienteGeneral
@@ -95,19 +95,19 @@
             Me.dgvAsientosDiario.AllowUserToAddRows = False
             Me.dgvAsientosDiario.AllowUserToDeleteRows = False
             Me.dgvAsientosDiario.AllowUserToResizeRows = False
-            DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-            Me.dgvAsientosDiario.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+            DataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+            Me.dgvAsientosDiario.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle3
             Me.dgvAsientosDiario.BackgroundColor = System.Drawing.Color.White
             Me.dgvAsientosDiario.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
             Me.dgvAsientosDiario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-            DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-            DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
-            DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
-            DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(123, Byte), Integer))
-            DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-            DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-            Me.dgvAsientosDiario.DefaultCellStyle = DataGridViewCellStyle2
+            DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+            DataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window
+            DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText
+            DataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(123, Byte), Integer))
+            DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+            DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+            Me.dgvAsientosDiario.DefaultCellStyle = DataGridViewCellStyle4
             Me.dgvAsientosDiario.GridColor = System.Drawing.SystemColors.ControlLightLight
             Me.dgvAsientosDiario.Location = New System.Drawing.Point(1, 88)
             Me.dgvAsientosDiario.MultiSelect = False
@@ -115,7 +115,7 @@
             Me.dgvAsientosDiario.ReadOnly = True
             Me.dgvAsientosDiario.RowHeadersVisible = False
             Me.dgvAsientosDiario.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvAsientosDiario.Size = New System.Drawing.Size(1171, 543)
+            Me.dgvAsientosDiario.Size = New System.Drawing.Size(1022, 483)
             Me.dgvAsientosDiario.TabIndex = 0
             '
             'gbRangoFechas
@@ -127,9 +127,9 @@
             Me.gbRangoFechas.Controls.Add(Me.Label10)
             Me.gbRangoFechas.Controls.Add(Me.Label7)
             Me.gbRangoFechas.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.gbRangoFechas.Location = New System.Drawing.Point(602, 24)
+            Me.gbRangoFechas.Location = New System.Drawing.Point(520, 24)
             Me.gbRangoFechas.Name = "gbRangoFechas"
-            Me.gbRangoFechas.Size = New System.Drawing.Size(570, 60)
+            Me.gbRangoFechas.Size = New System.Drawing.Size(503, 60)
             Me.gbRangoFechas.TabIndex = 114
             Me.gbRangoFechas.TabStop = False
             Me.gbRangoFechas.Text = "RANGO DE FECHAS"
@@ -150,7 +150,7 @@
             Me.ComboBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.ComboBox2.FormattingEnabled = True
             Me.ComboBox2.Items.AddRange(New Object() {"ALARMA", "GUARDIANIA", "ALARMA Y GUARDIANIA"})
-            Me.ComboBox2.Location = New System.Drawing.Point(94, 21)
+            Me.ComboBox2.Location = New System.Drawing.Point(100, 21)
             Me.ComboBox2.Name = "ComboBox2"
             Me.ComboBox2.Size = New System.Drawing.Size(58, 21)
             Me.ComboBox2.TabIndex = 14
@@ -158,7 +158,7 @@
             'dtpHasta
             '
             Me.dtpHasta.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-            Me.dtpHasta.Location = New System.Drawing.Point(467, 21)
+            Me.dtpHasta.Location = New System.Drawing.Point(326, 21)
             Me.dtpHasta.Name = "dtpHasta"
             Me.dtpHasta.Size = New System.Drawing.Size(98, 21)
             Me.dtpHasta.TabIndex = 1
@@ -166,7 +166,7 @@
             'dtpDesde
             '
             Me.dtpDesde.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-            Me.dtpDesde.Location = New System.Drawing.Point(347, 21)
+            Me.dtpDesde.Location = New System.Drawing.Point(206, 21)
             Me.dtpDesde.Name = "dtpDesde"
             Me.dtpDesde.Size = New System.Drawing.Size(97, 21)
             Me.dtpDesde.TabIndex = 0
@@ -175,20 +175,20 @@
             'Label10
             '
             Me.Label10.AutoSize = True
-            Me.Label10.Location = New System.Drawing.Point(198, 24)
+            Me.Label10.Location = New System.Drawing.Point(181, 24)
             Me.Label10.Name = "Label10"
-            Me.Label10.Size = New System.Drawing.Size(167, 13)
+            Me.Label10.Size = New System.Drawing.Size(20, 13)
             Me.Label10.TabIndex = 4
-            Me.Label10.Text = "DATOS COMPRENDIDOS ENTRE"
+            Me.Label10.Text = "De"
             '
             'Label7
             '
             Me.Label7.AutoSize = True
-            Me.Label7.Location = New System.Drawing.Point(448, 24)
+            Me.Label7.Location = New System.Drawing.Point(307, 24)
             Me.Label7.Name = "Label7"
             Me.Label7.Size = New System.Drawing.Size(14, 13)
             Me.Label7.TabIndex = 2
-            Me.Label7.Text = "Y"
+            Me.Label7.Text = "A"
             '
             'MenuStrip1
             '
@@ -199,7 +199,7 @@
             Me.MenuStrip1.Name = "MenuStrip1"
             Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(7, 2, 0, 2)
             Me.MenuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
-            Me.MenuStrip1.Size = New System.Drawing.Size(1173, 24)
+            Me.MenuStrip1.Size = New System.Drawing.Size(1028, 24)
             Me.MenuStrip1.TabIndex = 184
             Me.MenuStrip1.Text = "msIngresoBodega"
             '
@@ -224,9 +224,9 @@
             '
             Me.gbTotal.BackColor = System.Drawing.Color.White
             Me.gbTotal.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.gbTotal.Location = New System.Drawing.Point(1, 628)
+            Me.gbTotal.Location = New System.Drawing.Point(1, 572)
             Me.gbTotal.Name = "gbTotal"
-            Me.gbTotal.Size = New System.Drawing.Size(1172, 44)
+            Me.gbTotal.Size = New System.Drawing.Size(1022, 47)
             Me.gbTotal.TabIndex = 101
             Me.gbTotal.TabStop = False
             '
@@ -235,7 +235,7 @@
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.BackColor = System.Drawing.Color.White
-            Me.ClientSize = New System.Drawing.Size(1173, 672)
+            Me.ClientSize = New System.Drawing.Size(1028, 617)
             Me.Controls.Add(Me.gbClienteGeneral)
             Me.Controls.Add(Me.MenuStrip1)
             Me.Controls.Add(Me.dgvAsientosDiario)
@@ -244,6 +244,13 @@
             Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
             Me.Name = "FrmFacturadoPorClienteAnual"
             Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+            Me.StateActive.Border.DrawBorders = CType((((Krypton.Toolkit.PaletteDrawBorders.Top Or Krypton.Toolkit.PaletteDrawBorders.Bottom) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Left) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Right), Krypton.Toolkit.PaletteDrawBorders)
+            Me.StateActive.Border.Rounding = 5.0!
+            Me.StateCommon.Border.DrawBorders = CType((((Krypton.Toolkit.PaletteDrawBorders.Top Or Krypton.Toolkit.PaletteDrawBorders.Bottom) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Left) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Right), Krypton.Toolkit.PaletteDrawBorders)
             Me.Text = "TOTAL FACTURADO POR CLIENTE"
             Me.gbClienteGeneral.ResumeLayout(False)
             Me.gbClienteGeneral.PerformLayout()

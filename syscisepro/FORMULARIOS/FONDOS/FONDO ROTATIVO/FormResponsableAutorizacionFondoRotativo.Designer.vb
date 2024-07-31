@@ -67,7 +67,7 @@
             'lblCIResponsableAutoFR
             '
             Me.lblCIResponsableAutoFR.AutoSize = True
-            Me.lblCIResponsableAutoFR.Location = New System.Drawing.Point(203, 22)
+            Me.lblCIResponsableAutoFR.Location = New System.Drawing.Point(185, 22)
             Me.lblCIResponsableAutoFR.Name = "lblCIResponsableAutoFR"
             Me.lblCIResponsableAutoFR.Size = New System.Drawing.Size(29, 13)
             Me.lblCIResponsableAutoFR.TabIndex = 1
@@ -76,7 +76,7 @@
             'lblNombreResponsableAutoFR
             '
             Me.lblNombreResponsableAutoFR.AutoSize = True
-            Me.lblNombreResponsableAutoFR.Location = New System.Drawing.Point(437, 18)
+            Me.lblNombreResponsableAutoFR.Location = New System.Drawing.Point(378, 18)
             Me.lblNombreResponsableAutoFR.Name = "lblNombreResponsableAutoFR"
             Me.lblNombreResponsableAutoFR.Size = New System.Drawing.Size(56, 13)
             Me.lblNombreResponsableAutoFR.TabIndex = 2
@@ -115,7 +115,7 @@
             Me.dgvResponsableAutoFR.ReadOnly = True
             Me.dgvResponsableAutoFR.RowHeadersVisible = False
             Me.dgvResponsableAutoFR.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvResponsableAutoFR.Size = New System.Drawing.Size(769, 189)
+            Me.dgvResponsableAutoFR.Size = New System.Drawing.Size(706, 189)
             Me.dgvResponsableAutoFR.TabIndex = 19
             '
             'txtIdResponsableAutoFR
@@ -131,7 +131,7 @@
             '
             Me.txtCIResponsableAutoFR.BackColor = System.Drawing.Color.White
             Me.txtCIResponsableAutoFR.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-            Me.txtCIResponsableAutoFR.Location = New System.Drawing.Point(240, 19)
+            Me.txtCIResponsableAutoFR.Location = New System.Drawing.Point(222, 19)
             Me.txtCIResponsableAutoFR.Name = "txtCIResponsableAutoFR"
             Me.txtCIResponsableAutoFR.Size = New System.Drawing.Size(132, 21)
             Me.txtCIResponsableAutoFR.TabIndex = 21
@@ -140,7 +140,7 @@
             '
             Me.txtNombreResponsableAutoFR.BackColor = System.Drawing.Color.White
             Me.txtNombreResponsableAutoFR.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-            Me.txtNombreResponsableAutoFR.Location = New System.Drawing.Point(500, 15)
+            Me.txtNombreResponsableAutoFR.Location = New System.Drawing.Point(441, 15)
             Me.txtNombreResponsableAutoFR.Name = "txtNombreResponsableAutoFR"
             Me.txtNombreResponsableAutoFR.Size = New System.Drawing.Size(252, 21)
             Me.txtNombreResponsableAutoFR.TabIndex = 23
@@ -149,7 +149,7 @@
             '
             Me.txtApellidoResponsableAutoFR.BackColor = System.Drawing.Color.White
             Me.txtApellidoResponsableAutoFR.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-            Me.txtApellidoResponsableAutoFR.Location = New System.Drawing.Point(500, 41)
+            Me.txtApellidoResponsableAutoFR.Location = New System.Drawing.Point(441, 41)
             Me.txtApellidoResponsableAutoFR.Name = "txtApellidoResponsableAutoFR"
             Me.txtApellidoResponsableAutoFR.Size = New System.Drawing.Size(252, 21)
             Me.txtApellidoResponsableAutoFR.TabIndex = 26
@@ -157,7 +157,7 @@
             'lblApellidoResponsableAutoFR
             '
             Me.lblApellidoResponsableAutoFR.AutoSize = True
-            Me.lblApellidoResponsableAutoFR.Location = New System.Drawing.Point(439, 44)
+            Me.lblApellidoResponsableAutoFR.Location = New System.Drawing.Point(380, 44)
             Me.lblApellidoResponsableAutoFR.Name = "lblApellidoResponsableAutoFR"
             Me.lblApellidoResponsableAutoFR.Size = New System.Drawing.Size(60, 13)
             Me.lblApellidoResponsableAutoFR.TabIndex = 25
@@ -175,7 +175,7 @@
             Me.pCentroCostoSolicitudFR.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.pCentroCostoSolicitudFR.Location = New System.Drawing.Point(2, 113)
             Me.pCentroCostoSolicitudFR.Name = "pCentroCostoSolicitudFR"
-            Me.pCentroCostoSolicitudFR.Size = New System.Drawing.Size(768, 41)
+            Me.pCentroCostoSolicitudFR.Size = New System.Drawing.Size(705, 41)
             Me.pCentroCostoSolicitudFR.TabIndex = 27
             '
             'cmbParroquia
@@ -184,7 +184,7 @@
             Me.cmbParroquia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cmbParroquia.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.cmbParroquia.FormattingEnabled = True
-            Me.cmbParroquia.Location = New System.Drawing.Point(584, 10)
+            Me.cmbParroquia.Location = New System.Drawing.Point(515, 10)
             Me.cmbParroquia.Name = "cmbParroquia"
             Me.cmbParroquia.Size = New System.Drawing.Size(171, 21)
             Me.cmbParroquia.TabIndex = 7
@@ -195,7 +195,7 @@
             Me.cmbCanton.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cmbCanton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.cmbCanton.FormattingEnabled = True
-            Me.cmbCanton.Location = New System.Drawing.Point(320, 10)
+            Me.cmbCanton.Location = New System.Drawing.Point(281, 10)
             Me.cmbCanton.Name = "cmbCanton"
             Me.cmbCanton.Size = New System.Drawing.Size(151, 21)
             Me.cmbCanton.TabIndex = 6
@@ -214,7 +214,7 @@
             'lblParroquia
             '
             Me.lblParroquia.AutoSize = True
-            Me.lblParroquia.Location = New System.Drawing.Point(508, 13)
+            Me.lblParroquia.Location = New System.Drawing.Point(444, 13)
             Me.lblParroquia.Name = "lblParroquia"
             Me.lblParroquia.Size = New System.Drawing.Size(70, 13)
             Me.lblParroquia.TabIndex = 5
@@ -232,7 +232,7 @@
             'lblCanton
             '
             Me.lblCanton.AutoSize = True
-            Me.lblCanton.Location = New System.Drawing.Point(250, 13)
+            Me.lblCanton.Location = New System.Drawing.Point(224, 13)
             Me.lblCanton.Name = "lblCanton"
             Me.lblCanton.Size = New System.Drawing.Size(55, 13)
             Me.lblCanton.TabIndex = 3
@@ -265,7 +265,7 @@
             Me.gbResponsable.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.gbResponsable.Location = New System.Drawing.Point(4, 34)
             Me.gbResponsable.Name = "gbResponsable"
-            Me.gbResponsable.Size = New System.Drawing.Size(764, 76)
+            Me.gbResponsable.Size = New System.Drawing.Size(703, 76)
             Me.gbResponsable.TabIndex = 30
             Me.gbResponsable.TabStop = False
             Me.gbResponsable.Text = "RESPONSABLE"
@@ -278,7 +278,7 @@
             Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
             Me.MenuStrip1.Name = "MenuStrip1"
             Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(7, 2, 0, 2)
-            Me.MenuStrip1.Size = New System.Drawing.Size(771, 32)
+            Me.MenuStrip1.Size = New System.Drawing.Size(712, 32)
             Me.MenuStrip1.TabIndex = 185
             Me.MenuStrip1.Text = "msIngresoBodega"
             '
@@ -316,7 +316,7 @@
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.BackColor = System.Drawing.Color.White
-            Me.ClientSize = New System.Drawing.Size(771, 345)
+            Me.ClientSize = New System.Drawing.Size(712, 345)
             Me.Controls.Add(Me.MenuStrip1)
             Me.Controls.Add(Me.gbResponsable)
             Me.Controls.Add(Me.pCentroCostoSolicitudFR)

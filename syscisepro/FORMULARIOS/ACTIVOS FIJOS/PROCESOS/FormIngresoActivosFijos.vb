@@ -3092,5 +3092,9 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
         Private Sub Label38_Click(sender As Object, e As EventArgs) Handles lblArmasCount.Click
 
         End Sub
+
+        Private Sub cbmAnoFabricacionVehiculo_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbmAnoFabricacionVehiculo.SelectedIndexChanged
+
+        End Sub
     End Class
 End Namespace

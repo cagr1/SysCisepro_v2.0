@@ -51,7 +51,7 @@
             Me.tcAuxiliares.Location = New System.Drawing.Point(1, 37)
             Me.tcAuxiliares.Name = "tcAuxiliares"
             Me.tcAuxiliares.SelectedIndex = 0
-            Me.tcAuxiliares.Size = New System.Drawing.Size(984, 682)
+            Me.tcAuxiliares.Size = New System.Drawing.Size(841, 682)
             Me.tcAuxiliares.TabIndex = 0
             '
             'tpActualizar
@@ -65,7 +65,7 @@
             Me.tpActualizar.Location = New System.Drawing.Point(4, 22)
             Me.tpActualizar.Name = "tpActualizar"
             Me.tpActualizar.Padding = New System.Windows.Forms.Padding(3)
-            Me.tpActualizar.Size = New System.Drawing.Size(976, 656)
+            Me.tpActualizar.Size = New System.Drawing.Size(833, 656)
             Me.tpActualizar.TabIndex = 0
             Me.tpActualizar.Text = "MAYORES"
             Me.tpActualizar.UseVisualStyleBackColor = True
@@ -94,7 +94,7 @@
             Me.dgvAsientosDiario.ReadOnly = True
             Me.dgvAsientosDiario.RowHeadersVisible = False
             Me.dgvAsientosDiario.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvAsientosDiario.Size = New System.Drawing.Size(964, 622)
+            Me.dgvAsientosDiario.Size = New System.Drawing.Size(822, 622)
             Me.dgvAsientosDiario.TabIndex = 225
             '
             'dgvMayoresPadres
@@ -105,7 +105,7 @@
             Me.dgvMayoresPadres.Location = New System.Drawing.Point(6, 55)
             Me.dgvMayoresPadres.Name = "dgvMayoresPadres"
             Me.dgvMayoresPadres.ReadOnly = True
-            Me.dgvMayoresPadres.Size = New System.Drawing.Size(964, 22)
+            Me.dgvMayoresPadres.Size = New System.Drawing.Size(786, 22)
             Me.dgvMayoresPadres.TabIndex = 218
             Me.dgvMayoresPadres.Visible = False
             '
@@ -151,7 +151,7 @@
             Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
             Me.MenuStrip1.Name = "MenuStrip1"
             Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(7, 2, 0, 2)
-            Me.MenuStrip1.Size = New System.Drawing.Size(984, 32)
+            Me.MenuStrip1.Size = New System.Drawing.Size(846, 32)
             Me.MenuStrip1.TabIndex = 189
             Me.MenuStrip1.Text = "msIngresoBodega"
             '
@@ -178,7 +178,7 @@
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.BackColor = System.Drawing.Color.White
-            Me.ClientSize = New System.Drawing.Size(984, 720)
+            Me.ClientSize = New System.Drawing.Size(846, 720)
             Me.Controls.Add(Me.MenuStrip1)
             Me.Controls.Add(Me.tcAuxiliares)
             Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)

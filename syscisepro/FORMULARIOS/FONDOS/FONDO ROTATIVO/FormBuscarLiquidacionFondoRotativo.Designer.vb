@@ -1,10 +1,10 @@
 ﻿Namespace FORMULARIOS.FONDOS.FONDO_ROTATIVO
-    <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+    <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
     Partial Class FormBuscarLiquidacionFondoRotativo
         'Inherits System.Windows.Forms.Form
         Inherits Krypton.Toolkit.KryptonForm
         'Form reemplaza a Dispose para limpiar la lista de componentes.
-        <System.Diagnostics.DebuggerNonUserCode()> _
+        <System.Diagnostics.DebuggerNonUserCode()>
         Protected Overrides Sub Dispose(ByVal disposing As Boolean)
             Try
                 If disposing AndAlso components IsNot Nothing Then
@@ -21,7 +21,7 @@
         'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
         'Se puede modificar usando el Diseñador de Windows Forms.  
         'No lo modifique con el editor de código.
-        <System.Diagnostics.DebuggerStepThrough()> _
+        <System.Diagnostics.DebuggerStepThrough()>
         Private Sub InitializeComponent()
             Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
@@ -77,7 +77,7 @@
             Me.dgvLiquidacionFondoRotativo.Name = "dgvLiquidacionFondoRotativo"
             Me.dgvLiquidacionFondoRotativo.RowHeadersVisible = False
             Me.dgvLiquidacionFondoRotativo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvLiquidacionFondoRotativo.Size = New System.Drawing.Size(1015, 481)
+            Me.dgvLiquidacionFondoRotativo.Size = New System.Drawing.Size(933, 457)
             Me.dgvLiquidacionFondoRotativo.TabIndex = 0
             '
             'lblIdLiquidacionFondoRotativo
@@ -101,7 +101,7 @@
             'lblTotalLiquidacionFondoRotativo
             '
             Me.lblTotalLiquidacionFondoRotativo.AutoSize = True
-            Me.lblTotalLiquidacionFondoRotativo.Location = New System.Drawing.Point(819, 23)
+            Me.lblTotalLiquidacionFondoRotativo.Location = New System.Drawing.Point(736, 23)
             Me.lblTotalLiquidacionFondoRotativo.Name = "lblTotalLiquidacionFondoRotativo"
             Me.lblTotalLiquidacionFondoRotativo.Size = New System.Drawing.Size(45, 13)
             Me.lblTotalLiquidacionFondoRotativo.TabIndex = 3
@@ -110,7 +110,7 @@
             'lblFondoLiquidacion
             '
             Me.lblFondoLiquidacion.AutoSize = True
-            Me.lblFondoLiquidacion.Location = New System.Drawing.Point(312, 24)
+            Me.lblFondoLiquidacion.Location = New System.Drawing.Point(292, 24)
             Me.lblFondoLiquidacion.Name = "lblFondoLiquidacion"
             Me.lblFondoLiquidacion.Size = New System.Drawing.Size(47, 13)
             Me.lblFondoLiquidacion.TabIndex = 4
@@ -119,7 +119,7 @@
             'lblGastosLiquidacion
             '
             Me.lblGastosLiquidacion.AutoSize = True
-            Me.lblGastosLiquidacion.Location = New System.Drawing.Point(537, 24)
+            Me.lblGastosLiquidacion.Location = New System.Drawing.Point(492, 24)
             Me.lblGastosLiquidacion.Name = "lblGastosLiquidacion"
             Me.lblGastosLiquidacion.Size = New System.Drawing.Size(54, 13)
             Me.lblGastosLiquidacion.TabIndex = 5
@@ -128,7 +128,7 @@
             'lblSaldoLiquidacion
             '
             Me.lblSaldoLiquidacion.AutoSize = True
-            Me.lblSaldoLiquidacion.Location = New System.Drawing.Point(423, 24)
+            Me.lblSaldoLiquidacion.Location = New System.Drawing.Point(392, 24)
             Me.lblSaldoLiquidacion.Name = "lblSaldoLiquidacion"
             Me.lblSaldoLiquidacion.Size = New System.Drawing.Size(45, 13)
             Me.lblSaldoLiquidacion.TabIndex = 6
@@ -137,7 +137,7 @@
             'lblReposicionLiquidacion
             '
             Me.lblReposicionLiquidacion.AutoSize = True
-            Me.lblReposicionLiquidacion.Location = New System.Drawing.Point(677, 23)
+            Me.lblReposicionLiquidacion.Location = New System.Drawing.Point(606, 23)
             Me.lblReposicionLiquidacion.Name = "lblReposicionLiquidacion"
             Me.lblReposicionLiquidacion.Size = New System.Drawing.Size(74, 13)
             Me.lblReposicionLiquidacion.TabIndex = 7
@@ -160,7 +160,7 @@
             Me.txtFechaLiquidacion.Enabled = False
             Me.txtFechaLiquidacion.Location = New System.Drawing.Point(140, 21)
             Me.txtFechaLiquidacion.Name = "txtFechaLiquidacion"
-            Me.txtFechaLiquidacion.Size = New System.Drawing.Size(150, 21)
+            Me.txtFechaLiquidacion.Size = New System.Drawing.Size(145, 21)
             Me.txtFechaLiquidacion.TabIndex = 9
             '
             'txtTotalLiquidacion
@@ -168,7 +168,7 @@
             Me.txtTotalLiquidacion.BackColor = System.Drawing.Color.White
             Me.txtTotalLiquidacion.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtTotalLiquidacion.Enabled = False
-            Me.txtTotalLiquidacion.Location = New System.Drawing.Point(867, 20)
+            Me.txtTotalLiquidacion.Location = New System.Drawing.Point(784, 20)
             Me.txtTotalLiquidacion.Name = "txtTotalLiquidacion"
             Me.txtTotalLiquidacion.Size = New System.Drawing.Size(69, 21)
             Me.txtTotalLiquidacion.TabIndex = 10
@@ -180,7 +180,7 @@
             Me.txtFondoLiquidacion.BackColor = System.Drawing.Color.White
             Me.txtFondoLiquidacion.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtFondoLiquidacion.Enabled = False
-            Me.txtFondoLiquidacion.Location = New System.Drawing.Point(361, 20)
+            Me.txtFondoLiquidacion.Location = New System.Drawing.Point(341, 20)
             Me.txtFondoLiquidacion.Name = "txtFondoLiquidacion"
             Me.txtFondoLiquidacion.Size = New System.Drawing.Size(43, 21)
             Me.txtFondoLiquidacion.TabIndex = 11
@@ -192,7 +192,7 @@
             Me.txtGastosLiquidacion.BackColor = System.Drawing.Color.White
             Me.txtGastosLiquidacion.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtGastosLiquidacion.Enabled = False
-            Me.txtGastosLiquidacion.Location = New System.Drawing.Point(592, 20)
+            Me.txtGastosLiquidacion.Location = New System.Drawing.Point(547, 20)
             Me.txtGastosLiquidacion.Name = "txtGastosLiquidacion"
             Me.txtGastosLiquidacion.Size = New System.Drawing.Size(51, 21)
             Me.txtGastosLiquidacion.TabIndex = 12
@@ -204,7 +204,7 @@
             Me.txtSaldoLiquidacion.BackColor = System.Drawing.Color.White
             Me.txtSaldoLiquidacion.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtSaldoLiquidacion.Enabled = False
-            Me.txtSaldoLiquidacion.Location = New System.Drawing.Point(468, 20)
+            Me.txtSaldoLiquidacion.Location = New System.Drawing.Point(437, 20)
             Me.txtSaldoLiquidacion.Name = "txtSaldoLiquidacion"
             Me.txtSaldoLiquidacion.Size = New System.Drawing.Size(46, 21)
             Me.txtSaldoLiquidacion.TabIndex = 13
@@ -216,7 +216,7 @@
             Me.txtReposicionLiquidacion.BackColor = System.Drawing.Color.White
             Me.txtReposicionLiquidacion.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtReposicionLiquidacion.Enabled = False
-            Me.txtReposicionLiquidacion.Location = New System.Drawing.Point(751, 20)
+            Me.txtReposicionLiquidacion.Location = New System.Drawing.Point(680, 20)
             Me.txtReposicionLiquidacion.Name = "txtReposicionLiquidacion"
             Me.txtReposicionLiquidacion.Size = New System.Drawing.Size(48, 21)
             Me.txtReposicionLiquidacion.TabIndex = 14
@@ -245,7 +245,7 @@
             Me.gbLiquidacion.ForeColor = System.Drawing.Color.Black
             Me.gbLiquidacion.Location = New System.Drawing.Point(-1, 34)
             Me.gbLiquidacion.Name = "gbLiquidacion"
-            Me.gbLiquidacion.Size = New System.Drawing.Size(1017, 48)
+            Me.gbLiquidacion.Size = New System.Drawing.Size(935, 48)
             Me.gbLiquidacion.TabIndex = 16
             Me.gbLiquidacion.TabStop = False
             Me.gbLiquidacion.Text = "LIQUIDACION"
@@ -253,7 +253,7 @@
             'Button1
             '
             Me.Button1.Image = Global.syscisepro.My.Resources.Resources.description_24dp_FILL0_wght400_GRAD0_opsz24__2_
-            Me.Button1.Location = New System.Drawing.Point(960, 10)
+            Me.Button1.Location = New System.Drawing.Point(877, 10)
             Me.Button1.Name = "Button1"
             Me.Button1.Size = New System.Drawing.Size(47, 34)
             Me.Button1.TabIndex = 15
@@ -268,7 +268,7 @@
             Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
             Me.MenuStrip1.Name = "MenuStrip1"
             Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(7, 2, 0, 2)
-            Me.MenuStrip1.Size = New System.Drawing.Size(1018, 32)
+            Me.MenuStrip1.Size = New System.Drawing.Size(940, 32)
             Me.MenuStrip1.TabIndex = 189
             Me.MenuStrip1.Text = "msIngresoBodega"
             '
@@ -283,9 +283,9 @@
             'Label1
             '
             Me.Label1.AutoSize = True
-            Me.Label1.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(247, Byte), Integer))
+            Me.Label1.BackColor = System.Drawing.Color.FromArgb(CType(CType(189, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(232, Byte), Integer))
             Me.Label1.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label1.Location = New System.Drawing.Point(191, 6)
+            Me.Label1.Location = New System.Drawing.Point(189, 8)
             Me.Label1.Name = "Label1"
             Me.Label1.Size = New System.Drawing.Size(43, 13)
             Me.Label1.TabIndex = 190
@@ -310,9 +310,9 @@
             'Label2
             '
             Me.Label2.AutoSize = True
-            Me.Label2.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(247, Byte), Integer))
+            Me.Label2.BackColor = System.Drawing.Color.FromArgb(CType(CType(189, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(232, Byte), Integer))
             Me.Label2.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label2.Location = New System.Drawing.Point(460, 6)
+            Me.Label2.Location = New System.Drawing.Point(455, 8)
             Me.Label2.Name = "Label2"
             Me.Label2.Size = New System.Drawing.Size(46, 13)
             Me.Label2.TabIndex = 192
@@ -323,7 +323,7 @@
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.BackColor = System.Drawing.Color.White
-            Me.ClientSize = New System.Drawing.Size(1018, 565)
+            Me.ClientSize = New System.Drawing.Size(940, 541)
             Me.Controls.Add(Me.DateTimePicker2)
             Me.Controls.Add(Me.Label2)
             Me.Controls.Add(Me.DateTimePicker1)

@@ -393,5 +393,9 @@ Namespace FORMULARIOS.CONTABILIDAD.BALANCE
 
             CantidadReistros()
         End Sub
+
+        Private Sub tpActualizar_Click(sender As Object, e As EventArgs) Handles tpActualizar.Click
+
+        End Sub
     End Class
 End Namespace

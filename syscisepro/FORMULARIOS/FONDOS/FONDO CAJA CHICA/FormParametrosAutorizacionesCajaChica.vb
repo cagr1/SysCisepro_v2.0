@@ -148,7 +148,7 @@ Namespace FORMULARIOS.FONDOS.FONDO_CAJA_CHICA
                     dgvPersonal.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
                     dgvParametroAutorizaciones.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
             End Select
-            dgvPersonal.Font = New Font("Roboto", 8, FontStyle.Regular)
+            dgvPersonal.Font = New Font("Roboto", 7, FontStyle.Regular)
             dgvParametroAutorizaciones.Font = New Font("Roboto", 8, FontStyle.Regular)
             _sqlCommands = New List(Of SqlCommand)
             LlenarComboProvincias()
@@ -250,6 +250,10 @@ Namespace FORMULARIOS.FONDOS.FONDO_CAJA_CHICA
             txtCiudadResponsable.Text = dgvParametroAutorizaciones.CurrentRow.Cells.Item("NOMBRE_CIUDADES").Value.ToString()
             rbActivo.Checked = dgvParametroAutorizaciones.CurrentRow.Cells.Item("ESTADO_RESPONSABLE_AUTO_CCH").Value.ToString().Equals("1")
             rbInactivo.Checked = dgvParametroAutorizaciones.CurrentRow.Cells.Item("ESTADO_RESPONSABLE_AUTO_CCH").Value.ToString().Equals("2")
+        End Sub
+
+        Private Sub MenuStrip1_ItemClicked(sender As Object, e As ToolStripItemClickedEventArgs) Handles MenuStrip1.ItemClicked
+
         End Sub
     End Class
 End Namespace

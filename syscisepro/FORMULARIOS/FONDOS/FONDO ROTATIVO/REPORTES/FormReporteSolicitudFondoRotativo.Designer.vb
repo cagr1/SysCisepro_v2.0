@@ -36,7 +36,7 @@
             Me.crvSolicitudFondoRotativo.Dock = System.Windows.Forms.DockStyle.Fill
             Me.crvSolicitudFondoRotativo.Location = New System.Drawing.Point(0, 0)
             Me.crvSolicitudFondoRotativo.Name = "crvSolicitudFondoRotativo"
-            Me.crvSolicitudFondoRotativo.Size = New System.Drawing.Size(982, 655)
+            Me.crvSolicitudFondoRotativo.Size = New System.Drawing.Size(885, 613)
             Me.crvSolicitudFondoRotativo.TabIndex = 0
             Me.crvSolicitudFondoRotativo.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None
             '
@@ -46,7 +46,7 @@
             Me.btnVolver.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.btnVolver.Image = Global.syscisepro.My.Resources.Resources.BuscarRegistro
             Me.btnVolver.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-            Me.btnVolver.Location = New System.Drawing.Point(821, 2)
+            Me.btnVolver.Location = New System.Drawing.Point(719, 2)
             Me.btnVolver.Name = "btnVolver"
             Me.btnVolver.Size = New System.Drawing.Size(159, 24)
             Me.btnVolver.TabIndex = 3
@@ -58,7 +58,7 @@
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.BackColor = System.Drawing.Color.White
-            Me.ClientSize = New System.Drawing.Size(982, 655)
+            Me.ClientSize = New System.Drawing.Size(885, 613)
             Me.Controls.Add(Me.btnVolver)
             Me.Controls.Add(Me.crvSolicitudFondoRotativo)
             Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow

@@ -86,12 +86,12 @@
             Me.dgvFacturaVenta.BackgroundColor = System.Drawing.Color.White
             Me.dgvFacturaVenta.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
             Me.dgvFacturaVenta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-            Me.dgvFacturaVenta.Location = New System.Drawing.Point(2, 93)
+            Me.dgvFacturaVenta.Location = New System.Drawing.Point(2, 98)
             Me.dgvFacturaVenta.Name = "dgvFacturaVenta"
             Me.dgvFacturaVenta.ReadOnly = True
             Me.dgvFacturaVenta.RowHeadersVisible = False
             Me.dgvFacturaVenta.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvFacturaVenta.Size = New System.Drawing.Size(887, 524)
+            Me.dgvFacturaVenta.Size = New System.Drawing.Size(852, 519)
             Me.dgvFacturaVenta.TabIndex = 52
             '
             'lblEstadoXML
@@ -209,7 +209,7 @@
             Me.gbNumeroFactura.Controls.Add(Me.chkNumeroFactura)
             Me.gbNumeroFactura.Controls.Add(Me.txtNumeroFacturaBuscar)
             Me.gbNumeroFactura.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.gbNumeroFactura.Location = New System.Drawing.Point(769, 34)
+            Me.gbNumeroFactura.Location = New System.Drawing.Point(732, 34)
             Me.gbNumeroFactura.Name = "gbNumeroFactura"
             Me.gbNumeroFactura.Size = New System.Drawing.Size(122, 61)
             Me.gbNumeroFactura.TabIndex = 90
@@ -272,7 +272,7 @@
             Me.gbEnvioCorreo.Controls.Add(Me.Label5)
             Me.gbEnvioCorreo.Controls.Add(Me.txtAsunto)
             Me.gbEnvioCorreo.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.gbEnvioCorreo.Location = New System.Drawing.Point(893, 33)
+            Me.gbEnvioCorreo.Location = New System.Drawing.Point(856, 33)
             Me.gbEnvioCorreo.Name = "gbEnvioCorreo"
             Me.gbEnvioCorreo.Size = New System.Drawing.Size(305, 274)
             Me.gbEnvioCorreo.TabIndex = 91
@@ -300,7 +300,7 @@
             Me.gbRangoFechas.Controls.Add(Me.dtpFechaHasta)
             Me.gbRangoFechas.Controls.Add(Me.dtpFechaDesde)
             Me.gbRangoFechas.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.gbRangoFechas.Location = New System.Drawing.Point(543, 34)
+            Me.gbRangoFechas.Location = New System.Drawing.Point(506, 34)
             Me.gbRangoFechas.Name = "gbRangoFechas"
             Me.gbRangoFechas.Size = New System.Drawing.Size(224, 61)
             Me.gbRangoFechas.TabIndex = 92
@@ -350,7 +350,7 @@
             Me.gbClienteGeneral.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.gbClienteGeneral.Location = New System.Drawing.Point(236, 34)
             Me.gbClienteGeneral.Name = "gbClienteGeneral"
-            Me.gbClienteGeneral.Size = New System.Drawing.Size(307, 61)
+            Me.gbClienteGeneral.Size = New System.Drawing.Size(270, 61)
             Me.gbClienteGeneral.TabIndex = 93
             Me.gbClienteGeneral.TabStop = False
             Me.gbClienteGeneral.Text = "CLIENTES"
@@ -358,7 +358,7 @@
             'chkClienteGeneral
             '
             Me.chkClienteGeneral.AutoSize = True
-            Me.chkClienteGeneral.Location = New System.Drawing.Point(226, 1)
+            Me.chkClienteGeneral.Location = New System.Drawing.Point(191, 1)
             Me.chkClienteGeneral.Name = "chkClienteGeneral"
             Me.chkClienteGeneral.Size = New System.Drawing.Size(63, 17)
             Me.chkClienteGeneral.TabIndex = 32
@@ -370,7 +370,7 @@
             Me.txtClienteGeneral.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtClienteGeneral.Location = New System.Drawing.Point(4, 23)
             Me.txtClienteGeneral.Name = "txtClienteGeneral"
-            Me.txtClienteGeneral.Size = New System.Drawing.Size(297, 21)
+            Me.txtClienteGeneral.Size = New System.Drawing.Size(259, 21)
             Me.txtClienteGeneral.TabIndex = 31
             '
             'lblIdClienteGeneral
@@ -385,10 +385,11 @@
             'ListView1
             '
             Me.ListView1.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.nombre, Me.tamaño, Me.fecha})
+            Me.ListView1.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.ListView1.HideSelection = False
-            Me.ListView1.Location = New System.Drawing.Point(894, 300)
+            Me.ListView1.Location = New System.Drawing.Point(857, 307)
             Me.ListView1.Name = "ListView1"
-            Me.ListView1.Size = New System.Drawing.Size(304, 317)
+            Me.ListView1.Size = New System.Drawing.Size(304, 310)
             Me.ListView1.TabIndex = 94
             Me.ListView1.UseCompatibleStateImageBehavior = False
             Me.ListView1.View = System.Windows.Forms.View.Details
@@ -415,7 +416,7 @@
             Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
             Me.MenuStrip1.Name = "MenuStrip1"
             Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(7, 2, 0, 2)
-            Me.MenuStrip1.Size = New System.Drawing.Size(1222, 32)
+            Me.MenuStrip1.Size = New System.Drawing.Size(1165, 32)
             Me.MenuStrip1.TabIndex = 187
             Me.MenuStrip1.Text = "msIngresoBodega"
             '
@@ -468,7 +469,7 @@
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.BackColor = System.Drawing.Color.White
-            Me.ClientSize = New System.Drawing.Size(1222, 618)
+            Me.ClientSize = New System.Drawing.Size(1165, 618)
             Me.Controls.Add(Me.MenuStrip1)
             Me.Controls.Add(Me.ListView1)
             Me.Controls.Add(Me.gbClienteGeneral)

@@ -112,7 +112,7 @@
             Me.gbRangoFechas.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.gbRangoFechas.Location = New System.Drawing.Point(392, 36)
             Me.gbRangoFechas.Name = "gbRangoFechas"
-            Me.gbRangoFechas.Size = New System.Drawing.Size(499, 57)
+            Me.gbRangoFechas.Size = New System.Drawing.Size(336, 57)
             Me.gbRangoFechas.TabIndex = 118
             Me.gbRangoFechas.TabStop = False
             Me.gbRangoFechas.Text = "RANGO DE FECHAS"
@@ -129,7 +129,7 @@
             'Label1
             '
             Me.Label1.AutoSize = True
-            Me.Label1.Location = New System.Drawing.Point(134, 31)
+            Me.Label1.Location = New System.Drawing.Point(145, 31)
             Me.Label1.Name = "Label1"
             Me.Label1.Size = New System.Drawing.Size(13, 13)
             Me.Label1.TabIndex = 2
@@ -138,7 +138,7 @@
             'dtpHasta
             '
             Me.dtpHasta.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-            Me.dtpHasta.Location = New System.Drawing.Point(153, 28)
+            Me.dtpHasta.Location = New System.Drawing.Point(175, 28)
             Me.dtpHasta.Name = "dtpHasta"
             Me.dtpHasta.Size = New System.Drawing.Size(119, 21)
             Me.dtpHasta.TabIndex = 1
@@ -146,7 +146,7 @@
             'dtpDesde
             '
             Me.dtpDesde.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-            Me.dtpDesde.Location = New System.Drawing.Point(9, 28)
+            Me.dtpDesde.Location = New System.Drawing.Point(16, 28)
             Me.dtpDesde.Name = "dtpDesde"
             Me.dtpDesde.Size = New System.Drawing.Size(118, 21)
             Me.dtpDesde.TabIndex = 0
@@ -158,7 +158,7 @@
             Me.GroupBox1.Controls.Add(Me.dgvPagosFacturaVentaPorIngreso)
             Me.GroupBox1.Location = New System.Drawing.Point(0, 126)
             Me.GroupBox1.Name = "GroupBox1"
-            Me.GroupBox1.Size = New System.Drawing.Size(894, 100)
+            Me.GroupBox1.Size = New System.Drawing.Size(686, 100)
             Me.GroupBox1.TabIndex = 120
             Me.GroupBox1.TabStop = False
             '
@@ -175,7 +175,7 @@
             '
             Me.dgvPagosFacturaVentaPorFactura.AllowUserToAddRows = False
             Me.dgvPagosFacturaVentaPorFactura.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-            Me.dgvPagosFacturaVentaPorFactura.Location = New System.Drawing.Point(467, 10)
+            Me.dgvPagosFacturaVentaPorFactura.Location = New System.Drawing.Point(345, 10)
             Me.dgvPagosFacturaVentaPorFactura.Name = "dgvPagosFacturaVentaPorFactura"
             Me.dgvPagosFacturaVentaPorFactura.Size = New System.Drawing.Size(412, 84)
             Me.dgvPagosFacturaVentaPorFactura.TabIndex = 1
@@ -194,7 +194,7 @@
             Me.GroupBox2.Controls.Add(Me.dgvComprobanteEgresoBancos)
             Me.GroupBox2.Location = New System.Drawing.Point(1, 90)
             Me.GroupBox2.Name = "GroupBox2"
-            Me.GroupBox2.Size = New System.Drawing.Size(894, 585)
+            Me.GroupBox2.Size = New System.Drawing.Size(727, 528)
             Me.GroupBox2.TabIndex = 121
             Me.GroupBox2.TabStop = False
             '
@@ -227,7 +227,7 @@
             Me.dgvComprobanteEgresoBancos.RowHeadersVisible = False
             Me.dgvComprobanteEgresoBancos.RowHeadersWidth = 25
             Me.dgvComprobanteEgresoBancos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvComprobanteEgresoBancos.Size = New System.Drawing.Size(888, 566)
+            Me.dgvComprobanteEgresoBancos.Size = New System.Drawing.Size(721, 509)
             Me.dgvComprobanteEgresoBancos.TabIndex = 108
             '
             'chk
@@ -244,7 +244,7 @@
             Me.msKardex.Location = New System.Drawing.Point(0, 0)
             Me.msKardex.Name = "msKardex"
             Me.msKardex.Padding = New System.Windows.Forms.Padding(7, 2, 0, 2)
-            Me.msKardex.Size = New System.Drawing.Size(894, 32)
+            Me.msKardex.Size = New System.Drawing.Size(734, 32)
             Me.msKardex.TabIndex = 187
             Me.msKardex.Text = "msIngresoBodega"
             '
@@ -271,7 +271,7 @@
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.BackColor = System.Drawing.Color.White
-            Me.ClientSize = New System.Drawing.Size(894, 678)
+            Me.ClientSize = New System.Drawing.Size(734, 621)
             Me.Controls.Add(Me.msKardex)
             Me.Controls.Add(Me.gbBanco)
             Me.Controls.Add(Me.gbRangoFechas)

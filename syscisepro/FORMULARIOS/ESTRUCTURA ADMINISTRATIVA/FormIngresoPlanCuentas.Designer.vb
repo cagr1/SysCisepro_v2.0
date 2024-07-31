@@ -325,7 +325,7 @@
             DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
             Me.dgvPlanDeCuentas.RowsDefaultCellStyle = DataGridViewCellStyle4
             Me.dgvPlanDeCuentas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvPlanDeCuentas.Size = New System.Drawing.Size(1005, 583)
+            Me.dgvPlanDeCuentas.Size = New System.Drawing.Size(961, 415)
             Me.dgvPlanDeCuentas.TabIndex = 197
             '
             'Label10
@@ -359,9 +359,9 @@
             Me.ListBox1.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.ListBox1.FormattingEnabled = True
             Me.ListBox1.Items.AddRange(New Object() {"1. ESTADO DE SITUCION FINANCIERA", "", "2. ESTADO DE RESULTADO INTEGRAL", "", "3. ESTADO DE FLUJOS DE EFECTIVOS", "", "4. ESTADO DE CAMBIOS EN EL PATRIMONIO"})
-            Me.ListBox1.Location = New System.Drawing.Point(725, 32)
+            Me.ListBox1.Location = New System.Drawing.Point(725, 33)
             Me.ListBox1.Name = "ListBox1"
-            Me.ListBox1.Size = New System.Drawing.Size(286, 95)
+            Me.ListBox1.Size = New System.Drawing.Size(242, 95)
             Me.ListBox1.TabIndex = 201
             '
             'txtBuscar
@@ -372,7 +372,7 @@
             Me.txtBuscar.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtBuscar.Location = New System.Drawing.Point(372, 15)
             Me.txtBuscar.Name = "txtBuscar"
-            Me.txtBuscar.Size = New System.Drawing.Size(633, 22)
+            Me.txtBuscar.Size = New System.Drawing.Size(347, 22)
             Me.txtBuscar.TabIndex = 204
             '
             'GroupBox3
@@ -384,7 +384,7 @@
             Me.GroupBox3.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.GroupBox3.Location = New System.Drawing.Point(1, 129)
             Me.GroupBox3.Name = "GroupBox3"
-            Me.GroupBox3.Size = New System.Drawing.Size(1011, 45)
+            Me.GroupBox3.Size = New System.Drawing.Size(966, 45)
             Me.GroupBox3.TabIndex = 206
             Me.GroupBox3.TabStop = False
             Me.GroupBox3.Text = "BUSQUEDA"
@@ -458,7 +458,7 @@
             Me.GroupBox5.Controls.Add(Me.dgvPlanDeCuentas)
             Me.GroupBox5.Location = New System.Drawing.Point(0, 164)
             Me.GroupBox5.Name = "GroupBox5"
-            Me.GroupBox5.Size = New System.Drawing.Size(1011, 604)
+            Me.GroupBox5.Size = New System.Drawing.Size(967, 436)
             Me.GroupBox5.TabIndex = 208
             Me.GroupBox5.TabStop = False
             '
@@ -470,7 +470,7 @@
             Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
             Me.MenuStrip1.Name = "MenuStrip1"
             Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(7, 2, 0, 2)
-            Me.MenuStrip1.Size = New System.Drawing.Size(1012, 32)
+            Me.MenuStrip1.Size = New System.Drawing.Size(971, 32)
             Me.MenuStrip1.TabIndex = 209
             Me.MenuStrip1.Text = "msIngresoBodega"
             '
@@ -536,7 +536,7 @@
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.BackColor = System.Drawing.Color.White
-            Me.ClientSize = New System.Drawing.Size(1012, 772)
+            Me.ClientSize = New System.Drawing.Size(971, 604)
             Me.Controls.Add(Me.MenuStrip1)
             Me.Controls.Add(Me.GroupBox4)
             Me.Controls.Add(Me.GroupBox3)

@@ -270,7 +270,7 @@
             this.ButtonCancelar});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(955, 31);
+            this.toolStrip1.Size = new System.Drawing.Size(927, 31);
             this.toolStrip1.TabIndex = 215;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -360,7 +360,7 @@
             this.tcPersonal.Location = new System.Drawing.Point(1, 33);
             this.tcPersonal.Name = "tcPersonal";
             this.tcPersonal.SelectedIndex = 0;
-            this.tcPersonal.Size = new System.Drawing.Size(954, 427);
+            this.tcPersonal.Size = new System.Drawing.Size(924, 427);
             this.tcPersonal.TabIndex = 216;
             // 
             // tpDatosPersonales
@@ -374,7 +374,7 @@
             this.tpDatosPersonales.Location = new System.Drawing.Point(4, 22);
             this.tpDatosPersonales.Name = "tpDatosPersonales";
             this.tpDatosPersonales.Padding = new System.Windows.Forms.Padding(3);
-            this.tpDatosPersonales.Size = new System.Drawing.Size(946, 401);
+            this.tpDatosPersonales.Size = new System.Drawing.Size(916, 401);
             this.tpDatosPersonales.TabIndex = 0;
             this.tpDatosPersonales.Text = "DATOS PERSONALES";
             // 
@@ -417,7 +417,7 @@
             this.GroupBox1.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GroupBox1.Location = new System.Drawing.Point(0, -6);
             this.GroupBox1.Name = "GroupBox1";
-            this.GroupBox1.Size = new System.Drawing.Size(491, 229);
+            this.GroupBox1.Size = new System.Drawing.Size(452, 229);
             this.GroupBox1.TabIndex = 145;
             this.GroupBox1.TabStop = false;
             // 
@@ -448,7 +448,7 @@
             this.panelEsatdo.BackColor = System.Drawing.Color.White;
             this.panelEsatdo.Controls.Add(this.PictureBox1);
             this.panelEsatdo.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panelEsatdo.Location = new System.Drawing.Point(389, 9);
+            this.panelEsatdo.Location = new System.Drawing.Point(347, 9);
             this.panelEsatdo.Name = "panelEsatdo";
             this.panelEsatdo.Size = new System.Drawing.Size(99, 139);
             this.panelEsatdo.TabIndex = 186;
@@ -481,7 +481,7 @@
             "VIUDO (A)"});
             this.cbEstadoCivil.Location = new System.Drawing.Point(78, 123);
             this.cbEstadoCivil.Name = "cbEstadoCivil";
-            this.cbEstadoCivil.Size = new System.Drawing.Size(99, 21);
+            this.cbEstadoCivil.Size = new System.Drawing.Size(95, 21);
             this.cbEstadoCivil.TabIndex = 8;
             // 
             // txtPeso
@@ -512,7 +512,7 @@
             "SUPERIOR"});
             this.cbmInstruccion.Location = new System.Drawing.Point(77, 151);
             this.cbmInstruccion.Name = "cbmInstruccion";
-            this.cbmInstruccion.Size = new System.Drawing.Size(161, 21);
+            this.cbmInstruccion.Size = new System.Drawing.Size(133, 21);
             this.cbmInstruccion.TabIndex = 10;
             // 
             // cbmTipoSangre
@@ -565,9 +565,9 @@
             this.txtContrato.BackColor = System.Drawing.Color.White;
             this.txtContrato.Enabled = false;
             this.txtContrato.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtContrato.Location = new System.Drawing.Point(296, 17);
+            this.txtContrato.Location = new System.Drawing.Point(262, 17);
             this.txtContrato.Name = "txtContrato";
-            this.txtContrato.Size = new System.Drawing.Size(90, 21);
+            this.txtContrato.Size = new System.Drawing.Size(80, 21);
             this.txtContrato.TabIndex = 2;
             this.txtContrato.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtContrato.Leave += new System.EventHandler(this.txtContrato_Leave);
@@ -612,7 +612,7 @@
             this.txtCedula.BackColor = System.Drawing.Color.White;
             this.txtCedula.Enabled = false;
             this.txtCedula.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCedula.Location = new System.Drawing.Point(78, 17);
+            this.txtCedula.Location = new System.Drawing.Point(77, 17);
             this.txtCedula.MaxLength = 10;
             this.txtCedula.Name = "txtCedula";
             this.txtCedula.Size = new System.Drawing.Size(96, 21);
@@ -636,9 +636,9 @@
             this.txtNombres.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtNombres.Enabled = false;
             this.txtNombres.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombres.Location = new System.Drawing.Point(78, 43);
+            this.txtNombres.Location = new System.Drawing.Point(74, 43);
             this.txtNombres.Name = "txtNombres";
-            this.txtNombres.Size = new System.Drawing.Size(308, 21);
+            this.txtNombres.Size = new System.Drawing.Size(268, 21);
             this.txtNombres.TabIndex = 3;
             // 
             // lblApellidos
@@ -658,9 +658,9 @@
             this.txtApellidos.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtApellidos.Enabled = false;
             this.txtApellidos.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtApellidos.Location = new System.Drawing.Point(78, 69);
+            this.txtApellidos.Location = new System.Drawing.Point(74, 69);
             this.txtApellidos.Name = "txtApellidos";
-            this.txtApellidos.Size = new System.Drawing.Size(308, 21);
+            this.txtApellidos.Size = new System.Drawing.Size(268, 21);
             this.txtApellidos.TabIndex = 4;
             // 
             // lblSexo
@@ -687,7 +687,7 @@
             "FEMENINO"});
             this.cbmSexo.Location = new System.Drawing.Point(51, 96);
             this.cbmSexo.Name = "cbmSexo";
-            this.cbmSexo.Size = new System.Drawing.Size(83, 21);
+            this.cbmSexo.Size = new System.Drawing.Size(62, 21);
             this.cbmSexo.TabIndex = 5;
             // 
             // dtpFechaNacimiento
@@ -695,7 +695,7 @@
             this.dtpFechaNacimiento.Enabled = false;
             this.dtpFechaNacimiento.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpFechaNacimiento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaNacimiento.Location = new System.Drawing.Point(212, 96);
+            this.dtpFechaNacimiento.Location = new System.Drawing.Point(190, 96);
             this.dtpFechaNacimiento.Name = "dtpFechaNacimiento";
             this.dtpFechaNacimiento.Size = new System.Drawing.Size(86, 21);
             this.dtpFechaNacimiento.TabIndex = 6;
@@ -706,7 +706,7 @@
             this.lblFechaNacimiento.AutoSize = true;
             this.lblFechaNacimiento.BackColor = System.Drawing.Color.Transparent;
             this.lblFechaNacimiento.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFechaNacimiento.Location = new System.Drawing.Point(140, 99);
+            this.lblFechaNacimiento.Location = new System.Drawing.Point(118, 99);
             this.lblFechaNacimiento.Name = "lblFechaNacimiento";
             this.lblFechaNacimiento.Size = new System.Drawing.Size(70, 13);
             this.lblFechaNacimiento.TabIndex = 89;
@@ -717,7 +717,7 @@
             this.txtEdad.BackColor = System.Drawing.Color.White;
             this.txtEdad.Enabled = false;
             this.txtEdad.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEdad.Location = new System.Drawing.Point(339, 96);
+            this.txtEdad.Location = new System.Drawing.Point(315, 96);
             this.txtEdad.Name = "txtEdad";
             this.txtEdad.Size = new System.Drawing.Size(26, 21);
             this.txtEdad.TabIndex = 7;
@@ -729,7 +729,7 @@
             this.lblEdad.AutoSize = true;
             this.lblEdad.BackColor = System.Drawing.Color.Transparent;
             this.lblEdad.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEdad.Location = new System.Drawing.Point(305, 99);
+            this.lblEdad.Location = new System.Drawing.Point(279, 99);
             this.lblEdad.Name = "lblEdad";
             this.lblEdad.Size = new System.Drawing.Size(37, 13);
             this.lblEdad.TabIndex = 100;
@@ -740,9 +740,9 @@
             this.txtPasaporte.BackColor = System.Drawing.Color.White;
             this.txtPasaporte.Enabled = false;
             this.txtPasaporte.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPasaporte.Location = new System.Drawing.Point(281, 122);
+            this.txtPasaporte.Location = new System.Drawing.Point(249, 122);
             this.txtPasaporte.Name = "txtPasaporte";
-            this.txtPasaporte.Size = new System.Drawing.Size(105, 21);
+            this.txtPasaporte.Size = new System.Drawing.Size(85, 21);
             this.txtPasaporte.TabIndex = 9;
             this.txtPasaporte.Text = "0";
             this.txtPasaporte.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -752,7 +752,7 @@
             this.lblPasaporte.AutoSize = true;
             this.lblPasaporte.BackColor = System.Drawing.Color.Transparent;
             this.lblPasaporte.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPasaporte.Location = new System.Drawing.Point(208, 125);
+            this.lblPasaporte.Location = new System.Drawing.Point(177, 125);
             this.lblPasaporte.Name = "lblPasaporte";
             this.lblPasaporte.Size = new System.Drawing.Size(72, 13);
             this.lblPasaporte.TabIndex = 98;
@@ -763,9 +763,9 @@
             this.txtLibreta.BackColor = System.Drawing.Color.White;
             this.txtLibreta.Enabled = false;
             this.txtLibreta.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLibreta.Location = new System.Drawing.Point(354, 151);
+            this.txtLibreta.Location = new System.Drawing.Point(338, 151);
             this.txtLibreta.Name = "txtLibreta";
-            this.txtLibreta.Size = new System.Drawing.Size(116, 21);
+            this.txtLibreta.Size = new System.Drawing.Size(87, 21);
             this.txtLibreta.TabIndex = 11;
             this.txtLibreta.Text = "0";
             this.txtLibreta.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -785,7 +785,7 @@
             // 
             this.Label27.AutoSize = true;
             this.Label27.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label27.Location = new System.Drawing.Point(220, 20);
+            this.Label27.Location = new System.Drawing.Point(178, 20);
             this.Label27.Name = "Label27";
             this.Label27.Size = new System.Drawing.Size(83, 13);
             this.Label27.TabIndex = 119;
@@ -865,7 +865,7 @@
             this.GroupBox3.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GroupBox3.Location = new System.Drawing.Point(1, 218);
             this.GroupBox3.Name = "GroupBox3";
-            this.GroupBox3.Size = new System.Drawing.Size(490, 131);
+            this.GroupBox3.Size = new System.Drawing.Size(451, 131);
             this.GroupBox3.TabIndex = 147;
             this.GroupBox3.TabStop = false;
             // 
@@ -879,7 +879,7 @@
             this.cbmProvincia.FormattingEnabled = true;
             this.cbmProvincia.Location = new System.Drawing.Point(10, 24);
             this.cbmProvincia.Name = "cbmProvincia";
-            this.cbmProvincia.Size = new System.Drawing.Size(150, 21);
+            this.cbmProvincia.Size = new System.Drawing.Size(125, 21);
             this.cbmProvincia.TabIndex = 15;
             this.cbmProvincia.SelectedValueChanged += new System.EventHandler(this.cbmProvincia_SelectedValueChanged);
             // 
@@ -899,7 +899,7 @@
             this.lblCiudad.AutoSize = true;
             this.lblCiudad.BackColor = System.Drawing.Color.Transparent;
             this.lblCiudad.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCiudad.Location = new System.Drawing.Point(175, 9);
+            this.lblCiudad.Location = new System.Drawing.Point(142, 9);
             this.lblCiudad.Name = "lblCiudad";
             this.lblCiudad.Size = new System.Drawing.Size(48, 13);
             this.lblCiudad.TabIndex = 107;
@@ -913,9 +913,9 @@
             this.cbmCanton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbmCanton.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbmCanton.FormattingEnabled = true;
-            this.cbmCanton.Location = new System.Drawing.Point(178, 24);
+            this.cbmCanton.Location = new System.Drawing.Point(145, 24);
             this.cbmCanton.Name = "cbmCanton";
-            this.cbmCanton.Size = new System.Drawing.Size(150, 21);
+            this.cbmCanton.Size = new System.Drawing.Size(131, 21);
             this.cbmCanton.TabIndex = 16;
             this.cbmCanton.SelectedValueChanged += new System.EventHandler(this.cbmCanton_SelectedValueChanged);
             // 
@@ -924,7 +924,7 @@
             this.Label7.AutoSize = true;
             this.Label7.BackColor = System.Drawing.Color.Transparent;
             this.Label7.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label7.Location = new System.Drawing.Point(341, 8);
+            this.Label7.Location = new System.Drawing.Point(287, 8);
             this.Label7.Name = "Label7";
             this.Label7.Size = new System.Drawing.Size(70, 13);
             this.Label7.TabIndex = 127;
@@ -936,7 +936,7 @@
             this.txtEmail.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
             this.txtEmail.Enabled = false;
             this.txtEmail.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.Location = new System.Drawing.Point(293, 100);
+            this.txtEmail.Location = new System.Drawing.Point(265, 100);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(177, 21);
             this.txtEmail.TabIndex = 21;
@@ -946,7 +946,7 @@
             this.Label5.AutoSize = true;
             this.Label5.BackColor = System.Drawing.Color.Transparent;
             this.Label5.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label5.Location = new System.Drawing.Point(251, 103);
+            this.Label5.Location = new System.Drawing.Point(223, 103);
             this.Label5.Name = "Label5";
             this.Label5.Size = new System.Drawing.Size(42, 13);
             this.Label5.TabIndex = 123;
@@ -960,7 +960,7 @@
             this.cbmParroquia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbmParroquia.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbmParroquia.FormattingEnabled = true;
-            this.cbmParroquia.Location = new System.Drawing.Point(339, 24);
+            this.cbmParroquia.Location = new System.Drawing.Point(285, 24);
             this.cbmParroquia.Name = "cbmParroquia";
             this.cbmParroquia.Size = new System.Drawing.Size(131, 21);
             this.cbmParroquia.TabIndex = 17;
@@ -972,7 +972,7 @@
             this.txtTelefono.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTelefono.Location = new System.Drawing.Point(38, 100);
             this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Size = new System.Drawing.Size(74, 21);
+            this.txtTelefono.Size = new System.Drawing.Size(63, 21);
             this.txtTelefono.TabIndex = 19;
             this.txtTelefono.Text = "0";
             this.txtTelefono.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -986,7 +986,7 @@
             this.txtDireccion.Location = new System.Drawing.Point(10, 62);
             this.txtDireccion.Multiline = true;
             this.txtDireccion.Name = "txtDireccion";
-            this.txtDireccion.Size = new System.Drawing.Size(460, 33);
+            this.txtDireccion.Size = new System.Drawing.Size(432, 33);
             this.txtDireccion.TabIndex = 18;
             // 
             // txtMovil
@@ -994,9 +994,9 @@
             this.txtMovil.BackColor = System.Drawing.Color.White;
             this.txtMovil.Enabled = false;
             this.txtMovil.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMovil.Location = new System.Drawing.Point(154, 101);
+            this.txtMovil.Location = new System.Drawing.Point(145, 101);
             this.txtMovil.Name = "txtMovil";
-            this.txtMovil.Size = new System.Drawing.Size(90, 21);
+            this.txtMovil.Size = new System.Drawing.Size(71, 21);
             this.txtMovil.TabIndex = 20;
             this.txtMovil.Text = "0";
             this.txtMovil.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -1017,7 +1017,7 @@
             this.Label3.AutoSize = true;
             this.Label3.BackColor = System.Drawing.Color.Transparent;
             this.Label3.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label3.Location = new System.Drawing.Point(118, 104);
+            this.Label3.Location = new System.Drawing.Point(109, 104);
             this.Label3.Name = "Label3";
             this.Label3.Size = new System.Drawing.Size(32, 13);
             this.Label3.TabIndex = 120;
@@ -1055,7 +1055,7 @@
             this.GroupBox6.Controls.Add(this.Label12);
             this.GroupBox6.Controls.Add(this.lblPruebaAntidroga);
             this.GroupBox6.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GroupBox6.Location = new System.Drawing.Point(493, -6);
+            this.GroupBox6.Location = new System.Drawing.Point(454, -6);
             this.GroupBox6.Name = "GroupBox6";
             this.GroupBox6.Size = new System.Drawing.Size(453, 120);
             this.GroupBox6.TabIndex = 150;
@@ -1321,7 +1321,7 @@
             this.GroupBox5.Controls.Add(this.label32);
             this.GroupBox5.Controls.Add(this.label19);
             this.GroupBox5.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GroupBox5.Location = new System.Drawing.Point(494, 109);
+            this.GroupBox5.Location = new System.Drawing.Point(455, 109);
             this.GroupBox5.Name = "GroupBox5";
             this.GroupBox5.Size = new System.Drawing.Size(452, 292);
             this.GroupBox5.TabIndex = 149;
@@ -1768,7 +1768,7 @@
             this.GroupBox4.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GroupBox4.Location = new System.Drawing.Point(2, 351);
             this.GroupBox4.Name = "GroupBox4";
-            this.GroupBox4.Size = new System.Drawing.Size(501, 48);
+            this.GroupBox4.Size = new System.Drawing.Size(450, 48);
             this.GroupBox4.TabIndex = 148;
             this.GroupBox4.TabStop = false;
             this.GroupBox4.Text = "PARA EFECTOS DE PAGO / ACREDITACIÓN";
@@ -1783,7 +1783,7 @@
             this.cbxBanco.FormattingEnabled = true;
             this.cbxBanco.Location = new System.Drawing.Point(40, 19);
             this.cbxBanco.Name = "cbxBanco";
-            this.cbxBanco.Size = new System.Drawing.Size(198, 21);
+            this.cbxBanco.Size = new System.Drawing.Size(175, 21);
             this.cbxBanco.TabIndex = 22;
             // 
             // Label47
@@ -1808,7 +1808,7 @@
             this.cbxTipoCuenta.Items.AddRange(new object[] {
             "AHO",
             "COR"});
-            this.cbxTipoCuenta.Location = new System.Drawing.Point(423, 18);
+            this.cbxTipoCuenta.Location = new System.Drawing.Point(398, 18);
             this.cbxTipoCuenta.Name = "cbxTipoCuenta";
             this.cbxTipoCuenta.Size = new System.Drawing.Size(50, 21);
             this.cbxTipoCuenta.TabIndex = 24;
@@ -1818,7 +1818,7 @@
             this.txtNumCuenta.BackColor = System.Drawing.Color.White;
             this.txtNumCuenta.Enabled = false;
             this.txtNumCuenta.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNumCuenta.Location = new System.Drawing.Point(297, 18);
+            this.txtNumCuenta.Location = new System.Drawing.Point(272, 18);
             this.txtNumCuenta.Name = "txtNumCuenta";
             this.txtNumCuenta.Size = new System.Drawing.Size(126, 21);
             this.txtNumCuenta.TabIndex = 23;
@@ -1830,7 +1830,7 @@
             this.Label46.AutoSize = true;
             this.Label46.BackColor = System.Drawing.Color.Transparent;
             this.Label46.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label46.Location = new System.Drawing.Point(243, 22);
+            this.Label46.Location = new System.Drawing.Point(218, 22);
             this.Label46.Name = "Label46";
             this.Label46.Size = new System.Drawing.Size(49, 13);
             this.Label46.TabIndex = 125;
@@ -1845,7 +1845,7 @@
             this.tpDatosFamiliares.Location = new System.Drawing.Point(4, 22);
             this.tpDatosFamiliares.Name = "tpDatosFamiliares";
             this.tpDatosFamiliares.Padding = new System.Windows.Forms.Padding(3);
-            this.tpDatosFamiliares.Size = new System.Drawing.Size(946, 401);
+            this.tpDatosFamiliares.Size = new System.Drawing.Size(916, 401);
             this.tpDatosFamiliares.TabIndex = 1;
             this.tpDatosFamiliares.Text = "DATOS FAMILIARES";
             // 
@@ -1863,7 +1863,7 @@
             this.GroupBox9.Controls.Add(this.txtAquienAdeuda);
             this.GroupBox9.Location = new System.Drawing.Point(3, 3);
             this.GroupBox9.Name = "GroupBox9";
-            this.GroupBox9.Size = new System.Drawing.Size(1001, 57);
+            this.GroupBox9.Size = new System.Drawing.Size(884, 57);
             this.GroupBox9.TabIndex = 157;
             this.GroupBox9.TabStop = false;
             // 
@@ -1905,7 +1905,7 @@
             // 
             this.Label24.AutoSize = true;
             this.Label24.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label24.Location = new System.Drawing.Point(174, 25);
+            this.Label24.Location = new System.Drawing.Point(149, 25);
             this.Label24.Name = "Label24";
             this.Label24.Size = new System.Drawing.Size(102, 13);
             this.Label24.TabIndex = 143;
@@ -1918,7 +1918,7 @@
             this.chDeudorGarante.Cursor = System.Windows.Forms.Cursors.Hand;
             this.chDeudorGarante.Enabled = false;
             this.chDeudorGarante.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.chDeudorGarante.Location = new System.Drawing.Point(282, 27);
+            this.chDeudorGarante.Location = new System.Drawing.Point(278, 27);
             this.chDeudorGarante.Name = "chDeudorGarante";
             this.chDeudorGarante.Size = new System.Drawing.Size(12, 11);
             this.chDeudorGarante.TabIndex = 144;
@@ -1929,7 +1929,7 @@
             // 
             this.Label25.AutoSize = true;
             this.Label25.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label25.Location = new System.Drawing.Point(328, 27);
+            this.Label25.Location = new System.Drawing.Point(298, 27);
             this.Label25.Name = "Label25";
             this.Label25.Size = new System.Drawing.Size(91, 13);
             this.Label25.TabIndex = 145;
@@ -1950,7 +1950,7 @@
             this.txtCantidadDeuda.BackColor = System.Drawing.Color.White;
             this.txtCantidadDeuda.Enabled = false;
             this.txtCantidadDeuda.ForeColor = System.Drawing.Color.Black;
-            this.txtCantidadDeuda.Location = new System.Drawing.Point(425, 23);
+            this.txtCantidadDeuda.Location = new System.Drawing.Point(400, 23);
             this.txtCantidadDeuda.Name = "txtCantidadDeuda";
             this.txtCantidadDeuda.Size = new System.Drawing.Size(94, 21);
             this.txtCantidadDeuda.TabIndex = 146;
@@ -1963,7 +1963,7 @@
             this.Label26.BackColor = System.Drawing.Color.White;
             this.Label26.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Label26.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label26.Location = new System.Drawing.Point(583, 25);
+            this.Label26.Location = new System.Drawing.Point(532, 25);
             this.Label26.Name = "Label26";
             this.Label26.Size = new System.Drawing.Size(92, 13);
             this.Label26.TabIndex = 147;
@@ -1975,7 +1975,7 @@
             this.txtAquienAdeuda.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtAquienAdeuda.Enabled = false;
             this.txtAquienAdeuda.ForeColor = System.Drawing.Color.Black;
-            this.txtAquienAdeuda.Location = new System.Drawing.Point(681, 22);
+            this.txtAquienAdeuda.Location = new System.Drawing.Point(630, 22);
             this.txtAquienAdeuda.Name = "txtAquienAdeuda";
             this.txtAquienAdeuda.Size = new System.Drawing.Size(245, 21);
             this.txtAquienAdeuda.TabIndex = 149;
@@ -2040,7 +2040,7 @@
             this.txtDatosHijos.Location = new System.Drawing.Point(118, 44);
             this.txtDatosHijos.Multiline = true;
             this.txtDatosHijos.Name = "txtDatosHijos";
-            this.txtDatosHijos.Size = new System.Drawing.Size(588, 106);
+            this.txtDatosHijos.Size = new System.Drawing.Size(494, 106);
             this.txtDatosHijos.TabIndex = 3;
             this.txtDatosHijos.Text = "PENDIENTE";
             // 
@@ -2050,7 +2050,7 @@
             this.Label18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.Label18.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label18.ForeColor = System.Drawing.Color.Black;
-            this.Label18.Location = new System.Drawing.Point(708, 47);
+            this.Label18.Location = new System.Drawing.Point(617, 47);
             this.Label18.Name = "Label18";
             this.Label18.Size = new System.Drawing.Size(253, 52);
             this.Label18.TabIndex = 134;
@@ -2090,7 +2090,7 @@
             this.Label21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.Label21.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label21.ForeColor = System.Drawing.Color.Black;
-            this.Label21.Location = new System.Drawing.Point(708, 18);
+            this.Label21.Location = new System.Drawing.Point(619, 18);
             this.Label21.Name = "Label21";
             this.Label21.Size = new System.Drawing.Size(210, 26);
             this.Label21.TabIndex = 138;
@@ -2104,7 +2104,7 @@
             this.txtDatosEsposa.Location = new System.Drawing.Point(117, 16);
             this.txtDatosEsposa.Multiline = true;
             this.txtDatosEsposa.Name = "txtDatosEsposa";
-            this.txtDatosEsposa.Size = new System.Drawing.Size(588, 38);
+            this.txtDatosEsposa.Size = new System.Drawing.Size(495, 38);
             this.txtDatosEsposa.TabIndex = 136;
             this.txtDatosEsposa.Text = "PENDIENTE";
             // 
@@ -2127,7 +2127,7 @@
             this.txtDatosFamiliar.Location = new System.Drawing.Point(117, 61);
             this.txtDatosFamiliar.Multiline = true;
             this.txtDatosFamiliar.Name = "txtDatosFamiliar";
-            this.txtDatosFamiliar.Size = new System.Drawing.Size(588, 37);
+            this.txtDatosFamiliar.Size = new System.Drawing.Size(495, 37);
             this.txtDatosFamiliar.TabIndex = 151;
             this.txtDatosFamiliar.Text = "PENDIENTE";
             // 
@@ -2137,7 +2137,7 @@
             this.Label29.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.Label29.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label29.ForeColor = System.Drawing.Color.Black;
-            this.Label29.Location = new System.Drawing.Point(708, 62);
+            this.Label29.Location = new System.Drawing.Point(619, 62);
             this.Label29.Name = "Label29";
             this.Label29.Size = new System.Drawing.Size(252, 78);
             this.Label29.TabIndex = 152;
@@ -2153,7 +2153,7 @@
             this.txtDatosEmergencia.Location = new System.Drawing.Point(117, 104);
             this.txtDatosEmergencia.Multiline = true;
             this.txtDatosEmergencia.Name = "txtDatosEmergencia";
-            this.txtDatosEmergencia.Size = new System.Drawing.Size(588, 47);
+            this.txtDatosEmergencia.Size = new System.Drawing.Size(495, 47);
             this.txtDatosEmergencia.TabIndex = 154;
             this.txtDatosEmergencia.Text = "PENDIENTE";
             // 
@@ -2176,7 +2176,7 @@
             this.tpReferenciasLaborales.Location = new System.Drawing.Point(4, 22);
             this.tpReferenciasLaborales.Name = "tpReferenciasLaborales";
             this.tpReferenciasLaborales.Padding = new System.Windows.Forms.Padding(3);
-            this.tpReferenciasLaborales.Size = new System.Drawing.Size(946, 401);
+            this.tpReferenciasLaborales.Size = new System.Drawing.Size(916, 401);
             this.tpReferenciasLaborales.TabIndex = 2;
             this.tpReferenciasLaborales.Text = "REFERENCIAS LABORALES";
             // 
@@ -2200,7 +2200,7 @@
             this.GroupBox11.Controls.Add(this.Label38);
             this.GroupBox11.Location = new System.Drawing.Point(3, -6);
             this.GroupBox11.Name = "GroupBox11";
-            this.GroupBox11.Size = new System.Drawing.Size(943, 130);
+            this.GroupBox11.Size = new System.Drawing.Size(799, 130);
             this.GroupBox11.TabIndex = 161;
             this.GroupBox11.TabStop = false;
             // 
@@ -2265,7 +2265,7 @@
             this.txtTelefonoUltimoPatrono.BackColor = System.Drawing.Color.White;
             this.txtTelefonoUltimoPatrono.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtTelefonoUltimoPatrono.Enabled = false;
-            this.txtTelefonoUltimoPatrono.Location = new System.Drawing.Point(660, 97);
+            this.txtTelefonoUltimoPatrono.Location = new System.Drawing.Point(532, 97);
             this.txtTelefonoUltimoPatrono.Name = "txtTelefonoUltimoPatrono";
             this.txtTelefonoUltimoPatrono.Size = new System.Drawing.Size(245, 21);
             this.txtTelefonoUltimoPatrono.TabIndex = 156;
@@ -2286,7 +2286,7 @@
             // 
             this.Label40.AutoSize = true;
             this.Label40.BackColor = System.Drawing.Color.White;
-            this.Label40.Location = new System.Drawing.Point(518, 100);
+            this.Label40.Location = new System.Drawing.Point(390, 100);
             this.Label40.Name = "Label40";
             this.Label40.Size = new System.Drawing.Size(137, 13);
             this.Label40.TabIndex = 155;
@@ -2307,7 +2307,7 @@
             this.txtNombresUltimoPatrono.BackColor = System.Drawing.Color.White;
             this.txtNombresUltimoPatrono.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtNombresUltimoPatrono.Enabled = false;
-            this.txtNombresUltimoPatrono.Location = new System.Drawing.Point(660, 70);
+            this.txtNombresUltimoPatrono.Location = new System.Drawing.Point(532, 70);
             this.txtNombresUltimoPatrono.Name = "txtNombresUltimoPatrono";
             this.txtNombresUltimoPatrono.Size = new System.Drawing.Size(245, 21);
             this.txtNombresUltimoPatrono.TabIndex = 154;
@@ -2328,7 +2328,7 @@
             // 
             this.Label39.AutoSize = true;
             this.Label39.BackColor = System.Drawing.Color.White;
-            this.Label39.Location = new System.Drawing.Point(518, 73);
+            this.Label39.Location = new System.Drawing.Point(390, 73);
             this.Label39.Name = "Label39";
             this.Label39.Size = new System.Drawing.Size(136, 13);
             this.Label39.TabIndex = 153;
@@ -2338,7 +2338,7 @@
             // 
             this.Label37.AutoSize = true;
             this.Label37.BackColor = System.Drawing.Color.White;
-            this.Label37.Location = new System.Drawing.Point(518, 17);
+            this.Label37.Location = new System.Drawing.Point(390, 17);
             this.Label37.Name = "Label37";
             this.Label37.Size = new System.Drawing.Size(83, 13);
             this.Label37.TabIndex = 149;
@@ -2347,7 +2347,7 @@
             // dtpFechaSalidaReferencia
             // 
             this.dtpFechaSalidaReferencia.Enabled = false;
-            this.dtpFechaSalidaReferencia.Location = new System.Drawing.Point(660, 43);
+            this.dtpFechaSalidaReferencia.Location = new System.Drawing.Point(532, 43);
             this.dtpFechaSalidaReferencia.Name = "dtpFechaSalidaReferencia";
             this.dtpFechaSalidaReferencia.Size = new System.Drawing.Size(200, 21);
             this.dtpFechaSalidaReferencia.TabIndex = 152;
@@ -2356,7 +2356,7 @@
             // dtpFechaEntradaReferencia
             // 
             this.dtpFechaEntradaReferencia.Enabled = false;
-            this.dtpFechaEntradaReferencia.Location = new System.Drawing.Point(660, 17);
+            this.dtpFechaEntradaReferencia.Location = new System.Drawing.Point(532, 17);
             this.dtpFechaEntradaReferencia.Name = "dtpFechaEntradaReferencia";
             this.dtpFechaEntradaReferencia.Size = new System.Drawing.Size(200, 21);
             this.dtpFechaEntradaReferencia.TabIndex = 150;
@@ -2366,7 +2366,7 @@
             // 
             this.Label38.AutoSize = true;
             this.Label38.BackColor = System.Drawing.Color.White;
-            this.Label38.Location = new System.Drawing.Point(518, 46);
+            this.Label38.Location = new System.Drawing.Point(390, 46);
             this.Label38.Name = "Label38";
             this.Label38.Size = new System.Drawing.Size(73, 13);
             this.Label38.TabIndex = 151;
@@ -2379,7 +2379,7 @@
             this.GroupBox12.Controls.Add(this.txtRecomendaciones);
             this.GroupBox12.Location = new System.Drawing.Point(3, 121);
             this.GroupBox12.Name = "GroupBox12";
-            this.GroupBox12.Size = new System.Drawing.Size(943, 250);
+            this.GroupBox12.Size = new System.Drawing.Size(810, 250);
             this.GroupBox12.TabIndex = 162;
             this.GroupBox12.TabStop = false;
             // 
@@ -2413,7 +2413,7 @@
             this.txtRecomendaciones.Location = new System.Drawing.Point(4, 33);
             this.txtRecomendaciones.Multiline = true;
             this.txtRecomendaciones.Name = "txtRecomendaciones";
-            this.txtRecomendaciones.Size = new System.Drawing.Size(931, 211);
+            this.txtRecomendaciones.Size = new System.Drawing.Size(795, 211);
             this.txtRecomendaciones.TabIndex = 158;
             this.txtRecomendaciones.Text = "NO TIENE";
             // 
@@ -2425,7 +2425,7 @@
             this.tpFoto.Location = new System.Drawing.Point(4, 22);
             this.tpFoto.Name = "tpFoto";
             this.tpFoto.Padding = new System.Windows.Forms.Padding(3);
-            this.tpFoto.Size = new System.Drawing.Size(946, 401);
+            this.tpFoto.Size = new System.Drawing.Size(916, 401);
             this.tpFoto.TabIndex = 3;
             this.tpFoto.Text = "FOTOS";
             // 
@@ -2433,9 +2433,9 @@
             // 
             this.GroupBox14.Controls.Add(this.pbPerfil);
             this.GroupBox14.Controls.Add(this.Label45);
-            this.GroupBox14.Location = new System.Drawing.Point(500, 6);
+            this.GroupBox14.Location = new System.Drawing.Point(481, 6);
             this.GroupBox14.Name = "GroupBox14";
-            this.GroupBox14.Size = new System.Drawing.Size(438, 365);
+            this.GroupBox14.Size = new System.Drawing.Size(432, 365);
             this.GroupBox14.TabIndex = 149;
             this.GroupBox14.TabStop = false;
             this.GroupBox14.Text = "PERFIL";
@@ -2446,7 +2446,7 @@
             this.pbPerfil.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pbPerfil.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbPerfil.Image = ((System.Drawing.Image)(resources.GetObject("pbPerfil.Image")));
-            this.pbPerfil.Location = new System.Drawing.Point(208, 126);
+            this.pbPerfil.Location = new System.Drawing.Point(149, 126);
             this.pbPerfil.Name = "pbPerfil";
             this.pbPerfil.Size = new System.Drawing.Size(115, 160);
             this.pbPerfil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -2458,7 +2458,7 @@
             // 
             this.Label45.AutoSize = true;
             this.Label45.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label45.Location = new System.Drawing.Point(244, 47);
+            this.Label45.Location = new System.Drawing.Point(178, 47);
             this.Label45.Name = "Label45";
             this.Label45.Size = new System.Drawing.Size(62, 23);
             this.Label45.TabIndex = 147;
@@ -2470,7 +2470,7 @@
             this.GroupBox13.Controls.Add(this.Label44);
             this.GroupBox13.Location = new System.Drawing.Point(8, 6);
             this.GroupBox13.Name = "GroupBox13";
-            this.GroupBox13.Size = new System.Drawing.Size(486, 365);
+            this.GroupBox13.Size = new System.Drawing.Size(467, 365);
             this.GroupBox13.TabIndex = 148;
             this.GroupBox13.TabStop = false;
             this.GroupBox13.Text = "FRONTAL";
@@ -2506,7 +2506,7 @@
             this.TabPage1.Controls.Add(this.DataGridView1);
             this.TabPage1.Location = new System.Drawing.Point(4, 22);
             this.TabPage1.Name = "TabPage1";
-            this.TabPage1.Size = new System.Drawing.Size(946, 401);
+            this.TabPage1.Size = new System.Drawing.Size(916, 401);
             this.TabPage1.TabIndex = 4;
             this.TabPage1.Text = "HISTORIAL LABORAL";
             this.TabPage1.UseVisualStyleBackColor = true;
@@ -2519,7 +2519,7 @@
             this.button2.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.Image = global::SysCisepro3.Properties.Resources.icons8_excel_48;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(871, 3);
+            this.button2.Location = new System.Drawing.Point(769, 3);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(27, 27);
             this.button2.TabIndex = 196;
@@ -2578,7 +2578,7 @@
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.DataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DataGridView1.Size = new System.Drawing.Size(936, 336);
+            this.DataGridView1.Size = new System.Drawing.Size(900, 336);
             this.DataGridView1.TabIndex = 43;
             // 
             // GroupBox7
@@ -2589,7 +2589,7 @@
             this.GroupBox7.Controls.Add(this.dgvPersonal);
             this.GroupBox7.Location = new System.Drawing.Point(1, 461);
             this.GroupBox7.Name = "GroupBox7";
-            this.GroupBox7.Size = new System.Drawing.Size(949, 228);
+            this.GroupBox7.Size = new System.Drawing.Size(920, 197);
             this.GroupBox7.TabIndex = 217;
             this.GroupBox7.TabStop = false;
             // 
@@ -2600,7 +2600,7 @@
             this.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Button1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Button1.Image = global::SysCisepro3.Properties.Resources.icons8_excel_48;
-            this.Button1.Location = new System.Drawing.Point(777, 7);
+            this.Button1.Location = new System.Drawing.Point(779, 7);
             this.Button1.Name = "Button1";
             this.Button1.Size = new System.Drawing.Size(27, 27);
             this.Button1.TabIndex = 195;
@@ -2615,7 +2615,7 @@
             this.txtFiltro.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFiltro.Location = new System.Drawing.Point(60, 12);
             this.txtFiltro.Name = "txtFiltro";
-            this.txtFiltro.Size = new System.Drawing.Size(713, 20);
+            this.txtFiltro.Size = new System.Drawing.Size(704, 20);
             this.txtFiltro.TabIndex = 122;
             this.txtFiltro.TextChanged += new System.EventHandler(this.txtFiltro_TextChanged);
             this.txtFiltro.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtFiltro_KeyUp);
@@ -2670,7 +2670,7 @@
             dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvPersonal.RowsDefaultCellStyle = dataGridViewCellStyle10;
             this.dgvPersonal.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvPersonal.Size = new System.Drawing.Size(946, 193);
+            this.dgvPersonal.Size = new System.Drawing.Size(903, 158);
             this.dgvPersonal.TabIndex = 42;
             this.dgvPersonal.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPersonal_CellClick);
             this.dgvPersonal.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPersonal_CellDoubleClick);
@@ -2681,7 +2681,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(955, 693);
+            this.ClientSize = new System.Drawing.Size(927, 663);
             this.Controls.Add(this.GroupBox7);
             this.Controls.Add(this.tcPersonal);
             this.Controls.Add(this.toolStrip1);
