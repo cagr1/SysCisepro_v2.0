@@ -136,7 +136,7 @@ Namespace DIVISION_GEOGRÁFICA
         Public Function SeleccionarSitiosClientexIdPersonal3(ByVal tipoCon As TipoConexion, ByVal idper As String) As DataTable
             Dim pars = New List(Of Object())
             pars.Add(New Object() {"IDP", SqlDbType.Int, idper})
-            Return ComandosSql.SeleccionarQueryWithParamsToDataTable(tipoCon, "select nombre_sitio_trabajo + '|' + cl.nompre_razon_social_cliente_general from personal pe join sitios_trabajo st on pe.ubicacion = st.id_sitio_trabajo join cliente_general cl on st.id_cliente_general = cl.id_cliente_general where pe.id_personal = @idp", False, pars)
+            Return ComandosSql.SeleccionarQueryWithParamsToDataTable(tipoCon, "select nombre_sitio_trabajo, cl.nompre_razon_social_cliente_general, st.ID_SITIO_TRABAJO from personal pe join sitios_trabajo st on pe.ubicacion = st.id_sitio_trabajo join cliente_general cl on st.id_cliente_general = cl.id_cliente_general where pe.id_personal = @idp", False, pars)
         End Function
         Public Function SeleccionarSitiosFullClientexIdPersonal2(ByVal tipoCon As TipoConexion, ByVal idper As String) As DataTable
             Dim pars = New List(Of Object())

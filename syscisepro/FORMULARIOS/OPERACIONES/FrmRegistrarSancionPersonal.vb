@@ -11,6 +11,7 @@ Imports syscisepro.DATOS
 Imports Krypton.Toolkit
 
 
+
 Namespace FORMULARIOS.OPERACIONES
     ''' <summary>
     ''' CISEPRO - SEPORTPAC - ASENAVA 2019
@@ -62,35 +63,18 @@ Namespace FORMULARIOS.OPERACIONES
                     Icon = My.Resources.logo_a
                     MenuStrip1.ForeColor = Color.White
                     'MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorAsenava
-                    Label24.ForeColor = Color.White
-                    Label24.BackColor = My.MySettingsProperty.Settings.ColorAsenava
-                    Label1.ForeColor = Color.White
-                    Label1.BackColor = My.MySettingsProperty.Settings.ColorAsenava
-                    Label2.ForeColor = Color.White
-                    Label2.BackColor = My.MySettingsProperty.Settings.ColorAsenava
+
                     dgvSanciones.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorAsenava
 
                 Case TipoConexion.Seportpac
                     Icon = My.Resources.logo_s
                     'MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
                     MenuStrip1.ForeColor = Color.White
-                    Label24.ForeColor = Color.White
-                    Label24.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
-                    Label1.ForeColor = Color.White
-                    Label1.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
-                    Label2.ForeColor = Color.White
-                    Label2.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
                     dgvSanciones.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorSeportpac
                 Case Else
                     Icon = My.Resources.logo_c
                     'MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorCisepro
                     MenuStrip1.ForeColor = Color.White
-                    Label24.ForeColor = Color.White
-                    Label24.BackColor = My.MySettingsProperty.Settings.ColorCisepro
-                    Label1.ForeColor = Color.White
-                    Label1.BackColor = My.MySettingsProperty.Settings.ColorCisepro
-                    Label2.ForeColor = Color.White
-                    Label2.BackColor = My.MySettingsProperty.Settings.ColorCisepro
                     dgvSanciones.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
             End Select
             dgvSanciones.Font = New Font("Roboto", 8, FontStyle.Regular)
@@ -187,8 +171,8 @@ Namespace FORMULARIOS.OPERACIONES
         End Sub
 
         Private Function NumToCharExcel(ByVal i As Integer) As String
-            Dim data() = {"A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "AA", "AB", "AC", "AD", "AE", "AF", "AG", "AH", "AI", "AJ", _
-                          "AK", "AL", "AM", "AN", "AO", "AP", "AQ", "AR", "AS", "AT", "AU", "AV", "AW", "AX", "AY", "AZ", "BA", "BB", "BC", "BD", "BE", "BF", "BG", "BH", "BI", "BJ", "BK", "BL", "BM", "BN", "BO", "BP", _
+            Dim data() = {"A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "AA", "AB", "AC", "AD", "AE", "AF", "AG", "AH", "AI", "AJ",
+                          "AK", "AL", "AM", "AN", "AO", "AP", "AQ", "AR", "AS", "AT", "AU", "AV", "AW", "AX", "AY", "AZ", "BA", "BB", "BC", "BD", "BE", "BF", "BG", "BH", "BI", "BJ", "BK", "BL", "BM", "BN", "BO", "BP",
                           "BQ", "BR", "BS", "BT", "BU", "BV", "BW", "BX", "BY", "BZ"}
             Return data(i)
         End Function
@@ -439,10 +423,16 @@ Namespace FORMULARIOS.OPERACIONES
             ListView1.Groups.Clear()
 
 
+
+
+
+
             ' grupos
             For Each group In From row As DataRow In grupos.Rows Select New ListViewGroup(row.Item(0).ToString.Trim)
                 ListView1.Groups.Add(group)
             Next
+
+
 
 
             dgvSanciones.DataSource = Nothing
@@ -493,7 +483,7 @@ Namespace FORMULARIOS.OPERACIONES
 
             ' lleno dgvSanciones 1
 
-            
+
 
             'For Each row As DataRow In datos.Rows
 
@@ -630,7 +620,7 @@ Namespace FORMULARIOS.OPERACIONES
             Next
         End Sub
 
-        
+
         Private Function GetDataGridViewGroup(ByVal dgv As DataGridView, ByVal nm As String) As Integer
             Dim groupIndex As Integer = -1
 
@@ -883,4 +873,6 @@ Namespace FORMULARIOS.OPERACIONES
             End Try
         End Sub
     End Class
+
+
 End Namespace

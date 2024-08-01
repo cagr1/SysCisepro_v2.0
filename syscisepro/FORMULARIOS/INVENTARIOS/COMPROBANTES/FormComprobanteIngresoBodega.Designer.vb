@@ -196,7 +196,7 @@
             Me.tbComprobanteIngresoBodega.Location = New System.Drawing.Point(1, 33)
             Me.tbComprobanteIngresoBodega.Name = "tbComprobanteIngresoBodega"
             Me.tbComprobanteIngresoBodega.SelectedIndex = 0
-            Me.tbComprobanteIngresoBodega.Size = New System.Drawing.Size(1065, 582)
+            Me.tbComprobanteIngresoBodega.Size = New System.Drawing.Size(1084, 582)
             Me.tbComprobanteIngresoBodega.SizeMode = System.Windows.Forms.TabSizeMode.Fixed
             Me.tbComprobanteIngresoBodega.TabIndex = 0
             '
@@ -247,7 +247,7 @@
             Me.tpRegistro.Location = New System.Drawing.Point(4, 22)
             Me.tpRegistro.Name = "tpRegistro"
             Me.tpRegistro.Padding = New System.Windows.Forms.Padding(3)
-            Me.tpRegistro.Size = New System.Drawing.Size(1057, 556)
+            Me.tpRegistro.Size = New System.Drawing.Size(1076, 556)
             Me.tpRegistro.TabIndex = 0
             Me.tpRegistro.Text = "REGISTRO"
             '
@@ -722,7 +722,7 @@
             Me.pbFoto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
             Me.pbFoto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
             Me.pbFoto.Cursor = System.Windows.Forms.Cursors.Hand
-            Me.pbFoto.Location = New System.Drawing.Point(907, 28)
+            Me.pbFoto.Location = New System.Drawing.Point(874, 28)
             Me.pbFoto.Name = "pbFoto"
             Me.pbFoto.Size = New System.Drawing.Size(100, 40)
             Me.pbFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -734,7 +734,7 @@
             Me.Label17.AutoSize = True
             Me.Label17.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Label17.ForeColor = System.Drawing.Color.Black
-            Me.Label17.Location = New System.Drawing.Point(908, 12)
+            Me.Label17.Location = New System.Drawing.Point(875, 12)
             Me.Label17.Name = "Label17"
             Me.Label17.Size = New System.Drawing.Size(40, 15)
             Me.Label17.TabIndex = 200
@@ -821,7 +821,7 @@
             Me.dgvSecuencial.Name = "dgvSecuencial"
             Me.dgvSecuencial.RowHeadersVisible = False
             Me.dgvSecuencial.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvSecuencial.Size = New System.Drawing.Size(1029, 256)
+            Me.dgvSecuencial.Size = New System.Drawing.Size(1056, 256)
             Me.dgvSecuencial.TabIndex = 175
             '
             'CODIGO
@@ -953,7 +953,7 @@
             Me.tsmEliminar.BackColor = System.Drawing.Color.White
             Me.tsmEliminar.Enabled = False
             Me.tsmEliminar.Image = Global.syscisepro.My.Resources.Resources.do_not_disturb_on_24dp_FILL0_wght400_GRAD0_opsz24
-            Me.tsmEliminar.Location = New System.Drawing.Point(1048, 32)
+            Me.tsmEliminar.Location = New System.Drawing.Point(1015, 32)
             Me.tsmEliminar.Name = "tsmEliminar"
             Me.tsmEliminar.Size = New System.Drawing.Size(28, 28)
             Me.tsmEliminar.TabIndex = 126
@@ -965,7 +965,7 @@
             Me.tsmAgregar.BackColor = System.Drawing.Color.White
             Me.tsmAgregar.Enabled = False
             Me.tsmAgregar.Image = Global.syscisepro.My.Resources.Resources.add_circle_24dp_FILL0_wght400_GRAD0_opsz24__3_
-            Me.tsmAgregar.Location = New System.Drawing.Point(1014, 32)
+            Me.tsmAgregar.Location = New System.Drawing.Point(981, 32)
             Me.tsmAgregar.Name = "tsmAgregar"
             Me.tsmAgregar.Size = New System.Drawing.Size(28, 28)
             Me.tsmAgregar.TabIndex = 125
@@ -982,7 +982,7 @@
             Me.txtObservacion.MaxLength = 255
             Me.txtObservacion.Multiline = True
             Me.txtObservacion.Name = "txtObservacion"
-            Me.txtObservacion.Size = New System.Drawing.Size(180, 38)
+            Me.txtObservacion.Size = New System.Drawing.Size(150, 38)
             Me.txtObservacion.TabIndex = 124
             Me.txtObservacion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
             '
@@ -1587,7 +1587,7 @@
             Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
             Me.MenuStrip1.Name = "MenuStrip1"
             Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(8, 2, 0, 2)
-            Me.MenuStrip1.Size = New System.Drawing.Size(1068, 32)
+            Me.MenuStrip1.Size = New System.Drawing.Size(1097, 32)
             Me.MenuStrip1.TabIndex = 189
             Me.MenuStrip1.Text = "ELIMINAR"
             '
@@ -1706,7 +1706,7 @@
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.BackColor = System.Drawing.Color.White
-            Me.ClientSize = New System.Drawing.Size(1068, 613)
+            Me.ClientSize = New System.Drawing.Size(1097, 613)
             Me.Controls.Add(Me.lblCantidadInicial)
             Me.Controls.Add(Me.lblIdSecuencial)
             Me.Controls.Add(Me.lblIdKardex2)

@@ -806,7 +806,7 @@
             Me.pbFoto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
             Me.pbFoto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
             Me.pbFoto.Cursor = System.Windows.Forms.Cursors.Hand
-            Me.pbFoto.Location = New System.Drawing.Point(860, 34)
+            Me.pbFoto.Location = New System.Drawing.Point(842, 34)
             Me.pbFoto.Name = "pbFoto"
             Me.pbFoto.Size = New System.Drawing.Size(100, 40)
             Me.pbFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -818,7 +818,7 @@
             Me.Label27.AutoSize = True
             Me.Label27.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Label27.ForeColor = System.Drawing.Color.Black
-            Me.Label27.Location = New System.Drawing.Point(861, 18)
+            Me.Label27.Location = New System.Drawing.Point(843, 18)
             Me.Label27.Name = "Label27"
             Me.Label27.Size = New System.Drawing.Size(40, 15)
             Me.Label27.TabIndex = 216
@@ -919,7 +919,7 @@
             Me.tsmEliminar.FlatAppearance.BorderSize = 0
             Me.tsmEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.tsmEliminar.Image = Global.syscisepro.My.Resources.Resources.do_not_disturb_on_24dp_FILL0_wght400_GRAD0_opsz24
-            Me.tsmEliminar.Location = New System.Drawing.Point(996, 35)
+            Me.tsmEliminar.Location = New System.Drawing.Point(984, 35)
             Me.tsmEliminar.Name = "tsmEliminar"
             Me.tsmEliminar.Size = New System.Drawing.Size(28, 28)
             Me.tsmEliminar.TabIndex = 128
@@ -933,7 +933,7 @@
             Me.tsmAgregar.FlatAppearance.BorderSize = 0
             Me.tsmAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.tsmAgregar.Image = Global.syscisepro.My.Resources.Resources.add_circle_24dp_FILL0_wght400_GRAD0_opsz24__3_
-            Me.tsmAgregar.Location = New System.Drawing.Point(963, 35)
+            Me.tsmAgregar.Location = New System.Drawing.Point(945, 35)
             Me.tsmAgregar.Name = "tsmAgregar"
             Me.tsmAgregar.Size = New System.Drawing.Size(28, 28)
             Me.tsmAgregar.TabIndex = 127
@@ -950,7 +950,7 @@
             Me.txtObservacion.MaxLength = 255
             Me.txtObservacion.Multiline = True
             Me.txtObservacion.Name = "txtObservacion"
-            Me.txtObservacion.Size = New System.Drawing.Size(152, 39)
+            Me.txtObservacion.Size = New System.Drawing.Size(131, 39)
             Me.txtObservacion.TabIndex = 126
             Me.txtObservacion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
             '
@@ -2100,7 +2100,7 @@
             Me.TabPage2.Location = New System.Drawing.Point(4, 22)
             Me.TabPage2.Name = "TabPage2"
             Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-            Me.TabPage2.Size = New System.Drawing.Size(1250, 531)
+            Me.TabPage2.Size = New System.Drawing.Size(1031, 574)
             Me.TabPage2.TabIndex = 1
             Me.TabPage2.Text = "Imagen Adjunta"
             Me.TabPage2.UseVisualStyleBackColor = True
@@ -2110,7 +2110,7 @@
             Me.PictureBox1.Dock = System.Windows.Forms.DockStyle.Fill
             Me.PictureBox1.Location = New System.Drawing.Point(3, 3)
             Me.PictureBox1.Name = "PictureBox1"
-            Me.PictureBox1.Size = New System.Drawing.Size(1244, 525)
+            Me.PictureBox1.Size = New System.Drawing.Size(1025, 568)
             Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
             Me.PictureBox1.TabIndex = 0
             Me.PictureBox1.TabStop = False

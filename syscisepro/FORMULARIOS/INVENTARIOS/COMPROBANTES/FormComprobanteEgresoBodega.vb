@@ -405,7 +405,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
 
                     txtCodigoArticulo.Text = _objSecuencialItem.BuscarCodigoSecuencialItemxNombreSecuencial(_tipoCon, txtArticulo.Text.Trim.ToUpper)
                     ' nudCantidad.Value = 1
-                    nudValor.Value = _objSecuencialItem.BuscarPvpSecuencialItemXIdSecuencialItem(_tipoCon, lblIdArticulo.Text)
+                    nudValor.Value = _objSecuencialItem.BuscarCostoSecuencialItemXIdSecuencialItem(_tipoCon, lblIdArticulo.Text)
                     cmbObservacionCalidad.SelectedIndex = 0
                     tsmAgregar.Enabled = True
                 Else
@@ -1579,9 +1579,9 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                 If sitio.Rows.Count = 0 Then
 
                     sitio = _objSitioTrabajo.SeleccionarSitiosClientexIdPersonal3(_tipoCon, idPer)
-                    Dim par() As String = sitio.Rows(0).Item(0).ToString().Split("|"c)
-                    txtUbicacion.Text = "CLIENTE: " & par(0) & vbCrLf & "PUESTO:" & par(1)
-                    txtUbicacion.Tag = 1
+
+                    txtUbicacion.Text = "CLIENTE: " & sitio.Rows(0).Item(0).ToString() & vbCrLf & "PUESTO: " & sitio.Rows(0).Item(1).ToString()
+                    txtUbicacion.Tag = sitio.Rows(0).Item(2).ToString()
 
                 Else
                     Dim parts() As String = sitio.Rows(0).Item(0).ToString().Split("|"c)

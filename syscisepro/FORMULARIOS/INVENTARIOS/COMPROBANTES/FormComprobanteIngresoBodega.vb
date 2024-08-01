@@ -408,21 +408,21 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
 
                 Dim fila As String() =
                     {
-                        txtCodigoArticulo.Text,
-                        txtArticulo.Text,
-                        cant,
-                        val,
-                        cant * val,
-                        cmbObservacionCalidad.Text,
-                        txtObservacion.Text & " - SERIE: " & If(txtSerie.Text.Trim().Length = 0, "-", txtSerie.Text.Trim()),
-                        _detalleKardex.Rows(0)(0).ToString(),
-                        _detalleKardex.Rows(0)(9).ToString(),
-                        If(_detalleKardex.Rows(0)(12).ToString().Equals("INGRESO"), CDbl(_detalleKardex.Rows(0)(14).ToString()), CDbl(_detalleKardex.Rows(0)(17).ToString())),
-                        If(_detalleKardex.Rows(0)(12).ToString().Equals("INGRESO"), CDbl(_detalleKardex.Rows(0)(15).ToString()), CDbl(_detalleKardex.Rows(0)(18).ToString())),
-                        CDbl(_detalleKardex.Rows(0)(19).ToString()) - cant,
-                        val,
-                        (CDbl(_detalleKardex.Rows(0)(19).ToString()) - cant) * val,
-                        _detalleKardex.Rows(0)(1).ToString()
+                        txtCodigoArticulo.Text, 'CODIGO / 0
+                        txtArticulo.Text, 'NOMBRE / 1
+                        cant,' CANTIDAD / 2
+                        val,'VALOR / 3
+                        cant * val,'TOTAL / 4
+                        cmbObservacionCalidad.Text,'OBSERVACION / 5
+                        txtObservacion.Text & " - SERIE: " & If(txtSerie.Text.Trim().Length = 0, "-", txtSerie.Text.Trim()),'DETALLES / 6
+                        _detalleKardex.Rows(0)(0).ToString(),'ID_KARDEX / NUMERO_KARDEX / 7
+                        _detalleKardex.Rows(0)(9).ToString(),'ID_DETALLE_KARDEX / DETALLE_KARDEX / 8
+                        If(_detalleKardex.Rows(0)(12).ToString().Equals("INGRESO"), CDbl(_detalleKardex.Rows(0)(14).ToString()), CDbl(_detalleKardex.Rows(0)(17).ToString())), 'VALOR_UNITARIO_ANTERIOR / 9
+                        If(_detalleKardex.Rows(0)(12).ToString().Equals("INGRESO"), CDbl(_detalleKardex.Rows(0)(15).ToString()), CDbl(_detalleKardex.Rows(0)(18).ToString())), 'VALOR_TOTAL_ANTERIOR / 10
+                        CDbl(_detalleKardex.Rows(0)(19).ToString()) + cant, 'SALDO / 11
+                        val, 'CANTIDAD_SALDO / 12
+                        (CDbl(_detalleKardex.Rows(0)(19).ToString()) + cant) * val,'VALOR_UNITARIO_SALDO / 13
+                        _detalleKardex.Rows(0)(1).ToString()'ID_SECUENCIAL / 14
                     }
                 dgvSecuencial.Rows.Add(fila)
                 dgvSecuencial.Rows(dgvSecuencial.RowCount - 1).Tag = If(txtSerie.Text.Trim().Length = 0, "-", txtSerie.Text.Trim())
@@ -590,6 +590,8 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                 If KryptonMessageBox.Show("¿ESTA SEGURO QUE DESEA GUARDAR EL COMPROBANTE" & msj & "?", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) <> DialogResult.Yes Then Return
 
                 Dim cantidadPrendasLleva = 0
+                Dim dt As DataTable = ConvertDataTable(dgvSecuencial)
+
                 With _objCompIng
                     .Id = _objSerie.Serie(_objCompIng.BuscarMayorIdComprobanteIngresoBodega(_tipoCon) + 1)
                     .Fecha = dtpFecha.Value
@@ -1430,7 +1432,10 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
 
 
                 If sitio.Rows.Count = 0 Then
-                    txtUbicacion.Clear()
+                    sitio = _objSitioTrabajo.SeleccionarSitiosClientexIdPersonal3(_tipoCon, idPer)
+
+                    txtUbicacion.Text = "CLIENTE: " & sitio.Rows(0).Item(0).ToString() & vbCrLf & "PUESTO: " & sitio.Rows(0).Item(1).ToString()
+                    txtUbicacion.Tag = sitio.Rows(0).Item(2).ToString()
 
                 Else
                     Dim parts() As String = sitio.Rows(0).Item(0).ToString().Split("|"c)
@@ -1466,5 +1471,22 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
             End If
 
         End Sub
+
+        Private Function ConvertDataTable(ByVal dgv As DataGridView) As DataTable
+            Dim dt As New DataTable()
+            For Each column As DataGridViewColumn In dgv.Columns
+                dt.Columns.Add(column.Name)
+            Next
+
+            For Each row As DataGridViewRow In dgv.Rows
+                Dim newRow As DataRow = dt.NewRow()
+                For Each col As DataGridViewColumn In dgv.Columns
+                    newRow(col.Name) = row.Cells(col.Name).Value
+                Next
+                dt.Rows.Add(newRow)
+
+            Next
+            Return dt
+        End Function
     End Class
 End Namespace
