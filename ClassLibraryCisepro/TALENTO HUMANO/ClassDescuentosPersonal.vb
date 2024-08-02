@@ -94,6 +94,17 @@ Namespace TALENTO_HUMANO
             Return comando
         End Function
 
+
+        Public Function SeleccionarRegistroMultasAgrupados(tipoCon As TipoConexion, filtro As String, desde As DateTime, hasta As DateTime) As DataTable
+            Dim pars As New List(Of Object()) From {
+        New Object() {"FILTRO", SqlDbType.VarChar, filtro},
+        New Object() {"DESDE", SqlDbType.DateTime, desde},
+        New Object() {"HASTA", SqlDbType.DateTime, hasta}
+             }
+            Return ComandosSql.SeleccionarQueryWithParamsToDataTable(tipoCon, "sp_SeleccionarRegistroDescuentoAgrupados", True, pars)
+        End Function
+
+
     End Class
 End Namespace
 

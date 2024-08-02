@@ -53,7 +53,7 @@ namespace ClassLibraryCisepro3.TalentoHumano
         public DataTable SeleccionarDescuentosDatos1(TipoConexion tipoCon, string filtro, string desde, string hasta)
         {
             var sql = "select r.id_personal, e.cedula, e.apellidos+' '+e.nombres personal, " +
-                "COALESCE((select sum(d.valor) from DESCUENTOS_ROL d where d.id_personal = r.id_personal and  d.estado = 1 and d.tipo=0 and d.fecha between @DESDE and @HASTA),0) quirografario, " +
+                "COALESCE(gou(select sum(d.valor) from DESCUENTOS_ROL d where d.id_personal = r.id_personal and  d.estado = 1 and d.tipo=0 and d.fecha between @DESDE and @HASTA),0) quirografario, " +
                 "COALESCE((select sum(d.valor) from DESCUENTOS_ROL d where d.id_personal = r.id_personal and  d.estado = 1 and d.tipo=1 and d.fecha between @DESDE and @HASTA),0) hipotecario, " +
                 "COALESCE((select sum(d.valor) from DESCUENTOS_ROL d where d.id_personal = r.id_personal and  d.estado = 1 and d.tipo=2 and d.fecha between @DESDE and @HASTA),0) ext_salud, " +
                 "COALESCE((select sum(d.valor) from DESCUENTOS_ROL d where d.id_personal = r.id_personal and  d.estado = 1 and d.tipo=3 and d.fecha between @DESDE and @HASTA),0) anticipo, " +
@@ -81,6 +81,22 @@ namespace ClassLibraryCisepro3.TalentoHumano
             };
             return ComandosSql.SeleccionarQueryWithParamsToDataTable(tipoCon, sql, false, pars);
         }
+
+        public DataTable SeleccionarRegistroMultasAgrupados(TipoConexion tipoCon, String filtro, DateTime desde, DateTime hasta)
+        { 
+            var pars = new List<Object[]>
+            {
+                new Object[] { "FILTRO", SqlDbType.VarChar, filtro },
+                new Object[] { "DESDE", SqlDbType.DateTime, desde },
+                new Object[] { "HASTA", SqlDbType.DateTime, hasta }
+            };
+            return ComandosSql.SeleccionarQueryWithParamsToDataTable(tipoCon, "sp_SeleccionarRegistroDescuentoAgrupados", true, pars);
+        }  
+        
+
+
+
+
 
         public DataTable SeleccionarDescuentosDatos(TipoConexion tipoCon, string filtro, string desde, string hasta, string idp, string tipo)
         {

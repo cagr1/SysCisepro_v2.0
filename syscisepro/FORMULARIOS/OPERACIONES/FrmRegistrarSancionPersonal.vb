@@ -417,14 +417,10 @@ Namespace FORMULARIOS.OPERACIONES
 
             Dim grupos = _objRegistroSancion.SeleccionarRegistroSancionesGrupos(_tipoCon, filtro, fechaDesde, fechaHasta)
             Dim datos = _objRegistroSancion.SeleccionarRegistroSancionesDatos2(_tipoCon, filtro, fechaDesde, fechaHasta)
-
+            Dim Agrupados = _objRegistroDescuento.SeleccionarRegistroMultasAgrupados(_tipoCon, filtro, fechaDesde, fechaHasta)
 
             ListView1.Items.Clear()
             ListView1.Groups.Clear()
-
-
-
-
 
 
             ' grupos
@@ -432,41 +428,95 @@ Namespace FORMULARIOS.OPERACIONES
                 ListView1.Groups.Add(group)
             Next
 
+            dgvNormal.Columns.Clear()
+            dgvNormal.Rows.Clear()
 
+            Dim checkColumn As New DataGridViewCheckBoxColumn()
+            checkColumn.Name = "Check"
+            checkColumn.HeaderText = " "
+            dgvNormal.Columns.Add(checkColumn)
+
+            For Each column As DataColumn In datos.Columns
+                Dim col As New DataGridViewTextBoxColumn()
+                col.Name = column.ColumnName
+                col.HeaderText = column.ColumnName
+                col.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
+                dgvNormal.Columns.Add(col)
+            Next
+
+            For Each datarow As DataRow In datos.Rows
+                Dim newRow As New DataGridViewRow()
+                newRow.CreateCells(dgvNormal)
+                For i As Integer = 0 To datos.Columns.Count - 1
+
+                    If datos.Columns(i).ColumnName = "FECHA" AndAlso datarow.Item(i) IsNot Nothing Then
+                        newRow.Cells(i + 1).Value = Convert.ToDateTime(datarow.Item(i)).ToString("dd/MM/yyyy")
+                        Continue For
+                    End If
+                    newRow.Cells(i + 1).Value = If(datarow.Item(i) IsNot Nothing, datarow.Item(i).ToString(), String.Empty)
+                Next
+                dgvNormal.Rows.Add(newRow)
+            Next
+
+
+            'NO BORRAR
+            'For Each groupRow As DataRow In grupos.Rows
+            '    Dim groupName As String = groupRow.Item(0).ToString().Trim()
+
+            '    AddGroupRow(groupName)
+
+            '    For Each dataRow As DataRow In datos.Rows
+            '        If dataRow.Item(1).ToString().Trim() = groupName Then
+            '            AddDataRow(dataRow)
+            '        End If
+            '    Next
+            'Next
+
+            dgvNormal.Columns("ID_REGISTRO").Width = 80
+            dgvNormal.Columns("ID_REGISTRO").HeaderText = "ID"
+            dgvNormal.Columns("sancion").Width = 150
+            dgvNormal.Columns("sancion").HeaderText = "SANCION"
+            dgvNormal.Columns("ID_SANCION").Visible = False
+            dgvNormal.Columns("FECHA").Width = 100
+            dgvNormal.Columns("ID_PERSONAL").Visible = False
+            dgvNormal.Columns("NOMINA").Width = 250
+            dgvNormal.Columns("DESCRIPCION").Visible = False
+            dgvNormal.Columns("AREA").Width = 100
+            dgvNormal.Columns("ID_SITIO").Visible = False
+            dgvNormal.Columns("SITIO_TRABAJO").Width = 150
+            dgvNormal.Columns("SITIO_TRABAJO").HeaderText = "SITIO TRABAJO"
+            dgvNormal.Columns("VALOR").Width = 60
+            dgvNormal.Columns("OBSERVACION").Width = 180
+            dgvNormal.Columns("ID_DESCUENTO").Visible = False
+            dgvNormal.Columns("multador").Width = 150
+            dgvNormal.Columns("multador").HeaderText = "REGISTRADO POR"
 
 
             dgvSanciones.DataSource = Nothing
-            dgvSanciones.DataSource = _objRegistroSancion.SeleccionarRegistroSancionesDatos2(_tipoCon, filtro, fechaDesde, fechaHasta)
-            'dgvSanciones.Columns.Add("GroupName", "Group")
-
-
-            dgvSanciones.Columns("ID_REGISTRO").Width = 80
-            dgvSanciones.Columns("SANCION").Width = 180
-            dgvSanciones.Columns("ID_SANCION").Visible = False
-            dgvSanciones.Columns("FECHA").Width = 80
-            dgvSanciones.Columns("ID_PERSONAL").Visible = False
-            dgvSanciones.Columns("NOMINA").Width = 250
-            dgvSanciones.Columns("DESCRIPCION").HeaderText = "CARGO"
-            dgvSanciones.Columns("DESCRIPCION").Width = 150
-            dgvSanciones.Columns("AREA").Visible = False
-            dgvSanciones.Columns("ID_SITIO").Visible = False
-            dgvSanciones.Columns("SITIO_TRABAJO").HeaderText = "SITIO"
-            dgvSanciones.Columns("SITIO_TRABAJO").Width = 150
-            dgvSanciones.Columns("VALOR").Width = 60
-            dgvSanciones.Columns("OBSERVACION").Width = 180
-            dgvSanciones.Columns("ID_DESCUENTO").Width = 60
-            dgvSanciones.Columns("MULTADOR").Width = 150
+            'dgvSanciones.DataSource = _objRegistroSancion.SeleccionarRegistroSancionesDatos2(_tipoCon, filtro, fechaDesde, fechaHasta)
+            dgvSanciones.DataSource = Agrupados
+            dgvSanciones.Columns("ID_PERSONAL").Width = 100
+            dgvSanciones.Columns("ID_PERSONAL").HeaderText = "ID"
+            dgvSanciones.Columns("CEDULA").Width = 100
+            dgvSanciones.Columns("NOMINA").Width = 350
+            dgvSanciones.Columns("MULTAS").Width = 100
+            dgvSanciones.Columns("MULTAS").HeaderText = "VALOR"
+            'dgvSanciones.Columns("ID_PERSONAL").Visible = False
+            'dgvSanciones.Columns("NOMINA").Width = 250
+            'dgvSanciones.Columns("DESCRIPCION").HeaderText = "CARGO"
+            'dgvSanciones.Columns("DESCRIPCION").Width = 150
+            'dgvSanciones.Columns("AREA").Visible = False
+            'dgvSanciones.Columns("ID_SITIO").Visible = False
+            'dgvSanciones.Columns("SITIO_TRABAJO").HeaderText = "SITIO"
+            'dgvSanciones.Columns("SITIO_TRABAJO").Width = 150
+            'dgvSanciones.Columns("VALOR").Width = 60
+            'dgvSanciones.Columns("OBSERVACION").Width = 180
+            'dgvSanciones.Columns("ID_DESCUENTO").Width = 60
+            'dgvSanciones.Columns("REGISTRADO POR").Width = 150
 
 
 
             dgvSanciones.AutoResizeRows()
-            'For Each group As DataRow In grupos.Rows
-            '    Dim groupName As String = group.Item(0).ToString.Trim
-            '    dgvSanciones.Rows.Add(groupName)
-            '    dgvSanciones.DefaultCellStyle.BackColor = ValidationForms.GetColorSistema(_tipoCon)
-            '    dgvSanciones.DefaultCellStyle.ForeColor = Color.White
-            '    dgvSanciones.DefaultCellStyle.Font = New Font(dgvSanciones.Font, FontStyle.Bold)
-            'Next
 
 
             ' detalles
@@ -481,130 +531,16 @@ Namespace FORMULARIOS.OPERACIONES
                 ListView1.Items.Add(lst)
             Next
 
-            ' lleno dgvSanciones 1
 
 
 
-            'For Each row As DataRow In datos.Rows
-
-            '    Dim groupName As String = row.Item(0).ToString.Trim
-            '    Dim groupIndex As Integer = GetDataGridViewGroup(dgvSanciones, groupName)
-            '    If groupIndex = -1 Then
-            '        dgvSanciones.Rows.Add(groupName)
-            '        groupIndex = dgvSanciones.Rows.Count - 1
-            '    End If
-
-            '    ' Set the values for each cell in the details row
-            '    'Dim rowIndex As Integer = dgvSanciones.Rows.Count - 1 ' Index of the newly added row
-            '    For i As Integer = 0 To datos.Columns.Count - 1
-            '        ' Make sure the row index is valid
-            '        If i < dgvSanciones.Columns.Count Then
-            '            dgvSanciones.Rows(groupIndex).Cells(i).Value = If(row.Item(i) IsNot Nothing, row.Item(i).ToString(), String.Empty)
-            '        End If
-            '    Next
-
-
-            'Next
-
-            'lleno dgvSanciones 2
-
-            'For Each row As DataRow In datos.Rows
-            '    ' Add a row for each group in dgvSanciones
-            '    Dim groupName As String = row.Item(0).ToString.Trim
-            '    'dgvSanciones.Rows.Add(groupName)
-            '    Dim groupIndex As Integer = GetDataGridViewGroup(dgvSanciones, groupName)
-
-
-
-            '    If groupIndex = -1 Then
-            '        dgvSanciones.Rows.Add(groupName)
-            '        groupIndex = dgvSanciones.Rows.Count - 1
-
-
-            '        dgvSanciones.Rows(groupIndex).DefaultCellStyle.BackColor = ValidationForms.GetColorSistema(_tipoCon)
-            '        dgvSanciones.Rows(groupIndex).DefaultCellStyle.ForeColor = Color.White
-            '        dgvSanciones.Rows(groupIndex).DefaultCellStyle.Font = New Font(dgvSanciones.Font, FontStyle.Bold)
-            '    End If
-
-
-
-            '    'For i As Integer = 1 To datos.Columns.Count - 1
-            '    '    ' Make sure the column index is valid
-            '    '    If i < dgvSanciones.Columns.Count Then
-            '    '        dgvSanciones.Rows(groupIndex).Cells(i).Value = If(row.Item(i) IsNot Nothing, row.Item(i).ToString(), String.Empty)
-            '    '    End If
-            '    'Next
-
-            '    'For i As Integer = 0 To datos.Columns.Count - 1
-            '    '    Dim columnName As String = datos.Columns(i).ColumnName
-            '    '    If dgvSanciones.Columns.Cast(Of DataGridViewColumn)().Any(Function(col) col.Name = columnName) Then
-            '    '        ' Column with this name already exists, skip
-            '    '        Continue For
-            '    '    End If
-            '    '    dgvSanciones.Columns.Add(columnName, columnName)
-            '    '    dgvSanciones.Columns(i + 1).AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells
-            '    'Next
-
-
-            '    t += Convert.ToDouble(row.Item(10))
-            'Next
-
-            'esto vale
-            'For i As Integer = 0 To datos.Columns.Count - 1
-            '    dgvSanciones.Columns.Add(datos.Columns(i).ColumnName, datos.Columns(i).ColumnName)
-            '    dgvSanciones.Columns(i).AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells
-            'Next
-
-            'Dim columnNames As String() = {"ID", "FECHA", "PERSONAL", "CARGO", "SITIO", "VALOR", "OBSERVACION"}
-            'For Each columnName As String In columnNames
-            '    dgvSanciones.Columns.Add(columnName, columnName)
-            '    dgvSanciones.Columns(columnName).AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells
-            'Next
-
-            'For Each row As DataRow In datos.Rows
-            '    ' Find the index of the group corresponding to the row's group name
-            '    Dim groupName As String = row.Item(0).ToString.Trim
-            '    Dim groupIndex As Integer = GetDataGridViewGroup(dgvSanciones, groupName)
-
-            '    If groupIndex = -1 Then
-            '        ' Add a new group if it doesn't exist
-            '        dgvSanciones.Rows.Add(groupName)
-            '        groupIndex = dgvSanciones.Rows.Count - 1
-            '        dgvSanciones.Rows(groupIndex).DefaultCellStyle.BackColor = ValidationForms.GetColorSistema(_tipoCon)
-            '        dgvSanciones.Rows(groupIndex).DefaultCellStyle.ForeColor = Color.White
-            '        dgvSanciones.Rows(groupIndex).DefaultCellStyle.Font = New Font(dgvSanciones.Font, FontStyle.Bold)
-            '    End If
-
-
-            '    While dgvSanciones.Rows(groupIndex).Cells.Count < datos.Columns.Count
-            '        dgvSanciones.Rows(groupIndex).Cells.Add(New DataGridViewTextBoxCell())
-            '    End While
-            '    ' Add a new row and set its cell values
-            '    'Dim rowIndex As Integer = dgvSanciones.Rows.Add()
-            '    'For i As Integer = 0 To datos.Columns.Count - 1
-            '    '    dgvSanciones.Rows(rowIndex).Cells(i).Value = If(row.Item(i) IsNot Nothing, row.Item(i).ToString(), String.Empty)
-            '    'Next
-
-            '    For i As Integer = 1 To datos.Columns.Count - 1 ' Start from 1 to skip the group name
-            '        If i < dgvSanciones.Rows(groupIndex).Cells.Count Then ' Check if the cell index is valid
-            '            dgvSanciones.Rows(groupIndex).Cells(i).Value = If(row.Item(i) IsNot Nothing, row.Item(i).ToString(), String.Empty)
-            '        End If
-            '    Next
-            'Next
-
-            '' autosize columns for dgvSanciones
-            'For Each column As DataGridViewColumn In dgvSanciones.Columns
-            '    column.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells
-            'Next
-
-
-
+            'NO borrar 
             ' autosize columns
-            For Each column As ColumnHeader In ListView1.Columns
-                If column.Width > 5 Then
-                    column.Width = -2
-                End If
-            Next
+            'For Each column As ColumnHeader In ListView1.Columns
+            '    If column.Width > 5 Then
+            '        column.Width = -2
+            '    End If
+            'Next
 
             Label1.Text = datos.Rows.Count & " REGISTRO(S) - TOTAL EN MULTAS: "
             Label2.Text = "$ " & t.ToString("N")
@@ -612,27 +548,40 @@ Namespace FORMULARIOS.OPERACIONES
             ' seleccionar el ultimo que ingreso
             If selId = 0 Then Return
 
-            For Each row As ListViewItem In From row1 As ListViewItem In ListView1.Items Where row1.SubItems(0).Text.Trim.Equals(selId.ToString.Trim)
-                row.EnsureVisible()
-                ListView1.Items(row.Index).Selected = True
-                ListView1.Select()
-                Exit For
-            Next
+            'No borrar
+            'For Each row As ListViewItem In From row1 As ListViewItem In ListView1.Items Where row1.SubItems(0).Text.Trim.Equals(selId.ToString.Trim)
+            '    row.EnsureVisible()
+            '    ListView1.Items(row.Index).Selected = True
+            '    ListView1.Select()
+            '    Exit For
+            'Next
         End Sub
 
 
-        Private Function GetDataGridViewGroup(ByVal dgv As DataGridView, ByVal nm As String) As Integer
-            Dim groupIndex As Integer = -1
 
-            For i As Integer = 0 To dgv.Rows.Count - 1
-                If dgv.Rows(i).Cells(0) IsNot Nothing AndAlso dgv.Rows(i).Cells(0).Value IsNot Nothing AndAlso dgv.Rows(i).Cells(0).Value.ToString().Trim = nm.Trim Then
-                    groupIndex = i
-                    Exit For
-                End If
+
+        Private Sub AddGroupRow(groupName As String)
+
+            Dim headerRow As New DataGridViewRow()
+            headerRow.CreateCells(dgvNormal)
+            headerRow.DefaultCellStyle.Font = New Font(dgvNormal.Font, FontStyle.Bold)
+            headerRow.Cells(0).Value = groupName
+            dgvNormal.Rows.Add(headerRow)
+        End Sub
+
+        Private Sub AddDataRow(dataRow As DataRow)
+            Dim newRow As New DataGridViewRow()
+            newRow.CreateCells(dgvNormal)
+
+
+            Dim columnCount As Integer = dgvNormal.Columns.Count
+
+            For i As Integer = 0 To columnCount - 1
+                newRow.Cells(i).Value = If(i < dataRow.ItemArray.Length AndAlso dataRow.Item(i) IsNot Nothing, dataRow.Item(i).ToString(), String.Empty)
             Next
 
-            Return groupIndex
-        End Function
+            dgvNormal.Rows.Add(newRow)
+        End Sub
 
         Private Function GetListViewGroup(ByVal nm As String) As ListViewGroup
             Dim grup As ListViewGroup = Nothing
@@ -723,46 +672,46 @@ Namespace FORMULARIOS.OPERACIONES
         End Sub
 
         Private Sub ListView1_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles ListView1.SelectedIndexChanged
-            If ListView1.Items.Count > 0 Then
-                Try
-                    txtIdSancion.Text = ListView1.SelectedItems(0).SubItems(0).Text
+            'If ListView1.Items.Count > 0 Then
+            '    Try
+            '        txtIdSancion.Text = ListView1.SelectedItems(0).SubItems(0).Text
 
-                    txtIdPersonal.Text = ListView1.SelectedItems(0).SubItems(4).Text
-                    txtPersonal.Text = ListView1.SelectedItems(0).SubItems(5).Text
-                    txtCargo.Text = ListView1.SelectedItems(0).SubItems(6).Text
-                    txtArea.Text = ListView1.SelectedItems(0).SubItems(7).Text
+            '        txtIdPersonal.Text = ListView1.SelectedItems(0).SubItems(4).Text
+            '        txtPersonal.Text = ListView1.SelectedItems(0).SubItems(5).Text
+            '        txtCargo.Text = ListView1.SelectedItems(0).SubItems(6).Text
+            '        txtArea.Text = ListView1.SelectedItems(0).SubItems(7).Text
 
-                    txtSancion.Tag = ListView1.SelectedItems(0).SubItems(2).Text
-                    txtSancion.Text = ListView1.SelectedItems(0).SubItems(1).Text
-                    txtValor.Text = ListView1.SelectedItems(0).SubItems(10).Text
-                    txtObservacion.Text = ListView1.SelectedItems(0).SubItems(11).Text
-                    txtMultador.Text = ListView1.SelectedItems(0).SubItems(13).Text
+            '        txtSancion.Tag = ListView1.SelectedItems(0).SubItems(2).Text
+            '        txtSancion.Text = ListView1.SelectedItems(0).SubItems(1).Text
+            '        txtValor.Text = ListView1.SelectedItems(0).SubItems(10).Text
+            '        txtObservacion.Text = ListView1.SelectedItems(0).SubItems(11).Text
+            '        txtMultador.Text = ListView1.SelectedItems(0).SubItems(13).Text
 
-                    dtpFecha.Tag = ListView1.SelectedItems(0).SubItems(12).Text
+            '        dtpFecha.Tag = ListView1.SelectedItems(0).SubItems(12).Text
 
-                    btnNuevo.Enabled = True
-                    btnGuardar.Enabled = False
-                    btnAnular.Enabled = True
-                    btnCancelar.Enabled = False
+            '        btnNuevo.Enabled = True
+            '        btnGuardar.Enabled = False
+            '        btnAnular.Enabled = True
+            '        btnCancelar.Enabled = False
 
-                    Dim data = _objSitioTrabajo.SeleccionarSitiosFullClientexIdPersonal(_tipoCon, txtIdPersonal.Text)
-                    If data Is Nothing Then Return
-                    If data.Rows.Count = 0 Then Return
-                    If data.Rows(0).Item(36).ToString.Trim().Length = 0 Then
-                        Dim p = data.Rows(0).Item(36).ToString.Trim().Split("|")
-                        txtIdPuesto.Text = p(0).ToString
-                        txtUbicacionPuesto.Text = p(1).ToString()
-                        txtCliente.Text = p(2).ToString
-                    Else
-                        txtIdPuesto.Text = data.Rows(0).Item(0).ToString
-                        txtUbicacionPuesto.Text = data.Rows(0).Item(6).ToString
-                        txtCliente.Text = data.Rows(0).Item(20).ToString
-                    End If
+            '        Dim data = _objSitioTrabajo.SeleccionarSitiosFullClientexIdPersonal(_tipoCon, txtIdPersonal.Text)
+            '        If data Is Nothing Then Return
+            '        If data.Rows.Count = 0 Then Return
+            '        If data.Rows(0).Item(36).ToString.Trim().Length = 0 Then
+            '            Dim p = data.Rows(0).Item(36).ToString.Trim().Split("|")
+            '            txtIdPuesto.Text = p(0).ToString
+            '            txtUbicacionPuesto.Text = p(1).ToString()
+            '            txtCliente.Text = p(2).ToString
+            '        Else
+            '            txtIdPuesto.Text = data.Rows(0).Item(0).ToString
+            '            txtUbicacionPuesto.Text = data.Rows(0).Item(6).ToString
+            '            txtCliente.Text = data.Rows(0).Item(20).ToString
+            '        End If
 
-                Catch
-                    Exit Try
-                End Try
-            End If
+            '    Catch
+            '        Exit Try
+            '    End Try
+            'End If
         End Sub
 
         Private Sub txtValor_KeyPress(ByVal sender As System.Object, ByVal e As Windows.Forms.KeyPressEventArgs) Handles txtValor.KeyPress
@@ -871,6 +820,55 @@ Namespace FORMULARIOS.OPERACIONES
             Catch ex As Exception
                 Exit Try
             End Try
+        End Sub
+
+        Private Sub dgvNormal_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvNormal.CellContentClick
+
+        End Sub
+
+        Private Sub dgvNormal_SelectionChanged(sender As Object, e As EventArgs) Handles dgvNormal.SelectionChanged
+            If dgvNormal.Rows.Count > 0 Then
+                Try
+                    txtIdSancion.Text = dgvNormal.CurrentRow.Cells.Item(1).Value.ToString()
+
+                    'txtIdPersonal.Text = ListView1.SelectedItems(0).SubItems(4).Text
+                    txtIdPersonal.Text = dgvNormal.CurrentRow.Cells.Item(5).Value.ToString()
+                    txtPersonal.Text = dgvNormal.CurrentRow.Cells.Item(6).Value.ToString()
+                    txtCargo.Text = dgvNormal.CurrentRow.Cells.Item(7).Value.ToString()
+                    txtArea.Text = dgvNormal.CurrentRow.Cells.Item(8).Value.ToString()
+
+                    txtSancion.Tag = dgvNormal.CurrentRow.Cells.Item(3).Value.ToString()
+                    txtSancion.Text = dgvNormal.CurrentRow.Cells.Item(2).Value.ToString()
+                    txtValor.Text = dgvNormal.CurrentRow.Cells.Item(11).Value.ToString()
+                    txtObservacion.Text = dgvNormal.CurrentRow.Cells.Item(12).Value.ToString()
+                    txtMultador.Text = dgvNormal.CurrentRow.Cells.Item(14).Value.ToString()
+
+                    dtpFecha.Tag = dgvNormal.CurrentRow.Cells.Item(13).Value
+
+                    btnNuevo.Enabled = True
+                    btnGuardar.Enabled = False
+                    btnAnular.Enabled = True
+                    btnCancelar.Enabled = False
+
+                    Dim data = _objSitioTrabajo.SeleccionarSitiosFullClientexIdPersonal(_tipoCon, txtIdPersonal.Text)
+                    If data Is Nothing Then Return
+                    If data.Rows.Count = 0 Then Return
+                    If data.Rows(0).Item(36).ToString.Trim().Length = 0 Then
+                        Dim p = data.Rows(0).Item(36).ToString.Trim().Split("|")
+                        txtIdPuesto.Text = p(0).ToString
+                        txtUbicacionPuesto.Text = p(1).ToString()
+                        txtCliente.Text = p(2).ToString
+                    Else
+                        txtIdPuesto.Text = data.Rows(0).Item(0).ToString
+                        txtUbicacionPuesto.Text = data.Rows(0).Item(6).ToString
+                        txtCliente.Text = data.Rows(0).Item(20).ToString
+                    End If
+
+                Catch ex As Exception
+                    KryptonMessageBox.Show("ERROR AL SELECCIONAR EL REGISTRO: " & ex.Message, "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+                    Exit Try
+                End Try
+            End If
         End Sub
     End Class
 
