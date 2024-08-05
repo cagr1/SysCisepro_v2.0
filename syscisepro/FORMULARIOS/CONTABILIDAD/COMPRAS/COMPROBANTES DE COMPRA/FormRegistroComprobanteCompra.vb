@@ -238,11 +238,11 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
             '10 %
             '12 %
             '14 %
-            cbxPorcentaje.SelectedValue = 2
+            'cbxPorcentaje.SelectedValue = 2
             If PorcentajeIva = 0 Then cbxPorcentaje.SelectedIndex = 0
             If PorcentajeIva = 10 Then cbxPorcentaje.SelectedIndex = 1
-            If PorcentajeIva = 12 Then cbxPorcentaje.SelectedIndex = 1
-            If PorcentajeIva = 15 Then cbxPorcentaje.SelectedIndex = 2
+            If PorcentajeIva = 12 Then cbxPorcentaje.SelectedIndex = 2
+            If PorcentajeIva = 15 Then cbxPorcentaje.SelectedIndex = 3
 
             lblSubtotalIva.Text = "SUB TOTAL " & PorcentajeIva & "%:"
             lblIva.Text = "IVA  (" & PorcentajeIva & "%):"

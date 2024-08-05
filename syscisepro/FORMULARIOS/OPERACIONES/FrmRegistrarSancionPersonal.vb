@@ -86,6 +86,8 @@ Namespace FORMULARIOS.OPERACIONES
             Label1.Text = "O REGISTRO(S) - TOTAL EN MULTAS: "
             Label2.Text = "$ 0.00"
             'txtMultador.Text = UserName
+
+
         End Sub
 
         Private Sub ExportarDatosExcel(ByVal listViewExp As ListView, ByVal titulo As String)
@@ -431,10 +433,23 @@ Namespace FORMULARIOS.OPERACIONES
             dgvNormal.Columns.Clear()
             dgvNormal.Rows.Clear()
 
+            Dim headerCheckbox As New CheckBox()
+            headerCheckbox.Size = New Size(15, 15)
+            headerCheckbox.BackColor = Color.Transparent
+            AddHandler headerCheckbox.CheckedChanged, AddressOf HeaderCheckbox_CheckedChanged
+
             Dim checkColumn As New DataGridViewCheckBoxColumn()
             checkColumn.Name = "Check"
             checkColumn.HeaderText = " "
+            checkColumn.Width = 30
             dgvNormal.Columns.Add(checkColumn)
+
+
+            dgvNormal.Controls.Add(headerCheckbox)
+            Dim headerCellRect = dgvNormal.GetCellDisplayRectangle(0, -1, True).Location
+            'headerCellRect.Location = New Point(headerCellRect.X + (checkColumn.Width - headerCheckbox.Width) / 2, headerCellRect.Y + (dgvNormal.ColumnHeadersHeight - headerCheckbox.Height) / 2)
+
+
 
             For Each column As DataColumn In datos.Columns
                 Dim col As New DataGridViewTextBoxColumn()
@@ -472,12 +487,12 @@ Namespace FORMULARIOS.OPERACIONES
             '    Next
             'Next
 
-            dgvNormal.Columns("ID_REGISTRO").Width = 80
+            dgvNormal.Columns("ID_REGISTRO").Width = 70
             dgvNormal.Columns("ID_REGISTRO").HeaderText = "ID"
             dgvNormal.Columns("sancion").Width = 150
             dgvNormal.Columns("sancion").HeaderText = "SANCION"
             dgvNormal.Columns("ID_SANCION").Visible = False
-            dgvNormal.Columns("FECHA").Width = 100
+            dgvNormal.Columns("FECHA").Width = 80
             dgvNormal.Columns("ID_PERSONAL").Visible = False
             dgvNormal.Columns("NOMINA").Width = 250
             dgvNormal.Columns("DESCRIPCION").Visible = False
@@ -718,7 +733,7 @@ Namespace FORMULARIOS.OPERACIONES
             e.Handled = Not _objvalid.EsDecimal(e.KeyChar)
         End Sub
 
-        Private Sub ToolStripMenuItem2_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ToolStripMenuItem2.Click
+        Private Sub ToolStripMenuItem2_Click(ByVal sender As System.Object, ByVal e As EventArgs)
             ExportarDatosExcel(ListView1, "ASIGNACION DE PUESTOS DE TRABAJO")
         End Sub
 
@@ -730,7 +745,7 @@ Namespace FORMULARIOS.OPERACIONES
             txtTotal.Text = TotalMultas()
         End Sub
 
-        Private Sub AGRUPADOSToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles AGRUPADOSToolStripMenuItem.Click
+        Private Sub AGRUPADOSToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
             ExportarDatosExcel2(dgvSanciones, "ASIGNACION DE PUESTOS DE TRABAJO")
         End Sub
 
@@ -789,7 +804,7 @@ Namespace FORMULARIOS.OPERACIONES
                 head = 7
                 For Each row As DataGridViewRow In dgvSanciones.Rows
                     Dim y = 1
-                    t += CDbl(row.Cells("VALOR").Value) ' Adjust the column name accordingly
+                    t += CDbl(row.Cells("MULTAS").Value) ' Adjust the column name accordingly
                     For Each cell As DataGridViewCell In row.Cells
                         If cell.OwningColumn.Visible Then
                             worksheet.Cells(head, y) = cell.Value.ToString()
@@ -809,8 +824,8 @@ Namespace FORMULARIOS.OPERACIONES
                 worksheet.Cells(head + 1, 2) = "TOTAL SANCIONES"
                 worksheet.Cells(head + 1, 2).Font.Bold = True
 
-                worksheet.Cells(head + 1, 6) = t.ToString("N")
-                worksheet.Cells(head + 1, 6).Font.Bold = True
+                worksheet.Cells(head + 1, 4) = t.ToString("N")
+                worksheet.Cells(head + 1, 4).Font.Bold = True
 
                 worksheet.Range("A1:" & ic & (head * 2)).Columns.AutoFit()
 
@@ -818,7 +833,8 @@ Namespace FORMULARIOS.OPERACIONES
                 app.Visible = True
                 app.DisplayAlerts = True
             Catch ex As Exception
-                Exit Try
+                KryptonMessageBox.Show("ERROR AL EXPORTAR LOS DATOS: " & ex.Message, "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+
             End Try
         End Sub
 
@@ -870,6 +886,21 @@ Namespace FORMULARIOS.OPERACIONES
                 End Try
             End If
         End Sub
+
+        Private Sub KryptonButton2_Click(sender As Object, e As EventArgs) Handles btnAgrupados.Click
+            ExportarDatosExcel2(dgvSanciones, "ASIGNACION DE PUESTOS DE TRABAJO")
+        End Sub
+
+        Private Sub btnNormal_Click(sender As Object, e As EventArgs) Handles btnNormal.Click
+            ExportarDatosExcel(ListView1, "ASIGNACION DE PUESTOS DE TRABAJO")
+        End Sub
+        Private Sub HeaderCheckbox_CheckedChanged(sender As Object, e As EventArgs)
+            Dim headerCheckbox As CheckBox = CType(sender, CheckBox)
+            For Each row As DataGridViewRow In dgvNormal.Rows
+                row.Cells("Check").Value = headerCheckbox.Checked
+            Next
+        End Sub
+
     End Class
 
 

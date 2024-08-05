@@ -743,6 +743,8 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                 Dim idcu = _objControl.BuscarMayorIdControlUniformes(_tipoCon) + 1
                 Dim idd = _objDetalleEgresoPuesto.BuscarMayorIdRegistroDetalleComprobante(_tipoCon) + 1
                 Dim iddu = _objDetalle.BuscarMayorIdDetalleUniformes(_tipoCon) + 1
+                Dim idde = _objRegistroDescuento.BuscarMayorIdRegistroDescuento(_tipoCon) + 1
+
 
                 Try
 
@@ -757,7 +759,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                             Dim valor As Int32 = _objSecuencialItem.BuscarDescuentoSecuencialItem(_tipoCon, para)
                             If valor > 0 Then
                                 With _objRegistroDescuento
-                                    .IdRegistro = _objRegistroDescuento.BuscarMayorIdRegistroDescuento(_tipoCon) + 1
+                                    .IdRegistro = idde
                                     .IdPersonal = If(txtRecibe.Tag Is Nothing, txtRecibe.Text.Split("-")(1).Trim(), CType(txtRecibe.Tag, Integer))
                                     .Fecha = _objEntrega.Fecha
                                     .Procesado = 0
@@ -771,6 +773,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                                     .Idprog = 0
                                 End With
                                 _sqlCommands.Add(_objRegistroDescuento.NuevoRegistroDescuentoCommands())
+                                idde += 1
                             End If
                         End If
 
@@ -787,6 +790,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                                 .ObservacionDetalle = dgvSecuencial.Rows.Item(indice).Cells("DETALLES").Value.ToString.ToUpper
                             End With
                             _sqlCommands.Add(_objDetalle.NuevoRegistroDetalleUniformesCommand())
+                            iddu += 1
                         End If
 
 
@@ -862,7 +866,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                         idce += 1
                         idcu += 1
                         idd += 1
-                        iddu += 1
+
 
                     Next
                 Catch ex As Exception
