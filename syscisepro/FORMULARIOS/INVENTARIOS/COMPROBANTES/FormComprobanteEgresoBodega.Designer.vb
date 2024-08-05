@@ -177,7 +177,6 @@
             Me.KryptonLabel4 = New ComponentFactory.Krypton.Toolkit.KryptonLabel()
             Me.KryptonGroupBox5 = New ComponentFactory.Krypton.Toolkit.KryptonGroupBox()
             Me.btnBuscarModi = New ComponentFactory.Krypton.Toolkit.KryptonButton()
-            Me.txtFiltro = New System.Windows.Forms.TextBox()
             Me.gbComprobante = New System.Windows.Forms.GroupBox()
             Me.btnExportarComprobantes = New System.Windows.Forms.Button()
             Me.dgvComprobantesEgreso = New System.Windows.Forms.DataGridView()
@@ -207,6 +206,7 @@
             Me.lblComp = New System.Windows.Forms.Label()
             Me.lblIdSecuencial = New System.Windows.Forms.Label()
             Me.lblCantidadSaldo = New System.Windows.Forms.Label()
+            Me.txtFiltro = New System.Windows.Forms.TextBox()
             Me.tbComprobanteIngresoBodega.SuspendLayout()
             Me.tpRegistro.SuspendLayout()
             Me.GroupBox2.SuspendLayout()
@@ -1902,13 +1902,6 @@
             Me.btnBuscarModi.Values.ImageStates.ImageTracking = Global.syscisepro.My.Resources.Resources.search_24dp_FILL0_wght400_GRAD0_opsz40
             Me.btnBuscarModi.Values.Text = ""
             '
-            'txtFiltro
-            '
-            Me.txtFiltro.Location = New System.Drawing.Point(17, 6)
-            Me.txtFiltro.Name = "txtFiltro"
-            Me.txtFiltro.Size = New System.Drawing.Size(264, 21)
-            Me.txtFiltro.TabIndex = 13
-            '
             'gbComprobante
             '
             Me.gbComprobante.BackColor = System.Drawing.Color.White
@@ -2236,6 +2229,13 @@
             Me.lblCantidadSaldo.TabIndex = 193
             Me.lblCantidadSaldo.Visible = False
             '
+            'txtFiltro
+            '
+            Me.txtFiltro.Location = New System.Drawing.Point(16, 8)
+            Me.txtFiltro.Name = "txtFiltro"
+            Me.txtFiltro.Size = New System.Drawing.Size(264, 21)
+            Me.txtFiltro.TabIndex = 13
+            '
             'FormComprobanteEgresoBodega
             '
             Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 13.0!)
@@ -2423,7 +2423,6 @@
         Friend WithEvents Label18 As Label
         Friend WithEvents txtCedulaRecibe As TextBox
         Friend WithEvents btnUniformes As Button
-        Friend WithEvents txtFiltro As TextBox
         Friend WithEvents btnBuscarModi As ComponentFactory.Krypton.Toolkit.KryptonButton
         Friend WithEvents KryptonGroupBox5 As ComponentFactory.Krypton.Toolkit.KryptonGroupBox
         Friend WithEvents KryptonGroupBox6 As ComponentFactory.Krypton.Toolkit.KryptonGroupBox
@@ -2477,5 +2476,6 @@
         Friend WithEvents CONCEPTO_INVENTARIO As DataGridViewTextBoxColumn
         Friend WithEvents CANTIDAD_INICIAL_INGRESO As DataGridViewTextBoxColumn
         Friend WithEvents CANTIDAD_TOTAL_INGRESO As DataGridViewTextBoxColumn
+        Friend WithEvents txtFiltro As TextBox
     End Class
 End Namespace

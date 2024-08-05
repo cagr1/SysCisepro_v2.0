@@ -28,9 +28,19 @@
             Me.txtArea = New System.Windows.Forms.TextBox()
             Me.Label27 = New System.Windows.Forms.Label()
             Me.KryptonGroupBox1 = New ComponentFactory.Krypton.Toolkit.KryptonGroupBox()
+            Me.TabControl1 = New System.Windows.Forms.TabControl()
+            Me.TabPage1 = New System.Windows.Forms.TabPage()
+            Me.dgvNormal = New ComponentFactory.Krypton.Toolkit.KryptonDataGridView()
+            Me.TabPage2 = New System.Windows.Forms.TabPage()
+            Me.dgvSanciones = New System.Windows.Forms.DataGridView()
+            Me.btnAgrupados = New ComponentFactory.Krypton.Toolkit.KryptonButton()
+            Me.btnNormal = New ComponentFactory.Krypton.Toolkit.KryptonButton()
             Me.KryptonLabel3 = New ComponentFactory.Krypton.Toolkit.KryptonLabel()
             Me.KryptonLabel2 = New ComponentFactory.Krypton.Toolkit.KryptonLabel()
-            Me.dgvNormal = New ComponentFactory.Krypton.Toolkit.KryptonDataGridView()
+            Me.KryptonLabel1 = New ComponentFactory.Krypton.Toolkit.KryptonLabel()
+            Me.txtFiltro = New System.Windows.Forms.TextBox()
+            Me.dtpFechaDesde = New System.Windows.Forms.DateTimePicker()
+            Me.dtpFechaHasta = New System.Windows.Forms.DateTimePicker()
             Me.ListView1 = New System.Windows.Forms.ListView()
             Me.ColumnHeader1 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
             Me.ColumnHeader4 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
@@ -46,11 +56,6 @@
             Me.ColumnHeader12 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
             Me.ColumnHeader10 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
             Me.ColumnHeader14 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-            Me.dgvSanciones = New System.Windows.Forms.DataGridView()
-            Me.KryptonLabel1 = New ComponentFactory.Krypton.Toolkit.KryptonLabel()
-            Me.txtFiltro = New System.Windows.Forms.TextBox()
-            Me.dtpFechaDesde = New System.Windows.Forms.DateTimePicker()
-            Me.dtpFechaHasta = New System.Windows.Forms.DateTimePicker()
             Me.GroupBox2 = New System.Windows.Forms.GroupBox()
             Me.txtMultador = New System.Windows.Forms.TextBox()
             Me.Label4 = New System.Windows.Forms.Label()
@@ -91,16 +96,14 @@
             Me.btnCancelar = New System.Windows.Forms.ToolStripMenuItem()
             Me.Label1 = New System.Windows.Forms.Label()
             Me.Label2 = New System.Windows.Forms.Label()
-            Me.btnNormal = New ComponentFactory.Krypton.Toolkit.KryptonButton()
-            Me.btnAgrupados = New ComponentFactory.Krypton.Toolkit.KryptonButton()
-            Me.TabControl1 = New System.Windows.Forms.TabControl()
-            Me.TabPage1 = New System.Windows.Forms.TabPage()
-            Me.TabPage2 = New System.Windows.Forms.TabPage()
             CType(Me.KryptonGroupBox1, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.KryptonGroupBox1.Panel, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.KryptonGroupBox1.Panel.SuspendLayout()
             Me.KryptonGroupBox1.SuspendLayout()
+            Me.TabControl1.SuspendLayout()
+            Me.TabPage1.SuspendLayout()
             CType(Me.dgvNormal, System.ComponentModel.ISupportInitialize).BeginInit()
+            Me.TabPage2.SuspendLayout()
             CType(Me.dgvSanciones, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.GroupBox2.SuspendLayout()
             CType(Me.txtTotal, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -108,9 +111,6 @@
             Me.GroupBox3.SuspendLayout()
             Me.GroupBox1.SuspendLayout()
             Me.MenuStrip1.SuspendLayout()
-            Me.TabControl1.SuspendLayout()
-            Me.TabPage1.SuspendLayout()
-            Me.TabPage2.SuspendLayout()
             Me.SuspendLayout()
             '
             'txtArea
@@ -153,6 +153,94 @@
             Me.KryptonGroupBox1.TabIndex = 300
             Me.KryptonGroupBox1.Values.Heading = "Registro de Multas"
             '
+            'TabControl1
+            '
+            Me.TabControl1.Controls.Add(Me.TabPage1)
+            Me.TabControl1.Controls.Add(Me.TabPage2)
+            Me.TabControl1.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.TabControl1.Location = New System.Drawing.Point(4, 36)
+            Me.TabControl1.Name = "TabControl1"
+            Me.TabControl1.SelectedIndex = 0
+            Me.TabControl1.Size = New System.Drawing.Size(582, 323)
+            Me.TabControl1.TabIndex = 305
+            '
+            'TabPage1
+            '
+            Me.TabPage1.BackColor = System.Drawing.Color.FromArgb(CType(CType(187, Byte), Integer), CType(CType(206, Byte), Integer), CType(CType(230, Byte), Integer))
+            Me.TabPage1.Controls.Add(Me.dgvNormal)
+            Me.TabPage1.Location = New System.Drawing.Point(4, 22)
+            Me.TabPage1.Name = "TabPage1"
+            Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
+            Me.TabPage1.Size = New System.Drawing.Size(574, 297)
+            Me.TabPage1.TabIndex = 0
+            Me.TabPage1.Text = "Normal"
+            '
+            'dgvNormal
+            '
+            Me.dgvNormal.AllowUserToAddRows = False
+            Me.dgvNormal.AllowUserToDeleteRows = False
+            Me.dgvNormal.AllowUserToResizeColumns = False
+            Me.dgvNormal.AllowUserToResizeRows = False
+            Me.dgvNormal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+            Me.dgvNormal.Dock = System.Windows.Forms.DockStyle.Fill
+            Me.dgvNormal.Location = New System.Drawing.Point(3, 3)
+            Me.dgvNormal.Name = "dgvNormal"
+            Me.dgvNormal.RowHeadersVisible = False
+            Me.dgvNormal.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+            Me.dgvNormal.Size = New System.Drawing.Size(568, 291)
+            Me.dgvNormal.StateCommon.BackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.GridBackgroundList
+            Me.dgvNormal.StateCommon.DataCell.Border.Color1 = System.Drawing.Color.White
+            Me.dgvNormal.StateCommon.DataCell.Border.DrawBorders = CType((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top Or ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) _
+            Or ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) _
+            Or ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right), ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)
+            Me.dgvNormal.TabIndex = 205
+            '
+            'TabPage2
+            '
+            Me.TabPage2.BackColor = System.Drawing.Color.FromArgb(CType(CType(187, Byte), Integer), CType(CType(206, Byte), Integer), CType(CType(230, Byte), Integer))
+            Me.TabPage2.Controls.Add(Me.dgvSanciones)
+            Me.TabPage2.Location = New System.Drawing.Point(4, 22)
+            Me.TabPage2.Name = "TabPage2"
+            Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
+            Me.TabPage2.Size = New System.Drawing.Size(574, 297)
+            Me.TabPage2.TabIndex = 1
+            Me.TabPage2.Text = "Agrupado"
+            '
+            'dgvSanciones
+            '
+            Me.dgvSanciones.AllowUserToAddRows = False
+            Me.dgvSanciones.AllowUserToDeleteRows = False
+            Me.dgvSanciones.AllowUserToOrderColumns = True
+            Me.dgvSanciones.AllowUserToResizeRows = False
+            DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+            Me.dgvSanciones.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+            Me.dgvSanciones.BackgroundColor = System.Drawing.Color.White
+            Me.dgvSanciones.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedHorizontal
+            Me.dgvSanciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+            Me.dgvSanciones.Dock = System.Windows.Forms.DockStyle.Fill
+            Me.dgvSanciones.Location = New System.Drawing.Point(3, 3)
+            Me.dgvSanciones.Name = "dgvSanciones"
+            Me.dgvSanciones.RowHeadersVisible = False
+            Me.dgvSanciones.ShowEditingIcon = False
+            Me.dgvSanciones.Size = New System.Drawing.Size(568, 291)
+            Me.dgvSanciones.TabIndex = 0
+            '
+            'btnAgrupados
+            '
+            Me.btnAgrupados.Location = New System.Drawing.Point(515, 4)
+            Me.btnAgrupados.Name = "btnAgrupados"
+            Me.btnAgrupados.Size = New System.Drawing.Size(66, 27)
+            Me.btnAgrupados.TabIndex = 304
+            Me.btnAgrupados.Values.Text = "Agrupado"
+            '
+            'btnNormal
+            '
+            Me.btnNormal.Location = New System.Drawing.Point(450, 4)
+            Me.btnNormal.Name = "btnNormal"
+            Me.btnNormal.Size = New System.Drawing.Size(62, 27)
+            Me.btnNormal.TabIndex = 303
+            Me.btnNormal.Values.Text = "Normal"
+            '
             'KryptonLabel3
             '
             Me.KryptonLabel3.Location = New System.Drawing.Point(328, 5)
@@ -169,22 +257,43 @@
             Me.KryptonLabel2.TabIndex = 301
             Me.KryptonLabel2.Values.Text = "De"
             '
-            'dgvNormal
+            'KryptonLabel1
             '
-            Me.dgvNormal.AllowUserToAddRows = False
-            Me.dgvNormal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-            Me.dgvNormal.Dock = System.Windows.Forms.DockStyle.Fill
-            Me.dgvNormal.Location = New System.Drawing.Point(3, 3)
-            Me.dgvNormal.Name = "dgvNormal"
-            Me.dgvNormal.RowHeadersVisible = False
-            Me.dgvNormal.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvNormal.Size = New System.Drawing.Size(568, 291)
-            Me.dgvNormal.StateCommon.BackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.GridBackgroundList
-            Me.dgvNormal.StateCommon.DataCell.Border.Color1 = System.Drawing.Color.White
-            Me.dgvNormal.StateCommon.DataCell.Border.DrawBorders = CType((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top Or ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) _
-            Or ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) _
-            Or ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right), ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)
-            Me.dgvNormal.TabIndex = 205
+            Me.KryptonLabel1.Location = New System.Drawing.Point(4, 4)
+            Me.KryptonLabel1.Name = "KryptonLabel1"
+            Me.KryptonLabel1.Size = New System.Drawing.Size(38, 20)
+            Me.KryptonLabel1.TabIndex = 0
+            Me.KryptonLabel1.Values.Text = "Filtro"
+            '
+            'txtFiltro
+            '
+            Me.txtFiltro.BackColor = System.Drawing.Color.White
+            Me.txtFiltro.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+            Me.txtFiltro.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtFiltro.Location = New System.Drawing.Point(44, 4)
+            Me.txtFiltro.Name = "txtFiltro"
+            Me.txtFiltro.Size = New System.Drawing.Size(156, 21)
+            Me.txtFiltro.TabIndex = 291
+            '
+            'dtpFechaDesde
+            '
+            Me.dtpFechaDesde.CustomFormat = "dddd, dd-MMM-yyyy"
+            Me.dtpFechaDesde.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.dtpFechaDesde.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+            Me.dtpFechaDesde.Location = New System.Drawing.Point(232, 4)
+            Me.dtpFechaDesde.Name = "dtpFechaDesde"
+            Me.dtpFechaDesde.Size = New System.Drawing.Size(93, 22)
+            Me.dtpFechaDesde.TabIndex = 299
+            '
+            'dtpFechaHasta
+            '
+            Me.dtpFechaHasta.CustomFormat = "dddd, dd-MMM-yyyy"
+            Me.dtpFechaHasta.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.dtpFechaHasta.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+            Me.dtpFechaHasta.Location = New System.Drawing.Point(349, 3)
+            Me.dtpFechaHasta.Name = "dtpFechaHasta"
+            Me.dtpFechaHasta.Size = New System.Drawing.Size(93, 22)
+            Me.dtpFechaHasta.TabIndex = 2
             '
             'ListView1
             '
@@ -269,63 +378,6 @@
             'ColumnHeader14
             '
             Me.ColumnHeader14.Text = "REGISTRADO"
-            '
-            'dgvSanciones
-            '
-            Me.dgvSanciones.AllowUserToAddRows = False
-            Me.dgvSanciones.AllowUserToDeleteRows = False
-            Me.dgvSanciones.AllowUserToOrderColumns = True
-            Me.dgvSanciones.AllowUserToResizeRows = False
-            DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-            Me.dgvSanciones.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
-            Me.dgvSanciones.BackgroundColor = System.Drawing.Color.White
-            Me.dgvSanciones.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedHorizontal
-            Me.dgvSanciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-            Me.dgvSanciones.Dock = System.Windows.Forms.DockStyle.Fill
-            Me.dgvSanciones.Location = New System.Drawing.Point(3, 3)
-            Me.dgvSanciones.Name = "dgvSanciones"
-            Me.dgvSanciones.RowHeadersVisible = False
-            Me.dgvSanciones.ShowEditingIcon = False
-            Me.dgvSanciones.Size = New System.Drawing.Size(568, 291)
-            Me.dgvSanciones.TabIndex = 0
-            '
-            'KryptonLabel1
-            '
-            Me.KryptonLabel1.Location = New System.Drawing.Point(4, 4)
-            Me.KryptonLabel1.Name = "KryptonLabel1"
-            Me.KryptonLabel1.Size = New System.Drawing.Size(38, 20)
-            Me.KryptonLabel1.TabIndex = 0
-            Me.KryptonLabel1.Values.Text = "Filtro"
-            '
-            'txtFiltro
-            '
-            Me.txtFiltro.BackColor = System.Drawing.Color.White
-            Me.txtFiltro.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-            Me.txtFiltro.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtFiltro.Location = New System.Drawing.Point(44, 4)
-            Me.txtFiltro.Name = "txtFiltro"
-            Me.txtFiltro.Size = New System.Drawing.Size(156, 21)
-            Me.txtFiltro.TabIndex = 291
-            '
-            'dtpFechaDesde
-            '
-            Me.dtpFechaDesde.CustomFormat = "dddd, dd-MMM-yyyy"
-            Me.dtpFechaDesde.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.dtpFechaDesde.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-            Me.dtpFechaDesde.Location = New System.Drawing.Point(232, 4)
-            Me.dtpFechaDesde.Name = "dtpFechaDesde"
-            Me.dtpFechaDesde.Size = New System.Drawing.Size(93, 22)
-            Me.dtpFechaDesde.TabIndex = 299
-            '
-            'dtpFechaHasta
-            '
-            Me.dtpFechaHasta.CustomFormat = "dddd, dd-MMM-yyyy"
-            Me.dtpFechaHasta.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.dtpFechaHasta.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-            Me.dtpFechaHasta.Location = New System.Drawing.Point(349, 3)
-            Me.dtpFechaHasta.Name = "dtpFechaHasta"
-            Me.dtpFechaHasta.Size = New System.Drawing.Size(93, 22)
-            Me.dtpFechaHasta.TabIndex = 2
             '
             'GroupBox2
             '
@@ -758,55 +810,6 @@
             Me.Label2.Text = "$ 0.00"
             Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight
             '
-            'btnNormal
-            '
-            Me.btnNormal.Location = New System.Drawing.Point(450, 4)
-            Me.btnNormal.Name = "btnNormal"
-            Me.btnNormal.Size = New System.Drawing.Size(62, 27)
-            Me.btnNormal.TabIndex = 303
-            Me.btnNormal.Values.Text = "Normal"
-            '
-            'btnAgrupados
-            '
-            Me.btnAgrupados.Location = New System.Drawing.Point(515, 4)
-            Me.btnAgrupados.Name = "btnAgrupados"
-            Me.btnAgrupados.Size = New System.Drawing.Size(66, 27)
-            Me.btnAgrupados.TabIndex = 304
-            Me.btnAgrupados.Values.Text = "Agrupado"
-            '
-            'TabControl1
-            '
-            Me.TabControl1.Controls.Add(Me.TabPage1)
-            Me.TabControl1.Controls.Add(Me.TabPage2)
-            Me.TabControl1.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.TabControl1.Location = New System.Drawing.Point(4, 36)
-            Me.TabControl1.Name = "TabControl1"
-            Me.TabControl1.SelectedIndex = 0
-            Me.TabControl1.Size = New System.Drawing.Size(582, 323)
-            Me.TabControl1.TabIndex = 305
-            '
-            'TabPage1
-            '
-            Me.TabPage1.BackColor = System.Drawing.Color.FromArgb(CType(CType(187, Byte), Integer), CType(CType(206, Byte), Integer), CType(CType(230, Byte), Integer))
-            Me.TabPage1.Controls.Add(Me.dgvNormal)
-            Me.TabPage1.Location = New System.Drawing.Point(4, 22)
-            Me.TabPage1.Name = "TabPage1"
-            Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-            Me.TabPage1.Size = New System.Drawing.Size(574, 297)
-            Me.TabPage1.TabIndex = 0
-            Me.TabPage1.Text = "Normal"
-            '
-            'TabPage2
-            '
-            Me.TabPage2.BackColor = System.Drawing.Color.FromArgb(CType(CType(187, Byte), Integer), CType(CType(206, Byte), Integer), CType(CType(230, Byte), Integer))
-            Me.TabPage2.Controls.Add(Me.dgvSanciones)
-            Me.TabPage2.Location = New System.Drawing.Point(4, 22)
-            Me.TabPage2.Name = "TabPage2"
-            Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-            Me.TabPage2.Size = New System.Drawing.Size(574, 297)
-            Me.TabPage2.TabIndex = 1
-            Me.TabPage2.Text = "Agrupado"
-            '
             'FrmRegistrarSancionPersonal
             '
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -833,7 +836,10 @@
             Me.KryptonGroupBox1.Panel.PerformLayout()
             CType(Me.KryptonGroupBox1, System.ComponentModel.ISupportInitialize).EndInit()
             Me.KryptonGroupBox1.ResumeLayout(False)
+            Me.TabControl1.ResumeLayout(False)
+            Me.TabPage1.ResumeLayout(False)
             CType(Me.dgvNormal, System.ComponentModel.ISupportInitialize).EndInit()
+            Me.TabPage2.ResumeLayout(False)
             CType(Me.dgvSanciones, System.ComponentModel.ISupportInitialize).EndInit()
             Me.GroupBox2.ResumeLayout(False)
             Me.GroupBox2.PerformLayout()
@@ -845,9 +851,6 @@
             Me.GroupBox1.PerformLayout()
             Me.MenuStrip1.ResumeLayout(False)
             Me.MenuStrip1.PerformLayout()
-            Me.TabControl1.ResumeLayout(False)
-            Me.TabPage1.ResumeLayout(False)
-            Me.TabPage2.ResumeLayout(False)
             Me.ResumeLayout(False)
             Me.PerformLayout()
 

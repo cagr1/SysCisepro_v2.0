@@ -49,6 +49,7 @@ Namespace FORMULARIOS.OPERACIONES
         ReadOnly _objetoHistorial As New ClassHistorialLaboral
         ReadOnly _objvalid As New ClassDecimal
         Private _hoy As DateTime
+        Private headerCheckbox As CheckBox
 
         ReadOnly _objProgramacionOps As New ClassProgramacionOperaciones
         ReadOnly _objRegistroDescuento As New ClassDescuentosPersonal
@@ -81,11 +82,17 @@ Namespace FORMULARIOS.OPERACIONES
             _hoy = DateTime.Now
             dtpFecha.Value = _hoy
             dtpFechaDesde.Value = New DateTime(_hoy.Year, _hoy.Month, 1, 0, 0, 0)
-
+            'headerCheckbox = Me.Controls.OfType(Of CheckBox)().FirstOrDefault(Function(c) c.Name = "headerCheckbox")
             _sqlCommands = New List(Of SqlCommand)
             Label1.Text = "O REGISTRO(S) - TOTAL EN MULTAS: "
             Label2.Text = "$ 0.00"
             'txtMultador.Text = UserName
+
+            headerCheckbox = New CheckBox()
+            headerCheckbox.Size = New Size(15, 15)
+            headerCheckbox.BackColor = Color.Transparent
+            AddHandler headerCheckbox.CheckedChanged, AddressOf HeaderCheckbox_CheckedChanged
+            Controls.Add(headerCheckbox)
 
 
         End Sub
@@ -127,31 +134,60 @@ Namespace FORMULARIOS.OPERACIONES
                 'Dim foot = head + listViewExp.Items.Count + 2
 
                 Dim x = 1
-                For i = 0 To listViewExp.Columns.Count - 1
-                    If listViewExp.Columns(i).Width = 0 Then Continue For
-                    worksheet.Cells(head, x) = listViewExp.Columns(i).Text
-                    worksheet.Cells(head, x).Font.Bold = True
-                    worksheet.Cells(head, x).Borders.LineStyle = Excel.XlLineStyle.xlContinuous
-                    worksheet.Cells(head, x).Cells.HorizontalAlignment = Excel.XlHAlign.xlHAlignCenter
-                    worksheet.Cells(head, x).Interior.Color = ValidationForms.GetColorSistema(_tipoCon)
-                    worksheet.Cells(head, x).Font.Color = Color.White
-                    x += 1
+                'For i = 0 To listViewExp.Columns.Count - 1
+                '    If listViewExp.Columns(i).Width = 0 Then Continue For
+                '    worksheet.Cells(head, x) = listViewExp.Columns(i).Text
+                '    worksheet.Cells(head, x).Font.Bold = True
+                '    worksheet.Cells(head, x).Borders.LineStyle = Excel.XlLineStyle.xlContinuous
+                '    worksheet.Cells(head, x).Cells.HorizontalAlignment = Excel.XlHAlign.xlHAlignCenter
+                '    worksheet.Cells(head, x).Interior.Color = ValidationForms.GetColorSistema(_tipoCon)
+                '    worksheet.Cells(head, x).Font.Color = Color.White
+                '    x += 1
+                'Next
+
+                For Each column As DataGridViewColumn In dgvNormal.Columns
+                    If column.Visible Then
+                        worksheet.Cells(head, x) = column.HeaderText
+                        worksheet.Cells(head, x).Font.Bold = True
+                        worksheet.Cells(head, x).Borders.LineStyle = Excel.XlLineStyle.xlContinuous
+                        worksheet.Cells(head, x).Cells.HorizontalAlignment = Excel.XlHAlign.xlHAlignCenter
+                        worksheet.Cells(head, x).Interior.Color = ValidationForms.GetColorSistema(_tipoCon)
+                        worksheet.Cells(head, x).Font.Color = Color.White
+                        x += 1
+                    End If
                 Next
+
 
                 Dim t = 0.0
                 head = 7
-                For Each row As ListViewItem In listViewExp.Items
-                    Dim y = 1
-                    t += CDbl(row.SubItems(10).Text)
-                    For j = 0 To listViewExp.Columns.Count - 1
-                        If listViewExp.Columns(j).Width = 0 Then Continue For
-                        worksheet.Cells(head, y) = row.SubItems(j).Text
+                'For Each row As ListViewItem In listViewExp.Items
+                '    Dim y = 1
+                '    t += CDbl(row.SubItems(10).Text)
+                '    For j = 0 To listViewExp.Columns.Count - 1
+                '        If listViewExp.Columns(j).Width = 0 Then Continue For
+                '        worksheet.Cells(head, y) = row.SubItems(j).Text
 
-                        ' definir bordes
-                        worksheet.Cells(head, y).Borders(Excel.XlBordersIndex.xlEdgeLeft).LineStyle = Excel.XlLineStyle.xlContinuous
-                        worksheet.Cells(head, y).Borders(Excel.XlBordersIndex.xlEdgeRight).LineStyle = Excel.XlLineStyle.xlContinuous
-                        If head = listViewExp.Items.Count + 6 Then worksheet.Cells(head, y).Borders(Excel.XlBordersIndex.xlEdgeBottom).LineStyle = Excel.XlLineStyle.xlContinuous
-                        y += 1
+                '        ' definir bordes
+                '        worksheet.Cells(head, y).Borders(Excel.XlBordersIndex.xlEdgeLeft).LineStyle = Excel.XlLineStyle.xlContinuous
+                '        worksheet.Cells(head, y).Borders(Excel.XlBordersIndex.xlEdgeRight).LineStyle = Excel.XlLineStyle.xlContinuous
+                '        If head = listViewExp.Items.Count + 6 Then worksheet.Cells(head, y).Borders(Excel.XlBordersIndex.xlEdgeBottom).LineStyle = Excel.XlLineStyle.xlContinuous
+                '        y += 1
+                '    Next
+                '    head += 1
+                'Next
+
+                For Each row As DataGridViewRow In dgvNormal.Rows
+                    Dim y = 1
+                    t += CDbl(row.Cells(11).Value)
+                    For j = 0 To dgvNormal.Columns.Count - 1
+                        If dgvNormal.Columns(j).Visible Then
+                            worksheet.Cells(head, y) = row.Cells(j).Value
+                            ' definir bordes
+                            worksheet.Cells(head, y).Borders(Excel.XlBordersIndex.xlEdgeLeft).LineStyle = Excel.XlLineStyle.xlContinuous
+                            worksheet.Cells(head, y).Borders(Excel.XlBordersIndex.xlEdgeRight).LineStyle = Excel.XlLineStyle.xlContinuous
+                            If head = dgvNormal.Rows.Count + 6 Then worksheet.Cells(head, y).Borders(Excel.XlBordersIndex.xlEdgeBottom).LineStyle = Excel.XlLineStyle.xlContinuous
+                            y += 1
+                        End If
                     Next
                     head += 1
                 Next
@@ -159,8 +195,8 @@ Namespace FORMULARIOS.OPERACIONES
                 worksheet.Cells(head + 1, 2) = "TOTAL SANCIONES"
                 worksheet.Cells(head + 1, 2).Font.Bold = True
 
-                worksheet.Cells(head + 1, 6) = t.ToString("N")
-                worksheet.Cells(head + 1, 6).Font.Bold = True
+                worksheet.Cells(head + 1, 8) = t.ToString("N")
+                worksheet.Cells(head + 1, 8).Font.Bold = True
 
                 worksheet.Range("A1:" & ic & (head * 2)).Columns.AutoFit()
 
@@ -168,6 +204,7 @@ Namespace FORMULARIOS.OPERACIONES
                 app.Visible = True
                 app.DisplayAlerts = True
             Catch ex As Exception
+                KryptonMessageBox.Show("ERROR AL EXPORTAR LOS DATOS: " & ex.Message, "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
                 Exit Try
             End Try
         End Sub
@@ -327,20 +364,62 @@ Namespace FORMULARIOS.OPERACIONES
 
         Private Sub btnAnular_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnAnular.Click
             Try
-                If MessageBox.Show("Está seguro que desea anular el registro seleccionado?", "MENSAJE DEL SISTEMA", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.No Then
+
+
+                'If headerCheckbox IsNot Nothing Then
+                '    MessageBox.Show("Debe seleccionar al menos un registro para anular!", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                'End If
+
+                Dim isHeaderChecked As Boolean = headerCheckbox.Checked
+                Dim confirmationMessage As String = ""
+                Dim confirmationTitle As String = "MENSAJE DEL SISTEMA"
+                If isHeaderChecked Then
+                    confirmationMessage = "Está seguro que desea anular todos los registros seleccionados?"
+                Else
+                    confirmationMessage = "Está seguro que desea anular el registro seleccionado?"
+                End If
+
+                If KryptonMessageBox.Show(confirmationMessage, confirmationTitle, KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) = DialogResult.No Then
                     Return
                 End If
 
                 _sqlCommands.Clear()
-                With _objRegistroSancion
-                    .IdRegistro = txtIdSancion.Text.Trim
-                    .Estado = 0
-                End With
-                _sqlCommands.Add(_objRegistroSancion.AnularRegistroSancionCommand())
 
-                ' ANULAR DESCUENTO
-                _objRegistroDescuento.IdRegistro = dtpFecha.Tag.ToString
-                _sqlCommands.Add(_objRegistroDescuento.AnularRegistroDescuentoCommand())
+
+                If isHeaderChecked Then
+
+                    For Each row As DataGridViewRow In dgvNormal.Rows
+
+                        If Convert.ToBoolean(row.Cells("Check").Value) = False Then
+                            With _objRegistroSancion
+                                .IdRegistro = row.Cells(1).Value
+                                .Estado = 0
+                            End With
+                            _sqlCommands.Add(_objRegistroSancion.AnularRegistroSancionCommand())
+
+
+                            _objRegistroDescuento.IdRegistro = row.Cells(1).Value
+                            _sqlCommands.Add(_objRegistroDescuento.AnularRegistroDescuentoCommand())
+                        End If
+
+                    Next
+                Else
+
+
+                    With _objRegistroSancion
+                        .IdRegistro = txtIdSancion.Text.Trim
+                        .Estado = 0
+                    End With
+                    _sqlCommands.Add(_objRegistroSancion.AnularRegistroSancionCommand())
+
+                    ' ANULAR DESCUENTO
+                    _objRegistroDescuento.IdRegistro = dtpFecha.Tag.ToString
+                    _sqlCommands.Add(_objRegistroDescuento.AnularRegistroDescuentoCommand())
+
+                End If
+
+
+
 
 
                 Dim nombreU As String = "SANCION ANULADA " & UserName
@@ -433,10 +512,10 @@ Namespace FORMULARIOS.OPERACIONES
             dgvNormal.Columns.Clear()
             dgvNormal.Rows.Clear()
 
-            Dim headerCheckbox As New CheckBox()
-            headerCheckbox.Size = New Size(15, 15)
-            headerCheckbox.BackColor = Color.Transparent
-            AddHandler headerCheckbox.CheckedChanged, AddressOf HeaderCheckbox_CheckedChanged
+            'headerCheckbox = New CheckBox()
+            'headerCheckbox.Size = New Size(15, 15)
+            'headerCheckbox.BackColor = Color.Transparent
+            'AddHandler headerCheckbox.CheckedChanged, AddressOf HeaderCheckbox_CheckedChanged
 
             Dim checkColumn As New DataGridViewCheckBoxColumn()
             checkColumn.Name = "Check"
@@ -445,9 +524,9 @@ Namespace FORMULARIOS.OPERACIONES
             dgvNormal.Columns.Add(checkColumn)
 
 
+            Dim headerCellRect = dgvNormal.GetCellDisplayRectangle(0, -1, True)
+            headerCheckbox.Location = New Point(headerCellRect.X + (headerCellRect.Width - headerCheckbox.Width) / 2, headerCellRect.Y + (headerCellRect.Height - headerCheckbox.Height) / 2)
             dgvNormal.Controls.Add(headerCheckbox)
-            Dim headerCellRect = dgvNormal.GetCellDisplayRectangle(0, -1, True).Location
-            'headerCellRect.Location = New Point(headerCellRect.X + (checkColumn.Width - headerCheckbox.Width) / 2, headerCellRect.Y + (dgvNormal.ColumnHeadersHeight - headerCheckbox.Height) / 2)
 
 
 
@@ -896,10 +975,12 @@ Namespace FORMULARIOS.OPERACIONES
         End Sub
         Private Sub HeaderCheckbox_CheckedChanged(sender As Object, e As EventArgs)
             Dim headerCheckbox As CheckBox = CType(sender, CheckBox)
+            Dim isChecked As Boolean = headerCheckbox.Checked
             For Each row As DataGridViewRow In dgvNormal.Rows
                 row.Cells("Check").Value = headerCheckbox.Checked
             Next
         End Sub
+
 
     End Class
 

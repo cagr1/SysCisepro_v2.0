@@ -135,7 +135,6 @@
             Me.chkTodos = New System.Windows.Forms.CheckBox()
             Me.rbtDet = New System.Windows.Forms.RadioButton()
             Me.rbtNum = New System.Windows.Forms.RadioButton()
-            Me.txtDetail = New System.Windows.Forms.TextBox()
             Me.btnBuscar = New System.Windows.Forms.Button()
             Me.txtNroComprobanteBusqueda = New System.Windows.Forms.TextBox()
             Me.gbRangoFechas = New System.Windows.Forms.GroupBox()
@@ -165,6 +164,9 @@
             Me.lblIdKardex2 = New System.Windows.Forms.Label()
             Me.lblIdSecuencial = New System.Windows.Forms.Label()
             Me.lblCantidadInicial = New System.Windows.Forms.Label()
+            Me.KryptonGroupBox5 = New ComponentFactory.Krypton.Toolkit.KryptonGroupBox()
+            Me.btnBuscarModi = New ComponentFactory.Krypton.Toolkit.KryptonButton()
+            Me.txtFiltro = New System.Windows.Forms.TextBox()
             Me.tbComprobanteIngresoBodega.SuspendLayout()
             Me.tpRegistro.SuspendLayout()
             Me.gbBusquedaArticulo.SuspendLayout()
@@ -185,6 +187,10 @@
             Me.TabPage2.SuspendLayout()
             CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.MenuStrip1.SuspendLayout()
+            CType(Me.KryptonGroupBox5, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType(Me.KryptonGroupBox5.Panel, System.ComponentModel.ISupportInitialize).BeginInit()
+            Me.KryptonGroupBox5.Panel.SuspendLayout()
+            Me.KryptonGroupBox5.SuspendLayout()
             Me.SuspendLayout()
             '
             'tbComprobanteIngresoBodega
@@ -1195,14 +1201,15 @@
             'tpConsultar
             '
             Me.tpConsultar.BackColor = System.Drawing.Color.White
+            Me.tpConsultar.Controls.Add(Me.KryptonGroupBox5)
             Me.tpConsultar.Controls.Add(Me.gbComprobante)
             Me.tpConsultar.Controls.Add(Me.gbDetalleComprobante)
-            Me.tpConsultar.Controls.Add(Me.gbNumeroFactura)
             Me.tpConsultar.Controls.Add(Me.gbRangoFechas)
+            Me.tpConsultar.Controls.Add(Me.gbNumeroFactura)
             Me.tpConsultar.Location = New System.Drawing.Point(4, 22)
             Me.tpConsultar.Name = "tpConsultar"
             Me.tpConsultar.Padding = New System.Windows.Forms.Padding(3)
-            Me.tpConsultar.Size = New System.Drawing.Size(1057, 556)
+            Me.tpConsultar.Size = New System.Drawing.Size(1076, 556)
             Me.tpConsultar.TabIndex = 1
             Me.tpConsultar.Text = "CONSULTAR"
             '
@@ -1340,16 +1347,16 @@
             Me.gbNumeroFactura.Controls.Add(Me.chkTodos)
             Me.gbNumeroFactura.Controls.Add(Me.rbtDet)
             Me.gbNumeroFactura.Controls.Add(Me.rbtNum)
-            Me.gbNumeroFactura.Controls.Add(Me.txtDetail)
             Me.gbNumeroFactura.Controls.Add(Me.btnBuscar)
             Me.gbNumeroFactura.Controls.Add(Me.txtNroComprobanteBusqueda)
             Me.gbNumeroFactura.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.gbNumeroFactura.Location = New System.Drawing.Point(445, 6)
+            Me.gbNumeroFactura.Location = New System.Drawing.Point(791, 10)
             Me.gbNumeroFactura.Name = "gbNumeroFactura"
-            Me.gbNumeroFactura.Size = New System.Drawing.Size(608, 47)
+            Me.gbNumeroFactura.Size = New System.Drawing.Size(231, 47)
             Me.gbNumeroFactura.TabIndex = 148
             Me.gbNumeroFactura.TabStop = False
             Me.gbNumeroFactura.Text = "OPCIONES DE BUSQUEDA"
+            Me.gbNumeroFactura.Visible = False
             '
             'chkTodos
             '
@@ -1367,7 +1374,7 @@
             '
             Me.rbtDet.AutoSize = True
             Me.rbtDet.Enabled = False
-            Me.rbtDet.Location = New System.Drawing.Point(205, 19)
+            Me.rbtDet.Location = New System.Drawing.Point(143, 19)
             Me.rbtDet.Name = "rbtDet"
             Me.rbtDet.Size = New System.Drawing.Size(63, 17)
             Me.rbtDet.TabIndex = 7
@@ -1387,18 +1394,6 @@
             Me.rbtNum.Text = "N° Comp:"
             Me.rbtNum.UseVisualStyleBackColor = True
             '
-            'txtDetail
-            '
-            Me.txtDetail.BackColor = System.Drawing.Color.White
-            Me.txtDetail.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-            Me.txtDetail.Enabled = False
-            Me.txtDetail.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtDetail.Location = New System.Drawing.Point(265, 18)
-            Me.txtDetail.Name = "txtDetail"
-            Me.txtDetail.Size = New System.Drawing.Size(269, 21)
-            Me.txtDetail.TabIndex = 5
-            Me.txtDetail.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-            '
             'btnBuscar
             '
             Me.btnBuscar.BackColor = System.Drawing.Color.White
@@ -1407,7 +1402,7 @@
             Me.btnBuscar.Font = New System.Drawing.Font("Consolas", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.btnBuscar.Image = Global.syscisepro.My.Resources.Resources.search_24dp_FILL0_wght400_GRAD0_opsz40
             Me.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-            Me.btnBuscar.Location = New System.Drawing.Point(553, 15)
+            Me.btnBuscar.Location = New System.Drawing.Point(241, 18)
             Me.btnBuscar.Name = "btnBuscar"
             Me.btnBuscar.Size = New System.Drawing.Size(28, 28)
             Me.btnBuscar.TabIndex = 0
@@ -1422,7 +1417,7 @@
             Me.txtNroComprobanteBusqueda.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtNroComprobanteBusqueda.Location = New System.Drawing.Point(90, 18)
             Me.txtNroComprobanteBusqueda.Name = "txtNroComprobanteBusqueda"
-            Me.txtNroComprobanteBusqueda.Size = New System.Drawing.Size(105, 21)
+            Me.txtNroComprobanteBusqueda.Size = New System.Drawing.Size(42, 21)
             Me.txtNroComprobanteBusqueda.TabIndex = 0
             Me.txtNroComprobanteBusqueda.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
             '
@@ -1486,7 +1481,7 @@
             Me.tpReporte.Location = New System.Drawing.Point(4, 22)
             Me.tpReporte.Name = "tpReporte"
             Me.tpReporte.Padding = New System.Windows.Forms.Padding(3)
-            Me.tpReporte.Size = New System.Drawing.Size(1057, 556)
+            Me.tpReporte.Size = New System.Drawing.Size(1076, 556)
             Me.tpReporte.TabIndex = 2
             Me.tpReporte.Text = "REPORTE"
             '
@@ -1701,6 +1696,49 @@
             Me.lblCantidadInicial.TabIndex = 196
             Me.lblCantidadInicial.Visible = False
             '
+            'KryptonGroupBox5
+            '
+            Me.KryptonGroupBox5.Location = New System.Drawing.Point(471, -2)
+            Me.KryptonGroupBox5.Name = "KryptonGroupBox5"
+            '
+            'KryptonGroupBox5.Panel
+            '
+            Me.KryptonGroupBox5.Panel.Controls.Add(Me.txtFiltro)
+            Me.KryptonGroupBox5.Panel.Controls.Add(Me.btnBuscarModi)
+            Me.KryptonGroupBox5.Size = New System.Drawing.Size(307, 59)
+            Me.KryptonGroupBox5.TabIndex = 153
+            Me.KryptonGroupBox5.Values.Heading = "Busqueda"
+            '
+            'btnBuscarModi
+            '
+            Me.btnBuscarModi.AutoSize = True
+            Me.btnBuscarModi.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+            Me.btnBuscarModi.Location = New System.Drawing.Point(247, 2)
+            Me.btnBuscarModi.Name = "btnBuscarModi"
+            Me.btnBuscarModi.Size = New System.Drawing.Size(32, 32)
+            Me.btnBuscarModi.StateCommon.Back.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.[False]
+            Me.btnBuscarModi.StateCommon.Border.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.[False]
+            Me.btnBuscarModi.StateCommon.Border.DrawBorders = CType((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top Or ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) _
+            Or ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) _
+            Or ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right), ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)
+            Me.btnBuscarModi.StateCommon.Content.Padding = New System.Windows.Forms.Padding(2)
+            Me.btnBuscarModi.TabIndex = 249
+            Me.btnBuscarModi.Values.ImageStates.ImageCheckedNormal = Nothing
+            Me.btnBuscarModi.Values.ImageStates.ImageCheckedPressed = Nothing
+            Me.btnBuscarModi.Values.ImageStates.ImageCheckedTracking = Nothing
+            Me.btnBuscarModi.Values.ImageStates.ImageDisabled = Global.syscisepro.My.Resources.Resources.search_24dp_FILL0_wght400_GRAD0_opsz24__2_
+            Me.btnBuscarModi.Values.ImageStates.ImageNormal = Global.syscisepro.My.Resources.Resources.search_24dp_FILL0_wght400_GRAD0_opsz24__2_
+            Me.btnBuscarModi.Values.ImageStates.ImagePressed = Global.syscisepro.My.Resources.Resources.search_24dp_FILL0_wght400_GRAD0_opsz40
+            Me.btnBuscarModi.Values.ImageStates.ImageTracking = Global.syscisepro.My.Resources.Resources.search_24dp_FILL0_wght400_GRAD0_opsz40
+            Me.btnBuscarModi.Values.Text = ""
+            '
+            'txtFiltro
+            '
+            Me.txtFiltro.Location = New System.Drawing.Point(30, 9)
+            Me.txtFiltro.Name = "txtFiltro"
+            Me.txtFiltro.Size = New System.Drawing.Size(100, 21)
+            Me.txtFiltro.TabIndex = 250
+            '
             'FormComprobanteIngresoBodega
             '
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1753,6 +1791,11 @@
             CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
             Me.MenuStrip1.ResumeLayout(False)
             Me.MenuStrip1.PerformLayout()
+            CType(Me.KryptonGroupBox5.Panel, System.ComponentModel.ISupportInitialize).EndInit()
+            Me.KryptonGroupBox5.Panel.ResumeLayout(False)
+            Me.KryptonGroupBox5.Panel.PerformLayout()
+            CType(Me.KryptonGroupBox5, System.ComponentModel.ISupportInitialize).EndInit()
+            Me.KryptonGroupBox5.ResumeLayout(False)
             Me.ResumeLayout(False)
             Me.PerformLayout()
 
@@ -1783,7 +1826,6 @@
         Friend WithEvents Label11 As System.Windows.Forms.Label
         Friend WithEvents rbtDet As System.Windows.Forms.RadioButton
         Friend WithEvents rbtNum As System.Windows.Forms.RadioButton
-        Friend WithEvents txtDetail As System.Windows.Forms.TextBox
         Friend WithEvents chkTodos As System.Windows.Forms.CheckBox
         Friend WithEvents MenuStrip1 As System.Windows.Forms.MenuStrip
         Friend WithEvents tsmNuevo As System.Windows.Forms.ToolStripMenuItem
@@ -1882,5 +1924,8 @@
         Friend WithEvents lblDetalle As Label
         Friend WithEvents TmsEliminar As ToolStripMenuItem
         Friend WithEvents Label14 As Label
+        Friend WithEvents KryptonGroupBox5 As ComponentFactory.Krypton.Toolkit.KryptonGroupBox
+        Friend WithEvents btnBuscarModi As ComponentFactory.Krypton.Toolkit.KryptonButton
+        Friend WithEvents txtFiltro As TextBox
     End Class
 End Namespace

@@ -140,10 +140,13 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
             dgvComprobantesIngreso.Font = New System.Drawing.Font("Roboto", 8, FontStyle.Regular)
             dgvDetalleComprobate.Font = New System.Drawing.Font("Roboto", 8, FontStyle.Regular)
             _sqlCommands = New List(Of SqlCommand)
+            Dim validation As New ValidationForms()
+            validation.SetPlaceholder(txtFiltro, "Buscar por Sitio o Nombre")
             Label14.Text = "0  REGISTRO(S) - TOTAL"
             'pbFoto.TabStop = False
         End Sub
         Private Sub tsmNuevo_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles tsmNuevo.Click
+            Limpiar()
             AutocompletarRecibe()
             AutocompletarProveedores()
             AutocompletarClientes()
@@ -210,6 +213,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
             txtRecibe.Clear()
             txtUbicacion.Clear()
             txtRazon.Clear()
+            txtSerie.Clear()
 
             pbFoto.Image = Nothing
 
@@ -225,6 +229,10 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
             lblDetalle.Text = 0
             _detalleKardex = Nothing
             dgvSecuencial.Rows.Clear()
+            dgvComprobantesIngreso.DataSource = Nothing
+            dgvComprobantesIngreso.Rows.Clear()
+            dgvDetalleComprobate.DataSource = Nothing
+            dgvDetalleComprobate.Rows.Clear()
             Label14.Text = "0  REGISTRO(S) - TOTAL"
         End Sub
 
@@ -503,26 +511,30 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
             tsmEliminar.Enabled = dgvSecuencial.RowCount > 0
         End Sub
         Private Sub btnBuscar_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnBuscar.Click
-            CargarComprobantesEgreso()
+            CargarComprobantesEgreso(txtFiltro.Text)
             TmsActualizar.Enabled = True
             TmsEliminar.Enabled = True
             tsmCancelar.Enabled = True
         End Sub
 
-        Private Sub CargarComprobantesEgreso()
+        Private Sub CargarComprobantesEgreso(ByVal filtro As String)
             Try
+
+
+
                 Dim fechaDesde = dtpFechaDesde.Value.Day.ToString & "-" & dtpFechaDesde.Value.Month.ToString & "-" & dtpFechaDesde.Value.Year.ToString & " 00:00:00"
                 Dim fechaHasta = dtpFechaHasta.Value.Day.ToString & "-" & dtpFechaHasta.Value.Month.ToString & "-" & dtpFechaHasta.Value.Year.ToString & " 23:59:59"
+                dgvComprobantesIngreso.DataSource = _objCompIng.SeleccionarComprobanteIngresoBodegaxRengoFechas(_tipoCon, fechaDesde, fechaHasta, filtro)
 
-                If chkTodos.Checked Then
-                    dgvComprobantesIngreso.DataSource = _objCompIng.SeleccionarComprobanteIngresoBodegaxRengoFechas(_tipoCon, fechaDesde, fechaHasta)
-                Else
-                    If rbtNum.Checked Then
-                        dgvComprobantesIngreso.DataSource = _objCompIng.SeleccionarComprobanteIngresoBodegaxNroComprobante(_tipoCon, txtNroComprobanteBusqueda.Text.Trim)
-                    Else
-                        dgvComprobantesIngreso.DataSource = _objCompIng.SeleccionarComprobanteIngresoBodegaxDealle(_tipoCon, txtDetail.Text.Trim)
-                    End If
-                End If
+                'If chkTodos.Checked Then
+
+                'Else
+                '    If rbtNum.Checked Then
+                '        dgvComprobantesIngreso.DataSource = _objCompIng.SeleccionarComprobanteIngresoBodegaxNroComprobante(_tipoCon, txtNroComprobanteBusqueda.Text.Trim)
+                '    Else
+                '        dgvComprobantesIngreso.DataSource = _objCompIng.SeleccionarComprobanteIngresoBodegaxDealle(_tipoCon, txtDetail.Text.Trim)
+                '    End If
+                'End If
 
 
                 For Each row In dgvComprobantesIngreso.Rows
@@ -538,7 +550,8 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
 
                 dgvComprobantesIngreso.ReadOnly = True
 
-            Catch
+            Catch ex As Exception
+                KryptonMessageBox.Show("OCURRIÓ UN PROBLEMA AL CARGAR LOS COMPROBANTES DE INGRESO. POR FAVOR, CONTÁCTE AL ADMINISTRADOR!!!", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                 dgvComprobantesIngreso.DataSource = Nothing
                 dgvDetalleComprobate.DataSource = Nothing
             End Try
@@ -721,25 +734,25 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
             End If
             KryptonMessageBox.Show(res(1), "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, messageIcon)
         End Sub
-        Private Sub chkNumeroComprobante_CheckedChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles chkTodos.CheckedChanged
-            If chkTodos.Checked Then
-                txtNroComprobanteBusqueda.Enabled = False
-                txtDetail.Enabled = False
-                rbtNum.Enabled = False
-                rbtDet.Enabled = False
-                rbtNum.Checked = False
-                rbtDet.Checked = False
-            Else
-                txtNroComprobanteBusqueda.Enabled = True
-                txtDetail.Enabled = False
-                rbtNum.Enabled = True
-                rbtDet.Enabled = True
-                rbtNum.Checked = True
-                rbtDet.Checked = False
-            End If
-            txtNroComprobanteBusqueda.Clear()
-            txtDetail.Clear()
-        End Sub
+        'Private Sub chkNumeroComprobante_CheckedChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles chkTodos.CheckedChanged
+        '    If chkTodos.Checked Then
+        '        txtNroComprobanteBusqueda.Enabled = False
+        '        txtFiltro.Enabled = False
+        '        rbtNum.Enabled = False
+        '        rbtDet.Enabled = False
+        '        rbtNum.Checked = False
+        '        rbtDet.Checked = False
+        '    Else
+        '        txtNroComprobanteBusqueda.Enabled = True
+        '        txtFiltro.Enabled = False
+        '        rbtNum.Enabled = True
+        '        rbtDet.Enabled = True
+        '        rbtNum.Checked = True
+        '        rbtDet.Checked = False
+        '    End If
+        '    txtNroComprobanteBusqueda.Clear()
+        '    txtFiltro.Clear()
+        'End Sub
         Private Sub btnExportarComprobantes_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnExportarComprobantes.Click
             ExportarDatosExcel(dgvComprobantesIngreso, "COMPROBANTES DE EGRESO DE BODEGA ")
         End Sub
@@ -908,24 +921,24 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                 crvComprobante.ReportSource = Nothing
             End Try
         End Sub
-        Private Sub rbtNum_CheckedChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles rbtNum.CheckedChanged
-            If rbtNum.Checked Then
-                txtDetail.Clear()
-                txtNroComprobanteBusqueda.Clear()
-                txtNroComprobanteBusqueda.Focus()
-            End If
-            txtNroComprobanteBusqueda.Enabled = rbtNum.Checked
-            txtDetail.Enabled = rbtDet.Checked
-        End Sub
-        Private Sub rbtDet_CheckedChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles rbtDet.CheckedChanged
-            If rbtDet.Checked Then
-                txtDetail.Clear()
-                txtNroComprobanteBusqueda.Clear()
-                txtDetail.Focus()
-            End If
-            txtNroComprobanteBusqueda.Enabled = rbtNum.Checked
-            txtDetail.Enabled = rbtDet.Checked
-        End Sub
+        'Private Sub rbtNum_CheckedChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles rbtNum.CheckedChanged
+        '    If rbtNum.Checked Then
+        '        txtDetail.Clear()
+        '        txtNroComprobanteBusqueda.Clear()
+        '        txtNroComprobanteBusqueda.Focus()
+        '    End If
+        '    txtNroComprobanteBusqueda.Enabled = rbtNum.Checked
+        '    txtDetail.Enabled = rbtDet.Checked
+        'End Sub
+        'Private Sub rbtDet_CheckedChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles rbtDet.CheckedChanged
+        '    If rbtDet.Checked Then
+        '        txtDetail.Clear()
+        '        txtNroComprobanteBusqueda.Clear()
+        '        txtDetail.Focus()
+        '    End If
+        '    txtNroComprobanteBusqueda.Enabled = rbtNum.Checked
+        '    txtDetail.Enabled = rbtDet.Checked
+        'End Sub
 
         Private Sub bntPuesto_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles bntPuesto.Click
             Dim frm As New FrmBuscarPuestoTrabajo
@@ -1488,5 +1501,21 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
             Next
             Return dt
         End Function
+
+        Private Sub btnBuscarModi_Click(sender As Object, e As EventArgs) Handles btnBuscarModi.Click
+            If txtFiltro.Text = "Buscar por Sitio o Nombre" Then
+                txtFiltro.Text = ""
+
+            End If
+
+            CargarComprobantesEgreso(txtFiltro.Text)
+            TmsActualizar.Enabled = True
+            TmsEliminar.Enabled = True
+            tsmCancelar.Enabled = True
+        End Sub
+
+        Private Sub txtDetail_KeyUp(sender As Object, e As KeyEventArgs)
+            CargarComprobantesEgreso(txtFiltro.Text)
+        End Sub
     End Class
 End Namespace

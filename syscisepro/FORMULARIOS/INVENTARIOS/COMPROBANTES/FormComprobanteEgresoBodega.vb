@@ -171,6 +171,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
         End Sub
 
         Private Sub tsmNuevo_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles tsmNuevo.Click
+
             AutocompletarRecibe()
             AutocompletarProveedores()
 
@@ -188,7 +189,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
 
             CargarDocumentos()
 
-            HabilitarIngresos(True)
+
 
             tsmNuevo.Enabled = False
             tsmGuardar.Enabled = True
@@ -197,7 +198,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
             tmsEliminar.Enabled = False
             tsmReingreso.Enabled = False
 
-            Limpiar()
+
             _botonSeleccionadoSitio = 1 ' CONTROL INGRESO
             _validar = 0
 
@@ -206,6 +207,9 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
 
             txtProveedores.Text = _objPer.BuscarApellidosNombresPersonalXIdPersonal(_tipoCon, _objPer.BuscarIdPersonalXIdUsuario(_tipoCon, IdUsuario))
 
+            Limpiar()
+            HabilitarIngresos(True)
+            Limpiar()
             txtRecibe.Focus()
         End Sub
 
@@ -218,7 +222,9 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
 
             txtRecibe.Tag = Nothing
             txtRecibe.Clear()
+            txtCedulaRecibe.Clear()
             txtUbicacion.Clear()
+            txtUbicacion.Tag = Nothing
             txtRazon.Clear()
 
 
@@ -234,6 +240,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
             lbldetalle.Text = 0
             Label11.Text = "0 REGISTRO(S) - TOTAL"
             txtCedulaRecibe.Clear()
+            txtSerie.Clear()
 
             txtArticuloIngreso.Clear()
             txtSerieIngreso.Clear()
@@ -251,7 +258,9 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
             dgvSecuencial.Rows.Clear()
             dgvDetalleComprobanteIngreso.Rows.Clear()
             dgvComprobantesEgreso.DataSource = Nothing
+            dgvComprobantesEgreso.Rows.Clear()
             dgvDetalleComprobate.DataSource = Nothing
+            dgvDetalleComprobate.Rows.Clear()
         End Sub
 
         Private Sub HabilitarIngresos(ByVal cmbBodegaV As Boolean)
@@ -604,6 +613,16 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                 dgvComprobantesEgreso.AutoResizeRows()
                 dgvComprobantesEgreso.ReadOnly = True
                 dgvComprobantesEgreso.Columns(17).Visible = False
+                dgvComprobantesEgreso.Columns(2).Visible = False
+                dgvComprobantesEgreso.Columns(4).Visible = False
+                dgvComprobantesEgreso.Columns(5).Visible = False
+                dgvComprobantesEgreso.Columns(7).Visible = False
+                dgvComprobantesEgreso.Columns(8).Visible = False
+                dgvComprobantesEgreso.Columns(9).Visible = False
+                dgvComprobantesEgreso.Columns(10).Visible = False
+                dgvComprobantesEgreso.Columns(11).Visible = False
+
+
             Catch
                 dgvComprobantesEgreso.DataSource = Nothing
                 dgvDetalleComprobate.DataSource = Nothing
@@ -1166,7 +1185,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
             Try
                 If frm.ShowDialog = vbOK Then
                     txtUbicacion.Tag = frm.ListView1.SelectedItems(0).SubItems(0).Text.Trim ' ids
-                    txtUbicacion.Text = "CLIENTE: " & frm.ListView1.SelectedItems(0).Group.Header.Trim & vbNewLine & _
+                    txtUbicacion.Text = "CLIENTE: " & frm.ListView1.SelectedItems(0).Group.Header.Trim & vbNewLine &
                         "PUESTO: " & frm.ListView1.SelectedItems(0).SubItems(2).Text.Trim
                 End If
             Catch
@@ -1253,14 +1272,14 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
             lblIdSecuencial.Text = dgvDetalleComprobate.CurrentRow.Cells.Item(16).Value ' Id Secuencial 
             lblCantidadSaldo.Text = dgvDetalleComprobate.CurrentRow.Cells.Item(17).Value ' cantidad_saldo 
 
-           
+
 
         End Sub
 
         Private Sub tsmActualizar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
 
 
-            
+
             HabilitarIngresos(True)
             tsmNuevo.Enabled = False
             tsmGuardar.Enabled = True
@@ -1274,7 +1293,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
             End If
 
 
-           
+
         End Sub
 
         Private Sub ModicificarComprobanteEgreso()
@@ -1975,7 +1994,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
 
             Catch ex As Exception
                 MessageBox.Show("Error: " & ex.Message)
-            dgvDetalleComprobanteIngreso.DataSource = Nothing
+                dgvDetalleComprobanteIngreso.DataSource = Nothing
             End Try
 
         End Sub
@@ -2132,5 +2151,9 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
             Next
             Return dt
         End Function
+
+        Private Sub txtFiltro_KeyUp(sender As Object, e As KeyEventArgs) Handles txtFiltro.KeyUp
+            CargarComprobantesEgreso(txtFiltro.Text)
+        End Sub
     End Class
 End Namespace
