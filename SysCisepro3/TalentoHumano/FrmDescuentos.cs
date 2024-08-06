@@ -17,6 +17,7 @@ using DataTable = System.Data.DataTable;
 using Office = Microsoft.Office.Interop;
 using Krypton.Toolkit;
 
+
 namespace SysCisepro3.TalentoHumano
 {
     public partial class FrmDescuentos : KryptonForm
@@ -165,12 +166,13 @@ namespace SysCisepro3.TalentoHumano
             if (_estadoAccion == 1) return;
             try
             {
-                var tipo = cbxFiltro.Text;
+                var tipo = (cbxFiltro.SelectedIndex == 0 || string.IsNullOrWhiteSpace(cbxFiltro.Text)) ? string.Empty : cbxFiltro.Text;
                 var fechaDesde = dtpFechaDesde.Value.Year + "-" + dtpFechaDesde.Value.Month + "-" + dtpFechaDesde.Value.Day + " 00:00:00";
                 var fechaHasta = dtpFechaHasta.Value.Year + "-" + dtpFechaHasta.Value.Month + "-" + dtpFechaHasta.Value.Day + " 23:59:59";
+                var filtro = string.IsNullOrWhiteSpace(txtFiltro.Text) ? string.Empty : txtFiltro.Text.Trim();
 
-                var datos = _objRegistroDescuento.SeleccionarDescuentosDatos(TipoCon, txtFiltro.Text.Trim(), fechaDesde, fechaHasta, string.Empty, tipo);
-
+                var datos = _objRegistroDescuento.SeleccionarDescuentosDatos(TipoCon, filtro, fechaDesde, fechaHasta, tipo);
+               
                 ListView1.Items.Clear();
                 ListView1.Groups.Clear();
 
@@ -1100,8 +1102,9 @@ namespace SysCisepro3.TalentoHumano
                 double tt, t1 = 0, t2 = 0, t3 = 0, t4 = 0, t5 = 0, t6 = 0, t7 = 0, t8 = 0, t9 = 0, t10 = 0, t11 = 0, t12 = 0, t13 = 0, t14 = 0, t15 = 0, t16 = 0, t17 = 0;
 
                 dataGridView1.Rows.Clear();
-
-                var resumen = _objRegistroDescuento.SeleccionarDescuentosDatos1(TipoCon, txtFiltro.Text.Trim(), fechaDesde, fechaHasta);
+                var filtro = string.IsNullOrWhiteSpace(txtFiltro.Text) ? string.Empty : txtFiltro.Text.Trim();
+                
+                var resumen = _objRegistroDescuento.SeleccionarDescuentosDatos1(TipoCon, filtro, fechaDesde, fechaHasta);
                 foreach (DataRow row in resumen.Rows)
                 {
                     d1 = Convert.ToDouble(row[3]);
@@ -1299,8 +1302,9 @@ namespace SysCisepro3.TalentoHumano
                 var fechaDesde = dateTimePicker3.Value.Year + "-" + dateTimePicker3.Value.Month + "-" + dateTimePicker3.Value.Day + " 00:00:00";
                 var fechaHasta = dateTimePicker2.Value.Year + "-" + dateTimePicker2.Value.Month + "-" + dateTimePicker2.Value.Day + " 23:59:59";
 
+                var filtro = string.IsNullOrWhiteSpace(textBox1.Text) ? string.Empty : txtFiltro.Text.Trim();
                 var grupos = _objRegistroDescuento.SeleccionarDescuentosGrupos(TipoCon, textBox1.Text.Trim(), fechaDesde, fechaHasta);
-                var datos = _objRegistroDescuento.SeleccionarDescuentosDatos(TipoCon, textBox1.Text.Trim(), fechaDesde, fechaHasta);
+                var datos = _objRegistroDescuento.SeleccionarDescuentosDatos(TipoCon, filtro, fechaDesde, fechaHasta);
 
 
                 listView2.Items.Clear();

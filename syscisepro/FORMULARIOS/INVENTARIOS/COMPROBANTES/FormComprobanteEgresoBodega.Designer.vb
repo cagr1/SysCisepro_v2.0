@@ -1875,7 +1875,7 @@
             '
             Me.KryptonGroupBox5.Panel.Controls.Add(Me.btnBuscarModi)
             Me.KryptonGroupBox5.Panel.Controls.Add(Me.txtFiltro)
-            Me.KryptonGroupBox5.Size = New System.Drawing.Size(365, 61)
+            Me.KryptonGroupBox5.Size = New System.Drawing.Size(266, 61)
             Me.KryptonGroupBox5.TabIndex = 152
             Me.KryptonGroupBox5.Values.Heading = "Busqueda"
             '
@@ -1883,7 +1883,7 @@
             '
             Me.btnBuscarModi.AutoSize = True
             Me.btnBuscarModi.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-            Me.btnBuscarModi.Location = New System.Drawing.Point(311, 3)
+            Me.btnBuscarModi.Location = New System.Drawing.Point(218, 3)
             Me.btnBuscarModi.Name = "btnBuscarModi"
             Me.btnBuscarModi.Size = New System.Drawing.Size(32, 32)
             Me.btnBuscarModi.StateCommon.Back.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.[False]
@@ -2233,7 +2233,7 @@
             '
             Me.txtFiltro.Location = New System.Drawing.Point(16, 8)
             Me.txtFiltro.Name = "txtFiltro"
-            Me.txtFiltro.Size = New System.Drawing.Size(264, 21)
+            Me.txtFiltro.Size = New System.Drawing.Size(189, 21)
             Me.txtFiltro.TabIndex = 13
             '
             'FormComprobanteEgresoBodega

@@ -26,8 +26,6 @@
             Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
@@ -35,6 +33,8 @@
             Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormFacturaVenta))
             Me.gbValores = New System.Windows.Forms.GroupBox()
             Me.cmbIva = New System.Windows.Forms.ComboBox()
@@ -87,13 +87,6 @@
             Me.panelDetalle = New System.Windows.Forms.Panel()
             Me.lblDetalleSolicitud = New System.Windows.Forms.Label()
             Me.dgvDetalleFacturaVenta = New System.Windows.Forms.DataGridView()
-            Me.eliminarItem = New System.Windows.Forms.DataGridViewButtonColumn()
-            Me.idItem = New System.Windows.Forms.DataGridViewTextBoxColumn()
-            Me.nombreProductoServicio = New System.Windows.Forms.DataGridViewTextBoxColumn()
-            Me.cantidadProductoServicio = New System.Windows.Forms.DataGridViewTextBoxColumn()
-            Me.valorUnitarioProductoServicio = New System.Windows.Forms.DataGridViewTextBoxColumn()
-            Me.descuento = New System.Windows.Forms.DataGridViewTextBoxColumn()
-            Me.valorTotalProductoServicio = New System.Windows.Forms.DataGridViewTextBoxColumn()
             Me.gbEmpresa = New System.Windows.Forms.GroupBox()
             Me.txtDireccionEmpresa = New System.Windows.Forms.Label()
             Me.lblIdEmpresa = New System.Windows.Forms.Label()
@@ -146,6 +139,13 @@
             Me.btnGuardar = New System.Windows.Forms.ToolStripMenuItem()
             Me.btnCancelar = New System.Windows.Forms.ToolStripMenuItem()
             Me.Panel2 = New System.Windows.Forms.Panel()
+            Me.eliminarItem = New System.Windows.Forms.DataGridViewButtonColumn()
+            Me.idItem = New System.Windows.Forms.DataGridViewTextBoxColumn()
+            Me.nombreProductoServicio = New System.Windows.Forms.DataGridViewTextBoxColumn()
+            Me.cantidadProductoServicio = New System.Windows.Forms.DataGridViewTextBoxColumn()
+            Me.valorUnitarioProductoServicio = New System.Windows.Forms.DataGridViewTextBoxColumn()
+            Me.descuento = New System.Windows.Forms.DataGridViewTextBoxColumn()
+            Me.valorTotalProductoServicio = New System.Windows.Forms.DataGridViewTextBoxColumn()
             Me.gbValores.SuspendLayout()
             Me.gbNumeracion.SuspendLayout()
             Me.gbCliente.SuspendLayout()
@@ -188,9 +188,9 @@
             Me.gbValores.Controls.Add(Me.lblIva)
             Me.gbValores.Controls.Add(Me.lblSubtotal0OrdenCompra)
             Me.gbValores.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.gbValores.Location = New System.Drawing.Point(609, 397)
+            Me.gbValores.Location = New System.Drawing.Point(568, 397)
             Me.gbValores.Name = "gbValores"
-            Me.gbValores.Size = New System.Drawing.Size(180, 157)
+            Me.gbValores.Size = New System.Drawing.Size(185, 157)
             Me.gbValores.TabIndex = 71
             Me.gbValores.TabStop = False
             '
@@ -368,7 +368,7 @@
             Me.gbNumeracion.Controls.Add(Me.Label1)
             Me.gbNumeracion.Controls.Add(Me.Label6)
             Me.gbNumeracion.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.gbNumeracion.Location = New System.Drawing.Point(573, 67)
+            Me.gbNumeracion.Location = New System.Drawing.Point(537, 67)
             Me.gbNumeracion.Name = "gbNumeracion"
             Me.gbNumeracion.Size = New System.Drawing.Size(216, 65)
             Me.gbNumeracion.TabIndex = 74
@@ -377,7 +377,7 @@
             'Label17
             '
             Me.Label17.AutoSize = True
-            Me.Label17.Location = New System.Drawing.Point(168, 30)
+            Me.Label17.Location = New System.Drawing.Point(144, 30)
             Me.Label17.Name = "Label17"
             Me.Label17.Size = New System.Drawing.Size(10, 13)
             Me.Label17.TabIndex = 14
@@ -386,7 +386,7 @@
             'lblPtoEmisionFacturaEmpresa
             '
             Me.lblPtoEmisionFacturaEmpresa.AutoSize = True
-            Me.lblPtoEmisionFacturaEmpresa.Location = New System.Drawing.Point(141, 30)
+            Me.lblPtoEmisionFacturaEmpresa.Location = New System.Drawing.Point(124, 30)
             Me.lblPtoEmisionFacturaEmpresa.Name = "lblPtoEmisionFacturaEmpresa"
             Me.lblPtoEmisionFacturaEmpresa.Size = New System.Drawing.Size(16, 13)
             Me.lblPtoEmisionFacturaEmpresa.TabIndex = 13
@@ -422,7 +422,7 @@
             'lblNumeroFacturaVenta
             '
             Me.lblNumeroFacturaVenta.AutoSize = True
-            Me.lblNumeroFacturaVenta.Location = New System.Drawing.Point(184, 30)
+            Me.lblNumeroFacturaVenta.Location = New System.Drawing.Point(156, 30)
             Me.lblNumeroFacturaVenta.Name = "lblNumeroFacturaVenta"
             Me.lblNumeroFacturaVenta.Size = New System.Drawing.Size(16, 13)
             Me.lblNumeroFacturaVenta.TabIndex = 9
@@ -431,7 +431,7 @@
             'Label7
             '
             Me.Label7.AutoSize = True
-            Me.Label7.Location = New System.Drawing.Point(127, 30)
+            Me.Label7.Location = New System.Drawing.Point(111, 30)
             Me.Label7.Name = "Label7"
             Me.Label7.Size = New System.Drawing.Size(10, 13)
             Me.Label7.TabIndex = 8
@@ -440,7 +440,7 @@
             'lblEstablecimientoFacturaEmpresa
             '
             Me.lblEstablecimientoFacturaEmpresa.AutoSize = True
-            Me.lblEstablecimientoFacturaEmpresa.Location = New System.Drawing.Point(100, 30)
+            Me.lblEstablecimientoFacturaEmpresa.Location = New System.Drawing.Point(92, 30)
             Me.lblEstablecimientoFacturaEmpresa.Name = "lblEstablecimientoFacturaEmpresa"
             Me.lblEstablecimientoFacturaEmpresa.Size = New System.Drawing.Size(16, 13)
             Me.lblEstablecimientoFacturaEmpresa.TabIndex = 6
@@ -449,7 +449,7 @@
             'Label5
             '
             Me.Label5.AutoSize = True
-            Me.Label5.Location = New System.Drawing.Point(72, 30)
+            Me.Label5.Location = New System.Drawing.Point(66, 30)
             Me.Label5.Name = "Label5"
             Me.Label5.Size = New System.Drawing.Size(23, 13)
             Me.Label5.TabIndex = 5
@@ -531,7 +531,7 @@
             Me.gbCliente.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.gbCliente.Location = New System.Drawing.Point(1, 129)
             Me.gbCliente.Name = "gbCliente"
-            Me.gbCliente.Size = New System.Drawing.Size(598, 70)
+            Me.gbCliente.Size = New System.Drawing.Size(533, 70)
             Me.gbCliente.TabIndex = 75
             Me.gbCliente.TabStop = False
             '
@@ -544,7 +544,7 @@
             Me.cmbDirecciones.FormattingEnabled = True
             Me.cmbDirecciones.Location = New System.Drawing.Point(50, 41)
             Me.cmbDirecciones.Name = "cmbDirecciones"
-            Me.cmbDirecciones.Size = New System.Drawing.Size(542, 21)
+            Me.cmbDirecciones.Size = New System.Drawing.Size(415, 21)
             Me.cmbDirecciones.TabIndex = 13
             '
             'Label14
@@ -599,7 +599,7 @@
             Me.txtNombreComercialCliente.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtNombreComercialCliente.Location = New System.Drawing.Point(50, 19)
             Me.txtNombreComercialCliente.Name = "txtNombreComercialCliente"
-            Me.txtNombreComercialCliente.Size = New System.Drawing.Size(542, 21)
+            Me.txtNombreComercialCliente.Size = New System.Drawing.Size(415, 21)
             Me.txtNombreComercialCliente.TabIndex = 1
             '
             'Label10
@@ -629,7 +629,7 @@
             '
             'txtTelefonoClienteGeneral
             '
-            Me.txtTelefonoClienteGeneral.Location = New System.Drawing.Point(399, 19)
+            Me.txtTelefonoClienteGeneral.Location = New System.Drawing.Point(304, 19)
             Me.txtTelefonoClienteGeneral.Name = "txtTelefonoClienteGeneral"
             Me.txtTelefonoClienteGeneral.ReadOnly = True
             Me.txtTelefonoClienteGeneral.Size = New System.Drawing.Size(110, 21)
@@ -675,9 +675,9 @@
             Me.gbFecha.Controls.Add(Me.dtpFechaEmisionFacturaVenta)
             Me.gbFecha.Controls.Add(Me.txtGuiaRemisionFacturaVenta)
             Me.gbFecha.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.gbFecha.Location = New System.Drawing.Point(600, 128)
+            Me.gbFecha.Location = New System.Drawing.Point(537, 128)
             Me.gbFecha.Name = "gbFecha"
-            Me.gbFecha.Size = New System.Drawing.Size(189, 70)
+            Me.gbFecha.Size = New System.Drawing.Size(216, 70)
             Me.gbFecha.TabIndex = 76
             Me.gbFecha.TabStop = False
             '
@@ -698,7 +698,7 @@
             Me.panelDetalle.ForeColor = System.Drawing.Color.White
             Me.panelDetalle.Location = New System.Drawing.Point(1, 200)
             Me.panelDetalle.Name = "panelDetalle"
-            Me.panelDetalle.Size = New System.Drawing.Size(788, 21)
+            Me.panelDetalle.Size = New System.Drawing.Size(752, 21)
             Me.panelDetalle.TabIndex = 78
             '
             'lblDetalleSolicitud
@@ -745,66 +745,8 @@
             Me.dgvDetalleFacturaVenta.Name = "dgvDetalleFacturaVenta"
             Me.dgvDetalleFacturaVenta.RowHeadersVisible = False
             Me.dgvDetalleFacturaVenta.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvDetalleFacturaVenta.Size = New System.Drawing.Size(785, 159)
+            Me.dgvDetalleFacturaVenta.Size = New System.Drawing.Size(749, 159)
             Me.dgvDetalleFacturaVenta.TabIndex = 79
-            '
-            'eliminarItem
-            '
-            DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-            DataGridViewCellStyle3.BackColor = System.Drawing.Color.Red
-            DataGridViewCellStyle3.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            DataGridViewCellStyle3.ForeColor = System.Drawing.Color.White
-            DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
-            DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White
-            Me.eliminarItem.DefaultCellStyle = DataGridViewCellStyle3
-            Me.eliminarItem.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-            Me.eliminarItem.HeaderText = "SUPR"
-            Me.eliminarItem.Name = "eliminarItem"
-            Me.eliminarItem.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-            Me.eliminarItem.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
-            Me.eliminarItem.Text = "(X)"
-            Me.eliminarItem.ToolTipText = "Eliminar Fila"
-            Me.eliminarItem.UseColumnTextForButtonValue = True
-            Me.eliminarItem.Width = 40
-            '
-            'idItem
-            '
-            Me.idItem.HeaderText = "ID"
-            Me.idItem.Name = "idItem"
-            Me.idItem.Width = 50
-            '
-            'nombreProductoServicio
-            '
-            DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-            Me.nombreProductoServicio.DefaultCellStyle = DataGridViewCellStyle4
-            Me.nombreProductoServicio.HeaderText = "PRODUCTO/SERVICIO"
-            Me.nombreProductoServicio.Name = "nombreProductoServicio"
-            Me.nombreProductoServicio.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-            Me.nombreProductoServicio.Width = 370
-            '
-            'cantidadProductoServicio
-            '
-            Me.cantidadProductoServicio.HeaderText = "CANT."
-            Me.cantidadProductoServicio.Name = "cantidadProductoServicio"
-            Me.cantidadProductoServicio.Width = 55
-            '
-            'valorUnitarioProductoServicio
-            '
-            Me.valorUnitarioProductoServicio.HeaderText = "V. UNITARIO"
-            Me.valorUnitarioProductoServicio.Name = "valorUnitarioProductoServicio"
-            Me.valorUnitarioProductoServicio.Width = 107
-            '
-            'descuento
-            '
-            Me.descuento.HeaderText = "DESC."
-            Me.descuento.Name = "descuento"
-            Me.descuento.Width = 90
-            '
-            'valorTotalProductoServicio
-            '
-            Me.valorTotalProductoServicio.HeaderText = "V. TOTAL"
-            Me.valorTotalProductoServicio.Name = "valorTotalProductoServicio"
-            Me.valorTotalProductoServicio.Width = 90
             '
             'gbEmpresa
             '
@@ -815,7 +757,7 @@
             Me.gbEmpresa.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.gbEmpresa.Location = New System.Drawing.Point(1, 67)
             Me.gbEmpresa.Name = "gbEmpresa"
-            Me.gbEmpresa.Size = New System.Drawing.Size(571, 65)
+            Me.gbEmpresa.Size = New System.Drawing.Size(533, 65)
             Me.gbEmpresa.TabIndex = 80
             Me.gbEmpresa.TabStop = False
             '
@@ -823,7 +765,7 @@
             '
             Me.txtDireccionEmpresa.Location = New System.Drawing.Point(8, 32)
             Me.txtDireccionEmpresa.Name = "txtDireccionEmpresa"
-            Me.txtDireccionEmpresa.Size = New System.Drawing.Size(557, 28)
+            Me.txtDireccionEmpresa.Size = New System.Drawing.Size(519, 28)
             Me.txtDireccionEmpresa.TabIndex = 5
             Me.txtDireccionEmpresa.Text = "Dirección Empresa"
             Me.txtDireccionEmpresa.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -855,7 +797,7 @@
             Me.gbSon.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.gbSon.Location = New System.Drawing.Point(1, 397)
             Me.gbSon.Name = "gbSon"
-            Me.gbSon.Size = New System.Drawing.Size(607, 36)
+            Me.gbSon.Size = New System.Drawing.Size(562, 36)
             Me.gbSon.TabIndex = 85
             Me.gbSon.TabStop = False
             '
@@ -875,7 +817,7 @@
             Me.txtSon.Location = New System.Drawing.Point(45, 10)
             Me.txtSon.Name = "txtSon"
             Me.txtSon.ReadOnly = True
-            Me.txtSon.Size = New System.Drawing.Size(556, 22)
+            Me.txtSon.Size = New System.Drawing.Size(517, 22)
             Me.txtSon.TabIndex = 1
             '
             'gbObservaciones
@@ -885,7 +827,7 @@
             Me.gbObservaciones.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.gbObservaciones.Location = New System.Drawing.Point(1, 512)
             Me.gbObservaciones.Name = "gbObservaciones"
-            Me.gbObservaciones.Size = New System.Drawing.Size(607, 40)
+            Me.gbObservaciones.Size = New System.Drawing.Size(562, 40)
             Me.gbObservaciones.TabIndex = 84
             Me.gbObservaciones.TabStop = False
             Me.gbObservaciones.Text = "OBSERVACIONES:"
@@ -897,7 +839,7 @@
             Me.txtObservacionesFactura.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtObservacionesFactura.Location = New System.Drawing.Point(7, 14)
             Me.txtObservacionesFactura.Name = "txtObservacionesFactura"
-            Me.txtObservacionesFactura.Size = New System.Drawing.Size(594, 20)
+            Me.txtObservacionesFactura.Size = New System.Drawing.Size(555, 20)
             Me.txtObservacionesFactura.TabIndex = 5
             '
             'gbTipoPago
@@ -980,7 +922,7 @@
             Me.gbConceptoFactura.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.gbConceptoFactura.Location = New System.Drawing.Point(343, 434)
             Me.gbConceptoFactura.Name = "gbConceptoFactura"
-            Me.gbConceptoFactura.Size = New System.Drawing.Size(265, 40)
+            Me.gbConceptoFactura.Size = New System.Drawing.Size(220, 40)
             Me.gbConceptoFactura.TabIndex = 86
             Me.gbConceptoFactura.TabStop = False
             Me.gbConceptoFactura.Text = "CONCEPTO:"
@@ -1003,7 +945,7 @@
             Me.cmbConcepto.FormattingEnabled = True
             Me.cmbConcepto.Location = New System.Drawing.Point(6, 16)
             Me.cmbConcepto.Name = "cmbConcepto"
-            Me.cmbConcepto.Size = New System.Drawing.Size(253, 21)
+            Me.cmbConcepto.Size = New System.Drawing.Size(214, 21)
             Me.cmbConcepto.TabIndex = 0
             '
             'gbTipoAnbiente
@@ -1133,7 +1075,7 @@
             Me.GroupBox2.Location = New System.Drawing.Point(0, 220)
             Me.GroupBox2.Name = "GroupBox2"
             Me.GroupBox2.Padding = New System.Windows.Forms.Padding(2)
-            Me.GroupBox2.Size = New System.Drawing.Size(789, 178)
+            Me.GroupBox2.Size = New System.Drawing.Size(753, 178)
             Me.GroupBox2.TabIndex = 91
             Me.GroupBox2.TabStop = False
             '
@@ -1142,7 +1084,7 @@
             Me.GroupBox3.BackColor = System.Drawing.Color.White
             Me.GroupBox3.Controls.Add(Me.dgvFacturaVenta)
             Me.GroupBox3.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.GroupBox3.Location = New System.Drawing.Point(795, 67)
+            Me.GroupBox3.Location = New System.Drawing.Point(757, 67)
             Me.GroupBox3.Name = "GroupBox3"
             Me.GroupBox3.Size = New System.Drawing.Size(261, 631)
             Me.GroupBox3.TabIndex = 92
@@ -1156,7 +1098,7 @@
             Me.GroupBox4.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.GroupBox4.Location = New System.Drawing.Point(1, 573)
             Me.GroupBox4.Name = "GroupBox4"
-            Me.GroupBox4.Size = New System.Drawing.Size(788, 125)
+            Me.GroupBox4.Size = New System.Drawing.Size(752, 125)
             Me.GroupBox4.TabIndex = 93
             Me.GroupBox4.TabStop = False
             '
@@ -1190,7 +1132,7 @@
             DataGridViewCellStyle12.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.dgvAsientoDiarioFactura.RowsDefaultCellStyle = DataGridViewCellStyle12
             Me.dgvAsientoDiarioFactura.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvAsientoDiarioFactura.Size = New System.Drawing.Size(782, 106)
+            Me.dgvAsientoDiarioFactura.Size = New System.Drawing.Size(746, 106)
             Me.dgvAsientoDiarioFactura.TabIndex = 28
             '
             'CODIGO
@@ -1302,7 +1244,7 @@
             Me.Panel1.ForeColor = System.Drawing.Color.White
             Me.Panel1.Location = New System.Drawing.Point(1, 554)
             Me.Panel1.Name = "Panel1"
-            Me.Panel1.Size = New System.Drawing.Size(788, 22)
+            Me.Panel1.Size = New System.Drawing.Size(747, 22)
             Me.Panel1.TabIndex = 79
             '
             'cbxConvenio
@@ -1314,7 +1256,7 @@
             Me.cbxConvenio.FormattingEnabled = True
             Me.cbxConvenio.Location = New System.Drawing.Point(11, 13)
             Me.cbxConvenio.Name = "cbxConvenio"
-            Me.cbxConvenio.Size = New System.Drawing.Size(508, 21)
+            Me.cbxConvenio.Size = New System.Drawing.Size(469, 21)
             Me.cbxConvenio.TabIndex = 2
             '
             'GroupBox5
@@ -1324,7 +1266,7 @@
             Me.GroupBox5.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.GroupBox5.Location = New System.Drawing.Point(83, 474)
             Me.GroupBox5.Name = "GroupBox5"
-            Me.GroupBox5.Size = New System.Drawing.Size(525, 38)
+            Me.GroupBox5.Size = New System.Drawing.Size(480, 38)
             Me.GroupBox5.TabIndex = 94
             Me.GroupBox5.TabStop = False
             Me.GroupBox5.Text = "CONVENIO DÉBITO BANCARIO"
@@ -1400,12 +1342,70 @@
             Me.Panel2.Size = New System.Drawing.Size(391, 26)
             Me.Panel2.TabIndex = 95
             '
+            'eliminarItem
+            '
+            DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+            DataGridViewCellStyle3.BackColor = System.Drawing.Color.Red
+            DataGridViewCellStyle3.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle3.ForeColor = System.Drawing.Color.White
+            DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
+            DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White
+            Me.eliminarItem.DefaultCellStyle = DataGridViewCellStyle3
+            Me.eliminarItem.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+            Me.eliminarItem.HeaderText = "SUPR"
+            Me.eliminarItem.Name = "eliminarItem"
+            Me.eliminarItem.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+            Me.eliminarItem.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
+            Me.eliminarItem.Text = "(X)"
+            Me.eliminarItem.ToolTipText = "Eliminar Fila"
+            Me.eliminarItem.UseColumnTextForButtonValue = True
+            Me.eliminarItem.Width = 40
+            '
+            'idItem
+            '
+            Me.idItem.HeaderText = "ID"
+            Me.idItem.Name = "idItem"
+            Me.idItem.Width = 50
+            '
+            'nombreProductoServicio
+            '
+            DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+            Me.nombreProductoServicio.DefaultCellStyle = DataGridViewCellStyle4
+            Me.nombreProductoServicio.HeaderText = "PRODUCTO/SERVICIO"
+            Me.nombreProductoServicio.Name = "nombreProductoServicio"
+            Me.nombreProductoServicio.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+            Me.nombreProductoServicio.Width = 330
+            '
+            'cantidadProductoServicio
+            '
+            Me.cantidadProductoServicio.HeaderText = "CANT."
+            Me.cantidadProductoServicio.Name = "cantidadProductoServicio"
+            Me.cantidadProductoServicio.Width = 55
+            '
+            'valorUnitarioProductoServicio
+            '
+            Me.valorUnitarioProductoServicio.HeaderText = "V. UNITARIO"
+            Me.valorUnitarioProductoServicio.Name = "valorUnitarioProductoServicio"
+            Me.valorUnitarioProductoServicio.Width = 107
+            '
+            'descuento
+            '
+            Me.descuento.HeaderText = "DESC."
+            Me.descuento.Name = "descuento"
+            Me.descuento.Width = 90
+            '
+            'valorTotalProductoServicio
+            '
+            Me.valorTotalProductoServicio.HeaderText = "V. TOTAL"
+            Me.valorTotalProductoServicio.Name = "valorTotalProductoServicio"
+            Me.valorTotalProductoServicio.Width = 90
+            '
             'FormFacturaVenta
             '
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.BackColor = System.Drawing.Color.White
-            Me.ClientSize = New System.Drawing.Size(1060, 702)
+            Me.ClientSize = New System.Drawing.Size(1020, 702)
             Me.Controls.Add(Me.MenuStrip1)
             Me.Controls.Add(Me.gbPtoEmision)
             Me.Controls.Add(Me.GroupBox5)
@@ -1577,15 +1577,15 @@
         Friend WithEvents HABER As System.Windows.Forms.DataGridViewTextBoxColumn
         Friend WithEvents txtDireccionEmpresa As System.Windows.Forms.Label
         Friend WithEvents btnCompEgreso As System.Windows.Forms.ToolStripMenuItem
-        Friend WithEvents eliminarItem As System.Windows.Forms.DataGridViewButtonColumn
-        Friend WithEvents idItem As System.Windows.Forms.DataGridViewTextBoxColumn
-        Friend WithEvents nombreProductoServicio As System.Windows.Forms.DataGridViewTextBoxColumn
-        Friend WithEvents cantidadProductoServicio As System.Windows.Forms.DataGridViewTextBoxColumn
-        Friend WithEvents valorUnitarioProductoServicio As System.Windows.Forms.DataGridViewTextBoxColumn
-        Friend WithEvents descuento As System.Windows.Forms.DataGridViewTextBoxColumn
-        Friend WithEvents valorTotalProductoServicio As System.Windows.Forms.DataGridViewTextBoxColumn
         Friend WithEvents cmbDirecciones As System.Windows.Forms.ComboBox
         Friend WithEvents Label14 As System.Windows.Forms.Label
         Friend WithEvents cmbIva As System.Windows.Forms.ComboBox
+        Friend WithEvents eliminarItem As DataGridViewButtonColumn
+        Friend WithEvents idItem As DataGridViewTextBoxColumn
+        Friend WithEvents nombreProductoServicio As DataGridViewTextBoxColumn
+        Friend WithEvents cantidadProductoServicio As DataGridViewTextBoxColumn
+        Friend WithEvents valorUnitarioProductoServicio As DataGridViewTextBoxColumn
+        Friend WithEvents descuento As DataGridViewTextBoxColumn
+        Friend WithEvents valorTotalProductoServicio As DataGridViewTextBoxColumn
     End Class
 End Namespace

@@ -510,7 +510,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
             dgvSecuencial.Rows.RemoveAt(dgvSecuencial.CurrentCell.RowIndex())
             tsmEliminar.Enabled = dgvSecuencial.RowCount > 0
         End Sub
-        Private Sub btnBuscar_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnBuscar.Click
+        Private Sub btnBuscar_Click(ByVal sender As System.Object, ByVal e As EventArgs)
             CargarComprobantesEgreso(txtFiltro.Text)
             TmsActualizar.Enabled = True
             TmsEliminar.Enabled = True
@@ -545,6 +545,16 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                 Next
 
                 dgvComprobantesIngreso.Columns(17).Visible = False
+                dgvComprobantesIngreso.Columns(2).Visible = False
+                dgvComprobantesIngreso.Columns(2).Visible = False
+                dgvComprobantesIngreso.Columns(4).Visible = False
+                dgvComprobantesIngreso.Columns(5).Visible = False
+                dgvComprobantesIngreso.Columns(7).Visible = False
+                dgvComprobantesIngreso.Columns(8).Visible = False
+                dgvComprobantesIngreso.Columns(9).Visible = False
+                dgvComprobantesIngreso.Columns(10).Visible = False
+                dgvComprobantesIngreso.Columns(11).Visible = False
+
                 dgvComprobantesIngreso.AutoResizeColumns()
                 dgvComprobantesIngreso.AutoResizeRows()
 
