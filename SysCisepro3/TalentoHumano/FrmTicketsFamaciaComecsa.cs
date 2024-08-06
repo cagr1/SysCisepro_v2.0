@@ -17,6 +17,7 @@ using ClassLibraryCisepro3.ProcesosSql;
 using ClassLibraryCisepro3.Estaticas;
 using Microsoft.Office.Interop.Excel;
 using Krypton.Toolkit;
+using System.Text.RegularExpressions;
 
 namespace SysCisepro3.TalentoHumano
 {
@@ -250,12 +251,16 @@ namespace SysCisepro3.TalentoHumano
                 var fechaHasta = dtpFechaHasta.Value.Year + "-" + dtpFechaHasta.Value.Month + "-" + dtpFechaHasta.Value.Day + " 23:59:59";
 
                 var data = _objTicketsFarmaciaComecsa.SeleccionarRegistroNotificaciones(TipoCon, fechaDesde, fechaHasta, cbxFiltro.SelectedIndex, txtFiltro.Text.Trim());
-
+                double td = 0;
                 foreach (DataRow row in data.Rows)
-                    dataGridView1.Rows.Add(row[0], row[2], row[1], row[3], row[4], row[5], row[8], row[6]);
-            
+                {
+                    string text = row[5].ToString();
+                    string value = ExtractNumericValue(text);
+                    dataGridView1.Rows.Add(row[0], row[2], row[1], row[3], row[4], value, row[8], row[6]);
+                    td += Convert.ToDouble(value);
+                }
                 dataGridView1.AutoResizeRows();
-                Label1.Text = dataGridView1.RowCount + @" REGISTRO(S)";
+                Label1.Text = dataGridView1.RowCount + @" REGISTRO(S) - TOTAL DESCUENTOS $ " + td.ToString("N");
 
                 foreach (var row in dataGridView1.Rows.Cast<DataGridViewRow>().Where(row => row.Cells[0].Value.ToString().Equals(idsel + "")))
                 {
@@ -437,6 +442,11 @@ namespace SysCisepro3.TalentoHumano
             {
                 Console.Write(eccezione);
             }
-        } 
+        }
+        private string ExtractNumericValue(string text)
+        {
+            Match match = Regex.Match(text, @"\d+(\.\d{1,2})?");
+            return match.Value;
+        }
     }
 }

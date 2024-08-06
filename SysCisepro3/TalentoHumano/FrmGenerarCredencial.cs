@@ -618,8 +618,9 @@ namespace SysCisepro3.TalentoHumano
             _objTicketsFarmaciaComecsa.Tipo = 2;
 
             _sqlCommands.Add(_objTicketsFarmaciaComecsa.NuevoRegistroNotificacionCommands());
-
-            var res = ComandosSql.ProcesarTransacciones(TipoCon, _sqlCommands, "GUARDAR TICKET");
+            var user = Usuario.Datos.ToString();
+            var nombre = $"PERMISO POR: {user}";
+            var res = ComandosSql.ProcesarTransacciones(TipoCon, _sqlCommands, nombre);
             //string empre = Validaciones.NombreCompany(TipoCon) + " CÍA. LTDA.";
             string empre = Validaciones.NombreCompany(TipoCon); 
             if ((bool)res[0])

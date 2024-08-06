@@ -36,49 +36,41 @@ namespace ClassLibraryCisepro3.TalentoHumano
         {
             var pars = new List<object[]>
             {
-                new object[] { "DESDE", SqlDbType.DateTime, desde } ,
-                new object[] { "HASTA", SqlDbType.DateTime, hasta } ,
-                new object[] { "FILTRO", SqlDbType.VarChar, filtro }  
+                new object[] { "@DESDE", SqlDbType.DateTime, desde } ,
+                new object[] { "@HASTA", SqlDbType.DateTime, hasta } ,
+                new object[] { "@FILTRO", SqlDbType.NVarChar, filtro },
+                new object[] { "@TIPO", SqlDbType.Int, tipo}
             };
-            // string sql = null;
-            //if (tipo == 0) sql = "select r.*, (case r.tipo_ticket when 0 then 'TICKET DE FARMACIA' else 'TICKET DE COMECSA' end) TIPO from TICKETS_FARMACIA_COMECSA r where (r.fecha_registro between @DESDE and @HASTA) and r.estado = 1 and (r.detalle_observacion like ('%'+@FILTRO+'%') or r.cedularuc like ('%'+@FILTRO+'%') or r.apellidos_nombres like ('%'+@FILTRO+'%')) order by r.fecha_registro;";
-            //if (tipo == 1) sql = "select r.*, (case r.tipo_ticket when 0 then 'TICKET DE FARMACIA' else 'TICKET DE COMECS' end) TIPO from TICKETS_FARMACIA_COMECSA r where (r.fecha_registro between @DESDE and @HASTA) and r.tipo_ticket = 0 and r.estado = 1 and (r.detalle_observacion like ('%'+@FILTRO+'%') or r.cedularuc like ('%'+@FILTRO+'%') or r.apellidos_nombres like ('%'+@FILTRO+'%')) order by r.fecha_registro;";
-            //if (tipo == 2) sql = "select r.*, (case r.tipo_ticket when 0 then 'TICKET DE FARMACIA' else 'TICKET DE COMECSA' end) TIPO from TICKETS_FARMACIA_COMECSA r where (r.fecha_registro between @DESDE and @HASTA) and r.tipo_ticket = 1 and r.estado = 1 and (r.detalle_observacion like ('%'+@FILTRO+'%') or r.cedularuc like ('%'+@FILTRO+'%') or r.apellidos_nombres like ('%'+@FILTRO+'%')) order by r.fecha_registro;";
-
-            //if (tipo == 0) sql = "select r.*, (case r.tipo_ticket when 0 then 'TICKET DE FARMACIA' when 1 then 'TICKET DE COMECSA' when 2  then 'SOLICITUD ANTICIPO' when 3 then 'TICKET DE COMISARIATO' end) TIPO from TICKETS_FARMACIA_COMECSA r where (r.fecha_registro between @DESDE and @HASTA)  and r.estado = 1 and (r.detalle_observacion like ('%'+@FILTRO+'%') or r.cedularuc like ('%'+@FILTRO+'%') or r.apellidos_nombres like ('%'+@FILTRO+'%')) order by r.fecha_registro;";
-            //if (tipo == 1) sql = "select r.*, (case r.tipo_ticket when 1 then 'TICKET DE COMECSA' end) TIPO from TICKETS_FARMACIA_COMECSA r where (r.fecha_registro between @DESDE and @HASTA) and r.tipo_ticket = 1 and r.estado = 1 and (r.detalle_observacion like ('%'+@FILTRO+'%') or r.cedularuc like ('%'+@FILTRO+'%') or r.apellidos_nombres like ('%'+@FILTRO+'%')) order by r.fecha_registro;";
-            //if (tipo == 2) sql = "select r.*, (case r.tipo_ticket when 2 then 'SOLICITUD ANTICIPO' end) TIPO from TICKETS_FARMACIA_COMECSA r where (r.fecha_registro between @DESDE and @HASTA) and r.tipo_ticket = 2 and r.estado = 1 and (r.detalle_observacion like ('%'+@FILTRO+'%') or r.cedularuc like ('%'+@FILTRO+'%') or r.apellidos_nombres like ('%'+@FILTRO+'%')) order by r.fecha_registro;";
-            //if (tipo == 3) sql = "select r.*, (case r.tipo_ticket when 3 then 'TICKET DE COMISARIATO' end) TIPO from TICKETS_FARMACIA_COMECSA r where (r.fecha_registro between @DESDE and @HASTA) and r.tipo_ticket = 3 and r.estado = 1 and (r.detalle_observacion like ('%'+@FILTRO+'%') or r.cedularuc like ('%'+@FILTRO+'%') or r.apellidos_nombres like ('%'+@FILTRO+'%')) order by r.fecha_registro;";
-
-            string sql = "SELECT r.*, " +
-                  "CASE r.tipo_ticket " +
-                  "    WHEN 0 THEN 'TICKET DE FARMACIA' " +
-                  "    WHEN 1 THEN 'TICKET DE COMECSA' " +
-                  "    WHEN 2 THEN 'SOLICITUD ANTICIPO' " +
-                  "    WHEN 3 THEN 'TICKET DE COMISARIATO' " +
-                  "END AS TIPO " +
-                  "FROM TICKETS_FARMACIA_COMECSA r " +
-                  "WHERE r.fecha_registro BETWEEN @DESDE AND @HASTA " +
-                  "AND r.estado = 1 " +
-                  "AND (r.detalle_observacion LIKE ('%' + @FILTRO + '%') OR r.cedularuc LIKE ('%' + @FILTRO + '%') OR r.apellidos_nombres LIKE ('%' + @FILTRO + '%')) ";
-            
-            if (tipo > 0 && tipo <= 4)
-            {
-                sql += "AND r.tipo_ticket = " + (tipo - 1) + " ";
-            }
-            else if (tipo == 0)
-            {
-                sql += "AND r.tipo_ticket IN (0, 1, 2, 3) ";
-            }
-
-            sql += "ORDER BY r.fecha_registro;";
-
-
             
 
+            //string sql = "SELECT r.*, " +
+            //      "CASE r.tipo_ticket " +
+            //      "    WHEN 0 THEN 'TICKET DE FARMACIA' " +
+            //      "    WHEN 1 THEN 'TICKET DE COMECSA' " +
+            //      "    WHEN 2 THEN 'SOLICITUD ANTICIPO' " +
+            //      "    WHEN 3 THEN 'TICKET DE COMISARIATO' " +
+            //      "END AS TIPO " +
+            //      "FROM TICKETS_FARMACIA_COMECSA r " +
+            //      "WHERE r.fecha_registro BETWEEN @DESDE AND @HASTA " +
+            //      "AND r.estado = 1 " +
+            //      "AND (r.detalle_observacion LIKE ('%' + @FILTRO + '%') OR r.cedularuc LIKE ('%' + @FILTRO + '%') OR r.apellidos_nombres LIKE ('%' + @FILTRO + '%')) ";
+            
+            //if (tipo > 0 && tipo <= 4)
+            //{
+            //    sql += "AND r.tipo_ticket = " + (tipo - 1) + " ";
+            //}
+            //else if (tipo == 0)
+            //{
+            //    sql += "AND r.tipo_ticket IN (0, 1, 2, 3) ";
+            //}
+
+            //sql += "ORDER BY r.fecha_registro;";
+
+                     
 
 
-            return ComandosSql.SeleccionarQueryWithParamsToDataTable(tipoCon, sql, false, pars);
+
+            return ComandosSql.SeleccionarQueryWithParamsToDataTable(tipoCon, "sp_seleccionarRegistrosNotificaciones", true, pars);
         }
 
         public SqlCommand NuevoRegistroNotificacionCommands()
