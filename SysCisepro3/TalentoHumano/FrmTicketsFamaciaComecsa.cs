@@ -42,6 +42,8 @@ namespace SysCisepro3.TalentoHumano
 
         private readonly ClassTicketsFarmaciaComecsa _objTicketsFarmaciaComecsa;
         private readonly ClassPersonal _objPersonal;
+        private readonly syscisepro.crAnticipoEmergente _crAnticipoEmergenteCisepro;
+        private readonly syscisepro.crAnticipoEmergenteSeportpac _crAnticipoEmergenteSeportpac;
 
         private readonly List<SqlCommand> _sqlCommands;
 
@@ -53,7 +55,9 @@ namespace SysCisepro3.TalentoHumano
             _estado = 0;
             _sqlCommands = new List<SqlCommand>();
             _objTicketsFarmaciaComecsa = new ClassTicketsFarmaciaComecsa();
-            _objPersonal = new ClassPersonal(); 
+            _objPersonal = new ClassPersonal();
+            _crAnticipoEmergenteCisepro = new syscisepro.crAnticipoEmergente();
+            _crAnticipoEmergenteSeportpac = new syscisepro.crAnticipoEmergenteSeportpac();
         }
 
         private void FrmTicketsFamaciaComecsa_Load(object sender, EventArgs e)
@@ -65,24 +69,34 @@ namespace SysCisepro3.TalentoHumano
             Label24.ForeColor = Color.White;
             Label1.BackColor = ValidationForms.GetColorSistema(TipoCon);
             Label1.ForeColor = Color.White;
-            dataGridView1.DefaultCellStyle.SelectionBackColor = ValidationForms.GetColorSistema(TipoCon);
-            dataGridView1.Font = new System.Drawing.Font("Roboto", 9, FontStyle.Regular);
+            
+            
             switch (TipoCon)
             {
                 case TipoConexion.Seportpac:
                     Icon = Resources.logo_s;
+                    dgvRegistro.DefaultCellStyle.SelectionBackColor = ValidationForms.GetColorSistema(TipoCon);
+                    dgvRegistro.DefaultCellStyle.SelectionForeColor = Color.White;
                     break;
                 case TipoConexion.Asenava:
                     Icon = Resources.logo_a;
+                    dgvRegistro.DefaultCellStyle.SelectionBackColor = ValidationForms.GetColorSistema(TipoCon);
+                    dgvRegistro.DefaultCellStyle.SelectionForeColor = Color.White;
                     break;
                 default: // CISEPRO
                     Icon = Resources.logo_c;
+                    dgvRegistro.DefaultCellStyle.SelectionBackColor = ValidationForms.GetColorSistema(TipoCon);
+                    dgvRegistro.DefaultCellStyle.SelectionForeColor = Color.White;
                     break;
             }
+            crvCredenciales.Visible = true;
+            dgvRegistro.Font = new System.Drawing.Font("Roboto", 9, FontStyle.Regular);
             cbxFiltro.SelectedIndex = 0;
             dtpFechaRegistro.Value = Usuario.Now(TipoCon);
             dtpFechaDesde.Value = new DateTime(dtpFechaRegistro.Value.Year, dtpFechaRegistro.Value.Month, 1);
             ValidationForms.SetPlaceholder(txtFiltro, "Buscar ...");
+
+            
         }
 
         private void btnNuevo_Click(object sender, EventArgs e)
@@ -171,7 +185,7 @@ namespace SysCisepro3.TalentoHumano
 
         private void btnAnular_Click(object sender, EventArgs e)
         {
-            if (dataGridView1.RowCount == 0 || dtpFechaRegistro.Tag == null) return;
+            if (dgvRegistro.RowCount == 0 || dtpFechaRegistro.Tag == null) return;
 
             if (KryptonMessageBox.Show(@"Desea anular el ticket seleccioando?", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) != DialogResult.Yes) return;
 
@@ -245,33 +259,71 @@ namespace SysCisepro3.TalentoHumano
         {
             try
             {
-                dataGridView1.Rows.Clear();
-
+                dgvRegistro.Rows.Clear();
+               
                 var fechaDesde = dtpFechaDesde.Value.Year + "-" + dtpFechaDesde.Value.Month + "-" + dtpFechaDesde.Value.Day + " 00:00:00";
                 var fechaHasta = dtpFechaHasta.Value.Year + "-" + dtpFechaHasta.Value.Month + "-" + dtpFechaHasta.Value.Day + " 23:59:59";
 
                 var data = _objTicketsFarmaciaComecsa.SeleccionarRegistroNotificaciones(TipoCon, fechaDesde, fechaHasta, cbxFiltro.SelectedIndex, txtFiltro.Text.Trim());
                 double td = 0;
+                //foreach (DataRow row in data.Rows)
+                //{
+                //    string text = row[5].ToString();
+                //    string value = ExtractNumericValue(text);
+                //    //dataGridView1.Rows.Add(row[0], row[2], row[1], row[3], row[4], value, row[8], row[6]);
+                //    dataGridView1.Rows.Add(row[0], row[2], row[1], row[3], row[4], row[5], row[8], row[6]);
+                //    td += Convert.ToDouble(value);
+                //}
+
+                //foreach (DataColumn column in data.Columns)
+                //{
+                //    DataGridViewTextBoxColumn col = new DataGridViewTextBoxColumn();
+                //    col.Name = column.ColumnName;
+                //    col.HeaderText = column.ColumnName;
+                //    col.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+                //    dgvRegistro.Columns.Add(col);
+                //}
+
+                foreach (DataGridViewColumn column in dgvRegistro.Columns)
+                {
+                    column.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+                }
+                
+
                 foreach (DataRow row in data.Rows)
                 {
                     string text = row[5].ToString();
                     string value = ExtractNumericValue(text);
-                    dataGridView1.Rows.Add(row[0], row[2], row[1], row[3], row[4], value, row[8], row[6]);
+                    //dataGridView1.Rows.Add(row[0], row[2], row[1], row[3], row[4], value, row[8], row[6]);
+                    dgvRegistro.Rows.Add(row[0], row[2], row[1], row[3], row[4], value, row[8], row[6]);
                     td += Convert.ToDouble(value);
                 }
-                dataGridView1.AutoResizeRows();
-                Label1.Text = dataGridView1.RowCount + @" REGISTRO(S) - TOTAL DESCUENTOS $ " + td.ToString("N");
+                
+                dgvRegistro.AutoResizeRows();
 
-                foreach (var row in dataGridView1.Rows.Cast<DataGridViewRow>().Where(row => row.Cells[0].Value.ToString().Equals(idsel + "")))
+                
+
+
+                Label1.Text = dgvRegistro.RowCount + @" REGISTRO(S) - TOTAL DESCUENTOS $ " + td.ToString("N");
+
+                //foreach (var row in dataGridView1.Rows.Cast<DataGridViewRow>().Where(row => row.Cells[0].Value.ToString().Equals(idsel + "")))
+                //{
+                //    row.Cells[0].Selected = true;
+                //    break;
+                //}
+                foreach (var row in dgvRegistro.Rows.Cast<DataGridViewRow>().Where(row => row.Cells[0].Value.ToString().Equals(idsel + "")))
                 {
                     row.Cells[0].Selected = true;
                     break;
                 }
-                btnAnular.Enabled = dataGridView1.RowCount > 0 && dataGridView1.CurrentRow != null;
+                               
+                btnAnular.Enabled = dgvRegistro.RowCount > 0 && dataGridView1.CurrentRow != null;
+
             }
             catch (Exception ex)
             {
-                dataGridView1.Rows.Clear();
+               
+                dgvRegistro.Rows.Clear();
                 KryptonMessageBox.Show(@"Error al cargar detalles: " + ex.Message, "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
             }
         }
@@ -331,11 +383,25 @@ namespace SysCisepro3.TalentoHumano
 
                 var head = 5;
                 var x = 1;
-                for (var i = 0; i <= dataGridView1.Columns.Count - 1; i++)
-                {
-                    if (!dataGridView1.Columns[i].Visible) continue;
+                //for (var i = 0; i <= dataGridView1.Columns.Count - 1; i++)
+                //{
+                //    if (!dataGridView1.Columns[i].Visible) continue;
 
-                    worksheet.Cells[head, x] = dataGridView1.Columns[i].HeaderText;
+                //    worksheet.Cells[head, x] = dataGridView1.Columns[i].HeaderText;
+                //    worksheet.Cells[head, x].Font.Bold = true;
+                //    worksheet.Cells[head, x].Borders.LineStyle = XlLineStyle.xlContinuous;
+                //    worksheet.Cells[head, x].Cells.HorizontalAlignment = XlHAlign.xlHAlignCenter;
+                //    worksheet.Cells[head, x].Font.Color = Color.White;
+
+                //    worksheet.Cells[head, x].Interior.Color = ValidationForms.GetColorSistema(TipoCon);
+                //    x++;
+                //}
+
+                for (var i = 0; i <= dgvRegistro.Columns.Count - 1; i++)
+                {
+                    if (!dgvRegistro.Columns[i].Visible) continue;
+
+                    worksheet.Cells[head, x] = dgvRegistro.Columns[i].HeaderText;
                     worksheet.Cells[head, x].Font.Bold = true;
                     worksheet.Cells[head, x].Borders.LineStyle = XlLineStyle.xlContinuous;
                     worksheet.Cells[head, x].Cells.HorizontalAlignment = XlHAlign.xlHAlignCenter;
@@ -347,12 +413,29 @@ namespace SysCisepro3.TalentoHumano
 
                 // datos celdas
                 head++;
-                foreach (DataGridViewRow row in dataGridView1.Rows)
+                //foreach (DataGridViewRow row in dataGridView1.Rows)
+                //{
+                //    var y = 1;
+                //    for (var j = 0; j <= dataGridView1.Columns.Count - 1; j++)
+                //    {
+                //        if (!dataGridView1.Columns[j].Visible) continue;
+
+                //        worksheet.Cells[head, y] = row.Cells[j].Value;
+                //        worksheet.Cells[head, y].Borders(XlBordersIndex.xlEdgeLeft).LineStyle = XlLineStyle.xlContinuous;
+                //        worksheet.Cells[head, y].Borders(XlBordersIndex.xlEdgeRight).LineStyle = XlLineStyle.xlContinuous;
+                //        worksheet.Cells[head, y].Borders(XlBordersIndex.xlEdgeBottom).LineStyle = XlLineStyle.xlContinuous;
+                //        y++;
+                //    }
+
+                //    head++;
+                //}
+
+                foreach (DataGridViewRow row in dgvRegistro.Rows)
                 {
                     var y = 1;
-                    for (var j = 0; j <= dataGridView1.Columns.Count - 1; j++)
+                    for (var j = 0; j <= dgvRegistro.Columns.Count - 1; j++)
                     {
-                        if (!dataGridView1.Columns[j].Visible) continue;
+                        if (!dgvRegistro.Columns[j].Visible) continue;
 
                         worksheet.Cells[head, y] = row.Cells[j].Value;
                         worksheet.Cells[head, y].Borders(XlBordersIndex.xlEdgeLeft).LineStyle = XlLineStyle.xlContinuous;
@@ -414,18 +497,93 @@ namespace SysCisepro3.TalentoHumano
 
         private void ticComecsa_Click(object sender, EventArgs e)
         {
+            //try
+            //{
+            //    var applicationWord = new Microsoft.Office.Interop.Word.Application();
+            //    applicationWord.Visible = true;
+            //    var doc = new Microsoft.Office.Interop.Word.Document();
+            //    doc = applicationWord.Documents.Open(System.Windows.Forms.Application.StartupPath+"\\Formatos\\comecsa.docx");
+            //    doc.Activate();
+            //}
+            //catch (Exception eccezione)
+            //{
+            //    Console.Write(eccezione);
+            //}
+
             try
             {
-                var applicationWord = new Microsoft.Office.Interop.Word.Application();
-                applicationWord.Visible = true;
-                var doc = new Microsoft.Office.Interop.Word.Document();
-                doc = applicationWord.Documents.Open(System.Windows.Forms.Application.StartupPath+"\\Formatos\\comecsa.docx");
-                doc.Activate();
+                if (dgvRegistro.CurrentRow == null) return;
+                //var data = _objPersonal.SeleccionarTodosRegistrosPersonalFiltroFull(TipoCon , dgvRegistro.CurrentRow.Cells[3].Value.ToString());
+                var data = _objPersonal.SeleccionarTodosRegistrosPersonalFiltroMini(TipoCon, dgvRegistro.CurrentRow.Cells[3].Value.ToString());
+                if (data.Rows.Count == 0)
+                {
+                    KryptonMessageBox.Show(@"NO SE ENCONTRO EL REGISTRO DEL PERSONAL", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+                    return;
+                }
+                
+                if (cbxTipo.SelectedIndex != 3)
+                {
+                    KryptonMessageBox.Show(@"EL ITEM SELECCIONADO NO CORRESPONDE A SOLICTIDU DE ANTICIPO PARA ESTE TIPO DE PERSONAL", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+                    return;
+                }
+                                        
+                string empre = Validaciones.NombreCompany(TipoCon);
+                if (data.Rows.Count > 0)
+                {
+                    switch (TipoCon)
+                    {
+
+                        case TipoConexion.Seportpac:
+                            _crAnticipoEmergenteSeportpac.SetParameterValue("idsolicitud", dgvRegistro.CurrentRow.Cells[0].Value.ToString());
+                            _crAnticipoEmergenteSeportpac.SetParameterValue("numdoc", dgvRegistro.CurrentRow.Cells[2].Value.ToString());
+                            _crAnticipoEmergenteSeportpac.SetParameterValue("fecha", dgvRegistro.CurrentRow.Cells[1].Value.ToString());
+                            _crAnticipoEmergenteSeportpac.SetParameterValue("empre", empre);
+                            _crAnticipoEmergenteSeportpac.SetParameterValue("nombre", dgvRegistro.CurrentRow.Cells[4].Value.ToString());
+                            _crAnticipoEmergenteSeportpac.SetParameterValue("cedula", dgvRegistro.CurrentRow.Cells[3].Value.ToString());
+                            _crAnticipoEmergenteSeportpac.SetParameterValue("ingreso", data.Rows[0][4].ToString());
+                            _crAnticipoEmergenteSeportpac.SetParameterValue("cargo", data.Rows[0][5].ToString());
+                            _crAnticipoEmergenteSeportpac.SetParameterValue("puesto", Convert.ToInt32(data.Rows[0][6]) == 1 ? empre : data.Rows[0][7].ToString());
+                            _crAnticipoEmergenteSeportpac.SetParameterValue("valor", dgvRegistro.CurrentRow.Cells[5].Value.ToString());
+
+                            crvCredenciales.ReportSource = _crAnticipoEmergenteSeportpac;
+                            break;
+                        case TipoConexion.Asenava:
+                            crvCredenciales.ReportSource = null;
+                            break;
+                        default:
+                            _crAnticipoEmergenteCisepro.SetParameterValue("idsolicitud", dgvRegistro.CurrentRow.Cells[0].Value.ToString());
+                            _crAnticipoEmergenteCisepro.SetParameterValue("numdoc", dgvRegistro.CurrentRow.Cells[2].Value.ToString());
+                            _crAnticipoEmergenteCisepro.SetParameterValue("fecha", dgvRegistro.CurrentRow.Cells[1].Value.ToString());
+                            _crAnticipoEmergenteCisepro.SetParameterValue("empre", empre);
+                            _crAnticipoEmergenteCisepro.SetParameterValue("nombre", dgvRegistro.CurrentRow.Cells[4].Value.ToString());
+                            _crAnticipoEmergenteCisepro.SetParameterValue("cedula", dgvRegistro.CurrentRow.Cells[3].Value.ToString());
+                            _crAnticipoEmergenteCisepro.SetParameterValue("ingreso", data.Rows[0][4].ToString());
+                            _crAnticipoEmergenteCisepro.SetParameterValue("cargo", data.Rows[0][5].ToString());
+                            _crAnticipoEmergenteCisepro.SetParameterValue("puesto", Convert.ToInt32(data.Rows[0][6]) == 1 ? empre : data.Rows[0][7].ToString());
+                            _crAnticipoEmergenteCisepro.SetParameterValue("valor", dgvRegistro.CurrentRow.Cells[5].Value.ToString());
+                            crvCredenciales.ReportSource = _crAnticipoEmergenteCisepro;
+                            break;
+                    }
+
+                    crvCredenciales.Zoom(100);
+                    crvCredenciales.Refresh();
+                    crvCredenciales.Visible = true;
+
+                }
+                
+               
+
+
+
+                
+
             }
-            catch (Exception eccezione)
+            catch (Exception ex)
             {
-                Console.Write(eccezione);
+                KryptonMessageBox.Show(@"Error al cargar detalles: " + ex.Message, "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
             }
+
+
         }
 
         private void ticFarmacia_Click(object sender, EventArgs e)
@@ -447,6 +605,30 @@ namespace SysCisepro3.TalentoHumano
         {
             Match match = Regex.Match(text, @"\d+(\.\d{1,2})?");
             return match.Value;
+        }
+
+        private void dgvRegistro_SelectionChanged(object sender, EventArgs e)
+        {
+            if (_estado != 0) return;
+            if (dgvRegistro.RowCount == 0) return;
+            if (dgvRegistro.CurrentRow == null) return;
+
+            dtpFechaRegistro.Tag = dgvRegistro.CurrentRow.Cells[0].Value;
+            dtpFechaRegistro.Value = Convert.ToDateTime(dgvRegistro.CurrentRow.Cells[1].Value);
+            dtpFechaNotificacion.Value = Convert.ToDateTime(dgvRegistro.CurrentRow.Cells[1].Value);
+
+            txtNumDoc.Text = dgvRegistro.CurrentRow.Cells[2].Value.ToString();
+            txtCiRuc.Text = dgvRegistro.CurrentRow.Cells[3].Value.ToString();
+            txtNombreDenunciante.Text = dgvRegistro.CurrentRow.Cells[4].Value.ToString();
+            txtDetallesNotificacion.Text = dgvRegistro.CurrentRow.Cells[6].Value.ToString();
+            cbxTipo.SelectedIndex = Convert.ToInt32(dgvRegistro.CurrentRow.Cells[7].Value);
+
+            btnNuevo.Enabled = true;
+            btnGuardar.Enabled = false;
+            btnAnular.Enabled = true;
+            btnCancelar.Enabled = false;
+            ticComecsa.Enabled = true;
+
         }
     }
 }

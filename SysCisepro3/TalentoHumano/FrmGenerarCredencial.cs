@@ -610,7 +610,7 @@ namespace SysCisepro3.TalentoHumano
 
             _objTicketsFarmaciaComecsa.IdRegistro = _objTicketsFarmaciaComecsa.BuscarMayorIdTicket(TipoCon) + 1;
             _objTicketsFarmaciaComecsa.FechaRegistro = Usuario.Now(TipoCon);
-            _objTicketsFarmaciaComecsa.NumDocumento = _objContratos.BuscarMayorNumTicketComecsa(TipoCon) + 1;
+            _objTicketsFarmaciaComecsa.NumDocumento = _objContratos.BuscarMayorNumTicketAnticipo(TipoCon) + 1;
             _objTicketsFarmaciaComecsa.CedulaRuc = dgvBusquedaPersonal.CurrentRow.Cells[1].Value.ToString();
             _objTicketsFarmaciaComecsa.Estado = 1;
             _objTicketsFarmaciaComecsa.ApellidosNombres = dgvBusquedaPersonal.CurrentRow.Cells[2].Value.ToString();
@@ -621,7 +621,6 @@ namespace SysCisepro3.TalentoHumano
             var user = Usuario.Datos.ToString();
             var nombre = $"PERMISO POR: {user}";
             var res = ComandosSql.ProcesarTransacciones(TipoCon, _sqlCommands, nombre);
-            //string empre = Validaciones.NombreCompany(TipoCon) + " CÍA. LTDA.";
             string empre = Validaciones.NombreCompany(TipoCon); 
             if ((bool)res[0])
             {
@@ -661,7 +660,6 @@ namespace SysCisepro3.TalentoHumano
 
                 crvCredenciales.Zoom(100);
                 crvCredenciales.Refresh();
-
                 crvCredenciales.Visible = true;
                // axAcroPDF1.Visible = false;
             }

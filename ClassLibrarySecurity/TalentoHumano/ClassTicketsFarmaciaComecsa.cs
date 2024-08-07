@@ -41,35 +41,7 @@ namespace ClassLibraryCisepro3.TalentoHumano
                 new object[] { "@FILTRO", SqlDbType.NVarChar, filtro },
                 new object[] { "@TIPO", SqlDbType.Int, tipo}
             };
-            
-
-            //string sql = "SELECT r.*, " +
-            //      "CASE r.tipo_ticket " +
-            //      "    WHEN 0 THEN 'TICKET DE FARMACIA' " +
-            //      "    WHEN 1 THEN 'TICKET DE COMECSA' " +
-            //      "    WHEN 2 THEN 'SOLICITUD ANTICIPO' " +
-            //      "    WHEN 3 THEN 'TICKET DE COMISARIATO' " +
-            //      "END AS TIPO " +
-            //      "FROM TICKETS_FARMACIA_COMECSA r " +
-            //      "WHERE r.fecha_registro BETWEEN @DESDE AND @HASTA " +
-            //      "AND r.estado = 1 " +
-            //      "AND (r.detalle_observacion LIKE ('%' + @FILTRO + '%') OR r.cedularuc LIKE ('%' + @FILTRO + '%') OR r.apellidos_nombres LIKE ('%' + @FILTRO + '%')) ";
-            
-            //if (tipo > 0 && tipo <= 4)
-            //{
-            //    sql += "AND r.tipo_ticket = " + (tipo - 1) + " ";
-            //}
-            //else if (tipo == 0)
-            //{
-            //    sql += "AND r.tipo_ticket IN (0, 1, 2, 3) ";
-            //}
-
-            //sql += "ORDER BY r.fecha_registro;";
-
-                     
-
-
-
+                 
             return ComandosSql.SeleccionarQueryWithParamsToDataTable(tipoCon, "sp_seleccionarRegistrosNotificaciones", true, pars);
         }
 

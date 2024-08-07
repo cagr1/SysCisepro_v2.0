@@ -1437,7 +1437,7 @@
             Me.tpReporte.Location = New System.Drawing.Point(4, 22)
             Me.tpReporte.Name = "tpReporte"
             Me.tpReporte.Padding = New System.Windows.Forms.Padding(3)
-            Me.tpReporte.Size = New System.Drawing.Size(1076, 556)
+            Me.tpReporte.Size = New System.Drawing.Size(1041, 556)
             Me.tpReporte.TabIndex = 2
             Me.tpReporte.Text = "REPORTE"
             '
@@ -1470,7 +1470,7 @@
             Me.bntCargar.Font = New System.Drawing.Font("Consolas", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.bntCargar.Image = Global.syscisepro.My.Resources.Resources.BuscarRegistro
             Me.bntCargar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-            Me.bntCargar.Location = New System.Drawing.Point(952, 8)
+            Me.bntCargar.Location = New System.Drawing.Point(941, 8)
             Me.bntCargar.Name = "bntCargar"
             Me.bntCargar.Size = New System.Drawing.Size(83, 23)
             Me.bntCargar.TabIndex = 7
@@ -1482,7 +1482,7 @@
             '
             Me.Label3.AutoSize = True
             Me.Label3.Font = New System.Drawing.Font("Consolas", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label3.Location = New System.Drawing.Point(747, 12)
+            Me.Label3.Location = New System.Drawing.Point(714, 12)
             Me.Label3.Name = "Label3"
             Me.Label3.Size = New System.Drawing.Size(91, 15)
             Me.Label3.TabIndex = 5
@@ -1490,7 +1490,7 @@
             '
             'txtIdComprobante
             '
-            Me.txtIdComprobante.Location = New System.Drawing.Point(844, 8)
+            Me.txtIdComprobante.Location = New System.Drawing.Point(823, 8)
             Me.txtIdComprobante.Name = "txtIdComprobante"
             Me.txtIdComprobante.Size = New System.Drawing.Size(108, 21)
             Me.txtIdComprobante.TabIndex = 6
@@ -1505,6 +1505,8 @@
             Me.crvComprobante.ForeColor = System.Drawing.SystemColors.ControlText
             Me.crvComprobante.Location = New System.Drawing.Point(5, 6)
             Me.crvComprobante.Name = "crvComprobante"
+            Me.crvComprobante.ShowCloseButton = False
+            Me.crvComprobante.ShowLogo = False
             Me.crvComprobante.Size = New System.Drawing.Size(1040, 517)
             Me.crvComprobante.TabIndex = 152
             Me.crvComprobante.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None

@@ -1536,7 +1536,7 @@
             Me.bntCargar.Font = New System.Drawing.Font("Consolas", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.bntCargar.Image = Global.syscisepro.My.Resources.Resources.BuscarRegistro
             Me.bntCargar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-            Me.bntCargar.Location = New System.Drawing.Point(1160, 6)
+            Me.bntCargar.Location = New System.Drawing.Point(1154, 8)
             Me.bntCargar.Name = "bntCargar"
             Me.bntCargar.Size = New System.Drawing.Size(83, 23)
             Me.bntCargar.TabIndex = 9
@@ -1548,7 +1548,7 @@
             '
             Me.Label30.AutoSize = True
             Me.Label30.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label30.Location = New System.Drawing.Point(979, 11)
+            Me.Label30.Location = New System.Drawing.Point(954, 13)
             Me.Label30.Name = "Label30"
             Me.Label30.Size = New System.Drawing.Size(80, 13)
             Me.Label30.TabIndex = 5
@@ -1556,7 +1556,7 @@
             '
             'txtIdEntrega
             '
-            Me.txtIdEntrega.Location = New System.Drawing.Point(1065, 8)
+            Me.txtIdEntrega.Location = New System.Drawing.Point(1047, 8)
             Me.txtIdEntrega.Name = "txtIdEntrega"
             Me.txtIdEntrega.Size = New System.Drawing.Size(95, 21)
             Me.txtIdEntrega.TabIndex = 6
@@ -1571,6 +1571,8 @@
             Me.crvComprobante.ForeColor = System.Drawing.SystemColors.ControlText
             Me.crvComprobante.Location = New System.Drawing.Point(3, 6)
             Me.crvComprobante.Name = "crvComprobante"
+            Me.crvComprobante.ShowCloseButton = False
+            Me.crvComprobante.ShowLogo = False
             Me.crvComprobante.Size = New System.Drawing.Size(1240, 548)
             Me.crvComprobante.TabIndex = 152
             Me.crvComprobante.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None

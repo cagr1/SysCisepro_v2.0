@@ -262,5 +262,10 @@ namespace ClassLibraryCisepro3.TalentoHumano
             return data.Rows.Count == 0 ? 0 : data.Rows[0][0] == DBNull.Value ? 0 : Convert.ToInt32(data.Rows[0][0]);
         }
 
+        public int BuscarMayorNumTicketAnticipo(TipoConexion tipoCon)
+        {
+            var data = ComandosSql.SeleccionarQueryToDataTable(tipoCon, "SELECT num_ticket=CASE WHEN MAX(num_ticket) IS NULL THEN 0 ELSE MAX(num_ticket) End FROM TICKETS_FARMACIA_COMECSA WHERE tipo_ticket = 2;", false);
+            return data.Rows.Count == 0 ? 0 : data.Rows[0][0] == DBNull.Value ? 0 : Convert.ToInt32(data.Rows[0][0]);
+        }
     }
 }

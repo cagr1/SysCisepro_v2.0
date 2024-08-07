@@ -177,6 +177,7 @@
             Me.KryptonLabel4 = New ComponentFactory.Krypton.Toolkit.KryptonLabel()
             Me.KryptonGroupBox5 = New ComponentFactory.Krypton.Toolkit.KryptonGroupBox()
             Me.btnBuscarModi = New ComponentFactory.Krypton.Toolkit.KryptonButton()
+            Me.txtFiltro = New System.Windows.Forms.TextBox()
             Me.gbComprobante = New System.Windows.Forms.GroupBox()
             Me.btnExportarComprobantes = New System.Windows.Forms.Button()
             Me.dgvComprobantesEgreso = New System.Windows.Forms.DataGridView()
@@ -206,7 +207,6 @@
             Me.lblComp = New System.Windows.Forms.Label()
             Me.lblIdSecuencial = New System.Windows.Forms.Label()
             Me.lblCantidadSaldo = New System.Windows.Forms.Label()
-            Me.txtFiltro = New System.Windows.Forms.TextBox()
             Me.tbComprobanteIngresoBodega.SuspendLayout()
             Me.tpRegistro.SuspendLayout()
             Me.GroupBox2.SuspendLayout()
@@ -1902,6 +1902,13 @@
             Me.btnBuscarModi.Values.ImageStates.ImageTracking = Global.syscisepro.My.Resources.Resources.search_24dp_FILL0_wght400_GRAD0_opsz40
             Me.btnBuscarModi.Values.Text = ""
             '
+            'txtFiltro
+            '
+            Me.txtFiltro.Location = New System.Drawing.Point(16, 8)
+            Me.txtFiltro.Name = "txtFiltro"
+            Me.txtFiltro.Size = New System.Drawing.Size(189, 21)
+            Me.txtFiltro.TabIndex = 13
+            '
             'gbComprobante
             '
             Me.gbComprobante.BackColor = System.Drawing.Color.White
@@ -2083,6 +2090,7 @@
             Me.crvComprobante.ForeColor = System.Drawing.SystemColors.ControlText
             Me.crvComprobante.Location = New System.Drawing.Point(2, 4)
             Me.crvComprobante.Name = "crvComprobante"
+            Me.crvComprobante.ShowLogo = False
             Me.crvComprobante.Size = New System.Drawing.Size(1028, 564)
             Me.crvComprobante.TabIndex = 152
             Me.crvComprobante.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None
@@ -2228,13 +2236,6 @@
             Me.lblCantidadSaldo.Size = New System.Drawing.Size(0, 13)
             Me.lblCantidadSaldo.TabIndex = 193
             Me.lblCantidadSaldo.Visible = False
-            '
-            'txtFiltro
-            '
-            Me.txtFiltro.Location = New System.Drawing.Point(16, 8)
-            Me.txtFiltro.Name = "txtFiltro"
-            Me.txtFiltro.Size = New System.Drawing.Size(189, 21)
-            Me.txtFiltro.TabIndex = 13
             '
             'FormComprobanteEgresoBodega
             '
