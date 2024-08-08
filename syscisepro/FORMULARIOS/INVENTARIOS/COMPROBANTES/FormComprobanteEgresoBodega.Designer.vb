@@ -1287,7 +1287,7 @@
             'gbxDetalles
             '
             Me.gbxDetalles.Controls.Add(Me.dgvDetalleComprobate)
-            Me.gbxDetalles.Location = New System.Drawing.Point(6, 273)
+            Me.gbxDetalles.Location = New System.Drawing.Point(4, 282)
             Me.gbxDetalles.Name = "gbxDetalles"
             Me.gbxDetalles.Size = New System.Drawing.Size(1030, 323)
             Me.gbxDetalles.TabIndex = 155
@@ -1322,7 +1322,7 @@
             DataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
             Me.dgvDetalleComprobate.DefaultCellStyle = DataGridViewCellStyle13
             Me.dgvDetalleComprobate.GridColor = System.Drawing.Color.Black
-            Me.dgvDetalleComprobate.Location = New System.Drawing.Point(3, 20)
+            Me.dgvDetalleComprobate.Location = New System.Drawing.Point(3, 18)
             Me.dgvDetalleComprobate.MultiSelect = False
             Me.dgvDetalleComprobate.Name = "dgvDetalleComprobate"
             Me.dgvDetalleComprobate.ReadOnly = True
@@ -1334,7 +1334,10 @@
             '
             'gbxIngreso
             '
-            Me.gbxIngreso.Location = New System.Drawing.Point(6, 275)
+            Me.gbxIngreso.CaptionStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.GroupBoxCaption
+            Me.gbxIngreso.GroupBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.ControlGroupBox
+            Me.gbxIngreso.GroupBorderStyle = ComponentFactory.Krypton.Toolkit.PaletteBorderStyle.ControlGroupBox
+            Me.gbxIngreso.Location = New System.Drawing.Point(5, 275)
             Me.gbxIngreso.Name = "gbxIngreso"
             '
             'gbxIngreso.Panel
@@ -1498,14 +1501,17 @@
             Me.btnEliminaringreso.Name = "btnEliminaringreso"
             Me.btnEliminaringreso.Size = New System.Drawing.Size(34, 25)
             Me.btnEliminaringreso.StateCommon.Back.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.[False]
+            Me.btnEliminaringreso.StateCommon.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit
             Me.btnEliminaringreso.StateCommon.Border.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.[False]
             Me.btnEliminaringreso.StateCommon.Border.DrawBorders = CType((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top Or ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) _
             Or ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) _
             Or ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right), ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)
+            Me.btnEliminaringreso.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit
             Me.btnEliminaringreso.StateCommon.Content.Padding = New System.Windows.Forms.Padding(-2)
             Me.btnEliminaringreso.StateNormal.Border.DrawBorders = CType((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top Or ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) _
             Or ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) _
             Or ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right), ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)
+            Me.btnEliminaringreso.StateNormal.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit
             Me.btnEliminaringreso.TabIndex = 257
             Me.btnEliminaringreso.Values.ImageStates.ImageCheckedNormal = Nothing
             Me.btnEliminaringreso.Values.ImageStates.ImageCheckedPressed = Nothing
@@ -1523,14 +1529,17 @@
             Me.btnAgregarIngreso.Name = "btnAgregarIngreso"
             Me.btnAgregarIngreso.Size = New System.Drawing.Size(34, 25)
             Me.btnAgregarIngreso.StateCommon.Back.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.[False]
+            Me.btnAgregarIngreso.StateCommon.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit
             Me.btnAgregarIngreso.StateCommon.Border.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.[False]
             Me.btnAgregarIngreso.StateCommon.Border.DrawBorders = CType((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top Or ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) _
             Or ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) _
             Or ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right), ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)
+            Me.btnAgregarIngreso.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit
             Me.btnAgregarIngreso.StateCommon.Content.Padding = New System.Windows.Forms.Padding(-2)
             Me.btnAgregarIngreso.StateNormal.Border.DrawBorders = CType((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top Or ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) _
             Or ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) _
             Or ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right), ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)
+            Me.btnAgregarIngreso.StateNormal.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit
             Me.btnAgregarIngreso.TabIndex = 256
             Me.btnAgregarIngreso.Values.ImageStates.ImageCheckedNormal = Nothing
             Me.btnAgregarIngreso.Values.ImageStates.ImageCheckedPressed = Nothing
@@ -1548,6 +1557,8 @@
             Me.lblObservacionesTitulo.Name = "lblObservacionesTitulo"
             Me.lblObservacionesTitulo.Size = New System.Drawing.Size(92, 18)
             Me.lblObservacionesTitulo.StateNormal.ShortText.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.lblObservacionesTitulo.StateNormal.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit
+            Me.lblObservacionesTitulo.StateNormal.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit
             Me.lblObservacionesTitulo.TabIndex = 255
             Me.lblObservacionesTitulo.Values.Text = "Observaciones"
             Me.lblObservacionesTitulo.Visible = False
@@ -1558,6 +1569,8 @@
             Me.lblTotalTitulo.Name = "lblTotalTitulo"
             Me.lblTotalTitulo.Size = New System.Drawing.Size(39, 18)
             Me.lblTotalTitulo.StateNormal.ShortText.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.lblTotalTitulo.StateNormal.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit
+            Me.lblTotalTitulo.StateNormal.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit
             Me.lblTotalTitulo.TabIndex = 254
             Me.lblTotalTitulo.Values.Text = "Total"
             Me.lblTotalTitulo.Visible = False
@@ -1568,6 +1581,8 @@
             Me.txtCalidadTitulo.Name = "txtCalidadTitulo"
             Me.txtCalidadTitulo.Size = New System.Drawing.Size(52, 18)
             Me.txtCalidadTitulo.StateNormal.ShortText.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtCalidadTitulo.StateNormal.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit
+            Me.txtCalidadTitulo.StateNormal.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit
             Me.txtCalidadTitulo.TabIndex = 253
             Me.txtCalidadTitulo.Values.Text = "Calidad"
             Me.txtCalidadTitulo.Visible = False
@@ -1578,6 +1593,8 @@
             Me.lblValorTitulo.Name = "lblValorTitulo"
             Me.lblValorTitulo.Size = New System.Drawing.Size(39, 18)
             Me.lblValorTitulo.StateNormal.ShortText.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.lblValorTitulo.StateNormal.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit
+            Me.lblValorTitulo.StateNormal.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit
             Me.lblValorTitulo.TabIndex = 252
             Me.lblValorTitulo.Values.Text = "Valor"
             Me.lblValorTitulo.Visible = False
@@ -1588,6 +1605,8 @@
             Me.lblCantidadTitulo.Name = "lblCantidadTitulo"
             Me.lblCantidadTitulo.Size = New System.Drawing.Size(36, 18)
             Me.lblCantidadTitulo.StateNormal.ShortText.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.lblCantidadTitulo.StateNormal.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit
+            Me.lblCantidadTitulo.StateNormal.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit
             Me.lblCantidadTitulo.TabIndex = 251
             Me.lblCantidadTitulo.Values.Text = "Cant"
             Me.lblCantidadTitulo.Visible = False
@@ -1600,10 +1619,12 @@
             Me.btnBuscarReingreso.Name = "btnBuscarReingreso"
             Me.btnBuscarReingreso.Size = New System.Drawing.Size(32, 32)
             Me.btnBuscarReingreso.StateCommon.Back.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.[False]
+            Me.btnBuscarReingreso.StateCommon.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit
             Me.btnBuscarReingreso.StateCommon.Border.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.[False]
             Me.btnBuscarReingreso.StateCommon.Border.DrawBorders = CType((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top Or ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) _
             Or ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) _
             Or ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right), ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)
+            Me.btnBuscarReingreso.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit
             Me.btnBuscarReingreso.StateCommon.Content.Padding = New System.Windows.Forms.Padding(2)
             Me.btnBuscarReingreso.TabIndex = 250
             Me.btnBuscarReingreso.Values.ImageStates.ImageCheckedNormal = Nothing
@@ -1622,6 +1643,8 @@
             Me.lblSerieTitulo.Name = "lblSerieTitulo"
             Me.lblSerieTitulo.Size = New System.Drawing.Size(38, 18)
             Me.lblSerieTitulo.StateNormal.ShortText.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.lblSerieTitulo.StateNormal.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit
+            Me.lblSerieTitulo.StateNormal.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit
             Me.lblSerieTitulo.TabIndex = 245
             Me.lblSerieTitulo.Values.Text = "Serie"
             Me.lblSerieTitulo.Visible = False
@@ -1632,6 +1655,8 @@
             Me.lblCodigoTitulo.Name = "lblCodigoTitulo"
             Me.lblCodigoTitulo.Size = New System.Drawing.Size(50, 18)
             Me.lblCodigoTitulo.StateNormal.ShortText.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.lblCodigoTitulo.StateNormal.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit
+            Me.lblCodigoTitulo.StateNormal.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit
             Me.lblCodigoTitulo.TabIndex = 244
             Me.lblCodigoTitulo.Values.Text = "Codigo"
             Me.lblCodigoTitulo.Visible = False
@@ -1642,6 +1667,8 @@
             Me.lblArticuloTitulo.Name = "lblArticuloTitulo"
             Me.lblArticuloTitulo.Size = New System.Drawing.Size(53, 18)
             Me.lblArticuloTitulo.StateNormal.ShortText.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.lblArticuloTitulo.StateNormal.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit
+            Me.lblArticuloTitulo.StateNormal.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit
             Me.lblArticuloTitulo.TabIndex = 243
             Me.lblArticuloTitulo.Values.Text = "Articulo"
             Me.lblArticuloTitulo.Visible = False
@@ -1817,6 +1844,9 @@
             '
             'KryptonGroupBox6
             '
+            Me.KryptonGroupBox6.CaptionStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.GroupBoxCaption
+            Me.KryptonGroupBox6.GroupBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.ControlGroupBox
+            Me.KryptonGroupBox6.GroupBorderStyle = ComponentFactory.Krypton.Toolkit.PaletteBorderStyle.ControlGroupBox
             Me.KryptonGroupBox6.Location = New System.Drawing.Point(6, -4)
             Me.KryptonGroupBox6.Name = "KryptonGroupBox6"
             '
@@ -1868,6 +1898,9 @@
             '
             'KryptonGroupBox5
             '
+            Me.KryptonGroupBox5.CaptionStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.GroupBoxCaption
+            Me.KryptonGroupBox5.GroupBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.ControlGroupBox
+            Me.KryptonGroupBox5.GroupBorderStyle = ComponentFactory.Krypton.Toolkit.PaletteBorderStyle.ControlGroupBox
             Me.KryptonGroupBox5.Location = New System.Drawing.Point(462, -4)
             Me.KryptonGroupBox5.Name = "KryptonGroupBox5"
             '
@@ -1887,10 +1920,12 @@
             Me.btnBuscarModi.Name = "btnBuscarModi"
             Me.btnBuscarModi.Size = New System.Drawing.Size(32, 32)
             Me.btnBuscarModi.StateCommon.Back.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.[False]
+            Me.btnBuscarModi.StateCommon.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit
             Me.btnBuscarModi.StateCommon.Border.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.[False]
             Me.btnBuscarModi.StateCommon.Border.DrawBorders = CType((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top Or ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) _
             Or ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) _
             Or ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right), ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)
+            Me.btnBuscarModi.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit
             Me.btnBuscarModi.StateCommon.Content.Padding = New System.Windows.Forms.Padding(2)
             Me.btnBuscarModi.TabIndex = 249
             Me.btnBuscarModi.Values.ImageStates.ImageCheckedNormal = Nothing

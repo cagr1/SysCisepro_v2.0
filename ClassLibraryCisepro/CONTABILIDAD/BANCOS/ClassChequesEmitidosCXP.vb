@@ -56,12 +56,12 @@ Namespace CONTABILIDAD.BANCOS
             Return If(data.Rows.Count = 0, 0, If(IsDBNull(data.Rows(0)(0)), String.Empty, CStr(data.Rows(0)(0))))
         End Function
 
-        Public Function BuscarChequesEmitidosNoCobradosXRangoFecha(ByVal tipoCon As TipoConexion, ByVal fechaDesde As DateTime, ByVal fechaHasta As DateTime, ByVal ban As String, ByVal cuentaCheque As String) As DataTable
+        Public Function BuscarChequesEmitidosNoCobradosXRangoFecha(ByVal tipoCon As TipoConexion, ByVal fechaDesde As DateTime, ByVal fechaHasta As DateTime, ByVal filtro As String) As DataTable
             Dim pars = New List(Of Object())
             pars.Add(New Object() {"FECHA_INICIAL", SqlDbType.DateTime, fechaDesde})
             pars.Add(New Object() {"FECHA_FINAL", SqlDbType.DateTime, fechaHasta})
-            pars.Add(New Object() {"BANCO_CHEQUE_EMITIDO", SqlDbType.VarChar, ban})
-            pars.Add(New Object() {"CUENTA_CHEQUE_EMITIDO", SqlDbType.VarChar, cuentaCheque})
+            pars.Add(New Object() {"FILTRO", SqlDbType.NVarChar, filtro})
+
             Return ComandosSql.SeleccionarQueryWithParamsToDataTable(tipoCon, "BuscarChequesEmitidosNoCobradosXRangoFecha", True, pars)
         End Function
 
@@ -74,12 +74,12 @@ Namespace CONTABILIDAD.BANCOS
             Return ComandosSql.SeleccionarQueryWithParamsToDataTable(tipoCon, "BuscarChequesEmitidosNoCobradosXRangoFechaMin", True, pars)
         End Function
 
-        Public Function BuscarChequesEmitidosCobradosXRangoFechaCobro(ByVal tipoCon As TipoConexion, ByVal fechaDesde As DateTime, ByVal fechaHasta As DateTime, ByVal ban As String, ByVal cuentaCheque As String) As DataTable
+        Public Function BuscarChequesEmitidosCobradosXRangoFechaCobro(ByVal tipoCon As TipoConexion, ByVal fechaDesde As DateTime, ByVal fechaHasta As DateTime, ByVal filtro As String) As DataTable
             Dim pars = New List(Of Object())
             pars.Add(New Object() {"FECHA_INICIAL", SqlDbType.DateTime, fechaDesde})
             pars.Add(New Object() {"FECHA_FINAL", SqlDbType.DateTime, fechaHasta})
-            pars.Add(New Object() {"BANCO_CHEQUE_EMITIDO", SqlDbType.VarChar, ban})
-            pars.Add(New Object() {"CUENTA_CHEQUE_EMITIDO", SqlDbType.VarChar, cuentaCheque})
+            pars.Add(New Object() {"FILTRO", SqlDbType.NVarChar, filtro})
+
             Return ComandosSql.SeleccionarQueryWithParamsToDataTable(tipoCon, "BuscarChequesEmitidosCobradosXRangoFechaCobro", True, pars)
         End Function
 
@@ -92,11 +92,11 @@ Namespace CONTABILIDAD.BANCOS
             Return ComandosSql.SeleccionarQueryWithParamsToDataTable(tipoCon, "BuscarChequesEmitidosCobradosXRangoFechaCobroMin", True, pars)
         End Function
 
-        Public Function BuscarChequesEmitidosCaducadosXRangoFechaCobro(ByVal tipoCon As TipoConexion, ByVal fechaDesde As DateTime, ByVal fechaHasta As DateTime, ByVal ban As String) As DataTable
+        Public Function BuscarChequesEmitidosCaducadosXRangoFechaCobro(ByVal tipoCon As TipoConexion, ByVal fechaDesde As DateTime, ByVal fechaHasta As DateTime, ByVal filtro As String) As DataTable
             Dim pars = New List(Of Object())
             pars.Add(New Object() {"FECHA_INICIAL", SqlDbType.DateTime, fechaDesde})
             pars.Add(New Object() {"FECHA_FINAL", SqlDbType.DateTime, fechaHasta})
-            pars.Add(New Object() {"BANCO_CHEQUE_EMITIDO", SqlDbType.VarChar, ban})
+            pars.Add(New Object() {"FILTRO", SqlDbType.NVarChar, filtro})
             Return ComandosSql.SeleccionarQueryWithParamsToDataTable(tipoCon, "BuscarChequesEmitidosCaducadosXRangoFechaCobro", True, pars)
         End Function
 

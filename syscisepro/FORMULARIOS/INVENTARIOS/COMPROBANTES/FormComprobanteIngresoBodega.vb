@@ -360,7 +360,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                     _detalleKardex = _objKardex.BuscarUltimoMoviminetoKardexXIdKardex(_tipoCon, lblIdKardex.Text, lblIdDetalleKardex.Text)
                     txtCodigoArticulo.Text = _objSecuencialItem.BuscarCodigoSecuencialItemxNombreSecuencial(_tipoCon, txtArticulo.Text.Trim.ToUpper)
                     'nudCantidad.Value = 1
-                    nudValor.Value = _objSecuencialItem.BuscarCostoSecuencialItemXIdSecuencialItem(_tipoCon, lblIdArticulo.Text)
+                    nudValor.Value = _objSecuencialItem.BuscarPvpSecuencialItemXIdSecuencialItem(_tipoCon, lblIdArticulo.Text)
                     cmbObservacionCalidad.SelectedIndex = 0
                     tsmAgregar.Enabled = True
 

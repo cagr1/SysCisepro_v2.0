@@ -144,7 +144,7 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
             Try
                 If _fechaDesde = "" Then Return
 
-                dgvChequesEmitidosAprobados.DataSource = _objetoChequesEmitidos.BuscarChequesEmitidosNoCobradosXRangoFecha(_tipoCon, _fechaDesde, _fechaHasta, cmbBancos.Text, cmbCuentaBancos.Text)
+                dgvChequesEmitidosAprobados.DataSource = _objetoChequesEmitidos.BuscarChequesEmitidosNoCobradosXRangoFecha(_tipoCon, _fechaDesde, _fechaHasta, txtFiltro.Text)
                 dgvChequesEmitidosAprobados.AutoResizeColumns()
                 dgvChequesEmitidosAprobados.AutoResizeRows()
                 dgvChequesEmitidosAprobados.Columns(2).Width = 90
@@ -166,7 +166,7 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
             Try
                 If _fechaDesde = "" Then Return
 
-                dgvEmitidosCobrados.DataSource = _objetoChequesEmitidos.BuscarChequesEmitidosCobradosXRangoFechaCobro(_tipoCon, _fechaDesde, _fechaHasta, cmbBancos.Text, cmbCuentaBancos.Text)
+                dgvEmitidosCobrados.DataSource = _objetoChequesEmitidos.BuscarChequesEmitidosCobradosXRangoFechaCobro(_tipoCon, _fechaDesde, _fechaHasta, txtFiltro.Text)
                 dgvEmitidosCobrados.ReadOnly = False
                 dgvEmitidosCobrados.EditMode = DataGridViewEditMode.EditProgrammatically
                 dgvEmitidosCobrados.AutoResizeColumns()
@@ -184,7 +184,7 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
             Try
                 If _fechaDesde = "" Then Return
 
-                dgvEmitidosCaducados.DataSource = _objetoChequesEmitidos.BuscarChequesEmitidosCaducadosXRangoFechaCobro(_tipoCon, _fechaDesde, _fechaHasta, cmbBancos.Text)
+                dgvEmitidosCaducados.DataSource = _objetoChequesEmitidos.BuscarChequesEmitidosCaducadosXRangoFechaCobro(_tipoCon, _fechaDesde, _fechaHasta, txtFiltro.Text)
                 dgvEmitidosCaducados.ReadOnly = False
                 dgvEmitidosCaducados.EditMode = DataGridViewEditMode.EditProgrammatically
                 dgvEmitidosCaducados.AutoResizeColumns()
@@ -298,6 +298,8 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
             dgvChequesEmitidosAprobados.Font = New Font("Roboto", 8, FontStyle.Regular)
             dgvEmitidosCaducados.Font = New Font("Roboto", 8, FontStyle.Regular)
 
+            Dim validation As New ValidationForms()
+            validation.SetPlaceholder(txtFiltro, "Buscar por Banco, Cheque o Nombre")
             LlenarComboBancos()
 
             CargarChequesEmitidosNoCobrados()
@@ -346,7 +348,7 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
         End Sub
 
         Private Sub btnBuscar_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnBuscar.Click
-            If cmbBancos.SelectedValue Is Nothing Or cmbCuentaBancos.SelectedValue Is Nothing Then Return
+            'If cmbBancos.SelectedValue Is Nothing Or cmbCuentaBancos.SelectedValue Is Nothing Then Return
 
             ' se da formato a la fecha para que el rango coja desde el comienzo del día inicial hasta que termina el día final
             _fechaDesde = dtpFechaDesde.Value.Day.ToString & "-" & dtpFechaDesde.Value.Month.ToString & "-" & dtpFechaDesde.Value.Year.ToString & " 00:00:00.001"
@@ -451,6 +453,21 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
             Else
                 MsgBox("NO HAY DATOS QUE EXPORTAR!", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
             End If
+        End Sub
+
+        Private Sub dgvChequesEmitidosAprobados_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvChequesEmitidosAprobados.CellContentClick
+
+        End Sub
+
+        Private Sub txtFiltro_KeyUp(sender As Object, e As KeyEventArgs) Handles txtFiltro.KeyUp
+            _fechaDesde = dtpFechaDesde.Value.Day.ToString & "-" & dtpFechaDesde.Value.Month.ToString & "-" & dtpFechaDesde.Value.Year.ToString & " 00:00:00.001"
+            _fechaHasta = dtpFechaHasta.Value.Day.ToString & "-" & dtpFechaHasta.Value.Month.ToString & "-" & dtpFechaHasta.Value.Year.ToString & " 23:59:59.000"
+
+            CargarChequesEmitidosNoCobrados()
+            CargarChequesEmitidosCobrados()
+            CargarChequesEmitidosCaducados()
+
+
         End Sub
     End Class
 End Namespace
