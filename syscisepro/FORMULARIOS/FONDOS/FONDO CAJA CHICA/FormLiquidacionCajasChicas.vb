@@ -203,9 +203,10 @@ Namespace FORMULARIOS.FONDOS.FONDO_CAJA_CHICA
             dgvLiquidacionFondoCajaChica.Columns(12).HeaderText = "PARROQUIA"
             dgvLiquidacionFondoCajaChica.Columns(13).HeaderText = "CENTRO COSTO"
             dgvLiquidacionFondoCajaChica.Columns(13).Width = 180
-            dgvLiquidacionFondoCajaChica.Columns(14).HeaderText = "CUENTA"
-            dgvLiquidacionFondoCajaChica.Columns(17).Width = 200
+            dgvLiquidacionFondoCajaChica.Columns(15).HeaderText = "CUENTA"
             dgvLiquidacionFondoCajaChica.Columns(17).HeaderText = "CLIENTE"
+            dgvLiquidacionFondoCajaChica.Columns(17).Width = 200
+
             dgvLiquidacionFondoCajaChica.ReadOnly = True
 
         End Sub

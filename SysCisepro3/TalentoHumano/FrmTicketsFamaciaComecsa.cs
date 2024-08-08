@@ -18,6 +18,7 @@ using ClassLibraryCisepro3.Estaticas;
 using Microsoft.Office.Interop.Excel;
 using Krypton.Toolkit;
 using System.Text.RegularExpressions;
+using System.Diagnostics.Eventing.Reader;
 
 namespace SysCisepro3.TalentoHumano
 {
@@ -189,6 +190,12 @@ namespace SysCisepro3.TalentoHumano
 
             if (KryptonMessageBox.Show(@"Desea anular el ticket seleccioando?", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) != DialogResult.Yes) return;
 
+            if (dgvRegistro.CurrentRow.Cells[8].Value.ToString() == "ANULADO")
+            {
+                KryptonMessageBox.Show(@"EL TICKET YA SE ENCUENTRA ANULADO", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+                return;
+            }
+
             _sqlCommands.Clear();
 
             _objTicketsFarmaciaComecsa.IdRegistro = Convert.ToInt32(dtpFechaRegistro.Tag);
@@ -294,11 +301,32 @@ namespace SysCisepro3.TalentoHumano
                 {
                     string text = row[5].ToString();
                     string value = ExtractNumericValue(text);
+                    String estadoRegistro = "";
                     //dataGridView1.Rows.Add(row[0], row[2], row[1], row[3], row[4], value, row[8], row[6]);
-                    dgvRegistro.Rows.Add(row[0], row[2], row[1], row[3], row[4], value, row[8], row[6]);
+                    if (Convert.ToInt32(row[7]) == 0)
+                    {
+                        estadoRegistro = "ANULADO";
+                   }
+                    else
+                    {
+                        estadoRegistro = "ACTIVO";
+                    }
+                      
+
+                    dgvRegistro.Rows.Add(row[0], row[2], row[1], row[3], row[4], value, row[8], row[6], estadoRegistro);
                     td += Convert.ToDouble(value);
                 }
-                
+
+                foreach (DataGridViewRow row in dgvRegistro.Rows)
+                {
+                    if ((row.Cells[8].Value.ToString()) == "ANULADO")
+                    {
+                        row.DefaultCellStyle.BackColor = Color.LightSalmon;
+                        
+                    }
+                }
+
+
                 dgvRegistro.AutoResizeRows();
 
                 
@@ -521,12 +549,19 @@ namespace SysCisepro3.TalentoHumano
                     return;
                 }
                 
-                if (cbxTipo.SelectedIndex != 3)
+                if (cbxTipo.SelectedIndex != 2)
                 {
-                    KryptonMessageBox.Show(@"EL ITEM SELECCIONADO NO CORRESPONDE A SOLICTIDU DE ANTICIPO PARA ESTE TIPO DE PERSONAL", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+                    KryptonMessageBox.Show(@"EL ITEM SELECCIONADO NO CORRESPONDE A SOLICITUD DE ANTICIPO PARA ESTE TIPO DE PERSONAL", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
                     return;
                 }
-                                        
+                
+                if (dgvRegistro.CurrentRow.Cells[8].Value.ToString() == "ANULADO")
+                {
+                    KryptonMessageBox.Show(@"EL ITEM SELECCIONADO ESTA ANULADO", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+                    return;
+                }
+                
+
                 string empre = Validaciones.NombreCompany(TipoCon);
                 if (data.Rows.Count > 0)
                 {

@@ -85,6 +85,8 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.dgvRegistro = new ComponentFactory.Krypton.Toolkit.KryptonDataGridView();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.crvCredenciales = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FECHA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DOC = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -93,8 +95,7 @@
             this.VALOR = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TIPO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DATA = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.crvCredenciales = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
+            this.ESTADO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toolStrip1.SuspendLayout();
             this.GroupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -607,7 +608,8 @@
             this.NOMBRES,
             this.VALOR,
             this.TIPO,
-            this.DATA});
+            this.DATA,
+            this.ESTADO});
             this.dgvRegistro.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvRegistro.Location = new System.Drawing.Point(3, 3);
             this.dgvRegistro.Name = "dgvRegistro";
@@ -620,12 +622,36 @@
             this.dgvRegistro.StateCommon.DataCell.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.dgvRegistro.StateCommon.DataCell.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.dgvRegistro.StateCommon.DataCell.Content.Color1 = System.Drawing.Color.Black;
-            this.dgvRegistro.StateCommon.DataCell.Content.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
-            this.dgvRegistro.StateCommon.DataCell.Content.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
             this.dgvRegistro.TabIndex = 0;
             this.dgvRegistro.SelectionChanged += new System.EventHandler(this.dgvRegistro_SelectionChanged);
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.crvCredenciales);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(766, 368);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Reporte";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // crvCredenciales
+            // 
+            this.crvCredenciales.ActiveViewIndex = -1;
+            this.crvCredenciales.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.crvCredenciales.Cursor = System.Windows.Forms.Cursors.Default;
+            this.crvCredenciales.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.crvCredenciales.Location = new System.Drawing.Point(3, 3);
+            this.crvCredenciales.Name = "crvCredenciales";
+            this.crvCredenciales.ShowCloseButton = false;
+            this.crvCredenciales.ShowGroupTreeButton = false;
+            this.crvCredenciales.ShowLogo = false;
+            this.crvCredenciales.ShowParameterPanelButton = false;
+            this.crvCredenciales.Size = new System.Drawing.Size(760, 362);
+            this.crvCredenciales.TabIndex = 0;
+            this.crvCredenciales.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None;
             // 
             // ID
             // 
@@ -689,32 +715,11 @@
             this.DATA.Name = "DATA";
             this.DATA.Visible = false;
             // 
-            // tabPage2
+            // ESTADO
             // 
-            this.tabPage2.Controls.Add(this.crvCredenciales);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(766, 368);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Reporte";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // crvCredenciales
-            // 
-            this.crvCredenciales.ActiveViewIndex = -1;
-            this.crvCredenciales.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.crvCredenciales.Cursor = System.Windows.Forms.Cursors.Default;
-            this.crvCredenciales.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.crvCredenciales.Location = new System.Drawing.Point(3, 3);
-            this.crvCredenciales.Name = "crvCredenciales";
-            this.crvCredenciales.ShowCloseButton = false;
-            this.crvCredenciales.ShowGroupTreeButton = false;
-            this.crvCredenciales.ShowLogo = false;
-            this.crvCredenciales.ShowParameterPanelButton = false;
-            this.crvCredenciales.Size = new System.Drawing.Size(760, 362);
-            this.crvCredenciales.TabIndex = 0;
-            this.crvCredenciales.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None;
+            this.ESTADO.HeaderText = "ESTADO";
+            this.ESTADO.Name = "ESTADO";
+            this.ESTADO.ReadOnly = true;
             // 
             // FrmTicketsFamaciaComecsa
             // 
@@ -806,6 +811,7 @@
         private System.Windows.Forms.TabPage tabPage1;
         private ComponentFactory.Krypton.Toolkit.KryptonDataGridView dgvRegistro;
         private System.Windows.Forms.TabPage tabPage2;
+        private CrystalDecisions.Windows.Forms.CrystalReportViewer crvCredenciales;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn FECHA;
         private System.Windows.Forms.DataGridViewTextBoxColumn DOC;
@@ -814,6 +820,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn VALOR;
         private System.Windows.Forms.DataGridViewTextBoxColumn TIPO;
         private System.Windows.Forms.DataGridViewTextBoxColumn DATA;
-        private CrystalDecisions.Windows.Forms.CrystalReportViewer crvCredenciales;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ESTADO;
     }
 }
