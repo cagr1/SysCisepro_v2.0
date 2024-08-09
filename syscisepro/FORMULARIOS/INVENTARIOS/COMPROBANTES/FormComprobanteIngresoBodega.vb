@@ -22,6 +22,7 @@ Imports Microsoft.Office.Interop
 Imports syscisepro.DATOS
 Imports syscisepro.FORMULARIOS.INVENTARIOS.PROCESO
 Imports Krypton.Toolkit
+Imports System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel
 
 
 Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
@@ -55,7 +56,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
         End Property
         Dim _sqlCommands As List(Of SqlCommand)
         Public IdUsuario As Integer
-
+        Public UserName As String
         ReadOnly _objControl As New ClassControlUniformes
         ReadOnly _objSerie As New ClassGenerarSerie
         ReadOnly _objBodega As New ClassBodega
@@ -726,24 +727,32 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
             ElseIf _botonSeleccionadoSitio = 2 Then
                 ModicificarComprobanteIngreso()
             End If
-            Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, String.Empty)
-            If res(0) Then
-                txtNroComprobante.Text = _objCompIng.Id
-                txtIdComprobante.Text = txtNroComprobante.Text
-                tbComprobanteIngresoBodega.SelectedIndex = 2
-                tsmNuevo.Enabled = True
-                tsmGuardar.Enabled = False
-                tsmCancelar.Enabled = False
-                TmsActualizar.Enabled = True
+
+            Dim nombreU As String = ""
+
+            If _botonSeleccionadoSitio = 1 Then
+                nombreU = "COMPROBANTE INGRESO " & UserName
+            ElseIf _botonSeleccionadoSitio = 2 Then
+                nombreU = "MODIFICACIÓN COMPROBANTE INGRESO " & UserName
             End If
-            'MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
-            Dim messageIcon As KryptonMessageBoxIcon
+            Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, nombreU)
             If res(0) Then
-                messageIcon = KryptonMessageBoxIcon.Information
-            Else
-                messageIcon = KryptonMessageBoxIcon.Exclamation
-            End If
-            KryptonMessageBox.Show(res(1), "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, messageIcon)
+                    txtNroComprobante.Text = _objCompIng.Id
+                    txtIdComprobante.Text = txtNroComprobante.Text
+                    tbComprobanteIngresoBodega.SelectedIndex = 2
+                    tsmNuevo.Enabled = True
+                    tsmGuardar.Enabled = False
+                    tsmCancelar.Enabled = False
+                    TmsActualizar.Enabled = True
+                End If
+                'MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
+                Dim messageIcon As KryptonMessageBoxIcon
+                If res(0) Then
+                    messageIcon = KryptonMessageBoxIcon.Information
+                Else
+                    messageIcon = KryptonMessageBoxIcon.Exclamation
+                End If
+                KryptonMessageBox.Show(res(1), "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, messageIcon)
         End Sub
         'Private Sub chkNumeroComprobante_CheckedChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles chkTodos.CheckedChanged
         '    If chkTodos.Checked Then
@@ -1386,17 +1395,34 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
 
             End If
 
-            With _objDetCompIng
-                .IdDetalle = lblDetaComp.Text
-            End With
-            _sqlCommands.Add(_objDetCompIng.anularDetalleComprobanteIngresoBodegaCommand())
+            For Each row In dgvDetalleComprobate.Rows
+                With _objDetCompIng
+                    .IdDetalle = row.Cells.Item(1).Value
+                End With
+                _sqlCommands.Add(_objDetCompIng.anularDetalleComprobanteIngresoBodegaCommand())
 
-            With _objDetalleKardex
-                .Id = lblDetaKardex.Text
-            End With
-            _sqlCommands.Add(_objDetalleKardex.AnularRegistroDetalleKardexCommand())
 
-            Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, String.Empty)
+                With _objDetalleKardex
+                    .Id = row.Cells.Item(5).Value
+                End With
+                _sqlCommands.Add(_objDetalleKardex.AnularRegistroDetalleKardexCommand())
+
+
+            Next
+
+            'With _objDetCompIng
+            '    .IdDetalle = lblDetaComp.Text
+            'End With
+            '_sqlCommands.Add(_objDetCompIng.anularDetalleComprobanteIngresoBodegaCommand())
+
+            'With _objDetalleKardex
+            '    .Id = lblDetaKardex.Text
+            'End With
+            '_sqlCommands.Add(_objDetalleKardex.AnularRegistroDetalleKardexCommand())
+
+            Dim nombreU As String = "ANULACIÓN COMPROBANTE INGRESO " & UserName
+            Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, nombreU)
+
             If res(0) Then
                 tsmNuevo.Enabled = False
                 tsmGuardar.Enabled = False

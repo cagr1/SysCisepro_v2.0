@@ -1508,16 +1508,29 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                 _sqlCommands.Add(_objControl.AnularControlCommand())
 
             End If
+            For Each row In dgvDetalleComprobate.Rows
+                With _objDetCompEgr
+                    .IdDetalle = row.Cells.Item(1).Value
+                End With
+                _sqlCommands.Add(_objDetCompEgr.anularDetalleComprobanteEgresoBodegaCommand())
 
-            With _objDetCompEgr
-                .IdDetalle = lblDetaComp.Text
-            End With
-            _sqlCommands.Add(_objDetCompEgr.anularDetalleComprobanteEgresoBodegaCommand())
 
-            With _objDetalleKardex
-                .Id = lblDetKardex.Text
-            End With
-            _sqlCommands.Add(_objDetalleKardex.AnularRegistroDetalleKardexCommand())
+                With _objDetalleKardex
+                    .Id = row.Cells.Item(5).Value
+                End With
+                _sqlCommands.Add(_objDetalleKardex.AnularRegistroDetalleKardexCommand())
+
+            Next
+
+            'With _objDetCompEgr
+            '    .IdDetalle = lblDetaComp.Text
+            'End With
+            '_sqlCommands.Add(_objDetCompEgr.anularDetalleComprobanteEgresoBodegaCommand())
+
+            'With _objDetalleKardex
+            '    .Id = lblDetKardex.Text
+            'End With
+            '_sqlCommands.Add(_objDetalleKardex.AnularRegistroDetalleKardexCommand())
 
             Dim nombreU As String = ""
             nombreU = "ANULAR COMPROBANTE EGRESO " & UserName

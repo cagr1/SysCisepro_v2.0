@@ -1688,12 +1688,12 @@ namespace SysCisepro3.Main
         }
         private void eGRESOToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form f = new syscisepro.FORMULARIOS.INVENTARIOS.COMPROBANTES.FormComprobanteEgresoBodega { MdiParent = this, TipoCox = TipoCox, IdUsuario = ObjUsuario.IdUsuario };
+            Form f = new syscisepro.FORMULARIOS.INVENTARIOS.COMPROBANTES.FormComprobanteEgresoBodega { MdiParent = this, TipoCox = TipoCox, IdUsuario = ObjUsuario.IdUsuario, UserName = ObjUsuario.Datos };
             f.Show();
         }
         private void iNGRESOToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            Form f = new syscisepro.FORMULARIOS.INVENTARIOS.COMPROBANTES.FormComprobanteIngresoBodega { MdiParent = this, TipoCox = TipoCox, IdUsuario = ObjUsuario.IdUsuario };
+            Form f = new syscisepro.FORMULARIOS.INVENTARIOS.COMPROBANTES.FormComprobanteIngresoBodega { MdiParent = this, TipoCox = TipoCox, IdUsuario = ObjUsuario.IdUsuario, UserName = ObjUsuario.Datos };
             f.Show();
             f.BringToFront();
         }
