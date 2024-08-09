@@ -375,7 +375,8 @@ namespace SysCisepro3.TalentoHumano
 
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
-            if (dataGridView1.RowCount == 0)
+            
+            if (dgvRegistro.RowCount == 0)
             {
                 KryptonMessageBox.Show(@"NO HAY DATOS PARA EXPORTAR!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
                 return;
@@ -390,10 +391,10 @@ namespace SysCisepro3.TalentoHumano
                 worksheet.Name = "TICKETS";
 
                 var l = -1;
-                for (var i = 0; i <= dataGridView1.Columns.Count - 1; i++) if (dataGridView1.Columns[i].Visible) l++;
+                for (var i = 0; i <= dgvRegistro.Columns.Count - 1; i++) if (dgvRegistro.Columns[i].Visible) l++;
                 var ic = ValidationForms.NumToCharExcel(l);
 
-                var rc = dataGridView1.RowCount + 20;
+                var rc = dgvRegistro.RowCount + 20;
 
                 worksheet.Range["A1:" + ic + rc].Font.Size = 10;
 

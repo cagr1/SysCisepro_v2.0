@@ -654,6 +654,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                 Dim idu = _objControl.BuscarMayorIdControlUniformes(_tipoCon) + 1
 
                 Dim idd = _objDetalleEgresoPuesto.BuscarMayorIdRegistroDetalleComprobante(_tipoCon) + 1
+                Dim dat As DataTable = ConvertDataTable(dgvSecuencial)
                 For indice = 0 To dgvSecuencial.RowCount - 1
                     With _objDetalleKardex
                         .Id = iddk

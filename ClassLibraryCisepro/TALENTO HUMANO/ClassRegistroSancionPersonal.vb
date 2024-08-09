@@ -95,8 +95,9 @@ Namespace TALENTO_HUMANO
         Public Function DeleteRegistroNuevoSancionPersonalCommand(ByVal idp As Integer, ByVal fecd As DateTime, ByVal fech As DateTime) As SqlCommand
             Dim comando = New SqlCommand
             With comando
-                .CommandType = CommandType.Text
-                .CommandText = "delete from REGISTRO_SANCIONES_PERSONAL where fecha between @fecd and @fech and id_sancion IN (1,2,3,13,14,28)  and id_prog = @idp"
+                .CommandType = CommandType.StoredProcedure
+                '.CommandText = "delete from REGISTRO_SANCIONES_PERSONAL where fecha between @fecd and @fech and id_sancion IN (1,2,3,13,14,28)  and id_prog = @idp"
+                .CommandText = "sp_deleteRegistroNuevaSancionPersonal"
 
                 .Parameters.AddWithValue("@idp", SqlDbType.Int).Value = idp
                 .Parameters.AddWithValue("@fecd", SqlDbType.DateTime).Value = fecd

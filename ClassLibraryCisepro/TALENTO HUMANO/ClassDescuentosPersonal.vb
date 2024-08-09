@@ -83,10 +83,9 @@ Namespace TALENTO_HUMANO
         Public Function DeleteRegistroDescuentoXAsignacionPersonalCommand(ByVal idp As Integer, ByVal fecd As Date, ByVal fech As Date) As SqlCommand
             Dim comando = New SqlCommand
             With comando
-                .CommandType = CommandType.Text
-                '.CommandText = "UPDATE DESCUENTOS_ROL SET estado = 0 FROM DESCUENTOS_ROL DR LEFT JOIN REGISTRO_SANCIONES_PERSONAL RSP ON DR.id_registro = RSP.id_descuento WHERE DR.fecha BETWEEN @fecd AND @fech AND RSP.fecha BETWEEN @fecd AND @fech AND RSP.id_sancion = 28 AND RSP.id_prog = @idp;"
-                '.CommandText = "DELETE FROM DESCUENTOS_ROL LEFT JOIN REGISTRO_SANCIONES_PERSONAL ON DR.id_registro = RSP.id_descuento WHERE DR.fecha BETWEEN @fecd AND @fech  AND RSP.id_sancion=28 and RSP.id_prog = @idp;"
-                .CommandText = "DELETE DR FROM DESCUENTOS_ROL DR JOIN REGISTRO_SANCIONES_PERSONAL RSP ON DR.id_registro = RSP.id_descuento WHERE DR.fecha BETWEEN @fecd AND @fech AND RSP.id_sancion IN (1,2,3,13,14,28) AND RSP.id_prog = @idp"
+                .CommandType = CommandType.StoredProcedure
+                '.CommandText = "DELETE DR FROM DESCUENTOS_ROL DR JOIN REGISTRO_SANCIONES_PERSONAL RSP ON DR.id_registro = RSP.id_descuento WHERE DR.fecha BETWEEN @fecd AND @fech AND RSP.id_sancion IN (1,2,3,13,14,28) AND RSP.id_prog = @idp"
+                .CommandText = "sp_deleteRegsitroDescuentoXAsignacionPersonal"
                 .Parameters.AddWithValue("@idp", SqlDbType.Int).Value = idp
                 .Parameters.AddWithValue("@fecd", SqlDbType.Date).Value = fecd
                 .Parameters.AddWithValue("@fech", SqlDbType.Date).Value = fech

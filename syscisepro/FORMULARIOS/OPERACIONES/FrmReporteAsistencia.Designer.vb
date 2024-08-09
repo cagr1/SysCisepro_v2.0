@@ -246,7 +246,7 @@
             Me.NOVEDADESACBMToolStripMenuItem.Image = Global.syscisepro.My.Resources.Resources.icons8_excel_48
             Me.NOVEDADESACBMToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.NOVEDADESACBMToolStripMenuItem.Name = "NOVEDADESACBMToolStripMenuItem"
-            Me.NOVEDADESACBMToolStripMenuItem.Size = New System.Drawing.Size(206, 30)
+            Me.NOVEDADESACBMToolStripMenuItem.Size = New System.Drawing.Size(208, 30)
             Me.NOVEDADESACBMToolStripMenuItem.Text = "NOVEDADES A / C B.M."
             '
             'REPORTESDERADIOToolStripMenuItem
@@ -254,20 +254,20 @@
             Me.REPORTESDERADIOToolStripMenuItem.Image = Global.syscisepro.My.Resources.Resources.icons8_excel_48
             Me.REPORTESDERADIOToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.REPORTESDERADIOToolStripMenuItem.Name = "REPORTESDERADIOToolStripMenuItem"
-            Me.REPORTESDERADIOToolStripMenuItem.Size = New System.Drawing.Size(206, 30)
+            Me.REPORTESDERADIOToolStripMenuItem.Size = New System.Drawing.Size(208, 30)
             Me.REPORTESDERADIOToolStripMenuItem.Text = "SANCIONES / MULTAS"
             '
             'ToolStripSeparator1
             '
             Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
-            Me.ToolStripSeparator1.Size = New System.Drawing.Size(203, 6)
+            Me.ToolStripSeparator1.Size = New System.Drawing.Size(205, 6)
             '
             'EXPORTARDATOSToolStripMenuItem
             '
             Me.EXPORTARDATOSToolStripMenuItem.Image = Global.syscisepro.My.Resources.Resources.icons8_excel_48
             Me.EXPORTARDATOSToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.EXPORTARDATOSToolStripMenuItem.Name = "EXPORTARDATOSToolStripMenuItem"
-            Me.EXPORTARDATOSToolStripMenuItem.Size = New System.Drawing.Size(206, 30)
+            Me.EXPORTARDATOSToolStripMenuItem.Size = New System.Drawing.Size(208, 30)
             Me.EXPORTARDATOSToolStripMenuItem.Text = "EXPORTAR DATOS"
             '
             'GUARDARCAMBIOSToolStripMenuItem
@@ -284,7 +284,7 @@
             Me.Label8.AutoSize = True
             Me.Label8.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(247, Byte), Integer))
             Me.Label8.Font = New System.Drawing.Font("Roboto", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label8.ForeColor = System.Drawing.Color.Transparent
+            Me.Label8.ForeColor = System.Drawing.Color.Black
             Me.Label8.Location = New System.Drawing.Point(544, 10)
             Me.Label8.Name = "Label8"
             Me.Label8.Size = New System.Drawing.Size(60, 15)
@@ -296,7 +296,7 @@
             Me.Label7.AutoSize = True
             Me.Label7.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(247, Byte), Integer))
             Me.Label7.Font = New System.Drawing.Font("Roboto", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label7.ForeColor = System.Drawing.Color.Transparent
+            Me.Label7.ForeColor = System.Drawing.Color.Black
             Me.Label7.Location = New System.Drawing.Point(471, 10)
             Me.Label7.Name = "Label7"
             Me.Label7.Size = New System.Drawing.Size(71, 15)
@@ -538,7 +538,7 @@
             Me.TabPage3.Location = New System.Drawing.Point(4, 22)
             Me.TabPage3.Name = "TabPage3"
             Me.TabPage3.Padding = New System.Windows.Forms.Padding(3)
-            Me.TabPage3.Size = New System.Drawing.Size(1224, 484)
+            Me.TabPage3.Size = New System.Drawing.Size(1020, 450)
             Me.TabPage3.TabIndex = 1
             Me.TabPage3.Text = "NOCHE"
             Me.TabPage3.UseVisualStyleBackColor = True
@@ -728,7 +728,7 @@
             Me.TabPage5.Location = New System.Drawing.Point(4, 22)
             Me.TabPage5.Name = "TabPage5"
             Me.TabPage5.Padding = New System.Windows.Forms.Padding(3)
-            Me.TabPage5.Size = New System.Drawing.Size(1224, 484)
+            Me.TabPage5.Size = New System.Drawing.Size(1020, 450)
             Me.TabPage5.TabIndex = 2
             Me.TabPage5.Text = "DÍA LIBRE"
             Me.TabPage5.UseVisualStyleBackColor = True

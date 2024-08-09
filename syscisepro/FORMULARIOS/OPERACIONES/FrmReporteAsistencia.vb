@@ -97,9 +97,9 @@ Namespace FORMULARIOS.OPERACIONES
                     Label24.ForeColor = Color.White
                     Label24.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
                     'Label7.ForeColor = Color.White
-                    Label7.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
+                    'Label7.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
                     'Label8.ForeColor = Color.White
-                    Label8.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
+                    'Label8.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
                     Label2.ForeColor = Color.White
                     Label2.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
                     Label4.ForeColor = Color.White
@@ -114,9 +114,9 @@ Namespace FORMULARIOS.OPERACIONES
                     'MenuStrip2.BackColor = My.MySettingsProperty.Settings.ColorCisepro
                     Label24.ForeColor = Color.White
                     Label24.BackColor = My.MySettingsProperty.Settings.ColorCisepro
-                    Label7.ForeColor = My.MySettingsProperty.Settings.ColorCisepro
+                    'Label7.ForeColor = My.MySettingsProperty.Settings.ColorCisepro
                     'Label7.BackColor = My.MySettingsProperty.Settings.ColorCisepro
-                    Label8.ForeColor = My.MySettingsProperty.Settings.ColorCisepro
+                    'Label8.ForeColor = My.MySettingsProperty.Settings.ColorCisepro
                     'Label8.BackColor = My.MySettingsProperty.Settings.ColorCisepro
                     Label2.ForeColor = Color.White
                     Label2.BackColor = My.MySettingsProperty.Settings.ColorCisepro
@@ -140,7 +140,7 @@ Namespace FORMULARIOS.OPERACIONES
         Private Sub ToolStripMenuItem1_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ToolStripMenuItem2.Click
 
             If dgvDia.RowCount > 0 Or dgvNoche.RowCount > 0 Then
-                If MessageBox.Show("Se detectó datos en las tabla DÍA / NOCHE, si no ha guardado los cambios se volverá a cargar la información almacenada anteriormente para la fecha correspondiente. Desea continuar?", "MENSAJE DEL SISTEMA", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> DialogResult.Yes Then Return
+                If KryptonMessageBox.Show("Se detectó datos en las tabla DÍA / NOCHE, si no ha guardado los cambios se volverá a cargar la información almacenada anteriormente para la fecha correspondiente. Desea continuar?", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) <> DialogResult.Yes Then Return
             End If
 
             Try
@@ -151,7 +151,7 @@ Namespace FORMULARIOS.OPERACIONES
 
                 Dim prog = _objProgramacionOps.SeleccionarProgramacionByFecha(_tipoCon, fechaDesde)
                 If prog.Rows.Count = 0 Then
-                    MessageBox.Show("NO HAY REGISTRO DE LA PROGRAMACIÓN CORRESPONDIENTE A LA FECHA SELECCIONADA!", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                    KryptonMessageBox.Show("NO HAY REGISTRO DE LA PROGRAMACIÓN CORRESPONDIENTE A LA FECHA SELECCIONADA!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                     Return
                 End If
 
@@ -184,7 +184,7 @@ Namespace FORMULARIOS.OPERACIONES
 
                 Dim ex = _objAsignacionPersonal.SeleccionarProgramacionByIdProgFecha(_tipoCon, prog.Rows(0).Item(0), fechaDesde, fechaHasta)
                 If ex Then
-                    Select Case MessageBox.Show("YA EXISTE un reporte del " & DateTimePicker4.Text & " si pone 'SI' se cargará dicho reporte y podrá continuar los cambios sobre el mismo, si pone 'NO' se cargará un nuevo reporte según el día de la programación correspondiente. Desea cargar los datos del reporte existente? ", "MENSAJE DEL SISTEMA", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question)
+                    Select Case KryptonMessageBox.Show("YA EXISTE un reporte del " & DateTimePicker4.Text & " si pone 'SI' se cargará dicho reporte y podrá continuar los cambios sobre el mismo, si pone 'NO' se cargará un nuevo reporte según el día de la programación correspondiente. Desea cargar los datos del reporte existente? ", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.YesNoCancel, KryptonMessageBoxIcon.Question)
                         Case DialogResult.Yes
                             datosd = _objdetaProgramacionOps.SeleccionarDetalleAsistenciaByIdProgramacion(_tipoCon, True, prog.Rows(0).Item(0), dia, ndia, fechaDesde, fechaHasta, jdia, 1)
                             datosn = _objdetaProgramacionOps.SeleccionarDetalleAsistenciaByIdProgramacion(_tipoCon, True, prog.Rows(0).Item(0), dia, ndia, fechaDesde, fechaHasta, jdia, 2)
@@ -460,7 +460,7 @@ Namespace FORMULARIOS.OPERACIONES
                     ToolStripMenuItem6.Enabled = False
                     dgvDia.ReadOnly = True
                     dgvNoche.ReadOnly = True
-                    MessageBox.Show("HAN PASADO MÁS DE 48H, NO SE PUEDE MODIFICAR EL REPORTE CORRESPONDIENTE!!", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                    KryptonMessageBox.Show("HAN PASADO MÁS DE 48H, NO SE PUEDE MODIFICAR EL REPORTE CORRESPONDIENTE!!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                 Else
                     btnAgregar.Enabled = True
                     btnCambiar.Enabled = True
@@ -514,7 +514,7 @@ Namespace FORMULARIOS.OPERACIONES
 
         Private Sub FrmReporteAsistencia_FormClosing(ByVal sender As System.Object, ByVal e As Windows.Forms.FormClosingEventArgs) Handles MyBase.FormClosing
             If dgvDia.RowCount > 0 Or dgvNoche.RowCount > 0 Then
-                Dim res = MessageBox.Show("Desea guardar los cambios realizados?", "MENSAJE DEL SISTEMA", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question)
+                Dim res = KryptonMessageBox.Show("Desea guardar los cambios realizados?", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.YesNoCancel, KryptonMessageBoxIcon.Question)
                 If res = DialogResult.Cancel Then
                     e.Cancel = True
                 Else
@@ -527,11 +527,11 @@ Namespace FORMULARIOS.OPERACIONES
             _hoy = ValidationForms.FechaActual(_tipoCon)
 
             If Not Admin And _hoy > DateTimePicker5.Value.AddDays(2).AddHours(2) Then
-                MessageBox.Show("HAN PASADO MÁS DE 48H, NO SE PUEDE MODIFICAR EL REPORTE CORRESPONDIENTE!!", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                KryptonMessageBox.Show("HAN PASADO MÁS DE 48H, NO SE PUEDE MODIFICAR EL REPORTE CORRESPONDIENTE!!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                 Return
             End If
 
-            If msg Then If MessageBox.Show("Desea guardar los cambios realizados para los vigilantes?", "MENSAJE DEL SISTEMA", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> DialogResult.Yes Then Return
+            If msg Then If KryptonMessageBox.Show("Desea guardar los cambios realizados para los vigilantes?", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) <> DialogResult.Yes Then Return
             VerificarFaltas()
 
             _sqlCommands.Clear()
@@ -574,47 +574,6 @@ Namespace FORMULARIOS.OPERACIONES
                 End With
                 _sqlCommands.Add(_objAsignacionPersonal.RegistararNuevoAsignacionPersonalComman())
 
-
-                Dim multas As Integer = _objAsignacionPersonal.BuscarMultasParaSancionxId(_tipoCon, CInt(row.Cells(3).Value), fechaDesde, fechaHasta)
-                Dim Valor1 As Integer = _objRegistroSancion.ActualizarValorSancion(_tipoCon, CInt(row.Cells(3).Value), fechaDesde, fechaHasta, CInt(row.Cells(2).Value))
-                Dim Valor2 As Decimal = _objRegistroSancion.ValorSancion(_tipoCon)
-
-                'Registro de Multas x Reporte
-                'If multas > 0 And Valor1 > 0 Then
-                '    With _objRegistroSancion
-                '        .IdRegistro = _objRegistroSancion.BuscarMayorIdRegistroSancion(_tipoCon) + id
-                '        .IdPersonal = CInt(row.Cells(3).Value)
-                '        .IdSancion = 28
-                '        .Fecha = fechaDesde
-                '        .Valor = Valor1 * Valor2
-                '        .Estado = 1
-                '        .Observacion = (row.Tag & "").ToString.Trim.Split("|")(1).Trim & " MULTA X REPORTE"
-                '        .Idsitio = _objSitioTrabajo.SeleccionarSitioxIdxIdPersonal(_tipoCon, .IdPersonal)
-                '        .IdProg = CInt(row.Cells(2).Value)
-                '        .IdDescuento = _objRegistroDescuento.BuscarMayorIdRegistroDescuento(_tipoCon) + id
-
-
-                '    End With
-                '    _sqlCommands.Add(_objRegistroSancion.NuevoRegistroSancionDescuentoCommands())
-
-
-                '    With _objRegistroDescuento
-                '        .IdRegistro = _objRegistroDescuento.BuscarMayorIdRegistroDescuento(_tipoCon) + id
-                '        .IdPersonal = CInt(row.Cells(3).Value)
-                '        .Fecha = fechaDesde
-                '        .Procesado = 0
-                '        .Mes = DateTimePicker5.Value.Month
-                '        .Anio = DateTimePicker5.Value.Year
-                '        .IdRol = 0
-                '        .Tipo = 10
-                '        .Observacion = (row.Tag & "").ToString.Trim.Split("|")(1).Trim & " MULTA X REPORTE"
-                '        .Valor = Valor1 * Valor2
-                '        .Tipot = "DESCUENTO MULTAS / ATRASOS"
-                '        .Idprog = CInt(TextBox3.Text)
-                '    End With
-                '    _sqlCommands.Add(_objRegistroDescuento.NuevoRegistroDescuentoCommands())
-
-                'End If
 
                 'Registro de Multas x inasistencia
 
@@ -659,13 +618,14 @@ Namespace FORMULARIOS.OPERACIONES
                 Dim time As String = row.Cells(11).Value.ToString()
                 Dim parts() As String = time.Split(":"c)
 
+                If row.Cells(10).Value.ToString.Equals("ATRASO") Then
+                    If parts.Length >= 2 Then
 
-                If parts.Length >= 2 Then
 
-                    Dim minutes As Integer
-                    Dim IdSancion As Integer
-                    If Integer.TryParse(parts(1), minutes) Then
-                        If row.Cells(10).Value.ToString().Equals("ATRASO") Then
+                        Dim minutes As Integer
+                        Dim IdSancion As Integer
+                        If Integer.TryParse(parts(1), minutes) Then
+
 
                             If minutes >= 1 AndAlso minutes <= 9 Then
                                 IdSancion = 1 ' 10 min sanction
@@ -758,12 +718,13 @@ Namespace FORMULARIOS.OPERACIONES
                 _sqlCommands.Add(_objAsignacionPersonal.RegistararNuevoAsignacionPersonalComman())
 
 
-                Dim multas As Integer = _objAsignacionPersonal.BuscarMultasParaSancionxId(_tipoCon, CInt(row.Cells(3).Value), fechaDesde, fechaHasta)
+                'Dim multas As Integer = _objAsignacionPersonal.BuscarMultasParaSancionxId(_tipoCon, CInt(row.Cells(3).Value), fechaDesde, fechaHasta)
                 Dim Valor1 As Integer = _objRegistroSancion.ActualizarValorSancion(_tipoCon, CInt(row.Cells(3).Value), fechaDesde, fechaHasta, CInt(row.Cells(2).Value))
-                Dim Valor2 As Decimal = _objRegistroSancion.ValorSancion(_tipoCon)
-                'Dim Id_descuento As Integer = _objRegistroDescuento.BuscarMayorIdRegistroDescuento(_tipoCon) + id
-                If multas > 0 Then
 
+                'Dim Id_descuento As Integer = _objRegistroDescuento.BuscarMayorIdRegistroDescuento(_tipoCon) + id
+
+                If Valor1 > 0 Then
+                    Dim Valor2 As Decimal = _objRegistroSancion.ValorSancion(_tipoCon)
                     With _objRegistroSancion
                         .IdRegistro = _objRegistroSancion.BuscarMayorIdRegistroSancion(_tipoCon) + id
                         .IdPersonal = CInt(row.Cells(3).Value)
@@ -839,7 +800,7 @@ Namespace FORMULARIOS.OPERACIONES
 
                     End If
 
-                    id += 1
+
                 End If
 
 
@@ -847,13 +808,14 @@ Namespace FORMULARIOS.OPERACIONES
                 Dim time As String = row.Cells(11).Value.ToString()
                 Dim parts() As String = time.Split(":"c)
 
+                If row.Cells(10).Value.ToString().Equals("ATRASO") Then
 
-                If parts.Length >= 2 Then
+                    If parts.Length >= 2 Then
 
-                    Dim minutes As Integer
-                    Dim IdSancion As Integer
-                    If Integer.TryParse(parts(1), minutes) Then
-                        If row.Cells(10).Value.ToString().Equals("ATRASO") Then
+                        Dim minutes As Integer
+                        Dim IdSancion As Integer
+                        If Integer.TryParse(parts(1), minutes) Then
+
 
                             If minutes >= 1 AndAlso minutes <= 9 Then
                                 IdSancion = 1 ' 10 min 
@@ -904,7 +866,7 @@ Namespace FORMULARIOS.OPERACIONES
 
                     End If
 
-                    id += 1
+
                 End If
 
 
@@ -1873,7 +1835,7 @@ Namespace FORMULARIOS.OPERACIONES
 
             If Not Admin And _hoy > DateTimePicker4.Value.AddDays(2).AddHours(2) Then
                 'If Not _modificar Then
-                MessageBox.Show("HAN PASADO MÁS DE 48H, NO SE PUEDE MODIFICAR EL REPORTE CORRESPONDIENTE!!", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                KryptonMessageBox.Show("HAN PASADO MÁS DE 48H, NO SE PUEDE MODIFICAR EL REPORTE CORRESPONDIENTE!!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                 Return
             End If
 
@@ -1977,7 +1939,8 @@ Namespace FORMULARIOS.OPERACIONES
             End If
 
             VerificarFaltas()
-
+            Dim nombreU As String = "Se agrega " & frm.txtIdPersonal.Text & " en R. ASISTENCIA por  " & UserName
+            Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, nombreU)
         End Sub
 
         Private Sub CAMBIARToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnCambiar.Click
@@ -2047,17 +2010,25 @@ Namespace FORMULARIOS.OPERACIONES
             _hoy = ValidationForms.FechaActual(_tipoCon)
 
             If Not Admin And _hoy > DateTimePicker5.Value.AddDays(2).AddHours(2) Then
-                MessageBox.Show("HAN PASADO MÁS DE 48H, NO SE PUEDE MODIFICAR EL REPORTE CORRESPONDIENTE!!", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                KryptonMessageBox.Show("HAN PASADO MÁS DE 48H, NO SE PUEDE MODIFICAR EL REPORTE CORRESPONDIENTE!!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                 Return
             End If
 
-            If MessageBox.Show("Seguro que desea quitar este registro", "MENSAJE DEL SISTEMA", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> DialogResult.Yes Then Return
+            If KryptonMessageBox.Show("Seguro que desea quitar este registro", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) <> DialogResult.Yes Then Return
             Try
 
                 If TabControl1.SelectedIndex = 0 Then
+                    'I need the value copy the value in dgvDia.CurrentRow.Cells(3).Value
+                    Dim idpValue = dgvDia.SelectedRows(0).Cells(3).Value.ToString()
+                    Dim nombreU As String = "Se elimina a " & idpValue & " en R. ASISTENCIA por  " & UserName
+                    Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, nombreU)
                     dgvDia.Rows.Remove(dgvDia.SelectedRows(0))
                     TabControl1.TabPages(0).Text = "DÍA - " & dgvDia.RowCount & " VIGILANTES"
+
                 Else
+                    Dim idpValue = dgvNoche.SelectedRows(0).Cells(3).Value.ToString()
+                    Dim nombreU As String = "Se elimina a " & idpValue & " en R. ASISTENCIA por  " & UserName
+                    Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, nombreU)
                     dgvNoche.Rows.Remove(dgvNoche.SelectedRows(0))
                     TabControl1.TabPages(1).Text = "NOCHE - " & dgvNoche.RowCount & " VIGILANTES"
                 End If

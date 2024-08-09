@@ -50,41 +50,14 @@ Namespace TALENTO_HUMANO
         Public Function RegistararNuevoAsignacionPersonalComman() As SqlCommand
             Dim comando = New SqlCommand
             With comando
-                .CommandType = CommandType.Text
+                .CommandType = CommandType.StoredProcedure
                 '.CommandText = "DECLARE @con CHAR(1) = 'N';" & vbCrLf & "insert into asignacion_personal (id_asignacion, id_personal, id_puesto, id_horario, estado, fecha_registro, id_programacion, fecha, c50, c51, c40, c41, entrada, salida, tipo, cantrep, observacion, report, id_user, horario, fld_contar_multas)" & vbCrLf &
                 ' "values (@id_asignacion, @id_personal, @id_puesto, @id_horario, @estado, @fecha_registro, @idp, @fecha, @c50, @c51, @c40, @c41,  @entrada, @salida,  @tipo, @cantrep, @observacion, @report, @id_user, @horario, (DATALENGTH(CAST(@report AS VARCHAR(MAX))) - DATALENGTH(REPLACE(CAST(@report AS VARCHAR(MAX)), @con, ''))));"
 
 
-                .CommandText = "INSERT INTO asignacion_personal (id_asignacion, id_personal, id_puesto, id_horario, estado, fecha_registro, id_programacion, fecha, c50, c51, c40, c41, entrada, salida, tipo, cantrep, observacion, report, id_user, horario, fld_contar_multas)" & vbCrLf &
-    "VALUES (@id_asignacion, @id_personal, @id_puesto, @id_horario, @estado, @fecha_registro, @idp, @fecha, @c50, @c51, @c40, @c41,  @entrada, @salida,  @tipo, @cantrep, @observacion, @report, @id_user, @horario, " & vbCrLf &
-    "(SELECT (LEN(@report) - LEN(REPLACE(@report, 'N00:', ''))) / LEN('N00:')) + " & vbCrLf &
-    "(LEN(@report) - LEN(REPLACE(@report, 'N01:', ''))) / LEN('N01:') + " & vbCrLf &
-    "(LEN(@report) - LEN(REPLACE(@report, 'N02:', ''))) / LEN('N02:') + " & vbCrLf &
-    "(LEN(@report) - LEN(REPLACE(@report, 'N03:', ''))) / LEN('N03:') + " & vbCrLf &
-    "(LEN(@report) - LEN(REPLACE(@report, 'N04:', ''))) / LEN('N04:') + " & vbCrLf &
-    "(LEN(@report) - LEN(REPLACE(@report, 'N05:', ''))) / LEN('N05:') + " & vbCrLf &
-    "(LEN(@report) - LEN(REPLACE(@report, 'N06:', ''))) / LEN('N06:') + " & vbCrLf &
-    "(LEN(@report) - LEN(REPLACE(@report, 'N07:', ''))) / LEN('N07:') + " & vbCrLf &
-    "(LEN(@report) - LEN(REPLACE(@report, 'N08:', ''))) / LEN('N08:') + " & vbCrLf &
-    "(LEN(@report) - LEN(REPLACE(@report, 'N09:', ''))) / LEN('N09:') + " & vbCrLf &
-    "(LEN(@report) - LEN(REPLACE(@report, 'N10:', ''))) / LEN('N10:') + " & vbCrLf &
-    "(LEN(@report) - LEN(REPLACE(@report, 'N11:', ''))) / LEN('N11:') + " & vbCrLf &
-    "(LEN(@report) - LEN(REPLACE(@report, 'N12:', ''))) / LEN('N12:') + " & vbCrLf &
-    "(LEN(@report) - LEN(REPLACE(@report, 'N13:', ''))) / LEN('N13:') + " & vbCrLf &
-    "(LEN(@report) - LEN(REPLACE(@report, 'N14:', ''))) / LEN('N14:') + " & vbCrLf &
-    "(LEN(@report) - LEN(REPLACE(@report, 'N15:', ''))) / LEN('N15:') + " & vbCrLf &
-    "(LEN(@report) - LEN(REPLACE(@report, 'N16:', ''))) / LEN('N16:') + " & vbCrLf &
-    "(LEN(@report) - LEN(REPLACE(@report, 'N17:', ''))) / LEN('N17:') + " & vbCrLf &
-    "(LEN(@report) - LEN(REPLACE(@report, 'N18:', ''))) / LEN('N18:') + " & vbCrLf &
-    "(LEN(@report) - LEN(REPLACE(@report, 'N19:', ''))) / LEN('N19:') + " & vbCrLf &
-    "(LEN(@report) - LEN(REPLACE(@report, 'N20:', ''))) / LEN('N20:') + " & vbCrLf &
-    "(LEN(@report) - LEN(REPLACE(@report, 'N21:', ''))) / LEN('N21:') + " & vbCrLf &
-    "(LEN(@report) - LEN(REPLACE(@report, 'N22:', ''))) / LEN('N22:') + " & vbCrLf &
-    "(LEN(@report) - LEN(REPLACE(@report, 'N23:', ''))) / LEN('N23:') + " & vbCrLf &
-    "(LEN(@report) - LEN(REPLACE(@report, 'N24:', ''))) / LEN('N24:'));" & vbCrLf
-
-
-
+                '.CommandText = "INSERT INTO asignacion_personal (id_asignacion, id_personal, id_puesto, id_horario, estado, fecha_registro, id_programacion, fecha, c50, c51, c40, c41, entrada, salida, tipo, cantrep, observacion, report, id_user, horario, fld_contar_multas)" & vbCrLf &
+                '               "VALUES (@id_asignacion, @id_personal, @id_puesto, @id_horario, @estado, @fecha_registro, @idp, @fecha, @c50, @c51, @c40, @c41,  @entrada, @salida,  @tipo, @cantrep, @observacion, @report, @id_user, @horario, @cantrep );" & vbCrLf
+                .CommandText = "sp_registrarnuevoAsignacionPersonal"
 
                 .Parameters.AddWithValue("@id_asignacion", SqlDbType.Int).Value = IdAsignacion
                 .Parameters.AddWithValue("@id_personal", SqlDbType.Int).Value = IdPersonal
@@ -92,7 +65,7 @@ Namespace TALENTO_HUMANO
                 .Parameters.AddWithValue("@id_horario", SqlDbType.Int).Value = IdHorario
                 .Parameters.AddWithValue("@estado", SqlDbType.Int).Value = Estado
                 .Parameters.AddWithValue("@fecha_registro", SqlDbType.Date).Value = Fecharegistro
-                .Parameters.AddWithValue("@idp", SqlDbType.Int).Value = IdpPogramacion
+                .Parameters.AddWithValue("@id_programacion", SqlDbType.Int).Value = IdpPogramacion
                 .Parameters.AddWithValue("@fecha", SqlDbType.Date).Value = Fecha
                 .Parameters.AddWithValue("@c50", SqlDbType.VarChar).Value = C50
                 .Parameters.AddWithValue("@c51", SqlDbType.Date).Value = C51
@@ -128,11 +101,13 @@ Namespace TALENTO_HUMANO
         Public Function DeleteRegistroNuevoAsignacionPersonalComman(ByVal idp As Integer, ByVal fecd As Date, ByVal fech As Date) As SqlCommand
             Dim comando = New SqlCommand
             With comando
-                .CommandType = CommandType.Text
-                .CommandText = "delete from asignacion_personal where id_programacion = @idp and fecha between @fecd and @fech;"
+                .CommandType = CommandType.StoredProcedure
+                .CommandText = "sp_deleteRegistroNuevaAsignacionPersonal"
+                '.CommandText = "delete from asignacion_personal where id_programacion = @idp and fecha between @fecd and @fech;"
                 .Parameters.AddWithValue("@idp", SqlDbType.Int).Value = idp
                 .Parameters.AddWithValue("@fecd", SqlDbType.Date).Value = fecd
                 .Parameters.AddWithValue("@fech", SqlDbType.Date).Value = fech
+
             End With
             Return comando
         End Function
@@ -345,7 +320,6 @@ Namespace TALENTO_HUMANO
             pars.Add(New Object() {"idperson", SqlDbType.Int, idperson})
             pars.Add(New Object() {"fechad", SqlDbType.DateTime, fechad})
             pars.Add(New Object() {"fechah", SqlDbType.DateTime, fechah})
-            'Dim sql = "Select top 1 ap.fld_contar_multas  FROM  ASIGNACION_PERSONAL ap  WHERE  ap.fecha between @fechad AND  @fechah AND  ap.fld_contar_multas > 0 and ap.id_personal = @idperson"
             Dim sql = " SELECT TOP 1 ap.fld_contar_multas FROM ASIGNACION_PERSONAL ap WHERE ap.fecha BETWEEN @fechad AND @fechah AND ap.id_personal = @idperson and ap.fld_contar_multas > 0 ORDER BY ap.id_asignacion DESC;"
             Dim data As DataTable = ComandosSql.SeleccionarQueryWithParamsToDataTable(tipoCon, Sql, False, pars)
             If data.Rows.Count > 0 AndAlso Not IsDBNull(data.Rows(0)(0)) Then
