@@ -96,6 +96,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
 
         Dim _detalleKardex As New DataTable
         Dim _detalleKardexIngreso As New DataTable
+        Dim _valorReingreso As New Decimal
         Dim _botonSeleccionadoSitio As Integer = 0
         Dim _validar As Integer = 0
         Dim _IdComprobanteIngreso As String = ""
@@ -255,6 +256,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
 
             _detalleKardex = Nothing
             _detalleKardexIngreso = Nothing
+            _valorReingreso = 0
             dgvSecuencial.Rows.Clear()
             dgvDetalleComprobanteIngreso.Rows.Clear()
             dgvComprobantesEgreso.DataSource = Nothing
@@ -1522,15 +1524,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
 
             Next
 
-            'With _objDetCompEgr
-            '    .IdDetalle = lblDetaComp.Text
-            'End With
-            '_sqlCommands.Add(_objDetCompEgr.anularDetalleComprobanteEgresoBodegaCommand())
 
-            'With _objDetalleKardex
-            '    .Id = lblDetKardex.Text
-            'End With
-            '_sqlCommands.Add(_objDetalleKardex.AnularRegistroDetalleKardexCommand())
 
             Dim nombreU As String = ""
             nombreU = "ANULAR COMPROBANTE EGRESO " & UserName
@@ -1798,7 +1792,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
 
                 Dim idd = _objDetalleEgresoPuesto.BuscarMayorIdRegistroDetalleComprobante(_tipoCon) + 1
 
-
+                Dim dataT As DataTable = dgvDetalleComprobanteIngreso.DataSource
 
                 For indice = 0 To dgvDetalleComprobanteIngreso.RowCount - 1
 
@@ -1832,7 +1826,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                         .CantidadEgreso = 0.0
                         .ValorUnitarioEgreso = 0.0
                         .ValorTotalEgreso = 0.0
-                        .CantidadSaldo = dgvDetalleComprobanteIngreso.Rows(indice).Cells("SALDO_INGRESO").Value
+                        .CantidadSaldo = dgvDetalleComprobanteIngreso.Rows(indice).Cells("CANTIDAD_TOTAL_INGRESO").Value
                         .ValorUnitarioSaldo = dgvDetalleComprobanteIngreso.Rows(indice).Cells(8).Value
                         .ValorTotalSaldo = dgvDetalleComprobanteIngreso.Rows(indice).Cells(9).Value
                         .Fecha = dtpFecha.Value
@@ -1848,7 +1842,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                     With _objKardex
                         .Id = CLng(dgvDetalleComprobanteIngreso.Rows(indice).Cells(0).Value)
                         .IdsecuencialItem = CLng(dgvDetalleComprobanteIngreso.Rows(indice).Cells(2).Value)
-                        .Cantidad = dgvDetalleComprobanteIngreso.Rows(indice).Cells(10).Value
+                        .Cantidad = dgvDetalleComprobanteIngreso.Rows(indice).Cells("CANTIDAD_TOTAL_INGRESO").Value
                         .Fecha = _objCompIng.Fecha
                         .Estado = 1
                     End With
@@ -1982,6 +1976,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                     Dim rowIndex As Integer = dgvDetalleComprobanteIngreso.Rows.Add()
                     Dim dgvRow As DataGridViewRow = dgvDetalleComprobanteIngreso.Rows(rowIndex)
 
+                    Dim ctotal As Double = CDbl(row("CANTIDAD_INGRESO"))
                     dgvRow.Cells("ID_KAR").Value = row("ID_KAR")
                     dgvRow.Cells("NOMBRE_INGRESO").Value = row("NOMBRE_INGRESO")
                     dgvRow.Cells("ID_SECUENCIAL_INGRESO").Value = row("ID_SECUENCIAL_INGRESO")
@@ -1997,13 +1992,15 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                     dgvRow.Cells("CODIGO_CONCEPTO_INGRESO").Value = row("CODIGO_CONCEPTO_INGRESO")
                     dgvRow.Cells("CONCEPTO_INVENTARIO").Value = row("CONCEPTO_INVENTARIO")
                     dgvRow.Cells("CANTIDAD_INICIAL_INGRESO").Value = row("CANTIDAD_INICIAL_INGRESO")
-                    dgvRow.Cells("CANTIDAD_TOTAL_INGRESO").Value = row("CANTIDAD_TOTAL")
+                    dgvRow.Cells("CANTIDAD_TOTAL_INGRESO").Value = CDbl(row("CANTIDAD_TOTAL")) + ctotal 'suma de cantidad que esta ingresando
                 Next
 
 
 
                 dgvDetalleComprobanteIngreso.AutoResizeColumns()
                 dgvDetalleComprobanteIngreso.AutoResizeRows()
+
+
 
             Catch ex As Exception
                 MessageBox.Show("Error: " & ex.Message)
@@ -2013,6 +2010,9 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
         End Sub
 
         Private Sub dgvDetalleComprobanteIngreso_CellValueChanged(sender As Object, e As DataGridViewCellEventArgs) Handles dgvDetalleComprobanteIngreso.CellValueChanged
+
+
+
 
         End Sub
 
@@ -2167,6 +2167,52 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
 
         Private Sub txtFiltro_KeyUp(sender As Object, e As KeyEventArgs) Handles txtFiltro.KeyUp
             CargarComprobantesEgreso(txtFiltro.Text)
+        End Sub
+
+        Private Sub dgvDetalleComprobanteIngreso_CellEndEdit(sender As Object, e As DataGridViewCellEventArgs) Handles dgvDetalleComprobanteIngreso.CellEndEdit
+
+            If dgvDetalleComprobanteIngreso.CurrentRow Is Nothing Or dgvDetalleComprobanteIngreso.RowCount = 0 Then Return
+
+            If e.ColumnIndex <> 3 Then
+                Return
+            End If
+
+            Try
+
+
+                Dim cantidadIngresoFinal = dgvDetalleComprobanteIngreso.CurrentRow.Cells(3).Value
+
+
+                If cantidadIngresoFinal < _valorReingreso Then
+                    KryptonMessageBox.Show("LA CANTIDAD INGRESADA NO PUEDE SER MENOR A LA CANTIDAD INICIAL", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
+                    Return
+                End If
+
+                Dim diferencia = cantidadIngresoFinal - _valorReingreso
+                If diferencia = 0 Then Return
+
+                Dim valorUnitario = If(dgvDetalleComprobanteIngreso.CurrentRow.Cells(4).Value.ToString().Trim().Length = 0, 0, CDec(dgvDetalleComprobanteIngreso.CurrentRow.Cells(4).Value))
+
+                dgvDetalleComprobanteIngreso.CurrentRow.Cells(5).Value = cantidadIngresoFinal * valorUnitario 'calcula valor total solo de ingreso
+                Dim SaldoInicial = dgvDetalleComprobanteIngreso.CurrentRow.Cells(14).Value
+                Dim SaldoTotal = dgvDetalleComprobanteIngreso.CurrentRow.Cells(15).Value
+                dgvDetalleComprobanteIngreso.CurrentRow.Cells(15).Value = SaldoTotal + diferencia   ' asigna el valor a la casilla
+            Catch ex As Exception
+                KryptonMessageBox.Show("Error: " & ex.Message)
+
+            End Try
+        End Sub
+
+        Private Sub dgvDetalleComprobanteIngreso_DataError(sender As Object, e As DataGridViewDataErrorEventArgs) Handles dgvDetalleComprobanteIngreso.DataError
+            e.ThrowException = False
+        End Sub
+
+        Private Sub dgvDetalleComprobanteIngreso_CellBeginEdit(sender As Object, e As DataGridViewCellCancelEventArgs) Handles dgvDetalleComprobanteIngreso.CellBeginEdit
+            If e.ColumnIndex = 3 Then
+                _valorReingreso = If(dgvDetalleComprobanteIngreso.CurrentRow.Cells(3).Value.ToString().Trim().Length = 0, 0, CDec(dgvDetalleComprobanteIngreso.CurrentRow.Cells(3).Value))
+            End If
+
+
         End Sub
     End Class
 End Namespace

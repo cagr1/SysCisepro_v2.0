@@ -1410,15 +1410,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
 
             Next
 
-            'With _objDetCompIng
-            '    .IdDetalle = lblDetaComp.Text
-            'End With
-            '_sqlCommands.Add(_objDetCompIng.anularDetalleComprobanteIngresoBodegaCommand())
 
-            'With _objDetalleKardex
-            '    .Id = lblDetaKardex.Text
-            'End With
-            '_sqlCommands.Add(_objDetalleKardex.AnularRegistroDetalleKardexCommand())
 
             Dim nombreU As String = "ANULACIÓN COMPROBANTE INGRESO " & UserName
             Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, nombreU)
