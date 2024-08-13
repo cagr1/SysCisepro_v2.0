@@ -71,7 +71,8 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
         ReadOnly _objCentroCostos As New ClassCentroCosto
         ReadOnly _objCompIng As New ClassComprobanteIngresoBodego
         ReadOnly _objDetCompIng As New ClassDetalleComprobanteIngreso
-        ReadOnly _crComprobanteIngreso As New crComprobanteIngreso
+        'ReadOnly _crComprobanteIngreso As New crComprobanteIngreso
+        ReadOnly _crComprobanteIngreso As New crComprobanteIngresoMin
         ReadOnly _objSecuencialItem As New ClassSecuencialItem
         ReadOnly _objKardex As New ClassKardex
         ReadOnly _objDetalleKardex As New ClassDetalleKardex
@@ -931,7 +932,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
 
         Private Sub ConectarReporteComprobanteIngreso(ByVal idComprobante As String)
             Try
-                _crComprobanteIngreso.SetDataSource(_objCompIng.SeleccionarComprobanteIngresoxIdCompronanteIngreso(_tipoCon, idComprobante))
+                _crComprobanteIngreso.SetDataSource(_objCompIng.SeleccionarComprobanteEgresoxIdComprobanteIngresoMin(_tipoCon, idComprobante))
                 _crComprobanteIngreso.SetParameterValue("img", ValidationForms.NombreLogo(_tipoCon, Application.StartupPath))
                 _crComprobanteIngreso.SetParameterValue("ubicacion", _objCompIng.BuscarClienteByIdComprobanteEgresoBodega(_tipoCon, idComprobante))
                 crvComprobante.ReportSource = _crComprobanteIngreso

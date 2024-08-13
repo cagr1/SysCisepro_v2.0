@@ -52,27 +52,7 @@ namespace ClassLibraryCisepro3.TalentoHumano
 
         public DataTable SeleccionarDescuentosDatos1(TipoConexion tipoCon, string filtro, string desde, string hasta)
         {
-            //var sql = "select r.id_personal, e.cedula, e.apellidos+' '+e.nombres personal, " +
-            //    "COALESCE((select sum(d.valor) from DESCUENTOS_ROL d where d.id_personal = r.id_personal and  d.estado = 1 and d.tipo=0 and d.fecha between @DESDE and @HASTA),0) quirografario, " +
-            //    "COALESCE((select sum(d.valor) from DESCUENTOS_ROL d where d.id_personal = r.id_personal and  d.estado = 1 and d.tipo=1 and d.fecha between @DESDE and @HASTA),0) hipotecario, " +
-            //    "COALESCE((select sum(d.valor) from DESCUENTOS_ROL d where d.id_personal = r.id_personal and  d.estado = 1 and d.tipo=2 and d.fecha between @DESDE and @HASTA),0) ext_salud, " +
-            //    "COALESCE((select sum(d.valor) from DESCUENTOS_ROL d where d.id_personal = r.id_personal and  d.estado = 1 and d.tipo=3 and d.fecha between @DESDE and @HASTA),0) anticipo, " +
-            //    "COALESCE((select sum(d.valor) from DESCUENTOS_ROL d where d.id_personal = r.id_personal and  d.estado = 1 and d.tipo=4 and d.fecha between @DESDE and @HASTA),0) capaseg, " +
-            //    "COALESCE((select sum(d.valor) from DESCUENTOS_ROL d where d.id_personal = r.id_personal and  d.estado = 1 and d.tipo=5 and d.fecha between @DESDE and @HASTA),0) varios, " +
-            //    "COALESCE((select sum(d.valor) from DESCUENTOS_ROL d where d.id_personal = r.id_personal and  d.estado = 1 and d.tipo=6 and d.fecha between @DESDE and @HASTA),0) empresa, " +
-            //    "COALESCE((select sum(d.valor) from DESCUENTOS_ROL d where d.id_personal = r.id_personal and  d.estado = 1 and d.tipo=7 and d.fecha between @DESDE and @HASTA),0) comecsa, " +
-            //    "COALESCE((select sum(d.valor) from DESCUENTOS_ROL d where d.id_personal = r.id_personal and  d.estado = 1 and d.tipo=8 and d.fecha between @DESDE and @HASTA),0) comisariato, " +
-            //    "COALESCE((select sum(d.valor) from DESCUENTOS_ROL d where d.id_personal = r.id_personal and  d.estado = 1 and d.tipo=9 and d.fecha between @DESDE and @HASTA),0) bodega, " +
-            //    "COALESCE((select sum(d.valor) from DESCUENTOS_ROL d where d.id_personal = r.id_personal and  d.estado = 1 and d.tipo=15 and d.fecha between @DESDE and @HASTA),0) almuerzos, " +
-            //    "COALESCE((select sum(d.valor) from DESCUENTOS_ROL d where d.id_personal = r.id_personal and  d.estado = 1 and d.tipo=12 and d.fecha between @DESDE and @HASTA),0) pension, " +
-            //    "COALESCE((select sum(d.valor) from DESCUENTOS_ROL d where d.id_personal = r.id_personal and  d.estado = 1 and d.tipo=13 and d.fecha between @DESDE and @HASTA),0) pensionxiii, " +
-            //    "COALESCE((select sum(d.valor) from DESCUENTOS_ROL d where d.id_personal = r.id_personal and  d.estado = 1 and d.tipo=14 and d.fecha between @DESDE and @HASTA),0) pensionxiv, " +
-            //    "COALESCE((select sum(d.valor) from DESCUENTOS_ROL d where d.id_personal = r.id_personal and  d.estado = 1 and d.tipo=10 and d.fecha between @DESDE and @HASTA),0) multas, " +
-            //    "COALESCE((select sum(d.valor) from DESCUENTOS_ROL d where d.id_personal = r.id_personal and  d.estado = 1 and d.tipo=16 and d.fecha between @DESDE and @HASTA),0) nolaborado, " +
-            //    "COALESCE((select sum(d.valor) from DESCUENTOS_ROL d where d.id_personal = r.id_personal and  d.estado = 1 and d.tipo=11 and d.fecha between @DESDE and @HASTA),0) otros, " +
-            //    "'0' total " +
-            //    "from DESCUENTOS_ROL r join personal e on r.id_personal= e.id_personal where r.estado = 1 and r.fecha between @DESDE and @HASTA  " +
-            //    "and (e.cedula like ('%' + @FILTRO + '%') or e.apellidos like ('%' + @FILTRO + '%') or e.nombres like ('%' + @FILTRO + '%')) group by r.id_personal, e.cedula, e.apellidos, e.nombres ";
+            
             var pars = new List<object[]>
             {
                 new object[] { "@FILTRO", SqlDbType.NVarChar, filtro }, 

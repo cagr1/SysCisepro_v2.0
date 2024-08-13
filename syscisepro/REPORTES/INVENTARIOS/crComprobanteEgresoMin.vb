@@ -18,7 +18,7 @@ Imports System
 Imports System.ComponentModel
 
 
-Public Class crComprobanteEgreso
+Public Class crComprobanteEgresoMin
     Inherits ReportClass
     
     Public Sub New()
@@ -27,7 +27,7 @@ Public Class crComprobanteEgreso
     
     Public Overrides Property ResourceName() As String
         Get
-            Return "crComprobanteEgreso.rpt"
+            Return "crComprobanteEgresoMin.rpt"
         End Get
         Set
             'Do nothing
@@ -45,7 +45,7 @@ Public Class crComprobanteEgreso
     
     Public Overrides Property FullResourceName() As String
         Get
-            Return "syscisepro.crComprobanteEgreso.rpt"
+            Return "syscisepro.crComprobanteEgresoMin.rpt"
         End Get
         Set
             'Do nothing
@@ -110,7 +110,7 @@ Public Class crComprobanteEgreso
 End Class
 
 <System.Drawing.ToolboxBitmapAttribute(GetType(CrystalDecisions.[Shared].ExportOptions), "report.bmp")>  _
-Public Class CachedcrComprobanteEgreso
+Public Class CachedcrComprobanteEgresoMin
     Inherits Component
     Implements ICachedReport
     
@@ -152,7 +152,7 @@ Public Class CachedcrComprobanteEgreso
     End Property
     
     Public Overridable Function CreateReport() As CrystalDecisions.CrystalReports.Engine.ReportDocument Implements CrystalDecisions.ReportSource.ICachedReport.CreateReport
-        Dim rpt As crComprobanteEgreso = New crComprobanteEgreso()
+        Dim rpt As crComprobanteEgresoMin = New crComprobanteEgresoMin()
         rpt.Site = Me.Site
         Return rpt
     End Function

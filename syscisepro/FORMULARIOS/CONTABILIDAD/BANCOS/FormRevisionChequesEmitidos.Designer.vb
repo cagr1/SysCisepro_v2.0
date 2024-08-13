@@ -50,8 +50,6 @@
             Me.dtpFechaDesde = New System.Windows.Forms.DateTimePicker()
             Me.chkCaducado = New System.Windows.Forms.CheckBox()
             Me.dtpFechaCobroCheque = New System.Windows.Forms.DateTimePicker()
-            Me.gbBanco = New System.Windows.Forms.GroupBox()
-            Me.Label10 = New System.Windows.Forms.Label()
             Me.cmbCuentaBancos = New System.Windows.Forms.ComboBox()
             Me.cmbBancos = New System.Windows.Forms.ComboBox()
             Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
@@ -69,6 +67,7 @@
             Me.txtFiltro = New System.Windows.Forms.TextBox()
             Me.KryptonGroupBox2 = New ComponentFactory.Krypton.Toolkit.KryptonGroupBox()
             Me.KryptonGroupBox3 = New ComponentFactory.Krypton.Toolkit.KryptonGroupBox()
+            Me.KryptonGroupBox4 = New ComponentFactory.Krypton.Toolkit.KryptonGroupBox()
             CType(Me.dgvChequesEmitidosAprobados, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.tcRevisionCheques.SuspendLayout()
             Me.tpEmitidosNoCobrados.SuspendLayout()
@@ -76,7 +75,6 @@
             CType(Me.dgvEmitidosCobrados, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.tpCaducados.SuspendLayout()
             CType(Me.dgvEmitidosCaducados, System.ComponentModel.ISupportInitialize).BeginInit()
-            Me.gbBanco.SuspendLayout()
             Me.MenuStrip1.SuspendLayout()
             CType(Me.KryptonGroupBox1, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.KryptonGroupBox1.Panel, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -94,6 +92,10 @@
             CType(Me.KryptonGroupBox3.Panel, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.KryptonGroupBox3.Panel.SuspendLayout()
             Me.KryptonGroupBox3.SuspendLayout()
+            CType(Me.KryptonGroupBox4, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType(Me.KryptonGroupBox4.Panel, System.ComponentModel.ISupportInitialize).BeginInit()
+            Me.KryptonGroupBox4.Panel.SuspendLayout()
+            Me.KryptonGroupBox4.SuspendLayout()
             Me.SuspendLayout()
             '
             'txtTotalEmitidosNoCobrados
@@ -101,9 +103,9 @@
             Me.txtTotalEmitidosNoCobrados.BackColor = System.Drawing.Color.White
             Me.txtTotalEmitidosNoCobrados.Enabled = False
             Me.txtTotalEmitidosNoCobrados.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtTotalEmitidosNoCobrados.Location = New System.Drawing.Point(80, 18)
+            Me.txtTotalEmitidosNoCobrados.Location = New System.Drawing.Point(83, 15)
             Me.txtTotalEmitidosNoCobrados.Name = "txtTotalEmitidosNoCobrados"
-            Me.txtTotalEmitidosNoCobrados.Size = New System.Drawing.Size(69, 21)
+            Me.txtTotalEmitidosNoCobrados.Size = New System.Drawing.Size(66, 21)
             Me.txtTotalEmitidosNoCobrados.TabIndex = 0
             Me.txtTotalEmitidosNoCobrados.Text = "0.00"
             Me.txtTotalEmitidosNoCobrados.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -113,9 +115,9 @@
             Me.txtTotalEmitidosCobrados.BackColor = System.Drawing.Color.White
             Me.txtTotalEmitidosCobrados.Enabled = False
             Me.txtTotalEmitidosCobrados.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtTotalEmitidosCobrados.Location = New System.Drawing.Point(5, 18)
+            Me.txtTotalEmitidosCobrados.Location = New System.Drawing.Point(5, 15)
             Me.txtTotalEmitidosCobrados.Name = "txtTotalEmitidosCobrados"
-            Me.txtTotalEmitidosCobrados.Size = New System.Drawing.Size(69, 21)
+            Me.txtTotalEmitidosCobrados.Size = New System.Drawing.Size(72, 21)
             Me.txtTotalEmitidosCobrados.TabIndex = 0
             Me.txtTotalEmitidosCobrados.Text = "0.00"
             Me.txtTotalEmitidosCobrados.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -322,7 +324,7 @@
             '
             Me.dtpFechaHasta.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.dtpFechaHasta.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-            Me.dtpFechaHasta.Location = New System.Drawing.Point(123, 3)
+            Me.dtpFechaHasta.Location = New System.Drawing.Point(115, 3)
             Me.dtpFechaHasta.Name = "dtpFechaHasta"
             Me.dtpFechaHasta.Size = New System.Drawing.Size(81, 21)
             Me.dtpFechaHasta.TabIndex = 1
@@ -351,34 +353,10 @@
             '
             Me.dtpFechaCobroCheque.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.dtpFechaCobroCheque.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-            Me.dtpFechaCobroCheque.Location = New System.Drawing.Point(3, 2)
+            Me.dtpFechaCobroCheque.Location = New System.Drawing.Point(3, 3)
             Me.dtpFechaCobroCheque.Name = "dtpFechaCobroCheque"
             Me.dtpFechaCobroCheque.Size = New System.Drawing.Size(91, 21)
             Me.dtpFechaCobroCheque.TabIndex = 2
-            '
-            'gbBanco
-            '
-            Me.gbBanco.BackColor = System.Drawing.Color.White
-            Me.gbBanco.Controls.Add(Me.Label10)
-            Me.gbBanco.Controls.Add(Me.cmbCuentaBancos)
-            Me.gbBanco.Controls.Add(Me.cmbBancos)
-            Me.gbBanco.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.gbBanco.Location = New System.Drawing.Point(892, 44)
-            Me.gbBanco.Name = "gbBanco"
-            Me.gbBanco.Size = New System.Drawing.Size(24, 45)
-            Me.gbBanco.TabIndex = 117
-            Me.gbBanco.TabStop = False
-            Me.gbBanco.Text = "BANCO: "
-            Me.gbBanco.Visible = False
-            '
-            'Label10
-            '
-            Me.Label10.AutoSize = True
-            Me.Label10.Location = New System.Drawing.Point(155, 0)
-            Me.Label10.Name = "Label10"
-            Me.Label10.Size = New System.Drawing.Size(62, 13)
-            Me.Label10.TabIndex = 34
-            Me.Label10.Text = "CA/CC/TA:"
             '
             'cmbCuentaBancos
             '
@@ -386,10 +364,11 @@
             Me.cmbCuentaBancos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cmbCuentaBancos.DropDownWidth = 130
             Me.cmbCuentaBancos.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+            Me.cmbCuentaBancos.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cmbCuentaBancos.FormattingEnabled = True
-            Me.cmbCuentaBancos.Location = New System.Drawing.Point(155, 18)
+            Me.cmbCuentaBancos.Location = New System.Drawing.Point(121, 4)
             Me.cmbCuentaBancos.Name = "cmbCuentaBancos"
-            Me.cmbCuentaBancos.Size = New System.Drawing.Size(110, 21)
+            Me.cmbCuentaBancos.Size = New System.Drawing.Size(87, 21)
             Me.cmbCuentaBancos.TabIndex = 29
             '
             'cmbBancos
@@ -398,10 +377,11 @@
             Me.cmbBancos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cmbBancos.DropDownWidth = 140
             Me.cmbBancos.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+            Me.cmbBancos.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cmbBancos.FormattingEnabled = True
-            Me.cmbBancos.Location = New System.Drawing.Point(10, 18)
+            Me.cmbBancos.Location = New System.Drawing.Point(3, 4)
             Me.cmbBancos.Name = "cmbBancos"
-            Me.cmbBancos.Size = New System.Drawing.Size(129, 21)
+            Me.cmbBancos.Size = New System.Drawing.Size(112, 21)
             Me.cmbBancos.TabIndex = 25
             '
             'MenuStrip1
@@ -486,9 +466,6 @@
             '
             'KryptonGroupBox1
             '
-            Me.KryptonGroupBox1.CaptionStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.GroupBoxCaption
-            Me.KryptonGroupBox1.GroupBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.ControlGroupBox
-            Me.KryptonGroupBox1.GroupBorderStyle = ComponentFactory.Krypton.Toolkit.PaletteBorderStyle.ControlGroupBox
             Me.KryptonGroupBox1.Location = New System.Drawing.Point(6, 35)
             Me.KryptonGroupBox1.Name = "KryptonGroupBox1"
             '
@@ -503,7 +480,7 @@
             '
             'KryptonLabel1
             '
-            Me.KryptonLabel1.Location = New System.Drawing.Point(96, 3)
+            Me.KryptonLabel1.Location = New System.Drawing.Point(92, 3)
             Me.KryptonLabel1.Name = "KryptonLabel1"
             Me.KryptonLabel1.Size = New System.Drawing.Size(17, 20)
             Me.KryptonLabel1.TabIndex = 2
@@ -511,17 +488,14 @@
             '
             'KryptonGroupBox5
             '
-            Me.KryptonGroupBox5.CaptionStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.GroupBoxCaption
-            Me.KryptonGroupBox5.GroupBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.ControlGroupBox
-            Me.KryptonGroupBox5.GroupBorderStyle = ComponentFactory.Krypton.Toolkit.PaletteBorderStyle.ControlGroupBox
-            Me.KryptonGroupBox5.Location = New System.Drawing.Point(224, 35)
+            Me.KryptonGroupBox5.Location = New System.Drawing.Point(222, 35)
             Me.KryptonGroupBox5.Name = "KryptonGroupBox5"
             '
             'KryptonGroupBox5.Panel
             '
             Me.KryptonGroupBox5.Panel.Controls.Add(Me.btnBuscarModi)
             Me.KryptonGroupBox5.Panel.Controls.Add(Me.txtFiltro)
-            Me.KryptonGroupBox5.Size = New System.Drawing.Size(255, 55)
+            Me.KryptonGroupBox5.Size = New System.Drawing.Size(230, 55)
             Me.KryptonGroupBox5.TabIndex = 189
             Me.KryptonGroupBox5.Values.Heading = "Busqueda"
             '
@@ -529,16 +503,14 @@
             '
             Me.btnBuscarModi.AutoSize = True
             Me.btnBuscarModi.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-            Me.btnBuscarModi.Location = New System.Drawing.Point(212, -2)
+            Me.btnBuscarModi.Location = New System.Drawing.Point(189, -2)
             Me.btnBuscarModi.Name = "btnBuscarModi"
             Me.btnBuscarModi.Size = New System.Drawing.Size(32, 32)
             Me.btnBuscarModi.StateCommon.Back.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.[False]
-            Me.btnBuscarModi.StateCommon.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit
             Me.btnBuscarModi.StateCommon.Border.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.[False]
             Me.btnBuscarModi.StateCommon.Border.DrawBorders = CType((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top Or ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) _
             Or ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) _
             Or ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right), ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)
-            Me.btnBuscarModi.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit
             Me.btnBuscarModi.StateCommon.Content.Padding = New System.Windows.Forms.Padding(2)
             Me.btnBuscarModi.TabIndex = 249
             Me.btnBuscarModi.Values.ImageStates.ImageCheckedNormal = Nothing
@@ -555,15 +527,12 @@
             Me.txtFiltro.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtFiltro.Location = New System.Drawing.Point(9, 4)
             Me.txtFiltro.Name = "txtFiltro"
-            Me.txtFiltro.Size = New System.Drawing.Size(189, 21)
+            Me.txtFiltro.Size = New System.Drawing.Size(176, 21)
             Me.txtFiltro.TabIndex = 13
             '
             'KryptonGroupBox2
             '
-            Me.KryptonGroupBox2.CaptionStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.GroupBoxCaption
-            Me.KryptonGroupBox2.GroupBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.ControlGroupBox
-            Me.KryptonGroupBox2.GroupBorderStyle = ComponentFactory.Krypton.Toolkit.PaletteBorderStyle.ControlGroupBox
-            Me.KryptonGroupBox2.Location = New System.Drawing.Point(484, 35)
+            Me.KryptonGroupBox2.Location = New System.Drawing.Point(454, 35)
             Me.KryptonGroupBox2.Name = "KryptonGroupBox2"
             '
             'KryptonGroupBox2.Panel
@@ -576,10 +545,7 @@
             '
             'KryptonGroupBox3
             '
-            Me.KryptonGroupBox3.CaptionStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.GroupBoxCaption
-            Me.KryptonGroupBox3.GroupBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.ControlGroupBox
-            Me.KryptonGroupBox3.GroupBorderStyle = ComponentFactory.Krypton.Toolkit.PaletteBorderStyle.ControlGroupBox
-            Me.KryptonGroupBox3.Location = New System.Drawing.Point(594, 44)
+            Me.KryptonGroupBox3.Location = New System.Drawing.Point(782, 43)
             Me.KryptonGroupBox3.Name = "KryptonGroupBox3"
             '
             'KryptonGroupBox3.Panel
@@ -587,9 +553,22 @@
             Me.KryptonGroupBox3.Panel.Controls.Add(Me.txtTotalEmitidosNoCobrados)
             Me.KryptonGroupBox3.Panel.Controls.Add(Me.lblIdComprobanteEgresoBanco)
             Me.KryptonGroupBox3.Panel.Controls.Add(Me.txtTotalEmitidosCobrados)
-            Me.KryptonGroupBox3.Size = New System.Drawing.Size(167, 53)
+            Me.KryptonGroupBox3.Size = New System.Drawing.Size(156, 48)
             Me.KryptonGroupBox3.TabIndex = 191
             Me.KryptonGroupBox3.Values.Heading = ""
+            '
+            'KryptonGroupBox4
+            '
+            Me.KryptonGroupBox4.Location = New System.Drawing.Point(562, 35)
+            Me.KryptonGroupBox4.Name = "KryptonGroupBox4"
+            '
+            'KryptonGroupBox4.Panel
+            '
+            Me.KryptonGroupBox4.Panel.Controls.Add(Me.cmbBancos)
+            Me.KryptonGroupBox4.Panel.Controls.Add(Me.cmbCuentaBancos)
+            Me.KryptonGroupBox4.Size = New System.Drawing.Size(219, 55)
+            Me.KryptonGroupBox4.TabIndex = 192
+            Me.KryptonGroupBox4.Values.Heading = "Banco"
             '
             'FormRevisionChequesEmitidos
             '
@@ -597,10 +576,10 @@
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.BackColor = System.Drawing.Color.White
             Me.ClientSize = New System.Drawing.Size(951, 587)
+            Me.Controls.Add(Me.KryptonGroupBox4)
             Me.Controls.Add(Me.KryptonGroupBox3)
             Me.Controls.Add(Me.KryptonGroupBox2)
             Me.Controls.Add(Me.KryptonGroupBox5)
-            Me.Controls.Add(Me.gbBanco)
             Me.Controls.Add(Me.KryptonGroupBox1)
             Me.Controls.Add(Me.MenuStrip1)
             Me.Controls.Add(Me.tcRevisionCheques)
@@ -619,8 +598,6 @@
             CType(Me.dgvEmitidosCobrados, System.ComponentModel.ISupportInitialize).EndInit()
             Me.tpCaducados.ResumeLayout(False)
             CType(Me.dgvEmitidosCaducados, System.ComponentModel.ISupportInitialize).EndInit()
-            Me.gbBanco.ResumeLayout(False)
-            Me.gbBanco.PerformLayout()
             Me.MenuStrip1.ResumeLayout(False)
             Me.MenuStrip1.PerformLayout()
             CType(Me.KryptonGroupBox1.Panel, System.ComponentModel.ISupportInitialize).EndInit()
@@ -643,6 +620,10 @@
             Me.KryptonGroupBox3.Panel.PerformLayout()
             CType(Me.KryptonGroupBox3, System.ComponentModel.ISupportInitialize).EndInit()
             Me.KryptonGroupBox3.ResumeLayout(False)
+            CType(Me.KryptonGroupBox4.Panel, System.ComponentModel.ISupportInitialize).EndInit()
+            Me.KryptonGroupBox4.Panel.ResumeLayout(False)
+            CType(Me.KryptonGroupBox4, System.ComponentModel.ISupportInitialize).EndInit()
+            Me.KryptonGroupBox4.ResumeLayout(False)
             Me.ResumeLayout(False)
             Me.PerformLayout()
 
@@ -661,8 +642,6 @@
         Friend WithEvents dtpFechaHasta As System.Windows.Forms.DateTimePicker
         Friend WithEvents dtpFechaDesde As System.Windows.Forms.DateTimePicker
         Friend WithEvents dtpFechaCobroCheque As System.Windows.Forms.DateTimePicker
-        Friend WithEvents gbBanco As System.Windows.Forms.GroupBox
-        Friend WithEvents Label10 As System.Windows.Forms.Label
         Friend WithEvents cmbCuentaBancos As System.Windows.Forms.ComboBox
         Friend WithEvents cmbBancos As System.Windows.Forms.ComboBox
         Friend WithEvents tpCaducados As System.Windows.Forms.TabPage
@@ -683,5 +662,6 @@
         Friend WithEvents txtFiltro As TextBox
         Friend WithEvents KryptonGroupBox2 As ComponentFactory.Krypton.Toolkit.KryptonGroupBox
         Friend WithEvents KryptonGroupBox3 As ComponentFactory.Krypton.Toolkit.KryptonGroupBox
+        Friend WithEvents KryptonGroupBox4 As ComponentFactory.Krypton.Toolkit.KryptonGroupBox
     End Class
 End Namespace

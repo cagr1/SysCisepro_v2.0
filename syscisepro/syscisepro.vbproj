@@ -307,10 +307,20 @@
     <Compile Include="FORMULARIOS\CONJUNTO DE DATOS\FrmVisualizadorReportes.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FORMULARIOS\CONJUNTO DE DATOS\OPERACIONES\dsComprobanteIngreso.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsComprobanteIngreso.xsd</DependentUpon>
+    </Compile>
     <Compile Include="FORMULARIOS\CONJUNTO DE DATOS\INVENTARIOS ISO\dsEntregaUNIFORMES.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>dsEntregaUNIFORMES.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FORMULARIOS\CONJUNTO DE DATOS\OPERACIONES\dsComprobanteIngresoFinal.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsComprobanteIngresoFinal.xsd</DependentUpon>
     </Compile>
     <Compile Include="FORMULARIOS\CONJUNTO DE DATOS\OPERACIONES\dsOperaciones.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -2211,6 +2221,12 @@
       <SubType>Component</SubType>
       <DesignTime>True</DesignTime>
     </Compile>
+    <Compile Include="REPORTES\INVENTARIOS\crComprobanteIngresoMin.vb">
+      <DependentUpon>crComprobanteIngresoMin.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Include="REPORTES\INVENTARIOS\crConceptoInventario.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -2223,8 +2239,8 @@
       <DesignTime>True</DesignTime>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="REPORTES\INVENTARIOS\crComprobanteEgreso1.vb">
-      <DependentUpon>crComprobanteEgreso.rpt</DependentUpon>
+    <Compile Include="REPORTES\INVENTARIOS\crComprobanteEgresoMin.vb">
+      <DependentUpon>crComprobanteEgresoMin.rpt</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <SubType>Component</SubType>
@@ -3450,6 +3466,10 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>crComprobanteEgresoUniformes.vb</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="REPORTES\INVENTARIOS\crComprobanteIngresoMin.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crComprobanteIngresoMin.vb</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="REPORTES\INVENTARIOS\crConceptoInventario.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>crConceptoInventario.vb</LastGenOutput>
@@ -3458,9 +3478,9 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>crEntregaUNIFORMES1.vb</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="REPORTES\INVENTARIOS\crComprobanteEgreso.rpt">
+    <EmbeddedResource Include="REPORTES\INVENTARIOS\crComprobanteEgresoMin.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>crComprobanteEgreso1.vb</LastGenOutput>
+      <LastGenOutput>crComprobanteEgresoMin.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="REPORTES\INVENTARIOS\crComprobanteIngreso.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
@@ -3728,6 +3748,17 @@
     <None Include="FORMULARIOS\CONJUNTO DE DATOS\COMPRAS\DataSetOrdenCompra.xss">
       <DependentUpon>DataSetOrdenCompra.xsd</DependentUpon>
     </None>
+    <None Include="FORMULARIOS\CONJUNTO DE DATOS\OPERACIONES\dsComprobanteIngreso.xsc">
+      <DependentUpon>dsComprobanteIngreso.xsd</DependentUpon>
+    </None>
+    <None Include="FORMULARIOS\CONJUNTO DE DATOS\OPERACIONES\dsComprobanteIngreso.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsComprobanteIngreso.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="FORMULARIOS\CONJUNTO DE DATOS\OPERACIONES\dsComprobanteIngreso.xss">
+      <DependentUpon>dsComprobanteIngreso.xsd</DependentUpon>
+    </None>
     <None Include="FORMULARIOS\CONJUNTO DE DATOS\INVENTARIOS ISO\dsEntregaUNIFORMES.xsc">
       <DependentUpon>dsEntregaUNIFORMES.xsd</DependentUpon>
     </None>
@@ -3738,6 +3769,17 @@
     </None>
     <None Include="FORMULARIOS\CONJUNTO DE DATOS\INVENTARIOS ISO\dsEntregaUNIFORMES.xss">
       <DependentUpon>dsEntregaUNIFORMES.xsd</DependentUpon>
+    </None>
+    <None Include="FORMULARIOS\CONJUNTO DE DATOS\OPERACIONES\dsComprobanteIngresoFinal.xsc">
+      <DependentUpon>dsComprobanteIngresoFinal.xsd</DependentUpon>
+    </None>
+    <None Include="FORMULARIOS\CONJUNTO DE DATOS\OPERACIONES\dsComprobanteIngresoFinal.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsComprobanteIngresoFinal.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="FORMULARIOS\CONJUNTO DE DATOS\OPERACIONES\dsComprobanteIngresoFinal.xss">
+      <DependentUpon>dsComprobanteIngresoFinal.xsd</DependentUpon>
     </None>
     <None Include="FORMULARIOS\CONJUNTO DE DATOS\OPERACIONES\dsOperaciones.xsc">
       <DependentUpon>dsOperaciones.xsd</DependentUpon>

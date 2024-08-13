@@ -166,7 +166,7 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
             Try
                 If _fechaDesde = "" Then Return
 
-                dgvEmitidosCobrados.DataSource = _objetoChequesEmitidos.BuscarChequesEmitidosCobradosXRangoFechaCobro(_tipoCon, _fechaDesde, _fechaHasta, txtFiltro.Text)
+                dgvEmitidosCobrados.DataSource = _objetoChequesEmitidos.BuscarChequesEmitidosCobradosXRangoFechaCobro(_tipoCon, _fechaDesde, _fechaHasta, cmbBancos.Text, cmbCuentaBancos.Text)
                 dgvEmitidosCobrados.ReadOnly = False
                 dgvEmitidosCobrados.EditMode = DataGridViewEditMode.EditProgrammatically
                 dgvEmitidosCobrados.AutoResizeColumns()
@@ -184,7 +184,7 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
             Try
                 If _fechaDesde = "" Then Return
 
-                dgvEmitidosCaducados.DataSource = _objetoChequesEmitidos.BuscarChequesEmitidosCaducadosXRangoFechaCobro(_tipoCon, _fechaDesde, _fechaHasta, txtFiltro.Text)
+                dgvEmitidosCaducados.DataSource = _objetoChequesEmitidos.BuscarChequesEmitidosCaducadosXRangoFechaCobro(_tipoCon, _fechaDesde, _fechaHasta, cmbBancos.Text)
                 dgvEmitidosCaducados.ReadOnly = False
                 dgvEmitidosCaducados.EditMode = DataGridViewEditMode.EditProgrammatically
                 dgvEmitidosCaducados.AutoResizeColumns()

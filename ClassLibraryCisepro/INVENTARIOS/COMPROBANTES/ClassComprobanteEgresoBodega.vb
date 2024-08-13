@@ -91,7 +91,7 @@ Namespace INVENTARIOS.COMPROBANTES
             End With
             Return comando
         End Function
-         
+
         Public Function SeleccionarComprobanteEgresoxIdComprobanteEgreso(ByVal tipoCon As TipoConexion, ByVal idComprobante As String) As DataSet
             Dim pars = New List(Of Object())
             pars.Add(New Object() {"ID_COMPROBANTE", SqlDbType.VarChar, idComprobante})
@@ -134,6 +134,18 @@ Namespace INVENTARIOS.COMPROBANTES
             Return ds
         End Function
 
+        Public Function SeleccionarComprobanteEgresoxIdComprobanteEgresoMin(ByVal tipoCon As TipoConexion, ByVal idComprobante As String) As DataSet
+            Dim pars = New List(Of Object())
+            pars.Add(New Object() {"ID_COMPROBANTE", SqlDbType.VarChar, idComprobante})
+            Dim comp = ComandosSql.SeleccionarQueryWithParamsToDataAdapter(tipoCon, "SeleccionarComprobanteEgresoBodegaxNroComprobante", True, pars)
+            Dim detc = ComandosSql.SeleccionarQueryWithParamsToDataAdapter(tipoCon, "seleccionarDetallesComprobantesEgreso2", True, pars)
+            Dim ds = New DataSet()
+            comp.Fill(ds, "ComprobanteEgreso")
+            detc.Fill(ds, "DetalleComprobanteEgreso")
+
+            Return ds
+        End Function
+
         Public Function SeleccionarGruposComprobantesEgresoBodegaxNroComprobante(ByVal tipoCon As TipoConexion, ByVal num As String, ByVal todos As Boolean) As DataTable
             If todos Then
                 Return ComandosSql.SeleccionarQueryToDataTable(tipoCon, "select comprobante from(select 'N°: ' + dc.id_comprobante + ' -  FEC: ' +  convert(varchar, ce.fecha_comprobante, 103) + ' - DET: ' + ce.razon comprobante from detalle_comprobante_egreso_bodega dc join comprobante_egreso_bodega ce on dc.id_comprobante = ce.id_comprobante join kardex ka on dc.id_kardex = ka.id_kardex join secuencial_item si on ka.id_secuencial_item=si.id_secuencial_item join detalle_kardex dk on dc.id_detalle_kardex=dk.id_detalle where ce.fecha_comprobante > '2019-12-01 00:00:00') as tab group by tab.comprobante order by tab.comprobante;", False)
@@ -173,6 +185,8 @@ Namespace INVENTARIOS.COMPROBANTES
             pars.Add(New Object() {"FILTRO", SqlDbType.VarChar, filtro})
             Return ComandosSql.SeleccionarQueryWithParamsToDataTable(tipoCon, "sp_seleccionarComprobanteEgresoxRangoFechas", True, pars)
         End Function
+
+
 
         Public Function SeleccionarComprobanteEgresoBodegaxRengoFechasReingreso(ByVal tipoCon As TipoConexion, ByVal parametroFechaInicial As DateTime, ByVal parametroFechaFinal As DateTime, ByVal filtro As String) As DataTable
             Dim pars = New List(Of Object())

@@ -502,153 +502,158 @@ Namespace FORMULARIOS.OPERACIONES
 
             ListView1.Items.Clear()
             ListView1.Groups.Clear()
+            Try
 
-
-            ' grupos
-            For Each group In From row As DataRow In grupos.Rows Select New ListViewGroup(row.Item(0).ToString.Trim)
-                ListView1.Groups.Add(group)
-            Next
-
-            dgvNormal.Columns.Clear()
-            dgvNormal.Rows.Clear()
-
-            'headerCheckbox = New CheckBox()
-            'headerCheckbox.Size = New Size(15, 15)
-            'headerCheckbox.BackColor = Color.Transparent
-            'AddHandler headerCheckbox.CheckedChanged, AddressOf HeaderCheckbox_CheckedChanged
-
-            Dim checkColumn As New DataGridViewCheckBoxColumn()
-            checkColumn.Name = "Check"
-            checkColumn.HeaderText = " "
-            checkColumn.Width = 30
-            dgvNormal.Columns.Add(checkColumn)
-
-
-            Dim headerCellRect = dgvNormal.GetCellDisplayRectangle(0, -1, True)
-            headerCheckbox.Location = New Point(headerCellRect.X + (headerCellRect.Width - headerCheckbox.Width) / 2, headerCellRect.Y + (headerCellRect.Height - headerCheckbox.Height) / 2)
-            dgvNormal.Controls.Add(headerCheckbox)
-
-
-
-            For Each column As DataColumn In datos.Columns
-                Dim col As New DataGridViewTextBoxColumn()
-                col.Name = column.ColumnName
-                col.HeaderText = column.ColumnName
-                col.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
-                dgvNormal.Columns.Add(col)
-            Next
-
-            For Each datarow As DataRow In datos.Rows
-                Dim newRow As New DataGridViewRow()
-                newRow.CreateCells(dgvNormal)
-                For i As Integer = 0 To datos.Columns.Count - 1
-
-                    If datos.Columns(i).ColumnName = "FECHA" AndAlso datarow.Item(i) IsNot Nothing Then
-                        newRow.Cells(i + 1).Value = Convert.ToDateTime(datarow.Item(i)).ToString("dd/MM/yyyy")
-                        Continue For
-                    End If
-                    newRow.Cells(i + 1).Value = If(datarow.Item(i) IsNot Nothing, datarow.Item(i).ToString(), String.Empty)
+                ' grupos
+                For Each group In From row As DataRow In grupos.Rows Select New ListViewGroup(row.Item(0).ToString.Trim)
+                    ListView1.Groups.Add(group)
                 Next
-                dgvNormal.Rows.Add(newRow)
-            Next
+
+                dgvNormal.Columns.Clear()
+                dgvNormal.Rows.Clear()
+
+                'headerCheckbox = New CheckBox()
+                'headerCheckbox.Size = New Size(15, 15)
+                'headerCheckbox.BackColor = Color.Transparent
+                'AddHandler headerCheckbox.CheckedChanged, AddressOf HeaderCheckbox_CheckedChanged
+
+                Dim checkColumn As New DataGridViewCheckBoxColumn()
+                checkColumn.Name = "Check"
+                checkColumn.HeaderText = " "
+                checkColumn.Width = 30
+                dgvNormal.Columns.Add(checkColumn)
 
 
-            'NO BORRAR
-            'For Each groupRow As DataRow In grupos.Rows
-            '    Dim groupName As String = groupRow.Item(0).ToString().Trim()
-
-            '    AddGroupRow(groupName)
-
-            '    For Each dataRow As DataRow In datos.Rows
-            '        If dataRow.Item(1).ToString().Trim() = groupName Then
-            '            AddDataRow(dataRow)
-            '        End If
-            '    Next
-            'Next
-
-            dgvNormal.Columns("ID_REGISTRO").Width = 70
-            dgvNormal.Columns("ID_REGISTRO").HeaderText = "ID"
-            dgvNormal.Columns("sancion").Width = 150
-            dgvNormal.Columns("sancion").HeaderText = "SANCION"
-            dgvNormal.Columns("ID_SANCION").Visible = False
-            dgvNormal.Columns("FECHA").Width = 80
-            dgvNormal.Columns("ID_PERSONAL").Visible = False
-            dgvNormal.Columns("NOMINA").Width = 250
-            dgvNormal.Columns("DESCRIPCION").Visible = False
-            dgvNormal.Columns("AREA").Width = 100
-            dgvNormal.Columns("ID_SITIO").Visible = False
-            dgvNormal.Columns("SITIO_TRABAJO").Width = 150
-            dgvNormal.Columns("SITIO_TRABAJO").HeaderText = "SITIO TRABAJO"
-            dgvNormal.Columns("VALOR").Width = 60
-            dgvNormal.Columns("OBSERVACION").Width = 180
-            dgvNormal.Columns("ID_DESCUENTO").Visible = False
-            dgvNormal.Columns("multador").Width = 150
-            dgvNormal.Columns("multador").HeaderText = "REGISTRADO POR"
-
-
-            dgvSanciones.DataSource = Nothing
-            'dgvSanciones.DataSource = _objRegistroSancion.SeleccionarRegistroSancionesDatos2(_tipoCon, filtro, fechaDesde, fechaHasta)
-            dgvSanciones.DataSource = Agrupados
-            dgvSanciones.Columns("ID_PERSONAL").Width = 100
-            dgvSanciones.Columns("ID_PERSONAL").HeaderText = "ID"
-            dgvSanciones.Columns("CEDULA").Width = 100
-            dgvSanciones.Columns("NOMINA").Width = 350
-            dgvSanciones.Columns("MULTAS").Width = 100
-            dgvSanciones.Columns("MULTAS").HeaderText = "VALOR"
-            'dgvSanciones.Columns("ID_PERSONAL").Visible = False
-            'dgvSanciones.Columns("NOMINA").Width = 250
-            'dgvSanciones.Columns("DESCRIPCION").HeaderText = "CARGO"
-            'dgvSanciones.Columns("DESCRIPCION").Width = 150
-            'dgvSanciones.Columns("AREA").Visible = False
-            'dgvSanciones.Columns("ID_SITIO").Visible = False
-            'dgvSanciones.Columns("SITIO_TRABAJO").HeaderText = "SITIO"
-            'dgvSanciones.Columns("SITIO_TRABAJO").Width = 150
-            'dgvSanciones.Columns("VALOR").Width = 60
-            'dgvSanciones.Columns("OBSERVACION").Width = 180
-            'dgvSanciones.Columns("ID_DESCUENTO").Width = 60
-            'dgvSanciones.Columns("REGISTRADO POR").Width = 150
+                Dim headerCellRect = dgvNormal.GetCellDisplayRectangle(0, -1, True)
+                headerCheckbox.Location = New Point(headerCellRect.X + (headerCellRect.Width - headerCheckbox.Width) / 2, headerCellRect.Y + (headerCellRect.Height - headerCheckbox.Height) / 2)
+                dgvNormal.Controls.Add(headerCheckbox)
 
 
 
-            dgvSanciones.AutoResizeRows()
-
-
-            ' detalles
-            Dim t = 0.0
-            Dim head As Integer = 0
-            For Each row As DataRow In datos.Rows
-                Dim lst As New ListViewItem(If(row.Item(0) IsNot Nothing, row.Item(0).ToString, String.Empty), GetListViewGroup(row.Item(1).ToString.Trim))
-                t += Convert.ToDouble(row.Item(10))
-                For i = 1 To datos.Columns.Count - 1
-                    lst.SubItems.Add(If(row.Item(i) IsNot Nothing, row.Item(i).ToString, String.Empty))
+                For Each column As DataColumn In datos.Columns
+                    Dim col As New DataGridViewTextBoxColumn()
+                    col.Name = column.ColumnName
+                    col.HeaderText = column.ColumnName
+                    col.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
+                    dgvNormal.Columns.Add(col)
                 Next
-                ListView1.Items.Add(lst)
-            Next
+
+                For Each datarow As DataRow In datos.Rows
+                    Dim newRow As New DataGridViewRow()
+                    newRow.CreateCells(dgvNormal)
+                    For i As Integer = 0 To datos.Columns.Count - 1
+
+                        If datos.Columns(i).ColumnName = "FECHA" AndAlso datarow.Item(i) IsNot Nothing Then
+                            newRow.Cells(i + 1).Value = Convert.ToDateTime(datarow.Item(i)).ToString("dd/MM/yyyy")
+                            Continue For
+                        End If
+                        newRow.Cells(i + 1).Value = If(datarow.Item(i) IsNot Nothing, datarow.Item(i).ToString(), String.Empty)
+                    Next
+                    dgvNormal.Rows.Add(newRow)
+                Next
+
+
+                'NO BORRAR
+                'For Each groupRow As DataRow In grupos.Rows
+                '    Dim groupName As String = groupRow.Item(0).ToString().Trim()
+
+                '    AddGroupRow(groupName)
+
+                '    For Each dataRow As DataRow In datos.Rows
+                '        If dataRow.Item(1).ToString().Trim() = groupName Then
+                '            AddDataRow(dataRow)
+                '        End If
+                '    Next
+                'Next
+
+                dgvNormal.Columns("ID_REGISTRO").Width = 70
+                dgvNormal.Columns("ID_REGISTRO").HeaderText = "ID"
+                dgvNormal.Columns("sancion").Width = 150
+                dgvNormal.Columns("sancion").HeaderText = "SANCION"
+                dgvNormal.Columns("ID_SANCION").Visible = False
+                dgvNormal.Columns("FECHA").Width = 80
+                dgvNormal.Columns("ID_PERSONAL").Visible = False
+                dgvNormal.Columns("NOMINA").Width = 250
+                dgvNormal.Columns("DESCRIPCION").Visible = False
+                dgvNormal.Columns("AREA").Width = 100
+                dgvNormal.Columns("ID_SITIO").Visible = False
+                dgvNormal.Columns("SITIO_TRABAJO").Width = 150
+                dgvNormal.Columns("SITIO_TRABAJO").HeaderText = "SITIO TRABAJO"
+                dgvNormal.Columns("VALOR").Width = 60
+                dgvNormal.Columns("OBSERVACION").Width = 180
+                dgvNormal.Columns("ID_DESCUENTO").Visible = False
+                dgvNormal.Columns("multador").Width = 150
+                dgvNormal.Columns("multador").HeaderText = "REGISTRADO POR"
+
+
+                dgvSanciones.DataSource = Nothing
+                'dgvSanciones.DataSource = _objRegistroSancion.SeleccionarRegistroSancionesDatos2(_tipoCon, filtro, fechaDesde, fechaHasta)
+                dgvSanciones.DataSource = Agrupados
+                dgvSanciones.Columns("ID_PERSONAL").Width = 100
+                dgvSanciones.Columns("ID_PERSONAL").HeaderText = "ID"
+                dgvSanciones.Columns("CEDULA").Width = 100
+                dgvSanciones.Columns("NOMINA").Width = 350
+                dgvSanciones.Columns("MULTAS").Width = 100
+                dgvSanciones.Columns("MULTAS").HeaderText = "VALOR"
+                'dgvSanciones.Columns("ID_PERSONAL").Visible = False
+                'dgvSanciones.Columns("NOMINA").Width = 250
+                'dgvSanciones.Columns("DESCRIPCION").HeaderText = "CARGO"
+                'dgvSanciones.Columns("DESCRIPCION").Width = 150
+                'dgvSanciones.Columns("AREA").Visible = False
+                'dgvSanciones.Columns("ID_SITIO").Visible = False
+                'dgvSanciones.Columns("SITIO_TRABAJO").HeaderText = "SITIO"
+                'dgvSanciones.Columns("SITIO_TRABAJO").Width = 150
+                'dgvSanciones.Columns("VALOR").Width = 60
+                'dgvSanciones.Columns("OBSERVACION").Width = 180
+                'dgvSanciones.Columns("ID_DESCUENTO").Width = 60
+                'dgvSanciones.Columns("REGISTRADO POR").Width = 150
+
+
+
+                dgvSanciones.AutoResizeRows()
+
+
+                ' detalles
+                Dim t = 0.0
+                Dim head As Integer = 0
+                For Each row As DataRow In datos.Rows
+                    Dim lst As New ListViewItem(If(row.Item(0) IsNot Nothing, row.Item(0).ToString, String.Empty), GetListViewGroup(row.Item(1).ToString.Trim))
+                    t += Convert.ToDouble(row.Item(10))
+                    For i = 1 To datos.Columns.Count - 1
+                        lst.SubItems.Add(If(row.Item(i) IsNot Nothing, row.Item(i).ToString, String.Empty))
+                    Next
+                    ListView1.Items.Add(lst)
+                Next
 
 
 
 
-            'NO borrar 
-            ' autosize columns
-            'For Each column As ColumnHeader In ListView1.Columns
-            '    If column.Width > 5 Then
-            '        column.Width = -2
-            '    End If
-            'Next
+                'NO borrar 
+                ' autosize columns
+                'For Each column As ColumnHeader In ListView1.Columns
+                '    If column.Width > 5 Then
+                '        column.Width = -2
+                '    End If
+                'Next
 
-            Label1.Text = datos.Rows.Count & " REGISTRO(S) - TOTAL EN MULTAS: "
-            Label2.Text = "$ " & t.ToString("N")
+                Label1.Text = datos.Rows.Count & " REGISTRO(S) - TOTAL EN MULTAS: "
+                Label2.Text = "$ " & t.ToString("N")
 
-            ' seleccionar el ultimo que ingreso
-            If selId = 0 Then Return
+                ' seleccionar el ultimo que ingreso
+                If selId = 0 Then Return
 
-            'No borrar
-            'For Each row As ListViewItem In From row1 As ListViewItem In ListView1.Items Where row1.SubItems(0).Text.Trim.Equals(selId.ToString.Trim)
-            '    row.EnsureVisible()
-            '    ListView1.Items(row.Index).Selected = True
-            '    ListView1.Select()
-            '    Exit For
-            'Next
+                'No borrar
+                'For Each row As ListViewItem In From row1 As ListViewItem In ListView1.Items Where row1.SubItems(0).Text.Trim.Equals(selId.ToString.Trim)
+                '    row.EnsureVisible()
+                '    ListView1.Items(row.Index).Selected = True
+                '    ListView1.Select()
+                '    Exit For
+                'Next
+
+            Catch ex As Exception
+                KryptonMessageBox.Show("ERROR AL CARGAR LOS DATOS: " & ex.Message, "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+
+            End Try
         End Sub
 
 
