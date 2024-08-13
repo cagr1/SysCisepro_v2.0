@@ -33,12 +33,12 @@
             Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle14 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle15 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle16 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim DataGridViewCellStyle13 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle14 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle15 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle16 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormComprobanteEgresoBodega))
             Me.tbComprobanteIngresoBodega = New System.Windows.Forms.TabControl()
             Me.tpRegistro = New System.Windows.Forms.TabPage()
@@ -126,6 +126,8 @@
             Me.lblIdArticulo = New System.Windows.Forms.Label()
             Me.lbldetalle = New System.Windows.Forms.Label()
             Me.tpConsultar = New System.Windows.Forms.TabPage()
+            Me.gbxDetalles = New System.Windows.Forms.GroupBox()
+            Me.dgvDetalleComprobate = New System.Windows.Forms.DataGridView()
             Me.gbxIngreso = New ComponentFactory.Krypton.Toolkit.KryptonGroupBox()
             Me.dgvDetalleComprobanteIngreso = New ComponentFactory.Krypton.Toolkit.KryptonDataGridView()
             Me.ID_KAR = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -182,8 +184,6 @@
             Me.gbRangoFechas = New System.Windows.Forms.GroupBox()
             Me.Label13 = New System.Windows.Forms.Label()
             Me.Label14 = New System.Windows.Forms.Label()
-            Me.gbxDetalles = New System.Windows.Forms.GroupBox()
-            Me.dgvDetalleComprobate = New System.Windows.Forms.DataGridView()
             Me.tpReporte = New System.Windows.Forms.TabPage()
             Me.TabControl1 = New System.Windows.Forms.TabControl()
             Me.TabPage1 = New System.Windows.Forms.TabPage()
@@ -217,6 +217,8 @@
             CType(Me.dgvSecuencial, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.nudCantidad, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.tpConsultar.SuspendLayout()
+            Me.gbxDetalles.SuspendLayout()
+            CType(Me.dgvDetalleComprobate, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.gbxIngreso, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.gbxIngreso.Panel, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.gbxIngreso.Panel.SuspendLayout()
@@ -236,8 +238,6 @@
             Me.gbComprobante.SuspendLayout()
             CType(Me.dgvComprobantesEgreso, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.gbRangoFechas.SuspendLayout()
-            Me.gbxDetalles.SuspendLayout()
-            CType(Me.dgvDetalleComprobate, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.tpReporte.SuspendLayout()
             Me.TabControl1.SuspendLayout()
             Me.TabPage1.SuspendLayout()
@@ -1284,6 +1284,54 @@
             Me.tpConsultar.TabIndex = 1
             Me.tpConsultar.Text = "CONSULTAR"
             '
+            'gbxDetalles
+            '
+            Me.gbxDetalles.Controls.Add(Me.dgvDetalleComprobate)
+            Me.gbxDetalles.Location = New System.Drawing.Point(169, 284)
+            Me.gbxDetalles.Name = "gbxDetalles"
+            Me.gbxDetalles.Size = New System.Drawing.Size(1030, 315)
+            Me.gbxDetalles.TabIndex = 155
+            Me.gbxDetalles.TabStop = False
+            Me.gbxDetalles.Text = "Detalles"
+            '
+            'dgvDetalleComprobate
+            '
+            Me.dgvDetalleComprobate.AllowUserToAddRows = False
+            Me.dgvDetalleComprobate.AllowUserToDeleteRows = False
+            Me.dgvDetalleComprobate.AllowUserToResizeRows = False
+            DataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+            Me.dgvDetalleComprobate.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle11
+            Me.dgvDetalleComprobate.BackgroundColor = System.Drawing.Color.White
+            Me.dgvDetalleComprobate.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedHorizontal
+            Me.dgvDetalleComprobate.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
+            DataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+            DataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Control
+            DataGridViewCellStyle12.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText
+            DataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight
+            DataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+            DataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+            Me.dgvDetalleComprobate.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle12
+            Me.dgvDetalleComprobate.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+            DataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+            DataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Window
+            DataGridViewCellStyle13.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.ControlText
+            DataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(123, Byte), Integer))
+            DataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+            DataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+            Me.dgvDetalleComprobate.DefaultCellStyle = DataGridViewCellStyle13
+            Me.dgvDetalleComprobate.GridColor = System.Drawing.Color.Black
+            Me.dgvDetalleComprobate.Location = New System.Drawing.Point(3, 19)
+            Me.dgvDetalleComprobate.MultiSelect = False
+            Me.dgvDetalleComprobate.Name = "dgvDetalleComprobate"
+            Me.dgvDetalleComprobate.ReadOnly = True
+            Me.dgvDetalleComprobate.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
+            Me.dgvDetalleComprobate.RowHeadersVisible = False
+            Me.dgvDetalleComprobate.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+            Me.dgvDetalleComprobate.Size = New System.Drawing.Size(1022, 290)
+            Me.dgvDetalleComprobate.TabIndex = 146
+            '
             'gbxIngreso
             '
             Me.gbxIngreso.Location = New System.Drawing.Point(6, 279)
@@ -1956,54 +2004,6 @@
             Me.Label14.TabIndex = 4
             Me.Label14.Text = "a:"
             '
-            'gbxDetalles
-            '
-            Me.gbxDetalles.Controls.Add(Me.dgvDetalleComprobate)
-            Me.gbxDetalles.Location = New System.Drawing.Point(5, 284)
-            Me.gbxDetalles.Name = "gbxDetalles"
-            Me.gbxDetalles.Size = New System.Drawing.Size(1030, 315)
-            Me.gbxDetalles.TabIndex = 155
-            Me.gbxDetalles.TabStop = False
-            Me.gbxDetalles.Text = "Detalles"
-            '
-            'dgvDetalleComprobate
-            '
-            Me.dgvDetalleComprobate.AllowUserToAddRows = False
-            Me.dgvDetalleComprobate.AllowUserToDeleteRows = False
-            Me.dgvDetalleComprobate.AllowUserToResizeRows = False
-            DataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-            Me.dgvDetalleComprobate.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle11
-            Me.dgvDetalleComprobate.BackgroundColor = System.Drawing.Color.White
-            Me.dgvDetalleComprobate.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedHorizontal
-            Me.dgvDetalleComprobate.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-            DataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-            DataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Control
-            DataGridViewCellStyle12.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            DataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText
-            DataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight
-            DataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-            DataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-            Me.dgvDetalleComprobate.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle12
-            Me.dgvDetalleComprobate.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-            DataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-            DataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Window
-            DataGridViewCellStyle13.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            DataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.ControlText
-            DataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(123, Byte), Integer))
-            DataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-            DataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-            Me.dgvDetalleComprobate.DefaultCellStyle = DataGridViewCellStyle13
-            Me.dgvDetalleComprobate.GridColor = System.Drawing.Color.Black
-            Me.dgvDetalleComprobate.Location = New System.Drawing.Point(3, 19)
-            Me.dgvDetalleComprobate.MultiSelect = False
-            Me.dgvDetalleComprobate.Name = "dgvDetalleComprobate"
-            Me.dgvDetalleComprobate.ReadOnly = True
-            Me.dgvDetalleComprobate.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-            Me.dgvDetalleComprobate.RowHeadersVisible = False
-            Me.dgvDetalleComprobate.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvDetalleComprobate.Size = New System.Drawing.Size(1022, 290)
-            Me.dgvDetalleComprobate.TabIndex = 146
-            '
             'tpReporte
             '
             Me.tpReporte.BackColor = System.Drawing.Color.White
@@ -2276,6 +2276,8 @@
             CType(Me.dgvSecuencial, System.ComponentModel.ISupportInitialize).EndInit()
             CType(Me.nudCantidad, System.ComponentModel.ISupportInitialize).EndInit()
             Me.tpConsultar.ResumeLayout(False)
+            Me.gbxDetalles.ResumeLayout(False)
+            CType(Me.dgvDetalleComprobate, System.ComponentModel.ISupportInitialize).EndInit()
             CType(Me.gbxIngreso.Panel, System.ComponentModel.ISupportInitialize).EndInit()
             Me.gbxIngreso.Panel.ResumeLayout(False)
             Me.gbxIngreso.Panel.PerformLayout()
@@ -2299,8 +2301,6 @@
             CType(Me.dgvComprobantesEgreso, System.ComponentModel.ISupportInitialize).EndInit()
             Me.gbRangoFechas.ResumeLayout(False)
             Me.gbRangoFechas.PerformLayout()
-            Me.gbxDetalles.ResumeLayout(False)
-            CType(Me.dgvDetalleComprobate, System.ComponentModel.ISupportInitialize).EndInit()
             Me.tpReporte.ResumeLayout(False)
             Me.TabControl1.ResumeLayout(False)
             Me.TabPage1.ResumeLayout(False)

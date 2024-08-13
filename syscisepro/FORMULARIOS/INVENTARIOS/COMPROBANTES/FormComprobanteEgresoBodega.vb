@@ -1490,29 +1490,33 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
         End Sub
 
         Private Sub ModificarComprobanteEgresoAnular()
-            If MessageBox.Show("DESEA ANULAR EL REGISTRO?", "MENSAJE DEL SISTEMA", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> DialogResult.Yes Then Return
+            If KryptonMessageBox.Show("DESEA ANULAR EL REGISTRO?", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) <> DialogResult.Yes Then Return
 
 
             _sqlCommands.Clear()
 
             With _objCompEgr
-                .Id = lblComp.Text  'Id Comprobante 
+                .Id = txtNumero.Text  'Id Comprobante 
             End With
             _sqlCommands.Add(_objCompEgr.AnularRegistroComprobanteEgresoBodegaCommand())
 
-            Dim result As DataTable = _objControl.SeleccionarIdControlUniformes(_tipoCon, lblComp.Text, lblDetKardex.Text)
 
-
-            If result.Rows.Count > 0 Then
-                Dim idcon As Long = Convert.ToInt64(result.Rows(0)("ID_CONTROL"))
-
-                With _objControl
-                    .IdControl = idcon
-                End With
-                _sqlCommands.Add(_objControl.AnularControlCommand())
-
-            End If
             For Each row In dgvDetalleComprobate.Rows
+
+                Dim result As DataTable = _objControl.SeleccionarIdControlUniformes(_tipoCon, txtNumero.Text, row.Cells.Item(1).Value)
+
+
+                If result.Rows.Count > 0 Then
+                    Dim idcon As Long = Convert.ToInt64(result.Rows(0)("ID_CONTROL"))
+
+                    With _objControl
+                        .IdControl = idcon
+                    End With
+                    _sqlCommands.Add(_objControl.AnularControlCommand())
+
+                End If
+
+
                 With _objDetCompEgr
                     .IdDetalle = row.Cells.Item(1).Value
                 End With
@@ -1749,6 +1753,29 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
             Dim cantidadPrendasLleva As Integer = 0
             If KryptonMessageBox.Show("DESEA GUARDAR EL REINGRESO DEL COMPROBANTE?", "MENSAJE DE CONFIRMACIÓN", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) <> DialogResult.Yes Then Return
             Try
+                For indice = 0 To dgvDetalleComprobanteIngreso.RowCount - 1
+                    Dim idkardex = Convert.ToInt32(dgvDetalleComprobanteIngreso.Rows(indice).Cells(0).Value)
+
+                    If dgvDetalleComprobanteIngreso.Rows(indice).Cells(7).Value.ToString().Trim().Length > 0 Then
+                        Try
+                            Dim data As DataTable = _objDetCompEgr.BuscarSerieRepetida(_tipoCon, dgvDetalleComprobanteIngreso.Rows(indice).Cells(7).Value.ToString(), idkardex)
+                            If data IsNot Nothing AndAlso data.Rows.Count > 0 Then
+                                Dim last As DataRow = data.Rows(data.Rows.Count - 1)
+                                If Convert.ToInt32(last("ID_ACTIVIDAD")) = 1 Then
+                                    Dim serieText As String = dgvDetalleComprobanteIngreso.Rows(indice).Cells(7).Value.ToString()
+                                    KryptonMessageBox.Show("LA SERIE " & serieText & " YA FUE UTILIZADA EN UN INGRESO", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
+                                    Return
+                                End If
+                            End If
+                        Catch ex As Exception
+                            KryptonMessageBox.Show("OCURRIÓ UN PROBLEMA AL BUSCAR LA SERIE. POR FAVOR, CONTÁCTE AL ADMINISTRADOR!!!", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
+
+                        End Try
+                    End If
+                Next
+
+
+
                 With _objCompIng
                     .Id = _objSerie.Serie(_objCompIng.BuscarMayorIdComprobanteIngresoBodega(_tipoCon) + 1)
                     .Fecha = dtpFecha.Value
@@ -1798,25 +1825,6 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
 
                 For indice = 0 To dgvDetalleComprobanteIngreso.RowCount - 1
 
-
-                    Dim idkardex = Convert.ToInt32(dgvDetalleComprobanteIngreso.Rows(indice).Cells(0).Value)
-
-                    If dgvDetalleComprobanteIngreso.Rows(indice).Cells(7).Value.ToString().Trim().Length > 0 Then
-                        Try
-                            Dim data As DataTable = _objDetCompEgr.BuscarSerieRepetida(_tipoCon, dgvDetalleComprobanteIngreso.Rows(indice).Cells(7).Value.ToString(), idkardex)
-                            If data IsNot Nothing AndAlso data.Rows.Count > 0 Then
-                                Dim last As DataRow = data.Rows(data.Rows.Count - 1)
-                                If Convert.ToInt32(last("ID_ACTIVIDAD")) = 1 Then
-                                    Dim serieText As String = dgvDetalleComprobanteIngreso.Rows(indice).Cells(7).Value.ToString()
-                                    KryptonMessageBox.Show("LA SERIE " & serieText & " YA FUE UTILIZADA EN UN INGRESO", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
-                                    Return
-                                End If
-                            End If
-                        Catch ex As Exception
-                            KryptonMessageBox.Show("OCURRIÓ UN PROBLEMA AL BUSCAR LA SERIE. POR FAVOR, CONTÁCTE AL ADMINISTRADOR!!!", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
-
-                        End Try
-                    End If
 
                     With _objDetalleKardex
                         .Id = iddk

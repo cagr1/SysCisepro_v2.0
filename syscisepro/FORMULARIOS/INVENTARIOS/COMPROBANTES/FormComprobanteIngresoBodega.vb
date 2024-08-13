@@ -1372,45 +1372,50 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
 
         Private Sub ModificarComprobanteIngresoAnular()
 
-            If MessageBox.Show("DESEA ANULAR EL REGISTRO?", "MENSAJE DEL SISTEMA", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> DialogResult.Yes Then Return
+            If KryptonMessageBox.Show("DESEA ANULAR EL REGISTRO?", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) <> DialogResult.Yes Then Return
 
             'Dim fechaDesde = dtpFechaDesde.Value.Day.ToString & "-" & dtpFechaDesde.Value.Month.ToString & "-" & dtpFechaDesde.Value.Year.ToString & " 00:00:00"
             'Dim fechaHasta = dtpFechaHasta.Value.Day.ToString & "-" & dtpFechaHasta.Value.Month.ToString & "-" & dtpFechaHasta.Value.Year.ToString & " 23:59:59"
             _sqlCommands.Clear()
-
-            With _objCompIng
-                .Id = lblComp.Text  'Id Comprobante 
-            End With
-            _sqlCommands.Add(_objCompIng.AnularRegistroComprobanteIngresoBodegaCommand())
-
-            Dim result As DataTable = _objControl.SeleccionarIdControlUniformes(_tipoCon, lblComp.Text, lblDetaKardex.Text)
-
-
-            If result.Rows.Count > 0 Then
-                Dim idcon As Long = Convert.ToInt64(result.Rows(0)("ID_CONTROL"))
-
-                With _objControl
-                    .IdControl = idcon
+            Try
+                With _objCompIng
+                    .Id = txtNroComprobante.Text  'Id Comprobante 
                 End With
-                _sqlCommands.Add(_objControl.AnularControlCommand())
-
-            End If
-
-            For Each row In dgvDetalleComprobate.Rows
-                With _objDetCompIng
-                    .IdDetalle = row.Cells.Item(1).Value
-                End With
-                _sqlCommands.Add(_objDetCompIng.anularDetalleComprobanteIngresoBodegaCommand())
+                _sqlCommands.Add(_objCompIng.AnularRegistroComprobanteIngresoBodegaCommand())
 
 
-                With _objDetalleKardex
-                    .Id = row.Cells.Item(5).Value
-                End With
-                _sqlCommands.Add(_objDetalleKardex.AnularRegistroDetalleKardexCommand())
+                For Each row In dgvDetalleComprobate.Rows
+
+                    Dim result As DataTable = _objControl.SeleccionarIdControlUniformes(_tipoCon, txtNroComprobante.Text, row.Cells.Item(1).Value)
+
+                    If result.Rows.Count > 0 Then
+                        Dim idcon As Long = Convert.ToInt64(result.Rows(0)("ID_CONTROL"))
+
+                        With _objControl
+                            .IdControl = idcon
+                        End With
+                        _sqlCommands.Add(_objControl.AnularControlCommand())
+
+                    End If
 
 
-            Next
 
+                    With _objDetCompIng
+                        .IdDetalle = row.Cells.Item(1).Value
+                    End With
+                    _sqlCommands.Add(_objDetCompIng.anularDetalleComprobanteIngresoBodegaCommand())
+
+
+                    With _objDetalleKardex
+                        .Id = row.Cells.Item(5).Value
+                    End With
+                    _sqlCommands.Add(_objDetalleKardex.AnularRegistroDetalleKardexCommand())
+
+
+                Next
+            Catch ex As Exception
+                KryptonMessageBox.Show("ERROR AL ANULAR COMPROBANTE DE INGRESO DE BODEGA" & vbNewLine & ex.Message, "MENSAJE DE INFORMACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+            End Try
 
 
             Dim nombreU As String = "ANULACIÓN COMPROBANTE INGRESO " & UserName

@@ -36,6 +36,7 @@ Namespace FORMULARIOS.TALENTO_HUMANO
         End Property
         Dim _sqlCommands As List(Of SqlCommand)
         Public IdUsuario As Integer
+        Public UserName As String
 
         Dim _estadoAccion As Integer = 0
         ReadOnly _objSancionesPersonal As New ClassSanciones
@@ -105,8 +106,13 @@ Namespace FORMULARIOS.TALENTO_HUMANO
                     End With
                     _sqlCommands.Add(_objSancionesPersonal.ModificarSancionPersonalCommand())
                 End If
-
-                Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, String.Empty)
+                Dim nombreU As String = String.Empty
+                If _estadoAccion = 1 Then
+                    nombreU = "INGRESO SANCION " & UserName
+                ElseIf _estadoAccion = 2 Then
+                    nombreU = "MODIFICACIÓN SANCION " & UserName
+                End If
+                Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, nombreU)
                 If res(0) Then
                     cbxTipo.Enabled = False
                     txtDefinicion.Enabled = False
@@ -159,7 +165,10 @@ Namespace FORMULARIOS.TALENTO_HUMANO
                 End With
                 _sqlCommands.Add(_objSancionesPersonal.AnularSancionPersonalCommand())
 
-                Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, String.Empty)
+
+                Dim NombreU As String = "ANULACIÓN SANCION " & UserName
+
+                Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, NombreU)
                 If res(0) Then
                     txtIdSancion.Clear()
                     cbxTipo.Text = String.Empty
