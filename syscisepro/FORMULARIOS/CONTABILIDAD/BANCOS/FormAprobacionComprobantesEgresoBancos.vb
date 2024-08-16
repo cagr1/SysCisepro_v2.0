@@ -4,6 +4,7 @@ Imports ClassLibraryCisepro.CONTABILIDAD.BANCOS
 Imports ClassLibraryCisepro.CONTABILIDAD.BANCOS.AUDITORIA
 Imports ClassLibraryCisepro.ENUMS
 Imports ClassLibraryCisepro.ProcesosSql
+Imports Krypton.Toolkit
 Imports syscisepro.FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
 
 Namespace FORMULARIOS.CONTABILIDAD.BANCOS
@@ -158,10 +159,17 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
             AprobarComprobanteEgresoBancos()
             AprobarChequeEmitido()
 
-            Dim nombreU As String = "APROBACION COMPROBANTES EGRESO " & UserName
+            Dim nombreU As String = "Comprobante de Egreso aprobado por: " & UserName
             Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, String.Empty)
             If res(0) Then CargarComprobanteEgresoBancos()
-            MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
+            Dim messageIcon As KryptonMessageBoxIcon
+            If res(0) Then
+                messageIcon = KryptonMessageBoxIcon.Information
+            Else
+                messageIcon = KryptonMessageBoxIcon.Exclamation
+            End If
+            KryptonMessageBox.Show(res(1), "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, messageIcon)
+            'MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
         End Sub
 
         Private Sub ToolStripMenuItem2_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnRechazar.Click
@@ -181,9 +189,18 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
             RechazarComprobanteEgresoBancos()
             RechazarChequeEmitido()
 
-            Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, String.Empty)
+            Dim User As String = "Comprobante de Egreso rechazado por: " & UserName
+            Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, User)
+
             If res(0) Then CargarComprobanteEgresoBancos()
-            MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
+            Dim messageIcon As KryptonMessageBoxIcon
+            If res(0) Then
+                messageIcon = KryptonMessageBoxIcon.Information
+            Else
+                messageIcon = KryptonMessageBoxIcon.Exclamation
+            End If
+            KryptonMessageBox.Show(res(1), "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, messageIcon)
+            'MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
 
         End Sub
 

@@ -12,6 +12,7 @@ Imports ClassLibraryCisepro.CONTABILIDAD.PLAN_DE_CUENTAS
 Imports ClassLibraryCisepro.ENUMS
 Imports ClassLibraryCisepro.ProcesosSql
 Imports ClassLibraryCisepro.VALIDACIONES
+Imports Krypton.Toolkit
 Imports syscisepro.FORMULARIOS.CONTABILIDAD.BANCOS.REPORTES
 Imports syscisepro.FORMULARIOS.INVENTARIOS.PROCESO
 
@@ -672,14 +673,16 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
                     f.ShowDialog()
                 End If
             Else
-                MsgBox("POR FAVOR SELECCIONE UN COMPROBANTE DE EGRESO", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                'MsgBox("POR FAVOR SELECCIONE UN COMPROBANTE DE EGRESO", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                KryptonMessageBox.Show("POR FAVOR SELECCIONE UN COMPROBANTE DE EGRESO", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
             End If
         End Sub
         Private Function ValidarFecha()
             Dim fechaIngresada = New Date(dtpFechaComprobanteEgreso.Value.Year, dtpFechaComprobanteEgreso.Value.Month, dtpFechaComprobanteEgreso.Value.Day)
             Dim fechaMinimaIngreso = New Date(Date.Now.Year, 1, 1)
             If fechaMinimaIngreso > fechaIngresada Then
-                MsgBox("Esta ingresando comprobantes del año " + dtpFechaComprobanteEgreso.Value.Year.ToString + ". Por favor asegúrese de que la información sea correcta y no afecte el balance!")
+                'MsgBox("Esta ingresando comprobantes del año " + dtpFechaComprobanteEgreso.Value.Year.ToString + ". Por favor asegúrese de que la información sea correcta y no afecte el balance!")
+                KryptonMessageBox.Show("Esta ingresando comprobantes del año " + dtpFechaComprobanteEgreso.Value.Year.ToString + ". Por favor asegúrese de que la información sea correcta y no afecte el balance!", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                 Return True
             Else
                 Return True
@@ -694,7 +697,7 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
                 If ValidacionParametros() Then
                     If txtTotalDebe.Text = txtTotalHaber.Text Then
 
-                        If MessageBox.Show("¿ESTA SEGURA QUE DESEA GUARDAR EL COMPROBANTE?", "MENSAJE DE VALIDACIÓN", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> DialogResult.Yes Then Return
+                        If KryptonMessageBox.Show("¿ESTA SEGURA QUE DESEA GUARDAR EL COMPROBANTE?", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) <> DialogResult.Yes Then Return
                         _sqlCommands.Clear()
 
                         _objetoComprobanteEgresoBancos.Id = _objetoComprobanteEgresoBancos.BuscarMayorIdComprobanteEgresoBancos(_tipoCon) + 1
@@ -734,12 +737,21 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
                             lblIdComprobanteEgresoBancos.Text = _objetoComprobanteEgresoBancos.Id
                             btnReporte.Enabled = True
                         End If
-                        MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
+                        Dim messageIcon As KryptonMessageBoxIcon
+                        If res(0) Then
+                            messageIcon = KryptonMessageBoxIcon.Information
+                        Else
+                            messageIcon = KryptonMessageBoxIcon.Exclamation
+                        End If
+                        KryptonMessageBox.Show(res(1), "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, messageIcon)
+
                     Else
-                        MsgBox("NO SE PUEDE GUARDAR." & vbNewLine & "LOS VALORES DE EL DEBE Y EL HABER NO COINCIDEN POR FAVOR REVISE LAS TRANSACCIONES.", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACION")
+
+                        KryptonMessageBox.Show("NO SE PUEDE GUARDAR." & vbNewLine & "LOS VALORES DE EL DEBE Y EL HABER NO COINCIDEN POR FAVOR REVISE LAS TRANSACCIONES.", "MENSAJE DE VALIDACION", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                     End If
                 Else
-                    MsgBox("NO SE PUEDE GUARDAR." & vbNewLine & "NO SE HAN LLENADO TODOS LOS CAMPOS NECESARIOS.", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+
+                    KryptonMessageBox.Show("NO SE PUEDE GUARDAR." & vbNewLine & "NO SE HAN LLENADO TODOS LOS CAMPOS NECESARIOS.", "MENSAJE DE VALIDACION", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                 End If
             End If
         End Sub

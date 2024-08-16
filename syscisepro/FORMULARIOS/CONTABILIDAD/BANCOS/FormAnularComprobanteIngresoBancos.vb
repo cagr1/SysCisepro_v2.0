@@ -4,6 +4,7 @@ Imports ClassLibraryCisepro.CONTABILIDAD.LIBRO_DIARIO
 Imports ClassLibraryCisepro.CONTABILIDAD.VENTAS
 Imports ClassLibraryCisepro.ENUMS
 Imports ClassLibraryCisepro.ProcesosSql
+Imports Krypton.Toolkit
 
 Namespace FORMULARIOS.CONTABILIDAD.BANCOS
     ''' <summary>
@@ -178,17 +179,16 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
                 Case TipoConexion.Asenava
                     Icon = My.Resources.logo_a
                     msKardex.ForeColor = Color.White
-                    'msKardex.BackColor = My.MySettingsProperty.Settings.ColorAsenava
                     dgvComprobanteEgresoBancos.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorAsenava
                 Case TipoConexion.Seportpac
                     Icon = My.Resources.logo_s
                     msKardex.ForeColor = Color.White
-                    'msKardex.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
+
                     dgvComprobanteEgresoBancos.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorSeportpac
                 Case Else
                     Icon = My.Resources.logo_c
                     msKardex.ForeColor = Color.White
-                    'msKardex.BackColor = My.MySettingsProperty.Settings.ColorCisepro
+
                     dgvComprobanteEgresoBancos.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
             End Select
             _sqlCommands = New List(Of SqlCommand)
@@ -211,15 +211,23 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
                 _sqlCommands.Clear()
 
                 AnularComprobanteIngresoBancos()
-                Dim nombreU As String = "ANULAR COMPROBANTE INGRESO BANCOS " & UserName
+                Dim nombreU As String = "Comprobante de ingreso anulado por: " & UserName
                 Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, nombreU)
                 If res(0) Then
                     LlenarComboCuentasBancos()
                     CargarComprobanteIngresoBancos()
                 End If
-                MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
+                Dim messageIcon As KryptonMessageBoxIcon
+                If res(0) Then
+                    messageIcon = KryptonMessageBoxIcon.Information
+                Else
+                    messageIcon = KryptonMessageBoxIcon.Exclamation
+                End If
+                KryptonMessageBox.Show(res(1), "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, messageIcon)
+
             Else
-                MsgBox("NO HAY COMPROBANTES CARGADOS.", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+
+                KryptonMessageBox.Show("NO HAY COMPROBANTES CARGADOS.", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
             End If
         End Sub
 

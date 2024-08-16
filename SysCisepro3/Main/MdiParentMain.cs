@@ -1170,7 +1170,7 @@ namespace SysCisepro3.Main
         }
         private void aSIGNARCUENTASBANCOSToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form f = new syscisepro.FORMULARIOS.CONTABILIDAD.BANCOS.FormCuentasBancos { MdiParent = this, TipoCox = TipoCox, IdUsuario = ObjUsuario.IdUsuario };
+            Form f = new syscisepro.FORMULARIOS.CONTABILIDAD.BANCOS.FormCuentasBancos { MdiParent = this, TipoCox = TipoCox, IdUsuario = ObjUsuario.IdUsuario, UserName = ObjUsuario.Datos };
             f.Show();
         }
         private void bUSCARCOMPROBANTEEGRESOToolStripMenuItem_Click(object sender, EventArgs e)
@@ -1195,17 +1195,17 @@ namespace SysCisepro3.Main
         }
         private void cARGARCOMPROBANTESDEEGRESOToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form f = new syscisepro.FORMULARIOS.CONTABILIDAD.BANCOS.FormCargarComprobantesEgresoBanco { MdiParent = this, TipoCox = TipoCox, IdUsuario = ObjUsuario.IdUsuario };
+            Form f = new syscisepro.FORMULARIOS.CONTABILIDAD.BANCOS.FormCargarComprobantesEgresoBanco { MdiParent = this, TipoCox = TipoCox, IdUsuario = ObjUsuario.IdUsuario, UserName = ObjUsuario.Datos };
             f.Show();
         }
         private void cARGARCOMPROBANTESDEINGRESOToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form f = new syscisepro.FORMULARIOS.CONTABILIDAD.BANCOS.FormCargarComprobantesIngresoBanco { MdiParent = this, TipoCox = TipoCox, IdUsuario = ObjUsuario.IdUsuario };
+            Form f = new syscisepro.FORMULARIOS.CONTABILIDAD.BANCOS.FormCargarComprobantesIngresoBanco { MdiParent = this, TipoCox = TipoCox, IdUsuario = ObjUsuario.IdUsuario, UserName = ObjUsuario.Datos };
             f.Show();
         }
         private void cRUCEDECUENTASBANCOSToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form f = new syscisepro.FORMULARIOS.CONTABILIDAD.BANCOS.FormCruzeCuentasEgresoIngreso { MdiParent = this, TipoCox = TipoCox, IdUsuario = ObjUsuario.IdUsuario };
+            Form f = new syscisepro.FORMULARIOS.CONTABILIDAD.BANCOS.FormCruzeCuentasEgresoIngreso { MdiParent = this, TipoCox = TipoCox, IdUsuario = ObjUsuario.IdUsuario, UserName = ObjUsuario.Datos };
             f.Show();
         }
         private void rEPORTEDEBANCOSToolStripMenuItem_Click(object sender, EventArgs e)

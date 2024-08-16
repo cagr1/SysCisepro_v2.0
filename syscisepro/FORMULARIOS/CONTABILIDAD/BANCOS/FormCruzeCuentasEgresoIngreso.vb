@@ -11,6 +11,7 @@ Imports ClassLibraryCisepro.ProcesosSql
 Imports ClassLibraryCisepro.VALIDACIONES
 Imports ClassLibraryCisepro.CONTABILIDAD.CUENTAS_POR_COBRAR
 Imports ClassLibraryCisepro.CONTABILIDAD.CUENTAS_POR_PAGAR
+Imports Krypton.Toolkit
 
 Namespace FORMULARIOS.CONTABILIDAD.BANCOS
     ''' <summary>
@@ -41,6 +42,7 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
             End Set
         End Property
         Public IdUsuario As Integer
+        Public UserName As String
 
         Dim _sqlCommands As List(Of SqlCommand)
         Dim _dataPagosComp As Dictionary(Of String, String)
@@ -771,19 +773,19 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
             End Select
             Dim loFila As DataGridViewRow = dgvAsientoDiario.CurrentRow()
             Dim lsMensage As String = "¿Esta seguro de querer eliminar este Registro" & vbCrLf & loFila.Cells(2).Value.ToString()
-            If MessageBox.Show(lsMensage, "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> Windows.Forms.DialogResult.Yes Then Return
+            If KryptonMessageBox.Show(lsMensage, "", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) <> Windows.Forms.DialogResult.Yes Then Return
 
             Try
                 dgvAsientoDiario.Rows.RemoveAt(dgvAsientoDiario.CurrentRow.Index)
                 SumarTotal()
-                MessageBox.Show("FILA ELIMINADA", "", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                KryptonMessageBox.Show("FILA ELIMINADA", "", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
             Catch exp As Exception
-                MessageBox.Show(exp.Message, "", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                KryptonMessageBox.Show(exp.Message, "", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
             End Try
         End Sub
         Private Sub btnGuardar_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnGuardar.Click
             If CDec(txtTotalDebe.Text) = CDec(txtTotalHaber.Text) Then
-                If MessageBox.Show("¿ESTA SEGURA QUE DESEA GUARDAR?", "MENSAJE DE VALIDACIÓN", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> DialogResult.Yes Then Return
+                If KryptonMessageBox.Show("¿ESTA SEGURA QUE DESEA GUARDAR?", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) <> DialogResult.Yes Then Return
                 _sqlCommands.Clear()
 
                 _objetoComprobanteIngresoBancos.Id = _objetoComprobanteIngresoBancos.BuscarMayorIdComprobanteIngresoBancos(_tipoCon) + 1
@@ -807,15 +809,24 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
                 GuardarRegistroPagosFacturaVenta() ' guarda el pago de la factura de venta
                 GuardarRegistroPagosComprobanteCompra() ' guarda el pago del comprobante de compra
                 NuevoRegistroAsientoDiarioComprobanteIngresoBancos() ' guarda el asiento de diario
-
-                Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, String.Empty)
+                Dim NombreU As String = "Cruce de cuentas por: " + UserName
+                Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, NombreU)
                 If res(0) Then
                     DeshabilitadoInicio()
                     btnCancelar.Enabled = False
                 End If
-                MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
+                Dim messageIcon As KryptonMessageBoxIcon
+                If res(0) Then
+                    messageIcon = KryptonMessageBoxIcon.Information
+                Else
+                    messageIcon = KryptonMessageBoxIcon.Exclamation
+                End If
+                KryptonMessageBox.Show(res(1), "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, messageIcon)
+
+
             Else
-                MsgBox("NO SE PUEDE GUARDAR." & vbNewLine & "LOS VALORES DE EL DEBE Y EL HABER NO COINCIDEN POR FAVOR REVISE LAS TRANSACCIONES.", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACION")
+
+                KryptonMessageBox.Show("NO SE PUEDE GUARDAR." & vbNewLine & "LOS VALORES DE EL DEBE Y EL HABER NO COINCIDEN POR FAVOR REVISE LAS TRANSACCIONES.", "MENSAJE DE VALIDACION", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
             End If
         End Sub
         Private Sub GuardarRegistroComprobanteIngresoBancos()
@@ -959,7 +970,6 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
             Next
         End Sub
 
-         
 
 
 
@@ -989,9 +999,6 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
 
 
 
-       
-
-        
 
 
 
@@ -1007,22 +1014,26 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
 
 
 
-        
-       
-        
-
-        
-
-        
 
 
-        
 
-        
 
-        
 
-        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         Private Sub GuardarRegistroChequeEmitido()
             With _objetoChequeEmitido

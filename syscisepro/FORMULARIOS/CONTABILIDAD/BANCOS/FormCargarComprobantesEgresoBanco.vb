@@ -8,6 +8,7 @@ Imports ClassLibraryCisepro.ENUMS
 Imports System.Data.SqlClient
 Imports ClassLibraryCisepro.ProcesosSql
 Imports Excel = Microsoft.Office.Interop.Excel
+Imports Krypton.Toolkit
 
 Namespace FORMULARIOS.CONTABILIDAD.BANCOS
     ''' <summary>
@@ -38,7 +39,8 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
             End Set
         End Property
         Public IdUsuario As Integer
-         
+        Public UserName As String
+
         ReadOnly _objetoPlanCuentas As New ClassPlanDeCuentas
         ReadOnly _objetoLibroDiario As New ClassLibroDiario
         ReadOnly _objetoAsientoLibroDiario As New ClassAsientosLibroDiario
@@ -231,31 +233,44 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
 
                                 GuardarGeneralComprobanteEgresoChequeAsiento()
 
-                                Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, String.Empty)
+                                Dim User As String = "Carga de Comprobante de Egreso por:" + UserName
+
+                                Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, User)
+
+
                                 If res(0) Then
 
                                     txtRutaArchivo.Text = ""
                                     txtCuentaDebe.Text = ""
                                     lblCodigoCta.Text = "0"
 
-                                    MessageBox.Show("Planilla guardada correctamente!", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                                    KryptonMessageBox.Show("Planilla guardada correctamente!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
                                 End If
-                                MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
+                                Dim messageIcon As KryptonMessageBoxIcon
+                                If res(0) Then
+                                    messageIcon = KryptonMessageBoxIcon.Information
+                                Else
+                                    messageIcon = KryptonMessageBoxIcon.Exclamation
+                                End If
+                                KryptonMessageBox.Show(res(1), "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, messageIcon)
+                                'MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
 
                             Else
-                                MsgBox("NO SE PUEDE GUARDAR." & vbNewLine & "EXISTEN CHEQUES YA GUARDADOS EN EL ARCHIVO IMPORTADO.", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+
+                                KryptonMessageBox.Show("NO SE PUEDE GUARDAR." & vbNewLine & "EXISTEN CHEQUES YA GUARDADOS EN EL ARCHIVO IMPORTADO.", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                             End If
                         Else
-                            MsgBox("NO SE PUEDE GUARDAR." & vbNewLine & "EXISTEN DATOS EN BLANCO EN EL ARCHIVO IMPORTADO.", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+
+                            KryptonMessageBox.Show("NO SE PUEDE GUARDAR." & vbNewLine & "EXISTEN DATOS EN BLANCO EN EL ARCHIVO IMPORTADO.", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                         End If
                     Else
-                        MsgBox("NO SE PUEDE GUARDAR." & vbNewLine & "EL ARCHIVO SELECCIONADO NO SE CARGO DE FORMA CORRECTA." & vbNewLine & "POR FAVOR REVISE EL FORMATO.", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                        KryptonMessageBox.Show("NO SE PUEDE GUARDAR." & vbNewLine & "EL ARCHIVO SELECCIONADO NO SE CARGO DE FORMA CORRECTA." & vbNewLine & "POR FAVOR REVISE EL FORMATO.", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                     End If
                 Else
-                    MsgBox("NO SE PUEDE GUARDAR." & vbNewLine & "NO SE HA SELECCIONADO UNA CTA. CONTABLE.", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                    KryptonMessageBox.Show("NO SE PUEDE GUARDAR." & vbNewLine & "NO SE HA SELECCIONADO UNA CTA. CONTABLE.", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                 End If
             Else
-                MsgBox("NO SE PUEDE GUARDAR." & vbNewLine & "NO SE HAN CARGADO NINGÚN ARCHIVO.", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                KryptonMessageBox.Show("NO SE PUEDE GUARDAR." & vbNewLine & "NO SE HAN CARGADO NINGÚN ARCHIVO.", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
             End If
         End Sub
         Private Function ValidarComprobantesEgreso() As Boolean

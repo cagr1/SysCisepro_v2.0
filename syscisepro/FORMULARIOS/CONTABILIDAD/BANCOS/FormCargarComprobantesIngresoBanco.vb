@@ -8,6 +8,7 @@ Imports ClassLibraryCisepro.ENUMS
 Imports System.Data.SqlClient
 Imports ClassLibraryCisepro.ProcesosSql
 Imports Excel = Microsoft.Office.Interop.Excel
+Imports Krypton.Toolkit
 
 
 Namespace FORMULARIOS.CONTABILIDAD.BANCOS
@@ -39,7 +40,7 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
             End Set
         End Property
         Public IdUsuario As Integer
-
+        Public UserName As String
 
 
         Dim objetoPlanCuentas As New ClassPlanDeCuentas
@@ -58,6 +59,7 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
         'Dim _sqlCommands As List(Of SqlCommand)
         Public validarimportacion As Integer = 0
         Dim validarNumeroFactura As Integer = 0
+        Dim _sqlCommands As List(Of SqlCommand)
         Public varIdLibroDiario As Int64 
 
         Private Sub FormCargarComprobantesIngresoBanco_Load(ByVal sender As System.Object, ByVal e As EventArgs) Handles MyBase.Load
@@ -83,6 +85,7 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
             dgvComprobantesEgresoBanco.Font = New System.Drawing.Font("Roboto", 8, FontStyle.Regular)
             autocompletarPlanCuentas()
             llenarComboBancos()
+            _sqlCommands = New List(Of SqlCommand)
             dgvComprobantesEgresoBanco.ContextMenuStrip = ContextMenuStripClicDerecho 'Asigno a la propiedad contextMenuStrip del dgv el menu creado para el clic derecho
         End Sub
         Public Sub autocompletarPlanCuentas()
@@ -238,34 +241,47 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
 
                                 guardarGeneralComprobanteIngresoBancos()
 
-                                txtRutaArchivo.Text = ""
-                                txtCuentaDebe.Text = ""
-                                lblCodigoCta.Text = "0"
-                                MessageBox.Show("Planilla guardada correctamente!", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                                'txtRutaArchivo.Text = ""
+                                'txtCuentaDebe.Text = ""
+                                'lblCodigoCta.Text = "0"
+                                'MessageBox.Show("Planilla guardada correctamente!", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                                Dim User As String = "Carga de Comprobante de Ingreso por:" + UserName
 
-                                'Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, String.Empty)
-                                'If res(0) Then 
-                                '    txtRutaArchivo.Text = ""
-                                '    txtCuentaDebe.Text = ""
-                                '    lblCodigoCta.Text = "0" 
-                                '    MessageBox.Show("Planilla guardada correctamente!", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                                'End If
+                                Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, User)
+                                If res(0) Then
+                                    txtRutaArchivo.Text = ""
+                                    txtCuentaDebe.Text = ""
+                                    lblCodigoCta.Text = "0"
+
+                                End If
                                 'MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
+                                Dim messageIcon As KryptonMessageBoxIcon
+                                If res(0) Then
+                                    messageIcon = KryptonMessageBoxIcon.Information
+                                Else
+                                    messageIcon = KryptonMessageBoxIcon.Exclamation
+                                End If
+                                KryptonMessageBox.Show(res(1), "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, messageIcon)
+
 
                             Else
-                                MsgBox("NO SE PUEDE GUARDAR." & vbNewLine & "EXISTEN FACTURAS YA CANCELADAS EN EL ARCHIVO IMPORTADO.", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+
+                                KryptonMessageBox.Show("NO SE PUEDE GUARDAR." & vbNewLine & "EXISTEN FACTURAS YA CANCELADAS EN EL ARCHIVO IMPORTADO.", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                             End If
                         Else
-                            MsgBox("NO SE PUEDE GUARDAR." & vbNewLine & "EXISTEN DATOS EN BLANCO EN EL ARCHIVO IMPORTADO.", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+
+                            KryptonMessageBox.Show("NO SE PUEDE GUARDAR." & vbNewLine & "EXISTEN DATOS EN BLANCO EN EL ARCHIVO IMPORTADO.", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                         End If
                     Else
-                        MsgBox("NO SE PUEDE GUARDAR." & vbNewLine & "EL ARCHIVO SELECCIONADO NO SE CARGO DE FORMA CORRECTA." & vbNewLine & "POR FAVOR REVISE EL FORMATO.", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+
+                        KryptonMessageBox.Show("NO SE PUEDE GUARDAR." & vbNewLine & "EL ARCHIVO SELECCIONADO NO SE CARGO DE FORMA CORRECTA." & vbNewLine & "POR FAVOR REVISE EL FORMATO.", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                     End If
                 Else
-                    MsgBox("NO SE PUEDE GUARDAR." & vbNewLine & "NO SE HA SELECCIONADO UNA CTA. CONTABLE.", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+
+                    KryptonMessageBox.Show("NO SE PUEDE GUARDAR." & vbNewLine & "NO SE HA SELECCIONADO UNA CTA. CONTABLE.", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                 End If
             Else
-                MsgBox("NO SE PUEDE GUARDAR." & vbNewLine & "NO SE HAN CARGADO NINGÚN ARCHIVO.", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                KryptonMessageBox.Show("NO SE PUEDE GUARDAR." & vbNewLine & "NO SE HAN CARGADO NINGÚN ARCHIVO.", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
             End If
         End Sub
         Public Function validarBlancosComprobantesIngreso() As Boolean

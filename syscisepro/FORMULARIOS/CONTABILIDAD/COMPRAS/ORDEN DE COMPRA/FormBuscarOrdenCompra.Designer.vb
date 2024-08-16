@@ -345,6 +345,7 @@
             '
             Me.dgvOrdenCompra.AllowUserToAddRows = False
             Me.dgvOrdenCompra.AllowUserToDeleteRows = False
+            Me.dgvOrdenCompra.AllowUserToOrderColumns = True
             Me.dgvOrdenCompra.AllowUserToResizeRows = False
             DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
             Me.dgvOrdenCompra.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1

@@ -178,7 +178,7 @@
             Or Krypton.Toolkit.PaletteDrawBorders.Left) _
             Or Krypton.Toolkit.PaletteDrawBorders.Right), Krypton.Toolkit.PaletteDrawBorders)
             Me.StateActive.Border.Rounding = 5.0!
-            Me.Text = "BUSUEDA ASIENTO DE DIARIO"
+            Me.Text = "BUSQUEDA ASIENTO DE DIARIO"
             Me.gbAsientoDiario.ResumeLayout(False)
             Me.gbAsientoDiario.PerformLayout()
             CType(Me.dgvAsientoDiario, System.ComponentModel.ISupportInitialize).EndInit()

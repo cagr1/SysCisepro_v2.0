@@ -4,6 +4,7 @@ Imports ClassLibraryCisepro.CONTABILIDAD.COMPRAS.COMPROBANTES_COMPRA
 Imports ClassLibraryCisepro.CONTABILIDAD.LIBRO_DIARIO
 Imports ClassLibraryCisepro.ENUMS
 Imports ClassLibraryCisepro.ProcesosSql
+Imports Krypton.Toolkit
 
 Namespace FORMULARIOS.CONTABILIDAD.BANCOS
     ''' <summary>
@@ -74,7 +75,7 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
         End Sub
 
         Private Sub CargarComprobanteEgresoBancos()
-            Try 
+            Try
                 If _estadoBuscarComprobanteEgresos = 1 Then ' Emitidos
                     dgvComprobanteEgresoBancos.DataSource = _objetoComprobanteEgreso.BuscarComprobantesEgresoEmitidosXRangoFecha(_tipoCon, _fechaDesde, _fechaHasta, String.Empty)
                 ElseIf _estadoBuscarComprobanteEgresos = 2 Then ' Aprobados
@@ -123,7 +124,7 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
                 dgvComprobanteEgresoBancos.Columns(4).Width = 150
                 dgvComprobanteEgresoBancos.Columns(8).Width = 150
 
-            Catch
+            Catch ex As Exception
                 dgvComprobanteEgresoBancos.DataSource = Nothing
             End Try
         End Sub
@@ -235,15 +236,23 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
 
                 AnularComprobanteEgresoBancos()
 
-                Dim nombreU As String = "ANULAR COMPROBANTE EGRESO BANCO " & UserName
+                Dim nombreU As String = "Comprobante de Egreso anulado por: " & UserName
                 Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, nombreU)
                 If res(0) Then
                     LlenarComboCuentasBancos()
                     CargarComprobanteEgresoBancos()
                 End If
-                MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
+                Dim messageIcon As KryptonMessageBoxIcon
+                If res(0) Then
+                    messageIcon = KryptonMessageBoxIcon.Information
+                Else
+                    messageIcon = KryptonMessageBoxIcon.Exclamation
+                End If
+                KryptonMessageBox.Show(res(1), "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, messageIcon)
+                'MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
             Else
-                MsgBox("NO HAY COMPROBANTES CARGADOS.", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                'MsgBox("NO HAY COMPROBANTES CARGADOS.", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                KryptonMessageBox.Show("NO HAY COMPROBANTES CARGADOS.", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
             End If
         End Sub
 

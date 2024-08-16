@@ -2375,7 +2375,7 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
             If EsDialogo Then DialogResult = DialogResult.OK
 
 
-            Dim nombreU As String = "ACTIVO INGRESADO: " & UserName
+            Dim nombreU As String = "Ingreso de Activo por: " & UserName
             Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, nombreU)
             If res(0) Then
                 Select Case _formDialogoNuevoActivo.Tipo

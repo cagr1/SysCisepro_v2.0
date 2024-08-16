@@ -31,6 +31,7 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
             End Set
         End Property 
         Public IdUsuario As Integer
+        Public UserName As String
 
         ReadOnly _objetoBancos As New ClassBancos
         ReadOnly _objetoCuentasBancos As New ClassCuentasBancos
@@ -220,6 +221,17 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
                         Case 1 : guardarCuentasBancosNuevo()
                         Case 2 : GuardarCuentasBancosModificar()
                     End Select
+
+                    Dim nombreU As String = ""
+
+                    If _botonSeleccionado = 1 Then
+                        nombreU = "Nuevo Cuenta de Banco por: " & UserName
+                    ElseIf _botonSeleccionado = 2 Then
+                        nombreU = "Cuenta de Banco editado por: " & UserName
+                    End If
+
+
+
                 Else
                     MsgBox("NO SE PUEDE GUARDAR." & vbNewLine & "NO SE HAN LLENADO TODOS LOS CAMPOS NECESARIOS.", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACION")
                     txtNumeroCuentasBancos.Focus()

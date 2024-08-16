@@ -651,9 +651,9 @@ Namespace FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
             Dim nombreU As String = ""
 
             If _botonseleccionado = 1 Then
-                nombreU = "LIBRO-DIARIO-NUEVO " & UserName
+                nombreU = "Nuevo Libro diario por: " & UserName
             ElseIf _botonseleccionado = 2 Then
-                nombreU = "LIBRO-DIARIO-EDITADO " & UserName
+                nombreU = "Libro Diario editado por: " & UserName
             End If
 
             Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, nombreU)
