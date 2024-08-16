@@ -202,7 +202,8 @@ namespace SysCisepro3.TalentoHumano
             _objTicketsFarmaciaComecsa.Estado = 0;
             _sqlCommands.Add(_objTicketsFarmaciaComecsa.AnularRegistroNotificacion());
 
-            var res = ComandosSql.ProcesarTransacciones(TipoCon, _sqlCommands, "ANULAR TICKET");
+            var NombreUsuario = "Ticket anulado por " + Usuario.Datos;
+            var res = ComandosSql.ProcesarTransacciones(TipoCon, _sqlCommands, NombreUsuario);
 
             if ((bool)res[0])
             {

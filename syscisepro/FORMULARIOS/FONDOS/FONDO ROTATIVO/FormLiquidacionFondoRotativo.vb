@@ -346,8 +346,8 @@ Namespace FORMULARIOS.FONDOS.FONDO_ROTATIVO
                     ActualizarRegistroSolicitudFondoRotativo()
 
 
-                    Dim nombreU As String = "LIQUIDACION-FONDO-ROTATIVO " & UserName
-                    Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, String.Empty)
+                    Dim nombreU As String = "Liquidacion Fondo Rotativo por " & UserName
+                    Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, nombreU)
                     If res(0) Then
                         txtIdLiquidacion.Text = _objetoLiquidacionFondoRotativo.IdLiquidacion
                         txtIdLiquidacionBusqueda.Text = txtIdLiquidacion.Text
@@ -476,7 +476,7 @@ Namespace FORMULARIOS.FONDOS.FONDO_ROTATIVO
                 _sqlCommands.Add(_objetoAuxiliarFondoRotativo.ActualizarMontoAuxiliarFondoRotativoCommand2)
 
 
-                Dim nombreU As String = "LIQUIDACION-FONDO-ROTATIVO-ANULADA " & UserName
+                Dim nombreU As String = "Anulacion de Liquidacion Fondo Rotativo por " & UserName
                 Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, nombreU)
                 If res(0) Then ToolStripMenuItem1_Click(Nothing, Nothing)
                 'MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")

@@ -23,7 +23,7 @@ Namespace CONTABILIDAD.COMPRAS.REQUISICIONES
         End Function
 
         Public Function SeleccionarRegistrosAprobadosRequisicionProductoServicio(ByVal tipoCon As TipoConexion) As DataTable
-            Return ComandosSql.SeleccionarQueryToDataTable(tipoCon, "SELECT R.ID_REQUISICION_PS ID, R.FECHA_REQUISICION_PS FECHA, P.NOMBRES + ' ' + P.APELLIDOS REQUIRIENTE, R.PRIORIDAD_ENTREGA_REQUISICION_PS PRIORIDAD FROM	REQUISICION_PRODUCTO_SERVICIO R JOIN PERSONAL P ON R.ID_PERSONAL = P.ID_PERSONAL WHERE R.ESTADO_REQUISICION_PS = 2;", False)
+            Return ComandosSql.SeleccionarQueryToDataTable(tipoCon, "sp_seleccionarRegistrosAprobadosRequisicionProductoServicio", True)
         End Function
 
         Public Function BuscarMayorIdRequisicionProductoServicio(ByVal tipoCon As TipoConexion) As Integer

@@ -196,7 +196,6 @@
             Me.txtPassword.Enabled = False
             Me.txtPassword.Location = New System.Drawing.Point(559, 91)
             Me.txtPassword.Name = "txtPassword"
-            Me.txtPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
             Me.txtPassword.Size = New System.Drawing.Size(125, 22)
             Me.txtPassword.TabIndex = 17
             Me.txtPassword.UseSystemPasswordChar = True

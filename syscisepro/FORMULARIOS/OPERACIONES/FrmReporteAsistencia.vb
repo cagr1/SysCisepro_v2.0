@@ -1831,7 +1831,7 @@ Namespace FORMULARIOS.OPERACIONES
         Private Sub AGREGARToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnAgregar.Click
 
             _hoy = ValidationForms.FechaActual(_tipoCon)
-
+            Dim nombreU As String = ""
 
             If Not Admin And _hoy > DateTimePicker4.Value.AddDays(2).AddHours(2) Then
                 'If Not _modificar Then
@@ -1904,6 +1904,7 @@ Namespace FORMULARIOS.OPERACIONES
                             dgvDia.FirstDisplayedScrollingRowIndex = dgvDia.SelectedRows(0).Index
 
                             TabControl1.TabPages(0).Text = "DÍA - " & dgvDia.RowCount & " VIGILANTES"
+                            nombreU = "Se agrega " & frm.txtIdPersonal.Text & " en R. ASISTENCIA DIA ID: " & TextBox3.Text & " por: " & UserName
                         Catch ex As Exception
                             MessageBox.Show("ERROR: En AGREGARToolStripMenuItem() DIA, " & ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
                         End Try
@@ -1929,6 +1930,7 @@ Namespace FORMULARIOS.OPERACIONES
                             dgvNoche.FirstDisplayedScrollingRowIndex = dgvNoche.SelectedRows(0).Index
 
                             TabControl1.TabPages(1).Text = "NOCHE - " & dgvNoche.RowCount & " VIGILANTES"
+                            nombreU = "Se agrega " & frm.txtIdPersonal.Text & " en R. Asistencia Noche ID: " & TextBox3.Text & " por: " & UserName
                         Catch ex As Exception
                             MessageBox.Show("ERROR: En AGREGARToolStripMenuItem() NOCHE, " & ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
                         End Try
@@ -1939,7 +1941,7 @@ Namespace FORMULARIOS.OPERACIONES
             End If
 
             VerificarFaltas()
-            Dim nombreU As String = "Se agrega " & frm.txtIdPersonal.Text & " en R. ASISTENCIA por  " & UserName
+
             Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, nombreU)
         End Sub
 

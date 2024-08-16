@@ -1287,7 +1287,7 @@
             'gbxDetalles
             '
             Me.gbxDetalles.Controls.Add(Me.dgvDetalleComprobate)
-            Me.gbxDetalles.Location = New System.Drawing.Point(169, 284)
+            Me.gbxDetalles.Location = New System.Drawing.Point(6, 284)
             Me.gbxDetalles.Name = "gbxDetalles"
             Me.gbxDetalles.Size = New System.Drawing.Size(1030, 315)
             Me.gbxDetalles.TabIndex = 155

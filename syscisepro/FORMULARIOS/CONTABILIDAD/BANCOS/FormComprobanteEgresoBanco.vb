@@ -724,7 +724,7 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
                         GuardarNumeroRegistroAsientoComprobanteEgreso()
 
                         ' GUARDA LOS REGISTROS EN LA BASE DE DATOS
-                        Dim nombreU As String = "COMPROBANTE EGRESO BANCO " & UserName
+                        Dim nombreU As String = "Comprobante egreso Banco por " & UserName
                         Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, nombreU)
                         If res(0) Then
 

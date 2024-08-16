@@ -341,7 +341,7 @@
             Me.TabControl1.Location = New System.Drawing.Point(-1, 130)
             Me.TabControl1.Name = "TabControl1"
             Me.TabControl1.SelectedIndex = 0
-            Me.TabControl1.Size = New System.Drawing.Size(1028, 476)
+            Me.TabControl1.Size = New System.Drawing.Size(1028, 493)
             Me.TabControl1.TabIndex = 209
             '
             'TabPage2
@@ -350,7 +350,7 @@
             Me.TabPage2.Location = New System.Drawing.Point(4, 22)
             Me.TabPage2.Name = "TabPage2"
             Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-            Me.TabPage2.Size = New System.Drawing.Size(1020, 450)
+            Me.TabPage2.Size = New System.Drawing.Size(1020, 467)
             Me.TabPage2.TabIndex = 0
             Me.TabPage2.Text = "DÍA"
             Me.TabPage2.UseVisualStyleBackColor = True
@@ -382,7 +382,7 @@
             Me.dgvDia.Name = "dgvDia"
             Me.dgvDia.RowHeadersVisible = False
             Me.dgvDia.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvDia.Size = New System.Drawing.Size(1015, 440)
+            Me.dgvDia.Size = New System.Drawing.Size(1015, 458)
             Me.dgvDia.TabIndex = 202
             '
             'Column15
@@ -538,7 +538,7 @@
             Me.TabPage3.Location = New System.Drawing.Point(4, 22)
             Me.TabPage3.Name = "TabPage3"
             Me.TabPage3.Padding = New System.Windows.Forms.Padding(3)
-            Me.TabPage3.Size = New System.Drawing.Size(1020, 450)
+            Me.TabPage3.Size = New System.Drawing.Size(1020, 467)
             Me.TabPage3.TabIndex = 1
             Me.TabPage3.Text = "NOCHE"
             Me.TabPage3.UseVisualStyleBackColor = True
@@ -565,12 +565,12 @@
             DataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
             Me.dgvNoche.DefaultCellStyle = DataGridViewCellStyle16
             Me.dgvNoche.GridColor = System.Drawing.SystemColors.ControlDarkDark
-            Me.dgvNoche.Location = New System.Drawing.Point(2, 3)
+            Me.dgvNoche.Location = New System.Drawing.Point(4, 3)
             Me.dgvNoche.MultiSelect = False
             Me.dgvNoche.Name = "dgvNoche"
             Me.dgvNoche.RowHeadersVisible = False
             Me.dgvNoche.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvNoche.Size = New System.Drawing.Size(1150, 478)
+            Me.dgvNoche.Size = New System.Drawing.Size(1013, 458)
             Me.dgvNoche.TabIndex = 203
             '
             'DataGridViewTextBoxColumn1

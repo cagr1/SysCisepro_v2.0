@@ -280,7 +280,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.REQUERIMIENTOS
         Public Sub AprovarRequisicionProductoServicio()
             With _objetoRequisicionProductoServicio
                 .IdRequisicionPs = txtIdRequisicionProductoServicio.Text
-                .EstadoRequisicionPs = 2
+                .EstadoRequisicionPs = 2 'Esta lista para su revision
             End With
             _sqlCommands.Add(_objetoRequisicionProductoServicio.ActualizarEstadoRequisicionProductoServicio)
 

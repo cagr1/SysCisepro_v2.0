@@ -26,8 +26,12 @@
             Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormOrdenCompra))
             Me.gbProveedor = New System.Windows.Forms.GroupBox()
             Me.lblIdProveedorGeneral = New System.Windows.Forms.Label()
@@ -95,13 +99,19 @@
             Me.GroupBox2 = New System.Windows.Forms.GroupBox()
             Me.Label1 = New System.Windows.Forms.Label()
             Me.dgvRequisicionProductoServicio = New System.Windows.Forms.DataGridView()
+            Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+            Me.dgvDetalleRequisicionProductoServicio = New System.Windows.Forms.DataGridView()
             Me.Column1 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
             Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
             Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
             Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
             Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-            Me.GroupBox3 = New System.Windows.Forms.GroupBox()
-            Me.dgvDetalleRequisicionProductoServicio = New System.Windows.Forms.DataGridView()
+            Me.dgvRequisicionProductoServicioNew = New ComponentFactory.Krypton.Toolkit.KryptonDataGridView()
+            Me.Column6 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+            Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+            Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+            Me.Column9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+            Me.Column10 = New System.Windows.Forms.DataGridViewTextBoxColumn()
             Me.gbProveedor.SuspendLayout()
             Me.gbOrdenCompraCabecera.SuspendLayout()
             CType(Me.dgvDetalleOrdenCompra, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -117,6 +127,7 @@
             CType(Me.dgvRequisicionProductoServicio, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.GroupBox3.SuspendLayout()
             CType(Me.dgvDetalleRequisicionProductoServicio, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType(Me.dgvRequisicionProductoServicioNew, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.SuspendLayout()
             '
             'gbProveedor
@@ -818,6 +829,7 @@
             'GroupBox2
             '
             Me.GroupBox2.BackColor = System.Drawing.Color.White
+            Me.GroupBox2.Controls.Add(Me.dgvRequisicionProductoServicioNew)
             Me.GroupBox2.Controls.Add(Me.Label1)
             Me.GroupBox2.Controls.Add(Me.dgvRequisicionProductoServicio)
             Me.GroupBox2.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -842,19 +854,49 @@
             '
             Me.dgvRequisicionProductoServicio.AllowUserToAddRows = False
             Me.dgvRequisicionProductoServicio.AllowUserToDeleteRows = False
+            Me.dgvRequisicionProductoServicio.AllowUserToOrderColumns = True
             Me.dgvRequisicionProductoServicio.AllowUserToResizeRows = False
-            DataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-            Me.dgvRequisicionProductoServicio.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle4
+            DataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+            Me.dgvRequisicionProductoServicio.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle8
             Me.dgvRequisicionProductoServicio.BackgroundColor = System.Drawing.Color.White
             Me.dgvRequisicionProductoServicio.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
             Me.dgvRequisicionProductoServicio.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
             Me.dgvRequisicionProductoServicio.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5})
-            Me.dgvRequisicionProductoServicio.Location = New System.Drawing.Point(6, 14)
+            Me.dgvRequisicionProductoServicio.Location = New System.Drawing.Point(147, 14)
             Me.dgvRequisicionProductoServicio.Name = "dgvRequisicionProductoServicio"
             Me.dgvRequisicionProductoServicio.RowHeadersVisible = False
             Me.dgvRequisicionProductoServicio.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvRequisicionProductoServicio.Size = New System.Drawing.Size(302, 208)
+            Me.dgvRequisicionProductoServicio.Size = New System.Drawing.Size(143, 208)
             Me.dgvRequisicionProductoServicio.TabIndex = 1
+            '
+            'GroupBox3
+            '
+            Me.GroupBox3.BackColor = System.Drawing.Color.White
+            Me.GroupBox3.Controls.Add(Me.dgvDetalleRequisicionProductoServicio)
+            Me.GroupBox3.Location = New System.Drawing.Point(760, 267)
+            Me.GroupBox3.Name = "GroupBox3"
+            Me.GroupBox3.Size = New System.Drawing.Size(314, 396)
+            Me.GroupBox3.TabIndex = 189
+            Me.GroupBox3.TabStop = False
+            Me.GroupBox3.Text = "DETALLES DE REQUISICIÓN"
+            '
+            'dgvDetalleRequisicionProductoServicio
+            '
+            Me.dgvDetalleRequisicionProductoServicio.AllowUserToAddRows = False
+            Me.dgvDetalleRequisicionProductoServicio.AllowUserToDeleteRows = False
+            Me.dgvDetalleRequisicionProductoServicio.AllowUserToOrderColumns = True
+            Me.dgvDetalleRequisicionProductoServicio.AllowUserToResizeRows = False
+            DataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+            Me.dgvDetalleRequisicionProductoServicio.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle9
+            Me.dgvDetalleRequisicionProductoServicio.BackgroundColor = System.Drawing.Color.White
+            Me.dgvDetalleRequisicionProductoServicio.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
+            Me.dgvDetalleRequisicionProductoServicio.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+            Me.dgvDetalleRequisicionProductoServicio.Location = New System.Drawing.Point(6, 13)
+            Me.dgvDetalleRequisicionProductoServicio.Name = "dgvDetalleRequisicionProductoServicio"
+            Me.dgvDetalleRequisicionProductoServicio.RowHeadersVisible = False
+            Me.dgvDetalleRequisicionProductoServicio.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+            Me.dgvDetalleRequisicionProductoServicio.Size = New System.Drawing.Size(302, 377)
+            Me.dgvDetalleRequisicionProductoServicio.TabIndex = 3
             '
             'Column1
             '
@@ -877,7 +919,7 @@
             Me.Column3.Name = "Column3"
             Me.Column3.ReadOnly = True
             Me.Column3.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-            Me.Column3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+            Me.Column3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic
             '
             'Column4
             '
@@ -897,34 +939,56 @@
             Me.Column5.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
             Me.Column5.Width = 150
             '
-            'GroupBox3
+            'dgvRequisicionProductoServicioNew
             '
-            Me.GroupBox3.BackColor = System.Drawing.Color.White
-            Me.GroupBox3.Controls.Add(Me.dgvDetalleRequisicionProductoServicio)
-            Me.GroupBox3.Location = New System.Drawing.Point(760, 267)
-            Me.GroupBox3.Name = "GroupBox3"
-            Me.GroupBox3.Size = New System.Drawing.Size(314, 396)
-            Me.GroupBox3.TabIndex = 189
-            Me.GroupBox3.TabStop = False
-            Me.GroupBox3.Text = "DETALLES DE REQUISICIÓN"
+            Me.dgvRequisicionProductoServicioNew.AllowUserToAddRows = False
+            Me.dgvRequisicionProductoServicioNew.AllowUserToDeleteRows = False
+            Me.dgvRequisicionProductoServicioNew.AllowUserToOrderColumns = True
+            Me.dgvRequisicionProductoServicioNew.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+            Me.dgvRequisicionProductoServicioNew.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column6, Me.Column7, Me.Column8, Me.Column9, Me.Column10})
+            Me.dgvRequisicionProductoServicioNew.Location = New System.Drawing.Point(6, 13)
+            Me.dgvRequisicionProductoServicioNew.Name = "dgvRequisicionProductoServicioNew"
+            Me.dgvRequisicionProductoServicioNew.RowHeadersVisible = False
+            Me.dgvRequisicionProductoServicioNew.Size = New System.Drawing.Size(296, 209)
+            Me.dgvRequisicionProductoServicioNew.TabIndex = 36
             '
-            'dgvDetalleRequisicionProductoServicio
+            'Column6
             '
-            Me.dgvDetalleRequisicionProductoServicio.AllowUserToAddRows = False
-            Me.dgvDetalleRequisicionProductoServicio.AllowUserToDeleteRows = False
-            Me.dgvDetalleRequisicionProductoServicio.AllowUserToOrderColumns = True
-            Me.dgvDetalleRequisicionProductoServicio.AllowUserToResizeRows = False
-            DataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-            Me.dgvDetalleRequisicionProductoServicio.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle5
-            Me.dgvDetalleRequisicionProductoServicio.BackgroundColor = System.Drawing.Color.White
-            Me.dgvDetalleRequisicionProductoServicio.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
-            Me.dgvDetalleRequisicionProductoServicio.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-            Me.dgvDetalleRequisicionProductoServicio.Location = New System.Drawing.Point(6, 13)
-            Me.dgvDetalleRequisicionProductoServicio.Name = "dgvDetalleRequisicionProductoServicio"
-            Me.dgvDetalleRequisicionProductoServicio.RowHeadersVisible = False
-            Me.dgvDetalleRequisicionProductoServicio.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvDetalleRequisicionProductoServicio.Size = New System.Drawing.Size(302, 377)
-            Me.dgvDetalleRequisicionProductoServicio.TabIndex = 3
+            Me.Column6.HeaderText = ""
+            Me.Column6.Name = "Column6"
+            Me.Column6.Width = 50
+            '
+            'Column7
+            '
+            DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+            Me.Column7.DefaultCellStyle = DataGridViewCellStyle4
+            Me.Column7.HeaderText = "ID"
+            Me.Column7.Name = "Column7"
+            Me.Column7.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic
+            Me.Column7.Width = 50
+            '
+            'Column8
+            '
+            DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+            DataGridViewCellStyle5.NullValue = Nothing
+            Me.Column8.DefaultCellStyle = DataGridViewCellStyle5
+            Me.Column8.HeaderText = "Fecha"
+            Me.Column8.Name = "Column8"
+            '
+            'Column9
+            '
+            DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+            Me.Column9.DefaultCellStyle = DataGridViewCellStyle6
+            Me.Column9.HeaderText = "Requiere"
+            Me.Column9.Name = "Column9"
+            Me.Column9.Width = 150
+            '
+            'Column10
+            '
+            DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+            Me.Column10.DefaultCellStyle = DataGridViewCellStyle7
+            Me.Column10.HeaderText = "Prioridad"
+            Me.Column10.Name = "Column10"
             '
             'FormOrdenCompra
             '
@@ -978,6 +1042,7 @@
             CType(Me.dgvRequisicionProductoServicio, System.ComponentModel.ISupportInitialize).EndInit()
             Me.GroupBox3.ResumeLayout(False)
             CType(Me.dgvDetalleRequisicionProductoServicio, System.ComponentModel.ISupportInitialize).EndInit()
+            CType(Me.dgvRequisicionProductoServicioNew, System.ComponentModel.ISupportInitialize).EndInit()
             Me.ResumeLayout(False)
             Me.PerformLayout()
 
@@ -1042,11 +1107,6 @@
         Friend WithEvents dgvDetalleRequisicionProductoServicio As System.Windows.Forms.DataGridView
         Friend WithEvents Label1 As System.Windows.Forms.Label
         Friend WithEvents Label3 As System.Windows.Forms.Label
-        Friend WithEvents Column1 As System.Windows.Forms.DataGridViewCheckBoxColumn
-        Friend WithEvents Column2 As System.Windows.Forms.DataGridViewTextBoxColumn
-        Friend WithEvents Column3 As System.Windows.Forms.DataGridViewTextBoxColumn
-        Friend WithEvents Column4 As System.Windows.Forms.DataGridViewTextBoxColumn
-        Friend WithEvents Column5 As System.Windows.Forms.DataGridViewTextBoxColumn
         Friend WithEvents idItem As System.Windows.Forms.DataGridViewTextBoxColumn
         Friend WithEvents nombreProductoServicio As System.Windows.Forms.DataGridViewTextBoxColumn
         Friend WithEvents unidadMedida As System.Windows.Forms.DataGridViewTextBoxColumn
@@ -1055,5 +1115,16 @@
         Friend WithEvents valorTotalProductoServicio As System.Windows.Forms.DataGridViewTextBoxColumn
         Friend WithEvents chkReq As System.Windows.Forms.CheckBox
         Friend WithEvents IVA As System.Windows.Forms.DataGridViewTextBoxColumn
+        Friend WithEvents Column1 As DataGridViewCheckBoxColumn
+        Friend WithEvents Column2 As DataGridViewTextBoxColumn
+        Friend WithEvents Column3 As DataGridViewTextBoxColumn
+        Friend WithEvents Column4 As DataGridViewTextBoxColumn
+        Friend WithEvents Column5 As DataGridViewTextBoxColumn
+        Friend WithEvents dgvRequisicionProductoServicioNew As ComponentFactory.Krypton.Toolkit.KryptonDataGridView
+        Friend WithEvents Column6 As DataGridViewCheckBoxColumn
+        Friend WithEvents Column7 As DataGridViewTextBoxColumn
+        Friend WithEvents Column8 As DataGridViewTextBoxColumn
+        Friend WithEvents Column9 As DataGridViewTextBoxColumn
+        Friend WithEvents Column10 As DataGridViewTextBoxColumn
     End Class
 End Namespace

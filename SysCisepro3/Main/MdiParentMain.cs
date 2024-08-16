@@ -663,7 +663,7 @@ namespace SysCisepro3.Main
                     btnChange.Visible = true;
                 else
                 btnChange.Visible = false;
-               tsRecursoHumano.DropDownItems["dESCUENTOSPERSONALToolStripMenuItem"].Visible = ObjUsuario.Datos.Equals("MONICA ARMIJOS") || ObjUsuario.Datos.Equals("MARJORIE LOOR") || ObjUsuario.Datos.Equals("NATALIA");
+               tsRecursoHumano.DropDownItems["dESCUENTOSPERSONALToolStripMenuItem"].Visible = ObjUsuario.Datos.Equals("MONICA ARMIJOS") || ObjUsuario.Datos.Equals("MARJORIE LOOR") || ObjUsuario.Datos.Equals("NATALIA") || ObjUsuario.Datos.Equals("ELENA ARTEAGA CORO");
             }
 
             if (ObjUsuario.TipoUsuario.Trim().Contains("OPERACIONES"))

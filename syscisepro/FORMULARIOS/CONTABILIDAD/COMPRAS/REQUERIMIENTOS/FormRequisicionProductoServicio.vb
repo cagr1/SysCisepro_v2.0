@@ -260,7 +260,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.REQUERIMIENTOS
                     .PrioridadEntregaRequisicionPs = rbEntregaNormal.Text
                 End If
                 .TiempoEntregaRequisicionPs = txtEntregaNumeroDias.Text + " DÍAS"
-                .EstadoRequisicionPs = 1
+                .EstadoRequisicionPs = 1 'Se encuentra solo activa
             End With
             _sqlCommands.Add(_objetoRequisicionProductoServicio.NuevoRegistroRequisicionProductoServicio)
         End Sub

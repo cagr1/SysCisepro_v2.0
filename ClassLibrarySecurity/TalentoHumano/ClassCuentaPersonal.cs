@@ -41,6 +41,20 @@ namespace ClassLibraryCisepro3.TalentoHumano
             cmd.Parameters.AddWithValue("@num_cuenta", SqlDbType.VarChar).Value = NumCuenta;
             cmd.Parameters.AddWithValue("@tipo", SqlDbType.VarChar).Value = Tipo;
             return cmd;
-        } 
+        }
+
+        public SqlCommand ModificarCuentabancoPersonalcommand()
+        { 
+        var cmd = new SqlCommand
+        {
+            CommandType = CommandType.Text,
+            CommandText = "update cuentas_personal set id_banco=@id_banco, num_cuenta=@num_cuenta, tipo=@tipo where id_personal=@id_personal;"
+        };
+            cmd.Parameters.AddWithValue("@id_personal", SqlDbType.Int).Value = IdPersonal;
+            cmd.Parameters.AddWithValue("@id_banco", SqlDbType.Int).Value = IdBanco;
+            cmd.Parameters.AddWithValue("@num_cuenta", SqlDbType.VarChar).Value = NumCuenta;
+            cmd.Parameters.AddWithValue("@tipo", SqlDbType.VarChar).Value = Tipo;
+            return cmd;
+        }
     }
 }
