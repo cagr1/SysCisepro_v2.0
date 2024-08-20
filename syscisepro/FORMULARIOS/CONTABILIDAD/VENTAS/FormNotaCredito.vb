@@ -16,6 +16,7 @@ Imports syscisepro.DATOS
 Imports ClassLibraryCisepro.CONTABILIDAD.COMPROBANTES_ELECTRONICOS
 Imports System.Xml
 Imports System.Text
+Imports Krypton.Toolkit
 
 
 Namespace FORMULARIOS.CONTABILIDAD.VENTAS
@@ -486,7 +487,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
             End Select
         End Sub
         Private Sub btnGuardarSinFirmar_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnGuardarSinFirmar.Click
-            If MessageBox.Show("¿ESTA SEGURA QUE DESEA GUARDAR LA NOTA DE CRÉDITO?", "MENSAJE DE VALIDACIÓN", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> DialogResult.Yes Then Return
+            If KryptonMessageBox.Show("¿ESTA SEGURA QUE DESEA GUARDAR LA NOTA DE CRÉDITO?", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) <> DialogResult.Yes Then Return
             _sqlCommands.Clear()
 
             GenerarNumeroNotaCredito()
@@ -525,13 +526,21 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
 
 
 
-                            Dim nombreU As String = "NOTA-CREDITO-ANULADA " & UserName
+                            Dim nombreU As String = "Registro de nota de Credito por: " & UserName
                             Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, nombreU)
                             If res(0) Then
                                 If _ptoEmisionNotaCredito = "002" Then ExportarXml() ' exporta la factura electónica a formato XML
                                 DeshabilitadoInicio()
                             End If
-                            MsgBox(If(res(0), res(1) & vbNewLine & "XML GENERADO CORRECTAMENTE" & If(resx, " - XML GUARDADO", " - XML NO GUARDADO!"), res(1)), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
+
+                            Dim messageIcon As KryptonMessageBoxIcon
+                            If res(0) Then
+                                messageIcon = KryptonMessageBoxIcon.Information
+                            Else
+                                messageIcon = KryptonMessageBoxIcon.Exclamation
+                            End If
+                            KryptonMessageBox.Show(res(1), "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, messageIcon)
+                            'MsgBox(If(res(0), res(1) & vbNewLine & "XML GENERADO CORRECTAMENTE" & If(resx, " - XML GUARDADO", " - XML NO GUARDADO!"), res(1)), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
 
                         End If
                     Else
@@ -708,7 +717,6 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                     Case Else
                         ruta = RutaDocsElec & "\COMPROBANTES GENERADOS\FACTURAS - RETENCIONES FONDO\NOTA CREDITO " & _numeroNotaCredito & ".xml"
                 End Select
-
                 Dim xml = String.Empty
                 xml += "<?xml version='1.0' encoding='UTF-8'?>" & vbNewLine                 
                 xml += "<notaCredito id='comprobante' version='1.0.0'>" & vbNewLine

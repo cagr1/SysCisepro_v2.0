@@ -310,7 +310,14 @@ namespace SysCisepro3.TalentoHumano
             _sqlCommands.Add(_objCuentaPersonal.RegistrarNuevoCuentaBancoPersonalCommand());
 
             var user = Usuario.Datos.ToString();
-            var nombre = $"INGRESO CUENTA-BANCO: {user}";
+            var nombre = "";
+            if (_estado == 1)
+                nombre = $"Nueva Cuenta Bancaria por: {user} - para usuario: {txtPersonal.Text.Trim()}";
+            else if (_estado == 2)
+                nombre = $"Modificacion de Cuenta Bancaria por: {user} - para usuario: {txtPersonal.Text.Trim()}";
+
+            
+            
             var res =  ComandosSql.ProcesarTransacciones(TipoCon,_sqlCommands, nombre) ;
 
             if ((bool)res[0])

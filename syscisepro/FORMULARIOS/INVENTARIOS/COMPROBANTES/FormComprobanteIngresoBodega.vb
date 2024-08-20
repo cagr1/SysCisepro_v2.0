@@ -932,13 +932,15 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
 
         Private Sub ConectarReporteComprobanteIngreso(ByVal idComprobante As String)
             Try
-                _crComprobanteIngreso.SetDataSource(_objCompIng.SeleccionarComprobanteEgresoxIdComprobanteIngresoMin(_tipoCon, idComprobante))
+                _crComprobanteIngreso.SetDataSource(_objCompIng.SeleccionarComprobanteIngresoxIdComprobanteIngresoMin(_tipoCon, idComprobante))
                 _crComprobanteIngreso.SetParameterValue("img", ValidationForms.NombreLogo(_tipoCon, Application.StartupPath))
                 _crComprobanteIngreso.SetParameterValue("ubicacion", _objCompIng.BuscarClienteByIdComprobanteEgresoBodega(_tipoCon, idComprobante))
                 crvComprobante.ReportSource = _crComprobanteIngreso
                 crvComprobante.Zoom(100)
                 crvComprobante.Refresh()
-            Catch
+            Catch ex As Exception
+
+                MsgBox("ERROR AL CARGAR EL REPORTE DE COMPROBANTE DE INGRESO " & vbNewLine & ex.Message, MsgBoxStyle.Exclamation, "MENSAJE DE INFORMACIÓN.")
                 crvComprobante.ReportSource = Nothing
             End Try
         End Sub
@@ -1172,7 +1174,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
             Try
 
                 With _objCompIng
-                    .Id = lblComp.Text  'Id Comprobante 
+                    .Id = txtNroComprobante.Text  'Id Comprobante 
                     .Fecha = dtpFecha.Value
                     .NroParametroDocumento = txtNroDocumento.Text
                     .IdBodega = cmbBodega.SelectedValue

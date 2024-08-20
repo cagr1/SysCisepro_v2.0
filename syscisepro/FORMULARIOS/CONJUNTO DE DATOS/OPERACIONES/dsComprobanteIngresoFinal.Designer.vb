@@ -348,10 +348,6 @@ Partial Public Class dsComprobanteIngresoFinal
         
         Private columnPROVEEDOR As Global.System.Data.DataColumn
         
-        Private columnSITIO_DE_TRABAJO As Global.System.Data.DataColumn
-        
-        Private columnTIPO_DE_DOCUMENTO As Global.System.Data.DataColumn
-        
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Public Sub New()
@@ -508,22 +504,6 @@ Partial Public Class dsComprobanteIngresoFinal
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public ReadOnly Property SITIO_DE_TRABAJOColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnSITIO_DE_TRABAJO
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public ReadOnly Property TIPO_DE_DOCUMENTOColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnTIPO_DE_DOCUMENTO
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
          Global.System.ComponentModel.Browsable(false)>  _
         Public ReadOnly Property Count() As Integer
@@ -560,26 +540,9 @@ Partial Public Class dsComprobanteIngresoFinal
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Overloads Function AddComprobanteIngresoRow( _
-                    ByVal COMPROBANTE As String,  _
-                    ByVal FECHA As String,  _
-                    ByVal DOCUMENTO As String,  _
-                    ByVal BODEGA As String,  _
-                    ByVal ACTIVIDAD As String,  _
-                    ByVal CODIGO As String,  _
-                    ByVal CONCEPTO As String,  _
-                    ByVal PROVINCIA As String,  _
-                    ByVal CIUDAD As String,  _
-                    ByVal PARROQUIA As String,  _
-                    ByVal CENTRO_DE_COSTO As String,  _
-                    ByVal TIPO As String,  _
-                    ByVal RAZON As String,  _
-                    ByVal PERSONAL As String,  _
-                    ByVal PROVEEDOR As String,  _
-                    ByVal SITIO_DE_TRABAJO As String,  _
-                    ByVal TIPO_DE_DOCUMENTO As String) As ComprobanteIngresoRow
+        Public Overloads Function AddComprobanteIngresoRow(ByVal COMPROBANTE As String, ByVal FECHA As String, ByVal DOCUMENTO As String, ByVal BODEGA As String, ByVal ACTIVIDAD As String, ByVal CODIGO As String, ByVal CONCEPTO As String, ByVal PROVINCIA As String, ByVal CIUDAD As String, ByVal PARROQUIA As String, ByVal CENTRO_DE_COSTO As String, ByVal TIPO As String, ByVal RAZON As String, ByVal PERSONAL As String, ByVal PROVEEDOR As String) As ComprobanteIngresoRow
             Dim rowComprobanteIngresoRow As ComprobanteIngresoRow = CType(Me.NewRow,ComprobanteIngresoRow)
-            Dim columnValuesArray() As Object = New Object() {COMPROBANTE, FECHA, DOCUMENTO, BODEGA, ACTIVIDAD, CODIGO, CONCEPTO, PROVINCIA, CIUDAD, PARROQUIA, CENTRO_DE_COSTO, TIPO, RAZON, PERSONAL, PROVEEDOR, SITIO_DE_TRABAJO, TIPO_DE_DOCUMENTO}
+            Dim columnValuesArray() As Object = New Object() {COMPROBANTE, FECHA, DOCUMENTO, BODEGA, ACTIVIDAD, CODIGO, CONCEPTO, PROVINCIA, CIUDAD, PARROQUIA, CENTRO_DE_COSTO, TIPO, RAZON, PERSONAL, PROVEEDOR}
             rowComprobanteIngresoRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowComprobanteIngresoRow)
             Return rowComprobanteIngresoRow
@@ -617,8 +580,6 @@ Partial Public Class dsComprobanteIngresoFinal
             Me.columnRAZON = MyBase.Columns("RAZON")
             Me.columnPERSONAL = MyBase.Columns("PERSONAL")
             Me.columnPROVEEDOR = MyBase.Columns("PROVEEDOR")
-            Me.columnSITIO_DE_TRABAJO = MyBase.Columns("SITIO DE TRABAJO")
-            Me.columnTIPO_DE_DOCUMENTO = MyBase.Columns("TIPO DE DOCUMENTO")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -654,10 +615,6 @@ Partial Public Class dsComprobanteIngresoFinal
             MyBase.Columns.Add(Me.columnPERSONAL)
             Me.columnPROVEEDOR = New Global.System.Data.DataColumn("PROVEEDOR", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnPROVEEDOR)
-            Me.columnSITIO_DE_TRABAJO = New Global.System.Data.DataColumn("SITIO DE TRABAJO", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnSITIO_DE_TRABAJO)
-            Me.columnTIPO_DE_DOCUMENTO = New Global.System.Data.DataColumn("TIPO DE DOCUMENTO", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnTIPO_DE_DOCUMENTO)
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -1521,38 +1478,6 @@ Partial Public Class dsComprobanteIngresoFinal
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Property SITIO_DE_TRABAJO() As String
-            Get
-                Try 
-                    Return CType(Me(Me.tableComprobanteIngreso.SITIO_DE_TRABAJOColumn),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'SITIO DE TRABAJO' de la tabla 'ComprobanteIngreso' es DBN"& _ 
-                            "ull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableComprobanteIngreso.SITIO_DE_TRABAJOColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Property TIPO_DE_DOCUMENTO() As String
-            Get
-                Try 
-                    Return CType(Me(Me.tableComprobanteIngreso.TIPO_DE_DOCUMENTOColumn),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'TIPO DE DOCUMENTO' de la tabla 'ComprobanteIngreso' es DB"& _ 
-                            "Null.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableComprobanteIngreso.TIPO_DE_DOCUMENTOColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Public Function IsCOMPROBANTENull() As Boolean
             Return Me.IsNull(Me.tableComprobanteIngreso.COMPROBANTEColumn)
         End Function
@@ -1729,30 +1654,6 @@ Partial Public Class dsComprobanteIngresoFinal
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Public Sub SetPROVEEDORNull()
             Me(Me.tableComprobanteIngreso.PROVEEDORColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Function IsSITIO_DE_TRABAJONull() As Boolean
-            Return Me.IsNull(Me.tableComprobanteIngreso.SITIO_DE_TRABAJOColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Sub SetSITIO_DE_TRABAJONull()
-            Me(Me.tableComprobanteIngreso.SITIO_DE_TRABAJOColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Function IsTIPO_DE_DOCUMENTONull() As Boolean
-            Return Me.IsNull(Me.tableComprobanteIngreso.TIPO_DE_DOCUMENTOColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Sub SetTIPO_DE_DOCUMENTONull()
-            Me(Me.tableComprobanteIngreso.TIPO_DE_DOCUMENTOColumn) = Global.System.Convert.DBNull
         End Sub
     End Class
     

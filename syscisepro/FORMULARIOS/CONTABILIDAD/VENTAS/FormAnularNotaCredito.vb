@@ -4,6 +4,7 @@ Imports ClassLibraryCisepro.CONTABILIDAD.LIBRO_DIARIO
 Imports ClassLibraryCisepro.CONTABILIDAD.VENTAS
 Imports ClassLibraryCisepro.ENUMS
 Imports ClassLibraryCisepro.ProcesosSql
+Imports Krypton.Toolkit
 
 
 Namespace FORMULARIOS.CONTABILIDAD.VENTAS
@@ -165,7 +166,8 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                 If CBool(dgvNotaCredito.CurrentCell.EditedFormattedValue) Then
                     If _objetoPagosFacturaVenta.BuscarMayorSaldoPagosFacturaventaXIdFactura(_tipoCon, dgvNotaCredito.CurrentRow.Cells(16).Value) < 0.01 Then
                         If Not _notSelect.Contains(dgvNotaCredito.CurrentCell.RowIndex) Then _notSelect.Add(dgvNotaCredito.CurrentCell.RowIndex)
-                        MsgBox("ESTA FACTUARA YA HA SIDO CANCELADA" & vbNewLine & "NO SE PUEDE ANULAR", MsgBoxStyle.Information, "MENSAJE DE INFORMACIÓN")
+
+                        KryptonMessageBox.Show("Esta factura ya ha sido cancelada " & vbNewLine & "NO SE PUEDE ANULAR", "MENSAJE DE INFORMACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
                         'Else
                         '    Dim si = _objetoPagosFacturaVenta.SeleccionarPagosActivoXIdComprobante(_tipoCon, CLng(dgvNotaCredito.CurrentRow.Cells(17).Value))
                         '    If si.Rows.Count > 1 Or si.Rows(0)(2) > 1 Then
@@ -187,11 +189,11 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
             dgvNotaCredito.EndEdit()
             Dim sel = dgvNotaCredito.Rows.Cast(Of DataGridViewRow)().Any(Function(row) CBool(row.Cells(0).EditedFormattedValue))
             If Not sel Then
-                MessageBox.Show("DEBE SELECCIONAR AL MENOS UN REGISTRO!", "MENSAJE DE VALIDACIÓN", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                KryptonMessageBox.Show("DEBE SELECCIONAR AL MENOS UN REGISTRO!", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                 Return
             End If
 
-            If MessageBox.Show("¿ESTA SEGURA QUE DESEA ANULAR LOS REGISTROS SELECCIONADOS?", "MENSAJE DE VALIDACIÓN", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> DialogResult.Yes Then Return
+            If KryptonMessageBox.Show("¿ESTA SEGURA QUE DESEA ANULAR LOS REGISTROS SELECCIONADOS?", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) <> DialogResult.Yes Then Return
             _sqlCommands.Clear()
 
             ActualizarEstadoNotaCredito()
@@ -199,10 +201,17 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
             AnularAsientoLibroDiarioXNumeroRegistro()
 
 
-            Dim nombreU As String = "NOTA-CREDITO-ANULADA " & Username
+            Dim nombreU As String = "Nota de Credito anulada por: " & UserName
             Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, nombreU)
             If res(0) Then ToolStripMenuItem1_Click(Nothing, Nothing)
-            MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
+            Dim messageIcon As KryptonMessageBoxIcon
+            If res(0) Then
+                messageIcon = KryptonMessageBoxIcon.Information
+            Else
+                messageIcon = KryptonMessageBoxIcon.Exclamation
+            End If
+            KryptonMessageBox.Show(res(1), "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, messageIcon)
+            'MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
 
         End Sub
         Private Sub ActualizarEstadoNotaCredito()

@@ -148,10 +148,11 @@ Namespace INVENTARIOS.COMPROBANTES
             Return ds
         End Function
 
-        Public Function SeleccionarComprobanteEgresoxIdComprobanteIngresoMin(ByVal tipoCon As TipoConexion, ByVal idComprobante As String) As DataSet
-            Dim pars = New List(Of Object())
-            pars.Add(New Object() {"ID_COMPROBANTE", SqlDbType.VarChar, idComprobante})
-            Dim comp = ComandosSql.SeleccionarQueryWithParamsToDataAdapter(tipoCon, "SeleccionarComprobanteIngresoBodegaxNroComprobante", True, pars)
+        Public Function SeleccionarComprobanteIngresoxIdComprobanteIngresoMin(ByVal tipoCon As TipoConexion, ByVal idComprobante As String) As DataSet
+            Dim pars = New List(Of Object()) From {
+                New Object() {"ID_COMPROBANTE", SqlDbType.NVarChar, idComprobante}
+            }
+            Dim comp = ComandosSql.SeleccionarQueryWithParamsToDataAdapter(tipoCon, "sp_seleccionarComprobanteIngresoBodegaxNroComprobante", True, pars)
             Dim detc = ComandosSql.SeleccionarQueryWithParamsToDataAdapter(tipoCon, "seleccionarDetallesComprobantesIngreso2", True, pars)
             Dim ds = New DataSet()
             comp.Fill(ds, "ComprobanteIngreso")

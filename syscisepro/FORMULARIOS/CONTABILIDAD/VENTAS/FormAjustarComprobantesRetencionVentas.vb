@@ -8,6 +8,7 @@ Imports ClassLibraryCisepro.ENUMS
 Imports ClassLibraryCisepro.ProcesosSql
 Imports syscisepro.FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
 Imports ClassLibraryCisepro.CONTABILIDAD.RETENCIONES_EMITIDAS
+Imports Krypton.Toolkit
 
 
 Namespace FORMULARIOS.CONTABILIDAD.VENTAS
@@ -88,9 +89,8 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
             _sqlCommands = New List(Of SqlCommand)
 
             dtpMes.Value = New DateTime(DateTime.Now.Year, DateTime.Now.Month, 1)
-
             LlenarComboImpuesto()
-            LlenarComboConcepto() 
+            LlenarComboConcepto()
 
             AutocompletarNombreCliente()
         End Sub
@@ -115,7 +115,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
             Catch
                 cmbConcepto.DataSource = Nothing
             End Try
-        End Sub 
+        End Sub
         Private Sub AutocompletarNombreCliente()
             Try
                 txtNombreComercialCliente.AutoCompleteCustomSource = _objetoClienteGeneral.Autocompletar(_tipoCon)
@@ -321,7 +321,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                 txtIva.Text = "0.00"
                 txtTotal.Text = "0.00"
                 lblNumeroRegistroVenta.Text = "0"
-                LimpiarParametrosRetencion()                
+                LimpiarParametrosRetencion()
                 dgvPagosFacturaVenta.DataSource = Nothing
                 dgvAsientoDiarioVenta.DataSource = Nothing
             End Try
@@ -364,7 +364,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                 dgvComprobanteRetencion.Columns(3).Width = 175
                 dgvComprobanteRetencion.Columns(4).Width = 125
             Catch
-                LimpiarParametrosRetencion() 
+                LimpiarParametrosRetencion()
             End Try
         End Sub
         Private Sub dgvComprobanteRetencion_SelectionChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles dgvComprobanteRetencion.SelectionChanged
@@ -381,7 +381,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
             Catch
                 LimpiarParametrosRetencion()
             End Try
-        End Sub        
+        End Sub
         Private Sub CargarDetalleComprobanteRetencion()
             Try
                 dgvDetalleComprobanteRetencion.DataSource = _objetoDetalleComprobantesRetencionVenta.SeleccionarRegistrosDetalleComprobanteRetencionVentaXIdComprobanteRetencion(_tipoCon, lblIdComprobanteRetencion.Text)
@@ -408,7 +408,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                 txtPorcentajeRetencion.Text = "0"
                 txtValorRetencion.Text = "0.00"
                 lblIdDetalleComprobanteRetencionCompra.Text = "..."
-            End Try 
+            End Try
         End Sub
         Private Sub CalcularTotalRetencion()
             Dim acumulador As Decimal = 0
@@ -420,15 +420,15 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
             Catch
                 txtTotalComprobanteRetencion.Text = "0.00"
             End Try
-        End Sub 
+        End Sub
         Private Sub ToolStripMenuItem1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAnular.Click
             If dgvFacturaVenta.RowCount = 0 Then
-                MessageBox.Show("DEBE ESCOGER UNA FACTURA!", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                KryptonMessageBox.Show("DEBE ESCOGER UNA FACTURA!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                 Return
             End If
 
             If lblIdFacturaVenta.Text <> "..." And lblIdComprobanteRetencion.Text <> "..." Then
-                If MessageBox.Show("SI ANULA LA RETENCIÓN DE ESTA FACTRURA SE MODIFICARÁ EL ASIENTO Y LOS PAGOS CORRESPONDIETNES, DESEA ANULARLA?", "REGISTRAR RETENCIÓN", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
+                If KryptonMessageBox.Show("SI ANULA LA RETENCIÓN DE ESTA FACTRURA SE MODIFICARÁ EL ASIENTO Y LOS PAGOS CORRESPONDIETNES, DESEA ANULARLA?", "REGISTRAR RETENCIÓN", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) = DialogResult.Yes Then
                     _sqlCommands.Clear()
 
                     Dim idasientoCuenta = 0
@@ -438,7 +438,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                             idasientoCuenta = row.Cells(0).Value.ToString()
                             valorCuenta = CDec(row.Cells(6).Value)
                         End If
-                        If (row.Cells(2).Value.ToString().StartsWith("1010501") Or _
+                        If (row.Cells(2).Value.ToString().StartsWith("1010501") Or
                             row.Cells(2).Value.ToString().StartsWith("1010502")) And row.Cells(3).Value.ToString().Contains("RETEN") Then
                             With _objetoAsientoLibroDiario
                                 .IdAsiento = row.Cells(0).Value.ToString().Trim()
@@ -476,10 +476,17 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                     Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, nombreU)
                     If res(0) Then
                         LimpiarParametrosRetencion()
-                        dgvFacturaVenta_SelectionChanged(Nothing, Nothing) 
+                        dgvFacturaVenta_SelectionChanged(Nothing, Nothing)
                     End If
-                    MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
-                End If 
+                    Dim messageIcon As KryptonMessageBoxIcon
+                    If res(0) Then
+                        messageIcon = KryptonMessageBoxIcon.Information
+                    Else
+                        messageIcon = KryptonMessageBoxIcon.Exclamation
+                    End If
+                    KryptonMessageBox.Show(res(1), "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, messageIcon)
+                    'MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
+                End If
             End If
         End Sub   
     End Class

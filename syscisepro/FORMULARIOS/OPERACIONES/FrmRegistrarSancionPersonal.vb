@@ -331,7 +331,7 @@ Namespace FORMULARIOS.OPERACIONES
 
 
 
-                Dim nombreU As String = "REGISTRO SANCION " & UserName
+                Dim nombreU As String = "Registro de Sancion por: " & UserName
                 Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, nombreU)
                 If res(0) Then
                     btnPersonalEntra.Enabled = False
@@ -422,7 +422,7 @@ Namespace FORMULARIOS.OPERACIONES
 
 
 
-                Dim nombreU As String = "SANCION ANULADA " & UserName
+                Dim nombreU As String = "Sancion anulada por: " & UserName
                 Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, nombreU)
                 If res(0) Then
                     btnPersonalEntra.Enabled = False

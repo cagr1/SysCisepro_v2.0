@@ -435,7 +435,7 @@ namespace SysCisepro3.TalentoHumano
                     _sqlCommands.Add(_objRegistroDescuento.AnularRegistroDescuentoCommand());
                 }
                 var user = Usuario.Datos.ToString();
-                var nombre = $"DESCUENTO ANULADO: {user}";
+                var nombre = $"Descuento anulado por: {user}";
                 var res = ComandosSql.ProcesarTransacciones(TipoCon, _sqlCommands, nombre);
 
                 if ((bool)res[0])
@@ -801,7 +801,7 @@ namespace SysCisepro3.TalentoHumano
             _sqlCommands.Add(_objHistorialLaboral.RegistrarNuevoHistorialLaboralCommand());
             
             string user = Usuario.Datos.ToString();
-            string nombreU = $"DESCUENTO: {user}";
+            string nombreU = $"Descuento realizdo por: {user}";
             var res = ComandosSql.ProcesarTransacciones(TipoCon, _sqlCommands, nombreU);
 
             if ((bool)res[0])

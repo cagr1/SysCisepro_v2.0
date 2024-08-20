@@ -511,7 +511,8 @@ Namespace FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
         Private Sub btnModificarAsiento_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnModificarAsiento.Click
             If txtIdAsiento.Text.Trim().Length > 0 Then
                 If txtIdAsiento.Text = "ID" Then
-                    MsgBox("SELECCIONE UN REGISTRO A MODIFICAR", MsgBoxStyle.Information, "MENSAJE DE INFORMACIÓN")
+                    'MsgBox("SELECCIONE UN REGISTRO A MODIFICAR", MsgBoxStyle.Information, "MENSAJE DE INFORMACIÓN")
+                    KryptonMessageBox.Show("SELECCIONE UN REGISTRO A MODIFICAR", "MENSAJE DE INFORMACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
                 Else
                     HabilitadoNuevo()
                     

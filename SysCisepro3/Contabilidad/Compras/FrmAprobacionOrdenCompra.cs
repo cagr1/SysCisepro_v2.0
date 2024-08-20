@@ -242,7 +242,7 @@ namespace SysCisepro3.Contabilidad.Compras
             _sqlCommands.Add(_objOrdenCompra.ActualizarEstadoOrdenCompra());
 
             var user = Usuario.Datos.ToString();
-            var nombre = $"ORDEN-COMPRA-RECHAZADA: {user}";
+            var nombre = $"Orden de Compra rechazada por: {user}";
             var res = ComandosSql.ProcesarTransacciones(TipoCon, _sqlCommands, nombre);
 
             if ((bool)res[0]) btnRecargar.PerformClick();
@@ -276,7 +276,7 @@ namespace SysCisepro3.Contabilidad.Compras
             _sqlCommands.Add(_objOrdenCompra.ActualizarEstadoOrdenCompra());
 
             var user = Usuario.Datos.ToString();
-            var nombre = $"ORDEN-COMPRA-APROBADA: {user}";
+            var nombre = $"Oroden de Compra aprobada por: {user}";
             var res = ComandosSql.ProcesarTransacciones(TipoCon, _sqlCommands, nombre);
 
             if ((bool)res[0]) btnRecargar.PerformClick();

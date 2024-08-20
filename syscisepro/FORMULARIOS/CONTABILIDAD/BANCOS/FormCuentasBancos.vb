@@ -1,6 +1,7 @@
 ﻿Imports ClassLibraryCisepro.CONTABILIDAD.BANCOS
 Imports ClassLibraryCisepro.CONTABILIDAD.BANCOS.AUDITORIA
 Imports ClassLibraryCisepro.ENUMS
+Imports Krypton.Toolkit
 
 Namespace FORMULARIOS.CONTABILIDAD.BANCOS
     ''' <summary>
@@ -233,7 +234,8 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
 
 
                 Else
-                    MsgBox("NO SE PUEDE GUARDAR." & vbNewLine & "NO SE HAN LLENADO TODOS LOS CAMPOS NECESARIOS.", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACION")
+                    'MsgBox("NO SE PUEDE GUARDAR." & vbNewLine & "NO SE HAN LLENADO TODOS LOS CAMPOS NECESARIOS.", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACION")
+                    KryptonMessageBox.Show("NO SE PUEDE GUARDAR." & vbNewLine & "NO SE HAN LLENADO TODOS LOS CAMPOS NECESARIOS.", "MENSAJE DE VALIDACION", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                     txtNumeroCuentasBancos.Focus()
                 End If
             Catch ex As Exception

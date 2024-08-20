@@ -124,7 +124,7 @@
             Me.gbTotalDebeTotalHaber.Controls.Add(Me.Label3)
             Me.gbTotalDebeTotalHaber.Controls.Add(Me.Label1)
             Me.gbTotalDebeTotalHaber.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.gbTotalDebeTotalHaber.Location = New System.Drawing.Point(1, 607)
+            Me.gbTotalDebeTotalHaber.Location = New System.Drawing.Point(1, 602)
             Me.gbTotalDebeTotalHaber.Name = "gbTotalDebeTotalHaber"
             Me.gbTotalDebeTotalHaber.Size = New System.Drawing.Size(1224, 40)
             Me.gbTotalDebeTotalHaber.TabIndex = 134
@@ -134,7 +134,7 @@
             '
             Me.txtTotalHaber.AutoSize = True
             Me.txtTotalHaber.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtTotalHaber.Location = New System.Drawing.Point(1096, 13)
+            Me.txtTotalHaber.Location = New System.Drawing.Point(1070, 13)
             Me.txtTotalHaber.Name = "txtTotalHaber"
             Me.txtTotalHaber.Size = New System.Drawing.Size(36, 20)
             Me.txtTotalHaber.TabIndex = 41
@@ -174,7 +174,7 @@
             '
             Me.Label3.AutoSize = True
             Me.Label3.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label3.Location = New System.Drawing.Point(1038, 13)
+            Me.Label3.Location = New System.Drawing.Point(1008, 13)
             Me.Label3.Name = "Label3"
             Me.Label3.Size = New System.Drawing.Size(59, 20)
             Me.Label3.TabIndex = 39
@@ -197,7 +197,7 @@
             Me.GroupBox1.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.GroupBox1.Location = New System.Drawing.Point(0, 88)
             Me.GroupBox1.Name = "GroupBox1"
-            Me.GroupBox1.Size = New System.Drawing.Size(1225, 513)
+            Me.GroupBox1.Size = New System.Drawing.Size(1142, 513)
             Me.GroupBox1.TabIndex = 136
             Me.GroupBox1.TabStop = False
             '
@@ -247,7 +247,7 @@
             DataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
             Me.dgvAsientosDiario.RowsDefaultCellStyle = DataGridViewCellStyle10
             Me.dgvAsientosDiario.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvAsientosDiario.Size = New System.Drawing.Size(1219, 491)
+            Me.dgvAsientosDiario.Size = New System.Drawing.Size(1136, 491)
             Me.dgvAsientosDiario.TabIndex = 126
             '
             'rbCuenta
@@ -306,7 +306,7 @@
             Me.gbComandos.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.gbComandos.Location = New System.Drawing.Point(532, 34)
             Me.gbComandos.Name = "gbComandos"
-            Me.gbComandos.Size = New System.Drawing.Size(693, 50)
+            Me.gbComandos.Size = New System.Drawing.Size(610, 50)
             Me.gbComandos.TabIndex = 131
             Me.gbComandos.TabStop = False
             Me.gbComandos.Text = "CUENTAS"
@@ -318,7 +318,7 @@
             Me.txtCuentaNueva.Enabled = False
             Me.txtCuentaNueva.Location = New System.Drawing.Point(56, 19)
             Me.txtCuentaNueva.Name = "txtCuentaNueva"
-            Me.txtCuentaNueva.Size = New System.Drawing.Size(627, 21)
+            Me.txtCuentaNueva.Size = New System.Drawing.Size(545, 21)
             Me.txtCuentaNueva.TabIndex = 58
             '
             'Label2
@@ -363,7 +363,7 @@
             Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
             Me.MenuStrip1.Name = "MenuStrip1"
             Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(7, 2, 0, 2)
-            Me.MenuStrip1.Size = New System.Drawing.Size(1227, 32)
+            Me.MenuStrip1.Size = New System.Drawing.Size(1145, 32)
             Me.MenuStrip1.TabIndex = 186
             Me.MenuStrip1.Text = "msIngresoBodega"
             '
@@ -442,7 +442,7 @@
             '
             Me.CheckBox1.AutoSize = True
             Me.CheckBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(187, Byte), Integer), CType(CType(206, Byte), Integer), CType(CType(230, Byte), Integer))
-            Me.CheckBox1.Location = New System.Drawing.Point(1059, 5)
+            Me.CheckBox1.Location = New System.Drawing.Point(978, 5)
             Me.CheckBox1.Name = "CheckBox1"
             Me.CheckBox1.Size = New System.Drawing.Size(156, 17)
             Me.CheckBox1.TabIndex = 187
@@ -454,7 +454,7 @@
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.BackColor = System.Drawing.Color.White
-            Me.ClientSize = New System.Drawing.Size(1227, 650)
+            Me.ClientSize = New System.Drawing.Size(1145, 650)
             Me.Controls.Add(Me.CheckBox1)
             Me.Controls.Add(Me.MenuStrip1)
             Me.Controls.Add(Me.gbRnagoFechas)

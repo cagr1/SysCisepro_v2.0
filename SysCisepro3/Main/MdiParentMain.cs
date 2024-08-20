@@ -1155,7 +1155,7 @@ namespace SysCisepro3.Main
         }
         private void rEVISIÓNCHEQUESEMITIDOSToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form f = new syscisepro.FORMULARIOS.CONTABILIDAD.BANCOS.FormRevisionChequesEmitidos { MdiParent = this, TipoCox = TipoCox };
+            Form f = new syscisepro.FORMULARIOS.CONTABILIDAD.BANCOS.FormRevisionChequesEmitidos { MdiParent = this, TipoCox = TipoCox, UserName = ObjUsuario.Datos };
             f.Show();
         }
         private void rEVISIÓNDÉBITOSBANCARIOSToolStripMenuItem_Click(object sender, EventArgs e)

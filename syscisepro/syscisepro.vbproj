@@ -307,6 +307,16 @@
     <Compile Include="FORMULARIOS\CONJUNTO DE DATOS\FrmVisualizadorReportes.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FORMULARIOS\CONJUNTO DE DATOS\OPERACIONES\dsComprabanteIngresoMin.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsComprabanteIngresoMin.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FORMULARIOS\CONJUNTO DE DATOS\OPERACIONES\dsComprobanteEgresoMin.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsComprobanteEgresoMin.xsd</DependentUpon>
+    </Compile>
     <Compile Include="FORMULARIOS\CONJUNTO DE DATOS\OPERACIONES\dsComprobanteIngreso.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -3747,6 +3757,28 @@
     </None>
     <None Include="FORMULARIOS\CONJUNTO DE DATOS\COMPRAS\DataSetOrdenCompra.xss">
       <DependentUpon>DataSetOrdenCompra.xsd</DependentUpon>
+    </None>
+    <None Include="FORMULARIOS\CONJUNTO DE DATOS\OPERACIONES\dsComprabanteIngresoMin.xsc">
+      <DependentUpon>dsComprabanteIngresoMin.xsd</DependentUpon>
+    </None>
+    <None Include="FORMULARIOS\CONJUNTO DE DATOS\OPERACIONES\dsComprabanteIngresoMin.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsComprabanteIngresoMin.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="FORMULARIOS\CONJUNTO DE DATOS\OPERACIONES\dsComprabanteIngresoMin.xss">
+      <DependentUpon>dsComprabanteIngresoMin.xsd</DependentUpon>
+    </None>
+    <None Include="FORMULARIOS\CONJUNTO DE DATOS\OPERACIONES\dsComprobanteEgresoMin.xsc">
+      <DependentUpon>dsComprobanteEgresoMin.xsd</DependentUpon>
+    </None>
+    <None Include="FORMULARIOS\CONJUNTO DE DATOS\OPERACIONES\dsComprobanteEgresoMin.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsComprobanteEgresoMin.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="FORMULARIOS\CONJUNTO DE DATOS\OPERACIONES\dsComprobanteEgresoMin.xss">
+      <DependentUpon>dsComprobanteEgresoMin.xsd</DependentUpon>
     </None>
     <None Include="FORMULARIOS\CONJUNTO DE DATOS\OPERACIONES\dsComprobanteIngreso.xsc">
       <DependentUpon>dsComprobanteIngreso.xsd</DependentUpon>

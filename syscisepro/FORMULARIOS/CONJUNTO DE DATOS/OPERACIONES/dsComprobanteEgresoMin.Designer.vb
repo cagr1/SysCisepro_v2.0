@@ -20,9 +20,9 @@ Option Explicit On
  Global.System.ComponentModel.DesignerCategoryAttribute("code"),  _
  Global.System.ComponentModel.ToolboxItem(true),  _
  Global.System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema"),  _
- Global.System.Xml.Serialization.XmlRootAttribute("dsComprobanteIngreso"),  _
+ Global.System.Xml.Serialization.XmlRootAttribute("dsComprobanteEgresoMin"),  _
  Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")>  _
-Partial Public Class dsComprobanteIngreso
+Partial Public Class dsComprobanteEgresoMin
     Inherits Global.System.Data.DataSet
     
     Private tableComprobanteEgreso As ComprobanteEgresoDataTable
@@ -143,7 +143,7 @@ Partial Public Class dsComprobanteIngreso
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
     Public Overrides Function Clone() As Global.System.Data.DataSet
-        Dim cln As dsComprobanteIngreso = CType(MyBase.Clone,dsComprobanteIngreso)
+        Dim cln As dsComprobanteEgresoMin = CType(MyBase.Clone,dsComprobanteEgresoMin)
         cln.InitVars
         cln.SchemaSerializationMode = Me.SchemaSerializationMode
         Return cln
@@ -223,9 +223,9 @@ Partial Public Class dsComprobanteIngreso
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
     Private Sub InitClass()
-        Me.DataSetName = "dsComprobanteIngreso"
+        Me.DataSetName = "dsComprobanteEgresoMin"
         Me.Prefix = ""
-        Me.Namespace = "http://tempuri.org/dsComprobanteIngreso.xsd"
+        Me.Namespace = "http://tempuri.org/dsComprobanteEgresoMin.xsd"
         Me.EnforceConstraints = true
         Me.SchemaSerializationMode = Global.System.Data.SchemaSerializationMode.IncludeSchema
         Me.tableComprobanteEgreso = New ComprobanteEgresoDataTable()
@@ -257,7 +257,7 @@ Partial Public Class dsComprobanteIngreso
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
     Public Shared Function GetTypedDataSetSchema(ByVal xs As Global.System.Xml.Schema.XmlSchemaSet) As Global.System.Xml.Schema.XmlSchemaComplexType
-        Dim ds As dsComprobanteIngreso = New dsComprobanteIngreso()
+        Dim ds As dsComprobanteEgresoMin = New dsComprobanteEgresoMin()
         Dim type As Global.System.Xml.Schema.XmlSchemaComplexType = New Global.System.Xml.Schema.XmlSchemaComplexType()
         Dim sequence As Global.System.Xml.Schema.XmlSchemaSequence = New Global.System.Xml.Schema.XmlSchemaSequence()
         Dim any As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
@@ -682,7 +682,7 @@ Partial Public Class dsComprobanteIngreso
         Public Shared Function GetTypedTableSchema(ByVal xs As Global.System.Xml.Schema.XmlSchemaSet) As Global.System.Xml.Schema.XmlSchemaComplexType
             Dim type As Global.System.Xml.Schema.XmlSchemaComplexType = New Global.System.Xml.Schema.XmlSchemaComplexType()
             Dim sequence As Global.System.Xml.Schema.XmlSchemaSequence = New Global.System.Xml.Schema.XmlSchemaSequence()
-            Dim ds As dsComprobanteIngreso = New dsComprobanteIngreso()
+            Dim ds As dsComprobanteEgresoMin = New dsComprobanteEgresoMin()
             Dim any1 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
             any1.Namespace = "http://www.w3.org/2001/XMLSchema"
             any1.MinOccurs = New Decimal(0)
@@ -1173,7 +1173,7 @@ Partial Public Class dsComprobanteIngreso
         Public Shared Function GetTypedTableSchema(ByVal xs As Global.System.Xml.Schema.XmlSchemaSet) As Global.System.Xml.Schema.XmlSchemaComplexType
             Dim type As Global.System.Xml.Schema.XmlSchemaComplexType = New Global.System.Xml.Schema.XmlSchemaComplexType()
             Dim sequence As Global.System.Xml.Schema.XmlSchemaSequence = New Global.System.Xml.Schema.XmlSchemaSequence()
-            Dim ds As dsComprobanteIngreso = New dsComprobanteIngreso()
+            Dim ds As dsComprobanteEgresoMin = New dsComprobanteEgresoMin()
             Dim any1 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
             any1.Namespace = "http://www.w3.org/2001/XMLSchema"
             any1.MinOccurs = New Decimal(0)

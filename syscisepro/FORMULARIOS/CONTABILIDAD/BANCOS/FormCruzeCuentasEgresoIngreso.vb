@@ -448,7 +448,8 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
                 dgvPagosFacturaVenta.EditMode = DataGridViewEditMode.EditProgrammatically
             Catch ex As Exception
                 dgvPagosFacturaVenta.DataSource = Nothing
-                MsgBox("METODO CARGAR PAGOS FACTURA VENTA" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "MENSAJE DE EXCEPCIÓN")
+
+                KryptonMessageBox.Show("Metodo cargar pagos factura venta" & vbNewLine & ex.Message.ToString, "MENSAJE DE EXCEPCIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
         Private Sub dgvComprobantesCompra_SelectionChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles dgvComprobantesCompra.SelectionChanged
@@ -477,7 +478,7 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
                 dgvPagosComprobantesCompra.EditMode = DataGridViewEditMode.EditProgrammatically
             Catch ex As Exception
                 dgvPagosComprobantesCompra.DataSource = Nothing
-                MsgBox("METODO CARGAR PAGOS COMPROBANTES DE COMPRA" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "MENSAJE DE EXCEPCIÓN")
+                KryptonMessageBox.Show("Metodo cargar pagos comprobante de compra" & vbNewLine & ex.Message.ToString, "MENSAJE DE EXCEPCIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
         Private Sub dgvFacturaVenta_CellContentClick(ByVal sender As System.Object, ByVal e As Windows.Forms.DataGridViewCellEventArgs) Handles dgvFacturaVenta.CellContentClick
@@ -515,7 +516,8 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
                         'suma total comprobante
                         txtValorComprobaneIngreso.Text = CDec(txtValorComprobaneIngreso.Text) + s ' se suma el valor del saldo de la factura
                     Else
-                        MsgBox("ESTA FACTURA YA FUE CANCELADA", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+
+                        KryptonMessageBox.Show("Esta factura ya fue cancelada", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
                     End If
                 Else ' CheckBox Desmarcado"
                     For indiceArray = 0 To _cantidadFacturas - 1
@@ -595,7 +597,7 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
                         'suma Total comprobante
                         txtValorComprobanteEgresoBancos.Text = CDec(txtValorComprobanteEgresoBancos.Text) + s
                     Else
-                        MsgBox("ESTA COMPRA YA FUE CANCELADA", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                        KryptonMessageBox.Show("Esta compra ya fue cancelada", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
                     End If
                 Else ' CheckBox Desmarcado"
                     For indiceArray = 0 To _cantidadFacturasEgreso - 1
@@ -663,7 +665,8 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
                     End If
                 End If
             Catch ex As Exception
-                MsgBox("ERROR. NO SUMO TOTAL DE FACTURAS MARCADAS" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "MENSAJE DE EXCEPCIÓN")
+
+                KryptonMessageBox.Show("Error. No sumo total de facturas marcadas", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
         Private Sub cmbCuentasContables_SelectedValueChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles cmbCuentasContables.SelectedValueChanged
@@ -717,7 +720,7 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
                     gbCheque.Enabled = True
                     txtTitularCheque.Text = txtNombreComercialClienteGeneral.Text
                 Else
-                    MsgBox("PRIMERO CARGUE UN CLIENTE", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                    KryptonMessageBox.Show("Primero cargue un cliente", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                     rbEfectivo.Checked = True
                 End If
             Else
@@ -755,17 +758,20 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
                     SumarTotal()
                     btnEditarValores.Enabled = True
                 Else
-                    MsgBox("SELECCIONE UN BANCO, CUENTA E INGRESE UN NÚMERO DE CHEQUE", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+
+                    KryptonMessageBox.Show("Seleccione un banco, cuenta e ingrese un número de cheque", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                 End If
             Else
-                MsgBox("PRIMERO CARGUE UN CONCEPTO DE EGRESO", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+
+                KryptonMessageBox.Show("Primero cargue un concepto de egreso", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
             End If
         End Sub
         Private Sub ToolStripMenuItemEliminar_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ToolStripMenuItemEliminar.Click
             Dim lSeleccionados As DataGridViewSelectedRowCollection = dgvAsientoDiario.SelectedRows
             Select Case lSeleccionados.Count
                 Case 0
-                    MessageBox.Show("Debe seleccionar alguna fila", "", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
+                    KryptonMessageBox.Show("Debe seleccionar alguna fila", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
                     Return
                 Case Is > 1
                     MessageBox.Show("Demasiadas filas seleccionadas", "", MessageBoxButtons.OK, MessageBoxIcon.Information)
@@ -778,14 +784,14 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
             Try
                 dgvAsientoDiario.Rows.RemoveAt(dgvAsientoDiario.CurrentRow.Index)
                 SumarTotal()
-                KryptonMessageBox.Show("FILA ELIMINADA", "", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
+                KryptonMessageBox.Show("Fila Eliminada", "", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
             Catch exp As Exception
                 KryptonMessageBox.Show(exp.Message, "", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
             End Try
         End Sub
         Private Sub btnGuardar_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnGuardar.Click
             If CDec(txtTotalDebe.Text) = CDec(txtTotalHaber.Text) Then
-                If KryptonMessageBox.Show("¿ESTA SEGURA QUE DESEA GUARDAR?", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) <> DialogResult.Yes Then Return
+                If KryptonMessageBox.Show("¿Esta segur@ que desea guardar?", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) <> DialogResult.Yes Then Return
                 _sqlCommands.Clear()
 
                 _objetoComprobanteIngresoBancos.Id = _objetoComprobanteIngresoBancos.BuscarMayorIdComprobanteIngresoBancos(_tipoCon) + 1

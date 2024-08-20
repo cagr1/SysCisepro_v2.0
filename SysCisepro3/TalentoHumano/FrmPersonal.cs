@@ -925,11 +925,11 @@ namespace SysCisepro3.TalentoHumano
                 string user = Usuario.Datos.ToString();
                 string nombreU = String.Empty;
                 if (_estado ==1)
-                    nombreU = $"REGISTRO PERSONAL: {user} - CONTRATO: {txtContrato.Text.Trim()}";
+                    nombreU = $"Registro de Personal por: {user} - CONTRATO: {txtContrato.Text.Trim()}";
                 else if (_estado == 2)
-                    nombreU = $"MODIFICACIÓN PERSONAL: {user} - CONTRATO: {txtContrato.Text.Trim()}";
+                    nombreU = $"Modificacion de Personal por: {user} - CONTRATO: {txtContrato.Text.Trim()}";
                 else if (_estado == 3)
-                    nombreU = $"REINGRESO PERSONAL: {user} - CONTRATO: {txtContrato.Text.Trim()}";
+                    nombreU = $"Reingreso de Personal por: {user} - CONTRATO: {txtContrato.Text.Trim()}";
 
 
                 var res = ComandosSql.ProcesarTransacciones(TipoCon, _sqlCommands, nombreU);

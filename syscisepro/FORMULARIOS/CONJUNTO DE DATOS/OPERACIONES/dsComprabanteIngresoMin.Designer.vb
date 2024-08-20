@@ -20,14 +20,14 @@ Option Explicit On
  Global.System.ComponentModel.DesignerCategoryAttribute("code"),  _
  Global.System.ComponentModel.ToolboxItem(true),  _
  Global.System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema"),  _
- Global.System.Xml.Serialization.XmlRootAttribute("dsComprobanteIngreso"),  _
+ Global.System.Xml.Serialization.XmlRootAttribute("dsComprabanteIngresoMin"),  _
  Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")>  _
-Partial Public Class dsComprobanteIngreso
+Partial Public Class dsComprabanteIngresoMin
     Inherits Global.System.Data.DataSet
     
-    Private tableComprobanteEgreso As ComprobanteEgresoDataTable
+    Private tableComprobanteIngreso As ComprobanteIngresoDataTable
     
-    Private tableDetalleComprobanteEgreso As DetalleComprobanteEgresoDataTable
+    Private tableDetalleComprobanteIngreso As DetalleComprobanteIngresoDataTable
     
     Private _schemaSerializationMode As Global.System.Data.SchemaSerializationMode = Global.System.Data.SchemaSerializationMode.IncludeSchema
     
@@ -58,11 +58,11 @@ Partial Public Class dsComprobanteIngreso
         If (Me.DetermineSchemaSerializationMode(info, context) = Global.System.Data.SchemaSerializationMode.IncludeSchema) Then
             Dim ds As Global.System.Data.DataSet = New Global.System.Data.DataSet()
             ds.ReadXmlSchema(New Global.System.Xml.XmlTextReader(New Global.System.IO.StringReader(strSchema)))
-            If (Not (ds.Tables("ComprobanteEgreso")) Is Nothing) Then
-                MyBase.Tables.Add(New ComprobanteEgresoDataTable(ds.Tables("ComprobanteEgreso")))
+            If (Not (ds.Tables("ComprobanteIngreso")) Is Nothing) Then
+                MyBase.Tables.Add(New ComprobanteIngresoDataTable(ds.Tables("ComprobanteIngreso")))
             End If
-            If (Not (ds.Tables("DetalleComprobanteEgreso")) Is Nothing) Then
-                MyBase.Tables.Add(New DetalleComprobanteEgresoDataTable(ds.Tables("DetalleComprobanteEgreso")))
+            If (Not (ds.Tables("DetalleComprobanteIngreso")) Is Nothing) Then
+                MyBase.Tables.Add(New DetalleComprobanteIngresoDataTable(ds.Tables("DetalleComprobanteIngreso")))
             End If
             Me.DataSetName = ds.DataSetName
             Me.Prefix = ds.Prefix
@@ -85,9 +85,9 @@ Partial Public Class dsComprobanteIngreso
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
      Global.System.ComponentModel.Browsable(false),  _
      Global.System.ComponentModel.DesignerSerializationVisibility(Global.System.ComponentModel.DesignerSerializationVisibility.Content)>  _
-    Public ReadOnly Property ComprobanteEgreso() As ComprobanteEgresoDataTable
+    Public ReadOnly Property ComprobanteIngreso() As ComprobanteIngresoDataTable
         Get
-            Return Me.tableComprobanteEgreso
+            Return Me.tableComprobanteIngreso
         End Get
     End Property
     
@@ -95,9 +95,9 @@ Partial Public Class dsComprobanteIngreso
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
      Global.System.ComponentModel.Browsable(false),  _
      Global.System.ComponentModel.DesignerSerializationVisibility(Global.System.ComponentModel.DesignerSerializationVisibility.Content)>  _
-    Public ReadOnly Property DetalleComprobanteEgreso() As DetalleComprobanteEgresoDataTable
+    Public ReadOnly Property DetalleComprobanteIngreso() As DetalleComprobanteIngresoDataTable
         Get
-            Return Me.tableDetalleComprobanteEgreso
+            Return Me.tableDetalleComprobanteIngreso
         End Get
     End Property
     
@@ -143,7 +143,7 @@ Partial Public Class dsComprobanteIngreso
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
     Public Overrides Function Clone() As Global.System.Data.DataSet
-        Dim cln As dsComprobanteIngreso = CType(MyBase.Clone,dsComprobanteIngreso)
+        Dim cln As dsComprabanteIngresoMin = CType(MyBase.Clone,dsComprabanteIngresoMin)
         cln.InitVars
         cln.SchemaSerializationMode = Me.SchemaSerializationMode
         Return cln
@@ -168,11 +168,11 @@ Partial Public Class dsComprobanteIngreso
             Me.Reset
             Dim ds As Global.System.Data.DataSet = New Global.System.Data.DataSet()
             ds.ReadXml(reader)
-            If (Not (ds.Tables("ComprobanteEgreso")) Is Nothing) Then
-                MyBase.Tables.Add(New ComprobanteEgresoDataTable(ds.Tables("ComprobanteEgreso")))
+            If (Not (ds.Tables("ComprobanteIngreso")) Is Nothing) Then
+                MyBase.Tables.Add(New ComprobanteIngresoDataTable(ds.Tables("ComprobanteIngreso")))
             End If
-            If (Not (ds.Tables("DetalleComprobanteEgreso")) Is Nothing) Then
-                MyBase.Tables.Add(New DetalleComprobanteEgresoDataTable(ds.Tables("DetalleComprobanteEgreso")))
+            If (Not (ds.Tables("DetalleComprobanteIngreso")) Is Nothing) Then
+                MyBase.Tables.Add(New DetalleComprobanteIngresoDataTable(ds.Tables("DetalleComprobanteIngreso")))
             End If
             Me.DataSetName = ds.DataSetName
             Me.Prefix = ds.Prefix
@@ -206,16 +206,16 @@ Partial Public Class dsComprobanteIngreso
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
     Friend Overloads Sub InitVars(ByVal initTable As Boolean)
-        Me.tableComprobanteEgreso = CType(MyBase.Tables("ComprobanteEgreso"),ComprobanteEgresoDataTable)
+        Me.tableComprobanteIngreso = CType(MyBase.Tables("ComprobanteIngreso"),ComprobanteIngresoDataTable)
         If (initTable = true) Then
-            If (Not (Me.tableComprobanteEgreso) Is Nothing) Then
-                Me.tableComprobanteEgreso.InitVars
+            If (Not (Me.tableComprobanteIngreso) Is Nothing) Then
+                Me.tableComprobanteIngreso.InitVars
             End If
         End If
-        Me.tableDetalleComprobanteEgreso = CType(MyBase.Tables("DetalleComprobanteEgreso"),DetalleComprobanteEgresoDataTable)
+        Me.tableDetalleComprobanteIngreso = CType(MyBase.Tables("DetalleComprobanteIngreso"),DetalleComprobanteIngresoDataTable)
         If (initTable = true) Then
-            If (Not (Me.tableDetalleComprobanteEgreso) Is Nothing) Then
-                Me.tableDetalleComprobanteEgreso.InitVars
+            If (Not (Me.tableDetalleComprobanteIngreso) Is Nothing) Then
+                Me.tableDetalleComprobanteIngreso.InitVars
             End If
         End If
     End Sub
@@ -223,26 +223,26 @@ Partial Public Class dsComprobanteIngreso
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
     Private Sub InitClass()
-        Me.DataSetName = "dsComprobanteIngreso"
+        Me.DataSetName = "dsComprabanteIngresoMin"
         Me.Prefix = ""
-        Me.Namespace = "http://tempuri.org/dsComprobanteIngreso.xsd"
+        Me.Namespace = "http://tempuri.org/dsComprabanteIngresoMin.xsd"
         Me.EnforceConstraints = true
         Me.SchemaSerializationMode = Global.System.Data.SchemaSerializationMode.IncludeSchema
-        Me.tableComprobanteEgreso = New ComprobanteEgresoDataTable()
-        MyBase.Tables.Add(Me.tableComprobanteEgreso)
-        Me.tableDetalleComprobanteEgreso = New DetalleComprobanteEgresoDataTable()
-        MyBase.Tables.Add(Me.tableDetalleComprobanteEgreso)
+        Me.tableComprobanteIngreso = New ComprobanteIngresoDataTable()
+        MyBase.Tables.Add(Me.tableComprobanteIngreso)
+        Me.tableDetalleComprobanteIngreso = New DetalleComprobanteIngresoDataTable()
+        MyBase.Tables.Add(Me.tableDetalleComprobanteIngreso)
     End Sub
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-    Private Function ShouldSerializeComprobanteEgreso() As Boolean
+    Private Function ShouldSerializeComprobanteIngreso() As Boolean
         Return false
     End Function
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-    Private Function ShouldSerializeDetalleComprobanteEgreso() As Boolean
+    Private Function ShouldSerializeDetalleComprobanteIngreso() As Boolean
         Return false
     End Function
     
@@ -257,7 +257,7 @@ Partial Public Class dsComprobanteIngreso
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
     Public Shared Function GetTypedDataSetSchema(ByVal xs As Global.System.Xml.Schema.XmlSchemaSet) As Global.System.Xml.Schema.XmlSchemaComplexType
-        Dim ds As dsComprobanteIngreso = New dsComprobanteIngreso()
+        Dim ds As dsComprabanteIngresoMin = New dsComprabanteIngresoMin()
         Dim type As Global.System.Xml.Schema.XmlSchemaComplexType = New Global.System.Xml.Schema.XmlSchemaComplexType()
         Dim sequence As Global.System.Xml.Schema.XmlSchemaSequence = New Global.System.Xml.Schema.XmlSchemaSequence()
         Dim any As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
@@ -305,18 +305,18 @@ Partial Public Class dsComprobanteIngreso
     End Function
     
     <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-    Public Delegate Sub ComprobanteEgresoRowChangeEventHandler(ByVal sender As Object, ByVal e As ComprobanteEgresoRowChangeEvent)
+    Public Delegate Sub ComprobanteIngresoRowChangeEventHandler(ByVal sender As Object, ByVal e As ComprobanteIngresoRowChangeEvent)
     
     <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-    Public Delegate Sub DetalleComprobanteEgresoRowChangeEventHandler(ByVal sender As Object, ByVal e As DetalleComprobanteEgresoRowChangeEvent)
+    Public Delegate Sub DetalleComprobanteIngresoRowChangeEventHandler(ByVal sender As Object, ByVal e As DetalleComprobanteIngresoRowChangeEvent)
     
     '''<summary>
     '''Represents the strongly named DataTable class.
     '''</summary>
     <Global.System.Serializable(),  _
      Global.System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")>  _
-    Partial Public Class ComprobanteEgresoDataTable
-        Inherits Global.System.Data.TypedTableBase(Of ComprobanteEgresoRow)
+    Partial Public Class ComprobanteIngresoDataTable
+        Inherits Global.System.Data.TypedTableBase(Of ComprobanteIngresoRow)
         
         Private columnCOMPROBANTE As Global.System.Data.DataColumn
         
@@ -352,7 +352,7 @@ Partial Public Class dsComprobanteIngreso
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Public Sub New()
             MyBase.New
-            Me.TableName = "ComprobanteEgreso"
+            Me.TableName = "ComprobanteIngreso"
             Me.BeginInit
             Me.InitClass
             Me.EndInit
@@ -514,44 +514,44 @@ Partial Public Class dsComprobanteIngreso
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Default ReadOnly Property Item(ByVal index As Integer) As ComprobanteEgresoRow
+        Public Default ReadOnly Property Item(ByVal index As Integer) As ComprobanteIngresoRow
             Get
-                Return CType(Me.Rows(index),ComprobanteEgresoRow)
+                Return CType(Me.Rows(index),ComprobanteIngresoRow)
             End Get
         End Property
         
         <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Event ComprobanteEgresoRowChanging As ComprobanteEgresoRowChangeEventHandler
+        Public Event ComprobanteIngresoRowChanging As ComprobanteIngresoRowChangeEventHandler
         
         <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Event ComprobanteEgresoRowChanged As ComprobanteEgresoRowChangeEventHandler
+        Public Event ComprobanteIngresoRowChanged As ComprobanteIngresoRowChangeEventHandler
         
         <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Event ComprobanteEgresoRowDeleting As ComprobanteEgresoRowChangeEventHandler
+        Public Event ComprobanteIngresoRowDeleting As ComprobanteIngresoRowChangeEventHandler
         
         <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Event ComprobanteEgresoRowDeleted As ComprobanteEgresoRowChangeEventHandler
+        Public Event ComprobanteIngresoRowDeleted As ComprobanteIngresoRowChangeEventHandler
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Overloads Sub AddComprobanteEgresoRow(ByVal row As ComprobanteEgresoRow)
+        Public Overloads Sub AddComprobanteIngresoRow(ByVal row As ComprobanteIngresoRow)
             Me.Rows.Add(row)
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Overloads Function AddComprobanteEgresoRow(ByVal COMPROBANTE As String, ByVal FECHA As String, ByVal DOCUMENTO As String, ByVal BODEGA As String, ByVal ACTIVIDAD As String, ByVal CODIGO As String, ByVal CONCEPTO As String, ByVal PROVINCIA As String, ByVal CIUDAD As String, ByVal PARROQUIA As String, ByVal CENTRO_DE_COSTO As String, ByVal TIPO As String, ByVal RAZON As String, ByVal PERSONAL As String, ByVal PROVEEDOR As String) As ComprobanteEgresoRow
-            Dim rowComprobanteEgresoRow As ComprobanteEgresoRow = CType(Me.NewRow,ComprobanteEgresoRow)
+        Public Overloads Function AddComprobanteIngresoRow(ByVal COMPROBANTE As String, ByVal FECHA As String, ByVal DOCUMENTO As String, ByVal BODEGA As String, ByVal ACTIVIDAD As String, ByVal CODIGO As String, ByVal CONCEPTO As String, ByVal PROVINCIA As String, ByVal CIUDAD As String, ByVal PARROQUIA As String, ByVal CENTRO_DE_COSTO As String, ByVal TIPO As String, ByVal RAZON As String, ByVal PERSONAL As String, ByVal PROVEEDOR As String) As ComprobanteIngresoRow
+            Dim rowComprobanteIngresoRow As ComprobanteIngresoRow = CType(Me.NewRow,ComprobanteIngresoRow)
             Dim columnValuesArray() As Object = New Object() {COMPROBANTE, FECHA, DOCUMENTO, BODEGA, ACTIVIDAD, CODIGO, CONCEPTO, PROVINCIA, CIUDAD, PARROQUIA, CENTRO_DE_COSTO, TIPO, RAZON, PERSONAL, PROVEEDOR}
-            rowComprobanteEgresoRow.ItemArray = columnValuesArray
-            Me.Rows.Add(rowComprobanteEgresoRow)
-            Return rowComprobanteEgresoRow
+            rowComprobanteIngresoRow.ItemArray = columnValuesArray
+            Me.Rows.Add(rowComprobanteIngresoRow)
+            Return rowComprobanteIngresoRow
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Public Overrides Function Clone() As Global.System.Data.DataTable
-            Dim cln As ComprobanteEgresoDataTable = CType(MyBase.Clone,ComprobanteEgresoDataTable)
+            Dim cln As ComprobanteIngresoDataTable = CType(MyBase.Clone,ComprobanteIngresoDataTable)
             cln.InitVars
             Return cln
         End Function
@@ -559,7 +559,7 @@ Partial Public Class dsComprobanteIngreso
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Protected Overrides Function CreateInstance() As Global.System.Data.DataTable
-            Return New ComprobanteEgresoDataTable()
+            Return New ComprobanteIngresoDataTable()
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -619,28 +619,28 @@ Partial Public Class dsComprobanteIngreso
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Function NewComprobanteEgresoRow() As ComprobanteEgresoRow
-            Return CType(Me.NewRow,ComprobanteEgresoRow)
+        Public Function NewComprobanteIngresoRow() As ComprobanteIngresoRow
+            Return CType(Me.NewRow,ComprobanteIngresoRow)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Protected Overrides Function NewRowFromBuilder(ByVal builder As Global.System.Data.DataRowBuilder) As Global.System.Data.DataRow
-            Return New ComprobanteEgresoRow(builder)
+            Return New ComprobanteIngresoRow(builder)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Protected Overrides Function GetRowType() As Global.System.Type
-            Return GetType(ComprobanteEgresoRow)
+            Return GetType(ComprobanteIngresoRow)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Protected Overrides Sub OnRowChanged(ByVal e As Global.System.Data.DataRowChangeEventArgs)
             MyBase.OnRowChanged(e)
-            If (Not (Me.ComprobanteEgresoRowChangedEvent) Is Nothing) Then
-                RaiseEvent ComprobanteEgresoRowChanged(Me, New ComprobanteEgresoRowChangeEvent(CType(e.Row,ComprobanteEgresoRow), e.Action))
+            If (Not (Me.ComprobanteIngresoRowChangedEvent) Is Nothing) Then
+                RaiseEvent ComprobanteIngresoRowChanged(Me, New ComprobanteIngresoRowChangeEvent(CType(e.Row,ComprobanteIngresoRow), e.Action))
             End If
         End Sub
         
@@ -648,8 +648,8 @@ Partial Public Class dsComprobanteIngreso
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Protected Overrides Sub OnRowChanging(ByVal e As Global.System.Data.DataRowChangeEventArgs)
             MyBase.OnRowChanging(e)
-            If (Not (Me.ComprobanteEgresoRowChangingEvent) Is Nothing) Then
-                RaiseEvent ComprobanteEgresoRowChanging(Me, New ComprobanteEgresoRowChangeEvent(CType(e.Row,ComprobanteEgresoRow), e.Action))
+            If (Not (Me.ComprobanteIngresoRowChangingEvent) Is Nothing) Then
+                RaiseEvent ComprobanteIngresoRowChanging(Me, New ComprobanteIngresoRowChangeEvent(CType(e.Row,ComprobanteIngresoRow), e.Action))
             End If
         End Sub
         
@@ -657,8 +657,8 @@ Partial Public Class dsComprobanteIngreso
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Protected Overrides Sub OnRowDeleted(ByVal e As Global.System.Data.DataRowChangeEventArgs)
             MyBase.OnRowDeleted(e)
-            If (Not (Me.ComprobanteEgresoRowDeletedEvent) Is Nothing) Then
-                RaiseEvent ComprobanteEgresoRowDeleted(Me, New ComprobanteEgresoRowChangeEvent(CType(e.Row,ComprobanteEgresoRow), e.Action))
+            If (Not (Me.ComprobanteIngresoRowDeletedEvent) Is Nothing) Then
+                RaiseEvent ComprobanteIngresoRowDeleted(Me, New ComprobanteIngresoRowChangeEvent(CType(e.Row,ComprobanteIngresoRow), e.Action))
             End If
         End Sub
         
@@ -666,14 +666,14 @@ Partial Public Class dsComprobanteIngreso
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Protected Overrides Sub OnRowDeleting(ByVal e As Global.System.Data.DataRowChangeEventArgs)
             MyBase.OnRowDeleting(e)
-            If (Not (Me.ComprobanteEgresoRowDeletingEvent) Is Nothing) Then
-                RaiseEvent ComprobanteEgresoRowDeleting(Me, New ComprobanteEgresoRowChangeEvent(CType(e.Row,ComprobanteEgresoRow), e.Action))
+            If (Not (Me.ComprobanteIngresoRowDeletingEvent) Is Nothing) Then
+                RaiseEvent ComprobanteIngresoRowDeleting(Me, New ComprobanteIngresoRowChangeEvent(CType(e.Row,ComprobanteIngresoRow), e.Action))
             End If
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Sub RemoveComprobanteEgresoRow(ByVal row As ComprobanteEgresoRow)
+        Public Sub RemoveComprobanteIngresoRow(ByVal row As ComprobanteIngresoRow)
             Me.Rows.Remove(row)
         End Sub
         
@@ -682,7 +682,7 @@ Partial Public Class dsComprobanteIngreso
         Public Shared Function GetTypedTableSchema(ByVal xs As Global.System.Xml.Schema.XmlSchemaSet) As Global.System.Xml.Schema.XmlSchemaComplexType
             Dim type As Global.System.Xml.Schema.XmlSchemaComplexType = New Global.System.Xml.Schema.XmlSchemaComplexType()
             Dim sequence As Global.System.Xml.Schema.XmlSchemaSequence = New Global.System.Xml.Schema.XmlSchemaSequence()
-            Dim ds As dsComprobanteIngreso = New dsComprobanteIngreso()
+            Dim ds As dsComprabanteIngresoMin = New dsComprabanteIngresoMin()
             Dim any1 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
             any1.Namespace = "http://www.w3.org/2001/XMLSchema"
             any1.MinOccurs = New Decimal(0)
@@ -700,7 +700,7 @@ Partial Public Class dsComprobanteIngreso
             type.Attributes.Add(attribute1)
             Dim attribute2 As Global.System.Xml.Schema.XmlSchemaAttribute = New Global.System.Xml.Schema.XmlSchemaAttribute()
             attribute2.Name = "tableTypeName"
-            attribute2.FixedValue = "ComprobanteEgresoDataTable"
+            attribute2.FixedValue = "ComprobanteIngresoDataTable"
             type.Attributes.Add(attribute2)
             type.Particle = sequence
             Dim dsSchema As Global.System.Xml.Schema.XmlSchema = ds.GetSchemaSerializable
@@ -749,8 +749,8 @@ Partial Public Class dsComprobanteIngreso
     '''</summary>
     <Global.System.Serializable(),  _
      Global.System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")>  _
-    Partial Public Class DetalleComprobanteEgresoDataTable
-        Inherits Global.System.Data.TypedTableBase(Of DetalleComprobanteEgresoRow)
+    Partial Public Class DetalleComprobanteIngresoDataTable
+        Inherits Global.System.Data.TypedTableBase(Of DetalleComprobanteIngresoRow)
         
         Private columnCOMPROBANTE As Global.System.Data.DataColumn
         
@@ -768,7 +768,7 @@ Partial Public Class dsComprobanteIngreso
         
         Private columnOBSERVACION As Global.System.Data.DataColumn
         
-        Private columnCANTIDAD_EGRESO As Global.System.Data.DataColumn
+        Private columnCANTIDAD_INGRESO As Global.System.Data.DataColumn
         
         Private columnVALOR_UNITARIO As Global.System.Data.DataColumn
         
@@ -784,7 +784,7 @@ Partial Public Class dsComprobanteIngreso
         
         Private columnDETALLE As Global.System.Data.DataColumn
         
-        Private columnID_SEC As Global.System.Data.DataColumn
+        Private columnID_SECU As Global.System.Data.DataColumn
         
         Private columnCANTIDAD_SALDO As Global.System.Data.DataColumn
         
@@ -792,7 +792,7 @@ Partial Public Class dsComprobanteIngreso
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Public Sub New()
             MyBase.New
-            Me.TableName = "DetalleComprobanteEgreso"
+            Me.TableName = "DetalleComprobanteIngreso"
             Me.BeginInit
             Me.InitClass
             Me.EndInit
@@ -889,9 +889,9 @@ Partial Public Class dsComprobanteIngreso
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public ReadOnly Property CANTIDAD_EGRESOColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property CANTIDAD_INGRESOColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnCANTIDAD_EGRESO
+                Return Me.columnCANTIDAD_INGRESO
             End Get
         End Property
         
@@ -953,9 +953,9 @@ Partial Public Class dsComprobanteIngreso
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public ReadOnly Property ID_SECColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property ID_SECUColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnID_SEC
+                Return Me.columnID_SECU
             End Get
         End Property
         
@@ -978,33 +978,33 @@ Partial Public Class dsComprobanteIngreso
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Default ReadOnly Property Item(ByVal index As Integer) As DetalleComprobanteEgresoRow
+        Public Default ReadOnly Property Item(ByVal index As Integer) As DetalleComprobanteIngresoRow
             Get
-                Return CType(Me.Rows(index),DetalleComprobanteEgresoRow)
+                Return CType(Me.Rows(index),DetalleComprobanteIngresoRow)
             End Get
         End Property
         
         <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Event DetalleComprobanteEgresoRowChanging As DetalleComprobanteEgresoRowChangeEventHandler
+        Public Event DetalleComprobanteIngresoRowChanging As DetalleComprobanteIngresoRowChangeEventHandler
         
         <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Event DetalleComprobanteEgresoRowChanged As DetalleComprobanteEgresoRowChangeEventHandler
+        Public Event DetalleComprobanteIngresoRowChanged As DetalleComprobanteIngresoRowChangeEventHandler
         
         <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Event DetalleComprobanteEgresoRowDeleting As DetalleComprobanteEgresoRowChangeEventHandler
+        Public Event DetalleComprobanteIngresoRowDeleting As DetalleComprobanteIngresoRowChangeEventHandler
         
         <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Event DetalleComprobanteEgresoRowDeleted As DetalleComprobanteEgresoRowChangeEventHandler
+        Public Event DetalleComprobanteIngresoRowDeleted As DetalleComprobanteIngresoRowChangeEventHandler
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Overloads Sub AddDetalleComprobanteEgresoRow(ByVal row As DetalleComprobanteEgresoRow)
+        Public Overloads Sub AddDetalleComprobanteIngresoRow(ByVal row As DetalleComprobanteIngresoRow)
             Me.Rows.Add(row)
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Overloads Function AddDetalleComprobanteEgresoRow( _
+        Public Overloads Function AddDetalleComprobanteIngresoRow( _
                     ByVal COMPROBANTE As String,  _
                     ByVal ID_DET_COMP As String,  _
                     ByVal ID_KARDEX As String,  _
@@ -1013,7 +1013,7 @@ Partial Public Class dsComprobanteIngreso
                     ByVal ID_DET_KARDEX As String,  _
                     ByVal OBSERVACION_DETALLE As String,  _
                     ByVal OBSERVACION As String,  _
-                    ByVal CANTIDAD_EGRESO As String,  _
+                    ByVal CANTIDAD_INGRESO As String,  _
                     ByVal VALOR_UNITARIO As String,  _
                     ByVal VALOR_TOTAL As String,  _
                     ByVal CANTIDAD_TOTAL As String,  _
@@ -1021,19 +1021,19 @@ Partial Public Class dsComprobanteIngreso
                     ByVal ACTIVIDAD As String,  _
                     ByVal CODIGO As String,  _
                     ByVal DETALLE As String,  _
-                    ByVal ID_SEC As String,  _
-                    ByVal CANTIDAD_SALDO As String) As DetalleComprobanteEgresoRow
-            Dim rowDetalleComprobanteEgresoRow As DetalleComprobanteEgresoRow = CType(Me.NewRow,DetalleComprobanteEgresoRow)
-            Dim columnValuesArray() As Object = New Object() {COMPROBANTE, ID_DET_COMP, ID_KARDEX, ITEM, CANTIDAD_INICIAL, ID_DET_KARDEX, OBSERVACION_DETALLE, OBSERVACION, CANTIDAD_EGRESO, VALOR_UNITARIO, VALOR_TOTAL, CANTIDAD_TOTAL, FECHA, ACTIVIDAD, CODIGO, DETALLE, ID_SEC, CANTIDAD_SALDO}
-            rowDetalleComprobanteEgresoRow.ItemArray = columnValuesArray
-            Me.Rows.Add(rowDetalleComprobanteEgresoRow)
-            Return rowDetalleComprobanteEgresoRow
+                    ByVal ID_SECU As String,  _
+                    ByVal CANTIDAD_SALDO As String) As DetalleComprobanteIngresoRow
+            Dim rowDetalleComprobanteIngresoRow As DetalleComprobanteIngresoRow = CType(Me.NewRow,DetalleComprobanteIngresoRow)
+            Dim columnValuesArray() As Object = New Object() {COMPROBANTE, ID_DET_COMP, ID_KARDEX, ITEM, CANTIDAD_INICIAL, ID_DET_KARDEX, OBSERVACION_DETALLE, OBSERVACION, CANTIDAD_INGRESO, VALOR_UNITARIO, VALOR_TOTAL, CANTIDAD_TOTAL, FECHA, ACTIVIDAD, CODIGO, DETALLE, ID_SECU, CANTIDAD_SALDO}
+            rowDetalleComprobanteIngresoRow.ItemArray = columnValuesArray
+            Me.Rows.Add(rowDetalleComprobanteIngresoRow)
+            Return rowDetalleComprobanteIngresoRow
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Public Overrides Function Clone() As Global.System.Data.DataTable
-            Dim cln As DetalleComprobanteEgresoDataTable = CType(MyBase.Clone,DetalleComprobanteEgresoDataTable)
+            Dim cln As DetalleComprobanteIngresoDataTable = CType(MyBase.Clone,DetalleComprobanteIngresoDataTable)
             cln.InitVars
             Return cln
         End Function
@@ -1041,7 +1041,7 @@ Partial Public Class dsComprobanteIngreso
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Protected Overrides Function CreateInstance() As Global.System.Data.DataTable
-            Return New DetalleComprobanteEgresoDataTable()
+            Return New DetalleComprobanteIngresoDataTable()
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -1055,7 +1055,7 @@ Partial Public Class dsComprobanteIngreso
             Me.columnID_DET_KARDEX = MyBase.Columns("ID DET KARDEX")
             Me.columnOBSERVACION_DETALLE = MyBase.Columns("OBSERVACION_DETALLE")
             Me.columnOBSERVACION = MyBase.Columns("OBSERVACION")
-            Me.columnCANTIDAD_EGRESO = MyBase.Columns("CANTIDAD EGRESO")
+            Me.columnCANTIDAD_INGRESO = MyBase.Columns("CANTIDAD INGRESO")
             Me.columnVALOR_UNITARIO = MyBase.Columns("VALOR UNITARIO")
             Me.columnVALOR_TOTAL = MyBase.Columns("VALOR TOTAL")
             Me.columnCANTIDAD_TOTAL = MyBase.Columns("CANTIDAD TOTAL")
@@ -1063,7 +1063,7 @@ Partial Public Class dsComprobanteIngreso
             Me.columnACTIVIDAD = MyBase.Columns("ACTIVIDAD")
             Me.columnCODIGO = MyBase.Columns("CODIGO")
             Me.columnDETALLE = MyBase.Columns("DETALLE")
-            Me.columnID_SEC = MyBase.Columns("ID SEC")
+            Me.columnID_SECU = MyBase.Columns("ID SECU")
             Me.columnCANTIDAD_SALDO = MyBase.Columns("CANTIDAD SALDO")
         End Sub
         
@@ -1086,8 +1086,8 @@ Partial Public Class dsComprobanteIngreso
             MyBase.Columns.Add(Me.columnOBSERVACION_DETALLE)
             Me.columnOBSERVACION = New Global.System.Data.DataColumn("OBSERVACION", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnOBSERVACION)
-            Me.columnCANTIDAD_EGRESO = New Global.System.Data.DataColumn("CANTIDAD EGRESO", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnCANTIDAD_EGRESO)
+            Me.columnCANTIDAD_INGRESO = New Global.System.Data.DataColumn("CANTIDAD INGRESO", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnCANTIDAD_INGRESO)
             Me.columnVALOR_UNITARIO = New Global.System.Data.DataColumn("VALOR UNITARIO", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnVALOR_UNITARIO)
             Me.columnVALOR_TOTAL = New Global.System.Data.DataColumn("VALOR TOTAL", GetType(String), Nothing, Global.System.Data.MappingType.Element)
@@ -1102,36 +1102,36 @@ Partial Public Class dsComprobanteIngreso
             MyBase.Columns.Add(Me.columnCODIGO)
             Me.columnDETALLE = New Global.System.Data.DataColumn("DETALLE", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnDETALLE)
-            Me.columnID_SEC = New Global.System.Data.DataColumn("ID SEC", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnID_SEC)
+            Me.columnID_SECU = New Global.System.Data.DataColumn("ID SECU", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnID_SECU)
             Me.columnCANTIDAD_SALDO = New Global.System.Data.DataColumn("CANTIDAD SALDO", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnCANTIDAD_SALDO)
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Function NewDetalleComprobanteEgresoRow() As DetalleComprobanteEgresoRow
-            Return CType(Me.NewRow,DetalleComprobanteEgresoRow)
+        Public Function NewDetalleComprobanteIngresoRow() As DetalleComprobanteIngresoRow
+            Return CType(Me.NewRow,DetalleComprobanteIngresoRow)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Protected Overrides Function NewRowFromBuilder(ByVal builder As Global.System.Data.DataRowBuilder) As Global.System.Data.DataRow
-            Return New DetalleComprobanteEgresoRow(builder)
+            Return New DetalleComprobanteIngresoRow(builder)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Protected Overrides Function GetRowType() As Global.System.Type
-            Return GetType(DetalleComprobanteEgresoRow)
+            Return GetType(DetalleComprobanteIngresoRow)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Protected Overrides Sub OnRowChanged(ByVal e As Global.System.Data.DataRowChangeEventArgs)
             MyBase.OnRowChanged(e)
-            If (Not (Me.DetalleComprobanteEgresoRowChangedEvent) Is Nothing) Then
-                RaiseEvent DetalleComprobanteEgresoRowChanged(Me, New DetalleComprobanteEgresoRowChangeEvent(CType(e.Row,DetalleComprobanteEgresoRow), e.Action))
+            If (Not (Me.DetalleComprobanteIngresoRowChangedEvent) Is Nothing) Then
+                RaiseEvent DetalleComprobanteIngresoRowChanged(Me, New DetalleComprobanteIngresoRowChangeEvent(CType(e.Row,DetalleComprobanteIngresoRow), e.Action))
             End If
         End Sub
         
@@ -1139,8 +1139,8 @@ Partial Public Class dsComprobanteIngreso
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Protected Overrides Sub OnRowChanging(ByVal e As Global.System.Data.DataRowChangeEventArgs)
             MyBase.OnRowChanging(e)
-            If (Not (Me.DetalleComprobanteEgresoRowChangingEvent) Is Nothing) Then
-                RaiseEvent DetalleComprobanteEgresoRowChanging(Me, New DetalleComprobanteEgresoRowChangeEvent(CType(e.Row,DetalleComprobanteEgresoRow), e.Action))
+            If (Not (Me.DetalleComprobanteIngresoRowChangingEvent) Is Nothing) Then
+                RaiseEvent DetalleComprobanteIngresoRowChanging(Me, New DetalleComprobanteIngresoRowChangeEvent(CType(e.Row,DetalleComprobanteIngresoRow), e.Action))
             End If
         End Sub
         
@@ -1148,8 +1148,8 @@ Partial Public Class dsComprobanteIngreso
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Protected Overrides Sub OnRowDeleted(ByVal e As Global.System.Data.DataRowChangeEventArgs)
             MyBase.OnRowDeleted(e)
-            If (Not (Me.DetalleComprobanteEgresoRowDeletedEvent) Is Nothing) Then
-                RaiseEvent DetalleComprobanteEgresoRowDeleted(Me, New DetalleComprobanteEgresoRowChangeEvent(CType(e.Row,DetalleComprobanteEgresoRow), e.Action))
+            If (Not (Me.DetalleComprobanteIngresoRowDeletedEvent) Is Nothing) Then
+                RaiseEvent DetalleComprobanteIngresoRowDeleted(Me, New DetalleComprobanteIngresoRowChangeEvent(CType(e.Row,DetalleComprobanteIngresoRow), e.Action))
             End If
         End Sub
         
@@ -1157,14 +1157,14 @@ Partial Public Class dsComprobanteIngreso
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Protected Overrides Sub OnRowDeleting(ByVal e As Global.System.Data.DataRowChangeEventArgs)
             MyBase.OnRowDeleting(e)
-            If (Not (Me.DetalleComprobanteEgresoRowDeletingEvent) Is Nothing) Then
-                RaiseEvent DetalleComprobanteEgresoRowDeleting(Me, New DetalleComprobanteEgresoRowChangeEvent(CType(e.Row,DetalleComprobanteEgresoRow), e.Action))
+            If (Not (Me.DetalleComprobanteIngresoRowDeletingEvent) Is Nothing) Then
+                RaiseEvent DetalleComprobanteIngresoRowDeleting(Me, New DetalleComprobanteIngresoRowChangeEvent(CType(e.Row,DetalleComprobanteIngresoRow), e.Action))
             End If
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Sub RemoveDetalleComprobanteEgresoRow(ByVal row As DetalleComprobanteEgresoRow)
+        Public Sub RemoveDetalleComprobanteIngresoRow(ByVal row As DetalleComprobanteIngresoRow)
             Me.Rows.Remove(row)
         End Sub
         
@@ -1173,7 +1173,7 @@ Partial Public Class dsComprobanteIngreso
         Public Shared Function GetTypedTableSchema(ByVal xs As Global.System.Xml.Schema.XmlSchemaSet) As Global.System.Xml.Schema.XmlSchemaComplexType
             Dim type As Global.System.Xml.Schema.XmlSchemaComplexType = New Global.System.Xml.Schema.XmlSchemaComplexType()
             Dim sequence As Global.System.Xml.Schema.XmlSchemaSequence = New Global.System.Xml.Schema.XmlSchemaSequence()
-            Dim ds As dsComprobanteIngreso = New dsComprobanteIngreso()
+            Dim ds As dsComprabanteIngresoMin = New dsComprabanteIngresoMin()
             Dim any1 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
             any1.Namespace = "http://www.w3.org/2001/XMLSchema"
             any1.MinOccurs = New Decimal(0)
@@ -1191,7 +1191,7 @@ Partial Public Class dsComprobanteIngreso
             type.Attributes.Add(attribute1)
             Dim attribute2 As Global.System.Xml.Schema.XmlSchemaAttribute = New Global.System.Xml.Schema.XmlSchemaAttribute()
             attribute2.Name = "tableTypeName"
-            attribute2.FixedValue = "DetalleComprobanteEgresoDataTable"
+            attribute2.FixedValue = "DetalleComprobanteIngresoDataTable"
             type.Attributes.Add(attribute2)
             type.Particle = sequence
             Dim dsSchema As Global.System.Xml.Schema.XmlSchema = ds.GetSchemaSerializable
@@ -1238,16 +1238,16 @@ Partial Public Class dsComprobanteIngreso
     '''<summary>
     '''Represents strongly named DataRow class.
     '''</summary>
-    Partial Public Class ComprobanteEgresoRow
+    Partial Public Class ComprobanteIngresoRow
         Inherits Global.System.Data.DataRow
         
-        Private tableComprobanteEgreso As ComprobanteEgresoDataTable
+        Private tableComprobanteIngreso As ComprobanteIngresoDataTable
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Friend Sub New(ByVal rb As Global.System.Data.DataRowBuilder)
             MyBase.New(rb)
-            Me.tableComprobanteEgreso = CType(Me.Table,ComprobanteEgresoDataTable)
+            Me.tableComprobanteIngreso = CType(Me.Table,ComprobanteIngresoDataTable)
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -1255,13 +1255,13 @@ Partial Public Class dsComprobanteIngreso
         Public Property COMPROBANTE() As String
             Get
                 Try 
-                    Return CType(Me(Me.tableComprobanteEgreso.COMPROBANTEColumn),String)
+                    Return CType(Me(Me.tableComprobanteIngreso.COMPROBANTEColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'COMPROBANTE' de la tabla 'ComprobanteEgreso' es DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'COMPROBANTE' de la tabla 'ComprobanteIngreso' es DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tableComprobanteEgreso.COMPROBANTEColumn) = value
+                Me(Me.tableComprobanteIngreso.COMPROBANTEColumn) = value
             End Set
         End Property
         
@@ -1270,13 +1270,13 @@ Partial Public Class dsComprobanteIngreso
         Public Property FECHA() As String
             Get
                 Try 
-                    Return CType(Me(Me.tableComprobanteEgreso.FECHAColumn),String)
+                    Return CType(Me(Me.tableComprobanteIngreso.FECHAColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'FECHA' de la tabla 'ComprobanteEgreso' es DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'FECHA' de la tabla 'ComprobanteIngreso' es DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tableComprobanteEgreso.FECHAColumn) = value
+                Me(Me.tableComprobanteIngreso.FECHAColumn) = value
             End Set
         End Property
         
@@ -1285,13 +1285,13 @@ Partial Public Class dsComprobanteIngreso
         Public Property DOCUMENTO() As String
             Get
                 Try 
-                    Return CType(Me(Me.tableComprobanteEgreso.DOCUMENTOColumn),String)
+                    Return CType(Me(Me.tableComprobanteIngreso.DOCUMENTOColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'DOCUMENTO' de la tabla 'ComprobanteEgreso' es DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'DOCUMENTO' de la tabla 'ComprobanteIngreso' es DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tableComprobanteEgreso.DOCUMENTOColumn) = value
+                Me(Me.tableComprobanteIngreso.DOCUMENTOColumn) = value
             End Set
         End Property
         
@@ -1300,13 +1300,13 @@ Partial Public Class dsComprobanteIngreso
         Public Property BODEGA() As String
             Get
                 Try 
-                    Return CType(Me(Me.tableComprobanteEgreso.BODEGAColumn),String)
+                    Return CType(Me(Me.tableComprobanteIngreso.BODEGAColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'BODEGA' de la tabla 'ComprobanteEgreso' es DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'BODEGA' de la tabla 'ComprobanteIngreso' es DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tableComprobanteEgreso.BODEGAColumn) = value
+                Me(Me.tableComprobanteIngreso.BODEGAColumn) = value
             End Set
         End Property
         
@@ -1315,13 +1315,13 @@ Partial Public Class dsComprobanteIngreso
         Public Property ACTIVIDAD() As String
             Get
                 Try 
-                    Return CType(Me(Me.tableComprobanteEgreso.ACTIVIDADColumn),String)
+                    Return CType(Me(Me.tableComprobanteIngreso.ACTIVIDADColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'ACTIVIDAD' de la tabla 'ComprobanteEgreso' es DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'ACTIVIDAD' de la tabla 'ComprobanteIngreso' es DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tableComprobanteEgreso.ACTIVIDADColumn) = value
+                Me(Me.tableComprobanteIngreso.ACTIVIDADColumn) = value
             End Set
         End Property
         
@@ -1330,13 +1330,13 @@ Partial Public Class dsComprobanteIngreso
         Public Property CODIGO() As String
             Get
                 Try 
-                    Return CType(Me(Me.tableComprobanteEgreso.CODIGOColumn),String)
+                    Return CType(Me(Me.tableComprobanteIngreso.CODIGOColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'CODIGO' de la tabla 'ComprobanteEgreso' es DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'CODIGO' de la tabla 'ComprobanteIngreso' es DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tableComprobanteEgreso.CODIGOColumn) = value
+                Me(Me.tableComprobanteIngreso.CODIGOColumn) = value
             End Set
         End Property
         
@@ -1345,13 +1345,13 @@ Partial Public Class dsComprobanteIngreso
         Public Property CONCEPTO() As String
             Get
                 Try 
-                    Return CType(Me(Me.tableComprobanteEgreso.CONCEPTOColumn),String)
+                    Return CType(Me(Me.tableComprobanteIngreso.CONCEPTOColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'CONCEPTO' de la tabla 'ComprobanteEgreso' es DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'CONCEPTO' de la tabla 'ComprobanteIngreso' es DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tableComprobanteEgreso.CONCEPTOColumn) = value
+                Me(Me.tableComprobanteIngreso.CONCEPTOColumn) = value
             End Set
         End Property
         
@@ -1360,13 +1360,13 @@ Partial Public Class dsComprobanteIngreso
         Public Property PROVINCIA() As String
             Get
                 Try 
-                    Return CType(Me(Me.tableComprobanteEgreso.PROVINCIAColumn),String)
+                    Return CType(Me(Me.tableComprobanteIngreso.PROVINCIAColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'PROVINCIA' de la tabla 'ComprobanteEgreso' es DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'PROVINCIA' de la tabla 'ComprobanteIngreso' es DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tableComprobanteEgreso.PROVINCIAColumn) = value
+                Me(Me.tableComprobanteIngreso.PROVINCIAColumn) = value
             End Set
         End Property
         
@@ -1375,13 +1375,13 @@ Partial Public Class dsComprobanteIngreso
         Public Property CIUDAD() As String
             Get
                 Try 
-                    Return CType(Me(Me.tableComprobanteEgreso.CIUDADColumn),String)
+                    Return CType(Me(Me.tableComprobanteIngreso.CIUDADColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'CIUDAD' de la tabla 'ComprobanteEgreso' es DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'CIUDAD' de la tabla 'ComprobanteIngreso' es DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tableComprobanteEgreso.CIUDADColumn) = value
+                Me(Me.tableComprobanteIngreso.CIUDADColumn) = value
             End Set
         End Property
         
@@ -1390,13 +1390,13 @@ Partial Public Class dsComprobanteIngreso
         Public Property PARROQUIA() As String
             Get
                 Try 
-                    Return CType(Me(Me.tableComprobanteEgreso.PARROQUIAColumn),String)
+                    Return CType(Me(Me.tableComprobanteIngreso.PARROQUIAColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'PARROQUIA' de la tabla 'ComprobanteEgreso' es DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'PARROQUIA' de la tabla 'ComprobanteIngreso' es DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tableComprobanteEgreso.PARROQUIAColumn) = value
+                Me(Me.tableComprobanteIngreso.PARROQUIAColumn) = value
             End Set
         End Property
         
@@ -1405,14 +1405,14 @@ Partial Public Class dsComprobanteIngreso
         Public Property CENTRO_DE_COSTO() As String
             Get
                 Try 
-                    Return CType(Me(Me.tableComprobanteEgreso.CENTRO_DE_COSTOColumn),String)
+                    Return CType(Me(Me.tableComprobanteIngreso.CENTRO_DE_COSTOColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'CENTRO DE COSTO' de la tabla 'ComprobanteEgreso' es DBNul"& _ 
-                            "l.", e)
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'CENTRO DE COSTO' de la tabla 'ComprobanteIngreso' es DBNu"& _ 
+                            "ll.", e)
                 End Try
             End Get
             Set
-                Me(Me.tableComprobanteEgreso.CENTRO_DE_COSTOColumn) = value
+                Me(Me.tableComprobanteIngreso.CENTRO_DE_COSTOColumn) = value
             End Set
         End Property
         
@@ -1421,13 +1421,13 @@ Partial Public Class dsComprobanteIngreso
         Public Property TIPO() As String
             Get
                 Try 
-                    Return CType(Me(Me.tableComprobanteEgreso.TIPOColumn),String)
+                    Return CType(Me(Me.tableComprobanteIngreso.TIPOColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'TIPO' de la tabla 'ComprobanteEgreso' es DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'TIPO' de la tabla 'ComprobanteIngreso' es DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tableComprobanteEgreso.TIPOColumn) = value
+                Me(Me.tableComprobanteIngreso.TIPOColumn) = value
             End Set
         End Property
         
@@ -1436,13 +1436,13 @@ Partial Public Class dsComprobanteIngreso
         Public Property RAZON() As String
             Get
                 Try 
-                    Return CType(Me(Me.tableComprobanteEgreso.RAZONColumn),String)
+                    Return CType(Me(Me.tableComprobanteIngreso.RAZONColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'RAZON' de la tabla 'ComprobanteEgreso' es DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'RAZON' de la tabla 'ComprobanteIngreso' es DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tableComprobanteEgreso.RAZONColumn) = value
+                Me(Me.tableComprobanteIngreso.RAZONColumn) = value
             End Set
         End Property
         
@@ -1451,13 +1451,13 @@ Partial Public Class dsComprobanteIngreso
         Public Property PERSONAL() As String
             Get
                 Try 
-                    Return CType(Me(Me.tableComprobanteEgreso.PERSONALColumn),String)
+                    Return CType(Me(Me.tableComprobanteIngreso.PERSONALColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'PERSONAL' de la tabla 'ComprobanteEgreso' es DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'PERSONAL' de la tabla 'ComprobanteIngreso' es DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tableComprobanteEgreso.PERSONALColumn) = value
+                Me(Me.tableComprobanteIngreso.PERSONALColumn) = value
             End Set
         End Property
         
@@ -1466,210 +1466,210 @@ Partial Public Class dsComprobanteIngreso
         Public Property PROVEEDOR() As String
             Get
                 Try 
-                    Return CType(Me(Me.tableComprobanteEgreso.PROVEEDORColumn),String)
+                    Return CType(Me(Me.tableComprobanteIngreso.PROVEEDORColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'PROVEEDOR' de la tabla 'ComprobanteEgreso' es DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'PROVEEDOR' de la tabla 'ComprobanteIngreso' es DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tableComprobanteEgreso.PROVEEDORColumn) = value
+                Me(Me.tableComprobanteIngreso.PROVEEDORColumn) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Public Function IsCOMPROBANTENull() As Boolean
-            Return Me.IsNull(Me.tableComprobanteEgreso.COMPROBANTEColumn)
+            Return Me.IsNull(Me.tableComprobanteIngreso.COMPROBANTEColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Public Sub SetCOMPROBANTENull()
-            Me(Me.tableComprobanteEgreso.COMPROBANTEColumn) = Global.System.Convert.DBNull
+            Me(Me.tableComprobanteIngreso.COMPROBANTEColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Public Function IsFECHANull() As Boolean
-            Return Me.IsNull(Me.tableComprobanteEgreso.FECHAColumn)
+            Return Me.IsNull(Me.tableComprobanteIngreso.FECHAColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Public Sub SetFECHANull()
-            Me(Me.tableComprobanteEgreso.FECHAColumn) = Global.System.Convert.DBNull
+            Me(Me.tableComprobanteIngreso.FECHAColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Public Function IsDOCUMENTONull() As Boolean
-            Return Me.IsNull(Me.tableComprobanteEgreso.DOCUMENTOColumn)
+            Return Me.IsNull(Me.tableComprobanteIngreso.DOCUMENTOColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Public Sub SetDOCUMENTONull()
-            Me(Me.tableComprobanteEgreso.DOCUMENTOColumn) = Global.System.Convert.DBNull
+            Me(Me.tableComprobanteIngreso.DOCUMENTOColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Public Function IsBODEGANull() As Boolean
-            Return Me.IsNull(Me.tableComprobanteEgreso.BODEGAColumn)
+            Return Me.IsNull(Me.tableComprobanteIngreso.BODEGAColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Public Sub SetBODEGANull()
-            Me(Me.tableComprobanteEgreso.BODEGAColumn) = Global.System.Convert.DBNull
+            Me(Me.tableComprobanteIngreso.BODEGAColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Public Function IsACTIVIDADNull() As Boolean
-            Return Me.IsNull(Me.tableComprobanteEgreso.ACTIVIDADColumn)
+            Return Me.IsNull(Me.tableComprobanteIngreso.ACTIVIDADColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Public Sub SetACTIVIDADNull()
-            Me(Me.tableComprobanteEgreso.ACTIVIDADColumn) = Global.System.Convert.DBNull
+            Me(Me.tableComprobanteIngreso.ACTIVIDADColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Public Function IsCODIGONull() As Boolean
-            Return Me.IsNull(Me.tableComprobanteEgreso.CODIGOColumn)
+            Return Me.IsNull(Me.tableComprobanteIngreso.CODIGOColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Public Sub SetCODIGONull()
-            Me(Me.tableComprobanteEgreso.CODIGOColumn) = Global.System.Convert.DBNull
+            Me(Me.tableComprobanteIngreso.CODIGOColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Public Function IsCONCEPTONull() As Boolean
-            Return Me.IsNull(Me.tableComprobanteEgreso.CONCEPTOColumn)
+            Return Me.IsNull(Me.tableComprobanteIngreso.CONCEPTOColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Public Sub SetCONCEPTONull()
-            Me(Me.tableComprobanteEgreso.CONCEPTOColumn) = Global.System.Convert.DBNull
+            Me(Me.tableComprobanteIngreso.CONCEPTOColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Public Function IsPROVINCIANull() As Boolean
-            Return Me.IsNull(Me.tableComprobanteEgreso.PROVINCIAColumn)
+            Return Me.IsNull(Me.tableComprobanteIngreso.PROVINCIAColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Public Sub SetPROVINCIANull()
-            Me(Me.tableComprobanteEgreso.PROVINCIAColumn) = Global.System.Convert.DBNull
+            Me(Me.tableComprobanteIngreso.PROVINCIAColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Public Function IsCIUDADNull() As Boolean
-            Return Me.IsNull(Me.tableComprobanteEgreso.CIUDADColumn)
+            Return Me.IsNull(Me.tableComprobanteIngreso.CIUDADColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Public Sub SetCIUDADNull()
-            Me(Me.tableComprobanteEgreso.CIUDADColumn) = Global.System.Convert.DBNull
+            Me(Me.tableComprobanteIngreso.CIUDADColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Public Function IsPARROQUIANull() As Boolean
-            Return Me.IsNull(Me.tableComprobanteEgreso.PARROQUIAColumn)
+            Return Me.IsNull(Me.tableComprobanteIngreso.PARROQUIAColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Public Sub SetPARROQUIANull()
-            Me(Me.tableComprobanteEgreso.PARROQUIAColumn) = Global.System.Convert.DBNull
+            Me(Me.tableComprobanteIngreso.PARROQUIAColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Public Function IsCENTRO_DE_COSTONull() As Boolean
-            Return Me.IsNull(Me.tableComprobanteEgreso.CENTRO_DE_COSTOColumn)
+            Return Me.IsNull(Me.tableComprobanteIngreso.CENTRO_DE_COSTOColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Public Sub SetCENTRO_DE_COSTONull()
-            Me(Me.tableComprobanteEgreso.CENTRO_DE_COSTOColumn) = Global.System.Convert.DBNull
+            Me(Me.tableComprobanteIngreso.CENTRO_DE_COSTOColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Public Function IsTIPONull() As Boolean
-            Return Me.IsNull(Me.tableComprobanteEgreso.TIPOColumn)
+            Return Me.IsNull(Me.tableComprobanteIngreso.TIPOColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Public Sub SetTIPONull()
-            Me(Me.tableComprobanteEgreso.TIPOColumn) = Global.System.Convert.DBNull
+            Me(Me.tableComprobanteIngreso.TIPOColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Public Function IsRAZONNull() As Boolean
-            Return Me.IsNull(Me.tableComprobanteEgreso.RAZONColumn)
+            Return Me.IsNull(Me.tableComprobanteIngreso.RAZONColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Public Sub SetRAZONNull()
-            Me(Me.tableComprobanteEgreso.RAZONColumn) = Global.System.Convert.DBNull
+            Me(Me.tableComprobanteIngreso.RAZONColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Public Function IsPERSONALNull() As Boolean
-            Return Me.IsNull(Me.tableComprobanteEgreso.PERSONALColumn)
+            Return Me.IsNull(Me.tableComprobanteIngreso.PERSONALColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Public Sub SetPERSONALNull()
-            Me(Me.tableComprobanteEgreso.PERSONALColumn) = Global.System.Convert.DBNull
+            Me(Me.tableComprobanteIngreso.PERSONALColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Public Function IsPROVEEDORNull() As Boolean
-            Return Me.IsNull(Me.tableComprobanteEgreso.PROVEEDORColumn)
+            Return Me.IsNull(Me.tableComprobanteIngreso.PROVEEDORColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Public Sub SetPROVEEDORNull()
-            Me(Me.tableComprobanteEgreso.PROVEEDORColumn) = Global.System.Convert.DBNull
+            Me(Me.tableComprobanteIngreso.PROVEEDORColumn) = Global.System.Convert.DBNull
         End Sub
     End Class
     
     '''<summary>
     '''Represents strongly named DataRow class.
     '''</summary>
-    Partial Public Class DetalleComprobanteEgresoRow
+    Partial Public Class DetalleComprobanteIngresoRow
         Inherits Global.System.Data.DataRow
         
-        Private tableDetalleComprobanteEgreso As DetalleComprobanteEgresoDataTable
+        Private tableDetalleComprobanteIngreso As DetalleComprobanteIngresoDataTable
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Friend Sub New(ByVal rb As Global.System.Data.DataRowBuilder)
             MyBase.New(rb)
-            Me.tableDetalleComprobanteEgreso = CType(Me.Table,DetalleComprobanteEgresoDataTable)
+            Me.tableDetalleComprobanteIngreso = CType(Me.Table,DetalleComprobanteIngresoDataTable)
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -1677,14 +1677,14 @@ Partial Public Class dsComprobanteIngreso
         Public Property COMPROBANTE() As String
             Get
                 Try 
-                    Return CType(Me(Me.tableDetalleComprobanteEgreso.COMPROBANTEColumn),String)
+                    Return CType(Me(Me.tableDetalleComprobanteIngreso.COMPROBANTEColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'COMPROBANTE' de la tabla 'DetalleComprobanteEgreso' es DB"& _ 
-                            "Null.", e)
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'COMPROBANTE' de la tabla 'DetalleComprobanteIngreso' es D"& _ 
+                            "BNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tableDetalleComprobanteEgreso.COMPROBANTEColumn) = value
+                Me(Me.tableDetalleComprobanteIngreso.COMPROBANTEColumn) = value
             End Set
         End Property
         
@@ -1693,14 +1693,14 @@ Partial Public Class dsComprobanteIngreso
         Public Property ID_DET_COMP() As String
             Get
                 Try 
-                    Return CType(Me(Me.tableDetalleComprobanteEgreso.ID_DET_COMPColumn),String)
+                    Return CType(Me(Me.tableDetalleComprobanteIngreso.ID_DET_COMPColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'ID DET COMP' de la tabla 'DetalleComprobanteEgreso' es DB"& _ 
-                            "Null.", e)
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'ID DET COMP' de la tabla 'DetalleComprobanteIngreso' es D"& _ 
+                            "BNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tableDetalleComprobanteEgreso.ID_DET_COMPColumn) = value
+                Me(Me.tableDetalleComprobanteIngreso.ID_DET_COMPColumn) = value
             End Set
         End Property
         
@@ -1709,14 +1709,14 @@ Partial Public Class dsComprobanteIngreso
         Public Property ID_KARDEX() As String
             Get
                 Try 
-                    Return CType(Me(Me.tableDetalleComprobanteEgreso.ID_KARDEXColumn),String)
+                    Return CType(Me(Me.tableDetalleComprobanteIngreso.ID_KARDEXColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'ID KARDEX' de la tabla 'DetalleComprobanteEgreso' es DBNu"& _ 
-                            "ll.", e)
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'ID KARDEX' de la tabla 'DetalleComprobanteIngreso' es DBN"& _ 
+                            "ull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tableDetalleComprobanteEgreso.ID_KARDEXColumn) = value
+                Me(Me.tableDetalleComprobanteIngreso.ID_KARDEXColumn) = value
             End Set
         End Property
         
@@ -1725,13 +1725,13 @@ Partial Public Class dsComprobanteIngreso
         Public Property ITEM() As String
             Get
                 Try 
-                    Return CType(Me(Me.tableDetalleComprobanteEgreso.ITEMColumn),String)
+                    Return CType(Me(Me.tableDetalleComprobanteIngreso.ITEMColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'ITEM' de la tabla 'DetalleComprobanteEgreso' es DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'ITEM' de la tabla 'DetalleComprobanteIngreso' es DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tableDetalleComprobanteEgreso.ITEMColumn) = value
+                Me(Me.tableDetalleComprobanteIngreso.ITEMColumn) = value
             End Set
         End Property
         
@@ -1740,14 +1740,14 @@ Partial Public Class dsComprobanteIngreso
         Public Property CANTIDAD_INICIAL() As String
             Get
                 Try 
-                    Return CType(Me(Me.tableDetalleComprobanteEgreso.CANTIDAD_INICIALColumn),String)
+                    Return CType(Me(Me.tableDetalleComprobanteIngreso.CANTIDAD_INICIALColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'CANTIDAD INICIAL' de la tabla 'DetalleComprobanteEgreso' "& _ 
-                            "es DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'CANTIDAD INICIAL' de la tabla 'DetalleComprobanteIngreso'"& _ 
+                            " es DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tableDetalleComprobanteEgreso.CANTIDAD_INICIALColumn) = value
+                Me(Me.tableDetalleComprobanteIngreso.CANTIDAD_INICIALColumn) = value
             End Set
         End Property
         
@@ -1756,14 +1756,14 @@ Partial Public Class dsComprobanteIngreso
         Public Property ID_DET_KARDEX() As String
             Get
                 Try 
-                    Return CType(Me(Me.tableDetalleComprobanteEgreso.ID_DET_KARDEXColumn),String)
+                    Return CType(Me(Me.tableDetalleComprobanteIngreso.ID_DET_KARDEXColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'ID DET KARDEX' de la tabla 'DetalleComprobanteEgreso' es "& _ 
-                            "DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'ID DET KARDEX' de la tabla 'DetalleComprobanteIngreso' es"& _ 
+                            " DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tableDetalleComprobanteEgreso.ID_DET_KARDEXColumn) = value
+                Me(Me.tableDetalleComprobanteIngreso.ID_DET_KARDEXColumn) = value
             End Set
         End Property
         
@@ -1772,14 +1772,14 @@ Partial Public Class dsComprobanteIngreso
         Public Property OBSERVACION_DETALLE() As String
             Get
                 Try 
-                    Return CType(Me(Me.tableDetalleComprobanteEgreso.OBSERVACION_DETALLEColumn),String)
+                    Return CType(Me(Me.tableDetalleComprobanteIngreso.OBSERVACION_DETALLEColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'OBSERVACION_DETALLE' de la tabla 'DetalleComprobanteEgres"& _ 
-                            "o' es DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'OBSERVACION_DETALLE' de la tabla 'DetalleComprobanteIngre"& _ 
+                            "so' es DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tableDetalleComprobanteEgreso.OBSERVACION_DETALLEColumn) = value
+                Me(Me.tableDetalleComprobanteIngreso.OBSERVACION_DETALLEColumn) = value
             End Set
         End Property
         
@@ -1788,30 +1788,30 @@ Partial Public Class dsComprobanteIngreso
         Public Property OBSERVACION() As String
             Get
                 Try 
-                    Return CType(Me(Me.tableDetalleComprobanteEgreso.OBSERVACIONColumn),String)
+                    Return CType(Me(Me.tableDetalleComprobanteIngreso.OBSERVACIONColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'OBSERVACION' de la tabla 'DetalleComprobanteEgreso' es DB"& _ 
-                            "Null.", e)
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'OBSERVACION' de la tabla 'DetalleComprobanteIngreso' es D"& _ 
+                            "BNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tableDetalleComprobanteEgreso.OBSERVACIONColumn) = value
+                Me(Me.tableDetalleComprobanteIngreso.OBSERVACIONColumn) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Property CANTIDAD_EGRESO() As String
+        Public Property CANTIDAD_INGRESO() As String
             Get
                 Try 
-                    Return CType(Me(Me.tableDetalleComprobanteEgreso.CANTIDAD_EGRESOColumn),String)
+                    Return CType(Me(Me.tableDetalleComprobanteIngreso.CANTIDAD_INGRESOColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'CANTIDAD EGRESO' de la tabla 'DetalleComprobanteEgreso' e"& _ 
-                            "s DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'CANTIDAD INGRESO' de la tabla 'DetalleComprobanteIngreso'"& _ 
+                            " es DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tableDetalleComprobanteEgreso.CANTIDAD_EGRESOColumn) = value
+                Me(Me.tableDetalleComprobanteIngreso.CANTIDAD_INGRESOColumn) = value
             End Set
         End Property
         
@@ -1820,14 +1820,14 @@ Partial Public Class dsComprobanteIngreso
         Public Property VALOR_UNITARIO() As String
             Get
                 Try 
-                    Return CType(Me(Me.tableDetalleComprobanteEgreso.VALOR_UNITARIOColumn),String)
+                    Return CType(Me(Me.tableDetalleComprobanteIngreso.VALOR_UNITARIOColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'VALOR UNITARIO' de la tabla 'DetalleComprobanteEgreso' es"& _ 
-                            " DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'VALOR UNITARIO' de la tabla 'DetalleComprobanteIngreso' e"& _ 
+                            "s DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tableDetalleComprobanteEgreso.VALOR_UNITARIOColumn) = value
+                Me(Me.tableDetalleComprobanteIngreso.VALOR_UNITARIOColumn) = value
             End Set
         End Property
         
@@ -1836,14 +1836,14 @@ Partial Public Class dsComprobanteIngreso
         Public Property VALOR_TOTAL() As String
             Get
                 Try 
-                    Return CType(Me(Me.tableDetalleComprobanteEgreso.VALOR_TOTALColumn),String)
+                    Return CType(Me(Me.tableDetalleComprobanteIngreso.VALOR_TOTALColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'VALOR TOTAL' de la tabla 'DetalleComprobanteEgreso' es DB"& _ 
-                            "Null.", e)
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'VALOR TOTAL' de la tabla 'DetalleComprobanteIngreso' es D"& _ 
+                            "BNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tableDetalleComprobanteEgreso.VALOR_TOTALColumn) = value
+                Me(Me.tableDetalleComprobanteIngreso.VALOR_TOTALColumn) = value
             End Set
         End Property
         
@@ -1852,14 +1852,14 @@ Partial Public Class dsComprobanteIngreso
         Public Property CANTIDAD_TOTAL() As String
             Get
                 Try 
-                    Return CType(Me(Me.tableDetalleComprobanteEgreso.CANTIDAD_TOTALColumn),String)
+                    Return CType(Me(Me.tableDetalleComprobanteIngreso.CANTIDAD_TOTALColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'CANTIDAD TOTAL' de la tabla 'DetalleComprobanteEgreso' es"& _ 
-                            " DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'CANTIDAD TOTAL' de la tabla 'DetalleComprobanteIngreso' e"& _ 
+                            "s DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tableDetalleComprobanteEgreso.CANTIDAD_TOTALColumn) = value
+                Me(Me.tableDetalleComprobanteIngreso.CANTIDAD_TOTALColumn) = value
             End Set
         End Property
         
@@ -1868,13 +1868,14 @@ Partial Public Class dsComprobanteIngreso
         Public Property FECHA() As String
             Get
                 Try 
-                    Return CType(Me(Me.tableDetalleComprobanteEgreso.FECHAColumn),String)
+                    Return CType(Me(Me.tableDetalleComprobanteIngreso.FECHAColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'FECHA' de la tabla 'DetalleComprobanteEgreso' es DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'FECHA' de la tabla 'DetalleComprobanteIngreso' es DBNull."& _ 
+                            "", e)
                 End Try
             End Get
             Set
-                Me(Me.tableDetalleComprobanteEgreso.FECHAColumn) = value
+                Me(Me.tableDetalleComprobanteIngreso.FECHAColumn) = value
             End Set
         End Property
         
@@ -1883,14 +1884,14 @@ Partial Public Class dsComprobanteIngreso
         Public Property ACTIVIDAD() As String
             Get
                 Try 
-                    Return CType(Me(Me.tableDetalleComprobanteEgreso.ACTIVIDADColumn),String)
+                    Return CType(Me(Me.tableDetalleComprobanteIngreso.ACTIVIDADColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'ACTIVIDAD' de la tabla 'DetalleComprobanteEgreso' es DBNu"& _ 
-                            "ll.", e)
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'ACTIVIDAD' de la tabla 'DetalleComprobanteIngreso' es DBN"& _ 
+                            "ull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tableDetalleComprobanteEgreso.ACTIVIDADColumn) = value
+                Me(Me.tableDetalleComprobanteIngreso.ACTIVIDADColumn) = value
             End Set
         End Property
         
@@ -1899,14 +1900,14 @@ Partial Public Class dsComprobanteIngreso
         Public Property CODIGO() As String
             Get
                 Try 
-                    Return CType(Me(Me.tableDetalleComprobanteEgreso.CODIGOColumn),String)
+                    Return CType(Me(Me.tableDetalleComprobanteIngreso.CODIGOColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'CODIGO' de la tabla 'DetalleComprobanteEgreso' es DBNull."& _ 
-                            "", e)
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'CODIGO' de la tabla 'DetalleComprobanteIngreso' es DBNull"& _ 
+                            ".", e)
                 End Try
             End Get
             Set
-                Me(Me.tableDetalleComprobanteEgreso.CODIGOColumn) = value
+                Me(Me.tableDetalleComprobanteIngreso.CODIGOColumn) = value
             End Set
         End Property
         
@@ -1915,30 +1916,30 @@ Partial Public Class dsComprobanteIngreso
         Public Property DETALLE() As String
             Get
                 Try 
-                    Return CType(Me(Me.tableDetalleComprobanteEgreso.DETALLEColumn),String)
+                    Return CType(Me(Me.tableDetalleComprobanteIngreso.DETALLEColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'DETALLE' de la tabla 'DetalleComprobanteEgreso' es DBNull"& _ 
-                            ".", e)
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'DETALLE' de la tabla 'DetalleComprobanteIngreso' es DBNul"& _ 
+                            "l.", e)
                 End Try
             End Get
             Set
-                Me(Me.tableDetalleComprobanteEgreso.DETALLEColumn) = value
+                Me(Me.tableDetalleComprobanteIngreso.DETALLEColumn) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Property ID_SEC() As String
+        Public Property ID_SECU() As String
             Get
                 Try 
-                    Return CType(Me(Me.tableDetalleComprobanteEgreso.ID_SECColumn),String)
+                    Return CType(Me(Me.tableDetalleComprobanteIngreso.ID_SECUColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'ID SEC' de la tabla 'DetalleComprobanteEgreso' es DBNull."& _ 
-                            "", e)
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'ID SECU' de la tabla 'DetalleComprobanteIngreso' es DBNul"& _ 
+                            "l.", e)
                 End Try
             End Get
             Set
-                Me(Me.tableDetalleComprobanteEgreso.ID_SECColumn) = value
+                Me(Me.tableDetalleComprobanteIngreso.ID_SECUColumn) = value
             End Set
         End Property
         
@@ -1947,231 +1948,231 @@ Partial Public Class dsComprobanteIngreso
         Public Property CANTIDAD_SALDO() As String
             Get
                 Try 
-                    Return CType(Me(Me.tableDetalleComprobanteEgreso.CANTIDAD_SALDOColumn),String)
+                    Return CType(Me(Me.tableDetalleComprobanteIngreso.CANTIDAD_SALDOColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'CANTIDAD SALDO' de la tabla 'DetalleComprobanteEgreso' es"& _ 
-                            " DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'CANTIDAD SALDO' de la tabla 'DetalleComprobanteIngreso' e"& _ 
+                            "s DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tableDetalleComprobanteEgreso.CANTIDAD_SALDOColumn) = value
+                Me(Me.tableDetalleComprobanteIngreso.CANTIDAD_SALDOColumn) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Public Function IsCOMPROBANTENull() As Boolean
-            Return Me.IsNull(Me.tableDetalleComprobanteEgreso.COMPROBANTEColumn)
+            Return Me.IsNull(Me.tableDetalleComprobanteIngreso.COMPROBANTEColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Public Sub SetCOMPROBANTENull()
-            Me(Me.tableDetalleComprobanteEgreso.COMPROBANTEColumn) = Global.System.Convert.DBNull
+            Me(Me.tableDetalleComprobanteIngreso.COMPROBANTEColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Public Function IsID_DET_COMPNull() As Boolean
-            Return Me.IsNull(Me.tableDetalleComprobanteEgreso.ID_DET_COMPColumn)
+            Return Me.IsNull(Me.tableDetalleComprobanteIngreso.ID_DET_COMPColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Public Sub SetID_DET_COMPNull()
-            Me(Me.tableDetalleComprobanteEgreso.ID_DET_COMPColumn) = Global.System.Convert.DBNull
+            Me(Me.tableDetalleComprobanteIngreso.ID_DET_COMPColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Public Function IsID_KARDEXNull() As Boolean
-            Return Me.IsNull(Me.tableDetalleComprobanteEgreso.ID_KARDEXColumn)
+            Return Me.IsNull(Me.tableDetalleComprobanteIngreso.ID_KARDEXColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Public Sub SetID_KARDEXNull()
-            Me(Me.tableDetalleComprobanteEgreso.ID_KARDEXColumn) = Global.System.Convert.DBNull
+            Me(Me.tableDetalleComprobanteIngreso.ID_KARDEXColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Public Function IsITEMNull() As Boolean
-            Return Me.IsNull(Me.tableDetalleComprobanteEgreso.ITEMColumn)
+            Return Me.IsNull(Me.tableDetalleComprobanteIngreso.ITEMColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Public Sub SetITEMNull()
-            Me(Me.tableDetalleComprobanteEgreso.ITEMColumn) = Global.System.Convert.DBNull
+            Me(Me.tableDetalleComprobanteIngreso.ITEMColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Public Function IsCANTIDAD_INICIALNull() As Boolean
-            Return Me.IsNull(Me.tableDetalleComprobanteEgreso.CANTIDAD_INICIALColumn)
+            Return Me.IsNull(Me.tableDetalleComprobanteIngreso.CANTIDAD_INICIALColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Public Sub SetCANTIDAD_INICIALNull()
-            Me(Me.tableDetalleComprobanteEgreso.CANTIDAD_INICIALColumn) = Global.System.Convert.DBNull
+            Me(Me.tableDetalleComprobanteIngreso.CANTIDAD_INICIALColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Public Function IsID_DET_KARDEXNull() As Boolean
-            Return Me.IsNull(Me.tableDetalleComprobanteEgreso.ID_DET_KARDEXColumn)
+            Return Me.IsNull(Me.tableDetalleComprobanteIngreso.ID_DET_KARDEXColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Public Sub SetID_DET_KARDEXNull()
-            Me(Me.tableDetalleComprobanteEgreso.ID_DET_KARDEXColumn) = Global.System.Convert.DBNull
+            Me(Me.tableDetalleComprobanteIngreso.ID_DET_KARDEXColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Public Function IsOBSERVACION_DETALLENull() As Boolean
-            Return Me.IsNull(Me.tableDetalleComprobanteEgreso.OBSERVACION_DETALLEColumn)
+            Return Me.IsNull(Me.tableDetalleComprobanteIngreso.OBSERVACION_DETALLEColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Public Sub SetOBSERVACION_DETALLENull()
-            Me(Me.tableDetalleComprobanteEgreso.OBSERVACION_DETALLEColumn) = Global.System.Convert.DBNull
+            Me(Me.tableDetalleComprobanteIngreso.OBSERVACION_DETALLEColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Public Function IsOBSERVACIONNull() As Boolean
-            Return Me.IsNull(Me.tableDetalleComprobanteEgreso.OBSERVACIONColumn)
+            Return Me.IsNull(Me.tableDetalleComprobanteIngreso.OBSERVACIONColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Public Sub SetOBSERVACIONNull()
-            Me(Me.tableDetalleComprobanteEgreso.OBSERVACIONColumn) = Global.System.Convert.DBNull
+            Me(Me.tableDetalleComprobanteIngreso.OBSERVACIONColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Function IsCANTIDAD_EGRESONull() As Boolean
-            Return Me.IsNull(Me.tableDetalleComprobanteEgreso.CANTIDAD_EGRESOColumn)
+        Public Function IsCANTIDAD_INGRESONull() As Boolean
+            Return Me.IsNull(Me.tableDetalleComprobanteIngreso.CANTIDAD_INGRESOColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Sub SetCANTIDAD_EGRESONull()
-            Me(Me.tableDetalleComprobanteEgreso.CANTIDAD_EGRESOColumn) = Global.System.Convert.DBNull
+        Public Sub SetCANTIDAD_INGRESONull()
+            Me(Me.tableDetalleComprobanteIngreso.CANTIDAD_INGRESOColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Public Function IsVALOR_UNITARIONull() As Boolean
-            Return Me.IsNull(Me.tableDetalleComprobanteEgreso.VALOR_UNITARIOColumn)
+            Return Me.IsNull(Me.tableDetalleComprobanteIngreso.VALOR_UNITARIOColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Public Sub SetVALOR_UNITARIONull()
-            Me(Me.tableDetalleComprobanteEgreso.VALOR_UNITARIOColumn) = Global.System.Convert.DBNull
+            Me(Me.tableDetalleComprobanteIngreso.VALOR_UNITARIOColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Public Function IsVALOR_TOTALNull() As Boolean
-            Return Me.IsNull(Me.tableDetalleComprobanteEgreso.VALOR_TOTALColumn)
+            Return Me.IsNull(Me.tableDetalleComprobanteIngreso.VALOR_TOTALColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Public Sub SetVALOR_TOTALNull()
-            Me(Me.tableDetalleComprobanteEgreso.VALOR_TOTALColumn) = Global.System.Convert.DBNull
+            Me(Me.tableDetalleComprobanteIngreso.VALOR_TOTALColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Public Function IsCANTIDAD_TOTALNull() As Boolean
-            Return Me.IsNull(Me.tableDetalleComprobanteEgreso.CANTIDAD_TOTALColumn)
+            Return Me.IsNull(Me.tableDetalleComprobanteIngreso.CANTIDAD_TOTALColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Public Sub SetCANTIDAD_TOTALNull()
-            Me(Me.tableDetalleComprobanteEgreso.CANTIDAD_TOTALColumn) = Global.System.Convert.DBNull
+            Me(Me.tableDetalleComprobanteIngreso.CANTIDAD_TOTALColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Public Function IsFECHANull() As Boolean
-            Return Me.IsNull(Me.tableDetalleComprobanteEgreso.FECHAColumn)
+            Return Me.IsNull(Me.tableDetalleComprobanteIngreso.FECHAColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Public Sub SetFECHANull()
-            Me(Me.tableDetalleComprobanteEgreso.FECHAColumn) = Global.System.Convert.DBNull
+            Me(Me.tableDetalleComprobanteIngreso.FECHAColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Public Function IsACTIVIDADNull() As Boolean
-            Return Me.IsNull(Me.tableDetalleComprobanteEgreso.ACTIVIDADColumn)
+            Return Me.IsNull(Me.tableDetalleComprobanteIngreso.ACTIVIDADColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Public Sub SetACTIVIDADNull()
-            Me(Me.tableDetalleComprobanteEgreso.ACTIVIDADColumn) = Global.System.Convert.DBNull
+            Me(Me.tableDetalleComprobanteIngreso.ACTIVIDADColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Public Function IsCODIGONull() As Boolean
-            Return Me.IsNull(Me.tableDetalleComprobanteEgreso.CODIGOColumn)
+            Return Me.IsNull(Me.tableDetalleComprobanteIngreso.CODIGOColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Public Sub SetCODIGONull()
-            Me(Me.tableDetalleComprobanteEgreso.CODIGOColumn) = Global.System.Convert.DBNull
+            Me(Me.tableDetalleComprobanteIngreso.CODIGOColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Public Function IsDETALLENull() As Boolean
-            Return Me.IsNull(Me.tableDetalleComprobanteEgreso.DETALLEColumn)
+            Return Me.IsNull(Me.tableDetalleComprobanteIngreso.DETALLEColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Public Sub SetDETALLENull()
-            Me(Me.tableDetalleComprobanteEgreso.DETALLEColumn) = Global.System.Convert.DBNull
+            Me(Me.tableDetalleComprobanteIngreso.DETALLEColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Function IsID_SECNull() As Boolean
-            Return Me.IsNull(Me.tableDetalleComprobanteEgreso.ID_SECColumn)
+        Public Function IsID_SECUNull() As Boolean
+            Return Me.IsNull(Me.tableDetalleComprobanteIngreso.ID_SECUColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Sub SetID_SECNull()
-            Me(Me.tableDetalleComprobanteEgreso.ID_SECColumn) = Global.System.Convert.DBNull
+        Public Sub SetID_SECUNull()
+            Me(Me.tableDetalleComprobanteIngreso.ID_SECUColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Public Function IsCANTIDAD_SALDONull() As Boolean
-            Return Me.IsNull(Me.tableDetalleComprobanteEgreso.CANTIDAD_SALDOColumn)
+            Return Me.IsNull(Me.tableDetalleComprobanteIngreso.CANTIDAD_SALDOColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Public Sub SetCANTIDAD_SALDONull()
-            Me(Me.tableDetalleComprobanteEgreso.CANTIDAD_SALDOColumn) = Global.System.Convert.DBNull
+            Me(Me.tableDetalleComprobanteIngreso.CANTIDAD_SALDOColumn) = Global.System.Convert.DBNull
         End Sub
     End Class
     
@@ -2179,16 +2180,16 @@ Partial Public Class dsComprobanteIngreso
     '''Row event argument class
     '''</summary>
     <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-    Public Class ComprobanteEgresoRowChangeEvent
+    Public Class ComprobanteIngresoRowChangeEvent
         Inherits Global.System.EventArgs
         
-        Private eventRow As ComprobanteEgresoRow
+        Private eventRow As ComprobanteIngresoRow
         
         Private eventAction As Global.System.Data.DataRowAction
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Sub New(ByVal row As ComprobanteEgresoRow, ByVal action As Global.System.Data.DataRowAction)
+        Public Sub New(ByVal row As ComprobanteIngresoRow, ByVal action As Global.System.Data.DataRowAction)
             MyBase.New
             Me.eventRow = row
             Me.eventAction = action
@@ -2196,7 +2197,7 @@ Partial Public Class dsComprobanteIngreso
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public ReadOnly Property Row() As ComprobanteEgresoRow
+        Public ReadOnly Property Row() As ComprobanteIngresoRow
             Get
                 Return Me.eventRow
             End Get
@@ -2215,16 +2216,16 @@ Partial Public Class dsComprobanteIngreso
     '''Row event argument class
     '''</summary>
     <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-    Public Class DetalleComprobanteEgresoRowChangeEvent
+    Public Class DetalleComprobanteIngresoRowChangeEvent
         Inherits Global.System.EventArgs
         
-        Private eventRow As DetalleComprobanteEgresoRow
+        Private eventRow As DetalleComprobanteIngresoRow
         
         Private eventAction As Global.System.Data.DataRowAction
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Sub New(ByVal row As DetalleComprobanteEgresoRow, ByVal action As Global.System.Data.DataRowAction)
+        Public Sub New(ByVal row As DetalleComprobanteIngresoRow, ByVal action As Global.System.Data.DataRowAction)
             MyBase.New
             Me.eventRow = row
             Me.eventAction = action
@@ -2232,7 +2233,7 @@ Partial Public Class dsComprobanteIngreso
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public ReadOnly Property Row() As DetalleComprobanteEgresoRow
+        Public ReadOnly Property Row() As DetalleComprobanteIngresoRow
             Get
                 Return Me.eventRow
             End Get

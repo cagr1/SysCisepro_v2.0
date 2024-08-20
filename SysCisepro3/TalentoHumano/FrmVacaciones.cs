@@ -209,7 +209,7 @@ namespace SysCisepro3.TalentoHumano
             }
 
             var user = Usuario.Datos.ToString();
-            var nombre = $"REGISTRO VACACIONES: {user}";
+            var nombre = $"Registro de Vacaciones por: {user}";
             var res = ComandosSql.ProcesarTransacciones(TipoCon, _sqlCommands, nombre);
 
             if ((bool)res[0])

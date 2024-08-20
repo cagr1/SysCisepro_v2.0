@@ -283,7 +283,8 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.ORDEN_DE_COMPRA
             For indice = 0 To dgvDetalleOrdenCompra.RowCount - 1
                 If (dgvDetalleOrdenCompra.Rows(indice).Cells(0).Value & "").ToString.Trim.Length = 0 Then Continue For
                 If dgvDetalleOrdenCompra.Rows(indice).Cells(0).Value = dgvDetalleRequisicionProductoServicio.CurrentRow.Cells(8).Value Then
-                    MsgBox("ESTE ITEM YA ESTÁ AGREGADO A LA ORDEN!", MsgBoxStyle.Exclamation, "MENSAJE DE VALICACIÓN")
+                    'MsgBox("ESTE ITEM YA ESTÁ AGREGADO A LA ORDEN!", MsgBoxStyle.Exclamation, "MENSAJE DE VALICACIÓN")
+                    KryptonMessageBox.Show("ESTE ITEM YA ESTÁ AGREGADO A LA ORDEN!", "MENSAJE DE VALICACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                     Return
                 End If
             Next
@@ -376,7 +377,8 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.ORDEN_DE_COMPRA
                 If dgvDetalleOrdenCompra.Columns(e.ColumnIndex).Name = "valorUnitarioProductoServicio" Or dgvDetalleOrdenCompra.Columns(e.ColumnIndex).Name = "cantidadProductoServicio" Then
                     If dgvDetalleOrdenCompra.CurrentRow.Cells(3).Value.ToString <> "" And dgvDetalleOrdenCompra.CurrentRow.Cells(4).Value.ToString <> "" Then
                         'Modificacion 2023
-                        Dim dialogo = MsgBox("GRAVA IVA", MsgBoxStyle.YesNo, "MENSAJE DE VALIDACION")
+                        'Dim dialogo = MsgBox("GRAVA IVA", MsgBoxStyle.YesNo, "MENSAJE DE VALIDACION")
+                        Dim dialogo = KryptonMessageBox.Show("GRAVA IVA", "MENSAJE DE VALIDACION", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question)
                         If dialogo = Windows.Forms.DialogResult.Yes Then
                             dgvDetalleOrdenCompra.CurrentRow.Cells("IVA").Value = "S"
                         Else

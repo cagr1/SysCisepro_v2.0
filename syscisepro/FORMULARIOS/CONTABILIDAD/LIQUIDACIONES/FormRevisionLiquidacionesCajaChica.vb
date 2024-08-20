@@ -10,6 +10,7 @@ Imports ClassLibraryCisepro.FONDOS.CAJA_CHICA
 Imports ClassLibraryCisepro.ProcesosSql
 Imports ClassLibraryCisepro.TALENTO_HUMANO
 Imports ClassLibraryCisepro.CONTABILIDAD.RETENCIONES_EMITIDAS
+Imports Krypton.Toolkit
 
 
 Namespace FORMULARIOS.CONTABILIDAD.LIQUIDACIONES
@@ -486,7 +487,14 @@ Namespace FORMULARIOS.CONTABILIDAD.LIQUIDACIONES
                     LimpiarParametros()
                     CargarLiquidacionesCajaChica()
                 End If
-                MsgBox(res(1) & vbNewLine & texto, If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
+                Dim messageIcon As KryptonMessageBoxIcon
+                If res(0) Then
+                    messageIcon = KryptonMessageBoxIcon.Information
+                Else
+                    messageIcon = KryptonMessageBoxIcon.Exclamation
+                End If
+                KryptonMessageBox.Show(res(1), "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, messageIcon)
+                'MsgBox(res(1) & vbNewLine & texto, If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
 
             End If
         End Sub

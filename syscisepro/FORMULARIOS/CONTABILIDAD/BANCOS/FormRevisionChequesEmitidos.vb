@@ -4,6 +4,10 @@ Imports syscisepro.DATOS
 Imports syscisepro.FORMULARIOS.CONTABILIDAD.BANCOS.REPORTES
 Imports syscisepro.FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
 Imports Microsoft.Office.Interop
+Imports ClassLibraryCisepro.ProcesosSql
+Imports Krypton.Toolkit
+Imports System.Data.SqlClient
+Imports System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel
 
 Namespace FORMULARIOS.CONTABILIDAD.BANCOS
     ''' <summary>
@@ -42,8 +46,10 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
 
         Private _idComprobanteEgresoB As Integer
 
+        Dim _sqlCommands As List(Of SqlCommand)
         Dim _fechaDesde As String = ""
         Dim _fechaHasta As String = ""
+        Public UserName As String
 
         Private Sub ExportarDatosExcel(ByVal dgvAsientosDiario As DataGridView, ByVal titulo As String)
             Try
@@ -300,10 +306,11 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
 
             Dim validation As New ValidationForms()
             validation.SetPlaceholder(txtFiltro, "Buscar por Banco, Cheque o Nombre")
+            _sqlCommands = New List(Of SqlCommand)
             LlenarComboBancos()
 
             CargarChequesEmitidosNoCobrados()
-          
+
             CargarChequesEmitidosCobrados()
 
             CargarChequesEmitidosCaducados()
@@ -316,25 +323,37 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
                 If dtpFechaCobroCheque.Value > dtpFechaDesde.Value Then
                     Dim respuestaMsgBox = MessageBox.Show("¿ESTA SEGURO QUE DESEA CAMBIAR LOS CHEQUES SELECCIONADOS A COBRADOS?", "MENSAJE DE VALIDACIÓN", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
                     If respuestaMsgBox = MsgBoxResult.Yes Then
-                         
+
                         If chkCaducado.Checked Then
                             ActualizarChequeEmitidoACaducado()
                         Else
                             ActualizarChequeEmitidoACobrado()
                             ActualizarMontoCuentaBancos()
                         End If
-
                         CargarChequesEmitidosNoCobrados()
                         CargarChequesEmitidosCobrados()
                         CargarChequesEmitidosCaducados()
 
+                        Dim NombreU As String = "Cheques aprobados por: " + UserName
+                        Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, NombreU)
+
+                        Dim messageIcon As KryptonMessageBoxIcon
+                        If res(0) Then
+                            messageIcon = KryptonMessageBoxIcon.Information
+                        Else
+                            messageIcon = KryptonMessageBoxIcon.Exclamation
+                        End If
+                        KryptonMessageBox.Show(res(1), "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, messageIcon)
+
+
                         chkCaducado.Checked = False
                     End If
                 Else
-                    MsgBox("LA FECHA DE COBRO / CADUCIDAD NO PUEDE SER MENOR A LA DE EMISIÓN", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+
+                    KryptonMessageBox.Show("La fecha de cobro/caducidad no puede ser menor a la de emision", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                 End If
             Else
-                MsgBox("NO HAY CHEQUES PARA APROBAR NO COBRADOS", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                KryptonMessageBox.Show("NO HAY CHEQUES PARA APROBAR NO COBRADOS", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
             End If
 
         End Sub
@@ -368,6 +387,7 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
                 f.ShowDialog()
             Else
                 MsgBox("POR FAVOR SELECCIONE UN COMPROBANTE DE EGRESO", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+
             End If
         End Sub
 
