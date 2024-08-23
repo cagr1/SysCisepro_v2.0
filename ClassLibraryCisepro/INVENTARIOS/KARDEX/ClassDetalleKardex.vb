@@ -30,7 +30,7 @@ Namespace INVENTARIOS.KARDEX
         Public Function SeleccionarDetallesKardexCreados(ByVal tipoCon As TipoConexion, ByVal parametroBusqueda As String) As DataTable
             Dim pars = New List(Of Object())
             pars.Add(New Object() {"ID_KARDEX", SqlDbType.VarChar, parametroBusqueda})
-            Return ComandosSql.SeleccionarQueryWithParamsToDataTable(tipoCon, "seleccionarDetallesKardexCreados", True, pars) 
+            Return ComandosSql.SeleccionarQueryWithParamsToDataTable(tipoCon, "sp_seleccionarDetallesKardexCreados", True, pars)
         End Function
 
         Public Function BuscarMayorIdDetalleKardexxIdKardex(ByVal tipoCon As TipoConexion, ByVal idKardex As Int64) As Integer
@@ -95,7 +95,6 @@ Namespace INVENTARIOS.KARDEX
                     .Parameters.AddWithValue("@VALOR_TOTAL_SALDO", SqlDbType.Decimal).Value = ValorTotalSaldo
                     .Parameters.AddWithValue("@FECHA", SqlDbType.DateTime).Value = Fecha
                     .Parameters.AddWithValue("@ID_KARDEX", SqlDbType.BigInt).Value = IdKardex
-                    .Parameters.AddWithValue("@ESTADO", SqlDbType.Int).Value = Estado
                     .Parameters.AddWithValue("@NRO_COMPROBANTE", SqlDbType.NVarChar).Value = NroComprobante
                 End With
             Catch

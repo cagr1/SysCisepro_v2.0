@@ -167,7 +167,6 @@ Namespace INVENTARIOS.KARDEX
                 .Parameters.AddWithValue("@ID_SECUENCIAL_ITEM", SqlDbType.BigInt).Value = IdsecuencialItem
                 .Parameters.AddWithValue("@FECHA", SqlDbType.DateTime).Value = Fecha
                 .Parameters.AddWithValue("@CANTIDAD", SqlDbType.Int).Value = Cantidad
-                .Parameters.AddWithValue("@ESTADO", SqlDbType.Int).Value = Estado
             End With
             Return comando
         End Function

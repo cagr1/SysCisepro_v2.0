@@ -82,6 +82,9 @@
     <GenerateManifests>false</GenerateManifests>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AForge.Controls">
+      <HintPath>..\..\SysCisepro4\packages\AForge.Controls.2.2.5\lib\AForge.Controls.dll</HintPath>
+    </Reference>
     <Reference Include="AxInterop.AcroPDFLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>bin\Debug\AxInterop.AcroPDFLib.dll</HintPath>
@@ -184,7 +187,21 @@
       <HintPath>..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1001\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
-    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Reporting.WinForms.v11.1.0.0.0\lib\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Reporting.WinForms.v11.1.0.0.0\lib\Microsoft.ReportViewer.ProcessingObjectModel.DLL</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Report.Viewer.11.0.0.0\lib\net\Microsoft.ReportViewer.WebForms.DLL</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Reporting.WinForms.v11.1.0.0.0\lib\Microsoft.ReportViewer.WinForms.DLL</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Reporting.WinForms.v11.1.0.0.0\lib\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="ShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
       <HintPath>..\packages\CrystalReports.ShockwaveFlashObjects.13.0.4003\lib\net40\ShockwaveFlashObjects.dll</HintPath>
@@ -312,25 +329,28 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dsComprabanteIngresoMin.xsd</DependentUpon>
     </Compile>
+    <Compile Include="FORMULARIOS\CONJUNTO DE DATOS\OPERACIONES\dsComprobanteEgre.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsComprobanteEgre.xsd</DependentUpon>
+    </Compile>
     <Compile Include="FORMULARIOS\CONJUNTO DE DATOS\OPERACIONES\dsComprobanteEgresoMin.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>dsComprobanteEgresoMin.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="FORMULARIOS\CONJUNTO DE DATOS\OPERACIONES\dsComprobanteIngreso.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>dsComprobanteIngreso.xsd</DependentUpon>
     </Compile>
     <Compile Include="FORMULARIOS\CONJUNTO DE DATOS\INVENTARIOS ISO\dsEntregaUNIFORMES.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>dsEntregaUNIFORMES.xsd</DependentUpon>
     </Compile>
-    <Compile Include="FORMULARIOS\CONJUNTO DE DATOS\OPERACIONES\dsComprobanteIngresoFinal.Designer.vb">
+    <Compile Include="FORMULARIOS\CONJUNTO DE DATOS\OPERACIONES\dsComprobanteIngre.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>dsComprobanteIngresoFinal.xsd</DependentUpon>
+      <DependentUpon>dsComprobanteIngre.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FORMULARIOS\CONJUNTO DE DATOS\OPERACIONES\dsComprobanteIngre.vb">
+      <DependentUpon>dsComprobanteIngre.xsd</DependentUpon>
     </Compile>
     <Compile Include="FORMULARIOS\CONJUNTO DE DATOS\OPERACIONES\dsOperaciones.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -3769,6 +3789,17 @@
     <None Include="FORMULARIOS\CONJUNTO DE DATOS\OPERACIONES\dsComprabanteIngresoMin.xss">
       <DependentUpon>dsComprabanteIngresoMin.xsd</DependentUpon>
     </None>
+    <None Include="FORMULARIOS\CONJUNTO DE DATOS\OPERACIONES\dsComprobanteEgre.xsc">
+      <DependentUpon>dsComprobanteEgre.xsd</DependentUpon>
+    </None>
+    <None Include="FORMULARIOS\CONJUNTO DE DATOS\OPERACIONES\dsComprobanteEgre.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsComprobanteEgre.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="FORMULARIOS\CONJUNTO DE DATOS\OPERACIONES\dsComprobanteEgre.xss">
+      <DependentUpon>dsComprobanteEgre.xsd</DependentUpon>
+    </None>
     <None Include="FORMULARIOS\CONJUNTO DE DATOS\OPERACIONES\dsComprobanteEgresoMin.xsc">
       <DependentUpon>dsComprobanteEgresoMin.xsd</DependentUpon>
     </None>
@@ -3779,17 +3810,6 @@
     </None>
     <None Include="FORMULARIOS\CONJUNTO DE DATOS\OPERACIONES\dsComprobanteEgresoMin.xss">
       <DependentUpon>dsComprobanteEgresoMin.xsd</DependentUpon>
-    </None>
-    <None Include="FORMULARIOS\CONJUNTO DE DATOS\OPERACIONES\dsComprobanteIngreso.xsc">
-      <DependentUpon>dsComprobanteIngreso.xsd</DependentUpon>
-    </None>
-    <None Include="FORMULARIOS\CONJUNTO DE DATOS\OPERACIONES\dsComprobanteIngreso.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>dsComprobanteIngreso.Designer.vb</LastGenOutput>
-    </None>
-    <None Include="FORMULARIOS\CONJUNTO DE DATOS\OPERACIONES\dsComprobanteIngreso.xss">
-      <DependentUpon>dsComprobanteIngreso.xsd</DependentUpon>
     </None>
     <None Include="FORMULARIOS\CONJUNTO DE DATOS\INVENTARIOS ISO\dsEntregaUNIFORMES.xsc">
       <DependentUpon>dsEntregaUNIFORMES.xsd</DependentUpon>
@@ -3802,16 +3822,16 @@
     <None Include="FORMULARIOS\CONJUNTO DE DATOS\INVENTARIOS ISO\dsEntregaUNIFORMES.xss">
       <DependentUpon>dsEntregaUNIFORMES.xsd</DependentUpon>
     </None>
-    <None Include="FORMULARIOS\CONJUNTO DE DATOS\OPERACIONES\dsComprobanteIngresoFinal.xsc">
-      <DependentUpon>dsComprobanteIngresoFinal.xsd</DependentUpon>
+    <None Include="FORMULARIOS\CONJUNTO DE DATOS\OPERACIONES\dsComprobanteIngre.xsc">
+      <DependentUpon>dsComprobanteIngre.xsd</DependentUpon>
     </None>
-    <None Include="FORMULARIOS\CONJUNTO DE DATOS\OPERACIONES\dsComprobanteIngresoFinal.xsd">
+    <None Include="FORMULARIOS\CONJUNTO DE DATOS\OPERACIONES\dsComprobanteIngre.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>dsComprobanteIngresoFinal.Designer.vb</LastGenOutput>
+      <LastGenOutput>dsComprobanteIngre.Designer.vb</LastGenOutput>
     </None>
-    <None Include="FORMULARIOS\CONJUNTO DE DATOS\OPERACIONES\dsComprobanteIngresoFinal.xss">
-      <DependentUpon>dsComprobanteIngresoFinal.xsd</DependentUpon>
+    <None Include="FORMULARIOS\CONJUNTO DE DATOS\OPERACIONES\dsComprobanteIngre.xss">
+      <DependentUpon>dsComprobanteIngre.xsd</DependentUpon>
     </None>
     <None Include="FORMULARIOS\CONJUNTO DE DATOS\OPERACIONES\dsOperaciones.xsc">
       <DependentUpon>dsOperaciones.xsd</DependentUpon>
@@ -4387,6 +4407,20 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="SqlServerTypes\Loader.cs" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <None Include="Resources\do_not_disturb_on_24dp_000000_FILL0_wght400_GRAD0_opsz24.png" />
     <None Include="REPORTES\2019\dsLiquidacionFondoRotativoNew.xsc">
       <DependentUpon>dsLiquidacionFondoRotativoNew.xsd</DependentUpon>

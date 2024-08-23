@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsComprobanteEgre" targetNamespace="http://tempuri.org/dsComprobanteEgre.xsd" xmlns:mstns="http://tempuri.org/dsComprobanteEgre.xsd" xmlns="http://tempuri.org/dsComprobanteEgre.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsComprobanteEgre" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_UserDSName="dsComprobanteEgre" msprop:Generator_DataSetName="dsComprobanteEgre">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ComprobanteEgreso" msprop:Generator_RowEvHandlerName="ComprobanteEgresoRowChangeEventHandler" msprop:Generator_RowDeletedName="ComprobanteEgresoRowDeleted" msprop:Generator_RowDeletingName="ComprobanteEgresoRowDeleting" msprop:Generator_RowEvArgName="ComprobanteEgresoRowChangeEvent" msprop:Generator_TablePropName="ComprobanteEgreso" msprop:Generator_RowChangedName="ComprobanteEgresoRowChanged" msprop:Generator_RowChangingName="ComprobanteEgresoRowChanging" msprop:Generator_TableClassName="ComprobanteEgresoDataTable" msprop:Generator_RowClassName="ComprobanteEgresoRow" msprop:Generator_TableVarName="tableComprobanteEgreso" msprop:Generator_UserTableName="ComprobanteEgreso">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="COMPROBANTE" msprop:Generator_ColumnPropNameInRow="COMPROBANTE" msprop:Generator_ColumnPropNameInTable="COMPROBANTEColumn" msprop:Generator_ColumnVarNameInTable="columnCOMPROBANTE" msprop:Generator_UserColumnName="COMPROBANTE" type="xs:string" minOccurs="0" />
+              <xs:element name="FECHA" msprop:Generator_ColumnPropNameInRow="FECHA" msprop:Generator_ColumnPropNameInTable="FECHAColumn" msprop:Generator_ColumnVarNameInTable="columnFECHA" msprop:Generator_UserColumnName="FECHA" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="BODEGA" msprop:Generator_ColumnPropNameInRow="BODEGA" msprop:Generator_ColumnPropNameInTable="BODEGAColumn" msprop:Generator_ColumnVarNameInTable="columnBODEGA" msprop:Generator_UserColumnName="BODEGA" type="xs:string" minOccurs="0" />
+              <xs:element name="ACTIVIDAD" msprop:Generator_ColumnPropNameInRow="ACTIVIDAD" msprop:Generator_ColumnPropNameInTable="ACTIVIDADColumn" msprop:Generator_ColumnVarNameInTable="columnACTIVIDAD" msprop:Generator_UserColumnName="ACTIVIDAD" type="xs:string" minOccurs="0" />
+              <xs:element name="CONCEPTO" msprop:Generator_ColumnPropNameInRow="CONCEPTO" msprop:Generator_ColumnPropNameInTable="CONCEPTOColumn" msprop:Generator_ColumnVarNameInTable="columnCONCEPTO" msprop:Generator_UserColumnName="CONCEPTO" type="xs:string" minOccurs="0" />
+              <xs:element name="PROVINCIA" msprop:Generator_ColumnPropNameInRow="PROVINCIA" msprop:Generator_ColumnPropNameInTable="PROVINCIAColumn" msprop:Generator_ColumnVarNameInTable="columnPROVINCIA" msprop:Generator_UserColumnName="PROVINCIA" type="xs:string" minOccurs="0" />
+              <xs:element name="CIUDAD" msprop:Generator_ColumnPropNameInRow="CIUDAD" msprop:Generator_ColumnPropNameInTable="CIUDADColumn" msprop:Generator_ColumnVarNameInTable="columnCIUDAD" msprop:Generator_UserColumnName="CIUDAD" type="xs:string" minOccurs="0" />
+              <xs:element name="PARROQUIA" msprop:Generator_ColumnPropNameInRow="PARROQUIA" msprop:Generator_ColumnPropNameInTable="PARROQUIAColumn" msprop:Generator_ColumnVarNameInTable="columnPARROQUIA" msprop:Generator_UserColumnName="PARROQUIA" type="xs:string" minOccurs="0" />
+              <xs:element name="CENTRO_x0020_DE_x0020_COSTO" msprop:Generator_ColumnPropNameInRow="CENTRO_DE_COSTO" msprop:Generator_ColumnPropNameInTable="CENTRO_DE_COSTOColumn" msprop:Generator_ColumnVarNameInTable="columnCENTRO_DE_COSTO" msprop:Generator_UserColumnName="CENTRO DE COSTO" type="xs:string" minOccurs="0" />
+              <xs:element name="RAZON" msprop:Generator_ColumnPropNameInRow="RAZON" msprop:Generator_ColumnPropNameInTable="RAZONColumn" msprop:Generator_ColumnVarNameInTable="columnRAZON" msprop:Generator_UserColumnName="RAZON" type="xs:string" minOccurs="0" />
+              <xs:element name="PERSONAL" msprop:Generator_ColumnPropNameInRow="PERSONAL" msprop:Generator_ColumnPropNameInTable="PERSONALColumn" msprop:Generator_ColumnVarNameInTable="columnPERSONAL" msprop:Generator_UserColumnName="PERSONAL" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DetalleComprobanteEgreso" msprop:Generator_RowEvHandlerName="DetalleComprobanteEgresoRowChangeEventHandler" msprop:Generator_RowDeletedName="DetalleComprobanteEgresoRowDeleted" msprop:Generator_RowDeletingName="DetalleComprobanteEgresoRowDeleting" msprop:Generator_RowEvArgName="DetalleComprobanteEgresoRowChangeEvent" msprop:Generator_TablePropName="DetalleComprobanteEgreso" msprop:Generator_RowChangedName="DetalleComprobanteEgresoRowChanged" msprop:Generator_RowChangingName="DetalleComprobanteEgresoRowChanging" msprop:Generator_TableClassName="DetalleComprobanteEgresoDataTable" msprop:Generator_RowClassName="DetalleComprobanteEgresoRow" msprop:Generator_TableVarName="tableDetalleComprobanteEgreso" msprop:Generator_UserTableName="DetalleComprobanteEgreso">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID_x0020_KARDEX" msprop:Generator_ColumnPropNameInRow="ID_KARDEX" msprop:Generator_ColumnPropNameInTable="ID_KARDEXColumn" msprop:Generator_ColumnVarNameInTable="columnID_KARDEX" msprop:Generator_UserColumnName="ID KARDEX" type="xs:long" minOccurs="0" />
+              <xs:element name="ITEM" msprop:Generator_ColumnPropNameInRow="ITEM" msprop:Generator_ColumnPropNameInTable="ITEMColumn" msprop:Generator_ColumnVarNameInTable="columnITEM" msprop:Generator_UserColumnName="ITEM" type="xs:string" minOccurs="0" />
+              <xs:element name="OBSERVACION" msprop:Generator_ColumnPropNameInRow="OBSERVACION" msprop:Generator_ColumnPropNameInTable="OBSERVACIONColumn" msprop:Generator_ColumnVarNameInTable="columnOBSERVACION" msprop:Generator_UserColumnName="OBSERVACION" type="xs:string" minOccurs="0" />
+              <xs:element name="CANTIDAD_x0020_EGRESO" msdata:Caption="CANTIDAD INGRESO" msprop:Generator_ColumnPropNameInRow="CANTIDAD_EGRESO" msprop:Generator_ColumnPropNameInTable="CANTIDAD_EGRESOColumn" msprop:Generator_ColumnVarNameInTable="columnCANTIDAD_EGRESO" msprop:Generator_UserColumnName="CANTIDAD EGRESO" type="xs:int" minOccurs="0" />
+              <xs:element name="CODIGO" msprop:Generator_ColumnPropNameInRow="CODIGO" msprop:Generator_ColumnPropNameInTable="CODIGOColumn" msprop:Generator_ColumnVarNameInTable="columnCODIGO" msprop:Generator_UserColumnName="CODIGO" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

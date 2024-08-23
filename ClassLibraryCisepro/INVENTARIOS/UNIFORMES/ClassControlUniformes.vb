@@ -126,7 +126,6 @@ Namespace INVENTARIOS.UNIFORMES
                 .Parameters.AddWithValue("@CANTIDAD_ARTICULOS", SqlDbType.Int).Value = Cantidad
                 .Parameters.AddWithValue("@FECHA", SqlDbType.DateTime).Value = Fecha
                 .Parameters.AddWithValue("@ID_ACTIVIDAD", SqlDbType.Int).Value = IdActividad
-                .Parameters.AddWithValue("@ESTADO", SqlDbType.Int).Value = Estado
                 .Parameters.AddWithValue("@ID_DETALLE_KARDEX", SqlDbType.BigInt).Value = IdDetalleKardex
 
 

@@ -77,14 +77,12 @@ Namespace INVENTARIOS.COMPROBANTES
                 .Parameters.AddWithValue("@FECHA_COMPROBANTE", SqlDbType.DateTime).Value = Fecha
                 .Parameters.AddWithValue("@NRO_PARAMETRO", SqlDbType.NVarChar).Value = NroParametroDocumento
                 .Parameters.AddWithValue("@ID_BODEGA", SqlDbType.BigInt).Value = IdBodega
-                .Parameters.AddWithValue("@ID_ACTIVIDAD", SqlDbType.Int).Value = IdActividad
                 .Parameters.AddWithValue("@ID_CONCEPTO", SqlDbType.Int).Value = IdConcepto
                 .Parameters.AddWithValue("@ID_PROVINCIAS", SqlDbType.Int).Value = IdProvincias
                 .Parameters.AddWithValue("@ID_CIUDAD", SqlDbType.Int).Value = IdCiudad
                 .Parameters.AddWithValue("@ID_PARROQUIAS", SqlDbType.Int).Value = IdParroquias
                 .Parameters.AddWithValue("@ID_CENTRO_COSTO", SqlDbType.Int).Value = IdCentroCosto
                 .Parameters.AddWithValue("@ID_PARAMETRO_DOCUMENTO", SqlDbType.Int).Value = IdParametroDocumento
-                .Parameters.AddWithValue("@ESTADO", SqlDbType.Int).Value = Estado
                 .Parameters.AddWithValue("@RAZON", SqlDbType.NVarChar).Value = Razon
                 .Parameters.AddWithValue("@ID_PERSONAL", SqlDbType.Int).Value = IdPersonal
                 .Parameters.AddWithValue("@ID_EMPRESA", SqlDbType.Int).Value = IdEmpresa

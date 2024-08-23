@@ -932,7 +932,14 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
 
         Private Sub ConectarReporteComprobanteIngreso(ByVal idComprobante As String)
             Try
-                _crComprobanteIngreso.SetDataSource(_objCompIng.SeleccionarComprobanteIngresoxIdComprobanteIngresoMin(_tipoCon, idComprobante))
+                Dim ds = _objCompIng.SeleccionarComprobanteIngresoxIdComprobanteIngresoMin(_tipoCon, idComprobante)
+                _crComprobanteIngreso.SetDataSource(ds)
+                For Each table As DataTable In ds.Tables
+                    For Each column As DataColumn In table.Columns
+                        Debug.WriteLine("Table: " & table.TableName & " Column: " & column.ColumnName & " DataType: " & column.DataType.ToString())
+                    Next
+                Next
+                '_crComprobanteIngreso.SetDataSource(ds.Tables("ComprobanteIngreso"))
                 _crComprobanteIngreso.SetParameterValue("img", ValidationForms.NombreLogo(_tipoCon, Application.StartupPath))
                 _crComprobanteIngreso.SetParameterValue("ubicacion", _objCompIng.BuscarClienteByIdComprobanteEgresoBodega(_tipoCon, idComprobante))
                 crvComprobante.ReportSource = _crComprobanteIngreso
@@ -1125,7 +1132,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
             tsmCancelar.Enabled = True
             TmsEliminar.Enabled = False
             _botonSeleccionadoSitio = 2
-            txtProveedores.Text = _objPer.BuscarApellidosNombresPersonalXIdPersonal(_tipoCon, _objPer.BuscarIdPersonalXIdUsuario(_tipoCon, IdUsuario))
+            'txtProveedores.Text = _objPer.BuscarApellidosNombresPersonalXIdPersonal(_tipoCon, _objPer.BuscarIdPersonalXIdUsuario(_tipoCon, IdUsuario))
 
             If txtNroComprobante.Text.Trim().Length > 0 Then
                 HabilitarIngresos(True)
@@ -1177,20 +1184,18 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                     .Id = txtNroComprobante.Text  'Id Comprobante 
                     .Fecha = dtpFecha.Value
                     .NroParametroDocumento = txtNroDocumento.Text
-                    .IdBodega = cmbBodega.SelectedValue
-                    .IdActividad = 1
+                    .IdBodega = Convert.ToInt64(cmbBodega.SelectedValue)
                     .IdConcepto = cmbConceptos.SelectedValue
                     .IdProvincias = cbmProvincia.SelectedValue
                     .IdCiudad = cbmCanton.SelectedValue
                     .IdParroquias = cbmParroquia.SelectedValue
                     .IdCentroCosto = cbmCentroCosto.SelectedValue
                     .IdParametroDocumento = cmbDocumento.SelectedValue
-                    .Estado = 1
                     .Razon = txtRazon.Text.ToUpper
                     .IdPersonal = If(txtRecibe.Tag Is Nothing, txtRecibe.Text.Split("-")(1).Trim(), CType(txtRecibe.Tag, Integer))
                     .IdEmpresa = 1
                     .Cliente = txtUbicacion.Text.Trim
-                    .SitioTrabajo = CInt(txtUbicacion.Tag)
+                    .SitioTrabajo = txtUbicacion.Tag.ToString()
                 End With
                 _sqlCommands.Add(_objCompIng.ModificarRegistroComprobanteIngresoBodegaCommand())
             Catch ex As Exception
@@ -1204,7 +1209,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
             Dim CantidadIngreso = Convert.ToInt32(dgvDetalleComprobate.CurrentRow.Cells.Item(8).Value)
 
 
-            Dim result As DataTable = _objControl.SeleccionarIdControlUniformes(_tipoCon, lblComp.Text, lblDetaKardex.Text)
+            Dim result As DataTable = _objControl.SeleccionarIdControlUniformes(_tipoCon, txtNroComprobante.Text, lblDetaKardex.Text)
 
 
             If result.Rows.Count > 0 Then
@@ -1214,12 +1219,11 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                     With _objControl
                         .IdControl = idcon
                         .IdPersonal = If(txtRecibe.Tag Is Nothing, txtRecibe.Text.Split("-")(1).Trim(), CType(txtRecibe.Tag, Integer))
-                        .IdComprobante = Convert.ToString(lblComp.Text)
+                        .IdComprobante = txtNroComprobante.Text
                         .Cantidad = cant
                         .Fecha = dtpFecha.Value
                         .IdActividad = 1
-                        .Estado = 1
-                        .IdDetalleKardex = lblDetaKardex.Text
+                        .IdDetalleKardex = Convert.ToInt64(lblDetaKardex.Text)
                     End With
                     _sqlCommands.Add(_objControl.ModificarControlCommand())
                 Catch ex As Exception
@@ -1231,13 +1235,13 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
 
             Try
                 With _objDetCompIng
-                    .IdDetalle = lblDetaComp.Text
-                    .IdKardex = lblIdKardex2.Text
-                    .IdDetalleKardex = lblDetaKardex.Text
+                    .IdDetalle = Convert.ToInt64(lblDetaComp.Text)
+                    .IdKardex = Convert.ToInt64(lblIdKardex2.Text)
+                    .IdDetalleKardex = Convert.ToInt64(lblDetaKardex.Text)
                     .ObservacionCalidadDetalle = cmbObservacionCalidad.Text.ToUpper
                     .ObservacionDetalleSerial = txtObservacion.Text.ToUpper & " - SERIE: " & If(txtSerie.Text.Trim().Length = 0, "-", txtSerie.Text.Trim())
-                    .IdComprobante = lblComp.Text
-                    .Estado = 1
+                    .IdComprobante = txtNroComprobante.Text
+
                 End With
                 _sqlCommands.Add(_objDetCompIng.ModificarDetalleComprobanteIngresoBodegaCommand())
 
@@ -1248,7 +1252,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
             If CantidadIngreso > cant Then
                 Try
                     With _objDetalleKardex
-                        .Id = lblDetaKardex.Text
+                        .Id = Convert.ToInt64(lblDetaKardex.Text)
                         .IdActividad = 1
                         .IdConcepto = cmbConceptos.SelectedValue
                         .CantidadIngreso = cant
@@ -1262,8 +1266,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                         .ValorTotalSaldo = (saldoTotal - (CantidadIngreso - cant)) * val
                         .Fecha = dtpFecha.Value
                         .IdKardex = Convert.ToInt64(lblIdKardex2.Text)
-                        .Estado = 1
-                        .NroComprobante = lblComp.Text
+                        .NroComprobante = txtNroComprobante.Text
 
                     End With
                     _sqlCommands.Add(_objDetalleKardex.ModificarDetalleKardexCommand())
@@ -1274,11 +1277,10 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
 
                 Try
                     With _objKardex
-                        .Id = lblIdKardex2.Text
-                        .IdsecuencialItem = lblIdSecuencial.Text
+                        .Id = Convert.ToInt64(lblIdKardex2.Text)
+                        .IdsecuencialItem = Convert.ToInt64(lblIdSecuencial.Text)
                         .Cantidad = saldoTotal - (CantidadIngreso - cant)
                         .Fecha = dtpFecha.Value
-                        .Estado = 1
                     End With
                     _sqlCommands.Add(_objKardex.ModificarCantidadKardexCommand)
                 Catch ex As Exception
@@ -1289,7 +1291,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
 
                 Try
                     With _objDetalleKardex
-                        .Id = lblDetaKardex.Text
+                        .Id = Convert.ToInt64(lblDetaKardex.Text)
                         .IdActividad = 1
                         .IdConcepto = cmbConceptos.SelectedValue
                         .CantidadIngreso = cant
@@ -1303,8 +1305,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                         .ValorTotalSaldo = (saldoTotal + (cant - CantidadIngreso)) * cant
                         .Fecha = dtpFecha.Value
                         .IdKardex = Convert.ToInt64(lblIdKardex2.Text)
-                        .Estado = 1
-                        .NroComprobante = lblComp.Text
+                        .NroComprobante = txtNroComprobante.Text
 
                     End With
                     _sqlCommands.Add(_objDetalleKardex.ModificarDetalleKardexCommand())
@@ -1315,12 +1316,12 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
 
                 Try
                     With _objKardex
-                        .Id = lblIdKardex2.Text
-                        .IdsecuencialItem = lblIdSecuencial.Text
+                        .Id = Convert.ToInt64(lblIdKardex2.Text)
+                        .IdsecuencialItem = Convert.ToInt64(lblIdSecuencial.Text)
                         .Cantidad = saldoTotal + (cant - CantidadIngreso)
                         .Fecha = dtpFecha.Value
-                        .Estado = 1
                     End With
+
                     _sqlCommands.Add(_objKardex.ModificarCantidadKardexCommand)
                 Catch ex As Exception
                     KryptonMessageBox.Show("ERROR AL MODIFICAR KARDEX" & vbNewLine & ex.Message, "MENSAJE DE INFORMACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
@@ -1330,7 +1331,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
 
                 Try
                     With _objDetalleKardex
-                        .Id = lblDetaKardex.Text
+                        .Id = Convert.ToInt64(lblDetaKardex.Text)
                         .IdActividad = 1
                         .IdConcepto = cmbConceptos.SelectedValue
                         .CantidadIngreso = cant
@@ -1345,7 +1346,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                         .Fecha = dtpFecha.Value
                         .IdKardex = Convert.ToInt64(lblIdKardex2.Text)
                         .Estado = 1
-                        .NroComprobante = lblComp.Text
+                        .NroComprobante = txtNroComprobante.Text
 
                     End With
                     _sqlCommands.Add(_objDetalleKardex.ModificarDetalleKardexCommand())
@@ -1357,8 +1358,8 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                 Try
 
                     With _objKardex
-                        .Id = lblIdKardex2.Text
-                        .IdsecuencialItem = lblIdSecuencial.Text
+                        .Id = Convert.ToInt64(lblIdKardex2.Text)
+                        .IdsecuencialItem = Convert.ToInt64(lblIdSecuencial.Text)
                         .Cantidad = saldoTotal
                         .Fecha = dtpFecha.Value
                         .Estado = 1

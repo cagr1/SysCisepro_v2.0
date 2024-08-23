@@ -27,7 +27,7 @@
             Dim ReportDataSource1 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
             Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormReporte))
             Me.ClassATSBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-            Me.ReportViewerATS = New Microsoft.Reporting.WinForms.ReportViewer()
+            'Me.ReportViewerATS = New Microsoft.Reporting.WinForms.ReportViewer()
             CType(Me.ClassATSBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.SuspendLayout()
             '
@@ -38,8 +38,8 @@
             'ReportViewerATS
             '
             Me.ReportViewerATS.Dock = System.Windows.Forms.DockStyle.Fill
-            ReportDataSource1.Name = "ATS"
-            ReportDataSource1.Value = Me.ClassATSBindingSource
+            'ReportDataSource1.Name = "ATS"
+            'ReportDataSource1.Value = Me.ClassATSBindingSource
             Me.ReportViewerATS.LocalReport.DataSources.Add(ReportDataSource1)
             Me.ReportViewerATS.LocalReport.ReportEmbeddedResource = "syscisepro.Report1.rdlc"
             Me.ReportViewerATS.Location = New System.Drawing.Point(0, 0)

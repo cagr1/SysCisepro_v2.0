@@ -2829,7 +2829,7 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
 
                 dgvCamara.Rows.Add(cbmMarcaCamarasSeguridad.Text.Trim, txtModeloCamarasSeguridad.Text.Trim, cbmEstadoCamarasSeguridad.Text.Trim, txtSerieCamarasSeguridad.Text.Trim,
                                    cbmColorCamarasSeguridad.Text.Trim, cbmMaterialCamarasSeguridad.Text.Trim, cbmAñosCamarasSeguridad.Text.Trim,
-                                   txtAdicionalCamarasSeguridad, GenerarCodigoActivo(_formDialogoNuevoActivo.Tipo), If(chkGarantiaCamara.Checked, 1, 0), txtGarantiaCamara, txtValorFactura.Text.Trim, txtValorResidual.Text.Trim, txtAñosVidaUtil.Text.Trim, dtpCaducidadCamara.Value.ToShortDateString)
+                                   txtAdicionalCamarasSeguridad.Text, GenerarCodigoActivo(_formDialogoNuevoActivo.Tipo), If(chkGarantiaCamara.Checked, 1, 0), txtGarantiaCamara.Text, txtValorFactura.Text.Trim, txtValorResidual.Text.Trim, txtAñosVidaUtil.Text.Trim, dtpCaducidadCamara.Value.ToShortDateString)
 
                 ' LIMPIAR
                 cbmMarcaCamarasSeguridad.SelectedIndex = 0

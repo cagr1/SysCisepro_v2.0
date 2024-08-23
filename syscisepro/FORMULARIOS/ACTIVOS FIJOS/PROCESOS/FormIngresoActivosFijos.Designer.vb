@@ -194,6 +194,33 @@
             Me.txtSerieRadio = New System.Windows.Forms.TextBox()
             Me.lblSerie = New System.Windows.Forms.Label()
             Me.tpVehiculo = New System.Windows.Forms.TabPage()
+            Me.KryptonGroupBox1 = New ComponentFactory.Krypton.Toolkit.KryptonGroupBox()
+            Me.KryptonLabel13 = New ComponentFactory.Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel12 = New ComponentFactory.Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel11 = New ComponentFactory.Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel10 = New ComponentFactory.Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel9 = New ComponentFactory.Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel8 = New ComponentFactory.Krypton.Toolkit.KryptonLabel()
+            Me.cbmColorVehiculo = New System.Windows.Forms.ComboBox()
+            Me.cbmAnoFabricacionVehiculo = New System.Windows.Forms.ComboBox()
+            Me.KryptonLabel7 = New ComponentFactory.Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel6 = New ComponentFactory.Krypton.Toolkit.KryptonLabel()
+            Me.txtCapacidadVehiculo = New System.Windows.Forms.TextBox()
+            Me.KryptonLabel5 = New ComponentFactory.Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel4 = New ComponentFactory.Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel3 = New ComponentFactory.Krypton.Toolkit.KryptonLabel()
+            Me.txtMotorVehiculo = New System.Windows.Forms.TextBox()
+            Me.txtChasisVehiculo = New System.Windows.Forms.TextBox()
+            Me.KryptonLabel2 = New ComponentFactory.Krypton.Toolkit.KryptonLabel()
+            Me.cbmMarcaVehiculo = New System.Windows.Forms.ComboBox()
+            Me.KryptonLabel1 = New ComponentFactory.Krypton.Toolkit.KryptonLabel()
+            Me.dtpSoat = New System.Windows.Forms.DateTimePicker()
+            Me.txtCilindrajeVehiculo = New System.Windows.Forms.TextBox()
+            Me.txtTipoVehiculo = New System.Windows.Forms.TextBox()
+            Me.txtPlacaVehiculo = New System.Windows.Forms.TextBox()
+            Me.txtSerieVehiculo = New System.Windows.Forms.TextBox()
+            Me.txtModeloVehiculo = New System.Windows.Forms.TextBox()
+            Me.cbmEstadoVehiculo = New System.Windows.Forms.ComboBox()
             Me.chNingunDispositivo = New System.Windows.Forms.CheckBox()
             Me.GroupBox7 = New System.Windows.Forms.GroupBox()
             Me.txtDispositivoSeguridad = New System.Windows.Forms.TextBox()
@@ -221,19 +248,6 @@
             Me.txtSeguro = New System.Windows.Forms.TextBox()
             Me.Label47 = New System.Windows.Forms.Label()
             Me.chNingunSeguro = New System.Windows.Forms.CheckBox()
-            Me.dtpSoat = New System.Windows.Forms.DateTimePicker()
-            Me.txtTipoVehiculo = New System.Windows.Forms.TextBox()
-            Me.txtChasisVehiculo = New System.Windows.Forms.TextBox()
-            Me.txtCapacidadVehiculo = New System.Windows.Forms.TextBox()
-            Me.txtCilindrajeVehiculo = New System.Windows.Forms.TextBox()
-            Me.txtMotorVehiculo = New System.Windows.Forms.TextBox()
-            Me.txtPlacaVehiculo = New System.Windows.Forms.TextBox()
-            Me.cbmAnoFabricacionVehiculo = New System.Windows.Forms.ComboBox()
-            Me.txtModeloVehiculo = New System.Windows.Forms.TextBox()
-            Me.cbmEstadoVehiculo = New System.Windows.Forms.ComboBox()
-            Me.cbmColorVehiculo = New System.Windows.Forms.ComboBox()
-            Me.cbmMarcaVehiculo = New System.Windows.Forms.ComboBox()
-            Me.txtSerieVehiculo = New System.Windows.Forms.TextBox()
             Me.tpTerreno = New System.Windows.Forms.TabPage()
             Me.txtEstadoTerreno = New System.Windows.Forms.TextBox()
             Me.Label70 = New System.Windows.Forms.Label()
@@ -497,20 +511,6 @@
             Me.dtpCaducidadCamara = New System.Windows.Forms.DateTimePicker()
             Me.lblCamaraCount = New System.Windows.Forms.Label()
             Me.dgvCamara = New System.Windows.Forms.DataGridView()
-            Me.DataGridViewTextBoxColumn61 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-            Me.DataGridViewTextBoxColumn64 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-            Me.DataGridViewTextBoxColumn65 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-            Me.DataGridViewTextBoxColumn66 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-            Me.DataGridViewTextBoxColumn67 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-            Me.DataGridViewTextBoxColumn68 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-            Me.DataGridViewTextBoxColumn69 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-            Me.DataGridViewTextBoxColumn70 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-            Me.DataGridViewTextBoxColumn71 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-            Me.garantiaCamara = New System.Windows.Forms.DataGridViewCheckBoxColumn()
-            Me.rutaCamara = New System.Windows.Forms.DataGridViewTextBoxColumn()
-            Me.valorFactCamara = New System.Windows.Forms.DataGridViewTextBoxColumn()
-            Me.valorResiCamara = New System.Windows.Forms.DataGridViewTextBoxColumn()
-            Me.vidaUtilCamara = New System.Windows.Forms.DataGridViewTextBoxColumn()
             Me.btnDelCamara = New System.Windows.Forms.Button()
             Me.btnAddCamara = New System.Windows.Forms.Button()
             Me.Label138 = New System.Windows.Forms.Label()
@@ -613,20 +613,21 @@
             Me.ButtonCancelar = New System.Windows.Forms.ToolStripMenuItem()
             Me.btnAgregarCategoria = New System.Windows.Forms.ToolStripMenuItem()
             Me.btnParametros = New System.Windows.Forms.ToolStripMenuItem()
-            Me.KryptonGroupBox1 = New ComponentFactory.Krypton.Toolkit.KryptonGroupBox()
-            Me.KryptonLabel1 = New ComponentFactory.Krypton.Toolkit.KryptonLabel()
-            Me.KryptonLabel2 = New ComponentFactory.Krypton.Toolkit.KryptonLabel()
-            Me.KryptonLabel3 = New ComponentFactory.Krypton.Toolkit.KryptonLabel()
-            Me.KryptonLabel4 = New ComponentFactory.Krypton.Toolkit.KryptonLabel()
-            Me.KryptonLabel5 = New ComponentFactory.Krypton.Toolkit.KryptonLabel()
-            Me.KryptonLabel6 = New ComponentFactory.Krypton.Toolkit.KryptonLabel()
-            Me.KryptonLabel7 = New ComponentFactory.Krypton.Toolkit.KryptonLabel()
-            Me.KryptonLabel8 = New ComponentFactory.Krypton.Toolkit.KryptonLabel()
-            Me.KryptonLabel9 = New ComponentFactory.Krypton.Toolkit.KryptonLabel()
-            Me.KryptonLabel10 = New ComponentFactory.Krypton.Toolkit.KryptonLabel()
-            Me.KryptonLabel11 = New ComponentFactory.Krypton.Toolkit.KryptonLabel()
-            Me.KryptonLabel12 = New ComponentFactory.Krypton.Toolkit.KryptonLabel()
-            Me.KryptonLabel13 = New ComponentFactory.Krypton.Toolkit.KryptonLabel()
+            Me.DataGridViewTextBoxColumn61 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+            Me.DataGridViewTextBoxColumn64 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+            Me.DataGridViewTextBoxColumn65 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+            Me.DataGridViewTextBoxColumn66 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+            Me.DataGridViewTextBoxColumn67 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+            Me.DataGridViewTextBoxColumn68 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+            Me.DataGridViewTextBoxColumn69 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+            Me.DataGridViewTextBoxColumn70 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+            Me.DataGridViewTextBoxColumn71 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+            Me.garantiaCamara = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+            Me.rutaCamara = New System.Windows.Forms.DataGridViewTextBoxColumn()
+            Me.valorFactCamara = New System.Windows.Forms.DataGridViewTextBoxColumn()
+            Me.valorResiCamara = New System.Windows.Forms.DataGridViewTextBoxColumn()
+            Me.vidaUtilCamara = New System.Windows.Forms.DataGridViewTextBoxColumn()
+            Me.caducidad_chaleco = New System.Windows.Forms.DataGridViewTextBoxColumn()
             Me.gpInfActfijo.SuspendLayout()
             Me.GroupBox6.SuspendLayout()
             Me.tcDatos.SuspendLayout()
@@ -638,6 +639,10 @@
             Me.tpRadios.SuspendLayout()
             CType(Me.dgvRadios, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.tpVehiculo.SuspendLayout()
+            CType(Me.KryptonGroupBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType(Me.KryptonGroupBox1.Panel, System.ComponentModel.ISupportInitialize).BeginInit()
+            Me.KryptonGroupBox1.Panel.SuspendLayout()
+            Me.KryptonGroupBox1.SuspendLayout()
             Me.GroupBox7.SuspendLayout()
             Me.GroupBox1.SuspendLayout()
             Me.tpTerreno.SuspendLayout()
@@ -663,10 +668,6 @@
             CType(Me.dgvChaleco, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.tpSoftware.SuspendLayout()
             Me.MenuStrip1.SuspendLayout()
-            CType(Me.KryptonGroupBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-            CType(Me.KryptonGroupBox1.Panel, System.ComponentModel.ISupportInitialize).BeginInit()
-            Me.KryptonGroupBox1.Panel.SuspendLayout()
-            Me.KryptonGroupBox1.SuspendLayout()
             Me.SuspendLayout()
             '
             'gpInfActfijo
@@ -2340,6 +2341,288 @@
             Me.tpVehiculo.Text = "VEHICULO"
             Me.tpVehiculo.UseVisualStyleBackColor = True
             '
+            'KryptonGroupBox1
+            '
+            Me.KryptonGroupBox1.Location = New System.Drawing.Point(7, 4)
+            Me.KryptonGroupBox1.Name = "KryptonGroupBox1"
+            '
+            'KryptonGroupBox1.Panel
+            '
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel13)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel12)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel11)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel10)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel9)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel8)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.cbmColorVehiculo)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.cbmAnoFabricacionVehiculo)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel7)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel6)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.txtCapacidadVehiculo)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel5)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel4)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel3)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.txtMotorVehiculo)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.txtChasisVehiculo)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel2)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.cbmMarcaVehiculo)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel1)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.dtpSoat)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.txtCilindrajeVehiculo)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.txtTipoVehiculo)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.txtPlacaVehiculo)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.txtSerieVehiculo)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.txtModeloVehiculo)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.cbmEstadoVehiculo)
+            Me.KryptonGroupBox1.Size = New System.Drawing.Size(400, 250)
+            Me.KryptonGroupBox1.TabIndex = 196
+            Me.KryptonGroupBox1.Values.Heading = "Detalles"
+            '
+            'KryptonLabel13
+            '
+            Me.KryptonLabel13.Location = New System.Drawing.Point(10, 199)
+            Me.KryptonLabel13.Name = "KryptonLabel13"
+            Me.KryptonLabel13.Size = New System.Drawing.Size(40, 20)
+            Me.KryptonLabel13.TabIndex = 204
+            Me.KryptonLabel13.Values.Text = "Color"
+            '
+            'KryptonLabel12
+            '
+            Me.KryptonLabel12.Location = New System.Drawing.Point(198, 164)
+            Me.KryptonLabel12.Name = "KryptonLabel12"
+            Me.KryptonLabel12.Size = New System.Drawing.Size(33, 20)
+            Me.KryptonLabel12.TabIndex = 203
+            Me.KryptonLabel12.Values.Text = "Año"
+            '
+            'KryptonLabel11
+            '
+            Me.KryptonLabel11.Location = New System.Drawing.Point(199, 131)
+            Me.KryptonLabel11.Name = "KryptonLabel11"
+            Me.KryptonLabel11.Size = New System.Drawing.Size(34, 20)
+            Me.KryptonLabel11.TabIndex = 202
+            Me.KryptonLabel11.Values.Text = "Tipo"
+            '
+            'KryptonLabel10
+            '
+            Me.KryptonLabel10.Location = New System.Drawing.Point(198, 99)
+            Me.KryptonLabel10.Name = "KryptonLabel10"
+            Me.KryptonLabel10.Size = New System.Drawing.Size(44, 20)
+            Me.KryptonLabel10.TabIndex = 201
+            Me.KryptonLabel10.Values.Text = "Marca"
+            '
+            'KryptonLabel9
+            '
+            Me.KryptonLabel9.Location = New System.Drawing.Point(198, 70)
+            Me.KryptonLabel9.Name = "KryptonLabel9"
+            Me.KryptonLabel9.Size = New System.Drawing.Size(45, 20)
+            Me.KryptonLabel9.TabIndex = 200
+            Me.KryptonLabel9.Values.Text = "Motor"
+            '
+            'KryptonLabel8
+            '
+            Me.KryptonLabel8.Location = New System.Drawing.Point(198, 36)
+            Me.KryptonLabel8.Name = "KryptonLabel8"
+            Me.KryptonLabel8.Size = New System.Drawing.Size(45, 20)
+            Me.KryptonLabel8.TabIndex = 199
+            Me.KryptonLabel8.Values.Text = "Chasis"
+            '
+            'cbmColorVehiculo
+            '
+            Me.cbmColorVehiculo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+            Me.cbmColorVehiculo.Enabled = False
+            Me.cbmColorVehiculo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+            Me.cbmColorVehiculo.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.cbmColorVehiculo.FormattingEnabled = True
+            Me.cbmColorVehiculo.Location = New System.Drawing.Point(62, 198)
+            Me.cbmColorVehiculo.Name = "cbmColorVehiculo"
+            Me.cbmColorVehiculo.Size = New System.Drawing.Size(101, 21)
+            Me.cbmColorVehiculo.TabIndex = 162
+            '
+            'cbmAnoFabricacionVehiculo
+            '
+            Me.cbmAnoFabricacionVehiculo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+            Me.cbmAnoFabricacionVehiculo.Enabled = False
+            Me.cbmAnoFabricacionVehiculo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+            Me.cbmAnoFabricacionVehiculo.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.cbmAnoFabricacionVehiculo.FormattingEnabled = True
+            Me.cbmAnoFabricacionVehiculo.Location = New System.Drawing.Point(251, 164)
+            Me.cbmAnoFabricacionVehiculo.Name = "cbmAnoFabricacionVehiculo"
+            Me.cbmAnoFabricacionVehiculo.Size = New System.Drawing.Size(70, 21)
+            Me.cbmAnoFabricacionVehiculo.TabIndex = 167
+            '
+            'KryptonLabel7
+            '
+            Me.KryptonLabel7.Location = New System.Drawing.Point(198, 9)
+            Me.KryptonLabel7.Name = "KryptonLabel7"
+            Me.KryptonLabel7.Size = New System.Drawing.Size(47, 20)
+            Me.KryptonLabel7.TabIndex = 198
+            Me.KryptonLabel7.Values.Text = "Estado"
+            '
+            'KryptonLabel6
+            '
+            Me.KryptonLabel6.Location = New System.Drawing.Point(10, 164)
+            Me.KryptonLabel6.Name = "KryptonLabel6"
+            Me.KryptonLabel6.Size = New System.Drawing.Size(53, 20)
+            Me.KryptonLabel6.TabIndex = 197
+            Me.KryptonLabel6.Values.Text = "Modelo"
+            '
+            'txtCapacidadVehiculo
+            '
+            Me.txtCapacidadVehiculo.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+            Me.txtCapacidadVehiculo.Enabled = False
+            Me.txtCapacidadVehiculo.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtCapacidadVehiculo.Location = New System.Drawing.Point(251, 129)
+            Me.txtCapacidadVehiculo.Name = "txtCapacidadVehiculo"
+            Me.txtCapacidadVehiculo.Size = New System.Drawing.Size(104, 22)
+            Me.txtCapacidadVehiculo.TabIndex = 176
+            '
+            'KryptonLabel5
+            '
+            Me.KryptonLabel5.Location = New System.Drawing.Point(10, 129)
+            Me.KryptonLabel5.Name = "KryptonLabel5"
+            Me.KryptonLabel5.Size = New System.Drawing.Size(37, 20)
+            Me.KryptonLabel5.TabIndex = 196
+            Me.KryptonLabel5.Values.Text = "Serie"
+            '
+            'KryptonLabel4
+            '
+            Me.KryptonLabel4.Location = New System.Drawing.Point(10, 98)
+            Me.KryptonLabel4.Name = "KryptonLabel4"
+            Me.KryptonLabel4.Size = New System.Drawing.Size(44, 20)
+            Me.KryptonLabel4.TabIndex = 195
+            Me.KryptonLabel4.Values.Text = "Placas"
+            '
+            'KryptonLabel3
+            '
+            Me.KryptonLabel3.Location = New System.Drawing.Point(10, 70)
+            Me.KryptonLabel3.Name = "KryptonLabel3"
+            Me.KryptonLabel3.Size = New System.Drawing.Size(68, 20)
+            Me.KryptonLabel3.TabIndex = 194
+            Me.KryptonLabel3.Values.Text = "Capacidad"
+            '
+            'txtMotorVehiculo
+            '
+            Me.txtMotorVehiculo.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+            Me.txtMotorVehiculo.Enabled = False
+            Me.txtMotorVehiculo.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtMotorVehiculo.Location = New System.Drawing.Point(251, 68)
+            Me.txtMotorVehiculo.Name = "txtMotorVehiculo"
+            Me.txtMotorVehiculo.Size = New System.Drawing.Size(104, 22)
+            Me.txtMotorVehiculo.TabIndex = 172
+            '
+            'txtChasisVehiculo
+            '
+            Me.txtChasisVehiculo.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+            Me.txtChasisVehiculo.Enabled = False
+            Me.txtChasisVehiculo.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtChasisVehiculo.Location = New System.Drawing.Point(252, 36)
+            Me.txtChasisVehiculo.Name = "txtChasisVehiculo"
+            Me.txtChasisVehiculo.Size = New System.Drawing.Size(104, 22)
+            Me.txtChasisVehiculo.TabIndex = 178
+            '
+            'KryptonLabel2
+            '
+            Me.KryptonLabel2.Location = New System.Drawing.Point(10, 36)
+            Me.KryptonLabel2.Name = "KryptonLabel2"
+            Me.KryptonLabel2.Size = New System.Drawing.Size(61, 20)
+            Me.KryptonLabel2.TabIndex = 193
+            Me.KryptonLabel2.Values.Text = "Cilindraje"
+            '
+            'cbmMarcaVehiculo
+            '
+            Me.cbmMarcaVehiculo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+            Me.cbmMarcaVehiculo.Enabled = False
+            Me.cbmMarcaVehiculo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+            Me.cbmMarcaVehiculo.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.cbmMarcaVehiculo.FormattingEnabled = True
+            Me.cbmMarcaVehiculo.Location = New System.Drawing.Point(252, 101)
+            Me.cbmMarcaVehiculo.Name = "cbmMarcaVehiculo"
+            Me.cbmMarcaVehiculo.Size = New System.Drawing.Size(112, 21)
+            Me.cbmMarcaVehiculo.TabIndex = 158
+            '
+            'KryptonLabel1
+            '
+            Me.KryptonLabel1.Location = New System.Drawing.Point(10, 9)
+            Me.KryptonLabel1.Name = "KryptonLabel1"
+            Me.KryptonLabel1.Size = New System.Drawing.Size(41, 20)
+            Me.KryptonLabel1.TabIndex = 192
+            Me.KryptonLabel1.Values.Text = "SOAT"
+            '
+            'dtpSoat
+            '
+            Me.dtpSoat.Enabled = False
+            Me.dtpSoat.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.dtpSoat.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+            Me.dtpSoat.Location = New System.Drawing.Point(62, 7)
+            Me.dtpSoat.Name = "dtpSoat"
+            Me.dtpSoat.Size = New System.Drawing.Size(101, 22)
+            Me.dtpSoat.TabIndex = 191
+            Me.dtpSoat.Value = New Date(2020, 2, 7, 11, 43, 51, 0)
+            '
+            'txtCilindrajeVehiculo
+            '
+            Me.txtCilindrajeVehiculo.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+            Me.txtCilindrajeVehiculo.Enabled = False
+            Me.txtCilindrajeVehiculo.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtCilindrajeVehiculo.Location = New System.Drawing.Point(88, 36)
+            Me.txtCilindrajeVehiculo.Name = "txtCilindrajeVehiculo"
+            Me.txtCilindrajeVehiculo.Size = New System.Drawing.Size(75, 22)
+            Me.txtCilindrajeVehiculo.TabIndex = 174
+            '
+            'txtTipoVehiculo
+            '
+            Me.txtTipoVehiculo.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+            Me.txtTipoVehiculo.Enabled = False
+            Me.txtTipoVehiculo.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtTipoVehiculo.Location = New System.Drawing.Point(120, 68)
+            Me.txtTipoVehiculo.Name = "txtTipoVehiculo"
+            Me.txtTipoVehiculo.Size = New System.Drawing.Size(43, 22)
+            Me.txtTipoVehiculo.TabIndex = 180
+            '
+            'txtPlacaVehiculo
+            '
+            Me.txtPlacaVehiculo.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+            Me.txtPlacaVehiculo.Enabled = False
+            Me.txtPlacaVehiculo.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtPlacaVehiculo.Location = New System.Drawing.Point(83, 101)
+            Me.txtPlacaVehiculo.Name = "txtPlacaVehiculo"
+            Me.txtPlacaVehiculo.Size = New System.Drawing.Size(80, 22)
+            Me.txtPlacaVehiculo.TabIndex = 170
+            '
+            'txtSerieVehiculo
+            '
+            Me.txtSerieVehiculo.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+            Me.txtSerieVehiculo.Enabled = False
+            Me.txtSerieVehiculo.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtSerieVehiculo.Location = New System.Drawing.Point(62, 131)
+            Me.txtSerieVehiculo.Name = "txtSerieVehiculo"
+            Me.txtSerieVehiculo.Size = New System.Drawing.Size(101, 22)
+            Me.txtSerieVehiculo.TabIndex = 161
+            '
+            'txtModeloVehiculo
+            '
+            Me.txtModeloVehiculo.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+            Me.txtModeloVehiculo.Enabled = False
+            Me.txtModeloVehiculo.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtModeloVehiculo.Location = New System.Drawing.Point(62, 164)
+            Me.txtModeloVehiculo.Name = "txtModeloVehiculo"
+            Me.txtModeloVehiculo.Size = New System.Drawing.Size(101, 22)
+            Me.txtModeloVehiculo.TabIndex = 164
+            '
+            'cbmEstadoVehiculo
+            '
+            Me.cbmEstadoVehiculo.AutoCompleteCustomSource.AddRange(New String() {"BUENO", "REGULAR", "MALO"})
+            Me.cbmEstadoVehiculo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+            Me.cbmEstadoVehiculo.Enabled = False
+            Me.cbmEstadoVehiculo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+            Me.cbmEstadoVehiculo.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.cbmEstadoVehiculo.FormattingEnabled = True
+            Me.cbmEstadoVehiculo.Items.AddRange(New Object() {"BUENO", "REGULAR", "MALO"})
+            Me.cbmEstadoVehiculo.Location = New System.Drawing.Point(251, 7)
+            Me.cbmEstadoVehiculo.Name = "cbmEstadoVehiculo"
+            Me.cbmEstadoVehiculo.Size = New System.Drawing.Size(112, 21)
+            Me.cbmEstadoVehiculo.TabIndex = 163
+            '
             'chNingunDispositivo
             '
             Me.chNingunDispositivo.AutoSize = True
@@ -2657,147 +2940,6 @@
             Me.chNingunSeguro.TabIndex = 192
             Me.chNingunSeguro.Text = "NINGUNA SEGURO"
             Me.chNingunSeguro.UseVisualStyleBackColor = False
-            '
-            'dtpSoat
-            '
-            Me.dtpSoat.Enabled = False
-            Me.dtpSoat.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.dtpSoat.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-            Me.dtpSoat.Location = New System.Drawing.Point(62, 7)
-            Me.dtpSoat.Name = "dtpSoat"
-            Me.dtpSoat.Size = New System.Drawing.Size(101, 22)
-            Me.dtpSoat.TabIndex = 191
-            Me.dtpSoat.Value = New Date(2020, 2, 7, 11, 43, 51, 0)
-            '
-            'txtTipoVehiculo
-            '
-            Me.txtTipoVehiculo.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-            Me.txtTipoVehiculo.Enabled = False
-            Me.txtTipoVehiculo.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtTipoVehiculo.Location = New System.Drawing.Point(120, 68)
-            Me.txtTipoVehiculo.Name = "txtTipoVehiculo"
-            Me.txtTipoVehiculo.Size = New System.Drawing.Size(43, 22)
-            Me.txtTipoVehiculo.TabIndex = 180
-            '
-            'txtChasisVehiculo
-            '
-            Me.txtChasisVehiculo.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-            Me.txtChasisVehiculo.Enabled = False
-            Me.txtChasisVehiculo.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtChasisVehiculo.Location = New System.Drawing.Point(252, 36)
-            Me.txtChasisVehiculo.Name = "txtChasisVehiculo"
-            Me.txtChasisVehiculo.Size = New System.Drawing.Size(104, 22)
-            Me.txtChasisVehiculo.TabIndex = 178
-            '
-            'txtCapacidadVehiculo
-            '
-            Me.txtCapacidadVehiculo.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-            Me.txtCapacidadVehiculo.Enabled = False
-            Me.txtCapacidadVehiculo.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtCapacidadVehiculo.Location = New System.Drawing.Point(251, 129)
-            Me.txtCapacidadVehiculo.Name = "txtCapacidadVehiculo"
-            Me.txtCapacidadVehiculo.Size = New System.Drawing.Size(104, 22)
-            Me.txtCapacidadVehiculo.TabIndex = 176
-            '
-            'txtCilindrajeVehiculo
-            '
-            Me.txtCilindrajeVehiculo.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-            Me.txtCilindrajeVehiculo.Enabled = False
-            Me.txtCilindrajeVehiculo.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtCilindrajeVehiculo.Location = New System.Drawing.Point(88, 36)
-            Me.txtCilindrajeVehiculo.Name = "txtCilindrajeVehiculo"
-            Me.txtCilindrajeVehiculo.Size = New System.Drawing.Size(75, 22)
-            Me.txtCilindrajeVehiculo.TabIndex = 174
-            '
-            'txtMotorVehiculo
-            '
-            Me.txtMotorVehiculo.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-            Me.txtMotorVehiculo.Enabled = False
-            Me.txtMotorVehiculo.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtMotorVehiculo.Location = New System.Drawing.Point(251, 68)
-            Me.txtMotorVehiculo.Name = "txtMotorVehiculo"
-            Me.txtMotorVehiculo.Size = New System.Drawing.Size(104, 22)
-            Me.txtMotorVehiculo.TabIndex = 172
-            '
-            'txtPlacaVehiculo
-            '
-            Me.txtPlacaVehiculo.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-            Me.txtPlacaVehiculo.Enabled = False
-            Me.txtPlacaVehiculo.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtPlacaVehiculo.Location = New System.Drawing.Point(83, 101)
-            Me.txtPlacaVehiculo.Name = "txtPlacaVehiculo"
-            Me.txtPlacaVehiculo.Size = New System.Drawing.Size(80, 22)
-            Me.txtPlacaVehiculo.TabIndex = 170
-            '
-            'cbmAnoFabricacionVehiculo
-            '
-            Me.cbmAnoFabricacionVehiculo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-            Me.cbmAnoFabricacionVehiculo.Enabled = False
-            Me.cbmAnoFabricacionVehiculo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-            Me.cbmAnoFabricacionVehiculo.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.cbmAnoFabricacionVehiculo.FormattingEnabled = True
-            Me.cbmAnoFabricacionVehiculo.Location = New System.Drawing.Point(251, 164)
-            Me.cbmAnoFabricacionVehiculo.Name = "cbmAnoFabricacionVehiculo"
-            Me.cbmAnoFabricacionVehiculo.Size = New System.Drawing.Size(70, 21)
-            Me.cbmAnoFabricacionVehiculo.TabIndex = 167
-            '
-            'txtModeloVehiculo
-            '
-            Me.txtModeloVehiculo.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-            Me.txtModeloVehiculo.Enabled = False
-            Me.txtModeloVehiculo.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtModeloVehiculo.Location = New System.Drawing.Point(62, 164)
-            Me.txtModeloVehiculo.Name = "txtModeloVehiculo"
-            Me.txtModeloVehiculo.Size = New System.Drawing.Size(101, 22)
-            Me.txtModeloVehiculo.TabIndex = 164
-            '
-            'cbmEstadoVehiculo
-            '
-            Me.cbmEstadoVehiculo.AutoCompleteCustomSource.AddRange(New String() {"BUENO", "REGULAR", "MALO"})
-            Me.cbmEstadoVehiculo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-            Me.cbmEstadoVehiculo.Enabled = False
-            Me.cbmEstadoVehiculo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-            Me.cbmEstadoVehiculo.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.cbmEstadoVehiculo.FormattingEnabled = True
-            Me.cbmEstadoVehiculo.Items.AddRange(New Object() {"BUENO", "REGULAR", "MALO"})
-            Me.cbmEstadoVehiculo.Location = New System.Drawing.Point(251, 7)
-            Me.cbmEstadoVehiculo.Name = "cbmEstadoVehiculo"
-            Me.cbmEstadoVehiculo.Size = New System.Drawing.Size(112, 21)
-            Me.cbmEstadoVehiculo.TabIndex = 163
-            '
-            'cbmColorVehiculo
-            '
-            Me.cbmColorVehiculo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-            Me.cbmColorVehiculo.Enabled = False
-            Me.cbmColorVehiculo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-            Me.cbmColorVehiculo.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.cbmColorVehiculo.FormattingEnabled = True
-            Me.cbmColorVehiculo.Location = New System.Drawing.Point(62, 198)
-            Me.cbmColorVehiculo.Name = "cbmColorVehiculo"
-            Me.cbmColorVehiculo.Size = New System.Drawing.Size(101, 21)
-            Me.cbmColorVehiculo.TabIndex = 162
-            '
-            'cbmMarcaVehiculo
-            '
-            Me.cbmMarcaVehiculo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-            Me.cbmMarcaVehiculo.Enabled = False
-            Me.cbmMarcaVehiculo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-            Me.cbmMarcaVehiculo.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.cbmMarcaVehiculo.FormattingEnabled = True
-            Me.cbmMarcaVehiculo.Location = New System.Drawing.Point(252, 101)
-            Me.cbmMarcaVehiculo.Name = "cbmMarcaVehiculo"
-            Me.cbmMarcaVehiculo.Size = New System.Drawing.Size(112, 21)
-            Me.cbmMarcaVehiculo.TabIndex = 158
-            '
-            'txtSerieVehiculo
-            '
-            Me.txtSerieVehiculo.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-            Me.txtSerieVehiculo.Enabled = False
-            Me.txtSerieVehiculo.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtSerieVehiculo.Location = New System.Drawing.Point(62, 131)
-            Me.txtSerieVehiculo.Name = "txtSerieVehiculo"
-            Me.txtSerieVehiculo.Size = New System.Drawing.Size(101, 22)
-            Me.txtSerieVehiculo.TabIndex = 161
             '
             'tpTerreno
             '
@@ -3697,7 +3839,7 @@
             Me.tpMueblesOficina.Location = New System.Drawing.Point(4, 22)
             Me.tpMueblesOficina.Name = "tpMueblesOficina"
             Me.tpMueblesOficina.Padding = New System.Windows.Forms.Padding(3)
-            Me.tpMueblesOficina.Size = New System.Drawing.Size(994, 260)
+            Me.tpMueblesOficina.Size = New System.Drawing.Size(870, 260)
             Me.tpMueblesOficina.TabIndex = 8
             Me.tpMueblesOficina.Text = "MUEBLES DE OFICINA"
             Me.tpMueblesOficina.UseVisualStyleBackColor = True
@@ -3987,7 +4129,7 @@
             Me.tpEquiposCocina.Location = New System.Drawing.Point(4, 22)
             Me.tpEquiposCocina.Name = "tpEquiposCocina"
             Me.tpEquiposCocina.Padding = New System.Windows.Forms.Padding(3)
-            Me.tpEquiposCocina.Size = New System.Drawing.Size(994, 260)
+            Me.tpEquiposCocina.Size = New System.Drawing.Size(870, 260)
             Me.tpEquiposCocina.TabIndex = 9
             Me.tpEquiposCocina.Text = "EQUIPOS DE COCINA"
             Me.tpEquiposCocina.UseVisualStyleBackColor = True
@@ -4307,7 +4449,7 @@
             Me.TabPage4.Location = New System.Drawing.Point(4, 22)
             Me.TabPage4.Name = "TabPage4"
             Me.TabPage4.Padding = New System.Windows.Forms.Padding(3)
-            Me.TabPage4.Size = New System.Drawing.Size(994, 260)
+            Me.TabPage4.Size = New System.Drawing.Size(870, 260)
             Me.TabPage4.TabIndex = 10
             Me.TabPage4.Text = "EQUIPOS DE AMBIENTACION"
             Me.TabPage4.UseVisualStyleBackColor = True
@@ -4714,7 +4856,7 @@
             Me.TabPage1.Location = New System.Drawing.Point(4, 22)
             Me.TabPage1.Name = "TabPage1"
             Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-            Me.TabPage1.Size = New System.Drawing.Size(994, 260)
+            Me.TabPage1.Size = New System.Drawing.Size(870, 260)
             Me.TabPage1.TabIndex = 11
             Me.TabPage1.Text = "EQUIPOS DE COMUNICACIÓN Y TELEFONÍA"
             Me.TabPage1.UseVisualStyleBackColor = True
@@ -5126,7 +5268,7 @@
             Me.tpEquiposSeguridadIndustrial.Location = New System.Drawing.Point(4, 22)
             Me.tpEquiposSeguridadIndustrial.Name = "tpEquiposSeguridadIndustrial"
             Me.tpEquiposSeguridadIndustrial.Padding = New System.Windows.Forms.Padding(3)
-            Me.tpEquiposSeguridadIndustrial.Size = New System.Drawing.Size(994, 260)
+            Me.tpEquiposSeguridadIndustrial.Size = New System.Drawing.Size(870, 260)
             Me.tpEquiposSeguridadIndustrial.TabIndex = 12
             Me.tpEquiposSeguridadIndustrial.Text = "EQUIPOS DE SEGURIDAD INDUSTRIAL"
             Me.tpEquiposSeguridadIndustrial.UseVisualStyleBackColor = True
@@ -5472,7 +5614,7 @@
             Me.tpCamarasSeguridad.Location = New System.Drawing.Point(4, 22)
             Me.tpCamarasSeguridad.Name = "tpCamarasSeguridad"
             Me.tpCamarasSeguridad.Padding = New System.Windows.Forms.Padding(3)
-            Me.tpCamarasSeguridad.Size = New System.Drawing.Size(994, 260)
+            Me.tpCamarasSeguridad.Size = New System.Drawing.Size(870, 260)
             Me.tpCamarasSeguridad.TabIndex = 13
             Me.tpCamarasSeguridad.Text = "CAMARAS DE SEGURIDAD"
             Me.tpCamarasSeguridad.UseVisualStyleBackColor = True
@@ -5548,7 +5690,7 @@
             Me.dgvCamara.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
             Me.dgvCamara.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
             Me.dgvCamara.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-            Me.dgvCamara.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn61, Me.DataGridViewTextBoxColumn64, Me.DataGridViewTextBoxColumn65, Me.DataGridViewTextBoxColumn66, Me.DataGridViewTextBoxColumn67, Me.DataGridViewTextBoxColumn68, Me.DataGridViewTextBoxColumn69, Me.DataGridViewTextBoxColumn70, Me.DataGridViewTextBoxColumn71, Me.garantiaCamara, Me.rutaCamara, Me.valorFactCamara, Me.valorResiCamara, Me.vidaUtilCamara})
+            Me.dgvCamara.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn61, Me.DataGridViewTextBoxColumn64, Me.DataGridViewTextBoxColumn65, Me.DataGridViewTextBoxColumn66, Me.DataGridViewTextBoxColumn67, Me.DataGridViewTextBoxColumn68, Me.DataGridViewTextBoxColumn69, Me.DataGridViewTextBoxColumn70, Me.DataGridViewTextBoxColumn71, Me.garantiaCamara, Me.rutaCamara, Me.valorFactCamara, Me.valorResiCamara, Me.vidaUtilCamara, Me.caducidad_chaleco})
             DataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
             DataGridViewCellStyle20.BackColor = System.Drawing.SystemColors.Window
             DataGridViewCellStyle20.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -5565,90 +5707,6 @@
             Me.dgvCamara.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
             Me.dgvCamara.Size = New System.Drawing.Size(534, 190)
             Me.dgvCamara.TabIndex = 335
-            '
-            'DataGridViewTextBoxColumn61
-            '
-            Me.DataGridViewTextBoxColumn61.HeaderText = "MARCA"
-            Me.DataGridViewTextBoxColumn61.Name = "DataGridViewTextBoxColumn61"
-            Me.DataGridViewTextBoxColumn61.ReadOnly = True
-            '
-            'DataGridViewTextBoxColumn64
-            '
-            Me.DataGridViewTextBoxColumn64.HeaderText = "MODELO"
-            Me.DataGridViewTextBoxColumn64.Name = "DataGridViewTextBoxColumn64"
-            Me.DataGridViewTextBoxColumn64.ReadOnly = True
-            '
-            'DataGridViewTextBoxColumn65
-            '
-            Me.DataGridViewTextBoxColumn65.HeaderText = "ESTADO"
-            Me.DataGridViewTextBoxColumn65.Name = "DataGridViewTextBoxColumn65"
-            Me.DataGridViewTextBoxColumn65.ReadOnly = True
-            '
-            'DataGridViewTextBoxColumn66
-            '
-            Me.DataGridViewTextBoxColumn66.HeaderText = "SERIE"
-            Me.DataGridViewTextBoxColumn66.Name = "DataGridViewTextBoxColumn66"
-            Me.DataGridViewTextBoxColumn66.ReadOnly = True
-            '
-            'DataGridViewTextBoxColumn67
-            '
-            Me.DataGridViewTextBoxColumn67.HeaderText = "COLOR"
-            Me.DataGridViewTextBoxColumn67.Name = "DataGridViewTextBoxColumn67"
-            Me.DataGridViewTextBoxColumn67.ReadOnly = True
-            '
-            'DataGridViewTextBoxColumn68
-            '
-            Me.DataGridViewTextBoxColumn68.HeaderText = "MATERIAL"
-            Me.DataGridViewTextBoxColumn68.Name = "DataGridViewTextBoxColumn68"
-            Me.DataGridViewTextBoxColumn68.ReadOnly = True
-            '
-            'DataGridViewTextBoxColumn69
-            '
-            Me.DataGridViewTextBoxColumn69.HeaderText = "AÑOS"
-            Me.DataGridViewTextBoxColumn69.Name = "DataGridViewTextBoxColumn69"
-            Me.DataGridViewTextBoxColumn69.ReadOnly = True
-            '
-            'DataGridViewTextBoxColumn70
-            '
-            Me.DataGridViewTextBoxColumn70.HeaderText = "ADICIONAL"
-            Me.DataGridViewTextBoxColumn70.Name = "DataGridViewTextBoxColumn70"
-            Me.DataGridViewTextBoxColumn70.ReadOnly = True
-            '
-            'DataGridViewTextBoxColumn71
-            '
-            Me.DataGridViewTextBoxColumn71.HeaderText = "CODIGO"
-            Me.DataGridViewTextBoxColumn71.Name = "DataGridViewTextBoxColumn71"
-            Me.DataGridViewTextBoxColumn71.ReadOnly = True
-            '
-            'garantiaCamara
-            '
-            Me.garantiaCamara.HeaderText = "GARANTIA"
-            Me.garantiaCamara.Name = "garantiaCamara"
-            Me.garantiaCamara.ReadOnly = True
-            '
-            'rutaCamara
-            '
-            Me.rutaCamara.HeaderText = "RUTA"
-            Me.rutaCamara.Name = "rutaCamara"
-            Me.rutaCamara.ReadOnly = True
-            '
-            'valorFactCamara
-            '
-            Me.valorFactCamara.HeaderText = "valorFact"
-            Me.valorFactCamara.Name = "valorFactCamara"
-            Me.valorFactCamara.ReadOnly = True
-            '
-            'valorResiCamara
-            '
-            Me.valorResiCamara.HeaderText = "ValosResi"
-            Me.valorResiCamara.Name = "valorResiCamara"
-            Me.valorResiCamara.ReadOnly = True
-            '
-            'vidaUtilCamara
-            '
-            Me.vidaUtilCamara.HeaderText = "VidaUtil"
-            Me.vidaUtilCamara.Name = "vidaUtilCamara"
-            Me.vidaUtilCamara.ReadOnly = True
             '
             'btnDelCamara
             '
@@ -5875,7 +5933,7 @@
             Me.tpGeneradores.Location = New System.Drawing.Point(4, 22)
             Me.tpGeneradores.Name = "tpGeneradores"
             Me.tpGeneradores.Padding = New System.Windows.Forms.Padding(3)
-            Me.tpGeneradores.Size = New System.Drawing.Size(994, 260)
+            Me.tpGeneradores.Size = New System.Drawing.Size(870, 260)
             Me.tpGeneradores.TabIndex = 14
             Me.tpGeneradores.Text = "GENERADORES"
             Me.tpGeneradores.UseVisualStyleBackColor = True
@@ -6139,7 +6197,7 @@
             Me.tpChalecos.Location = New System.Drawing.Point(4, 22)
             Me.tpChalecos.Name = "tpChalecos"
             Me.tpChalecos.Padding = New System.Windows.Forms.Padding(3)
-            Me.tpChalecos.Size = New System.Drawing.Size(994, 260)
+            Me.tpChalecos.Size = New System.Drawing.Size(870, 260)
             Me.tpChalecos.TabIndex = 15
             Me.tpChalecos.Text = "CHALECOS"
             Me.tpChalecos.UseVisualStyleBackColor = True
@@ -6739,146 +6797,95 @@
             Me.btnParametros.Size = New System.Drawing.Size(105, 28)
             Me.btnParametros.Text = "PARÁMETROS"
             '
-            'KryptonGroupBox1
+            'DataGridViewTextBoxColumn61
             '
-            Me.KryptonGroupBox1.Location = New System.Drawing.Point(7, 4)
-            Me.KryptonGroupBox1.Name = "KryptonGroupBox1"
+            Me.DataGridViewTextBoxColumn61.HeaderText = "MARCA"
+            Me.DataGridViewTextBoxColumn61.Name = "DataGridViewTextBoxColumn61"
+            Me.DataGridViewTextBoxColumn61.ReadOnly = True
             '
-            'KryptonGroupBox1.Panel
+            'DataGridViewTextBoxColumn64
             '
-            Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel13)
-            Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel12)
-            Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel11)
-            Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel10)
-            Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel9)
-            Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel8)
-            Me.KryptonGroupBox1.Panel.Controls.Add(Me.cbmColorVehiculo)
-            Me.KryptonGroupBox1.Panel.Controls.Add(Me.cbmAnoFabricacionVehiculo)
-            Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel7)
-            Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel6)
-            Me.KryptonGroupBox1.Panel.Controls.Add(Me.txtCapacidadVehiculo)
-            Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel5)
-            Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel4)
-            Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel3)
-            Me.KryptonGroupBox1.Panel.Controls.Add(Me.txtMotorVehiculo)
-            Me.KryptonGroupBox1.Panel.Controls.Add(Me.txtChasisVehiculo)
-            Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel2)
-            Me.KryptonGroupBox1.Panel.Controls.Add(Me.cbmMarcaVehiculo)
-            Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel1)
-            Me.KryptonGroupBox1.Panel.Controls.Add(Me.dtpSoat)
-            Me.KryptonGroupBox1.Panel.Controls.Add(Me.txtCilindrajeVehiculo)
-            Me.KryptonGroupBox1.Panel.Controls.Add(Me.txtTipoVehiculo)
-            Me.KryptonGroupBox1.Panel.Controls.Add(Me.txtPlacaVehiculo)
-            Me.KryptonGroupBox1.Panel.Controls.Add(Me.txtSerieVehiculo)
-            Me.KryptonGroupBox1.Panel.Controls.Add(Me.txtModeloVehiculo)
-            Me.KryptonGroupBox1.Panel.Controls.Add(Me.cbmEstadoVehiculo)
-            Me.KryptonGroupBox1.Size = New System.Drawing.Size(400, 250)
-            Me.KryptonGroupBox1.TabIndex = 196
-            Me.KryptonGroupBox1.Values.Heading = "Detalles"
+            Me.DataGridViewTextBoxColumn64.HeaderText = "MODELO"
+            Me.DataGridViewTextBoxColumn64.Name = "DataGridViewTextBoxColumn64"
+            Me.DataGridViewTextBoxColumn64.ReadOnly = True
             '
-            'KryptonLabel1
+            'DataGridViewTextBoxColumn65
             '
-            Me.KryptonLabel1.Location = New System.Drawing.Point(10, 9)
-            Me.KryptonLabel1.Name = "KryptonLabel1"
-            Me.KryptonLabel1.Size = New System.Drawing.Size(41, 20)
-            Me.KryptonLabel1.TabIndex = 192
-            Me.KryptonLabel1.Values.Text = "SOAT"
+            Me.DataGridViewTextBoxColumn65.HeaderText = "ESTADO"
+            Me.DataGridViewTextBoxColumn65.Name = "DataGridViewTextBoxColumn65"
+            Me.DataGridViewTextBoxColumn65.ReadOnly = True
             '
-            'KryptonLabel2
+            'DataGridViewTextBoxColumn66
             '
-            Me.KryptonLabel2.Location = New System.Drawing.Point(10, 36)
-            Me.KryptonLabel2.Name = "KryptonLabel2"
-            Me.KryptonLabel2.Size = New System.Drawing.Size(61, 20)
-            Me.KryptonLabel2.TabIndex = 193
-            Me.KryptonLabel2.Values.Text = "Cilindraje"
+            Me.DataGridViewTextBoxColumn66.HeaderText = "SERIE"
+            Me.DataGridViewTextBoxColumn66.Name = "DataGridViewTextBoxColumn66"
+            Me.DataGridViewTextBoxColumn66.ReadOnly = True
             '
-            'KryptonLabel3
+            'DataGridViewTextBoxColumn67
             '
-            Me.KryptonLabel3.Location = New System.Drawing.Point(10, 70)
-            Me.KryptonLabel3.Name = "KryptonLabel3"
-            Me.KryptonLabel3.Size = New System.Drawing.Size(68, 20)
-            Me.KryptonLabel3.TabIndex = 194
-            Me.KryptonLabel3.Values.Text = "Capacidad"
+            Me.DataGridViewTextBoxColumn67.HeaderText = "COLOR"
+            Me.DataGridViewTextBoxColumn67.Name = "DataGridViewTextBoxColumn67"
+            Me.DataGridViewTextBoxColumn67.ReadOnly = True
             '
-            'KryptonLabel4
+            'DataGridViewTextBoxColumn68
             '
-            Me.KryptonLabel4.Location = New System.Drawing.Point(10, 98)
-            Me.KryptonLabel4.Name = "KryptonLabel4"
-            Me.KryptonLabel4.Size = New System.Drawing.Size(44, 20)
-            Me.KryptonLabel4.TabIndex = 195
-            Me.KryptonLabel4.Values.Text = "Placas"
+            Me.DataGridViewTextBoxColumn68.HeaderText = "MATERIAL"
+            Me.DataGridViewTextBoxColumn68.Name = "DataGridViewTextBoxColumn68"
+            Me.DataGridViewTextBoxColumn68.ReadOnly = True
             '
-            'KryptonLabel5
+            'DataGridViewTextBoxColumn69
             '
-            Me.KryptonLabel5.Location = New System.Drawing.Point(10, 129)
-            Me.KryptonLabel5.Name = "KryptonLabel5"
-            Me.KryptonLabel5.Size = New System.Drawing.Size(37, 20)
-            Me.KryptonLabel5.TabIndex = 196
-            Me.KryptonLabel5.Values.Text = "Serie"
+            Me.DataGridViewTextBoxColumn69.HeaderText = "AÑOS"
+            Me.DataGridViewTextBoxColumn69.Name = "DataGridViewTextBoxColumn69"
+            Me.DataGridViewTextBoxColumn69.ReadOnly = True
             '
-            'KryptonLabel6
+            'DataGridViewTextBoxColumn70
             '
-            Me.KryptonLabel6.Location = New System.Drawing.Point(10, 164)
-            Me.KryptonLabel6.Name = "KryptonLabel6"
-            Me.KryptonLabel6.Size = New System.Drawing.Size(53, 20)
-            Me.KryptonLabel6.TabIndex = 197
-            Me.KryptonLabel6.Values.Text = "Modelo"
+            Me.DataGridViewTextBoxColumn70.HeaderText = "ADICIONAL"
+            Me.DataGridViewTextBoxColumn70.Name = "DataGridViewTextBoxColumn70"
+            Me.DataGridViewTextBoxColumn70.ReadOnly = True
             '
-            'KryptonLabel7
+            'DataGridViewTextBoxColumn71
             '
-            Me.KryptonLabel7.Location = New System.Drawing.Point(198, 9)
-            Me.KryptonLabel7.Name = "KryptonLabel7"
-            Me.KryptonLabel7.Size = New System.Drawing.Size(47, 20)
-            Me.KryptonLabel7.TabIndex = 198
-            Me.KryptonLabel7.Values.Text = "Estado"
+            Me.DataGridViewTextBoxColumn71.HeaderText = "CODIGO"
+            Me.DataGridViewTextBoxColumn71.Name = "DataGridViewTextBoxColumn71"
+            Me.DataGridViewTextBoxColumn71.ReadOnly = True
             '
-            'KryptonLabel8
+            'garantiaCamara
             '
-            Me.KryptonLabel8.Location = New System.Drawing.Point(198, 36)
-            Me.KryptonLabel8.Name = "KryptonLabel8"
-            Me.KryptonLabel8.Size = New System.Drawing.Size(45, 20)
-            Me.KryptonLabel8.TabIndex = 199
-            Me.KryptonLabel8.Values.Text = "Chasis"
+            Me.garantiaCamara.HeaderText = "GARANTIA"
+            Me.garantiaCamara.Name = "garantiaCamara"
+            Me.garantiaCamara.ReadOnly = True
             '
-            'KryptonLabel9
+            'rutaCamara
             '
-            Me.KryptonLabel9.Location = New System.Drawing.Point(198, 70)
-            Me.KryptonLabel9.Name = "KryptonLabel9"
-            Me.KryptonLabel9.Size = New System.Drawing.Size(45, 20)
-            Me.KryptonLabel9.TabIndex = 200
-            Me.KryptonLabel9.Values.Text = "Motor"
+            Me.rutaCamara.HeaderText = "RUTA"
+            Me.rutaCamara.Name = "rutaCamara"
+            Me.rutaCamara.ReadOnly = True
             '
-            'KryptonLabel10
+            'valorFactCamara
             '
-            Me.KryptonLabel10.Location = New System.Drawing.Point(198, 99)
-            Me.KryptonLabel10.Name = "KryptonLabel10"
-            Me.KryptonLabel10.Size = New System.Drawing.Size(44, 20)
-            Me.KryptonLabel10.TabIndex = 201
-            Me.KryptonLabel10.Values.Text = "Marca"
+            Me.valorFactCamara.HeaderText = "valorFact"
+            Me.valorFactCamara.Name = "valorFactCamara"
+            Me.valorFactCamara.ReadOnly = True
             '
-            'KryptonLabel11
+            'valorResiCamara
             '
-            Me.KryptonLabel11.Location = New System.Drawing.Point(199, 131)
-            Me.KryptonLabel11.Name = "KryptonLabel11"
-            Me.KryptonLabel11.Size = New System.Drawing.Size(34, 20)
-            Me.KryptonLabel11.TabIndex = 202
-            Me.KryptonLabel11.Values.Text = "Tipo"
+            Me.valorResiCamara.HeaderText = "ValosResi"
+            Me.valorResiCamara.Name = "valorResiCamara"
+            Me.valorResiCamara.ReadOnly = True
             '
-            'KryptonLabel12
+            'vidaUtilCamara
             '
-            Me.KryptonLabel12.Location = New System.Drawing.Point(198, 164)
-            Me.KryptonLabel12.Name = "KryptonLabel12"
-            Me.KryptonLabel12.Size = New System.Drawing.Size(33, 20)
-            Me.KryptonLabel12.TabIndex = 203
-            Me.KryptonLabel12.Values.Text = "Año"
+            Me.vidaUtilCamara.HeaderText = "VidaUtil"
+            Me.vidaUtilCamara.Name = "vidaUtilCamara"
+            Me.vidaUtilCamara.ReadOnly = True
             '
-            'KryptonLabel13
+            'caducidad_chaleco
             '
-            Me.KryptonLabel13.Location = New System.Drawing.Point(10, 199)
-            Me.KryptonLabel13.Name = "KryptonLabel13"
-            Me.KryptonLabel13.Size = New System.Drawing.Size(40, 20)
-            Me.KryptonLabel13.TabIndex = 204
-            Me.KryptonLabel13.Values.Text = "Color"
+            Me.caducidad_chaleco.HeaderText = "CADUCIDAD"
+            Me.caducidad_chaleco.Name = "caducidad_chaleco"
+            Me.caducidad_chaleco.ReadOnly = True
             '
             'FormIngresoActivosFijos
             '
@@ -6918,6 +6925,11 @@
             CType(Me.dgvRadios, System.ComponentModel.ISupportInitialize).EndInit()
             Me.tpVehiculo.ResumeLayout(False)
             Me.tpVehiculo.PerformLayout()
+            CType(Me.KryptonGroupBox1.Panel, System.ComponentModel.ISupportInitialize).EndInit()
+            Me.KryptonGroupBox1.Panel.ResumeLayout(False)
+            Me.KryptonGroupBox1.Panel.PerformLayout()
+            CType(Me.KryptonGroupBox1, System.ComponentModel.ISupportInitialize).EndInit()
+            Me.KryptonGroupBox1.ResumeLayout(False)
             Me.GroupBox7.ResumeLayout(False)
             Me.GroupBox7.PerformLayout()
             Me.GroupBox1.ResumeLayout(False)
@@ -6959,11 +6971,6 @@
             Me.tpSoftware.PerformLayout()
             Me.MenuStrip1.ResumeLayout(False)
             Me.MenuStrip1.PerformLayout()
-            CType(Me.KryptonGroupBox1.Panel, System.ComponentModel.ISupportInitialize).EndInit()
-            Me.KryptonGroupBox1.Panel.ResumeLayout(False)
-            Me.KryptonGroupBox1.Panel.PerformLayout()
-            CType(Me.KryptonGroupBox1, System.ComponentModel.ISupportInitialize).EndInit()
-            Me.KryptonGroupBox1.ResumeLayout(False)
             Me.ResumeLayout(False)
             Me.PerformLayout()
 
@@ -7402,20 +7409,6 @@
         Friend WithEvents txtGarantiaOficina As System.Windows.Forms.TextBox
         Friend WithEvents txtGarantiaComunicacion As System.Windows.Forms.TextBox
         Friend WithEvents txtGarantiaCamara As System.Windows.Forms.TextBox
-        Friend WithEvents DataGridViewTextBoxColumn61 As System.Windows.Forms.DataGridViewTextBoxColumn
-        Friend WithEvents DataGridViewTextBoxColumn64 As System.Windows.Forms.DataGridViewTextBoxColumn
-        Friend WithEvents DataGridViewTextBoxColumn65 As System.Windows.Forms.DataGridViewTextBoxColumn
-        Friend WithEvents DataGridViewTextBoxColumn66 As System.Windows.Forms.DataGridViewTextBoxColumn
-        Friend WithEvents DataGridViewTextBoxColumn67 As System.Windows.Forms.DataGridViewTextBoxColumn
-        Friend WithEvents DataGridViewTextBoxColumn68 As System.Windows.Forms.DataGridViewTextBoxColumn
-        Friend WithEvents DataGridViewTextBoxColumn69 As System.Windows.Forms.DataGridViewTextBoxColumn
-        Friend WithEvents DataGridViewTextBoxColumn70 As System.Windows.Forms.DataGridViewTextBoxColumn
-        Friend WithEvents DataGridViewTextBoxColumn71 As System.Windows.Forms.DataGridViewTextBoxColumn
-        Friend WithEvents garantiaCamara As System.Windows.Forms.DataGridViewCheckBoxColumn
-        Friend WithEvents rutaCamara As System.Windows.Forms.DataGridViewTextBoxColumn
-        Friend WithEvents valorFactCamara As System.Windows.Forms.DataGridViewTextBoxColumn
-        Friend WithEvents valorResiCamara As System.Windows.Forms.DataGridViewTextBoxColumn
-        Friend WithEvents vidaUtilCamara As System.Windows.Forms.DataGridViewTextBoxColumn
         Friend WithEvents txtGarantiaChaleco As System.Windows.Forms.TextBox
         Friend WithEvents DataGridViewTextBoxColumn7 As System.Windows.Forms.DataGridViewTextBoxColumn
         Friend WithEvents GARANTIA As System.Windows.Forms.DataGridViewTextBoxColumn
@@ -7549,5 +7542,20 @@
         Friend WithEvents KryptonLabel7 As ComponentFactory.Krypton.Toolkit.KryptonLabel
         Friend WithEvents KryptonLabel6 As ComponentFactory.Krypton.Toolkit.KryptonLabel
         Friend WithEvents KryptonLabel13 As ComponentFactory.Krypton.Toolkit.KryptonLabel
+        Friend WithEvents DataGridViewTextBoxColumn61 As DataGridViewTextBoxColumn
+        Friend WithEvents DataGridViewTextBoxColumn64 As DataGridViewTextBoxColumn
+        Friend WithEvents DataGridViewTextBoxColumn65 As DataGridViewTextBoxColumn
+        Friend WithEvents DataGridViewTextBoxColumn66 As DataGridViewTextBoxColumn
+        Friend WithEvents DataGridViewTextBoxColumn67 As DataGridViewTextBoxColumn
+        Friend WithEvents DataGridViewTextBoxColumn68 As DataGridViewTextBoxColumn
+        Friend WithEvents DataGridViewTextBoxColumn69 As DataGridViewTextBoxColumn
+        Friend WithEvents DataGridViewTextBoxColumn70 As DataGridViewTextBoxColumn
+        Friend WithEvents DataGridViewTextBoxColumn71 As DataGridViewTextBoxColumn
+        Friend WithEvents garantiaCamara As DataGridViewCheckBoxColumn
+        Friend WithEvents rutaCamara As DataGridViewTextBoxColumn
+        Friend WithEvents valorFactCamara As DataGridViewTextBoxColumn
+        Friend WithEvents valorResiCamara As DataGridViewTextBoxColumn
+        Friend WithEvents vidaUtilCamara As DataGridViewTextBoxColumn
+        Friend WithEvents caducidad_chaleco As DataGridViewTextBoxColumn
     End Class
 End Namespace

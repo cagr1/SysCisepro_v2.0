@@ -72,5 +72,9 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS.REPORTES
                 End If
             End If
         End Sub
+
+        Private Sub txtIdComprobanteEgreso_TextChanged(sender As Object, e As EventArgs) Handles txtIdComprobanteEgreso.TextChanged
+
+        End Sub
     End Class
 End Namespace
