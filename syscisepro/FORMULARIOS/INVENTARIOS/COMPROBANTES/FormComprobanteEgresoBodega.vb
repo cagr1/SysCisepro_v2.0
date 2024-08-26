@@ -1538,7 +1538,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
             tsmReingreso.Enabled = False
 
             _botonSeleccionadoSitio = 2
-            txtProveedores.Text = _objPer.BuscarApellidosNombresPersonalXIdPersonal(_tipoCon, _objPer.BuscarIdPersonalXIdUsuario(_tipoCon, IdUsuario))
+            ' txtProveedores.Text = _objPer.BuscarApellidosNombresPersonalXIdPersonal(_tipoCon, _objPer.BuscarIdPersonalXIdUsuario(_tipoCon, IdUsuario))
             If txtNumero.Text.Trim().Length > 0 Then
                 HabilitarIngresos(True)
                 tsmAgregar.Enabled = True
@@ -1754,7 +1754,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                     .Id = _objSerie.Serie(_objCompIng.BuscarMayorIdComprobanteIngresoBodega(_tipoCon) + 1)
                     .Fecha = dtpFecha.Value
                     .NroParametroDocumento = txtNroDocumento.Tag & " ~ " & txtNroDocumento.Text.Trim
-                    .IdBodega = cmbBodega.SelectedValue.ToString()
+                    .IdBodega = Convert.ToUInt64(cmbBodega.SelectedValue)
                     .IdActividad = 1
                     .IdConcepto = cmbConceptos.SelectedValue.ToString()
                     .IdProvincias = cbmProvincia.SelectedValue.ToString()
@@ -1771,9 +1771,9 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                 End With
                 _sqlCommands.Add(_objCompIng.NuevoRegistroComprobanteIngresoBodegaCommand())
 
-                _IdComprobanteIngreso = _objCompIng.Id.ToString()
+                '_IdComprobanteIngreso = _objCompIng.Id.ToString()
 
-                Dim dt As DataTable = ConvertDataTable(dgvDetalleComprobanteIngreso)
+                'Dim dt As DataTable = ConvertDataTable(dgvDetalleComprobanteIngreso)
 
 
 
