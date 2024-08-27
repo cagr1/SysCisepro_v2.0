@@ -93,6 +93,7 @@
     <Compile Include="TalentoHumano\ClassParametrosRol.cs" />
     <Compile Include="TalentoHumano\ClassPersonal.cs" />
     <Compile Include="TalentoHumano\ClassRegistroPermisoPersonal.cs" />
+    <Compile Include="TalentoHumano\ClassRolesFirmados.cs" />
     <Compile Include="TalentoHumano\ClassRolPago.cs" />
     <Compile Include="TalentoHumano\ClassSalidaPersonal.cs" />
     <Compile Include="TalentoHumano\ClassSecuencialContratos.cs" />

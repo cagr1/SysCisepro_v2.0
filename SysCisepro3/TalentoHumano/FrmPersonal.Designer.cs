@@ -1549,7 +1549,7 @@
             this.dtpFechaAfiliado.Enabled = false;
             this.dtpFechaAfiliado.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpFechaAfiliado.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaAfiliado.Location = new System.Drawing.Point(255, 10);
+            this.dtpFechaAfiliado.Location = new System.Drawing.Point(263, 10);
             this.dtpFechaAfiliado.Name = "dtpFechaAfiliado";
             this.dtpFechaAfiliado.Size = new System.Drawing.Size(77, 21);
             this.dtpFechaAfiliado.TabIndex = 37;
@@ -1559,7 +1559,7 @@
             this.chkAfiliado.AutoSize = true;
             this.chkAfiliado.Enabled = false;
             this.chkAfiliado.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkAfiliado.Location = new System.Drawing.Point(147, 12);
+            this.chkAfiliado.Location = new System.Drawing.Point(151, 12);
             this.chkAfiliado.Name = "chkAfiliado";
             this.chkAfiliado.Size = new System.Drawing.Size(108, 17);
             this.chkAfiliado.TabIndex = 36;

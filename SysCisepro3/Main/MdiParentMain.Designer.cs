@@ -2283,7 +2283,7 @@
             this.salidaPersonaltoolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.salidaPersonaltoolStripMenuItem.Name = "salidaPersonaltoolStripMenuItem";
             this.salidaPersonaltoolStripMenuItem.Size = new System.Drawing.Size(300, 30);
-            this.salidaPersonaltoolStripMenuItem.Text = "PROCESO SALIDA DE PERSONAL";
+            this.salidaPersonaltoolStripMenuItem.Text = "SALIDA / FIRMAS DE PERSONAL";
             this.salidaPersonaltoolStripMenuItem.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
             // iNFORMEDEPAGOtoolStripMenuItem

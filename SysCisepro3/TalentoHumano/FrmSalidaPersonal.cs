@@ -38,6 +38,7 @@ namespace SysCisepro3.TalentoHumano
 
         private readonly ClassPersonal _objPersonal;
         private readonly ClassSalidaPersonal _objSalidaPersonal;
+        private readonly ClassRolesFirmados _objRolesFirmados;
         private readonly ClassHistorialLaboral _objHistorialLaboral;
         private readonly rptSalidaPersonal _rptSalidaPersonal;
         
@@ -86,6 +87,7 @@ namespace SysCisepro3.TalentoHumano
             }
             dgvPersonal.Font = new Font("Roboto", 8, FontStyle.Regular);    
             ValidationForms.SetPlaceholder(txtFiltro, "Buscar ...");
+            ValidationForms.SetPlaceholder(txtBusquedaFirmado, "Buscar ...");
 
 
         }
@@ -467,6 +469,27 @@ namespace SysCisepro3.TalentoHumano
                      "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
              }
          }
-        
+
+        private void AutocompletarNombre()
+        {
+            txtNombreFirmado.AutoCompleteCustomSource = _objPersonal.AutocompletarApellidos(TipoCon, true);
+            txtNombreFirmado.AutoCompleteMode = AutoCompleteMode.Suggest;
+            txtNombreFirmado.AutoCompleteSource = AutoCompleteSource.CustomSource;
+        }
+
+        private void btnNuevoFirmado_Click(object sender, EventArgs e)
+        {
+            HabilitarIngresos(true);
+            AutocompletarNombre();
+        }
+
+        private void HabilitarIngresos(bool valor)
+        {
+            txtNombreFirmado.Enabled = valor;
+            dtpFechaFirmado.Enabled = valor;
+            
+            
+        }
+
     }
 }

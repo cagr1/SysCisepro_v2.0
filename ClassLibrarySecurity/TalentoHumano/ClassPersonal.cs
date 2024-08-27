@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Windows.Forms;
 using ClassLibraryCisepro3.Enums;
 using ClassLibraryCisepro3.ProcesosSql;
 
@@ -608,12 +609,6 @@ namespace ClassLibraryCisepro3.TalentoHumano
         }
 
 
-
-
-
-
-
-
         public DataTable SeleccionarTodosRegistrosPersonalCne(TipoConexion tipoCon, string filtro, int estado, int tipo)
         {
             var t = "";
@@ -628,5 +623,29 @@ namespace ClassLibraryCisepro3.TalentoHumano
             };
             return ComandosSql.SeleccionarQueryWithParamsToDataTable(tipoCon, sql, false, pars);
         }
+
+        private DataTable SeleccionarApellidosNombresYIdPersonal(TipoConexion tipoCon, bool todos)
+        {
+            string sql = todos ?
+                "SELECT APELLIDOS + ' ' + NOMBRES   AS DATOS, ID_PERSONAL AS CODIGO, CEDULA  FROM dbo.PERSONAL ORDER BY ID_PERSONAL"
+                : "SeleccionarApellidosNombresYIdPersonal";
+
+            return ComandosSql.SeleccionarQueryToDataTable(tipoCon, sql, false);
+        }
+
+        public AutoCompleteStringCollection AutocompletarApellidos(TipoConexion tipoCon, bool todos)
+        {
+            DataTable dt = SeleccionarApellidosNombresYIdPersonal(tipoCon, todos);
+            AutoCompleteStringCollection coleccion = new AutoCompleteStringCollection();
+
+            foreach (DataRow row in dt.Rows)
+            {
+                coleccion.Add(Convert.ToString(row["DATOS"]));
+            }
+
+            return coleccion;
+        }
+
+
     }
 }

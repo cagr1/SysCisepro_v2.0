@@ -81,7 +81,7 @@
             this.TicComisariato});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1097, 31);
+            this.toolStrip1.Size = new System.Drawing.Size(1010, 31);
             this.toolStrip1.TabIndex = 216;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -254,9 +254,9 @@
             // PictureBox1
             // 
             this.PictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.PictureBox1.Location = new System.Drawing.Point(359, 11);
+            this.PictureBox1.Location = new System.Drawing.Point(375, 11);
             this.PictureBox1.Name = "PictureBox1";
-            this.PictureBox1.Size = new System.Drawing.Size(125, 144);
+            this.PictureBox1.Size = new System.Drawing.Size(109, 144);
             this.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PictureBox1.TabIndex = 119;
             this.PictureBox1.TabStop = false;
@@ -334,7 +334,7 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.DataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
-            this.DataGridView1.Location = new System.Drawing.Point(880, 37);
+            this.DataGridView1.Location = new System.Drawing.Point(813, 37);
             this.DataGridView1.MultiSelect = false;
             this.DataGridView1.Name = "DataGridView1";
             this.DataGridView1.ReadOnly = true;
@@ -392,7 +392,7 @@
             this.dgvBusquedaPersonal.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.dgvBusquedaPersonal.RowHeadersVisible = false;
             this.dgvBusquedaPersonal.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvBusquedaPersonal.Size = new System.Drawing.Size(390, 157);
+            this.dgvBusquedaPersonal.Size = new System.Drawing.Size(318, 157);
             this.dgvBusquedaPersonal.TabIndex = 218;
             this.dgvBusquedaPersonal.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBusquedaPersonal_CellContentClick);
             this.dgvBusquedaPersonal.SelectionChanged += new System.EventHandler(this.dgvBusquedaPersonal_SelectionChanged);
@@ -409,9 +409,10 @@
             this.crvCredenciales.ShowCopyButton = false;
             this.crvCredenciales.ShowGotoPageButton = false;
             this.crvCredenciales.ShowGroupTreeButton = false;
+            this.crvCredenciales.ShowLogo = false;
             this.crvCredenciales.ShowParameterPanelButton = false;
             this.crvCredenciales.ShowTextSearchButton = false;
-            this.crvCredenciales.Size = new System.Drawing.Size(1099, 498);
+            this.crvCredenciales.Size = new System.Drawing.Size(1008, 498);
             this.crvCredenciales.TabIndex = 220;
             this.crvCredenciales.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None;
             // 
@@ -420,7 +421,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1097, 696);
+            this.ClientSize = new System.Drawing.Size(1010, 696);
             this.Controls.Add(this.crvCredenciales);
             this.Controls.Add(this.DataGridView1);
             this.Controls.Add(this.dgvBusquedaPersonal);

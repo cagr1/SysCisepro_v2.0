@@ -1942,5 +1942,9 @@ Namespace FORMULARIOS.OPERACIONES
                 MessageBox.Show("HUBO UN PROBLEMA AL EXPORTAR DATOS!" & vbNewLine & ex.Message, "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Error)
             End Try
         End Sub
+
+        Private Sub dgvDecimo3_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvDecimo3.CellContentClick
+
+        End Sub
     End Class
 End Namespace

@@ -866,7 +866,6 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                             .IdsecuencialItem = CLng(dgvSecuencial.Rows.Item(indice).Cells("ID_SECUENCIAL").Value)
                             .Cantidad = CInt(dgvSecuencial.Rows.Item(indice).Cells("SALDO").Value) 'de CANTIDAD_SALDO a SALDO
                             .Fecha = _objCompEgr.Fecha
-                            .Estado = 1
                         End With
                         _sqlCommands.Add(_objKardex.ModificarCantidadKardexCommand())
 

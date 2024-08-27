@@ -98,6 +98,9 @@
     <Reference Include="AForge.Video.DirectShow, Version=2.2.5.0, Culture=neutral, PublicKeyToken=61ea4348d43881b7, processorArchitecture=MSIL">
       <HintPath>..\packages\AForge.Video.DirectShow.2.2.5\lib\AForge.Video.DirectShow.dll</HintPath>
     </Reference>
+    <Reference Include="ComponentFactory.Krypton.Docking">
+      <HintPath>..\..\..\Krypton-master\Krypton-master\Bin\ComponentFactory.Krypton.Docking.dll</HintPath>
+    </Reference>
     <Reference Include="ComponentFactory.Krypton.Navigator">
       <HintPath>..\..\..\Krypton-master\Krypton-master\Bin\ComponentFactory.Krypton.Navigator.dll</HintPath>
     </Reference>
@@ -1768,6 +1771,7 @@
     <None Include="Resources\add_a_photo_24dp_FILL0_wght400_GRAD0_opsz24.png" />
     <None Include="Resources\align_horizontal_right_24dp_FILL0_wght400_GRAD0_opsz24.png" />
     <None Include="Resources\align_vertical_bottom_24dp_FILL0_wght400_GRAD0_opsz24.png" />
+    <None Include="Resources\cancel_24dp_000000_FILL0_wght400_GRAD0_opsz24.png" />
     <Content Include="Resources\charticon.png" />
     <None Include="Resources\tick.png" />
     <None Include="Resources\user-group-icon.png" />
