@@ -113,11 +113,10 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\syscisepro\syscisepro.vbproj">
-      <Project>{155DEEA4-726B-4FE4-B2E2-B4ABC7606BEB}</Project>
+      <Project>{155deea4-726b-4fe4-b2e2-b4abc7606beb}</Project>
       <Name>syscisepro</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

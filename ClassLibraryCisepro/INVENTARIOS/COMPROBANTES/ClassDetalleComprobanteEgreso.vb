@@ -49,7 +49,6 @@ Namespace INVENTARIOS.COMPROBANTES
                 .Parameters.AddWithValue("@ID_DETALLE_KARDEX", SqlDbType.BigInt).Value = IdDetalleKardex
                 .Parameters.AddWithValue("@OBSERVACION_DETALLE", SqlDbType.NVarChar).Value = ObservacionCalidad
                 .Parameters.AddWithValue("@ID_COMPROBANTE", SqlDbType.NVarChar).Value = IdComprobante
-                .Parameters.AddWithValue("@ESTADO_DETALLE", SqlDbType.Int).Value = Estado
                 .Parameters.AddWithValue("@OBSERVACION", SqlDbType.NVarChar).Value = ObservacionDetalle
             End With
             Return comando

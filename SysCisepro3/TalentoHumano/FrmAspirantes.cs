@@ -20,7 +20,7 @@ using Microsoft.Office.Interop.Excel;
 using Office = Microsoft.Office.Interop;
 using ClassLibraryCisepro3.Estaticas;
 using Krypton.Toolkit;
-using PdfSharp;
+
 
 namespace SysCisepro3.TalentoHumano
 {

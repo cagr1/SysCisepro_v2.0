@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.btnListar = new System.Windows.Forms.ToolStripButton();
             this.btnGuardar = new System.Windows.Forms.ToolStripButton();
@@ -66,12 +68,12 @@
             this.kryptonLabel1 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.kryptonPage2 = new ComponentFactory.Krypton.Navigator.KryptonPage();
             this.kryptonGroupBox4 = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
-            this.kryptonDataGridView1 = new ComponentFactory.Krypton.Toolkit.KryptonDataGridView();
-            this.txtBusquedaFirmado = new System.Windows.Forms.TextBox();
+            this.dgvFirmado = new ComponentFactory.Krypton.Toolkit.KryptonDataGridView();
             this.kryptonGroupBox3 = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
             this.txtIdPersonalFirmado = new System.Windows.Forms.TextBox();
+            this.txtBusquedaFirmado = new System.Windows.Forms.TextBox();
             this.kryptonLabel11 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.kryptonButton1 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.btnCancelarFirmado = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.btnGuardarFirmado = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.btnNuevoFirmado = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.dtpFechaFirmado = new ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker();
@@ -81,6 +83,21 @@
             this.kryptonLabel8 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.txtNombreFirmado = new System.Windows.Forms.TextBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.dtpAnio = new ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker();
+            this.Nomina = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ENE = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.FEB = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.MAR = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.ABR = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.May = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.JUN = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.JUL = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.AGO = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.SEPT = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.OCT = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.NOV = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.DIC = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPersonal)).BeginInit();
             this.tabControl1.SuspendLayout();
@@ -104,7 +121,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox4.Panel)).BeginInit();
             this.kryptonGroupBox4.Panel.SuspendLayout();
             this.kryptonGroupBox4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.kryptonDataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvFirmado)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox3.Panel)).BeginInit();
             this.kryptonGroupBox3.Panel.SuspendLayout();
@@ -185,6 +202,7 @@
             this.dgvPersonal.AllowUserToOrderColumns = true;
             this.dgvPersonal.AllowUserToResizeRows = false;
             this.dgvPersonal.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            this.dgvPersonal.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvPersonal.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
             this.dgvPersonal.Location = new System.Drawing.Point(0, 0);
             this.dgvPersonal.MultiSelect = false;
@@ -375,7 +393,9 @@
             this.crvSalida.Dock = System.Windows.Forms.DockStyle.Fill;
             this.crvSalida.Location = new System.Drawing.Point(3, 3);
             this.crvSalida.Name = "crvSalida";
+            this.crvSalida.ShowCloseButton = false;
             this.crvSalida.ShowGroupTreeButton = false;
+            this.crvSalida.ShowLogo = false;
             this.crvSalida.Size = new System.Drawing.Size(817, 427);
             this.crvSalida.TabIndex = 0;
             this.crvSalida.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None;
@@ -414,9 +434,6 @@
             // 
             // kryptonGroupBox2
             // 
-            this.kryptonGroupBox2.CaptionStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.GroupBoxCaption;
-            this.kryptonGroupBox2.GroupBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.ControlGroupBox;
-            this.kryptonGroupBox2.GroupBorderStyle = ComponentFactory.Krypton.Toolkit.PaletteBorderStyle.ControlGroupBox;
             this.kryptonGroupBox2.Location = new System.Drawing.Point(612, 4);
             this.kryptonGroupBox2.Name = "kryptonGroupBox2";
             // 
@@ -432,9 +449,6 @@
             // 
             // kryptonGroupBox1
             // 
-            this.kryptonGroupBox1.CaptionStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.GroupBoxCaption;
-            this.kryptonGroupBox1.GroupBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.ControlGroupBox;
-            this.kryptonGroupBox1.GroupBorderStyle = ComponentFactory.Krypton.Toolkit.PaletteBorderStyle.ControlGroupBox;
             this.kryptonGroupBox1.Location = new System.Drawing.Point(12, 5);
             this.kryptonGroupBox1.Name = "kryptonGroupBox1";
             // 
@@ -540,50 +554,52 @@
             // 
             // kryptonGroupBox4
             // 
-            this.kryptonGroupBox4.CaptionStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.GroupBoxCaption;
-            this.kryptonGroupBox4.GroupBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.ControlGroupBox;
-            this.kryptonGroupBox4.GroupBorderStyle = ComponentFactory.Krypton.Toolkit.PaletteBorderStyle.ControlGroupBox;
             this.kryptonGroupBox4.Location = new System.Drawing.Point(3, 190);
             this.kryptonGroupBox4.Name = "kryptonGroupBox4";
             // 
             // kryptonGroupBox4.Panel
             // 
-            this.kryptonGroupBox4.Panel.Controls.Add(this.kryptonDataGridView1);
+            this.kryptonGroupBox4.Panel.Controls.Add(this.dgvFirmado);
             this.kryptonGroupBox4.Size = new System.Drawing.Size(833, 446);
             this.kryptonGroupBox4.TabIndex = 1;
             this.kryptonGroupBox4.Values.Heading = "Busqueda";
             // 
-            // kryptonDataGridView1
+            // dgvFirmado
             // 
-            this.kryptonDataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.kryptonDataGridView1.Location = new System.Drawing.Point(8, 35);
-            this.kryptonDataGridView1.Name = "kryptonDataGridView1";
-            this.kryptonDataGridView1.Size = new System.Drawing.Size(817, 413);
-            this.kryptonDataGridView1.TabIndex = 12;
-            // 
-            // txtBusquedaFirmado
-            // 
-            this.txtBusquedaFirmado.BackColor = System.Drawing.Color.White;
-            this.txtBusquedaFirmado.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBusquedaFirmado.Location = new System.Drawing.Point(16, 125);
-            this.txtBusquedaFirmado.Name = "txtBusquedaFirmado";
-            this.txtBusquedaFirmado.Size = new System.Drawing.Size(338, 21);
-            this.txtBusquedaFirmado.TabIndex = 11;
+            this.dgvFirmado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvFirmado.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Nomina,
+            this.Fecha,
+            this.ENE,
+            this.FEB,
+            this.MAR,
+            this.ABR,
+            this.May,
+            this.JUN,
+            this.JUL,
+            this.AGO,
+            this.SEPT,
+            this.OCT,
+            this.NOV,
+            this.DIC});
+            this.dgvFirmado.Location = new System.Drawing.Point(5, 5);
+            this.dgvFirmado.Name = "dgvFirmado";
+            this.dgvFirmado.RowHeadersVisible = false;
+            this.dgvFirmado.Size = new System.Drawing.Size(817, 413);
+            this.dgvFirmado.TabIndex = 12;
             // 
             // kryptonGroupBox3
             // 
-            this.kryptonGroupBox3.CaptionStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.GroupBoxCaption;
-            this.kryptonGroupBox3.GroupBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.ControlGroupBox;
-            this.kryptonGroupBox3.GroupBorderStyle = ComponentFactory.Krypton.Toolkit.PaletteBorderStyle.ControlGroupBox;
             this.kryptonGroupBox3.Location = new System.Drawing.Point(3, 5);
             this.kryptonGroupBox3.Name = "kryptonGroupBox3";
             // 
             // kryptonGroupBox3.Panel
             // 
+            this.kryptonGroupBox3.Panel.Controls.Add(this.dtpAnio);
             this.kryptonGroupBox3.Panel.Controls.Add(this.txtIdPersonalFirmado);
             this.kryptonGroupBox3.Panel.Controls.Add(this.txtBusquedaFirmado);
             this.kryptonGroupBox3.Panel.Controls.Add(this.kryptonLabel11);
-            this.kryptonGroupBox3.Panel.Controls.Add(this.kryptonButton1);
+            this.kryptonGroupBox3.Panel.Controls.Add(this.btnCancelarFirmado);
             this.kryptonGroupBox3.Panel.Controls.Add(this.btnGuardarFirmado);
             this.kryptonGroupBox3.Panel.Controls.Add(this.btnNuevoFirmado);
             this.kryptonGroupBox3.Panel.Controls.Add(this.dtpFechaFirmado);
@@ -601,54 +617,61 @@
             this.txtIdPersonalFirmado.BackColor = System.Drawing.Color.White;
             this.txtIdPersonalFirmado.Enabled = false;
             this.txtIdPersonalFirmado.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIdPersonalFirmado.Location = new System.Drawing.Point(145, 98);
+            this.txtIdPersonalFirmado.Location = new System.Drawing.Point(136, 65);
             this.txtIdPersonalFirmado.Name = "txtIdPersonalFirmado";
             this.txtIdPersonalFirmado.Size = new System.Drawing.Size(100, 21);
             this.txtIdPersonalFirmado.TabIndex = 10;
             // 
+            // txtBusquedaFirmado
+            // 
+            this.txtBusquedaFirmado.BackColor = System.Drawing.Color.White;
+            this.txtBusquedaFirmado.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBusquedaFirmado.Location = new System.Drawing.Point(7, 123);
+            this.txtBusquedaFirmado.Name = "txtBusquedaFirmado";
+            this.txtBusquedaFirmado.Size = new System.Drawing.Size(338, 21);
+            this.txtBusquedaFirmado.TabIndex = 11;
+            this.txtBusquedaFirmado.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtBusquedaFirmado_KeyUp);
+            // 
             // kryptonLabel11
             // 
-            this.kryptonLabel11.Location = new System.Drawing.Point(16, 98);
+            this.kryptonLabel11.Location = new System.Drawing.Point(7, 66);
             this.kryptonLabel11.Name = "kryptonLabel11";
             this.kryptonLabel11.Size = new System.Drawing.Size(50, 20);
             this.kryptonLabel11.TabIndex = 9;
             this.kryptonLabel11.Values.Text = "Codigo";
             // 
-            // kryptonButton1
+            // btnCancelarFirmado
             // 
-            this.kryptonButton1.Location = new System.Drawing.Point(466, 13);
-            this.kryptonButton1.Name = "kryptonButton1";
-            this.kryptonButton1.Size = new System.Drawing.Size(32, 32);
-            this.kryptonButton1.StateCommon.Back.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.False;
-            this.kryptonButton1.StateCommon.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
-            this.kryptonButton1.StateCommon.Border.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.False;
-            this.kryptonButton1.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.btnCancelarFirmado.Location = new System.Drawing.Point(466, 4);
+            this.btnCancelarFirmado.Name = "btnCancelarFirmado";
+            this.btnCancelarFirmado.Size = new System.Drawing.Size(32, 32);
+            this.btnCancelarFirmado.StateCommon.Back.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.False;
+            this.btnCancelarFirmado.StateCommon.Border.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.False;
+            this.btnCancelarFirmado.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonButton1.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
-            this.kryptonButton1.TabIndex = 8;
-            this.toolTip1.SetToolTip(this.kryptonButton1, "Cancelar");
-            this.kryptonButton1.Values.ImageStates.ImageCheckedNormal = null;
-            this.kryptonButton1.Values.ImageStates.ImageCheckedPressed = null;
-            this.kryptonButton1.Values.ImageStates.ImageCheckedTracking = null;
-            this.kryptonButton1.Values.ImageStates.ImageDisabled = global::SysCisepro3.Properties.Resources.cancel_24dp_FILL0_wght400_GRAD0_opsz24;
-            this.kryptonButton1.Values.ImageStates.ImageNormal = global::SysCisepro3.Properties.Resources.cancel_24dp_FILL0_wght400_GRAD0_opsz24;
-            this.kryptonButton1.Values.ImageStates.ImagePressed = global::SysCisepro3.Properties.Resources.cancel_24dp_000000_FILL0_wght400_GRAD0_opsz24;
-            this.kryptonButton1.Values.ImageStates.ImageTracking = global::SysCisepro3.Properties.Resources.cancel_24dp_000000_FILL0_wght400_GRAD0_opsz24;
-            this.kryptonButton1.Values.Text = "";
+            this.btnCancelarFirmado.TabIndex = 8;
+            this.toolTip1.SetToolTip(this.btnCancelarFirmado, "Cancelar");
+            this.btnCancelarFirmado.Values.ImageStates.ImageCheckedNormal = null;
+            this.btnCancelarFirmado.Values.ImageStates.ImageCheckedPressed = null;
+            this.btnCancelarFirmado.Values.ImageStates.ImageCheckedTracking = null;
+            this.btnCancelarFirmado.Values.ImageStates.ImageDisabled = global::SysCisepro3.Properties.Resources.cancel_24dp_FILL0_wght400_GRAD0_opsz24;
+            this.btnCancelarFirmado.Values.ImageStates.ImageNormal = global::SysCisepro3.Properties.Resources.cancel_24dp_FILL0_wght400_GRAD0_opsz24;
+            this.btnCancelarFirmado.Values.ImageStates.ImagePressed = global::SysCisepro3.Properties.Resources.cancel_24dp_000000_FILL0_wght400_GRAD0_opsz24;
+            this.btnCancelarFirmado.Values.ImageStates.ImageTracking = global::SysCisepro3.Properties.Resources.cancel_24dp_000000_FILL0_wght400_GRAD0_opsz24;
+            this.btnCancelarFirmado.Values.Text = "";
+            this.btnCancelarFirmado.Click += new System.EventHandler(this.btnCancelarFirmado_Click);
             // 
             // btnGuardarFirmado
             // 
-            this.btnGuardarFirmado.Location = new System.Drawing.Point(428, 14);
+            this.btnGuardarFirmado.Location = new System.Drawing.Point(428, 5);
             this.btnGuardarFirmado.Name = "btnGuardarFirmado";
             this.btnGuardarFirmado.Size = new System.Drawing.Size(32, 32);
             this.btnGuardarFirmado.StateCommon.Back.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.False;
-            this.btnGuardarFirmado.StateCommon.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.btnGuardarFirmado.StateCommon.Border.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.False;
             this.btnGuardarFirmado.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.btnGuardarFirmado.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.btnGuardarFirmado.TabIndex = 7;
             this.toolTip1.SetToolTip(this.btnGuardarFirmado, "Guardar");
             this.btnGuardarFirmado.Values.ImageStates.ImageCheckedNormal = null;
@@ -659,19 +682,18 @@
             this.btnGuardarFirmado.Values.ImageStates.ImagePressed = global::SysCisepro3.Properties.Resources.save_24dp_FILL0_wght400_GRAD0_opsz24;
             this.btnGuardarFirmado.Values.ImageStates.ImageTracking = global::SysCisepro3.Properties.Resources.save_24dp_FILL0_wght400_GRAD0_opsz24;
             this.btnGuardarFirmado.Values.Text = "";
+            this.btnGuardarFirmado.Click += new System.EventHandler(this.btnGuardarFirmado_Click);
             // 
             // btnNuevoFirmado
             // 
-            this.btnNuevoFirmado.Location = new System.Drawing.Point(390, 13);
+            this.btnNuevoFirmado.Location = new System.Drawing.Point(390, 4);
             this.btnNuevoFirmado.Name = "btnNuevoFirmado";
             this.btnNuevoFirmado.Size = new System.Drawing.Size(32, 32);
             this.btnNuevoFirmado.StateCommon.Back.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.False;
-            this.btnNuevoFirmado.StateCommon.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.btnNuevoFirmado.StateCommon.Border.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.False;
             this.btnNuevoFirmado.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.btnNuevoFirmado.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.btnNuevoFirmado.TabIndex = 6;
             this.toolTip1.SetToolTip(this.btnNuevoFirmado, "Nuevo");
             this.btnNuevoFirmado.Values.ImageStates.ImageCheckedNormal = null;
@@ -688,7 +710,7 @@
             // 
             this.dtpFechaFirmado.Enabled = false;
             this.dtpFechaFirmado.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaFirmado.Location = new System.Drawing.Point(145, 70);
+            this.dtpFechaFirmado.Location = new System.Drawing.Point(136, 93);
             this.dtpFechaFirmado.Name = "dtpFechaFirmado";
             this.dtpFechaFirmado.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
             this.dtpFechaFirmado.Size = new System.Drawing.Size(100, 21);
@@ -697,7 +719,7 @@
             // 
             // kryptonLabel10
             // 
-            this.kryptonLabel10.Location = new System.Drawing.Point(14, 72);
+            this.kryptonLabel10.Location = new System.Drawing.Point(7, 94);
             this.kryptonLabel10.Name = "kryptonLabel10";
             this.kryptonLabel10.Size = new System.Drawing.Size(42, 20);
             this.kryptonLabel10.TabIndex = 4;
@@ -708,14 +730,14 @@
             this.txtCedulaFirmado.BackColor = System.Drawing.Color.White;
             this.txtCedulaFirmado.Enabled = false;
             this.txtCedulaFirmado.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCedulaFirmado.Location = new System.Drawing.Point(145, 45);
+            this.txtCedulaFirmado.Location = new System.Drawing.Point(136, 35);
             this.txtCedulaFirmado.Name = "txtCedulaFirmado";
             this.txtCedulaFirmado.Size = new System.Drawing.Size(100, 21);
             this.txtCedulaFirmado.TabIndex = 3;
             // 
             // kryptonLabel9
             // 
-            this.kryptonLabel9.Location = new System.Drawing.Point(14, 46);
+            this.kryptonLabel9.Location = new System.Drawing.Point(7, 36);
             this.kryptonLabel9.Name = "kryptonLabel9";
             this.kryptonLabel9.Size = new System.Drawing.Size(48, 20);
             this.kryptonLabel9.TabIndex = 2;
@@ -723,7 +745,7 @@
             // 
             // kryptonLabel8
             // 
-            this.kryptonLabel8.Location = new System.Drawing.Point(14, 19);
+            this.kryptonLabel8.Location = new System.Drawing.Point(5, 10);
             this.kryptonLabel8.Name = "kryptonLabel8";
             this.kryptonLabel8.Size = new System.Drawing.Size(125, 20);
             this.kryptonLabel8.TabIndex = 1;
@@ -734,10 +756,108 @@
             this.txtNombreFirmado.BackColor = System.Drawing.Color.White;
             this.txtNombreFirmado.Enabled = false;
             this.txtNombreFirmado.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombreFirmado.Location = new System.Drawing.Point(145, 19);
+            this.txtNombreFirmado.Location = new System.Drawing.Point(136, 6);
             this.txtNombreFirmado.Name = "txtNombreFirmado";
             this.txtNombreFirmado.Size = new System.Drawing.Size(207, 21);
             this.txtNombreFirmado.TabIndex = 0;
+            this.txtNombreFirmado.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtNombreFirmado_KeyDown);
+            // 
+            // dtpAnio
+            // 
+            this.dtpAnio.CustomFormat = "yyyy";
+            this.dtpAnio.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpAnio.Location = new System.Drawing.Point(376, 120);
+            this.dtpAnio.Name = "dtpAnio";
+            this.dtpAnio.Size = new System.Drawing.Size(60, 21);
+            this.dtpAnio.TabIndex = 12;
+            // 
+            // Nomina
+            // 
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Nomina.DefaultCellStyle = dataGridViewCellStyle1;
+            this.Nomina.HeaderText = "Nomina";
+            this.Nomina.Name = "Nomina";
+            this.Nomina.Width = 200;
+            // 
+            // Fecha
+            // 
+            dataGridViewCellStyle2.Format = "d";
+            dataGridViewCellStyle2.NullValue = null;
+            this.Fecha.DefaultCellStyle = dataGridViewCellStyle2;
+            this.Fecha.HeaderText = "Fecha";
+            this.Fecha.Name = "Fecha";
+            // 
+            // ENE
+            // 
+            this.ENE.HeaderText = "Ene";
+            this.ENE.Name = "ENE";
+            this.ENE.Width = 50;
+            // 
+            // FEB
+            // 
+            this.FEB.HeaderText = "Feb";
+            this.FEB.Name = "FEB";
+            this.FEB.Width = 50;
+            // 
+            // MAR
+            // 
+            this.MAR.HeaderText = "Mar";
+            this.MAR.Name = "MAR";
+            this.MAR.Width = 50;
+            // 
+            // ABR
+            // 
+            this.ABR.HeaderText = "Abr";
+            this.ABR.Name = "ABR";
+            this.ABR.Width = 50;
+            // 
+            // May
+            // 
+            this.May.HeaderText = "May";
+            this.May.Name = "May";
+            this.May.Width = 50;
+            // 
+            // JUN
+            // 
+            this.JUN.HeaderText = "Jun";
+            this.JUN.Name = "JUN";
+            this.JUN.Width = 50;
+            // 
+            // JUL
+            // 
+            this.JUL.HeaderText = "Jul";
+            this.JUL.Name = "JUL";
+            this.JUL.Width = 50;
+            // 
+            // AGO
+            // 
+            this.AGO.HeaderText = "Ago";
+            this.AGO.Name = "AGO";
+            this.AGO.Width = 50;
+            // 
+            // SEPT
+            // 
+            this.SEPT.HeaderText = "Sept";
+            this.SEPT.Name = "SEPT";
+            this.SEPT.Width = 50;
+            // 
+            // OCT
+            // 
+            this.OCT.HeaderText = "Oct";
+            this.OCT.Name = "OCT";
+            this.OCT.Width = 50;
+            // 
+            // NOV
+            // 
+            this.NOV.HeaderText = "Nov";
+            this.NOV.Name = "NOV";
+            this.NOV.Width = 50;
+            // 
+            // DIC
+            // 
+            this.DIC.HeaderText = "Dic";
+            this.DIC.Name = "DIC";
+            this.DIC.Width = 50;
             // 
             // FrmSalidaPersonal
             // 
@@ -781,7 +901,7 @@
             this.kryptonGroupBox4.Panel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox4)).EndInit();
             this.kryptonGroupBox4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.kryptonDataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvFirmado)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox3.Panel)).EndInit();
             this.kryptonGroupBox3.Panel.ResumeLayout(false);
             this.kryptonGroupBox3.Panel.PerformLayout();
@@ -840,11 +960,26 @@
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnNuevoFirmado;
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnGuardarFirmado;
         private System.Windows.Forms.ToolTip toolTip1;
-        private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton1;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton btnCancelarFirmado;
         private System.Windows.Forms.TextBox txtIdPersonalFirmado;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel11;
         private ComponentFactory.Krypton.Toolkit.KryptonGroupBox kryptonGroupBox4;
         private System.Windows.Forms.TextBox txtBusquedaFirmado;
-        private ComponentFactory.Krypton.Toolkit.KryptonDataGridView kryptonDataGridView1;
+        private ComponentFactory.Krypton.Toolkit.KryptonDataGridView dgvFirmado;
+        private ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker dtpAnio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nomina;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn ENE;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn FEB;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn MAR;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn ABR;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn May;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn JUN;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn JUL;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn AGO;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn SEPT;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn OCT;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn NOV;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn DIC;
     }
 }

@@ -587,7 +587,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
 
 
 
-            If MessageBox.Show("DESEA GUARDAR LOS CAMBIOS?", "MENSAJE DEL SISTEMA", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> DialogResult.Yes Then Return
+            If KryptonMessageBox.Show("DESEA GUARDAR LOS CAMBIOS?", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) <> DialogResult.Yes Then Return
 
             _sqlCommands.Clear()
             If _botonSeleccionadoSitio = 1 Then
@@ -706,7 +706,6 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                         .IdsecuencialItem = CLng(dgvSecuencial.Rows.Item(indice).Cells("ID_SECUENCIAL").Value)
                         .Cantidad = CInt(dgvSecuencial.Rows.Item(indice).Cells("SALDO").Value) 'de CANTIDAD_SALDO a SALDO
                         .Fecha = _objCompIng.Fecha
-                        .Estado = 1
                     End With
                     _sqlCommands.Add(_objKardex.ModificarCantidadKardexCommand())
 

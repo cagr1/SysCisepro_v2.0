@@ -646,6 +646,18 @@ namespace ClassLibraryCisepro3.TalentoHumano
             return coleccion;
         }
 
+        public DataTable BuscarPersonalFirmado(TipoConexion tipoCon, string lastName, string firstName)
+        {
+            var pars = new List<object[]>
+            {
+                new object[] { "@lastname", SqlDbType.VarChar, lastName },
+                new object[] { "@name", SqlDbType.VarChar, firstName }
+
+            };
+            return ComandosSql.SeleccionarQueryWithParamsToDataTable(tipoCon, "sp_BuscarPersonalFirmado", true, pars);
+
+        }
+
 
     }
 }

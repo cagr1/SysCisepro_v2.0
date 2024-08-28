@@ -489,5 +489,14 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
 
 
         End Sub
+
+        Private Sub btnBuscarModi_Click(sender As Object, e As EventArgs) Handles btnBuscarModi.Click
+            _fechaDesde = dtpFechaDesde.Value.Day.ToString & "-" & dtpFechaDesde.Value.Month.ToString & "-" & dtpFechaDesde.Value.Year.ToString & " 00:00:00.001"
+            _fechaHasta = dtpFechaHasta.Value.Day.ToString & "-" & dtpFechaHasta.Value.Month.ToString & "-" & dtpFechaHasta.Value.Year.ToString & " 23:59:59.000"
+
+            CargarChequesEmitidosNoCobrados()
+            CargarChequesEmitidosCobrados()
+            CargarChequesEmitidosCaducados()
+        End Sub
     End Class
 End Namespace

@@ -1,11 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.Data;
+using System.Windows.Forms;
 using System.Linq;
 using System.Text;
 using ClassLibraryCisepro3.Enums;
 using ClassLibraryCisepro3.ProcesosSql;
-using System.Data.SqlClient;
-using System.Data;
+
+
 
 namespace ClassLibraryCisepro3.TalentoHumano
 {
@@ -34,6 +37,34 @@ namespace ClassLibraryCisepro3.TalentoHumano
             };
 
             return ComandosSql.SeleccionarQueryWithParamsToDataTable(tipoCon, "sp_BuscarPersonalRolFirmado", true, pars);
+        }
+
+        public SqlCommand RegistrarNuevoRolFirmadoCommand()
+        {
+            var cmd = new SqlCommand
+            {
+                CommandType = CommandType.StoredProcedure,
+                CommandText = "sp_nuevoRolFirmado"
+            };
+            
+            cmd.Parameters.AddWithValue("@idrol", SqlDbType.Int).Value = idrol;
+            cmd.Parameters.AddWithValue("@idpersonal", SqlDbType.Int).Value = idpersonal;
+            cmd.Parameters.AddWithValue("@mes", SqlDbType.Int).Value = mes;
+            cmd.Parameters.AddWithValue("@anio", SqlDbType.Int).Value = anio;
+            cmd.Parameters.AddWithValue("@fecha", SqlDbType.DateTime).Value = fecha;
+            cmd.Parameters.AddWithValue("@estado", SqlDbType.Int).Value = estado;
+            return cmd;
+        }
+
+        public DataTable BuscarPersonalFirmadoFiltro(TipoConexion tipoCon, string fil, int anio)
+        {
+            var pars = new List<object[]>
+            {
+                new object[] { "filtro", SqlDbType.NVarChar, fil },
+                new object[] { "year", SqlDbType.Int, anio }
+            };
+
+            return ComandosSql.SeleccionarQueryWithParamsToDataTable(tipoCon, "sp_buscarPersonalRolesFirmados", true, pars);
         }
     }
 }

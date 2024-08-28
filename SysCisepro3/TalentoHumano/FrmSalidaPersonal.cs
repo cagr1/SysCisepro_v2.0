@@ -53,6 +53,7 @@ namespace SysCisepro3.TalentoHumano
         }
 
         private int _estado;
+        public string NombreUsuario { get; set; }
         private readonly List<SqlCommand> _sqlCommands;
 
         private FrmSalidaPersonal()
@@ -63,6 +64,7 @@ namespace SysCisepro3.TalentoHumano
             _objSalidaPersonal = new ClassSalidaPersonal();
             _objHistorialLaboral = new ClassHistorialLaboral();
             _rptSalidaPersonal = new rptSalidaPersonal();
+            _objRolesFirmados = new ClassRolesFirmados();
 
         }
 
@@ -85,7 +87,8 @@ namespace SysCisepro3.TalentoHumano
                     Icon = Resources.logo_c;
                     break;
             }
-            dgvPersonal.Font = new Font("Roboto", 8, FontStyle.Regular);    
+            dgvPersonal.Font = new Font("Roboto", 8, FontStyle.Regular);
+            dgvFirmado.Font = new Font("Roboto", 8, FontStyle.Regular);
             ValidationForms.SetPlaceholder(txtFiltro, "Buscar ...");
             ValidationForms.SetPlaceholder(txtBusquedaFirmado, "Buscar ...");
 
@@ -490,6 +493,142 @@ namespace SysCisepro3.TalentoHumano
             
             
         }
+                     
 
+        private void txtNombreFirmado_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.Enter)
+            {
+                string fullName = txtNombreFirmado.Text.Trim();
+                string[] names = fullName.Split(' ');
+
+                string lastName = names[0] + " " + names[1];
+                string firstName = names[2] + " " + names[3];
+
+
+
+                if (names.Length == 4)
+                {
+                    var dt = _objPersonal.BuscarPersonalFirmado(TipoCon, lastName, firstName);
+                    if (dt.Rows.Count == 0)
+                    {
+                        KryptonMessageBox.Show(@"No se encontró el personal firmado. Por favor, verifique los datos ingresados!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        //dgvFirmado.DataSource = _objPersonal.BuscarPersonalFirmado(TipoCon, lastName, firstName);
+                        txtCedulaFirmado.Text = dt.Rows[0]["CEDULA"].ToString();
+                        txtIdPersonalFirmado.Text = dt.Rows[0]["ID_PERSONAL"].ToString();
+                    }
+                }
+            }
+            
+        }
+
+        private void btnCancelarFirmado_Click(object sender, EventArgs e)
+        {
+            HabilitarIngresos(false);
+            txtIdPersonalFirmado.Clear();
+            txtNombreFirmado.Clear();
+            txtCedulaFirmado.Clear();
+        }
+
+        private void btnGuardarFirmado_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                _sqlCommands.Clear();
+                if (txtIdPersonalFirmado.Text.Trim().Length == 0 || txtNombreFirmado.Text.Trim().Length == 0 || txtCedulaFirmado.Text.Trim().Length == 0)
+                {
+                KryptonMessageBox.Show(@"No se puede guardar debido a que no ha llenado todos los campos necesarios!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+            }
+               
+
+
+                else
+                {
+                    
+                    _objRolesFirmados.idrol = _objRolesFirmados.BuscarMayorId(TipoCon) + 1;
+                    _objRolesFirmados.idpersonal = Convert.ToInt32(txtIdPersonalFirmado.Text.Trim());
+                    _objRolesFirmados.fecha = dtpFechaFirmado.Value;
+                    _objRolesFirmados.mes = dtpFechaFirmado.Value.Month;
+                    _objRolesFirmados.anio = dtpFechaFirmado.Value.Year;
+                    _objRolesFirmados.estado = 1;
+                    _sqlCommands.Add(_objRolesFirmados.RegistrarNuevoRolFirmadoCommand());
+
+                    string user = Usuario.Datos.ToString();
+                    string nombreU = $"Registro de Personal firmado: {user} ";
+                    var res = ComandosSql.ProcesarTransacciones(TipoCon, _sqlCommands, nombreU);
+                if ((bool)res[0])
+                    {
+                        txtIdPersonalFirmado.Clear();
+                        txtNombreFirmado.Clear();
+                        txtCedulaFirmado.Clear();
+                        HabilitarIngresos(false);
+                    }
+                    KryptonMessageBox.Show((string)res[1], "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+                }
+            
+            }
+            catch (Exception ex)
+                {
+                KryptonMessageBox.Show(@"Error al guardar registro de personal firmado: " + ex.Message, "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+            }
+        }
+
+        private void txtBusquedaFirmado_KeyUp(object sender, KeyEventArgs e)
+        {
+            try
+            {
+                dgvFirmado.Columns.Clear();
+                var data  = _objRolesFirmados.BuscarPersonalFirmadoFiltro(TipoCon, txtBusquedaFirmado.Text, Convert.ToInt32(dtpFechaFirmado.Value.Year));
+                
+                if (data == null || data.Rows.Count == 0)
+                { 
+                dgvFirmado.DataSource = null;
+                    return;
+
+                }
+                
+                dgvFirmado.DataSource = data;
+                foreach (DataGridViewColumn col in dgvFirmado.Columns)
+                {
+                    col.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
+                    if (col.Name == "Fecha" ||  col.Name == "ENE" || col.Name == "FEB" || col.Name == "MAR" || col.Name == "ABR" || col.Name == "MAY" || col.Name == "JUN" ||
+                        col.Name == "JUL" || col.Name == "AGO" || col.Name == "SEPT" || col.Name == "OCT" || col.Name == "NOV" || col.Name == "DIC")
+                    {
+                        col.Width = 50;
+                    }
+
+                    if (col.Name == "Nomina" )
+                    {
+                        col.Width = 200;
+                    }
+
+                    if (col.Name == "ENE" || col.Name == "FEB" || col.Name == "MAR" || col.Name == "ABR" || col.Name == "MAY" || col.Name == "JUN" ||
+                         col.Name == "JUL" || col.Name == "AGO" || col.Name == "SEPT" || col.Name == "OCT" || col.Name == "NOV" || col.Name == "DIC")
+                    {
+                        DataGridViewCheckBoxColumn checkBoxColumn = new DataGridViewCheckBoxColumn();
+                        checkBoxColumn.Name = col.Name;
+                        checkBoxColumn.HeaderText = col.HeaderText;
+                        checkBoxColumn.Width = col.Width;
+                        checkBoxColumn.DataPropertyName = col.DataPropertyName;
+                        checkBoxColumn.TrueValue = 1;
+                        checkBoxColumn.FalseValue = 0;
+                        dgvFirmado.Columns.Add(checkBoxColumn);
+                    }
+
+
+                }
+
+                //dgvFirmado.AutoResizeRows();
+            }
+            catch(Exception ex)
+            {
+                KryptonMessageBox.Show(@"Error al buscar personal firmado: " + ex.Message, "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+                dgvFirmado.DataSource = null;
+            }
+        }
     }
 }
