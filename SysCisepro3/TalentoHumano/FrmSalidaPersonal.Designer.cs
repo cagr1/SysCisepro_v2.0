@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.btnListar = new System.Windows.Forms.ToolStripButton();
             this.btnGuardar = new System.Windows.Forms.ToolStripButton();
@@ -84,20 +82,6 @@
             this.txtNombreFirmado = new System.Windows.Forms.TextBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.dtpAnio = new ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker();
-            this.Nomina = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ENE = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.FEB = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.MAR = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.ABR = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.May = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.JUN = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.JUL = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.AGO = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.SEPT = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.OCT = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.NOV = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.DIC = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPersonal)).BeginInit();
             this.tabControl1.SuspendLayout();
@@ -566,25 +550,13 @@
             // 
             // dgvFirmado
             // 
+            this.dgvFirmado.AllowUserToAddRows = false;
+            this.dgvFirmado.AllowUserToDeleteRows = false;
             this.dgvFirmado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvFirmado.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Nomina,
-            this.Fecha,
-            this.ENE,
-            this.FEB,
-            this.MAR,
-            this.ABR,
-            this.May,
-            this.JUN,
-            this.JUL,
-            this.AGO,
-            this.SEPT,
-            this.OCT,
-            this.NOV,
-            this.DIC});
             this.dgvFirmado.Location = new System.Drawing.Point(5, 5);
             this.dgvFirmado.Name = "dgvFirmado";
             this.dgvFirmado.RowHeadersVisible = false;
+            this.dgvFirmado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvFirmado.Size = new System.Drawing.Size(817, 413);
             this.dgvFirmado.TabIndex = 12;
             // 
@@ -708,6 +680,7 @@
             // 
             // dtpFechaFirmado
             // 
+            this.dtpFechaFirmado.CalendarTodayDate = new System.DateTime(2024, 8, 28, 0, 0, 0, 0);
             this.dtpFechaFirmado.Enabled = false;
             this.dtpFechaFirmado.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpFechaFirmado.Location = new System.Drawing.Point(136, 93);
@@ -764,100 +737,13 @@
             // 
             // dtpAnio
             // 
+            this.dtpAnio.CalendarTodayDate = new System.DateTime(2024, 8, 28, 0, 0, 0, 0);
             this.dtpAnio.CustomFormat = "yyyy";
             this.dtpAnio.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpAnio.Location = new System.Drawing.Point(376, 120);
             this.dtpAnio.Name = "dtpAnio";
             this.dtpAnio.Size = new System.Drawing.Size(60, 21);
             this.dtpAnio.TabIndex = 12;
-            // 
-            // Nomina
-            // 
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Nomina.DefaultCellStyle = dataGridViewCellStyle1;
-            this.Nomina.HeaderText = "Nomina";
-            this.Nomina.Name = "Nomina";
-            this.Nomina.Width = 200;
-            // 
-            // Fecha
-            // 
-            dataGridViewCellStyle2.Format = "d";
-            dataGridViewCellStyle2.NullValue = null;
-            this.Fecha.DefaultCellStyle = dataGridViewCellStyle2;
-            this.Fecha.HeaderText = "Fecha";
-            this.Fecha.Name = "Fecha";
-            // 
-            // ENE
-            // 
-            this.ENE.HeaderText = "Ene";
-            this.ENE.Name = "ENE";
-            this.ENE.Width = 50;
-            // 
-            // FEB
-            // 
-            this.FEB.HeaderText = "Feb";
-            this.FEB.Name = "FEB";
-            this.FEB.Width = 50;
-            // 
-            // MAR
-            // 
-            this.MAR.HeaderText = "Mar";
-            this.MAR.Name = "MAR";
-            this.MAR.Width = 50;
-            // 
-            // ABR
-            // 
-            this.ABR.HeaderText = "Abr";
-            this.ABR.Name = "ABR";
-            this.ABR.Width = 50;
-            // 
-            // May
-            // 
-            this.May.HeaderText = "May";
-            this.May.Name = "May";
-            this.May.Width = 50;
-            // 
-            // JUN
-            // 
-            this.JUN.HeaderText = "Jun";
-            this.JUN.Name = "JUN";
-            this.JUN.Width = 50;
-            // 
-            // JUL
-            // 
-            this.JUL.HeaderText = "Jul";
-            this.JUL.Name = "JUL";
-            this.JUL.Width = 50;
-            // 
-            // AGO
-            // 
-            this.AGO.HeaderText = "Ago";
-            this.AGO.Name = "AGO";
-            this.AGO.Width = 50;
-            // 
-            // SEPT
-            // 
-            this.SEPT.HeaderText = "Sept";
-            this.SEPT.Name = "SEPT";
-            this.SEPT.Width = 50;
-            // 
-            // OCT
-            // 
-            this.OCT.HeaderText = "Oct";
-            this.OCT.Name = "OCT";
-            this.OCT.Width = 50;
-            // 
-            // NOV
-            // 
-            this.NOV.HeaderText = "Nov";
-            this.NOV.Name = "NOV";
-            this.NOV.Width = 50;
-            // 
-            // DIC
-            // 
-            this.DIC.HeaderText = "Dic";
-            this.DIC.Name = "DIC";
-            this.DIC.Width = 50;
             // 
             // FrmSalidaPersonal
             // 
@@ -967,19 +853,5 @@
         private System.Windows.Forms.TextBox txtBusquedaFirmado;
         private ComponentFactory.Krypton.Toolkit.KryptonDataGridView dgvFirmado;
         private ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker dtpAnio;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nomina;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn ENE;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn FEB;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn MAR;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn ABR;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn May;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn JUN;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn JUL;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn AGO;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn SEPT;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn OCT;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn NOV;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn DIC;
     }
 }

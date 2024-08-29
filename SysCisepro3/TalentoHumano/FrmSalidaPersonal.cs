@@ -28,6 +28,8 @@ using CrystalDecisions.CrystalReports.Engine;
 using SysCisepro3.Main;
 using Microsoft.Office.Interop.Excel;
 using Krypton.Toolkit;
+using Microsoft.Office.Interop.Word;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace SysCisepro3.TalentoHumano
 {
@@ -567,6 +569,7 @@ namespace SysCisepro3.TalentoHumano
                         HabilitarIngresos(false);
                     }
                     KryptonMessageBox.Show((string)res[1], "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+                    dgvFirmado.DataSource = null;
                 }
             
             }
@@ -581,7 +584,8 @@ namespace SysCisepro3.TalentoHumano
             try
             {
                 dgvFirmado.Columns.Clear();
-                var data  = _objRolesFirmados.BuscarPersonalFirmadoFiltro(TipoCon, txtBusquedaFirmado.Text, Convert.ToInt32(dtpFechaFirmado.Value.Year));
+                dgvFirmado.Rows.Clear();
+                var data  = _objRolesFirmados.BuscarPersonalFirmadoFiltro(TipoCon, txtBusquedaFirmado.Text, Convert.ToInt32(dtpAnio.Value.Year));
                 
                 if (data == null || data.Rows.Count == 0)
                 { 
@@ -589,38 +593,78 @@ namespace SysCisepro3.TalentoHumano
                     return;
 
                 }
-                
-                dgvFirmado.DataSource = data;
-                foreach (DataGridViewColumn col in dgvFirmado.Columns)
+
+
+                foreach (DataColumn column in data.Columns)
                 {
-                    col.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+                   
 
-                    if (col.Name == "Fecha" ||  col.Name == "ENE" || col.Name == "FEB" || col.Name == "MAR" || col.Name == "ABR" || col.Name == "MAY" || col.Name == "JUN" ||
-                        col.Name == "JUL" || col.Name == "AGO" || col.Name == "SEPT" || col.Name == "OCT" || col.Name == "NOV" || col.Name == "DIC")
+                    if (column.ColumnName == "ENE" || column.ColumnName == "FEB" || column.ColumnName == "MAR" || column.ColumnName == "ABR" ||
+                        column.ColumnName == "MAY" || column.ColumnName == "JUN" || column.ColumnName == "JUL" || column.ColumnName == "AGO" ||
+                        column.ColumnName == "SEPT" || column.ColumnName == "OCT" || column.ColumnName == "NOV" || column.ColumnName == "DIC")
                     {
-                        col.Width = 50;
-                    }
+                        DataGridViewCheckBoxColumn colCheck = new DataGridViewCheckBoxColumn();
+                        colCheck.Name = column.ColumnName;
+                        colCheck.HeaderText = column.ColumnName;
+                        colCheck.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+                        colCheck.Width = 50;
+                        colCheck.TrueValue = 1;
+                        colCheck.FalseValue = 0;
+                        dgvFirmado.Columns.Add(colCheck);
 
-                    if (col.Name == "Nomina" )
+                    }
+                    else
                     {
-                        col.Width = 200;
+                        DataGridViewTextBoxColumn col = new DataGridViewTextBoxColumn();
+                        col.Name = column.ColumnName;
+                        col.HeaderText = column.ColumnName;
+                        col.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
+                        if (col.Name == "Apellidos" || col.Name == "Nombres")
+                        {
+                            col.Width = 140;
+                        }
+                        if (col.Name == "Fecha")
+                        {
+                            col.Width = 60;
+                        }
+                        dgvFirmado.Columns.Add(col);
                     }
+                    
 
-                    if (col.Name == "ENE" || col.Name == "FEB" || col.Name == "MAR" || col.Name == "ABR" || col.Name == "MAY" || col.Name == "JUN" ||
-                         col.Name == "JUL" || col.Name == "AGO" || col.Name == "SEPT" || col.Name == "OCT" || col.Name == "NOV" || col.Name == "DIC")
-                    {
-                        DataGridViewCheckBoxColumn checkBoxColumn = new DataGridViewCheckBoxColumn();
-                        checkBoxColumn.Name = col.Name;
-                        checkBoxColumn.HeaderText = col.HeaderText;
-                        checkBoxColumn.Width = col.Width;
-                        checkBoxColumn.DataPropertyName = col.DataPropertyName;
-                        checkBoxColumn.TrueValue = 1;
-                        checkBoxColumn.FalseValue = 0;
-                        dgvFirmado.Columns.Add(checkBoxColumn);
-                    }
-
-
+                    
                 }
+
+
+                foreach (DataRow row in data.Rows)
+                {
+                    int index = dgvFirmado.Rows.Add();
+                    DataGridViewRow dgvRow = dgvFirmado.Rows[index];
+
+                    // Set the checkbox cells
+                    dgvRow.Cells["ENE"].Value = Convert.ToInt32(row["ENE"]) == 1;
+                    dgvRow.Cells["FEB"].Value = Convert.ToInt32(row["FEB"]) == 1;
+                    dgvRow.Cells["MAR"].Value = Convert.ToInt32(row["MAR"]) == 1;
+                    dgvRow.Cells["ABR"].Value = Convert.ToInt32(row["ABR"]) == 1;
+                    dgvRow.Cells["MAY"].Value = Convert.ToInt32(row["MAY"]) == 1;
+                    dgvRow.Cells["JUN"].Value = Convert.ToInt32(row["JUN"]) == 1;
+                    dgvRow.Cells["JUL"].Value = Convert.ToInt32(row["JUL"]) == 1;
+                    dgvRow.Cells["AGO"].Value = Convert.ToInt32(row["AGO"]) == 1;
+                    dgvRow.Cells["SEPT"].Value = Convert.ToInt32(row["SEPT"]) == 1;
+                    dgvRow.Cells["OCT"].Value = Convert.ToInt32(row["OCT"]) == 1;
+                    dgvRow.Cells["NOV"].Value = Convert.ToInt32(row["NOV"]) == 1;
+                    dgvRow.Cells["DIC"].Value = Convert.ToInt32(row["DIC"]) == 1;
+
+                    // Set the rest of the text cells
+                    //dgvRow.Cells["Nomina"].Value = row["Nomina"].ToString();
+                    dgvRow.Cells["Fecha"].Value = row["Fecha"].ToString();
+                    dgvRow.Cells["Apellidos"].Value = row["Apellidos"].ToString();
+                    dgvRow.Cells["Nombres"].Value = row["Nombres"].ToString();
+                }
+
+
+
+
 
                 //dgvFirmado.AutoResizeRows();
             }
