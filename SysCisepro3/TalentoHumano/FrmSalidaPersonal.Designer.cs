@@ -35,6 +35,7 @@
             this.btnModificar = new System.Windows.Forms.ToolStripButton();
             this.btnCancelar = new System.Windows.Forms.ToolStripButton();
             this.btnExportar = new System.Windows.Forms.ToolStripButton();
+            this.btnExportarFirmas = new System.Windows.Forms.ToolStripButton();
             this.dgvPersonal = new System.Windows.Forms.DataGridView();
             this.chkbxFichaMedica = new System.Windows.Forms.CheckBox();
             this.txtObservaciones = new System.Windows.Forms.TextBox();
@@ -68,6 +69,7 @@
             this.kryptonGroupBox4 = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
             this.dgvFirmado = new ComponentFactory.Krypton.Toolkit.KryptonDataGridView();
             this.kryptonGroupBox3 = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
+            this.dtpAnio = new ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker();
             this.txtIdPersonalFirmado = new System.Windows.Forms.TextBox();
             this.txtBusquedaFirmado = new System.Windows.Forms.TextBox();
             this.kryptonLabel11 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
@@ -81,7 +83,6 @@
             this.kryptonLabel8 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.txtNombreFirmado = new System.Windows.Forms.TextBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.dtpAnio = new ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPersonal)).BeginInit();
             this.tabControl1.SuspendLayout();
@@ -121,7 +122,8 @@
             this.btnGuardar,
             this.btnModificar,
             this.btnCancelar,
-            this.btnExportar});
+            this.btnExportar,
+            this.btnExportarFirmas});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(847, 31);
@@ -178,6 +180,16 @@
             this.btnExportar.Size = new System.Drawing.Size(82, 28);
             this.btnExportar.Text = "REPORTE";
             this.btnExportar.Click += new System.EventHandler(this.btnExportar_Click);
+            // 
+            // btnExportarFirmas
+            // 
+            this.btnExportarFirmas.Image = global::SysCisepro3.Properties.Resources.icons8_excel_48;
+            this.btnExportarFirmas.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.btnExportarFirmas.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnExportarFirmas.Name = "btnExportarFirmas";
+            this.btnExportarFirmas.Size = new System.Drawing.Size(76, 28);
+            this.btnExportarFirmas.Text = "FIRMAS";
+            this.btnExportarFirmas.Click += new System.EventHandler(this.btnExportarFirmas_Click);
             // 
             // dgvPersonal
             // 
@@ -396,7 +408,7 @@
             this.kryptonDockableNavigator1.Pages.AddRange(new ComponentFactory.Krypton.Navigator.KryptonPage[] {
             this.kryptonPage1,
             this.kryptonPage2});
-            this.kryptonDockableNavigator1.SelectedIndex = 1;
+            this.kryptonDockableNavigator1.SelectedIndex = 0;
             this.kryptonDockableNavigator1.Size = new System.Drawing.Size(847, 675);
             this.kryptonDockableNavigator1.TabIndex = 8;
             this.kryptonDockableNavigator1.Text = "kryptonDockableNavigator1";
@@ -580,9 +592,19 @@
             this.kryptonGroupBox3.Panel.Controls.Add(this.kryptonLabel9);
             this.kryptonGroupBox3.Panel.Controls.Add(this.kryptonLabel8);
             this.kryptonGroupBox3.Panel.Controls.Add(this.txtNombreFirmado);
-            this.kryptonGroupBox3.Size = new System.Drawing.Size(517, 179);
+            this.kryptonGroupBox3.Size = new System.Drawing.Size(512, 179);
             this.kryptonGroupBox3.TabIndex = 0;
             this.kryptonGroupBox3.Values.Heading = "Datos Personal";
+            // 
+            // dtpAnio
+            // 
+            this.dtpAnio.CalendarTodayDate = new System.DateTime(2024, 8, 28, 0, 0, 0, 0);
+            this.dtpAnio.CustomFormat = "yyyy";
+            this.dtpAnio.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpAnio.Location = new System.Drawing.Point(376, 120);
+            this.dtpAnio.Name = "dtpAnio";
+            this.dtpAnio.Size = new System.Drawing.Size(60, 21);
+            this.dtpAnio.TabIndex = 12;
             // 
             // txtIdPersonalFirmado
             // 
@@ -735,16 +757,6 @@
             this.txtNombreFirmado.TabIndex = 0;
             this.txtNombreFirmado.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtNombreFirmado_KeyDown);
             // 
-            // dtpAnio
-            // 
-            this.dtpAnio.CalendarTodayDate = new System.DateTime(2024, 8, 28, 0, 0, 0, 0);
-            this.dtpAnio.CustomFormat = "yyyy";
-            this.dtpAnio.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpAnio.Location = new System.Drawing.Point(376, 120);
-            this.dtpAnio.Name = "dtpAnio";
-            this.dtpAnio.Size = new System.Drawing.Size(60, 21);
-            this.dtpAnio.TabIndex = 12;
-            // 
             // FrmSalidaPersonal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -853,5 +865,6 @@
         private System.Windows.Forms.TextBox txtBusquedaFirmado;
         private ComponentFactory.Krypton.Toolkit.KryptonDataGridView dgvFirmado;
         private ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker dtpAnio;
+        private System.Windows.Forms.ToolStripButton btnExportarFirmas;
     }
 }

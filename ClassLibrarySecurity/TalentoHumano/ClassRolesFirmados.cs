@@ -66,5 +66,17 @@ namespace ClassLibraryCisepro3.TalentoHumano
 
             return ComandosSql.SeleccionarQueryWithParamsToDataTable(tipoCon, "sp_buscarPersonalRolesFirmados", true, pars);
         }
+
+        public DataTable buscarFirmaRepetida(TipoConexion tipoCon, int code, int mes, int anio)
+        {
+            var pars = new List<object[]>
+            {
+                new object[] { "@code", SqlDbType.Int, code },
+                new object[] { "@fecha", SqlDbType.Int, mes },
+                new object[] { "@anio", SqlDbType.Int, anio }
+            };
+
+            return ComandosSql.SeleccionarQueryWithParamsToDataTable(tipoCon, "sp_buscarPersonalFirmadoRepetido", true, pars);
+        }   
     }
 }

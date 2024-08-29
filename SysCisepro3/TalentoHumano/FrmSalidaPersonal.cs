@@ -540,13 +540,22 @@ namespace SysCisepro3.TalentoHumano
             try
             {
                 _sqlCommands.Clear();
+                var mes = Convert.ToInt32(dtpFechaFirmado.Value.Month);
+                var anio = Convert.ToInt32(dtpFechaFirmado.Value.Year);
+                var codigo = Convert.ToInt32(txtIdPersonalFirmado.Text.Trim());
+                var data = _objRolesFirmados.buscarFirmaRepetida(TipoCon, codigo, mes, anio);
+                if (data.Rows.Count > 0)
+                {
+                    KryptonMessageBox.Show(@"Ya existe un registro de personal firmado para el mes y año seleccionado!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+                    return;
+                }
+
                 if (txtIdPersonalFirmado.Text.Trim().Length == 0 || txtNombreFirmado.Text.Trim().Length == 0 || txtCedulaFirmado.Text.Trim().Length == 0)
                 {
                 KryptonMessageBox.Show(@"No se puede guardar debido a que no ha llenado todos los campos necesarios!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
-            }
+                
+                }
                
-
-
                 else
                 {
                     
@@ -672,6 +681,106 @@ namespace SysCisepro3.TalentoHumano
             {
                 KryptonMessageBox.Show(@"Error al buscar personal firmado: " + ex.Message, "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
                 dgvFirmado.DataSource = null;
+            }
+        }
+
+        private void btnExportarFirmas_Click(object sender, EventArgs e)
+        {
+            if (dgvFirmado.RowCount == 0)
+            {
+                KryptonMessageBox.Show(@"NO HAY DATOS PARA EXPORTAR!", "MENSAJE DELL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+                return;
+            }
+
+            try
+            {
+                var app = new Microsoft.Office.Interop.Excel.Application();
+                var workbook = app.Workbooks.Add(Type.Missing);
+
+                var worksheet = (Microsoft.Office.Interop.Excel.Worksheet)workbook.Worksheets[1];
+                worksheet.Name = "REPORTE DE PERSONAL FIRMADO";
+
+
+
+                var l = -1;
+                for (var i = 0; i <= dgvFirmado.Columns.Count - 1; i++) if (dgvFirmado.Columns[i].Visible) l++;
+                var ic = ValidationForms.NumToCharExcel(l); // PARA FIRMA Y HUELLA
+
+                var rc = dgvFirmado.RowCount + 20;
+
+                worksheet.Range["A1:" + ic + rc].Font.Size = 10;
+
+                worksheet.Range["A1:" + ic + "1"].Merge();
+                worksheet.Range["A1:" + ic + "1"].Value = Validaciones.NombreCompany(TipoCon);
+                worksheet.Range["A1:" + ic + "1"].Font.Bold = true;
+                worksheet.Range["A1:" + ic + "1"].Cells.HorizontalAlignment = Microsoft.Office.Interop.Excel.XlHAlign.xlHAlignLeft;
+                worksheet.Range["A1:" + ic + "1"].Interior.Color = ValidationForms.GetColorSistema(TipoCon);
+                worksheet.Range["A1:" + ic + "1"].Font.Color = Color.White;
+                worksheet.Range["A1:" + ic + "1"].Font.Size = 12;
+
+                worksheet.Range["A2:" + ic + "2"].Merge();
+                worksheet.Range["A2:" + ic + "2"].Value = "PERÍODO: " + dtpAnio.Value.ToLongDateString();
+                worksheet.Range["A2:" + ic + "2"].Font.Size = 12;
+
+                
+                var head = 5;
+
+                var x = 1;
+                for (var i = 0; i <= dgvFirmado.Columns.Count - 1; i++)
+                {
+                    if (!dgvFirmado.Columns[i].Visible) continue;
+
+                    worksheet.Cells[head, x] = dgvFirmado.Columns[i].HeaderText;
+                    worksheet.Cells[head, x].Font.Bold = true;
+                    worksheet.Cells[head, x].Borders.LineStyle = Microsoft.Office.Interop.Excel.XlLineStyle.xlContinuous;
+                    worksheet.Cells[head, x].Cells.HorizontalAlignment = Microsoft.Office.Interop.Excel.XlHAlign.xlHAlignCenter;
+                    worksheet.Cells[head, x].Font.Color = Color.White;
+
+                    worksheet.Cells[head, x].Interior.Color = ValidationForms.GetColorSistema(TipoCon);
+                    x++;
+                }
+
+                // datos celdas
+                head++;
+                foreach (DataGridViewRow row in dgvFirmado.Rows)
+                {
+                    var y = 1;
+                    for (var j = 0; j <= dgvFirmado.Columns.Count - 1; j++)
+                    {
+                        if (!dgvFirmado.Columns[j].Visible) continue;
+                        var cellValue = row.Cells[j].Value;
+                        if (cellValue is bool booleanValue)
+                        {
+                            worksheet.Cells[head, y] = booleanValue ? "X" : "";
+                        }
+                        else
+                        {
+                            worksheet.Cells[head, y] = cellValue;
+                        }
+                        worksheet.Cells[head, y] = row.Cells[j].Value;
+                        if ((row.Tag + "").Equals("2") || (row.Tag + "").Equals("3")) worksheet.Cells[head, y].Font.Bold = true;
+                        worksheet.Cells[head, y].Borders(Microsoft.Office.Interop.Excel.XlBordersIndex.xlEdgeLeft).LineStyle = Microsoft.Office.Interop.Excel.XlLineStyle.xlContinuous;
+                        worksheet.Cells[head, y].Borders(Microsoft.Office.Interop.Excel.XlBordersIndex.xlEdgeRight).LineStyle = Microsoft.Office.Interop.Excel.XlLineStyle.xlContinuous;
+                        worksheet.Cells[head, y].Borders(Microsoft.Office.Interop.Excel.XlBordersIndex.xlEdgeBottom).LineStyle = Microsoft.Office.Interop.Excel.XlLineStyle.xlContinuous;
+                        y++;
+                    }
+                    head++;
+                }
+
+                var position = (Microsoft.Office.Interop.Excel.Range)worksheet.Cells[2, 7];
+                Clipboard.SetImage(ValidationForms.Logo(TipoCon));
+                worksheet.Paste(position);
+
+                worksheet.Range["A1:" + ic + rc].Columns.AutoFit();
+                app.DisplayAlerts = false;
+                app.Visible = true;
+                app.DisplayAlerts = true;
+                
+                KryptonMessageBox.Show(@"REPORTE  generado correctamente!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                KryptonMessageBox.Show(@"HUBO UN PROBLEMA AL EXPORTAR DATOS!" + "\n" + ex.Message, @"MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error);
             }
         }
     }

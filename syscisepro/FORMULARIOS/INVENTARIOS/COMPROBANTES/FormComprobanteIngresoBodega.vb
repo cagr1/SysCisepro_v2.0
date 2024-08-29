@@ -1235,7 +1235,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
             Try
                 With _objDetCompIng
                     .IdDetalle = Convert.ToInt64(lblDetaComp.Text)
-                    .IdKardex = Convert.ToInt64(lblIdKardex2.Text)
+                    .IdKardex = Convert.ToInt64(lblIdKardex.Text)
                     .IdDetalleKardex = Convert.ToInt64(lblDetaKardex.Text)
                     .ObservacionCalidadDetalle = cmbObservacionCalidad.Text.ToUpper
                     .ObservacionDetalleSerial = txtObservacion.Text.ToUpper & " - SERIE: " & If(txtSerie.Text.Trim().Length = 0, "-", txtSerie.Text.Trim())
@@ -1264,7 +1264,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                         .ValorUnitarioSaldo = val
                         .ValorTotalSaldo = (saldoTotal - (CantidadIngreso - cant)) * val
                         .Fecha = dtpFecha.Value
-                        .IdKardex = Convert.ToInt64(lblIdKardex2.Text)
+                        .IdKardex = Convert.ToInt64(lblIdKardex.Text)
                         .NroComprobante = txtNroComprobante.Text
 
                     End With
@@ -1276,7 +1276,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
 
                 Try
                     With _objKardex
-                        .Id = Convert.ToInt64(lblIdKardex2.Text)
+                        .Id = Convert.ToInt64(lblIdKardex.Text)
                         .IdsecuencialItem = Convert.ToInt64(lblIdSecuencial.Text)
                         .Cantidad = saldoTotal - (CantidadIngreso - cant)
                         .Fecha = dtpFecha.Value
@@ -1303,7 +1303,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                         .ValorUnitarioSaldo = val
                         .ValorTotalSaldo = (saldoTotal + (cant - CantidadIngreso)) * cant
                         .Fecha = dtpFecha.Value
-                        .IdKardex = Convert.ToInt64(lblIdKardex2.Text)
+                        .IdKardex = Convert.ToInt64(lblIdKardex.Text)
                         .NroComprobante = txtNroComprobante.Text
 
                     End With
@@ -1315,7 +1315,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
 
                 Try
                     With _objKardex
-                        .Id = Convert.ToInt64(lblIdKardex2.Text)
+                        .Id = Convert.ToInt64(lblIdKardex.Text)
                         .IdsecuencialItem = Convert.ToInt64(lblIdSecuencial.Text)
                         .Cantidad = saldoTotal + (cant - CantidadIngreso)
                         .Fecha = dtpFecha.Value
@@ -1343,7 +1343,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                         .ValorUnitarioSaldo = val
                         .ValorTotalSaldo = saldoTotal * val
                         .Fecha = dtpFecha.Value
-                        .IdKardex = Convert.ToInt64(lblIdKardex2.Text)
+                        .IdKardex = Convert.ToInt64(lblIdKardex.Text)
                         .Estado = 1
                         .NroComprobante = txtNroComprobante.Text
 
@@ -1357,7 +1357,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                 Try
 
                     With _objKardex
-                        .Id = Convert.ToInt64(lblIdKardex2.Text)
+                        .Id = Convert.ToInt64(lblIdKardex.Text)
                         .IdsecuencialItem = Convert.ToInt64(lblIdSecuencial.Text)
                         .Cantidad = saldoTotal
                         .Fecha = dtpFecha.Value

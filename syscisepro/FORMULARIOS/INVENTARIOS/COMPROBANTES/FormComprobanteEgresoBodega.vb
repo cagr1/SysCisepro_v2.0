@@ -1354,7 +1354,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
 
             With _objDetCompEgr
                 .IdDetalle = Convert.ToInt64(lblDetaComp.Text)
-                .IdKardex = Convert.ToInt64(lblIdKardex2.Text)
+                .IdKardex = Convert.ToInt64(lblIdKardex.Text)
                 .IdDetalleKardex = Convert.ToInt64(lblDetKardex.Text)
                 .ObservacionCalidad = cmbObservacionCalidad.Text.ToUpper
                 .ObservacionDetalle = txtObservacion.Text.ToUpper & " - SERIE: " & If(txtSerie.Text.Trim().Length = 0, "-", txtSerie.Text.Trim())
@@ -1380,7 +1380,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                     .ValorUnitarioSaldo = val
                     .ValorTotalSaldo = (saldoTotal + (CantidadEgreso - cant)) * val
                     .Fecha = dtpFecha.Value
-                    .IdKardex = Convert.ToInt64(lblIdKardex2.Text)
+                    .IdKardex = Convert.ToInt64(lblIdKardex.Text)
                     .NroComprobante = txtNumero.Text.ToString()
 
                 End With
@@ -1410,14 +1410,14 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                     .ValorUnitarioSaldo = val
                     .ValorTotalSaldo = (saldoTotal - (cant - CantidadEgreso)) * val
                     .Fecha = dtpFecha.Value
-                    .IdKardex = Convert.ToInt64(lblIdKardex2.Text)
+                    .IdKardex = Convert.ToInt64(lblIdKardex.Text)
                     .NroComprobante = lblComp.Text
 
                 End With
                 _sqlCommands.Add(_objDetalleKardex.ModificarDetalleKardexCommand())
 
                 With _objKardex
-                    .Id = Convert.ToInt64(lblIdKardex2.Text)
+                    .Id = Convert.ToInt64(lblIdKardex.Text)
                     .IdsecuencialItem = lblIdSecuencial.Text
                     .Cantidad = saldoTotal - (cant - CantidadEgreso)
                     .Fecha = dtpFecha.Value
@@ -1440,14 +1440,14 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                     .ValorUnitarioSaldo = val
                     .ValorTotalSaldo = saldoTotal * val
                     .Fecha = dtpFecha.Value
-                    .IdKardex = Convert.ToInt64(lblIdKardex2.Text)
+                    .IdKardex = Convert.ToInt64(lblIdKardex.Text)
                     .NroComprobante = txtNumero.Text.ToString()
 
                 End With
                 _sqlCommands.Add(_objDetalleKardex.ModificarDetalleKardexCommand())
 
                 With _objKardex
-                    .Id = Convert.ToInt64(lblIdKardex2.Text)
+                    .Id = Convert.ToInt64(lblIdKardex.Text)
                     .IdsecuencialItem = lblIdSecuencial.Text
                     .Cantidad = saldoTotal
                     .Fecha = dtpFecha.Value
