@@ -272,7 +272,38 @@ namespace SysCisepro3.TalentoHumano
                 var fechaDesde = dtpFechaDesde.Value.Year + "-" + dtpFechaDesde.Value.Month + "-" + dtpFechaDesde.Value.Day + " 00:00:00";
                 var fechaHasta = dtpFechaHasta.Value.Year + "-" + dtpFechaHasta.Value.Month + "-" + dtpFechaHasta.Value.Day + " 23:59:59";
 
-                var data = _objTicketsFarmaciaComecsa.SeleccionarRegistroNotificaciones(TipoCon, fechaDesde, fechaHasta, cbxFiltro.SelectedIndex, txtFiltro.Text.Trim());
+                var tipo = cbxFiltro.SelectedIndex;
+                //declare data for receive a datatable
+                System.Data.DataTable data;
+
+                if (tipo == 0)
+                {
+                    data = _objTicketsFarmaciaComecsa.SeleccionarRegistroNotificacionesTodo(TipoCon, fechaDesde, fechaHasta, txtFiltro.Text.Trim());
+                }
+                else
+                {
+                    int tipoF = 0;
+                    switch (tipo)
+                    {
+                        case 1:
+                            tipoF = 0;
+                            break;
+                        case 2:
+                            tipoF = 1;
+                            break;
+                        case 3:
+                            tipoF = 2;
+                            break;
+                        case 4:
+                            tipoF = 3;
+                            break;
+                        
+                    }
+
+                    data = _objTicketsFarmaciaComecsa.SeleccionarRegistroNotificaciones(TipoCon, fechaDesde, fechaHasta, tipoF, txtFiltro.Text.Trim());
+                    
+
+                }
                 double td = 0;
                 //foreach (DataRow row in data.Rows)
                 //{

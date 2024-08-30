@@ -45,6 +45,19 @@ namespace ClassLibraryCisepro3.TalentoHumano
             return ComandosSql.SeleccionarQueryWithParamsToDataTable(tipoCon, "sp_seleccionarRegistrosNotificaciones", true, pars);
         }
 
+        public DataTable SeleccionarRegistroNotificacionesTodo(TipoConexion tipoCon, string desde, string hasta, string filtro)
+        {
+            var pars = new List<object[]>
+            {
+                new object[] { "@DESDE", SqlDbType.DateTime, desde } ,
+                new object[] { "@HASTA", SqlDbType.DateTime, hasta } ,
+                new object[] { "@FILTRO", SqlDbType.NVarChar, filtro },
+                
+            };
+
+            return ComandosSql.SeleccionarQueryWithParamsToDataTable(tipoCon, "sp_seleccionarRegistrosNotificacionesTodos", true, pars);
+        }
+
         public SqlCommand NuevoRegistroNotificacionCommands()
         {
             var cmd = new SqlCommand

@@ -370,7 +370,7 @@
             this.toolStrip1.AllowMerge = false;
             this.toolStrip1.AutoSize = false;
             this.toolStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(83)))), ((int)(((byte)(156)))));
-            this.toolStrip1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.toolStrip1.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStrip1.GripMargin = new System.Windows.Forms.Padding(0);
             this.toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -430,6 +430,8 @@
             this.tsAdministracion.Size = new System.Drawing.Size(142, 47);
             this.tsAdministracion.Text = "ADMINISTRACIÓN";
             this.tsAdministracion.Click += new System.EventHandler(this.tsAdministracion_Click);
+            this.tsAdministracion.MouseLeave += new System.EventHandler(this.tsAdministracion_MouseLeave);
+            this.tsAdministracion.MouseHover += new System.EventHandler(this.tsAdministracion_MouseHover);
             // 
             // eSTRUCTURAADMINISTRATIVAToolStripMenuItem
             // 
@@ -647,6 +649,8 @@
             this.tsActivosFijos.Size = new System.Drawing.Size(128, 47);
             this.tsActivosFijos.Text = "ACTIVOS FIJOS";
             this.tsActivosFijos.Click += new System.EventHandler(this.tsActivosFijos_Click);
+            this.tsActivosFijos.MouseLeave += new System.EventHandler(this.tsActivosFijos_MouseLeave);
+            this.tsActivosFijos.MouseHover += new System.EventHandler(this.tsActivosFijos_MouseHover);
             // 
             // iNGRESOToolStripMenuItem
             // 
@@ -992,6 +996,8 @@
             this.tsFondos.Name = "tsFondos";
             this.tsFondos.Size = new System.Drawing.Size(91, 47);
             this.tsFondos.Text = "FONDOS";
+            this.tsFondos.MouseLeave += new System.EventHandler(this.tsFondos_MouseLeave);
+            this.tsFondos.MouseHover += new System.EventHandler(this.tsFondos_MouseHover);
             // 
             // fONDODECAJACHICAToolStripMenuItem
             // 
@@ -1174,6 +1180,8 @@
             this.tsContabilidad.Name = "tsContabilidad";
             this.tsContabilidad.Size = new System.Drawing.Size(127, 47);
             this.tsContabilidad.Text = "CONTABILIDAD";
+            this.tsContabilidad.MouseLeave += new System.EventHandler(this.tsContabilidad_MouseLeave);
+            this.tsContabilidad.MouseHover += new System.EventHandler(this.tsContabilidad_MouseHover);
             // 
             // lIBRODIARIOGENERALToolStripMenuItem
             // 
@@ -2111,6 +2119,8 @@
             this.tsRecursoHumano.Name = "tsRecursoHumano";
             this.tsRecursoHumano.Size = new System.Drawing.Size(151, 47);
             this.tsRecursoHumano.Text = "RECURSO HUMANO";
+            this.tsRecursoHumano.MouseLeave += new System.EventHandler(this.tsRecursoHumano_MouseLeave);
+            this.tsRecursoHumano.MouseHover += new System.EventHandler(this.tsRecursoHumano_MouseHover);
             // 
             // rEGISTROPROYECTOCONTRATACIONtoolStripMenuItem
             // 
@@ -2375,6 +2385,8 @@
             this.tsOperaciones.Name = "tsOperaciones";
             this.tsOperaciones.Size = new System.Drawing.Size(124, 47);
             this.tsOperaciones.Text = "OPERACIONES";
+            this.tsOperaciones.MouseLeave += new System.EventHandler(this.tsOperaciones_MouseLeave);
+            this.tsOperaciones.MouseHover += new System.EventHandler(this.tsOperaciones_MouseHover);
             // 
             // dIVISIÓNPOLÍTICADELPAISToolStripMenuItem
             // 
@@ -2510,6 +2522,8 @@
             this.tsBodega.Name = "tsBodega";
             this.tsBodega.Size = new System.Drawing.Size(90, 47);
             this.tsBodega.Text = "BODEGA";
+            this.tsBodega.MouseLeave += new System.EventHandler(this.tsBodega_MouseLeave);
+            this.tsBodega.MouseHover += new System.EventHandler(this.tsBodega_MouseHover);
             // 
             // bODEGASToolStripMenuItem
             // 
@@ -2744,14 +2758,11 @@
             // 
             // kryptonPalette1
             // 
-            this.kryptonPalette1.BasePaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Office2010Blue;
             this.kryptonPalette1.ButtonStyles.ButtonCustom1.StateCommon.Back.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.False;
-            this.kryptonPalette1.ButtonStyles.ButtonCustom1.StateCommon.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.kryptonPalette1.ButtonStyles.ButtonCustom1.StateCommon.Border.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.False;
             this.kryptonPalette1.ButtonStyles.ButtonCustom1.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonPalette1.ButtonStyles.ButtonCustom1.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.kryptonPalette1.ToolMenuStatus.ToolStrip.ToolStripBorder = System.Drawing.Color.Transparent;
             this.kryptonPalette1.ToolMenuStatus.ToolStrip.ToolStripContentPanelGradientEnd = System.Drawing.Color.Transparent;
             this.kryptonPalette1.PalettePaint += new System.EventHandler<ComponentFactory.Krypton.Toolkit.PaletteLayoutEventArgs>(this.kryptonPalette1_PalettePaint);

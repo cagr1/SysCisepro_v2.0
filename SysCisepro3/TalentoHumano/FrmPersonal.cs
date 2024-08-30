@@ -46,6 +46,7 @@ namespace SysCisepro3.TalentoHumano
         private readonly ClassSitiosTrabajo _objSitiosTrabajo;
         private readonly ClassDocumentosContrato _objDocumentosContrato;
         private FrmNotificarNovedades _frmNotificacion;
+        private readonly ClassSalidaPersonal _objSalidaPersonal;
 
         private List<object[]> docs;
 
@@ -88,6 +89,7 @@ namespace SysCisepro3.TalentoHumano
             _objParroquias = new ClassParroquias();
             _objSitiosTrabajo = new ClassSitiosTrabajo();
             _objDocumentosContrato = new ClassDocumentosContrato();
+            _objSalidaPersonal = new ClassSalidaPersonal();
         }
 
         private void FormPersonal_Load(object sender, EventArgs e)
@@ -1266,13 +1268,14 @@ namespace SysCisepro3.TalentoHumano
             //_objCuentaPersonal.NumCuenta = "";
             //_objCuentaPersonal.Tipo = "AHO";
 
-
             var CuentaPersonal = (DataRowView)cbxBanco.SelectedItem;
             _objCuentaPersonal.IdBanco = Convert.ToInt32(CuentaPersonal["id_banco"]);
             _objCuentaPersonal.IdPersonal = Convert.ToInt32(_objPersonal.IdPersonal);
             _objCuentaPersonal.NumCuenta = txtNumCuenta.Text;
             _objCuentaPersonal.Tipo = cbxTipoCuenta.SelectedItem.ToString();
             _sqlCommands.Add(_objCuentaPersonal.ModificarCuentabancoPersonalcommand());
+
+            
 
             _sqlCommands.Add(_objSecuencialContratos.ActualizarSecuencialContrato(dtpFechaIngreso.Value.Year));
         }

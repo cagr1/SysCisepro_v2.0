@@ -1580,7 +1580,7 @@
             "POR OBRA O SERVICIO DETERMINADO DENTRO DEL GIRO DEL NEGOCIO",
             "A TIEMPO INDEFINIDO CON PERÍODO DE PRUEBA (3 - 6 MESES)",
             "CONTRATO INDEFINIDO, SIN FECHA ESPECÍFICA DE FINALIZACIÓN"});
-            this.cbmTipoContrato.Location = new System.Drawing.Point(123, 32);
+            this.cbmTipoContrato.Location = new System.Drawing.Point(123, 34);
             this.cbmTipoContrato.Name = "cbmTipoContrato";
             this.cbmTipoContrato.Size = new System.Drawing.Size(324, 21);
             this.cbmTipoContrato.TabIndex = 152;

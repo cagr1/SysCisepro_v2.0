@@ -87,6 +87,7 @@ namespace SysCisepro3.Main
 
         int[] menuDos = Enumerable.Range(1, 58).ToArray();
         int[] menuTres = Enumerable.Range(1, 130).ToArray();
+        
 
         public MdiParentMain()
         {
@@ -697,10 +698,12 @@ namespace SysCisepro3.Main
             // CARGAR ICONO Y DESIEÑO SEGUN SISTEMA
             DefinirTipoSistema();             
             timer1.Start();
-            
+
             //Image image = Resources.Your_paragraph_text__2_;
             // AdjustImageToFit(pictureBox1, image);
 
+            
+            
 
         }
 
@@ -1894,6 +1897,8 @@ namespace SysCisepro3.Main
                     notifyIcon1.BalloonTipText = @"ALERTA!!! Aviso por chalecos que estan a punto de expirar su permiso. Por favor, verifique la información correspondiente.";
                 }
 
+               
+
 
 
                 if (_data.Rows.Count > 0) notifyIcon1.ShowBalloonTip(10000);
@@ -2004,6 +2009,93 @@ namespace SysCisepro3.Main
             FrmRoles.Usuario = ObjUsuario;
             FrmRoles.Instancia.Show();
             FrmRoles.Instancia.BringToFront();
+        }
+
+        private void tsAdministracion_MouseHover(object sender, EventArgs e)
+        {
+            tsAdministracion.ForeColor = Color.Black;
+            tsAdministracion.Image = Resources.manage_accounts_24dp_FILL0_wght400_GRAD0_opsz24__5_;
+            
+        }
+        private void tsAdministracion_MouseLeave(object sender, EventArgs e)
+        {
+            tsAdministracion.ForeColor = Color.White;
+            tsAdministracion.Image = Resources.manage_accounts_24dp_FILL0_wght400_GRAD0_opsz24__1_;
+        }
+
+        private void tsActivosFijos_MouseHover(object sender, EventArgs e)
+        {
+            tsActivosFijos.ForeColor = Color.Black;
+            tsActivosFijos.Image = Resources.wallet_20dp_FILL0_wght400_GRAD0_opsz24;
+            
+        }
+
+        private void tsActivosFijos_MouseLeave(object sender, EventArgs e)
+        {
+            tsActivosFijos.ForeColor = Color.White;
+            tsActivosFijos.Image = Resources.wallet_20dp_FILL0_wght400_GRAD0_opsz20;
+        }
+
+        private void tsFondos_MouseHover(object sender, EventArgs e)
+        {
+            tsFondos.ForeColor = Color.Black;
+            tsFondos.Image = Resources.payments_24dp_FILL0_wght400_GRAD0_opsz24__2_;
+        }
+
+        private void tsFondos_MouseLeave(object sender, EventArgs e)
+        {
+            tsFondos.ForeColor = Color.White;
+            tsFondos.Image = Resources.payments_24dp_FILL0_wght400_GRAD0_opsz24__1_;
+        }
+
+        private void tsContabilidad_MouseHover(object sender, EventArgs e)
+        {
+            tsContabilidad.ForeColor = Color.Black;
+            tsContabilidad.Image = Resources.account_balance_24dp_FILL0_wght400_GRAD0_opsz24;
+            
+        }
+
+        private void tsContabilidad_MouseLeave(object sender, EventArgs e)
+        {
+            tsContabilidad.ForeColor = Color.White;
+            tsContabilidad.Image = Resources.account_balance_24dp_FILL0_wght400_GRAD0_opsz24__1_;
+        }
+
+        private void tsRecursoHumano_MouseHover(object sender, EventArgs e)
+        {
+            tsRecursoHumano.ForeColor = Color.Black;
+            tsRecursoHumano.Image = Resources.groups_24dp_FILL0_wght400_GRAD0_opsz24__1_;
+                
+        }
+
+        private void tsRecursoHumano_MouseLeave(object sender, EventArgs e)
+        {
+            tsRecursoHumano.ForeColor = Color.White;
+            tsRecursoHumano.Image = Resources.groups_24dp_FILL0_wght400_GRAD0_opsz24;
+        }
+
+        private void tsOperaciones_MouseHover(object sender, EventArgs e)
+        {
+            tsOperaciones.ForeColor = Color.Black;
+            tsOperaciones.Image = Resources.security_24dp_FILL0_wght400_GRAD0_opsz24;
+        }
+
+        private void tsOperaciones_MouseLeave(object sender, EventArgs e)
+        {
+            tsOperaciones.ForeColor = Color.White;
+            tsOperaciones.Image = Resources.security_24dp_FILL0_wght400_GRAD0_opsz24__1_;
+        }
+
+        private void tsBodega_MouseHover(object sender, EventArgs e)
+        {
+            tsBodega.ForeColor = Color.Black;
+            tsBodega.Image = Resources.storefront_20dp_FILL0_wght400_GRAD0_opsz20__2_;
+        }
+
+        private void tsBodega_MouseLeave(object sender, EventArgs e)
+        {
+            tsBodega.ForeColor = Color.White;
+            tsBodega.Image = Resources.storefront_20dp_FILL0_wght400_GRAD0_opsz20__1_;
         }
 
         private void AdjustImageToFit(PictureBox pbx, Image image)

@@ -1,19 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.SqlClient;
-using System.Drawing;
-using System.Windows.Forms;
-using ClassLibraryCisepro3.DivisionGeografica;
+﻿using ClassLibraryCisepro3.DivisionGeografica;
 using ClassLibraryCisepro3.Enums;
 using ClassLibraryCisepro3.Estaticas;
 using ClassLibraryCisepro3.Invetarios;
 using ClassLibraryCisepro3.ProcesosSql;
 using ClassLibraryCisepro3.UsuarioGeneral;
+using Krypton.Toolkit;
 using SysCisepro3.Datos;
 using SysCisepro3.Properties;
 using SysCisepro3.Reportes;
 using SysCisepro3.TalentoHumano;
-using Krypton.Toolkit; 
+using System;
+using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.Drawing;
+using System.Windows.Forms;
 
 namespace SysCisepro3.Inventarios
 {
@@ -63,10 +63,10 @@ namespace SysCisepro3.Inventarios
             switch (TipoCon)
             {
                 case TipoConexion.Seportpac:
-                    Icon = Resources.logo_s; 
+                    Icon = Resources.logo_s;
                     break;
                 case TipoConexion.Asenava:
-                    Icon = Resources.logo_a; 
+                    Icon = Resources.logo_a;
                     break;
                 default: // CISEPRO
                     Icon = Resources.logo_c;
