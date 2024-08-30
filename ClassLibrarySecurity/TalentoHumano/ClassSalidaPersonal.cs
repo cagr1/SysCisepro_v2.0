@@ -99,5 +99,15 @@ namespace ClassLibraryCisepro3.TalentoHumano
             var data = ComandosSql.SeleccionarQueryWithParamsToDataTable(tipoCon, "sp_buscarIdPersonalSalida", true, pars);
             return data.Rows.Count == 0 ? 0 : data.Rows[0][0] == DBNull.Value ? 0 : Convert.ToInt32(data.Rows[0][0]);
         }
+
+        public DataTable BuscarPersonalSalida(TipoConexion tipoCon, int id)
+        {
+            var pars = new List<object[]>
+            {
+                new object[] { "@id", SqlDbType.Int, id }
+            };
+
+            return ComandosSql.SeleccionarQueryWithParamsToDataTable(tipoCon, "sp_BuscarPersonalSalidaReingreso", true, pars);
+        }
     }
 }

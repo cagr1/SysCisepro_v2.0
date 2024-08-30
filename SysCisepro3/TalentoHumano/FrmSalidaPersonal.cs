@@ -11,8 +11,6 @@ using SysCisepro3.Datos;
 using SysCisepro3.Operaciones;
 using SysCisepro3.Properties;
 using SysCisepro3.Reportes;
-
-
 using ClassLibraryCisepro3.Enums;
 using ClassLibraryCisepro3.Estaticas;
 using ClassLibraryCisepro3.EstructuraEmpresa;
@@ -20,16 +18,20 @@ using ClassLibraryCisepro3.Operaciones;
 using ClassLibraryCisepro3.TalentoHumano;
 using ClassLibraryCisepro3.UsuarioGeneral;
 using ClassLibraryCisepro3.ProcesosSql;
+using iText.Kernel.Pdf;
+using iText.Layout;
+using iText.Layout.Element;
+using iText.Layout.Properties;
 using System.IO;
 using DataTable = System.Data.DataTable;
 using Font = System.Drawing.Font;
 using CrystalDecisions.CrystalReports.Engine;
-
 using SysCisepro3.Main;
 using Microsoft.Office.Interop.Excel;
 using Krypton.Toolkit;
 using Microsoft.Office.Interop.Word;
-using static System.Net.Mime.MediaTypeNames;
+using iText.Kernel.Geom;
+
 
 namespace SysCisepro3.TalentoHumano
 {
@@ -258,7 +260,7 @@ namespace SysCisepro3.TalentoHumano
              {
                 chkbxRoles.Enabled = enable;              
              }
-             if (Usuario.TipoUsuario.Trim().Contains("ADMINISTRADOR") && Settings.Default.Usuario.Equals("NATALIA"))
+             if (Usuario.TipoUsuario.Trim().Contains("ADMINISTRADOR") && Settings.Default.Usuario.Equals("ERIKA GIRON CORO"))
              {
                  chkbxUniformes.Enabled = enable;
              }
@@ -465,9 +467,13 @@ namespace SysCisepro3.TalentoHumano
                  crvSalida.ReportSource = _rptSalidaPersonal;
                  crvSalida.Zoom(2);
                  crvSalida.Refresh();
+
+                //Nuevo Reporte con PDF
+
                 
-                 
-             }
+
+
+            }
              catch (Exception)
              {
                  MessageBox.Show(@"Error al generar solicitud. Por favor, contácte al administrador!",

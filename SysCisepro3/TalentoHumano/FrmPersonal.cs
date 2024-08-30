@@ -1171,113 +1171,133 @@ namespace SysCisepro3.TalentoHumano
 
         private void  GuardarRegistroModificadoPersonalReingreso()
         {
-            _objPersonal.IdPersonal = Convert.ToInt32(lblIdPersonal.Text.Trim());
-            _objPersonal.CedulaPersonal = txtCedula.Text.Trim();
-            _objPersonal.NombresPersonal = txtNombres.Text.Trim();
-            _objPersonal.ApellidosPersonal = txtApellidos.Text.Trim();
-            _objPersonal.ProvinciaPersonal = cbmProvincia.Text;
-            _objPersonal.DireccionPersonal = txtDireccion.Text.Trim();
-            _objPersonal.FechaNacimientoPersonal = dtpFechaNacimiento.Value;
-            _objPersonal.SexoPersonal = cbmSexo.Text.Trim();
-            _objPersonal.CiudadPersonal = cbmCanton.Text;
-            _objPersonal.SueldoPersonal = NupSueldo.Value;
-            _objPersonal.LibretaMilitarPersonal = txtLibreta.Text.Trim();
-            _objPersonal.TipoSangrePersonal = cbmTipoSangre.Text.Trim();
-            _objPersonal.PasaportePersonal = txtPasaporte.Text.Trim();
-            _objPersonal.PesoPersonal = Convert.ToDecimal(txtPeso.Text);
-            _objPersonal.EdadPersonal = Convert.ToInt32(txtEdad.Text);
-            _objPersonal.PruebaAntidrogaPersona = cbmPruebaAntiDroga.Text.Trim();
-            _objPersonal.FechaEntradaPersonal = dtpFechaIngreso.Value;
-            _objPersonal.UbicacionPersonal = txtSitio.Tag.ToString();
-            _objPersonal.InstruccionPersonal = cbmInstruccion.Text.Trim();
-            _objPersonal.EstadoCivilPersonal = cbEstadoCivil.Text;
-            _objPersonal.MovilPersonal = txtMovil.Text;
-            _objPersonal.TelefonoPersonal = txtTelefono.Text;
-            _objPersonal.FechaSalidaPersonal = new DateTime(1990, 1, 1, 0, 0, 0);
-            _objPersonal.EstadoPersonal = 1;
-            _objPersonal.IdCargoPersonal = Convert.ToInt32(cbCargo.SelectedValue);
-            _objPersonal.IdAreaPersonal = _objArea.BuscarIdAreaGeneralPorNombreAreaGeneral(TipoCon, cbArea.Text);
-            _objPersonal.CantidadHijosPersonal = Convert.ToInt32(nudCantidadHijos.Value);
-            _objPersonal.HistoriaClinicaPersonal = chkHistoriaClinica.Checked ? "SI" : "NO";
-            _objPersonal.ParroquiaPersonal = cbmParroquia.Text;
-            _objPersonal.EstaturaPersonal = Convert.ToDecimal(txtEstatura.Text);
-            _objPersonal.DiscapacidadPersonal = chbDiscapacitado.Checked ? "SI" : "NO";
-            _objPersonal.ExamenPsicologicoPersonal = (chbExamenPsicologico.Checked ? "SI" : "NO") + ";" + txtDocumentacion.Text.Trim();
-            _objPersonal.LugarExamenPsicologicoPersonal = txtLugarExamenPsicologico.Text;
-            _objPersonal.CursoVigilante = chkCursoVigilante.Checked ? "SI" : "NO";
-            _objPersonal.EmisorCursoVigilante = txtEmisorCursoVigilante.Text;
-            _objPersonal.CarnetConadisPersonal = txtCarnetConadis.Text;
-            _objPersonal.DatosHijosPersonal = txtDatosHijos.Text;
-            _objPersonal.DatosEsposaPersonal = txtDatosEsposa.Text;
-            _objPersonal.CasaPersonal = chCasaPropia.Checked ? "SI" : "NO";
-            _objPersonal.ArriendoPersonal = chArrienda.Checked ? "SI" : "NO";
-            _objPersonal.DeudorPersonal = chDeudorGarante.Checked ? "SI" : "NO";
-            _objPersonal.CantidadDeudaPersonal = Convert.ToDecimal(txtCantidadDeuda.Text);
-            _objPersonal.AQuienAdeudaPersonal = txtAquienAdeuda.Text;
-            _objPersonal.TrabajoAnteriormentePersonal = chTrabajoAnterior.Checked ? "SI" : "NO";
-            _objPersonal.AnteriorTrabajoPersonal = txtEmpresaLugar.Text;
-            _objPersonal.CargoAnteriorTrabajoPersonal = txtCargoOcupo.Text;
-            _objPersonal.MotivoSalidaTrabajoPersonal = txtMotivoSalidaAnterior.Text;
-            _objPersonal.EntradaAnteriorPersonal = dtpFechaEntradaReferencia.Value;
-            _objPersonal.SalidaAnteriorPersonal = dtpFechaSalidaReferencia.Value;
-            _objPersonal.NombresPatronoAnteriorPersonal = txtNombresUltimoPatrono.Text;
-            _objPersonal.TelefonoPatronoAnteriorPersonal = txtTelefonoUltimoPatrono.Text;
-            _objPersonal.RecomendacionesPersonal = txtRecomendaciones.Text;
-            _objPersonal.DatosFamiliaresPersonal = txtDatosFamiliar.Text;
-            _objPersonal.DatosEmergenciaPersonal = txtDatosEmergencia.Text;
-            _objPersonal.FotoPersonal = ValidationForms.ImageToBytes(pbFoto.Image);
-            _objPersonal.PerfilPersonal = ValidationForms.ImageToBytes(pbPerfil.Image);
-            _objPersonal.EmailPersonal = txtEmail.Text;
-            _objPersonal.Observacion = txtObservacion.Text.Trim();
-            _objPersonal.Credencial = chkcredencial.Checked ? 1 : 0;
-            _sqlCommands.Add(_objPersonal.ModificarPersonalCompletoCommand());
+            try
+            {
+                _objPersonal.IdPersonal = Convert.ToInt32(lblIdPersonal.Text.Trim());
+                _objPersonal.CedulaPersonal = txtCedula.Text.Trim();
+                _objPersonal.NombresPersonal = txtNombres.Text.Trim();
+                _objPersonal.ApellidosPersonal = txtApellidos.Text.Trim();
+                _objPersonal.ProvinciaPersonal = cbmProvincia.Text;
+                _objPersonal.DireccionPersonal = txtDireccion.Text.Trim();
+                _objPersonal.FechaNacimientoPersonal = dtpFechaNacimiento.Value;
+                _objPersonal.SexoPersonal = cbmSexo.Text.Trim();
+                _objPersonal.CiudadPersonal = cbmCanton.Text;
+                _objPersonal.SueldoPersonal = NupSueldo.Value;
+                _objPersonal.LibretaMilitarPersonal = txtLibreta.Text.Trim();
+                _objPersonal.TipoSangrePersonal = cbmTipoSangre.Text.Trim();
+                _objPersonal.PasaportePersonal = txtPasaporte.Text.Trim();
+                _objPersonal.PesoPersonal = Convert.ToDecimal(txtPeso.Text);
+                _objPersonal.EdadPersonal = Convert.ToInt32(txtEdad.Text);
+                _objPersonal.PruebaAntidrogaPersona = cbmPruebaAntiDroga.Text.Trim();
+                _objPersonal.FechaEntradaPersonal = dtpFechaIngreso.Value;
+                _objPersonal.UbicacionPersonal = txtSitio.Tag.ToString();
+                _objPersonal.InstruccionPersonal = cbmInstruccion.Text.Trim();
+                _objPersonal.EstadoCivilPersonal = cbEstadoCivil.Text;
+                _objPersonal.MovilPersonal = txtMovil.Text;
+                _objPersonal.TelefonoPersonal = txtTelefono.Text;
+                _objPersonal.FechaSalidaPersonal = new DateTime(1990, 1, 1, 0, 0, 0);
+                _objPersonal.EstadoPersonal = 1;
+                _objPersonal.IdCargoPersonal = Convert.ToInt32(cbCargo.SelectedValue);
+                _objPersonal.IdAreaPersonal = _objArea.BuscarIdAreaGeneralPorNombreAreaGeneral(TipoCon, cbArea.Text);
+                _objPersonal.CantidadHijosPersonal = Convert.ToInt32(nudCantidadHijos.Value);
+                _objPersonal.HistoriaClinicaPersonal = chkHistoriaClinica.Checked ? "SI" : "NO";
+                _objPersonal.ParroquiaPersonal = cbmParroquia.Text;
+                _objPersonal.EstaturaPersonal = Convert.ToDecimal(txtEstatura.Text);
+                _objPersonal.DiscapacidadPersonal = chbDiscapacitado.Checked ? "SI" : "NO";
+                _objPersonal.ExamenPsicologicoPersonal = (chbExamenPsicologico.Checked ? "SI" : "NO") + ";" + txtDocumentacion.Text.Trim();
+                _objPersonal.LugarExamenPsicologicoPersonal = txtLugarExamenPsicologico.Text;
+                _objPersonal.CursoVigilante = chkCursoVigilante.Checked ? "SI" : "NO";
+                _objPersonal.EmisorCursoVigilante = txtEmisorCursoVigilante.Text;
+                _objPersonal.CarnetConadisPersonal = txtCarnetConadis.Text;
+                _objPersonal.DatosHijosPersonal = txtDatosHijos.Text;
+                _objPersonal.DatosEsposaPersonal = txtDatosEsposa.Text;
+                _objPersonal.CasaPersonal = chCasaPropia.Checked ? "SI" : "NO";
+                _objPersonal.ArriendoPersonal = chArrienda.Checked ? "SI" : "NO";
+                _objPersonal.DeudorPersonal = chDeudorGarante.Checked ? "SI" : "NO";
+                _objPersonal.CantidadDeudaPersonal = Convert.ToDecimal(txtCantidadDeuda.Text);
+                _objPersonal.AQuienAdeudaPersonal = txtAquienAdeuda.Text;
+                _objPersonal.TrabajoAnteriormentePersonal = chTrabajoAnterior.Checked ? "SI" : "NO";
+                _objPersonal.AnteriorTrabajoPersonal = txtEmpresaLugar.Text;
+                _objPersonal.CargoAnteriorTrabajoPersonal = txtCargoOcupo.Text;
+                _objPersonal.MotivoSalidaTrabajoPersonal = txtMotivoSalidaAnterior.Text;
+                _objPersonal.EntradaAnteriorPersonal = dtpFechaEntradaReferencia.Value;
+                _objPersonal.SalidaAnteriorPersonal = dtpFechaSalidaReferencia.Value;
+                _objPersonal.NombresPatronoAnteriorPersonal = txtNombresUltimoPatrono.Text;
+                _objPersonal.TelefonoPatronoAnteriorPersonal = txtTelefonoUltimoPatrono.Text;
+                _objPersonal.RecomendacionesPersonal = txtRecomendaciones.Text;
+                _objPersonal.DatosFamiliaresPersonal = txtDatosFamiliar.Text;
+                _objPersonal.DatosEmergenciaPersonal = txtDatosEmergencia.Text;
+                _objPersonal.FotoPersonal = ValidationForms.ImageToBytes(pbFoto.Image);
+                _objPersonal.PerfilPersonal = ValidationForms.ImageToBytes(pbPerfil.Image);
+                _objPersonal.EmailPersonal = txtEmail.Text;
+                _objPersonal.Observacion = txtObservacion.Text.Trim();
+                _objPersonal.Credencial = chkcredencial.Checked ? 1 : 0;
+                _sqlCommands.Add(_objPersonal.ModificarPersonalCompletoCommand());
 
-            _objContratos.IdContrato = _objContratos.BuscarMayorId(TipoCon) + 1;
-            _objContratos.NroContrato = txtContrato.Text.Trim().Equals("NO TIENE") ? 0 : Convert.ToInt64(txtContrato.Text);
-            _objContratos.FechaInicialContrato = _objPersonal.FechaEntradaPersonal;
-            _objContratos.FechaFinalContrato = _objPersonal.FechaSalidaPersonal;
-            _objContratos.PeriodoContrato = dtpFechaIngreso.Value.Year + "";
-            _objContratos.TipoContrato = cbmTipoContrato.SelectedIndex;
-            _objContratos.EstadoContrato = "VIGENTE";
-            _objContratos.IdPersonalContrato = _objPersonal.IdPersonal;
-            _objContratos.EstadoRegistroContrato = 1;
-            _objContratos.IessContratox = chkAfiliado.Checked ? 1 : 0;
-            _objContratos.FechaAfiliacionContrato = dtpFechaAfiliado.Value;
-            _objContratos.AplicaFondoReservaContrato = chkFondoRes.Checked ? 1 : 0;
-            _objContratos.XiiiEnRolContrato = chkXiii.Checked ? 1 : 0;
-            _objContratos.XivEnRolContrato = chkXiv.Checked ? 1 : 0;
-            _objContratos.AcumulaFondoReservaContrato = chkAcumulaFondo.Checked ? 1 : 0;
-            _objContratos.Observacion = txtObservacion.Text.Trim();
-            _objContratos.RecExtra = Convert.ToDouble(NupExtra.Value);
-            _objContratos.SeDescuentaSerguro = 1;
-            _objContratos.CobraQuince = 1;
-            _objContratos.ExtSal = 0;
-            _objContratos.IdProyecto = (int)cbxProyecto.SelectedValue;
-            _sqlCommands.Add(_objContratos.RegistrarNuevoContratoCommand());
+                _objContratos.IdContrato = _objContratos.BuscarMayorId(TipoCon) + 1;
+                _objContratos.NroContrato = txtContrato.Text.Trim().Equals("NO TIENE") ? 0 : Convert.ToInt64(txtContrato.Text);
+                _objContratos.FechaInicialContrato = _objPersonal.FechaEntradaPersonal;
+                _objContratos.FechaFinalContrato = _objPersonal.FechaSalidaPersonal;
+                _objContratos.PeriodoContrato = dtpFechaIngreso.Value.Year + "";
+                _objContratos.TipoContrato = cbmTipoContrato.SelectedIndex;
+                _objContratos.EstadoContrato = "VIGENTE";
+                _objContratos.IdPersonalContrato = _objPersonal.IdPersonal;
+                _objContratos.EstadoRegistroContrato = 1;
+                _objContratos.IessContratox = chkAfiliado.Checked ? 1 : 0;
+                _objContratos.FechaAfiliacionContrato = dtpFechaAfiliado.Value;
+                _objContratos.AplicaFondoReservaContrato = chkFondoRes.Checked ? 1 : 0;
+                _objContratos.XiiiEnRolContrato = chkXiii.Checked ? 1 : 0;
+                _objContratos.XivEnRolContrato = chkXiv.Checked ? 1 : 0;
+                _objContratos.AcumulaFondoReservaContrato = chkAcumulaFondo.Checked ? 1 : 0;
+                _objContratos.Observacion = txtObservacion.Text.Trim();
+                _objContratos.RecExtra = Convert.ToDouble(NupExtra.Value);
+                _objContratos.SeDescuentaSerguro = 1;
+                _objContratos.CobraQuince = 1;
+                _objContratos.ExtSal = 0;
+                _objContratos.IdProyecto = (int)cbxProyecto.SelectedValue;
+                _sqlCommands.Add(_objContratos.RegistrarNuevoContratoCommand());
 
-            _objHistorialLaboral.IdHistoriaLaboral = _objHistorialLaboral.BuscarMayorIdHistoriaLaboral(TipoCon) + 1;
-            _objHistorialLaboral.FechaHistoriaLaboral = DateTime.Now;
-            _objHistorialLaboral.DetalleHistoriaLaboral = "INGRESO A LA COMPAÑIA " + Validaciones.NombreCompany(TipoCon) + " CON EL CARGO DE " + cbCargo.Text;
-            _objHistorialLaboral.EstadoHistoriaLaboral = 1;
-            _objHistorialLaboral.IdPersonalHistoriaLaboral = _objPersonal.IdPersonal;
-            _objHistorialLaboral.IdSitioHistoriaLaboral = string.Empty;
-            _sqlCommands.Add(_objHistorialLaboral.RegistrarNuevoHistorialLaboralCommand());
+                _objHistorialLaboral.IdHistoriaLaboral = _objHistorialLaboral.BuscarMayorIdHistoriaLaboral(TipoCon) + 1;
+                _objHistorialLaboral.FechaHistoriaLaboral = DateTime.Now;
+                _objHistorialLaboral.DetalleHistoriaLaboral = "INGRESO A LA COMPAÑIA " + Validaciones.NombreCompany(TipoCon) + " CON EL CARGO DE " + cbCargo.Text;
+                _objHistorialLaboral.EstadoHistoriaLaboral = 1;
+                _objHistorialLaboral.IdPersonalHistoriaLaboral = _objPersonal.IdPersonal;
+                _objHistorialLaboral.IdSitioHistoriaLaboral = string.Empty;
+                _sqlCommands.Add(_objHistorialLaboral.RegistrarNuevoHistorialLaboralCommand());
 
-            //_objCuentaPersonal.IdBanco = 0;
-            //_objCuentaPersonal.IdPersonal = Convert.ToInt32(_objPersonal.IdPersonal);
-            //_objCuentaPersonal.NumCuenta = "";
-            //_objCuentaPersonal.Tipo = "AHO";
+                //_objCuentaPersonal.IdBanco = 0;
+                //_objCuentaPersonal.IdPersonal = Convert.ToInt32(_objPersonal.IdPersonal);
+                //_objCuentaPersonal.NumCuenta = "";
+                //_objCuentaPersonal.Tipo = "AHO";
 
-            var CuentaPersonal = (DataRowView)cbxBanco.SelectedItem;
-            _objCuentaPersonal.IdBanco = Convert.ToInt32(CuentaPersonal["id_banco"]);
-            _objCuentaPersonal.IdPersonal = Convert.ToInt32(_objPersonal.IdPersonal);
-            _objCuentaPersonal.NumCuenta = txtNumCuenta.Text;
-            _objCuentaPersonal.Tipo = cbxTipoCuenta.SelectedItem.ToString();
-            _sqlCommands.Add(_objCuentaPersonal.ModificarCuentabancoPersonalcommand());
+                var CuentaPersonal = (DataRowView)cbxBanco.SelectedItem;
+                _objCuentaPersonal.IdBanco = Convert.ToInt32(CuentaPersonal["id_banco"]);
+                _objCuentaPersonal.IdPersonal = Convert.ToInt32(_objPersonal.IdPersonal);
+                _objCuentaPersonal.NumCuenta = txtNumCuenta.Text;
+                _objCuentaPersonal.Tipo = cbxTipoCuenta.SelectedItem.ToString();
+                _sqlCommands.Add(_objCuentaPersonal.ModificarCuentabancoPersonalcommand());
 
-            
+                DataTable BuscarPersonalSalida = _objSalidaPersonal.BuscarPersonalSalida(TipoCon, Convert.ToInt32(lblIdPersonal.Text.Trim()));
 
-            _sqlCommands.Add(_objSecuencialContratos.ActualizarSecuencialContrato(dtpFechaIngreso.Value.Year));
+                if (BuscarPersonalSalida.Rows.Count > 0)
+                {
+                    _objSalidaPersonal.IdSalida = Convert.ToInt32(_objSalidaPersonal.BuscarMayorId(TipoCon));
+                    _objSalidaPersonal.IdPersonal = Convert.ToInt32(lblIdPersonal.Text.Trim());
+                    _objSalidaPersonal.Certificado = 0;
+                    _objSalidaPersonal.Uniformes = 0;
+                    _objSalidaPersonal.Roles = 0;
+                    _objSalidaPersonal.Credencial = 0;
+                    _objSalidaPersonal.FechaSalida = new DateTime(1990, 1, 1, 0, 0, 0); ;
+                    _objSalidaPersonal.Estado = 1;
+                    _sqlCommands.Add(_objSalidaPersonal.ModificarPersonalSalida());
+                }
+
+                _sqlCommands.Add(_objSecuencialContratos.ActualizarSecuencialContrato(dtpFechaIngreso.Value.Year));
+            }
+            catch (Exception ex)
+            {
+                KryptonMessageBox.Show(@"Error al guardar el registro: " + ex.Message, @"MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error);
+            }
         }
 
         private void ButtonModificarRegistro_Click(object sender, EventArgs e)
