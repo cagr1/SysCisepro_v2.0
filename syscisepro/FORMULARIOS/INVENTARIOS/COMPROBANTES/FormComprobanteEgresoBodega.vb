@@ -789,8 +789,8 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                                     .Anio = dtpFecha.Value.Year
                                     .IdRol = 0
                                     .Tipo = 9 ' DESCUENTO EQ. SEG. / BODEGA
-                                    .Observacion = "ENTREGA DE UNIFORMES (EQ. SEG. / BODEGA) AL SR(A): " & txtRecibe.Text & ", " & row.Cells("NOMBRE").Value.ToString()
-                                    .Valor = CDbl(row.Cells("VALOR").Value)
+                                    .Observacion = "ENTREGA DE UNIFORMES (EQ. SEG. / BODEGA) " & ", " & row.Cells("NOMBRE").Value.ToString()
+                                    .Valor = CDbl(row.Cells("VALOR").Value) * CDbl(row.Cells("CANTIDAD").Value)
                                     .Tipot = "DESCUENTO EQ. SEG. / BODEGA"
                                     .Idprog = 0
                                 End With
@@ -1489,6 +1489,15 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
 
                 End If
 
+                Dim idpersonal = If(txtRecibe.Tag Is Nothing, txtRecibe.Text.Split("-")(1).Trim(), CType(txtRecibe.Tag, Integer))
+                Dim mes = dtpFecha.Value.Month
+                Dim anio = dtpFecha.Value.Year
+                With _objRegistroDescuento
+                    .IdPersonal = idpersonal
+                    .Mes = mes
+                    .Anio = anio
+                End With
+                _sqlCommands.Add(_objRegistroDescuento.AnularRegistroDescuentoComprobanteEgreso(idpersonal, mes, anio))
 
                 With _objDetCompEgr
                     .IdDetalle = row.Cells.Item(1).Value

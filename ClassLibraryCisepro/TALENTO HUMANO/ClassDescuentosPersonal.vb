@@ -61,6 +61,18 @@ Namespace TALENTO_HUMANO
             Return comando
         End Function
 
+        Public Function AnularRegistroDescuentoComprobanteEgreso(ByVal idp As Integer, mes As Integer, anio As Integer)
+            Dim comando = New SqlCommand
+            With comando
+                .CommandType = CommandType.StoredProcedure
+                .CommandText = "sp_deleteRegistroDescuentoComprobanteEgreso"
+                .Parameters.AddWithValue("@idp", SqlDbType.Int).Value = idp
+                .Parameters.AddWithValue("@mes", SqlDbType.Int).Value = mes
+                .Parameters.AddWithValue("@anio", SqlDbType.Int).Value = anio
+            End With
+            Return comando
+        End Function
+
         Public Function AnularRegistroDescuentoFrCommand(ByVal idSolFon As Integer) As SqlCommand
             Dim comando = New SqlCommand
             With comando

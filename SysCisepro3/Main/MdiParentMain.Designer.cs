@@ -296,6 +296,7 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.kryptonPalette1 = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
+            this.rEPORTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -1474,7 +1475,8 @@
             this.mANTENIMINETOPROVEEDORESToolStripMenuItem,
             this.rEGISTRODEDATOSPROVEEDORESCALIFICADOSToolStripMenuItem,
             this.eVALUACIONPROVEEDORESToolStripMenuItem,
-            this.bUSCAREVALUACIONPROVEEDORESToolStripMenuItem});
+            this.bUSCAREVALUACIONPROVEEDORESToolStripMenuItem,
+            this.rEPORTToolStripMenuItem});
             this.cOMPRASToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cOMPRASToolStripMenuItem.Image = global::SysCisepro3.Properties.Resources.shopping_cart_24dp_FILL0_wght400_GRAD0_opsz24__2_;
             this.cOMPRASToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
@@ -2767,6 +2769,13 @@
             this.kryptonPalette1.ToolMenuStatus.ToolStrip.ToolStripContentPanelGradientEnd = System.Drawing.Color.Transparent;
             this.kryptonPalette1.PalettePaint += new System.EventHandler<ComponentFactory.Krypton.Toolkit.PaletteLayoutEventArgs>(this.kryptonPalette1_PalettePaint);
             // 
+            // rEPORTToolStripMenuItem
+            // 
+            this.rEPORTToolStripMenuItem.Image = global::SysCisepro3.Properties.Resources.description_24dp_FILL0_wght400_GRAD0_opsz24;
+            this.rEPORTToolStripMenuItem.Name = "rEPORTToolStripMenuItem";
+            this.rEPORTToolStripMenuItem.Size = new System.Drawing.Size(365, 22);
+            this.rEPORTToolStripMenuItem.Text = "REPORTE COMPARATIVO COMPRAS";
+            // 
             // MdiParentMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -3078,6 +3087,7 @@
         
         private System.Windows.Forms.ToolStripButton toolStripButton2;
         private ComponentFactory.Krypton.Toolkit.KryptonPalette kryptonPalette1;
+        private System.Windows.Forms.ToolStripMenuItem rEPORTToolStripMenuItem;
     }
 }
 

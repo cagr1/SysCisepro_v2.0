@@ -590,8 +590,8 @@ namespace ClassLibraryCisepro3.TalentoHumano
             var cmd = new SqlCommand
             {
                 CommandType = CommandType.Text,
-                CommandText = noSePresento ? "update personal set estado_personal = 0, fecha_entrada = @fsa, fecha_salida = @fsa where ID_PERSONAL= @ID_PERSONAL;" :
-                "update personal set estado_personal = 0, fecha_salida = @fsa where ID_PERSONAL= @ID_PERSONAL;"
+                CommandText = noSePresento ? "update personal set estado_personal = 0, fecha_entrada = @fsa, fecha_salida = @fsa, CREDENCIAL = 0 where ID_PERSONAL= @ID_PERSONAL;" :
+                "update personal set estado_personal = 0, fecha_salida = @fsa, CREDENCIAL = 0 where ID_PERSONAL= @ID_PERSONAL;"
             };
             cmd.Parameters.AddWithValue("@ID_PERSONAL", SqlDbType.Int).Value = IdPersonal;
             cmd.Parameters.AddWithValue("@fsa", SqlDbType.DateTime).Value = fechaSalida; 

@@ -254,13 +254,13 @@ namespace SysCisepro3.TalentoHumano
 
              txtObservaciones.Enabled = enable;
 
-             if (Usuario.TipoUsuario == "RR.HH" && Settings.Default.Usuario.Equals("VIVIANA") )
+             if (Usuario.TipoUsuario == "RR.HH" && Usuario.Datos.Equals("VIVIANA") )
              { chkbxFichaMedica.Enabled = enable; }
              if (Usuario.TipoUsuario == "RR.HH" )
              {
                 chkbxRoles.Enabled = enable;              
              }
-             if (Usuario.TipoUsuario.Trim().Contains("ADMINISTRADOR") && Settings.Default.Usuario.Equals("ERIKA GIRON CORO"))
+             if (Usuario.TipoUsuario.Trim().Contains("ADMINISTRADOR") && Usuario.Datos.Equals("ERIKA GIRON CORO"))
              {
                  chkbxUniformes.Enabled = enable;
              }
