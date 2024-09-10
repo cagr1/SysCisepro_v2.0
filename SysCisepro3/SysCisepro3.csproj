@@ -361,6 +361,12 @@
     <Compile Include="Contabilidad\Compras\FrmPorcentajesRetencionIva.Designer.cs">
       <DependentUpon>FrmPorcentajesRetencionIva.cs</DependentUpon>
     </Compile>
+    <Compile Include="Contabilidad\Compras\FrmTablaComparacionCompra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contabilidad\Compras\FrmTablaComparacionCompra.Designer.cs">
+      <DependentUpon>FrmTablaComparacionCompra.cs</DependentUpon>
+    </Compile>
     <Compile Include="Contabilidad\FrmBuscarPlanCuentas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -739,6 +745,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Contabilidad\Compras\FrmPorcentajesRetencionIva.resx">
       <DependentUpon>FrmPorcentajesRetencionIva.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contabilidad\Compras\FrmTablaComparacionCompra.resx">
+      <DependentUpon>FrmTablaComparacionCompra.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Contabilidad\FrmBuscarPlanCuentas.resx">
       <DependentUpon>FrmBuscarPlanCuentas.cs</DependentUpon>

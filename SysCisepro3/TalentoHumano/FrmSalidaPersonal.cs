@@ -138,10 +138,18 @@ namespace SysCisepro3.TalentoHumano
 
                 foreach (DataGridViewRow row in dgvPersonal.Rows)
                 {
-                    if (row.Cells["ESTADO"].Value != null && Convert.ToInt32(row.Cells["ESTADO"].Value) !=2 )
+                    if ( Convert.ToInt32(row.Cells["ESTADO"].Value) ==2 )
                     {
-                          row.DefaultCellStyle.BackColor = Color.Coral;
+                          row.DefaultCellStyle.BackColor = Color.Green;
                                          
+                    }
+                    else if (Convert.ToInt32(row.Cells["ESTADO"].Value) == 1)
+                    {
+                        row.DefaultCellStyle.BackColor = Color.LightYellow;
+                    }
+                    else
+                    {
+                        row.DefaultCellStyle.BackColor = Color.LightGray;
                     }
                 }
 

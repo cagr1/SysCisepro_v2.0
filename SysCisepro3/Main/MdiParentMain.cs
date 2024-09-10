@@ -2098,6 +2098,17 @@ namespace SysCisepro3.Main
             tsBodega.Image = Resources.storefront_20dp_FILL0_wght400_GRAD0_opsz20__1_;
         }
 
+        private void rEPORTToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.BringToFront();
+            FrmTablaComparacionCompra.Instancia.MdiParent = this;
+            FrmTablaComparacionCompra.TipoCon = TipoCon;
+            FrmTablaComparacionCompra.Usuario = ObjUsuario;
+            FrmTablaComparacionCompra.Instancia.Show();
+            FrmTablaComparacionCompra.Instancia.BringToFront();
+
+        }
+
         private void AdjustImageToFit(PictureBox pbx, Image image)
         {
             pbx.BackgroundImageLayout = ImageLayout.None;

@@ -173,6 +173,7 @@
             this.rEGISTRODEDATOSPROVEEDORESCALIFICADOSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eVALUACIONPROVEEDORESToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bUSCAREVALUACIONPROVEEDORESToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.rEPORTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cLIENTESToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mANTENIMIENTOSDECLIENTESToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gENERARFACTURAELECTRONICAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -296,7 +297,6 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.kryptonPalette1 = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
-            this.rEPORTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -1620,6 +1620,14 @@
             this.bUSCAREVALUACIONPROVEEDORESToolStripMenuItem.Text = "BUSCAR EVALUACION PROVEEDORES";
             this.bUSCAREVALUACIONPROVEEDORESToolStripMenuItem.Click += new System.EventHandler(this.bUSCAREVALUACIONPROVEEDORESToolStripMenuItem_Click);
             // 
+            // rEPORTToolStripMenuItem
+            // 
+            this.rEPORTToolStripMenuItem.Image = global::SysCisepro3.Properties.Resources.description_24dp_FILL0_wght400_GRAD0_opsz24;
+            this.rEPORTToolStripMenuItem.Name = "rEPORTToolStripMenuItem";
+            this.rEPORTToolStripMenuItem.Size = new System.Drawing.Size(365, 22);
+            this.rEPORTToolStripMenuItem.Text = "REPORTE COMPARATIVO COMPRAS";
+            this.rEPORTToolStripMenuItem.Click += new System.EventHandler(this.rEPORTToolStripMenuItem_Click);
+            // 
             // cLIENTESToolStripMenuItem
             // 
             this.cLIENTESToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -2768,13 +2776,6 @@
             this.kryptonPalette1.ToolMenuStatus.ToolStrip.ToolStripBorder = System.Drawing.Color.Transparent;
             this.kryptonPalette1.ToolMenuStatus.ToolStrip.ToolStripContentPanelGradientEnd = System.Drawing.Color.Transparent;
             this.kryptonPalette1.PalettePaint += new System.EventHandler<ComponentFactory.Krypton.Toolkit.PaletteLayoutEventArgs>(this.kryptonPalette1_PalettePaint);
-            // 
-            // rEPORTToolStripMenuItem
-            // 
-            this.rEPORTToolStripMenuItem.Image = global::SysCisepro3.Properties.Resources.description_24dp_FILL0_wght400_GRAD0_opsz24;
-            this.rEPORTToolStripMenuItem.Name = "rEPORTToolStripMenuItem";
-            this.rEPORTToolStripMenuItem.Size = new System.Drawing.Size(365, 22);
-            this.rEPORTToolStripMenuItem.Text = "REPORTE COMPARATIVO COMPRAS";
             // 
             // MdiParentMain
             // 
