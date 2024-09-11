@@ -25,6 +25,7 @@ namespace ClassLibraryCisepro3.TalentoHumano
         public DateTime FechaReg { get; set; }
         public int IdSitio { get; set; }
         public int NumDoc { get; set; }
+        public byte[] Certificado { get; set; }
 
         public int BuscarMayorIdRegistroPermiso(TipoConexion tipoCon)
         {
@@ -77,7 +78,7 @@ namespace ClassLibraryCisepro3.TalentoHumano
             var cmd = new SqlCommand
             {
                 CommandType = CommandType.Text,
-                CommandText = "insert into REGISTRO_PERMISOS_PERSONAL (id_registro, id_personal, id_sancion, desde, hasta, estado, observacion, id_sitio, fecha_registro, ndoc) values (@id_registro, @id_personal, @id_sancion, @desde, @hasta, @estado, @observacion, @idsitio, @fecha_registro, @ndoc);"
+                CommandText = "insert into REGISTRO_PERMISOS_PERSONAL (id_registro, id_personal, id_sancion, desde, hasta, estado, observacion, id_sitio, fecha_registro, ndoc, certificado) values (@id_registro, @id_personal, @id_sancion, @desde, @hasta, @estado, @observacion, @idsitio, @fecha_registro, @ndoc, @certificado);"
             };
             cmd.Parameters.AddWithValue("@id_registro", SqlDbType.Int).Value = IdRegistro;
             cmd.Parameters.AddWithValue("@id_personal", SqlDbType.Int).Value = IdPersonal;
@@ -89,6 +90,7 @@ namespace ClassLibraryCisepro3.TalentoHumano
             cmd.Parameters.AddWithValue("@idsitio", SqlDbType.Int).Value = IdSitio;
             cmd.Parameters.AddWithValue("@fecha_registro", SqlDbType.DateTime).Value = FechaReg;
             cmd.Parameters.AddWithValue("@ndoc", SqlDbType.Int).Value = NumDoc;
+            cmd.Parameters.AddWithValue("@certificado", SqlDbType.VarBinary).Value = Certificado;
             return cmd;
         }
 
@@ -112,6 +114,15 @@ namespace ClassLibraryCisepro3.TalentoHumano
             };
             var data = ComandosSql.SeleccionarQueryWithParamsToDataTable(tipoCon, "SELECT tipo_sancion FROM dbo.SANCIONES_PERSONAL WHERE   id_sancion=@id_sancion;", false, pars);
             return data.Rows.Count == 0 ? string.Empty : data.Rows[0]["SANCION"].ToString();
+        }
+
+        public DataTable BuscarIdRegistroPermiso(TipoConexion tipoCon, int id)
+        {
+            var pars = new List<object[]>
+            {
+                new object[] { "id_registro", SqlDbType.Int, id }
+            };
+            return ComandosSql.SeleccionarQueryWithParamsToDataTable(tipoCon, "SELECT certificado FROM REGISTRO_PERMISOS_PERSONAL WHERE id_registro=@id_registro;", false, pars);
         }
     }
 }

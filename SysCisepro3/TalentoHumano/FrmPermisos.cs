@@ -19,6 +19,11 @@ using SysCisepro3.Properties;
 using Office = Microsoft.Office.Interop;
 using CrystalDecisions.CrystalReports.Engine;
 using Krypton.Toolkit;
+using System.IO;
+using Patagames.Pdf.Net.Controls.WinForms;
+using Patagames.Pdf.Net.Controls.WinForms.ToolBars;
+using System.Drawing.Text;
+
 
 namespace SysCisepro3.TalentoHumano
 {
@@ -52,18 +57,46 @@ namespace SysCisepro3.TalentoHumano
         public DataGridViewRow Fila { private get; set; }
 
         private readonly List<SqlCommand> _sqlCommands;
+        private MemoryStream _ms;
 
         private int _estado;
 
-        private FrmPermisos()
+        public byte[] _cm;
+
+        
+
+        public FrmPermisos(TipoConexion tipoCon, ClassUsuarioGeneral usuario)
         {
             InitializeComponent();
             _estado = 0;
+            TipoCon = tipoCon;
+            Usuario = usuario;
             _sqlCommands = new List<SqlCommand>();
             _objRegistroPermisoPersonal = new ClassRegistroPermisoPersonal();
             _objHistorialLaboral = new ClassHistorialLaboral();
             _objSitiosTrabajo = new ClassSitiosTrabajo();
             _objPersonal = new ClassPersonal();
+
+
+            openFileDialog1 = new OpenFileDialog()
+            {
+                InitialDirectory = @"C:\",
+                Title = "SELECCIONAR DOCUMENTO",
+                CheckFileExists = true,
+                CheckPathExists = true,
+                DefaultExt = "pdf",
+                Filter = "Archivos PDF (*.pdf)|*.pdf",
+                FilterIndex = 2,
+                RestoreDirectory = true,
+                ReadOnlyChecked = true,
+                ShowReadOnly = true
+            };
+
+            
+        }
+
+        public FrmPermisos()
+        {
         }
 
         private void FrmPermisos_Load(object sender, EventArgs e)
@@ -72,9 +105,9 @@ namespace SysCisepro3.TalentoHumano
             //toolStrip1.BackColor = ValidationForms.GetColorSistema(TipoCon);
             toolStrip1.ForeColor = Color.White;
             Label1.BackColor = ValidationForms.GetColorSistema(TipoCon);
-            Label24.BackColor = ValidationForms.GetColorSistema(TipoCon);
+            
             Label1.ForeColor = Color.White;
-            Label24.ForeColor = Color.White;
+            
             switch (TipoCon)
             {
                 case TipoConexion.Seportpac:
@@ -94,6 +127,20 @@ namespace SysCisepro3.TalentoHumano
 
             LlenarMotivoPermisosFiltro();
             LlenarMotivoPermisos();
+            AutorizacionPermisos();
+        }
+
+        private void AutorizacionPermisos()
+        {
+            if( Usuario.TipoUsuario == "MONITOREO" || Usuario.TipoUsuario == "JEFE DE OPERACIONES")
+            {
+                btnGuardar.Visible = false;
+                btnAnular.Visible = false;
+                btnNuevo.Visible = false;
+
+            }
+
+
         }
 
         private void LlenarMotivoPermisos()
@@ -134,8 +181,10 @@ namespace SysCisepro3.TalentoHumano
         {
             LlenarMotivoPermisos();
 
-            btnPersonalEntra.Enabled = true;
-            bntPuesto.Enabled = true;
+            
+            btnBuscarPersonal.Enabled = true;
+            btnBuscarPuesto.Enabled = true;
+            btnBuscarTipo.Enabled = true;
             txtIdPersonal.Clear();
             txtPersonal.Clear();
             txtCargo.Clear();
@@ -183,6 +232,12 @@ namespace SysCisepro3.TalentoHumano
                     "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
                 return;
             }
+            if (Convert.ToInt32(cbmMotivo.SelectedValue) == 33 && txtCertificado.Text.Trim().Length == 0)
+            {
+                KryptonMessageBox.Show(@"Seleccione el documento PDF",
+                    "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+                return;
+            }
 
             _sqlCommands.Clear();
 
@@ -195,8 +250,6 @@ namespace SysCisepro3.TalentoHumano
             _objRegistroPermisoPersonal.IdRegistro = _objRegistroPermisoPersonal.BuscarMayorIdRegistroPermiso(TipoCon) + 1;
             _objRegistroPermisoPersonal.IdPersonal = Convert.ToInt32(txtIdPersonal.Text.Trim());
             _objRegistroPermisoPersonal.IdSancion = Convert.ToInt32(cbmMotivo.SelectedValue);
-            //_objRegistroPermisoPersonal.Desde = Convert.ToDateTime(fechaDesde);
-            //_objRegistroPermisoPersonal.Hasta = Convert.ToDateTime(fechaHasta);
             _objRegistroPermisoPersonal.Desde = fechaDesde;
             _objRegistroPermisoPersonal.Hasta = fechaHasta;
             _objRegistroPermisoPersonal.Estado = 1;
@@ -204,6 +257,7 @@ namespace SysCisepro3.TalentoHumano
             _objRegistroPermisoPersonal.IdSitio = Convert.ToInt32(txtSitio.Tag);
             _objRegistroPermisoPersonal.FechaReg = dtpFecha.Value;
             _objRegistroPermisoPersonal.NumDoc = Convert.ToInt32(txtNumDoc.Text.Trim()); //txtNumDoc.Text.Trim().Length == 0 ? 0 : Convert.ToInt32(txtNumDoc.Text.Trim());
+            _objRegistroPermisoPersonal.Certificado = _cm;
             _sqlCommands.Add(_objRegistroPermisoPersonal.NuevoRegistroPermisoCommands());
 
             _objHistorialLaboral.IdHistoriaLaboral = _objHistorialLaboral.BuscarMayorIdHistoriaLaboral(TipoCon) + 1;
@@ -221,8 +275,10 @@ namespace SysCisepro3.TalentoHumano
 
             if ((bool)res[0])
             {
-                btnPersonalEntra.Enabled = false;
-                bntPuesto.Enabled = false;
+                
+                btnBuscarPuesto.Enabled = false;
+                btnBuscarPersonal.Enabled = false;
+                btnBuscarTipo.Enabled = false;
                 btnNuevo.Enabled = true;
                 btnGuardar.Enabled = false;
                 btnAnular.Enabled = true;
@@ -234,6 +290,7 @@ namespace SysCisepro3.TalentoHumano
                 cbmMotivo.Enabled = false;
                 txtNumDoc.Enabled = false;
                 txtFiltro.Clear();
+                _cm = null;
                 _estado = 0;
 
                 CargarAsignaciones(string.Empty, _objRegistroPermisoPersonal.IdRegistro);
@@ -259,8 +316,10 @@ namespace SysCisepro3.TalentoHumano
 
             if ((bool)res[0])
             {
-                btnPersonalEntra.Enabled = false;
-                bntPuesto.Enabled = false;
+                
+                btnBuscarPersonal.Enabled = false;
+                btnBuscarPuesto.Enabled = false;
+                btnBuscarTipo.Enabled = false;
                 txtObservacion.Enabled = false;
                 dtpFecha.Enabled = false;
                 dtpDesde.Enabled = false;
@@ -274,6 +333,7 @@ namespace SysCisepro3.TalentoHumano
 
                 _estado = 0;
                 txtFiltro.Clear();
+                txtCertificado.Clear();
                 CargarAsignaciones(string.Empty, 0);
             }
             KryptonMessageBox.Show((string)res[1], "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
@@ -281,8 +341,10 @@ namespace SysCisepro3.TalentoHumano
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            btnPersonalEntra.Enabled = false;
-            bntPuesto.Enabled = false;
+            
+            btnBuscarPersonal.Enabled = false;
+            btnBuscarPuesto.Enabled = false;
+            btnBuscarTipo.Enabled = false;
             txtIdPersonal.Clear();
             txtPersonal.Clear();
             txtCargo.Clear();
@@ -303,6 +365,8 @@ namespace SysCisepro3.TalentoHumano
             btnGuardar.Enabled = false;
             btnAnular.Enabled = false;
             btnCancelar.Enabled = false;
+            _cm = null;
+            txtCertificado.Clear();
             Label1.Text = @"0 REGISTRO(S)";
         }
 
@@ -495,8 +559,9 @@ namespace SysCisepro3.TalentoHumano
             if (!cbmMotivo.SelectedValue.ToString().Equals("34")) return; // SOLO PARA EL CASO DE VACACIONES
 
             _estado = 0;
-            btnPersonalEntra.Enabled = false;
-            bntPuesto.Enabled = false;
+            
+            btnBuscarPersonal.Enabled = false;
+            btnBuscarPuesto.Enabled = false;
             txtIdPersonal.Clear();
             txtPersonal.Clear();
             txtCargo.Clear();
@@ -772,17 +837,189 @@ namespace SysCisepro3.TalentoHumano
 
         }
 
-      
-       
-        
+        private void btnBuscarPersonal_Click(object sender, EventArgs e)
+        {
+            _frmBuscarPersonal = new FrmBuscarPersonal { TipoCon = TipoCon, SoloActivos = true, Tipo = 0 };
+            try
+            {
+                if (_frmBuscarPersonal.ShowDialog() != DialogResult.OK) return;
+                if (_frmBuscarPersonal.dataGridView1.CurrentRow == null) return;
 
-       
+                txtIdPersonal.Text = _frmBuscarPersonal.dataGridView1.CurrentRow.Cells[0].Value.ToString();
+                txtPersonal.Text = _frmBuscarPersonal.dataGridView1.CurrentRow.Cells[2].Value.ToString();
+                txtCargo.Text = _frmBuscarPersonal.dataGridView1.CurrentRow.Cells[3].Value.ToString();
+                txtArea.Text = _frmBuscarPersonal.dataGridView1.CurrentRow.Cells["NOMBRE_AREA"].Value.ToString();
+                var admin = _frmBuscarPersonal.dataGridView1.CurrentRow.Cells["ID_GERENCIAS_GENERAL"].Value.ToString().Equals("1");
 
-       
+                try
+                {
+                    var data = _objPersonal.SeleccionarTodosRegistrosPersonalFiltroFull(TipoCon, _frmBuscarPersonal.dataGridView1.CurrentRow.Cells[1].Value.ToString());
+                    dateTimePicker1.Text = data.Rows[0]["FECHA_NACIMIENTO"].ToString();
+                    textBox1.Text = data.Rows[0]["EDAD"].ToString();
+                }
+                catch
+                {
+                    dateTimePicker1.Value = DateTime.MinValue;
+                    textBox1.Text = @"0";
+                }
 
-       
+                var sit = _objSitiosTrabajo.BuscarUltimoPuestoPorIdPersonal(TipoCon, Convert.ToInt32(txtIdPersonal.Text.Trim()), admin);
+                if (sit.Rows.Count == 0) return;
+                if (admin)
+                {
+                    txtSitio.Tag = sit.Rows[0][0].ToString();
+                    txtSitio.Text = sit.Rows[0][6] + @" (" + sit.Rows[0][20] + @")";
+                }
+                else
+                {
+                    txtSitio.Tag = sit.Rows[0][2].ToString();
+                    txtSitio.Text = sit.Rows[0][15] + @" (" + sit.Rows[0][29] + @")";
+                }
+            }
+            catch
+            {
+                txtPersonal.Text = @"NO DEFINIDO";
+                txtIdPersonal.Clear();
+                txtCargo.Clear();
+                txtArea.Clear();
+            }
+        }
+
+        private void btnBuscarPuesto_Click(object sender, EventArgs e)
+        {
+            _femBuscarPuestoTrabajo = new FrmBuscarPuestoTrabajo { Label3 = { Text = @"TODOS LOS PUESTOS REGISTRADOS" }, TipoCon = TipoCon };
+            try
+            {
+                if (_femBuscarPuestoTrabajo.ShowDialog() != DialogResult.OK) return;
+                txtSitio.Tag = _femBuscarPuestoTrabajo.ListView1.SelectedItems[0].SubItems[0].Text.Trim();
+                txtSitio.Text = _femBuscarPuestoTrabajo.ListView1.SelectedItems[0].SubItems[2].Text + @" (" +
+                    _femBuscarPuestoTrabajo.ListView1.SelectedItems[0].SubItems[18].Text.Trim() + @")";
+            }
+            catch
+            {
+                txtSitio.Text = @"AUN NO SE ESPECIFICA";
+                txtSitio.Tag = 0;
+            }
+        }
+
+        private void GroupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void kryptonButton2_Click(object sender, EventArgs e)
+        {
+            _frmBuscarPersonal = new FrmBuscarPersonal { TipoCon = TipoCon, SoloActivos = true, Tipo = 0 };
+            try
+            {
+                if (_frmBuscarPersonal.ShowDialog() != DialogResult.OK) return;
+                if (_frmBuscarPersonal.dataGridView1.CurrentRow == null) return;
+
+                txtIdPersonal.Text = _frmBuscarPersonal.dataGridView1.CurrentRow.Cells[0].Value.ToString();
+                txtPersonal.Text = _frmBuscarPersonal.dataGridView1.CurrentRow.Cells[2].Value.ToString();
+                txtCargo.Text = _frmBuscarPersonal.dataGridView1.CurrentRow.Cells[3].Value.ToString();
+                txtArea.Text = _frmBuscarPersonal.dataGridView1.CurrentRow.Cells["NOMBRE_AREA"].Value.ToString();
+                var admin = _frmBuscarPersonal.dataGridView1.CurrentRow.Cells["ID_GERENCIAS_GENERAL"].Value.ToString().Equals("1");
+
+                try
+                {
+                    var data = _objPersonal.SeleccionarTodosRegistrosPersonalFiltroFull(TipoCon, _frmBuscarPersonal.dataGridView1.CurrentRow.Cells[1].Value.ToString());
+                    dateTimePicker1.Text = data.Rows[0]["FECHA_NACIMIENTO"].ToString();
+                    textBox1.Text = data.Rows[0]["EDAD"].ToString();
+                }
+                catch
+                {
+                    dateTimePicker1.Value = DateTime.MinValue;
+                    textBox1.Text = @"0";
+                }
+
+                var sit = _objSitiosTrabajo.BuscarUltimoPuestoPorIdPersonal(TipoCon, Convert.ToInt32(txtIdPersonal.Text.Trim()), admin);
+                if (sit.Rows.Count == 0) return;
+                if (admin)
+                {
+                    txtSitio.Tag = sit.Rows[0][0].ToString();
+                    txtSitio.Text = sit.Rows[0][6] + @" (" + sit.Rows[0][20] + @")";
+                }
+                else
+                {
+                    txtSitio.Tag = sit.Rows[0][2].ToString();
+                    txtSitio.Text = sit.Rows[0][15] + @" (" + sit.Rows[0][29] + @")";
+                }
+            }
+            catch
+            {
+                txtPersonal.Text = @"NO DEFINIDO";
+                txtIdPersonal.Clear();
+                txtCargo.Clear();
+                txtArea.Clear();
+            }
+        }
+
+        private void kryptonButton2_Click_1(object sender, EventArgs e)
+        {
+            _femBuscarPuestoTrabajo = new FrmBuscarPuestoTrabajo { Label3 = { Text = @"TODOS LOS PUESTOS REGISTRADOS" }, TipoCon = TipoCon };
+            try
+            {
+                if (_femBuscarPuestoTrabajo.ShowDialog() != DialogResult.OK) return;
+                txtSitio.Tag = _femBuscarPuestoTrabajo.ListView1.SelectedItems[0].SubItems[0].Text.Trim();
+                txtSitio.Text = _femBuscarPuestoTrabajo.ListView1.SelectedItems[0].SubItems[2].Text + @" (" +
+                    _femBuscarPuestoTrabajo.ListView1.SelectedItems[0].SubItems[18].Text.Trim() + @")";
+            }
+            catch
+            {
+                txtSitio.Text = @"AUN NO SE ESPECIFICA";
+                txtSitio.Tag = 0;
+            }
+        }
+
+        private void btnBuscarTipo_Click(object sender, EventArgs e)
+        {
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                string Path = openFileDialog1.FileName;
+                txtCertificado.Text = Path;
+                _cm = File.ReadAllBytes(Path);
+            }
+        }
+
+        private void btnCertificado_Click(object sender, EventArgs e)
+        {
+            try
+            {
+              var id = listView2.SelectedItems[0].SubItems[0].Text;
+
+                var data = _objRegistroPermisoPersonal.BuscarIdRegistroPermiso(TipoCon, Convert.ToInt32(id));
+                if (data.Rows.Count == 0)
+                {
+                    KryptonMessageBox.Show(@"NO SE ENCUENTRA CERTIFICADO PARA EL REGISTRO SELECCIONADO!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+                    return;
+                }
+
+                var cm = (byte[])data.Rows[0][0];
+                string temp = Path.Combine(Path.GetTempPath(), "Temp.pdf");
+                //File.WriteAllBytes(temp, cm);
                
-     
+                _ms?.Dispose();
+                _ms = new MemoryStream(cm);
+                pdfViewer1.LoadDocument(_ms);
+                
+                //using (MemoryStream stream = new MemoryStream(cm))
+                //{
+                //    pdfViewer1.LoadDocument(stream);
+                //}
+
+            }
+            catch (Exception ex)
+            {
+                KryptonMessageBox.Show(@"Error al buscar certificado " + ex.Message, "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+            }
+        }
+
+        private void FrmPermisos_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            _ms?.Dispose();
+            _ms = null;
+        }
     }
 }
 

@@ -479,5 +479,32 @@ namespace SysCisepro3.Main
                 f.Show();
             }
         }
+
+        private void pERMISOSPERSONALToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            _tag = "Permisos_C";
+            if (ExisteForm(_tag)) GetForm(_tag).BringToFront();
+            else
+            {
+                var f = new FrmPermisos((TipoConexion)0, ObjUsuario) { Tag = _tag, Text = @"Permisos Personal" };
+                _formularios.Add(_tag, f);
+                f.FormClosing += FormOnFormClosing;
+                f.Show();
+            }
+
+        }
+
+        private void pERMISOSPERSONALToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            _tag = "Permisos_S";
+            if (ExisteForm(_tag)) GetForm(_tag).BringToFront();
+            else
+            {
+                var f = new FrmPermisos((TipoConexion)1, ObjUsuario) { Tag = _tag, Text = @"Permisos Personal" };
+                _formularios.Add(_tag, f);
+                f.FormClosing += FormOnFormClosing;
+                f.Show();
+            }
+        }
     }
 }
