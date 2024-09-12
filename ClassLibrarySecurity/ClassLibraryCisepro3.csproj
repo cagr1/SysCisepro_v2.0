@@ -70,6 +70,7 @@
     <Compile Include="EstructuraEmpresa\ClassSubSeccion.cs" />
     <Compile Include="EstructuraEmpresa\ClassSucursal.cs" />
     <Compile Include="Invetarios\ClassBodega.cs" />
+    <Compile Include="Invetarios\ClassSecuencialItem.cs" />
     <Compile Include="Operaciones\ClassAsignacionPersonal.cs" />
     <Compile Include="Operaciones\ClassDetalleOrdenRevisionTecnica.cs" />
     <Compile Include="Operaciones\ClassOrdenRevisionTecnica.cs" />

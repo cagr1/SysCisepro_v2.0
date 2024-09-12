@@ -41,7 +41,7 @@ namespace SysCisepro3.TalentoHumano
         {
             get
             {
-                if (_instance == null || _instance.IsDisposed) _instance = new FrmPermisos();
+                if (_instance == null || _instance.IsDisposed) _instance = new FrmPermisos(TipoCon,Usuario);
                 return _instance;
             }
         }
@@ -63,7 +63,37 @@ namespace SysCisepro3.TalentoHumano
 
         public byte[] _cm;
 
-        
+
+
+        //public FrmPermisos(TipoConexion tipoCon, ClassUsuarioGeneral usuario)
+        //{
+        //    InitializeComponent();
+        //    _estado = 0;
+        //    TipoCon = tipoCon;
+        //    Usuario = usuario;
+        //    _sqlCommands = new List<SqlCommand>();
+        //    _objRegistroPermisoPersonal = new ClassRegistroPermisoPersonal();
+        //    _objHistorialLaboral = new ClassHistorialLaboral();
+        //    _objSitiosTrabajo = new ClassSitiosTrabajo();
+        //    _objPersonal = new ClassPersonal();
+
+
+        //    openFileDialog1 = new OpenFileDialog()
+        //    {
+        //        InitialDirectory = @"C:\",
+        //        Title = "SELECCIONAR DOCUMENTO",
+        //        CheckFileExists = true,
+        //        CheckPathExists = true,
+        //        DefaultExt = "pdf",
+        //        Filter = "Archivos PDF (*.pdf)|*.pdf",
+        //        FilterIndex = 2,
+        //        RestoreDirectory = true,
+        //        ReadOnlyChecked = true,
+        //        ShowReadOnly = true
+        //    };
+
+
+        //}
 
         public FrmPermisos(TipoConexion tipoCon, ClassUsuarioGeneral usuario)
         {
@@ -91,15 +121,8 @@ namespace SysCisepro3.TalentoHumano
                 ReadOnlyChecked = true,
                 ShowReadOnly = true
             };
-
-            
         }
-
-        public FrmPermisos()
-        {
-        }
-
-        private void FrmPermisos_Load(object sender, EventArgs e)
+            private void FrmPermisos_Load(object sender, EventArgs e)
         {
             // CARGAR ICONO Y DESIEÑO SEGUN SISTEMA 
             //toolStrip1.BackColor = ValidationForms.GetColorSistema(TipoCon);
