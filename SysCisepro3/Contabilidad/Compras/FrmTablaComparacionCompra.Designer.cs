@@ -155,6 +155,7 @@
             this.btnGuardarTabla.Values.ImageStates.ImagePressed = global::SysCisepro3.Properties.Resources.save_24dp_FILL0_wght400_GRAD0_opsz24;
             this.btnGuardarTabla.Values.ImageStates.ImageTracking = global::SysCisepro3.Properties.Resources.save_24dp_FILL0_wght400_GRAD0_opsz24;
             this.btnGuardarTabla.Values.Text = "";
+            this.btnGuardarTabla.Click += new System.EventHandler(this.btnGuardarTabla_Click);
             // 
             // btnNuevaTabla
             // 
@@ -178,13 +179,15 @@
             this.btnNuevaTabla.Values.ImageStates.ImagePressed = global::SysCisepro3.Properties.Resources.add_circle_24dp_FILL0_wght400_GRAD0_opsz24;
             this.btnNuevaTabla.Values.ImageStates.ImageTracking = global::SysCisepro3.Properties.Resources.add_circle_24dp_FILL0_wght400_GRAD0_opsz24;
             this.btnNuevaTabla.Values.Text = "";
+            this.btnNuevaTabla.Click += new System.EventHandler(this.btnNuevaTabla_Click);
             // 
             // txtObservaciones
             // 
             this.txtObservaciones.Enabled = false;
+            this.txtObservaciones.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtObservaciones.Location = new System.Drawing.Point(109, 30);
             this.txtObservaciones.Name = "txtObservaciones";
-            this.txtObservaciones.Size = new System.Drawing.Size(398, 20);
+            this.txtObservaciones.Size = new System.Drawing.Size(398, 21);
             this.txtObservaciones.TabIndex = 3;
             // 
             // kryptonLabel1
@@ -207,6 +210,7 @@
             this.precio,
             this.credito,
             this.dias});
+            this.dgvIngresoTabla.Enabled = false;
             this.dgvIngresoTabla.Location = new System.Drawing.Point(4, 57);
             this.dgvIngresoTabla.Name = "dgvIngresoTabla";
             this.dgvIngresoTabla.Size = new System.Drawing.Size(790, 190);

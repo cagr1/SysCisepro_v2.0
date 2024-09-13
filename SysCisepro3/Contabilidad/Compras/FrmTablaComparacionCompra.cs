@@ -20,6 +20,8 @@ using SysCisepro3.TalentoHumano;
 using System.Data.SqlClient;
 using ClassLibraryCisepro3.Contabilidad.Proveedores;
 using ClassLibraryCisepro3.Invetarios;
+using ClassLibraryCisepro3.Contabilidad.Compras.TablaComparativa;
+using iText.Kernel.Pdf.Canvas.Wmf;
 
 
 namespace SysCisepro3.Contabilidad.Compras
@@ -43,12 +45,16 @@ namespace SysCisepro3.Contabilidad.Compras
         private readonly List<SqlCommand> _sqlCommands;
         private readonly ClassProveedores _objProveedores;
         private readonly ClassSecuencialItem _objSecuencialItem;
+        private readonly ClassTablaComparativa _objTablaComparativa;
+        private readonly ClassDetalleTablaComparativa _objDetalleTablaComparativa;
         public FrmTablaComparacionCompra()
         {
             InitializeComponent();
             _sqlCommands = new List<SqlCommand>();
             _objProveedores = new ClassProveedores();
             _objSecuencialItem = new ClassSecuencialItem();
+            _objTablaComparativa = new ClassTablaComparativa();
+            _objDetalleTablaComparativa = new ClassDetalleTablaComparativa();
 
         }
 
@@ -99,11 +105,9 @@ namespace SysCisepro3.Contabilidad.Compras
             var textBox = sender as TextBox;
                        
             if (char.IsDigit(e.KeyChar) || e.KeyChar == '.')
-            {
-             
+            {             
                 if (e.KeyChar == '.')
-                {
-                 
+                {                 
                     if (textBox.Text.Contains("."))
                     {
                         e.Handled = true; 
@@ -130,7 +134,6 @@ namespace SysCisepro3.Contabilidad.Compras
                     {
                         dgvIngresoTabla.CurrentRow.Cells[0].Value = dtp.Rows[0][0].ToString();
                     }
-
                 }
 
                 if (e.ColumnIndex == 3 && dgvIngresoTabla.CurrentRow.Cells[3].Value != null)
@@ -141,10 +144,92 @@ namespace SysCisepro3.Contabilidad.Compras
                     {
                         dgvIngresoTabla.CurrentRow.Cells[2].Value = dts.Rows[0][0].ToString();
                     }
+                }
+            }
+        }
 
+        private void btnNuevaTabla_Click(object sender, EventArgs e)
+        {
+            HabilitarRegistro(true);
+        }
+
+        private void HabilitarRegistro(bool estado)
+        {
+            dgvIngresoTabla.Enabled = estado;
+            btnGuardarTabla.Enabled = estado;
+            btnCancelar.Enabled = estado;
+            txtObservaciones.Enabled = estado;
+            dtpFecha.Enabled = estado;
+
+        }
+
+        private void btnGuardarTabla_Click(object sender, EventArgs e)
+        {
+            _sqlCommands.Clear();
+
+            if (dgvIngresoTabla.CurrentRow.Cells.Count < 0)
+            {
+                KryptonMessageBox.Show("Debe ingresar los datos de la tabla", "Aviso", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+                return;
+            }
+
+            if (KryptonMessageBox.Show("¿Desea guardar la tabla?", "Aviso", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                GuardarTabla();
+            }
+            
+
+            string user = Usuario.Datos.ToString();
+            string nombreU = "Tabla Comparativa por: " + user;
+
+            
+
+            var res = ComandosSql.ProcesarTransacciones(TipoCon, _sqlCommands, nombreU);
+            if ((bool)res[0])
+            {                
+                HabilitarRegistro(false);
+                txtObservaciones.Clear();
+                dgvIngresoTabla.Rows.Clear();
+            }
+
+            KryptonMessageBox.Show((string)res[1], "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+
+        }
+
+        private void GuardarTabla()
+        {
+            try
+            {
+                _objTablaComparativa.IdTablaComparativa = _objTablaComparativa.BuscarMayorIdTablaComparativa(TipoCon) + 1;
+                _objTablaComparativa.Observacion = txtObservaciones.Text;
+                _objTablaComparativa.Fecha = dtpFecha.Value;
+                _objTablaComparativa.estado = 1;
+                _sqlCommands.Add(_objTablaComparativa.InsertarTablaComparativaCommand());
+
+                var iddeta = _objDetalleTablaComparativa.BuscarMayorIdDetalleTablaComparativa(TipoCon) + 1;
+                foreach (DataGridViewRow row in dgvIngresoTabla.Rows)
+                {
+
+                    if (row.Cells[0].Value == null || row.Cells[2].Value == null || row.Cells[4].Value == null ||
+                        row.Cells[5].Value == null || row.Cells[6].Value == null)
+                        continue;
+
+                    _objDetalleTablaComparativa.IdDetalleTablaComparativa = iddeta;
+                    _objDetalleTablaComparativa.IdSecuencial = Convert.ToInt32(row.Cells[0].Value);
+                    _objDetalleTablaComparativa.IdProveedor = Convert.ToInt32(row.Cells[2].Value);
+                    _objDetalleTablaComparativa.IdTablaComparativa = _objTablaComparativa.IdTablaComparativa;
+                    _objDetalleTablaComparativa.Precio = Convert.ToDecimal(row.Cells[4].Value);
+                    _objDetalleTablaComparativa.Credito = Convert.ToInt32(row.Cells[5].Value);
+                    _objDetalleTablaComparativa.Dias = Convert.ToInt32(row.Cells[6].Value);
+                    _objDetalleTablaComparativa.Estado = 1;
+                    _sqlCommands.Add(_objDetalleTablaComparativa.InsertarDetalleTablaComparativaCommand());
+                    iddeta++;
                 }
 
-
+            }
+            catch (Exception ex)
+            {
+                KryptonMessageBox.Show(ex.Message, "Aviso", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error);
             }
         }
     }

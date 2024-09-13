@@ -13,6 +13,8 @@ namespace ClassLibraryCisepro3.Invetarios
     public class ClassSecuencialItem
     {
 
+        
+
         public DataTable buscarNombresSecuencial(TipoConexion tipoCon)
         {
             return ComandosSql.SeleccionarQueryToDataTable(tipoCon, "buscarNombreSecuencialItem", true);

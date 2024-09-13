@@ -346,7 +346,7 @@ namespace SysCisepro3.TalentoHumano
                          CargarPersonal(txtFiltro.Text.Trim());
                          dgvPersonal_SelectionChanged(null, null);
                      }
-                     //MessageBox.Show((string)res[1], "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                     
                 KryptonMessageBox.Show((string)res[1], "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
 
 

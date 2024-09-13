@@ -46,6 +46,8 @@
     <Compile Include="ActivoFijo\ClassChaleco.cs" />
     <Compile Include="Contabilidad\Compras\OrdenDeCompra\ClassDetalleOrdenCompra.cs" />
     <Compile Include="Contabilidad\Compras\OrdenDeCompra\ClassOrdenCompra.cs" />
+    <Compile Include="Contabilidad\Compras\TablaComparativa\ClassDetalleTablaComparativa.cs" />
+    <Compile Include="Contabilidad\Compras\TablaComparativa\ClassTablaComparativa.cs" />
     <Compile Include="Contabilidad\LibroDiario\ClassLibroDiario.cs" />
     <Compile Include="Contabilidad\LibroDiario\ClassPorcentajesRetencion.cs" />
     <Compile Include="Contabilidad\PlanDeCuentas\ClassPlanDeCuentas.cs" />
@@ -118,9 +120,7 @@
       <Name>syscisepro</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Contabilidad\Compras\TablaComparativa\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
