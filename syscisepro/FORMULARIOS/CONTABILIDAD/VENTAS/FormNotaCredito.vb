@@ -133,7 +133,9 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
             CargarDatosEmpresa()
 
             lblSubtotalIva.Text = "Subtotal " + _porcentajeIva.ToString + ":"
+            lblSubtotal12OrdenCompra.Text = "SUB TOTAL " + _porcentajeIva.ToString + ":"
             lblIva.Text = "IVA (" + _porcentajeIva.ToString + "):"
+            lblIvaOrdenCompra.Text = "IVA (" + _porcentajeIva.ToString + "%):"
 
             rbProduccion.Checked = True
             rbTipoEmisionNormal.Checked = True

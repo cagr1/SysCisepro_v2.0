@@ -54,7 +54,7 @@ namespace SysCisepro3.Contabilidad.Compras
 
         private void FrmTablaComparacionCompra_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private void dgvIngresoTabla_EditingControlShowing(object sender, DataGridViewEditingControlShowingEventArgs e)

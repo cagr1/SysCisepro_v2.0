@@ -12,6 +12,8 @@ Imports Krypton.Toolkit
 
 
 
+
+
 Namespace FORMULARIOS.OPERACIONES
     ''' <summary>
     ''' CISEPRO - SEPORTPAC - ASENAVA 2019
@@ -88,11 +90,18 @@ Namespace FORMULARIOS.OPERACIONES
             Label2.Text = "$ 0.00"
             'txtMultador.Text = UserName
 
+            txtFiltro.ForeColor = ValidationForms.GetColorSistema(_tipoCon)
+            txtFiltro.Font = New Font("Roboto", 9, FontStyle.Regular)
+            Dim validation As New ValidationForms()
+            validation.SetPlaceholder(txtFiltro, "Buscar...")
+
+
             headerCheckbox = New CheckBox()
             headerCheckbox.Size = New Size(15, 15)
             headerCheckbox.BackColor = Color.Transparent
             AddHandler headerCheckbox.CheckedChanged, AddressOf HeaderCheckbox_CheckedChanged
             Controls.Add(headerCheckbox)
+
 
 
         End Sub
@@ -971,13 +980,11 @@ Namespace FORMULARIOS.OPERACIONES
             End If
         End Sub
 
-        Private Sub KryptonButton2_Click(sender As Object, e As EventArgs) Handles btnAgrupados.Click
+        Private Sub KryptonButton2_Click(sender As Object, e As EventArgs)
             ExportarDatosExcel2(dgvSanciones, "ASIGNACION DE PUESTOS DE TRABAJO")
         End Sub
 
-        Private Sub btnNormal_Click(sender As Object, e As EventArgs) Handles btnNormal.Click
-            ExportarDatosExcel(ListView1, "ASIGNACION DE PUESTOS DE TRABAJO")
-        End Sub
+
         Private Sub HeaderCheckbox_CheckedChanged(sender As Object, e As EventArgs)
             Dim headerCheckbox As CheckBox = CType(sender, CheckBox)
             Dim isChecked As Boolean = headerCheckbox.Checked
@@ -986,7 +993,17 @@ Namespace FORMULARIOS.OPERACIONES
             Next
         End Sub
 
+        Private Sub dtpFechaHasta_ValueChanged(sender As Object, e As EventArgs) Handles dtpFechaHasta.ValueChanged
 
+        End Sub
+
+        Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnNormalF.Click
+            ExportarDatosExcel(ListView1, "ASIGNACION DE PUESTOS DE TRABAJO")
+        End Sub
+
+        Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click
+            ExportarDatosExcel2(dgvSanciones, "ASIGNACION DE PUESTOS DE TRABAJO")
+        End Sub
     End Class
 
 
