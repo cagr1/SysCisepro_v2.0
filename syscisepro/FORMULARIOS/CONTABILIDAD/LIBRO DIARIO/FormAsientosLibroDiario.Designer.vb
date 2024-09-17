@@ -134,7 +134,7 @@
             '
             Me.txtTotalHaber.AutoSize = True
             Me.txtTotalHaber.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtTotalHaber.Location = New System.Drawing.Point(1070, 13)
+            Me.txtTotalHaber.Location = New System.Drawing.Point(1013, 13)
             Me.txtTotalHaber.Name = "txtTotalHaber"
             Me.txtTotalHaber.Size = New System.Drawing.Size(36, 20)
             Me.txtTotalHaber.TabIndex = 41
@@ -144,7 +144,7 @@
             '
             Me.txtTotalDebe.AutoSize = True
             Me.txtTotalDebe.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtTotalDebe.Location = New System.Drawing.Point(886, 13)
+            Me.txtTotalDebe.Location = New System.Drawing.Point(829, 13)
             Me.txtTotalDebe.Name = "txtTotalDebe"
             Me.txtTotalDebe.Size = New System.Drawing.Size(36, 20)
             Me.txtTotalDebe.TabIndex = 40
@@ -153,7 +153,7 @@
             'PictureBoxErrorSumaAsiento
             '
             Me.PictureBoxErrorSumaAsiento.Image = CType(resources.GetObject("PictureBoxErrorSumaAsiento.Image"), System.Drawing.Image)
-            Me.PictureBoxErrorSumaAsiento.Location = New System.Drawing.Point(810, 16)
+            Me.PictureBoxErrorSumaAsiento.Location = New System.Drawing.Point(753, 16)
             Me.PictureBoxErrorSumaAsiento.Name = "PictureBoxErrorSumaAsiento"
             Me.PictureBoxErrorSumaAsiento.Size = New System.Drawing.Size(16, 16)
             Me.PictureBoxErrorSumaAsiento.TabIndex = 37
@@ -164,7 +164,7 @@
             '
             Me.lblTotal.AutoSize = True
             Me.lblTotal.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.lblTotal.Location = New System.Drawing.Point(747, 13)
+            Me.lblTotal.Location = New System.Drawing.Point(690, 13)
             Me.lblTotal.Name = "lblTotal"
             Me.lblTotal.Size = New System.Drawing.Size(57, 20)
             Me.lblTotal.TabIndex = 34
@@ -174,7 +174,7 @@
             '
             Me.Label3.AutoSize = True
             Me.Label3.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label3.Location = New System.Drawing.Point(1008, 13)
+            Me.Label3.Location = New System.Drawing.Point(951, 13)
             Me.Label3.Name = "Label3"
             Me.Label3.Size = New System.Drawing.Size(59, 20)
             Me.Label3.TabIndex = 39
@@ -184,7 +184,7 @@
             '
             Me.Label1.AutoSize = True
             Me.Label1.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label1.Location = New System.Drawing.Point(838, 13)
+            Me.Label1.Location = New System.Drawing.Point(781, 13)
             Me.Label1.Name = "Label1"
             Me.Label1.Size = New System.Drawing.Size(48, 20)
             Me.Label1.TabIndex = 38

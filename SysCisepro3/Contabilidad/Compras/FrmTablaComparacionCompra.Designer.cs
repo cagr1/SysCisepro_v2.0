@@ -32,6 +32,10 @@
             this.kryptonNavigator1 = new ComponentFactory.Krypton.Navigator.KryptonNavigator();
             this.kryptonPage1 = new ComponentFactory.Krypton.Navigator.KryptonPage();
             this.kryptonGroupBox1 = new Krypton.Toolkit.KryptonGroupBox();
+            this.lblIdProveedor = new Krypton.Toolkit.KryptonLabel();
+            this.btnAgregar = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.kryptonLabel2 = new Krypton.Toolkit.KryptonLabel();
+            this.txtProveedor = new System.Windows.Forms.TextBox();
             this.btnCancelar = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.btnGuardarTabla = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.btnNuevaTabla = new ComponentFactory.Krypton.Toolkit.KryptonButton();
@@ -40,14 +44,19 @@
             this.dgvIngresoTabla = new Krypton.Toolkit.KryptonDataGridView();
             this.id_secuencial = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.producto_servicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.id_proveedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.proveedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.credito = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dias = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtpFecha = new Krypton.Toolkit.KryptonDateTimePicker();
             this.kryptonPage3 = new ComponentFactory.Krypton.Navigator.KryptonPage();
+            this.kryptonGroupBox2 = new Krypton.Toolkit.KryptonGroupBox();
+            this.btnExportar = new Krypton.Toolkit.KryptonButton();
+            this.dgvDetalleTablaComparativa = new Krypton.Toolkit.KryptonDataGridView();
+            this.dgvTablaComparativa = new Krypton.Toolkit.KryptonDataGridView();
+            this.txtBuscar = new System.Windows.Forms.TextBox();
             this.kryptonPage2 = new ComponentFactory.Krypton.Navigator.KryptonPage();
+            this.pdfToolStripMain1 = new Patagames.Pdf.Net.Controls.WinForms.ToolBars.PdfToolStripMain();
+            this.pdfViewer1 = new Patagames.Pdf.Net.Controls.WinForms.PdfViewer();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.kryptonNavigator1)).BeginInit();
             this.kryptonNavigator1.SuspendLayout();
@@ -59,7 +68,15 @@
             this.kryptonGroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvIngresoTabla)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPage3)).BeginInit();
+            this.kryptonPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox2.Panel)).BeginInit();
+            this.kryptonGroupBox2.Panel.SuspendLayout();
+            this.kryptonGroupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDetalleTablaComparativa)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTablaComparativa)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPage2)).BeginInit();
+            this.kryptonPage2.SuspendLayout();
             this.SuspendLayout();
             // 
             // kryptonNavigator1
@@ -73,7 +90,7 @@
             this.kryptonPage1,
             this.kryptonPage3,
             this.kryptonPage2});
-            this.kryptonNavigator1.SelectedIndex = 0;
+            this.kryptonNavigator1.SelectedIndex = 1;
             this.kryptonNavigator1.Size = new System.Drawing.Size(808, 450);
             this.kryptonNavigator1.TabIndex = 0;
             this.kryptonNavigator1.Text = "kryptonNavigator1";
@@ -98,6 +115,10 @@
             // 
             // kryptonGroupBox1.Panel
             // 
+            this.kryptonGroupBox1.Panel.Controls.Add(this.lblIdProveedor);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.btnAgregar);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.kryptonLabel2);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.txtProveedor);
             this.kryptonGroupBox1.Panel.Controls.Add(this.btnCancelar);
             this.kryptonGroupBox1.Panel.Controls.Add(this.btnGuardarTabla);
             this.kryptonGroupBox1.Panel.Controls.Add(this.btnNuevaTabla);
@@ -105,9 +126,57 @@
             this.kryptonGroupBox1.Panel.Controls.Add(this.kryptonLabel1);
             this.kryptonGroupBox1.Panel.Controls.Add(this.dgvIngresoTabla);
             this.kryptonGroupBox1.Panel.Controls.Add(this.dtpFecha);
-            this.kryptonGroupBox1.Size = new System.Drawing.Size(807, 280);
+            this.kryptonGroupBox1.Size = new System.Drawing.Size(807, 317);
             this.kryptonGroupBox1.TabIndex = 0;
             this.kryptonGroupBox1.Values.Heading = "Datos";
+            // 
+            // lblIdProveedor
+            // 
+            this.lblIdProveedor.Location = new System.Drawing.Point(458, 58);
+            this.lblIdProveedor.Name = "lblIdProveedor";
+            this.lblIdProveedor.Size = new System.Drawing.Size(22, 20);
+            this.lblIdProveedor.TabIndex = 13;
+            this.lblIdProveedor.Values.Text = "ID";
+            // 
+            // btnAgregar
+            // 
+            this.btnAgregar.Location = new System.Drawing.Point(529, 51);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(32, 32);
+            this.btnAgregar.StateCommon.Back.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.False;
+            this.btnAgregar.StateCommon.Border.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.False;
+            this.btnAgregar.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnAgregar.TabIndex = 12;
+            this.toolTip1.SetToolTip(this.btnAgregar, "Agregar Proveedor");
+            this.btnAgregar.Values.ImageStates.ImageCheckedNormal = null;
+            this.btnAgregar.Values.ImageStates.ImageCheckedPressed = null;
+            this.btnAgregar.Values.ImageStates.ImageCheckedTracking = null;
+            this.btnAgregar.Values.ImageStates.ImageDisabled = global::SysCisepro3.Properties.Resources.add_circle_24dp_FILL0_wght400_GRAD0_opsz24__3_;
+            this.btnAgregar.Values.ImageStates.ImageNormal = global::SysCisepro3.Properties.Resources.add_circle_24dp_FILL0_wght400_GRAD0_opsz24__3_;
+            this.btnAgregar.Values.ImageStates.ImagePressed = global::SysCisepro3.Properties.Resources.add_circle_24dp_FILL0_wght400_GRAD0_opsz24;
+            this.btnAgregar.Values.ImageStates.ImageTracking = global::SysCisepro3.Properties.Resources.add_circle_24dp_FILL0_wght400_GRAD0_opsz24;
+            this.btnAgregar.Values.Text = "";
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
+            // 
+            // kryptonLabel2
+            // 
+            this.kryptonLabel2.Location = new System.Drawing.Point(13, 56);
+            this.kryptonLabel2.Name = "kryptonLabel2";
+            this.kryptonLabel2.Size = new System.Drawing.Size(67, 20);
+            this.kryptonLabel2.TabIndex = 11;
+            this.kryptonLabel2.Values.Text = "Proveedor";
+            // 
+            // txtProveedor
+            // 
+            this.txtProveedor.Enabled = false;
+            this.txtProveedor.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtProveedor.Location = new System.Drawing.Point(109, 58);
+            this.txtProveedor.Name = "txtProveedor";
+            this.txtProveedor.Size = new System.Drawing.Size(331, 21);
+            this.txtProveedor.TabIndex = 10;
+            this.txtProveedor.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtProveedor_KeyDown);
             // 
             // btnCancelar
             // 
@@ -115,12 +184,10 @@
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(32, 32);
             this.btnCancelar.StateCommon.Back.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.False;
-            this.btnCancelar.StateCommon.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.btnCancelar.StateCommon.Border.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.False;
             this.btnCancelar.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.btnCancelar.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.btnCancelar.TabIndex = 9;
             this.toolTip1.SetToolTip(this.btnCancelar, "Cancelar");
             this.btnCancelar.UseMnemonic = false;
@@ -132,6 +199,7 @@
             this.btnCancelar.Values.ImageStates.ImagePressed = global::SysCisepro3.Properties.Resources.cancel_24dp_000000_FILL0_wght400_GRAD0_opsz24;
             this.btnCancelar.Values.ImageStates.ImageTracking = global::SysCisepro3.Properties.Resources.cancel_24dp_000000_FILL0_wght400_GRAD0_opsz24;
             this.btnCancelar.Values.Text = "";
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnGuardarTabla
             // 
@@ -139,12 +207,10 @@
             this.btnGuardarTabla.Name = "btnGuardarTabla";
             this.btnGuardarTabla.Size = new System.Drawing.Size(32, 32);
             this.btnGuardarTabla.StateCommon.Back.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.False;
-            this.btnGuardarTabla.StateCommon.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.btnGuardarTabla.StateCommon.Border.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.False;
             this.btnGuardarTabla.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.btnGuardarTabla.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.btnGuardarTabla.TabIndex = 8;
             this.toolTip1.SetToolTip(this.btnGuardarTabla, "Guardar Tabla");
             this.btnGuardarTabla.Values.ImageStates.ImageCheckedNormal = null;
@@ -163,21 +229,19 @@
             this.btnNuevaTabla.Name = "btnNuevaTabla";
             this.btnNuevaTabla.Size = new System.Drawing.Size(32, 32);
             this.btnNuevaTabla.StateCommon.Back.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.False;
-            this.btnNuevaTabla.StateCommon.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.btnNuevaTabla.StateCommon.Border.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.False;
             this.btnNuevaTabla.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.btnNuevaTabla.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.btnNuevaTabla.TabIndex = 7;
             this.toolTip1.SetToolTip(this.btnNuevaTabla, "Nueva Tabla");
             this.btnNuevaTabla.Values.ImageStates.ImageCheckedNormal = null;
             this.btnNuevaTabla.Values.ImageStates.ImageCheckedPressed = null;
             this.btnNuevaTabla.Values.ImageStates.ImageCheckedTracking = null;
-            this.btnNuevaTabla.Values.ImageStates.ImageDisabled = global::SysCisepro3.Properties.Resources.add_circle_24dp_FILL0_wght400_GRAD0_opsz24__3_;
-            this.btnNuevaTabla.Values.ImageStates.ImageNormal = global::SysCisepro3.Properties.Resources.add_circle_24dp_FILL0_wght400_GRAD0_opsz24__3_;
-            this.btnNuevaTabla.Values.ImageStates.ImagePressed = global::SysCisepro3.Properties.Resources.add_circle_24dp_FILL0_wght400_GRAD0_opsz24;
-            this.btnNuevaTabla.Values.ImageStates.ImageTracking = global::SysCisepro3.Properties.Resources.add_circle_24dp_FILL0_wght400_GRAD0_opsz24;
+            this.btnNuevaTabla.Values.ImageStates.ImageDisabled = global::SysCisepro3.Properties.Resources.note_add_24dp_FILL0_wght400_GRAD0_opsz24;
+            this.btnNuevaTabla.Values.ImageStates.ImageNormal = global::SysCisepro3.Properties.Resources.note_add_24dp_FILL0_wght400_GRAD0_opsz24;
+            this.btnNuevaTabla.Values.ImageStates.ImagePressed = global::SysCisepro3.Properties.Resources.note_add_24dp_FILL0_wght400_GRAD0_opsz24__2_;
+            this.btnNuevaTabla.Values.ImageStates.ImageTracking = global::SysCisepro3.Properties.Resources.note_add_24dp_FILL0_wght400_GRAD0_opsz24__2_;
             this.btnNuevaTabla.Values.Text = "";
             this.btnNuevaTabla.Click += new System.EventHandler(this.btnNuevaTabla_Click);
             // 
@@ -185,18 +249,19 @@
             // 
             this.txtObservaciones.Enabled = false;
             this.txtObservaciones.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtObservaciones.Location = new System.Drawing.Point(109, 30);
+            this.txtObservaciones.Location = new System.Drawing.Point(109, 25);
             this.txtObservaciones.Name = "txtObservaciones";
             this.txtObservaciones.Size = new System.Drawing.Size(398, 21);
             this.txtObservaciones.TabIndex = 3;
             // 
             // kryptonLabel1
             // 
-            this.kryptonLabel1.Location = new System.Drawing.Point(13, 30);
+            this.kryptonLabel1.Location = new System.Drawing.Point(10, 25);
             this.kryptonLabel1.Name = "kryptonLabel1";
             this.kryptonLabel1.Size = new System.Drawing.Size(90, 20);
             this.kryptonLabel1.TabIndex = 2;
             this.kryptonLabel1.Values.Text = "Observaciones";
+            this.kryptonLabel1.Click += new System.EventHandler(this.kryptonLabel1_Click);
             // 
             // dgvIngresoTabla
             // 
@@ -205,15 +270,13 @@
             this.dgvIngresoTabla.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id_secuencial,
             this.producto_servicio,
-            this.id_proveedor,
-            this.proveedor,
             this.precio,
             this.credito,
             this.dias});
             this.dgvIngresoTabla.Enabled = false;
-            this.dgvIngresoTabla.Location = new System.Drawing.Point(4, 57);
+            this.dgvIngresoTabla.Location = new System.Drawing.Point(4, 90);
             this.dgvIngresoTabla.Name = "dgvIngresoTabla";
-            this.dgvIngresoTabla.Size = new System.Drawing.Size(790, 190);
+            this.dgvIngresoTabla.Size = new System.Drawing.Size(796, 190);
             this.dgvIngresoTabla.TabIndex = 1;
             this.dgvIngresoTabla.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvIngresoTabla_CellEndEdit);
             this.dgvIngresoTabla.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.dgvIngresoTabla_EditingControlShowing);
@@ -230,19 +293,6 @@
             this.producto_servicio.HeaderText = "Producto/Servicio";
             this.producto_servicio.Name = "producto_servicio";
             this.producto_servicio.Width = 260;
-            // 
-            // id_proveedor
-            // 
-            this.id_proveedor.HeaderText = "Id";
-            this.id_proveedor.Name = "id_proveedor";
-            this.id_proveedor.ReadOnly = true;
-            this.id_proveedor.Width = 40;
-            // 
-            // proveedor
-            // 
-            this.proveedor.HeaderText = "Proveedor";
-            this.proveedor.Name = "proveedor";
-            this.proveedor.Width = 260;
             // 
             // precio
             // 
@@ -266,7 +316,7 @@
             // 
             this.dtpFecha.Enabled = false;
             this.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFecha.Location = new System.Drawing.Point(521, 28);
+            this.dtpFecha.Location = new System.Drawing.Point(529, 24);
             this.dtpFecha.Name = "dtpFecha";
             this.dtpFecha.Size = new System.Drawing.Size(88, 21);
             this.dtpFecha.TabIndex = 0;
@@ -274,6 +324,7 @@
             // kryptonPage3
             // 
             this.kryptonPage3.AutoHiddenSlideSize = new System.Drawing.Size(200, 200);
+            this.kryptonPage3.Controls.Add(this.kryptonGroupBox2);
             this.kryptonPage3.Flags = 65534;
             this.kryptonPage3.LastVisibleSet = true;
             this.kryptonPage3.MinimumSize = new System.Drawing.Size(50, 50);
@@ -283,9 +334,75 @@
             this.kryptonPage3.ToolTipTitle = "Page ToolTip";
             this.kryptonPage3.UniqueName = "52EB43BB56504659649444E3236E61E5";
             // 
+            // kryptonGroupBox2
+            // 
+            this.kryptonGroupBox2.Location = new System.Drawing.Point(11, 16);
+            this.kryptonGroupBox2.Name = "kryptonGroupBox2";
+            // 
+            // kryptonGroupBox2.Panel
+            // 
+            this.kryptonGroupBox2.Panel.Controls.Add(this.btnExportar);
+            this.kryptonGroupBox2.Panel.Controls.Add(this.dgvDetalleTablaComparativa);
+            this.kryptonGroupBox2.Panel.Controls.Add(this.dgvTablaComparativa);
+            this.kryptonGroupBox2.Panel.Controls.Add(this.txtBuscar);
+            this.kryptonGroupBox2.Size = new System.Drawing.Size(784, 396);
+            this.kryptonGroupBox2.TabIndex = 0;
+            this.kryptonGroupBox2.Values.Heading = "";
+            // 
+            // btnExportar
+            // 
+            this.btnExportar.Location = new System.Drawing.Point(307, 10);
+            this.btnExportar.Name = "btnExportar";
+            this.btnExportar.Size = new System.Drawing.Size(34, 34);
+            this.btnExportar.StateCommon.Back.Draw = Krypton.Toolkit.InheritBool.False;
+            this.btnExportar.StateCommon.Border.Draw = Krypton.Toolkit.InheritBool.False;
+            this.btnExportar.StateCommon.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnExportar.TabIndex = 4;
+            this.btnExportar.Values.Image = global::SysCisepro3.Properties.Resources.pdf_;
+            this.btnExportar.Values.Text = "";
+            this.btnExportar.Click += new System.EventHandler(this.btnExportar_Click);
+            // 
+            // dgvDetalleTablaComparativa
+            // 
+            this.dgvDetalleTablaComparativa.AllowUserToAddRows = false;
+            this.dgvDetalleTablaComparativa.AllowUserToDeleteRows = false;
+            this.dgvDetalleTablaComparativa.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dgvDetalleTablaComparativa.ColumnHeadersHeight = 24;
+            this.dgvDetalleTablaComparativa.Location = new System.Drawing.Point(5, 179);
+            this.dgvDetalleTablaComparativa.Name = "dgvDetalleTablaComparativa";
+            this.dgvDetalleTablaComparativa.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvDetalleTablaComparativa.Size = new System.Drawing.Size(772, 208);
+            this.dgvDetalleTablaComparativa.TabIndex = 3;
+            // 
+            // dgvTablaComparativa
+            // 
+            this.dgvTablaComparativa.AllowUserToAddRows = false;
+            this.dgvTablaComparativa.AllowUserToDeleteRows = false;
+            this.dgvTablaComparativa.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dgvTablaComparativa.ColumnHeadersHeight = 24;
+            this.dgvTablaComparativa.Location = new System.Drawing.Point(5, 50);
+            this.dgvTablaComparativa.Name = "dgvTablaComparativa";
+            this.dgvTablaComparativa.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvTablaComparativa.Size = new System.Drawing.Size(772, 121);
+            this.dgvTablaComparativa.TabIndex = 2;
+            this.dgvTablaComparativa.SelectionChanged += new System.EventHandler(this.dgvTablaComparativa_SelectionChanged);
+            // 
+            // txtBuscar
+            // 
+            this.txtBuscar.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBuscar.Location = new System.Drawing.Point(14, 22);
+            this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.Size = new System.Drawing.Size(220, 21);
+            this.txtBuscar.TabIndex = 0;
+            this.txtBuscar.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtBuscar_KeyUp);
+            // 
             // kryptonPage2
             // 
             this.kryptonPage2.AutoHiddenSlideSize = new System.Drawing.Size(200, 200);
+            this.kryptonPage2.Controls.Add(this.pdfToolStripMain1);
+            this.kryptonPage2.Controls.Add(this.pdfViewer1);
             this.kryptonPage2.Flags = 65534;
             this.kryptonPage2.LastVisibleSet = true;
             this.kryptonPage2.MinimumSize = new System.Drawing.Size(50, 50);
@@ -294,6 +411,51 @@
             this.kryptonPage2.Text = "Reporte";
             this.kryptonPage2.ToolTipTitle = "Page ToolTip";
             this.kryptonPage2.UniqueName = "1E3B42D390BC4975BF83023BF932CB93";
+            // 
+            // pdfToolStripMain1
+            // 
+            this.pdfToolStripMain1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.pdfToolStripMain1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.pdfToolStripMain1.Location = new System.Drawing.Point(0, 0);
+            this.pdfToolStripMain1.Name = "pdfToolStripMain1";
+            this.pdfToolStripMain1.PdfViewer = this.pdfViewer1;
+            this.pdfToolStripMain1.Size = new System.Drawing.Size(806, 58);
+            this.pdfToolStripMain1.TabIndex = 1;
+            this.pdfToolStripMain1.Text = "pdfToolStripMain1";
+            // 
+            // pdfViewer1
+            // 
+            this.pdfViewer1.BackColor = System.Drawing.Color.White;
+            this.pdfViewer1.CurrentIndex = -1;
+            this.pdfViewer1.CurrentPageHighlightColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(70)))), ((int)(((byte)(130)))), ((int)(((byte)(180)))));
+            this.pdfViewer1.Document = null;
+            this.pdfViewer1.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pdfViewer1.FormHighlightColor = System.Drawing.Color.Transparent;
+            this.pdfViewer1.FormsBlendMode = Patagames.Pdf.Enums.BlendTypes.FXDIB_BLEND_MULTIPLY;
+            this.pdfViewer1.LoadingIconText = "Loading...";
+            this.pdfViewer1.Location = new System.Drawing.Point(1, 61);
+            this.pdfViewer1.MouseMode = Patagames.Pdf.Net.Controls.WinForms.MouseModes.Default;
+            this.pdfViewer1.Name = "pdfViewer1";
+            this.pdfViewer1.OptimizedLoadThreshold = 1000;
+            this.pdfViewer1.Padding = new System.Windows.Forms.Padding(10);
+            this.pdfViewer1.PageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.pdfViewer1.PageAutoDispose = true;
+            this.pdfViewer1.PageBackColor = System.Drawing.Color.White;
+            this.pdfViewer1.PageBorderColor = System.Drawing.Color.Black;
+            this.pdfViewer1.PageMargin = new System.Windows.Forms.Padding(10);
+            this.pdfViewer1.PageSeparatorColor = System.Drawing.Color.Gray;
+            this.pdfViewer1.RenderFlags = ((Patagames.Pdf.Enums.RenderFlags)((Patagames.Pdf.Enums.RenderFlags.FPDF_LCD_TEXT | Patagames.Pdf.Enums.RenderFlags.FPDF_NO_CATCH)));
+            this.pdfViewer1.ShowCurrentPageHighlight = true;
+            this.pdfViewer1.ShowLoadingIcon = true;
+            this.pdfViewer1.ShowPageSeparator = true;
+            this.pdfViewer1.Size = new System.Drawing.Size(802, 360);
+            this.pdfViewer1.SizeMode = Patagames.Pdf.Net.Controls.WinForms.SizeModes.FitToWidth;
+            this.pdfViewer1.TabIndex = 0;
+            this.pdfViewer1.TextSelectColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(130)))), ((int)(((byte)(180)))));
+            this.pdfViewer1.TilesCount = 2;
+            this.pdfViewer1.UseProgressiveRender = true;
+            this.pdfViewer1.ViewMode = Patagames.Pdf.Net.Controls.WinForms.ViewModes.Vertical;
+            this.pdfViewer1.Zoom = 1F;
             // 
             // FrmTablaComparacionCompra
             // 
@@ -320,7 +482,17 @@
             this.kryptonGroupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvIngresoTabla)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPage3)).EndInit();
+            this.kryptonPage3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox2.Panel)).EndInit();
+            this.kryptonGroupBox2.Panel.ResumeLayout(false);
+            this.kryptonGroupBox2.Panel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox2)).EndInit();
+            this.kryptonGroupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDetalleTablaComparativa)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTablaComparativa)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPage2)).EndInit();
+            this.kryptonPage2.ResumeLayout(false);
+            this.kryptonPage2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -334,18 +506,27 @@
         private Krypton.Toolkit.KryptonDateTimePicker dtpFecha;
         private Krypton.Toolkit.KryptonDataGridView dgvIngresoTabla;
         private Krypton.Toolkit.KryptonLabel kryptonLabel1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn id_secuencial;
-        private System.Windows.Forms.DataGridViewTextBoxColumn producto_servicio;
-        private System.Windows.Forms.DataGridViewTextBoxColumn id_proveedor;
-        private System.Windows.Forms.DataGridViewTextBoxColumn proveedor;
-        private System.Windows.Forms.DataGridViewTextBoxColumn precio;
-        private System.Windows.Forms.DataGridViewTextBoxColumn credito;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dias;
         private System.Windows.Forms.TextBox txtObservaciones;
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnNuevaTabla;
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnGuardarTabla;
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnCancelar;
         private System.Windows.Forms.ToolTip toolTip1;
         private ComponentFactory.Krypton.Navigator.KryptonPage kryptonPage3;
+        private Krypton.Toolkit.KryptonLabel lblIdProveedor;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton btnAgregar;
+        private Krypton.Toolkit.KryptonLabel kryptonLabel2;
+        private System.Windows.Forms.TextBox txtProveedor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id_secuencial;
+        private System.Windows.Forms.DataGridViewTextBoxColumn producto_servicio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn precio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn credito;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dias;
+        private Krypton.Toolkit.KryptonGroupBox kryptonGroupBox2;
+        private System.Windows.Forms.TextBox txtBuscar;
+        private Krypton.Toolkit.KryptonDataGridView dgvDetalleTablaComparativa;
+        private Krypton.Toolkit.KryptonDataGridView dgvTablaComparativa;
+        private Krypton.Toolkit.KryptonButton btnExportar;
+        private Patagames.Pdf.Net.Controls.WinForms.PdfViewer pdfViewer1;
+        private Patagames.Pdf.Net.Controls.WinForms.ToolBars.PdfToolStripMain pdfToolStripMain1;
     }
 }

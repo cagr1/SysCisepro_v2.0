@@ -269,29 +269,36 @@ namespace SysCisepro3.TalentoHumano
 
             var fechaDesde = dtpDesde.Value;
             var fechaHasta = dtpHasta.Value;
+            try
+            {
+                _objRegistroPermisoPersonal.IdRegistro = _objRegistroPermisoPersonal.BuscarMayorIdRegistroPermiso(TipoCon) + 1;
+                _objRegistroPermisoPersonal.IdPersonal = Convert.ToInt32(txtIdPersonal.Text.Trim());
+                _objRegistroPermisoPersonal.IdSancion = Convert.ToInt32(cbmMotivo.SelectedValue);
+                _objRegistroPermisoPersonal.Desde = fechaDesde;
+                _objRegistroPermisoPersonal.Hasta = fechaHasta;
+                _objRegistroPermisoPersonal.Estado = 1;
+                _objRegistroPermisoPersonal.Observacionx = txtObservacion.Text.Trim();
+                _objRegistroPermisoPersonal.IdSitio = Convert.ToInt32(txtSitio.Tag);
+                _objRegistroPermisoPersonal.FechaReg = dtpFecha.Value;
+                _objRegistroPermisoPersonal.NumDoc = Convert.ToInt32(txtNumDoc.Text.Trim()); //txtNumDoc.Text.Trim().Length == 0 ? 0 : Convert.ToInt32(txtNumDoc.Text.Trim());
+                _objRegistroPermisoPersonal.Certificado = _cm ?? new byte[0];
+                _sqlCommands.Add(_objRegistroPermisoPersonal.NuevoRegistroPermisoCommands());
 
-            _objRegistroPermisoPersonal.IdRegistro = _objRegistroPermisoPersonal.BuscarMayorIdRegistroPermiso(TipoCon) + 1;
-            _objRegistroPermisoPersonal.IdPersonal = Convert.ToInt32(txtIdPersonal.Text.Trim());
-            _objRegistroPermisoPersonal.IdSancion = Convert.ToInt32(cbmMotivo.SelectedValue);
-            _objRegistroPermisoPersonal.Desde = fechaDesde;
-            _objRegistroPermisoPersonal.Hasta = fechaHasta;
-            _objRegistroPermisoPersonal.Estado = 1;
-            _objRegistroPermisoPersonal.Observacionx = txtObservacion.Text.Trim();
-            _objRegistroPermisoPersonal.IdSitio = Convert.ToInt32(txtSitio.Tag);
-            _objRegistroPermisoPersonal.FechaReg = dtpFecha.Value;
-            _objRegistroPermisoPersonal.NumDoc = Convert.ToInt32(txtNumDoc.Text.Trim()); //txtNumDoc.Text.Trim().Length == 0 ? 0 : Convert.ToInt32(txtNumDoc.Text.Trim());
-            _objRegistroPermisoPersonal.Certificado = _cm;
-            _sqlCommands.Add(_objRegistroPermisoPersonal.NuevoRegistroPermisoCommands());
+                _objHistorialLaboral.IdHistoriaLaboral = _objHistorialLaboral.BuscarMayorIdHistoriaLaboral(TipoCon) + 1;
+                _objHistorialLaboral.FechaHistoriaLaboral = dtpFecha.Value;
+                _objHistorialLaboral.DetalleHistoriaLaboral = "REGISTRA PERMISO POR CONCEPTO DE: " + cbmMotivo.Text.Trim() + ", " + txtObservacion.Text.Trim();
+                _objHistorialLaboral.EstadoHistoriaLaboral = 1;
+                _objHistorialLaboral.IdPersonalHistoriaLaboral = Convert.ToInt32(txtIdPersonal.Text.Trim());
+                _objHistorialLaboral.IdSitioHistoriaLaboral = "1";
+                _objHistorialLaboral.IdSitioAuxHistoriaLaboral = 0;
+                _sqlCommands.Add(_objHistorialLaboral.RegistrarNuevoHistorialLaboralCommand());
 
-            _objHistorialLaboral.IdHistoriaLaboral = _objHistorialLaboral.BuscarMayorIdHistoriaLaboral(TipoCon) + 1;
-            _objHistorialLaboral.FechaHistoriaLaboral = dtpFecha.Value;
-            _objHistorialLaboral.DetalleHistoriaLaboral = "REGISTRA PERMISO POR CONCEPTO DE: " + cbmMotivo.Text.Trim() + ", " + txtObservacion.Text.Trim();
-            _objHistorialLaboral.EstadoHistoriaLaboral = 1;
-            _objHistorialLaboral.IdPersonalHistoriaLaboral = Convert.ToInt32(txtIdPersonal.Text.Trim());
-            _objHistorialLaboral.IdSitioHistoriaLaboral = "1";
-            _objHistorialLaboral.IdSitioAuxHistoriaLaboral = 0;
-            _sqlCommands.Add(_objHistorialLaboral.RegistrarNuevoHistorialLaboralCommand());
-
+            }
+            catch (Exception ex)
+            {
+                KryptonMessageBox.Show(@"Error al procesar datos: " + ex.Message, "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+                return;
+            }
             var user = Usuario.Datos.ToString();
             var nombre = $"Registro de Permiso por: {user}";
             var res = ComandosSql.ProcesarTransacciones(TipoCon, _sqlCommands, nombre);

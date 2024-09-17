@@ -46,5 +46,15 @@ namespace ClassLibraryCisepro3.Contabilidad.Compras.TablaComparativa
             return cmd;
         }
 
+        public DataTable buscarDetalleTablaComparativa(TipoConexion TipoCon, int id)
+        {
+            var pars = new List<object[]>
+            {
+                new object[] { "@id", SqlDbType.Int, id }
+            };
+
+            return ComandosSql.SeleccionarQueryWithParamsToDataTable(TipoCon, "sp_buscarDetalleTablaComparativa", true, pars);
+        }
+
     }
 }

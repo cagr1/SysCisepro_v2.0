@@ -22,6 +22,24 @@ namespace ClassLibraryCisepro3.Estaticas
             return name;
         }
 
+        public static string NombreLogoNuevo(TipoConexion tipo, string stp)
+        {
+            string name;
+            switch (tipo)
+            {
+                case TipoConexion.Asenava:
+                    name = stp + "\\logoas.png";
+                    break;
+                case TipoConexion.Seportpac:
+                    name = stp + "\\seportpac.png";
+                    break;
+                default:
+                    name = stp + "\\cisepro.png";
+                    break;
+            }
+            return name;
+        }
+
         public static string NombreCompany(TipoConexion tipo)
         {
             string name;

@@ -43,5 +43,7 @@ namespace ClassLibraryCisepro3.Contabilidad.Proveedores
 
             return ComandosSql.SeleccionarQueryWithParamsToDataTable(tipoCon, "SELECT * FROM PROVEEDOR_GENERAL WHERE RAZON_SOCIAL_PROVEEDOR_GENERAL = @FILTRO;", false, pars);
         }
+
+
     }
 }

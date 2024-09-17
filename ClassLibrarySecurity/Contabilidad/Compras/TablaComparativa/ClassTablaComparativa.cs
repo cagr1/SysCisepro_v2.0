@@ -38,6 +38,18 @@ namespace ClassLibraryCisepro3.Contabilidad.Compras.TablaComparativa
 
             return cmd;
         }
+        public DataTable BuscarTablaComparativa(TipoConexion tipoCon, string filtro)
+        {
+           
+                var pars = new List<object[]>
+                    {
+                new object[] { "@filtro", SqlDbType.NVarChar, filtro },
+                
+                    };
+
+                return ComandosSql.SeleccionarQueryWithParamsToDataTable(tipoCon, "sp_buscarTablaComparativa", true, pars);
+            
+        }
 
     }
 }

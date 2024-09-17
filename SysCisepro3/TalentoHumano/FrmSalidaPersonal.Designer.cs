@@ -430,9 +430,6 @@
             // 
             // kryptonGroupBox2
             // 
-            this.kryptonGroupBox2.CaptionStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.GroupBoxCaption;
-            this.kryptonGroupBox2.GroupBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.ControlGroupBox;
-            this.kryptonGroupBox2.GroupBorderStyle = ComponentFactory.Krypton.Toolkit.PaletteBorderStyle.ControlGroupBox;
             this.kryptonGroupBox2.Location = new System.Drawing.Point(612, 4);
             this.kryptonGroupBox2.Name = "kryptonGroupBox2";
             // 
@@ -448,9 +445,6 @@
             // 
             // kryptonGroupBox1
             // 
-            this.kryptonGroupBox1.CaptionStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.GroupBoxCaption;
-            this.kryptonGroupBox1.GroupBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.ControlGroupBox;
-            this.kryptonGroupBox1.GroupBorderStyle = ComponentFactory.Krypton.Toolkit.PaletteBorderStyle.ControlGroupBox;
             this.kryptonGroupBox1.Location = new System.Drawing.Point(12, 5);
             this.kryptonGroupBox1.Name = "kryptonGroupBox1";
             // 
@@ -556,9 +550,6 @@
             // 
             // kryptonGroupBox4
             // 
-            this.kryptonGroupBox4.CaptionStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.GroupBoxCaption;
-            this.kryptonGroupBox4.GroupBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.ControlGroupBox;
-            this.kryptonGroupBox4.GroupBorderStyle = ComponentFactory.Krypton.Toolkit.PaletteBorderStyle.ControlGroupBox;
             this.kryptonGroupBox4.Location = new System.Drawing.Point(3, 190);
             this.kryptonGroupBox4.Name = "kryptonGroupBox4";
             // 
@@ -583,9 +574,6 @@
             // 
             // kryptonGroupBox3
             // 
-            this.kryptonGroupBox3.CaptionStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.GroupBoxCaption;
-            this.kryptonGroupBox3.GroupBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.ControlGroupBox;
-            this.kryptonGroupBox3.GroupBorderStyle = ComponentFactory.Krypton.Toolkit.PaletteBorderStyle.ControlGroupBox;
             this.kryptonGroupBox3.Location = new System.Drawing.Point(3, 5);
             this.kryptonGroupBox3.Name = "kryptonGroupBox3";
             // 
@@ -615,7 +603,6 @@
             this.dtpAnio.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpAnio.Location = new System.Drawing.Point(376, 120);
             this.dtpAnio.Name = "dtpAnio";
-            this.dtpAnio.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Global;
             this.dtpAnio.Size = new System.Drawing.Size(60, 21);
             this.dtpAnio.TabIndex = 12;
             // 
@@ -653,12 +640,10 @@
             this.btnCancelarFirmado.Name = "btnCancelarFirmado";
             this.btnCancelarFirmado.Size = new System.Drawing.Size(32, 32);
             this.btnCancelarFirmado.StateCommon.Back.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.False;
-            this.btnCancelarFirmado.StateCommon.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.btnCancelarFirmado.StateCommon.Border.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.False;
             this.btnCancelarFirmado.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.btnCancelarFirmado.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.btnCancelarFirmado.TabIndex = 8;
             this.toolTip1.SetToolTip(this.btnCancelarFirmado, "Cancelar");
             this.btnCancelarFirmado.Values.ImageStates.ImageCheckedNormal = null;
@@ -677,12 +662,10 @@
             this.btnGuardarFirmado.Name = "btnGuardarFirmado";
             this.btnGuardarFirmado.Size = new System.Drawing.Size(32, 32);
             this.btnGuardarFirmado.StateCommon.Back.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.False;
-            this.btnGuardarFirmado.StateCommon.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.btnGuardarFirmado.StateCommon.Border.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.False;
             this.btnGuardarFirmado.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.btnGuardarFirmado.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.btnGuardarFirmado.TabIndex = 7;
             this.toolTip1.SetToolTip(this.btnGuardarFirmado, "Guardar");
             this.btnGuardarFirmado.Values.ImageStates.ImageCheckedNormal = null;
@@ -701,12 +684,10 @@
             this.btnNuevoFirmado.Name = "btnNuevoFirmado";
             this.btnNuevoFirmado.Size = new System.Drawing.Size(32, 32);
             this.btnNuevoFirmado.StateCommon.Back.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.False;
-            this.btnNuevoFirmado.StateCommon.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.btnNuevoFirmado.StateCommon.Border.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.False;
             this.btnNuevoFirmado.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.btnNuevoFirmado.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.btnNuevoFirmado.TabIndex = 6;
             this.toolTip1.SetToolTip(this.btnNuevoFirmado, "Nuevo");
             this.btnNuevoFirmado.Values.ImageStates.ImageCheckedNormal = null;

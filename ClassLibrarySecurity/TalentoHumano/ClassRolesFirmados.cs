@@ -72,7 +72,7 @@ namespace ClassLibraryCisepro3.TalentoHumano
             var pars = new List<object[]>
             {
                 new object[] { "@code", SqlDbType.Int, code },
-                new object[] { "@fecha", SqlDbType.Int, mes },
+                new object[] { "@mes", SqlDbType.Int, mes },
                 new object[] { "@anio", SqlDbType.Int, anio }
             };
 
