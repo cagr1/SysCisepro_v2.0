@@ -103,7 +103,7 @@ namespace ClassLibraryCisepro3.ProcesosSql
                     }
                     else r += sql.CommandText + ";";   
                 }
-                r = r.Replace("'", "");
+                r = r.Replace("'", ""); //LOG_SQL
 
                 querys.Add(new SqlCommand
                 {

@@ -54,6 +54,12 @@ namespace SysCisepro3.Contabilidad.Compras
         private readonly ClassSecuencialItem _objSecuencialItem;
         private readonly ClassTablaComparativa _objTablaComparativa;
         private readonly ClassDetalleTablaComparativa _objDetalleTablaComparativa;
+
+        int facturaWidth = 0;
+        int creditoWidth = 0;
+        int diasWidth = 0;
+        int itemsWidth = 0;
+
         public FrmTablaComparacionCompra()
         {
             InitializeComponent();
@@ -379,19 +385,89 @@ namespace SysCisepro3.Contabilidad.Compras
         {
             try
             {                
-                dgvDetalleTablaComparativa.DataSource = _objDetalleTablaComparativa.buscarDetalleTablaComparativa(TipoCon, id);
-                dgvDetalleTablaComparativa.Columns[0].Width = 70;
-                dgvDetalleTablaComparativa.Columns[0].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-                dgvDetalleTablaComparativa.Columns[1].Width = 320;
-                dgvDetalleTablaComparativa.Columns[1].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-                dgvDetalleTablaComparativa.Columns[2].Width = 250;
-                dgvDetalleTablaComparativa.Columns[2].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-                dgvDetalleTablaComparativa.Columns[3].Width = 70;
-                dgvDetalleTablaComparativa.Columns[3].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-                dgvDetalleTablaComparativa.Columns[4].Width = 70;
-                dgvDetalleTablaComparativa.Columns[4].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-                dgvDetalleTablaComparativa.Columns[5].Width = 70;
-                dgvDetalleTablaComparativa.Columns[5].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+                
+
+                DataTable dt = _objDetalleTablaComparativa.buscarDetalleTablaComparativa(TipoCon, id);
+                DataTable dtPivot = new DataTable();
+                dtPivot.Columns.Add("ITEMS", typeof(string));                             
+                var proveedores = dt.AsEnumerable().Select(row => row["Proveedor"].ToString().Trim()).Distinct().ToList();
+
+                foreach (var proveedor in proveedores)
+                {
+                    dtPivot.Columns.Add($"{proveedor} (Precio)", typeof(string));                    
+                }
+
+                foreach (var proveedor in proveedores)
+                {                    
+                    dtPivot.Columns.Add($"{proveedor} (Crédito)", typeof(string));                 
+                }
+
+                foreach (var proveedor in proveedores)
+                {                 
+                    dtPivot.Columns.Add($"{proveedor} (Días)", typeof(string));                   
+                }
+
+               
+                var items = dt.AsEnumerable().Select(row => row["Producto/Servicio"].ToString().Trim()).Distinct().ToList();
+
+                foreach (var item in items)
+                {
+                    DataRow newRow = dtPivot.NewRow();
+                    newRow["ITEMS"] = item;
+
+                    foreach (var proveedor in proveedores)
+                    {                        
+                        var data = dt.AsEnumerable()
+                            .Where(row => row["Producto/Servicio"].ToString().Trim().Equals(item.Trim(), StringComparison.OrdinalIgnoreCase) &&
+                                    row["Proveedor"].ToString().Trim().Equals(proveedor.Trim(), StringComparison.OrdinalIgnoreCase))
+                                .FirstOrDefault();
+
+                        
+
+                        if (data != null )
+                        {
+                            //Precio
+                            newRow[$"{proveedor} (Precio)"] = !string.IsNullOrEmpty(data["Precio"].ToString()) ? data["Precio"].ToString() : "0";
+                            // Crédito
+                            newRow[$"{proveedor} (Crédito)"] = !string.IsNullOrEmpty(data["Credito"].ToString()) ? data["Credito"].ToString() : "0";
+                            // Días
+                            newRow[$"{proveedor} (Días)"] = !string.IsNullOrEmpty(data["Dias"].ToString()) ? data["Dias"].ToString() : "0";                                             
+                        }
+                    }
+
+                    dtPivot.Rows.Add(newRow);
+
+                }
+                dgvDetalleTablaComparativa.DataSource = dtPivot;
+
+                //foreach (DataGridViewColumn column in dgvDetalleTablaComparativa.Columns)
+                //{
+                //    if (column.HeaderText.Contains("Precio"))
+                //    {
+                //        int columnWidth = dgvDetalleTablaComparativa.Columns[column.Index].GetPreferredWidth(DataGridViewAutoSizeColumnMode.DisplayedCells, true);
+                //        facturaWidth = Math.Max(facturaWidth, columnWidth);
+                //    }
+                //    else if (column.HeaderText.Contains("Crédito"))
+                //    {
+                //        int columnWidth = dgvDetalleTablaComparativa.Columns[column.Index].GetPreferredWidth(DataGridViewAutoSizeColumnMode.DisplayedCells, true);
+                //        creditoWidth = Math.Max(creditoWidth, columnWidth);
+                //    }
+                //    else if (column.HeaderText.Contains("Días"))
+                //    {
+                //        int columnWidth = dgvDetalleTablaComparativa.Columns[column.Index].GetPreferredWidth(DataGridViewAutoSizeColumnMode.DisplayedCells, true);
+                //        diasWidth = Math.Max(diasWidth, columnWidth);
+                //    }
+                //    else if (column.HeaderText.Contains("ITEMS"))
+                //    {
+                //        int columnWidth = dgvDetalleTablaComparativa.Columns[column.Index].GetPreferredWidth(DataGridViewAutoSizeColumnMode.DisplayedCells, true);
+                //        itemsWidth = Math.Max(itemsWidth, columnWidth);
+                //    }   
+                //}
+
+
+                dgvDetalleTablaComparativa.AutoResizeColumns();
+
+
 
             }
 
@@ -435,35 +511,68 @@ namespace SysCisepro3.Contabilidad.Compras
             string ruta = System.IO.Path.Combine(Application.StartupPath, "Temp.pdf");
 
 
-            Document document = new Document(PageSize.A4);
+            Document document = new Document();
             try
             {
                 PdfWriter writer = PdfWriter.GetInstance(document, new FileStream(ruta, FileMode.Create));
                 document.Open();
                 string rutaImagen = Validaciones.NombreLogoNuevo(TipoCon, Application.StartupPath);
                 iTextSharp.text.Image logo = iTextSharp.text.Image.GetInstance(rutaImagen);
-                logo.ScaleToFit(100, 100);
-                document.Add(logo);
+                logo.ScaleToFit(60, 60);                
 
                 iTextSharp.text.Font fuente12 = FontFactory.GetFont(FontFactory.HELVETICA, 12, BaseColor.BLACK);
                 iTextSharp.text.Font fuente10 = FontFactory.GetFont(FontFactory.HELVETICA, 10, BaseColor.BLACK);
                 iTextSharp.text.Font fuente8 = FontFactory.GetFont(FontFactory.HELVETICA, 8, BaseColor.BLACK);
-                Paragraph title = new Paragraph("TABLA COMPARATIVA DE COMPRAS",fuente12);
-                title.Alignment = Element.ALIGN_CENTER;
-                document.Add(title);
 
-                document.Add(new Paragraph("\n"));
+                foreach (DataGridViewColumn column in dgvDetalleTablaComparativa.Columns)
+                {
+                    int columnWidth = dgvDetalleTablaComparativa.Columns[column.Index].GetPreferredWidth(DataGridViewAutoSizeColumnMode.DisplayedCells, true);
+                    if (column.HeaderText == "ITEMS")
+                        itemsWidth = columnWidth;
+                    else if (column.HeaderText.Contains("Precio"))
+                        facturaWidth = columnWidth;
+                    else if (column.HeaderText.Contains("Crédito"))
+                        creditoWidth = columnWidth;
+                    else if (column.HeaderText.Contains("Días"))
+                        diasWidth = columnWidth;
+                }
 
-                PdfPTable tabla = new PdfPTable(dgvDetalleTablaComparativa.ColumnCount);
+                float headerHeight = 70;
+                PdfPTable headerTable = new PdfPTable(3); // header;
+                headerTable.TotalWidth = 550;
+                
+                float[] columnWidthTabla0 = new float[] { itemsWidth, facturaWidth + creditoWidth + diasWidth, 50f };
+                headerTable.SetWidths(columnWidthTabla0);
+                headerTable.HorizontalAlignment = Element.ALIGN_CENTER;
+                
+                PdfPCell logoCell = new PdfPCell(logo) { Border = iTextSharp.text.Rectangle.NO_BORDER, FixedHeight = headerHeight,HorizontalAlignment = Element.ALIGN_CENTER  };
+                headerTable.AddCell(logoCell);
 
-                float[] columnWidthTabla1 = new float[] {0f, 5f,4f,2f,2f,2f};
-                tabla.DefaultCell.Border = iTextSharp.text.Rectangle.NO_BORDER;
+                PdfPCell tituloCell = new PdfPCell(new Phrase("TABLA COMPARATIVA DE PRECIOS", fuente12)) { Border = iTextSharp.text.Rectangle.NO_BORDER, HorizontalAlignment = Element.ALIGN_CENTER, FixedHeight = headerHeight };
+                headerTable.AddCell(tituloCell);
+
+                PdfPCell rightCell = new PdfPCell() { Border = iTextSharp.text.Rectangle.NO_BORDER, HorizontalAlignment = Element.ALIGN_CENTER, FixedHeight = headerHeight };
+
+                rightCell.AddElement(new Phrase("Código: RE 3.6.1-3", fuente8));
+                rightCell.AddElement(new Phrase("Versión: 002", fuente8));
+                rightCell.AddElement(new Phrase("Página: 1 de 1", fuente8));
+                rightCell.AddElement(new Phrase("Fecha de Realización: 03/04/2013" , fuente8));
+
+                headerTable.AddCell(rightCell);
+                headerTable.WriteSelectedRows(0, -1, 100, 600, writer.DirectContent);
+                document.Add(headerTable);
+
+
+
+                PdfPTable tabla2 = new PdfPTable(dgvDetalleTablaComparativa.ColumnCount); // table dgv;
+                float[] columnWidthTabla1 = new float[] {4f, 5f,4f,2f,2f,2f,2f};
+                tabla2.DefaultCell.Border = iTextSharp.text.Rectangle.NO_BORDER;
                 for (int i = 0; i < dgvDetalleTablaComparativa.ColumnCount; i++)
                 {
                     PdfPCell cell = new PdfPCell(new Phrase(dgvDetalleTablaComparativa.Columns[i].HeaderText, fuente10));
                     cell.BackgroundColor = BaseColor.LIGHT_GRAY;
                     cell.HorizontalAlignment = Element.ALIGN_CENTER;
-                    tabla.AddCell(cell);
+                    tabla2.AddCell(cell);
                 }
 
                
@@ -476,12 +585,12 @@ namespace SysCisepro3.Contabilidad.Compras
                             PdfPCell cell = new PdfPCell(new Phrase(dgvDetalleTablaComparativa[col, row].Value.ToString(), fuente8));
                             cell.HorizontalAlignment = Element.ALIGN_LEFT;
                             cell.BackgroundColor = BaseColor.WHITE;
-                            tabla.AddCell(cell);
+                            tabla2.AddCell(cell);
                         }
                     }
                 }                                  
-                tabla.SetWidths(columnWidthTabla1);
-                document.Add(tabla);
+                tabla2.SetWidths(columnWidthTabla1);
+                document.Add(tabla2);
                 document.Close();
                 pdfViewer1.LoadDocument(ruta);                                              
 
