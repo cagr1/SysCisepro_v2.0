@@ -26,6 +26,11 @@ using iTextSharp.text;
 using iTextSharp.text.pdf;
 using Patagames.Pdf.Net.Wrappers;
 using System.Windows.Controls;
+using ComponentFactory.Krypton.Docking;
+//using LiveCharts.Wpf;
+using LiveCharts.WinForms;
+using LiveCharts;
+using LiveCharts.Wpf;
 
 
 
@@ -38,7 +43,7 @@ namespace SysCisepro3.Contabilidad.Compras
 
         public static TipoConexion TipoCon { private get; set; }
         public static ClassUsuarioGeneral Usuario { private get; set; }
-
+        
         private static FrmTablaComparacionCompra _instance;
         public static FrmTablaComparacionCompra Instancia
         {
@@ -68,6 +73,7 @@ namespace SysCisepro3.Contabilidad.Compras
             _objSecuencialItem = new ClassSecuencialItem();
             _objTablaComparativa = new ClassTablaComparativa();
             _objDetalleTablaComparativa = new ClassDetalleTablaComparativa();
+           
 
         }
 
@@ -88,8 +94,8 @@ namespace SysCisepro3.Contabilidad.Compras
             ValidationForms.SetPlaceholder(txtProveedor, "Ingrese el Proveedor..");
             ValidationForms.SetPlaceholder(txtObservaciones, "Ingrese Observaciones..");
             ValidationForms.SetPlaceholder(txtBuscar, "Buscar por observaciones..");
+          
 
-         
         }
 
         private void dgvIngresoTabla_EditingControlShowing(object sender, DataGridViewEditingControlShowingEventArgs e)
@@ -114,10 +120,12 @@ namespace SysCisepro3.Contabilidad.Compras
             if(dgvIngresoTabla.CurrentCell.ColumnIndex == 2 || dgvIngresoTabla.CurrentCell.ColumnIndex == 3 || dgvIngresoTabla.CurrentCell.ColumnIndex == 4)
             {
                 itemName.KeyPress += Item_KeyPress ;
+                        
             }           
            
         }
 
+        
         private void Item_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (char.IsControl(e.KeyChar))
@@ -440,29 +448,7 @@ namespace SysCisepro3.Contabilidad.Compras
                 }
                 dgvDetalleTablaComparativa.DataSource = dtPivot;
 
-                //foreach (DataGridViewColumn column in dgvDetalleTablaComparativa.Columns)
-                //{
-                //    if (column.HeaderText.Contains("Precio"))
-                //    {
-                //        int columnWidth = dgvDetalleTablaComparativa.Columns[column.Index].GetPreferredWidth(DataGridViewAutoSizeColumnMode.DisplayedCells, true);
-                //        facturaWidth = Math.Max(facturaWidth, columnWidth);
-                //    }
-                //    else if (column.HeaderText.Contains("Crédito"))
-                //    {
-                //        int columnWidth = dgvDetalleTablaComparativa.Columns[column.Index].GetPreferredWidth(DataGridViewAutoSizeColumnMode.DisplayedCells, true);
-                //        creditoWidth = Math.Max(creditoWidth, columnWidth);
-                //    }
-                //    else if (column.HeaderText.Contains("Días"))
-                //    {
-                //        int columnWidth = dgvDetalleTablaComparativa.Columns[column.Index].GetPreferredWidth(DataGridViewAutoSizeColumnMode.DisplayedCells, true);
-                //        diasWidth = Math.Max(diasWidth, columnWidth);
-                //    }
-                //    else if (column.HeaderText.Contains("ITEMS"))
-                //    {
-                //        int columnWidth = dgvDetalleTablaComparativa.Columns[column.Index].GetPreferredWidth(DataGridViewAutoSizeColumnMode.DisplayedCells, true);
-                //        itemsWidth = Math.Max(itemsWidth, columnWidth);
-                //    }   
-                //}
+               
 
 
                 dgvDetalleTablaComparativa.AutoResizeColumns();
@@ -507,92 +493,203 @@ namespace SysCisepro3.Contabilidad.Compras
         private void btnExportar_Click(object sender, EventArgs e)
         {
           
-          
+            pdfViewer1.CloseDocument();
             string ruta = System.IO.Path.Combine(Application.StartupPath, "Temp.pdf");
+            string rutaFacturaChart = Path.Combine(Application.StartupPath, "FacturaChart.png");
+            string rutaCreditoChart = Path.Combine(Application.StartupPath, "CreditoChart.png");
+            string rutaTiempoChart = Path.Combine(Application.StartupPath, "TiempoChart.png");
 
+            CreateFacturaChart(rutaFacturaChart);
+            //CreateCreditoChart(rutaCreditoChart);
+            //CreateTiempoChart(rutaTiempoChart);
+
+
+            if (File.Exists(ruta))
+            {              
+                    File.Delete(ruta);                
+            }
 
             Document document = new Document();
+            PdfWriter writer = null;
+            FileStream fs = null;
             try
             {
-                PdfWriter writer = PdfWriter.GetInstance(document, new FileStream(ruta, FileMode.Create));
-                document.Open();
-                string rutaImagen = Validaciones.NombreLogoNuevo(TipoCon, Application.StartupPath);
-                iTextSharp.text.Image logo = iTextSharp.text.Image.GetInstance(rutaImagen);
-                logo.ScaleToFit(60, 60);                
+                fs = new FileStream(ruta, FileMode.Create);
+                writer = PdfWriter.GetInstance(document, fs);                
 
-                iTextSharp.text.Font fuente12 = FontFactory.GetFont(FontFactory.HELVETICA, 12, BaseColor.BLACK);
-                iTextSharp.text.Font fuente10 = FontFactory.GetFont(FontFactory.HELVETICA, 10, BaseColor.BLACK);
-                iTextSharp.text.Font fuente8 = FontFactory.GetFont(FontFactory.HELVETICA, 8, BaseColor.BLACK);
+                        iTextSharp.text.Rectangle pageSize = new iTextSharp.text.Rectangle(1000, 700);
+                        document.SetPageSize(pageSize);
+                        document.Open();
 
-                foreach (DataGridViewColumn column in dgvDetalleTablaComparativa.Columns)
-                {
-                    int columnWidth = dgvDetalleTablaComparativa.Columns[column.Index].GetPreferredWidth(DataGridViewAutoSizeColumnMode.DisplayedCells, true);
-                    if (column.HeaderText == "ITEMS")
-                        itemsWidth = columnWidth;
-                    else if (column.HeaderText.Contains("Precio"))
-                        facturaWidth = columnWidth;
-                    else if (column.HeaderText.Contains("Crédito"))
-                        creditoWidth = columnWidth;
-                    else if (column.HeaderText.Contains("Días"))
-                        diasWidth = columnWidth;
-                }
+                        iTextSharp.text.Image facturaImage = iTextSharp.text.Image.GetInstance(rutaFacturaChart);
+                        facturaImage.ScaleToFit(400, 300); // Adjust size as needed
+                        document.Add(facturaImage);
 
-                float headerHeight = 70;
-                PdfPTable headerTable = new PdfPTable(3); // header;
-                headerTable.TotalWidth = 550;
-                
-                float[] columnWidthTabla0 = new float[] { itemsWidth, facturaWidth + creditoWidth + diasWidth, 50f };
-                headerTable.SetWidths(columnWidthTabla0);
-                headerTable.HorizontalAlignment = Element.ALIGN_CENTER;
-                
-                PdfPCell logoCell = new PdfPCell(logo) { Border = iTextSharp.text.Rectangle.NO_BORDER, FixedHeight = headerHeight,HorizontalAlignment = Element.ALIGN_CENTER  };
-                headerTable.AddCell(logoCell);
+                        iTextSharp.text.Image creditoImage = iTextSharp.text.Image.GetInstance(rutaCreditoChart);
+                        creditoImage.ScaleToFit(400, 300); // Adjust size as needed
+                        document.Add(creditoImage);
 
-                PdfPCell tituloCell = new PdfPCell(new Phrase("TABLA COMPARATIVA DE PRECIOS", fuente12)) { Border = iTextSharp.text.Rectangle.NO_BORDER, HorizontalAlignment = Element.ALIGN_CENTER, FixedHeight = headerHeight };
-                headerTable.AddCell(tituloCell);
-
-                PdfPCell rightCell = new PdfPCell() { Border = iTextSharp.text.Rectangle.NO_BORDER, HorizontalAlignment = Element.ALIGN_CENTER, FixedHeight = headerHeight };
-
-                rightCell.AddElement(new Phrase("Código: RE 3.6.1-3", fuente8));
-                rightCell.AddElement(new Phrase("Versión: 002", fuente8));
-                rightCell.AddElement(new Phrase("Página: 1 de 1", fuente8));
-                rightCell.AddElement(new Phrase("Fecha de Realización: 03/04/2013" , fuente8));
-
-                headerTable.AddCell(rightCell);
-                headerTable.WriteSelectedRows(0, -1, 100, 600, writer.DirectContent);
-                document.Add(headerTable);
+                        iTextSharp.text.Image tiempoImage = iTextSharp.text.Image.GetInstance(rutaTiempoChart);
+                        tiempoImage.ScaleToFit(400, 300); // Adjust size as needed
+                        document.Add(tiempoImage);
 
 
 
-                PdfPTable tabla2 = new PdfPTable(dgvDetalleTablaComparativa.ColumnCount); // table dgv;
-                float[] columnWidthTabla1 = new float[] {4f, 5f,4f,2f,2f,2f,2f};
-                tabla2.DefaultCell.Border = iTextSharp.text.Rectangle.NO_BORDER;
-                for (int i = 0; i < dgvDetalleTablaComparativa.ColumnCount; i++)
-                {
-                    PdfPCell cell = new PdfPCell(new Phrase(dgvDetalleTablaComparativa.Columns[i].HeaderText, fuente10));
-                    cell.BackgroundColor = BaseColor.LIGHT_GRAY;
-                    cell.HorizontalAlignment = Element.ALIGN_CENTER;
-                    tabla2.AddCell(cell);
-                }
+                        string rutaImagen = Validaciones.NombreLogoNuevo(TipoCon, Application.StartupPath);
+                        iTextSharp.text.Image logo = iTextSharp.text.Image.GetInstance(rutaImagen);
+                        logo.ScaleToFit(60, 60);
+                        iTextSharp.text.Font fuente12 = FontFactory.GetFont(FontFactory.HELVETICA, 12, BaseColor.BLACK);
+                        iTextSharp.text.Font fuente10 = FontFactory.GetFont(FontFactory.HELVETICA, 10, BaseColor.BLACK);
+                        iTextSharp.text.Font fuente8 = FontFactory.GetFont(FontFactory.HELVETICA, 8, BaseColor.BLACK);
 
-               
-                for (int row = 0; row < dgvDetalleTablaComparativa.Rows.Count; row++)
-                {
-                    for (int col = 0; col < dgvDetalleTablaComparativa.ColumnCount; col++)
-                    {
-                        if (dgvDetalleTablaComparativa[col, row].Value != null)
+                        foreach (DataGridViewColumn column in dgvDetalleTablaComparativa.Columns)
                         {
-                            PdfPCell cell = new PdfPCell(new Phrase(dgvDetalleTablaComparativa[col, row].Value.ToString(), fuente8));
-                            cell.HorizontalAlignment = Element.ALIGN_LEFT;
+                            int columnWidth = dgvDetalleTablaComparativa.Columns[column.Index].GetPreferredWidth(DataGridViewAutoSizeColumnMode.DisplayedCells, true);
+                            if (column.HeaderText == "ITEMS")
+                                itemsWidth = columnWidth;
+                            else if (column.HeaderText.Contains("Precio"))
+                            {
+                                facturaWidth = columnWidth;
+                            }
+                            else if (column.HeaderText.Contains("Crédito"))
+                                creditoWidth = columnWidth;
+                            else if (column.HeaderText.Contains("Días"))
+                                diasWidth = columnWidth;
+                        }
+
+                        float totalWidth = (facturaWidth + creditoWidth + diasWidth + itemsWidth) - 40;
+                        float tituloWidth = Convert.ToInt64((facturaWidth + creditoWidth + diasWidth) * 0.7);
+                        float codigoWidth = Convert.ToInt64((facturaWidth + creditoWidth + diasWidth) * 0.3);
+
+                        //Creacion de tabla encabezado
+                        float headerHeight = 70;
+                        PdfPTable headerTable = new PdfPTable(3);
+                        headerTable.TotalWidth = totalWidth;
+
+
+                        float[] columnWidthTabla0 = new float[] { itemsWidth, tituloWidth, codigoWidth };
+                        headerTable.SetWidths(columnWidthTabla0);
+                        headerTable.HorizontalAlignment = Element.ALIGN_CENTER;
+
+                        PdfPCell logoCell = new PdfPCell(logo) { HorizontalAlignment = Element.ALIGN_CENTER, VerticalAlignment = Element.ALIGN_MIDDLE };
+                        headerTable.AddCell(logoCell);
+
+                        PdfPCell tituloCell = new PdfPCell(new Phrase("TABLA COMPARATIVA DE PRECIOS", fuente12)) { HorizontalAlignment = Element.ALIGN_CENTER, VerticalAlignment = Element.ALIGN_MIDDLE };
+                        headerTable.AddCell(tituloCell);
+
+                        PdfPCell rightCell = new PdfPCell() { HorizontalAlignment = Element.ALIGN_CENTER, FixedHeight = headerHeight, Border = PdfPCell.BOX };
+
+                        rightCell.AddElement(new Phrase("Código: RE 3.6.1-3", fuente8));
+                        rightCell.AddElement(new Phrase("Versión: 002", fuente8));
+                        rightCell.AddElement(new Phrase("Página: 1 de 1", fuente8));
+                        rightCell.AddElement(new Phrase("Fecha de Realización: 03/04/2013", fuente8));
+
+                        headerTable.AddCell(rightCell);
+                        headerTable.WriteSelectedRows(0, -1, 10, 590, writer.DirectContent);
+
+                        //Creacion de tabla subencabezado
+
+                        int subHeaderHeight = 20;
+                        float subHeaderWidth = totalWidth - itemsWidth + 40;
+                        float subHeaderColumnWidth = subHeaderWidth / 3;
+                        PdfPTable SubHeader = new PdfPTable(4);
+                        float[] columnWidthSubheader = new float[4];
+                        columnWidthSubheader[0] = itemsWidth;
+                        columnWidthSubheader[1] = subHeaderColumnWidth;
+                        columnWidthSubheader[2] = subHeaderColumnWidth;
+                        columnWidthSubheader[3] = subHeaderColumnWidth;
+
+                        SubHeader.TotalWidth = totalWidth;
+                        SubHeader.SetWidths(columnWidthSubheader);
+
+                        PdfPCell SubHeaderCell1 = new PdfPCell(new Phrase("", fuente10)) { HorizontalAlignment = Element.ALIGN_CENTER, VerticalAlignment = Element.ALIGN_MIDDLE, BackgroundColor = BaseColor.LIGHT_GRAY, FixedHeight = subHeaderHeight };
+                        SubHeaderCell1.BorderWidthBottom = 0;
+                        PdfPCell SubHeaderCell2 = new PdfPCell(new Phrase("FACTURACION", fuente10)) { HorizontalAlignment = Element.ALIGN_CENTER, VerticalAlignment = Element.ALIGN_MIDDLE, BackgroundColor = BaseColor.LIGHT_GRAY, FixedHeight = subHeaderHeight };
+                        PdfPCell SubHeaderCell3 = new PdfPCell(new Phrase("CRÉDITO DIAS", fuente10)) { HorizontalAlignment = Element.ALIGN_CENTER, VerticalAlignment = Element.ALIGN_MIDDLE, BackgroundColor = BaseColor.LIGHT_GRAY, FixedHeight = subHeaderHeight };
+                        PdfPCell SubHeaderCell4 = new PdfPCell(new Phrase("TIEMPO DE ENTREGA", fuente10)) { HorizontalAlignment = Element.ALIGN_CENTER, VerticalAlignment = Element.ALIGN_MIDDLE, BackgroundColor = BaseColor.LIGHT_GRAY, FixedHeight = subHeaderHeight };
+
+                        SubHeader.AddCell(SubHeaderCell1);
+                        SubHeader.AddCell(SubHeaderCell2);
+                        SubHeader.AddCell(SubHeaderCell3);
+                        SubHeader.AddCell(SubHeaderCell4);
+
+                        SubHeader.WriteSelectedRows(0, -1, 10, 520, writer.DirectContent);
+
+
+                        //Creacion de tabla de datos
+                        int numProveedores = (dgvDetalleTablaComparativa.ColumnCount - 1) / 3;
+                        float totalProveedorWidth = totalWidth - itemsWidth;
+                        float proveedorPrecioWidth = facturaWidth / numProveedores;
+                        float proveedorCreditoWidth = creditoWidth / numProveedores;
+                        float proveedorDiasWidth = diasWidth / numProveedores;
+
+
+
+                        PdfPTable tabla2 = new PdfPTable(dgvDetalleTablaComparativa.ColumnCount); // table dgv;
+                        float[] columns1WidthTabla2 = new float[dgvDetalleTablaComparativa.ColumnCount];
+                        columns1WidthTabla2[0] = itemsWidth;
+
+                        for (int i = 1; i < dgvDetalleTablaComparativa.ColumnCount; i++)
+                        {
+                            if (i % 3 == 1)
+                            {
+                                columns1WidthTabla2[i] = proveedorPrecioWidth;
+                            }
+                            else if (i % 3 == 2)
+                            {
+                                columns1WidthTabla2[i] = proveedorCreditoWidth;
+                            }
+                            else
+                            {
+                                columns1WidthTabla2[i] = proveedorDiasWidth;
+                            }
+
+                        }
+
+                        tabla2.SetWidths(columns1WidthTabla2);
+                        tabla2.TotalWidth = totalWidth;
+                        tabla2.HorizontalAlignment = Element.ALIGN_CENTER;
+
+                        for (int i = 0; i < dgvDetalleTablaComparativa.ColumnCount; i++)
+                        {
+                            PdfPCell cell = new PdfPCell(new Phrase(dgvDetalleTablaComparativa.Columns[i].HeaderText, fuente10));
                             cell.BackgroundColor = BaseColor.WHITE;
+                            cell.HorizontalAlignment = Element.ALIGN_CENTER;
+
+                            if (i == 0)
+                            {
+                                cell.BorderWidthTop = 0;
+                                cell.BackgroundColor = BaseColor.LIGHT_GRAY;
+                            }
+
                             tabla2.AddCell(cell);
                         }
-                    }
-                }                                  
-                tabla2.SetWidths(columnWidthTabla1);
-                document.Add(tabla2);
-                document.Close();
-                pdfViewer1.LoadDocument(ruta);                                              
+
+
+                        for (int row = 0; row < dgvDetalleTablaComparativa.Rows.Count; row++)
+                        {
+                            for (int col = 0; col < dgvDetalleTablaComparativa.ColumnCount; col++)
+                            {
+                                if (dgvDetalleTablaComparativa[col, row].Value != null)
+                                {
+                                    PdfPCell cell = new PdfPCell(new Phrase(dgvDetalleTablaComparativa[col, row].Value.ToString(), fuente8))
+                                    {
+                                        HorizontalAlignment = Element.ALIGN_LEFT,
+                                        BackgroundColor = BaseColor.WHITE
+                                    };
+                                    tabla2.AddCell(cell);
+                                }
+                            }
+                        }
+
+                        tabla2.WriteSelectedRows(0, -1, 10, 500, writer.DirectContent);
+                        document.Close();
+                
+                
+                    
+                
+              
+                //pdfViewer1.LoadDocument(ruta);                                              
 
             }
 
@@ -600,7 +697,83 @@ namespace SysCisepro3.Contabilidad.Compras
             {
                 KryptonMessageBox.Show(ex.Message, "Aviso", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error);
             }
+            finally
+            {
+                if (writer != null)
+                {
+                    writer.Close();
+                }
+                if (fs != null)
+                {
+                    fs.Close();
+                    fs.Dispose();
+                }
+            }
 
+            if (File.Exists(ruta))
+            {
+                pdfViewer1.LoadDocument(ruta);
+            }
+
+        }
+
+        private void CreateFacturaChart(string filePath)
+        {
+
+            var chart = new LiveCharts.WinForms.CartesianChart();
+            // Populate chart with data from dgvDetalleComparacion for Facturación
+            var dt = (DataTable)dgvDetalleTablaComparativa.DataSource;
+            var proveedores = dt.AsEnumerable().Select(row => row["Proveedor"].ToString().Trim()).Distinct().ToList();
+            var items = dt.AsEnumerable().Select(row => row["ITEMS"].ToString().Trim()).ToList();
+
+            var seriesCollection = new SeriesCollection();
+
+            foreach (var item in items)
+            {
+                var values = new ChartValues<decimal>();
+
+                foreach (var proveedor in proveedores)
+                {
+                    var data = dt.AsEnumerable()
+                        .FirstOrDefault(row => row["ITEMS"].ToString().Trim().Equals(item.Trim(), StringComparison.OrdinalIgnoreCase) &&
+                                               row["Proveedor"].ToString().Trim().Equals(proveedor.Trim(), StringComparison.OrdinalIgnoreCase));
+
+                    // If data exists, add the price; otherwise, add 0
+                    values.Add(data != null ? Convert.ToDecimal(data[$"{proveedor} (Precio)"]) : 0);
+                }
+
+                // Create a new column series for the current item
+                var columnSeries = new ColumnSeries
+                {
+                    Title = item,
+                    Values = values
+                };
+                seriesCollection.Add(columnSeries);
+            }
+
+            // Set the series collection to the chart
+            chart.Series = seriesCollection;
+
+            // Configure axes
+            chart.AxisX.Add(new Axis
+            {
+                Title = "Proveedores",
+                Labels = proveedores.ToArray()
+            });
+
+            chart.AxisY.Add(new Axis
+            {
+                Title = "Precio",
+                LabelFormatter = value => value.ToString("C")
+            });
+
+            
+            //chart.SaveImage(filePath, System.Drawing.Imaging.ImageFormat.Png);
+
+            
+            chart.Dispose();
+
+            // Save the chart to filePath as an image
         }
     }
 }
