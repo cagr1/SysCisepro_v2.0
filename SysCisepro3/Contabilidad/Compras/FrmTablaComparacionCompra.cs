@@ -28,9 +28,9 @@ using Patagames.Pdf.Net.Wrappers;
 using System.Windows.Controls;
 using ComponentFactory.Krypton.Docking;
 //using LiveCharts.Wpf;
-using LiveCharts.WinForms;
-using LiveCharts;
-using LiveCharts.Wpf;
+using static iText.StyledXmlParser.Jsoup.Select.Evaluator;
+using System.Threading;
+using System.Windows.Forms.DataVisualization.Charting;
 
 
 
@@ -500,8 +500,8 @@ namespace SysCisepro3.Contabilidad.Compras
             string rutaTiempoChart = Path.Combine(Application.StartupPath, "TiempoChart.png");
 
             CreateFacturaChart(rutaFacturaChart);
-            //CreateCreditoChart(rutaCreditoChart);
-            //CreateTiempoChart(rutaTiempoChart);
+            CreateCreditoChart(rutaCreditoChart);
+            CreateTiempoChart(rutaTiempoChart);
 
 
             if (File.Exists(ruta))
@@ -522,20 +522,23 @@ namespace SysCisepro3.Contabilidad.Compras
                         document.Open();
 
                         iTextSharp.text.Image facturaImage = iTextSharp.text.Image.GetInstance(rutaFacturaChart);
-                        facturaImage.ScaleToFit(400, 300); // Adjust size as needed
+                        facturaImage.ScaleToFit(300, 300); 
+                        facturaImage.SetAbsolutePosition(50, 100);
                         document.Add(facturaImage);
 
                         iTextSharp.text.Image creditoImage = iTextSharp.text.Image.GetInstance(rutaCreditoChart);
-                        creditoImage.ScaleToFit(400, 300); // Adjust size as needed
+                        creditoImage.ScaleToFit(300, 300);
+                        creditoImage.SetAbsolutePosition(350, 100);
                         document.Add(creditoImage);
 
                         iTextSharp.text.Image tiempoImage = iTextSharp.text.Image.GetInstance(rutaTiempoChart);
-                        tiempoImage.ScaleToFit(400, 300); // Adjust size as needed
+                        tiempoImage.ScaleToFit(300, 300);
+                        tiempoImage.SetAbsolutePosition(650, 100);
                         document.Add(tiempoImage);
 
 
 
-                        string rutaImagen = Validaciones.NombreLogoNuevo(TipoCon, Application.StartupPath);
+                string rutaImagen = Validaciones.NombreLogoNuevo(TipoCon, Application.StartupPath);
                         iTextSharp.text.Image logo = iTextSharp.text.Image.GetInstance(rutaImagen);
                         logo.ScaleToFit(60, 60);
                         iTextSharp.text.Font fuente12 = FontFactory.GetFont(FontFactory.HELVETICA, 12, BaseColor.BLACK);
@@ -720,60 +723,281 @@ namespace SysCisepro3.Contabilidad.Compras
         private void CreateFacturaChart(string filePath)
         {
 
-            var chart = new LiveCharts.WinForms.CartesianChart();
-            // Populate chart with data from dgvDetalleComparacion for Facturación
-            var dt = (DataTable)dgvDetalleTablaComparativa.DataSource;
-            var proveedores = dt.AsEnumerable().Select(row => row["Proveedor"].ToString().Trim()).Distinct().ToList();
-            var items = dt.AsEnumerable().Select(row => row["ITEMS"].ToString().Trim()).ToList();
+            DataTable dt = _objDetalleTablaComparativa.buscarDetalleTablaComparativa(TipoCon, Convert.ToInt32(dgvTablaComparativa.CurrentRow.Cells[0].Value.ToString()));
+            DataTable dtPivot = new DataTable();
+            dtPivot.Columns.Add("Proveedor", typeof(string)); // Providers on X-Axis
 
-            var seriesCollection = new SeriesCollection();
-
-            foreach (var item in items)
+            // Get unique product/service names for series
+            var productos = dt.AsEnumerable().Select(row => row["Producto/Servicio"].ToString().Trim()).Distinct().ToList();
+            foreach (var producto in productos)
             {
-                var values = new ChartValues<decimal>();
-
-                foreach (var proveedor in proveedores)
-                {
-                    var data = dt.AsEnumerable()
-                        .FirstOrDefault(row => row["ITEMS"].ToString().Trim().Equals(item.Trim(), StringComparison.OrdinalIgnoreCase) &&
-                                               row["Proveedor"].ToString().Trim().Equals(proveedor.Trim(), StringComparison.OrdinalIgnoreCase));
-
-                    // If data exists, add the price; otherwise, add 0
-                    values.Add(data != null ? Convert.ToDecimal(data[$"{proveedor} (Precio)"]) : 0);
-                }
-
-                // Create a new column series for the current item
-                var columnSeries = new ColumnSeries
-                {
-                    Title = item,
-                    Values = values
-                };
-                seriesCollection.Add(columnSeries);
+                dtPivot.Columns.Add(producto, typeof(decimal)); // One series per product
             }
 
-            // Set the series collection to the chart
-            chart.Series = seriesCollection;
-
-            // Configure axes
-            chart.AxisX.Add(new Axis
+            var proveedores = dt.AsEnumerable().Select(row => row["Proveedor"].ToString().Trim()).Distinct().ToList();
+            foreach (var proveedor in proveedores)
             {
-                Title = "Proveedores",
-                Labels = proveedores.ToArray()
-            });
+                DataRow newRow = dtPivot.NewRow();
+                newRow["Proveedor"] = proveedor; // X-axis label
 
-            chart.AxisY.Add(new Axis
-            {
-                Title = "Precio",
-                LabelFormatter = value => value.ToString("C")
-            });
+                foreach (var producto in productos)
+                {
+                    var data = dt.AsEnumerable()
+                        .FirstOrDefault(row => row["Producto/Servicio"].ToString().Trim().Equals(producto.Trim(), StringComparison.OrdinalIgnoreCase) &&
+                                               row["Proveedor"].ToString().Trim().Equals(proveedor.Trim(), StringComparison.OrdinalIgnoreCase));
+
+                    newRow[producto] = data != null ? Convert.ToDecimal(data["Precio"]) : 0;
+                }
+                dtPivot.Rows.Add(newRow);
+            }
 
             
-            //chart.SaveImage(filePath, System.Drawing.Imaging.ImageFormat.Png);
+            var chart = new Chart
+            {
+                Width = 800,
+                Height = 600
+            };
 
+            var chartArea = new ChartArea
+            {
+               AxisX = {  Interval = 1, LabelStyle = { Angle = -45 } }, // Providers on the X-axis
+                AxisY = { Title = "Precio" }  // Y-axis for pricing
+            };
+            chart.ChartAreas.Add(chartArea);
+
+            Dictionary<string, Color> proveedorColors = new Dictionary<string, Color>();
+            Random rand = new Random();
+
+            foreach (var proveedor in proveedores)
+            {
+                // Assign a random unique color to each supplier
+                proveedorColors[proveedor] = Color.FromArgb(rand.Next(256), rand.Next(256), rand.Next(256));
+            }
+
+            foreach (var proveedor in proveedores)
+            {
+                var series = new Series
+                {
+                    Name = proveedor, // Series name is the supplier
+                    IsVisibleInLegend = true,
+                    ChartType = SeriesChartType.Column,
+                    Color = proveedorColors[proveedor] // Assign supplier's unique color
+                };
+
+                foreach (var producto in productos)
+                {
+                    var dataPoint = new DataPoint
+                    {
+                        AxisLabel = $"{producto}", // Display only the product name on the column
+                        YValues = new[] { Convert.ToDouble(dtPivot.Rows[proveedores.IndexOf(proveedor)][producto]) },
+                        
+                    };
+                    series.Points.Add(dataPoint);
+                }
+
+                chart.Series.Add(series);
+            }
             
-            chart.Dispose();
+            var legend = new Legend
+            {
+                Title = "Proveedores", // Title for the legend
+                Docking = Docking.Bottom,
+                Alignment = StringAlignment.Center,
+                IsTextAutoFit = true
+            };
+            chart.Legends.Add(legend);
 
-            // Save the chart to filePath as an image
+
+            chart.SaveImage(filePath, ChartImageFormat.Png);
+
         }
-    }
+
+        private void CreateCreditoChart(string filePath)
+        {
+
+            DataTable dt = _objDetalleTablaComparativa.buscarDetalleTablaComparativa(TipoCon, Convert.ToInt32(dgvTablaComparativa.CurrentRow.Cells[0].Value.ToString()));
+            DataTable dtPivot = new DataTable();
+            dtPivot.Columns.Add("Proveedor", typeof(string)); // Providers on X-Axis
+
+            // Get unique product/service names for series
+            var productos = dt.AsEnumerable().Select(row => row["Producto/Servicio"].ToString().Trim()).Distinct().ToList();
+            foreach (var producto in productos)
+            {
+                dtPivot.Columns.Add(producto, typeof(decimal)); // One series per product
+            }
+
+            var proveedores = dt.AsEnumerable().Select(row => row["Proveedor"].ToString().Trim()).Distinct().ToList();
+            foreach (var proveedor in proveedores)
+            {
+                DataRow newRow = dtPivot.NewRow();
+                newRow["Proveedor"] = proveedor; // X-axis label
+
+                foreach (var producto in productos)
+                {
+                    var data = dt.AsEnumerable()
+                        .FirstOrDefault(row => row["Producto/Servicio"].ToString().Trim().Equals(producto.Trim(), StringComparison.OrdinalIgnoreCase) &&
+                                               row["Proveedor"].ToString().Trim().Equals(proveedor.Trim(), StringComparison.OrdinalIgnoreCase));
+
+                    newRow[producto] = data != null ? Convert.ToDecimal(data["Credito"]) : 0;
+                }
+                dtPivot.Rows.Add(newRow);
+            }
+
+
+            var chart = new Chart
+            {
+                Width = 800,
+                Height = 600
+            };
+
+            var chartArea = new ChartArea
+            {
+                AxisX = { Interval = 1, LabelStyle = { Angle = -45 } }, // Providers on the X-axis
+                AxisY = { Title = "Credito" }  // Y-axis for pricing
+            };
+            chart.ChartAreas.Add(chartArea);
+
+            Dictionary<string, Color> proveedorColors = new Dictionary<string, Color>();
+            Random rand = new Random();
+
+            foreach (var proveedor in proveedores)
+            {
+                // Assign a random unique color to each supplier
+                proveedorColors[proveedor] = Color.FromArgb(rand.Next(256), rand.Next(256), rand.Next(256));
+            }
+
+            foreach (var proveedor in proveedores)
+            {
+                var series = new Series
+                {
+                    Name = proveedor, // Series name is the supplier
+                    IsVisibleInLegend = true,
+                    ChartType = SeriesChartType.Column,
+                    Color = proveedorColors[proveedor] // Assign supplier's unique color
+                };
+
+                foreach (var producto in productos)
+                {
+                    var dataPoint = new DataPoint
+                    {
+                        AxisLabel = $"{producto}", // Display only the product name on the column
+                        YValues = new[] { Convert.ToDouble(dtPivot.Rows[proveedores.IndexOf(proveedor)][producto]) },
+
+                    };
+                    series.Points.Add(dataPoint);
+                }
+
+                chart.Series.Add(series);
+            }
+
+            var legend = new Legend
+            {
+                Title = "Proveedores", // Title for the legend
+                Docking = Docking.Bottom,
+                Alignment = StringAlignment.Center,
+                IsTextAutoFit = true
+            };
+            chart.Legends.Add(legend);
+
+
+            chart.SaveImage(filePath, ChartImageFormat.Png);
+        }
+
+
+        private void CreateTiempoChart(string filePath)
+        {
+            DataTable dt = _objDetalleTablaComparativa.buscarDetalleTablaComparativa(TipoCon, Convert.ToInt32(dgvTablaComparativa.CurrentRow.Cells[0].Value.ToString()));
+            DataTable dtPivot = new DataTable();
+            dtPivot.Columns.Add("Proveedor", typeof(string)); // Providers on X-Axis
+
+            // Get unique product/service names for series
+            var productos = dt.AsEnumerable().Select(row => row["Producto/Servicio"].ToString().Trim()).Distinct().ToList();
+            foreach (var producto in productos)
+            {
+                dtPivot.Columns.Add(producto, typeof(decimal)); // One series per product
+            }
+
+            var proveedores = dt.AsEnumerable().Select(row => row["Proveedor"].ToString().Trim()).Distinct().ToList();
+            foreach (var proveedor in proveedores)
+            {
+                DataRow newRow = dtPivot.NewRow();
+                newRow["Proveedor"] = proveedor; // X-axis label
+
+                foreach (var producto in productos)
+                {
+                    var data = dt.AsEnumerable()
+                        .FirstOrDefault(row => row["Producto/Servicio"].ToString().Trim().Equals(producto.Trim(), StringComparison.OrdinalIgnoreCase) &&
+                                                                       row["Proveedor"].ToString().Trim().Equals(proveedor.Trim(), StringComparison.OrdinalIgnoreCase));
+
+                    newRow[producto] = data != null ? Convert.ToDecimal(data["Dias"]) : 0;
+                }
+                dtPivot.Rows.Add(newRow);
+            }
+
+            var chart = new Chart
+            {
+                Width = 800,
+                Height = 600
+            };
+
+            var chartArea = new ChartArea
+            {
+                AxisX = { Interval = 1, LabelStyle = { Angle = -45 } }, // Providers on the X-axis
+                AxisY = { Title = "Dias de Entrega" }  // Y-axis for pricing
+            };
+            chart.ChartAreas.Add(chartArea);
+
+            Dictionary<string, Color> proveedorColors = new Dictionary<string, Color>();
+            Random rand = new Random();
+
+            foreach (var proveedor in proveedores)
+            {
+                // Assign a random unique color to each supplier
+                proveedorColors[proveedor] = Color.FromArgb(rand.Next(256), rand.Next(256), rand.Next(256));
+            }
+
+            foreach (var proveedor in proveedores)
+            {
+                var series = new Series
+                {
+                    Name = proveedor, // Series name is the supplier
+                    IsVisibleInLegend = true,
+                    ChartType = SeriesChartType.Column,
+                    Color = proveedorColors[proveedor] // Assign supplier's unique color
+                };
+
+                foreach (var producto in productos)
+                {
+                    var dataPoint = new DataPoint
+                    {
+                        AxisLabel = $"{producto}", // Display only the product name on the column
+                        YValues = new[] { Convert.ToDouble(dtPivot.Rows[proveedores.IndexOf(proveedor)][producto]) },
+
+                    };
+                    series.Points.Add(dataPoint);
+                }
+
+                chart.Series.Add(series);
+            }
+
+            var legend = new Legend
+            {
+                Title = "Proveedores", // Title for the legend
+                Docking = Docking.Bottom,
+                Alignment = StringAlignment.Center,
+                IsTextAutoFit = true
+            };
+            chart.Legends.Add(legend);
+
+
+            chart.SaveImage(filePath, ChartImageFormat.Png);
+
+
+        }
+
+
+
+
+
+        }
 }

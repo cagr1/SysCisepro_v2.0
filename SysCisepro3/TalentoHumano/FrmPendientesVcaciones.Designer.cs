@@ -97,6 +97,7 @@
             // Label1
             // 
             this.Label1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Label1.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label1.Location = new System.Drawing.Point(541, 516);
             this.Label1.Name = "Label1";
             this.Label1.Size = new System.Drawing.Size(445, 18);
@@ -242,6 +243,7 @@
             // label6
             // 
             this.label6.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label6.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(0, 516);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(552, 18);
