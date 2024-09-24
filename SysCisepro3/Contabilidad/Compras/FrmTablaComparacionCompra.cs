@@ -521,21 +521,7 @@ namespace SysCisepro3.Contabilidad.Compras
                         document.SetPageSize(pageSize);
                         document.Open();
 
-                        iTextSharp.text.Image facturaImage = iTextSharp.text.Image.GetInstance(rutaFacturaChart);
-                        facturaImage.ScaleToFit(300, 300); 
-                        facturaImage.SetAbsolutePosition(50, 100);
-                        document.Add(facturaImage);
-
-                        iTextSharp.text.Image creditoImage = iTextSharp.text.Image.GetInstance(rutaCreditoChart);
-                        creditoImage.ScaleToFit(300, 300);
-                        creditoImage.SetAbsolutePosition(350, 100);
-                        document.Add(creditoImage);
-
-                        iTextSharp.text.Image tiempoImage = iTextSharp.text.Image.GetInstance(rutaTiempoChart);
-                        tiempoImage.ScaleToFit(300, 300);
-                        tiempoImage.SetAbsolutePosition(650, 100);
-                        document.Add(tiempoImage);
-
+                        
 
 
                 string rutaImagen = Validaciones.NombreLogoNuevo(TipoCon, Application.StartupPath);
@@ -588,7 +574,7 @@ namespace SysCisepro3.Contabilidad.Compras
                         rightCell.AddElement(new Phrase("Fecha de Realización: 03/04/2013", fuente8));
 
                         headerTable.AddCell(rightCell);
-                        headerTable.WriteSelectedRows(0, -1, 10, 590, writer.DirectContent);
+                        headerTable.WriteSelectedRows(0, -1, 10, 690, writer.DirectContent);
 
                         //Creacion de tabla subencabezado
 
@@ -616,7 +602,7 @@ namespace SysCisepro3.Contabilidad.Compras
                         SubHeader.AddCell(SubHeaderCell3);
                         SubHeader.AddCell(SubHeaderCell4);
 
-                        SubHeader.WriteSelectedRows(0, -1, 10, 520, writer.DirectContent);
+                        SubHeader.WriteSelectedRows(0, -1, 10, 620, writer.DirectContent);
 
 
                         //Creacion de tabla de datos
@@ -685,14 +671,77 @@ namespace SysCisepro3.Contabilidad.Compras
                             }
                         }
 
-                        tabla2.WriteSelectedRows(0, -1, 10, 500, writer.DirectContent);
-                        document.Close();
+                        tabla2.WriteSelectedRows(0, -1, 10, 600, writer.DirectContent);
+
+                        PdfPTable ObservacionesTable = new PdfPTable(2);
+                        
+                        float[] columnWidthObservaciones = new float[2];
+                        columnWidthObservaciones[0] = itemsWidth;
+                        columnWidthObservaciones[1] = (facturaWidth + creditoWidth + diasWidth) ;
+                        ObservacionesTable.SetWidths(columnWidthObservaciones);
+                        ObservacionesTable.TotalWidth = totalWidth;
+
+                PdfPCell ObservacionesCell1 = new PdfPCell(new Phrase("Justificacion de Seleccion de Proveedor", fuente10)) { HorizontalAlignment = Element.ALIGN_CENTER, VerticalAlignment = Element.ALIGN_MIDDLE, BackgroundColor = BaseColor.LIGHT_GRAY, FixedHeight = 20 };
+                PdfPCell ObservacionesCell2 = new PdfPCell(new Phrase(dgvTablaComparativa.CurrentRow.Cells[1].Value.ToString(), fuente10)) { HorizontalAlignment = Element.ALIGN_CENTER, VerticalAlignment = Element.ALIGN_MIDDLE, FixedHeight = 20 };
+                ObservacionesTable.AddCell(ObservacionesCell1);
+                ObservacionesTable.AddCell(ObservacionesCell2);
+                float yTable2 = 600 - tabla2.TotalHeight;
+
+                ObservacionesTable.WriteSelectedRows(0, -1, 10, yTable2 - 5, writer.DirectContent);
+
+                float yObservacionesTable = yTable2 - 5 - ObservacionesTable.TotalHeight;
+
+                PdfPTable FooterTable = new PdfPTable(1);
+                float[] columnWidhtFooter = new float[1];
+                columnWidhtFooter[0] = itemsWidth;
                 
-                
-                    
-                
-              
-                //pdfViewer1.LoadDocument(ruta);                                              
+                FooterTable.SetWidths(columnWidhtFooter);
+                FooterTable.TotalWidth = totalWidth;
+
+                PdfPCell FooterCell1 = new PdfPCell(new Phrase("Realizado por: " , fuente10)) { HorizontalAlignment = Element.ALIGN_CENTER, VerticalAlignment = Element.ALIGN_MIDDLE, FixedHeight = 20 };
+                FooterTable.AddCell(FooterCell1);
+                PdfPCell FooterCell2 = new PdfPCell(new Phrase("Ing. Karen Navarrete ", fuente10)) { HorizontalAlignment = Element.ALIGN_CENTER, VerticalAlignment = Element.ALIGN_MIDDLE, FixedHeight = 20 };
+                FooterTable.AddCell(FooterCell2);
+
+
+                if (yObservacionesTable < 350)
+                {
+                    document.NewPage();
+
+                    iTextSharp.text.Image facturaImage = iTextSharp.text.Image.GetInstance(rutaFacturaChart);
+                    facturaImage.ScaleToFit(300, 300);
+                    facturaImage.SetAbsolutePosition(10, 150);
+                    document.Add(facturaImage);
+
+                    iTextSharp.text.Image creditoImage = iTextSharp.text.Image.GetInstance(rutaCreditoChart);
+                    creditoImage.ScaleToFit(300, 300);
+                    creditoImage.SetAbsolutePosition(310, 150);
+                    document.Add(creditoImage);
+
+                    iTextSharp.text.Image tiempoImage = iTextSharp.text.Image.GetInstance(rutaTiempoChart);
+                    tiempoImage.ScaleToFit(300, 300);
+                    tiempoImage.SetAbsolutePosition(610, 150);
+                    document.Add(tiempoImage);
+
+                }
+
+                if (yObservacionesTable  < 100)
+                {
+                    document.NewPage();
+                    yObservacionesTable = 700;
+                }
+
+
+
+
+
+
+
+
+
+                document.Close();                                                 
+                        
+
 
             }
 

@@ -111,11 +111,11 @@ Namespace DATOS
             Dim company As String
             Select Case tipoCon
                 Case TipoConexion.Asenava
-                    company = "ASENAVA CIA. LTDA."
+                    company = "ASENAVA C. LTDA."
                 Case TipoConexion.Seportpac
-                    company = "SEPORTPAC CIA. LTDA."
+                    company = "SEPORTPAC C. LTDA."
                 Case Else
-                    company = "CISEPRO CIA. LTDA."
+                    company = "CISEPRO C. LTDA."
             End Select
             Return company
         End Function

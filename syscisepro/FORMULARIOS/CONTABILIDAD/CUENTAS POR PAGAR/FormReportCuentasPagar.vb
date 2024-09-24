@@ -64,7 +64,7 @@ Public Class FormReportCuentasPagar
                     crvReporteVentas.ReportSource = _crystalReportCuentasPagarMinGen
                 Else
                     For Each row As DataGridViewRow In DataGrid.Rows
-                        ds.Tables("CuentasPagarMinProv").Rows.Add(row.Cells(1).Value, row.Cells(2).Value, CDate(row.Cells(3).Value).ToString("dd/MM/yyyy"), row.Cells(4).Value, row.Cells(5).Value)
+                        ds.Tables("CuentasPagarMinProv").Rows.Add(row.Cells(1).Value, row.Cells(2).Value, CDate(row.Cells(3).Value).ToString("dd/MM/yyyy"), row.Cells(13).Value, row.Cells(15).Value)
                     Next
                     _crystalReportCuentasPagarMinProv.SetDataSource(ds.Tables("CuentasPagarMinProv"))
                     _crystalReportCuentasPagarMinProv.SetParameterValue("cia", ValidationForms.NombreCompany(_tipoCon))

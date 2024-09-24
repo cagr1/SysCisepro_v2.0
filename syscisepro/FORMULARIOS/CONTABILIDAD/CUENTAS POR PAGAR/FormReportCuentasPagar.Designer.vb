@@ -34,6 +34,7 @@ Partial Class FormReportCuentasPagar
         Me.crvReporteVentas.Location = New System.Drawing.Point(0, 0)
         Me.crvReporteVentas.Name = "crvReporteVentas"
         Me.crvReporteVentas.ShowCloseButton = False
+        Me.crvReporteVentas.ShowLogo = False
         Me.crvReporteVentas.Size = New System.Drawing.Size(1018, 611)
         Me.crvReporteVentas.TabIndex = 2
         Me.crvReporteVentas.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None

@@ -624,6 +624,14 @@
     <Compile Include="FORMULARIOS\CONJUNTO DE DATOS\VENTAS\DataSetVentasPdf.vb">
       <DependentUpon>DataSetVentasPdf.xsd</DependentUpon>
     </Compile>
+    <Compile Include="FORMULARIOS\CONJUNTO DE DATOS\VENTAS\dsCuentasxPagar.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsCuentasxPagar.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FORMULARIOS\CONJUNTO DE DATOS\VENTAS\dsCuentasxPagar.vb">
+      <DependentUpon>dsCuentasxPagar.xsd</DependentUpon>
+    </Compile>
     <Compile Include="FORMULARIOS\CONTABILIDAD\AUXILIARES\FormAuxiliaresVentas.Designer.vb">
       <DependentUpon>FormAuxiliaresVentas.vb</DependentUpon>
     </Compile>
@@ -4380,6 +4388,17 @@
     </None>
     <None Include="FORMULARIOS\CONJUNTO DE DATOS\VENTAS\DataSetVentasPdf.xss">
       <DependentUpon>DataSetVentasPdf.xsd</DependentUpon>
+    </None>
+    <None Include="FORMULARIOS\CONJUNTO DE DATOS\VENTAS\dsCuentasxPagar.xsc">
+      <DependentUpon>dsCuentasxPagar.xsd</DependentUpon>
+    </None>
+    <None Include="FORMULARIOS\CONJUNTO DE DATOS\VENTAS\dsCuentasxPagar.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsCuentasxPagar.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="FORMULARIOS\CONJUNTO DE DATOS\VENTAS\dsCuentasxPagar.xss">
+      <DependentUpon>dsCuentasxPagar.xsd</DependentUpon>
     </None>
     <None Include="FORMULARIOS\CONJUNTO DE DATOS\VENTAS\xmlFactura.xsd">
       <SubType>Designer</SubType>

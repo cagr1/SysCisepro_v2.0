@@ -58,6 +58,7 @@
             this.pdfToolStripMain1 = new Patagames.Pdf.Net.Controls.WinForms.ToolBars.PdfToolStripMain();
             this.pdfViewer1 = new Patagames.Pdf.Net.Controls.WinForms.PdfViewer();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.pdfToolStripPages1 = new Patagames.Pdf.Net.Controls.WinForms.ToolBars.PdfToolStripPages();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonNavigator1)).BeginInit();
             this.kryptonNavigator1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPage1)).BeginInit();
@@ -401,6 +402,7 @@
             // kryptonPage2
             // 
             this.kryptonPage2.AutoHiddenSlideSize = new System.Drawing.Size(200, 200);
+            this.kryptonPage2.Controls.Add(this.pdfToolStripPages1);
             this.kryptonPage2.Controls.Add(this.pdfToolStripMain1);
             this.kryptonPage2.Controls.Add(this.pdfViewer1);
             this.kryptonPage2.Flags = 65534;
@@ -456,6 +458,18 @@
             this.pdfViewer1.UseProgressiveRender = true;
             this.pdfViewer1.ViewMode = Patagames.Pdf.Net.Controls.WinForms.ViewModes.Vertical;
             this.pdfViewer1.Zoom = 1F;
+            // 
+            // pdfToolStripPages1
+            // 
+            this.pdfToolStripPages1.Dock = System.Windows.Forms.DockStyle.None;
+            this.pdfToolStripPages1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.pdfToolStripPages1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.pdfToolStripPages1.Location = new System.Drawing.Point(199, 20);
+            this.pdfToolStripPages1.Name = "pdfToolStripPages1";
+            this.pdfToolStripPages1.PdfViewer = this.pdfViewer1;
+            this.pdfToolStripPages1.Size = new System.Drawing.Size(211, 27);
+            this.pdfToolStripPages1.TabIndex = 2;
+            this.pdfToolStripPages1.Text = "pdfToolStripPages1";
             // 
             // FrmTablaComparacionCompra
             // 
@@ -528,5 +542,6 @@
         private Krypton.Toolkit.KryptonButton btnExportar;
         private Patagames.Pdf.Net.Controls.WinForms.PdfViewer pdfViewer1;
         private Patagames.Pdf.Net.Controls.WinForms.ToolBars.PdfToolStripMain pdfToolStripMain1;
+        private Patagames.Pdf.Net.Controls.WinForms.ToolBars.PdfToolStripPages pdfToolStripPages1;
     }
 }
