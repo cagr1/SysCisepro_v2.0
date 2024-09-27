@@ -248,6 +248,8 @@
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.dESCUENTOSPERSONALToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.rOLDEPAGOSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.rOLESToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aSIENTOSDEROLESToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salidaPersonaltoolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.iNFORMEDEPAGOtoolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator25 = new System.Windows.Forms.ToolStripSeparator();
@@ -2288,6 +2290,9 @@
             // 
             // rOLDEPAGOSToolStripMenuItem
             // 
+            this.rOLDEPAGOSToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.rOLESToolStripMenuItem,
+            this.aSIENTOSDEROLESToolStripMenuItem});
             this.rOLDEPAGOSToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rOLDEPAGOSToolStripMenuItem.Image = global::SysCisepro3.Properties.Resources.sticky_note_2_24dp_FILL0_wght400_GRAD0_opsz24;
             this.rOLDEPAGOSToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
@@ -2295,6 +2300,22 @@
             this.rOLDEPAGOSToolStripMenuItem.Size = new System.Drawing.Size(300, 30);
             this.rOLDEPAGOSToolStripMenuItem.Text = "ROL DE PAGOS";
             this.rOLDEPAGOSToolStripMenuItem.Click += new System.EventHandler(this.rOLDEPAGOSToolStripMenuItem_Click);
+            // 
+            // rOLESToolStripMenuItem
+            // 
+            this.rOLESToolStripMenuItem.Image = global::SysCisepro3.Properties.Resources.description_24dp_FILL0_wght400_GRAD0_opsz24;
+            this.rOLESToolStripMenuItem.Name = "rOLESToolStripMenuItem";
+            this.rOLESToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.rOLESToolStripMenuItem.Text = "ROLES";
+            this.rOLESToolStripMenuItem.Click += new System.EventHandler(this.rOLESToolStripMenuItem_Click);
+            // 
+            // aSIENTOSDEROLESToolStripMenuItem
+            // 
+            this.aSIENTOSDEROLESToolStripMenuItem.Image = global::SysCisepro3.Properties.Resources.edit_document_24dp_FILL0_wght400_GRAD0_opsz24;
+            this.aSIENTOSDEROLESToolStripMenuItem.Name = "aSIENTOSDEROLESToolStripMenuItem";
+            this.aSIENTOSDEROLESToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.aSIENTOSDEROLESToolStripMenuItem.Text = "ASIENTOS DE ROLES";
+            this.aSIENTOSDEROLESToolStripMenuItem.Click += new System.EventHandler(this.aSIENTOSDEROLESToolStripMenuItem_Click);
             // 
             // salidaPersonaltoolStripMenuItem
             // 
@@ -3089,6 +3110,8 @@
         private System.Windows.Forms.ToolStripButton toolStripButton2;
         private ComponentFactory.Krypton.Toolkit.KryptonPalette kryptonPalette1;
         private System.Windows.Forms.ToolStripMenuItem rEPORTToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem rOLESToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem aSIENTOSDEROLESToolStripMenuItem;
     }
 }
 

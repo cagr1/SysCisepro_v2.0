@@ -14,6 +14,8 @@ Imports syscisepro.DATOS
 Imports syscisepro.FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO.REPORTES
 Imports syscisepro.FORMULARIOS.INVENTARIOS.PROCESO
 Imports Krypton.Toolkit
+Imports ComponentFactory.Krypton.Docking.KryptonDockableNavigator
+
 
 
 Namespace FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
@@ -55,16 +57,20 @@ Namespace FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
         ReadOnly _objetoNumeroRegistro As New ClassNumeroRegistroAsiento
         ReadOnly _objetoAjustarAsientos As New ClassAjustarAsientosLibroDiario
         ReadOnly _objetoPlanCuentas As New ClassPlanDeCuentas
-        ReadOnly _objetoCentroCosto As New ClassCentroCosto 
+        ReadOnly _objetoCentroCosto As New ClassCentroCosto
         ReadOnly _objetoComprobanteEgresoBancos As New ClassComprobanteEgresoBanco
         ReadOnly _objetoComprobanteIngresoBancos As New ClassComprobanteIngresoBanco
         ReadOnly _objetoBanco As New ClassBancos
         ReadOnly _objetoCuentasBancos As New ClassCuentasBancos
 
 
+        ReadOnly _validacionesNumeros As New ClassNumerico
+        ReadOnly _validacionesAlfanumerica As New ClassAlfanumerico
+        ReadOnly _validacionesDecimales As New ClassDecimal
+
         Private _parametroBusqueda As Integer = 0
         Private _botonseleccionado As Integer = 0
-         
+
         Private Sub FormAjustarAsientosLibroDiario_Load(ByVal sender As System.Object, ByVal e As EventArgs) Handles MyBase.Load
             ' DEFINIR TIPO Y COLOR DE SISTEMA
             Select Case _tipoCon
@@ -93,6 +99,7 @@ Namespace FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
             dgvAsientosDiario.Font = New Font("Roboto", 8, FontStyle.Regular)
             dgvAsientoBuscado.Font = New Font("Roboto", 8, FontStyle.Regular)
             dgvNumeroRegistroAsiento.Font = New Font("Roboto", 8, FontStyle.Regular)
+            dgvAsientoRoles.Font = New Font("Roboto", 8, FontStyle.Regular)
             _sqlCommands = New List(Of SqlCommand)
 
             CargarNumeroRegistroAsientoLibroDiario()
@@ -107,6 +114,7 @@ Namespace FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
 
             LlenarComboCentroCosto()
             LlenarCuentasContables()
+            llenarCuentasContablesRoles()
 
             LlenarComboBancos()
             LlenarComboCuentasBancos()
@@ -308,6 +316,17 @@ Namespace FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
             txtConciliarAsiento.Enabled = False
             txtEstadoAsiento.Enabled = False
             txtIdLibroDiario.Enabled = False
+
+            '=== Roles
+            btnGenerar.Enabled = False
+            cbxCuenta.Enabled = False
+            dtpfecha.Enabled = False
+            txtdetalle.Enabled = False
+            cbxTipo.Enabled = False
+            txtFondoReservaxPagar.Enabled = False
+            txtAportePatronal.Enabled = False
+
+
         End Sub
         Private Sub LlenarComboCentroCosto()
             Try
@@ -320,17 +339,32 @@ Namespace FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
                 cmbCentroCosto.DataSource = Nothing
             End Try
         End Sub
+
+
         Private Sub LlenarCuentasContables()
             Try
                 Dim data = _objetoPlanCuentas.SeleccionarCuentasYDetallePlanDeCuentas(_tipoCon)
                 cmbCuentasContables.DataSource = data
                 cmbCuentasContables.DisplayMember = data.Columns(0).ToString
                 cmbCuentasContables.ValueMember = data.Columns(1).ToString
-                If (CType(cmbCuentasContables.DataSource, DataTable).Rows.Count > 0) Then cmbCuentasContables.SelectedIndex = 0 
+                If (CType(cmbCuentasContables.DataSource, DataTable).Rows.Count > 0) Then cmbCuentasContables.SelectedIndex = 0
             Catch
                 cmbCuentasContables.DataSource = Nothing
             End Try
         End Sub
+
+        Private Sub llenarCuentasContablesRoles()
+            Try
+                Dim data = _objetoPlanCuentas.SeleccionarCuentasYDetallePlanDeCuentas(_tipoCon)
+                cbxCuenta.DataSource = data
+                cbxCuenta.DisplayMember = data.Columns(0).ToString
+                cbxCuenta.ValueMember = data.Columns(1).ToString
+                If (CType(cbxCuenta.DataSource, DataTable).Rows.Count > 0) Then cbxCuenta.SelectedIndex = 0
+            Catch
+                cbxCuenta.DataSource = Nothing
+            End Try
+        End Sub
+
         Private Sub LlenarComboBancos()
             Try
                 Dim data = _objetoBanco.SeleccionarRegistrosBancos(_tipoCon)
@@ -400,7 +434,7 @@ Namespace FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
             If rbTransaccionInterna.Checked = True Then
                 Dim em = _objetoEmpresa.SeleccionarRegistroEmpresaGeneralInformacionTributaria(_tipoCon)
                 lblRucClienteProveedorPersonal.Text = em.Rows(0)(2)
-                txtNombreClienteProveedorPersonal.Text = em.Rows(0)(4) 
+                txtNombreClienteProveedorPersonal.Text = em.Rows(0)(4)
                 gbClienteProveedorPersonal.Enabled = False
             Else
                 lblRucClienteProveedorPersonal.Text = "0"
@@ -412,7 +446,7 @@ Namespace FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
             Dim frm As New FrmBuscarProveedorCliente
             frm.TipoCox = TipoCox
             frm.Todos = True
- 
+
             Try
                 If frm.ShowDialog = vbOK Then
                     If frm.rbtProveedor.Checked Then
@@ -428,7 +462,7 @@ Namespace FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
                         lblRucClienteProveedorPersonal.Text = frm.dgvCustodios.CurrentRow.Cells.Item(3).Value
                         txtNombreClienteProveedorPersonal.Text = frm.dgvCustodios.CurrentRow.Cells.Item(4).Value & " " & frm.dgvCustodios.CurrentRow.Cells.Item(5).Value
                     End If
-                     
+
                 End If
             Catch ex As Exception
                 MsgBox("BOTÓN BUSCAR PERSONAL." & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "MENSAJE DE EXCEPCIÓN")
@@ -441,7 +475,7 @@ Namespace FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
             LlenarComboCuentasBancos()
 
             HabilitadoNuevo()
-            
+
             dgvAsientoBuscado.Visible = False
             dgvAsientosDiario.Visible = True
 
@@ -461,8 +495,8 @@ Namespace FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
             cmbCuentasContables.SelectedValue = 0
 
             dtpFechaAsiento.ResetText()
-             
-            rbEfectivo.Checked = True 
+
+            rbEfectivo.Checked = True
             txtDetalleAsiento.Text = "..."
             txtValorDebeAsiento.Text = "0.00"
             txtValorHaberAsiento.Text = "0.00"
@@ -473,6 +507,13 @@ Namespace FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
             txtConciliarAsiento.Text = "1"
             txtEstadoAsiento.Text = "1"
             txtIdLibroDiario.Text = "0"
+
+            txtdetalle.Clear()
+            txtFondoReservaxPagar.Clear()
+            cbxCuenta.SelectedValue = 0
+            dtpfecha.ResetText()
+            cbxTipo.SelectedIndex = 0
+
         End Sub
         Private Sub HabilitadoNuevo()
             '===
@@ -507,15 +548,28 @@ Namespace FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
             txtConciliarAsiento.Enabled = True
             txtEstadoAsiento.Enabled = True
             txtIdLibroDiario.Enabled = True
+
+            '=== Roles
+            btnGenerar.Enabled = True
+            cbxCuenta.Enabled = True
+            dtpfecha.Enabled = True
+            txtdetalle.Enabled = True
+            cbxTipo.Enabled = True
+            txtFondoReservaxPagar.Enabled = True
+            txtAportePatronal.Enabled = True
+
+
         End Sub
         Private Sub btnModificarAsiento_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnModificarAsiento.Click
             If txtIdAsiento.Text.Trim().Length > 0 Then
                 If txtIdAsiento.Text = "ID" Then
                     'MsgBox("SELECCIONE UN REGISTRO A MODIFICAR", MsgBoxStyle.Information, "MENSAJE DE INFORMACIÓN")
                     KryptonMessageBox.Show("SELECCIONE UN REGISTRO A MODIFICAR", "MENSAJE DE INFORMACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
+
+
                 Else
                     HabilitadoNuevo()
-                    
+
                     rbEfectivo.Checked = True
                     dgvAsientoBuscado.Visible = True
                     dgvAsientosDiario.Visible = False
@@ -525,10 +579,10 @@ Namespace FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
                     cmbConcepto.Enabled = False
                     gbClienteProveedorPersonal.Enabled = False
                     txtDetalleAsiento.Focus()
-                End If                
+                End If
             Else
                 MsgBox("SELECCIONE UN REGISTRO A MODIFICAR", MsgBoxStyle.Information, "MENSAJE")
-            End If           
+            End If
         End Sub
         Private Sub btnCancelar_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnCancelar.Click
             LimpiarParametros()
@@ -576,13 +630,13 @@ Namespace FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
                             SumarTotalAsientoDiarioBusqueda()
                         End If
                     Else
-                        MsgBox("EL VALOR DEL DEBE NO PUEDE SER IGUAL AL DEL HABER", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                        KryptonMessageBox.Show("EL VALOR DEL DEBE NO PUEDE SER IGUAL AL DEL HABER", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                     End If
                 Else
-                    MsgBox("POR FAVOR REVISE QUE TODOS LOS PARAMETROS ESTEN CORRECTOS PARA AGREGAR.", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                    KryptonMessageBox.Show("POR FAVOR REVISE QUE TODOS LOS PARAMETROS ESTEN CORRECTOS PARA AGREGAR.", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                 End If
             Catch ex As Exception
-                MsgBox("AGREGAR ASIENTO." & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "MENSAJE DE EXCEPCIÓN")
+                KryptonMessageBox.Show("AGREGAR ASIENTO." & vbNewLine & ex.Message.ToString, "MENSAJE DE EXCEPCIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
 
@@ -602,8 +656,8 @@ Namespace FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
             End Try
         End Sub
         Private Sub btnEliminar_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnEliminar.Click
-            Try 
-                If _botonseleccionado = 1 Then 
+            Try
+                If _botonseleccionado = 1 Then
                     dgvAsientosDiario.Rows.RemoveAt(dgvAsientosDiario.CurrentRow.Index)
                     SumarTotalAsientoDiario()
                 ElseIf _botonseleccionado = 2 Then
@@ -671,7 +725,7 @@ Namespace FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
             End If
             KryptonMessageBox.Show(res(1), "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, messageIcon)
             CargarNumeroRegistroAsientoLibroDiario()
-        End Sub          
+        End Sub
         Private Sub NuevoRegistroAsientoDiario()
             Dim i = _objetoAsientoLibroDiario.BuscarMayorIdAsientoLibroDiario(_tipoCon) + 1
             For indice = 0 To dgvAsientosDiario.RowCount - 1
@@ -711,10 +765,10 @@ Namespace FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
                     .CodigoCuentaAsiento = dgvAsientoBuscado.Rows(indice).Cells(2).Value.ToString.Trim
                     .NombreCuentaAsiento = dgvAsientoBuscado.Rows(indice).Cells(3).Value.ToString.Trim
                     .ConceptoAsiento = dgvAsientoBuscado.Rows(indice).Cells(4).Value.ToString.ToUpper
-                    .DetalleTransaccionAsiento = dgvAsientoBuscado.Rows(indice).Cells(5).Value.ToString.ToUpper  
+                    .DetalleTransaccionAsiento = dgvAsientoBuscado.Rows(indice).Cells(5).Value.ToString.ToUpper
                     .CentroCostoAsiento = cmbConcepto.Text
                     .ValorDebeAsiento = dgvAsientoBuscado.Rows(indice).Cells(6).Value
-                    .ValorHaberAsiento = dgvAsientoBuscado.Rows(indice).Cells(7).Value 
+                    .ValorHaberAsiento = dgvAsientoBuscado.Rows(indice).Cells(7).Value
                     .NumeroRegistroAsiento = dgvAsientoBuscado.Rows(indice).Cells(8).Value
                     If CDec(dgvAsientoBuscado.Rows(indice).Cells(6).Value) > CDec(dgvAsientoBuscado.Rows(indice).Cells(7).Value) Then
                         .DebeHaberAsiento = 1
@@ -727,7 +781,7 @@ Namespace FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
                 End With
                 _sqlCommands.Add(_objetoAsientoLibroDiario.ModificarRegistroAsientoLibroDiarioCommand)
             Next
-        End Sub                  
+        End Sub
         Private Sub btnReporte_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnReporte.Click
             If txtNumeroAsientoBuscar.Text.Trim().Length > 0 Then
                 Dim rpt = New FormReporteAsiento
@@ -831,10 +885,98 @@ Namespace FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
             Catch ex As Exception
                 MessageBox.Show("HUBO UN PROBLEMA AL EXPORTAR DATOS!", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Error)
             End Try
-        End Sub          
+        End Sub
 
         Private Sub dgvAsientosDiario_SelectionChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles dgvAsientosDiario.SelectionChanged
 
         End Sub
+
+        Private Sub btnGenerar_Click(sender As Object, e As EventArgs) Handles btnGenerar.Click
+            'If txtDebe.Text <> txtHaber.Text Then
+            '    txtDebe.ForeColor = Color.Red
+            '    txtHaber.ForeColor = Color.Red
+            'Else
+            '    txtDebe.ForeColor = Color.Green
+            '    txtHaber.ForeColor = Color.Green
+            'End If
+            _botonseleccionado = 3
+            Dim dt = _objetoAsientoLibroDiario.GenerarAsientoRoles(_tipoCon, dtpfecha.Value.Month, dtpfecha.Value.Year, cbxTipo.SelectedValue)
+            dgvAsientoRoles.DataSource = Nothing
+
+
+
+
+
+        End Sub
+
+        Private Sub dgvAsientoRoles_CellEndEdit(sender As Object, e As DataGridViewCellEventArgs) Handles dgvAsientoRoles.CellEndEdit
+            Try
+                If dgvAsientoRoles.Columns(e.ColumnIndex).Name = "cuenta" Then
+                    If dgvAsientoRoles.CurrentRow.Cells("cuenta").Value Is Nothing Then Return
+                    If dgvAsientoRoles.CurrentRow.Cells("cuenta").Value.ToString.Trim.Length = 0 Then Return
+
+
+                    Dim cod = dgvAsientoRoles.CurrentRow.Cells("cuenta").Value.ToString.Trim().Split("-")(0).Trim
+                    Dim cue = dgvAsientoRoles.CurrentRow.Cells("cuenta").Value.ToString.Trim().Replace((cod.Trim & " - "), String.Empty).Trim
+
+                    Try
+                        Dim cc = _objetoPlanCuentas.BuscarDetallesCuentaPorCodigo(_tipoCon, cod)
+                        If cc.Rows(0)(5) = "SI" Then
+                            dgvAsientoRoles.CurrentRow.Cells("codigo").Value = cod
+                            dgvAsientoRoles.CurrentRow.Cells("cuenta").Value = cc.Rows(0)(2)
+                        Else
+                            dgvAsientoRoles.CurrentRow.Cells("codigo").Value = String.Empty
+                            dgvAsientoRoles.CurrentRow.Cells("cuenta").Value = String.Empty
+                            MsgBox("LA CUENTA: " & cc.Rows(0)(1) & " - " & cc.Rows(0)(2) & vbNewLine & "ES UNA CUENTA PADRE, NO GENERA MOVIMIENTO!!", MsgBoxStyle.Information, "MENSAJE DE INFORMACIÓN")
+                        End If
+                    Catch ex As Exception
+                        dgvAsientoRoles.CurrentRow.Cells("codigo").Value = cod
+                        dgvAsientoRoles.CurrentRow.Cells("cuenta").Value = cue
+                    End Try
+
+
+                End If
+
+
+            Catch ex As Exception
+                KryptonMessageBox.Show("CELDA FIN DE EDICIÓN." & vbNewLine & ex.Message.ToString, "MENSAJE DE EXCEPCIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+            End Try
+        End Sub
+
+        Private Sub dgvAsientoRoles_EditingControlShowing(sender As Object, e As DataGridViewEditingControlShowingEventArgs) Handles dgvAsientoRoles.EditingControlShowing
+
+            Dim itemName = TryCast(e.Control, TextBox)
+            If itemName IsNot Nothing Then
+                If dgvAsientoRoles.CurrentCell.ColumnIndex = 3 Then
+                    itemName.AutoCompleteCustomSource = _objetoPlanCuentas.Autocompletar(_tipoCon)
+                    itemName.AutoCompleteMode = AutoCompleteMode.Suggest
+                    itemName.AutoCompleteSource = AutoCompleteSource.CustomSource
+                Else
+                    itemName.AutoCompleteMode = AutoCompleteMode.None
+                End If
+            End If
+            Dim itemType = TryCast(e.Control, TextBox)
+            If itemType IsNot Nothing Then AddHandler itemType.KeyPress, AddressOf ItemType_KeyPress
+
+        End Sub
+
+        Private Sub ItemType_KeyPress(ByVal sender As System.Object, ByVal e As Windows.Forms.KeyPressEventArgs) Handles dgvAsientoRoles.KeyPress
+            Try
+                Select Case dgvAsientoRoles.CurrentCell.ColumnIndex
+                    Case 1
+                        e.Handled = Not _validacionesNumeros.EsNumero(e.KeyChar)
+                    Case 2
+                        e.Handled = Not _validacionesNumeros.EsNumero(e.KeyChar)
+                    Case 3
+                        e.Handled = Not _validacionesDecimales.EsDecimal(e.KeyChar)
+                    Case Else
+                        e.Handled = Not _validacionesAlfanumerica.EsAlfanumerico(e.KeyChar)
+                End Select
+            Catch
+                e.Handled = False
+            End Try
+        End Sub
+
+
     End Class
 End Namespace

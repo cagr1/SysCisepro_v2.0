@@ -442,18 +442,10 @@ namespace SysCisepro3.Contabilidad.Compras
                             newRow[$"{proveedor} (Días)"] = !string.IsNullOrEmpty(data["Dias"].ToString()) ? data["Dias"].ToString() : "0";                                             
                         }
                     }
-
                     dtPivot.Rows.Add(newRow);
-
                 }
-                dgvDetalleTablaComparativa.DataSource = dtPivot;
-
-               
-
-
+                dgvDetalleTablaComparativa.DataSource = dtPivot;             
                 dgvDetalleTablaComparativa.AutoResizeColumns();
-
-
 
             }
 
@@ -708,39 +700,39 @@ namespace SysCisepro3.Contabilidad.Compras
                 {
                     document.NewPage();
 
-                    iTextSharp.text.Image facturaImage = iTextSharp.text.Image.GetInstance(rutaFacturaChart);
-                    facturaImage.ScaleToFit(300, 300);
-                    facturaImage.SetAbsolutePosition(10, 150);
-                    document.Add(facturaImage);
+                    //iTextSharp.text.Image facturaImage = iTextSharp.text.Image.GetInstance(rutaFacturaChart);
+                    //facturaImage.ScaleToFit(300, 300);
+                    //facturaImage.SetAbsolutePosition(10, 100);
+                    //document.Add(facturaImage);
 
-                    iTextSharp.text.Image creditoImage = iTextSharp.text.Image.GetInstance(rutaCreditoChart);
-                    creditoImage.ScaleToFit(300, 300);
-                    creditoImage.SetAbsolutePosition(310, 150);
-                    document.Add(creditoImage);
+                    //iTextSharp.text.Image creditoImage = iTextSharp.text.Image.GetInstance(rutaCreditoChart);
+                    //creditoImage.ScaleToFit(300, 300);
+                    //creditoImage.SetAbsolutePosition(310, 100);
+                    //document.Add(creditoImage);
 
-                    iTextSharp.text.Image tiempoImage = iTextSharp.text.Image.GetInstance(rutaTiempoChart);
-                    tiempoImage.ScaleToFit(300, 300);
-                    tiempoImage.SetAbsolutePosition(610, 150);
-                    document.Add(tiempoImage);
+                    //iTextSharp.text.Image tiempoImage = iTextSharp.text.Image.GetInstance(rutaTiempoChart);
+                    //tiempoImage.ScaleToFit(300, 300);
+                    //tiempoImage.SetAbsolutePosition(610, 100);
+                    //document.Add(tiempoImage);
+
+                    float chartY = 100;
+
+                    AddChartToDocument(rutaFacturaChart, document, chartY);
+                    AddChartToDocument(rutaCreditoChart, document, chartY);
+                    AddChartToDocument(rutaTiempoChart, document, chartY);
 
                 }
 
-                if (yObservacionesTable  < 100)
-                {
-                    document.NewPage();
-                    yObservacionesTable = 700;
+                else
+                {                 
+                  
+                        float chartYPosition = yObservacionesTable - 10; // 10 es un pequeño margen
+                        AddChartToDocument(rutaFacturaChart, document, chartYPosition);
+                        AddChartToDocument(rutaCreditoChart, document, chartYPosition + 300);
+                        AddChartToDocument(rutaTiempoChart, document, chartYPosition + 600);                    
                 }
 
-
-
-
-
-
-
-
-
-                document.Close();                                                 
-                        
+                document.Close();                                                                                     
 
 
             }
@@ -767,6 +759,14 @@ namespace SysCisepro3.Contabilidad.Compras
                 pdfViewer1.LoadDocument(ruta);
             }
 
+        }
+
+        private void AddChartToDocument(string chartPath, Document document, float yPosition)
+        {
+            iTextSharp.text.Image chartImage = iTextSharp.text.Image.GetInstance(chartPath);
+            chartImage.ScaleToFit(300, 300);
+            chartImage.SetAbsolutePosition(10, yPosition);
+            document.Add(chartImage);
         }
 
         private void CreateFacturaChart(string filePath)

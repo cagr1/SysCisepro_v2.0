@@ -1557,12 +1557,12 @@ namespace SysCisepro3.Main
         }
         private void rOLDEPAGOSToolStripMenuItem_Click(object sender, EventArgs e)
         {
-           this.BringToFront();
-            FrmRolPago.Instancia.MdiParent = this;
-            FrmRolPago.TipoCon = TipoCon;
-            FrmRolPago.Usuario = ObjUsuario;
-            FrmRolPago.Instancia.Show();
-            FrmRolPago.Instancia.BringToFront();
+           //this.BringToFront();
+           // FrmRolPago.Instancia.MdiParent = this;
+           // FrmRolPago.TipoCon = TipoCon;
+           // FrmRolPago.Usuario = ObjUsuario;
+           // FrmRolPago.Instancia.Show();
+           // FrmRolPago.Instancia.BringToFront();
             
 
         }
@@ -2107,6 +2107,27 @@ namespace SysCisepro3.Main
             FrmTablaComparacionCompra.Instancia.Show();
             FrmTablaComparacionCompra.Instancia.BringToFront();
 
+        }
+
+        private void rOLESToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.BringToFront();
+            FrmRolPago.Instancia.MdiParent = this;
+            FrmRolPago.TipoCon = TipoCon;
+            FrmRolPago.Usuario = ObjUsuario;
+            FrmRolPago.Instancia.Show();
+            FrmRolPago.Instancia.BringToFront();
+
+        }
+
+        private void aSIENTOSDEROLESToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.BringToFront();
+            FrmAsientoRoles.Instancia.MdiParent = this;
+            FrmAsientoRoles.TipoCon = TipoCon;
+            FrmAsientoRoles.Usuario = ObjUsuario;
+            FrmAsientoRoles.Instancia.Show();
+            FrmAsientoRoles.Instancia.BringToFront();
         }
 
         private void AdjustImageToFit(PictureBox pbx, Image image)

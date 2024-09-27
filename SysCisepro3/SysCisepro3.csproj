@@ -558,6 +558,12 @@
     <Compile Include="TalentoHumano\FrmAgregarPersonalRolPago.Designer.cs">
       <DependentUpon>FrmAgregarPersonalRolPago.cs</DependentUpon>
     </Compile>
+    <Compile Include="TalentoHumano\FrmAsientoRoles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TalentoHumano\FrmAsientoRoles.Designer.cs">
+      <DependentUpon>FrmAsientoRoles.cs</DependentUpon>
+    </Compile>
     <Compile Include="TalentoHumano\FrmAspirantes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -849,6 +855,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TalentoHumano\FrmAgregarPersonalRolPago.resx">
       <DependentUpon>FrmAgregarPersonalRolPago.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TalentoHumano\FrmAsientoRoles.resx">
+      <DependentUpon>FrmAsientoRoles.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TalentoHumano\FrmAspirantes.resx">
       <DependentUpon>FrmAspirantes.cs</DependentUpon>

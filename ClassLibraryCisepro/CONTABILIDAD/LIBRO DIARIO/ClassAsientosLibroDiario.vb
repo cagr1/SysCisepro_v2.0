@@ -213,7 +213,18 @@ Namespace CONTABILIDAD.LIBRO_DIARIO
             End With
             Return comando
         End Function
-    
+
+
+        Public Function GenerarAsientoRoles(ByVal tipoCon As TipoConexion, ByVal mes As Int32, ByVal anio As Int32, ByVal tipo As Int32) As DataTable
+            Dim pars = New List(Of Object())
+            pars.Add(New Object() {"@mes", SqlDbType.Int, mes})
+            pars.Add(New Object() {"@anio", SqlDbType.Int, anio})
+            pars.Add(New Object() {"@tipo", SqlDbType.Int, tipo})
+            Return ComandosSql.SeleccionarQueryWithParamsToDataTable(tipoCon, "sp_GenerarAsientoRoles", True, pars)
+        End Function
+
+
+
     End Class
 End Namespace
 
