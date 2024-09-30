@@ -220,7 +220,7 @@ Namespace CONTABILIDAD.LIBRO_DIARIO
             pars.Add(New Object() {"@mes", SqlDbType.Int, mes})
             pars.Add(New Object() {"@anio", SqlDbType.Int, anio})
             pars.Add(New Object() {"@tipo", SqlDbType.Int, tipo})
-            Return ComandosSql.SeleccionarQueryWithParamsToDataTable(tipoCon, "sp_GenerarAsientoRoles", True, pars)
+            Return ComandosSql.SeleccionarQueryWithParamsToDataTable(tipoCon, "sp_generarAsientoRoles", True, pars)
         End Function
 
 

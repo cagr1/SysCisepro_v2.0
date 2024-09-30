@@ -31,6 +31,8 @@
             Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormAjustarAsientosLibroDiario))
             Me.gbBuscarAsiento = New System.Windows.Forms.GroupBox()
             Me.rbFechaAsiento = New System.Windows.Forms.RadioButton()
@@ -121,13 +123,10 @@
             Me.kryptonGroupBox1 = New Krypton.Toolkit.KryptonGroupBox()
             Me.KryptonLabel8 = New Krypton.Toolkit.KryptonLabel()
             Me.txtHaber = New System.Windows.Forms.TextBox()
-            Me.cbxCuenta = New Krypton.Toolkit.KryptonComboBox()
             Me.txtDebe = New System.Windows.Forms.TextBox()
-            Me.KryptonLabel7 = New Krypton.Toolkit.KryptonLabel()
             Me.kryptonLabel6 = New Krypton.Toolkit.KryptonLabel()
             Me.kryptonLabel5 = New Krypton.Toolkit.KryptonLabel()
             Me.kryptonLabel4 = New Krypton.Toolkit.KryptonLabel()
-            Me.kryptonLabel1 = New Krypton.Toolkit.KryptonLabel()
             Me.txtFondoReservaxPagar = New System.Windows.Forms.TextBox()
             Me.txtAportePatronal = New System.Windows.Forms.TextBox()
             Me.dgvAsientoRoles = New Krypton.Toolkit.KryptonDataGridView()
@@ -141,7 +140,6 @@
             Me.haber = New System.Windows.Forms.DataGridViewTextBoxColumn()
             Me.cbxTipo = New Krypton.Toolkit.KryptonComboBox()
             Me.kryptonLabel3 = New Krypton.Toolkit.KryptonLabel()
-            Me.txtdetalle = New System.Windows.Forms.TextBox()
             Me.dtpfecha = New Krypton.Toolkit.KryptonDateTimePicker()
             Me.btnGenerar = New Krypton.Toolkit.KryptonButton()
             Me.KryptonDockableNavigator1 = New ComponentFactory.Krypton.Docking.KryptonDockableNavigator()
@@ -167,7 +165,6 @@
             CType(Me.kryptonGroupBox1.Panel, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.kryptonGroupBox1.Panel.SuspendLayout()
             Me.kryptonGroupBox1.SuspendLayout()
-            CType(Me.cbxCuenta, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.dgvAsientoRoles, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.cbxTipo, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.KryptonDockableNavigator1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -1137,19 +1134,15 @@
             '
             Me.kryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel8)
             Me.kryptonGroupBox1.Panel.Controls.Add(Me.txtHaber)
-            Me.kryptonGroupBox1.Panel.Controls.Add(Me.cbxCuenta)
             Me.kryptonGroupBox1.Panel.Controls.Add(Me.txtDebe)
-            Me.kryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel7)
             Me.kryptonGroupBox1.Panel.Controls.Add(Me.kryptonLabel6)
             Me.kryptonGroupBox1.Panel.Controls.Add(Me.kryptonLabel5)
             Me.kryptonGroupBox1.Panel.Controls.Add(Me.kryptonLabel4)
-            Me.kryptonGroupBox1.Panel.Controls.Add(Me.kryptonLabel1)
             Me.kryptonGroupBox1.Panel.Controls.Add(Me.txtFondoReservaxPagar)
             Me.kryptonGroupBox1.Panel.Controls.Add(Me.txtAportePatronal)
             Me.kryptonGroupBox1.Panel.Controls.Add(Me.dgvAsientoRoles)
             Me.kryptonGroupBox1.Panel.Controls.Add(Me.cbxTipo)
             Me.kryptonGroupBox1.Panel.Controls.Add(Me.kryptonLabel3)
-            Me.kryptonGroupBox1.Panel.Controls.Add(Me.txtdetalle)
             Me.kryptonGroupBox1.Panel.Controls.Add(Me.dtpfecha)
             Me.kryptonGroupBox1.Panel.Controls.Add(Me.btnGenerar)
             Me.kryptonGroupBox1.Size = New System.Drawing.Size(991, 587)
@@ -1166,46 +1159,28 @@
             '
             'txtHaber
             '
-            Me.txtHaber.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtHaber.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtHaber.Location = New System.Drawing.Point(704, 524)
             Me.txtHaber.Name = "txtHaber"
             Me.txtHaber.ShortcutsEnabled = False
-            Me.txtHaber.Size = New System.Drawing.Size(100, 21)
+            Me.txtHaber.Size = New System.Drawing.Size(100, 22)
             Me.txtHaber.TabIndex = 4
             Me.txtHaber.Text = "0.00"
             Me.txtHaber.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
             '
-            'cbxCuenta
-            '
-            Me.cbxCuenta.DropDownWidth = 197
-            Me.cbxCuenta.IntegralHeight = False
-            Me.cbxCuenta.Location = New System.Drawing.Point(103, 10)
-            Me.cbxCuenta.Name = "cbxCuenta"
-            Me.cbxCuenta.Size = New System.Drawing.Size(197, 21)
-            Me.cbxCuenta.StateCommon.ComboBox.Content.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near
-            Me.cbxCuenta.TabIndex = 16
-            '
             'txtDebe
             '
-            Me.txtDebe.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtDebe.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtDebe.Location = New System.Drawing.Point(589, 525)
             Me.txtDebe.Name = "txtDebe"
-            Me.txtDebe.Size = New System.Drawing.Size(100, 21)
+            Me.txtDebe.Size = New System.Drawing.Size(100, 22)
             Me.txtDebe.TabIndex = 3
             Me.txtDebe.Text = "0.00"
             Me.txtDebe.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
             '
-            'KryptonLabel7
-            '
-            Me.KryptonLabel7.Location = New System.Drawing.Point(9, 10)
-            Me.KryptonLabel7.Name = "KryptonLabel7"
-            Me.KryptonLabel7.Size = New System.Drawing.Size(84, 20)
-            Me.KryptonLabel7.TabIndex = 15
-            Me.KryptonLabel7.Values.Text = "Cta. Contable"
-            '
             'kryptonLabel6
             '
-            Me.kryptonLabel6.Location = New System.Drawing.Point(10, 41)
+            Me.kryptonLabel6.Location = New System.Drawing.Point(422, 10)
             Me.kryptonLabel6.Name = "kryptonLabel6"
             Me.kryptonLabel6.Size = New System.Drawing.Size(67, 20)
             Me.kryptonLabel6.TabIndex = 12
@@ -1213,7 +1188,7 @@
             '
             'kryptonLabel5
             '
-            Me.kryptonLabel5.Location = New System.Drawing.Point(10, 74)
+            Me.kryptonLabel5.Location = New System.Drawing.Point(610, 9)
             Me.kryptonLabel5.Name = "kryptonLabel5"
             Me.kryptonLabel5.Size = New System.Drawing.Size(70, 20)
             Me.kryptonLabel5.TabIndex = 11
@@ -1221,24 +1196,16 @@
             '
             'kryptonLabel4
             '
-            Me.kryptonLabel4.Location = New System.Drawing.Point(325, 8)
+            Me.kryptonLabel4.Location = New System.Drawing.Point(7, 8)
             Me.kryptonLabel4.Name = "kryptonLabel4"
             Me.kryptonLabel4.Size = New System.Drawing.Size(42, 20)
             Me.kryptonLabel4.TabIndex = 10
             Me.kryptonLabel4.Values.Text = "Fecha"
             '
-            'kryptonLabel1
-            '
-            Me.kryptonLabel1.Location = New System.Drawing.Point(209, 42)
-            Me.kryptonLabel1.Name = "kryptonLabel1"
-            Me.kryptonLabel1.Size = New System.Drawing.Size(49, 20)
-            Me.kryptonLabel1.TabIndex = 9
-            Me.kryptonLabel1.Values.Text = "Detalle"
-            '
             'txtFondoReservaxPagar
             '
             Me.txtFondoReservaxPagar.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtFondoReservaxPagar.Location = New System.Drawing.Point(103, 42)
+            Me.txtFondoReservaxPagar.Location = New System.Drawing.Point(495, 9)
             Me.txtFondoReservaxPagar.Name = "txtFondoReservaxPagar"
             Me.txtFondoReservaxPagar.Size = New System.Drawing.Size(76, 21)
             Me.txtFondoReservaxPagar.TabIndex = 8
@@ -1246,7 +1213,7 @@
             'txtAportePatronal
             '
             Me.txtAportePatronal.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtAportePatronal.Location = New System.Drawing.Point(101, 74)
+            Me.txtAportePatronal.Location = New System.Drawing.Point(701, 9)
             Me.txtAportePatronal.Name = "txtAportePatronal"
             Me.txtAportePatronal.Size = New System.Drawing.Size(78, 21)
             Me.txtAportePatronal.TabIndex = 7
@@ -1256,10 +1223,10 @@
             '
             Me.dgvAsientoRoles.BorderStyle = System.Windows.Forms.BorderStyle.None
             Me.dgvAsientoRoles.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.id, Me.fecha, Me.codigo, Me.cuenta, Me.concepto, Me.detalle, Me.debe, Me.haber})
-            Me.dgvAsientoRoles.Location = New System.Drawing.Point(2, 118)
+            Me.dgvAsientoRoles.Location = New System.Drawing.Point(2, 48)
             Me.dgvAsientoRoles.Name = "dgvAsientoRoles"
             Me.dgvAsientoRoles.RowHeadersVisible = False
-            Me.dgvAsientoRoles.Size = New System.Drawing.Size(982, 349)
+            Me.dgvAsientoRoles.Size = New System.Drawing.Size(982, 422)
             Me.dgvAsientoRoles.TabIndex = 6
             '
             'id
@@ -1300,11 +1267,17 @@
             '
             'debe
             '
+            DataGridViewCellStyle8.Format = "N2"
+            DataGridViewCellStyle8.NullValue = Nothing
+            Me.debe.DefaultCellStyle = DataGridViewCellStyle8
             Me.debe.HeaderText = "Debe"
             Me.debe.Name = "debe"
             '
             'haber
             '
+            DataGridViewCellStyle9.Format = "N2"
+            DataGridViewCellStyle9.NullValue = Nothing
+            Me.haber.DefaultCellStyle = DataGridViewCellStyle9
             Me.haber.HeaderText = "Haber"
             Me.haber.Name = "haber"
             '
@@ -1314,7 +1287,7 @@
             Me.cbxTipo.DropDownWidth = 121
             Me.cbxTipo.IntegralHeight = False
             Me.cbxTipo.Items.AddRange(New Object() {"- Elija Uno - ", "Administrativo", "Operativo"})
-            Me.cbxTipo.Location = New System.Drawing.Point(589, 7)
+            Me.cbxTipo.Location = New System.Drawing.Point(261, 8)
             Me.cbxTipo.Name = "cbxTipo"
             Me.cbxTipo.Size = New System.Drawing.Size(125, 21)
             Me.cbxTipo.StateCommon.ComboBox.Content.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near
@@ -1322,33 +1295,25 @@
             '
             'kryptonLabel3
             '
-            Me.kryptonLabel3.Location = New System.Drawing.Point(541, 7)
+            Me.kryptonLabel3.Location = New System.Drawing.Point(213, 8)
             Me.kryptonLabel3.Name = "kryptonLabel3"
             Me.kryptonLabel3.Size = New System.Drawing.Size(34, 20)
             Me.kryptonLabel3.TabIndex = 4
             Me.kryptonLabel3.Values.Text = "Tipo"
-            '
-            'txtdetalle
-            '
-            Me.txtdetalle.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtdetalle.Location = New System.Drawing.Point(270, 40)
-            Me.txtdetalle.Name = "txtdetalle"
-            Me.txtdetalle.Size = New System.Drawing.Size(444, 21)
-            Me.txtdetalle.TabIndex = 3
             '
             'dtpfecha
             '
             Me.dtpfecha.CalendarTodayDate = New Date(2024, 9, 26, 0, 0, 0, 0)
             Me.dtpfecha.CustomFormat = "MMMM  - yyyy"
             Me.dtpfecha.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-            Me.dtpfecha.Location = New System.Drawing.Point(383, 7)
+            Me.dtpfecha.Location = New System.Drawing.Point(55, 9)
             Me.dtpfecha.Name = "dtpfecha"
             Me.dtpfecha.Size = New System.Drawing.Size(125, 21)
             Me.dtpfecha.TabIndex = 1
             '
             'btnGenerar
             '
-            Me.btnGenerar.Location = New System.Drawing.Point(624, 74)
+            Me.btnGenerar.Location = New System.Drawing.Point(821, 5)
             Me.btnGenerar.Name = "btnGenerar"
             Me.btnGenerar.Size = New System.Drawing.Size(90, 25)
             Me.btnGenerar.StateNormal.Border.DrawBorders = CType((((Krypton.Toolkit.PaletteDrawBorders.Top Or Krypton.Toolkit.PaletteDrawBorders.Bottom) _
@@ -1366,7 +1331,7 @@
             Me.KryptonDockableNavigator1.Location = New System.Drawing.Point(0, 32)
             Me.KryptonDockableNavigator1.Name = "KryptonDockableNavigator1"
             Me.KryptonDockableNavigator1.Pages.AddRange(New ComponentFactory.Krypton.Navigator.KryptonPage() {Me.KryptonPage3, Me.KryptonPage4})
-            Me.KryptonDockableNavigator1.SelectedIndex = 1
+            Me.KryptonDockableNavigator1.SelectedIndex = 0
             Me.KryptonDockableNavigator1.Size = New System.Drawing.Size(997, 620)
             Me.KryptonDockableNavigator1.TabIndex = 187
             Me.KryptonDockableNavigator1.Text = "KryptonDockableNavigator1"
@@ -1462,7 +1427,6 @@
             Me.kryptonGroupBox1.Panel.PerformLayout()
             CType(Me.kryptonGroupBox1, System.ComponentModel.ISupportInitialize).EndInit()
             Me.kryptonGroupBox1.ResumeLayout(False)
-            CType(Me.cbxCuenta, System.ComponentModel.ISupportInitialize).EndInit()
             CType(Me.dgvAsientoRoles, System.ComponentModel.ISupportInitialize).EndInit()
             CType(Me.cbxTipo, System.ComponentModel.ISupportInitialize).EndInit()
             CType(Me.KryptonDockableNavigator1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1565,20 +1529,19 @@
         Private WithEvents kryptonLabel6 As Krypton.Toolkit.KryptonLabel
         Private WithEvents kryptonLabel5 As Krypton.Toolkit.KryptonLabel
         Private WithEvents kryptonLabel4 As Krypton.Toolkit.KryptonLabel
-        Private WithEvents kryptonLabel1 As Krypton.Toolkit.KryptonLabel
         Private WithEvents txtFondoReservaxPagar As TextBox
         Private WithEvents txtAportePatronal As TextBox
         Private WithEvents cbxTipo As Krypton.Toolkit.KryptonComboBox
         Private WithEvents kryptonLabel3 As Krypton.Toolkit.KryptonLabel
-        Private WithEvents txtdetalle As TextBox
         Private WithEvents dtpfecha As Krypton.Toolkit.KryptonDateTimePicker
-        Friend WithEvents cbxCuenta As Krypton.Toolkit.KryptonComboBox
-        Private WithEvents KryptonLabel7 As Krypton.Toolkit.KryptonLabel
         Private WithEvents dgvAsientoRoles As Krypton.Toolkit.KryptonDataGridView
         Private WithEvents btnGenerar As Krypton.Toolkit.KryptonButton
         Friend WithEvents txtHaber As TextBox
         Friend WithEvents txtDebe As TextBox
         Friend WithEvents KryptonLabel8 As Krypton.Toolkit.KryptonLabel
+        Friend WithEvents KryptonDockableNavigator1 As ComponentFactory.Krypton.Docking.KryptonDockableNavigator
+        Friend WithEvents KryptonPage3 As ComponentFactory.Krypton.Navigator.KryptonPage
+        Friend WithEvents KryptonPage4 As ComponentFactory.Krypton.Navigator.KryptonPage
         Friend WithEvents id As DataGridViewTextBoxColumn
         Friend WithEvents fecha As DataGridViewTextBoxColumn
         Friend WithEvents codigo As DataGridViewTextBoxColumn
@@ -1587,8 +1550,5 @@
         Friend WithEvents detalle As DataGridViewTextBoxColumn
         Friend WithEvents debe As DataGridViewTextBoxColumn
         Friend WithEvents haber As DataGridViewTextBoxColumn
-        Friend WithEvents KryptonDockableNavigator1 As ComponentFactory.Krypton.Docking.KryptonDockableNavigator
-        Friend WithEvents KryptonPage3 As ComponentFactory.Krypton.Navigator.KryptonPage
-        Friend WithEvents KryptonPage4 As ComponentFactory.Krypton.Navigator.KryptonPage
     End Class
 End Namespace
