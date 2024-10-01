@@ -70,6 +70,7 @@ Namespace FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
 
         Private _parametroBusqueda As Integer = 0
         Private _botonseleccionado As Integer = 0
+        Private _selectedRowIndex As Integer = -1
 
         Private Sub FormAjustarAsientosLibroDiario_Load(ByVal sender As System.Object, ByVal e As EventArgs) Handles MyBase.Load
             ' DEFINIR TIPO Y COLOR DE SISTEMA
@@ -501,6 +502,8 @@ Namespace FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
             txtFondoReservaxPagar.Clear()
             dtpfecha.ResetText()
             cbxTipo.SelectedIndex = 0
+            txtDebe.Clear()
+            txtHaber.Clear()
 
         End Sub
         Private Sub HabilitadoNuevo()
@@ -686,6 +689,17 @@ Namespace FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
 
             ElseIf _botonseleccionado = 2 Then
                 ModificarRegistroAsientoDiario()
+            ElseIf _botonseleccionado = 3 Then
+                _objetoLibroDiario.IdLibroDiario = _objetoLibroDiario.BuscarMayorIdLibroDiario(_tipoCon)
+
+                With _objetoNumeroRegistro
+                    .NumeroRegistro = .BuscarMayorNumeroRegistro(_tipoCon) + 1
+                    .NumeroAnterior = .BuscarMayorNumeroAnterior(_tipoCon) + 1
+                End With
+                _sqlCommands.Add(_objetoNumeroRegistro.NuevoNumeroRegistroAsientoLibroDiarioCommand)
+
+                NuevoRegistroAsientoDiarioRoles()
+
             End If
 
 
@@ -695,6 +709,8 @@ Namespace FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
                 nombreU = "Nuevo Libro diario por: " & UserName
             ElseIf _botonseleccionado = 2 Then
                 nombreU = "Libro Diario editado por: " & UserName
+            ElseIf _botonseleccionado = 3 Then
+                nombreU = "Nuevo Libro diario por: " & UserName
             End If
 
             Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, nombreU)
@@ -743,6 +759,39 @@ Namespace FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
                 i += 1
             Next
         End Sub
+
+        Private Sub NuevoRegistroAsientoDiarioRoles()
+            Dim i = _objetoAsientoLibroDiario.BuscarMayorIdAsientoLibroDiario(_tipoCon) + 1
+            For indice = 0 To dgvAsientoRoles.RowCount - 1
+                With _objetoAsientoLibroDiario
+                    .IdAsiento = i
+                    .FechaAsiento = dgvAsientoRoles.Rows(indice).Cells(1).Value
+                    .CodigoCuentaAsiento = dgvAsientoRoles.Rows(indice).Cells(2).Value.ToString.Trim
+                    .NombreCuentaAsiento = dgvAsientoRoles.Rows(indice).Cells(3).Value.ToString.Trim
+                    .ConceptoAsiento = dgvAsientoRoles.Rows(indice).Cells(4).Value.ToString.ToUpper
+                    .DetalleTransaccionAsiento = dgvAsientoRoles.Rows(indice).Cells(5).Value.ToString.ToUpper
+                    .ProvinciaAsiento = "EL ORO"
+                    .CiudadAsiento = "MACHALA"
+                    .ParroquiaAsiento = "MACHALA"
+                    .CentroCostoAsiento = "GERENCIA GENERAL"
+                    .ValorDebeAsiento = dgvAsientoRoles.Rows(indice).Cells(6).Value
+                    .ValorHaberAsiento = dgvAsientoRoles.Rows(indice).Cells(7).Value
+                    .NumeroRegistroAsiento = _objetoNumeroRegistro.NumeroRegistro
+                    If dgvAsientoRoles.Rows(indice).Cells(6).Value > dgvAsientoRoles.Rows(indice).Cells(7).Value Then
+                        .DebeHaberAsiento = 1
+                    Else
+                        .DebeHaberAsiento = 2
+                    End If
+                    .ConciliarAsiento = 1
+                    .EstadoAsiento = 1
+                    .IdLibroDiario = _objetoLibroDiario.IdLibroDiario
+                    .EstadoMayorAsiento = 0
+                End With
+                _sqlCommands.Add(_objetoAsientoLibroDiario.NuevoRegistroAsientoLibroDiarioCommand())
+                i += 1
+            Next
+        End Sub
+
         Private Sub ModificarRegistroAsientoDiario()
             For indice = 0 To dgvAsientoBuscado.RowCount - 1
                 With _objetoAsientoLibroDiario
@@ -885,8 +934,13 @@ Namespace FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
             '    txtDebe.ForeColor = Color.Green
             '    txtHaber.ForeColor = Color.Green
             'End If
-            If txtFondoReservaxPagar.Text.Length < 0 And txtAportePatronal.Text.Length < 0 Then
+            If txtFondoReservaxPagar.Text.Length = 0 Or txtAportePatronal.Text.Length = 0 Then
                 KryptonMessageBox.Show("NO SE PUEDE GENERAR" & vbNewLine & "ingrese los valores .", "MENSAJE DE VALIDACION", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
+                Return
+            End If
+
+            If cbxTipo.SelectedIndex = 0 Then
+                KryptonMessageBox.Show("SELECCIONE EL TIPO DE ROLES", "MENSAJE DE VALIDACION", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                 Return
             End If
 
@@ -902,8 +956,8 @@ Namespace FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
                 Dim iess = CDec(row(6)) + aporte
                 Dim fondo = CDec(txtFondoReservaxPagar.Text)
                 If (cbxTipo.SelectedIndex = 1) Then
-                    dgvAsientoRoles.Rows.Add(0, DateTime.Now, "52020101", "SUELDOS PERSONAL ADMINISTRATIVO", "COMPROBANTE ASIENTO DE DIARIO", "ASIENTO DE DIARIO MES ADMINISTRATIVO " & dtpfecha.Value.ToString("MMMM").ToUpper & " " & dtpfecha.Value.Year, row(0).ToString(), 0)
-                    dgvAsientoRoles.Rows.Add(0, DateTime.Now, "52020102", "HORAS EXTRAS", "COMPROBANTE ASIENTO DE DIARIO", "ASIENTO DE DIARIO MES ADMINISTRATIVO " & dtpfecha.Value.ToString("MMMM").ToUpper & " " & dtpfecha.Value.Year, row(1).ToString, 0)
+                    dgvAsientoRoles.Rows.Add(0, DateTime.Now, "52020101", "SUELDOS PERSONAL ADMINISTRATIVO", "COMPROBANTE ASIENTO DE DIARIO", "ASIENTO DE DIARIO MES ADMINISTRATIVO " & dtpfecha.Value.ToString("MMMM").ToUpper & " " & dtpfecha.Value.Year, row(0), 0)
+                    dgvAsientoRoles.Rows.Add(0, DateTime.Now, "52020102", "HORAS EXTRAS", "COMPROBANTE ASIENTO DE DIARIO", "ASIENTO DE DIARIO MES ADMINISTRATIVO " & dtpfecha.Value.ToString("MMMM").ToUpper & " " & dtpfecha.Value.Year, row(1), 0)
                     dgvAsientoRoles.Rows.Add(0, DateTime.Now, "52020201", "APORTE PATRONAL", "COMPROBANTE ASIENTO DE DIARIO", "ASIENTO DE DIARIO MES ADMINISTRATIVO " & dtpfecha.Value.ToString("MMMM").ToUpper & " " & dtpfecha.Value.Year, aporte, 0)
                     dgvAsientoRoles.Rows.Add(0, DateTime.Now, "52020301", "PROVISION 13AVO SUELDO", "COMPROBANTE ASIENTO DE DIARIO", "ASIENTO DE DIARIO MES ADMINISTRATIVO " & dtpfecha.Value.ToString("MMMM").ToUpper & " " & dtpfecha.Value.Year, row(3), 0)
                     dgvAsientoRoles.Rows.Add(0, DateTime.Now, "52020302", "PROVISION 14AVO SUELDO", "COMPROBANTE ASIENTO DE DIARIO", "ASIENTO DE DIARIO MES ADMINISTRATIVO " & dtpfecha.Value.ToString("MMMM").ToUpper & " " & dtpfecha.Value.Year, row(4), 0)
@@ -917,19 +971,101 @@ Namespace FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
                     dgvAsientoRoles.Rows.Add(0, DateTime.Now, "201070309", "PRESTAMO HIPOTECARIO", "COMPROBANTE ASIENTO DE DIARIO", "ASIENTO DE DIARIO MES ADMINISTRATIVO " & dtpfecha.Value.ToString("MMMM").ToUpper & " " & dtpfecha.Value.Year, 0, row(9))
                     dgvAsientoRoles.Rows.Add(0, DateTime.Now, "201070336", "OBLIGACIONES CON EL SEGURO SOCIAL EXTENCION SALUD", "COMPROBANTE ASIENTO DE DIARIO", "ASIENTO DE DIARIO MES ADMINISTRATIVO " & dtpfecha.Value.ToString("MMMM").ToUpper & " " & dtpfecha.Value.Year, 0, row(10))
                     dgvAsientoRoles.Rows.Add(0, DateTime.Now, "201070701", "ADMINISTRATIVOS", "COMPROBANTE ASIENTO DE DIARIO", "ASIENTO DE DIARIO MES ADMINISTRATIVO " & dtpfecha.Value.ToString("MMMM").ToUpper & " " & dtpfecha.Value.Year, 0, row(22))
-                    dgvAsientoRoles.Rows.Add(0, DateTime.Now, "201070710", "DESCUENTO DE COMISARIATO", "COMPROBANTE ASIENTO DE DIARIO", "ASIENTO DE DIARIO MES ADMINISTRATIVO " & dtpfecha.Value.ToString("MMMM").ToUpper & " " & dtpfecha.Value.Year, 0, row(16))
-                    dgvAsientoRoles.Rows.Add(0, DateTime.Now, "201070716", "DESCUENTO COMECSA", "COMPROBANTE ASIENTO DE DIARIO", "ASIENTO DE DIARIO MES ADMINISTRATIVO " & dtpfecha.Value.ToString("MMMM").ToUpper & " " & dtpfecha.Value.Year, 0, row(15))
-                    dgvAsientoRoles.Rows.Add(0, DateTime.Now, "201070718", "DESCUENTO ALMUERZO AL PERSONAL", "COMPROBANTE ASIENTO DE DIARIO", "ASIENTO DE DIARIO MES ADMINISTRATIVO " & dtpfecha.Value.ToString("MMMM").ToUpper & " " & dtpfecha.Value.Year, 0, row(21))
+
+                    If CDec(row(14)) > 0 Then
+                        dgvAsientoRoles.Rows.Add(0, DateTime.Now, "201070705", "DESCUENTO EQUIPO DE SEGURIDAD", "COMPROBANTE ASIENTO DE DIARIO", "ASIENTO DE DIARIO MES ADMINISTRATIVO " & dtpfecha.Value.ToString("MMMM").ToUpper & " " & dtpfecha.Value.Year, 0, row(14))
+                    End If
+
+                    If CDec(row(19)) > 0 Then
+                        dgvAsientoRoles.Rows.Add(0, DateTime.Now, "201070706", "DESCUENTO DE MULTAS", "COMPROBANTE ASIENTO DE DIARIO", "ASIENTO DE DIARIO MES ADMINISTRATIVO " & dtpfecha.Value.ToString("MMMM").ToUpper & " " & dtpfecha.Value.Year, 0, row(19))
+                    End If
+
+                    If CDec(row(20)) > 0 Then
+                        dgvAsientoRoles.Rows.Add(0, DateTime.Now, "201070707", "OTRAS CUENTAS POR PAGAR", "COMPROBANTE ASIENTO DE DIARIO", "ASIENTO DE DIARIO MES ADMINISTRATIVO " & dtpfecha.Value.ToString("MMMM").ToUpper & " " & dtpfecha.Value.Year, 0, row(20))
+                    End If
+
+                    If (CDec(row(18))) > 0 Then
+                        dgvAsientoRoles.Rows.Add(0, DateTime.Now, "201070709", "DESCUENTO JUDICIALES POR PAGAR", "COMPROBANTE ASIENTO DE DIARIO", "ASIENTO DE DIARIO MES ADMINISTRATIVO " & dtpfecha.Value.ToString("MMMM").ToUpper & " " & dtpfecha.Value.Year, 0, row(18))
+                    End If
+
+                    If (CDec(row(16))) > 0 Then
+                        dgvAsientoRoles.Rows.Add(0, DateTime.Now, "201070710", "DESCUENTO DE COMISARIATO", "COMPROBANTE ASIENTO DE DIARIO", "ASIENTO DE DIARIO MES ADMINISTRATIVO " & dtpfecha.Value.ToString("MMMM").ToUpper & " " & dtpfecha.Value.Year, 0, row(16))
+                    End If
+
                     If CDec(row(17)) > 0 Then
+                        dgvAsientoRoles.Rows.Add(0, DateTime.Now, "201070714", "DESCUENTO JUDICIALES POR BENEFICIOS DE LEY", "COMPROBANTE ASIENTO DE DIARIO", "ASIENTO DE DIARIO MES ADMINISTRATIVO " & dtpfecha.Value.ToString("MMMM").ToUpper & " " & dtpfecha.Value.Year, 0, row(17))
+                    End If
+
+                    If (CDec(row(15))) > 0 Then
+                        dgvAsientoRoles.Rows.Add(0, DateTime.Now, "201070716", "DESCUENTO COMECSA", "COMPROBANTE ASIENTO DE DIARIO", "ASIENTO DE DIARIO MES ADMINISTRATIVO " & dtpfecha.Value.ToString("MMMM").ToUpper & " " & dtpfecha.Value.Year, 0, row(15))
+                    End If
+
+                    If CDec(row(12)) > 0 Then
+                        dgvAsientoRoles.Rows.Add(0, DateTime.Now, "201070717", "DESCUENTO CURSO DE CAPACITACION", "COMPROBANTE ASIENTO DE DIARIO", "ASIENTO DE DIARIO MES ADMINISTRATIVO " & dtpfecha.Value.ToString("MMMM").ToUpper & " " & dtpfecha.Value.Year, 0, row(12))
+                    End If
+
+                    If CDec(row(21)) > 0 Then
                         dgvAsientoRoles.Rows.Add(0, DateTime.Now, "201070718", "DESCUENTO ALMUERZO AL PERSONAL", "COMPROBANTE ASIENTO DE DIARIO", "ASIENTO DE DIARIO MES ADMINISTRATIVO " & dtpfecha.Value.ToString("MMMM").ToUpper & " " & dtpfecha.Value.Year, 0, row(21))
                     End If
 
 
 
                 Else
-                    'dgvAsientoRoles.Rows.Add(0, DateTime.Now, "52010101", "SUELDOS VIGILANTES DE SEGURIDAD", )
+                    dgvAsientoRoles.Rows.Add(0, DateTime.Now, "52020101", "SUELDOS PERSONAL ADMINISTRATIVO", "COMPROBANTE ASIENTO DE DIARIO", "ASIENTO DE DIARIO MES OPERATIVO " & dtpfecha.Value.ToString("MMMM").ToUpper & " " & dtpfecha.Value.Year, row(0), 0)
+                    dgvAsientoRoles.Rows.Add(0, DateTime.Now, "52020102", "HORAS EXTRAS", "COMPROBANTE ASIENTO DE DIARIO", "ASIENTO DE DIARIO MES OPERATIVO " & dtpfecha.Value.ToString("MMMM").ToUpper & " " & dtpfecha.Value.Year, row(1), 0)
+                    dgvAsientoRoles.Rows.Add(0, DateTime.Now, "52020201", "APORTE PATRONAL", "COMPROBANTE ASIENTO DE DIARIO", "ASIENTO DE DIARIO MES OPERATIVO " & dtpfecha.Value.ToString("MMMM").ToUpper & " " & dtpfecha.Value.Year, aporte, 0)
+                    dgvAsientoRoles.Rows.Add(0, DateTime.Now, "52020301", "PROVISION 13AVO SUELDO", "COMPROBANTE ASIENTO DE DIARIO", "ASIENTO DE DIARIO MES OPERATIVO " & dtpfecha.Value.ToString("MMMM").ToUpper & " " & dtpfecha.Value.Year, row(3), 0)
+                    dgvAsientoRoles.Rows.Add(0, DateTime.Now, "52020302", "PROVISION 14AVO SUELDO", "COMPROBANTE ASIENTO DE DIARIO", "ASIENTO DE DIARIO MES OPERATIVO " & dtpfecha.Value.ToString("MMMM").ToUpper & " " & dtpfecha.Value.Year, row(4), 0)
+                    dgvAsientoRoles.Rows.Add(0, DateTime.Now, "52020202", "FONDO DE RESERVA", "COMPROBANTE ASIENTO DE DIARIO", "ASIENTO DE DIARIO MES OPERATIVO " & dtpfecha.Value.ToString("MMMM").ToUpper & " " & dtpfecha.Value.Year, fondoxpagar, 0)
+                    dgvAsientoRoles.Rows.Add(0, DateTime.Now, "101040401", "ANTICIPO NORMAL A EMPLEADOS", "COMPROBANTE ASIENTO DE DIARIO", "ASIENTO DE DIARIO MES OPERATIVO " & dtpfecha.Value.ToString("MMMM").ToUpper & " " & dtpfecha.Value.Year, 0, row(7))
+                    dgvAsientoRoles.Rows.Add(0, DateTime.Now, "101040402", "ANTICIPO EMERGENTE A EMPLEADOS", "COMPROBANTE ASIENTO DE DIARIO", "ASIENTO DE DIARIO MES OPERATIVO " & dtpfecha.Value.ToString("MMMM").ToUpper & " " & dtpfecha.Value.Year, 0, row(11))
+                    dgvAsientoRoles.Rows.Add(0, DateTime.Now, "20107010207", "IMPUESTO A LA RENTA RD", "COMPROBANTE ASIENTO DE DIARIO", "ASIENTO DE DIARIO MES OPERATIVO " & dtpfecha.Value.ToString("MMMM").ToUpper & " " & dtpfecha.Value.Year, 0, row(13))
+                    dgvAsientoRoles.Rows.Add(0, DateTime.Now, "201070301", "OBLIGACIONES CON EL SEGURO SOCIAL", "COMPROBANTE ASIENTO DE DIARIO", "ASIENTO DE DIARIO MES OPERATIVO " & dtpfecha.Value.ToString("MMMM").ToUpper & " " & dtpfecha.Value.Year, 0, iess)
+                    dgvAsientoRoles.Rows.Add(0, DateTime.Now, "201070305", "FONDO DE RESERVA POR PAGAR", "COMPROBANTE ASIENTO DE DIARIO", "ASIENTO DE DIARIO MES OPERATIVO " & dtpfecha.Value.ToString("MMMM").ToUpper & " " & dtpfecha.Value.Year, 0, fondo)
+                    dgvAsientoRoles.Rows.Add(0, DateTime.Now, "201070307", "PRESTAMO QUIROGRAFARIO", "COMPROBANTE ASIENTO DE DIARIO", "ASIENTO DE DIARIO MES OPERATIVO " & dtpfecha.Value.ToString("MMMM").ToUpper & " " & dtpfecha.Value.Year, 0, row(8))
+                    dgvAsientoRoles.Rows.Add(0, DateTime.Now, "201070309", "PRESTAMO HIPOTECARIO", "COMPROBANTE ASIENTO DE DIARIO", "ASIENTO DE DIARIO MES OPERATIVO " & dtpfecha.Value.ToString("MMMM").ToUpper & " " & dtpfecha.Value.Year, 0, row(9))
+                    dgvAsientoRoles.Rows.Add(0, DateTime.Now, "201070336", "OBLIGACIONES CON EL SEGURO SOCIAL EXTENCION SALUD", "COMPROBANTE ASIENTO DE DIARIO", "ASIENTO DE DIARIO MES OPERATIVO " & dtpfecha.Value.ToString("MMMM").ToUpper & " " & dtpfecha.Value.Year, 0, row(10))
+                    dgvAsientoRoles.Rows.Add(0, DateTime.Now, "201070701", "OPERATIVOS", "COMPROBANTE ASIENTO DE DIARIO", "ASIENTO DE DIARIO MES OPERATIVO " & dtpfecha.Value.ToString("MMMM").ToUpper & " " & dtpfecha.Value.Year, 0, row(22))
+
+                    If CDec(row(14)) > 0 Then
+                        dgvAsientoRoles.Rows.Add(0, DateTime.Now, "201070705", "DESCUENTO EQUIPO DE SEGURIDAD", "COMPROBANTE ASIENTO DE DIARIO", "ASIENTO DE DIARIO MES OPERATIVO " & dtpfecha.Value.ToString("MMMM").ToUpper & " " & dtpfecha.Value.Year, 0, row(14))
+                    End If
+
+                    If CDec(row(19)) > 0 Then
+                        dgvAsientoRoles.Rows.Add(0, DateTime.Now, "201070706", "DESCUENTO DE MULTAS", "COMPROBANTE ASIENTO DE DIARIO", "ASIENTO DE DIARIO MES OPERATIVO " & dtpfecha.Value.ToString("MMMM").ToUpper & " " & dtpfecha.Value.Year, 0, row(19))
+                    End If
+
+                    If CDec(row(20)) > 0 Then
+                        dgvAsientoRoles.Rows.Add(0, DateTime.Now, "201070707", "OTRAS CUENTAS POR PAGAR", "COMPROBANTE ASIENTO DE DIARIO", "ASIENTO DE DIARIO MES OPERATIVO " & dtpfecha.Value.ToString("MMMM").ToUpper & " " & dtpfecha.Value.Year, 0, row(20))
+                    End If
+
+                    If (CDec(row(18))) > 0 Then
+                        dgvAsientoRoles.Rows.Add(0, DateTime.Now, "201070709", "DESCUENTO JUDICIALES POR PAGAR", "COMPROBANTE ASIENTO DE DIARIO", "ASIENTO DE DIARIO MES OPERATIVO " & dtpfecha.Value.ToString("MMMM").ToUpper & " " & dtpfecha.Value.Year, 0, row(18))
+                    End If
+
+                    If (CDec(row(16))) > 0 Then
+                        dgvAsientoRoles.Rows.Add(0, DateTime.Now, "201070710", "DESCUENTO DE COMISARIATO", "COMPROBANTE ASIENTO DE DIARIO", "ASIENTO DE DIARIO MES OPERATIVO " & dtpfecha.Value.ToString("MMMM").ToUpper & " " & dtpfecha.Value.Year, 0, row(16))
+                    End If
+
+                    If CDec(row(17)) > 0 Then
+                        dgvAsientoRoles.Rows.Add(0, DateTime.Now, "201070714", "DESCUENTO JUDICIALES POR BENEFICIOS DE LEY", "COMPROBANTE ASIENTO DE DIARIO", "ASIENTO DE DIARIO MES OPERATIVO " & dtpfecha.Value.ToString("MMMM").ToUpper & " " & dtpfecha.Value.Year, 0, row(17))
+                    End If
+
+                    If (CDec(row(15))) > 0 Then
+                        dgvAsientoRoles.Rows.Add(0, DateTime.Now, "201070716", "DESCUENTO COMECSA", "COMPROBANTE ASIENTO DE DIARIO", "ASIENTO DE DIARIO MES OPERATIVO " & dtpfecha.Value.ToString("MMMM").ToUpper & " " & dtpfecha.Value.Year, 0, row(15))
+                    End If
+
+                    If CDec(row(12)) > 0 Then
+                        dgvAsientoRoles.Rows.Add(0, DateTime.Now, "201070717", "DESCUENTO CURSO DE CAPACITACION", "COMPROBANTE ASIENTO DE DIARIO", "ASIENTO DE DIARIO MES OPERATIVO " & dtpfecha.Value.ToString("MMMM").ToUpper & " " & dtpfecha.Value.Year, 0, row(12))
+                    End If
+
+                    If CDec(row(21)) > 0 Then
+                        dgvAsientoRoles.Rows.Add(0, DateTime.Now, "201070718", "DESCUENTO ALMUERZO AL PERSONAL", "COMPROBANTE ASIENTO DE DIARIO", "ASIENTO DE DIARIO MES OPERATIVO " & dtpfecha.Value.ToString("MMMM").ToUpper & " " & dtpfecha.Value.Year, 0, row(21))
+                    End If
+
 
                 End If
+
                 sumarTotalAsientoRoles()
 
             End If
@@ -972,6 +1108,8 @@ Namespace FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
                             dgvAsientoRoles.CurrentRow.Cells("cuenta").Value = String.Empty
                             MsgBox("LA CUENTA: " & cc.Rows(0)(1) & " - " & cc.Rows(0)(2) & vbNewLine & "ES UNA CUENTA PADRE, NO GENERA MOVIMIENTO!!", MsgBoxStyle.Information, "MENSAJE DE INFORMACIÓN")
                         End If
+
+
                     Catch ex As Exception
                         dgvAsientoRoles.CurrentRow.Cells("codigo").Value = cod
                         dgvAsientoRoles.CurrentRow.Cells("cuenta").Value = cue
@@ -979,7 +1117,7 @@ Namespace FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
 
 
                 End If
-
+                SumarTotalAsientoRoles()
 
             Catch ex As Exception
                 KryptonMessageBox.Show("CELDA FIN DE EDICIÓN." & vbNewLine & ex.Message.ToString, "MENSAJE DE EXCEPCIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
@@ -1012,6 +1150,8 @@ Namespace FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
                         e.Handled = Not _validacionesNumeros.EsNumero(e.KeyChar)
                     Case 3
                         e.Handled = Not _validacionesDecimales.EsDecimal(e.KeyChar)
+                    Case 6, 7
+                        e.Handled = Not _validacionesDecimales.EsDecimal(e.KeyChar)
                     Case Else
                         e.Handled = Not _validacionesAlfanumerica.EsAlfanumerico(e.KeyChar)
                 End Select
@@ -1028,8 +1168,8 @@ Namespace FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
                     totalDebe += CDec(dgvAsientoRoles.Rows(indice).Cells(6).Value)
                     totalHaber += CDec(dgvAsientoRoles.Rows(indice).Cells(7).Value)
                 Next
-                txtDebe.Text = totalDebe
-                txtHaber.Text = totalHaber
+                txtDebe.Text = totalDebe.ToString("N2")
+                txtHaber.Text = totalHaber.ToString("N2")
 
                 If txtDebe.Text <> txtHaber.Text Then
                     txtDebe.ForeColor = Color.Red
@@ -1039,11 +1179,42 @@ Namespace FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
                     txtHaber.ForeColor = Color.Green
                 End If
             Catch
-                txtDebe.Text = 0
-                txtHaber.Text = 0
+                txtDebe.Text = "0.00"
+                txtHaber.Text = "0.00"
             End Try
         End Sub
 
+        Private Sub dgvAsientoRoles_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvAsientoRoles.CellClick
 
+            If e.RowIndex >= 0 Then
+                _selectedRowIndex = e.RowIndex
+            End If
+
+        End Sub
+
+        Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
+            If _selectedRowIndex >= 0 Then
+                dgvAsientoRoles.Rows.Insert(_selectedRowIndex + 1)
+
+                _selectedRowIndex = -1
+            Else
+                KryptonMessageBox.Show("SELECCIONE UNA FILA PARA INSERTAR", "MENSAJE DE VALIDACION", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
+            End If
+
+            SumarTotalAsientoRoles()
+        End Sub
+
+        Private Sub btnDelete_Click(sender As Object, e As EventArgs) Handles btnDelete.Click
+            If _selectedRowIndex >= 0 And dgvAsientoRoles.Rows.Count > 0 Then
+                dgvAsientoRoles.Rows.RemoveAt(_selectedRowIndex)
+                _selectedRowIndex = -1
+            ElseIf dgvAsientoRoles.Rows.Count <= 1 Then
+                KryptonMessageBox.Show("NO SE PUEDE ELIMINAR EL ÚLTIMO REGISTRO", "MENSAJE DE VALIDACION", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
+            Else
+                KryptonMessageBox.Show("SELECCIONE UNA FILA PARA ELIMINAR", "MENSAJE DE VALIDACION", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
+            End If
+
+            SumarTotalAsientoRoles()
+        End Sub
     End Class
 End Namespace

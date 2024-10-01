@@ -33,6 +33,7 @@
             Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormAjustarAsientosLibroDiario))
             Me.gbBuscarAsiento = New System.Windows.Forms.GroupBox()
             Me.rbFechaAsiento = New System.Windows.Forms.RadioButton()
@@ -121,6 +122,8 @@
             Me.btnReporte = New System.Windows.Forms.ToolStripMenuItem()
             Me.btnExportar = New System.Windows.Forms.ToolStripMenuItem()
             Me.kryptonGroupBox1 = New Krypton.Toolkit.KryptonGroupBox()
+            Me.btnDelete = New Krypton.Toolkit.KryptonButton()
+            Me.btnAdd = New Krypton.Toolkit.KryptonButton()
             Me.KryptonLabel8 = New Krypton.Toolkit.KryptonLabel()
             Me.txtHaber = New System.Windows.Forms.TextBox()
             Me.txtDebe = New System.Windows.Forms.TextBox()
@@ -1132,6 +1135,8 @@
             '
             'kryptonGroupBox1.Panel
             '
+            Me.kryptonGroupBox1.Panel.Controls.Add(Me.btnDelete)
+            Me.kryptonGroupBox1.Panel.Controls.Add(Me.btnAdd)
             Me.kryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel8)
             Me.kryptonGroupBox1.Panel.Controls.Add(Me.txtHaber)
             Me.kryptonGroupBox1.Panel.Controls.Add(Me.txtDebe)
@@ -1149,6 +1154,48 @@
             Me.kryptonGroupBox1.TabIndex = 2
             Me.kryptonGroupBox1.Values.Heading = "Datos Asiento"
             '
+            'btnDelete
+            '
+            Me.btnDelete.Location = New System.Drawing.Point(908, 7)
+            Me.btnDelete.Name = "btnDelete"
+            Me.btnDelete.Size = New System.Drawing.Size(30, 30)
+            Me.btnDelete.StateNormal.Back.Draw = Krypton.Toolkit.InheritBool.[False]
+            Me.btnDelete.StateNormal.Border.Draw = Krypton.Toolkit.InheritBool.[False]
+            Me.btnDelete.StateNormal.Border.DrawBorders = CType((((Krypton.Toolkit.PaletteDrawBorders.Top Or Krypton.Toolkit.PaletteDrawBorders.Bottom) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Left) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Right), Krypton.Toolkit.PaletteDrawBorders)
+            Me.btnDelete.StateNormal.Content.Draw = Krypton.Toolkit.InheritBool.[True]
+            Me.btnDelete.TabIndex = 14
+            Me.btnDelete.Values.ImageStates.ImageCheckedNormal = Nothing
+            Me.btnDelete.Values.ImageStates.ImageCheckedPressed = Nothing
+            Me.btnDelete.Values.ImageStates.ImageCheckedTracking = Nothing
+            Me.btnDelete.Values.ImageStates.ImageDisabled = Global.syscisepro.My.Resources.Resources.do_not_disturb_on_24dp_FILL0_wght400_GRAD0_opsz24
+            Me.btnDelete.Values.ImageStates.ImageNormal = Global.syscisepro.My.Resources.Resources.do_not_disturb_on_24dp_FILL0_wght400_GRAD0_opsz24
+            Me.btnDelete.Values.ImageStates.ImagePressed = Global.syscisepro.My.Resources.Resources.do_not_disturb_on_24dp_000000_FILL0_wght400_GRAD0_opsz24
+            Me.btnDelete.Values.ImageStates.ImageTracking = Global.syscisepro.My.Resources.Resources.do_not_disturb_on_24dp_000000_FILL0_wght400_GRAD0_opsz24
+            Me.btnDelete.Values.Text = ""
+            '
+            'btnAdd
+            '
+            Me.btnAdd.Location = New System.Drawing.Point(867, 7)
+            Me.btnAdd.Name = "btnAdd"
+            Me.btnAdd.Size = New System.Drawing.Size(30, 30)
+            Me.btnAdd.StateNormal.Back.Draw = Krypton.Toolkit.InheritBool.[False]
+            Me.btnAdd.StateNormal.Border.Draw = Krypton.Toolkit.InheritBool.[False]
+            Me.btnAdd.StateNormal.Border.DrawBorders = CType((((Krypton.Toolkit.PaletteDrawBorders.Top Or Krypton.Toolkit.PaletteDrawBorders.Bottom) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Left) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Right), Krypton.Toolkit.PaletteDrawBorders)
+            Me.btnAdd.StateNormal.Content.Draw = Krypton.Toolkit.InheritBool.[True]
+            Me.btnAdd.TabIndex = 13
+            Me.btnAdd.Values.ImageStates.ImageCheckedNormal = Nothing
+            Me.btnAdd.Values.ImageStates.ImageCheckedPressed = Nothing
+            Me.btnAdd.Values.ImageStates.ImageCheckedTracking = Nothing
+            Me.btnAdd.Values.ImageStates.ImageDisabled = Global.syscisepro.My.Resources.Resources.add_circle_24dp_FILL0_wght400_GRAD0_opsz24__3_
+            Me.btnAdd.Values.ImageStates.ImageNormal = Global.syscisepro.My.Resources.Resources.add_circle_24dp_FILL0_wght400_GRAD0_opsz24__3_
+            Me.btnAdd.Values.ImageStates.ImagePressed = Global.syscisepro.My.Resources.Resources.add_circle_24dp_FILL0_wght400_GRAD0_opsz24
+            Me.btnAdd.Values.ImageStates.ImageTracking = Global.syscisepro.My.Resources.Resources.add_circle_24dp_FILL0_wght400_GRAD0_opsz24
+            Me.btnAdd.Values.Text = ""
+            '
             'KryptonLabel8
             '
             Me.KryptonLabel8.Location = New System.Drawing.Point(530, 525)
@@ -1159,28 +1206,28 @@
             '
             'txtHaber
             '
-            Me.txtHaber.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtHaber.Font = New System.Drawing.Font("Roboto", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtHaber.Location = New System.Drawing.Point(704, 524)
             Me.txtHaber.Name = "txtHaber"
             Me.txtHaber.ShortcutsEnabled = False
-            Me.txtHaber.Size = New System.Drawing.Size(100, 22)
+            Me.txtHaber.Size = New System.Drawing.Size(100, 23)
             Me.txtHaber.TabIndex = 4
             Me.txtHaber.Text = "0.00"
             Me.txtHaber.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
             '
             'txtDebe
             '
-            Me.txtDebe.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtDebe.Font = New System.Drawing.Font("Roboto", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtDebe.Location = New System.Drawing.Point(589, 525)
             Me.txtDebe.Name = "txtDebe"
-            Me.txtDebe.Size = New System.Drawing.Size(100, 22)
+            Me.txtDebe.Size = New System.Drawing.Size(100, 23)
             Me.txtDebe.TabIndex = 3
             Me.txtDebe.Text = "0.00"
             Me.txtDebe.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
             '
             'kryptonLabel6
             '
-            Me.kryptonLabel6.Location = New System.Drawing.Point(422, 10)
+            Me.kryptonLabel6.Location = New System.Drawing.Point(391, 10)
             Me.kryptonLabel6.Name = "kryptonLabel6"
             Me.kryptonLabel6.Size = New System.Drawing.Size(67, 20)
             Me.kryptonLabel6.TabIndex = 12
@@ -1188,7 +1235,7 @@
             '
             'kryptonLabel5
             '
-            Me.kryptonLabel5.Location = New System.Drawing.Point(610, 9)
+            Me.kryptonLabel5.Location = New System.Drawing.Point(567, 9)
             Me.kryptonLabel5.Name = "kryptonLabel5"
             Me.kryptonLabel5.Size = New System.Drawing.Size(70, 20)
             Me.kryptonLabel5.TabIndex = 11
@@ -1205,7 +1252,7 @@
             'txtFondoReservaxPagar
             '
             Me.txtFondoReservaxPagar.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtFondoReservaxPagar.Location = New System.Drawing.Point(495, 9)
+            Me.txtFondoReservaxPagar.Location = New System.Drawing.Point(468, 9)
             Me.txtFondoReservaxPagar.Name = "txtFondoReservaxPagar"
             Me.txtFondoReservaxPagar.Size = New System.Drawing.Size(76, 21)
             Me.txtFondoReservaxPagar.TabIndex = 8
@@ -1213,7 +1260,7 @@
             'txtAportePatronal
             '
             Me.txtAportePatronal.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtAportePatronal.Location = New System.Drawing.Point(701, 9)
+            Me.txtAportePatronal.Location = New System.Drawing.Point(646, 9)
             Me.txtAportePatronal.Name = "txtAportePatronal"
             Me.txtAportePatronal.Size = New System.Drawing.Size(78, 21)
             Me.txtAportePatronal.TabIndex = 7
@@ -1221,12 +1268,14 @@
             '
             'dgvAsientoRoles
             '
+            DataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+            Me.dgvAsientoRoles.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle8
             Me.dgvAsientoRoles.BorderStyle = System.Windows.Forms.BorderStyle.None
             Me.dgvAsientoRoles.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.id, Me.fecha, Me.codigo, Me.cuenta, Me.concepto, Me.detalle, Me.debe, Me.haber})
             Me.dgvAsientoRoles.Location = New System.Drawing.Point(2, 48)
             Me.dgvAsientoRoles.Name = "dgvAsientoRoles"
             Me.dgvAsientoRoles.RowHeadersVisible = False
-            Me.dgvAsientoRoles.Size = New System.Drawing.Size(982, 422)
+            Me.dgvAsientoRoles.Size = New System.Drawing.Size(982, 450)
             Me.dgvAsientoRoles.TabIndex = 6
             '
             'id
@@ -1267,17 +1316,17 @@
             '
             'debe
             '
-            DataGridViewCellStyle8.Format = "N2"
-            DataGridViewCellStyle8.NullValue = Nothing
-            Me.debe.DefaultCellStyle = DataGridViewCellStyle8
+            DataGridViewCellStyle9.Format = "N2"
+            DataGridViewCellStyle9.NullValue = Nothing
+            Me.debe.DefaultCellStyle = DataGridViewCellStyle9
             Me.debe.HeaderText = "Debe"
             Me.debe.Name = "debe"
             '
             'haber
             '
-            DataGridViewCellStyle9.Format = "N2"
-            DataGridViewCellStyle9.NullValue = Nothing
-            Me.haber.DefaultCellStyle = DataGridViewCellStyle9
+            DataGridViewCellStyle10.Format = "N2"
+            DataGridViewCellStyle10.NullValue = Nothing
+            Me.haber.DefaultCellStyle = DataGridViewCellStyle10
             Me.haber.HeaderText = "Haber"
             Me.haber.Name = "haber"
             '
@@ -1287,7 +1336,7 @@
             Me.cbxTipo.DropDownWidth = 121
             Me.cbxTipo.IntegralHeight = False
             Me.cbxTipo.Items.AddRange(New Object() {"- Elija Uno - ", "Administrativo", "Operativo"})
-            Me.cbxTipo.Location = New System.Drawing.Point(261, 8)
+            Me.cbxTipo.Location = New System.Drawing.Point(246, 8)
             Me.cbxTipo.Name = "cbxTipo"
             Me.cbxTipo.Size = New System.Drawing.Size(125, 21)
             Me.cbxTipo.StateCommon.ComboBox.Content.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near
@@ -1295,7 +1344,7 @@
             '
             'kryptonLabel3
             '
-            Me.kryptonLabel3.Location = New System.Drawing.Point(213, 8)
+            Me.kryptonLabel3.Location = New System.Drawing.Point(202, 8)
             Me.kryptonLabel3.Name = "kryptonLabel3"
             Me.kryptonLabel3.Size = New System.Drawing.Size(34, 20)
             Me.kryptonLabel3.TabIndex = 4
@@ -1313,7 +1362,7 @@
             '
             'btnGenerar
             '
-            Me.btnGenerar.Location = New System.Drawing.Point(821, 5)
+            Me.btnGenerar.Location = New System.Drawing.Point(753, 5)
             Me.btnGenerar.Name = "btnGenerar"
             Me.btnGenerar.Size = New System.Drawing.Size(90, 25)
             Me.btnGenerar.StateNormal.Border.DrawBorders = CType((((Krypton.Toolkit.PaletteDrawBorders.Top Or Krypton.Toolkit.PaletteDrawBorders.Bottom) _
@@ -1550,5 +1599,7 @@
         Friend WithEvents detalle As DataGridViewTextBoxColumn
         Friend WithEvents debe As DataGridViewTextBoxColumn
         Friend WithEvents haber As DataGridViewTextBoxColumn
+        Friend WithEvents btnDelete As Krypton.Toolkit.KryptonButton
+        Friend WithEvents btnAdd As Krypton.Toolkit.KryptonButton
     End Class
 End Namespace
