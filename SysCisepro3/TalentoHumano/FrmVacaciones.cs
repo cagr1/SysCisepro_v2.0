@@ -177,6 +177,7 @@ namespace SysCisepro3.TalentoHumano
             _objRegistroPermisoPersonal.IdSitio = Convert.ToInt32(txtSitio.Tag);
             _objRegistroPermisoPersonal.FechaReg = dtpFecha.Value;
             _objRegistroPermisoPersonal.NumDoc = txtNumDoc.Text.Trim().Length == 0 ? 0 : Convert.ToInt32(txtNumDoc.Text.Trim());
+            _objRegistroPermisoPersonal.Certificado = new byte[0];
             _sqlCommands.Add(_objRegistroPermisoPersonal.NuevoRegistroPermisoCommands());
 
             _objHistorialLaboral.IdHistoriaLaboral = _objHistorialLaboral.BuscarMayorIdHistoriaLaboral(TipoCon) + 1;

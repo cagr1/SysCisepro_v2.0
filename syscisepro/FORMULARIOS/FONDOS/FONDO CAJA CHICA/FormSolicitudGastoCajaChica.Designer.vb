@@ -51,7 +51,6 @@
             Me.lblCaja = New System.Windows.Forms.Label()
             Me.cbmAutoriza = New System.Windows.Forms.ComboBox()
             Me.lblAutoriza = New System.Windows.Forms.Label()
-            Me.cbmCajasChicas = New System.Windows.Forms.ComboBox()
             Me.Label15 = New System.Windows.Forms.Label()
             Me.GroupBox1 = New System.Windows.Forms.GroupBox()
             Me.lblIdCombustible = New System.Windows.Forms.Label()
@@ -140,6 +139,7 @@
             Me.Label1 = New System.Windows.Forms.Label()
             Me.dtpComprobanteRetencion = New System.Windows.Forms.DateTimePicker()
             Me.dtpFechaEmisionComprobanteCompra = New System.Windows.Forms.DateTimePicker()
+            Me.cbmCajasChicas = New System.Windows.Forms.ComboBox()
             Me.dgvDetallesRetencion = New System.Windows.Forms.DataGridView()
             Me.EjercicioFiscal = New System.Windows.Forms.DataGridViewTextBoxColumn()
             Me.CodigoRetencion = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -202,7 +202,7 @@
             Me.tcSolicitudCajaChica.Controls.Add(Me.tpSolicitud)
             Me.tcSolicitudCajaChica.Controls.Add(Me.tpReporteCombustible)
             Me.tcSolicitudCajaChica.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.tcSolicitudCajaChica.Location = New System.Drawing.Point(2, 33)
+            Me.tcSolicitudCajaChica.Location = New System.Drawing.Point(0, 34)
             Me.tcSolicitudCajaChica.Name = "tcSolicitudCajaChica"
             Me.tcSolicitudCajaChica.SelectedIndex = 0
             Me.tcSolicitudCajaChica.Size = New System.Drawing.Size(1007, 518)
@@ -226,7 +226,6 @@
             Me.tpSolicitud.Controls.Add(Me.dtpComprobanteRetencion)
             Me.tpSolicitud.Controls.Add(Me.dtpFechaEmisionComprobanteCompra)
             Me.tpSolicitud.Controls.Add(Me.cbmCajasChicas)
-            Me.tpSolicitud.Controls.Add(Me.dgvDetallesRetencion)
             Me.tpSolicitud.Location = New System.Drawing.Point(4, 22)
             Me.tpSolicitud.Name = "tpSolicitud"
             Me.tpSolicitud.Padding = New System.Windows.Forms.Padding(3)
@@ -342,18 +341,6 @@
             Me.lblAutoriza.Size = New System.Drawing.Size(63, 13)
             Me.lblAutoriza.TabIndex = 10
             Me.lblAutoriza.Text = "AUTORIZA:"
-            '
-            'cbmCajasChicas
-            '
-            Me.cbmCajasChicas.BackColor = System.Drawing.Color.White
-            Me.cbmCajasChicas.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-            Me.cbmCajasChicas.Enabled = False
-            Me.cbmCajasChicas.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-            Me.cbmCajasChicas.FormattingEnabled = True
-            Me.cbmCajasChicas.Location = New System.Drawing.Point(156, 12)
-            Me.cbmCajasChicas.Name = "cbmCajasChicas"
-            Me.cbmCajasChicas.Size = New System.Drawing.Size(216, 21)
-            Me.cbmCajasChicas.TabIndex = 2
             '
             'Label15
             '
@@ -1324,6 +1311,18 @@
             Me.dtpFechaEmisionComprobanteCompra.TabIndex = 44
             Me.dtpFechaEmisionComprobanteCompra.Visible = False
             '
+            'cbmCajasChicas
+            '
+            Me.cbmCajasChicas.BackColor = System.Drawing.Color.White
+            Me.cbmCajasChicas.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+            Me.cbmCajasChicas.Enabled = False
+            Me.cbmCajasChicas.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+            Me.cbmCajasChicas.FormattingEnabled = True
+            Me.cbmCajasChicas.Location = New System.Drawing.Point(156, 12)
+            Me.cbmCajasChicas.Name = "cbmCajasChicas"
+            Me.cbmCajasChicas.Size = New System.Drawing.Size(216, 21)
+            Me.cbmCajasChicas.TabIndex = 2
+            '
             'dgvDetallesRetencion
             '
             Me.dgvDetallesRetencion.AllowUserToAddRows = False
@@ -1334,12 +1333,12 @@
             Me.dgvDetallesRetencion.BorderStyle = System.Windows.Forms.BorderStyle.None
             Me.dgvDetallesRetencion.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
             DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-            DataGridViewCellStyle7.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle7.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
             Me.dgvDetallesRetencion.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle7
             Me.dgvDetallesRetencion.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.EjercicioFiscal, Me.CodigoRetencion, Me.BaseImponible, Me.Impuesto, Me.PorcentajeRetencion, Me.ValorRetenido, Me.Column1, Me.Column2})
             Me.dgvDetallesRetencion.GridColor = System.Drawing.SystemColors.ControlLight
-            Me.dgvDetallesRetencion.Location = New System.Drawing.Point(37, 8)
+            Me.dgvDetallesRetencion.Location = New System.Drawing.Point(38, 144)
             Me.dgvDetallesRetencion.MultiSelect = False
             Me.dgvDetallesRetencion.Name = "dgvDetallesRetencion"
             Me.dgvDetallesRetencion.ReadOnly = True
@@ -1347,7 +1346,7 @@
             Me.dgvDetallesRetencion.RowHeadersVisible = False
             Me.dgvDetallesRetencion.RowTemplate.DefaultCellStyle.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.dgvDetallesRetencion.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvDetallesRetencion.Size = New System.Drawing.Size(704, 85)
+            Me.dgvDetallesRetencion.Size = New System.Drawing.Size(185, 85)
             Me.dgvDetallesRetencion.TabIndex = 53
             Me.dgvDetallesRetencion.Visible = False
             '
@@ -1590,6 +1589,7 @@
             Me.Controls.Add(Me.tcSolicitudCajaChica)
             Me.Controls.Add(Me.txtTexto)
             Me.Controls.Add(Me.btnControlCombustible)
+            Me.Controls.Add(Me.dgvDetallesRetencion)
             Me.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
             Me.MaximizeBox = False

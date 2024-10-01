@@ -1653,10 +1653,10 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
 
         Private Sub btnBuscarModi_Click(sender As Object, e As EventArgs) Handles btnBuscarModi.Click
 
-            If txtFiltro.Text = "Buscar por Sitio o Nombre" Then
-                txtFiltro.Text = ""
+            'If txtFiltro.Text = "Buscar por Sitio o Nombre" Then
+            '    txtFiltro.Text = ""
 
-            End If
+            'End If
             CargarComprobantesEgreso(txtFiltro.Text)
             tsmNuevo.Enabled = True
             tsmActualizar.Enabled = True

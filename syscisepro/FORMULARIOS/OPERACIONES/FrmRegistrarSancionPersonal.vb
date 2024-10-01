@@ -90,8 +90,7 @@ Namespace FORMULARIOS.OPERACIONES
             Label2.Text = "$ 0.00"
             'txtMultador.Text = UserName
 
-            txtFiltro.ForeColor = ValidationForms.GetColorSistema(_tipoCon)
-            txtFiltro.Font = New Font("Roboto", 9, FontStyle.Regular)
+
             Dim validation As New ValidationForms()
             validation.SetPlaceholder(txtFiltro, "Buscar...")
 
@@ -993,9 +992,7 @@ Namespace FORMULARIOS.OPERACIONES
             Next
         End Sub
 
-        Private Sub dtpFechaHasta_ValueChanged(sender As Object, e As EventArgs) Handles dtpFechaHasta.ValueChanged
 
-        End Sub
 
         Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnNormalF.Click
             ExportarDatosExcel(ListView1, "ASIGNACION DE PUESTOS DE TRABAJO")

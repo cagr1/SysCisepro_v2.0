@@ -346,7 +346,7 @@
             Me.Button1.ForeColor = System.Drawing.Color.Black
             Me.Button1.Image = Global.syscisepro.My.Resources.Resources.save_24dp_FILL0_wght400_GRAD0_opsz24__2_
             Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-            Me.Button1.Location = New System.Drawing.Point(827, 16)
+            Me.Button1.Location = New System.Drawing.Point(838, 13)
             Me.Button1.Name = "Button1"
             Me.Button1.Size = New System.Drawing.Size(39, 26)
             Me.Button1.TabIndex = 19
@@ -477,7 +477,7 @@
             Me.tpReporte.Location = New System.Drawing.Point(4, 22)
             Me.tpReporte.Name = "tpReporte"
             Me.tpReporte.Padding = New System.Windows.Forms.Padding(3)
-            Me.tpReporte.Size = New System.Drawing.Size(1002, 625)
+            Me.tpReporte.Size = New System.Drawing.Size(943, 566)
             Me.tpReporte.TabIndex = 1
             Me.tpReporte.Text = "REPORTE"
             '
@@ -489,7 +489,7 @@
             Me.crvAutorizaciones.Dock = System.Windows.Forms.DockStyle.Fill
             Me.crvAutorizaciones.Location = New System.Drawing.Point(3, 3)
             Me.crvAutorizaciones.Name = "crvAutorizaciones"
-            Me.crvAutorizaciones.Size = New System.Drawing.Size(996, 619)
+            Me.crvAutorizaciones.Size = New System.Drawing.Size(937, 560)
             Me.crvAutorizaciones.TabIndex = 0
             Me.crvAutorizaciones.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None
             '
