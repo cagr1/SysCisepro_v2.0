@@ -1490,14 +1490,14 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                 End If
 
                 Dim idpersonal = If(txtRecibe.Tag Is Nothing, txtRecibe.Text.Split("-")(1).Trim(), CType(txtRecibe.Tag, Integer))
-                Dim mes = dtpFecha.Value.Month
-                Dim anio = dtpFecha.Value.Year
+                'Dim mes = dtpFecha.Value.Month
+                'Dim anio = dtpFecha.Value.Year
+                Dim fechaDesde = dtpFecha.Value.Day.ToString & "-" & dtpFecha.Value.Month.ToString & "-" & dtpFecha.Value.Year.ToString & " 00:00:00"
+                Dim fechaHasta = dtpFecha.Value.Day.ToString & "-" & dtpFecha.Value.Month.ToString & "-" & dtpFecha.Value.Year.ToString & " 23:59:59"
                 With _objRegistroDescuento
                     .IdPersonal = idpersonal
-                    .Mes = mes
-                    .Anio = anio
                 End With
-                _sqlCommands.Add(_objRegistroDescuento.AnularRegistroDescuentoComprobanteEgreso(idpersonal, mes, anio))
+                _sqlCommands.Add(_objRegistroDescuento.AnularRegistroDescuentoComprobanteEgreso(idpersonal, fechaDesde, fechaHasta))
 
                 With _objDetCompEgr
                     .IdDetalle = row.Cells.Item(1).Value
