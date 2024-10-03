@@ -298,15 +298,15 @@ namespace SysCisepro3.TalentoHumano
                 lblValCon.Visible = false;
                 txtNombres.Text = row.Cells["NOMBRES"].Value.ToString();
                 txtApellidos.Text = row.Cells["APELLIDOS"].Value.ToString();
-                cbmSexo.Text = row.Cells["SEXO"].Value.ToString();
+                cbmSexo.SelectedItem = row.Cells["SEXO"].Value.ToString();
                 dtpFechaNacimiento.Value = Convert.ToDateTime(row.Cells["FECHA_NACIMIENTO"].Value);
 
                 txtEdad.Text = row.Cells["EDAD"].Value.ToString();
-                cbEstadoCivil.Text = row.Cells["ESTADO_CIVIL"].Value.ToString();
+                cbEstadoCivil.SelectedItem = row.Cells["ESTADO_CIVIL"].Value.ToString();
                 txtPasaporte.Text = row.Cells["PASAPORTE"].Value.ToString();
-                cbmInstruccion.Text = row.Cells["INSTRUCCION"].Value.ToString();
+                cbmInstruccion.SelectedItem = row.Cells["INSTRUCCION"].Value.ToString();
                 txtLibreta.Text = row.Cells["LIBRETA_MILITAR"].Value.ToString();
-                cbmTipoSangre.Text = row.Cells["TIPO_SANGRE"].Value.ToString();
+                cbmTipoSangre.SelectedItem = row.Cells["TIPO_SANGRE"].Value.ToString();
                 txtPeso.Text = row.Cells["PESO"].Value.ToString();
                 txtEstatura.Text = row.Cells["ESTATURA"].Value.ToString();
                 object credencial = row.Cells["CREDENCIAL"].Value;
@@ -1096,7 +1096,7 @@ namespace SysCisepro3.TalentoHumano
             _objPersonal.FechaEntradaPersonal = dtpFechaIngreso.Value;
             _objPersonal.UbicacionPersonal = txtSitio.Tag.ToString();
             _objPersonal.InstruccionPersonal = cbmInstruccion.Text.Trim();
-            _objPersonal.EstadoCivilPersonal = cbEstadoCivil.Text;
+            _objPersonal.EstadoCivilPersonal = cbEstadoCivil.Text.Trim();
             _objPersonal.MovilPersonal = txtMovil.Text;
             _objPersonal.TelefonoPersonal = txtTelefono.Text;
             _objPersonal.FechaSalidaPersonal = dtpFechaSalida.Value;

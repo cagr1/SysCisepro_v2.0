@@ -42,11 +42,6 @@
             this.txtObservaciones = new System.Windows.Forms.TextBox();
             this.kryptonLabel1 = new Krypton.Toolkit.KryptonLabel();
             this.dgvIngresoTabla = new Krypton.Toolkit.KryptonDataGridView();
-            this.id_secuencial = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.producto_servicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.credito = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dias = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtpFecha = new Krypton.Toolkit.KryptonDateTimePicker();
             this.kryptonPage3 = new ComponentFactory.Krypton.Navigator.KryptonPage();
             this.kryptonGroupBox2 = new Krypton.Toolkit.KryptonGroupBox();
@@ -59,6 +54,8 @@
             this.pdfViewer1 = new Patagames.Pdf.Net.Controls.WinForms.PdfViewer();
             this.pdfToolStripMain1 = new Patagames.Pdf.Net.Controls.WinForms.ToolBars.PdfToolStripMain();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.id_secuencial = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.producto_servicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonNavigator1)).BeginInit();
             this.kryptonNavigator1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPage1)).BeginInit();
@@ -145,10 +142,12 @@
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(32, 32);
             this.btnAgregar.StateCommon.Back.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.False;
+            this.btnAgregar.StateCommon.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.btnAgregar.StateCommon.Border.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.False;
             this.btnAgregar.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnAgregar.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.btnAgregar.TabIndex = 12;
             this.toolTip1.SetToolTip(this.btnAgregar, "Agregar Proveedor");
             this.btnAgregar.Values.ImageStates.ImageCheckedNormal = null;
@@ -185,10 +184,12 @@
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(32, 32);
             this.btnCancelar.StateCommon.Back.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.False;
+            this.btnCancelar.StateCommon.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.btnCancelar.StateCommon.Border.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.False;
             this.btnCancelar.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnCancelar.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.btnCancelar.TabIndex = 9;
             this.toolTip1.SetToolTip(this.btnCancelar, "Cancelar");
             this.btnCancelar.UseMnemonic = false;
@@ -208,10 +209,12 @@
             this.btnGuardarTabla.Name = "btnGuardarTabla";
             this.btnGuardarTabla.Size = new System.Drawing.Size(32, 32);
             this.btnGuardarTabla.StateCommon.Back.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.False;
+            this.btnGuardarTabla.StateCommon.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.btnGuardarTabla.StateCommon.Border.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.False;
             this.btnGuardarTabla.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnGuardarTabla.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.btnGuardarTabla.TabIndex = 8;
             this.toolTip1.SetToolTip(this.btnGuardarTabla, "Guardar Tabla");
             this.btnGuardarTabla.Values.ImageStates.ImageCheckedNormal = null;
@@ -230,10 +233,12 @@
             this.btnNuevaTabla.Name = "btnNuevaTabla";
             this.btnNuevaTabla.Size = new System.Drawing.Size(32, 32);
             this.btnNuevaTabla.StateCommon.Back.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.False;
+            this.btnNuevaTabla.StateCommon.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.btnNuevaTabla.StateCommon.Border.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.False;
             this.btnNuevaTabla.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnNuevaTabla.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.btnNuevaTabla.TabIndex = 7;
             this.toolTip1.SetToolTip(this.btnNuevaTabla, "Nueva Tabla");
             this.btnNuevaTabla.Values.ImageStates.ImageCheckedNormal = null;
@@ -270,10 +275,7 @@
             this.dgvIngresoTabla.ColumnHeadersHeight = 24;
             this.dgvIngresoTabla.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id_secuencial,
-            this.producto_servicio,
-            this.precio,
-            this.credito,
-            this.dias});
+            this.producto_servicio});
             this.dgvIngresoTabla.Enabled = false;
             this.dgvIngresoTabla.Location = new System.Drawing.Point(4, 90);
             this.dgvIngresoTabla.Name = "dgvIngresoTabla";
@@ -281,37 +283,6 @@
             this.dgvIngresoTabla.TabIndex = 1;
             this.dgvIngresoTabla.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvIngresoTabla_CellEndEdit);
             this.dgvIngresoTabla.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.dgvIngresoTabla_EditingControlShowing);
-            // 
-            // id_secuencial
-            // 
-            this.id_secuencial.HeaderText = "Id";
-            this.id_secuencial.Name = "id_secuencial";
-            this.id_secuencial.ReadOnly = true;
-            this.id_secuencial.Width = 40;
-            // 
-            // producto_servicio
-            // 
-            this.producto_servicio.HeaderText = "Producto/Servicio";
-            this.producto_servicio.Name = "producto_servicio";
-            this.producto_servicio.Width = 260;
-            // 
-            // precio
-            // 
-            this.precio.HeaderText = "Precio";
-            this.precio.Name = "precio";
-            this.precio.Width = 50;
-            // 
-            // credito
-            // 
-            this.credito.HeaderText = "Credito";
-            this.credito.Name = "credito";
-            this.credito.Width = 50;
-            // 
-            // dias
-            // 
-            this.dias.HeaderText = "Dias";
-            this.dias.Name = "dias";
-            this.dias.Width = 50;
             // 
             // dtpFecha
             // 
@@ -471,6 +442,19 @@
             this.pdfToolStripMain1.TabIndex = 1;
             this.pdfToolStripMain1.Text = "pdfToolStripMain1";
             // 
+            // id_secuencial
+            // 
+            this.id_secuencial.HeaderText = "Id";
+            this.id_secuencial.Name = "id_secuencial";
+            this.id_secuencial.ReadOnly = true;
+            this.id_secuencial.Width = 40;
+            // 
+            // producto_servicio
+            // 
+            this.producto_servicio.HeaderText = "Producto/Servicio";
+            this.producto_servicio.Name = "producto_servicio";
+            this.producto_servicio.Width = 260;
+            // 
             // FrmTablaComparacionCompra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -530,11 +514,6 @@
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnAgregar;
         private Krypton.Toolkit.KryptonLabel kryptonLabel2;
         private System.Windows.Forms.TextBox txtProveedor;
-        private System.Windows.Forms.DataGridViewTextBoxColumn id_secuencial;
-        private System.Windows.Forms.DataGridViewTextBoxColumn producto_servicio;
-        private System.Windows.Forms.DataGridViewTextBoxColumn precio;
-        private System.Windows.Forms.DataGridViewTextBoxColumn credito;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dias;
         private Krypton.Toolkit.KryptonGroupBox kryptonGroupBox2;
         private System.Windows.Forms.TextBox txtBuscar;
         private Krypton.Toolkit.KryptonDataGridView dgvDetalleTablaComparativa;
@@ -543,5 +522,7 @@
         private Patagames.Pdf.Net.Controls.WinForms.PdfViewer pdfViewer1;
         private Patagames.Pdf.Net.Controls.WinForms.ToolBars.PdfToolStripMain pdfToolStripMain1;
         private Patagames.Pdf.Net.Controls.WinForms.ToolBars.PdfToolStripPages pdfToolStripPages1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id_secuencial;
+        private System.Windows.Forms.DataGridViewTextBoxColumn producto_servicio;
     }
 }

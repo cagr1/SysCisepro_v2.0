@@ -117,15 +117,60 @@ namespace SysCisepro3.Contabilidad.Compras
                 itemName.AutoCompleteSource = AutoCompleteSource.None;
             }
 
-            if(dgvIngresoTabla.CurrentCell.ColumnIndex == 2 || dgvIngresoTabla.CurrentCell.ColumnIndex == 3 || dgvIngresoTabla.CurrentCell.ColumnIndex == 4)
+            if (dgvIngresoTabla.CurrentCell.OwningColumn.Name.StartsWith("Precio_"))
             {
-                itemName.KeyPress += Item_KeyPress ;
-                        
-            }           
-           
+                // Permitimos solo números decimales
+                itemName.KeyPress += Item_KeyPressDecimal;
+            }
+            // Verificamos si es una columna de "Tiempo" o "Días" (solo números enteros permitidos)
+            else if (dgvIngresoTabla.CurrentCell.OwningColumn.Name.StartsWith("Tiempo_"))
+            {
+                // Permitimos solo números enteros
+                itemName.KeyPress += Item_KeyPressInteger;
+            }
+
         }
 
-        
+        private void Item_KeyPressDecimal(object sender, KeyPressEventArgs e)
+        {
+            
+            if (char.IsControl(e.KeyChar))
+            {
+                return;
+            }
+
+            var textBox = sender as System.Windows.Forms.TextBox;
+
+            if (char.IsDigit(e.KeyChar) || e.KeyChar == '.')
+            {
+            
+                if (e.KeyChar == '.' && textBox.Text.Contains("."))
+                {
+                    e.Handled = true;
+                }
+            }
+            else
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void Item_KeyPressInteger(object sender, KeyPressEventArgs e)
+        {
+            // Permitimos solo dígitos y teclas de control
+            if (char.IsControl(e.KeyChar))
+            {
+                return;
+            }
+
+            if (!char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true; // Si no es un dígito, cancelamos la entrada
+            }
+        }
+
+
+
         private void Item_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (char.IsControl(e.KeyChar))
@@ -233,57 +278,60 @@ namespace SysCisepro3.Contabilidad.Compras
                 _sqlCommands.Add(_objTablaComparativa.InsertarTablaComparativaCommand());
 
                 var iddeta = _objDetalleTablaComparativa.BuscarMayorIdDetalleTablaComparativa(TipoCon) + 1;
-                bool isAnyChecked = false;
+                
+                
                 foreach (DataGridViewRow row in dgvIngresoTabla.Rows)
                 {
                     if (row.IsNewRow) continue;
 
-                    bool isRowChecked = false;
+                    
 
-                    if (row.Cells[0].Value == null || row.Cells[1].Value == null || row.Cells[2].Value == null ||
-                        row.Cells[3].Value == null || row.Cells[4].Value == null)
+                    if (row.Cells[0].Value == null || row.Cells[1].Value == null )
                         continue;
 
 
                     foreach (DataGridViewColumn column in dgvIngresoTabla.Columns)
                     {
-                        if (column is DataGridViewCheckBoxColumn)
+                        if (column.Name.StartsWith("Precio_") || column.Name.StartsWith("Tiempo_") )
                         {
-                            if (Convert.ToBoolean(row.Cells[column.Name].Value))
+                            string nombreProveedor = column.HeaderText;
+
+                            if (nombreProveedor.StartsWith("Precio (") || nombreProveedor.StartsWith("Entrega ("))
                             {
-                                isRowChecked = true;
-                                isAnyChecked = true;
-                                string nombreProveedor = column.HeaderText;
-                                var dt = _objProveedores.SeleccionarProveedorGeneralXNombre(TipoCon, nombreProveedor);
-                                if(dt.Rows.Count > 0)
+                                nombreProveedor = nombreProveedor.Substring(nombreProveedor.IndexOf('(') + 1);
+                                nombreProveedor = nombreProveedor.TrimEnd(')');
+                            }
+
+                            var dt = _objProveedores.SeleccionarProveedorGeneralXNombre(TipoCon, nombreProveedor);
+                            if (dt.Rows.Count > 0)
+                            {
+                               _objDetalleTablaComparativa.IdProveedor = Convert.ToInt32(dt.Rows[0][0]);
+                               _objDetalleTablaComparativa.Precio = Convert.ToDecimal(row.Cells[column.Index].Value.ToString());
+                                int diasColumn = column.Index + 1;
+                                if (diasColumn < dgvIngresoTabla.Columns.Count)
                                 {
-                                    _objDetalleTablaComparativa.IdProveedor = Convert.ToInt32(dt.Rows[0][0]);
+                                    _objDetalleTablaComparativa.Dias = Convert.ToInt32(row.Cells[4].Value);
                                 }
-                                else
-                                {
-                                    KryptonMessageBox.Show("Proveedor no encontrado, haga check en la fila vacia del proveedor", "Aviso", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
-                                    return;
-                                }
-                                
+                                _objDetalleTablaComparativa.Credito = 30;
                                 _objDetalleTablaComparativa.IdDetalleTablaComparativa = iddeta;
                                 _objDetalleTablaComparativa.IdSecuencial = Convert.ToInt32(row.Cells[0].Value);
                                 _objDetalleTablaComparativa.IdTablaComparativa = _objTablaComparativa.IdTablaComparativa;
-                                _objDetalleTablaComparativa.Precio = Convert.ToDecimal(row.Cells[2].Value);
-                                _objDetalleTablaComparativa.Credito = Convert.ToInt32(row.Cells[3].Value);
-                                _objDetalleTablaComparativa.Dias = Convert.ToInt32(row.Cells[4].Value);
                                 _objDetalleTablaComparativa.Estado = 1;
+
                                 _sqlCommands.Add(_objDetalleTablaComparativa.InsertarDetalleTablaComparativaCommand());
                                 iddeta++;
-
                             }
-                        }
+                            else
+                            {
+                                KryptonMessageBox.Show("Proveedor no encontrado, asegúrese de que el nombre es correcto.", "Aviso", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+                                return;
+                            }
+                        }                  
+
                     }                    
                 }
-                if (!isAnyChecked)
-                {
-                    KryptonMessageBox.Show("Debe seleccionar al menos un proveedor", "Aviso", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
-                    return;
-                }
+                
+                
 
             }
             catch (Exception ex)
@@ -333,32 +381,52 @@ namespace SysCisepro3.Contabilidad.Compras
             }
 
             
-            string columnName = "Column_" + txtProveedor.Text;
-            
-            if (!dgvIngresoTabla.Columns.Contains(columnName))
-            {                
-                DataGridViewCheckBoxColumn newColumn = new DataGridViewCheckBoxColumn
-                {
-                    HeaderText = txtProveedor.Text,
-                    Name = columnName,
-                    Width = 120,
-                    DefaultCellStyle = { Alignment = DataGridViewContentAlignment.MiddleRight }
-                };                
-                dgvIngresoTabla.Columns.Add(newColumn);
+            string proveedor = txtProveedor.Text;
+           
+
+            string precioColumnName = "Precio_" + txtProveedor.Text;
+            string tiempoColumnName = "Tiempo_" + txtProveedor.Text;
+
+
+            if (dgvIngresoTabla.Columns.Contains(precioColumnName) || dgvIngresoTabla.Columns.Contains(tiempoColumnName))
+            {
+             
+                KryptonMessageBox.Show("El proveedor '" + proveedor + "' ya ha sido agregado.", "Aviso", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+                return; 
+            }
+
+
+            if (!dgvIngresoTabla.Columns.Contains(precioColumnName) && !dgvIngresoTabla.Columns.Contains(tiempoColumnName))
+            {
                 
+                DataGridViewTextBoxColumn precioColumn = new DataGridViewTextBoxColumn
+                {
+                    HeaderText = "Precio (" + proveedor + ")",
+                    Name = precioColumnName,
+                    Width = 100,
+                    DefaultCellStyle = { Alignment = DataGridViewContentAlignment.MiddleRight }
+                };
+
+                
+                DataGridViewTextBoxColumn diasColumn = new DataGridViewTextBoxColumn
+                {
+                    HeaderText = "Entrega (" + proveedor + ")",
+                    Name = tiempoColumnName,
+                    Width = 100,
+                    DefaultCellStyle = { Alignment = DataGridViewContentAlignment.MiddleRight }
+                };
+
+                
+                dgvIngresoTabla.Columns.Add(precioColumn);
+                dgvIngresoTabla.Columns.Add(diasColumn);
             }
 
-            foreach (DataGridViewRow row in dgvIngresoTabla.Rows)
-            {            
-                if (row.IsNewRow) continue;
-                bool isChecked = !string.IsNullOrEmpty(lblIdProveedor.Text); 
-                row.Cells[columnName].Value = isChecked;
+            
 
-            }
 
         }
 
-        private void Autocompletarproveedor()
+            private void Autocompletarproveedor()
         {
             txtProveedor.AutoCompleteCustomSource = _objProveedores.AutoCompletarProveedor(TipoCon);
             txtProveedor.AutoCompleteMode = AutoCompleteMode.Suggest;
@@ -698,38 +766,53 @@ namespace SysCisepro3.Contabilidad.Compras
 
                 if (yObservacionesTable < 350)
                 {
+
                     document.NewPage();
+                    iTextSharp.text.Image facturaImage = iTextSharp.text.Image.GetInstance(rutaFacturaChart);
+                    facturaImage.ScaleToFit(275, 275);
+                    facturaImage.SetAbsolutePosition(10, 100);
+                    document.Add(facturaImage);
 
-                    //iTextSharp.text.Image facturaImage = iTextSharp.text.Image.GetInstance(rutaFacturaChart);
-                    //facturaImage.ScaleToFit(300, 300);
-                    //facturaImage.SetAbsolutePosition(10, 100);
-                    //document.Add(facturaImage);
+                    iTextSharp.text.Image creditoImage = iTextSharp.text.Image.GetInstance(rutaCreditoChart);
+                    creditoImage.ScaleToFit(275, 275);
+                    creditoImage.SetAbsolutePosition(310, 100);
+                    document.Add(creditoImage);
 
-                    //iTextSharp.text.Image creditoImage = iTextSharp.text.Image.GetInstance(rutaCreditoChart);
-                    //creditoImage.ScaleToFit(300, 300);
-                    //creditoImage.SetAbsolutePosition(310, 100);
-                    //document.Add(creditoImage);
+                    iTextSharp.text.Image tiempoImage = iTextSharp.text.Image.GetInstance(rutaTiempoChart);
+                    tiempoImage.ScaleToFit(275, 275);
+                    tiempoImage.SetAbsolutePosition(610, 100);
+                    document.Add(tiempoImage);
 
-                    //iTextSharp.text.Image tiempoImage = iTextSharp.text.Image.GetInstance(rutaTiempoChart);
-                    //tiempoImage.ScaleToFit(300, 300);
-                    //tiempoImage.SetAbsolutePosition(610, 100);
-                    //document.Add(tiempoImage);
+                    //float chartY = 100;
 
-                    float chartY = 100;
-
-                    AddChartToDocument(rutaFacturaChart, document, chartY);
-                    AddChartToDocument(rutaCreditoChart, document, chartY);
-                    AddChartToDocument(rutaTiempoChart, document, chartY);
+                    //AddChartToDocument(rutaFacturaChart, document, chartY);
+                    //AddChartToDocument(rutaCreditoChart, document, chartY);
+                    //AddChartToDocument(rutaTiempoChart, document, chartY);
 
                 }
 
                 else
-                {                 
-                  
-                        float chartYPosition = yObservacionesTable - 10; // 10 es un pequeño margen
-                        AddChartToDocument(rutaFacturaChart, document, chartYPosition);
-                        AddChartToDocument(rutaCreditoChart, document, chartYPosition + 300);
-                        AddChartToDocument(rutaTiempoChart, document, chartYPosition + 600);                    
+                {
+                   
+                    //float chartYPosition = yObservacionesTable - 10; // 10 es un pequeño margen
+                    //    AddChartToDocument(rutaFacturaChart, document, chartYPosition);
+                    //    AddChartToDocument(rutaCreditoChart, document, chartYPosition + 300);
+                    //    AddChartToDocument(rutaTiempoChart, document, chartYPosition + 600);                    
+
+                    iTextSharp.text.Image facturaImage = iTextSharp.text.Image.GetInstance(rutaFacturaChart);
+                    facturaImage.ScaleToFit(275, 275);
+                    facturaImage.SetAbsolutePosition(10, 100);
+                    document.Add(facturaImage);
+
+                    iTextSharp.text.Image creditoImage = iTextSharp.text.Image.GetInstance(rutaCreditoChart);
+                    creditoImage.ScaleToFit(275, 275);
+                    creditoImage.SetAbsolutePosition(310, 100);
+                    document.Add(creditoImage);
+
+                    iTextSharp.text.Image tiempoImage = iTextSharp.text.Image.GetInstance(rutaTiempoChart);
+                    tiempoImage.ScaleToFit(275, 275);
+                    tiempoImage.SetAbsolutePosition(610, 100);
+                    document.Add(tiempoImage);
                 }
 
                 document.Close();                                                                                     
