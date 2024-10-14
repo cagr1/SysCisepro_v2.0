@@ -42,6 +42,8 @@
             this.txtObservaciones = new System.Windows.Forms.TextBox();
             this.kryptonLabel1 = new Krypton.Toolkit.KryptonLabel();
             this.dgvIngresoTabla = new Krypton.Toolkit.KryptonDataGridView();
+            this.id_secuencial = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.producto_servicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtpFecha = new Krypton.Toolkit.KryptonDateTimePicker();
             this.kryptonPage3 = new ComponentFactory.Krypton.Navigator.KryptonPage();
             this.kryptonGroupBox2 = new Krypton.Toolkit.KryptonGroupBox();
@@ -50,12 +52,8 @@
             this.dgvTablaComparativa = new Krypton.Toolkit.KryptonDataGridView();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.kryptonPage2 = new ComponentFactory.Krypton.Navigator.KryptonPage();
-            this.pdfToolStripPages1 = new Patagames.Pdf.Net.Controls.WinForms.ToolBars.PdfToolStripPages();
-            this.pdfViewer1 = new Patagames.Pdf.Net.Controls.WinForms.PdfViewer();
-            this.pdfToolStripMain1 = new Patagames.Pdf.Net.Controls.WinForms.ToolBars.PdfToolStripMain();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.id_secuencial = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.producto_servicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pdfViewer1 = new PdfiumViewer.PdfViewer();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonNavigator1)).BeginInit();
             this.kryptonNavigator1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPage1)).BeginInit();
@@ -88,7 +86,7 @@
             this.kryptonPage1,
             this.kryptonPage3,
             this.kryptonPage2});
-            this.kryptonNavigator1.SelectedIndex = 0;
+            this.kryptonNavigator1.SelectedIndex = 1;
             this.kryptonNavigator1.Size = new System.Drawing.Size(808, 450);
             this.kryptonNavigator1.TabIndex = 0;
             this.kryptonNavigator1.Text = "kryptonNavigator1";
@@ -142,12 +140,10 @@
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(32, 32);
             this.btnAgregar.StateCommon.Back.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.False;
-            this.btnAgregar.StateCommon.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.btnAgregar.StateCommon.Border.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.False;
             this.btnAgregar.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.btnAgregar.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.btnAgregar.TabIndex = 12;
             this.toolTip1.SetToolTip(this.btnAgregar, "Agregar Proveedor");
             this.btnAgregar.Values.ImageStates.ImageCheckedNormal = null;
@@ -184,12 +180,10 @@
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(32, 32);
             this.btnCancelar.StateCommon.Back.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.False;
-            this.btnCancelar.StateCommon.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.btnCancelar.StateCommon.Border.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.False;
             this.btnCancelar.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.btnCancelar.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.btnCancelar.TabIndex = 9;
             this.toolTip1.SetToolTip(this.btnCancelar, "Cancelar");
             this.btnCancelar.UseMnemonic = false;
@@ -209,12 +203,10 @@
             this.btnGuardarTabla.Name = "btnGuardarTabla";
             this.btnGuardarTabla.Size = new System.Drawing.Size(32, 32);
             this.btnGuardarTabla.StateCommon.Back.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.False;
-            this.btnGuardarTabla.StateCommon.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.btnGuardarTabla.StateCommon.Border.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.False;
             this.btnGuardarTabla.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.btnGuardarTabla.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.btnGuardarTabla.TabIndex = 8;
             this.toolTip1.SetToolTip(this.btnGuardarTabla, "Guardar Tabla");
             this.btnGuardarTabla.Values.ImageStates.ImageCheckedNormal = null;
@@ -233,12 +225,10 @@
             this.btnNuevaTabla.Name = "btnNuevaTabla";
             this.btnNuevaTabla.Size = new System.Drawing.Size(32, 32);
             this.btnNuevaTabla.StateCommon.Back.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.False;
-            this.btnNuevaTabla.StateCommon.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.btnNuevaTabla.StateCommon.Border.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.False;
             this.btnNuevaTabla.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.btnNuevaTabla.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.btnNuevaTabla.TabIndex = 7;
             this.toolTip1.SetToolTip(this.btnNuevaTabla, "Nueva Tabla");
             this.btnNuevaTabla.Values.ImageStates.ImageCheckedNormal = null;
@@ -283,6 +273,19 @@
             this.dgvIngresoTabla.TabIndex = 1;
             this.dgvIngresoTabla.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvIngresoTabla_CellEndEdit);
             this.dgvIngresoTabla.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.dgvIngresoTabla_EditingControlShowing);
+            // 
+            // id_secuencial
+            // 
+            this.id_secuencial.HeaderText = "Id";
+            this.id_secuencial.Name = "id_secuencial";
+            this.id_secuencial.ReadOnly = true;
+            this.id_secuencial.Width = 40;
+            // 
+            // producto_servicio
+            // 
+            this.producto_servicio.HeaderText = "Producto/Servicio";
+            this.producto_servicio.Name = "producto_servicio";
+            this.producto_servicio.Width = 260;
             // 
             // dtpFecha
             // 
@@ -373,8 +376,6 @@
             // kryptonPage2
             // 
             this.kryptonPage2.AutoHiddenSlideSize = new System.Drawing.Size(200, 200);
-            this.kryptonPage2.Controls.Add(this.pdfToolStripPages1);
-            this.kryptonPage2.Controls.Add(this.pdfToolStripMain1);
             this.kryptonPage2.Controls.Add(this.pdfViewer1);
             this.kryptonPage2.Flags = 65534;
             this.kryptonPage2.LastVisibleSet = true;
@@ -385,75 +386,12 @@
             this.kryptonPage2.ToolTipTitle = "Page ToolTip";
             this.kryptonPage2.UniqueName = "1E3B42D390BC4975BF83023BF932CB93";
             // 
-            // pdfToolStripPages1
-            // 
-            this.pdfToolStripPages1.Dock = System.Windows.Forms.DockStyle.None;
-            this.pdfToolStripPages1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.pdfToolStripPages1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
-            this.pdfToolStripPages1.Location = new System.Drawing.Point(199, 20);
-            this.pdfToolStripPages1.Name = "pdfToolStripPages1";
-            this.pdfToolStripPages1.PdfViewer = this.pdfViewer1;
-            this.pdfToolStripPages1.Size = new System.Drawing.Size(211, 27);
-            this.pdfToolStripPages1.TabIndex = 2;
-            this.pdfToolStripPages1.Text = "pdfToolStripPages1";
-            // 
             // pdfViewer1
             // 
-            this.pdfViewer1.BackColor = System.Drawing.Color.White;
-            this.pdfViewer1.CurrentIndex = -1;
-            this.pdfViewer1.CurrentPageHighlightColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(70)))), ((int)(((byte)(130)))), ((int)(((byte)(180)))));
-            this.pdfViewer1.Document = null;
-            this.pdfViewer1.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pdfViewer1.FormHighlightColor = System.Drawing.Color.Transparent;
-            this.pdfViewer1.FormsBlendMode = Patagames.Pdf.Enums.BlendTypes.FXDIB_BLEND_MULTIPLY;
-            this.pdfViewer1.LoadingIconText = "Loading...";
-            this.pdfViewer1.Location = new System.Drawing.Point(1, 61);
-            this.pdfViewer1.MouseMode = Patagames.Pdf.Net.Controls.WinForms.MouseModes.Default;
+            this.pdfViewer1.Location = new System.Drawing.Point(2, 3);
             this.pdfViewer1.Name = "pdfViewer1";
-            this.pdfViewer1.OptimizedLoadThreshold = 1000;
-            this.pdfViewer1.Padding = new System.Windows.Forms.Padding(10);
-            this.pdfViewer1.PageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.pdfViewer1.PageAutoDispose = true;
-            this.pdfViewer1.PageBackColor = System.Drawing.Color.White;
-            this.pdfViewer1.PageBorderColor = System.Drawing.Color.Black;
-            this.pdfViewer1.PageMargin = new System.Windows.Forms.Padding(10);
-            this.pdfViewer1.PageSeparatorColor = System.Drawing.Color.Gray;
-            this.pdfViewer1.RenderFlags = ((Patagames.Pdf.Enums.RenderFlags)((Patagames.Pdf.Enums.RenderFlags.FPDF_LCD_TEXT | Patagames.Pdf.Enums.RenderFlags.FPDF_NO_CATCH)));
-            this.pdfViewer1.ShowCurrentPageHighlight = true;
-            this.pdfViewer1.ShowLoadingIcon = true;
-            this.pdfViewer1.ShowPageSeparator = true;
-            this.pdfViewer1.Size = new System.Drawing.Size(802, 351);
-            this.pdfViewer1.SizeMode = Patagames.Pdf.Net.Controls.WinForms.SizeModes.FitToWidth;
+            this.pdfViewer1.Size = new System.Drawing.Size(801, 438);
             this.pdfViewer1.TabIndex = 0;
-            this.pdfViewer1.TextSelectColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(130)))), ((int)(((byte)(180)))));
-            this.pdfViewer1.TilesCount = 2;
-            this.pdfViewer1.UseProgressiveRender = true;
-            this.pdfViewer1.ViewMode = Patagames.Pdf.Net.Controls.WinForms.ViewModes.Vertical;
-            this.pdfViewer1.Zoom = 1F;
-            // 
-            // pdfToolStripMain1
-            // 
-            this.pdfToolStripMain1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.pdfToolStripMain1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
-            this.pdfToolStripMain1.Location = new System.Drawing.Point(0, 0);
-            this.pdfToolStripMain1.Name = "pdfToolStripMain1";
-            this.pdfToolStripMain1.PdfViewer = this.pdfViewer1;
-            this.pdfToolStripMain1.Size = new System.Drawing.Size(806, 58);
-            this.pdfToolStripMain1.TabIndex = 1;
-            this.pdfToolStripMain1.Text = "pdfToolStripMain1";
-            // 
-            // id_secuencial
-            // 
-            this.id_secuencial.HeaderText = "Id";
-            this.id_secuencial.Name = "id_secuencial";
-            this.id_secuencial.ReadOnly = true;
-            this.id_secuencial.Width = 40;
-            // 
-            // producto_servicio
-            // 
-            this.producto_servicio.HeaderText = "Producto/Servicio";
-            this.producto_servicio.Name = "producto_servicio";
-            this.producto_servicio.Width = 260;
             // 
             // FrmTablaComparacionCompra
             // 
@@ -468,6 +406,7 @@
             | Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.StateActive.Border.Rounding = 5F;
             this.Text = "FrmTablaComparacionCompra";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmTablaComparacionCompra_FormClosing);
             this.Load += new System.EventHandler(this.FrmTablaComparacionCompra_Load);
             ((System.ComponentModel.ISupportInitialize)(this.kryptonNavigator1)).EndInit();
             this.kryptonNavigator1.ResumeLayout(false);
@@ -490,7 +429,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvTablaComparativa)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPage2)).EndInit();
             this.kryptonPage2.ResumeLayout(false);
-            this.kryptonPage2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -519,10 +457,8 @@
         private Krypton.Toolkit.KryptonDataGridView dgvDetalleTablaComparativa;
         private Krypton.Toolkit.KryptonDataGridView dgvTablaComparativa;
         private Krypton.Toolkit.KryptonButton btnExportar;
-        private Patagames.Pdf.Net.Controls.WinForms.PdfViewer pdfViewer1;
-        private Patagames.Pdf.Net.Controls.WinForms.ToolBars.PdfToolStripMain pdfToolStripMain1;
-        private Patagames.Pdf.Net.Controls.WinForms.ToolBars.PdfToolStripPages pdfToolStripPages1;
         private System.Windows.Forms.DataGridViewTextBoxColumn id_secuencial;
         private System.Windows.Forms.DataGridViewTextBoxColumn producto_servicio;
+        private PdfiumViewer.PdfViewer pdfViewer1;
     }
 }

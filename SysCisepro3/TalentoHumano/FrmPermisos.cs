@@ -20,9 +20,8 @@ using Office = Microsoft.Office.Interop;
 using CrystalDecisions.CrystalReports.Engine;
 using Krypton.Toolkit;
 using System.IO;
-using Patagames.Pdf.Net.Controls.WinForms;
-using Patagames.Pdf.Net.Controls.WinForms.ToolBars;
 using System.Drawing.Text;
+using PdfiumViewer;
 
 
 namespace SysCisepro3.TalentoHumano
@@ -1026,17 +1025,17 @@ namespace SysCisepro3.TalentoHumano
                 }
 
                 var cm = (byte[])data.Rows[0][0];
-                string temp = Path.Combine(Path.GetTempPath(), "Temp.pdf");
+                //string temp = Path.Combine(Path.GetTempPath(), "Temp.pdf");
                 //File.WriteAllBytes(temp, cm);
                
                 _ms?.Dispose();
                 _ms = new MemoryStream(cm);
-                pdfViewer1.LoadDocument(_ms);
-                
-                //using (MemoryStream stream = new MemoryStream(cm))
-                //{
-                //    pdfViewer1.LoadDocument(stream);
-                //}
+                pdfViewer1.Document = PdfiumViewer.PdfDocument.Load(_ms);
+
+
+                //pdfViewer1.Load(stream);
+
+
 
             }
             catch (Exception ex)

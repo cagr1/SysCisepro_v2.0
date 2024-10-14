@@ -95,19 +95,16 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.btnCertificado = new Krypton.Toolkit.KryptonButton();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.pdfToolStripZoomEx1 = new Patagames.Pdf.Net.Controls.WinForms.ToolBars.PdfToolStripZoomEx();
-            this.pdfViewer1 = new Patagames.Pdf.Net.Controls.WinForms.PdfViewer();
-            this.pdfToolStripMain1 = new Patagames.Pdf.Net.Controls.WinForms.ToolBars.PdfToolStripMain();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.pdfViewer1 = new PdfiumViewer.PdfViewer();
             this.GroupBox2.SuspendLayout();
             this.GroupBox1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
-            this.pdfToolStripMain1.SuspendLayout();
             this.SuspendLayout();
             // 
             // Label1
@@ -821,8 +818,6 @@
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.White;
-            this.tabPage2.Controls.Add(this.pdfToolStripZoomEx1);
-            this.tabPage2.Controls.Add(this.pdfToolStripMain1);
             this.tabPage2.Controls.Add(this.pdfViewer1);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
@@ -830,80 +825,6 @@
             this.tabPage2.Size = new System.Drawing.Size(776, 622);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Permiso IESS";
-            // 
-            // pdfToolStripZoomEx1
-            // 
-            this.pdfToolStripZoomEx1.Dock = System.Windows.Forms.DockStyle.None;
-            this.pdfToolStripZoomEx1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.pdfToolStripZoomEx1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
-            this.pdfToolStripZoomEx1.Location = new System.Drawing.Point(144, 23);
-            this.pdfToolStripZoomEx1.Name = "pdfToolStripZoomEx1";
-            this.pdfToolStripZoomEx1.PdfViewer = this.pdfViewer1;
-            this.pdfToolStripZoomEx1.Size = new System.Drawing.Size(205, 25);
-            this.pdfToolStripZoomEx1.TabIndex = 2;
-            this.pdfToolStripZoomEx1.Text = "pdfToolStripZoomEx1";
-            this.pdfToolStripZoomEx1.ZoomLevel = new float[] {
-        8.33F,
-        12.5F,
-        25F,
-        33.33F,
-        50F,
-        66.67F,
-        75F,
-        100F,
-        125F,
-        150F,
-        200F,
-        300F,
-        400F,
-        600F,
-        800F};
-            // 
-            // pdfViewer1
-            // 
-            this.pdfViewer1.BackColor = System.Drawing.Color.White;
-            this.pdfViewer1.CurrentIndex = -1;
-            this.pdfViewer1.CurrentPageHighlightColor = System.Drawing.Color.Silver;
-            this.pdfViewer1.Document = null;
-            this.pdfViewer1.FormHighlightColor = System.Drawing.Color.Transparent;
-            this.pdfViewer1.FormsBlendMode = Patagames.Pdf.Enums.BlendTypes.FXDIB_BLEND_MULTIPLY;
-            this.pdfViewer1.LoadingIconText = "Loading...";
-            this.pdfViewer1.Location = new System.Drawing.Point(6, 64);
-            this.pdfViewer1.MouseMode = Patagames.Pdf.Net.Controls.WinForms.MouseModes.Default;
-            this.pdfViewer1.Name = "pdfViewer1";
-            this.pdfViewer1.OptimizedLoadThreshold = 1000;
-            this.pdfViewer1.Padding = new System.Windows.Forms.Padding(10);
-            this.pdfViewer1.PageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.pdfViewer1.PageAutoDispose = true;
-            this.pdfViewer1.PageBackColor = System.Drawing.Color.White;
-            this.pdfViewer1.PageBorderColor = System.Drawing.Color.Black;
-            this.pdfViewer1.PageMargin = new System.Windows.Forms.Padding(10);
-            this.pdfViewer1.PageSeparatorColor = System.Drawing.Color.Gray;
-            this.pdfViewer1.RenderFlags = ((Patagames.Pdf.Enums.RenderFlags)((Patagames.Pdf.Enums.RenderFlags.FPDF_LCD_TEXT | Patagames.Pdf.Enums.RenderFlags.FPDF_NO_CATCH)));
-            this.pdfViewer1.ShowCurrentPageHighlight = true;
-            this.pdfViewer1.ShowLoadingIcon = true;
-            this.pdfViewer1.ShowPageSeparator = true;
-            this.pdfViewer1.Size = new System.Drawing.Size(762, 551);
-            this.pdfViewer1.SizeMode = Patagames.Pdf.Net.Controls.WinForms.SizeModes.FitToWidth;
-            this.pdfViewer1.TabIndex = 0;
-            this.pdfViewer1.TextSelectColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(130)))), ((int)(((byte)(180)))));
-            this.pdfViewer1.TilesCount = 2;
-            this.pdfViewer1.UseProgressiveRender = true;
-            this.pdfViewer1.ViewMode = Patagames.Pdf.Net.Controls.WinForms.ViewModes.Vertical;
-            this.pdfViewer1.Zoom = 1F;
-            // 
-            // pdfToolStripMain1
-            // 
-            this.pdfToolStripMain1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.pdfToolStripMain1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
-            this.pdfToolStripMain1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripSeparator1});
-            this.pdfToolStripMain1.Location = new System.Drawing.Point(3, 3);
-            this.pdfToolStripMain1.Name = "pdfToolStripMain1";
-            this.pdfToolStripMain1.PdfViewer = this.pdfViewer1;
-            this.pdfToolStripMain1.Size = new System.Drawing.Size(770, 58);
-            this.pdfToolStripMain1.TabIndex = 1;
-            this.pdfToolStripMain1.Text = "pdfToolStripMain1";
             // 
             // toolStripSeparator1
             // 
@@ -913,6 +834,14 @@
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // pdfViewer1
+            // 
+            this.pdfViewer1.Location = new System.Drawing.Point(3, 0);
+            this.pdfViewer1.Name = "pdfViewer1";
+            this.pdfViewer1.ShowToolbar = false;
+            this.pdfViewer1.Size = new System.Drawing.Size(773, 619);
+            this.pdfViewer1.TabIndex = 0;
             // 
             // FrmPermisos
             // 
@@ -941,9 +870,6 @@
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
-            this.tabPage2.PerformLayout();
-            this.pdfToolStripMain1.ResumeLayout(false);
-            this.pdfToolStripMain1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1018,10 +944,9 @@
         private Krypton.Toolkit.KryptonButton btnBuscarPuesto;
         private Krypton.Toolkit.KryptonButton btnBuscarTipo;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
-        private Patagames.Pdf.Net.Controls.WinForms.PdfViewer pdfViewer1;
-        private Patagames.Pdf.Net.Controls.WinForms.ToolBars.PdfToolStripZoomEx pdfToolStripZoomEx1;
-        private Patagames.Pdf.Net.Controls.WinForms.ToolBars.PdfToolStripMain pdfToolStripMain1;
+        
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private Krypton.Toolkit.KryptonButton btnCertificado;
+        private PdfiumViewer.PdfViewer pdfViewer1;
     }
 }
