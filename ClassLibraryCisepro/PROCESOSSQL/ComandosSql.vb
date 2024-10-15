@@ -100,6 +100,7 @@ Namespace ProcesosSql
             Dim res() As Object = {False, ""}
             Dim trans As SqlTransaction = Nothing
             Dim qr = String.Empty
+            Const max As Integer = 3000
             Try
                 Dim con = Conexion.AbrirConexion(tip)
                 trans = con.BeginTransaction()
@@ -114,6 +115,12 @@ Namespace ProcesosSql
                     Else
                         r += sql.CommandText + ";"
                     End If
+
+                    If r.Length > max Then
+                        r = r.Substring(0, max)
+                        Exit For ' Stop further additions once truncated
+                    End If
+
                 Next
                 r = r.Replace("'", "")
 

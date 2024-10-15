@@ -14,7 +14,7 @@ Imports syscisepro.DATOS
 Imports syscisepro.FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO.REPORTES
 Imports syscisepro.FORMULARIOS.INVENTARIOS.PROCESO
 Imports Krypton.Toolkit
-Imports ComponentFactory.Krypton.Docking.KryptonDockableNavigator
+Imports ComponentFactory.Krypton
 
 
 
@@ -121,6 +121,7 @@ Namespace FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
             LlenarComboCuentasBancos()
             cmbConcepto.SelectedIndex = 1
             txtNumeroAsientoBuscar.Focus()
+            KryptonDockableNavigator1.SelectedPage = KryptonPage3
         End Sub
         Private Sub CargarNumeroRegistroAsientoLibroDiario()
             Try

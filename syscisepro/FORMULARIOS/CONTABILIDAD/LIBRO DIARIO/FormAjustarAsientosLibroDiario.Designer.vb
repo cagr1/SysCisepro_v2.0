@@ -3,7 +3,7 @@
     Partial Class FormAjustarAsientosLibroDiario
         'Inherits System.Windows.Forms.Form
         Inherits Krypton.Toolkit.KryptonForm
-        'Inherits ComponentFactory.Krypton.Toolkit.KryptonForm
+
         'Form reemplaza a Dispose para limpiar la lista de componentes.
         <System.Diagnostics.DebuggerNonUserCode()> _
         Protected Overrides Sub Dispose(ByVal disposing As Boolean)
@@ -714,7 +714,7 @@
             Me.dgvNumeroRegistroAsiento.ReadOnly = True
             Me.dgvNumeroRegistroAsiento.RowHeadersVisible = False
             Me.dgvNumeroRegistroAsiento.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvNumeroRegistroAsiento.Size = New System.Drawing.Size(171, 594)
+            Me.dgvNumeroRegistroAsiento.Size = New System.Drawing.Size(171, 587)
             Me.dgvNumeroRegistroAsiento.TabIndex = 124
             '
             'dgvAsientoBuscado

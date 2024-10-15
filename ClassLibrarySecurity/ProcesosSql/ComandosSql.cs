@@ -86,6 +86,7 @@ namespace ClassLibraryCisepro3.ProcesosSql
             var result = new object[] { false, string.Empty };
             SqlTransaction trans = null;
             var qr = string.Empty;
+           
             try
             {
                 var con = Conexion.AbrirConexion(tip);
@@ -94,15 +95,26 @@ namespace ClassLibraryCisepro3.ProcesosSql
                 // LOG (GUARDA LAS SENTENCIAS EJECUTADAS EN CADA PROCESO, PARA MANTENIMIENTO) 
                 string query;
                 var  r = string.Empty;
+                const int max = 3000;
                 foreach (var sql in querys)
                 {
+                    
                     if (sql.CommandText.Contains("@"))
                     {
                         query = sql.Parameters.Cast<SqlParameter>().Aggregate(sql.CommandText, (current, par) => current.Replace(par.ParameterName, "'" + par.Value + "'"));
                         r += query + ";";
                     }
-                    else r += sql.CommandText + ";";   
+                    else r += sql.CommandText + ";";
+
+                    if (r.Length > max)
+                    {
+                        r = r.Substring(0, max);
+                        break;
+                    }
                 }
+
+                
+
                 r = r.Replace("'", ""); //LOG_SQL
 
                 querys.Add(new SqlCommand
