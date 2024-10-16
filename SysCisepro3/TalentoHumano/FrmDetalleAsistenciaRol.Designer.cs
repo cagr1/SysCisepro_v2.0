@@ -44,6 +44,8 @@
             this.ColumnHeader15 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ColumnHeader16 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ColumnHeader18 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.GroupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -170,6 +172,8 @@
             this.ColumnHeader14,
             this.ColumnHeader15,
             this.ColumnHeader16,
+            this.columnHeader1,
+            this.columnHeader2,
             this.ColumnHeader18});
             this.ListView3.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ListView3.FullRowSelect = true;
@@ -205,7 +209,16 @@
             // ColumnHeader18
             // 
             this.ColumnHeader18.Text = "OBSERVACIONES";
-            this.ColumnHeader18.Width = 300;
+            this.ColumnHeader18.Width = 250;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "HORARIO";
+            this.columnHeader1.Width = 100;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "ENTRADA";
             // 
             // FrmDetalleAsistenciaRol
             // 
@@ -248,6 +261,8 @@
         internal System.Windows.Forms.Label label2;
         internal System.Windows.Forms.Button btnCargarPersonal;
         internal System.Windows.Forms.Button btnCargaBasica;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
 
         public string Mes { get; internal set; }
     }

@@ -4130,8 +4130,8 @@ namespace SysCisepro3.TalentoHumano
 
                 textBox1 =
                     {
-                        Tag = dgvDetallesRol.CurrentRow.Cells[1].Value.ToString(),
-                        Text = dgvDetallesRol.CurrentRow.Cells[5].Value.ToString()
+                        Tag = dgvDetallesRol.CurrentRow.Cells[1].Value.ToString(),//id_personal
+                        Text = dgvDetallesRol.CurrentRow.Cells[5].Value.ToString()//nomina
                     },
                     DateTimePicker7 = { Value = dtpDesde.Value },
                     DateTimePicker6 = { Value = dtpHasta.Value },
