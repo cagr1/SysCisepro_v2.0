@@ -184,7 +184,10 @@ Namespace FORMULARIOS.OPERACIONES
 
                 Dim ex = _objAsignacionPersonal.SeleccionarProgramacionByIdProgFecha(_tipoCon, prog.Rows(0).Item(0), fechaDesde, fechaHasta)
                 If ex Then
-                    Select Case KryptonMessageBox.Show("YA EXISTE un reporte del " & DateTimePicker4.Text & " si pone 'SI' se cargará dicho reporte y podrá continuar los cambios sobre el mismo, si pone 'NO' se cargará un nuevo reporte según el día de la programación correspondiente. Desea cargar los datos del reporte existente? ", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.YesNoCancel, KryptonMessageBoxIcon.Question)
+                    Select Case KryptonMessageBox.Show("Ya existe un reporte del " & DateTimePicker4.Text & vbCrLf & vbCrLf &
+                                                       "Si pone 'SI' se cargará dicho reporte y podrá continuar los cambios sobre el mismo." & vbCrLf &
+                                                       "Si pone 'NO' se cargará un nuevo reporte según el día de la programación correspondiente." & vbCrLf &
+                                                       "Desea cargar los datos del reporte existente? ", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.YesNoCancel, KryptonMessageBoxIcon.Question)
                         Case DialogResult.Yes
                             datosd = _objdetaProgramacionOps.SeleccionarDetalleAsistenciaByIdProgramacion(_tipoCon, True, prog.Rows(0).Item(0), dia, ndia, fechaDesde, fechaHasta, jdia, 1)
                             datosn = _objdetaProgramacionOps.SeleccionarDetalleAsistenciaByIdProgramacion(_tipoCon, True, prog.Rows(0).Item(0), dia, ndia, fechaDesde, fechaHasta, jdia, 2)
@@ -248,7 +251,7 @@ Namespace FORMULARIOS.OPERACIONES
                     If row.Item(10) = "ATRASO" Then dgvDia.Rows(dgvDia.RowCount - 1).Cells(11).Style.BackColor = Color.FromArgb(255, 255, 218, 155)
 
                     If row.Item(10) = "INASISTENCIA" Then
-                        dgvDia.Rows(dgvDia.RowCount - 1).Cells(11).Value = "IN"
+                        dgvDia.Rows(dgvDia.RowCount - 1).Cells(11).Value = "In"
                         dgvDia.Rows(dgvDia.RowCount - 1).Cells(11).Style.BackColor = Color.FromArgb(255, 240, 128, 128)
                     End If
 
@@ -316,7 +319,7 @@ Namespace FORMULARIOS.OPERACIONES
                     If row.Item(10) = "ATRASO" Then dgvNoche.Rows(dgvNoche.RowCount - 1).Cells(11).Style.BackColor = Color.FromArgb(255, 255, 218, 155)
 
                     If row.Item(10) = "INASISTENCIA" Then
-                        dgvNoche.Rows(dgvNoche.RowCount - 1).Cells(11).Value = "IN"
+                        dgvNoche.Rows(dgvNoche.RowCount - 1).Cells(11).Value = "In"
                         dgvNoche.Rows(dgvNoche.RowCount - 1).Cells(11).Style.BackColor = Color.FromArgb(255, 240, 128, 128)
                     End If
 

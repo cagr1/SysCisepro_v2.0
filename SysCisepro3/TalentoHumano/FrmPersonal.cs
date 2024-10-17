@@ -1675,7 +1675,9 @@ namespace SysCisepro3.TalentoHumano
                 return;
             }
 
-            if (KryptonMessageBox.Show(@"DESEA DAR DE BAJA EL REGISTRO DE PERSONAL ADMINISTRATIVO / OPERATIVO? NOTA: Este proceso debe realizarlo cuando ya se haya cancelado la liquidación del mismo, de lo contrario seguirá generándose el rol de pagos correspondiente!",
+            if (KryptonMessageBox.Show("DESEA DAR DE BAJA EL REGISTRO DE PERSONAL ADMINISTRATIVO / OPERATIVO? \n\n" +
+                "NOTA: Este proceso debe realizarlo cuando ya se haya cancelado la liquidación del mismo, \n" +
+                "de lo contrario seguirá generándose el rol de pagos correspondiente!",
                    "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) != DialogResult.Yes) return;
 
             _objMotivoFechaSalida = new FrmSeleccionarMotivoFechaSalida { TipoCon = TipoCon, TextBox1 = { Text = txtObservacion.Text } };

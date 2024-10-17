@@ -52,8 +52,8 @@
             this.dgvTablaComparativa = new Krypton.Toolkit.KryptonDataGridView();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.kryptonPage2 = new ComponentFactory.Krypton.Navigator.KryptonPage();
-            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.pdfViewer1 = new PdfiumViewer.PdfViewer();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.kryptonNavigator1)).BeginInit();
             this.kryptonNavigator1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPage1)).BeginInit();
@@ -86,7 +86,7 @@
             this.kryptonPage1,
             this.kryptonPage3,
             this.kryptonPage2});
-            this.kryptonNavigator1.SelectedIndex = 1;
+            this.kryptonNavigator1.SelectedIndex = 0;
             this.kryptonNavigator1.Size = new System.Drawing.Size(808, 450);
             this.kryptonNavigator1.TabIndex = 0;
             this.kryptonNavigator1.Text = "kryptonNavigator1";
@@ -400,7 +400,6 @@
             this.ClientSize = new System.Drawing.Size(808, 450);
             this.Controls.Add(this.kryptonNavigator1);
             this.Name = "FrmTablaComparacionCompra";
-            this.ShowIcon = false;
             this.StateActive.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | Krypton.Toolkit.PaletteDrawBorders.Left) 
             | Krypton.Toolkit.PaletteDrawBorders.Right)));
