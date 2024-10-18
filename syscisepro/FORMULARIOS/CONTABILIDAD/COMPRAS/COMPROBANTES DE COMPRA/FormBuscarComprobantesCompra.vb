@@ -836,7 +836,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
         End Sub
 
 
-        Private Sub LeerXml(ByVal s As IO.Stream)
+        Private Sub LeerXml(ByVal s As System.IO.Stream)
 
             'infoTributaria
             Dim numeroAutorizacion As String = ""
@@ -1156,7 +1156,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
 
                 Dim FormaPagoTable As DataTable = _objetoFormasPago.BuscarDetalleFormaPago(_tipoCon, Convert.ToInt32(formaPago))
                 formaPago = Convert.ToString(FormaPagoTable.Rows(0)("DETALLE_FORMA_PAGO"))
-                Dim baseFont As BaseFont = baseFont.CreateFont(baseFont.HELVETICA, baseFont.CP1252, baseFont.EMBEDDED)
+                Dim baseFont As BaseFont = BaseFont.CreateFont(BaseFont.HELVETICA, BaseFont.CP1252, BaseFont.EMBEDDED)
                 Dim fuente10 As Font = New Font(baseFont, 10, Font.Bold)
                 Dim fuente8 As Font = New Font(baseFont, 8)
 
@@ -1613,7 +1613,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
             archivo.Close()
         End Sub
 
-        Private Sub LeerXmlRetencion(ByVal s As IO.Stream)
+        Private Sub LeerXmlRetencion(ByVal s As System.IO.Stream)
 
             'infoTributaria
             Dim numeroAutorizacion As String = ""
@@ -1639,7 +1639,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
             Dim razonSocialSujetoRetenido As String = ""
             Dim identificacionSujetoRetenido As String = ""
             Dim periodoFiscal As String = ""
-            
+
 
             'Impuestos
             Dim codigo As String = ""
@@ -1773,7 +1773,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
                                     Case "periodoFiscal"
                                         periodoFiscal = nodoInfoCompRetencion.InnerText
 
-                                    
+
                                 End Select
 
                             Next
@@ -1848,8 +1848,8 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
                 Dim writer As PdfWriter = PdfWriter.GetInstance(document, New FileStream(pdfFilePath, FileMode.Create))
                 document.Open()
 
-                
-                Dim baseFont As BaseFont = baseFont.CreateFont(baseFont.HELVETICA, baseFont.CP1252, baseFont.EMBEDDED)
+
+                Dim baseFont As BaseFont = BaseFont.CreateFont(BaseFont.HELVETICA, BaseFont.CP1252, BaseFont.EMBEDDED)
                 Dim fuente10 As Font = New Font(baseFont, 10, Font.Bold)
                 Dim fuente8 As Font = New Font(baseFont, 8)
 
@@ -2041,7 +2041,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
                 table4.WriteSelectedRows(0, -1, xPositionTable4, newYPositionTable4, writer.DirectContent)
 
 
-               
+
 
 
                 Dim table6 As PdfPTable = New PdfPTable(2)
@@ -2075,7 +2075,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
                 vacioTable6.BorderWidthBottom = 1
                 table6.AddCell(vacioTable6)
 
-                
+
 
 
                 table6.SetWidths(columnWidthsTable6)

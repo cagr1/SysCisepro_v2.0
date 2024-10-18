@@ -636,7 +636,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
             archivo.Close()
         End Sub
 
-        Private Sub LeerXml(ByVal s As IO.Stream)
+        Private Sub LeerXml(ByVal s As System.IO.Stream)
 
             'infoTributaria
             Dim numeroAutorizacion As String = ""
@@ -948,7 +948,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
 
 
 
-                Dim baseFont As BaseFont = baseFont.CreateFont(baseFont.HELVETICA, baseFont.CP1252, baseFont.EMBEDDED)
+                Dim baseFont As BaseFont = BaseFont.CreateFont(BaseFont.HELVETICA, BaseFont.CP1252, BaseFont.EMBEDDED)
                 Dim fuente10 As Font = New Font(baseFont, 10, Font.Bold)
                 Dim fuente8 As Font = New Font(baseFont, 8)
 

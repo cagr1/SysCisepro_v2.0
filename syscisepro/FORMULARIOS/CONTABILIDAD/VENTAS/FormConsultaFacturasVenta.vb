@@ -580,7 +580,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
         End Sub
 
 
-        Private Sub LeerXml(ByVal s As IO.Stream)
+        Private Sub LeerXml(ByVal s As System.IO.Stream)
 
             'infoTributaria
             Dim numeroAutorizacion As String = ""
@@ -656,7 +656,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                 Dim nombreNodo = ""
                 Dim xmlFileName As String = Path.GetFileNameWithoutExtension(CType(s, FileStream).Name)
 
-               
+
                 Dim txtFilePath As String = Path.Combine(Application.StartupPath & "\Leer XML Temp\pathFactura.txt")
 
                 Dim selectedFolderPath As String = ""
@@ -697,7 +697,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                 Dim ruta As String = Convert.ToString(Application.StartupPath & "\Leer XML Temp\lectorTempFact.xml")
                 xmlDoc.Load(ruta)
 
-                
+
                 Dim nodoRaiz As XmlNode = xmlDoc.DocumentElement
                 Dim nodosMain As XmlNodeList = nodoRaiz.ChildNodes
 
@@ -899,7 +899,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
 
                 Dim FormaPagoTable As DataTable = _objetoFormasPago.BuscarDetalleFormaPago(_tipoCon, Convert.ToInt32(formaPago))
                 formaPago = Convert.ToString(FormaPagoTable.Rows(0)("DETALLE_FORMA_PAGO"))
-                Dim baseFont As BaseFont = baseFont.CreateFont(baseFont.HELVETICA, baseFont.CP1252, baseFont.EMBEDDED)
+                Dim baseFont As BaseFont = BaseFont.CreateFont(BaseFont.HELVETICA, BaseFont.CP1252, BaseFont.EMBEDDED)
                 Dim fuente10 As Font = New Font(baseFont, 10, Font.Bold)
                 Dim fuente8 As Font = New Font(baseFont, 8)
 
@@ -1260,7 +1260,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                 retencionTable6.BorderWidthBottom = 0
                 table6.AddCell(textRetencionTable6)
                 table6.AddCell(retencionTable6)
-                
+
 
                 Dim textObservacionTable6 As New PdfPCell(New Phrase("Observaciones", fuente8))
                 textObservacionTable6.BorderWidthLeft = 1
@@ -1330,8 +1330,8 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
 
         End Sub
 
-       
-       
+
+
         Private Sub btnFacturaPath_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnFacturaPath.Click
             Dim rutaFactura As String
 
