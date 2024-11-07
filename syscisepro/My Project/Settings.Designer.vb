@@ -68,18 +68,6 @@ Namespace My
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("0, 83, 156")>  _
-        Public Property ColorCisepro() As Global.System.Drawing.Color
-            Get
-                Return CType(Me("ColorCisepro"),Global.System.Drawing.Color)
-            End Get
-            Set
-                Me("ColorCisepro") = value
-            End Set
-        End Property
-        
-        <Global.System.Configuration.UserScopedSettingAttribute(),  _
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.DefaultSettingValueAttribute("64, 64, 64")>  _
         Public Property ColorSeportpac() As Global.System.Drawing.Color
             Get
@@ -143,6 +131,18 @@ Namespace My
             Get
                 Return CType(Me("SYSCISEPROConnectionString"),String)
             End Get
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("13, 71, 161")>  _
+        Public Property ColorCisepro() As Global.System.Drawing.Color
+            Get
+                Return CType(Me("ColorCisepro"),Global.System.Drawing.Color)
+            End Get
+            Set
+                Me("ColorCisepro") = value
+            End Set
         End Property
     End Class
 End Namespace

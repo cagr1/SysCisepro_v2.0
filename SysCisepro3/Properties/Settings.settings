@@ -5,9 +5,6 @@
     <Setting Name="Usuario" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="ColorCisepro" Type="System.Drawing.Color" Scope="User">
-      <Value Profile="(Default)">0, 83, 156</Value>
-    </Setting>
     <Setting Name="ColorSeportpac" Type="System.Drawing.Color" Scope="User">
       <Value Profile="(Default)">38, 50, 56</Value>
     </Setting>
@@ -45,6 +42,9 @@
   &lt;ConnectionString&gt;Data Source=192.168.0.137;Initial Catalog=SYSCISEPRO;Persist Security Info=True;User ID=syscisepro;Password=syscisepro&lt;/ConnectionString&gt;
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
       <Value Profile="(Default)">Data Source=192.168.0.137;Initial Catalog=SYSCISEPRO;Persist Security Info=True;User ID=syscisepro;Password=syscisepro</Value>
+    </Setting>
+    <Setting Name="ColorCisepro" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">13, 71, 161</Value>
     </Setting>
   </Settings>
 </SettingsFile>

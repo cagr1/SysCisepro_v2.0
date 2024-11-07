@@ -1633,11 +1633,8 @@ Namespace dsUbicacionesTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Private Sub InitConnection()
-            'Dim connectionString As String = Configuration.ConfigurationManager.ConnectionStrings(
             Me._connection = New Global.System.Data.SqlClient.SqlConnection()
             Me._connection.ConnectionString = Global.syscisepro.My.MySettings.Default.SYSCISEPROConnectionString
-
-
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _

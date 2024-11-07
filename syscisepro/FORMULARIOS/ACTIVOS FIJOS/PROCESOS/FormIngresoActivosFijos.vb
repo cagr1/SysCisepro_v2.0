@@ -19,7 +19,10 @@ Imports System.Diagnostics
 Imports System.IO
 Imports Krypton.Toolkit
 Imports ClassLibraryCisepro.USUARIOS_DEL_SISTEMA
-
+Imports ReaLTaiizor.Controls
+Imports System.Windows.Forms
+Imports System.Drawing
+Imports syscisepro.DATOS
 Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
     ''' <summary>
     ''' CISEPRO - SEPORTPAC - ASENAVA 2019
@@ -99,6 +102,7 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
         ReadOnly _validacionesDecimal As New ClassDecimal
         ReadOnly _validacionesAlfanumerica As New ClassAlfanumerico
 
+
         Dim _formDialogoNuevoActivo As FormDialogoNuevoActivo
         Public _tipoAccion As Integer
         Public EsDialogo As Boolean
@@ -108,6 +112,9 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
         Dim _valorDepreciacion As Decimal
         Public pdfFilePath As String
         Public UserName As String
+
+
+
 
         'Public Sub New()
 
@@ -179,6 +186,7 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
 
                 HabiLitarParametrosActivos(True, True)
                 tcVarios.SelectedIndex = _formDialogoNuevoActivo.Tipo
+                tcVarios1.SelectedIndex = _formDialogoNuevoActivo.Tipo
 
                 btnNuevo.Enabled = False
                 btnGuardar.Enabled = True
@@ -697,8 +705,12 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
             txtNombreProvedor.Enabled = enable
             txtNombreCustodio.Enabled = enable
 
-            GroupBox2.Enabled = enable
-            GroupBox6.Enabled = enable
+            'GroupBox2.Enabled = enable
+            'GroupBox6.Enabled = enable
+
+            gbxInformacion.Enabled = enable
+            gbxDatos.Enabled = enable
+            gbxContabilidad.Enabled = enable
 
             txtSitio.Text = _objetoSitio.BuscarNombreSitioxIdSitio(_tipoCon, 1, True)
             txtSitio.Tag = 1
@@ -1456,7 +1468,7 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
 
         End Sub
 
-        Private Sub txtResponsable_KeyPress(ByVal sender As System.Object, ByVal e As Windows.Forms.KeyPressEventArgs) Handles txtResponsable.KeyPress, txtNombreProvedor.KeyPress, txtNombreCustodio.KeyPress, txtNombreActivo.KeyPress, txtSerieVehiculo.KeyPress, txtSeguro.KeyPress, txtPlacaVehiculo.KeyPress, txtMotorVehiculo.KeyPress, txtModeloVehiculo.KeyPress, txtModeloRadio.KeyPress, txtDispositivoSeguridad.KeyPress, txtChasisVehiculo.KeyPress, txtCapacidadVehiculo.KeyPress, txtBroker.KeyPress, txtAseguradoraNombre.KeyPress, txtVersionSoftware.KeyPress, txtUbicacionTerreno.KeyPress, txtTipoGeneradores.KeyPress, txtTipoEquiposAmbientacion.KeyPress, txtSerieGeneradores.KeyPress, txtSerieEquiposOficina.KeyPress, txtSerieEquipoSeguridad.KeyPress, txtSerieEquiposComunicacion.KeyPress, txtSerieEquiposCocina.KeyPress, txtSerieEquiposAmbientacion.KeyPress, txtSerieChaleco.KeyPress, txtSerieCamarasSeguridad.KeyPress, txtProvedorSoftware.KeyPress, txtModeloMueblesOficina.KeyPress, txtModeloGeneradores.KeyPress, txtModeloEquiposOficina.KeyPress, txtModeloEquipoSeguridad.KeyPress, txtModeloEquiposComunicacion.KeyPress, txtModeloEquiposCocina.KeyPress, txtModeloEquiposAmbientacion.KeyPress, txtModeloEquipoComputo.KeyPress, txtModeloChaleco.KeyPress, txtModeloCamarasSeguridad.KeyPress, txtMedidaTerreno.KeyPress, txtEstadoTerreno.KeyPress, txtEditorial.KeyPress, txtDetalleSoftware.KeyPress, txtComponenteEquipoComputo.KeyPress, txtAutor.KeyPress, txtAdicionalGeneradores.KeyPress, txtAdicionalEquipoSeguridad.KeyPress, txtAdicionalChaleco.KeyPress, txtAdicionalCamarasSeguridad.KeyPress, txtSerieRadio.KeyPress
+        Private Sub txtResponsable_KeyPress(ByVal sender As System.Object, ByVal e As Windows.Forms.KeyPressEventArgs) Handles txtResponsable.KeyPress, txtNombreProvedor.KeyPress, txtNombreCustodio.KeyPress, txtNombreActivo.KeyPress, txtSerieVehiculo.KeyPress, txtSeguro.KeyPress, txtPlacaVehiculo.KeyPress, txtMotorVehiculo.KeyPress, txtModeloVehiculo.KeyPress, txtModeloRadio.KeyPress, txtDispositivoSeguridad.KeyPress, txtChasisVehiculo.KeyPress, txtCapacidadVehiculo.KeyPress, txtBroker.KeyPress, txtAseguradoraNombre.KeyPress, txtVersionSoftware.KeyPress, txtUbicacionTerreno.KeyPress, txtSerieEquiposOficina.KeyPress, txtSerieEquiposCocina.KeyPress, txtProvedorSoftware.KeyPress, txtModeloMueblesOficina.KeyPress, txtModeloEquiposOficina.KeyPress, txtModeloEquiposCocina.KeyPress, txtModeloEquipoComputo.KeyPress, txtMedidaTerreno.KeyPress, txtEstadoTerreno.KeyPress, txtEditorial.KeyPress, txtDetalleSoftware.KeyPress, txtComponenteEquipoComputo.KeyPress, txtAutor.KeyPress, txtSerieRadio.KeyPress
             e.Handled = Not _validacionesAlfanumerica.EsAlfanumerico(e.KeyChar)
         End Sub
 
@@ -1464,7 +1476,7 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
             'e.Handled = Not _validacionesNumeros.EsNumero(e.KeyChar)
         End Sub
 
-        Private Sub txtNumeroFactura_KeyPress(ByVal sender As System.Object, ByVal e As Windows.Forms.KeyPressEventArgs) Handles txtValorResidual.KeyPress, txtValorFactura.KeyPress, txtValorAdicional.KeyPress, txtNumeroFactura.KeyPress, txtVoltajeEquiposAmbientacion.KeyPress, txtCostoPrima.KeyPress, txtCilindrajeVehiculo.KeyPress, txtAmperajeEquiposAmbientacion.KeyPress, txtVoltajeGeneradores.KeyPress, txtAmperajeGeneradores.KeyPress
+        Private Sub txtNumeroFactura_KeyPress(ByVal sender As System.Object, ByVal e As Windows.Forms.KeyPressEventArgs) Handles txtValorResidual.KeyPress, txtValorFactura.KeyPress, txtValorAdicional.KeyPress, txtNumeroFactura.KeyPress, txtCostoPrima.KeyPress, txtCilindrajeVehiculo.KeyPress
             e.Handled = Not _validacionesDecimal.EsDecimal(e.KeyChar)
         End Sub
 
@@ -2206,7 +2218,7 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
                         Dim IdDetaDepre = _objDetalleDepreciacion.BuscarMayorIdDetalleDepreciacion(_tipoCon) + id
                         GuardarDatosActivoGeneralVarios(idActivoFijo, idDepreciacion, row.Cells(8).Value.ToString.Trim, row.Cells(9).Value.ToString.Trim, row.Cells(10).Value.ToString.Trim, row.Cells(11).Value.ToString.Trim, IdDetaDepre)
 
-                       
+
 
                         With _objetoEquiposSeguridad
                             .IdActivoFijo = idActivoFijo
@@ -2516,10 +2528,43 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
                     'MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorCisepro
                     MenuStrip1.ForeColor = Color.White
                     dgvEquiposComputo.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
+
             End Select
+
+
+            'customTabControl.
+            'dgvMantenimientoDepreciaciones.Font = New Font("Roboto", 8, FontStyle.Regular)
+            dgvRadios.Font = New Font("Roboto", 8, FontStyle.Regular)
+            dgvArmas.Font = New Font("Roboto", 8, FontStyle.Regular)
+            dgvCamara.Font = New Font("Roboto", 8, FontStyle.Regular)
+            dgvChaleco.Font = New Font("Roboto", 8, FontStyle.Regular)
+            dgvEquipoCocina.Font = New Font("Roboto", 8, FontStyle.Regular)
+            dgvEquipoAmbientacion.Font = New Font("Roboto", 8, FontStyle.Regular)
+            dgvEquipoComunicacion.Font = New Font("Roboto", 8, FontStyle.Regular)
+            dgvEquipoSeguridad.Font = New Font("Roboto", 8, FontStyle.Regular)
+            dgvEquiposComputo.Font = New Font("Roboto", 8, FontStyle.Regular)
+            dgvEquiposOficina.Font = New Font("Roboto", 8, FontStyle.Regular)
+            dgvMuebleOficina.Font = New Font("Roboto", 8, FontStyle.Regular)
+            lblArmasCount.ForeColor = ValidationForms.GetColorSistema(_tipoCon)
+            lblCamaraCount.ForeColor = ValidationForms.GetColorSistema(_tipoCon)
+            lblChalecoCount.ForeColor = ValidationForms.GetColorSistema(_tipoCon)
+            lblRadiosCount.ForeColor = ValidationForms.GetColorSistema(_tipoCon)
+            lblEquiposOficinaCount.ForeColor = ValidationForms.GetColorSistema(_tipoCon)
+            lblEquipoAmbientacionCount.ForeColor = ValidationForms.GetColorSistema(_tipoCon)
+            lblEquipoCocinaCount.ForeColor = ValidationForms.GetColorSistema(_tipoCon)
+            lblEquipoComunicacionCount.ForeColor = ValidationForms.GetColorSistema(_tipoCon)
+            lblEquipoSeguridadCount.ForeColor = ValidationForms.GetColorSistema(_tipoCon)
+            lblMarcaEquipoComputo.ForeColor = ValidationForms.GetColorSistema(_tipoCon)
+            lblMuebleOficinaCount.ForeColor = ValidationForms.GetColorSistema(_tipoCon)
+
+
+
+
+
 
             _sqlCommands = New List(Of SqlCommand)
         End Sub
+
 
         Private Sub cbmSecuencial_SelectedValueChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cbmSecuencial.SelectedValueChanged
             If cbmSecuencial.SelectedValue Is Nothing Or TypeOf cbmSecuencial.SelectedValue Is DataRowView Then Return
@@ -2748,7 +2793,7 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
             End If
         End Sub
 
-        Private Sub btnAddEquipoComunicacion_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAddEquipoComunicacion.Click
+        Private Sub btnAddEquipoComunicacion_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
             If ValidacionParametrosEquiposComunicacion() Then
 
                 dgvEquipoComunicacion.Rows.Add(cbmMarcaEquiposComunicacion.Text.Trim, txtModeloEquiposComunicacion.Text.Trim, cbmEstadoEquiposComunicacion.Text.Trim, txtSerieEquiposComunicacion.Text.Trim,
@@ -2774,7 +2819,7 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
             End If
         End Sub
 
-        Private Sub btnDelEquipoComunicacion_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnDelEquipoComunicacion.Click
+        Private Sub btnDelEquipoComunicacion_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
             If dgvEquipoComunicacion.RowCount = 0 Then Return
             If dgvEquipoComunicacion.CurrentRow Is Nothing Then Return
             dgvEquipoComunicacion.Rows.RemoveAt(dgvEquipoComunicacion.CurrentRow.Index)
@@ -2824,7 +2869,7 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
             End If
         End Sub
 
-        Private Sub btnAddCamara_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAddCamara.Click
+        Private Sub btnAddCamara_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
             If ValidacionParametrosCamarasSeguridad() Then
 
                 dgvCamara.Rows.Add(cbmMarcaCamarasSeguridad.Text.Trim, txtModeloCamarasSeguridad.Text.Trim, cbmEstadoCamarasSeguridad.Text.Trim, txtSerieCamarasSeguridad.Text.Trim,
@@ -2851,7 +2896,7 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
             End If
         End Sub
 
-        Private Sub btnDelCamara_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnDelCamara.Click
+        Private Sub btnDelCamara_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
             If dgvCamara.RowCount = 0 Then Return
             If dgvCamara.CurrentRow Is Nothing Then Return
             dgvCamara.Rows.RemoveAt(dgvCamara.CurrentRow.Index)
@@ -2916,11 +2961,11 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
             End If
         End Sub
 
-        Private Sub gpInfActfijo_Enter(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles gpInfActfijo.Enter
+        Private Sub gpInfActfijo_Enter(ByVal sender As System.Object, ByVal e As System.EventArgs)
 
         End Sub
 
-        Private Sub Label159_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Label159.Click
+        Private Sub Label159_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
 
         End Sub
 
@@ -3003,7 +3048,7 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
             End Try
         End Sub
 
-        Private Sub btnGarantiaComunicacion_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnGarantiaComunicacion.Click
+        Private Sub btnGarantiaComunicacion_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
             Try
                 pdfFilePath = String.Empty
                 Using openFileDialog As New OpenFileDialog()
@@ -3029,7 +3074,7 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
             End Try
         End Sub
 
-        Private Sub btnGarantiaCamara_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnGarantiaCamara.Click
+        Private Sub btnGarantiaCamara_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
             Try
                 pdfFilePath = String.Empty
                 Using openFileDialog As New OpenFileDialog()
@@ -3055,7 +3100,7 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
             End Try
         End Sub
 
-        Private Sub btnGarantiaChaleco_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnGarantiaChaleco.Click
+        Private Sub btnGarantiaChaleco_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
             Try
                 pdfFilePath = String.Empty
                 Using openFileDialog As New OpenFileDialog()
@@ -3081,7 +3126,7 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
             End Try
         End Sub
 
-        Private Sub txtAdicionalChaleco_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtAdicionalChaleco.TextChanged
+        Private Sub txtAdicionalChaleco_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
 
         End Sub
 
@@ -3089,12 +3134,119 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
 
         End Sub
 
-        Private Sub Label38_Click(sender As Object, e As EventArgs) Handles lblArmasCount.Click
+        Private Sub Label38_Click(sender As Object, e As EventArgs)
 
         End Sub
 
         Private Sub cbmAnoFabricacionVehiculo_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbmAnoFabricacionVehiculo.SelectedIndexChanged
 
         End Sub
+
+        Private Sub Label35_Click(sender As Object, e As EventArgs)
+
+        End Sub
+
+        Private Sub Label77_Click(sender As Object, e As EventArgs)
+
+        End Sub
+
+        Private Sub Label76_Click(sender As Object, e As EventArgs)
+
+        End Sub
+
+        Private Sub KryptonGroupBox2_Paint(sender As Object, e As PaintEventArgs) Handles KryptonGroupBox2.Paint
+
+        End Sub
+
+        Private Sub txtSerieEquiposComunicacion_TextChanged(sender As Object, e As EventArgs) Handles txtSerieEquiposComunicacion.TextChanged
+
+        End Sub
+
+        Private Sub KryptonLabel112_Click(sender As Object, e As EventArgs) Handles KryptonLabel112.Click
+
+        End Sub
+
+        Private Sub txtAmperajeGeneradores_TextChanged(sender As Object, e As EventArgs) Handles txtAmperajeGeneradores.TextChanged
+
+        End Sub
+
+        Private Sub KryptonLabel135_Click(sender As Object, e As EventArgs) Handles KryptonLabel135.Click
+
+        End Sub
+
+
+        'NO BORRAR ESTE METODO
+        'Private Sub tcVarios_DrawItem(sender As Object, e As DrawItemEventArgs) Handles tcVarios.DrawItem
+
+
+        '    Dim tabRect As Rectangle = tcVarios.GetTabRect(e.Index)
+        '    Dim isSelected As Boolean = (e.Index = tcVarios.SelectedIndex)
+
+        '    Define Text color based on selection
+        '    Dim textColor As Color = If(isSelected, GetTabColor(_tipoCon), Color.DarkGray) ' Selected text color
+
+        '    Adjust the tab rectangle to remove any borders
+        '    tabRect.Inflate(0, 0) ' Ensures the tab rectangle takes the full width available
+
+        '    Draw the text of the tab without any background
+        '    TextRenderer.DrawText(e.Graphics, tcVarios.TabPages(e.Index).Text, tcVarios.Font, tabRect, textColor, TextFormatFlags.HorizontalCenter Or TextFormatFlags.VerticalCenter)
+
+        '    Draw the bottom border line for the selected tab
+        '    If isSelected Then
+        '        Using borderBrush As New SolidBrush(GetTabColor(_tipoCon)) ' Line color for the selected tab
+        '            Dim borderRect As New Rectangle(tabRect.X, tabRect.Bottom, tabRect.Width, 3) ' Height of the border line
+        '            e.Graphics.FillRectangle(borderBrush, borderRect)
+        '        End Using
+        '    End If
+
+        '    Dim TabControl1 As TabControl = CType(sender, TabControl)
+        '    Dim tabPage1 As System.Windows.Forms.TabPage = TabControl1.TabPages(e.Index)
+
+        '    Dim tabRect As Rectangle = TabControl1.GetTabRect(e.Index)
+        '    tabRect.Inflate(-2, -2)
+        '    Dim isSelected As Boolean = (e.Index = TabControl1.SelectedIndex)
+
+        '    Dim lineColor As Color = GetTabColor(_tipoCon)
+
+        '    Dim backColor As Color = If(isSelected, GetTabColor(_tipoCon), Color.White)
+
+
+        '    Using backbrush As New SolidBrush(If(isSelected, tabPage1.BackColor, Color.White))
+        '        e.Graphics.FillRectangle(backbrush, tabRect)
+        '    End Using
+
+
+
+        '    If isSelected Then
+        '        Dim topLineRect As New Rectangle(tabRect.X, tabRect.Y, tabRect.Width, 1)
+        '        Using topBrush As New SolidBrush(backColor)
+        '            e.Graphics.FillRectangle(topBrush, topLineRect)
+        '        End Using
+
+        '    End If
+
+        '    If isSelected Then
+        '        Dim tabpageLineRect As New Rectangle(0, 0, tabPage1.Width, 1)
+        '        Using lineBrush As New SolidBrush(lineColor)
+        '            tabPage1.CreateGraphics().FillRectangle(lineBrush, tabpageLineRect)
+        '        End Using
+        '    End If
+
+        '    Dim Textcolor As Color = If(isSelected, backColor, Color.DarkGray)
+        '    TextRenderer.DrawText(e.Graphics, tabPage1.Text, TabControl1.Font, tabRect, textColor, TextFormatFlags.HorizontalCenter Or TextFormatFlags.VerticalCenter)
+
+        'End Sub
+
+
+        'Private Function GetTabColor(ByVal tipoCon As TipoConexion) As Color
+        '    Select Case tipoCon
+        '        Case TipoConexion.Seportpac
+        '            Return My.MySettingsProperty.Settings.ColorSeportpac
+        '        Case TipoConexion.Asenava
+        '            Return My.MySettingsProperty.Settings.ColorAsenava
+        '        Case Else ' Default connection (CISEPRO)
+        '            Return My.MySettingsProperty.Settings.ColorCisepro
+        '    End Select
+        'End Function
     End Class
 End Namespace

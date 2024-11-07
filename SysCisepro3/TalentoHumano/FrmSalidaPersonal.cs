@@ -1,41 +1,30 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 using SysCisepro3.Datos;
-using SysCisepro3.Operaciones;
 using SysCisepro3.Properties;
 using SysCisepro3.Reportes;
 using ClassLibraryCisepro3.Enums;
 using ClassLibraryCisepro3.Estaticas;
-using ClassLibraryCisepro3.EstructuraEmpresa;
-using ClassLibraryCisepro3.Operaciones;
 using ClassLibraryCisepro3.TalentoHumano;
 using ClassLibraryCisepro3.UsuarioGeneral;
 using ClassLibraryCisepro3.ProcesosSql;
-using iText.Kernel.Pdf;
-using iText.Layout;
-using iText.Layout.Element;
-using iText.Layout.Properties;
-using System.IO;
 using DataTable = System.Data.DataTable;
 using Font = System.Drawing.Font;
-using CrystalDecisions.CrystalReports.Engine;
 using SysCisepro3.Main;
 using Microsoft.Office.Interop.Excel;
 using Krypton.Toolkit;
-using Microsoft.Office.Interop.Word;
-using iText.Kernel.Geom;
+using ComponentFactory.Krypton.Toolkit;
+
+
 
 
 namespace SysCisepro3.TalentoHumano
 {
-    public partial class FrmSalidaPersonal : KryptonForm
+    public partial class FrmSalidaPersonal : Krypton.Toolkit.KryptonForm
     {
         public static TipoConexion TipoCon { private get; set; }
         public static ClassUsuarioGeneral Usuario { private get; set; }
@@ -347,14 +336,14 @@ namespace SysCisepro3.TalentoHumano
                          dgvPersonal_SelectionChanged(null, null);
                      }
                      
-                KryptonMessageBox.Show((string)res[1], "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+                Krypton.Toolkit.KryptonMessageBox.Show((string)res[1], "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
 
 
             }
-             else 
-                 
-               // MessageBox.Show(@"No se puede guardar debido a que no ha llenado todos los campos necesarios!","MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            KryptonMessageBox.Show(@"No se puede guardar debido a que no ha llenado todos los campos necesarios!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+             else
+
+                // MessageBox.Show(@"No se puede guardar debido a que no ha llenado todos los campos necesarios!","MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Krypton.Toolkit.KryptonMessageBox.Show(@"No se puede guardar debido a que no ha llenado todos los campos necesarios!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
 
 
         }
@@ -528,7 +517,7 @@ namespace SysCisepro3.TalentoHumano
                     var dt = _objPersonal.BuscarPersonalFirmado(TipoCon, lastName, firstName);
                     if (dt.Rows.Count == 0)
                     {
-                        KryptonMessageBox.Show(@"No se encontró el personal firmado. Por favor, verifique los datos ingresados!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+                        Krypton.Toolkit.KryptonMessageBox.Show(@"No se encontró el personal firmado. Por favor, verifique los datos ingresados!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
                     }
                     else
                     {
@@ -560,13 +549,13 @@ namespace SysCisepro3.TalentoHumano
                 var data = _objRolesFirmados.buscarFirmaRepetida(TipoCon, codigo, mes, anio);
                 if (data.Rows.Count > 0)
                 {
-                    KryptonMessageBox.Show(@"Ya existe un registro de personal firmado para el mes y año seleccionado!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+                    Krypton.Toolkit.KryptonMessageBox.Show(@"Ya existe un registro de personal firmado para el mes y año seleccionado!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
                     return;
                 }
 
                 if (txtIdPersonalFirmado.Text.Trim().Length == 0 || txtNombreFirmado.Text.Trim().Length == 0 || txtCedulaFirmado.Text.Trim().Length == 0)
                 {
-                KryptonMessageBox.Show(@"No se puede guardar debido a que no ha llenado todos los campos necesarios!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+                    Krypton.Toolkit.KryptonMessageBox.Show(@"No se puede guardar debido a que no ha llenado todos los campos necesarios!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
                 
                 }
                
@@ -591,14 +580,14 @@ namespace SysCisepro3.TalentoHumano
                         txtCedulaFirmado.Clear();
                         HabilitarIngresos(false);
                     }
-                    KryptonMessageBox.Show((string)res[1], "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+                    Krypton.Toolkit.KryptonMessageBox.Show((string)res[1], "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
                     dgvFirmado.DataSource = null;
                 }
             
             }
             catch (Exception ex)
                 {
-                KryptonMessageBox.Show(@"Error al guardar registro de personal firmado: " + ex.Message, "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+                Krypton.Toolkit.KryptonMessageBox.Show(@"Error al guardar registro de personal firmado: " + ex.Message, "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
             }
         }
 
@@ -693,7 +682,7 @@ namespace SysCisepro3.TalentoHumano
             }
             catch(Exception ex)
             {
-                KryptonMessageBox.Show(@"Error al buscar personal firmado: " + ex.Message, "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+                Krypton.Toolkit.KryptonMessageBox.Show(@"Error al buscar personal firmado: " + ex.Message, "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
                 dgvFirmado.DataSource = null;
             }
         }
@@ -702,7 +691,7 @@ namespace SysCisepro3.TalentoHumano
         {
             if (dgvFirmado.RowCount == 0)
             {
-                KryptonMessageBox.Show(@"NO HAY DATOS PARA EXPORTAR!", "MENSAJE DELL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+                Krypton.Toolkit.KryptonMessageBox.Show(@"NO HAY DATOS PARA EXPORTAR!", "MENSAJE DELL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
                 return;
             }
 
@@ -789,12 +778,12 @@ namespace SysCisepro3.TalentoHumano
                 app.DisplayAlerts = false;
                 app.Visible = true;
                 app.DisplayAlerts = true;
-                
-                KryptonMessageBox.Show(@"REPORTE  generado correctamente!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+
+                Krypton.Toolkit.KryptonMessageBox.Show(@"REPORTE  generado correctamente!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
-                KryptonMessageBox.Show(@"HUBO UN PROBLEMA AL EXPORTAR DATOS!" + "\n" + ex.Message, @"MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error);
+                Krypton.Toolkit.KryptonMessageBox.Show(@"HUBO UN PROBLEMA AL EXPORTAR DATOS!" + "\n" + ex.Message, @"MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error);
             }
         }
     }

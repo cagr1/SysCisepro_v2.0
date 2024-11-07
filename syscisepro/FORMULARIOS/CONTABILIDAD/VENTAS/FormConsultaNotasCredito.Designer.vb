@@ -494,7 +494,7 @@
             'GENERARRIDEToolStripMenuItem
             '
             Me.GENERARRIDEToolStripMenuItem.Font = New System.Drawing.Font("Segoe UI", 8.0!)
-            Me.GENERARRIDEToolStripMenuItem.Image = Global.syscisepro.My.Resources.Resources.description_24dp_FILL0_wght400_GRAD0_opsz24__2_
+            Me.GENERARRIDEToolStripMenuItem.Image = Global.syscisepro.My.Resources.Resources.pdf
             Me.GENERARRIDEToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.GENERARRIDEToolStripMenuItem.Name = "GENERARRIDEToolStripMenuItem"
             Me.GENERARRIDEToolStripMenuItem.Size = New System.Drawing.Size(67, 28)
@@ -538,7 +538,7 @@
             Me.TabPage2.Location = New System.Drawing.Point(4, 22)
             Me.TabPage2.Name = "TabPage2"
             Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-            Me.TabPage2.Size = New System.Drawing.Size(1280, 80)
+            Me.TabPage2.Size = New System.Drawing.Size(1084, 80)
             Me.TabPage2.TabIndex = 1
             Me.TabPage2.Text = "RUTA DE DOCUMENTO"
             Me.TabPage2.UseVisualStyleBackColor = True

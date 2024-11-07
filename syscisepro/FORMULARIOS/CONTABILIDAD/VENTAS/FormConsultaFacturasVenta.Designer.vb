@@ -620,11 +620,11 @@
             '
             'GENERARFACTURAToolStripMenuItem
             '
-            Me.GENERARFACTURAToolStripMenuItem.Image = Global.syscisepro.My.Resources.Resources.description_24dp_FILL0_wght400_GRAD0_opsz24__2_
+            Me.GENERARFACTURAToolStripMenuItem.Image = Global.syscisepro.My.Resources.Resources.pdf
             Me.GENERARFACTURAToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.GENERARFACTURAToolStripMenuItem.Name = "GENERARFACTURAToolStripMenuItem"
-            Me.GENERARFACTURAToolStripMenuItem.Size = New System.Drawing.Size(97, 28)
-            Me.GENERARFACTURAToolStripMenuItem.Text = "GENERAR "
+            Me.GENERARFACTURAToolStripMenuItem.Size = New System.Drawing.Size(93, 28)
+            Me.GENERARFACTURAToolStripMenuItem.Text = "FACTURA"
             '
             'TabControl1
             '
@@ -654,7 +654,7 @@
             Me.REPORTE.Location = New System.Drawing.Point(4, 22)
             Me.REPORTE.Name = "REPORTE"
             Me.REPORTE.Padding = New System.Windows.Forms.Padding(3)
-            Me.REPORTE.Size = New System.Drawing.Size(1014, 487)
+            Me.REPORTE.Size = New System.Drawing.Size(1024, 487)
             Me.REPORTE.TabIndex = 1
             Me.REPORTE.Text = "RUTA DOCUMENTOS"
             Me.REPORTE.UseVisualStyleBackColor = True

@@ -1,7 +1,8 @@
 ﻿Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA.REPORTES
     <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
     Partial Class FormReporteComprobanteCompra
-        Inherits System.Windows.Forms.Form
+        'Inherits System.Windows.Forms.Form
+        Inherits Krypton.Toolkit.KryptonForm
 
         'Form reemplaza a Dispose para limpiar la lista de componentes.
         <System.Diagnostics.DebuggerNonUserCode()> _
@@ -36,6 +37,7 @@
             Me.crvComprobanteCompra.Dock = System.Windows.Forms.DockStyle.Fill
             Me.crvComprobanteCompra.Location = New System.Drawing.Point(0, 0)
             Me.crvComprobanteCompra.Name = "crvComprobanteCompra"
+            Me.crvComprobanteCompra.ShowLogo = False
             Me.crvComprobanteCompra.Size = New System.Drawing.Size(792, 671)
             Me.crvComprobanteCompra.TabIndex = 0
             Me.crvComprobanteCompra.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None
@@ -62,6 +64,13 @@
             Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
             Me.Name = "FormReporteComprobanteCompra"
             Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+            Me.StateActive.Border.DrawBorders = CType((((Krypton.Toolkit.PaletteDrawBorders.Top Or Krypton.Toolkit.PaletteDrawBorders.Bottom) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Left) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Right), Krypton.Toolkit.PaletteDrawBorders)
+            Me.StateActive.Border.Rounding = 5.0!
+            Me.StateCommon.Border.DrawBorders = CType((((Krypton.Toolkit.PaletteDrawBorders.Top Or Krypton.Toolkit.PaletteDrawBorders.Bottom) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Left) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Right), Krypton.Toolkit.PaletteDrawBorders)
             Me.Text = "REPORTE COMPROBANTE DE COMPRA"
             Me.ResumeLayout(False)
             Me.PerformLayout()

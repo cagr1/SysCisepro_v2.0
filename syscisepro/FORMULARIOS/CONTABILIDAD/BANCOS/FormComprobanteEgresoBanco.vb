@@ -213,7 +213,8 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
             txtNumeroCheque.Enabled = False
             txtTotalDebe.Enabled = False
             txtTotalHaber.Enabled = False
-            gbProveedor.Enabled = False
+            'gbProveedor.Enabled = False
+            txtNombreComercialProveedor.Enabled = False
         End Sub
         Private Sub AutocompletarNombreProveedor()
             Try
@@ -222,9 +223,13 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
                 txtNombreComercialProveedor.AutoCompleteMode = AutoCompleteMode.SuggestAppend
                 txtNombreComercialProveedor.AutoCompleteSource = AutoCompleteSource.CustomSource
 
+
+
+
                 txtPagadoA.AutoCompleteCustomSource = data
                 txtPagadoA.AutoCompleteMode = AutoCompleteMode.SuggestAppend
                 txtPagadoA.AutoCompleteSource = AutoCompleteSource.CustomSource
+
             Catch
                 txtNombreComercialProveedor.AutoCompleteCustomSource = Nothing
                 txtPagadoA.AutoCompleteCustomSource = Nothing
@@ -269,7 +274,8 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
             cmbBancos.Enabled = True
             cmbCuentaBancos.Enabled = True
             txtNumeroCheque.Enabled = True
-            gbProveedor.Enabled = True
+            'gbProveedor.Enabled = True
+
             txtNombreComercialProveedor.Enabled = False
         End Sub
         Private Sub LimpiarParametros()
@@ -303,7 +309,8 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
                 cmbBancos.SelectedIndex = 0
                 cmbCuentaBancos.SelectedIndex = 0
             Catch ex As Exception
-                MsgBox(ex.Message.ToString, MsgBoxStyle.Critical, "MENSAJE DE EXCEPCIÓN")
+
+                KryptonMessageBox.Show("Error: " & ex.Message.ToString, "MENSAJE DE ERROR", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
         Private Sub chkTransferenciaInterna_CheckedChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles chkTransferenciaInterna.CheckedChanged
@@ -314,7 +321,8 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
                 AgregarConceptosComprobanteEgreso()
                 SumarTotalDebeHaber()
             Else
-                MsgBox("POR FAVOR INGRESE UNA RAZÓN DE PAGO", MsgBoxStyle.Information, "MENSAJE DE INFORMACIÓN")
+
+                KryptonMessageBox.Show("POR FAVOR INGRESE UNA RAZÓN DE PAGO", "MENSAJE DE INFORMACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
                 txtRazonComprobanteEgresoBanco.Focus()
             End If
         End Sub
@@ -337,7 +345,8 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
                 dgvComprobanteEgresoBanco.Rows(dgvComprobanteEgresoBanco.RowCount - 1).Cells(5).Value = "0.00"
                 dgvComprobanteEgresoBanco.Rows(dgvComprobanteEgresoBanco.RowCount - 1).Cells(6).Value = "0"
             Else
-                MsgBox("POR FAVOR INGRESE SOLO NÚMEROS" & vbNewLine & "EL SEPARADOR DECIMAL ES EL '.'", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+
+                KryptonMessageBox.Show("POR FAVOR INGRESE SOLO NÚMEROS" & vbNewLine & "EL SEPARADOR DECIMAL ES EL '.'", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
             End If
         End Sub
         Private Sub SumarTotalDebeHaber()
@@ -385,12 +394,14 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
                     End If
                 End If
             Catch ex As Exception
-                MsgBox("BOTÓN BUSCAR PERSONAL." & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "MENSAJE DE EXCEPCIÓN")
+
+                KryptonMessageBox.Show("Error: " & ex.Message.ToString, "MENSAJE DE ERROR", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
         Private Sub btnAgregarBancosComprobante_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnAgregarBancosComprobante.Click
             If _existeNumero Then
-                MsgBox("EL NÚMERO DE CHEQUE EMITIDO YA SE ENCUENTRA REGISTRADO EN LA BD.", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+
+                KryptonMessageBox.Show("EL NÚMERO DE CHEQUE EMITIDO YA SE ENCUENTRA REGISTRADO EN LA BD.", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
                 Return
             End If
 
@@ -423,18 +434,18 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
                                 If txtValorComprobanteEgresoBancos.Text <> _valorFinalCheque Then txtValorComprobanteEgresoBancos.Text = _valorFinalCheque
                             End If
                         Else
-                            MsgBox("POR FAVOR INGRESE SOLO NÚMEROS" & vbNewLine & "EL SEPARADOR DECIMAL ES EL '.'", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                            KryptonMessageBox.Show("POR FAVOR INGRESE SOLO NÚMEROS" & vbNewLine & "EL SEPARADOR DECIMAL ES EL '.'", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
                         End If
 
                         btnEditarValores.Enabled = True
                     Else
-                        MsgBox("SELECCIONE UN BANCO, CUENTA E INGRESE UN NÚMERO DE CHEQUE", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                        KryptonMessageBox.Show("SELECCIONE UN BANCO, CUENTA E INGRESE UN NÚMERO DE CHEQUE", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
                     End If
                 Else
-                    MsgBox("PRIMERO CARGUE UN CONCEPTO DE EGRESO", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                    KryptonMessageBox.Show("PRIMERO CARGUE UN CONCEPTO DE EGRESO", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
                 End If
             Catch ex As Exception
-                MsgBox("CARGAR COMPROBANTE EGRESO: BANCOS" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "MENSAJE DE EXCEPCIÓN")
+                KryptonMessageBox.Show("CARGAR COMPROBANTE EGRESO: BANCOS" & vbNewLine & ex.Message.ToString, "MENSAJE DE EXCEPCIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Warning)
             End Try
         End Sub
         Private Sub btnEditarValores_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnEditarValores.Click
@@ -477,7 +488,7 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
                 lblIdProveedorGeneral.Text = pro.Rows(0)(0)
                 txtRucCi.Text = pro.Rows(0)(2)
             Catch ex As Exception
-                MsgBox("CARGAR DATOS PROVEEDOR." & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "MENSAJE DE EXCEPCIÓN")
+                KryptonMessageBox.Show("CARGAR DATOS PROVEEDOR." & vbNewLine & ex.Message.ToString, "MENSAJE DE EXCEPCIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
             End Try
         End Sub
         Private Sub CargarComprobantesCompra()
@@ -491,26 +502,30 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
                 dgvComprobantesCompra.Columns(0).ReadOnly = False
             Catch ex As Exception
                 dgvComprobantesCompra.DataSource = Nothing
-                MsgBox("METODO CARGAR COMPROBANTES DE COMPRA" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "MENSAJE DE EXCEPCIÓN")
+                KryptonMessageBox.Show("METODO CARGAR COMPROBANTES DE COMPRA" & vbNewLine & ex.Message.ToString, "MENSAJE DE EXCEPCIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
             End Try
         End Sub
         Private Sub chkActivar_CheckedChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles chkActivar.CheckedChanged
             If cmbCuentasContables.SelectedValue <> 0 Then
                 If chkActivar.Checked Then
                     txtNombreComercialProveedor.Enabled = True
-                    gbComprobantesCompra.Enabled = True
-                    gbPagosComprobanteCompra.Enabled = True
+                    'gbComprobantesCompra.Enabled = True
+                    dgvComprobanteEgresoBanco.Enabled = True
+                    'gbPagosComprobanteCompra.Enabled = True
+                    dgvPagosComprobantesCompra.Enabled = True
                     txtConceptoComprobanteEgreso.Text = "PAGO A PROVEEDOR"
                 Else
-                    gbComprobantesCompra.Enabled = False
-                    gbPagosComprobanteCompra.Enabled = False
+                    'gbComprobantesCompra.Enabled = False
+                    dgvPagosComprobantesCompra.Enabled = False
+                    'gbPagosComprobanteCompra.Enabled = False
+                    dgvPagosComprobantesCompra.Enabled = False
                     txtConceptoComprobanteEgreso.Text = ""
                 End If
             Else
                 chkActivar.Checked = False
-                gbComprobantesCompra.Enabled = False
-                gbPagosComprobanteCompra.Enabled = False
-                MsgBox("POR FAVOR PRIMERO ESCOJA UNA CTA. CONTABLE", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                'gbComprobantesCompra.Enabled = False
+                'gbPagosComprobanteCompra.Enabled = False
+                KryptonMessageBox.Show("POR FAVOR PRIMERO ESCOJA UNA CTA. CONTABLE", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
             End If
         End Sub
         Private Sub txtPagadoA_KeyUp(ByVal sender As System.Object, ByVal e As Windows.Forms.KeyEventArgs) Handles txtPagadoA.KeyUp
@@ -596,7 +611,7 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
                 dgvPagosComprobantesCompra.AutoResizeRows()
                 dgvPagosComprobantesCompra.EditMode = DataGridViewEditMode.EditProgrammatically
             Catch ex As Exception
-                MsgBox("METODO CARGAR PAGOS COMPROBANTES DE COMPRA" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "MENSAJE DE EXCEPCIÓN")
+                KryptonMessageBox.Show("METODO CARGAR PAGOS COMPROBANTES DE COMPRA" & vbNewLine & ex.Message.ToString, "MENSAJE DE EXCEPCIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
             End Try
         End Sub
         Private Sub dgvComprobantesCompra_CellContentClick(ByVal sender As System.Object, ByVal e As Windows.Forms.DataGridViewCellEventArgs) Handles dgvComprobantesCompra.CellContentClick
@@ -627,7 +642,7 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
                         dgvComprobanteEgresoBanco.Rows(_nroFilasEgreso).Cells(5).Value = "0.00"
                         dgvComprobanteEgresoBanco.Rows(_nroFilasEgreso).Cells(6).Value = dgvComprobantesCompra.CurrentRow.Cells(1).Value.ToString
                     Else
-                        MsgBox("ESTA FACTURA YA FUE CANCELADA", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                        KryptonMessageBox.Show("ESTA FACTURA YA FUE CANCELADA", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
                     End If
                 Else
                     For indiceArray = 0 To _cantidadFacturas - 1
@@ -673,7 +688,7 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
                     f.ShowDialog()
                 End If
             Else
-                'MsgBox("POR FAVOR SELECCIONE UN COMPROBANTE DE EGRESO", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                'KryptonMessageBox("POR FAVOR SELECCIONE UN COMPROBANTE DE EGRESO",, "MENSAJE DE VALIDACIÓN")
                 KryptonMessageBox.Show("POR FAVOR SELECCIONE UN COMPROBANTE DE EGRESO", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
             End If
         End Sub
@@ -681,7 +696,7 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
             Dim fechaIngresada = New Date(dtpFechaComprobanteEgreso.Value.Year, dtpFechaComprobanteEgreso.Value.Month, dtpFechaComprobanteEgreso.Value.Day)
             Dim fechaMinimaIngreso = New Date(Date.Now.Year, 1, 1)
             If fechaMinimaIngreso > fechaIngresada Then
-                'MsgBox("Esta ingresando comprobantes del año " + dtpFechaComprobanteEgreso.Value.Year.ToString + ". Por favor asegúrese de que la información sea correcta y no afecte el balance!")
+                'KryptonMessageBox("Esta ingresando comprobantes del año " + dtpFechaComprobanteEgreso.Value.Year.ToString + ". Por favor asegúrese de que la información sea correcta y no afecte el balance!")
                 KryptonMessageBox.Show("Esta ingresando comprobantes del año " + dtpFechaComprobanteEgreso.Value.Year.ToString + ". Por favor asegúrese de que la información sea correcta y no afecte el balance!", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                 Return True
             Else
@@ -756,7 +771,7 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
             End If
         End Sub
         Private Sub GuardarRegistroComprobanteEgresoBancos()
-            With _objetoComprobanteEgresoBancos  
+            With _objetoComprobanteEgresoBancos
                 .FechaComprobante = dtpFechaComprobanteEgreso.Value
                 .NumeroFactura = txtFacturaReceptor.Text
                 .RucCiReceptor = txtRucCi.Text.ToUpper
@@ -781,7 +796,7 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
                 End If
             End With
             _sqlCommands.Add(_objetoComprobanteEgresoBancos.NuevoRegistroComprobanteEgresoBancos)
-             
+
             With _objAuditoria
                 .IdAuditoria = CLng(.BuscarMayorIdAuditoriaGeneral(_tipoCon) + 1)
                 .IdUsuarioAuditoria = IdUsuario
@@ -865,7 +880,7 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
             End If
         End Sub
         Private Sub NuevoRegistroAsientoDiarioComprobanteEgresoBancos()
-            Try 
+            Try
                 Dim idc As Integer
                 Dim idb As Integer
 
@@ -897,7 +912,7 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
                     End With
                     _sqlCommands.Add(_objetoAsientoLibroDiario.NuevoRegistroAsientoLibroDiarioCommand())
                     ia += 1
-                    
+
                     ' GUARDA EL COMPROBANTE DE INGRESO EN CASO DE UNA TRANSFERENCIA DE BANCO A BANCO
                     idc = _objetoCuentaBancos.BuscarIdCuentaXCodigoPlan(_tipoCon, _objetoAsientoLibroDiario.CodigoCuentaAsiento.ToString().Trim())
                     If idc > 0 And _objetoAsientoLibroDiario.ValorDebeAsiento > 0 Then
@@ -936,7 +951,7 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
 
                 Next
             Catch ex As Exception
-                MsgBox("NO GUARDO AL DIARIO COMPROBANTE EGRESO." & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "MENSAJE DE EXCEPCIÓN")
+                KryptonMessageBox.Show("NO GUARDO AL DIARIO COMPROBANTE EGRESO." & vbNewLine & ex.Message.ToString, "MENSAJE DE EXCEPCIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Warning)
             End Try
         End Sub
         Private Sub GuardarNumeroRegistroAsientoComprobanteEgreso()

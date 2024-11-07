@@ -773,11 +773,11 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
         '    txtNroComprobanteBusqueda.Clear()
         '    txtFiltro.Clear()
         'End Sub
-        Private Sub btnExportarComprobantes_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnExportarComprobantes.Click
-            ExportarDatosExcel(dgvComprobantesIngreso, "COMPROBANTES DE EGRESO DE BODEGA ")
+        Private Sub btnExportarComprobantes_Click(ByVal sender As System.Object, ByVal e As EventArgs)
+            ExportarDatosExcel(dgvComprobantesIngreso, "COMPROBANTES DE INGRESO DE BODEGA ")
         End Sub
         Private Sub btnExportarDetalleComprobante_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnExportarDetalleComprobante.Click
-            ExportarDatosExcel(dgvDetalleComprobate, "DETALLE DE COMPROABANTE DE EGRESO N°: " & CType(dgvComprobantesIngreso.CurrentRow.Cells.Item(0).Value, String))
+            ExportarDatosExcel(dgvDetalleComprobate, "DETALLE DE COMPROBANTE DE INGRESO N°: " & CType(dgvComprobantesIngreso.CurrentRow.Cells.Item(0).Value, String))
         End Sub
 
         Private Sub ExportarDatosExcel(ByVal dataGridViewExp As DataGridView, ByVal titulo As String)
@@ -843,7 +843,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
             app.Visible = True
             app.DisplayAlerts = True
         End Sub
-        Private Sub dgvComprobantesIngreso_SelectionChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles dgvComprobantesIngreso.SelectionChanged
+        Private Sub dgvComprobantesIngreso_SelectionChanged(ByVal sender As System.Object, ByVal e As EventArgs)
             If dgvComprobantesIngreso.Rows.Count = 0 Or dgvComprobantesIngreso.CurrentRow Is Nothing Then Return
             CargarDetalleComprobante(dgvComprobantesIngreso.CurrentRow.Cells.Item(0).Value)
 
@@ -917,7 +917,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                 dgvDetalleComprobate.DataSource = Nothing
             End Try
         End Sub
-        Private Sub bntCargar_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles bntCargar.Click
+        Private Sub bntCargar_Click(ByVal sender As System.Object, ByVal e As EventArgs)
             ConectarReporteComprobanteIngreso(txtIdComprobante.Text.Trim)
             PictureBox1.Image = Nothing
             Try
@@ -1553,6 +1553,80 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
 
         Private Sub txtDetail_KeyUp(sender As Object, e As KeyEventArgs)
             CargarComprobantesEgreso(txtFiltro.Text)
+        End Sub
+
+        Private Sub KryptonLabel15_Paint(sender As Object, e As PaintEventArgs) Handles KryptonLabel15.Paint
+
+        End Sub
+
+        Private Sub KryptonLabel16_Paint(sender As Object, e As PaintEventArgs) Handles KryptonLabel16.Paint
+
+        End Sub
+
+        Private Sub KryptonLabel17_Paint(sender As Object, e As PaintEventArgs) Handles KryptonLabel17.Paint
+
+        End Sub
+
+        Private Sub dgvComprobantesIngreso_SelectionChanged_1(sender As Object, e As EventArgs) Handles dgvComprobantesIngreso.SelectionChanged
+            If dgvComprobantesIngreso.Rows.Count = 0 Or dgvComprobantesIngreso.CurrentRow Is Nothing Then Return
+            CargarDetalleComprobante(dgvComprobantesIngreso.CurrentRow.Cells.Item(0).Value)
+
+
+            CargarBodegas()
+            AutocompletarRecibe()
+            AutocompletarProveedores()
+            AutocompletarArticulo()
+
+            LlenarConceptos(1) ' INGRESO
+            LlenarComboProvincias()
+            cbmCanton.SelectedValue = 58 ' MACHALA
+            LlenarCentroCosto()
+            cbmIngreso.SelectedIndex = 0
+            CargarDocumentos()
+
+            'cmbConcepto.Text = dgvAsientoBuscado.CurrentRow.Cells.Item(4).Value
+
+            txtNroComprobante.Text = dgvComprobantesIngreso.CurrentRow.Cells.Item(0).Value.ToString().Trim() 'Id_comprobante_ingreso
+            txtIdComprobante.Text = dgvComprobantesIngreso.CurrentRow.Cells.Item(0).Value.ToString().Trim() 'Id_comprobante_ingreso
+            cmbBodega.Text = dgvComprobantesIngreso.CurrentRow.Cells.Item(3).Value ' Id_bodega
+            cbmProvincia.Text = dgvComprobantesIngreso.CurrentRow.Cells.Item(7).Value ' Id_provincia
+            cbmCanton.Text = dgvComprobantesIngreso.CurrentRow.Cells.Item(8).Value ' Id_ciudad
+            cbmParroquia.Text = dgvComprobantesIngreso.CurrentRow.Cells.Item(9).Value ' Id_parroquia
+            cbmCentroCosto.Text = dgvComprobantesIngreso.CurrentRow.Cells.Item(10).Value ' Id_centro_costo
+
+            dtpFecha.Text = dgvComprobantesIngreso.CurrentRow.Cells.Item(1).Value ' fecha_comprobante_ingreso
+
+
+
+            txtRecibe.Text = dgvComprobantesIngreso.CurrentRow.Cells.Item(13).Value + " - " + dgvComprobantesIngreso.CurrentRow.Cells.Item(17).Value.ToString()
+            txtCodigo.Text = dgvComprobantesIngreso.CurrentRow.Cells.Item(5).Value ' 
+            cmbConceptos.Text = dgvComprobantesIngreso.CurrentRow.Cells.Item(6).Value
+            txtProveedores.Text = dgvComprobantesIngreso.CurrentRow.Cells.Item(14).Value.ToString()
+            UpdateUbicacion(dgvComprobantesIngreso.CurrentRow.Cells.Item(17).Value.ToString())
+
+
+            txtRazon.Text = dgvComprobantesIngreso.CurrentRow.Cells.Item(12).Value
+            cmbDocumento.Text = dgvComprobantesIngreso.CurrentRow.Cells.Item(16).Value ' id_parametro_documento
+        End Sub
+
+        Private Sub bntCargar_Click_1(sender As Object, e As EventArgs) Handles bntCargar.Click
+            ConectarReporteComprobanteIngreso(txtIdComprobante.Text.Trim)
+            PictureBox1.Image = Nothing
+            Try
+                Dim r = _objFoto.BuscarRegistroFoto(_tipoCon, "INGRESO BODEGA", CInt(txtIdComprobante.Text.Trim))
+                If r.Rows.Count = 0 Then Return
+                PictureBox1.Image = ValidationForms.BytesToImage(CType(r.Rows(0)("FOTO"), Byte()))
+            Catch
+                PictureBox1.Image = Nothing
+            End Try
+        End Sub
+
+        Private Sub btnExportarComprobantes_Click_1(sender As Object, e As EventArgs) Handles btnExportarComprobantes.Click
+            ExportarDatosExcel(dgvComprobantesIngreso, "COMPROBANTES DE INGRESO DE BODEGA ")
+        End Sub
+
+        Private Sub KryptonButton1_Click(sender As Object, e As EventArgs) Handles KryptonButton1.Click
+            ExportarDatosExcel(dgvDetalleComprobate, "DETALLE DE COMPROBANTE DE INGRESO N°: " & CType(dgvComprobantesIngreso.CurrentRow.Cells.Item(0).Value, String))
         End Sub
     End Class
 End Namespace

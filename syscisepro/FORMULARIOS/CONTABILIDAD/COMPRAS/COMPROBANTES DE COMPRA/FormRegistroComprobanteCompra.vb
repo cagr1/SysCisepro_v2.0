@@ -154,32 +154,36 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
                     dgvDetalleComprobanteRetencion.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorAsenava
                 Case TipoConexion.Seportpac
                     Icon = My.Resources.logo_s
-                    gbPtoEmision.ForeColor = Color.White
                     gbPtoEmision.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
-                    gbTipoAnbiente.ForeColor = Color.White
+                    gbPtoEmision.ForeColor = Color.White
                     gbTipoAnbiente.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
-                    gbTipoEmision.ForeColor = Color.White
+                    gbTipoAnbiente.ForeColor = Color.White
                     gbTipoEmision.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
-                    gbDatosComprobanteCompra.ForeColor = Color.White
+                    gbTipoEmision.ForeColor = Color.White
                     gbDatosComprobanteCompra.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
-                    gbDatosEspecialesComprobanteCompra.ForeColor = Color.White
+                    gbDatosComprobanteCompra.ForeColor = Color.White
                     gbDatosEspecialesComprobanteCompra.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
+                    gbDatosEspecialesComprobanteCompra.ForeColor = Color.White
                     dgvAsientosDiario.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorSeportpac
+                    dgvAsientosDiario.DefaultCellStyle.SelectionForeColor = Color.White
                     dgvDetalleComprobanteRetencion.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorSeportpac
+                    dgvDetalleComprobanteRetencion.DefaultCellStyle.SelectionForeColor = Color.White
                 Case Else
                     Icon = My.Resources.logo_c
-                    gbPtoEmision.ForeColor = Color.White
                     gbPtoEmision.BackColor = My.MySettingsProperty.Settings.ColorCisepro
-                    gbTipoAnbiente.ForeColor = Color.White
+                    gbPtoEmision.ForeColor = Color.White
                     gbTipoAnbiente.BackColor = My.MySettingsProperty.Settings.ColorCisepro
-                    gbTipoEmision.ForeColor = Color.White
+                    gbTipoAnbiente.ForeColor = Color.White
                     gbTipoEmision.BackColor = My.MySettingsProperty.Settings.ColorCisepro
-                    gbDatosComprobanteCompra.ForeColor = Color.White
+                    gbTipoEmision.ForeColor = Color.White
                     gbDatosComprobanteCompra.BackColor = My.MySettingsProperty.Settings.ColorCisepro
-                    gbDatosEspecialesComprobanteCompra.ForeColor = Color.White
+                    gbDatosComprobanteCompra.ForeColor = Color.White
                     gbDatosEspecialesComprobanteCompra.BackColor = My.MySettingsProperty.Settings.ColorCisepro
+                    gbDatosEspecialesComprobanteCompra.ForeColor = Color.White
                     dgvAsientosDiario.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
+                    dgvAsientosDiario.DefaultCellStyle.SelectionForeColor = Color.White
                     dgvDetalleComprobanteRetencion.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
+                    dgvDetalleComprobanteRetencion.DefaultCellStyle.SelectionForeColor = Color.White
             End Select
             dgvAsientosDiario.Font = New Font("Roboto", 8, FontStyle.Regular)
             dgvDetalleComprobanteRetencion.Font = New Font("Roboto", 8, FontStyle.Regular)

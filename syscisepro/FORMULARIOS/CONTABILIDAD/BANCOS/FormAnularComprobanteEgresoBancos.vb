@@ -230,8 +230,9 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
         Private Sub btnGuardar_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnGuardar.Click
             dgvComprobanteEgresoBancos.EndEdit()
             If dgvComprobanteEgresoBancos.Rows.Count > 0 Then
-                Dim respuestaMsgBox = MessageBox.Show("¿CONFIRMA QUE DESEA ANULAR LOS COMPROBANTES SELECCIONADOS?", "MENSAJE DE VALIDACIÓN", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
-                If respuestaMsgBox <> MsgBoxResult.Yes Then Return
+                'Dim respuestaMsgBox = MessageBox.Show("¿CONFIRMA QUE DESEA ANULAR LOS COMPROBANTES SELECCIONADOS?", "MENSAJE DE VALIDACIÓN", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+                Dim respuestaMsgBox = KryptonMessageBox.Show("¿CONFIRMA QUE DESEA ANULAR LOS COMPROBANTES SELECCIONADOS?", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question)
+                If respuestaMsgBox <> DialogResult.Yes Then Return
                 _sqlCommands.Clear()
 
                 AnularComprobanteEgresoBancos()
@@ -249,9 +250,9 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
                     messageIcon = KryptonMessageBoxIcon.Exclamation
                 End If
                 KryptonMessageBox.Show(res(1), "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, messageIcon)
-                'MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
+
             Else
-                'MsgBox("NO HAY COMPROBANTES CARGADOS.", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+
                 KryptonMessageBox.Show("NO HAY COMPROBANTES CARGADOS.", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
             End If
         End Sub
@@ -259,9 +260,14 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
         Private Sub rbEmitidos_CheckedChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles rbEmitidos.CheckedChanged
             If rbEmitidos.Checked Then
                 _estadoBuscarComprobanteEgresos = 1
-                gbNumeroCheque.Enabled = False
-                gbRangoFechas.Enabled = True
-                gbBanco.Enabled = False
+                'gbNumeroCheque.Enabled = False
+                txtNumeroCheque.Enabled = False
+                'gbRangoFechas.Enabled = True
+                dtpDesde.Enabled = True
+                dtpHasta.Enabled = True
+                'gbBanco.Enabled = False
+                txtNumeroCheque.Enabled = False
+                cmbBancos.Enabled = False
             Else
                 _estadoBuscarComprobanteEgresos = 2
             End If
@@ -270,9 +276,13 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
         Private Sub rbAprobados_CheckedChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles rbAprobados.CheckedChanged
             If rbAprobados.Checked Then
                 _estadoBuscarComprobanteEgresos = 2
-                gbNumeroCheque.Enabled = False
-                gbRangoFechas.Enabled = True
-                gbBanco.Enabled = False
+                'gbNumeroCheque.Enabled = False
+                'gbRangoFechas.Enabled = True
+                txtNumeroCheque.Enabled = False
+                dtpDesde.Enabled = True
+                dtpHasta.Enabled = True
+                cmbBancos.Enabled = False
+                'gbBanco.Enabled = False
             Else
                 _estadoBuscarComprobanteEgresos = 1
             End If
@@ -283,9 +293,13 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
                 _estadoBuscarComprobanteEgresos = 3
                 txtNumeroCheque.Enabled = True
                 txtNumeroCheque.Focus()
-                gbNumeroCheque.Enabled = True
-                gbRangoFechas.Enabled = False
-                gbBanco.Enabled = False
+                'gbNumeroCheque.Enabled = True
+                'gbRangoFechas.Enabled = False
+                dtpDesde.Enabled = False
+                dtpHasta.Enabled = False
+                'gbBanco.Enabled = False
+                cmbBancos.Enabled = False
+                cmbCuentaBancos.Enabled = False
             Else
                 _estadoBuscarComprobanteEgresos = 1
             End If
@@ -294,9 +308,14 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
         Private Sub rbFecha_CheckedChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles rbFecha.CheckedChanged
             If rbFecha.Checked Then
                 _estadoBuscarComprobanteEgresos = 5
-                gbNumeroCheque.Enabled = False
-                gbRangoFechas.Enabled = True
-                gbBanco.Enabled = False
+                'gbNumeroCheque.Enabled = False
+                txtNumeroCheque.Enabled = False
+                'gbRangoFechas.Enabled = True
+                dtpDesde.Enabled = True
+                dtpHasta.Enabled = True
+                'gbBanco.Enabled = False
+                cmbBancos.Enabled = False
+                cmbCuentaBancos.Enabled = False
             Else
                 _estadoBuscarComprobanteEgresos = 1
             End If
@@ -304,9 +323,14 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
         Private Sub rbBanco_CheckedChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles rbBanco.CheckedChanged
             If rbBanco.Checked = True Then
                 _estadoBuscarComprobanteEgresos = 6
-                gbNumeroCheque.Enabled = False
-                gbRangoFechas.Enabled = True
-                gbBanco.Enabled = True
+                'gbNumeroCheque.Enabled = False
+                txtNumeroCheque.Enabled = False
+                'gbRangoFechas.Enabled = True
+                dtpDesde.Enabled = True
+                dtpHasta.Enabled = True
+                'gbBanco.Enabled = True
+                cmbBancos.Enabled = True
+                cmbCuentaBancos.Enabled = True
             Else
                 _estadoBuscarComprobanteEgresos = 1
             End If

@@ -35,6 +35,7 @@
             Me.crvPlanDeCuentas.Dock = System.Windows.Forms.DockStyle.Fill
             Me.crvPlanDeCuentas.Location = New System.Drawing.Point(0, 0)
             Me.crvPlanDeCuentas.Name = "crvPlanDeCuentas"
+            Me.crvPlanDeCuentas.ShowLogo = False
             Me.crvPlanDeCuentas.Size = New System.Drawing.Size(1012, 734)
             Me.crvPlanDeCuentas.TabIndex = 2
             Me.crvPlanDeCuentas.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None

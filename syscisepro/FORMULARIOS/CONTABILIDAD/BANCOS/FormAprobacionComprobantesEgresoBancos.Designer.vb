@@ -27,48 +27,49 @@
             Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormAprobacionComprobantesEgresoBancos))
             Me.dgvComprobanteEgresoBancos = New System.Windows.Forms.DataGridView()
-            Me.gbComprobanteEgresoBancos = New System.Windows.Forms.GroupBox()
-            Me.Label1 = New System.Windows.Forms.Label()
             Me.txtRazon = New System.Windows.Forms.TextBox()
-            Me.lblNumeroComprobante = New System.Windows.Forms.Label()
             Me.txtRucCi = New System.Windows.Forms.TextBox()
-            Me.lblRucCi = New System.Windows.Forms.Label()
             Me.txtActividad = New System.Windows.Forms.TextBox()
-            Me.lblActividad = New System.Windows.Forms.Label()
             Me.txtNumeroComprobanteEgreso = New System.Windows.Forms.TextBox()
             Me.txtNumeroCheque = New System.Windows.Forms.TextBox()
-            Me.lblFechaComprobanteEgreso = New System.Windows.Forms.Label()
-            Me.lblNumeroCheque = New System.Windows.Forms.Label()
             Me.txtFechaComprobanteEgreso = New System.Windows.Forms.TextBox()
             Me.txtValorComprobante = New System.Windows.Forms.TextBox()
-            Me.lblNumeroFactura = New System.Windows.Forms.Label()
-            Me.lblValorComprobante = New System.Windows.Forms.Label()
             Me.txtNumeroFactura = New System.Windows.Forms.TextBox()
             Me.txtCuenta = New System.Windows.Forms.TextBox()
-            Me.lblCuenta = New System.Windows.Forms.Label()
             Me.txtBanco = New System.Windows.Forms.TextBox()
-            Me.lblPagadoA = New System.Windows.Forms.Label()
-            Me.lblBanco = New System.Windows.Forms.Label()
             Me.txtPagadoA = New System.Windows.Forms.TextBox()
             Me.txtTipoPago = New System.Windows.Forms.TextBox()
-            Me.lblTipoPago = New System.Windows.Forms.Label()
             Me.txtConcepto = New System.Windows.Forms.TextBox()
-            Me.lblConcepto = New System.Windows.Forms.Label()
             Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
             Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
             Me.btnAprovar = New System.Windows.Forms.ToolStripMenuItem()
             Me.btnRechazar = New System.Windows.Forms.ToolStripMenuItem()
             Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-            Me.gbRangoFechas = New System.Windows.Forms.GroupBox()
             Me.dtpFechaHasta = New System.Windows.Forms.DateTimePicker()
             Me.dtpFechaDesde = New System.Windows.Forms.DateTimePicker()
-            Me.Label9 = New System.Windows.Forms.Label()
-            Me.Label2 = New System.Windows.Forms.Label()
+            Me.KryptonGroupBox1 = New Krypton.Toolkit.KryptonGroupBox()
+            Me.KryptonLabel1 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel2 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel3 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel4 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel5 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel6 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel7 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel8 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel9 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel10 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel11 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel12 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel13 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel14 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel15 = New Krypton.Toolkit.KryptonLabel()
             CType(Me.dgvComprobanteEgresoBancos, System.ComponentModel.ISupportInitialize).BeginInit()
-            Me.gbComprobanteEgresoBancos.SuspendLayout()
             Me.MenuStrip1.SuspendLayout()
             Me.GroupBox1.SuspendLayout()
-            Me.gbRangoFechas.SuspendLayout()
+            CType(Me.KryptonGroupBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType(Me.KryptonGroupBox1.Panel, System.ComponentModel.ISupportInitialize).BeginInit()
+            Me.KryptonGroupBox1.Panel.SuspendLayout()
+            Me.KryptonGroupBox1.SuspendLayout()
             Me.SuspendLayout()
             '
             'dgvComprobanteEgresoBancos
@@ -79,6 +80,7 @@
             DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
             Me.dgvComprobanteEgresoBancos.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
             Me.dgvComprobanteEgresoBancos.BackgroundColor = System.Drawing.Color.White
+            Me.dgvComprobanteEgresoBancos.BorderStyle = System.Windows.Forms.BorderStyle.None
             Me.dgvComprobanteEgresoBancos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
             Me.dgvComprobanteEgresoBancos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
             DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
@@ -95,121 +97,49 @@
             Me.dgvComprobanteEgresoBancos.ReadOnly = True
             Me.dgvComprobanteEgresoBancos.RowHeadersVisible = False
             Me.dgvComprobanteEgresoBancos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvComprobanteEgresoBancos.Size = New System.Drawing.Size(901, 277)
+            Me.dgvComprobanteEgresoBancos.Size = New System.Drawing.Size(901, 263)
             Me.dgvComprobanteEgresoBancos.TabIndex = 44
-            '
-            'gbComprobanteEgresoBancos
-            '
-            Me.gbComprobanteEgresoBancos.BackColor = System.Drawing.Color.White
-            Me.gbComprobanteEgresoBancos.Controls.Add(Me.Label1)
-            Me.gbComprobanteEgresoBancos.Controls.Add(Me.txtRazon)
-            Me.gbComprobanteEgresoBancos.Controls.Add(Me.lblNumeroComprobante)
-            Me.gbComprobanteEgresoBancos.Controls.Add(Me.txtRucCi)
-            Me.gbComprobanteEgresoBancos.Controls.Add(Me.lblRucCi)
-            Me.gbComprobanteEgresoBancos.Controls.Add(Me.txtActividad)
-            Me.gbComprobanteEgresoBancos.Controls.Add(Me.lblActividad)
-            Me.gbComprobanteEgresoBancos.Controls.Add(Me.txtNumeroComprobanteEgreso)
-            Me.gbComprobanteEgresoBancos.Controls.Add(Me.txtNumeroCheque)
-            Me.gbComprobanteEgresoBancos.Controls.Add(Me.lblFechaComprobanteEgreso)
-            Me.gbComprobanteEgresoBancos.Controls.Add(Me.lblNumeroCheque)
-            Me.gbComprobanteEgresoBancos.Controls.Add(Me.txtFechaComprobanteEgreso)
-            Me.gbComprobanteEgresoBancos.Controls.Add(Me.txtValorComprobante)
-            Me.gbComprobanteEgresoBancos.Controls.Add(Me.lblNumeroFactura)
-            Me.gbComprobanteEgresoBancos.Controls.Add(Me.lblValorComprobante)
-            Me.gbComprobanteEgresoBancos.Controls.Add(Me.txtNumeroFactura)
-            Me.gbComprobanteEgresoBancos.Controls.Add(Me.txtCuenta)
-            Me.gbComprobanteEgresoBancos.Controls.Add(Me.lblCuenta)
-            Me.gbComprobanteEgresoBancos.Controls.Add(Me.txtBanco)
-            Me.gbComprobanteEgresoBancos.Controls.Add(Me.lblPagadoA)
-            Me.gbComprobanteEgresoBancos.Controls.Add(Me.lblBanco)
-            Me.gbComprobanteEgresoBancos.Controls.Add(Me.txtPagadoA)
-            Me.gbComprobanteEgresoBancos.Controls.Add(Me.txtTipoPago)
-            Me.gbComprobanteEgresoBancos.Controls.Add(Me.lblTipoPago)
-            Me.gbComprobanteEgresoBancos.Controls.Add(Me.txtConcepto)
-            Me.gbComprobanteEgresoBancos.Controls.Add(Me.lblConcepto)
-            Me.gbComprobanteEgresoBancos.Location = New System.Drawing.Point(2, 78)
-            Me.gbComprobanteEgresoBancos.Name = "gbComprobanteEgresoBancos"
-            Me.gbComprobanteEgresoBancos.Size = New System.Drawing.Size(913, 124)
-            Me.gbComprobanteEgresoBancos.TabIndex = 46
-            Me.gbComprobanteEgresoBancos.TabStop = False
-            Me.gbComprobanteEgresoBancos.Text = "COMPROBANTE DE EGRESO"
-            '
-            'Label1
-            '
-            Me.Label1.AutoSize = True
-            Me.Label1.Location = New System.Drawing.Point(743, 20)
-            Me.Label1.Name = "Label1"
-            Me.Label1.Size = New System.Drawing.Size(47, 13)
-            Me.Label1.TabIndex = 45
-            Me.Label1.Text = "RAZON:"
             '
             'txtRazon
             '
             Me.txtRazon.BackColor = System.Drawing.Color.White
             Me.txtRazon.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtRazon.Enabled = False
-            Me.txtRazon.Location = New System.Drawing.Point(745, 36)
+            Me.txtRazon.Location = New System.Drawing.Point(742, 54)
             Me.txtRazon.Multiline = True
             Me.txtRazon.Name = "txtRazon"
             Me.txtRazon.ReadOnly = True
             Me.txtRazon.Size = New System.Drawing.Size(159, 79)
             Me.txtRazon.TabIndex = 46
             '
-            'lblNumeroComprobante
-            '
-            Me.lblNumeroComprobante.AutoSize = True
-            Me.lblNumeroComprobante.Location = New System.Drawing.Point(14, 20)
-            Me.lblNumeroComprobante.Name = "lblNumeroComprobante"
-            Me.lblNumeroComprobante.Size = New System.Drawing.Size(87, 13)
-            Me.lblNumeroComprobante.TabIndex = 19
-            Me.lblNumeroComprobante.Text = "NUMERO :  CE -"
-            '
             'txtRucCi
             '
             Me.txtRucCi.BackColor = System.Drawing.Color.White
             Me.txtRucCi.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtRucCi.Enabled = False
-            Me.txtRucCi.Location = New System.Drawing.Point(107, 95)
+            Me.txtRucCi.Location = New System.Drawing.Point(88, 115)
             Me.txtRucCi.Name = "txtRucCi"
             Me.txtRucCi.ReadOnly = True
             Me.txtRucCi.Size = New System.Drawing.Size(115, 22)
             Me.txtRucCi.TabIndex = 26
-            '
-            'lblRucCi
-            '
-            Me.lblRucCi.AutoSize = True
-            Me.lblRucCi.Location = New System.Drawing.Point(14, 98)
-            Me.lblRucCi.Name = "lblRucCi"
-            Me.lblRucCi.Size = New System.Drawing.Size(46, 13)
-            Me.lblRucCi.TabIndex = 25
-            Me.lblRucCi.Text = "RUC/CI:"
             '
             'txtActividad
             '
             Me.txtActividad.BackColor = System.Drawing.Color.White
             Me.txtActividad.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtActividad.Enabled = False
-            Me.txtActividad.Location = New System.Drawing.Point(304, 17)
+            Me.txtActividad.Location = New System.Drawing.Point(298, 29)
             Me.txtActividad.Name = "txtActividad"
             Me.txtActividad.ReadOnly = True
             Me.txtActividad.Size = New System.Drawing.Size(216, 22)
             Me.txtActividad.TabIndex = 30
-            '
-            'lblActividad
-            '
-            Me.lblActividad.AutoSize = True
-            Me.lblActividad.Location = New System.Drawing.Point(230, 20)
-            Me.lblActividad.Name = "lblActividad"
-            Me.lblActividad.Size = New System.Drawing.Size(72, 13)
-            Me.lblActividad.TabIndex = 29
-            Me.lblActividad.Text = "ACTIVIDAD  :"
             '
             'txtNumeroComprobanteEgreso
             '
             Me.txtNumeroComprobanteEgreso.BackColor = System.Drawing.Color.White
             Me.txtNumeroComprobanteEgreso.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtNumeroComprobanteEgreso.Enabled = False
-            Me.txtNumeroComprobanteEgreso.Location = New System.Drawing.Point(107, 17)
+            Me.txtNumeroComprobanteEgreso.Location = New System.Drawing.Point(89, 31)
             Me.txtNumeroComprobanteEgreso.Name = "txtNumeroComprobanteEgreso"
             Me.txtNumeroComprobanteEgreso.ReadOnly = True
             Me.txtNumeroComprobanteEgreso.Size = New System.Drawing.Size(61, 22)
@@ -220,36 +150,18 @@
             Me.txtNumeroCheque.BackColor = System.Drawing.Color.White
             Me.txtNumeroCheque.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtNumeroCheque.Enabled = False
-            Me.txtNumeroCheque.Location = New System.Drawing.Point(597, 69)
+            Me.txtNumeroCheque.Location = New System.Drawing.Point(599, 87)
             Me.txtNumeroCheque.Name = "txtNumeroCheque"
             Me.txtNumeroCheque.ReadOnly = True
             Me.txtNumeroCheque.Size = New System.Drawing.Size(133, 22)
             Me.txtNumeroCheque.TabIndex = 42
-            '
-            'lblFechaComprobanteEgreso
-            '
-            Me.lblFechaComprobanteEgreso.AutoSize = True
-            Me.lblFechaComprobanteEgreso.Location = New System.Drawing.Point(14, 46)
-            Me.lblFechaComprobanteEgreso.Name = "lblFechaComprobanteEgreso"
-            Me.lblFechaComprobanteEgreso.Size = New System.Drawing.Size(47, 13)
-            Me.lblFechaComprobanteEgreso.TabIndex = 21
-            Me.lblFechaComprobanteEgreso.Text = "FECHA :"
-            '
-            'lblNumeroCheque
-            '
-            Me.lblNumeroCheque.AutoSize = True
-            Me.lblNumeroCheque.Location = New System.Drawing.Point(530, 72)
-            Me.lblNumeroCheque.Name = "lblNumeroCheque"
-            Me.lblNumeroCheque.Size = New System.Drawing.Size(69, 13)
-            Me.lblNumeroCheque.TabIndex = 41
-            Me.lblNumeroCheque.Text = "Nº CHEQUE:"
             '
             'txtFechaComprobanteEgreso
             '
             Me.txtFechaComprobanteEgreso.BackColor = System.Drawing.Color.White
             Me.txtFechaComprobanteEgreso.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtFechaComprobanteEgreso.Enabled = False
-            Me.txtFechaComprobanteEgreso.Location = New System.Drawing.Point(107, 43)
+            Me.txtFechaComprobanteEgreso.Location = New System.Drawing.Point(88, 59)
             Me.txtFechaComprobanteEgreso.Name = "txtFechaComprobanteEgreso"
             Me.txtFechaComprobanteEgreso.ReadOnly = True
             Me.txtFechaComprobanteEgreso.Size = New System.Drawing.Size(115, 22)
@@ -260,36 +172,18 @@
             Me.txtValorComprobante.BackColor = System.Drawing.Color.White
             Me.txtValorComprobante.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtValorComprobante.Enabled = False
-            Me.txtValorComprobante.Location = New System.Drawing.Point(597, 95)
+            Me.txtValorComprobante.Location = New System.Drawing.Point(599, 113)
             Me.txtValorComprobante.Name = "txtValorComprobante"
             Me.txtValorComprobante.ReadOnly = True
             Me.txtValorComprobante.Size = New System.Drawing.Size(133, 22)
             Me.txtValorComprobante.TabIndex = 40
-            '
-            'lblNumeroFactura
-            '
-            Me.lblNumeroFactura.AutoSize = True
-            Me.lblNumeroFactura.Location = New System.Drawing.Point(14, 72)
-            Me.lblNumeroFactura.Name = "lblNumeroFactura"
-            Me.lblNumeroFactura.Size = New System.Drawing.Size(87, 13)
-            Me.lblNumeroFactura.TabIndex = 23
-            Me.lblNumeroFactura.Text = "NRO FACTURA :"
-            '
-            'lblValorComprobante
-            '
-            Me.lblValorComprobante.AutoSize = True
-            Me.lblValorComprobante.Location = New System.Drawing.Point(530, 98)
-            Me.lblValorComprobante.Name = "lblValorComprobante"
-            Me.lblValorComprobante.Size = New System.Drawing.Size(53, 13)
-            Me.lblValorComprobante.TabIndex = 39
-            Me.lblValorComprobante.Text = "VALOR $:"
             '
             'txtNumeroFactura
             '
             Me.txtNumeroFactura.BackColor = System.Drawing.Color.White
             Me.txtNumeroFactura.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtNumeroFactura.Enabled = False
-            Me.txtNumeroFactura.Location = New System.Drawing.Point(107, 69)
+            Me.txtNumeroFactura.Location = New System.Drawing.Point(89, 87)
             Me.txtNumeroFactura.Name = "txtNumeroFactura"
             Me.txtNumeroFactura.ReadOnly = True
             Me.txtNumeroFactura.Size = New System.Drawing.Size(115, 22)
@@ -300,56 +194,29 @@
             Me.txtCuenta.BackColor = System.Drawing.Color.White
             Me.txtCuenta.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtCuenta.Enabled = False
-            Me.txtCuenta.Location = New System.Drawing.Point(597, 43)
+            Me.txtCuenta.Location = New System.Drawing.Point(599, 57)
             Me.txtCuenta.Name = "txtCuenta"
             Me.txtCuenta.ReadOnly = True
             Me.txtCuenta.Size = New System.Drawing.Size(133, 22)
             Me.txtCuenta.TabIndex = 38
-            '
-            'lblCuenta
-            '
-            Me.lblCuenta.AutoSize = True
-            Me.lblCuenta.Location = New System.Drawing.Point(530, 46)
-            Me.lblCuenta.Name = "lblCuenta"
-            Me.lblCuenta.Size = New System.Drawing.Size(54, 13)
-            Me.lblCuenta.TabIndex = 37
-            Me.lblCuenta.Text = "CUENTA :"
             '
             'txtBanco
             '
             Me.txtBanco.BackColor = System.Drawing.Color.White
             Me.txtBanco.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtBanco.Enabled = False
-            Me.txtBanco.Location = New System.Drawing.Point(597, 17)
+            Me.txtBanco.Location = New System.Drawing.Point(599, 27)
             Me.txtBanco.Name = "txtBanco"
             Me.txtBanco.ReadOnly = True
             Me.txtBanco.Size = New System.Drawing.Size(133, 22)
             Me.txtBanco.TabIndex = 36
-            '
-            'lblPagadoA
-            '
-            Me.lblPagadoA.AutoSize = True
-            Me.lblPagadoA.Location = New System.Drawing.Point(230, 98)
-            Me.lblPagadoA.Name = "lblPagadoA"
-            Me.lblPagadoA.Size = New System.Drawing.Size(67, 13)
-            Me.lblPagadoA.TabIndex = 27
-            Me.lblPagadoA.Text = "PAGADO A :"
-            '
-            'lblBanco
-            '
-            Me.lblBanco.AutoSize = True
-            Me.lblBanco.Location = New System.Drawing.Point(530, 20)
-            Me.lblBanco.Name = "lblBanco"
-            Me.lblBanco.Size = New System.Drawing.Size(50, 13)
-            Me.lblBanco.TabIndex = 35
-            Me.lblBanco.Text = "BANCO :"
             '
             'txtPagadoA
             '
             Me.txtPagadoA.BackColor = System.Drawing.Color.White
             Me.txtPagadoA.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtPagadoA.Enabled = False
-            Me.txtPagadoA.Location = New System.Drawing.Point(303, 95)
+            Me.txtPagadoA.Location = New System.Drawing.Point(298, 115)
             Me.txtPagadoA.Name = "txtPagadoA"
             Me.txtPagadoA.ReadOnly = True
             Me.txtPagadoA.Size = New System.Drawing.Size(217, 22)
@@ -360,40 +227,22 @@
             Me.txtTipoPago.BackColor = System.Drawing.Color.White
             Me.txtTipoPago.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtTipoPago.Enabled = False
-            Me.txtTipoPago.Location = New System.Drawing.Point(304, 69)
+            Me.txtTipoPago.Location = New System.Drawing.Point(298, 87)
             Me.txtTipoPago.Name = "txtTipoPago"
             Me.txtTipoPago.ReadOnly = True
             Me.txtTipoPago.Size = New System.Drawing.Size(216, 22)
             Me.txtTipoPago.TabIndex = 34
-            '
-            'lblTipoPago
-            '
-            Me.lblTipoPago.AutoSize = True
-            Me.lblTipoPago.Location = New System.Drawing.Point(230, 72)
-            Me.lblTipoPago.Name = "lblTipoPago"
-            Me.lblTipoPago.Size = New System.Drawing.Size(69, 13)
-            Me.lblTipoPago.TabIndex = 33
-            Me.lblTipoPago.Text = "TIPO PAGO :"
             '
             'txtConcepto
             '
             Me.txtConcepto.BackColor = System.Drawing.Color.White
             Me.txtConcepto.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtConcepto.Enabled = False
-            Me.txtConcepto.Location = New System.Drawing.Point(304, 43)
+            Me.txtConcepto.Location = New System.Drawing.Point(298, 59)
             Me.txtConcepto.Name = "txtConcepto"
             Me.txtConcepto.ReadOnly = True
             Me.txtConcepto.Size = New System.Drawing.Size(216, 22)
             Me.txtConcepto.TabIndex = 32
-            '
-            'lblConcepto
-            '
-            Me.lblConcepto.AutoSize = True
-            Me.lblConcepto.Location = New System.Drawing.Point(230, 46)
-            Me.lblConcepto.Name = "lblConcepto"
-            Me.lblConcepto.Size = New System.Drawing.Size(70, 13)
-            Me.lblConcepto.TabIndex = 31
-            Me.lblConcepto.Text = "CONCEPTO :"
             '
             'MenuStrip1
             '
@@ -438,59 +287,189 @@
             'GroupBox1
             '
             Me.GroupBox1.Controls.Add(Me.dgvComprobanteEgresoBancos)
-            Me.GroupBox1.Location = New System.Drawing.Point(2, 205)
+            Me.GroupBox1.Location = New System.Drawing.Point(2, 206)
             Me.GroupBox1.Name = "GroupBox1"
-            Me.GroupBox1.Size = New System.Drawing.Size(913, 295)
+            Me.GroupBox1.Size = New System.Drawing.Size(913, 284)
             Me.GroupBox1.TabIndex = 187
             Me.GroupBox1.TabStop = False
             Me.GroupBox1.Text = "DETALLES DE LA ÓRDEN"
             '
-            'gbRangoFechas
-            '
-            Me.gbRangoFechas.BackColor = System.Drawing.Color.White
-            Me.gbRangoFechas.Controls.Add(Me.dtpFechaHasta)
-            Me.gbRangoFechas.Controls.Add(Me.dtpFechaDesde)
-            Me.gbRangoFechas.Controls.Add(Me.Label9)
-            Me.gbRangoFechas.Controls.Add(Me.Label2)
-            Me.gbRangoFechas.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.gbRangoFechas.Location = New System.Drawing.Point(6, 36)
-            Me.gbRangoFechas.Name = "gbRangoFechas"
-            Me.gbRangoFechas.Size = New System.Drawing.Size(579, 41)
-            Me.gbRangoFechas.TabIndex = 188
-            Me.gbRangoFechas.TabStop = False
-            Me.gbRangoFechas.Text = "CARGAR COMPROBANTES DESDE LA FECHA"
-            '
             'dtpFechaHasta
             '
-            Me.dtpFechaHasta.Location = New System.Drawing.Point(332, 15)
+            Me.dtpFechaHasta.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+            Me.dtpFechaHasta.Location = New System.Drawing.Point(298, 3)
             Me.dtpFechaHasta.Name = "dtpFechaHasta"
-            Me.dtpFechaHasta.Size = New System.Drawing.Size(234, 21)
+            Me.dtpFechaHasta.Size = New System.Drawing.Size(115, 22)
             Me.dtpFechaHasta.TabIndex = 1
             '
             'dtpFechaDesde
             '
-            Me.dtpFechaDesde.Location = New System.Drawing.Point(47, 15)
+            Me.dtpFechaDesde.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+            Me.dtpFechaDesde.Location = New System.Drawing.Point(89, 3)
             Me.dtpFechaDesde.Name = "dtpFechaDesde"
-            Me.dtpFechaDesde.Size = New System.Drawing.Size(234, 21)
+            Me.dtpFechaDesde.Size = New System.Drawing.Size(115, 22)
             Me.dtpFechaDesde.TabIndex = 0
             '
-            'Label9
+            'KryptonGroupBox1
             '
-            Me.Label9.AutoSize = True
-            Me.Label9.Location = New System.Drawing.Point(17, 18)
-            Me.Label9.Name = "Label9"
-            Me.Label9.Size = New System.Drawing.Size(29, 13)
-            Me.Label9.TabIndex = 3
-            Me.Label9.Text = "DEL:"
+            Me.KryptonGroupBox1.Location = New System.Drawing.Point(3, 32)
+            Me.KryptonGroupBox1.Name = "KryptonGroupBox1"
             '
-            'Label2
+            'KryptonGroupBox1.Panel
             '
-            Me.Label2.AutoSize = True
-            Me.Label2.Location = New System.Drawing.Point(307, 18)
-            Me.Label2.Name = "Label2"
-            Me.Label2.Size = New System.Drawing.Size(23, 13)
-            Me.Label2.TabIndex = 2
-            Me.Label2.Text = "AL:"
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel15)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel14)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel13)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.txtRazon)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel12)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel11)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel10)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel9)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.txtNumeroCheque)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel8)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.txtValorComprobante)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel7)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel6)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.txtActividad)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel5)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel4)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.txtCuenta)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel3)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.txtRucCi)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.txtBanco)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel2)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel1)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.dtpFechaHasta)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.dtpFechaDesde)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.txtNumeroComprobanteEgreso)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.txtFechaComprobanteEgreso)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.txtNumeroFactura)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.txtPagadoA)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.txtConcepto)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.txtTipoPago)
+            Me.KryptonGroupBox1.Size = New System.Drawing.Size(911, 170)
+            Me.KryptonGroupBox1.TabIndex = 189
+            Me.KryptonGroupBox1.Values.Heading = "Datos"
+            '
+            'KryptonLabel1
+            '
+            Me.KryptonLabel1.Location = New System.Drawing.Point(9, 31)
+            Me.KryptonLabel1.Name = "KryptonLabel1"
+            Me.KryptonLabel1.Size = New System.Drawing.Size(73, 20)
+            Me.KryptonLabel1.TabIndex = 2
+            Me.KryptonLabel1.Values.Text = "Numero CE"
+            '
+            'KryptonLabel2
+            '
+            Me.KryptonLabel2.Location = New System.Drawing.Point(11, 5)
+            Me.KryptonLabel2.Name = "KryptonLabel2"
+            Me.KryptonLabel2.Size = New System.Drawing.Size(26, 20)
+            Me.KryptonLabel2.TabIndex = 3
+            Me.KryptonLabel2.Values.Text = "De"
+            '
+            'KryptonLabel3
+            '
+            Me.KryptonLabel3.Location = New System.Drawing.Point(11, 57)
+            Me.KryptonLabel3.Name = "KryptonLabel3"
+            Me.KryptonLabel3.Size = New System.Drawing.Size(42, 20)
+            Me.KryptonLabel3.TabIndex = 21
+            Me.KryptonLabel3.Values.Text = "Fecha"
+            '
+            'KryptonLabel4
+            '
+            Me.KryptonLabel4.Location = New System.Drawing.Point(9, 83)
+            Me.KryptonLabel4.Name = "KryptonLabel4"
+            Me.KryptonLabel4.Size = New System.Drawing.Size(70, 20)
+            Me.KryptonLabel4.TabIndex = 22
+            Me.KryptonLabel4.Values.Text = "No Factura"
+            '
+            'KryptonLabel5
+            '
+            Me.KryptonLabel5.Location = New System.Drawing.Point(9, 112)
+            Me.KryptonLabel5.Name = "KryptonLabel5"
+            Me.KryptonLabel5.Size = New System.Drawing.Size(50, 20)
+            Me.KryptonLabel5.TabIndex = 23
+            Me.KryptonLabel5.Values.Text = "RUC/CI"
+            '
+            'KryptonLabel6
+            '
+            Me.KryptonLabel6.Location = New System.Drawing.Point(215, 31)
+            Me.KryptonLabel6.Name = "KryptonLabel6"
+            Me.KryptonLabel6.Size = New System.Drawing.Size(61, 20)
+            Me.KryptonLabel6.TabIndex = 27
+            Me.KryptonLabel6.Values.Text = "Actividad"
+            '
+            'KryptonLabel7
+            '
+            Me.KryptonLabel7.Location = New System.Drawing.Point(215, 57)
+            Me.KryptonLabel7.Name = "KryptonLabel7"
+            Me.KryptonLabel7.Size = New System.Drawing.Size(63, 20)
+            Me.KryptonLabel7.TabIndex = 28
+            Me.KryptonLabel7.Values.Text = "Concepto"
+            '
+            'KryptonLabel8
+            '
+            Me.KryptonLabel8.Location = New System.Drawing.Point(215, 83)
+            Me.KryptonLabel8.Name = "KryptonLabel8"
+            Me.KryptonLabel8.Size = New System.Drawing.Size(66, 20)
+            Me.KryptonLabel8.TabIndex = 29
+            Me.KryptonLabel8.Values.Text = "Tipo Pago"
+            '
+            'KryptonLabel9
+            '
+            Me.KryptonLabel9.Location = New System.Drawing.Point(215, 112)
+            Me.KryptonLabel9.Name = "KryptonLabel9"
+            Me.KryptonLabel9.Size = New System.Drawing.Size(52, 20)
+            Me.KryptonLabel9.TabIndex = 30
+            Me.KryptonLabel9.Values.Text = "Pagado"
+            '
+            'KryptonLabel10
+            '
+            Me.KryptonLabel10.Location = New System.Drawing.Point(530, 29)
+            Me.KryptonLabel10.Name = "KryptonLabel10"
+            Me.KryptonLabel10.Size = New System.Drawing.Size(44, 20)
+            Me.KryptonLabel10.TabIndex = 35
+            Me.KryptonLabel10.Values.Text = "Banco"
+            '
+            'KryptonLabel11
+            '
+            Me.KryptonLabel11.Location = New System.Drawing.Point(530, 59)
+            Me.KryptonLabel11.Name = "KryptonLabel11"
+            Me.KryptonLabel11.Size = New System.Drawing.Size(49, 20)
+            Me.KryptonLabel11.TabIndex = 36
+            Me.KryptonLabel11.Values.Text = "Cuenta"
+            '
+            'KryptonLabel12
+            '
+            Me.KryptonLabel12.Location = New System.Drawing.Point(525, 87)
+            Me.KryptonLabel12.Name = "KryptonLabel12"
+            Me.KryptonLabel12.Size = New System.Drawing.Size(72, 20)
+            Me.KryptonLabel12.TabIndex = 37
+            Me.KryptonLabel12.Values.Text = "No Cheque"
+            '
+            'KryptonLabel13
+            '
+            Me.KryptonLabel13.Location = New System.Drawing.Point(530, 115)
+            Me.KryptonLabel13.Name = "KryptonLabel13"
+            Me.KryptonLabel13.Size = New System.Drawing.Size(39, 20)
+            Me.KryptonLabel13.TabIndex = 38
+            Me.KryptonLabel13.Values.Text = "Valor"
+            '
+            'KryptonLabel14
+            '
+            Me.KryptonLabel14.Location = New System.Drawing.Point(742, 22)
+            Me.KryptonLabel14.Name = "KryptonLabel14"
+            Me.KryptonLabel14.Size = New System.Drawing.Size(44, 20)
+            Me.KryptonLabel14.TabIndex = 47
+            Me.KryptonLabel14.Values.Text = "Razon"
+            '
+            'KryptonLabel15
+            '
+            Me.KryptonLabel15.Location = New System.Drawing.Point(215, 3)
+            Me.KryptonLabel15.Name = "KryptonLabel15"
+            Me.KryptonLabel15.Size = New System.Drawing.Size(18, 20)
+            Me.KryptonLabel15.TabIndex = 48
+            Me.KryptonLabel15.Values.Text = "A"
             '
             'FormAprobacionComprobantesEgresoBancos
             '
@@ -498,10 +477,9 @@
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.BackColor = System.Drawing.Color.White
             Me.ClientSize = New System.Drawing.Size(919, 502)
-            Me.Controls.Add(Me.gbRangoFechas)
+            Me.Controls.Add(Me.KryptonGroupBox1)
             Me.Controls.Add(Me.GroupBox1)
             Me.Controls.Add(Me.MenuStrip1)
-            Me.Controls.Add(Me.gbComprobanteEgresoBancos)
             Me.Cursor = System.Windows.Forms.Cursors.Default
             Me.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
@@ -514,54 +492,54 @@
             Me.StateActive.Border.Rounding = 5.0!
             Me.Text = "APROBACIÓN COMPROBANTES EGRESO"
             CType(Me.dgvComprobanteEgresoBancos, System.ComponentModel.ISupportInitialize).EndInit()
-            Me.gbComprobanteEgresoBancos.ResumeLayout(False)
-            Me.gbComprobanteEgresoBancos.PerformLayout()
             Me.MenuStrip1.ResumeLayout(False)
             Me.MenuStrip1.PerformLayout()
             Me.GroupBox1.ResumeLayout(False)
-            Me.gbRangoFechas.ResumeLayout(False)
-            Me.gbRangoFechas.PerformLayout()
+            CType(Me.KryptonGroupBox1.Panel, System.ComponentModel.ISupportInitialize).EndInit()
+            Me.KryptonGroupBox1.Panel.ResumeLayout(False)
+            Me.KryptonGroupBox1.Panel.PerformLayout()
+            CType(Me.KryptonGroupBox1, System.ComponentModel.ISupportInitialize).EndInit()
+            Me.KryptonGroupBox1.ResumeLayout(False)
             Me.ResumeLayout(False)
             Me.PerformLayout()
 
         End Sub
         Friend WithEvents dgvComprobanteEgresoBancos As System.Windows.Forms.DataGridView
-        Friend WithEvents gbComprobanteEgresoBancos As System.Windows.Forms.GroupBox
-        Friend WithEvents lblNumeroComprobante As System.Windows.Forms.Label
         Friend WithEvents txtRucCi As System.Windows.Forms.TextBox
-        Friend WithEvents lblRucCi As System.Windows.Forms.Label
         Friend WithEvents txtActividad As System.Windows.Forms.TextBox
-        Friend WithEvents lblActividad As System.Windows.Forms.Label
         Friend WithEvents txtNumeroComprobanteEgreso As System.Windows.Forms.TextBox
         Friend WithEvents txtNumeroCheque As System.Windows.Forms.TextBox
-        Friend WithEvents lblFechaComprobanteEgreso As System.Windows.Forms.Label
-        Friend WithEvents lblNumeroCheque As System.Windows.Forms.Label
         Friend WithEvents txtFechaComprobanteEgreso As System.Windows.Forms.TextBox
         Friend WithEvents txtValorComprobante As System.Windows.Forms.TextBox
-        Friend WithEvents lblNumeroFactura As System.Windows.Forms.Label
-        Friend WithEvents lblValorComprobante As System.Windows.Forms.Label
         Friend WithEvents txtNumeroFactura As System.Windows.Forms.TextBox
         Friend WithEvents txtCuenta As System.Windows.Forms.TextBox
-        Friend WithEvents lblCuenta As System.Windows.Forms.Label
         Friend WithEvents txtBanco As System.Windows.Forms.TextBox
-        Friend WithEvents lblPagadoA As System.Windows.Forms.Label
-        Friend WithEvents lblBanco As System.Windows.Forms.Label
         Friend WithEvents txtPagadoA As System.Windows.Forms.TextBox
         Friend WithEvents txtTipoPago As System.Windows.Forms.TextBox
-        Friend WithEvents lblTipoPago As System.Windows.Forms.Label
         Friend WithEvents txtConcepto As System.Windows.Forms.TextBox
-        Friend WithEvents lblConcepto As System.Windows.Forms.Label
-        Friend WithEvents Label1 As System.Windows.Forms.Label
         Friend WithEvents txtRazon As System.Windows.Forms.TextBox
         Friend WithEvents MenuStrip1 As System.Windows.Forms.MenuStrip
         Friend WithEvents btnAprovar As System.Windows.Forms.ToolStripMenuItem
         Friend WithEvents btnRechazar As System.Windows.Forms.ToolStripMenuItem
         Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
         Friend WithEvents ToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
-        Friend WithEvents gbRangoFechas As System.Windows.Forms.GroupBox
         Friend WithEvents dtpFechaHasta As System.Windows.Forms.DateTimePicker
         Friend WithEvents dtpFechaDesde As System.Windows.Forms.DateTimePicker
-        Friend WithEvents Label9 As System.Windows.Forms.Label
-        Friend WithEvents Label2 As System.Windows.Forms.Label
+        Friend WithEvents KryptonGroupBox1 As Krypton.Toolkit.KryptonGroupBox
+        Friend WithEvents KryptonLabel2 As Krypton.Toolkit.KryptonLabel
+        Friend WithEvents KryptonLabel1 As Krypton.Toolkit.KryptonLabel
+        Friend WithEvents KryptonLabel12 As Krypton.Toolkit.KryptonLabel
+        Friend WithEvents KryptonLabel11 As Krypton.Toolkit.KryptonLabel
+        Friend WithEvents KryptonLabel10 As Krypton.Toolkit.KryptonLabel
+        Friend WithEvents KryptonLabel9 As Krypton.Toolkit.KryptonLabel
+        Friend WithEvents KryptonLabel8 As Krypton.Toolkit.KryptonLabel
+        Friend WithEvents KryptonLabel7 As Krypton.Toolkit.KryptonLabel
+        Friend WithEvents KryptonLabel6 As Krypton.Toolkit.KryptonLabel
+        Friend WithEvents KryptonLabel5 As Krypton.Toolkit.KryptonLabel
+        Friend WithEvents KryptonLabel4 As Krypton.Toolkit.KryptonLabel
+        Friend WithEvents KryptonLabel3 As Krypton.Toolkit.KryptonLabel
+        Friend WithEvents KryptonLabel15 As Krypton.Toolkit.KryptonLabel
+        Friend WithEvents KryptonLabel14 As Krypton.Toolkit.KryptonLabel
+        Friend WithEvents KryptonLabel13 As Krypton.Toolkit.KryptonLabel
     End Class
 End Namespace

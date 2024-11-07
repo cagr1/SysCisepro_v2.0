@@ -5,6 +5,7 @@ Imports Microsoft.Office.Interop
 Imports syscisepro.DATOS
 Imports syscisepro.FORMULARIOS.CONTABILIDAD.BANCOS.REPORTES
 Imports syscisepro.FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
+Imports Krypton.Toolkit
 
 Namespace FORMULARIOS.CONTABILIDAD.BANCOS
     ''' <summary>
@@ -51,7 +52,8 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
         Private Sub ExportarDatosExcel(ByVal dgvAsientosDiario As DataGridView, ByVal titulo As String)
             Try
                 If dgvAsientosDiario.Rows.Count = 0 Then
-                    MsgBox("NO HAY DATOS QUE EXPORTAR!", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+
+                    KryptonMessageBox.Show("NO HAY DATOS QUE EXPORTAR!", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                     Return
                 End If
 
@@ -257,45 +259,70 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
         Private Sub rbTodo_CheckedChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles rbTodo.CheckedChanged
             If rbTodo.Checked = True Then
                 _tipoBusqueda = 1
-                gbClienteGeneral.Enabled = False
-                gbRangoFechas.Enabled = False
-                gbBanco.Enabled = False
+                'gbClienteGeneral.Enabled = False
+                txtNombreComercialClienteGeneral.Enabled = False
+                'gbRangoFechas.Enabled = False
+                dtpDesde.Enabled = False
+                dtpHasta.Enabled = False
+                'gbBanco.Enabled = False
+                cmbBancos.Enabled = False
+                cmbCuentaBancos.Enabled = False
             End If
         End Sub
 
         Private Sub rbFecha_CheckedChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles rbFecha.CheckedChanged
             If rbFecha.Checked = True Then
                 _tipoBusqueda = 2
-                gbRangoFechas.Enabled = True
-                gbClienteGeneral.Enabled = False
-                gbBanco.Enabled = False
+                'gbRangoFechas.Enabled = True
+                dtpDesde.Enabled = True
+                dtpHasta.Enabled = True
+                'gbClienteGeneral.Enabled = False
+                txtNombreComercialClienteGeneral.Enabled = False
+                'gbBanco.Enabled = False
+                cmbBancos.Enabled = False
+                cmbCuentaBancos.Enabled = False
             End If
         End Sub
 
         Private Sub rbBanco_CheckedChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles rbBanco.CheckedChanged
             If rbBanco.Checked = True Then
                 _tipoBusqueda = 3
-                gbBanco.Enabled = True
-                gbClienteGeneral.Enabled = False
-                gbRangoFechas.Enabled = True
+                'gbBanco.Enabled = True
+                cmbBancos.Enabled = True
+                cmbCuentaBancos.Enabled = True
+                'gbClienteGeneral.Enabled = False
+                txtNombreComercialClienteGeneral.Enabled = False
+                'gbRangoFechas.Enabled = True
+                dtpDesde.Enabled = True
+                dtpHasta.Enabled = True
             End If
         End Sub
         Private Sub rbCliente_CheckedChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles rbCliente.CheckedChanged
             If rbCliente.Checked = True Then
                 _tipoBusqueda = 4
-                gbClienteGeneral.Enabled = True
-                gbBanco.Enabled = False
-                gbRangoFechas.Enabled = True
-                autocompletarNombreCliente()
+                'gbClienteGeneral.Enabled = True
+                txtNombreComercialClienteGeneral.Enabled = True
+                'gbBanco.Enabled = False
+                cmbBancos.Enabled = False
+                cmbCuentaBancos.Enabled = False
+                'gbRangoFechas.Enabled = True
+                dtpDesde.Enabled = True
+                dtpHasta.Enabled = True
+                AutocompletarNombreCliente()
             End If
         End Sub
         Private Sub rbConsorcio_CheckedChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles rbConsorcio.CheckedChanged
             If rbConsorcio.Checked = True Then
                 _tipoBusqueda = 5
-                gbClienteGeneral.Enabled = True
-                gbBanco.Enabled = False
-                gbRangoFechas.Enabled = True
-                autocompletarConsorcioCliente()
+                'gbClienteGeneral.Enabled = True
+                txtNombreComercialClienteGeneral.Enabled = True
+                'gbBanco.Enabled = False
+                cmbBancos.Enabled = False
+                cmbCuentaBancos.Enabled = False
+                'gbRangoFechas.Enabled = True
+                dtpDesde.Enabled = True
+                dtpHasta.Enabled = True
+                AutocompletarConsorcioCliente()
             End If
         End Sub
          
@@ -314,7 +341,8 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
                 f.lblIdComprobanteIngreso.Text = _idComprobanteIngresoB
                 f.Show()
             Else
-                MsgBox("POR FAVOR SELECCIONE UN COMPROBANTE DE INGRESO", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+
+                KryptonMessageBox.Show("POR FAVOR SELECCIONE UN COMPROBANTE DE INGRESO", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
             End If
         End Sub
 
@@ -328,7 +356,8 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
                     lblIdComprobanteIngresoBanco.Text = dgvComprobanteEgresoBancos.CurrentRow.Cells.Item(0).Value
                 End If
             Catch ex As Exception
-                MsgBox(ex.Message.ToString, MsgBoxStyle.Critical, "MENSAJE DE EXCEPCIÓN")
+
+                KryptonMessageBox.Show("HUBO UN PROBLEMA AL SELECCIONAR EL COMPROBANTE DE INGRESO", "MENSAJE DE EXCEPCIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
 
@@ -340,7 +369,8 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
                 f.lblIdComprobanteIngreso.Text = _idComprobanteIngresoB
                 f.Show()
             Else
-                MsgBox("POR FAVOR SELECCIONE UN COMPROBANTE DE INGRESO", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+
+                KryptonMessageBox.Show("POR FAVOR SELECCIONE UN COMPROBANTE DE INGRESO", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
             End If
         End Sub
 

@@ -168,18 +168,22 @@ namespace SysCisepro3.TalentoHumano
 
             cbxQuincena.Enabled = false;
             cbxTipo.Enabled = false;
+            
 
             btnAnt.Tag = 0;
             btnSig.Tag = 0;
             btnResumen.Tag = null;
 
             _cuentas = new List<string>();
+            dgvDetallesRol.Font = new Font("Roboto", 8, FontStyle.Regular);
+            dgvInformePago.Font = new Font("Roboto", 8, FontStyle.Regular);
+            metroTabControl1.SelectedTab = metroTabPage1;
 
             //Image orginalBcoPichicha = Resources.banco_pichincha_logo;
             //Image resizeBcoPichincha = new Bitmap(orginalBcoPichicha, new Size(btnBizPichincha.Width, btnBizPichincha.Height));
             //btnBizPichincha.Image = resizeBcoPichincha;
             //btnBizPichincha.ImageAlign = ContentAlignment.MiddleCenter;
-            
+
             ComboColumnas(); 
         }
 
@@ -904,6 +908,7 @@ namespace SysCisepro3.TalentoHumano
 
         private void cbxTipo_SelectedIndexChanged(object sender, EventArgs e)
         {
+            
             cbxGrupo.Items.Clear();
             if (cbxQuincena.SelectedIndex == 0) //  quince
             {
@@ -936,7 +941,7 @@ namespace SysCisepro3.TalentoHumano
                         cbxGrupo.Items.Add(row[0]);
 
                     if (cbxGrupo.Items.Count > 0) cbxGrupo.SelectedIndex = 0;
-                    cbxGrupo.DropDownWidth = 180;
+                    cbxGrupo.DropDownWidth = 350;
                     cbxGrupo.Enabled = _estado == 1;
                 }
                 else if ((cbxTipo.SelectedIndex == 1))  //  admin
@@ -4256,6 +4261,11 @@ namespace SysCisepro3.TalentoHumano
         }
 
         private void TabResumenRol_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbxGrupo_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

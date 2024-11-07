@@ -23,10 +23,13 @@ using SysCisepro3.TalentoHumano;
 using SysCisepro3.Bodega;
 using ClassLibraryCisepro3.ActivoFijo;
 //using ComponentFactory.Krypton.Toolkit;
-using FontAwesome.Sharp;
 using Krypton.Toolkit;
 using System.IO;
 using System.Drawing.Text;
+
+
+
+
 
 
 
@@ -38,6 +41,8 @@ namespace SysCisepro3.Main
         /// CISEPRO 2019
         /// INTERFAZ PRINCIPAL DEL SISTEMA (COMPRAS, VENTAS, RRHH, CONTABILIDAD)
         /// </summary>
+        /// 
+        
         public ClassUsuarioGeneral ObjUsuario { private get; set; }
         public int TiempoNotificacion { private get; set; }
         public TipoConexion TipoCon { private get; set; }
@@ -115,7 +120,7 @@ namespace SysCisepro3.Main
             toolStripButtonCalc.ForeColor = Color.White;
             toolStripButtonNote.ForeColor = ValidationForms.GetColorSistema(TipoCon);
             
-            this.StateCommon.Border.Color1 = ValidationForms.GetColorSistema(TipoCon);
+            //this.StateCommon.Border.Color1 = ValidationForms.GetColorSistema(TipoCon);
             toolStripStatusLabel1.ForeColor = Color.White;
             lblVersion.ForeColor = Color.White;
             toolStripStatusLabel4.ForeColor = Color.White;
@@ -146,7 +151,14 @@ namespace SysCisepro3.Main
                     tslLogo.BackgroundImage = Resources.SeportPac_Wall;
                     this.BackgroundImage = Resources.Seport_wall;
                     this.BackgroundImageLayout = ImageLayout.Stretch;
+
+
+                    
+                    toolStrip1.BackColor = Color.FromArgb(66, 66, 66);   //ValidationForms.GetColorSistema(TipoCon);
+                    statusStrip.BackColor = Color.FromArgb(66, 66, 66);// ValidationForms.GetColorSistema(TipoCon);
+
                     break;
+                    
                 case TipoConexion.Asenava:
                     Icon = Resources.logo_a;
                     tslLogo.BackgroundImage = Resources.Cisepro_Wall;
@@ -156,6 +168,10 @@ namespace SysCisepro3.Main
                     tslLogo.BackgroundImage = Resources.Cisepro_Wall;
                     this.BackgroundImage = Resources.Your_paragraph_text;
                     this.BackgroundImageLayout = ImageLayout.Stretch;
+
+                    
+                    toolStrip1.BackColor = Color.FromArgb(13,71,161);   //ValidationForms.GetColorSistema(TipoCon);
+                    statusStrip.BackColor = Color.FromArgb(13, 71, 161); // ValidationForms.GetColorSistema(TipoCon);
                     break;
             }
 
@@ -814,6 +830,7 @@ namespace SysCisepro3.Main
         private void aPROBACIÓNDECOMPROBANTESEGRESOBANCOSToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var f = new syscisepro.FORMULARIOS.CONTABILIDAD.BANCOS.FormAprobacionComprobantesEgresoBancos { MdiParent = this, TipoCox = TipoCox, IdUsuario = ObjUsuario.IdUsuario, UserName = ObjUsuario.Datos };
+         
             f.Show();
         }
         private void lIQUIDACIÓNFONDOROTATIVOToolStripMenuItem_Click(object sender, EventArgs e)

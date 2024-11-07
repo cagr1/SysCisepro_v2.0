@@ -48,6 +48,10 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
         Dim _fechaDesde = ""
         Dim _fechaHasta = ""
 
+        Public IdUsuario As Integer
+        Public UserName As String
+
+
         Private Sub FormBuscarComprobanteEgresoBancos_Load(ByVal sender As System.Object, ByVal e As EventArgs) Handles MyBase.Load
             ' DEFINIR TIPO Y COLOR DE SISTEMA
             Select Case _tipoCon

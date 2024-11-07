@@ -395,7 +395,7 @@ Namespace FORMULARIOS.FONDOS.FONDO_ROTATIVO
             btnCancelarSolicitudFR.Enabled = False
         End Sub
 
-        Private Sub bntCargar_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnReporte.Click
+        Private Sub bntCargar_Click(ByVal sender As System.Object, ByVal e As EventArgs)
             Try
                 Dim liq = _objetoLiquidacionFondoRotativo.SeleccionarLiquidacionFondoRotativoXid(_tipoCon, CInt(txtIdLiquidacionBusqueda.Text))
                 _crLiquidacionFondoRotativoNew.SetDataSource(_objetoLiquidacionFondoRotativo.ReporteFondoRotativoPorIdLiquidacion(_tipoCon, CInt(txtIdLiquidacionBusqueda.Text)))
@@ -413,7 +413,7 @@ Namespace FORMULARIOS.FONDOS.FONDO_ROTATIVO
             End Try
         End Sub
 
-        Private Sub TabControl1_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles TabControl1.SelectedIndexChanged
+        Private Sub TabControl1_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As EventArgs)
             If TabControl1.SelectedIndex = 1 Then txtIdLiquidacionBusqueda.Focus()
         End Sub
 

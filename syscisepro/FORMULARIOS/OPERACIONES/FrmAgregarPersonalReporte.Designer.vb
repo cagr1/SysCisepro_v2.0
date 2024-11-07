@@ -771,6 +771,7 @@
             '
             Me.Button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(75, Byte), Integer), CType(CType(166, Byte), Integer), CType(CType(79, Byte), Integer))
             Me.Button2.DialogResult = System.Windows.Forms.DialogResult.OK
+            Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.Button2.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Button2.ForeColor = System.Drawing.Color.White
             Me.Button2.Location = New System.Drawing.Point(693, 244)
@@ -784,6 +785,7 @@
             '
             Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(58, Byte), Integer))
             Me.Button1.DialogResult = System.Windows.Forms.DialogResult.Cancel
+            Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.Button1.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Button1.ForeColor = System.Drawing.Color.White
             Me.Button1.Location = New System.Drawing.Point(612, 244)

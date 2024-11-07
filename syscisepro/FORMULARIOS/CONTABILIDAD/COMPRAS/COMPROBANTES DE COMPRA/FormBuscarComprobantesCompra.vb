@@ -17,6 +17,11 @@ Imports System.IO
 Imports iTextSharp.text
 Imports iTextSharp.text.pdf
 Imports ClassLibraryCisepro.CONTABILIDAD.VENTAS
+Imports CrystalDecisions.Shared.Json
+Imports ClassLibraryCisepro
+Imports iTextSharp.awt.geom.Point2D
+Imports ReaLTaiizor.Controls
+Imports System.Windows.Forms.VisualStyles
 
 Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
     ''' <summary>
@@ -388,11 +393,469 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
 
             If lblIdComprobanteCompra.Text <> 0 Then
                 If lblEstadoComprobanteCompra.Text = "COMPRAS" Then
-                    Dim f = New FormReporteComprobanteCompra
-                    f.TipoCox = TipoCox
-                    f.lblIdComprobanteCompra.Text = lblIdComprobanteCompra.Text
-                    f._porcentaje = Convert.ToString(lblPorcentaje.Text)
-                    f.ShowDialog()
+                    Dim numeroRegistro = _objetoNumeroRegistroAsientoCompCompra.BuscarNumeroRegistroAsientoPorIdComprobanteCompra(_tipoCon, lblIdComprobanteCompra.Text)
+                    Dim ds As DataSet = _objetoComprobantesCompra.BuscarReporteComprobanteCompraXIdComprobanteNumeroRegistro(_tipoCon, Convert.ToInt32(lblIdComprobanteCompra.Text), numeroRegistro)
+
+                    Dim iva5 As DataTable = _objetoComprobantesCompra.IvaComprobanteTabla(_tipoCon, CType(lblIdComprobanteCompra.Text, Int64))
+
+                    Dim subtotal5Value As String = "0"
+                    Dim iva5Value As String = "0"
+                    If iva5.Rows.Count > 0 Then
+
+                        subtotal5Value = If(iva5.Rows(0)("SUBTOTAL_5_COMPROBANTE_COMPRA") IsNot DBNull.Value, iva5.Rows(0)("SUBTOTAL_5_COMPROBANTE_COMPRA").ToString(), "0,00")
+                        iva5Value = If(iva5.Rows(0)("IVA5_COMPROBANTE_COMPRA") IsNot DBNull.Value, iva5.Rows(0)("IVA5_COMPROBANTE_COMPRA").ToString(), "0,00")
+                    End If
+
+                    Dim pdfStream As New MemoryStream()
+
+                    Dim ruta As String = System.IO.Path.Combine(System.IO.Path.GetTempPath(), "ComprobanteCompra.pdf")
+                    PdfViewer1.Document?.Dispose()
+                    PdfViewer1.Document = Nothing
+
+                    'Using fs As New FileStream(ruta, FileMode.Create, FileAccess.Write, FileShare.None)
+                    Dim document As New iTextSharp.text.Document()
+                    Dim writer As PdfWriter = PdfWriter.GetInstance(document, pdfStream)
+                    writer.CloseStream = False
+                    document.Open()
+
+                    Dim baseFont As BaseFont = BaseFont.CreateFont(BaseFont.HELVETICA, BaseFont.CP1252, BaseFont.EMBEDDED)
+                    Dim fuente12 As iTextSharp.text.Font = New Font(baseFont, 12, iTextSharp.text.Font.BOLD)
+                    Dim fuente10Bold As iTextSharp.text.Font = New Font(baseFont, 10, iTextSharp.text.Font.BOLD)
+                    Dim fuente10 As iTextSharp.text.Font = New Font(baseFont, 10)
+                    Dim fuente8 As iTextSharp.text.Font = New Font(baseFont, 8)
+                    Dim fuente8Bold As iTextSharp.text.Font = New Font(baseFont, 8, iTextSharp.text.Font.BOLD)
+
+                    Dim rutaImagen As String = ValidationForms.NombreLogoNuevo(_tipoCon, Application.StartupPath)
+                    Dim logo As iTextSharp.text.Image = iTextSharp.text.Image.GetInstance(rutaImagen)
+                    logo.ScaleToFit(35, 35)
+
+
+
+                    Dim headerTable As PdfPTable = New PdfPTable(3)
+                    headerTable.TotalWidth = 500
+
+                    Dim ColumnWidhts As Single() = New Single() {150, 250, 100}
+                    headerTable.SetWidths(ColumnWidhts)
+
+
+
+                    Dim idContent As New Phrase()
+                    idContent.Add(New Chunk("Id    ", fuente10Bold))
+                    idContent.Add(New Chunk("   " & lblIdComprobanteCompra.Text, fuente10))
+                    idContent.Add(New Chunk(vbLf, fuente10))
+                    idContent.Add(New Chunk(vbLf & "Tipo    ", fuente10Bold))
+                    idContent.Add(New Chunk(dgvComprobantesCompra.CurrentRow.Cells.Item(2).Value.ToString(), fuente10))
+
+
+
+                    Dim idCell As New PdfPCell(idContent) With {
+                                    .HorizontalAlignment = Element.ALIGN_LEFT,
+                                    .VerticalAlignment = Element.ALIGN_MIDDLE,
+                                    .Border = PdfPCell.NO_BORDER
+                                }
+                    headerTable.AddCell(idCell)
+
+                    Dim tituloCell As New PdfPCell(New Phrase("COMPROBANTE DE COMPRA", fuente12)) With {
+                                    .HorizontalAlignment = Element.ALIGN_CENTER,
+                                    .VerticalAlignment = Element.ALIGN_MIDDLE,
+                                    .Border = PdfPCell.NO_BORDER
+                                }
+                    headerTable.AddCell(tituloCell)
+
+                    Dim logoCell As New PdfPCell(logo) With {
+                                    .HorizontalAlignment = Element.ALIGN_CENTER,
+                                    .VerticalAlignment = Element.ALIGN_CENTER,
+                                    .Border = PdfPCell.NO_BORDER
+                                }
+                    headerTable.AddCell(logoCell)
+                    headerTable.WriteSelectedRows(0, -1, 50, 825, writer.DirectContent)
+
+                    Dim rectTabla1 As PdfContentByte = writer.DirectContent
+                    rectTabla1.RoundRectangle(40.0F, 785.0F, 525.0F, 45.0F, 10.0F)
+                    rectTabla1.Stroke()
+
+
+
+                    Dim tabla1 As PdfPTable = New PdfPTable(2)
+                    tabla1.TotalWidth = 500
+
+                    Dim ColumnWidhts1 As Single() = New Single() {300, 200}
+                    tabla1.SetWidths(ColumnWidhts1)
+
+                    Dim proveedorContent As New Phrase()
+                    proveedorContent.Add(New Chunk("Proveedor   ", fuente8Bold))
+                    proveedorContent.Add(New Chunk(dgvComprobantesCompra.CurrentRow.Cells.Item("PROVEEDOR").Value.ToString(), fuente8))
+
+                    Dim proveedorCell As New PdfPCell(proveedorContent) With {
+                                    .HorizontalAlignment = Element.ALIGN_LEFT,
+                                    .VerticalAlignment = Element.ALIGN_MIDDLE,
+                                    .Border = PdfPCell.NO_BORDER
+                                }
+                    tabla1.AddCell(proveedorCell)
+
+                    Dim fechaContent As New Phrase()
+                    fechaContent.Add(New Chunk("Fecha   ", fuente8Bold))
+                    fechaContent.Add(New Chunk(dgvComprobantesCompra.CurrentRow.Cells.Item("FECHA EMISION").Value.ToString(), fuente8))
+
+                    Dim fechaCell As New PdfPCell(fechaContent) With {
+                                    .HorizontalAlignment = Element.ALIGN_LEFT,
+                                    .VerticalAlignment = Element.ALIGN_MIDDLE,
+                                    .Border = PdfPCell.NO_BORDER
+                                }
+                    tabla1.AddCell(fechaCell)
+
+                    Dim emptyCell As New PdfPCell(New Phrase("")) With {
+                                    .HorizontalAlignment = Element.ALIGN_LEFT,
+                                    .VerticalAlignment = Element.ALIGN_MIDDLE,
+                                    .Border = PdfPCell.NO_BORDER
+                                }
+                    Dim emptyCell2 As New PdfPCell(New Phrase("")) With {
+                                    .HorizontalAlignment = Element.ALIGN_LEFT,
+                                    .VerticalAlignment = Element.ALIGN_MIDDLE,
+                                    .Border = PdfPCell.NO_BORDER,
+                                    .Colspan = 2
+                                 }
+
+
+                    Dim separatorCell As New PdfPCell() With {
+                                    .Colspan = 2,
+                                    .BorderWidthTop = 0.5F,
+                                    .BorderWidthLeft = 0,
+                                    .BorderWidthRight = 0,
+                                    .BorderWidthBottom = 0
+                                }
+
+
+
+                    'tabla1.AddCell(emptyCell)
+
+                    Dim NroComprobanteContent As New Phrase()
+                    NroComprobanteContent.Add(New Chunk("Nro. Comprobante   ", fuente8Bold))
+                    NroComprobanteContent.Add(New Chunk(dgvComprobantesCompra.CurrentRow.Cells.Item("NUMERO").Value.ToString(), fuente8))
+
+                    Dim NroComprobanteCell As New PdfPCell(NroComprobanteContent) With {
+                                    .HorizontalAlignment = Element.ALIGN_LEFT,
+                                    .VerticalAlignment = Element.ALIGN_MIDDLE,
+                                    .Border = PdfPCell.NO_BORDER
+                                }
+
+                    tabla1.AddCell(NroComprobanteCell)
+                    tabla1.AddCell(emptyCell)
+                    tabla1.AddCell(emptyCell2)
+                    'tabla1.AddCell(separatorCell)
+
+                    Dim comproTable As DataTable = ds.Tables("COMPROBANTES_COMPRA")
+                    Dim numAutorizacionContent As New Phrase()
+                    numAutorizacionContent.Add(New Chunk("Nro. Autorización SRI ", fuente8Bold))
+                    numAutorizacionContent.Add(New Chunk(comproTable.Rows(0)("NUM_AUTO_SRI_COMPROBANTE_COMPRA").ToString(), fuente8))
+
+                    Dim numAutorizacionCell As New PdfPCell(numAutorizacionContent) With {
+                                    .HorizontalAlignment = Element.ALIGN_LEFT,
+                                    .VerticalAlignment = Element.ALIGN_MIDDLE,
+                                    .Border = PdfPCell.NO_BORDER,
+                                    .Colspan = 2
+                                }
+
+                    tabla1.AddCell(numAutorizacionCell)
+
+                    Dim fechaAutorizacion As New Phrase()
+                    fechaAutorizacion.Add(New Chunk("Fecha Autorización SRI ", fuente8Bold))
+                    fechaAutorizacion.Add(New Chunk(comproTable.Rows(0)("FECHA_AUTO_SRI_COMPROBANTE_COMPRA").ToString(), fuente8))
+
+                    Dim fechaAutorizacionCell As New PdfPCell(fechaAutorizacion) With {
+                                    .HorizontalAlignment = Element.ALIGN_LEFT,
+                                    .VerticalAlignment = Element.ALIGN_MIDDLE,
+                                    .Border = PdfPCell.NO_BORDER,
+                                    .Colspan = 2
+                                }
+
+                    tabla1.AddCell(fechaAutorizacionCell)
+                    tabla1.AddCell(emptyCell2)
+
+                    Dim ObservacionContent As New Phrase()
+                    ObservacionContent.Add(New Chunk("Observación   ", fuente8Bold))
+                    ObservacionContent.Add(New Chunk(comproTable.Rows(0)("OBSERVACION_COMPROBANTE_COMPRA").ToString(), fuente8))
+
+                    Dim ObservacionCell As New PdfPCell(ObservacionContent) With {
+                                    .HorizontalAlignment = Element.ALIGN_LEFT,
+                                    .VerticalAlignment = Element.ALIGN_MIDDLE,
+                                    .Border = PdfPCell.NO_BORDER
+                                }
+
+                    tabla1.AddCell(ObservacionCell)
+
+                    Dim table2 As PdfPTable = New PdfPTable(2)
+                    table2.TotalWidth = 200
+                    table2.HorizontalAlignment = Element.ALIGN_CENTER
+                    'Dim columnWidthsTable5() As Single = {150, 50}
+
+
+                    Dim cell1Row1 As New PdfPCell(New Phrase("Subtotal " & lblPorcentaje.Text & "%", fuente8Bold))
+                    Dim cell2Row1 As New PdfPCell(New Phrase(comproTable.Rows(0)("SUBTOTAL_12_COMPROBANTE_COMPRA").ToString(), fuente8))
+                    cell2Row1.HorizontalAlignment = Element.ALIGN_RIGHT
+                    table2.AddCell(cell1Row1)
+                    table2.AddCell(cell2Row1)
+
+                    Dim cell1Row2 As New PdfPCell(New Phrase("Subtotal 5%", fuente8Bold))
+                    Dim cell2Row2 As New PdfPCell(New Phrase(subtotal5Value, fuente8))
+                    cell2Row2.HorizontalAlignment = Element.ALIGN_RIGHT
+                    table2.AddCell(cell1Row2)
+                    table2.AddCell(cell2Row2)
+
+                    Dim cell1Row3 As New PdfPCell(New Phrase("Subtotal 0%", fuente8Bold))
+                    Dim cell2Row3 As New PdfPCell(New Phrase(comproTable.Rows(0)("SUBTOTAL_12_COMPROBANTE_COMPRA").ToString(), fuente8))
+                    cell2Row3.HorizontalAlignment = Element.ALIGN_RIGHT
+                    table2.AddCell(cell1Row3)
+                    table2.AddCell(cell2Row3)
+
+                    Dim cell1Row4 As New PdfPCell(New Phrase("Descuento", fuente8Bold))
+                    Dim cell2Row4 As New PdfPCell(New Phrase(comproTable.Rows(0)("DESCUENTO_COMPROBANTE_COMPRA").ToString(), fuente8))
+                    cell2Row4.HorizontalAlignment = Element.ALIGN_RIGHT
+                    table2.AddCell(cell1Row4)
+                    table2.AddCell(cell2Row4)
+
+                    Dim cell1Row5 As New PdfPCell(New Phrase("Subtotal", fuente8Bold))
+                    Dim cell2Row5 As New PdfPCell(New Phrase(comproTable.Rows(0)("SUBTOTAL_COMPROBANTE_COMPRA").ToString(), fuente8))
+                    cell2Row5.HorizontalAlignment = Element.ALIGN_RIGHT
+                    table2.AddCell(cell1Row5)
+                    table2.AddCell(cell2Row5)
+
+                    Dim cell1Row6 As New PdfPCell(New Phrase("IVA 5%", fuente8Bold))
+                    Dim cell2Row6 As New PdfPCell(New Phrase(iva5Value, fuente8))
+                    cell2Row6.HorizontalAlignment = Element.ALIGN_RIGHT
+                    table2.AddCell(cell1Row6)
+                    table2.AddCell(cell2Row6)
+
+                    Dim cell1Row7 As New PdfPCell(New Phrase("IVA " & lblPorcentaje.Text & "%", fuente8Bold))
+                    Dim cell2Row7 As New PdfPCell(New Phrase(comproTable.Rows(0)("IVA_COMPROBANTE_COMPRA").ToString(), fuente8))
+                    cell2Row7.HorizontalAlignment = Element.ALIGN_RIGHT
+                    table2.AddCell(cell1Row7)
+                    table2.AddCell(cell2Row7)
+
+                    Dim cell1Row8 As New PdfPCell(New Phrase("TOTAL ", fuente8Bold))
+                    Dim cell2Row8 As New PdfPCell(New Phrase(comproTable.Rows(0)("TOTAL_COMPROBANTE_COMPRA").ToString(), fuente8))
+                    cell2Row8.HorizontalAlignment = Element.ALIGN_RIGHT
+                    table2.AddCell(cell1Row8)
+                    table2.AddCell(cell2Row8)
+
+                    Dim nestedTableCell As New PdfPCell(table2) With {
+                                        .Border = PdfPCell.NO_BORDER,
+                                        .HorizontalAlignment = Element.ALIGN_RIGHT,
+                                        .VerticalAlignment = Element.ALIGN_TOP}
+                    tabla1.AddCell(nestedTableCell)
+                    tabla1.WriteSelectedRows(0, -1, 50, 775, writer.DirectContent)
+
+
+                    Dim tabla3 As PdfPTable = New PdfPTable(2)
+                    tabla3.TotalWidth = 500
+
+                    Dim ColumnWidhts3 As Single() = New Single() {250, 250}
+                    tabla3.SetWidths(ColumnWidhts3)
+
+                    Dim TituloTabla3 As New PdfPCell(New Phrase("COMPROBANTE DE RETENCIÓN", fuente10Bold)) With {
+                                    .HorizontalAlignment = Element.ALIGN_CENTER,
+                                    .VerticalAlignment = Element.ALIGN_MIDDLE,
+                                    .Border = PdfPCell.BOTTOM_BORDER,
+                                    .Colspan = 2
+                                }
+
+                    tabla3.AddCell(TituloTabla3)
+
+                    Dim emptyCellTable3 As New PdfPCell(New Phrase(" ")) With {
+                                    .HorizontalAlignment = Element.ALIGN_LEFT,
+                                    .VerticalAlignment = Element.ALIGN_MIDDLE,
+                                    .Border = PdfPCell.NO_BORDER,
+                                    .Colspan = 2
+                                 }
+
+                    tabla3.AddCell(emptyCellTable3)
+                    Dim retencionTable As DataTable = ds.Tables("COMPROBANTE_RETENCION_COMPRA")
+
+
+                    Dim IdRetencion As New Phrase()
+                    IdRetencion.Add(New Chunk("ID   ", fuente8Bold))
+                    IdRetencion.Add(New Chunk(retencionTable.Rows(0)("ID_COMPROBANTE_RETENCION_COMPRA").ToString(), fuente8))
+
+
+
+                    Dim IdRetencionCell As New PdfPCell(IdRetencion) With {
+                                    .HorizontalAlignment = Element.ALIGN_LEFT,
+                                    .VerticalAlignment = Element.ALIGN_MIDDLE,
+                                    .Border = PdfPCell.NO_BORDER
+                                                                    }
+
+                    tabla3.AddCell(IdRetencionCell)
+
+                    Dim TipoComprobante As New Phrase()
+                    TipoComprobante.Add(New Chunk("Tipo Comprobante   ", fuente8Bold))
+                    TipoComprobante.Add(New Chunk(retencionTable.Rows(0)("TIPO_COMP_VENTA_COMPROBANTE_RETENCION_COMPRA").ToString(), fuente8))
+
+                    Dim TipoComprobanteCell As New PdfPCell(TipoComprobante) With {
+                                    .HorizontalAlignment = Element.ALIGN_LEFT,
+                                    .VerticalAlignment = Element.ALIGN_MIDDLE,
+                                    .Border = PdfPCell.NO_BORDER
+                                }
+
+                    tabla3.AddCell(TipoComprobanteCell)
+
+                    Dim NroComprobanteRetencion As New Phrase()
+                    NroComprobanteRetencion.Add(New Chunk("Nro. Retencion   ", fuente8Bold))
+                    NroComprobanteRetencion.Add(New Chunk(retencionTable.Rows(0)("NUMERO_COMPROBANTE_RETENCION_COMPRA").ToString(), fuente8))
+
+                    Dim NroComprobanteRetencionCell As New PdfPCell(NroComprobanteRetencion) With {
+                                    .HorizontalAlignment = Element.ALIGN_LEFT,
+                                    .VerticalAlignment = Element.ALIGN_MIDDLE,
+                                    .Border = PdfPCell.NO_BORDER
+                                }
+
+                    tabla3.AddCell(NroComprobanteRetencionCell)
+
+                    Dim FechaEmision As New Phrase()
+                    FechaEmision.Add(New Chunk("Fecha Emisión   ", fuente8Bold))
+                    FechaEmision.Add(New Chunk(retencionTable.Rows(0)("FECHA_EMISION_COMPROBANTE_RETENCION_COMPRA").ToString(), fuente8))
+
+                    Dim FechaEmisionCell As New PdfPCell(FechaEmision) With {
+                                    .HorizontalAlignment = Element.ALIGN_LEFT,
+                                    .VerticalAlignment = Element.ALIGN_MIDDLE,
+                                    .Border = PdfPCell.NO_BORDER
+                                }
+
+                    tabla3.AddCell(FechaEmisionCell)
+
+                    Dim NroAutorizacion As New Phrase()
+                    NroAutorizacion.Add(New Chunk("Nro. Autorización SRI   ", fuente8Bold))
+                    NroAutorizacion.Add(New Chunk(retencionTable.Rows(0)("NUM_AUTO_SRI_COMPROBANTE_RETENCION_COMPRA").ToString(), fuente8))
+
+                    Dim NroAutorizacionCell As New PdfPCell(NroAutorizacion) With {
+                                    .HorizontalAlignment = Element.ALIGN_LEFT,
+                                    .VerticalAlignment = Element.ALIGN_MIDDLE,
+                                    .Border = PdfPCell.NO_BORDER
+                                }
+
+                    tabla3.AddCell(NroAutorizacionCell)
+
+                    Dim FechaAutorizacionSRI As New Phrase()
+                    FechaAutorizacionSRI.Add(New Chunk("Fecha Autorización SRI   ", fuente8Bold))
+                    FechaAutorizacionSRI.Add(New Chunk(retencionTable.Rows(0)("FECHA_AUTO_SRI_COMPROBANTE_RETENCION_COMPA").ToString(), fuente8))
+
+                    Dim FechaAutorizacionSRICell As New PdfPCell(FechaAutorizacionSRI) With {
+                                    .HorizontalAlignment = Element.ALIGN_LEFT,
+                                    .VerticalAlignment = Element.ALIGN_MIDDLE,
+                                    .Border = PdfPCell.NO_BORDER
+                                }
+
+                    tabla3.AddCell(FechaAutorizacionSRICell)
+
+                    tabla3.WriteSelectedRows(0, -1, 50, 600, writer.DirectContent)
+
+                    Dim table4 As New PdfPTable(6)
+                    table4.TotalWidth = 500
+
+                    Dim detalleRetencionTable As DataTable = ds.Tables("DETALLE_COMPROBANTE_RETENCION_COMPRA")
+                    Dim columnWidthsTable4() As Single = {80, 80, 80, 100, 80, 80}
+                    table4.SetWidths(columnWidthsTable4)
+
+                    ' First row (header)
+                    table4.AddCell(New Phrase("Ejercicio Fiscal", fuente8Bold))
+                    table4.AddCell(New Phrase("Codigo", fuente8Bold))
+                    table4.AddCell(New Phrase("Base Imponible", fuente8Bold))
+                    table4.AddCell(New Phrase("Impuesto", fuente8Bold))
+                    table4.AddCell(New Phrase("Porcentaje", fuente8Bold))
+                    table4.AddCell(New Phrase("Valor", fuente8Bold))
+
+                    table4.AddCell(New Phrase(detalleRetencionTable.Rows(0)("EJ_FISCAL_DETALLE_COMPROBANTE_RETENCION_COMPRA").ToString(), fuente8))
+                    table4.AddCell(New Phrase(detalleRetencionTable.Rows(0)("CODIGO_DETALLE_COMPROBANTE_RETENCION_COMPRA").ToString(), fuente8))
+                    table4.AddCell(New Phrase(detalleRetencionTable.Rows(0)("BASE_IMPONIBLE_DETALLE_COMPROBANTE_RETENCION_COMPRA").ToString(), fuente8))
+                    table4.AddCell(New Phrase(detalleRetencionTable.Rows(0)("IMPUESTO_DETALLE_COMPROBANTE_RETENCION_COMPRA").ToString(), fuente8))
+                    table4.AddCell(New Phrase(detalleRetencionTable.Rows(0)("PORCENTAJE_DETALLE_COMPROBANTE_RETENCION_COMPRA").ToString(), fuente8))
+                    table4.AddCell(New Phrase(detalleRetencionTable.Rows(0)("VALOR_DETALLE_COMPROBANTE_RETENCION_COMPRA").ToString(), fuente8))
+
+                    table4.WriteSelectedRows(0, -1, 50, 520, writer.DirectContent)
+
+
+                    Dim asientoTable As DataTable = ds.Tables("ASIENTOS_LIBRO_DIARIO")
+                    Dim table5 As New PdfPTable(4)
+                    table5.TotalWidth = 500
+
+                    Dim columnWidthsTable5() As Single = {80, 270, 75, 75}
+                    table5.SetWidths(columnWidthsTable5)
+
+                    Dim TituloTabla5 As New PdfPCell(New Phrase("ASIENTO DE DIARIO", fuente10Bold)) With {
+                                    .HorizontalAlignment = Element.ALIGN_CENTER,
+                                    .VerticalAlignment = Element.ALIGN_MIDDLE,
+                                    .Border = PdfPCell.BOTTOM_BORDER,
+                                    .Colspan = 4
+                                }
+                    table5.AddCell(TituloTabla5)
+
+                    Dim emptyCell4Table5 As New PdfPCell(New Phrase(" ")) With {
+                                    .HorizontalAlignment = Element.ALIGN_LEFT,
+                                    .VerticalAlignment = Element.ALIGN_MIDDLE,
+                                    .Border = PdfPCell.NO_BORDER,
+                                    .Colspan = 4,
+                                    .PaddingTop = 10
+                                 }
+
+                    table5.AddCell(emptyCell4Table5)
+
+                    table5.AddCell(New Phrase("Codigo", fuente8Bold))
+                    table5.AddCell(New Phrase("Cuenta", fuente8Bold))
+                    table5.AddCell(New Phrase("Debe", fuente8Bold))
+                    table5.AddCell(New Phrase("Haber", fuente8Bold))
+
+                    Dim valorDebe As Decimal = 0
+                    Dim valorHaber As Decimal = 0
+                    For Each row As DataRow In asientoTable.Rows
+                        table5.AddCell(New Phrase(row("CODIGO_CUENTA_ASIENTO").ToString(), fuente8))
+                        table5.AddCell(New Phrase(row("NOMBRE_CUENTA_ASIENTO").ToString(), fuente8))
+                        table5.AddCell(New Phrase(row("VALOR_DEBE_ASIENTO").ToString(), fuente8))
+                        table5.AddCell(New Phrase(row("VALOR_HABER_ASIENTO").ToString(), fuente8))
+                        valorDebe += Convert.ToDecimal(row("VALOR_DEBE_ASIENTO"))
+                        valorHaber += Convert.ToDecimal(row("VALOR_HABER_ASIENTO"))
+                    Next
+
+                    table5.WriteSelectedRows(0, -1, 50, 450, writer.DirectContent)
+
+                    Dim table6 As New PdfPTable(2)
+                    table6.TotalWidth = 150
+
+                    Dim table5Height As Single = table5.TotalHeight
+                    table6.AddCell(New Phrase(valorDebe.ToString(), fuente8Bold))
+                    table6.AddCell(New Phrase(valorHaber.ToString(), fuente8Bold))
+
+                    table6.WriteSelectedRows(0, -1, 400, 450 - table5Height, writer.DirectContent)
+
+
+
+                    'add the actual date in the document footer
+                    Dim footerTable As PdfPTable = New PdfPTable(1)
+                    footerTable.TotalWidth = 500
+                    Dim footerCell As New PdfPCell(New Phrase("Fecha de Reporte: " & DateAndTime.DateString() & " " & DateAndTime.TimeString(), fuente8)) With {
+                                    .HorizontalAlignment = Element.ALIGN_RIGHT,
+                                    .VerticalAlignment = Element.ALIGN_MIDDLE,
+                                    .Border = PdfPCell.NO_BORDER
+                                }
+
+                    footerTable.AddCell(footerCell)
+                    footerTable.WriteSelectedRows(0, -1, 50, 50, writer.DirectContent)
+
+                    document.Close()
+                    writer.Close()
+
+                    pdfStream.Seek(0, SeekOrigin.Begin)
+                    PdfViewer1.Document = PdfiumViewer.PdfDocument.Load(pdfStream)
+                    PdfViewer1.ZoomMode = 1
+
+
+
+
+
+
+                    'Dim f = New FormReporteComprobanteCompra
+                    'f.TipoCox = TipoCox
+                    'f.lblIdComprobanteCompra.Text = lblIdComprobanteCompra.Text
+                    'f._porcentaje = Convert.ToString(lblPorcentaje.Text)
+                    'f.ShowDialog()
                 Else
                     MsgBox("LOS COMPROBANTES DE FONDO Y CAJA SE IMPRIMEN EN SUS RESPECTIVAS LIQUIDACIONES", MsgBoxStyle.Information, "MENSAJE DE INFORMACIÓN")
                 End If

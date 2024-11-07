@@ -150,6 +150,7 @@
             // 
             // txtFiltro
             // 
+            this.txtFiltro.BackColor = System.Drawing.Color.White;
             this.txtFiltro.Location = new System.Drawing.Point(66, 58);
             this.txtFiltro.Name = "txtFiltro";
             this.txtFiltro.Size = new System.Drawing.Size(421, 21);

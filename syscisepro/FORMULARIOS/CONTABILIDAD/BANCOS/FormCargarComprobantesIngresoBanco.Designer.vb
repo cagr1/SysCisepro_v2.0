@@ -149,12 +149,12 @@
             DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
             DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
             Me.dgvComprobantesEgresoBanco.DefaultCellStyle = DataGridViewCellStyle2
-            Me.dgvComprobantesEgresoBanco.Location = New System.Drawing.Point(2, 90)
+            Me.dgvComprobantesEgresoBanco.Location = New System.Drawing.Point(2, 232)
             Me.dgvComprobantesEgresoBanco.MultiSelect = False
             Me.dgvComprobantesEgresoBanco.Name = "dgvComprobantesEgresoBanco"
             Me.dgvComprobantesEgresoBanco.RowHeadersVisible = False
             Me.dgvComprobantesEgresoBanco.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvComprobantesEgresoBanco.Size = New System.Drawing.Size(816, 486)
+            Me.dgvComprobantesEgresoBanco.Size = New System.Drawing.Size(816, 344)
             Me.dgvComprobantesEgresoBanco.TabIndex = 112
             '
             'GroupBox1
@@ -191,7 +191,7 @@
             Me.dgvFacturaVenta.AllowUserToAddRows = False
             Me.dgvFacturaVenta.AllowUserToDeleteRows = False
             Me.dgvFacturaVenta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-            Me.dgvFacturaVenta.Location = New System.Drawing.Point(14, 109)
+            Me.dgvFacturaVenta.Location = New System.Drawing.Point(21, 246)
             Me.dgvFacturaVenta.Name = "dgvFacturaVenta"
             Me.dgvFacturaVenta.ReadOnly = True
             Me.dgvFacturaVenta.Size = New System.Drawing.Size(786, 53)

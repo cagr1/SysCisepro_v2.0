@@ -153,7 +153,7 @@
             Me.txtCuentaPadre.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtCuentaPadre.Location = New System.Drawing.Point(65, 8)
             Me.txtCuentaPadre.Name = "txtCuentaPadre"
-            Me.txtCuentaPadre.Size = New System.Drawing.Size(590, 21)
+            Me.txtCuentaPadre.Size = New System.Drawing.Size(578, 21)
             Me.txtCuentaPadre.TabIndex = 217
             '
             'dgvMayoresHijos
@@ -183,7 +183,7 @@
             DataGridViewCellStyle5.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.dgvMayoresHijos.RowsDefaultCellStyle = DataGridViewCellStyle5
             Me.dgvMayoresHijos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvMayoresHijos.Size = New System.Drawing.Size(948, 48)
+            Me.dgvMayoresHijos.Size = New System.Drawing.Size(932, 48)
             Me.dgvMayoresHijos.TabIndex = 228
             '
             'Panel7
@@ -193,7 +193,7 @@
             Me.Panel7.Controls.Add(Me.Label13)
             Me.Panel7.Location = New System.Drawing.Point(0, 135)
             Me.Panel7.Name = "Panel7"
-            Me.Panel7.Size = New System.Drawing.Size(948, 27)
+            Me.Panel7.Size = New System.Drawing.Size(932, 27)
             Me.Panel7.TabIndex = 290
             '
             'Label13
@@ -218,7 +218,7 @@
             Me.Panel6.Controls.Add(Me.Label19)
             Me.Panel6.Location = New System.Drawing.Point(0, 402)
             Me.Panel6.Name = "Panel6"
-            Me.Panel6.Size = New System.Drawing.Size(948, 32)
+            Me.Panel6.Size = New System.Drawing.Size(932, 32)
             Me.Panel6.TabIndex = 289
             '
             'txtSaldo
@@ -227,7 +227,7 @@
             Me.txtSaldo.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtSaldo.Enabled = False
             Me.txtSaldo.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtSaldo.Location = New System.Drawing.Point(810, 4)
+            Me.txtSaldo.Location = New System.Drawing.Point(776, 4)
             Me.txtSaldo.Name = "txtSaldo"
             Me.txtSaldo.Size = New System.Drawing.Size(131, 21)
             Me.txtSaldo.TabIndex = 287
@@ -237,7 +237,7 @@
             '
             Me.Label14.AutoSize = True
             Me.Label14.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label14.Location = New System.Drawing.Point(766, 8)
+            Me.Label14.Location = New System.Drawing.Point(732, 8)
             Me.Label14.Name = "Label14"
             Me.Label14.Size = New System.Drawing.Size(42, 13)
             Me.Label14.TabIndex = 288
@@ -249,7 +249,7 @@
             Me.txtAcreedorRegistros.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtAcreedorRegistros.Enabled = False
             Me.txtAcreedorRegistros.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtAcreedorRegistros.Location = New System.Drawing.Point(611, 4)
+            Me.txtAcreedorRegistros.Location = New System.Drawing.Point(577, 4)
             Me.txtAcreedorRegistros.Name = "txtAcreedorRegistros"
             Me.txtAcreedorRegistros.Size = New System.Drawing.Size(122, 21)
             Me.txtAcreedorRegistros.TabIndex = 278
@@ -259,7 +259,7 @@
             '
             Me.Label18.AutoSize = True
             Me.Label18.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label18.Location = New System.Drawing.Point(548, 8)
+            Me.Label18.Location = New System.Drawing.Point(514, 8)
             Me.Label18.Name = "Label18"
             Me.Label18.Size = New System.Drawing.Size(62, 13)
             Me.Label18.TabIndex = 280
@@ -271,7 +271,7 @@
             Me.txtDeudorRegistros.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtDeudorRegistros.Enabled = False
             Me.txtDeudorRegistros.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtDeudorRegistros.Location = New System.Drawing.Point(408, 4)
+            Me.txtDeudorRegistros.Location = New System.Drawing.Point(374, 4)
             Me.txtDeudorRegistros.Name = "txtDeudorRegistros"
             Me.txtDeudorRegistros.Size = New System.Drawing.Size(122, 21)
             Me.txtDeudorRegistros.TabIndex = 277
@@ -281,7 +281,7 @@
             '
             Me.Label19.AutoSize = True
             Me.Label19.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label19.Location = New System.Drawing.Point(359, 8)
+            Me.Label19.Location = New System.Drawing.Point(325, 8)
             Me.Label19.Name = "Label19"
             Me.Label19.Size = New System.Drawing.Size(49, 13)
             Me.Label19.TabIndex = 279
@@ -294,7 +294,7 @@
             Me.Panel5.Controls.Add(Me.Label10)
             Me.Panel5.Location = New System.Drawing.Point(0, 443)
             Me.Panel5.Name = "Panel5"
-            Me.Panel5.Size = New System.Drawing.Size(948, 27)
+            Me.Panel5.Size = New System.Drawing.Size(932, 27)
             Me.Panel5.TabIndex = 288
             '
             'Label10
@@ -319,7 +319,7 @@
             Me.Panel4.Controls.Add(Me.Label12)
             Me.Panel4.Location = New System.Drawing.Point(0, 638)
             Me.Panel4.Name = "Panel4"
-            Me.Panel4.Size = New System.Drawing.Size(948, 32)
+            Me.Panel4.Size = New System.Drawing.Size(932, 32)
             Me.Panel4.TabIndex = 287
             '
             'txtSaldoAsiento
@@ -328,7 +328,7 @@
             Me.txtSaldoAsiento.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtSaldoAsiento.Enabled = False
             Me.txtSaldoAsiento.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtSaldoAsiento.Location = New System.Drawing.Point(810, 4)
+            Me.txtSaldoAsiento.Location = New System.Drawing.Point(759, 4)
             Me.txtSaldoAsiento.Name = "txtSaldoAsiento"
             Me.txtSaldoAsiento.Size = New System.Drawing.Size(131, 21)
             Me.txtSaldoAsiento.TabIndex = 289
@@ -338,7 +338,7 @@
             '
             Me.Label15.AutoSize = True
             Me.Label15.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label15.Location = New System.Drawing.Point(767, 8)
+            Me.Label15.Location = New System.Drawing.Point(716, 8)
             Me.Label15.Name = "Label15"
             Me.Label15.Size = New System.Drawing.Size(42, 13)
             Me.Label15.TabIndex = 290
@@ -350,7 +350,7 @@
             Me.txtAcreedorAsiento.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtAcreedorAsiento.Enabled = False
             Me.txtAcreedorAsiento.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtAcreedorAsiento.Location = New System.Drawing.Point(611, 4)
+            Me.txtAcreedorAsiento.Location = New System.Drawing.Point(560, 4)
             Me.txtAcreedorAsiento.Name = "txtAcreedorAsiento"
             Me.txtAcreedorAsiento.Size = New System.Drawing.Size(122, 21)
             Me.txtAcreedorAsiento.TabIndex = 282
@@ -360,7 +360,7 @@
             '
             Me.Label11.AutoSize = True
             Me.Label11.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label11.Location = New System.Drawing.Point(550, 8)
+            Me.Label11.Location = New System.Drawing.Point(499, 8)
             Me.Label11.Name = "Label11"
             Me.Label11.Size = New System.Drawing.Size(62, 13)
             Me.Label11.TabIndex = 284
@@ -372,7 +372,7 @@
             Me.txtDeudorAsiento.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtDeudorAsiento.Enabled = False
             Me.txtDeudorAsiento.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtDeudorAsiento.Location = New System.Drawing.Point(408, 4)
+            Me.txtDeudorAsiento.Location = New System.Drawing.Point(357, 4)
             Me.txtDeudorAsiento.Name = "txtDeudorAsiento"
             Me.txtDeudorAsiento.Size = New System.Drawing.Size(122, 21)
             Me.txtDeudorAsiento.TabIndex = 281
@@ -382,7 +382,7 @@
             '
             Me.Label12.AutoSize = True
             Me.Label12.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label12.Location = New System.Drawing.Point(359, 8)
+            Me.Label12.Location = New System.Drawing.Point(308, 8)
             Me.Label12.Name = "Label12"
             Me.Label12.Size = New System.Drawing.Size(49, 13)
             Me.Label12.TabIndex = 283
@@ -416,7 +416,7 @@
             DataGridViewCellStyle8.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.dgvAsiento.RowsDefaultCellStyle = DataGridViewCellStyle8
             Me.dgvAsiento.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvAsiento.Size = New System.Drawing.Size(948, 168)
+            Me.dgvAsiento.Size = New System.Drawing.Size(932, 168)
             Me.dgvAsiento.TabIndex = 230
             '
             'dgvRegistros
@@ -447,7 +447,7 @@
             DataGridViewCellStyle11.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.dgvRegistros.RowsDefaultCellStyle = DataGridViewCellStyle11
             Me.dgvRegistros.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvRegistros.Size = New System.Drawing.Size(948, 242)
+            Me.dgvRegistros.Size = New System.Drawing.Size(932, 242)
             Me.dgvRegistros.TabIndex = 229
             '
             'Panel1
@@ -495,7 +495,7 @@
             Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
             Me.MenuStrip1.Name = "MenuStrip1"
             Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(7, 2, 0, 2)
-            Me.MenuStrip1.Size = New System.Drawing.Size(944, 32)
+            Me.MenuStrip1.Size = New System.Drawing.Size(936, 32)
             Me.MenuStrip1.TabIndex = 288
             Me.MenuStrip1.Text = "msIngresoBodega"
             '
@@ -536,7 +536,7 @@
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.BackColor = System.Drawing.Color.White
-            Me.ClientSize = New System.Drawing.Size(944, 672)
+            Me.ClientSize = New System.Drawing.Size(936, 672)
             Me.Controls.Add(Me.Panel5)
             Me.Controls.Add(Me.Panel4)
             Me.Controls.Add(Me.Panel6)

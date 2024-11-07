@@ -81,6 +81,8 @@
             Me.txtRetencionPath = New System.Windows.Forms.TextBox()
             Me.Label10 = New System.Windows.Forms.Label()
             Me.Label11 = New System.Windows.Forms.Label()
+            Me.TabPage3 = New System.Windows.Forms.TabPage()
+            Me.PdfViewer1 = New PdfiumViewer.PdfViewer()
             Me.gbNombreComercialProveedor.SuspendLayout()
             CType(Me.dgvComprobantesCompra, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.gbParametrosBusqueda.SuspendLayout()
@@ -91,6 +93,7 @@
             Me.TabPage1.SuspendLayout()
             Me.TabPage2.SuspendLayout()
             Me.GroupBox1.SuspendLayout()
+            Me.TabPage3.SuspendLayout()
             Me.SuspendLayout()
             '
             'gbNombreComercialProveedor
@@ -559,27 +562,27 @@
             '
             Me.GENERARCOMPROBANTEToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PDFLIQUIDACIONToolStripMenuItem, Me.PDFRETENCIONToolStripMenuItem})
             Me.GENERARCOMPROBANTEToolStripMenuItem.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.GENERARCOMPROBANTEToolStripMenuItem.Image = Global.syscisepro.My.Resources.Resources.description_24dp_FILL0_wght400_GRAD0_opsz24__2_
+            Me.GENERARCOMPROBANTEToolStripMenuItem.Image = Global.syscisepro.My.Resources.Resources.pdf
             Me.GENERARCOMPROBANTEToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.GENERARCOMPROBANTEToolStripMenuItem.Name = "GENERARCOMPROBANTEToolStripMenuItem"
-            Me.GENERARCOMPROBANTEToolStripMenuItem.Size = New System.Drawing.Size(127, 28)
-            Me.GENERARCOMPROBANTEToolStripMenuItem.Text = "GENERAR RIDE"
+            Me.GENERARCOMPROBANTEToolStripMenuItem.Size = New System.Drawing.Size(71, 28)
+            Me.GENERARCOMPROBANTEToolStripMenuItem.Text = "RIDE"
             '
             'PDFLIQUIDACIONToolStripMenuItem
             '
-            Me.PDFLIQUIDACIONToolStripMenuItem.Image = Global.syscisepro.My.Resources.Resources.description_24dp_FILL0_wght400_GRAD0_opsz24__2_
+            Me.PDFLIQUIDACIONToolStripMenuItem.Image = Global.syscisepro.My.Resources.Resources.pdf
             Me.PDFLIQUIDACIONToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.PDFLIQUIDACIONToolStripMenuItem.Name = "PDFLIQUIDACIONToolStripMenuItem"
-            Me.PDFLIQUIDACIONToolStripMenuItem.Size = New System.Drawing.Size(187, 30)
-            Me.PDFLIQUIDACIONToolStripMenuItem.Text = "PDF LIQUIDACION"
+            Me.PDFLIQUIDACIONToolStripMenuItem.Size = New System.Drawing.Size(159, 30)
+            Me.PDFLIQUIDACIONToolStripMenuItem.Text = "LIQUIDACION"
             '
             'PDFRETENCIONToolStripMenuItem
             '
-            Me.PDFRETENCIONToolStripMenuItem.Image = Global.syscisepro.My.Resources.Resources.description_24dp_FILL0_wght400_GRAD0_opsz24__2_
+            Me.PDFRETENCIONToolStripMenuItem.Image = Global.syscisepro.My.Resources.Resources.pdf
             Me.PDFRETENCIONToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.PDFRETENCIONToolStripMenuItem.Name = "PDFRETENCIONToolStripMenuItem"
-            Me.PDFRETENCIONToolStripMenuItem.Size = New System.Drawing.Size(187, 30)
-            Me.PDFRETENCIONToolStripMenuItem.Text = "PDF RETENCION"
+            Me.PDFRETENCIONToolStripMenuItem.Size = New System.Drawing.Size(159, 30)
+            Me.PDFRETENCIONToolStripMenuItem.Text = "RETENCION"
             '
             'ofdSeleccionarArchivo
             '
@@ -589,11 +592,12 @@
             '
             Me.TabControl1.Controls.Add(Me.TabPage1)
             Me.TabControl1.Controls.Add(Me.TabPage2)
+            Me.TabControl1.Controls.Add(Me.TabPage3)
             Me.TabControl1.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.TabControl1.Location = New System.Drawing.Point(0, 33)
+            Me.TabControl1.Location = New System.Drawing.Point(2, 33)
             Me.TabControl1.Name = "TabControl1"
             Me.TabControl1.SelectedIndex = 0
-            Me.TabControl1.Size = New System.Drawing.Size(1245, 575)
+            Me.TabControl1.Size = New System.Drawing.Size(1165, 575)
             Me.TabControl1.TabIndex = 82
             '
             'TabPage1
@@ -605,7 +609,7 @@
             Me.TabPage1.Location = New System.Drawing.Point(4, 22)
             Me.TabPage1.Name = "TabPage1"
             Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-            Me.TabPage1.Size = New System.Drawing.Size(1237, 549)
+            Me.TabPage1.Size = New System.Drawing.Size(1157, 549)
             Me.TabPage1.TabIndex = 0
             Me.TabPage1.Text = "CONSULTAS"
             Me.TabPage1.UseVisualStyleBackColor = True
@@ -616,7 +620,7 @@
             Me.TabPage2.Location = New System.Drawing.Point(4, 22)
             Me.TabPage2.Name = "TabPage2"
             Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-            Me.TabPage2.Size = New System.Drawing.Size(1237, 549)
+            Me.TabPage2.Size = New System.Drawing.Size(1157, 549)
             Me.TabPage2.TabIndex = 1
             Me.TabPage2.Text = "RUTAS DOCUMENTOS"
             Me.TabPage2.UseVisualStyleBackColor = True
@@ -692,6 +696,24 @@
             Me.Label11.TabIndex = 1
             Me.Label11.Text = "RUTA DE LIQUIDACION DE COMPRA :"
             '
+            'TabPage3
+            '
+            Me.TabPage3.Controls.Add(Me.PdfViewer1)
+            Me.TabPage3.Location = New System.Drawing.Point(4, 22)
+            Me.TabPage3.Name = "TabPage3"
+            Me.TabPage3.Padding = New System.Windows.Forms.Padding(3)
+            Me.TabPage3.Size = New System.Drawing.Size(1157, 549)
+            Me.TabPage3.TabIndex = 2
+            Me.TabPage3.Text = "Reporte"
+            Me.TabPage3.UseVisualStyleBackColor = True
+            '
+            'PdfViewer1
+            '
+            Me.PdfViewer1.Location = New System.Drawing.Point(6, 0)
+            Me.PdfViewer1.Name = "PdfViewer1"
+            Me.PdfViewer1.Size = New System.Drawing.Size(1149, 540)
+            Me.PdfViewer1.TabIndex = 0
+            '
             'FormBuscarComprobantesCompra
             '
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -728,6 +750,7 @@
             Me.TabPage2.ResumeLayout(False)
             Me.GroupBox1.ResumeLayout(False)
             Me.GroupBox1.PerformLayout()
+            Me.TabPage3.ResumeLayout(False)
             Me.ResumeLayout(False)
             Me.PerformLayout()
 
@@ -786,5 +809,7 @@
         Friend WithEvents PDFRETENCIONToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
         Friend WithEvents txtIva5Compras As TextBox
         Friend WithEvents Label12 As Label
+        Friend WithEvents TabPage3 As TabPage
+        Friend WithEvents PdfViewer1 As PdfiumViewer.PdfViewer
     End Class
 End Namespace

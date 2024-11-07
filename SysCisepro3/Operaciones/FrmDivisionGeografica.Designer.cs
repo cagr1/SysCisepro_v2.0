@@ -225,9 +225,9 @@
             // pbDivision
             // 
             this.pbDivision.Image = global::SysCisepro3.Properties.Resources.mapa_de_ecuador_con_sus_provincias_1;
-            this.pbDivision.Location = new System.Drawing.Point(513, 39);
+            this.pbDivision.Location = new System.Drawing.Point(473, 39);
             this.pbDivision.Name = "pbDivision";
-            this.pbDivision.Size = new System.Drawing.Size(392, 209);
+            this.pbDivision.Size = new System.Drawing.Size(457, 209);
             this.pbDivision.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbDivision.TabIndex = 203;
             this.pbDivision.TabStop = false;

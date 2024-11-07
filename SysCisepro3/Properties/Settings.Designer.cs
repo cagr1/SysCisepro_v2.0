@@ -37,18 +37,6 @@ namespace SysCisepro3.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("0, 83, 156")]
-        public global::System.Drawing.Color ColorCisepro {
-            get {
-                return ((global::System.Drawing.Color)(this["ColorCisepro"]));
-            }
-            set {
-                this["ColorCisepro"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("38, 50, 56")]
         public global::System.Drawing.Color ColorSeportpac {
             get {
@@ -136,6 +124,18 @@ namespace SysCisepro3.Properties {
         public string SysCiseproConnectionString {
             get {
                 return ((string)(this["SysCiseproConnectionString"]));
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("13, 71, 161")]
+        public global::System.Drawing.Color ColorCisepro {
+            get {
+                return ((global::System.Drawing.Color)(this["ColorCisepro"]));
+            }
+            set {
+                this["ColorCisepro"] = value;
             }
         }
     }

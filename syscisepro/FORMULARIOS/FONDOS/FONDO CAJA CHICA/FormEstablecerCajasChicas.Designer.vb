@@ -26,37 +26,21 @@
             Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormEstablecerCajasChicas))
-            Me.tcDatos = New System.Windows.Forms.TabControl()
-            Me.tpDatos = New System.Windows.Forms.TabPage()
-            Me.Label15 = New System.Windows.Forms.Label()
             Me.lblNombres = New System.Windows.Forms.TextBox()
             Me.cbmParroquia = New System.Windows.Forms.ComboBox()
-            Me.Label14 = New System.Windows.Forms.Label()
             Me.btnBuscarCustodio = New System.Windows.Forms.Button()
             Me.txtIdCustodio = New System.Windows.Forms.TextBox()
             Me.cbmCiudad = New System.Windows.Forms.ComboBox()
-            Me.Label11 = New System.Windows.Forms.Label()
             Me.cbmProvincia = New System.Windows.Forms.ComboBox()
             Me.txtCuentaContable = New System.Windows.Forms.TextBox()
             Me.cbmNivelCuenta = New System.Windows.Forms.ComboBox()
-            Me.Label9 = New System.Windows.Forms.Label()
-            Me.Label10 = New System.Windows.Forms.Label()
             Me.cbmTipoCuenta = New System.Windows.Forms.ComboBox()
             Me.cbmCentroCosto = New System.Windows.Forms.ComboBox()
-            Me.Label8 = New System.Windows.Forms.Label()
             Me.txtValorGasto = New System.Windows.Forms.TextBox()
-            Me.Label3 = New System.Windows.Forms.Label()
             Me.txtMonto = New System.Windows.Forms.TextBox()
             Me.txtDetalle = New System.Windows.Forms.TextBox()
-            Me.Label7 = New System.Windows.Forms.Label()
             Me.txtIdCajaChica = New System.Windows.Forms.TextBox()
-            Me.Label6 = New System.Windows.Forms.Label()
-            Me.Label1 = New System.Windows.Forms.Label()
-            Me.Label2 = New System.Windows.Forms.Label()
-            Me.Label5 = New System.Windows.Forms.Label()
-            Me.Label4 = New System.Windows.Forms.Label()
             Me.dgvCajas = New System.Windows.Forms.DataGridView()
-            Me.tpReporte = New System.Windows.Forms.TabPage()
             Me.crvCajasChicasCustodios = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
             Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
             Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
@@ -65,71 +49,36 @@
             Me.btnModificar = New System.Windows.Forms.ToolStripMenuItem()
             Me.btnCancelar = New System.Windows.Forms.ToolStripMenuItem()
             Me.btnReporte = New System.Windows.Forms.ToolStripMenuItem()
-            Me.tcDatos.SuspendLayout()
-            Me.tpDatos.SuspendLayout()
+            Me.tcDatos = New ComponentFactory.Krypton.Navigator.KryptonNavigator()
+            Me.KryptonPage1 = New ComponentFactory.Krypton.Navigator.KryptonPage()
+            Me.KryptonPage2 = New ComponentFactory.Krypton.Navigator.KryptonPage()
+            Me.KryptonGroupBox1 = New ComponentFactory.Krypton.Toolkit.KryptonGroupBox()
+            Me.KryptonLabel1 = New ComponentFactory.Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel2 = New ComponentFactory.Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel3 = New ComponentFactory.Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel4 = New ComponentFactory.Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel5 = New ComponentFactory.Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel6 = New ComponentFactory.Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel7 = New ComponentFactory.Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel8 = New ComponentFactory.Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel9 = New ComponentFactory.Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel10 = New ComponentFactory.Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel11 = New ComponentFactory.Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel12 = New ComponentFactory.Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel13 = New ComponentFactory.Krypton.Toolkit.KryptonLabel()
             CType(Me.dgvCajas, System.ComponentModel.ISupportInitialize).BeginInit()
-            Me.tpReporte.SuspendLayout()
             Me.MenuStrip1.SuspendLayout()
+            CType(Me.tcDatos, System.ComponentModel.ISupportInitialize).BeginInit()
+            Me.tcDatos.SuspendLayout()
+            CType(Me.KryptonPage1, System.ComponentModel.ISupportInitialize).BeginInit()
+            Me.KryptonPage1.SuspendLayout()
+            CType(Me.KryptonPage2, System.ComponentModel.ISupportInitialize).BeginInit()
+            Me.KryptonPage2.SuspendLayout()
+            CType(Me.KryptonGroupBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType(Me.KryptonGroupBox1.Panel, System.ComponentModel.ISupportInitialize).BeginInit()
+            Me.KryptonGroupBox1.Panel.SuspendLayout()
+            Me.KryptonGroupBox1.SuspendLayout()
             Me.SuspendLayout()
-            '
-            'tcDatos
-            '
-            Me.tcDatos.Controls.Add(Me.tpDatos)
-            Me.tcDatos.Controls.Add(Me.tpReporte)
-            Me.tcDatos.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.tcDatos.Location = New System.Drawing.Point(3, 34)
-            Me.tcDatos.Name = "tcDatos"
-            Me.tcDatos.SelectedIndex = 0
-            Me.tcDatos.Size = New System.Drawing.Size(886, 481)
-            Me.tcDatos.TabIndex = 0
-            '
-            'tpDatos
-            '
-            Me.tpDatos.BackColor = System.Drawing.Color.White
-            Me.tpDatos.Controls.Add(Me.Label15)
-            Me.tpDatos.Controls.Add(Me.lblNombres)
-            Me.tpDatos.Controls.Add(Me.cbmParroquia)
-            Me.tpDatos.Controls.Add(Me.Label14)
-            Me.tpDatos.Controls.Add(Me.btnBuscarCustodio)
-            Me.tpDatos.Controls.Add(Me.txtIdCustodio)
-            Me.tpDatos.Controls.Add(Me.cbmCiudad)
-            Me.tpDatos.Controls.Add(Me.Label11)
-            Me.tpDatos.Controls.Add(Me.cbmProvincia)
-            Me.tpDatos.Controls.Add(Me.txtCuentaContable)
-            Me.tpDatos.Controls.Add(Me.cbmNivelCuenta)
-            Me.tpDatos.Controls.Add(Me.Label9)
-            Me.tpDatos.Controls.Add(Me.Label10)
-            Me.tpDatos.Controls.Add(Me.cbmTipoCuenta)
-            Me.tpDatos.Controls.Add(Me.cbmCentroCosto)
-            Me.tpDatos.Controls.Add(Me.Label8)
-            Me.tpDatos.Controls.Add(Me.txtValorGasto)
-            Me.tpDatos.Controls.Add(Me.Label3)
-            Me.tpDatos.Controls.Add(Me.txtMonto)
-            Me.tpDatos.Controls.Add(Me.txtDetalle)
-            Me.tpDatos.Controls.Add(Me.Label7)
-            Me.tpDatos.Controls.Add(Me.txtIdCajaChica)
-            Me.tpDatos.Controls.Add(Me.Label6)
-            Me.tpDatos.Controls.Add(Me.Label1)
-            Me.tpDatos.Controls.Add(Me.Label2)
-            Me.tpDatos.Controls.Add(Me.Label5)
-            Me.tpDatos.Controls.Add(Me.Label4)
-            Me.tpDatos.Controls.Add(Me.dgvCajas)
-            Me.tpDatos.Location = New System.Drawing.Point(4, 22)
-            Me.tpDatos.Name = "tpDatos"
-            Me.tpDatos.Padding = New System.Windows.Forms.Padding(3)
-            Me.tpDatos.Size = New System.Drawing.Size(878, 455)
-            Me.tpDatos.TabIndex = 0
-            Me.tpDatos.Text = "DATOS"
-            '
-            'Label15
-            '
-            Me.Label15.AutoSize = True
-            Me.Label15.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label15.Location = New System.Drawing.Point(9, 35)
-            Me.Label15.Name = "Label15"
-            Me.Label15.Size = New System.Drawing.Size(57, 13)
-            Me.Label15.TabIndex = 56
-            Me.Label15.Text = "CUSTODIO:"
             '
             'lblNombres
             '
@@ -137,9 +86,9 @@
             Me.lblNombres.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.lblNombres.Enabled = False
             Me.lblNombres.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.lblNombres.Location = New System.Drawing.Point(74, 32)
+            Me.lblNombres.Location = New System.Drawing.Point(81, 48)
             Me.lblNombres.Name = "lblNombres"
-            Me.lblNombres.Size = New System.Drawing.Size(368, 21)
+            Me.lblNombres.Size = New System.Drawing.Size(178, 21)
             Me.lblNombres.TabIndex = 55
             '
             'cbmParroquia
@@ -150,33 +99,24 @@
             Me.cbmParroquia.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.cbmParroquia.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cbmParroquia.FormattingEnabled = True
-            Me.cbmParroquia.Location = New System.Drawing.Point(552, 87)
+            Me.cbmParroquia.Location = New System.Drawing.Point(412, 112)
             Me.cbmParroquia.Name = "cbmParroquia"
-            Me.cbmParroquia.Size = New System.Drawing.Size(176, 21)
+            Me.cbmParroquia.Size = New System.Drawing.Size(125, 21)
             Me.cbmParroquia.TabIndex = 54
-            '
-            'Label14
-            '
-            Me.Label14.AutoSize = True
-            Me.Label14.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label14.Location = New System.Drawing.Point(461, 95)
-            Me.Label14.Name = "Label14"
-            Me.Label14.Size = New System.Drawing.Size(60, 13)
-            Me.Label14.TabIndex = 53
-            Me.Label14.Text = "PARROQUIA"
             '
             'btnBuscarCustodio
             '
+            Me.btnBuscarCustodio.BackColor = System.Drawing.Color.Transparent
             Me.btnBuscarCustodio.Cursor = System.Windows.Forms.Cursors.Hand
             Me.btnBuscarCustodio.Enabled = False
             Me.btnBuscarCustodio.FlatAppearance.BorderSize = 0
             Me.btnBuscarCustodio.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.btnBuscarCustodio.Image = Global.syscisepro.My.Resources.Resources.search_24dp_FILL0_wght400_GRAD0_opsz24__2_
-            Me.btnBuscarCustodio.Location = New System.Drawing.Point(413, 2)
+            Me.btnBuscarCustodio.Location = New System.Drawing.Point(275, 3)
             Me.btnBuscarCustodio.Name = "btnBuscarCustodio"
             Me.btnBuscarCustodio.Size = New System.Drawing.Size(28, 28)
             Me.btnBuscarCustodio.TabIndex = 44
-            Me.btnBuscarCustodio.UseVisualStyleBackColor = True
+            Me.btnBuscarCustodio.UseVisualStyleBackColor = False
             '
             'txtIdCustodio
             '
@@ -184,7 +124,7 @@
             Me.txtIdCustodio.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtIdCustodio.Enabled = False
             Me.txtIdCustodio.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtIdCustodio.Location = New System.Drawing.Point(339, 5)
+            Me.txtIdCustodio.Location = New System.Drawing.Point(191, 7)
             Me.txtIdCustodio.Name = "txtIdCustodio"
             Me.txtIdCustodio.Size = New System.Drawing.Size(68, 21)
             Me.txtIdCustodio.TabIndex = 50
@@ -197,20 +137,10 @@
             Me.cbmCiudad.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.cbmCiudad.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cbmCiudad.FormattingEnabled = True
-            Me.cbmCiudad.Location = New System.Drawing.Point(552, 59)
+            Me.cbmCiudad.Location = New System.Drawing.Point(412, 80)
             Me.cbmCiudad.Name = "cbmCiudad"
-            Me.cbmCiudad.Size = New System.Drawing.Size(176, 21)
+            Me.cbmCiudad.Size = New System.Drawing.Size(125, 21)
             Me.cbmCiudad.TabIndex = 49
-            '
-            'Label11
-            '
-            Me.Label11.AutoSize = True
-            Me.Label11.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label11.Location = New System.Drawing.Point(264, 8)
-            Me.Label11.Name = "Label11"
-            Me.Label11.Size = New System.Drawing.Size(69, 13)
-            Me.Label11.TabIndex = 42
-            Me.Label11.Text = "ID CUSTODIO:"
             '
             'cbmProvincia
             '
@@ -220,9 +150,9 @@
             Me.cbmProvincia.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.cbmProvincia.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cbmProvincia.FormattingEnabled = True
-            Me.cbmProvincia.Location = New System.Drawing.Point(552, 32)
+            Me.cbmProvincia.Location = New System.Drawing.Point(412, 47)
             Me.cbmProvincia.Name = "cbmProvincia"
-            Me.cbmProvincia.Size = New System.Drawing.Size(176, 21)
+            Me.cbmProvincia.Size = New System.Drawing.Size(125, 21)
             Me.cbmProvincia.TabIndex = 48
             '
             'txtCuentaContable
@@ -230,10 +160,10 @@
             Me.txtCuentaContable.BackColor = System.Drawing.Color.White
             Me.txtCuentaContable.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtCuentaContable.Enabled = False
-            Me.txtCuentaContable.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtCuentaContable.Location = New System.Drawing.Point(750, 92)
+            Me.txtCuentaContable.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtCuentaContable.Location = New System.Drawing.Point(612, 84)
             Me.txtCuentaContable.Name = "txtCuentaContable"
-            Me.txtCuentaContable.Size = New System.Drawing.Size(122, 23)
+            Me.txtCuentaContable.Size = New System.Drawing.Size(81, 21)
             Me.txtCuentaContable.TabIndex = 46
             Me.txtCuentaContable.Text = "101010101"
             Me.txtCuentaContable.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
@@ -247,30 +177,10 @@
             Me.cbmNivelCuenta.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cbmNivelCuenta.FormattingEnabled = True
             Me.cbmNivelCuenta.Items.AddRange(New Object() {"1", "2", "3", "4", "5", "6", "7"})
-            Me.cbmNivelCuenta.Location = New System.Drawing.Point(803, 41)
+            Me.cbmNivelCuenta.Location = New System.Drawing.Point(612, 47)
             Me.cbmNivelCuenta.Name = "cbmNivelCuenta"
-            Me.cbmNivelCuenta.Size = New System.Drawing.Size(69, 21)
+            Me.cbmNivelCuenta.Size = New System.Drawing.Size(81, 21)
             Me.cbmNivelCuenta.TabIndex = 45
-            '
-            'Label9
-            '
-            Me.Label9.AutoSize = True
-            Me.Label9.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label9.Location = New System.Drawing.Point(461, 40)
-            Me.Label9.Name = "Label9"
-            Me.Label9.Size = New System.Drawing.Size(60, 13)
-            Me.Label9.TabIndex = 37
-            Me.Label9.Text = "PROVINCIA:"
-            '
-            'Label10
-            '
-            Me.Label10.AutoSize = True
-            Me.Label10.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label10.Location = New System.Drawing.Point(461, 67)
-            Me.Label10.Name = "Label10"
-            Me.Label10.Size = New System.Drawing.Size(46, 13)
-            Me.Label10.TabIndex = 40
-            Me.Label10.Text = "CIUDAD:"
             '
             'cbmTipoCuenta
             '
@@ -281,9 +191,9 @@
             Me.cbmTipoCuenta.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cbmTipoCuenta.FormattingEnabled = True
             Me.cbmTipoCuenta.Items.AddRange(New Object() {"1", "2", "3", "4", "5", "6"})
-            Me.cbmTipoCuenta.Location = New System.Drawing.Point(803, 10)
+            Me.cbmTipoCuenta.Location = New System.Drawing.Point(612, 8)
             Me.cbmTipoCuenta.Name = "cbmTipoCuenta"
-            Me.cbmTipoCuenta.Size = New System.Drawing.Size(69, 21)
+            Me.cbmTipoCuenta.Size = New System.Drawing.Size(81, 21)
             Me.cbmTipoCuenta.TabIndex = 43
             '
             'cbmCentroCosto
@@ -294,20 +204,10 @@
             Me.cbmCentroCosto.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.cbmCentroCosto.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cbmCentroCosto.FormattingEnabled = True
-            Me.cbmCentroCosto.Location = New System.Drawing.Point(552, 4)
+            Me.cbmCentroCosto.Location = New System.Drawing.Point(412, 7)
             Me.cbmCentroCosto.Name = "cbmCentroCosto"
-            Me.cbmCentroCosto.Size = New System.Drawing.Size(176, 21)
+            Me.cbmCentroCosto.Size = New System.Drawing.Size(125, 21)
             Me.cbmCentroCosto.TabIndex = 47
-            '
-            'Label8
-            '
-            Me.Label8.AutoSize = True
-            Me.Label8.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label8.Location = New System.Drawing.Point(461, 4)
-            Me.Label8.Name = "Label8"
-            Me.Label8.Size = New System.Drawing.Size(45, 26)
-            Me.Label8.TabIndex = 35
-            Me.Label8.Text = "CENTRO " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "COSTO:"
             '
             'txtValorGasto
             '
@@ -315,20 +215,10 @@
             Me.txtValorGasto.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtValorGasto.Enabled = False
             Me.txtValorGasto.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtValorGasto.Location = New System.Drawing.Point(365, 86)
+            Me.txtValorGasto.Location = New System.Drawing.Point(204, 112)
             Me.txtValorGasto.Name = "txtValorGasto"
-            Me.txtValorGasto.Size = New System.Drawing.Size(77, 21)
+            Me.txtValorGasto.Size = New System.Drawing.Size(55, 21)
             Me.txtValorGasto.TabIndex = 38
-            '
-            'Label3
-            '
-            Me.Label3.AutoSize = True
-            Me.Label3.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label3.Location = New System.Drawing.Point(746, 76)
-            Me.Label3.Name = "Label3"
-            Me.Label3.Size = New System.Drawing.Size(93, 13)
-            Me.Label3.TabIndex = 28
-            Me.Label3.Text = "CUENTA CONTABLE:"
             '
             'txtMonto
             '
@@ -336,9 +226,9 @@
             Me.txtMonto.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtMonto.Enabled = False
             Me.txtMonto.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtMonto.Location = New System.Drawing.Point(74, 86)
+            Me.txtMonto.Location = New System.Drawing.Point(81, 111)
             Me.txtMonto.Name = "txtMonto"
-            Me.txtMonto.Size = New System.Drawing.Size(77, 21)
+            Me.txtMonto.Size = New System.Drawing.Size(55, 21)
             Me.txtMonto.TabIndex = 36
             '
             'txtDetalle
@@ -347,20 +237,10 @@
             Me.txtDetalle.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtDetalle.Enabled = False
             Me.txtDetalle.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtDetalle.Location = New System.Drawing.Point(74, 60)
+            Me.txtDetalle.Location = New System.Drawing.Point(81, 80)
             Me.txtDetalle.Name = "txtDetalle"
-            Me.txtDetalle.Size = New System.Drawing.Size(368, 21)
+            Me.txtDetalle.Size = New System.Drawing.Size(178, 21)
             Me.txtDetalle.TabIndex = 33
-            '
-            'Label7
-            '
-            Me.Label7.AutoSize = True
-            Me.Label7.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label7.Location = New System.Drawing.Point(747, 44)
-            Me.Label7.Name = "Label7"
-            Me.Label7.Size = New System.Drawing.Size(45, 26)
-            Me.Label7.TabIndex = 34
-            Me.Label7.Text = "NIVEL " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "CUENTA:"
             '
             'txtIdCajaChica
             '
@@ -368,60 +248,10 @@
             Me.txtIdCajaChica.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtIdCajaChica.Enabled = False
             Me.txtIdCajaChica.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtIdCajaChica.Location = New System.Drawing.Point(74, 5)
+            Me.txtIdCajaChica.Location = New System.Drawing.Point(33, 8)
             Me.txtIdCajaChica.Name = "txtIdCajaChica"
             Me.txtIdCajaChica.Size = New System.Drawing.Size(55, 21)
             Me.txtIdCajaChica.TabIndex = 32
-            '
-            'Label6
-            '
-            Me.Label6.AutoSize = True
-            Me.Label6.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label6.Location = New System.Drawing.Point(746, 10)
-            Me.Label6.Name = "Label6"
-            Me.Label6.Size = New System.Drawing.Size(45, 26)
-            Me.Label6.TabIndex = 31
-            Me.Label6.Text = "TIPO " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "CUENTA:"
-            '
-            'Label1
-            '
-            Me.Label1.AutoSize = True
-            Me.Label1.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label1.Location = New System.Drawing.Point(9, 10)
-            Me.Label1.Name = "Label1"
-            Me.Label1.Size = New System.Drawing.Size(44, 13)
-            Me.Label1.TabIndex = 26
-            Me.Label1.Text = "ID CAJA:"
-            '
-            'Label2
-            '
-            Me.Label2.AutoSize = True
-            Me.Label2.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label2.Location = New System.Drawing.Point(9, 63)
-            Me.Label2.Name = "Label2"
-            Me.Label2.Size = New System.Drawing.Size(47, 13)
-            Me.Label2.TabIndex = 27
-            Me.Label2.Text = "DETALLE:"
-            '
-            'Label5
-            '
-            Me.Label5.AutoSize = True
-            Me.Label5.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label5.Location = New System.Drawing.Point(9, 87)
-            Me.Label5.Name = "Label5"
-            Me.Label5.Size = New System.Drawing.Size(45, 13)
-            Me.Label5.TabIndex = 30
-            Me.Label5.Text = "MONTO:"
-            '
-            'Label4
-            '
-            Me.Label4.AutoSize = True
-            Me.Label4.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label4.Location = New System.Drawing.Point(298, 84)
-            Me.Label4.Name = "Label4"
-            Me.Label4.Size = New System.Drawing.Size(61, 26)
-            Me.Label4.TabIndex = 29
-            Me.Label4.Text = "VALOR " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "POR GASTO:"
             '
             'dgvCajas
             '
@@ -441,25 +271,14 @@
             DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
             DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
             Me.dgvCajas.DefaultCellStyle = DataGridViewCellStyle2
-            Me.dgvCajas.Location = New System.Drawing.Point(3, 121)
+            Me.dgvCajas.Location = New System.Drawing.Point(2, 154)
             Me.dgvCajas.MultiSelect = False
             Me.dgvCajas.Name = "dgvCajas"
             Me.dgvCajas.ReadOnly = True
             Me.dgvCajas.RowHeadersVisible = False
             Me.dgvCajas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvCajas.Size = New System.Drawing.Size(872, 335)
+            Me.dgvCajas.Size = New System.Drawing.Size(761, 264)
             Me.dgvCajas.TabIndex = 14
-            '
-            'tpReporte
-            '
-            Me.tpReporte.BackColor = System.Drawing.Color.White
-            Me.tpReporte.Controls.Add(Me.crvCajasChicasCustodios)
-            Me.tpReporte.Location = New System.Drawing.Point(4, 22)
-            Me.tpReporte.Name = "tpReporte"
-            Me.tpReporte.Padding = New System.Windows.Forms.Padding(3)
-            Me.tpReporte.Size = New System.Drawing.Size(878, 458)
-            Me.tpReporte.TabIndex = 1
-            Me.tpReporte.Text = "REPORTE"
             '
             'crvCajasChicasCustodios
             '
@@ -467,9 +286,10 @@
             Me.crvCajasChicasCustodios.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
             Me.crvCajasChicasCustodios.Cursor = System.Windows.Forms.Cursors.Default
             Me.crvCajasChicasCustodios.Dock = System.Windows.Forms.DockStyle.Fill
-            Me.crvCajasChicasCustodios.Location = New System.Drawing.Point(3, 3)
+            Me.crvCajasChicasCustodios.Location = New System.Drawing.Point(0, 0)
             Me.crvCajasChicasCustodios.Name = "crvCajasChicasCustodios"
-            Me.crvCajasChicasCustodios.Size = New System.Drawing.Size(872, 452)
+            Me.crvCajasChicasCustodios.ShowLogo = False
+            Me.crvCajasChicasCustodios.Size = New System.Drawing.Size(879, 450)
             Me.crvCajasChicasCustodios.TabIndex = 0
             Me.crvCajasChicasCustodios.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None
             '
@@ -481,7 +301,7 @@
             Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
             Me.MenuStrip1.Name = "MenuStrip1"
             Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(7, 2, 0, 2)
-            Me.MenuStrip1.Size = New System.Drawing.Size(893, 32)
+            Me.MenuStrip1.Size = New System.Drawing.Size(765, 32)
             Me.MenuStrip1.TabIndex = 198
             Me.MenuStrip1.Text = "msIngresoBodega"
             '
@@ -542,14 +362,218 @@
             Me.btnReporte.Size = New System.Drawing.Size(92, 28)
             Me.btnReporte.Text = "REPORTE"
             '
+            'tcDatos
+            '
+            Me.tcDatos.Button.ButtonDisplayLogic = ComponentFactory.Krypton.Navigator.ButtonDisplayLogic.None
+            Me.tcDatos.Button.CloseButtonAction = ComponentFactory.Krypton.Navigator.CloseButtonAction.RemovePageAndDispose
+            Me.tcDatos.Button.CloseButtonDisplay = ComponentFactory.Krypton.Navigator.ButtonDisplay.Hide
+            Me.tcDatos.Button.ContextButtonAction = ComponentFactory.Krypton.Navigator.ContextButtonAction.SelectPage
+            Me.tcDatos.Button.ContextButtonDisplay = ComponentFactory.Krypton.Navigator.ButtonDisplay.Logic
+            Me.tcDatos.Button.ContextMenuMapImage = ComponentFactory.Krypton.Navigator.MapKryptonPageImage.Small
+            Me.tcDatos.Button.ContextMenuMapText = ComponentFactory.Krypton.Navigator.MapKryptonPageText.TextTitle
+            Me.tcDatos.Button.NextButtonAction = ComponentFactory.Krypton.Navigator.DirectionButtonAction.ModeAppropriateAction
+            Me.tcDatos.Button.NextButtonDisplay = ComponentFactory.Krypton.Navigator.ButtonDisplay.Logic
+            Me.tcDatos.Button.PreviousButtonAction = ComponentFactory.Krypton.Navigator.DirectionButtonAction.ModeAppropriateAction
+            Me.tcDatos.Button.PreviousButtonDisplay = ComponentFactory.Krypton.Navigator.ButtonDisplay.Logic
+            Me.tcDatos.Dock = System.Windows.Forms.DockStyle.Fill
+            Me.tcDatos.Group.GroupBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.ControlClient
+            Me.tcDatos.Group.GroupBorderStyle = ComponentFactory.Krypton.Toolkit.PaletteBorderStyle.ControlClient
+            Me.tcDatos.Header.HeaderStyleBar = ComponentFactory.Krypton.Toolkit.HeaderStyle.Secondary
+            Me.tcDatos.Header.HeaderStylePrimary = ComponentFactory.Krypton.Toolkit.HeaderStyle.Primary
+            Me.tcDatos.Header.HeaderStyleSecondary = ComponentFactory.Krypton.Toolkit.HeaderStyle.Secondary
+            Me.tcDatos.Location = New System.Drawing.Point(0, 32)
+            Me.tcDatos.Name = "tcDatos"
+            Me.tcDatos.NavigatorMode = ComponentFactory.Krypton.Navigator.NavigatorMode.BarTabGroup
+            Me.tcDatos.PageBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.ControlClient
+            Me.tcDatos.Pages.AddRange(New ComponentFactory.Krypton.Navigator.KryptonPage() {Me.KryptonPage1, Me.KryptonPage2})
+            Me.tcDatos.Panel.PanelBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.PanelClient
+            Me.tcDatos.SelectedIndex = 0
+            Me.tcDatos.Size = New System.Drawing.Size(765, 447)
+            Me.tcDatos.TabIndex = 199
+            Me.tcDatos.Text = "KryptonNavigator1"
+            '
+            'KryptonPage1
+            '
+            Me.KryptonPage1.AutoHiddenSlideSize = New System.Drawing.Size(200, 200)
+            Me.KryptonPage1.Controls.Add(Me.KryptonGroupBox1)
+            Me.KryptonPage1.Controls.Add(Me.dgvCajas)
+            Me.KryptonPage1.Flags = 65534
+            Me.KryptonPage1.LastVisibleSet = True
+            Me.KryptonPage1.MinimumSize = New System.Drawing.Size(50, 50)
+            Me.KryptonPage1.Name = "KryptonPage1"
+            Me.KryptonPage1.Size = New System.Drawing.Size(763, 420)
+            Me.KryptonPage1.Text = "Datos"
+            Me.KryptonPage1.ToolTipStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.ToolTip
+            Me.KryptonPage1.ToolTipTitle = "Page ToolTip"
+            Me.KryptonPage1.UniqueName = "17EEDA42A0174407678C24A1A2486B82"
+            '
+            'KryptonPage2
+            '
+            Me.KryptonPage2.AutoHiddenSlideSize = New System.Drawing.Size(200, 200)
+            Me.KryptonPage2.Controls.Add(Me.crvCajasChicasCustodios)
+            Me.KryptonPage2.Flags = 65534
+            Me.KryptonPage2.LastVisibleSet = True
+            Me.KryptonPage2.MinimumSize = New System.Drawing.Size(50, 50)
+            Me.KryptonPage2.Name = "KryptonPage2"
+            Me.KryptonPage2.Size = New System.Drawing.Size(879, 450)
+            Me.KryptonPage2.Text = "Reporte"
+            Me.KryptonPage2.ToolTipStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.ToolTip
+            Me.KryptonPage2.ToolTipTitle = "Page ToolTip"
+            Me.KryptonPage2.UniqueName = "28364F020BAD4D2B7FB04B9630471402"
+            '
+            'KryptonGroupBox1
+            '
+            Me.KryptonGroupBox1.CaptionStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.GroupBoxCaption
+            Me.KryptonGroupBox1.GroupBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.ControlGroupBox
+            Me.KryptonGroupBox1.GroupBorderStyle = ComponentFactory.Krypton.Toolkit.PaletteBorderStyle.ControlGroupBox
+            Me.KryptonGroupBox1.Location = New System.Drawing.Point(0, 3)
+            Me.KryptonGroupBox1.Name = "KryptonGroupBox1"
+            '
+            'KryptonGroupBox1.Panel
+            '
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel13)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel12)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel11)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel10)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel9)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel8)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.txtCuentaContable)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel7)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.cbmNivelCuenta)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.cbmParroquia)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel6)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel5)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.cbmCiudad)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel4)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel3)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.cbmProvincia)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.lblNombres)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel2)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel1)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.txtIdCajaChica)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.txtIdCustodio)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.btnBuscarCustodio)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.cbmCentroCosto)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.txtValorGasto)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.cbmTipoCuenta)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.txtDetalle)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.txtMonto)
+            Me.KryptonGroupBox1.Size = New System.Drawing.Size(763, 150)
+            Me.KryptonGroupBox1.TabIndex = 0
+            Me.KryptonGroupBox1.Values.Heading = ""
+            '
+            'KryptonLabel1
+            '
+            Me.KryptonLabel1.Location = New System.Drawing.Point(3, 8)
+            Me.KryptonLabel1.Name = "KryptonLabel1"
+            Me.KryptonLabel1.Size = New System.Drawing.Size(21, 20)
+            Me.KryptonLabel1.TabIndex = 0
+            Me.KryptonLabel1.Values.Text = "Id"
+            '
+            'KryptonLabel2
+            '
+            Me.KryptonLabel2.Location = New System.Drawing.Point(112, 8)
+            Me.KryptonLabel2.Name = "KryptonLabel2"
+            Me.KryptonLabel2.Size = New System.Drawing.Size(73, 20)
+            Me.KryptonLabel2.TabIndex = 33
+            Me.KryptonLabel2.Values.Text = "Id Custodio"
+            '
+            'KryptonLabel3
+            '
+            Me.KryptonLabel3.Location = New System.Drawing.Point(324, 8)
+            Me.KryptonLabel3.Name = "KryptonLabel3"
+            Me.KryptonLabel3.Size = New System.Drawing.Size(82, 20)
+            Me.KryptonLabel3.TabIndex = 51
+            Me.KryptonLabel3.Values.Text = "Centro Costo"
+            '
+            'KryptonLabel4
+            '
+            Me.KryptonLabel4.Location = New System.Drawing.Point(554, 7)
+            Me.KryptonLabel4.Name = "KryptonLabel4"
+            Me.KryptonLabel4.Size = New System.Drawing.Size(34, 20)
+            Me.KryptonLabel4.TabIndex = 52
+            Me.KryptonLabel4.Values.Text = "Tipo"
+            '
+            'KryptonLabel5
+            '
+            Me.KryptonLabel5.Location = New System.Drawing.Point(3, 48)
+            Me.KryptonLabel5.Name = "KryptonLabel5"
+            Me.KryptonLabel5.Size = New System.Drawing.Size(59, 20)
+            Me.KryptonLabel5.TabIndex = 56
+            Me.KryptonLabel5.Values.Text = "Custodio"
+            '
+            'KryptonLabel6
+            '
+            Me.KryptonLabel6.Location = New System.Drawing.Point(3, 84)
+            Me.KryptonLabel6.Name = "KryptonLabel6"
+            Me.KryptonLabel6.Size = New System.Drawing.Size(49, 20)
+            Me.KryptonLabel6.TabIndex = 57
+            Me.KryptonLabel6.Values.Text = "Detalle"
+            '
+            'KryptonLabel7
+            '
+            Me.KryptonLabel7.Location = New System.Drawing.Point(3, 110)
+            Me.KryptonLabel7.Name = "KryptonLabel7"
+            Me.KryptonLabel7.Size = New System.Drawing.Size(47, 20)
+            Me.KryptonLabel7.TabIndex = 58
+            Me.KryptonLabel7.Values.Text = "Monto"
+            '
+            'KryptonLabel8
+            '
+            Me.KryptonLabel8.Location = New System.Drawing.Point(159, 110)
+            Me.KryptonLabel8.Name = "KryptonLabel8"
+            Me.KryptonLabel8.Size = New System.Drawing.Size(39, 20)
+            Me.KryptonLabel8.TabIndex = 59
+            Me.KryptonLabel8.Values.Text = "Valor"
+            '
+            'KryptonLabel9
+            '
+            Me.KryptonLabel9.Location = New System.Drawing.Point(324, 47)
+            Me.KryptonLabel9.Name = "KryptonLabel9"
+            Me.KryptonLabel9.Size = New System.Drawing.Size(60, 20)
+            Me.KryptonLabel9.TabIndex = 60
+            Me.KryptonLabel9.Values.Text = "Provincia"
+            '
+            'KryptonLabel10
+            '
+            Me.KryptonLabel10.Location = New System.Drawing.Point(324, 80)
+            Me.KryptonLabel10.Name = "KryptonLabel10"
+            Me.KryptonLabel10.Size = New System.Drawing.Size(49, 20)
+            Me.KryptonLabel10.TabIndex = 61
+            Me.KryptonLabel10.Values.Text = "Ciudad"
+            '
+            'KryptonLabel11
+            '
+            Me.KryptonLabel11.Location = New System.Drawing.Point(324, 113)
+            Me.KryptonLabel11.Name = "KryptonLabel11"
+            Me.KryptonLabel11.Size = New System.Drawing.Size(63, 20)
+            Me.KryptonLabel11.TabIndex = 62
+            Me.KryptonLabel11.Values.Text = "Parroquia"
+            '
+            'KryptonLabel12
+            '
+            Me.KryptonLabel12.Location = New System.Drawing.Point(554, 49)
+            Me.KryptonLabel12.Name = "KryptonLabel12"
+            Me.KryptonLabel12.Size = New System.Drawing.Size(38, 20)
+            Me.KryptonLabel12.TabIndex = 63
+            Me.KryptonLabel12.Values.Text = "Nivel"
+            '
+            'KryptonLabel13
+            '
+            Me.KryptonLabel13.Location = New System.Drawing.Point(554, 87)
+            Me.KryptonLabel13.Name = "KryptonLabel13"
+            Me.KryptonLabel13.Size = New System.Drawing.Size(49, 20)
+            Me.KryptonLabel13.TabIndex = 64
+            Me.KryptonLabel13.Values.Text = "Cuenta"
+            '
             'FormEstablecerCajasChicas
             '
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.BackColor = System.Drawing.Color.White
-            Me.ClientSize = New System.Drawing.Size(893, 517)
-            Me.Controls.Add(Me.MenuStrip1)
+            Me.ClientSize = New System.Drawing.Size(765, 479)
             Me.Controls.Add(Me.tcDatos)
+            Me.Controls.Add(Me.MenuStrip1)
             Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
             Me.Name = "FormEstablecerCajasChicas"
             Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
@@ -558,46 +582,38 @@
             Or Krypton.Toolkit.PaletteDrawBorders.Right), Krypton.Toolkit.PaletteDrawBorders)
             Me.StateActive.Border.Rounding = 5.0!
             Me.Text = "ESTABLECER CAJAS CHICAS"
-            Me.tcDatos.ResumeLayout(False)
-            Me.tpDatos.ResumeLayout(False)
-            Me.tpDatos.PerformLayout()
             CType(Me.dgvCajas, System.ComponentModel.ISupportInitialize).EndInit()
-            Me.tpReporte.ResumeLayout(False)
             Me.MenuStrip1.ResumeLayout(False)
             Me.MenuStrip1.PerformLayout()
+            CType(Me.tcDatos, System.ComponentModel.ISupportInitialize).EndInit()
+            Me.tcDatos.ResumeLayout(False)
+            CType(Me.KryptonPage1, System.ComponentModel.ISupportInitialize).EndInit()
+            Me.KryptonPage1.ResumeLayout(False)
+            CType(Me.KryptonPage2, System.ComponentModel.ISupportInitialize).EndInit()
+            Me.KryptonPage2.ResumeLayout(False)
+            CType(Me.KryptonGroupBox1.Panel, System.ComponentModel.ISupportInitialize).EndInit()
+            Me.KryptonGroupBox1.Panel.ResumeLayout(False)
+            Me.KryptonGroupBox1.Panel.PerformLayout()
+            CType(Me.KryptonGroupBox1, System.ComponentModel.ISupportInitialize).EndInit()
+            Me.KryptonGroupBox1.ResumeLayout(False)
             Me.ResumeLayout(False)
             Me.PerformLayout()
 
         End Sub
-        Friend WithEvents tcDatos As System.Windows.Forms.TabControl
-        Friend WithEvents tpDatos As System.Windows.Forms.TabPage
         Friend WithEvents cbmParroquia As System.Windows.Forms.ComboBox
-        Friend WithEvents Label14 As System.Windows.Forms.Label
         Friend WithEvents btnBuscarCustodio As System.Windows.Forms.Button
         Friend WithEvents txtIdCustodio As System.Windows.Forms.TextBox
         Friend WithEvents cbmCiudad As System.Windows.Forms.ComboBox
-        Friend WithEvents Label11 As System.Windows.Forms.Label
         Friend WithEvents cbmProvincia As System.Windows.Forms.ComboBox
         Friend WithEvents txtCuentaContable As System.Windows.Forms.TextBox
         Friend WithEvents cbmNivelCuenta As System.Windows.Forms.ComboBox
-        Friend WithEvents Label9 As System.Windows.Forms.Label
-        Friend WithEvents Label10 As System.Windows.Forms.Label
         Friend WithEvents cbmTipoCuenta As System.Windows.Forms.ComboBox
         Friend WithEvents cbmCentroCosto As System.Windows.Forms.ComboBox
-        Friend WithEvents Label8 As System.Windows.Forms.Label
         Friend WithEvents txtValorGasto As System.Windows.Forms.TextBox
-        Friend WithEvents Label3 As System.Windows.Forms.Label
         Friend WithEvents txtMonto As System.Windows.Forms.TextBox
         Friend WithEvents txtDetalle As System.Windows.Forms.TextBox
-        Friend WithEvents Label7 As System.Windows.Forms.Label
         Friend WithEvents txtIdCajaChica As System.Windows.Forms.TextBox
-        Friend WithEvents Label6 As System.Windows.Forms.Label
-        Friend WithEvents Label1 As System.Windows.Forms.Label
-        Friend WithEvents Label2 As System.Windows.Forms.Label
-        Friend WithEvents Label5 As System.Windows.Forms.Label
-        Friend WithEvents Label4 As System.Windows.Forms.Label
         Friend WithEvents dgvCajas As System.Windows.Forms.DataGridView
-        Friend WithEvents tpReporte As System.Windows.Forms.TabPage
         Friend WithEvents crvCajasChicasCustodios As CrystalDecisions.Windows.Forms.CrystalReportViewer
         Friend WithEvents MenuStrip1 As System.Windows.Forms.MenuStrip
         Friend WithEvents btnNuevaCaja As System.Windows.Forms.ToolStripMenuItem
@@ -605,8 +621,24 @@
         Friend WithEvents btnGuardar As System.Windows.Forms.ToolStripMenuItem
         Friend WithEvents btnReporte As System.Windows.Forms.ToolStripMenuItem
         Friend WithEvents lblNombres As System.Windows.Forms.TextBox
-        Friend WithEvents Label15 As System.Windows.Forms.Label
         Friend WithEvents ToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
         Friend WithEvents btnModificar As System.Windows.Forms.ToolStripMenuItem
+        Friend WithEvents tcDatos As ComponentFactory.Krypton.Navigator.KryptonNavigator
+        Friend WithEvents KryptonPage1 As ComponentFactory.Krypton.Navigator.KryptonPage
+        Friend WithEvents KryptonGroupBox1 As ComponentFactory.Krypton.Toolkit.KryptonGroupBox
+        Friend WithEvents KryptonLabel2 As ComponentFactory.Krypton.Toolkit.KryptonLabel
+        Friend WithEvents KryptonLabel1 As ComponentFactory.Krypton.Toolkit.KryptonLabel
+        Friend WithEvents KryptonPage2 As ComponentFactory.Krypton.Navigator.KryptonPage
+        Friend WithEvents KryptonLabel8 As ComponentFactory.Krypton.Toolkit.KryptonLabel
+        Friend WithEvents KryptonLabel7 As ComponentFactory.Krypton.Toolkit.KryptonLabel
+        Friend WithEvents KryptonLabel6 As ComponentFactory.Krypton.Toolkit.KryptonLabel
+        Friend WithEvents KryptonLabel5 As ComponentFactory.Krypton.Toolkit.KryptonLabel
+        Friend WithEvents KryptonLabel4 As ComponentFactory.Krypton.Toolkit.KryptonLabel
+        Friend WithEvents KryptonLabel3 As ComponentFactory.Krypton.Toolkit.KryptonLabel
+        Friend WithEvents KryptonLabel13 As ComponentFactory.Krypton.Toolkit.KryptonLabel
+        Friend WithEvents KryptonLabel12 As ComponentFactory.Krypton.Toolkit.KryptonLabel
+        Friend WithEvents KryptonLabel11 As ComponentFactory.Krypton.Toolkit.KryptonLabel
+        Friend WithEvents KryptonLabel10 As ComponentFactory.Krypton.Toolkit.KryptonLabel
+        Friend WithEvents KryptonLabel9 As ComponentFactory.Krypton.Toolkit.KryptonLabel
     End Class
 End Namespace

@@ -505,6 +505,7 @@ Namespace FORMULARIOS.CONTABILIDAD.BALANCE
                 End If
             Next
             LbCount1.Text = v1 & " REGISTRO(S)"
+
         End Sub
 
     End Class

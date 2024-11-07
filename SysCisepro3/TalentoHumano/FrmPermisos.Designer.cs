@@ -148,7 +148,7 @@
             // btnBuscarTipo
             // 
             this.btnBuscarTipo.Enabled = false;
-            this.btnBuscarTipo.Location = new System.Drawing.Point(734, 42);
+            this.btnBuscarTipo.Location = new System.Drawing.Point(733, 39);
             this.btnBuscarTipo.Name = "btnBuscarTipo";
             this.btnBuscarTipo.Size = new System.Drawing.Size(30, 30);
             this.btnBuscarTipo.StateCommon.Back.Draw = Krypton.Toolkit.InheritBool.False;
@@ -159,14 +159,14 @@
             this.btnBuscarTipo.StateCommon.Content.Image.ImageH = Krypton.Toolkit.PaletteRelativeAlign.Center;
             this.btnBuscarTipo.StateCommon.Content.Image.ImageV = Krypton.Toolkit.PaletteRelativeAlign.Center;
             this.btnBuscarTipo.TabIndex = 223;
-            this.toolTip1.SetToolTip(this.btnBuscarTipo, "Buscar Certificado");
+            this.toolTip1.SetToolTip(this.btnBuscarTipo, "Subir Certificado");
             this.btnBuscarTipo.Values.ImageStates.ImageCheckedNormal = null;
             this.btnBuscarTipo.Values.ImageStates.ImageCheckedPressed = null;
             this.btnBuscarTipo.Values.ImageStates.ImageCheckedTracking = null;
-            this.btnBuscarTipo.Values.ImageStates.ImageDisabled = global::SysCisepro3.Properties.Resources.search_24dp_FILL0_wght400_GRAD0_opsz24__2_;
-            this.btnBuscarTipo.Values.ImageStates.ImageNormal = global::SysCisepro3.Properties.Resources.search_24dp_FILL0_wght400_GRAD0_opsz24__2_;
-            this.btnBuscarTipo.Values.ImageStates.ImagePressed = global::SysCisepro3.Properties.Resources.search_24dp_FILL0_wght400_GRAD0_opsz40;
-            this.btnBuscarTipo.Values.ImageStates.ImageTracking = global::SysCisepro3.Properties.Resources.search_24dp_FILL0_wght400_GRAD0_opsz40;
+            this.btnBuscarTipo.Values.ImageStates.ImageDisabled = global::SysCisepro3.Properties.Resources.upload_24dp_FILL0_wght400_GRAD0_opsz24__2_;
+            this.btnBuscarTipo.Values.ImageStates.ImageNormal = global::SysCisepro3.Properties.Resources.upload_24dp_FILL0_wght400_GRAD0_opsz24__2_;
+            this.btnBuscarTipo.Values.ImageStates.ImagePressed = global::SysCisepro3.Properties.Resources.upload_24dp_FILL0_wght400_GRAD0_opsz24__1_;
+            this.btnBuscarTipo.Values.ImageStates.ImageTracking = global::SysCisepro3.Properties.Resources.upload_24dp_FILL0_wght400_GRAD0_opsz24__1_;
             this.btnBuscarTipo.Values.Text = "";
             this.btnBuscarTipo.Click += new System.EventHandler(this.btnBuscarTipo_Click);
             // 
@@ -837,11 +837,10 @@
             // 
             // pdfViewer1
             // 
-            this.pdfViewer1.Location = new System.Drawing.Point(3, 0);
+            this.pdfViewer1.Location = new System.Drawing.Point(3, 3);
             this.pdfViewer1.Name = "pdfViewer1";
-            this.pdfViewer1.ShowToolbar = false;
-            this.pdfViewer1.Size = new System.Drawing.Size(773, 619);
-            this.pdfViewer1.TabIndex = 0;
+            this.pdfViewer1.Size = new System.Drawing.Size(770, 438);
+            this.pdfViewer1.TabIndex = 1;
             // 
             // FrmPermisos
             // 

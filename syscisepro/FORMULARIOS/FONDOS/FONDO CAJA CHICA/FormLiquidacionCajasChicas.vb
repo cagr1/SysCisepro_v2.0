@@ -9,6 +9,7 @@ Imports syscisepro.DATOS
 Imports ClassLibraryCisepro.CONTABILIDAD.COMPRAS.COMPROBANTES_COMPRA
 Imports ClassLibraryCisepro.CONTABILIDAD.COMPROBANTES_RETENCION
 Imports ClassLibraryCisepro.CONTABILIDAD.DOCUMENTOS_NO_DEDUCIBLES
+Imports Krypton.Toolkit
 
 
 Namespace FORMULARIOS.FONDOS.FONDO_CAJA_CHICA
@@ -165,12 +166,12 @@ Namespace FORMULARIOS.FONDOS.FONDO_CAJA_CHICA
             LlenarComboCiudad()
         End Sub
 
-        Private Sub cbmCanton_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles cbmCanton.SelectedIndexChanged
+        Private Sub cbmCanton_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As EventArgs)
             If cbmCanton.SelectedValue Is Nothing Or TypeOf cbmCanton.SelectedValue Is DataRowView Then Return
             LlenarComboParroquias()
         End Sub
 
-        Private Sub cbmCajasChicas_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles cbmCajasChicas.SelectedIndexChanged
+        Private Sub cbmCajasChicas_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As EventArgs)
             If cbmCajasChicas.SelectedValue Is Nothing Or TypeOf cbmCajasChicas.SelectedValue Is DataRowView Then Return
             txtFondoCajaChica.Text = _objCajasChicas.BuscarMontoAsignadoCajaChicaXidCajaChica(_tipoCon, cbmCajasChicas.SelectedValue)
         End Sub
@@ -243,12 +244,12 @@ Namespace FORMULARIOS.FONDOS.FONDO_CAJA_CHICA
         End Sub
 
         Private Function ValidarParametrosLiquidacion()
-            Return (cbmCajasChicas.SelectedValue > 0 And _
-               cbmProvincia.SelectedValue > 0 And _
-               cbmCanton.SelectedValue > 0 And _
-               cbmParroquia.SelectedValue > 0 And _
-               txtTotalLiquidacion.Text > 0 And _
-               txtReposicionFondoCajaChica.Text <> 0 And _
+            Return (cbmCajasChicas.SelectedValue > 0 And
+               cbmProvincia.SelectedValue > 0 And
+               cbmCanton.SelectedValue > 0 And
+               cbmParroquia.SelectedValue > 0 And
+               txtTotalLiquidacion.Text > 0 And
+               txtReposicionFondoCajaChica.Text <> 0 And
                txtGastosFondoCajaChica.Text > 0 And dgvLiquidacionFondoCajaChica.RowCount > 0)
         End Function
 
@@ -266,8 +267,8 @@ Namespace FORMULARIOS.FONDOS.FONDO_CAJA_CHICA
                     .IdLiquidacion = _objLiquidacionCajaChica.Id
                 End With
                 _sqlCommands.Add(_objSolicitudCajaChica.EliminarSolicitudesCajaChicaCommand())
-                Auditoria("LIQUIDACIÓN DE CAJA CHICA ID: " & _objLiquidacionCajaChica.Id & ", DETALLE DE LIQUIDACIÓN  " & _
-                        "ID SOL: " & _objSolicitudCajaChica.IdSolitud & ", N°: " & dgvLiquidacionFondoCajaChica.Rows(+indice).Cells(7).Value & ", FECHA: " & dgvLiquidacionFondoCajaChica.Rows(+indice).Cells(3).Value & _
+                Auditoria("LIQUIDACIÓN DE CAJA CHICA ID: " & _objLiquidacionCajaChica.Id & ", DETALLE DE LIQUIDACIÓN  " &
+                        "ID SOL: " & _objSolicitudCajaChica.IdSolitud & ", N°: " & dgvLiquidacionFondoCajaChica.Rows(+indice).Cells(7).Value & ", FECHA: " & dgvLiquidacionFondoCajaChica.Rows(+indice).Cells(3).Value &
                         "VALOR: " & dgvLiquidacionFondoCajaChica.Rows(+indice).Cells(4).Value)
             Next
         End Sub
@@ -290,11 +291,13 @@ Namespace FORMULARIOS.FONDOS.FONDO_CAJA_CHICA
         Private Sub btnGuardar_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnGuardarSolicitudCCH.Click
             Try
                 If CDbl(txtTotalLiquidacion.Text) > CDbl(txtFondoCajaChica.Text) Then
-                    MessageBox.Show("NO SE PUEDE LIQUIDAR debido a que el total de los gastos supera al valor definido para FONDO DE CAJA CHICA!!!", "MENSAJE DE VALIDACIÓN", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                    KryptonMessageBox.Show("NO SE PUEDE LIQUIDAR debido a que el total de los gastos supera al valor definido para FONDO DE CAJA CHICA!!!", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                     Return
                 End If
 
-                If MessageBox.Show("¿ESTA SEGURA QUE DESEA GUARDAR LA LIQUIDACIÓN '" & cbmCajasChicas.Text & "' en la fecha " & dtpFechaLiquidacion.Value.ToLongDateString() & "?", "MENSAJE DE VALIDACIÓN", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> DialogResult.Yes Then Return
+                'If MessageBox.Show("¿ESTA SEGURA QUE DESEA GUARDAR LA LIQUIDACIÓN '" & cbmCajasChicas.Text & "' en la fecha " & dtpFechaLiquidacion.Value.ToLongDateString() & "?", "MENSAJE DE VALIDACIÓN", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> DialogResult.Yes Then Return
+                If KryptonMessageBox.Show("¿ESTA SEGURA QUE DESEA GUARDAR LA LIQUIDACIÓN '" & cbmCajasChicas.Text & "' en la fecha " & dtpFechaLiquidacion.Value.ToLongDateString() & "?", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) <> DialogResult.Yes Then Return
+
                 If ValidarParametrosLiquidacion() Then
 
                     _sqlCommands.Clear()
@@ -323,8 +326,8 @@ Namespace FORMULARIOS.FONDOS.FONDO_CAJA_CHICA
                     End With
                     _sqlCommands.Add(_objLiquidacionCajaChica.NuevaLiquidacionCommand())
 
-                    Auditoria("LIQUIDACIÓN DE CAJA CHICA ID: " & _objLiquidacionCajaChica.Id & ", FECHA: " & _objLiquidacionCajaChica.Fecha & _
-                    "FONDO: " & _objLiquidacionCajaChica.Fondo & ", GASTO: " & _objLiquidacionCajaChica.Gastos & ", REPOSICIÓN: " & _objLiquidacionCajaChica.Reposicion & _
+                    Auditoria("LIQUIDACIÓN DE CAJA CHICA ID: " & _objLiquidacionCajaChica.Id & ", FECHA: " & _objLiquidacionCajaChica.Fecha &
+                    "FONDO: " & _objLiquidacionCajaChica.Fondo & ", GASTO: " & _objLiquidacionCajaChica.Gastos & ", REPOSICIÓN: " & _objLiquidacionCajaChica.Reposicion &
                     "ID CAJA: " & _objLiquidacionCajaChica.IdCaja)
 
                     EliminarSolicitudesCajaChica()
@@ -344,14 +347,29 @@ Namespace FORMULARIOS.FONDOS.FONDO_CAJA_CHICA
 
                         tcLiquidar.SelectedIndex = 1
                     End If
-                    MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
+
+                    Dim messageIcon As KryptonMessageBoxIcon
+                    Dim messageText As String = res(1)
+                    If res(0) Then
+                        messageIcon = KryptonMessageBoxIcon.Information
+                    Else
+                        messageIcon = KryptonMessageBoxIcon.Exclamation
+                    End If
+
+                    KryptonMessageBox.Show(messageText, "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, messageIcon)
+
+                    'MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
+
+
 
                 Else
-                    MsgBox("No se pudo GUARDAR debido a que no ha llenado los parámetros necesarios o no hay registros que liquidar!", MsgBoxStyle.Information, "Mensaje de Validación")
+
+                    KryptonMessageBox.Show("No se pudo gaurdar debido a que no ha llenado los parámetros necesarios o no hay registros que liquidar!", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                 End If
 
             Catch ex As Exception
-                MsgBox(ex.ToString, MsgBoxStyle.Critical)
+
+                KryptonMessageBox.Show(ex.ToString, "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
 
@@ -364,7 +382,7 @@ Namespace FORMULARIOS.FONDOS.FONDO_CAJA_CHICA
             btnCancelar.Enabled = False
         End Sub
 
-        Private Sub bntCargar_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles bntCargar.Click
+        Private Sub bntCargar_Click(ByVal sender As System.Object, ByVal e As EventArgs)
             Try
                 '_crLiquidacionCajaChica.SetDataSource(_objLiquidacionCajaChica.BuscarSolicitudesFondoCajaChicaPorIdLiquidacion(_tipoCon, txtIdLiquidacionBusqueda.Text))
                 '_crLiquidacionCajaChica.SetParameterValue("img", ValidationForms.NombreLogo(_tipoCon, Application.StartupPath))
@@ -378,16 +396,17 @@ Namespace FORMULARIOS.FONDOS.FONDO_CAJA_CHICA
             End Try
         End Sub
 
-        Private Sub tcLiquidar_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles tcLiquidar.SelectedIndexChanged
+        Private Sub tcLiquidar_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As EventArgs)
             If tcLiquidar.SelectedIndex = 1 Then txtIdLiquidacionBusqueda.Focus()
         End Sub
 
-        Private Sub dgvLiquidacionFondoCajaChica_SelectionChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles dgvLiquidacionFondoCajaChica.SelectionChanged
+        Private Sub dgvLiquidacionFondoCajaChica_SelectionChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
             btnAnularSolicitud.Enabled = dgvLiquidacionFondoCajaChica.RowCount > 0 And Not dgvLiquidacionFondoCajaChica.CurrentRow Is Nothing
         End Sub
 
         Private Sub btnAnularSolicitud_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAnularSolicitud.Click
-            If MessageBox.Show("¿ESTA SEGURA QUE DESEA ANULAR EL DOCUMENTO: '" & dgvLiquidacionFondoCajaChica.CurrentRow.Cells(6).Value & "' N° " & dgvLiquidacionFondoCajaChica.CurrentRow.Cells(7).Value & "?", "MENSAJE DE VALIDACIÓN", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> DialogResult.Yes Then Return
+            'If MessageBox.Show("¿ESTA SEGURA QUE DESEA ANULAR EL DOCUMENTO: '" & dgvLiquidacionFondoCajaChica.CurrentRow.Cells(6).Value & "' N° " & dgvLiquidacionFondoCajaChica.CurrentRow.Cells(7).Value & "?", "MENSAJE DE VALIDACIÓN", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> DialogResult.Yes Then Return
+            If KryptonMessageBox.Show("¿ESTA SEGURA QUE DESEA ANULAR EL DOCUMENTO: '" & dgvLiquidacionFondoCajaChica.CurrentRow.Cells(6).Value & "' N° " & dgvLiquidacionFondoCajaChica.CurrentRow.Cells(7).Value & "?", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) <> DialogResult.Yes Then Return
             Try
                 _sqlCommands.Clear()
 
@@ -424,9 +443,21 @@ Namespace FORMULARIOS.FONDOS.FONDO_CAJA_CHICA
                 Dim nombreU As String = "LIQUIDACION-CAJA-CHICA-ANULADA " & UserName
                 Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, nombreU)
                 If res(0) Then btnCargar_Click(Nothing, Nothing)
-                MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
+
+                Dim messageIcon As KryptonMessageBoxIcon
+                Dim messageText As String = res(1)
+                If res(0) Then
+                    messageIcon = KryptonMessageBoxIcon.Information
+                Else
+                    messageIcon = KryptonMessageBoxIcon.Exclamation
+                End If
+
+                KryptonMessageBox.Show(messageText, "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, messageIcon)
+
+
             Catch ex As Exception
-                MsgBox("ERROR AL ANULAR DOCUMENTO: " & ex.ToString, MsgBoxStyle.Critical)
+
+                KryptonMessageBox.Show(ex.ToString, "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
 

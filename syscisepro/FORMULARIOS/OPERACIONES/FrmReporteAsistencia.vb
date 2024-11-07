@@ -65,6 +65,7 @@ Namespace FORMULARIOS.OPERACIONES
 
         Dim _cleanRead As Boolean = True
 
+        Private ReadOnly _indices As New List(Of Integer)
         Dim _r As DataGridViewRow
 
         Private Sub FrmAsignarPuestoTrabajoOperaciones_Load(ByVal sender As System.Object, ByVal e As EventArgs) Handles MyBase.Load
@@ -76,16 +77,13 @@ Namespace FORMULARIOS.OPERACIONES
                     '  MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorAsenava
                     MenuStrip2.ForeColor = Color.White
                     'MenuStrip2.BackColor = My.MySettingsProperty.Settings.ColorAsenava
-                    Label24.ForeColor = Color.White
-                    Label24.BackColor = My.MySettingsProperty.Settings.ColorAsenava
+                    'Label24.ForeColor = Color.White
+                    'Label24.BackColor = My.MySettingsProperty.Settings.ColorAsenava
                     'Label7.ForeColor = Color.White
                     Label7.BackColor = My.MySettingsProperty.Settings.ColorAsenava
                     'Label8.ForeColor = Color.White
                     Label8.BackColor = My.MySettingsProperty.Settings.ColorAsenava
-                    Label2.ForeColor = Color.White
-                    Label2.BackColor = My.MySettingsProperty.Settings.ColorAsenava
-                    Label4.ForeColor = Color.White
-                    Label4.BackColor = My.MySettingsProperty.Settings.ColorAsenava
+
                     dgvDia.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorAsenava
                     dgvNoche.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorAsenava
                 Case TipoConexion.Seportpac
@@ -94,16 +92,13 @@ Namespace FORMULARIOS.OPERACIONES
                     MenuStrip1.ForeColor = Color.White
                     MenuStrip2.ForeColor = Color.White
                     ' MenuStrip2.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
-                    Label24.ForeColor = Color.White
-                    Label24.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
+                    'Label24.ForeColor = Color.White
+                    'Label24.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
                     'Label7.ForeColor = Color.White
                     'Label7.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
                     'Label8.ForeColor = Color.White
                     'Label8.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
-                    Label2.ForeColor = Color.White
-                    Label2.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
-                    Label4.ForeColor = Color.White
-                    Label4.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
+
                     dgvDia.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorSeportpac
                     dgvNoche.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorSeportpac
                 Case Else
@@ -112,16 +107,13 @@ Namespace FORMULARIOS.OPERACIONES
                     MenuStrip1.ForeColor = Color.White
                     MenuStrip2.ForeColor = Color.White
                     'MenuStrip2.BackColor = My.MySettingsProperty.Settings.ColorCisepro
-                    Label24.ForeColor = Color.White
-                    Label24.BackColor = My.MySettingsProperty.Settings.ColorCisepro
+                    'Label24.ForeColor = Color.White
+                    'Label24.BackColor = My.MySettingsProperty.Settings.ColorCisepro
                     'Label7.ForeColor = My.MySettingsProperty.Settings.ColorCisepro
                     'Label7.BackColor = My.MySettingsProperty.Settings.ColorCisepro
                     'Label8.ForeColor = My.MySettingsProperty.Settings.ColorCisepro
                     'Label8.BackColor = My.MySettingsProperty.Settings.ColorCisepro
-                    Label2.ForeColor = Color.White
-                    Label2.BackColor = My.MySettingsProperty.Settings.ColorCisepro
-                    Label4.ForeColor = Color.White
-                    Label4.BackColor = My.MySettingsProperty.Settings.ColorCisepro
+
 
                     dgvDia.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
                     dgvNoche.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
@@ -129,11 +121,14 @@ Namespace FORMULARIOS.OPERACIONES
 
             _hoy = ValidationForms.FechaActual(_tipoCon)
             Me.btnAgregar.ToolTipText = "Agregar Vigilante"
-
+            dgvDia.Font = New Font("Roboto", 8, FontStyle.Regular)
+            dgvNoche.Font = New Font("Roboto", 8, FontStyle.Regular)
+            DataGridView1.Font = New Font("Roboto", 8, FontStyle.Regular)
             dtpMes.Value = New Date(_hoy.Year, _hoy.Month, 1)
             Text += " " & ValidationForms.NombreCompany(_tipoCon)
             Label8.Text = UserName
-
+            Dim validation As New ValidationForms()
+            validation.SetPlaceholder(TextBox1, "Buscar por Nombre")
             _sqlCommands = New List(Of SqlCommand)
         End Sub
 
@@ -287,7 +282,7 @@ Namespace FORMULARIOS.OPERACIONES
                 dgvDia.Columns("RIVER").DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
                 dgvDia.Columns("HORARIO").DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
                 dgvDia.AutoResizeRows()
-                TabControl1.TabPages(0).Text = "DÍA - " & dgvDia.RowCount & " VIGILANTES"
+                TabControl1.TabPages(0).Text = "Dia - " & dgvDia.RowCount & " Vigilantes"
 
                 ' noche
                 DeleteColumnsReport(dgvNoche)
@@ -354,7 +349,7 @@ Namespace FORMULARIOS.OPERACIONES
                 dgvNoche.Columns("RIVER2").DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
                 dgvNoche.Columns("HORARIO2").DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
                 dgvNoche.AutoResizeRows()
-                TabControl1.TabPages(1).Text = "NOCHE - " & dgvNoche.RowCount & " VIGILANTES"
+                TabControl1.TabPages(1).Text = "Noche - " & dgvNoche.RowCount & " Vigilantes"
 
 
                 ' lista libre hoy
@@ -2363,8 +2358,103 @@ Namespace FORMULARIOS.OPERACIONES
 
         End Sub
 
-        Private Sub Label2_Click(sender As Object, e As EventArgs) Handles Label2.Click
+        Private Sub Label2_Click(sender As Object, e As EventArgs)
 
         End Sub
+
+
+
+
+
+        Private Sub btnAnt_Click(sender As Object, e As EventArgs) Handles btnAnt.Click
+            NavigatePrevious(dgvDia, lblDia, btnAnt, btnSig)
+        End Sub
+
+        Private Sub btnSig_Click(sender As Object, e As EventArgs) Handles btnSig.Click
+            NavigateNext(dgvDia, lblDia, btnAnt, btnSig)
+        End Sub
+
+        Private Sub txtBuscar_KeyUp(sender As Object, e As KeyEventArgs) Handles txtBuscar.KeyUp
+            SearchInDataGridView(dgvDia, txtBuscar, lblDia, btnAnt, btnSig)
+        End Sub
+
+        Private Sub txtBuscarNoche_KeyUp(sender As Object, e As KeyEventArgs) Handles txtBuscarNoche.KeyUp
+            SearchInDataGridView(dgvNoche, txtBuscarNoche, lblNoche, btnAntNoche, btnSigNoche)
+        End Sub
+
+        Private Sub btnAntNoche_Click(sender As Object, e As EventArgs) Handles btnAntNoche.Click
+            NavigatePrevious(dgvNoche, lblNoche, btnAntNoche, btnSigNoche)
+        End Sub
+
+        Private Sub btnSigNoche_Click(sender As Object, e As EventArgs) Handles btnSigNoche.Click
+            NavigateNext(dgvNoche, lblNoche, btnAntNoche, btnSigNoche)
+        End Sub
+
+        Private Sub SearchInDataGridView(dgv As DataGridView, txtBuscar As TextBox, lblResult As Label, btnAnt As Button, btnSig As Button)
+            If txtBuscar.Text.Trim().Length = 0 Then
+                _indices.Clear()
+                btnAnt.Tag = 0
+                btnSig.Tag = 0
+                If dgv.RowCount > 0 Then
+                    dgv.Rows(0).Selected = True
+                    dgv.FirstDisplayedScrollingRowIndex = 0
+                End If
+                lblResult.Text = String.Empty
+                Return
+            End If
+
+            _indices.Clear()
+
+            For Each row As DataGridViewRow In dgv.Rows
+                If row.Cells(4).Value?.ToString().Trim().Contains(txtBuscar.Text.Trim()) Then
+                    _indices.Add(row.Index)
+                End If
+            Next
+
+            If _indices.Count = 0 Then
+                btnAnt.Tag = 0
+                btnSig.Tag = 0
+                If dgv.RowCount > 0 Then
+                    dgv.Rows(0).Selected = True
+                    dgv.FirstDisplayedScrollingRowIndex = 0
+                End If
+                lblResult.Text = "No existe Vigilante"
+            Else
+                btnAnt.Tag = 0
+                btnSig.Tag = If(_indices.Count > 1, 1, 0)
+                dgv.Rows(_indices(0)).Selected = True
+                dgv.FirstDisplayedScrollingRowIndex = _indices(0)
+                lblResult.Text = "Vigilante 1 de " & _indices.Count
+            End If
+        End Sub
+
+        Private Sub NavigatePrevious(dgv As DataGridView, lblResult As Label, btnAnt As Button, btnSig As Button)
+            If _indices.Count = 0 Then Return
+            Dim currentIndex As Integer = Convert.ToInt32(btnAnt.Tag)
+            If currentIndex < 0 Then Return
+
+            dgv.Rows(_indices(currentIndex)).Selected = True
+            dgv.FirstDisplayedScrollingRowIndex = _indices(currentIndex)
+
+            lblResult.Text = (Convert.ToInt32(btnAnt.Tag) + 1) & " de " & _indices.Count & " resultado(s)..."
+            btnSig.Tag = currentIndex + 1
+            btnAnt.Tag = currentIndex - 1
+        End Sub
+
+        Private Sub NavigateNext(dgv As DataGridView, lblResult As Label, btnAnt As Button, btnSig As Button)
+            If _indices.Count = 0 Then Return
+            Dim currentIndex As Integer = Convert.ToInt32(btnSig.Tag)
+            If currentIndex > _indices.Count - 1 Then Return
+
+            dgv.Rows(_indices(currentIndex)).Selected = True
+            dgv.FirstDisplayedScrollingRowIndex = _indices(currentIndex)
+
+            lblResult.Text = (Convert.ToInt32(btnSig.Tag) + 1) & " de " & _indices.Count & " resultado(s)..."
+            btnAnt.Tag = currentIndex - 1
+            btnSig.Tag = currentIndex + 1
+        End Sub
+
+
+
     End Class
 End Namespace

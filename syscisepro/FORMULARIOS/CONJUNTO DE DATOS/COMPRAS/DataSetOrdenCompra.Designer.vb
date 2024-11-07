@@ -3607,6 +3607,7 @@ Namespace DataSetOrdenCompraTableAdapters
         Private Sub InitConnection()
             Me._connection = New Global.System.Data.SqlClient.SqlConnection()
             Me._connection.ConnectionString = Global.syscisepro.My.MySettings.Default.SYSCISEPROConnectionString
+
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -4730,7 +4731,6 @@ Namespace DataSetOrdenCompraTableAdapters
         Private Sub InitConnection()
             Me._connection = New Global.System.Data.SqlClient.SqlConnection()
             Me._connection.ConnectionString = Global.syscisepro.My.MySettings.Default.SYSCISEPROConnectionString
-
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -5122,6 +5122,7 @@ Namespace DataSetOrdenCompraTableAdapters
         Private Sub InitConnection()
             Me._connection = New Global.System.Data.SqlClient.SqlConnection()
             Me._connection.ConnectionString = Global.syscisepro.My.MySettings.Default.SYSCISEPROConnectionString
+
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -5525,6 +5526,7 @@ Namespace DataSetOrdenCompraTableAdapters
         Private Sub InitConnection()
             Me._connection = New Global.System.Data.SqlClient.SqlConnection()
             Me._connection.ConnectionString = Global.syscisepro.My.MySettings.Default.SYSCISEPROConnectionString
+
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _

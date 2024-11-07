@@ -19,6 +19,8 @@ using SysCisepro3.Properties;
 using Office = Microsoft.Office.Interop;
 using DataTable = System.Data.DataTable;
 using Krypton.Toolkit;
+//using ComponentFactory.Krypton.Toolkit;
+
 
 namespace SysCisepro3.TalentoHumano
 {
@@ -97,7 +99,10 @@ namespace SysCisepro3.TalentoHumano
             //toolStrip1.BackColor = ValidationForms.GetColorSistema(TipoCon);
             toolStrip1.ForeColor = Color.White;
             DataGridView1.DefaultCellStyle.SelectionBackColor = ValidationForms.GetColorSistema(TipoCon);
+            DataGridView1.DefaultCellStyle.SelectionForeColor = Color.White;
             dgvPersonal.DefaultCellStyle.SelectionBackColor = ValidationForms.GetColorSistema(TipoCon);
+            dgvPersonal.DefaultCellStyle.SelectionForeColor = Color.White;
+
             switch (TipoCon)
             {
                 case TipoConexion.Seportpac:
@@ -108,6 +113,9 @@ namespace SysCisepro3.TalentoHumano
                     break;
                 default: // CISEPRO
                     Icon = Resources.logo_c;
+                    //kryptonManager1.GlobalPaletteMode = PaletteMode.Office2010Silver;
+                    
+
                     break;
             }
             DataGridView1.Font = new System.Drawing.Font("Roboto", 8, FontStyle.Regular);
@@ -636,6 +644,7 @@ namespace SysCisepro3.TalentoHumano
             txtContrato.Clear();
             txtContrato.Tag = null;
             lblValCon.Tag = 0;
+            
 
             DataGridView1.DataSource = null;
 
@@ -779,7 +788,7 @@ namespace SysCisepro3.TalentoHumano
                 var per = _objContratos.BuscarNroContratoRepetido(TipoCon, Convert.ToInt64(txtContrato.Text));
                 if (per.Rows.Count == 0)
                 {
-                    lblValCon.Image = Resources.oki;
+                    lblValCon.Image = Resources.check_circle_24dp_FILL0_wght400_GRAD0_opsz24__3_;
                     lblValCon.Visible = true;
                     lblValCon.Tag = 1;
                 }
@@ -787,13 +796,13 @@ namespace SysCisepro3.TalentoHumano
                 {
                     if (per.Rows[0][1].ToString().Equals("0"))
                     {
-                        lblValCon.Image = Resources.oki;
+                        lblValCon.Image = Resources.check_circle_24dp_FILL0_wght400_GRAD0_opsz24__3_;
                         lblValCon.Visible = true;
                         lblValCon.Tag = 1;
                     }
                     else
                     {
-                        lblValCon.Image = Resources.erri;
+                        lblValCon.Image = Resources.cancel_24dp_FILL0_wght400_GRAD0_opsz24;
                         lblValCon.Tag = 0;
                         txtContrato.Tag = @"NÚMERO DE CONTRATO YA SE ENCUENTRA REGISTRADO PARA: " + per.Rows[0][1];
                         KryptonMessageBox.Show(txtContrato.Tag.ToString(), "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
@@ -802,7 +811,7 @@ namespace SysCisepro3.TalentoHumano
             }
             catch (Exception)
             {
-                lblValCon.Image = Resources.erri;
+                lblValCon.Image = Resources.cancel_24dp_FILL0_wght400_GRAD0_opsz24;
                 lblValCon.Visible = true;
                 lblValCon.Tag = 0;
                 txtContrato.Tag = @"OCURRIÓ UN PROBLEMA AL VERIFICAR NÚMERO DE CONTRATO";
@@ -843,6 +852,8 @@ namespace SysCisepro3.TalentoHumano
             if (KryptonMessageBox.Show(@"Desea guardar el registro actual?",
                    "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) !=
                DialogResult.Yes) return;
+
+            
 
             if (ValidacionParametros())
             {
@@ -1345,6 +1356,8 @@ namespace SysCisepro3.TalentoHumano
             HabilitarBotonesMenu(true, false, false, false, false, false, false);
 
             lblValCon.Visible = false;
+            lblValCed.Visible = false;
+
             _estado = 0;
 
             chkXiii.Enabled = false;
@@ -1356,6 +1369,8 @@ namespace SysCisepro3.TalentoHumano
         private void txtCedula_KeyUp(object sender, KeyEventArgs e)
         {
             if (txtCedula.Text.Trim().Length == 10) ValidarCedula();
+            
+            lblValCed.Visible = true;
         }
 
         private void ValidarCedula()
@@ -1363,7 +1378,7 @@ namespace SysCisepro3.TalentoHumano
             var r = _objPersonal.BuscarCedulaExistente(TipoCon, txtCedula.Text.Trim());
             if (r > 0)
             {
-                lblValCed.Image = Resources.erri;
+                lblValCed.Image = Resources.cancel_24dp_FILL0_wght400_GRAD0_opsz24;
                 ButtonGuardar.Enabled = false;
                 KryptonMessageBox.Show(@"El número de cédula ingresado ya se encuentra registrado como personal con estado ACTIVO!",
                    @"MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
@@ -1498,7 +1513,7 @@ namespace SysCisepro3.TalentoHumano
                     } 
                 }
 
-                lblValCed.Image = Resources.oki;
+                lblValCed.Image = Resources.check_circle_24dp_FILL0_wght400_GRAD0_opsz24__3_;
                 ButtonGuardar.Enabled = true; 
             }
         }

@@ -169,6 +169,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
             validation.SetPlaceholder(txtFiltro, "Buscar por Sitio o Nombre")
 
 
+            dtpFecha.Value = DateTime.Now
             _sqlCommands = New List(Of SqlCommand)
         End Sub
 
@@ -205,7 +206,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
             _validar = 0
 
             cmbBodega.SelectedValue = 1 ' UNFORMES
-            cmbBodega_SelectedValueChanged(Nothing, Nothing)
+            cmbBodega_SelectedValueChanged_1(Nothing, Nothing)
 
             txtProveedores.Text = _objPer.BuscarApellidosNombresPersonalXIdPersonal(_tipoCon, _objPer.BuscarIdPersonalXIdUsuario(_tipoCon, IdUsuario))
 
@@ -213,6 +214,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
             HabilitarIngresos(True)
             Limpiar()
             txtRecibe.Focus()
+            dtpFecha.Value = DateTime.Now
         End Sub
 
         Private Sub Limpiar()
@@ -297,7 +299,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                 cmbBodega.DataSource = Nothing
             End Try
         End Sub
-        Private Sub cmbBodega_SelectedValueChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles cmbBodega.SelectedValueChanged
+        Private Sub cmbBodega_SelectedValueChanged(ByVal sender As System.Object, ByVal e As EventArgs)
             If cmbBodega.SelectedValue Is Nothing Or TypeOf cmbBodega.SelectedValue Is DataRowView Then Return
             Dim cu = _objPer.BuscarPersonalCustodioBodegaPorIdBodega(_tipoCon, cmbBodega.SelectedValue)
             If cu.Rows.Count = 0 Then
@@ -323,7 +325,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
             End Try
         End Sub
 
-        Private Sub cmbConceptos_SelectedValueChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles cmbConceptos.SelectedValueChanged
+        Private Sub cmbConceptos_SelectedValueChanged(ByVal sender As System.Object, ByVal e As EventArgs)
             If cmbConceptos.SelectedValue Is Nothing Or TypeOf cmbConceptos.SelectedValue Is DataRowView Then Return
             txtCódigo.Text = _objCon.BuscarCodigoxIdConcepto(_tipoCon, cmbConceptos.SelectedValue)
         End Sub
@@ -340,7 +342,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
             End Try
         End Sub
 
-        Private Sub cbmProvincia_SelectedValueChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles cbmProvincia.SelectedValueChanged
+        Private Sub cbmProvincia_SelectedValueChanged(ByVal sender As System.Object, ByVal e As EventArgs)
             If cbmProvincia.SelectedValue Is Nothing Or TypeOf cbmProvincia.SelectedValue Is DataRowView Then Return
             LlenarComboCiudad()
         End Sub
@@ -357,7 +359,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
             End Try
         End Sub
 
-        Private Sub cbmCanton_SelectedValueChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles cbmCanton.SelectedValueChanged
+        Private Sub cbmCanton_SelectedValueChanged(ByVal sender As System.Object, ByVal e As EventArgs)
             If cbmCanton.SelectedValue Is Nothing Or TypeOf cbmCanton.SelectedValue Is DataRowView Then Return
             LlenarComboParroquias()
         End Sub
@@ -386,7 +388,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
             End Try
         End Sub
 
-        Private Sub cmbDocumento_SelectedValueChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles cmbDocumento.SelectedValueChanged
+        Private Sub cmbDocumento_SelectedValueChanged(ByVal sender As System.Object, ByVal e As EventArgs)
             If cmbDocumento.SelectedValue Is Nothing Or TypeOf cmbDocumento.SelectedValue Is DataRowView Then Return
             txtNroDocumento.Text = "S/N"
             txtNroDocumento.Enabled = cmbDocumento.SelectedValue <> 8
@@ -432,7 +434,8 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                     lblIdKardex.Text = 0
                     tsmAgregar.Enabled = False
                     tsmEliminar.Enabled = dgvSecuencial.RowCount > 0
-                    MsgBox("EL ITEM SELECCIONADO NO EXISTE EN EL SISTEMA. DEBE CREAR EL ITEM EN LA OPCIÓN 'BODEGA / ARTÍCULOS Y PRODUCTOS' Y LUEGO REGISTAR EL 'COMPROBANTE DE INGRESO' CORRESPONDIENTE!!!", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+
+                    KryptonMessageBox.Show("EL ITEM SELECCIONADO NO EXISTE EN EL SISTEMA. DEBE CREAR EL ITEM EN LA OPCIÓN 'BODEGA / ARTÍCULOS Y PRODUCTOS'" & vbCrLf & " Y LUEGO REGISTAR EL 'COMPROBANTE DE INGRESO' CORRESPONDIENTE!!!", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                 End If
                 CalcuarTotal()
             Catch
@@ -447,22 +450,32 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                 nudCantidad.Value = 0
                 CalcuarTotal()
                 txtObservacion.Clear()
-                MsgBox("OCURRIÓ UN PROBLEMA AL SELECCIONAR ARTÍCULOS. POR FAVOR, CONTÁCTE AL ADMINISTRADOR!!!", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+
+                KryptonMessageBox.Show("Ocurrió un problema al seleccionar artículos. por favor, contácte al administrador", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
             End Try
         End Sub
         Private Sub tsmAgregar_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles tsmAgregar.Click
             If _detalleKardex Is Nothing Then
-                MsgBox("POR FAVOR, SELECCIONE UN ITEM PARA AGREGAR A LA LISTA!", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÒN")
+
+                KryptonMessageBox.Show("Por favor, seleccione un item para agregar a la lista!", "MENSAJE DE VALIDACIÒN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                 Return
             End If
 
             If _detalleKardex.Rows.Count = 0 Then
-                MsgBox("POR FAVOR, SELECCIONE UN ITEM PARA AGREGAR A LA LISTA!", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÒN")
+
+                KryptonMessageBox.Show("Por favor, seleccione un item para agregar a la lista!", "MENSAJE DE VALIDACIÒN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                 Return
             End If
 
             If cmbObservacionCalidad.SelectedIndex = 0 Then
-                MsgBox("POR FAVOR, SELECCIONE LA OBSERVACIÓN DE CALIDAD PARA ESTE ITEM", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÒN")
+
+                KryptonMessageBox.Show("Por favor, seleccione la observación de calidad para este item", "MENSAJE DE VALIDACIÒN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
+                Return
+            End If
+
+            If nudCantidad.Value = 0 Then
+
+                KryptonMessageBox.Show("Por favor, ingrese la cantidad de artículos a egresar", "MENSAJE DE VALIDACIÒN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                 Return
             End If
 
@@ -510,7 +523,8 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                 tsmEliminar.Enabled = True
                 Label11.Text = dgvSecuencial.Rows.Count & " REGISTRO(S) - TOTAL"
             Else
-                MsgBox("NO SE PUEDE AGREGAR UN ITEM REPETIDO", MsgBoxStyle.Information, "MENSAJE DE VALIDACIÒN")
+
+                KryptonMessageBox.Show("No se puede agregar un item repetido", "MENSAJE DE VALIDACIÒN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
             End If
         End Sub
 
@@ -688,19 +702,19 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
 
 
 
-            'If MessageBox.Show("DESEA GUARDAR LOS CAMBIOS?", "MENSAJE DEL SISTEMA", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> DialogResult.Yes Then Return
-            If KryptonMessageBox.Show("DESEA GUARDAR LOS CAMBIOS?", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) <> DialogResult.Yes Then Return
+
+            If KryptonMessageBox.Show("Desea guardar los cambios?", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) <> DialogResult.Yes Then Return
 
             _sqlCommands.Clear()
             If _botonSeleccionadoSitio = 1 Then
 
                 If dgvSecuencial.RowCount = 0 Then
-                    KryptonMessageBox.Show("POR FAVOR, INGRESE LOS ITEMS DEL COMPROBANTES PARA GUARDAR", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
+                    KryptonMessageBox.Show("Por favor, ingrese los items del comprobantes para guardar", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                     Return
                 End If
 
                 If CInt(txtUbicacion.Tag) = 0 Then
-                    KryptonMessageBox.Show("POR FAVOR, SELECCIONE UN SITIO DE TRABAJO", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
+                    KryptonMessageBox.Show("Por favor, seleccione un sitio de trabajo", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                     Return
                 End If
 
@@ -918,6 +932,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                 txtNumero.Text = _objCompEgr.Id
                 txtIdComprobante.Text = txtNumero.Text
                 tbComprobanteIngresoBodega.SelectedIndex = 2
+
             End If
 
             Dim messageIcon As KryptonMessageBoxIcon
@@ -962,7 +977,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
         '    txtNroComprobante.Clear()
         '    txtDetail.Clear()
         'End Sub
-        Private Sub btnExportarComprobantes_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnExportarComprobantes.Click
+        Private Sub btnExportarComprobantes_Click(ByVal sender As System.Object, ByVal e As EventArgs)
             ExportarDatosExcel(dgvComprobantesEgreso, "COMPROBANTES DE EGRESO DE BODEGA ")
         End Sub
         Private Sub btnExportarDetalleComprobante_Click(ByVal sender As System.Object, ByVal e As EventArgs)
@@ -1032,7 +1047,8 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                 app.Visible = True
                 app.DisplayAlerts = True
             Catch ex As Exception
-                MsgBox("NO SE PUEDE EXPORTAR, CONTÁCTE AL ADMINISTRADOR", MsgBoxStyle.Information, "MENSAJE DE VALIDACIÒN")
+
+                KryptonMessageBox.Show("No se puede exportar: " & ex.Message, "MENSAJE DE VALIDACIÒN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
             End Try
         End Sub
 
@@ -1179,7 +1195,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
             nudTotalIngreso.Value = CInt(nudCantidadIngreso.Value) * CDec(nudValorIngreso.Value)
         End Sub
 
-        Private Sub bntPuesto_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles bntPuesto.Click
+        Private Sub bntPuesto_Click(ByVal sender As System.Object, ByVal e As EventArgs)
             Dim frm As New FrmBuscarPuestoTrabajo
             frm.TipoCox = TipoCox
             frm.Label3.Text = "TODOS LOS PUESTOS REGISTRADOS"
@@ -1292,7 +1308,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
 
             Else
 
-                MsgBox("SELECCIONE UN REGISTRO A MODIFICAR", MsgBoxStyle.Information, "MENSAJE")
+                KryptonMessageBox.Show("Seleccione un registro a modificar", "MENSAJE", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
             End If
 
 
@@ -1463,7 +1479,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
         End Sub
 
         Private Sub ModificarComprobanteEgresoAnular()
-            If KryptonMessageBox.Show("DESEA ANULAR EL REGISTRO?", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) <> DialogResult.Yes Then Return
+            If KryptonMessageBox.Show("Desea anular el registro?", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) <> DialogResult.Yes Then Return
 
 
             _sqlCommands.Clear()
@@ -1552,7 +1568,8 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                 tsmAgregar.Enabled = True
             Else
                 tsmEliminar.Enabled = False
-                MsgBox("SELECCIONE UN REGISTRO A MODIFICAR", MsgBoxStyle.Information, "MENSAJE")
+
+                KryptonMessageBox.Show("Seleccione un registro a modificar", "MENSAJE", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
             End If
 
         End Sub
@@ -1572,7 +1589,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
             End If
         End Sub
 
-        Private Sub txtRecibe_KeyUp(sender As Object, e As KeyEventArgs) Handles txtRecibe.KeyUp
+        Private Sub txtRecibe_KeyUp(sender As Object, e As KeyEventArgs)
             If e.KeyCode <> Keys.Enter Then Return
             Try
                 Dim idPer As String = txtRecibe.Text.Split("-")(1).Trim()
@@ -1609,7 +1626,8 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                     End If
                 End If
             Catch ex As Exception
-                MsgBox("Error al cargar la ubicación del personal: " & ex.Message, MsgBoxStyle.Information, "MENSAJE DE VALIDACIÒN")
+
+                KryptonMessageBox.Show("Error al cargar la ubicación del personal: " & ex.Message, "MENSAJE DE VALIDACIÒN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
                 txtUbicacion.Clear()
             End Try
         End Sub
@@ -1642,7 +1660,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                     crvComprobante.Zoom(100)
                     crvComprobante.Refresh()
                 Else
-                    KryptonMessageBox.Show("EL COMPROBANTE NO CORRESPONDE A UNIFORMES", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
+                    KryptonMessageBox.Show("El comprobante no corresponde a uniformes", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
                     Return
                 End If
 
@@ -1651,7 +1669,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
             End Try
         End Sub
 
-        Private Sub btnBuscarModi_Click(sender As Object, e As EventArgs) Handles btnBuscarModi.Click
+        Private Sub btnBuscarModi_Click(sender As Object, e As EventArgs)
 
             'If txtFiltro.Text = "Buscar por Sitio o Nombre" Then
             '    txtFiltro.Text = ""
@@ -1666,7 +1684,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
             tsmGuardar.Enabled = False
         End Sub
 
-        Private Sub txtFiltro_Enter(sender As Object, e As EventArgs) Handles txtFiltro.Enter
+        Private Sub txtFiltro_Enter(sender As Object, e As EventArgs)
 
         End Sub
 
@@ -1682,7 +1700,8 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
             If txtNumero.Text.Trim().Length > 0 Then
                 HabilitarIngresos(True)
             Else
-                MsgBox("SELECCIONE UN REGISTRO A MODIFICAR", MsgBoxStyle.Information, "MENSAJE")
+
+                KryptonMessageBox.Show("Seleccione un registro a modificar", "MENSAJE", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
             End If
             AutoCompletarArticuloIngreso()
 
@@ -1727,13 +1746,13 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
 
         Public Sub ReingresoComprobante()
             If dgvDetalleComprobanteIngreso.RowCount = 0 Then
-                KryptonMessageBox.Show("POR FAVOR, INGRESE LOS ITEMS DEL COMPROBANTES PARA GUARDAR", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
+                KryptonMessageBox.Show("Por favor, ingrese los items del comprobantes para guardar", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                 Return
             End If
 
             _sqlCommands.Clear()
             Dim cantidadPrendasLleva As Integer = 0
-            If KryptonMessageBox.Show("DESEA GUARDAR EL REINGRESO DEL COMPROBANTE?", "MENSAJE DE CONFIRMACIÓN", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) <> DialogResult.Yes Then Return
+            If KryptonMessageBox.Show("Desea guardar el reingreso del comprobante?", "MENSAJE DE CONFIRMACIÓN", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) <> DialogResult.Yes Then Return
             Try
                 For indice = 0 To dgvDetalleComprobanteIngreso.RowCount - 1
                     Dim idkardex = Convert.ToInt32(dgvDetalleComprobanteIngreso.Rows(indice).Cells(0).Value)
@@ -1750,7 +1769,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                                 End If
                             End If
                         Catch ex As Exception
-                            KryptonMessageBox.Show("OCURRIÓ UN PROBLEMA AL BUSCAR LA SERIE. POR FAVOR, CONTÁCTE AL ADMINISTRADOR!!!", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
+                            KryptonMessageBox.Show("Ocurrió un problema al buscar la serie. por favor, contácte al administrador!!!", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
 
                         End Try
                     End If
@@ -1894,17 +1913,17 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
 
         Private Sub btnAgregarIngreso_Click(sender As Object, e As EventArgs) Handles btnAgregarIngreso.Click
             If _detalleKardexIngreso Is Nothing Then
-                KryptonMessageBox.Show("POR FAVOR, SELECCIONE UN ITEM PARA AGREGAR A LA LISTA!", "MENSAJE DE VALIDACIÒN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+                KryptonMessageBox.Show("Por favor, seleccione un item para agregar a la lista!", "MENSAJE DE VALIDACIÒN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
                 Return
             End If
 
             If _detalleKardexIngreso.Rows.Count = 0 Then
-                KryptonMessageBox.Show("POR FAVOR, SELECCIONE UN ITEM PARA AGREGAR A LA LISTA!", "MENSAJE DE VALIDACIÒN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+                KryptonMessageBox.Show("Por favor, seleccione un item para agregar a la lista!", "MENSAJE DE VALIDACIÒN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
                 Return
             End If
 
             If cbxCalidadIngreso.SelectedIndex = 0 Then
-                KryptonMessageBox.Show("POR FAVOR, SELECCIONE LA OBSERVACIÓN DE CALIDAD PARA ESTE ITEM", "MENSAJE DE VALIDACIÒN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+                KryptonMessageBox.Show("Por favor, seleccione la observación de calidad para este item", "MENSAJE DE VALIDACIÒN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
                 Return
             End If
             _validar = 2
@@ -1952,7 +1971,8 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                 tsmEliminar.Enabled = True
                 'Label11.Text = dgvDetalleComprobanteIngreso.Rows.Count & " REGISTRO(S) - TOTAL"
             Else
-                MsgBox("NO SE PUEDE AGREGAR UN ITEM REPETIDO", MsgBoxStyle.Information, "MENSAJE DE VALIDACIÒN")
+
+                KryptonMessageBox.Show("No se puede agregar un item repetido", "MENSAJE DE VALIDACIÒN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
             End If
         End Sub
 
@@ -2040,7 +2060,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                     lblIdKardexIngreso.Text = 0
                     btnAgregarIngreso.Enabled = False
                     btnEliminaringreso.Enabled = dgvDetalleComprobanteIngreso.RowCount > 0
-                    KryptonMessageBox.Show("EL ITEM SELECCIONADO NO EXISTE EN EL SISTEMA. DEBE CREAR EL ITEM EN LA OPCIÓN 'BODEGA / ARTÍCULOS Y PRODUCTOS' Y LUEGO REGISTAR EL 'COMPROBANTE DE INGRESO' CORRESPONDIENTE!!!", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
+                    KryptonMessageBox.Show("El item seleccionado no existe en el sistema." & vbCrLf & "Debe crear el item en la opción 'bodega / artículos y productos' y luego registar el 'comprobante de ingreso' correspondiente!!!", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                 End If
                 CalcularTotalIngreso()
             Catch
@@ -2054,7 +2074,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                 nudCantidadIngreso.Value = 0
                 CalcularTotalIngreso()
                 txtObservacionesIngreso.Clear()
-                KryptonMessageBox.Show("OCURRIÓ UN PROBLEMA AL SELECCIONAR ARTÍCULOS. POR FAVOR, CONTÁCTE AL ADMINISTRADOR!!!", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
+                KryptonMessageBox.Show("Ocurrió un problema al seleccionar artículos. por favor, contácte al administrador!!!", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
             End Try
 
         End Sub
@@ -2105,13 +2125,13 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                     If data IsNot Nothing AndAlso data.Rows.Count > 0 Then
                         Dim last As DataRow = data.Rows(data.Rows.Count - 1)
                         If Convert.ToInt32(last("ID_ACTIVIDAD")) = 2 Then
-                            KryptonMessageBox.Show("LA SERIE YA FUE UTILIZADA EN UN EGRESO", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
+                            KryptonMessageBox.Show("La serie ya fue utilizada en un egreso", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
                             txtSerie.Clear()
                             Return
                         End If
                     End If
                 Catch ex As Exception
-                    KryptonMessageBox.Show("OCURRIÓ UN PROBLEMA AL BUSCAR LA SERIE. POR FAVOR, CONTÁCTE AL ADMINISTRADOR!!!", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
+                    KryptonMessageBox.Show("Ocurrió un problema al buscar la serie. por favor, contácte al administrador!!!", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
 
                 End Try
             End If
@@ -2128,13 +2148,13 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                     If data IsNot Nothing AndAlso data.Rows.Count > 0 Then
                         Dim last As DataRow = data.Rows(data.Rows.Count - 1)
                         If Convert.ToInt32(last("ID_ACTIVIDAD")) = 1 Then
-                            KryptonMessageBox.Show("LA SERIE YA FUE UTILIZADA EN UN INGRESO", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
+                            KryptonMessageBox.Show("La serie ya fue utilizada en un ingreso", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
                             txtSerieIngreso.Clear()
                             Return
                         End If
                     End If
                 Catch ex As Exception
-                    KryptonMessageBox.Show("OCURRIÓ UN PROBLEMA AL BUSCAR LA SERIE. POR FAVOR, CONTÁCTE AL ADMINISTRADOR!!!", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
+                    KryptonMessageBox.Show("Ocurrió un problema al buscar la serie. por favor, contácte al administrador!!!", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
 
                 End Try
             End If
@@ -2157,7 +2177,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
             Return dt
         End Function
 
-        Private Sub txtFiltro_KeyUp(sender As Object, e As KeyEventArgs) Handles txtFiltro.KeyUp
+        Private Sub txtFiltro_KeyUp(sender As Object, e As KeyEventArgs)
             CargarComprobantesEgreso(txtFiltro.Text)
         End Sub
 
@@ -2176,7 +2196,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
 
 
                 If cantidadIngresoFinal < _valorReingreso Then
-                    KryptonMessageBox.Show("LA CANTIDAD INGRESADA NO PUEDE SER MENOR A LA CANTIDAD INICIAL", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
+                    KryptonMessageBox.Show("La cantidad ingresada no puede ser menor a la cantidad inicial", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
                     Return
                 End If
 
@@ -2205,6 +2225,96 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
             End If
 
 
+        End Sub
+
+        Private Sub cbmProvincia_SelectedValueChanged_1(sender As Object, e As EventArgs) Handles cbmProvincia.SelectedValueChanged
+            If cbmProvincia.SelectedValue Is Nothing Or TypeOf cbmProvincia.SelectedValue Is DataRowView Then Return
+            LlenarComboCiudad()
+        End Sub
+
+        Private Sub cbmCanton_SelectedValueChanged_1(sender As Object, e As EventArgs) Handles cbmCanton.SelectedValueChanged
+            If cbmCanton.SelectedValue Is Nothing Or TypeOf cbmCanton.SelectedValue Is DataRowView Then Return
+            LlenarComboParroquias()
+        End Sub
+
+        Private Sub cmbBodega_SelectedValueChanged_1(sender As Object, e As EventArgs) Handles cmbBodega.SelectedValueChanged
+            If cmbBodega.SelectedValue Is Nothing Or TypeOf cmbBodega.SelectedValue Is DataRowView Then Return
+            Dim cu = _objPer.BuscarPersonalCustodioBodegaPorIdBodega(_tipoCon, cmbBodega.SelectedValue)
+            If cu.Rows.Count = 0 Then
+                txtNombre.Tag = Nothing
+                txtCedula.Clear()
+                txtNombre.Clear()
+                Return
+            End If
+            txtNombre.Tag = cu.Rows(0)(0).ToString
+            txtCedula.Text = cu.Rows(0)(1).ToString
+            txtNombre.Text = cu.Rows(0)(2).ToString
+
+        End Sub
+
+        Private Sub txtRecibe_KeyUp_1(sender As Object, e As KeyEventArgs) Handles txtRecibe.KeyUp
+            If e.KeyCode <> Keys.Enter Then Return
+            Try
+                Dim idPer As String = txtRecibe.Text.Split("-")(1).Trim()
+                txtCedulaRecibe.Text = _objPer.BuscarCedulaPersonalXIdPersonal(_tipoCon, idPer)
+                UpdateUbicacion(idPer)
+
+            Catch
+
+                txtCedulaRecibe.Clear()
+                txtUbicacion.Clear()
+            End Try
+        End Sub
+
+        Private Sub txtFiltro_KeyUp_1(sender As Object, e As KeyEventArgs) Handles txtFiltro.KeyUp
+            CargarComprobantesEgreso(txtFiltro.Text)
+            tsmNuevo.Enabled = True
+            tsmActualizar.Enabled = True
+            tmsEliminar.Enabled = True
+            tsmCancelar.Enabled = True
+            tsmReingreso.Enabled = True
+            tsmGuardar.Enabled = False
+        End Sub
+
+        Private Sub btnBuscarModi_Click_1(sender As Object, e As EventArgs) Handles btnBuscarModi.Click
+            CargarComprobantesEgreso(txtFiltro.Text)
+            tsmNuevo.Enabled = True
+            tsmActualizar.Enabled = True
+            tmsEliminar.Enabled = True
+            tsmCancelar.Enabled = True
+            tsmReingreso.Enabled = True
+            tsmGuardar.Enabled = False
+        End Sub
+
+        Private Sub cmbConceptos_SelectedValueChanged_1(sender As Object, e As EventArgs) Handles cmbConceptos.SelectedValueChanged
+            If cmbConceptos.SelectedValue Is Nothing Or TypeOf cmbConceptos.SelectedValue Is DataRowView Then Return
+            txtCódigo.Text = _objCon.BuscarCodigoxIdConcepto(_tipoCon, cmbConceptos.SelectedValue)
+        End Sub
+
+        Private Sub bntPuesto_Click_1(sender As Object, e As EventArgs) Handles bntPuesto.Click
+            Dim frm As New FrmBuscarPuestoTrabajo
+            frm.TipoCox = TipoCox
+            frm.Label3.Text = "TODOS LOS PUESTOS REGISTRADOS"
+            frm.Text = "BUSCAR SITIOS DE TRABAJO"
+
+            Try
+                If frm.ShowDialog = vbOK Then
+                    txtUbicacion.Tag = frm.ListView1.SelectedItems(0).SubItems(0).Text.Trim ' ids
+                    txtUbicacion.Text = "CLIENTE: " & frm.ListView1.SelectedItems(0).Group.Header.Trim & vbNewLine &
+                        "PUESTO: " & frm.ListView1.SelectedItems(0).SubItems(2).Text.Trim
+                End If
+            Catch
+                txtUbicacion.Tag = Nothing
+                txtUbicacion.Clear()
+            End Try
+        End Sub
+
+        Private Sub btnExportarComprobantes_Click_1(sender As Object, e As EventArgs) Handles btnExportarComprobantes.Click
+            ExportarDatosExcel(dgvComprobantesEgreso, "COMPROBANTES DE EGRESO DE BODEGA ")
+        End Sub
+
+        Private Sub btnExportarDetalleComprobante_Click_1(sender As Object, e As EventArgs) Handles btnExportarDetalleComprobante.Click
+            ExportarDatosExcel(dgvDetalleComprobate, "DETALLE DE COMPROABANTE DE EGRESO N°: " & CType(dgvComprobantesEgreso.CurrentRow.Cells.Item(0).Value, String))
         End Sub
     End Class
 End Namespace

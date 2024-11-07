@@ -26,39 +26,42 @@
             Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormBuscarOrdenCompra))
             Me.dgvDetalleOrdenCompra = New System.Windows.Forms.DataGridView()
-            Me.gbOrdenCompra = New System.Windows.Forms.GroupBox()
             Me.txtTotalOrdenCompra = New System.Windows.Forms.TextBox()
-            Me.lblTotalORdenCompra = New System.Windows.Forms.Label()
             Me.txtIvaOrdenCompra = New System.Windows.Forms.TextBox()
-            Me.lblIvaOrdenCompra = New System.Windows.Forms.Label()
             Me.txtDescuentoOrdenCompra = New System.Windows.Forms.TextBox()
-            Me.lblDescuentoOrdenCompra = New System.Windows.Forms.Label()
             Me.txtSubtotal0OrdenCompra = New System.Windows.Forms.TextBox()
-            Me.lblSubtotal0OrdenCompra = New System.Windows.Forms.Label()
             Me.txtSubtotal12OrdenCompra = New System.Windows.Forms.TextBox()
-            Me.lblSubtotal12OrdenCompra = New System.Windows.Forms.Label()
             Me.txtTipoPagoOrdenCompra = New System.Windows.Forms.TextBox()
-            Me.lblTipoPagoOrdenCompra = New System.Windows.Forms.Label()
             Me.txtFormaPagoOrdenCompra = New System.Windows.Forms.TextBox()
-            Me.lblFormaPagoOrdenCompra = New System.Windows.Forms.Label()
             Me.txtNombreProveedor = New System.Windows.Forms.TextBox()
-            Me.lblNombreProveedor = New System.Windows.Forms.Label()
             Me.txtRucProveedor = New System.Windows.Forms.TextBox()
-            Me.lblRucProveedor = New System.Windows.Forms.Label()
             Me.txtFechaOrdenCompra = New System.Windows.Forms.TextBox()
             Me.txtIdOrdenCompra = New System.Windows.Forms.TextBox()
-            Me.lblFechaOrdenCompra = New System.Windows.Forms.Label()
-            Me.lblNroOrdenCompra = New System.Windows.Forms.Label()
             Me.lblIdOrdenCompra = New System.Windows.Forms.Label()
             Me.dgvOrdenCompra = New System.Windows.Forms.DataGridView()
             Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
             Me.btnRecargar = New System.Windows.Forms.ToolStripMenuItem()
             Me.btnReporte = New System.Windows.Forms.ToolStripMenuItem()
             Me.btnAceptar = New System.Windows.Forms.ToolStripMenuItem()
+            Me.KryptonGroupBox1 = New Krypton.Toolkit.KryptonGroupBox()
+            Me.KryptonLabel1 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel2 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel3 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel4 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel5 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel6 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel7 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel8 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel9 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel10 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel11 = New Krypton.Toolkit.KryptonLabel()
             CType(Me.dgvDetalleOrdenCompra, System.ComponentModel.ISupportInitialize).BeginInit()
-            Me.gbOrdenCompra.SuspendLayout()
             CType(Me.dgvOrdenCompra, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.MenuStrip1.SuspendLayout()
+            CType(Me.KryptonGroupBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType(Me.KryptonGroupBox1.Panel, System.ComponentModel.ISupportInitialize).BeginInit()
+            Me.KryptonGroupBox1.Panel.SuspendLayout()
+            Me.KryptonGroupBox1.SuspendLayout()
             Me.SuspendLayout()
             '
             'dgvDetalleOrdenCompra
@@ -78,230 +81,115 @@
             Me.dgvDetalleOrdenCompra.Size = New System.Drawing.Size(1014, 333)
             Me.dgvDetalleOrdenCompra.TabIndex = 47
             '
-            'gbOrdenCompra
-            '
-            Me.gbOrdenCompra.BackColor = System.Drawing.Color.White
-            Me.gbOrdenCompra.Controls.Add(Me.txtTotalOrdenCompra)
-            Me.gbOrdenCompra.Controls.Add(Me.lblTotalORdenCompra)
-            Me.gbOrdenCompra.Controls.Add(Me.txtIvaOrdenCompra)
-            Me.gbOrdenCompra.Controls.Add(Me.lblIvaOrdenCompra)
-            Me.gbOrdenCompra.Controls.Add(Me.txtDescuentoOrdenCompra)
-            Me.gbOrdenCompra.Controls.Add(Me.lblDescuentoOrdenCompra)
-            Me.gbOrdenCompra.Controls.Add(Me.txtSubtotal0OrdenCompra)
-            Me.gbOrdenCompra.Controls.Add(Me.lblSubtotal0OrdenCompra)
-            Me.gbOrdenCompra.Controls.Add(Me.txtSubtotal12OrdenCompra)
-            Me.gbOrdenCompra.Controls.Add(Me.lblSubtotal12OrdenCompra)
-            Me.gbOrdenCompra.Controls.Add(Me.txtTipoPagoOrdenCompra)
-            Me.gbOrdenCompra.Controls.Add(Me.lblTipoPagoOrdenCompra)
-            Me.gbOrdenCompra.Controls.Add(Me.txtFormaPagoOrdenCompra)
-            Me.gbOrdenCompra.Controls.Add(Me.lblFormaPagoOrdenCompra)
-            Me.gbOrdenCompra.Controls.Add(Me.txtNombreProveedor)
-            Me.gbOrdenCompra.Controls.Add(Me.lblNombreProveedor)
-            Me.gbOrdenCompra.Controls.Add(Me.txtRucProveedor)
-            Me.gbOrdenCompra.Controls.Add(Me.lblRucProveedor)
-            Me.gbOrdenCompra.Controls.Add(Me.txtFechaOrdenCompra)
-            Me.gbOrdenCompra.Controls.Add(Me.txtIdOrdenCompra)
-            Me.gbOrdenCompra.Controls.Add(Me.lblFechaOrdenCompra)
-            Me.gbOrdenCompra.Controls.Add(Me.lblNroOrdenCompra)
-            Me.gbOrdenCompra.Controls.Add(Me.lblIdOrdenCompra)
-            Me.gbOrdenCompra.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.gbOrdenCompra.Location = New System.Drawing.Point(541, 35)
-            Me.gbOrdenCompra.Name = "gbOrdenCompra"
-            Me.gbOrdenCompra.Size = New System.Drawing.Size(475, 200)
-            Me.gbOrdenCompra.TabIndex = 44
-            Me.gbOrdenCompra.TabStop = False
-            Me.gbOrdenCompra.Text = "DATOS ORDEN DE COMPRA"
-            '
             'txtTotalOrdenCompra
             '
             Me.txtTotalOrdenCompra.BackColor = System.Drawing.Color.White
             Me.txtTotalOrdenCompra.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtTotalOrdenCompra.Enabled = False
-            Me.txtTotalOrdenCompra.Location = New System.Drawing.Point(400, 170)
+            Me.txtTotalOrdenCompra.Location = New System.Drawing.Point(336, 150)
             Me.txtTotalOrdenCompra.Name = "txtTotalOrdenCompra"
-            Me.txtTotalOrdenCompra.Size = New System.Drawing.Size(65, 21)
+            Me.txtTotalOrdenCompra.Size = New System.Drawing.Size(65, 20)
             Me.txtTotalOrdenCompra.TabIndex = 22
             Me.txtTotalOrdenCompra.Text = "0.00"
             Me.txtTotalOrdenCompra.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-            '
-            'lblTotalORdenCompra
-            '
-            Me.lblTotalORdenCompra.AutoSize = True
-            Me.lblTotalORdenCompra.Location = New System.Drawing.Point(322, 173)
-            Me.lblTotalORdenCompra.Name = "lblTotalORdenCompra"
-            Me.lblTotalORdenCompra.Size = New System.Drawing.Size(45, 13)
-            Me.lblTotalORdenCompra.TabIndex = 21
-            Me.lblTotalORdenCompra.Text = "TOTAL:"
             '
             'txtIvaOrdenCompra
             '
             Me.txtIvaOrdenCompra.BackColor = System.Drawing.Color.White
             Me.txtIvaOrdenCompra.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtIvaOrdenCompra.Enabled = False
-            Me.txtIvaOrdenCompra.Location = New System.Drawing.Point(400, 144)
+            Me.txtIvaOrdenCompra.Location = New System.Drawing.Point(336, 122)
             Me.txtIvaOrdenCompra.Name = "txtIvaOrdenCompra"
-            Me.txtIvaOrdenCompra.Size = New System.Drawing.Size(65, 21)
+            Me.txtIvaOrdenCompra.Size = New System.Drawing.Size(65, 20)
             Me.txtIvaOrdenCompra.TabIndex = 20
             Me.txtIvaOrdenCompra.Text = "0.00"
             Me.txtIvaOrdenCompra.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-            '
-            'lblIvaOrdenCompra
-            '
-            Me.lblIvaOrdenCompra.AutoSize = True
-            Me.lblIvaOrdenCompra.Location = New System.Drawing.Point(322, 147)
-            Me.lblIvaOrdenCompra.Name = "lblIvaOrdenCompra"
-            Me.lblIvaOrdenCompra.Size = New System.Drawing.Size(58, 13)
-            Me.lblIvaOrdenCompra.TabIndex = 19
-            Me.lblIvaOrdenCompra.Text = "IVA (12%):"
             '
             'txtDescuentoOrdenCompra
             '
             Me.txtDescuentoOrdenCompra.BackColor = System.Drawing.Color.White
             Me.txtDescuentoOrdenCompra.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtDescuentoOrdenCompra.Enabled = False
-            Me.txtDescuentoOrdenCompra.Location = New System.Drawing.Point(400, 118)
+            Me.txtDescuentoOrdenCompra.Location = New System.Drawing.Point(336, 96)
             Me.txtDescuentoOrdenCompra.Name = "txtDescuentoOrdenCompra"
-            Me.txtDescuentoOrdenCompra.Size = New System.Drawing.Size(65, 21)
+            Me.txtDescuentoOrdenCompra.Size = New System.Drawing.Size(65, 20)
             Me.txtDescuentoOrdenCompra.TabIndex = 18
             Me.txtDescuentoOrdenCompra.Text = "0.00"
             Me.txtDescuentoOrdenCompra.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-            '
-            'lblDescuentoOrdenCompra
-            '
-            Me.lblDescuentoOrdenCompra.AutoSize = True
-            Me.lblDescuentoOrdenCompra.Location = New System.Drawing.Point(322, 121)
-            Me.lblDescuentoOrdenCompra.Name = "lblDescuentoOrdenCompra"
-            Me.lblDescuentoOrdenCompra.Size = New System.Drawing.Size(73, 13)
-            Me.lblDescuentoOrdenCompra.TabIndex = 17
-            Me.lblDescuentoOrdenCompra.Text = "DESCUENTO:"
             '
             'txtSubtotal0OrdenCompra
             '
             Me.txtSubtotal0OrdenCompra.BackColor = System.Drawing.Color.White
             Me.txtSubtotal0OrdenCompra.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtSubtotal0OrdenCompra.Enabled = False
-            Me.txtSubtotal0OrdenCompra.Location = New System.Drawing.Point(400, 92)
+            Me.txtSubtotal0OrdenCompra.Location = New System.Drawing.Point(336, 70)
             Me.txtSubtotal0OrdenCompra.Name = "txtSubtotal0OrdenCompra"
-            Me.txtSubtotal0OrdenCompra.Size = New System.Drawing.Size(65, 21)
+            Me.txtSubtotal0OrdenCompra.Size = New System.Drawing.Size(65, 20)
             Me.txtSubtotal0OrdenCompra.TabIndex = 16
             Me.txtSubtotal0OrdenCompra.Text = "0.00"
             Me.txtSubtotal0OrdenCompra.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-            '
-            'lblSubtotal0OrdenCompra
-            '
-            Me.lblSubtotal0OrdenCompra.AutoSize = True
-            Me.lblSubtotal0OrdenCompra.Location = New System.Drawing.Point(322, 95)
-            Me.lblSubtotal0OrdenCompra.Name = "lblSubtotal0OrdenCompra"
-            Me.lblSubtotal0OrdenCompra.Size = New System.Drawing.Size(75, 13)
-            Me.lblSubtotal0OrdenCompra.TabIndex = 15
-            Me.lblSubtotal0OrdenCompra.Text = "SUBTOTAL 0:"
             '
             'txtSubtotal12OrdenCompra
             '
             Me.txtSubtotal12OrdenCompra.BackColor = System.Drawing.Color.White
             Me.txtSubtotal12OrdenCompra.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtSubtotal12OrdenCompra.Enabled = False
-            Me.txtSubtotal12OrdenCompra.Location = New System.Drawing.Point(400, 66)
+            Me.txtSubtotal12OrdenCompra.Location = New System.Drawing.Point(336, 45)
             Me.txtSubtotal12OrdenCompra.Name = "txtSubtotal12OrdenCompra"
-            Me.txtSubtotal12OrdenCompra.Size = New System.Drawing.Size(65, 21)
+            Me.txtSubtotal12OrdenCompra.Size = New System.Drawing.Size(65, 20)
             Me.txtSubtotal12OrdenCompra.TabIndex = 14
             Me.txtSubtotal12OrdenCompra.Text = "0.00"
             Me.txtSubtotal12OrdenCompra.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-            '
-            'lblSubtotal12OrdenCompra
-            '
-            Me.lblSubtotal12OrdenCompra.AutoSize = True
-            Me.lblSubtotal12OrdenCompra.Location = New System.Drawing.Point(322, 69)
-            Me.lblSubtotal12OrdenCompra.Name = "lblSubtotal12OrdenCompra"
-            Me.lblSubtotal12OrdenCompra.Size = New System.Drawing.Size(81, 13)
-            Me.lblSubtotal12OrdenCompra.TabIndex = 13
-            Me.lblSubtotal12OrdenCompra.Text = "SUBTOTAL 12:"
             '
             'txtTipoPagoOrdenCompra
             '
             Me.txtTipoPagoOrdenCompra.BackColor = System.Drawing.Color.White
             Me.txtTipoPagoOrdenCompra.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtTipoPagoOrdenCompra.Enabled = False
-            Me.txtTipoPagoOrdenCompra.Location = New System.Drawing.Point(83, 171)
+            Me.txtTipoPagoOrdenCompra.Location = New System.Drawing.Point(79, 150)
             Me.txtTipoPagoOrdenCompra.Name = "txtTipoPagoOrdenCompra"
-            Me.txtTipoPagoOrdenCompra.Size = New System.Drawing.Size(217, 21)
+            Me.txtTipoPagoOrdenCompra.Size = New System.Drawing.Size(146, 20)
             Me.txtTipoPagoOrdenCompra.TabIndex = 12
-            '
-            'lblTipoPagoOrdenCompra
-            '
-            Me.lblTipoPagoOrdenCompra.AutoSize = True
-            Me.lblTipoPagoOrdenCompra.Location = New System.Drawing.Point(4, 174)
-            Me.lblTipoPagoOrdenCompra.Name = "lblTipoPagoOrdenCompra"
-            Me.lblTipoPagoOrdenCompra.Size = New System.Drawing.Size(67, 13)
-            Me.lblTipoPagoOrdenCompra.TabIndex = 11
-            Me.lblTipoPagoOrdenCompra.Text = "TIPO PAGO:"
             '
             'txtFormaPagoOrdenCompra
             '
             Me.txtFormaPagoOrdenCompra.BackColor = System.Drawing.Color.White
             Me.txtFormaPagoOrdenCompra.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtFormaPagoOrdenCompra.Enabled = False
-            Me.txtFormaPagoOrdenCompra.Location = New System.Drawing.Point(83, 142)
+            Me.txtFormaPagoOrdenCompra.Location = New System.Drawing.Point(79, 122)
             Me.txtFormaPagoOrdenCompra.Name = "txtFormaPagoOrdenCompra"
-            Me.txtFormaPagoOrdenCompra.Size = New System.Drawing.Size(217, 21)
+            Me.txtFormaPagoOrdenCompra.Size = New System.Drawing.Size(146, 20)
             Me.txtFormaPagoOrdenCompra.TabIndex = 10
-            '
-            'lblFormaPagoOrdenCompra
-            '
-            Me.lblFormaPagoOrdenCompra.AutoSize = True
-            Me.lblFormaPagoOrdenCompra.Location = New System.Drawing.Point(4, 145)
-            Me.lblFormaPagoOrdenCompra.Name = "lblFormaPagoOrdenCompra"
-            Me.lblFormaPagoOrdenCompra.Size = New System.Drawing.Size(80, 13)
-            Me.lblFormaPagoOrdenCompra.TabIndex = 9
-            Me.lblFormaPagoOrdenCompra.Text = "FORMA PAGO:"
             '
             'txtNombreProveedor
             '
             Me.txtNombreProveedor.BackColor = System.Drawing.Color.White
             Me.txtNombreProveedor.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtNombreProveedor.Enabled = False
-            Me.txtNombreProveedor.Location = New System.Drawing.Point(83, 45)
+            Me.txtNombreProveedor.Location = New System.Drawing.Point(8, 70)
             Me.txtNombreProveedor.Multiline = True
             Me.txtNombreProveedor.Name = "txtNombreProveedor"
-            Me.txtNombreProveedor.Size = New System.Drawing.Size(217, 87)
+            Me.txtNombreProveedor.Size = New System.Drawing.Size(217, 46)
             Me.txtNombreProveedor.TabIndex = 8
-            '
-            'lblNombreProveedor
-            '
-            Me.lblNombreProveedor.AutoSize = True
-            Me.lblNombreProveedor.Location = New System.Drawing.Point(4, 48)
-            Me.lblNombreProveedor.Name = "lblNombreProveedor"
-            Me.lblNombreProveedor.Size = New System.Drawing.Size(73, 13)
-            Me.lblNombreProveedor.TabIndex = 7
-            Me.lblNombreProveedor.Text = "PROVEEDOR:"
             '
             'txtRucProveedor
             '
             Me.txtRucProveedor.BackColor = System.Drawing.Color.White
             Me.txtRucProveedor.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtRucProveedor.Enabled = False
-            Me.txtRucProveedor.Location = New System.Drawing.Point(371, 22)
+            Me.txtRucProveedor.Location = New System.Drawing.Point(307, 20)
             Me.txtRucProveedor.Name = "txtRucProveedor"
-            Me.txtRucProveedor.Size = New System.Drawing.Size(94, 21)
+            Me.txtRucProveedor.Size = New System.Drawing.Size(94, 20)
             Me.txtRucProveedor.TabIndex = 6
-            '
-            'lblRucProveedor
-            '
-            Me.lblRucProveedor.AutoSize = True
-            Me.lblRucProveedor.Location = New System.Drawing.Point(322, 25)
-            Me.lblRucProveedor.Name = "lblRucProveedor"
-            Me.lblRucProveedor.Size = New System.Drawing.Size(31, 13)
-            Me.lblRucProveedor.TabIndex = 5
-            Me.lblRucProveedor.Text = "RUC:"
             '
             'txtFechaOrdenCompra
             '
             Me.txtFechaOrdenCompra.BackColor = System.Drawing.Color.White
             Me.txtFechaOrdenCompra.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtFechaOrdenCompra.Enabled = False
-            Me.txtFechaOrdenCompra.Location = New System.Drawing.Point(202, 19)
+            Me.txtFechaOrdenCompra.Location = New System.Drawing.Point(164, 21)
             Me.txtFechaOrdenCompra.Name = "txtFechaOrdenCompra"
-            Me.txtFechaOrdenCompra.Size = New System.Drawing.Size(98, 21)
+            Me.txtFechaOrdenCompra.Size = New System.Drawing.Size(98, 20)
             Me.txtFechaOrdenCompra.TabIndex = 4
             '
             'txtIdOrdenCompra
@@ -309,33 +197,18 @@
             Me.txtIdOrdenCompra.BackColor = System.Drawing.Color.White
             Me.txtIdOrdenCompra.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtIdOrdenCompra.Enabled = False
-            Me.txtIdOrdenCompra.Location = New System.Drawing.Point(83, 19)
+            Me.txtIdOrdenCompra.Location = New System.Drawing.Point(41, 21)
             Me.txtIdOrdenCompra.Name = "txtIdOrdenCompra"
-            Me.txtIdOrdenCompra.Size = New System.Drawing.Size(72, 21)
+            Me.txtIdOrdenCompra.Size = New System.Drawing.Size(72, 20)
             Me.txtIdOrdenCompra.TabIndex = 3
-            '
-            'lblFechaOrdenCompra
-            '
-            Me.lblFechaOrdenCompra.AutoSize = True
-            Me.lblFechaOrdenCompra.Location = New System.Drawing.Point(158, 22)
-            Me.lblFechaOrdenCompra.Name = "lblFechaOrdenCompra"
-            Me.lblFechaOrdenCompra.Size = New System.Drawing.Size(44, 13)
-            Me.lblFechaOrdenCompra.TabIndex = 2
-            Me.lblFechaOrdenCompra.Text = "FECHA:"
-            '
-            'lblNroOrdenCompra
-            '
-            Me.lblNroOrdenCompra.AutoSize = True
-            Me.lblNroOrdenCompra.Location = New System.Drawing.Point(4, 22)
-            Me.lblNroOrdenCompra.Name = "lblNroOrdenCompra"
-            Me.lblNroOrdenCompra.Size = New System.Drawing.Size(23, 13)
-            Me.lblNroOrdenCompra.TabIndex = 1
-            Me.lblNroOrdenCompra.Text = "Nº:"
             '
             'lblIdOrdenCompra
             '
             Me.lblIdOrdenCompra.AutoSize = True
-            Me.lblIdOrdenCompra.Location = New System.Drawing.Point(341, 0)
+            Me.lblIdOrdenCompra.BackColor = System.Drawing.Color.Transparent
+            Me.lblIdOrdenCompra.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.lblIdOrdenCompra.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
+            Me.lblIdOrdenCompra.Location = New System.Drawing.Point(274, -1)
             Me.lblIdOrdenCompra.Name = "lblIdOrdenCompra"
             Me.lblIdOrdenCompra.Size = New System.Drawing.Size(19, 13)
             Me.lblIdOrdenCompra.TabIndex = 0
@@ -358,7 +231,7 @@
             Me.dgvOrdenCompra.ReadOnly = True
             Me.dgvOrdenCompra.RowHeadersVisible = False
             Me.dgvOrdenCompra.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvOrdenCompra.Size = New System.Drawing.Size(538, 201)
+            Me.dgvOrdenCompra.Size = New System.Drawing.Size(579, 201)
             Me.dgvOrdenCompra.TabIndex = 43
             '
             'MenuStrip1
@@ -400,15 +273,137 @@
             Me.btnAceptar.Text = "ACEPTAR"
             Me.btnAceptar.Visible = False
             '
+            'KryptonGroupBox1
+            '
+            Me.KryptonGroupBox1.Location = New System.Drawing.Point(587, 34)
+            Me.KryptonGroupBox1.Name = "KryptonGroupBox1"
+            '
+            'KryptonGroupBox1.Panel
+            '
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel11)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.txtTotalOrdenCompra)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel10)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel9)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.txtIvaOrdenCompra)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel8)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel7)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.txtDescuentoOrdenCompra)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel6)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.txtFechaOrdenCompra)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel5)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.lblIdOrdenCompra)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.txtSubtotal0OrdenCompra)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel4)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel3)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.txtSubtotal12OrdenCompra)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel2)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel1)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.txtIdOrdenCompra)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.txtNombreProveedor)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.txtFormaPagoOrdenCompra)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.txtRucProveedor)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.txtTipoPagoOrdenCompra)
+            Me.KryptonGroupBox1.Size = New System.Drawing.Size(429, 201)
+            Me.KryptonGroupBox1.TabIndex = 189
+            Me.KryptonGroupBox1.Values.Heading = "Datos"
+            '
+            'KryptonLabel1
+            '
+            Me.KryptonLabel1.Location = New System.Drawing.Point(8, 20)
+            Me.KryptonLabel1.Name = "KryptonLabel1"
+            Me.KryptonLabel1.Size = New System.Drawing.Size(27, 20)
+            Me.KryptonLabel1.TabIndex = 0
+            Me.KryptonLabel1.Values.Text = "No"
+            '
+            'KryptonLabel2
+            '
+            Me.KryptonLabel2.Location = New System.Drawing.Point(8, 45)
+            Me.KryptonLabel2.Name = "KryptonLabel2"
+            Me.KryptonLabel2.Size = New System.Drawing.Size(67, 20)
+            Me.KryptonLabel2.TabIndex = 1
+            Me.KryptonLabel2.Values.Text = "Proveedor"
+            '
+            'KryptonLabel3
+            '
+            Me.KryptonLabel3.Location = New System.Drawing.Point(8, 122)
+            Me.KryptonLabel3.Name = "KryptonLabel3"
+            Me.KryptonLabel3.Size = New System.Drawing.Size(38, 20)
+            Me.KryptonLabel3.TabIndex = 13
+            Me.KryptonLabel3.Values.Text = "Pago"
+            '
+            'KryptonLabel4
+            '
+            Me.KryptonLabel4.Location = New System.Drawing.Point(8, 150)
+            Me.KryptonLabel4.Name = "KryptonLabel4"
+            Me.KryptonLabel4.Size = New System.Drawing.Size(34, 20)
+            Me.KryptonLabel4.TabIndex = 14
+            Me.KryptonLabel4.Values.Text = "Tipo"
+            '
+            'KryptonLabel5
+            '
+            Me.KryptonLabel5.Location = New System.Drawing.Point(231, 150)
+            Me.KryptonLabel5.Name = "KryptonLabel5"
+            Me.KryptonLabel5.Size = New System.Drawing.Size(38, 20)
+            Me.KryptonLabel5.TabIndex = 15
+            Me.KryptonLabel5.Values.Text = "Total"
+            '
+            'KryptonLabel6
+            '
+            Me.KryptonLabel6.Location = New System.Drawing.Point(231, 122)
+            Me.KryptonLabel6.Name = "KryptonLabel6"
+            Me.KryptonLabel6.Size = New System.Drawing.Size(29, 20)
+            Me.KryptonLabel6.TabIndex = 16
+            Me.KryptonLabel6.Values.Text = "IVA "
+            '
+            'KryptonLabel7
+            '
+            Me.KryptonLabel7.Location = New System.Drawing.Point(231, 96)
+            Me.KryptonLabel7.Name = "KryptonLabel7"
+            Me.KryptonLabel7.Size = New System.Drawing.Size(68, 20)
+            Me.KryptonLabel7.TabIndex = 17
+            Me.KryptonLabel7.Values.Text = "Descuento"
+            '
+            'KryptonLabel8
+            '
+            Me.KryptonLabel8.Location = New System.Drawing.Point(231, 70)
+            Me.KryptonLabel8.Name = "KryptonLabel8"
+            Me.KryptonLabel8.Size = New System.Drawing.Size(76, 20)
+            Me.KryptonLabel8.TabIndex = 18
+            Me.KryptonLabel8.Values.Text = "Subtotal 0%"
+            '
+            'KryptonLabel9
+            '
+            Me.KryptonLabel9.Location = New System.Drawing.Point(231, 45)
+            Me.KryptonLabel9.Name = "KryptonLabel9"
+            Me.KryptonLabel9.Size = New System.Drawing.Size(83, 20)
+            Me.KryptonLabel9.TabIndex = 19
+            Me.KryptonLabel9.Values.Text = "Subtotal 12%"
+            '
+            'KryptonLabel10
+            '
+            Me.KryptonLabel10.Location = New System.Drawing.Point(267, 21)
+            Me.KryptonLabel10.Name = "KryptonLabel10"
+            Me.KryptonLabel10.Size = New System.Drawing.Size(34, 20)
+            Me.KryptonLabel10.TabIndex = 20
+            Me.KryptonLabel10.Values.Text = "RUC"
+            '
+            'KryptonLabel11
+            '
+            Me.KryptonLabel11.Location = New System.Drawing.Point(118, 21)
+            Me.KryptonLabel11.Name = "KryptonLabel11"
+            Me.KryptonLabel11.Size = New System.Drawing.Size(42, 20)
+            Me.KryptonLabel11.TabIndex = 23
+            Me.KryptonLabel11.Values.Text = "Fecha"
+            '
             'FormBuscarOrdenCompra
             '
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.BackColor = System.Drawing.Color.White
             Me.ClientSize = New System.Drawing.Size(1018, 572)
+            Me.Controls.Add(Me.KryptonGroupBox1)
             Me.Controls.Add(Me.MenuStrip1)
             Me.Controls.Add(Me.dgvDetalleOrdenCompra)
-            Me.Controls.Add(Me.gbOrdenCompra)
             Me.Controls.Add(Me.dgvOrdenCompra)
             Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
             Me.Name = "FormBuscarOrdenCompra"
@@ -420,44 +415,47 @@
             Me.StateActive.Border.Rounding = 5.0!
             Me.Text = "BUSCAR ORDEN DE COMPRA"
             CType(Me.dgvDetalleOrdenCompra, System.ComponentModel.ISupportInitialize).EndInit()
-            Me.gbOrdenCompra.ResumeLayout(False)
-            Me.gbOrdenCompra.PerformLayout()
             CType(Me.dgvOrdenCompra, System.ComponentModel.ISupportInitialize).EndInit()
             Me.MenuStrip1.ResumeLayout(False)
             Me.MenuStrip1.PerformLayout()
+            CType(Me.KryptonGroupBox1.Panel, System.ComponentModel.ISupportInitialize).EndInit()
+            Me.KryptonGroupBox1.Panel.ResumeLayout(False)
+            Me.KryptonGroupBox1.Panel.PerformLayout()
+            CType(Me.KryptonGroupBox1, System.ComponentModel.ISupportInitialize).EndInit()
+            Me.KryptonGroupBox1.ResumeLayout(False)
             Me.ResumeLayout(False)
             Me.PerformLayout()
 
         End Sub
         Friend WithEvents dgvDetalleOrdenCompra As System.Windows.Forms.DataGridView
-        Friend WithEvents gbOrdenCompra As System.Windows.Forms.GroupBox
         Friend WithEvents txtTotalOrdenCompra As System.Windows.Forms.TextBox
-        Friend WithEvents lblTotalORdenCompra As System.Windows.Forms.Label
         Friend WithEvents txtIvaOrdenCompra As System.Windows.Forms.TextBox
-        Friend WithEvents lblIvaOrdenCompra As System.Windows.Forms.Label
         Friend WithEvents txtDescuentoOrdenCompra As System.Windows.Forms.TextBox
-        Friend WithEvents lblDescuentoOrdenCompra As System.Windows.Forms.Label
         Friend WithEvents txtSubtotal0OrdenCompra As System.Windows.Forms.TextBox
-        Friend WithEvents lblSubtotal0OrdenCompra As System.Windows.Forms.Label
         Friend WithEvents txtSubtotal12OrdenCompra As System.Windows.Forms.TextBox
-        Friend WithEvents lblSubtotal12OrdenCompra As System.Windows.Forms.Label
         Friend WithEvents txtTipoPagoOrdenCompra As System.Windows.Forms.TextBox
-        Friend WithEvents lblTipoPagoOrdenCompra As System.Windows.Forms.Label
         Friend WithEvents txtFormaPagoOrdenCompra As System.Windows.Forms.TextBox
-        Friend WithEvents lblFormaPagoOrdenCompra As System.Windows.Forms.Label
         Friend WithEvents txtNombreProveedor As System.Windows.Forms.TextBox
-        Friend WithEvents lblNombreProveedor As System.Windows.Forms.Label
         Friend WithEvents txtRucProveedor As System.Windows.Forms.TextBox
-        Friend WithEvents lblRucProveedor As System.Windows.Forms.Label
         Friend WithEvents txtFechaOrdenCompra As System.Windows.Forms.TextBox
         Friend WithEvents txtIdOrdenCompra As System.Windows.Forms.TextBox
-        Friend WithEvents lblFechaOrdenCompra As System.Windows.Forms.Label
-        Friend WithEvents lblNroOrdenCompra As System.Windows.Forms.Label
         Friend WithEvents lblIdOrdenCompra As System.Windows.Forms.Label
         Friend WithEvents MenuStrip1 As System.Windows.Forms.MenuStrip
         Public WithEvents btnAceptar As System.Windows.Forms.ToolStripMenuItem
         Public WithEvents btnReporte As System.Windows.Forms.ToolStripMenuItem
         Public WithEvents btnRecargar As System.Windows.Forms.ToolStripMenuItem
         Public WithEvents dgvOrdenCompra As System.Windows.Forms.DataGridView
+        Friend WithEvents KryptonGroupBox1 As Krypton.Toolkit.KryptonGroupBox
+        Friend WithEvents KryptonLabel10 As Krypton.Toolkit.KryptonLabel
+        Friend WithEvents KryptonLabel9 As Krypton.Toolkit.KryptonLabel
+        Friend WithEvents KryptonLabel8 As Krypton.Toolkit.KryptonLabel
+        Friend WithEvents KryptonLabel7 As Krypton.Toolkit.KryptonLabel
+        Friend WithEvents KryptonLabel6 As Krypton.Toolkit.KryptonLabel
+        Friend WithEvents KryptonLabel5 As Krypton.Toolkit.KryptonLabel
+        Friend WithEvents KryptonLabel4 As Krypton.Toolkit.KryptonLabel
+        Friend WithEvents KryptonLabel3 As Krypton.Toolkit.KryptonLabel
+        Friend WithEvents KryptonLabel2 As Krypton.Toolkit.KryptonLabel
+        Friend WithEvents KryptonLabel1 As Krypton.Toolkit.KryptonLabel
+        Friend WithEvents KryptonLabel11 As Krypton.Toolkit.KryptonLabel
     End Class
 End Namespace

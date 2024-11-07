@@ -272,7 +272,8 @@ Namespace FORMULARIOS.FONDOS.FONDO_CAJA_CHICA
             txtDetalleGasto.Enabled = detalle
             txtNombreComercialCliente.Enabled = detalle
 
-            GroupBox1.Enabled = detalle
+            'GroupBox1.Enabled = detalle
+            gbCombustible.Enabled = detalle
             chkCombustible.Enabled = detalle
         End Sub
         Private Sub AutocompletarNombreCliente()
@@ -479,12 +480,14 @@ Namespace FORMULARIOS.FONDOS.FONDO_CAJA_CHICA
             If cbmConcepto.SelectedValue Is Nothing Or TypeOf cbmConcepto.SelectedValue Is DataRowView Then Return
 
             If CInt(cbmConcepto.SelectedValue) = 14 Then
-                GroupBox1.Enabled = True
+                'GroupBox1.Enabled = True
+                gbCombustible.Enabled = True
                 chkCombustible.Checked = True
                 MsgBox("No se olvide de realizar el control del combustible!", MsgBoxStyle.Information, "MENSAJE DE INFORMACIÓN")
             Else
                 chkCombustible.Checked = False
-                GroupBox1.Enabled = False
+                'GroupBox1.Enabled = False
+                gbCombustible.Enabled = False
             End If
         End Sub
 
@@ -814,7 +817,7 @@ Namespace FORMULARIOS.FONDOS.FONDO_CAJA_CHICA
             e.Handled = Not _validacionesNumeros.EsNumero(e.KeyChar)
         End Sub
 
-        Private Sub btnReporte_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnReporte.Click
+        Private Sub btnReporte_Click(ByVal sender As System.Object, ByVal e As EventArgs)
             ConectarReporte()
         End Sub
 
@@ -1008,7 +1011,8 @@ Namespace FORMULARIOS.FONDOS.FONDO_CAJA_CHICA
                         If _validarComprobanteLiqCompra = 1 And _ptoEmisionLiqCompra = "002" Then ExportarXmlLiquidacionCompra()
 
                         chkCombustible.Enabled = False
-                        GroupBox1.Enabled = False
+                        'GroupBox1.Enabled = False
+                        gbCombustible.Enabled = False
 
                         txtNumeroSolicitud.Text = _objSolicitudCajaChica.Numero
                         txtNumeroSolicitud.Tag = _objSolicitudCajaChica.IdSolitud
@@ -1084,18 +1088,18 @@ Namespace FORMULARIOS.FONDOS.FONDO_CAJA_CHICA
 
         Private Function ValidarParametros() As Boolean
             If txtCedulaRecibe.Tag Is Nothing Then Return False
-            Return (CInt(cbmCajasChicas.SelectedValue) > 0 And _
-               CInt(cbmConcepto.SelectedValue) > 0 And _
-               CInt(cbmProvincia.SelectedValue) > 0 And _
-               CInt(cbmCanton.SelectedValue) > 0 And _
-               CInt(cbmParroquia.SelectedValue) > 0 And _
-               CInt(cbmCentroCosto.SelectedValue) > 0 And _
-               CInt(cbmAutoriza.SelectedValue) > 0 And _
-               txtCedulaRecibe.Text <> "" And txtNombresRecibe.Text <> "" And _
-               txtCedulaEntrega.Text <> "" And txtNombresEntrega.Text <> "" And _
-               CInt(cbmParametrosDocumentos.SelectedValue) > 0 And txtNroDocumento.Text <> "" And _
-              CDec(txtValorGasto.Text) > 0 And txtDetalleGasto.Text <> "" And _
-               txtCodigoDebe.Text <> "" And txtCodigoHaber.Text <> "" And _
+            Return (CInt(cbmCajasChicas.SelectedValue) > 0 And
+               CInt(cbmConcepto.SelectedValue) > 0 And
+               CInt(cbmProvincia.SelectedValue) > 0 And
+               CInt(cbmCanton.SelectedValue) > 0 And
+               CInt(cbmParroquia.SelectedValue) > 0 And
+               CInt(cbmCentroCosto.SelectedValue) > 0 And
+               CInt(cbmAutoriza.SelectedValue) > 0 And
+               txtCedulaRecibe.Text <> "" And txtNombresRecibe.Text <> "" And
+               txtCedulaEntrega.Text <> "" And txtNombresEntrega.Text <> "" And
+               CInt(cbmParametrosDocumentos.SelectedValue) > 0 And txtNroDocumento.Text <> "" And
+              CDec(txtValorGasto.Text) > 0 And txtDetalleGasto.Text <> "" And
+               txtCodigoDebe.Text <> "" And txtCodigoHaber.Text <> "" And
                CInt(txtCedulaRecibe.Tag) > 0)
         End Function
 
@@ -1140,7 +1144,7 @@ Namespace FORMULARIOS.FONDOS.FONDO_CAJA_CHICA
 
             End With
             _sqlCommands.Add(_objSolicitudCajaChica.NuevaSolicitudCajaChicaCommand())
-            Auditoria("SOLICITUD DE CAJA CHICA ID: " & _objSolicitudCajaChica.IdSolitud & ", N° " & _objSolicitudCajaChica.Numero & _
+            Auditoria("SOLICITUD DE CAJA CHICA ID: " & _objSolicitudCajaChica.IdSolitud & ", N° " & _objSolicitudCajaChica.Numero &
             ", FECHA: " & _objSolicitudCajaChica.Fecha & ", VALOR: " & _objSolicitudCajaChica.Valor)
         End Sub
 
@@ -1191,8 +1195,8 @@ Namespace FORMULARIOS.FONDOS.FONDO_CAJA_CHICA
                 .IdSolicitudCaja = _objSolicitudCajaChica.IdSolitud
             End With
             _sqlCommands.Add(_objetoDocumentoNoDeducible.NuevoRegistroDocumentoNoDeducibleCommand())
-            Auditoria("SOLICITUD DE CAJA CHICA ID: " & _objSolicitudCajaChica.IdSolitud & ", DOCUMENTO NO DEDUCIBLE " & _
-                "ID: " & _objetoDocumentoNoDeducible.IdDocumentoNo & ", N°: " & _objetoDocumentoNoDeducible.NumeroDocumentoNo & ", FECHA: " & _objetoDocumentoNoDeducible.FechaDocumentoNo & _
+            Auditoria("SOLICITUD DE CAJA CHICA ID: " & _objSolicitudCajaChica.IdSolitud & ", DOCUMENTO NO DEDUCIBLE " &
+                "ID: " & _objetoDocumentoNoDeducible.IdDocumentoNo & ", N°: " & _objetoDocumentoNoDeducible.NumeroDocumentoNo & ", FECHA: " & _objetoDocumentoNoDeducible.FechaDocumentoNo &
                 "VALOR: " & _objetoDocumentoNoDeducible.ValorDocumentoNo)
         End Sub
 
@@ -1203,7 +1207,7 @@ Namespace FORMULARIOS.FONDOS.FONDO_CAJA_CHICA
                 .MontoAnterior = CType(lblMontoCajaChica.Text, Decimal)
             End With
             _sqlCommands.Add(_objAuxiliarCajaChica.ActualizarMontosCajaChicaCommand())
-            Auditoria("SOLICITUD DE CAJA CHICA ID: " & _objSolicitudCajaChica.IdSolitud & ", ACTUALIZACIÓN DE MONT CAJA CHICA " & _
+            Auditoria("SOLICITUD DE CAJA CHICA ID: " & _objSolicitudCajaChica.IdSolitud & ", ACTUALIZACIÓN DE MONT CAJA CHICA " &
                 "ID CAJA: " & _objAuxiliarCajaChica.IdCajaChica & ", ANTERIOR: " & _objAuxiliarCajaChica.MontoAnterior & ", ACTUAL: " & _objAuxiliarCajaChica.MontoCajaChica)
         End Sub
 
@@ -1251,8 +1255,8 @@ Namespace FORMULARIOS.FONDOS.FONDO_CAJA_CHICA
                 .IdLlegada = _objSalida.IdSalidaVehiculo
             End With
             _sqlCommands.Add(_objetoControlcombustible.NuevoRegistroControlCombustiblesCommand())
-            Auditoria("SOLICITUD DE CAJA CHICA ID: " & _objSolicitudCajaChica.IdSolitud & ", CONTROL COMBUSTIBLE " & _
-               "ID: " & _objetoControlcombustible.IdControl & ", FECHA: " & _objetoControlcombustible.FechaControl & ", VALOR: " & _objetoControlcombustible.ValorControl & _
+            Auditoria("SOLICITUD DE CAJA CHICA ID: " & _objSolicitudCajaChica.IdSolitud & ", CONTROL COMBUSTIBLE " &
+               "ID: " & _objetoControlcombustible.IdControl & ", FECHA: " & _objetoControlcombustible.FechaControl & ", VALOR: " & _objetoControlcombustible.ValorControl &
                "DESTINO: " & _objetoControlcombustible.DestinoControl)
         End Sub
 
@@ -1291,8 +1295,8 @@ Namespace FORMULARIOS.FONDOS.FONDO_CAJA_CHICA
                 .IdComprobanteCompra = _objetoComprobantesCompra.IdComprobante
             End With
             _sqlCommands.Add(_objetoComprobantesRetencion.NuevoRegistroComprobanteRetencionCompraCommand())
-            Auditoria("SOLICITUD DE CAJA CHICA ID: " & _objSolicitudCajaChica.IdSolitud & ", COMPROBANTE DE RETENCIÓN " & _
-                "ID: " & _objetoComprobantesRetencion.IdComprobanteRetencion & ", N°: " & _objetoComprobantesRetencion.NumeroComprobanteRetencion & ", FECHA: " & _objetoComprobantesRetencion.FechaEmisionComprobanteRetencion & _
+            Auditoria("SOLICITUD DE CAJA CHICA ID: " & _objSolicitudCajaChica.IdSolitud & ", COMPROBANTE DE RETENCIÓN " &
+                "ID: " & _objetoComprobantesRetencion.IdComprobanteRetencion & ", N°: " & _objetoComprobantesRetencion.NumeroComprobanteRetencion & ", FECHA: " & _objetoComprobantesRetencion.FechaEmisionComprobanteRetencion &
                 "VALOR: " & _objetoComprobantesRetencion.TotalComprobanteRetencion)
         End Sub
 
@@ -1464,7 +1468,7 @@ Namespace FORMULARIOS.FONDOS.FONDO_CAJA_CHICA
                     Case Else
                         ruta = RutaDocsElec & "\COMPROBANTES GENERADOS\LIQUIDACION COMPRA\LIQUIDACION COMPRA " & numeroFactura & ".xml"
                 End Select
- 
+
                 Dim xml = String.Empty
                 xml += "<?xml version='1.0' encoding='UTF-8'?>" & vbNewLine
                 xml += "<liquidacionCompra id='comprobante' version='1.0.0'>" & vbNewLine
@@ -1590,7 +1594,7 @@ Namespace FORMULARIOS.FONDOS.FONDO_CAJA_CHICA
             End Try
         End Sub
 
-        Private Sub txtNumControl_KeyPress(ByVal sender As System.Object, ByVal e As Windows.Forms.KeyPressEventArgs) Handles txtNumControl.KeyPress
+        Private Sub txtNumControl_KeyPress(ByVal sender As System.Object, ByVal e As Windows.Forms.KeyPressEventArgs)
             e.Handled = Not _validacionesNumeros.EsNumero(e.KeyChar)
         End Sub
 

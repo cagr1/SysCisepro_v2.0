@@ -952,5 +952,12 @@ Namespace FORMULARIOS.CONTABILIDAD.AUXILIARES
 
         End Sub
 
+        Private Sub KryptonPage1_Click(sender As Object, e As EventArgs) Handles KryptonPage1.Click
+
+        End Sub
+
+        Private Sub lblIdComprobanteCompra_Click(sender As Object, e As EventArgs) Handles lblIdComprobanteCompra.Click
+
+        End Sub
     End Class
 End Namespace
