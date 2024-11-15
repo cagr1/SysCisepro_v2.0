@@ -7,6 +7,7 @@ Imports ClassLibraryCisepro.CONTABILIDAD.VENTAS
 Imports ClassLibraryCisepro.ENUMS
 Imports syscisepro.DATOS
 Imports Microsoft.Office.Interop
+Imports Krypton.Toolkit
 
 Namespace FORMULARIOS.CONTABILIDAD.AUXILIARES
     ''' <summary>
@@ -179,7 +180,8 @@ Namespace FORMULARIOS.CONTABILIDAD.AUXILIARES
                 If _tipoBusquedaC = 1 Then
                     dgvComprobantesCompra.DataSource = _objetoComprobantesCompra.SeleccionarComrpobantesCompraXIdProveedorYRangoFechas(_tipoCon, lblIdProveedorGeneral.Text, _fechaDesde, _fechaHasta)
                 ElseIf _tipoBusquedaC = 2 Then
-                    MsgBox("CONSULTA POR NÚMERO DE FACTURA EN DESARROLLO")
+                    'MsgBox("CONSULTA POR NÚMERO DE FACTURA EN DESARROLLO")
+                    KryptonMessageBox.Show("CONSULTA POR NÚMERO DE FACTURA EN DESARROLLO", "MENSAJE DE INFORMACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
                 ElseIf _tipoBusquedaC = 3 Then
                     dgvComprobantesCompra.DataSource = _objetoComprobantesCompra.SeleccionarComrpobantesCompraXEstadoYRangoFechas(_tipoCon, _fechaDesde, _fechaHasta, 1)
                 End If
@@ -201,7 +203,8 @@ Namespace FORMULARIOS.CONTABILIDAD.AUXILIARES
             Catch ex As Exception
                 dgvComprobantesCompra.DataSource = Nothing
                 LimpiarGridsCompra(False, True, True, True, True, True, True)
-                MsgBox("METODO CARGAR COMPROBANTES DE COMPRA" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "MENSAJE DE EXCEPCIÓN")
+                'MsgBox("METODO CARGAR COMPROBANTES DE COMPRA" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "MENSAJE DE EXCEPCIÓN")
+                KryptonMessageBox.Show("METODO CARGAR COMPROBANTES DE COMPRA" & vbNewLine & ex.Message.ToString, "MENSAJE DE EXCEPCIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
         
@@ -295,7 +298,8 @@ Namespace FORMULARIOS.CONTABILIDAD.AUXILIARES
                 dgvPagosComprobantesCompra.Columns(6).Visible = False
             Catch ex As Exception
                 dgvPagosComprobantesCompra.DataSource = Nothing
-                MsgBox("METODO CARGAR PAGOS COMPROBANTES DE COMPRA" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "MENSAJE DE EXCEPCIÓN")
+                'MsgBox("METODO CARGAR PAGOS COMPROBANTES DE COMPRA" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "MENSAJE DE EXCEPCIÓN")
+                KryptonMessageBox.Show("METODO CARGAR PAGOS COMPROBANTES DE COMPRA" & vbNewLine & ex.Message.ToString, "MENSAJE DE EXCEPCIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
         Private Sub dgvComprobantesCompra_SelectionChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles dgvComprobantesCompra.SelectionChanged
@@ -339,7 +343,8 @@ Namespace FORMULARIOS.CONTABILIDAD.AUXILIARES
                 End If
             Catch ex As Exception
                 dgvComprobanteRetencion.DataSource = Nothing
-                MsgBox("METODO CARGAR COMPROBANTE DE RETENCIÓN" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "MENSAJE DE EXCEPCIÓN")
+                'MsgBox("METODO CARGAR COMPROBANTE DE RETENCIÓN" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "MENSAJE DE EXCEPCIÓN")
+                KryptonMessageBox.Show("METODO CARGAR COMPROBANTE DE RETENCIÓN" & vbNewLine & ex.Message.ToString, "MENSAJE DE EXCEPCIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
         Private Sub CargarDetalleComprobanteRetencion()
@@ -374,7 +379,8 @@ Namespace FORMULARIOS.CONTABILIDAD.AUXILIARES
                 dgvDetalleComprobanteRetencion.Columns(9).Visible = False
             Catch ex As Exception
                 dgvDetalleComprobanteRetencion.DataSource = Nothing
-                MsgBox("METODO CARGAR DETALLE COMPROBANTE DE RETENCIÓN" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "MENSAJE DE EXCEPCIÓN")
+
+                KryptonMessageBox.Show("METODO CARGAR DETALLE COMPROBANTE DE RETENCIÓN" & vbNewLine & ex.Message.ToString, "MENSAJE DE EXCEPCIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
         Private Sub ValidarPagosCompras()
@@ -425,7 +431,8 @@ Namespace FORMULARIOS.CONTABILIDAD.AUXILIARES
                 dgvAsientoDiarioCompra.Columns(11).Visible = False
             Catch ex As Exception
                 dgvAsientoDiarioCompra.DataSource = Nothing
-                MsgBox("CARGAR ASIENTOS DIARIO BUSQUEDA" & vbNewLine & ex.ToString, MsgBoxStyle.Critical, "MENSAJE DE EXCEPCIÓN")
+
+                KryptonMessageBox.Show("CARGAR ASIENTOS DIARIO BUSQUEDA" & vbNewLine & ex.ToString, "MENSAJE DE EXCEPCIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
         Private Sub SumarAsientosDiario()
@@ -611,7 +618,8 @@ Namespace FORMULARIOS.CONTABILIDAD.AUXILIARES
             Catch ex As Exception
                 dgvFacturaVenta.DataSource = Nothing
                 LimpiarGridsVenta(False, True, True, True, True, True, True)
-                MsgBox("METODO CARGAR FACTURA VENTA" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "MENSAJE DE EXCEPCIÓN")
+                'MsgBox("METODO CARGAR FACTURA VENTA" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "MENSAJE DE EXCEPCIÓN")
+                KryptonMessageBox.Show("METODO CARGAR FACTURA VENTA" & vbNewLine & ex.Message.ToString, "MENSAJE DE EXCEPCIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
         Private Sub SumarTotalFacturas()
@@ -700,7 +708,8 @@ Namespace FORMULARIOS.CONTABILIDAD.AUXILIARES
                 dgvPagosFacturaVenta.Columns(8).Visible = False
             Catch ex As Exception
                 dgvPagosFacturaVenta.DataSource = Nothing
-                MsgBox("METODO CARGAR PAGOS FACTURA VENTA" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "MENSAJE DE EXCEPCIÓN")
+
+                KryptonMessageBox.Show("METODO CARGAR PAGOS FACTURA VENTA" & vbNewLine & ex.Message.ToString, "MENSAJE DE EXCEPCIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
         Private Sub CargarAsientoIngreso()
@@ -769,7 +778,8 @@ Namespace FORMULARIOS.CONTABILIDAD.AUXILIARES
             Catch ex As Exception
                 dgvComprobanteRetencionVenta.DataSource = Nothing
                 LimpiarGridsVenta(False, False, False, True, True, True, True)
-                MsgBox("METODO CARGAR COMPROBANTE DE RETENCIÓN VENTA" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "MENSAJE DE EXCEPCIÓN")
+
+                KryptonMessageBox.Show("METODO CARGAR COMPROBANTE DE RETENCIÓN VENTA" & vbNewLine & ex.Message.ToString, "MENSAJE DE EXCEPCIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
         Private Sub CargarDetalleComprobanteRetencionVenta()
@@ -799,7 +809,8 @@ Namespace FORMULARIOS.CONTABILIDAD.AUXILIARES
 
             Catch ex As Exception
                 dgvDetalleRetencionVenta.DataSource = Nothing
-                MsgBox("METODO CARGAR DETALLE COMPROBANTE DE RETENCIÓN" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "MENSAJE DE EXCEPCIÓN")
+
+                KryptonMessageBox.Show("METODO CARGAR DETALLE COMPROBANTE DE RETENCIÓN" & vbNewLine & ex.Message.ToString, "MENSAJE DE EXCEPCIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
         Private Sub ValidarPagos()
@@ -851,7 +862,8 @@ Namespace FORMULARIOS.CONTABILIDAD.AUXILIARES
                 If dgvPagosFacturaVenta.RowCount > 0 Then
                     ExportarDatosExcel(dgvPagosFacturaVenta, "AUXILIAR DE PAGO")
                 Else
-                    MsgBox("NO HAY DATOS QUE EXPORTAR!", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                    'MsgBox("NO HAY DATOS QUE EXPORTAR!", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                    KryptonMessageBox.Show("NO HAY DATOS QUE EXPORTAR!", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                     Return
                 End If
             Catch ex As Exception

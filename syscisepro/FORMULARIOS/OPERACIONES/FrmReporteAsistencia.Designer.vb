@@ -991,7 +991,7 @@
             '
             'Label24
             '
-            Me.Label24.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(247, Byte), Integer))
+            Me.Label24.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.Label24.Cursor = System.Windows.Forms.Cursors.Arrow
             Me.Label24.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Label24.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
@@ -1005,7 +1005,7 @@
             'MenuStrip3
             '
             Me.MenuStrip3.AutoSize = False
-            Me.MenuStrip3.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(247, Byte), Integer))
+            Me.MenuStrip3.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.MenuStrip3.Dock = System.Windows.Forms.DockStyle.None
             Me.MenuStrip3.Font = New System.Drawing.Font("Segoe UI", 9.0!)
             Me.MenuStrip3.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnAgregar, Me.btnCambiar, Me.ToolStripMenuItem3, Me.ToolStripMenuItem1, Me.btnQuitar, Me.btnAddRad, Me.ToolStripMenuItem6})
@@ -1091,7 +1091,7 @@
             'Panel1
             '
             Me.Panel1.AutoSize = True
-            Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(247, Byte), Integer))
+            Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.Panel1.Controls.Add(Me.MenuStrip1)
             Me.Panel1.Controls.Add(Me.Label8)
             Me.Panel1.Controls.Add(Me.Label7)
@@ -1105,7 +1105,7 @@
             'MenuStrip1
             '
             Me.MenuStrip1.AutoSize = False
-            Me.MenuStrip1.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(247, Byte), Integer))
+            Me.MenuStrip1.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.MenuStrip1.Dock = System.Windows.Forms.DockStyle.None
             Me.MenuStrip1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
             Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.REPORTESToolStripMenuItem, Me.GUARDARCAMBIOSToolStripMenuItem})
@@ -1166,7 +1166,7 @@
             'Label8
             '
             Me.Label8.AutoSize = True
-            Me.Label8.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(247, Byte), Integer))
+            Me.Label8.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.Label8.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Label8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
             Me.Label8.Location = New System.Drawing.Point(543, 12)
@@ -1178,7 +1178,7 @@
             'Label7
             '
             Me.Label7.AutoSize = True
-            Me.Label7.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(247, Byte), Integer))
+            Me.Label7.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.Label7.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Label7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
             Me.Label7.Location = New System.Drawing.Point(471, 12)
@@ -1197,7 +1197,7 @@
             '
             'MenuStrip2
             '
-            Me.MenuStrip2.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(247, Byte), Integer))
+            Me.MenuStrip2.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.MenuStrip2.Dock = System.Windows.Forms.DockStyle.None
             Me.MenuStrip2.Font = New System.Drawing.Font("Segoe UI", 9.0!)
             Me.MenuStrip2.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem2})
@@ -1209,6 +1209,7 @@
             '
             'ToolStripMenuItem2
             '
+            Me.ToolStripMenuItem2.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.ToolStripMenuItem2.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.ToolStripMenuItem2.Image = Global.syscisepro.My.Resources.Resources.search_24dp_FILL0_wght400_GRAD0_opsz24__2_
             Me.ToolStripMenuItem2.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
@@ -1271,20 +1272,10 @@
             'KryptonNavigator1
             '
             Me.KryptonNavigator1.Button.ButtonDisplayLogic = ComponentFactory.Krypton.Navigator.ButtonDisplayLogic.None
-            Me.KryptonNavigator1.Button.CloseButtonAction = ComponentFactory.Krypton.Navigator.CloseButtonAction.RemovePageAndDispose
             Me.KryptonNavigator1.Button.CloseButtonDisplay = ComponentFactory.Krypton.Navigator.ButtonDisplay.Hide
-            Me.KryptonNavigator1.Button.ContextButtonAction = ComponentFactory.Krypton.Navigator.ContextButtonAction.SelectPage
-            Me.KryptonNavigator1.Button.ContextButtonDisplay = ComponentFactory.Krypton.Navigator.ButtonDisplay.Logic
-            Me.KryptonNavigator1.Button.ContextMenuMapImage = ComponentFactory.Krypton.Navigator.MapKryptonPageImage.Small
-            Me.KryptonNavigator1.Button.ContextMenuMapText = ComponentFactory.Krypton.Navigator.MapKryptonPageText.TextTitle
-            Me.KryptonNavigator1.Button.NextButtonAction = ComponentFactory.Krypton.Navigator.DirectionButtonAction.ModeAppropriateAction
-            Me.KryptonNavigator1.Button.NextButtonDisplay = ComponentFactory.Krypton.Navigator.ButtonDisplay.Logic
-            Me.KryptonNavigator1.Button.PreviousButtonAction = ComponentFactory.Krypton.Navigator.DirectionButtonAction.ModeAppropriateAction
-            Me.KryptonNavigator1.Button.PreviousButtonDisplay = ComponentFactory.Krypton.Navigator.ButtonDisplay.Logic
             Me.KryptonNavigator1.Dock = System.Windows.Forms.DockStyle.Fill
             Me.KryptonNavigator1.Location = New System.Drawing.Point(0, 0)
             Me.KryptonNavigator1.Name = "KryptonNavigator1"
-            Me.KryptonNavigator1.NavigatorMode = ComponentFactory.Krypton.Navigator.NavigatorMode.BarTabGroup
             Me.KryptonNavigator1.Pages.AddRange(New ComponentFactory.Krypton.Navigator.KryptonPage() {Me.KryptonPage1, Me.KryptonPage2})
             Me.KryptonNavigator1.SelectedIndex = 0
             Me.KryptonNavigator1.Size = New System.Drawing.Size(1023, 673)
@@ -1304,6 +1295,7 @@
             Me.KryptonPage1.MinimumSize = New System.Drawing.Size(50, 50)
             Me.KryptonPage1.Name = "KryptonPage1"
             Me.KryptonPage1.Size = New System.Drawing.Size(1021, 646)
+            Me.KryptonPage1.StateCommon.Page.Color1 = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.KryptonPage1.Text = "Asistencia"
             Me.KryptonPage1.ToolTipTitle = "Page ToolTip"
             Me.KryptonPage1.UniqueName = "1B64E934613E4291EABC24ABDFD7D9B9"
@@ -1465,7 +1457,7 @@
             '
             'btnSigNoche
             '
-            Me.btnSigNoche.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(247, Byte), Integer))
+            Me.btnSigNoche.BackColor = System.Drawing.Color.White
             Me.btnSigNoche.FlatAppearance.BorderSize = 0
             Me.btnSigNoche.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.btnSigNoche.Image = Global.syscisepro.My.Resources.Resources.arrow_forward_24dp_FILL0_wght400_GRAD0_opsz24
@@ -1477,7 +1469,7 @@
             '
             'btnAntNoche
             '
-            Me.btnAntNoche.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(247, Byte), Integer))
+            Me.btnAntNoche.BackColor = System.Drawing.Color.White
             Me.btnAntNoche.FlatAppearance.BorderSize = 0
             Me.btnAntNoche.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.btnAntNoche.Image = Global.syscisepro.My.Resources.Resources.arrow_back_24dp_FILL0_wght400_GRAD0_opsz24

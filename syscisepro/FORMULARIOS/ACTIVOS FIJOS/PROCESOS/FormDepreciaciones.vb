@@ -4,6 +4,7 @@ Imports ClassLibraryCisepro.ACTIVOS_FIJOS.MODULOS_DE_ACTIVOS_FIJOS
 Imports ClassLibraryCisepro.CONTABILIDAD.BANCOS.AUDITORIA
 Imports ClassLibraryCisepro.ENUMS
 Imports ClassLibraryCisepro.ProcesosSql
+Imports syscisepro.DATOS
 Imports syscisepro.FORMULARIOS.ACTIVOS_FIJOS.REPORTES
 
 Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
@@ -49,7 +50,7 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
             _objAuditoria.EstadoAuditoria = 1
             _objAuditoria.IdUsuarioAuditoria = IdUsuario
             _objAuditoria.AccionAuditoria = "REALIZO UNA DEPRECIACION DE ACTIVO FIJO CON N° DE REGISTRO:" + lblIdDepreciacion.Text + " CON ULTIMO VALOR EN EL MERCADO DE: " + lblDepreciacion.Text
-            _sqlCommands.Add(_objAuditoria.NuevaAuditoria) 
+            _sqlCommands.Add(_objAuditoria.NuevaAuditoria)
         End Sub
         Private Sub btnBuscar_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnBuscar.Click
             Try
@@ -237,6 +238,12 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
             dgvActivoFijo.Font = New Font("Roboto", 8, FontStyle.Regular)
             dgvMantenimientoDepreciaciones.Font = New Font("Roboto", 8, FontStyle.Regular)
             _sqlCommands = New List(Of SqlCommand)
+
+            Dim validation As New ValidationForms()
+            validation.SetPlaceholder(txtCodigoActivo, "Buscar por Codigo, Tipo o Custodio de Activo")
+
         End Sub
+
+
     End Class
 End Namespace

@@ -2385,7 +2385,9 @@
             // 
             // kryptonGroupBox1
             // 
+            this.kryptonGroupBox1.CaptionStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.GroupBoxCaption;
             this.kryptonGroupBox1.GroupBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.ControlRibbon;
+            this.kryptonGroupBox1.GroupBorderStyle = ComponentFactory.Krypton.Toolkit.PaletteBorderStyle.ControlGroupBox;
             this.kryptonGroupBox1.Location = new System.Drawing.Point(0, -2);
             this.kryptonGroupBox1.Name = "kryptonGroupBox1";
             // 
@@ -2515,6 +2517,8 @@
             this.kryptonLabel42.Name = "kryptonLabel42";
             this.kryptonLabel42.Size = new System.Drawing.Size(34, 20);
             this.kryptonLabel42.StateCommon.ShortText.Color1 = System.Drawing.Color.SeaGreen;
+            this.kryptonLabel42.StateCommon.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.kryptonLabel42.StateCommon.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
             this.kryptonLabel42.TabIndex = 228;
             this.kryptonLabel42.Values.Text = "Tipo";
             // 
@@ -2524,6 +2528,8 @@
             this.kryptonLabel41.Name = "kryptonLabel41";
             this.kryptonLabel41.Size = new System.Drawing.Size(29, 20);
             this.kryptonLabel41.StateCommon.ShortText.Color1 = System.Drawing.Color.SeaGreen;
+            this.kryptonLabel41.StateCommon.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.kryptonLabel41.StateCommon.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
             this.kryptonLabel41.TabIndex = 227;
             this.kryptonLabel41.Values.Text = "Cta";
             // 
@@ -2533,6 +2539,8 @@
             this.kryptonLabel40.Name = "kryptonLabel40";
             this.kryptonLabel40.Size = new System.Drawing.Size(44, 20);
             this.kryptonLabel40.StateCommon.ShortText.Color1 = System.Drawing.Color.SeaGreen;
+            this.kryptonLabel40.StateCommon.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.kryptonLabel40.StateCommon.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
             this.kryptonLabel40.TabIndex = 226;
             this.kryptonLabel40.Values.Text = "Banco";
             // 
@@ -2880,7 +2888,9 @@
             // kryptonGroupBox2
             // 
             this.kryptonGroupBox2.CaptionOverlap = 0.85D;
+            this.kryptonGroupBox2.CaptionStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.GroupBoxCaption;
             this.kryptonGroupBox2.GroupBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.ButtonAlternate;
+            this.kryptonGroupBox2.GroupBorderStyle = ComponentFactory.Krypton.Toolkit.PaletteBorderStyle.ControlGroupBox;
             this.kryptonGroupBox2.Location = new System.Drawing.Point(-1, 3);
             this.kryptonGroupBox2.Name = "kryptonGroupBox2";
             // 
@@ -2920,7 +2930,11 @@
             this.kryptonLabel57.Name = "kryptonLabel57";
             this.kryptonLabel57.Size = new System.Drawing.Size(299, 83);
             this.kryptonLabel57.StateCommon.LongText.Font = new System.Drawing.Font("Roboto", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonLabel57.StateCommon.LongText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.kryptonLabel57.StateCommon.LongText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
             this.kryptonLabel57.StateCommon.ShortText.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonLabel57.StateCommon.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.kryptonLabel57.StateCommon.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
             this.kryptonLabel57.TabIndex = 165;
             this.kryptonLabel57.Values.Text = "EJEMPLO:\r\nIDROVO CARDENAS MIRIAM MATILDE/JUAN MONTALVO\r\nY CARLOS REGALADO/SECRETA" +
     "RIA/072914750\r\n\r\nIDROVO CARDENAS MIRIAM MATILDE/JUAN MONTALVO\r\nY CARLOS REGALADO" +
@@ -2932,6 +2946,8 @@
             this.kryptonLabel56.Name = "kryptonLabel56";
             this.kryptonLabel56.Size = new System.Drawing.Size(270, 36);
             this.kryptonLabel56.StateCommon.LongText.Font = new System.Drawing.Font("Roboto", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonLabel56.StateCommon.LongText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.kryptonLabel56.StateCommon.LongText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
             this.kryptonLabel56.TabIndex = 164;
             this.kryptonLabel56.Values.Text = "EJEMPLO: \r\nPEREZ RAMIREZ /JUAN CARLOS/40/10-10-1984\r\n";
             // 
@@ -3004,6 +3020,8 @@
             this.kryptonLabel52.Name = "kryptonLabel52";
             this.kryptonLabel52.Size = new System.Drawing.Size(293, 52);
             this.kryptonLabel52.StateCommon.LongText.Font = new System.Drawing.Font("Roboto", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonLabel52.StateCommon.LongText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.kryptonLabel52.StateCommon.LongText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
             this.kryptonLabel52.TabIndex = 157;
             this.kryptonLabel52.Values.Text = "EJEMPLO: \r\nPEREZ RAMIREZ /JUAN CARLOS/40/10-10-1984\r\nPEREZ RAMIREZ/MARIA FERNANDA" +
     "/10/10-10-2014     ";
@@ -3088,7 +3106,9 @@
             // kryptonGroupBox4
             // 
             this.kryptonGroupBox4.CaptionOverlap = 0.85D;
+            this.kryptonGroupBox4.CaptionStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.GroupBoxCaption;
             this.kryptonGroupBox4.GroupBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.ButtonAlternate;
+            this.kryptonGroupBox4.GroupBorderStyle = ComponentFactory.Krypton.Toolkit.PaletteBorderStyle.ControlGroupBox;
             this.kryptonGroupBox4.Location = new System.Drawing.Point(2, 4);
             this.kryptonGroupBox4.Name = "kryptonGroupBox4";
             // 
@@ -3215,7 +3235,9 @@
             // kryptonGroupBox6
             // 
             this.kryptonGroupBox6.CaptionOverlap = 0.85D;
+            this.kryptonGroupBox6.CaptionStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.GroupBoxCaption;
             this.kryptonGroupBox6.GroupBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.ButtonAlternate;
+            this.kryptonGroupBox6.GroupBorderStyle = ComponentFactory.Krypton.Toolkit.PaletteBorderStyle.ControlGroupBox;
             this.kryptonGroupBox6.Location = new System.Drawing.Point(427, 32);
             this.kryptonGroupBox6.Name = "kryptonGroupBox6";
             // 
@@ -3229,7 +3251,9 @@
             // kryptonGroupBox5
             // 
             this.kryptonGroupBox5.CaptionOverlap = 0.85D;
+            this.kryptonGroupBox5.CaptionStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.GroupBoxCaption;
             this.kryptonGroupBox5.GroupBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.ButtonAlternate;
+            this.kryptonGroupBox5.GroupBorderStyle = ComponentFactory.Krypton.Toolkit.PaletteBorderStyle.ControlGroupBox;
             this.kryptonGroupBox5.Location = new System.Drawing.Point(3, 31);
             this.kryptonGroupBox5.Name = "kryptonGroupBox5";
             // 
@@ -3256,7 +3280,9 @@
             // kryptonGroupBox7
             // 
             this.kryptonGroupBox7.CaptionOverlap = 0.85D;
+            this.kryptonGroupBox7.CaptionStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.GroupBoxCaption;
             this.kryptonGroupBox7.GroupBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.ControlRibbon;
+            this.kryptonGroupBox7.GroupBorderStyle = ComponentFactory.Krypton.Toolkit.PaletteBorderStyle.ControlGroupBox;
             this.kryptonGroupBox7.Location = new System.Drawing.Point(3, 4);
             this.kryptonGroupBox7.Name = "kryptonGroupBox7";
             // 
@@ -3271,8 +3297,10 @@
             // kryptonGroupBox3
             // 
             this.kryptonGroupBox3.CaptionOverlap = 0.85D;
+            this.kryptonGroupBox3.CaptionStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.GroupBoxCaption;
             this.kryptonGroupBox3.GroupBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.ControlRibbon;
-            this.kryptonGroupBox3.Location = new System.Drawing.Point(2, 424);
+            this.kryptonGroupBox3.GroupBorderStyle = ComponentFactory.Krypton.Toolkit.PaletteBorderStyle.ControlGroupBox;
+            this.kryptonGroupBox3.Location = new System.Drawing.Point(2, 425);
             this.kryptonGroupBox3.Name = "kryptonGroupBox3";
             // 
             // kryptonGroupBox3.Panel
@@ -3280,7 +3308,7 @@
             this.kryptonGroupBox3.Panel.Controls.Add(this.Button1);
             this.kryptonGroupBox3.Panel.Controls.Add(this.dgvPersonal);
             this.kryptonGroupBox3.Panel.Controls.Add(this.txtFiltro);
-            this.kryptonGroupBox3.Size = new System.Drawing.Size(844, 239);
+            this.kryptonGroupBox3.Size = new System.Drawing.Size(844, 238);
             this.kryptonGroupBox3.TabIndex = 219;
             this.kryptonGroupBox3.Values.Heading = "Busqueda";
             // 

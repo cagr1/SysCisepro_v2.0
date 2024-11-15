@@ -71,7 +71,7 @@
             '
             Me.Label1.AutoSize = True
             Me.Label1.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label1.Location = New System.Drawing.Point(138, 18)
+            Me.Label1.Location = New System.Drawing.Point(125, 17)
             Me.Label1.Name = "Label1"
             Me.Label1.Size = New System.Drawing.Size(71, 13)
             Me.Label1.TabIndex = 2
@@ -94,7 +94,7 @@
             Me.dtpFechaDesde.Enabled = False
             Me.dtpFechaDesde.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.dtpFechaDesde.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-            Me.dtpFechaDesde.Location = New System.Drawing.Point(126, 16)
+            Me.dtpFechaDesde.Location = New System.Drawing.Point(518, 16)
             Me.dtpFechaDesde.Name = "dtpFechaDesde"
             Me.dtpFechaDesde.ShowUpDown = True
             Me.dtpFechaDesde.Size = New System.Drawing.Size(161, 20)
@@ -105,7 +105,7 @@
             '
             Me.Label24.AutoSize = True
             Me.Label24.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label24.Location = New System.Drawing.Point(87, 22)
+            Me.Label24.Location = New System.Drawing.Point(455, 16)
             Me.Label24.Name = "Label24"
             Me.Label24.Size = New System.Drawing.Size(37, 13)
             Me.Label24.TabIndex = 230

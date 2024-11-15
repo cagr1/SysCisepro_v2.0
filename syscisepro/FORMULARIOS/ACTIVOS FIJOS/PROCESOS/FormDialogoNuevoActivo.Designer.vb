@@ -46,11 +46,12 @@
             'rbGeneradores
             '
             Me.rbGeneradores.AutoSize = True
-            Me.rbGeneradores.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.rbGeneradores.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.rbGeneradores.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
             Me.rbGeneradores.ImeMode = System.Windows.Forms.ImeMode.NoControl
             Me.rbGeneradores.Location = New System.Drawing.Point(3, 303)
             Me.rbGeneradores.Name = "rbGeneradores"
-            Me.rbGeneradores.Size = New System.Drawing.Size(91, 17)
+            Me.rbGeneradores.Size = New System.Drawing.Size(102, 17)
             Me.rbGeneradores.TabIndex = 139
             Me.rbGeneradores.Tag = "13"
             Me.rbGeneradores.Text = "GENERADORES"
@@ -59,11 +60,12 @@
             'rbEquiposCocina
             '
             Me.rbEquiposCocina.AutoSize = True
-            Me.rbEquiposCocina.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.rbEquiposCocina.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.rbEquiposCocina.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
             Me.rbEquiposCocina.ImeMode = System.Windows.Forms.ImeMode.NoControl
             Me.rbEquiposCocina.Location = New System.Drawing.Point(4, 188)
             Me.rbEquiposCocina.Name = "rbEquiposCocina"
-            Me.rbEquiposCocina.Size = New System.Drawing.Size(116, 17)
+            Me.rbEquiposCocina.Size = New System.Drawing.Size(130, 17)
             Me.rbEquiposCocina.TabIndex = 137
             Me.rbEquiposCocina.Tag = "8"
             Me.rbEquiposCocina.Text = "EQUIPOS DE COCINA"
@@ -72,11 +74,12 @@
             'rbMueblesOficina
             '
             Me.rbMueblesOficina.AutoSize = True
-            Me.rbMueblesOficina.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.rbMueblesOficina.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.rbMueblesOficina.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
             Me.rbMueblesOficina.ImeMode = System.Windows.Forms.ImeMode.NoControl
             Me.rbMueblesOficina.Location = New System.Drawing.Point(4, 165)
             Me.rbMueblesOficina.Name = "rbMueblesOficina"
-            Me.rbMueblesOficina.Size = New System.Drawing.Size(120, 17)
+            Me.rbMueblesOficina.Size = New System.Drawing.Size(135, 17)
             Me.rbMueblesOficina.TabIndex = 136
             Me.rbMueblesOficina.Tag = "7"
             Me.rbMueblesOficina.Text = "MUEBLES DE OFICINA"
@@ -85,11 +88,12 @@
             'rbEquiposOficina
             '
             Me.rbEquiposOficina.AutoSize = True
-            Me.rbEquiposOficina.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.rbEquiposOficina.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.rbEquiposOficina.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
             Me.rbEquiposOficina.ImeMode = System.Windows.Forms.ImeMode.NoControl
             Me.rbEquiposOficina.Location = New System.Drawing.Point(4, 143)
             Me.rbEquiposOficina.Name = "rbEquiposOficina"
-            Me.rbEquiposOficina.Size = New System.Drawing.Size(118, 17)
+            Me.rbEquiposOficina.Size = New System.Drawing.Size(132, 17)
             Me.rbEquiposOficina.TabIndex = 135
             Me.rbEquiposOficina.Tag = "6"
             Me.rbEquiposOficina.Text = "EQUIPOS DE OFICINA"
@@ -98,11 +102,12 @@
             'rbLibrosYcolecciones
             '
             Me.rbLibrosYcolecciones.AutoSize = True
-            Me.rbLibrosYcolecciones.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.rbLibrosYcolecciones.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.rbLibrosYcolecciones.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
             Me.rbLibrosYcolecciones.ImeMode = System.Windows.Forms.ImeMode.NoControl
             Me.rbLibrosYcolecciones.Location = New System.Drawing.Point(4, 120)
             Me.rbLibrosYcolecciones.Name = "rbLibrosYcolecciones"
-            Me.rbLibrosYcolecciones.Size = New System.Drawing.Size(128, 17)
+            Me.rbLibrosYcolecciones.Size = New System.Drawing.Size(149, 17)
             Me.rbLibrosYcolecciones.TabIndex = 134
             Me.rbLibrosYcolecciones.Tag = "5"
             Me.rbLibrosYcolecciones.Text = "LIBROS Y COLECCIONES"
@@ -111,11 +116,12 @@
             'rbEquiposComputo
             '
             Me.rbEquiposComputo.AutoSize = True
-            Me.rbEquiposComputo.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.rbEquiposComputo.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.rbEquiposComputo.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
             Me.rbEquiposComputo.ImeMode = System.Windows.Forms.ImeMode.NoControl
             Me.rbEquiposComputo.Location = New System.Drawing.Point(4, 94)
             Me.rbEquiposComputo.Name = "rbEquiposComputo"
-            Me.rbEquiposComputo.Size = New System.Drawing.Size(128, 17)
+            Me.rbEquiposComputo.Size = New System.Drawing.Size(144, 17)
             Me.rbEquiposComputo.TabIndex = 133
             Me.rbEquiposComputo.Tag = "4"
             Me.rbEquiposComputo.Text = "EQUIPOS DE COMPUTO"
@@ -124,11 +130,12 @@
             'rbTerrenos
             '
             Me.rbTerrenos.AutoSize = True
-            Me.rbTerrenos.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.rbTerrenos.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.rbTerrenos.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
             Me.rbTerrenos.ImeMode = System.Windows.Forms.ImeMode.NoControl
             Me.rbTerrenos.Location = New System.Drawing.Point(3, 71)
             Me.rbTerrenos.Name = "rbTerrenos"
-            Me.rbTerrenos.Size = New System.Drawing.Size(71, 17)
+            Me.rbTerrenos.Size = New System.Drawing.Size(81, 17)
             Me.rbTerrenos.TabIndex = 132
             Me.rbTerrenos.Tag = "3"
             Me.rbTerrenos.Text = "TERRENOS"
@@ -137,11 +144,12 @@
             'rbVehiculo
             '
             Me.rbVehiculo.AutoSize = True
-            Me.rbVehiculo.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.rbVehiculo.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.rbVehiculo.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
             Me.rbVehiculo.ImeMode = System.Windows.Forms.ImeMode.NoControl
             Me.rbVehiculo.Location = New System.Drawing.Point(3, 48)
             Me.rbVehiculo.Name = "rbVehiculo"
-            Me.rbVehiculo.Size = New System.Drawing.Size(76, 17)
+            Me.rbVehiculo.Size = New System.Drawing.Size(84, 17)
             Me.rbVehiculo.TabIndex = 131
             Me.rbVehiculo.Tag = "2"
             Me.rbVehiculo.Text = "VEHÍCULOS"
@@ -150,11 +158,12 @@
             'rbRadios
             '
             Me.rbRadios.AutoSize = True
-            Me.rbRadios.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.rbRadios.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.rbRadios.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
             Me.rbRadios.ImeMode = System.Windows.Forms.ImeMode.NoControl
             Me.rbRadios.Location = New System.Drawing.Point(3, 25)
             Me.rbRadios.Name = "rbRadios"
-            Me.rbRadios.Size = New System.Drawing.Size(59, 17)
+            Me.rbRadios.Size = New System.Drawing.Size(64, 17)
             Me.rbRadios.TabIndex = 130
             Me.rbRadios.Tag = "1"
             Me.rbRadios.Text = "RADIOS"
@@ -164,11 +173,12 @@
             '
             Me.rbArmas.AutoSize = True
             Me.rbArmas.Checked = True
-            Me.rbArmas.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.rbArmas.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.rbArmas.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
             Me.rbArmas.ImeMode = System.Windows.Forms.ImeMode.NoControl
             Me.rbArmas.Location = New System.Drawing.Point(3, 2)
             Me.rbArmas.Name = "rbArmas"
-            Me.rbArmas.Size = New System.Drawing.Size(57, 17)
+            Me.rbArmas.Size = New System.Drawing.Size(63, 17)
             Me.rbArmas.TabIndex = 129
             Me.rbArmas.TabStop = True
             Me.rbArmas.Tag = "0"
@@ -193,11 +203,12 @@
             'rbEquiposComunicacion
             '
             Me.rbEquiposComunicacion.AutoSize = True
-            Me.rbEquiposComunicacion.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.rbEquiposComunicacion.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.rbEquiposComunicacion.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
             Me.rbEquiposComunicacion.ImeMode = System.Windows.Forms.ImeMode.NoControl
             Me.rbEquiposComunicacion.Location = New System.Drawing.Point(4, 234)
             Me.rbEquiposComunicacion.Name = "rbEquiposComunicacion"
-            Me.rbEquiposComunicacion.Size = New System.Drawing.Size(212, 17)
+            Me.rbEquiposComunicacion.Size = New System.Drawing.Size(243, 17)
             Me.rbEquiposComunicacion.TabIndex = 142
             Me.rbEquiposComunicacion.Tag = "10"
             Me.rbEquiposComunicacion.Text = "EQUIPOS DE COMUNICACIÓN Y TELEFONÍA"
@@ -206,11 +217,12 @@
             'rbEquiposSeguridadIndustrial
             '
             Me.rbEquiposSeguridadIndustrial.AutoSize = True
-            Me.rbEquiposSeguridadIndustrial.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.rbEquiposSeguridadIndustrial.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.rbEquiposSeguridadIndustrial.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
             Me.rbEquiposSeguridadIndustrial.ImeMode = System.Windows.Forms.ImeMode.NoControl
             Me.rbEquiposSeguridadIndustrial.Location = New System.Drawing.Point(3, 257)
             Me.rbEquiposSeguridadIndustrial.Name = "rbEquiposSeguridadIndustrial"
-            Me.rbEquiposSeguridadIndustrial.Size = New System.Drawing.Size(190, 17)
+            Me.rbEquiposSeguridadIndustrial.Size = New System.Drawing.Size(214, 17)
             Me.rbEquiposSeguridadIndustrial.TabIndex = 143
             Me.rbEquiposSeguridadIndustrial.Tag = "11"
             Me.rbEquiposSeguridadIndustrial.Text = "EQUIPOS DE SEGURIDAD INDUSTRIAL"
@@ -219,11 +231,12 @@
             'rbEquiposAmbientacion
             '
             Me.rbEquiposAmbientacion.AutoSize = True
-            Me.rbEquiposAmbientacion.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.rbEquiposAmbientacion.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.rbEquiposAmbientacion.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
             Me.rbEquiposAmbientacion.ImeMode = System.Windows.Forms.ImeMode.NoControl
             Me.rbEquiposAmbientacion.Location = New System.Drawing.Point(4, 211)
             Me.rbEquiposAmbientacion.Name = "rbEquiposAmbientacion"
-            Me.rbEquiposAmbientacion.Size = New System.Drawing.Size(150, 17)
+            Me.rbEquiposAmbientacion.Size = New System.Drawing.Size(171, 17)
             Me.rbEquiposAmbientacion.TabIndex = 144
             Me.rbEquiposAmbientacion.Tag = "9"
             Me.rbEquiposAmbientacion.Text = "EQUIPOS DE AMBIENTACIÓN"
@@ -232,11 +245,12 @@
             'rbChaleco
             '
             Me.rbChaleco.AutoSize = True
-            Me.rbChaleco.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.rbChaleco.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.rbChaleco.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
             Me.rbChaleco.ImeMode = System.Windows.Forms.ImeMode.NoControl
             Me.rbChaleco.Location = New System.Drawing.Point(3, 326)
             Me.rbChaleco.Name = "rbChaleco"
-            Me.rbChaleco.Size = New System.Drawing.Size(72, 17)
+            Me.rbChaleco.Size = New System.Drawing.Size(81, 17)
             Me.rbChaleco.TabIndex = 145
             Me.rbChaleco.Tag = "14"
             Me.rbChaleco.Text = "CHALECOS"
@@ -245,11 +259,12 @@
             'rbCamarasSeguridad
             '
             Me.rbCamarasSeguridad.AutoSize = True
-            Me.rbCamarasSeguridad.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.rbCamarasSeguridad.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.rbCamarasSeguridad.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
             Me.rbCamarasSeguridad.ImeMode = System.Windows.Forms.ImeMode.NoControl
             Me.rbCamarasSeguridad.Location = New System.Drawing.Point(3, 280)
             Me.rbCamarasSeguridad.Name = "rbCamarasSeguridad"
-            Me.rbCamarasSeguridad.Size = New System.Drawing.Size(138, 17)
+            Me.rbCamarasSeguridad.Size = New System.Drawing.Size(155, 17)
             Me.rbCamarasSeguridad.TabIndex = 146
             Me.rbCamarasSeguridad.Tag = "12"
             Me.rbCamarasSeguridad.Text = "CAMARAS DE SEGURIDAD"
@@ -258,11 +273,12 @@
             'rbSoftware
             '
             Me.rbSoftware.AutoSize = True
-            Me.rbSoftware.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.rbSoftware.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.rbSoftware.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
             Me.rbSoftware.ImeMode = System.Windows.Forms.ImeMode.NoControl
             Me.rbSoftware.Location = New System.Drawing.Point(3, 348)
             Me.rbSoftware.Name = "rbSoftware"
-            Me.rbSoftware.Size = New System.Drawing.Size(74, 17)
+            Me.rbSoftware.Size = New System.Drawing.Size(83, 17)
             Me.rbSoftware.TabIndex = 147
             Me.rbSoftware.Tag = "15"
             Me.rbSoftware.Text = "SOFTWARE"
@@ -273,7 +289,7 @@
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.BackColor = System.Drawing.Color.White
-            Me.ClientSize = New System.Drawing.Size(239, 410)
+            Me.ClientSize = New System.Drawing.Size(245, 410)
             Me.Controls.Add(Me.rbSoftware)
             Me.Controls.Add(Me.rbCamarasSeguridad)
             Me.Controls.Add(Me.rbChaleco)

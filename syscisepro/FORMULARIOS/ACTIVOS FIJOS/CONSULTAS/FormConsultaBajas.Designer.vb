@@ -25,6 +25,8 @@
         Private Sub InitializeComponent()
             Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormConsultaBajas))
             Me.dgvActivoFijosBajas = New System.Windows.Forms.DataGridView()
             CType(Me.dgvActivoFijosBajas, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -37,22 +39,34 @@
             Me.dgvActivoFijosBajas.AllowUserToResizeRows = False
             DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
             Me.dgvActivoFijosBajas.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
-            Me.dgvActivoFijosBajas.BackgroundColor = System.Drawing.Color.White
+            Me.dgvActivoFijosBajas.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
+            Me.dgvActivoFijosBajas.BorderStyle = System.Windows.Forms.BorderStyle.None
             Me.dgvActivoFijosBajas.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
-            Me.dgvActivoFijosBajas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
             DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-            DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
-            DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
-            DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(123, Byte), Integer))
+            DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control
+            DataGridViewCellStyle2.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText
+            DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
             DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-            DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-            Me.dgvActivoFijosBajas.DefaultCellStyle = DataGridViewCellStyle2
+            DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+            Me.dgvActivoFijosBajas.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+            Me.dgvActivoFijosBajas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+            DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+            DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window
+            DataGridViewCellStyle3.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText
+            DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(123, Byte), Integer))
+            DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+            DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+            Me.dgvActivoFijosBajas.DefaultCellStyle = DataGridViewCellStyle3
             Me.dgvActivoFijosBajas.Location = New System.Drawing.Point(2, 1)
             Me.dgvActivoFijosBajas.MultiSelect = False
             Me.dgvActivoFijosBajas.Name = "dgvActivoFijosBajas"
             Me.dgvActivoFijosBajas.ReadOnly = True
             Me.dgvActivoFijosBajas.RowHeadersVisible = False
+            DataGridViewCellStyle4.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.dgvActivoFijosBajas.RowsDefaultCellStyle = DataGridViewCellStyle4
+            Me.dgvActivoFijosBajas.RowTemplate.DefaultCellStyle.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.dgvActivoFijosBajas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
             Me.dgvActivoFijosBajas.Size = New System.Drawing.Size(984, 453)
             Me.dgvActivoFijosBajas.TabIndex = 0
@@ -69,6 +83,10 @@
             Me.MaximizeBox = False
             Me.Name = "FormConsultaBajas"
             Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+            Me.StateActive.Border.DrawBorders = CType((((Krypton.Toolkit.PaletteDrawBorders.Top Or Krypton.Toolkit.PaletteDrawBorders.Bottom) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Left) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Right), Krypton.Toolkit.PaletteDrawBorders)
+            Me.StateActive.Border.Rounding = 5.0!
             Me.Text = "CONSULTA DE BAJAS ACTIVOS FIJOS"
             CType(Me.dgvActivoFijosBajas, System.ComponentModel.ISupportInitialize).EndInit()
             Me.ResumeLayout(False)

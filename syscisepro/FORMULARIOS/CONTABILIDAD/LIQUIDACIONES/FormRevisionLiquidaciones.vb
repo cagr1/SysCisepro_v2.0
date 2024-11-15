@@ -9,6 +9,7 @@ Imports ClassLibraryCisepro.ENUMS
 Imports ClassLibraryCisepro.FONDOS.FONDO_ROTATIVO
 Imports ClassLibraryCisepro.ProcesosSql
 Imports ClassLibraryCisepro.CONTABILIDAD.RETENCIONES_EMITIDAS
+Imports Krypton.Toolkit
 
 
 Namespace FORMULARIOS.CONTABILIDAD.LIQUIDACIONES
@@ -204,7 +205,8 @@ Namespace FORMULARIOS.CONTABILIDAD.LIQUIDACIONES
                 Next
             Catch ex As Exception
                 dgvLiquidacionesPendientes.DataSource = Nothing
-                MsgBox("METODO CARGAR LIQUIDACIÓN." & vbNewLine & ex.Message.ToString, MsgBoxStyle.Exclamation, "MENSAJE DE EXCEPCIÓN")
+
+                KryptonMessageBox.Show("METODO CARGAR LIQUIDACIÓN." & vbNewLine & ex.Message.ToString, "MENSAJE DE EXCEPCIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
 
@@ -243,7 +245,8 @@ Namespace FORMULARIOS.CONTABILIDAD.LIQUIDACIONES
                 Next
             Catch ex As Exception
                 dgvSolicitudFondoRotativo.DataSource = Nothing
-                MsgBox("METODO CARGAR SOLICITUD LIQUIDACIÓN DEDUCIBLE." & vbNewLine & ex.Message.ToString, MsgBoxStyle.Exclamation, "MENSAJE DE EXCEPCIÓN")
+                'MsgBox("METODO CARGAR SOLICITUD LIQUIDACIÓN DEDUCIBLE." & vbNewLine & ex.Message.ToString, MsgBoxStyle.Exclamation, "MENSAJE DE EXCEPCIÓN")
+                KryptonMessageBox.Show("METODO CARGAR SOLICITUD LIQUIDACIÓN DEDUCIBLE." & vbNewLine & ex.Message.ToString, "MENSAJE DE EXCEPCIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
 
@@ -283,7 +286,8 @@ Namespace FORMULARIOS.CONTABILIDAD.LIQUIDACIONES
 
             Catch ex As Exception
                 dgvSolicitudFonoRotativoNoDeducible.DataSource = Nothing
-                MsgBox("METODO CARGAR SOLICITUD LIQUIDACIÓN NO DEDUCIBLE." & vbNewLine & ex.Message.ToString, MsgBoxStyle.Exclamation, "MENSAJE DE EXCEPCIÓN")
+                'MsgBox("METODO CARGAR SOLICITUD LIQUIDACIÓN NO DEDUCIBLE." & vbNewLine & ex.Message.ToString, MsgBoxStyle.Exclamation, "MENSAJE DE EXCEPCIÓN")
+                KryptonMessageBox.Show("METODO CARGAR SOLICITUD LIQUIDACIÓN NO DEDUCIBLE." & vbNewLine & ex.Message.ToString, "MENSAJE DE EXCEPCIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
 
@@ -303,15 +307,18 @@ Namespace FORMULARIOS.CONTABILIDAD.LIQUIDACIONES
 
         Private Sub btnReportes_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnFinRevision.Click
             If dgvSolicitudFondoRotativo.RowCount = 0 And dgvSolicitudFonoRotativoNoDeducible.RowCount = 0 Then
-                MsgBox("NO SE CARGARON LAS SOLICITUDES DE FONDO POR FAVOR REVISE LA LIQUIDACIÓN", MsgBoxStyle.Information, "MENSAJE DE INFORMACIÓN")
+                'MsgBox("NO SE CARGARON LAS SOLICITUDES DE FONDO POR FAVOR REVISE LA LIQUIDACIÓN", MsgBoxStyle.Information, "MENSAJE DE INFORMACIÓN")
+                KryptonMessageBox.Show("NO SE CARGARON LAS SOLICITUDES DE FONDO POR FAVOR REVISE LA LIQUIDACIÓN", "MENSAJE DE INFORMACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
             Else
 
                 If Not ValidarSeleccion() Then
-                    MsgBox("DEBE SELECCIONAR AL MENOS UNA SOLICITUD PARA REALIZAR LA LIQUIDACIÓN", MsgBoxStyle.Information, "MENSAJE DE INFORMACIÓN")
+                    'MsgBox("DEBE SELECCIONAR AL MENOS UNA SOLICITUD PARA REALIZAR LA LIQUIDACIÓN", MsgBoxStyle.Information, "MENSAJE DE INFORMACIÓN")
+                    KryptonMessageBox.Show("DEBE SELECCIONAR AL MENOS UNA SOLICITUD PARA REALIZAR LA LIQUIDACIÓN", "MENSAJE DE INFORMACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
                     Return
                 End If
 
-                If MsgBox("ESTÁ SEGURO QUE DESEA PROCESAR LA LIQUIDACIÓN ACTUAL?", MsgBoxStyle.YesNo, "MENSAJE DE INFORMACIÓN") <> DialogResult.Yes Then Return
+                'If MsgBox("ESTÁ SEGURO QUE DESEA PROCESAR LA LIQUIDACIÓN ACTUAL?", MsgBoxStyle.YesNo, "MENSAJE DE INFORMACIÓN") <> DialogResult.Yes Then Return
+                If KryptonMessageBox.Show("ESTÁ PROCESANDO LA LIQUIDACIÓN ACTUAL", "MENSAJE DE INFORMACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information) <> DialogResult.Yes Then Return
                 dgvSolicitudFondoRotativo_CellEndEdit(Nothing, Nothing)
                 dgvSolicitudFonoRotativoNoDeducible_CellEndEdit(Nothing, Nothing)
 
@@ -341,7 +348,8 @@ Namespace FORMULARIOS.CONTABILIDAD.LIQUIDACIONES
 
                 Dim texto = "DEBE: " & _valDebe & "        -        HABER: " & _valHaber
                 If Math.Abs(_valDebe - _valHaber) > 0.01 Then
-                    MsgBox("NO ES POSBLE PROCESAR LA LIQUIDACIÓN PORQUE LA TRANSACCIÓN GENERADA NO CUADRA!!!" & vbNewLine & texto)
+                    'MsgBox("NO ES POSBLE PROCESAR LA LIQUIDACIÓN PORQUE LA TRANSACCIÓN GENERADA NO CUADRA!!!" & vbNewLine & texto)
+                    KryptonMessageBox.Show("NO ES POSBLE PROCESAR LA LIQUIDACIÓN PORQUE LA TRANSACCIÓN GENERADA NO CUADRA!!!" & vbNewLine & texto, "MENSAJE DE INFORMACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
                     Return
                 End If
 
@@ -352,7 +360,17 @@ Namespace FORMULARIOS.CONTABILIDAD.LIQUIDACIONES
                     LimpiarParametros()
                     CargarLiquidacionFondoRotativo()
                 End If
-                MsgBox(res(1) & vbNewLine & texto, If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
+                'MsgBox(res(1) & vbNewLine & texto, If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
+
+                Dim messageIcon As KryptonMessageBoxIcon
+                If res(0) Then
+                    messageIcon = KryptonMessageBoxIcon.Information
+                Else
+                    messageIcon = KryptonMessageBoxIcon.Exclamation
+                End If
+                KryptonMessageBox.Show(res(1) & vbNewLine & texto, "Mensaje del sistema", KryptonMessageBoxButtons.OK, messageIcon)
+
+
 
             End If
         End Sub
@@ -506,7 +524,8 @@ Namespace FORMULARIOS.CONTABILIDAD.LIQUIDACIONES
                             'End If
 
                             If dgvDetalleComprobanteRetencionCompra.Rows(r).Cells.Item(10).Value.ToString().Trim().Length = 0 Or dgvDetalleComprobanteRetencionCompra.Rows(r).Cells.Item(11).Value.ToString().Trim().Length = 0 Then
-                                MsgBox("NO SE PUEDE GUARDAR." & vbNewLine & "LA CUENTA PARA EL CÓDIGO DE RETENCIÓN ESCOGIDO EN LA FAC. ID: " & dgvComprobanteCompra.Rows(0).Cells(0).Value & " NO HA SIDO DEFINIDA EN LA BD!", MsgBoxStyle.Exclamation, "MENSAJE DE VALICACIÓN")
+                                'MsgBox("NO SE PUEDE GUARDAR." & vbNewLine & "LA CUENTA PARA EL CÓDIGO DE RETENCIÓN ESCOGIDO EN LA FAC. ID: " & dgvComprobanteCompra.Rows(0).Cells(0).Value & " NO HA SIDO DEFINIDA EN LA BD!", MsgBoxStyle.Exclamation, "MENSAJE DE VALICACIÓN")
+                                KryptonMessageBox.Show("NO SE PUEDE GUARDAR." & vbNewLine & "LA CUENTA PARA EL CÓDIGO DE RETENCIÓN ESCOGIDO EN LA FAC. ID: " & dgvComprobanteCompra.Rows(0).Cells(0).Value & " NO HA SIDO DEFINIDA EN LA BD!", "MENSAJE DE VALICACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
                                 Exit Sub
                             End If
 

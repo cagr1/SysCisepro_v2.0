@@ -204,6 +204,12 @@ Namespace FORMULARIOS.CONTABILIDAD.CUENTAS_POR_COBRAR
             dgvCuentasPorCobrar.Columns(8).HeaderText = "SALDO"
             dgvCuentasPorCobrar.Columns(8).Width = 80
 
+            dgvCuentasPorCobrar.Columns(9).HeaderText = "TELEFONO"
+            dgvCuentasPorCobrar.Columns(9).Width = 80
+
+            dgvCuentasPorCobrar.Columns(10).HeaderText = "TIPO CLIENTE"
+            dgvCuentasPorCobrar.Columns(10).Width = 100
+
             'cantidadRegistrosCuentasPorCobrar = CType(dgvCuentasPorCobrar.DataSource, DataTable).Rows.Count
 
             dgvCuentasPorCobrar.ReadOnly = False

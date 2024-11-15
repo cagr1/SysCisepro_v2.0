@@ -409,8 +409,7 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.CONSULTAS
 
 
 
-            txtBuscar.ForeColor = ValidationForms.GetColorSistema(_tipoCon)
-            txtBuscar.Font = New Font("Roboto", 9, FontStyle.Regular)
+
 
             Dim validation As New ValidationForms()
             validation.SetPlaceholder(txtBuscar, "Buscar Activo por Serie o Nombre")
@@ -418,7 +417,7 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.CONSULTAS
 
 
 
-            Me.Controls.Add(txtBuscar)
+
 
 
         End Sub
@@ -527,19 +526,15 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.CONSULTAS
             End If
         End Sub
 
-        Private Sub txtBuscar_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtBuscar.KeyPress
 
-        End Sub
 
-        Private Sub txtBuscar_KeyDown(sender As Object, e As KeyEventArgs) Handles txtBuscar.KeyDown
+        Private Sub txtBuscar_KeyDown(sender As Object, e As KeyEventArgs)
             If e.KeyCode = Keys.Enter Then
                 btnBuscar_Click(Nothing, Nothing)
             End If
 
         End Sub
 
-        Private Sub txtBuscar_TextChanged(sender As Object, e As EventArgs) Handles txtBuscar.TextChanged
 
-        End Sub
     End Class
 End Namespace

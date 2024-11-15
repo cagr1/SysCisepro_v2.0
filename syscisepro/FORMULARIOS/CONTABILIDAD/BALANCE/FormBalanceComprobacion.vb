@@ -2,6 +2,7 @@
 Imports ClassLibraryCisepro.ENUMS
 Imports Microsoft.Office.Interop
 Imports syscisepro.DATOS
+Imports Krypton.Toolkit
 
 Namespace FORMULARIOS.CONTABILIDAD.BALANCE
   ''' <summary>
@@ -145,7 +146,8 @@ Namespace FORMULARIOS.CONTABILIDAD.BALANCE
         Public Sub ExportarDatosExcel(ByVal dgvAsientosDiario As DataGridView, ByVal titulo As String)
             Try
                 If dgvAsientosDiario.Rows.Count = 0 Then
-                    MsgBox("NO HAY DATOS QUE EXPORTAR!", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                    'MsgBox("NO HAY DATOS QUE EXPORTAR!", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                    KryptonMessageBox.Show("NO HAY DATOS QUE EXPORTAR!", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                     Return
                 End If
 
@@ -355,7 +357,8 @@ Namespace FORMULARIOS.CONTABILIDAD.BALANCE
                     End If
                 End If
             Catch ex As Exception
-                MsgBox(ex.Message.ToString)
+                'MsgBox(ex.Message.ToString)
+                KryptonMessageBox.Show(ex.Message.ToString, "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
 
@@ -394,7 +397,7 @@ Namespace FORMULARIOS.CONTABILIDAD.BALANCE
             CantidadReistros()
         End Sub
 
-        Private Sub tpActualizar_Click(sender As Object, e As EventArgs) Handles tpActualizar.Click
+        Private Sub tpActualizar_Click(sender As Object, e As EventArgs)
 
         End Sub
     End Class

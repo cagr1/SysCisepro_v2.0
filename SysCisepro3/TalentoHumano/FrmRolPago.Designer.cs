@@ -1566,9 +1566,9 @@
             this.btnDatos.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDatos.Image = global::SysCisepro3.Properties.Resources.folder_open_24dp_FILL0_wght400_GRAD0_opsz24__2_;
             this.btnDatos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDatos.Location = new System.Drawing.Point(622, 1);
+            this.btnDatos.Location = new System.Drawing.Point(632, 1);
             this.btnDatos.Name = "btnDatos";
-            this.btnDatos.Size = new System.Drawing.Size(78, 27);
+            this.btnDatos.Size = new System.Drawing.Size(94, 27);
             this.btnDatos.TabIndex = 219;
             this.btnDatos.Text = "DATOS";
             this.btnDatos.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -1618,9 +1618,9 @@
             this.btnDescuentos.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDescuentos.Image = global::SysCisepro3.Properties.Resources.pending_actions_24dp_FILL0_wght400_GRAD0_opsz24;
             this.btnDescuentos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDescuentos.Location = new System.Drawing.Point(801, 1);
+            this.btnDescuentos.Location = new System.Drawing.Point(847, 1);
             this.btnDescuentos.Name = "btnDescuentos";
-            this.btnDescuentos.Size = new System.Drawing.Size(112, 27);
+            this.btnDescuentos.Size = new System.Drawing.Size(121, 27);
             this.btnDescuentos.TabIndex = 215;
             this.btnDescuentos.Text = "DESCUENTOS";
             this.btnDescuentos.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -1728,10 +1728,10 @@
             this.btnCargarPersonal.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCargarPersonal.Image = global::SysCisepro3.Properties.Resources.task_alt_20dp;
             this.btnCargarPersonal.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCargarPersonal.Location = new System.Drawing.Point(523, 1);
+            this.btnCargarPersonal.Location = new System.Drawing.Point(520, 1);
             this.btnCargarPersonal.Name = "btnCargarPersonal";
             this.btnCargarPersonal.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btnCargarPersonal.Size = new System.Drawing.Size(93, 27);
+            this.btnCargarPersonal.Size = new System.Drawing.Size(103, 27);
             this.btnCargarPersonal.TabIndex = 44;
             this.btnCargarPersonal.Text = "GENERAR";
             this.btnCargarPersonal.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -1747,9 +1747,9 @@
             this.btnParams.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnParams.Image = global::SysCisepro3.Properties.Resources.list_24dp__2_;
             this.btnParams.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnParams.Location = new System.Drawing.Point(706, 1);
+            this.btnParams.Location = new System.Drawing.Point(737, 1);
             this.btnParams.Name = "btnParams";
-            this.btnParams.Size = new System.Drawing.Size(89, 27);
+            this.btnParams.Size = new System.Drawing.Size(99, 27);
             this.btnParams.TabIndex = 216;
             this.btnParams.Text = "PARAMS.";
             this.btnParams.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -2263,7 +2263,7 @@
             this.metroTabControl1.Location = new System.Drawing.Point(0, 79);
             this.metroTabControl1.MCursor = System.Windows.Forms.Cursors.Hand;
             this.metroTabControl1.Name = "metroTabControl1";
-            this.metroTabControl1.SelectedIndex = 1;
+            this.metroTabControl1.SelectedIndex = 2;
             this.metroTabControl1.SelectedTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.metroTabControl1.Size = new System.Drawing.Size(1285, 657);
             this.metroTabControl1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
@@ -2576,6 +2576,7 @@
             this.btnGenerar.TabIndex = 223;
             this.btnGenerar.Text = "GENERAR";
             this.btnGenerar.UseVisualStyleBackColor = false;
+            this.btnGenerar.Click += new System.EventHandler(this.btnGenerar_Click_1);
             // 
             // FrmRolPago
             // 

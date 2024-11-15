@@ -126,7 +126,8 @@
             '
             'KryptonGroupBox1
             '
-            Me.KryptonGroupBox1.GroupBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.ButtonAlternate
+            Me.KryptonGroupBox1.CaptionOverlap = 0R
+            Me.KryptonGroupBox1.GroupBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.ControlRibbon
             Me.KryptonGroupBox1.Location = New System.Drawing.Point(0, 279)
             Me.KryptonGroupBox1.Name = "KryptonGroupBox1"
             '
@@ -147,7 +148,7 @@
             '
             'Button1
             '
-            Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(213, Byte), Integer), CType(CType(227, Byte), Integer), CType(CType(242, Byte), Integer))
+            Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.Button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(213, Byte), Integer), CType(CType(227, Byte), Integer), CType(CType(242, Byte), Integer))
             Me.Button1.FlatAppearance.BorderSize = 0
             Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -165,7 +166,7 @@
             '
             'btnNormalF
             '
-            Me.btnNormalF.BackColor = System.Drawing.Color.FromArgb(CType(CType(213, Byte), Integer), CType(CType(227, Byte), Integer), CType(CType(242, Byte), Integer))
+            Me.btnNormalF.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.btnNormalF.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(213, Byte), Integer), CType(CType(227, Byte), Integer), CType(CType(242, Byte), Integer))
             Me.btnNormalF.FlatAppearance.BorderSize = 0
             Me.btnNormalF.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -186,20 +187,20 @@
             Me.TabControl1.Controls.Add(Me.TabPage1)
             Me.TabControl1.Controls.Add(Me.TabPage2)
             Me.TabControl1.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.TabControl1.Location = New System.Drawing.Point(3, 38)
+            Me.TabControl1.Location = New System.Drawing.Point(8, 38)
             Me.TabControl1.Name = "TabControl1"
             Me.TabControl1.SelectedIndex = 0
-            Me.TabControl1.Size = New System.Drawing.Size(564, 243)
+            Me.TabControl1.Size = New System.Drawing.Size(547, 238)
             Me.TabControl1.TabIndex = 305
             '
             'TabPage1
             '
-            Me.TabPage1.BackColor = System.Drawing.Color.FromArgb(CType(CType(187, Byte), Integer), CType(CType(206, Byte), Integer), CType(CType(230, Byte), Integer))
+            Me.TabPage1.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.TabPage1.Controls.Add(Me.dgvNormal)
             Me.TabPage1.Location = New System.Drawing.Point(4, 22)
             Me.TabPage1.Name = "TabPage1"
             Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-            Me.TabPage1.Size = New System.Drawing.Size(556, 217)
+            Me.TabPage1.Size = New System.Drawing.Size(539, 212)
             Me.TabPage1.TabIndex = 0
             Me.TabPage1.Text = "Normal"
             '
@@ -217,8 +218,8 @@
             Me.dgvNormal.Name = "dgvNormal"
             Me.dgvNormal.RowHeadersVisible = False
             Me.dgvNormal.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvNormal.Size = New System.Drawing.Size(550, 211)
-            Me.dgvNormal.StateCommon.Background.Color1 = System.Drawing.Color.FromArgb(CType(CType(214, Byte), Integer), CType(CType(228, Byte), Integer), CType(CType(243, Byte), Integer))
+            Me.dgvNormal.Size = New System.Drawing.Size(533, 206)
+            Me.dgvNormal.StateCommon.Background.Color1 = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.dgvNormal.StateCommon.BackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.GridBackgroundList
             Me.dgvNormal.StateCommon.DataCell.Border.Color1 = System.Drawing.Color.White
             Me.dgvNormal.StateCommon.DataCell.Border.DrawBorders = CType((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top Or ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) _
@@ -228,12 +229,12 @@
             '
             'TabPage2
             '
-            Me.TabPage2.BackColor = System.Drawing.Color.FromArgb(CType(CType(187, Byte), Integer), CType(CType(206, Byte), Integer), CType(CType(230, Byte), Integer))
+            Me.TabPage2.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.TabPage2.Controls.Add(Me.dgvSanciones)
             Me.TabPage2.Location = New System.Drawing.Point(4, 22)
             Me.TabPage2.Name = "TabPage2"
             Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-            Me.TabPage2.Size = New System.Drawing.Size(556, 217)
+            Me.TabPage2.Size = New System.Drawing.Size(539, 212)
             Me.TabPage2.TabIndex = 1
             Me.TabPage2.Text = "Agrupado"
             '
@@ -245,7 +246,7 @@
             Me.dgvSanciones.AllowUserToResizeRows = False
             DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
             Me.dgvSanciones.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle2
-            Me.dgvSanciones.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(214, Byte), Integer), CType(CType(228, Byte), Integer), CType(CType(243, Byte), Integer))
+            Me.dgvSanciones.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.dgvSanciones.BorderStyle = System.Windows.Forms.BorderStyle.None
             Me.dgvSanciones.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedHorizontal
             Me.dgvSanciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
@@ -253,8 +254,9 @@
             Me.dgvSanciones.Location = New System.Drawing.Point(3, 3)
             Me.dgvSanciones.Name = "dgvSanciones"
             Me.dgvSanciones.RowHeadersVisible = False
+            Me.dgvSanciones.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
             Me.dgvSanciones.ShowEditingIcon = False
-            Me.dgvSanciones.Size = New System.Drawing.Size(550, 211)
+            Me.dgvSanciones.Size = New System.Drawing.Size(533, 206)
             Me.dgvSanciones.TabIndex = 0
             '
             'KryptonLabel3
@@ -657,7 +659,7 @@
             'KryptonGroupBox2
             '
             Me.KryptonGroupBox2.CaptionOverlap = 0.85R
-            Me.KryptonGroupBox2.GroupBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.ButtonAlternate
+            Me.KryptonGroupBox2.GroupBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.ControlRibbon
             Me.KryptonGroupBox2.Location = New System.Drawing.Point(0, 33)
             Me.KryptonGroupBox2.Name = "KryptonGroupBox2"
             '

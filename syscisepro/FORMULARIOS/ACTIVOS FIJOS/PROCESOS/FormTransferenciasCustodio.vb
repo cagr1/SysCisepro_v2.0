@@ -200,8 +200,8 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
             Try
                 Dim data = _objetoEmpresa.SeleccionarTodosLosRegistrosEmpresa(_tipoCon)
                 cbEmpresa.DataSource = data
-                cbEmpresa.DisplayMember = data.Columns("NOMBRE_EMPRESA").ToString
-                cbEmpresa.ValueMember = data.Columns("NOMBRE_EMPRESA").ToString
+                cbEmpresa.DisplayMember = data.Columns("NOMBRE_COMERCIAL_EMPRESA").ToString
+                cbEmpresa.ValueMember = data.Columns("NOMBRE_COMERCIAL_EMPRESA").ToString
                 cbEmpresa.DropDownWidth = 100
             Catch
                 cbEmpresa.DataSource = Nothing

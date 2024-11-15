@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tcNivelOGrupoOcupacional = new System.Windows.Forms.TabControl();
             this.tpGrupoONivelOcupacional = new System.Windows.Forms.TabPage();
             this.MenuStrip1 = new System.Windows.Forms.ToolStrip();
@@ -50,12 +50,10 @@
             this.dgGrupoOcupacional = new System.Windows.Forms.DataGridView();
             this.tpSeries = new System.Windows.Forms.TabPage();
             this.MenuStrip2 = new System.Windows.Forms.ToolStrip();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.btnNuevaSerie = new System.Windows.Forms.ToolStripMenuItem();
             this.btnGuardarSerie = new System.Windows.Forms.ToolStripMenuItem();
             this.btnModificarSerie = new System.Windows.Forms.ToolStripMenuItem();
             this.btnCancelarSerie = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnReporteSerie = new System.Windows.Forms.ToolStripMenuItem();
             this.Label6 = new System.Windows.Forms.Label();
             this.cbmGrupo = new System.Windows.Forms.ComboBox();
             this.Label2 = new System.Windows.Forms.Label();
@@ -80,6 +78,21 @@
             this.Label8 = new System.Windows.Forms.Label();
             this.Label5 = new System.Windows.Forms.Label();
             this.lblSerieCargo = new System.Windows.Forms.Label();
+            this.kryptonNavigator1 = new ComponentFactory.Krypton.Navigator.KryptonNavigator();
+            this.kryptonPage1 = new ComponentFactory.Krypton.Navigator.KryptonPage();
+            this.kryptonPage2 = new ComponentFactory.Krypton.Navigator.KryptonPage();
+            this.kryptonPage3 = new ComponentFactory.Krypton.Navigator.KryptonPage();
+            this.kryptonLabel1 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel2 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel3 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel4 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
+            this.kryptonLabel5 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel6 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel7 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel8 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel9 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.tcNivelOGrupoOcupacional.SuspendLayout();
             this.tpGrupoONivelOcupacional.SuspendLayout();
             this.MenuStrip1.SuspendLayout();
@@ -90,6 +103,14 @@
             this.tpCargos.SuspendLayout();
             this.MenuStrip3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgCargo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonNavigator1)).BeginInit();
+            this.kryptonNavigator1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonPage1)).BeginInit();
+            this.kryptonPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonPage2)).BeginInit();
+            this.kryptonPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonPage3)).BeginInit();
+            this.kryptonPage3.SuspendLayout();
             this.SuspendLayout();
             // 
             // tcNivelOGrupoOcupacional
@@ -97,25 +118,21 @@
             this.tcNivelOGrupoOcupacional.Controls.Add(this.tpGrupoONivelOcupacional);
             this.tcNivelOGrupoOcupacional.Controls.Add(this.tpSeries);
             this.tcNivelOGrupoOcupacional.Controls.Add(this.tpCargos);
-            this.tcNivelOGrupoOcupacional.Location = new System.Drawing.Point(0, 1);
+            this.tcNivelOGrupoOcupacional.Location = new System.Drawing.Point(376, 39);
             this.tcNivelOGrupoOcupacional.Name = "tcNivelOGrupoOcupacional";
             this.tcNivelOGrupoOcupacional.SelectedIndex = 0;
-            this.tcNivelOGrupoOcupacional.Size = new System.Drawing.Size(761, 359);
+            this.tcNivelOGrupoOcupacional.Size = new System.Drawing.Size(131, 76);
             this.tcNivelOGrupoOcupacional.TabIndex = 3;
             // 
             // tpGrupoONivelOcupacional
             // 
             this.tpGrupoONivelOcupacional.BackColor = System.Drawing.Color.White;
-            this.tpGrupoONivelOcupacional.Controls.Add(this.MenuStrip1);
             this.tpGrupoONivelOcupacional.Controls.Add(this.lblDescripcion);
             this.tpGrupoONivelOcupacional.Controls.Add(this.lblCodigo);
-            this.tpGrupoONivelOcupacional.Controls.Add(this.txtDescripcion);
-            this.tpGrupoONivelOcupacional.Controls.Add(this.txtCodigo);
-            this.tpGrupoONivelOcupacional.Controls.Add(this.dgGrupoOcupacional);
             this.tpGrupoONivelOcupacional.Location = new System.Drawing.Point(4, 22);
             this.tpGrupoONivelOcupacional.Name = "tpGrupoONivelOcupacional";
             this.tpGrupoONivelOcupacional.Padding = new System.Windows.Forms.Padding(3);
-            this.tpGrupoONivelOcupacional.Size = new System.Drawing.Size(753, 333);
+            this.tpGrupoONivelOcupacional.Size = new System.Drawing.Size(394, 333);
             this.tpGrupoONivelOcupacional.TabIndex = 0;
             this.tpGrupoONivelOcupacional.Text = "A. GRUPO OCUPACIONAL";
             // 
@@ -131,69 +148,73 @@
             this.btnModificar,
             this.btnCancelar,
             this.btnReportes});
-            this.MenuStrip1.Location = new System.Drawing.Point(3, 3);
+            this.MenuStrip1.Location = new System.Drawing.Point(0, 0);
             this.MenuStrip1.Name = "MenuStrip1";
             this.MenuStrip1.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
-            this.MenuStrip1.Size = new System.Drawing.Size(747, 27);
+            this.MenuStrip1.Size = new System.Drawing.Size(576, 35);
             this.MenuStrip1.TabIndex = 183;
             this.MenuStrip1.Text = "msIngresoBodega";
             // 
             // btnCargarGerencia
             // 
-            this.btnCargarGerencia.Image = global::SysCisepro3.Properties.Resources.BuscarRegistro;
+            this.btnCargarGerencia.Image = global::SysCisepro3.Properties.Resources.search_24dp_FILL0_wght400_GRAD0_opsz24__2_;
+            this.btnCargarGerencia.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnCargarGerencia.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnCargarGerencia.Name = "btnCargarGerencia";
-            this.btnCargarGerencia.Size = new System.Drawing.Size(86, 20);
-            this.btnCargarGerencia.Text = "VER TODAS";
+            this.btnCargarGerencia.Size = new System.Drawing.Size(79, 28);
+            this.btnCargarGerencia.Text = "BUSCAR";
             this.btnCargarGerencia.Click += new System.EventHandler(this.btnCargarGerencia_Click);
             // 
             // btnNuevo
             // 
-            this.btnNuevo.Image = global::SysCisepro3.Properties.Resources.NuevoRegistro;
+            this.btnNuevo.Image = global::SysCisepro3.Properties.Resources.add_circle_24dp_FILL0_wght400_GRAD0_opsz24__3_;
             this.btnNuevo.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnNuevo.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(66, 20);
+            this.btnNuevo.Size = new System.Drawing.Size(74, 28);
             this.btnNuevo.Text = "NUEVO";
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
             // btnGuardar
             // 
             this.btnGuardar.Enabled = false;
-            this.btnGuardar.Image = global::SysCisepro3.Properties.Resources.GuardarRegistro;
+            this.btnGuardar.Image = global::SysCisepro3.Properties.Resources.save_24dp_FILL0_wght400_GRAD0_opsz24__2_;
             this.btnGuardar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnGuardar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(81, 20);
+            this.btnGuardar.Size = new System.Drawing.Size(89, 28);
             this.btnGuardar.Text = "GUARDAR";
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // btnModificar
             // 
             this.btnModificar.Enabled = false;
-            this.btnModificar.Image = global::SysCisepro3.Properties.Resources.ModificarRegistro;
+            this.btnModificar.Image = global::SysCisepro3.Properties.Resources.edit_document_24dp_FILL0_wght400_GRAD0_opsz24__2_;
+            this.btnModificar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnModificar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(96, 20);
+            this.btnModificar.Size = new System.Drawing.Size(104, 28);
             this.btnModificar.Text = "ACTUALIZAR";
             this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // btnCancelar
             // 
             this.btnCancelar.Enabled = false;
-            this.btnCancelar.Image = global::SysCisepro3.Properties.Resources.cancel;
+            this.btnCancelar.Image = global::SysCisepro3.Properties.Resources.cancel_24dp_FILL0_wght400_GRAD0_opsz24;
+            this.btnCancelar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnCancelar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(87, 20);
+            this.btnCancelar.Size = new System.Drawing.Size(95, 28);
             this.btnCancelar.Text = "CANCELAR";
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnReportes
             // 
-            this.btnReportes.Image = global::SysCisepro3.Properties.Resources.report;
+            this.btnReportes.Image = global::SysCisepro3.Properties.Resources.description_24dp_FILL0_wght400_GRAD0_opsz24__2_;
+            this.btnReportes.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnReportes.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnReportes.Name = "btnReportes";
-            this.btnReportes.Size = new System.Drawing.Size(74, 20);
+            this.btnReportes.Size = new System.Drawing.Size(82, 28);
             this.btnReportes.Text = "REPORTE";
             this.btnReportes.Click += new System.EventHandler(this.btnReportes_Click);
             // 
@@ -220,9 +241,9 @@
             this.txtDescripcion.BackColor = System.Drawing.Color.White;
             this.txtDescripcion.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtDescripcion.Enabled = false;
-            this.txtDescripcion.Location = new System.Drawing.Point(302, 34);
+            this.txtDescripcion.Location = new System.Drawing.Point(203, 54);
             this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(370, 22);
+            this.txtDescripcion.Size = new System.Drawing.Size(313, 22);
             this.txtDescripcion.TabIndex = 46;
             // 
             // txtCodigo
@@ -231,7 +252,7 @@
             this.txtCodigo.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtCodigo.Enabled = false;
             this.txtCodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCodigo.Location = new System.Drawing.Point(73, 34);
+            this.txtCodigo.Location = new System.Drawing.Point(41, 52);
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(65, 22);
             this.txtCodigo.TabIndex = 45;
@@ -242,44 +263,40 @@
             this.dgGrupoOcupacional.AllowUserToAddRows = false;
             this.dgGrupoOcupacional.AllowUserToDeleteRows = false;
             this.dgGrupoOcupacional.AllowUserToResizeRows = false;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgGrupoOcupacional.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
-            this.dgGrupoOcupacional.BackgroundColor = System.Drawing.Color.White;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgGrupoOcupacional.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
+            this.dgGrupoOcupacional.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
+            this.dgGrupoOcupacional.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgGrupoOcupacional.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
             this.dgGrupoOcupacional.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(60)))), ((int)(((byte)(123)))));
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgGrupoOcupacional.DefaultCellStyle = dataGridViewCellStyle8;
-            this.dgGrupoOcupacional.Location = new System.Drawing.Point(3, 61);
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(60)))), ((int)(((byte)(123)))));
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgGrupoOcupacional.DefaultCellStyle = dataGridViewCellStyle14;
+            this.dgGrupoOcupacional.Location = new System.Drawing.Point(12, 86);
             this.dgGrupoOcupacional.MultiSelect = false;
             this.dgGrupoOcupacional.Name = "dgGrupoOcupacional";
             this.dgGrupoOcupacional.ReadOnly = true;
             this.dgGrupoOcupacional.RowHeadersVisible = false;
             this.dgGrupoOcupacional.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgGrupoOcupacional.Size = new System.Drawing.Size(747, 269);
+            this.dgGrupoOcupacional.Size = new System.Drawing.Size(443, 148);
             this.dgGrupoOcupacional.TabIndex = 44;
             this.dgGrupoOcupacional.SelectionChanged += new System.EventHandler(this.dgGrupoOcupacional_SelectionChanged);
             // 
             // tpSeries
             // 
             this.tpSeries.BackColor = System.Drawing.Color.White;
-            this.tpSeries.Controls.Add(this.MenuStrip2);
             this.tpSeries.Controls.Add(this.Label6);
-            this.tpSeries.Controls.Add(this.cbmGrupo);
             this.tpSeries.Controls.Add(this.Label2);
             this.tpSeries.Controls.Add(this.Label3);
-            this.tpSeries.Controls.Add(this.txtDescripcionSerie);
-            this.tpSeries.Controls.Add(this.txtCodigoSerie);
-            this.tpSeries.Controls.Add(this.dgSeries);
             this.tpSeries.Location = new System.Drawing.Point(4, 22);
             this.tpSeries.Name = "tpSeries";
             this.tpSeries.Padding = new System.Windows.Forms.Padding(3);
-            this.tpSeries.Size = new System.Drawing.Size(753, 333);
+            this.tpSeries.Size = new System.Drawing.Size(311, 333);
             this.tpSeries.TabIndex = 1;
             this.tpSeries.Text = "B. SERIES";
             // 
@@ -287,73 +304,60 @@
             // 
             this.MenuStrip2.AllowMerge = false;
             this.MenuStrip2.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.MenuStrip2.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.MenuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButton1,
+            this.toolStripButton3,
             this.btnNuevaSerie,
             this.btnGuardarSerie,
             this.btnModificarSerie,
             this.btnCancelarSerie,
-            this.btnReporteSerie});
-            this.MenuStrip2.Location = new System.Drawing.Point(3, 3);
+            this.toolStripMenuItem5});
+            this.MenuStrip2.Location = new System.Drawing.Point(0, 0);
             this.MenuStrip2.Name = "MenuStrip2";
             this.MenuStrip2.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
-            this.MenuStrip2.Size = new System.Drawing.Size(747, 27);
+            this.MenuStrip2.Size = new System.Drawing.Size(576, 35);
             this.MenuStrip2.TabIndex = 184;
             this.MenuStrip2.Text = "msIngresoBodega";
-            // 
-            // toolStripButton1
-            // 
-            this.toolStripButton1.Image = global::SysCisepro3.Properties.Resources.BuscarRegistro;
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(86, 20);
-            this.toolStripButton1.Text = "VER TODAS";
-            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
+            this.MenuStrip2.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.MenuStrip2_ItemClicked);
             // 
             // btnNuevaSerie
             // 
-            this.btnNuevaSerie.Image = global::SysCisepro3.Properties.Resources.NuevoRegistro;
+            this.btnNuevaSerie.Image = global::SysCisepro3.Properties.Resources.add_circle_24dp_FILL0_wght400_GRAD0_opsz24__3_;
             this.btnNuevaSerie.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnNuevaSerie.Name = "btnNuevaSerie";
-            this.btnNuevaSerie.Size = new System.Drawing.Size(74, 23);
+            this.btnNuevaSerie.Size = new System.Drawing.Size(82, 28);
             this.btnNuevaSerie.Text = "NUEVO";
             this.btnNuevaSerie.Click += new System.EventHandler(this.btnNuevaSerie_Click);
             // 
             // btnGuardarSerie
             // 
             this.btnGuardarSerie.Enabled = false;
-            this.btnGuardarSerie.Image = global::SysCisepro3.Properties.Resources.GuardarRegistro;
+            this.btnGuardarSerie.Image = global::SysCisepro3.Properties.Resources.save_24dp_FILL0_wght400_GRAD0_opsz24__2_;
             this.btnGuardarSerie.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnGuardarSerie.Name = "btnGuardarSerie";
-            this.btnGuardarSerie.Size = new System.Drawing.Size(89, 23);
+            this.btnGuardarSerie.Size = new System.Drawing.Size(97, 28);
             this.btnGuardarSerie.Text = "GUARDAR";
             this.btnGuardarSerie.Click += new System.EventHandler(this.btnGuardarSerie_Click);
             // 
             // btnModificarSerie
             // 
             this.btnModificarSerie.Enabled = false;
-            this.btnModificarSerie.Image = global::SysCisepro3.Properties.Resources.ModificarRegistro;
+            this.btnModificarSerie.Image = global::SysCisepro3.Properties.Resources.edit_document_24dp_FILL0_wght400_GRAD0_opsz24__2_;
+            this.btnModificarSerie.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnModificarSerie.Name = "btnModificarSerie";
-            this.btnModificarSerie.Size = new System.Drawing.Size(104, 23);
+            this.btnModificarSerie.Size = new System.Drawing.Size(112, 28);
             this.btnModificarSerie.Text = "ACTUALIZAR";
             this.btnModificarSerie.Click += new System.EventHandler(this.btnModificarSerie_Click);
             // 
             // btnCancelarSerie
             // 
             this.btnCancelarSerie.Enabled = false;
-            this.btnCancelarSerie.Image = global::SysCisepro3.Properties.Resources.cancel;
+            this.btnCancelarSerie.Image = global::SysCisepro3.Properties.Resources.cancel_24dp_FILL0_wght400_GRAD0_opsz24;
+            this.btnCancelarSerie.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnCancelarSerie.Name = "btnCancelarSerie";
-            this.btnCancelarSerie.Size = new System.Drawing.Size(95, 23);
+            this.btnCancelarSerie.Size = new System.Drawing.Size(103, 28);
             this.btnCancelarSerie.Text = "CANCELAR";
             this.btnCancelarSerie.Click += new System.EventHandler(this.btnCancelarSerie_Click);
-            // 
-            // btnReporteSerie
-            // 
-            this.btnReporteSerie.Image = global::SysCisepro3.Properties.Resources.report;
-            this.btnReporteSerie.Name = "btnReporteSerie";
-            this.btnReporteSerie.Size = new System.Drawing.Size(82, 23);
-            this.btnReporteSerie.Text = "REPORTE";
-            this.btnReporteSerie.Click += new System.EventHandler(this.btnReporteSerie_Click);
             // 
             // Label6
             // 
@@ -371,7 +375,7 @@
             this.cbmGrupo.Enabled = false;
             this.cbmGrupo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbmGrupo.FormattingEnabled = true;
-            this.cbmGrupo.Location = new System.Drawing.Point(571, 40);
+            this.cbmGrupo.Location = new System.Drawing.Point(197, 69);
             this.cbmGrupo.Name = "cbmGrupo";
             this.cbmGrupo.Size = new System.Drawing.Size(176, 21);
             this.cbmGrupo.TabIndex = 56;
@@ -399,9 +403,9 @@
             this.txtDescripcionSerie.BackColor = System.Drawing.Color.White;
             this.txtDescripcionSerie.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtDescripcionSerie.Enabled = false;
-            this.txtDescripcionSerie.Location = new System.Drawing.Point(219, 40);
+            this.txtDescripcionSerie.Location = new System.Drawing.Point(197, 41);
             this.txtDescripcionSerie.Name = "txtDescripcionSerie";
-            this.txtDescripcionSerie.Size = new System.Drawing.Size(291, 22);
+            this.txtDescripcionSerie.Size = new System.Drawing.Size(213, 22);
             this.txtDescripcionSerie.TabIndex = 53;
             // 
             // txtCodigoSerie
@@ -410,7 +414,7 @@
             this.txtCodigoSerie.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtCodigoSerie.Enabled = false;
             this.txtCodigoSerie.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCodigoSerie.Location = new System.Drawing.Point(32, 40);
+            this.txtCodigoSerie.Location = new System.Drawing.Point(41, 41);
             this.txtCodigoSerie.Name = "txtCodigoSerie";
             this.txtCodigoSerie.Size = new System.Drawing.Size(65, 22);
             this.txtCodigoSerie.TabIndex = 52;
@@ -422,38 +426,33 @@
             this.dgSeries.AllowUserToDeleteRows = false;
             this.dgSeries.AllowUserToResizeColumns = false;
             this.dgSeries.AllowUserToResizeRows = false;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgSeries.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
-            this.dgSeries.BackgroundColor = System.Drawing.Color.White;
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgSeries.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle15;
+            this.dgSeries.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
+            this.dgSeries.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgSeries.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
             this.dgSeries.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(60)))), ((int)(((byte)(123)))));
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgSeries.DefaultCellStyle = dataGridViewCellStyle10;
-            this.dgSeries.Location = new System.Drawing.Point(3, 68);
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle16.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle16.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(60)))), ((int)(((byte)(123)))));
+            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgSeries.DefaultCellStyle = dataGridViewCellStyle16;
+            this.dgSeries.Location = new System.Drawing.Point(13, 99);
             this.dgSeries.MultiSelect = false;
             this.dgSeries.Name = "dgSeries";
             this.dgSeries.ReadOnly = true;
             this.dgSeries.RowHeadersVisible = false;
             this.dgSeries.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgSeries.Size = new System.Drawing.Size(747, 262);
+            this.dgSeries.Size = new System.Drawing.Size(442, 150);
             this.dgSeries.TabIndex = 51;
             this.dgSeries.SelectionChanged += new System.EventHandler(this.dgSeries_SelectionChanged);
             // 
             // tpCargos
             // 
             this.tpCargos.BackColor = System.Drawing.Color.White;
-            this.tpCargos.Controls.Add(this.MenuStrip3);
-            this.tpCargos.Controls.Add(this.txtSueldo);
-            this.tpCargos.Controls.Add(this.cbmSerie);
-            this.tpCargos.Controls.Add(this.txtDescripcionCargo);
-            this.tpCargos.Controls.Add(this.txtCodigoCargo);
-            this.tpCargos.Controls.Add(this.dgCargo);
             this.tpCargos.Controls.Add(this.Label4);
             this.tpCargos.Controls.Add(this.Label8);
             this.tpCargos.Controls.Add(this.Label5);
@@ -461,12 +460,14 @@
             this.tpCargos.Location = new System.Drawing.Point(4, 22);
             this.tpCargos.Name = "tpCargos";
             this.tpCargos.Padding = new System.Windows.Forms.Padding(3);
-            this.tpCargos.Size = new System.Drawing.Size(753, 333);
+            this.tpCargos.Size = new System.Drawing.Size(123, 50);
             this.tpCargos.TabIndex = 2;
             this.tpCargos.Text = "C. CARGOS";
             // 
             // MenuStrip3
             // 
+            this.MenuStrip3.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.MenuStrip3.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.MenuStrip3.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripButton2,
             this.btnNuevoCargo,
@@ -474,65 +475,68 @@
             this.btnModificarCargo,
             this.btnCancelarCargo,
             this.btnReporteCargo});
-            this.MenuStrip3.Location = new System.Drawing.Point(3, 3);
+            this.MenuStrip3.Location = new System.Drawing.Point(0, 0);
             this.MenuStrip3.Name = "MenuStrip3";
             this.MenuStrip3.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
-            this.MenuStrip3.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.MenuStrip3.Size = new System.Drawing.Size(747, 27);
+            this.MenuStrip3.Size = new System.Drawing.Size(576, 35);
             this.MenuStrip3.TabIndex = 185;
             this.MenuStrip3.Text = "msIngresoBodega";
             // 
             // toolStripButton2
             // 
-            this.toolStripButton2.Image = global::SysCisepro3.Properties.Resources.BuscarRegistro;
+            this.toolStripButton2.Image = global::SysCisepro3.Properties.Resources.search_24dp_FILL0_wght400_GRAD0_opsz24__2_;
+            this.toolStripButton2.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(86, 20);
-            this.toolStripButton2.Text = "VER TODAS";
+            this.toolStripButton2.Size = new System.Drawing.Size(79, 28);
+            this.toolStripButton2.Text = "BUSCAR";
             this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
             // 
             // btnNuevoCargo
             // 
-            this.btnNuevoCargo.Image = global::SysCisepro3.Properties.Resources.NuevoRegistro;
+            this.btnNuevoCargo.Image = global::SysCisepro3.Properties.Resources.add_circle_24dp_FILL0_wght400_GRAD0_opsz24__3_;
             this.btnNuevoCargo.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnNuevoCargo.Name = "btnNuevoCargo";
-            this.btnNuevoCargo.Size = new System.Drawing.Size(74, 23);
+            this.btnNuevoCargo.Size = new System.Drawing.Size(82, 28);
             this.btnNuevoCargo.Text = "NUEVO";
             this.btnNuevoCargo.Click += new System.EventHandler(this.btnNuevoCargo_Click);
             // 
             // btnGuardarCargo
             // 
             this.btnGuardarCargo.Enabled = false;
-            this.btnGuardarCargo.Image = global::SysCisepro3.Properties.Resources.GuardarRegistro;
+            this.btnGuardarCargo.Image = global::SysCisepro3.Properties.Resources.save_24dp_FILL0_wght400_GRAD0_opsz24__2_;
             this.btnGuardarCargo.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnGuardarCargo.Name = "btnGuardarCargo";
-            this.btnGuardarCargo.Size = new System.Drawing.Size(89, 23);
+            this.btnGuardarCargo.Size = new System.Drawing.Size(97, 28);
             this.btnGuardarCargo.Text = "GUARDAR";
             this.btnGuardarCargo.Click += new System.EventHandler(this.btnGuardarCargo_Click);
             // 
             // btnModificarCargo
             // 
             this.btnModificarCargo.Enabled = false;
-            this.btnModificarCargo.Image = global::SysCisepro3.Properties.Resources.ModificarRegistro;
+            this.btnModificarCargo.Image = global::SysCisepro3.Properties.Resources.edit_document_24dp_FILL0_wght400_GRAD0_opsz24__2_;
+            this.btnModificarCargo.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnModificarCargo.Name = "btnModificarCargo";
-            this.btnModificarCargo.Size = new System.Drawing.Size(104, 23);
+            this.btnModificarCargo.Size = new System.Drawing.Size(112, 28);
             this.btnModificarCargo.Text = "ACTUALIZAR";
             this.btnModificarCargo.Click += new System.EventHandler(this.btnModificarCargo_Click);
             // 
             // btnCancelarCargo
             // 
             this.btnCancelarCargo.Enabled = false;
-            this.btnCancelarCargo.Image = global::SysCisepro3.Properties.Resources.cancel;
+            this.btnCancelarCargo.Image = global::SysCisepro3.Properties.Resources.cancel_24dp_FILL0_wght400_GRAD0_opsz24;
+            this.btnCancelarCargo.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnCancelarCargo.Name = "btnCancelarCargo";
-            this.btnCancelarCargo.Size = new System.Drawing.Size(95, 23);
+            this.btnCancelarCargo.Size = new System.Drawing.Size(103, 28);
             this.btnCancelarCargo.Text = "CANCELAR";
             this.btnCancelarCargo.Click += new System.EventHandler(this.btnCancelarCargo_Click);
             // 
             // btnReporteCargo
             // 
-            this.btnReporteCargo.Image = global::SysCisepro3.Properties.Resources.report;
+            this.btnReporteCargo.Image = global::SysCisepro3.Properties.Resources.description_24dp_FILL0_wght400_GRAD0_opsz24__2_;
+            this.btnReporteCargo.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnReporteCargo.Name = "btnReporteCargo";
-            this.btnReporteCargo.Size = new System.Drawing.Size(82, 23);
+            this.btnReporteCargo.Size = new System.Drawing.Size(90, 28);
             this.btnReporteCargo.Text = "REPORTE";
             this.btnReporteCargo.Click += new System.EventHandler(this.btnReporteCargo_Click);
             // 
@@ -541,7 +545,7 @@
             this.txtSueldo.BackColor = System.Drawing.Color.White;
             this.txtSueldo.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtSueldo.Enabled = false;
-            this.txtSueldo.Location = new System.Drawing.Point(691, 37);
+            this.txtSueldo.Location = new System.Drawing.Point(370, 71);
             this.txtSueldo.Name = "txtSueldo";
             this.txtSueldo.Size = new System.Drawing.Size(56, 22);
             this.txtSueldo.TabIndex = 67;
@@ -555,7 +559,7 @@
             this.cbmSerie.Enabled = false;
             this.cbmSerie.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbmSerie.FormattingEnabled = true;
-            this.cbmSerie.Location = new System.Drawing.Point(149, 37);
+            this.cbmSerie.Location = new System.Drawing.Point(220, 44);
             this.cbmSerie.Name = "cbmSerie";
             this.cbmSerie.Size = new System.Drawing.Size(206, 21);
             this.cbmSerie.TabIndex = 66;
@@ -565,7 +569,7 @@
             this.txtDescripcionCargo.BackColor = System.Drawing.Color.White;
             this.txtDescripcionCargo.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtDescripcionCargo.Enabled = false;
-            this.txtDescripcionCargo.Location = new System.Drawing.Point(448, 37);
+            this.txtDescripcionCargo.Location = new System.Drawing.Point(93, 71);
             this.txtDescripcionCargo.Name = "txtDescripcionCargo";
             this.txtDescripcionCargo.Size = new System.Drawing.Size(186, 22);
             this.txtDescripcionCargo.TabIndex = 60;
@@ -575,7 +579,7 @@
             this.txtCodigoCargo.BackColor = System.Drawing.Color.White;
             this.txtCodigoCargo.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtCodigoCargo.Enabled = false;
-            this.txtCodigoCargo.Location = new System.Drawing.Point(38, 36);
+            this.txtCodigoCargo.Location = new System.Drawing.Point(69, 42);
             this.txtCodigoCargo.Name = "txtCodigoCargo";
             this.txtCodigoCargo.Size = new System.Drawing.Size(63, 22);
             this.txtCodigoCargo.TabIndex = 59;
@@ -587,27 +591,28 @@
             this.dgCargo.AllowUserToDeleteRows = false;
             this.dgCargo.AllowUserToResizeColumns = false;
             this.dgCargo.AllowUserToResizeRows = false;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgCargo.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle11;
-            this.dgCargo.BackgroundColor = System.Drawing.Color.White;
+            dataGridViewCellStyle17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgCargo.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle17;
+            this.dgCargo.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
+            this.dgCargo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgCargo.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
             this.dgCargo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(60)))), ((int)(((byte)(123)))));
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgCargo.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle18.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle18.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle18.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(60)))), ((int)(((byte)(123)))));
+            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgCargo.DefaultCellStyle = dataGridViewCellStyle18;
             this.dgCargo.GridColor = System.Drawing.Color.LightSteelBlue;
-            this.dgCargo.Location = new System.Drawing.Point(2, 64);
+            this.dgCargo.Location = new System.Drawing.Point(13, 107);
             this.dgCargo.MultiSelect = false;
             this.dgCargo.Name = "dgCargo";
             this.dgCargo.ReadOnly = true;
             this.dgCargo.RowHeadersVisible = false;
             this.dgCargo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgCargo.Size = new System.Drawing.Size(748, 266);
+            this.dgCargo.Size = new System.Drawing.Size(454, 154);
             this.dgCargo.TabIndex = 58;
             this.dgCargo.SelectionChanged += new System.EventHandler(this.dgCargo_SelectionChanged);
             // 
@@ -647,12 +652,205 @@
             this.lblSerieCargo.TabIndex = 65;
             this.lblSerieCargo.Text = "SERIE:";
             // 
+            // kryptonNavigator1
+            // 
+            this.kryptonNavigator1.Button.ButtonDisplayLogic = ComponentFactory.Krypton.Navigator.ButtonDisplayLogic.None;
+            this.kryptonNavigator1.Button.CloseButtonAction = ComponentFactory.Krypton.Navigator.CloseButtonAction.RemovePageAndDispose;
+            this.kryptonNavigator1.Button.CloseButtonDisplay = ComponentFactory.Krypton.Navigator.ButtonDisplay.Hide;
+            this.kryptonNavigator1.Button.ContextButtonAction = ComponentFactory.Krypton.Navigator.ContextButtonAction.SelectPage;
+            this.kryptonNavigator1.Button.ContextButtonDisplay = ComponentFactory.Krypton.Navigator.ButtonDisplay.Logic;
+            this.kryptonNavigator1.Button.ContextMenuMapImage = ComponentFactory.Krypton.Navigator.MapKryptonPageImage.Small;
+            this.kryptonNavigator1.Button.ContextMenuMapText = ComponentFactory.Krypton.Navigator.MapKryptonPageText.TextTitle;
+            this.kryptonNavigator1.Button.NextButtonAction = ComponentFactory.Krypton.Navigator.DirectionButtonAction.ModeAppropriateAction;
+            this.kryptonNavigator1.Button.NextButtonDisplay = ComponentFactory.Krypton.Navigator.ButtonDisplay.Logic;
+            this.kryptonNavigator1.Button.PreviousButtonAction = ComponentFactory.Krypton.Navigator.DirectionButtonAction.ModeAppropriateAction;
+            this.kryptonNavigator1.Button.PreviousButtonDisplay = ComponentFactory.Krypton.Navigator.ButtonDisplay.Logic;
+            this.kryptonNavigator1.Group.GroupBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.ControlClient;
+            this.kryptonNavigator1.Group.GroupBorderStyle = ComponentFactory.Krypton.Toolkit.PaletteBorderStyle.ControlClient;
+            this.kryptonNavigator1.Header.HeaderStyleBar = ComponentFactory.Krypton.Toolkit.HeaderStyle.Secondary;
+            this.kryptonNavigator1.Header.HeaderStylePrimary = ComponentFactory.Krypton.Toolkit.HeaderStyle.Primary;
+            this.kryptonNavigator1.Header.HeaderStyleSecondary = ComponentFactory.Krypton.Toolkit.HeaderStyle.Secondary;
+            this.kryptonNavigator1.Location = new System.Drawing.Point(-1, -3);
+            this.kryptonNavigator1.Name = "kryptonNavigator1";
+            this.kryptonNavigator1.NavigatorMode = ComponentFactory.Krypton.Navigator.NavigatorMode.BarTabGroup;
+            this.kryptonNavigator1.PageBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.ControlClient;
+            this.kryptonNavigator1.Pages.AddRange(new ComponentFactory.Krypton.Navigator.KryptonPage[] {
+            this.kryptonPage1,
+            this.kryptonPage2,
+            this.kryptonPage3});
+            this.kryptonNavigator1.Panel.PanelBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.PanelClient;
+            this.kryptonNavigator1.SelectedIndex = 0;
+            this.kryptonNavigator1.Size = new System.Drawing.Size(578, 296);
+            this.kryptonNavigator1.TabIndex = 4;
+            this.kryptonNavigator1.Text = "kryptonNavigator1";
+            // 
+            // kryptonPage1
+            // 
+            this.kryptonPage1.AutoHiddenSlideSize = new System.Drawing.Size(200, 200);
+            this.kryptonPage1.Controls.Add(this.kryptonLabel2);
+            this.kryptonPage1.Controls.Add(this.kryptonLabel1);
+            this.kryptonPage1.Controls.Add(this.dgGrupoOcupacional);
+            this.kryptonPage1.Controls.Add(this.txtDescripcion);
+            this.kryptonPage1.Controls.Add(this.MenuStrip1);
+            this.kryptonPage1.Controls.Add(this.txtCodigo);
+            this.kryptonPage1.Flags = 65534;
+            this.kryptonPage1.LastVisibleSet = true;
+            this.kryptonPage1.MinimumSize = new System.Drawing.Size(50, 50);
+            this.kryptonPage1.Name = "kryptonPage1";
+            this.kryptonPage1.Size = new System.Drawing.Size(576, 269);
+            this.kryptonPage1.StateCommon.Page.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
+            this.kryptonPage1.StateCommon.Page.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.kryptonPage1.Text = "Grupo Ocupacional";
+            this.kryptonPage1.ToolTipStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.ToolTip;
+            this.kryptonPage1.ToolTipTitle = "Page ToolTip";
+            this.kryptonPage1.UniqueName = "A76B54B8C78343155EB4F5889B43B01B";
+            // 
+            // kryptonPage2
+            // 
+            this.kryptonPage2.AutoHiddenSlideSize = new System.Drawing.Size(200, 200);
+            this.kryptonPage2.Controls.Add(this.kryptonLabel5);
+            this.kryptonPage2.Controls.Add(this.kryptonLabel3);
+            this.kryptonPage2.Controls.Add(this.kryptonLabel4);
+            this.kryptonPage2.Controls.Add(this.dgSeries);
+            this.kryptonPage2.Controls.Add(this.MenuStrip2);
+            this.kryptonPage2.Controls.Add(this.txtDescripcionSerie);
+            this.kryptonPage2.Controls.Add(this.cbmGrupo);
+            this.kryptonPage2.Controls.Add(this.txtCodigoSerie);
+            this.kryptonPage2.Flags = 65534;
+            this.kryptonPage2.LastVisibleSet = true;
+            this.kryptonPage2.MinimumSize = new System.Drawing.Size(50, 50);
+            this.kryptonPage2.Name = "kryptonPage2";
+            this.kryptonPage2.Size = new System.Drawing.Size(576, 269);
+            this.kryptonPage2.StateCommon.Page.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
+            this.kryptonPage2.StateCommon.Page.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.kryptonPage2.Text = "Series";
+            this.kryptonPage2.ToolTipStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.ToolTip;
+            this.kryptonPage2.ToolTipTitle = "Page ToolTip";
+            this.kryptonPage2.UniqueName = "4F178C407EF04D21D883D50450EC4273";
+            // 
+            // kryptonPage3
+            // 
+            this.kryptonPage3.AutoHiddenSlideSize = new System.Drawing.Size(200, 200);
+            this.kryptonPage3.Controls.Add(this.dgCargo);
+            this.kryptonPage3.Controls.Add(this.kryptonLabel9);
+            this.kryptonPage3.Controls.Add(this.txtSueldo);
+            this.kryptonPage3.Controls.Add(this.MenuStrip3);
+            this.kryptonPage3.Controls.Add(this.txtDescripcionCargo);
+            this.kryptonPage3.Controls.Add(this.cbmSerie);
+            this.kryptonPage3.Controls.Add(this.kryptonLabel6);
+            this.kryptonPage3.Controls.Add(this.kryptonLabel7);
+            this.kryptonPage3.Controls.Add(this.txtCodigoCargo);
+            this.kryptonPage3.Controls.Add(this.kryptonLabel8);
+            this.kryptonPage3.Flags = 65534;
+            this.kryptonPage3.LastVisibleSet = true;
+            this.kryptonPage3.MinimumSize = new System.Drawing.Size(50, 50);
+            this.kryptonPage3.Name = "kryptonPage3";
+            this.kryptonPage3.Size = new System.Drawing.Size(576, 269);
+            this.kryptonPage3.StateCommon.Page.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
+            this.kryptonPage3.StateCommon.Page.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.kryptonPage3.Text = "Cargos";
+            this.kryptonPage3.ToolTipStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.ToolTip;
+            this.kryptonPage3.ToolTipTitle = "Page ToolTip";
+            this.kryptonPage3.UniqueName = "27D9A2A52CC141AA72BC25B06034551D";
+            // 
+            // kryptonLabel1
+            // 
+            this.kryptonLabel1.Location = new System.Drawing.Point(13, 54);
+            this.kryptonLabel1.Name = "kryptonLabel1";
+            this.kryptonLabel1.Size = new System.Drawing.Size(22, 20);
+            this.kryptonLabel1.TabIndex = 184;
+            this.kryptonLabel1.Values.Text = "ID";
+            // 
+            // kryptonLabel2
+            // 
+            this.kryptonLabel2.Location = new System.Drawing.Point(120, 52);
+            this.kryptonLabel2.Name = "kryptonLabel2";
+            this.kryptonLabel2.Size = new System.Drawing.Size(74, 20);
+            this.kryptonLabel2.TabIndex = 185;
+            this.kryptonLabel2.Values.Text = "Descripcion";
+            // 
+            // kryptonLabel3
+            // 
+            this.kryptonLabel3.Location = new System.Drawing.Point(118, 42);
+            this.kryptonLabel3.Name = "kryptonLabel3";
+            this.kryptonLabel3.Size = new System.Drawing.Size(74, 20);
+            this.kryptonLabel3.TabIndex = 187;
+            this.kryptonLabel3.Values.Text = "Descripcion";
+            // 
+            // kryptonLabel4
+            // 
+            this.kryptonLabel4.Location = new System.Drawing.Point(13, 44);
+            this.kryptonLabel4.Name = "kryptonLabel4";
+            this.kryptonLabel4.Size = new System.Drawing.Size(22, 20);
+            this.kryptonLabel4.TabIndex = 186;
+            this.kryptonLabel4.Values.Text = "ID";
+            // 
+            // toolStripButton3
+            // 
+            this.toolStripButton3.Image = global::SysCisepro3.Properties.Resources.search_24dp_FILL0_wght400_GRAD0_opsz24__2_;
+            this.toolStripButton3.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton3.Name = "toolStripButton3";
+            this.toolStripButton3.Size = new System.Drawing.Size(79, 28);
+            this.toolStripButton3.Text = "BUSCAR";
+            this.toolStripButton3.Click += new System.EventHandler(this.toolStripButton1_Click);
+            // 
+            // toolStripMenuItem5
+            // 
+            this.toolStripMenuItem5.Image = global::SysCisepro3.Properties.Resources.description_24dp_FILL0_wght400_GRAD0_opsz24__2_;
+            this.toolStripMenuItem5.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripMenuItem5.Name = "toolStripMenuItem5";
+            this.toolStripMenuItem5.Size = new System.Drawing.Size(90, 28);
+            this.toolStripMenuItem5.Text = "REPORTE";
+            this.toolStripMenuItem5.Click += new System.EventHandler(this.btnReporteSerie_Click);
+            // 
+            // kryptonLabel5
+            // 
+            this.kryptonLabel5.Location = new System.Drawing.Point(120, 69);
+            this.kryptonLabel5.Name = "kryptonLabel5";
+            this.kryptonLabel5.Size = new System.Drawing.Size(45, 20);
+            this.kryptonLabel5.TabIndex = 188;
+            this.kryptonLabel5.Values.Text = "Grupo";
+            // 
+            // kryptonLabel6
+            // 
+            this.kryptonLabel6.Location = new System.Drawing.Point(13, 69);
+            this.kryptonLabel6.Name = "kryptonLabel6";
+            this.kryptonLabel6.Size = new System.Drawing.Size(74, 20);
+            this.kryptonLabel6.TabIndex = 191;
+            this.kryptonLabel6.Values.Text = "Descripcion";
+            // 
+            // kryptonLabel7
+            // 
+            this.kryptonLabel7.Location = new System.Drawing.Point(154, 42);
+            this.kryptonLabel7.Name = "kryptonLabel7";
+            this.kryptonLabel7.Size = new System.Drawing.Size(37, 20);
+            this.kryptonLabel7.TabIndex = 190;
+            this.kryptonLabel7.Values.Text = "Serie";
+            // 
+            // kryptonLabel8
+            // 
+            this.kryptonLabel8.Location = new System.Drawing.Point(13, 42);
+            this.kryptonLabel8.Name = "kryptonLabel8";
+            this.kryptonLabel8.Size = new System.Drawing.Size(50, 20);
+            this.kryptonLabel8.TabIndex = 189;
+            this.kryptonLabel8.Values.Text = "Codigo";
+            // 
+            // kryptonLabel9
+            // 
+            this.kryptonLabel9.Location = new System.Drawing.Point(299, 71);
+            this.kryptonLabel9.Name = "kryptonLabel9";
+            this.kryptonLabel9.Size = new System.Drawing.Size(48, 20);
+            this.kryptonLabel9.TabIndex = 192;
+            this.kryptonLabel9.Values.Text = "Sueldo";
+            // 
             // FrmCargo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(761, 360);
+            this.ClientSize = new System.Drawing.Size(577, 293);
+            this.Controls.Add(this.kryptonNavigator1);
             this.Controls.Add(this.tcNivelOGrupoOcupacional);
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
@@ -682,6 +880,17 @@
             this.MenuStrip3.ResumeLayout(false);
             this.MenuStrip3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgCargo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonNavigator1)).EndInit();
+            this.kryptonNavigator1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonPage1)).EndInit();
+            this.kryptonPage1.ResumeLayout(false);
+            this.kryptonPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonPage2)).EndInit();
+            this.kryptonPage2.ResumeLayout(false);
+            this.kryptonPage2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonPage3)).EndInit();
+            this.kryptonPage3.ResumeLayout(false);
+            this.kryptonPage3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -702,7 +911,6 @@
         internal System.Windows.Forms.ToolStripMenuItem btnGuardarSerie;
         internal System.Windows.Forms.ToolStripMenuItem btnModificarSerie;
         internal System.Windows.Forms.ToolStripMenuItem btnCancelarSerie;
-        internal System.Windows.Forms.ToolStripMenuItem btnReporteSerie;
         internal System.Windows.Forms.Label Label6;
         internal System.Windows.Forms.ComboBox cbmGrupo;
         internal System.Windows.Forms.Label Label2;
@@ -732,7 +940,21 @@
         internal System.Windows.Forms.ToolStripButton btnCancelar;
         internal System.Windows.Forms.ToolStripButton btnReportes;
         private System.Windows.Forms.ToolStripButton btnCargarGerencia;
-        private System.Windows.Forms.ToolStripButton toolStripButton1;
         private System.Windows.Forms.ToolStripButton toolStripButton2;
+        private ComponentFactory.Krypton.Navigator.KryptonNavigator kryptonNavigator1;
+        private ComponentFactory.Krypton.Navigator.KryptonPage kryptonPage1;
+        private ComponentFactory.Krypton.Navigator.KryptonPage kryptonPage2;
+        private ComponentFactory.Krypton.Navigator.KryptonPage kryptonPage3;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel2;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel1;
+        internal System.Windows.Forms.ToolStripMenuItem toolStripMenuItem5;
+        private System.Windows.Forms.ToolStripButton toolStripButton3;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel3;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel4;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel5;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel9;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel6;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel7;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel8;
     }
 }

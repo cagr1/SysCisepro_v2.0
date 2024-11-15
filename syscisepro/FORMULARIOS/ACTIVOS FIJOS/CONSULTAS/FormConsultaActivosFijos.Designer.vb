@@ -30,173 +30,41 @@
             Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormConsultaActivosFijos))
-            Me.Label1 = New System.Windows.Forms.Label()
-            Me.dgvActivosFijos = New System.Windows.Forms.DataGridView()
-            Me.Label2 = New System.Windows.Forms.Label()
-            Me.txtCantidad = New System.Windows.Forms.TextBox()
-            Me.txtTotal = New System.Windows.Forms.TextBox()
-            Me.Label3 = New System.Windows.Forms.Label()
-            Me.dgvTotalActivosFijos = New System.Windows.Forms.DataGridView()
-            Me.Label4 = New System.Windows.Forms.Label()
             Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
             Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
             Me.btnReporteFondoRotativo = New System.Windows.Forms.ToolStripMenuItem()
-            Me.Label5 = New System.Windows.Forms.Label()
-            Me.txtCustodio = New System.Windows.Forms.TextBox()
-            Me.txtActivo = New System.Windows.Forms.TextBox()
             Me.btnBuscar = New ComponentFactory.Krypton.Toolkit.KryptonButton()
-            Me.txtBuscar = New System.Windows.Forms.TextBox()
-            Me.chbxCategoria = New ComponentFactory.Krypton.Toolkit.KryptonCheckBox()
             Me.cbxActivo = New ComponentFactory.Krypton.Toolkit.KryptonComboBox()
-            CType(Me.dgvActivosFijos, System.ComponentModel.ISupportInitialize).BeginInit()
-            CType(Me.dgvTotalActivosFijos, System.ComponentModel.ISupportInitialize).BeginInit()
+            Me.txtBuscar = New System.Windows.Forms.TextBox()
+            Me.KryptonGroupBox1 = New ComponentFactory.Krypton.Toolkit.KryptonGroupBox()
+            Me.chbxCategoria = New ComponentFactory.Krypton.Toolkit.KryptonCheckBox()
+            Me.dgvTotalActivosFijos = New System.Windows.Forms.DataGridView()
+            Me.KryptonGroupBox2 = New ComponentFactory.Krypton.Toolkit.KryptonGroupBox()
+            Me.dgvActivosFijos = New System.Windows.Forms.DataGridView()
+            Me.KryptonLabel1 = New ComponentFactory.Krypton.Toolkit.KryptonLabel()
+            Me.txtCantidad = New System.Windows.Forms.TextBox()
+            Me.txtActivo = New System.Windows.Forms.TextBox()
+            Me.txtTotal = New System.Windows.Forms.TextBox()
+            Me.KryptonLabel3 = New ComponentFactory.Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel2 = New ComponentFactory.Krypton.Toolkit.KryptonLabel()
+            Me.txtCustodio = New System.Windows.Forms.TextBox()
+            Me.KryptonLabel4 = New ComponentFactory.Krypton.Toolkit.KryptonLabel()
             Me.MenuStrip1.SuspendLayout()
             CType(Me.cbxActivo, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType(Me.KryptonGroupBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType(Me.KryptonGroupBox1.Panel, System.ComponentModel.ISupportInitialize).BeginInit()
+            Me.KryptonGroupBox1.Panel.SuspendLayout()
+            Me.KryptonGroupBox1.SuspendLayout()
+            CType(Me.dgvTotalActivosFijos, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType(Me.KryptonGroupBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType(Me.KryptonGroupBox2.Panel, System.ComponentModel.ISupportInitialize).BeginInit()
+            Me.KryptonGroupBox2.Panel.SuspendLayout()
+            Me.KryptonGroupBox2.SuspendLayout()
+            CType(Me.dgvActivosFijos, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.SuspendLayout()
-            '
-            'Label1
-            '
-            Me.Label1.AutoSize = True
-            Me.Label1.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label1.Location = New System.Drawing.Point(13, 198)
-            Me.Label1.Name = "Label1"
-            Me.Label1.Size = New System.Drawing.Size(74, 13)
-            Me.Label1.TabIndex = 6
-            Me.Label1.Text = "TIPO ACTIVO"
-            '
-            'dgvActivosFijos
-            '
-            Me.dgvActivosFijos.AllowUserToAddRows = False
-            Me.dgvActivosFijos.AllowUserToDeleteRows = False
-            Me.dgvActivosFijos.AllowUserToResizeRows = False
-            DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-            DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-            Me.dgvActivosFijos.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
-            Me.dgvActivosFijos.BackgroundColor = System.Drawing.Color.White
-            Me.dgvActivosFijos.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-            Me.dgvActivosFijos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
-            DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-            DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control
-            DataGridViewCellStyle2.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText
-            DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-            DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-            DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-            Me.dgvActivosFijos.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
-            Me.dgvActivosFijos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-            DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-            DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window
-            DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText
-            DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
-            DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-            DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-            Me.dgvActivosFijos.DefaultCellStyle = DataGridViewCellStyle3
-            Me.dgvActivosFijos.Location = New System.Drawing.Point(0, 236)
-            Me.dgvActivosFijos.MultiSelect = False
-            Me.dgvActivosFijos.Name = "dgvActivosFijos"
-            Me.dgvActivosFijos.ReadOnly = True
-            DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-            DataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control
-            DataGridViewCellStyle4.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText
-            DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
-            DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-            DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-            Me.dgvActivosFijos.RowHeadersDefaultCellStyle = DataGridViewCellStyle4
-            Me.dgvActivosFijos.RowHeadersVisible = False
-            Me.dgvActivosFijos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvActivosFijos.Size = New System.Drawing.Size(974, 358)
-            Me.dgvActivosFijos.TabIndex = 7
-            '
-            'Label2
-            '
-            Me.Label2.AutoSize = True
-            Me.Label2.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label2.Location = New System.Drawing.Point(359, 198)
-            Me.Label2.Name = "Label2"
-            Me.Label2.Size = New System.Drawing.Size(60, 13)
-            Me.Label2.TabIndex = 8
-            Me.Label2.Text = "CANTIDAD"
-            '
-            'txtCantidad
-            '
-            Me.txtCantidad.BackColor = System.Drawing.Color.White
-            Me.txtCantidad.Enabled = False
-            Me.txtCantidad.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtCantidad.Location = New System.Drawing.Point(425, 196)
-            Me.txtCantidad.Name = "txtCantidad"
-            Me.txtCantidad.Size = New System.Drawing.Size(56, 21)
-            Me.txtCantidad.TabIndex = 9
-            Me.txtCantidad.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-            '
-            'txtTotal
-            '
-            Me.txtTotal.BackColor = System.Drawing.Color.White
-            Me.txtTotal.Enabled = False
-            Me.txtTotal.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtTotal.Location = New System.Drawing.Point(537, 196)
-            Me.txtTotal.Name = "txtTotal"
-            Me.txtTotal.Size = New System.Drawing.Size(100, 21)
-            Me.txtTotal.TabIndex = 11
-            Me.txtTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-            '
-            'Label3
-            '
-            Me.Label3.AutoSize = True
-            Me.Label3.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label3.Location = New System.Drawing.Point(493, 200)
-            Me.Label3.Name = "Label3"
-            Me.Label3.Size = New System.Drawing.Size(42, 13)
-            Me.Label3.TabIndex = 10
-            Me.Label3.Text = "TOTAL"
-            '
-            'dgvTotalActivosFijos
-            '
-            Me.dgvTotalActivosFijos.AllowUserToAddRows = False
-            Me.dgvTotalActivosFijos.AllowUserToDeleteRows = False
-            Me.dgvTotalActivosFijos.AllowUserToResizeRows = False
-            DataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-            Me.dgvTotalActivosFijos.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle5
-            Me.dgvTotalActivosFijos.BackgroundColor = System.Drawing.Color.White
-            Me.dgvTotalActivosFijos.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-            Me.dgvTotalActivosFijos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
-            DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-            DataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control
-            DataGridViewCellStyle6.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            DataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText
-            DataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight
-            DataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-            DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-            Me.dgvTotalActivosFijos.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle6
-            Me.dgvTotalActivosFijos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-            Me.dgvTotalActivosFijos.Location = New System.Drawing.Point(0, 92)
-            Me.dgvTotalActivosFijos.MultiSelect = False
-            Me.dgvTotalActivosFijos.Name = "dgvTotalActivosFijos"
-            Me.dgvTotalActivosFijos.ReadOnly = True
-            DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-            DataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control
-            DataGridViewCellStyle7.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            DataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText
-            DataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight
-            DataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-            DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-            Me.dgvTotalActivosFijos.RowHeadersDefaultCellStyle = DataGridViewCellStyle7
-            Me.dgvTotalActivosFijos.RowHeadersVisible = False
-            Me.dgvTotalActivosFijos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvTotalActivosFijos.Size = New System.Drawing.Size(974, 97)
-            Me.dgvTotalActivosFijos.TabIndex = 12
-            '
-            'Label4
-            '
-            Me.Label4.AutoSize = True
-            Me.Label4.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label4.Location = New System.Drawing.Point(16, 71)
-            Me.Label4.Name = "Label4"
-            Me.Label4.Size = New System.Drawing.Size(140, 13)
-            Me.Label4.TabIndex = 13
-            Me.Label4.Text = "TOTAL DE ACTIVOS FIJOS"
             '
             'MenuStrip1
             '
@@ -206,7 +74,7 @@
             Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
             Me.MenuStrip1.Name = "MenuStrip1"
             Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(7, 2, 0, 2)
-            Me.MenuStrip1.Size = New System.Drawing.Size(974, 32)
+            Me.MenuStrip1.Size = New System.Drawing.Size(897, 32)
             Me.MenuStrip1.TabIndex = 242
             Me.MenuStrip1.Text = "msIngresoBodega"
             '
@@ -229,43 +97,11 @@
             Me.btnReporteFondoRotativo.Size = New System.Drawing.Size(91, 28)
             Me.btnReporteFondoRotativo.Text = "REPORTE"
             '
-            'Label5
-            '
-            Me.Label5.AutoSize = True
-            Me.Label5.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label5.Location = New System.Drawing.Point(648, 200)
-            Me.Label5.Name = "Label5"
-            Me.Label5.Size = New System.Drawing.Size(61, 13)
-            Me.Label5.TabIndex = 243
-            Me.Label5.Text = "CUSTODIO"
-            '
-            'txtCustodio
-            '
-            Me.txtCustodio.BackColor = System.Drawing.Color.White
-            Me.txtCustodio.Enabled = False
-            Me.txtCustodio.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtCustodio.Location = New System.Drawing.Point(721, 196)
-            Me.txtCustodio.Name = "txtCustodio"
-            Me.txtCustodio.Size = New System.Drawing.Size(248, 21)
-            Me.txtCustodio.TabIndex = 244
-            Me.txtCustodio.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-            '
-            'txtActivo
-            '
-            Me.txtActivo.BackColor = System.Drawing.Color.White
-            Me.txtActivo.Enabled = False
-            Me.txtActivo.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtActivo.Location = New System.Drawing.Point(105, 195)
-            Me.txtActivo.Name = "txtActivo"
-            Me.txtActivo.Size = New System.Drawing.Size(237, 21)
-            Me.txtActivo.TabIndex = 245
-            Me.txtActivo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-            '
             'btnBuscar
             '
             Me.btnBuscar.AutoSize = True
             Me.btnBuscar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-            Me.btnBuscar.Location = New System.Drawing.Point(220, 36)
+            Me.btnBuscar.Location = New System.Drawing.Point(252, 37)
             Me.btnBuscar.Name = "btnBuscar"
             Me.btnBuscar.Size = New System.Drawing.Size(32, 32)
             Me.btnBuscar.StateCommon.Back.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.[False]
@@ -284,62 +120,252 @@
             Me.btnBuscar.Values.ImageStates.ImageTracking = Global.syscisepro.My.Resources.Resources.search_24dp_FILL0_wght400_GRAD0_opsz40
             Me.btnBuscar.Values.Text = ""
             '
+            'cbxActivo
+            '
+            Me.cbxActivo.DropDownWidth = 129
+            Me.cbxActivo.Enabled = False
+            Me.cbxActivo.Items.AddRange(New Object() {"ARMAS", "RADIOS", "VEHICULOS", "TERRENOS", "EQUIPOS DE COMPUTO", "LIBROS Y COLECCIONES", "EQUIPOS DE OFICINA", "MUEBLES DE OFICINA", "EQUIPOS DE COCINA", "EQUIPOS DE AMBIENTACION", "EQUIPOS DE COMUNICACION Y TELEFONIA", "EQUIPOS DE SEGURIDAD INDUSTRIAL", "CAMARAS DE SEGURIDAD", "GENERADORES", "CHALECOS", "SOFTWARE"})
+            Me.cbxActivo.Location = New System.Drawing.Point(405, 44)
+            Me.cbxActivo.Name = "cbxActivo"
+            Me.cbxActivo.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem
+            Me.cbxActivo.Size = New System.Drawing.Size(129, 21)
+            Me.cbxActivo.TabIndex = 250
+            '
             'txtBuscar
             '
-            Me.txtBuscar.Font = New System.Drawing.Font("Roboto", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtBuscar.Location = New System.Drawing.Point(17, 39)
-            Me.txtBuscar.Margin = New System.Windows.Forms.Padding(4, 4, 2, 2)
+            Me.txtBuscar.BackColor = System.Drawing.Color.White
+            Me.txtBuscar.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtBuscar.Location = New System.Drawing.Point(14, 45)
             Me.txtBuscar.Name = "txtBuscar"
-            Me.txtBuscar.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-            Me.txtBuscar.Size = New System.Drawing.Size(194, 23)
-            Me.txtBuscar.TabIndex = 248
+            Me.txtBuscar.Size = New System.Drawing.Size(219, 21)
+            Me.txtBuscar.TabIndex = 259
+            Me.txtBuscar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+            '
+            'KryptonGroupBox1
+            '
+            Me.KryptonGroupBox1.CaptionOverlap = 0R
+            Me.KryptonGroupBox1.GroupBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.PanelRibbonInactive
+            Me.KryptonGroupBox1.Location = New System.Drawing.Point(12, 79)
+            Me.KryptonGroupBox1.Name = "KryptonGroupBox1"
+            '
+            'KryptonGroupBox1.Panel
+            '
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.dgvTotalActivosFijos)
+            Me.KryptonGroupBox1.Size = New System.Drawing.Size(873, 118)
+            Me.KryptonGroupBox1.TabIndex = 251
+            Me.KryptonGroupBox1.Values.Heading = "Total Activos Fijos"
             '
             'chbxCategoria
             '
             Me.chbxCategoria.Images.CheckedNormal = Global.syscisepro.My.Resources.Resources.check_24dp_FILL0_wght400_GRAD0_opsz24
             Me.chbxCategoria.Images.CheckedPressed = Global.syscisepro.My.Resources.Resources.check_24dp_FILL0_wght400_GRAD0_opsz24
             Me.chbxCategoria.Images.CheckedTracking = Global.syscisepro.My.Resources.Resources.check_24dp_FILL0_wght400_GRAD0_opsz24
-            Me.chbxCategoria.Location = New System.Drawing.Point(294, 42)
+            Me.chbxCategoria.Location = New System.Drawing.Point(306, 44)
             Me.chbxCategoria.Name = "chbxCategoria"
-            Me.chbxCategoria.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem
-            Me.chbxCategoria.Size = New System.Drawing.Size(83, 20)
+            Me.chbxCategoria.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Office2007Blue
+            Me.chbxCategoria.Size = New System.Drawing.Size(83, 18)
             Me.chbxCategoria.StateCommon.ShortText.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.chbxCategoria.TabIndex = 249
             Me.chbxCategoria.Values.Text = "Categorias"
             '
-            'cbxActivo
+            'dgvTotalActivosFijos
             '
-            Me.cbxActivo.DropDownWidth = 129
-            Me.cbxActivo.Enabled = False
-            Me.cbxActivo.Items.AddRange(New Object() {"ARMAS", "RADIOS", "VEHICULOS", "TERRENOS", "EQUIPOS DE COMPUTO", "LIBROS Y COLECCIONES", "EQUIPOS DE OFICINA", "MUEBLES DE OFICINA", "EQUIPOS DE COCINA", "EQUIPOS DE AMBIENTACION", "EQUIPOS DE COMUNICACION Y TELEFONIA", "EQUIPOS DE SEGURIDAD INDUSTRIAL", "CAMARAS DE SEGURIDAD", "GENERADORES", "CHALECOS", "SOFTWARE"})
-            Me.cbxActivo.Location = New System.Drawing.Point(383, 41)
-            Me.cbxActivo.Name = "cbxActivo"
-            Me.cbxActivo.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem
-            Me.cbxActivo.Size = New System.Drawing.Size(129, 21)
-            Me.cbxActivo.TabIndex = 250
+            Me.dgvTotalActivosFijos.AllowUserToAddRows = False
+            Me.dgvTotalActivosFijos.AllowUserToDeleteRows = False
+            Me.dgvTotalActivosFijos.AllowUserToResizeRows = False
+            DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+            Me.dgvTotalActivosFijos.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+            Me.dgvTotalActivosFijos.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(247, Byte), Integer))
+            Me.dgvTotalActivosFijos.BorderStyle = System.Windows.Forms.BorderStyle.None
+            Me.dgvTotalActivosFijos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
+            DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+            DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control
+            DataGridViewCellStyle2.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText
+            DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+            DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+            DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+            Me.dgvTotalActivosFijos.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+            Me.dgvTotalActivosFijos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+            Me.dgvTotalActivosFijos.Dock = System.Windows.Forms.DockStyle.Fill
+            Me.dgvTotalActivosFijos.Location = New System.Drawing.Point(0, 0)
+            Me.dgvTotalActivosFijos.MultiSelect = False
+            Me.dgvTotalActivosFijos.Name = "dgvTotalActivosFijos"
+            Me.dgvTotalActivosFijos.ReadOnly = True
+            DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+            DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control
+            DataGridViewCellStyle3.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText
+            DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
+            DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+            DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+            Me.dgvTotalActivosFijos.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
+            Me.dgvTotalActivosFijos.RowHeadersVisible = False
+            DataGridViewCellStyle4.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.dgvTotalActivosFijos.RowsDefaultCellStyle = DataGridViewCellStyle4
+            Me.dgvTotalActivosFijos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+            Me.dgvTotalActivosFijos.Size = New System.Drawing.Size(869, 94)
+            Me.dgvTotalActivosFijos.TabIndex = 12
+            '
+            'KryptonGroupBox2
+            '
+            Me.KryptonGroupBox2.CaptionOverlap = 0R
+            Me.KryptonGroupBox2.GroupBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.PanelRibbonInactive
+            Me.KryptonGroupBox2.Location = New System.Drawing.Point(12, 239)
+            Me.KryptonGroupBox2.Name = "KryptonGroupBox2"
+            '
+            'KryptonGroupBox2.Panel
+            '
+            Me.KryptonGroupBox2.Panel.Controls.Add(Me.dgvActivosFijos)
+            Me.KryptonGroupBox2.Size = New System.Drawing.Size(873, 316)
+            Me.KryptonGroupBox2.TabIndex = 256
+            Me.KryptonGroupBox2.Values.Heading = "Tipo Activo Fijo"
+            '
+            'dgvActivosFijos
+            '
+            Me.dgvActivosFijos.AllowUserToAddRows = False
+            Me.dgvActivosFijos.AllowUserToDeleteRows = False
+            Me.dgvActivosFijos.AllowUserToResizeRows = False
+            DataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+            DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+            Me.dgvActivosFijos.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle5
+            Me.dgvActivosFijos.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(247, Byte), Integer))
+            Me.dgvActivosFijos.BorderStyle = System.Windows.Forms.BorderStyle.None
+            Me.dgvActivosFijos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
+            DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+            DataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control
+            DataGridViewCellStyle6.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText
+            DataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight
+            DataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+            DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+            Me.dgvActivosFijos.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle6
+            Me.dgvActivosFijos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+            DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+            DataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Window
+            DataGridViewCellStyle7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ControlText
+            DataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight
+            DataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+            DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+            Me.dgvActivosFijos.DefaultCellStyle = DataGridViewCellStyle7
+            Me.dgvActivosFijos.Dock = System.Windows.Forms.DockStyle.Fill
+            Me.dgvActivosFijos.Location = New System.Drawing.Point(0, 0)
+            Me.dgvActivosFijos.MultiSelect = False
+            Me.dgvActivosFijos.Name = "dgvActivosFijos"
+            Me.dgvActivosFijos.ReadOnly = True
+            DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+            DataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control
+            DataGridViewCellStyle8.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText
+            DataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight
+            DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+            DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+            Me.dgvActivosFijos.RowHeadersDefaultCellStyle = DataGridViewCellStyle8
+            Me.dgvActivosFijos.RowHeadersVisible = False
+            DataGridViewCellStyle9.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.dgvActivosFijos.RowsDefaultCellStyle = DataGridViewCellStyle9
+            Me.dgvActivosFijos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+            Me.dgvActivosFijos.Size = New System.Drawing.Size(869, 292)
+            Me.dgvActivosFijos.TabIndex = 7
+            '
+            'KryptonLabel1
+            '
+            Me.KryptonLabel1.Location = New System.Drawing.Point(14, 209)
+            Me.KryptonLabel1.Name = "KryptonLabel1"
+            Me.KryptonLabel1.Size = New System.Drawing.Size(72, 20)
+            Me.KryptonLabel1.TabIndex = 263
+            Me.KryptonLabel1.Values.Text = "Tipo Activo"
+            '
+            'txtCantidad
+            '
+            Me.txtCantidad.BackColor = System.Drawing.Color.White
+            Me.txtCantidad.Enabled = False
+            Me.txtCantidad.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtCantidad.Location = New System.Drawing.Point(371, 206)
+            Me.txtCantidad.Name = "txtCantidad"
+            Me.txtCantidad.Size = New System.Drawing.Size(56, 21)
+            Me.txtCantidad.TabIndex = 260
+            Me.txtCantidad.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+            '
+            'txtActivo
+            '
+            Me.txtActivo.BackColor = System.Drawing.Color.White
+            Me.txtActivo.Enabled = False
+            Me.txtActivo.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtActivo.Location = New System.Drawing.Point(93, 208)
+            Me.txtActivo.Name = "txtActivo"
+            Me.txtActivo.Size = New System.Drawing.Size(191, 21)
+            Me.txtActivo.TabIndex = 262
+            Me.txtActivo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+            '
+            'txtTotal
+            '
+            Me.txtTotal.BackColor = System.Drawing.Color.White
+            Me.txtTotal.Enabled = False
+            Me.txtTotal.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtTotal.Location = New System.Drawing.Point(483, 206)
+            Me.txtTotal.Name = "txtTotal"
+            Me.txtTotal.Size = New System.Drawing.Size(86, 21)
+            Me.txtTotal.TabIndex = 261
+            Me.txtTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+            '
+            'KryptonLabel3
+            '
+            Me.KryptonLabel3.Location = New System.Drawing.Point(438, 207)
+            Me.KryptonLabel3.Name = "KryptonLabel3"
+            Me.KryptonLabel3.Size = New System.Drawing.Size(38, 20)
+            Me.KryptonLabel3.TabIndex = 265
+            Me.KryptonLabel3.Values.Text = "Total"
+            '
+            'KryptonLabel2
+            '
+            Me.KryptonLabel2.Location = New System.Drawing.Point(306, 207)
+            Me.KryptonLabel2.Name = "KryptonLabel2"
+            Me.KryptonLabel2.Size = New System.Drawing.Size(59, 20)
+            Me.KryptonLabel2.TabIndex = 264
+            Me.KryptonLabel2.Values.Text = "Cantidad"
+            '
+            'txtCustodio
+            '
+            Me.txtCustodio.BackColor = System.Drawing.Color.White
+            Me.txtCustodio.Enabled = False
+            Me.txtCustodio.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtCustodio.Location = New System.Drawing.Point(640, 208)
+            Me.txtCustodio.Name = "txtCustodio"
+            Me.txtCustodio.Size = New System.Drawing.Size(245, 21)
+            Me.txtCustodio.TabIndex = 267
+            Me.txtCustodio.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+            '
+            'KryptonLabel4
+            '
+            Me.KryptonLabel4.Location = New System.Drawing.Point(575, 208)
+            Me.KryptonLabel4.Name = "KryptonLabel4"
+            Me.KryptonLabel4.Size = New System.Drawing.Size(59, 20)
+            Me.KryptonLabel4.TabIndex = 266
+            Me.KryptonLabel4.Values.Text = "Custodio"
             '
             'FormConsultaActivosFijos
             '
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.BackColor = System.Drawing.Color.White
-            Me.ClientSize = New System.Drawing.Size(974, 599)
-            Me.Controls.Add(Me.cbxActivo)
-            Me.Controls.Add(Me.chbxCategoria)
-            Me.Controls.Add(Me.txtBuscar)
-            Me.Controls.Add(Me.btnBuscar)
-            Me.Controls.Add(Me.txtActivo)
+            Me.ClientSize = New System.Drawing.Size(897, 562)
             Me.Controls.Add(Me.txtCustodio)
-            Me.Controls.Add(Me.Label5)
-            Me.Controls.Add(Me.MenuStrip1)
-            Me.Controls.Add(Me.Label4)
-            Me.Controls.Add(Me.dgvTotalActivosFijos)
-            Me.Controls.Add(Me.txtTotal)
-            Me.Controls.Add(Me.Label3)
+            Me.Controls.Add(Me.chbxCategoria)
+            Me.Controls.Add(Me.KryptonLabel4)
+            Me.Controls.Add(Me.KryptonLabel1)
             Me.Controls.Add(Me.txtCantidad)
-            Me.Controls.Add(Me.Label2)
-            Me.Controls.Add(Me.dgvActivosFijos)
-            Me.Controls.Add(Me.Label1)
+            Me.Controls.Add(Me.KryptonGroupBox2)
+            Me.Controls.Add(Me.txtActivo)
+            Me.Controls.Add(Me.KryptonGroupBox1)
+            Me.Controls.Add(Me.txtTotal)
+            Me.Controls.Add(Me.KryptonLabel3)
+            Me.Controls.Add(Me.KryptonLabel2)
+            Me.Controls.Add(Me.txtBuscar)
+            Me.Controls.Add(Me.MenuStrip1)
+            Me.Controls.Add(Me.cbxActivo)
+            Me.Controls.Add(Me.btnBuscar)
             Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
             Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
             Me.MaximizeBox = False
@@ -350,32 +376,41 @@
             Or Krypton.Toolkit.PaletteDrawBorders.Right), Krypton.Toolkit.PaletteDrawBorders)
             Me.StateActive.Border.Rounding = 5.0!
             Me.Text = "CONSULTA DE REGISTROS DE ACTIVOS FIJOS"
-            CType(Me.dgvActivosFijos, System.ComponentModel.ISupportInitialize).EndInit()
-            CType(Me.dgvTotalActivosFijos, System.ComponentModel.ISupportInitialize).EndInit()
             Me.MenuStrip1.ResumeLayout(False)
             Me.MenuStrip1.PerformLayout()
             CType(Me.cbxActivo, System.ComponentModel.ISupportInitialize).EndInit()
+            CType(Me.KryptonGroupBox1.Panel, System.ComponentModel.ISupportInitialize).EndInit()
+            Me.KryptonGroupBox1.Panel.ResumeLayout(False)
+            CType(Me.KryptonGroupBox1, System.ComponentModel.ISupportInitialize).EndInit()
+            Me.KryptonGroupBox1.ResumeLayout(False)
+            CType(Me.dgvTotalActivosFijos, System.ComponentModel.ISupportInitialize).EndInit()
+            CType(Me.KryptonGroupBox2.Panel, System.ComponentModel.ISupportInitialize).EndInit()
+            Me.KryptonGroupBox2.Panel.ResumeLayout(False)
+            CType(Me.KryptonGroupBox2, System.ComponentModel.ISupportInitialize).EndInit()
+            Me.KryptonGroupBox2.ResumeLayout(False)
+            CType(Me.dgvActivosFijos, System.ComponentModel.ISupportInitialize).EndInit()
             Me.ResumeLayout(False)
             Me.PerformLayout()
 
         End Sub
-        Friend WithEvents Label1 As System.Windows.Forms.Label
-        Friend WithEvents dgvActivosFijos As System.Windows.Forms.DataGridView
-        Friend WithEvents Label2 As System.Windows.Forms.Label
-        Friend WithEvents txtCantidad As System.Windows.Forms.TextBox
-        Friend WithEvents txtTotal As System.Windows.Forms.TextBox
-        Friend WithEvents Label3 As System.Windows.Forms.Label
-        Friend WithEvents dgvTotalActivosFijos As System.Windows.Forms.DataGridView
-        Friend WithEvents Label4 As System.Windows.Forms.Label
         Friend WithEvents MenuStrip1 As System.Windows.Forms.MenuStrip
         Friend WithEvents btnReporteFondoRotativo As System.Windows.Forms.ToolStripMenuItem
         Friend WithEvents ToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
-        Friend WithEvents Label5 As System.Windows.Forms.Label
-        Friend WithEvents txtCustodio As System.Windows.Forms.TextBox
-        Friend WithEvents txtActivo As System.Windows.Forms.TextBox
         Friend WithEvents btnBuscar As ComponentFactory.Krypton.Toolkit.KryptonButton
-        Friend WithEvents txtBuscar As System.Windows.Forms.TextBox
-        Friend WithEvents chbxCategoria As ComponentFactory.Krypton.Toolkit.KryptonCheckBox
         Friend WithEvents cbxActivo As ComponentFactory.Krypton.Toolkit.KryptonComboBox
+        Friend WithEvents txtBuscar As TextBox
+        Friend WithEvents KryptonGroupBox1 As ComponentFactory.Krypton.Toolkit.KryptonGroupBox
+        Friend WithEvents dgvTotalActivosFijos As DataGridView
+        Friend WithEvents chbxCategoria As ComponentFactory.Krypton.Toolkit.KryptonCheckBox
+        Friend WithEvents KryptonGroupBox2 As ComponentFactory.Krypton.Toolkit.KryptonGroupBox
+        Friend WithEvents dgvActivosFijos As DataGridView
+        Friend WithEvents KryptonLabel1 As ComponentFactory.Krypton.Toolkit.KryptonLabel
+        Friend WithEvents txtCantidad As TextBox
+        Friend WithEvents txtActivo As TextBox
+        Friend WithEvents txtTotal As TextBox
+        Friend WithEvents KryptonLabel3 As ComponentFactory.Krypton.Toolkit.KryptonLabel
+        Friend WithEvents KryptonLabel2 As ComponentFactory.Krypton.Toolkit.KryptonLabel
+        Friend WithEvents txtCustodio As TextBox
+        Friend WithEvents KryptonLabel4 As ComponentFactory.Krypton.Toolkit.KryptonLabel
     End Class
 End Namespace

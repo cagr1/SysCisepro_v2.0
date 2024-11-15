@@ -1526,6 +1526,12 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                 End With
                 _sqlCommands.Add(_objDetalleKardex.AnularRegistroDetalleKardexCommand())
 
+                With _objKardex
+                    .Id = row.Cells.Item(2).Value
+                    .Cantidad = Convert.ToInt32(row.cells.item(4).value) + Convert.ToInt32(row.cells.item(8).value)
+                End With
+                _sqlCommands.Add(_objKardex.ModificarCantidadKardexMinCommand())
+
             Next
 
 

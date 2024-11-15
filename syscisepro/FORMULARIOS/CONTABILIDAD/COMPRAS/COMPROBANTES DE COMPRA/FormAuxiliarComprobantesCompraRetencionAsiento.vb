@@ -188,6 +188,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
             dgvComprobantesCompra.Font = New Font("Roboto", 8, FontStyle.Regular)
             dgvComprobanteRetencion.Font = New Font("Roboto", 8, FontStyle.Regular)
             dgvDetalleComprobanteRetencion.Font = New Font("Roboto", 8, FontStyle.Regular)
+            dgvAsientoDiario.Font = New Font("Roboto", 8, FontStyle.Regular)
         End Sub
 
         Private Sub dgvComprobantesCompra_SelectionChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles dgvComprobantesCompra.SelectionChanged
@@ -342,6 +343,10 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
             Catch ex As Exception
                 MessageBox.Show("HUBO UN PROBLEMA AL EXPORTAR DATOS!", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Error)
             End Try
+        End Sub
+
+        Private Sub dgvComprobanteRetencion_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvComprobanteRetencion.CellContentClick
+
         End Sub
     End Class
 End Namespace

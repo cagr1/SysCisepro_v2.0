@@ -27,30 +27,17 @@
             Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormFondoRotativo))
             Me.dgvFondoRotativo = New System.Windows.Forms.DataGridView()
-            Me.lblIdFondoRotativo = New System.Windows.Forms.Label()
-            Me.lblDetalleFondoRotativo = New System.Windows.Forms.Label()
-            Me.lblMontoFondoRotativo = New System.Windows.Forms.Label()
-            Me.lblCtaContableFondo = New System.Windows.Forms.Label()
-            Me.lblTipoCuenta = New System.Windows.Forms.Label()
-            Me.lblNivelCuenta = New System.Windows.Forms.Label()
             Me.txtIdFondoRotativo = New System.Windows.Forms.TextBox()
             Me.txtDetalleFondoRotativo = New System.Windows.Forms.TextBox()
             Me.txtMontoFondoRotativo = New System.Windows.Forms.TextBox()
             Me.txtCtaContableFondo = New System.Windows.Forms.TextBox()
-            Me.pCentroCostoSolicitudFR = New System.Windows.Forms.Panel()
             Me.cmbCentroCosto = New System.Windows.Forms.ComboBox()
             Me.cmbParroquia = New System.Windows.Forms.ComboBox()
             Me.cmbCanton = New System.Windows.Forms.ComboBox()
             Me.cmbProvincia = New System.Windows.Forms.ComboBox()
-            Me.lblParroquia = New System.Windows.Forms.Label()
-            Me.lblProvincia = New System.Windows.Forms.Label()
-            Me.lblCanton = New System.Windows.Forms.Label()
-            Me.lblCentroCosto = New System.Windows.Forms.Label()
-            Me.GroupBox1 = New System.Windows.Forms.GroupBox()
             Me.cmbNivelCuenta = New System.Windows.Forms.ComboBox()
             Me.cmbTipoCuenta = New System.Windows.Forms.ComboBox()
             Me.txtCustodioFondo = New System.Windows.Forms.TextBox()
-            Me.lblCustodioFondo = New System.Windows.Forms.Label()
             Me.btnBuscarCustodio = New System.Windows.Forms.Button()
             Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
             Me.btnNuevoFondoRotativo = New System.Windows.Forms.ToolStripMenuItem()
@@ -58,10 +45,24 @@
             Me.btnGuardarFondoRotativo = New System.Windows.Forms.ToolStripMenuItem()
             Me.btnCancelarFondoRotativo = New System.Windows.Forms.ToolStripMenuItem()
             Me.btnReporteFondoRotativo = New System.Windows.Forms.ToolStripMenuItem()
+            Me.KryptonGroupBox1 = New Krypton.Toolkit.KryptonGroupBox()
+            Me.KryptonLabel1 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel2 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel3 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel4 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel5 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel6 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel7 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel8 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel9 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel10 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel11 = New Krypton.Toolkit.KryptonLabel()
             CType(Me.dgvFondoRotativo, System.ComponentModel.ISupportInitialize).BeginInit()
-            Me.pCentroCostoSolicitudFR.SuspendLayout()
-            Me.GroupBox1.SuspendLayout()
             Me.MenuStrip1.SuspendLayout()
+            CType(Me.KryptonGroupBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType(Me.KryptonGroupBox1.Panel, System.ComponentModel.ISupportInitialize).BeginInit()
+            Me.KryptonGroupBox1.Panel.SuspendLayout()
+            Me.KryptonGroupBox1.SuspendLayout()
             Me.SuspendLayout()
             '
             'dgvFondoRotativo
@@ -71,7 +72,8 @@
             Me.dgvFondoRotativo.AllowUserToResizeRows = False
             DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
             Me.dgvFondoRotativo.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
-            Me.dgvFondoRotativo.BackgroundColor = System.Drawing.Color.White
+            Me.dgvFondoRotativo.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
+            Me.dgvFondoRotativo.BorderStyle = System.Windows.Forms.BorderStyle.None
             Me.dgvFondoRotativo.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
             Me.dgvFondoRotativo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
             DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
@@ -82,75 +84,22 @@
             DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
             DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
             Me.dgvFondoRotativo.DefaultCellStyle = DataGridViewCellStyle2
-            Me.dgvFondoRotativo.Location = New System.Drawing.Point(4, 207)
+            Me.dgvFondoRotativo.Location = New System.Drawing.Point(2, 207)
             Me.dgvFondoRotativo.MultiSelect = False
             Me.dgvFondoRotativo.Name = "dgvFondoRotativo"
             Me.dgvFondoRotativo.ReadOnly = True
             Me.dgvFondoRotativo.RowHeadersVisible = False
             Me.dgvFondoRotativo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvFondoRotativo.Size = New System.Drawing.Size(789, 181)
+            Me.dgvFondoRotativo.Size = New System.Drawing.Size(670, 181)
             Me.dgvFondoRotativo.TabIndex = 0
-            '
-            'lblIdFondoRotativo
-            '
-            Me.lblIdFondoRotativo.AutoSize = True
-            Me.lblIdFondoRotativo.Location = New System.Drawing.Point(6, 24)
-            Me.lblIdFondoRotativo.Name = "lblIdFondoRotativo"
-            Me.lblIdFondoRotativo.Size = New System.Drawing.Size(60, 13)
-            Me.lblIdFondoRotativo.TabIndex = 1
-            Me.lblIdFondoRotativo.Text = "ID FONDO:"
-            '
-            'lblDetalleFondoRotativo
-            '
-            Me.lblDetalleFondoRotativo.AutoSize = True
-            Me.lblDetalleFondoRotativo.Location = New System.Drawing.Point(6, 51)
-            Me.lblDetalleFondoRotativo.Name = "lblDetalleFondoRotativo"
-            Me.lblDetalleFondoRotativo.Size = New System.Drawing.Size(55, 13)
-            Me.lblDetalleFondoRotativo.TabIndex = 2
-            Me.lblDetalleFondoRotativo.Text = "DETALLE:"
-            '
-            'lblMontoFondoRotativo
-            '
-            Me.lblMontoFondoRotativo.AutoSize = True
-            Me.lblMontoFondoRotativo.Location = New System.Drawing.Point(6, 78)
-            Me.lblMontoFondoRotativo.Name = "lblMontoFondoRotativo"
-            Me.lblMontoFondoRotativo.Size = New System.Drawing.Size(51, 13)
-            Me.lblMontoFondoRotativo.TabIndex = 3
-            Me.lblMontoFondoRotativo.Text = "MONTO:"
-            '
-            'lblCtaContableFondo
-            '
-            Me.lblCtaContableFondo.AutoSize = True
-            Me.lblCtaContableFondo.Location = New System.Drawing.Point(529, 23)
-            Me.lblCtaContableFondo.Name = "lblCtaContableFondo"
-            Me.lblCtaContableFondo.Size = New System.Drawing.Size(93, 13)
-            Me.lblCtaContableFondo.TabIndex = 4
-            Me.lblCtaContableFondo.Text = "CTA. CONTABLE:"
-            '
-            'lblTipoCuenta
-            '
-            Me.lblTipoCuenta.AutoSize = True
-            Me.lblTipoCuenta.Location = New System.Drawing.Point(529, 50)
-            Me.lblTipoCuenta.Name = "lblTipoCuenta"
-            Me.lblTipoCuenta.Size = New System.Drawing.Size(62, 13)
-            Me.lblTipoCuenta.TabIndex = 5
-            Me.lblTipoCuenta.Text = "TIPO CTA.:"
-            '
-            'lblNivelCuenta
-            '
-            Me.lblNivelCuenta.AutoSize = True
-            Me.lblNivelCuenta.Location = New System.Drawing.Point(529, 77)
-            Me.lblNivelCuenta.Name = "lblNivelCuenta"
-            Me.lblNivelCuenta.Size = New System.Drawing.Size(67, 13)
-            Me.lblNivelCuenta.TabIndex = 6
-            Me.lblNivelCuenta.Text = "NIVEL CTA.:"
             '
             'txtIdFondoRotativo
             '
             Me.txtIdFondoRotativo.BackColor = System.Drawing.Color.White
             Me.txtIdFondoRotativo.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtIdFondoRotativo.Enabled = False
-            Me.txtIdFondoRotativo.Location = New System.Drawing.Point(76, 21)
+            Me.txtIdFondoRotativo.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtIdFondoRotativo.Location = New System.Drawing.Point(72, 4)
             Me.txtIdFondoRotativo.Name = "txtIdFondoRotativo"
             Me.txtIdFondoRotativo.Size = New System.Drawing.Size(45, 21)
             Me.txtIdFondoRotativo.TabIndex = 10
@@ -160,9 +109,10 @@
             Me.txtDetalleFondoRotativo.BackColor = System.Drawing.Color.White
             Me.txtDetalleFondoRotativo.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtDetalleFondoRotativo.Enabled = False
-            Me.txtDetalleFondoRotativo.Location = New System.Drawing.Point(76, 48)
+            Me.txtDetalleFondoRotativo.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtDetalleFondoRotativo.Location = New System.Drawing.Point(72, 30)
             Me.txtDetalleFondoRotativo.Name = "txtDetalleFondoRotativo"
-            Me.txtDetalleFondoRotativo.Size = New System.Drawing.Size(399, 21)
+            Me.txtDetalleFondoRotativo.Size = New System.Drawing.Size(360, 21)
             Me.txtDetalleFondoRotativo.TabIndex = 11
             '
             'txtMontoFondoRotativo
@@ -170,7 +120,8 @@
             Me.txtMontoFondoRotativo.BackColor = System.Drawing.Color.White
             Me.txtMontoFondoRotativo.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtMontoFondoRotativo.Enabled = False
-            Me.txtMontoFondoRotativo.Location = New System.Drawing.Point(76, 75)
+            Me.txtMontoFondoRotativo.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtMontoFondoRotativo.Location = New System.Drawing.Point(72, 56)
             Me.txtMontoFondoRotativo.Name = "txtMontoFondoRotativo"
             Me.txtMontoFondoRotativo.Size = New System.Drawing.Size(69, 21)
             Me.txtMontoFondoRotativo.TabIndex = 12
@@ -180,27 +131,11 @@
             Me.txtCtaContableFondo.BackColor = System.Drawing.Color.White
             Me.txtCtaContableFondo.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtCtaContableFondo.Enabled = False
-            Me.txtCtaContableFondo.Location = New System.Drawing.Point(630, 20)
+            Me.txtCtaContableFondo.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtCtaContableFondo.Location = New System.Drawing.Point(581, 4)
             Me.txtCtaContableFondo.Name = "txtCtaContableFondo"
-            Me.txtCtaContableFondo.Size = New System.Drawing.Size(138, 21)
+            Me.txtCtaContableFondo.Size = New System.Drawing.Size(68, 21)
             Me.txtCtaContableFondo.TabIndex = 13
-            '
-            'pCentroCostoSolicitudFR
-            '
-            Me.pCentroCostoSolicitudFR.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-            Me.pCentroCostoSolicitudFR.Controls.Add(Me.cmbCentroCosto)
-            Me.pCentroCostoSolicitudFR.Controls.Add(Me.cmbParroquia)
-            Me.pCentroCostoSolicitudFR.Controls.Add(Me.cmbCanton)
-            Me.pCentroCostoSolicitudFR.Controls.Add(Me.cmbProvincia)
-            Me.pCentroCostoSolicitudFR.Controls.Add(Me.lblParroquia)
-            Me.pCentroCostoSolicitudFR.Controls.Add(Me.lblProvincia)
-            Me.pCentroCostoSolicitudFR.Controls.Add(Me.lblCanton)
-            Me.pCentroCostoSolicitudFR.Controls.Add(Me.lblCentroCosto)
-            Me.pCentroCostoSolicitudFR.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.pCentroCostoSolicitudFR.Location = New System.Drawing.Point(4, 137)
-            Me.pCentroCostoSolicitudFR.Name = "pCentroCostoSolicitudFR"
-            Me.pCentroCostoSolicitudFR.Size = New System.Drawing.Size(789, 68)
-            Me.pCentroCostoSolicitudFR.TabIndex = 14
             '
             'cmbCentroCosto
             '
@@ -208,10 +143,11 @@
             Me.cmbCentroCosto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cmbCentroCosto.Enabled = False
             Me.cmbCentroCosto.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+            Me.cmbCentroCosto.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cmbCentroCosto.FormattingEnabled = True
-            Me.cmbCentroCosto.Location = New System.Drawing.Point(524, 35)
+            Me.cmbCentroCosto.Location = New System.Drawing.Point(346, 110)
             Me.cmbCentroCosto.Name = "cmbCentroCosto"
-            Me.cmbCentroCosto.Size = New System.Drawing.Size(257, 21)
+            Me.cmbCentroCosto.Size = New System.Drawing.Size(154, 21)
             Me.cmbCentroCosto.TabIndex = 8
             '
             'cmbParroquia
@@ -220,10 +156,11 @@
             Me.cmbParroquia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cmbParroquia.Enabled = False
             Me.cmbParroquia.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+            Me.cmbParroquia.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cmbParroquia.FormattingEnabled = True
-            Me.cmbParroquia.Location = New System.Drawing.Point(77, 35)
+            Me.cmbParroquia.Location = New System.Drawing.Point(74, 109)
             Me.cmbParroquia.Name = "cmbParroquia"
-            Me.cmbParroquia.Size = New System.Drawing.Size(273, 21)
+            Me.cmbParroquia.Size = New System.Drawing.Size(154, 21)
             Me.cmbParroquia.TabIndex = 7
             '
             'cmbCanton
@@ -232,10 +169,11 @@
             Me.cmbCanton.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cmbCanton.Enabled = False
             Me.cmbCanton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+            Me.cmbCanton.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cmbCanton.FormattingEnabled = True
-            Me.cmbCanton.Location = New System.Drawing.Point(524, 8)
+            Me.cmbCanton.Location = New System.Drawing.Point(346, 82)
             Me.cmbCanton.Name = "cmbCanton"
-            Me.cmbCanton.Size = New System.Drawing.Size(215, 21)
+            Me.cmbCanton.Size = New System.Drawing.Size(154, 21)
             Me.cmbCanton.TabIndex = 6
             '
             'cmbProvincia
@@ -244,73 +182,12 @@
             Me.cmbProvincia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cmbProvincia.Enabled = False
             Me.cmbProvincia.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+            Me.cmbProvincia.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cmbProvincia.FormattingEnabled = True
-            Me.cmbProvincia.Location = New System.Drawing.Point(77, 8)
+            Me.cmbProvincia.Location = New System.Drawing.Point(72, 82)
             Me.cmbProvincia.Name = "cmbProvincia"
-            Me.cmbProvincia.Size = New System.Drawing.Size(273, 21)
+            Me.cmbProvincia.Size = New System.Drawing.Size(156, 21)
             Me.cmbProvincia.TabIndex = 5
-            '
-            'lblParroquia
-            '
-            Me.lblParroquia.AutoSize = True
-            Me.lblParroquia.Location = New System.Drawing.Point(1, 38)
-            Me.lblParroquia.Name = "lblParroquia"
-            Me.lblParroquia.Size = New System.Drawing.Size(70, 13)
-            Me.lblParroquia.TabIndex = 5
-            Me.lblParroquia.Text = "PARROQUIA:"
-            '
-            'lblProvincia
-            '
-            Me.lblProvincia.AutoSize = True
-            Me.lblProvincia.Location = New System.Drawing.Point(3, 11)
-            Me.lblProvincia.Name = "lblProvincia"
-            Me.lblProvincia.Size = New System.Drawing.Size(67, 13)
-            Me.lblProvincia.TabIndex = 1
-            Me.lblProvincia.Text = "PROVINCIA:"
-            '
-            'lblCanton
-            '
-            Me.lblCanton.AutoSize = True
-            Me.lblCanton.Location = New System.Drawing.Point(432, 11)
-            Me.lblCanton.Name = "lblCanton"
-            Me.lblCanton.Size = New System.Drawing.Size(55, 13)
-            Me.lblCanton.TabIndex = 3
-            Me.lblCanton.Text = "CANTON:"
-            '
-            'lblCentroCosto
-            '
-            Me.lblCentroCosto.AutoSize = True
-            Me.lblCentroCosto.Location = New System.Drawing.Point(432, 38)
-            Me.lblCentroCosto.Name = "lblCentroCosto"
-            Me.lblCentroCosto.Size = New System.Drawing.Size(93, 13)
-            Me.lblCentroCosto.TabIndex = 2
-            Me.lblCentroCosto.Text = "CENTRO COSTO:"
-            '
-            'GroupBox1
-            '
-            Me.GroupBox1.BackColor = System.Drawing.Color.White
-            Me.GroupBox1.Controls.Add(Me.cmbNivelCuenta)
-            Me.GroupBox1.Controls.Add(Me.cmbTipoCuenta)
-            Me.GroupBox1.Controls.Add(Me.txtCustodioFondo)
-            Me.GroupBox1.Controls.Add(Me.lblCustodioFondo)
-            Me.GroupBox1.Controls.Add(Me.btnBuscarCustodio)
-            Me.GroupBox1.Controls.Add(Me.lblIdFondoRotativo)
-            Me.GroupBox1.Controls.Add(Me.lblDetalleFondoRotativo)
-            Me.GroupBox1.Controls.Add(Me.txtCtaContableFondo)
-            Me.GroupBox1.Controls.Add(Me.lblMontoFondoRotativo)
-            Me.GroupBox1.Controls.Add(Me.txtMontoFondoRotativo)
-            Me.GroupBox1.Controls.Add(Me.lblCtaContableFondo)
-            Me.GroupBox1.Controls.Add(Me.txtDetalleFondoRotativo)
-            Me.GroupBox1.Controls.Add(Me.lblNivelCuenta)
-            Me.GroupBox1.Controls.Add(Me.txtIdFondoRotativo)
-            Me.GroupBox1.Controls.Add(Me.lblTipoCuenta)
-            Me.GroupBox1.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.GroupBox1.Location = New System.Drawing.Point(4, 33)
-            Me.GroupBox1.Name = "GroupBox1"
-            Me.GroupBox1.Size = New System.Drawing.Size(789, 105)
-            Me.GroupBox1.TabIndex = 15
-            Me.GroupBox1.TabStop = False
-            Me.GroupBox1.Text = "FONDO"
             '
             'cmbNivelCuenta
             '
@@ -318,11 +195,12 @@
             Me.cmbNivelCuenta.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cmbNivelCuenta.Enabled = False
             Me.cmbNivelCuenta.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+            Me.cmbNivelCuenta.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cmbNivelCuenta.FormattingEnabled = True
             Me.cmbNivelCuenta.Items.AddRange(New Object() {"1", "2", "3", "4", "5"})
-            Me.cmbNivelCuenta.Location = New System.Drawing.Point(630, 74)
+            Me.cmbNivelCuenta.Location = New System.Drawing.Point(581, 55)
             Me.cmbNivelCuenta.Name = "cmbNivelCuenta"
-            Me.cmbNivelCuenta.Size = New System.Drawing.Size(138, 21)
+            Me.cmbNivelCuenta.Size = New System.Drawing.Size(68, 21)
             Me.cmbNivelCuenta.TabIndex = 18
             '
             'cmbTipoCuenta
@@ -331,11 +209,12 @@
             Me.cmbTipoCuenta.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cmbTipoCuenta.Enabled = False
             Me.cmbTipoCuenta.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+            Me.cmbTipoCuenta.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cmbTipoCuenta.FormattingEnabled = True
             Me.cmbTipoCuenta.Items.AddRange(New Object() {"1", "2", "3", "4", "5"})
-            Me.cmbTipoCuenta.Location = New System.Drawing.Point(630, 47)
+            Me.cmbTipoCuenta.Location = New System.Drawing.Point(581, 29)
             Me.cmbTipoCuenta.Name = "cmbTipoCuenta"
-            Me.cmbTipoCuenta.Size = New System.Drawing.Size(138, 21)
+            Me.cmbTipoCuenta.Size = New System.Drawing.Size(68, 21)
             Me.cmbTipoCuenta.TabIndex = 17
             '
             'txtCustodioFondo
@@ -343,29 +222,24 @@
             Me.txtCustodioFondo.BackColor = System.Drawing.Color.White
             Me.txtCustodioFondo.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtCustodioFondo.Enabled = False
-            Me.txtCustodioFondo.Location = New System.Drawing.Point(214, 21)
+            Me.txtCustodioFondo.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtCustodioFondo.Location = New System.Drawing.Point(207, 4)
             Me.txtCustodioFondo.Name = "txtCustodioFondo"
             Me.txtCustodioFondo.Size = New System.Drawing.Size(225, 21)
             Me.txtCustodioFondo.TabIndex = 16
             '
-            'lblCustodioFondo
-            '
-            Me.lblCustodioFondo.AutoSize = True
-            Me.lblCustodioFondo.Location = New System.Drawing.Point(142, 24)
-            Me.lblCustodioFondo.Name = "lblCustodioFondo"
-            Me.lblCustodioFondo.Size = New System.Drawing.Size(64, 13)
-            Me.lblCustodioFondo.TabIndex = 15
-            Me.lblCustodioFondo.Text = "CUSTODIO:"
-            '
             'btnBuscarCustodio
             '
+            Me.btnBuscarCustodio.BackColor = System.Drawing.Color.Transparent
             Me.btnBuscarCustodio.Enabled = False
-            Me.btnBuscarCustodio.Image = Global.syscisepro.My.Resources.Resources.BuscarRegistro
-            Me.btnBuscarCustodio.Location = New System.Drawing.Point(445, 19)
+            Me.btnBuscarCustodio.FlatAppearance.BorderSize = 0
+            Me.btnBuscarCustodio.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+            Me.btnBuscarCustodio.Image = Global.syscisepro.My.Resources.Resources.search_24dp_FILL0_wght400_GRAD0_opsz24__2_
+            Me.btnBuscarCustodio.Location = New System.Drawing.Point(446, 3)
             Me.btnBuscarCustodio.Name = "btnBuscarCustodio"
-            Me.btnBuscarCustodio.Size = New System.Drawing.Size(30, 23)
+            Me.btnBuscarCustodio.Size = New System.Drawing.Size(29, 29)
             Me.btnBuscarCustodio.TabIndex = 14
-            Me.btnBuscarCustodio.UseVisualStyleBackColor = True
+            Me.btnBuscarCustodio.UseVisualStyleBackColor = False
             '
             'MenuStrip1
             '
@@ -375,15 +249,16 @@
             Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
             Me.MenuStrip1.Name = "MenuStrip1"
             Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(7, 2, 0, 2)
-            Me.MenuStrip1.Size = New System.Drawing.Size(798, 32)
+            Me.MenuStrip1.Size = New System.Drawing.Size(675, 32)
             Me.MenuStrip1.TabIndex = 189
             Me.MenuStrip1.Text = "msIngresoBodega"
             '
             'btnNuevoFondoRotativo
             '
-            Me.btnNuevoFondoRotativo.Image = Global.syscisepro.My.Resources.Resources.NuevoRegistro
+            Me.btnNuevoFondoRotativo.Image = Global.syscisepro.My.Resources.Resources.add_circle_24dp_FILL0_wght400_GRAD0_opsz24__3_
+            Me.btnNuevoFondoRotativo.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnNuevoFondoRotativo.Name = "btnNuevoFondoRotativo"
-            Me.btnNuevoFondoRotativo.Size = New System.Drawing.Size(74, 20)
+            Me.btnNuevoFondoRotativo.Size = New System.Drawing.Size(82, 28)
             Me.btnNuevoFondoRotativo.Text = "NUEVO"
             Me.btnNuevoFondoRotativo.Visible = False
             '
@@ -426,15 +301,139 @@
             Me.btnReporteFondoRotativo.Size = New System.Drawing.Size(90, 28)
             Me.btnReporteFondoRotativo.Text = "REPORTE"
             '
+            'KryptonGroupBox1
+            '
+            Me.KryptonGroupBox1.CaptionOverlap = 0R
+            Me.KryptonGroupBox1.GroupBackStyle = Krypton.Toolkit.PaletteBackStyle.ControlRibbon
+            Me.KryptonGroupBox1.GroupBorderStyle = Krypton.Toolkit.PaletteBorderStyle.ControlRibbon
+            Me.KryptonGroupBox1.Location = New System.Drawing.Point(2, 35)
+            Me.KryptonGroupBox1.Name = "KryptonGroupBox1"
+            '
+            'KryptonGroupBox1.Panel
+            '
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.cmbCentroCosto)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel11)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel10)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.cmbParroquia)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel9)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel8)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.cmbCanton)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.cmbNivelCuenta)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel7)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.cmbProvincia)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.cmbTipoCuenta)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel6)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel5)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel4)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel3)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.txtCtaContableFondo)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel2)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel1)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.txtCustodioFondo)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.btnBuscarCustodio)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.txtIdFondoRotativo)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.txtMontoFondoRotativo)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.txtDetalleFondoRotativo)
+            Me.KryptonGroupBox1.Size = New System.Drawing.Size(670, 166)
+            Me.KryptonGroupBox1.TabIndex = 190
+            Me.KryptonGroupBox1.Values.Heading = "Datos"
+            '
+            'KryptonLabel1
+            '
+            Me.KryptonLabel1.Location = New System.Drawing.Point(4, 4)
+            Me.KryptonLabel1.Name = "KryptonLabel1"
+            Me.KryptonLabel1.Size = New System.Drawing.Size(22, 20)
+            Me.KryptonLabel1.TabIndex = 0
+            Me.KryptonLabel1.Values.Text = "ID"
+            '
+            'KryptonLabel2
+            '
+            Me.KryptonLabel2.Location = New System.Drawing.Point(142, 4)
+            Me.KryptonLabel2.Name = "KryptonLabel2"
+            Me.KryptonLabel2.Size = New System.Drawing.Size(59, 20)
+            Me.KryptonLabel2.TabIndex = 11
+            Me.KryptonLabel2.Values.Text = "Custodio"
+            '
+            'KryptonLabel3
+            '
+            Me.KryptonLabel3.Location = New System.Drawing.Point(4, 30)
+            Me.KryptonLabel3.Name = "KryptonLabel3"
+            Me.KryptonLabel3.Size = New System.Drawing.Size(49, 20)
+            Me.KryptonLabel3.TabIndex = 17
+            Me.KryptonLabel3.Values.Text = "Detalle"
+            '
+            'KryptonLabel4
+            '
+            Me.KryptonLabel4.Location = New System.Drawing.Point(4, 56)
+            Me.KryptonLabel4.Name = "KryptonLabel4"
+            Me.KryptonLabel4.Size = New System.Drawing.Size(47, 20)
+            Me.KryptonLabel4.TabIndex = 18
+            Me.KryptonLabel4.Values.Text = "Monto"
+            '
+            'KryptonLabel5
+            '
+            Me.KryptonLabel5.Location = New System.Drawing.Point(494, 4)
+            Me.KryptonLabel5.Name = "KryptonLabel5"
+            Me.KryptonLabel5.Size = New System.Drawing.Size(81, 20)
+            Me.KryptonLabel5.TabIndex = 19
+            Me.KryptonLabel5.Values.Text = "Cta Contable"
+            '
+            'KryptonLabel6
+            '
+            Me.KryptonLabel6.Location = New System.Drawing.Point(494, 30)
+            Me.KryptonLabel6.Name = "KryptonLabel6"
+            Me.KryptonLabel6.Size = New System.Drawing.Size(34, 20)
+            Me.KryptonLabel6.TabIndex = 20
+            Me.KryptonLabel6.Values.Text = "Tipo"
+            '
+            'KryptonLabel7
+            '
+            Me.KryptonLabel7.Location = New System.Drawing.Point(494, 56)
+            Me.KryptonLabel7.Name = "KryptonLabel7"
+            Me.KryptonLabel7.Size = New System.Drawing.Size(38, 20)
+            Me.KryptonLabel7.TabIndex = 21
+            Me.KryptonLabel7.Values.Text = "Nivel"
+            '
+            'KryptonLabel8
+            '
+            Me.KryptonLabel8.Location = New System.Drawing.Point(6, 82)
+            Me.KryptonLabel8.Name = "KryptonLabel8"
+            Me.KryptonLabel8.Size = New System.Drawing.Size(60, 20)
+            Me.KryptonLabel8.TabIndex = 22
+            Me.KryptonLabel8.Values.Text = "Provincia"
+            '
+            'KryptonLabel9
+            '
+            Me.KryptonLabel9.Location = New System.Drawing.Point(251, 82)
+            Me.KryptonLabel9.Name = "KryptonLabel9"
+            Me.KryptonLabel9.Size = New System.Drawing.Size(50, 20)
+            Me.KryptonLabel9.TabIndex = 23
+            Me.KryptonLabel9.Values.Text = "Canton"
+            '
+            'KryptonLabel10
+            '
+            Me.KryptonLabel10.Location = New System.Drawing.Point(6, 108)
+            Me.KryptonLabel10.Name = "KryptonLabel10"
+            Me.KryptonLabel10.Size = New System.Drawing.Size(63, 20)
+            Me.KryptonLabel10.TabIndex = 24
+            Me.KryptonLabel10.Values.Text = "Parroquia"
+            '
+            'KryptonLabel11
+            '
+            Me.KryptonLabel11.Location = New System.Drawing.Point(251, 109)
+            Me.KryptonLabel11.Name = "KryptonLabel11"
+            Me.KryptonLabel11.Size = New System.Drawing.Size(82, 20)
+            Me.KryptonLabel11.TabIndex = 25
+            Me.KryptonLabel11.Values.Text = "Centro Costo"
+            '
             'FormFondoRotativo
             '
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-            Me.BackColor = System.Drawing.Color.White
-            Me.ClientSize = New System.Drawing.Size(798, 391)
+            Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
+            Me.ClientSize = New System.Drawing.Size(675, 391)
+            Me.Controls.Add(Me.KryptonGroupBox1)
             Me.Controls.Add(Me.MenuStrip1)
-            Me.Controls.Add(Me.GroupBox1)
-            Me.Controls.Add(Me.pCentroCostoSolicitudFR)
             Me.Controls.Add(Me.dgvFondoRotativo)
             Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
             Me.Name = "FormFondoRotativo"
@@ -445,41 +444,29 @@
             Me.StateActive.Border.Rounding = 5.0!
             Me.Text = "DEFINICION FONDO ROTATIVO"
             CType(Me.dgvFondoRotativo, System.ComponentModel.ISupportInitialize).EndInit()
-            Me.pCentroCostoSolicitudFR.ResumeLayout(False)
-            Me.pCentroCostoSolicitudFR.PerformLayout()
-            Me.GroupBox1.ResumeLayout(False)
-            Me.GroupBox1.PerformLayout()
             Me.MenuStrip1.ResumeLayout(False)
             Me.MenuStrip1.PerformLayout()
+            CType(Me.KryptonGroupBox1.Panel, System.ComponentModel.ISupportInitialize).EndInit()
+            Me.KryptonGroupBox1.Panel.ResumeLayout(False)
+            Me.KryptonGroupBox1.Panel.PerformLayout()
+            CType(Me.KryptonGroupBox1, System.ComponentModel.ISupportInitialize).EndInit()
+            Me.KryptonGroupBox1.ResumeLayout(False)
             Me.ResumeLayout(False)
             Me.PerformLayout()
 
         End Sub
         Friend WithEvents dgvFondoRotativo As System.Windows.Forms.DataGridView
-        Friend WithEvents lblIdFondoRotativo As System.Windows.Forms.Label
-        Friend WithEvents lblDetalleFondoRotativo As System.Windows.Forms.Label
-        Friend WithEvents lblMontoFondoRotativo As System.Windows.Forms.Label
-        Friend WithEvents lblCtaContableFondo As System.Windows.Forms.Label
-        Friend WithEvents lblTipoCuenta As System.Windows.Forms.Label
-        Friend WithEvents lblNivelCuenta As System.Windows.Forms.Label
         Friend WithEvents txtIdFondoRotativo As System.Windows.Forms.TextBox
         Friend WithEvents txtDetalleFondoRotativo As System.Windows.Forms.TextBox
         Friend WithEvents txtMontoFondoRotativo As System.Windows.Forms.TextBox
         Friend WithEvents txtCtaContableFondo As System.Windows.Forms.TextBox
-        Friend WithEvents pCentroCostoSolicitudFR As System.Windows.Forms.Panel
         Friend WithEvents cmbCentroCosto As System.Windows.Forms.ComboBox
         Friend WithEvents cmbParroquia As System.Windows.Forms.ComboBox
         Friend WithEvents cmbCanton As System.Windows.Forms.ComboBox
         Friend WithEvents cmbProvincia As System.Windows.Forms.ComboBox
-        Friend WithEvents lblParroquia As System.Windows.Forms.Label
-        Friend WithEvents lblProvincia As System.Windows.Forms.Label
-        Friend WithEvents lblCanton As System.Windows.Forms.Label
-        Friend WithEvents lblCentroCosto As System.Windows.Forms.Label
-        Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
         Friend WithEvents cmbNivelCuenta As System.Windows.Forms.ComboBox
         Friend WithEvents cmbTipoCuenta As System.Windows.Forms.ComboBox
         Friend WithEvents txtCustodioFondo As System.Windows.Forms.TextBox
-        Friend WithEvents lblCustodioFondo As System.Windows.Forms.Label
         Friend WithEvents btnBuscarCustodio As System.Windows.Forms.Button
         Friend WithEvents MenuStrip1 As System.Windows.Forms.MenuStrip
         Friend WithEvents btnNuevoFondoRotativo As System.Windows.Forms.ToolStripMenuItem
@@ -487,5 +474,17 @@
         Friend WithEvents btnGuardarFondoRotativo As System.Windows.Forms.ToolStripMenuItem
         Friend WithEvents btnCancelarFondoRotativo As System.Windows.Forms.ToolStripMenuItem
         Friend WithEvents btnReporteFondoRotativo As System.Windows.Forms.ToolStripMenuItem
+        Friend WithEvents KryptonGroupBox1 As Krypton.Toolkit.KryptonGroupBox
+        Friend WithEvents KryptonLabel4 As Krypton.Toolkit.KryptonLabel
+        Friend WithEvents KryptonLabel3 As Krypton.Toolkit.KryptonLabel
+        Friend WithEvents KryptonLabel2 As Krypton.Toolkit.KryptonLabel
+        Friend WithEvents KryptonLabel1 As Krypton.Toolkit.KryptonLabel
+        Friend WithEvents KryptonLabel11 As Krypton.Toolkit.KryptonLabel
+        Friend WithEvents KryptonLabel10 As Krypton.Toolkit.KryptonLabel
+        Friend WithEvents KryptonLabel9 As Krypton.Toolkit.KryptonLabel
+        Friend WithEvents KryptonLabel8 As Krypton.Toolkit.KryptonLabel
+        Friend WithEvents KryptonLabel7 As Krypton.Toolkit.KryptonLabel
+        Friend WithEvents KryptonLabel6 As Krypton.Toolkit.KryptonLabel
+        Friend WithEvents KryptonLabel5 As Krypton.Toolkit.KryptonLabel
     End Class
 End Namespace

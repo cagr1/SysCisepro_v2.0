@@ -160,6 +160,8 @@ Namespace FORMULARIOS.CONTABILIDAD.CUENTAS_POR_COBRAR
                 dgvCuentasPorCobrar.Columns(8).HeaderText = "SALDO"
                 dgvCuentasPorCobrar.Columns(8).Width = 80
                 dgvCuentasPorCobrar.Columns(8).DefaultCellStyle.Format = "n"
+                dgvCuentasPorCobrar.Columns(9).Visible = False
+                dgvCuentasPorCobrar.Columns(10).Visible = False
 
                 dgvCuentasPorCobrar.ReadOnly = False
 
@@ -262,23 +264,14 @@ Namespace FORMULARIOS.CONTABILIDAD.CUENTAS_POR_COBRAR
                 Case TipoConexion.Asenava
                     Icon = My.Resources.logo_a
                     MenuStrip1.ForeColor = Color.White
-                    'MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorAsenava
-                    ChkTodos.ForeColor = Color.White
-                    'ChkTodos.BackColor = My.MySettingsProperty.Settings.ColorAsenava
                     dgvCuentasPorCobrar.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorAsenava
                 Case TipoConexion.Seportpac
                     Icon = My.Resources.logo_s
-                    'MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
                     MenuStrip1.ForeColor = Color.White
-                    ChkTodos.ForeColor = Color.White
-                    'ChkTodos.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
                     dgvCuentasPorCobrar.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorSeportpac
                 Case Else
                     Icon = My.Resources.logo_c
-                    'MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorCisepro
                     MenuStrip1.ForeColor = Color.White
-                    ChkTodos.ForeColor = Color.White
-                    'ChkTodos.BackColor = My.MySettingsProperty.Settings.ColorCisepro
                     dgvCuentasPorCobrar.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
             End Select
             dgvCuentasPorCobrar.Font = New Font("Roboto", 8, FontStyle.Regular)

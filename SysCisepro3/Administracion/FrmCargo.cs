@@ -615,5 +615,10 @@ namespace SysCisepro3.Administracion
         {
             e.Handled = !Validaciones.IsNumeroDecimal(e.KeyChar, txtSueldo.Text);
         }
+
+        private void MenuStrip2_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
     }
 }

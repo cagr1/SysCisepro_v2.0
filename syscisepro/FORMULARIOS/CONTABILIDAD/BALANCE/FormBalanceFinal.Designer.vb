@@ -81,7 +81,7 @@
             Me.chkTodos.BackColor = System.Drawing.Color.Transparent
             Me.chkTodos.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.chkTodos.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
-            Me.chkTodos.Location = New System.Drawing.Point(523, 5)
+            Me.chkTodos.Location = New System.Drawing.Point(546, 5)
             Me.chkTodos.Name = "chkTodos"
             Me.chkTodos.Size = New System.Drawing.Size(94, 22)
             Me.chkTodos.TabIndex = 235
@@ -125,7 +125,7 @@
             Me.dgvMayores.AllowUserToDeleteRows = False
             Me.dgvMayores.AllowUserToResizeRows = False
             DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-            DataGridViewCellStyle1.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle1.Font = New System.Drawing.Font("Roboto", 8.25!)
             Me.dgvMayores.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
             Me.dgvMayores.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.dgvMayores.BorderStyle = System.Windows.Forms.BorderStyle.None
@@ -184,7 +184,8 @@
             'LbCount1
             '
             Me.LbCount1.AutoSize = True
-            Me.LbCount1.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.LbCount1.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.LbCount1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
             Me.LbCount1.Location = New System.Drawing.Point(6, 17)
             Me.LbCount1.Name = "LbCount1"
             Me.LbCount1.Size = New System.Drawing.Size(0, 13)
@@ -205,6 +206,7 @@
             '
             Me.lblUtilidadPerdida.AutoSize = True
             Me.lblUtilidadPerdida.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.lblUtilidadPerdida.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
             Me.lblUtilidadPerdida.Location = New System.Drawing.Point(709, 16)
             Me.lblUtilidadPerdida.Name = "lblUtilidadPerdida"
             Me.lblUtilidadPerdida.Size = New System.Drawing.Size(54, 13)
@@ -237,6 +239,7 @@
             '
             Me.Label10.AutoSize = True
             Me.Label10.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Label10.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
             Me.Label10.Location = New System.Drawing.Point(469, 16)
             Me.Label10.Name = "Label10"
             Me.Label10.Size = New System.Drawing.Size(105, 13)
@@ -247,6 +250,7 @@
             '
             Me.Label8.AutoSize = True
             Me.Label8.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Label8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
             Me.Label8.Location = New System.Drawing.Point(87, 16)
             Me.Label8.Name = "Label8"
             Me.Label8.Size = New System.Drawing.Size(46, 13)
@@ -268,6 +272,7 @@
             '
             Me.Label9.AutoSize = True
             Me.Label9.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Label9.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
             Me.Label9.Location = New System.Drawing.Point(278, 17)
             Me.Label9.Name = "Label9"
             Me.Label9.Size = New System.Drawing.Size(45, 13)

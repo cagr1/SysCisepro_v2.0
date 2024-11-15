@@ -387,7 +387,7 @@
             Me.txtTotalKmControlC.BackColor = System.Drawing.Color.White
             Me.txtTotalKmControlC.Enabled = False
             Me.txtTotalKmControlC.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtTotalKmControlC.Location = New System.Drawing.Point(689, 8)
+            Me.txtTotalKmControlC.Location = New System.Drawing.Point(745, 9)
             Me.txtTotalKmControlC.Name = "txtTotalKmControlC"
             Me.txtTotalKmControlC.Size = New System.Drawing.Size(47, 21)
             Me.txtTotalKmControlC.TabIndex = 29
@@ -470,11 +470,11 @@
             'chkCombustible
             '
             Me.chkCombustible.AutoSize = True
-            Me.chkCombustible.BackColor = System.Drawing.Color.White
+            Me.chkCombustible.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.chkCombustible.Enabled = False
             Me.chkCombustible.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.chkCombustible.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
-            Me.chkCombustible.Location = New System.Drawing.Point(10, 275)
+            Me.chkCombustible.Location = New System.Drawing.Point(10, 277)
             Me.chkCombustible.Name = "chkCombustible"
             Me.chkCombustible.Size = New System.Drawing.Size(143, 17)
             Me.chkCombustible.TabIndex = 23
@@ -497,7 +497,7 @@
             '
             Me.txtMotivoControlC.BackColor = System.Drawing.Color.White
             Me.txtMotivoControlC.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-            Me.txtMotivoControlC.Location = New System.Drawing.Point(441, 38)
+            Me.txtMotivoControlC.Location = New System.Drawing.Point(452, 38)
             Me.txtMotivoControlC.Name = "txtMotivoControlC"
             Me.txtMotivoControlC.Size = New System.Drawing.Size(295, 22)
             Me.txtMotivoControlC.TabIndex = 28
@@ -516,7 +516,7 @@
             Me.txtValorControl.BackColor = System.Drawing.Color.White
             Me.txtValorControl.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtValorControl.ForeColor = System.Drawing.Color.Black
-            Me.txtValorControl.Location = New System.Drawing.Point(513, 11)
+            Me.txtValorControl.Location = New System.Drawing.Point(501, 11)
             Me.txtValorControl.Name = "txtValorControl"
             Me.txtValorControl.Size = New System.Drawing.Size(83, 21)
             Me.txtValorControl.TabIndex = 26
@@ -530,7 +530,7 @@
             Me.txtNombreComercialCliente.Enabled = False
             Me.txtNombreComercialCliente.Location = New System.Drawing.Point(444, 178)
             Me.txtNombreComercialCliente.Name = "txtNombreComercialCliente"
-            Me.txtNombreComercialCliente.Size = New System.Drawing.Size(238, 22)
+            Me.txtNombreComercialCliente.Size = New System.Drawing.Size(337, 22)
             Me.txtNombreComercialCliente.TabIndex = 22
             '
             'btnBuscarPersonalRecibe
@@ -720,7 +720,7 @@
             Me.crvReporteCombustible.Location = New System.Drawing.Point(0, 0)
             Me.crvReporteCombustible.Name = "crvReporteCombustible"
             Me.crvReporteCombustible.ShowLogo = False
-            Me.crvReporteCombustible.Size = New System.Drawing.Size(900, 468)
+            Me.crvReporteCombustible.Size = New System.Drawing.Size(893, 468)
             Me.crvReporteCombustible.TabIndex = 0
             Me.crvReporteCombustible.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None
             '
@@ -975,7 +975,7 @@
             Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
             Me.MenuStrip1.Name = "MenuStrip1"
             Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(7, 2, 0, 2)
-            Me.MenuStrip1.Size = New System.Drawing.Size(902, 32)
+            Me.MenuStrip1.Size = New System.Drawing.Size(895, 32)
             Me.MenuStrip1.TabIndex = 186
             Me.MenuStrip1.Text = "msIngresoBodega"
             '
@@ -1076,30 +1076,13 @@
             'KryptonNavigator1
             '
             Me.KryptonNavigator1.Button.ButtonDisplayLogic = ComponentFactory.Krypton.Navigator.ButtonDisplayLogic.None
-            Me.KryptonNavigator1.Button.CloseButtonAction = ComponentFactory.Krypton.Navigator.CloseButtonAction.RemovePageAndDispose
             Me.KryptonNavigator1.Button.CloseButtonDisplay = ComponentFactory.Krypton.Navigator.ButtonDisplay.Hide
-            Me.KryptonNavigator1.Button.ContextButtonAction = ComponentFactory.Krypton.Navigator.ContextButtonAction.SelectPage
-            Me.KryptonNavigator1.Button.ContextButtonDisplay = ComponentFactory.Krypton.Navigator.ButtonDisplay.Logic
-            Me.KryptonNavigator1.Button.ContextMenuMapImage = ComponentFactory.Krypton.Navigator.MapKryptonPageImage.Small
-            Me.KryptonNavigator1.Button.ContextMenuMapText = ComponentFactory.Krypton.Navigator.MapKryptonPageText.TextTitle
-            Me.KryptonNavigator1.Button.NextButtonAction = ComponentFactory.Krypton.Navigator.DirectionButtonAction.ModeAppropriateAction
-            Me.KryptonNavigator1.Button.NextButtonDisplay = ComponentFactory.Krypton.Navigator.ButtonDisplay.Logic
-            Me.KryptonNavigator1.Button.PreviousButtonAction = ComponentFactory.Krypton.Navigator.DirectionButtonAction.ModeAppropriateAction
-            Me.KryptonNavigator1.Button.PreviousButtonDisplay = ComponentFactory.Krypton.Navigator.ButtonDisplay.Logic
             Me.KryptonNavigator1.Dock = System.Windows.Forms.DockStyle.Fill
-            Me.KryptonNavigator1.Group.GroupBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.ControlClient
-            Me.KryptonNavigator1.Group.GroupBorderStyle = ComponentFactory.Krypton.Toolkit.PaletteBorderStyle.ControlClient
-            Me.KryptonNavigator1.Header.HeaderStyleBar = ComponentFactory.Krypton.Toolkit.HeaderStyle.Secondary
-            Me.KryptonNavigator1.Header.HeaderStylePrimary = ComponentFactory.Krypton.Toolkit.HeaderStyle.Primary
-            Me.KryptonNavigator1.Header.HeaderStyleSecondary = ComponentFactory.Krypton.Toolkit.HeaderStyle.Secondary
             Me.KryptonNavigator1.Location = New System.Drawing.Point(0, 32)
             Me.KryptonNavigator1.Name = "KryptonNavigator1"
-            Me.KryptonNavigator1.NavigatorMode = ComponentFactory.Krypton.Navigator.NavigatorMode.BarTabGroup
-            Me.KryptonNavigator1.PageBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.ControlClient
             Me.KryptonNavigator1.Pages.AddRange(New ComponentFactory.Krypton.Navigator.KryptonPage() {Me.KryptonPage1, Me.KryptonPage2})
-            Me.KryptonNavigator1.Panel.PanelBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.PanelClient
             Me.KryptonNavigator1.SelectedIndex = 0
-            Me.KryptonNavigator1.Size = New System.Drawing.Size(902, 495)
+            Me.KryptonNavigator1.Size = New System.Drawing.Size(895, 495)
             Me.KryptonNavigator1.TabIndex = 190
             Me.KryptonNavigator1.Text = "KryptonNavigator1"
             '
@@ -1114,18 +1097,16 @@
             Me.KryptonPage1.LastVisibleSet = True
             Me.KryptonPage1.MinimumSize = New System.Drawing.Size(50, 50)
             Me.KryptonPage1.Name = "KryptonPage1"
-            Me.KryptonPage1.Size = New System.Drawing.Size(900, 468)
+            Me.KryptonPage1.Size = New System.Drawing.Size(893, 468)
+            Me.KryptonPage1.StateCommon.Page.Color1 = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.KryptonPage1.Text = "Registro Solicitudes"
-            Me.KryptonPage1.ToolTipStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.ToolTip
             Me.KryptonPage1.ToolTipTitle = "Page ToolTip"
             Me.KryptonPage1.UniqueName = "CBC9E2EE499240D362B0F89E4AB658E2"
             '
             'gbCombustible
             '
-            Me.gbCombustible.CaptionStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.GroupBoxCaption
             Me.gbCombustible.Enabled = False
-            Me.gbCombustible.GroupBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.ControlRibbon
-            Me.gbCombustible.GroupBorderStyle = ComponentFactory.Krypton.Toolkit.PaletteBorderStyle.ControlGroupBox
+            Me.gbCombustible.GroupBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.PanelRibbonInactive
             Me.gbCombustible.Location = New System.Drawing.Point(0, 292)
             Me.gbCombustible.Name = "gbCombustible"
             '
@@ -1155,7 +1136,7 @@
             Me.gbCombustible.Panel.Controls.Add(Me.cbmCombustible)
             Me.gbCombustible.Panel.Controls.Add(Me.txtValorControl)
             Me.gbCombustible.Panel.Controls.Add(Me.txtMotivoControlC)
-            Me.gbCombustible.Size = New System.Drawing.Size(901, 177)
+            Me.gbCombustible.Size = New System.Drawing.Size(889, 177)
             Me.gbCombustible.TabIndex = 4
             Me.gbCombustible.Values.Heading = ""
             '
@@ -1198,14 +1179,12 @@
             Me.KryptonLabel33.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Office2007Blue
             Me.KryptonLabel33.Size = New System.Drawing.Size(58, 20)
             Me.KryptonLabel33.StateCommon.ShortText.Color1 = System.Drawing.Color.SeaGreen
-            Me.KryptonLabel33.StateCommon.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit
-            Me.KryptonLabel33.StateCommon.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit
             Me.KryptonLabel33.TabIndex = 68
             Me.KryptonLabel33.Values.Text = "Vehiculo"
             '
             'KryptonLabel32
             '
-            Me.KryptonLabel32.Location = New System.Drawing.Point(624, 10)
+            Me.KryptonLabel32.Location = New System.Drawing.Point(680, 10)
             Me.KryptonLabel32.Name = "KryptonLabel32"
             Me.KryptonLabel32.Size = New System.Drawing.Size(59, 20)
             Me.KryptonLabel32.TabIndex = 73
@@ -1221,7 +1200,7 @@
             '
             'KryptonLabel30
             '
-            Me.KryptonLabel30.Location = New System.Drawing.Point(466, 12)
+            Me.KryptonLabel30.Location = New System.Drawing.Point(452, 12)
             Me.KryptonLabel30.Name = "KryptonLabel30"
             Me.KryptonLabel30.Size = New System.Drawing.Size(39, 20)
             Me.KryptonLabel30.TabIndex = 71
@@ -1253,10 +1232,8 @@
             '
             'KryptonGroupBox1
             '
-            Me.KryptonGroupBox1.CaptionStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.GroupBoxCaption
             Me.KryptonGroupBox1.GroupBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.ControlRibbon
-            Me.KryptonGroupBox1.GroupBorderStyle = ComponentFactory.Krypton.Toolkit.PaletteBorderStyle.ControlGroupBox
-            Me.KryptonGroupBox1.Location = New System.Drawing.Point(0, -1)
+            Me.KryptonGroupBox1.Location = New System.Drawing.Point(0, 2)
             Me.KryptonGroupBox1.Name = "KryptonGroupBox1"
             '
             'KryptonGroupBox1.Panel
@@ -1312,7 +1289,7 @@
             Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel1)
             Me.KryptonGroupBox1.Panel.Controls.Add(Me.txtNumeroSolicitud)
             Me.KryptonGroupBox1.Panel.Controls.Add(Me.cbmCajasChicas)
-            Me.KryptonGroupBox1.Size = New System.Drawing.Size(901, 273)
+            Me.KryptonGroupBox1.Size = New System.Drawing.Size(889, 273)
             Me.KryptonGroupBox1.TabIndex = 0
             Me.KryptonGroupBox1.Values.Heading = ""
             '
@@ -1339,8 +1316,6 @@
             Me.KryptonLabel24.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Office2007Blue
             Me.KryptonLabel24.Size = New System.Drawing.Size(75, 20)
             Me.KryptonLabel24.StateCommon.ShortText.Color1 = System.Drawing.Color.SeaGreen
-            Me.KryptonLabel24.StateCommon.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit
-            Me.KryptonLabel24.StateCommon.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit
             Me.KryptonLabel24.TabIndex = 65
             Me.KryptonLabel24.Values.Text = "Documento"
             '
@@ -1367,8 +1342,6 @@
             Me.KryptonLabel21.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Office2007Blue
             Me.KryptonLabel21.Size = New System.Drawing.Size(42, 20)
             Me.KryptonLabel21.StateCommon.ShortText.Color1 = System.Drawing.Color.SeaGreen
-            Me.KryptonLabel21.StateCommon.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit
-            Me.KryptonLabel21.StateCommon.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit
             Me.KryptonLabel21.TabIndex = 62
             Me.KryptonLabel21.Values.Text = "Gasto"
             '
@@ -1395,8 +1368,6 @@
             Me.KryptonLabel18.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Office2007Blue
             Me.KryptonLabel18.Size = New System.Drawing.Size(94, 20)
             Me.KryptonLabel18.StateCommon.ShortText.Color1 = System.Drawing.Color.SeaGreen
-            Me.KryptonLabel18.StateCommon.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit
-            Me.KryptonLabel18.StateCommon.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit
             Me.KryptonLabel18.TabIndex = 59
             Me.KryptonLabel18.Values.Text = "Contabilizacion"
             '
@@ -1431,8 +1402,6 @@
             Me.KryptonLabel14.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Office2007Blue
             Me.KryptonLabel14.Size = New System.Drawing.Size(47, 20)
             Me.KryptonLabel14.StateCommon.ShortText.Color1 = System.Drawing.Color.SeaGreen
-            Me.KryptonLabel14.StateCommon.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit
-            Me.KryptonLabel14.StateCommon.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit
             Me.KryptonLabel14.TabIndex = 55
             Me.KryptonLabel14.Values.Text = "Recibe"
             '
@@ -1459,8 +1428,6 @@
             Me.KryptonLabel11.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Office2007Blue
             Me.KryptonLabel11.Size = New System.Drawing.Size(52, 20)
             Me.KryptonLabel11.StateCommon.ShortText.Color1 = System.Drawing.Color.SeaGreen
-            Me.KryptonLabel11.StateCommon.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit
-            Me.KryptonLabel11.StateCommon.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit
             Me.KryptonLabel11.TabIndex = 52
             Me.KryptonLabel11.Values.Text = "Entrega"
             '
@@ -1554,9 +1521,8 @@
             Me.KryptonPage2.LastVisibleSet = True
             Me.KryptonPage2.MinimumSize = New System.Drawing.Size(50, 50)
             Me.KryptonPage2.Name = "KryptonPage2"
-            Me.KryptonPage2.Size = New System.Drawing.Size(900, 468)
+            Me.KryptonPage2.Size = New System.Drawing.Size(893, 468)
             Me.KryptonPage2.Text = "Reporte Combustible"
-            Me.KryptonPage2.ToolTipStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.ToolTip
             Me.KryptonPage2.ToolTipTitle = "Page ToolTip"
             Me.KryptonPage2.UniqueName = "1F88DC0C62DD43329DADA882EC8C8324"
             '
@@ -1585,7 +1551,7 @@
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.BackColor = System.Drawing.Color.White
-            Me.ClientSize = New System.Drawing.Size(902, 527)
+            Me.ClientSize = New System.Drawing.Size(895, 527)
             Me.Controls.Add(Me.KryptonNavigator1)
             Me.Controls.Add(Me.lblMontoPorTransaccion)
             Me.Controls.Add(Me.Label6)

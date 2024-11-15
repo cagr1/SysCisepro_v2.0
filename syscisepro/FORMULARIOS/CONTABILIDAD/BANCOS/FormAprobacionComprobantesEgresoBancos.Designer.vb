@@ -48,28 +48,32 @@
             Me.dtpFechaHasta = New System.Windows.Forms.DateTimePicker()
             Me.dtpFechaDesde = New System.Windows.Forms.DateTimePicker()
             Me.KryptonGroupBox1 = New Krypton.Toolkit.KryptonGroupBox()
-            Me.KryptonLabel1 = New Krypton.Toolkit.KryptonLabel()
-            Me.KryptonLabel2 = New Krypton.Toolkit.KryptonLabel()
-            Me.KryptonLabel3 = New Krypton.Toolkit.KryptonLabel()
-            Me.KryptonLabel4 = New Krypton.Toolkit.KryptonLabel()
-            Me.KryptonLabel5 = New Krypton.Toolkit.KryptonLabel()
-            Me.KryptonLabel6 = New Krypton.Toolkit.KryptonLabel()
-            Me.KryptonLabel7 = New Krypton.Toolkit.KryptonLabel()
-            Me.KryptonLabel8 = New Krypton.Toolkit.KryptonLabel()
-            Me.KryptonLabel9 = New Krypton.Toolkit.KryptonLabel()
-            Me.KryptonLabel10 = New Krypton.Toolkit.KryptonLabel()
-            Me.KryptonLabel11 = New Krypton.Toolkit.KryptonLabel()
-            Me.KryptonLabel12 = New Krypton.Toolkit.KryptonLabel()
-            Me.KryptonLabel13 = New Krypton.Toolkit.KryptonLabel()
-            Me.KryptonLabel14 = New Krypton.Toolkit.KryptonLabel()
             Me.KryptonLabel15 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel14 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel13 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel12 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel11 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel10 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel9 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel8 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel7 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel6 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel5 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel4 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel3 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel2 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel1 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonGroupBox2 = New Krypton.Toolkit.KryptonGroupBox()
             CType(Me.dgvComprobanteEgresoBancos, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.MenuStrip1.SuspendLayout()
-            Me.GroupBox1.SuspendLayout()
             CType(Me.KryptonGroupBox1, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.KryptonGroupBox1.Panel, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.KryptonGroupBox1.Panel.SuspendLayout()
             Me.KryptonGroupBox1.SuspendLayout()
+            CType(Me.KryptonGroupBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType(Me.KryptonGroupBox2.Panel, System.ComponentModel.ISupportInitialize).BeginInit()
+            Me.KryptonGroupBox2.Panel.SuspendLayout()
+            Me.KryptonGroupBox2.SuspendLayout()
             Me.SuspendLayout()
             '
             'dgvComprobanteEgresoBancos
@@ -79,7 +83,7 @@
             Me.dgvComprobanteEgresoBancos.AllowUserToResizeRows = False
             DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
             Me.dgvComprobanteEgresoBancos.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
-            Me.dgvComprobanteEgresoBancos.BackgroundColor = System.Drawing.Color.White
+            Me.dgvComprobanteEgresoBancos.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.dgvComprobanteEgresoBancos.BorderStyle = System.Windows.Forms.BorderStyle.None
             Me.dgvComprobanteEgresoBancos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
             Me.dgvComprobanteEgresoBancos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
@@ -91,13 +95,14 @@
             DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
             DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
             Me.dgvComprobanteEgresoBancos.DefaultCellStyle = DataGridViewCellStyle2
-            Me.dgvComprobanteEgresoBancos.Location = New System.Drawing.Point(3, 15)
+            Me.dgvComprobanteEgresoBancos.Dock = System.Windows.Forms.DockStyle.Fill
+            Me.dgvComprobanteEgresoBancos.Location = New System.Drawing.Point(0, 0)
             Me.dgvComprobanteEgresoBancos.MultiSelect = False
             Me.dgvComprobanteEgresoBancos.Name = "dgvComprobanteEgresoBancos"
             Me.dgvComprobanteEgresoBancos.ReadOnly = True
             Me.dgvComprobanteEgresoBancos.RowHeadersVisible = False
             Me.dgvComprobanteEgresoBancos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvComprobanteEgresoBancos.Size = New System.Drawing.Size(901, 263)
+            Me.dgvComprobanteEgresoBancos.Size = New System.Drawing.Size(907, 263)
             Me.dgvComprobanteEgresoBancos.TabIndex = 44
             '
             'txtRazon
@@ -286,10 +291,9 @@
             '
             'GroupBox1
             '
-            Me.GroupBox1.Controls.Add(Me.dgvComprobanteEgresoBancos)
-            Me.GroupBox1.Location = New System.Drawing.Point(2, 206)
+            Me.GroupBox1.Location = New System.Drawing.Point(493, 336)
             Me.GroupBox1.Name = "GroupBox1"
-            Me.GroupBox1.Size = New System.Drawing.Size(913, 284)
+            Me.GroupBox1.Size = New System.Drawing.Size(109, 61)
             Me.GroupBox1.TabIndex = 187
             Me.GroupBox1.TabStop = False
             Me.GroupBox1.Text = "DETALLES DE LA ÓRDEN"
@@ -312,7 +316,9 @@
             '
             'KryptonGroupBox1
             '
-            Me.KryptonGroupBox1.Location = New System.Drawing.Point(3, 32)
+            Me.KryptonGroupBox1.CaptionOverlap = 0R
+            Me.KryptonGroupBox1.GroupBackStyle = Krypton.Toolkit.PaletteBackStyle.ControlRibbon
+            Me.KryptonGroupBox1.Location = New System.Drawing.Point(3, 35)
             Me.KryptonGroupBox1.Name = "KryptonGroupBox1"
             '
             'KryptonGroupBox1.Panel
@@ -351,109 +357,13 @@
             Me.KryptonGroupBox1.TabIndex = 189
             Me.KryptonGroupBox1.Values.Heading = "Datos"
             '
-            'KryptonLabel1
+            'KryptonLabel15
             '
-            Me.KryptonLabel1.Location = New System.Drawing.Point(9, 31)
-            Me.KryptonLabel1.Name = "KryptonLabel1"
-            Me.KryptonLabel1.Size = New System.Drawing.Size(73, 20)
-            Me.KryptonLabel1.TabIndex = 2
-            Me.KryptonLabel1.Values.Text = "Numero CE"
-            '
-            'KryptonLabel2
-            '
-            Me.KryptonLabel2.Location = New System.Drawing.Point(11, 5)
-            Me.KryptonLabel2.Name = "KryptonLabel2"
-            Me.KryptonLabel2.Size = New System.Drawing.Size(26, 20)
-            Me.KryptonLabel2.TabIndex = 3
-            Me.KryptonLabel2.Values.Text = "De"
-            '
-            'KryptonLabel3
-            '
-            Me.KryptonLabel3.Location = New System.Drawing.Point(11, 57)
-            Me.KryptonLabel3.Name = "KryptonLabel3"
-            Me.KryptonLabel3.Size = New System.Drawing.Size(42, 20)
-            Me.KryptonLabel3.TabIndex = 21
-            Me.KryptonLabel3.Values.Text = "Fecha"
-            '
-            'KryptonLabel4
-            '
-            Me.KryptonLabel4.Location = New System.Drawing.Point(9, 83)
-            Me.KryptonLabel4.Name = "KryptonLabel4"
-            Me.KryptonLabel4.Size = New System.Drawing.Size(70, 20)
-            Me.KryptonLabel4.TabIndex = 22
-            Me.KryptonLabel4.Values.Text = "No Factura"
-            '
-            'KryptonLabel5
-            '
-            Me.KryptonLabel5.Location = New System.Drawing.Point(9, 112)
-            Me.KryptonLabel5.Name = "KryptonLabel5"
-            Me.KryptonLabel5.Size = New System.Drawing.Size(50, 20)
-            Me.KryptonLabel5.TabIndex = 23
-            Me.KryptonLabel5.Values.Text = "RUC/CI"
-            '
-            'KryptonLabel6
-            '
-            Me.KryptonLabel6.Location = New System.Drawing.Point(215, 31)
-            Me.KryptonLabel6.Name = "KryptonLabel6"
-            Me.KryptonLabel6.Size = New System.Drawing.Size(61, 20)
-            Me.KryptonLabel6.TabIndex = 27
-            Me.KryptonLabel6.Values.Text = "Actividad"
-            '
-            'KryptonLabel7
-            '
-            Me.KryptonLabel7.Location = New System.Drawing.Point(215, 57)
-            Me.KryptonLabel7.Name = "KryptonLabel7"
-            Me.KryptonLabel7.Size = New System.Drawing.Size(63, 20)
-            Me.KryptonLabel7.TabIndex = 28
-            Me.KryptonLabel7.Values.Text = "Concepto"
-            '
-            'KryptonLabel8
-            '
-            Me.KryptonLabel8.Location = New System.Drawing.Point(215, 83)
-            Me.KryptonLabel8.Name = "KryptonLabel8"
-            Me.KryptonLabel8.Size = New System.Drawing.Size(66, 20)
-            Me.KryptonLabel8.TabIndex = 29
-            Me.KryptonLabel8.Values.Text = "Tipo Pago"
-            '
-            'KryptonLabel9
-            '
-            Me.KryptonLabel9.Location = New System.Drawing.Point(215, 112)
-            Me.KryptonLabel9.Name = "KryptonLabel9"
-            Me.KryptonLabel9.Size = New System.Drawing.Size(52, 20)
-            Me.KryptonLabel9.TabIndex = 30
-            Me.KryptonLabel9.Values.Text = "Pagado"
-            '
-            'KryptonLabel10
-            '
-            Me.KryptonLabel10.Location = New System.Drawing.Point(530, 29)
-            Me.KryptonLabel10.Name = "KryptonLabel10"
-            Me.KryptonLabel10.Size = New System.Drawing.Size(44, 20)
-            Me.KryptonLabel10.TabIndex = 35
-            Me.KryptonLabel10.Values.Text = "Banco"
-            '
-            'KryptonLabel11
-            '
-            Me.KryptonLabel11.Location = New System.Drawing.Point(530, 59)
-            Me.KryptonLabel11.Name = "KryptonLabel11"
-            Me.KryptonLabel11.Size = New System.Drawing.Size(49, 20)
-            Me.KryptonLabel11.TabIndex = 36
-            Me.KryptonLabel11.Values.Text = "Cuenta"
-            '
-            'KryptonLabel12
-            '
-            Me.KryptonLabel12.Location = New System.Drawing.Point(525, 87)
-            Me.KryptonLabel12.Name = "KryptonLabel12"
-            Me.KryptonLabel12.Size = New System.Drawing.Size(72, 20)
-            Me.KryptonLabel12.TabIndex = 37
-            Me.KryptonLabel12.Values.Text = "No Cheque"
-            '
-            'KryptonLabel13
-            '
-            Me.KryptonLabel13.Location = New System.Drawing.Point(530, 115)
-            Me.KryptonLabel13.Name = "KryptonLabel13"
-            Me.KryptonLabel13.Size = New System.Drawing.Size(39, 20)
-            Me.KryptonLabel13.TabIndex = 38
-            Me.KryptonLabel13.Values.Text = "Valor"
+            Me.KryptonLabel15.Location = New System.Drawing.Point(215, 3)
+            Me.KryptonLabel15.Name = "KryptonLabel15"
+            Me.KryptonLabel15.Size = New System.Drawing.Size(18, 20)
+            Me.KryptonLabel15.TabIndex = 48
+            Me.KryptonLabel15.Values.Text = "A"
             '
             'KryptonLabel14
             '
@@ -463,13 +373,123 @@
             Me.KryptonLabel14.TabIndex = 47
             Me.KryptonLabel14.Values.Text = "Razon"
             '
-            'KryptonLabel15
+            'KryptonLabel13
             '
-            Me.KryptonLabel15.Location = New System.Drawing.Point(215, 3)
-            Me.KryptonLabel15.Name = "KryptonLabel15"
-            Me.KryptonLabel15.Size = New System.Drawing.Size(18, 20)
-            Me.KryptonLabel15.TabIndex = 48
-            Me.KryptonLabel15.Values.Text = "A"
+            Me.KryptonLabel13.Location = New System.Drawing.Point(525, 115)
+            Me.KryptonLabel13.Name = "KryptonLabel13"
+            Me.KryptonLabel13.Size = New System.Drawing.Size(39, 20)
+            Me.KryptonLabel13.TabIndex = 38
+            Me.KryptonLabel13.Values.Text = "Valor"
+            '
+            'KryptonLabel12
+            '
+            Me.KryptonLabel12.Location = New System.Drawing.Point(525, 87)
+            Me.KryptonLabel12.Name = "KryptonLabel12"
+            Me.KryptonLabel12.Size = New System.Drawing.Size(72, 20)
+            Me.KryptonLabel12.TabIndex = 37
+            Me.KryptonLabel12.Values.Text = "No Cheque"
+            '
+            'KryptonLabel11
+            '
+            Me.KryptonLabel11.Location = New System.Drawing.Point(525, 59)
+            Me.KryptonLabel11.Name = "KryptonLabel11"
+            Me.KryptonLabel11.Size = New System.Drawing.Size(49, 20)
+            Me.KryptonLabel11.TabIndex = 36
+            Me.KryptonLabel11.Values.Text = "Cuenta"
+            '
+            'KryptonLabel10
+            '
+            Me.KryptonLabel10.Location = New System.Drawing.Point(525, 29)
+            Me.KryptonLabel10.Name = "KryptonLabel10"
+            Me.KryptonLabel10.Size = New System.Drawing.Size(44, 20)
+            Me.KryptonLabel10.TabIndex = 35
+            Me.KryptonLabel10.Values.Text = "Banco"
+            '
+            'KryptonLabel9
+            '
+            Me.KryptonLabel9.Location = New System.Drawing.Point(215, 112)
+            Me.KryptonLabel9.Name = "KryptonLabel9"
+            Me.KryptonLabel9.Size = New System.Drawing.Size(52, 20)
+            Me.KryptonLabel9.TabIndex = 30
+            Me.KryptonLabel9.Values.Text = "Pagado"
+            '
+            'KryptonLabel8
+            '
+            Me.KryptonLabel8.Location = New System.Drawing.Point(215, 83)
+            Me.KryptonLabel8.Name = "KryptonLabel8"
+            Me.KryptonLabel8.Size = New System.Drawing.Size(66, 20)
+            Me.KryptonLabel8.TabIndex = 29
+            Me.KryptonLabel8.Values.Text = "Tipo Pago"
+            '
+            'KryptonLabel7
+            '
+            Me.KryptonLabel7.Location = New System.Drawing.Point(215, 57)
+            Me.KryptonLabel7.Name = "KryptonLabel7"
+            Me.KryptonLabel7.Size = New System.Drawing.Size(63, 20)
+            Me.KryptonLabel7.TabIndex = 28
+            Me.KryptonLabel7.Values.Text = "Concepto"
+            '
+            'KryptonLabel6
+            '
+            Me.KryptonLabel6.Location = New System.Drawing.Point(215, 31)
+            Me.KryptonLabel6.Name = "KryptonLabel6"
+            Me.KryptonLabel6.Size = New System.Drawing.Size(61, 20)
+            Me.KryptonLabel6.TabIndex = 27
+            Me.KryptonLabel6.Values.Text = "Actividad"
+            '
+            'KryptonLabel5
+            '
+            Me.KryptonLabel5.Location = New System.Drawing.Point(9, 112)
+            Me.KryptonLabel5.Name = "KryptonLabel5"
+            Me.KryptonLabel5.Size = New System.Drawing.Size(50, 20)
+            Me.KryptonLabel5.TabIndex = 23
+            Me.KryptonLabel5.Values.Text = "RUC/CI"
+            '
+            'KryptonLabel4
+            '
+            Me.KryptonLabel4.Location = New System.Drawing.Point(9, 83)
+            Me.KryptonLabel4.Name = "KryptonLabel4"
+            Me.KryptonLabel4.Size = New System.Drawing.Size(70, 20)
+            Me.KryptonLabel4.TabIndex = 22
+            Me.KryptonLabel4.Values.Text = "No Factura"
+            '
+            'KryptonLabel3
+            '
+            Me.KryptonLabel3.Location = New System.Drawing.Point(11, 57)
+            Me.KryptonLabel3.Name = "KryptonLabel3"
+            Me.KryptonLabel3.Size = New System.Drawing.Size(42, 20)
+            Me.KryptonLabel3.TabIndex = 21
+            Me.KryptonLabel3.Values.Text = "Fecha"
+            '
+            'KryptonLabel2
+            '
+            Me.KryptonLabel2.Location = New System.Drawing.Point(11, 5)
+            Me.KryptonLabel2.Name = "KryptonLabel2"
+            Me.KryptonLabel2.Size = New System.Drawing.Size(26, 20)
+            Me.KryptonLabel2.TabIndex = 3
+            Me.KryptonLabel2.Values.Text = "De"
+            '
+            'KryptonLabel1
+            '
+            Me.KryptonLabel1.Location = New System.Drawing.Point(9, 31)
+            Me.KryptonLabel1.Name = "KryptonLabel1"
+            Me.KryptonLabel1.Size = New System.Drawing.Size(73, 20)
+            Me.KryptonLabel1.TabIndex = 2
+            Me.KryptonLabel1.Values.Text = "Numero CE"
+            '
+            'KryptonGroupBox2
+            '
+            Me.KryptonGroupBox2.CaptionOverlap = 0R
+            Me.KryptonGroupBox2.GroupBackStyle = Krypton.Toolkit.PaletteBackStyle.ControlRibbon
+            Me.KryptonGroupBox2.Location = New System.Drawing.Point(3, 211)
+            Me.KryptonGroupBox2.Name = "KryptonGroupBox2"
+            '
+            'KryptonGroupBox2.Panel
+            '
+            Me.KryptonGroupBox2.Panel.Controls.Add(Me.dgvComprobanteEgresoBancos)
+            Me.KryptonGroupBox2.Size = New System.Drawing.Size(911, 287)
+            Me.KryptonGroupBox2.TabIndex = 190
+            Me.KryptonGroupBox2.Values.Heading = "Detalles de Orden"
             '
             'FormAprobacionComprobantesEgresoBancos
             '
@@ -477,6 +497,7 @@
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.BackColor = System.Drawing.Color.White
             Me.ClientSize = New System.Drawing.Size(919, 502)
+            Me.Controls.Add(Me.KryptonGroupBox2)
             Me.Controls.Add(Me.KryptonGroupBox1)
             Me.Controls.Add(Me.GroupBox1)
             Me.Controls.Add(Me.MenuStrip1)
@@ -494,12 +515,15 @@
             CType(Me.dgvComprobanteEgresoBancos, System.ComponentModel.ISupportInitialize).EndInit()
             Me.MenuStrip1.ResumeLayout(False)
             Me.MenuStrip1.PerformLayout()
-            Me.GroupBox1.ResumeLayout(False)
             CType(Me.KryptonGroupBox1.Panel, System.ComponentModel.ISupportInitialize).EndInit()
             Me.KryptonGroupBox1.Panel.ResumeLayout(False)
             Me.KryptonGroupBox1.Panel.PerformLayout()
             CType(Me.KryptonGroupBox1, System.ComponentModel.ISupportInitialize).EndInit()
             Me.KryptonGroupBox1.ResumeLayout(False)
+            CType(Me.KryptonGroupBox2.Panel, System.ComponentModel.ISupportInitialize).EndInit()
+            Me.KryptonGroupBox2.Panel.ResumeLayout(False)
+            CType(Me.KryptonGroupBox2, System.ComponentModel.ISupportInitialize).EndInit()
+            Me.KryptonGroupBox2.ResumeLayout(False)
             Me.ResumeLayout(False)
             Me.PerformLayout()
 
@@ -541,5 +565,6 @@
         Friend WithEvents KryptonLabel15 As Krypton.Toolkit.KryptonLabel
         Friend WithEvents KryptonLabel14 As Krypton.Toolkit.KryptonLabel
         Friend WithEvents KryptonLabel13 As Krypton.Toolkit.KryptonLabel
+        Friend WithEvents KryptonGroupBox2 As Krypton.Toolkit.KryptonGroupBox
     End Class
 End Namespace

@@ -104,6 +104,7 @@
     <Compile Include="TalentoHumano\ClassSalidaPersonal.cs" />
     <Compile Include="TalentoHumano\ClassSecuencialContratos.cs" />
     <Compile Include="TalentoHumano\ClassTicketsFarmaciaComecsa.cs" />
+    <Compile Include="UsuarioGeneral\ClassGeneral.cs" />
     <Compile Include="UsuarioGeneral\ClassPermisosUsuario.cs" />
     <Compile Include="UsuarioGeneral\ClassUsuarioGeneral.cs" />
   </ItemGroup>

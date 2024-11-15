@@ -31,31 +31,28 @@
             Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle13 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle14 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle15 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormRevisionLiquidaciones))
-            Me.gbLiquidacion = New System.Windows.Forms.GroupBox()
             Me.txtIdLiquidacion = New System.Windows.Forms.Label()
-            Me.lblFechaLiquidacionFondoRotativo = New System.Windows.Forms.Label()
-            Me.lblTotalLiquidacionFondoRotativo = New System.Windows.Forms.Label()
             Me.txtReposicionLiquidacion = New System.Windows.Forms.TextBox()
-            Me.lblFondoLiquidacion = New System.Windows.Forms.Label()
             Me.txtSaldoLiquidacion = New System.Windows.Forms.TextBox()
-            Me.lblGastosLiquidacion = New System.Windows.Forms.Label()
             Me.txtGastosLiquidacion = New System.Windows.Forms.TextBox()
-            Me.lblSaldoLiquidacion = New System.Windows.Forms.Label()
             Me.txtFondoLiquidacion = New System.Windows.Forms.TextBox()
-            Me.lblReposicionLiquidacion = New System.Windows.Forms.Label()
             Me.txtTotalLiquidacion = New System.Windows.Forms.TextBox()
             Me.txtFechaLiquidacion = New System.Windows.Forms.TextBox()
             Me.dgvSolicitudFondoRotativo = New System.Windows.Forms.DataGridView()
             Me.CHK = New System.Windows.Forms.DataGridViewCheckBoxColumn()
             Me.dgvLiquidacionesPendientes = New System.Windows.Forms.DataGridView()
             Me.chkSeleccionarTodo = New System.Windows.Forms.CheckBox()
-            Me.chkSeleccionarTodoNoDeducibles = New System.Windows.Forms.CheckBox()
             Me.dgvSolicitudFonoRotativoNoDeducible = New System.Windows.Forms.DataGridView()
             Me.DataGridViewCheckBoxColumn1 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
-            Me.gbNoDeducibles = New System.Windows.Forms.GroupBox()
             Me.lblNoDeducibles = New System.Windows.Forms.Label()
-            Me.gbDeducibles = New System.Windows.Forms.GroupBox()
             Me.lblDeducibles = New System.Windows.Forms.Label()
             Me.dgvComprobanteCompra = New System.Windows.Forms.DataGridView()
             Me.dgvComprobanteRetencionCompra = New System.Windows.Forms.DataGridView()
@@ -65,162 +62,104 @@
             Me.btnAgregarDiarioNoDeducibles = New System.Windows.Forms.ToolStripMenuItem()
             Me.btnAgregarDiarioDeducibles = New System.Windows.Forms.ToolStripMenuItem()
             Me.btnFinRevision = New System.Windows.Forms.ToolStripMenuItem()
-            Me.gbLiquidacion.SuspendLayout()
+            Me.KryptonGroupBox1 = New Krypton.Toolkit.KryptonGroupBox()
+            Me.KryptonLabel1 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel2 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel3 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel4 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel5 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel6 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonGroupBox2 = New Krypton.Toolkit.KryptonGroupBox()
+            Me.chkSeleccionarTodoNoDeducibles = New System.Windows.Forms.CheckBox()
+            Me.KryptonGroupBox3 = New Krypton.Toolkit.KryptonGroupBox()
             CType(Me.dgvSolicitudFondoRotativo, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.dgvLiquidacionesPendientes, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.dgvSolicitudFonoRotativoNoDeducible, System.ComponentModel.ISupportInitialize).BeginInit()
-            Me.gbNoDeducibles.SuspendLayout()
-            Me.gbDeducibles.SuspendLayout()
             CType(Me.dgvComprobanteCompra, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.dgvComprobanteRetencionCompra, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.dgvDetalleComprobanteRetencionCompra, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.MenuStrip1.SuspendLayout()
+            CType(Me.KryptonGroupBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType(Me.KryptonGroupBox1.Panel, System.ComponentModel.ISupportInitialize).BeginInit()
+            Me.KryptonGroupBox1.Panel.SuspendLayout()
+            Me.KryptonGroupBox1.SuspendLayout()
+            CType(Me.KryptonGroupBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType(Me.KryptonGroupBox2.Panel, System.ComponentModel.ISupportInitialize).BeginInit()
+            Me.KryptonGroupBox2.Panel.SuspendLayout()
+            Me.KryptonGroupBox2.SuspendLayout()
+            CType(Me.KryptonGroupBox3, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType(Me.KryptonGroupBox3.Panel, System.ComponentModel.ISupportInitialize).BeginInit()
+            Me.KryptonGroupBox3.Panel.SuspendLayout()
+            Me.KryptonGroupBox3.SuspendLayout()
             Me.SuspendLayout()
-            '
-            'gbLiquidacion
-            '
-            Me.gbLiquidacion.BackColor = System.Drawing.Color.White
-            Me.gbLiquidacion.Controls.Add(Me.txtIdLiquidacion)
-            Me.gbLiquidacion.Controls.Add(Me.lblFechaLiquidacionFondoRotativo)
-            Me.gbLiquidacion.Controls.Add(Me.lblTotalLiquidacionFondoRotativo)
-            Me.gbLiquidacion.Controls.Add(Me.txtReposicionLiquidacion)
-            Me.gbLiquidacion.Controls.Add(Me.lblFondoLiquidacion)
-            Me.gbLiquidacion.Controls.Add(Me.txtSaldoLiquidacion)
-            Me.gbLiquidacion.Controls.Add(Me.lblGastosLiquidacion)
-            Me.gbLiquidacion.Controls.Add(Me.txtGastosLiquidacion)
-            Me.gbLiquidacion.Controls.Add(Me.lblSaldoLiquidacion)
-            Me.gbLiquidacion.Controls.Add(Me.txtFondoLiquidacion)
-            Me.gbLiquidacion.Controls.Add(Me.lblReposicionLiquidacion)
-            Me.gbLiquidacion.Controls.Add(Me.txtTotalLiquidacion)
-            Me.gbLiquidacion.Controls.Add(Me.txtFechaLiquidacion)
-            Me.gbLiquidacion.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.gbLiquidacion.Location = New System.Drawing.Point(2, 102)
-            Me.gbLiquidacion.Name = "gbLiquidacion"
-            Me.gbLiquidacion.Size = New System.Drawing.Size(909, 42)
-            Me.gbLiquidacion.TabIndex = 19
-            Me.gbLiquidacion.TabStop = False
-            Me.gbLiquidacion.Text = "LIQUIDACION"
             '
             'txtIdLiquidacion
             '
             Me.txtIdLiquidacion.AutoSize = True
-            Me.txtIdLiquidacion.Location = New System.Drawing.Point(79, 0)
+            Me.txtIdLiquidacion.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtIdLiquidacion.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
+            Me.txtIdLiquidacion.Location = New System.Drawing.Point(93, 40)
             Me.txtIdLiquidacion.Name = "txtIdLiquidacion"
             Me.txtIdLiquidacion.Size = New System.Drawing.Size(16, 13)
             Me.txtIdLiquidacion.TabIndex = 1
             Me.txtIdLiquidacion.Text = "..."
             '
-            'lblFechaLiquidacionFondoRotativo
-            '
-            Me.lblFechaLiquidacionFondoRotativo.AutoSize = True
-            Me.lblFechaLiquidacionFondoRotativo.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.lblFechaLiquidacionFondoRotativo.Location = New System.Drawing.Point(12, 17)
-            Me.lblFechaLiquidacionFondoRotativo.Name = "lblFechaLiquidacionFondoRotativo"
-            Me.lblFechaLiquidacionFondoRotativo.Size = New System.Drawing.Size(44, 13)
-            Me.lblFechaLiquidacionFondoRotativo.TabIndex = 2
-            Me.lblFechaLiquidacionFondoRotativo.Text = "FECHA:"
-            '
-            'lblTotalLiquidacionFondoRotativo
-            '
-            Me.lblTotalLiquidacionFondoRotativo.AutoSize = True
-            Me.lblTotalLiquidacionFondoRotativo.Location = New System.Drawing.Point(271, 17)
-            Me.lblTotalLiquidacionFondoRotativo.Name = "lblTotalLiquidacionFondoRotativo"
-            Me.lblTotalLiquidacionFondoRotativo.Size = New System.Drawing.Size(45, 13)
-            Me.lblTotalLiquidacionFondoRotativo.TabIndex = 3
-            Me.lblTotalLiquidacionFondoRotativo.Text = "TOTAL:"
-            '
             'txtReposicionLiquidacion
             '
             Me.txtReposicionLiquidacion.BackColor = System.Drawing.Color.White
             Me.txtReposicionLiquidacion.Enabled = False
-            Me.txtReposicionLiquidacion.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtReposicionLiquidacion.Location = New System.Drawing.Point(837, 13)
+            Me.txtReposicionLiquidacion.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtReposicionLiquidacion.Location = New System.Drawing.Point(730, 6)
             Me.txtReposicionLiquidacion.Name = "txtReposicionLiquidacion"
-            Me.txtReposicionLiquidacion.Size = New System.Drawing.Size(66, 20)
+            Me.txtReposicionLiquidacion.Size = New System.Drawing.Size(66, 21)
             Me.txtReposicionLiquidacion.TabIndex = 14
             Me.txtReposicionLiquidacion.Text = "0.00"
             Me.txtReposicionLiquidacion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-            '
-            'lblFondoLiquidacion
-            '
-            Me.lblFondoLiquidacion.AutoSize = True
-            Me.lblFondoLiquidacion.Location = New System.Drawing.Point(391, 17)
-            Me.lblFondoLiquidacion.Name = "lblFondoLiquidacion"
-            Me.lblFondoLiquidacion.Size = New System.Drawing.Size(47, 13)
-            Me.lblFondoLiquidacion.TabIndex = 4
-            Me.lblFondoLiquidacion.Text = "FONDO:"
             '
             'txtSaldoLiquidacion
             '
             Me.txtSaldoLiquidacion.BackColor = System.Drawing.Color.White
             Me.txtSaldoLiquidacion.Enabled = False
-            Me.txtSaldoLiquidacion.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtSaldoLiquidacion.Location = New System.Drawing.Point(686, 13)
+            Me.txtSaldoLiquidacion.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtSaldoLiquidacion.Location = New System.Drawing.Point(582, 6)
             Me.txtSaldoLiquidacion.Name = "txtSaldoLiquidacion"
-            Me.txtSaldoLiquidacion.Size = New System.Drawing.Size(66, 20)
+            Me.txtSaldoLiquidacion.Size = New System.Drawing.Size(66, 21)
             Me.txtSaldoLiquidacion.TabIndex = 13
             Me.txtSaldoLiquidacion.Text = "0.00"
             Me.txtSaldoLiquidacion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-            '
-            'lblGastosLiquidacion
-            '
-            Me.lblGastosLiquidacion.AutoSize = True
-            Me.lblGastosLiquidacion.Location = New System.Drawing.Point(511, 17)
-            Me.lblGastosLiquidacion.Name = "lblGastosLiquidacion"
-            Me.lblGastosLiquidacion.Size = New System.Drawing.Size(54, 13)
-            Me.lblGastosLiquidacion.TabIndex = 5
-            Me.lblGastosLiquidacion.Text = "GASTOS:"
             '
             'txtGastosLiquidacion
             '
             Me.txtGastosLiquidacion.BackColor = System.Drawing.Color.White
             Me.txtGastosLiquidacion.Enabled = False
-            Me.txtGastosLiquidacion.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtGastosLiquidacion.Location = New System.Drawing.Point(566, 14)
+            Me.txtGastosLiquidacion.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtGastosLiquidacion.Location = New System.Drawing.Point(459, 6)
             Me.txtGastosLiquidacion.Name = "txtGastosLiquidacion"
-            Me.txtGastosLiquidacion.Size = New System.Drawing.Size(65, 20)
+            Me.txtGastosLiquidacion.Size = New System.Drawing.Size(65, 21)
             Me.txtGastosLiquidacion.TabIndex = 12
             Me.txtGastosLiquidacion.Text = "0.00"
             Me.txtGastosLiquidacion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-            '
-            'lblSaldoLiquidacion
-            '
-            Me.lblSaldoLiquidacion.AutoSize = True
-            Me.lblSaldoLiquidacion.Location = New System.Drawing.Point(637, 16)
-            Me.lblSaldoLiquidacion.Name = "lblSaldoLiquidacion"
-            Me.lblSaldoLiquidacion.Size = New System.Drawing.Size(45, 13)
-            Me.lblSaldoLiquidacion.TabIndex = 6
-            Me.lblSaldoLiquidacion.Text = "SALDO:"
             '
             'txtFondoLiquidacion
             '
             Me.txtFondoLiquidacion.BackColor = System.Drawing.Color.White
             Me.txtFondoLiquidacion.Enabled = False
-            Me.txtFondoLiquidacion.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtFondoLiquidacion.Location = New System.Drawing.Point(440, 14)
+            Me.txtFondoLiquidacion.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtFondoLiquidacion.Location = New System.Drawing.Point(337, 6)
             Me.txtFondoLiquidacion.Name = "txtFondoLiquidacion"
-            Me.txtFondoLiquidacion.Size = New System.Drawing.Size(65, 20)
+            Me.txtFondoLiquidacion.Size = New System.Drawing.Size(65, 21)
             Me.txtFondoLiquidacion.TabIndex = 11
             Me.txtFondoLiquidacion.Text = "0.00"
             Me.txtFondoLiquidacion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-            '
-            'lblReposicionLiquidacion
-            '
-            Me.lblReposicionLiquidacion.AutoSize = True
-            Me.lblReposicionLiquidacion.Location = New System.Drawing.Point(758, 16)
-            Me.lblReposicionLiquidacion.Name = "lblReposicionLiquidacion"
-            Me.lblReposicionLiquidacion.Size = New System.Drawing.Size(74, 13)
-            Me.lblReposicionLiquidacion.TabIndex = 7
-            Me.lblReposicionLiquidacion.Text = "REPOSICION:"
             '
             'txtTotalLiquidacion
             '
             Me.txtTotalLiquidacion.BackColor = System.Drawing.Color.White
             Me.txtTotalLiquidacion.Enabled = False
-            Me.txtTotalLiquidacion.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtTotalLiquidacion.Location = New System.Drawing.Point(320, 14)
+            Me.txtTotalLiquidacion.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtTotalLiquidacion.Location = New System.Drawing.Point(215, 6)
             Me.txtTotalLiquidacion.Name = "txtTotalLiquidacion"
-            Me.txtTotalLiquidacion.Size = New System.Drawing.Size(65, 20)
+            Me.txtTotalLiquidacion.Size = New System.Drawing.Size(65, 21)
             Me.txtTotalLiquidacion.TabIndex = 10
             Me.txtTotalLiquidacion.Text = "0.00"
             Me.txtTotalLiquidacion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
@@ -230,9 +169,9 @@
             Me.txtFechaLiquidacion.BackColor = System.Drawing.Color.White
             Me.txtFechaLiquidacion.Enabled = False
             Me.txtFechaLiquidacion.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtFechaLiquidacion.Location = New System.Drawing.Point(61, 14)
+            Me.txtFechaLiquidacion.Location = New System.Drawing.Point(55, 6)
             Me.txtFechaLiquidacion.Name = "txtFechaLiquidacion"
-            Me.txtFechaLiquidacion.Size = New System.Drawing.Size(178, 21)
+            Me.txtFechaLiquidacion.Size = New System.Drawing.Size(108, 21)
             Me.txtFechaLiquidacion.TabIndex = 9
             '
             'dgvSolicitudFondoRotativo
@@ -243,26 +182,44 @@
             DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
             DataGridViewCellStyle1.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.dgvSolicitudFondoRotativo.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
-            Me.dgvSolicitudFondoRotativo.BackgroundColor = System.Drawing.Color.White
+            Me.dgvSolicitudFondoRotativo.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
+            Me.dgvSolicitudFondoRotativo.BorderStyle = System.Windows.Forms.BorderStyle.None
+            DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+            DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control
+            DataGridViewCellStyle2.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText
+            DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+            DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+            DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+            Me.dgvSolicitudFondoRotativo.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
             Me.dgvSolicitudFondoRotativo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
             Me.dgvSolicitudFondoRotativo.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.CHK})
-            DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-            DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
-            DataGridViewCellStyle2.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
-            DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(123, Byte), Integer))
-            DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-            DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-            Me.dgvSolicitudFondoRotativo.DefaultCellStyle = DataGridViewCellStyle2
-            Me.dgvSolicitudFondoRotativo.Location = New System.Drawing.Point(6, 22)
+            DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+            DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window
+            DataGridViewCellStyle3.Font = New System.Drawing.Font("Roboto", 8.25!)
+            DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText
+            DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(123, Byte), Integer))
+            DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+            DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+            Me.dgvSolicitudFondoRotativo.DefaultCellStyle = DataGridViewCellStyle3
+            Me.dgvSolicitudFondoRotativo.Dock = System.Windows.Forms.DockStyle.Fill
+            Me.dgvSolicitudFondoRotativo.Location = New System.Drawing.Point(0, 0)
             Me.dgvSolicitudFondoRotativo.MultiSelect = False
             Me.dgvSolicitudFondoRotativo.Name = "dgvSolicitudFondoRotativo"
+            DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+            DataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control
+            DataGridViewCellStyle4.Font = New System.Drawing.Font("Roboto", 8.25!)
+            DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText
+            DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
+            DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+            DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+            Me.dgvSolicitudFondoRotativo.RowHeadersDefaultCellStyle = DataGridViewCellStyle4
             Me.dgvSolicitudFondoRotativo.RowHeadersVisible = False
-            DataGridViewCellStyle3.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-            Me.dgvSolicitudFondoRotativo.RowsDefaultCellStyle = DataGridViewCellStyle3
+            DataGridViewCellStyle5.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+            Me.dgvSolicitudFondoRotativo.RowsDefaultCellStyle = DataGridViewCellStyle5
             Me.dgvSolicitudFondoRotativo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvSolicitudFondoRotativo.Size = New System.Drawing.Size(897, 228)
+            Me.dgvSolicitudFondoRotativo.Size = New System.Drawing.Size(812, 152)
             Me.dgvSolicitudFondoRotativo.TabIndex = 17
             '
             'CHK
@@ -277,80 +234,106 @@
             Me.dgvLiquidacionesPendientes.AllowUserToAddRows = False
             Me.dgvLiquidacionesPendientes.AllowUserToDeleteRows = False
             Me.dgvLiquidacionesPendientes.AllowUserToResizeRows = False
-            DataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-            Me.dgvLiquidacionesPendientes.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle4
-            Me.dgvLiquidacionesPendientes.BackgroundColor = System.Drawing.Color.White
+            DataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+            Me.dgvLiquidacionesPendientes.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle6
+            Me.dgvLiquidacionesPendientes.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.dgvLiquidacionesPendientes.BorderStyle = System.Windows.Forms.BorderStyle.None
             Me.dgvLiquidacionesPendientes.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
+            DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+            DataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control
+            DataGridViewCellStyle7.Font = New System.Drawing.Font("Roboto", 8.25!)
+            DataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText
+            DataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight
+            DataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+            DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+            Me.dgvLiquidacionesPendientes.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle7
             Me.dgvLiquidacionesPendientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-            DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-            DataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window
-            DataGridViewCellStyle5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            DataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText
-            DataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(123, Byte), Integer))
-            DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-            DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-            Me.dgvLiquidacionesPendientes.DefaultCellStyle = DataGridViewCellStyle5
-            Me.dgvLiquidacionesPendientes.Location = New System.Drawing.Point(1, 34)
+            DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+            DataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window
+            DataGridViewCellStyle8.Font = New System.Drawing.Font("Roboto", 8.25!)
+            DataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText
+            DataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(123, Byte), Integer))
+            DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+            DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+            Me.dgvLiquidacionesPendientes.DefaultCellStyle = DataGridViewCellStyle8
+            Me.dgvLiquidacionesPendientes.Location = New System.Drawing.Point(5, 32)
             Me.dgvLiquidacionesPendientes.MultiSelect = False
             Me.dgvLiquidacionesPendientes.Name = "dgvLiquidacionesPendientes"
+            DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+            DataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control
+            DataGridViewCellStyle9.Font = New System.Drawing.Font("Roboto", 8.25!)
+            DataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText
+            DataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight
+            DataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+            DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+            Me.dgvLiquidacionesPendientes.RowHeadersDefaultCellStyle = DataGridViewCellStyle9
             Me.dgvLiquidacionesPendientes.RowHeadersVisible = False
+            DataGridViewCellStyle10.Font = New System.Drawing.Font("Roboto", 8.25!)
+            Me.dgvLiquidacionesPendientes.RowsDefaultCellStyle = DataGridViewCellStyle10
             Me.dgvLiquidacionesPendientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvLiquidacionesPendientes.Size = New System.Drawing.Size(905, 65)
+            Me.dgvLiquidacionesPendientes.Size = New System.Drawing.Size(797, 90)
             Me.dgvLiquidacionesPendientes.TabIndex = 22
             '
             'chkSeleccionarTodo
             '
             Me.chkSeleccionarTodo.AutoSize = True
             Me.chkSeleccionarTodo.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.chkSeleccionarTodo.Location = New System.Drawing.Point(746, 1)
+            Me.chkSeleccionarTodo.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
+            Me.chkSeleccionarTodo.Location = New System.Drawing.Point(689, 376)
             Me.chkSeleccionarTodo.Name = "chkSeleccionarTodo"
-            Me.chkSeleccionarTodo.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-            Me.chkSeleccionarTodo.Size = New System.Drawing.Size(147, 17)
+            Me.chkSeleccionarTodo.RightToLeft = System.Windows.Forms.RightToLeft.No
+            Me.chkSeleccionarTodo.Size = New System.Drawing.Size(128, 17)
             Me.chkSeleccionarTodo.TabIndex = 23
-            Me.chkSeleccionarTodo.Text = "MARCAR / DESMARCAR"
+            Me.chkSeleccionarTodo.Text = "Marcar / Desmarcar"
+            Me.chkSeleccionarTodo.TextAlign = System.Drawing.ContentAlignment.MiddleRight
             Me.chkSeleccionarTodo.UseVisualStyleBackColor = True
-            '
-            'chkSeleccionarTodoNoDeducibles
-            '
-            Me.chkSeleccionarTodoNoDeducibles.AutoSize = True
-            Me.chkSeleccionarTodoNoDeducibles.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.chkSeleccionarTodoNoDeducibles.Location = New System.Drawing.Point(746, -1)
-            Me.chkSeleccionarTodoNoDeducibles.Name = "chkSeleccionarTodoNoDeducibles"
-            Me.chkSeleccionarTodoNoDeducibles.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-            Me.chkSeleccionarTodoNoDeducibles.Size = New System.Drawing.Size(147, 17)
-            Me.chkSeleccionarTodoNoDeducibles.TabIndex = 30
-            Me.chkSeleccionarTodoNoDeducibles.Text = "MARCAR / DESMARCAR"
-            Me.chkSeleccionarTodoNoDeducibles.UseVisualStyleBackColor = True
             '
             'dgvSolicitudFonoRotativoNoDeducible
             '
             Me.dgvSolicitudFonoRotativoNoDeducible.AllowUserToAddRows = False
             Me.dgvSolicitudFonoRotativoNoDeducible.AllowUserToDeleteRows = False
             Me.dgvSolicitudFonoRotativoNoDeducible.AllowUserToResizeRows = False
-            DataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-            DataGridViewCellStyle6.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.dgvSolicitudFonoRotativoNoDeducible.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle6
-            Me.dgvSolicitudFonoRotativoNoDeducible.BackgroundColor = System.Drawing.Color.White
+            DataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+            DataGridViewCellStyle11.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.dgvSolicitudFonoRotativoNoDeducible.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle11
+            Me.dgvSolicitudFonoRotativoNoDeducible.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
+            Me.dgvSolicitudFonoRotativoNoDeducible.BorderStyle = System.Windows.Forms.BorderStyle.None
+            DataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+            DataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Control
+            DataGridViewCellStyle12.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText
+            DataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight
+            DataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+            DataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+            Me.dgvSolicitudFonoRotativoNoDeducible.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle12
             Me.dgvSolicitudFonoRotativoNoDeducible.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
             Me.dgvSolicitudFonoRotativoNoDeducible.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewCheckBoxColumn1})
-            DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-            DataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Window
-            DataGridViewCellStyle7.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            DataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ControlText
-            DataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(123, Byte), Integer))
-            DataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-            DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-            Me.dgvSolicitudFonoRotativoNoDeducible.DefaultCellStyle = DataGridViewCellStyle7
-            Me.dgvSolicitudFonoRotativoNoDeducible.Location = New System.Drawing.Point(6, 22)
+            DataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+            DataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Window
+            DataGridViewCellStyle13.Font = New System.Drawing.Font("Roboto", 8.25!)
+            DataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.ControlText
+            DataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(123, Byte), Integer))
+            DataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+            DataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+            Me.dgvSolicitudFonoRotativoNoDeducible.DefaultCellStyle = DataGridViewCellStyle13
+            Me.dgvSolicitudFonoRotativoNoDeducible.Dock = System.Windows.Forms.DockStyle.Fill
+            Me.dgvSolicitudFonoRotativoNoDeducible.Location = New System.Drawing.Point(0, 0)
             Me.dgvSolicitudFonoRotativoNoDeducible.MultiSelect = False
             Me.dgvSolicitudFonoRotativoNoDeducible.Name = "dgvSolicitudFonoRotativoNoDeducible"
+            DataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+            DataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Control
+            DataGridViewCellStyle14.Font = New System.Drawing.Font("Roboto", 8.25!)
+            DataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.WindowText
+            DataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight
+            DataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+            DataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+            Me.dgvSolicitudFonoRotativoNoDeducible.RowHeadersDefaultCellStyle = DataGridViewCellStyle14
             Me.dgvSolicitudFonoRotativoNoDeducible.RowHeadersVisible = False
-            DataGridViewCellStyle8.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-            Me.dgvSolicitudFonoRotativoNoDeducible.RowsDefaultCellStyle = DataGridViewCellStyle8
+            DataGridViewCellStyle15.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+            Me.dgvSolicitudFonoRotativoNoDeducible.RowsDefaultCellStyle = DataGridViewCellStyle15
             Me.dgvSolicitudFonoRotativoNoDeducible.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvSolicitudFonoRotativoNoDeducible.Size = New System.Drawing.Size(897, 195)
+            Me.dgvSolicitudFonoRotativoNoDeducible.Size = New System.Drawing.Size(812, 152)
             Me.dgvSolicitudFonoRotativoNoDeducible.TabIndex = 29
             '
             'DataGridViewCheckBoxColumn1
@@ -360,48 +343,23 @@
             Me.DataGridViewCheckBoxColumn1.Name = "DataGridViewCheckBoxColumn1"
             Me.DataGridViewCheckBoxColumn1.Width = 35
             '
-            'gbNoDeducibles
-            '
-            Me.gbNoDeducibles.BackColor = System.Drawing.Color.White
-            Me.gbNoDeducibles.Controls.Add(Me.lblNoDeducibles)
-            Me.gbNoDeducibles.Controls.Add(Me.chkSeleccionarTodoNoDeducibles)
-            Me.gbNoDeducibles.Controls.Add(Me.dgvSolicitudFonoRotativoNoDeducible)
-            Me.gbNoDeducibles.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.gbNoDeducibles.Location = New System.Drawing.Point(2, 145)
-            Me.gbNoDeducibles.Name = "gbNoDeducibles"
-            Me.gbNoDeducibles.Size = New System.Drawing.Size(909, 222)
-            Me.gbNoDeducibles.TabIndex = 32
-            Me.gbNoDeducibles.TabStop = False
-            Me.gbNoDeducibles.Text = "NO DEDUCIBLES"
-            '
             'lblNoDeducibles
             '
             Me.lblNoDeducibles.AutoSize = True
-            Me.lblNoDeducibles.Location = New System.Drawing.Point(104, 0)
+            Me.lblNoDeducibles.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.lblNoDeducibles.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
+            Me.lblNoDeducibles.Location = New System.Drawing.Point(107, 196)
             Me.lblNoDeducibles.Name = "lblNoDeducibles"
             Me.lblNoDeducibles.Size = New System.Drawing.Size(16, 13)
             Me.lblNoDeducibles.TabIndex = 31
             Me.lblNoDeducibles.Text = "..."
             '
-            'gbDeducibles
-            '
-            Me.gbDeducibles.BackColor = System.Drawing.Color.White
-            Me.gbDeducibles.Controls.Add(Me.lblDeducibles)
-            Me.gbDeducibles.Controls.Add(Me.chkSeleccionarTodo)
-            Me.gbDeducibles.Controls.Add(Me.dgvSolicitudFondoRotativo)
-            Me.gbDeducibles.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.gbDeducibles.Location = New System.Drawing.Point(2, 371)
-            Me.gbDeducibles.Name = "gbDeducibles"
-            Me.gbDeducibles.Size = New System.Drawing.Size(903, 250)
-            Me.gbDeducibles.TabIndex = 33
-            Me.gbDeducibles.TabStop = False
-            Me.gbDeducibles.Text = "DEDUCIBLES"
-            '
             'lblDeducibles
             '
             Me.lblDeducibles.AutoSize = True
             Me.lblDeducibles.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.lblDeducibles.Location = New System.Drawing.Point(104, 0)
+            Me.lblDeducibles.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
+            Me.lblDeducibles.Location = New System.Drawing.Point(91, 376)
             Me.lblDeducibles.Name = "lblDeducibles"
             Me.lblDeducibles.Size = New System.Drawing.Size(16, 13)
             Me.lblDeducibles.TabIndex = 32
@@ -448,7 +406,7 @@
             Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
             Me.MenuStrip1.Name = "MenuStrip1"
             Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(7, 2, 0, 2)
-            Me.MenuStrip1.Size = New System.Drawing.Size(907, 32)
+            Me.MenuStrip1.Size = New System.Drawing.Size(829, 32)
             Me.MenuStrip1.TabIndex = 184
             Me.MenuStrip1.Text = "msIngresoBodega"
             '
@@ -488,20 +446,140 @@
             Me.btnFinRevision.Size = New System.Drawing.Size(163, 28)
             Me.btnFinRevision.Text = "FINALIZAR / LIQUIDAR"
             '
+            'KryptonGroupBox1
+            '
+            Me.KryptonGroupBox1.CaptionOverlap = 0R
+            Me.KryptonGroupBox1.GroupBackStyle = Krypton.Toolkit.PaletteBackStyle.ControlRibbon
+            Me.KryptonGroupBox1.Location = New System.Drawing.Point(5, 35)
+            Me.KryptonGroupBox1.Name = "KryptonGroupBox1"
+            '
+            'KryptonGroupBox1.Panel
+            '
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel6)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel5)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel4)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.txtReposicionLiquidacion)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel3)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel2)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel1)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.txtSaldoLiquidacion)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.dgvLiquidacionesPendientes)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.txtFechaLiquidacion)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.txtTotalLiquidacion)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.txtFondoLiquidacion)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.txtGastosLiquidacion)
+            Me.KryptonGroupBox1.Size = New System.Drawing.Size(819, 150)
+            Me.KryptonGroupBox1.TabIndex = 185
+            Me.KryptonGroupBox1.Values.Heading = "Liquidacion"
+            '
+            'KryptonLabel1
+            '
+            Me.KryptonLabel1.Location = New System.Drawing.Point(7, 5)
+            Me.KryptonLabel1.Name = "KryptonLabel1"
+            Me.KryptonLabel1.Size = New System.Drawing.Size(42, 20)
+            Me.KryptonLabel1.TabIndex = 0
+            Me.KryptonLabel1.Values.Text = "Fecha"
+            '
+            'KryptonLabel2
+            '
+            Me.KryptonLabel2.Location = New System.Drawing.Point(170, 6)
+            Me.KryptonLabel2.Name = "KryptonLabel2"
+            Me.KryptonLabel2.Size = New System.Drawing.Size(38, 20)
+            Me.KryptonLabel2.TabIndex = 10
+            Me.KryptonLabel2.Values.Text = "Total"
+            '
+            'KryptonLabel3
+            '
+            Me.KryptonLabel3.Location = New System.Drawing.Point(286, 6)
+            Me.KryptonLabel3.Name = "KryptonLabel3"
+            Me.KryptonLabel3.Size = New System.Drawing.Size(45, 20)
+            Me.KryptonLabel3.TabIndex = 11
+            Me.KryptonLabel3.Values.Text = "Fondo"
+            '
+            'KryptonLabel4
+            '
+            Me.KryptonLabel4.Location = New System.Drawing.Point(408, 6)
+            Me.KryptonLabel4.Name = "KryptonLabel4"
+            Me.KryptonLabel4.Size = New System.Drawing.Size(47, 20)
+            Me.KryptonLabel4.TabIndex = 12
+            Me.KryptonLabel4.Values.Text = "Gastos"
+            '
+            'KryptonLabel5
+            '
+            Me.KryptonLabel5.Location = New System.Drawing.Point(530, 6)
+            Me.KryptonLabel5.Name = "KryptonLabel5"
+            Me.KryptonLabel5.Size = New System.Drawing.Size(46, 20)
+            Me.KryptonLabel5.TabIndex = 13
+            Me.KryptonLabel5.Values.Text = "Saldos"
+            '
+            'KryptonLabel6
+            '
+            Me.KryptonLabel6.Location = New System.Drawing.Point(654, 6)
+            Me.KryptonLabel6.Name = "KryptonLabel6"
+            Me.KryptonLabel6.Size = New System.Drawing.Size(70, 20)
+            Me.KryptonLabel6.TabIndex = 14
+            Me.KryptonLabel6.Values.Text = "Reposicion"
+            '
+            'KryptonGroupBox2
+            '
+            Me.KryptonGroupBox2.CaptionOverlap = 0R
+            Me.KryptonGroupBox2.GroupBackStyle = Krypton.Toolkit.PaletteBackStyle.ControlRibbon
+            Me.KryptonGroupBox2.Location = New System.Drawing.Point(8, 191)
+            Me.KryptonGroupBox2.Name = "KryptonGroupBox2"
+            '
+            'KryptonGroupBox2.Panel
+            '
+            Me.KryptonGroupBox2.Panel.Controls.Add(Me.dgvSolicitudFonoRotativoNoDeducible)
+            Me.KryptonGroupBox2.Size = New System.Drawing.Size(816, 176)
+            Me.KryptonGroupBox2.TabIndex = 186
+            Me.KryptonGroupBox2.Values.Heading = "No Deducibles"
+            '
+            'chkSeleccionarTodoNoDeducibles
+            '
+            Me.chkSeleccionarTodoNoDeducibles.AutoSize = True
+            Me.chkSeleccionarTodoNoDeducibles.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.chkSeleccionarTodoNoDeducibles.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
+            Me.chkSeleccionarTodoNoDeducibles.Location = New System.Drawing.Point(688, 196)
+            Me.chkSeleccionarTodoNoDeducibles.Name = "chkSeleccionarTodoNoDeducibles"
+            Me.chkSeleccionarTodoNoDeducibles.RightToLeft = System.Windows.Forms.RightToLeft.No
+            Me.chkSeleccionarTodoNoDeducibles.Size = New System.Drawing.Size(128, 17)
+            Me.chkSeleccionarTodoNoDeducibles.TabIndex = 30
+            Me.chkSeleccionarTodoNoDeducibles.Text = "Marcar / Desmarcar"
+            Me.chkSeleccionarTodoNoDeducibles.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+            Me.chkSeleccionarTodoNoDeducibles.UseVisualStyleBackColor = True
+            '
+            'KryptonGroupBox3
+            '
+            Me.KryptonGroupBox3.CaptionOverlap = 0R
+            Me.KryptonGroupBox3.GroupBackStyle = Krypton.Toolkit.PaletteBackStyle.ControlRibbon
+            Me.KryptonGroupBox3.Location = New System.Drawing.Point(8, 371)
+            Me.KryptonGroupBox3.Name = "KryptonGroupBox3"
+            '
+            'KryptonGroupBox3.Panel
+            '
+            Me.KryptonGroupBox3.Panel.Controls.Add(Me.dgvSolicitudFondoRotativo)
+            Me.KryptonGroupBox3.Size = New System.Drawing.Size(816, 176)
+            Me.KryptonGroupBox3.TabIndex = 187
+            Me.KryptonGroupBox3.Values.Heading = "Deducibles"
+            '
             'FormRevisionLiquidaciones
             '
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-            Me.BackColor = System.Drawing.Color.White
-            Me.ClientSize = New System.Drawing.Size(907, 623)
-            Me.Controls.Add(Me.gbNoDeducibles)
+            Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
+            Me.ClientSize = New System.Drawing.Size(829, 550)
+            Me.Controls.Add(Me.chkSeleccionarTodo)
+            Me.Controls.Add(Me.lblDeducibles)
+            Me.Controls.Add(Me.KryptonGroupBox3)
+            Me.Controls.Add(Me.chkSeleccionarTodoNoDeducibles)
+            Me.Controls.Add(Me.lblNoDeducibles)
+            Me.Controls.Add(Me.KryptonGroupBox2)
+            Me.Controls.Add(Me.txtIdLiquidacion)
+            Me.Controls.Add(Me.KryptonGroupBox1)
             Me.Controls.Add(Me.MenuStrip1)
             Me.Controls.Add(Me.dgvDetalleComprobanteRetencionCompra)
             Me.Controls.Add(Me.dgvComprobanteRetencionCompra)
             Me.Controls.Add(Me.dgvComprobanteCompra)
-            Me.Controls.Add(Me.gbDeducibles)
-            Me.Controls.Add(Me.dgvLiquidacionesPendientes)
-            Me.Controls.Add(Me.gbLiquidacion)
             Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
             Me.Name = "FormRevisionLiquidaciones"
             Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
@@ -510,47 +588,44 @@
             Or Krypton.Toolkit.PaletteDrawBorders.Right), Krypton.Toolkit.PaletteDrawBorders)
             Me.StateActive.Border.Rounding = 5.0!
             Me.Text = "REVISION DE LIQUIDACIONES"
-            Me.gbLiquidacion.ResumeLayout(False)
-            Me.gbLiquidacion.PerformLayout()
             CType(Me.dgvSolicitudFondoRotativo, System.ComponentModel.ISupportInitialize).EndInit()
             CType(Me.dgvLiquidacionesPendientes, System.ComponentModel.ISupportInitialize).EndInit()
             CType(Me.dgvSolicitudFonoRotativoNoDeducible, System.ComponentModel.ISupportInitialize).EndInit()
-            Me.gbNoDeducibles.ResumeLayout(False)
-            Me.gbNoDeducibles.PerformLayout()
-            Me.gbDeducibles.ResumeLayout(False)
-            Me.gbDeducibles.PerformLayout()
             CType(Me.dgvComprobanteCompra, System.ComponentModel.ISupportInitialize).EndInit()
             CType(Me.dgvComprobanteRetencionCompra, System.ComponentModel.ISupportInitialize).EndInit()
             CType(Me.dgvDetalleComprobanteRetencionCompra, System.ComponentModel.ISupportInitialize).EndInit()
             Me.MenuStrip1.ResumeLayout(False)
             Me.MenuStrip1.PerformLayout()
+            CType(Me.KryptonGroupBox1.Panel, System.ComponentModel.ISupportInitialize).EndInit()
+            Me.KryptonGroupBox1.Panel.ResumeLayout(False)
+            Me.KryptonGroupBox1.Panel.PerformLayout()
+            CType(Me.KryptonGroupBox1, System.ComponentModel.ISupportInitialize).EndInit()
+            Me.KryptonGroupBox1.ResumeLayout(False)
+            CType(Me.KryptonGroupBox2.Panel, System.ComponentModel.ISupportInitialize).EndInit()
+            Me.KryptonGroupBox2.Panel.ResumeLayout(False)
+            CType(Me.KryptonGroupBox2, System.ComponentModel.ISupportInitialize).EndInit()
+            Me.KryptonGroupBox2.ResumeLayout(False)
+            CType(Me.KryptonGroupBox3.Panel, System.ComponentModel.ISupportInitialize).EndInit()
+            Me.KryptonGroupBox3.Panel.ResumeLayout(False)
+            CType(Me.KryptonGroupBox3, System.ComponentModel.ISupportInitialize).EndInit()
+            Me.KryptonGroupBox3.ResumeLayout(False)
             Me.ResumeLayout(False)
             Me.PerformLayout()
 
         End Sub
-        Friend WithEvents gbLiquidacion As System.Windows.Forms.GroupBox
         Friend WithEvents txtIdLiquidacion As System.Windows.Forms.Label
-        Friend WithEvents lblFechaLiquidacionFondoRotativo As System.Windows.Forms.Label
-        Friend WithEvents lblTotalLiquidacionFondoRotativo As System.Windows.Forms.Label
         Friend WithEvents txtReposicionLiquidacion As System.Windows.Forms.TextBox
-        Friend WithEvents lblFondoLiquidacion As System.Windows.Forms.Label
         Friend WithEvents txtSaldoLiquidacion As System.Windows.Forms.TextBox
-        Friend WithEvents lblGastosLiquidacion As System.Windows.Forms.Label
         Friend WithEvents txtGastosLiquidacion As System.Windows.Forms.TextBox
-        Friend WithEvents lblSaldoLiquidacion As System.Windows.Forms.Label
         Friend WithEvents txtFondoLiquidacion As System.Windows.Forms.TextBox
-        Friend WithEvents lblReposicionLiquidacion As System.Windows.Forms.Label
         Friend WithEvents txtTotalLiquidacion As System.Windows.Forms.TextBox
         Friend WithEvents txtFechaLiquidacion As System.Windows.Forms.TextBox
         Friend WithEvents dgvSolicitudFondoRotativo As System.Windows.Forms.DataGridView
         Friend WithEvents dgvLiquidacionesPendientes As System.Windows.Forms.DataGridView
         Friend WithEvents CHK As System.Windows.Forms.DataGridViewCheckBoxColumn
         Friend WithEvents chkSeleccionarTodo As System.Windows.Forms.CheckBox
-        Friend WithEvents chkSeleccionarTodoNoDeducibles As System.Windows.Forms.CheckBox
         Friend WithEvents dgvSolicitudFonoRotativoNoDeducible As System.Windows.Forms.DataGridView
         Friend WithEvents DataGridViewCheckBoxColumn1 As System.Windows.Forms.DataGridViewCheckBoxColumn
-        Friend WithEvents gbNoDeducibles As System.Windows.Forms.GroupBox
-        Friend WithEvents gbDeducibles As System.Windows.Forms.GroupBox
         Friend WithEvents dgvComprobanteCompra As System.Windows.Forms.DataGridView
         Friend WithEvents dgvComprobanteRetencionCompra As System.Windows.Forms.DataGridView
         Friend WithEvents dgvDetalleComprobanteRetencionCompra As System.Windows.Forms.DataGridView
@@ -561,5 +636,15 @@
         Friend WithEvents btnFinRevision As System.Windows.Forms.ToolStripMenuItem
         Friend WithEvents lblNoDeducibles As System.Windows.Forms.Label
         Friend WithEvents lblDeducibles As System.Windows.Forms.Label
+        Friend WithEvents KryptonGroupBox1 As Krypton.Toolkit.KryptonGroupBox
+        Friend WithEvents KryptonLabel6 As Krypton.Toolkit.KryptonLabel
+        Friend WithEvents KryptonLabel5 As Krypton.Toolkit.KryptonLabel
+        Friend WithEvents KryptonLabel4 As Krypton.Toolkit.KryptonLabel
+        Friend WithEvents KryptonLabel3 As Krypton.Toolkit.KryptonLabel
+        Friend WithEvents KryptonLabel2 As Krypton.Toolkit.KryptonLabel
+        Friend WithEvents KryptonLabel1 As Krypton.Toolkit.KryptonLabel
+        Friend WithEvents KryptonGroupBox2 As Krypton.Toolkit.KryptonGroupBox
+        Friend WithEvents chkSeleccionarTodoNoDeducibles As CheckBox
+        Friend WithEvents KryptonGroupBox3 As Krypton.Toolkit.KryptonGroupBox
     End Class
 End Namespace

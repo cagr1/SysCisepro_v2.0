@@ -95,10 +95,10 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.btnCertificado = new Krypton.Toolkit.KryptonButton();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.pdfViewer1 = new PdfiumViewer.PdfViewer();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.pdfViewer1 = new PdfiumViewer.PdfViewer();
             this.GroupBox2.SuspendLayout();
             this.GroupBox1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
@@ -826,6 +826,13 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Permiso IESS";
             // 
+            // pdfViewer1
+            // 
+            this.pdfViewer1.Location = new System.Drawing.Point(3, 3);
+            this.pdfViewer1.Name = "pdfViewer1";
+            this.pdfViewer1.Size = new System.Drawing.Size(770, 613);
+            this.pdfViewer1.TabIndex = 1;
+            // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
@@ -834,13 +841,6 @@
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
-            // 
-            // pdfViewer1
-            // 
-            this.pdfViewer1.Location = new System.Drawing.Point(3, 3);
-            this.pdfViewer1.Name = "pdfViewer1";
-            this.pdfViewer1.Size = new System.Drawing.Size(770, 438);
-            this.pdfViewer1.TabIndex = 1;
             // 
             // FrmPermisos
             // 

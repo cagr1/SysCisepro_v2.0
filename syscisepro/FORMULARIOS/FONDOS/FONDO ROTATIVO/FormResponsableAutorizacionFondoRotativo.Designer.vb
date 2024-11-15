@@ -98,6 +98,9 @@
             Me.dgvResponsableAutoFR.AllowUserToResizeRows = False
             DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
             Me.dgvResponsableAutoFR.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+            Me.dgvResponsableAutoFR.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
             Me.dgvResponsableAutoFR.BackgroundColor = System.Drawing.Color.White
             Me.dgvResponsableAutoFR.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
             Me.dgvResponsableAutoFR.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
@@ -109,13 +112,13 @@
             DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
             DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
             Me.dgvResponsableAutoFR.DefaultCellStyle = DataGridViewCellStyle2
-            Me.dgvResponsableAutoFR.Location = New System.Drawing.Point(1, 155)
+            Me.dgvResponsableAutoFR.Location = New System.Drawing.Point(315, 155)
             Me.dgvResponsableAutoFR.MultiSelect = False
             Me.dgvResponsableAutoFR.Name = "dgvResponsableAutoFR"
             Me.dgvResponsableAutoFR.ReadOnly = True
             Me.dgvResponsableAutoFR.RowHeadersVisible = False
             Me.dgvResponsableAutoFR.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvResponsableAutoFR.Size = New System.Drawing.Size(706, 189)
+            Me.dgvResponsableAutoFR.Size = New System.Drawing.Size(392, 189)
             Me.dgvResponsableAutoFR.TabIndex = 19
             '
             'txtIdResponsableAutoFR
@@ -173,9 +176,9 @@
             Me.pCentroCostoSolicitudFR.Controls.Add(Me.lblProvincia)
             Me.pCentroCostoSolicitudFR.Controls.Add(Me.lblCanton)
             Me.pCentroCostoSolicitudFR.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.pCentroCostoSolicitudFR.Location = New System.Drawing.Point(2, 113)
+            Me.pCentroCostoSolicitudFR.Location = New System.Drawing.Point(315, 113)
             Me.pCentroCostoSolicitudFR.Name = "pCentroCostoSolicitudFR"
-            Me.pCentroCostoSolicitudFR.Size = New System.Drawing.Size(705, 41)
+            Me.pCentroCostoSolicitudFR.Size = New System.Drawing.Size(392, 41)
             Me.pCentroCostoSolicitudFR.TabIndex = 27
             '
             'cmbParroquia
@@ -263,9 +266,9 @@
             Me.gbResponsable.Controls.Add(Me.txtCIResponsableAutoFR)
             Me.gbResponsable.Controls.Add(Me.txtNombreResponsableAutoFR)
             Me.gbResponsable.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.gbResponsable.Location = New System.Drawing.Point(4, 34)
+            Me.gbResponsable.Location = New System.Drawing.Point(315, 34)
             Me.gbResponsable.Name = "gbResponsable"
-            Me.gbResponsable.Size = New System.Drawing.Size(703, 76)
+            Me.gbResponsable.Size = New System.Drawing.Size(392, 76)
             Me.gbResponsable.TabIndex = 30
             Me.gbResponsable.TabStop = False
             Me.gbResponsable.Text = "RESPONSABLE"

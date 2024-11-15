@@ -4269,5 +4269,54 @@ namespace SysCisepro3.TalentoHumano
         {
 
         }
+
+        private void btnGenerar_Click_1(object sender, EventArgs e)
+        {
+
+            if (dgvDetallesRol.CurrentRow == null) return;
+            if (dgvDetallesRol.CurrentRow.Cells[0].Value == DBNull.Value) return;
+            var fila1 = dgvDetallesRol.CurrentRow;
+
+            string empre = Validaciones.NombreCompany(TipoCon);
+            var Hoy = Usuario.Now(TipoCon).ToShortDateString();
+            var Mes1 = System.Globalization.CultureInfo.CurrentCulture.DateTimeFormat.GetMonthName(dtpMesAnio.Value.Month).ToUpper();
+            var Anio = dtpMesAnio.Value.Year.ToString();
+            var Admin = dgvDetallesRol.CurrentRow.Cells[0].Value.ToString().Equals("ADMINISTRATIVO");
+            var rpt = new rptPlanillaPagoBasicoTodos();
+
+            try
+            {
+
+                var ids = (from DataGridViewRow row in dgvDetallesRol.Rows
+                           where row.Cells[1].Value != null && row.Cells[1].Value != DBNull.Value
+                           select row.Cells[1].Value.ToString()).ToList();
+
+                _rptPlanilla.SetDataSource(_objDetaRolPago.SeleccionarDetalleRolLista(TipoCon, ids, Convert.ToInt32(lblIdRol.Text)));
+                //rpt.SetDataSource(_objDetaRolPago.SeleccionarDetalleRolLista(TipoCon,ids,Convert.ToInt32(lblIdRol.Text)));
+                _rptPlanilla.SetParameterValue("img", Validaciones.NombreLogo(TipoCon, System.Windows.Forms.Application.StartupPath));
+                _rptPlanilla.SetParameterValue("fecha", Hoy);
+                _rptPlanilla.SetParameterValue("empre", empre);
+                _rptPlanilla.SetParameterValue("mes", Mes1);
+                _rptPlanilla.SetParameterValue("anio", Anio);
+
+
+                //_rptPlanilla.SetParameterValue("banco", (fila1.Cells[72].Value != null && fila1.Cells[72].Value.ToString().Trim() != "0")
+                //? fila1.Cells[73].Value + " - " + fila1.Cells[74].Value + " (" + fila1.Cells[75].Value + ")" : "SIN BANCO - PAGADO EN CHEQUE");
+
+                //var txtReportHeader = rpt.ReportDefinition.ReportObjects["Text64"] as TextObject;
+                //txtReportHeader.Text = Admin ? "DESC. DIF. DEC. EXT:" : "DES. DIA NO LAB:";
+
+
+                crvReporteRol.ReportSource = _rptPlanilla;
+                crvReporteRol.Zoom(2);
+                crvReporteRol.Refresh();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("An error occured: " + ex.Message);
+                crvReporteRol.ReportSource = null;
+            }
+
+        }
     }
 }

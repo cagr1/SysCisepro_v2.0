@@ -4,6 +4,7 @@ Imports ClassLibraryCisepro.CONTABILIDAD.PLAN_DE_CUENTAS
 Imports ClassLibraryCisepro.ENUMS
 Imports Microsoft.Office.Interop
 Imports syscisepro.DATOS
+Imports Krypton.Toolkit
 
 Namespace FORMULARIOS.CONTABILIDAD.BALANCE
  ''' <summary>
@@ -209,7 +210,8 @@ Namespace FORMULARIOS.CONTABILIDAD.BALANCE
         Private Sub ExportarDatosExcel(ByVal dgvAsientosDiario As DataGridView, ByVal titulo As String)
             Try
                 If dgvAsientosDiario.Rows.Count = 0 Then
-                    MsgBox("NO HAY DATOS QUE EXPORTAR!", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                    'MsgBox("NO HAY DATOS QUE EXPORTAR!", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                    KryptonMessageBox.Show("NO HAY DATOS QUE EXPORTAR!", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                     Return
                 End If
 
@@ -298,7 +300,8 @@ Namespace FORMULARIOS.CONTABILIDAD.BALANCE
                 app.Visible = True
                 app.DisplayAlerts = True
             Catch ex As Exception
-                MessageBox.Show("HUBO UN PROBLEMA AL EXPORTAR DATOS!", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                'MessageBox.Show("HUBO UN PROBLEMA AL EXPORTAR DATOS!", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                KryptonMessageBox.Show("HUBO UN PROBLEMA AL EXPORTAR DATOS!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
 
         End Sub
@@ -336,7 +339,8 @@ Namespace FORMULARIOS.CONTABILIDAD.BALANCE
         Private Sub btnArbol_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnArbol.Click
             Try
                 If dgvMayores.RowCount = 0 Then
-                    MsgBox("PRIMERO DEBE CARGAR EL BALANCE", MsgBoxStyle.Exclamation, "MENSAJE DE INFORMACION")
+                    'MsgBox("PRIMERO DEBE CARGAR EL BALANCE", MsgBoxStyle.Exclamation, "MENSAJE DE INFORMACION")
+                    KryptonMessageBox.Show("PRIMERO DEBE CARGAR EL BALANCE", "MENSAJE DE INFORMACION", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                     Return
                 End If
 
@@ -378,9 +382,11 @@ Namespace FORMULARIOS.CONTABILIDAD.BALANCE
 
                 tvBalanceComprobacion.EndUpdate()
                 tcAuxiliares.SelectedIndex = 1
-                MsgBox("ÁRBOL GENERADO CON EÉXTIO", MsgBoxStyle.Information, "MENSAJE DE INFORMACION")
+                'MsgBox("ÁRBOL GENERADO CON EÉXTIO", MsgBoxStyle.Information, "MENSAJE DE INFORMACION")
+                KryptonMessageBox.Show("ÁRBOL GENERADO CON ÉXTIO", "MENSAJE DE INFORMACION", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
             Catch esxception As Exception
-                MsgBox("ERROR AL GENERAR ÁRBOL: " & esxception.Message, MsgBoxStyle.Critical, "MENSAJE DE INFORMACION")
+                'MsgBox("ERROR AL GENERAR ÁRBOL: " & esxception.Message, MsgBoxStyle.Critical, "MENSAJE DE INFORMACION")
+                KryptonMessageBox.Show("ERROR AL GENERAR ÁRBOL: " & esxception.Message, "MENSAJE DE INFORMACION", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
 
@@ -445,7 +451,8 @@ Namespace FORMULARIOS.CONTABILIDAD.BALANCE
                     End If
                 End If
             Catch ex As Exception
-                MsgBox(ex.Message.ToString)
+                'MsgBox(ex.Message.ToString)
+                KryptonMessageBox.Show(ex.Message.ToString, "MENSAJE DE INFORMACION", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
          

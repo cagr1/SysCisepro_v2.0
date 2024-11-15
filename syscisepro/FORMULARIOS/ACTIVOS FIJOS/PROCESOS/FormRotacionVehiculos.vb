@@ -1,9 +1,11 @@
 ﻿Imports System.Data.SqlClient
+Imports System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel
 Imports ClassLibraryCisepro.ACTIVOS_FIJOS.MODULOS_DE_ACTIVOS_FIJOS
 Imports ClassLibraryCisepro.ACTIVOS_FIJOS.TIPOS_DE_ACTIVOS
 Imports ClassLibraryCisepro.ENUMS
 Imports ClassLibraryCisepro.ProcesosSql
 Imports ClassLibraryCisepro.TALENTO_HUMANO
+Imports Krypton.Toolkit
 
 Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
     ''' <summary>
@@ -35,6 +37,7 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
         End Property
         Dim _sqlCommands As List(Of SqlCommand)
         Public IdUsuario As Integer
+        Public UserName As String
 
         ReadOnly _objPersonal As New ClassPersonal
         ReadOnly _objVehiculos As New ClassVehiculo
@@ -51,12 +54,12 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
                     dgvVehiculos.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorAsenava
                     dgvRotaciones.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorAsenava
                 Case TipoConexion.Seportpac
-                    Icon = My.Resources.logo_s 
+                    Icon = My.Resources.logo_s
                     dgvPersonal.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorSeportpac
                     dgvVehiculos.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorSeportpac
                     dgvRotaciones.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorSeportpac
                 Case Else
-                    Icon = My.Resources.logo_c 
+                    Icon = My.Resources.logo_c
                     dgvPersonal.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
                     dgvVehiculos.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
                     dgvRotaciones.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
@@ -65,7 +68,7 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
             dgvVehiculos.Font = New Font("Roboto", 8, FontStyle.Regular)
             dgvRotaciones.Font = New Font("Roboto", 8, FontStyle.Regular)
             _sqlCommands = New List(Of SqlCommand)
-            Cargar() 
+            Cargar()
         End Sub
 
         Private Sub Cargar()
@@ -170,14 +173,14 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
                 dgvVehiculos.Rows(dgvVehiculos.CurrentCell.RowIndex.ToString()).DefaultCellStyle.BackColor = Color.Yellow
                 dgvVehiculos.Rows(dgvVehiculos.CurrentCell.RowIndex.ToString()).Selected = False
                 dgvVehiculos.Rows(dgvVehiculos.CurrentCell.RowIndex.ToString() + 1).Selected = True
-                Dim fila As String() = {_idRotacion, _
-                                        dgvVehiculos.CurrentRow.Cells.Item("ID_ACTIVO_FIJO").Value.ToString(), _
-                                        dgvVehiculos.CurrentRow.Cells.Item("NOMBRE_ACTIVO").Value.ToString(), _
-                                        txtFechaRotacion.Text, _
-                                        dgvPersonal.CurrentRow.Cells.Item("ID_PERSONAL").Value.ToString(), _
-                                        dgvPersonal.CurrentRow.Cells.Item("APELLIDOS").Value.ToString() + " " + dgvPersonal.CurrentRow.Cells.Item("NOMBRES").Value.ToString(), _
-                                        dgvVehiculos.CurrentRow.Cells.Item("ID_PERSONAL").Value.ToString(), _
-                                        dgvVehiculos.CurrentRow.Cells.Item("NOMBRE_CUSTODIO").Value.ToString(), _
+                Dim fila As String() = {_idRotacion,
+                                        dgvVehiculos.CurrentRow.Cells.Item("ID_ACTIVO_FIJO").Value.ToString(),
+                                        dgvVehiculos.CurrentRow.Cells.Item("NOMBRE_ACTIVO").Value.ToString(),
+                                        txtFechaRotacion.Text,
+                                        dgvPersonal.CurrentRow.Cells.Item("ID_PERSONAL").Value.ToString(),
+                                        dgvPersonal.CurrentRow.Cells.Item("APELLIDOS").Value.ToString() + " " + dgvPersonal.CurrentRow.Cells.Item("NOMBRES").Value.ToString(),
+                                        dgvVehiculos.CurrentRow.Cells.Item("ID_PERSONAL").Value.ToString(),
+                                        dgvVehiculos.CurrentRow.Cells.Item("NOMBRE_CUSTODIO").Value.ToString(),
                                         txtObservacion.Text.ToUpper.Trim}
                 dgvRotaciones.Rows.Add(fila)
                 _idRotacion += 1
@@ -189,12 +192,13 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
             txtIdRotacion.Text = _idRotacion
             btnNuevo.Enabled = False
             btnAgregar.Enabled = True
-            btnGuardar.Enabled = True 
+            btnGuardar.Enabled = True
         End Sub
 
         Private Sub btnGuardar_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnGuardar.Click
 
-            If MessageBox.Show("¿ESTA SEGURO QUE DESEA GUARDAR?", "MENSAJE DE VALIDACIÓN", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> MsgBoxResult.Yes Then Return
+            'If MessageBox.Show("¿ESTA SEGURO QUE DESEA GUARDAR?", "MENSAJE DE VALIDACIÓN", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> MsgBoxResult.Yes Then Return
+            If KryptonMessageBox.Show("¿ESTA SEGURO QUE DESEA GUARDAR?", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) <> MsgBoxResult.Yes Then Return
             _sqlCommands.Clear()
 
             For indice = 0 To dgvRotaciones.Rows.Count - 2
@@ -211,15 +215,14 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
                 End With
                 _sqlCommands.Add(_objRotacion.NuevaRotacionVehiculos)
 
-                _sqlCommands.Add(_objActivoFijo.ActualizarActivoFijoPoRotacionCustodio(CType(dgvRotaciones.Rows(indice).Cells("ID_ACTIVO").Value, Integer), _
-                                                       txtFechaRotacion.Text, _
-                                                       CType(dgvRotaciones.Rows(indice).Cells("ID_CUSTODIO_NUEVO").Value, Integer), _
+                _sqlCommands.Add(_objActivoFijo.ActualizarActivoFijoPoRotacionCustodio(CType(dgvRotaciones.Rows(indice).Cells("ID_ACTIVO").Value, Integer),
+                                                       txtFechaRotacion.Text,
+                                                       CType(dgvRotaciones.Rows(indice).Cells("ID_CUSTODIO_NUEVO").Value, Integer),
                                                        CType(dgvRotaciones.Rows(indice).Cells("CUSTODIO_NUEVO").Value, String)))
-
-
             Next
 
-            Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, String.Empty)
+            Dim nombreU As String = "Rotacion de Vehiculo por: " & UserName
+            Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, nombreU)
             If res(0) Then
                 btnNuevo.Enabled = True
                 btnAgregar.Enabled = False
@@ -227,7 +230,16 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
                 dgvRotaciones.Rows.Clear()
                 Cargar()
             End If
-            MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema") 
+
+            Dim messageIcon As KryptonMessageBoxIcon
+            If res(0) Then
+                messageIcon = KryptonMessageBoxIcon.Information
+            Else
+                messageIcon = KryptonMessageBoxIcon.Exclamation
+            End If
+            KryptonMessageBox.Show(res(1), "Mensaje del Sistema", KryptonMessageBoxButtons.OK, messageIcon)
+
+            'MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema") 
         End Sub
     End Class
 End Namespace

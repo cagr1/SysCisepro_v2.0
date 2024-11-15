@@ -26,6 +26,7 @@ using ClassLibraryCisepro3.ActivoFijo;
 using Krypton.Toolkit;
 using System.IO;
 using System.Drawing.Text;
+using MaterialSkin;
 
 
 
@@ -144,6 +145,9 @@ namespace SysCisepro3.Main
             toolStripStatusLabel6.ForeColor = Color.White;
             lblFecha.ForeColor = Color.White;
 
+            //var materialSkinManager = MaterialSkin.MaterialSkinManager.Instance;
+            //materialSkinManager.AddFormToManage(this);
+            //materialSkinManager.Theme = MaterialSkin.MaterialSkinManager.Themes.LIGHT;
             switch (TipoCon)
             {
                 case TipoConexion.Seportpac:
@@ -153,12 +157,18 @@ namespace SysCisepro3.Main
                     this.BackgroundImageLayout = ImageLayout.Stretch;
 
 
-                    
+
                     toolStrip1.BackColor = Color.FromArgb(66, 66, 66);   //ValidationForms.GetColorSistema(TipoCon);
                     statusStrip.BackColor = Color.FromArgb(66, 66, 66);// ValidationForms.GetColorSistema(TipoCon);
 
+                    //materialSkinManager.ColorScheme = new MaterialSkin.ColorScheme(
+                    //Primary.Grey800, Primary.Grey800, Primary.Grey600,
+                    //Accent.Indigo700, TextShade.WHITE);
+                                       
+
+
                     break;
-                    
+
                 case TipoConexion.Asenava:
                     Icon = Resources.logo_a;
                     tslLogo.BackgroundImage = Resources.Cisepro_Wall;
@@ -169,11 +179,27 @@ namespace SysCisepro3.Main
                     this.BackgroundImage = Resources.Your_paragraph_text;
                     this.BackgroundImageLayout = ImageLayout.Stretch;
 
+
                     
-                    toolStrip1.BackColor = Color.FromArgb(13,71,161);   //ValidationForms.GetColorSistema(TipoCon);
-                    statusStrip.BackColor = Color.FromArgb(13, 71, 161); // ValidationForms.GetColorSistema(TipoCon);
+
+                    toolStrip1.BackColor = Color.FromArgb(21, 101, 192);   //ValidationForms.GetColorSistema(TipoCon);
+                    statusStrip.BackColor = Color.FromArgb(21, 101, 192); // ValidationForms.GetColorSistema(TipoCon);
+                    //materialSkinManager.ColorScheme = new MaterialSkin.ColorScheme(
+                    //Primary.Blue800, Primary.Blue800, Primary.Blue600,
+                    //Accent.LightBlue200, TextShade.WHITE);
+
+                    
+
+                    
+                    
+                    
+
+
+
                     break;
+
             }
+
 
             notifyIcon1.BalloonTipTitle = @"Notificación para: " + Settings.Default.Usuario;
             notifyIcon1.Icon = Icon;
@@ -190,6 +216,7 @@ namespace SysCisepro3.Main
             ValidarFechas();
         }
 
+       
         private void SecuencialContrato()
         {
             bool res = true;
@@ -769,12 +796,14 @@ namespace SysCisepro3.Main
             Settings.Default.RutaFirmElec = rs[2];
             Settings.Default.Save();
 
+            
             if (string.IsNullOrEmpty(r)) // CLAVE DEBE COINCIDER EN MAYÚSCULAS Y/O MINÚSCULAS
             {
                 KryptonMessageBox.Show(@"Error al cargar rutas del sistema!", @"MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
                 Close();
             }
 
+             //.Office2010Blue;
             var mayorIdLibro = _objLibroDiario.BuscarMayorIdLibroDiario(TipoCon) + 1;
             var fechaUltimoLibro = _objLibroDiario.BuscarFechaLibroDiarioXIdLibroDiario(TipoCon, mayorIdLibro - 1);
             var hoy = ObjUsuario.ObtenerFechaSola(TipoCon);
@@ -835,7 +864,7 @@ namespace SysCisepro3.Main
         }
         private void lIQUIDACIÓNFONDOROTATIVOToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form f = new syscisepro.FORMULARIOS.CONTABILIDAD.LIQUIDACIONES.FormRevisionLiquidaciones { MdiParent = this, TipoCox = TipoCox, IdUsuario = ObjUsuario.IdUsuario };
+            Form f = new syscisepro.FORMULARIOS.CONTABILIDAD.LIQUIDACIONES.FormRevisionLiquidaciones { MdiParent = this, TipoCox = TipoCox, IdUsuario = ObjUsuario.IdUsuario, UserName = ObjUsuario.Datos };
             f.Show();
         }
         private void lIQUIDACIÓNCAJACHICAToolStripMenuItem_Click(object sender, EventArgs e)
@@ -888,7 +917,7 @@ namespace SysCisepro3.Main
         }
         private void iNGRESODECODIGOSDEACTIVOSFIJOSToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form f = new syscisepro.FORMULARIOS.ACTIVOS_FIJOS.PROCESOS.FormAgregarCategoria { MdiParent = this, TipoCox = TipoCox, IdUsuario = ObjUsuario.IdUsuario };
+            Form f = new syscisepro.FORMULARIOS.ACTIVOS_FIJOS.PROCESOS.FormAgregarCategoria { MdiParent = this, TipoCox = TipoCox, IdUsuario = ObjUsuario.IdUsuario, UserName = ObjUsuario.Datos };
             f.Show();
         }
         private void aCTUALIZACIONDECOSTOSDEMANTENIMIENTOSToolStripMenuItem_Click(object sender, EventArgs e)
@@ -1039,7 +1068,7 @@ namespace SysCisepro3.Main
         }
         private void bAJASDEACTIVOSFIJOSToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form f = new syscisepro.FORMULARIOS.ACTIVOS_FIJOS.PROCESOS.FormBajasActivosFijos { MdiParent = this, TipoCox = TipoCox, IdUsuario = ObjUsuario.IdUsuario };
+            Form f = new syscisepro.FORMULARIOS.ACTIVOS_FIJOS.PROCESOS.FormBajasActivosFijos { MdiParent = this, TipoCox = TipoCox, IdUsuario = ObjUsuario.IdUsuario, UserName = ObjUsuario.Datos };
             f.Show();
         }
         private void dEPRECIACIONESToolStripMenuItem_Click(object sender, EventArgs e)
@@ -1049,7 +1078,7 @@ namespace SysCisepro3.Main
         }
         private void rOTACIONDEVEHICULOSToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form f = new syscisepro.FORMULARIOS.ACTIVOS_FIJOS.PROCESOS.FormRotacionVehiculos { MdiParent = this, TipoCox = TipoCox, IdUsuario = ObjUsuario.IdUsuario };
+            Form f = new syscisepro.FORMULARIOS.ACTIVOS_FIJOS.PROCESOS.FormRotacionVehiculos { MdiParent = this, TipoCox = TipoCox, IdUsuario = ObjUsuario.IdUsuario, UserName = ObjUsuario.Datos };
             f.Show();
         }
         private void gENERARSTICKERSCONCODIGOSDEACTIVOSToolStripMenuItem_Click(object sender, EventArgs e)

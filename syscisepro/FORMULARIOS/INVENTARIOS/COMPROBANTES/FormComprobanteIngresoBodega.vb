@@ -893,13 +893,13 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
 
                 dgvDetalleComprobate.Columns(0).Width = 80
                 dgvDetalleComprobate.Columns(1).Width = 60
-                dgvDetalleComprobate.Columns(2).Width = 60
+                dgvDetalleComprobate.Columns(2).Width = 60 'Id Kardex
                 dgvDetalleComprobate.Columns(3).Width = 200
-                dgvDetalleComprobate.Columns(4).Width = 60
+                dgvDetalleComprobate.Columns(4).Width = 60 'Cantidad Kardex
                 dgvDetalleComprobate.Columns(5).Width = 60
                 dgvDetalleComprobate.Columns(6).Width = 120
                 dgvDetalleComprobate.Columns(7).Width = 250
-                dgvDetalleComprobate.Columns(8).Width = 60
+                dgvDetalleComprobate.Columns(8).Width = 60 'Cantidad Ingreso
                 dgvDetalleComprobate.Columns(9).Width = 60
                 dgvDetalleComprobate.Columns(10).Width = 60
                 dgvDetalleComprobate.Columns(11).Width = 60
@@ -1412,6 +1412,12 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                         .Id = row.Cells.Item(5).Value
                     End With
                     _sqlCommands.Add(_objDetalleKardex.AnularRegistroDetalleKardexCommand())
+
+                    With _objKardex
+                        .Id = row.Cells.Item(2).Value
+                        .Cantidad = Convert.ToInt32(row.Cells.Item(4).Value) - Convert.ToInt32(row.Cells.Item(8).Value)
+                    End With
+                    _sqlCommands.Add(_objKardex.ModificarCantidadKardexMinCommand())
 
 
                 Next

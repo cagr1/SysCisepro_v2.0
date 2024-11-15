@@ -33,21 +33,18 @@
             Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle13 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim DataGridViewCellStyle14 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim DataGridViewCellStyle15 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle16 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle13 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormComprobanteIngresoBanco))
             Me.txtNombreComercialClienteGeneral = New System.Windows.Forms.TextBox()
             Me.lblIdClienteGeneral = New System.Windows.Forms.Label()
-            Me.gbFacturaVenta = New System.Windows.Forms.GroupBox()
             Me.lblIdFacturaVenta = New System.Windows.Forms.Label()
             Me.dgvFacturaVenta = New System.Windows.Forms.DataGridView()
             Me.chk = New System.Windows.Forms.DataGridViewCheckBoxColumn()
-            Me.gbPagosFacturaVenta = New System.Windows.Forms.GroupBox()
             Me.dgvPagosFacturaVenta = New System.Windows.Forms.DataGridView()
             Me.dtpFechaEmisionComprobanteIngreso = New System.Windows.Forms.DateTimePicker()
             Me.lblIdComprobanteIngresoBancos = New System.Windows.Forms.Label()
@@ -123,20 +120,14 @@
             Me.KryptonLabel12 = New ComponentFactory.Krypton.Toolkit.KryptonLabel()
             Me.KryptonLabel11 = New ComponentFactory.Krypton.Toolkit.KryptonLabel()
             Me.KryptonLabel10 = New ComponentFactory.Krypton.Toolkit.KryptonLabel()
-            Me.GroupBox3 = New System.Windows.Forms.GroupBox()
-            Me.Label4 = New System.Windows.Forms.Label()
-            Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-            Me.DataGridViewCheckBoxColumn1 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
             Me.KryptonLabel9 = New ComponentFactory.Krypton.Toolkit.KryptonLabel()
             Me.Label3 = New System.Windows.Forms.Label()
             Me.KryptonLabel8 = New ComponentFactory.Krypton.Toolkit.KryptonLabel()
             Me.KryptonLabel7 = New ComponentFactory.Krypton.Toolkit.KryptonLabel()
             Me.KryptonLabel6 = New ComponentFactory.Krypton.Toolkit.KryptonLabel()
             Me.KryptonLabel5 = New ComponentFactory.Krypton.Toolkit.KryptonLabel()
-            Me.Label2 = New System.Windows.Forms.Label()
             Me.KryptonLabel4 = New ComponentFactory.Krypton.Toolkit.KryptonLabel()
             Me.KryptonLabel3 = New ComponentFactory.Krypton.Toolkit.KryptonLabel()
-            Me.Label1 = New System.Windows.Forms.Label()
             Me.GroupBox2 = New System.Windows.Forms.GroupBox()
             Me.RadioButton1 = New System.Windows.Forms.RadioButton()
             Me.RadioButton2 = New System.Windows.Forms.RadioButton()
@@ -149,9 +140,9 @@
             Me.Label7 = New System.Windows.Forms.Label()
             Me.KryptonLabel2 = New ComponentFactory.Krypton.Toolkit.KryptonLabel()
             Me.KryptonLabel1 = New ComponentFactory.Krypton.Toolkit.KryptonLabel()
-            Me.gbFacturaVenta.SuspendLayout()
+            Me.gbFacturaVenta = New ComponentFactory.Krypton.Toolkit.KryptonGroupBox()
+            Me.gbPagosFacturaVenta = New ComponentFactory.Krypton.Toolkit.KryptonGroupBox()
             CType(Me.dgvFacturaVenta, System.ComponentModel.ISupportInitialize).BeginInit()
-            Me.gbPagosFacturaVenta.SuspendLayout()
             CType(Me.dgvPagosFacturaVenta, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.gbAcreditado.SuspendLayout()
             Me.GroupBox4.SuspendLayout()
@@ -176,10 +167,16 @@
             CType(Me.gbCheque.Panel, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.gbCheque.Panel.SuspendLayout()
             Me.gbCheque.SuspendLayout()
-            Me.GroupBox3.SuspendLayout()
-            CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.GroupBox2.SuspendLayout()
             Me.GroupBox5.SuspendLayout()
+            CType(Me.gbFacturaVenta, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType(Me.gbFacturaVenta.Panel, System.ComponentModel.ISupportInitialize).BeginInit()
+            Me.gbFacturaVenta.Panel.SuspendLayout()
+            Me.gbFacturaVenta.SuspendLayout()
+            CType(Me.gbPagosFacturaVenta, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType(Me.gbPagosFacturaVenta.Panel, System.ComponentModel.ISupportInitialize).BeginInit()
+            Me.gbPagosFacturaVenta.Panel.SuspendLayout()
+            Me.gbPagosFacturaVenta.SuspendLayout()
             Me.SuspendLayout()
             '
             'txtNombreComercialClienteGeneral
@@ -190,39 +187,28 @@
             Me.txtNombreComercialClienteGeneral.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtNombreComercialClienteGeneral.Location = New System.Drawing.Point(349, 14)
             Me.txtNombreComercialClienteGeneral.Name = "txtNombreComercialClienteGeneral"
-            Me.txtNombreComercialClienteGeneral.Size = New System.Drawing.Size(309, 21)
+            Me.txtNombreComercialClienteGeneral.Size = New System.Drawing.Size(380, 21)
             Me.txtNombreComercialClienteGeneral.TabIndex = 2
             '
             'lblIdClienteGeneral
             '
             Me.lblIdClienteGeneral.AutoSize = True
-            Me.lblIdClienteGeneral.BackColor = System.Drawing.Color.FromArgb(CType(CType(189, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(232, Byte), Integer))
+            Me.lblIdClienteGeneral.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.lblIdClienteGeneral.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.lblIdClienteGeneral.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
-            Me.lblIdClienteGeneral.Location = New System.Drawing.Point(346, -2)
+            Me.lblIdClienteGeneral.Location = New System.Drawing.Point(354, -2)
             Me.lblIdClienteGeneral.Name = "lblIdClienteGeneral"
             Me.lblIdClienteGeneral.Size = New System.Drawing.Size(16, 13)
             Me.lblIdClienteGeneral.TabIndex = 76
             Me.lblIdClienteGeneral.Text = "..."
             '
-            'gbFacturaVenta
-            '
-            Me.gbFacturaVenta.BackColor = System.Drawing.Color.FromArgb(CType(CType(189, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(232, Byte), Integer))
-            Me.gbFacturaVenta.Controls.Add(Me.lblIdFacturaVenta)
-            Me.gbFacturaVenta.Controls.Add(Me.dgvFacturaVenta)
-            Me.gbFacturaVenta.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.gbFacturaVenta.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
-            Me.gbFacturaVenta.Location = New System.Drawing.Point(512, 43)
-            Me.gbFacturaVenta.Name = "gbFacturaVenta"
-            Me.gbFacturaVenta.Size = New System.Drawing.Size(301, 310)
-            Me.gbFacturaVenta.TabIndex = 100
-            Me.gbFacturaVenta.TabStop = False
-            Me.gbFacturaVenta.Text = "Factura Ventas"
-            '
             'lblIdFacturaVenta
             '
             Me.lblIdFacturaVenta.AutoSize = True
-            Me.lblIdFacturaVenta.Location = New System.Drawing.Point(216, 0)
+            Me.lblIdFacturaVenta.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(247, Byte), Integer))
+            Me.lblIdFacturaVenta.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.lblIdFacturaVenta.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
+            Me.lblIdFacturaVenta.Location = New System.Drawing.Point(607, 49)
             Me.lblIdFacturaVenta.Name = "lblIdFacturaVenta"
             Me.lblIdFacturaVenta.Size = New System.Drawing.Size(16, 13)
             Me.lblIdFacturaVenta.TabIndex = 30
@@ -235,7 +221,7 @@
             Me.dgvFacturaVenta.AllowUserToResizeRows = False
             DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
             Me.dgvFacturaVenta.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
-            Me.dgvFacturaVenta.BackgroundColor = System.Drawing.Color.White
+            Me.dgvFacturaVenta.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(247, Byte), Integer))
             Me.dgvFacturaVenta.BorderStyle = System.Windows.Forms.BorderStyle.None
             Me.dgvFacturaVenta.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
             Me.dgvFacturaVenta.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
@@ -252,18 +238,28 @@
             DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
             DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window
             DataGridViewCellStyle3.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            DataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
+            DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText
             DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(123, Byte), Integer))
             DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
             DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
             Me.dgvFacturaVenta.DefaultCellStyle = DataGridViewCellStyle3
             Me.dgvFacturaVenta.Dock = System.Windows.Forms.DockStyle.Fill
-            Me.dgvFacturaVenta.Location = New System.Drawing.Point(3, 17)
+            Me.dgvFacturaVenta.Location = New System.Drawing.Point(0, 0)
             Me.dgvFacturaVenta.MultiSelect = False
             Me.dgvFacturaVenta.Name = "dgvFacturaVenta"
+            DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+            DataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control
+            DataGridViewCellStyle4.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText
+            DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
+            DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+            DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+            Me.dgvFacturaVenta.RowHeadersDefaultCellStyle = DataGridViewCellStyle4
             Me.dgvFacturaVenta.RowHeadersVisible = False
+            DataGridViewCellStyle5.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.dgvFacturaVenta.RowsDefaultCellStyle = DataGridViewCellStyle5
             Me.dgvFacturaVenta.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvFacturaVenta.Size = New System.Drawing.Size(295, 290)
+            Me.dgvFacturaVenta.Size = New System.Drawing.Size(297, 286)
             Me.dgvFacturaVenta.TabIndex = 0
             '
             'chk
@@ -272,56 +268,43 @@
             Me.chk.Name = "chk"
             Me.chk.Width = 30
             '
-            'gbPagosFacturaVenta
-            '
-            Me.gbPagosFacturaVenta.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(247, Byte), Integer))
-            Me.gbPagosFacturaVenta.Controls.Add(Me.dgvPagosFacturaVenta)
-            Me.gbPagosFacturaVenta.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.gbPagosFacturaVenta.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
-            Me.gbPagosFacturaVenta.Location = New System.Drawing.Point(515, 364)
-            Me.gbPagosFacturaVenta.Name = "gbPagosFacturaVenta"
-            Me.gbPagosFacturaVenta.Size = New System.Drawing.Size(301, 222)
-            Me.gbPagosFacturaVenta.TabIndex = 101
-            Me.gbPagosFacturaVenta.TabStop = False
-            Me.gbPagosFacturaVenta.Text = "Pagos Facturas"
-            '
             'dgvPagosFacturaVenta
             '
             Me.dgvPagosFacturaVenta.AllowUserToAddRows = False
             Me.dgvPagosFacturaVenta.AllowUserToDeleteRows = False
             Me.dgvPagosFacturaVenta.AllowUserToResizeRows = False
-            DataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-            Me.dgvPagosFacturaVenta.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle4
+            DataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+            Me.dgvPagosFacturaVenta.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle6
             Me.dgvPagosFacturaVenta.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(247, Byte), Integer))
             Me.dgvPagosFacturaVenta.BorderStyle = System.Windows.Forms.BorderStyle.None
             Me.dgvPagosFacturaVenta.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
             Me.dgvPagosFacturaVenta.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-            DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-            DataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control
-            DataGridViewCellStyle5.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            DataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText
-            DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption
-            DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-            DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-            Me.dgvPagosFacturaVenta.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
+            DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+            DataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control
+            DataGridViewCellStyle7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText
+            DataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption
+            DataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+            DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+            Me.dgvPagosFacturaVenta.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle7
             Me.dgvPagosFacturaVenta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-            DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-            DataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window
-            DataGridViewCellStyle6.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            DataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
-            DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(123, Byte), Integer))
-            DataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-            DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-            Me.dgvPagosFacturaVenta.DefaultCellStyle = DataGridViewCellStyle6
+            DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+            DataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window
+            DataGridViewCellStyle8.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText
+            DataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(123, Byte), Integer))
+            DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+            DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+            Me.dgvPagosFacturaVenta.DefaultCellStyle = DataGridViewCellStyle8
             Me.dgvPagosFacturaVenta.Dock = System.Windows.Forms.DockStyle.Fill
-            Me.dgvPagosFacturaVenta.Location = New System.Drawing.Point(3, 17)
+            Me.dgvPagosFacturaVenta.Location = New System.Drawing.Point(0, 0)
             Me.dgvPagosFacturaVenta.MultiSelect = False
             Me.dgvPagosFacturaVenta.Name = "dgvPagosFacturaVenta"
             Me.dgvPagosFacturaVenta.RowHeadersVisible = False
-            DataGridViewCellStyle7.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.dgvPagosFacturaVenta.RowsDefaultCellStyle = DataGridViewCellStyle7
+            DataGridViewCellStyle9.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.dgvPagosFacturaVenta.RowsDefaultCellStyle = DataGridViewCellStyle9
             Me.dgvPagosFacturaVenta.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvPagosFacturaVenta.Size = New System.Drawing.Size(295, 202)
+            Me.dgvPagosFacturaVenta.Size = New System.Drawing.Size(297, 198)
             Me.dgvPagosFacturaVenta.TabIndex = 0
             '
             'dtpFechaEmisionComprobanteIngreso
@@ -337,10 +320,10 @@
             'lblIdComprobanteIngresoBancos
             '
             Me.lblIdComprobanteIngresoBancos.AutoSize = True
-            Me.lblIdComprobanteIngresoBancos.BackColor = System.Drawing.Color.FromArgb(CType(CType(189, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(232, Byte), Integer))
+            Me.lblIdComprobanteIngresoBancos.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.lblIdComprobanteIngresoBancos.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.lblIdComprobanteIngresoBancos.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
-            Me.lblIdComprobanteIngresoBancos.Location = New System.Drawing.Point(74, 0)
+            Me.lblIdComprobanteIngresoBancos.Location = New System.Drawing.Point(80, 0)
             Me.lblIdComprobanteIngresoBancos.Name = "lblIdComprobanteIngresoBancos"
             Me.lblIdComprobanteIngresoBancos.Size = New System.Drawing.Size(16, 13)
             Me.lblIdComprobanteIngresoBancos.TabIndex = 77
@@ -636,31 +619,31 @@
             Me.dgvComprobanteIngresoBanco.AllowUserToAddRows = False
             Me.dgvComprobanteIngresoBanco.AllowUserToDeleteRows = False
             Me.dgvComprobanteIngresoBanco.AllowUserToResizeRows = False
-            DataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-            DataGridViewCellStyle8.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.dgvComprobanteIngresoBanco.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle8
+            DataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+            DataGridViewCellStyle10.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.dgvComprobanteIngresoBanco.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle10
             Me.dgvComprobanteIngresoBanco.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(247, Byte), Integer))
             Me.dgvComprobanteIngresoBanco.BorderStyle = System.Windows.Forms.BorderStyle.None
             Me.dgvComprobanteIngresoBanco.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
             Me.dgvComprobanteIngresoBanco.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-            DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-            DataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control
-            DataGridViewCellStyle9.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            DataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText
-            DataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption
-            DataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-            DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-            Me.dgvComprobanteIngresoBanco.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle9
+            DataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+            DataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Control
+            DataGridViewCellStyle11.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText
+            DataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption
+            DataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+            DataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+            Me.dgvComprobanteIngresoBanco.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle11
             Me.dgvComprobanteIngresoBanco.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
             Me.dgvComprobanteIngresoBanco.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.CODIGO, Me.CUENTA, Me.CONCEPTO, Me.DETALLE, Me.DEBE, Me.HABER, Me.ID_CC})
-            DataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-            DataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Window
-            DataGridViewCellStyle12.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            DataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.ControlText
-            DataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(123, Byte), Integer))
-            DataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-            DataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-            Me.dgvComprobanteIngresoBanco.DefaultCellStyle = DataGridViewCellStyle12
+            DataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+            DataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Window
+            DataGridViewCellStyle14.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.ControlText
+            DataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(123, Byte), Integer))
+            DataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+            DataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+            Me.dgvComprobanteIngresoBanco.DefaultCellStyle = DataGridViewCellStyle14
             Me.dgvComprobanteIngresoBanco.Dock = System.Windows.Forms.DockStyle.Fill
             Me.dgvComprobanteIngresoBanco.GridColor = System.Drawing.SystemColors.ControlLight
             Me.dgvComprobanteIngresoBanco.Location = New System.Drawing.Point(3, 16)
@@ -668,8 +651,8 @@
             Me.dgvComprobanteIngresoBanco.Name = "dgvComprobanteIngresoBanco"
             Me.dgvComprobanteIngresoBanco.RowHeadersVisible = False
             Me.dgvComprobanteIngresoBanco.RowHeadersWidth = 25
-            DataGridViewCellStyle13.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.dgvComprobanteIngresoBanco.RowsDefaultCellStyle = DataGridViewCellStyle13
+            DataGridViewCellStyle15.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.dgvComprobanteIngresoBanco.RowsDefaultCellStyle = DataGridViewCellStyle15
             Me.dgvComprobanteIngresoBanco.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
             Me.dgvComprobanteIngresoBanco.Size = New System.Drawing.Size(483, 202)
             Me.dgvComprobanteIngresoBanco.TabIndex = 109
@@ -701,16 +684,16 @@
             '
             'DEBE
             '
-            DataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-            Me.DEBE.DefaultCellStyle = DataGridViewCellStyle10
+            DataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+            Me.DEBE.DefaultCellStyle = DataGridViewCellStyle12
             Me.DEBE.HeaderText = "DEBE"
             Me.DEBE.Name = "DEBE"
             Me.DEBE.Width = 85
             '
             'HABER
             '
-            DataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-            Me.HABER.DefaultCellStyle = DataGridViewCellStyle11
+            DataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+            Me.HABER.DefaultCellStyle = DataGridViewCellStyle13
             Me.HABER.HeaderText = "HABER"
             Me.HABER.Name = "HABER"
             Me.HABER.Width = 85
@@ -850,7 +833,7 @@
             '
             'GroupBox1
             '
-            Me.GroupBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(247, Byte), Integer))
+            Me.GroupBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.GroupBox1.Controls.Add(Me.dgvComprobanteIngresoBanco)
             Me.GroupBox1.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.GroupBox1.Location = New System.Drawing.Point(13, 359)
@@ -917,6 +900,9 @@
             '
             'KryptonGroupBox1.Panel
             '
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.gbPagosFacturaVenta)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.lblIdFacturaVenta)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.gbFacturaVenta)
             Me.KryptonGroupBox1.Panel.Controls.Add(Me.txtValorComprobaneIngreso)
             Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel18)
             Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel17)
@@ -929,12 +915,9 @@
             Me.KryptonGroupBox1.Panel.Controls.Add(Me.cmbCuentaBancos)
             Me.KryptonGroupBox1.Panel.Controls.Add(Me.gbCheque)
             Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel10)
-            Me.KryptonGroupBox1.Panel.Controls.Add(Me.gbPagosFacturaVenta)
             Me.KryptonGroupBox1.Panel.Controls.Add(Me.gbTotalDebeTotalHaber)
-            Me.KryptonGroupBox1.Panel.Controls.Add(Me.GroupBox3)
             Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel9)
             Me.KryptonGroupBox1.Panel.Controls.Add(Me.Label3)
-            Me.KryptonGroupBox1.Panel.Controls.Add(Me.gbFacturaVenta)
             Me.KryptonGroupBox1.Panel.Controls.Add(Me.lblCodigoCuentaContable)
             Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel8)
             Me.KryptonGroupBox1.Panel.Controls.Add(Me.GroupBox1)
@@ -946,11 +929,9 @@
             Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel7)
             Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel6)
             Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel5)
-            Me.KryptonGroupBox1.Panel.Controls.Add(Me.Label2)
             Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel4)
             Me.KryptonGroupBox1.Panel.Controls.Add(Me.lblIdClienteGeneral)
             Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel3)
-            Me.KryptonGroupBox1.Panel.Controls.Add(Me.Label1)
             Me.KryptonGroupBox1.Panel.Controls.Add(Me.txtNombreComercialClienteGeneral)
             Me.KryptonGroupBox1.Panel.Controls.Add(Me.GroupBox2)
             Me.KryptonGroupBox1.Panel.Controls.Add(Me.lblIdComprobanteIngresoBancos)
@@ -990,6 +971,7 @@
             '
             'KryptonGroupBox2
             '
+            Me.KryptonGroupBox2.CaptionOverlap = 0.85R
             Me.KryptonGroupBox2.GroupBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.PanelRibbonInactive
             Me.KryptonGroupBox2.Location = New System.Drawing.Point(11, 134)
             Me.KryptonGroupBox2.Name = "KryptonGroupBox2"
@@ -1165,6 +1147,7 @@
             '
             'gbCheque
             '
+            Me.gbCheque.CaptionOverlap = 0.85R
             Me.gbCheque.GroupBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.PanelRibbonInactive
             Me.gbCheque.Location = New System.Drawing.Point(11, 190)
             Me.gbCheque.Name = "gbCheque"
@@ -1233,73 +1216,6 @@
             Me.KryptonLabel10.TabIndex = 113
             Me.KryptonLabel10.Values.Text = "Banco"
             '
-            'GroupBox3
-            '
-            Me.GroupBox3.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(247, Byte), Integer))
-            Me.GroupBox3.Controls.Add(Me.Label4)
-            Me.GroupBox3.Controls.Add(Me.DataGridView1)
-            Me.GroupBox3.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.GroupBox3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
-            Me.GroupBox3.Location = New System.Drawing.Point(512, 43)
-            Me.GroupBox3.Name = "GroupBox3"
-            Me.GroupBox3.Size = New System.Drawing.Size(301, 310)
-            Me.GroupBox3.TabIndex = 100
-            Me.GroupBox3.TabStop = False
-            Me.GroupBox3.Text = "Factura Ventas"
-            '
-            'Label4
-            '
-            Me.Label4.AutoSize = True
-            Me.Label4.Location = New System.Drawing.Point(216, 0)
-            Me.Label4.Name = "Label4"
-            Me.Label4.Size = New System.Drawing.Size(16, 13)
-            Me.Label4.TabIndex = 30
-            Me.Label4.Text = "..."
-            '
-            'DataGridView1
-            '
-            Me.DataGridView1.AllowUserToAddRows = False
-            Me.DataGridView1.AllowUserToDeleteRows = False
-            Me.DataGridView1.AllowUserToResizeRows = False
-            DataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-            Me.DataGridView1.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle14
-            Me.DataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(247, Byte), Integer))
-            Me.DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None
-            Me.DataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
-            Me.DataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-            DataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-            DataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.Control
-            DataGridViewCellStyle15.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            DataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.WindowText
-            DataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption
-            DataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-            DataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-            Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle15
-            Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-            Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewCheckBoxColumn1})
-            DataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-            DataGridViewCellStyle16.BackColor = System.Drawing.SystemColors.Window
-            DataGridViewCellStyle16.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            DataGridViewCellStyle16.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
-            DataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(123, Byte), Integer))
-            DataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-            DataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-            Me.DataGridView1.DefaultCellStyle = DataGridViewCellStyle16
-            Me.DataGridView1.Dock = System.Windows.Forms.DockStyle.Fill
-            Me.DataGridView1.Location = New System.Drawing.Point(3, 17)
-            Me.DataGridView1.MultiSelect = False
-            Me.DataGridView1.Name = "DataGridView1"
-            Me.DataGridView1.RowHeadersVisible = False
-            Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.DataGridView1.Size = New System.Drawing.Size(295, 290)
-            Me.DataGridView1.TabIndex = 0
-            '
-            'DataGridViewCheckBoxColumn1
-            '
-            Me.DataGridViewCheckBoxColumn1.HeaderText = "CHK"
-            Me.DataGridViewCheckBoxColumn1.Name = "DataGridViewCheckBoxColumn1"
-            Me.DataGridViewCheckBoxColumn1.Width = 30
-            '
             'KryptonLabel9
             '
             Me.KryptonLabel9.Location = New System.Drawing.Point(201, 216)
@@ -1352,18 +1268,6 @@
             Me.KryptonLabel5.TabIndex = 81
             Me.KryptonLabel5.Values.Text = "Acreditado"
             '
-            'Label2
-            '
-            Me.Label2.AutoSize = True
-            Me.Label2.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
-            Me.Label2.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
-            Me.Label2.Location = New System.Drawing.Point(346, -2)
-            Me.Label2.Name = "Label2"
-            Me.Label2.Size = New System.Drawing.Size(16, 13)
-            Me.Label2.TabIndex = 76
-            Me.Label2.Text = "..."
-            '
             'KryptonLabel4
             '
             Me.KryptonLabel4.Location = New System.Drawing.Point(6, 40)
@@ -1379,18 +1283,6 @@
             Me.KryptonLabel3.Size = New System.Drawing.Size(48, 20)
             Me.KryptonLabel3.TabIndex = 79
             Me.KryptonLabel3.Values.Text = "Cliente"
-            '
-            'Label1
-            '
-            Me.Label1.AutoSize = True
-            Me.Label1.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
-            Me.Label1.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
-            Me.Label1.Location = New System.Drawing.Point(74, 0)
-            Me.Label1.Name = "Label1"
-            Me.Label1.Size = New System.Drawing.Size(16, 13)
-            Me.Label1.TabIndex = 77
-            Me.Label1.Text = "..."
             '
             'GroupBox2
             '
@@ -1542,6 +1434,34 @@
             Me.KryptonLabel1.TabIndex = 1
             Me.KryptonLabel1.Values.Text = "Nro"
             '
+            'gbFacturaVenta
+            '
+            Me.gbFacturaVenta.CaptionOverlap = 0R
+            Me.gbFacturaVenta.GroupBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.PanelRibbonInactive
+            Me.gbFacturaVenta.Location = New System.Drawing.Point(515, 46)
+            Me.gbFacturaVenta.Name = "gbFacturaVenta"
+            '
+            'gbFacturaVenta.Panel
+            '
+            Me.gbFacturaVenta.Panel.Controls.Add(Me.dgvFacturaVenta)
+            Me.gbFacturaVenta.Size = New System.Drawing.Size(301, 310)
+            Me.gbFacturaVenta.TabIndex = 119
+            Me.gbFacturaVenta.Values.Heading = "Factura Venta"
+            '
+            'gbPagosFacturaVenta
+            '
+            Me.gbPagosFacturaVenta.CaptionOverlap = 0R
+            Me.gbPagosFacturaVenta.GroupBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.PanelRibbonInactive
+            Me.gbPagosFacturaVenta.Location = New System.Drawing.Point(515, 362)
+            Me.gbPagosFacturaVenta.Name = "gbPagosFacturaVenta"
+            '
+            'gbPagosFacturaVenta.Panel
+            '
+            Me.gbPagosFacturaVenta.Panel.Controls.Add(Me.dgvPagosFacturaVenta)
+            Me.gbPagosFacturaVenta.Size = New System.Drawing.Size(301, 222)
+            Me.gbPagosFacturaVenta.TabIndex = 120
+            Me.gbPagosFacturaVenta.Values.Heading = "Pagos Factura"
+            '
             'FormComprobanteIngresoBanco
             '
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1558,10 +1478,7 @@
             Or Krypton.Toolkit.PaletteDrawBorders.Right), Krypton.Toolkit.PaletteDrawBorders)
             Me.StateActive.Border.Rounding = 5.0!
             Me.Text = "COMPROBANTE DE INGRESO BANCOS"
-            Me.gbFacturaVenta.ResumeLayout(False)
-            Me.gbFacturaVenta.PerformLayout()
             CType(Me.dgvFacturaVenta, System.ComponentModel.ISupportInitialize).EndInit()
-            Me.gbPagosFacturaVenta.ResumeLayout(False)
             CType(Me.dgvPagosFacturaVenta, System.ComponentModel.ISupportInitialize).EndInit()
             Me.gbAcreditado.ResumeLayout(False)
             Me.gbAcreditado.PerformLayout()
@@ -1594,22 +1511,25 @@
             Me.gbCheque.Panel.PerformLayout()
             CType(Me.gbCheque, System.ComponentModel.ISupportInitialize).EndInit()
             Me.gbCheque.ResumeLayout(False)
-            Me.GroupBox3.ResumeLayout(False)
-            Me.GroupBox3.PerformLayout()
-            CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
             Me.GroupBox2.ResumeLayout(False)
             Me.GroupBox2.PerformLayout()
             Me.GroupBox5.ResumeLayout(False)
             Me.GroupBox5.PerformLayout()
+            CType(Me.gbFacturaVenta.Panel, System.ComponentModel.ISupportInitialize).EndInit()
+            Me.gbFacturaVenta.Panel.ResumeLayout(False)
+            CType(Me.gbFacturaVenta, System.ComponentModel.ISupportInitialize).EndInit()
+            Me.gbFacturaVenta.ResumeLayout(False)
+            CType(Me.gbPagosFacturaVenta.Panel, System.ComponentModel.ISupportInitialize).EndInit()
+            Me.gbPagosFacturaVenta.Panel.ResumeLayout(False)
+            CType(Me.gbPagosFacturaVenta, System.ComponentModel.ISupportInitialize).EndInit()
+            Me.gbPagosFacturaVenta.ResumeLayout(False)
             Me.ResumeLayout(False)
             Me.PerformLayout()
 
         End Sub
         Friend WithEvents txtNombreComercialClienteGeneral As System.Windows.Forms.TextBox
         Friend WithEvents lblIdClienteGeneral As System.Windows.Forms.Label
-        Friend WithEvents gbFacturaVenta As System.Windows.Forms.GroupBox
         Friend WithEvents dgvFacturaVenta As System.Windows.Forms.DataGridView
-        Friend WithEvents gbPagosFacturaVenta As System.Windows.Forms.GroupBox
         Friend WithEvents dgvPagosFacturaVenta As System.Windows.Forms.DataGridView
         Friend WithEvents cmbCuentasContables As System.Windows.Forms.ComboBox
         Friend WithEvents btnAgregarConceptoComprobante As System.Windows.Forms.Button
@@ -1690,13 +1610,7 @@
         Friend WithEvents RadioButton6 As RadioButton
         Friend WithEvents RadioButton7 As RadioButton
         Friend WithEvents RadioButton8 As RadioButton
-        Friend WithEvents GroupBox3 As GroupBox
-        Friend WithEvents Label4 As Label
-        Friend WithEvents DataGridView1 As DataGridView
-        Friend WithEvents DataGridViewCheckBoxColumn1 As DataGridViewCheckBoxColumn
         Friend WithEvents Label3 As Label
-        Friend WithEvents Label2 As Label
-        Friend WithEvents Label1 As Label
         Friend WithEvents GroupBox2 As GroupBox
         Friend WithEvents RadioButton1 As RadioButton
         Friend WithEvents RadioButton2 As RadioButton
@@ -1713,5 +1627,7 @@
         Friend WithEvents RadioButton14 As RadioButton
         Friend WithEvents Label8 As Label
         Friend WithEvents Label7 As Label
+        Friend WithEvents gbFacturaVenta As ComponentFactory.Krypton.Toolkit.KryptonGroupBox
+        Friend WithEvents gbPagosFacturaVenta As ComponentFactory.Krypton.Toolkit.KryptonGroupBox
     End Class
 End Namespace

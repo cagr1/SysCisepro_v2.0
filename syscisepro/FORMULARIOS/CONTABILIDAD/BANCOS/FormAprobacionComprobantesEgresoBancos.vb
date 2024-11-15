@@ -140,14 +140,16 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
                     DialogResult = formAsientoDiario.ShowDialog
                 End If
             Catch ex As Exception
-                MsgBox(ex.Message.ToString, MsgBoxStyle.Critical, "MENSAJE DE EXCEPCIÓN")
+                'MsgBox(ex.Message.ToString, MsgBoxStyle.Critical, "MENSAJE DE EXCEPCIÓN")
+                KryptonMessageBox.Show(ex.Message, "MENSAJE DE EXCEPCIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
 
         Private Sub ToolStripMenuItem1_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnAprovar.Click
             If dgvComprobanteEgresoBancos.Rows.Count = 0 Or dgvComprobanteEgresoBancos.CurrentRow Is Nothing Then Return
 
-            If MessageBox.Show("¿ESTA SEGURO QUE DESEA APROBAR EL COMPROBANTE DE EGRESO?", "MENSAJE DE VALIDACIÓN", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> MsgBoxResult.Yes Then Return
+            'If MessageBox.Show("¿ESTA SEGURO QUE DESEA APROBAR EL COMPROBANTE DE EGRESO?", "MENSAJE DE VALIDACIÓN", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> MsgBoxResult.Yes Then Return
+            If KryptonMessageBox.Show("¿ESTA SEGURO QUE DESEA APROBAR EL COMPROBANTE DE EGRESO?", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) <> DialogResult.Yes Then Return
             _sqlCommands.Clear()
 
             _objAuditoria.IdAuditoria = _objAuditoria.BuscarMayorIdAuditoriaGeneral(_tipoCon) + 1
@@ -177,7 +179,8 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
                 Return
             End If
 
-            If MessageBox.Show("¿ESTA SEGURO QUE DESEA RECHAZAR EL COMPROBANTE DE EGRESO?", "MENSAJE DE VALIDACIÓN", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> MsgBoxResult.Yes Then Return
+            'If MessageBox.Show("¿ESTA SEGURO QUE DESEA RECHAZAR EL COMPROBANTE DE EGRESO?", "MENSAJE DE VALIDACIÓN", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> MsgBoxResult.Yes Then Return
+            If KryptonMessageBox.Show("¿ESTA SEGURO QUE DESEA RECHAZAR EL COMPROBANTE DE EGRESO?", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) <> DialogResult.Yes Then Return
             _sqlCommands.Clear()
 
             _objAuditoria.IdAuditoria = _objAuditoria.BuscarMayorIdAuditoriaGeneral(_tipoCon) + 1

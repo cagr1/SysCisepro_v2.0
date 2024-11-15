@@ -5,6 +5,7 @@ Imports ClassLibraryCisepro.ENUMS
 Imports ClassLibraryCisepro.ProcesosSql
 Imports ClassLibraryCisepro.VALIDACIONES
 Imports syscisepro.FORMULARIOS.ACTIVOS_FIJOS.REPORTES
+Imports Krypton.Toolkit
 
 Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
     ''' <summary>
@@ -33,9 +34,10 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
                         _tipoCon = TipoConexion.Cisepro
                 End Select
             End Set
-        End Property 
+        End Property
         Dim _sqlCommands As List(Of SqlCommand)
         Public IdUsuario As Integer
+        Public UserName As String
 
         ReadOnly _objActivoFijo As New ClassActivoFijo
         ReadOnly _objActivoFijoBaja As New ClassActivoFijoBajas
@@ -43,7 +45,7 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
         ReadOnly _objetoValidacionesNumeros As New ClassNumerico
         ReadOnly _objetoValidacionesAlfanumerico As New ClassAlfanumerico
         ReadOnly _objetoValidacionesAlfabetico As New ClassAlfabetico
-        
+
         Private Sub txtBusquedaActivoFijo_TextChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles txtBusquedaActivoFijo.TextChanged
             If rbCodigoActivo.Checked = True Then
                 Try
@@ -58,7 +60,7 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
                     dgvActivosFijos.Columns("ID_GERENCIAS").Visible = False
                 Catch ex As Exception
                     dgvActivosFijos.DataSource = Nothing
-                End Try 
+                End Try
             End If
             If rbNombreCustodio.Checked = True Then
                 Try
@@ -73,7 +75,7 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
                     dgvActivosFijos.Columns("ID_GERENCIAS").Visible = False
                 Catch ex As Exception
                     dgvActivosFijos.DataSource = Nothing
-                End Try 
+                End Try
             End If
         End Sub
 
@@ -90,7 +92,7 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
                 .NroMemorandum = txtNroMemorandum.Text
                 .Estado = 1
                 .TipoActivo = lblTipoActivo.Text.Trim.ToUpper
-                .EstadoActivo = cbmEstadoActivo.Text.Trim.ToUpper 
+                .EstadoActivo = cbmEstadoActivo.Text.Trim.ToUpper
             End With
             _sqlCommands.Add(_objActivoFijoBaja.NuevoActivoFijoBajas)
         End Sub
@@ -128,12 +130,12 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
 
         Private Function ValidacionParametros() As Boolean
             Return txtIdBaja.Text <> "" And cbmEstadoActivo.Text <> "" And cbmMotivo.Text <> "" And txtInformeTecnico.Text <> "" _
-               And txtNroMemorandum.Text <> "" And txtDestinatario.Text <> "" And lblCodigo.Text <> "" And lblCodigoActivo.Text <> "" And lblIdCustodio.Text <> "" And _
-               lblNombreActivoFijo.Text <> "" And lblNombreCustodio.Text <> "" And txtAutorizo.Text <> ""  
+               And txtNroMemorandum.Text <> "" And txtDestinatario.Text <> "" And lblCodigo.Text <> "" And lblCodigoActivo.Text <> "" And lblIdCustodio.Text <> "" And
+               lblNombreActivoFijo.Text <> "" And lblNombreCustodio.Text <> "" And txtAutorizo.Text <> ""
         End Function
 
         Private Sub btnNuevoBaja_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnNuevoBaja.Click
-            ParametrosEnabled(True, True, True, True, True, True, True) 
+            ParametrosEnabled(True, True, True, True, True, True, True)
             btnNuevoBaja.Enabled = False
             btnBaja.Enabled = True
         End Sub
@@ -159,20 +161,21 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
             End Select
             dgvActivosFijos.Font = New Font("Roboto", 8, FontStyle.Regular)
             _sqlCommands = New List(Of SqlCommand)
-            txtFecha.Text = Date.Now 
+            txtFecha.Text = Date.Now
         End Sub
 
         Private Sub btnBaja_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnBaja.Click
             If ValidacionParametros() Then
-                If MessageBox.Show("¿ESTA SEGURO QUE DESEA GUARDAR?", "MENSAJE DE VALIDACIÓN", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> MsgBoxResult.Yes Then Return
+
+                If KryptonMessageBox.Show("¿ESTA SEGURO QUE DESEA GUARDAR?", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) <> MsgBoxResult.Yes Then Return
                 _sqlCommands.Clear()
 
                 Select Case (lblTipoActivo.Text)
                     Case "ARMAS"
                         _sqlCommands.Add(_objActivoFijo.BajaArmas(CInt(lblCodigo.Text)))
                     Case "RADIOS"
-                        _sqlCommands.Add(_objActivoFijo.BajaRadios(CInt(lblCodigo.Text))) 
-                    Case "VEHÍCULOS" 
+                        _sqlCommands.Add(_objActivoFijo.BajaRadios(CInt(lblCodigo.Text)))
+                    Case "VEHÍCULOS"
                         _sqlCommands.Add(_objActivoFijo.BajaVehiculos(CInt(lblCodigo.Text)))
                     Case "TERRENOS"
                         _sqlCommands.Add(_objActivoFijo.BajaTerrenos(CInt(lblCodigo.Text)))
@@ -186,7 +189,7 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
                         _sqlCommands.Add(_objActivoFijo.BajaMueblesOficina(CInt(lblCodigo.Text)))
                     Case "EQUIPOS DE COCINA"
                         _sqlCommands.Add(_objActivoFijo.BajaEquiposCocina(CInt(lblCodigo.Text)))
-                    Case "EQUIPOS DE AMBIENTACIÓN"                        
+                    Case "EQUIPOS DE AMBIENTACIÓN"
                         _sqlCommands.Add(_objActivoFijo.BajaEquiposAmbientacion(CInt(lblCodigo.Text)))
                     Case "EQUIPOS DE COMUNICACIÓN Y TELEFONÍA"
                         _sqlCommands.Add(_objActivoFijo.BajaEquiposComunicacion(CInt(lblCodigo.Text)))
@@ -201,8 +204,8 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
                     Case "SOFTWARE"
                         _sqlCommands.Add(_objActivoFijo.BajasSoftware(CInt(lblCodigo.Text)))
                 End Select
-                 
-                Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, String.Empty)
+                Dim nombreU As String = "Ingreso de Activo por: " & UserName
+                Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, nombreU)
                 If res(0) Then
                     Auditoria()
                     GuardarBaja()
@@ -211,9 +214,18 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
                     ParametrosEnabled(False, False, False, False, False, False, False)
                     Limpiar()
                 End If
-                MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
+                Dim messageIcon As KryptonMessageBoxIcon
+                If res(0) Then
+                    messageIcon = KryptonMessageBoxIcon.Information
+                Else
+                    messageIcon = KryptonMessageBoxIcon.Exclamation
+                End If
+                KryptonMessageBox.Show(res(1), "Mensaje del Sistema", KryptonMessageBoxButtons.OK, messageIcon)
+
+
             Else
-                MsgBox("NO HA LLENADO TODOS LOS PARÁMETROS DE BAJAS", MsgBoxStyle.Information, "MENSAJE DE INFORMACIÓN")
+
+                KryptonMessageBox.Show("NO HA LLENADO TODOS LOS PARÁMETROS DE BAJAS", "MENSAJE DE INFORMACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
             End If
         End Sub
 

@@ -572,7 +572,7 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
                 KryptonMessageBox.Show("CARGAR COMPROBANTE INGRESO: BANCOS" & vbNewLine & ex.Message.ToString, "MENSAJE DE EXCEPCIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
-        Private Sub dgvFacturaVenta_SelectionChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles dgvFacturaVenta.SelectionChanged, DataGridView1.SelectionChanged
+        Private Sub dgvFacturaVenta_SelectionChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles dgvFacturaVenta.SelectionChanged
             If dgvFacturaVenta.RowCount = 0 Then Return
             If dgvFacturaVenta.CurrentRow.Cells.Item(0).Value Is DBNull.Value Then
                 lblIdFacturaVenta.Text = "..."
@@ -582,7 +582,7 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
             CargarPagosFacturaVenta() ' carga los pagos realizados a la factura seleccionada
             ValidarPagosAnteriores()
         End Sub
-        Private Sub dgvFacturaVenta_CellContentClick(ByVal sender As System.Object, ByVal e As Windows.Forms.DataGridViewCellEventArgs) Handles dgvFacturaVenta.CellContentClick, DataGridView1.CellContentClick
+        Private Sub dgvFacturaVenta_CellContentClick(ByVal sender As System.Object, ByVal e As Windows.Forms.DataGridViewCellEventArgs) Handles dgvFacturaVenta.CellContentClick
             If e.ColumnIndex = chk.Index Then
                 Dim value = CBool(dgvFacturaVenta.CurrentCell.EditedFormattedValue)
 

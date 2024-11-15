@@ -2,6 +2,7 @@
 Imports ClassLibraryCisepro.ENUMS
 Imports Microsoft.Office.Interop
 Imports syscisepro.DATOS
+Imports Krypton.Toolkit
 
 Namespace FORMULARIOS.CONTABILIDAD.AUXILIARES
     ''' <summary>
@@ -328,7 +329,8 @@ Namespace FORMULARIOS.CONTABILIDAD.AUXILIARES
 
         Private Sub btnExportar_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnExportar.Click
             If dgvAsientosDiario.Rows.Count = 0 Then
-                MsgBox("NO HAY DATOS QUE EXPORTAR!", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                'MsgBox("NO HAY DATOS QUE EXPORTAR!", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                KryptonMessageBox.Show("NO HAY DATOS QUE EXPORTAR!", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                 Return
             End If
             ExportarDatosExcel("AUXILIARES", "AUXILIARES", dtpInicio.Value, dtpFinal.Value)

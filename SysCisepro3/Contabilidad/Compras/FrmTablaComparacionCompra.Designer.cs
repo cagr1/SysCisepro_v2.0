@@ -87,7 +87,7 @@
             this.kryptonPage1,
             this.kryptonPage3,
             this.kryptonPage2});
-            this.kryptonNavigator1.SelectedIndex = 1;
+            this.kryptonNavigator1.SelectedIndex = 0;
             this.kryptonNavigator1.Size = new System.Drawing.Size(808, 450);
             this.kryptonNavigator1.TabIndex = 0;
             this.kryptonNavigator1.Text = "kryptonNavigator1";
@@ -107,6 +107,7 @@
             // 
             // kryptonGroupBox1
             // 
+            this.kryptonGroupBox1.GroupBackStyle = Krypton.Toolkit.PaletteBackStyle.ControlRibbon;
             this.kryptonGroupBox1.Location = new System.Drawing.Point(-1, 3);
             this.kryptonGroupBox1.Name = "kryptonGroupBox1";
             // 
@@ -289,6 +290,8 @@
             this.dgvIngresoTabla.Location = new System.Drawing.Point(4, 59);
             this.dgvIngresoTabla.Name = "dgvIngresoTabla";
             this.dgvIngresoTabla.Size = new System.Drawing.Size(796, 258);
+            this.dgvIngresoTabla.StateCommon.Background.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
+            this.dgvIngresoTabla.StateCommon.BackStyle = Krypton.Toolkit.PaletteBackStyle.GridBackgroundList;
             this.dgvIngresoTabla.TabIndex = 1;
             this.dgvIngresoTabla.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvIngresoTabla_CellEndEdit);
             this.dgvIngresoTabla.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.dgvIngresoTabla_EditingControlShowing);
@@ -324,12 +327,14 @@
             this.kryptonPage3.MinimumSize = new System.Drawing.Size(50, 50);
             this.kryptonPage3.Name = "kryptonPage3";
             this.kryptonPage3.Size = new System.Drawing.Size(806, 423);
+            this.kryptonPage3.StateCommon.Page.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
             this.kryptonPage3.Text = "Buscar";
             this.kryptonPage3.ToolTipTitle = "Page ToolTip";
             this.kryptonPage3.UniqueName = "52EB43BB56504659649444E3236E61E5";
             // 
             // kryptonGroupBox2
             // 
+            this.kryptonGroupBox2.GroupBackStyle = Krypton.Toolkit.PaletteBackStyle.ControlRibbon;
             this.kryptonGroupBox2.Location = new System.Drawing.Point(11, 16);
             this.kryptonGroupBox2.Name = "kryptonGroupBox2";
             // 
@@ -368,6 +373,8 @@
             this.dgvDetalleTablaComparativa.Name = "dgvDetalleTablaComparativa";
             this.dgvDetalleTablaComparativa.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvDetalleTablaComparativa.Size = new System.Drawing.Size(772, 208);
+            this.dgvDetalleTablaComparativa.StateCommon.Background.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
+            this.dgvDetalleTablaComparativa.StateCommon.BackStyle = Krypton.Toolkit.PaletteBackStyle.GridBackgroundList;
             this.dgvDetalleTablaComparativa.TabIndex = 3;
             // 
             // dgvTablaComparativa
@@ -380,6 +387,8 @@
             this.dgvTablaComparativa.Name = "dgvTablaComparativa";
             this.dgvTablaComparativa.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvTablaComparativa.Size = new System.Drawing.Size(772, 121);
+            this.dgvTablaComparativa.StateCommon.Background.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
+            this.dgvTablaComparativa.StateCommon.BackStyle = Krypton.Toolkit.PaletteBackStyle.GridBackgroundList;
             this.dgvTablaComparativa.TabIndex = 2;
             this.dgvTablaComparativa.SelectionChanged += new System.EventHandler(this.dgvTablaComparativa_SelectionChanged);
             // 

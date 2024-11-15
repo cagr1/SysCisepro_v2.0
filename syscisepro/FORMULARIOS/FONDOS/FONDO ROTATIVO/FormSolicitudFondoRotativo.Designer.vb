@@ -170,7 +170,7 @@
             Me.txtNroSolicitudFR.BackColor = System.Drawing.Color.White
             Me.txtNroSolicitudFR.Enabled = False
             Me.txtNroSolicitudFR.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtNroSolicitudFR.Location = New System.Drawing.Point(87, 6)
+            Me.txtNroSolicitudFR.Location = New System.Drawing.Point(73, 6)
             Me.txtNroSolicitudFR.Name = "txtNroSolicitudFR"
             Me.txtNroSolicitudFR.Size = New System.Drawing.Size(70, 22)
             Me.txtNroSolicitudFR.TabIndex = 1
@@ -285,7 +285,7 @@
             Me.txtApellidoResponsableAutoFR.BackColor = System.Drawing.Color.White
             Me.txtApellidoResponsableAutoFR.Enabled = False
             Me.txtApellidoResponsableAutoFR.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtApellidoResponsableAutoFR.Location = New System.Drawing.Point(308, 147)
+            Me.txtApellidoResponsableAutoFR.Location = New System.Drawing.Point(301, 147)
             Me.txtApellidoResponsableAutoFR.Name = "txtApellidoResponsableAutoFR"
             Me.txtApellidoResponsableAutoFR.Size = New System.Drawing.Size(169, 21)
             Me.txtApellidoResponsableAutoFR.TabIndex = 12
@@ -320,7 +320,7 @@
             Me.txtCIResponsableAutoFR.BackColor = System.Drawing.Color.White
             Me.txtCIResponsableAutoFR.Enabled = False
             Me.txtCIResponsableAutoFR.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtCIResponsableAutoFR.Location = New System.Drawing.Point(309, 118)
+            Me.txtCIResponsableAutoFR.Location = New System.Drawing.Point(302, 118)
             Me.txtCIResponsableAutoFR.Name = "txtCIResponsableAutoFR"
             Me.txtCIResponsableAutoFR.Size = New System.Drawing.Size(113, 21)
             Me.txtCIResponsableAutoFR.TabIndex = 10
@@ -482,17 +482,18 @@
             'txtFechaSolicitudFR
             '
             Me.txtFechaSolicitudFR.Enabled = False
-            Me.txtFechaSolicitudFR.Location = New System.Drawing.Point(215, 6)
+            Me.txtFechaSolicitudFR.Location = New System.Drawing.Point(280, 4)
             Me.txtFechaSolicitudFR.Name = "txtFechaSolicitudFR"
-            Me.txtFechaSolicitudFR.Size = New System.Drawing.Size(262, 22)
+            Me.txtFechaSolicitudFR.Size = New System.Drawing.Size(210, 22)
             Me.txtFechaSolicitudFR.TabIndex = 2
             '
             'txtNombreComercialCliente
             '
+            Me.txtNombreComercialCliente.BackColor = System.Drawing.Color.White
             Me.txtNombreComercialCliente.Enabled = False
-            Me.txtNombreComercialCliente.Location = New System.Drawing.Point(620, 195)
+            Me.txtNombreComercialCliente.Location = New System.Drawing.Point(567, 195)
             Me.txtNombreComercialCliente.Name = "txtNombreComercialCliente"
-            Me.txtNombreComercialCliente.Size = New System.Drawing.Size(194, 22)
+            Me.txtNombreComercialCliente.Size = New System.Drawing.Size(247, 22)
             Me.txtNombreComercialCliente.TabIndex = 19
             '
             'btnBuscarPersonal
@@ -503,7 +504,7 @@
             Me.btnBuscarPersonal.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.btnBuscarPersonal.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.btnBuscarPersonal.Image = Global.syscisepro.My.Resources.Resources.search_24dp_FILL0_wght400_GRAD0_opsz40
-            Me.btnBuscarPersonal.Location = New System.Drawing.Point(197, 191)
+            Me.btnBuscarPersonal.Location = New System.Drawing.Point(188, 191)
             Me.btnBuscarPersonal.Name = "btnBuscarPersonal"
             Me.btnBuscarPersonal.Size = New System.Drawing.Size(28, 28)
             Me.btnBuscarPersonal.TabIndex = 16
@@ -514,9 +515,9 @@
             Me.txtReceptorDineroSolicitud.BackColor = System.Drawing.Color.White
             Me.txtReceptorDineroSolicitud.Enabled = False
             Me.txtReceptorDineroSolicitud.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtReceptorDineroSolicitud.Location = New System.Drawing.Point(309, 197)
+            Me.txtReceptorDineroSolicitud.Location = New System.Drawing.Point(302, 197)
             Me.txtReceptorDineroSolicitud.Name = "txtReceptorDineroSolicitud"
-            Me.txtReceptorDineroSolicitud.Size = New System.Drawing.Size(224, 21)
+            Me.txtReceptorDineroSolicitud.Size = New System.Drawing.Size(208, 21)
             Me.txtReceptorDineroSolicitud.TabIndex = 17
             Me.txtReceptorDineroSolicitud.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
             '
@@ -527,7 +528,7 @@
             Me.txtCIReceptorDinero.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtCIReceptorDinero.Location = New System.Drawing.Point(73, 197)
             Me.txtCIReceptorDinero.Name = "txtCIReceptorDinero"
-            Me.txtCIReceptorDinero.Size = New System.Drawing.Size(113, 22)
+            Me.txtCIReceptorDinero.Size = New System.Drawing.Size(99, 22)
             Me.txtCIReceptorDinero.TabIndex = 15
             '
             'dgvAsientosDiario
@@ -1028,7 +1029,7 @@
             '
             'KryptonGroupBox1
             '
-            Me.KryptonGroupBox1.GroupBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.ButtonAlternate
+            Me.KryptonGroupBox1.GroupBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.ControlRibbon
             Me.KryptonGroupBox1.Location = New System.Drawing.Point(0, 32)
             Me.KryptonGroupBox1.Name = "KryptonGroupBox1"
             '
@@ -1119,7 +1120,7 @@
             '
             'KryptonLabel21
             '
-            Me.KryptonLabel21.Location = New System.Drawing.Point(546, 197)
+            Me.KryptonLabel21.Location = New System.Drawing.Point(513, 197)
             Me.KryptonLabel21.Name = "KryptonLabel21"
             Me.KryptonLabel21.Size = New System.Drawing.Size(48, 20)
             Me.KryptonLabel21.TabIndex = 203
@@ -1266,7 +1267,7 @@
             '
             'KryptonLabel2
             '
-            Me.KryptonLabel2.Location = New System.Drawing.Point(163, 6)
+            Me.KryptonLabel2.Location = New System.Drawing.Point(200, 6)
             Me.KryptonLabel2.Name = "KryptonLabel2"
             Me.KryptonLabel2.Size = New System.Drawing.Size(42, 20)
             Me.KryptonLabel2.TabIndex = 2

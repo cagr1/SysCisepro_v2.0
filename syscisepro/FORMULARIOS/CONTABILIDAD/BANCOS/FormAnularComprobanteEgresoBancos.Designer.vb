@@ -312,7 +312,7 @@
             'KryptonGroupBox1
             '
             Me.KryptonGroupBox1.CaptionOverlap = 0.85R
-            Me.KryptonGroupBox1.GroupBackStyle = Krypton.Toolkit.PaletteBackStyle.HeaderDockInactive
+            Me.KryptonGroupBox1.GroupBackStyle = Krypton.Toolkit.PaletteBackStyle.PanelRibbonInactive
             Me.KryptonGroupBox1.Location = New System.Drawing.Point(2, 31)
             Me.KryptonGroupBox1.Name = "KryptonGroupBox1"
             '

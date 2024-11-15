@@ -3,6 +3,7 @@ Imports ClassLibraryCisepro.CONTABILIDAD.VENTAS
 Imports ClassLibraryCisepro.ENUMS
 Imports syscisepro.DATOS
 Imports Microsoft.Office.Interop
+Imports Krypton.Toolkit
 
 Namespace FORMULARIOS.CONTABILIDAD.AUXILIARES
     ''' <summary>
@@ -114,7 +115,8 @@ Namespace FORMULARIOS.CONTABILIDAD.AUXILIARES
                 dgvComprobanteRetencion.ReadOnly = True
             Catch ex As Exception
                 dgvComprobanteRetencion.DataSource = Nothing
-                MsgBox("METODO CARGAR COMPROBANTE DE RETENCIÓN" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "MENSAJE DE EXCEPCIÓN")
+                'MsgBox("METODO CARGAR COMPROBANTE DE RETENCIÓN" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "MENSAJE DE EXCEPCIÓN")
+                KryptonMessageBox.Show("METODO CARGAR COMPROBANTE DE RETENCIÓN" & vbNewLine & ex.Message.ToString, "MENSAJE DE EXCEPCIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
 
@@ -154,13 +156,15 @@ Namespace FORMULARIOS.CONTABILIDAD.AUXILIARES
                 dgvDetalleComprobanteRetencion.AutoResizeRows()
                 dgvDetalleComprobanteRetencion.ReadOnly = True
             Catch ex As Exception
-                MsgBox("METODO CARGAR DETALLE COMPROBANTE DE RETENCIÓN" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "MENSAJE DE EXCEPCIÓN")
+                'MsgBox("METODO CARGAR DETALLE COMPROBANTE DE RETENCIÓN" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "MENSAJE DE EXCEPCIÓN")
+                KryptonMessageBox.Show("METODO CARGAR DETALLE COMPROBANTE DE RETENCIÓN" & vbNewLine & ex.Message.ToString, "MENSAJE DE EXCEPCIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
 
         Private Sub btnExportar_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnExportar.Click
             If dgvFacturas.Rows.Count = 0 Then
-                MsgBox("NO HAY DATOS QUE EXPORTAR! PRIMERO REALICE UNA BUSQUEDA", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                'MsgBox("NO HAY DATOS QUE EXPORTAR! PRIMERO REALICE UNA BUSQUEDA", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                KryptonMessageBox.Show("NO HAY DATOS QUE EXPORTAR! PRIMERO REALICE UNA BUSQUEDA", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                 Return
             End If
             ExportarDatosExcel(dgvFacturas, "FACTURAS DE VENTA", "FACTURAS_VENTA")
@@ -168,7 +172,8 @@ Namespace FORMULARIOS.CONTABILIDAD.AUXILIARES
 
         Private Sub ToolStripMenuItem1_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ToolStripMenuItem1.Click
             If dgvDetalleComprobanteRetencion.Rows.Count = 0 Then
-                MsgBox("NO HAY DATOS QUE EXPORTAR! PRIMERO REALICE UNA BUSQUEDA", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                'MsgBox("NO HAY DATOS QUE EXPORTAR! PRIMERO REALICE UNA BUSQUEDA", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                KryptonMessageBox.Show("NO HAY DATOS QUE EXPORTAR! PRIMERO REALICE UNA BUSQUEDA", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                 Return
             End If
             ExportarDatosExcel(dgvDetalleComprobanteRetencion, "RETENCIÓN EN VENTA", "RETENCION_VENTA")
@@ -176,7 +181,8 @@ Namespace FORMULARIOS.CONTABILIDAD.AUXILIARES
 
         Private Sub ToolStripMenuItem2_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ToolStripMenuItem2.Click
             If dgvAsientoDiario.Rows.Count = 0 Then
-                MsgBox("NO HAY DATOS QUE EXPORTAR! PRIMERO REALICE UNA BUSQUEDA", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                'MsgBox("NO HAY DATOS QUE EXPORTAR! PRIMERO REALICE UNA BUSQUEDA", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                KryptonMessageBox.Show("NO HAY DATOS QUE EXPORTAR! PRIMERO REALICE UNA BUSQUEDA", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                 Return
             End If
             ExportarDatosExcel(dgvAsientoDiario, "ASIENTOS DIARIO DE VENTA", "LIBRO_DARIO")
@@ -185,7 +191,8 @@ Namespace FORMULARIOS.CONTABILIDAD.AUXILIARES
         Private Sub ExportarDatosExcel(ByVal dgvAsientosDiario As DataGridView, ByVal titulo As String, ByVal sname As String)
             Try
                 If dgvAsientosDiario.Rows.Count = 0 Then
-                    MsgBox("NO HAY DATOS QUE EXPORTAR!", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                    'MsgBox("NO HAY DATOS QUE EXPORTAR!", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                    KryptonMessageBox.Show("NO HAY DATOS QUE EXPORTAR!", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                     Return
                 End If
 
@@ -253,7 +260,8 @@ Namespace FORMULARIOS.CONTABILIDAD.AUXILIARES
                 app.Visible = True
                 app.DisplayAlerts = True
             Catch ex As Exception
-                MessageBox.Show("HUBO UN PROBLEMA AL EXPORTAR DATOS!", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                'MessageBox.Show("HUBO UN PROBLEMA AL EXPORTAR DATOS!", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                KryptonMessageBox.Show("HUBO UN PROBLEMA AL EXPORTAR DATOS!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
     End Class

@@ -38,6 +38,7 @@
             Me.crvControlCombustible.Dock = System.Windows.Forms.DockStyle.Fill
             Me.crvControlCombustible.Location = New System.Drawing.Point(0, 0)
             Me.crvControlCombustible.Name = "crvControlCombustible"
+            Me.crvControlCombustible.ShowLogo = False
             Me.crvControlCombustible.Size = New System.Drawing.Size(896, 568)
             Me.crvControlCombustible.TabIndex = 0
             Me.crvControlCombustible.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None

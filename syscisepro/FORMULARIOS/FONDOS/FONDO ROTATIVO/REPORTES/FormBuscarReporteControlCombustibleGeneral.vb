@@ -2,6 +2,7 @@
 Imports ClassLibraryCisepro.ACTIVOS_FIJOS.MODULOS_DE_ACTIVOS_FIJOS
 Imports ClassLibraryCisepro.ENUMS
 Imports ClassLibraryCisepro.FONDOS.FONDO_ROTATIVO
+Imports Krypton.Toolkit
 
 Namespace FORMULARIOS.FONDOS.FONDO_ROTATIVO.REPORTES
     ''' <summary>
@@ -118,6 +119,14 @@ Namespace FORMULARIOS.FONDOS.FONDO_ROTATIVO.REPORTES
         End Sub
 
         Private Sub dgvControlCombustible_CellClick(ByVal sender As Object, ByVal e As Windows.Forms.DataGridViewCellEventArgs) Handles dgvControlCombustible.CellClick
+
+        End Sub
+         
+        Private Sub ToolStripMenuItem1_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ToolStripMenuItem1.Click
+            CargarControlCombustible()
+        End Sub
+
+        Private Sub dgvControlCombustible_SelectionChanged(sender As Object, e As EventArgs) Handles dgvControlCombustible.SelectionChanged
             Try
                 If dgvControlCombustible.CurrentRow Is Nothing Then Return
                 If dgvControlCombustible.CurrentRow.Cells.Item(0).Value Is DBNull.Value Then
@@ -135,32 +144,33 @@ Namespace FORMULARIOS.FONDOS.FONDO_ROTATIVO.REPORTES
                     txtVehiculo.Text = _objetoActivoFijo.BuscarNombreActivoFijoXIdActivoFijo(_tipoCon, CType(lblIdVehiculo.Text, Integer))
 
                     lblIdRubro.Text = dgvControlCombustible.CurrentRow.Cells.Item(13).Value.ToString
-                    _objetoRubro.BuscarNombreRubrosXIdRubro(_tipoCon, CType(lblIdRubro.Text, Integer))
-                    txtRubro.Text = _objetoRubro.NombreRubro
+                    '_objetoRubro.BuscarNombreRubrosXIdRubro(_tipoCon, CType(lblIdRubro.Text, Integer))
+                    'txtRubro.Text = _objetoRubro.NombreRubro
+                    txtRubro.Text = _objetoRubro.BuscarNombreRubrosXIdRubro(_tipoCon, CType(lblIdRubro.Text, Integer))
 
                     lblIdSalidaVehiculo.Text = dgvControlCombustible.CurrentRow.Cells.Item(14).Value.ToString
 
-                    _objetoSalidaVehiculo.BuscarFechaSalidaVehiculoXIdSalidaVehiculo(_tipoCon, CType(lblIdSalidaVehiculo.Text, Integer))
-                    txtFechaSalidaVehiculo.Text = _objetoSalidaVehiculo.FechaSalidaVehiculo
-                    _objetoSalidaVehiculo.BuscarKmSalidaVehiculoXIdSalidaVehiculo(_tipoCon, CType(lblIdSalidaVehiculo.Text, Integer))
-                    txtKmSalidaVehiculo.Text = _objetoSalidaVehiculo.KmSalidaVehiculo
+                    '_objetoSalidaVehiculo.BuscarFechaSalidaVehiculoXIdSalidaVehiculo(_tipoCon, CType(lblIdSalidaVehiculo.Text, Integer))
+                    'txtFechaSalidaVehiculo.Text = _objetoSalidaVehiculo.FechaSalidaVehiculo
+                    txtFechaSalidaVehiculo.Text = _objetoSalidaVehiculo.BuscarFechaSalidaVehiculoXIdSalidaVehiculo(_tipoCon, CType(lblIdSalidaVehiculo.Text, Integer))
+                    '_objetoSalidaVehiculo.BuscarKmSalidaVehiculoXIdSalidaVehiculo(_tipoCon, CType(lblIdSalidaVehiculo.Text, Integer))
+                    'txtKmSalidaVehiculo.Text = _objetoSalidaVehiculo.KmSalidaVehiculo
+                    txtKmSalidaVehiculo.Text = _objetoSalidaVehiculo.BuscarKmSalidaVehiculoXIdSalidaVehiculo(_tipoCon, CType(lblIdSalidaVehiculo.Text, Integer))
 
                     lblIdLlegadaVehiculo.Text = dgvControlCombustible.CurrentRow.Cells.Item(15).Value.ToString
 
-                    _objetoLlegadaVehiculo.BuscarFechaLlegadaVehiculoXIdLlegadaVehiculo(_tipoCon, CType(lblIdLlegadaVehiculo.Text, Integer))
-                    txtFechaLlegadaVehiculo.Text = _objetoLlegadaVehiculo.FechaLlegadaVehiculo
-                    _objetoLlegadaVehiculo.BuscarKmLlegadaVehiculoXIdLlegadaVehiculo(_tipoCon, CType(lblIdLlegadaVehiculo.Text, Integer))
-                    txtKmLlegadaVehiculo.Text = _objetoLlegadaVehiculo.KmLlegadaVehiculo
+                    '_objetoLlegadaVehiculo.BuscarFechaLlegadaVehiculoXIdLlegadaVehiculo(_tipoCon, CType(lblIdLlegadaVehiculo.Text, Integer))
+                    'txtFechaLlegadaVehiculo.Text = _objetoLlegadaVehiculo.FechaLlegadaVehiculo
+                    txtFechaLlegadaVehiculo.Text = _objetoLlegadaVehiculo.BuscarFechaLlegadaVehiculoXIdLlegadaVehiculo(_tipoCon, CType(lblIdLlegadaVehiculo.Text, Integer))
+                    '_objetoLlegadaVehiculo.BuscarKmLlegadaVehiculoXIdLlegadaVehiculo(_tipoCon, CType(lblIdLlegadaVehiculo.Text, Integer))
+                    'txtKmLlegadaVehiculo.Text = _objetoLlegadaVehiculo.KmLlegadaVehiculo
+                    txtKmLlegadaVehiculo.Text = _objetoLlegadaVehiculo.BuscarKmLlegadaVehiculoXIdLlegadaVehiculo(_tipoCon, CType(lblIdLlegadaVehiculo.Text, Integer))
 
                 End If
             Catch ex As Exception
-                MsgBox("DGV CELL CLICK." & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "MENSAJE DE EXCEPCIÓN")
+                'MsgBox("DGV CELL CLICK." & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "MENSAJE DE EXCEPCIÓN")
+                KryptonMessageBox.Show("Error: " & vbNewLine & ex.Message.ToString, "MENSAJE DE EXCEPCIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
-         
-        Private Sub ToolStripMenuItem1_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ToolStripMenuItem1.Click
-            CargarControlCombustible()
-        End Sub
-
     End Class
 End Namespace

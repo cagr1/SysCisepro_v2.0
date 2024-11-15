@@ -28,10 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.btnRecargar = new System.Windows.Forms.ToolStripButton();
             this.btnAprobarLiquidacion = new System.Windows.Forms.ToolStripButton();
@@ -63,12 +66,36 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dgvDetalleOrdenCompra = new System.Windows.Forms.DataGridView();
+            this.kryptonGroupBox1 = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
+            this.kryptonGroupBox2 = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
+            this.kryptonLabel1 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel2 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel3 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel4 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel5 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel6 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel7 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel8 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel9 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel10 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel11 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.kryptonGroupBox3 = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrdenCompra)).BeginInit();
             this.gbOrdenCompra.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetalleOrdenCompra)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox1.Panel)).BeginInit();
+            this.kryptonGroupBox1.Panel.SuspendLayout();
+            this.kryptonGroupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox2.Panel)).BeginInit();
+            this.kryptonGroupBox2.Panel.SuspendLayout();
+            this.kryptonGroupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox3.Panel)).BeginInit();
+            this.kryptonGroupBox3.Panel.SuspendLayout();
+            this.kryptonGroupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -81,7 +108,7 @@
             this.toolStripButton1});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1020, 31);
+            this.toolStrip1.Size = new System.Drawing.Size(867, 31);
             this.toolStrip1.TabIndex = 197;
             this.toolStrip1.Text = "toolStrip1";
             this.toolStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.toolStrip1_ItemClicked);
@@ -123,25 +150,34 @@
             this.dgvOrdenCompra.AllowUserToAddRows = false;
             this.dgvOrdenCompra.AllowUserToDeleteRows = false;
             this.dgvOrdenCompra.AllowUserToResizeRows = false;
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgvOrdenCompra.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
-            this.dgvOrdenCompra.BackgroundColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgvOrdenCompra.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle8;
+            this.dgvOrdenCompra.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
+            this.dgvOrdenCompra.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvOrdenCompra.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.dgvOrdenCompra.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(60)))), ((int)(((byte)(123)))));
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvOrdenCompra.DefaultCellStyle = dataGridViewCellStyle14;
-            this.dgvOrdenCompra.Location = new System.Drawing.Point(4, 14);
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(60)))), ((int)(((byte)(123)))));
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvOrdenCompra.DefaultCellStyle = dataGridViewCellStyle10;
+            this.dgvOrdenCompra.Location = new System.Drawing.Point(3, 3);
             this.dgvOrdenCompra.MultiSelect = false;
             this.dgvOrdenCompra.Name = "dgvOrdenCompra";
             this.dgvOrdenCompra.ReadOnly = true;
             this.dgvOrdenCompra.RowHeadersVisible = false;
             this.dgvOrdenCompra.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvOrdenCompra.Size = new System.Drawing.Size(1009, 105);
+            this.dgvOrdenCompra.Size = new System.Drawing.Size(840, 105);
             this.dgvOrdenCompra.TabIndex = 198;
             this.dgvOrdenCompra.SelectionChanged += new System.EventHandler(this.dgvOrdenCompra_SelectionChanged);
             this.dgvOrdenCompra.Sorted += new System.EventHandler(this.dgvOrdenCompra_Sorted);
@@ -149,31 +185,20 @@
             // gbOrdenCompra
             // 
             this.gbOrdenCompra.BackColor = System.Drawing.Color.White;
-            this.gbOrdenCompra.Controls.Add(this.txtTotalOrdenCompra);
             this.gbOrdenCompra.Controls.Add(this.lblTotalORdenCompra);
-            this.gbOrdenCompra.Controls.Add(this.txtIvaOrdenCompra);
             this.gbOrdenCompra.Controls.Add(this.lblIvaOrdenCompra);
-            this.gbOrdenCompra.Controls.Add(this.txtDescuentoOrdenCompra);
             this.gbOrdenCompra.Controls.Add(this.lblDescuentoOrdenCompra);
-            this.gbOrdenCompra.Controls.Add(this.txtSubtotal0OrdenCompra);
             this.gbOrdenCompra.Controls.Add(this.lblSubtotal0OrdenCompra);
-            this.gbOrdenCompra.Controls.Add(this.txtSubtotal12OrdenCompra);
             this.gbOrdenCompra.Controls.Add(this.lblSubtotal12OrdenCompra);
-            this.gbOrdenCompra.Controls.Add(this.txtTipoPagoOrdenCompra);
             this.gbOrdenCompra.Controls.Add(this.lblTipoPagoOrdenCompra);
-            this.gbOrdenCompra.Controls.Add(this.txtFormaPagoOrdenCompra);
             this.gbOrdenCompra.Controls.Add(this.lblFormaPagoOrdenCompra);
-            this.gbOrdenCompra.Controls.Add(this.txtNombreProveedor);
             this.gbOrdenCompra.Controls.Add(this.lblNombreProveedor);
-            this.gbOrdenCompra.Controls.Add(this.txtRucProveedor);
             this.gbOrdenCompra.Controls.Add(this.lblRucProveedor);
-            this.gbOrdenCompra.Controls.Add(this.txtFechaOrdenCompra);
-            this.gbOrdenCompra.Controls.Add(this.txtIdOrdenCompra);
             this.gbOrdenCompra.Controls.Add(this.lblFechaOrdenCompra);
             this.gbOrdenCompra.Controls.Add(this.lblNroOrdenCompra);
-            this.gbOrdenCompra.Location = new System.Drawing.Point(0, 159);
+            this.gbOrdenCompra.Location = new System.Drawing.Point(428, 199);
             this.gbOrdenCompra.Name = "gbOrdenCompra";
-            this.gbOrdenCompra.Size = new System.Drawing.Size(1018, 96);
+            this.gbOrdenCompra.Size = new System.Drawing.Size(257, 56);
             this.gbOrdenCompra.TabIndex = 199;
             this.gbOrdenCompra.TabStop = false;
             this.gbOrdenCompra.Text = "DATOS ORDEN DE COMPRA";
@@ -183,9 +208,10 @@
             this.txtTotalOrdenCompra.BackColor = System.Drawing.Color.White;
             this.txtTotalOrdenCompra.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtTotalOrdenCompra.Enabled = false;
-            this.txtTotalOrdenCompra.Location = new System.Drawing.Point(946, 43);
+            this.txtTotalOrdenCompra.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTotalOrdenCompra.Location = new System.Drawing.Point(777, 35);
             this.txtTotalOrdenCompra.Name = "txtTotalOrdenCompra";
-            this.txtTotalOrdenCompra.Size = new System.Drawing.Size(64, 22);
+            this.txtTotalOrdenCompra.Size = new System.Drawing.Size(64, 21);
             this.txtTotalOrdenCompra.TabIndex = 22;
             this.txtTotalOrdenCompra.Text = "0.00";
             this.txtTotalOrdenCompra.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -205,9 +231,10 @@
             this.txtIvaOrdenCompra.BackColor = System.Drawing.Color.White;
             this.txtIvaOrdenCompra.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtIvaOrdenCompra.Enabled = false;
-            this.txtIvaOrdenCompra.Location = new System.Drawing.Point(946, 17);
+            this.txtIvaOrdenCompra.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIvaOrdenCompra.Location = new System.Drawing.Point(777, 7);
             this.txtIvaOrdenCompra.Name = "txtIvaOrdenCompra";
-            this.txtIvaOrdenCompra.Size = new System.Drawing.Size(64, 22);
+            this.txtIvaOrdenCompra.Size = new System.Drawing.Size(64, 21);
             this.txtIvaOrdenCompra.TabIndex = 20;
             this.txtIvaOrdenCompra.Text = "0.00";
             this.txtIvaOrdenCompra.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -227,9 +254,10 @@
             this.txtDescuentoOrdenCompra.BackColor = System.Drawing.Color.White;
             this.txtDescuentoOrdenCompra.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtDescuentoOrdenCompra.Enabled = false;
-            this.txtDescuentoOrdenCompra.Location = new System.Drawing.Point(783, 69);
+            this.txtDescuentoOrdenCompra.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDescuentoOrdenCompra.Location = new System.Drawing.Point(626, 59);
             this.txtDescuentoOrdenCompra.Name = "txtDescuentoOrdenCompra";
-            this.txtDescuentoOrdenCompra.Size = new System.Drawing.Size(64, 22);
+            this.txtDescuentoOrdenCompra.Size = new System.Drawing.Size(64, 21);
             this.txtDescuentoOrdenCompra.TabIndex = 18;
             this.txtDescuentoOrdenCompra.Text = "0.00";
             this.txtDescuentoOrdenCompra.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -249,9 +277,10 @@
             this.txtSubtotal0OrdenCompra.BackColor = System.Drawing.Color.White;
             this.txtSubtotal0OrdenCompra.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtSubtotal0OrdenCompra.Enabled = false;
-            this.txtSubtotal0OrdenCompra.Location = new System.Drawing.Point(783, 43);
+            this.txtSubtotal0OrdenCompra.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSubtotal0OrdenCompra.Location = new System.Drawing.Point(626, 31);
             this.txtSubtotal0OrdenCompra.Name = "txtSubtotal0OrdenCompra";
-            this.txtSubtotal0OrdenCompra.Size = new System.Drawing.Size(64, 22);
+            this.txtSubtotal0OrdenCompra.Size = new System.Drawing.Size(64, 21);
             this.txtSubtotal0OrdenCompra.TabIndex = 16;
             this.txtSubtotal0OrdenCompra.Text = "0.00";
             this.txtSubtotal0OrdenCompra.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -271,9 +300,10 @@
             this.txtSubtotal12OrdenCompra.BackColor = System.Drawing.Color.White;
             this.txtSubtotal12OrdenCompra.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtSubtotal12OrdenCompra.Enabled = false;
-            this.txtSubtotal12OrdenCompra.Location = new System.Drawing.Point(783, 17);
+            this.txtSubtotal12OrdenCompra.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSubtotal12OrdenCompra.Location = new System.Drawing.Point(626, 3);
             this.txtSubtotal12OrdenCompra.Name = "txtSubtotal12OrdenCompra";
-            this.txtSubtotal12OrdenCompra.Size = new System.Drawing.Size(64, 22);
+            this.txtSubtotal12OrdenCompra.Size = new System.Drawing.Size(64, 21);
             this.txtSubtotal12OrdenCompra.TabIndex = 14;
             this.txtSubtotal12OrdenCompra.Text = "0.00";
             this.txtSubtotal12OrdenCompra.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -293,9 +323,10 @@
             this.txtTipoPagoOrdenCompra.BackColor = System.Drawing.Color.White;
             this.txtTipoPagoOrdenCompra.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtTipoPagoOrdenCompra.Enabled = false;
-            this.txtTipoPagoOrdenCompra.Location = new System.Drawing.Point(433, 69);
+            this.txtTipoPagoOrdenCompra.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTipoPagoOrdenCompra.Location = new System.Drawing.Point(347, 59);
             this.txtTipoPagoOrdenCompra.Name = "txtTipoPagoOrdenCompra";
-            this.txtTipoPagoOrdenCompra.Size = new System.Drawing.Size(151, 22);
+            this.txtTipoPagoOrdenCompra.Size = new System.Drawing.Size(151, 21);
             this.txtTipoPagoOrdenCompra.TabIndex = 12;
             // 
             // lblTipoPagoOrdenCompra
@@ -312,9 +343,10 @@
             this.txtFormaPagoOrdenCompra.BackColor = System.Drawing.Color.White;
             this.txtFormaPagoOrdenCompra.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtFormaPagoOrdenCompra.Enabled = false;
-            this.txtFormaPagoOrdenCompra.Location = new System.Drawing.Point(95, 69);
+            this.txtFormaPagoOrdenCompra.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFormaPagoOrdenCompra.Location = new System.Drawing.Point(93, 59);
             this.txtFormaPagoOrdenCompra.Name = "txtFormaPagoOrdenCompra";
-            this.txtFormaPagoOrdenCompra.Size = new System.Drawing.Size(151, 22);
+            this.txtFormaPagoOrdenCompra.Size = new System.Drawing.Size(151, 21);
             this.txtFormaPagoOrdenCompra.TabIndex = 10;
             // 
             // lblFormaPagoOrdenCompra
@@ -331,9 +363,10 @@
             this.txtNombreProveedor.BackColor = System.Drawing.Color.White;
             this.txtNombreProveedor.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtNombreProveedor.Enabled = false;
-            this.txtNombreProveedor.Location = new System.Drawing.Point(95, 43);
+            this.txtNombreProveedor.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombreProveedor.Location = new System.Drawing.Point(93, 31);
             this.txtNombreProveedor.Name = "txtNombreProveedor";
-            this.txtNombreProveedor.Size = new System.Drawing.Size(489, 22);
+            this.txtNombreProveedor.Size = new System.Drawing.Size(405, 21);
             this.txtNombreProveedor.TabIndex = 8;
             // 
             // lblNombreProveedor
@@ -350,9 +383,10 @@
             this.txtRucProveedor.BackColor = System.Drawing.Color.White;
             this.txtRucProveedor.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtRucProveedor.Enabled = false;
-            this.txtRucProveedor.Location = new System.Drawing.Point(478, 17);
+            this.txtRucProveedor.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRucProveedor.Location = new System.Drawing.Point(392, 5);
             this.txtRucProveedor.Name = "txtRucProveedor";
-            this.txtRucProveedor.Size = new System.Drawing.Size(106, 22);
+            this.txtRucProveedor.Size = new System.Drawing.Size(106, 21);
             this.txtRucProveedor.TabIndex = 6;
             // 
             // lblRucProveedor
@@ -369,9 +403,10 @@
             this.txtFechaOrdenCompra.BackColor = System.Drawing.Color.White;
             this.txtFechaOrdenCompra.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtFechaOrdenCompra.Enabled = false;
-            this.txtFechaOrdenCompra.Location = new System.Drawing.Point(218, 17);
+            this.txtFechaOrdenCompra.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFechaOrdenCompra.Location = new System.Drawing.Point(215, 5);
             this.txtFechaOrdenCompra.Name = "txtFechaOrdenCompra";
-            this.txtFechaOrdenCompra.Size = new System.Drawing.Size(114, 22);
+            this.txtFechaOrdenCompra.Size = new System.Drawing.Size(114, 21);
             this.txtFechaOrdenCompra.TabIndex = 4;
             // 
             // txtIdOrdenCompra
@@ -379,9 +414,10 @@
             this.txtIdOrdenCompra.BackColor = System.Drawing.Color.White;
             this.txtIdOrdenCompra.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtIdOrdenCompra.Enabled = false;
-            this.txtIdOrdenCompra.Location = new System.Drawing.Point(95, 17);
+            this.txtIdOrdenCompra.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIdOrdenCompra.Location = new System.Drawing.Point(93, 5);
             this.txtIdOrdenCompra.Name = "txtIdOrdenCompra";
-            this.txtIdOrdenCompra.Size = new System.Drawing.Size(51, 22);
+            this.txtIdOrdenCompra.Size = new System.Drawing.Size(51, 21);
             this.txtIdOrdenCompra.TabIndex = 3;
             // 
             // lblFechaOrdenCompra
@@ -405,10 +441,9 @@
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.White;
-            this.groupBox2.Controls.Add(this.dgvOrdenCompra);
-            this.groupBox2.Location = new System.Drawing.Point(2, 33);
+            this.groupBox2.Location = new System.Drawing.Point(433, 33);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(1016, 125);
+            this.groupBox2.Size = new System.Drawing.Size(252, 125);
             this.groupBox2.TabIndex = 201;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "ÓRDENES DE COMPRA PENDIENTES";
@@ -416,10 +451,9 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.White;
-            this.groupBox1.Controls.Add(this.dgvDetalleOrdenCompra);
-            this.groupBox1.Location = new System.Drawing.Point(2, 255);
+            this.groupBox1.Location = new System.Drawing.Point(433, 371);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1016, 225);
+            this.groupBox1.Size = new System.Drawing.Size(196, 109);
             this.groupBox1.TabIndex = 202;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "DETALLES DE LA ÓRDEN DE COMPRA";
@@ -429,34 +463,206 @@
             this.dgvDetalleOrdenCompra.AllowUserToAddRows = false;
             this.dgvDetalleOrdenCompra.AllowUserToDeleteRows = false;
             this.dgvDetalleOrdenCompra.AllowUserToResizeRows = false;
-            dataGridViewCellStyle15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgvDetalleOrdenCompra.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle15;
-            this.dgvDetalleOrdenCompra.BackgroundColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgvDetalleOrdenCompra.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle11;
+            this.dgvDetalleOrdenCompra.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
+            this.dgvDetalleOrdenCompra.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvDetalleOrdenCompra.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle12;
             this.dgvDetalleOrdenCompra.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle16.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle16.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(60)))), ((int)(((byte)(123)))));
-            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvDetalleOrdenCompra.DefaultCellStyle = dataGridViewCellStyle16;
-            this.dgvDetalleOrdenCompra.Location = new System.Drawing.Point(4, 14);
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(60)))), ((int)(((byte)(123)))));
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvDetalleOrdenCompra.DefaultCellStyle = dataGridViewCellStyle13;
+            this.dgvDetalleOrdenCompra.Location = new System.Drawing.Point(4, 4);
             this.dgvDetalleOrdenCompra.MultiSelect = false;
             this.dgvDetalleOrdenCompra.Name = "dgvDetalleOrdenCompra";
             this.dgvDetalleOrdenCompra.ReadOnly = true;
             this.dgvDetalleOrdenCompra.RowHeadersVisible = false;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvDetalleOrdenCompra.RowsDefaultCellStyle = dataGridViewCellStyle14;
+            this.dgvDetalleOrdenCompra.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgvDetalleOrdenCompra.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvDetalleOrdenCompra.Size = new System.Drawing.Size(1009, 205);
+            this.dgvDetalleOrdenCompra.Size = new System.Drawing.Size(837, 155);
             this.dgvDetalleOrdenCompra.TabIndex = 198;
             this.dgvDetalleOrdenCompra.Sorted += new System.EventHandler(this.dgvDetalleOrdenCompra_Sorted);
+            // 
+            // kryptonGroupBox1
+            // 
+            this.kryptonGroupBox1.CaptionOverlap = 0D;
+            this.kryptonGroupBox1.CaptionStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.GroupBoxCaption;
+            this.kryptonGroupBox1.GroupBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.ControlRibbon;
+            this.kryptonGroupBox1.GroupBorderStyle = ComponentFactory.Krypton.Toolkit.PaletteBorderStyle.ControlGroupBox;
+            this.kryptonGroupBox1.Location = new System.Drawing.Point(5, 35);
+            this.kryptonGroupBox1.Name = "kryptonGroupBox1";
+            // 
+            // kryptonGroupBox1.Panel
+            // 
+            this.kryptonGroupBox1.Panel.Controls.Add(this.dgvOrdenCompra);
+            this.kryptonGroupBox1.Size = new System.Drawing.Size(857, 139);
+            this.kryptonGroupBox1.TabIndex = 203;
+            this.kryptonGroupBox1.Values.Heading = "Orden de Compra Pendientes";
+            // 
+            // kryptonGroupBox2
+            // 
+            this.kryptonGroupBox2.CaptionOverlap = 0D;
+            this.kryptonGroupBox2.CaptionStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.GroupBoxCaption;
+            this.kryptonGroupBox2.GroupBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.ControlRibbon;
+            this.kryptonGroupBox2.GroupBorderStyle = ComponentFactory.Krypton.Toolkit.PaletteBorderStyle.ControlGroupBox;
+            this.kryptonGroupBox2.Location = new System.Drawing.Point(5, 176);
+            this.kryptonGroupBox2.Name = "kryptonGroupBox2";
+            // 
+            // kryptonGroupBox2.Panel
+            // 
+            this.kryptonGroupBox2.Panel.Controls.Add(this.txtTotalOrdenCompra);
+            this.kryptonGroupBox2.Panel.Controls.Add(this.kryptonLabel11);
+            this.kryptonGroupBox2.Panel.Controls.Add(this.kryptonLabel10);
+            this.kryptonGroupBox2.Panel.Controls.Add(this.txtIvaOrdenCompra);
+            this.kryptonGroupBox2.Panel.Controls.Add(this.kryptonLabel9);
+            this.kryptonGroupBox2.Panel.Controls.Add(this.kryptonLabel8);
+            this.kryptonGroupBox2.Panel.Controls.Add(this.kryptonLabel7);
+            this.kryptonGroupBox2.Panel.Controls.Add(this.kryptonLabel6);
+            this.kryptonGroupBox2.Panel.Controls.Add(this.txtDescuentoOrdenCompra);
+            this.kryptonGroupBox2.Panel.Controls.Add(this.kryptonLabel5);
+            this.kryptonGroupBox2.Panel.Controls.Add(this.kryptonLabel4);
+            this.kryptonGroupBox2.Panel.Controls.Add(this.txtSubtotal0OrdenCompra);
+            this.kryptonGroupBox2.Panel.Controls.Add(this.kryptonLabel3);
+            this.kryptonGroupBox2.Panel.Controls.Add(this.kryptonLabel2);
+            this.kryptonGroupBox2.Panel.Controls.Add(this.txtSubtotal12OrdenCompra);
+            this.kryptonGroupBox2.Panel.Controls.Add(this.kryptonLabel1);
+            this.kryptonGroupBox2.Panel.Controls.Add(this.txtIdOrdenCompra);
+            this.kryptonGroupBox2.Panel.Controls.Add(this.txtNombreProveedor);
+            this.kryptonGroupBox2.Panel.Controls.Add(this.txtFormaPagoOrdenCompra);
+            this.kryptonGroupBox2.Panel.Controls.Add(this.txtFechaOrdenCompra);
+            this.kryptonGroupBox2.Panel.Controls.Add(this.txtRucProveedor);
+            this.kryptonGroupBox2.Panel.Controls.Add(this.txtTipoPagoOrdenCompra);
+            this.kryptonGroupBox2.Size = new System.Drawing.Size(857, 108);
+            this.kryptonGroupBox2.TabIndex = 204;
+            this.kryptonGroupBox2.Values.Heading = "Orden de Compra ";
+            // 
+            // kryptonLabel1
+            // 
+            this.kryptonLabel1.Location = new System.Drawing.Point(9, 5);
+            this.kryptonLabel1.Name = "kryptonLabel1";
+            this.kryptonLabel1.Size = new System.Drawing.Size(21, 20);
+            this.kryptonLabel1.TabIndex = 0;
+            this.kryptonLabel1.Values.Text = "Id";
+            // 
+            // kryptonLabel2
+            // 
+            this.kryptonLabel2.Location = new System.Drawing.Point(9, 33);
+            this.kryptonLabel2.Name = "kryptonLabel2";
+            this.kryptonLabel2.Size = new System.Drawing.Size(67, 20);
+            this.kryptonLabel2.TabIndex = 1;
+            this.kryptonLabel2.Values.Text = "Proveedor";
+            // 
+            // kryptonLabel3
+            // 
+            this.kryptonLabel3.Location = new System.Drawing.Point(9, 59);
+            this.kryptonLabel3.Name = "kryptonLabel3";
+            this.kryptonLabel3.Size = new System.Drawing.Size(76, 20);
+            this.kryptonLabel3.TabIndex = 2;
+            this.kryptonLabel3.Values.Text = "Forma Pago";
+            // 
+            // kryptonLabel4
+            // 
+            this.kryptonLabel4.Location = new System.Drawing.Point(157, 5);
+            this.kryptonLabel4.Name = "kryptonLabel4";
+            this.kryptonLabel4.Size = new System.Drawing.Size(42, 20);
+            this.kryptonLabel4.TabIndex = 11;
+            this.kryptonLabel4.Values.Text = "Fecha";
+            // 
+            // kryptonLabel5
+            // 
+            this.kryptonLabel5.Location = new System.Drawing.Point(352, 7);
+            this.kryptonLabel5.Name = "kryptonLabel5";
+            this.kryptonLabel5.Size = new System.Drawing.Size(34, 20);
+            this.kryptonLabel5.TabIndex = 12;
+            this.kryptonLabel5.Values.Text = "RUC";
+            // 
+            // kryptonLabel6
+            // 
+            this.kryptonLabel6.Location = new System.Drawing.Point(275, 61);
+            this.kryptonLabel6.Name = "kryptonLabel6";
+            this.kryptonLabel6.Size = new System.Drawing.Size(66, 20);
+            this.kryptonLabel6.TabIndex = 13;
+            this.kryptonLabel6.Values.Text = "Tipo Pago";
+            // 
+            // kryptonLabel7
+            // 
+            this.kryptonLabel7.Location = new System.Drawing.Point(531, 7);
+            this.kryptonLabel7.Name = "kryptonLabel7";
+            this.kryptonLabel7.Size = new System.Drawing.Size(73, 20);
+            this.kryptonLabel7.TabIndex = 14;
+            this.kryptonLabel7.Values.Text = "Subtotal 12";
+            // 
+            // kryptonLabel8
+            // 
+            this.kryptonLabel8.Location = new System.Drawing.Point(531, 33);
+            this.kryptonLabel8.Name = "kryptonLabel8";
+            this.kryptonLabel8.Size = new System.Drawing.Size(56, 20);
+            this.kryptonLabel8.TabIndex = 15;
+            this.kryptonLabel8.Values.Text = "Subtotal ";
+            // 
+            // kryptonLabel9
+            // 
+            this.kryptonLabel9.Location = new System.Drawing.Point(531, 61);
+            this.kryptonLabel9.Name = "kryptonLabel9";
+            this.kryptonLabel9.Size = new System.Drawing.Size(68, 20);
+            this.kryptonLabel9.TabIndex = 16;
+            this.kryptonLabel9.Values.Text = "Descuento";
+            // 
+            // kryptonLabel10
+            // 
+            this.kryptonLabel10.Location = new System.Drawing.Point(713, 7);
+            this.kryptonLabel10.Name = "kryptonLabel10";
+            this.kryptonLabel10.Size = new System.Drawing.Size(46, 20);
+            this.kryptonLabel10.TabIndex = 19;
+            this.kryptonLabel10.Values.Text = "IVA 12";
+            // 
+            // kryptonLabel11
+            // 
+            this.kryptonLabel11.Location = new System.Drawing.Point(716, 33);
+            this.kryptonLabel11.Name = "kryptonLabel11";
+            this.kryptonLabel11.Size = new System.Drawing.Size(38, 20);
+            this.kryptonLabel11.TabIndex = 20;
+            this.kryptonLabel11.Values.Text = "Total";
+            // 
+            // kryptonGroupBox3
+            // 
+            this.kryptonGroupBox3.CaptionOverlap = 0D;
+            this.kryptonGroupBox3.CaptionStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.GroupBoxCaption;
+            this.kryptonGroupBox3.GroupBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.ControlRibbon;
+            this.kryptonGroupBox3.GroupBorderStyle = ComponentFactory.Krypton.Toolkit.PaletteBorderStyle.ControlGroupBox;
+            this.kryptonGroupBox3.Location = new System.Drawing.Point(5, 287);
+            this.kryptonGroupBox3.Name = "kryptonGroupBox3";
+            // 
+            // kryptonGroupBox3.Panel
+            // 
+            this.kryptonGroupBox3.Panel.Controls.Add(this.dgvDetalleOrdenCompra);
+            this.kryptonGroupBox3.Size = new System.Drawing.Size(857, 193);
+            this.kryptonGroupBox3.TabIndex = 205;
+            this.kryptonGroupBox3.Values.Heading = "Detalle Orden de Compra ";
             // 
             // FrmAprobacionOrdenCompra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1020, 480);
+            this.ClientSize = new System.Drawing.Size(867, 480);
+            this.Controls.Add(this.kryptonGroupBox3);
+            this.Controls.Add(this.kryptonGroupBox2);
+            this.Controls.Add(this.kryptonGroupBox1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.gbOrdenCompra);
@@ -475,9 +681,20 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrdenCompra)).EndInit();
             this.gbOrdenCompra.ResumeLayout(false);
             this.gbOrdenCompra.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetalleOrdenCompra)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox1.Panel)).EndInit();
+            this.kryptonGroupBox1.Panel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox1)).EndInit();
+            this.kryptonGroupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox2.Panel)).EndInit();
+            this.kryptonGroupBox2.Panel.ResumeLayout(false);
+            this.kryptonGroupBox2.Panel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox2)).EndInit();
+            this.kryptonGroupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox3.Panel)).EndInit();
+            this.kryptonGroupBox3.Panel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox3)).EndInit();
+            this.kryptonGroupBox3.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -516,5 +733,19 @@
         internal System.Windows.Forms.GroupBox groupBox1;
         internal System.Windows.Forms.DataGridView dgvDetalleOrdenCompra;
         private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private ComponentFactory.Krypton.Toolkit.KryptonGroupBox kryptonGroupBox1;
+        private ComponentFactory.Krypton.Toolkit.KryptonGroupBox kryptonGroupBox2;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel6;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel5;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel4;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel3;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel2;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel1;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel11;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel10;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel9;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel8;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel7;
+        private ComponentFactory.Krypton.Toolkit.KryptonGroupBox kryptonGroupBox3;
     }
 }

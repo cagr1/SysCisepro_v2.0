@@ -2,6 +2,7 @@
 Imports ClassLibraryCisepro.ENUMS 
 Imports Microsoft.Office.Interop
 Imports syscisepro.DATOS
+Imports Krypton.Toolkit
 
 Namespace FORMULARIOS.CONTABILIDAD.PERDIDAS_Y_GANANCIAS
     ''' <summary>
@@ -171,7 +172,8 @@ Namespace FORMULARIOS.CONTABILIDAD.PERDIDAS_Y_GANANCIAS
         Private Sub ExportarDatosExcel(ByVal dgvAsientosDiario As DataGridView, ByVal titulo As String)
             Try
                 If dgvAsientosDiario.Rows.Count = 0 Then
-                    MsgBox("NO HAY DATOS QUE EXPORTAR!", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+
+                    KryptonMessageBox.Show("NO HAY DATOS QUE EXPORTAR!", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                     Return
                 End If
 
@@ -406,25 +408,16 @@ Namespace FORMULARIOS.CONTABILIDAD.PERDIDAS_Y_GANANCIAS
                 Case TipoConexion.Asenava
                     Icon = My.Resources.logo_a
                     MenuStrip1.ForeColor = Color.White
-                    'MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorAsenava
-                    Label22.ForeColor = Color.White
-                    Label22.BackColor = My.MySettingsProperty.Settings.ColorAsenava
                     dgvEgresos.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorAsenava
                     dgvIngresos.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorAsenava
                 Case TipoConexion.Seportpac
                     Icon = My.Resources.logo_s
                     MenuStrip1.ForeColor = Color.White
-                    'MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
-                    Label22.ForeColor = Color.White
-                    Label22.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
                     dgvEgresos.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorSeportpac
                     dgvIngresos.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorSeportpac
                 Case Else
                     Icon = My.Resources.logo_c
                     MenuStrip1.ForeColor = Color.White
-                    'MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorCisepro
-                    Label22.ForeColor = Color.White
-                    Label22.BackColor = My.MySettingsProperty.Settings.ColorCisepro
                     dgvEgresos.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
                     dgvIngresos.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
             End Select
@@ -630,7 +623,8 @@ Namespace FORMULARIOS.CONTABILIDAD.PERDIDAS_Y_GANANCIAS
                     End If
                 End If
             Catch ex As Exception
-                MsgBox(ex.Message.ToString)
+                'MsgBox(ex.Message.ToString)
+                KryptonMessageBox.Show("ERROR: " & ex.Message, "ERROR", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
 
@@ -669,7 +663,8 @@ Namespace FORMULARIOS.CONTABILIDAD.PERDIDAS_Y_GANANCIAS
                     End If
                 End If
             Catch ex As Exception
-                MsgBox(ex.Message.ToString)
+                'MsgBox(ex.Message.ToString)
+                KryptonMessageBox.Show("ERROR: " & ex.Message, "ERROR", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
 

@@ -23,10 +23,10 @@
         'No lo modifique con el editor de código.
         <System.Diagnostics.DebuggerStepThrough()>
         Private Sub InitializeComponent()
-            Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
@@ -779,10 +779,10 @@
             Me.tcVarios1.AnimateTime = 200
             Me.tcVarios1.Appearance = System.Windows.Forms.TabAppearance.Buttons
             Me.tcVarios1.BackgroundColor = System.Drawing.Color.White
-            Me.tcVarios1.Controls.Add(Me.tpRadio)
             Me.tcVarios1.Controls.Add(Me.MetroTabPage1)
-            Me.tcVarios1.Controls.Add(Me.MetroTabPage4)
+            Me.tcVarios1.Controls.Add(Me.tpRadio)
             Me.tcVarios1.Controls.Add(Me.MetroTabPage3)
+            Me.tcVarios1.Controls.Add(Me.MetroTabPage4)
             Me.tcVarios1.Controls.Add(Me.MetroTabPage5)
             Me.tcVarios1.Controls.Add(Me.MetroTabPage6)
             Me.tcVarios1.Controls.Add(Me.MetroTabPage7)
@@ -1116,20 +1116,20 @@
             Me.dgvRadios.AllowUserToAddRows = False
             Me.dgvRadios.AllowUserToDeleteRows = False
             Me.dgvRadios.AllowUserToResizeRows = False
-            DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-            Me.dgvRadios.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+            DataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+            Me.dgvRadios.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle3
             Me.dgvRadios.BackgroundColor = System.Drawing.Color.White
             Me.dgvRadios.BorderStyle = System.Windows.Forms.BorderStyle.None
             Me.dgvRadios.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
             Me.dgvRadios.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn7, Me.GARANTIA, Me.DataGridViewTextBoxColumn8, Me.DataGridViewTextBoxColumn9, Me.DataGridViewTextBoxColumn10, Me.DataGridViewTextBoxColumn11, Me.DataGridViewTextBoxColumn12, Me.DataGridViewTextBoxColumn13, Me.DataGridViewTextBoxColumn17, Me.DataGridViewTextBoxColumn14, Me.DOCUMENTO, Me.Column17, Me.Column18, Me.Column19})
-            DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-            DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
-            DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
-            DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
-            DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(123, Byte), Integer))
-            DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-            DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-            Me.dgvRadios.DefaultCellStyle = DataGridViewCellStyle2
+            DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+            DataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window
+            DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
+            DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText
+            DataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(123, Byte), Integer))
+            DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+            DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+            Me.dgvRadios.DefaultCellStyle = DataGridViewCellStyle4
             Me.dgvRadios.Location = New System.Drawing.Point(292, 29)
             Me.dgvRadios.MultiSelect = False
             Me.dgvRadios.Name = "dgvRadios"
@@ -1509,20 +1509,20 @@
             Me.dgvArmas.AllowUserToAddRows = False
             Me.dgvArmas.AllowUserToDeleteRows = False
             Me.dgvArmas.AllowUserToResizeRows = False
-            DataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-            Me.dgvArmas.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle3
+            DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+            Me.dgvArmas.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
             Me.dgvArmas.BackgroundColor = System.Drawing.Color.White
             Me.dgvArmas.BorderStyle = System.Windows.Forms.BorderStyle.None
             Me.dgvArmas.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken
             Me.dgvArmas.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6, Me.Column5, Me.Column6, Me.Column7, Me.Column8, Me.Column9, Me.ValorFact, Me.ValorResi, Me.VidaUtil})
-            DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-            DataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window
-            DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
-            DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText
-            DataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(123, Byte), Integer))
-            DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-            DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-            Me.dgvArmas.DefaultCellStyle = DataGridViewCellStyle4
+            DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+            DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
+            DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
+            DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
+            DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(123, Byte), Integer))
+            DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+            DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+            Me.dgvArmas.DefaultCellStyle = DataGridViewCellStyle2
             Me.dgvArmas.Location = New System.Drawing.Point(351, 41)
             Me.dgvArmas.MultiSelect = False
             Me.dgvArmas.Name = "dgvArmas"
@@ -2059,9 +2059,6 @@
             '
             'KryptonGroupBox1
             '
-            Me.KryptonGroupBox1.CaptionStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.GroupBoxCaption
-            Me.KryptonGroupBox1.GroupBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.ControlGroupBox
-            Me.KryptonGroupBox1.GroupBorderStyle = ComponentFactory.Krypton.Toolkit.PaletteBorderStyle.ControlGroupBox
             Me.KryptonGroupBox1.Location = New System.Drawing.Point(3, -2)
             Me.KryptonGroupBox1.Name = "KryptonGroupBox1"
             '

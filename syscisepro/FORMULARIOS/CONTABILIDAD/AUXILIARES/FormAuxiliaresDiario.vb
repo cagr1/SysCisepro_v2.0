@@ -2,6 +2,7 @@
 Imports ClassLibraryCisepro.ENUMS
 Imports syscisepro.DATOS
 Imports Microsoft.Office.Interop
+Imports Krypton.Toolkit
 
 Namespace FORMULARIOS.CONTABILIDAD.AUXILIARES
     ''' <summary>
@@ -169,7 +170,8 @@ Namespace FORMULARIOS.CONTABILIDAD.AUXILIARES
 
         Private Sub btnExportar_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ToolStripMenuItem1.Click
             If dgvDiarios.Rows.Count = 0 Then
-                MsgBox("NO HAY DATOS QUE EXPORTAR! PRIMERO REALICE UNA BUSQUEDA", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                'MsgBox("NO HAY DATOS QUE EXPORTAR! PRIMERO REALICE UNA BUSQUEDA", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                KryptonMessageBox.Show("NO HAY DATOS QUE EXPORTAR! PRIMERO REALICE UNA BUSQUEDA", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                 Return
             End If
             ExportarDatosExcel(dgvDiarios, "LIBRO DIARIO", "LIBRO_DIARIO")
@@ -177,7 +179,8 @@ Namespace FORMULARIOS.CONTABILIDAD.AUXILIARES
 
         Private Sub ToolStripMenuItem1_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ToolStripMenuItem2.Click
             If dgvAsientos.Rows.Count = 0 Then
-                MsgBox("NO HAY DATOS QUE EXPORTAR! PRIMERO REALICE UNA BUSQUEDA", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                'MsgBox("NO HAY DATOS QUE EXPORTAR! PRIMERO REALICE UNA BUSQUEDA", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                KryptonMessageBox.Show("NO HAY DATOS QUE EXPORTAR! PRIMERO REALICE UNA BUSQUEDA", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                 Return
             End If
             ExportarDatosExcel(dgvAsientos, "ASIENTOS LIBRO DIARIO", "ASIENTOS_DIARIO")
@@ -185,7 +188,8 @@ Namespace FORMULARIOS.CONTABILIDAD.AUXILIARES
 
         Private Sub ToolStripMenuItem2_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ToolStripMenuItem3.Click
             If dgvJornalizacion.Rows.Count = 0 Then
-                MsgBox("NO HAY DATOS QUE EXPORTAR! PRIMERO REALICE UNA BUSQUEDA", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                'MsgBox("NO HAY DATOS QUE EXPORTAR! PRIMERO REALICE UNA BUSQUEDA", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                KryptonMessageBox.Show("NO HAY DATOS QUE EXPORTAR! PRIMERO REALICE UNA BUSQUEDA", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                 Return
             End If
             ExportarDatosExcel(dgvJornalizacion, "DETALLE ASIENTO", "LIBRO_DARIO")
@@ -194,7 +198,8 @@ Namespace FORMULARIOS.CONTABILIDAD.AUXILIARES
         Private Sub ExportarDatosExcel(ByVal dgvAsientosDiario As DataGridView, ByVal titulo As String, ByVal sname As String)
             Try
                 If dgvAsientosDiario.Rows.Count = 0 Then
-                    MsgBox("NO HAY DATOS QUE EXPORTAR!", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                    'MsgBox("NO HAY DATOS QUE EXPORTAR!", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                    KryptonMessageBox.Show("No hay Datos que exportar!", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                     Return
                 End If
 
@@ -262,8 +267,13 @@ Namespace FORMULARIOS.CONTABILIDAD.AUXILIARES
                 app.DisplayAlerts = True
                 'workbook.SaveAs(sfd.FileName, Excel.XlFileFormat.xlWorkbookNormal, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Excel.XlSaveAsAccessMode.xlExclusive, Type.Missing, Type.Missing, Type.Missing, Type.Missing)
             Catch ex As Exception
-                MessageBox.Show("HUBO UN PROBLEMA AL EXPORTAR DATOS!", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                'MessageBox.Show("HUBO UN PROBLEMA AL EXPORTAR DATOS!", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                KryptonMessageBox.Show("HUBO UN PROBLEMA AL EXPORTAR DATOS!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
+        End Sub
+
+        Private Sub KryptonLabel1_Paint(sender As Object, e As PaintEventArgs) Handles KryptonLabel1.Paint
+
         End Sub
     End Class
 End Namespace

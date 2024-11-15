@@ -4,6 +4,8 @@ Imports ClassLibraryCisepro.ESTRUCTURA_EMPRESA
 Imports ClassLibraryCisepro.ProcesosSql
 Imports ClassLibraryCisepro.USUARIOS_DEL_SISTEMA
 Imports syscisepro.FORMULARIOS.INVENTARIOS.PROCESO
+Imports Krypton.Toolkit
+Imports System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel
 
 Namespace FORMULARIOS.ESTRUCTURA_ADMINISTRATIVA
     ''' <summary>
@@ -37,6 +39,7 @@ Namespace FORMULARIOS.ESTRUCTURA_ADMINISTRATIVA
 
         Dim _sqlCommands As List(Of SqlCommand)
         Public IdUsuario As Integer
+
 
         ReadOnly _objEmpresa As New ClassEmpresa
         ReadOnly _objSucursal As New ClassSucursal
@@ -162,7 +165,8 @@ Namespace FORMULARIOS.ESTRUCTURA_ADMINISTRATIVA
         End Sub
 
         Private Sub tsmGuardar_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles tsmGuardar.Click
-            If MessageBox.Show("¿ESTA SEGURO QUE DESEA GUARDAR?", "MENSAJE DE VALIDACIÓN", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> MsgBoxResult.Yes Then Return
+            'If MessageBox.Show("¿ESTA SEGURO QUE DESEA GUARDAR?", "MENSAJE DE VALIDACIÓN", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> MsgBoxResult.Yes Then Return
+            If KryptonMessageBox.Show("¿ESTA SEGURO QUE DESEA GUARDAR?", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) <> MsgBoxResult.Yes Then Return
             _sqlCommands.Clear()
 
             Select Case _boton
@@ -190,7 +194,10 @@ Namespace FORMULARIOS.ESTRUCTURA_ADMINISTRATIVA
                     _sqlCommands.Add(_objUsuarioGeneral.ModificarPasswordUsuarioGeneral)
             End Select
 
-            Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, String.Empty)
+            Dim nombreU As String = "Ingreso de Usuario por: " & User
+
+
+            Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, nombreU)
             If res(0) Then
 
                 Habilitar(False, False, False, False, False, False, False, False, False)
@@ -203,7 +210,16 @@ Namespace FORMULARIOS.ESTRUCTURA_ADMINISTRATIVA
                 CargarUsuarios()
 
             End If
-            MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
+
+            Dim messageIcon As KryptonMessageBoxIcon
+            If res(0) Then
+                messageIcon = KryptonMessageBoxIcon.Information
+            Else
+                messageIcon = KryptonMessageBoxIcon.Exclamation
+            End If
+            KryptonMessageBox.Show(res(1), "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, messageIcon)
+
+            'MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
         End Sub
 
         Private Sub ToolStripMenuItem2_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ToolStripMenuItem2.Click
@@ -334,7 +350,7 @@ Namespace FORMULARIOS.ESTRUCTURA_ADMINISTRATIVA
             End Try
         End Sub
 
-        Private Sub Label10_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Label10.Click
+        Private Sub Label10_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
 
         End Sub
     End Class
