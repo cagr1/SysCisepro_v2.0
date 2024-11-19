@@ -120,7 +120,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.PROVEEDORES
             If dgvContactosProveedorCalificado.RowCount <> 0 Then
                 guardarRegistroContactoProveedorCalificado()
             Else
-                MsgBox("NO SE PUEDE GUARDAR." & vbNewLine & "NO SE HAN AGREGADO CONTÁCTOS AL PROVEEDOR CALIFICADO.", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                MsgBox("No se puede guardar." & vbNewLine & "NO SE HAN AGREGADO CONTÁCTOS AL PROVEEDOR CALIFICADO.", MsgBoxStyle.Exclamation, "Mensaje de validación")
             End If
         End Sub
 
@@ -136,7 +136,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.PROVEEDORES
                     txtNombreComercialProveedorGeneral.Text = formBuscarProveedor.dgvProveedorGeneral.CurrentRow.Cells.Item(4).Value.ToString
                 End If
             Catch ex As Exception
-                MsgBox("BOTÓN BUSCAR PROVEEDOR:" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "MENSAJE DE EXCEPCIÓN")
+                MsgBox("BOTÓN BUSCAR PROVEEDOR:" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
             End Try
         End Sub
 
@@ -150,16 +150,16 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.PROVEEDORES
                         dgvContactosProveedorCalificado.Rows.Add(formAgregarContacto.txtIdContactoProveedorCalificado.Text, formAgregarContacto.txtNombresContactoProveedorCalificado.Text, formAgregarContacto.txtApellidosContactoProveedorCalificado.Text, formAgregarContacto.txtCargoContactoProveedorCalificado.Text, formAgregarContacto.txtTelefonoContactoProveedorCalificado.Text, formAgregarContacto.txtCelularContactoProveedorCalificado.Text, formAgregarContacto.txtEmailContactoProveedorCalificado.Text, "1", txtIdProveedorGeneral.Text)
                     End If
                 Catch ex As Exception
-                    MsgBox("BOTÓN BUSCAR PROVEEDOR:" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "MENSAJE DE EXCEPCIÓN")
+                    MsgBox("BOTÓN BUSCAR PROVEEDOR:" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
                 End Try
             Else
-                MsgBox("NO PUEDE AGREGAR CONTÁCTOS." & vbNewLine & "POR FAVOR PRIMERO SELECCIONE UN PROVEEDOR.", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                MsgBox("NO PUEDE AGREGAR CONTÁCTOS." & vbNewLine & "POR FAVOR PRIMERO SELECCIONE UN PROVEEDOR.", MsgBoxStyle.Exclamation, "Mensaje de validación")
             End If
         End Sub
 
         Private Sub btnEliminar_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnEliminar.Click
             If dgvContactosProveedorCalificado.RowCount = 0 Then
-                MsgBox("NO HAY CELDAS EN LA GRILLA", MsgBoxStyle.Information, "MENSAJE DE INFORMACIÓN")
+                MsgBox("NO HAY CELDAS EN LA GRILLA", MsgBoxStyle.Information, "Mensaje de información")
             Else
                 dgvContactosProveedorCalificado.Rows.RemoveAt(dgvContactosProveedorCalificado.CurrentRow.Index)
             End If

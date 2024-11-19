@@ -126,16 +126,19 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
         End Sub
         Private Sub ToolStripMenuItemEliminar_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ToolStripMenuItemEliminar.Click
             If dgvComprobantesEgresoBanco.SelectedRows.Count <> 1 Then
-                MessageBox.Show("Debe seleccionar sólo una fila!", "", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
+                KryptonMessageBox.Show("Debe seleccionar sólo una fila!", "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
                 Return
             End If
 
             Dim lsMensage As String = "¿Esta seguro de querer eliminar este Registro" & vbCrLf & dgvComprobantesEgresoBanco.CurrentRow().Cells(2).Value.ToString()
-            If MessageBox.Show(lsMensage, "", MessageBoxButtons.YesNo, MessageBoxIcon.Information, MessageBoxDefaultButton.Button2, MessageBoxOptions.ServiceNotification) = DialogResult.No Then
-                Return
-            End If
-            dgvComprobantesEgresoBanco.Rows.RemoveAt(dgvComprobantesEgresoBanco.CurrentRow.Index)
-            MessageBox.Show("FILA ELIMINADA", "", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            'If MessageBox.Show(lsMensage, "", MessageBoxButtons.YesNo, MessageBoxIcon.Information, MessageBoxDefaultButton.Button2, MessageBoxOptions.ServiceNotification) = DialogResult.No Then
+            If KryptonMessageBox.Show(lsMensage, "Mensaje del sistema", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) = DialogResult.No Then
+                    Return
+                End If
+                dgvComprobantesEgresoBanco.Rows.RemoveAt(dgvComprobantesEgresoBanco.CurrentRow.Index)
+
+            KryptonMessageBox.Show("Fila eliminada", "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
         End Sub
         Private Sub txtCuentaDebe_KeyUp(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles txtCuentaDebe.KeyUp
             If e.KeyCode <> Keys.Enter Then Return
@@ -144,7 +147,8 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
                 lblCodigoCta.Text = cad(0)
             Catch ex As Exception
                 lblCodigoCta.Text = "0"
-                MsgBox("ERROR AL SELECCIONAR LA CUENTA! " & vbNewLine & ex.Message.ToString, MsgBoxStyle.Exclamation, "MENSAJE DE EXCEPCIÓN")
+
+                KryptonMessageBox.Show("Error al seleccionar la cuenta! " & vbNewLine & ex.Message.ToString, "Mensaje de excepción", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
             End Try
         End Sub
         Private Sub btnBuscarPersonal_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnBuscarPersonal.Click
@@ -157,7 +161,8 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
                     validarNumeroFacturaCanceladas()
                 End If
             Catch ex As Exception
-                MsgBox("BOTÓN BUSCAR." & vbNewLine & ex.ToString, MsgBoxStyle.Critical, "MENSAJE DE EXCEPCIÓN")
+
+                KryptonMessageBox.Show("Error al seleccionar el archivo! " & vbNewLine & ex.Message.ToString, "Mensaje de excepción", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
             End Try
         End Sub
         Private Sub ImportarArchivoDeExcel(ByVal archivoImportar As String)
@@ -206,7 +211,8 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
 
                 validarimportacion = 1
             Catch ex As Exception
-                MsgBox("LAS COLUMNAS O EL NOMBRE DE LA HOJA NO COINCIDEN. POR FAVOR REVISE QUE EL FORMATO SEA EL ESTABLECIDO." & vbNewLine & " " & vbNewLine & "NOMBRE DE LA HOJA:  COMPROBANTE_INGRESO" & vbNewLine & " " & vbNewLine & "COLUMNAS: FORMA_PAGO,  BANCO_CHEQUE_RECIBIDO,  CTA_CHEQUE_RECIBIDO,  NUMERO_CHEQUE_RECIBIDO,  FECHA,CLIENTE,  RAZON,  NUMERO_FACTURA,  VALOR,  BANCO_DEPOSITO,  CTA_DEPOSITO", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                'MsgBox("LAS COLUMNAS O EL NOMBRE DE LA HOJA NO COINCIDEN. POR FAVOR REVISE QUE EL FORMATO SEA EL ESTABLECIDO." & vbNewLine & " " & vbNewLine & "NOMBRE DE LA HOJA:  COMPROBANTE_INGRESO" & vbNewLine & " " & vbNewLine & "COLUMNAS: FORMA_PAGO,  BANCO_CHEQUE_RECIBIDO,  CTA_CHEQUE_RECIBIDO,  NUMERO_CHEQUE_RECIBIDO,  FECHA,CLIENTE,  RAZON,  NUMERO_FACTURA,  VALOR,  BANCO_DEPOSITO,  CTA_DEPOSITO", MsgBoxStyle.Exclamation, "Mensaje de validación")
+                KryptonMessageBox.Show("Las columnas o el nombre de la hoja no coinciden. por favor revise que el formato sea el establecido." & vbNewLine & " " & vbNewLine & "Nombre de la hoja:  comprobante_ingreso" & vbNewLine & " " & vbNewLine & "Columnas: forma_pago,  banco_cheque_recibido,  cta_cheque_recibido,  numero_cheque_recibido,  fecha,cliente,  razon,  numero_factura,  valor,  banco_deposito,  cta_deposito" & vbNewLine & ex.Message.ToString, "Mensaje de excepción", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                 validarimportacion = 0
             End Try
         End Sub
@@ -216,12 +222,14 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
                 dgvFacturaVenta.DataSource = objetoFacturaVenta.SeleccionarFacturaVentaXNumeroFactura(_tipoCon, dgvComprobantesEgresoBanco.Rows(indice).Cells(7).Value)
                 If dgvFacturaVenta.Rows.Count > 0 Then
                     If objetoPagosFacturaVenta.BuscarMayorSaldoPagosFacturaventaXIdFactura(_tipoCon, dgvFacturaVenta.Rows(0).Cells(0).Value.ToString) = 0 Then
-                        MsgBox("LA FACTURA NÚMERO : " + dgvComprobantesEgresoBanco.Rows(indice).Cells(7).Value.ToString & vbNewLine & "YA ESTA CANCELADA", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                        'MsgBox("LA FACTURA NÚMERO : " + dgvComprobantesEgresoBanco.Rows(indice).Cells(7).Value.ToString & vbNewLine & "YA ESTA CANCELADA", MsgBoxStyle.Exclamation, "Mensaje de validación")
+                        KryptonMessageBox.Show("La factura número : " + dgvComprobantesEgresoBanco.Rows(indice).Cells(7).Value.ToString & vbNewLine & "YA ESTA CANCELADA", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                         dgvComprobantesEgresoBanco.Rows(indice).DefaultCellStyle.BackColor = Color.Salmon
                         validarNumeroFactura = 0
                     End If
                 Else
-                    MsgBox("LA FACTURA NÚMERO : " + dgvComprobantesEgresoBanco.Rows(indice).Cells(7).Value.ToString & vbNewLine & "NO ESTA REGISTRADA", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                    'MsgBox("LA FACTURA NÚMERO : " + dgvComprobantesEgresoBanco.Rows(indice).Cells(7).Value.ToString & vbNewLine & "NO ESTA REGISTRADA", MsgBoxStyle.Exclamation, "Mensaje de validación")
+                    KryptonMessageBox.Show("La factura número : " + dgvComprobantesEgresoBanco.Rows(indice).Cells(7).Value.ToString & vbNewLine & "NO ESTA REGISTRADA", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                     dgvComprobantesEgresoBanco.Rows(indice).DefaultCellStyle.BackColor = Color.Salmon
                 End If
             Next
@@ -244,7 +252,7 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
                                 'txtRutaArchivo.Text = ""
                                 'txtCuentaDebe.Text = ""
                                 'lblCodigoCta.Text = "0"
-                                'MessageBox.Show("Planilla guardada correctamente!", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
                                 Dim User As String = "Carga de Comprobante de Ingreso por:" + UserName
 
                                 Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, User)
@@ -261,27 +269,27 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
                                 Else
                                     messageIcon = KryptonMessageBoxIcon.Exclamation
                                 End If
-                                KryptonMessageBox.Show(res(1), "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, messageIcon)
+                                KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, messageIcon)
 
 
                             Else
 
-                                KryptonMessageBox.Show("NO SE PUEDE GUARDAR." & vbNewLine & "EXISTEN FACTURAS YA CANCELADAS EN EL ARCHIVO IMPORTADO.", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
+                                KryptonMessageBox.Show("No se puede guardar." & vbNewLine & "Existen facturas ya canceladas en el archivo importado.", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                             End If
                         Else
 
-                            KryptonMessageBox.Show("NO SE PUEDE GUARDAR." & vbNewLine & "EXISTEN DATOS EN BLANCO EN EL ARCHIVO IMPORTADO.", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
+                            KryptonMessageBox.Show("No se puede guardar." & vbNewLine & "Existen datos en blanco en el archivo importado.", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                         End If
                     Else
 
-                        KryptonMessageBox.Show("NO SE PUEDE GUARDAR." & vbNewLine & "EL ARCHIVO SELECCIONADO NO SE CARGO DE FORMA CORRECTA." & vbNewLine & "POR FAVOR REVISE EL FORMATO.", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
+                        KryptonMessageBox.Show("No se puede guardar." & vbNewLine & "El archivo seleccionado no se cargo de forma correcta." & vbNewLine & "POR FAVOR REVISE EL FORMATO.", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                     End If
                 Else
 
-                    KryptonMessageBox.Show("NO SE PUEDE GUARDAR." & vbNewLine & "NO SE HA SELECCIONADO UNA CTA. CONTABLE.", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
+                    KryptonMessageBox.Show("No se puede guardar." & vbNewLine & "No se ha seleccionado una cta. contable.", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                 End If
             Else
-                KryptonMessageBox.Show("NO SE PUEDE GUARDAR." & vbNewLine & "NO SE HAN CARGADO NINGÚN ARCHIVO.", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
+                KryptonMessageBox.Show("No se puede guardar." & vbNewLine & "No se han cargado ningún archivo.", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
             End If
         End Sub
         Public Function validarBlancosComprobantesIngreso() As Boolean

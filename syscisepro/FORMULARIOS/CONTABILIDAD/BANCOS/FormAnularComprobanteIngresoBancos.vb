@@ -86,7 +86,7 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
                 dgvComprobanteEgresoBancos.Columns("OBSERVACION").Width = 250
                 dgvComprobanteEgresoBancos.Columns(0).ReadOnly = False
             Catch ex As Exception
-                MsgBox("METODO CARGAR COMPROBANTES DE INGRESO." & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "MENSAJE DE EXCEPCIÓN")
+                MsgBox("METODO CARGAR COMPROBANTES DE INGRESO." & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
             End Try
         End Sub
 
@@ -206,7 +206,7 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
         Private Sub btnReporte_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnReporte.Click
             dgvComprobanteEgresoBancos.EndEdit()
             If dgvComprobanteEgresoBancos.Rows.Count > 0 Then
-                Dim respuestaMsgBox = MessageBox.Show("¿CONFIRMA QUE DESEA ANULAR LOS COMPROBANTES SELECCIONADOS?", "MENSAJE DE VALIDACIÓN", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+                Dim respuestaMsgBox = MessageBox.Show("¿Confirma que desea anular los comprobantes seleccionados?", "Mensaje de validación", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
                 If respuestaMsgBox <> MsgBoxResult.Yes Then Return
                 _sqlCommands.Clear()
 
@@ -223,11 +223,11 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
                 Else
                     messageIcon = KryptonMessageBoxIcon.Exclamation
                 End If
-                KryptonMessageBox.Show(res(1), "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, messageIcon)
+                KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, messageIcon)
 
             Else
 
-                KryptonMessageBox.Show("NO HAY COMPROBANTES CARGADOS.", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
+                KryptonMessageBox.Show("No hay comprobantes cargados.", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
             End If
         End Sub
 

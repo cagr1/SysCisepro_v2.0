@@ -380,7 +380,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                     lblIdKardex.Text = 0
                     tsmAgregar.Enabled = False
                     tsmEliminar.Enabled = dgvSecuencial.RowCount > 0
-                    MsgBox("EL ITEM SELECCIONADO NO EXISTE EN EL SISTEMA. DEBE CREAR EL ITEM EN LA OPCIÓN 'BODEGA / ARTÍCULOS Y PRODUCTOS' Y LUEGO REGISTAR EL 'COMPROBANTE DE INGRESO' CORRESPONDIENTE!!!", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                    MsgBox("EL ITEM SELECCIONADO NO EXISTE EN EL SISTEMA. DEBE CREAR EL ITEM EN LA OPCIÓN 'BODEGA / ARTÍCULOS Y PRODUCTOS' Y LUEGO REGISTAR EL 'COMPROBANTE DE INGRESO' CORRESPONDIENTE!!!", MsgBoxStyle.Exclamation, "Mensaje de validación")
                 End If
             Catch
                 lblIdArticulo.Text = 0
@@ -393,7 +393,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                 nudCantidad.Value = 0
                 nudValor.Value = 0
                 txtObservacion.Clear()
-                MsgBox("OCURRIÓ UN PROBLEMA AL SELECCIONAR ARTÍCULOS. POR FAVOR, CONTÁCTE AL ADMINISTRADOR!!!", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                MsgBox("OCURRIÓ UN PROBLEMA AL SELECCIONAR ARTÍCULOS. POR FAVOR, CONTÁCTE AL ADMINISTRADOR!!!", MsgBoxStyle.Exclamation, "Mensaje de validación")
             End Try
         End Sub
         Private Sub tsmAgregar_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles tsmAgregar.Click
@@ -563,7 +563,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                 dgvComprobantesIngreso.ReadOnly = True
 
             Catch ex As Exception
-                KryptonMessageBox.Show("OCURRIÓ UN PROBLEMA AL CARGAR LOS COMPROBANTES DE INGRESO. POR FAVOR, CONTÁCTE AL ADMINISTRADOR!!!", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
+                KryptonMessageBox.Show("OCURRIÓ UN PROBLEMA AL CARGAR LOS COMPROBANTES DE INGRESO. POR FAVOR, CONTÁCTE AL ADMINISTRADOR!!!", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                 dgvComprobantesIngreso.DataSource = Nothing
                 dgvDetalleComprobate.DataSource = Nothing
             End Try
@@ -587,32 +587,32 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
 
 
 
-            If KryptonMessageBox.Show("DESEA GUARDAR LOS CAMBIOS?", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) <> DialogResult.Yes Then Return
+            If KryptonMessageBox.Show("DESEA GUARDAR LOS CAMBIOS?", "Mensaje del sistema", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) <> DialogResult.Yes Then Return
 
             _sqlCommands.Clear()
             If _botonSeleccionadoSitio = 1 Then
 
                 If dgvSecuencial.RowCount = 0 Then
 
-                    KryptonMessageBox.Show("POR FAVOR, INGRESE LOS ITEMS DEL COMPROBANTES PARA GUARDAR", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
+                    KryptonMessageBox.Show("POR FAVOR, INGRESE LOS ITEMS DEL COMPROBANTES PARA GUARDAR", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                     Return
                 End If
                 If cmbDocumento.SelectedValue <> 8 And txtNroDocumento.Text.Trim().Equals("S/N") Then
 
-                    KryptonMessageBox.Show("POR FAVOR, INGRESE EL NUMERO DE FACTURA/DOCUMENTO PARA GUARDAR", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
+                    KryptonMessageBox.Show("POR FAVOR, INGRESE EL NUMERO DE FACTURA/DOCUMENTO PARA GUARDAR", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                     Return
                 End If
 
                 If CInt(txtUbicacion.Tag) = 0 Then
 
-                    KryptonMessageBox.Show("POR FAVOR, SELECCIONE UN SITIO DE TRABAJO", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
+                    KryptonMessageBox.Show("POR FAVOR, SELECCIONE UN SITIO DE TRABAJO", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
 
                     Return
                 End If
 
                 Dim msj = If(lblOrdenCompra.Text.Equals("###"), "", " CON ÓRDEN N° " & lblOrdenCompra.Text)
 
-                If KryptonMessageBox.Show("¿ESTA SEGURO QUE DESEA GUARDAR EL COMPROBANTE" & msj & "?", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) <> DialogResult.Yes Then Return
+                If KryptonMessageBox.Show("¿Esta seguro que desea guardar EL COMPROBANTE" & msj & "?", "Mensaje del sistema", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) <> DialogResult.Yes Then Return
 
                 Dim cantidadPrendasLleva = 0
                 Dim dt As DataTable = ConvertDataTable(dgvSecuencial)
@@ -752,7 +752,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                 Else
                     messageIcon = KryptonMessageBoxIcon.Exclamation
                 End If
-                KryptonMessageBox.Show(res(1), "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, messageIcon)
+                KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, messageIcon)
         End Sub
         'Private Sub chkNumeroComprobante_CheckedChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles chkTodos.CheckedChanged
         '    If chkTodos.Checked Then
@@ -946,7 +946,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                 crvComprobante.Refresh()
             Catch ex As Exception
 
-                MsgBox("ERROR AL CARGAR EL REPORTE DE COMPROBANTE DE INGRESO " & vbNewLine & ex.Message, MsgBoxStyle.Exclamation, "MENSAJE DE INFORMACIÓN.")
+                MsgBox("ERROR AL CARGAR EL REPORTE DE COMPROBANTE DE INGRESO " & vbNewLine & ex.Message, MsgBoxStyle.Exclamation, "Mensaje de información.")
                 crvComprobante.ReportSource = Nothing
             End Try
         End Sub
@@ -1029,7 +1029,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                 txtNroDocumento.Tag = Nothing
                 txtNroDocumento.Text = "S/N"
                 txtRazon.Clear()
-                MsgBox("ERROR AL CARGAR COMPROBANTE DE EGRESO " & vbNewLine & ex.Message, MsgBoxStyle.Exclamation, "MENSAJE DE INFORMACIÓN.")
+                MsgBox("ERROR AL CARGAR COMPROBANTE DE EGRESO " & vbNewLine & ex.Message, MsgBoxStyle.Exclamation, "Mensaje de información.")
             End Try
         End Sub
 
@@ -1083,7 +1083,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
 
             Catch
                 lblOrdenCompra.Text = "###"
-                MsgBox("ERROR AL CARGAR ORDEN DE COMPRA!", MsgBoxStyle.Exclamation, "MENSAJE DE INFORMACIÓN.")
+                MsgBox("ERROR AL CARGAR ORDEN DE COMPRA!", MsgBoxStyle.Exclamation, "Mensaje de información.")
             End Try
         End Sub
 
@@ -1103,7 +1103,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                 dgvSecuencial.CurrentRow.Cells(4).Value = CInt(dgvSecuencial.CurrentRow.Cells(2).Value) * CDec(dgvSecuencial.CurrentRow.Cells(3).Value)
             Catch
                 dgvSecuencial.CurrentRow.Cells(4).Value = "0.00"
-                MsgBox("ERROR AL MODIFICAR DETALLES!", MsgBoxStyle.Exclamation, "MENSAJE DE INFORMACIÓN.")
+                MsgBox("ERROR AL MODIFICAR DETALLES!", MsgBoxStyle.Exclamation, "Mensaje de información.")
             End Try
         End Sub
 
@@ -1198,7 +1198,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                 End With
                 _sqlCommands.Add(_objCompIng.ModificarRegistroComprobanteIngresoBodegaCommand())
             Catch ex As Exception
-                KryptonMessageBox.Show("ERROR AL MODIFICAR COMPROBANTE DE INGRESO DE BODEGA" & vbNewLine & ex.Message, "MENSAJE DE INFORMACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+                KryptonMessageBox.Show("ERROR AL MODIFICAR COMPROBANTE DE INGRESO DE BODEGA" & vbNewLine & ex.Message, "Mensaje de información", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
 
             Dim cant = CInt(nudCantidad.Value)
@@ -1226,7 +1226,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                     End With
                     _sqlCommands.Add(_objControl.ModificarControlCommand())
                 Catch ex As Exception
-                    KryptonMessageBox.Show("ERROR AL MODIFICAR CONTROL DE UNIFORMES" & vbNewLine & ex.Message, "MENSAJE DE INFORMACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+                    KryptonMessageBox.Show("ERROR AL MODIFICAR CONTROL DE UNIFORMES" & vbNewLine & ex.Message, "Mensaje de información", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
                 End Try
             End If
 
@@ -1245,7 +1245,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                 _sqlCommands.Add(_objDetCompIng.ModificarDetalleComprobanteIngresoBodegaCommand())
 
             Catch ex As Exception
-                KryptonMessageBox.Show("ERROR AL MODIFICAR DETALLE DE COMPROBANTE DE INGRESO DE BODEGA" & vbNewLine & ex.Message, "MENSAJE DE INFORMACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+                KryptonMessageBox.Show("ERROR AL MODIFICAR DETALLE DE COMPROBANTE DE INGRESO DE BODEGA" & vbNewLine & ex.Message, "Mensaje de información", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
 
             If CantidadIngreso > cant Then
@@ -1271,7 +1271,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                     _sqlCommands.Add(_objDetalleKardex.ModificarDetalleKardexCommand())
 
                 Catch ex As Exception
-                    KryptonMessageBox.Show("ERROR AL MODIFICAR DETALLE DE KARDEX" & vbNewLine & ex.Message, "MENSAJE DE INFORMACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+                    KryptonMessageBox.Show("ERROR AL MODIFICAR DETALLE DE KARDEX" & vbNewLine & ex.Message, "Mensaje de información", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
                 End Try
 
                 Try
@@ -1283,7 +1283,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                     End With
                     _sqlCommands.Add(_objKardex.ModificarCantidadKardexCommand)
                 Catch ex As Exception
-                    KryptonMessageBox.Show("ERROR AL MODIFICAR KARDEX" & vbNewLine & ex.Message, "MENSAJE DE INFORMACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+                    KryptonMessageBox.Show("ERROR AL MODIFICAR KARDEX" & vbNewLine & ex.Message, "Mensaje de información", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
                 End Try
 
             ElseIf CantidadIngreso < cant Then
@@ -1310,7 +1310,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                     _sqlCommands.Add(_objDetalleKardex.ModificarDetalleKardexCommand())
 
                 Catch ex As Exception
-                    KryptonMessageBox.Show("ERROR AL MODIFICAR DETALLE DE KARDEX" & vbNewLine & ex.Message, "MENSAJE DE INFORMACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+                    KryptonMessageBox.Show("ERROR AL MODIFICAR DETALLE DE KARDEX" & vbNewLine & ex.Message, "Mensaje de información", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
                 End Try
 
                 Try
@@ -1323,7 +1323,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
 
                     _sqlCommands.Add(_objKardex.ModificarCantidadKardexCommand)
                 Catch ex As Exception
-                    KryptonMessageBox.Show("ERROR AL MODIFICAR KARDEX" & vbNewLine & ex.Message, "MENSAJE DE INFORMACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+                    KryptonMessageBox.Show("ERROR AL MODIFICAR KARDEX" & vbNewLine & ex.Message, "Mensaje de información", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
                 End Try
 
             ElseIf CantidadIngreso = cant Then
@@ -1351,7 +1351,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                     _sqlCommands.Add(_objDetalleKardex.ModificarDetalleKardexCommand())
 
                 Catch ex As Exception
-                    KryptonMessageBox.Show("ERROR AL MODIFICAR DETALLE DE KARDEX" & vbNewLine & ex.Message, "MENSAJE DE INFORMACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+                    KryptonMessageBox.Show("ERROR AL MODIFICAR DETALLE DE KARDEX" & vbNewLine & ex.Message, "Mensaje de información", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
                 End Try
 
                 Try
@@ -1365,7 +1365,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                     End With
                     _sqlCommands.Add(_objKardex.ModificarCantidadKardexCommand)
                 Catch ex As Exception
-                    KryptonMessageBox.Show("ERROR AL MODIFICAR KARDEX" & vbNewLine & ex.Message, "MENSAJE DE INFORMACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+                    KryptonMessageBox.Show("ERROR AL MODIFICAR KARDEX" & vbNewLine & ex.Message, "Mensaje de información", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
                 End Try
 
             End If
@@ -1374,7 +1374,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
 
         Private Sub ModificarComprobanteIngresoAnular()
 
-            If KryptonMessageBox.Show("DESEA ANULAR EL REGISTRO?", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) <> DialogResult.Yes Then Return
+            If KryptonMessageBox.Show("DESEA ANULAR EL REGISTRO?", "Mensaje del sistema", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) <> DialogResult.Yes Then Return
 
             'Dim fechaDesde = dtpFechaDesde.Value.Day.ToString & "-" & dtpFechaDesde.Value.Month.ToString & "-" & dtpFechaDesde.Value.Year.ToString & " 00:00:00"
             'Dim fechaHasta = dtpFechaHasta.Value.Day.ToString & "-" & dtpFechaHasta.Value.Month.ToString & "-" & dtpFechaHasta.Value.Year.ToString & " 23:59:59"
@@ -1422,7 +1422,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
 
                 Next
             Catch ex As Exception
-                KryptonMessageBox.Show("ERROR AL ANULAR COMPROBANTE DE INGRESO DE BODEGA" & vbNewLine & ex.Message, "MENSAJE DE INFORMACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+                KryptonMessageBox.Show("ERROR AL ANULAR COMPROBANTE DE INGRESO DE BODEGA" & vbNewLine & ex.Message, "Mensaje de información", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
 
 
@@ -1442,7 +1442,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                 messageIcon = KryptonMessageBoxIcon.Exclamation
             End If
 
-            KryptonMessageBox.Show(res(1), "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, messageIcon)
+            KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, messageIcon)
         End Sub
 
         Private Sub TmsEliminar_Click(sender As Object, e As EventArgs) Handles TmsEliminar.Click
@@ -1450,7 +1450,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
 
 
             If dgvComprobantesIngreso.CurrentRow Is Nothing Then
-                KryptonMessageBox.Show("No hay datos para anular!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
+                KryptonMessageBox.Show("No hay datos para anular!", "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
                 Return
             Else
 
@@ -1515,13 +1515,13 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                     If data IsNot Nothing AndAlso data.Rows.Count > 0 Then
                         Dim last As DataRow = data.Rows(data.Rows.Count - 1)
                         If Convert.ToInt32(last("ID_ACTIVIDAD")) = 1 Then
-                            KryptonMessageBox.Show("LA SERIE YA FUE UTILIZADA EN UN INGRESO", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
+                            KryptonMessageBox.Show("LA SERIE YA FUE UTILIZADA EN UN INGRESO", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
                             txtSerie.Clear()
                             Return
                         End If
                     End If
                 Catch ex As Exception
-                    KryptonMessageBox.Show("OCURRIÓ UN PROBLEMA AL BUSCAR LA SERIE. POR FAVOR, CONTÁCTE AL ADMINISTRADOR!!!", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
+                    KryptonMessageBox.Show("OCURRIÓ UN PROBLEMA AL BUSCAR LA SERIE. POR FAVOR, CONTÁCTE AL ADMINISTRADOR!!!", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
 
                 End Try
             End If

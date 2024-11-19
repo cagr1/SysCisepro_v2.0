@@ -83,7 +83,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                 dgvFacturaVenta.ReadOnly = False
                 dgvFacturaVenta.EditMode = DataGridViewEditMode.EditProgrammatically
             Catch ex As Exception
-                MsgBox("METODO CARGAR FACTURA VENTA" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "MENSAJE DE EXCEPCIÓN")
+                MsgBox("METODO CARGAR FACTURA VENTA" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
             End Try
         End Sub
 
@@ -101,7 +101,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                 dgvFacturaVenta.ClearSelection()
                 dgvFacturaVenta.Rows(0).Selected = True
             Catch ex As Exception
-                MsgBox("METODO MOVER REGISTRO." & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "MENSAJE DE EXCEPCIÓN")
+                MsgBox("METODO MOVER REGISTRO." & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
             End Try
         End Sub
       
@@ -112,7 +112,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                 cargarValores()
                 conectarReporte()
             Else
-                MsgBox("NO SAE HA ENCONTRADO LA FACTURA INGRESADA." & vbNewLine & "POR FAVOR REVISE EL NÚMERO DE LA FACTURA", MsgBoxStyle.Information, "MENSAJE DE INFORMACIÓN")
+                MsgBox("NO SAE HA ENCONTRADO LA FACTURA INGRESADA." & vbNewLine & "POR FAVOR REVISE EL NÚMERO DE LA FACTURA", MsgBoxStyle.Information, "Mensaje de información")
             End If
 
         End Sub
@@ -124,7 +124,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                     cargarValores()
                     conectarReporte()
                 Else
-                    MsgBox("NO SAE HA ENCONTRADO LA FACTURA INGRESADA." & vbNewLine & "POR FAVOR REVISE EL NÚMERO DE LA FACTURA", MsgBoxStyle.Information, "MENSAJE DE INFORMACIÓN")
+                    MsgBox("NO SAE HA ENCONTRADO LA FACTURA INGRESADA." & vbNewLine & "POR FAVOR REVISE EL NÚMERO DE LA FACTURA", MsgBoxStyle.Information, "Mensaje de información")
                 End If
             End If
         End Sub

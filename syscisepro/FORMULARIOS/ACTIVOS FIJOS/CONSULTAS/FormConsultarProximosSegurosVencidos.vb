@@ -62,20 +62,20 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.CONSULTAS
             Consultar()
             ConsultarDispositivos()
             If dgvSeguros.RowCount > 1 Then
-                'MsgBox("Algunos Vehículos necesitan renovar el SEGURO esta semana", MsgBoxStyle.Critical, "MENSAJE DE VALIDACIÓN")
-                KryptonMessageBox.Show("Algunos Vehículos necesitan renovar el SEGURO esta semana", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
+                'MsgBox("Algunos Vehículos necesitan renovar el SEGURO esta semana", MsgBoxStyle.Critical, "Mensaje de validación")
+                KryptonMessageBox.Show("Algunos Vehículos necesitan renovar el SEGURO esta semana", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
                 _sonido.Intermitente()
                 tcSeguros.SelectedIndex = 0
             Else
-                KryptonMessageBox.Show("No existen Vehículos que necesiten renovar el SEGURO esta semana", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
+                KryptonMessageBox.Show("No existen Vehículos que necesiten renovar el SEGURO esta semana", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
                 cerrar += 1
             End If
             If dgvDispositivos.RowCount > 1 Then
-                KryptonMessageBox.Show("Algunos Vehículos necesitan renovar el DISPOSITIVO DE SEGURIDAD esta semana", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
+                KryptonMessageBox.Show("Algunos Vehículos necesitan renovar el DISPOSITIVO DE SEGURIDAD esta semana", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
                 tcSeguros.SelectedIndex = 1
                 _sonido.Intermitente()
             Else
-                KryptonMessageBox.Show("No existen Vehículos que necesiten renovar el DISPOSITIVO DE SEGURIDAD esta semana", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
+                KryptonMessageBox.Show("No existen Vehículos que necesiten renovar el DISPOSITIVO DE SEGURIDAD esta semana", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
                 cerrar += 1
             End If
             If cerrar = 2 Then

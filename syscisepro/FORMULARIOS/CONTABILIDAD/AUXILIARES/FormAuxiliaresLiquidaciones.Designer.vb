@@ -47,10 +47,10 @@
             Me.tpReporte = New System.Windows.Forms.TabPage()
             Me.Label4 = New System.Windows.Forms.Label()
             Me.Label1 = New System.Windows.Forms.Label()
+            Me.Label3 = New System.Windows.Forms.Label()
             Me.txtCantidad = New System.Windows.Forms.TextBox()
             Me.txtTotal = New System.Windows.Forms.TextBox()
             Me.dgvSolicitudes = New System.Windows.Forms.DataGridView()
-            Me.Label3 = New System.Windows.Forms.Label()
             Me.txtHaber = New System.Windows.Forms.TextBox()
             Me.txtDebe = New System.Windows.Forms.TextBox()
             Me.dgvAsiento = New System.Windows.Forms.DataGridView()
@@ -73,9 +73,9 @@
             Me.KryptonGroupBox2 = New ComponentFactory.Krypton.Toolkit.KryptonGroupBox()
             Me.KryptonGroupBox1 = New ComponentFactory.Krypton.Toolkit.KryptonGroupBox()
             Me.KryptonPage2 = New ComponentFactory.Krypton.Navigator.KryptonPage()
-            Me.KryptonGroupBox3 = New ComponentFactory.Krypton.Toolkit.KryptonGroupBox()
-            Me.KryptonLabel5 = New ComponentFactory.Krypton.Toolkit.KryptonLabel()
             Me.KryptonLabel6 = New ComponentFactory.Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel5 = New ComponentFactory.Krypton.Toolkit.KryptonLabel()
+            Me.KryptonGroupBox3 = New ComponentFactory.Krypton.Toolkit.KryptonGroupBox()
             Me.tcAuxiliaresLiquidaciones.SuspendLayout()
             Me.tpLiquidaciones.SuspendLayout()
             Me.tpReporte.SuspendLayout()
@@ -126,7 +126,7 @@
             Me.tpLiquidaciones.Location = New System.Drawing.Point(4, 22)
             Me.tpLiquidaciones.Name = "tpLiquidaciones"
             Me.tpLiquidaciones.Padding = New System.Windows.Forms.Padding(3)
-            Me.tpLiquidaciones.Size = New System.Drawing.Size(275, 393)
+            Me.tpLiquidaciones.Size = New System.Drawing.Size(396, 175)
             Me.tpLiquidaciones.TabIndex = 0
             Me.tpLiquidaciones.Text = "FONDOS"
             Me.tpLiquidaciones.UseVisualStyleBackColor = True
@@ -222,6 +222,16 @@
             Me.Label1.TabIndex = 259
             Me.Label1.Text = "TOTAL"
             '
+            'Label3
+            '
+            Me.Label3.AutoSize = True
+            Me.Label3.Font = New System.Drawing.Font("Consolas", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Label3.Location = New System.Drawing.Point(6, 10)
+            Me.Label3.Name = "Label3"
+            Me.Label3.Size = New System.Drawing.Size(104, 18)
+            Me.Label3.TabIndex = 255
+            Me.Label3.Text = "SOLICITUDES:"
+            '
             'txtCantidad
             '
             Me.txtCantidad.BackColor = System.Drawing.Color.White
@@ -281,18 +291,8 @@
             DataGridViewCellStyle4.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.dgvSolicitudes.RowsDefaultCellStyle = DataGridViewCellStyle4
             Me.dgvSolicitudes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvSolicitudes.Size = New System.Drawing.Size(713, 390)
+            Me.dgvSolicitudes.Size = New System.Drawing.Size(713, 386)
             Me.dgvSolicitudes.TabIndex = 256
-            '
-            'Label3
-            '
-            Me.Label3.AutoSize = True
-            Me.Label3.Font = New System.Drawing.Font("Consolas", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label3.Location = New System.Drawing.Point(6, 10)
-            Me.Label3.Name = "Label3"
-            Me.Label3.Size = New System.Drawing.Size(104, 18)
-            Me.Label3.TabIndex = 255
-            Me.Label3.Text = "SOLICITUDES:"
             '
             'txtHaber
             '
@@ -500,7 +500,7 @@
             Me.KryptonNavigator1.Location = New System.Drawing.Point(0, 32)
             Me.KryptonNavigator1.Name = "KryptonNavigator1"
             Me.KryptonNavigator1.Pages.AddRange(New ComponentFactory.Krypton.Navigator.KryptonPage() {Me.KryptonPage1, Me.KryptonPage2})
-            Me.KryptonNavigator1.SelectedIndex = 0
+            Me.KryptonNavigator1.SelectedIndex = 1
             Me.KryptonNavigator1.Size = New System.Drawing.Size(742, 479)
             Me.KryptonNavigator1.TabIndex = 221
             Me.KryptonNavigator1.Text = "KryptonNavigator1"
@@ -603,24 +603,18 @@
             Me.KryptonPage2.MinimumSize = New System.Drawing.Size(50, 50)
             Me.KryptonPage2.Name = "KryptonPage2"
             Me.KryptonPage2.Size = New System.Drawing.Size(740, 452)
-            Me.KryptonPage2.StateCommon.Page.Color1 = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(247, Byte), Integer))
+            Me.KryptonPage2.StateCommon.Page.Color1 = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.KryptonPage2.Text = "Solicitudes"
             Me.KryptonPage2.ToolTipTitle = "Page ToolTip"
             Me.KryptonPage2.UniqueName = "3458AC98C1934C81C19C80D48CBA10EF"
             '
-            'KryptonGroupBox3
+            'KryptonLabel6
             '
-            Me.KryptonGroupBox3.CaptionOverlap = 0R
-            Me.KryptonGroupBox3.GroupBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.ControlRibbon
-            Me.KryptonGroupBox3.Location = New System.Drawing.Point(12, 35)
-            Me.KryptonGroupBox3.Name = "KryptonGroupBox3"
-            '
-            'KryptonGroupBox3.Panel
-            '
-            Me.KryptonGroupBox3.Panel.Controls.Add(Me.dgvSolicitudes)
-            Me.KryptonGroupBox3.Size = New System.Drawing.Size(717, 414)
-            Me.KryptonGroupBox3.TabIndex = 0
-            Me.KryptonGroupBox3.Values.Heading = "Solicitudes"
+            Me.KryptonLabel6.Location = New System.Drawing.Point(196, 10)
+            Me.KryptonLabel6.Name = "KryptonLabel6"
+            Me.KryptonLabel6.Size = New System.Drawing.Size(38, 20)
+            Me.KryptonLabel6.TabIndex = 260
+            Me.KryptonLabel6.Values.Text = "Total"
             '
             'KryptonLabel5
             '
@@ -630,13 +624,19 @@
             Me.KryptonLabel5.TabIndex = 259
             Me.KryptonLabel5.Values.Text = "Cantidad"
             '
-            'KryptonLabel6
+            'KryptonGroupBox3
             '
-            Me.KryptonLabel6.Location = New System.Drawing.Point(196, 10)
-            Me.KryptonLabel6.Name = "KryptonLabel6"
-            Me.KryptonLabel6.Size = New System.Drawing.Size(38, 20)
-            Me.KryptonLabel6.TabIndex = 260
-            Me.KryptonLabel6.Values.Text = "Total"
+            Me.KryptonGroupBox3.CaptionOverlap = 0R
+            Me.KryptonGroupBox3.GroupBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.ControlRibbon
+            Me.KryptonGroupBox3.Location = New System.Drawing.Point(12, 39)
+            Me.KryptonGroupBox3.Name = "KryptonGroupBox3"
+            '
+            'KryptonGroupBox3.Panel
+            '
+            Me.KryptonGroupBox3.Panel.Controls.Add(Me.dgvSolicitudes)
+            Me.KryptonGroupBox3.Size = New System.Drawing.Size(717, 410)
+            Me.KryptonGroupBox3.TabIndex = 0
+            Me.KryptonGroupBox3.Values.Heading = "Solicitudes"
             '
             'FormAuxiliaresLiquidaciones
             '

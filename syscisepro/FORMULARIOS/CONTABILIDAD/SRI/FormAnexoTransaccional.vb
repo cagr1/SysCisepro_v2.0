@@ -153,7 +153,7 @@ Namespace FORMULARIOS.CONTABILIDAD.SRI
                 dgvComprobantesAnulados.AutoResizeColumns()
                 dgvComprobantesAnulados.AutoResizeRows()
             Catch ex As Exception
-                MsgBox("FACTURAS ANULADAS." & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "MENSAJE DE EXCEPCIÓN.")
+                MsgBox("FACTURAS ANULADAS." & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción.")
             End Try
         End Sub
         Public Sub cargarAnexoRetencionFuente()
@@ -198,7 +198,7 @@ Namespace FORMULARIOS.CONTABILIDAD.SRI
                     End Select
                 Next
             Catch ex As Exception
-                MsgBox("CALCULAR VALOR RETENIDO" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "MENSAJE DE EXCEPCIÓN")
+                MsgBox("CALCULAR VALOR RETENIDO" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
             End Try
         End Sub
         Public Sub cargarAnexoRetencionIVA()
@@ -405,7 +405,7 @@ Namespace FORMULARIOS.CONTABILIDAD.SRI
                 sumarTotales()
                 '=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
             Else
-                MsgBox("REVISE LOS PARAMETROS DE BÚSQUEDA", MsgBoxStyle.Information, "MENSAJE DE INFORMACIÓN")
+                MsgBox("REVISE LOS PARAMETROS DE BÚSQUEDA", MsgBoxStyle.Information, "Mensaje de información")
             End If
         End Sub
 
@@ -733,12 +733,12 @@ Namespace FORMULARIOS.CONTABILIDAD.SRI
                 lectura.close()
 
 
-                MsgBox("XML GENERADO CORRECTAMENTE", MsgBoxStyle.Information, "MENSAJE DE INFORMACIÓN.")
+                MsgBox("XML GENERADO CORRECTAMENTE", MsgBoxStyle.Information, "Mensaje de información.")
             Else
-                MsgBox("NO SE PUEDE GENERAR EL XML." & vbNewLine & "ASEGURESE DE HABER ESCOGIDO BIEN LAS FECHAS", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN.")
+                MsgBox("NO SE PUEDE GENERAR EL XML." & vbNewLine & "ASEGURESE DE HABER ESCOGIDO BIEN LAS FECHAS", MsgBoxStyle.Exclamation, "Mensaje de validación.")
             End If
             'Catch ex As Exception
-            '    MsgBox("GENERAR XML" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "MENSAJE DE EXCEPCIÓN.")
+            '    MsgBox("GENERAR XML" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción.")
             'End Try
         End Sub
 

@@ -158,7 +158,7 @@ Namespace FORMULARIOS.CONTABILIDAD.SRI
                 dgvComprasATS.Columns(2).Width = 250
             Catch ex As Exception
                 dgvComprasATS.DataSource = Nothing
-                MsgBox("METODO CARGAR COMPROBANTES DE COMPRA" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "MENSAJE DE EXCEPCIÓN")
+                MsgBox("METODO CARGAR COMPROBANTES DE COMPRA" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
             End Try
             SumarTotalesCompras()
         End Sub
@@ -235,7 +235,7 @@ Namespace FORMULARIOS.CONTABILIDAD.SRI
                 dgvVentasATS.ReadOnly = True
             Catch ex As Exception
                 dgvVentasATS.DataSource = Nothing
-                MsgBox("METODO CARGAR FACTURA VENTA" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "MENSAJE DE EXCEPCIÓN")
+                MsgBox("METODO CARGAR FACTURA VENTA" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
             End Try
             SumarTotalesVentas()
         End Sub
@@ -316,7 +316,7 @@ Namespace FORMULARIOS.CONTABILIDAD.SRI
                 dgvNotasCredito.Columns(0).Width = 50
                 dgvNotasCredito.Columns(1).Width = 50
             Catch ex As Exception
-                MsgBox("METODO CARGAR FACTURA VENTA" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "MENSAJE DE EXCEPCIÓN")
+                MsgBox("METODO CARGAR FACTURA VENTA" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
             End Try
             SumarTotalesNotasCredito()
         End Sub
@@ -1378,10 +1378,10 @@ Namespace FORMULARIOS.CONTABILIDAD.SRI
                 archivo.writeline("</iva>")
                 archivo.close()
 
-                MsgBox("XML GENERADO CORRECTAMENTE", MsgBoxStyle.Information, "MENSAJE DE INFORMACIÓN.")
+                MsgBox("XML GENERADO CORRECTAMENTE", MsgBoxStyle.Information, "Mensaje de información.")
 
             Else
-                MsgBox("NO SE PUEDE GENERAR EL XML." & vbNewLine & "ASEGURESE DE HABER ESCOGIDO BIEN LAS FECHAS", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN.")
+                MsgBox("NO SE PUEDE GENERAR EL XML." & vbNewLine & "ASEGURESE DE HABER ESCOGIDO BIEN LAS FECHAS", MsgBoxStyle.Exclamation, "Mensaje de validación.")
             End If
         End Sub
 

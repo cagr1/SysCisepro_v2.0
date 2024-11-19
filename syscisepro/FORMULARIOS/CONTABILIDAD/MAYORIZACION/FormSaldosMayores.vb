@@ -62,7 +62,7 @@ Namespace FORMULARIOS.CONTABILIDAD.MAYORIZACION
         Public Sub ExportarDatosExcel(ByVal dgvAsientosDiario As DataGridView, ByVal titulo As String)
             Try
                 If dgvAsientosDiario.Rows.Count = 0 Then
-                    MsgBox("NO HAY DATOS QUE EXPORTAR!", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                    MsgBox("No hay datos que exportar!", MsgBoxStyle.Exclamation, "Mensaje de validación")
                     Return
                 End If
 
@@ -131,7 +131,7 @@ Namespace FORMULARIOS.CONTABILIDAD.MAYORIZACION
                 app.DisplayAlerts = True
                 'workbook.SaveAs(sfd.FileName, Excel.XlFileFormat.xlWorkbookNormal, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Excel.XlSaveAsAccessMode.xlExclusive, Type.Missing, Type.Missing, Type.Missing, Type.Missing)
             Catch ex As Exception
-                MessageBox.Show("HUBO UN PROBLEMA AL EXPORTAR DATOS!", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                MessageBox.Show("Hubo un problema al exportar datos!", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Error)
             End Try
         End Sub
 
@@ -277,10 +277,10 @@ Namespace FORMULARIOS.CONTABILIDAD.MAYORIZACION
                 txtEgresos.Text = Math.Round(Math.Abs(txtDeudorEgresos.Text - txtAcreedorEgresos.Text), 2)
                 txtTotal.Text = Math.Round(Math.Abs(txtIngresos.Text - txtEgresos.Text), 2)
 
-                MsgBox("COMPROBACIÓN DE MAYORES EXITOSA!" & vbNewLine & "Por favor, verifique toda la información antes de generar el asiento!", MsgBoxStyle.Information, "MENSAJE DE INFORMACIÓN")
+                MsgBox("COMPROBACIÓN DE MAYORES EXITOSA!" & vbNewLine & "Por favor, verifique toda la información antes de generar el asiento!", MsgBoxStyle.Information, "Mensaje de información")
                 btnAsientoInicial.Enabled = True
             Else
-                MsgBox("HUBO UN PROBLEMA AL REALIZAR LA COMPROBACIÓN!", MsgBoxStyle.Information, "MENSAJE DE INFORMACIÓN")
+                MsgBox("HUBO UN PROBLEMA AL REALIZAR LA COMPROBACIÓN!", MsgBoxStyle.Information, "Mensaje de información")
                 btnAsientoInicial.Enabled = False
             End If
 
@@ -336,7 +336,7 @@ Namespace FORMULARIOS.CONTABILIDAD.MAYORIZACION
         '            dgvCuentas.Rows(indice).Cells("PADRE").Value = dgvCuentasPorProcesar.Rows(indice).Cells("PADRE").Value
         '        Next
         '        ' Procesar Cuentas de nivel 6
-        '        'MsgBox("PROCESANDO CUENTAS NIVEL 6", MsgBoxStyle.Information, "MENSAJE DE INFORMACION") ' txtNivel6.BackColor = Color.Azure
+        '        'MsgBox("PROCESANDO CUENTAS NIVEL 6", MsgBoxStyle.Information, "Mensaje de información") ' txtNivel6.BackColor = Color.Azure
         '        ' Sumar los valores
         '        For indice = 0 To dgvCuentasPorProcesar.Rows.Count - 1 Step 1
         '            For posicion = 0 To dgvCuentas.Rows.Count - 1 Step 1
@@ -357,7 +357,7 @@ Namespace FORMULARIOS.CONTABILIDAD.MAYORIZACION
         '            dgvCuentas.Rows(indice).Cells("PADRE").Value = dgvCuentasPorProcesar.Rows(indice).Cells("PADRE").Value
         '        Next
         '        ' Procesar Cuentas de nivel 5
-        '        'MsgBox("PROCESANDO CUENTAS NIVEL 5", MsgBoxStyle.Information, "MENSAJE DE INFORMACION") 'txtNivel5.BackColor = Color.Azure
+        '        'MsgBox("PROCESANDO CUENTAS NIVEL 5", MsgBoxStyle.Information, "Mensaje de información") 'txtNivel5.BackColor = Color.Azure
         '        ' Sumar los valores
         '        For indice = 0 To dgvCuentasPorProcesar.Rows.Count - 1 Step 1
         '            For posicion = 0 To dgvCuentas.Rows.Count - 1 Step 1
@@ -378,7 +378,7 @@ Namespace FORMULARIOS.CONTABILIDAD.MAYORIZACION
         '            dgvCuentas.Rows(indice).Cells("PADRE").Value = dgvCuentasPorProcesar.Rows(indice).Cells("PADRE").Value
         '        Next
         '        ' Procesar Cuentas de nivel 4
-        '        'MsgBox("PROCESANDO CUENTAS NIVEL 4", MsgBoxStyle.Information, "MENSAJE DE INFORMACION") 'txtNivel4.BackColor = Color.Azure
+        '        'MsgBox("PROCESANDO CUENTAS NIVEL 4", MsgBoxStyle.Information, "Mensaje de información") 'txtNivel4.BackColor = Color.Azure
         '        ' Sumar los valores
         '        For indice = 0 To dgvCuentasPorProcesar.Rows.Count - 1 Step 1
         '            For posicion = 0 To dgvCuentas.Rows.Count - 1 Step 1
@@ -399,7 +399,7 @@ Namespace FORMULARIOS.CONTABILIDAD.MAYORIZACION
         '            dgvCuentas.Rows(indice).Cells("PADRE").Value = dgvCuentasPorProcesar.Rows(indice).Cells("PADRE").Value
         '        Next
         '        ' Procesar Cuentas de nivel 3
-        '        'MsgBox("PROCESANDO CUENTAS NIVEL 3", MsgBoxStyle.Information, "MENSAJE DE INFORMACION") ' txtNivel3.BackColor = Color.Azure
+        '        'MsgBox("PROCESANDO CUENTAS NIVEL 3", MsgBoxStyle.Information, "Mensaje de información") ' txtNivel3.BackColor = Color.Azure
         '        ' Sumar los valores
         '        For indice = 0 To dgvCuentasPorProcesar.Rows.Count - 1 Step 1
         '            For posicion = 0 To dgvCuentas.Rows.Count - 1 Step 1
@@ -420,7 +420,7 @@ Namespace FORMULARIOS.CONTABILIDAD.MAYORIZACION
         '            dgvCuentas.Rows(indice).Cells("PADRE").Value = dgvCuentasPorProcesar.Rows(indice).Cells("PADRE").Value
         '        Next
         '        ' Procesar Cuentas de nivel 2
-        '        'MsgBox("PROCESANDO CUENTAS NIVEL 2", MsgBoxStyle.Information, "MENSAJE DE INFORMACION") 'txtNivel2.BackColor = Color.Azure
+        '        'MsgBox("PROCESANDO CUENTAS NIVEL 2", MsgBoxStyle.Information, "Mensaje de información") 'txtNivel2.BackColor = Color.Azure
         '        ' Sumar los valores
         '        For indice = 0 To dgvCuentasPorProcesar.Rows.Count - 1 Step 1
         '            For posicion = 0 To dgvCuentas.Rows.Count - 1 Step 1
@@ -441,7 +441,7 @@ Namespace FORMULARIOS.CONTABILIDAD.MAYORIZACION
         '            dgvCuentas.Rows(indice).Cells("PADRE").Value = dgvCuentasPorProcesar.Rows(indice).Cells("PADRE").Value
         '        Next
         '        ' Procesar Cuentas de nivel 1
-        '        'MsgBox("PROCESANDO CUENTAS NIVEL 1", MsgBoxStyle.Information, "MENSAJE DE INFORMACION") ' txtNivel1.BackColor = Color.Azure
+        '        'MsgBox("PROCESANDO CUENTAS NIVEL 1", MsgBoxStyle.Information, "Mensaje de información") ' txtNivel1.BackColor = Color.Azure
         '        ' Sumar los valores
         '        For indice = 0 To dgvCuentasPorProcesar.Rows.Count - 1 Step 1
         '            For posicion = 0 To dgvCuentas.Rows.Count - 1 Step 1
@@ -552,14 +552,14 @@ Namespace FORMULARIOS.CONTABILIDAD.MAYORIZACION
         '            txtEgresos.Text = Math.Round(Math.Abs(txtDeudorEgresos.Text - txtAcreedorEgresos.Text), 2)
         '            txtTotal.Text = Math.Round(Math.Abs(txtIngresos.Text - txtEgresos.Text), 2)
 
-        '            MsgBox("COMPROBACIÓN DE MAYORES EXITOSA!" & vbNewLine & "Por favor, verifique toda la información antes de generar el asiento!", MsgBoxStyle.Information, "MENSAJE DE INFORMACIÓN")
+        '            MsgBox("COMPROBACIÓN DE MAYORES EXITOSA!" & vbNewLine & "Por favor, verifique toda la información antes de generar el asiento!", MsgBoxStyle.Information, "Mensaje de información")
         '            btnAsientoInicial.Enabled = True
         '        Else
-        '            MsgBox("HUBO UN PROBLEMA AL REALIZAR LA COMPROBACIÓN!", MsgBoxStyle.Information, "MENSAJE DE INFORMACIÓN")
+        '            MsgBox("HUBO UN PROBLEMA AL REALIZAR LA COMPROBACIÓN!", MsgBoxStyle.Information, "Mensaje de información")
         '            btnAsientoInicial.Enabled = False
         '        End If
         '    Catch ex As Exception
-        '        MsgBox("HUBO UN PROBLEMA AL REALIZAR LA COMPROBACIÓN!", MsgBoxStyle.Information, "MENSAJE DE INFORMACIÓN")
+        '        MsgBox("HUBO UN PROBLEMA AL REALIZAR LA COMPROBACIÓN!", MsgBoxStyle.Information, "Mensaje de información")
         '        btnAsientoInicial.Enabled = False
         '    End Try
         'End Sub
@@ -667,19 +667,19 @@ Namespace FORMULARIOS.CONTABILIDAD.MAYORIZACION
         Private Sub btnAsientoInicial_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnAsientoInicial.Click
             Try
                 If dgvCuentas.RowCount = 0 Then
-                    MessageBox.Show("DEBE SELECCIONAR EL AÑO Y CARGAR LAS CUENTAS!", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    MessageBox.Show("DEBE SELECCIONAR EL AÑO Y CARGAR LAS CUENTAS!", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Error)
                     Return
                 End If
 
                 Dim concepto = "ESTADO SITUACION INICIAL " & dtpAnio.Value.Year
                 Dim n = objAsiento.BuscarNumeroRegistroAsientoXConceptoAsientoLibroDiario(_tipoCon, concepto)
                 If n > 0 Then
-                    MessageBox.Show("YA EXISTE UN ESTADO DE SITUACION INICIAL PARA EL AÑO " & dtpAnio.Value.Year & vbNewLine & "REVISE EL ASIENTO NUMERO " & n, "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    MessageBox.Show("YA EXISTE UN ESTADO DE SITUACION INICIAL PARA EL AÑO " & dtpAnio.Value.Year & vbNewLine & "REVISE EL ASIENTO NUMERO " & n, "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Error)
                     Return
                 End If
 
                 Dim numeroRegistro = objAsiento.BuscarMayorNuneroRegistroAsientoInicialLibroDiario(_tipoCon) + 1
-                If MessageBox.Show("¿ESTA SEGURO QUE DESEA CREAR EL ESTADO DE SITUACIÓN INICIAL " & dtpAnio.Value.Year & " CON N° DE ASIENTO: " & numeroRegistro & "?", "MENSAJE DE VALIDACIÓN", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> DialogResult.Yes Then Return
+                If MessageBox.Show("¿ESTA SEGURO QUE DESEA CREAR EL ESTADO DE SITUACIÓN INICIAL " & dtpAnio.Value.Year & " CON N° DE ASIENTO: " & numeroRegistro & "?", "Mensaje de validación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> DialogResult.Yes Then Return
 
                 _sqlCommands.Clear()
 
@@ -751,7 +751,7 @@ Namespace FORMULARIOS.CONTABILIDAD.MAYORIZACION
                 MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
 
             Catch ex As Exception
-                MessageBox.Show("HUBO UN PROBLEMA GUARDAR!" & vbNewLine & ex.Message, "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                MessageBox.Show("HUBO UN PROBLEMA GUARDAR!" & vbNewLine & ex.Message, "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Error)
             End Try
         End Sub
 

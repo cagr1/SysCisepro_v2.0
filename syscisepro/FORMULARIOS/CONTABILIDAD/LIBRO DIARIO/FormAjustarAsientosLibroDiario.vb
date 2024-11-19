@@ -156,7 +156,7 @@ Namespace FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
                 btnBuscarAsiento_Click(Nothing, Nothing)
 
             Catch ex As Exception
-                MsgBox("ERROR. SELECCIONAR ASIENTO LIBRO DIARIO" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "MENSAJE DE EXCEPCIÓN")
+                MsgBox("ERROR. SELECCIONAR ASIENTO LIBRO DIARIO" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
             End Try
         End Sub
         Private Sub btnBuscarAsiento_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnBuscarAsiento.Click
@@ -170,7 +170,7 @@ Namespace FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
                 dgvAsientosDiario.Visible = False
                 _botonseleccionado = 2
             Catch ex As Exception
-                MsgBox("ERROR. BUSCAR ASIENTO LIBRO DIARIO" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "MENSAJE DE EXCEPCIÓN")
+                MsgBox("ERROR. BUSCAR ASIENTO LIBRO DIARIO" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
             End Try
         End Sub
         Private Sub CargarAsientoLibroDiarioBusqueda()
@@ -182,7 +182,7 @@ Namespace FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
                         dgvAsientoBuscado.DataSource = _objetoAjustarAsientos.BuscarAsientosLibroDiarioXRangoFecha(_tipoCon, dtpAsientoDesde.Value, dtpAsientoHasta.Value)
                     Case Else
                         dgvAsientoBuscado.DataSource = Nothing
-                        MsgBox("NO HA SELECCIONADO UN PARAMETRO DE BUSQUEDA", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                        MsgBox("NO HA SELECCIONADO UN PARAMETRO DE BUSQUEDA", MsgBoxStyle.Exclamation, "Mensaje de validación")
                 End Select
 
                 dgvAsientoBuscado.AutoResizeColumns()
@@ -202,7 +202,7 @@ Namespace FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
 
             Catch ex As Exception
                 dgvAsientoBuscado.DataSource = Nothing
-                MsgBox("CARGAR ASIENTOS DIARIO BUSQUEDA" & vbNewLine & ex.ToString, MsgBoxStyle.Critical, "MENSAJE DE EXCEPCIÓN")
+                MsgBox("CARGAR ASIENTOS DIARIO BUSQUEDA" & vbNewLine & ex.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
             End Try
         End Sub
         Private Sub SumarTotalAsientoDiarioBusqueda()
@@ -224,7 +224,7 @@ Namespace FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
             If dgvAsientoBuscado.CurrentRow Is Nothing Then Return
 
             If dgvAsientoBuscado.CurrentRow.Cells.Item(0).Value Is DBNull.Value Then
-                MsgBox("NO HAY COINCIDENCIAS. REVISE LOS PARAMETROS DE BUSQUEDA", MsgBoxStyle.Information, "MENSAJE DE INFORMACIÓN")
+                MsgBox("NO HAY COINCIDENCIAS. REVISE LOS PARAMETROS DE BUSQUEDA", MsgBoxStyle.Information, "Mensaje de información")
             Else
                 txtIdAsiento.Text = dgvAsientoBuscado.CurrentRow.Cells.Item(0).Value
                 dtpFechaAsiento.Text = dgvAsientoBuscado.CurrentRow.Cells.Item(1).Value
@@ -277,7 +277,7 @@ Namespace FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
                 dgvAsientosDiario.Columns(12).Width = 90
                 dgvAsientosDiario.ReadOnly = False
             Catch ex As Exception
-                MsgBox("CARGAR ASIENTOS DIARIO" & vbNewLine & ex.ToString, MsgBoxStyle.Critical, "MENSAJE DE EXCEPCIÓN")
+                MsgBox("CARGAR ASIENTOS DIARIO" & vbNewLine & ex.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
             End Try
         End Sub
         Private Sub DeshabilitadoInicio()
@@ -302,9 +302,13 @@ Namespace FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
             btnAgregar.Enabled = False
             btnEliminar.Enabled = False
             '===
-            gbBanco.Enabled = False
+            'gbBanco.Enabled = False 
+            cmbBancos.Enabled = False
+            cmbCuentaBancos.Enabled = False
             gbFormaPago.Enabled = False
-            gbClienteProveedorPersonal.Enabled = False
+            'gbClienteProveedorPersonal.Enabled = False
+            txtNombreClienteProveedorPersonal.Enabled = False
+            btnBuscarPersonal.Enabled = False
 
             dtpFechaAsiento.Enabled = False
             cmbCuentasContables.Enabled = False
@@ -384,10 +388,14 @@ Namespace FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
             cmbConcepto.SelectedIndex = 0
             If cmbConcepto.Text = "COMPROBANTE DE EGRESO" Or cmbConcepto.Text = "COMPROBANTE DE INGRESO" Or
                 cmbConcepto.Text = "COMPROBANTE DE INGRESO CUENTAS POR PAGAR" Then
-                gbBanco.Enabled = True
+                'gbBanco.Enabled = True
+                cmbBancos.Enabled = True
+                cmbCuentaBancos.Enabled = True
                 gbFormaPago.Enabled = True
             Else
-                gbBanco.Enabled = False
+                'gbBanco.Enabled = False
+                cmbBancos.Enabled = False
+                cmbCuentaBancos.Enabled = False
                 gbFormaPago.Enabled = False
                 LlenarComboBancos()
                 LlenarComboCuentasBancos()
@@ -425,11 +433,15 @@ Namespace FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
                 Dim em = _objetoEmpresa.SeleccionarRegistroEmpresaGeneralInformacionTributaria(_tipoCon)
                 lblRucClienteProveedorPersonal.Text = em.Rows(0)(2)
                 txtNombreClienteProveedorPersonal.Text = em.Rows(0)(4)
-                gbClienteProveedorPersonal.Enabled = False
+                'gbClienteProveedorPersonal.Enabled = False
+                txtNombreClienteProveedorPersonal.Enabled = False
+                btnBuscarPersonal.Enabled = False
             Else
                 lblRucClienteProveedorPersonal.Text = "0"
                 txtNombreClienteProveedorPersonal.Text = ""
-                gbClienteProveedorPersonal.Enabled = True
+                'gbClienteProveedorPersonal.Enabled = True
+                txtNombreClienteProveedorPersonal.Enabled = True
+                btnBuscarPersonal.Enabled = True
             End If
         End Sub
         Private Sub btnBuscarPersonal_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnBuscarPersonal.Click
@@ -455,7 +467,7 @@ Namespace FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
 
                 End If
             Catch ex As Exception
-                MsgBox("BOTÓN BUSCAR PERSONAL." & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "MENSAJE DE EXCEPCIÓN")
+                MsgBox("BOTÓN BUSCAR PERSONAL." & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
             End Try
         End Sub
         Private Sub btnNuevoAsiento_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnNuevoAsiento.Click
@@ -524,9 +536,14 @@ Namespace FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
             btnAgregar.Enabled = True
             btnEliminar.Enabled = True
             '===
-            gbBanco.Enabled = False
+            'gbBanco.Enabled = False
+            cmbBancos.Enabled = False
+            cmbCuentaBancos.Enabled = False
             gbFormaPago.Enabled = True
-            gbClienteProveedorPersonal.Enabled = True
+            'gbClienteProveedorPersonal.Enabled = True
+            txtNombreClienteProveedorPersonal.Enabled = True
+            btnBuscarPersonal.Enabled = True
+
 
             dtpFechaAsiento.Enabled = True
             cmbCuentasContables.Enabled = True
@@ -553,8 +570,8 @@ Namespace FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
         Private Sub btnModificarAsiento_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnModificarAsiento.Click
             If txtIdAsiento.Text.Trim().Length > 0 Then
                 If txtIdAsiento.Text = "ID" Then
-                    'MsgBox("SELECCIONE UN REGISTRO A MODIFICAR", MsgBoxStyle.Information, "MENSAJE DE INFORMACIÓN")
-                    KryptonMessageBox.Show("SELECCIONE UN REGISTRO A MODIFICAR", "MENSAJE DE INFORMACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
+                    'MsgBox("SELECCIONE UN REGISTRO A MODIFICAR", MsgBoxStyle.Information, "Mensaje de información")
+                    KryptonMessageBox.Show("SELECCIONE UN REGISTRO A MODIFICAR", "Mensaje de información", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
 
 
                 Else
@@ -567,7 +584,9 @@ Namespace FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
 
                     cmbConcepto.SelectedIndex = 1
                     cmbConcepto.Enabled = False
-                    gbClienteProveedorPersonal.Enabled = False
+                    'gbClienteProveedorPersonal.Enabled = False
+                    txtNombreClienteProveedorPersonal.Enabled = False
+                    btnBuscarPersonal.Enabled = False
                     txtDetalleAsiento.Focus()
                 End If
             Else
@@ -620,13 +639,13 @@ Namespace FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
                             SumarTotalAsientoDiarioBusqueda()
                         End If
                     Else
-                        KryptonMessageBox.Show("EL VALOR DEL DEBE NO PUEDE SER IGUAL AL DEL HABER", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
+                        KryptonMessageBox.Show("EL VALOR DEL DEBE NO PUEDE SER IGUAL AL DEL HABER", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                     End If
                 Else
-                    KryptonMessageBox.Show("POR FAVOR REVISE QUE TODOS LOS PARAMETROS ESTEN CORRECTOS PARA AGREGAR.", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
+                    KryptonMessageBox.Show("POR FAVOR REVISE QUE TODOS LOS PARAMETROS ESTEN CORRECTOS PARA AGREGAR.", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                 End If
             Catch ex As Exception
-                KryptonMessageBox.Show("AGREGAR ASIENTO." & vbNewLine & ex.Message.ToString, "MENSAJE DE EXCEPCIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+                KryptonMessageBox.Show("AGREGAR ASIENTO." & vbNewLine & ex.Message.ToString, "Mensaje de excepción", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
 
@@ -651,14 +670,14 @@ Namespace FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
                     dgvAsientosDiario.Rows.RemoveAt(dgvAsientosDiario.CurrentRow.Index)
                     SumarTotalAsientoDiario()
                 ElseIf _botonseleccionado = 2 Then
-                    If MessageBox.Show("La fila/cuenta seleccionada será anulada. Quiere continuar?", "MENSAJE DEL SISTEMA", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> DialogResult.Yes Then Return
+                    If MessageBox.Show("La fila/cuenta seleccionada será anulada. Quiere continuar?", "Mensaje del sistema", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> DialogResult.Yes Then Return
                     dgvAsientoBuscado.CurrentRow.Cells(6).Value = 0
                     dgvAsientoBuscado.CurrentRow.Cells(7).Value = 0
                     dgvAsientoBuscado.CurrentRow.Cells(11).Value = 0
                     SumarTotalAsientoDiarioBusqueda()
                 End If
             Catch ex As Exception
-                MsgBox("ELIMINAR CELDAS:" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "MENSAJE DE EXCEPCIÓN")
+                MsgBox("ELIMINAR CELDAS:" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
             End Try
         End Sub
         Private Sub cmbCuentasContables_SelectedValueChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles cmbCuentasContables.SelectedValueChanged
@@ -667,11 +686,11 @@ Namespace FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
         End Sub
         Private Sub btnGuardar_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnGuardar.Click
             If CDec(txtTotalDebe.Text) <> CDec(txtTotalHaber.Text) Then
-                MessageBox.Show("El ASIENTO no cuadra, no se puede guardar los cambios!", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                MessageBox.Show("El ASIENTO no cuadra, No se puede guardar los cambios!", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
                 Return
             End If
 
-            If MessageBox.Show("Seguro que desea guardar los cambios realizados?", "MENSAJE DEL SISTEMA", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.No Then
+            If MessageBox.Show("Seguro que desea guardar los cambios realizados?", "Mensaje del sistema", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.No Then
                 Return
             End If
             _sqlCommands.Clear()
@@ -726,7 +745,7 @@ Namespace FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
             Else
                 messageIcon = KryptonMessageBoxIcon.Exclamation
             End If
-            KryptonMessageBox.Show(res(1), "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, messageIcon)
+            KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, messageIcon)
             CargarNumeroRegistroAsientoLibroDiario()
         End Sub
         Private Sub NuevoRegistroAsientoDiario()
@@ -826,7 +845,7 @@ Namespace FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
                 rpt.NumeroRegistro = txtNumeroAsientoBuscar.Text
                 rpt.ShowDialog()
             Else
-                MsgBox("NO HAY ASINETOS QUE CARGAR. PRIMERO SELECCIONE", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                MsgBox("NO HAY ASINETOS QUE CARGAR. PRIMERO SELECCIONE", MsgBoxStyle.Exclamation, "Mensaje de validación")
             End If
         End Sub
         Private Sub btnExportar_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnExportar.Click
@@ -837,13 +856,13 @@ Namespace FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
                     If dgvAsientoBuscado.RowCount > 0 Then ExportarDatosExcel(dgvAsientoBuscado, "ASIENTO DE DIARIO")
                 End If
             Catch ex As Exception
-                MsgBox("EXPORTAR ASIENTO DE DIARIO." & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "MENSAJE DE EXCEPCIÓN")
+                MsgBox("EXPORTAR ASIENTO DE DIARIO." & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
             End Try
         End Sub
         Private Sub ExportarDatosExcel(ByVal dgvAsientosDiario As DataGridView, ByVal titulo As String)
             Try
                 If dgvAsientosDiario.Rows.Count = 0 Then
-                    MsgBox("NO HAY DATOS QUE EXPORTAR!", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                    MsgBox("No hay datos que exportar!", MsgBoxStyle.Exclamation, "Mensaje de validación")
                     Return
                 End If
 
@@ -919,7 +938,7 @@ Namespace FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
                 app.DisplayAlerts = True
                 'workbook.SaveAs(sfd.FileName, Excel.XlFileFormat.xlWorkbookNormal, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Excel.XlSaveAsAccessMode.xlExclusive, Type.Missing, Type.Missing, Type.Missing, Type.Missing)
             Catch ex As Exception
-                MessageBox.Show("HUBO UN PROBLEMA AL EXPORTAR DATOS!", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                MessageBox.Show("Hubo un problema al exportar datos!", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Error)
             End Try
         End Sub
 
@@ -936,12 +955,12 @@ Namespace FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
             '    txtHaber.ForeColor = Color.Green
             'End If
             If txtFondoReservaxPagar.Text.Length = 0 Or txtAportePatronal.Text.Length = 0 Then
-                KryptonMessageBox.Show("NO SE PUEDE GENERAR" & vbNewLine & "ingrese los valores .", "MENSAJE DE VALIDACION", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
+                KryptonMessageBox.Show("NO SE PUEDE GENERAR" & vbNewLine & "ingrese los valores .", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                 Return
             End If
 
             If cbxTipo.SelectedIndex = 0 Then
-                KryptonMessageBox.Show("SELECCIONE EL TIPO DE ROLES", "MENSAJE DE VALIDACION", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
+                KryptonMessageBox.Show("SELECCIONE EL TIPO DE ROLES", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                 Return
             End If
 
@@ -1107,7 +1126,7 @@ Namespace FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
                         Else
                             dgvAsientoRoles.CurrentRow.Cells("codigo").Value = String.Empty
                             dgvAsientoRoles.CurrentRow.Cells("cuenta").Value = String.Empty
-                            MsgBox("LA CUENTA: " & cc.Rows(0)(1) & " - " & cc.Rows(0)(2) & vbNewLine & "ES UNA CUENTA PADRE, NO GENERA MOVIMIENTO!!", MsgBoxStyle.Information, "MENSAJE DE INFORMACIÓN")
+                            MsgBox("LA CUENTA: " & cc.Rows(0)(1) & " - " & cc.Rows(0)(2) & vbNewLine & "ES UNA CUENTA PADRE, NO GENERA MOVIMIENTO!!", MsgBoxStyle.Information, "Mensaje de información")
                         End If
 
 
@@ -1121,7 +1140,7 @@ Namespace FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
                 SumarTotalAsientoRoles()
 
             Catch ex As Exception
-                KryptonMessageBox.Show("CELDA FIN DE EDICIÓN." & vbNewLine & ex.Message.ToString, "MENSAJE DE EXCEPCIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+                KryptonMessageBox.Show("CELDA FIN DE EDICIÓN." & vbNewLine & ex.Message.ToString, "Mensaje de excepción", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
 
@@ -1199,7 +1218,7 @@ Namespace FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
 
                 _selectedRowIndex = -1
             Else
-                KryptonMessageBox.Show("SELECCIONE UNA FILA PARA INSERTAR", "MENSAJE DE VALIDACION", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
+                KryptonMessageBox.Show("SELECCIONE UNA FILA PARA INSERTAR", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
             End If
 
             SumarTotalAsientoRoles()
@@ -1210,9 +1229,9 @@ Namespace FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
                 dgvAsientoRoles.Rows.RemoveAt(_selectedRowIndex)
                 _selectedRowIndex = -1
             ElseIf dgvAsientoRoles.Rows.Count <= 1 Then
-                KryptonMessageBox.Show("NO SE PUEDE ELIMINAR EL ÚLTIMO REGISTRO", "MENSAJE DE VALIDACION", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
+                KryptonMessageBox.Show("NO SE PUEDE ELIMINAR EL ÚLTIMO REGISTRO", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
             Else
-                KryptonMessageBox.Show("SELECCIONE UNA FILA PARA ELIMINAR", "MENSAJE DE VALIDACION", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
+                KryptonMessageBox.Show("SELECCIONE UNA FILA PARA ELIMINAR", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
             End If
 
             SumarTotalAsientoRoles()

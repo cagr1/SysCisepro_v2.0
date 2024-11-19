@@ -5,6 +5,7 @@ Imports ClassLibraryCisepro.CONTABILIDAD.COMPROBANTES_RETENCION
 Imports ClassLibraryCisepro.ENUMS
 Imports ClassLibraryCisepro.ProcesosSql
 Imports ClassLibraryCisepro.USUARIOS_DEL_SISTEMA
+Imports Krypton.Toolkit
 
 Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
     ''' <summary>
@@ -76,10 +77,23 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
             DeshabilitadoInicio()
         End Sub 
         Private Sub DeshabilitadoInicio()
-            
-            gbNombreComercialProveedor.Enabled = True
-            gbDatosComprobanteCompra.Enabled = False
-            gbValoresComprobanteCompra.Enabled = False
+
+            'gbNombreComercialProveedor.Enabled = True
+            txtNombreComercialProveedorGeneral.Enabled = True
+
+            'gbDatosComprobanteCompra.Enabled = False
+            txtNumeroComprobanteCompra.Enabled = False
+            txtNumAutoSRIComprobanteCompra.Enabled = False
+            dtpFechaAutoSRIComprobanteCompra.Enabled = False
+            dtpFechaEmisionComprobanteCompra.Enabled = False
+
+            'gbValoresComprobanteCompra.Enabled = False
+            txtSubtotal12FacturaCompra.Enabled = False
+            txtSubtotal0FacturaCompra.Enabled = False
+            txtDescuentoFacturaCompra.Enabled = False
+            txtSubTotalComprobanteCompra.Enabled = False
+            txtIvaComprobanteCompra.Enabled = False
+            txtTotalComprobanteCompra.Enabled = False
 
             txtGuiaRemisionComprobanteCompra.Enabled = False
             txtDocModComprobanteCompra.Enabled = False
@@ -141,7 +155,8 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
                 btnModificar.Enabled = dgvComprobantesCompra.RowCount > 0 And dgvComprobantesCompra.CurrentRow IsNot Nothing
             Catch ex As Exception
                 dgvComprobantesCompra.DataSource = Nothing
-                MsgBox("METODO CARGAR COMPROBANTES DE COMPRA" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "MENSAJE DE EXCEPCIÓN")
+                'MsgBox("METODO CARGAR COMPROBANTES DE COMPRA" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
+                KryptonMessageBox.Show("Metodo cargar comprobantes de compra" & vbNewLine & ex.Message.ToString, "Mensaje de excepción")
             End Try
         End Sub
         Private Sub dgvComprobantesCompra_SelectionChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles dgvComprobantesCompra.SelectionChanged
@@ -183,8 +198,13 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
             HabilitadoNuevo()
         End Sub
         Private Sub HabilitadoNuevo()
-             gbNombreComercialProveedor.Enabled = True
-            gbDatosComprobanteCompra.Enabled = True
+            'gbNombreComercialProveedor.Enabled = True
+            txtNombreComercialProveedorGeneral.Enabled = True
+            'gbDatosComprobanteCompra.Enabled = True
+            txtNumeroComprobanteCompra.Enabled = True
+            txtNumAutoSRIComprobanteCompra.Enabled = True
+            dtpFechaAutoSRIComprobanteCompra.Enabled = True
+            dtpFechaEmisionComprobanteCompra.Enabled = True
 
             txtGuiaRemisionComprobanteCompra.Enabled = True
             txtDocModComprobanteCompra.Enabled = True
@@ -249,10 +269,12 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
 
             Dim fechaMaximaIngreso = New Date(Date.Now.Year, mesFechaMaxima, 25) ' establece la fecha maxima de ingreso (año,mes,dia)
             If fechaActual > fechaMaximaIngreso And mesFechaCompra < mesFechaMaxima Then
-                MsgBox("¯\_(ツ)_/¯ despues del 25 no se aceptan facturas del mes anterior")
+                'MsgBox("¯\_(ツ)_/¯ despues del 25 no se aceptan facturas del mes anterior")
+                KryptonMessageBox.Show("Despues del 25 no se aceptan facturas del mes anterior", "Mensaje de validación")
                 Return False
             ElseIf fechaCompra > fechaActual Then
-                MsgBox("¯\_(ツ)_/¯ no es la maquina del tiempo no puede ingresar fechas futuras")
+                'MsgBox("¯\_(ツ)_/¯ no es la maquina del tiempo no puede ingresar fechas futuras")
+                KryptonMessageBox.Show("No puede ingresar fechas futuras", "Mensaje de validación")
                 Return False
             Else
                 Return True
@@ -262,7 +284,8 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
             If ValidarFecha() Then
                 If ValidacionParametros() Then
 
-                    If MessageBox.Show("¿ESTA SEGURA QUE DESEA GUARDAR EL COMPROBANTE?", "MENSAJE DE VALIDACIÓN", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> DialogResult.Yes Then Return
+                    'If MessageBox.Show("¿ESTA SEGURA QUE DESEA GUARDAR EL COMPROBANTE?", "Mensaje de validación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> DialogResult.Yes Then Return
+                    If KryptonMessageBox.Show("¿Esta segura que desea guardar el comprobante?", "Mensaje de validación", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) <> DialogResult.Yes Then Return
                     _sqlCommands.Clear()
 
                     ModificarComprobanteCompra()
@@ -281,9 +304,20 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
                         CargarComprobantesCompra()
 
                     End If
-                    MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
+
+                    Dim messageIcon As KryptonMessageBoxIcon
+                    If res(0) Then
+                        messageIcon = KryptonMessageBoxIcon.Information
+                    Else
+                        messageIcon = KryptonMessageBoxIcon.Exclamation
+                    End If
+                    KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, messageIcon)
+
+
+                    'MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
                 Else
-                    MsgBox("NO SE PUEDE MODIFICAR. NO HA LLENADO TODOS LOS PARAMETROS NECESARIOS", MsgBoxStyle.Information, "MENSAJE DE VALICACIÓN")
+                    'MsgBox("NO SE PUEDE MODIFICAR. NO HA LLENADO TODOS LOS PARAMETROS NECESARIOS", MsgBoxStyle.Information, "Mensaje de validación")
+                    KryptonMessageBox.Show("No se puede modificar. No ha llenado todos los parametros necesarios", "Mensaje de validación")
                 End If
             End If
         End Sub

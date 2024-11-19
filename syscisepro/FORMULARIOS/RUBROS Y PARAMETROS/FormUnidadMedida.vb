@@ -161,7 +161,7 @@ Namespace FORMULARIOS.RUBROS_Y_PARAMETROS
         Private Sub btnGuardarUnidadMedida_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnGuardarUnidadMedida.Click
             If ValidacionParametros() Then
 
-                If MessageBox.Show("¿ESTA SEGURO QUE DESEA GUARDAR?", "MENSAJE DE VALIDACIÓN", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> MsgBoxResult.Yes Then Return
+                If MessageBox.Show("¿Esta seguro que desea guardar?", "Mensaje de validación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> MsgBoxResult.Yes Then Return
                 _sqlCommands.Clear()
 
                 Select Case (_botonSeleccionado)
@@ -176,7 +176,7 @@ Namespace FORMULARIOS.RUBROS_Y_PARAMETROS
                 End If
                 MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
             Else
-                MsgBox("NO SE PUEDE GUARDAR." & vbNewLine & "NO SE HAN LLENADO TODOS LOS CAMPOS NECESARIOS.", MsgBoxStyle.Information, "MENSAJE DE VALIDACION")
+                MsgBox("No se puede guardar." & vbNewLine & "NO SE HAN LLENADO TODOS LOS CAMPOS NECESARIOS.", MsgBoxStyle.Information, "Mensaje de validación")
             End If
         End Sub
         Private Sub btnCancelarUnidadMedida_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnCancelarUnidadMedida.Click
@@ -187,7 +187,7 @@ Namespace FORMULARIOS.RUBROS_Y_PARAMETROS
         Private Sub dgvUnidadMedida_SelectionChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles dgvUnidadMedida.SelectionChanged
             If dgvUnidadMedida.RowCount = 0 Or dgvUnidadMedida.CurrentRow Is Nothing Then Return
             If dgvUnidadMedida.CurrentRow.Cells.Item(0).Value Is DBNull.Value Then
-                MsgBox("La tabla UNIDAD MEDIDA esta vacía", MsgBoxStyle.Information, "Mensaje de Información")
+                MsgBox("La tabla UNIDAD MEDIDA esta vacía", MsgBoxStyle.Information, "Mensaje de información")
             Else
                 txtIdUnidadMedida.Text = dgvUnidadMedida.CurrentRow.Cells.Item(0).Value
                 txtDetalleUnidadMedida.Text = dgvUnidadMedida.CurrentRow.Cells.Item(1).Value.ToString

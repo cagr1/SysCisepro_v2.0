@@ -70,7 +70,7 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
             If txtIdVehiculoOtros.Text <> "" And txtResponsable.Text <> "" And nudCapacidad.Text <> "" And txtNombreVehiculo.Text <> "" And txtNombreCustodio.Text <> "" And txtPlacaVehiculo.Text <> "" And txtChasisVehiculo.Text <> "" And cbmMarca.Text <> "" And txtModeloVehiculo.Text <> "" And _
                txtSerieVehiculo.Text <> "" And txtMotorVehiculo.Text <> "" And txtCilindrajeVehiculo.Text <> "" And cbmColorVehiculo.Text <> "" And txtTipoVehiculo.Text <> "" And txtUbicacion.Text <> "" And cbmTipoCustodio.Text <> "" Then
 
-                If MessageBox.Show("¿ESTA SEGURO QUE DESEA GUARDAR?", "MENSAJE DE VALIDACIÓN", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> MsgBoxResult.Yes Then Return
+                If MessageBox.Show("¿Esta seguro que desea guardar?", "Mensaje de validación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> MsgBoxResult.Yes Then Return
                 _sqlCommands.Clear()
 
                 With _objVehiculosOtros
@@ -122,7 +122,7 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
                 MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
 
             Else
-                MsgBox("No se puede guardar el registro si no llena todos los parámetros necesarios", MsgBoxStyle.Information, "MENSAJE DE INFORMACIÓN")
+                MsgBox("No se puede guardar el registro si no llena todos los parámetros necesarios", MsgBoxStyle.Information, "Mensaje de información")
             End If
         End Sub
 

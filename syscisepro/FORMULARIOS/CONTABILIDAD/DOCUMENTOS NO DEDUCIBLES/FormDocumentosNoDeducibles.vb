@@ -52,17 +52,17 @@ Namespace FORMULARIOS.CONTABILIDAD.DOCUMENTOS_NO_DEDUCIBLES
         Private Sub btnNuevoSolicitudFR_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnListo.Click
             If ValidacionParametros() = True Then 'VALIDACION
                 If CDbl(txtValorDocumentoNoDeducible.Text) > ValorMaximo Then
-                    MsgBox("No se permite procesar un valor mayor monto disponible para caja ($" & ValorMaximo.ToString("N") & ")!", MsgBoxStyle.Information, "MENSAJE DE INFORMACIÓN")
+                    MsgBox("No se permite procesar un valor mayor monto disponible para caja ($" & ValorMaximo.ToString("N") & ")!", MsgBoxStyle.Information, "Mensaje de información")
                     Return
                 End If
 
                 If _existeNumero Then
-                    MsgBox("El N° del comprobante ya ha sido registrado!", MsgBoxStyle.Information, "MENSAJE DE INFORMACIÓN")
+                    MsgBox("El N° del comprobante ya ha sido registrado!", MsgBoxStyle.Information, "Mensaje de información")
                     Return
                 End If
                 DialogResult = Windows.Forms.DialogResult.OK
             Else
-                MsgBox("NO SE PUEDE GUARDAR." & vbNewLine & "NO SE HAN LLENADO TODOS LOS CAMPOS NECESARIOS.", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACION")
+                MsgBox("No se puede guardar." & vbNewLine & "NO SE HAN LLENADO TODOS LOS CAMPOS NECESARIOS.", MsgBoxStyle.Exclamation, "Mensaje de validación")
                 txtNumeroDocumentoNoDeducible.Focus()
             End If
         End Sub

@@ -67,6 +67,7 @@
             Me.lblDatos.AutoSize = True
             Me.lblDatos.BackColor = System.Drawing.Color.Transparent
             Me.lblDatos.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.lblDatos.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
             Me.lblDatos.Location = New System.Drawing.Point(3, 16)
             Me.lblDatos.Name = "lblDatos"
             Me.lblDatos.Size = New System.Drawing.Size(45, 13)
@@ -76,6 +77,8 @@
             'btnBuscar
             '
             Me.btnBuscar.BackColor = System.Drawing.Color.Transparent
+            Me.btnBuscar.FlatAppearance.BorderSize = 0
+            Me.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.btnBuscar.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.btnBuscar.Image = Global.syscisepro.My.Resources.Resources.search_24dp_FILL0_wght400_GRAD0_opsz24__2_
             Me.btnBuscar.Location = New System.Drawing.Point(327, 4)
@@ -87,6 +90,8 @@
             '
             'btnActualizar
             '
+            Me.btnActualizar.FlatAppearance.BorderSize = 0
+            Me.btnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.btnActualizar.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.btnActualizar.Image = Global.syscisepro.My.Resources.Resources.refresh_24dp_FILL0_wght400_GRAD0_opsz24__2_
             Me.btnActualizar.Location = New System.Drawing.Point(380, 4)
@@ -147,6 +152,7 @@
             '
             Me.lblSucursal.AutoSize = True
             Me.lblSucursal.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.lblSucursal.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
             Me.lblSucursal.Location = New System.Drawing.Point(768, 15)
             Me.lblSucursal.Name = "lblSucursal"
             Me.lblSucursal.Size = New System.Drawing.Size(65, 13)
@@ -157,6 +163,7 @@
             '
             Me.lblEmpresa.AutoSize = True
             Me.lblEmpresa.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.lblEmpresa.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
             Me.lblEmpresa.Location = New System.Drawing.Point(491, 16)
             Me.lblEmpresa.Name = "lblEmpresa"
             Me.lblEmpresa.Size = New System.Drawing.Size(60, 13)
@@ -170,6 +177,7 @@
             Me.crvActivoCustodio.Cursor = System.Windows.Forms.Cursors.Default
             Me.crvActivoCustodio.Location = New System.Drawing.Point(0, 3)
             Me.crvActivoCustodio.Name = "crvActivoCustodio"
+            Me.crvActivoCustodio.ShowLogo = False
             Me.crvActivoCustodio.Size = New System.Drawing.Size(990, 538)
             Me.crvActivoCustodio.TabIndex = 1
             Me.crvActivoCustodio.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None
@@ -178,7 +186,7 @@
             '
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-            Me.BackColor = System.Drawing.Color.White
+            Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(185, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(227, Byte), Integer))
             Me.ClientSize = New System.Drawing.Size(993, 598)
             Me.Controls.Add(Me.scReporteActivoFijoCustodio)
             Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow

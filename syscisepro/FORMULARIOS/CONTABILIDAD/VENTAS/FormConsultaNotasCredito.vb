@@ -129,7 +129,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                     _porcentajeIva = epr.Rows(0)(21)
                 End If
             Catch ex As Exception
-                MsgBox("CARGAR DATOS EMPRESA." & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "MENSAJE DE EXCEPCIÓN")
+                MsgBox("CARGAR DATOS EMPRESA." & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
             End Try
         End Sub
         Private Sub rbPorCliente_CheckedChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles rbPorCliente.CheckedChanged
@@ -265,7 +265,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                 dgvNotaCredito.ReadOnly = True
                 SumarTotalFacturas()
             Catch ex As Exception
-                MsgBox("METODO CARGAR FACTURA VENTA" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "MENSAJE DE EXCEPCIÓN")
+                MsgBox("METODO CARGAR FACTURA VENTA" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
             End Try
         End Sub
         Private Sub SumarTotalFacturas()
@@ -304,7 +304,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                 CargarNotasCreditoVenta()
                 ValidarValorAsiento()
             Catch ex As Exception
-                MsgBox("CARGAR DATOS" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "MENSAJE DE EXCEPCIÓN")
+                MsgBox("CARGAR DATOS" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
             End Try
             SumarTotalFacturas()
         End Sub
@@ -331,7 +331,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                     formAsientoDiario.ShowDialog()
                 End If
             Catch ex As Exception
-                MsgBox("ERROR AL CARGAR ASIENTO" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "MENSAJE DE EXCEPCIÓN")
+                MsgBox("ERROR AL CARGAR ASIENTO" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
             End Try
         End Sub
         Private Sub dgvNotaCredito_SelectionChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles dgvNotaCredito.SelectionChanged
@@ -347,13 +347,13 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
             If dgvNotaCredito.Rows.Count > 0 Then
                 ExportarDatosExcel(dgvNotaCredito, "NOTAS DE CREDITO")
             Else
-                MsgBox("PRIMERO REALICE UNA CONSULTA", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                MsgBox("PRIMERO REALICE UNA CONSULTA", MsgBoxStyle.Exclamation, "Mensaje de validación")
             End If
         End Sub
         Private Sub ExportarDatosExcel(ByVal dgvAsientosDiario As DataGridView, ByVal titulo As String)
             Try
                 If dgvAsientosDiario.Rows.Count = 0 Then
-                    MsgBox("NO HAY DATOS QUE EXPORTAR!", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                    MsgBox("No hay datos que exportar!", MsgBoxStyle.Exclamation, "Mensaje de validación")
                     Return
                 End If
 
@@ -422,7 +422,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                 app.DisplayAlerts = True
                 'workbook.SaveAs(sfd.FileName, Excel.XlFileFormat.xlWorkbookNormal, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Excel.XlSaveAsAccessMode.xlExclusive, Type.Missing, Type.Missing, Type.Missing, Type.Missing)
             Catch ex As Exception
-                MessageBox.Show("HUBO UN PROBLEMA AL EXPORTAR DATOS!", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                MessageBox.Show("Hubo un problema al exportar datos!", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Error)
             End Try
         End Sub
         Private Sub btnSalir_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnSalir.Click
@@ -486,7 +486,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                     _rucCliente = dgvCliente.Rows(0).Cells(3).Value
                 End If
             Catch ex As Exception
-                MsgBox("CARGAR DATOS CLIENTE." & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "MENSAJE DE EXCEPCIÓN")
+                MsgBox("CARGAR DATOS CLIENTE." & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
             End Try
         End Sub
         Private Sub CargarFacturasVenta()
@@ -606,9 +606,9 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                 writer.Flush()
                 writer.Close()
 
-                MsgBox("NOTA DE CRÉDITO ELECTRÓNICA" & vbNewLine & "XML GENERADO CORRECTAMENTE", MsgBoxStyle.Information, "MENSAJE DE INFORMACIÓN.")
+                MsgBox("NOTA DE CRÉDITO ELECTRÓNICA" & vbNewLine & "XML GENERADO CORRECTAMENTE", MsgBoxStyle.Information, "Mensaje de información.")
             Catch ex As Exception
-                MsgBox("ERROR AL GENERAR NOTA DE CRÉDITO ELECTRÓNICA" & vbNewLine & ex.Message, MsgBoxStyle.Exclamation, "MENSAJE DE INFORMACIÓN.")
+                MsgBox("ERROR AL GENERAR NOTA DE CRÉDITO ELECTRÓNICA" & vbNewLine & ex.Message, MsgBoxStyle.Exclamation, "Mensaje de información.")
             End Try
         End Sub
 
@@ -1289,10 +1289,10 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                 xmlDoc = Nothing
                 File.Delete(ruta)
                 writer.Close()
-                MsgBox("LIQUIDACION DE COMPRA CREADA CORRECTAMENTE!", MsgBoxStyle.Information, "MENSAJE DE VALIDACIÓN")
+                MsgBox("LIQUIDACION DE COMPRA CREADA CORRECTAMENTE!", MsgBoxStyle.Information, "Mensaje de validación")
 
             Catch ex As Exception
-                MsgBox("HUBO UN PROBLEMA AL CARGAR EL XML! " & vbNewLine & ex.Message, MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                MsgBox("HUBO UN PROBLEMA AL CARGAR EL XML! " & vbNewLine & ex.Message, MsgBoxStyle.Exclamation, "Mensaje de validación")
             End Try
 
         End Sub

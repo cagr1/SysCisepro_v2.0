@@ -11,6 +11,7 @@ Imports ClassLibraryCisepro.CONTABILIDAD.RETENCIONES_EMITIDAS
 Imports syscisepro.FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
 Imports ClassLibraryCisepro.CONTABILIDAD.VENTAS
 Imports ClassLibraryCisepro.CONTABILIDAD.LIBRO_DIARIO
+Imports Krypton.Toolkit
 
 
 Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
@@ -342,13 +343,17 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
         End Sub
         Private Sub ToolStripMenuItem1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ToolStripMenuItem1.Click
             If dgvComprobantesCompra.RowCount = 0 Then
-                MessageBox.Show("DEBE ESCOGER UNA FACTURA!", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                'MessageBox.Show("DEBE ESCOGER UNA FACTURA!", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                KryptonMessageBox.Show("Debe escoger una factura!", "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                 Return
             End If
 
             If lblIdComprobanteCompra.Text <> "..." And lblIdComprobanteRetencion.Text <> "..." Then
-                If MessageBox.Show("SI ANULA LA RETENCIÓN DE ESTA FACTRURA SE MODIFICARÁ EL ASIENTO Y LOS PAGOS CORRESPONDIETNES, DESEA ANULARLA?", "REGISTRAR RETENCIÓN", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
-                    _sqlCommands.Clear()
+                'If MessageBox.Show("SI ANULA LA RETENCIÓN DE ESTA FACTRURA SE MODIFICARÁ EL ASIENTO Y LOS PAGOS CORRESPONDIETNES, DESEA ANULARLA?", "REGISTRAR RETENCIÓN", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
+                If KryptonMessageBox.Show("Si anula la retención de esta factrura se modificará el asiento y los pagos correspondientes", "Mensaje del sistema", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) = DialogResult.No Then
+                    Return
+                End If
+                _sqlCommands.Clear()
 
                     Dim idasientoCuenta = 0
                     Dim valorCuenta = 0.0
@@ -357,7 +362,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
                             idasientoCuenta = row.Cells(0).Value.ToString()
                             valorCuenta = CDec(row.Cells(7).Value)
                         End If
-                        If (row.Cells(2).Value.ToString().StartsWith("201070101") Or _
+                        If (row.Cells(2).Value.ToString().StartsWith("201070101") Or
                             row.Cells(2).Value.ToString().StartsWith("201070102")) And row.Cells(3).Value.ToString().Contains("RETEN") Then
                             With _objetoAsientoLibroDiario
                                 .IdAsiento = row.Cells(0).Value.ToString().Trim()
@@ -411,15 +416,29 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
 
                     Dim nombreU As String = "ANULAR COMPROBANTE RETENCION COMPRA " & UserName
                     Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, String.Empty)
-                    If res(0) Then
-                        LimpiarParametrosRetencion()
-                        dgvComprobantesCompra_SelectionChanged(Nothing, Nothing)
-                    End If
-                    MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
+                If res(0) Then
+                    LimpiarParametrosRetencion()
+                    dgvComprobantesCompra_SelectionChanged(Nothing, Nothing)
                 End If
+                Dim messageIcon As KryptonMessageBoxIcon
+                If res(0) Then
+                    messageIcon = KryptonMessageBoxIcon.Information
+                Else
+                    messageIcon = KryptonMessageBoxIcon.Exclamation
+                End If
+                KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, messageIcon)
+
+
+                'MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
+
             Else
-                MessageBox.Show("LA FACTURA SELECCIONADA NO TIENE REGISTRADO UN COMPROBANTE DE RETENCIÓN!", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                'MessageBox.Show("LA FACTURA SELECCIONADA NO TIENE REGISTRADO UN COMPROBANTE DE RETENCIÓN!", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                KryptonMessageBox.Show("La factura seleccionada no tiene registrado un comprobante de retención!", "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
             End If
+        End Sub
+
+        Private Sub lblIdComprobanteRetencion_Click(sender As Object, e As EventArgs) Handles lblIdComprobanteRetencion.Click
+
         End Sub
     End Class
 End Namespace

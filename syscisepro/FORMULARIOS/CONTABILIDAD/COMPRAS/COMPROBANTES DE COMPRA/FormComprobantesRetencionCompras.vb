@@ -16,6 +16,7 @@ Imports System.Xml
 Imports System.Text
 Imports syscisepro.FORMULARIOS.CONTABILIDAD.PORCENTAJES_RETENCION
 Imports ClassLibraryCisepro.USUARIOS_DEL_SISTEMA
+Imports Krypton.Toolkit
 
 Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
     ''' <summary>
@@ -120,6 +121,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
             End Select
             dgvAsientoComprobanteCompra.Font = New Font("Roboto", 8, FontStyle.Regular)
             dgvDetalleComprobanteRetencion.Font = New Font("Roboto", 8, FontStyle.Regular)
+            dgvComprobantesCompra.Font = New Font("Roboto", 8, FontStyle.Regular)
             _sqlCommands = New List(Of SqlCommand)
             cmbBienServicio.SelectedIndex = 0
             dtpMes.Value = New DateTime(DateTime.Now.Year, DateTime.Now.Month, 1)
@@ -353,36 +355,55 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
         Private Sub btnNuevo_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnNuevo.Click
             If dgvPagosComprobanteCompra.RowCount > 0 Then
                 If CDec(dgvPagosComprobanteCompra.Rows(0).Cells(4).Value) = 0 Then
-                    MsgBox("LA FACTURA YA HA SIDO PAGADA EN TOTALIDAD!", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                    'MsgBox("LA FACTURA YA HA SIDO PAGADA EN TOTALIDAD!", MsgBoxStyle.Exclamation, "Mensaje de validación")
+                    KryptonMessageBox.Show("La factura ya ha sido pagada en totalidad!", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                     Return
                 End If
             End If
 
             If lblIdComprobanteCompra.Text = "..." Then
-                MsgBox("DEBE SELECCIONAR UNA COMPRA PARA GENERAR LA RETENCIÓN CORRESPONDIENTE!", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                'MsgBox("DEBE SELECCIONAR UNA COMPRA PARA GENERAR LA RETENCIÓN CORRESPONDIENTE!", MsgBoxStyle.Exclamation, "Mensaje de validación")
+                KryptonMessageBox.Show("Debe seleccionar una compra para generar la retención correspondiente!", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                 Return
             End If
 
             If lblIdComprobanteRetencion.Text <> "..." Then
-                MsgBox("YA EXISTE UNA RETENCIÓN REGISTRADA PARA ESTA COMPRA!", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                'MsgBox("YA EXISTE UNA RETENCIÓN REGISTRADA PARA ESTA COMPRA!", MsgBoxStyle.Exclamation, "Mensaje de validación")
+                KryptonMessageBox.Show("Ya existe una retención registrada para esta compra!", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                 Return
             End If
 
             If _objetoAts.ValidarCompraConDeclaracion(_tipoCon, dtpFechaEmisionComprobanteCompra.Value) Then
-                MsgBox("EL ATS DEL MES " & dtpFechaEmisionComprobanteCompra.Value.Month.ToString & " DEL AÑO " & dtpFechaEmisionComprobanteCompra.Value.Year.ToString & " YA FUE GENERADO." & vbNewLine & " SI NECESITA MODIFICAR ESTE COMPROBANTE SOLICITE UNA SUSTUTIVA A LA CONTADORA Y HAGA UNA REQUISICIÓN AL DEPARTAMENTO DE SISTEMAS.", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                'MsgBox("EL ATS DEL MES " & dtpFechaEmisionComprobanteCompra.Value.Month.ToString & " DEL AÑO " & dtpFechaEmisionComprobanteCompra.Value.Year.ToString & " YA FUE GENERADO." & vbNewLine & " SI NECESITA MODIFICAR ESTE COMPROBANTE SOLICITE UNA SUSTUTIVA A LA CONTADORA Y HAGA UNA REQUISICIÓN AL DEPARTAMENTO DE SISTEMAS.", MsgBoxStyle.Exclamation, "Mensaje de validación")
+                KryptonMessageBox.Show("El ATS del mes " & dtpFechaEmisionComprobanteCompra.Value.Month.ToString & " del año " & dtpFechaEmisionComprobanteCompra.Value.Year.ToString & " ya fue generado." & vbNewLine & " Si necesita modificar este comprobante solicite una sustutiva a la contadora y haga una requisición al departamento de sistemas.", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                 Return
             End If
             _state = 1
 
             LimpiarParametrosRetencion()
 
-            gbNombreComercialProveedor.Enabled = False
+            'gbNombreComercialProveedor.Enabled = False
+            txtNombreComercialProveedorGeneral.Enabled = False
+            dtpMes.Enabled = False
             dgvComprobantesCompra.Enabled = False
             rbPtoEmision001.Enabled = True
             rbPtoEmision002.Enabled = True
             rbPtoEmision002.Checked = True
 
-            gbRetencion.Enabled = True
+            'gbRetencion.Enabled = True
+            txtNumAutoSRIComprobanteRetencion.Enabled = True
+            txtNumeroComprobanteRetencion.Enabled = True
+            dtpComprobanteRetencion.Enabled = True
+            cmbImpuesto.Enabled = True
+            cmbConcepto.Enabled = True
+            cmbContribuyente.Enabled = True
+            txtBaseImponible.Enabled = True
+            txtPorcentajeRetencion.Enabled = True
+            btnAgregarImpuesto.Enabled = True
+            btnEliminarImpuesto.Enabled = True
+            txtValorRetencion.Enabled = True
+            cmbBienServicio.Enabled = True
+
             btnNuevo.Enabled = False
             btnGuardar.Enabled = True
             btnCancelar.Enabled = True
@@ -421,13 +442,28 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
             LimpiarParametrosGeneral()
             LimpiarParametrosRetencion()
 
-            gbNombreComercialProveedor.Enabled = True
+            'gbNombreComercialProveedor.Enabled = True
+            txtNombreComercialProveedorGeneral.Enabled = True
+            dtpMes.Enabled = True
             dgvComprobantesCompra.Enabled = True
             rbPtoEmision001.Enabled = False
             rbPtoEmision002.Enabled = False
             rbPtoEmision002.Checked = True
 
-            gbRetencion.Enabled = False
+            'gbRetencion.Enabled = False
+            txtNumAutoSRIComprobanteRetencion.Enabled = False
+            txtNumeroComprobanteRetencion.Enabled = False
+            dtpComprobanteRetencion.Enabled = False
+            cmbImpuesto.Enabled = False
+            cmbConcepto.Enabled = False
+            cmbContribuyente.Enabled = False
+            txtBaseImponible.Enabled = False
+            txtPorcentajeRetencion.Enabled = False
+            btnAgregarImpuesto.Enabled = False
+            btnEliminarImpuesto.Enabled = False
+            txtValorRetencion.Enabled = False
+            cmbBienServicio.Enabled = False
+
             btnNuevo.Enabled = True
             btnGuardar.Enabled = False
             btnCancelar.Enabled = False
@@ -460,17 +496,21 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
             dgvDetalleComprobanteRetencion.EndEdit()
 
             If txtNumeroComprobanteRetencion.TextLength <> 15 Then
-                MsgBox("EL NÚMERO DE DE COMPROBANTE DE RETENCIÓN NO PUEDE TENER MENOS DE 15 DÍGITOS. POR FAVOR REVISE", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                'MsgBox("EL NÚMERO DE DE COMPROBANTE DE RETENCIÓN NO PUEDE TENER MENOS DE 15 DÍGITOS. POR FAVOR REVISE", MsgBoxStyle.Exclamation, "Mensaje de validación")
+                KryptonMessageBox.Show("El número de de comprobante de retención no puede tener menos de 15 dígitos. Por favor revise", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                 Return
             End If
 
             If _objetoAts.ValidarCompraConDeclaracion(_tipoCon, dtpFechaEmisionComprobanteCompra.Value) Then ' si el ats del mes del comprobante ya fue generado
-                MsgBox("EL ATS DEL MES " & dtpFechaEmisionComprobanteCompra.Value.Month.ToString & " DEL AÑO " & dtpFechaEmisionComprobanteCompra.Value.Year.ToString & " YA FUE GENERADO." & vbNewLine & " SI NECESITA MODIFICAR ESTE COMPROBANTE SOLICITE UNA SUSTUTIVA A LA CONTADORA Y HAGA UNA REQUISICIÓN AL DEPARTAMENTO DE SISTEMAS.", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                'MsgBox("EL ATS DEL MES " & dtpFechaEmisionComprobanteCompra.Value.Month.ToString & " DEL AÑO " & dtpFechaEmisionComprobanteCompra.Value.Year.ToString & " YA FUE GENERADO." & vbNewLine & " SI NECESITA MODIFICAR ESTE COMPROBANTE SOLICITE UNA SUSTUTIVA A LA CONTADORA Y HAGA UNA REQUISICIÓN AL DEPARTAMENTO DE SISTEMAS.", MsgBoxStyle.Exclamation, "Mensaje de validación")
+                KryptonMessageBox.Show("El ATS del mes " & dtpFechaEmisionComprobanteCompra.Value.Month.ToString & " del año " & dtpFechaEmisionComprobanteCompra.Value.Year.ToString & " ya fue generado." & vbNewLine & " Si necesita modificar este comprobante solicite una sustutiva a la contadora y haga una requisición al departamento de sistemas.", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
             Else
                 If dtpComprobanteRetencion.Value < dtpFechaEmisionComprobanteCompra.Value Then ' si la fecha de la retención es menor a la de la compra
-                    MsgBox("LA FECHA DE LA RETENCIÓN NO PUEDE SER MENOR A LA DE LA COMPRA.", MsgBoxStyle.Critical, "MENSAJE DE VALICACIÓN")
+                    'MsgBox("LA FECHA DE LA RETENCIÓN NO PUEDE SER MENOR A LA DE LA COMPRA.", MsgBoxStyle.Critical, "Mensaje de validación")
+                    KryptonMessageBox.Show("La fecha de la retención no puede ser menor a la de la compra.", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
                 Else
-                    If MessageBox.Show("¿ESTA SEGURA QUE DESEA GUARDAR GENERAR ESTA RETENCIÓN?", "MENSAJE DE VALIDACIÓN", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> DialogResult.Yes Then Return
+                    If KryptonMessageBox.Show("¿Esta segura que desea guardar generar esta retención?", "Mensaje de validación", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) <> DialogResult.Yes Then Return
+                    'If MessageBox.Show("¿ESTA SEGURA QUE DESEA GUARDAR GENERAR ESTA RETENCIÓN?", "Mensaje de validación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> DialogResult.Yes Then Return
                     _sqlCommands.Clear()
 
                     GuardarComprobanteRetencion()
@@ -502,23 +542,40 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
 
                         NuevoRegistroAsientoDiarioRetencion(numasientoCuenta, numLibro)
                         If (_objetoAsientoLibroDiario.CodigoCuentaAsiento + "").Trim().Length = 0 Then
-                            MsgBox("NO SE PUEDE GUARDAR." & vbNewLine & "LA CUENTA PARA EL CÓDIGO DE RETENCIÓN ESCOGIDO NO HA SIDO DEFINIDA EN LA BD!", MsgBoxStyle.Exclamation, "MENSAJE DE VALICACIÓN")
+                            'MsgBox("No se puede guardar." & vbNewLine & "La cuenta para el código de retención escogido no ha sido definida en la bd!", MsgBoxStyle.Exclamation, "Mensaje de validación")
+                            KryptonMessageBox.Show("No se puede guardar." & vbNewLine & "La cuenta para el código de retención escogido no ha sido definida en la bd!", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                             Return
                         End If
                     End If
 
-                    Dim nombreU As String = "AJUSTE-COMPROBANTE-RETENCION " & UserName
+                    Dim nombreU As String = "Ajuste-comprobante-retencion " & UserName
                     Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, nombreU)
                     If res(0) Then
                         LimpiarParametrosRetencion()
 
-                        gbNombreComercialProveedor.Enabled = True
+                        'gbNombreComercialProveedor.Enabled = True
+                        txtNombreComercialProveedorGeneral.Enabled = True
+                        dtpMes.Enabled = True
                         dgvComprobantesCompra.Enabled = True
 
                         rbPtoEmision001.Enabled = False
                         rbPtoEmision002.Enabled = False
 
-                        gbRetencion.Enabled = False
+                        'gbRetencion.Enabled = False
+                        txtNumAutoSRIComprobanteRetencion.Enabled = False
+                        txtNumeroComprobanteRetencion.Enabled = False
+                        dtpComprobanteRetencion.Enabled = False
+                        cmbImpuesto.Enabled = False
+                        cmbConcepto.Enabled = False
+                        cmbContribuyente.Enabled = False
+                        txtBaseImponible.Enabled = False
+                        txtPorcentajeRetencion.Enabled = False
+                        btnAgregarImpuesto.Enabled = False
+                        btnEliminarImpuesto.Enabled = False
+                        txtValorRetencion.Enabled = False
+                        cmbBienServicio.Enabled = False
+
+
                         btnNuevo.Enabled = True
                         btnGuardar.Enabled = False
                         btnCancelar.Enabled = False
@@ -528,7 +585,17 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
                         dgvComprobantesCompra_SelectionChanged(Nothing, Nothing)
 
                     End If
-                    MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
+
+                    Dim messageIcon As KryptonMessageBoxIcon
+                    If res(0) Then
+                        messageIcon = KryptonMessageBoxIcon.Information
+                    Else
+                        messageIcon = KryptonMessageBoxIcon.Exclamation
+                    End If
+                    KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, messageIcon)
+
+
+                    'MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
                 End If
             End If
         End Sub
@@ -552,7 +619,8 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
                             Dim valrenta = Math.Round((CDec(response) * porcent) / 100, 2, MidpointRounding.AwayFromZero)
                             dgvDetalleComprobanteRetencion.Rows.Add(dtpComprobanteRetencion.Value.Year, _objetoConceptos.BuscarCodigoConceptoXIdConcepto(_tipoCon, CInt(cmbConcepto.SelectedValue)), CDec(response), cmbImpuesto.Text, porcent, Math.Round(valrenta, 3, MidpointRounding.AwayFromZero), cod, cue)
                         Else
-                            MsgBox("POR FAVOR INGRESE SOLO NÚMEROS" & vbNewLine & "EL SEPARADOR DECIMAL ES EL '.'", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                            'MsgBox("POR FAVOR INGRESE SOLO NÚMEROS" & vbNewLine & "EL SEPARADOR DECIMAL ES EL '.'", MsgBoxStyle.Exclamation, "Mensaje de validación")
+                            KryptonMessageBox.Show("Por favor ingrese solo números" & vbNewLine & "El separador decimal es el '.'", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                         End If
                     ElseIf CInt(cmbImpuesto.SelectedValue) = 2 Then  '-=-=-=-=-= SI ES IVA =-=-=-=-=- 
                         Dim porret As DataTable
@@ -575,16 +643,19 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
                             Dim valiva = Math.Round((CDbl(response) * porcent) / 100, 2, MidpointRounding.AwayFromZero)
                             dgvDetalleComprobanteRetencion.Rows.Add(dtpComprobanteRetencion.Value.Year, _objetoConceptos.BuscarCodigoConceptoXIdConcepto(_tipoCon, CInt(cmbConcepto.SelectedValue)), CDec(response), cmbImpuesto.Text, porcent, Math.Round(valiva, 2, MidpointRounding.AwayFromZero), cod, cue)
                         Else
-                            MsgBox("POR FAVOR INGRESE SOLO NÚMEROS" & vbNewLine & "EL SEPARADOR DECIMAL ES EL '.'", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                            'MsgBox("POR FAVOR INGRESE SOLO NÚMEROS" & vbNewLine & "EL SEPARADOR DECIMAL ES EL '.'", MsgBoxStyle.Exclamation, "Mensaje de validación")
+                            KryptonMessageBox.Show("Por favor ingrese solo números" & vbNewLine & "El separador decimal es el '.'", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                         End If
                     End If
 
                     CalcularTotalRetencion()
                 Else
-                    MsgBox("SELECCIONE LOS PARAMETROS NECESARIOS: IMPUESTO, CONCEPTO, CONTRIBUYENTE.", MsgBoxStyle.Information, "MENSAJE DE INFORMACIÓN")
+                    'MsgBox("SELECCIONE LOS PARAMETROS NECESARIOS: IMPUESTO, CONCEPTO, CONTRIBUYENTE.", MsgBoxStyle.Information, "Mensaje de información")
+                    KryptonMessageBox.Show("Seleccione los parametros necesarios: Impuesto, Concepto, Contribuyente.", "Mensaje de información", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
                 End If
             Else
-                MsgBox("NO HA INGRESADO DATOS DE FACTURA.", MsgBoxStyle.Information, "MENSAJE DE INFORMACIÓN")
+                'MsgBox("NO HA INGRESADO DATOS DE FACTURA.", MsgBoxStyle.Information, "Mensaje de información")
+                KryptonMessageBox.Show("No ha ingresado datos de factura.", "Mensaje de información", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
             End If
         End Sub
         Private Sub btnEliminarImpuesto_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnEliminarImpuesto.Click
@@ -834,7 +905,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
                     End Select
 
                     If CInt(_estadoCompRet) > 12 Then ' pregunta si es retención electrónica
-                        If MessageBox.Show("¿ESTA SEGURA QUE DESEA GENERAR UN XML DE LA RETENCIÓN?", "MENSAJE DE VALIDACIÓN", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> DialogResult.Yes Then Return
+                        If MessageBox.Show("¿ESTA SEGURA QUE DESEA GENERAR UN XML DE LA RETENCIÓN?", "Mensaje de validación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> DialogResult.Yes Then Return
                         _sqlCommands.Clear()
 
                         _tipoAmbiente = "2" ' produccion
@@ -867,23 +938,36 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
                                 If res(0) Then
                                     ExportarXml() ' exporta el comprobante de retención electónico a formato XML
                                 Else
-                                    MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
+                                    Dim messageIcon As KryptonMessageBoxIcon
+                                    If res(0) Then
+                                        messageIcon = KryptonMessageBoxIcon.Information
+                                    Else
+                                        messageIcon = KryptonMessageBoxIcon.Exclamation
+                                    End If
+                                    KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, messageIcon)
+
+                                    'MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
                                 End If
 
                             Else
-                                MsgBox("CLAVE DE ACCESO NO ES VÁLIDA!")
+                                'MsgBox("CLAVE DE ACCESO NO ES VÁLIDA!")
+                                KryptonMessageBox.Show("Clave de acceso no es válida!", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                             End If
                         Else
-                            MsgBox("EL NUMERO DE COMPROBANTE 000000000000000 NO ES VALIDO PARA GENERAR XML", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                            'MsgBox("EL NUMERO DE COMPROBANTE 000000000000000 NO ES VALIDO PARA GENERAR XML", MsgBoxStyle.Exclamation, "Mensaje de validación")
+                            KryptonMessageBox.Show("El número de comprobante 000000000000000 no es válido para generar XML", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                         End If
                     Else
-                        MsgBox("EL COMPROBANTE SELECCIONADO NO TIENE RETENCION ELECTRÓNICA PARA GENERAR XML", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                        'MsgBox("EL COMPROBANTE SELECCIONADO NO TIENE RETENCION ELECTRÓNICA PARA GENERAR XML", MsgBoxStyle.Exclamation, "Mensaje de validación")
+                        KryptonMessageBox.Show("El comprobante seleccionado no tiene retención electrónica para generar XML", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                     End If
                 Else
-                    MsgBox("SELECCIONE UN COMPROBANTE DE COMPRA CON RETENCIÓN PARA GENERAR XML", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                    'MsgBox("SELECCIONE UN COMPROBANTE DE COMPRA CON RETENCIÓN PARA GENERAR XML", MsgBoxStyle.Exclamation, "Mensaje de validación")
+                    KryptonMessageBox.Show("Seleccione un comprobante de compra con retención para generar XML", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                 End If
             Catch ex As Exception
-                MsgBox("HUBO UN PROBLEMA AL GENERAR XML!" & vbNewLine & ex.Message, MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                'MsgBox("HUBO UN PROBLEMA AL GENERAR XML!" & vbNewLine & ex.Message, MsgBoxStyle.Exclamation, "Mensaje de validación")
+                KryptonMessageBox.Show("Hubo un problema al generar XML!" & vbNewLine & ex.Message, "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
             End Try
         End Sub
         Private Sub ExportarXml()
@@ -974,9 +1058,11 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
                 writer.Flush()
                 writer.Close()
 
-                MsgBox("RETENCIÓN ELECTRÓNICA" & vbNewLine & "XML GENERADO CORRECTAMENTE", MsgBoxStyle.Information, "MENSAJE DE INFORMACIÓN.")
+                'MsgBox("RETENCIÓN ELECTRÓNICA" & vbNewLine & "XML GENERADO CORRECTAMENTE", MsgBoxStyle.Information, "Mensaje de información.")
+                KryptonMessageBox.Show("Retención electrónica" & vbNewLine & "XML generado correctamente", "Mensaje de información", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
             Catch ex As Exception
-                MsgBox("ERROR AL GENERAR RETENCIÓN ELECTRÓNICA" & vbNewLine & ex.Message, MsgBoxStyle.Exclamation, "MENSAJE DE INFORMACIÓN.")
+                'MsgBox("ERROR AL GENERAR RETENCIÓN ELECTRÓNICA" & vbNewLine & ex.Message, MsgBoxStyle.Exclamation, "Mensaje de información.")
+                KryptonMessageBox.Show("Error al generar retención electrónica" & vbNewLine & ex.Message, "Mensaje de información", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
             End Try
         End Sub
 
@@ -1018,7 +1104,8 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
                 dgvDetalleComprobanteRetencion(5, e.RowIndex).Value = 0
                 dgvDetalleComprobanteRetencion(6, e.RowIndex).Value = String.Empty
                 dgvDetalleComprobanteRetencion(7, e.RowIndex).Value = String.Empty
-                MsgBox("HUBO UN PROBLEMA AL CALCULAR VALOR RETENIDO, INTENTE DE NUEVO.", MsgBoxStyle.Information, "MENSAJE DE INFORMACIÓN")
+                'MsgBox("HUBO UN PROBLEMA AL CALCULAR VALOR RETENIDO, INTENTE DE NUEVO.", MsgBoxStyle.Information, "Mensaje de información")
+                KryptonMessageBox.Show("Hubo un problema al calcular valor retenido, intente de nuevo.", "Mensaje de información", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
             End Try
             CalcularTotalRetencion()
         End Sub

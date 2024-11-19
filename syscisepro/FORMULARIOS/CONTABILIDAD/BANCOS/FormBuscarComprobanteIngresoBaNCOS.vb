@@ -53,7 +53,7 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
             Try
                 If dgvAsientosDiario.Rows.Count = 0 Then
 
-                    KryptonMessageBox.Show("NO HAY DATOS QUE EXPORTAR!", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
+                    KryptonMessageBox.Show("No hay datos que exportar!", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                     Return
                 End If
 
@@ -122,7 +122,7 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
                 app.DisplayAlerts = True
                 'workbook.SaveAs(sfd.FileName, Excel.XlFileFormat.xlWorkbookNormal, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Excel.XlSaveAsAccessMode.xlExclusive, Type.Missing, Type.Missing, Type.Missing, Type.Missing)
             Catch ex As Exception
-                MessageBox.Show("HUBO UN PROBLEMA AL EXPORTAR DATOS!\n" & ex.Message, "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                MessageBox.Show("Hubo un problema al exportar datos!\n" & ex.Message, "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Error)
             End Try
         End Sub
 
@@ -342,7 +342,7 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
                 f.Show()
             Else
 
-                KryptonMessageBox.Show("POR FAVOR SELECCIONE UN COMPROBANTE DE INGRESO", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
+                KryptonMessageBox.Show("Por favor seleccione un comprobante de ingreso", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
             End If
         End Sub
 
@@ -357,7 +357,7 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
                 End If
             Catch ex As Exception
 
-                KryptonMessageBox.Show("HUBO UN PROBLEMA AL SELECCIONAR EL COMPROBANTE DE INGRESO", "MENSAJE DE EXCEPCIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+                KryptonMessageBox.Show("Hubo un problema al seleccionar el comprobante de ingreso", "Mensaje de excepción", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
 
@@ -370,7 +370,7 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
                 f.Show()
             Else
 
-                KryptonMessageBox.Show("POR FAVOR SELECCIONE UN COMPROBANTE DE INGRESO", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
+                KryptonMessageBox.Show("Por favor seleccione un comprobante de ingreso", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
             End If
         End Sub
 

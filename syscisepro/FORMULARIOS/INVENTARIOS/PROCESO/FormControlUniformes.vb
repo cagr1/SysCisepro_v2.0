@@ -170,7 +170,7 @@ Namespace FORMULARIOS.INVENTARIOS.PROCESO
                     cuantos = 0 
                 Next 
             Catch ex As Exception
-                MsgBox("NO SE PUEDE PROCESAR" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "MENSAJE DE EXCEPCIÓN")
+                MsgBox("NO SE PUEDE PROCESAR" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
             End Try
         End Sub
 
@@ -204,7 +204,7 @@ Namespace FORMULARIOS.INVENTARIOS.PROCESO
 
         Public Sub ExportarDatosExcel(ByVal DataGridViewExp As DataGridView, ByVal titulo As String)
             If DataGridViewExp.Rows.Count = 0 Then
-                MsgBox("NO HAY DATOS QUE EXPORTAR!", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                MsgBox("No hay datos que exportar!", MsgBoxStyle.Exclamation, "Mensaje de validación")
                 Return
             End If
 
@@ -274,7 +274,7 @@ Namespace FORMULARIOS.INVENTARIOS.PROCESO
             Try
                 ExportarDatosExcel(dgvCustodios, If(chkCustodio.Checked, "REPORTE POR CUSTODIO", "REPORTE DE ITEM / KARDEX"))
             Catch ex As Exception
-                MsgBox("NO SE PUEDE PROCESAR" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "MENSAJE DE EXCEPCIÓN")
+                MsgBox("NO SE PUEDE PROCESAR" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
             End Try
         End Sub
 
@@ -282,7 +282,7 @@ Namespace FORMULARIOS.INVENTARIOS.PROCESO
             Try
                 ExportarDatosExcel(dgvControl, If(chkCustodio.Checked, "CUSTODIO: " & dgvCustodios.CurrentRow.Cells(2).Value, "REPORTE DE ITEM / KARDEX"))
             Catch ex As Exception
-                MsgBox("NO SE PUEDE PROCESAR" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "MENSAJE DE EXCEPCIÓN")
+                MsgBox("NO SE PUEDE PROCESAR" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
             End Try
         End Sub
 

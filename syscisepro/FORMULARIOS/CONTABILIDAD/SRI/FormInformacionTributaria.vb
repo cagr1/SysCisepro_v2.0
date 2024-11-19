@@ -265,7 +265,7 @@ Namespace FORMULARIOS.CONTABILIDAD.SRI
             If dgvEmpresa.RowCount > 0 Then
                 llenarCamposEmpresaInformacionTributaria()
             Else
-                MsgBox("NO SE HA PODIDO CARGAR LA INFORMACIÓN DE LA EMPRESA", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                MsgBox("NO SE HA PODIDO CARGAR LA INFORMACIÓN DE LA EMPRESA", MsgBoxStyle.Exclamation, "Mensaje de validación")
             End If
         End Sub
          

@@ -26,7 +26,7 @@ using ClassLibraryCisepro3.ActivoFijo;
 using Krypton.Toolkit;
 using System.IO;
 using System.Drawing.Text;
-using MaterialSkin;
+
 
 
 
@@ -1722,7 +1722,7 @@ namespace SysCisepro3.Main
         }
         private void aRTÍCULOSPRODUCTOSToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form f = new syscisepro.FORMULARIOS.INVENTARIOS.PROCESO.FormProductosBodega { MdiParent = this, TipoCox = TipoCox };
+            Form f = new syscisepro.FORMULARIOS.INVENTARIOS.PROCESO.FormProductosBodega { MdiParent = this, TipoCox = TipoCox, UserName = ObjUsuario.Datos };
             f.Show();
         }
         private void kARDEXToolStripMenuItem_Click(object sender, EventArgs e)

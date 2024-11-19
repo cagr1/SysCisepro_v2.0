@@ -503,7 +503,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
             If _botonSeleccionado = 1 Then
                 Dim c = _objetoClienteGeneral.BuscarRazonSocialClienteGeneralXRuc(_tipoCon, txtRucCiClienteGeneral.Text)
                 If c <> "0" Then
-                    MsgBox("ESTE RUC YA SE ENCUANTRA REGISTRADO CON EL CLIENTE:" & vbNewLine & c, MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                    MsgBox("ESTE RUC YA SE ENCUANTRA REGISTRADO CON EL CLIENTE:" & vbNewLine & c, MsgBoxStyle.Exclamation, "Mensaje de validación")
                     txtRucCiClienteGeneral.Focus()
                 End If
             End If
@@ -634,14 +634,14 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                                                    v.ToString("N"),
                                                    frm.TextBox1.Text.Trim)
                         Else
-                            MessageBox.Show("Debe agregar el valor a debitar, correspondiente al convenio!", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                            MessageBox.Show("Debe agregar el valor a debitar, correspondiente al convenio!", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
                         End If
                     Else
-                        MessageBox.Show("Debe agregar todos los datos del convenio!", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                        MessageBox.Show("Debe agregar todos los datos del convenio!", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
                     End If
                 End If
             Catch ex As Exception
-                MessageBox.Show("Ocurrio un problema al agregar convenio: " & ex.Message, "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                MessageBox.Show("Ocurrio un problema al agregar convenio: " & ex.Message, "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
             End Try
         End Sub
         Private Sub DataGridView1_CellDoubleClick(ByVal sender As System.Object, ByVal e As Windows.Forms.DataGridViewCellEventArgs) Handles DataGridView1.CellDoubleClick
@@ -673,24 +673,24 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                             DataGridView1.CurrentRow.Cells(8).Value = v.ToString("N")
                             DataGridView1.CurrentRow.Cells(9).Value = frm.TextBox1.Text.Trim
                         Else
-                            MessageBox.Show("Debe agregar el valor a debitar, correspondiente al convenio!", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                            MessageBox.Show("Debe agregar el valor a debitar, correspondiente al convenio!", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
                         End If
                     Else
-                        MessageBox.Show("Debe agregar todos los datos del convenio!", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                        MessageBox.Show("Debe agregar todos los datos del convenio!", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
                     End If
                 End If
             Catch ex As Exception
-                MessageBox.Show("Ocurrio un problema al modificar convenio: " & ex.Message, "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                MessageBox.Show("Ocurrio un problema al modificar convenio: " & ex.Message, "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
             End Try
         End Sub
         Private Sub btnRemove_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnRemove.Click
             If DataGridView1.RowCount = 0 Then Return
-            If MessageBox.Show("Seguro que desea quitar este convenio", "MENSAJE DEL SISTEMA", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> DialogResult.Yes Then Return
+            If MessageBox.Show("Seguro que desea quitar este convenio", "Mensaje del sistema", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> DialogResult.Yes Then Return
             Try
                 If _botonSeleccionado = 2 Then _objetoConvenioCliente.QuitarRegistroConvenioClienteGeneral(_tipoCon, CInt(DataGridView1.CurrentRow.Cells(1).Value))
                 DataGridView1.Rows.Remove(DataGridView1.CurrentRow)
             Catch ex As Exception
-                MessageBox.Show("Ocurrio un problema al quitar convenio: " & ex.Message, "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                MessageBox.Show("Ocurrio un problema al quitar convenio: " & ex.Message, "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
             End Try
         End Sub
         Private Sub ToolStripMenuItem3_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ToolStripMenuItem3.Click
@@ -772,13 +772,13 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                 app.DisplayAlerts = True
                 'workbook.SaveAs(sfd.FileName, Excel.XlFileFormat.xlWorkbookNormal, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Excel.XlSaveAsAccessMode.xlExclusive, Type.Missing, Type.Missing, Type.Missing, Type.Missing)
             Catch ex As Exception
-                MessageBox.Show("HUBO UN PROBLEMA AL EXPORTAR DATOS!", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                MessageBox.Show("Hubo un problema al exportar datos!", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Error)
             End Try
         End Sub
         Private Sub btnAnular_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnAnular.Click
             If lblIdClienteGeneral.Text <> "..." Then
 
-                If MessageBox.Show("¿ESTA SEGURA QUE DESEA ANULAR?", "MENSAJE DE VALIDACIÓN", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> DialogResult.Yes Then Return
+                If MessageBox.Show("¿ESTA SEGURA QUE DESEA ANULAR?", "Mensaje de validación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> DialogResult.Yes Then Return
                 _sqlCommands.Clear()
 
                 ActualizarEstadoClienteGeneral()
@@ -793,7 +793,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                 MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
 
             Else
-                MsgBox("PARA ANULAR, PRIMERO SELECCIONE UN CLIENTE.", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                MsgBox("PARA ANULAR, PRIMERO SELECCIONE UN CLIENTE.", MsgBoxStyle.Exclamation, "Mensaje de validación")
             End If
         End Sub
         Private Sub ActualizarEstadoClienteGeneral()
@@ -806,7 +806,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
         Private Sub btnGuardar_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnGuardar.Click
             If ValidarParametros() Then
 
-                If MessageBox.Show("¿ESTA SEGURA QUE DESEA GUARDAR LOS CAMBIOS?", "MENSAJE DE VALIDACIÓN", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> DialogResult.Yes Then Return
+                If MessageBox.Show("¿ESTA SEGURA QUE DESEA GUARDAR LOS CAMBIOS?", "Mensaje de validación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> DialogResult.Yes Then Return
                 txtBuscarCliente.Text = txtApellidoNombreComercial.Text.Trim
                 _sqlCommands.Clear()
 
@@ -829,7 +829,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                 MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
 
             Else
-                MsgBox("NO SE PUEDE GUARDAR." & vbNewLine & "NO SE HAN LLENADO TODOS LOS CAMPOS NECESARIOS.", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                MsgBox("No se puede guardar." & vbNewLine & "NO SE HAN LLENADO TODOS LOS CAMPOS NECESARIOS.", MsgBoxStyle.Exclamation, "Mensaje de validación")
             End If
 
         End Sub
@@ -1201,7 +1201,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
 
             ' GUARDAR DIRECCIONES
             If Label44.Text = "..." Then Return
-            If MessageBox.Show("¿ESTA SEGURA QUE DESEA GUARDAR LOS CAMBIOS?", "MENSAJE DE VALIDACIÓN", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> DialogResult.Yes Then Return
+            If MessageBox.Show("¿ESTA SEGURA QUE DESEA GUARDAR LOS CAMBIOS?", "Mensaje de validación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> DialogResult.Yes Then Return
             _sqlCommands.Clear()
 
             Dim id = _objetoDireccionesFacturacion.BuscarMayorIdDireccionFacturacion(_tipoCon) + 1

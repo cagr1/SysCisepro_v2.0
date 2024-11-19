@@ -157,7 +157,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.PROVEEDORES
         End Sub
         Private Sub btnModificarProveedorGeneral_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnModificarProveedorGeneral.Click
             If txtIdProveedorGeneral.Text = "" Then
-                MsgBox("NO HA SELECCIONA NINGÚN REGISTRO.", MsgBoxStyle.Information, "MENSAJE DE INFORMACIÓN")
+                MsgBox("NO HA SELECCIONA NINGÚN REGISTRO.", MsgBoxStyle.Information, "Mensaje de información")
             Else
                 HabilitadoModificar()
                 _botonSeleccionado = 2
@@ -342,7 +342,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.PROVEEDORES
                 app.DisplayAlerts = True
                 'workbook.SaveAs(sfd.FileName, Excel.XlFileFormat.xlWorkbookNormal, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Excel.XlSaveAsAccessMode.xlExclusive, Type.Missing, Type.Missing, Type.Missing, Type.Missing)
             Catch ex As Exception
-                MessageBox.Show("HUBO UN PROBLEMA AL EXPORTAR DATOS!", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                MessageBox.Show("Hubo un problema al exportar datos!", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Error)
             End Try
         End Sub
 
@@ -351,7 +351,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.PROVEEDORES
             If r.Rows.Count > 0 Then
                 If Not txtIdProveedorGeneral.Text.Trim.Equals(r(0)(0).ToString.Trim) Then
                     If txtRucCiProveedorGeneral.Text.Trim.Equals(r(0)(2)) Then
-                        MsgBox("ESTE C.I./R.U.C. YA SE ENCUANTRA REGISTRADO CON EL PROVEEDOR:" & vbNewLine & r(0)(3), MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                        MsgBox("ESTE C.I./R.U.C. YA SE ENCUANTRA REGISTRADO CON EL PROVEEDOR:" & vbNewLine & r(0)(3), MsgBoxStyle.Exclamation, "Mensaje de validación")
                         txtRucCiProveedorGeneral.Focus()
                     End If
                 End If
@@ -376,12 +376,12 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.PROVEEDORES
         End Function
         Private Sub btnGuardarProveedorGeneral_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnGuardarProveedorGeneral.Click
             If cbxCiruc.SelectedIndex = 0 And txtRucCiProveedorGeneral.Text.Trim.Length <> 10 Then
-                MessageBox.Show("La C.I. ingresada no es válida!", "MENSAJE DE VALIDACIÓN", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                MessageBox.Show("La C.I. ingresada no es válida!", "Mensaje de validación", MessageBoxButtons.OK, MessageBoxIcon.Warning)
                 Return
             End If
 
             If cbxCiruc.SelectedIndex = 1 And txtRucCiProveedorGeneral.Text.Trim.Length <> 13 Then
-                MessageBox.Show("El R.U.C. ingresado no es válido!", "MENSAJE DE VALIDACIÓN", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                MessageBox.Show("El R.U.C. ingresado no es válido!", "Mensaje de validación", MessageBoxButtons.OK, MessageBoxIcon.Warning)
                 Return
             End If
 
@@ -389,7 +389,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.PROVEEDORES
             If r.Rows.Count > 0 Then
                 If Not txtIdProveedorGeneral.Text.Trim().Equals(r(0)(0).ToString().Trim()) Then
                     If txtRucCiProveedorGeneral.Text.Trim.Equals(r(0)(2)) Then
-                        MsgBox("ESTE C.I./R.U.C. YA SE ENCUANTRA REGISTRADO CON EL PROVEEDOR:" & vbNewLine & r(0)(3), MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                        MsgBox("ESTE C.I./R.U.C. YA SE ENCUANTRA REGISTRADO CON EL PROVEEDOR:" & vbNewLine & r(0)(3), MsgBoxStyle.Exclamation, "Mensaje de validación")
                         txtRucCiProveedorGeneral.Focus()
                         Return
                     End If
@@ -397,7 +397,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.PROVEEDORES
             End If
 
             If ValidacionParametros() Then
-                If MessageBox.Show("¿ESTA SEGURA QUE DESEA GUARDAR?", "MENSAJE DE VALIDACIÓN", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> DialogResult.Yes Then Return
+                If MessageBox.Show("¿ESTA SEGURA QUE DESEA GUARDAR?", "Mensaje de validación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> DialogResult.Yes Then Return
                 _sqlCommands.Clear()
 
                 Select Case (_botonSeleccionado)
@@ -418,7 +418,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.PROVEEDORES
                 End If
                 MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
             Else
-                MsgBox("NO SE PUEDE GUARDAR." & vbNewLine & "NO SE HAN LLENADO TODOS LOS CAMPOS NECESARIOS.", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                MsgBox("No se puede guardar." & vbNewLine & "NO SE HAN LLENADO TODOS LOS CAMPOS NECESARIOS.", MsgBoxStyle.Exclamation, "Mensaje de validación")
             End If
         End Sub
         Private Sub Auditoria()

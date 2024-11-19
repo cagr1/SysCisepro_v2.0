@@ -51,10 +51,10 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
             txtFechaActual.Text = Date.Now
             Consultar()
             If dgvSoat.RowCount > 1 Then
-                MsgBox("Algunos Vehículos necesitan renovar el SOAT esta semana", MsgBoxStyle.Critical, "MENSAJE DE VALIDACIÓN")
+                MsgBox("Algunos Vehículos necesitan renovar el SOAT esta semana", MsgBoxStyle.Critical, "Mensaje de validación")
                 _sonido.Intermitente()
             Else
-                MsgBox("No existen Vehículos que necesiten renovar el SOAT esta semana", MsgBoxStyle.Information, "MENSAJE DE VALIDACIÓN")
+                MsgBox("No existen Vehículos que necesiten renovar el SOAT esta semana", MsgBoxStyle.Information, "Mensaje de validación")
                 Close()
             End If 
         End Sub

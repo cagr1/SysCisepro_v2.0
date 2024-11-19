@@ -7,6 +7,7 @@ Imports ClassLibraryCisepro.ProcesosSql
 Imports ClassLibraryCisepro.VALIDACIONES
 Imports syscisepro.DATOS
 Imports Microsoft.Office.Interop
+Imports Krypton.Toolkit
 
 Namespace FORMULARIOS.INVENTARIOS.PROCESO
     ''' <summary>
@@ -54,6 +55,7 @@ Namespace FORMULARIOS.INVENTARIOS.PROCESO
         ReadOnly _validacionesDecimales As New ClassDecimal
 
         Dim _saveOupdate As Integer
+        Public UserName As String
 
         Private Sub FormProductosBodega_Load(ByVal sender As System.Object, ByVal e As EventArgs) Handles MyBase.Load
             ' DEFINIR TIPO Y COLOR DE SISTEMA
@@ -297,7 +299,8 @@ Namespace FORMULARIOS.INVENTARIOS.PROCESO
                 txtDescripción.Text = "Error al cargar item"
                 txtDescripción.BackColor = Color.Salmon
                 'show the error message
-                MsgBox(ex.Message, MsgBoxStyle.Critical, "Error")
+                'MsgBox(ex.Message, MsgBoxStyle.Critical, "Error")
+                KryptonMessageBox.Show(ex.Message, "Error", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
 
             End Try
         End Sub
@@ -404,10 +407,12 @@ Namespace FORMULARIOS.INVENTARIOS.PROCESO
         Private Sub lblCrearMarca_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles lblCrearMarca.Click
             Dim respuesta = InputBox("INGRESE EL NOMBRE DE LA MARCA", "REGISTRO DE NUEVA MARCA", "INGRESE EL NOMBRE")
             If respuesta.Trim().Length = 0 Then Return
-            If MessageBox.Show("ESTA SEGURO QUE DESEA GUARDAR LA MARCA '" & respuesta & "'?", "MENSAJE DE VALIDACIÓN", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> MsgBoxResult.Yes Then Return
+            'If MessageBox.Show("Esta seguro que desea guardar LA MARCA '" & respuesta & "'?", "Mensaje de validación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> MsgBoxResult.Yes Then Return
+            If KryptonMessageBox.Show("Esta seguro que desea guardar LA MARCA '" & respuesta & "'?", "Mensaje de validación", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) <> MsgBoxResult.Yes Then Return
             Dim r = _objMarcas.BuscarMarcaRepetida(_tipoCon, respuesta)
             If r Then
-                MsgBox("Marca ya está registrada!", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                'MsgBox("Marca ya está registrada!", MsgBoxStyle.Exclamation, "Mensaje de validación")
+                KryptonMessageBox.Show("Marca ya está registrada!", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                 Return
             End If
 
@@ -425,10 +430,11 @@ Namespace FORMULARIOS.INVENTARIOS.PROCESO
         Private Sub lblCrearModelo_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles lblCrearModelo.Click
             Dim respuesta = InputBox("INGRESE EL NOMBRE DEL MODELO", "REGISTRO DE NUEVO MODELO", "INGRESE EL NOMBRE")
             If respuesta.Trim().Length = 0 Then Return
-            If MessageBox.Show("ESTA SEGURO QUE DESEA GUARDAR EL MODELO '" & respuesta & "'?", "MENSAJE DE VALIDACIÓN", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> MsgBoxResult.Yes Then Return
+            If MessageBox.Show("Esta seguro que desea guardar EL MODELO '" & respuesta & "'?", "Mensaje de validación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> MsgBoxResult.Yes Then Return
             Dim r = _objModelos.BuscarModeloRepetida(_tipoCon, respuesta)
             If r Then
-                MsgBox("Modelo ya está registrado!", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                'MsgBox("Modelo ya está registrado!", MsgBoxStyle.Exclamation, "Mensaje de validación")
+                KryptonMessageBox.Show("Modelo ya está registrado!", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                 Return
             End If
             With _objModelos
@@ -444,10 +450,11 @@ Namespace FORMULARIOS.INVENTARIOS.PROCESO
         Private Sub lblCrearMaterial_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles lblCrearMaterial.Click
             Dim respuesta = InputBox("INGRESE EL NOMBRE DEL MATERIAL", "REGISTRO DE NUEVO MATERIAL", "INGRESE EL NOMBRE")
             If respuesta.Trim().Length = 0 Then Return
-            If MessageBox.Show("ESTA SEGURO QUE DESEA GUARDAR EL MATERIAL '" & respuesta & "'?", "MENSAJE DE VALIDACIÓN", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> MsgBoxResult.Yes Then Return
+            If MessageBox.Show("Esta seguro que desea guardar EL MATERIAL '" & respuesta & "'?", "Mensaje de validación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> MsgBoxResult.Yes Then Return
             Dim r = _objMaterial.BuscarMaterialRepetida(_tipoCon, respuesta)
             If r Then
-                MsgBox("Material ya está registrado!", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                'MsgBox("Material ya está registrado!", MsgBoxStyle.Exclamation, "Mensaje de validación")
+                KryptonMessageBox.Show("Material ya está registrado!", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                 Return
             End If
             With _objMaterial
@@ -463,10 +470,11 @@ Namespace FORMULARIOS.INVENTARIOS.PROCESO
         Private Sub lblCrearColor_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles lblCrearColor.Click
             Dim respuesta = InputBox("INGRESE EL NOMBRE DEL COLOR", "REGISTRO DE NUEVO COLOR", "INGRESE EL NOMBRE")
             If respuesta.Trim().Length = 0 Then Return
-            If MessageBox.Show("ESTA SEGURO QUE DESEA GUARDAR EL COLOR '" & respuesta & "'?", "MENSAJE DE VALIDACIÓN", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> MsgBoxResult.Yes Then Return
+            If MessageBox.Show("Esta seguro que desea guardar EL COLOR '" & respuesta & "'?", "Mensaje de validación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> MsgBoxResult.Yes Then Return
             Dim r = _objColor.BuscarColorRepetida(_tipoCon, respuesta)
             If r Then
-                MsgBox("Color ya está registrado!", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                'MsgBox("Color ya está registrado!", MsgBoxStyle.Exclamation, "Mensaje de validación")
+                KryptonMessageBox.Show("Color ya está registrado!", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                 Return
             End If
             With _objColor
@@ -487,10 +495,11 @@ Namespace FORMULARIOS.INVENTARIOS.PROCESO
             Dim respuesta2 = InputBox("INGRESE ABREVIATURA DE LA UNIDAD DE MEDIDA", "REGISTRO DE NUEVA UNIDAD DE MEDIDA", "INGRESE EL NOMBRE")
             If respuesta2.Trim().Length = 0 Then Return
 
-            If MessageBox.Show("ESTA SEGURO QUE DESEA GUARDAR LA UNIDAD DE MEDIDA '" & respuesta & " / " & respuesta2 & "'?", "MENSAJE DE VALIDACIÓN", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> MsgBoxResult.Yes Then Return
+            If MessageBox.Show("Esta seguro que desea guardar LA UNIDAD DE MEDIDA '" & respuesta & " / " & respuesta2 & "'?", "Mensaje de validación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> MsgBoxResult.Yes Then Return
             Dim r = _objUnidad.BuscarUnidadMedidaRepetida(_tipoCon, respuesta)
             If r Then
-                MsgBox("Unidad de medida ya está registrado!", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                'MsgBox("Unidad de medida ya está registrado!", MsgBoxStyle.Exclamation, "Mensaje de validación")
+                KryptonMessageBox.Show("Unidad de medida ya está registrado!", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                 Return
             End If
             With _objUnidad
@@ -539,7 +548,8 @@ Namespace FORMULARIOS.INVENTARIOS.PROCESO
 
         Private Sub tsmGuardar_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles tsmGuardar.Click
             If Not ValidarParametros() Then
-                MsgBox("NO HA LLENADO LOS PARÁMETROS NECESARIOS", MsgBoxStyle.Exclamation, "MENSAJE DE INFORMACIÓN")
+                'MsgBox("NO HA LLENADO LOS PARÁMETROS NECESARIOS", MsgBoxStyle.Exclamation, "Mensaje de información")
+                KryptonMessageBox.Show("NO HA LLENADO LOS PARÁMETROS NECESARIOS", "Mensaje de información", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                 Return
             End If
 
@@ -656,7 +666,8 @@ Namespace FORMULARIOS.INVENTARIOS.PROCESO
 
                 End If
 
-                Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, String.Empty)
+                Dim nombreU = "Ingreso de Producto Bodega por: " & UserName
+                Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, nombreU)
                 If res(0) Then
                     _saveOupdate = 0
                     'lblModificar.Visible = False
@@ -668,9 +679,19 @@ Namespace FORMULARIOS.INVENTARIOS.PROCESO
                     HabilitarParametrosSecuencial(False)
                     CargarSecuencial()
                 End If
-                MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
+
+                Dim messageIcon As KryptonMessageBoxIcon
+                If res(0) Then
+                    messageIcon = KryptonMessageBoxIcon.Information
+                Else
+                    messageIcon = KryptonMessageBoxIcon.Exclamation
+                End If
+                KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, messageIcon)
+
+                'MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
             Else
-                MsgBox("DEBE REGISTRAR EL COSTO PARA GUARDAR", MsgBoxStyle.Exclamation, "MENSAJE DE INFORMACIÓN")
+                'MsgBox("DEBE REGISTRAR EL COSTO PARA GUARDAR", MsgBoxStyle.Exclamation, "Mensaje de información")
+                KryptonMessageBox.Show("DEBE REGISTRAR EL COSTO PARA GUARDAR", "Mensaje de información", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
             End If
         End Sub
 
@@ -772,7 +793,7 @@ Namespace FORMULARIOS.INVENTARIOS.PROCESO
                 app.Visible = True
                 app.DisplayAlerts = True
             Catch ex As Exception
-                MessageBox.Show("HUBO UN PROBLEMA AL EXPORTAR DATOS!", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                MessageBox.Show("Hubo un problema al exportar datos!", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Error)
             End Try
         End Sub
 
@@ -815,8 +836,8 @@ Namespace FORMULARIOS.INVENTARIOS.PROCESO
                     End With
                     _sqlCommands.Add(_objKardex.ModificarCantidadKardexMinCommand())
 
-                     
-                    Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, String.Empty)
+                    Dim nombreU = "Ajuste de Producto Bodega por: " & UserName
+                    Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, nombreU)
                     If res(0) Then
                         _saveOupdate = 0
                         tsmNuevo.Enabled = True
@@ -828,12 +849,22 @@ Namespace FORMULARIOS.INVENTARIOS.PROCESO
                         HabilitarParametrosSecuencial(False)
                         CargarSecuencial()
                     End If
-                    MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
+
+                    Dim messageIcon As KryptonMessageBoxIcon
+                    If res(0) Then
+                        messageIcon = KryptonMessageBoxIcon.Information
+                    Else
+                        messageIcon = KryptonMessageBoxIcon.Exclamation
+                    End If
+                    KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, messageIcon)
+
+                    'MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
                 Else
-                    MessageBox.Show("LA CANTIDAD DEBE SER UN VALOR NUMÉRICO!", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    MessageBox.Show("LA CANTIDAD DEBE SER UN VALOR NUMÉRICO!", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 End If
             Catch ex As Exception
-                MessageBox.Show("HUBO UN PROBLEMA AL REALIZAR AJUSTE!" & vbNewLine & ex.Message, "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                'MessageBox.Show("HUBO UN PROBLEMA AL REALIZAR AJUSTE!" & vbNewLine & ex.Message, "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                KryptonMessageBox.Show("HUBO UN PROBLEMA AL REALIZAR AJUSTE!" & vbNewLine & ex.Message, "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
     End Class

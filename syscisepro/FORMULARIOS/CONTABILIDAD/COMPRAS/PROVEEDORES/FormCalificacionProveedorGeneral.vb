@@ -125,7 +125,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.PROVEEDORES
                     txtNombreComercialProveedorGeneral.Text = FormBuscarProveedor.dgvProveedorGeneral.CurrentRow.Cells.Item(4).Value.ToString
                 End If
             Catch ex As Exception
-                MsgBox("BOTÓN BUSCAR PROVEEDOR:" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "MENSAJE DE EXCEPCIÓN")
+                MsgBox("BOTÓN BUSCAR PROVEEDOR:" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
             End Try
         End Sub
 
@@ -167,7 +167,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.PROVEEDORES
                 guargarRegistroEvaluacioServicios()
                 deshabilitadoInicio()
             Else
-                MsgBox("NO SE PUEDE GUARDAR" & vbNewLine & "NO SE HAN LLENADO TODOS LOS CAMPOS NECESARIOS PARA LA CALIFICACIÓN.", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                MsgBox("No se puede guardar" & vbNewLine & "NO SE HAN LLENADO TODOS LOS CAMPOS NECESARIOS PARA LA CALIFICACIÓN.", MsgBoxStyle.Exclamation, "Mensaje de validación")
             End If
         End Sub
         Private Sub btnSalirCalificacionProveedor_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnSalirCalificacionProveedor.Click

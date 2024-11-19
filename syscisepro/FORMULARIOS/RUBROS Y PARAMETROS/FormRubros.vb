@@ -122,7 +122,7 @@ Namespace FORMULARIOS.RUBROS_Y_PARAMETROS
         End Sub
         Private Sub btnGuardarRubroFondoRotativo_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnGuardarRubroFondoRotativo.Click
             If ValidacionParametros() Then
-                If MessageBox.Show("¿ESTA SEGURO QUE DESEA GUARDAR?", "MENSAJE DE VALIDACIÓN", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> MsgBoxResult.Yes Then Return
+                If MessageBox.Show("¿Esta seguro que desea guardar?", "Mensaje de validación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> MsgBoxResult.Yes Then Return
                 _sqlCommands.Clear()
 
                 Select Case (_botonSeleccionado)
@@ -139,7 +139,7 @@ Namespace FORMULARIOS.RUBROS_Y_PARAMETROS
                 End If
                 MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
             Else
-                MsgBox("NO SE PUEDE GUARDAR." & vbNewLine & "NO SE HAN LLENADO TODOS LOS CAMPOS NECESARIOS.", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACION")
+                MsgBox("No se puede guardar." & vbNewLine & "NO SE HAN LLENADO TODOS LOS CAMPOS NECESARIOS.", MsgBoxStyle.Exclamation, "Mensaje de validación")
             End If
         End Sub
 

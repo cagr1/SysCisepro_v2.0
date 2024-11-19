@@ -167,12 +167,12 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
             If txtIdActivo.Text <> "" Then
                 Parametros(True, True, True, True, True, True, True, True, True, True, True, True, True)
             Else
-                MsgBox("Necesita seleccionar un Vehículo para actulizar datos", MsgBoxStyle.Information, "MENSAJE DE VALIDACIÓN")
+                MsgBox("Necesita seleccionar un Vehículo para actulizar datos", MsgBoxStyle.Information, "Mensaje de validación")
                 btnActualizar.Enabled = False
             End If
         End Sub
         Private Sub btnActualizar_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnActualizar.Click
-            If MessageBox.Show("¿ESTA SEGURO QUE DESEA GUARDAR?", "MENSAJE DE VALIDACIÓN", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> MsgBoxResult.Yes Then Return
+            If MessageBox.Show("¿Esta seguro que desea guardar?", "Mensaje de validación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> MsgBoxResult.Yes Then Return
             _sqlCommands.Clear()
              
             If txtIdActivo.Text <> "" Then

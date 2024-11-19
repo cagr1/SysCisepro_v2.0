@@ -26,14 +26,10 @@
             Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormCentroCosto))
-            Me.lblIdCentroCosto = New System.Windows.Forms.Label()
-            Me.lblDetalle = New System.Windows.Forms.Label()
-            Me.lblCodigo = New System.Windows.Forms.Label()
             Me.dgvCentroCosto = New System.Windows.Forms.DataGridView()
             Me.txtIdCentroCosto = New System.Windows.Forms.TextBox()
             Me.txtDetalleCentroCosto = New System.Windows.Forms.TextBox()
             Me.txtCodigoCentroCosto = New System.Windows.Forms.TextBox()
-            Me.GroupBox1 = New System.Windows.Forms.GroupBox()
             Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
             Me.btnBuscarAsiento = New System.Windows.Forms.ToolStripMenuItem()
             Me.btnNuevoCentroCosto = New System.Windows.Forms.ToolStripMenuItem()
@@ -42,40 +38,17 @@
             Me.btnReporteCentroCosto = New System.Windows.Forms.ToolStripMenuItem()
             Me.btnReporte = New System.Windows.Forms.ToolStripMenuItem()
             Me.btnExportar = New System.Windows.Forms.ToolStripMenuItem()
+            Me.KryptonGroupBox1 = New ComponentFactory.Krypton.Toolkit.KryptonGroupBox()
+            Me.KryptonLabel1 = New ComponentFactory.Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel2 = New ComponentFactory.Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel3 = New ComponentFactory.Krypton.Toolkit.KryptonLabel()
             CType(Me.dgvCentroCosto, System.ComponentModel.ISupportInitialize).BeginInit()
-            Me.GroupBox1.SuspendLayout()
             Me.MenuStrip1.SuspendLayout()
+            CType(Me.KryptonGroupBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType(Me.KryptonGroupBox1.Panel, System.ComponentModel.ISupportInitialize).BeginInit()
+            Me.KryptonGroupBox1.Panel.SuspendLayout()
+            Me.KryptonGroupBox1.SuspendLayout()
             Me.SuspendLayout()
-            '
-            'lblIdCentroCosto
-            '
-            Me.lblIdCentroCosto.AutoSize = True
-            Me.lblIdCentroCosto.ForeColor = System.Drawing.Color.Black
-            Me.lblIdCentroCosto.Location = New System.Drawing.Point(45, 24)
-            Me.lblIdCentroCosto.Name = "lblIdCentroCosto"
-            Me.lblIdCentroCosto.Size = New System.Drawing.Size(21, 14)
-            Me.lblIdCentroCosto.TabIndex = 0
-            Me.lblIdCentroCosto.Text = "ID:"
-            '
-            'lblDetalle
-            '
-            Me.lblDetalle.AutoSize = True
-            Me.lblDetalle.ForeColor = System.Drawing.Color.Black
-            Me.lblDetalle.Location = New System.Drawing.Point(10, 52)
-            Me.lblDetalle.Name = "lblDetalle"
-            Me.lblDetalle.Size = New System.Drawing.Size(59, 14)
-            Me.lblDetalle.TabIndex = 1
-            Me.lblDetalle.Text = "DETALLE:"
-            '
-            'lblCodigo
-            '
-            Me.lblCodigo.AutoSize = True
-            Me.lblCodigo.ForeColor = System.Drawing.Color.Black
-            Me.lblCodigo.Location = New System.Drawing.Point(307, 24)
-            Me.lblCodigo.Name = "lblCodigo"
-            Me.lblCodigo.Size = New System.Drawing.Size(53, 14)
-            Me.lblCodigo.TabIndex = 2
-            Me.lblCodigo.Text = "CODIGO:"
             '
             'dgvCentroCosto
             '
@@ -84,7 +57,8 @@
             Me.dgvCentroCosto.AllowUserToResizeRows = False
             DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
             Me.dgvCentroCosto.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
-            Me.dgvCentroCosto.BackgroundColor = System.Drawing.Color.White
+            Me.dgvCentroCosto.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(247, Byte), Integer))
+            Me.dgvCentroCosto.BorderStyle = System.Windows.Forms.BorderStyle.None
             Me.dgvCentroCosto.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
             Me.dgvCentroCosto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
             DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
@@ -95,61 +69,47 @@
             DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
             DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
             Me.dgvCentroCosto.DefaultCellStyle = DataGridViewCellStyle2
-            Me.dgvCentroCosto.Location = New System.Drawing.Point(1, 100)
+            Me.dgvCentroCosto.Location = New System.Drawing.Point(9, 56)
             Me.dgvCentroCosto.MultiSelect = False
             Me.dgvCentroCosto.Name = "dgvCentroCosto"
             Me.dgvCentroCosto.ReadOnly = True
             Me.dgvCentroCosto.RowHeadersVisible = False
             Me.dgvCentroCosto.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvCentroCosto.Size = New System.Drawing.Size(705, 372)
+            Me.dgvCentroCosto.Size = New System.Drawing.Size(567, 354)
             Me.dgvCentroCosto.TabIndex = 12
             '
             'txtIdCentroCosto
             '
             Me.txtIdCentroCosto.BackColor = System.Drawing.Color.White
             Me.txtIdCentroCosto.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+            Me.txtIdCentroCosto.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtIdCentroCosto.ForeColor = System.Drawing.Color.Black
-            Me.txtIdCentroCosto.Location = New System.Drawing.Point(82, 21)
+            Me.txtIdCentroCosto.Location = New System.Drawing.Point(68, 4)
             Me.txtIdCentroCosto.Name = "txtIdCentroCosto"
-            Me.txtIdCentroCosto.Size = New System.Drawing.Size(100, 22)
+            Me.txtIdCentroCosto.Size = New System.Drawing.Size(100, 21)
             Me.txtIdCentroCosto.TabIndex = 13
             '
             'txtDetalleCentroCosto
             '
             Me.txtDetalleCentroCosto.BackColor = System.Drawing.Color.White
             Me.txtDetalleCentroCosto.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+            Me.txtDetalleCentroCosto.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtDetalleCentroCosto.ForeColor = System.Drawing.Color.Black
-            Me.txtDetalleCentroCosto.Location = New System.Drawing.Point(82, 49)
+            Me.txtDetalleCentroCosto.Location = New System.Drawing.Point(68, 30)
             Me.txtDetalleCentroCosto.Name = "txtDetalleCentroCosto"
-            Me.txtDetalleCentroCosto.Size = New System.Drawing.Size(613, 22)
+            Me.txtDetalleCentroCosto.Size = New System.Drawing.Size(481, 21)
             Me.txtDetalleCentroCosto.TabIndex = 14
             '
             'txtCodigoCentroCosto
             '
             Me.txtCodigoCentroCosto.BackColor = System.Drawing.Color.White
             Me.txtCodigoCentroCosto.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+            Me.txtCodigoCentroCosto.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtCodigoCentroCosto.ForeColor = System.Drawing.Color.Black
-            Me.txtCodigoCentroCosto.Location = New System.Drawing.Point(369, 21)
+            Me.txtCodigoCentroCosto.Location = New System.Drawing.Point(285, 2)
             Me.txtCodigoCentroCosto.Name = "txtCodigoCentroCosto"
-            Me.txtCodigoCentroCosto.Size = New System.Drawing.Size(120, 22)
+            Me.txtCodigoCentroCosto.Size = New System.Drawing.Size(120, 21)
             Me.txtCodigoCentroCosto.TabIndex = 15
-            '
-            'GroupBox1
-            '
-            Me.GroupBox1.BackColor = System.Drawing.Color.White
-            Me.GroupBox1.Controls.Add(Me.lblIdCentroCosto)
-            Me.GroupBox1.Controls.Add(Me.txtCodigoCentroCosto)
-            Me.GroupBox1.Controls.Add(Me.lblDetalle)
-            Me.GroupBox1.Controls.Add(Me.txtDetalleCentroCosto)
-            Me.GroupBox1.Controls.Add(Me.lblCodigo)
-            Me.GroupBox1.Controls.Add(Me.txtIdCentroCosto)
-            Me.GroupBox1.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.GroupBox1.ForeColor = System.Drawing.Color.Black
-            Me.GroupBox1.Location = New System.Drawing.Point(0, 21)
-            Me.GroupBox1.Name = "GroupBox1"
-            Me.GroupBox1.Size = New System.Drawing.Size(705, 78)
-            Me.GroupBox1.TabIndex = 16
-            Me.GroupBox1.TabStop = False
             '
             'MenuStrip1
             '
@@ -159,7 +119,7 @@
             Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
             Me.MenuStrip1.Name = "MenuStrip1"
             Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(7, 2, 0, 2)
-            Me.MenuStrip1.Size = New System.Drawing.Size(707, 32)
+            Me.MenuStrip1.Size = New System.Drawing.Size(589, 32)
             Me.MenuStrip1.TabIndex = 210
             Me.MenuStrip1.Text = "msIngresoBodega"
             '
@@ -230,15 +190,58 @@
             Me.btnExportar.Text = "EXPORTAR"
             Me.btnExportar.Visible = False
             '
+            'KryptonGroupBox1
+            '
+            Me.KryptonGroupBox1.CaptionOverlap = 0R
+            Me.KryptonGroupBox1.GroupBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.PanelRibbonInactive
+            Me.KryptonGroupBox1.Location = New System.Drawing.Point(0, 35)
+            Me.KryptonGroupBox1.Name = "KryptonGroupBox1"
+            '
+            'KryptonGroupBox1.Panel
+            '
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel3)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.txtCodigoCentroCosto)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel2)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.dgvCentroCosto)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel1)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.txtDetalleCentroCosto)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.txtIdCentroCosto)
+            Me.KryptonGroupBox1.Size = New System.Drawing.Size(588, 437)
+            Me.KryptonGroupBox1.TabIndex = 211
+            Me.KryptonGroupBox1.Values.Heading = "Datos"
+            '
+            'KryptonLabel1
+            '
+            Me.KryptonLabel1.Location = New System.Drawing.Point(9, 4)
+            Me.KryptonLabel1.Name = "KryptonLabel1"
+            Me.KryptonLabel1.Size = New System.Drawing.Size(21, 20)
+            Me.KryptonLabel1.TabIndex = 0
+            Me.KryptonLabel1.Values.Text = "Id"
+            '
+            'KryptonLabel2
+            '
+            Me.KryptonLabel2.Location = New System.Drawing.Point(9, 30)
+            Me.KryptonLabel2.Name = "KryptonLabel2"
+            Me.KryptonLabel2.Size = New System.Drawing.Size(49, 20)
+            Me.KryptonLabel2.TabIndex = 1
+            Me.KryptonLabel2.Values.Text = "Detalle"
+            '
+            'KryptonLabel3
+            '
+            Me.KryptonLabel3.Location = New System.Drawing.Point(217, 4)
+            Me.KryptonLabel3.Name = "KryptonLabel3"
+            Me.KryptonLabel3.Size = New System.Drawing.Size(50, 20)
+            Me.KryptonLabel3.TabIndex = 2
+            Me.KryptonLabel3.Values.Text = "Codigo"
+            '
             'FormCentroCosto
             '
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-            Me.BackColor = System.Drawing.Color.White
-            Me.ClientSize = New System.Drawing.Size(707, 473)
+            Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(185, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(227, Byte), Integer))
+            Me.ClientSize = New System.Drawing.Size(589, 473)
+            Me.Controls.Add(Me.KryptonGroupBox1)
             Me.Controls.Add(Me.MenuStrip1)
-            Me.Controls.Add(Me.GroupBox1)
-            Me.Controls.Add(Me.dgvCentroCosto)
             Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
             Me.MaximizeBox = False
             Me.Name = "FormCentroCosto"
@@ -249,22 +252,21 @@
             Me.StateActive.Border.Rounding = 5.0!
             Me.Text = "DEFINICION DE CENTROS DE COSTO"
             CType(Me.dgvCentroCosto, System.ComponentModel.ISupportInitialize).EndInit()
-            Me.GroupBox1.ResumeLayout(False)
-            Me.GroupBox1.PerformLayout()
             Me.MenuStrip1.ResumeLayout(False)
             Me.MenuStrip1.PerformLayout()
+            CType(Me.KryptonGroupBox1.Panel, System.ComponentModel.ISupportInitialize).EndInit()
+            Me.KryptonGroupBox1.Panel.ResumeLayout(False)
+            Me.KryptonGroupBox1.Panel.PerformLayout()
+            CType(Me.KryptonGroupBox1, System.ComponentModel.ISupportInitialize).EndInit()
+            Me.KryptonGroupBox1.ResumeLayout(False)
             Me.ResumeLayout(False)
             Me.PerformLayout()
 
         End Sub
-        Friend WithEvents lblIdCentroCosto As System.Windows.Forms.Label
-        Friend WithEvents lblDetalle As System.Windows.Forms.Label
-        Friend WithEvents lblCodigo As System.Windows.Forms.Label
         Friend WithEvents dgvCentroCosto As System.Windows.Forms.DataGridView
         Friend WithEvents txtIdCentroCosto As System.Windows.Forms.TextBox
         Friend WithEvents txtDetalleCentroCosto As System.Windows.Forms.TextBox
         Friend WithEvents txtCodigoCentroCosto As System.Windows.Forms.TextBox
-        Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
         Friend WithEvents MenuStrip1 As System.Windows.Forms.MenuStrip
         Friend WithEvents btnBuscarAsiento As System.Windows.Forms.ToolStripMenuItem
         Friend WithEvents btnNuevoCentroCosto As System.Windows.Forms.ToolStripMenuItem
@@ -273,5 +275,9 @@
         Friend WithEvents btnReporteCentroCosto As System.Windows.Forms.ToolStripMenuItem
         Friend WithEvents btnReporte As System.Windows.Forms.ToolStripMenuItem
         Friend WithEvents btnExportar As System.Windows.Forms.ToolStripMenuItem
+        Friend WithEvents KryptonGroupBox1 As ComponentFactory.Krypton.Toolkit.KryptonGroupBox
+        Friend WithEvents KryptonLabel3 As ComponentFactory.Krypton.Toolkit.KryptonLabel
+        Friend WithEvents KryptonLabel2 As ComponentFactory.Krypton.Toolkit.KryptonLabel
+        Friend WithEvents KryptonLabel1 As ComponentFactory.Krypton.Toolkit.KryptonLabel
     End Class
 End Namespace

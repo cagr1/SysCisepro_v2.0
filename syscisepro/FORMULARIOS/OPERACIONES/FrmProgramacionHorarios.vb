@@ -177,12 +177,12 @@ Namespace FORMULARIOS.OPERACIONES
 
         Private Sub btnGuardar_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnGuardar.Click
             Try
-                If MessageBox.Show("Está seguro que desea guardar los cambios realizados", "MENSAJE DEL SISTEMA", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.No Then
+                If MessageBox.Show("Está seguro que desea guardar los cambios realizados", "Mensaje del sistema", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.No Then
                     Return
                 End If
 
                 If txtHorasRegular.Text.Trim.Length = 0 Then
-                    MessageBox.Show("Debe definir los horarios para guardar (Presione el botón 'CALCULAR')!", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                    MessageBox.Show("Debe definir los horarios para guardar (Presione el botón 'CALCULAR')!", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
                     Return
                 End If
 
@@ -196,7 +196,7 @@ Namespace FORMULARIOS.OPERACIONES
                 Dim domingo = dtpDeDomingo.Text & " ~ " & dtpADomingo.Text
 
                 If _objetoHorario.ExisteHorarioOperacion(_tipoCon, txtIdHorario.Text, dias, lunes, martes, miercoles, jueves, viernes, sabado, domingo) > 0 Then
-                    MessageBox.Show("Ya existe un horario registrado con los mismos días y horas!", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                    MessageBox.Show("Ya existe un horario registrado con los mismos días y horas!", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Warning)
                     Return
                 End If
 
@@ -295,7 +295,7 @@ Namespace FORMULARIOS.OPERACIONES
                 End If
                 MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
             Catch ex As Exception
-                MsgBox("ERROR AL GUARDAR HORARIO DE TRABAJO: " & ex.Message, MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                MsgBox("ERROR AL GUARDAR HORARIO DE TRABAJO: " & ex.Message, MsgBoxStyle.Exclamation, "Mensaje de validación")
             End Try
         End Sub
 
@@ -350,7 +350,7 @@ Namespace FORMULARIOS.OPERACIONES
 
         Private Sub btnAnular_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnAnular.Click
             Try
-                If MessageBox.Show("Seguro que desea anular el horario seleccionado?", "MENSAJE DEL SISTEMA", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.No Then
+                If MessageBox.Show("Seguro que desea anular el horario seleccionado?", "Mensaje del sistema", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.No Then
                     Return
                 End If
 
@@ -390,7 +390,7 @@ Namespace FORMULARIOS.OPERACIONES
                 MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
 
             Catch ex As Exception
-                MsgBox("ERROR AL GUARDAR HORARIO DE TRABAJO: " & ex.Message, MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                MsgBox("ERROR AL GUARDAR HORARIO DE TRABAJO: " & ex.Message, MsgBoxStyle.Exclamation, "Mensaje de validación")
             End Try
         End Sub
 
@@ -904,7 +904,7 @@ Namespace FORMULARIOS.OPERACIONES
                 crvSitios.Zoom(75)
                 crvSitios.Refresh()
             Catch ex As Exception
-                MsgBox("ERROR AL GENERAR REPORTE: " & ex.Message, MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                MsgBox("ERROR AL GENERAR REPORTE: " & ex.Message, MsgBoxStyle.Exclamation, "Mensaje de validación")
             End Try
         End Sub
 

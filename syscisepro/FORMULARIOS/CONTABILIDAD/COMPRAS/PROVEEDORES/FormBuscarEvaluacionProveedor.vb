@@ -46,7 +46,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.PROVEEDORES
         Public Sub ExportarDatosExcel(ByVal dgvAsientosDiario As DataGridView, ByVal titulo As String)
             Try
                 If dgvAsientosDiario.Rows.Count = 0 Then
-                    MsgBox("NO HAY DATOS QUE EXPORTAR!", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                    MsgBox("No hay datos que exportar!", MsgBoxStyle.Exclamation, "Mensaje de validación")
                     Return
                 End If
 
@@ -115,7 +115,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.PROVEEDORES
                 app.DisplayAlerts = True
                 'workbook.SaveAs(sfd.FileName, Excel.XlFileFormat.xlWorkbookNormal, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Excel.XlSaveAsAccessMode.xlExclusive, Type.Missing, Type.Missing, Type.Missing, Type.Missing)
             Catch ex As Exception
-                MessageBox.Show("HUBO UN PROBLEMA AL EXPORTAR DATOS!", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                MessageBox.Show("Hubo un problema al exportar datos!", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Error)
             End Try
         End Sub
         Public Sub autocompletarNombreProveedor()
@@ -173,7 +173,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.PROVEEDORES
             If tipoBusqueda <> 0 Then
                 cargarEvaluacionProveedor()
             Else
-                MsgBox("NO HA SELECCIONADO TIPO DE BUSQUEDA", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                MsgBox("NO HA SELECCIONADO TIPO DE BUSQUEDA", MsgBoxStyle.Exclamation, "Mensaje de validación")
             End If
         End Sub
 
@@ -185,7 +185,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.PROVEEDORES
                 f.lblTipoProveedor.Text = tipoProveedor
                 f.Show()
             Else
-                MsgBox("POR FAVOR SELECCIONE UN COMPROBANTE DE EGRESO", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                MsgBox("POR FAVOR SELECCIONE UN COMPROBANTE DE EGRESO", MsgBoxStyle.Exclamation, "Mensaje de validación")
             End If
         End Sub
 

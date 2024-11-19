@@ -234,7 +234,7 @@ Namespace FORMULARIOS.FONDOS.FONDO_CAJA_CHICA
                 _gasto = 0
                 _saldo = 0
                 _reposicion = 0
-                MessageBox.Show("Ocurrió un problema al realizar la sumatoria!", "MENSAJE DE VALIDACIÓN", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                MessageBox.Show("Ocurrió un problema al realizar la sumatoria!", "Mensaje de validación", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
             End Try
             txtFondoCajaChica.Text = _fondo
             txtGastosFondoCajaChica.Text = _gasto
@@ -291,12 +291,12 @@ Namespace FORMULARIOS.FONDOS.FONDO_CAJA_CHICA
         Private Sub btnGuardar_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnGuardarSolicitudCCH.Click
             Try
                 If CDbl(txtTotalLiquidacion.Text) > CDbl(txtFondoCajaChica.Text) Then
-                    KryptonMessageBox.Show("NO SE PUEDE LIQUIDAR debido a que el total de los gastos supera al valor definido para FONDO DE CAJA CHICA!!!", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
+                    KryptonMessageBox.Show("NO SE PUEDE LIQUIDAR debido a que el total de los gastos supera al valor definido para FONDO DE CAJA CHICA!!!", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                     Return
                 End If
 
-                'If MessageBox.Show("¿ESTA SEGURA QUE DESEA GUARDAR LA LIQUIDACIÓN '" & cbmCajasChicas.Text & "' en la fecha " & dtpFechaLiquidacion.Value.ToLongDateString() & "?", "MENSAJE DE VALIDACIÓN", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> DialogResult.Yes Then Return
-                If KryptonMessageBox.Show("¿ESTA SEGURA QUE DESEA GUARDAR LA LIQUIDACIÓN '" & cbmCajasChicas.Text & "' en la fecha " & dtpFechaLiquidacion.Value.ToLongDateString() & "?", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) <> DialogResult.Yes Then Return
+                'If MessageBox.Show("¿ESTA SEGURA QUE DESEA GUARDAR LA LIQUIDACIÓN '" & cbmCajasChicas.Text & "' en la fecha " & dtpFechaLiquidacion.Value.ToLongDateString() & "?", "Mensaje de validación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> DialogResult.Yes Then Return
+                If KryptonMessageBox.Show("¿ESTA SEGURA QUE DESEA GUARDAR LA LIQUIDACIÓN '" & cbmCajasChicas.Text & "' en la fecha " & dtpFechaLiquidacion.Value.ToLongDateString() & "?", "Mensaje de validación", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) <> DialogResult.Yes Then Return
 
                 If ValidarParametrosLiquidacion() Then
 
@@ -356,7 +356,7 @@ Namespace FORMULARIOS.FONDOS.FONDO_CAJA_CHICA
                         messageIcon = KryptonMessageBoxIcon.Exclamation
                     End If
 
-                    KryptonMessageBox.Show(messageText, "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, messageIcon)
+                    KryptonMessageBox.Show(messageText, "Mensaje del sistema", KryptonMessageBoxButtons.OK, messageIcon)
 
                     'MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
 
@@ -364,12 +364,12 @@ Namespace FORMULARIOS.FONDOS.FONDO_CAJA_CHICA
 
                 Else
 
-                    KryptonMessageBox.Show("No se pudo gaurdar debido a que no ha llenado los parámetros necesarios o no hay registros que liquidar!", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
+                    KryptonMessageBox.Show("No se pudo gaurdar debido a que no ha llenado los parámetros necesarios o no hay registros que liquidar!", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                 End If
 
             Catch ex As Exception
 
-                KryptonMessageBox.Show(ex.ToString, "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+                KryptonMessageBox.Show(ex.ToString, "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
 
@@ -405,8 +405,8 @@ Namespace FORMULARIOS.FONDOS.FONDO_CAJA_CHICA
         End Sub
 
         Private Sub btnAnularSolicitud_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAnularSolicitud.Click
-            'If MessageBox.Show("¿ESTA SEGURA QUE DESEA ANULAR EL DOCUMENTO: '" & dgvLiquidacionFondoCajaChica.CurrentRow.Cells(6).Value & "' N° " & dgvLiquidacionFondoCajaChica.CurrentRow.Cells(7).Value & "?", "MENSAJE DE VALIDACIÓN", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> DialogResult.Yes Then Return
-            If KryptonMessageBox.Show("¿ESTA SEGURA QUE DESEA ANULAR EL DOCUMENTO: '" & dgvLiquidacionFondoCajaChica.CurrentRow.Cells(6).Value & "' N° " & dgvLiquidacionFondoCajaChica.CurrentRow.Cells(7).Value & "?", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) <> DialogResult.Yes Then Return
+            'If MessageBox.Show("¿ESTA SEGURA QUE DESEA ANULAR EL DOCUMENTO: '" & dgvLiquidacionFondoCajaChica.CurrentRow.Cells(6).Value & "' N° " & dgvLiquidacionFondoCajaChica.CurrentRow.Cells(7).Value & "?", "Mensaje de validación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> DialogResult.Yes Then Return
+            If KryptonMessageBox.Show("¿ESTA SEGURA QUE DESEA ANULAR EL DOCUMENTO: '" & dgvLiquidacionFondoCajaChica.CurrentRow.Cells(6).Value & "' N° " & dgvLiquidacionFondoCajaChica.CurrentRow.Cells(7).Value & "?", "Mensaje de validación", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) <> DialogResult.Yes Then Return
             Try
                 _sqlCommands.Clear()
 
@@ -452,12 +452,12 @@ Namespace FORMULARIOS.FONDOS.FONDO_CAJA_CHICA
                     messageIcon = KryptonMessageBoxIcon.Exclamation
                 End If
 
-                KryptonMessageBox.Show(messageText, "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, messageIcon)
+                KryptonMessageBox.Show(messageText, "Mensaje del sistema", KryptonMessageBoxButtons.OK, messageIcon)
 
 
             Catch ex As Exception
 
-                KryptonMessageBox.Show(ex.ToString, "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+                KryptonMessageBox.Show(ex.ToString, "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
 

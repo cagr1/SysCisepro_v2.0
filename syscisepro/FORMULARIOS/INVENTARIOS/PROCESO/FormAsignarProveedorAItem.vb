@@ -42,7 +42,7 @@ Namespace FORMULARIOS.INVENTARIOS.PROCESO
  
         Dim _validarProveedor As Integer = 0
         Dim _validarRepetidos As Integer = 0
-        ReadOnly titulo As String = "MENSAJE DE INFORMACIÓN"
+        ReadOnly titulo As String = "Mensaje de información"
  
         Public Sub CargarItem()
             Try
@@ -166,7 +166,7 @@ Namespace FORMULARIOS.INVENTARIOS.PROCESO
 
         Private Sub btnNuevo_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnAgregarProveedor.Click
             If dgvProveedor.RowCount = 0 Then
-                MsgBox("Debe agregar al menos un item / proveedor en la lista!", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                MsgBox("Debe agregar al menos un item / proveedor en la lista!", MsgBoxStyle.Exclamation, "Mensaje de validación")
                 Return
             End If
 
@@ -193,7 +193,7 @@ Namespace FORMULARIOS.INVENTARIOS.PROCESO
                 dgvProveedor.Columns(2).Width = 500
                 dgvProveedor.Columns(5).Width = 500
             Else
-                MsgBox("El proveedor ya esta Agregado", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                MsgBox("El proveedor ya esta Agregado", MsgBoxStyle.Exclamation, "Mensaje de validación")
                 _validarRepetidos = 0
             End If
             dgvProveedor.AutoResizeRows()
@@ -215,14 +215,14 @@ Namespace FORMULARIOS.INVENTARIOS.PROCESO
                     btnAgregarProveedor.Enabled = True
                 End If
             Catch ex As Exception
-                MsgBox("No se puede eliminar fila inexistente", MsgBoxStyle.Critical, "MENSAJE DE VALIDACIÓN")
+                MsgBox("No se puede eliminar fila inexistente", MsgBoxStyle.Critical, "Mensaje de validación")
             End Try
         End Sub
 
         Private Sub ToolStripMenuItem1_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnGuardar.Click
             Try
                 If dgvProveedor.Rows.Count > 0 Then
-                    If MessageBox.Show("¿ESTA SEGURO QUE DESEA GUARDAR?", "MENSAJE DE VALIDACIÓN", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> MsgBoxResult.Yes Then Return
+                    If MessageBox.Show("¿Esta seguro que desea guardar?", "Mensaje de validación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> MsgBoxResult.Yes Then Return
                     _sqlCommands.Clear()
 
                     For indice = 0 To dgvProveedor.Rows.Count - 1
@@ -251,7 +251,7 @@ Namespace FORMULARIOS.INVENTARIOS.PROCESO
                     MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
                      
                 Else
-                    MsgBox("No se puede guardar debido a que no existe ningún proveedor agregado", MsgBoxStyle.Critical, "MENSAJE DE VALIDACIÓN")
+                    MsgBox("No se puede guardar debido a que no existe ningún proveedor agregado", MsgBoxStyle.Critical, "Mensaje de validación")
                 End If
             Catch ex As Exception
                 Exit Try
@@ -268,7 +268,7 @@ Namespace FORMULARIOS.INVENTARIOS.PROCESO
                     txtBuscarDetalleItems.Text = ""
                     txtBuscarDetalleItems.Enabled = True
                     txtBuscarDetalleItems.Focus()
-                    MsgBox("SELECCIONE UN ITEM VÁLIDO", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                    MsgBox("SELECCIONE UN ITEM VÁLIDO", MsgBoxStyle.Exclamation, "Mensaje de validación")
                 Else
                     txtCódigoItem.Text = _objSecuencialItem.BuscarCodigoSecuencialItemxNombreSecuencial(_tipoCon, txtBuscarDetalleItems.Text.Trim.ToUpper)
                     txtBuscarDetalleItems.Tag = _objSecuencialItem.BuscarIdSecuencialItemXNombreSecuencialItem(_tipoCon, txtBuscarDetalleItems.Text.Trim.ToUpper)
@@ -288,7 +288,7 @@ Namespace FORMULARIOS.INVENTARIOS.PROCESO
                     txtBuscarNombreProveedor.Text = ""
                     txtBuscarNombreProveedor.Enabled = True
                     txtBuscarNombreProveedor.Focus()
-                    MsgBox("SELECCIONE UN PROVEEDOR VÁLIDO", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                    MsgBox("SELECCIONE UN PROVEEDOR VÁLIDO", MsgBoxStyle.Exclamation, "Mensaje de validación")
                 Else
                     txtRuc.Text = _objProveedor.BuscarRucProveedorXIdProveedor(_tipoCon, r)
                     txtBuscarNombreProveedor.Tag = r

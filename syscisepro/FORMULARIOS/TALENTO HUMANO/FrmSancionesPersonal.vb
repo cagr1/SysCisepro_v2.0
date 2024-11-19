@@ -74,12 +74,12 @@ Namespace FORMULARIOS.TALENTO_HUMANO
 
         Private Sub btnGuardar_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnGuardar.Click
             Try
-                If MessageBox.Show("Está seguro que desea guardar los cambios realizados", "MENSAJE DEL SISTEMA", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.No Then
+                If MessageBox.Show("Está seguro que desea guardar los cambios realizados", "Mensaje del sistema", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.No Then
                     Return
                 End If
 
                 If cbxTipo.Text.Trim.Length = 0 Or txtDefinicion.Text.Trim.Length = 0 Or txtValor.Text.Trim.Length = 0 Then
-                    MessageBox.Show("Debe definir los datos de la sanción para guardar!", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                    MessageBox.Show("Debe definir los datos de la sanción para guardar!", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
                     Return
                 End If
 
@@ -130,7 +130,7 @@ Namespace FORMULARIOS.TALENTO_HUMANO
                 End If
                 MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
             Catch ex As Exception
-                MsgBox("ERROR AL GUARDAR HORARIO DE TRABAJO: " & ex.Message, MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                MsgBox("ERROR AL GUARDAR HORARIO DE TRABAJO: " & ex.Message, MsgBoxStyle.Exclamation, "Mensaje de validación")
             End Try
         End Sub
 
@@ -154,7 +154,7 @@ Namespace FORMULARIOS.TALENTO_HUMANO
 
         Private Sub btnAnular_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnAnular.Click
             Try
-                If MessageBox.Show("Seguro que desea anular la sanción seleccionada?", "MENSAJE DEL SISTEMA", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.No Then
+                If MessageBox.Show("Seguro que desea anular la sanción seleccionada?", "Mensaje del sistema", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.No Then
                     Return
                 End If
 
@@ -184,7 +184,7 @@ Namespace FORMULARIOS.TALENTO_HUMANO
                 End If
                 MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
             Catch ex As Exception
-                MsgBox("ERROR AL GUARDAR HORARIO DE TRABAJO: " & ex.Message, MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                MsgBox("ERROR AL GUARDAR HORARIO DE TRABAJO: " & ex.Message, MsgBoxStyle.Exclamation, "Mensaje de validación")
             End Try
         End Sub
 
@@ -408,7 +408,7 @@ Namespace FORMULARIOS.TALENTO_HUMANO
         Private Sub ConectarReporte()
             Try
                 If ListView1.Items.Count = 0 Then
-                    MessageBox.Show("NO SE HA SELECCIONADO DATOS PARA EXPORTAR!", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                    MessageBox.Show("NO SE HA SELECCIONADO DATOS PARA EXPORTAR!", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
                     Return
                 End If
 

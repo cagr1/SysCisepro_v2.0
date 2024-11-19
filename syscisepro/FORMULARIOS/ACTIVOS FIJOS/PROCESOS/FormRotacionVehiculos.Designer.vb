@@ -57,9 +57,9 @@
             Me.KryptonGroupBox1 = New Krypton.Toolkit.KryptonGroupBox()
             Me.KryptonGroupBox2 = New Krypton.Toolkit.KryptonGroupBox()
             Me.KryptonGroupBox3 = New Krypton.Toolkit.KryptonGroupBox()
-            Me.KryptonLabel1 = New Krypton.Toolkit.KryptonLabel()
-            Me.KryptonLabel2 = New Krypton.Toolkit.KryptonLabel()
             Me.KryptonLabel3 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel2 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel1 = New Krypton.Toolkit.KryptonLabel()
             CType(Me.dgvPersonal, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.dgvVehiculos, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.dgvRotaciones, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -372,13 +372,13 @@
             Me.KryptonGroupBox3.TabIndex = 14
             Me.KryptonGroupBox3.Values.Heading = ""
             '
-            'KryptonLabel1
+            'KryptonLabel3
             '
-            Me.KryptonLabel1.Location = New System.Drawing.Point(8, 6)
-            Me.KryptonLabel1.Name = "KryptonLabel1"
-            Me.KryptonLabel1.Size = New System.Drawing.Size(73, 20)
-            Me.KryptonLabel1.TabIndex = 0
-            Me.KryptonLabel1.Values.Text = "Id Rotacion"
+            Me.KryptonLabel3.Location = New System.Drawing.Point(396, 5)
+            Me.KryptonLabel3.Name = "KryptonLabel3"
+            Me.KryptonLabel3.Size = New System.Drawing.Size(42, 20)
+            Me.KryptonLabel3.TabIndex = 10
+            Me.KryptonLabel3.Values.Text = "Fecha"
             '
             'KryptonLabel2
             '
@@ -388,19 +388,19 @@
             Me.KryptonLabel2.TabIndex = 1
             Me.KryptonLabel2.Values.Text = "Observacion"
             '
-            'KryptonLabel3
+            'KryptonLabel1
             '
-            Me.KryptonLabel3.Location = New System.Drawing.Point(396, 3)
-            Me.KryptonLabel3.Name = "KryptonLabel3"
-            Me.KryptonLabel3.Size = New System.Drawing.Size(42, 20)
-            Me.KryptonLabel3.TabIndex = 10
-            Me.KryptonLabel3.Values.Text = "Fecha"
+            Me.KryptonLabel1.Location = New System.Drawing.Point(8, 6)
+            Me.KryptonLabel1.Name = "KryptonLabel1"
+            Me.KryptonLabel1.Size = New System.Drawing.Size(73, 20)
+            Me.KryptonLabel1.TabIndex = 0
+            Me.KryptonLabel1.Values.Text = "Id Rotacion"
             '
             'FormRotacionVehiculos
             '
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-            Me.BackColor = System.Drawing.Color.White
+            Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(185, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(227, Byte), Integer))
             Me.ClientSize = New System.Drawing.Size(794, 589)
             Me.Controls.Add(Me.KryptonGroupBox3)
             Me.Controls.Add(Me.KryptonGroupBox2)

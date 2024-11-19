@@ -55,7 +55,7 @@ Namespace FORMULARIOS.CONTABILIDAD.PERDIDAS_Y_GANANCIAS
         
         Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles Button1.Click
             If dgvIngresos.RowCount = 0 Or dgvEgresos.RowCount = 0 Then
-                MessageBox.Show("En Ingresos o Egresos no hay datos que exportar!", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                MessageBox.Show("En Ingresos o Egresos No hay datos que exportar!", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
                 Return
             End If
             ExportarDatosExcelDobleGrid(dgvIngresos, dgvEgresos, "ESTADO DE PERDIDAS Y GANANCIAS")
@@ -161,7 +161,7 @@ Namespace FORMULARIOS.CONTABILIDAD.PERDIDAS_Y_GANANCIAS
                 app.DisplayAlerts = True
                 'workbook.SaveAs(sfd.FileName, Excel.XlFileFormat.xlWorkbookNormal, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Excel.XlSaveAsAccessMode.xlExclusive, Type.Missing, Type.Missing, Type.Missing, Type.Missing)
             Catch ex As Exception
-                MessageBox.Show("HUBO UN PROBLEMA AL EXPORTAR DATOS!", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                MessageBox.Show("Hubo un problema al exportar datos!", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Error)
             End Try
         End Sub
 
@@ -221,7 +221,7 @@ Namespace FORMULARIOS.CONTABILIDAD.PERDIDAS_Y_GANANCIAS
 
         Private Sub BackgroundWorker1_RunWorkerCompleted(ByVal sender As System.Object, ByVal e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles BackgroundWorker1.RunWorkerCompleted
             If e.Result Is Nothing Then
-                MessageBox.Show("Error al generar!", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                MessageBox.Show("Error al generar!", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
             End If
 
             Dim datos = CType(e.Result, List(Of DataTable))
@@ -275,7 +275,7 @@ Namespace FORMULARIOS.CONTABILIDAD.PERDIDAS_Y_GANANCIAS
                 dgvIngresos.Rows(dgvIngresos.RowCount - 1).Selected = True
 
             Catch ex As Exception
-                MessageBox.Show("Error al generar reporte ingresos: " & ex.Message, "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                MessageBox.Show("Error al generar reporte ingresos: " & ex.Message, "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
             End Try
 
             Try
@@ -326,7 +326,7 @@ Namespace FORMULARIOS.CONTABILIDAD.PERDIDAS_Y_GANANCIAS
                 dgvEgresos.Rows(dgvEgresos.RowCount - 1).Selected = True
 
             Catch ex As Exception
-                MessageBox.Show("Error al generar reporte egresos: " & ex.Message, "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                MessageBox.Show("Error al generar reporte egresos: " & ex.Message, "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
             End Try
 
             PictureBox1.Visible = False
@@ -337,7 +337,7 @@ Namespace FORMULARIOS.CONTABILIDAD.PERDIDAS_Y_GANANCIAS
 
         Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles Button2.Click
             If dgvIngresos.RowCount = 0 Then
-                MessageBox.Show("No hay datos que exportar!", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                MessageBox.Show("No hay datos que exportar!", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
                 Return
             End If
             ExportarDatosExcel(dgvIngresos, "INGRESOS")
@@ -345,7 +345,7 @@ Namespace FORMULARIOS.CONTABILIDAD.PERDIDAS_Y_GANANCIAS
 
         Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles Button3.Click
             If dgvEgresos.RowCount = 0 Then
-                MessageBox.Show("No hay datos que exportar!", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                MessageBox.Show("No hay datos que exportar!", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
                 Return
             End If
             ExportarDatosExcel(dgvEgresos, "EGRESOS")
@@ -354,7 +354,7 @@ Namespace FORMULARIOS.CONTABILIDAD.PERDIDAS_Y_GANANCIAS
         Public Sub ExportarDatosExcel(ByVal dgvAsientosDiario As DataGridView, ByVal titulo As String)
             Try
                 If dgvAsientosDiario.Rows.Count = 0 Then
-                    MsgBox("NO HAY DATOS QUE EXPORTAR!", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                    MsgBox("No hay datos que exportar!", MsgBoxStyle.Exclamation, "Mensaje de validación")
                     Return
                 End If
 
@@ -423,7 +423,7 @@ Namespace FORMULARIOS.CONTABILIDAD.PERDIDAS_Y_GANANCIAS
                 app.DisplayAlerts = True
                 'workbook.SaveAs(sfd.FileName, Excel.XlFileFormat.xlWorkbookNormal, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Excel.XlSaveAsAccessMode.xlExclusive, Type.Missing, Type.Missing, Type.Missing, Type.Missing)
             Catch ex As Exception
-                MessageBox.Show("HUBO UN PROBLEMA AL EXPORTAR DATOS!", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                MessageBox.Show("Hubo un problema al exportar datos!", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Error)
             End Try
         End Sub
     End Class

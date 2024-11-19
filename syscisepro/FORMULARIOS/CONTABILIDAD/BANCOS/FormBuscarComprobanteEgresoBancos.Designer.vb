@@ -1,10 +1,10 @@
 ﻿Namespace FORMULARIOS.CONTABILIDAD.BANCOS
-    <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+    <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
     Partial Class FormBuscarComprobanteEgresoBancos
         'Inherits System.Windows.Forms.Form
         Inherits Krypton.Toolkit.KryptonForm
         'Form reemplaza a Dispose para limpiar la lista de componentes.
-        <System.Diagnostics.DebuggerNonUserCode()> _
+        <System.Diagnostics.DebuggerNonUserCode()>
         Protected Overrides Sub Dispose(ByVal disposing As Boolean)
             Try
                 If disposing AndAlso components IsNot Nothing Then
@@ -21,34 +21,27 @@
         'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
         'Se puede modificar usando el Diseñador de Windows Forms.  
         'No lo modifique con el editor de código.
-        <System.Diagnostics.DebuggerStepThrough()> _
+        <System.Diagnostics.DebuggerStepThrough()>
         Private Sub InitializeComponent()
             Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Me.dgvComprobanteEgresoBancos = New System.Windows.Forms.DataGridView()
-            Me.gbComandos = New System.Windows.Forms.GroupBox()
             Me.lblIdBeneficiario = New System.Windows.Forms.Label()
             Me.txtBuscar = New System.Windows.Forms.TextBox()
-            Me.gbRangoFechas = New System.Windows.Forms.GroupBox()
             Me.lblIdComprobanteEgresoBanco = New System.Windows.Forms.Label()
-            Me.Label1 = New System.Windows.Forms.Label()
             Me.dtpHasta = New System.Windows.Forms.DateTimePicker()
             Me.dtpDesde = New System.Windows.Forms.DateTimePicker()
-            Me.gbEmitidosAprobados = New System.Windows.Forms.GroupBox()
             Me.rbBanco = New System.Windows.Forms.RadioButton()
             Me.rbFecha = New System.Windows.Forms.RadioButton()
             Me.rbTodos = New System.Windows.Forms.RadioButton()
             Me.rbNumeroCheque = New System.Windows.Forms.RadioButton()
             Me.rbAprobados = New System.Windows.Forms.RadioButton()
             Me.rbEmitidos = New System.Windows.Forms.RadioButton()
-            Me.gbNumeroCheque = New System.Windows.Forms.GroupBox()
             Me.txtNumeroCheque = New System.Windows.Forms.TextBox()
             Me.gbTotal = New System.Windows.Forms.GroupBox()
             Me.txtTotalComprobantesEgreso = New System.Windows.Forms.TextBox()
             Me.Label2 = New System.Windows.Forms.Label()
-            Me.gbBanco = New System.Windows.Forms.GroupBox()
-            Me.Label10 = New System.Windows.Forms.Label()
             Me.cmbCuentaBancos = New System.Windows.Forms.ComboBox()
             Me.cmbBancos = New System.Windows.Forms.ComboBox()
             Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
@@ -57,14 +50,19 @@
             Me.btnReporte = New System.Windows.Forms.ToolStripMenuItem()
             Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
             Me.btnExportar = New System.Windows.Forms.ToolStripMenuItem()
+            Me.KryptonGroupBox1 = New ComponentFactory.Krypton.Toolkit.KryptonGroupBox()
+            Me.KryptonLabel5 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel4 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel3 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel1 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel2 = New Krypton.Toolkit.KryptonLabel()
             CType(Me.dgvComprobanteEgresoBancos, System.ComponentModel.ISupportInitialize).BeginInit()
-            Me.gbComandos.SuspendLayout()
-            Me.gbRangoFechas.SuspendLayout()
-            Me.gbEmitidosAprobados.SuspendLayout()
-            Me.gbNumeroCheque.SuspendLayout()
             Me.gbTotal.SuspendLayout()
-            Me.gbBanco.SuspendLayout()
             Me.MenuStrip1.SuspendLayout()
+            CType(Me.KryptonGroupBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType(Me.KryptonGroupBox1.Panel, System.ComponentModel.ISupportInitialize).BeginInit()
+            Me.KryptonGroupBox1.Panel.SuspendLayout()
+            Me.KryptonGroupBox1.SuspendLayout()
             Me.SuspendLayout()
             '
             'dgvComprobanteEgresoBancos
@@ -74,7 +72,8 @@
             Me.dgvComprobanteEgresoBancos.AllowUserToResizeRows = False
             DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
             Me.dgvComprobanteEgresoBancos.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
-            Me.dgvComprobanteEgresoBancos.BackgroundColor = System.Drawing.Color.White
+            Me.dgvComprobanteEgresoBancos.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(185, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(227, Byte), Integer))
+            Me.dgvComprobanteEgresoBancos.BorderStyle = System.Windows.Forms.BorderStyle.None
             Me.dgvComprobanteEgresoBancos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
             DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
             DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control
@@ -92,32 +91,19 @@
             DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
             DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
             Me.dgvComprobanteEgresoBancos.DefaultCellStyle = DataGridViewCellStyle3
-            Me.dgvComprobanteEgresoBancos.Location = New System.Drawing.Point(4, 94)
+            Me.dgvComprobanteEgresoBancos.Location = New System.Drawing.Point(4, 121)
             Me.dgvComprobanteEgresoBancos.MultiSelect = False
             Me.dgvComprobanteEgresoBancos.Name = "dgvComprobanteEgresoBancos"
             Me.dgvComprobanteEgresoBancos.RowHeadersVisible = False
             Me.dgvComprobanteEgresoBancos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvComprobanteEgresoBancos.Size = New System.Drawing.Size(979, 440)
+            Me.dgvComprobanteEgresoBancos.Size = New System.Drawing.Size(947, 407)
             Me.dgvComprobanteEgresoBancos.TabIndex = 18
-            '
-            'gbComandos
-            '
-            Me.gbComandos.BackColor = System.Drawing.Color.White
-            Me.gbComandos.Controls.Add(Me.lblIdBeneficiario)
-            Me.gbComandos.Controls.Add(Me.txtBuscar)
-            Me.gbComandos.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.gbComandos.Location = New System.Drawing.Point(834, 38)
-            Me.gbComandos.Name = "gbComandos"
-            Me.gbComandos.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-            Me.gbComandos.Size = New System.Drawing.Size(149, 53)
-            Me.gbComandos.TabIndex = 45
-            Me.gbComandos.TabStop = False
-            Me.gbComandos.Text = "BENEFICIARIO"
             '
             'lblIdBeneficiario
             '
             Me.lblIdBeneficiario.AutoSize = True
-            Me.lblIdBeneficiario.Location = New System.Drawing.Point(9, 0)
+            Me.lblIdBeneficiario.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
+            Me.lblIdBeneficiario.Location = New System.Drawing.Point(856, 3)
             Me.lblIdBeneficiario.Name = "lblIdBeneficiario"
             Me.lblIdBeneficiario.Size = New System.Drawing.Size(16, 13)
             Me.lblIdBeneficiario.TabIndex = 4
@@ -128,49 +114,27 @@
             Me.txtBuscar.BackColor = System.Drawing.Color.White
             Me.txtBuscar.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtBuscar.Font = New System.Drawing.Font("Consolas", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtBuscar.Location = New System.Drawing.Point(6, 18)
+            Me.txtBuscar.Location = New System.Drawing.Point(763, 19)
             Me.txtBuscar.Name = "txtBuscar"
             Me.txtBuscar.RightToLeft = System.Windows.Forms.RightToLeft.No
             Me.txtBuscar.Size = New System.Drawing.Size(136, 23)
             Me.txtBuscar.TabIndex = 1
             '
-            'gbRangoFechas
-            '
-            Me.gbRangoFechas.BackColor = System.Drawing.Color.White
-            Me.gbRangoFechas.Controls.Add(Me.lblIdComprobanteEgresoBanco)
-            Me.gbRangoFechas.Controls.Add(Me.Label1)
-            Me.gbRangoFechas.Controls.Add(Me.dtpHasta)
-            Me.gbRangoFechas.Controls.Add(Me.dtpDesde)
-            Me.gbRangoFechas.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.gbRangoFechas.Location = New System.Drawing.Point(575, 38)
-            Me.gbRangoFechas.Name = "gbRangoFechas"
-            Me.gbRangoFechas.Size = New System.Drawing.Size(255, 53)
-            Me.gbRangoFechas.TabIndex = 105
-            Me.gbRangoFechas.TabStop = False
-            Me.gbRangoFechas.Text = "RANGO DE FECHAS"
-            '
             'lblIdComprobanteEgresoBanco
             '
             Me.lblIdComprobanteEgresoBanco.AutoSize = True
-            Me.lblIdComprobanteEgresoBanco.Location = New System.Drawing.Point(190, 0)
+            Me.lblIdComprobanteEgresoBanco.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
+            Me.lblIdComprobanteEgresoBanco.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
+            Me.lblIdComprobanteEgresoBanco.Location = New System.Drawing.Point(688, 3)
             Me.lblIdComprobanteEgresoBanco.Name = "lblIdComprobanteEgresoBanco"
             Me.lblIdComprobanteEgresoBanco.Size = New System.Drawing.Size(16, 13)
             Me.lblIdComprobanteEgresoBanco.TabIndex = 3
             Me.lblIdComprobanteEgresoBanco.Text = "..."
             '
-            'Label1
-            '
-            Me.Label1.AutoSize = True
-            Me.Label1.Location = New System.Drawing.Point(108, 22)
-            Me.Label1.Name = "Label1"
-            Me.Label1.Size = New System.Drawing.Size(37, 13)
-            Me.Label1.TabIndex = 2
-            Me.Label1.Text = "Hasta"
-            '
             'dtpHasta
             '
             Me.dtpHasta.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-            Me.dtpHasta.Location = New System.Drawing.Point(147, 19)
+            Me.dtpHasta.Location = New System.Drawing.Point(659, 20)
             Me.dtpHasta.Name = "dtpHasta"
             Me.dtpHasta.Size = New System.Drawing.Size(98, 21)
             Me.dtpHasta.TabIndex = 1
@@ -178,105 +142,88 @@
             'dtpDesde
             '
             Me.dtpDesde.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-            Me.dtpDesde.Location = New System.Drawing.Point(9, 19)
+            Me.dtpDesde.Location = New System.Drawing.Point(546, 21)
             Me.dtpDesde.Name = "dtpDesde"
             Me.dtpDesde.Size = New System.Drawing.Size(97, 21)
             Me.dtpDesde.TabIndex = 0
             '
-            'gbEmitidosAprobados
-            '
-            Me.gbEmitidosAprobados.BackColor = System.Drawing.Color.White
-            Me.gbEmitidosAprobados.Controls.Add(Me.rbBanco)
-            Me.gbEmitidosAprobados.Controls.Add(Me.rbFecha)
-            Me.gbEmitidosAprobados.Controls.Add(Me.rbTodos)
-            Me.gbEmitidosAprobados.Controls.Add(Me.rbNumeroCheque)
-            Me.gbEmitidosAprobados.Controls.Add(Me.rbAprobados)
-            Me.gbEmitidosAprobados.Controls.Add(Me.rbEmitidos)
-            Me.gbEmitidosAprobados.Font = New System.Drawing.Font("Roboto", 6.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.gbEmitidosAprobados.Location = New System.Drawing.Point(3, 38)
-            Me.gbEmitidosAprobados.Name = "gbEmitidosAprobados"
-            Me.gbEmitidosAprobados.Size = New System.Drawing.Size(205, 53)
-            Me.gbEmitidosAprobados.TabIndex = 106
-            Me.gbEmitidosAprobados.TabStop = False
-            Me.gbEmitidosAprobados.Text = "TIPO"
-            '
             'rbBanco
             '
             Me.rbBanco.AutoSize = True
-            Me.rbBanco.Location = New System.Drawing.Point(83, 28)
+            Me.rbBanco.BackColor = System.Drawing.Color.Transparent
+            Me.rbBanco.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
+            Me.rbBanco.Location = New System.Drawing.Point(83, 18)
             Me.rbBanco.Name = "rbBanco"
-            Me.rbBanco.Size = New System.Drawing.Size(53, 15)
+            Me.rbBanco.Size = New System.Drawing.Size(56, 17)
             Me.rbBanco.TabIndex = 5
-            Me.rbBanco.Text = "BANCO"
-            Me.rbBanco.UseVisualStyleBackColor = True
+            Me.rbBanco.Text = "Banco"
+            Me.rbBanco.UseVisualStyleBackColor = False
             '
             'rbFecha
             '
             Me.rbFecha.AutoSize = True
+            Me.rbFecha.BackColor = System.Drawing.Color.Transparent
             Me.rbFecha.Checked = True
-            Me.rbFecha.Location = New System.Drawing.Point(84, 13)
+            Me.rbFecha.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
+            Me.rbFecha.Location = New System.Drawing.Point(84, 3)
             Me.rbFecha.Name = "rbFecha"
-            Me.rbFecha.Size = New System.Drawing.Size(51, 15)
+            Me.rbFecha.Size = New System.Drawing.Size(55, 17)
             Me.rbFecha.TabIndex = 4
             Me.rbFecha.TabStop = True
-            Me.rbFecha.Text = "FECHA"
-            Me.rbFecha.UseVisualStyleBackColor = True
+            Me.rbFecha.Text = "Fecha"
+            Me.rbFecha.UseVisualStyleBackColor = False
             '
             'rbTodos
             '
             Me.rbTodos.AutoSize = True
-            Me.rbTodos.Location = New System.Drawing.Point(146, 28)
+            Me.rbTodos.BackColor = System.Drawing.Color.Transparent
+            Me.rbTodos.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
+            Me.rbTodos.Location = New System.Drawing.Point(146, 18)
             Me.rbTodos.Name = "rbTodos"
-            Me.rbTodos.Size = New System.Drawing.Size(51, 15)
+            Me.rbTodos.Size = New System.Drawing.Size(55, 17)
             Me.rbTodos.TabIndex = 3
-            Me.rbTodos.Text = "TODOS"
-            Me.rbTodos.UseVisualStyleBackColor = True
+            Me.rbTodos.Text = "Todos"
+            Me.rbTodos.UseVisualStyleBackColor = False
             '
             'rbNumeroCheque
             '
             Me.rbNumeroCheque.AutoSize = True
-            Me.rbNumeroCheque.Location = New System.Drawing.Point(146, 13)
+            Me.rbNumeroCheque.BackColor = System.Drawing.Color.Transparent
+            Me.rbNumeroCheque.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
+            Me.rbNumeroCheque.Location = New System.Drawing.Point(146, 3)
             Me.rbNumeroCheque.Name = "rbNumeroCheque"
-            Me.rbNumeroCheque.Size = New System.Drawing.Size(57, 15)
+            Me.rbNumeroCheque.Size = New System.Drawing.Size(62, 17)
             Me.rbNumeroCheque.TabIndex = 2
-            Me.rbNumeroCheque.Text = "CHEQUE"
-            Me.rbNumeroCheque.UseVisualStyleBackColor = True
+            Me.rbNumeroCheque.Text = "Cheque"
+            Me.rbNumeroCheque.UseVisualStyleBackColor = False
             '
             'rbAprobados
             '
             Me.rbAprobados.AutoSize = True
-            Me.rbAprobados.Location = New System.Drawing.Point(6, 28)
+            Me.rbAprobados.BackColor = System.Drawing.Color.Transparent
+            Me.rbAprobados.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
+            Me.rbAprobados.Location = New System.Drawing.Point(6, 18)
             Me.rbAprobados.Name = "rbAprobados"
-            Me.rbAprobados.Size = New System.Drawing.Size(76, 15)
+            Me.rbAprobados.Size = New System.Drawing.Size(78, 17)
             Me.rbAprobados.TabIndex = 1
-            Me.rbAprobados.Text = "APROBADOS"
-            Me.rbAprobados.UseVisualStyleBackColor = True
+            Me.rbAprobados.Text = "Aprobados"
+            Me.rbAprobados.UseVisualStyleBackColor = False
             '
             'rbEmitidos
             '
             Me.rbEmitidos.AutoSize = True
-            Me.rbEmitidos.Location = New System.Drawing.Point(6, 13)
+            Me.rbEmitidos.BackColor = System.Drawing.Color.Transparent
+            Me.rbEmitidos.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
+            Me.rbEmitidos.Location = New System.Drawing.Point(6, 3)
             Me.rbEmitidos.Name = "rbEmitidos"
-            Me.rbEmitidos.Size = New System.Drawing.Size(62, 15)
+            Me.rbEmitidos.Size = New System.Drawing.Size(69, 17)
             Me.rbEmitidos.TabIndex = 0
-            Me.rbEmitidos.Text = "EMITIDOS"
-            Me.rbEmitidos.UseVisualStyleBackColor = True
-            '
-            'gbNumeroCheque
-            '
-            Me.gbNumeroCheque.BackColor = System.Drawing.Color.White
-            Me.gbNumeroCheque.Controls.Add(Me.txtNumeroCheque)
-            Me.gbNumeroCheque.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.gbNumeroCheque.Location = New System.Drawing.Point(211, 38)
-            Me.gbNumeroCheque.Name = "gbNumeroCheque"
-            Me.gbNumeroCheque.Size = New System.Drawing.Size(100, 53)
-            Me.gbNumeroCheque.TabIndex = 107
-            Me.gbNumeroCheque.TabStop = False
-            Me.gbNumeroCheque.Text = "No CHEQUE"
+            Me.rbEmitidos.Text = "Emitidos"
+            Me.rbEmitidos.UseVisualStyleBackColor = False
             '
             'txtNumeroCheque
             '
-            Me.txtNumeroCheque.Location = New System.Drawing.Point(10, 27)
+            Me.txtNumeroCheque.Location = New System.Drawing.Point(225, 20)
             Me.txtNumeroCheque.Name = "txtNumeroCheque"
             Me.txtNumeroCheque.Size = New System.Drawing.Size(80, 21)
             Me.txtNumeroCheque.TabIndex = 0
@@ -285,13 +232,13 @@
             '
             'gbTotal
             '
-            Me.gbTotal.BackColor = System.Drawing.Color.White
+            Me.gbTotal.BackColor = System.Drawing.Color.FromArgb(CType(CType(185, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(227, Byte), Integer))
             Me.gbTotal.Controls.Add(Me.txtTotalComprobantesEgreso)
             Me.gbTotal.Controls.Add(Me.Label2)
             Me.gbTotal.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.gbTotal.Location = New System.Drawing.Point(12, 534)
             Me.gbTotal.Name = "gbTotal"
-            Me.gbTotal.Size = New System.Drawing.Size(971, 35)
+            Me.gbTotal.Size = New System.Drawing.Size(939, 35)
             Me.gbTotal.TabIndex = 115
             Me.gbTotal.TabStop = False
             '
@@ -299,10 +246,11 @@
             '
             Me.txtTotalComprobantesEgreso.BackColor = System.Drawing.Color.White
             Me.txtTotalComprobantesEgreso.Enabled = False
-            Me.txtTotalComprobantesEgreso.Location = New System.Drawing.Point(839, 14)
+            Me.txtTotalComprobantesEgreso.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtTotalComprobantesEgreso.Location = New System.Drawing.Point(825, 14)
             Me.txtTotalComprobantesEgreso.Name = "txtTotalComprobantesEgreso"
             Me.txtTotalComprobantesEgreso.ReadOnly = True
-            Me.txtTotalComprobantesEgreso.Size = New System.Drawing.Size(100, 20)
+            Me.txtTotalComprobantesEgreso.Size = New System.Drawing.Size(100, 21)
             Me.txtTotalComprobantesEgreso.TabIndex = 110
             Me.txtTotalComprobantesEgreso.Text = "0.00"
             Me.txtTotalComprobantesEgreso.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -310,42 +258,20 @@
             'Label2
             '
             Me.Label2.AutoSize = True
-            Me.Label2.Location = New System.Drawing.Point(777, 17)
+            Me.Label2.Font = New System.Drawing.Font("Roboto Medium", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
+            Me.Label2.Location = New System.Drawing.Point(756, 16)
             Me.Label2.Name = "Label2"
-            Me.Label2.Size = New System.Drawing.Size(43, 13)
+            Me.Label2.Size = New System.Drawing.Size(50, 13)
             Me.Label2.TabIndex = 111
             Me.Label2.Text = "TOTAL:"
-            '
-            'gbBanco
-            '
-            Me.gbBanco.BackColor = System.Drawing.Color.White
-            Me.gbBanco.Controls.Add(Me.Label10)
-            Me.gbBanco.Controls.Add(Me.cmbCuentaBancos)
-            Me.gbBanco.Controls.Add(Me.cmbBancos)
-            Me.gbBanco.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.gbBanco.Location = New System.Drawing.Point(317, 38)
-            Me.gbBanco.Name = "gbBanco"
-            Me.gbBanco.Size = New System.Drawing.Size(254, 53)
-            Me.gbBanco.TabIndex = 117
-            Me.gbBanco.TabStop = False
-            Me.gbBanco.Text = "BANCO: "
-            '
-            'Label10
-            '
-            Me.Label10.AutoSize = True
-            Me.Label10.Location = New System.Drawing.Point(133, 0)
-            Me.Label10.Name = "Label10"
-            Me.Label10.Size = New System.Drawing.Size(62, 13)
-            Me.Label10.TabIndex = 34
-            Me.Label10.Text = "CA/CC/TA:"
             '
             'cmbCuentaBancos
             '
             Me.cmbCuentaBancos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cmbCuentaBancos.DropDownWidth = 130
-            Me.cmbCuentaBancos.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.cmbCuentaBancos.FormattingEnabled = True
-            Me.cmbCuentaBancos.Location = New System.Drawing.Point(132, 19)
+            Me.cmbCuentaBancos.Location = New System.Drawing.Point(430, 21)
             Me.cmbCuentaBancos.Name = "cmbCuentaBancos"
             Me.cmbCuentaBancos.Size = New System.Drawing.Size(110, 21)
             Me.cmbCuentaBancos.TabIndex = 29
@@ -354,9 +280,8 @@
             '
             Me.cmbBancos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cmbBancos.DropDownWidth = 140
-            Me.cmbBancos.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.cmbBancos.FormattingEnabled = True
-            Me.cmbBancos.Location = New System.Drawing.Point(6, 19)
+            Me.cmbBancos.Location = New System.Drawing.Point(311, 21)
             Me.cmbBancos.Name = "cmbBancos"
             Me.cmbBancos.Size = New System.Drawing.Size(113, 21)
             Me.cmbBancos.TabIndex = 25
@@ -369,7 +294,7 @@
             Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
             Me.MenuStrip1.Name = "MenuStrip1"
             Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(7, 2, 0, 2)
-            Me.MenuStrip1.Size = New System.Drawing.Size(987, 32)
+            Me.MenuStrip1.Size = New System.Drawing.Size(951, 32)
             Me.MenuStrip1.TabIndex = 183
             Me.MenuStrip1.Text = "msIngresoBodega"
             '
@@ -418,20 +343,88 @@
             Me.btnExportar.Size = New System.Drawing.Size(99, 28)
             Me.btnExportar.Text = "EXPORTAR"
             '
+            'KryptonGroupBox1
+            '
+            Me.KryptonGroupBox1.CaptionOverlap = 0R
+            Me.KryptonGroupBox1.GroupBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.ControlRibbon
+            Me.KryptonGroupBox1.Location = New System.Drawing.Point(4, 40)
+            Me.KryptonGroupBox1.Name = "KryptonGroupBox1"
+            '
+            'KryptonGroupBox1.Panel
+            '
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.lblIdBeneficiario)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel5)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.lblIdComprobanteEgresoBanco)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.txtBuscar)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel4)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel3)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.dtpHasta)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.cmbCuentaBancos)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.dtpDesde)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel1)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.txtNumeroCheque)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel2)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.rbBanco)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.cmbBancos)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.rbEmitidos)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.rbFecha)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.rbAprobados)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.rbTodos)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.rbNumeroCheque)
+            Me.KryptonGroupBox1.Size = New System.Drawing.Size(947, 74)
+            Me.KryptonGroupBox1.TabIndex = 184
+            Me.KryptonGroupBox1.Values.Heading = "Busqueda"
+            '
+            'KryptonLabel5
+            '
+            Me.KryptonLabel5.Location = New System.Drawing.Point(763, 0)
+            Me.KryptonLabel5.Name = "KryptonLabel5"
+            Me.KryptonLabel5.Size = New System.Drawing.Size(74, 20)
+            Me.KryptonLabel5.TabIndex = 89
+            Me.KryptonLabel5.Values.Text = "Beneficiario"
+            '
+            'KryptonLabel4
+            '
+            Me.KryptonLabel4.Location = New System.Drawing.Point(546, 1)
+            Me.KryptonLabel4.Name = "KryptonLabel4"
+            Me.KryptonLabel4.Size = New System.Drawing.Size(45, 20)
+            Me.KryptonLabel4.TabIndex = 88
+            Me.KryptonLabel4.Values.Text = "Desde"
+            '
+            'KryptonLabel3
+            '
+            Me.KryptonLabel3.Location = New System.Drawing.Point(430, 0)
+            Me.KryptonLabel3.Name = "KryptonLabel3"
+            Me.KryptonLabel3.Size = New System.Drawing.Size(66, 20)
+            Me.KryptonLabel3.TabIndex = 87
+            Me.KryptonLabel3.Values.Text = "CA/CC/TA"
+            '
+            'KryptonLabel1
+            '
+            Me.KryptonLabel1.Location = New System.Drawing.Point(225, 0)
+            Me.KryptonLabel1.Name = "KryptonLabel1"
+            Me.KryptonLabel1.Size = New System.Drawing.Size(52, 20)
+            Me.KryptonLabel1.TabIndex = 86
+            Me.KryptonLabel1.Values.Text = "Cheque"
+            '
+            'KryptonLabel2
+            '
+            Me.KryptonLabel2.Location = New System.Drawing.Point(311, 0)
+            Me.KryptonLabel2.Name = "KryptonLabel2"
+            Me.KryptonLabel2.Size = New System.Drawing.Size(44, 20)
+            Me.KryptonLabel2.TabIndex = 85
+            Me.KryptonLabel2.Values.Text = "Banco"
+            '
             'FormBuscarComprobanteEgresoBancos
             '
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-            Me.BackColor = System.Drawing.Color.White
-            Me.ClientSize = New System.Drawing.Size(987, 570)
+            Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(185, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(227, Byte), Integer))
+            Me.ClientSize = New System.Drawing.Size(951, 570)
+            Me.Controls.Add(Me.KryptonGroupBox1)
             Me.Controls.Add(Me.MenuStrip1)
             Me.Controls.Add(Me.dgvComprobanteEgresoBancos)
-            Me.Controls.Add(Me.gbBanco)
             Me.Controls.Add(Me.gbTotal)
-            Me.Controls.Add(Me.gbNumeroCheque)
-            Me.Controls.Add(Me.gbEmitidosAprobados)
-            Me.Controls.Add(Me.gbRangoFechas)
-            Me.Controls.Add(Me.gbComandos)
             Me.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Name = "FormBuscarComprobanteEgresoBancos"
             Me.ShowIcon = False
@@ -442,35 +435,25 @@
             Me.StateActive.Border.Rounding = 5.0!
             Me.Text = "BUSCAR COMPROBANTE EGRESO BANCOS"
             CType(Me.dgvComprobanteEgresoBancos, System.ComponentModel.ISupportInitialize).EndInit()
-            Me.gbComandos.ResumeLayout(False)
-            Me.gbComandos.PerformLayout()
-            Me.gbRangoFechas.ResumeLayout(False)
-            Me.gbRangoFechas.PerformLayout()
-            Me.gbEmitidosAprobados.ResumeLayout(False)
-            Me.gbEmitidosAprobados.PerformLayout()
-            Me.gbNumeroCheque.ResumeLayout(False)
-            Me.gbNumeroCheque.PerformLayout()
             Me.gbTotal.ResumeLayout(False)
             Me.gbTotal.PerformLayout()
-            Me.gbBanco.ResumeLayout(False)
-            Me.gbBanco.PerformLayout()
             Me.MenuStrip1.ResumeLayout(False)
             Me.MenuStrip1.PerformLayout()
+            CType(Me.KryptonGroupBox1.Panel, System.ComponentModel.ISupportInitialize).EndInit()
+            Me.KryptonGroupBox1.Panel.ResumeLayout(False)
+            Me.KryptonGroupBox1.Panel.PerformLayout()
+            CType(Me.KryptonGroupBox1, System.ComponentModel.ISupportInitialize).EndInit()
+            Me.KryptonGroupBox1.ResumeLayout(False)
             Me.ResumeLayout(False)
             Me.PerformLayout()
 
         End Sub
         Friend WithEvents dgvComprobanteEgresoBancos As System.Windows.Forms.DataGridView
-        Friend WithEvents gbComandos As System.Windows.Forms.GroupBox
-        Friend WithEvents gbRangoFechas As System.Windows.Forms.GroupBox
         Friend WithEvents lblIdComprobanteEgresoBanco As System.Windows.Forms.Label
-        Friend WithEvents Label1 As System.Windows.Forms.Label
         Friend WithEvents dtpHasta As System.Windows.Forms.DateTimePicker
         Friend WithEvents dtpDesde As System.Windows.Forms.DateTimePicker
-        Friend WithEvents gbEmitidosAprobados As System.Windows.Forms.GroupBox
         Friend WithEvents rbAprobados As System.Windows.Forms.RadioButton
         Friend WithEvents rbEmitidos As System.Windows.Forms.RadioButton
-        Friend WithEvents gbNumeroCheque As System.Windows.Forms.GroupBox
         Friend WithEvents txtNumeroCheque As System.Windows.Forms.TextBox
         Friend WithEvents rbNumeroCheque As System.Windows.Forms.RadioButton
         Friend WithEvents rbTodos As System.Windows.Forms.RadioButton
@@ -479,8 +462,6 @@
         Friend WithEvents gbTotal As System.Windows.Forms.GroupBox
         Friend WithEvents txtTotalComprobantesEgreso As System.Windows.Forms.TextBox
         Friend WithEvents Label2 As System.Windows.Forms.Label
-        Friend WithEvents gbBanco As System.Windows.Forms.GroupBox
-        Friend WithEvents Label10 As System.Windows.Forms.Label
         Friend WithEvents cmbCuentaBancos As System.Windows.Forms.ComboBox
         Friend WithEvents cmbBancos As System.Windows.Forms.ComboBox
         Friend WithEvents MenuStrip1 As System.Windows.Forms.MenuStrip
@@ -491,5 +472,11 @@
         Friend WithEvents txtBuscar As System.Windows.Forms.TextBox
         Friend WithEvents ToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
         Friend WithEvents lblIdBeneficiario As System.Windows.Forms.Label
+        Friend WithEvents KryptonGroupBox1 As ComponentFactory.Krypton.Toolkit.KryptonGroupBox
+        Friend WithEvents KryptonLabel3 As Krypton.Toolkit.KryptonLabel
+        Friend WithEvents KryptonLabel1 As Krypton.Toolkit.KryptonLabel
+        Friend WithEvents KryptonLabel2 As Krypton.Toolkit.KryptonLabel
+        Friend WithEvents KryptonLabel4 As Krypton.Toolkit.KryptonLabel
+        Friend WithEvents KryptonLabel5 As Krypton.Toolkit.KryptonLabel
     End Class
 End Namespace

@@ -197,8 +197,8 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
 
         Private Sub btnGuardar_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnGuardar.Click
 
-            'If MessageBox.Show("¿ESTA SEGURO QUE DESEA GUARDAR?", "MENSAJE DE VALIDACIÓN", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> MsgBoxResult.Yes Then Return
-            If KryptonMessageBox.Show("¿ESTA SEGURO QUE DESEA GUARDAR?", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) <> MsgBoxResult.Yes Then Return
+
+            If KryptonMessageBox.Show("¿Esta seguro que desea guardar?", "Mensaje de validación", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) <> MsgBoxResult.Yes Then Return
             _sqlCommands.Clear()
 
             For indice = 0 To dgvRotaciones.Rows.Count - 2
@@ -237,9 +237,9 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
             Else
                 messageIcon = KryptonMessageBoxIcon.Exclamation
             End If
-            KryptonMessageBox.Show(res(1), "Mensaje del Sistema", KryptonMessageBoxButtons.OK, messageIcon)
+            KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, messageIcon)
 
-            'MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema") 
+
         End Sub
     End Class
 End Namespace

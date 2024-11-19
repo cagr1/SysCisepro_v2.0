@@ -65,7 +65,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.PROVEEDORES
 
                 txtIdContactoProveedorCalificado.Text = _objetocontactoProveedorCalificado.BuscarMayorIdContactoProveedorCalificado(_tipoCon) + 1
             Catch ex As Exception
-                MsgBox("NO SE PUEDE CARGAR." & vbNewLine & ex.Message.ToString, MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACION")
+                MsgBox("NO SE PUEDE CARGAR." & vbNewLine & ex.Message.ToString, MsgBoxStyle.Exclamation, "Mensaje de validación")
             End Try
 
         End Sub
@@ -77,7 +77,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.PROVEEDORES
                 deshabilitadoListo()
                 DialogResult = DialogResult.OK
             Else
-                MsgBox("NO SE PUEDE GUARDAR." & vbNewLine & "NO SE HAN LLENADO TODOS LOS CAMPOS NECESARIOS.", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACION")
+                MsgBox("No se puede guardar." & vbNewLine & "NO SE HAN LLENADO TODOS LOS CAMPOS NECESARIOS.", MsgBoxStyle.Exclamation, "Mensaje de validación")
                 txtNombresContactoProveedorCalificado.Focus()
             End If
         End Sub

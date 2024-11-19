@@ -67,7 +67,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
             If lblActual.Text <> "0" And txtCantidadFacturaSecuencial.Text <> "0" And dtpFechaFacturaSecuenciales.Value.Day >= Date.Now.Day Then
                 Return True
             Else
-                MsgBox("DATOS INGRESADOS INVALIDOS. POR FAVOR REVISE", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                MsgBox("DATOS INGRESADOS INVALIDOS. POR FAVOR REVISE", MsgBoxStyle.Exclamation, "Mensaje de validación")
                 Return False
             End If
         End Function
@@ -140,7 +140,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
         Private Sub btnGuardar_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnGuardar.Click
             If ValidarCampos() = True Then
 
-                If MessageBox.Show("¿ESTA SEGURO QUE DESEA GUARDAR?", "MENSAJE DE VALIDACIÓN", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> MsgBoxResult.Yes Then Return
+                If MessageBox.Show("¿Esta seguro que desea guardar?", "Mensaje de validación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> MsgBoxResult.Yes Then Return
                 _sqlCommands.Clear()
 
                 GuardarFacturaSecuenciales()
@@ -309,7 +309,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
 
                 mExcel.Cursor = Excel.XlMousePointer.xlDefault
             Catch ex As Exception
-                MsgBox("EXPORTAR REVISIÓN DE FACTURACIÓN." & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "MENSAJE DE EXCEPCIÓN")
+                MsgBox("EXPORTAR REVISIÓN DE FACTURACIÓN." & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
             End Try
         End Sub
     End Class

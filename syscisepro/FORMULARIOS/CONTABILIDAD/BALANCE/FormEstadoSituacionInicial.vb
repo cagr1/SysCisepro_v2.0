@@ -256,7 +256,7 @@ Namespace FORMULARIOS.CONTABILIDAD.BALANCE
         Public Sub ExportarDatosExcel(ByVal dgvAsientosDiario As DataGridView, ByVal titulo As String)
             Try
                 If dgvAsientosDiario.Rows.Count = 0 Then
-                    MsgBox("NO HAY DATOS QUE EXPORTAR!", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                    MsgBox("No hay datos que exportar!", MsgBoxStyle.Exclamation, "Mensaje de validación")
                     Return
                 End If
 
@@ -344,7 +344,7 @@ Namespace FORMULARIOS.CONTABILIDAD.BALANCE
                 app.Visible = True
                 app.DisplayAlerts = True
             Catch ex As Exception
-                MessageBox.Show("HUBO UN PROBLEMA AL EXPORTAR DATOS!", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                MessageBox.Show("Hubo un problema al exportar datos!", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Error)
             End Try
         End Sub
         '=== PARA EXPORTAR DATOS A EXCEL =============================================================================================================================================
@@ -356,7 +356,7 @@ Namespace FORMULARIOS.CONTABILIDAD.BALANCE
             'Try
             '    _hoy = ValidationForms.FechaActual(_tipoCon)
 
-            '    If MessageBox.Show("¿ESTA SEGURO QUE DESEA GUARDAR EL ESTADO DE SITUACIÓN INICIAL " & _hoy.Year & "?", "MENSAJE DE VALIDACIÓN", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> DialogResult.Yes Then Return
+            '    If MessageBox.Show("¿Esta seguro que desea guardar EL ESTADO DE SITUACIÓN INICIAL " & _hoy.Year & "?", "Mensaje de validación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> DialogResult.Yes Then Return
 
             '    _sqlCommands.Clear()
 
@@ -444,7 +444,7 @@ Namespace FORMULARIOS.CONTABILIDAD.BALANCE
 
             '    MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
             'Catch ex As Exception
-            '    MessageBox.Show("HUBO UN PROBLEMA GUARDAR!" & vbNewLine & ex.Message, "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            '    MessageBox.Show("HUBO UN PROBLEMA GUARDAR!" & vbNewLine & ex.Message, "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Error)
             'End Try
         End Sub
 

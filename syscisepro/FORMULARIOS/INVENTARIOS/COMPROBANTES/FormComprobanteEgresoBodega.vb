@@ -435,7 +435,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                     tsmAgregar.Enabled = False
                     tsmEliminar.Enabled = dgvSecuencial.RowCount > 0
 
-                    KryptonMessageBox.Show("EL ITEM SELECCIONADO NO EXISTE EN EL SISTEMA. DEBE CREAR EL ITEM EN LA OPCIÓN 'BODEGA / ARTÍCULOS Y PRODUCTOS'" & vbCrLf & " Y LUEGO REGISTAR EL 'COMPROBANTE DE INGRESO' CORRESPONDIENTE!!!", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
+                    KryptonMessageBox.Show("EL ITEM SELECCIONADO NO EXISTE EN EL SISTEMA. DEBE CREAR EL ITEM EN LA OPCIÓN 'BODEGA / ARTÍCULOS Y PRODUCTOS'" & vbCrLf & " Y LUEGO REGISTAR EL 'COMPROBANTE DE INGRESO' CORRESPONDIENTE!!!", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                 End If
                 CalcuarTotal()
             Catch
@@ -451,7 +451,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                 CalcuarTotal()
                 txtObservacion.Clear()
 
-                KryptonMessageBox.Show("Ocurrió un problema al seleccionar artículos. por favor, contácte al administrador", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
+                KryptonMessageBox.Show("Ocurrió un problema al seleccionar artículos. por favor, contácte al administrador", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
             End Try
         End Sub
         Private Sub tsmAgregar_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles tsmAgregar.Click
@@ -703,18 +703,18 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
 
 
 
-            If KryptonMessageBox.Show("Desea guardar los cambios?", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) <> DialogResult.Yes Then Return
+            If KryptonMessageBox.Show("Desea guardar los cambios?", "Mensaje del sistema", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) <> DialogResult.Yes Then Return
 
             _sqlCommands.Clear()
             If _botonSeleccionadoSitio = 1 Then
 
                 If dgvSecuencial.RowCount = 0 Then
-                    KryptonMessageBox.Show("Por favor, ingrese los items del comprobantes para guardar", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
+                    KryptonMessageBox.Show("Por favor, ingrese los items del comprobantes para guardar", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                     Return
                 End If
 
                 If CInt(txtUbicacion.Tag) = 0 Then
-                    KryptonMessageBox.Show("Por favor, seleccione un sitio de trabajo", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
+                    KryptonMessageBox.Show("Por favor, seleccione un sitio de trabajo", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                     Return
                 End If
 
@@ -946,7 +946,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                 messageText = res(1) & " " & "El Comprobante " & _IdComprobanteIngreso & " ha sido reingresado"
             End If
 
-            KryptonMessageBox.Show(messageText, "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, messageIcon)
+            KryptonMessageBox.Show(messageText, "Mensaje del sistema", KryptonMessageBoxButtons.OK, messageIcon)
             HabilitarIngresos(False)
             Limpiar()
             tsmNuevo.Enabled = True
@@ -1479,7 +1479,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
         End Sub
 
         Private Sub ModificarComprobanteEgresoAnular()
-            If KryptonMessageBox.Show("Desea anular el registro?", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) <> DialogResult.Yes Then Return
+            If KryptonMessageBox.Show("Desea anular el registro?", "Mensaje del sistema", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) <> DialogResult.Yes Then Return
 
 
             _sqlCommands.Clear()
@@ -1555,7 +1555,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                 messageIcon = KryptonMessageBoxIcon.Exclamation
             End If
 
-            KryptonMessageBox.Show(res(1), "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, messageIcon)
+            KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, messageIcon)
         End Sub
 
         Private Sub tsmActualizar_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles tsmActualizar.Click
@@ -1583,7 +1583,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
         Private Sub tmsEliminar_Click(sender As Object, e As EventArgs) Handles tmsEliminar.Click
 
             If dgvComprobantesEgreso.CurrentRow Is Nothing Then
-                KryptonMessageBox.Show("No hay datos para anular!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
+                KryptonMessageBox.Show("No hay datos para anular!", "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
                 Return
             Else
 
@@ -1666,7 +1666,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                     crvComprobante.Zoom(100)
                     crvComprobante.Refresh()
                 Else
-                    KryptonMessageBox.Show("El comprobante no corresponde a uniformes", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
+                    KryptonMessageBox.Show("El comprobante no corresponde a uniformes", "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
                     Return
                 End If
 
@@ -1752,7 +1752,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
 
         Public Sub ReingresoComprobante()
             If dgvDetalleComprobanteIngreso.RowCount = 0 Then
-                KryptonMessageBox.Show("Por favor, ingrese los items del comprobantes para guardar", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
+                KryptonMessageBox.Show("Por favor, ingrese los items del comprobantes para guardar", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                 Return
             End If
 
@@ -1770,12 +1770,12 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                                 Dim last As DataRow = data.Rows(data.Rows.Count - 1)
                                 If Convert.ToInt32(last("ID_ACTIVIDAD")) = 1 Then
                                     Dim serieText As String = dgvDetalleComprobanteIngreso.Rows(indice).Cells(7).Value.ToString()
-                                    KryptonMessageBox.Show("LA SERIE " & serieText & " YA FUE UTILIZADA EN UN INGRESO", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
+                                    KryptonMessageBox.Show("LA SERIE " & serieText & " YA FUE UTILIZADA EN UN INGRESO", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
                                     Return
                                 End If
                             End If
                         Catch ex As Exception
-                            KryptonMessageBox.Show("Ocurrió un problema al buscar la serie. por favor, contácte al administrador!!!", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
+                            KryptonMessageBox.Show("Ocurrió un problema al buscar la serie. por favor, contácte al administrador!!!", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
 
                         End Try
                     End If
@@ -1859,7 +1859,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                     With _objKardex
                         .Id = CLng(dgvDetalleComprobanteIngreso.Rows(indice).Cells(0).Value)
                         .IdsecuencialItem = CLng(dgvDetalleComprobanteIngreso.Rows(indice).Cells(2).Value)
-                        .Cantidad = dgvDetalleComprobanteIngreso.Rows(indice).Cells("CANTIDAD_TOTAL_INGRESO").Value
+                        .Cantidad = dgvDetalleComprobanteIngreso.Rows(indice).Cells("CANTIDAD_TOTAL_INGRESO").Value 'calcular aqui
                         .Fecha = _objCompIng.Fecha
                         .Estado = 1
                     End With
@@ -2066,7 +2066,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                     lblIdKardexIngreso.Text = 0
                     btnAgregarIngreso.Enabled = False
                     btnEliminaringreso.Enabled = dgvDetalleComprobanteIngreso.RowCount > 0
-                    KryptonMessageBox.Show("El item seleccionado no existe en el sistema." & vbCrLf & "Debe crear el item en la opción 'bodega / artículos y productos' y luego registar el 'comprobante de ingreso' correspondiente!!!", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
+                    KryptonMessageBox.Show("El item seleccionado no existe en el sistema." & vbCrLf & "Debe crear el item en la opción 'bodega / artículos y productos' y luego registar el 'comprobante de ingreso' correspondiente!!!", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                 End If
                 CalcularTotalIngreso()
             Catch
@@ -2080,7 +2080,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                 nudCantidadIngreso.Value = 0
                 CalcularTotalIngreso()
                 txtObservacionesIngreso.Clear()
-                KryptonMessageBox.Show("Ocurrió un problema al seleccionar artículos. por favor, contácte al administrador!!!", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
+                KryptonMessageBox.Show("Ocurrió un problema al seleccionar artículos. por favor, contácte al administrador!!!", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
             End Try
 
         End Sub
@@ -2131,13 +2131,13 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                     If data IsNot Nothing AndAlso data.Rows.Count > 0 Then
                         Dim last As DataRow = data.Rows(data.Rows.Count - 1)
                         If Convert.ToInt32(last("ID_ACTIVIDAD")) = 2 Then
-                            KryptonMessageBox.Show("La serie ya fue utilizada en un egreso", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
+                            KryptonMessageBox.Show("La serie ya fue utilizada en un egreso", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
                             txtSerie.Clear()
                             Return
                         End If
                     End If
                 Catch ex As Exception
-                    KryptonMessageBox.Show("Ocurrió un problema al buscar la serie. por favor, contácte al administrador!!!", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
+                    KryptonMessageBox.Show("Ocurrió un problema al buscar la serie. por favor, contácte al administrador!!!", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
 
                 End Try
             End If
@@ -2154,13 +2154,13 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                     If data IsNot Nothing AndAlso data.Rows.Count > 0 Then
                         Dim last As DataRow = data.Rows(data.Rows.Count - 1)
                         If Convert.ToInt32(last("ID_ACTIVIDAD")) = 1 Then
-                            KryptonMessageBox.Show("La serie ya fue utilizada en un ingreso", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
+                            KryptonMessageBox.Show("La serie ya fue utilizada en un ingreso", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
                             txtSerieIngreso.Clear()
                             Return
                         End If
                     End If
                 Catch ex As Exception
-                    KryptonMessageBox.Show("Ocurrió un problema al buscar la serie. por favor, contácte al administrador!!!", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
+                    KryptonMessageBox.Show("Ocurrió un problema al buscar la serie. por favor, contácte al administrador!!!", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
 
                 End Try
             End If
@@ -2202,7 +2202,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
 
 
                 If cantidadIngresoFinal < _valorReingreso Then
-                    KryptonMessageBox.Show("La cantidad ingresada no puede ser menor a la cantidad inicial", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
+                    KryptonMessageBox.Show("La cantidad ingresada no puede ser menor a la cantidad inicial", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
                     Return
                 End If
 

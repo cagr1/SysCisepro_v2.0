@@ -470,7 +470,7 @@ Namespace FORMULARIOS.FONDOS.FONDO_ROTATIVO
                 gbCombustible.Enabled = True
                 chkCombustible.Checked = True
 
-                KryptonMessageBox.Show("No se olvide de realizar el control del combustible!", "MENSAJE DE INFORMACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
+                KryptonMessageBox.Show("No se olvide de realizar el control del combustible!", "Mensaje de información", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
             Else
                 'GroupBox3.Enabled = False
                 gbCombustible.Enabled = False
@@ -520,14 +520,14 @@ Namespace FORMULARIOS.FONDOS.FONDO_ROTATIVO
 
                 If montoFondoRotativo < 35 Then
 
-                    KryptonMessageBox.Show("HA SUPERADO EL 95% DE SU FONDO. POR FAVOR REALICE LIQUIDACIÓN INMEDIATAMENTE!!!", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Warning)
+                    KryptonMessageBox.Show("HA SUPERADO EL 95% DE SU FONDO. POR FAVOR REALICE LIQUIDACIÓN INMEDIATAMENTE!!!", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Warning)
                 ElseIf montoFondoRotativo < 70 Then
 
-                    KryptonMessageBox.Show("HA SUPERADO EL 90% DE SU FONDO. POR FAVOR REALICE LIQUIDACIÓN", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Warning)
+                    KryptonMessageBox.Show("HA SUPERADO EL 90% DE SU FONDO. POR FAVOR REALICE LIQUIDACIÓN", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Warning)
                 End If
             Catch ex As Exception
 
-                KryptonMessageBox.Show("Error: " & ex.Message, "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+                KryptonMessageBox.Show("Error: " & ex.Message, "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
         Private Sub btnBuscarPersonal_Click_1(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnBuscarPersonal.Click
@@ -690,7 +690,7 @@ Namespace FORMULARIOS.FONDOS.FONDO_ROTATIVO
                 Catch ex As Exception
                     _validarLlenarDocumento = 0
 
-                    KryptonMessageBox.Show(ex.ToString & vbNewLine & "Por favor, vuelva a ingresar los datos de la factura!", "MENSAJE DE EXCEPCIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+                    KryptonMessageBox.Show(ex.ToString & vbNewLine & "Por favor, vuelva a ingresar los datos de la factura!", "Mensaje de excepción", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
                 End Try
             ElseIf cmbNombreParametroDocumentos.Tag.ToString() = "NO DEDUCIBLE" Then
                 Try
@@ -716,7 +716,7 @@ Namespace FORMULARIOS.FONDOS.FONDO_ROTATIVO
                 Catch ex As Exception
                     _validarLlenarDocumento = 0
 
-                    KryptonMessageBox.Show(ex.ToString & vbNewLine & "Por favor, vuelva a ingresar los datos del documento!", "MENSAJE DE EXCEPCIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+                    KryptonMessageBox.Show(ex.ToString & vbNewLine & "Por favor, vuelva a ingresar los datos del documento!", "Mensaje de excepción", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
                 End Try
             End If
         End Sub
@@ -724,12 +724,12 @@ Namespace FORMULARIOS.FONDOS.FONDO_ROTATIVO
         Private Sub btnGuardar_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnGuardarSolicitudFR.Click
             If txtDetalleSolicitudFR.Text.Trim().Equals("...") Or txtDetalleSolicitudFR.Text.Length < 6 Then
 
-                KryptonMessageBox.Show("DEBE AGREGAR LA OBSERVACIÓN O DETALLE DEL DOCUMENTO!", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
+                KryptonMessageBox.Show("DEBE AGREGAR LA OBSERVACIÓN O DETALLE DEL DOCUMENTO!", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
                 Return
             End If
 
             If txtNombreComercialCliente.Text.Length = 0 Then
-                KryptonMessageBox.Show("DEBE AGREGAR EL NOMBRE DEL CLIENTE O PROVEEDOR!", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
+                KryptonMessageBox.Show("DEBE AGREGAR EL NOMBRE DEL CLIENTE O PROVEEDOR!", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
                 Return
             End If
 
@@ -739,7 +739,7 @@ Namespace FORMULARIOS.FONDOS.FONDO_ROTATIVO
             If Not ValidarNumeroComprobanteLiquidacionRepetido() Then Return
             If chkCombustible.Checked And Not ValidacionParametrosCombustible() Then
 
-                KryptonMessageBox.Show("NO OLVIDE INGRESAR LOS DATOS DEL CONTROL DE COMBUSTIBLE!", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
+                KryptonMessageBox.Show("NO OLVIDE INGRESAR LOS DATOS DEL CONTROL DE COMBUSTIBLE!", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
                 Return
             End If
 
@@ -748,7 +748,7 @@ Namespace FORMULARIOS.FONDOS.FONDO_ROTATIVO
 
                     If CDbl(txtValorSolicitudFR.Text) > CDbl(lblMontoFondoRotativo.Text) Then
 
-                        KryptonMessageBox.Show("No se puede procesar un valor mayor al valor disponible en fondo rotativo ($" & lblMontoFondoRotativo.Text & ")!" & vbCrLf & " Por favor, realice una reposición", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
+                        KryptonMessageBox.Show("No se puede procesar un valor mayor al valor disponible en fondo rotativo ($" & lblMontoFondoRotativo.Text & ")!" & vbCrLf & " Por favor, realice una reposición", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
                         Return
                     End If
                     _sqlCommands.Clear()
@@ -761,8 +761,8 @@ Namespace FORMULARIOS.FONDOS.FONDO_ROTATIVO
                     If cmbNombreParametroDocumentos.Tag.ToString() = "DEDUCIBLE" Then
 
                         If _objetoAts.ValidarCompraConDeclaracion(_tipoCon, dtpFechaEmisionComprobanteCompra.Value) Then
-                            'MsgBox("EL ATS DEL MES " & dtpFechaEmisionComprobanteCompra.Value.Month.ToString & " DEL AÑO " & dtpFechaEmisionComprobanteCompra.Value.Year.ToString & " YA FUE GENERADO." & vbNewLine & " SI NECESITA INGRESAR ESTE COMPROBANTE SOLICITE UNA SUSTUTIVA A LA CONTADORA Y HAGA UNA REQUISICIÓN AL DEPARTAMENTO DE SISTEMAS.", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
-                            KryptonMessageBox.Show("EL ATS DEL MES " & dtpFechaEmisionComprobanteCompra.Value.Month.ToString & " DEL AÑO " & dtpFechaEmisionComprobanteCompra.Value.Year.ToString & " YA FUE GENERADO." & vbNewLine & " SI NECESITA INGRESAR ESTE COMPROBANTE SOLICITE UNA SUSTUTIVA A LA CONTADORA Y HAGA UNA REQUISICION AL DEPARTAMENTO DE SISTEMAS.", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
+                            'MsgBox("EL ATS DEL MES " & dtpFechaEmisionComprobanteCompra.Value.Month.ToString & " DEL AÑO " & dtpFechaEmisionComprobanteCompra.Value.Year.ToString & " YA FUE GENERADO." & vbNewLine & " SI NECESITA INGRESAR ESTE COMPROBANTE SOLICITE UNA SUSTUTIVA A LA CONTADORA Y HAGA UNA REQUISICIÓN AL DEPARTAMENTO DE SISTEMAS.", MsgBoxStyle.Exclamation, "Mensaje de validación")
+                            KryptonMessageBox.Show("EL ATS DEL MES " & dtpFechaEmisionComprobanteCompra.Value.Month.ToString & " DEL AÑO " & dtpFechaEmisionComprobanteCompra.Value.Year.ToString & " YA FUE GENERADO." & vbNewLine & " SI NECESITA INGRESAR ESTE COMPROBANTE SOLICITE UNA SUSTUTIVA A LA CONTADORA Y HAGA UNA REQUISICION AL DEPARTAMENTO DE SISTEMAS.", "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
                         Else
 
                             ' AAUXILIARES ID
@@ -798,7 +798,7 @@ _tipoAmbiente, _establecimientoRetencion, _ptoEmisionRetencion,
                                     GuardarDetalleComprobanteRetencion()
                                 Else
 
-                                    KryptonMessageBox.Show("ERROR AL GENERAR RETENCIÓN: CLAVE DE ACCESO INVALIDA!", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+                                    KryptonMessageBox.Show("ERROR AL GENERAR RETENCIÓN: CLAVE DE ACCESO INVALIDA!", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
                                     Return
                                 End If
                             End If
@@ -828,7 +828,7 @@ _tipoAmbiente, _establecimientoLiqCompra, _ptoEmisionLiqCompra,
                                     If _ptoEmisionLiqCompra = "002" Then ActualizarSecuencialLiquidacion() ' actualiza el secuencial de comprobante de retencion electronico
                                 Else
 
-                                    KryptonMessageBox.Show("ERROR AL GENERAR LIQUIDACION COMPRA: CLAVE DE ACCESO INVALIDA!", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+                                    KryptonMessageBox.Show("ERROR AL GENERAR LIQUIDACION COMPRA: CLAVE DE ACCESO INVALIDA!", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
                                     Return
                                 End If
                             End If
@@ -849,7 +849,7 @@ _tipoAmbiente, _establecimientoLiqCompra, _ptoEmisionLiqCompra,
                             GuardarCombustible()
                         Else
 
-                            KryptonMessageBox.Show("El valor de combustible no puede ser 0!", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
+                            KryptonMessageBox.Show("El valor de combustible no puede ser 0!", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
                             Return
                         End If
                     End If
@@ -872,7 +872,7 @@ _tipoAmbiente, _establecimientoLiqCompra, _ptoEmisionLiqCompra,
                         DeshabilitadoInicio()
                     Else
 
-                        KryptonMessageBox.Show("NO SE PUEDE GUARDAR." & vbNewLine & "NO SE HAN LLENADO LOS DATOS DEL DOCUMENTO.", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
+                        KryptonMessageBox.Show("No se puede guardar." & vbNewLine & "NO SE HAN LLENADO LOS DATOS DEL DOCUMENTO.", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
                     End If
                     'MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
 
@@ -882,15 +882,15 @@ _tipoAmbiente, _establecimientoLiqCompra, _ptoEmisionLiqCompra,
                     Else
                         messageIcon = KryptonMessageBoxIcon.Exclamation
                     End If
-                    KryptonMessageBox.Show(res(1), "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, messageIcon)
+                    KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, messageIcon)
 
                 Else
 
-                    KryptonMessageBox.Show("NO SE PUEDE GUARDAR." & vbNewLine & "NO SE HAN LLENADO LOS DATOS DEL DOCUMENTO.", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
+                    KryptonMessageBox.Show("No se puede guardar." & vbNewLine & "NO SE HAN LLENADO LOS DATOS DEL DOCUMENTO.", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
                 End If
             Else
 
-                KryptonMessageBox.Show("NO SE PUEDE GUARDAR." & vbNewLine & "NO SE HAN LLENADO TODOS LOS CAMPOS NECESARIOS.", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
+                KryptonMessageBox.Show("No se puede guardar." & vbNewLine & "NO SE HAN LLENADO TODOS LOS CAMPOS NECESARIOS.", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
                 txtValorSolicitudFR.Focus()
             End If
         End Sub
@@ -899,7 +899,7 @@ _tipoAmbiente, _establecimientoLiqCompra, _ptoEmisionLiqCompra,
                 Dim n = _objetoComprobantesCompra.BuscarNumeroComprobanteXIdProveedorNumeroComprobante(_tipoCon, _idProveedorGeneral, _numeroComprobanteCompra.Trim.ToString)
                 If n <> "0" Then
 
-                    KryptonMessageBox.Show("EL NÚMERO DE COMPROBANTE " & n & " YA ESTA REGISTRADO PARA ESTE PROVEEDOR", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
+                    KryptonMessageBox.Show("EL NÚMERO DE COMPROBANTE " & n & " YA ESTA REGISTRADO PARA ESTE PROVEEDOR", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
                     Return False
                 Else
                     Return True
@@ -913,7 +913,7 @@ _tipoAmbiente, _establecimientoLiqCompra, _ptoEmisionLiqCompra,
                 If _numComprobanteRetencion <> "001001000000001" Then
                     If _objetoComprobantesRetencion.ExisteNumeroComprobanteRetencion(_tipoCon, _numComprobanteRetencion) Then
 
-                        KryptonMessageBox.Show("EL NÚMERO DE COMPROBANTE DE RETENCIÓN " & _numComprobanteRetencion & " YA ESTA REGISTRADO!", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
+                        KryptonMessageBox.Show("EL NÚMERO DE COMPROBANTE DE RETENCIÓN " & _numComprobanteRetencion & " YA ESTA REGISTRADO!", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
                         Return False
                     End If
                     Return True
@@ -925,8 +925,8 @@ _tipoAmbiente, _establecimientoLiqCompra, _ptoEmisionLiqCompra,
         Private Function ValidarNumeroComprobanteLiquidacionRepetido()
             If cmbNombreParametroDocumentos.Tag = "DEDUCIBLE" Then
                 If _objetoComprobantesRetencion.ExisteNumeroComprobanteLiquidacionCompra(_tipoCon, _numeroComprobanteCompra, _idProveedorGeneral) Then
-                    'MsgBox("EL NÚMERO DE COMPROBANTE DE LIQUIDACIÓN DE COMPRA " & _numeroComprobanteCompra & " YA ESTA REGISTRADO!", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
-                    KryptonMessageBox.Show("EL NÚMERO DE COMPROBANTE DE LIQUIDACIÓN DE COMPRA " & _numeroComprobanteCompra & " YA ESTA REGISTRADO!", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
+                    'MsgBox("EL NÚMERO DE COMPROBANTE DE LIQUIDACIÓN DE COMPRA " & _numeroComprobanteCompra & " YA ESTA REGISTRADO!", MsgBoxStyle.Exclamation, "Mensaje de validación")
+                    KryptonMessageBox.Show("EL NÚMERO DE COMPROBANTE DE LIQUIDACIÓN DE COMPRA " & _numeroComprobanteCompra & " YA ESTA REGISTRADO!", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
                     Return False
                 End If
                 Return True
@@ -1250,16 +1250,16 @@ _tipoAmbiente, _establecimientoLiqCompra, _ptoEmisionLiqCompra,
 
             If fechaRetencion < fechaCompra Then
 
-                KryptonMessageBox.Show("La fecha de la retención no puede ser menor a la compra!", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
+                KryptonMessageBox.Show("La fecha de la retención no puede ser menor a la compra!", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
                 Return False
             Else
                 If fechaActual > fechaMaximaIngreso Then
 
-                    KryptonMessageBox.Show("No puede ingresar facturas despues de 90 días de su emisión!", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
+                    KryptonMessageBox.Show("No puede ingresar facturas despues de 90 días de su emisión!", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
                     Return False
                 ElseIf fechaCompra > fechaActual Then
 
-                    KryptonMessageBox.Show("No puede ingresar fecha futuras!", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
+                    KryptonMessageBox.Show("No puede ingresar fecha futuras!", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
                     Return False
                 Else
                     Return True
@@ -1396,8 +1396,8 @@ _tipoAmbiente, _establecimientoLiqCompra, _ptoEmisionLiqCompra,
                 writer.Close()
 
             Catch ex As Exception
-                'MsgBox("ERROR AL GENERAR RETENCIÓN ELECTRÓNICA" & vbNewLine & ex.Message, MsgBoxStyle.Exclamation, "MENSAJE DE INFORMACIÓN.")
-                KryptonMessageBox.Show("ERROR AL GENERAR RETENCIÓN ELECTRÓNICA" & vbNewLine & ex.Message, "MENSAJE DE INFORMACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+                'MsgBox("ERROR AL GENERAR RETENCIÓN ELECTRÓNICA" & vbNewLine & ex.Message, MsgBoxStyle.Exclamation, "Mensaje de información.")
+                KryptonMessageBox.Show("ERROR AL GENERAR RETENCIÓN ELECTRÓNICA" & vbNewLine & ex.Message, "Mensaje de información", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
 
@@ -1545,7 +1545,7 @@ _tipoAmbiente, _establecimientoLiqCompra, _ptoEmisionLiqCompra,
 
             Catch ex As Exception
 
-                KryptonMessageBox.Show("ERROR A GENERAR LIQUIDACIÓN DE COMPRAS " & vbNewLine & ex.Message, "MENSAJE DE INFORMACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+                KryptonMessageBox.Show("ERROR A GENERAR LIQUIDACIÓN DE COMPRAS " & vbNewLine & ex.Message, "Mensaje de información", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
     End Class

@@ -42,7 +42,7 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.CONSULTAS
                 dgvMantenimientosProximos.DataSource = _objActivosFijos.SeleccionarMantenimientosProximosSemana(_tipoCon)
                 If dgvMantenimientosProximos.RowCount > 1 Then
                     _objBeep.Advertir()
-                    MsgBox("EXISTEN ACTIVOS QUE ESTA SEMANA NECESITAN DARSE MANTENIMIENTO", MsgBoxStyle.Critical, "MENSAJE DE INFORMACIÓN")
+                    MsgBox("EXISTEN ACTIVOS QUE ESTA SEMANA NECESITAN DARSE MANTENIMIENTO", MsgBoxStyle.Critical, "Mensaje de información")
                 End If
                 dgvMantenimientosProximos.Columns("FECHA_MANTENIMIENTO").DefaultCellStyle.BackColor = Color.Red
                 dgvMantenimientosProximos.Columns("FECHA_MANTENIMIENTO").DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter

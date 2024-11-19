@@ -102,7 +102,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.REQUERIMIENTOS
                 dgvRequisicionProductoServicio.AutoResizeRows()
                 dgvRequisicionProductoServicio.ReadOnly = True 
             Catch ex As Exception
-                MsgBox("METODO CARGAR REQUISICIONES PRODUCTO/SERVICIO" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "MENSAJE DE EXCEPCIÓN")
+                MsgBox("METODO CARGAR REQUISICIONES PRODUCTO/SERVICIO" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
             End Try
         End Sub
         Private Sub dgvRequisicionProductoServicio_SelectionChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles dgvRequisicionProductoServicio.SelectionChanged
@@ -152,12 +152,12 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.REQUERIMIENTOS
                 dgvDetalleRequisicionProductoServicio.Columns(7).Visible = False
                 dgvDetalleRequisicionProductoServicio.Columns(8).Visible = False
             Catch ex As Exception
-                MsgBox("METODO CARGAR DETALLE REQUISICIONES PRODUCTO/SERVICIO" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "MENSAJE DE EXCEPCIÓN")
+                MsgBox("METODO CARGAR DETALLE REQUISICIONES PRODUCTO/SERVICIO" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
             End Try
         End Sub
         Private Sub btnModificar_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnModificar.Click
             If dgvRequisicionProductoServicio.RowCount = 0 Then
-                MsgBox("DEBE SELECCIONAR UN REGISTRO!", MsgBoxStyle.Critical, "MENSAJE DE EXCEPCIÓN")
+                MsgBox("DEBE SELECCIONAR UN REGISTRO!", MsgBoxStyle.Critical, "Mensaje de excepción")
                 Return
             End If
             HabilitadoModificar()
@@ -184,7 +184,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.REQUERIMIENTOS
         Private Sub btnGuardar_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnGuardar.Click
             If dgvDetalleRequisicionProductoServicio.RowCount = 0 Then Return
             Try
-                If MessageBox.Show("¿ESTA SEGURA QUE DESEA GUARDAR LOS CAMBIOS?", "MENSAJE DE VALIDACIÓN", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> DialogResult.Yes Then Return
+                If MessageBox.Show("¿ESTA SEGURA QUE DESEA GUARDAR LOS CAMBIOS?", "Mensaje de validación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> DialogResult.Yes Then Return
 
                 _sqlCommands.Clear()
 
@@ -198,7 +198,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.REQUERIMIENTOS
                 MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
 
             Catch ex As Exception
-                MsgBox("HUBO UN PROBLEMA AL GUARDAR CAMBIOS. POR FAVOR, CONTÁCTE AL ADMINISTRADOR!" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "MENSAJE DE EXCEPCIÓN")
+                MsgBox("HUBO UN PROBLEMA AL GUARDAR CAMBIOS. POR FAVOR, CONTÁCTE AL ADMINISTRADOR!" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
             End Try
         End Sub
         Public Sub ModificarDetalleSolicitudMensualSuministros()
@@ -214,7 +214,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.REQUERIMIENTOS
         Private Sub btnRechazar_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnRechazar.Click
             If dgvRequisicionProductoServicio.RowCount > 0 And dgvDetalleRequisicionProductoServicio.RowCount > 0 And txtIdRequisicionProductoServicio.Text <> "" Then
                 Try
-                    If MessageBox.Show("¿ESTA SEGURA QUE DESEA RECHAZAR?", "MENSAJE DE VALIDACIÓN", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> DialogResult.Yes Then Return
+                    If MessageBox.Show("¿ESTA SEGURA QUE DESEA RECHAZAR?", "Mensaje de validación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> DialogResult.Yes Then Return
 
                     _sqlCommands.Clear()
 
@@ -230,10 +230,10 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.REQUERIMIENTOS
                     MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
                    
                 Catch ex As Exception
-                    MsgBox("HUBO UN PROBLEMA AL RECHAZAR. POR FAVOR, CONTÁCTE AL ADMINISTRADOR!" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "MENSAJE DE EXCEPCIÓN")
+                    MsgBox("HUBO UN PROBLEMA AL RECHAZAR. POR FAVOR, CONTÁCTE AL ADMINISTRADOR!" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
                 End Try
             Else
-                MsgBox("SELECCIONE UNA REQUISICIÓN PARA PODER RECHAZAR", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                MsgBox("SELECCIONE UNA REQUISICIÓN PARA PODER RECHAZAR", MsgBoxStyle.Exclamation, "Mensaje de validación")
             End If
         End Sub
         Public Sub RechazarRequisicionProductoServicio()
@@ -255,7 +255,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.REQUERIMIENTOS
         Private Sub btnAprovar_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnAprovar.Click
             If dgvRequisicionProductoServicio.RowCount > 0 And dgvDetalleRequisicionProductoServicio.RowCount > 0 And txtIdRequisicionProductoServicio.Text <> "" Then
                 Try
-                    If MessageBox.Show("¿ESTA SEGURA QUE DESEA APROBAR?", "MENSAJE DE VALIDACIÓN", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> DialogResult.Yes Then Return
+                    If MessageBox.Show("¿ESTA SEGURA QUE DESEA APROBAR?", "Mensaje de validación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> DialogResult.Yes Then Return
 
                     _sqlCommands.Clear()
 
@@ -271,10 +271,10 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.REQUERIMIENTOS
                     MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
 
                 Catch ex As Exception
-                    MsgBox("HUBO UN PROBLEMA AL APROBAR. POR FAVOR, CONTÁCTE AL ADMINISTRADOR!" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "MENSAJE DE EXCEPCIÓN")
+                    MsgBox("HUBO UN PROBLEMA AL APROBAR. POR FAVOR, CONTÁCTE AL ADMINISTRADOR!" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
                 End Try 
             Else
-                MsgBox("SELECCIONE UNA REQUISICIÓN PARA PODER APROBAR", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                MsgBox("SELECCIONE UNA REQUISICIÓN PARA PODER APROBAR", MsgBoxStyle.Exclamation, "Mensaje de validación")
             End If
         End Sub
         Public Sub AprovarRequisicionProductoServicio()

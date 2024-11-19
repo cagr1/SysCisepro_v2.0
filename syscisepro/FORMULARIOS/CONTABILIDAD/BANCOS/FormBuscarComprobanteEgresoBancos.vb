@@ -7,6 +7,7 @@ Imports Microsoft.Office.Interop
 Imports syscisepro.DATOS
 Imports syscisepro.FORMULARIOS.CONTABILIDAD.BANCOS.REPORTES
 Imports syscisepro.FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
+Imports Krypton.Toolkit
 
 Namespace FORMULARIOS.CONTABILIDAD.BANCOS
     ''' <summary>
@@ -165,10 +166,16 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
             If rbEmitidos.Checked Then
                 txtBuscar.Clear()
                 lblIdBeneficiario.Text = "..."
-                gbNumeroCheque.Enabled = False
-                gbRangoFechas.Enabled = True
-                gbBanco.Enabled = False
-                gbComandos.Enabled = True
+                'gbNumeroCheque.Enabled = False
+                txtNumeroCheque.Enabled = False
+                'gbRangoFechas.Enabled = True
+                dtpDesde.Enabled = True
+                dtpHasta.Enabled = True
+                'gbBanco.Enabled = False
+                cmbBancos.Enabled = False
+                cmbCuentaBancos.Enabled = False
+                'gbComandos.Enabled = True
+                txtBuscar.Enabled = True
             End If
         End Sub
         Private Sub rbFecha_CheckedChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles rbFecha.CheckedChanged
@@ -176,10 +183,16 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
             If rbFecha.Checked Then
                 txtBuscar.Clear()
                 lblIdBeneficiario.Text = "..."
-                gbNumeroCheque.Enabled = False
-                gbRangoFechas.Enabled = True
-                gbBanco.Enabled = False
-                gbComandos.Enabled = True
+                'gbNumeroCheque.Enabled = False
+                txtNumeroCheque.Enabled = False
+                'gbRangoFechas.Enabled = True
+                dtpDesde.Enabled = True
+                dtpHasta.Enabled = True
+                'gbBanco.Enabled = False
+                cmbBancos.Enabled = False
+                cmbCuentaBancos.Enabled = False
+                'gbComandos.Enabled = True
+                txtBuscar.Enabled = True
             End If
         End Sub
         Private Sub rbNumeroCheque_CheckedChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles rbNumeroCheque.CheckedChanged
@@ -189,10 +202,16 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
                 lblIdBeneficiario.Text = "..."
                 txtNumeroCheque.Enabled = True
                 txtNumeroCheque.Focus()
-                gbNumeroCheque.Enabled = True
-                gbRangoFechas.Enabled = False
-                gbBanco.Enabled = False
-                gbComandos.Enabled = False
+                'gbNumeroCheque.Enabled = True
+                txtNumeroCheque.Enabled = True
+                'gbRangoFechas.Enabled = False
+                dtpDesde.Enabled = False
+                dtpHasta.Enabled = False
+                'gbBanco.Enabled = False
+                cmbBancos.Enabled = False
+                cmbCuentaBancos.Enabled = False
+                'gbComandos.Enabled = False
+                txtBuscar.Enabled = False
             End If
         End Sub
         Private Sub rbAprobados_CheckedChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles rbAprobados.CheckedChanged
@@ -200,10 +219,17 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
             If rbAprobados.Checked Then
                 txtBuscar.Clear()
                 lblIdBeneficiario.Text = "..."
-                gbNumeroCheque.Enabled = False
-                gbRangoFechas.Enabled = True
-                gbComandos.Enabled = True
-                gbBanco.Enabled = False
+                'gbNumeroCheque.Enabled = False
+                txtNumeroCheque.Enabled = False
+                'gbRangoFechas.Enabled = True
+                dtpDesde.Enabled = True
+                dtpHasta.Enabled = True
+                'gbComandos.Enabled = True
+                txtBuscar.Enabled = True
+                'gbBanco.Enabled = False
+                cmbBancos.Enabled = False
+                cmbCuentaBancos.Enabled = False
+
             End If
         End Sub
         Private Sub rbBanco_CheckedChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles rbBanco.CheckedChanged
@@ -211,10 +237,16 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
             If rbBanco.Checked Then
                 txtBuscar.Clear()
                 lblIdBeneficiario.Text = "..."
-                gbNumeroCheque.Enabled = False
-                gbRangoFechas.Enabled = True
-                gbBanco.Enabled = True
-                gbComandos.Enabled = True
+                'gbNumeroCheque.Enabled = False
+                txtNumeroCheque.Enabled = False
+                'gbRangoFechas.Enabled = True
+                dtpDesde.Enabled = True
+                dtpHasta.Enabled = True
+                'gbBanco.Enabled = True
+                cmbBancos.Enabled = True
+                cmbCuentaBancos.Enabled = True
+                'gbComandos.Enabled = True
+                txtBuscar.Enabled = True
             End If
         End Sub
         Private Sub rbTodos_CheckedChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles rbTodos.CheckedChanged
@@ -222,10 +254,16 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
             If rbTodos.Checked Then
                 txtBuscar.Clear()
                 lblIdBeneficiario.Text = "..."
-                gbNumeroCheque.Enabled = False
-                gbRangoFechas.Enabled = False
-                gbBanco.Enabled = False
-                gbComandos.Enabled = True
+                'gbNumeroCheque.Enabled = False
+                txtNumeroCheque.Enabled = False
+                'gbRangoFechas.Enabled = False
+                dtpDesde.Enabled = False
+                dtpHasta.Enabled = False
+                'gbBanco.Enabled = False
+                cmbBancos.Enabled = False
+                cmbCuentaBancos.Enabled = False
+                'gbComandos.Enabled = True
+                txtBuscar.Enabled = True
             End If
         End Sub
         Private Sub dgvComprobanteEgresoBancos_SelectionChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles dgvComprobanteEgresoBancos.SelectionChanged
@@ -256,9 +294,11 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
             If dgvComprobanteEgresoBancos.Rows.Count > 0 Then
                 actualizarRegistroComprobanteEgresoBancos()
                 CargarComprobanteEgresoBancos()
-                MsgBox("COMPROBANTE DE EGRESO DE BANCOS ACTUALIZADO SATISFACTOREAMENTE", MsgBoxStyle.Information, "MENSAJE DE INFORMACIÓN")
+
+                KryptonMessageBox.Show("Comprobante de egreso de bancos actualizado satisfactoreamente", "Mensaje de información", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
             Else
-                MsgBox("POR FAVOR CARGUE COMPROBANTES DE EGRESO", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+
+                KryptonMessageBox.Show("Por favor cargue comprobantes de egreso", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
             End If
         End Sub
         Private Sub ActualizarRegistroComprobanteEgresoBancos()
@@ -276,7 +316,8 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
         Private Sub ExportarDatosExcel(ByVal dgvAsientosDiario As DataGridView, ByVal titulo As String)
             Try
                 If dgvAsientosDiario.Rows.Count = 0 Then
-                    MsgBox("NO HAY DATOS QUE EXPORTAR!", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+
+                    KryptonMessageBox.Show("No hay datos que exportar!", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                     Return
                 End If
 
@@ -344,7 +385,8 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
                 app.Visible = True
                 app.DisplayAlerts = True
             Catch ex As Exception
-                MessageBox.Show("HUBO UN PROBLEMA AL EXPORTAR DATOS!", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Error)
+
+                KryptonMessageBox.Show("Hubo un problema al exportar datos!", "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try 
         End Sub
         Private Sub btnReporte_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnReporte.Click
@@ -371,7 +413,8 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
                     rep.ShowDialog()
                 End If
             Else
-                MsgBox("POR FAVOR SELECCIONE UN COMPROBANTE DE EGRESO", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+
+                KryptonMessageBox.Show("Por favor seleccione un comprobante de egreso", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
             End If
         End Sub
          
@@ -402,7 +445,8 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
                     rep.ShowDialog()
                 End If
             Else
-                MsgBox("POR FAVOR SELECCIONE UN COMPROBANTE DE EGRESO", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+
+                KryptonMessageBox.Show("Por favor seleccione un comprobante de egreso", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
             End If
         End Sub
 

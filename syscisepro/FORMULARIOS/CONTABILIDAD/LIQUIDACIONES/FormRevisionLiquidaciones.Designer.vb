@@ -63,12 +63,12 @@
             Me.btnAgregarDiarioDeducibles = New System.Windows.Forms.ToolStripMenuItem()
             Me.btnFinRevision = New System.Windows.Forms.ToolStripMenuItem()
             Me.KryptonGroupBox1 = New Krypton.Toolkit.KryptonGroupBox()
-            Me.KryptonLabel1 = New Krypton.Toolkit.KryptonLabel()
-            Me.KryptonLabel2 = New Krypton.Toolkit.KryptonLabel()
-            Me.KryptonLabel3 = New Krypton.Toolkit.KryptonLabel()
-            Me.KryptonLabel4 = New Krypton.Toolkit.KryptonLabel()
-            Me.KryptonLabel5 = New Krypton.Toolkit.KryptonLabel()
             Me.KryptonLabel6 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel5 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel4 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel3 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel2 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel1 = New Krypton.Toolkit.KryptonLabel()
             Me.KryptonGroupBox2 = New Krypton.Toolkit.KryptonGroupBox()
             Me.chkSeleccionarTodoNoDeducibles = New System.Windows.Forms.CheckBox()
             Me.KryptonGroupBox3 = New Krypton.Toolkit.KryptonGroupBox()
@@ -96,6 +96,7 @@
             'txtIdLiquidacion
             '
             Me.txtIdLiquidacion.AutoSize = True
+            Me.txtIdLiquidacion.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.txtIdLiquidacion.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtIdLiquidacion.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
             Me.txtIdLiquidacion.Location = New System.Drawing.Point(93, 40)
@@ -277,6 +278,7 @@
             'chkSeleccionarTodo
             '
             Me.chkSeleccionarTodo.AutoSize = True
+            Me.chkSeleccionarTodo.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.chkSeleccionarTodo.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.chkSeleccionarTodo.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
             Me.chkSeleccionarTodo.Location = New System.Drawing.Point(689, 376)
@@ -286,7 +288,7 @@
             Me.chkSeleccionarTodo.TabIndex = 23
             Me.chkSeleccionarTodo.Text = "Marcar / Desmarcar"
             Me.chkSeleccionarTodo.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-            Me.chkSeleccionarTodo.UseVisualStyleBackColor = True
+            Me.chkSeleccionarTodo.UseVisualStyleBackColor = False
             '
             'dgvSolicitudFonoRotativoNoDeducible
             '
@@ -346,6 +348,7 @@
             'lblNoDeducibles
             '
             Me.lblNoDeducibles.AutoSize = True
+            Me.lblNoDeducibles.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.lblNoDeducibles.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.lblNoDeducibles.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
             Me.lblNoDeducibles.Location = New System.Drawing.Point(107, 196)
@@ -357,6 +360,7 @@
             'lblDeducibles
             '
             Me.lblDeducibles.AutoSize = True
+            Me.lblDeducibles.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.lblDeducibles.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.lblDeducibles.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
             Me.lblDeducibles.Location = New System.Drawing.Point(91, 376)
@@ -472,37 +476,13 @@
             Me.KryptonGroupBox1.TabIndex = 185
             Me.KryptonGroupBox1.Values.Heading = "Liquidacion"
             '
-            'KryptonLabel1
+            'KryptonLabel6
             '
-            Me.KryptonLabel1.Location = New System.Drawing.Point(7, 5)
-            Me.KryptonLabel1.Name = "KryptonLabel1"
-            Me.KryptonLabel1.Size = New System.Drawing.Size(42, 20)
-            Me.KryptonLabel1.TabIndex = 0
-            Me.KryptonLabel1.Values.Text = "Fecha"
-            '
-            'KryptonLabel2
-            '
-            Me.KryptonLabel2.Location = New System.Drawing.Point(170, 6)
-            Me.KryptonLabel2.Name = "KryptonLabel2"
-            Me.KryptonLabel2.Size = New System.Drawing.Size(38, 20)
-            Me.KryptonLabel2.TabIndex = 10
-            Me.KryptonLabel2.Values.Text = "Total"
-            '
-            'KryptonLabel3
-            '
-            Me.KryptonLabel3.Location = New System.Drawing.Point(286, 6)
-            Me.KryptonLabel3.Name = "KryptonLabel3"
-            Me.KryptonLabel3.Size = New System.Drawing.Size(45, 20)
-            Me.KryptonLabel3.TabIndex = 11
-            Me.KryptonLabel3.Values.Text = "Fondo"
-            '
-            'KryptonLabel4
-            '
-            Me.KryptonLabel4.Location = New System.Drawing.Point(408, 6)
-            Me.KryptonLabel4.Name = "KryptonLabel4"
-            Me.KryptonLabel4.Size = New System.Drawing.Size(47, 20)
-            Me.KryptonLabel4.TabIndex = 12
-            Me.KryptonLabel4.Values.Text = "Gastos"
+            Me.KryptonLabel6.Location = New System.Drawing.Point(654, 6)
+            Me.KryptonLabel6.Name = "KryptonLabel6"
+            Me.KryptonLabel6.Size = New System.Drawing.Size(70, 20)
+            Me.KryptonLabel6.TabIndex = 14
+            Me.KryptonLabel6.Values.Text = "Reposicion"
             '
             'KryptonLabel5
             '
@@ -512,13 +492,37 @@
             Me.KryptonLabel5.TabIndex = 13
             Me.KryptonLabel5.Values.Text = "Saldos"
             '
-            'KryptonLabel6
+            'KryptonLabel4
             '
-            Me.KryptonLabel6.Location = New System.Drawing.Point(654, 6)
-            Me.KryptonLabel6.Name = "KryptonLabel6"
-            Me.KryptonLabel6.Size = New System.Drawing.Size(70, 20)
-            Me.KryptonLabel6.TabIndex = 14
-            Me.KryptonLabel6.Values.Text = "Reposicion"
+            Me.KryptonLabel4.Location = New System.Drawing.Point(408, 6)
+            Me.KryptonLabel4.Name = "KryptonLabel4"
+            Me.KryptonLabel4.Size = New System.Drawing.Size(47, 20)
+            Me.KryptonLabel4.TabIndex = 12
+            Me.KryptonLabel4.Values.Text = "Gastos"
+            '
+            'KryptonLabel3
+            '
+            Me.KryptonLabel3.Location = New System.Drawing.Point(286, 6)
+            Me.KryptonLabel3.Name = "KryptonLabel3"
+            Me.KryptonLabel3.Size = New System.Drawing.Size(45, 20)
+            Me.KryptonLabel3.TabIndex = 11
+            Me.KryptonLabel3.Values.Text = "Fondo"
+            '
+            'KryptonLabel2
+            '
+            Me.KryptonLabel2.Location = New System.Drawing.Point(170, 6)
+            Me.KryptonLabel2.Name = "KryptonLabel2"
+            Me.KryptonLabel2.Size = New System.Drawing.Size(38, 20)
+            Me.KryptonLabel2.TabIndex = 10
+            Me.KryptonLabel2.Values.Text = "Total"
+            '
+            'KryptonLabel1
+            '
+            Me.KryptonLabel1.Location = New System.Drawing.Point(7, 5)
+            Me.KryptonLabel1.Name = "KryptonLabel1"
+            Me.KryptonLabel1.Size = New System.Drawing.Size(42, 20)
+            Me.KryptonLabel1.TabIndex = 0
+            Me.KryptonLabel1.Values.Text = "Fecha"
             '
             'KryptonGroupBox2
             '
@@ -537,6 +541,7 @@
             'chkSeleccionarTodoNoDeducibles
             '
             Me.chkSeleccionarTodoNoDeducibles.AutoSize = True
+            Me.chkSeleccionarTodoNoDeducibles.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.chkSeleccionarTodoNoDeducibles.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.chkSeleccionarTodoNoDeducibles.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
             Me.chkSeleccionarTodoNoDeducibles.Location = New System.Drawing.Point(688, 196)
@@ -546,7 +551,7 @@
             Me.chkSeleccionarTodoNoDeducibles.TabIndex = 30
             Me.chkSeleccionarTodoNoDeducibles.Text = "Marcar / Desmarcar"
             Me.chkSeleccionarTodoNoDeducibles.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-            Me.chkSeleccionarTodoNoDeducibles.UseVisualStyleBackColor = True
+            Me.chkSeleccionarTodoNoDeducibles.UseVisualStyleBackColor = False
             '
             'KryptonGroupBox3
             '
@@ -566,7 +571,7 @@
             '
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-            Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
+            Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(185, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(227, Byte), Integer))
             Me.ClientSize = New System.Drawing.Size(829, 550)
             Me.Controls.Add(Me.chkSeleccionarTodo)
             Me.Controls.Add(Me.lblDeducibles)

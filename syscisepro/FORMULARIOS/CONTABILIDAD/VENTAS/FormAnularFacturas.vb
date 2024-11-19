@@ -98,7 +98,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                     lblLlevaContabilidadClienteGeneral.Text = cli.Rows(0)(7)
                 End If
             Catch ex As Exception
-                MsgBox("CARGAR DATOS CLIENTE." & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "MENSAJE DE EXCEPCIÓN")
+                MsgBox("CARGAR DATOS CLIENTE." & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
             End Try
         End Sub
         Private Sub CargarFacturasVentaXIdCliente()
@@ -155,7 +155,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                 dgvFacturaVenta.AutoResizeColumns()
                 dgvFacturaVenta.AutoResizeRows()
             Catch ex As Exception
-                MsgBox("METODO CARGAR FACTURA VENTA" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "MENSAJE DE EXCEPCIÓN")
+                MsgBox("METODO CARGAR FACTURA VENTA" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
             End Try
         End Sub
         Private Sub CargarFacturasVentaXNroFactura()
@@ -213,7 +213,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                 dgvFacturaVenta.AutoResizeColumns()
                 dgvFacturaVenta.AutoResizeRows()
             Catch ex As Exception
-                MsgBox("METODO CARGAR FACTURA VENTA" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "MENSAJE DE EXCEPCIÓN")
+                MsgBox("METODO CARGAR FACTURA VENTA" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
             End Try
         End Sub
         Private Sub CargarPagosFacturaVenta()
@@ -227,7 +227,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                 dgvPagosFacturaVenta.Columns(6).HeaderText = "EST"
                 dgvPagosFacturaVenta.Columns(7).HeaderText = "ID FV"  
             Catch ex As Exception
-                MsgBox("METODO CARGAR PAGOS FACTURA VENTA" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "MENSAJE DE EXCEPCIÓN")
+                MsgBox("METODO CARGAR PAGOS FACTURA VENTA" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
             End Try
         End Sub
         Private Sub CargarComprobanteRetencion()
@@ -236,7 +236,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                 dgvComprobanteRetencion.ReadOnly = False
                 dgvComprobanteRetencion.EditMode = DataGridViewEditMode.EditProgrammatically
             Catch ex As Exception
-                MsgBox("METODO CARGAR COMPROBANTE DE RETENCIÓN" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "MENSAJE DE EXCEPCIÓN")
+                MsgBox("METODO CARGAR COMPROBANTE DE RETENCIÓN" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
             End Try
         End Sub
         Private Sub CargarDetalleComprobanteRetencion(ByVal idCompRetenciom As Integer)
@@ -245,7 +245,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                 dgvDetalleComprobanteRetencion.ReadOnly = False
                 dgvDetalleComprobanteRetencion.EditMode = DataGridViewEditMode.EditProgrammatically
             Catch ex As Exception
-                MsgBox("METODO CARGAR DETALLE COMPROBANTE DE RETENCIÓN" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "MENSAJE DE EXCEPCIÓN")
+                MsgBox("METODO CARGAR DETALLE COMPROBANTE DE RETENCIÓN" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
             End Try
         End Sub
         Private Sub CargarNotaCreditoVenta(ByVal idFacturaVenta As Integer)
@@ -255,7 +255,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                 dgvDetalleComprobanteRetencion.EditMode = DataGridViewEditMode.EditProgrammatically
             Catch ex As Exception
                 dgvNotaCreditoVenta.DataSource = Nothing
-                MsgBox("METODO CARGAR DETALLE COMPROBANTE DE RETENCIÓN" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "MENSAJE DE EXCEPCIÓN")
+                MsgBox("METODO CARGAR DETALLE COMPROBANTE DE RETENCIÓN" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
             End Try
         End Sub
         
@@ -276,11 +276,11 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
         Private Sub btnGuardar_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnGuardar.Click
             Dim sel = dgvFacturaVenta.Rows.Cast(Of DataGridViewRow)().Any(Function(row) CBool(row.Cells(0).EditedFormattedValue))
             If Not sel Then
-                MessageBox.Show("DEBE SELECCIONAR AL MENOS UNA FACTURA!", "MENSAJE DE VALIDACIÓN", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                MessageBox.Show("DEBE SELECCIONAR AL MENOS UNA FACTURA!", "Mensaje de validación", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
                 Return
             End If
 
-            If MessageBox.Show("¿ESTA SEGURA QUE DESEA ANULAR LAS FACTURAS SELECCIONADAS?", "MENSAJE DE VALIDACIÓN", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> DialogResult.Yes Then Return
+            If MessageBox.Show("¿ESTA SEGURA QUE DESEA ANULAR LAS FACTURAS SELECCIONADAS?", "Mensaje de validación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> DialogResult.Yes Then Return
             _sqlCommands.Clear()
 
             ActualizarEstadoFacturasVenta() ' actualizar estado factura y asiento
@@ -425,12 +425,12 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                 If CBool(dgvFacturaVenta.CurrentCell.EditedFormattedValue) Then
                     If _objetoPagosFacturaVenta.BuscarMayorSaldoPagosFacturaventaXIdFactura(_tipoCon, dgvFacturaVenta.CurrentRow.Cells.Item(1).Value) < 0.01 Then
                         If Not _notSelect.Contains(dgvFacturaVenta.CurrentCell.RowIndex) Then _notSelect.Add(dgvFacturaVenta.CurrentCell.RowIndex)
-                        MsgBox("ESTA FACTUARA YA HA SIDO CANCELADA" & vbNewLine & "NO SE PUEDE ANULAR", MsgBoxStyle.Information, "MENSAJE DE INFORMACIÓN")
+                        MsgBox("ESTA FACTUARA YA HA SIDO CANCELADA" & vbNewLine & "NO SE PUEDE ANULAR", MsgBoxStyle.Information, "Mensaje de información")
                     Else
                         Dim si = _objetoPagosFacturaVenta.SeleccionarPagosActivoXIdComprobante(_tipoCon, CLng(dgvFacturaVenta.CurrentRow.Cells(1).Value))
                         If si.Rows.Count > 1 Or si.Rows(0)(2) > 1 Then
                             If Not _notSelect.Contains(dgvFacturaVenta.CurrentCell.RowIndex) Then _notSelect.Add(dgvFacturaVenta.CurrentCell.RowIndex)
-                            MsgBox("ESTA FACTURA YA REGISTRA PAGOS. ANULE PRIMERO LOS PAGOS CORRESPONDIENTES O LA FACTURA NO SERÁ ANULADA!", MsgBoxStyle.Information, "MENSAJE DE VALIDACIÓN")
+                            MsgBox("ESTA FACTURA YA REGISTRA PAGOS. ANULE PRIMERO LOS PAGOS CORRESPONDIENTES O LA FACTURA NO SERÁ ANULADA!", MsgBoxStyle.Information, "Mensaje de validación")
                         End If
                     End If
                 End If

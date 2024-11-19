@@ -5,6 +5,7 @@ Imports ClassLibraryCisepro.ENUMS
 Imports ClassLibraryCisepro.ESTRUCTURA_EMPRESA
 Imports Microsoft.Office.Interop
 Imports syscisepro.DATOS
+Imports Krypton.Toolkit
 
 Namespace FORMULARIOS.ESTRUCTURA_ADMINISTRATIVA
     ''' <summary>
@@ -191,9 +192,11 @@ Namespace FORMULARIOS.ESTRUCTURA_ADMINISTRATIVA
                     If IsNumeric(response) = True Then
                         year = CType(response, Integer) ' <-- Recibe el valor del Imputbox
                         If year > Date.Now.Year Then
-                            MsgBox("EL AÑO INGRESADO NO PUEDE SER MAYOR AL AÑO EN CURSO", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                            'MsgBox("EL AÑO INGRESADO NO PUEDE SER MAYOR AL AÑO EN CURSO", MsgBoxStyle.Exclamation, "Mensaje de validación")
+                            KryptonMessageBox.Show("EL AÑO INGRESADO NO PUEDE SER MAYOR AL AÑO EN CURSO", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                         ElseIf (Date.Now.Year - year) > 1 Then
-                            MsgBox("NO PUEDE HABER MAS DE UN AÑO DE DIFERENCIA DEL AÑO INGRESADO CON EL AÑO EN CURSO", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                            'MsgBox("NO PUEDE HABER MAS DE UN AÑO DE DIFERENCIA DEL AÑO INGRESADO CON EL AÑO EN CURSO", MsgBoxStyle.Exclamation, "Mensaje de validación")
+                            KryptonMessageBox.Show("NO PUEDE HABER MAS DE UN AÑO DE DIFERENCIA DEL AÑO INGRESADO CON EL AÑO EN CURSO", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                         Else
                             Dim n = _objAsiento.BuscarMayorNuneroRegistroAsientoInicialLibroDiarioXFecha(_tipoCon, year.ToString + "-01-01 00:00:01", year.ToString + "-01-01 23:59:59")
                             If n = 0 Then
@@ -205,7 +208,8 @@ Namespace FORMULARIOS.ESTRUCTURA_ADMINISTRATIVA
                             showBox = False
                         End If
                     Else
-                        MsgBox("POR FAVOR INGRESE SOLO NÚMEROS ENTEROS", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                        'MsgBox("POR FAVOR INGRESE SOLO NÚMEROS ENTEROS", MsgBoxStyle.Exclamation, "Mensaje de validación")
+                        KryptonMessageBox.Show("POR FAVOR INGRESE SOLO NÚMEROS ENTEROS", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                     End If
                 End If
             End While
@@ -252,12 +256,14 @@ Namespace FORMULARIOS.ESTRUCTURA_ADMINISTRATIVA
                 _objAuditoria.FormularioAuditoria = Text.ToUpper
                 Auditoria()
             Else
-                MsgBox("EL NIVEL DE LA CUENTA DEBE SER UNO MAS QUE LA CUENTA PADRE", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN.")
+                'MsgBox("EL NIVEL DE LA CUENTA DEBE SER UNO MAS QUE LA CUENTA PADRE", MsgBoxStyle.Exclamation, "Mensaje de validación.")
+                KryptonMessageBox.Show("EL NIVEL DE LA CUENTA DEBE SER UNO MAS QUE LA CUENTA PADRE", "Mensaje de validación.", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
             End If
         End Sub
         '==============================================================================================================================================================================
         Private Sub btnGuardar_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnGuardar.Click
-            If MessageBox.Show("Seguro que desea guardar los cambios realizados?", "MENSAJE DEL SISTEMA", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.No Then
+            'If MessageBox.Show("Seguro que desea guardar los cambios realizados?", "Mensaje del sistema", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.No Then
+            If KryptonMessageBox.Show("Seguro que desea guardar los cambios realizados?", "Mensaje del sistema", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) = DialogResult.No Then
                 Return
             End If
 
@@ -270,7 +276,8 @@ Namespace FORMULARIOS.ESTRUCTURA_ADMINISTRATIVA
                     HabilitarBotones(True, True, False, False)
                     CargarCuentas()
                 Else
-                    MsgBox("No se puede guardar debido a que no ha llenado todos los campos nesesarios", MsgBoxStyle.Information, "Mensaje de Validación")
+                    'MsgBox("No se puede guardar debido a que no ha llenado todos los campos nesesarios", MsgBoxStyle.Information, "Mensaje de validación")
+                    KryptonMessageBox.Show("No se puede guardar debido a que no ha llenado todos los campos nesesarios", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
                     txtCodigo.Focus()
                 End If
             Catch ex As Exception
@@ -400,7 +407,8 @@ Namespace FORMULARIOS.ESTRUCTURA_ADMINISTRATIVA
         Private Sub btnExportar_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnExportar.Click
             Try
                 If dgvPlanDeCuentas.Rows.Count = 0 Then
-                    MsgBox("NO HAY DATOS QUE EXPORTAR!", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                    'MsgBox("No hay datos que exportar!", MsgBoxStyle.Exclamation, "Mensaje de validación")
+                    KryptonMessageBox.Show("No hay datos que exportar!", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                     Return
                 End If
 
@@ -469,7 +477,7 @@ Namespace FORMULARIOS.ESTRUCTURA_ADMINISTRATIVA
                 app.DisplayAlerts = True
                 'workbook.SaveAs(sfd.FileName, Excel.XlFileFormat.xlWorkbookNormal, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Excel.XlSaveAsAccessMode.xlExclusive, Type.Missing, Type.Missing, Type.Missing, Type.Missing)
             Catch
-                MessageBox.Show("HUBO UN PROBLEMA AL EXPORTAR DATOS!", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                MessageBox.Show("Hubo un problema al exportar datos!", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Error)
             End Try
         End Sub
     End Class

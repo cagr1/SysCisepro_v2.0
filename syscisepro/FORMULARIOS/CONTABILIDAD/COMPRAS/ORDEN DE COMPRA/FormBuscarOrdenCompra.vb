@@ -66,7 +66,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.ORDEN_DE_COMPRA
                 dgvOrdenCompra.ReadOnly = True
                 dgvOrdenCompra.EditMode = DataGridViewEditMode.EditProgrammatically 
             Catch ex As Exception
-                MsgBox("METODO CARGAR ORDEN DE COMPRA" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "MENSAJE DE EXCEPCIÓN")
+                MsgBox("METODO CARGAR ORDEN DE COMPRA" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
             End Try
         End Sub
         Public Sub CargarDetalleOrdenCompra()
@@ -107,7 +107,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.ORDEN_DE_COMPRA
 
                 dgvDetalleOrdenCompra.ReadOnly = True
             Catch ex As Exception
-                MsgBox("METODO CARGAR DETALLE ORDEN COMPRA" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "MENSAJE DE EXCEPCIÓN")
+                MsgBox("METODO CARGAR DETALLE ORDEN COMPRA" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
             End Try
         End Sub
 

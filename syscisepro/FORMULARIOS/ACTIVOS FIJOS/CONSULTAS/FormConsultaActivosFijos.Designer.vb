@@ -40,8 +40,8 @@
             Me.cbxActivo = New ComponentFactory.Krypton.Toolkit.KryptonComboBox()
             Me.txtBuscar = New System.Windows.Forms.TextBox()
             Me.KryptonGroupBox1 = New ComponentFactory.Krypton.Toolkit.KryptonGroupBox()
-            Me.chbxCategoria = New ComponentFactory.Krypton.Toolkit.KryptonCheckBox()
             Me.dgvTotalActivosFijos = New System.Windows.Forms.DataGridView()
+            Me.chbxCategoria = New ComponentFactory.Krypton.Toolkit.KryptonCheckBox()
             Me.KryptonGroupBox2 = New ComponentFactory.Krypton.Toolkit.KryptonGroupBox()
             Me.dgvActivosFijos = New System.Windows.Forms.DataGridView()
             Me.KryptonLabel1 = New ComponentFactory.Krypton.Toolkit.KryptonLabel()
@@ -155,19 +155,6 @@
             Me.KryptonGroupBox1.TabIndex = 251
             Me.KryptonGroupBox1.Values.Heading = "Total Activos Fijos"
             '
-            'chbxCategoria
-            '
-            Me.chbxCategoria.Images.CheckedNormal = Global.syscisepro.My.Resources.Resources.check_24dp_FILL0_wght400_GRAD0_opsz24
-            Me.chbxCategoria.Images.CheckedPressed = Global.syscisepro.My.Resources.Resources.check_24dp_FILL0_wght400_GRAD0_opsz24
-            Me.chbxCategoria.Images.CheckedTracking = Global.syscisepro.My.Resources.Resources.check_24dp_FILL0_wght400_GRAD0_opsz24
-            Me.chbxCategoria.Location = New System.Drawing.Point(306, 44)
-            Me.chbxCategoria.Name = "chbxCategoria"
-            Me.chbxCategoria.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Office2007Blue
-            Me.chbxCategoria.Size = New System.Drawing.Size(83, 18)
-            Me.chbxCategoria.StateCommon.ShortText.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.chbxCategoria.TabIndex = 249
-            Me.chbxCategoria.Values.Text = "Categorias"
-            '
             'dgvTotalActivosFijos
             '
             Me.dgvTotalActivosFijos.AllowUserToAddRows = False
@@ -206,6 +193,19 @@
             Me.dgvTotalActivosFijos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
             Me.dgvTotalActivosFijos.Size = New System.Drawing.Size(869, 94)
             Me.dgvTotalActivosFijos.TabIndex = 12
+            '
+            'chbxCategoria
+            '
+            Me.chbxCategoria.Images.CheckedNormal = Global.syscisepro.My.Resources.Resources.check_24dp_FILL0_wght400_GRAD0_opsz24
+            Me.chbxCategoria.Images.CheckedPressed = Global.syscisepro.My.Resources.Resources.check_24dp_FILL0_wght400_GRAD0_opsz24
+            Me.chbxCategoria.Images.CheckedTracking = Global.syscisepro.My.Resources.Resources.check_24dp_FILL0_wght400_GRAD0_opsz24
+            Me.chbxCategoria.Location = New System.Drawing.Point(306, 44)
+            Me.chbxCategoria.Name = "chbxCategoria"
+            Me.chbxCategoria.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Office2007Blue
+            Me.chbxCategoria.Size = New System.Drawing.Size(83, 18)
+            Me.chbxCategoria.StateCommon.ShortText.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.chbxCategoria.TabIndex = 249
+            Me.chbxCategoria.Values.Text = "Categorias"
             '
             'KryptonGroupBox2
             '
@@ -349,7 +349,7 @@
             '
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-            Me.BackColor = System.Drawing.Color.White
+            Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(185, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(227, Byte), Integer))
             Me.ClientSize = New System.Drawing.Size(897, 562)
             Me.Controls.Add(Me.txtCustodio)
             Me.Controls.Add(Me.chbxCategoria)

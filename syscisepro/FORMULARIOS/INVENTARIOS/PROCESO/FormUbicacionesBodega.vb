@@ -280,7 +280,7 @@ Namespace FORMULARIOS.INVENTARIOS.PROCESO
 
         Private Sub tsmGuardar_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnGuardarCategoría.Click
             If ValidacionParametrosCategorías() Then
-                If MessageBox.Show("¿ESTA SEGURO QUE DESEA GUARDAR?", "MENSAJE DE VALIDACIÓN", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> MsgBoxResult.Yes Then Return
+                If MessageBox.Show("¿Esta seguro que desea guardar?", "Mensaje de validación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> MsgBoxResult.Yes Then Return
                 _sqlCommands.Clear()
                 With _objCategorias
                     .IdCategoriaUbicacion = .BuscarMayorIdCategoriaUbicacionItem(_tipoCon) + 1
@@ -308,7 +308,7 @@ Namespace FORMULARIOS.INVENTARIOS.PROCESO
                 MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema") 
                 
             Else
-                MsgBox("DATO NO GUARDADO, LLENE LOS PARÁMETROS NECESARIOS", MsgBoxStyle.Information, "MENSAJE DE VALIDACIÓN")
+                MsgBox("DATO NO GUARDADO, LLENE LOS PARÁMETROS NECESARIOS", MsgBoxStyle.Information, "Mensaje de validación")
             End If 
         End Sub
 
@@ -324,7 +324,7 @@ Namespace FORMULARIOS.INVENTARIOS.PROCESO
 
         Private Sub ToolStripMenuItem4_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnGuardarGrupo.Click
             If ValidacionParametrosGrupos() Then
-                If MessageBox.Show("¿ESTA SEGURO QUE DESEA GUARDAR?", "MENSAJE DE VALIDACIÓN", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> MsgBoxResult.Yes Then Return
+                If MessageBox.Show("¿Esta seguro que desea guardar?", "Mensaje de validación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> MsgBoxResult.Yes Then Return
                 _sqlCommands.Clear()
                 With _objGrupos
                     .IdGrupoUbicacion = .BuscarMayorIdGrupoUbicacionItem(_tipoCon) + 1
@@ -353,7 +353,7 @@ Namespace FORMULARIOS.INVENTARIOS.PROCESO
                 MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
 
             Else
-                MsgBox("DATO NO GUARDADO, LLENE LOS PARÁMETROS NECESARIOS", MsgBoxStyle.Information, "MENSAJE DE VALIDACIÓN")
+                MsgBox("DATO NO GUARDADO, LLENE LOS PARÁMETROS NECESARIOS", MsgBoxStyle.Information, "Mensaje de validación")
             End If
         End Sub
 
@@ -400,7 +400,7 @@ Namespace FORMULARIOS.INVENTARIOS.PROCESO
             Dim fila As String = dgvGrupoItem.CurrentRow.Cells.Item(1).Value
             Dim idGrupoUbicacion As Integer = dgvGrupoItem.CurrentRow.Cells.Item(0).Value
 
-            If MessageBox.Show("¿ESTA SEGURO QUE DESEA GUARDAR?", "MENSAJE DE VALIDACIÓN", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> MsgBoxResult.Yes Then Return
+            If MessageBox.Show("¿Esta seguro que desea guardar?", "Mensaje de validación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> MsgBoxResult.Yes Then Return
             _sqlCommands.Clear()
 
             With _objSubGrupos

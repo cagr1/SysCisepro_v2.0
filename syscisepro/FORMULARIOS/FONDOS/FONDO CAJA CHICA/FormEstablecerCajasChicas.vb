@@ -249,11 +249,11 @@ Namespace FORMULARIOS.FONDOS.FONDO_CAJA_CHICA
         End Sub
         Private Sub btnGuardar_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnGuardar.Click
             If Not Validacion() Then
-                MsgBox("No se puede guardar debido a que no ha llenado todos los parámetros nesesarios", MsgBoxStyle.Information, "Mensaje de Validación")
+                MsgBox("No se puede guardar debido a que no ha llenado todos los parámetros nesesarios", MsgBoxStyle.Information, "Mensaje de validación")
                 Return
             End If
 
-            If MessageBox.Show("¿ESTA SEGURO QUE DESEA GUARDAR?", "MENSAJE DE VALIDACIÓN", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> MsgBoxResult.Yes Then Return
+            If MessageBox.Show("¿Esta seguro que desea guardar?", "Mensaje de validación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> MsgBoxResult.Yes Then Return
             _sqlCommands.Clear()
 
             Select Case (_botonSelecionado)

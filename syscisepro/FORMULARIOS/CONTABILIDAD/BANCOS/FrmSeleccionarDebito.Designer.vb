@@ -111,7 +111,7 @@
             Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
             Me.Name = "FrmSeleccionarDebito"
             Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-            Me.Text = "MENSAJE DEL SISTEMA"
+            Me.Text = "Mensaje del sistema"
             Me.ResumeLayout(False)
 
         End Sub

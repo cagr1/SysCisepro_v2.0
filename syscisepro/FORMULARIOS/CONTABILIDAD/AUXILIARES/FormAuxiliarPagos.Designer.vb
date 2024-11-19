@@ -1277,7 +1277,7 @@
             Me.dgvDetalleRetencionVenta.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
             Me.dgvDetalleRetencionVenta.RowHeadersVisible = False
             Me.dgvDetalleRetencionVenta.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvDetalleRetencionVenta.Size = New System.Drawing.Size(408, 86)
+            Me.dgvDetalleRetencionVenta.Size = New System.Drawing.Size(408, 95)
             Me.dgvDetalleRetencionVenta.TabIndex = 111
             '
             'lblNumeroFactura
@@ -2451,13 +2451,13 @@
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
             Me.KryptonGroupBox13.CaptionOverlap = 0R
             Me.KryptonGroupBox13.GroupBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.PanelRibbonInactive
-            Me.KryptonGroupBox13.Location = New System.Drawing.Point(595, 104)
+            Me.KryptonGroupBox13.Location = New System.Drawing.Point(595, 95)
             Me.KryptonGroupBox13.Name = "KryptonGroupBox13"
             '
             'KryptonGroupBox13.Panel
             '
             Me.KryptonGroupBox13.Panel.Controls.Add(Me.dgvDetalleRetencionVenta)
-            Me.KryptonGroupBox13.Size = New System.Drawing.Size(412, 110)
+            Me.KryptonGroupBox13.Size = New System.Drawing.Size(412, 119)
             Me.KryptonGroupBox13.TabIndex = 115
             Me.KryptonGroupBox13.Values.Heading = "Detalle Retencion"
             '

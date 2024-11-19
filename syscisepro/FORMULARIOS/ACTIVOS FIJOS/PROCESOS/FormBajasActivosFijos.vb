@@ -167,7 +167,7 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
         Private Sub btnBaja_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnBaja.Click
             If ValidacionParametros() Then
 
-                If KryptonMessageBox.Show("¿ESTA SEGURO QUE DESEA GUARDAR?", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) <> MsgBoxResult.Yes Then Return
+                If KryptonMessageBox.Show("¿Esta seguro que desea guardar?", "Mensaje de validación", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) <> MsgBoxResult.Yes Then Return
                 _sqlCommands.Clear()
 
                 Select Case (lblTipoActivo.Text)
@@ -220,12 +220,12 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
                 Else
                     messageIcon = KryptonMessageBoxIcon.Exclamation
                 End If
-                KryptonMessageBox.Show(res(1), "Mensaje del Sistema", KryptonMessageBoxButtons.OK, messageIcon)
+                KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, messageIcon)
 
 
             Else
 
-                KryptonMessageBox.Show("NO HA LLENADO TODOS LOS PARÁMETROS DE BAJAS", "MENSAJE DE INFORMACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
+                KryptonMessageBox.Show("No ha llenado todos los parámetros de bajas", "Mensaje de información", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
             End If
         End Sub
 

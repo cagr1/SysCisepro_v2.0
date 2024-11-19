@@ -108,7 +108,7 @@ Namespace FORMULARIOS.FONDOS.FONDO_CAJA_CHICA
         End Sub
 
         Private Sub btnGuardar_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnGuardar.Click
-            If MessageBox.Show("¿ESTA SEGURO QUE DESEA GUARDAR?", "MENSAJE DE VALIDACIÓN", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> MsgBoxResult.Yes Then Return
+            If MessageBox.Show("¿Esta seguro que desea guardar?", "Mensaje de validación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> MsgBoxResult.Yes Then Return
             _sqlCommands.Clear()
 
             If txtDetalle.Text <> "" And txtCtaContable.Text <> "" Then
@@ -133,7 +133,7 @@ Namespace FORMULARIOS.FONDOS.FONDO_CAJA_CHICA
                 End If
                 MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
             Else
-                MsgBox("No ha llenado todos los parámetros necesarios", MsgBoxStyle.Information, "MENSAJE DE VALIDACIÓN")
+                MsgBox("No ha llenado todos los parámetros necesarios", MsgBoxStyle.Information, "Mensaje de validación")
                 txtDetalle.Focus()
             End If
         End Sub

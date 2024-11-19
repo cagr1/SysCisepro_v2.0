@@ -156,8 +156,8 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
         Private Sub btnGuardarCategoria_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnGuardarCategoria.Click
             If txtNombreCategoria.Text <> "" Then
 
-                'If MessageBox.Show("¿ESTA SEGURO QUE DESEA GUARDAR?", "MENSAJE DE VALIDACIÓN", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> MsgBoxResult.Yes Then Return
-                If KryptonMessageBox.Show("¿ESTA SEGURO QUE DESEA GUARDAR?", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) <> MsgBoxResult.Yes Then Return
+                'If MessageBox.Show("¿Esta seguro que desea guardar?", "Mensaje de validación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> MsgBoxResult.Yes Then Return
+                If KryptonMessageBox.Show("¿Esta seguro que desea guardar?", "Mensaje de validación", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) <> MsgBoxResult.Yes Then Return
                 _sqlCommands.Clear()
 
                 With _objetoCategoria
@@ -185,14 +185,14 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
                 Else
                     messageIcon = KryptonMessageBoxIcon.Exclamation
                 End If
-                KryptonMessageBox.Show(res(1), "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, messageIcon)
+                KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, messageIcon)
 
                 'MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
 
 
             Else
-                'MsgBox("No se puede guardar la CATEGORIA debido a que no ha llenado todos los parámetros nesesarios", MsgBoxStyle.Information, "Mensaje de Validación")
-                KryptonMessageBox.Show("No se puede guardar la CATEGORIA debido a que no ha llenado todos los parámetros nesesarios", "Mensaje de Validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
+                'MsgBox("No se puede guardar la CATEGORIA debido a que no ha llenado todos los parámetros nesesarios", MsgBoxStyle.Information, "Mensaje de validación")
+                KryptonMessageBox.Show("No se puede guardar la CATEGORIA debido a que no ha llenado todos los parámetros nesesarios", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
                 txtCodigoCategoria.Focus()
             End If
         End Sub
@@ -226,8 +226,8 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
         Private Sub btnGuardarGrupo_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnGuardarGrupo.Click
             If txtNombreGrupo.Text <> "" And cbmCategoriaGrupo.Text <> "" Then
 
-                'If MessageBox.Show("¿ESTA SEGURO QUE DESEA GUARDAR?", "MENSAJE DE VALIDACIÓN", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> MsgBoxResult.Yes Then Return
-                If KryptonMessageBox.Show("¿ESTA SEGURO QUE DESEA GUARDAR?", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) <> MsgBoxResult.Yes Then Return
+                'If MessageBox.Show("¿Esta seguro que desea guardar?", "Mensaje de validación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> MsgBoxResult.Yes Then Return
+                If KryptonMessageBox.Show("¿Esta seguro que desea guardar?", "Mensaje de validación", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) <> MsgBoxResult.Yes Then Return
                 _sqlCommands.Clear()
 
                 With _objetoGrupo
@@ -257,20 +257,20 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
                 Else
                     messageIcon = KryptonMessageBoxIcon.Exclamation
                 End If
-                KryptonMessageBox.Show(res(1), "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, messageIcon)
+                KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, messageIcon)
 
                 'MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
             Else
-                'MsgBox("No se puede guardar el GRUPO debido a que no ha llenado todos los parámetros nesesarios", MsgBoxStyle.Information, "Mensaje de Validación")
-                KryptonMessageBox.Show("No se puede guardar el GRUPO debido a que no ha llenado todos los parámetros nesesarios", "Mensaje de Validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
+                'MsgBox("No se puede guardar el GRUPO debido a que no ha llenado todos los parámetros nesesarios", MsgBoxStyle.Information, "Mensaje de validación")
+                KryptonMessageBox.Show("No se puede guardar el GRUPO debido a que no ha llenado todos los parámetros nesesarios", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
                 txtCodigoGrupo.Focus()
             End If
         End Sub
         Private Sub btnGuardarSubGrupo_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnGuardarSubGrupo.Click
             If txtNombreSubGrupo.Text <> "" And cbmSubGrupo.Text <> "" Then
 
-                'If MessageBox.Show("¿ESTA SEGURO QUE DESEA GUARDAR?", "MENSAJE DE VALIDACIÓN", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> MsgBoxResult.Yes Then Return
-                If KryptonMessageBox.Show("¿ESTA SEGURO QUE DESEA GUARDAR?", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) <> MsgBoxResult.Yes Then Return
+                'If MessageBox.Show("¿Esta seguro que desea guardar?", "Mensaje de validación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> MsgBoxResult.Yes Then Return
+                If KryptonMessageBox.Show("¿Esta seguro que desea guardar?", "Mensaje de validación", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) <> MsgBoxResult.Yes Then Return
                 _sqlCommands.Clear()
 
                 With _objetoSubGrupo
@@ -299,12 +299,12 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
                 Else
                     messageIcon = KryptonMessageBoxIcon.Exclamation
                 End If
-                KryptonMessageBox.Show(res(1), "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, messageIcon)
+                KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, messageIcon)
 
                 'MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
             Else
-                'MsgBox("No se puede guardar el SUB GRUPO debido a que no ha llenado todos los parámetros nesesarios", MsgBoxStyle.Information, "Mensaje de Validación")
-                KryptonMessageBox.Show("No se puede guardar el SUB GRUPO debido a que no ha llenado todos los parámetros nesesarios", "Mensaje de Validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
+                'MsgBox("No se puede guardar el SUB GRUPO debido a que no ha llenado todos los parámetros nesesarios", MsgBoxStyle.Information, "Mensaje de validación")
+                KryptonMessageBox.Show("No se puede guardar el SUB GRUPO debido a que no ha llenado todos los parámetros nesesarios", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
                 txtCodigoGrupo.Focus()
             End If
         End Sub
@@ -347,8 +347,8 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
         End Sub
         Private Sub btnGuardarSecuencial_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnGuardarSecuencial.Click
 
-            'If MessageBox.Show("¿ESTA SEGURO QUE DESEA APROBAR EL COMPROBANTE DE EGRESO?", "MENSAJE DE VALIDACIÓN", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> MsgBoxResult.Yes Then Return
-            If KryptonMessageBox.Show("¿ESTA SEGURO QUE DESEA APROBAR EL COMPROBANTE DE EGRESO?", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) <> MsgBoxResult.Yes Then Return
+            'If MessageBox.Show("¿ESTA SEGURO QUE DESEA APROBAR EL COMPROBANTE DE EGRESO?", "Mensaje de validación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> MsgBoxResult.Yes Then Return
+            If KryptonMessageBox.Show("¿Esta seguro que desea aprobar el comprobante de egreso?", "Mensaje de validación", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) <> MsgBoxResult.Yes Then Return
             _sqlCommands.Clear()
 
             With _objetoSecuencial
@@ -383,7 +383,7 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
             Else
                 messageIcon = KryptonMessageBoxIcon.Exclamation
             End If
-            KryptonMessageBox.Show(res(1), "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, messageIcon)
+            KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, messageIcon)
             'MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema") 
         End Sub
        

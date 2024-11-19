@@ -190,7 +190,7 @@ Namespace FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
                     MsgBox("NO HAY REGISTROS PARA DESPLAZARSE", MsgBoxStyle.Exclamation, "MENSAJE DE VALDACIÓN")
                 End If
             Catch ex As Exception
-                MsgBox("MOVER REGISTRO LIBRO DIARIO." & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "MENSAJE DE EXCEPCIÓN")
+                MsgBox("MOVER REGISTRO LIBRO DIARIO." & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
             End Try
         End Sub
         Public Sub sumaTotalDebe()
@@ -298,13 +298,13 @@ Namespace FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
         Private Sub btnCuadrarLibroDiario_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnCuadrarLibroDiario.Click
             Try
                 If dgvAsientosLibroDiario.Rows.Count < 2 Then
-                    MsgBox("NO HAY ASIENTOS REGISTRADOS EN ESTE DIARIO", MsgBoxStyle.Information, "MENSAJE DE INFORMACION")
+                    MsgBox("NO HAY ASIENTOS REGISTRADOS EN ESTE DIARIO", MsgBoxStyle.Information, "Mensaje de información")
                 Else
                     sumaTotalDebe()
                     sumaTotalHaber()
                 End If
             Catch ex As Exception
-                MsgBox("NO HAY ASINETOS REGISTRADOS EN ESTE DIARIO", MsgBoxStyle.Information, "MENSAJE DE INFORMACION")
+                MsgBox("NO HAY ASINETOS REGISTRADOS EN ESTE DIARIO", MsgBoxStyle.Information, "Mensaje de información")
             End Try
         End Sub
         Private Sub btnReporteLibroDiario_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnReporteLibroDiario.Click
@@ -324,7 +324,7 @@ Namespace FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
         Private Sub dgvLibroDiario_CellClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles dgvLibroDiario.CellClick
             Try
                 If dgvLibroDiario.CurrentRow.Cells.Item(0).Value Is DBNull.Value Then
-                    MsgBox("La Tabla LIQUIDACION FONDO ROTATIVO Esta Vacía", MsgBoxStyle.Information, "Mensaje de Información")
+                    MsgBox("La Tabla LIQUIDACION FONDO ROTATIVO Esta Vacía", MsgBoxStyle.Information, "Mensaje de información")
                 Else
                     lblIndice.Text = dgvLibroDiario.CurrentRow.Cells.Item(0).Value
                     indice = dgvLibroDiario.CurrentCell.RowIndex.ToString()
@@ -340,7 +340,7 @@ Namespace FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
             If txtBuscarAsiento.Text <> "" Then
                 cargarDatosAsientoLibroDiarioXNroAsiento()
             Else
-                MsgBox("INGRESE UN PARAMETRO DE BUSQUEDA", MsgBoxStyle.Exclamation, "MENSAJE DE INFORMACION")
+                MsgBox("INGRESE UN PARAMETRO DE BUSQUEDA", MsgBoxStyle.Exclamation, "Mensaje de información")
             End If
         End Sub
         Private Sub btnBusquedaAvanzada_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnBusquedaAvanzada.Click
@@ -372,7 +372,7 @@ Namespace FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
         Private Sub btnExportar_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnExportar.Click
             Try
                 If dgvAsientosLibroDiario.Rows.Count = 0 Then
-                    MsgBox("NO HAY DATOS QUE EXPORTAR!", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                    MsgBox("No hay datos que exportar!", MsgBoxStyle.Exclamation, "Mensaje de validación")
                     Return
                 End If
 
@@ -448,7 +448,7 @@ Namespace FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
                 app.DisplayAlerts = True
                 'workbook.SaveAs(sfd.FileName, Excel.XlFileFormat.xlWorkbookNormal, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Excel.XlSaveAsAccessMode.xlExclusive, Type.Missing, Type.Missing, Type.Missing, Type.Missing)
             Catch ex As Exception
-                MessageBox.Show("HUBO UN PROBLEMA AL EXPORTAR DATOS!", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                MessageBox.Show("Hubo un problema al exportar datos!", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Error)
             End Try 
         End Sub
     End Class

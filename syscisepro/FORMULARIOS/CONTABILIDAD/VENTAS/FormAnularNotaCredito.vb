@@ -116,7 +116,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                     lblLlevaContabilidadClienteGeneral.Text = cli.Rows(0)(7)
                 End If
             Catch ex As Exception
-                MsgBox("CARGAR DATOS CLIENTE." & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "MENSAJE DE EXCEPCIÓN")
+                MsgBox("CARGAR DATOS CLIENTE." & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
             End Try
         End Sub
         Private Sub CargarNotaCreditoXIdCliente()
@@ -167,12 +167,12 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                     If _objetoPagosFacturaVenta.BuscarMayorSaldoPagosFacturaventaXIdFactura(_tipoCon, dgvNotaCredito.CurrentRow.Cells(16).Value) < 0.01 Then
                         If Not _notSelect.Contains(dgvNotaCredito.CurrentCell.RowIndex) Then _notSelect.Add(dgvNotaCredito.CurrentCell.RowIndex)
 
-                        KryptonMessageBox.Show("Esta factura ya ha sido cancelada " & vbNewLine & "NO SE PUEDE ANULAR", "MENSAJE DE INFORMACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
+                        KryptonMessageBox.Show("Esta factura ya ha sido cancelada " & vbNewLine & "NO SE PUEDE ANULAR", "Mensaje de información", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
                         'Else
                         '    Dim si = _objetoPagosFacturaVenta.SeleccionarPagosActivoXIdComprobante(_tipoCon, CLng(dgvNotaCredito.CurrentRow.Cells(17).Value))
                         '    If si.Rows.Count > 1 Or si.Rows(0)(2) > 1 Then
                         '        If Not _notSelect.Contains(dgvNotaCredito.CurrentCell.RowIndex) Then _notSelect.Add(dgvNotaCredito.CurrentCell.RowIndex)
-                        '        MsgBox("ESTA FACTURA YA REGISTRA PAGOS. ANULE PRIMERO LOS PAGOS CORRESPONDIENTES O LA FACTURA NO SERÁ ANULADA!", MsgBoxStyle.Information, "MENSAJE DE VALIDACIÓN")
+                        '        MsgBox("ESTA FACTURA YA REGISTRA PAGOS. ANULE PRIMERO LOS PAGOS CORRESPONDIENTES O LA FACTURA NO SERÁ ANULADA!", MsgBoxStyle.Information, "Mensaje de validación")
                         '    End If
                     End If
                 End If
@@ -189,11 +189,11 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
             dgvNotaCredito.EndEdit()
             Dim sel = dgvNotaCredito.Rows.Cast(Of DataGridViewRow)().Any(Function(row) CBool(row.Cells(0).EditedFormattedValue))
             If Not sel Then
-                KryptonMessageBox.Show("DEBE SELECCIONAR AL MENOS UN REGISTRO!", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
+                KryptonMessageBox.Show("DEBE SELECCIONAR AL MENOS UN REGISTRO!", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                 Return
             End If
 
-            If KryptonMessageBox.Show("¿ESTA SEGURA QUE DESEA ANULAR LOS REGISTROS SELECCIONADOS?", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) <> DialogResult.Yes Then Return
+            If KryptonMessageBox.Show("¿ESTA SEGURA QUE DESEA ANULAR LOS REGISTROS SELECCIONADOS?", "Mensaje de validación", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) <> DialogResult.Yes Then Return
             _sqlCommands.Clear()
 
             ActualizarEstadoNotaCredito()
@@ -210,7 +210,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
             Else
                 messageIcon = KryptonMessageBoxIcon.Exclamation
             End If
-            KryptonMessageBox.Show(res(1), "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, messageIcon)
+            KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, messageIcon)
             'MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
 
         End Sub

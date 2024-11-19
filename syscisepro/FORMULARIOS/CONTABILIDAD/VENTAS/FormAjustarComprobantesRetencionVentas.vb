@@ -132,7 +132,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
             If lblLlevaContabilidadClienteGeneral.Text = "SI" Then
                 CargarFacturasVentaXIdCliente()
             ElseIf lblLlevaContabilidadClienteGeneral.Text = "NO" Then
-                MsgBox("NO SE REGISTRAN RETENCIONES DE CLIENTES QUE NO LLEVAN CONTABILIDAD", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                MsgBox("NO SE REGISTRAN RETENCIONES DE CLIENTES QUE NO LLEVAN CONTABILIDAD", MsgBoxStyle.Exclamation, "Mensaje de validación")
             End If
         End Sub
         Private Sub CargarDatosCliente()
@@ -423,7 +423,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
         End Sub
         Private Sub ToolStripMenuItem1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAnular.Click
             If dgvFacturaVenta.RowCount = 0 Then
-                KryptonMessageBox.Show("DEBE ESCOGER UNA FACTURA!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
+                KryptonMessageBox.Show("DEBE ESCOGER UNA FACTURA!", "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                 Return
             End If
 
@@ -484,7 +484,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                     Else
                         messageIcon = KryptonMessageBoxIcon.Exclamation
                     End If
-                    KryptonMessageBox.Show(res(1), "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, messageIcon)
+                    KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, messageIcon)
                     'MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
                 End If
             End If

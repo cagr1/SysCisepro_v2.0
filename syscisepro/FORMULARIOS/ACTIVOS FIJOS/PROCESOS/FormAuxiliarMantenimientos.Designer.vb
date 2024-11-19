@@ -132,7 +132,7 @@
             '
             'btnExportarMantenimientos
             '
-            Me.btnExportarMantenimientos.BackColor = System.Drawing.Color.White
+            Me.btnExportarMantenimientos.BackColor = System.Drawing.Color.Transparent
             Me.btnExportarMantenimientos.FlatAppearance.BorderSize = 0
             Me.btnExportarMantenimientos.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.btnExportarMantenimientos.Font = New System.Drawing.Font("Consolas", 6.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -146,7 +146,7 @@
             '
             'Button1
             '
-            Me.Button1.BackColor = System.Drawing.Color.White
+            Me.Button1.BackColor = System.Drawing.Color.Transparent
             Me.Button1.FlatAppearance.BorderSize = 0
             Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.Button1.Font = New System.Drawing.Font("Consolas", 6.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -190,7 +190,7 @@
             '
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-            Me.BackColor = System.Drawing.Color.White
+            Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(185, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(227, Byte), Integer))
             Me.ClientSize = New System.Drawing.Size(867, 424)
             Me.Controls.Add(Me.KryptonGroupBox2)
             Me.Controls.Add(Me.KryptonGroupBox1)

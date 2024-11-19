@@ -32,7 +32,7 @@ Namespace FORMULARIOS.OPERACIONES
 
         Private Sub bntHorarios_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles bntHorarios.Click
             If txtIdPersonal.Text.Trim.Length = 0 Then
-                MsgBox("Por favor, seleccione un empleado o personal", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                MsgBox("Por favor, seleccione un empleado o personal", MsgBoxStyle.Exclamation, "Mensaje de validación")
                 Return
             End If
 

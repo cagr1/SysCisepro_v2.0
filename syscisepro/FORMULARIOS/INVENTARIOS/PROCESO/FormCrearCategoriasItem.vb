@@ -83,7 +83,7 @@ Namespace FORMULARIOS.INVENTARIOS.PROCESO
                 btnNuevaCategoría.Enabled = True
                 txtNombreCategoria.Enabled = False
             Else
-                MsgBox("No ha llenado los parámetros necesarios para crear una Categoría nueva", MsgBoxStyle.Critical, "MENSAJE DE VALIDACIÓN")
+                MsgBox("No ha llenado los parámetros necesarios para crear una Categoría nueva", MsgBoxStyle.Critical, "Mensaje de validación")
             End If
         End Sub
 
@@ -126,7 +126,7 @@ Namespace FORMULARIOS.INVENTARIOS.PROCESO
                 cbmCategoría.Enabled = False
                 txtNombreGrupo.Enabled = False
             Else
-                MsgBox("No ha llenado los parámetros necesarios para crear un Grupo nuevo", MsgBoxStyle.Critical, "MENSAJE DE VALIDACIÓN")
+                MsgBox("No ha llenado los parámetros necesarios para crear un Grupo nuevo", MsgBoxStyle.Critical, "Mensaje de validación")
                 txtNombreGrupo.Focus()
             End If
         End Sub
@@ -176,7 +176,7 @@ Namespace FORMULARIOS.INVENTARIOS.PROCESO
                 cbmGrupo.Enabled = False
                 txtNombreSubGrupo.Enabled = False
             Else
-                MsgBox("No ha llenado los parámetros necesarios para crear un Sub Grupo nuevo", MsgBoxStyle.Critical, "MENSAJE DE VALIDACIÓN")
+                MsgBox("No ha llenado los parámetros necesarios para crear un Sub Grupo nuevo", MsgBoxStyle.Critical, "Mensaje de validación")
                 txtNombreSubGrupo.Focus()
             End If
         End Sub

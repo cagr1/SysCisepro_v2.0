@@ -65,7 +65,7 @@ Namespace FORMULARIOS.CONTABILIDAD.CUENTAS_POR_PAGAR
                     lblRucProveedorGeneral.Text = dgvProveedorGeneral.Rows(0).Cells(2).Value
                 End If
             Catch ex As Exception
-                MsgBox("CARGAR DATOS PROVEEDOR." & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "MENSAJE DE EXCEPCIÓN")
+                MsgBox("CARGAR DATOS PROVEEDOR." & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
             End Try
         End Sub
 
@@ -206,7 +206,7 @@ Namespace FORMULARIOS.CONTABILIDAD.CUENTAS_POR_PAGAR
                 cargarCuentasPorPagarPorProveedor(ChkTodos.Checked)
                 sumarCuentasPorPagarPorProveedor()
             Else
-                MsgBox("ESCOJA UN TIPOD E CONSULTA.", MsgBoxStyle.Information, "MENSAJE DE VALIDACIÓN")
+                MsgBox("ESCOJA UN TIPOD E CONSULTA.", MsgBoxStyle.Information, "Mensaje de validación")
             End If
             dgvCuentasPorPagar.ReadOnly = True
         End Sub
@@ -215,7 +215,7 @@ Namespace FORMULARIOS.CONTABILIDAD.CUENTAS_POR_PAGAR
         Private Sub btnExportar_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnExportar.Click
             Try
                 If dgvCuentasPorPagar.Rows.Count = 0 Then
-                    MsgBox("NO HAY DATOS QUE EXPORTAR!", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                    MsgBox("No hay datos que exportar!", MsgBoxStyle.Exclamation, "Mensaje de validación")
                     Return
                 End If
 
@@ -293,7 +293,7 @@ Namespace FORMULARIOS.CONTABILIDAD.CUENTAS_POR_PAGAR
                 app.DisplayAlerts = True
                 'workbook.SaveAs(sfd.FileName, Excel.XlFileFormat.xlWorkbookNormal, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Excel.XlSaveAsAccessMode.xlExclusive, Type.Missing, Type.Missing, Type.Missing, Type.Missing)
             Catch ex As Exception
-                MessageBox.Show("HUBO UN PROBLEMA AL EXPORTAR DATOS!", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                MessageBox.Show("Hubo un problema al exportar datos!", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Error)
             End Try 
         End Sub
          
@@ -314,7 +314,7 @@ Namespace FORMULARIOS.CONTABILIDAD.CUENTAS_POR_PAGAR
 
         Private Sub REPORTEASIENTOToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles REPORTEASIENTOToolStripMenuItem.Click
             If dgvCuentasPorPagar.Rows.Count = 0 Then
-                MsgBox("NO HAY REGISTROS QUE CARGAR. PRIMERO REALICE UNA BUSQUEDA", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                MsgBox("NO HAY REGISTROS QUE CARGAR. Primero realice una busqueda", MsgBoxStyle.Exclamation, "Mensaje de validación")
                 Return
             End If
 

@@ -172,8 +172,10 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
             lblIdComprobanteIngresoBancos.Visible = False
             lblIdComprobanteEgresoBancos.Visible = False
 
-            gbClienteGeneral.Enabled = False
-            gbProveedor.Enabled = False
+            'gbClienteGeneral.Enabled = False
+            txtNombreComercialClienteGeneral.Enabled = False
+            'gbProveedor.Enabled = False
+            txtNombreComercialProveedor.Enabled = False
 
             gbFacturaVenta.Enabled = False
             gbComprobantesCompra.Enabled = False
@@ -184,16 +186,30 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
             gbPagosFacturaVenta.Enabled = False
             gbPagosComprobanteCompra.Enabled = False
 
-            gbCtaContable.Enabled = False
-            gbBanco.Enabled = False
-            gbFechaComprobante.Enabled = False
+            'gbCtaContable.Enabled = False
+            cmbCuentasContables.Enabled = False
+            'gbBanco.Enabled = False
+            cmbBancos.Enabled = False
+            cmbCuentaBancos.Enabled = False
+            'gbFechaComprobante.Enabled = False
+            dtpFechaEmisionComprobante.Enabled = False
 
             gbFormaPago.Enabled = False
-            gbCheque.Enabled = False
-            gbValorDebeAjuste.Enabled = False
-            gbValorHaberAjuste.Enabled = False
+            'gbCheque.Enabled = False
+            txtNumeroCheque.Enabled = False
+            txtTitularCheque.Enabled = False
+            dtpFechaEmisionCheque.Enabled = False
+            txtBancoCheque.Enabled = False
+            txtCtaCteCheque.Enabled = False
 
-            gbBotonesAgregarEditar.Enabled = False
+            'gbValorDebeAjuste.Enabled = False
+            txtValorDebeAjuste.Enabled = False
+
+            'gbValorHaberAjuste.Enabled = False
+            txtValorHaberAjuste.Enabled = False
+            'gbBotonesAgregarEditar.Enabled = False
+            btnAgregarConceptoComprobante.Enabled = False
+            btnEditarValores.Enabled = False
             gbpAsientoContable.Enabled = False
         End Sub
         Private Sub LlenarCuentasContables()
@@ -256,23 +272,7 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
             rbComprobanteIngreso.Checked = False
             rbComprobanteEgreso.Checked = False
         End Sub
-        Private Sub RadioButton1_CheckedChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles rbtSoloCruce.CheckedChanged
-            If Not rbtSoloCruce.Checked Then Return
 
-            gbCtaContable.Enabled = False
-            gbBanco.Enabled = False
-            gbCheque.Enabled = False
-
-            gbValorDebeAjuste.Enabled = True
-            gbValorHaberAjuste.Enabled = True
-
-            lblIdComprobanteIngresoBancos.Visible = False
-            lblIdComprobanteEgresoBancos.Visible = False
-
-            _prefijoDetalleAsiento = "ID: "
-
-            HabilitadoNuevo()
-        End Sub
         Private Sub rbComprobanteIngreso_CheckedChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles rbComprobanteIngreso.CheckedChanged
             If rbComprobanteIngreso.Checked Then
                 HabilitadoNuevo()
@@ -305,8 +305,10 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
             lblIdComprobanteIngresoBancos.Text = "..."
             lblIdComprobanteEgresoBancos.Text = "..."
 
-            gbClienteGeneral.Enabled = True
-            gbProveedor.Enabled = True
+            'gbClienteGeneral.Enabled = True
+            txtNombreComercialClienteGeneral.Enabled = True
+            'gbProveedor.Enabled = True
+            txtNombreComercialProveedor.Enabled = True
 
             gbFacturaVenta.Enabled = True
             gbComprobantesCompra.Enabled = True
@@ -317,15 +319,28 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
             gbPagosFacturaVenta.Enabled = True
             gbPagosComprobanteCompra.Enabled = True
 
-            gbCtaContable.Enabled = True
-            gbBanco.Enabled = True
-            gbFechaComprobante.Enabled = True
+            'gbCtaContable.Enabled = True
+            cmbCuentasContables.Enabled = True
+            'gbBanco.Enabled = True
+            cmbBancos.Enabled = True
+            cmbCuentaBancos.Enabled = True
+            cmbBancos.Enabled = True
+            'gbFechaComprobante.Enabled = True
+            dtpFechaEmisionComprobante.Enabled = True
             gbFormaPago.Enabled = True
-            gbCheque.Enabled = True
-            gbValorDebeAjuste.Enabled = True
-            gbValorHaberAjuste.Enabled = True
-
-            gbBotonesAgregarEditar.Enabled = True
+            'gbCheque.Enabled = True
+            txtNumeroCheque.Enabled = True
+            txtTitularCheque.Enabled = True
+            dtpFechaEmisionCheque.Enabled = True
+            txtBancoCheque.Enabled = True
+            txtCtaCteCheque.Enabled = True
+            'gbValorDebeAjuste.Enabled = True
+            txtValorDebeAjuste.Enabled = True
+            'gbValorHaberAjuste.Enabled = True
+            txtValorHaberAjuste.Enabled = True
+            'gbBotonesAgregarEditar.Enabled = True
+            btnAgregarConceptoComprobante.Enabled = True
+            btnEditarValores.Enabled = True
             gbpAsientoContable.Enabled = True
         End Sub
         Private Sub txtNombreComercialClienteGeneral_KeyUp(ByVal sender As System.Object, ByVal e As Windows.Forms.KeyEventArgs) Handles txtNombreComercialClienteGeneral.KeyUp
@@ -363,7 +378,8 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
                 dgvFacturaVenta.AutoResizeRows()
             Catch ex As Exception
                 dgvFacturaVenta.DataSource = Nothing
-                MsgBox("METODO CARGAR FACTURA VENTA" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "MENSAJE DE EXCEPCIÓN")
+
+                KryptonMessageBox.Show("Metodo cargar facturas venta" & vbNewLine & ex.Message.ToString, "Mensaje de excepción", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
         Private Sub txtNombreComercialProveedor_KeyUp(ByVal sender As System.Object, ByVal e As Windows.Forms.KeyEventArgs) Handles txtNombreComercialProveedor.KeyUp
@@ -389,7 +405,8 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
             Catch ex As Exception
                 lblIdProveedorGeneral.Text = String.Empty
                 lblIdProveedorGeneral.Tag = Nothing
-                MsgBox("CARGAR DATOS PROVEEDOR." & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "MENSAJE DE EXCEPCIÓN")
+
+                KryptonMessageBox.Show("Metodo cargar datos proveedor" & vbNewLine & ex.Message.ToString, "Mensaje de excepción", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
         Private Sub CargarComprobantesCompra()
@@ -417,7 +434,8 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
                 dgvComprobantesCompra.AutoResizeRows()
             Catch ex As Exception
                 dgvComprobantesCompra.DataSource = Nothing
-                MsgBox("METODO CARGAR COMPROBANTES DE COMPRA" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "MENSAJE DE EXCEPCIÓN")
+
+                KryptonMessageBox.Show("Metodo cargar comprobantes de compra" & vbNewLine & ex.Message.ToString, "Mensaje de excepción", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
         Private Sub dgvFacturaVenta_SelectionChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles dgvFacturaVenta.SelectionChanged
@@ -449,7 +467,7 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
             Catch ex As Exception
                 dgvPagosFacturaVenta.DataSource = Nothing
 
-                KryptonMessageBox.Show("Metodo cargar pagos factura venta" & vbNewLine & ex.Message.ToString, "MENSAJE DE EXCEPCIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+                KryptonMessageBox.Show("Metodo cargar pagos factura venta" & vbNewLine & ex.Message.ToString, "Mensaje de excepción", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
         Private Sub dgvComprobantesCompra_SelectionChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles dgvComprobantesCompra.SelectionChanged
@@ -478,7 +496,7 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
                 dgvPagosComprobantesCompra.EditMode = DataGridViewEditMode.EditProgrammatically
             Catch ex As Exception
                 dgvPagosComprobantesCompra.DataSource = Nothing
-                KryptonMessageBox.Show("Metodo cargar pagos comprobante de compra" & vbNewLine & ex.Message.ToString, "MENSAJE DE EXCEPCIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+                KryptonMessageBox.Show("Metodo cargar pagos comprobante de compra" & vbNewLine & ex.Message.ToString, "Mensaje de excepción", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
         Private Sub dgvFacturaVenta_CellContentClick(ByVal sender As System.Object, ByVal e As Windows.Forms.DataGridViewCellEventArgs) Handles dgvFacturaVenta.CellContentClick
@@ -517,7 +535,7 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
                         txtValorComprobaneIngreso.Text = CDec(txtValorComprobaneIngreso.Text) + s ' se suma el valor del saldo de la factura
                     Else
 
-                        KryptonMessageBox.Show("Esta factura ya fue cancelada", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
+                        KryptonMessageBox.Show("Esta factura ya fue cancelada", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
                     End If
                 Else ' CheckBox Desmarcado"
                     For indiceArray = 0 To _cantidadFacturas - 1
@@ -597,7 +615,7 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
                         'suma Total comprobante
                         txtValorComprobanteEgresoBancos.Text = CDec(txtValorComprobanteEgresoBancos.Text) + s
                     Else
-                        KryptonMessageBox.Show("Esta compra ya fue cancelada", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
+                        KryptonMessageBox.Show("Esta compra ya fue cancelada", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
                     End If
                 Else ' CheckBox Desmarcado"
                     For indiceArray = 0 To _cantidadFacturasEgreso - 1
@@ -665,8 +683,8 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
                     End If
                 End If
             Catch ex As Exception
+                KryptonMessageBox.Show("Metodo sumar total" & vbNewLine & ex.Message.ToString, "Mensaje de excepción", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
 
-                KryptonMessageBox.Show("Error. No sumo total de facturas marcadas", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
         Private Sub cmbCuentasContables_SelectedValueChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles cmbCuentasContables.SelectedValueChanged
@@ -717,14 +735,24 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
         Private Sub rbCheque_CheckedChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles rbCheque.CheckedChanged
             If rbCheque.Checked Then
                 If txtNombreComercialClienteGeneral.Text <> "" And lblIdClienteGeneral.Text <> "..." Then
-                    gbCheque.Enabled = True
+                    'gbCheque.Enabled = True
+                    txtNumeroCheque.Enabled = True
+                    txtTitularCheque.Enabled = True
+                    dtpFechaEmisionCheque.Enabled = True
+                    txtBancoCheque.Enabled = True
+                    txtCtaCteCheque.Enabled = True
                     txtTitularCheque.Text = txtNombreComercialClienteGeneral.Text
                 Else
-                    KryptonMessageBox.Show("Primero cargue un cliente", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
+                    KryptonMessageBox.Show("Primero cargue un cliente", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                     rbEfectivo.Checked = True
                 End If
             Else
-                gbCheque.Enabled = False
+                'gbCheque.Enabled = False
+                txtNumeroCheque.Enabled = False
+                txtTitularCheque.Enabled = False
+                dtpFechaEmisionCheque.Enabled = False
+                txtBancoCheque.Enabled = False
+                txtCtaCteCheque.Enabled = False
                 txtTitularCheque.Text = ""
             End If
         End Sub
@@ -759,11 +787,11 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
                     btnEditarValores.Enabled = True
                 Else
 
-                    KryptonMessageBox.Show("Seleccione un banco, cuenta e ingrese un número de cheque", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
+                    KryptonMessageBox.Show("Seleccione un banco, cuenta e ingrese un número de cheque", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                 End If
             Else
 
-                KryptonMessageBox.Show("Primero cargue un concepto de egreso", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
+                KryptonMessageBox.Show("Primero cargue un concepto de egreso", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
             End If
         End Sub
         Private Sub ToolStripMenuItemEliminar_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ToolStripMenuItemEliminar.Click
@@ -771,7 +799,7 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
             Select Case lSeleccionados.Count
                 Case 0
 
-                    KryptonMessageBox.Show("Debe seleccionar alguna fila", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
+                    KryptonMessageBox.Show("Debe seleccionar alguna fila", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
                     Return
                 Case Is > 1
                     MessageBox.Show("Demasiadas filas seleccionadas", "", MessageBoxButtons.OK, MessageBoxIcon.Information)
@@ -791,7 +819,7 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
         End Sub
         Private Sub btnGuardar_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnGuardar.Click
             If CDec(txtTotalDebe.Text) = CDec(txtTotalHaber.Text) Then
-                If KryptonMessageBox.Show("¿Esta segur@ que desea guardar?", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) <> DialogResult.Yes Then Return
+                If KryptonMessageBox.Show("¿Esta segur@ que desea guardar?", "Mensaje de validación", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) <> DialogResult.Yes Then Return
                 _sqlCommands.Clear()
 
                 _objetoComprobanteIngresoBancos.Id = _objetoComprobanteIngresoBancos.BuscarMayorIdComprobanteIngresoBancos(_tipoCon) + 1
@@ -827,12 +855,12 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
                 Else
                     messageIcon = KryptonMessageBoxIcon.Exclamation
                 End If
-                KryptonMessageBox.Show(res(1), "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, messageIcon)
+                KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, messageIcon)
 
 
             Else
 
-                KryptonMessageBox.Show("NO SE PUEDE GUARDAR." & vbNewLine & "LOS VALORES DE EL DEBE Y EL HABER NO COINCIDEN POR FAVOR REVISE LAS TRANSACCIONES.", "MENSAJE DE VALIDACION", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
+                KryptonMessageBox.Show("No se puede guardar." & vbNewLine & "LOS VALORES DE EL DEBE Y EL HABER NO COINCIDEN POR FAVOR REVISE LAS TRANSACCIONES.", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
             End If
         End Sub
         Private Sub GuardarRegistroComprobanteIngresoBancos()
@@ -1164,5 +1192,31 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
             Next
         End Sub
 
+        Private Sub rbtSoloCruce_CheckedChanged(sender As Object, e As EventArgs) Handles rbtSoloCruce.CheckedChanged
+            If Not rbtSoloCruce.Checked Then Return
+
+            'gbCtaContable.Enabled = False
+            cmbCuentasContables.Enabled = False
+            'gbBanco.Enabled = False
+            cmbCuentaBancos.Enabled = False
+            cmbCuentaBancos.Enabled = False
+            'gbCheque.Enabled = False
+            txtNumeroCheque.Enabled = False
+            txtTitularCheque.Enabled = False
+            dtpFechaEmisionCheque.Enabled = False
+            txtBancoCheque.Enabled = False
+            txtCtaCteCheque.Enabled = False
+            'gbValorDebeAjuste.Enabled = True
+            txtValorDebeAjuste.Enabled = True
+            'gbValorHaberAjuste.Enabled = True
+            txtValorHaberAjuste.Enabled = True
+
+            lblIdComprobanteIngresoBancos.Visible = False
+            lblIdComprobanteEgresoBancos.Visible = False
+
+            _prefijoDetalleAsiento = "ID: "
+
+            HabilitadoNuevo()
+        End Sub
     End Class
 End Namespace

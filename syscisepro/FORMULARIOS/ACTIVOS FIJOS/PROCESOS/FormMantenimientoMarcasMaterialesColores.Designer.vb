@@ -72,6 +72,7 @@
             'ID_CATEGORIALabel
             '
             ID_CATEGORIALabel.AutoSize = True
+            ID_CATEGORIALabel.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
             ID_CATEGORIALabel.Location = New System.Drawing.Point(6, 37)
             ID_CATEGORIALabel.Name = "ID_CATEGORIALabel"
             ID_CATEGORIALabel.Size = New System.Drawing.Size(20, 13)
@@ -81,6 +82,7 @@
             'NOMBRE_CATEGORIALabel
             '
             NOMBRE_CATEGORIALabel.AutoSize = True
+            NOMBRE_CATEGORIALabel.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
             NOMBRE_CATEGORIALabel.Location = New System.Drawing.Point(6, 73)
             NOMBRE_CATEGORIALabel.Name = "NOMBRE_CATEGORIALabel"
             NOMBRE_CATEGORIALabel.Size = New System.Drawing.Size(55, 13)
@@ -90,6 +92,7 @@
             'ID_SUB_GRUPOLabel
             '
             ID_SUB_GRUPOLabel.AutoSize = True
+            ID_SUB_GRUPOLabel.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
             ID_SUB_GRUPOLabel.Location = New System.Drawing.Point(23, 35)
             ID_SUB_GRUPOLabel.Name = "ID_SUB_GRUPOLabel"
             ID_SUB_GRUPOLabel.Size = New System.Drawing.Size(20, 13)
@@ -99,6 +102,7 @@
             'NOMBRE_SUB_GRUPOLabel
             '
             NOMBRE_SUB_GRUPOLabel.AutoSize = True
+            NOMBRE_SUB_GRUPOLabel.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
             NOMBRE_SUB_GRUPOLabel.Location = New System.Drawing.Point(23, 70)
             NOMBRE_SUB_GRUPOLabel.Name = "NOMBRE_SUB_GRUPOLabel"
             NOMBRE_SUB_GRUPOLabel.Size = New System.Drawing.Size(55, 13)
@@ -108,6 +112,7 @@
             'ID_GRUPOLabel
             '
             ID_GRUPOLabel.AutoSize = True
+            ID_GRUPOLabel.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
             ID_GRUPOLabel.Location = New System.Drawing.Point(9, 41)
             ID_GRUPOLabel.Name = "ID_GRUPOLabel"
             ID_GRUPOLabel.Size = New System.Drawing.Size(20, 13)
@@ -117,6 +122,7 @@
             'NOMBRE_GRUPOLabel
             '
             NOMBRE_GRUPOLabel.AutoSize = True
+            NOMBRE_GRUPOLabel.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
             NOMBRE_GRUPOLabel.Location = New System.Drawing.Point(9, 80)
             NOMBRE_GRUPOLabel.Name = "NOMBRE_GRUPOLabel"
             NOMBRE_GRUPOLabel.Size = New System.Drawing.Size(55, 13)
@@ -130,7 +136,8 @@
             Me.dgvMarcas.AllowUserToResizeRows = False
             DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
             Me.dgvMarcas.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
-            Me.dgvMarcas.BackgroundColor = System.Drawing.Color.White
+            Me.dgvMarcas.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(185, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(227, Byte), Integer))
+            Me.dgvMarcas.BorderStyle = System.Windows.Forms.BorderStyle.None
             Me.dgvMarcas.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
             Me.dgvMarcas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
             DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
@@ -157,7 +164,8 @@
             Me.dgvMateriales.AllowUserToResizeRows = False
             DataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
             Me.dgvMateriales.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle3
-            Me.dgvMateriales.BackgroundColor = System.Drawing.Color.White
+            Me.dgvMateriales.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(185, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(227, Byte), Integer))
+            Me.dgvMateriales.BorderStyle = System.Windows.Forms.BorderStyle.None
             Me.dgvMateriales.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
             Me.dgvMateriales.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
             DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
@@ -184,7 +192,8 @@
             Me.dgvColores.AllowUserToResizeRows = False
             DataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
             Me.dgvColores.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle5
-            Me.dgvColores.BackgroundColor = System.Drawing.Color.White
+            Me.dgvColores.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(185, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(227, Byte), Integer))
+            Me.dgvColores.BorderStyle = System.Windows.Forms.BorderStyle.None
             Me.dgvColores.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
             Me.dgvColores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
             DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
@@ -213,6 +222,7 @@
             Me.gbMarcas.Controls.Add(Me.txtDetalleMarca)
             Me.gbMarcas.Controls.Add(NOMBRE_CATEGORIALabel)
             Me.gbMarcas.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.gbMarcas.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
             Me.gbMarcas.Location = New System.Drawing.Point(2, 2)
             Me.gbMarcas.Name = "gbMarcas"
             Me.gbMarcas.Size = New System.Drawing.Size(395, 108)
@@ -222,8 +232,10 @@
             '
             'btnGuardarMarca
             '
-            Me.btnGuardarMarca.BackColor = System.Drawing.Color.White
+            Me.btnGuardarMarca.BackColor = System.Drawing.Color.Transparent
             Me.btnGuardarMarca.Enabled = False
+            Me.btnGuardarMarca.FlatAppearance.BorderSize = 0
+            Me.btnGuardarMarca.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.btnGuardarMarca.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.btnGuardarMarca.Image = Global.syscisepro.My.Resources.Resources.save_24dp_FILL0_wght400_GRAD0_opsz24__2_
             Me.btnGuardarMarca.Location = New System.Drawing.Point(275, 22)
@@ -234,9 +246,10 @@
             '
             'btnNuevoMarca
             '
-            Me.btnNuevoMarca.BackColor = System.Drawing.Color.White
+            Me.btnNuevoMarca.BackColor = System.Drawing.Color.Transparent
             Me.btnNuevoMarca.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
             Me.btnNuevoMarca.FlatAppearance.BorderSize = 0
+            Me.btnNuevoMarca.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.btnNuevoMarca.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.btnNuevoMarca.Image = Global.syscisepro.My.Resources.Resources.add_circle_24dp_FILL0_wght400_GRAD0_opsz24__3_
             Me.btnNuevoMarca.Location = New System.Drawing.Point(220, 22)
@@ -269,7 +282,7 @@
             Me.btnVolver.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.btnVolver.Image = Global.syscisepro.My.Resources.Resources.check_circle_24dp_FILL0_wght400_GRAD0_opsz24__3_
             Me.btnVolver.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-            Me.btnVolver.Location = New System.Drawing.Point(149, 329)
+            Me.btnVolver.Location = New System.Drawing.Point(149, 331)
             Me.btnVolver.Name = "btnVolver"
             Me.btnVolver.Size = New System.Drawing.Size(114, 32)
             Me.btnVolver.TabIndex = 76
@@ -285,6 +298,7 @@
             Me.gbMateriales.Controls.Add(NOMBRE_SUB_GRUPOLabel)
             Me.gbMateriales.Controls.Add(Me.txtDetalleMaterial)
             Me.gbMateriales.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.gbMateriales.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
             Me.gbMateriales.Location = New System.Drawing.Point(1, 235)
             Me.gbMateriales.Name = "gbMateriales"
             Me.gbMateriales.Size = New System.Drawing.Size(396, 93)
@@ -294,8 +308,10 @@
             '
             'btnGuardarMaterial
             '
-            Me.btnGuardarMaterial.BackColor = System.Drawing.Color.White
+            Me.btnGuardarMaterial.BackColor = System.Drawing.Color.Transparent
             Me.btnGuardarMaterial.Enabled = False
+            Me.btnGuardarMaterial.FlatAppearance.BorderSize = 0
+            Me.btnGuardarMaterial.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.btnGuardarMaterial.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.btnGuardarMaterial.Image = Global.syscisepro.My.Resources.Resources.save_24dp_FILL0_wght400_GRAD0_opsz24__2_
             Me.btnGuardarMaterial.Location = New System.Drawing.Point(276, 19)
@@ -318,7 +334,9 @@
             '
             'btnNuevoMaterial
             '
-            Me.btnNuevoMaterial.BackColor = System.Drawing.Color.White
+            Me.btnNuevoMaterial.BackColor = System.Drawing.Color.Transparent
+            Me.btnNuevoMaterial.FlatAppearance.BorderSize = 0
+            Me.btnNuevoMaterial.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.btnNuevoMaterial.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.btnNuevoMaterial.Image = Global.syscisepro.My.Resources.Resources.add_circle_24dp_FILL0_wght400_GRAD0_opsz24__3_
             Me.btnNuevoMaterial.Location = New System.Drawing.Point(221, 19)
@@ -346,6 +364,7 @@
             Me.gbColores.Controls.Add(NOMBRE_GRUPOLabel)
             Me.gbColores.Controls.Add(Me.txtDetalleColor)
             Me.gbColores.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.gbColores.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
             Me.gbColores.Location = New System.Drawing.Point(2, 116)
             Me.gbColores.Name = "gbColores"
             Me.gbColores.Size = New System.Drawing.Size(395, 113)
@@ -355,8 +374,10 @@
             '
             'btnGuardarColor
             '
-            Me.btnGuardarColor.BackColor = System.Drawing.Color.White
+            Me.btnGuardarColor.BackColor = System.Drawing.Color.Transparent
             Me.btnGuardarColor.Enabled = False
+            Me.btnGuardarColor.FlatAppearance.BorderSize = 0
+            Me.btnGuardarColor.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.btnGuardarColor.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.btnGuardarColor.Image = Global.syscisepro.My.Resources.Resources.save_24dp_FILL0_wght400_GRAD0_opsz24__2_
             Me.btnGuardarColor.Location = New System.Drawing.Point(275, 31)
@@ -368,7 +389,9 @@
             '
             'btnNuevoColor
             '
-            Me.btnNuevoColor.BackColor = System.Drawing.Color.White
+            Me.btnNuevoColor.BackColor = System.Drawing.Color.Transparent
+            Me.btnNuevoColor.FlatAppearance.BorderSize = 0
+            Me.btnNuevoColor.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.btnNuevoColor.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.btnNuevoColor.Image = Global.syscisepro.My.Resources.Resources.add_circle_24dp_FILL0_wght400_GRAD0_opsz24__3_
             Me.btnNuevoColor.Location = New System.Drawing.Point(223, 31)
@@ -400,7 +423,7 @@
             '
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-            Me.BackColor = System.Drawing.Color.White
+            Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(185, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(227, Byte), Integer))
             Me.ClientSize = New System.Drawing.Size(718, 365)
             Me.Controls.Add(Me.btnVolver)
             Me.Controls.Add(Me.dgvMarcas)

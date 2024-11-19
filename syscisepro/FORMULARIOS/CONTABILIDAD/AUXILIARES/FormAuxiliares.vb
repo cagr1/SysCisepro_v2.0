@@ -70,7 +70,7 @@ Namespace FORMULARIOS.CONTABILIDAD.AUXILIARES
                 End Select
             Next
 
-            'MsgBox("MENSAJE DE INFORMACION", MsgBoxStyle.Information, "MAYORES CARGADOS")
+            'MsgBox("Mensaje de información", MsgBoxStyle.Information, "MAYORES CARGADOS")
             Dim objPlanCuentas2 As New ClassPlanDeCuentas
             dgvAsientosDiario.DataSource = objPlanCuentas2.SeleccionarSaldosMayoresXFechaDiario(_tipoCon, fechaDesde, fechaHasta)
             dgvAsientosDiario.AutoResizeColumns()
@@ -88,7 +88,7 @@ Namespace FORMULARIOS.CONTABILIDAD.AUXILIARES
             Next
 
             '=== PROCESAR LOS DE NIVEL 7 ==============================================================================================================================================
-            ' MsgBox("NIVEL 7 PROCESADOS", MsgBoxStyle.Information, "MENSAJE DE INFORMACION")
+            ' MsgBox("NIVEL 7 PROCESADOS", MsgBoxStyle.Information, "Mensaje de información")
             For indice = 0 To dgvMayoresPadres.Rows.Count - 1 Step 1
                 For posicion = 0 To dgvAsientosDiario.Rows.Count - 1 Step 1
                     If dgvMayoresPadres.Rows(indice).Cells(0).Value = dgvAsientosDiario.Rows(posicion).Cells(6).Value And dgvAsientosDiario.Rows(posicion).Cells(5).Value = "7" Then
@@ -107,7 +107,7 @@ Namespace FORMULARIOS.CONTABILIDAD.AUXILIARES
                 dgvAsientosDiario.Rows(indice).Cells(6).Value = dgvMayoresPadres.Rows(indice).Cells(6).Value
             Next
             '=== PROCESAR LOS DE NIVEL 6 ==============================================================================================================================================
-            ' MsgBox("NIVEL 6 PROCESADOS", MsgBoxStyle.Information, "MENSAJE DE INFORMACION")
+            ' MsgBox("NIVEL 6 PROCESADOS", MsgBoxStyle.Information, "Mensaje de información")
             For indice = 0 To dgvMayoresPadres.Rows.Count - 1 Step 1
                 For posicion = 0 To dgvAsientosDiario.Rows.Count - 1 Step 1
                     If dgvMayoresPadres.Rows(indice).Cells(0).Value = dgvAsientosDiario.Rows(posicion).Cells(6).Value And dgvAsientosDiario.Rows(posicion).Cells(5).Value = "6" Then
@@ -126,7 +126,7 @@ Namespace FORMULARIOS.CONTABILIDAD.AUXILIARES
                 dgvAsientosDiario.Rows(indice).Cells(6).Value = dgvMayoresPadres.Rows(indice).Cells(6).Value
             Next
             '=== PROCESAR LOS DE NIVEL 5 ==============================================================================================================================================
-            ' MsgBox("NIVEL 5 PROCESADOS", MsgBoxStyle.Information, "MENSAJE DE INFORMACION")
+            ' MsgBox("NIVEL 5 PROCESADOS", MsgBoxStyle.Information, "Mensaje de información")
             For indice = 0 To dgvMayoresPadres.Rows.Count - 1 Step 1
                 For posicion = 0 To dgvAsientosDiario.Rows.Count - 1 Step 1
                     If dgvMayoresPadres.Rows(indice).Cells(0).Value = dgvAsientosDiario.Rows(posicion).Cells(6).Value And dgvAsientosDiario.Rows(posicion).Cells(5).Value = "5" Then
@@ -145,7 +145,7 @@ Namespace FORMULARIOS.CONTABILIDAD.AUXILIARES
                 dgvAsientosDiario.Rows(indice).Cells(6).Value = dgvMayoresPadres.Rows(indice).Cells(6).Value
             Next
             '=== PROCESAR LOS DE NIVEL 4 ==============================================================================================================================================
-            'MsgBox("NIVEL 4 PROCESADOS", MsgBoxStyle.Information, "MENSAJE DE INFORMACION")
+            'MsgBox("NIVEL 4 PROCESADOS", MsgBoxStyle.Information, "Mensaje de información")
             For indice = 0 To dgvMayoresPadres.Rows.Count - 1 Step 1
                 For posicion = 0 To dgvAsientosDiario.Rows.Count - 1 Step 1
                     If dgvMayoresPadres.Rows(indice).Cells(0).Value = dgvAsientosDiario.Rows(posicion).Cells(6).Value And dgvAsientosDiario.Rows(posicion).Cells(5).Value = "4" Then
@@ -164,7 +164,7 @@ Namespace FORMULARIOS.CONTABILIDAD.AUXILIARES
                 dgvAsientosDiario.Rows(indice).Cells(6).Value = dgvMayoresPadres.Rows(indice).Cells(6).Value
             Next
             '=== PROCESAR LOS DE NIVEL 3 ==============================================================================================================================================
-            'MsgBox("NIVEL 3 PROCESADOS", MsgBoxStyle.Information, "MENSAJE DE INFORMACION")
+            'MsgBox("NIVEL 3 PROCESADOS", MsgBoxStyle.Information, "Mensaje de información")
             For indice = 0 To dgvMayoresPadres.Rows.Count - 1 Step 1
                 For posicion = 0 To dgvAsientosDiario.Rows.Count - 1 Step 1
                     If dgvMayoresPadres.Rows(indice).Cells(0).Value = dgvAsientosDiario.Rows(posicion).Cells(6).Value And dgvAsientosDiario.Rows(posicion).Cells(5).Value = "3" Then
@@ -183,7 +183,7 @@ Namespace FORMULARIOS.CONTABILIDAD.AUXILIARES
                 dgvAsientosDiario.Rows(indice).Cells(6).Value = dgvMayoresPadres.Rows(indice).Cells(6).Value
             Next
             '=== PROCESAR LOS DE NIVEL 2 ==============================================================================================================================================
-            'MsgBox("NIVEL 2 PROCESADOS", MsgBoxStyle.Information, "MENSAJE DE INFORMACION")
+            'MsgBox("NIVEL 2 PROCESADOS", MsgBoxStyle.Information, "Mensaje de información")
             For indice = 0 To dgvMayoresPadres.Rows.Count - 1 Step 1
                 For posicion = 0 To dgvAsientosDiario.Rows.Count - 1 Step 1
                     If dgvMayoresPadres.Rows(indice).Cells(0).Value = dgvAsientosDiario.Rows(posicion).Cells(6).Value And dgvAsientosDiario.Rows(posicion).Cells(5).Value = "2" Then
@@ -202,7 +202,7 @@ Namespace FORMULARIOS.CONTABILIDAD.AUXILIARES
                 dgvAsientosDiario.Rows(indice).Cells(6).Value = dgvMayoresPadres.Rows(indice).Cells(6).Value
             Next
             '=== PROCESAR LOS DE NIVEL 1 ==============================================================================================================================================
-            'MsgBox("NIVEL 1 PROCESADOS", MsgBoxStyle.Information, "MENSAJE DE INFORMACION")
+            'MsgBox("NIVEL 1 PROCESADOS", MsgBoxStyle.Information, "Mensaje de información")
             For indice = 0 To dgvMayoresPadres.Rows.Count - 1 Step 1
                 For posicion = 0 To dgvAsientosDiario.Rows.Count - 1 Step 1
                     If dgvMayoresPadres.Rows(indice).Cells(0).Value = dgvAsientosDiario.Rows(posicion).Cells(6).Value And dgvAsientosDiario.Rows(posicion).Cells(5).Value = "1" Then
@@ -237,17 +237,17 @@ Namespace FORMULARIOS.CONTABILIDAD.AUXILIARES
                 Case TipoConexion.Asenava
                     Icon = My.Resources.logo_a
                     MenuStrip1.ForeColor = Color.White
-                    'MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorAsenava
+
                     dgvAsientosDiario.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorAsenava
                 Case TipoConexion.Seportpac
                     Icon = My.Resources.logo_s
                     MenuStrip1.ForeColor = Color.White
-                    'MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
+
                     dgvAsientosDiario.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorSeportpac
                 Case Else
                     Icon = My.Resources.logo_c
                     MenuStrip1.ForeColor = Color.White
-                    'MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorCisepro
+
                     dgvAsientosDiario.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
             End Select
             dgvAsientosDiario.Font = New Font("Roboto", 8, FontStyle.Regular)
@@ -323,14 +323,14 @@ Namespace FORMULARIOS.CONTABILIDAD.AUXILIARES
                 app.Visible = True
                 app.DisplayAlerts = True
             Catch ex As Exception
-                MessageBox.Show("HUBO UN PROBLEMA AL EXPORTAR DATOS!", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                MessageBox.Show("Hubo un problema al exportar datos!", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Error)
             End Try
         End Sub
 
         Private Sub btnExportar_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnExportar.Click
             If dgvAsientosDiario.Rows.Count = 0 Then
-                'MsgBox("NO HAY DATOS QUE EXPORTAR!", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
-                KryptonMessageBox.Show("NO HAY DATOS QUE EXPORTAR!", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
+
+                KryptonMessageBox.Show("No hay datos que exportar!", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                 Return
             End If
             ExportarDatosExcel("AUXILIARES", "AUXILIARES", dtpInicio.Value, dtpFinal.Value)

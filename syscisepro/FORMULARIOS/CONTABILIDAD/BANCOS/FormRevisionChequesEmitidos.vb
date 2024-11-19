@@ -118,7 +118,7 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
                 app.DisplayAlerts = True
                 'workbook.SaveAs(sfd.FileName, Excel.XlFileFormat.xlWorkbookNormal, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Excel.XlSaveAsAccessMode.xlExclusive, Type.Missing, Type.Missing, Type.Missing, Type.Missing)
             Catch ex As Exception
-                MessageBox.Show("HUBO UN PROBLEMA AL EXPORTAR DATOS!", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                MessageBox.Show("Hubo un problema al exportar datos!", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Error)
             End Try
         End Sub
 
@@ -321,7 +321,7 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
 
             If dgvChequesEmitidosAprobados.Rows.Count > 0 Then
                 If dtpFechaCobroCheque.Value > dtpFechaDesde.Value Then
-                    Dim respuestaMsgBox = MessageBox.Show("¿ESTA SEGURO QUE DESEA CAMBIAR LOS CHEQUES SELECCIONADOS A COBRADOS?", "MENSAJE DE VALIDACIÓN", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+                    Dim respuestaMsgBox = MessageBox.Show("¿ESTA SEGURO QUE DESEA CAMBIAR LOS CHEQUES SELECCIONADOS A COBRADOS?", "Mensaje de validación", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
                     If respuestaMsgBox = MsgBoxResult.Yes Then
 
                         If chkCaducado.Checked Then
@@ -343,17 +343,17 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
                         Else
                             messageIcon = KryptonMessageBoxIcon.Exclamation
                         End If
-                        KryptonMessageBox.Show(res(1), "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, messageIcon)
+                        KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, messageIcon)
 
 
                         chkCaducado.Checked = False
                     End If
                 Else
 
-                    KryptonMessageBox.Show("La fecha de cobro/caducidad no puede ser menor a la de emision", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
+                    KryptonMessageBox.Show("La fecha de cobro/caducidad no puede ser menor a la de emision", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                 End If
             Else
-                KryptonMessageBox.Show("NO HAY CHEQUES PARA APROBAR NO COBRADOS", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
+                KryptonMessageBox.Show("NO HAY CHEQUES PARA APROBAR NO COBRADOS", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
             End If
 
         End Sub
@@ -362,7 +362,8 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
             If dgvChequesEmitidosAprobados.Rows.Count > 0 Then
                 ExportarDatosExcel(dgvChequesEmitidosAprobados, "CHEQUES GIRADOS NO COBRADOS")
             Else
-                MsgBox("NO HAY DATOS QUE EXPORTAR!", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+
+                KryptonMessageBox.Show("No hay datos que exportar!", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
             End If
         End Sub
 
@@ -386,7 +387,8 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
                 f.lblIdComprobanteEgreso.Text = _idComprobanteEgresoB
                 f.ShowDialog()
             Else
-                MsgBox("POR FAVOR SELECCIONE UN COMPROBANTE DE EGRESO", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+
+                KryptonMessageBox.Show("Por favor seleccione un comprobante de egreso", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
 
             End If
         End Sub
@@ -400,7 +402,8 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
                     lblIdComprobanteEgresoBanco.Text = dgvChequesEmitidosAprobados.CurrentRow.Cells.Item(9).Value
                 End If
             Catch ex As Exception
-                MsgBox(ex.Message.ToString, MsgBoxStyle.Critical, "MENSAJE DE EXCEPCIÓN")
+
+                KryptonMessageBox.Show(ex.Message, "Mensaje de excepción", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
 
@@ -418,7 +421,8 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
                     DialogResult = formAsientoDiario.ShowDialog
                 End If
             Catch ex As Exception
-                MsgBox(ex.Message.ToString, MsgBoxStyle.Critical, "MENSAJE DE EXCEPCIÓN")
+
+                KryptonMessageBox.Show(ex.Message, "Mensaje de excepción", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
 
@@ -431,7 +435,8 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
                     lblIdComprobanteEgresoBanco.Text = dgvEmitidosCobrados.CurrentRow.Cells.Item(8).Value
                 End If
             Catch ex As Exception
-                MsgBox(ex.Message.ToString, MsgBoxStyle.Critical, "MENSAJE DE EXCEPCIÓN")
+
+                KryptonMessageBox.Show(ex.Message, "Mensaje de excepción", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
 
@@ -450,7 +455,8 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
                     DialogResult = formAsientoDiario.ShowDialog
                 End If
             Catch ex As Exception
-                MsgBox(ex.Message.ToString, MsgBoxStyle.Critical, "MENSAJE DE EXCEPCIÓN")
+
+                KryptonMessageBox.Show(ex.Message, "Mensaje de excepción", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
 
@@ -463,7 +469,8 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
             If dgvEmitidosCobrados.Rows.Count > 0 Then
                 ExportarDatosExcel(dgvEmitidosCobrados, "CHEQUES GIRADOS COBRADOS")
             Else
-                MsgBox("NO HAY DATOS QUE EXPORTAR!", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+
+                KryptonMessageBox.Show("No hay datos que exportar!", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
             End If 
         End Sub
 
@@ -471,7 +478,8 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
             If dgvEmitidosCaducados.Rows.Count > 0 Then
                 ExportarDatosExcel(dgvEmitidosCaducados, "CHEQUES GIRADOS CADUCADOS")
             Else
-                MsgBox("NO HAY DATOS QUE EXPORTAR!", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+
+                KryptonMessageBox.Show("No hay datos que exportar!", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
             End If
         End Sub
 

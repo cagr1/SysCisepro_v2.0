@@ -41,7 +41,7 @@
             Me.dgvMantenimientosProximos.AllowUserToResizeRows = False
             DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
             Me.dgvMantenimientosProximos.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
-            Me.dgvMantenimientosProximos.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
+            Me.dgvMantenimientosProximos.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(185, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(227, Byte), Integer))
             Me.dgvMantenimientosProximos.BorderStyle = System.Windows.Forms.BorderStyle.None
             Me.dgvMantenimientosProximos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
             Me.dgvMantenimientosProximos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
@@ -67,7 +67,7 @@
             Me.rbSemana.AutoSize = True
             Me.rbSemana.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.rbSemana.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
-            Me.rbSemana.Location = New System.Drawing.Point(102, 4)
+            Me.rbSemana.Location = New System.Drawing.Point(88, 4)
             Me.rbSemana.Name = "rbSemana"
             Me.rbSemana.Size = New System.Drawing.Size(66, 17)
             Me.rbSemana.TabIndex = 1
@@ -120,7 +120,7 @@
             '
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-            Me.BackColor = System.Drawing.Color.White
+            Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(185, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(227, Byte), Integer))
             Me.ClientSize = New System.Drawing.Size(787, 445)
             Me.Controls.Add(Me.btnMayores)
             Me.Controls.Add(Me.btnFiltrar)

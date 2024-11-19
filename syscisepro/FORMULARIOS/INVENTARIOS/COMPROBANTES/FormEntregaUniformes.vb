@@ -221,7 +221,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                     _detalleKardex = Nothing
                     tsmAgregar.Enabled = False
                     tsmEliminar.Enabled = dgvSecuencial.RowCount > 0
-                    MsgBox("EL ITEM SELECCIONADO NO EXISTE EN EL SISTEMA. DEBE CREAR EL ITEM EN LA OPCIÓN 'BODEGA / ARTÍCULOS Y PRODUCTOS' Y LUEGO REGISTAR EL 'COMPROBANTE DE INGRESO' CORRESPONDIENTE!!!", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                    MsgBox("EL ITEM SELECCIONADO NO EXISTE EN EL SISTEMA. DEBE CREAR EL ITEM EN LA OPCIÓN 'BODEGA / ARTÍCULOS Y PRODUCTOS' Y LUEGO REGISTAR EL 'COMPROBANTE DE INGRESO' CORRESPONDIENTE!!!", MsgBoxStyle.Exclamation, "Mensaje de validación")
                 End If
             Catch
                 txtArticulo.Clear()
@@ -357,11 +357,11 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
         Private Sub tsmGuardar_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles tsmGuardar.Click
             CalcuarTotal()
             If dgvSecuencial.RowCount = 0 Then
-                MsgBox("POR FAVOR, INGRESE LOS ITEMS DEL COMPROBANTES PARA GUARDAR", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                MsgBox("POR FAVOR, INGRESE LOS ITEMS DEL COMPROBANTES PARA GUARDAR", MsgBoxStyle.Exclamation, "Mensaje de validación")
                 Return
             End If
 
-            If MessageBox.Show("DESEA GUARDAR LOS CAMBIOS?", "MENSAJE DEL SISTEMA", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> DialogResult.Yes Then Return
+            If MessageBox.Show("DESEA GUARDAR LOS CAMBIOS?", "Mensaje del sistema", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> DialogResult.Yes Then Return
 
             _sqlCommands.Clear()
 

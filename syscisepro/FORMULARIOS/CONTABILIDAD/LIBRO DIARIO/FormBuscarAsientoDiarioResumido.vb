@@ -61,7 +61,7 @@ Namespace FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
                 dgvAsientoDiario.Columns(5).Visible = False
                 dgvAsientoDiario.Columns(8).Visible = False 
             Catch ex As Exception
-                MsgBox("CARGAR ASIENTOS DIARIO BUSQUEDA" & vbNewLine & ex.ToString, MsgBoxStyle.Critical, "MENSAJE DE EXCEPCIÓN")
+                MsgBox("CARGAR ASIENTOS DIARIO BUSQUEDA" & vbNewLine & ex.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
             End Try
         End Sub
 

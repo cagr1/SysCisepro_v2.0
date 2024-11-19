@@ -140,16 +140,16 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
                     DialogResult = formAsientoDiario.ShowDialog
                 End If
             Catch ex As Exception
-                'MsgBox(ex.Message.ToString, MsgBoxStyle.Critical, "MENSAJE DE EXCEPCIÓN")
-                KryptonMessageBox.Show(ex.Message, "MENSAJE DE EXCEPCIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+
+                KryptonMessageBox.Show(ex.Message, "Mensaje de excepción", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
 
         Private Sub ToolStripMenuItem1_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnAprovar.Click
             If dgvComprobanteEgresoBancos.Rows.Count = 0 Or dgvComprobanteEgresoBancos.CurrentRow Is Nothing Then Return
 
-            'If MessageBox.Show("¿ESTA SEGURO QUE DESEA APROBAR EL COMPROBANTE DE EGRESO?", "MENSAJE DE VALIDACIÓN", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> MsgBoxResult.Yes Then Return
-            If KryptonMessageBox.Show("¿ESTA SEGURO QUE DESEA APROBAR EL COMPROBANTE DE EGRESO?", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) <> DialogResult.Yes Then Return
+
+            If KryptonMessageBox.Show("¿Esta seguro que desea aprobar el comprobante de egreso?", "Mensaje de validación", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) <> DialogResult.Yes Then Return
             _sqlCommands.Clear()
 
             _objAuditoria.IdAuditoria = _objAuditoria.BuscarMayorIdAuditoriaGeneral(_tipoCon) + 1
@@ -170,7 +170,7 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
             Else
                 messageIcon = KryptonMessageBoxIcon.Exclamation
             End If
-            KryptonMessageBox.Show(res(1), "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, messageIcon)
+            KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, messageIcon)
             'MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
         End Sub
 
@@ -179,8 +179,8 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
                 Return
             End If
 
-            'If MessageBox.Show("¿ESTA SEGURO QUE DESEA RECHAZAR EL COMPROBANTE DE EGRESO?", "MENSAJE DE VALIDACIÓN", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> MsgBoxResult.Yes Then Return
-            If KryptonMessageBox.Show("¿ESTA SEGURO QUE DESEA RECHAZAR EL COMPROBANTE DE EGRESO?", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) <> DialogResult.Yes Then Return
+
+            If KryptonMessageBox.Show("¿Esta seguro que desea rechazar el comprobante de egreso?", "Mensaje de validación", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) <> DialogResult.Yes Then Return
             _sqlCommands.Clear()
 
             _objAuditoria.IdAuditoria = _objAuditoria.BuscarMayorIdAuditoriaGeneral(_tipoCon) + 1
@@ -202,8 +202,8 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
             Else
                 messageIcon = KryptonMessageBoxIcon.Exclamation
             End If
-            KryptonMessageBox.Show(res(1), "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, messageIcon)
-            'MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
+            KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, messageIcon)
+
 
         End Sub
 

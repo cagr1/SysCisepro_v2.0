@@ -112,7 +112,7 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
         Private Sub btnGuardarMarca_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnGuardarMarca.Click
             If txtDetalleMarca.Text <> "" Then
 
-                If MessageBox.Show("¿ESTA SEGURO QUE DESEA GUARDAR?", "MENSAJE DE VALIDACIÓN", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> MsgBoxResult.Yes Then Return
+                If MessageBox.Show("¿Esta seguro que desea guardar?", "Mensaje de validación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> MsgBoxResult.Yes Then Return
                 _sqlCommands.Clear()
 
                 _objAuditoria.IdAuditoria = _objAuditoria.BuscarMayorIdAuditoriaGeneral(_tipoCon) + 1
@@ -140,14 +140,14 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
                 End If
                 MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
             Else
-                MsgBox("No se puede guardar la MARCA debido a que no ha llenado todos los parámetros nesesarios", MsgBoxStyle.Information, "Mensaje de Validación")
+                MsgBox("No se puede guardar la MARCA debido a que no ha llenado todos los parámetros nesesarios", MsgBoxStyle.Information, "Mensaje de validación")
                 txtDetalleMarca.Focus()
             End If
         End Sub
 
         Private Sub btnNuevoColor_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnNuevoColor.Click
             btnGuardarColor.Enabled = True
-            btnNuevoColor.Enabled = False 
+            btnNuevoColor.Enabled = False
             txtDetalleColor.Enabled = True
             txtDetalleColor.Focus()
         End Sub
@@ -155,7 +155,7 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
         Private Sub btnGuardarColor_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnGuardarColor.Click
             If txtDetalleColor.Text <> "" Then
 
-                If MessageBox.Show("¿ESTA SEGURO QUE DESEA GUARDAR?", "MENSAJE DE VALIDACIÓN", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> MsgBoxResult.Yes Then Return
+                If MessageBox.Show("¿Esta seguro que desea guardar?", "Mensaje de validación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> MsgBoxResult.Yes Then Return
                 _sqlCommands.Clear()
 
                 _objAuditoria.IdAuditoria = _objAuditoria.BuscarMayorIdAuditoriaGeneral(_tipoCon) + 1
@@ -183,14 +183,14 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
                 End If
                 MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
             Else
-                MsgBox("No se puede guardar el COLOR debido a que no ha llenado todos los parámetros nesesarios", MsgBoxStyle.Information, "Mensaje de Validación")
+                MsgBox("No se puede guardar el COLOR debido a que no ha llenado todos los parámetros nesesarios", MsgBoxStyle.Information, "Mensaje de validación")
                 txtDetalleColor.Focus()
             End If
         End Sub
 
         Private Sub btnNuevoMaterial_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnNuevoMaterial.Click
             btnGuardarMaterial.Enabled = True
-            btnNuevoMaterial.Enabled = False 
+            btnNuevoMaterial.Enabled = False
             txtDetalleMaterial.Enabled = True
             txtDetalleMaterial.Focus()
         End Sub
@@ -198,7 +198,7 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
         Private Sub btnGuardarMaterial_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnGuardarMaterial.Click
             If txtDetalleMaterial.Text <> "" Then
 
-                If MessageBox.Show("¿ESTA SEGURO QUE DESEA GUARDAR?", "MENSAJE DE VALIDACIÓN", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> MsgBoxResult.Yes Then Return
+                If MessageBox.Show("¿Esta seguro que desea guardar?", "Mensaje de validación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> MsgBoxResult.Yes Then Return
                 _sqlCommands.Clear()
 
                 _objAuditoria.IdAuditoria = _objAuditoria.BuscarMayorIdAuditoriaGeneral(_tipoCon) + 1
@@ -226,7 +226,7 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
                 End If
                 MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
             Else
-                MsgBox("No se puede guardar el MATERIAL debido a que no ha llenado todos los parámetros nesesarios", MsgBoxStyle.Information, "Mensaje de Validación")
+                MsgBox("No se puede guardar el MATERIAL debido a que no ha llenado todos los parámetros nesesarios", MsgBoxStyle.Information, "Mensaje de validación")
                 txtDetalleMaterial.Focus()
             End If
         End Sub

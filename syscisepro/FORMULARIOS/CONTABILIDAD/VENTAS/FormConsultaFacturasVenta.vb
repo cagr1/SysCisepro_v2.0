@@ -190,7 +190,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
         Private Sub ExportarDatosExcel(ByVal dgvAsientosDiario As DataGridView, ByVal titulo As String)
             Try
                 If dgvAsientosDiario.Rows.Count = 0 Then
-                    MsgBox("NO HAY DATOS QUE EXPORTAR!", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                    MsgBox("No hay datos que exportar!", MsgBoxStyle.Exclamation, "Mensaje de validación")
                     Return
                 End If
 
@@ -259,7 +259,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                 app.DisplayAlerts = True
                 'workbook.SaveAs(sfd.FileName, Excel.XlFileFormat.xlWorkbookNormal, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Excel.XlSaveAsAccessMode.xlExclusive, Type.Missing, Type.Missing, Type.Missing, Type.Missing)
             Catch ex As Exception
-                MessageBox.Show("HUBO UN PROBLEMA AL EXPORTAR DATOS!", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                MessageBox.Show("Hubo un problema al exportar datos!", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Error)
             End Try
         End Sub
 
@@ -271,7 +271,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
 
                 End If
             Catch ex As Exception
-                MsgBox("CARGAR DATOS EMPRESA." & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "MENSAJE DE EXCEPCIÓN")
+                MsgBox("CARGAR DATOS EMPRESA." & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
             End Try
         End Sub
         Private Sub FormConsultaFacturasVenta_Load(ByVal sender As System.Object, ByVal e As EventArgs) Handles MyBase.Load
@@ -480,7 +480,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
             Try
                 Dim data = _objetoComprobantesElectronicos.BuscarComprobanteElectronicoByIdComprobanteTipo(_tipoCon, "FACTURA VENTA", lblIdFacturaVenta.Text)
                 If data.Rows.Count = 0 Then
-                    MsgBox("NO SE ENCONTRÓ COMPROBANTE ELECTRONICO!", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                    MsgBox("NO SE ENCONTRÓ COMPROBANTE ELECTRONICO!", MsgBoxStyle.Exclamation, "Mensaje de validación")
                     Return
                 End If
 
@@ -504,9 +504,9 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                 writer.Flush()
                 writer.Close()
 
-                MsgBox("COMPROBANTE ELECTRONICO EXPORTADO CORRECTAMENTE!", MsgBoxStyle.Information, "MENSAJE DE VALIDACIÓN")
+                MsgBox("COMPROBANTE ELECTRONICO EXPORTADO CORRECTAMENTE!", MsgBoxStyle.Information, "Mensaje de validación")
             Catch ex As Exception
-                MsgBox("HUBO UN PROBLEMA AL CARGAR EL COMPROBANTE ELECTRONICO! " & vbNewLine & ex.Message, MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                MsgBox("HUBO UN PROBLEMA AL CARGAR EL COMPROBANTE ELECTRONICO! " & vbNewLine & ex.Message, MsgBoxStyle.Exclamation, "Mensaje de validación")
             End Try
         End Sub
 
@@ -520,7 +520,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                 f.lblFechaFinal.Text = _fechaHasta
                 f.Show()
             Else
-                MsgBox("NO HAY FACTURAS QUE CARGAR. PRIMERO REALICE UNA BUSQUEDA", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                MsgBox("NO HAY FACTURAS QUE CARGAR. Primero realice una busqueda", MsgBoxStyle.Exclamation, "Mensaje de validación")
             End If
         End Sub
 
@@ -543,7 +543,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                 f.lblFechaFinal.Text = _fechaHasta
                 f.Show()
             Else
-                MsgBox("NO HAY FACTURAS QUE CARGAR. PRIMERO REALICE UNA BUSQUEDA", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                MsgBox("NO HAY FACTURAS QUE CARGAR. Primero realice una busqueda", MsgBoxStyle.Exclamation, "Mensaje de validación")
             End If
         End Sub
 
@@ -1322,10 +1322,10 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                 xmlDoc = Nothing
                 File.Delete(ruta)
                 writer.Close()
-                MsgBox("FACTURA CREADA CORRECTAMENTE!", MsgBoxStyle.Information, "MENSAJE DE VALIDACIÓN")
+                MsgBox("FACTURA CREADA CORRECTAMENTE!", MsgBoxStyle.Information, "Mensaje de validación")
 
             Catch ex As Exception
-                MsgBox("HUBO UN PROBLEMA AL CARGAR EL XML! " & vbNewLine & ex.Message, MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                MsgBox("HUBO UN PROBLEMA AL CARGAR EL XML! " & vbNewLine & ex.Message, MsgBoxStyle.Exclamation, "Mensaje de validación")
             End Try
 
         End Sub

@@ -135,7 +135,7 @@ Namespace FORMULARIOS.OPERACIONES
         Private Sub ToolStripMenuItem1_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ToolStripMenuItem2.Click
 
             If dgvDia.RowCount > 0 Or dgvNoche.RowCount > 0 Then
-                If KryptonMessageBox.Show("Se detectó datos en las tabla DÍA / NOCHE, si no ha guardado los cambios se volverá a cargar la información almacenada anteriormente para la fecha correspondiente. Desea continuar?", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) <> DialogResult.Yes Then Return
+                If KryptonMessageBox.Show("Se detectó datos en las tabla DÍA / NOCHE, si no ha guardado los cambios se volverá a cargar la información almacenada anteriormente para la fecha correspondiente. Desea continuar?", "Mensaje del sistema", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) <> DialogResult.Yes Then Return
             End If
 
             Try
@@ -146,7 +146,7 @@ Namespace FORMULARIOS.OPERACIONES
 
                 Dim prog = _objProgramacionOps.SeleccionarProgramacionByFecha(_tipoCon, fechaDesde)
                 If prog.Rows.Count = 0 Then
-                    KryptonMessageBox.Show("NO HAY REGISTRO DE LA PROGRAMACIÓN CORRESPONDIENTE A LA FECHA SELECCIONADA!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
+                    KryptonMessageBox.Show("NO HAY REGISTRO DE LA PROGRAMACIÓN CORRESPONDIENTE A LA FECHA SELECCIONADA!", "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                     Return
                 End If
 
@@ -182,7 +182,7 @@ Namespace FORMULARIOS.OPERACIONES
                     Select Case KryptonMessageBox.Show("Ya existe un reporte del " & DateTimePicker4.Text & vbCrLf & vbCrLf &
                                                        "Si pone 'SI' se cargará dicho reporte y podrá continuar los cambios sobre el mismo." & vbCrLf &
                                                        "Si pone 'NO' se cargará un nuevo reporte según el día de la programación correspondiente." & vbCrLf &
-                                                       "Desea cargar los datos del reporte existente? ", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.YesNoCancel, KryptonMessageBoxIcon.Question)
+                                                       "Desea cargar los datos del reporte existente? ", "Mensaje del sistema", KryptonMessageBoxButtons.YesNoCancel, KryptonMessageBoxIcon.Question)
                         Case DialogResult.Yes
                             datosd = _objdetaProgramacionOps.SeleccionarDetalleAsistenciaByIdProgramacion(_tipoCon, True, prog.Rows(0).Item(0), dia, ndia, fechaDesde, fechaHasta, jdia, 1)
                             datosn = _objdetaProgramacionOps.SeleccionarDetalleAsistenciaByIdProgramacion(_tipoCon, True, prog.Rows(0).Item(0), dia, ndia, fechaDesde, fechaHasta, jdia, 2)
@@ -458,7 +458,7 @@ Namespace FORMULARIOS.OPERACIONES
                     ToolStripMenuItem6.Enabled = False
                     dgvDia.ReadOnly = True
                     dgvNoche.ReadOnly = True
-                    KryptonMessageBox.Show("HAN PASADO MÁS DE 48H, NO SE PUEDE MODIFICAR EL REPORTE CORRESPONDIENTE!!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
+                    KryptonMessageBox.Show("HAN PASADO MÁS DE 48H, NO SE PUEDE MODIFICAR EL REPORTE CORRESPONDIENTE!!", "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                 Else
                     btnAgregar.Enabled = True
                     btnCambiar.Enabled = True
@@ -474,7 +474,8 @@ Namespace FORMULARIOS.OPERACIONES
                 dgvDia.Rows.Clear()
                 dgvNoche.Rows.Clear()
                 Dim m = If(ex.Message.Contains("fila en la posición 0"), "HUBO UN PROBLEMA AL CARGAR LA PROGRAMACIÓN CORRESPONDIENTE A LA FECHA SELECCIONADA!", ex.Message)
-                MsgBox(m, MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                'MsgBox(m, MsgBoxStyle.Exclamation, "Mensaje de validación")
+                KryptonMessageBox.Show(m, "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
             End Try
         End Sub
 
@@ -512,7 +513,7 @@ Namespace FORMULARIOS.OPERACIONES
 
         Private Sub FrmReporteAsistencia_FormClosing(ByVal sender As System.Object, ByVal e As Windows.Forms.FormClosingEventArgs) Handles MyBase.FormClosing
             If dgvDia.RowCount > 0 Or dgvNoche.RowCount > 0 Then
-                Dim res = KryptonMessageBox.Show("Desea guardar los cambios realizados?", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.YesNoCancel, KryptonMessageBoxIcon.Question)
+                Dim res = KryptonMessageBox.Show("Desea guardar los cambios realizados?", "Mensaje del sistema", KryptonMessageBoxButtons.YesNoCancel, KryptonMessageBoxIcon.Question)
                 If res = DialogResult.Cancel Then
                     e.Cancel = True
                 Else
@@ -525,11 +526,11 @@ Namespace FORMULARIOS.OPERACIONES
             _hoy = ValidationForms.FechaActual(_tipoCon)
 
             If Not Admin And _hoy > DateTimePicker5.Value.AddDays(2).AddHours(2) Then
-                KryptonMessageBox.Show("HAN PASADO MÁS DE 48H, NO SE PUEDE MODIFICAR EL REPORTE CORRESPONDIENTE!!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
+                KryptonMessageBox.Show("HAN PASADO MÁS DE 48H, NO SE PUEDE MODIFICAR EL REPORTE CORRESPONDIENTE!!", "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                 Return
             End If
 
-            If msg Then If KryptonMessageBox.Show("Desea guardar los cambios realizados para los vigilantes?", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) <> DialogResult.Yes Then Return
+            If msg Then If KryptonMessageBox.Show("Desea guardar los cambios realizados para los vigilantes?", "Mensaje del sistema", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) <> DialogResult.Yes Then Return
             VerificarFaltas()
 
             _sqlCommands.Clear()
@@ -884,7 +885,7 @@ Namespace FORMULARIOS.OPERACIONES
             Else
                 messageIcon = KryptonMessageBoxIcon.Exclamation
             End If
-            KryptonMessageBox.Show(res(1), "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, messageIcon)
+            KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, messageIcon)
         End Sub
 
         Private Function NumeroRiver(ByVal rivers As String) As Integer
@@ -928,7 +929,8 @@ Namespace FORMULARIOS.OPERACIONES
                     Next
                 End If
             Catch ex As Exception
-                MessageBox.Show("ERROR: En VerificarFaltas() DIA, index:" & r & " , " & ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                'MessageBox.Show("ERROR: En VerificarFaltas() DIA, index:" & r & " , " & ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                KryptonMessageBox.Show("ERROR: En VerificarFaltas() DIA, index:" & r & " , " & ex.Message, "ERROR", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
             End Try
             Try
                 If dgvNoche.Rows.Count > 0 Then
@@ -952,7 +954,8 @@ Namespace FORMULARIOS.OPERACIONES
                     Next
                 End If
             Catch ex As Exception
-                MessageBox.Show("ERROR: En VerificarFaltas() NOCHE, index:" & r & " , " & ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                'MessageBox.Show("ERROR: En VerificarFaltas() NOCHE, index:" & r & " , " & ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                KryptonMessageBox.Show("ERROR: En VerificarFaltas() NOCHE, index:" & r & " , " & ex.Message, "ERROR", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
             End Try
         End Sub
 
@@ -1437,7 +1440,8 @@ Namespace FORMULARIOS.OPERACIONES
                 app.Visible = True
                 app.DisplayAlerts = True
             Catch ex As Exception
-                MessageBox.Show("Error al exportar datos! " & vbNewLine & ex.Message, "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                'MessageBox.Show("Error al exportar datos! " & vbNewLine & ex.Message, "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                KryptonMessageBox.Show("Error al exportar datos! " & vbNewLine & ex.Message, "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
 
@@ -1599,7 +1603,7 @@ Namespace FORMULARIOS.OPERACIONES
             app.Visible = True
             app.DisplayAlerts = True
             'Catch ex As Exception
-            '    MessageBox.Show("Error al exportar datos! " & vbNewLine & ex.Message, "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            '    MessageBox.Show("Error al exportar datos! " & vbNewLine & ex.Message, "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Error)
             'End Try
         End Sub
 
@@ -1815,7 +1819,8 @@ Namespace FORMULARIOS.OPERACIONES
                 app.Visible = True
                 app.DisplayAlerts = True
             Catch ex As Exception
-                MessageBox.Show("Error al exportar datos! " & vbNewLine & ex.Message, "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                'MessageBox.Show("Error al exportar datos! " & vbNewLine & ex.Message, "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                KryptonMessageBox.Show("Error al exportar datos! " & vbNewLine & ex.Message, "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
 
@@ -1833,7 +1838,7 @@ Namespace FORMULARIOS.OPERACIONES
 
             If Not Admin And _hoy > DateTimePicker4.Value.AddDays(2).AddHours(2) Then
                 'If Not _modificar Then
-                KryptonMessageBox.Show("HAN PASADO MÁS DE 48H, NO SE PUEDE MODIFICAR EL REPORTE CORRESPONDIENTE!!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
+                KryptonMessageBox.Show("HAN PASADO MÁS DE 48H, NO SE PUEDE MODIFICAR EL REPORTE CORRESPONDIENTE!!", "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                 Return
             End If
 
@@ -1858,12 +1863,14 @@ Namespace FORMULARIOS.OPERACIONES
 
                     If frm.lblDiaNoche.Text.Equals("1") Then
                         If ExisteRegistroDia(frm.txtIdPersonal.Text.Trim, frm.lblIdHorario.Text.Trim) Then
-                            MessageBox.Show("Ya existe el personal en el mismo puesto / horario que intenta agregar!", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                            'MessageBox.Show("Ya existe el personal en el mismo puesto / horario que intenta agregar!", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                            KryptonMessageBox.Show("Ya existe el personal en el mismo puesto / horario que intenta agregar!", "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Warning)
                             Return
                         End If
                     Else
                         If ExisteRegistroNoche(frm.txtIdPersonal.Text.Trim, frm.lblIdHorario.Text.Trim) Then
-                            MessageBox.Show("Ya existe el personal en el mismo puesto / horario que intenta agregar!", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                            'MessageBox.Show("Ya existe el personal en el mismo puesto / horario que intenta agregar!", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                            KryptonMessageBox.Show("Ya existe el personal en el mismo puesto / horario que intenta agregar!", "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Warning)
                             Return
                         End If
                     End If
@@ -1904,7 +1911,8 @@ Namespace FORMULARIOS.OPERACIONES
                             TabControl1.TabPages(0).Text = "DÍA - " & dgvDia.RowCount & " VIGILANTES"
                             nombreU = "Se agrega " & frm.txtIdPersonal.Text & " en R. ASISTENCIA DIA ID: " & TextBox3.Text & " por: " & UserName
                         Catch ex As Exception
-                            MessageBox.Show("ERROR: En AGREGARToolStripMenuItem() DIA, " & ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                            'MessageBox.Show("ERROR: En AGREGARToolStripMenuItem() DIA, " & ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                            KryptonMessageBox.Show("ERROR: En AGREGARToolStripMenuItem() DIA, " & ex.Message, "ERROR", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                         End Try
                     Else
                         Try
@@ -1930,11 +1938,14 @@ Namespace FORMULARIOS.OPERACIONES
                             TabControl1.TabPages(1).Text = "NOCHE - " & dgvNoche.RowCount & " VIGILANTES"
                             nombreU = "Se agrega " & frm.txtIdPersonal.Text & " en R. Asistencia Noche ID: " & TextBox3.Text & " por: " & UserName
                         Catch ex As Exception
-                            MessageBox.Show("ERROR: En AGREGARToolStripMenuItem() NOCHE, " & ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                            'MessageBox.Show("ERROR: En AGREGARToolStripMenuItem() NOCHE, " & ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                            KryptonMessageBox.Show("ERROR: En AGREGARToolStripMenuItem() NOCHE, " & ex.Message, "ERROR", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                         End Try
                     End If
                 Else
-                    MessageBox.Show("No seleccionó nigún registro!", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                    'MessageBox.Show("No seleccionó nigún registro!", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                    KryptonMessageBox.Show("No seleccionó nigún registro!", "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
+
                 End If
             End If
 
@@ -1950,14 +1961,16 @@ Namespace FORMULARIOS.OPERACIONES
             _hoy = ValidationForms.FechaActual(_tipoCon)
 
             If Not Admin And _hoy > DateTimePicker5.Value.AddDays(2).AddHours(2) Then
-                MessageBox.Show("HAN PASADO MÁS DE 48H, NO SE PUEDE MODIFICAR EL REPORTE CORRESPONDIENTE!!", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                MessageBox.Show("HAN PASADO MÁS DE 48H, NO SE PUEDE MODIFICAR EL REPORTE CORRESPONDIENTE!!", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
                 Return
             End If
 
             If TabControl1.SelectedIndex = 0 Then
-                If MessageBox.Show("El puesto de " & dgvDia.CurrentRow.Cells(4).Value & " será cubierto por otro vigilante. Si la respuesta es 'SI' seleccione el nombre del vigilante que cubrirá el puesto", "MENSAJE DEL SISTEMA", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> DialogResult.Yes Then Return
+                'If MessageBox.Show("El puesto de " & dgvDia.CurrentRow.Cells(4).Value & " será cubierto por otro vigilante. Si la respuesta es 'SI' seleccione el nombre del vigilante que cubrirá el puesto", "Mensaje del sistema", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> DialogResult.Yes Then Return
+                If KryptonMessageBox.Show("El puesto de " & dgvDia.CurrentRow.Cells(4).Value & " será cubierto por otro vigilante." & vbCrLf & "Si la respuesta es 'SI' seleccione el nombre del vigilante que cubrirá el puesto", "Mensaje del sistema", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) <> DialogResult.Yes Then Return
             Else
-                If MessageBox.Show("El puesto de " & dgvNoche.CurrentRow.Cells(4).Value & " será cubierto por otro vigilante. Si la respuesta es 'SI' seleccione el nombre del vigilante que cubrirá el puesto", "MENSAJE DEL SISTEMA", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> DialogResult.Yes Then Return
+                'If MessageBox.Show("El puesto de " & dgvNoche.CurrentRow.Cells(4).Value & " será cubierto por otro vigilante. Si la respuesta es 'SI' seleccione el nombre del vigilante que cubrirá el puesto", "Mensaje del sistema", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> DialogResult.Yes Then Return
+                If KryptonMessageBox.Show("El puesto de " & dgvNoche.CurrentRow.Cells(4).Value & " será cubierto por otro vigilante." & vbCrLf & "Si la respuesta es 'SI' seleccione el nombre del vigilante que cubrirá el puesto", "Mensaje del sistema", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) <> DialogResult.Yes Then Return
             End If
 
             Try
@@ -1974,12 +1987,14 @@ Namespace FORMULARIOS.OPERACIONES
 
                     If TabControl1.SelectedIndex = 0 Then
                         If ExisteRegistroDia(frm.dgvCustodios.CurrentRow.Cells.Item(0).Value, dgvDia.CurrentRow.Cells(8).Value) Then
-                            MessageBox.Show("Ya existe el personal en el mismo puesto / horario que intenta agregar!", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                            'MessageBox.Show("Ya existe el personal en el mismo puesto / horario que intenta agregar!", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                            KryptonMessageBox.Show("Ya existe el personal en el mismo puesto / horario que intenta agregar!", "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Warning)
                             Return
                         End If
                     Else
                         If ExisteRegistroNoche(frm.dgvCustodios.CurrentRow.Cells.Item(0).Value, dgvDia.CurrentRow.Cells(8).Value) Then
-                            MessageBox.Show("Ya existe el personal en el mismo puesto / horario que intenta agregar!", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                            'MessageBox.Show("Ya existe el personal en el mismo puesto / horario que intenta agregar!", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                            KryptonMessageBox.Show("Ya existe el personal en el mismo puesto / horario que intenta agregar!", "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Warning)
                             Return
                         End If
                     End If
@@ -1999,7 +2014,8 @@ Namespace FORMULARIOS.OPERACIONES
 
                 VerificarFaltas()
             Catch ex As Exception
-                MessageBox.Show("Erro al cambiar: " & ex.Message, "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                'MessageBox.Show("Erro al cambiar: " & ex.Message, "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                KryptonMessageBox.Show("Error al cambiar: " & ex.Message, "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
             End Try
         End Sub
 
@@ -2010,11 +2026,11 @@ Namespace FORMULARIOS.OPERACIONES
             _hoy = ValidationForms.FechaActual(_tipoCon)
 
             If Not Admin And _hoy > DateTimePicker5.Value.AddDays(2).AddHours(2) Then
-                KryptonMessageBox.Show("HAN PASADO MÁS DE 48H, NO SE PUEDE MODIFICAR EL REPORTE CORRESPONDIENTE!!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
+                KryptonMessageBox.Show("HAN PASADO MÁS DE 48H, NO SE PUEDE MODIFICAR EL REPORTE CORRESPONDIENTE!!", "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                 Return
             End If
 
-            If KryptonMessageBox.Show("Seguro que desea quitar este registro", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) <> DialogResult.Yes Then Return
+            If KryptonMessageBox.Show("Seguro que desea quitar este registro", "Mensaje del sistema", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) <> DialogResult.Yes Then Return
             Try
 
                 If TabControl1.SelectedIndex = 0 Then
@@ -2035,7 +2051,8 @@ Namespace FORMULARIOS.OPERACIONES
                 VerificarFaltas()
 
             Catch ex As Exception
-                MessageBox.Show("Ocurrio un problema al quitar fila: " & ex.Message, "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                'MessageBox.Show("Ocurrio un problema al quitar fila: " & ex.Message, "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                KryptonMessageBox.Show("Ocurrio un problema al quitar fila: " & ex.Message, "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
             End Try
         End Sub
 
@@ -2086,7 +2103,8 @@ Namespace FORMULARIOS.OPERACIONES
 
                 VerificarFaltas()
             Catch ex As Exception
-                MessageBox.Show("Ocurrio un problema al agregar columna reporte: " & ex.Message, "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                'MessageBox.Show("Ocurrio un problema al agregar columna reporte: " & ex.Message, "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                KryptonMessageBox.Show("Ocurrio un problema al agregar columna reporte: " & ex.Message, "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
             End Try
         End Sub
 
@@ -2094,7 +2112,8 @@ Namespace FORMULARIOS.OPERACIONES
             If TabControl1.SelectedIndex = 0 And dgvDia.RowCount = 0 Then Return
             If TabControl1.SelectedIndex = 1 And dgvNoche.RowCount = 0 Then Return
 
-            If MessageBox.Show("Desea quitar la última columna de reportes?" & vbNewLine & "Nota: El proceso es irreversible!", "MENSAJE DEL SISTEMA", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> DialogResult.Yes Then Return
+            'If MessageBox.Show("Desea quitar la última columna de reportes?" & vbNewLine & "Nota: El proceso es irreversible!", "Mensaje del sistema", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> DialogResult.Yes Then Return
+            If KryptonMessageBox.Show("Desea quitar la última columna de reportes?" & vbNewLine & "Nota: El proceso es irreversible!", "Mensaje del sistema", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) <> DialogResult.Yes Then Return
             If TabControl1.SelectedIndex = 0 Then
                 If dgvDia.ColumnCount - 2 > 15 Then
                     dgvDia.Columns.Remove(dgvDia.Columns(dgvDia.ColumnCount - 1))
@@ -2120,12 +2139,14 @@ Namespace FORMULARIOS.OPERACIONES
             _hoy = ValidationForms.FechaActual(_tipoCon)
 
             If Not Admin And _hoy > DateTimePicker4.Value.AddDays(2).AddHours(2) Then
-                MessageBox.Show("HAN PASADO MÁS DE 48H, NO SE PUEDE MODIFICAR EL REPORTE CORRESPONDIENTE!!", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                'MessageBox.Show("HAN PASADO MÁS DE 48H, NO SE PUEDE MODIFICAR EL REPORTE CORRESPONDIENTE!!", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                KryptonMessageBox.Show("Han pasado más de 48h, no se puede modificar el reporte correspondiente!!", "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                 Return
             End If
 
             If TabControl1.SelectedIndex = 0 Then
-                If MessageBox.Show("El turno de " & dgvDia.CurrentRow.Cells(4).Value & " será cambiado a la NOCHE?", "MENSAJE DEL SISTEMA", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> DialogResult.Yes Then Return
+                'If MessageBox.Show("El turno de " & dgvDia.CurrentRow.Cells(4).Value & " será cambiado a la NOCHE?", "Mensaje del sistema", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> DialogResult.Yes Then Return
+                If KryptonMessageBox.Show("El turno de " & dgvDia.CurrentRow.Cells(4).Value & " será cambiado a la NOCHE?", "Mensaje del sistema", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) <> DialogResult.Yes Then Return
 
                 _r = dgvDia.CurrentRow
                 str = If((_r.Tag & "").ToString.Trim.Length = 0, "0|||0", _r.Tag & "")
@@ -2206,7 +2227,8 @@ Namespace FORMULARIOS.OPERACIONES
                 _r.Selected = True
                 dgvNoche.FirstDisplayedScrollingRowIndex = dgvNoche.SelectedRows(0).Index
             Else
-                If MessageBox.Show("El turno de " & dgvNoche.CurrentRow.Cells(4).Value & " será cambiado a la DÍA?", "MENSAJE DEL SISTEMA", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> DialogResult.Yes Then Return
+                'If MessageBox.Show("El turno de " & dgvNoche.CurrentRow.Cells(4).Value & " será cambiado a la DÍA?", "Mensaje del sistema", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> DialogResult.Yes Then Return
+                If KryptonMessageBox.Show("El turno de " & dgvNoche.CurrentRow.Cells(4).Value & " será cambiado a la DÍA?", "Mensaje del sistema", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) <> DialogResult.Yes Then Return
 
                 _r = dgvNoche.CurrentRow
                 str = If((_r.Tag & "").ToString.Trim.Length = 0, "0|||0", _r.Tag & "")
@@ -2306,14 +2328,18 @@ Namespace FORMULARIOS.OPERACIONES
             'If _hoy > DateTimePicker5.Value.AddDays(2).AddHours(2) Then
             If Not Admin And _hoy > DateTimePicker4.Value.AddDays(2).AddHours(2) Then
                 'If Not _modificar Then
-                MessageBox.Show("HAN PASADO MÁS DE 48H, NO SE PUEDE MODIFICAR EL REPORTE CORRESPONDIENTE!!", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                'MessageBox.Show("HAN PASADO MÁS DE 48H, NO SE PUEDE MODIFICAR EL REPORTE CORRESPONDIENTE!!", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                KryptonMessageBox.Show("HAN PASADO MÁS DE 48H, NO SE PUEDE MODIFICAR EL REPORTE CORRESPONDIENTE!!", "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                 Return
             End If
 
             If TabControl1.SelectedIndex = 0 Then
-                If MessageBox.Show("Está por cambiar el puesto de " & dgvDia.CurrentRow.Cells(4).Value & ". Si la respuesta es 'SI' deberá seleccionar el nuevo puesto", "MENSAJE DEL SISTEMA", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> DialogResult.Yes Then Return
+                If KryptonMessageBox.Show("Está por cambiar el puesto de " & dgvDia.CurrentRow.Cells(4).Value & ". Si la respuesta es 'SI' deberá seleccionar el nuevo puesto", "Mensaje del sistema", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) <> DialogResult.Yes Then Return
+                'If MessageBox.Show("Está por cambiar el puesto de " & dgvDia.CurrentRow.Cells(4).Value & ". Si la respuesta es 'SI' deberá seleccionar el nuevo puesto", "Mensaje del sistema", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> DialogResult.Yes Then Return
+                KryptonMessageBox.Show("Está por cambiar el puesto de " & dgvDia.CurrentRow.Cells(4).Value & vbCrLf & "Si la respuesta es 'SI' deberá seleccionar el nuevo puesto", "Mensaje del sistema", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question)
             Else
-                If MessageBox.Show("Está por cambiar el puesto de " & dgvNoche.CurrentRow.Cells(4).Value & ". Si la respuesta es 'SI' deberá seleccionar el nuevo puesto", "MENSAJE DEL SISTEMA", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> DialogResult.Yes Then Return
+                If KryptonMessageBox.Show("Está por cambiar el puesto de " & dgvNoche.CurrentRow.Cells(4).Value & "." & vbCrLf & "Si la respuesta es 'SI' deberá seleccionar el nuevo puesto", "Mensaje del sistema", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) <> DialogResult.Yes Then Return
+                'If MessageBox.Show("Está por cambiar el puesto de " & dgvNoche.CurrentRow.Cells(4).Value & ". Si la respuesta es 'SI' deberá seleccionar el nuevo puesto", "Mensaje del sistema", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> DialogResult.Yes Then Return
             End If
 
             Try
@@ -2349,7 +2375,8 @@ Namespace FORMULARIOS.OPERACIONES
 
                 VerificarFaltas()
             Catch ex As Exception
-                MessageBox.Show("Erro al puesto: " & ex.Message, "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                'MessageBox.Show("Error al puesto: " & ex.Message, "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                KryptonMessageBox.Show("Error al puesto: " & ex.Message, "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
             End Try
 
         End Sub

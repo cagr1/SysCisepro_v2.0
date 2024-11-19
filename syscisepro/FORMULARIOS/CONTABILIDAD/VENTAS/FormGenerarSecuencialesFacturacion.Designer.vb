@@ -25,21 +25,19 @@
         Private Sub InitializeComponent()
             Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormGenerarSecuencialesFacturacion))
             Me.gbDatos = New System.Windows.Forms.GroupBox()
             Me.Label6 = New System.Windows.Forms.Label()
-            Me.txtObservacionesFacturaSecuenciales = New System.Windows.Forms.TextBox()
             Me.Label5 = New System.Windows.Forms.Label()
-            Me.txtFinalFacturaSecuencial = New System.Windows.Forms.TextBox()
             Me.Label4 = New System.Windows.Forms.Label()
-            Me.txtInicialFacturaSecuencial = New System.Windows.Forms.TextBox()
             Me.Label3 = New System.Windows.Forms.Label()
-            Me.lblActual = New System.Windows.Forms.Label()
             Me.Label2 = New System.Windows.Forms.Label()
-            Me.dtpFechaFacturaSecuenciales = New System.Windows.Forms.DateTimePicker()
             Me.Label1 = New System.Windows.Forms.Label()
+            Me.txtObservacionesFacturaSecuenciales = New System.Windows.Forms.TextBox()
+            Me.txtFinalFacturaSecuencial = New System.Windows.Forms.TextBox()
+            Me.txtInicialFacturaSecuencial = New System.Windows.Forms.TextBox()
+            Me.lblActual = New System.Windows.Forms.Label()
+            Me.dtpFechaFacturaSecuenciales = New System.Windows.Forms.DateTimePicker()
             Me.txtCantidadFacturaSecuencial = New System.Windows.Forms.TextBox()
             Me.lblIdFacturaSecuencial = New System.Windows.Forms.Label()
             Me.dgvFacturaSecuenciales = New System.Windows.Forms.DataGridView()
@@ -49,12 +47,12 @@
             Me.btnCancelar = New System.Windows.Forms.ToolStripMenuItem()
             Me.btnReporte = New System.Windows.Forms.ToolStripMenuItem()
             Me.KryptonGroupBox1 = New Krypton.Toolkit.KryptonGroupBox()
-            Me.KryptonLabel1 = New Krypton.Toolkit.KryptonLabel()
-            Me.KryptonLabel2 = New Krypton.Toolkit.KryptonLabel()
-            Me.KryptonLabel3 = New Krypton.Toolkit.KryptonLabel()
-            Me.KryptonLabel4 = New Krypton.Toolkit.KryptonLabel()
-            Me.KryptonLabel5 = New Krypton.Toolkit.KryptonLabel()
             Me.KryptonLabel6 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel5 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel4 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel3 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel2 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel1 = New Krypton.Toolkit.KryptonLabel()
             Me.gbDatos.SuspendLayout()
             CType(Me.dgvFacturaSecuenciales, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.msKardex.SuspendLayout()
@@ -90,6 +88,51 @@
             Me.Label6.TabIndex = 12
             Me.Label6.Text = "OBSERVACIONES:"
             '
+            'Label5
+            '
+            Me.Label5.AutoSize = True
+            Me.Label5.Location = New System.Drawing.Point(421, 61)
+            Me.Label5.Name = "Label5"
+            Me.Label5.Size = New System.Drawing.Size(66, 13)
+            Me.Label5.TabIndex = 10
+            Me.Label5.Text = "SEC. FINAL:"
+            '
+            'Label4
+            '
+            Me.Label4.AutoSize = True
+            Me.Label4.Location = New System.Drawing.Point(199, 61)
+            Me.Label4.Name = "Label4"
+            Me.Label4.Size = New System.Drawing.Size(73, 13)
+            Me.Label4.TabIndex = 8
+            Me.Label4.Text = "SEC. INICIAL:"
+            '
+            'Label3
+            '
+            Me.Label3.AutoSize = True
+            Me.Label3.Location = New System.Drawing.Point(11, 61)
+            Me.Label3.Name = "Label3"
+            Me.Label3.Size = New System.Drawing.Size(63, 13)
+            Me.Label3.TabIndex = 6
+            Me.Label3.Text = "CANTIDAD:"
+            '
+            'Label2
+            '
+            Me.Label2.AutoSize = True
+            Me.Label2.Location = New System.Drawing.Point(421, 24)
+            Me.Label2.Name = "Label2"
+            Me.Label2.Size = New System.Drawing.Size(117, 13)
+            Me.Label2.TabIndex = 4
+            Me.Label2.Text = "ULTIMO SECUENCIAL:"
+            '
+            'Label1
+            '
+            Me.Label1.AutoSize = True
+            Me.Label1.Location = New System.Drawing.Point(11, 24)
+            Me.Label1.Name = "Label1"
+            Me.Label1.Size = New System.Drawing.Size(44, 13)
+            Me.Label1.TabIndex = 2
+            Me.Label1.Text = "FECHA:"
+            '
             'txtObservacionesFacturaSecuenciales
             '
             Me.txtObservacionesFacturaSecuenciales.BackColor = System.Drawing.Color.White
@@ -100,15 +143,6 @@
             Me.txtObservacionesFacturaSecuenciales.Size = New System.Drawing.Size(381, 21)
             Me.txtObservacionesFacturaSecuenciales.TabIndex = 11
             Me.txtObservacionesFacturaSecuenciales.Text = "..."
-            '
-            'Label5
-            '
-            Me.Label5.AutoSize = True
-            Me.Label5.Location = New System.Drawing.Point(421, 61)
-            Me.Label5.Name = "Label5"
-            Me.Label5.Size = New System.Drawing.Size(66, 13)
-            Me.Label5.TabIndex = 10
-            Me.Label5.Text = "SEC. FINAL:"
             '
             'txtFinalFacturaSecuencial
             '
@@ -122,15 +156,6 @@
             Me.txtFinalFacturaSecuencial.Text = "0"
             Me.txtFinalFacturaSecuencial.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
             '
-            'Label4
-            '
-            Me.Label4.AutoSize = True
-            Me.Label4.Location = New System.Drawing.Point(199, 61)
-            Me.Label4.Name = "Label4"
-            Me.Label4.Size = New System.Drawing.Size(73, 13)
-            Me.Label4.TabIndex = 8
-            Me.Label4.Text = "SEC. INICIAL:"
-            '
             'txtInicialFacturaSecuencial
             '
             Me.txtInicialFacturaSecuencial.BackColor = System.Drawing.Color.White
@@ -142,15 +167,6 @@
             Me.txtInicialFacturaSecuencial.TabIndex = 7
             Me.txtInicialFacturaSecuencial.Text = "0"
             Me.txtInicialFacturaSecuencial.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-            '
-            'Label3
-            '
-            Me.Label3.AutoSize = True
-            Me.Label3.Location = New System.Drawing.Point(11, 61)
-            Me.Label3.Name = "Label3"
-            Me.Label3.Size = New System.Drawing.Size(63, 13)
-            Me.Label3.TabIndex = 6
-            Me.Label3.Text = "CANTIDAD:"
             '
             'lblActual
             '
@@ -164,15 +180,6 @@
             Me.lblActual.TabIndex = 5
             Me.lblActual.Text = "00000"
             '
-            'Label2
-            '
-            Me.Label2.AutoSize = True
-            Me.Label2.Location = New System.Drawing.Point(421, 24)
-            Me.Label2.Name = "Label2"
-            Me.Label2.Size = New System.Drawing.Size(117, 13)
-            Me.Label2.TabIndex = 4
-            Me.Label2.Text = "ULTIMO SECUENCIAL:"
-            '
             'dtpFechaFacturaSecuenciales
             '
             Me.dtpFechaFacturaSecuenciales.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -180,15 +187,6 @@
             Me.dtpFechaFacturaSecuenciales.Name = "dtpFechaFacturaSecuenciales"
             Me.dtpFechaFacturaSecuenciales.Size = New System.Drawing.Size(169, 21)
             Me.dtpFechaFacturaSecuenciales.TabIndex = 3
-            '
-            'Label1
-            '
-            Me.Label1.AutoSize = True
-            Me.Label1.Location = New System.Drawing.Point(11, 24)
-            Me.Label1.Name = "Label1"
-            Me.Label1.Size = New System.Drawing.Size(44, 13)
-            Me.Label1.TabIndex = 2
-            Me.Label1.Text = "FECHA:"
             '
             'txtCantidadFacturaSecuencial
             '
@@ -223,34 +221,18 @@
             Me.dgvFacturaSecuenciales.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.dgvFacturaSecuenciales.BorderStyle = System.Windows.Forms.BorderStyle.None
             Me.dgvFacturaSecuenciales.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
-            DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-            DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control
-            DataGridViewCellStyle2.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText
-            DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-            DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-            DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-            Me.dgvFacturaSecuenciales.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
             Me.dgvFacturaSecuenciales.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-            DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-            DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window
-            DataGridViewCellStyle3.Font = New System.Drawing.Font("Roboto", 8.25!)
-            DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText
-            DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(123, Byte), Integer))
-            DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-            DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-            Me.dgvFacturaSecuenciales.DefaultCellStyle = DataGridViewCellStyle3
+            DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+            DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
+            DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
+            DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(123, Byte), Integer))
+            DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+            DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+            Me.dgvFacturaSecuenciales.DefaultCellStyle = DataGridViewCellStyle2
             Me.dgvFacturaSecuenciales.Location = New System.Drawing.Point(4, 161)
             Me.dgvFacturaSecuenciales.Name = "dgvFacturaSecuenciales"
             Me.dgvFacturaSecuenciales.ReadOnly = True
-            DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-            DataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control
-            DataGridViewCellStyle4.Font = New System.Drawing.Font("Roboto", 8.25!)
-            DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText
-            DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
-            DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-            DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-            Me.dgvFacturaSecuenciales.RowHeadersDefaultCellStyle = DataGridViewCellStyle4
             Me.dgvFacturaSecuenciales.RowHeadersVisible = False
             Me.dgvFacturaSecuenciales.RowTemplate.DefaultCellStyle.Font = New System.Drawing.Font("Roboto", 8.25!)
             Me.dgvFacturaSecuenciales.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
@@ -330,37 +312,13 @@
             Me.KryptonGroupBox1.TabIndex = 182
             Me.KryptonGroupBox1.Values.Heading = "Secuenciales"
             '
-            'KryptonLabel1
+            'KryptonLabel6
             '
-            Me.KryptonLabel1.Location = New System.Drawing.Point(5, 4)
-            Me.KryptonLabel1.Name = "KryptonLabel1"
-            Me.KryptonLabel1.Size = New System.Drawing.Size(42, 20)
-            Me.KryptonLabel1.TabIndex = 0
-            Me.KryptonLabel1.Values.Text = "Fecha"
-            '
-            'KryptonLabel2
-            '
-            Me.KryptonLabel2.Location = New System.Drawing.Point(5, 30)
-            Me.KryptonLabel2.Name = "KryptonLabel2"
-            Me.KryptonLabel2.Size = New System.Drawing.Size(59, 20)
-            Me.KryptonLabel2.TabIndex = 1
-            Me.KryptonLabel2.Values.Text = "Cantidad"
-            '
-            'KryptonLabel3
-            '
-            Me.KryptonLabel3.Location = New System.Drawing.Point(5, 56)
-            Me.KryptonLabel3.Name = "KryptonLabel3"
-            Me.KryptonLabel3.Size = New System.Drawing.Size(90, 20)
-            Me.KryptonLabel3.TabIndex = 2
-            Me.KryptonLabel3.Values.Text = "Observaciones"
-            '
-            'KryptonLabel4
-            '
-            Me.KryptonLabel4.Location = New System.Drawing.Point(169, 30)
-            Me.KryptonLabel4.Name = "KryptonLabel4"
-            Me.KryptonLabel4.Size = New System.Drawing.Size(64, 20)
-            Me.KryptonLabel4.TabIndex = 12
-            Me.KryptonLabel4.Values.Text = "Sec Inicial"
+            Me.KryptonLabel6.Location = New System.Drawing.Point(289, 5)
+            Me.KryptonLabel6.Name = "KryptonLabel6"
+            Me.KryptonLabel6.Size = New System.Drawing.Size(108, 20)
+            Me.KryptonLabel6.TabIndex = 14
+            Me.KryptonLabel6.Values.Text = "Ultimo Secuencial"
             '
             'KryptonLabel5
             '
@@ -370,19 +328,43 @@
             Me.KryptonLabel5.TabIndex = 13
             Me.KryptonLabel5.Values.Text = "Sec Final"
             '
-            'KryptonLabel6
+            'KryptonLabel4
             '
-            Me.KryptonLabel6.Location = New System.Drawing.Point(289, 5)
-            Me.KryptonLabel6.Name = "KryptonLabel6"
-            Me.KryptonLabel6.Size = New System.Drawing.Size(108, 20)
-            Me.KryptonLabel6.TabIndex = 14
-            Me.KryptonLabel6.Values.Text = "Ultimo Secuencial"
+            Me.KryptonLabel4.Location = New System.Drawing.Point(169, 30)
+            Me.KryptonLabel4.Name = "KryptonLabel4"
+            Me.KryptonLabel4.Size = New System.Drawing.Size(64, 20)
+            Me.KryptonLabel4.TabIndex = 12
+            Me.KryptonLabel4.Values.Text = "Sec Inicial"
+            '
+            'KryptonLabel3
+            '
+            Me.KryptonLabel3.Location = New System.Drawing.Point(5, 56)
+            Me.KryptonLabel3.Name = "KryptonLabel3"
+            Me.KryptonLabel3.Size = New System.Drawing.Size(90, 20)
+            Me.KryptonLabel3.TabIndex = 2
+            Me.KryptonLabel3.Values.Text = "Observaciones"
+            '
+            'KryptonLabel2
+            '
+            Me.KryptonLabel2.Location = New System.Drawing.Point(5, 30)
+            Me.KryptonLabel2.Name = "KryptonLabel2"
+            Me.KryptonLabel2.Size = New System.Drawing.Size(59, 20)
+            Me.KryptonLabel2.TabIndex = 1
+            Me.KryptonLabel2.Values.Text = "Cantidad"
+            '
+            'KryptonLabel1
+            '
+            Me.KryptonLabel1.Location = New System.Drawing.Point(5, 4)
+            Me.KryptonLabel1.Name = "KryptonLabel1"
+            Me.KryptonLabel1.Size = New System.Drawing.Size(42, 20)
+            Me.KryptonLabel1.TabIndex = 0
+            Me.KryptonLabel1.Values.Text = "Fecha"
             '
             'FormGenerarSecuencialesFacturacion
             '
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-            Me.BackColor = System.Drawing.Color.White
+            Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(185, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(227, Byte), Integer))
             Me.ClientSize = New System.Drawing.Size(501, 322)
             Me.Controls.Add(Me.lblIdFacturaSecuencial)
             Me.Controls.Add(Me.KryptonGroupBox1)

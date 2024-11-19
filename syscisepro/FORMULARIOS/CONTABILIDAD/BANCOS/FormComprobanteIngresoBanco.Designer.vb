@@ -98,6 +98,8 @@
             Me.btnCancelar = New System.Windows.Forms.ToolStripMenuItem()
             Me.btnReporte = New System.Windows.Forms.ToolStripMenuItem()
             Me.KryptonGroupBox1 = New ComponentFactory.Krypton.Toolkit.KryptonGroupBox()
+            Me.gbPagosFacturaVenta = New ComponentFactory.Krypton.Toolkit.KryptonGroupBox()
+            Me.gbFacturaVenta = New ComponentFactory.Krypton.Toolkit.KryptonGroupBox()
             Me.KryptonLabel18 = New ComponentFactory.Krypton.Toolkit.KryptonLabel()
             Me.KryptonLabel17 = New ComponentFactory.Krypton.Toolkit.KryptonLabel()
             Me.KryptonLabel16 = New ComponentFactory.Krypton.Toolkit.KryptonLabel()
@@ -140,8 +142,6 @@
             Me.Label7 = New System.Windows.Forms.Label()
             Me.KryptonLabel2 = New ComponentFactory.Krypton.Toolkit.KryptonLabel()
             Me.KryptonLabel1 = New ComponentFactory.Krypton.Toolkit.KryptonLabel()
-            Me.gbFacturaVenta = New ComponentFactory.Krypton.Toolkit.KryptonGroupBox()
-            Me.gbPagosFacturaVenta = New ComponentFactory.Krypton.Toolkit.KryptonGroupBox()
             CType(Me.dgvFacturaVenta, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.dgvPagosFacturaVenta, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.gbAcreditado.SuspendLayout()
@@ -155,6 +155,14 @@
             CType(Me.KryptonGroupBox1.Panel, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.KryptonGroupBox1.Panel.SuspendLayout()
             Me.KryptonGroupBox1.SuspendLayout()
+            CType(Me.gbPagosFacturaVenta, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType(Me.gbPagosFacturaVenta.Panel, System.ComponentModel.ISupportInitialize).BeginInit()
+            Me.gbPagosFacturaVenta.Panel.SuspendLayout()
+            Me.gbPagosFacturaVenta.SuspendLayout()
+            CType(Me.gbFacturaVenta, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType(Me.gbFacturaVenta.Panel, System.ComponentModel.ISupportInitialize).BeginInit()
+            Me.gbFacturaVenta.Panel.SuspendLayout()
+            Me.gbFacturaVenta.SuspendLayout()
             CType(Me.KryptonGroupBox2, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.KryptonGroupBox2.Panel, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.KryptonGroupBox2.Panel.SuspendLayout()
@@ -169,14 +177,6 @@
             Me.gbCheque.SuspendLayout()
             Me.GroupBox2.SuspendLayout()
             Me.GroupBox5.SuspendLayout()
-            CType(Me.gbFacturaVenta, System.ComponentModel.ISupportInitialize).BeginInit()
-            CType(Me.gbFacturaVenta.Panel, System.ComponentModel.ISupportInitialize).BeginInit()
-            Me.gbFacturaVenta.Panel.SuspendLayout()
-            Me.gbFacturaVenta.SuspendLayout()
-            CType(Me.gbPagosFacturaVenta, System.ComponentModel.ISupportInitialize).BeginInit()
-            CType(Me.gbPagosFacturaVenta.Panel, System.ComponentModel.ISupportInitialize).BeginInit()
-            Me.gbPagosFacturaVenta.Panel.SuspendLayout()
-            Me.gbPagosFacturaVenta.SuspendLayout()
             Me.SuspendLayout()
             '
             'txtNombreComercialClienteGeneral
@@ -346,7 +346,6 @@
             Me.cmbConcepto.DropDownHeight = 150
             Me.cmbConcepto.DropDownWidth = 500
             Me.cmbConcepto.Enabled = False
-            Me.cmbConcepto.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.cmbConcepto.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cmbConcepto.FormattingEnabled = True
             Me.cmbConcepto.IntegralHeight = False
@@ -360,7 +359,6 @@
             Me.cmbCentroCosto.BackColor = System.Drawing.Color.White
             Me.cmbCentroCosto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cmbCentroCosto.Enabled = False
-            Me.cmbCentroCosto.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.cmbCentroCosto.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cmbCentroCosto.FormattingEnabled = True
             Me.cmbCentroCosto.Location = New System.Drawing.Point(296, 76)
@@ -529,7 +527,6 @@
             Me.cmbCuentasContables.BackColor = System.Drawing.Color.White
             Me.cmbCuentasContables.DropDownWidth = 200
             Me.cmbCuentasContables.Enabled = False
-            Me.cmbCuentasContables.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.cmbCuentasContables.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cmbCuentasContables.FormattingEnabled = True
             Me.cmbCuentasContables.Location = New System.Drawing.Point(295, 215)
@@ -579,7 +576,6 @@
             Me.cmbCuentaBancos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cmbCuentaBancos.DropDownWidth = 130
             Me.cmbCuentaBancos.Enabled = False
-            Me.cmbCuentaBancos.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.cmbCuentaBancos.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cmbCuentaBancos.FormattingEnabled = True
             Me.cmbCuentaBancos.Location = New System.Drawing.Point(296, 270)
@@ -593,7 +589,6 @@
             Me.cmbBancos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cmbBancos.DropDownWidth = 180
             Me.cmbBancos.Enabled = False
-            Me.cmbBancos.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.cmbBancos.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cmbBancos.FormattingEnabled = True
             Me.cmbBancos.Location = New System.Drawing.Point(296, 242)
@@ -622,13 +617,13 @@
             DataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
             DataGridViewCellStyle10.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.dgvComprobanteIngresoBanco.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle10
-            Me.dgvComprobanteIngresoBanco.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(247, Byte), Integer))
+            Me.dgvComprobanteIngresoBanco.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.dgvComprobanteIngresoBanco.BorderStyle = System.Windows.Forms.BorderStyle.None
             Me.dgvComprobanteIngresoBanco.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
             Me.dgvComprobanteIngresoBanco.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
             DataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
             DataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Control
-            DataGridViewCellStyle11.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle11.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             DataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText
             DataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption
             DataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText
@@ -638,7 +633,7 @@
             Me.dgvComprobanteIngresoBanco.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.CODIGO, Me.CUENTA, Me.CONCEPTO, Me.DETALLE, Me.DEBE, Me.HABER, Me.ID_CC})
             DataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
             DataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Window
-            DataGridViewCellStyle14.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle14.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             DataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.ControlText
             DataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(123, Byte), Integer))
             DataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText
@@ -653,6 +648,7 @@
             Me.dgvComprobanteIngresoBanco.RowHeadersWidth = 25
             DataGridViewCellStyle15.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.dgvComprobanteIngresoBanco.RowsDefaultCellStyle = DataGridViewCellStyle15
+            Me.dgvComprobanteIngresoBanco.RowTemplate.DefaultCellStyle.Font = New System.Drawing.Font("Roboto", 8.25!)
             Me.dgvComprobanteIngresoBanco.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
             Me.dgvComprobanteIngresoBanco.Size = New System.Drawing.Size(483, 202)
             Me.dgvComprobanteIngresoBanco.TabIndex = 109
@@ -799,10 +795,11 @@
             'lblTotal
             '
             Me.lblTotal.AutoSize = True
+            Me.lblTotal.Font = New System.Drawing.Font("Roboto Medium", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.lblTotal.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
             Me.lblTotal.Location = New System.Drawing.Point(315, 14)
             Me.lblTotal.Name = "lblTotal"
-            Me.lblTotal.Size = New System.Drawing.Size(48, 13)
+            Me.lblTotal.Size = New System.Drawing.Size(54, 13)
             Me.lblTotal.TabIndex = 34
             Me.lblTotal.Text = "TOTAL :"
             '
@@ -945,6 +942,34 @@
             Me.KryptonGroupBox1.TabIndex = 212
             Me.KryptonGroupBox1.Values.Heading = ""
             '
+            'gbPagosFacturaVenta
+            '
+            Me.gbPagosFacturaVenta.CaptionOverlap = 0R
+            Me.gbPagosFacturaVenta.GroupBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.PanelRibbonInactive
+            Me.gbPagosFacturaVenta.Location = New System.Drawing.Point(515, 362)
+            Me.gbPagosFacturaVenta.Name = "gbPagosFacturaVenta"
+            '
+            'gbPagosFacturaVenta.Panel
+            '
+            Me.gbPagosFacturaVenta.Panel.Controls.Add(Me.dgvPagosFacturaVenta)
+            Me.gbPagosFacturaVenta.Size = New System.Drawing.Size(301, 222)
+            Me.gbPagosFacturaVenta.TabIndex = 120
+            Me.gbPagosFacturaVenta.Values.Heading = "Pagos Factura"
+            '
+            'gbFacturaVenta
+            '
+            Me.gbFacturaVenta.CaptionOverlap = 0R
+            Me.gbFacturaVenta.GroupBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.PanelRibbonInactive
+            Me.gbFacturaVenta.Location = New System.Drawing.Point(515, 46)
+            Me.gbFacturaVenta.Name = "gbFacturaVenta"
+            '
+            'gbFacturaVenta.Panel
+            '
+            Me.gbFacturaVenta.Panel.Controls.Add(Me.dgvFacturaVenta)
+            Me.gbFacturaVenta.Size = New System.Drawing.Size(301, 310)
+            Me.gbFacturaVenta.TabIndex = 119
+            Me.gbFacturaVenta.Values.Heading = "Factura Venta"
+            '
             'KryptonLabel18
             '
             Me.KryptonLabel18.Location = New System.Drawing.Point(201, 298)
@@ -971,7 +996,7 @@
             '
             'KryptonGroupBox2
             '
-            Me.KryptonGroupBox2.CaptionOverlap = 0.85R
+            Me.KryptonGroupBox2.CaptionOverlap = 0.15R
             Me.KryptonGroupBox2.GroupBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.PanelRibbonInactive
             Me.KryptonGroupBox2.Location = New System.Drawing.Point(11, 134)
             Me.KryptonGroupBox2.Name = "KryptonGroupBox2"
@@ -1147,8 +1172,8 @@
             '
             'gbCheque
             '
-            Me.gbCheque.CaptionOverlap = 0.85R
-            Me.gbCheque.GroupBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.PanelRibbonInactive
+            Me.gbCheque.CaptionOverlap = 0.15R
+            Me.gbCheque.GroupBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.ControlRibbon
             Me.gbCheque.Location = New System.Drawing.Point(11, 190)
             Me.gbCheque.Name = "gbCheque"
             '
@@ -1434,39 +1459,11 @@
             Me.KryptonLabel1.TabIndex = 1
             Me.KryptonLabel1.Values.Text = "Nro"
             '
-            'gbFacturaVenta
-            '
-            Me.gbFacturaVenta.CaptionOverlap = 0R
-            Me.gbFacturaVenta.GroupBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.PanelRibbonInactive
-            Me.gbFacturaVenta.Location = New System.Drawing.Point(515, 46)
-            Me.gbFacturaVenta.Name = "gbFacturaVenta"
-            '
-            'gbFacturaVenta.Panel
-            '
-            Me.gbFacturaVenta.Panel.Controls.Add(Me.dgvFacturaVenta)
-            Me.gbFacturaVenta.Size = New System.Drawing.Size(301, 310)
-            Me.gbFacturaVenta.TabIndex = 119
-            Me.gbFacturaVenta.Values.Heading = "Factura Venta"
-            '
-            'gbPagosFacturaVenta
-            '
-            Me.gbPagosFacturaVenta.CaptionOverlap = 0R
-            Me.gbPagosFacturaVenta.GroupBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.PanelRibbonInactive
-            Me.gbPagosFacturaVenta.Location = New System.Drawing.Point(515, 362)
-            Me.gbPagosFacturaVenta.Name = "gbPagosFacturaVenta"
-            '
-            'gbPagosFacturaVenta.Panel
-            '
-            Me.gbPagosFacturaVenta.Panel.Controls.Add(Me.dgvPagosFacturaVenta)
-            Me.gbPagosFacturaVenta.Size = New System.Drawing.Size(301, 222)
-            Me.gbPagosFacturaVenta.TabIndex = 120
-            Me.gbPagosFacturaVenta.Values.Heading = "Pagos Factura"
-            '
             'FormComprobanteIngresoBanco
             '
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-            Me.BackColor = System.Drawing.Color.White
+            Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(185, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(227, Byte), Integer))
             Me.ClientSize = New System.Drawing.Size(826, 665)
             Me.Controls.Add(Me.KryptonGroupBox1)
             Me.Controls.Add(Me.MenuStrip1)
@@ -1496,6 +1493,14 @@
             Me.KryptonGroupBox1.Panel.PerformLayout()
             CType(Me.KryptonGroupBox1, System.ComponentModel.ISupportInitialize).EndInit()
             Me.KryptonGroupBox1.ResumeLayout(False)
+            CType(Me.gbPagosFacturaVenta.Panel, System.ComponentModel.ISupportInitialize).EndInit()
+            Me.gbPagosFacturaVenta.Panel.ResumeLayout(False)
+            CType(Me.gbPagosFacturaVenta, System.ComponentModel.ISupportInitialize).EndInit()
+            Me.gbPagosFacturaVenta.ResumeLayout(False)
+            CType(Me.gbFacturaVenta.Panel, System.ComponentModel.ISupportInitialize).EndInit()
+            Me.gbFacturaVenta.Panel.ResumeLayout(False)
+            CType(Me.gbFacturaVenta, System.ComponentModel.ISupportInitialize).EndInit()
+            Me.gbFacturaVenta.ResumeLayout(False)
             CType(Me.KryptonGroupBox2.Panel, System.ComponentModel.ISupportInitialize).EndInit()
             Me.KryptonGroupBox2.Panel.ResumeLayout(False)
             Me.KryptonGroupBox2.Panel.PerformLayout()
@@ -1515,14 +1520,6 @@
             Me.GroupBox2.PerformLayout()
             Me.GroupBox5.ResumeLayout(False)
             Me.GroupBox5.PerformLayout()
-            CType(Me.gbFacturaVenta.Panel, System.ComponentModel.ISupportInitialize).EndInit()
-            Me.gbFacturaVenta.Panel.ResumeLayout(False)
-            CType(Me.gbFacturaVenta, System.ComponentModel.ISupportInitialize).EndInit()
-            Me.gbFacturaVenta.ResumeLayout(False)
-            CType(Me.gbPagosFacturaVenta.Panel, System.ComponentModel.ISupportInitialize).EndInit()
-            Me.gbPagosFacturaVenta.Panel.ResumeLayout(False)
-            CType(Me.gbPagosFacturaVenta, System.ComponentModel.ISupportInitialize).EndInit()
-            Me.gbPagosFacturaVenta.ResumeLayout(False)
             Me.ResumeLayout(False)
             Me.PerformLayout()
 

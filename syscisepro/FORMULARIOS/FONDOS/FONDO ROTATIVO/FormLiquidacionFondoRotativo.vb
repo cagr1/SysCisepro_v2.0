@@ -311,7 +311,7 @@ Namespace FORMULARIOS.FONDOS.FONDO_ROTATIVO
 
         Private Sub btnLiquidacionFondoCCH_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnLiquidacionFondoRotativo.Click
             If dgvLiquidacionFondoRotativo.Rows.Count < 1 Then
-                MsgBox("NO HAY SOLICITUDES QUE LIQUIDAR", MsgBoxStyle.Information, "MENSAJE DE INFORMACION")
+                MsgBox("NO HAY SOLICITUDES QUE LIQUIDAR", MsgBoxStyle.Information, "Mensaje de información")
             Else
                 SumaTotalLiquidacion()
 
@@ -325,11 +325,11 @@ Namespace FORMULARIOS.FONDOS.FONDO_ROTATIVO
         Private Sub btnGuardarSolicitudCCH_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnGuardarSolicitudFR.Click
             Try
                 If CDbl(txtTotalLiquidacion.Text) > CDbl(txtCantidadFondoRotativo.Text) Then
-                    MessageBox.Show("NO SE PUEDE LIQUIDAR debido a que el total de los gastos supera al valor definido para FONDO DE CAJA CHICA!!!", "MENSAJE DE VALIDACIÓN", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                    MessageBox.Show("NO SE PUEDE LIQUIDAR debido a que el total de los gastos supera al valor definido para FONDO DE CAJA CHICA!!!", "Mensaje de validación", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
                     Return
                 End If
 
-                If MessageBox.Show("¿ESTA SEGURA QUE DESEA GUARDAR LA LIQUIDACIÓN?", "MENSAJE DE VALIDACIÓN", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> DialogResult.Yes Then Return
+                If MessageBox.Show("¿ESTA SEGURA QUE DESEA GUARDAR LA LIQUIDACIÓN?", "Mensaje de validación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> DialogResult.Yes Then Return
 
                 If ValidacionParametros() Then
 
@@ -367,12 +367,12 @@ Namespace FORMULARIOS.FONDOS.FONDO_ROTATIVO
                     Else
                         messageIcon = KryptonMessageBoxIcon.Exclamation
                     End If
-                    KryptonMessageBox.Show(res(1), "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, messageIcon)
+                    KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, messageIcon)
 
 
                 Else
-                    'MsgBox("No se pudo GUARDAR debido a que no ha llenado los parámetros necesarios o no hay registros que liquidar!", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACION")
-                    KryptonMessageBox.Show("No se pudo GUARDAR debido a que no ha llenado los parámetros necesarios o no hay registros que liquidar!", "MENSAJE DE VALIDACION", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
+                    'MsgBox("No se pudo GUARDAR debido a que no ha llenado los parámetros necesarios o no hay registros que liquidar!", MsgBoxStyle.Exclamation, "Mensaje de validación")
+                    KryptonMessageBox.Show("No se pudo GUARDAR debido a que no ha llenado los parámetros necesarios o no hay registros que liquidar!", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                 End If
             Catch ex As Exception
                 MsgBox(ex.ToString, MsgBoxStyle.Critical)
@@ -425,7 +425,7 @@ Namespace FORMULARIOS.FONDOS.FONDO_ROTATIVO
         Dim _objRegistroDescuento As ClassDescuentosPersonal
         Dim _objetoHistorial As ClassHistorialLaboral
         Private Sub btnAnularSolicitud_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAnularSolicitud.Click
-            If MessageBox.Show("¿ESTA SEGURA QUE DESEA ANULAR EL DOCUMENTO: '" & dgvLiquidacionFondoRotativo.CurrentRow.Cells(4).Value & "' N° " & dgvLiquidacionFondoRotativo.CurrentRow.Cells(9).Value & "?", "MENSAJE DE VALIDACIÓN", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> DialogResult.Yes Then Return
+            If MessageBox.Show("¿ESTA SEGURA QUE DESEA ANULAR EL DOCUMENTO: '" & dgvLiquidacionFondoRotativo.CurrentRow.Cells(4).Value & "' N° " & dgvLiquidacionFondoRotativo.CurrentRow.Cells(9).Value & "?", "Mensaje de validación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> DialogResult.Yes Then Return
             Try
                 _sqlCommands.Clear()
 
@@ -486,11 +486,11 @@ Namespace FORMULARIOS.FONDOS.FONDO_ROTATIVO
                 Else
                     messageIcon = KryptonMessageBoxIcon.Exclamation
                 End If
-                KryptonMessageBox.Show(res(1), "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, messageIcon)
+                KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, messageIcon)
 
             Catch ex As Exception
                 'MsgBox("ERROR AL ANULAR DOCUMENTO: " & ex.ToString, MsgBoxStyle.Critical)
-                KryptonMessageBox.Show("ERROR AL ANULAR DOCUMENTO: " & ex.ToString, "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+                KryptonMessageBox.Show("ERROR AL ANULAR DOCUMENTO: " & ex.ToString, "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
     End Class

@@ -168,8 +168,8 @@ Namespace FORMULARIOS.FONDOS.FONDO_ROTATIVO.REPORTES
 
                 End If
             Catch ex As Exception
-                'MsgBox("DGV CELL CLICK." & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "MENSAJE DE EXCEPCIÓN")
-                KryptonMessageBox.Show("Error: " & vbNewLine & ex.Message.ToString, "MENSAJE DE EXCEPCIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+                'MsgBox("DGV CELL CLICK." & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
+                KryptonMessageBox.Show("Error: " & vbNewLine & ex.Message.ToString, "Mensaje de excepción", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
     End Class

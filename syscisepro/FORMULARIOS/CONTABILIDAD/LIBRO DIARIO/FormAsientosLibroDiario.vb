@@ -80,24 +80,21 @@ Namespace FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
                 Case TipoConexion.Asenava
                     Icon = My.Resources.logo_a
                     MenuStrip1.ForeColor = Color.White
-                    'MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorAsenava
                     dgvAsientosDiario.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorAsenava
-                    'CheckBox1.BackColor = My.MySettingsProperty.Settings.ColorAsenava
+
                     CheckBox1.ForeColor = Color.White
                 Case TipoConexion.Seportpac
                     Icon = My.Resources.logo_s
-                    'MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
+
                     MenuStrip1.ForeColor = Color.White
                     dgvAsientosDiario.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorSeportpac
-                    'CheckBox1.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
-                    CheckBox1.ForeColor = Color.White
+
                 Case Else
                     Icon = My.Resources.logo_c
                     'MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorCisepro
                     MenuStrip1.ForeColor = Color.White
                     dgvAsientosDiario.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
-                    'CheckBox1.BackColor = My.MySettingsProperty.Settings.ColorCisepro
-                    CheckBox1.ForeColor = Color.White
+
             End Select
             CheckBox1.Visible = IsAdmin
             dgvAsientosDiario.Font = New Font("Roboto", 8, FontStyle.Regular)
@@ -128,7 +125,8 @@ Namespace FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
                             dgvAsientosDiario.DataSource = _objetoAjustarAsientos.BuscarAsientosLibroDiarioXCodigoCuenta(_tipoCon, txtCuentaNueva.Text.Trim.Split(" ")(0), _fechaDesde, _fechaHasta)
                         End If
                     Case Else
-                        MsgBox("NO HA SELECCIONADO UN PARAMETRO DE BUSQUEDA", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                        'MsgBox("NO HA SELECCIONADO UN PARAMETRO DE BUSQUEDA", MsgBoxStyle.Exclamation, "Mensaje de validación")
+                        KryptonMessageBox.Show("NO HA SELECCIONADO UN PARAMETRO DE BUSQUEDA", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                 End Select
 
                 If dgvAsientosDiario.RowCount = 0 Then Return
@@ -142,7 +140,7 @@ Namespace FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
                 dgvAsientosDiario.Columns(1).DefaultCellStyle.Format = "g"
                 dgvAsientosDiario.Columns(1).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
 
-                dgvAsientosDiario.Columns(2).Width = 100
+                dgvAsientosDiario.Columns(2).Width = 80
                 dgvAsientosDiario.Columns(2).ReadOnly = True
                 dgvAsientosDiario.Columns(2).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft
 
@@ -151,13 +149,13 @@ Namespace FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
                 dgvAsientosDiario.Columns(4).Width = 120
                 dgvAsientosDiario.Columns(4).ReadOnly = True
 
-                dgvAsientosDiario.Columns(5).Width = 400
+                dgvAsientosDiario.Columns(5).Width = 325
                 dgvAsientosDiario.Columns(5).ReadOnly = True
 
-                dgvAsientosDiario.Columns(6).Width = 75
+                dgvAsientosDiario.Columns(6).Width = 70
                 dgvAsientosDiario.Columns(6).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
 
-                dgvAsientosDiario.Columns(7).Width = 75
+                dgvAsientosDiario.Columns(7).Width = 70
                 dgvAsientosDiario.Columns(7).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
 
                 dgvAsientosDiario.Columns(8).Width = 60
@@ -172,7 +170,8 @@ Namespace FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
 
             Catch ex As Exception
                 dgvAsientosDiario.DataSource = Nothing
-                MsgBox("CARGAR ASIENTOS DIARIO BUSQUEDA" & vbNewLine & ex.ToString, MsgBoxStyle.Critical, "MENSAJE DE EXCEPCIÓN")
+                'MsgBox("CARGAR ASIENTOS DIARIO BUSQUEDA" & vbNewLine & ex.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
+                KryptonMessageBox.Show("CARGAR ASIENTOS DIARIO BUSQUEDA" & vbNewLine & ex.ToString, "Mensaje de excepción", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
             SumarTotalAsientoDiario()
         End Sub
@@ -202,7 +201,8 @@ Namespace FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
             Catch ex As Exception
                 totalDebe = 0.0
                 totalHaber = 0.0
-                MsgBox("SUMAR ASIENTOS DIARIO" & vbNewLine & ex.Message, MsgBoxStyle.Critical, "MENSAJE DE EXCEPCIÓN")
+                'MsgBox("SUMAR ASIENTOS DIARIO" & vbNewLine & ex.Message, MsgBoxStyle.Critical, "Mensaje de excepción")
+                KryptonMessageBox.Show("SUMAR ASIENTOS DIARIO" & vbNewLine & ex.Message, "Mensaje de excepción", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
 
             txtTotalDebe.Text = "$ " & totalDebe.ToString("N")
@@ -210,8 +210,8 @@ Namespace FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
 
             If txtTotalDebe.Text.Trim().Equals(txtTotalHaber.Text.Trim()) Then
                 PictureBoxErrorSumaAsiento.Visible = False
-                txtTotalDebe.ForeColor = Color.Black
-                txtTotalHaber.ForeColor = Color.Black
+                txtTotalDebe.ForeColor = Color.FromArgb(30, 57, 91)
+                txtTotalHaber.ForeColor = Color.FromArgb(30, 57, 91)
             Else
                 PictureBoxErrorSumaAsiento.Visible = True
                 txtTotalDebe.ForeColor = Color.Red
@@ -221,7 +221,8 @@ Namespace FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
 
         Private Sub btnExportar_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnExportar.Click
             If dgvAsientosDiario.Rows.Count = 0 Then
-                MsgBox("NO HAY ASINETOS QUE CARGAR. PRIMERO REALICE UNA BUSQUEDA", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                'MsgBox("NO HAY ASINETOS QUE CARGAR. Primero realice una busqueda", MsgBoxStyle.Exclamation, "Mensaje de validación")
+                KryptonMessageBox.Show("NO HAY ASIENTOS QUE CARGAR. Primero realice una busqueda", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                 Return
             End If
             ExportarDatosExcel("ASIENTOS DE DIARIO", "LIBRO_DARIO", dtpAsientoDesde.Value, dtpAsientoHasta.Value)
@@ -349,21 +350,24 @@ Namespace FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
                 app.Visible = True
                 app.DisplayAlerts = True
             Catch ex As Exception
-                MessageBox.Show("HUBO UN PROBLEMA AL EXPORTAR DATOS!", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                MessageBox.Show("Hubo un problema al exportar datos!", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Error)
             End Try
         End Sub
         Private Sub btnGuardar_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnGuardar.Click
             If txtNumeroAsientoBuscar.Text.Trim.Length = 0 Or dgvAsientosDiario.RowCount = 0 Then
-                MsgBox("POR FAVOR REVISE LAS TRANSACCIONES, DEBE SELECCIONAR UNA TRANSACCIÓN PARA ANULAR", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACION")
+                'MsgBox("POR FAVOR REVISE LAS TRANSACCIONES, DEBE SELECCIONAR UNA TRANSACCIÓN PARA ANULAR", MsgBoxStyle.Exclamation, "Mensaje de validación")
+                KryptonMessageBox.Show("POR FAVOR REVISE LAS TRANSACCIONES, DEBE SELECCIONAR UNA TRANSACCIÓN PARA ANULAR", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                 Return
             End If
 
             If CType(txtNumeroAsientoBuscar.Text, Int32) < 10 Then
-                MsgBox("POR FAVOR REVISE LAS TRANSACCIONES, DEBE SELECCIONAR UNA TRANSACCIÓN PARA ANULAR", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACION")
+                'MsgBox("POR FAVOR REVISE LAS TRANSACCIONES, DEBE SELECCIONAR UNA TRANSACCIÓN PARA ANULAR", MsgBoxStyle.Exclamation, "Mensaje de validación")
+                KryptonMessageBox.Show("POR FAVOR REVISE LAS TRANSACCIONES, DEBE SELECCIONAR UNA TRANSACCIÓN PARA ANULAR", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                 Return
             End If
 
-            If MessageBox.Show("DESEA GUARDAR LOS CAMBIOS REALIZADOS?", "MENSAJE DEL SISTEMA", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> DialogResult.Yes Then Return
+            'If MessageBox.Show("DESEA GUARDAR LOS CAMBIOS REALIZADOS?", "Mensaje del sistema", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> DialogResult.Yes Then Return
+            If KryptonMessageBox.Show("DESEA GUARDAR LOS CAMBIOS REALIZADOS?", "Mensaje del sistema", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) <> DialogResult.Yes Then Return
 
             Try
                 SumarTotalAsientoDiario()
@@ -399,7 +403,8 @@ Namespace FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
                     Next
 
                     If er Then
-                        MsgBox("NO SE PUEDE GUARDAR. LA CUENTA NO EXISTE EN SU PLAN DE CUENTAS, POR FAVOR REVISE LAS TRANSACCIONES.", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACION")
+                        'MsgBox("No se puede guardar. LA CUENTA NO EXISTE EN SU PLAN DE CUENTAS, POR FAVOR REVISE LAS TRANSACCIONES.", MsgBoxStyle.Exclamation, "Mensaje de validación")
+                        KryptonMessageBox.Show("No se puede guardar. LA CUENTA NO EXISTE EN SU PLAN DE CUENTAS, POR FAVOR REVISE LAS TRANSACCIONES.", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                         Return
                     End If
 
@@ -414,17 +419,18 @@ Namespace FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
                     Else
                         messageIcon = KryptonMessageBoxIcon.Exclamation
                     End If
-                    KryptonMessageBox.Show(res(1), "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, messageIcon)
+                    KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, messageIcon)
 
                 Else
-                    MsgBox("NO SE PUEDE GUARDAR." & vbNewLine & "LOS VALORES DE EL DEBE Y EL HABER NO COINCIDEN POR FAVOR REVISE LAS TRANSACCIONES.", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACION")
+                    'MsgBox("No se puede guardar." & vbNewLine & "LOS VALORES DE EL DEBE Y EL HABER NO COINCIDEN POR FAVOR REVISE LAS TRANSACCIONES.", MsgBoxStyle.Exclamation, "Mensaje de validación")
+                    KryptonMessageBox.Show("No se puede guardar." & vbNewLine & "LOS VALORES DE EL DEBE Y EL HABER NO COINCIDEN POR FAVOR REVISE LAS TRANSACCIONES.", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                 End If
             Catch ex As Exception
 
             End Try
         End Sub
 
-        Private Sub dgvAsientosDiario_EditingControlShowing(ByVal sender As System.Object, ByVal e As DataGridViewEditingControlShowingEventArgs) Handles dgvAsientosDiario.EditingControlShowing
+        Private Sub dgvAsientosDiario_EditingControlShowing(ByVal sender As System.Object, ByVal e As DataGridViewEditingControlShowingEventArgs)
             Dim tBox = CType(e.Control, Windows.Forms.TextBox)
             tBox.CharacterCasing = CharacterCasing.Upper
             AddHandler tBox.KeyPress, AddressOf ItemType_KeyPress
@@ -449,7 +455,7 @@ Namespace FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
             End Select
         End Sub
 
-        Private Sub dgvAsientosDiario_CellEndEdit(ByVal sender As System.Object, ByVal e As DataGridViewCellEventArgs) Handles dgvAsientosDiario.CellEndEdit
+        Private Sub dgvAsientosDiario_CellEndEdit(ByVal sender As System.Object, ByVal e As DataGridViewCellEventArgs)
             dgvAsientosDiario.Rows(e.RowIndex).ErrorText = [String].Empty
             If e.ColumnIndex = 3 Then
                 Try
@@ -471,16 +477,19 @@ Namespace FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
 
         Private Sub btnAnular_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnAnular.Click
             If txtNumeroAsientoBuscar.Text.Trim.Length = 0 Or dgvAsientosDiario.RowCount = 0 Or Not rbNumero.Checked Then
-                MsgBox("POR FAVOR REVISE LAS TRANSACCIONES, DEBE SELECCIONAR UNA TRANSACCIÓN PARA ANULAR", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACION")
+                'MsgBox("POR FAVOR REVISE LAS TRANSACCIONES, DEBE SELECCIONAR UNA TRANSACCIÓN PARA ANULAR", MsgBoxStyle.Exclamation, "Mensaje de validación")
+                KryptonMessageBox.Show("POR FAVOR REVISE LAS TRANSACCIONES, DEBE SELECCIONAR UNA TRANSACCIÓN PARA ANULAR", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                 Return
             End If
 
             If CType(txtNumeroAsientoBuscar.Text, Int32) < 10 Then
-                MsgBox("POR FAVOR REVISE LAS TRANSACCIONES, DEBE SELECCIONAR UNA TRANSACCIÓN PARA ANULAR", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACION")
+                'MsgBox("POR FAVOR REVISE LAS TRANSACCIONES, DEBE SELECCIONAR UNA TRANSACCIÓN PARA ANULAR", MsgBoxStyle.Exclamation, "Mensaje de validación")
+                KryptonMessageBox.Show("POR FAVOR REVISE LAS TRANSACCIONES, DEBE SELECCIONAR UNA TRANSACCIÓN PARA ANULAR", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                 Return
             End If
 
-            If MessageBox.Show("DESEA ANULAR EL ASIENTO SELECCIONADO?", "MENSAJE DEL SISTEMA", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> DialogResult.Yes Then Return
+            'If MessageBox.Show("DESEA ANULAR EL ASIENTO SELECCIONADO?", "Mensaje del sistema", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> DialogResult.Yes Then Return
+            If KryptonMessageBox.Show("DESEA ANULAR EL ASIENTO SELECCIONADO?", "Mensaje del sistema", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) <> DialogResult.Yes Then Return
 
             Try
                 _sqlCommands.Clear()
@@ -517,23 +526,23 @@ Namespace FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
                 Else
                     messageIcon = KryptonMessageBoxIcon.Exclamation
                 End If
-                KryptonMessageBox.Show(res(1), "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, messageIcon)
+                KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, messageIcon)
             Catch ex As Exception
-                'MsgBox("NO SE PUEDE GUARDAR." & ex.Message, MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACION")
-                KryptonMessageBox.Show("NO SE PUEDE GUARDAR " & ex.Message, "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+                'MsgBox("No se puede guardar." & ex.Message, MsgBoxStyle.Exclamation, "Mensaje de validación")
+                KryptonMessageBox.Show("No se puede guardar " & ex.Message, "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
 
         End Sub
 
-        Private Sub dgvAsientosDiario_CellBeginEdit(ByVal sender As System.Object, ByVal e As DataGridViewCellCancelEventArgs) Handles dgvAsientosDiario.CellBeginEdit
+        Private Sub dgvAsientosDiario_CellBeginEdit(ByVal sender As System.Object, ByVal e As DataGridViewCellCancelEventArgs)
             If dgvAsientosDiario.RowCount = 0 Then Return
             If Not (e.ColumnIndex = 3 Or e.ColumnIndex = 6 Or e.ColumnIndex = 7) Then Return
         End Sub
 
-        Private Sub dgvAsientosDiario_SelectionChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles dgvAsientosDiario.SelectionChanged
+        Private Sub dgvAsientosDiario_SelectionChanged(ByVal sender As System.Object, ByVal e As EventArgs)
             If dgvAsientosDiario.Rows.Count = 0 Or dgvAsientosDiario.CurrentRow Is Nothing Then Return
             If dgvAsientosDiario.CurrentRow.Cells.Item(0).Value Is DBNull.Value Then Return
-            txtNumeroAsientoBuscar.Text = dgvAsientosDiario.CurrentRow.Cells("ASIENTO").Value 
+            txtNumeroAsientoBuscar.Text = dgvAsientosDiario.CurrentRow.Cells("ASIENTO").Value
         End Sub
 
         Private Sub ToolStripMenuItem1_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ToolStripMenuItem1.Click
@@ -542,7 +551,8 @@ Namespace FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
 
         Private Sub REPORTEASIENTOToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles REPORTEASIENTOToolStripMenuItem.Click
             If dgvAsientosDiario.Rows.Count = 0 Then
-                MsgBox("NO HAY ASIENTOS QUE CARGAR. PRIMERO REALICE UNA BUSQUEDA", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                'MsgBox("NO HAY ASIENTOS QUE CARGAR. Primero realice una busqueda", MsgBoxStyle.Exclamation, "Mensaje de validación")
+                KryptonMessageBox.Show("NO HAY ASIENTOS QUE CARGAR. Primero realice una busqueda", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                 Return
             End If
             Dim f = New FormReporteAsiento
@@ -554,7 +564,9 @@ Namespace FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
 
         Private Sub TODOSLOSASIENTOSToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TODOSLOSASIENTOSToolStripMenuItem.Click
             If dgvAsientosDiario.Rows.Count = 0 Then
-                MsgBox("NO HAY ASIENTOS QUE CARGAR. PRIMERO REALICE UNA BUSQUEDA", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                'MsgBox("NO HAY ASIENTOS QUE CARGAR. Primero realice una busqueda", MsgBoxStyle.Exclamation, "Mensaje de validación")
+                KryptonMessageBox.Show("NO HAY ASIENTOS QUE CARGAR. Primero realice una busqueda", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
+
                 Return
             End If
 

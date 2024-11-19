@@ -271,14 +271,14 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.PROVEEDORES
                         guargarRegistroEvaluacioServicios()
                         deshabilitadoInicio()
                     Else
-                        MsgBox("NO SE PUEDE GUARDAR" & vbNewLine & "NO SE HAN LLENADO TODOS LOS CAMPOS NECESARIOS PARA LA EVALUACIÓN.", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                        MsgBox("No se puede guardar" & vbNewLine & "NO SE HAN LLENADO TODOS LOS CAMPOS NECESARIOS PARA LA EVALUACIÓN.", MsgBoxStyle.Exclamation, "Mensaje de validación")
                     End If
                 Case 2
                     If ValidacionParametrosMateriales() = True Then
                         guargarRegistroEvaluacioMateriales()
                         deshabilitadoInicio()
                     Else
-                        MsgBox("NO SE PUEDE GUARDAR" & vbNewLine & "NO SE HAN LLENADO TODOS LOS CAMPOS NECESARIOS PARA LA EVALUACIÓN.", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                        MsgBox("No se puede guardar" & vbNewLine & "NO SE HAN LLENADO TODOS LOS CAMPOS NECESARIOS PARA LA EVALUACIÓN.", MsgBoxStyle.Exclamation, "Mensaje de validación")
                     End If
             End Select
 

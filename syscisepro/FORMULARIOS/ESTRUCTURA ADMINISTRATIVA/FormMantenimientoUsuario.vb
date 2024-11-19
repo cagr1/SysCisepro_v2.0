@@ -165,8 +165,8 @@ Namespace FORMULARIOS.ESTRUCTURA_ADMINISTRATIVA
         End Sub
 
         Private Sub tsmGuardar_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles tsmGuardar.Click
-            'If MessageBox.Show("¿ESTA SEGURO QUE DESEA GUARDAR?", "MENSAJE DE VALIDACIÓN", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> MsgBoxResult.Yes Then Return
-            If KryptonMessageBox.Show("¿ESTA SEGURO QUE DESEA GUARDAR?", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) <> MsgBoxResult.Yes Then Return
+            'If MessageBox.Show("¿Esta seguro que desea guardar?", "Mensaje de validación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> MsgBoxResult.Yes Then Return
+            If KryptonMessageBox.Show("¿Esta seguro que desea guardar?", "Mensaje de validación", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) <> MsgBoxResult.Yes Then Return
             _sqlCommands.Clear()
 
             Select Case _boton
@@ -217,7 +217,7 @@ Namespace FORMULARIOS.ESTRUCTURA_ADMINISTRATIVA
             Else
                 messageIcon = KryptonMessageBoxIcon.Exclamation
             End If
-            KryptonMessageBox.Show(res(1), "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, messageIcon)
+            KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, messageIcon)
 
             'MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
         End Sub
@@ -226,11 +226,12 @@ Namespace FORMULARIOS.ESTRUCTURA_ADMINISTRATIVA
             If dgvUsuarios.CurrentRow Is Nothing Then Return
 
             If Not Isadm And Not txtDatos.Text.Trim.Equals(User.Trim) Then
-                MessageBox.Show("EL USUARIO QUE SELECCIONÓ NO ES SUYO, NO PUEDE REALIZAR ESTA ACCIÓN!", "VALIDACIÓN DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                'MessageBox.Show("EL USUARIO QUE SELECCIONÓ NO ES SUYO, NO PUEDE REALIZAR ESTA ACCIÓN!", "VALIDACIÓN DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                KryptonMessageBox.Show("El usuario que seleccionó no es suyo, no puede realizar esta acción!", "VALIDACIÓN DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Warning)
                 Return
             End If
 
-            Dim respuesta = InputBox("MODIFICAR CONTRASEÑA O PASSWORD", "INGRESE SU CONTRASEÑA ACTUAL" & vbCr & "" & vbCr & " RECUERDE SIEMPRE SU CONTRASEÑA")
+            Dim respuesta = InputBox("Modificar contraseña o password", "Ingrese su contraseña actual" & vbCr & "" & vbCr & " Recuerde siempre su contraseña")
 
             If respuesta = _objUsuarioGeneral.BuscarPasswordPorLogin(_tipoCon, txtLogin.Text) Then
                 txtPassword.Enabled = True
@@ -249,7 +250,8 @@ Namespace FORMULARIOS.ESTRUCTURA_ADMINISTRATIVA
                 ToolStripMenuItem2.Enabled = True
                 tsmCancelar.Enabled = False
                 btnPersonal.Enabled = False
-                MessageBox.Show("DEBE INGRESAR SU CONTRASEÑA ACTUAL PARA REALIZAR CAMBIOS!", "VALIDADCIÓN DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                'MessageBox.Show("DEBE INGRESAR SU CONTRASEÑA ACTUAL PARA REALIZAR CAMBIOS!", "VALIDADCIÓN DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                KryptonMessageBox.Show("Debe ingresar su contraseña actual para realizar cambios!", "VALIDADCIÓN DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Warning)
             End If
         End Sub
 

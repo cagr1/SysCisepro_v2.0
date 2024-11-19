@@ -217,7 +217,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.PROVEEDORES
                 guardarRegistroContactoProveedorCalificado()
                 deshabilitadoInicio()
             Else
-                MsgBox("NO SE PUEDE GUARDAR." & vbNewLine & "NO SE HAN LLENADO TODOS LOS CAMPOS NECESARIOS.", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                MsgBox("No se puede guardar." & vbNewLine & "NO SE HAN LLENADO TODOS LOS CAMPOS NECESARIOS.", MsgBoxStyle.Exclamation, "Mensaje de validación")
             End If
         End Sub
         
@@ -233,7 +233,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.PROVEEDORES
                     txtNombreComercialProveedorGeneral.Text = formBuscarProveedor.dgvProveedorGeneral.CurrentRow.Cells.Item(4).Value.ToString
                 End If
             Catch ex As Exception
-                MsgBox("BOTÓN BUSCAR PROVEEDOR:" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "MENSAJE DE EXCEPCIÓN")
+                MsgBox("BOTÓN BUSCAR PROVEEDOR:" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
             End Try
         End Sub
 
@@ -250,10 +250,10 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.PROVEEDORES
                                                                  formAgregarContacto.txtEmailContactoProveedorCalificado.Text, "1", txtIdProveedorGeneral.Text)
                     End If
                 Catch ex As Exception
-                    MsgBox("BOTÓN BUSCAR PROVEEDOR:" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "MENSAJE DE EXCEPCIÓN")
+                    MsgBox("BOTÓN BUSCAR PROVEEDOR:" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
                 End Try
             Else
-                MsgBox("NO PUEDE AGREGAR CONTÁCTOS." & vbNewLine & "POR FAVOR PRIMERO SELECCIONE UN PROVEEDOR.", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                MsgBox("NO PUEDE AGREGAR CONTÁCTOS." & vbNewLine & "POR FAVOR PRIMERO SELECCIONE UN PROVEEDOR.", MsgBoxStyle.Exclamation, "Mensaje de validación")
             End If
         End Sub
         Private Sub cmbPais_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles cmbPais.SelectedIndexChanged
@@ -285,7 +285,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.PROVEEDORES
                     cmbCiudad.ValueMember = data.Columns(0).ToString
                 End If
             Catch ex As Exception
-                MsgBox("COMBOBOX PROVINCIA." & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "MENSAJE DE EXCEPCIÓN")
+                MsgBox("COMBOBOX PROVINCIA." & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
             End Try
         End Sub
 
@@ -298,7 +298,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.PROVEEDORES
 
         Private Sub btnEliminar_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnEliminar.Click
             If dgvContactosProveedorCalificado.RowCount = 0 Then
-                MsgBox("NO HAY CELDAS EN LA GRILLA", MsgBoxStyle.Information, "MENSAJE DE INFORMACIÓN")
+                MsgBox("NO HAY CELDAS EN LA GRILLA", MsgBoxStyle.Information, "Mensaje de información")
             Else
                 dgvContactosProveedorCalificado.Rows.RemoveAt(dgvContactosProveedorCalificado.CurrentRow.Index)
             End If

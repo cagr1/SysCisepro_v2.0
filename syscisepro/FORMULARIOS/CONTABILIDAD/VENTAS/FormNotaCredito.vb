@@ -181,7 +181,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                     _porcentajeIva = cli.Rows(0)(21)
                 End If
             Catch ex As Exception
-                MsgBox("CARGAR DATOS EMPRESA." & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "MENSAJE DE EXCEPCIÓN")
+                MsgBox("CARGAR DATOS EMPRESA." & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
             End Try
         End Sub
         Private Sub btnNuevo_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnNuevo.Click
@@ -251,7 +251,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                     End If
                 End If
             Catch ex As Exception
-                MsgBox("CARGAR DATOS CLIENTE." & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "MENSAJE DE EXCEPCIÓN")
+                MsgBox("CARGAR DATOS CLIENTE." & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
             End Try
         End Sub
         Private Sub CargarFacturasVentaXIdCliente()
@@ -310,7 +310,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                     lblIdFacturaVenta.Text = "..."
                 Else
                     If _objetoPagosFacturaVenta.BuscarMayorSaldoPagosFacturaventaXIdFactura(_tipoCon, dgvFacturaVenta.CurrentRow.Cells(0).Value) = 0 Then
-                        MsgBox("ESTA FACTUARA YA HA SIDO CANCELADA" & vbNewLine & "NO SE PUEDE REGISTRAR NOTA DE CRÉDITO", MsgBoxStyle.Information, "MENSAJE DE INFORMACIÓN")
+                        MsgBox("ESTA FACTUARA YA HA SIDO CANCELADA" & vbNewLine & "NO SE PUEDE REGISTRAR NOTA DE CRÉDITO", MsgBoxStyle.Information, "Mensaje de información")
                     Else
 
                         If dgvFacturaVenta.CurrentRow.Cells.Item(14).Value = 1 Then
@@ -345,7 +345,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                     End If
                 End If
             Catch ex As Exception
-                MsgBox("CELL_CLICK FACTURA VENTA." & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "MENSAJE DE EXCEPCIÓN")
+                MsgBox("CELL_CLICK FACTURA VENTA." & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
             End Try
         End Sub
         Private Sub CargarDetalleFacturaVentasXidFactura()
@@ -489,7 +489,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
             End Select
         End Sub
         Private Sub btnGuardarSinFirmar_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnGuardarSinFirmar.Click
-            If KryptonMessageBox.Show("¿ESTA SEGURA QUE DESEA GUARDAR LA NOTA DE CRÉDITO?", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) <> DialogResult.Yes Then Return
+            If KryptonMessageBox.Show("¿ESTA SEGURA QUE DESEA GUARDAR LA NOTA DE CRÉDITO?", "Mensaje de validación", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) <> DialogResult.Yes Then Return
             _sqlCommands.Clear()
 
             GenerarNumeroNotaCredito()
@@ -501,7 +501,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                 If lblIdFacturaVenta.Text <> "..." Then
                     If _numeroNotaCredito <> "" And txtTotalNotaCredito.Text <> "0.00" And txtComprobanteModificaNotaCredito.Text <> "" And txtRazonModificacionNotaCredito.Text <> "" Then
                         If txtTotalNotaCredito.Text > _objetoPagosFacturaVenta.BuscarMayorSaldoPagosFacturaventaXIdFactura(_tipoCon, lblIdFacturaVenta.Text) Then
-                            MsgBox("EL VALOR DE LA NOTA DE CREDITO ES MAYOR AL SALDO DE LA FACTURA.", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                            MsgBox("EL VALOR DE LA NOTA DE CREDITO ES MAYOR AL SALDO DE LA FACTURA.", MsgBoxStyle.Exclamation, "Mensaje de validación")
                         Else
 
                             GuardarNotaCredito()
@@ -541,16 +541,16 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                             Else
                                 messageIcon = KryptonMessageBoxIcon.Exclamation
                             End If
-                            KryptonMessageBox.Show(res(1), "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, messageIcon)
+                            KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, messageIcon)
                             'MsgBox(If(res(0), res(1) & vbNewLine & "XML GENERADO CORRECTAMENTE" & If(resx, " - XML GUARDADO", " - XML NO GUARDADO!"), res(1)), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
 
                         End If
                     Else
-                        MsgBox("NO HA LLENADO TODOS LOS PARAMETROS NECESARIOS PARA GUARDAR.", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                        MsgBox("NO HA LLENADO TODOS LOS PARAMETROS NECESARIOS PARA GUARDAR.", MsgBoxStyle.Exclamation, "Mensaje de validación")
                     End If
 
                 Else
-                    MsgBox("NO HA SELECCIONADO UNA FACTURA.", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                    MsgBox("NO HA SELECCIONADO UNA FACTURA.", MsgBoxStyle.Exclamation, "Mensaje de validación")
                 End If
             Else
                 MsgBox("CLAVE DE ACCESO INVALIDA")
@@ -815,7 +815,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
 
             Catch ex As Exception
                 resx = False
-                MsgBox("ERROR AL GENERAR NOTA DE CRÉDITO ELECTRÓNICA" & vbNewLine & ex.Message, MsgBoxStyle.Information, "MENSAJE DE INFORMACIÓN.")
+                MsgBox("ERROR AL GENERAR NOTA DE CRÉDITO ELECTRÓNICA" & vbNewLine & ex.Message, MsgBoxStyle.Information, "Mensaje de información.")
             End Try
         End Sub
 

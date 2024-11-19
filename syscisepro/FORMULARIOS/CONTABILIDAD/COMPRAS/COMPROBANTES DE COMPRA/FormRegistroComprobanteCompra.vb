@@ -234,7 +234,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
 
                 SetIvaBox()
             Catch ex As Exception
-                MsgBox("CARGAR DATOS EMPRESA." & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "MENSAJE DE EXCEPCIÓN")
+                MsgBox("CARGAR DATOS EMPRESA." & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
             End Try
         End Sub
         Private Sub SetIvaBox()
@@ -545,7 +545,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
                 End While
                 newReader.Close()
             Catch ex As Exception
-                MsgBox("Hubo un problema al cargar el archivo. Por favor, intente nuevamente!" & vbNewLine & ex.Message, MsgBoxStyle.Information, "MENSAJE DE INFORMACIÓN")
+                MsgBox("Hubo un problema al cargar el archivo. Por favor, intente nuevamente!" & vbNewLine & ex.Message, MsgBoxStyle.Information, "Mensaje de información")
             End Try
         End Sub
         Private Sub btnCancelar_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnCancelar.Click
@@ -565,7 +565,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
                 f._porcentaje = PorcentajeIva
                 f.ShowDialog()
             Else
-                MsgBox("NO SE HA ENCONTRADO EL ID DEL COMPROBANTE DE COMPRA", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                MsgBox("NO SE HA ENCONTRADO EL ID DEL COMPROBANTE DE COMPRA", MsgBoxStyle.Exclamation, "Mensaje de validación")
             End If
         End Sub
         Private Sub cbxPorcentaje_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles cbxPorcentaje.SelectedIndexChanged
@@ -578,7 +578,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
             lblIva.Text = "IVA  (" & PorcentajeIva & "%):"
             CalcularTotalesFactura()
             If dgvDetalleComprobanteRetencion.RowCount = 0 Then Return
-            MsgBox("HA CAMBIADO EL PORCENTAJE DE IVA, NO OLVIDE REVISAR EL DETALLES DE LA RETENCIÓN!", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACION")
+            MsgBox("HA CAMBIADO EL PORCENTAJE DE IVA, NO OLVIDE REVISAR EL DETALLES DE LA RETENCIÓN!", MsgBoxStyle.Exclamation, "Mensaje de validación")
         End Sub
 
         Private Sub CalcularTotalesFactura()
@@ -763,16 +763,16 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
         Private Sub txtNumAutoSRIComprobanteCompra_Validated(ByVal sender As System.Object, ByVal e As EventArgs) Handles txtNumAutoSRIComprobanteCompra.Validated
             If _estado = 0 Then Return
             If txtNumAutoSRIComprobanteCompra.TextLength < 10 Then
-                MsgBox("EL NÚMERO DE AUTORIZACIÓN DE FACTURA DEL SRI NO PUEDE TENER MENOS DE 10 DÍGITOS. POR FAVOR REVISE", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                MsgBox("EL NÚMERO DE AUTORIZACIÓN DE FACTURA DEL SRI NO PUEDE TENER MENOS DE 10 DÍGITOS. POR FAVOR REVISE", MsgBoxStyle.Exclamation, "Mensaje de validación")
             ElseIf txtNumAutoSRIComprobanteCompra.TextLength > 10 And txtNumAutoSRIComprobanteCompra.TextLength < 37 Then
-                MsgBox("EL NÚMERO DE AUTORIZACIÓN DE FACTURA ELECTRÓNICA ES DE 37 DIGITOS. POR FAVOR REVISE", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                MsgBox("EL NÚMERO DE AUTORIZACIÓN DE FACTURA ELECTRÓNICA ES DE 37 DIGITOS. POR FAVOR REVISE", MsgBoxStyle.Exclamation, "Mensaje de validación")
             End If
         End Sub
 
         Private Sub txtNumeroComprobanteRetencion_Validated(ByVal sender As System.Object, ByVal e As EventArgs) Handles txtNumeroComprobanteRetencion.Validated
             If _estado = 0 Then Return
             If txtNumeroComprobanteRetencion.TextLength <> 15 Then
-                MsgBox("EL NÚMERO DE DE COMPROBANTE DE RETENCIÓN DEBE TENER 15 DÍGITOS. POR FAVOR REVISE", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                MsgBox("EL NÚMERO DE DE COMPROBANTE DE RETENCIÓN DEBE TENER 15 DÍGITOS. POR FAVOR REVISE", MsgBoxStyle.Exclamation, "Mensaje de validación")
             Else
                 _establecimientoRetencion = ""
                 _ptoEmisionRetencion = ""
@@ -792,20 +792,20 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
             If _estado = 0 Then Return
             If lblIdProveedorGeneral.Text <> "..." Then
                 If txtNumeroComprobanteCompra.Text.Trim.Length <> 15 Then
-                    MsgBox("EL NÚMERO DE COMPROBANTE DE COMPRA DEBE TENER 15 DÍGITOS. POR FAVOR REVISE", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                    MsgBox("EL NÚMERO DE COMPROBANTE DE COMPRA DEBE TENER 15 DÍGITOS. POR FAVOR REVISE", MsgBoxStyle.Exclamation, "Mensaje de validación")
                 Else
                     If cmbNombreParametroDocumentos.SelectedValue <> 3 Then ValidarNumeroComprobanteRepetidoProveedor()
                 End If
             Else
                 txtNumeroComprobanteCompra.Text = ""
-                MsgBox("ANTES DE INGRESAR EL NUMERO DE COMPROBANTE SELECCIONE UN PROVEEDOR", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                MsgBox("ANTES DE INGRESAR EL NUMERO DE COMPROBANTE SELECCIONE UN PROVEEDOR", MsgBoxStyle.Exclamation, "Mensaje de validación")
             End If
         End Sub
         Private Sub txtDocModComprobanteCompra_Validated(ByVal sender As System.Object, ByVal e As EventArgs) Handles txtDocModComprobanteCompra.Validated
             If _estado = 0 Then Return
             If cmbNombreParametroDocumentos.SelectedValue = 7 Then
                 If Trim(txtDocModComprobanteCompra.Text).Length <> 15 Then
-                    MsgBox("EL NÚMERO DE DE COMPROBANTE DE COMPRA DEBE TENER 15 DÍGITOS. POR FAVOR REVISE", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                    MsgBox("EL NÚMERO DE DE COMPROBANTE DE COMPRA DEBE TENER 15 DÍGITOS. POR FAVOR REVISE", MsgBoxStyle.Exclamation, "Mensaje de validación")
                 End If
             End If
         End Sub
@@ -813,7 +813,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
             If _estado = 0 Then Return
             If cmbNombreParametroDocumentos.SelectedValue = 7 Then
                 If Trim(txtRazModComprobanteCompra.Text).Length < 10 Then
-                    MsgBox("EL NÚMERO DE AUTORIZACIÓN DE FACTURA DEL SRI NO PUEDE TENER MENOS DE 10 DÍGITOS. POR FAVOR REVISE", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                    MsgBox("EL NÚMERO DE AUTORIZACIÓN DE FACTURA DEL SRI NO PUEDE TENER MENOS DE 10 DÍGITOS. POR FAVOR REVISE", MsgBoxStyle.Exclamation, "Mensaje de validación")
                 End If
             End If
         End Sub
@@ -836,7 +836,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
                 If Not ValidarNumeroComprobanteLiquidacionRepetido() Then Return
 
                 If chkActivarRetencion.Checked And Not ValidacionParametrosRetencion() Then
-                    MsgBox("HA MARCADO RETENCIÓN PARA ESTA COMPRA, POR FAVOR VERIFIQUE!", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACION")
+                    MsgBox("HA MARCADO RETENCIÓN PARA ESTA COMPRA, POR FAVOR VERIFIQUE!", MsgBoxStyle.Exclamation, "Mensaje de validación")
                     Return
                 End If
 
@@ -846,27 +846,27 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
                 End If
 
                 If txtNumeroComprobanteCompra.Text.Trim.Contains("-") Then
-                    MsgBox("EL NÚMERO DE COMPROBANTE DE COMPRA NO DEBE TENER GUÍONES. POR FAVOR REVISE", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                    MsgBox("EL NÚMERO DE COMPROBANTE DE COMPRA NO DEBE TENER GUÍONES. POR FAVOR REVISE", MsgBoxStyle.Exclamation, "Mensaje de validación")
                     Return
                 End If
 
                 If Trim(txtNumeroComprobanteCompra.Text.Trim).Length <> 15 Then
-                    MsgBox("EL NÚMERO DE COMPROBANTE DE COMPRA DEBE TENER 15 DÍGITOS. POR FAVOR REVISE", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                    MsgBox("EL NÚMERO DE COMPROBANTE DE COMPRA DEBE TENER 15 DÍGITOS. POR FAVOR REVISE", MsgBoxStyle.Exclamation, "Mensaje de validación")
                     Return
                 End If
 
                 If txtNumAutoSRIComprobanteCompra.Text.Trim.Length < 10 Then
-                    MsgBox("EL NÚMERO DE AUTORIZACIÓN DE FACTURA DEL SRI NO PUEDE TENER MENOS DE 10 DÍGITOS. POR FAVOR REVISE", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                    MsgBox("EL NÚMERO DE AUTORIZACIÓN DE FACTURA DEL SRI NO PUEDE TENER MENOS DE 10 DÍGITOS. POR FAVOR REVISE", MsgBoxStyle.Exclamation, "Mensaje de validación")
                     Return
                 End If
 
                 If txtNumAutoSRIComprobanteCompra.Text.Trim.Length > 10 And txtNumAutoSRIComprobanteCompra.TextLength < 37 Then
-                    MsgBox("EL NÚMERO DE AUTORIZACIÓN DE FACTURA ELECTRÓNICA ES DE 37 DIGITOS. POR FAVOR REVISE", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                    MsgBox("EL NÚMERO DE AUTORIZACIÓN DE FACTURA ELECTRÓNICA ES DE 37 DIGITOS. POR FAVOR REVISE", MsgBoxStyle.Exclamation, "Mensaje de validación")
                     Return
                 End If
 
                 If ValorMaximo < (CDbl(txtTotalComprobanteCompra.Text) - CDbl(txtTotalComprobanteRetencion.Text)) Then
-                    MsgBox("No se puede procesasr un valor mayor al valor disponible en CAJA / FONDO ROTATIVO ($" & ValorMaximo.ToString("N") & ")! Por favor, realice una reposición", MsgBoxStyle.Information, "MENSAJE DE INFORMACIÓN")
+                    MsgBox("No se puede procesasr un valor mayor al valor disponible en CAJA / FONDO ROTATIVO ($" & ValorMaximo.ToString("N") & ")! Por favor, realice una reposición", MsgBoxStyle.Information, "Mensaje de información")
                     Return
                 End If
 
@@ -878,7 +878,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
                 _estado = 0
                 DialogResult = DialogResult.OK
             Catch ex As Exception
-                MsgBox(ex.Message, MsgBoxStyle.Critical, "MENSAJE DE EXCEPCIÓN")
+                MsgBox(ex.Message, MsgBoxStyle.Critical, "Mensaje de excepción")
             End Try
         End Sub
 
@@ -944,7 +944,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
                             Dim valrenta = Math.Round((CDec(response) * porcent) / 100, 2, MidpointRounding.AwayFromZero)
                             dgvDetalleComprobanteRetencion.Rows.Add(dtpComprobanteRetencion.Value.Year, _objetoConceptos.BuscarCodigoConceptoXIdConcepto(_tipoCon, CInt(cmbConcepto.SelectedValue)), CDec(response), cmbImpuesto.Text, porcent, Math.Round(valrenta, 3, MidpointRounding.AwayFromZero), cod, cue)
                         Else
-                            MsgBox("POR FAVOR INGRESE SOLO NÚMEROS" & vbNewLine & "EL SEPARADOR DECIMAL ES EL '.'", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                            MsgBox("POR FAVOR INGRESE SOLO NÚMEROS" & vbNewLine & "EL SEPARADOR DECIMAL ES EL '.'", MsgBoxStyle.Exclamation, "Mensaje de validación")
                         End If
 
                     ElseIf CInt(cmbImpuesto.SelectedValue) = 2 Then '-=-=-=-=-= SI ES IVA =-=-=-=-=- 
@@ -968,21 +968,21 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
                             Dim valiva = Math.Round((CDbl(response) * porcent) / 100, 2, MidpointRounding.AwayFromZero)
                             dgvDetalleComprobanteRetencion.Rows.Add(dtpComprobanteRetencion.Value.Year, _objetoConceptos.BuscarCodigoConceptoXIdConcepto(_tipoCon, CInt(cmbConcepto.SelectedValue)), CDec(response), cmbImpuesto.Text, porcent, Math.Round(valiva, 2, MidpointRounding.AwayFromZero), cod, cue)
                         Else
-                            MsgBox("POR FAVOR INGRESE SOLO NÚMEROS" & vbNewLine & "EL SEPARADOR DECIMAL ES EL '.'", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                            MsgBox("POR FAVOR INGRESE SOLO NÚMEROS" & vbNewLine & "EL SEPARADOR DECIMAL ES EL '.'", MsgBoxStyle.Exclamation, "Mensaje de validación")
                         End If
                     End If
 
                     CalcularTotalesFactura()
                 Else
-                    MsgBox("SELECCIONE LOS PARAMETROS NECESARIOS: IMPUESTO, CONCEPTO, CONTRIBUYENTE.", MsgBoxStyle.Information, "MENSAJE DE INFORMACIÓN")
+                    MsgBox("SELECCIONE LOS PARAMETROS NECESARIOS: IMPUESTO, CONCEPTO, CONTRIBUYENTE.", MsgBoxStyle.Information, "Mensaje de información")
                 End If
             Else
-                MsgBox("NO HA INGRESADO DATOS DE FACTURA.", MsgBoxStyle.Information, "MENSAJE DE INFORMACIÓN")
+                MsgBox("NO HA INGRESADO DATOS DE FACTURA.", MsgBoxStyle.Information, "Mensaje de información")
             End If
         End Sub
         Private Sub btnEliminarImpuesto_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnEliminarImpuesto.Click
             If dgvDetalleComprobanteRetencion.RowCount = 0 Then
-                MsgBox("NO HAY CELDAS EN LA GRILLA", MsgBoxStyle.Information, "MENSAJE DE INFORMACIÓN")
+                MsgBox("NO HAY CELDAS EN LA GRILLA", MsgBoxStyle.Information, "Mensaje de información")
             Else
                 If dgvDetalleComprobanteRetencion.CurrentRow.Cells(3).Value = "RENTA" Then
                     dgvDetalleComprobanteRetencion.Rows.RemoveAt(dgvDetalleComprobanteRetencion.CurrentRow.Index)
@@ -1018,7 +1018,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
                         Else
                             dgvAsientosDiario.CurrentRow.Cells("CODIGO").Value = String.Empty
                             dgvAsientosDiario.CurrentRow.Cells("CUENTA").Value = String.Empty
-                            MsgBox("LA CUENTA: " & cc.Rows(0)(1) & " - " & cc.Rows(0)(2) & vbNewLine & "ES UNA CUENTA PADRE, NO GENERA MOVIMIENTO!!", MsgBoxStyle.Information, "MENSAJE DE INFORMACIÓN")
+                            MsgBox("LA CUENTA: " & cc.Rows(0)(1) & " - " & cc.Rows(0)(2) & vbNewLine & "ES UNA CUENTA PADRE, NO GENERA MOVIMIENTO!!", MsgBoxStyle.Information, "Mensaje de información")
                         End If
                     Catch ex As Exception
                         dgvAsientosDiario.CurrentRow.Cells("CODIGO").Value = cod
@@ -1066,7 +1066,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
         End Sub
         Private Sub dgvAsientosDiario_CellValueChanged(ByVal sender As System.Object, ByVal e As Windows.Forms.DataGridViewCellEventArgs) Handles dgvAsientosDiario.CellValueChanged
             'If dgvAsientosDiario.Columns(e.ColumnIndex).Name = "VALOR" Then ' si se modifica el valor unitario
-            '    Dim dialogo = MsgBox("GRAVA IVA", MsgBoxStyle.YesNo, "MENSAJE DE VALIDACION")
+            '    Dim dialogo = MsgBox("GRAVA IVA", MsgBoxStyle.YesNo, "Mensaje de validación")
             '    If dialogo = Windows.Forms.DialogResult.Yes Then
             '        dgvAsientosDiario.CurrentRow.Cells("IVA").Value = "S"
             '    Else
@@ -1142,22 +1142,22 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
             End If
 
             If Trim(txtNumeroComprobanteCompra.Text.Trim).Length <> 15 Then
-                MsgBox("EL NÚMERO DE COMPROBANTE DE COMPRA DEBE TENER 15 DÍGITOS. POR FAVOR REVISE", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                MsgBox("EL NÚMERO DE COMPROBANTE DE COMPRA DEBE TENER 15 DÍGITOS. POR FAVOR REVISE", MsgBoxStyle.Exclamation, "Mensaje de validación")
                 Return
             End If
 
             If txtNumeroComprobanteCompra.Text.Trim.Contains("-") Then
-                MsgBox("EL NÚMERO DE COMPROBANTE DE COMPRA NO DEBE TENER GUÍONES. POR FAVOR REVISE", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                MsgBox("EL NÚMERO DE COMPROBANTE DE COMPRA NO DEBE TENER GUÍONES. POR FAVOR REVISE", MsgBoxStyle.Exclamation, "Mensaje de validación")
                 Return
             End If
 
             If txtNumAutoSRIComprobanteCompra.Text.Trim.Length < 10 Then
-                MsgBox("EL NÚMERO DE AUTORIZACIÓN DE FACTURA DEL SRI NO PUEDE TENER MENOS DE 10 DÍGITOS. POR FAVOR REVISE", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                MsgBox("EL NÚMERO DE AUTORIZACIÓN DE FACTURA DEL SRI NO PUEDE TENER MENOS DE 10 DÍGITOS. POR FAVOR REVISE", MsgBoxStyle.Exclamation, "Mensaje de validación")
                 Return
             End If
 
             If txtNumAutoSRIComprobanteCompra.Text.Trim.Length > 10 And txtNumAutoSRIComprobanteCompra.TextLength < 37 Then
-                MsgBox("EL NÚMERO DE AUTORIZACIÓN DE FACTURA ELECTRÓNICA ES DE 37 DIGITOS. POR FAVOR REVISE", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                MsgBox("EL NÚMERO DE AUTORIZACIÓN DE FACTURA ELECTRÓNICA ES DE 37 DIGITOS. POR FAVOR REVISE", MsgBoxStyle.Exclamation, "Mensaje de validación")
                 Return
             End If
 
@@ -1168,20 +1168,20 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
             If Not ValidarNumeroComprobanteLiquidacionRepetido() Then Return
 
             If chkActivarRetencion.Checked And dgvDetalleComprobanteRetencion.RowCount = 0 Then
-                MsgBox("NO OLVIDE LLENAR LOS DETALLES DE LA RETENCIÓN!!", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACION")
+                MsgBox("NO OLVIDE LLENAR LOS DETALLES DE LA RETENCIÓN!!", MsgBoxStyle.Exclamation, "Mensaje de validación")
                 Return
             End If
 
             If chkActivarRetencion.Checked And Not ValidacionParametrosRetencion() Then
-                MsgBox("HA MARCADO RETENCIÓN PARA ESTA COMPRA, POR FAVOR VERIFIQUE LOS DATOS DE LA MISMA!", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACION")
+                MsgBox("HA MARCADO RETENCIÓN PARA ESTA COMPRA, POR FAVOR VERIFIQUE LOS DATOS DE LA MISMA!", MsgBoxStyle.Exclamation, "Mensaje de validación")
                 Return
             End If
 
             If _objetoAts.ValidarCompraConDeclaracion(_tipoCon, dtpFechaEmisionComprobanteCompra.Value) Then
-                MsgBox("EL ATS DEL MES " & dtpFechaEmisionComprobanteCompra.Value.Month.ToString & " DEL AÑO " & dtpFechaEmisionComprobanteCompra.Value.Year.ToString & " YA FUE GENERADO." & vbNewLine & " SI NECESITA INGRESAR ESTE COMPROBANTE SOLICITE UNA SUSTUTIVA A LA CONTADORA Y HAGA UNA REQUISICION AL DEPARTAMENTO DE SISTEMAS.", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                MsgBox("EL ATS DEL MES " & dtpFechaEmisionComprobanteCompra.Value.Month.ToString & " DEL AÑO " & dtpFechaEmisionComprobanteCompra.Value.Year.ToString & " YA FUE GENERADO." & vbNewLine & " SI NECESITA INGRESAR ESTE COMPROBANTE SOLICITE UNA SUSTUTIVA A LA CONTADORA Y HAGA UNA REQUISICION AL DEPARTAMENTO DE SISTEMAS.", MsgBoxStyle.Exclamation, "Mensaje de validación")
             Else
                 Dim msj = If(lblOrdenCompra.Text.Equals("###"), "", " CON ÓRDEN N° " & lblOrdenCompra.Text)
-                If MessageBox.Show("¿ESTA SEGURO QUE DESEA GUARDAR EL COMPROBANTE" & msj & "?", "MENSAJE DE VALIDACIÓN", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> DialogResult.Yes Then Return
+                If MessageBox.Show("¿Esta seguro que desea guardar EL COMPROBANTE" & msj & "?", "Mensaje de validación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> DialogResult.Yes Then Return
 
                 If ValidacionParametros() Then
 
@@ -1242,7 +1242,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
                         If txtTotalComprobanteRetencion.Text > 0 Then
                             NuevoRegistroAsientoDiarioRetencion()
                             If (_objetoAsientoLibroDiario.CodigoCuentaAsiento + "").Trim().Length = 0 Then
-                                MsgBox("NO SE PUEDE GUARDAR." & vbNewLine & "LA CUENTA PARA EL CÓDIGO DE RETENCIÓN ESCOGIDO NO HA SIDO DEFINIDA EN LA BD!", MsgBoxStyle.Exclamation, "MENSAJE DE VALICACIÓN")
+                                MsgBox("No se puede guardar." & vbNewLine & "LA CUENTA PARA EL CÓDIGO DE RETENCIÓN ESCOGIDO NO HA SIDO DEFINIDA EN LA BD!", MsgBoxStyle.Exclamation, "Mensaje de validación")
                                 Return
                             End If
                         End If
@@ -1282,7 +1282,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
                     MsgBox(res(1) & vbNewLine & texto, If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
 
                 Else
-                    MsgBox("NO SE PUEDE GUARDAR." & vbNewLine & "NO HA LLENADO TODOS LOS PARAMETROS NECESARIOS", MsgBoxStyle.Information, "MENSAJE DE VALICACIÓN")
+                    MsgBox("No se puede guardar." & vbNewLine & "NO HA LLENADO TODOS LOS PARAMETROS NECESARIOS", MsgBoxStyle.Information, "Mensaje de validación")
                 End If
             End If
         End Sub
@@ -1294,7 +1294,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
                     txtRucProveedorGeneral.Text = ""
                     txtNombreComercialProveedorGeneral.Text = ""
                     txtNombreComercialProveedorGeneral.Focus()
-                    MsgBox("LAS LIQUIDACIONES DE COMPRA NO SE PUEDEN HACER A PROVEEDORES CON RUC", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                    MsgBox("LAS LIQUIDACIONES DE COMPRA NO SE PUEDEN HACER A PROVEEDORES CON RUC", MsgBoxStyle.Exclamation, "Mensaje de validación")
                     Return False
                 End If
             ElseIf cmbNombreParametroDocumentos.SelectedValue = 1 Or cmbNombreParametroDocumentos.SelectedValue = 7 Then ' FACTURA / NOTA DE CREDITO
@@ -1303,7 +1303,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
                     txtRucProveedorGeneral.Text = ""
                     txtNombreComercialProveedorGeneral.Text = ""
                     txtNombreComercialProveedorGeneral.Focus()
-                    MsgBox("LAS FACTURAS / NOTAS DE CREDITO NO SE PUEDEN HACER A PROVEEDORES SIN RUC", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                    MsgBox("LAS FACTURAS / NOTAS DE CREDITO NO SE PUEDEN HACER A PROVEEDORES SIN RUC", MsgBoxStyle.Exclamation, "Mensaje de validación")
                     Return False
                 End If
             End If
@@ -1317,16 +1317,16 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
                         Dim n = _objetoComprobantesCompra.BuscarNumeroComprobanteXIdProveedorNumeroComprobante(_tipoCon, lblIdProveedorGeneral.Text, txtNumeroComprobanteCompra.Text.Trim)
                         If n <> "0" Then
                             txtNumeroComprobanteCompra.Focus()
-                            MsgBox("EL NÚMERO DE COMPROBANTE " & n & " YA ESTA REGISTRADO PARA ESTE PROVEEDOR", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                            MsgBox("EL NÚMERO DE COMPROBANTE " & n & " YA ESTA REGISTRADO PARA ESTE PROVEEDOR", MsgBoxStyle.Exclamation, "Mensaje de validación")
                             Return False
                         End If
                     End If
                 Else
-                    MsgBox("DEBE INGRESAR UN NUMERO DE FACTURA", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACION")
+                    MsgBox("DEBE INGRESAR UN NUMERO DE FACTURA", MsgBoxStyle.Exclamation, "Mensaje de validación")
                     Return False
                 End If
             Else
-                MsgBox("DEBE INGRESAR UN PROVEEDOR", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACION")
+                MsgBox("DEBE INGRESAR UN PROVEEDOR", MsgBoxStyle.Exclamation, "Mensaje de validación")
                 Return False
             End If
             Return True
@@ -1336,7 +1336,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
             If _estado = 0 Then Return True
             If txtNumeroComprobanteRetencion.Text <> "" And _ptoEmisionRetencion <> "001" Then
                 If _objetoComprobantesRetencion.ExisteNumeroComprobanteRetencion(_tipoCon, txtNumeroComprobanteRetencion.Text) Then
-                    MsgBox("EL NÚMERO DE COMPROBANTE DE RETENCIÓN " & txtNumeroComprobanteRetencion.Text & " YA ESTA REGISTRADO!", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                    MsgBox("EL NÚMERO DE COMPROBANTE DE RETENCIÓN " & txtNumeroComprobanteRetencion.Text & " YA ESTA REGISTRADO!", MsgBoxStyle.Exclamation, "Mensaje de validación")
                     Return False
                 End If
             End If
@@ -1347,7 +1347,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
             If _estado = 0 Then Return True
             If txtNumeroComprobanteCompra.Text <> "" And _ptoEmisionLiqCompra <> "001" Then
                 If _objetoComprobantesRetencion.ExisteNumeroComprobanteLiquidacionCompra(_tipoCon, txtNumeroComprobanteCompra.Text, lblIdProveedorGeneral.Text) Then
-                    MsgBox("EL NÚMERO DE COMPROBANTE DE LIQUIDACIÓN DE COMPRA " & txtNumeroComprobanteCompra.Text & " YA ESTA REGISTRADO!", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                    MsgBox("EL NÚMERO DE COMPROBANTE DE LIQUIDACIÓN DE COMPRA " & txtNumeroComprobanteCompra.Text & " YA ESTA REGISTRADO!", MsgBoxStyle.Exclamation, "Mensaje de validación")
                     Return False
                 End If
             End If
@@ -1850,7 +1850,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
                 writer.Close()
 
             Catch ex As Exception
-                MsgBox("ERROR AL GENERAR RETENCIÓN ELECTRÓNICA" & vbNewLine & ex.Message, MsgBoxStyle.Exclamation, "MENSAJE DE INFORMACIÓN.")
+                MsgBox("ERROR AL GENERAR RETENCIÓN ELECTRÓNICA" & vbNewLine & ex.Message, MsgBoxStyle.Exclamation, "Mensaje de información.")
             End Try
         End Sub
 
@@ -1998,7 +1998,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
                 writer.Close()
 
             Catch ex As Exception
-                MsgBox("ERROR A GENERAR LIQUIDACIÓN DE COMPRAS " & vbNewLine & ex.Message, MsgBoxStyle.Exclamation, "MENSAJE DE INFORMACIÓN.")
+                MsgBox("ERROR A GENERAR LIQUIDACIÓN DE COMPRAS " & vbNewLine & ex.Message, MsgBoxStyle.Exclamation, "Mensaje de información.")
             End Try
         End Sub
 
@@ -2076,7 +2076,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
                 dgvDetalleComprobanteRetencion(5, e.RowIndex).Value = 0
                 dgvDetalleComprobanteRetencion(6, e.RowIndex).Value = String.Empty
                 dgvDetalleComprobanteRetencion(7, e.RowIndex).Value = String.Empty
-                MsgBox("HUBO UN PROBLEMA AL CALCULAR VALOR RETENIDO, INTENTE DE NUEVO.", MsgBoxStyle.Information, "MENSAJE DE INFORMACIÓN")
+                MsgBox("HUBO UN PROBLEMA AL CALCULAR VALOR RETENIDO, INTENTE DE NUEVO.", MsgBoxStyle.Information, "Mensaje de información")
             End Try
             CalcularTotalesFactura() 
         End Sub

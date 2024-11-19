@@ -56,14 +56,7 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
         Dim _fechaHasta = ""
 
         Private Sub LlenarComboCuentasBancos()
-            'Dim data = _objetoCuentaBancos.BuscarNumeroCuentaXIdBanco(_tipoCon, lblIdBanco.Text)
-            'cmbCuentaBancos.DataSource = data
-            'If cmbCuentaBancos.Items.Count = 0 Then
-            '    cmbCuentaBancos.Text = "NINGUNA CUENTA"
-            'Else
-            '    cmbCuentaBancos.DisplayMember = data.Columns(0).ToString
-            '    cmbCuentaBancos.ValueMember = data.Columns(0).ToString
-            'End If
+
 
             cmbCuentaBancos.DataSource = _objetoCuentaBancos.BuscarNumeroCuentaXIdBanco(_tipoCon, cmbBancos.SelectedValue)
             If cmbCuentaBancos.Items.Count = 0 Then
@@ -230,8 +223,8 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
         Private Sub btnGuardar_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnGuardar.Click
             dgvComprobanteEgresoBancos.EndEdit()
             If dgvComprobanteEgresoBancos.Rows.Count > 0 Then
-                'Dim respuestaMsgBox = MessageBox.Show("¿CONFIRMA QUE DESEA ANULAR LOS COMPROBANTES SELECCIONADOS?", "MENSAJE DE VALIDACIÓN", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
-                Dim respuestaMsgBox = KryptonMessageBox.Show("¿CONFIRMA QUE DESEA ANULAR LOS COMPROBANTES SELECCIONADOS?", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question)
+
+                Dim respuestaMsgBox = KryptonMessageBox.Show("¿Confirma que desea anular los comprobantes seleccionados?", "Mensaje de validación", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question)
                 If respuestaMsgBox <> DialogResult.Yes Then Return
                 _sqlCommands.Clear()
 
@@ -249,11 +242,11 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
                 Else
                     messageIcon = KryptonMessageBoxIcon.Exclamation
                 End If
-                KryptonMessageBox.Show(res(1), "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, messageIcon)
+                KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, messageIcon)
 
             Else
 
-                KryptonMessageBox.Show("NO HAY COMPROBANTES CARGADOS.", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
+                KryptonMessageBox.Show("no hay comprobantes cargados.", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
             End If
         End Sub
 

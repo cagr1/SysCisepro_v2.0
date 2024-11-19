@@ -155,11 +155,11 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
         End Sub
         Private Sub btnNuevo_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnNuevo.Click
             If dgvFacturaVenta.RowCount = 0 Then
-                MsgBox("POR FAVOR SELECCIONE UNA FACTURA!", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                MsgBox("POR FAVOR SELECCIONE UNA FACTURA!", MsgBoxStyle.Exclamation, "Mensaje de validación")
                 Return
             End If
             If dgvComprobanteRetencionVenta.RowCount > 0 Then
-                MsgBox("LA FACTURA SELECCIONADA YA TIENE REGISTRADO UN COMPROBANTE DE RETENCIÓN!", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                MsgBox("LA FACTURA SELECCIONADA YA TIENE REGISTRADO UN COMPROBANTE DE RETENCIÓN!", MsgBoxStyle.Exclamation, "Mensaje de validación")
                 Return
             End If
 
@@ -216,7 +216,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                     lblContribuyenteEspecial.Text = cli.Rows(0)(6)
                 End If
             Catch ex As Exception
-                MsgBox("CARGAR DATOS CLIENTE." & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "MENSAJE DE EXCEPCIÓN")
+                MsgBox("CARGAR DATOS CLIENTE." & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
             End Try
         End Sub
         Private Sub CargarFacturasVentaXIdCliente()
@@ -255,7 +255,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                 dgvFacturaVenta.AutoResizeColumns()
                 dgvFacturaVenta.AutoResizeRows()
             Catch ex As Exception
-                MsgBox("METODO CARGAR FACTURA VENTA" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "MENSAJE DE EXCEPCIÓN")
+                MsgBox("METODO CARGAR FACTURA VENTA" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
             End Try
         End Sub
         Private Sub CargarFacturasVentaXNroFactura()
@@ -292,7 +292,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                 dgvFacturaVenta.AutoResizeColumns()
                 dgvFacturaVenta.AutoResizeRows()
             Catch ex As Exception
-                MsgBox("METODO CARGAR FACTURA VENTA" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "MENSAJE DE EXCEPCIÓN")
+                MsgBox("METODO CARGAR FACTURA VENTA" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
             End Try
         End Sub
         Private Sub CargarComprobanteRetencionVenta()
@@ -344,7 +344,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
             If CDec(txtTotalComprobanteRetencion.Text) = totalRetencion Then
                 Return True
             Else
-                MsgBox("LA SUMA DE LOS DETALLES DE LA RETENCION NO COINCIDE CON EL TOTAL.", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                MsgBox("LA SUMA DE LOS DETALLES DE LA RETENCION NO COINCIDE CON EL TOTAL.", MsgBoxStyle.Exclamation, "Mensaje de validación")
                 Return False
             End If
         End Function
@@ -367,7 +367,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                 CargarFacturasVentaXIdCliente()
                 _busacarNumeroFactura = 0
             ElseIf lblLlevaContabilidadClienteGeneral.Text = "NO" Then
-                MsgBox("NO SE REGISTRAN RETENCIONES DE CLIENTES QUE NO LLEVAN CONTABILIDAD", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                MsgBox("NO SE REGISTRAN RETENCIONES DE CLIENTES QUE NO LLEVAN CONTABILIDAD", MsgBoxStyle.Exclamation, "Mensaje de validación")
             End If
         End Sub
         Private Sub btnBuscarAsiento_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnBuscarAsiento.Click
@@ -382,7 +382,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                 lblIdFacturaVenta.Text = "..."
             Else
                 If _objetoPagosFacturaVenta.BuscarMayorSaldoPagosFacturaventaXIdFactura(_tipoCon, dgvFacturaVenta.CurrentRow.Cells.Item(0).Value) = 0 Then
-                    MsgBox("ESTA FACTUARA YA HA SIDO CANCELADA" & vbNewLine & "NO SE PUEDE REGISTRAR RETENCIÓN", MsgBoxStyle.Information, "MENSAJE DE INFORMACIÓN")
+                    MsgBox("ESTA FACTUARA YA HA SIDO CANCELADA" & vbNewLine & "NO SE PUEDE REGISTRAR RETENCIÓN", MsgBoxStyle.Information, "Mensaje de información")
                 Else
                     If _busacarNumeroFactura = 0 Then
                         lblIdFacturaVenta.Text = dgvFacturaVenta.CurrentRow.Cells.Item(0).Value
@@ -443,7 +443,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                                 _validarRenta = 1
                             End If
                         Else
-                            MsgBox("POR FAVOR INGRESE SOLO NÚMEROS" & vbNewLine & "EL SEPARADOR DECIMAL ES EL '.'", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                            MsgBox("POR FAVOR INGRESE SOLO NÚMEROS" & vbNewLine & "EL SEPARADOR DECIMAL ES EL '.'", MsgBoxStyle.Exclamation, "Mensaje de validación")
                         End If
                     ElseIf CInt(cmbImpuesto.SelectedValue) = 2 Then ''-=-=-=-=-= SI ES IVA =-=-=-=-=-
 
@@ -467,23 +467,23 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                             Dim valorRetenidoIva = Math.Round((CDec(response) * porcent) / 100, 3, MidpointRounding.AwayFromZero)
                             dgvDetalleComprobanteRetencionVenta.Rows.Add(dtpComprobanteRetencion.Value.Year, _objetoConceptos.BuscarCodigoConceptoXIdConcepto(_tipoCon, CInt(cmbConcepto.SelectedValue)), CDec(response), cmbImpuesto.Text, porcent, Math.Round(valorRetenidoIva, 2, MidpointRounding.ToEven), cod, cue)
                         Else
-                            MsgBox("POR FAVOR INGRESE SOLO NÚMEROS" & vbNewLine & "EL SEPARADOR DECIMAL ES EL '.'", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                            MsgBox("POR FAVOR INGRESE SOLO NÚMEROS" & vbNewLine & "EL SEPARADOR DECIMAL ES EL '.'", MsgBoxStyle.Exclamation, "Mensaje de validación")
                         End If
 
                     End If
 
                     CalcularTotalRetencion()
                 Else
-                    MsgBox("SELECCIONE LOS PARAMETROS NECESARIOS: IMPUESTO, CONCEPTO, CONTRIBUYENTE.", MsgBoxStyle.Information, "MENSAJE DE INFORMACIÓN")
+                    MsgBox("SELECCIONE LOS PARAMETROS NECESARIOS: IMPUESTO, CONCEPTO, CONTRIBUYENTE.", MsgBoxStyle.Information, "Mensaje de información")
                 End If
             Else
-                MsgBox("NO HA INGRESADO DATOS DE FACTURA.", MsgBoxStyle.Information, "MENSAJE DE INFORMACIÓN")
+                MsgBox("NO HA INGRESADO DATOS DE FACTURA.", MsgBoxStyle.Information, "Mensaje de información")
             End If
         End Sub
 
         Private Sub btnEliminarImpuesto_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnEliminarImpuesto.Click
             If dgvDetalleComprobanteRetencionVenta.RowCount = 0 Then
-                MsgBox("NO HAY CELDAS EN LA GRILLA", MsgBoxStyle.Information, "MENSAJE DE INFORMACIÓN")
+                MsgBox("NO HAY CELDAS EN LA GRILLA", MsgBoxStyle.Information, "Mensaje de información")
             Else
                 If dgvDetalleComprobanteRetencionVenta.CurrentRow.Cells(3).Value = "RENTA" Then
                     dgvDetalleComprobanteRetencionVenta.Rows.RemoveAt(dgvDetalleComprobanteRetencionVenta.CurrentRow.Index)
@@ -496,13 +496,13 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
         End Sub
         Private Sub btnGuardar_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnGuardar.Click
             If _objetoAts.ValidarCompraConDeclaracion(_tipoCon, dtpComprobanteRetencion.Value) Then ' si el ats del mes del comprobante ya fue generado
-                MsgBox("EL ATS DEL MES " & dtpComprobanteRetencion.Value.Month.ToString & " DEL AÑO " & dtpComprobanteRetencion.Value.Year.ToString & " YA FUE GENERADO." & vbNewLine & " SI NECESITA INGRESAR ESTE COMPROBANTE SOLICITE UNA SUSTUTIVA A LA CONTADORA Y HAGA UNA REQUISICIÓN AL DEPARTAMENTO DE SISTEMAS.", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                MsgBox("EL ATS DEL MES " & dtpComprobanteRetencion.Value.Month.ToString & " DEL AÑO " & dtpComprobanteRetencion.Value.Year.ToString & " YA FUE GENERADO." & vbNewLine & " SI NECESITA INGRESAR ESTE COMPROBANTE SOLICITE UNA SUSTUTIVA A LA CONTADORA Y HAGA UNA REQUISICIÓN AL DEPARTAMENTO DE SISTEMAS.", MsgBoxStyle.Exclamation, "Mensaje de validación")
             Else
                 If ValidacionParametros() Then
                     If ValidacionValores() Then
                         If Math.Round(CDec(txtTotalComprobanteRetencion.Text), 2) <= _objetoPagosFacturaVenta.BuscarMayorSaldoPagosFacturaventaXIdFactura(_tipoCon, lblIdFacturaVenta.Text) Then ' si el valor de la retención es menor o igual al saldo de la factura guarda
 
-                            If MessageBox.Show("¿ESTA SEGURO QUE DESEA GUARDAR EL COMPRONATE DE RETENCIÓN?", "MENSAJE DE VALIDACIÓN", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> DialogResult.Yes Then Return
+                            If MessageBox.Show("¿Esta seguro que desea guardar EL COMPRONATE DE RETENCIÓN?", "Mensaje de validación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> DialogResult.Yes Then Return
                             _sqlCommands.Clear()
 
                             GuardarComprobanteRetencion()
@@ -510,7 +510,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
 
                             NuevoRegistroAsientoDiarioRetencion()
                             If (_objetoAsientoLibroDiario.CodigoCuentaAsiento + "").Trim().Length = 0 Then
-                                MsgBox("NO SE PUEDE GUARDAR." & vbNewLine & "LA CUENTA PARA EL CÓDIGO DE RETENCIÓN ESCOGIDO NO HA SIDO DEFINIDA EN LA BD!", MsgBoxStyle.Exclamation, "MENSAJE DE VALICACIÓN")
+                                MsgBox("No se puede guardar." & vbNewLine & "LA CUENTA PARA EL CÓDIGO DE RETENCIÓN ESCOGIDO NO HA SIDO DEFINIDA EN LA BD!", MsgBoxStyle.Exclamation, "Mensaje de validación")
                                 Return
                             End If
 
@@ -526,11 +526,11 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                             End If
                             MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
                         Else
-                            MsgBox("NO SE PUEDE GUARDAR." & vbNewLine & "EL VALOR DE LA RETENCIÓN ES MAYOR AL SALDO DE LA FACTURA", MsgBoxStyle.Information, "MENSAJE DE VALICACIÓN")
+                            MsgBox("No se puede guardar." & vbNewLine & "EL VALOR DE LA RETENCIÓN ES MAYOR AL SALDO DE LA FACTURA", MsgBoxStyle.Information, "Mensaje de validación")
                         End If
                     End If
                 Else
-                    MsgBox("NO SE PUEDE GUARDAR." & vbNewLine & "NO HA LLENADO TODOS LOS CAMPOS NECESARIOS", MsgBoxStyle.Information, "MENSAJE DE VALICACIÓN")
+                    MsgBox("No se puede guardar." & vbNewLine & "NO HA LLENADO TODOS LOS CAMPOS NECESARIOS", MsgBoxStyle.Information, "Mensaje de validación")
                 End If
             End If
         End Sub
@@ -709,7 +709,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                 dgvDetalleComprobanteRetencionVenta(5, e.RowIndex).Value = 0
                 dgvDetalleComprobanteRetencionVenta(6, e.RowIndex).Value = String.Empty
                 dgvDetalleComprobanteRetencionVenta(7, e.RowIndex).Value = String.Empty
-                MsgBox("HUBO UN PROBLEMA AL CALCULAR VALOR RETENIDO, INTENTE DE NUEVO.", MsgBoxStyle.Information, "MENSAJE DE INFORMACIÓN")
+                MsgBox("HUBO UN PROBLEMA AL CALCULAR VALOR RETENIDO, INTENTE DE NUEVO.", MsgBoxStyle.Information, "Mensaje de información")
             End Try
             CalcularTotalRetencion()
         End Sub

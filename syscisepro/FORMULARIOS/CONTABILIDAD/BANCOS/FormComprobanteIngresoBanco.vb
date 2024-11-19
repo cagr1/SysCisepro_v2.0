@@ -271,8 +271,8 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
                     gbCheque.Enabled = True
                     txtTitularCheque.Text = txtNombreComercialClienteGeneral.Text
                 Else
-                    'MsgBox("PRIMERO CARGUE UN CLIENTE", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
-                    KryptonMessageBox.Show("Primero cargue un cliente", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
+                    'MsgBox("PRIMERO CARGUE UN CLIENTE", MsgBoxStyle.Exclamation, "Mensaje de validación")
+                    KryptonMessageBox.Show("Primero cargue un cliente", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                     rbEfectivo.Checked = True
                 End If
             Else
@@ -355,8 +355,8 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
                 btnNuevo.Enabled = True
                 btnReporte.Enabled = False
             Else
-                'MsgBox("POR FAVOR SELECCIONE UN COMPROBANTE DE INGRESO", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
-                KryptonMessageBox.Show("Por favor seleccione un comprobante de ingreso", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
+                'MsgBox("POR FAVOR SELECCIONE UN COMPROBANTE DE INGRESO", MsgBoxStyle.Exclamation, "Mensaje de validación")
+                KryptonMessageBox.Show("Por favor seleccione un comprobante de ingreso", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
             End If
         End Sub
         Private Sub btnNuevo_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnNuevo.Click
@@ -392,7 +392,7 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
                     If txtTitularCheque.Text <> "" And txtBancoCheque.Text <> "" And txtCtaCteCheque.Text <> "" And txtNumeroCheque.Text <> "" Then
                         Return True
                     Else
-                        KryptonMessageBox.Show("Escogio forma de pago cheque." & vbNewLine & "No ha llenado todos los campos del cheque.", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
+                        KryptonMessageBox.Show("Escogio forma de pago cheque." & vbNewLine & "No ha llenado todos los campos del cheque.", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                         Return False
                     End If
                 Else
@@ -400,7 +400,7 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
                 End If
             Else
 
-                KryptonMessageBox.Show("Revise el comprobante de ingreso." & vbNewLine & "No ha llenado todos los campos del comprobante.", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
+                KryptonMessageBox.Show("Revise el comprobante de ingreso." & vbNewLine & "No ha llenado todos los campos del comprobante.", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                 Return False
             End If
         End Function
@@ -427,7 +427,7 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
                         dgvComprobanteIngresoBanco.Rows(indiceAsiento).Cells("DEBE").Style.BackColor = Color.LightSalmon
                         dgvComprobanteIngresoBanco.Rows(indiceAsiento).Cells("HABER").Style.BackColor = Color.LightSalmon
 
-                        KryptonMessageBox.Show("SALDO NEGATIVO EN LA FACTURA: " + _objetoFacturaVenta.BuscarNumeroFacturaVentaXIdFacturaVenta(_tipoCon, dgvComprobanteIngresoBanco.Rows(indiceAsiento).Cells("ID_CC").Value).ToString, "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
+                        KryptonMessageBox.Show("Saldo negativo en la factura: " + _objetoFacturaVenta.BuscarNumeroFacturaVentaXIdFacturaVenta(_tipoCon, dgvComprobanteIngresoBanco.Rows(indiceAsiento).Cells("ID_CC").Value).ToString, "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                         bandera = 1
                     End If
                 End If
@@ -441,7 +441,7 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
                     If dgvFacturaVenta.Rows(indiceFacturas).Cells("FECHA").Value > dtpFechaEmisionComprobanteIngreso.Value Then
                         fechaValida = 1
 
-                        KryptonMessageBox.Show("Fecha Invalida." & vbNewLine & "LA FECHA DE LA FACTURA: " + dgvFacturaVenta.Rows(indiceFacturas).Cells("NUMERO").Value + "es posterior a la fecha de comprobante de ingreso", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
+                        KryptonMessageBox.Show("Fecha Invalida." & vbNewLine & "LA FECHA DE LA FACTURA: " + dgvFacturaVenta.Rows(indiceFacturas).Cells("NUMERO").Value + "es posterior a la fecha de comprobante de ingreso", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                     End If
                 End If
             Next
@@ -468,7 +468,7 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
                 dgvPagosFacturaVenta.EditMode = DataGridViewEditMode.EditProgrammatically
             Catch ex As Exception
 
-                KryptonMessageBox.Show("METODO CARGAR PAGOS FACTURA VENTA" & vbNewLine & ex.Message.ToString, "MENSAJE DE EXCEPCIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+                KryptonMessageBox.Show("Metodo cargar pagos factura venta" & vbNewLine & ex.Message.ToString, "Mensaje de excepción", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
         Private Sub SumarTotalDebeHaber()
@@ -525,7 +525,7 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
                         dgvComprobanteIngresoBanco.Rows(nroFilaIngreso).Cells(6).Value = "0" ' el id de la factura
                     Else
 
-                        KryptonMessageBox.Show("SELECCIONE UNA CUENTA CONTABLE.", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
+                        KryptonMessageBox.Show("SELECCIONE UNA CUENTA CONTABLE.", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                     End If
                 ElseIf rbAcreditadoBancos.Checked Then 'PREGUNTO VA A SER ACREDITADO EL INGRESO A BANCOS
                     If CInt(cmbBancos.SelectedValue) <> "0" And CInt(cmbCuentaBancos.SelectedValue) <> "0" Then ' verifica que se haya seleccionado un banco y una cuenta
@@ -559,17 +559,17 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
                         dgvComprobanteIngresoBanco.Rows(nroFilaIngreso).Cells(6).Value = "0" ' el id de la factura
                     Else
 
-                        KryptonMessageBox.Show("SELECCIONE UN BANCO Y UNA CUENTA.", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
+                        KryptonMessageBox.Show("Seleccione un banco y una cuenta.", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                     End If
                 Else
 
-                    KryptonMessageBox.Show("SELECCIONE A DONDE VA A ACREDITAR.", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
+                    KryptonMessageBox.Show("Seleccione a donde va a acreditar.", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                 End If
                 SumarTotalDebeHaber()
                 btnEditarValores.Enabled = True
             Catch ex As Exception
 
-                KryptonMessageBox.Show("CARGAR COMPROBANTE INGRESO: BANCOS" & vbNewLine & ex.Message.ToString, "MENSAJE DE EXCEPCIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+                KryptonMessageBox.Show("Cargar comprobante ingreso: bancos" & vbNewLine & ex.Message.ToString, "Mensaje de excepción", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
         Private Sub dgvFacturaVenta_SelectionChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles dgvFacturaVenta.SelectionChanged
@@ -636,11 +636,11 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
                             SumarTotalDebeHaber() ' suma los totales del comprobante de ingreso (Debe-Haber)
                         Else
 
-                            KryptonMessageBox.Show("ESTA FACTURA YA FUE CANCELADA", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
+                            KryptonMessageBox.Show("Esta factura ya fue cancelada", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                         End If
                     Else '  caso contrario si la factura ya ha sido agregada
 
-                        KryptonMessageBox.Show("ESTA FACTURA YA ESTA AGREGADA", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
+                        KryptonMessageBox.Show("Esta factura ya esta agregada", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                     End If
                 Else ' CheckBox Desmarcado"
                     For indiceArray = 0 To _cantidadFacturas - 1
@@ -741,7 +741,7 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
 
                             If ValidarFechasFacturas() = 0 Then ' valida que las fechas de las facturas no sean posteriores al comprobante de ingreso
 
-                                If KryptonMessageBox.Show("¿ESTA SEGURA QUE DESEA GUARDAR EL COMPROBANTE?", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) <> DialogResult.Yes Then Return
+                                If KryptonMessageBox.Show("¿Esta segura que desea guardar el comprobante?", "Mensaje de validación", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) <> DialogResult.Yes Then Return
                                 _sqlCommands.Clear()
 
                                 _objetoComprobanteIngresoBancos.Id = _objetoComprobanteIngresoBancos.BuscarMayorIdComprobanteIngresoBancos(_tipoCon) + 1
@@ -777,7 +777,7 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
                                         If dgvComprobanteIngresoBanco.RowCount = 2 Then
                                             _objetoComprobanteIngresoBancos.ValorComprobanteIngreso = CDec(txtTotalDebe.Text.Trim)
                                         Else
-                                            Dim response = InputBox("INGRESE EL VALOR DEL COMPROBANTE PARA CRUCE DE CUENTAS", "VALOR COMPROBANTE INGRESO", 0, , )
+                                            Dim response = InputBox("Ingrese el valor del comprobante para cruce de cuentas", "Valor comprobante ingreso", 0, , )
                                             If IsNumeric(response) Then
                                                 _objetoComprobanteIngresoBancos.ValorComprobanteIngreso = CDec(response)
                                             Else
@@ -810,30 +810,30 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
                                 Else
                                     messageIcon = KryptonMessageBoxIcon.Exclamation
                                 End If
-                                KryptonMessageBox.Show(res(1), "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, messageIcon)
+                                KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, messageIcon)
 
 
                             Else
 
-                                KryptonMessageBox.Show("NO SE PUEDE GUARDAR." & vbNewLine & "LAS FECHAS DE LAS FACTURAS SON POSTERIORES AL INGRESO .", "MENSAJE DE VALIDACION", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
+                                KryptonMessageBox.Show("No se puede guardar." & vbNewLine & "Las fechas de las facturas son posteriores al ingreso.", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                             End If
                         Else
 
-                            KryptonMessageBox.Show("NO SE PUEDE GUARDAR." & vbNewLine & "LOS VALORES DE LOS PAGOS GENERAN SALDOS NEGATIVOS .", "MENSAJE DE VALIDACION", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
+                            KryptonMessageBox.Show("No se puede guardar." & vbNewLine & "Los valores de los pagos generan saldos negativos.", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                         End If
                     Else
 
-                        KryptonMessageBox.Show("NO SE PUEDE GUARDAR." & vbNewLine & "NO HA LLENADO TODOS LOS CAMPOS NECESARIOS .", "MENSAJE DE VALIDACION", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
+                        KryptonMessageBox.Show("No se puede guardar." & vbNewLine & "No ha llenado todos los campos necesarios.", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                     End If
 
                 Else
 
-                    KryptonMessageBox.Show("NO SE PUEDE GUARDAR." & vbNewLine & "LOS VALORES DE EL DEBE Y EL HABER NO COINCIDEN POR FAVOR REVISE LAS TRANSACCIONES.", "MENSAJE DE VALIDACION", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
+                    KryptonMessageBox.Show("No se puede guardar." & vbNewLine & "Los valores de el debe y el haber no coinciden por favor revise las transacciones.", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                 End If
 
             Else
 
-                KryptonMessageBox.Show("NO SE PUEDE GUARDAR." & vbNewLine & "LOS VALORES DE EL DEBE Y EL HABER NO COINCIDEN POR FAVOR REVISE LAS TRANSACCIONES.", "MENSAJE DE VALIDACION", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
+                KryptonMessageBox.Show("No se puede guardar." & vbNewLine & "Los valores de el debe y el haber no coinciden por favor revise las transacciones.", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
             End If
         End Sub
         Private Sub GuardarRegistroComprobanteIngresoBancos()
@@ -1039,7 +1039,7 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
                     txtTitularCheque.Text = txtNombreComercialClienteGeneral.Text
                 Else
 
-                    KryptonMessageBox.Show("Primero cargue un cliente", "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
+                    KryptonMessageBox.Show("Primero cargue un cliente", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                     rbEfectivo.Checked = True
                 End If
             Else

@@ -162,7 +162,7 @@ Namespace FORMULARIOS.FONDOS.FONDO_CAJA_CHICA
         Private Sub btnActualizar_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnActualizar.Click
             If txtIdResponsable.Text <> "" Then
 
-                If MessageBox.Show("¿ESTA SEGURO QUE DESEA ACTUALIZAR LOS DATOS?", "MENSAJE DE VALIDACIÓN", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> MsgBoxResult.Yes Then Return
+                If MessageBox.Show("¿ESTA SEGURO QUE DESEA ACTUALIZAR LOS DATOS?", "Mensaje de validación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> MsgBoxResult.Yes Then Return
                 _sqlCommands.Clear()
 
                 If rbActivo.Checked = True Then
@@ -183,7 +183,7 @@ Namespace FORMULARIOS.FONDOS.FONDO_CAJA_CHICA
         Private Sub btnGuardar_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles Button1.Click
             If txtCedula.Text <> "" And txtIdPersonal.Text <> "" And txtNombres.Text <> "" And cbmCiudad.Text <> "" And cbmProvincias.Text <> "" Then
 
-                If MessageBox.Show("¿ESTA SEGURO QUE DESEA GUARDAR?", "MENSAJE DE VALIDACIÓN", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> MsgBoxResult.Yes Then Return
+                If MessageBox.Show("¿Esta seguro que desea guardar?", "Mensaje de validación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> MsgBoxResult.Yes Then Return
                 _sqlCommands.Clear()
 
                 With _objAutorizaciones
@@ -202,7 +202,7 @@ Namespace FORMULARIOS.FONDOS.FONDO_CAJA_CHICA
                 If res(0) Then CargarAutorizaciones()
                 MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
             Else
-                MsgBox("No se puede Guardar el registro sino agrega todos los parámetros ", MsgBoxStyle.Information, "MENSAJE DE INFORMACIÓN")
+                MsgBox("No se puede guardar el registro sino agrega todos los parámetros ", MsgBoxStyle.Information, "Mensaje de información")
             End If
         End Sub
         '===============================================================================================================================================================================================================

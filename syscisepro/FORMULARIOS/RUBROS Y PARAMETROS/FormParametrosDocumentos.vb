@@ -139,7 +139,7 @@ Namespace FORMULARIOS.RUBROS_Y_PARAMETROS
         Private Sub btnGuardarParametroDocumentos_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnGuardarParametroDocumentos.Click
             If ValidacionParametros() Then
 
-                If MessageBox.Show("¿ESTA SEGURO QUE DESEA GUARDAR?", "MENSAJE DE VALIDACIÓN", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> MsgBoxResult.Yes Then Return
+                If MessageBox.Show("¿Esta seguro que desea guardar?", "Mensaje de validación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> MsgBoxResult.Yes Then Return
                 _sqlCommands.Clear()
                  
                 Select Case (_botonSeleccionado)
@@ -154,7 +154,7 @@ Namespace FORMULARIOS.RUBROS_Y_PARAMETROS
                 End If
                 MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema") 
             Else
-                MsgBox("NO SE PUEDE GUARDAR." & vbNewLine & "NO SE HAN LLENADO TODOS LOS CAMPOS NECESARIOS.", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACION")
+                MsgBox("No se puede guardar." & vbNewLine & "NO SE HAN LLENADO TODOS LOS CAMPOS NECESARIOS.", MsgBoxStyle.Exclamation, "Mensaje de validación")
                 txtDetalleParametro.Focus()
             End If
         End Sub
@@ -199,7 +199,7 @@ Namespace FORMULARIOS.RUBROS_Y_PARAMETROS
         Private Sub dgvParametrosDocumentos_CellClick(ByVal sender As System.Object, ByVal e As Windows.Forms.DataGridViewCellEventArgs) Handles dgvParametrosDocumentos.CellClick
             If dgvParametrosDocumentos.RowCount = 0 Or dgvParametrosDocumentos.CurrentRow Is Nothing Then Return
             If dgvParametrosDocumentos.CurrentRow.Cells.Item(0).Value Is DBNull.Value Then
-                MsgBox("La tabla PARAMETROS DOCUMENTOS esta vacía", MsgBoxStyle.Information, "Mensaje de Información")
+                MsgBox("La tabla PARAMETROS DOCUMENTOS esta vacía", MsgBoxStyle.Information, "Mensaje de información")
             Else
                 txtIdParametro.Text = dgvParametrosDocumentos.CurrentRow.Cells.Item(0).Value
                 txtDetalleParametro.Text = dgvParametrosDocumentos.CurrentRow.Cells.Item(1).Value.ToString

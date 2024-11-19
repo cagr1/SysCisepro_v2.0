@@ -56,7 +56,7 @@ Namespace FORMULARIOS.CONTABILIDAD.LIQUIDACIONES
         'End Sub
         'Private Sub txtCodCuentaAsiento_Leave(ByVal sender As System.Object, ByVal e As EventArgs) Handles txtCodCuentaAsiento.Leave
         '    If txtCodCuentaAsiento.Text <> "520228" Then
-        '        MsgBox("CUENTA NO VALIDA." & vbNewLine & "PARA REGISTRAR OTROS GASTOS NO DEDUCIBLES EN EL LIBRO DIARIO UTILICE LA CUENTA 520228", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+        '        MsgBox("CUENTA NO VALIDA." & vbNewLine & "PARA REGISTRAR OTROS GASTOS NO DEDUCIBLES EN EL LIBRO DIARIO UTILICE LA CUENTA 520228", MsgBoxStyle.Exclamation, "Mensaje de validación")
         '        txtCodCuentaAsiento.Text = ""
         '        txtCodCuentaAsiento.Focus()
         '    Else
@@ -68,7 +68,7 @@ Namespace FORMULARIOS.CONTABILIDAD.LIQUIDACIONES
 
         'Private Sub txtConceptoAsiento_Validated(ByVal sender As System.Object, ByVal e As EventArgs) Handles txtConceptoAsiento.Validated
         '    If txtConceptoAsiento.Text.ToUpper <> "OTROS GASTOS NO DEDUCIBLES" Then
-        '        MsgBox("CONCEPTO NO VALIDO." & vbNewLine & "TIENE QUE GUARDAR CON CONCEPTO 'OTROS GASTOS NO DEDUCIBLES'.", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+        '        MsgBox("CONCEPTO NO VALIDO." & vbNewLine & "TIENE QUE GUARDAR CON CONCEPTO 'OTROS GASTOS NO DEDUCIBLES'.", MsgBoxStyle.Exclamation, "Mensaje de validación")
         '        txtConceptoAsiento.Text = ""
         '        txtConceptoAsiento.Focus()
         '    End If

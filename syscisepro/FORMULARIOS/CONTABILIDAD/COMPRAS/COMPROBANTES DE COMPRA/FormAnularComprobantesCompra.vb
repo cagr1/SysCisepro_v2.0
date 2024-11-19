@@ -7,6 +7,7 @@ Imports ClassLibraryCisepro.CONTABILIDAD.SRI
 Imports ClassLibraryCisepro.ENUMS
 Imports ClassLibraryCisepro.ProcesosSql
 Imports ClassLibraryCisepro.USUARIOS_DEL_SISTEMA
+Imports Krypton.Toolkit
 
 Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
     ''' <summary>
@@ -135,7 +136,8 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
 
             Catch ex As Exception
                 dgvComprobantesCompra.DataSource = Nothing
-                MsgBox("METODO CARGAR COMPROBANTES DE COMPRA" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "MENSAJE DE EXCEPCIÓN")
+                'MsgBox("METODO CARGAR COMPROBANTES DE COMPRA" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
+                KryptonMessageBox.Show("Metodo cargar comprobantes de compra" & vbNewLine & ex.Message.ToString, "Mensaje de excepción", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
         
@@ -145,16 +147,19 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
                     Dim fechaComprobante = dgvComprobantesCompra.Rows(dgvComprobantesCompra.CurrentRow.Index).Cells(7).Value ' recibe la fecha del comprobante
                     If _objetoAts.ValidarCompraConDeclaracion(_tipoCon, fechaComprobante) Then ' si el comprobante fue declarado
                         If Not _notSelect.Contains(dgvComprobantesCompra.CurrentCell.RowIndex) Then _notSelect.Add(dgvComprobantesCompra.CurrentCell.RowIndex)
-                        MsgBox("EL ATS DEL MES " & fechaComprobante.Month.ToString & " DEL AÑO " & fechaComprobante.Year.ToString & " YA FUE GENERADO." & vbNewLine & " SI NECESITA ELIMINAR ESTE COMPROBANTE SOLICITE UNA SUSTUTIVA A LA CONTADORA Y HAGA UNA REQUISICIÓN AL DEPARTAMENTO DE SISTEMAS.", MsgBoxStyle.Information, "MENSAJE DE VALIDACIÓN")
+                        'MsgBox("EL ATS DEL MES " & fechaComprobante.Month.ToString & " DEL AÑO " & fechaComprobante.Year.ToString & " YA FUE GENERADO." & vbNewLine & " SI NECESITA ELIMINAR ESTE COMPROBANTE SOLICITE UNA SUSTUTIVA A LA CONTADORA Y HAGA UNA REQUISICIÓN AL DEPARTAMENTO DE SISTEMAS.", MsgBoxStyle.Information, "Mensaje de validación")
+                        KryptonMessageBox.Show("El ATS del mes " & fechaComprobante.Month.ToString & " del año " & fechaComprobante.Year.ToString & " ya fue generado." & vbNewLine & "Si necesita eliminar este comprobante solicite una sustutiva a la contadora y haga una requisición al departamento de sistemas.", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
                     Else
                         If _objetoPagosComprobantesCompra.BuscarMayorSaldoPagosComprobantesCompraXIdComprobante(_tipoCon, dgvComprobantesCompra.CurrentRow.Cells(1).Value) = 0 Then
                             If Not _notSelect.Contains(dgvComprobantesCompra.CurrentCell.RowIndex) Then _notSelect.Add(dgvComprobantesCompra.CurrentCell.RowIndex)
-                            MsgBox("ESTA FACTURA YA FUE CANCELADA POR LO TANTO NO SERÁ ANULADA!", MsgBoxStyle.Information, "MENSAJE DE VALIDACIÓN")
+                            'MsgBox("ESTA FACTURA YA FUE CANCELADA POR LO TANTO NO SERÁ ANULADA!", MsgBoxStyle.Information, "Mensaje de validación")
+                            KryptonMessageBox.Show("Esta factura ya fue cancelada por lo tanto no será anulada!", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
                         Else
                             Dim si = _objetoComprobantesCompra.SeleccionarPagosActivoXIdComprobante(_tipoCon, CLng(dgvComprobantesCompra.CurrentRow.Cells(1).Value))
                             If si.Rows.Count > 1 Or si.Rows(0)(2) > 1 Then
                                 If Not _notSelect.Contains(dgvComprobantesCompra.CurrentCell.RowIndex) Then _notSelect.Add(dgvComprobantesCompra.CurrentCell.RowIndex)
-                                MsgBox("ESTA FACTURA YA REGISTRA PAGOS. ANULE PRIMERO LOS PAGOS CORRESPONDIENTES O LA FACTURA NO SERÁ ANULADA!", MsgBoxStyle.Information, "MENSAJE DE VALIDACIÓN")
+                                'MsgBox("ESTA FACTURA YA REGISTRA PAGOS. ANULE PRIMERO LOS PAGOS CORRESPONDIENTES O LA FACTURA NO SERÁ ANULADA!", MsgBoxStyle.Information, "Mensaje de validación")
+                                KryptonMessageBox.Show("Esta factura ya registra pagos. Anule primero los pagos correspondientes o la factura no será anulada!", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
                             End If
                         End If
                     End If
@@ -178,15 +183,25 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
                 ActualizarEstadoComprobanteCompra()
 
 
-                Dim nombreU As String = "ANULAR COMPROBANTE COMPRA " & UserName
-                Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, String.Empty)
+                Dim nombreU As String = "Comprobante Compra anulado por: " & UserName
+                Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, nombreU)
                 If res(0) Then
                     CargarComprobantesCompra()
                 End If
-                MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
+
+                Dim messageIcon As KryptonMessageBoxIcon
+                If res(0) Then
+                    messageIcon = KryptonMessageBoxIcon.Information
+                Else
+                    messageIcon = KryptonMessageBoxIcon.Exclamation
+                End If
+                KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, messageIcon)
+
+                'MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
 
             Else
-                MsgBox("NO HAY RESULTADOS DE BUSQUEDA NO SE PUEDE GUARDAR CAMBIOS.", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                'MsgBox("NO HAY RESULTADOS DE BUSQUEDA No se puede guardar CAMBIOS.", MsgBoxStyle.Exclamation, "Mensaje de validación")
+                KryptonMessageBox.Show("No hay resultados de busqueda No se puede guardar cambios.", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
             End If
         End Sub
         Private Sub ActualizarEstadoComprobanteCompra()
@@ -195,7 +210,8 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
 
                     Dim fechaComprobante = dgvComprobantesCompra.Rows(indiceCompCompra).Cells(7).Value ' recibe la fecha del comprobante
                     If _objetoAts.ValidarCompraConDeclaracion(_tipoCon, fechaComprobante) Then ' si el comprobante fue declarado
-                        MsgBox("EL ATS DEL MES " & fechaComprobante.Month.ToString & " DEL AÑO " & fechaComprobante.Year.ToString & " YA FUE GENERADO." & vbNewLine & " SI NECESITA ELIMINAR ESTE COMPROBANTE SOLICITE UNA SUSTUTIVA A LA CONTADORA Y HAGA UNA REQUISICIÓN AL DEPARTAMENTO DE SISTEMAS.", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                        'MsgBox("EL ATS DEL MES " & fechaComprobante.Month.ToString & " DEL AÑO " & fechaComprobante.Year.ToString & " YA FUE GENERADO." & vbNewLine & " SI NECESITA ELIMINAR ESTE COMPROBANTE SOLICITE UNA SUSTUTIVA A LA CONTADORA Y HAGA UNA REQUISICIÓN AL DEPARTAMENTO DE SISTEMAS.", MsgBoxStyle.Exclamation, "Mensaje de validación")
+                        KryptonMessageBox.Show("El ATS del mes " & fechaComprobante.Month.ToString & " del año " & fechaComprobante.Year.ToString & " ya fue generado." & vbNewLine & "Si necesita eliminar este comprobante solicite una sustutiva a la contadora y haga una requisición al departamento de sistemas.", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
                     Else
 
                         With _objetoComprobantesCompra

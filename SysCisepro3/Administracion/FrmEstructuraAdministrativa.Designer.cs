@@ -28,18 +28,43 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tcEstructuraAdministrativa = new System.Windows.Forms.TabControl();
             this.tpGerencia = new System.Windows.Forms.TabPage();
+            this.lblSucursal = new System.Windows.Forms.Label();
+            this.lblNombreEmpresa = new System.Windows.Forms.Label();
+            this.lblDescripcionGerencia = new System.Windows.Forms.Label();
+            this.lblCodigoGerencia = new System.Windows.Forms.Label();
+            this.lblIdGerencia = new System.Windows.Forms.Label();
+            this.tpGerencias = new System.Windows.Forms.TabPage();
+            this.lblGerencia = new System.Windows.Forms.Label();
+            this.lblNombreGerencias = new System.Windows.Forms.Label();
+            this.Label4 = new System.Windows.Forms.Label();
+            this.Label5 = new System.Windows.Forms.Label();
+            this.tpArea = new System.Windows.Forms.TabPage();
+            this.lblGerencias = new System.Windows.Forms.Label();
+            this.Label2 = new System.Windows.Forms.Label();
+            this.Label3 = new System.Windows.Forms.Label();
+            this.Label6 = new System.Windows.Forms.Label();
+            this.tpSeccion = new System.Windows.Forms.TabPage();
+            this.lblAreaSeccion = new System.Windows.Forms.Label();
+            this.Label10 = new System.Windows.Forms.Label();
+            this.Label11 = new System.Windows.Forms.Label();
+            this.Label12 = new System.Windows.Forms.Label();
+            this.tpSubSecciones = new System.Windows.Forms.TabPage();
+            this.Label9 = new System.Windows.Forms.Label();
+            this.Label13 = new System.Windows.Forms.Label();
+            this.Label14 = new System.Windows.Forms.Label();
+            this.Label15 = new System.Windows.Forms.Label();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.btnCargarGerencia = new System.Windows.Forms.ToolStripButton();
             this.btnNuevoGerencia = new System.Windows.Forms.ToolStripButton();
@@ -48,17 +73,11 @@
             this.btnCancelarGerencia = new System.Windows.Forms.ToolStripButton();
             this.btnReportesGerencia = new System.Windows.Forms.ToolStripButton();
             this.cbSucursal = new System.Windows.Forms.ComboBox();
-            this.lblSucursal = new System.Windows.Forms.Label();
             this.cbEmpresa = new System.Windows.Forms.ComboBox();
             this.txtCodigoGerencia = new System.Windows.Forms.TextBox();
             this.txtIdGerencia = new System.Windows.Forms.TextBox();
             this.txtDescripcionGerencia = new System.Windows.Forms.TextBox();
-            this.lblNombreEmpresa = new System.Windows.Forms.Label();
-            this.lblDescripcionGerencia = new System.Windows.Forms.Label();
-            this.lblCodigoGerencia = new System.Windows.Forms.Label();
-            this.lblIdGerencia = new System.Windows.Forms.Label();
             this.dgvGerencia = new System.Windows.Forms.DataGridView();
-            this.tpGerencias = new System.Windows.Forms.TabPage();
             this.toolStrip2 = new System.Windows.Forms.ToolStrip();
             this.btnCargarGerencias = new System.Windows.Forms.ToolStripButton();
             this.btnNuevoGerencias = new System.Windows.Forms.ToolStripButton();
@@ -70,12 +89,7 @@
             this.txtCodigoGerencias = new System.Windows.Forms.TextBox();
             this.txtIdGerencias = new System.Windows.Forms.TextBox();
             this.txtNombreGerencias = new System.Windows.Forms.TextBox();
-            this.lblGerencia = new System.Windows.Forms.Label();
-            this.lblNombreGerencias = new System.Windows.Forms.Label();
-            this.Label4 = new System.Windows.Forms.Label();
-            this.Label5 = new System.Windows.Forms.Label();
             this.dgvGerencias = new System.Windows.Forms.DataGridView();
-            this.tpArea = new System.Windows.Forms.TabPage();
             this.toolStrip3 = new System.Windows.Forms.ToolStrip();
             this.btnCargarAreas = new System.Windows.Forms.ToolStripButton();
             this.btnNuevoAreas = new System.Windows.Forms.ToolStripButton();
@@ -87,12 +101,7 @@
             this.txtCodigoAreas = new System.Windows.Forms.TextBox();
             this.txtIdAreas = new System.Windows.Forms.TextBox();
             this.txtNombreAreas = new System.Windows.Forms.TextBox();
-            this.lblGerencias = new System.Windows.Forms.Label();
-            this.Label2 = new System.Windows.Forms.Label();
-            this.Label3 = new System.Windows.Forms.Label();
-            this.Label6 = new System.Windows.Forms.Label();
             this.dgvAreas = new System.Windows.Forms.DataGridView();
-            this.tpSeccion = new System.Windows.Forms.TabPage();
             this.toolStrip4 = new System.Windows.Forms.ToolStrip();
             this.btnCargarSeccion = new System.Windows.Forms.ToolStripButton();
             this.btnNuevaSeccion = new System.Windows.Forms.ToolStripButton();
@@ -104,12 +113,7 @@
             this.txtCodigoSeccion = new System.Windows.Forms.TextBox();
             this.txtIdSeccion = new System.Windows.Forms.TextBox();
             this.txtNombreSeccion = new System.Windows.Forms.TextBox();
-            this.lblAreaSeccion = new System.Windows.Forms.Label();
-            this.Label10 = new System.Windows.Forms.Label();
-            this.Label11 = new System.Windows.Forms.Label();
-            this.Label12 = new System.Windows.Forms.Label();
             this.dgvSecciones = new System.Windows.Forms.DataGridView();
-            this.tpSubSecciones = new System.Windows.Forms.TabPage();
             this.toolStrip5 = new System.Windows.Forms.ToolStrip();
             this.btnCargarSubSeccion = new System.Windows.Forms.ToolStripButton();
             this.btnNuevoSubSeccion = new System.Windows.Forms.ToolStripButton();
@@ -121,53 +125,49 @@
             this.txtCodigoSubSeccion = new System.Windows.Forms.TextBox();
             this.txtIdSubSeccion = new System.Windows.Forms.TextBox();
             this.txtNombreSubSeccion = new System.Windows.Forms.TextBox();
-            this.Label9 = new System.Windows.Forms.Label();
-            this.Label13 = new System.Windows.Forms.Label();
-            this.Label14 = new System.Windows.Forms.Label();
-            this.Label15 = new System.Windows.Forms.Label();
             this.dgvSubSecciones = new System.Windows.Forms.DataGridView();
             this.kryptonNavigator1 = new ComponentFactory.Krypton.Navigator.KryptonNavigator();
             this.kryptonPage1 = new ComponentFactory.Krypton.Navigator.KryptonPage();
-            this.kryptonPage2 = new ComponentFactory.Krypton.Navigator.KryptonPage();
-            this.kryptonPage3 = new ComponentFactory.Krypton.Navigator.KryptonPage();
-            this.kryptonPage4 = new ComponentFactory.Krypton.Navigator.KryptonPage();
-            this.kryptonPage5 = new ComponentFactory.Krypton.Navigator.KryptonPage();
-            this.foreverContextMenuStrip1 = new ReaLTaiizor.Controls.ForeverContextMenuStrip();
-            this.kryptonLabel1 = new Krypton.Toolkit.KryptonLabel();
-            this.kryptonLabel2 = new Krypton.Toolkit.KryptonLabel();
-            this.kryptonLabel3 = new Krypton.Toolkit.KryptonLabel();
-            this.kryptonLabel4 = new Krypton.Toolkit.KryptonLabel();
             this.kryptonLabel5 = new Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel4 = new Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel3 = new Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel2 = new Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel1 = new Krypton.Toolkit.KryptonLabel();
+            this.kryptonPage2 = new ComponentFactory.Krypton.Navigator.KryptonPage();
             this.kryptonLabel6 = new Krypton.Toolkit.KryptonLabel();
             this.kryptonLabel7 = new Krypton.Toolkit.KryptonLabel();
             this.kryptonLabel8 = new Krypton.Toolkit.KryptonLabel();
             this.kryptonLabel9 = new Krypton.Toolkit.KryptonLabel();
+            this.kryptonPage3 = new ComponentFactory.Krypton.Navigator.KryptonPage();
             this.kryptonLabel10 = new Krypton.Toolkit.KryptonLabel();
             this.kryptonLabel11 = new Krypton.Toolkit.KryptonLabel();
             this.kryptonLabel12 = new Krypton.Toolkit.KryptonLabel();
             this.kryptonLabel13 = new Krypton.Toolkit.KryptonLabel();
+            this.kryptonPage4 = new ComponentFactory.Krypton.Navigator.KryptonPage();
             this.kryptonLabel14 = new Krypton.Toolkit.KryptonLabel();
             this.kryptonLabel15 = new Krypton.Toolkit.KryptonLabel();
             this.kryptonLabel16 = new Krypton.Toolkit.KryptonLabel();
             this.kryptonLabel17 = new Krypton.Toolkit.KryptonLabel();
+            this.kryptonPage5 = new ComponentFactory.Krypton.Navigator.KryptonPage();
             this.kryptonLabel18 = new Krypton.Toolkit.KryptonLabel();
             this.kryptonLabel19 = new Krypton.Toolkit.KryptonLabel();
             this.kryptonLabel20 = new Krypton.Toolkit.KryptonLabel();
             this.kryptonLabel21 = new Krypton.Toolkit.KryptonLabel();
+            this.foreverContextMenuStrip1 = new ReaLTaiizor.Controls.ForeverContextMenuStrip();
             this.tcEstructuraAdministrativa.SuspendLayout();
             this.tpGerencia.SuspendLayout();
+            this.tpGerencias.SuspendLayout();
+            this.tpArea.SuspendLayout();
+            this.tpSeccion.SuspendLayout();
+            this.tpSubSecciones.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGerencia)).BeginInit();
-            this.tpGerencias.SuspendLayout();
             this.toolStrip2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGerencias)).BeginInit();
-            this.tpArea.SuspendLayout();
             this.toolStrip3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAreas)).BeginInit();
-            this.tpSeccion.SuspendLayout();
             this.toolStrip4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSecciones)).BeginInit();
-            this.tpSubSecciones.SuspendLayout();
             this.toolStrip5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSubSecciones)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonNavigator1)).BeginInit();
@@ -208,10 +208,255 @@
             this.tpGerencia.Location = new System.Drawing.Point(4, 22);
             this.tpGerencia.Name = "tpGerencia";
             this.tpGerencia.Padding = new System.Windows.Forms.Padding(3);
-            this.tpGerencia.Size = new System.Drawing.Size(405, 298);
+            this.tpGerencia.Size = new System.Drawing.Size(126, 55);
             this.tpGerencia.TabIndex = 0;
             this.tpGerencia.Text = "A. GERENCIA";
             this.tpGerencia.UseVisualStyleBackColor = true;
+            // 
+            // lblSucursal
+            // 
+            this.lblSucursal.AutoSize = true;
+            this.lblSucursal.Location = new System.Drawing.Point(157, 72);
+            this.lblSucursal.Name = "lblSucursal";
+            this.lblSucursal.Size = new System.Drawing.Size(65, 13);
+            this.lblSucursal.TabIndex = 10;
+            this.lblSucursal.Text = "SUCURSAL:";
+            // 
+            // lblNombreEmpresa
+            // 
+            this.lblNombreEmpresa.AutoSize = true;
+            this.lblNombreEmpresa.Location = new System.Drawing.Point(157, 44);
+            this.lblNombreEmpresa.Name = "lblNombreEmpresa";
+            this.lblNombreEmpresa.Size = new System.Drawing.Size(60, 13);
+            this.lblNombreEmpresa.TabIndex = 3;
+            this.lblNombreEmpresa.Text = "EMPRESA:";
+            // 
+            // lblDescripcionGerencia
+            // 
+            this.lblDescripcionGerencia.AutoSize = true;
+            this.lblDescripcionGerencia.Location = new System.Drawing.Point(6, 102);
+            this.lblDescripcionGerencia.Name = "lblDescripcionGerencia";
+            this.lblDescripcionGerencia.Size = new System.Drawing.Size(80, 13);
+            this.lblDescripcionGerencia.TabIndex = 2;
+            this.lblDescripcionGerencia.Text = "DESCRIPCION:";
+            // 
+            // lblCodigoGerencia
+            // 
+            this.lblCodigoGerencia.AutoSize = true;
+            this.lblCodigoGerencia.Location = new System.Drawing.Point(6, 71);
+            this.lblCodigoGerencia.Name = "lblCodigoGerencia";
+            this.lblCodigoGerencia.Size = new System.Drawing.Size(51, 13);
+            this.lblCodigoGerencia.TabIndex = 1;
+            this.lblCodigoGerencia.Text = "CODIGO:";
+            // 
+            // lblIdGerencia
+            // 
+            this.lblIdGerencia.AutoSize = true;
+            this.lblIdGerencia.Location = new System.Drawing.Point(9, 45);
+            this.lblIdGerencia.Name = "lblIdGerencia";
+            this.lblIdGerencia.Size = new System.Drawing.Size(20, 13);
+            this.lblIdGerencia.TabIndex = 1;
+            this.lblIdGerencia.Text = "ID:";
+            // 
+            // tpGerencias
+            // 
+            this.tpGerencias.Controls.Add(this.lblGerencia);
+            this.tpGerencias.Controls.Add(this.lblNombreGerencias);
+            this.tpGerencias.Controls.Add(this.Label4);
+            this.tpGerencias.Controls.Add(this.Label5);
+            this.tpGerencias.Location = new System.Drawing.Point(4, 22);
+            this.tpGerencias.Name = "tpGerencias";
+            this.tpGerencias.Padding = new System.Windows.Forms.Padding(3);
+            this.tpGerencias.Size = new System.Drawing.Size(126, 55);
+            this.tpGerencias.TabIndex = 1;
+            this.tpGerencias.Text = "B. GERENCIAS";
+            this.tpGerencias.UseVisualStyleBackColor = true;
+            // 
+            // lblGerencia
+            // 
+            this.lblGerencia.AutoSize = true;
+            this.lblGerencia.Location = new System.Drawing.Point(196, 48);
+            this.lblGerencia.Name = "lblGerencia";
+            this.lblGerencia.Size = new System.Drawing.Size(59, 13);
+            this.lblGerencia.TabIndex = 48;
+            this.lblGerencia.Text = "GERENCIA";
+            // 
+            // lblNombreGerencias
+            // 
+            this.lblNombreGerencias.AutoSize = true;
+            this.lblNombreGerencias.Location = new System.Drawing.Point(198, 76);
+            this.lblNombreGerencias.Name = "lblNombreGerencias";
+            this.lblNombreGerencias.Size = new System.Drawing.Size(56, 13);
+            this.lblNombreGerencias.TabIndex = 47;
+            this.lblNombreGerencias.Text = "NOMBRE:";
+            // 
+            // Label4
+            // 
+            this.Label4.AutoSize = true;
+            this.Label4.Location = new System.Drawing.Point(21, 76);
+            this.Label4.Name = "Label4";
+            this.Label4.Size = new System.Drawing.Size(54, 13);
+            this.Label4.TabIndex = 45;
+            this.Label4.Text = "CODIGO:";
+            // 
+            // Label5
+            // 
+            this.Label5.AutoSize = true;
+            this.Label5.Location = new System.Drawing.Point(24, 48);
+            this.Label5.Name = "Label5";
+            this.Label5.Size = new System.Drawing.Size(21, 13);
+            this.Label5.TabIndex = 46;
+            this.Label5.Text = "ID:";
+            // 
+            // tpArea
+            // 
+            this.tpArea.Controls.Add(this.lblGerencias);
+            this.tpArea.Controls.Add(this.Label2);
+            this.tpArea.Controls.Add(this.Label3);
+            this.tpArea.Controls.Add(this.Label6);
+            this.tpArea.Location = new System.Drawing.Point(4, 22);
+            this.tpArea.Name = "tpArea";
+            this.tpArea.Padding = new System.Windows.Forms.Padding(3);
+            this.tpArea.Size = new System.Drawing.Size(126, 55);
+            this.tpArea.TabIndex = 2;
+            this.tpArea.Text = "C. AREAS";
+            this.tpArea.UseVisualStyleBackColor = true;
+            // 
+            // lblGerencias
+            // 
+            this.lblGerencias.AutoSize = true;
+            this.lblGerencias.Location = new System.Drawing.Point(195, 47);
+            this.lblGerencias.Name = "lblGerencias";
+            this.lblGerencias.Size = new System.Drawing.Size(68, 13);
+            this.lblGerencias.TabIndex = 59;
+            this.lblGerencias.Text = "GERENCIAS:";
+            // 
+            // Label2
+            // 
+            this.Label2.AutoSize = true;
+            this.Label2.Location = new System.Drawing.Point(195, 74);
+            this.Label2.Name = "Label2";
+            this.Label2.Size = new System.Drawing.Size(56, 13);
+            this.Label2.TabIndex = 58;
+            this.Label2.Text = "NOMBRE:";
+            // 
+            // Label3
+            // 
+            this.Label3.AutoSize = true;
+            this.Label3.Location = new System.Drawing.Point(13, 75);
+            this.Label3.Name = "Label3";
+            this.Label3.Size = new System.Drawing.Size(54, 13);
+            this.Label3.TabIndex = 56;
+            this.Label3.Text = "CODIGO:";
+            // 
+            // Label6
+            // 
+            this.Label6.AutoSize = true;
+            this.Label6.Location = new System.Drawing.Point(13, 47);
+            this.Label6.Name = "Label6";
+            this.Label6.Size = new System.Drawing.Size(21, 13);
+            this.Label6.TabIndex = 57;
+            this.Label6.Text = "ID:";
+            // 
+            // tpSeccion
+            // 
+            this.tpSeccion.Controls.Add(this.lblAreaSeccion);
+            this.tpSeccion.Controls.Add(this.Label10);
+            this.tpSeccion.Controls.Add(this.Label11);
+            this.tpSeccion.Controls.Add(this.Label12);
+            this.tpSeccion.Location = new System.Drawing.Point(4, 22);
+            this.tpSeccion.Name = "tpSeccion";
+            this.tpSeccion.Padding = new System.Windows.Forms.Padding(3);
+            this.tpSeccion.Size = new System.Drawing.Size(126, 55);
+            this.tpSeccion.TabIndex = 3;
+            this.tpSeccion.Text = "D. SECCIONES";
+            this.tpSeccion.UseVisualStyleBackColor = true;
+            // 
+            // lblAreaSeccion
+            // 
+            this.lblAreaSeccion.AutoSize = true;
+            this.lblAreaSeccion.Location = new System.Drawing.Point(197, 39);
+            this.lblAreaSeccion.Name = "lblAreaSeccion";
+            this.lblAreaSeccion.Size = new System.Drawing.Size(37, 13);
+            this.lblAreaSeccion.TabIndex = 72;
+            this.lblAreaSeccion.Text = "AREA:";
+            // 
+            // Label10
+            // 
+            this.Label10.AutoSize = true;
+            this.Label10.Location = new System.Drawing.Point(197, 67);
+            this.Label10.Name = "Label10";
+            this.Label10.Size = new System.Drawing.Size(56, 13);
+            this.Label10.TabIndex = 71;
+            this.Label10.Text = "NOMBRE:";
+            // 
+            // Label11
+            // 
+            this.Label11.AutoSize = true;
+            this.Label11.Location = new System.Drawing.Point(16, 67);
+            this.Label11.Name = "Label11";
+            this.Label11.Size = new System.Drawing.Size(54, 13);
+            this.Label11.TabIndex = 69;
+            this.Label11.Text = "CODIGO:";
+            // 
+            // Label12
+            // 
+            this.Label12.AutoSize = true;
+            this.Label12.Location = new System.Drawing.Point(16, 39);
+            this.Label12.Name = "Label12";
+            this.Label12.Size = new System.Drawing.Size(21, 13);
+            this.Label12.TabIndex = 70;
+            this.Label12.Text = "ID:";
+            // 
+            // tpSubSecciones
+            // 
+            this.tpSubSecciones.Controls.Add(this.Label9);
+            this.tpSubSecciones.Controls.Add(this.Label13);
+            this.tpSubSecciones.Controls.Add(this.Label14);
+            this.tpSubSecciones.Controls.Add(this.Label15);
+            this.tpSubSecciones.Location = new System.Drawing.Point(4, 22);
+            this.tpSubSecciones.Name = "tpSubSecciones";
+            this.tpSubSecciones.Padding = new System.Windows.Forms.Padding(3);
+            this.tpSubSecciones.Size = new System.Drawing.Size(126, 55);
+            this.tpSubSecciones.TabIndex = 4;
+            this.tpSubSecciones.Text = "E. SUB-SECCIONES";
+            this.tpSubSecciones.UseVisualStyleBackColor = true;
+            // 
+            // Label9
+            // 
+            this.Label9.AutoSize = true;
+            this.Label9.Location = new System.Drawing.Point(193, 42);
+            this.Label9.Name = "Label9";
+            this.Label9.Size = new System.Drawing.Size(56, 13);
+            this.Label9.TabIndex = 85;
+            this.Label9.Text = "SECCION:";
+            // 
+            // Label13
+            // 
+            this.Label13.AutoSize = true;
+            this.Label13.Location = new System.Drawing.Point(192, 67);
+            this.Label13.Name = "Label13";
+            this.Label13.Size = new System.Drawing.Size(56, 13);
+            this.Label13.TabIndex = 84;
+            this.Label13.Text = "NOMBRE:";
+            // 
+            // Label14
+            // 
+            this.Label14.AutoSize = true;
+            this.Label14.Location = new System.Drawing.Point(16, 67);
+            this.Label14.Name = "Label14";
+            this.Label14.Size = new System.Drawing.Size(54, 13);
+            this.Label14.TabIndex = 82;
+            this.Label14.Text = "CODIGO:";
+            // 
+            // Label15
+            // 
+            this.Label15.AutoSize = true;
+            this.Label15.Location = new System.Drawing.Point(16, 39);
+            this.Label15.Name = "Label15";
+            this.Label15.Size = new System.Drawing.Size(21, 13);
+            this.Label15.TabIndex = 83;
+            this.Label15.Text = "ID:";
             // 
             // toolStrip1
             // 
@@ -306,15 +551,6 @@
             this.cbSucursal.Size = new System.Drawing.Size(292, 21);
             this.cbSucursal.TabIndex = 11;
             // 
-            // lblSucursal
-            // 
-            this.lblSucursal.AutoSize = true;
-            this.lblSucursal.Location = new System.Drawing.Point(157, 72);
-            this.lblSucursal.Name = "lblSucursal";
-            this.lblSucursal.Size = new System.Drawing.Size(65, 13);
-            this.lblSucursal.TabIndex = 10;
-            this.lblSucursal.Text = "SUCURSAL:";
-            // 
             // cbEmpresa
             // 
             this.cbEmpresa.BackColor = System.Drawing.Color.White;
@@ -363,61 +599,25 @@
             this.txtDescripcionGerencia.Size = new System.Drawing.Size(401, 21);
             this.txtDescripcionGerencia.TabIndex = 4;
             // 
-            // lblNombreEmpresa
-            // 
-            this.lblNombreEmpresa.AutoSize = true;
-            this.lblNombreEmpresa.Location = new System.Drawing.Point(157, 44);
-            this.lblNombreEmpresa.Name = "lblNombreEmpresa";
-            this.lblNombreEmpresa.Size = new System.Drawing.Size(60, 13);
-            this.lblNombreEmpresa.TabIndex = 3;
-            this.lblNombreEmpresa.Text = "EMPRESA:";
-            // 
-            // lblDescripcionGerencia
-            // 
-            this.lblDescripcionGerencia.AutoSize = true;
-            this.lblDescripcionGerencia.Location = new System.Drawing.Point(6, 102);
-            this.lblDescripcionGerencia.Name = "lblDescripcionGerencia";
-            this.lblDescripcionGerencia.Size = new System.Drawing.Size(80, 13);
-            this.lblDescripcionGerencia.TabIndex = 2;
-            this.lblDescripcionGerencia.Text = "DESCRIPCION:";
-            // 
-            // lblCodigoGerencia
-            // 
-            this.lblCodigoGerencia.AutoSize = true;
-            this.lblCodigoGerencia.Location = new System.Drawing.Point(6, 71);
-            this.lblCodigoGerencia.Name = "lblCodigoGerencia";
-            this.lblCodigoGerencia.Size = new System.Drawing.Size(51, 13);
-            this.lblCodigoGerencia.TabIndex = 1;
-            this.lblCodigoGerencia.Text = "CODIGO:";
-            // 
-            // lblIdGerencia
-            // 
-            this.lblIdGerencia.AutoSize = true;
-            this.lblIdGerencia.Location = new System.Drawing.Point(9, 45);
-            this.lblIdGerencia.Name = "lblIdGerencia";
-            this.lblIdGerencia.Size = new System.Drawing.Size(20, 13);
-            this.lblIdGerencia.TabIndex = 1;
-            this.lblIdGerencia.Text = "ID:";
-            // 
             // dgvGerencia
             // 
             this.dgvGerencia.AllowUserToAddRows = false;
             this.dgvGerencia.AllowUserToDeleteRows = false;
             this.dgvGerencia.AllowUserToResizeRows = false;
-            dataGridViewCellStyle21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgvGerencia.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle21;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgvGerencia.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvGerencia.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
             this.dgvGerencia.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvGerencia.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
             this.dgvGerencia.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle22.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle22.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle22.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle22.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(60)))), ((int)(((byte)(123)))));
-            dataGridViewCellStyle22.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvGerencia.DefaultCellStyle = dataGridViewCellStyle22;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(60)))), ((int)(((byte)(123)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvGerencia.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvGerencia.Location = new System.Drawing.Point(17, 143);
             this.dgvGerencia.MultiSelect = false;
             this.dgvGerencia.Name = "dgvGerencia";
@@ -427,20 +627,6 @@
             this.dgvGerencia.Size = new System.Drawing.Size(424, 113);
             this.dgvGerencia.TabIndex = 0;
             this.dgvGerencia.SelectionChanged += new System.EventHandler(this.dgvGerencia_SelectionChanged);
-            // 
-            // tpGerencias
-            // 
-            this.tpGerencias.Controls.Add(this.lblGerencia);
-            this.tpGerencias.Controls.Add(this.lblNombreGerencias);
-            this.tpGerencias.Controls.Add(this.Label4);
-            this.tpGerencias.Controls.Add(this.Label5);
-            this.tpGerencias.Location = new System.Drawing.Point(4, 22);
-            this.tpGerencias.Name = "tpGerencias";
-            this.tpGerencias.Padding = new System.Windows.Forms.Padding(3);
-            this.tpGerencias.Size = new System.Drawing.Size(405, 298);
-            this.tpGerencias.TabIndex = 1;
-            this.tpGerencias.Text = "B. GERENCIAS";
-            this.tpGerencias.UseVisualStyleBackColor = true;
             // 
             // toolStrip2
             // 
@@ -455,7 +641,7 @@
             this.btnReporteGerencias});
             this.toolStrip2.Location = new System.Drawing.Point(0, 0);
             this.toolStrip2.Name = "toolStrip2";
-            this.toolStrip2.Size = new System.Drawing.Size(502, 31);
+            this.toolStrip2.Size = new System.Drawing.Size(537, 31);
             this.toolStrip2.TabIndex = 198;
             this.toolStrip2.Text = "toolStrip2";
             // 
@@ -565,61 +751,25 @@
             this.txtNombreGerencias.Size = new System.Drawing.Size(207, 22);
             this.txtNombreGerencias.TabIndex = 49;
             // 
-            // lblGerencia
-            // 
-            this.lblGerencia.AutoSize = true;
-            this.lblGerencia.Location = new System.Drawing.Point(196, 48);
-            this.lblGerencia.Name = "lblGerencia";
-            this.lblGerencia.Size = new System.Drawing.Size(59, 13);
-            this.lblGerencia.TabIndex = 48;
-            this.lblGerencia.Text = "GERENCIA";
-            // 
-            // lblNombreGerencias
-            // 
-            this.lblNombreGerencias.AutoSize = true;
-            this.lblNombreGerencias.Location = new System.Drawing.Point(198, 76);
-            this.lblNombreGerencias.Name = "lblNombreGerencias";
-            this.lblNombreGerencias.Size = new System.Drawing.Size(56, 13);
-            this.lblNombreGerencias.TabIndex = 47;
-            this.lblNombreGerencias.Text = "NOMBRE:";
-            // 
-            // Label4
-            // 
-            this.Label4.AutoSize = true;
-            this.Label4.Location = new System.Drawing.Point(21, 76);
-            this.Label4.Name = "Label4";
-            this.Label4.Size = new System.Drawing.Size(54, 13);
-            this.Label4.TabIndex = 45;
-            this.Label4.Text = "CODIGO:";
-            // 
-            // Label5
-            // 
-            this.Label5.AutoSize = true;
-            this.Label5.Location = new System.Drawing.Point(24, 48);
-            this.Label5.Name = "Label5";
-            this.Label5.Size = new System.Drawing.Size(21, 13);
-            this.Label5.TabIndex = 46;
-            this.Label5.Text = "ID:";
-            // 
             // dgvGerencias
             // 
             this.dgvGerencias.AllowUserToAddRows = false;
             this.dgvGerencias.AllowUserToDeleteRows = false;
             this.dgvGerencias.AllowUserToResizeRows = false;
-            dataGridViewCellStyle23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgvGerencias.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle23;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgvGerencias.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvGerencias.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
             this.dgvGerencias.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvGerencias.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
             this.dgvGerencias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle24.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle24.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle24.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle24.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(60)))), ((int)(((byte)(123)))));
-            dataGridViewCellStyle24.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvGerencias.DefaultCellStyle = dataGridViewCellStyle24;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(60)))), ((int)(((byte)(123)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvGerencias.DefaultCellStyle = dataGridViewCellStyle4;
             this.dgvGerencias.Location = new System.Drawing.Point(17, 102);
             this.dgvGerencias.MultiSelect = false;
             this.dgvGerencias.Name = "dgvGerencias";
@@ -629,20 +779,6 @@
             this.dgvGerencias.Size = new System.Drawing.Size(415, 154);
             this.dgvGerencias.TabIndex = 1;
             this.dgvGerencias.SelectionChanged += new System.EventHandler(this.dgvGerencias_SelectionChanged);
-            // 
-            // tpArea
-            // 
-            this.tpArea.Controls.Add(this.lblGerencias);
-            this.tpArea.Controls.Add(this.Label2);
-            this.tpArea.Controls.Add(this.Label3);
-            this.tpArea.Controls.Add(this.Label6);
-            this.tpArea.Location = new System.Drawing.Point(4, 22);
-            this.tpArea.Name = "tpArea";
-            this.tpArea.Padding = new System.Windows.Forms.Padding(3);
-            this.tpArea.Size = new System.Drawing.Size(405, 298);
-            this.tpArea.TabIndex = 2;
-            this.tpArea.Text = "C. AREAS";
-            this.tpArea.UseVisualStyleBackColor = true;
             // 
             // toolStrip3
             // 
@@ -657,7 +793,7 @@
             this.btnReporteAreas});
             this.toolStrip3.Location = new System.Drawing.Point(0, 0);
             this.toolStrip3.Name = "toolStrip3";
-            this.toolStrip3.Size = new System.Drawing.Size(502, 31);
+            this.toolStrip3.Size = new System.Drawing.Size(537, 31);
             this.toolStrip3.TabIndex = 199;
             this.toolStrip3.Text = "toolStrip3";
             // 
@@ -767,61 +903,25 @@
             this.txtNombreAreas.Size = new System.Drawing.Size(237, 22);
             this.txtNombreAreas.TabIndex = 60;
             // 
-            // lblGerencias
-            // 
-            this.lblGerencias.AutoSize = true;
-            this.lblGerencias.Location = new System.Drawing.Point(195, 47);
-            this.lblGerencias.Name = "lblGerencias";
-            this.lblGerencias.Size = new System.Drawing.Size(68, 13);
-            this.lblGerencias.TabIndex = 59;
-            this.lblGerencias.Text = "GERENCIAS:";
-            // 
-            // Label2
-            // 
-            this.Label2.AutoSize = true;
-            this.Label2.Location = new System.Drawing.Point(195, 74);
-            this.Label2.Name = "Label2";
-            this.Label2.Size = new System.Drawing.Size(56, 13);
-            this.Label2.TabIndex = 58;
-            this.Label2.Text = "NOMBRE:";
-            // 
-            // Label3
-            // 
-            this.Label3.AutoSize = true;
-            this.Label3.Location = new System.Drawing.Point(13, 75);
-            this.Label3.Name = "Label3";
-            this.Label3.Size = new System.Drawing.Size(54, 13);
-            this.Label3.TabIndex = 56;
-            this.Label3.Text = "CODIGO:";
-            // 
-            // Label6
-            // 
-            this.Label6.AutoSize = true;
-            this.Label6.Location = new System.Drawing.Point(13, 47);
-            this.Label6.Name = "Label6";
-            this.Label6.Size = new System.Drawing.Size(21, 13);
-            this.Label6.TabIndex = 57;
-            this.Label6.Text = "ID:";
-            // 
             // dgvAreas
             // 
             this.dgvAreas.AllowUserToAddRows = false;
             this.dgvAreas.AllowUserToDeleteRows = false;
             this.dgvAreas.AllowUserToResizeRows = false;
-            dataGridViewCellStyle25.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgvAreas.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle25;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgvAreas.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvAreas.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
             this.dgvAreas.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvAreas.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
             this.dgvAreas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle26.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle26.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle26.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle26.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(60)))), ((int)(((byte)(123)))));
-            dataGridViewCellStyle26.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle26.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvAreas.DefaultCellStyle = dataGridViewCellStyle26;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(60)))), ((int)(((byte)(123)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvAreas.DefaultCellStyle = dataGridViewCellStyle6;
             this.dgvAreas.Location = new System.Drawing.Point(11, 101);
             this.dgvAreas.MultiSelect = false;
             this.dgvAreas.Name = "dgvAreas";
@@ -831,20 +931,6 @@
             this.dgvAreas.Size = new System.Drawing.Size(442, 155);
             this.dgvAreas.TabIndex = 2;
             this.dgvAreas.SelectionChanged += new System.EventHandler(this.dgvAreas_SelectionChanged);
-            // 
-            // tpSeccion
-            // 
-            this.tpSeccion.Controls.Add(this.lblAreaSeccion);
-            this.tpSeccion.Controls.Add(this.Label10);
-            this.tpSeccion.Controls.Add(this.Label11);
-            this.tpSeccion.Controls.Add(this.Label12);
-            this.tpSeccion.Location = new System.Drawing.Point(4, 22);
-            this.tpSeccion.Name = "tpSeccion";
-            this.tpSeccion.Padding = new System.Windows.Forms.Padding(3);
-            this.tpSeccion.Size = new System.Drawing.Size(405, 298);
-            this.tpSeccion.TabIndex = 3;
-            this.tpSeccion.Text = "D. SECCIONES";
-            this.tpSeccion.UseVisualStyleBackColor = true;
             // 
             // toolStrip4
             // 
@@ -859,7 +945,7 @@
             this.btnReportesSeccion});
             this.toolStrip4.Location = new System.Drawing.Point(0, 0);
             this.toolStrip4.Name = "toolStrip4";
-            this.toolStrip4.Size = new System.Drawing.Size(502, 31);
+            this.toolStrip4.Size = new System.Drawing.Size(537, 31);
             this.toolStrip4.TabIndex = 200;
             this.toolStrip4.Text = "toolStrip4";
             // 
@@ -969,61 +1055,25 @@
             this.txtNombreSeccion.Size = new System.Drawing.Size(256, 22);
             this.txtNombreSeccion.TabIndex = 73;
             // 
-            // lblAreaSeccion
-            // 
-            this.lblAreaSeccion.AutoSize = true;
-            this.lblAreaSeccion.Location = new System.Drawing.Point(197, 39);
-            this.lblAreaSeccion.Name = "lblAreaSeccion";
-            this.lblAreaSeccion.Size = new System.Drawing.Size(37, 13);
-            this.lblAreaSeccion.TabIndex = 72;
-            this.lblAreaSeccion.Text = "AREA:";
-            // 
-            // Label10
-            // 
-            this.Label10.AutoSize = true;
-            this.Label10.Location = new System.Drawing.Point(197, 67);
-            this.Label10.Name = "Label10";
-            this.Label10.Size = new System.Drawing.Size(56, 13);
-            this.Label10.TabIndex = 71;
-            this.Label10.Text = "NOMBRE:";
-            // 
-            // Label11
-            // 
-            this.Label11.AutoSize = true;
-            this.Label11.Location = new System.Drawing.Point(16, 67);
-            this.Label11.Name = "Label11";
-            this.Label11.Size = new System.Drawing.Size(54, 13);
-            this.Label11.TabIndex = 69;
-            this.Label11.Text = "CODIGO:";
-            // 
-            // Label12
-            // 
-            this.Label12.AutoSize = true;
-            this.Label12.Location = new System.Drawing.Point(16, 39);
-            this.Label12.Name = "Label12";
-            this.Label12.Size = new System.Drawing.Size(21, 13);
-            this.Label12.TabIndex = 70;
-            this.Label12.Text = "ID:";
-            // 
             // dgvSecciones
             // 
             this.dgvSecciones.AllowUserToAddRows = false;
             this.dgvSecciones.AllowUserToDeleteRows = false;
             this.dgvSecciones.AllowUserToResizeRows = false;
-            dataGridViewCellStyle27.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgvSecciones.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle27;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgvSecciones.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
             this.dgvSecciones.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
             this.dgvSecciones.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvSecciones.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
             this.dgvSecciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle28.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle28.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle28.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle28.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(60)))), ((int)(((byte)(123)))));
-            dataGridViewCellStyle28.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle28.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvSecciones.DefaultCellStyle = dataGridViewCellStyle28;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(60)))), ((int)(((byte)(123)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvSecciones.DefaultCellStyle = dataGridViewCellStyle8;
             this.dgvSecciones.Location = new System.Drawing.Point(17, 111);
             this.dgvSecciones.MultiSelect = false;
             this.dgvSecciones.Name = "dgvSecciones";
@@ -1033,20 +1083,6 @@
             this.dgvSecciones.Size = new System.Drawing.Size(470, 145);
             this.dgvSecciones.TabIndex = 3;
             this.dgvSecciones.SelectionChanged += new System.EventHandler(this.dgvSecciones_SelectionChanged);
-            // 
-            // tpSubSecciones
-            // 
-            this.tpSubSecciones.Controls.Add(this.Label9);
-            this.tpSubSecciones.Controls.Add(this.Label13);
-            this.tpSubSecciones.Controls.Add(this.Label14);
-            this.tpSubSecciones.Controls.Add(this.Label15);
-            this.tpSubSecciones.Location = new System.Drawing.Point(4, 22);
-            this.tpSubSecciones.Name = "tpSubSecciones";
-            this.tpSubSecciones.Padding = new System.Windows.Forms.Padding(3);
-            this.tpSubSecciones.Size = new System.Drawing.Size(126, 55);
-            this.tpSubSecciones.TabIndex = 4;
-            this.tpSubSecciones.Text = "E. SUB-SECCIONES";
-            this.tpSubSecciones.UseVisualStyleBackColor = true;
             // 
             // toolStrip5
             // 
@@ -1171,61 +1207,25 @@
             this.txtNombreSubSeccion.Size = new System.Drawing.Size(262, 22);
             this.txtNombreSubSeccion.TabIndex = 86;
             // 
-            // Label9
-            // 
-            this.Label9.AutoSize = true;
-            this.Label9.Location = new System.Drawing.Point(193, 42);
-            this.Label9.Name = "Label9";
-            this.Label9.Size = new System.Drawing.Size(56, 13);
-            this.Label9.TabIndex = 85;
-            this.Label9.Text = "SECCION:";
-            // 
-            // Label13
-            // 
-            this.Label13.AutoSize = true;
-            this.Label13.Location = new System.Drawing.Point(192, 67);
-            this.Label13.Name = "Label13";
-            this.Label13.Size = new System.Drawing.Size(56, 13);
-            this.Label13.TabIndex = 84;
-            this.Label13.Text = "NOMBRE:";
-            // 
-            // Label14
-            // 
-            this.Label14.AutoSize = true;
-            this.Label14.Location = new System.Drawing.Point(16, 67);
-            this.Label14.Name = "Label14";
-            this.Label14.Size = new System.Drawing.Size(54, 13);
-            this.Label14.TabIndex = 82;
-            this.Label14.Text = "CODIGO:";
-            // 
-            // Label15
-            // 
-            this.Label15.AutoSize = true;
-            this.Label15.Location = new System.Drawing.Point(16, 39);
-            this.Label15.Name = "Label15";
-            this.Label15.Size = new System.Drawing.Size(21, 13);
-            this.Label15.TabIndex = 83;
-            this.Label15.Text = "ID:";
-            // 
             // dgvSubSecciones
             // 
             this.dgvSubSecciones.AllowUserToAddRows = false;
             this.dgvSubSecciones.AllowUserToDeleteRows = false;
             this.dgvSubSecciones.AllowUserToResizeRows = false;
-            dataGridViewCellStyle29.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgvSubSecciones.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle29;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgvSubSecciones.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
             this.dgvSubSecciones.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
             this.dgvSubSecciones.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvSubSecciones.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
             this.dgvSubSecciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle30.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle30.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle30.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle30.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(60)))), ((int)(((byte)(123)))));
-            dataGridViewCellStyle30.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle30.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvSubSecciones.DefaultCellStyle = dataGridViewCellStyle30;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(60)))), ((int)(((byte)(123)))));
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvSubSecciones.DefaultCellStyle = dataGridViewCellStyle10;
             this.dgvSubSecciones.Location = new System.Drawing.Point(21, 96);
             this.dgvSubSecciones.MultiSelect = false;
             this.dgvSubSecciones.Name = "dgvSubSecciones";
@@ -1249,22 +1249,15 @@
             this.kryptonNavigator1.Button.NextButtonDisplay = ComponentFactory.Krypton.Navigator.ButtonDisplay.Logic;
             this.kryptonNavigator1.Button.PreviousButtonAction = ComponentFactory.Krypton.Navigator.DirectionButtonAction.ModeAppropriateAction;
             this.kryptonNavigator1.Button.PreviousButtonDisplay = ComponentFactory.Krypton.Navigator.ButtonDisplay.Logic;
-            this.kryptonNavigator1.Group.GroupBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.ControlClient;
-            this.kryptonNavigator1.Group.GroupBorderStyle = ComponentFactory.Krypton.Toolkit.PaletteBorderStyle.ControlClient;
-            this.kryptonNavigator1.Header.HeaderStyleBar = ComponentFactory.Krypton.Toolkit.HeaderStyle.Secondary;
-            this.kryptonNavigator1.Header.HeaderStylePrimary = ComponentFactory.Krypton.Toolkit.HeaderStyle.Primary;
-            this.kryptonNavigator1.Header.HeaderStyleSecondary = ComponentFactory.Krypton.Toolkit.HeaderStyle.Secondary;
             this.kryptonNavigator1.Location = new System.Drawing.Point(0, 0);
             this.kryptonNavigator1.Name = "kryptonNavigator1";
             this.kryptonNavigator1.NavigatorMode = ComponentFactory.Krypton.Navigator.NavigatorMode.BarTabGroup;
-            this.kryptonNavigator1.PageBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.ControlClient;
             this.kryptonNavigator1.Pages.AddRange(new ComponentFactory.Krypton.Navigator.KryptonPage[] {
             this.kryptonPage1,
             this.kryptonPage2,
             this.kryptonPage3,
             this.kryptonPage4,
             this.kryptonPage5});
-            this.kryptonNavigator1.Panel.PanelBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.PanelClient;
             this.kryptonNavigator1.SelectedIndex = 0;
             this.kryptonNavigator1.Size = new System.Drawing.Size(539, 292);
             this.kryptonNavigator1.TabIndex = 2;
@@ -1291,11 +1284,49 @@
             this.kryptonPage1.Name = "kryptonPage1";
             this.kryptonPage1.Size = new System.Drawing.Size(537, 265);
             this.kryptonPage1.StateCommon.Page.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
-            this.kryptonPage1.StateCommon.Page.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.kryptonPage1.Text = "General";
-            this.kryptonPage1.ToolTipStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.ToolTip;
             this.kryptonPage1.ToolTipTitle = "Page ToolTip";
             this.kryptonPage1.UniqueName = "AB7F5BF5469E410F2AACDE23D6BE4CFA";
+            // 
+            // kryptonLabel5
+            // 
+            this.kryptonLabel5.Location = new System.Drawing.Point(17, 111);
+            this.kryptonLabel5.Name = "kryptonLabel5";
+            this.kryptonLabel5.Size = new System.Drawing.Size(74, 20);
+            this.kryptonLabel5.TabIndex = 202;
+            this.kryptonLabel5.Values.Text = "Descripcion";
+            // 
+            // kryptonLabel4
+            // 
+            this.kryptonLabel4.Location = new System.Drawing.Point(159, 76);
+            this.kryptonLabel4.Name = "kryptonLabel4";
+            this.kryptonLabel4.Size = new System.Drawing.Size(56, 20);
+            this.kryptonLabel4.TabIndex = 201;
+            this.kryptonLabel4.Values.Text = "Sucursal";
+            // 
+            // kryptonLabel3
+            // 
+            this.kryptonLabel3.Location = new System.Drawing.Point(159, 46);
+            this.kryptonLabel3.Name = "kryptonLabel3";
+            this.kryptonLabel3.Size = new System.Drawing.Size(57, 20);
+            this.kryptonLabel3.TabIndex = 200;
+            this.kryptonLabel3.Values.Text = "Empresa";
+            // 
+            // kryptonLabel2
+            // 
+            this.kryptonLabel2.Location = new System.Drawing.Point(17, 76);
+            this.kryptonLabel2.Name = "kryptonLabel2";
+            this.kryptonLabel2.Size = new System.Drawing.Size(50, 20);
+            this.kryptonLabel2.TabIndex = 199;
+            this.kryptonLabel2.Values.Text = "Codigo";
+            // 
+            // kryptonLabel1
+            // 
+            this.kryptonLabel1.Location = new System.Drawing.Point(17, 46);
+            this.kryptonLabel1.Name = "kryptonLabel1";
+            this.kryptonLabel1.Size = new System.Drawing.Size(21, 20);
+            this.kryptonLabel1.TabIndex = 198;
+            this.kryptonLabel1.Values.Text = "Id";
             // 
             // kryptonPage2
             // 
@@ -1314,136 +1345,11 @@
             this.kryptonPage2.LastVisibleSet = true;
             this.kryptonPage2.MinimumSize = new System.Drawing.Size(50, 50);
             this.kryptonPage2.Name = "kryptonPage2";
-            this.kryptonPage2.Size = new System.Drawing.Size(502, 265);
+            this.kryptonPage2.Size = new System.Drawing.Size(537, 265);
             this.kryptonPage2.StateCommon.Page.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
-            this.kryptonPage2.StateCommon.Page.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.kryptonPage2.Text = "Gerencias";
-            this.kryptonPage2.ToolTipStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.ToolTip;
             this.kryptonPage2.ToolTipTitle = "Page ToolTip";
             this.kryptonPage2.UniqueName = "190BB81A28D44AB0C2A4E0951AA4D5E2";
-            // 
-            // kryptonPage3
-            // 
-            this.kryptonPage3.AutoHiddenSlideSize = new System.Drawing.Size(200, 200);
-            this.kryptonPage3.Controls.Add(this.cbGerencias);
-            this.kryptonPage3.Controls.Add(this.toolStrip3);
-            this.kryptonPage3.Controls.Add(this.txtCodigoAreas);
-            this.kryptonPage3.Controls.Add(this.kryptonLabel10);
-            this.kryptonPage3.Controls.Add(this.dgvAreas);
-            this.kryptonPage3.Controls.Add(this.txtIdAreas);
-            this.kryptonPage3.Controls.Add(this.txtNombreAreas);
-            this.kryptonPage3.Controls.Add(this.kryptonLabel11);
-            this.kryptonPage3.Controls.Add(this.kryptonLabel12);
-            this.kryptonPage3.Controls.Add(this.kryptonLabel13);
-            this.kryptonPage3.Flags = 65534;
-            this.kryptonPage3.LastVisibleSet = true;
-            this.kryptonPage3.MinimumSize = new System.Drawing.Size(50, 50);
-            this.kryptonPage3.Name = "kryptonPage3";
-            this.kryptonPage3.Size = new System.Drawing.Size(502, 265);
-            this.kryptonPage3.StateCommon.Page.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
-            this.kryptonPage3.StateCommon.Page.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
-            this.kryptonPage3.Text = "Areas";
-            this.kryptonPage3.ToolTipStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.ToolTip;
-            this.kryptonPage3.ToolTipTitle = "Page ToolTip";
-            this.kryptonPage3.UniqueName = "CFC4C8B98AD1451280B0BEFF5E538B72";
-            // 
-            // kryptonPage4
-            // 
-            this.kryptonPage4.AutoHiddenSlideSize = new System.Drawing.Size(200, 200);
-            this.kryptonPage4.Controls.Add(this.cbArea);
-            this.kryptonPage4.Controls.Add(this.toolStrip4);
-            this.kryptonPage4.Controls.Add(this.txtCodigoSeccion);
-            this.kryptonPage4.Controls.Add(this.kryptonLabel14);
-            this.kryptonPage4.Controls.Add(this.dgvSecciones);
-            this.kryptonPage4.Controls.Add(this.txtIdSeccion);
-            this.kryptonPage4.Controls.Add(this.txtNombreSeccion);
-            this.kryptonPage4.Controls.Add(this.kryptonLabel15);
-            this.kryptonPage4.Controls.Add(this.kryptonLabel16);
-            this.kryptonPage4.Controls.Add(this.kryptonLabel17);
-            this.kryptonPage4.Flags = 65534;
-            this.kryptonPage4.LastVisibleSet = true;
-            this.kryptonPage4.MinimumSize = new System.Drawing.Size(50, 50);
-            this.kryptonPage4.Name = "kryptonPage4";
-            this.kryptonPage4.Size = new System.Drawing.Size(502, 265);
-            this.kryptonPage4.StateCommon.Page.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
-            this.kryptonPage4.StateCommon.Page.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
-            this.kryptonPage4.Text = "Secciones";
-            this.kryptonPage4.ToolTipStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.ToolTip;
-            this.kryptonPage4.ToolTipTitle = "Page ToolTip";
-            this.kryptonPage4.UniqueName = "D3D2EFA513534BE3828807554E8D3F7B";
-            // 
-            // kryptonPage5
-            // 
-            this.kryptonPage5.AutoHiddenSlideSize = new System.Drawing.Size(200, 200);
-            this.kryptonPage5.Controls.Add(this.cbSeccion);
-            this.kryptonPage5.Controls.Add(this.toolStrip5);
-            this.kryptonPage5.Controls.Add(this.txtCodigoSubSeccion);
-            this.kryptonPage5.Controls.Add(this.kryptonLabel18);
-            this.kryptonPage5.Controls.Add(this.txtIdSubSeccion);
-            this.kryptonPage5.Controls.Add(this.txtNombreSubSeccion);
-            this.kryptonPage5.Controls.Add(this.kryptonLabel19);
-            this.kryptonPage5.Controls.Add(this.kryptonLabel20);
-            this.kryptonPage5.Controls.Add(this.kryptonLabel21);
-            this.kryptonPage5.Controls.Add(this.dgvSubSecciones);
-            this.kryptonPage5.Flags = 65534;
-            this.kryptonPage5.LastVisibleSet = true;
-            this.kryptonPage5.MinimumSize = new System.Drawing.Size(50, 50);
-            this.kryptonPage5.Name = "kryptonPage5";
-            this.kryptonPage5.Size = new System.Drawing.Size(537, 265);
-            this.kryptonPage5.StateCommon.Page.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
-            this.kryptonPage5.StateCommon.Page.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
-            this.kryptonPage5.Text = "SubSecciones";
-            this.kryptonPage5.ToolTipStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.ToolTip;
-            this.kryptonPage5.ToolTipTitle = "Page ToolTip";
-            this.kryptonPage5.UniqueName = "44F90548305447A6A3A6DFE9A0A61CFE";
-            // 
-            // foreverContextMenuStrip1
-            // 
-            this.foreverContextMenuStrip1.Font = new System.Drawing.Font("Segoe UI", 8F);
-            this.foreverContextMenuStrip1.ForeColor = System.Drawing.Color.White;
-            this.foreverContextMenuStrip1.Name = "foreverContextMenuStrip1";
-            this.foreverContextMenuStrip1.ShowImageMargin = false;
-            this.foreverContextMenuStrip1.Size = new System.Drawing.Size(36, 4);
-            // 
-            // kryptonLabel1
-            // 
-            this.kryptonLabel1.Location = new System.Drawing.Point(17, 46);
-            this.kryptonLabel1.Name = "kryptonLabel1";
-            this.kryptonLabel1.Size = new System.Drawing.Size(21, 20);
-            this.kryptonLabel1.TabIndex = 198;
-            this.kryptonLabel1.Values.Text = "Id";
-            // 
-            // kryptonLabel2
-            // 
-            this.kryptonLabel2.Location = new System.Drawing.Point(17, 76);
-            this.kryptonLabel2.Name = "kryptonLabel2";
-            this.kryptonLabel2.Size = new System.Drawing.Size(50, 20);
-            this.kryptonLabel2.TabIndex = 199;
-            this.kryptonLabel2.Values.Text = "Codigo";
-            // 
-            // kryptonLabel3
-            // 
-            this.kryptonLabel3.Location = new System.Drawing.Point(159, 46);
-            this.kryptonLabel3.Name = "kryptonLabel3";
-            this.kryptonLabel3.Size = new System.Drawing.Size(57, 20);
-            this.kryptonLabel3.TabIndex = 200;
-            this.kryptonLabel3.Values.Text = "Empresa";
-            // 
-            // kryptonLabel4
-            // 
-            this.kryptonLabel4.Location = new System.Drawing.Point(159, 76);
-            this.kryptonLabel4.Name = "kryptonLabel4";
-            this.kryptonLabel4.Size = new System.Drawing.Size(56, 20);
-            this.kryptonLabel4.TabIndex = 201;
-            this.kryptonLabel4.Values.Text = "Sucursal";
-            // 
-            // kryptonLabel5
-            // 
-            this.kryptonLabel5.Location = new System.Drawing.Point(17, 111);
-            this.kryptonLabel5.Name = "kryptonLabel5";
-            this.kryptonLabel5.Size = new System.Drawing.Size(74, 20);
-            this.kryptonLabel5.TabIndex = 202;
-            this.kryptonLabel5.Values.Text = "Descripcion";
             // 
             // kryptonLabel6
             // 
@@ -1477,6 +1383,29 @@
             this.kryptonLabel9.TabIndex = 202;
             this.kryptonLabel9.Values.Text = "Id";
             // 
+            // kryptonPage3
+            // 
+            this.kryptonPage3.AutoHiddenSlideSize = new System.Drawing.Size(200, 200);
+            this.kryptonPage3.Controls.Add(this.cbGerencias);
+            this.kryptonPage3.Controls.Add(this.toolStrip3);
+            this.kryptonPage3.Controls.Add(this.txtCodigoAreas);
+            this.kryptonPage3.Controls.Add(this.kryptonLabel10);
+            this.kryptonPage3.Controls.Add(this.dgvAreas);
+            this.kryptonPage3.Controls.Add(this.txtIdAreas);
+            this.kryptonPage3.Controls.Add(this.txtNombreAreas);
+            this.kryptonPage3.Controls.Add(this.kryptonLabel11);
+            this.kryptonPage3.Controls.Add(this.kryptonLabel12);
+            this.kryptonPage3.Controls.Add(this.kryptonLabel13);
+            this.kryptonPage3.Flags = 65534;
+            this.kryptonPage3.LastVisibleSet = true;
+            this.kryptonPage3.MinimumSize = new System.Drawing.Size(50, 50);
+            this.kryptonPage3.Name = "kryptonPage3";
+            this.kryptonPage3.Size = new System.Drawing.Size(537, 265);
+            this.kryptonPage3.StateCommon.Page.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
+            this.kryptonPage3.Text = "Areas";
+            this.kryptonPage3.ToolTipTitle = "Page ToolTip";
+            this.kryptonPage3.UniqueName = "CFC4C8B98AD1451280B0BEFF5E538B72";
+            // 
             // kryptonLabel10
             // 
             this.kryptonLabel10.Location = new System.Drawing.Point(146, 72);
@@ -1508,6 +1437,29 @@
             this.kryptonLabel13.Size = new System.Drawing.Size(21, 20);
             this.kryptonLabel13.TabIndex = 206;
             this.kryptonLabel13.Values.Text = "Id";
+            // 
+            // kryptonPage4
+            // 
+            this.kryptonPage4.AutoHiddenSlideSize = new System.Drawing.Size(200, 200);
+            this.kryptonPage4.Controls.Add(this.cbArea);
+            this.kryptonPage4.Controls.Add(this.toolStrip4);
+            this.kryptonPage4.Controls.Add(this.txtCodigoSeccion);
+            this.kryptonPage4.Controls.Add(this.kryptonLabel14);
+            this.kryptonPage4.Controls.Add(this.dgvSecciones);
+            this.kryptonPage4.Controls.Add(this.txtIdSeccion);
+            this.kryptonPage4.Controls.Add(this.txtNombreSeccion);
+            this.kryptonPage4.Controls.Add(this.kryptonLabel15);
+            this.kryptonPage4.Controls.Add(this.kryptonLabel16);
+            this.kryptonPage4.Controls.Add(this.kryptonLabel17);
+            this.kryptonPage4.Flags = 65534;
+            this.kryptonPage4.LastVisibleSet = true;
+            this.kryptonPage4.MinimumSize = new System.Drawing.Size(50, 50);
+            this.kryptonPage4.Name = "kryptonPage4";
+            this.kryptonPage4.Size = new System.Drawing.Size(537, 265);
+            this.kryptonPage4.StateCommon.Page.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
+            this.kryptonPage4.Text = "Secciones";
+            this.kryptonPage4.ToolTipTitle = "Page ToolTip";
+            this.kryptonPage4.UniqueName = "D3D2EFA513534BE3828807554E8D3F7B";
             // 
             // kryptonLabel14
             // 
@@ -1541,6 +1493,29 @@
             this.kryptonLabel17.TabIndex = 210;
             this.kryptonLabel17.Values.Text = "Id";
             // 
+            // kryptonPage5
+            // 
+            this.kryptonPage5.AutoHiddenSlideSize = new System.Drawing.Size(200, 200);
+            this.kryptonPage5.Controls.Add(this.cbSeccion);
+            this.kryptonPage5.Controls.Add(this.toolStrip5);
+            this.kryptonPage5.Controls.Add(this.txtCodigoSubSeccion);
+            this.kryptonPage5.Controls.Add(this.kryptonLabel18);
+            this.kryptonPage5.Controls.Add(this.txtIdSubSeccion);
+            this.kryptonPage5.Controls.Add(this.txtNombreSubSeccion);
+            this.kryptonPage5.Controls.Add(this.kryptonLabel19);
+            this.kryptonPage5.Controls.Add(this.kryptonLabel20);
+            this.kryptonPage5.Controls.Add(this.kryptonLabel21);
+            this.kryptonPage5.Controls.Add(this.dgvSubSecciones);
+            this.kryptonPage5.Flags = 65534;
+            this.kryptonPage5.LastVisibleSet = true;
+            this.kryptonPage5.MinimumSize = new System.Drawing.Size(50, 50);
+            this.kryptonPage5.Name = "kryptonPage5";
+            this.kryptonPage5.Size = new System.Drawing.Size(537, 265);
+            this.kryptonPage5.StateCommon.Page.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
+            this.kryptonPage5.Text = "SubSecciones";
+            this.kryptonPage5.ToolTipTitle = "Page ToolTip";
+            this.kryptonPage5.UniqueName = "44F90548305447A6A3A6DFE9A0A61CFE";
+            // 
             // kryptonLabel18
             // 
             this.kryptonLabel18.Location = new System.Drawing.Point(146, 70);
@@ -1573,6 +1548,14 @@
             this.kryptonLabel21.TabIndex = 214;
             this.kryptonLabel21.Values.Text = "Id";
             // 
+            // foreverContextMenuStrip1
+            // 
+            this.foreverContextMenuStrip1.Font = new System.Drawing.Font("Segoe UI", 8F);
+            this.foreverContextMenuStrip1.ForeColor = System.Drawing.Color.White;
+            this.foreverContextMenuStrip1.Name = "foreverContextMenuStrip1";
+            this.foreverContextMenuStrip1.ShowImageMargin = false;
+            this.foreverContextMenuStrip1.Size = new System.Drawing.Size(36, 4);
+            // 
             // FrmEstructuraAdministrativa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1595,26 +1578,26 @@
             this.tcEstructuraAdministrativa.ResumeLayout(false);
             this.tpGerencia.ResumeLayout(false);
             this.tpGerencia.PerformLayout();
+            this.tpGerencias.ResumeLayout(false);
+            this.tpGerencias.PerformLayout();
+            this.tpArea.ResumeLayout(false);
+            this.tpArea.PerformLayout();
+            this.tpSeccion.ResumeLayout(false);
+            this.tpSeccion.PerformLayout();
+            this.tpSubSecciones.ResumeLayout(false);
+            this.tpSubSecciones.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGerencia)).EndInit();
-            this.tpGerencias.ResumeLayout(false);
-            this.tpGerencias.PerformLayout();
             this.toolStrip2.ResumeLayout(false);
             this.toolStrip2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGerencias)).EndInit();
-            this.tpArea.ResumeLayout(false);
-            this.tpArea.PerformLayout();
             this.toolStrip3.ResumeLayout(false);
             this.toolStrip3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAreas)).EndInit();
-            this.tpSeccion.ResumeLayout(false);
-            this.tpSeccion.PerformLayout();
             this.toolStrip4.ResumeLayout(false);
             this.toolStrip4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSecciones)).EndInit();
-            this.tpSubSecciones.ResumeLayout(false);
-            this.tpSubSecciones.PerformLayout();
             this.toolStrip5.ResumeLayout(false);
             this.toolStrip5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSubSecciones)).EndInit();

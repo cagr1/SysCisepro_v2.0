@@ -242,7 +242,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                 _correoCliente = dgvCliente.Rows(0).Cells(13).Value '
             End If
             'Catch ex As Exception
-            '    MsgBox("CARGAR DATOS CLIENTE." & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "MENSAJE DE EXCEPCIÓN")
+            '    MsgBox("CARGAR DATOS CLIENTE." & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
             'End Try
         End Sub
 
@@ -264,7 +264,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
 
             End If
             'Catch ex As Exception
-            '    MsgBox("CARGAR DATOS EMPRESA." & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "MENSAJE DE EXCEPCIÓN")
+            '    MsgBox("CARGAR DATOS EMPRESA." & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
             'End Try
         End Sub
 
@@ -312,7 +312,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                 dgvFacturaVenta.ReadOnly = True
                 dgvFacturaVenta.EditMode = DataGridViewEditMode.EditProgrammatically
             Catch ex As Exception
-                MsgBox("METODO CARGAR FACTURA VENTA" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "MENSAJE DE EXCEPCIÓN")
+                MsgBox("METODO CARGAR FACTURA VENTA" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
             End Try
         End Sub
 
@@ -449,9 +449,9 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
             writer.Flush()
             writer.Close()
 
-            'MsgBox("XML GENERADO CORRECTAMENTE", MsgBoxStyle.Information, "MENSAJE DE INFORMACIÓN.")
+            'MsgBox("XML GENERADO CORRECTAMENTE", MsgBoxStyle.Information, "Mensaje de información.")
             'Catch ex As Exception
-            MsgBox(If(res, " - XML GUARDADO", " - XML NO GUARDADO!"), MsgBoxStyle.Exclamation, "MENSAJE DEL SISTEMA")
+            MsgBox(If(res, " - XML GUARDADO", " - XML NO GUARDADO!"), MsgBoxStyle.Exclamation, "Mensaje del sistema")
             'End Try
         End Sub
         Private Sub CargarControlListView(ByVal path As String)
@@ -488,7 +488,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                     ListView1.Items.Add(item)
                 End If
             Catch ex As Exception
-                MsgBox("EL ARCHIVO XML NO EXISTE" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "MENSAJE DE EXCEPCIÓN")
+                MsgBox("EL ARCHIVO XML NO EXISTE" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
             End Try
 
             'For Each file As FileInfo In d.GetFiles(n & ".xml") ' recorre los archivos del directorio que coicidan con la busqueda
@@ -537,7 +537,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                 ListView1.Items.Add(item)
 
             Catch ex As Exception
-                MsgBox("EL ARCHIVO XML NO EXISTE" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "MENSAJE DE EXCEPCIÓN")
+                MsgBox("EL ARCHIVO XML NO EXISTE" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
             End Try
 
             'For Each file As FileInfo In d.GetFiles(n & ".xml") ' recorre los archivos del directorio que coicidan con la busqueda
@@ -696,7 +696,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
         Private Sub btnEnviar_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnEnviar.Click
             If dgvFacturaVenta.Rows.Count > 0 Then
                 If txtAsunto.Text = "" Or txtMensaje.Text = "" Then
-                    MsgBox("INGRESE UN ASUNTO / MENSAJE ANTES DE ENVIAR", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                    MsgBox("INGRESE UN ASUNTO / MENSAJE ANTES DE ENVIAR", MsgBoxStyle.Exclamation, "Mensaje de validación")
                 Else
                     For indice = 0 To dgvFacturaVenta.Rows.Count - 1
                         If dgvFacturaVenta.Rows(indice).Cells(1).Value.ToString <> "0" Then
@@ -909,7 +909,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                     xmlDoc.Save(RutaDocsElec & "\COMPROBANTES FIRMADOS\FACTURAS - RETENCIONES FONDO\FACTURA " & numeroFactura & ".xml")
             End Select
 
-            MsgBox("FIRMA GENERADA CORRECTAMENTE", MsgBoxStyle.Information, "MENSAJE DE INFORMACIÓN.")
+            MsgBox("FIRMA GENERADA CORRECTAMENTE", MsgBoxStyle.Information, "Mensaje de información.")
         End Sub
 
         Private Function NewId(ByVal prefix As String) As String

@@ -126,14 +126,14 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
                 If dgvActivoFijo.CurrentRow.Cells.Item(6).Value IsNot Nothing AndAlso Not String.IsNullOrEmpty(dgvActivoFijo.CurrentRow.Cells.Item(6).Value.ToString()) Then
                     Valor = Convert.ToDecimal(dgvActivoFijo.CurrentRow.Cells.Item(6).Value)
                 Else
-                    MsgBox("El valor de factura no puede estar vacío.", MsgBoxStyle.Information, "MENSAJE DE INFORMACIÓN")
+                    MsgBox("El valor de factura no puede estar vacío.", MsgBoxStyle.Information, "Mensaje de información")
                     Return
                 End If
 
                 If dgvActivoFijo.CurrentRow.Cells.Item(2).Value IsNot Nothing AndAlso Not String.IsNullOrEmpty(dgvActivoFijo.CurrentRow.Cells.Item(2).Value.ToString()) Then
                     Porcentaje = Convert.ToDecimal(dgvActivoFijo.CurrentRow.Cells.Item(2).Value)
                 Else
-                    MsgBox("El porcentaje no puede estar vacío.", MsgBoxStyle.Information, "MENSAJE DE INFORMACIÓN")
+                    MsgBox("El porcentaje no puede estar vacío.", MsgBoxStyle.Information, "Mensaje de información")
                     Return
                 End If
 
@@ -144,7 +144,7 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
                 lblValorResidual.Text = Decimal.Round((Valor * Porcentaje), 3).ToString()
                 lblTope.Text = dgvActivoFijo.CurrentRow.Cells.Item(4).Value.ToString()
             Catch
-                MsgBox("Por favor cargue el detalle de Depreciacion anterior", MsgBoxStyle.Information, "MENSAJE DE INFORMACIÓN")
+                MsgBox("Por favor cargue el detalle de Depreciacion anterior", MsgBoxStyle.Information, "Mensaje de información")
             End Try
 
         End Sub
@@ -152,13 +152,13 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
         Private Sub btnGuardar_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnGuardar.Click
             If txtIdDepreciacion.Text <> "" Then
 
-                If MessageBox.Show("¿ESTA SEGURO QUE DESEA GUARDAR?", "MENSAJE DE VALIDACIÓN", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> MsgBoxResult.Yes Then Return
+                If MessageBox.Show("¿Esta seguro que desea guardar?", "Mensaje de validación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> MsgBoxResult.Yes Then Return
                 _sqlCommands.Clear()
                 Dim id = Convert.ToInt32(dgvActivoFijo.CurrentRow.Cells.Item(0).Value)
                 Dim Idrepe = _objDetalleDepreciacion.BuscarIdDetalleDepreciacionRepetido(_tipoCon, id)
 
                 If (Idrepe = id) Then
-                    MessageBox.Show("LA DEPRECIACION YA SE REALIZO!!", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                    MessageBox.Show("La depreciacion ya se realizo!!", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
                     Return
                 End If
 
@@ -204,7 +204,7 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
                 If res(0) Then btnCargar_Click(Nothing, Nothing)
                 MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
             Else
-                MsgBox("No se puede guardar si no tiene un identificador de Depreciación", MsgBoxStyle.Information, "MENSAJE DE INFORMACIÓN")
+                MsgBox("No se puede guardar si no tiene un identificador de Depreciación", MsgBoxStyle.Information, "Mensaje de información")
             End If
         End Sub
         Private Sub btnReporte_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnReporte.Click

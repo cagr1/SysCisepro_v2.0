@@ -136,7 +136,7 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
                 MessageBox.Show("Por favor llene la información de la planilla para guardar", "VALIDACIÓN DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
             Else
 
-                If MessageBox.Show("Seguro que desea guardar la planilla actual?", "MENSAJE DEL SISTEMA", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
+                If MessageBox.Show("Seguro que desea guardar la planilla actual?", "Mensaje del sistema", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
 
                     _sqlCommands.Clear()
 
@@ -320,12 +320,12 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
 
         Private Sub btnGenerarExcel_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnGenerarExcel.Click
             If _tipoGuardar <> 0 Then
-                MessageBox.Show("No se puede generar el archivo mientras está activa una opción de guardar o procesar", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                MessageBox.Show("No se puede generar el archivo mientras está activa una opción de guardar o procesar", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
                 Return
             End If
 
             If _tipoGuardar <> 0 Then
-                MessageBox.Show("No ha seleccionado ninguna orden para generar el archivo!", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                MessageBox.Show("No ha seleccionado ninguna orden para generar el archivo!", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
                 Return
             End If
 
@@ -395,11 +395,11 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
                     Next
 
                     objWriter.Close()
-                    MessageBox.Show("Archivo generado correctamente", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    MessageBox.Show("Archivo generado correctamente", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Information)
                 End If
 
             Catch ex As Exception
-                MessageBox.Show("Ocurrió un problema al generar el archivo. Por favor, contácte al administrador!", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                MessageBox.Show("Ocurrió un problema al generar el archivo. Por favor, contácte al administrador!", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Error)
             End Try
         End Sub
 
@@ -600,7 +600,7 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
         Private Sub ExportarDatosExcel(ByVal dgvAsientosDiario As DataGridView, ByVal titulo As String)
             Try
                 If dgvAsientosDiario.Rows.Count = 0 Then
-                    MsgBox("NO HAY DATOS QUE EXPORTAR!", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                    MsgBox("No hay datos que exportar!", MsgBoxStyle.Exclamation, "Mensaje de validación")
                     Return
                 End If
 
@@ -669,7 +669,7 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
                 app.DisplayAlerts = True
                 'workbook.SaveAs(sfd.FileName, Excel.XlFileFormat.xlWorkbookNormal, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Excel.XlSaveAsAccessMode.xlExclusive, Type.Missing, Type.Missing, Type.Missing, Type.Missing)
             Catch ex As Exception
-                MessageBox.Show("HUBO UN PROBLEMA AL EXPORTAR DATOS!", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                MessageBox.Show("Hubo un problema al exportar datos!", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Error)
             End Try             
         End Sub
 

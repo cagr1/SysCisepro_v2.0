@@ -82,7 +82,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.PROVEEDORES
                         dgvProveedorGeneral.ReadOnly = False
                         dgvProveedorGeneral.EditMode = DataGridViewEditMode.EditProgrammatically
                     Else
-                        MsgBox("SELECCIONE UN PARÁMETRO DE BÚSQUEDA", MsgBoxStyle.Critical, "MENSAJE DE VALIDACIÓN")
+                        MsgBox("SELECCIONE UN PARÁMETRO DE BÚSQUEDA", MsgBoxStyle.Critical, "Mensaje de validación")
                     End If
                 End If
             Catch ex As Exception

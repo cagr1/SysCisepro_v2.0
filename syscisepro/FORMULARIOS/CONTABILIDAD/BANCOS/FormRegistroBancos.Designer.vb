@@ -34,25 +34,28 @@
             Me.btnCancelarBanco = New System.Windows.Forms.ToolStripMenuItem()
             Me.btnReporteBanco = New System.Windows.Forms.ToolStripMenuItem()
             Me.txtIdBanco = New System.Windows.Forms.TextBox()
-            Me.lblEmail = New System.Windows.Forms.Label()
             Me.txtNombreBanco = New System.Windows.Forms.TextBox()
-            Me.lblFax = New System.Windows.Forms.Label()
-            Me.lblTelefonos = New System.Windows.Forms.Label()
             Me.txtDireccionBanco = New System.Windows.Forms.TextBox()
-            Me.lblOficialCredito = New System.Windows.Forms.Label()
             Me.txtOficialCreditoBanco = New System.Windows.Forms.TextBox()
-            Me.lblDireccionBanco = New System.Windows.Forms.Label()
             Me.txtTelefonoBanco = New System.Windows.Forms.TextBox()
             Me.txtFaxBanco = New System.Windows.Forms.TextBox()
-            Me.lblNombreBanco = New System.Windows.Forms.Label()
             Me.txtEMailBanco = New System.Windows.Forms.TextBox()
-            Me.lblIdBanco = New System.Windows.Forms.Label()
-            Me.lblCodigoCuentaBanco = New System.Windows.Forms.Label()
             Me.txtCodigoCuentaBanco = New System.Windows.Forms.TextBox()
-            Me.gpBancos = New System.Windows.Forms.GroupBox()
+            Me.KryptonGroupBox1 = New Krypton.Toolkit.KryptonGroupBox()
+            Me.KryptonLabel1 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel2 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel3 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel4 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel5 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel6 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel7 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel8 = New Krypton.Toolkit.KryptonLabel()
             CType(Me.dgvBancos, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.msKardex.SuspendLayout()
-            Me.gpBancos.SuspendLayout()
+            CType(Me.KryptonGroupBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType(Me.KryptonGroupBox1.Panel, System.ComponentModel.ISupportInitialize).BeginInit()
+            Me.KryptonGroupBox1.Panel.SuspendLayout()
+            Me.KryptonGroupBox1.SuspendLayout()
             Me.SuspendLayout()
             '
             'dgvBancos
@@ -62,7 +65,8 @@
             Me.dgvBancos.AllowUserToResizeRows = False
             DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
             Me.dgvBancos.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
-            Me.dgvBancos.BackgroundColor = System.Drawing.Color.White
+            Me.dgvBancos.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(185, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(227, Byte), Integer))
+            Me.dgvBancos.BorderStyle = System.Windows.Forms.BorderStyle.None
             Me.dgvBancos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
             Me.dgvBancos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
             DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
@@ -73,13 +77,13 @@
             DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
             DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
             Me.dgvBancos.DefaultCellStyle = DataGridViewCellStyle2
-            Me.dgvBancos.Location = New System.Drawing.Point(1, 160)
+            Me.dgvBancos.Location = New System.Drawing.Point(12, 177)
             Me.dgvBancos.MultiSelect = False
             Me.dgvBancos.Name = "dgvBancos"
             Me.dgvBancos.ReadOnly = True
             Me.dgvBancos.RowHeadersVisible = False
             Me.dgvBancos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvBancos.Size = New System.Drawing.Size(608, 231)
+            Me.dgvBancos.Size = New System.Drawing.Size(511, 214)
             Me.dgvBancos.TabIndex = 17
             '
             'msKardex
@@ -90,7 +94,7 @@
             Me.msKardex.Location = New System.Drawing.Point(0, 0)
             Me.msKardex.Name = "msKardex"
             Me.msKardex.Padding = New System.Windows.Forms.Padding(7, 2, 0, 2)
-            Me.msKardex.Size = New System.Drawing.Size(614, 32)
+            Me.msKardex.Size = New System.Drawing.Size(532, 32)
             Me.msKardex.TabIndex = 185
             Me.msKardex.Text = "msIngresoBodega"
             '
@@ -147,98 +151,48 @@
             Me.txtIdBanco.BackColor = System.Drawing.Color.White
             Me.txtIdBanco.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtIdBanco.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtIdBanco.Location = New System.Drawing.Point(78, 15)
+            Me.txtIdBanco.Location = New System.Drawing.Point(63, 3)
             Me.txtIdBanco.Name = "txtIdBanco"
             Me.txtIdBanco.Size = New System.Drawing.Size(39, 21)
             Me.txtIdBanco.TabIndex = 8
-            '
-            'lblEmail
-            '
-            Me.lblEmail.AutoSize = True
-            Me.lblEmail.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.lblEmail.Location = New System.Drawing.Point(400, 98)
-            Me.lblEmail.Name = "lblEmail"
-            Me.lblEmail.Size = New System.Drawing.Size(51, 13)
-            Me.lblEmail.TabIndex = 7
-            Me.lblEmail.Text = "E - MAIL:"
             '
             'txtNombreBanco
             '
             Me.txtNombreBanco.BackColor = System.Drawing.Color.White
             Me.txtNombreBanco.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtNombreBanco.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtNombreBanco.Location = New System.Drawing.Point(78, 43)
+            Me.txtNombreBanco.Location = New System.Drawing.Point(63, 29)
             Me.txtNombreBanco.Name = "txtNombreBanco"
-            Me.txtNombreBanco.Size = New System.Drawing.Size(315, 21)
+            Me.txtNombreBanco.Size = New System.Drawing.Size(220, 21)
             Me.txtNombreBanco.TabIndex = 9
-            '
-            'lblFax
-            '
-            Me.lblFax.AutoSize = True
-            Me.lblFax.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.lblFax.Location = New System.Drawing.Point(400, 72)
-            Me.lblFax.Name = "lblFax"
-            Me.lblFax.Size = New System.Drawing.Size(74, 13)
-            Me.lblFax.TabIndex = 6
-            Me.lblFax.Text = "NRO DE FAX :"
-            '
-            'lblTelefonos
-            '
-            Me.lblTelefonos.AutoSize = True
-            Me.lblTelefonos.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.lblTelefonos.Location = New System.Drawing.Point(400, 46)
-            Me.lblTelefonos.Name = "lblTelefonos"
-            Me.lblTelefonos.Size = New System.Drawing.Size(68, 13)
-            Me.lblTelefonos.TabIndex = 5
-            Me.lblTelefonos.Text = "TELEFONO :"
             '
             'txtDireccionBanco
             '
             Me.txtDireccionBanco.BackColor = System.Drawing.Color.White
             Me.txtDireccionBanco.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtDireccionBanco.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtDireccionBanco.Location = New System.Drawing.Point(78, 69)
+            Me.txtDireccionBanco.Location = New System.Drawing.Point(63, 55)
             Me.txtDireccionBanco.Multiline = True
             Me.txtDireccionBanco.Name = "txtDireccionBanco"
-            Me.txtDireccionBanco.Size = New System.Drawing.Size(315, 20)
+            Me.txtDireccionBanco.Size = New System.Drawing.Size(220, 20)
             Me.txtDireccionBanco.TabIndex = 11
-            '
-            'lblOficialCredito
-            '
-            Me.lblOficialCredito.AutoSize = True
-            Me.lblOficialCredito.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.lblOficialCredito.Location = New System.Drawing.Point(10, 98)
-            Me.lblOficialCredito.Name = "lblOficialCredito"
-            Me.lblOficialCredito.Size = New System.Drawing.Size(117, 13)
-            Me.lblOficialCredito.TabIndex = 4
-            Me.lblOficialCredito.Text = "OFICIAL DE CREDITO :"
             '
             'txtOficialCreditoBanco
             '
             Me.txtOficialCreditoBanco.BackColor = System.Drawing.Color.White
             Me.txtOficialCreditoBanco.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtOficialCreditoBanco.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtOficialCreditoBanco.Location = New System.Drawing.Point(141, 95)
+            Me.txtOficialCreditoBanco.Location = New System.Drawing.Point(94, 81)
             Me.txtOficialCreditoBanco.Name = "txtOficialCreditoBanco"
-            Me.txtOficialCreditoBanco.Size = New System.Drawing.Size(252, 21)
+            Me.txtOficialCreditoBanco.Size = New System.Drawing.Size(189, 21)
             Me.txtOficialCreditoBanco.TabIndex = 12
-            '
-            'lblDireccionBanco
-            '
-            Me.lblDireccionBanco.AutoSize = True
-            Me.lblDireccionBanco.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.lblDireccionBanco.Location = New System.Drawing.Point(10, 72)
-            Me.lblDireccionBanco.Name = "lblDireccionBanco"
-            Me.lblDireccionBanco.Size = New System.Drawing.Size(66, 13)
-            Me.lblDireccionBanco.TabIndex = 3
-            Me.lblDireccionBanco.Text = "DIRECCION:"
             '
             'txtTelefonoBanco
             '
             Me.txtTelefonoBanco.BackColor = System.Drawing.Color.White
             Me.txtTelefonoBanco.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtTelefonoBanco.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtTelefonoBanco.Location = New System.Drawing.Point(486, 43)
+            Me.txtTelefonoBanco.Location = New System.Drawing.Point(360, 4)
             Me.txtTelefonoBanco.Name = "txtTelefonoBanco"
             Me.txtTelefonoBanco.Size = New System.Drawing.Size(114, 21)
             Me.txtTelefonoBanco.TabIndex = 13
@@ -248,97 +202,133 @@
             Me.txtFaxBanco.BackColor = System.Drawing.Color.White
             Me.txtFaxBanco.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtFaxBanco.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtFaxBanco.Location = New System.Drawing.Point(486, 69)
+            Me.txtFaxBanco.Location = New System.Drawing.Point(360, 28)
             Me.txtFaxBanco.Name = "txtFaxBanco"
             Me.txtFaxBanco.Size = New System.Drawing.Size(114, 21)
             Me.txtFaxBanco.TabIndex = 14
-            '
-            'lblNombreBanco
-            '
-            Me.lblNombreBanco.AutoSize = True
-            Me.lblNombreBanco.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.lblNombreBanco.Location = New System.Drawing.Point(10, 46)
-            Me.lblNombreBanco.Name = "lblNombreBanco"
-            Me.lblNombreBanco.Size = New System.Drawing.Size(59, 13)
-            Me.lblNombreBanco.TabIndex = 1
-            Me.lblNombreBanco.Text = "NOMBRE :"
             '
             'txtEMailBanco
             '
             Me.txtEMailBanco.BackColor = System.Drawing.Color.White
             Me.txtEMailBanco.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtEMailBanco.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtEMailBanco.Location = New System.Drawing.Point(486, 95)
+            Me.txtEMailBanco.Location = New System.Drawing.Point(360, 54)
             Me.txtEMailBanco.Name = "txtEMailBanco"
-            Me.txtEMailBanco.Size = New System.Drawing.Size(114, 21)
+            Me.txtEMailBanco.Size = New System.Drawing.Size(137, 21)
             Me.txtEMailBanco.TabIndex = 15
-            '
-            'lblIdBanco
-            '
-            Me.lblIdBanco.AutoSize = True
-            Me.lblIdBanco.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.lblIdBanco.Location = New System.Drawing.Point(10, 18)
-            Me.lblIdBanco.Name = "lblIdBanco"
-            Me.lblIdBanco.Size = New System.Drawing.Size(23, 13)
-            Me.lblIdBanco.TabIndex = 0
-            Me.lblIdBanco.Text = "ID :"
-            '
-            'lblCodigoCuentaBanco
-            '
-            Me.lblCodigoCuentaBanco.AutoSize = True
-            Me.lblCodigoCuentaBanco.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.lblCodigoCuentaBanco.Location = New System.Drawing.Point(126, 18)
-            Me.lblCodigoCuentaBanco.Name = "lblCodigoCuentaBanco"
-            Me.lblCodigoCuentaBanco.Size = New System.Drawing.Size(54, 13)
-            Me.lblCodigoCuentaBanco.TabIndex = 16
-            Me.lblCodigoCuentaBanco.Text = "CODIGO :"
             '
             'txtCodigoCuentaBanco
             '
             Me.txtCodigoCuentaBanco.BackColor = System.Drawing.Color.White
             Me.txtCodigoCuentaBanco.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtCodigoCuentaBanco.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtCodigoCuentaBanco.Location = New System.Drawing.Point(187, 15)
+            Me.txtCodigoCuentaBanco.Location = New System.Drawing.Point(183, 3)
             Me.txtCodigoCuentaBanco.Name = "txtCodigoCuentaBanco"
             Me.txtCodigoCuentaBanco.Size = New System.Drawing.Size(100, 21)
             Me.txtCodigoCuentaBanco.TabIndex = 17
             '
-            'gpBancos
+            'KryptonGroupBox1
             '
-            Me.gpBancos.BackColor = System.Drawing.Color.White
-            Me.gpBancos.Controls.Add(Me.txtCodigoCuentaBanco)
-            Me.gpBancos.Controls.Add(Me.lblCodigoCuentaBanco)
-            Me.gpBancos.Controls.Add(Me.lblIdBanco)
-            Me.gpBancos.Controls.Add(Me.txtEMailBanco)
-            Me.gpBancos.Controls.Add(Me.lblNombreBanco)
-            Me.gpBancos.Controls.Add(Me.txtFaxBanco)
-            Me.gpBancos.Controls.Add(Me.txtTelefonoBanco)
-            Me.gpBancos.Controls.Add(Me.lblDireccionBanco)
-            Me.gpBancos.Controls.Add(Me.txtOficialCreditoBanco)
-            Me.gpBancos.Controls.Add(Me.lblOficialCredito)
-            Me.gpBancos.Controls.Add(Me.txtDireccionBanco)
-            Me.gpBancos.Controls.Add(Me.lblTelefonos)
-            Me.gpBancos.Controls.Add(Me.lblFax)
-            Me.gpBancos.Controls.Add(Me.txtNombreBanco)
-            Me.gpBancos.Controls.Add(Me.lblEmail)
-            Me.gpBancos.Controls.Add(Me.txtIdBanco)
-            Me.gpBancos.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.gpBancos.Location = New System.Drawing.Point(1, 36)
-            Me.gpBancos.Name = "gpBancos"
-            Me.gpBancos.Size = New System.Drawing.Size(608, 122)
-            Me.gpBancos.TabIndex = 16
-            Me.gpBancos.TabStop = False
-            Me.gpBancos.Text = "BANCOS"
+            Me.KryptonGroupBox1.CaptionOverlap = 0R
+            Me.KryptonGroupBox1.GroupBackStyle = Krypton.Toolkit.PaletteBackStyle.ControlRibbon
+            Me.KryptonGroupBox1.Location = New System.Drawing.Point(8, 35)
+            Me.KryptonGroupBox1.Name = "KryptonGroupBox1"
+            '
+            'KryptonGroupBox1.Panel
+            '
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel8)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel7)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel6)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.txtEMailBanco)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.txtOficialCreditoBanco)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel5)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel4)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel3)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.txtFaxBanco)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.txtCodigoCuentaBanco)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel2)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel1)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.txtIdBanco)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.txtTelefonoBanco)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.txtDireccionBanco)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.txtNombreBanco)
+            Me.KryptonGroupBox1.Size = New System.Drawing.Size(515, 136)
+            Me.KryptonGroupBox1.TabIndex = 186
+            Me.KryptonGroupBox1.Values.Heading = "Datos"
+            '
+            'KryptonLabel1
+            '
+            Me.KryptonLabel1.Location = New System.Drawing.Point(3, 3)
+            Me.KryptonLabel1.Name = "KryptonLabel1"
+            Me.KryptonLabel1.Size = New System.Drawing.Size(21, 20)
+            Me.KryptonLabel1.TabIndex = 0
+            Me.KryptonLabel1.Values.Text = "Id"
+            '
+            'KryptonLabel2
+            '
+            Me.KryptonLabel2.Location = New System.Drawing.Point(127, 3)
+            Me.KryptonLabel2.Name = "KryptonLabel2"
+            Me.KryptonLabel2.Size = New System.Drawing.Size(50, 20)
+            Me.KryptonLabel2.TabIndex = 9
+            Me.KryptonLabel2.Values.Text = "Codigo"
+            '
+            'KryptonLabel3
+            '
+            Me.KryptonLabel3.Location = New System.Drawing.Point(298, 4)
+            Me.KryptonLabel3.Name = "KryptonLabel3"
+            Me.KryptonLabel3.Size = New System.Drawing.Size(58, 20)
+            Me.KryptonLabel3.TabIndex = 18
+            Me.KryptonLabel3.Values.Text = "Telefono"
+            '
+            'KryptonLabel4
+            '
+            Me.KryptonLabel4.Location = New System.Drawing.Point(3, 29)
+            Me.KryptonLabel4.Name = "KryptonLabel4"
+            Me.KryptonLabel4.Size = New System.Drawing.Size(56, 20)
+            Me.KryptonLabel4.TabIndex = 19
+            Me.KryptonLabel4.Values.Text = "Nombre"
+            '
+            'KryptonLabel5
+            '
+            Me.KryptonLabel5.Location = New System.Drawing.Point(3, 55)
+            Me.KryptonLabel5.Name = "KryptonLabel5"
+            Me.KryptonLabel5.Size = New System.Drawing.Size(62, 20)
+            Me.KryptonLabel5.TabIndex = 20
+            Me.KryptonLabel5.Values.Text = "Direccion"
+            '
+            'KryptonLabel6
+            '
+            Me.KryptonLabel6.Location = New System.Drawing.Point(298, 30)
+            Me.KryptonLabel6.Name = "KryptonLabel6"
+            Me.KryptonLabel6.Size = New System.Drawing.Size(28, 20)
+            Me.KryptonLabel6.TabIndex = 21
+            Me.KryptonLabel6.Values.Text = "Fax"
+            '
+            'KryptonLabel7
+            '
+            Me.KryptonLabel7.Location = New System.Drawing.Point(298, 55)
+            Me.KryptonLabel7.Name = "KryptonLabel7"
+            Me.KryptonLabel7.Size = New System.Drawing.Size(40, 20)
+            Me.KryptonLabel7.TabIndex = 22
+            Me.KryptonLabel7.Values.Text = "Email"
+            '
+            'KryptonLabel8
+            '
+            Me.KryptonLabel8.Location = New System.Drawing.Point(3, 81)
+            Me.KryptonLabel8.Name = "KryptonLabel8"
+            Me.KryptonLabel8.Size = New System.Drawing.Size(88, 20)
+            Me.KryptonLabel8.TabIndex = 23
+            Me.KryptonLabel8.Values.Text = "Oficial Credito"
             '
             'FormRegistroBancos
             '
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-            Me.BackColor = System.Drawing.Color.White
-            Me.ClientSize = New System.Drawing.Size(614, 393)
+            Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(185, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(227, Byte), Integer))
+            Me.ClientSize = New System.Drawing.Size(532, 393)
+            Me.Controls.Add(Me.KryptonGroupBox1)
             Me.Controls.Add(Me.msKardex)
             Me.Controls.Add(Me.dgvBancos)
-            Me.Controls.Add(Me.gpBancos)
             Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
             Me.Name = "FormRegistroBancos"
             Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
@@ -350,8 +340,11 @@
             CType(Me.dgvBancos, System.ComponentModel.ISupportInitialize).EndInit()
             Me.msKardex.ResumeLayout(False)
             Me.msKardex.PerformLayout()
-            Me.gpBancos.ResumeLayout(False)
-            Me.gpBancos.PerformLayout()
+            CType(Me.KryptonGroupBox1.Panel, System.ComponentModel.ISupportInitialize).EndInit()
+            Me.KryptonGroupBox1.Panel.ResumeLayout(False)
+            Me.KryptonGroupBox1.Panel.PerformLayout()
+            CType(Me.KryptonGroupBox1, System.ComponentModel.ISupportInitialize).EndInit()
+            Me.KryptonGroupBox1.ResumeLayout(False)
             Me.ResumeLayout(False)
             Me.PerformLayout()
 
@@ -364,21 +357,21 @@
         Friend WithEvents btnCancelarBanco As System.Windows.Forms.ToolStripMenuItem
         Friend WithEvents btnReporteBanco As System.Windows.Forms.ToolStripMenuItem
         Friend WithEvents txtIdBanco As System.Windows.Forms.TextBox
-        Friend WithEvents lblEmail As System.Windows.Forms.Label
         Friend WithEvents txtNombreBanco As System.Windows.Forms.TextBox
-        Friend WithEvents lblFax As System.Windows.Forms.Label
-        Friend WithEvents lblTelefonos As System.Windows.Forms.Label
         Friend WithEvents txtDireccionBanco As System.Windows.Forms.TextBox
-        Friend WithEvents lblOficialCredito As System.Windows.Forms.Label
         Friend WithEvents txtOficialCreditoBanco As System.Windows.Forms.TextBox
-        Friend WithEvents lblDireccionBanco As System.Windows.Forms.Label
         Friend WithEvents txtTelefonoBanco As System.Windows.Forms.TextBox
         Friend WithEvents txtFaxBanco As System.Windows.Forms.TextBox
-        Friend WithEvents lblNombreBanco As System.Windows.Forms.Label
         Friend WithEvents txtEMailBanco As System.Windows.Forms.TextBox
-        Friend WithEvents lblIdBanco As System.Windows.Forms.Label
-        Friend WithEvents lblCodigoCuentaBanco As System.Windows.Forms.Label
         Friend WithEvents txtCodigoCuentaBanco As System.Windows.Forms.TextBox
-        Friend WithEvents gpBancos As System.Windows.Forms.GroupBox
+        Friend WithEvents KryptonGroupBox1 As Krypton.Toolkit.KryptonGroupBox
+        Friend WithEvents KryptonLabel8 As Krypton.Toolkit.KryptonLabel
+        Friend WithEvents KryptonLabel7 As Krypton.Toolkit.KryptonLabel
+        Friend WithEvents KryptonLabel6 As Krypton.Toolkit.KryptonLabel
+        Friend WithEvents KryptonLabel5 As Krypton.Toolkit.KryptonLabel
+        Friend WithEvents KryptonLabel4 As Krypton.Toolkit.KryptonLabel
+        Friend WithEvents KryptonLabel3 As Krypton.Toolkit.KryptonLabel
+        Friend WithEvents KryptonLabel2 As Krypton.Toolkit.KryptonLabel
+        Friend WithEvents KryptonLabel1 As Krypton.Toolkit.KryptonLabel
     End Class
 End Namespace

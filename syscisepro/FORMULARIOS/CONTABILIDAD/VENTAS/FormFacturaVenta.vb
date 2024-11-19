@@ -218,7 +218,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                     '_porcentajeIva = emp.Rows(0)(21)  'AQUI CAMBIO 2024
                 End If
             Catch ex As Exception
-                MsgBox("CARGAR DATOS EMPRESA." & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "MENSAJE DE EXCEPCIÓN")
+                MsgBox("CARGAR DATOS EMPRESA." & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
             End Try
         End Sub
         Private Sub LlenarComboConcepto()
@@ -518,7 +518,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                     End Try
                 End If
             Catch ex As Exception
-                MsgBox("CARGAR DATOS CLIENTE." & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "MENSAJE DE EXCEPCIÓN")
+                MsgBox("CARGAR DATOS CLIENTE." & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
             End Try
         End Sub
         Private Sub CargarConveniosDebitoBanco()
@@ -534,7 +534,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                     VerificarCbConvenio()
                 End If
             Catch ex As Exception
-                MsgBox("ERROR AL CARGAR CONVENIOS DÉBITO BANCARIO:" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "MENSAJE DE EXCEPCIÓN")
+                MsgBox("ERROR AL CARGAR CONVENIOS DÉBITO BANCARIO:" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
             End Try
         End Sub
         Private Sub cmbTipoPagoFactura_SelectedValueChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles cmbTipoPagoFactura.SelectedValueChanged
@@ -602,7 +602,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
         Private Sub dtpFechaEmisionFacturaVenta_ValueChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles dtpFechaEmisionFacturaVenta.ValueChanged
             ObservacionesFecha()
             If Not ValidarFecha() Then
-                MsgBox("LA SECUENCIA DE LOS MESES DE FACTURACIÓN ESTA SALTADA", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                MsgBox("LA SECUENCIA DE LOS MESES DE FACTURACIÓN ESTA SALTADA", MsgBoxStyle.Exclamation, "Mensaje de validación")
             End If
         End Sub
         Private Function ValidarFecha()
@@ -681,7 +681,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                                 dgvDetalleFacturaVenta.CurrentRow.Cells(6).Value = dgvDetalleFacturaVenta.CurrentRow.Cells(4).Value
                             Else
                                 dgvDetalleFacturaVenta.Rows.RemoveAt(dgvDetalleFacturaVenta.CurrentRow.Index)
-                                MsgBox("EL ITEM SELECCIONADO YA ESTA AGREGADO A LA FACTURA.", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                                MsgBox("EL ITEM SELECCIONADO YA ESTA AGREGADO A LA FACTURA.", MsgBoxStyle.Exclamation, "Mensaje de validación")
                                 Exit For
                             End If
                         Else
@@ -754,7 +754,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
         Private Sub btnModificar_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnModificar.Click
             If Not cbxConvenio.DataSource Is Nothing Then
                 If cbxConvenio.Items.Count > 1 And cbxConvenio.SelectedIndex = 0 Then
-                    MessageBox.Show("SELECCIONE EL CONVENIO DÉBTIO BANCO!!", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                    MessageBox.Show("SELECCIONE EL CONVENIO DÉBTIO BANCO!!", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
                     Return
                 End If
             End If
@@ -766,13 +766,13 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
             Dim fechaActualIngreso = New Date(dtpFechaEmisionFacturaVenta.Value.Year, dtpFechaEmisionFacturaVenta.Value.Month, dtpFechaEmisionFacturaVenta.Value.Day)
 
             If fechaMinimaIngreso > fechaActualIngreso Then ' si la fecha de registro de la factura corresponde al periodo contable en curso
-                MsgBox("NO SE PUEDEN REGISTRAR TRANSACCIONES DEL PERIODO " + dtpFechaEmisionFacturaVenta.Value.Year.ToString + "!", MsgBoxStyle.Critical, "MENSAJE DE VALICACIÓN")
+                MsgBox("NO SE PUEDEN REGISTRAR TRANSACCIONES DEL PERIODO " + dtpFechaEmisionFacturaVenta.Value.Year.ToString + "!", MsgBoxStyle.Critical, "Mensaje de validación")
             Else
                 If ValidarParametros() Then
                     If ValidarValores() Then ' verifica si los valores de la factura estan correctos
                         If ValidarAsiento() Then
 
-                            If MessageBox.Show("¿ESTA SEGURA QUE DESEA GUARDAR LA VENTA ACTUAL?", "MENSAJE DE VALIDACIÓN", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> DialogResult.Yes Then Return
+                            If MessageBox.Show("¿ESTA SEGURA QUE DESEA GUARDAR LA VENTA ACTUAL?", "Mensaje de validación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> DialogResult.Yes Then Return
 
                             _sqlCommands.Clear()
 
@@ -811,7 +811,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                                 ' Show the input box.
                                 claveIngresada = InputBox("INGRESE LA CLAVE AUTORIZACIÓN", "VALOR COMPROBANTE")
                                 If Not IsNumeric(claveIngresada) Then
-                                    MsgBox("POR FAVOR INGRESE SOLO NÚMEROS", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                                    MsgBox("POR FAVOR INGRESE SOLO NÚMEROS", MsgBoxStyle.Exclamation, "Mensaje de validación")
                                     Exit Sub
                                 End If
 
@@ -867,13 +867,13 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
 
 
                         Else
-                            MsgBox("NO SE PUEDE GUARDAR." & vbNewLine & ", EL ASIENTO NO CUADRA. REVISE EL ASIENTO DE DIARIO, SUBTOTAL, IVA Y TOTAL DE LA FACTURA.", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                            MsgBox("No se puede guardar." & vbNewLine & ", EL ASIENTO NO CUADRA. REVISE EL ASIENTO DE DIARIO, SUBTOTAL, IVA Y TOTAL DE LA FACTURA.", MsgBoxStyle.Exclamation, "Mensaje de validación")
                         End If
                     Else
-                        MsgBox("NO SE PUEDE GUARDAR." & vbNewLine & "INCONSISTENCIA CON LOS VALORES. REVISE EL ASIENTO DE DIARIO, SUBTOTAL, IVA Y TOTAL DE LA FACTURA.", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                        MsgBox("No se puede guardar." & vbNewLine & "INCONSISTENCIA CON LOS VALORES. REVISE EL ASIENTO DE DIARIO, SUBTOTAL, IVA Y TOTAL DE LA FACTURA.", MsgBoxStyle.Exclamation, "Mensaje de validación")
                     End If
                 Else
-                    MsgBox("NO SE PUEDE GUARDAR." & vbNewLine & "NO SE HAN LLENADO TODOS LOS CAMPOS NECESARIOS.", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                    MsgBox("No se puede guardar." & vbNewLine & "NO SE HAN LLENADO TODOS LOS CAMPOS NECESARIOS.", MsgBoxStyle.Exclamation, "Mensaje de validación")
                 End If
             End If
         End Sub
@@ -1191,7 +1191,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
 
             Catch ex As Exception
                 resx = False
-                MsgBox("ERROR A GENERAR FACTURA ELECTRÓNICA " & vbNewLine & ex.Message, MsgBoxStyle.Exclamation, "MENSAJE DE INFORMACIÓN.")
+                MsgBox("ERROR A GENERAR FACTURA ELECTRÓNICA " & vbNewLine & ex.Message, MsgBoxStyle.Exclamation, "Mensaje de información.")
             End Try
         End Sub
 
@@ -1218,7 +1218,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                     CargarAsiento()
                 End If
             Catch ex As Exception
-                MsgBox("ERROR AL CARGAR COMPROBANTE DE EGRESO " & vbNewLine & ex.Message, MsgBoxStyle.Exclamation, "MENSAJE DE INFORMACIÓN.")
+                MsgBox("ERROR AL CARGAR COMPROBANTE DE EGRESO " & vbNewLine & ex.Message, MsgBoxStyle.Exclamation, "Mensaje de información.")
             End Try
         End Sub
 

@@ -234,12 +234,15 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
 
 
                 Else
-                    'MsgBox("NO SE PUEDE GUARDAR." & vbNewLine & "NO SE HAN LLENADO TODOS LOS CAMPOS NECESARIOS.", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACION")
-                    KryptonMessageBox.Show("NO SE PUEDE GUARDAR." & vbNewLine & "NO SE HAN LLENADO TODOS LOS CAMPOS NECESARIOS.", "MENSAJE DE VALIDACION", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
+
+                    KryptonMessageBox.Show("No se puede guardar." & vbNewLine & "NO SE HAN LLENADO TODOS LOS CAMPOS NECESARIOS.", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                     txtNumeroCuentasBancos.Focus()
                 End If
             Catch ex As Exception
-                MsgBox(ex.ToString, MsgBoxStyle.Critical, "NO GUARDO. CUENTAS BANCOS")
+                'MsgBox(ex.ToString, MsgBoxStyle.Critical, "NO GUARDO. CUENTAS BANCOS")
+                KryptonMessageBox.Show("No se puede guardar." & vbNewLine & "NO SE HAN LLENADO TODOS LOS CAMPOS NECESARIOS." & vbNewLine & ex.Message.ToString(), "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
+
+
             End Try
         End Sub
         Private Sub btnCancelarCuentaBancos_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnCancelarCuentaBancos.Click

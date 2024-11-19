@@ -2,6 +2,7 @@
 Imports ClassLibraryCisepro.ENUMS 
 Imports Microsoft.Office.Interop
 Imports syscisepro.DATOS
+Imports Krypton.Toolkit
 
 Namespace FORMULARIOS.CONTABILIDAD.BANCOS
     ''' <summary>
@@ -88,7 +89,7 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
                 dgvLibroBancos.Columns(1).Width = 50
                 dgvLibroBancos.Columns(2).Width = 80
                 dgvLibroBancos.Columns(3).Width = 60
-                dgvLibroBancos.Columns(4).Width = 430
+                dgvLibroBancos.Columns(4).Width = 330
                 dgvLibroBancos.Columns(5).Width = 72
                 dgvLibroBancos.Columns(6).Width = 72
                 dgvLibroBancos.Columns(7).Width = 70
@@ -100,7 +101,9 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
                 dgvLibroBancos.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells
 
             Catch ex As Exception
-                MsgBox(ex.Message.ToString)
+                'MsgBox(ex.Message.ToString)
+                'show meesage error and the text in ex.Message
+                KryptonMessageBox.Show("Error en el metodo CargarLibros" & vbNewLine & ex.Message.ToString, "Mensaje de excepción", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
 
@@ -149,9 +152,11 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
 
                 Next
 
-                Label12.Text = "Emitidos (no cobrados) -> " & dgvChequesEmitidosAprobados.RowCount & "                                             Emitidos (cobrados) -> " & dgvEmitidosCobrados.RowCount & ""
+                label12.Text = "Emitidos (no cobrados) -> " & dgvChequesEmitidosAprobados.RowCount & "" '                                             Emitidos (cobrados) -> " & dgvEmitidosCobrados.RowCount & ""
+                lblcobrados.Text = "Emitidos (Cobrados) -> " & dgvEmitidosCobrados.RowCount & ""
             Catch ex As Exception
-                MsgBox("Error al cargar cheques no cobrados")
+                'MsgBox("Error al cargar cheques no cobrados")
+                KryptonMessageBox.Show("Error al cargar cheques no cobrados" & vbNewLine & ex.Message.ToString, "Mensaje de excepción", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
 
@@ -168,9 +173,11 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
                 dgvEmitidosCobrados.Columns(6).Width = 60
                 dgvEmitidosCobrados.Columns(7).Width = 70
 
-                Label12.Text = "Emitidos (no cobrados) -> " & dgvChequesEmitidosAprobados.RowCount & "                                             Emitidos (cobrados) -> " & dgvEmitidosCobrados.RowCount & ""
+                label12.Text = "Emitidos (no cobrados) -> " & dgvChequesEmitidosAprobados.RowCount & "" '                                             Emitidos (cobrados) -> " & dgvEmitidosCobrados.RowCount & ""
+                lblcobrados.Text = "Emitidos (Cobrados) -> " & dgvEmitidosCobrados.RowCount & ""
             Catch ex As Exception
-                MsgBox("Error al cargar cheques cobrados")
+                'MsgBox("Error al cargar cheques cobrados")
+                KryptonMessageBox.Show("Error al cargar cheques cobrados" & vbNewLine & ex.Message.ToString, "Mensaje de excepción", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
 
@@ -251,34 +258,22 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
             Select Case _tipoCon
                 Case TipoConexion.Asenava
                     Icon = My.Resources.logo_a
-                    gbBanco.ForeColor = Color.White
-                    gbBanco.BackColor = My.MySettingsProperty.Settings.ColorAsenava
-                    gbComandos.ForeColor = Color.White
-                    gbComandos.BackColor = My.MySettingsProperty.Settings.ColorAsenava
-                    gbRangoFechas.ForeColor = Color.White
-                    gbRangoFechas.BackColor = My.MySettingsProperty.Settings.ColorAsenava
+                    'gbBanco.ForeColor = Color.White
+                    'gbBanco.BackColor = My.MySettingsProperty.Settings.ColorAsenava
+                    'gbComandos.ForeColor = Color.White
+                    'gbComandos.BackColor = My.MySettingsProperty.Settings.ColorAsenava
+                    'gbRangoFechas.ForeColor = Color.White
+                    'gbRangoFechas.BackColor = My.MySettingsProperty.Settings.ColorAsenava
                     dgvChequesEmitidosAprobados.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorAsenava
                     dgvLibroBancos.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorAsenava
                     dgvEmitidosCobrados.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorAsenava
                 Case TipoConexion.Seportpac
                     Icon = My.Resources.logo_s
-                    'gbBanco.ForeColor = My.MySettingsProperty.Settings.ColorSeportpac
-                    'gbBanco.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
-                    'gbComandos.ForeColor = My.MySettingsProperty.Settings.ColorSeportpac
-                    'gbComandos.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
-                    'gbRangoFechas.ForeColor = My.MySettingsProperty.Settings.ColorSeportpac
-                    'gbRangoFechas.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
                     dgvChequesEmitidosAprobados.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorSeportpac
                     dgvLibroBancos.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorSeportpac
                     dgvEmitidosCobrados.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorSeportpac
                 Case Else
                     Icon = My.Resources.logo_c
-                    'gbBanco.ForeColor = My.MySettingsProperty.Settings.ColorCisepro
-                    'gbBanco.BackColor = My.MySettingsProperty.Settings.ColorCisepro
-                    'gbComandos.ForeColor = My.MySettingsProperty.Settings.ColorCisepro
-                    'gbComandos.BackColor = My.MySettingsProperty.Settings.ColorCisepro
-                    'gbRangoFechas.ForeColor = My.MySettingsProperty.Settings.ColorCisepro
-                    'gbRangoFechas.BackColor = My.MySettingsProperty.Settings.ColorCisepro
                     dgvChequesEmitidosAprobados.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
                     dgvLibroBancos.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
                     dgvEmitidosCobrados.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
@@ -321,8 +316,8 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
         Private Sub btnExportar_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnExportar.Click
             If dgvLibroBancos.Rows.Count = 0 Then Return
             Try
-                Dim estCuenta = InputBox("INGRESE EL VALOR DEL ESTADO DE CUETNA", "ESTADO CUENTA", "0.00")
-                 
+                Dim estCuenta = InputBox("Ingrese el valor del estado de cuenta", "ESTADO CUENTA", "0.00")
+
                 Dim fec = ValidationForms.FechaActual(_tipoCon)
 
                 Dim app = New Excel.Application()
@@ -496,7 +491,7 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
                 app.DisplayAlerts = True
                 'workbook.SaveAs(sfd.FileName, Excel.XlFileFormat.xlWorkbookNormal, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Excel.XlSaveAsAccessMode.xlExclusive, Type.Missing, Type.Missing, Type.Missing, Type.Missing)
             Catch ex As Exception
-                MessageBox.Show("HUBO UN PROBLEMA AL EXPORTAR DATOS!", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                MessageBox.Show("Hubo un problema al exportar datos!", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Error)
             End Try
         End Sub
 

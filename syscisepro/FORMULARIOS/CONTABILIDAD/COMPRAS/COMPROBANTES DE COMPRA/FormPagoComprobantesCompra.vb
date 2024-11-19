@@ -147,7 +147,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
                 dgvComprobantesCompra.AutoResizeRows()
                 dgvComprobantesCompra.ReadOnly = True
             Catch ex As Exception
-                MsgBox("METODO CARGAR COMPROBANTES DE COMPRA" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "MENSAJE DE EXCEPCIÓN")
+                MsgBox("METODO CARGAR COMPROBANTES DE COMPRA" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
             End Try
         End Sub
         Public Sub cargarPagosComprobantesCompra()
@@ -170,7 +170,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
                 dgvPagosComprobantesCompra.ReadOnly = False
                 dgvPagosComprobantesCompra.EditMode = DataGridViewEditMode.EditProgrammatically
             Catch ex As Exception
-                MsgBox("METODO CARGAR PAGOS COMPROBANTES DE COMPRA" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "MENSAJE DE EXCEPCIÓN")
+                MsgBox("METODO CARGAR PAGOS COMPROBANTES DE COMPRA" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
             End Try
         End Sub
         Public Sub cargarComprobanteRetencion()
@@ -182,7 +182,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
                 dgvComprobanteRetencion.ReadOnly = False
                 dgvComprobanteRetencion.EditMode = DataGridViewEditMode.EditProgrammatically
             Catch ex As Exception
-                MsgBox("METODO CARGAR COMPROBANTE DE RETENCIÓN" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "MENSAJE DE EXCEPCIÓN")
+                MsgBox("METODO CARGAR COMPROBANTE DE RETENCIÓN" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
             End Try
         End Sub
         Public Sub cargarDetalleComprobanteRetencion()
@@ -194,7 +194,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
                 dgvDetalleComprobanteRetencion.ReadOnly = False
                 dgvDetalleComprobanteRetencion.EditMode = DataGridViewEditMode.EditProgrammatically
             Catch ex As Exception
-                MsgBox("METODO CARGAR DETALLE COMPROBANTE DE RETENCIÓN" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "MENSAJE DE EXCEPCIÓN")
+                MsgBox("METODO CARGAR DETALLE COMPROBANTE DE RETENCIÓN" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
             End Try
         End Sub
 
@@ -324,7 +324,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
         Private Sub btnNuevo_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnNuevo.Click
             If dgvComprobantesCompra.RowCount > 0 And lblIdComprobanteCompra.Text <> "..." Then
                 If dgvComprobantesCompra.CurrentRow.Cells.Item(16).Value = 2 Then
-                    MsgBox("ESTE COMPROBANTE DE PAGO YA ESTA CANCELADO." & vbNewLine & "POR FAVOR SELECCIONE OTRO COMPROBANTE", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                    MsgBox("ESTE COMPROBANTE DE PAGO YA ESTA CANCELADO." & vbNewLine & "POR FAVOR SELECCIONE OTRO COMPROBANTE", MsgBoxStyle.Exclamation, "Mensaje de validación")
                 ElseIf lblEstadoComprobanteCompra.Text = "POR PAGAR" Then
                     habilitadoNuevo()
                     '=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= ID DE PAGO =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
@@ -340,7 +340,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
                     End If
                 End If
             Else
-                MsgBox("NO HA SELECCIONA UN COMPROBANTE DE COMPRA PARA REVISAR", MsgBoxStyle.Information, "MENSAJE DE VALIDACIÓN")
+                MsgBox("NO HA SELECCIONA UN COMPROBANTE DE COMPRA PARA REVISAR", MsgBoxStyle.Information, "Mensaje de validación")
             End If
         End Sub
     
@@ -363,7 +363,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
                 deshabilitadoInicio()
                 limpiarParametrosPagos()
             Else
-                MsgBox("NO SE PUEDE GUARDAR." & vbNewLine & "NO SE HAN LLENADO TODOS LOS PARAMETROS NECESARIOS", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                MsgBox("No se puede guardar." & vbNewLine & "NO SE HAN LLENADO TODOS LOS PARAMETROS NECESARIOS", MsgBoxStyle.Exclamation, "Mensaje de validación")
             End If
         End Sub
     
@@ -382,15 +382,15 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
                     nuevoSaldo = CDec(txtAnteriorSaldoPagosComprobantesCompra.Text) - CDec(txtMontoPagosComprobantesCompra.Text)
                     txtNuevoSaldoPagosComprobantesCompra.Text = nuevoSaldo
                     If nuevoSaldo = 0 Then
-                        MsgBox("EL MONTO CUBRE EL TOTAL DEL SALDO." & vbNewLine & " COMPROBANTE CANCELADO", MsgBoxStyle.Information, "MENSAJE DE INFORMACIÓN")
+                        MsgBox("EL MONTO CUBRE EL TOTAL DEL SALDO." & vbNewLine & " COMPROBANTE CANCELADO", MsgBoxStyle.Information, "Mensaje de información")
                     End If
                 Else
-                    MsgBox("EL MONTO A PAGAR ES MAYOR QUE EL SALDO.", MsgBoxStyle.Critical, "MENSAJE DE VALIDACIÓN")
+                    MsgBox("EL MONTO A PAGAR ES MAYOR QUE EL SALDO.", MsgBoxStyle.Critical, "Mensaje de validación")
                     txtMontoPagosComprobantesCompra.Text = "0,00"
                     txtNuevoSaldoPagosComprobantesCompra.Text = "0,00"
                 End If
             Catch ex As Exception
-                MsgBox("TXTMONTO VALIDATED." & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "MENSAJE DE EXCEPCIÓN")
+                MsgBox("TXTMONTO VALIDATED." & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
             End Try
         End Sub
     End Class

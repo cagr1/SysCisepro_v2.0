@@ -198,22 +198,22 @@ Namespace FORMULARIOS.OPERACIONES
             Try
                  
                 If ListView1.Items.Count = 0 Then
-                    MessageBox.Show("Debe agregar al menos un registro para guardar la programción!", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                    MessageBox.Show("Debe agregar al menos un registro para guardar la programción!", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Warning)
                     Return
                 End If
 
                 If DateTimePicker2.Value <= DateTimePicker1.Value Then
-                    MessageBox.Show("La fecha de finalización debe ser mayor a la fecha de inicio!", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                    MessageBox.Show("La fecha de finalización debe ser mayor a la fecha de inicio!", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Warning)
                     Return
                 End If
 
-                If MessageBox.Show("Está seguro que desea guardar los cambios realizados?", "MENSAJE DEL SISTEMA", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.No Then
+                If MessageBox.Show("Está seguro que desea guardar los cambios realizados?", "Mensaje del sistema", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.No Then
                     Return
                 End If
                  
                 If _estadoAccion = 1 Then
                     If _objProgramacionOps.ExisteProgramacionMesAnio(_tipoCon, dtpMes.Value.Month, dtpMes.Value.Year) Then
-                        MessageBox.Show("Ya existe una programación para el mes/año seleccionado!", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                        MessageBox.Show("Ya existe una programación para el mes/año seleccionado!", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Warning)
                         Return
                     End If
 
@@ -305,7 +305,7 @@ Namespace FORMULARIOS.OPERACIONES
                 MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
 
             Catch ex As Exception
-                MsgBox("ERROR AL GUARDAR PROGRAMACIÓN DE TRABAJO: " & ex.Message, MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                MsgBox("ERROR AL GUARDAR PROGRAMACIÓN DE TRABAJO: " & ex.Message, MsgBoxStyle.Exclamation, "Mensaje de validación")
             End Try
         End Sub
 
@@ -496,7 +496,7 @@ Namespace FORMULARIOS.OPERACIONES
         Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnReporte.Click
             Try
                 If ListView1.Items.Count = 0 Then
-                    MessageBox.Show("Debe seleccionar una programación para generar reporte!", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                    MessageBox.Show("Debe seleccionar una programación para generar reporte!", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Warning)
                     Return
                 End If
 
@@ -541,7 +541,7 @@ Namespace FORMULARIOS.OPERACIONES
                 crvSitios.Zoom(75)
                 crvSitios.Refresh()
             Catch ex As Exception
-                MsgBox("ERROR AL GENERAR REPORTE: " & ex.Message, MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                MsgBox("ERROR AL GENERAR REPORTE: " & ex.Message, MsgBoxStyle.Exclamation, "Mensaje de validación")
             End Try
         End Sub
 
@@ -593,7 +593,7 @@ Namespace FORMULARIOS.OPERACIONES
                     btnNoSitiosProgramacion.Enabled = True
                 End If
             Catch ex As Exception
-                MsgBox("ERROR AL CARGAR PROGRAMACIÓN SELECCIONADA: " & ex.Message, MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                MsgBox("ERROR AL CARGAR PROGRAMACIÓN SELECCIONADA: " & ex.Message, MsgBoxStyle.Exclamation, "Mensaje de validación")
             End Try
         End Sub
 
@@ -625,22 +625,22 @@ Namespace FORMULARIOS.OPERACIONES
 
         Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnAdd.Click
             If (dtpDesdeP.Value < DateTimePicker1.Value Or dtpDesdeP.Value > DateTimePicker2.Value) Then
-                MessageBox.Show("La fecha de inicio para el vigilante " & txtPersonal.Text.Trim & " debe estar dentro del rango de la fecha de la programación!", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                MessageBox.Show("La fecha de inicio para el vigilante " & txtPersonal.Text.Trim & " debe estar dentro del rango de la fecha de la programación!", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Warning)
                 Return
             End If
 
             If (dtpHastaP.Value < DateTimePicker1.Value Or dtpHastaP.Value > DateTimePicker2.Value Or dtpHastaP.Value < dtpDesdeP.Value) Then
-                MessageBox.Show("La fecha de fin para el vigilante " & txtPersonal.Text.Trim & " debe estar dentro del rango de la fecha de la programación y debe ser mayor  o igual a la fecha de inicio!", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                MessageBox.Show("La fecha de fin para el vigilante " & txtPersonal.Text.Trim & " debe estar dentro del rango de la fecha de la programación y debe ser mayor  o igual a la fecha de inicio!", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Warning)
                 Return
             End If
 
             If (txtIdSitio.Text.Trim.Length = 0 Or txtIdPersonal.Text.Trim.Length = 0 Or lblIdHorario.Text.Trim.Length = 0) Then
-                MessageBox.Show("Debe seleccionar Sitio, Horario y Personal para agregar a la programación!", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                MessageBox.Show("Debe seleccionar Sitio, Horario y Personal para agregar a la programación!", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Warning)
                 Return
             End If
 
             If (txtIdSitio.Text.Trim = "0" Or txtIdPersonal.Text.Trim = "0" Or lblIdHorario.Text.Trim = "0") Then
-                MessageBox.Show("Debe seleccionar Sitio, Horario y Personal para agregar a la programación!", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                MessageBox.Show("Debe seleccionar Sitio, Horario y Personal para agregar a la programación!", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Warning)
                 Return
             End If
 
@@ -663,7 +663,7 @@ Namespace FORMULARIOS.OPERACIONES
 
         Private Sub AgregarRegistro(ByVal row As DataRow, ByVal nombre As String)
             If VerificarRepetidoSitioHorario(row.Item(0).ToString, row.Item(4).ToString) Then
-                MessageBox.Show(nombre & " ya se encuentra asignado a este u otro puesto con el mismo horario!", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                MessageBox.Show(nombre & " ya se encuentra asignado a este u otro puesto con el mismo horario!", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Warning)
                 Return
             End If
 
@@ -696,7 +696,7 @@ Namespace FORMULARIOS.OPERACIONES
 
         Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnRemove.Click
             If ListView1.Items.Count = 0 Or ListView1.SelectedItems.Count = 0 Then Return
-            If MessageBox.Show("Seguro que desea quitar este registro", "MENSAJE DEL SISTEMA", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> DialogResult.Yes Then Return
+            If MessageBox.Show("Seguro que desea quitar este registro", "Mensaje del sistema", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> DialogResult.Yes Then Return
             ListView1.Items.Remove(ListView1.SelectedItems(0))
         End Sub
 
@@ -833,7 +833,7 @@ Namespace FORMULARIOS.OPERACIONES
                 frm.cargarPersonalNoProgramacion(TextBox3.Text.Trim)
                 frm.ShowDialog()
             Catch ex As Exception
-                MessageBox.Show("Error al visualizar lista!", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                MessageBox.Show("Error al visualizar lista!", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             End Try
         End Sub
 
@@ -851,7 +851,7 @@ Namespace FORMULARIOS.OPERACIONES
                 frm.cargarSitiosNoProgramacion(TextBox3.Text.Trim)
                 frm.ShowDialog()
             Catch ex As Exception
-                MessageBox.Show("Error al visualizar lista!", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                MessageBox.Show("Error al visualizar lista!", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             End Try
         End Sub
 
@@ -866,11 +866,11 @@ Namespace FORMULARIOS.OPERACIONES
             Dim ulm = _objProgramacionOps.BuscarMesAnioUltimaProgramacion(_tipoCon)
             If ulm.Rows.Count = 0 Then Return
             If String.IsNullOrEmpty(ulm.Rows(0)(0)) Then Return
-            If MessageBox.Show("Desea cargar la programación del mes anterior (" & ValidationForms.Mes(ulm.Rows(0)(1)) & "-" & ulm.Rows(0)(2) & ")?", "MENSAJE DEL SISTEMA", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> DialogResult.Yes Then Return
+            If MessageBox.Show("Desea cargar la programación del mes anterior (" & ValidationForms.Mes(ulm.Rows(0)(1)) & "-" & ulm.Rows(0)(2) & ")?", "Mensaje del sistema", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> DialogResult.Yes Then Return
 
             Dim pro = _objProgramacionOps.SeleccionarProgramacionById(_tipoCon, ulm.Rows(0)(0))
             If pro Is Nothing Or pro.Rows.Count = 0 Then
-                MessageBox.Show("Los datos de la programación del mes anterior (" & ValidationForms.Mes(ulm.Rows(0)(1)) & "-" & ulm.Rows(0)(2) & " no han podido ser cargados!!", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                MessageBox.Show("Los datos de la programación del mes anterior (" & ValidationForms.Mes(ulm.Rows(0)(1)) & "-" & ulm.Rows(0)(2) & " no han podido ser cargados!!", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Warning)
                 Return
             End If
 

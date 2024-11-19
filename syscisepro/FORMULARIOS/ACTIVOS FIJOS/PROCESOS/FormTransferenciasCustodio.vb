@@ -68,7 +68,7 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
                     If rbCédula.Checked Then
                         dgvBusquedaPersonal.DataSource = _objetoPersonal.BuscarPorCedulaElPersonal(_tipoCon, txtBusqueda.Text)
                     Else
-                        MsgBox("Seleccione un parámetro de busqueda", MsgBoxStyle.Critical, "Mensaje de Validación")
+                        MsgBox("Seleccione un parámetro de busqueda", MsgBoxStyle.Critical, "Mensaje de validación")
                     End If
                 End If
             End If
@@ -191,7 +191,7 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
                 If rbNombreCustodio.Checked Then
                     dgvActivoFijo.DataSource = _objetoActivoFijo.BuscarPorCustodioActivoFijo(_tipoCon, txtBusquedaActivoFijo.Text)
                 Else
-                    MsgBox("Seleccione un parámetro de busqueda", MsgBoxStyle.Critical, "Mensaje de Validación")
+                    MsgBox("Seleccione un parámetro de busqueda", MsgBoxStyle.Critical, "Mensaje de validación")
                 End If
             End If
         End Sub
@@ -261,7 +261,7 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
                 For indice = 0 To dgvTransferencias.Rows.Count - 1
                     If dgvActivoFijo.CurrentRow.Cells.Item("CODIGO").Value = dgvTransferencias.Rows(indice).Cells("CODIGO_ACTIVO").Value Then
                         buscar = True
-                        MsgBox("El Activo fijo REPETIDO en transferencia", MsgBoxStyle.Critical, "Mensaje de Validación")
+                        MsgBox("El Activo fijo REPETIDO en transferencia", MsgBoxStyle.Critical, "Mensaje de validación")
                         indice = dgvTransferencias.Rows.Count - 1
 
                     Else
@@ -269,7 +269,7 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
                     End If
                     If Me.dgvActivoFijo.CurrentRow.Cells.Item("ID_PERSONAL").Value = txtIdCustodioAnterior.Text Then
                     Else
-                        MsgBox("Activo fijo NO CORRESPONDE al anterior custodio", MsgBoxStyle.Critical, "Mensaje de Validación")
+                        MsgBox("Activo fijo NO CORRESPONDE al anterior custodio", MsgBoxStyle.Critical, "Mensaje de validación")
                         buscar = True
                         indice = dgvTransferencias.Rows.Count - 1
                     End If
@@ -278,7 +278,7 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
                     Me.dgvTransferencias.Rows.Add(fila)
                 End If
             Else
-                MsgBox("No se puede crear la transferencia", MsgBoxStyle.Critical, "Mensaje de Validación")
+                MsgBox("No se puede crear la transferencia", MsgBoxStyle.Critical, "Mensaje de validación")
             End If 
         End Sub
 
@@ -288,7 +288,7 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
                     dgvTransferencias.Rows.RemoveAt(dgvTransferencias.CurrentCell.RowIndex())
                 End If
             Catch ex As Exception
-                MsgBox("No se puede eliminar, fila inexistente", MsgBoxStyle.Critical, "Mensaje de Validación")
+                MsgBox("No se puede eliminar, fila inexistente", MsgBoxStyle.Critical, "Mensaje de validación")
             End Try
         End Sub
 
@@ -320,7 +320,7 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
         End Function
         Private Sub ButtonGuardarTransferencia_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnGuardarTransferencia.Click
             If Validaciones() Then
-                If MessageBox.Show("¿ESTA SEGURO QUE DESEA GUARDAR?", "MENSAJE DE VALIDACIÓN", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> MsgBoxResult.Yes Then Return
+                If MessageBox.Show("¿Esta seguro que desea guardar?", "Mensaje de validación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> MsgBoxResult.Yes Then Return
                 _sqlCommands.Clear()
 
                 With _objetoActovoFijoTransferencias
@@ -399,49 +399,49 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
                 End If
                 MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
                 Else
-                MsgBox("No a completado todos los parametros necesarios en la transferencia", MsgBoxStyle.Critical, "Mensaje de Validación")
+                MsgBox("No a completado todos los parametros necesarios en la transferencia", MsgBoxStyle.Critical, "Mensaje de validación")
             End If
             End Sub
 
         Private Sub btnCustodioNuevo_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles txtNombreCustodioNuevo.Click
             Try
                 If dgvBusquedaPersonal.CurrentRow.Cells.Item(0).Value Is DBNull.Value Then
-                    MsgBox("´Tabla de Personal Vacía por favor comunicarse con RR.HH", MsgBoxStyle.Critical, "Mensaje de Validación")
+                    MsgBox("´Tabla de Personal Vacía por favor comunicarse con RR.HH", MsgBoxStyle.Critical, "Mensaje de validación")
                 Else
                     If txtIdCustodioAnterior.Text <> dgvBusquedaPersonal.CurrentRow.Cells.Item(0).Value.ToString Then
                         txtNombreCustodioNuevo.Text = dgvBusquedaPersonal.CurrentRow.Cells.Item(2).Value.ToString + " " + dgvBusquedaPersonal.CurrentRow.Cells.Item(3).Value.ToString
                         txtIdCustodioNuevo.Text = dgvBusquedaPersonal.CurrentRow.Cells.Item(0).Value.ToString
                         txtUbicacionNueva.Text = dgvBusquedaPersonal.CurrentRow.Cells.Item("UBICACION").Value.ToString
                     Else
-                        MsgBox("No se puede agragar custodi@", MsgBoxStyle.Critical, "Mensaje de Validación")
+                        MsgBox("No se puede agragar custodi@", MsgBoxStyle.Critical, "Mensaje de validación")
                         txtIdCustodioNuevo.Text = ""
                         txtNombreCustodioNuevo.Text = ""
                         txtUbicacionNueva.Text = ""
                     End If
                 End If
             Catch ex As Exception
-                MsgBox("Dato no encontrado, vuelva a buscar el personal", MsgBoxStyle.Critical, "Mensaje de Validación")
+                MsgBox("Dato no encontrado, vuelva a buscar el personal", MsgBoxStyle.Critical, "Mensaje de validación")
             End Try
         End Sub
 
         Private Sub btnCustodioAnterior_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles txtNombreCustodioAnterior.Click
             Try
                 If dgvBusquedaPersonal.CurrentRow.Cells.Item(0).Value Is DBNull.Value Then
-                    MsgBox("´Tabla de Personal Vacía por favor comunicarse con RR.HH", MsgBoxStyle.Critical, "Mensaje de Validación")
+                    MsgBox("´Tabla de Personal Vacía por favor comunicarse con RR.HH", MsgBoxStyle.Critical, "Mensaje de validación")
                 Else
                     If txtIdCustodioNuevo.Text <> dgvBusquedaPersonal.CurrentRow.Cells.Item(0).Value.ToString Then
                         txtNombreCustodioAnterior.Text = dgvBusquedaPersonal.CurrentRow.Cells.Item(2).Value.ToString + " " + dgvBusquedaPersonal.CurrentRow.Cells.Item(3).Value.ToString
                         txtIdCustodioAnterior.Text = dgvBusquedaPersonal.CurrentRow.Cells.Item(0).Value.ToString
                         txtUbicacionAnterior.Text = dgvBusquedaPersonal.CurrentRow.Cells.Item("UBICACION").Value.ToString
                     Else
-                        MsgBox("No se puede agragar custodi@", MsgBoxStyle.Critical, "Mensaje de Validación")
+                        MsgBox("No se puede agragar custodi@", MsgBoxStyle.Critical, "Mensaje de validación")
                         txtIdCustodioAnterior.Text = ""
                         txtNombreCustodioAnterior.Text = ""
                         txtUbicacionAnterior.Text = ""
                     End If
                 End If
             Catch ex As Exception
-                MsgBox("Dato no encontrado, vuelva a buscar el personal", MsgBoxStyle.Critical, "Mensaje de Validación")
+                MsgBox("Dato no encontrado, vuelva a buscar el personal", MsgBoxStyle.Critical, "Mensaje de validación")
             End Try
         End Sub
 

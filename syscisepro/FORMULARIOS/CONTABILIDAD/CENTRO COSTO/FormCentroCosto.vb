@@ -3,6 +3,7 @@ Imports ClassLibraryCisepro.CONTABILIDAD.BANCOS.AUDITORIA
 Imports ClassLibraryCisepro.CONTABILIDAD.CENTRO_DE_COSTOS
 Imports ClassLibraryCisepro.ENUMS
 Imports syscisepro.FORMULARIOS.CONTABILIDAD.CENTRO_COSTO.REPORTES
+Imports Krypton.Toolkit
 
 
 Namespace FORMULARIOS.CONTABILIDAD.CENTRO_COSTO
@@ -176,11 +177,12 @@ Namespace FORMULARIOS.CONTABILIDAD.CENTRO_COSTO
             habilitadoNuevo()
         End Sub
         Private Sub btnGuardarCentroCosto_Click(ByVal sender As Object, ByVal e As EventArgs) Handles btnGuardarCentroCosto.Click
-            If MessageBox.Show("Seguro que desea guardar los cambios realizados?", "MENSAJE DEL SISTEMA", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.No Then
-                Return
-            End If
-            
-            If ValidacionParametros() Then
+            'If MessageBox.Show("Seguro que desea guardar los cambios realizados?", "Mensaje del sistema", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.No Then
+            If KryptonMessageBox.Show("Seguro que desea guardar los cambios realizados?", "Mensaje del sistema", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) = DialogResult.No Then
+                    Return
+                End If
+
+                If ValidacionParametros() Then
                 Select Case (_botonSeleccionado)
                     Case 1 : GuardarCentroCostoNuevo()
                     Case 2 : GuardarCentroCostoModificado()
@@ -189,7 +191,8 @@ Namespace FORMULARIOS.CONTABILIDAD.CENTRO_COSTO
                 DesabilitadoCancelar()
                 CargarCentroCosto()
             Else
-                MsgBox("NO SE PUEDE GUARDAR." & vbNewLine & "NO SE HAN LLENADO TODOS LOS CAMPOS NECESARIOS.", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACION")
+                'MsgBox("No se puede guardar." & vbNewLine & "NO SE HAN LLENADO TODOS LOS CAMPOS NECESARIOS.", MsgBoxStyle.Exclamation, "Mensaje de validación")
+                KryptonMessageBox.Show("No se puede guardar." & vbNewLine & "No se han llenado todos los campos necesarios.", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                 txtIdCentroCosto.Focus()
             End If
         End Sub

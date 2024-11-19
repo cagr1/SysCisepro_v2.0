@@ -363,7 +363,6 @@
             Me.cbDepreciable.BackColor = System.Drawing.Color.White
             Me.cbDepreciable.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cbDepreciable.Enabled = False
-            Me.cbDepreciable.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.cbDepreciable.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cbDepreciable.FormattingEnabled = True
             Me.cbDepreciable.Items.AddRange(New Object() {"SI", "NO"})
@@ -394,7 +393,6 @@
             Me.cbSubGrupo.BackColor = System.Drawing.Color.White
             Me.cbSubGrupo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cbSubGrupo.Enabled = False
-            Me.cbSubGrupo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.cbSubGrupo.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cbSubGrupo.FormattingEnabled = True
             Me.cbSubGrupo.Location = New System.Drawing.Point(76, 108)

@@ -79,7 +79,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                 dgvRevisionFacturacion.Columns(7).Width = 80
                 dgvRevisionFacturacion.Columns(11).Width = 300
             Catch ex As Exception
-                MsgBox("METODO CARGAR FACTURAS VENTA" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "MENSAJE DE EXCEPCIÓN")
+                MsgBox("METODO CARGAR FACTURAS VENTA" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
             End Try
         End Sub
 
@@ -91,7 +91,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                 dgvComprobanteRetencionVenta.ReadOnly = False
                 dgvComprobanteRetencionVenta.EditMode = DataGridViewEditMode.EditProgrammatically
             Catch ex As Exception
-                MsgBox("METODO CARGAR COMPROBANTE DE RETENCIÓN VENTA" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "MENSAJE DE EXCEPCIÓN")
+                MsgBox("METODO CARGAR COMPROBANTE DE RETENCIÓN VENTA" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
             End Try
         End Sub
 
@@ -103,7 +103,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                 dgvDetalleComprobanteRetencionVenta.ReadOnly = False
                 dgvDetalleComprobanteRetencionVenta.EditMode = DataGridViewEditMode.EditProgrammatically
             Catch ex As Exception
-                MsgBox("METODO CARGAR DETALLE COMPROBANTE DE RETENCIÓN VENTA" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "MENSAJE DE EXCEPCIÓN")
+                MsgBox("METODO CARGAR DETALLE COMPROBANTE DE RETENCIÓN VENTA" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
             End Try
         End Sub
 
@@ -158,7 +158,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                     End If
                 End If
             Catch ex As Exception
-                KryptonMessageBox.Show("CARGAR DATOS FACTURA." & vbNewLine & ex.Message.ToString, "MENSAJE DE EXCEPCIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Warning)
+                KryptonMessageBox.Show("CARGAR DATOS FACTURA." & vbNewLine & ex.Message.ToString, "Mensaje de excepción", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Warning)
             End Try
         End Sub
 
@@ -173,9 +173,9 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                 End If
             Next
             If validarFacturacion = 1 Then
-                KryptonMessageBox.Show("HAY FACTURAS POR APROBAR", "MENSAJE DE INFORMACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
+                KryptonMessageBox.Show("HAY FACTURAS POR APROBAR", "Mensaje de información", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
             Else
-                KryptonMessageBox.Show("NO HAY FACTURAS POR APROBAR", "MENSAJE DE INFORMACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
+                KryptonMessageBox.Show("NO HAY FACTURAS POR APROBAR", "Mensaje de información", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
             End If
         End Sub
 
@@ -299,7 +299,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                 txtTotalFacturadoMesAnte4.Text = _objetoFacturasVentas.BuscarTotalFacturaVentaXRangoFechas(_tipoCon, _fechaInicialAnte4, _fechaFinalAnte4)
                 txtTotalFacturadoMesAnte5.Text = _objetoFacturasVentas.BuscarTotalFacturaVentaXRangoFechas(_tipoCon, _fechaInicialAnte5, _fechaFinalAnte5)
             Catch ex As Exception
-                MsgBox("CARGAR TOTALES FACUTRACION." & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "MENSAJE DE EXCEPCIÓN")
+                MsgBox("CARGAR TOTALES FACUTRACION." & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
             End Try
         End Sub
 
@@ -430,7 +430,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
 
                 mExcel.Cursor = Excel.XlMousePointer.xlDefault
             Catch ex As Exception
-                MsgBox("EXPORTAR REVISIÓN DE FACTURACIÓN." & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "MENSAJE DE EXCEPCIÓN")
+                MsgBox("EXPORTAR REVISIÓN DE FACTURACIÓN." & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
             End Try            
         End Sub
 
@@ -498,7 +498,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                 MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
 
             Catch ex As Exception
-                MsgBox("APROBAR FACTURAS VENTA." & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "MENSAJE DE EXCEPCIÓN")
+                MsgBox("APROBAR FACTURAS VENTA." & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
             End Try
         End Sub
         Private Sub btnMarcarTodo_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnMarcarTodo.Click
@@ -512,7 +512,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                 Next
                 btnMarcarTodo.Enabled = True ' vuelve a habilitar el boton
             Catch ex As Exception
-                MsgBox("MARCAR TODAS LAS FACTURAS VENTA." & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "MENSAJE DE EXCEPCIÓN")
+                MsgBox("MARCAR TODAS LAS FACTURAS VENTA." & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
             End Try
         End Sub
         Private Sub btnDesmarcarTodo_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnDesmarcarTodo.Click
@@ -526,7 +526,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                 Next
                 btnDesmarcarTodo.Enabled = True
             Catch ex As Exception
-                MsgBox("DESMARCAR TODAS LAS FACTURAS VENTA." & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "MENSAJE DE EXCEPCIÓN")
+                MsgBox("DESMARCAR TODAS LAS FACTURAS VENTA." & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
             End Try
         End Sub
 

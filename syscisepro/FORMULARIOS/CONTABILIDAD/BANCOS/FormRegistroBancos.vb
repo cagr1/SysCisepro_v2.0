@@ -2,6 +2,7 @@
 Imports ClassLibraryCisepro.CONTABILIDAD.BANCOS.AUDITORIA
 Imports ClassLibraryCisepro.ENUMS
 Imports syscisepro.FORMULARIOS.CONTABILIDAD.BANCOS.REPORTES
+Imports Krypton.Toolkit
 
 Namespace FORMULARIOS.CONTABILIDAD.BANCOS
     ''' <summary>
@@ -228,11 +229,13 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
                         Case 2 : GuardarBancosModificar()
                     End Select
                 Else
-                    MsgBox("NO SE PUEDE GUARDAR." & vbNewLine & "NO SE HAN LLENADO TODOS LOS CAMPOS NECESARIOS.", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACION")
+                    'MsgBox("No se puede guardar." & vbNewLine & "NO SE HAN LLENADO TODOS LOS CAMPOS NECESARIOS.", MsgBoxStyle.Exclamation, "Mensaje de validación")
+                    KryptonMessageBox.Show("No se puede guardar." & vbNewLine & "No se han llenado todos los campos necesarios.", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                     txtNombreBanco.Focus()
                 End If
             Catch ex As Exception
-                MsgBox(ex.ToString, MsgBoxStyle.Critical, "NO GUARDO. BANCOS")
+                'MsgBox(ex.ToString, MsgBoxStyle.Critical, "NO GUARDO. BANCOS")
+                KryptonMessageBox.Show(ex.ToString, "no guardo. bancos", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
         Private Sub btnCancelarBanco_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnCancelarBanco.Click

@@ -18,10 +18,9 @@ Imports iTextSharp.text
 Imports iTextSharp.text.pdf
 Imports ClassLibraryCisepro.CONTABILIDAD.VENTAS
 Imports CrystalDecisions.Shared.Json
-Imports ClassLibraryCisepro
 Imports iTextSharp.awt.geom.Point2D
-Imports ReaLTaiizor.Controls
 Imports System.Windows.Forms.VisualStyles
+Imports Krypton.Toolkit
 
 Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
     ''' <summary>
@@ -112,7 +111,8 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
                 dgvComprobantesCompra.AutoResizeRows()
             Catch ex As Exception
                 dgvComprobantesCompra.DataSource = Nothing
-                MsgBox("METODO CARGAR COMPROBANTES DE COMPRA" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "MENSAJE DE EXCEPCIÓN")
+                'MsgBox("METODO CARGAR COMPROBANTES DE COMPRA" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
+                KryptonMessageBox.Show("Metodo cargar comprobantes de compra" & vbNewLine & ex.Message.ToString, "Mensaje de excepción", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
 
@@ -302,7 +302,8 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
             If dgvComprobantesCompra.Rows.Count = 0 Then Return
             Try
                 If dgvComprobantesCompra.Rows.Count = 0 Then
-                    MsgBox("NO HAY DATOS QUE EXPORTAR!", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                    'MsgBox("No hay datos que exportar!", MsgBoxStyle.Exclamation, "Mensaje de validación")
+                    KryptonMessageBox.Show("No hay datos que exportar!", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                     Return
                 End If
 
@@ -371,7 +372,8 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
                 app.DisplayAlerts = True
                 'workbook.SaveAs(sfd.FileName, Excel.XlFileFormat.xlWorkbookNormal, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Excel.XlSaveAsAccessMode.xlExclusive, Type.Missing, Type.Missing, Type.Missing, Type.Missing)
             Catch ex As Exception
-                MessageBox.Show("HUBO UN PROBLEMA AL EXPORTAR DATOS!" & vbNewLine & ex.Message, "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                'MessageBox.Show("Hubo un problema al exportar datos!" & vbNewLine & ex.Message, "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                KryptonMessageBox.Show("Hubo un problema al exportar datos!" & vbNewLine & ex.Message, "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
 
@@ -857,10 +859,12 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
                     'f._porcentaje = Convert.ToString(lblPorcentaje.Text)
                     'f.ShowDialog()
                 Else
-                    MsgBox("LOS COMPROBANTES DE FONDO Y CAJA SE IMPRIMEN EN SUS RESPECTIVAS LIQUIDACIONES", MsgBoxStyle.Information, "MENSAJE DE INFORMACIÓN")
+                    'MsgBox("LOS COMPROBANTES DE FONDO Y CAJA SE IMPRIMEN EN SUS RESPECTIVAS LIQUIDACIONES", MsgBoxStyle.Information, "Mensaje de información")
+                    KryptonMessageBox.Show("Los comprobantes de fondo y caja se imprimen en sus respectivas liquidaciones", "Mensaje de información", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
                 End If
             Else
-                MsgBox("POR FAVOR SELECCIONE UN COMPROBANTE DE COMPRA", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                'sgBox("POR FAVOR SELECCIONE UN COMPROBANTE DE COMPRA", MsgBoxStyle.Exclamation, "Mensaje de validación")
+                KryptonMessageBox.Show("Por favor seleccione un comprobante de compra", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
             End If
         End Sub
 
@@ -909,7 +913,8 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
                 _estadoCompRet = rete.Rows(0)(9)
 
                 If CInt(_estadoCompRet) > 12 Then ' pregunta si es retención electrónica
-                    If MessageBox.Show("DESEA GENERAR EL XML DE LA RETENCIÓN?", "MENSAJE DE VALIDACIÓN", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> DialogResult.Yes Then Return
+                    If KryptonMessageBox.Show("Desea generar el XML de la retención?", "Mensaje de validación", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) <> DialogResult.Yes Then Return
+                    'If MessageBox.Show("DESEA GENERAR EL XML DE LA RETENCIÓN?", "Mensaje de validación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> DialogResult.Yes Then Return
 
                     'ruc 01 / cedula 05
                     _lblRucProveedorGeneral = prove.Rows(0)(2)
@@ -946,16 +951,20 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
                         If _claveAcceso.ToString.Length = 49 Then
                             ExportarXmlRetencion() ' exporta el comprobante de retención electónico a formato XML 
                         Else
-                            MsgBox("CLAVE DE ACCESO INVALIDA")
+
+                            KryptonMessageBox.Show("Clave de acceso inválida", "Mensaje de validación")
                         End If
                     Else
-                        MsgBox("EL NUMERO DE COMPROBANTE 000000000000000 NO ES VALIDO PARA GENERAR XML", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+
+                        KryptonMessageBox.Show("El número de comprobante 000000000000000 no es válido para generar XML", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                     End If
                 Else
-                    MsgBox("EL COMPROBANTE SELECCIONADO NO TIENE RETENCION ELECTRONICA PARA GENERAR XML", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+
+                    KryptonMessageBox.Show("El comprobante seleccionado no tiene retención electrónica para generar XML", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                 End If
             Else
-                MsgBox("SELECCIONE UN COMPROBANTE DE COMPRA CON RETENCIÓN PARA GENERAR XML", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+
+                KryptonMessageBox.Show("Seleccione un comprobante de compra con retención para generar XML", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
             End If
         End Sub
         Private Sub CargarDatosEmpresa()
@@ -974,7 +983,8 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
                     _porcentajeIva = CInt(empre.Rows(0)(21).ToString())
                 End If
             Catch ex As Exception
-                MsgBox("CARGAR DATOS EMPRESA." & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "MENSAJE DE EXCEPCIÓN")
+
+                KryptonMessageBox.Show("Cargar datos empresa." & vbNewLine & ex.Message.ToString, "Mensaje de excepción", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
         Private Sub ExportarXmlRetencion()
@@ -1072,9 +1082,11 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
                 writer.Flush()
                 writer.Close()
 
-                MsgBox("RETENCIÓN ELECTRÓNICA" & vbNewLine & "XML GENERADO CORRECTAMENTE", MsgBoxStyle.Information, "MENSAJE DE INFORMACIÓN.")
+
+                KryptonMessageBox.Show("Retención electrónica" & vbNewLine & "XML generado correctamente", "Mensaje de información", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
             Catch ex As Exception
-                MsgBox("ERROR AL GENERAR RETENCIÓN ELECTRÓNICA" & vbNewLine & ex.Message, MsgBoxStyle.Exclamation, "MENSAJE DE INFORMACIÓN.")
+                'MsgBox("ERROR AL GENERAR RETENCIÓN ELECTRÓNICA" & vbNewLine & ex.Message, MsgBoxStyle.Exclamation, "Mensaje de información.")
+                KryptonMessageBox.Show("Error al generar retención electrónica" & vbNewLine & ex.Message, "Mensaje de información.", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
 
@@ -1097,7 +1109,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
 
                 Dim prove = _objetoProveedorGeneral.BuscarProveedorGeneralXNombre(_tipoCon, dgvComprobantesCompra.CurrentRow.Cells(1).Value)
 
-                If MessageBox.Show("DESEA GENERAR EL XML DE LA RETENCIÓN?", "MENSAJE DE VALIDACIÓN", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> DialogResult.Yes Then Return
+                If MessageBox.Show("DESEA GENERAR EL XML DE LA RETENCIÓN?", "Mensaje de validación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> DialogResult.Yes Then Return
 
                 _establecimientoLiqCompra = dgvComprobantesCompra.CurrentRow.Cells(3).Value.ToString().Substring(0, 3)
                 _ptoEmisionLiqCompra = dgvComprobantesCompra.CurrentRow.Cells(3).Value.ToString().Substring(3, 3)
@@ -1127,11 +1139,13 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
                 If _claveAccesoLiqCompra.ToString.Length = 49 Then
                     ExportarXmlLiquidacionCompra() ' exporta el comprobante de liqudacion electónico a formato XML 
                 Else
-                    MsgBox("CLAVE DE ACCESO INVALIDA")
+                    'MsgBox("CLAVE DE ACCESO INVALIDA")
+                    KryptonMessageBox.Show("Clave de acceso inválida", "Mensaje de validación")
                 End If
 
             Else
-                MsgBox("SELECCIONE UN COMPROBANTE DE COMPRA CON RETENCIÓN PARA GENERAR XML", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                'MsgBox("SELECCIONE UN COMPROBANTE DE COMPRA CON RETENCIÓN PARA GENERAR XML", MsgBoxStyle.Exclamation, "Mensaje de validación")
+                KryptonMessageBox.Show("Seleccione un comprobante de compra con retención para generar XML", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
             End If
         End Sub
 
@@ -1264,9 +1278,11 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
                 writer.Flush()
                 writer.Close()
 
-                MsgBox("LIQUIDACIÓN DE COMPRA DE BIENES Y PRESTACIÓN DE SERVICIOS " & vbNewLine & "XML GENERADO CORRECTAMENTE", MsgBoxStyle.Information, "MENSAJE DE INFORMACIÓN.")
+                'MsgBox("LIQUIDACIÓN DE COMPRA DE BIENES Y PRESTACIÓN DE SERVICIOS " & vbNewLine & "XML GENERADO CORRECTAMENTE", MsgBoxStyle.Information, "Mensaje de información.")
+                KryptonMessageBox.Show("Liquidación de compra de bienes y prestación de servicios" & vbNewLine & "XML generado correctamente", "Mensaje de información")
             Catch ex As Exception
-                MsgBox("ERROR A GENERAR LIQUIDACIÓN DE COMPRAS " & vbNewLine & ex.Message, MsgBoxStyle.Exclamation, "MENSAJE DE INFORMACIÓN.")
+                'MsgBox("ERROR A GENERAR LIQUIDACIÓN DE COMPRAS " & vbNewLine & ex.Message, MsgBoxStyle.Exclamation, "Mensaje de información.")
+                KryptonMessageBox.Show("Error al generar liquidación de compras" & vbNewLine & ex.Message, "Mensaje de información", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
             End Try
         End Sub
       
@@ -1982,15 +1998,17 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
                 xmlDoc = Nothing
                 File.Delete(ruta)
                 writer.Close()
-                MsgBox("LIQUIDACION DE COMPRA CREADA CORRECTAMENTE!", MsgBoxStyle.Information, "MENSAJE DE VALIDACIÓN")
+                'MsgBox("LIQUIDACION DE COMPRA CREADA CORRECTAMENTE!", MsgBoxStyle.Information, "Mensaje de validación")
+                KryptonMessageBox.Show("Liquidacion de compra creada correctamente!", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
 
             Catch ex As Exception
-                MsgBox("HUBO UN PROBLEMA AL CARGAR EL XML! " & vbNewLine & ex.Message, MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                'MsgBox("HUBO UN PROBLEMA AL CARGAR EL XML! " & vbNewLine & ex.Message, MsgBoxStyle.Exclamation, "Mensaje de validación")
+                KryptonMessageBox.Show("Hubo un problema al cargar el XML! " & vbNewLine & ex.Message, "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
             End Try
 
         End Sub
 
-        Private Sub Label10_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Label10.Click
+        Private Sub Label10_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
 
         End Sub
 
@@ -2557,10 +2575,12 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
                 xmlDoc = Nothing
                 File.Delete(ruta)
                 writer.Close()
-                MsgBox("COMPROBANTE DE RENTENCION CREADO CORRECTAMENTE!", MsgBoxStyle.Information, "MENSAJE DE VALIDACIÓN")
+                'MsgBox("COMPROBANTE DE RENTENCION CREADO CORRECTAMENTE!", MsgBoxStyle.Information, "Mensaje de validación")
+                KryptonMessageBox.Show("Comprobante de retención creado correctamente!", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
 
             Catch ex As Exception
-                MsgBox("HUBO UN PROBLEMA AL CARGAR EL XML! " & vbNewLine & ex.Message, MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                'MsgBox("HUBO UN PROBLEMA AL CARGAR EL XML! " & vbNewLine & ex.Message, MsgBoxStyle.Exclamation, "Mensaje de validación")
+                KryptonMessageBox.Show("Hubo un problema al cargar el XML! " & vbNewLine & ex.Message, "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
             End Try
 
         End Sub

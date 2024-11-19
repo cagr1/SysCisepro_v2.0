@@ -212,7 +212,7 @@ Namespace FORMULARIOS.OPERACIONES
                 app.Visible = True
                 app.DisplayAlerts = True
             Catch ex As Exception
-                KryptonMessageBox.Show("ERROR AL EXPORTAR LOS DATOS: " & ex.Message, "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+                KryptonMessageBox.Show("ERROR AL EXPORTAR LOS DATOS: " & ex.Message, "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
                 Exit Try
             End Try
         End Sub
@@ -274,12 +274,12 @@ Namespace FORMULARIOS.OPERACIONES
         Private Sub btnGuardar_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnGuardar.Click
             Try
                 txtTotal.Text = TotalMultas()
-                If MessageBox.Show("Está seguro que desea guardar los cambios realizados", "MENSAJE DEL SISTEMA", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.No Then
+                If MessageBox.Show("Está seguro que desea guardar los cambios realizados", "Mensaje del sistema", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.No Then
                     Return
                 End If
 
                 If txtIdPersonal.Text.Trim.Length = 0 Or txtValor.Text.Trim.Length = 0 Then
-                    MessageBox.Show("Debe definir los datos de la sanción para guardar!", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                    MessageBox.Show("Debe definir los datos de la sanción para guardar!", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
                     Return
                 End If
                 _sqlCommands.Clear()
@@ -364,9 +364,9 @@ Namespace FORMULARIOS.OPERACIONES
                     messageIcon = KryptonMessageBoxIcon.Exclamation
                 End If
 
-                KryptonMessageBox.Show(res(1), "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, messageIcon)
+                KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, messageIcon)
             Catch ex As Exception
-                MsgBox("ERROR AL GUARDAR HORARIO DE TRABAJO: " & ex.Message, MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                MsgBox("ERROR AL GUARDAR HORARIO DE TRABAJO: " & ex.Message, MsgBoxStyle.Exclamation, "Mensaje de validación")
             End Try
         End Sub
 
@@ -375,12 +375,12 @@ Namespace FORMULARIOS.OPERACIONES
 
 
                 'If headerCheckbox IsNot Nothing Then
-                '    MessageBox.Show("Debe seleccionar al menos un registro para anular!", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                '    MessageBox.Show("Debe seleccionar al menos un registro para anular!", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
                 'End If
 
                 Dim isHeaderChecked As Boolean = headerCheckbox.Checked
                 Dim confirmationMessage As String = ""
-                Dim confirmationTitle As String = "MENSAJE DEL SISTEMA"
+                Dim confirmationTitle As String = "Mensaje del sistema"
                 If isHeaderChecked Then
                     confirmationMessage = "Está seguro que desea anular todos los registros seleccionados?"
                 Else
@@ -455,9 +455,9 @@ Namespace FORMULARIOS.OPERACIONES
                     messageIcon = KryptonMessageBoxIcon.Exclamation
                 End If
 
-                KryptonMessageBox.Show(res(1), "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, messageIcon)
+                KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, messageIcon)
             Catch ex As Exception
-                MsgBox("ERROR AL GUARDAR HORARIO DE TRABAJO: " & ex.Message, MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                MsgBox("ERROR AL GUARDAR HORARIO DE TRABAJO: " & ex.Message, MsgBoxStyle.Exclamation, "Mensaje de validación")
             End Try
         End Sub
 
@@ -659,7 +659,7 @@ Namespace FORMULARIOS.OPERACIONES
                 'Next
 
             Catch ex As Exception
-                KryptonMessageBox.Show("ERROR AL CARGAR LOS DATOS: " & ex.Message, "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+                KryptonMessageBox.Show("ERROR AL CARGAR LOS DATOS: " & ex.Message, "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
 
             End Try
         End Sub
@@ -925,7 +925,7 @@ Namespace FORMULARIOS.OPERACIONES
                 app.Visible = True
                 app.DisplayAlerts = True
             Catch ex As Exception
-                KryptonMessageBox.Show("ERROR AL EXPORTAR LOS DATOS: " & ex.Message, "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+                KryptonMessageBox.Show("ERROR AL EXPORTAR LOS DATOS: " & ex.Message, "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
 
             End Try
         End Sub
@@ -973,7 +973,7 @@ Namespace FORMULARIOS.OPERACIONES
                     End If
 
                 Catch ex As Exception
-                    KryptonMessageBox.Show("ERROR AL SELECCIONAR EL REGISTRO: " & ex.Message, "MENSAJE DE VALIDACIÓN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+                    KryptonMessageBox.Show("ERROR AL SELECCIONAR EL REGISTRO: " & ex.Message, "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
                     Exit Try
                 End Try
             End If

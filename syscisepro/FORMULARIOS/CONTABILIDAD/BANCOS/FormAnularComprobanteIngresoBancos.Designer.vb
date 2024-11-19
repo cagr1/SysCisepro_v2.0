@@ -154,7 +154,7 @@
             '
             'GroupBox2
             '
-            Me.GroupBox2.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
+            Me.GroupBox2.BackColor = System.Drawing.Color.FromArgb(CType(CType(185, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(227, Byte), Integer))
             Me.GroupBox2.Controls.Add(Me.dgvComprobanteEgresoBancos)
             Me.GroupBox2.Location = New System.Drawing.Point(1, 109)
             Me.GroupBox2.Name = "GroupBox2"
@@ -287,7 +287,7 @@
             '
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-            Me.BackColor = System.Drawing.Color.White
+            Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(185, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(227, Byte), Integer))
             Me.ClientSize = New System.Drawing.Size(734, 551)
             Me.Controls.Add(Me.KryptonGroupBox1)
             Me.Controls.Add(Me.msKardex)

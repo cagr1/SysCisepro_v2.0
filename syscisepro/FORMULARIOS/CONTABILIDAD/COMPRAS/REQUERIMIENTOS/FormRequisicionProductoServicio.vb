@@ -144,7 +144,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.REQUERIMIENTOS
                                     dgvDetalleRequisicionPS.CurrentRow.Cells(3).Value = ""
                                     dgvDetalleRequisicionPS.CurrentRow.Cells(4).Value = ""
                                     dgvDetalleRequisicionPS.CurrentRow.Cells(5).Value = ""
-                                    MsgBox("EL ITEM INGRESADO NO SE ENCUENTRA EN LA BASE DE DATOS. POR FAVOR REGISTRELO ANTES DE INGRESARLO EN LA REQUISICIÓN", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                                    MsgBox("EL ITEM INGRESADO NO SE ENCUENTRA EN LA BASE DE DATOS. POR FAVOR REGISTRELO ANTES DE INGRESARLO EN LA REQUISICIÓN", MsgBoxStyle.Exclamation, "Mensaje de validación")
                                     Return
                                 End If
                                 dgvDetalleRequisicionPS.CurrentRow.Cells(0).Value = tab.Rows(0)(0).ToString
@@ -152,7 +152,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.REQUERIMIENTOS
                                 dgvDetalleRequisicionPS.CurrentRow.Cells(2).Value = tab.Rows(0)(18).ToString
                                 dgvDetalleRequisicionPS.CurrentRow.Cells(3).Value = 1
                             Else
-                                MsgBox("EL ITEM SELECCIONADO YA ESTA AGREGADO A LA REQUISICION.", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                                MsgBox("EL ITEM SELECCIONADO YA ESTA AGREGADO A LA REQUISICION.", MsgBoxStyle.Exclamation, "Mensaje de validación")
                                 dgvDetalleRequisicionPS.CurrentRow.Cells(1).Value = ""
                                 dgvDetalleRequisicionPS.Rows.RemoveAt(dgvDetalleRequisicionPS.CurrentRow.Index)
                                 Exit For
@@ -166,7 +166,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.REQUERIMIENTOS
                                 dgvDetalleRequisicionPS.CurrentRow.Cells(3).Value = ""
                                 dgvDetalleRequisicionPS.CurrentRow.Cells(4).Value = ""
                                 dgvDetalleRequisicionPS.CurrentRow.Cells(5).Value = ""
-                                MsgBox("EL ITEM INGRESADO NO SE ENCUENTRA EN LA BASE DE DATOS. POR FAVOR REGISTRELO ANTES DE INGRESARLO EN LA REQUISICIÓN", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                                MsgBox("EL ITEM INGRESADO NO SE ENCUENTRA EN LA BASE DE DATOS. POR FAVOR REGISTRELO ANTES DE INGRESARLO EN LA REQUISICIÓN", MsgBoxStyle.Exclamation, "Mensaje de validación")
                                 Return
                             End If
                             dgvDetalleRequisicionPS.CurrentRow.Cells(0).Value = tab.Rows(0)(0).ToString
@@ -177,7 +177,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.REQUERIMIENTOS
                     Next
                 End If
             Catch ex As Exception
-                MsgBox("BUSCAR ID DE ITEM." & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "MENSAJE DE EXCEPCIÓN")
+                MsgBox("BUSCAR ID DE ITEM." & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
             End Try
         End Sub
         Private Sub btnBuscarPersonal_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnBuscarPersonal.Click
@@ -229,7 +229,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.REQUERIMIENTOS
             If dgvDetalleRequisicionPS.RowCount > 0 Then
                 If ValidarParametros() Then
 
-                    If MessageBox.Show("¿ESTA SEGUR@ QUE DESEA GUARDAR?", "MENSAJE DE VALIDACIÓN", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> DialogResult.Yes Then Return
+                    If MessageBox.Show("¿ESTA SEGUR@ QUE DESEA GUARDAR?", "Mensaje de validación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> DialogResult.Yes Then Return
                     _sqlCommands.Clear()
 
                     GuardarRegistroRequisicionProductoServicio()
@@ -242,10 +242,10 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.REQUERIMIENTOS
                     End If
                     MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
                 Else
-                    MsgBox("NO SE PUEDE GUARDAR." & vbNewLine & "NO SE HAN LLENADO TODOS LOS CAMPOS NECESARIOS.", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                    MsgBox("No se puede guardar." & vbNewLine & "NO SE HAN LLENADO TODOS LOS CAMPOS NECESARIOS.", MsgBoxStyle.Exclamation, "Mensaje de validación")
                 End If
             Else
-                MsgBox("NO SE PUEDE GUARDAR." & vbNewLine & "NO HA AGREGADO NINGÚN ITEM A LA REQUISICIÓN.", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                MsgBox("No se puede guardar." & vbNewLine & "NO HA AGREGADO NINGÚN ITEM A LA REQUISICIÓN.", MsgBoxStyle.Exclamation, "Mensaje de validación")
             End If
         End Sub 
         Public Sub GuardarRegistroRequisicionProductoServicio()
