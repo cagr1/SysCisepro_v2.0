@@ -1,7 +1,8 @@
 ﻿Namespace FORMULARIOS.CONTABILIDAD.BANCOS.REPORTES
     <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
     Partial Class FormReporteComprobanteEgresoBancoMachala
-        Inherits System.Windows.Forms.Form
+        'Inherits System.Windows.Forms.Form
+        Inherits Krypton.Toolkit.KryptonForm
 
         'Form reemplaza a Dispose para limpiar la lista de componentes.
         <System.Diagnostics.DebuggerNonUserCode()> _
@@ -39,6 +40,7 @@
             Me.crvComprobanteEgresoBancoMachala.Dock = System.Windows.Forms.DockStyle.Fill
             Me.crvComprobanteEgresoBancoMachala.Location = New System.Drawing.Point(0, 0)
             Me.crvComprobanteEgresoBancoMachala.Name = "crvComprobanteEgresoBancoMachala"
+            Me.crvComprobanteEgresoBancoMachala.ShowLogo = False
             Me.crvComprobanteEgresoBancoMachala.Size = New System.Drawing.Size(1194, 675)
             Me.crvComprobanteEgresoBancoMachala.TabIndex = 0
             Me.crvComprobanteEgresoBancoMachala.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None
@@ -96,6 +98,10 @@
             Me.ImeMode = System.Windows.Forms.ImeMode.[On]
             Me.Name = "FormReporteComprobanteEgresoBancoMachala"
             Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+            Me.StateActive.Border.DrawBorders = CType((((Krypton.Toolkit.PaletteDrawBorders.Top Or Krypton.Toolkit.PaletteDrawBorders.Bottom) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Left) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Right), Krypton.Toolkit.PaletteDrawBorders)
+            Me.StateActive.Border.Rounding = 5.0!
             Me.Text = "COMPROBANTE EGRESO BANCO MACHALA"
             Me.ResumeLayout(False)
             Me.PerformLayout()

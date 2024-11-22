@@ -1,10 +1,10 @@
 ﻿Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
-    <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+    <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
     Partial Class FormRegistroComprobanteCompra
         'Inherits System.Windows.Forms.Form
         Inherits Krypton.Toolkit.KryptonForm
         'Form reemplaza a Dispose para limpiar la lista de componentes.
-        <System.Diagnostics.DebuggerNonUserCode()> _
+        <System.Diagnostics.DebuggerNonUserCode()>
         Protected Overrides Sub Dispose(ByVal disposing As Boolean)
             Try
                 If disposing AndAlso components IsNot Nothing Then
@@ -21,36 +21,35 @@
         'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
         'Se puede modificar usando el Diseñador de Windows Forms.  
         'No lo modifique con el editor de código.
-        <System.Diagnostics.DebuggerStepThrough()> _
+        <System.Diagnostics.DebuggerStepThrough()>
         Private Sub InitializeComponent()
-            Dim DataGridViewCellStyle31 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle32 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle33 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle34 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle35 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle36 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle37 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle38 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle39 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle40 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle41 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle42 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle45 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle43 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle44 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Me.gpComandos = New System.Windows.Forms.GroupBox()
-            Me.lblEtiquetaIdComprobanteCompra = New System.Windows.Forms.Label()
+            Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle13 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle14 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle15 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle18 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle16 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle17 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Me.lblIdComprobanteCompra = New System.Windows.Forms.Label()
             Me.btnGuardar = New System.Windows.Forms.Button()
             Me.btnCancelar = New System.Windows.Forms.Button()
             Me.btnReporte = New System.Windows.Forms.Button()
             Me.btnNuevo = New System.Windows.Forms.Button()
             Me.btnGuardarEnFondoRotativo = New System.Windows.Forms.Button()
-            Me.gbTipoComprobanteCompra = New System.Windows.Forms.GroupBox()
             Me.lblTipoDocumento = New System.Windows.Forms.Label()
             Me.cmbNombreParametroDocumentos = New System.Windows.Forms.ComboBox()
             Me.chkActivoFijo = New System.Windows.Forms.CheckBox()
-            Me.gbRetencion = New System.Windows.Forms.GroupBox()
             Me.cmbBienServicio = New System.Windows.Forms.ComboBox()
             Me.btnEliminarImpuesto = New System.Windows.Forms.Button()
             Me.cmbConcepto = New System.Windows.Forms.ComboBox()
@@ -58,15 +57,8 @@
             Me.cmbContribuyente = New System.Windows.Forms.ComboBox()
             Me.dtpComprobanteRetencion = New System.Windows.Forms.DateTimePicker()
             Me.btnAgregarImpuesto = New System.Windows.Forms.Button()
-            Me.lblConcepto = New System.Windows.Forms.Label()
-            Me.lblImpuesto = New System.Windows.Forms.Label()
-            Me.lblTotalRetencion = New System.Windows.Forms.Label()
             Me.txtTotalComprobanteRetencion = New System.Windows.Forms.TextBox()
-            Me.lblNroRetencion = New System.Windows.Forms.Label()
             Me.txtNumeroComprobanteRetencion = New System.Windows.Forms.TextBox()
-            Me.lblFechaRetencion = New System.Windows.Forms.Label()
-            Me.lblContribuyente = New System.Windows.Forms.Label()
-            Me.GroupBox1 = New System.Windows.Forms.GroupBox()
             Me.dgvDetalleComprobanteRetencion = New System.Windows.Forms.DataGridView()
             Me.EjercicioFiscal = New System.Windows.Forms.DataGridViewTextBoxColumn()
             Me.CodigoRetencion = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -76,92 +68,52 @@
             Me.ValorRetenido = New System.Windows.Forms.DataGridViewTextBoxColumn()
             Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
             Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-            Me.gbDatosEspecialesComprobanteCompra = New System.Windows.Forms.GroupBox()
-            Me.bntBuscarMod = New System.Windows.Forms.Button()
-            Me.Label1 = New System.Windows.Forms.Label()
-            Me.txtRazModComprobanteCompra = New System.Windows.Forms.TextBox()
-            Me.Label32 = New System.Windows.Forms.Label()
-            Me.txtDocModComprobanteCompra = New System.Windows.Forms.TextBox()
-            Me.lblGuiaRemisionFacturaCompra = New System.Windows.Forms.Label()
-            Me.txtGuiaRemisionComprobanteCompra = New System.Windows.Forms.TextBox()
-            Me.Label5 = New System.Windows.Forms.Label()
-            Me.Label9 = New System.Windows.Forms.Label()
-            Me.chkActivarRetencion = New System.Windows.Forms.CheckBox()
-            Me.Label45 = New System.Windows.Forms.Label()
-            Me.lblFechaEmisionFacturaCompra = New System.Windows.Forms.Label()
-            Me.dtpFechaEmisionComprobanteCompra = New System.Windows.Forms.DateTimePicker()
-            Me.gbValoresComprobanteCompra = New System.Windows.Forms.GroupBox()
-            Me.txtSubtotal5FacturaCompra = New System.Windows.Forms.TextBox()
-            Me.lblSubtotal5ComprabanteCompra = New System.Windows.Forms.Label()
-            Me.txtIva5ComprobanteCompra = New System.Windows.Forms.TextBox()
-            Me.lblIva5 = New System.Windows.Forms.Label()
-            Me.txtDescuentoFacturaCompra = New System.Windows.Forms.TextBox()
-            Me.txtSubtotal0FacturaCompra = New System.Windows.Forms.TextBox()
-            Me.txtSubtotal12FacturaCompra = New System.Windows.Forms.TextBox()
-            Me.txtSubTotalComprobanteCompra = New System.Windows.Forms.TextBox()
-            Me.txtTotalComprobanteCompra = New System.Windows.Forms.TextBox()
-            Me.txtIvaComprobanteCompra = New System.Windows.Forms.TextBox()
-            Me.lblSubTotal = New System.Windows.Forms.Label()
-            Me.lblTotalOrdenCompra = New System.Windows.Forms.Label()
-            Me.lblIva = New System.Windows.Forms.Label()
-            Me.lblDescuentoOrdenCompra = New System.Windows.Forms.Label()
-            Me.lblSubtotal0OrdenCompra = New System.Windows.Forms.Label()
-            Me.lblSubtotalIva = New System.Windows.Forms.Label()
-            Me.gbDatosComprobanteCompra = New System.Windows.Forms.GroupBox()
-            Me.btnOrdenCompra = New System.Windows.Forms.Button()
-            Me.lblOrdenCompra = New System.Windows.Forms.Label()
-            Me.chkReq = New System.Windows.Forms.CheckBox()
-            Me.btnBuscar = New System.Windows.Forms.Button()
-            Me.lblNumAutoSRIFacturaCompra = New System.Windows.Forms.Label()
-            Me.txtNumAutoSRIComprobanteCompra = New System.Windows.Forms.TextBox()
-            Me.lblNumeroFacturaCompra = New System.Windows.Forms.Label()
-            Me.dtpFechaAutoSRIComprobanteCompra = New System.Windows.Forms.DateTimePicker()
-            Me.txtNumeroComprobanteCompra = New System.Windows.Forms.TextBox()
-            Me.lblFechaAutoSRIFacturaCompra = New System.Windows.Forms.Label()
-            Me.lblSeparadorRUC = New System.Windows.Forms.Label()
-            Me.lblSeparadorNumFact = New System.Windows.Forms.Label()
-            Me.Label37 = New System.Windows.Forms.Label()
-            Me.gbDatosProveedor = New System.Windows.Forms.GroupBox()
             Me.txtContribuyenteEspecialProveedorGeneral = New System.Windows.Forms.TextBox()
             Me.txtObligadoLlevarContabilidadProveedorGeneral = New System.Windows.Forms.TextBox()
             Me.txtNumAutoContEspFacturaCompra = New System.Windows.Forms.TextBox()
-            Me.lblNumAutoContEspFacturaCompra = New System.Windows.Forms.Label()
-            Me.lblContabilidadProveedorGeneral = New System.Windows.Forms.Label()
-            Me.lblContribuyenteEspecialProveedorGeneral = New System.Windows.Forms.Label()
             Me.txtCiudadProveedorGeneral = New System.Windows.Forms.TextBox()
-            Me.lblCiudadProveedorGeneral = New System.Windows.Forms.Label()
             Me.txtEmailProveedorGeneral = New System.Windows.Forms.TextBox()
-            Me.Label2 = New System.Windows.Forms.Label()
             Me.txtTelefonoProveedorGeneral = New System.Windows.Forms.TextBox()
             Me.txtDireccionProveedorGeneral = New System.Windows.Forms.TextBox()
-            Me.lblTelefono1ProveedorGeneral = New System.Windows.Forms.Label()
-            Me.lblDireccionProveedorGeneral = New System.Windows.Forms.Label()
-            Me.gbRUCProveedor = New System.Windows.Forms.GroupBox()
             Me.txtRucProveedorGeneral = New System.Windows.Forms.TextBox()
             Me.lblIdProveedorGeneral = New System.Windows.Forms.Label()
-            Me.gbNombreComercialProveedor = New System.Windows.Forms.GroupBox()
             Me.txtNombreComercialProveedorGeneral = New System.Windows.Forms.TextBox()
-            Me.gbObservaciones = New System.Windows.Forms.GroupBox()
             Me.txtObservacionesComprobantesCompra = New System.Windows.Forms.TextBox()
-            Me.gbConceptoCompra = New System.Windows.Forms.GroupBox()
-            Me.cmbConceptoCompra = New System.Windows.Forms.ComboBox()
-            Me.gbTipoEmision = New System.Windows.Forms.GroupBox()
             Me.rbTipoEmisionIndisponibilidadSistema = New System.Windows.Forms.RadioButton()
             Me.rbTipoEmisionNormal = New System.Windows.Forms.RadioButton()
-            Me.Label20 = New System.Windows.Forms.Label()
-            Me.gbTipoAnbiente = New System.Windows.Forms.GroupBox()
             Me.rbProduccion = New System.Windows.Forms.RadioButton()
-            Me.Label18 = New System.Windows.Forms.Label()
             Me.rbPruebas = New System.Windows.Forms.RadioButton()
-            Me.gbPtoEmision = New System.Windows.Forms.GroupBox()
-            Me.Label19 = New System.Windows.Forms.Label()
             Me.rbPtoEmision002 = New System.Windows.Forms.RadioButton()
             Me.rbPtoEmision001 = New System.Windows.Forms.RadioButton()
             Me.ofdSeleccionarArchivo = New System.Windows.Forms.OpenFileDialog()
             Me.GroupBox2 = New System.Windows.Forms.GroupBox()
             Me.Label3 = New System.Windows.Forms.Label()
             Me.cbxPorcentaje = New System.Windows.Forms.ComboBox()
-            Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+            Me.KryptonGroupBox1 = New Krypton.Toolkit.KryptonGroupBox()
+            Me.KryptonLabel3 = New Krypton.Toolkit.KryptonLabel()
+            Me.SpaceSeparatorVertical2 = New ReaLTaiizor.Controls.SpaceSeparatorVertical()
+            Me.KryptonLabel2 = New Krypton.Toolkit.KryptonLabel()
+            Me.SpaceSeparatorVertical1 = New ReaLTaiizor.Controls.SpaceSeparatorVertical()
+            Me.KryptonLabel1 = New Krypton.Toolkit.KryptonLabel()
+            Me.gbConceptoCompra = New System.Windows.Forms.GroupBox()
+            Me.cmbConceptoCompra = New System.Windows.Forms.ComboBox()
+            Me.KryptonGroupBox2 = New Krypton.Toolkit.KryptonGroupBox()
+            Me.KryptonLabel4 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonGroupBox3 = New Krypton.Toolkit.KryptonGroupBox()
+            Me.KryptonLabel23 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel26 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel25 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel24 = New Krypton.Toolkit.KryptonLabel()
+            Me.txtSubtotal5FacturaCompra = New System.Windows.Forms.TextBox()
+            Me.lblIva = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel22 = New Krypton.Toolkit.KryptonLabel()
+            Me.txtIva5ComprobanteCompra = New System.Windows.Forms.TextBox()
+            Me.KryptonLabel21 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel5 = New Krypton.Toolkit.KryptonLabel()
+            Me.txtDescuentoFacturaCompra = New System.Windows.Forms.TextBox()
+            Me.lblSubtotalIva = New Krypton.Toolkit.KryptonLabel()
+            Me.txtSubtotal0FacturaCompra = New System.Windows.Forms.TextBox()
+            Me.txtSubTotalComprobanteCompra = New System.Windows.Forms.TextBox()
             Me.dgvAsientosDiario = New System.Windows.Forms.DataGridView()
             Me.eliminarItem = New System.Windows.Forms.DataGridViewButtonColumn()
             Me.CODIGO = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -169,59 +121,74 @@
             Me.VALOR = New System.Windows.Forms.DataGridViewTextBoxColumn()
             Me.IVA = New System.Windows.Forms.DataGridViewTextBoxColumn()
             Me.PORCENTAJE = New System.Windows.Forms.DataGridViewComboBoxColumn()
-            Me.gpComandos.SuspendLayout()
-            Me.gbTipoComprobanteCompra.SuspendLayout()
-            Me.gbRetencion.SuspendLayout()
-            Me.GroupBox1.SuspendLayout()
+            Me.txtTotalComprobanteCompra = New System.Windows.Forms.TextBox()
+            Me.txtSubtotal12FacturaCompra = New System.Windows.Forms.TextBox()
+            Me.txtIvaComprobanteCompra = New System.Windows.Forms.TextBox()
+            Me.btnOrdenCompra = New System.Windows.Forms.Button()
+            Me.KryptonLabel20 = New Krypton.Toolkit.KryptonLabel()
+            Me.lblOrdenCompra = New System.Windows.Forms.Label()
+            Me.KryptonLabel19 = New Krypton.Toolkit.KryptonLabel()
+            Me.chkReq = New System.Windows.Forms.CheckBox()
+            Me.KryptonLabel18 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel17 = New Krypton.Toolkit.KryptonLabel()
+            Me.dtpFechaEmisionComprobanteCompra = New System.Windows.Forms.DateTimePicker()
+            Me.KryptonLabel16 = New Krypton.Toolkit.KryptonLabel()
+            Me.txtRazModComprobanteCompra = New System.Windows.Forms.TextBox()
+            Me.btnBuscar = New System.Windows.Forms.Button()
+            Me.bntBuscarMod = New System.Windows.Forms.Button()
+            Me.dtpFechaAutoSRIComprobanteCompra = New System.Windows.Forms.DateTimePicker()
+            Me.txtNumAutoSRIComprobanteCompra = New System.Windows.Forms.TextBox()
+            Me.KryptonLabel15 = New Krypton.Toolkit.KryptonLabel()
+            Me.chkActivarRetencion = New System.Windows.Forms.CheckBox()
+            Me.KryptonLabel14 = New Krypton.Toolkit.KryptonLabel()
+            Me.txtGuiaRemisionComprobanteCompra = New System.Windows.Forms.TextBox()
+            Me.txtDocModComprobanteCompra = New System.Windows.Forms.TextBox()
+            Me.txtNumeroComprobanteCompra = New System.Windows.Forms.TextBox()
+            Me.KryptonLabel13 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel12 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel11 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel10 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel9 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel8 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel7 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel6 = New Krypton.Toolkit.KryptonLabel()
+            Me.gbRUCProveedor = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonGroupBox4 = New Krypton.Toolkit.KryptonGroupBox()
+            Me.KryptonLabel32 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel31 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel30 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel29 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel28 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel27 = New Krypton.Toolkit.KryptonLabel()
             CType(Me.dgvDetalleComprobanteRetencion, System.ComponentModel.ISupportInitialize).BeginInit()
-            Me.gbDatosEspecialesComprobanteCompra.SuspendLayout()
-            Me.gbValoresComprobanteCompra.SuspendLayout()
-            Me.gbDatosComprobanteCompra.SuspendLayout()
-            Me.gbDatosProveedor.SuspendLayout()
-            Me.gbRUCProveedor.SuspendLayout()
-            Me.gbNombreComercialProveedor.SuspendLayout()
-            Me.gbObservaciones.SuspendLayout()
-            Me.gbConceptoCompra.SuspendLayout()
-            Me.gbTipoEmision.SuspendLayout()
-            Me.gbTipoAnbiente.SuspendLayout()
-            Me.gbPtoEmision.SuspendLayout()
             Me.GroupBox2.SuspendLayout()
-            Me.GroupBox3.SuspendLayout()
+            CType(Me.KryptonGroupBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType(Me.KryptonGroupBox1.Panel, System.ComponentModel.ISupportInitialize).BeginInit()
+            Me.KryptonGroupBox1.Panel.SuspendLayout()
+            Me.KryptonGroupBox1.SuspendLayout()
+            Me.gbConceptoCompra.SuspendLayout()
+            CType(Me.KryptonGroupBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType(Me.KryptonGroupBox2.Panel, System.ComponentModel.ISupportInitialize).BeginInit()
+            Me.KryptonGroupBox2.Panel.SuspendLayout()
+            Me.KryptonGroupBox2.SuspendLayout()
+            CType(Me.KryptonGroupBox3, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType(Me.KryptonGroupBox3.Panel, System.ComponentModel.ISupportInitialize).BeginInit()
+            Me.KryptonGroupBox3.Panel.SuspendLayout()
+            Me.KryptonGroupBox3.SuspendLayout()
             CType(Me.dgvAsientosDiario, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType(Me.KryptonGroupBox4, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType(Me.KryptonGroupBox4.Panel, System.ComponentModel.ISupportInitialize).BeginInit()
+            Me.KryptonGroupBox4.Panel.SuspendLayout()
+            Me.KryptonGroupBox4.SuspendLayout()
             Me.SuspendLayout()
-            '
-            'gpComandos
-            '
-            Me.gpComandos.BackColor = System.Drawing.Color.White
-            Me.gpComandos.Controls.Add(Me.lblEtiquetaIdComprobanteCompra)
-            Me.gpComandos.Controls.Add(Me.lblIdComprobanteCompra)
-            Me.gpComandos.Controls.Add(Me.btnGuardar)
-            Me.gpComandos.Controls.Add(Me.btnCancelar)
-            Me.gpComandos.Controls.Add(Me.btnReporte)
-            Me.gpComandos.Controls.Add(Me.btnNuevo)
-            Me.gpComandos.Controls.Add(Me.btnGuardarEnFondoRotativo)
-            Me.gpComandos.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.gpComandos.Location = New System.Drawing.Point(431, 31)
-            Me.gpComandos.Name = "gpComandos"
-            Me.gpComandos.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-            Me.gpComandos.Size = New System.Drawing.Size(350, 48)
-            Me.gpComandos.TabIndex = 47
-            Me.gpComandos.TabStop = False
-            '
-            'lblEtiquetaIdComprobanteCompra
-            '
-            Me.lblEtiquetaIdComprobanteCompra.AutoSize = True
-            Me.lblEtiquetaIdComprobanteCompra.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.lblEtiquetaIdComprobanteCompra.Location = New System.Drawing.Point(6, 0)
-            Me.lblEtiquetaIdComprobanteCompra.Name = "lblEtiquetaIdComprobanteCompra"
-            Me.lblEtiquetaIdComprobanteCompra.Size = New System.Drawing.Size(34, 13)
-            Me.lblEtiquetaIdComprobanteCompra.TabIndex = 29
-            Me.lblEtiquetaIdComprobanteCompra.Text = "ID CC"
             '
             'lblIdComprobanteCompra
             '
             Me.lblIdComprobanteCompra.AutoSize = True
-            Me.lblIdComprobanteCompra.Location = New System.Drawing.Point(48, -4)
+            Me.lblIdComprobanteCompra.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
+            Me.lblIdComprobanteCompra.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.lblIdComprobanteCompra.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
+            Me.lblIdComprobanteCompra.Location = New System.Drawing.Point(417, 10)
             Me.lblIdComprobanteCompra.Name = "lblIdComprobanteCompra"
             Me.lblIdComprobanteCompra.Size = New System.Drawing.Size(16, 13)
             Me.lblIdComprobanteCompra.TabIndex = 28
@@ -229,11 +196,13 @@
             '
             'btnGuardar
             '
-            Me.btnGuardar.BackColor = System.Drawing.Color.White
+            Me.btnGuardar.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.btnGuardar.Enabled = False
+            Me.btnGuardar.FlatAppearance.BorderSize = 0
+            Me.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.btnGuardar.Font = New System.Drawing.Font("Segoe UI", 6.5!)
             Me.btnGuardar.Image = Global.syscisepro.My.Resources.Resources.save_24dp_FILL0_wght400_GRAD0_opsz24__2_
-            Me.btnGuardar.Location = New System.Drawing.Point(113, 10)
+            Me.btnGuardar.Location = New System.Drawing.Point(545, -8)
             Me.btnGuardar.Name = "btnGuardar"
             Me.btnGuardar.Size = New System.Drawing.Size(35, 35)
             Me.btnGuardar.TabIndex = 10
@@ -242,11 +211,13 @@
             '
             'btnCancelar
             '
-            Me.btnCancelar.BackColor = System.Drawing.Color.White
+            Me.btnCancelar.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.btnCancelar.Enabled = False
+            Me.btnCancelar.FlatAppearance.BorderSize = 0
+            Me.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.btnCancelar.Font = New System.Drawing.Font("Segoe UI", 6.5!)
             Me.btnCancelar.Image = Global.syscisepro.My.Resources.Resources.cancel_24dp_FILL0_wght400_GRAD0_opsz24
-            Me.btnCancelar.Location = New System.Drawing.Point(198, 10)
+            Me.btnCancelar.Location = New System.Drawing.Point(627, -7)
             Me.btnCancelar.Name = "btnCancelar"
             Me.btnCancelar.Size = New System.Drawing.Size(35, 35)
             Me.btnCancelar.TabIndex = 12
@@ -255,12 +226,14 @@
             '
             'btnReporte
             '
-            Me.btnReporte.BackColor = System.Drawing.Color.White
+            Me.btnReporte.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.btnReporte.Enabled = False
+            Me.btnReporte.FlatAppearance.BorderSize = 0
+            Me.btnReporte.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.btnReporte.Font = New System.Drawing.Font("Segoe UI", 6.5!)
             Me.btnReporte.Image = Global.syscisepro.My.Resources.Resources.description_24dp_FILL0_wght400_GRAD0_opsz24__2_
             Me.btnReporte.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-            Me.btnReporte.Location = New System.Drawing.Point(239, 10)
+            Me.btnReporte.Location = New System.Drawing.Point(668, -6)
             Me.btnReporte.Name = "btnReporte"
             Me.btnReporte.Size = New System.Drawing.Size(35, 35)
             Me.btnReporte.TabIndex = 13
@@ -269,10 +242,12 @@
             '
             'btnNuevo
             '
-            Me.btnNuevo.BackColor = System.Drawing.Color.White
+            Me.btnNuevo.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
+            Me.btnNuevo.FlatAppearance.BorderSize = 0
+            Me.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.btnNuevo.Font = New System.Drawing.Font("Segoe UI", 6.5!)
             Me.btnNuevo.Image = Global.syscisepro.My.Resources.Resources.add_circle_24dp_FILL0_wght400_GRAD0_opsz24__3_
-            Me.btnNuevo.Location = New System.Drawing.Point(157, 10)
+            Me.btnNuevo.Location = New System.Drawing.Point(586, -7)
             Me.btnNuevo.Name = "btnNuevo"
             Me.btnNuevo.Size = New System.Drawing.Size(35, 35)
             Me.btnNuevo.TabIndex = 9
@@ -281,12 +256,14 @@
             '
             'btnGuardarEnFondoRotativo
             '
-            Me.btnGuardarEnFondoRotativo.BackColor = System.Drawing.Color.White
+            Me.btnGuardarEnFondoRotativo.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.btnGuardarEnFondoRotativo.Enabled = False
+            Me.btnGuardarEnFondoRotativo.FlatAppearance.BorderSize = 0
+            Me.btnGuardarEnFondoRotativo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.btnGuardarEnFondoRotativo.Font = New System.Drawing.Font("Segoe UI", 6.5!)
-            Me.btnGuardarEnFondoRotativo.Image = Global.syscisepro.My.Resources.Resources.save_24dp_FILL0_wght400_GRAD0_opsz24
+            Me.btnGuardarEnFondoRotativo.Image = Global.syscisepro.My.Resources.Resources.save_24dp_FILL0_wght400_GRAD0_opsz24__3_
             Me.btnGuardarEnFondoRotativo.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-            Me.btnGuardarEnFondoRotativo.Location = New System.Drawing.Point(72, 10)
+            Me.btnGuardarEnFondoRotativo.Location = New System.Drawing.Point(504, -7)
             Me.btnGuardarEnFondoRotativo.Name = "btnGuardarEnFondoRotativo"
             Me.btnGuardarEnFondoRotativo.Size = New System.Drawing.Size(35, 35)
             Me.btnGuardarEnFondoRotativo.TabIndex = 11
@@ -294,25 +271,12 @@
             Me.btnGuardarEnFondoRotativo.UseVisualStyleBackColor = False
             Me.btnGuardarEnFondoRotativo.Visible = False
             '
-            'gbTipoComprobanteCompra
-            '
-            Me.gbTipoComprobanteCompra.BackColor = System.Drawing.Color.White
-            Me.gbTipoComprobanteCompra.Controls.Add(Me.lblTipoDocumento)
-            Me.gbTipoComprobanteCompra.Controls.Add(Me.cmbNombreParametroDocumentos)
-            Me.gbTipoComprobanteCompra.Controls.Add(Me.chkActivoFijo)
-            Me.gbTipoComprobanteCompra.Enabled = False
-            Me.gbTipoComprobanteCompra.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.gbTipoComprobanteCompra.Location = New System.Drawing.Point(1, 32)
-            Me.gbTipoComprobanteCompra.Name = "gbTipoComprobanteCompra"
-            Me.gbTipoComprobanteCompra.Size = New System.Drawing.Size(427, 48)
-            Me.gbTipoComprobanteCompra.TabIndex = 46
-            Me.gbTipoComprobanteCompra.TabStop = False
-            Me.gbTipoComprobanteCompra.Text = "TIPO DE COMPROBANTE"
-            '
             'lblTipoDocumento
             '
             Me.lblTipoDocumento.AutoSize = True
-            Me.lblTipoDocumento.Location = New System.Drawing.Point(149, 0)
+            Me.lblTipoDocumento.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
+            Me.lblTipoDocumento.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
+            Me.lblTipoDocumento.Location = New System.Drawing.Point(130, 44)
             Me.lblTipoDocumento.Name = "lblTipoDocumento"
             Me.lblTipoDocumento.Size = New System.Drawing.Size(16, 13)
             Me.lblTipoDocumento.TabIndex = 25
@@ -322,76 +286,51 @@
             '
             Me.cmbNombreParametroDocumentos.BackColor = System.Drawing.Color.White
             Me.cmbNombreParametroDocumentos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-            Me.cmbNombreParametroDocumentos.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+            Me.cmbNombreParametroDocumentos.DropDownWidth = 350
             Me.cmbNombreParametroDocumentos.FormattingEnabled = True
-            Me.cmbNombreParametroDocumentos.Location = New System.Drawing.Point(5, 20)
+            Me.cmbNombreParametroDocumentos.Location = New System.Drawing.Point(4, 5)
             Me.cmbNombreParametroDocumentos.Name = "cmbNombreParametroDocumentos"
-            Me.cmbNombreParametroDocumentos.Size = New System.Drawing.Size(400, 21)
+            Me.cmbNombreParametroDocumentos.Size = New System.Drawing.Size(215, 21)
             Me.cmbNombreParametroDocumentos.TabIndex = 7
             '
             'chkActivoFijo
             '
             Me.chkActivoFijo.AutoSize = True
+            Me.chkActivoFijo.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.chkActivoFijo.Enabled = False
             Me.chkActivoFijo.FlatAppearance.BorderColor = System.Drawing.Color.White
+            Me.chkActivoFijo.FlatAppearance.BorderSize = 4
             Me.chkActivoFijo.FlatAppearance.CheckedBackColor = System.Drawing.Color.White
             Me.chkActivoFijo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White
-            Me.chkActivoFijo.Font = New System.Drawing.Font("Segoe UI Semibold", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.chkActivoFijo.Location = New System.Drawing.Point(331, 0)
+            Me.chkActivoFijo.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.chkActivoFijo.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
+            Me.chkActivoFijo.Location = New System.Drawing.Point(293, 7)
             Me.chkActivoFijo.Name = "chkActivoFijo"
-            Me.chkActivoFijo.Size = New System.Drawing.Size(88, 17)
+            Me.chkActivoFijo.Size = New System.Drawing.Size(78, 17)
             Me.chkActivoFijo.TabIndex = 32
-            Me.chkActivoFijo.Text = "ACTIVO FIJO"
+            Me.chkActivoFijo.Text = "Activo Fijo"
             Me.chkActivoFijo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-            Me.chkActivoFijo.UseVisualStyleBackColor = True
-            '
-            'gbRetencion
-            '
-            Me.gbRetencion.BackColor = System.Drawing.Color.White
-            Me.gbRetencion.Controls.Add(Me.cmbBienServicio)
-            Me.gbRetencion.Controls.Add(Me.btnEliminarImpuesto)
-            Me.gbRetencion.Controls.Add(Me.cmbConcepto)
-            Me.gbRetencion.Controls.Add(Me.cmbImpuesto)
-            Me.gbRetencion.Controls.Add(Me.cmbContribuyente)
-            Me.gbRetencion.Controls.Add(Me.dtpComprobanteRetencion)
-            Me.gbRetencion.Controls.Add(Me.btnAgregarImpuesto)
-            Me.gbRetencion.Controls.Add(Me.lblConcepto)
-            Me.gbRetencion.Controls.Add(Me.lblImpuesto)
-            Me.gbRetencion.Controls.Add(Me.lblTotalRetencion)
-            Me.gbRetencion.Controls.Add(Me.txtTotalComprobanteRetencion)
-            Me.gbRetencion.Controls.Add(Me.lblNroRetencion)
-            Me.gbRetencion.Controls.Add(Me.txtNumeroComprobanteRetencion)
-            Me.gbRetencion.Controls.Add(Me.lblFechaRetencion)
-            Me.gbRetencion.Controls.Add(Me.lblContribuyente)
-            Me.gbRetencion.Enabled = False
-            Me.gbRetencion.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.gbRetencion.Location = New System.Drawing.Point(1, 519)
-            Me.gbRetencion.Name = "gbRetencion"
-            Me.gbRetencion.Size = New System.Drawing.Size(790, 69)
-            Me.gbRetencion.TabIndex = 72
-            Me.gbRetencion.TabStop = False
-            Me.gbRetencion.Text = "RETENCIÓN"
+            Me.chkActivoFijo.UseVisualStyleBackColor = False
             '
             'cmbBienServicio
             '
             Me.cmbBienServicio.BackColor = System.Drawing.Color.White
             Me.cmbBienServicio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cmbBienServicio.DropDownWidth = 100
-            Me.cmbBienServicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.cmbBienServicio.FormattingEnabled = True
             Me.cmbBienServicio.Items.AddRange(New Object() {"BIEN", "SERV."})
-            Me.cmbBienServicio.Location = New System.Drawing.Point(681, 43)
+            Me.cmbBienServicio.Location = New System.Drawing.Point(639, 32)
             Me.cmbBienServicio.Name = "cmbBienServicio"
-            Me.cmbBienServicio.Size = New System.Drawing.Size(102, 21)
+            Me.cmbBienServicio.Size = New System.Drawing.Size(70, 21)
             Me.cmbBienServicio.TabIndex = 53
             '
             'btnEliminarImpuesto
             '
-            Me.btnEliminarImpuesto.BackColor = System.Drawing.Color.White
+            Me.btnEliminarImpuesto.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.btnEliminarImpuesto.FlatAppearance.BorderSize = 0
             Me.btnEliminarImpuesto.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.btnEliminarImpuesto.Image = Global.syscisepro.My.Resources.Resources.do_not_disturb_on_24dp_FILL0_wght400_GRAD0_opsz24
-            Me.btnEliminarImpuesto.Location = New System.Drawing.Point(747, 14)
+            Me.btnEliminarImpuesto.Location = New System.Drawing.Point(681, 1)
             Me.btnEliminarImpuesto.Name = "btnEliminarImpuesto"
             Me.btnEliminarImpuesto.Size = New System.Drawing.Size(27, 27)
             Me.btnEliminarImpuesto.TabIndex = 48
@@ -402,20 +341,18 @@
             Me.cmbConcepto.BackColor = System.Drawing.Color.White
             Me.cmbConcepto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cmbConcepto.DropDownWidth = 600
-            Me.cmbConcepto.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.cmbConcepto.FormattingEnabled = True
-            Me.cmbConcepto.Location = New System.Drawing.Point(242, 43)
+            Me.cmbConcepto.Location = New System.Drawing.Point(281, 29)
             Me.cmbConcepto.Name = "cmbConcepto"
-            Me.cmbConcepto.Size = New System.Drawing.Size(163, 21)
+            Me.cmbConcepto.Size = New System.Drawing.Size(111, 21)
             Me.cmbConcepto.TabIndex = 45
             '
             'cmbImpuesto
             '
             Me.cmbImpuesto.BackColor = System.Drawing.Color.White
             Me.cmbImpuesto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-            Me.cmbImpuesto.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.cmbImpuesto.FormattingEnabled = True
-            Me.cmbImpuesto.Location = New System.Drawing.Point(72, 43)
+            Me.cmbImpuesto.Location = New System.Drawing.Point(66, 29)
             Me.cmbImpuesto.Name = "cmbImpuesto"
             Me.cmbImpuesto.Size = New System.Drawing.Size(89, 21)
             Me.cmbImpuesto.TabIndex = 44
@@ -425,9 +362,8 @@
             Me.cmbContribuyente.BackColor = System.Drawing.Color.White
             Me.cmbContribuyente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cmbContribuyente.DropDownWidth = 300
-            Me.cmbContribuyente.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.cmbContribuyente.FormattingEnabled = True
-            Me.cmbContribuyente.Location = New System.Drawing.Point(548, 43)
+            Me.cmbContribuyente.Location = New System.Drawing.Point(508, 32)
             Me.cmbContribuyente.Name = "cmbContribuyente"
             Me.cmbContribuyente.Size = New System.Drawing.Size(123, 21)
             Me.cmbContribuyente.TabIndex = 46
@@ -436,140 +372,91 @@
             '
             Me.dtpComprobanteRetencion.Enabled = False
             Me.dtpComprobanteRetencion.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-            Me.dtpComprobanteRetencion.Location = New System.Drawing.Point(274, 16)
+            Me.dtpComprobanteRetencion.Location = New System.Drawing.Point(281, 3)
             Me.dtpComprobanteRetencion.Name = "dtpComprobanteRetencion"
-            Me.dtpComprobanteRetencion.Size = New System.Drawing.Size(129, 21)
+            Me.dtpComprobanteRetencion.Size = New System.Drawing.Size(111, 22)
             Me.dtpComprobanteRetencion.TabIndex = 42
             Me.dtpComprobanteRetencion.Value = New Date(2019, 11, 22, 0, 0, 0, 0)
             '
             'btnAgregarImpuesto
             '
-            Me.btnAgregarImpuesto.BackColor = System.Drawing.Color.White
+            Me.btnAgregarImpuesto.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.btnAgregarImpuesto.FlatAppearance.BorderSize = 0
             Me.btnAgregarImpuesto.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.btnAgregarImpuesto.Image = Global.syscisepro.My.Resources.Resources.add_circle_24dp_FILL0_wght400_GRAD0_opsz24__3_
-            Me.btnAgregarImpuesto.Location = New System.Drawing.Point(713, 13)
+            Me.btnAgregarImpuesto.Location = New System.Drawing.Point(647, 1)
             Me.btnAgregarImpuesto.Name = "btnAgregarImpuesto"
             Me.btnAgregarImpuesto.Size = New System.Drawing.Size(27, 27)
             Me.btnAgregarImpuesto.TabIndex = 47
             Me.btnAgregarImpuesto.UseVisualStyleBackColor = False
             '
-            'lblConcepto
-            '
-            Me.lblConcepto.AutoSize = True
-            Me.lblConcepto.Location = New System.Drawing.Point(178, 47)
-            Me.lblConcepto.Name = "lblConcepto"
-            Me.lblConcepto.Size = New System.Drawing.Size(68, 13)
-            Me.lblConcepto.TabIndex = 50
-            Me.lblConcepto.Text = "CONCEPTO:"
-            '
-            'lblImpuesto
-            '
-            Me.lblImpuesto.AutoSize = True
-            Me.lblImpuesto.Location = New System.Drawing.Point(7, 47)
-            Me.lblImpuesto.Name = "lblImpuesto"
-            Me.lblImpuesto.Size = New System.Drawing.Size(65, 13)
-            Me.lblImpuesto.TabIndex = 48
-            Me.lblImpuesto.Text = "IMPUESTO:"
-            '
-            'lblTotalRetencion
-            '
-            Me.lblTotalRetencion.AutoSize = True
-            Me.lblTotalRetencion.Location = New System.Drawing.Point(426, 19)
-            Me.lblTotalRetencion.Name = "lblTotalRetencion"
-            Me.lblTotalRetencion.Size = New System.Drawing.Size(108, 13)
-            Me.lblTotalRetencion.TabIndex = 44
-            Me.lblTotalRetencion.Text = "TOTAL RETENCIÓN:"
-            '
             'txtTotalComprobanteRetencion
             '
             Me.txtTotalComprobanteRetencion.BackColor = System.Drawing.Color.White
             Me.txtTotalComprobanteRetencion.Enabled = False
-            Me.txtTotalComprobanteRetencion.Location = New System.Drawing.Point(548, 16)
+            Me.txtTotalComprobanteRetencion.Location = New System.Drawing.Point(508, 4)
             Me.txtTotalComprobanteRetencion.Name = "txtTotalComprobanteRetencion"
-            Me.txtTotalComprobanteRetencion.Size = New System.Drawing.Size(123, 21)
+            Me.txtTotalComprobanteRetencion.Size = New System.Drawing.Size(123, 22)
             Me.txtTotalComprobanteRetencion.TabIndex = 43
             Me.txtTotalComprobanteRetencion.Text = "0.00"
             Me.txtTotalComprobanteRetencion.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
             '
-            'lblNroRetencion
-            '
-            Me.lblNroRetencion.AutoSize = True
-            Me.lblNroRetencion.Location = New System.Drawing.Point(6, 19)
-            Me.lblNroRetencion.Name = "lblNroRetencion"
-            Me.lblNroRetencion.Size = New System.Drawing.Size(33, 13)
-            Me.lblNroRetencion.TabIndex = 28
-            Me.lblNroRetencion.Text = "NRO:"
-            '
             'txtNumeroComprobanteRetencion
             '
             Me.txtNumeroComprobanteRetencion.BackColor = System.Drawing.Color.White
-            Me.txtNumeroComprobanteRetencion.Location = New System.Drawing.Point(43, 16)
+            Me.txtNumeroComprobanteRetencion.Location = New System.Drawing.Point(66, 1)
             Me.txtNumeroComprobanteRetencion.Name = "txtNumeroComprobanteRetencion"
-            Me.txtNumeroComprobanteRetencion.Size = New System.Drawing.Size(117, 21)
+            Me.txtNumeroComprobanteRetencion.Size = New System.Drawing.Size(117, 22)
             Me.txtNumeroComprobanteRetencion.TabIndex = 41
-            '
-            'lblFechaRetencion
-            '
-            Me.lblFechaRetencion.AutoSize = True
-            Me.lblFechaRetencion.Location = New System.Drawing.Point(181, 19)
-            Me.lblFechaRetencion.Name = "lblFechaRetencion"
-            Me.lblFechaRetencion.Size = New System.Drawing.Size(44, 13)
-            Me.lblFechaRetencion.TabIndex = 46
-            Me.lblFechaRetencion.Text = "FECHA:"
-            '
-            'lblContribuyente
-            '
-            Me.lblContribuyente.AutoSize = True
-            Me.lblContribuyente.Location = New System.Drawing.Point(430, 47)
-            Me.lblContribuyente.Name = "lblContribuyente"
-            Me.lblContribuyente.Size = New System.Drawing.Size(98, 13)
-            Me.lblContribuyente.TabIndex = 52
-            Me.lblContribuyente.Text = "CONTRIBUYENTE:"
-            '
-            'GroupBox1
-            '
-            Me.GroupBox1.BackColor = System.Drawing.Color.White
-            Me.GroupBox1.Controls.Add(Me.dgvDetalleComprobanteRetencion)
-            Me.GroupBox1.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.GroupBox1.Location = New System.Drawing.Point(1, 589)
-            Me.GroupBox1.Name = "GroupBox1"
-            Me.GroupBox1.Padding = New System.Windows.Forms.Padding(2, 2, 2, 3)
-            Me.GroupBox1.Size = New System.Drawing.Size(789, 113)
-            Me.GroupBox1.TabIndex = 70
-            Me.GroupBox1.TabStop = False
             '
             'dgvDetalleComprobanteRetencion
             '
             Me.dgvDetalleComprobanteRetencion.AllowUserToAddRows = False
             Me.dgvDetalleComprobanteRetencion.AllowUserToDeleteRows = False
             Me.dgvDetalleComprobanteRetencion.AllowUserToResizeRows = False
-            DataGridViewCellStyle31.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-            Me.dgvDetalleComprobanteRetencion.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle31
+            DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+            Me.dgvDetalleComprobanteRetencion.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
             Me.dgvDetalleComprobanteRetencion.BackgroundColor = System.Drawing.Color.White
             Me.dgvDetalleComprobanteRetencion.BorderStyle = System.Windows.Forms.BorderStyle.None
             Me.dgvDetalleComprobanteRetencion.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
-            DataGridViewCellStyle32.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-            DataGridViewCellStyle32.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            DataGridViewCellStyle32.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-            Me.dgvDetalleComprobanteRetencion.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle32
+            DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+            DataGridViewCellStyle2.Font = New System.Drawing.Font("Roboto", 8.25!)
+            DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+            Me.dgvDetalleComprobanteRetencion.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
             Me.dgvDetalleComprobanteRetencion.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.EjercicioFiscal, Me.CodigoRetencion, Me.BaseImponible, Me.Impuesto, Me.PorcentajeRetencion, Me.ValorRetenido, Me.Column1, Me.Column2})
-            Me.dgvDetalleComprobanteRetencion.Dock = System.Windows.Forms.DockStyle.Fill
+            DataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+            DataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Window
+            DataGridViewCellStyle11.Font = New System.Drawing.Font("Roboto", 8.25!)
+            DataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.ControlText
+            DataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight
+            DataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+            DataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+            Me.dgvDetalleComprobanteRetencion.DefaultCellStyle = DataGridViewCellStyle11
             Me.dgvDetalleComprobanteRetencion.GridColor = System.Drawing.SystemColors.ControlLight
-            Me.dgvDetalleComprobanteRetencion.Location = New System.Drawing.Point(2, 17)
+            Me.dgvDetalleComprobanteRetencion.Location = New System.Drawing.Point(-1, 58)
             Me.dgvDetalleComprobanteRetencion.MultiSelect = False
             Me.dgvDetalleComprobanteRetencion.Name = "dgvDetalleComprobanteRetencion"
             Me.dgvDetalleComprobanteRetencion.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+            DataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+            DataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Control
+            DataGridViewCellStyle12.Font = New System.Drawing.Font("Roboto", 8.25!)
+            DataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText
+            DataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight
+            DataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+            DataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+            Me.dgvDetalleComprobanteRetencion.RowHeadersDefaultCellStyle = DataGridViewCellStyle12
             Me.dgvDetalleComprobanteRetencion.RowHeadersVisible = False
-            Me.dgvDetalleComprobanteRetencion.RowTemplate.DefaultCellStyle.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle13.Font = New System.Drawing.Font("Roboto", 8.25!)
+            Me.dgvDetalleComprobanteRetencion.RowsDefaultCellStyle = DataGridViewCellStyle13
+            Me.dgvDetalleComprobanteRetencion.RowTemplate.DefaultCellStyle.Font = New System.Drawing.Font("Roboto", 8.25!)
             Me.dgvDetalleComprobanteRetencion.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvDetalleComprobanteRetencion.Size = New System.Drawing.Size(785, 93)
+            Me.dgvDetalleComprobanteRetencion.Size = New System.Drawing.Size(710, 93)
             Me.dgvDetalleComprobanteRetencion.TabIndex = 49
             '
             'EjercicioFiscal
             '
-            DataGridViewCellStyle33.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.EjercicioFiscal.DefaultCellStyle = DataGridViewCellStyle33
+            DataGridViewCellStyle3.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.EjercicioFiscal.DefaultCellStyle = DataGridViewCellStyle3
             Me.EjercicioFiscal.HeaderText = "AÑO"
             Me.EjercicioFiscal.Name = "EjercicioFiscal"
             Me.EjercicioFiscal.ReadOnly = True
@@ -578,8 +465,8 @@
             '
             'CodigoRetencion
             '
-            DataGridViewCellStyle34.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.CodigoRetencion.DefaultCellStyle = DataGridViewCellStyle34
+            DataGridViewCellStyle4.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.CodigoRetencion.DefaultCellStyle = DataGridViewCellStyle4
             Me.CodigoRetencion.HeaderText = "CODIGO"
             Me.CodigoRetencion.Name = "CodigoRetencion"
             Me.CodigoRetencion.ReadOnly = True
@@ -588,8 +475,8 @@
             '
             'BaseImponible
             '
-            DataGridViewCellStyle35.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.BaseImponible.DefaultCellStyle = DataGridViewCellStyle35
+            DataGridViewCellStyle5.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.BaseImponible.DefaultCellStyle = DataGridViewCellStyle5
             Me.BaseImponible.HeaderText = "BASE IMPONIBLE"
             Me.BaseImponible.Name = "BaseImponible"
             Me.BaseImponible.ReadOnly = True
@@ -598,8 +485,8 @@
             '
             'Impuesto
             '
-            DataGridViewCellStyle36.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Impuesto.DefaultCellStyle = DataGridViewCellStyle36
+            DataGridViewCellStyle6.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Impuesto.DefaultCellStyle = DataGridViewCellStyle6
             Me.Impuesto.HeaderText = "IMPUESTO"
             Me.Impuesto.Name = "Impuesto"
             Me.Impuesto.ReadOnly = True
@@ -608,8 +495,8 @@
             '
             'PorcentajeRetencion
             '
-            DataGridViewCellStyle37.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.PorcentajeRetencion.DefaultCellStyle = DataGridViewCellStyle37
+            DataGridViewCellStyle7.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.PorcentajeRetencion.DefaultCellStyle = DataGridViewCellStyle7
             Me.PorcentajeRetencion.HeaderText = "%"
             Me.PorcentajeRetencion.Name = "PorcentajeRetencion"
             Me.PorcentajeRetencion.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
@@ -617,8 +504,8 @@
             '
             'ValorRetenido
             '
-            DataGridViewCellStyle38.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.ValorRetenido.DefaultCellStyle = DataGridViewCellStyle38
+            DataGridViewCellStyle8.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.ValorRetenido.DefaultCellStyle = DataGridViewCellStyle8
             Me.ValorRetenido.HeaderText = "VALOR"
             Me.ValorRetenido.Name = "ValorRetenido"
             Me.ValorRetenido.ReadOnly = True
@@ -627,582 +514,26 @@
             '
             'Column1
             '
-            DataGridViewCellStyle39.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-            Me.Column1.DefaultCellStyle = DataGridViewCellStyle39
+            DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+            Me.Column1.DefaultCellStyle = DataGridViewCellStyle9
             Me.Column1.HeaderText = "CODIGO"
             Me.Column1.Name = "Column1"
             Me.Column1.ReadOnly = True
             '
             'Column2
             '
-            DataGridViewCellStyle40.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-            Me.Column2.DefaultCellStyle = DataGridViewCellStyle40
+            DataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+            Me.Column2.DefaultCellStyle = DataGridViewCellStyle10
             Me.Column2.HeaderText = "CUENTA"
             Me.Column2.Name = "Column2"
             Me.Column2.ReadOnly = True
             Me.Column2.Width = 350
             '
-            'gbDatosEspecialesComprobanteCompra
-            '
-            Me.gbDatosEspecialesComprobanteCompra.Controls.Add(Me.bntBuscarMod)
-            Me.gbDatosEspecialesComprobanteCompra.Controls.Add(Me.Label1)
-            Me.gbDatosEspecialesComprobanteCompra.Controls.Add(Me.txtRazModComprobanteCompra)
-            Me.gbDatosEspecialesComprobanteCompra.Controls.Add(Me.Label32)
-            Me.gbDatosEspecialesComprobanteCompra.Controls.Add(Me.txtDocModComprobanteCompra)
-            Me.gbDatosEspecialesComprobanteCompra.Controls.Add(Me.lblGuiaRemisionFacturaCompra)
-            Me.gbDatosEspecialesComprobanteCompra.Controls.Add(Me.txtGuiaRemisionComprobanteCompra)
-            Me.gbDatosEspecialesComprobanteCompra.Controls.Add(Me.Label5)
-            Me.gbDatosEspecialesComprobanteCompra.Controls.Add(Me.Label9)
-            Me.gbDatosEspecialesComprobanteCompra.Enabled = False
-            Me.gbDatosEspecialesComprobanteCompra.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.gbDatosEspecialesComprobanteCompra.Location = New System.Drawing.Point(1, 200)
-            Me.gbDatosEspecialesComprobanteCompra.Name = "gbDatosEspecialesComprobanteCompra"
-            Me.gbDatosEspecialesComprobanteCompra.Size = New System.Drawing.Size(239, 102)
-            Me.gbDatosEspecialesComprobanteCompra.TabIndex = 71
-            Me.gbDatosEspecialesComprobanteCompra.TabStop = False
-            '
-            'bntBuscarMod
-            '
-            Me.bntBuscarMod.BackColor = System.Drawing.Color.White
-            Me.bntBuscarMod.FlatAppearance.BorderColor = System.Drawing.Color.DimGray
-            Me.bntBuscarMod.FlatAppearance.BorderSize = 0
-            Me.bntBuscarMod.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-            Me.bntBuscarMod.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.bntBuscarMod.ForeColor = System.Drawing.Color.Black
-            Me.bntBuscarMod.Image = Global.syscisepro.My.Resources.Resources.attach_file_24dp_FILL0_wght400_GRAD0_opsz24
-            Me.bntBuscarMod.Location = New System.Drawing.Point(206, 40)
-            Me.bntBuscarMod.Name = "bntBuscarMod"
-            Me.bntBuscarMod.Size = New System.Drawing.Size(27, 27)
-            Me.bntBuscarMod.TabIndex = 66
-            Me.bntBuscarMod.UseVisualStyleBackColor = False
-            '
-            'Label1
-            '
-            Me.Label1.AutoSize = True
-            Me.Label1.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label1.Location = New System.Drawing.Point(4, 74)
-            Me.Label1.Name = "Label1"
-            Me.Label1.Size = New System.Drawing.Size(88, 13)
-            Me.Label1.TabIndex = 65
-            Me.Label1.Text = "AUT SRI MODIF:"
-            '
-            'txtRazModComprobanteCompra
-            '
-            Me.txtRazModComprobanteCompra.BackColor = System.Drawing.Color.White
-            Me.txtRazModComprobanteCompra.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtRazModComprobanteCompra.Location = New System.Drawing.Point(98, 71)
-            Me.txtRazModComprobanteCompra.Name = "txtRazModComprobanteCompra"
-            Me.txtRazModComprobanteCompra.Size = New System.Drawing.Size(132, 21)
-            Me.txtRazModComprobanteCompra.TabIndex = 25
-            Me.txtRazModComprobanteCompra.Text = "0"
-            Me.txtRazModComprobanteCompra.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-            '
-            'Label32
-            '
-            Me.Label32.AutoSize = True
-            Me.Label32.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label32.Location = New System.Drawing.Point(4, 45)
-            Me.Label32.Name = "Label32"
-            Me.Label32.Size = New System.Drawing.Size(74, 13)
-            Me.Label32.TabIndex = 63
-            Me.Label32.Text = "DOC. MODIF.:"
-            '
-            'txtDocModComprobanteCompra
-            '
-            Me.txtDocModComprobanteCompra.BackColor = System.Drawing.Color.White
-            Me.txtDocModComprobanteCompra.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtDocModComprobanteCompra.Location = New System.Drawing.Point(98, 42)
-            Me.txtDocModComprobanteCompra.Name = "txtDocModComprobanteCompra"
-            Me.txtDocModComprobanteCompra.Size = New System.Drawing.Size(102, 21)
-            Me.txtDocModComprobanteCompra.TabIndex = 24
-            Me.txtDocModComprobanteCompra.Text = "000"
-            Me.txtDocModComprobanteCompra.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-            '
-            'lblGuiaRemisionFacturaCompra
-            '
-            Me.lblGuiaRemisionFacturaCompra.AutoSize = True
-            Me.lblGuiaRemisionFacturaCompra.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.lblGuiaRemisionFacturaCompra.Location = New System.Drawing.Point(4, 14)
-            Me.lblGuiaRemisionFacturaCompra.Name = "lblGuiaRemisionFacturaCompra"
-            Me.lblGuiaRemisionFacturaCompra.Size = New System.Drawing.Size(90, 13)
-            Me.lblGuiaRemisionFacturaCompra.TabIndex = 57
-            Me.lblGuiaRemisionFacturaCompra.Text = "GUIA REMISIÓN:"
-            '
-            'txtGuiaRemisionComprobanteCompra
-            '
-            Me.txtGuiaRemisionComprobanteCompra.BackColor = System.Drawing.Color.White
-            Me.txtGuiaRemisionComprobanteCompra.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtGuiaRemisionComprobanteCompra.Location = New System.Drawing.Point(98, 11)
-            Me.txtGuiaRemisionComprobanteCompra.Name = "txtGuiaRemisionComprobanteCompra"
-            Me.txtGuiaRemisionComprobanteCompra.Size = New System.Drawing.Size(132, 21)
-            Me.txtGuiaRemisionComprobanteCompra.TabIndex = 23
-            Me.txtGuiaRemisionComprobanteCompra.Text = "000"
-            Me.txtGuiaRemisionComprobanteCompra.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-            '
-            'Label5
-            '
-            Me.Label5.AutoSize = True
-            Me.Label5.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label5.ForeColor = System.Drawing.SystemColors.ControlLight
-            Me.Label5.Location = New System.Drawing.Point(4, 26)
-            Me.Label5.Name = "Label5"
-            Me.Label5.Size = New System.Drawing.Size(192, 13)
-            Me.Label5.TabIndex = 57
-            Me.Label5.Text = "_____________________________________"
-            '
-            'Label9
-            '
-            Me.Label9.AutoSize = True
-            Me.Label9.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label9.ForeColor = System.Drawing.SystemColors.ControlLight
-            Me.Label9.Location = New System.Drawing.Point(4, 55)
-            Me.Label9.Name = "Label9"
-            Me.Label9.Size = New System.Drawing.Size(192, 13)
-            Me.Label9.TabIndex = 59
-            Me.Label9.Text = "_____________________________________"
-            '
-            'chkActivarRetencion
-            '
-            Me.chkActivarRetencion.AutoSize = True
-            Me.chkActivarRetencion.FlatAppearance.BorderColor = System.Drawing.Color.White
-            Me.chkActivarRetencion.FlatAppearance.CheckedBackColor = System.Drawing.Color.White
-            Me.chkActivarRetencion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White
-            Me.chkActivarRetencion.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.chkActivarRetencion.Location = New System.Drawing.Point(9, 76)
-            Me.chkActivarRetencion.Name = "chkActivarRetencion"
-            Me.chkActivarRetencion.Size = New System.Drawing.Size(235, 17)
-            Me.chkActivarRetencion.TabIndex = 31
-            Me.chkActivarRetencion.Text = "ACTIVAR COMPROBANTE DE RETENCIÓN"
-            Me.chkActivarRetencion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-            Me.chkActivarRetencion.UseVisualStyleBackColor = True
-            '
-            'Label45
-            '
-            Me.Label45.AutoSize = True
-            Me.Label45.Font = New System.Drawing.Font("Segoe UI", 7.0!)
-            Me.Label45.ForeColor = System.Drawing.SystemColors.ControlLight
-            Me.Label45.Location = New System.Drawing.Point(352, 56)
-            Me.Label45.Name = "Label45"
-            Me.Label45.Size = New System.Drawing.Size(129, 12)
-            Me.Label45.TabIndex = 61
-            Me.Label45.Text = "_______________________________"
-            '
-            'lblFechaEmisionFacturaCompra
-            '
-            Me.lblFechaEmisionFacturaCompra.AutoSize = True
-            Me.lblFechaEmisionFacturaCompra.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.lblFechaEmisionFacturaCompra.Location = New System.Drawing.Point(348, 45)
-            Me.lblFechaEmisionFacturaCompra.Name = "lblFechaEmisionFacturaCompra"
-            Me.lblFechaEmisionFacturaCompra.Size = New System.Drawing.Size(92, 13)
-            Me.lblFechaEmisionFacturaCompra.TabIndex = 55
-            Me.lblFechaEmisionFacturaCompra.Text = "FECHA EMISIÓN:"
-            '
-            'dtpFechaEmisionComprobanteCompra
-            '
-            Me.dtpFechaEmisionComprobanteCompra.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.dtpFechaEmisionComprobanteCompra.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-            Me.dtpFechaEmisionComprobanteCompra.Location = New System.Drawing.Point(441, 40)
-            Me.dtpFechaEmisionComprobanteCompra.MinDate = New Date(2014, 9, 1, 0, 0, 0, 0)
-            Me.dtpFechaEmisionComprobanteCompra.Name = "dtpFechaEmisionComprobanteCompra"
-            Me.dtpFechaEmisionComprobanteCompra.Size = New System.Drawing.Size(98, 21)
-            Me.dtpFechaEmisionComprobanteCompra.TabIndex = 30
-            '
-            'gbValoresComprobanteCompra
-            '
-            Me.gbValoresComprobanteCompra.BackColor = System.Drawing.Color.White
-            Me.gbValoresComprobanteCompra.Controls.Add(Me.txtSubtotal5FacturaCompra)
-            Me.gbValoresComprobanteCompra.Controls.Add(Me.lblSubtotal5ComprabanteCompra)
-            Me.gbValoresComprobanteCompra.Controls.Add(Me.txtIva5ComprobanteCompra)
-            Me.gbValoresComprobanteCompra.Controls.Add(Me.lblIva5)
-            Me.gbValoresComprobanteCompra.Controls.Add(Me.txtDescuentoFacturaCompra)
-            Me.gbValoresComprobanteCompra.Controls.Add(Me.txtSubtotal0FacturaCompra)
-            Me.gbValoresComprobanteCompra.Controls.Add(Me.txtSubtotal12FacturaCompra)
-            Me.gbValoresComprobanteCompra.Controls.Add(Me.txtSubTotalComprobanteCompra)
-            Me.gbValoresComprobanteCompra.Controls.Add(Me.txtTotalComprobanteCompra)
-            Me.gbValoresComprobanteCompra.Controls.Add(Me.txtIvaComprobanteCompra)
-            Me.gbValoresComprobanteCompra.Controls.Add(Me.lblSubTotal)
-            Me.gbValoresComprobanteCompra.Controls.Add(Me.lblTotalOrdenCompra)
-            Me.gbValoresComprobanteCompra.Controls.Add(Me.lblIva)
-            Me.gbValoresComprobanteCompra.Controls.Add(Me.lblDescuentoOrdenCompra)
-            Me.gbValoresComprobanteCompra.Controls.Add(Me.lblSubtotal0OrdenCompra)
-            Me.gbValoresComprobanteCompra.Controls.Add(Me.lblSubtotalIva)
-            Me.gbValoresComprobanteCompra.Enabled = False
-            Me.gbValoresComprobanteCompra.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.gbValoresComprobanteCompra.Location = New System.Drawing.Point(586, 307)
-            Me.gbValoresComprobanteCompra.Name = "gbValoresComprobanteCompra"
-            Me.gbValoresComprobanteCompra.Size = New System.Drawing.Size(204, 212)
-            Me.gbValoresComprobanteCompra.TabIndex = 70
-            Me.gbValoresComprobanteCompra.TabStop = False
-            '
-            'txtSubtotal5FacturaCompra
-            '
-            Me.txtSubtotal5FacturaCompra.BackColor = System.Drawing.Color.White
-            Me.txtSubtotal5FacturaCompra.Enabled = False
-            Me.txtSubtotal5FacturaCompra.Location = New System.Drawing.Point(96, 56)
-            Me.txtSubtotal5FacturaCompra.Name = "txtSubtotal5FacturaCompra"
-            Me.txtSubtotal5FacturaCompra.Size = New System.Drawing.Size(106, 21)
-            Me.txtSubtotal5FacturaCompra.TabIndex = 43
-            Me.txtSubtotal5FacturaCompra.Text = "0.00"
-            Me.txtSubtotal5FacturaCompra.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-            '
-            'lblSubtotal5ComprabanteCompra
-            '
-            Me.lblSubtotal5ComprabanteCompra.AutoSize = True
-            Me.lblSubtotal5ComprabanteCompra.Location = New System.Drawing.Point(7, 59)
-            Me.lblSubtotal5ComprabanteCompra.Name = "lblSubtotal5ComprabanteCompra"
-            Me.lblSubtotal5ComprabanteCompra.Size = New System.Drawing.Size(86, 13)
-            Me.lblSubtotal5ComprabanteCompra.TabIndex = 42
-            Me.lblSubtotal5ComprabanteCompra.Text = "SUB TOTAL 5%:"
-            '
-            'txtIva5ComprobanteCompra
-            '
-            Me.txtIva5ComprobanteCompra.BackColor = System.Drawing.Color.White
-            Me.txtIva5ComprobanteCompra.Enabled = False
-            Me.txtIva5ComprobanteCompra.Location = New System.Drawing.Point(96, 154)
-            Me.txtIva5ComprobanteCompra.Name = "txtIva5ComprobanteCompra"
-            Me.txtIva5ComprobanteCompra.Size = New System.Drawing.Size(104, 21)
-            Me.txtIva5ComprobanteCompra.TabIndex = 41
-            Me.txtIva5ComprobanteCompra.Text = "0.00"
-            Me.txtIva5ComprobanteCompra.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-            '
-            'lblIva5
-            '
-            Me.lblIva5.AutoSize = True
-            Me.lblIva5.Location = New System.Drawing.Point(4, 163)
-            Me.lblIva5.Name = "lblIva5"
-            Me.lblIva5.Size = New System.Drawing.Size(44, 13)
-            Me.lblIva5.TabIndex = 40
-            Me.lblIva5.Text = "IVA 5%:"
-            '
-            'txtDescuentoFacturaCompra
-            '
-            Me.txtDescuentoFacturaCompra.BackColor = System.Drawing.Color.White
-            Me.txtDescuentoFacturaCompra.Enabled = False
-            Me.txtDescuentoFacturaCompra.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtDescuentoFacturaCompra.Location = New System.Drawing.Point(96, 82)
-            Me.txtDescuentoFacturaCompra.Name = "txtDescuentoFacturaCompra"
-            Me.txtDescuentoFacturaCompra.Size = New System.Drawing.Size(105, 22)
-            Me.txtDescuentoFacturaCompra.TabIndex = 36
-            Me.txtDescuentoFacturaCompra.Text = "0.00"
-            Me.txtDescuentoFacturaCompra.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-            '
-            'txtSubtotal0FacturaCompra
-            '
-            Me.txtSubtotal0FacturaCompra.BackColor = System.Drawing.Color.White
-            Me.txtSubtotal0FacturaCompra.Enabled = False
-            Me.txtSubtotal0FacturaCompra.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtSubtotal0FacturaCompra.Location = New System.Drawing.Point(96, 33)
-            Me.txtSubtotal0FacturaCompra.Name = "txtSubtotal0FacturaCompra"
-            Me.txtSubtotal0FacturaCompra.Size = New System.Drawing.Size(105, 22)
-            Me.txtSubtotal0FacturaCompra.TabIndex = 35
-            Me.txtSubtotal0FacturaCompra.Text = "0.00"
-            Me.txtSubtotal0FacturaCompra.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-            '
-            'txtSubtotal12FacturaCompra
-            '
-            Me.txtSubtotal12FacturaCompra.BackColor = System.Drawing.Color.White
-            Me.txtSubtotal12FacturaCompra.Enabled = False
-            Me.txtSubtotal12FacturaCompra.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtSubtotal12FacturaCompra.Location = New System.Drawing.Point(96, 10)
-            Me.txtSubtotal12FacturaCompra.Name = "txtSubtotal12FacturaCompra"
-            Me.txtSubtotal12FacturaCompra.Size = New System.Drawing.Size(105, 22)
-            Me.txtSubtotal12FacturaCompra.TabIndex = 34
-            Me.txtSubtotal12FacturaCompra.Text = "0.00"
-            Me.txtSubtotal12FacturaCompra.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-            '
-            'txtSubTotalComprobanteCompra
-            '
-            Me.txtSubTotalComprobanteCompra.BackColor = System.Drawing.Color.White
-            Me.txtSubTotalComprobanteCompra.Enabled = False
-            Me.txtSubTotalComprobanteCompra.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtSubTotalComprobanteCompra.Location = New System.Drawing.Point(96, 106)
-            Me.txtSubTotalComprobanteCompra.Name = "txtSubTotalComprobanteCompra"
-            Me.txtSubTotalComprobanteCompra.Size = New System.Drawing.Size(105, 22)
-            Me.txtSubTotalComprobanteCompra.TabIndex = 37
-            Me.txtSubTotalComprobanteCompra.Text = "0.00"
-            Me.txtSubTotalComprobanteCompra.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-            '
-            'txtTotalComprobanteCompra
-            '
-            Me.txtTotalComprobanteCompra.BackColor = System.Drawing.Color.White
-            Me.txtTotalComprobanteCompra.Enabled = False
-            Me.txtTotalComprobanteCompra.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtTotalComprobanteCompra.Location = New System.Drawing.Point(97, 180)
-            Me.txtTotalComprobanteCompra.Name = "txtTotalComprobanteCompra"
-            Me.txtTotalComprobanteCompra.Size = New System.Drawing.Size(105, 22)
-            Me.txtTotalComprobanteCompra.TabIndex = 39
-            Me.txtTotalComprobanteCompra.Text = "0.00"
-            Me.txtTotalComprobanteCompra.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-            '
-            'txtIvaComprobanteCompra
-            '
-            Me.txtIvaComprobanteCompra.BackColor = System.Drawing.Color.White
-            Me.txtIvaComprobanteCompra.Enabled = False
-            Me.txtIvaComprobanteCompra.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtIvaComprobanteCompra.Location = New System.Drawing.Point(97, 130)
-            Me.txtIvaComprobanteCompra.Name = "txtIvaComprobanteCompra"
-            Me.txtIvaComprobanteCompra.Size = New System.Drawing.Size(105, 22)
-            Me.txtIvaComprobanteCompra.TabIndex = 38
-            Me.txtIvaComprobanteCompra.Text = "0.00"
-            Me.txtIvaComprobanteCompra.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-            '
-            'lblSubTotal
-            '
-            Me.lblSubTotal.AutoSize = True
-            Me.lblSubTotal.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.lblSubTotal.Location = New System.Drawing.Point(5, 109)
-            Me.lblSubTotal.Name = "lblSubTotal"
-            Me.lblSubTotal.Size = New System.Drawing.Size(64, 13)
-            Me.lblSubTotal.TabIndex = 20
-            Me.lblSubTotal.Text = "SUB TOTAL:"
-            '
-            'lblTotalOrdenCompra
-            '
-            Me.lblTotalOrdenCompra.AutoSize = True
-            Me.lblTotalOrdenCompra.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.lblTotalOrdenCompra.Location = New System.Drawing.Point(5, 184)
-            Me.lblTotalOrdenCompra.Name = "lblTotalOrdenCompra"
-            Me.lblTotalOrdenCompra.Size = New System.Drawing.Size(41, 13)
-            Me.lblTotalOrdenCompra.TabIndex = 14
-            Me.lblTotalOrdenCompra.Text = "TOTAL:"
-            '
-            'lblIva
-            '
-            Me.lblIva.AutoSize = True
-            Me.lblIva.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.lblIva.Location = New System.Drawing.Point(5, 134)
-            Me.lblIva.Name = "lblIva"
-            Me.lblIva.Size = New System.Drawing.Size(56, 13)
-            Me.lblIva.TabIndex = 13
-            Me.lblIva.Text = "IVA (12%):"
-            '
-            'lblDescuentoOrdenCompra
-            '
-            Me.lblDescuentoOrdenCompra.AutoSize = True
-            Me.lblDescuentoOrdenCompra.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.lblDescuentoOrdenCompra.Location = New System.Drawing.Point(6, 85)
-            Me.lblDescuentoOrdenCompra.Name = "lblDescuentoOrdenCompra"
-            Me.lblDescuentoOrdenCompra.Size = New System.Drawing.Size(73, 13)
-            Me.lblDescuentoOrdenCompra.TabIndex = 12
-            Me.lblDescuentoOrdenCompra.Text = "DESCUENTO:"
-            '
-            'lblSubtotal0OrdenCompra
-            '
-            Me.lblSubtotal0OrdenCompra.AutoSize = True
-            Me.lblSubtotal0OrdenCompra.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.lblSubtotal0OrdenCompra.Location = New System.Drawing.Point(6, 35)
-            Me.lblSubtotal0OrdenCompra.Name = "lblSubtotal0OrdenCompra"
-            Me.lblSubtotal0OrdenCompra.Size = New System.Drawing.Size(82, 13)
-            Me.lblSubtotal0OrdenCompra.TabIndex = 11
-            Me.lblSubtotal0OrdenCompra.Text = "SUB TOTAL 0%:"
-            '
-            'lblSubtotalIva
-            '
-            Me.lblSubtotalIva.AutoSize = True
-            Me.lblSubtotalIva.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.lblSubtotalIva.Location = New System.Drawing.Point(7, 12)
-            Me.lblSubtotalIva.Name = "lblSubtotalIva"
-            Me.lblSubtotalIva.Size = New System.Drawing.Size(88, 13)
-            Me.lblSubtotalIva.TabIndex = 10
-            Me.lblSubtotalIva.Text = "SUB TOTAL 12%:"
-            '
-            'gbDatosComprobanteCompra
-            '
-            Me.gbDatosComprobanteCompra.Controls.Add(Me.btnOrdenCompra)
-            Me.gbDatosComprobanteCompra.Controls.Add(Me.lblOrdenCompra)
-            Me.gbDatosComprobanteCompra.Controls.Add(Me.chkReq)
-            Me.gbDatosComprobanteCompra.Controls.Add(Me.btnBuscar)
-            Me.gbDatosComprobanteCompra.Controls.Add(Me.lblFechaEmisionFacturaCompra)
-            Me.gbDatosComprobanteCompra.Controls.Add(Me.dtpFechaEmisionComprobanteCompra)
-            Me.gbDatosComprobanteCompra.Controls.Add(Me.lblNumAutoSRIFacturaCompra)
-            Me.gbDatosComprobanteCompra.Controls.Add(Me.txtNumAutoSRIComprobanteCompra)
-            Me.gbDatosComprobanteCompra.Controls.Add(Me.lblNumeroFacturaCompra)
-            Me.gbDatosComprobanteCompra.Controls.Add(Me.dtpFechaAutoSRIComprobanteCompra)
-            Me.gbDatosComprobanteCompra.Controls.Add(Me.chkActivarRetencion)
-            Me.gbDatosComprobanteCompra.Controls.Add(Me.Label45)
-            Me.gbDatosComprobanteCompra.Controls.Add(Me.txtNumeroComprobanteCompra)
-            Me.gbDatosComprobanteCompra.Controls.Add(Me.lblFechaAutoSRIFacturaCompra)
-            Me.gbDatosComprobanteCompra.Controls.Add(Me.lblSeparadorRUC)
-            Me.gbDatosComprobanteCompra.Controls.Add(Me.lblSeparadorNumFact)
-            Me.gbDatosComprobanteCompra.Controls.Add(Me.Label37)
-            Me.gbDatosComprobanteCompra.Enabled = False
-            Me.gbDatosComprobanteCompra.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.gbDatosComprobanteCompra.Location = New System.Drawing.Point(240, 200)
-            Me.gbDatosComprobanteCompra.Name = "gbDatosComprobanteCompra"
-            Me.gbDatosComprobanteCompra.Size = New System.Drawing.Size(550, 102)
-            Me.gbDatosComprobanteCompra.TabIndex = 69
-            Me.gbDatosComprobanteCompra.TabStop = False
-            '
-            'btnOrdenCompra
-            '
-            Me.btnOrdenCompra.Enabled = False
-            Me.btnOrdenCompra.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.btnOrdenCompra.Location = New System.Drawing.Point(434, 70)
-            Me.btnOrdenCompra.Name = "btnOrdenCompra"
-            Me.btnOrdenCompra.Size = New System.Drawing.Size(26, 22)
-            Me.btnOrdenCompra.TabIndex = 118
-            Me.btnOrdenCompra.Tag = "1"
-            Me.btnOrdenCompra.Text = "..."
-            Me.btnOrdenCompra.UseVisualStyleBackColor = True
-            '
-            'lblOrdenCompra
-            '
-            Me.lblOrdenCompra.AutoSize = True
-            Me.lblOrdenCompra.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.lblOrdenCompra.Location = New System.Drawing.Point(400, 76)
-            Me.lblOrdenCompra.Name = "lblOrdenCompra"
-            Me.lblOrdenCompra.Size = New System.Drawing.Size(28, 13)
-            Me.lblOrdenCompra.TabIndex = 62
-            Me.lblOrdenCompra.Text = "###"
-            '
-            'chkReq
-            '
-            Me.chkReq.AutoSize = True
-            Me.chkReq.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.chkReq.Location = New System.Drawing.Point(304, 74)
-            Me.chkReq.Name = "chkReq"
-            Me.chkReq.Size = New System.Drawing.Size(93, 17)
-            Me.chkReq.TabIndex = 63
-            Me.chkReq.Text = "ÓRDEN C. N°:"
-            Me.chkReq.UseVisualStyleBackColor = True
-            '
-            'btnBuscar
-            '
-            Me.btnBuscar.BackColor = System.Drawing.Color.White
-            Me.btnBuscar.FlatAppearance.BorderColor = System.Drawing.Color.DimGray
-            Me.btnBuscar.FlatAppearance.BorderSize = 0
-            Me.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-            Me.btnBuscar.Font = New System.Drawing.Font("Segoe UI", 7.0!)
-            Me.btnBuscar.ForeColor = System.Drawing.Color.Black
-            Me.btnBuscar.Image = Global.syscisepro.My.Resources.Resources.attach_file_24dp_FILL0_wght400_GRAD0_opsz24
-            Me.btnBuscar.Location = New System.Drawing.Point(286, 11)
-            Me.btnBuscar.Name = "btnBuscar"
-            Me.btnBuscar.Size = New System.Drawing.Size(27, 27)
-            Me.btnBuscar.TabIndex = 27
-            Me.btnBuscar.UseVisualStyleBackColor = False
-            '
-            'lblNumAutoSRIFacturaCompra
-            '
-            Me.lblNumAutoSRIFacturaCompra.AutoSize = True
-            Me.lblNumAutoSRIFacturaCompra.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.lblNumAutoSRIFacturaCompra.Location = New System.Drawing.Point(5, 45)
-            Me.lblNumAutoSRIFacturaCompra.Name = "lblNumAutoSRIFacturaCompra"
-            Me.lblNumAutoSRIFacturaCompra.Size = New System.Drawing.Size(53, 13)
-            Me.lblNumAutoSRIFacturaCompra.TabIndex = 28
-            Me.lblNumAutoSRIFacturaCompra.Text = "AUT. SRI:"
-            '
-            'txtNumAutoSRIComprobanteCompra
-            '
-            Me.txtNumAutoSRIComprobanteCompra.BackColor = System.Drawing.Color.White
-            Me.txtNumAutoSRIComprobanteCompra.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtNumAutoSRIComprobanteCompra.Location = New System.Drawing.Point(67, 41)
-            Me.txtNumAutoSRIComprobanteCompra.Name = "txtNumAutoSRIComprobanteCompra"
-            Me.txtNumAutoSRIComprobanteCompra.Size = New System.Drawing.Size(212, 21)
-            Me.txtNumAutoSRIComprobanteCompra.TabIndex = 28
-            Me.txtNumAutoSRIComprobanteCompra.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-            '
-            'lblNumeroFacturaCompra
-            '
-            Me.lblNumeroFacturaCompra.AutoSize = True
-            Me.lblNumeroFacturaCompra.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.lblNumeroFacturaCompra.Location = New System.Drawing.Point(5, 15)
-            Me.lblNumeroFacturaCompra.Name = "lblNumeroFacturaCompra"
-            Me.lblNumeroFacturaCompra.Size = New System.Drawing.Size(54, 13)
-            Me.lblNumeroFacturaCompra.TabIndex = 26
-            Me.lblNumeroFacturaCompra.Text = "Nº FACT.:"
-            '
-            'dtpFechaAutoSRIComprobanteCompra
-            '
-            Me.dtpFechaAutoSRIComprobanteCompra.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.dtpFechaAutoSRIComprobanteCompra.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-            Me.dtpFechaAutoSRIComprobanteCompra.Location = New System.Drawing.Point(441, 12)
-            Me.dtpFechaAutoSRIComprobanteCompra.Name = "dtpFechaAutoSRIComprobanteCompra"
-            Me.dtpFechaAutoSRIComprobanteCompra.Size = New System.Drawing.Size(98, 21)
-            Me.dtpFechaAutoSRIComprobanteCompra.TabIndex = 29
-            '
-            'txtNumeroComprobanteCompra
-            '
-            Me.txtNumeroComprobanteCompra.BackColor = System.Drawing.Color.White
-            Me.txtNumeroComprobanteCompra.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtNumeroComprobanteCompra.Location = New System.Drawing.Point(67, 12)
-            Me.txtNumeroComprobanteCompra.Name = "txtNumeroComprobanteCompra"
-            Me.txtNumeroComprobanteCompra.Size = New System.Drawing.Size(213, 21)
-            Me.txtNumeroComprobanteCompra.TabIndex = 26
-            Me.txtNumeroComprobanteCompra.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-            '
-            'lblFechaAutoSRIFacturaCompra
-            '
-            Me.lblFechaAutoSRIFacturaCompra.AutoSize = True
-            Me.lblFechaAutoSRIFacturaCompra.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.lblFechaAutoSRIFacturaCompra.Location = New System.Drawing.Point(348, 16)
-            Me.lblFechaAutoSRIFacturaCompra.Name = "lblFechaAutoSRIFacturaCompra"
-            Me.lblFechaAutoSRIFacturaCompra.Size = New System.Drawing.Size(78, 13)
-            Me.lblFechaAutoSRIFacturaCompra.TabIndex = 54
-            Me.lblFechaAutoSRIFacturaCompra.Text = "FECHA AUTO.:"
-            '
-            'lblSeparadorRUC
-            '
-            Me.lblSeparadorRUC.AutoSize = True
-            Me.lblSeparadorRUC.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.lblSeparadorRUC.ForeColor = System.Drawing.SystemColors.ControlLight
-            Me.lblSeparadorRUC.Location = New System.Drawing.Point(7, 27)
-            Me.lblSeparadorRUC.Name = "lblSeparadorRUC"
-            Me.lblSeparadorRUC.Size = New System.Drawing.Size(217, 13)
-            Me.lblSeparadorRUC.TabIndex = 30
-            Me.lblSeparadorRUC.Text = "__________________________________________"
-            '
-            'lblSeparadorNumFact
-            '
-            Me.lblSeparadorNumFact.AutoSize = True
-            Me.lblSeparadorNumFact.Font = New System.Drawing.Font("Segoe UI", 7.0!)
-            Me.lblSeparadorNumFact.ForeColor = System.Drawing.SystemColors.ControlLight
-            Me.lblSeparadorNumFact.Location = New System.Drawing.Point(7, 56)
-            Me.lblSeparadorNumFact.Name = "lblSeparadorNumFact"
-            Me.lblSeparadorNumFact.Size = New System.Drawing.Size(173, 12)
-            Me.lblSeparadorNumFact.TabIndex = 31
-            Me.lblSeparadorNumFact.Text = "__________________________________________"
-            '
-            'Label37
-            '
-            Me.Label37.AutoSize = True
-            Me.Label37.Font = New System.Drawing.Font("Segoe UI", 7.0!)
-            Me.Label37.ForeColor = System.Drawing.SystemColors.ControlLight
-            Me.Label37.Location = New System.Drawing.Point(348, 28)
-            Me.Label37.Name = "Label37"
-            Me.Label37.Size = New System.Drawing.Size(129, 12)
-            Me.Label37.TabIndex = 56
-            Me.Label37.Text = "_______________________________"
-            '
-            'gbDatosProveedor
-            '
-            Me.gbDatosProveedor.BackColor = System.Drawing.Color.White
-            Me.gbDatosProveedor.Controls.Add(Me.txtContribuyenteEspecialProveedorGeneral)
-            Me.gbDatosProveedor.Controls.Add(Me.txtObligadoLlevarContabilidadProveedorGeneral)
-            Me.gbDatosProveedor.Controls.Add(Me.txtNumAutoContEspFacturaCompra)
-            Me.gbDatosProveedor.Controls.Add(Me.lblNumAutoContEspFacturaCompra)
-            Me.gbDatosProveedor.Controls.Add(Me.lblContabilidadProveedorGeneral)
-            Me.gbDatosProveedor.Controls.Add(Me.lblContribuyenteEspecialProveedorGeneral)
-            Me.gbDatosProveedor.Controls.Add(Me.txtCiudadProveedorGeneral)
-            Me.gbDatosProveedor.Controls.Add(Me.lblCiudadProveedorGeneral)
-            Me.gbDatosProveedor.Controls.Add(Me.txtEmailProveedorGeneral)
-            Me.gbDatosProveedor.Controls.Add(Me.Label2)
-            Me.gbDatosProveedor.Controls.Add(Me.txtTelefonoProveedorGeneral)
-            Me.gbDatosProveedor.Controls.Add(Me.txtDireccionProveedorGeneral)
-            Me.gbDatosProveedor.Controls.Add(Me.lblTelefono1ProveedorGeneral)
-            Me.gbDatosProveedor.Controls.Add(Me.lblDireccionProveedorGeneral)
-            Me.gbDatosProveedor.Enabled = False
-            Me.gbDatosProveedor.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.gbDatosProveedor.Location = New System.Drawing.Point(1, 120)
-            Me.gbDatosProveedor.Name = "gbDatosProveedor"
-            Me.gbDatosProveedor.Size = New System.Drawing.Size(790, 87)
-            Me.gbDatosProveedor.TabIndex = 82
-            Me.gbDatosProveedor.TabStop = False
-            '
             'txtContribuyenteEspecialProveedorGeneral
             '
             Me.txtContribuyenteEspecialProveedorGeneral.BackColor = System.Drawing.Color.White
             Me.txtContribuyenteEspecialProveedorGeneral.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtContribuyenteEspecialProveedorGeneral.Location = New System.Drawing.Point(330, 61)
+            Me.txtContribuyenteEspecialProveedorGeneral.Location = New System.Drawing.Point(278, 83)
             Me.txtContribuyenteEspecialProveedorGeneral.Name = "txtContribuyenteEspecialProveedorGeneral"
             Me.txtContribuyenteEspecialProveedorGeneral.Size = New System.Drawing.Size(54, 21)
             Me.txtContribuyenteEspecialProveedorGeneral.TabIndex = 21
@@ -1211,7 +542,7 @@
             '
             Me.txtObligadoLlevarContabilidadProveedorGeneral.BackColor = System.Drawing.Color.White
             Me.txtObligadoLlevarContabilidadProveedorGeneral.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtObligadoLlevarContabilidadProveedorGeneral.Location = New System.Drawing.Point(131, 61)
+            Me.txtObligadoLlevarContabilidadProveedorGeneral.Location = New System.Drawing.Point(80, 83)
             Me.txtObligadoLlevarContabilidadProveedorGeneral.Name = "txtObligadoLlevarContabilidadProveedorGeneral"
             Me.txtObligadoLlevarContabilidadProveedorGeneral.Size = New System.Drawing.Size(65, 21)
             Me.txtObligadoLlevarContabilidadProveedorGeneral.TabIndex = 20
@@ -1220,373 +551,169 @@
             '
             Me.txtNumAutoContEspFacturaCompra.BackColor = System.Drawing.Color.White
             Me.txtNumAutoContEspFacturaCompra.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtNumAutoContEspFacturaCompra.Location = New System.Drawing.Point(713, 58)
+            Me.txtNumAutoContEspFacturaCompra.Location = New System.Drawing.Point(557, 52)
             Me.txtNumAutoContEspFacturaCompra.Name = "txtNumAutoContEspFacturaCompra"
             Me.txtNumAutoContEspFacturaCompra.Size = New System.Drawing.Size(68, 21)
             Me.txtNumAutoContEspFacturaCompra.TabIndex = 22
             Me.txtNumAutoContEspFacturaCompra.Text = "0"
             '
-            'lblNumAutoContEspFacturaCompra
-            '
-            Me.lblNumAutoContEspFacturaCompra.AutoSize = True
-            Me.lblNumAutoContEspFacturaCompra.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.lblNumAutoContEspFacturaCompra.Location = New System.Drawing.Point(399, 63)
-            Me.lblNumAutoContEspFacturaCompra.Name = "lblNumAutoContEspFacturaCompra"
-            Me.lblNumAutoContEspFacturaCompra.Size = New System.Drawing.Size(235, 13)
-            Me.lblNumAutoContEspFacturaCompra.TabIndex = 91
-            Me.lblNumAutoContEspFacturaCompra.Text = "NUM. AUTORIZACIÓN CONTRIBUYENTE ESP.:"
-            '
-            'lblContabilidadProveedorGeneral
-            '
-            Me.lblContabilidadProveedorGeneral.AutoSize = True
-            Me.lblContabilidadProveedorGeneral.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.lblContabilidadProveedorGeneral.Location = New System.Drawing.Point(8, 64)
-            Me.lblContabilidadProveedorGeneral.Name = "lblContabilidadProveedorGeneral"
-            Me.lblContabilidadProveedorGeneral.Size = New System.Drawing.Size(110, 13)
-            Me.lblContabilidadProveedorGeneral.TabIndex = 89
-            Me.lblContabilidadProveedorGeneral.Text = "OBLIG. LLEV. CONT.:"
-            '
-            'lblContribuyenteEspecialProveedorGeneral
-            '
-            Me.lblContribuyenteEspecialProveedorGeneral.AutoSize = True
-            Me.lblContribuyenteEspecialProveedorGeneral.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.lblContribuyenteEspecialProveedorGeneral.Location = New System.Drawing.Point(210, 64)
-            Me.lblContribuyenteEspecialProveedorGeneral.Name = "lblContribuyenteEspecialProveedorGeneral"
-            Me.lblContribuyenteEspecialProveedorGeneral.Size = New System.Drawing.Size(112, 13)
-            Me.lblContribuyenteEspecialProveedorGeneral.TabIndex = 90
-            Me.lblContribuyenteEspecialProveedorGeneral.Text = "CONTRIB. ESPECIAL:"
-            '
             'txtCiudadProveedorGeneral
             '
             Me.txtCiudadProveedorGeneral.BackColor = System.Drawing.Color.White
             Me.txtCiudadProveedorGeneral.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtCiudadProveedorGeneral.Location = New System.Drawing.Point(85, 36)
+            Me.txtCiudadProveedorGeneral.Location = New System.Drawing.Point(80, 56)
             Me.txtCiudadProveedorGeneral.Name = "txtCiudadProveedorGeneral"
             Me.txtCiudadProveedorGeneral.Size = New System.Drawing.Size(111, 21)
             Me.txtCiudadProveedorGeneral.TabIndex = 17
-            '
-            'lblCiudadProveedorGeneral
-            '
-            Me.lblCiudadProveedorGeneral.AutoSize = True
-            Me.lblCiudadProveedorGeneral.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.lblCiudadProveedorGeneral.Location = New System.Drawing.Point(8, 38)
-            Me.lblCiudadProveedorGeneral.Name = "lblCiudadProveedorGeneral"
-            Me.lblCiudadProveedorGeneral.Size = New System.Drawing.Size(48, 13)
-            Me.lblCiudadProveedorGeneral.TabIndex = 76
-            Me.lblCiudadProveedorGeneral.Text = "CIUDAD:"
             '
             'txtEmailProveedorGeneral
             '
             Me.txtEmailProveedorGeneral.BackColor = System.Drawing.Color.White
             Me.txtEmailProveedorGeneral.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtEmailProveedorGeneral.Location = New System.Drawing.Point(448, 36)
+            Me.txtEmailProveedorGeneral.Location = New System.Drawing.Point(444, 28)
             Me.txtEmailProveedorGeneral.Name = "txtEmailProveedorGeneral"
-            Me.txtEmailProveedorGeneral.Size = New System.Drawing.Size(333, 21)
+            Me.txtEmailProveedorGeneral.Size = New System.Drawing.Size(221, 21)
             Me.txtEmailProveedorGeneral.TabIndex = 19
-            '
-            'Label2
-            '
-            Me.Label2.AutoSize = True
-            Me.Label2.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label2.Location = New System.Drawing.Point(397, 39)
-            Me.Label2.Name = "Label2"
-            Me.Label2.Size = New System.Drawing.Size(45, 13)
-            Me.Label2.TabIndex = 75
-            Me.Label2.Text = "E-MAIL:"
             '
             'txtTelefonoProveedorGeneral
             '
             Me.txtTelefonoProveedorGeneral.BackColor = System.Drawing.Color.White
             Me.txtTelefonoProveedorGeneral.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtTelefonoProveedorGeneral.Location = New System.Drawing.Point(270, 36)
+            Me.txtTelefonoProveedorGeneral.Location = New System.Drawing.Point(278, 55)
             Me.txtTelefonoProveedorGeneral.Name = "txtTelefonoProveedorGeneral"
-            Me.txtTelefonoProveedorGeneral.Size = New System.Drawing.Size(114, 21)
+            Me.txtTelefonoProveedorGeneral.Size = New System.Drawing.Size(103, 21)
             Me.txtTelefonoProveedorGeneral.TabIndex = 18
             '
             'txtDireccionProveedorGeneral
             '
             Me.txtDireccionProveedorGeneral.BackColor = System.Drawing.Color.White
             Me.txtDireccionProveedorGeneral.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtDireccionProveedorGeneral.Location = New System.Drawing.Point(85, 12)
+            Me.txtDireccionProveedorGeneral.Location = New System.Drawing.Point(80, 28)
             Me.txtDireccionProveedorGeneral.Name = "txtDireccionProveedorGeneral"
-            Me.txtDireccionProveedorGeneral.Size = New System.Drawing.Size(696, 21)
+            Me.txtDireccionProveedorGeneral.Size = New System.Drawing.Size(301, 21)
             Me.txtDireccionProveedorGeneral.TabIndex = 16
-            '
-            'lblTelefono1ProveedorGeneral
-            '
-            Me.lblTelefono1ProveedorGeneral.AutoSize = True
-            Me.lblTelefono1ProveedorGeneral.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.lblTelefono1ProveedorGeneral.Location = New System.Drawing.Point(210, 39)
-            Me.lblTelefono1ProveedorGeneral.Name = "lblTelefono1ProveedorGeneral"
-            Me.lblTelefono1ProveedorGeneral.Size = New System.Drawing.Size(62, 13)
-            Me.lblTelefono1ProveedorGeneral.TabIndex = 73
-            Me.lblTelefono1ProveedorGeneral.Text = "TELEFONO"
-            '
-            'lblDireccionProveedorGeneral
-            '
-            Me.lblDireccionProveedorGeneral.AutoSize = True
-            Me.lblDireccionProveedorGeneral.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.lblDireccionProveedorGeneral.Location = New System.Drawing.Point(8, 15)
-            Me.lblDireccionProveedorGeneral.Name = "lblDireccionProveedorGeneral"
-            Me.lblDireccionProveedorGeneral.Size = New System.Drawing.Size(66, 13)
-            Me.lblDireccionProveedorGeneral.TabIndex = 74
-            Me.lblDireccionProveedorGeneral.Text = "DIRECCIÓN:"
-            '
-            'gbRUCProveedor
-            '
-            Me.gbRUCProveedor.BackColor = System.Drawing.Color.White
-            Me.gbRUCProveedor.Controls.Add(Me.txtRucProveedorGeneral)
-            Me.gbRUCProveedor.Enabled = False
-            Me.gbRUCProveedor.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.gbRUCProveedor.Location = New System.Drawing.Point(1, 80)
-            Me.gbRUCProveedor.Name = "gbRUCProveedor"
-            Me.gbRUCProveedor.Size = New System.Drawing.Size(239, 42)
-            Me.gbRUCProveedor.TabIndex = 80
-            Me.gbRUCProveedor.TabStop = False
-            Me.gbRUCProveedor.Text = "CI / RUC / PASAPORTE"
             '
             'txtRucProveedorGeneral
             '
             Me.txtRucProveedorGeneral.BackColor = System.Drawing.Color.White
             Me.txtRucProveedorGeneral.Enabled = False
             Me.txtRucProveedorGeneral.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtRucProveedorGeneral.Location = New System.Drawing.Point(11, 14)
+            Me.txtRucProveedorGeneral.Location = New System.Drawing.Point(80, 4)
             Me.txtRucProveedorGeneral.Name = "txtRucProveedorGeneral"
-            Me.txtRucProveedorGeneral.Size = New System.Drawing.Size(219, 20)
+            Me.txtRucProveedorGeneral.Size = New System.Drawing.Size(111, 20)
             Me.txtRucProveedorGeneral.TabIndex = 14
             '
             'lblIdProveedorGeneral
             '
             Me.lblIdProveedorGeneral.AutoSize = True
-            Me.lblIdProveedorGeneral.Location = New System.Drawing.Point(81, -1)
+            Me.lblIdProveedorGeneral.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
+            Me.lblIdProveedorGeneral.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
+            Me.lblIdProveedorGeneral.Location = New System.Drawing.Point(638, 7)
             Me.lblIdProveedorGeneral.Name = "lblIdProveedorGeneral"
             Me.lblIdProveedorGeneral.Size = New System.Drawing.Size(16, 13)
             Me.lblIdProveedorGeneral.TabIndex = 76
             Me.lblIdProveedorGeneral.Text = "..."
-            '
-            'gbNombreComercialProveedor
-            '
-            Me.gbNombreComercialProveedor.BackColor = System.Drawing.Color.White
-            Me.gbNombreComercialProveedor.Controls.Add(Me.txtNombreComercialProveedorGeneral)
-            Me.gbNombreComercialProveedor.Controls.Add(Me.lblIdProveedorGeneral)
-            Me.gbNombreComercialProveedor.Enabled = False
-            Me.gbNombreComercialProveedor.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.gbNombreComercialProveedor.Location = New System.Drawing.Point(239, 80)
-            Me.gbNombreComercialProveedor.Name = "gbNombreComercialProveedor"
-            Me.gbNombreComercialProveedor.Size = New System.Drawing.Size(551, 42)
-            Me.gbNombreComercialProveedor.TabIndex = 81
-            Me.gbNombreComercialProveedor.TabStop = False
-            Me.gbNombreComercialProveedor.Text = "PROVEEDOR"
             '
             'txtNombreComercialProveedorGeneral
             '
             Me.txtNombreComercialProveedorGeneral.BackColor = System.Drawing.Color.White
             Me.txtNombreComercialProveedorGeneral.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtNombreComercialProveedorGeneral.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtNombreComercialProveedorGeneral.Location = New System.Drawing.Point(6, 14)
+            Me.txtNombreComercialProveedorGeneral.Location = New System.Drawing.Point(278, 2)
             Me.txtNombreComercialProveedorGeneral.Name = "txtNombreComercialProveedorGeneral"
-            Me.txtNombreComercialProveedorGeneral.Size = New System.Drawing.Size(536, 20)
+            Me.txtNombreComercialProveedorGeneral.Size = New System.Drawing.Size(302, 20)
             Me.txtNombreComercialProveedorGeneral.TabIndex = 15
-            '
-            'gbObservaciones
-            '
-            Me.gbObservaciones.BackColor = System.Drawing.Color.White
-            Me.gbObservaciones.Controls.Add(Me.txtObservacionesComprobantesCompra)
-            Me.gbObservaciones.Enabled = False
-            Me.gbObservaciones.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.gbObservaciones.Location = New System.Drawing.Point(1, 478)
-            Me.gbObservaciones.Name = "gbObservaciones"
-            Me.gbObservaciones.Size = New System.Drawing.Size(585, 41)
-            Me.gbObservaciones.TabIndex = 83
-            Me.gbObservaciones.TabStop = False
-            Me.gbObservaciones.Text = "OBSERVACIONES"
             '
             'txtObservacionesComprobantesCompra
             '
             Me.txtObservacionesComprobantesCompra.BackColor = System.Drawing.Color.White
             Me.txtObservacionesComprobantesCompra.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-            Me.txtObservacionesComprobantesCompra.Location = New System.Drawing.Point(7, 14)
+            Me.txtObservacionesComprobantesCompra.Location = New System.Drawing.Point(145, 399)
             Me.txtObservacionesComprobantesCompra.Name = "txtObservacionesComprobantesCompra"
-            Me.txtObservacionesComprobantesCompra.Size = New System.Drawing.Size(570, 21)
+            Me.txtObservacionesComprobantesCompra.Size = New System.Drawing.Size(409, 22)
             Me.txtObservacionesComprobantesCompra.TabIndex = 40
-            '
-            'gbConceptoCompra
-            '
-            Me.gbConceptoCompra.BackColor = System.Drawing.Color.White
-            Me.gbConceptoCompra.Controls.Add(Me.cmbConceptoCompra)
-            Me.gbConceptoCompra.Enabled = False
-            Me.gbConceptoCompra.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.gbConceptoCompra.Location = New System.Drawing.Point(332, 7)
-            Me.gbConceptoCompra.Name = "gbConceptoCompra"
-            Me.gbConceptoCompra.Size = New System.Drawing.Size(181, 56)
-            Me.gbConceptoCompra.TabIndex = 84
-            Me.gbConceptoCompra.TabStop = False
-            Me.gbConceptoCompra.Text = "CONCEPTO:"
-            '
-            'cmbConceptoCompra
-            '
-            Me.cmbConceptoCompra.DropDownHeight = 150
-            Me.cmbConceptoCompra.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-            Me.cmbConceptoCompra.DropDownWidth = 500
-            Me.cmbConceptoCompra.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-            Me.cmbConceptoCompra.FormattingEnabled = True
-            Me.cmbConceptoCompra.IntegralHeight = False
-            Me.cmbConceptoCompra.Location = New System.Drawing.Point(10, 23)
-            Me.cmbConceptoCompra.Name = "cmbConceptoCompra"
-            Me.cmbConceptoCompra.Size = New System.Drawing.Size(217, 21)
-            Me.cmbConceptoCompra.TabIndex = 8
-            '
-            'gbTipoEmision
-            '
-            Me.gbTipoEmision.Controls.Add(Me.rbTipoEmisionIndisponibilidadSistema)
-            Me.gbTipoEmision.Controls.Add(Me.rbTipoEmisionNormal)
-            Me.gbTipoEmision.Controls.Add(Me.Label20)
-            Me.gbTipoEmision.Controls.Add(Me.gbConceptoCompra)
-            Me.gbTipoEmision.Enabled = False
-            Me.gbTipoEmision.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.gbTipoEmision.ForeColor = System.Drawing.Color.White
-            Me.gbTipoEmision.Location = New System.Drawing.Point(448, -3)
-            Me.gbTipoEmision.Name = "gbTipoEmision"
-            Me.gbTipoEmision.Size = New System.Drawing.Size(340, 33)
-            Me.gbTipoEmision.TabIndex = 88
-            Me.gbTipoEmision.TabStop = False
             '
             'rbTipoEmisionIndisponibilidadSistema
             '
             Me.rbTipoEmisionIndisponibilidadSistema.AutoSize = True
+            Me.rbTipoEmisionIndisponibilidadSistema.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.rbTipoEmisionIndisponibilidadSistema.Enabled = False
-            Me.rbTipoEmisionIndisponibilidadSistema.ForeColor = System.Drawing.Color.White
-            Me.rbTipoEmisionIndisponibilidadSistema.Location = New System.Drawing.Point(160, 11)
+            Me.rbTipoEmisionIndisponibilidadSistema.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
+            Me.rbTipoEmisionIndisponibilidadSistema.Location = New System.Drawing.Point(581, 4)
             Me.rbTipoEmisionIndisponibilidadSistema.Name = "rbTipoEmisionIndisponibilidadSistema"
-            Me.rbTipoEmisionIndisponibilidadSistema.Size = New System.Drawing.Size(133, 17)
+            Me.rbTipoEmisionIndisponibilidadSistema.Size = New System.Drawing.Size(118, 17)
             Me.rbTipoEmisionIndisponibilidadSistema.TabIndex = 6
-            Me.rbTipoEmisionIndisponibilidadSistema.Text = "INDISP DEL SISTEMA"
-            Me.rbTipoEmisionIndisponibilidadSistema.UseVisualStyleBackColor = True
+            Me.rbTipoEmisionIndisponibilidadSistema.Text = "Indisp del Sistema"
+            Me.rbTipoEmisionIndisponibilidadSistema.UseVisualStyleBackColor = False
             '
             'rbTipoEmisionNormal
             '
             Me.rbTipoEmisionNormal.AutoSize = True
+            Me.rbTipoEmisionNormal.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.rbTipoEmisionNormal.Checked = True
             Me.rbTipoEmisionNormal.Enabled = False
-            Me.rbTipoEmisionNormal.ForeColor = System.Drawing.Color.White
-            Me.rbTipoEmisionNormal.Location = New System.Drawing.Point(91, 9)
+            Me.rbTipoEmisionNormal.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
+            Me.rbTipoEmisionNormal.Location = New System.Drawing.Point(517, 4)
             Me.rbTipoEmisionNormal.Name = "rbTipoEmisionNormal"
-            Me.rbTipoEmisionNormal.Size = New System.Drawing.Size(61, 17)
+            Me.rbTipoEmisionNormal.Size = New System.Drawing.Size(62, 17)
             Me.rbTipoEmisionNormal.TabIndex = 5
             Me.rbTipoEmisionNormal.TabStop = True
-            Me.rbTipoEmisionNormal.Text = "NORMAL"
-            Me.rbTipoEmisionNormal.UseVisualStyleBackColor = True
-            '
-            'Label20
-            '
-            Me.Label20.AutoSize = True
-            Me.Label20.Font = New System.Drawing.Font("Consolas", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label20.ForeColor = System.Drawing.Color.White
-            Me.Label20.Location = New System.Drawing.Point(14, 9)
-            Me.Label20.Name = "Label20"
-            Me.Label20.Size = New System.Drawing.Size(63, 15)
-            Me.Label20.TabIndex = 20
-            Me.Label20.Text = "EMISIÓN:"
-            '
-            'gbTipoAnbiente
-            '
-            Me.gbTipoAnbiente.Controls.Add(Me.rbProduccion)
-            Me.gbTipoAnbiente.Controls.Add(Me.Label18)
-            Me.gbTipoAnbiente.Controls.Add(Me.rbPruebas)
-            Me.gbTipoAnbiente.Enabled = False
-            Me.gbTipoAnbiente.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.gbTipoAnbiente.ForeColor = System.Drawing.Color.White
-            Me.gbTipoAnbiente.Location = New System.Drawing.Point(220, -3)
-            Me.gbTipoAnbiente.Name = "gbTipoAnbiente"
-            Me.gbTipoAnbiente.Size = New System.Drawing.Size(228, 33)
-            Me.gbTipoAnbiente.TabIndex = 89
-            Me.gbTipoAnbiente.TabStop = False
+            Me.rbTipoEmisionNormal.Text = "Normal"
+            Me.rbTipoEmisionNormal.UseVisualStyleBackColor = False
             '
             'rbProduccion
             '
             Me.rbProduccion.AutoSize = True
+            Me.rbProduccion.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.rbProduccion.Checked = True
             Me.rbProduccion.Enabled = False
-            Me.rbProduccion.ForeColor = System.Drawing.Color.White
-            Me.rbProduccion.Location = New System.Drawing.Point(139, 10)
+            Me.rbProduccion.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
+            Me.rbProduccion.Location = New System.Drawing.Point(327, 4)
             Me.rbProduccion.Name = "rbProduccion"
-            Me.rbProduccion.Size = New System.Drawing.Size(85, 17)
+            Me.rbProduccion.Size = New System.Drawing.Size(83, 17)
             Me.rbProduccion.TabIndex = 4
             Me.rbProduccion.TabStop = True
-            Me.rbProduccion.Text = "PRODUCCIÓN"
-            Me.rbProduccion.UseVisualStyleBackColor = True
-            '
-            'Label18
-            '
-            Me.Label18.AutoSize = True
-            Me.Label18.Font = New System.Drawing.Font("Consolas", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label18.ForeColor = System.Drawing.Color.White
-            Me.Label18.Location = New System.Drawing.Point(4, 11)
-            Me.Label18.Name = "Label18"
-            Me.Label18.Size = New System.Drawing.Size(70, 15)
-            Me.Label18.TabIndex = 15
-            Me.Label18.Text = "AMBIENTE:"
+            Me.rbProduccion.Text = "Produccion"
+            Me.rbProduccion.UseVisualStyleBackColor = False
             '
             'rbPruebas
             '
             Me.rbPruebas.AutoSize = True
+            Me.rbPruebas.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.rbPruebas.Enabled = False
-            Me.rbPruebas.ForeColor = System.Drawing.Color.White
-            Me.rbPruebas.Location = New System.Drawing.Point(74, 11)
+            Me.rbPruebas.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
+            Me.rbPruebas.Location = New System.Drawing.Point(258, 4)
             Me.rbPruebas.Name = "rbPruebas"
-            Me.rbPruebas.Size = New System.Drawing.Size(67, 17)
+            Me.rbPruebas.Size = New System.Drawing.Size(66, 17)
             Me.rbPruebas.TabIndex = 3
-            Me.rbPruebas.Text = "PRUEBAS"
-            Me.rbPruebas.UseVisualStyleBackColor = True
-            '
-            'gbPtoEmision
-            '
-            Me.gbPtoEmision.Controls.Add(Me.Label19)
-            Me.gbPtoEmision.Controls.Add(Me.rbPtoEmision002)
-            Me.gbPtoEmision.Controls.Add(Me.rbPtoEmision001)
-            Me.gbPtoEmision.Enabled = False
-            Me.gbPtoEmision.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.gbPtoEmision.ForeColor = System.Drawing.Color.White
-            Me.gbPtoEmision.Location = New System.Drawing.Point(1, -3)
-            Me.gbPtoEmision.Name = "gbPtoEmision"
-            Me.gbPtoEmision.Size = New System.Drawing.Size(220, 34)
-            Me.gbPtoEmision.TabIndex = 91
-            Me.gbPtoEmision.TabStop = False
-            '
-            'Label19
-            '
-            Me.Label19.AutoSize = True
-            Me.Label19.Font = New System.Drawing.Font("Consolas", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label19.ForeColor = System.Drawing.Color.White
-            Me.Label19.Location = New System.Drawing.Point(4, 9)
-            Me.Label19.Name = "Label19"
-            Me.Label19.Size = New System.Drawing.Size(91, 15)
-            Me.Label19.TabIndex = 16
-            Me.Label19.Text = "PTO EMISIÓN:"
+            Me.rbPruebas.Text = "Pruebas"
+            Me.rbPruebas.UseVisualStyleBackColor = False
             '
             'rbPtoEmision002
             '
             Me.rbPtoEmision002.AutoSize = True
+            Me.rbPtoEmision002.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.rbPtoEmision002.Checked = True
-            Me.rbPtoEmision002.ForeColor = System.Drawing.Color.White
-            Me.rbPtoEmision002.Location = New System.Drawing.Point(141, 9)
+            Me.rbPtoEmision002.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
+            Me.rbPtoEmision002.Location = New System.Drawing.Point(124, 4)
             Me.rbPtoEmision002.Name = "rbPtoEmision002"
             Me.rbPtoEmision002.Size = New System.Drawing.Size(43, 17)
             Me.rbPtoEmision002.TabIndex = 2
             Me.rbPtoEmision002.TabStop = True
             Me.rbPtoEmision002.Text = "002"
-            Me.rbPtoEmision002.UseVisualStyleBackColor = True
+            Me.rbPtoEmision002.UseVisualStyleBackColor = False
             '
             'rbPtoEmision001
             '
             Me.rbPtoEmision001.AutoSize = True
-            Me.rbPtoEmision001.ForeColor = System.Drawing.Color.White
-            Me.rbPtoEmision001.Location = New System.Drawing.Point(98, 9)
+            Me.rbPtoEmision001.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
+            Me.rbPtoEmision001.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
+            Me.rbPtoEmision001.Location = New System.Drawing.Point(81, 4)
             Me.rbPtoEmision001.Name = "rbPtoEmision001"
             Me.rbPtoEmision001.Size = New System.Drawing.Size(43, 17)
             Me.rbPtoEmision001.TabIndex = 1
             Me.rbPtoEmision001.Text = "001"
-            Me.rbPtoEmision001.UseVisualStyleBackColor = True
+            Me.rbPtoEmision001.UseVisualStyleBackColor = False
             '
             'ofdSeleccionarArchivo
             '
@@ -1598,9 +725,9 @@
             Me.GroupBox2.Controls.Add(Me.Label3)
             Me.GroupBox2.Controls.Add(Me.cbxPorcentaje)
             Me.GroupBox2.Enabled = False
-            Me.GroupBox2.Location = New System.Drawing.Point(590, 307)
+            Me.GroupBox2.Location = New System.Drawing.Point(646, 352)
             Me.GroupBox2.Name = "GroupBox2"
-            Me.GroupBox2.Size = New System.Drawing.Size(198, 41)
+            Me.GroupBox2.Size = New System.Drawing.Size(71, 35)
             Me.GroupBox2.TabIndex = 92
             Me.GroupBox2.TabStop = False
             '
@@ -1628,60 +755,378 @@
             Me.cbxPorcentaje.Size = New System.Drawing.Size(75, 21)
             Me.cbxPorcentaje.TabIndex = 33
             '
-            'GroupBox3
+            'KryptonGroupBox1
             '
-            Me.GroupBox3.BackColor = System.Drawing.Color.White
-            Me.GroupBox3.Controls.Add(Me.dgvAsientosDiario)
-            Me.GroupBox3.Enabled = False
-            Me.GroupBox3.Location = New System.Drawing.Point(1, 307)
-            Me.GroupBox3.Name = "GroupBox3"
-            Me.GroupBox3.Padding = New System.Windows.Forms.Padding(2)
-            Me.GroupBox3.Size = New System.Drawing.Size(585, 171)
-            Me.GroupBox3.TabIndex = 93
-            Me.GroupBox3.TabStop = False
+            Me.KryptonGroupBox1.CaptionOverlap = 0R
+            Me.KryptonGroupBox1.GroupBackStyle = Krypton.Toolkit.PaletteBackStyle.ControlRibbon
+            Me.KryptonGroupBox1.Location = New System.Drawing.Point(-1, 2)
+            Me.KryptonGroupBox1.Name = "KryptonGroupBox1"
+            '
+            'KryptonGroupBox1.Panel
+            '
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.rbTipoEmisionIndisponibilidadSistema)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel3)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.rbTipoEmisionNormal)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.SpaceSeparatorVertical2)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.rbProduccion)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel2)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.SpaceSeparatorVertical1)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.rbPruebas)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel1)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.rbPtoEmision002)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.rbPtoEmision001)
+            Me.KryptonGroupBox1.Size = New System.Drawing.Size(730, 36)
+            Me.KryptonGroupBox1.TabIndex = 94
+            Me.KryptonGroupBox1.Values.Heading = ""
+            '
+            'KryptonLabel3
+            '
+            Me.KryptonLabel3.Location = New System.Drawing.Point(456, 4)
+            Me.KryptonLabel3.Name = "KryptonLabel3"
+            Me.KryptonLabel3.Size = New System.Drawing.Size(53, 20)
+            Me.KryptonLabel3.TabIndex = 6
+            Me.KryptonLabel3.Values.Text = "Emision"
+            '
+            'SpaceSeparatorVertical2
+            '
+            Me.SpaceSeparatorVertical2.Customization = "Kioq/yoqKv8jIyP/Kioq/w=="
+            Me.SpaceSeparatorVertical2.Font = New System.Drawing.Font("Verdana", 8.0!)
+            Me.SpaceSeparatorVertical2.Image = Nothing
+            Me.SpaceSeparatorVertical2.Location = New System.Drawing.Point(439, 5)
+            Me.SpaceSeparatorVertical2.Name = "SpaceSeparatorVertical2"
+            Me.SpaceSeparatorVertical2.NoRounding = False
+            Me.SpaceSeparatorVertical2.Size = New System.Drawing.Size(4, 15)
+            Me.SpaceSeparatorVertical2.TabIndex = 5
+            Me.SpaceSeparatorVertical2.Text = "SpaceSeparatorVertical2"
+            Me.SpaceSeparatorVertical2.Transparent = False
+            '
+            'KryptonLabel2
+            '
+            Me.KryptonLabel2.Location = New System.Drawing.Point(190, 4)
+            Me.KryptonLabel2.Name = "KryptonLabel2"
+            Me.KryptonLabel2.Size = New System.Drawing.Size(63, 20)
+            Me.KryptonLabel2.TabIndex = 4
+            Me.KryptonLabel2.Values.Text = "Ambiente"
+            '
+            'SpaceSeparatorVertical1
+            '
+            Me.SpaceSeparatorVertical1.Customization = "Kioq/yoqKv8jIyP/Kioq/w=="
+            Me.SpaceSeparatorVertical1.Font = New System.Drawing.Font("Verdana", 8.0!)
+            Me.SpaceSeparatorVertical1.Image = Nothing
+            Me.SpaceSeparatorVertical1.Location = New System.Drawing.Point(176, 6)
+            Me.SpaceSeparatorVertical1.Name = "SpaceSeparatorVertical1"
+            Me.SpaceSeparatorVertical1.NoRounding = False
+            Me.SpaceSeparatorVertical1.Size = New System.Drawing.Size(4, 15)
+            Me.SpaceSeparatorVertical1.TabIndex = 3
+            Me.SpaceSeparatorVertical1.Text = "SpaceSeparatorVertical1"
+            Me.SpaceSeparatorVertical1.Transparent = False
+            '
+            'KryptonLabel1
+            '
+            Me.KryptonLabel1.Location = New System.Drawing.Point(4, 4)
+            Me.KryptonLabel1.Name = "KryptonLabel1"
+            Me.KryptonLabel1.Size = New System.Drawing.Size(75, 20)
+            Me.KryptonLabel1.TabIndex = 0
+            Me.KryptonLabel1.Values.Text = "Pto Emision"
+            '
+            'gbConceptoCompra
+            '
+            Me.gbConceptoCompra.BackColor = System.Drawing.Color.White
+            Me.gbConceptoCompra.Controls.Add(Me.cmbConceptoCompra)
+            Me.gbConceptoCompra.Enabled = False
+            Me.gbConceptoCompra.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.gbConceptoCompra.Location = New System.Drawing.Point(647, 52)
+            Me.gbConceptoCompra.Name = "gbConceptoCompra"
+            Me.gbConceptoCompra.Size = New System.Drawing.Size(66, 37)
+            Me.gbConceptoCompra.TabIndex = 84
+            Me.gbConceptoCompra.TabStop = False
+            Me.gbConceptoCompra.Text = "CONCEPTO:"
+            '
+            'cmbConceptoCompra
+            '
+            Me.cmbConceptoCompra.DropDownHeight = 150
+            Me.cmbConceptoCompra.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+            Me.cmbConceptoCompra.DropDownWidth = 500
+            Me.cmbConceptoCompra.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+            Me.cmbConceptoCompra.FormattingEnabled = True
+            Me.cmbConceptoCompra.IntegralHeight = False
+            Me.cmbConceptoCompra.Location = New System.Drawing.Point(10, 23)
+            Me.cmbConceptoCompra.Name = "cmbConceptoCompra"
+            Me.cmbConceptoCompra.Size = New System.Drawing.Size(217, 21)
+            Me.cmbConceptoCompra.TabIndex = 8
+            '
+            'KryptonGroupBox2
+            '
+            Me.KryptonGroupBox2.CaptionOverlap = 0R
+            Me.KryptonGroupBox2.GroupBackStyle = Krypton.Toolkit.PaletteBackStyle.ControlRibbon
+            Me.KryptonGroupBox2.Location = New System.Drawing.Point(-1, 39)
+            Me.KryptonGroupBox2.Name = "KryptonGroupBox2"
+            '
+            'KryptonGroupBox2.Panel
+            '
+            Me.KryptonGroupBox2.Panel.Controls.Add(Me.KryptonLabel4)
+            Me.KryptonGroupBox2.Panel.Controls.Add(Me.lblIdComprobanteCompra)
+            Me.KryptonGroupBox2.Panel.Controls.Add(Me.cmbNombreParametroDocumentos)
+            Me.KryptonGroupBox2.Panel.Controls.Add(Me.chkActivoFijo)
+            Me.KryptonGroupBox2.Panel.Controls.Add(Me.btnReporte)
+            Me.KryptonGroupBox2.Panel.Controls.Add(Me.btnCancelar)
+            Me.KryptonGroupBox2.Panel.Controls.Add(Me.btnGuardar)
+            Me.KryptonGroupBox2.Panel.Controls.Add(Me.btnGuardarEnFondoRotativo)
+            Me.KryptonGroupBox2.Panel.Controls.Add(Me.btnNuevo)
+            Me.KryptonGroupBox2.Size = New System.Drawing.Size(730, 57)
+            Me.KryptonGroupBox2.TabIndex = 95
+            Me.KryptonGroupBox2.Values.Heading = "Tipo Comprobante"
+            '
+            'KryptonLabel4
+            '
+            Me.KryptonLabel4.Location = New System.Drawing.Point(371, 4)
+            Me.KryptonLabel4.Name = "KryptonLabel4"
+            Me.KryptonLabel4.Size = New System.Drawing.Size(40, 20)
+            Me.KryptonLabel4.TabIndex = 33
+            Me.KryptonLabel4.Values.Text = "Id CC"
+            '
+            'KryptonGroupBox3
+            '
+            Me.KryptonGroupBox3.CaptionOverlap = 0R
+            Me.KryptonGroupBox3.GroupBackStyle = Krypton.Toolkit.PaletteBackStyle.ControlRibbon
+            Me.KryptonGroupBox3.Location = New System.Drawing.Point(0, 98)
+            Me.KryptonGroupBox3.Name = "KryptonGroupBox3"
+            '
+            'KryptonGroupBox3.Panel
+            '
+            Me.KryptonGroupBox3.Panel.Controls.Add(Me.KryptonLabel23)
+            Me.KryptonGroupBox3.Panel.Controls.Add(Me.txtObservacionesComprobantesCompra)
+            Me.KryptonGroupBox3.Panel.Controls.Add(Me.KryptonLabel26)
+            Me.KryptonGroupBox3.Panel.Controls.Add(Me.KryptonLabel25)
+            Me.KryptonGroupBox3.Panel.Controls.Add(Me.KryptonLabel24)
+            Me.KryptonGroupBox3.Panel.Controls.Add(Me.txtSubtotal5FacturaCompra)
+            Me.KryptonGroupBox3.Panel.Controls.Add(Me.lblIva)
+            Me.KryptonGroupBox3.Panel.Controls.Add(Me.KryptonLabel22)
+            Me.KryptonGroupBox3.Panel.Controls.Add(Me.txtIva5ComprobanteCompra)
+            Me.KryptonGroupBox3.Panel.Controls.Add(Me.KryptonLabel21)
+            Me.KryptonGroupBox3.Panel.Controls.Add(Me.KryptonLabel5)
+            Me.KryptonGroupBox3.Panel.Controls.Add(Me.txtDescuentoFacturaCompra)
+            Me.KryptonGroupBox3.Panel.Controls.Add(Me.lblSubtotalIva)
+            Me.KryptonGroupBox3.Panel.Controls.Add(Me.txtSubtotal0FacturaCompra)
+            Me.KryptonGroupBox3.Panel.Controls.Add(Me.txtSubTotalComprobanteCompra)
+            Me.KryptonGroupBox3.Panel.Controls.Add(Me.dgvAsientosDiario)
+            Me.KryptonGroupBox3.Panel.Controls.Add(Me.txtTotalComprobanteCompra)
+            Me.KryptonGroupBox3.Panel.Controls.Add(Me.txtSubtotal12FacturaCompra)
+            Me.KryptonGroupBox3.Panel.Controls.Add(Me.txtIvaComprobanteCompra)
+            Me.KryptonGroupBox3.Panel.Controls.Add(Me.btnOrdenCompra)
+            Me.KryptonGroupBox3.Panel.Controls.Add(Me.KryptonLabel20)
+            Me.KryptonGroupBox3.Panel.Controls.Add(Me.lblOrdenCompra)
+            Me.KryptonGroupBox3.Panel.Controls.Add(Me.KryptonLabel19)
+            Me.KryptonGroupBox3.Panel.Controls.Add(Me.chkReq)
+            Me.KryptonGroupBox3.Panel.Controls.Add(Me.KryptonLabel18)
+            Me.KryptonGroupBox3.Panel.Controls.Add(Me.KryptonLabel17)
+            Me.KryptonGroupBox3.Panel.Controls.Add(Me.dtpFechaEmisionComprobanteCompra)
+            Me.KryptonGroupBox3.Panel.Controls.Add(Me.KryptonLabel16)
+            Me.KryptonGroupBox3.Panel.Controls.Add(Me.txtRazModComprobanteCompra)
+            Me.KryptonGroupBox3.Panel.Controls.Add(Me.btnBuscar)
+            Me.KryptonGroupBox3.Panel.Controls.Add(Me.bntBuscarMod)
+            Me.KryptonGroupBox3.Panel.Controls.Add(Me.dtpFechaAutoSRIComprobanteCompra)
+            Me.KryptonGroupBox3.Panel.Controls.Add(Me.txtNumAutoSRIComprobanteCompra)
+            Me.KryptonGroupBox3.Panel.Controls.Add(Me.KryptonLabel15)
+            Me.KryptonGroupBox3.Panel.Controls.Add(Me.chkActivarRetencion)
+            Me.KryptonGroupBox3.Panel.Controls.Add(Me.KryptonLabel14)
+            Me.KryptonGroupBox3.Panel.Controls.Add(Me.txtGuiaRemisionComprobanteCompra)
+            Me.KryptonGroupBox3.Panel.Controls.Add(Me.txtDocModComprobanteCompra)
+            Me.KryptonGroupBox3.Panel.Controls.Add(Me.txtNumeroComprobanteCompra)
+            Me.KryptonGroupBox3.Panel.Controls.Add(Me.KryptonLabel13)
+            Me.KryptonGroupBox3.Panel.Controls.Add(Me.txtNumAutoContEspFacturaCompra)
+            Me.KryptonGroupBox3.Panel.Controls.Add(Me.KryptonLabel12)
+            Me.KryptonGroupBox3.Panel.Controls.Add(Me.txtContribuyenteEspecialProveedorGeneral)
+            Me.KryptonGroupBox3.Panel.Controls.Add(Me.KryptonLabel11)
+            Me.KryptonGroupBox3.Panel.Controls.Add(Me.txtDireccionProveedorGeneral)
+            Me.KryptonGroupBox3.Panel.Controls.Add(Me.KryptonLabel10)
+            Me.KryptonGroupBox3.Panel.Controls.Add(Me.txtObligadoLlevarContabilidadProveedorGeneral)
+            Me.KryptonGroupBox3.Panel.Controls.Add(Me.KryptonLabel9)
+            Me.KryptonGroupBox3.Panel.Controls.Add(Me.KryptonLabel8)
+            Me.KryptonGroupBox3.Panel.Controls.Add(Me.KryptonLabel7)
+            Me.KryptonGroupBox3.Panel.Controls.Add(Me.lblIdProveedorGeneral)
+            Me.KryptonGroupBox3.Panel.Controls.Add(Me.txtNombreComercialProveedorGeneral)
+            Me.KryptonGroupBox3.Panel.Controls.Add(Me.KryptonLabel6)
+            Me.KryptonGroupBox3.Panel.Controls.Add(Me.txtRucProveedorGeneral)
+            Me.KryptonGroupBox3.Panel.Controls.Add(Me.txtEmailProveedorGeneral)
+            Me.KryptonGroupBox3.Panel.Controls.Add(Me.gbRUCProveedor)
+            Me.KryptonGroupBox3.Panel.Controls.Add(Me.txtCiudadProveedorGeneral)
+            Me.KryptonGroupBox3.Panel.Controls.Add(Me.txtTelefonoProveedorGeneral)
+            Me.KryptonGroupBox3.Size = New System.Drawing.Size(729, 450)
+            Me.KryptonGroupBox3.TabIndex = 96
+            Me.KryptonGroupBox3.Values.Heading = "Datos"
+            '
+            'KryptonLabel23
+            '
+            Me.KryptonLabel23.Location = New System.Drawing.Point(6, 399)
+            Me.KryptonLabel23.Name = "KryptonLabel23"
+            Me.KryptonLabel23.Size = New System.Drawing.Size(90, 20)
+            Me.KryptonLabel23.TabIndex = 156
+            Me.KryptonLabel23.Values.Text = "Observaciones"
+            '
+            'KryptonLabel26
+            '
+            Me.KryptonLabel26.Location = New System.Drawing.Point(557, 401)
+            Me.KryptonLabel26.Name = "KryptonLabel26"
+            Me.KryptonLabel26.Size = New System.Drawing.Size(38, 20)
+            Me.KryptonLabel26.TabIndex = 155
+            Me.KryptonLabel26.Values.Text = "Total"
+            '
+            'KryptonLabel25
+            '
+            Me.KryptonLabel25.Location = New System.Drawing.Point(557, 374)
+            Me.KryptonLabel25.Name = "KryptonLabel25"
+            Me.KryptonLabel25.Size = New System.Drawing.Size(50, 20)
+            Me.KryptonLabel25.TabIndex = 154
+            Me.KryptonLabel25.Values.Text = "IVA 5%"
+            '
+            'KryptonLabel24
+            '
+            Me.KryptonLabel24.Location = New System.Drawing.Point(557, 269)
+            Me.KryptonLabel24.Name = "KryptonLabel24"
+            Me.KryptonLabel24.Size = New System.Drawing.Size(76, 20)
+            Me.KryptonLabel24.TabIndex = 153
+            Me.KryptonLabel24.Values.Text = "Subtotal 5%"
+            '
+            'txtSubtotal5FacturaCompra
+            '
+            Me.txtSubtotal5FacturaCompra.BackColor = System.Drawing.Color.White
+            Me.txtSubtotal5FacturaCompra.Enabled = False
+            Me.txtSubtotal5FacturaCompra.Location = New System.Drawing.Point(643, 266)
+            Me.txtSubtotal5FacturaCompra.Name = "txtSubtotal5FacturaCompra"
+            Me.txtSubtotal5FacturaCompra.Size = New System.Drawing.Size(74, 22)
+            Me.txtSubtotal5FacturaCompra.TabIndex = 147
+            Me.txtSubtotal5FacturaCompra.Text = "0.00"
+            Me.txtSubtotal5FacturaCompra.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+            '
+            'lblIva
+            '
+            Me.lblIva.Location = New System.Drawing.Point(557, 347)
+            Me.lblIva.Name = "lblIva"
+            Me.lblIva.Size = New System.Drawing.Size(29, 20)
+            Me.lblIva.TabIndex = 152
+            Me.lblIva.Values.Text = "IVA"
+            '
+            'KryptonLabel22
+            '
+            Me.KryptonLabel22.Location = New System.Drawing.Point(557, 322)
+            Me.KryptonLabel22.Name = "KryptonLabel22"
+            Me.KryptonLabel22.Size = New System.Drawing.Size(56, 20)
+            Me.KryptonLabel22.TabIndex = 151
+            Me.KryptonLabel22.Values.Text = "Subtotal"
+            '
+            'txtIva5ComprobanteCompra
+            '
+            Me.txtIva5ComprobanteCompra.BackColor = System.Drawing.Color.White
+            Me.txtIva5ComprobanteCompra.Enabled = False
+            Me.txtIva5ComprobanteCompra.Location = New System.Drawing.Point(643, 371)
+            Me.txtIva5ComprobanteCompra.Name = "txtIva5ComprobanteCompra"
+            Me.txtIva5ComprobanteCompra.Size = New System.Drawing.Size(74, 22)
+            Me.txtIva5ComprobanteCompra.TabIndex = 146
+            Me.txtIva5ComprobanteCompra.Text = "0.00"
+            Me.txtIva5ComprobanteCompra.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+            '
+            'KryptonLabel21
+            '
+            Me.KryptonLabel21.Location = New System.Drawing.Point(557, 295)
+            Me.KryptonLabel21.Name = "KryptonLabel21"
+            Me.KryptonLabel21.Size = New System.Drawing.Size(68, 20)
+            Me.KryptonLabel21.TabIndex = 150
+            Me.KryptonLabel21.Values.Text = "Descuento"
+            '
+            'KryptonLabel5
+            '
+            Me.KryptonLabel5.Location = New System.Drawing.Point(557, 239)
+            Me.KryptonLabel5.Name = "KryptonLabel5"
+            Me.KryptonLabel5.Size = New System.Drawing.Size(76, 20)
+            Me.KryptonLabel5.TabIndex = 149
+            Me.KryptonLabel5.Values.Text = "Subtotal 0%"
+            '
+            'txtDescuentoFacturaCompra
+            '
+            Me.txtDescuentoFacturaCompra.BackColor = System.Drawing.Color.White
+            Me.txtDescuentoFacturaCompra.Enabled = False
+            Me.txtDescuentoFacturaCompra.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtDescuentoFacturaCompra.Location = New System.Drawing.Point(643, 292)
+            Me.txtDescuentoFacturaCompra.Name = "txtDescuentoFacturaCompra"
+            Me.txtDescuentoFacturaCompra.Size = New System.Drawing.Size(74, 22)
+            Me.txtDescuentoFacturaCompra.TabIndex = 142
+            Me.txtDescuentoFacturaCompra.Text = "0.00"
+            Me.txtDescuentoFacturaCompra.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+            '
+            'lblSubtotalIva
+            '
+            Me.lblSubtotalIva.Location = New System.Drawing.Point(557, 210)
+            Me.lblSubtotalIva.Name = "lblSubtotalIva"
+            Me.lblSubtotalIva.Size = New System.Drawing.Size(79, 20)
+            Me.lblSubtotalIva.TabIndex = 148
+            Me.lblSubtotalIva.Values.Text = "Subtotal IVA"
+            '
+            'txtSubtotal0FacturaCompra
+            '
+            Me.txtSubtotal0FacturaCompra.BackColor = System.Drawing.Color.White
+            Me.txtSubtotal0FacturaCompra.Enabled = False
+            Me.txtSubtotal0FacturaCompra.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtSubtotal0FacturaCompra.Location = New System.Drawing.Point(643, 237)
+            Me.txtSubtotal0FacturaCompra.Name = "txtSubtotal0FacturaCompra"
+            Me.txtSubtotal0FacturaCompra.Size = New System.Drawing.Size(74, 22)
+            Me.txtSubtotal0FacturaCompra.TabIndex = 141
+            Me.txtSubtotal0FacturaCompra.Text = "0.00"
+            Me.txtSubtotal0FacturaCompra.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+            '
+            'txtSubTotalComprobanteCompra
+            '
+            Me.txtSubTotalComprobanteCompra.BackColor = System.Drawing.Color.White
+            Me.txtSubTotalComprobanteCompra.Enabled = False
+            Me.txtSubTotalComprobanteCompra.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtSubTotalComprobanteCompra.Location = New System.Drawing.Point(643, 319)
+            Me.txtSubTotalComprobanteCompra.Name = "txtSubTotalComprobanteCompra"
+            Me.txtSubTotalComprobanteCompra.Size = New System.Drawing.Size(74, 22)
+            Me.txtSubTotalComprobanteCompra.TabIndex = 143
+            Me.txtSubTotalComprobanteCompra.Text = "0.00"
+            Me.txtSubTotalComprobanteCompra.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
             '
             'dgvAsientosDiario
             '
             Me.dgvAsientosDiario.AllowUserToDeleteRows = False
             Me.dgvAsientosDiario.AllowUserToResizeRows = False
-            DataGridViewCellStyle41.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-            Me.dgvAsientosDiario.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle41
+            DataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+            Me.dgvAsientosDiario.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle14
             Me.dgvAsientosDiario.BackgroundColor = System.Drawing.Color.White
             Me.dgvAsientosDiario.BorderStyle = System.Windows.Forms.BorderStyle.None
             Me.dgvAsientosDiario.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
-            DataGridViewCellStyle42.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-            DataGridViewCellStyle42.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            DataGridViewCellStyle42.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-            Me.dgvAsientosDiario.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle42
+            DataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+            DataGridViewCellStyle15.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+            Me.dgvAsientosDiario.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle15
             Me.dgvAsientosDiario.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.eliminarItem, Me.CODIGO, Me.CUENTA, Me.VALOR, Me.IVA, Me.PORCENTAJE})
-            DataGridViewCellStyle45.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-            DataGridViewCellStyle45.BackColor = System.Drawing.SystemColors.Window
-            DataGridViewCellStyle45.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            DataGridViewCellStyle45.ForeColor = System.Drawing.SystemColors.ControlText
-            DataGridViewCellStyle45.SelectionBackColor = System.Drawing.SystemColors.Highlight
-            DataGridViewCellStyle45.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-            DataGridViewCellStyle45.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-            Me.dgvAsientosDiario.DefaultCellStyle = DataGridViewCellStyle45
-            Me.dgvAsientosDiario.Dock = System.Windows.Forms.DockStyle.Fill
+            DataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+            DataGridViewCellStyle18.BackColor = System.Drawing.SystemColors.Window
+            DataGridViewCellStyle18.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle18.ForeColor = System.Drawing.SystemColors.ControlText
+            DataGridViewCellStyle18.SelectionBackColor = System.Drawing.SystemColors.Highlight
+            DataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+            DataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+            Me.dgvAsientosDiario.DefaultCellStyle = DataGridViewCellStyle18
             Me.dgvAsientosDiario.GridColor = System.Drawing.SystemColors.ControlLight
-            Me.dgvAsientosDiario.Location = New System.Drawing.Point(2, 17)
+            Me.dgvAsientosDiario.Location = New System.Drawing.Point(6, 210)
             Me.dgvAsientosDiario.MultiSelect = False
             Me.dgvAsientosDiario.Name = "dgvAsientosDiario"
             Me.dgvAsientosDiario.RowHeadersVisible = False
             Me.dgvAsientosDiario.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvAsientosDiario.Size = New System.Drawing.Size(581, 152)
-            Me.dgvAsientosDiario.TabIndex = 32
+            Me.dgvAsientosDiario.Size = New System.Drawing.Size(545, 183)
+            Me.dgvAsientosDiario.TabIndex = 139
             '
             'eliminarItem
             '
-            DataGridViewCellStyle43.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-            DataGridViewCellStyle43.BackColor = System.Drawing.Color.DarkRed
-            DataGridViewCellStyle43.ForeColor = System.Drawing.Color.White
-            DataGridViewCellStyle43.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
-            DataGridViewCellStyle43.SelectionForeColor = System.Drawing.Color.White
-            Me.eliminarItem.DefaultCellStyle = DataGridViewCellStyle43
+            DataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+            DataGridViewCellStyle16.BackColor = System.Drawing.Color.DarkRed
+            DataGridViewCellStyle16.ForeColor = System.Drawing.Color.White
+            DataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
+            DataGridViewCellStyle16.SelectionForeColor = System.Drawing.Color.White
+            Me.eliminarItem.DefaultCellStyle = DataGridViewCellStyle16
             Me.eliminarItem.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-            Me.eliminarItem.HeaderText = "SUPR"
+            Me.eliminarItem.HeaderText = "Supr"
             Me.eliminarItem.Name = "eliminarItem"
             Me.eliminarItem.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
             Me.eliminarItem.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
@@ -1692,22 +1137,22 @@
             '
             'CODIGO
             '
-            Me.CODIGO.HeaderText = "CODIGO"
+            Me.CODIGO.HeaderText = "Codigo"
             Me.CODIGO.Name = "CODIGO"
             Me.CODIGO.Width = 95
             '
             'CUENTA
             '
-            DataGridViewCellStyle44.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-            Me.CUENTA.DefaultCellStyle = DataGridViewCellStyle44
-            Me.CUENTA.HeaderText = "CUENTA"
+            DataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+            Me.CUENTA.DefaultCellStyle = DataGridViewCellStyle17
+            Me.CUENTA.HeaderText = "Cuenta"
             Me.CUENTA.Name = "CUENTA"
             Me.CUENTA.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
             Me.CUENTA.Width = 225
             '
             'VALOR
             '
-            Me.VALOR.HeaderText = "VALOR"
+            Me.VALOR.HeaderText = "Valor"
             Me.VALOR.Name = "VALOR"
             Me.VALOR.Width = 80
             '
@@ -1719,31 +1164,421 @@
             '
             'PORCENTAJE
             '
-            Me.PORCENTAJE.HeaderText = "PORCENTAJE"
+            Me.PORCENTAJE.HeaderText = "%"
             Me.PORCENTAJE.Items.AddRange(New Object() {"0", "5", "12", "15"})
             Me.PORCENTAJE.Name = "PORCENTAJE"
+            Me.PORCENTAJE.Width = 70
+            '
+            'txtTotalComprobanteCompra
+            '
+            Me.txtTotalComprobanteCompra.BackColor = System.Drawing.Color.White
+            Me.txtTotalComprobanteCompra.Enabled = False
+            Me.txtTotalComprobanteCompra.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtTotalComprobanteCompra.Location = New System.Drawing.Point(643, 399)
+            Me.txtTotalComprobanteCompra.Name = "txtTotalComprobanteCompra"
+            Me.txtTotalComprobanteCompra.Size = New System.Drawing.Size(73, 22)
+            Me.txtTotalComprobanteCompra.TabIndex = 145
+            Me.txtTotalComprobanteCompra.Text = "0.00"
+            Me.txtTotalComprobanteCompra.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+            '
+            'txtSubtotal12FacturaCompra
+            '
+            Me.txtSubtotal12FacturaCompra.BackColor = System.Drawing.Color.White
+            Me.txtSubtotal12FacturaCompra.Enabled = False
+            Me.txtSubtotal12FacturaCompra.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtSubtotal12FacturaCompra.Location = New System.Drawing.Point(643, 210)
+            Me.txtSubtotal12FacturaCompra.Name = "txtSubtotal12FacturaCompra"
+            Me.txtSubtotal12FacturaCompra.Size = New System.Drawing.Size(74, 22)
+            Me.txtSubtotal12FacturaCompra.TabIndex = 140
+            Me.txtSubtotal12FacturaCompra.Text = "0.00"
+            Me.txtSubtotal12FacturaCompra.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+            '
+            'txtIvaComprobanteCompra
+            '
+            Me.txtIvaComprobanteCompra.BackColor = System.Drawing.Color.White
+            Me.txtIvaComprobanteCompra.Enabled = False
+            Me.txtIvaComprobanteCompra.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtIvaComprobanteCompra.Location = New System.Drawing.Point(643, 345)
+            Me.txtIvaComprobanteCompra.Name = "txtIvaComprobanteCompra"
+            Me.txtIvaComprobanteCompra.Size = New System.Drawing.Size(73, 22)
+            Me.txtIvaComprobanteCompra.TabIndex = 144
+            Me.txtIvaComprobanteCompra.Text = "0.00"
+            Me.txtIvaComprobanteCompra.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+            '
+            'btnOrdenCompra
+            '
+            Me.btnOrdenCompra.Enabled = False
+            Me.btnOrdenCompra.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.btnOrdenCompra.Location = New System.Drawing.Point(617, 169)
+            Me.btnOrdenCompra.Name = "btnOrdenCompra"
+            Me.btnOrdenCompra.Size = New System.Drawing.Size(26, 22)
+            Me.btnOrdenCompra.TabIndex = 138
+            Me.btnOrdenCompra.Tag = "1"
+            Me.btnOrdenCompra.Text = "..."
+            Me.btnOrdenCompra.UseVisualStyleBackColor = True
+            '
+            'KryptonLabel20
+            '
+            Me.KryptonLabel20.Location = New System.Drawing.Point(526, 145)
+            Me.KryptonLabel20.Name = "KryptonLabel20"
+            Me.KryptonLabel20.Size = New System.Drawing.Size(88, 20)
+            Me.KryptonLabel20.TabIndex = 137
+            Me.KryptonLabel20.Values.Text = "Fecha Emision"
+            '
+            'lblOrdenCompra
+            '
+            Me.lblOrdenCompra.AutoSize = True
+            Me.lblOrdenCompra.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
+            Me.lblOrdenCompra.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.lblOrdenCompra.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
+            Me.lblOrdenCompra.Location = New System.Drawing.Point(575, 176)
+            Me.lblOrdenCompra.Name = "lblOrdenCompra"
+            Me.lblOrdenCompra.Size = New System.Drawing.Size(28, 13)
+            Me.lblOrdenCompra.TabIndex = 128
+            Me.lblOrdenCompra.Text = "###"
+            '
+            'KryptonLabel19
+            '
+            Me.KryptonLabel19.Location = New System.Drawing.Point(542, 121)
+            Me.KryptonLabel19.Name = "KryptonLabel19"
+            Me.KryptonLabel19.Size = New System.Drawing.Size(72, 20)
+            Me.KryptonLabel19.TabIndex = 136
+            Me.KryptonLabel19.Values.Text = "Fecha Auto"
+            '
+            'chkReq
+            '
+            Me.chkReq.AutoSize = True
+            Me.chkReq.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
+            Me.chkReq.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.chkReq.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
+            Me.chkReq.Location = New System.Drawing.Point(453, 175)
+            Me.chkReq.Name = "chkReq"
+            Me.chkReq.Size = New System.Drawing.Size(87, 17)
+            Me.chkReq.TabIndex = 129
+            Me.chkReq.Text = "Órden C. N°:"
+            Me.chkReq.UseVisualStyleBackColor = False
+            '
+            'KryptonLabel18
+            '
+            Me.KryptonLabel18.Location = New System.Drawing.Point(230, 145)
+            Me.KryptonLabel18.Name = "KryptonLabel18"
+            Me.KryptonLabel18.Size = New System.Drawing.Size(50, 20)
+            Me.KryptonLabel18.TabIndex = 135
+            Me.KryptonLabel18.Values.Text = "Aut SRI"
+            '
+            'KryptonLabel17
+            '
+            Me.KryptonLabel17.Location = New System.Drawing.Point(230, 120)
+            Me.KryptonLabel17.Name = "KryptonLabel17"
+            Me.KryptonLabel17.Size = New System.Drawing.Size(53, 20)
+            Me.KryptonLabel17.TabIndex = 134
+            Me.KryptonLabel17.Values.Text = "No Fact"
+            '
+            'dtpFechaEmisionComprobanteCompra
+            '
+            Me.dtpFechaEmisionComprobanteCompra.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.dtpFechaEmisionComprobanteCompra.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+            Me.dtpFechaEmisionComprobanteCompra.Location = New System.Drawing.Point(617, 146)
+            Me.dtpFechaEmisionComprobanteCompra.MinDate = New Date(2014, 9, 1, 0, 0, 0, 0)
+            Me.dtpFechaEmisionComprobanteCompra.Name = "dtpFechaEmisionComprobanteCompra"
+            Me.dtpFechaEmisionComprobanteCompra.Size = New System.Drawing.Size(98, 21)
+            Me.dtpFechaEmisionComprobanteCompra.TabIndex = 126
+            '
+            'KryptonLabel16
+            '
+            Me.KryptonLabel16.Location = New System.Drawing.Point(2, 169)
+            Me.KryptonLabel16.Name = "KryptonLabel16"
+            Me.KryptonLabel16.Size = New System.Drawing.Size(86, 20)
+            Me.KryptonLabel16.TabIndex = 133
+            Me.KryptonLabel16.Values.Text = "Aut SRI Modif"
+            '
+            'txtRazModComprobanteCompra
+            '
+            Me.txtRazModComprobanteCompra.BackColor = System.Drawing.Color.White
+            Me.txtRazModComprobanteCompra.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtRazModComprobanteCompra.Location = New System.Drawing.Point(93, 171)
+            Me.txtRazModComprobanteCompra.Name = "txtRazModComprobanteCompra"
+            Me.txtRazModComprobanteCompra.Size = New System.Drawing.Size(132, 21)
+            Me.txtRazModComprobanteCompra.TabIndex = 121
+            Me.txtRazModComprobanteCompra.Text = "0"
+            Me.txtRazModComprobanteCompra.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+            '
+            'btnBuscar
+            '
+            Me.btnBuscar.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
+            Me.btnBuscar.FlatAppearance.BorderColor = System.Drawing.Color.DimGray
+            Me.btnBuscar.FlatAppearance.BorderSize = 0
+            Me.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+            Me.btnBuscar.Font = New System.Drawing.Font("Segoe UI", 7.0!)
+            Me.btnBuscar.ForeColor = System.Drawing.Color.Black
+            Me.btnBuscar.Image = Global.syscisepro.My.Resources.Resources.attach_file_24dp_FILL0_wght400_GRAD0_opsz24
+            Me.btnBuscar.Location = New System.Drawing.Point(508, 117)
+            Me.btnBuscar.Name = "btnBuscar"
+            Me.btnBuscar.Size = New System.Drawing.Size(27, 27)
+            Me.btnBuscar.TabIndex = 123
+            Me.btnBuscar.UseVisualStyleBackColor = False
+            '
+            'bntBuscarMod
+            '
+            Me.bntBuscarMod.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
+            Me.bntBuscarMod.FlatAppearance.BorderColor = System.Drawing.Color.DimGray
+            Me.bntBuscarMod.FlatAppearance.BorderSize = 0
+            Me.bntBuscarMod.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+            Me.bntBuscarMod.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.bntBuscarMod.ForeColor = System.Drawing.Color.Black
+            Me.bntBuscarMod.Image = Global.syscisepro.My.Resources.Resources.attach_file_24dp_FILL0_wght400_GRAD0_opsz24
+            Me.bntBuscarMod.Location = New System.Drawing.Point(200, 140)
+            Me.bntBuscarMod.Name = "bntBuscarMod"
+            Me.bntBuscarMod.Size = New System.Drawing.Size(27, 27)
+            Me.bntBuscarMod.TabIndex = 130
+            Me.bntBuscarMod.UseVisualStyleBackColor = False
+            '
+            'dtpFechaAutoSRIComprobanteCompra
+            '
+            Me.dtpFechaAutoSRIComprobanteCompra.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.dtpFechaAutoSRIComprobanteCompra.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+            Me.dtpFechaAutoSRIComprobanteCompra.Location = New System.Drawing.Point(617, 119)
+            Me.dtpFechaAutoSRIComprobanteCompra.Name = "dtpFechaAutoSRIComprobanteCompra"
+            Me.dtpFechaAutoSRIComprobanteCompra.Size = New System.Drawing.Size(98, 21)
+            Me.dtpFechaAutoSRIComprobanteCompra.TabIndex = 125
+            '
+            'txtNumAutoSRIComprobanteCompra
+            '
+            Me.txtNumAutoSRIComprobanteCompra.BackColor = System.Drawing.Color.White
+            Me.txtNumAutoSRIComprobanteCompra.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtNumAutoSRIComprobanteCompra.Location = New System.Drawing.Point(289, 146)
+            Me.txtNumAutoSRIComprobanteCompra.Name = "txtNumAutoSRIComprobanteCompra"
+            Me.txtNumAutoSRIComprobanteCompra.Size = New System.Drawing.Size(212, 21)
+            Me.txtNumAutoSRIComprobanteCompra.TabIndex = 124
+            Me.txtNumAutoSRIComprobanteCompra.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+            '
+            'KryptonLabel15
+            '
+            Me.KryptonLabel15.Location = New System.Drawing.Point(2, 145)
+            Me.KryptonLabel15.Name = "KryptonLabel15"
+            Me.KryptonLabel15.Size = New System.Drawing.Size(68, 20)
+            Me.KryptonLabel15.TabIndex = 132
+            Me.KryptonLabel15.Values.Text = "Doc Modif"
+            '
+            'chkActivarRetencion
+            '
+            Me.chkActivarRetencion.AutoSize = True
+            Me.chkActivarRetencion.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
+            Me.chkActivarRetencion.FlatAppearance.BorderColor = System.Drawing.Color.White
+            Me.chkActivarRetencion.FlatAppearance.CheckedBackColor = System.Drawing.Color.White
+            Me.chkActivarRetencion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White
+            Me.chkActivarRetencion.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.chkActivarRetencion.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
+            Me.chkActivarRetencion.Location = New System.Drawing.Point(235, 175)
+            Me.chkActivarRetencion.Name = "chkActivarRetencion"
+            Me.chkActivarRetencion.Size = New System.Drawing.Size(199, 17)
+            Me.chkActivarRetencion.TabIndex = 127
+            Me.chkActivarRetencion.Text = "Activar Comprobante de Retencion"
+            Me.chkActivarRetencion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+            Me.chkActivarRetencion.UseVisualStyleBackColor = False
+            '
+            'KryptonLabel14
+            '
+            Me.KryptonLabel14.Location = New System.Drawing.Point(2, 116)
+            Me.KryptonLabel14.Name = "KryptonLabel14"
+            Me.KryptonLabel14.Size = New System.Drawing.Size(89, 20)
+            Me.KryptonLabel14.TabIndex = 131
+            Me.KryptonLabel14.Values.Text = "Guia Remision"
+            '
+            'txtGuiaRemisionComprobanteCompra
+            '
+            Me.txtGuiaRemisionComprobanteCompra.BackColor = System.Drawing.Color.White
+            Me.txtGuiaRemisionComprobanteCompra.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtGuiaRemisionComprobanteCompra.Location = New System.Drawing.Point(93, 117)
+            Me.txtGuiaRemisionComprobanteCompra.Name = "txtGuiaRemisionComprobanteCompra"
+            Me.txtGuiaRemisionComprobanteCompra.Size = New System.Drawing.Size(132, 21)
+            Me.txtGuiaRemisionComprobanteCompra.TabIndex = 119
+            Me.txtGuiaRemisionComprobanteCompra.Text = "000"
+            Me.txtGuiaRemisionComprobanteCompra.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+            '
+            'txtDocModComprobanteCompra
+            '
+            Me.txtDocModComprobanteCompra.BackColor = System.Drawing.Color.White
+            Me.txtDocModComprobanteCompra.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtDocModComprobanteCompra.Location = New System.Drawing.Point(93, 144)
+            Me.txtDocModComprobanteCompra.Name = "txtDocModComprobanteCompra"
+            Me.txtDocModComprobanteCompra.Size = New System.Drawing.Size(102, 21)
+            Me.txtDocModComprobanteCompra.TabIndex = 120
+            Me.txtDocModComprobanteCompra.Text = "000"
+            Me.txtDocModComprobanteCompra.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+            '
+            'txtNumeroComprobanteCompra
+            '
+            Me.txtNumeroComprobanteCompra.BackColor = System.Drawing.Color.White
+            Me.txtNumeroComprobanteCompra.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtNumeroComprobanteCompra.Location = New System.Drawing.Point(289, 117)
+            Me.txtNumeroComprobanteCompra.Name = "txtNumeroComprobanteCompra"
+            Me.txtNumeroComprobanteCompra.Size = New System.Drawing.Size(213, 21)
+            Me.txtNumeroComprobanteCompra.TabIndex = 122
+            Me.txtNumeroComprobanteCompra.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+            '
+            'KryptonLabel13
+            '
+            Me.KryptonLabel13.Location = New System.Drawing.Point(2, 24)
+            Me.KryptonLabel13.Name = "KryptonLabel13"
+            Me.KryptonLabel13.Size = New System.Drawing.Size(62, 20)
+            Me.KryptonLabel13.TabIndex = 83
+            Me.KryptonLabel13.Values.Text = "Direccion"
+            '
+            'KryptonLabel12
+            '
+            Me.KryptonLabel12.Location = New System.Drawing.Point(396, 55)
+            Me.KryptonLabel12.Name = "KryptonLabel12"
+            Me.KryptonLabel12.Size = New System.Drawing.Size(126, 20)
+            Me.KryptonLabel12.TabIndex = 82
+            Me.KryptonLabel12.Values.Text = "Num Auto Contrib Es"
+            '
+            'KryptonLabel11
+            '
+            Me.KryptonLabel11.Location = New System.Drawing.Point(155, 84)
+            Me.KryptonLabel11.Name = "KryptonLabel11"
+            Me.KryptonLabel11.Size = New System.Drawing.Size(100, 20)
+            Me.KryptonLabel11.TabIndex = 81
+            Me.KryptonLabel11.Values.Text = "Contrib. Especial"
+            '
+            'KryptonLabel10
+            '
+            Me.KryptonLabel10.Location = New System.Drawing.Point(2, 84)
+            Me.KryptonLabel10.Name = "KryptonLabel10"
+            Me.KryptonLabel10.Size = New System.Drawing.Size(70, 20)
+            Me.KryptonLabel10.TabIndex = 80
+            Me.KryptonLabel10.Values.Text = "Oblig Cont"
+            '
+            'KryptonLabel9
+            '
+            Me.KryptonLabel9.Location = New System.Drawing.Point(396, 29)
+            Me.KryptonLabel9.Name = "KryptonLabel9"
+            Me.KryptonLabel9.Size = New System.Drawing.Size(40, 20)
+            Me.KryptonLabel9.TabIndex = 79
+            Me.KryptonLabel9.Values.Text = "Email"
+            '
+            'KryptonLabel8
+            '
+            Me.KryptonLabel8.Location = New System.Drawing.Point(197, 55)
+            Me.KryptonLabel8.Name = "KryptonLabel8"
+            Me.KryptonLabel8.Size = New System.Drawing.Size(58, 20)
+            Me.KryptonLabel8.TabIndex = 78
+            Me.KryptonLabel8.Values.Text = "Telefono"
+            '
+            'KryptonLabel7
+            '
+            Me.KryptonLabel7.Location = New System.Drawing.Point(1, 53)
+            Me.KryptonLabel7.Name = "KryptonLabel7"
+            Me.KryptonLabel7.Size = New System.Drawing.Size(49, 20)
+            Me.KryptonLabel7.TabIndex = 77
+            Me.KryptonLabel7.Values.Text = "Ciudad"
+            '
+            'KryptonLabel6
+            '
+            Me.KryptonLabel6.Location = New System.Drawing.Point(201, 1)
+            Me.KryptonLabel6.Name = "KryptonLabel6"
+            Me.KryptonLabel6.Size = New System.Drawing.Size(67, 20)
+            Me.KryptonLabel6.TabIndex = 15
+            Me.KryptonLabel6.Values.Text = "Proveedor"
+            '
+            'gbRUCProveedor
+            '
+            Me.gbRUCProveedor.Location = New System.Drawing.Point(3, 1)
+            Me.gbRUCProveedor.Name = "gbRUCProveedor"
+            Me.gbRUCProveedor.Size = New System.Drawing.Size(57, 20)
+            Me.gbRUCProveedor.TabIndex = 1
+            Me.gbRUCProveedor.Values.Text = "CI / RUC "
+            '
+            'KryptonGroupBox4
+            '
+            Me.KryptonGroupBox4.CaptionOverlap = 0R
+            Me.KryptonGroupBox4.GroupBackStyle = Krypton.Toolkit.PaletteBackStyle.ControlRibbon
+            Me.KryptonGroupBox4.Location = New System.Drawing.Point(0, 551)
+            Me.KryptonGroupBox4.Name = "KryptonGroupBox4"
+            '
+            'KryptonGroupBox4.Panel
+            '
+            Me.KryptonGroupBox4.Panel.Controls.Add(Me.dgvDetalleComprobanteRetencion)
+            Me.KryptonGroupBox4.Panel.Controls.Add(Me.btnEliminarImpuesto)
+            Me.KryptonGroupBox4.Panel.Controls.Add(Me.cmbBienServicio)
+            Me.KryptonGroupBox4.Panel.Controls.Add(Me.btnAgregarImpuesto)
+            Me.KryptonGroupBox4.Panel.Controls.Add(Me.KryptonLabel32)
+            Me.KryptonGroupBox4.Panel.Controls.Add(Me.KryptonLabel31)
+            Me.KryptonGroupBox4.Panel.Controls.Add(Me.cmbContribuyente)
+            Me.KryptonGroupBox4.Panel.Controls.Add(Me.KryptonLabel30)
+            Me.KryptonGroupBox4.Panel.Controls.Add(Me.KryptonLabel29)
+            Me.KryptonGroupBox4.Panel.Controls.Add(Me.cmbConcepto)
+            Me.KryptonGroupBox4.Panel.Controls.Add(Me.KryptonLabel28)
+            Me.KryptonGroupBox4.Panel.Controls.Add(Me.KryptonLabel27)
+            Me.KryptonGroupBox4.Panel.Controls.Add(Me.txtNumeroComprobanteRetencion)
+            Me.KryptonGroupBox4.Panel.Controls.Add(Me.txtTotalComprobanteRetencion)
+            Me.KryptonGroupBox4.Panel.Controls.Add(Me.dtpComprobanteRetencion)
+            Me.KryptonGroupBox4.Panel.Controls.Add(Me.cmbImpuesto)
+            Me.KryptonGroupBox4.Size = New System.Drawing.Size(729, 178)
+            Me.KryptonGroupBox4.TabIndex = 97
+            Me.KryptonGroupBox4.Values.Heading = "Retencion"
+            '
+            'KryptonLabel32
+            '
+            Me.KryptonLabel32.Location = New System.Drawing.Point(411, 32)
+            Me.KryptonLabel32.Name = "KryptonLabel32"
+            Me.KryptonLabel32.Size = New System.Drawing.Size(88, 20)
+            Me.KryptonLabel32.TabIndex = 139
+            Me.KryptonLabel32.Values.Text = "Contribuyente"
+            '
+            'KryptonLabel31
+            '
+            Me.KryptonLabel31.Location = New System.Drawing.Point(411, 5)
+            Me.KryptonLabel31.Name = "KryptonLabel31"
+            Me.KryptonLabel31.Size = New System.Drawing.Size(96, 20)
+            Me.KryptonLabel31.TabIndex = 138
+            Me.KryptonLabel31.Values.Text = "Total Retencion"
+            '
+            'KryptonLabel30
+            '
+            Me.KryptonLabel30.Location = New System.Drawing.Point(197, 32)
+            Me.KryptonLabel30.Name = "KryptonLabel30"
+            Me.KryptonLabel30.Size = New System.Drawing.Size(63, 20)
+            Me.KryptonLabel30.TabIndex = 137
+            Me.KryptonLabel30.Values.Text = "Concepto"
+            '
+            'KryptonLabel29
+            '
+            Me.KryptonLabel29.Location = New System.Drawing.Point(222, 1)
+            Me.KryptonLabel29.Name = "KryptonLabel29"
+            Me.KryptonLabel29.Size = New System.Drawing.Size(42, 20)
+            Me.KryptonLabel29.TabIndex = 136
+            Me.KryptonLabel29.Values.Text = "Fecha"
+            '
+            'KryptonLabel28
+            '
+            Me.KryptonLabel28.Location = New System.Drawing.Point(3, 29)
+            Me.KryptonLabel28.Name = "KryptonLabel28"
+            Me.KryptonLabel28.Size = New System.Drawing.Size(62, 20)
+            Me.KryptonLabel28.TabIndex = 135
+            Me.KryptonLabel28.Values.Text = "Impuesto"
+            '
+            'KryptonLabel27
+            '
+            Me.KryptonLabel27.Location = New System.Drawing.Point(3, 3)
+            Me.KryptonLabel27.Name = "KryptonLabel27"
+            Me.KryptonLabel27.Size = New System.Drawing.Size(31, 20)
+            Me.KryptonLabel27.TabIndex = 134
+            Me.KryptonLabel27.Values.Text = "Nro"
             '
             'FormRegistroComprobanteCompra
             '
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.AutoScroll = True
-            Me.ClientSize = New System.Drawing.Size(792, 706)
-            Me.Controls.Add(Me.gbRetencion)
-            Me.Controls.Add(Me.gbObservaciones)
-            Me.Controls.Add(Me.gbNombreComercialProveedor)
-            Me.Controls.Add(Me.gbPtoEmision)
-            Me.Controls.Add(Me.gbRUCProveedor)
-            Me.Controls.Add(Me.gpComandos)
-            Me.Controls.Add(Me.gbTipoEmision)
-            Me.Controls.Add(Me.gbTipoAnbiente)
-            Me.Controls.Add(Me.gbDatosProveedor)
-            Me.Controls.Add(Me.gbDatosEspecialesComprobanteCompra)
-            Me.Controls.Add(Me.gbDatosComprobanteCompra)
-            Me.Controls.Add(Me.GroupBox3)
-            Me.Controls.Add(Me.GroupBox1)
-            Me.Controls.Add(Me.gbValoresComprobanteCompra)
-            Me.Controls.Add(Me.gbTipoComprobanteCompra)
+            Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(185, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(227, Byte), Integer))
+            Me.ClientSize = New System.Drawing.Size(730, 729)
+            Me.Controls.Add(Me.KryptonGroupBox4)
+            Me.Controls.Add(Me.KryptonGroupBox3)
+            Me.Controls.Add(Me.lblTipoDocumento)
+            Me.Controls.Add(Me.KryptonGroupBox2)
+            Me.Controls.Add(Me.KryptonGroupBox1)
+            Me.Controls.Add(Me.gbConceptoCompra)
             Me.Controls.Add(Me.GroupBox2)
             Me.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Name = "FormRegistroComprobanteCompra"
@@ -1753,153 +1588,73 @@
             Or Krypton.Toolkit.PaletteDrawBorders.Right), Krypton.Toolkit.PaletteDrawBorders)
             Me.StateActive.Border.Rounding = 5.0!
             Me.Text = "REGISTRAR COMPROBANTE DE COMPRA"
-            Me.gpComandos.ResumeLayout(False)
-            Me.gpComandos.PerformLayout()
-            Me.gbTipoComprobanteCompra.ResumeLayout(False)
-            Me.gbTipoComprobanteCompra.PerformLayout()
-            Me.gbRetencion.ResumeLayout(False)
-            Me.gbRetencion.PerformLayout()
-            Me.GroupBox1.ResumeLayout(False)
             CType(Me.dgvDetalleComprobanteRetencion, System.ComponentModel.ISupportInitialize).EndInit()
-            Me.gbDatosEspecialesComprobanteCompra.ResumeLayout(False)
-            Me.gbDatosEspecialesComprobanteCompra.PerformLayout()
-            Me.gbValoresComprobanteCompra.ResumeLayout(False)
-            Me.gbValoresComprobanteCompra.PerformLayout()
-            Me.gbDatosComprobanteCompra.ResumeLayout(False)
-            Me.gbDatosComprobanteCompra.PerformLayout()
-            Me.gbDatosProveedor.ResumeLayout(False)
-            Me.gbDatosProveedor.PerformLayout()
-            Me.gbRUCProveedor.ResumeLayout(False)
-            Me.gbRUCProveedor.PerformLayout()
-            Me.gbNombreComercialProveedor.ResumeLayout(False)
-            Me.gbNombreComercialProveedor.PerformLayout()
-            Me.gbObservaciones.ResumeLayout(False)
-            Me.gbObservaciones.PerformLayout()
-            Me.gbConceptoCompra.ResumeLayout(False)
-            Me.gbTipoEmision.ResumeLayout(False)
-            Me.gbTipoEmision.PerformLayout()
-            Me.gbTipoAnbiente.ResumeLayout(False)
-            Me.gbTipoAnbiente.PerformLayout()
-            Me.gbPtoEmision.ResumeLayout(False)
-            Me.gbPtoEmision.PerformLayout()
             Me.GroupBox2.ResumeLayout(False)
             Me.GroupBox2.PerformLayout()
-            Me.GroupBox3.ResumeLayout(False)
+            CType(Me.KryptonGroupBox1.Panel, System.ComponentModel.ISupportInitialize).EndInit()
+            Me.KryptonGroupBox1.Panel.ResumeLayout(False)
+            Me.KryptonGroupBox1.Panel.PerformLayout()
+            CType(Me.KryptonGroupBox1, System.ComponentModel.ISupportInitialize).EndInit()
+            Me.KryptonGroupBox1.ResumeLayout(False)
+            Me.gbConceptoCompra.ResumeLayout(False)
+            CType(Me.KryptonGroupBox2.Panel, System.ComponentModel.ISupportInitialize).EndInit()
+            Me.KryptonGroupBox2.Panel.ResumeLayout(False)
+            Me.KryptonGroupBox2.Panel.PerformLayout()
+            CType(Me.KryptonGroupBox2, System.ComponentModel.ISupportInitialize).EndInit()
+            Me.KryptonGroupBox2.ResumeLayout(False)
+            CType(Me.KryptonGroupBox3.Panel, System.ComponentModel.ISupportInitialize).EndInit()
+            Me.KryptonGroupBox3.Panel.ResumeLayout(False)
+            Me.KryptonGroupBox3.Panel.PerformLayout()
+            CType(Me.KryptonGroupBox3, System.ComponentModel.ISupportInitialize).EndInit()
+            Me.KryptonGroupBox3.ResumeLayout(False)
             CType(Me.dgvAsientosDiario, System.ComponentModel.ISupportInitialize).EndInit()
+            CType(Me.KryptonGroupBox4.Panel, System.ComponentModel.ISupportInitialize).EndInit()
+            Me.KryptonGroupBox4.Panel.ResumeLayout(False)
+            Me.KryptonGroupBox4.Panel.PerformLayout()
+            CType(Me.KryptonGroupBox4, System.ComponentModel.ISupportInitialize).EndInit()
+            Me.KryptonGroupBox4.ResumeLayout(False)
             Me.ResumeLayout(False)
+            Me.PerformLayout()
 
         End Sub
-        Friend WithEvents gpComandos As System.Windows.Forms.GroupBox
         Friend WithEvents btnCancelar As System.Windows.Forms.Button
         Friend WithEvents btnGuardar As System.Windows.Forms.Button
         Friend WithEvents btnReporte As System.Windows.Forms.Button
         Friend WithEvents btnNuevo As System.Windows.Forms.Button
-        Friend WithEvents gbTipoComprobanteCompra As System.Windows.Forms.GroupBox
         Friend WithEvents lblTipoDocumento As System.Windows.Forms.Label
         Friend WithEvents cmbNombreParametroDocumentos As System.Windows.Forms.ComboBox
-        Friend WithEvents gbRetencion As System.Windows.Forms.GroupBox
         Friend WithEvents dtpComprobanteRetencion As System.Windows.Forms.DateTimePicker
         Friend WithEvents btnEliminarImpuesto As System.Windows.Forms.Button
         Friend WithEvents btnAgregarImpuesto As System.Windows.Forms.Button
         Friend WithEvents dgvDetalleComprobanteRetencion As System.Windows.Forms.DataGridView
-        Friend WithEvents lblFechaRetencion As System.Windows.Forms.Label
-        Friend WithEvents lblTotalRetencion As System.Windows.Forms.Label
         Friend WithEvents txtTotalComprobanteRetencion As System.Windows.Forms.TextBox
-        Friend WithEvents lblNroRetencion As System.Windows.Forms.Label
         Friend WithEvents txtNumeroComprobanteRetencion As System.Windows.Forms.TextBox
-        Friend WithEvents gbDatosEspecialesComprobanteCompra As System.Windows.Forms.GroupBox
-        Friend WithEvents lblFechaEmisionFacturaCompra As System.Windows.Forms.Label
-        Friend WithEvents dtpFechaEmisionComprobanteCompra As System.Windows.Forms.DateTimePicker
-        Friend WithEvents lblGuiaRemisionFacturaCompra As System.Windows.Forms.Label
-        Friend WithEvents txtGuiaRemisionComprobanteCompra As System.Windows.Forms.TextBox
-        Friend WithEvents Label5 As System.Windows.Forms.Label
-        Friend WithEvents chkActivarRetencion As System.Windows.Forms.CheckBox
-        Friend WithEvents Label9 As System.Windows.Forms.Label
-        Friend WithEvents Label45 As System.Windows.Forms.Label
-        Friend WithEvents gbValoresComprobanteCompra As System.Windows.Forms.GroupBox
-        Friend WithEvents txtDescuentoFacturaCompra As System.Windows.Forms.TextBox
-        Friend WithEvents txtSubtotal0FacturaCompra As System.Windows.Forms.TextBox
-        Friend WithEvents txtSubtotal12FacturaCompra As System.Windows.Forms.TextBox
-        Friend WithEvents txtSubTotalComprobanteCompra As System.Windows.Forms.TextBox
-        Friend WithEvents lblSubTotal As System.Windows.Forms.Label
-        Friend WithEvents txtTotalComprobanteCompra As System.Windows.Forms.TextBox
-        Friend WithEvents txtIvaComprobanteCompra As System.Windows.Forms.TextBox
-        Friend WithEvents lblTotalOrdenCompra As System.Windows.Forms.Label
-        Friend WithEvents lblIva As System.Windows.Forms.Label
-        Friend WithEvents lblDescuentoOrdenCompra As System.Windows.Forms.Label
-        Friend WithEvents lblSubtotal0OrdenCompra As System.Windows.Forms.Label
-        Friend WithEvents lblSubtotalIva As System.Windows.Forms.Label
-        Friend WithEvents gbDatosComprobanteCompra As System.Windows.Forms.GroupBox
-        Friend WithEvents lblNumAutoSRIFacturaCompra As System.Windows.Forms.Label
-        Friend WithEvents txtNumAutoSRIComprobanteCompra As System.Windows.Forms.TextBox
-        Friend WithEvents lblNumeroFacturaCompra As System.Windows.Forms.Label
-        Friend WithEvents dtpFechaAutoSRIComprobanteCompra As System.Windows.Forms.DateTimePicker
-        Friend WithEvents txtNumeroComprobanteCompra As System.Windows.Forms.TextBox
-        Friend WithEvents lblFechaAutoSRIFacturaCompra As System.Windows.Forms.Label
-        Friend WithEvents lblSeparadorRUC As System.Windows.Forms.Label
-        Friend WithEvents lblSeparadorNumFact As System.Windows.Forms.Label
-        Friend WithEvents Label37 As System.Windows.Forms.Label
-        Friend WithEvents gbDatosProveedor As System.Windows.Forms.GroupBox
         Friend WithEvents txtCiudadProveedorGeneral As System.Windows.Forms.TextBox
-        Friend WithEvents lblCiudadProveedorGeneral As System.Windows.Forms.Label
         Friend WithEvents txtEmailProveedorGeneral As System.Windows.Forms.TextBox
-        Friend WithEvents Label2 As System.Windows.Forms.Label
         Friend WithEvents txtTelefonoProveedorGeneral As System.Windows.Forms.TextBox
         Friend WithEvents txtDireccionProveedorGeneral As System.Windows.Forms.TextBox
-        Friend WithEvents lblTelefono1ProveedorGeneral As System.Windows.Forms.Label
-        Friend WithEvents lblDireccionProveedorGeneral As System.Windows.Forms.Label
-        Friend WithEvents gbRUCProveedor As System.Windows.Forms.GroupBox
         Friend WithEvents txtRucProveedorGeneral As System.Windows.Forms.TextBox
         Friend WithEvents lblIdProveedorGeneral As System.Windows.Forms.Label
-        Friend WithEvents gbNombreComercialProveedor As System.Windows.Forms.GroupBox
         Friend WithEvents txtNombreComercialProveedorGeneral As System.Windows.Forms.TextBox
-        Friend WithEvents Label32 As System.Windows.Forms.Label
-        Friend WithEvents txtDocModComprobanteCompra As System.Windows.Forms.TextBox
         Friend WithEvents txtContribuyenteEspecialProveedorGeneral As System.Windows.Forms.TextBox
         Friend WithEvents txtObligadoLlevarContabilidadProveedorGeneral As System.Windows.Forms.TextBox
         Friend WithEvents txtNumAutoContEspFacturaCompra As System.Windows.Forms.TextBox
-        Friend WithEvents lblNumAutoContEspFacturaCompra As System.Windows.Forms.Label
-        Friend WithEvents lblContabilidadProveedorGeneral As System.Windows.Forms.Label
-        Friend WithEvents lblContribuyenteEspecialProveedorGeneral As System.Windows.Forms.Label
-        Friend WithEvents Label1 As System.Windows.Forms.Label
-        Friend WithEvents txtRazModComprobanteCompra As System.Windows.Forms.TextBox
-        Friend WithEvents lblEtiquetaIdComprobanteCompra As System.Windows.Forms.Label
         Friend WithEvents lblIdComprobanteCompra As System.Windows.Forms.Label
-        Friend WithEvents gbObservaciones As System.Windows.Forms.GroupBox
         Friend WithEvents txtObservacionesComprobantesCompra As System.Windows.Forms.TextBox
         Friend WithEvents btnGuardarEnFondoRotativo As System.Windows.Forms.Button
-        Friend WithEvents gbConceptoCompra As System.Windows.Forms.GroupBox
-        Friend WithEvents cmbConceptoCompra As System.Windows.Forms.ComboBox
-        Friend WithEvents lblContribuyente As System.Windows.Forms.Label
         Friend WithEvents cmbContribuyente As System.Windows.Forms.ComboBox
-        Friend WithEvents lblConcepto As System.Windows.Forms.Label
         Friend WithEvents cmbConcepto As System.Windows.Forms.ComboBox
-        Friend WithEvents lblImpuesto As System.Windows.Forms.Label
         Friend WithEvents cmbImpuesto As System.Windows.Forms.ComboBox
-        Friend WithEvents gbTipoEmision As System.Windows.Forms.GroupBox
         Friend WithEvents rbTipoEmisionIndisponibilidadSistema As System.Windows.Forms.RadioButton
         Friend WithEvents rbTipoEmisionNormal As System.Windows.Forms.RadioButton
-        Friend WithEvents Label20 As System.Windows.Forms.Label
-        Friend WithEvents gbTipoAnbiente As System.Windows.Forms.GroupBox
-        Friend WithEvents Label18 As System.Windows.Forms.Label
         Friend WithEvents rbProduccion As System.Windows.Forms.RadioButton
         Friend WithEvents rbPruebas As System.Windows.Forms.RadioButton
-        Friend WithEvents gbPtoEmision As System.Windows.Forms.GroupBox
-        Friend WithEvents Label19 As System.Windows.Forms.Label
         Friend WithEvents rbPtoEmision002 As System.Windows.Forms.RadioButton
         Friend WithEvents rbPtoEmision001 As System.Windows.Forms.RadioButton
-        Friend WithEvents btnBuscar As System.Windows.Forms.Button
         Friend WithEvents ofdSeleccionarArchivo As System.Windows.Forms.OpenFileDialog
-        Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
         Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
-        Friend WithEvents GroupBox3 As System.Windows.Forms.GroupBox
-        Friend WithEvents dgvAsientosDiario As System.Windows.Forms.DataGridView
         Friend WithEvents cbxPorcentaje As System.Windows.Forms.ComboBox
         Friend WithEvents Label3 As System.Windows.Forms.Label
-        Friend WithEvents bntBuscarMod As System.Windows.Forms.Button
-        Friend WithEvents lblOrdenCompra As System.Windows.Forms.Label
-        Friend WithEvents chkReq As System.Windows.Forms.CheckBox
-        Friend WithEvents btnOrdenCompra As System.Windows.Forms.Button
         Friend WithEvents cmbBienServicio As System.Windows.Forms.ComboBox
         Friend WithEvents chkActivoFijo As System.Windows.Forms.CheckBox
         Friend WithEvents EjercicioFiscal As System.Windows.Forms.DataGridViewTextBoxColumn
@@ -1910,10 +1665,71 @@
         Friend WithEvents ValorRetenido As System.Windows.Forms.DataGridViewTextBoxColumn
         Friend WithEvents Column1 As System.Windows.Forms.DataGridViewTextBoxColumn
         Friend WithEvents Column2 As System.Windows.Forms.DataGridViewTextBoxColumn
-        Friend WithEvents txtIva5ComprobanteCompra As TextBox
-        Friend WithEvents lblIva5 As Label
+        Friend WithEvents KryptonGroupBox1 As Krypton.Toolkit.KryptonGroupBox
+        Friend WithEvents KryptonLabel1 As Krypton.Toolkit.KryptonLabel
+        Friend WithEvents KryptonLabel3 As Krypton.Toolkit.KryptonLabel
+        Friend WithEvents SpaceSeparatorVertical2 As ReaLTaiizor.Controls.SpaceSeparatorVertical
+        Friend WithEvents KryptonLabel2 As Krypton.Toolkit.KryptonLabel
+        Friend WithEvents SpaceSeparatorVertical1 As ReaLTaiizor.Controls.SpaceSeparatorVertical
+        Friend WithEvents gbConceptoCompra As GroupBox
+        Friend WithEvents cmbConceptoCompra As ComboBox
+        Friend WithEvents KryptonGroupBox2 As Krypton.Toolkit.KryptonGroupBox
+        Friend WithEvents KryptonLabel4 As Krypton.Toolkit.KryptonLabel
+        Friend WithEvents KryptonGroupBox3 As Krypton.Toolkit.KryptonGroupBox
+        Friend WithEvents KryptonLabel9 As Krypton.Toolkit.KryptonLabel
+        Friend WithEvents KryptonLabel8 As Krypton.Toolkit.KryptonLabel
+        Friend WithEvents KryptonLabel7 As Krypton.Toolkit.KryptonLabel
+        Friend WithEvents KryptonLabel6 As Krypton.Toolkit.KryptonLabel
+        Friend WithEvents gbRUCProveedor As Krypton.Toolkit.KryptonLabel
+        Friend WithEvents KryptonLabel12 As Krypton.Toolkit.KryptonLabel
+        Friend WithEvents KryptonLabel11 As Krypton.Toolkit.KryptonLabel
+        Friend WithEvents KryptonLabel10 As Krypton.Toolkit.KryptonLabel
+        Friend WithEvents KryptonLabel13 As Krypton.Toolkit.KryptonLabel
+        Friend WithEvents btnOrdenCompra As Button
+        Friend WithEvents KryptonLabel20 As Krypton.Toolkit.KryptonLabel
+        Friend WithEvents lblOrdenCompra As Label
+        Friend WithEvents KryptonLabel19 As Krypton.Toolkit.KryptonLabel
+        Friend WithEvents chkReq As CheckBox
+        Friend WithEvents KryptonLabel18 As Krypton.Toolkit.KryptonLabel
+        Friend WithEvents KryptonLabel17 As Krypton.Toolkit.KryptonLabel
+        Friend WithEvents dtpFechaEmisionComprobanteCompra As DateTimePicker
+        Friend WithEvents KryptonLabel16 As Krypton.Toolkit.KryptonLabel
+        Friend WithEvents txtRazModComprobanteCompra As TextBox
+        Friend WithEvents btnBuscar As Button
+        Friend WithEvents bntBuscarMod As Button
+        Friend WithEvents dtpFechaAutoSRIComprobanteCompra As DateTimePicker
+        Friend WithEvents txtNumAutoSRIComprobanteCompra As TextBox
+        Friend WithEvents KryptonLabel15 As Krypton.Toolkit.KryptonLabel
+        Friend WithEvents chkActivarRetencion As CheckBox
+        Friend WithEvents KryptonLabel14 As Krypton.Toolkit.KryptonLabel
+        Friend WithEvents txtGuiaRemisionComprobanteCompra As TextBox
+        Friend WithEvents txtDocModComprobanteCompra As TextBox
+        Friend WithEvents txtNumeroComprobanteCompra As TextBox
+        Friend WithEvents KryptonLabel26 As Krypton.Toolkit.KryptonLabel
+        Friend WithEvents KryptonLabel25 As Krypton.Toolkit.KryptonLabel
+        Friend WithEvents KryptonLabel24 As Krypton.Toolkit.KryptonLabel
         Friend WithEvents txtSubtotal5FacturaCompra As TextBox
-        Friend WithEvents lblSubtotal5ComprabanteCompra As Label
+        Friend WithEvents lblIva As Krypton.Toolkit.KryptonLabel
+        Friend WithEvents KryptonLabel22 As Krypton.Toolkit.KryptonLabel
+        Friend WithEvents txtIva5ComprobanteCompra As TextBox
+        Friend WithEvents KryptonLabel21 As Krypton.Toolkit.KryptonLabel
+        Friend WithEvents KryptonLabel5 As Krypton.Toolkit.KryptonLabel
+        Friend WithEvents txtDescuentoFacturaCompra As TextBox
+        Friend WithEvents lblSubtotalIva As Krypton.Toolkit.KryptonLabel
+        Friend WithEvents txtSubtotal0FacturaCompra As TextBox
+        Friend WithEvents txtSubTotalComprobanteCompra As TextBox
+        Friend WithEvents dgvAsientosDiario As DataGridView
+        Friend WithEvents txtTotalComprobanteCompra As TextBox
+        Friend WithEvents txtSubtotal12FacturaCompra As TextBox
+        Friend WithEvents txtIvaComprobanteCompra As TextBox
+        Friend WithEvents KryptonLabel23 As Krypton.Toolkit.KryptonLabel
+        Friend WithEvents KryptonGroupBox4 As Krypton.Toolkit.KryptonGroupBox
+        Friend WithEvents KryptonLabel32 As Krypton.Toolkit.KryptonLabel
+        Friend WithEvents KryptonLabel31 As Krypton.Toolkit.KryptonLabel
+        Friend WithEvents KryptonLabel30 As Krypton.Toolkit.KryptonLabel
+        Friend WithEvents KryptonLabel29 As Krypton.Toolkit.KryptonLabel
+        Friend WithEvents KryptonLabel28 As Krypton.Toolkit.KryptonLabel
+        Friend WithEvents KryptonLabel27 As Krypton.Toolkit.KryptonLabel
         Friend WithEvents eliminarItem As DataGridViewButtonColumn
         Friend WithEvents CODIGO As DataGridViewTextBoxColumn
         Friend WithEvents CUENTA As DataGridViewTextBoxColumn

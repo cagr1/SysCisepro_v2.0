@@ -3,6 +3,7 @@ Imports ClassLibraryCisepro.CONTABILIDAD.COMPRAS.COMPROBANTES_COMPRA
 Imports ClassLibraryCisepro.CONTABILIDAD.COMPRAS.PROVEEDORES
 Imports ClassLibraryCisepro.CONTABILIDAD.COMPROBANTES_RETENCION
 Imports ClassLibraryCisepro.ENUMS
+Imports Krypton.Toolkit
 
 Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
     ''' <summary>
@@ -47,14 +48,22 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
         Public nuevoSaldo As Decimal = 0
 
         Public Sub deshabilitadoInicio()
-            gbNuevoPagoComprobanteCompra.Enabled = False
+
+            txtNumeroPagosComrptobantesCompra.Enabled = False
+            txtAnteriorSaldoPagosComprobantesCompra.Enabled = False
+            txtMontoPagosComprobantesCompra.Enabled = False
+            txtNuevoSaldoPagosComprobantesCompra.Enabled = False
             btnNuevo.Enabled = True
             btnModificar.Enabled = False
             btnCancelar.Enabled = False
-            btnGuardar.Enabled = False 
+            btnGuardar.Enabled = False
         End Sub
         Public Sub habilitadoNuevo()
-            gbNuevoPagoComprobanteCompra.Enabled = True
+
+            txtNumeroPagosComrptobantesCompra.Enabled = True
+            txtAnteriorSaldoPagosComprobantesCompra.Enabled = True
+            txtMontoPagosComprobantesCompra.Enabled = True
+            txtNuevoSaldoPagosComprobantesCompra.Enabled = True
             btnNuevo.Enabled = False
             btnModificar.Enabled = False
             btnCancelar.Enabled = True
@@ -147,7 +156,8 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
                 dgvComprobantesCompra.AutoResizeRows()
                 dgvComprobantesCompra.ReadOnly = True
             Catch ex As Exception
-                MsgBox("METODO CARGAR COMPROBANTES DE COMPRA" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
+                'MsgBox("METODO CARGAR COMPROBANTES DE COMPRA" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
+                KryptonMessageBox.Show("Metodo cargar comprobantes de compra" & vbNewLine & ex.Message.ToString, "Mensaje de excepción", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
         Public Sub cargarPagosComprobantesCompra()
@@ -170,7 +180,8 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
                 dgvPagosComprobantesCompra.ReadOnly = False
                 dgvPagosComprobantesCompra.EditMode = DataGridViewEditMode.EditProgrammatically
             Catch ex As Exception
-                MsgBox("METODO CARGAR PAGOS COMPROBANTES DE COMPRA" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
+                'MsgBox("METODO CARGAR PAGOS COMPROBANTES DE COMPRA" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
+                KryptonMessageBox.Show("Metodo cargar pagos comprobantes de compra" & vbNewLine & ex.Message.ToString, "Mensaje de excepción", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
         Public Sub cargarComprobanteRetencion()
@@ -182,7 +193,8 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
                 dgvComprobanteRetencion.ReadOnly = False
                 dgvComprobanteRetencion.EditMode = DataGridViewEditMode.EditProgrammatically
             Catch ex As Exception
-                MsgBox("METODO CARGAR COMPROBANTE DE RETENCIÓN" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
+                'MsgBox("METODO CARGAR COMPROBANTE DE RETENCIÓN" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
+                KryptonMessageBox.Show("Metodo cargar comprobante de retención" & vbNewLine & ex.Message.ToString, "Mensaje de excepción", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
         Public Sub cargarDetalleComprobanteRetencion()
@@ -194,7 +206,8 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
                 dgvDetalleComprobanteRetencion.ReadOnly = False
                 dgvDetalleComprobanteRetencion.EditMode = DataGridViewEditMode.EditProgrammatically
             Catch ex As Exception
-                MsgBox("METODO CARGAR DETALLE COMPROBANTE DE RETENCIÓN" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
+                'MsgBox("METODO CARGAR DETALLE COMPROBANTE DE RETENCIÓN" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
+                KryptonMessageBox.Show("Metodo cargar detalle comprobante de retención" & vbNewLine & ex.Message.ToString, "Mensaje de excepción", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
 
@@ -269,20 +282,162 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
         End Sub
 
         Private Sub dgvComprobantesCompra_CellClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles dgvComprobantesCompra.CellClick
+            'Try
+            '    If dgvComprobantesCompra.CurrentRow.Cells.Item(0).Value Is DBNull.Value Then
+            '        lblIdComprobanteCompra.Text = "..."
+            '    Else
+            '        lblIdComprobanteCompra.Text = dgvComprobantesCompra.CurrentRow.Cells.Item(0).Value
+            '        lblTipoComprobanteCompra.Text = dgvComprobantesCompra.CurrentRow.Cells.Item(2).Value
+            '        lblNumeroComprobanteCompra.Text = dgvComprobantesCompra.CurrentRow.Cells.Item(3).Value
+            '        lblFechaComprobanteCompra.Text = Format(dgvComprobantesCompra.CurrentRow.Cells.Item(6).Value, "dd/MM/yyyy")
+            '        txtSubtotal12.Text = dgvComprobantesCompra.CurrentRow.Cells.Item(11).Value 'cambio
+            '        txtSubtotal0.Text = dgvComprobantesCompra.CurrentRow.Cells.Item(13).Value
+            '        txtDescuento.Text = dgvComprobantesCompra.CurrentRow.Cells.Item(12).Value
+            '        txtSubtotalComprobanteCompra.Text = dgvComprobantesCompra.CurrentRow.Cells.Item(13).Value
+            '        txtIvaComprobanteCompra.Text = dgvComprobantesCompra.CurrentRow.Cells.Item(16).Value
+            '        txtTotalComprobanteCompra.Text = dgvComprobantesCompra.CurrentRow.Cells.Item(17).Value
+            '        If dgvComprobantesCompra.CurrentRow.Cells.Item(16).Value = 1 Then
+            '            lblEstadoComprobanteCompra.Text = "POR PAGAR"
+            '        ElseIf dgvComprobantesCompra.CurrentRow.Cells.Item(16).Value = 2 Then
+            '            lblEstadoComprobanteCompra.Text = "CANCELADO"
+            '        End If
+            '        dgvComprobantesCompra.Rows(dgvComprobantesCompra.CurrentCell.RowIndex.ToString()).Selected = True
+            '        cargarComprobanteRetencion()
+            '        cargarPagosComprobantesCompra()
+            '        If dgvComprobanteRetencion.RowCount > 0 Then
+            '            idComprobanteRetencion = dgvComprobanteRetencion.Rows(0).Cells.Item(0).Value
+            '            lblNumeroComprobanteRetencion.Text = dgvComprobanteRetencion.Rows(0).Cells.Item(1).Value
+            '            lblFechaComprobanteRetencion.Text = Format(dgvComprobanteRetencion.Rows(0).Cells.Item(4).Value, "dd/MM/yyyy")
+            '            txtTotalComprobanteRetencion.Text = dgvComprobanteRetencion.Rows(0).Cells.Item(8).Value
+            '        Else
+            '            idComprobanteRetencion = 0
+            '            lblNumeroComprobanteRetencion.Text = "0"
+            '            lblFechaComprobanteRetencion.Text = "00/00/0000"
+            '            txtTotalComprobanteRetencion.Text = "0.00"
+            '        End If
+            '        cargarDetalleComprobanteRetencion()
+            '        If dgvDetalleComprobanteRetencion.RowCount > 0 Then
+            '            For indiceDetalle = 0 To dgvDetalleComprobanteRetencion.RowCount - 1
+            '                If dgvDetalleComprobanteRetencion.Rows(indiceDetalle).Cells.Item(4).Value = "RENTA" Then
+            '                    txtValorRetencionFuente.Text = dgvDetalleComprobanteRetencion.Rows(indiceDetalle).Cells.Item(6).Value
+            '                End If
+            '                If dgvDetalleComprobanteRetencion.Rows(indiceDetalle).Cells.Item(4).Value = "IVA" Then
+            '                    txtValorRetencionIVA.Text = dgvDetalleComprobanteRetencion.Rows(indiceDetalle).Cells.Item(6).Value
+            '                End If
+            '            Next
+            '        Else
+            '            txtValorRetencionFuente.Text = "0.00"
+            '            txtValorRetencionIVA.Text = "0.00"
+            '        End If
+            '    End If
+            'Catch ex As Exception
+            'End Try
+        End Sub
+
+        Private Sub btnNuevo_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnNuevo.Click
+            If dgvComprobantesCompra.RowCount > 0 And lblIdComprobanteCompra.Text <> "..." Then
+                If dgvComprobantesCompra.CurrentRow.Cells.Item(16).Value = 2 Then
+                    'MsgBox("ESTE COMPROBANTE DE PAGO YA ESTA CANCELADO." & vbNewLine & "POR FAVOR SELECCIONE OTRO COMPROBANTE", MsgBoxStyle.Exclamation, "Mensaje de validación")
+                    KryptonMessageBox.Show("Este comprobante de pago ya esta cancelado." & vbNewLine & "Por favor seleccione otro comprobante", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
+                ElseIf lblEstadoComprobanteCompra.Text = "POR PAGAR" Then
+                    habilitadoNuevo()
+                    '=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= ID DE PAGO =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+                    lblidPagosComprobantePago.Text = objetoPagosComprobantesCompra.BuscarMayorIdPagosComprobantesCompra(_tipoCon) + 1
+                    '=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= NUMERO DE PAGO =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+                    txtNumeroPagosComrptobantesCompra.Text = objetoPagosComprobantesCompra.BuscarMayorNumeroPagosComprobantesCompra(_tipoCon, lblIdComprobanteCompra.Text) + 1
+                    If dgvPagosComprobantesCompra.RowCount = 0 Then
+                        txtAnteriorSaldoPagosComprobantesCompra.Text = CDec(txtTotalComprobanteCompra.Text) - CDec(txtTotalComprobanteRetencion.Text)
+                    Else
+                        txtAnteriorSaldoPagosComprobantesCompra.Text = dgvPagosComprobantesCompra.Rows(dgvPagosComprobantesCompra.RowCount - 1).Cells(3).Value
+                    End If
+                End If
+            Else
+                'MsgBox("NO HA SELECCIONA UN COMPROBANTE DE COMPRA PARA REVISAR", MsgBoxStyle.Information, "Mensaje de validación")
+                KryptonMessageBox.Show("No ha seleccionado un comprobante de compra para revisar", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
+            End If
+        End Sub
+    
+        Private Sub btnCancelar_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnCancelar.Click
+            limpiarParametrosGeneral()
+            deshabilitadoInicio()
+        End Sub
+
+        Private Sub btnGuardar_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnGuardar.Click
+            If validarParametros() = True Then
+                guardarPagosComprobantesCompra()
+                If nuevoSaldo = 0 Then
+                    actualizarComprobantesCompra()
+                    cargarComprobantesCompra()
+                    dgvPagosComprobantesCompra.DataSource = Nothing
+                Else
+                    cargarComprobantesCompra()
+                    cargarPagosComprobantesCompra()
+                End If
+                deshabilitadoInicio()
+                limpiarParametrosPagos()
+            Else
+                'MsgBox("No se puede guardar." & vbNewLine & "NO SE HAN LLENADO TODOS LOS PARAMETROS NECESARIOS", MsgBoxStyle.Exclamation, "Mensaje de validación")
+                KryptonMessageBox.Show("No se puede guardar." & vbNewLine & "No se han llenado todos los parametros necesarios", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
+            End If
+        End Sub
+    
+        Private Sub txtNombreComercialProveedorGeneral_KeyDown(ByVal sender As System.Object, ByVal e As Windows.Forms.KeyEventArgs) Handles txtNombreComercialProveedorGeneral.KeyDown
+            If e.KeyCode = Keys.Enter Then
+
+                lblIdProveedorGeneral.Text = objetoProveedorGeneral.BuscarIdProveedorXRazonSocialProveedor(_tipoCon, txtNombreComercialProveedorGeneral.Text)
+                cargarComprobantesCompra()
+            End If
+        End Sub
+
+        Private Sub txtMontoPagosComprobantesCompra_Validated(ByVal sender As System.Object, ByVal e As EventArgs) Handles txtMontoPagosComprobantesCompra.Validated
             Try
-                If dgvComprobantesCompra.CurrentRow.Cells.Item(0).Value Is DBNull.Value Then
+                nuevoSaldo = 0
+                If CDec(txtMontoPagosComprobantesCompra.Text) <= CDec(txtAnteriorSaldoPagosComprobantesCompra.Text) Then
+                    nuevoSaldo = CDec(txtAnteriorSaldoPagosComprobantesCompra.Text) - CDec(txtMontoPagosComprobantesCompra.Text)
+                    txtNuevoSaldoPagosComprobantesCompra.Text = nuevoSaldo
+                    If nuevoSaldo = 0 Then
+                        'MsgBox("EL MONTO CUBRE EL TOTAL DEL SALDO." & vbNewLine & " COMPROBANTE CANCELADO", MsgBoxStyle.Information, "Mensaje de información")
+                        KryptonMessageBox.Show("El monto cubre el total del saldo." & vbNewLine & "Comprobante cancelado", "Mensaje de información", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
+                    End If
+                Else
+                    'MsgBox("EL MONTO A PAGAR ES MAYOR QUE EL SALDO.", MsgBoxStyle.Critical, "Mensaje de validación")
+                    KryptonMessageBox.Show("El monto a pagar es mayor que el saldo", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+                    txtMontoPagosComprobantesCompra.Text = "0,00"
+                    txtNuevoSaldoPagosComprobantesCompra.Text = "0,00"
+                End If
+            Catch ex As Exception
+                'MsgBox("TXTMONTO VALIDATED." & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
+                KryptonMessageBox.Show("Txtmonto validated." & vbNewLine & ex.Message.ToString, "Mensaje de excepción", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+            End Try
+        End Sub
+
+        Private Sub txtAnteriorSaldoPagosComprobantesCompra_TextChanged(sender As Object, e As EventArgs) Handles txtAnteriorSaldoPagosComprobantesCompra.TextChanged
+
+        End Sub
+
+        Private Sub dgvComprobantesCompra_SelectionChanged(sender As Object, e As EventArgs) Handles dgvComprobantesCompra.SelectionChanged
+            Try
+
+                If dgvComprobantesCompra.CurrentRow Is Nothing Then
+                    Return
+                End If
+
+                If dgvComprobantesCompra.CurrentRow.Cells.Item(0).Value Is DBNull.Value OrElse dgvComprobantesCompra.CurrentRow.Cells.Item(0).Value Is Nothing Then
+                    'If dgvComprobantesCompra.CurrentRow.Cells.Item(0).Value Is DBNull.Value Then
                     lblIdComprobanteCompra.Text = "..."
                 Else
                     lblIdComprobanteCompra.Text = dgvComprobantesCompra.CurrentRow.Cells.Item(0).Value
                     lblTipoComprobanteCompra.Text = dgvComprobantesCompra.CurrentRow.Cells.Item(2).Value
                     lblNumeroComprobanteCompra.Text = dgvComprobantesCompra.CurrentRow.Cells.Item(3).Value
                     lblFechaComprobanteCompra.Text = Format(dgvComprobantesCompra.CurrentRow.Cells.Item(6).Value, "dd/MM/yyyy")
-                    txtSubtotal12.Text = dgvComprobantesCompra.CurrentRow.Cells.Item(10).Value
-                    txtSubtotal0.Text = dgvComprobantesCompra.CurrentRow.Cells.Item(11).Value
+                    txtSubtotal12.Text = dgvComprobantesCompra.CurrentRow.Cells.Item(11).Value 'cambio
+                    txtSubtotal0.Text = dgvComprobantesCompra.CurrentRow.Cells.Item(13).Value
                     txtDescuento.Text = dgvComprobantesCompra.CurrentRow.Cells.Item(12).Value
                     txtSubtotalComprobanteCompra.Text = dgvComprobantesCompra.CurrentRow.Cells.Item(13).Value
-                    txtIvaComprobanteCompra.Text = dgvComprobantesCompra.CurrentRow.Cells.Item(14).Value
-                    txtTotalComprobanteCompra.Text = dgvComprobantesCompra.CurrentRow.Cells.Item(15).Value
+                    txtIvaComprobanteCompra.Text = dgvComprobantesCompra.CurrentRow.Cells.Item(16).Value
+                    txtTotalComprobanteCompra.Text = dgvComprobantesCompra.CurrentRow.Cells.Item(17).Value
                     If dgvComprobantesCompra.CurrentRow.Cells.Item(16).Value = 1 Then
                         lblEstadoComprobanteCompra.Text = "POR PAGAR"
                     ElseIf dgvComprobantesCompra.CurrentRow.Cells.Item(16).Value = 2 Then
@@ -318,79 +473,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
                     End If
                 End If
             Catch ex As Exception
-            End Try
-        End Sub
-
-        Private Sub btnNuevo_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnNuevo.Click
-            If dgvComprobantesCompra.RowCount > 0 And lblIdComprobanteCompra.Text <> "..." Then
-                If dgvComprobantesCompra.CurrentRow.Cells.Item(16).Value = 2 Then
-                    MsgBox("ESTE COMPROBANTE DE PAGO YA ESTA CANCELADO." & vbNewLine & "POR FAVOR SELECCIONE OTRO COMPROBANTE", MsgBoxStyle.Exclamation, "Mensaje de validación")
-                ElseIf lblEstadoComprobanteCompra.Text = "POR PAGAR" Then
-                    habilitadoNuevo()
-                    '=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= ID DE PAGO =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-
-                    lblidPagosComprobantePago.Text = objetoPagosComprobantesCompra.BuscarMayorIdPagosComprobantesCompra(_tipoCon) + 1
-                    '=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= NUMERO DE PAGO =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-
-                    txtNumeroPagosComrptobantesCompra.Text = objetoPagosComprobantesCompra.BuscarMayorNumeroPagosComprobantesCompra(_tipoCon, lblIdComprobanteCompra.Text) + 1
-                    If dgvPagosComprobantesCompra.RowCount = 0 Then
-                        txtAnteriorSaldoPagosComprobantesCompra.Text = CDec(txtTotalComprobanteCompra.Text) - CDec(txtTotalComprobanteRetencion.Text)
-                    Else
-                        txtAnteriorSaldoPagosComprobantesCompra.Text = dgvPagosComprobantesCompra.Rows(dgvPagosComprobantesCompra.RowCount - 1).Cells(3).Value
-                    End If
-                End If
-            Else
-                MsgBox("NO HA SELECCIONA UN COMPROBANTE DE COMPRA PARA REVISAR", MsgBoxStyle.Information, "Mensaje de validación")
-            End If
-        End Sub
-    
-        Private Sub btnCancelar_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnCancelar.Click
-            limpiarParametrosGeneral()
-            deshabilitadoInicio()
-        End Sub
-
-        Private Sub btnGuardar_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnGuardar.Click
-            If validarParametros() = True Then
-                guardarPagosComprobantesCompra()
-                If nuevoSaldo = 0 Then
-                    actualizarComprobantesCompra()
-                    cargarComprobantesCompra()
-                    dgvPagosComprobantesCompra.DataSource = Nothing
-                Else
-                    cargarComprobantesCompra()
-                    cargarPagosComprobantesCompra()
-                End If
-                deshabilitadoInicio()
-                limpiarParametrosPagos()
-            Else
-                MsgBox("No se puede guardar." & vbNewLine & "NO SE HAN LLENADO TODOS LOS PARAMETROS NECESARIOS", MsgBoxStyle.Exclamation, "Mensaje de validación")
-            End If
-        End Sub
-    
-        Private Sub txtNombreComercialProveedorGeneral_KeyDown(ByVal sender As System.Object, ByVal e As Windows.Forms.KeyEventArgs) Handles txtNombreComercialProveedorGeneral.KeyDown
-            If e.KeyCode = Keys.Enter Then
-
-                lblIdProveedorGeneral.Text = objetoProveedorGeneral.BuscarIdProveedorXRazonSocialProveedor(_tipoCon, txtNombreComercialProveedorGeneral.Text)
-                cargarComprobantesCompra()
-            End If
-        End Sub
-
-        Private Sub txtMontoPagosComprobantesCompra_Validated(ByVal sender As System.Object, ByVal e As EventArgs) Handles txtMontoPagosComprobantesCompra.Validated
-            Try
-                nuevoSaldo = 0
-                If CDec(txtMontoPagosComprobantesCompra.Text) <= CDec(txtAnteriorSaldoPagosComprobantesCompra.Text) Then
-                    nuevoSaldo = CDec(txtAnteriorSaldoPagosComprobantesCompra.Text) - CDec(txtMontoPagosComprobantesCompra.Text)
-                    txtNuevoSaldoPagosComprobantesCompra.Text = nuevoSaldo
-                    If nuevoSaldo = 0 Then
-                        MsgBox("EL MONTO CUBRE EL TOTAL DEL SALDO." & vbNewLine & " COMPROBANTE CANCELADO", MsgBoxStyle.Information, "Mensaje de información")
-                    End If
-                Else
-                    MsgBox("EL MONTO A PAGAR ES MAYOR QUE EL SALDO.", MsgBoxStyle.Critical, "Mensaje de validación")
-                    txtMontoPagosComprobantesCompra.Text = "0,00"
-                    txtNuevoSaldoPagosComprobantesCompra.Text = "0,00"
-                End If
-            Catch ex As Exception
-                MsgBox("TXTMONTO VALIDATED." & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
+                KryptonMessageBox.Show("Error al seleccionar comprobante de compra" & vbNewLine & ex.Message.ToString, "Mensaje de excepción", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
     End Class

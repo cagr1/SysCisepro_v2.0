@@ -106,7 +106,7 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
             dgvComprobantesCompra.Font = New Font("Roboto", 8, FontStyle.Regular)
             dgvComprobanteEgresoBanco.Font = New Font("Roboto", 8, FontStyle.Regular)
             dgvPagosComprobantesCompra.Font = New Font("Roboto", 8, FontStyle.Regular)
-            dgvFacturaVenta.Font = New Font("Roboto", 8, FontStyle.Regular)
+            'dgvFacturaVenta.Font = New Font("Roboto", 8, FontStyle.Regular)
             _sqlCommands = New List(Of SqlCommand)
             _dataPagos = New Dictionary(Of String, String)
 

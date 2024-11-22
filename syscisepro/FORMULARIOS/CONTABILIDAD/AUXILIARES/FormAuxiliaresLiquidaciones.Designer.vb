@@ -262,7 +262,7 @@
             Me.dgvSolicitudes.AllowUserToDeleteRows = False
             DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
             Me.dgvSolicitudes.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
-            Me.dgvSolicitudes.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
+            Me.dgvSolicitudes.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(247, Byte), Integer))
             Me.dgvSolicitudes.BorderStyle = System.Windows.Forms.BorderStyle.None
             Me.dgvSolicitudes.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
             DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
@@ -500,7 +500,7 @@
             Me.KryptonNavigator1.Location = New System.Drawing.Point(0, 32)
             Me.KryptonNavigator1.Name = "KryptonNavigator1"
             Me.KryptonNavigator1.Pages.AddRange(New ComponentFactory.Krypton.Navigator.KryptonPage() {Me.KryptonPage1, Me.KryptonPage2})
-            Me.KryptonNavigator1.SelectedIndex = 1
+            Me.KryptonNavigator1.SelectedIndex = 0
             Me.KryptonNavigator1.Size = New System.Drawing.Size(742, 479)
             Me.KryptonNavigator1.TabIndex = 221
             Me.KryptonNavigator1.Text = "KryptonNavigator1"
@@ -627,7 +627,7 @@
             'KryptonGroupBox3
             '
             Me.KryptonGroupBox3.CaptionOverlap = 0R
-            Me.KryptonGroupBox3.GroupBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.ControlRibbon
+            Me.KryptonGroupBox3.GroupBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.PanelRibbonInactive
             Me.KryptonGroupBox3.Location = New System.Drawing.Point(12, 39)
             Me.KryptonGroupBox3.Name = "KryptonGroupBox3"
             '

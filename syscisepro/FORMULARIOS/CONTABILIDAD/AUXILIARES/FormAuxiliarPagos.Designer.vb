@@ -700,9 +700,10 @@
             'lblNumeroRegistroVenta
             '
             Me.lblNumeroRegistroVenta.AutoSize = True
+            Me.lblNumeroRegistroVenta.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.lblNumeroRegistroVenta.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.lblNumeroRegistroVenta.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
-            Me.lblNumeroRegistroVenta.Location = New System.Drawing.Point(97, 395)
+            Me.lblNumeroRegistroVenta.Location = New System.Drawing.Point(99, 396)
             Me.lblNumeroRegistroVenta.Name = "lblNumeroRegistroVenta"
             Me.lblNumeroRegistroVenta.Size = New System.Drawing.Size(13, 13)
             Me.lblNumeroRegistroVenta.TabIndex = 1
@@ -1897,6 +1898,7 @@
             Me.KryptonPage1.MinimumSize = New System.Drawing.Size(50, 50)
             Me.KryptonPage1.Name = "KryptonPage1"
             Me.KryptonPage1.Size = New System.Drawing.Size(1011, 599)
+            Me.KryptonPage1.StateCommon.Page.Color1 = System.Drawing.Color.FromArgb(CType(CType(185, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(227, Byte), Integer))
             Me.KryptonPage1.Text = "Compras"
             Me.KryptonPage1.ToolTipTitle = "Page ToolTip"
             Me.KryptonPage1.UniqueName = "18551F11C2AA48EEBC9BEF6757C5BD32"
@@ -2245,6 +2247,7 @@
             Me.KryptonPage2.MinimumSize = New System.Drawing.Size(50, 50)
             Me.KryptonPage2.Name = "KryptonPage2"
             Me.KryptonPage2.Size = New System.Drawing.Size(1011, 599)
+            Me.KryptonPage2.StateCommon.Page.Color1 = System.Drawing.Color.FromArgb(CType(CType(185, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(227, Byte), Integer))
             Me.KryptonPage2.Text = "Ventas"
             Me.KryptonPage2.ToolTipTitle = "Page ToolTip"
             Me.KryptonPage2.UniqueName = "41E3E042B073464C3682A629DBE63370"
@@ -2327,7 +2330,7 @@
             '
             'KryptonGroupBox15
             '
-            Me.KryptonGroupBox15.CaptionOverlap = 0.85R
+            Me.KryptonGroupBox15.CaptionOverlap = 0R
             Me.KryptonGroupBox15.GroupBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.ControlRibbon
             Me.KryptonGroupBox15.Location = New System.Drawing.Point(2, 391)
             Me.KryptonGroupBox15.Name = "KryptonGroupBox15"

@@ -96,6 +96,12 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
             txtProveedores.AutoCompleteSource = AutoCompleteSource.CustomSource
         End Sub
 
+        Private Sub AutocompletarTodo()
+            txtProveedores.AutoCompleteCustomSource = _objProv.AutocompletarProveedorClientePersonal(_tipoCon)
+            txtProveedores.AutoCompleteMode = AutoCompleteMode.Suggest
+            txtProveedores.AutoCompleteSource = AutoCompleteSource.CustomSource
+        End Sub
+
         Private Sub AutocompletarArticulo()
             txtArticulo.AutoCompleteCustomSource = _objSecuencialItem.Autocompletar(_tipoCon)
             txtArticulo.AutoCompleteMode = AutoCompleteMode.Suggest
@@ -150,7 +156,8 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
         Private Sub tsmNuevo_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles tsmNuevo.Click
             Limpiar()
             AutocompletarRecibe()
-            AutocompletarProveedores()
+            'AutocompletarProveedores()
+            AutocompletarTodo()
             AutocompletarClientes()
             AutocompletarArticulo()
 
@@ -850,7 +857,8 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
 
             CargarBodegas()
             AutocompletarRecibe()
-            AutocompletarProveedores()
+            'AutocompletarProveedores()
+            AutocompletarTodo()
             AutocompletarArticulo()
 
             LlenarConceptos(1) ' INGRESO
@@ -1580,7 +1588,8 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
 
             CargarBodegas()
             AutocompletarRecibe()
-            AutocompletarProveedores()
+            'AutocompletarProveedores()
+            AutocompletarTodo()
             AutocompletarArticulo()
 
             LlenarConceptos(1) ' INGRESO

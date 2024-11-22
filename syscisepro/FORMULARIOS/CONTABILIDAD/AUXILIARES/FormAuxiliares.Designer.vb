@@ -86,7 +86,7 @@
             Me.dgvAsientosDiario.ReadOnly = True
             Me.dgvAsientosDiario.RowHeadersVisible = False
             Me.dgvAsientosDiario.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvAsientosDiario.Size = New System.Drawing.Size(744, 469)
+            Me.dgvAsientosDiario.Size = New System.Drawing.Size(748, 479)
             Me.dgvAsientosDiario.TabIndex = 225
             '
             'dgvMayoresPadres
@@ -171,19 +171,17 @@
             Me.KryptonPage1.MinimumSize = New System.Drawing.Size(50, 50)
             Me.KryptonPage1.Name = "KryptonPage1"
             Me.KryptonPage1.Size = New System.Drawing.Size(752, 503)
-            Me.KryptonPage1.StateCommon.Page.Color1 = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(247, Byte), Integer))
+            Me.KryptonPage1.StateCommon.Page.Color1 = System.Drawing.Color.FromArgb(CType(CType(185, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(227, Byte), Integer))
             Me.KryptonPage1.Text = "Mayores"
             Me.KryptonPage1.ToolTipTitle = "Page ToolTip"
             Me.KryptonPage1.UniqueName = "BCF99E1FB14F4968F1A32E789714C803"
             '
             'KryptonGroupBox1
             '
-            Me.KryptonGroupBox1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-            Me.KryptonGroupBox1.CaptionOverlap = 0.85R
+            Me.KryptonGroupBox1.CaptionOverlap = 0R
+            Me.KryptonGroupBox1.Dock = System.Windows.Forms.DockStyle.Fill
             Me.KryptonGroupBox1.GroupBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.PanelRibbonInactive
-            Me.KryptonGroupBox1.Location = New System.Drawing.Point(3, 7)
+            Me.KryptonGroupBox1.Location = New System.Drawing.Point(0, 0)
             Me.KryptonGroupBox1.Name = "KryptonGroupBox1"
             '
             'KryptonGroupBox1.Panel
@@ -194,7 +192,7 @@
             Me.KryptonGroupBox1.Panel.Controls.Add(Me.dtpInicio)
             Me.KryptonGroupBox1.Panel.Controls.Add(Me.dtpFinal)
             Me.KryptonGroupBox1.Panel.Controls.Add(Me.dgvMayoresPadres)
-            Me.KryptonGroupBox1.Size = New System.Drawing.Size(748, 493)
+            Me.KryptonGroupBox1.Size = New System.Drawing.Size(752, 503)
             Me.KryptonGroupBox1.TabIndex = 1
             Me.KryptonGroupBox1.Values.Heading = "Busqueda"
             '

@@ -1950,6 +1950,7 @@ namespace SysCisepro3.Main
                 if (_data.Rows.Count > 0) notifyIcon1.ShowBalloonTip(10000);
             }
             catch (Exception ex)
+
             {
                 Console.WriteLine(@"Error recordatorio facturar: " + ex.Message);
             }

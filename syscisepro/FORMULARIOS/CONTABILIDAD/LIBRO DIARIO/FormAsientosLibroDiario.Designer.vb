@@ -144,7 +144,7 @@
             Me.txtCuentaNueva.BackColor = System.Drawing.Color.White
             Me.txtCuentaNueva.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtCuentaNueva.Enabled = False
-            Me.txtCuentaNueva.Location = New System.Drawing.Point(696, 3)
+            Me.txtCuentaNueva.Location = New System.Drawing.Point(726, 3)
             Me.txtCuentaNueva.Name = "txtCuentaNueva"
             Me.txtCuentaNueva.Size = New System.Drawing.Size(309, 22)
             Me.txtCuentaNueva.TabIndex = 58
@@ -169,7 +169,7 @@
             Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
             Me.MenuStrip1.Name = "MenuStrip1"
             Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(7, 2, 0, 2)
-            Me.MenuStrip1.Size = New System.Drawing.Size(1120, 32)
+            Me.MenuStrip1.Size = New System.Drawing.Size(1065, 32)
             Me.MenuStrip1.TabIndex = 186
             Me.MenuStrip1.Text = "msIngresoBodega"
             '
@@ -276,13 +276,13 @@
             Me.KryptonGroupBox1.Panel.Controls.Add(Me.rbCuenta)
             Me.KryptonGroupBox1.Panel.Controls.Add(Me.rbNumero)
             Me.KryptonGroupBox1.Panel.Controls.Add(Me.rbFecha)
-            Me.KryptonGroupBox1.Size = New System.Drawing.Size(1016, 62)
+            Me.KryptonGroupBox1.Size = New System.Drawing.Size(1058, 62)
             Me.KryptonGroupBox1.TabIndex = 188
             Me.KryptonGroupBox1.Values.Heading = "Busqueda"
             '
             'KryptonLabel4
             '
-            Me.KryptonLabel4.Location = New System.Drawing.Point(647, 3)
+            Me.KryptonLabel4.Location = New System.Drawing.Point(677, 3)
             Me.KryptonLabel4.Name = "KryptonLabel4"
             Me.KryptonLabel4.Size = New System.Drawing.Size(49, 20)
             Me.KryptonLabel4.TabIndex = 8
@@ -319,7 +319,7 @@
             Me.dgvAsientosDiario.AllowUserToResizeRows = False
             DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
             Me.dgvAsientosDiario.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
-            Me.dgvAsientosDiario.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
+            Me.dgvAsientosDiario.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(185, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(227, Byte), Integer))
             Me.dgvAsientosDiario.BorderStyle = System.Windows.Forms.BorderStyle.None
             Me.dgvAsientosDiario.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
             Me.dgvAsientosDiario.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
@@ -357,7 +357,7 @@
             DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
             Me.dgvAsientosDiario.RowsDefaultCellStyle = DataGridViewCellStyle5
             Me.dgvAsientosDiario.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvAsientosDiario.Size = New System.Drawing.Size(1117, 446)
+            Me.dgvAsientosDiario.Size = New System.Drawing.Size(1058, 446)
             Me.dgvAsientosDiario.TabIndex = 189
             '
             'txtTotalHaber
@@ -424,7 +424,7 @@
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(185, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(227, Byte), Integer))
-            Me.ClientSize = New System.Drawing.Size(1120, 584)
+            Me.ClientSize = New System.Drawing.Size(1065, 584)
             Me.Controls.Add(Me.KryptonLabel7)
             Me.Controls.Add(Me.KryptonLabel6)
             Me.Controls.Add(Me.KryptonLabel5)

@@ -86,6 +86,15 @@ Namespace CONTABILIDAD.COMPRAS.PROVEEDORES
             Return coleccion
         End Function
 
+        Public Function AutocompletarProveedorClientePersonal(ByVal tipoCon As TipoConexion) As AutoCompleteStringCollection
+            Dim dt As DataTable = BuscarNombresProveedorClientePersonalGeneral(tipoCon)
+            Dim coleccion As New AutoCompleteStringCollection()
+            For Each row As DataRow In dt.Rows
+                coleccion.Add(Convert.ToString(row("Nombres")))
+            Next
+            Return coleccion
+        End Function
+
         Public Function BuscarMayorIdProveedorGeneral(ByVal tipoCon As TipoConexion) As Integer
             Dim data = ComandosSql.SeleccionarQueryToDataTable(tipoCon, "BuscarMayorIdProveedorGeneral", True) 
             Return If(data.Rows.Count = 0, 0, If(IsDBNull(data.Rows(0)(0)), 0, CInt(data.Rows(0)(0))))
@@ -215,7 +224,11 @@ Namespace CONTABILIDAD.COMPRAS.PROVEEDORES
         End Function
 
         Private Function BuscarNombresProveedorGeneral(ByVal tipoCon As TipoConexion) As DataTable
-            Return ComandosSql.SeleccionarQueryToDataTable(tipoCon, "buscarNombresProveedorGeneral", True) 
+            Return ComandosSql.SeleccionarQueryToDataTable(tipoCon, "buscarNombresProveedorGeneral", True)
+        End Function
+
+        Private Function BuscarNombresProveedorClientePersonalGeneral(ByVal tipoCon As TipoConexion) As DataTable
+            Return ComandosSql.SeleccionarQueryToDataTable(tipoCon, "sp_buscarProveedorClientePersonalGeneral", True)
         End Function
 
         Public Function BuscarFiltradoPorRazonSocialProveedorGeneral(ByVal tipoCon As TipoConexion, ByVal parametroBusqueda As String) As DataTable
