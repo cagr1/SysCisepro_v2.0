@@ -96,6 +96,8 @@ namespace SysCisepro3.TalentoHumano
             CargarFiltro();
             CargarTipos();
             _estadoAccion = 0;
+            metroTabControl1.SelectedTab = metroTabPage1;
+            metroTabControl1.BackgroundColor = Color.FromArgb(223, 235, 247);
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
@@ -250,8 +252,8 @@ namespace SysCisepro3.TalentoHumano
                 {
                     column.Width = -2;
                 }
-                label17.Text = listView3.Items.Count + @" REGISTRO(S) - TOTAL DESCUENTOS $ " + tb.ToString("N");
-                label19.Text = listView4.Items.Count + @" REGISTRO(S) - TOTAL DESCUENTOS $ " + tn.ToString("N");
+                //label17.Text = listView3.Items.Count + @" REGISTRO(S) - TOTAL DESCUENTOS $ " + tb.ToString("N");
+                //label19.Text = listView4.Items.Count + @" REGISTRO(S) - TOTAL DESCUENTOS $ " + tn.ToString("N");
 
 
                 if (idsel == 0) return;
@@ -303,7 +305,7 @@ namespace SysCisepro3.TalentoHumano
             txtValor.Clear();
             txtCuota.Clear();
             txtValorPago.Clear();
-            txtIdPrestamo.Clear();
+            
             dtpFecha.Value = DateTime.Now;
             txtValor.Enabled = true;
             txtObservacion.Enabled = true;
@@ -502,7 +504,7 @@ namespace SysCisepro3.TalentoHumano
             chkMensual.Enabled = false;
             chkMensual.Checked = false;
             //btngenerar.Enabled = false;
-            txtIdPrestamo.Clear();
+            
             txtValorPago.Clear();
             txtCuota.Clear();
 
@@ -518,11 +520,7 @@ namespace SysCisepro3.TalentoHumano
             //CargarAsignaciones(0);
         }
 
-        private void txtFiltro_KeyUp(object sender, KeyEventArgs e)
-        {
-            if (e.KeyValue != 13) return;
-            CargarAsignaciones(0);
-        }
+        
 
         private void txtValor_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -697,8 +695,8 @@ namespace SysCisepro3.TalentoHumano
                 
                                 
                 // registro detalle prestamo
-                //idpres = Int32.Parse(txtIdPrestamo.Text);
-                txtIdPrestamo.Text = idpres.ToString();
+                
+                
                 _objRegistroDescuento.IdPrestamo = idpres;
                 _objRegistroDescuento.Fecha = Convert.ToDateTime(fec);
                 _objRegistroDescuento.plazo = Convert.ToInt32(txtCuota.Text);
@@ -828,7 +826,7 @@ namespace SysCisepro3.TalentoHumano
                 _estadoAccion = 0;
                 //CargarAsignaciones(_objRegistroDescuento.IdRegistro);
             }
-            KryptonMessageBox.Show((string)res[1], "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+            KryptonMessageBox.Show((string)res[1], "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
         }
 
         private void btnPersonalEntra_Click(object sender, EventArgs e)
@@ -855,103 +853,7 @@ namespace SysCisepro3.TalentoHumano
 
         private void toolStripButton1_Click_1(object sender, EventArgs e)
         {
-            if (ListView1.Items.Count == 0)
-            {
-                KryptonMessageBox.Show(@"NO HAY DATOS PARA EXPORTAR!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
-                return;
-            }
-
-            try
-            {
-                var app = new Office.Excel.Application();
-                var workbook = app.Workbooks.Add(Type.Missing);
-
-                var worksheet = (Worksheet)workbook.Worksheets[1];
-                worksheet.Name = "DESCUENTOS";
-
-                var l = -1;
-                for (var i = 0; i <= ListView1.Columns.Count - 1; i++) if (i == 1 || ListView1.Columns[i].Width > 1) l++;
-                var ic = ValidationForms.NumToCharExcel(l);
-
-                var rc = ListView1.Items.Count + 20;
-
-                worksheet.Range["A1:" + ic + rc].Font.Size = 10;
-
-                worksheet.Range["A1:" + ic + "1"].Merge();
-                worksheet.Range["A1:" + ic + "1"].Value = Validaciones.NombreCompany(TipoCon) + " - DESCUENTOS GENERAL";
-                worksheet.Range["A1:" + ic + "1"].Font.Bold = true;
-                worksheet.Range["A1:" + ic + "1"].Cells.HorizontalAlignment = XlHAlign.xlHAlignLeft;
-                worksheet.Range["A1:" + ic + "1"].Interior.Color = ValidationForms.GetColorSistema(TipoCon);
-                worksheet.Range["A1:" + ic + "1"].Font.Color = Color.White;
-                worksheet.Range["A1:" + ic + "1"].Font.Size = 12;
-
-                worksheet.Range["A3:" + ic + "3"].Merge();
-                worksheet.Range["A3:" + ic + "3"].Value = cbxFiltro.Text + " DEL " + dtpFechaDesde.Value.ToShortDateString() + " AL " + dtpFechaHasta.Value.ToShortDateString() + "                Fecha de Impresión: " + Usuario.Now(TipoCon);
-                worksheet.Range["A3:" + ic + "3"].Font.Size = 12;
-
-                var head = 5;
-                var x = 1;
-                for (var i = 0; i <= ListView1.Columns.Count - 1; i++)
-                {
-                    if (i != 1 && ListView1.Columns[i].Width < 1) continue;
-
-                    worksheet.Cells[head, x] = ListView1.Columns[i].Text;
-                    worksheet.Cells[head, x].Font.Bold = true;
-                    worksheet.Cells[head, x].Borders.LineStyle = XlLineStyle.xlContinuous;
-                    worksheet.Cells[head, x].Cells.HorizontalAlignment = XlHAlign.xlHAlignCenter;
-                    worksheet.Cells[head, x].Font.Color = Color.White;
-
-                    worksheet.Cells[head, x].Interior.Color = ValidationForms.GetColorSistema(TipoCon);
-                    x++;
-                }
-
-                // datos celdas
-                head++;
-                foreach (ListViewItem row in ListView1.Items)
-                {
-                    var y = 1;
-                    for (var j = 0; j <= ListView1.Columns.Count - 1; j++)
-                    {
-                        if (j != 1 && ListView1.Columns[j].Width < 1) continue;
-
-                        worksheet.Cells[head, y] = j == 2
-                            ? Convert.ToDateTime(row.SubItems[j].Text).ToString("yyyy/MM/dd")
-                            : row.SubItems[j].Text;
-
-                        worksheet.Cells[head, y].Borders(XlBordersIndex.xlEdgeLeft).LineStyle = XlLineStyle.xlContinuous;
-                        worksheet.Cells[head, y].Borders(XlBordersIndex.xlEdgeRight).LineStyle = XlLineStyle.xlContinuous;
-                        worksheet.Cells[head, y].Borders(XlBordersIndex.xlEdgeBottom).LineStyle = XlLineStyle.xlContinuous;
-                        y++;
-                    }
-
-                    head++;
-                }
-
-                head += 3;
-
-                worksheet.Range["A" + head + ":F" + head].Merge();
-                worksheet.Range["A" + head + ":F" + head].Value = Label1.Text;
-                worksheet.Range["A" + head + ":F" + head].Font.Bold = true;
-                worksheet.Range["A" + head + ":F" + head].Cells.HorizontalAlignment = XlHAlign.xlHAlignRight;
-                worksheet.Range["A" + head + ":F" + head].Interior.Color = ValidationForms.GetColorSistema(TipoCon);
-                worksheet.Range["A" + head + ":F" + head].Font.Color = Color.White;
-                worksheet.Range["A" + head + ":F" + head].Font.Size = 12;
-
-
-                var position = (Range)worksheet.Cells[2, 7];
-                Clipboard.SetImage(ValidationForms.Logo(TipoCon));
-                worksheet.Paste(position);
-
-                worksheet.Range["A1:" + ic + rc].Columns.AutoFit();
-                app.DisplayAlerts = false;
-                app.Visible = true;
-                app.DisplayAlerts = true;
-                KryptonMessageBox.Show(@"ARCHIVO generado correctamente!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
-            }
-            catch
-            {
-                KryptonMessageBox.Show(@"HUBO UN PROBLEMA AL EXPORTAR DATOS!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error);
-            }
+            
         }
 
         private void cbxFiltro_SelectedIndexChanged(object sender, EventArgs e)
@@ -1157,7 +1059,7 @@ namespace SysCisepro3.TalentoHumano
                 dataGridView1.Rows[dataGridView1.RowCount - 1].DefaultCellStyle.Font = new System.Drawing.Font("Segoe UI", 8.5f, FontStyle.Bold);
 
                 dataGridView1.AutoResizeRows();
-                label8.Text = dataGridView1.RowCount + @" REGISTRO(S)";
+                //label8.Text = dataGridView1.RowCount + @" REGISTRO(S)";
             }
             catch (Exception ex)
             {
@@ -1169,100 +1071,7 @@ namespace SysCisepro3.TalentoHumano
 
         private void toolStripButton3_Click(object sender, EventArgs e)
         {
-            if (dataGridView1.RowCount == 0)
-            {
-                KryptonMessageBox.Show(@"NO HAY DATOS PARA EXPORTAR!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
-                return;
-            }
-
-            try
-            {
-                var app = new Office.Excel.Application();
-                var workbook = app.Workbooks.Add(Type.Missing);
-
-                var worksheet = (Worksheet)workbook.Worksheets[1];
-                worksheet.Name = "DESCUENTOS";
-
-                var l = -1;
-                for (var i = 0; i <= dataGridView1.Columns.Count - 1; i++) if (dataGridView1.Columns[i].Visible) l++;
-                var ic = ValidationForms.NumToCharExcel(l);
-
-                var rc = dataGridView1.RowCount + 20;
-
-                worksheet.Range["A1:" + ic + rc].Font.Size = 10;
-
-                worksheet.Range["A1:" + ic + "1"].Merge();
-                worksheet.Range["A1:" + ic + "1"].Value = Validaciones.NombreCompany(TipoCon) + " - DESCUENTOS REGISTRADOS";
-                worksheet.Range["A1:" + ic + "1"].Font.Bold = true;
-                worksheet.Range["A1:" + ic + "1"].Cells.HorizontalAlignment = XlHAlign.xlHAlignLeft;
-                worksheet.Range["A1:" + ic + "1"].Interior.Color = ValidationForms.GetColorSistema(TipoCon);
-                worksheet.Range["A1:" + ic + "1"].Font.Color = Color.White;
-                worksheet.Range["A1:" + ic + "1"].Font.Size = 12;
-
-                worksheet.Range["A3:" + ic + "3"].Merge();
-                worksheet.Range["A3:" + ic + "3"].Value = "DESCUENTOS DESD EL " + dtpFechaDesde.Value.ToShortDateString() + " AL " + dtpFechaHasta.Value.ToShortDateString() + "                Fecha de Impresión: " + Usuario.Now(TipoCon);
-                worksheet.Range["A3:" + ic + "3"].Font.Size = 12;
-
-                var head = 5;
-                var x = 1;
-                for (var i = 0; i <= dataGridView1.Columns.Count - 1; i++)
-                {
-                    if (!dataGridView1.Columns[i].Visible) continue;
-
-                    worksheet.Cells[head, x] = dataGridView1.Columns[i].HeaderText;
-                    worksheet.Cells[head, x].Font.Bold = true;
-                    worksheet.Cells[head, x].Borders.LineStyle = XlLineStyle.xlContinuous;
-                    worksheet.Cells[head, x].Cells.HorizontalAlignment = XlHAlign.xlHAlignCenter;
-                    worksheet.Cells[head, x].Font.Color = Color.White;
-
-                    worksheet.Cells[head, x].Interior.Color = ValidationForms.GetColorSistema(TipoCon);
-                    x++;
-                }
-
-                // datos celdas
-                head++;
-                foreach (DataGridViewRow row in dataGridView1.Rows)
-                {
-                    var y = 1;
-                    for (var j = 0; j <= dataGridView1.Columns.Count - 1; j++)
-                    {
-                        if (!dataGridView1.Columns[j].Visible) continue;
-
-                        worksheet.Cells[head, y] = row.Cells[j].Value;
-                        worksheet.Cells[head, y].Borders(XlBordersIndex.xlEdgeLeft).LineStyle = XlLineStyle.xlContinuous;
-                        worksheet.Cells[head, y].Borders(XlBordersIndex.xlEdgeRight).LineStyle = XlLineStyle.xlContinuous;
-                        worksheet.Cells[head, y].Borders(XlBordersIndex.xlEdgeBottom).LineStyle = XlLineStyle.xlContinuous;
-                        y++;
-                    }
-
-                    head++;
-                }
-
-                head += 3;
-
-                worksheet.Range["A" + head + ":F" + head].Merge();
-                worksheet.Range["A" + head + ":F" + head].Value = Label1.Text;
-                worksheet.Range["A" + head + ":F" + head].Font.Bold = true;
-                worksheet.Range["A" + head + ":F" + head].Cells.HorizontalAlignment = XlHAlign.xlHAlignRight;
-                worksheet.Range["A" + head + ":F" + head].Interior.Color = ValidationForms.GetColorSistema(TipoCon);
-                worksheet.Range["A" + head + ":F" + head].Font.Color = Color.White;
-                worksheet.Range["A" + head + ":F" + head].Font.Size = 12;
-
-                var position = (Range)worksheet.Cells[2, 6];
-                Clipboard.SetImage(ValidationForms.Logo(TipoCon));
-                worksheet.Paste(position);
-
-                worksheet.Range["A1:" + ic + rc].Columns.AutoFit();
-                app.DisplayAlerts = false;
-                app.Visible = true;
-                app.DisplayAlerts = true;
-                //workbook.SaveAs(sfd.FileName, XlFileFormat.xlWorkbookNormal, Type.Missing, Type.Missing, Type.Missing, Type.Missing, XlSaveAsAccessMode.xlExclusive, Type.Missing, Type.Missing, Type.Missing, Type.Missing);
-                KryptonMessageBox.Show(@"ARCHIVO generado correctamente!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
-            }
-            catch
-            {
-                KryptonMessageBox.Show(@"HUBO UN PROBLEMA AL EXPORTAR DATOS!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error);
-            }
+            
         }
 
         private void chkAnual_CheckedChanged(object sender, EventArgs e)
@@ -1337,7 +1146,7 @@ namespace SysCisepro3.TalentoHumano
                     listView2.Items.Add(lst);
                 }
 
-                label16.Text = datos.Rows.Count + @" REGISTRO(S) - TOTAL DESCUENTOS $ " + td.ToString("N") + " - UTILIDAD TOTAL: $ " + tu.ToString("N");
+                //label16.Text = datos.Rows.Count + @" REGISTRO(S) - TOTAL DESCUENTOS $ " + td.ToString("N") + " - UTILIDAD TOTAL: $ " + tu.ToString("N");
 
                 if (idsel == 0) return;
 
@@ -1463,204 +1272,12 @@ namespace SysCisepro3.TalentoHumano
 
         private void toolStripButton5_Click(object sender, EventArgs e)
         {
-            if (listView3.Items.Count == 0)
-            {
-                KryptonMessageBox.Show(@"NO HAY DATOS PARA EXPORTAR!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
-                return;
-            }
-
-            try
-            {
-                var app = new Office.Excel.Application();
-                var workbook = app.Workbooks.Add(Type.Missing);
-
-                var worksheet = (Worksheet)workbook.Worksheets[1];
-                worksheet.Name = "BODEGA";
-
-                var l = -1;
-                for (var i = 0; i <= listView3.Columns.Count - 1; i++) if (i == 1 || listView3.Columns[i].Width > 1) l++;
-                var ic = ValidationForms.NumToCharExcel(l);
-
-                var rc = listView3.Items.Count + 20;
-
-                worksheet.Range["A1:" + ic + rc].Font.Size = 10;
-
-                worksheet.Range["A1:" + ic + "1"].Merge();
-                worksheet.Range["A1:" + ic + "1"].Value = Validaciones.NombreCompany(TipoCon) + " - DESCUENTOS BODEGA";
-                worksheet.Range["A1:" + ic + "1"].Font.Bold = true;
-                worksheet.Range["A1:" + ic + "1"].Cells.HorizontalAlignment = XlHAlign.xlHAlignLeft;
-                worksheet.Range["A1:" + ic + "1"].Interior.Color = ValidationForms.GetColorSistema(TipoCon);
-                worksheet.Range["A1:" + ic + "1"].Font.Color = Color.White;
-                worksheet.Range["A1:" + ic + "1"].Font.Size = 12;
-
-                worksheet.Range["A3:" + ic + "3"].Merge();
-                worksheet.Range["A3:" + ic + "3"].Value = cbxFiltro.Text + " DEL " + dtpFechaDesde.Value.ToShortDateString() + " AL " + dtpFechaHasta.Value.ToShortDateString() + "                Fecha de Impresión: " + Usuario.Now(TipoCon);
-                worksheet.Range["A3:" + ic + "3"].Font.Size = 12;
-
-                var head = 5;
-                var x = 1;
-                for (var i = 0; i <= listView3.Columns.Count - 1; i++)
-                {
-                    if (i != 1 && listView3.Columns[i].Width < 1) continue;
-
-                    worksheet.Cells[head, x] = listView3.Columns[i].Text;
-                    worksheet.Cells[head, x].Font.Bold = true;
-                    worksheet.Cells[head, x].Borders.LineStyle = XlLineStyle.xlContinuous;
-                    worksheet.Cells[head, x].Cells.HorizontalAlignment = XlHAlign.xlHAlignCenter;
-                    worksheet.Cells[head, x].Font.Color = Color.White;
-
-                    worksheet.Cells[head, x].Interior.Color = ValidationForms.GetColorSistema(TipoCon);
-                    x++;
-                }
-
-                // datos celdas
-                head++;
-                foreach (ListViewItem row in listView3.Items)
-                {
-                    var y = 1;
-                    for (var j = 0; j <= listView3.Columns.Count - 1; j++)
-                    {
-                        if (j != 1 && listView3.Columns[j].Width < 1) continue;
-
-                        worksheet.Cells[head, y] = j == 2
-                            ? Convert.ToDateTime(row.SubItems[j].Text).ToString("yyyy/MM/dd")
-                            : row.SubItems[j].Text;
-
-                        worksheet.Cells[head, y].Borders(XlBordersIndex.xlEdgeLeft).LineStyle = XlLineStyle.xlContinuous;
-                        worksheet.Cells[head, y].Borders(XlBordersIndex.xlEdgeRight).LineStyle = XlLineStyle.xlContinuous;
-                        worksheet.Cells[head, y].Borders(XlBordersIndex.xlEdgeBottom).LineStyle = XlLineStyle.xlContinuous;
-                        y++;
-                    }
-
-                    head++;
-                }
-
-                head += 3;
-
-                worksheet.Range["A" + head + ":F" + head].Merge();
-                worksheet.Range["A" + head + ":F" + head].Value = Label1.Text;
-                worksheet.Range["A" + head + ":F" + head].Font.Bold = true;
-                worksheet.Range["A" + head + ":F" + head].Cells.HorizontalAlignment = XlHAlign.xlHAlignRight;
-                worksheet.Range["A" + head + ":F" + head].Interior.Color = ValidationForms.GetColorSistema(TipoCon);
-                worksheet.Range["A" + head + ":F" + head].Font.Color = Color.White;
-                worksheet.Range["A" + head + ":F" + head].Font.Size = 12;
-
-
-                var position = (Range)worksheet.Cells[2, 7];
-                Clipboard.SetImage(ValidationForms.Logo(TipoCon));
-                worksheet.Paste(position);
-
-                worksheet.Range["A1:" + ic + rc].Columns.AutoFit();
-                app.DisplayAlerts = false;
-                app.Visible = true;
-                app.DisplayAlerts = true;
-                KryptonMessageBox.Show(@"ARCHIVO generado correctamente!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
-            }
-            catch
-            {
-                KryptonMessageBox.Show(@"HUBO UN PROBLEMA AL EXPORTAR DATOS!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error);
-            }
+           
         }
 
         private void toolStripButton6_Click(object sender, EventArgs e)
         {
-            if (listView4.Items.Count == 0)
-            {
-                KryptonMessageBox.Show(@"NO HAY DATOS PARA EXPORTAR!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
-                return;
-            }
-
-            try
-            {
-                var app = new Office.Excel.Application();
-                var workbook = app.Workbooks.Add(Type.Missing);
-
-                var worksheet = (Worksheet)workbook.Worksheets[1];
-                worksheet.Name = "OTROS";
-
-                var l = -1;
-                for (var i = 0; i <= listView4.Columns.Count - 1; i++) if (i == 1 || listView4.Columns[i].Width > 1) l++;
-                var ic = ValidationForms.NumToCharExcel(l);
-
-                var rc = listView4.Items.Count + 20;
-
-                worksheet.Range["A1:" + ic + rc].Font.Size = 10;
-
-                worksheet.Range["A1:" + ic + "1"].Merge();
-                worksheet.Range["A1:" + ic + "1"].Value = Validaciones.NombreCompany(TipoCon) + " - OTROS DESCUENTOS";
-                worksheet.Range["A1:" + ic + "1"].Font.Bold = true;
-                worksheet.Range["A1:" + ic + "1"].Cells.HorizontalAlignment = XlHAlign.xlHAlignLeft;
-                worksheet.Range["A1:" + ic + "1"].Interior.Color = ValidationForms.GetColorSistema(TipoCon);
-                worksheet.Range["A1:" + ic + "1"].Font.Color = Color.White;
-                worksheet.Range["A1:" + ic + "1"].Font.Size = 12;
-
-                worksheet.Range["A3:" + ic + "3"].Merge();
-                worksheet.Range["A3:" + ic + "3"].Value = cbxFiltro.Text + " DEL " + dtpFechaDesde.Value.ToShortDateString() + " AL " + dtpFechaHasta.Value.ToShortDateString() + "                Fecha de Impresión: " + Usuario.Now(TipoCon);
-                worksheet.Range["A3:" + ic + "3"].Font.Size = 12;
-
-                var head = 5;
-                var x = 1;
-                for (var i = 0; i <= listView4.Columns.Count - 1; i++)
-                {
-                    if (i != 1 && listView4.Columns[i].Width < 1) continue;
-
-                    worksheet.Cells[head, x] = listView4.Columns[i].Text;
-                    worksheet.Cells[head, x].Font.Bold = true;
-                    worksheet.Cells[head, x].Borders.LineStyle = XlLineStyle.xlContinuous;
-                    worksheet.Cells[head, x].Cells.HorizontalAlignment = XlHAlign.xlHAlignCenter;
-                    worksheet.Cells[head, x].Font.Color = Color.White;
-
-                    worksheet.Cells[head, x].Interior.Color = ValidationForms.GetColorSistema(TipoCon);
-                    x++;
-                }
-
-                // datos celdas
-                head++;
-                foreach (ListViewItem row in listView4.Items)
-                {
-                    var y = 1;
-                    for (var j = 0; j <= listView4.Columns.Count - 1; j++)
-                    {
-                        if (j != 1 && listView4.Columns[j].Width < 1) continue;
-
-                        worksheet.Cells[head, y] = j == 2
-                            ? Convert.ToDateTime(row.SubItems[j].Text).ToString("yyyy/MM/dd")
-                            : row.SubItems[j].Text;
-
-                        worksheet.Cells[head, y].Borders(XlBordersIndex.xlEdgeLeft).LineStyle = XlLineStyle.xlContinuous;
-                        worksheet.Cells[head, y].Borders(XlBordersIndex.xlEdgeRight).LineStyle = XlLineStyle.xlContinuous;
-                        worksheet.Cells[head, y].Borders(XlBordersIndex.xlEdgeBottom).LineStyle = XlLineStyle.xlContinuous;
-                        y++;
-                    }
-
-                    head++;
-                }
-
-                head += 3;
-
-                worksheet.Range["A" + head + ":F" + head].Merge();
-                worksheet.Range["A" + head + ":F" + head].Value = Label1.Text;
-                worksheet.Range["A" + head + ":F" + head].Font.Bold = true;
-                worksheet.Range["A" + head + ":F" + head].Cells.HorizontalAlignment = XlHAlign.xlHAlignRight;
-                worksheet.Range["A" + head + ":F" + head].Interior.Color = ValidationForms.GetColorSistema(TipoCon);
-                worksheet.Range["A" + head + ":F" + head].Font.Color = Color.White;
-                worksheet.Range["A" + head + ":F" + head].Font.Size = 12;
-
-
-                var position = (Range)worksheet.Cells[2, 7];
-                Clipboard.SetImage(ValidationForms.Logo(TipoCon));
-                worksheet.Paste(position);
-
-                worksheet.Range["A1:" + ic + rc].Columns.AutoFit();
-                app.DisplayAlerts = false;
-                app.Visible = true;
-                app.DisplayAlerts = true;
-                KryptonMessageBox.Show(@"ARCHIVO generado correctamente!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
-            }
-            catch
-            {
-                KryptonMessageBox.Show(@"HUBO UN PROBLEMA AL EXPORTAR DATOS!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error);
-            }
+            
         }
 
         private void label21_Click(object sender, EventArgs e)
@@ -1921,7 +1538,514 @@ namespace SysCisepro3.TalentoHumano
             }
         }
 
+        
+
+        private void btnDetalle_Click(object sender, EventArgs e)
+        {
+            if (ListView1.Items.Count == 0)
+            {
+                KryptonMessageBox.Show(@"NO HAY DATOS PARA EXPORTAR!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+                return;
+            }
+
+            try
+            {
+                var app = new Office.Excel.Application();
+                var workbook = app.Workbooks.Add(Type.Missing);
+
+                var worksheet = (Worksheet)workbook.Worksheets[1];
+                worksheet.Name = "DESCUENTOS";
+
+                var l = -1;
+                for (var i = 0; i <= ListView1.Columns.Count - 1; i++) if (i == 1 || ListView1.Columns[i].Width > 1) l++;
+                var ic = ValidationForms.NumToCharExcel(l);
+
+                var rc = ListView1.Items.Count + 20;
+
+                worksheet.Range["A1:" + ic + rc].Font.Size = 10;
+
+                worksheet.Range["A1:" + ic + "1"].Merge();
+                worksheet.Range["A1:" + ic + "1"].Value = Validaciones.NombreCompany(TipoCon) + " - DESCUENTOS GENERAL";
+                worksheet.Range["A1:" + ic + "1"].Font.Bold = true;
+                worksheet.Range["A1:" + ic + "1"].Cells.HorizontalAlignment = XlHAlign.xlHAlignLeft;
+                worksheet.Range["A1:" + ic + "1"].Interior.Color = ValidationForms.GetColorSistema(TipoCon);
+                worksheet.Range["A1:" + ic + "1"].Font.Color = Color.White;
+                worksheet.Range["A1:" + ic + "1"].Font.Size = 12;
+
+                worksheet.Range["A3:" + ic + "3"].Merge();
+                worksheet.Range["A3:" + ic + "3"].Value = cbxFiltro.Text + " DEL " + dtpFechaDesde.Value.ToShortDateString() + " AL " + dtpFechaHasta.Value.ToShortDateString() + "                Fecha de Impresión: " + Usuario.Now(TipoCon);
+                worksheet.Range["A3:" + ic + "3"].Font.Size = 12;
+
+                var head = 5;
+                var x = 1;
+                for (var i = 0; i <= ListView1.Columns.Count - 1; i++)
+                {
+                    if (i != 1 && ListView1.Columns[i].Width < 1) continue;
+
+                    worksheet.Cells[head, x] = ListView1.Columns[i].Text;
+                    worksheet.Cells[head, x].Font.Bold = true;
+                    worksheet.Cells[head, x].Borders.LineStyle = XlLineStyle.xlContinuous;
+                    worksheet.Cells[head, x].Cells.HorizontalAlignment = XlHAlign.xlHAlignCenter;
+                    worksheet.Cells[head, x].Font.Color = Color.White;
+
+                    worksheet.Cells[head, x].Interior.Color = ValidationForms.GetColorSistema(TipoCon);
+                    x++;
+                }
+
+                // datos celdas
+                head++;
+                foreach (ListViewItem row in ListView1.Items)
+                {
+                    var y = 1;
+                    for (var j = 0; j <= ListView1.Columns.Count - 1; j++)
+                    {
+                        if (j != 1 && ListView1.Columns[j].Width < 1) continue;
+
+                        worksheet.Cells[head, y] = j == 2
+                            ? Convert.ToDateTime(row.SubItems[j].Text).ToString("yyyy/MM/dd")
+                            : row.SubItems[j].Text;
+
+                        worksheet.Cells[head, y].Borders(XlBordersIndex.xlEdgeLeft).LineStyle = XlLineStyle.xlContinuous;
+                        worksheet.Cells[head, y].Borders(XlBordersIndex.xlEdgeRight).LineStyle = XlLineStyle.xlContinuous;
+                        worksheet.Cells[head, y].Borders(XlBordersIndex.xlEdgeBottom).LineStyle = XlLineStyle.xlContinuous;
+                        y++;
+                    }
+
+                    head++;
+                }
+
+                head += 3;
+
+                worksheet.Range["A" + head + ":F" + head].Merge();
+                worksheet.Range["A" + head + ":F" + head].Value = Label1.Text;
+                worksheet.Range["A" + head + ":F" + head].Font.Bold = true;
+                worksheet.Range["A" + head + ":F" + head].Cells.HorizontalAlignment = XlHAlign.xlHAlignRight;
+                worksheet.Range["A" + head + ":F" + head].Interior.Color = ValidationForms.GetColorSistema(TipoCon);
+                worksheet.Range["A" + head + ":F" + head].Font.Color = Color.White;
+                worksheet.Range["A" + head + ":F" + head].Font.Size = 12;
 
 
+                var position = (Range)worksheet.Cells[2, 7];
+                Clipboard.SetImage(ValidationForms.Logo(TipoCon));
+                worksheet.Paste(position);
+
+                worksheet.Range["A1:" + ic + rc].Columns.AutoFit();
+                app.DisplayAlerts = false;
+                app.Visible = true;
+                app.DisplayAlerts = true;
+                KryptonMessageBox.Show(@"ARCHIVO generado correctamente!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+            }
+            catch
+            {
+                KryptonMessageBox.Show(@"HUBO UN PROBLEMA AL EXPORTAR DATOS!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error);
+            }
+        }
+
+        private void btnResumen_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.RowCount == 0)
+            {
+                KryptonMessageBox.Show(@"NO HAY DATOS PARA EXPORTAR!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+                return;
+            }
+
+            try
+            {
+                var app = new Office.Excel.Application();
+                var workbook = app.Workbooks.Add(Type.Missing);
+
+                var worksheet = (Worksheet)workbook.Worksheets[1];
+                worksheet.Name = "DESCUENTOS";
+
+                var l = -1;
+                for (var i = 0; i <= dataGridView1.Columns.Count - 1; i++) if (dataGridView1.Columns[i].Visible) l++;
+                var ic = ValidationForms.NumToCharExcel(l);
+
+                var rc = dataGridView1.RowCount + 20;
+
+                worksheet.Range["A1:" + ic + rc].Font.Size = 10;
+
+                worksheet.Range["A1:" + ic + "1"].Merge();
+                worksheet.Range["A1:" + ic + "1"].Value = Validaciones.NombreCompany(TipoCon) + " - DESCUENTOS REGISTRADOS";
+                worksheet.Range["A1:" + ic + "1"].Font.Bold = true;
+                worksheet.Range["A1:" + ic + "1"].Cells.HorizontalAlignment = XlHAlign.xlHAlignLeft;
+                worksheet.Range["A1:" + ic + "1"].Interior.Color = ValidationForms.GetColorSistema(TipoCon);
+                worksheet.Range["A1:" + ic + "1"].Font.Color = Color.White;
+                worksheet.Range["A1:" + ic + "1"].Font.Size = 12;
+
+                worksheet.Range["A3:" + ic + "3"].Merge();
+                worksheet.Range["A3:" + ic + "3"].Value = "DESCUENTOS DESD EL " + dtpFechaDesde.Value.ToShortDateString() + " AL " + dtpFechaHasta.Value.ToShortDateString() + "                Fecha de Impresión: " + Usuario.Now(TipoCon);
+                worksheet.Range["A3:" + ic + "3"].Font.Size = 12;
+
+                var head = 5;
+                var x = 1;
+                for (var i = 0; i <= dataGridView1.Columns.Count - 1; i++)
+                {
+                    if (!dataGridView1.Columns[i].Visible) continue;
+
+                    worksheet.Cells[head, x] = dataGridView1.Columns[i].HeaderText;
+                    worksheet.Cells[head, x].Font.Bold = true;
+                    worksheet.Cells[head, x].Borders.LineStyle = XlLineStyle.xlContinuous;
+                    worksheet.Cells[head, x].Cells.HorizontalAlignment = XlHAlign.xlHAlignCenter;
+                    worksheet.Cells[head, x].Font.Color = Color.White;
+
+                    worksheet.Cells[head, x].Interior.Color = ValidationForms.GetColorSistema(TipoCon);
+                    x++;
+                }
+
+                // datos celdas
+                head++;
+                foreach (DataGridViewRow row in dataGridView1.Rows)
+                {
+                    var y = 1;
+                    for (var j = 0; j <= dataGridView1.Columns.Count - 1; j++)
+                    {
+                        if (!dataGridView1.Columns[j].Visible) continue;
+
+                        worksheet.Cells[head, y] = row.Cells[j].Value;
+                        worksheet.Cells[head, y].Borders(XlBordersIndex.xlEdgeLeft).LineStyle = XlLineStyle.xlContinuous;
+                        worksheet.Cells[head, y].Borders(XlBordersIndex.xlEdgeRight).LineStyle = XlLineStyle.xlContinuous;
+                        worksheet.Cells[head, y].Borders(XlBordersIndex.xlEdgeBottom).LineStyle = XlLineStyle.xlContinuous;
+                        y++;
+                    }
+
+                    head++;
+                }
+
+                head += 3;
+
+                worksheet.Range["A" + head + ":F" + head].Merge();
+                worksheet.Range["A" + head + ":F" + head].Value = Label1.Text;
+                worksheet.Range["A" + head + ":F" + head].Font.Bold = true;
+                worksheet.Range["A" + head + ":F" + head].Cells.HorizontalAlignment = XlHAlign.xlHAlignRight;
+                worksheet.Range["A" + head + ":F" + head].Interior.Color = ValidationForms.GetColorSistema(TipoCon);
+                worksheet.Range["A" + head + ":F" + head].Font.Color = Color.White;
+                worksheet.Range["A" + head + ":F" + head].Font.Size = 12;
+
+                var position = (Range)worksheet.Cells[2, 6];
+                Clipboard.SetImage(ValidationForms.Logo(TipoCon));
+                worksheet.Paste(position);
+
+                worksheet.Range["A1:" + ic + rc].Columns.AutoFit();
+                app.DisplayAlerts = false;
+                app.Visible = true;
+                app.DisplayAlerts = true;
+                //workbook.SaveAs(sfd.FileName, XlFileFormat.xlWorkbookNormal, Type.Missing, Type.Missing, Type.Missing, Type.Missing, XlSaveAsAccessMode.xlExclusive, Type.Missing, Type.Missing, Type.Missing, Type.Missing);
+                KryptonMessageBox.Show(@"ARCHIVO generado correctamente!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+            }
+            catch
+            {
+                KryptonMessageBox.Show(@"HUBO UN PROBLEMA AL EXPORTAR DATOS!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error);
+            }
+        }
+
+        private void btnBodega_Click(object sender, EventArgs e)
+        {
+            if (listView3.Items.Count == 0)
+            {
+                KryptonMessageBox.Show(@"NO HAY DATOS PARA EXPORTAR!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+                return;
+            }
+
+            try
+            {
+                var app = new Office.Excel.Application();
+                var workbook = app.Workbooks.Add(Type.Missing);
+
+                var worksheet = (Worksheet)workbook.Worksheets[1];
+                worksheet.Name = "BODEGA";
+
+                var l = -1;
+                for (var i = 0; i <= listView3.Columns.Count - 1; i++) if (i == 1 || listView3.Columns[i].Width > 1) l++;
+                var ic = ValidationForms.NumToCharExcel(l);
+
+                var rc = listView3.Items.Count + 20;
+
+                worksheet.Range["A1:" + ic + rc].Font.Size = 10;
+
+                worksheet.Range["A1:" + ic + "1"].Merge();
+                worksheet.Range["A1:" + ic + "1"].Value = Validaciones.NombreCompany(TipoCon) + " - DESCUENTOS BODEGA";
+                worksheet.Range["A1:" + ic + "1"].Font.Bold = true;
+                worksheet.Range["A1:" + ic + "1"].Cells.HorizontalAlignment = XlHAlign.xlHAlignLeft;
+                worksheet.Range["A1:" + ic + "1"].Interior.Color = ValidationForms.GetColorSistema(TipoCon);
+                worksheet.Range["A1:" + ic + "1"].Font.Color = Color.White;
+                worksheet.Range["A1:" + ic + "1"].Font.Size = 12;
+
+                worksheet.Range["A3:" + ic + "3"].Merge();
+                worksheet.Range["A3:" + ic + "3"].Value = cbxFiltro.Text + " DEL " + dtpFechaDesde.Value.ToShortDateString() + " AL " + dtpFechaHasta.Value.ToShortDateString() + "                Fecha de Impresión: " + Usuario.Now(TipoCon);
+                worksheet.Range["A3:" + ic + "3"].Font.Size = 12;
+
+                var head = 5;
+                var x = 1;
+                for (var i = 0; i <= listView3.Columns.Count - 1; i++)
+                {
+                    if (i != 1 && listView3.Columns[i].Width < 1) continue;
+
+                    worksheet.Cells[head, x] = listView3.Columns[i].Text;
+                    worksheet.Cells[head, x].Font.Bold = true;
+                    worksheet.Cells[head, x].Borders.LineStyle = XlLineStyle.xlContinuous;
+                    worksheet.Cells[head, x].Cells.HorizontalAlignment = XlHAlign.xlHAlignCenter;
+                    worksheet.Cells[head, x].Font.Color = Color.White;
+
+                    worksheet.Cells[head, x].Interior.Color = ValidationForms.GetColorSistema(TipoCon);
+                    x++;
+                }
+
+                // datos celdas
+                head++;
+                foreach (ListViewItem row in listView3.Items)
+                {
+                    var y = 1;
+                    for (var j = 0; j <= listView3.Columns.Count - 1; j++)
+                    {
+                        if (j != 1 && listView3.Columns[j].Width < 1) continue;
+
+                        worksheet.Cells[head, y] = j == 2
+                            ? Convert.ToDateTime(row.SubItems[j].Text).ToString("yyyy/MM/dd")
+                            : row.SubItems[j].Text;
+
+                        worksheet.Cells[head, y].Borders(XlBordersIndex.xlEdgeLeft).LineStyle = XlLineStyle.xlContinuous;
+                        worksheet.Cells[head, y].Borders(XlBordersIndex.xlEdgeRight).LineStyle = XlLineStyle.xlContinuous;
+                        worksheet.Cells[head, y].Borders(XlBordersIndex.xlEdgeBottom).LineStyle = XlLineStyle.xlContinuous;
+                        y++;
+                    }
+
+                    head++;
+                }
+
+                head += 3;
+
+                worksheet.Range["A" + head + ":F" + head].Merge();
+                worksheet.Range["A" + head + ":F" + head].Value = Label1.Text;
+                worksheet.Range["A" + head + ":F" + head].Font.Bold = true;
+                worksheet.Range["A" + head + ":F" + head].Cells.HorizontalAlignment = XlHAlign.xlHAlignRight;
+                worksheet.Range["A" + head + ":F" + head].Interior.Color = ValidationForms.GetColorSistema(TipoCon);
+                worksheet.Range["A" + head + ":F" + head].Font.Color = Color.White;
+                worksheet.Range["A" + head + ":F" + head].Font.Size = 12;
+
+
+                var position = (Range)worksheet.Cells[2, 7];
+                Clipboard.SetImage(ValidationForms.Logo(TipoCon));
+                worksheet.Paste(position);
+
+                worksheet.Range["A1:" + ic + rc].Columns.AutoFit();
+                app.DisplayAlerts = false;
+                app.Visible = true;
+                app.DisplayAlerts = true;
+                KryptonMessageBox.Show(@"ARCHIVO generado correctamente!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+            }
+            catch
+            {
+                KryptonMessageBox.Show(@"HUBO UN PROBLEMA AL EXPORTAR DATOS!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error);
+            }
+        }
+
+        private void btnDetalle_Click_1(object sender, EventArgs e)
+        {
+            if (ListView1.Items.Count == 0)
+            {
+                KryptonMessageBox.Show(@"NO HAY DATOS PARA EXPORTAR!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+                return;
+            }
+
+            try
+            {
+                var app = new Office.Excel.Application();
+                var workbook = app.Workbooks.Add(Type.Missing);
+
+                var worksheet = (Worksheet)workbook.Worksheets[1];
+                worksheet.Name = "DESCUENTOS";
+
+                var l = -1;
+                for (var i = 0; i <= ListView1.Columns.Count - 1; i++) if (i == 1 || ListView1.Columns[i].Width > 1) l++;
+                var ic = ValidationForms.NumToCharExcel(l);
+
+                var rc = ListView1.Items.Count + 20;
+
+                worksheet.Range["A1:" + ic + rc].Font.Size = 10;
+
+                worksheet.Range["A1:" + ic + "1"].Merge();
+                worksheet.Range["A1:" + ic + "1"].Value = Validaciones.NombreCompany(TipoCon) + " - DESCUENTOS GENERAL";
+                worksheet.Range["A1:" + ic + "1"].Font.Bold = true;
+                worksheet.Range["A1:" + ic + "1"].Cells.HorizontalAlignment = XlHAlign.xlHAlignLeft;
+                worksheet.Range["A1:" + ic + "1"].Interior.Color = ValidationForms.GetColorSistema(TipoCon);
+                worksheet.Range["A1:" + ic + "1"].Font.Color = Color.White;
+                worksheet.Range["A1:" + ic + "1"].Font.Size = 12;
+
+                worksheet.Range["A3:" + ic + "3"].Merge();
+                worksheet.Range["A3:" + ic + "3"].Value = cbxFiltro.Text + " DEL " + dtpFechaDesde.Value.ToShortDateString() + " AL " + dtpFechaHasta.Value.ToShortDateString() + "                Fecha de Impresión: " + Usuario.Now(TipoCon);
+                worksheet.Range["A3:" + ic + "3"].Font.Size = 12;
+
+                var head = 5;
+                var x = 1;
+                for (var i = 0; i <= ListView1.Columns.Count - 1; i++)
+                {
+                    if (i != 1 && ListView1.Columns[i].Width < 1) continue;
+
+                    worksheet.Cells[head, x] = ListView1.Columns[i].Text;
+                    worksheet.Cells[head, x].Font.Bold = true;
+                    worksheet.Cells[head, x].Borders.LineStyle = XlLineStyle.xlContinuous;
+                    worksheet.Cells[head, x].Cells.HorizontalAlignment = XlHAlign.xlHAlignCenter;
+                    worksheet.Cells[head, x].Font.Color = Color.White;
+
+                    worksheet.Cells[head, x].Interior.Color = ValidationForms.GetColorSistema(TipoCon);
+                    x++;
+                }
+
+                // datos celdas
+                head++;
+                foreach (ListViewItem row in ListView1.Items)
+                {
+                    var y = 1;
+                    for (var j = 0; j <= ListView1.Columns.Count - 1; j++)
+                    {
+                        if (j != 1 && ListView1.Columns[j].Width < 1) continue;
+
+                        worksheet.Cells[head, y] = j == 2
+                            ? Convert.ToDateTime(row.SubItems[j].Text).ToString("yyyy/MM/dd")
+                            : row.SubItems[j].Text;
+
+                        worksheet.Cells[head, y].Borders(XlBordersIndex.xlEdgeLeft).LineStyle = XlLineStyle.xlContinuous;
+                        worksheet.Cells[head, y].Borders(XlBordersIndex.xlEdgeRight).LineStyle = XlLineStyle.xlContinuous;
+                        worksheet.Cells[head, y].Borders(XlBordersIndex.xlEdgeBottom).LineStyle = XlLineStyle.xlContinuous;
+                        y++;
+                    }
+
+                    head++;
+                }
+
+                head += 3;
+
+                worksheet.Range["A" + head + ":F" + head].Merge();
+                worksheet.Range["A" + head + ":F" + head].Value = Label1.Text;
+                worksheet.Range["A" + head + ":F" + head].Font.Bold = true;
+                worksheet.Range["A" + head + ":F" + head].Cells.HorizontalAlignment = XlHAlign.xlHAlignRight;
+                worksheet.Range["A" + head + ":F" + head].Interior.Color = ValidationForms.GetColorSistema(TipoCon);
+                worksheet.Range["A" + head + ":F" + head].Font.Color = Color.White;
+                worksheet.Range["A" + head + ":F" + head].Font.Size = 12;
+
+
+                var position = (Range)worksheet.Cells[2, 7];
+                Clipboard.SetImage(ValidationForms.Logo(TipoCon));
+                worksheet.Paste(position);
+
+                worksheet.Range["A1:" + ic + rc].Columns.AutoFit();
+                app.DisplayAlerts = false;
+                app.Visible = true;
+                app.DisplayAlerts = true;
+                KryptonMessageBox.Show(@"ARCHIVO generado correctamente!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+            }
+            catch
+            {
+                KryptonMessageBox.Show(@"HUBO UN PROBLEMA AL EXPORTAR DATOS!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error);
+            }
+        }
+
+        private void btnOtros_Click(object sender, EventArgs e)
+        {
+            if (listView4.Items.Count == 0)
+            {
+                KryptonMessageBox.Show(@"NO HAY DATOS PARA EXPORTAR!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+                return;
+            }
+
+            try
+            {
+                var app = new Office.Excel.Application();
+                var workbook = app.Workbooks.Add(Type.Missing);
+
+                var worksheet = (Worksheet)workbook.Worksheets[1];
+                worksheet.Name = "OTROS";
+
+                var l = -1;
+                for (var i = 0; i <= listView4.Columns.Count - 1; i++) if (i == 1 || listView4.Columns[i].Width > 1) l++;
+                var ic = ValidationForms.NumToCharExcel(l);
+
+                var rc = listView4.Items.Count + 20;
+
+                worksheet.Range["A1:" + ic + rc].Font.Size = 10;
+
+                worksheet.Range["A1:" + ic + "1"].Merge();
+                worksheet.Range["A1:" + ic + "1"].Value = Validaciones.NombreCompany(TipoCon) + " - OTROS DESCUENTOS";
+                worksheet.Range["A1:" + ic + "1"].Font.Bold = true;
+                worksheet.Range["A1:" + ic + "1"].Cells.HorizontalAlignment = XlHAlign.xlHAlignLeft;
+                worksheet.Range["A1:" + ic + "1"].Interior.Color = ValidationForms.GetColorSistema(TipoCon);
+                worksheet.Range["A1:" + ic + "1"].Font.Color = Color.White;
+                worksheet.Range["A1:" + ic + "1"].Font.Size = 12;
+
+                worksheet.Range["A3:" + ic + "3"].Merge();
+                worksheet.Range["A3:" + ic + "3"].Value = cbxFiltro.Text + " DEL " + dtpFechaDesde.Value.ToShortDateString() + " AL " + dtpFechaHasta.Value.ToShortDateString() + "                Fecha de Impresión: " + Usuario.Now(TipoCon);
+                worksheet.Range["A3:" + ic + "3"].Font.Size = 12;
+
+                var head = 5;
+                var x = 1;
+                for (var i = 0; i <= listView4.Columns.Count - 1; i++)
+                {
+                    if (i != 1 && listView4.Columns[i].Width < 1) continue;
+
+                    worksheet.Cells[head, x] = listView4.Columns[i].Text;
+                    worksheet.Cells[head, x].Font.Bold = true;
+                    worksheet.Cells[head, x].Borders.LineStyle = XlLineStyle.xlContinuous;
+                    worksheet.Cells[head, x].Cells.HorizontalAlignment = XlHAlign.xlHAlignCenter;
+                    worksheet.Cells[head, x].Font.Color = Color.White;
+
+                    worksheet.Cells[head, x].Interior.Color = ValidationForms.GetColorSistema(TipoCon);
+                    x++;
+                }
+
+                // datos celdas
+                head++;
+                foreach (ListViewItem row in listView4.Items)
+                {
+                    var y = 1;
+                    for (var j = 0; j <= listView4.Columns.Count - 1; j++)
+                    {
+                        if (j != 1 && listView4.Columns[j].Width < 1) continue;
+
+                        worksheet.Cells[head, y] = j == 2
+                            ? Convert.ToDateTime(row.SubItems[j].Text).ToString("yyyy/MM/dd")
+                            : row.SubItems[j].Text;
+
+                        worksheet.Cells[head, y].Borders(XlBordersIndex.xlEdgeLeft).LineStyle = XlLineStyle.xlContinuous;
+                        worksheet.Cells[head, y].Borders(XlBordersIndex.xlEdgeRight).LineStyle = XlLineStyle.xlContinuous;
+                        worksheet.Cells[head, y].Borders(XlBordersIndex.xlEdgeBottom).LineStyle = XlLineStyle.xlContinuous;
+                        y++;
+                    }
+
+                    head++;
+                }
+
+                head += 3;
+
+                worksheet.Range["A" + head + ":F" + head].Merge();
+                worksheet.Range["A" + head + ":F" + head].Value = Label1.Text;
+                worksheet.Range["A" + head + ":F" + head].Font.Bold = true;
+                worksheet.Range["A" + head + ":F" + head].Cells.HorizontalAlignment = XlHAlign.xlHAlignRight;
+                worksheet.Range["A" + head + ":F" + head].Interior.Color = ValidationForms.GetColorSistema(TipoCon);
+                worksheet.Range["A" + head + ":F" + head].Font.Color = Color.White;
+                worksheet.Range["A" + head + ":F" + head].Font.Size = 12;
+
+
+                var position = (Range)worksheet.Cells[2, 7];
+                Clipboard.SetImage(ValidationForms.Logo(TipoCon));
+                worksheet.Paste(position);
+
+                worksheet.Range["A1:" + ic + rc].Columns.AutoFit();
+                app.DisplayAlerts = false;
+                app.Visible = true;
+                app.DisplayAlerts = true;
+                KryptonMessageBox.Show(@"ARCHIVO generado correctamente!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+            }
+            catch
+            {
+                KryptonMessageBox.Show(@"HUBO UN PROBLEMA AL EXPORTAR DATOS!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error);
+            }
+        }
+
+        private void txtFiltro_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyValue != 13) return;
+            CargarAsignaciones(0);
+        }
     }
 }

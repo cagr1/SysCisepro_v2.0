@@ -194,6 +194,7 @@ Namespace FORMULARIOS.CONTABILIDAD.CUENTAS_POR_PAGAR
             dgvCuentasPorPagar.Font = New Font("Roboto", 8, FontStyle.Regular)
             autocompletarNombreProveedor()
             rbGeneral.Checked = True
+            ChkTodos.ForeColor = Color.FromArgb(30, 57, 91)
         End Sub
         Private Sub txtNombreComercialProveedorGeneral_KeyDown(ByVal sender As System.Object, ByVal e As Windows.Forms.KeyEventArgs) Handles txtNombreComercialProveedorGeneral.KeyDown
             If e.KeyCode = Keys.Enter Then

@@ -506,5 +506,9 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
             CargarChequesEmitidosCobrados()
             CargarChequesEmitidosCaducados()
         End Sub
+
+        Private Sub chkCaducado_CheckedChanged(sender As Object, e As EventArgs) Handles chkCaducado.CheckedChanged
+
+        End Sub
     End Class
 End Namespace

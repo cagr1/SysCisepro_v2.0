@@ -21,7 +21,7 @@ namespace SysCisepro3
         private readonly TipoConexion _tipoCon; // TIPO DE CONEXION (CISEPRO, SEPORTAPC, ASERNAVA)
         private readonly int _tiempoNotificacion; // TIEMPO PARA NOTIFICACION
 
-        private FrmLogin _loginForm;
+        //private FrmLogin _loginForm;
         private FrmNewLogin2 _newLoginForm;
         
         public FrmIntro(TipoConexion tipoCon, int tiempoNotificacion)
@@ -99,7 +99,7 @@ namespace SysCisepro3
             //_loginForm = new FrmLogin { TipoCon = _tipoCon, TiempoNotificacion = _tiempoNotificacion };
             //_loginForm.Show();
 
-            _newLoginForm = new FrmNewLogin2();
+            _newLoginForm = new FrmNewLogin2 { TipoCon = _tipoCon, TiempoNotificacion = _tiempoNotificacion };
             _newLoginForm.Show();
         }
 

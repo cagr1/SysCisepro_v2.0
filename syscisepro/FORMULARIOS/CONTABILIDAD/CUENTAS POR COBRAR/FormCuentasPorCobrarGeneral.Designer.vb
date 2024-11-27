@@ -50,19 +50,19 @@
             Me.btnExportar = New System.Windows.Forms.ToolStripMenuItem()
             Me.REPORTEASIENTOToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
             Me.KryptonGroupBox1 = New Krypton.Toolkit.KryptonGroupBox()
-            Me.KryptonLabel1 = New Krypton.Toolkit.KryptonLabel()
-            Me.KryptonLabel2 = New Krypton.Toolkit.KryptonLabel()
             Me.KryptonLabel3 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel2 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel1 = New Krypton.Toolkit.KryptonLabel()
             Me.KryptonGroupBox2 = New Krypton.Toolkit.KryptonGroupBox()
-            Me.KryptonLabel4 = New Krypton.Toolkit.KryptonLabel()
-            Me.KryptonLabel5 = New Krypton.Toolkit.KryptonLabel()
-            Me.KryptonLabel6 = New Krypton.Toolkit.KryptonLabel()
-            Me.KryptonLabel7 = New Krypton.Toolkit.KryptonLabel()
-            Me.KryptonLabel8 = New Krypton.Toolkit.KryptonLabel()
-            Me.KryptonLabel9 = New Krypton.Toolkit.KryptonLabel()
-            Me.KryptonLabel10 = New Krypton.Toolkit.KryptonLabel()
-            Me.txtTotalCuentasPorCobrar = New System.Windows.Forms.TextBox()
             Me.KryptonLabel11 = New Krypton.Toolkit.KryptonLabel()
+            Me.txtTotalCuentasPorCobrar = New System.Windows.Forms.TextBox()
+            Me.KryptonLabel10 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel9 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel8 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel7 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel6 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel5 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel4 = New Krypton.Toolkit.KryptonLabel()
             CType(Me.dgvCuentasPorCobrar, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.dgvCliente, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.MenuStrip1.SuspendLayout()
@@ -78,6 +78,7 @@
             '
             'ChkTodos
             '
+            Me.ChkTodos.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.ChkTodos.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.ChkTodos.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
             Me.ChkTodos.Location = New System.Drawing.Point(207, 5)
@@ -85,11 +86,12 @@
             Me.ChkTodos.Size = New System.Drawing.Size(104, 22)
             Me.ChkTodos.TabIndex = 26
             Me.ChkTodos.Text = "Mostrar todas"
-            Me.ChkTodos.UseVisualStyleBackColor = True
+            Me.ChkTodos.UseVisualStyleBackColor = False
             '
             'rbConsorcioDetalle
             '
             Me.rbConsorcioDetalle.AutoSize = True
+            Me.rbConsorcioDetalle.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.rbConsorcioDetalle.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.rbConsorcioDetalle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
             Me.rbConsorcioDetalle.Location = New System.Drawing.Point(92, 22)
@@ -98,11 +100,12 @@
             Me.rbConsorcioDetalle.TabIndex = 25
             Me.rbConsorcioDetalle.TabStop = True
             Me.rbConsorcioDetalle.Text = "Grupo Detallado"
-            Me.rbConsorcioDetalle.UseVisualStyleBackColor = True
+            Me.rbConsorcioDetalle.UseVisualStyleBackColor = False
             '
             'rbConsorcio
             '
             Me.rbConsorcio.AutoSize = True
+            Me.rbConsorcio.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.rbConsorcio.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.rbConsorcio.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
             Me.rbConsorcio.Location = New System.Drawing.Point(92, 2)
@@ -111,11 +114,12 @@
             Me.rbConsorcio.TabIndex = 24
             Me.rbConsorcio.TabStop = True
             Me.rbConsorcio.Text = "Grupo General"
-            Me.rbConsorcio.UseVisualStyleBackColor = True
+            Me.rbConsorcio.UseVisualStyleBackColor = False
             '
             'rbPorCliente
             '
             Me.rbPorCliente.AutoSize = True
+            Me.rbPorCliente.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.rbPorCliente.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.rbPorCliente.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
             Me.rbPorCliente.Location = New System.Drawing.Point(3, 22)
@@ -124,11 +128,12 @@
             Me.rbPorCliente.TabIndex = 1
             Me.rbPorCliente.TabStop = True
             Me.rbPorCliente.Text = "Por Cliente"
-            Me.rbPorCliente.UseVisualStyleBackColor = True
+            Me.rbPorCliente.UseVisualStyleBackColor = False
             '
             'rbGeneral
             '
             Me.rbGeneral.AutoSize = True
+            Me.rbGeneral.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.rbGeneral.Checked = True
             Me.rbGeneral.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.rbGeneral.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
@@ -138,7 +143,7 @@
             Me.rbGeneral.TabIndex = 0
             Me.rbGeneral.TabStop = True
             Me.rbGeneral.Text = "General"
-            Me.rbGeneral.UseVisualStyleBackColor = True
+            Me.rbGeneral.UseVisualStyleBackColor = False
             '
             'txtNombreComercialClienteGeneral
             '
@@ -155,6 +160,7 @@
             'lblIdClienteGeneral
             '
             Me.lblIdClienteGeneral.AutoSize = True
+            Me.lblIdClienteGeneral.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.lblIdClienteGeneral.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.lblIdClienteGeneral.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
             Me.lblIdClienteGeneral.Location = New System.Drawing.Point(386, 7)
@@ -171,7 +177,7 @@
             Me.dgvCuentasPorCobrar.AllowUserToResizeRows = False
             DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
             Me.dgvCuentasPorCobrar.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
-            Me.dgvCuentasPorCobrar.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
+            Me.dgvCuentasPorCobrar.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(185, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(227, Byte), Integer))
             Me.dgvCuentasPorCobrar.BorderStyle = System.Windows.Forms.BorderStyle.None
             Me.dgvCuentasPorCobrar.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
             Me.dgvCuentasPorCobrar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
@@ -207,7 +213,7 @@
             '
             Me.txtTotalNotaCredito.BackColor = System.Drawing.Color.White
             Me.txtTotalNotaCredito.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtTotalNotaCredito.Location = New System.Drawing.Point(529, 37)
+            Me.txtTotalNotaCredito.Location = New System.Drawing.Point(529, 31)
             Me.txtTotalNotaCredito.Name = "txtTotalNotaCredito"
             Me.txtTotalNotaCredito.ReadOnly = True
             Me.txtTotalNotaCredito.Size = New System.Drawing.Size(75, 21)
@@ -219,7 +225,7 @@
             '
             Me.txtTotalAbonado.BackColor = System.Drawing.Color.White
             Me.txtTotalAbonado.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtTotalAbonado.Location = New System.Drawing.Point(776, 13)
+            Me.txtTotalAbonado.Location = New System.Drawing.Point(776, 7)
             Me.txtTotalAbonado.Name = "txtTotalAbonado"
             Me.txtTotalAbonado.ReadOnly = True
             Me.txtTotalAbonado.Size = New System.Drawing.Size(75, 21)
@@ -231,7 +237,7 @@
             '
             Me.txtTotalSubtotal.BackColor = System.Drawing.Color.White
             Me.txtTotalSubtotal.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtTotalSubtotal.Location = New System.Drawing.Point(65, 10)
+            Me.txtTotalSubtotal.Location = New System.Drawing.Point(65, 4)
             Me.txtTotalSubtotal.Name = "txtTotalSubtotal"
             Me.txtTotalSubtotal.ReadOnly = True
             Me.txtTotalSubtotal.Size = New System.Drawing.Size(75, 21)
@@ -243,7 +249,7 @@
             '
             Me.txtTotalIVA.BackColor = System.Drawing.Color.White
             Me.txtTotalIVA.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtTotalIVA.Location = New System.Drawing.Point(65, 38)
+            Me.txtTotalIVA.Location = New System.Drawing.Point(65, 32)
             Me.txtTotalIVA.Name = "txtTotalIVA"
             Me.txtTotalIVA.ReadOnly = True
             Me.txtTotalIVA.Size = New System.Drawing.Size(75, 21)
@@ -255,7 +261,7 @@
             '
             Me.txtTotalFacturas.BackColor = System.Drawing.Color.White
             Me.txtTotalFacturas.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtTotalFacturas.Location = New System.Drawing.Point(298, 12)
+            Me.txtTotalFacturas.Location = New System.Drawing.Point(298, 6)
             Me.txtTotalFacturas.Name = "txtTotalFacturas"
             Me.txtTotalFacturas.ReadOnly = True
             Me.txtTotalFacturas.Size = New System.Drawing.Size(75, 21)
@@ -267,7 +273,7 @@
             '
             Me.txtTotalRetencion.BackColor = System.Drawing.Color.White
             Me.txtTotalRetencion.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtTotalRetencion.Location = New System.Drawing.Point(299, 38)
+            Me.txtTotalRetencion.Location = New System.Drawing.Point(299, 32)
             Me.txtTotalRetencion.Name = "txtTotalRetencion"
             Me.txtTotalRetencion.ReadOnly = True
             Me.txtTotalRetencion.Size = New System.Drawing.Size(75, 21)
@@ -279,7 +285,7 @@
             '
             Me.txtTotalACobrar.BackColor = System.Drawing.Color.White
             Me.txtTotalACobrar.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtTotalACobrar.Location = New System.Drawing.Point(529, 10)
+            Me.txtTotalACobrar.Location = New System.Drawing.Point(529, 4)
             Me.txtTotalACobrar.Name = "txtTotalACobrar"
             Me.txtTotalACobrar.ReadOnly = True
             Me.txtTotalACobrar.Size = New System.Drawing.Size(75, 21)
@@ -290,6 +296,7 @@
             'lblIdComprobanteEgresoBanco
             '
             Me.lblIdComprobanteEgresoBanco.AutoSize = True
+            Me.lblIdComprobanteEgresoBanco.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.lblIdComprobanteEgresoBanco.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.lblIdComprobanteEgresoBanco.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
             Me.lblIdComprobanteEgresoBanco.Location = New System.Drawing.Point(753, 5)
@@ -383,13 +390,13 @@
             Me.KryptonGroupBox1.TabIndex = 185
             Me.KryptonGroupBox1.Values.Heading = "Tipo de Reporte"
             '
-            'KryptonLabel1
+            'KryptonLabel3
             '
-            Me.KryptonLabel1.Location = New System.Drawing.Point(320, 3)
-            Me.KryptonLabel1.Name = "KryptonLabel1"
-            Me.KryptonLabel1.Size = New System.Drawing.Size(48, 20)
-            Me.KryptonLabel1.TabIndex = 27
-            Me.KryptonLabel1.Values.Text = "Cliente"
+            Me.KryptonLabel3.Location = New System.Drawing.Point(744, 24)
+            Me.KryptonLabel3.Name = "KryptonLabel3"
+            Me.KryptonLabel3.Size = New System.Drawing.Size(41, 20)
+            Me.KryptonLabel3.TabIndex = 78
+            Me.KryptonLabel3.Values.Text = "Hasta"
             '
             'KryptonLabel2
             '
@@ -399,17 +406,17 @@
             Me.KryptonLabel2.TabIndex = 77
             Me.KryptonLabel2.Values.Text = "Desde"
             '
-            'KryptonLabel3
+            'KryptonLabel1
             '
-            Me.KryptonLabel3.Location = New System.Drawing.Point(744, 24)
-            Me.KryptonLabel3.Name = "KryptonLabel3"
-            Me.KryptonLabel3.Size = New System.Drawing.Size(41, 20)
-            Me.KryptonLabel3.TabIndex = 78
-            Me.KryptonLabel3.Values.Text = "Hasta"
+            Me.KryptonLabel1.Location = New System.Drawing.Point(320, 3)
+            Me.KryptonLabel1.Name = "KryptonLabel1"
+            Me.KryptonLabel1.Size = New System.Drawing.Size(48, 20)
+            Me.KryptonLabel1.TabIndex = 27
+            Me.KryptonLabel1.Values.Text = "Cliente"
             '
             'KryptonGroupBox2
             '
-            Me.KryptonGroupBox2.CaptionOverlap = 1.0R
+            Me.KryptonGroupBox2.CaptionOverlap = 0R
             Me.KryptonGroupBox2.GroupBackStyle = Krypton.Toolkit.PaletteBackStyle.PanelRibbonInactive
             Me.KryptonGroupBox2.Location = New System.Drawing.Point(7, 435)
             Me.KryptonGroupBox2.Name = "KryptonGroupBox2"
@@ -432,71 +439,23 @@
             Me.KryptonGroupBox2.Panel.Controls.Add(Me.txtTotalACobrar)
             Me.KryptonGroupBox2.Panel.Controls.Add(Me.txtTotalRetencion)
             Me.KryptonGroupBox2.Panel.Controls.Add(Me.txtTotalFacturas)
-            Me.KryptonGroupBox2.Size = New System.Drawing.Size(911, 90)
+            Me.KryptonGroupBox2.Size = New System.Drawing.Size(911, 80)
             Me.KryptonGroupBox2.TabIndex = 186
             Me.KryptonGroupBox2.Values.Heading = "Valores"
             '
-            'KryptonLabel4
+            'KryptonLabel11
             '
-            Me.KryptonLabel4.Location = New System.Drawing.Point(5, 12)
-            Me.KryptonLabel4.Name = "KryptonLabel4"
-            Me.KryptonLabel4.Size = New System.Drawing.Size(56, 20)
-            Me.KryptonLabel4.TabIndex = 0
-            Me.KryptonLabel4.Values.Text = "Subtotal"
-            '
-            'KryptonLabel5
-            '
-            Me.KryptonLabel5.Location = New System.Drawing.Point(5, 38)
-            Me.KryptonLabel5.Name = "KryptonLabel5"
-            Me.KryptonLabel5.Size = New System.Drawing.Size(29, 20)
-            Me.KryptonLabel5.TabIndex = 1
-            Me.KryptonLabel5.Values.Text = "IVA"
-            '
-            'KryptonLabel6
-            '
-            Me.KryptonLabel6.Location = New System.Drawing.Point(194, 12)
-            Me.KryptonLabel6.Name = "KryptonLabel6"
-            Me.KryptonLabel6.Size = New System.Drawing.Size(73, 20)
-            Me.KryptonLabel6.TabIndex = 9
-            Me.KryptonLabel6.Values.Text = "Facturacion"
-            '
-            'KryptonLabel7
-            '
-            Me.KryptonLabel7.Location = New System.Drawing.Point(194, 38)
-            Me.KryptonLabel7.Name = "KryptonLabel7"
-            Me.KryptonLabel7.Size = New System.Drawing.Size(65, 20)
-            Me.KryptonLabel7.TabIndex = 10
-            Me.KryptonLabel7.Values.Text = "Retencion"
-            '
-            'KryptonLabel8
-            '
-            Me.KryptonLabel8.Location = New System.Drawing.Point(425, 14)
-            Me.KryptonLabel8.Name = "KryptonLabel8"
-            Me.KryptonLabel8.Size = New System.Drawing.Size(57, 20)
-            Me.KryptonLabel8.TabIndex = 11
-            Me.KryptonLabel8.Values.Text = "T Cobrar"
-            '
-            'KryptonLabel9
-            '
-            Me.KryptonLabel9.Location = New System.Drawing.Point(425, 38)
-            Me.KryptonLabel9.Name = "KryptonLabel9"
-            Me.KryptonLabel9.Size = New System.Drawing.Size(91, 20)
-            Me.KryptonLabel9.TabIndex = 12
-            Me.KryptonLabel9.Values.Text = "T Nota Credito"
-            '
-            'KryptonLabel10
-            '
-            Me.KryptonLabel10.Location = New System.Drawing.Point(663, 13)
-            Me.KryptonLabel10.Name = "KryptonLabel10"
-            Me.KryptonLabel10.Size = New System.Drawing.Size(71, 20)
-            Me.KryptonLabel10.TabIndex = 14
-            Me.KryptonLabel10.Values.Text = "T Abonado"
+            Me.KryptonLabel11.Location = New System.Drawing.Point(663, 31)
+            Me.KryptonLabel11.Name = "KryptonLabel11"
+            Me.KryptonLabel11.Size = New System.Drawing.Size(51, 20)
+            Me.KryptonLabel11.TabIndex = 15
+            Me.KryptonLabel11.Values.Text = "T Saldo"
             '
             'txtTotalCuentasPorCobrar
             '
             Me.txtTotalCuentasPorCobrar.BackColor = System.Drawing.Color.White
             Me.txtTotalCuentasPorCobrar.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtTotalCuentasPorCobrar.Location = New System.Drawing.Point(776, 40)
+            Me.txtTotalCuentasPorCobrar.Location = New System.Drawing.Point(776, 34)
             Me.txtTotalCuentasPorCobrar.Name = "txtTotalCuentasPorCobrar"
             Me.txtTotalCuentasPorCobrar.ReadOnly = True
             Me.txtTotalCuentasPorCobrar.Size = New System.Drawing.Size(75, 21)
@@ -504,21 +463,69 @@
             Me.txtTotalCuentasPorCobrar.Text = "0.00"
             Me.txtTotalCuentasPorCobrar.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
             '
-            'KryptonLabel11
+            'KryptonLabel10
             '
-            Me.KryptonLabel11.Location = New System.Drawing.Point(663, 37)
-            Me.KryptonLabel11.Name = "KryptonLabel11"
-            Me.KryptonLabel11.Size = New System.Drawing.Size(51, 20)
-            Me.KryptonLabel11.TabIndex = 15
-            Me.KryptonLabel11.Values.Text = "T Saldo"
+            Me.KryptonLabel10.Location = New System.Drawing.Point(663, 7)
+            Me.KryptonLabel10.Name = "KryptonLabel10"
+            Me.KryptonLabel10.Size = New System.Drawing.Size(71, 20)
+            Me.KryptonLabel10.TabIndex = 14
+            Me.KryptonLabel10.Values.Text = "T Abonado"
+            '
+            'KryptonLabel9
+            '
+            Me.KryptonLabel9.Location = New System.Drawing.Point(425, 32)
+            Me.KryptonLabel9.Name = "KryptonLabel9"
+            Me.KryptonLabel9.Size = New System.Drawing.Size(91, 20)
+            Me.KryptonLabel9.TabIndex = 12
+            Me.KryptonLabel9.Values.Text = "T Nota Credito"
+            '
+            'KryptonLabel8
+            '
+            Me.KryptonLabel8.Location = New System.Drawing.Point(425, 8)
+            Me.KryptonLabel8.Name = "KryptonLabel8"
+            Me.KryptonLabel8.Size = New System.Drawing.Size(57, 20)
+            Me.KryptonLabel8.TabIndex = 11
+            Me.KryptonLabel8.Values.Text = "T Cobrar"
+            '
+            'KryptonLabel7
+            '
+            Me.KryptonLabel7.Location = New System.Drawing.Point(194, 32)
+            Me.KryptonLabel7.Name = "KryptonLabel7"
+            Me.KryptonLabel7.Size = New System.Drawing.Size(65, 20)
+            Me.KryptonLabel7.TabIndex = 10
+            Me.KryptonLabel7.Values.Text = "Retencion"
+            '
+            'KryptonLabel6
+            '
+            Me.KryptonLabel6.Location = New System.Drawing.Point(194, 6)
+            Me.KryptonLabel6.Name = "KryptonLabel6"
+            Me.KryptonLabel6.Size = New System.Drawing.Size(73, 20)
+            Me.KryptonLabel6.TabIndex = 9
+            Me.KryptonLabel6.Values.Text = "Facturacion"
+            '
+            'KryptonLabel5
+            '
+            Me.KryptonLabel5.Location = New System.Drawing.Point(5, 32)
+            Me.KryptonLabel5.Name = "KryptonLabel5"
+            Me.KryptonLabel5.Size = New System.Drawing.Size(29, 20)
+            Me.KryptonLabel5.TabIndex = 1
+            Me.KryptonLabel5.Values.Text = "IVA"
+            '
+            'KryptonLabel4
+            '
+            Me.KryptonLabel4.Location = New System.Drawing.Point(5, 6)
+            Me.KryptonLabel4.Name = "KryptonLabel4"
+            Me.KryptonLabel4.Size = New System.Drawing.Size(56, 20)
+            Me.KryptonLabel4.TabIndex = 0
+            Me.KryptonLabel4.Values.Text = "Subtotal"
             '
             'FormCuentasPorCobrarGeneral
             '
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.AutoSize = True
-            Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
-            Me.ClientSize = New System.Drawing.Size(922, 527)
+            Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(185, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(227, Byte), Integer))
+            Me.ClientSize = New System.Drawing.Size(922, 514)
             Me.Controls.Add(Me.KryptonGroupBox2)
             Me.Controls.Add(Me.KryptonGroupBox1)
             Me.Controls.Add(Me.MenuStrip1)

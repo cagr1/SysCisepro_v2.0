@@ -6,6 +6,7 @@ using ClassLibraryCisepro3.TalentoHumano;
 using SysCisepro3.Datos;
 using SysCisepro3.Properties;
 using Krypton.Toolkit;
+using syscisepro;
 
 namespace SysCisepro3.TalentoHumano
 {
@@ -85,13 +86,28 @@ namespace SysCisepro3.TalentoHumano
 
                 foreach (DataGridViewColumn col in dataGridView1.Columns) col.Visible = col.Tag != null;
 
+                foreach (DataGridViewRow row in dataGridView1.Rows)
+                {
+
+                    if (row.Cells[2].Value != null && row.Cells[22].Value != DBNull.Value)
+                    {
+                        // Verificar si el estado no es 1
+                        if (Convert.ToInt32(row.Cells[22].Value) != 1)
+                        {
+                            row.DefaultCellStyle.BackColor = Color.Coral; 
+                        }
+                    }
+                }
+
+
                 dataGridView1.AutoResizeRows();
                 Label2.Text = dataGridView1.RowCount + @" REGISTROS ENCONTRADOS";
             }
             catch (Exception ex)
             {
-                label4.Text = @"ERROR AL CARGAR DATOS: " + ex.Message;
-                label4.Visible = true;
+
+                KryptonMessageBox.Show(@"Error al cargar datos: " + ex.Message, @"ERROR", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error);
+                
                 dataGridView1.Rows.Clear();
             }
         }

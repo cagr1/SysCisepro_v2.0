@@ -329,7 +329,8 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
         End Sub
         Private Sub AgregarConceptosComprobanteEgreso()
 
-            Dim respuesta = InputBox("Ingrese el valor del comprobante", "Valor comprobante", txtValorComprobanteEgresoBancos.Text)
+            'Dim respuesta = InputBox("Ingrese el valor del comprobante", "Valor comprobante", txtValorComprobanteEgresoBancos.Text)
+            Dim respuesta = KryptonInputBox.Show("Ingrese el valor del comprobante", "Valor comprobante", txtValorComprobanteEgresoBancos.Text)
             If respuesta.Trim().Length = 0 Then Return
 
             If IsNumeric(respuesta) Then
@@ -411,7 +412,8 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
                 If dgvComprobanteEgresoBanco.RowCount > 0 Then
                     If txtNumeroCheque.Text <> "" Then
 
-                        Dim respuesta = InputBox("Ingrese el valor del comprobante", "VALOR BANCO", txtTotalDebe.Text)
+                        'Dim respuesta = InputBox("Ingrese el valor del comprobante", "VALOR BANCO", txtTotalDebe.Text)
+                        Dim respuesta = KryptonInputBox.Show("Ingrese el valor del comprobante", "VALOR BANCO", txtTotalDebe.Text)
                         If IsNumeric(respuesta) Then
                             dgvComprobanteEgresoBanco.Rows.Add()
 

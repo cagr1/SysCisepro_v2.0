@@ -58,7 +58,8 @@
             Me.dgvEvaluacionProveedor.AllowUserToResizeRows = False
             DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
             Me.dgvEvaluacionProveedor.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
-            Me.dgvEvaluacionProveedor.BackgroundColor = System.Drawing.Color.White
+            Me.dgvEvaluacionProveedor.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(185, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(227, Byte), Integer))
+            Me.dgvEvaluacionProveedor.BorderStyle = System.Windows.Forms.BorderStyle.None
             Me.dgvEvaluacionProveedor.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
             Me.dgvEvaluacionProveedor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
             Me.dgvEvaluacionProveedor.Location = New System.Drawing.Point(2, 97)
@@ -252,7 +253,7 @@
             '
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-            Me.BackColor = System.Drawing.Color.White
+            Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(185, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(227, Byte), Integer))
             Me.ClientSize = New System.Drawing.Size(1020, 627)
             Me.Controls.Add(Me.MenuStrip1)
             Me.Controls.Add(Me.dgvEvaluacionProveedor)

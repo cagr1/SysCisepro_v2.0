@@ -4,6 +4,7 @@ Imports ClassLibraryCisepro.CONTABILIDAD.VENTAS
 Imports ClassLibraryCisepro.ENUMS
 Imports Microsoft.Office.Interop
 Imports syscisepro.DATOS
+Imports Krypton.Toolkit
 
 Namespace FORMULARIOS.CONTABILIDAD.CUENTAS_POR_COBRAR
     Public Class FrmCuentasPorCobrarGeneralClienteConvenio
@@ -198,7 +199,8 @@ Namespace FORMULARIOS.CONTABILIDAD.CUENTAS_POR_COBRAR
                     txtTotalCuentasPorCobrar.Text = Math.Round(((totalFacturado - totalRetenido) - (totalNotaCredito + totalAbonado)), 2)
                 End If
             Catch ex As Exception
-                MsgBox("METODO SUMAR TOTAL CUENTAS POR COBRAR" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
+                'MsgBox("METODO SUMAR TOTAL CUENTAS POR COBRAR" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
+                KryptonMessageBox.Show("METODO SUMAR TOTAL CUENTAS POR COBRAR" & vbNewLine & ex.Message.ToString, "Mensaje de excepción", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Warning)
             End Try
         End Sub
 
@@ -208,14 +210,15 @@ Namespace FORMULARIOS.CONTABILIDAD.CUENTAS_POR_COBRAR
                     ExportarDatosExcel(dgvCuentasPorCobrar, "CUENTAS POR COBRAR")
                 End If
             Catch ex As Exception
-
+                KryptonMessageBox.Show("Hubo un problema al exportar datos!", "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
 
         Private Sub ExportarDatosExcel(ByVal dgvCuentasPorPagar As DataGridView, ByVal titulo As String)
             Try
                 If dgvCuentasPorPagar.Rows.Count = 0 Then
-                    MsgBox("No hay datos que exportar!", MsgBoxStyle.Exclamation, "Mensaje de validación")
+                    'MsgBox("No hay datos que exportar!", MsgBoxStyle.Exclamation, "Mensaje de validación")
+                    KryptonMessageBox.Show("No hay datos que exportar!", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
                     Return
                 End If
 
@@ -326,7 +329,8 @@ Namespace FORMULARIOS.CONTABILIDAD.CUENTAS_POR_COBRAR
                 app.Visible = True
                 app.DisplayAlerts = True
             Catch ex As Exception
-                MessageBox.Show("Hubo un problema al exportar datos!", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                'MessageBox.Show("Hubo un problema al exportar datos!", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                KryptonMessageBox.Show("Hubo un problema al exportar datos!", "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
     End Class

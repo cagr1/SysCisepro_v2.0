@@ -4,6 +4,7 @@ Imports ClassLibraryCisepro.CONTABILIDAD.VENTAS
 Imports ClassLibraryCisepro.ENUMS
 Imports Microsoft.Office.Interop
 Imports syscisepro.DATOS
+Imports Krypton.Toolkit
 
 Namespace FORMULARIOS.CONTABILIDAD.CUENTAS_POR_COBRAR
     ''' <summary>
@@ -45,7 +46,8 @@ Namespace FORMULARIOS.CONTABILIDAD.CUENTAS_POR_COBRAR
         Private Sub ExportarDatosExcel(ByVal dgvCuentasPorPagar As DataGridView, ByVal titulo As String)
             Try
                 If dgvCuentasPorPagar.Rows.Count = 0 Then
-                    MsgBox("No hay datos que exportar!", MsgBoxStyle.Exclamation, "Mensaje de validación")
+                    'MsgBox("No hay datos que exportar!", MsgBoxStyle.Exclamation, "Mensaje de validación")
+                    KryptonMessageBox.Show("No hay datos que exportar!", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                     Return
                 End If
 
@@ -166,7 +168,8 @@ Namespace FORMULARIOS.CONTABILIDAD.CUENTAS_POR_COBRAR
                 dgvCuentasPorCobrar.ReadOnly = False
 
             Catch ex As Exception
-                MsgBox("METODO CARGAR CUENTAS POR COBRAR" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
+                'MsgBox("METODO CARGAR CUENTAS POR COBRAR" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
+                KryptonMessageBox.Show("Metodo cargar cuentas por cobrar" & vbNewLine & ex.Message.ToString, "Mensaje de excepción", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
         Public Sub cargarCuentasPorCobrarPorCliente(ByVal all As Boolean, ByVal min As Boolean)
@@ -226,7 +229,8 @@ Namespace FORMULARIOS.CONTABILIDAD.CUENTAS_POR_COBRAR
                     txtTotalCuentasPorCobrar.Text = Math.Round(totalCobrar, 2)
                 End If
             Catch ex As Exception
-                MsgBox("METODO SUMAR TOTAL CUENTAS POR COBRAR" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
+                'MsgBox("METODO SUMAR TOTAL CUENTAS POR COBRAR" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
+                KryptonMessageBox.Show("Metodo sumar total cuentas por cobrar" & vbNewLine & ex.Message.ToString, "Mensaje de excepción", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
 
@@ -254,7 +258,8 @@ Namespace FORMULARIOS.CONTABILIDAD.CUENTAS_POR_COBRAR
                     lblIdClienteGeneral.Text = dgvCliente.Rows(0).Cells(0).Value
                 End If
             Catch ex As Exception
-                MsgBox("CARGAR DATOS CLIENTE." & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
+                'MsgBox("CARGAR DATOS CLIENTE." & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
+                KryptonMessageBox.Show("Cargar datos cliente." & vbNewLine & ex.Message.ToString, "Mensaje de excepción", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
 
@@ -337,7 +342,8 @@ Namespace FORMULARIOS.CONTABILIDAD.CUENTAS_POR_COBRAR
 
         Private Sub REPORTEASIENTOToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles REPORTEASIENTOToolStripMenuItem.Click
             If dgvCuentasPorCobrar.Rows.Count = 0 Then
-                MsgBox("NO HAY REGISTROS QUE CARGAR. Primero realice una busqueda", MsgBoxStyle.Exclamation, "Mensaje de validación")
+                'MsgBox("NO HAY REGISTROS QUE CARGAR. Primero realice una busqueda", MsgBoxStyle.Exclamation, "Mensaje de validación")
+                KryptonMessageBox.Show("No hay registros que cargar. Primero realice una busqueda", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                 Return
             End If
 

@@ -27,17 +27,11 @@
             Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormAprovacionRequisicion))
             Me.dgvRequisicionProductoServicio = New System.Windows.Forms.DataGridView()
-            Me.gbRequisicion = New System.Windows.Forms.GroupBox()
             Me.txtPrioridadEntregaRequisicion = New System.Windows.Forms.TextBox()
-            Me.lblEstadoRequisicionProductoServicio = New System.Windows.Forms.Label()
             Me.txtIdRequisicionProductoServicio = New System.Windows.Forms.TextBox()
             Me.txtTiempoEntregaRequisicion = New System.Windows.Forms.TextBox()
             Me.txtFechaRequisicionProducto = New System.Windows.Forms.TextBox()
-            Me.lblEtiquetaNumeroRequisicion = New System.Windows.Forms.Label()
-            Me.lblEntregaRequerimientoProductoServicio = New System.Windows.Forms.Label()
-            Me.lblFechaRequisicionProductoServicio = New System.Windows.Forms.Label()
             Me.txtNombrePersonal = New System.Windows.Forms.TextBox()
-            Me.lblRealizadoPor = New System.Windows.Forms.Label()
             Me.dgvDetalleRequisicionProductoServicio = New System.Windows.Forms.DataGridView()
             Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
             Me.btnRecargar = New System.Windows.Forms.ToolStripMenuItem()
@@ -46,10 +40,19 @@
             Me.btnModificar = New System.Windows.Forms.ToolStripMenuItem()
             Me.btnGuardar = New System.Windows.Forms.ToolStripMenuItem()
             Me.btnCancelar = New System.Windows.Forms.ToolStripMenuItem()
+            Me.KryptonGroupBox1 = New Krypton.Toolkit.KryptonGroupBox()
+            Me.KryptonLabel5 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel4 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel3 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel2 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel1 = New Krypton.Toolkit.KryptonLabel()
             CType(Me.dgvRequisicionProductoServicio, System.ComponentModel.ISupportInitialize).BeginInit()
-            Me.gbRequisicion.SuspendLayout()
             CType(Me.dgvDetalleRequisicionProductoServicio, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.MenuStrip1.SuspendLayout()
+            CType(Me.KryptonGroupBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType(Me.KryptonGroupBox1.Panel, System.ComponentModel.ISupportInitialize).BeginInit()
+            Me.KryptonGroupBox1.Panel.SuspendLayout()
+            Me.KryptonGroupBox1.SuspendLayout()
             Me.SuspendLayout()
             '
             'dgvRequisicionProductoServicio
@@ -59,36 +62,16 @@
             Me.dgvRequisicionProductoServicio.AllowUserToResizeRows = False
             DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
             Me.dgvRequisicionProductoServicio.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
-            Me.dgvRequisicionProductoServicio.BackgroundColor = System.Drawing.Color.White
+            Me.dgvRequisicionProductoServicio.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(185, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(227, Byte), Integer))
+            Me.dgvRequisicionProductoServicio.BorderStyle = System.Windows.Forms.BorderStyle.None
             Me.dgvRequisicionProductoServicio.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
             Me.dgvRequisicionProductoServicio.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-            Me.dgvRequisicionProductoServicio.Location = New System.Drawing.Point(2, 33)
+            Me.dgvRequisicionProductoServicio.Location = New System.Drawing.Point(2, 37)
             Me.dgvRequisicionProductoServicio.Name = "dgvRequisicionProductoServicio"
             Me.dgvRequisicionProductoServicio.RowHeadersVisible = False
             Me.dgvRequisicionProductoServicio.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvRequisicionProductoServicio.Size = New System.Drawing.Size(539, 150)
+            Me.dgvRequisicionProductoServicio.Size = New System.Drawing.Size(535, 119)
             Me.dgvRequisicionProductoServicio.TabIndex = 0
-            '
-            'gbRequisicion
-            '
-            Me.gbRequisicion.BackColor = System.Drawing.Color.White
-            Me.gbRequisicion.Controls.Add(Me.txtPrioridadEntregaRequisicion)
-            Me.gbRequisicion.Controls.Add(Me.lblEstadoRequisicionProductoServicio)
-            Me.gbRequisicion.Controls.Add(Me.txtIdRequisicionProductoServicio)
-            Me.gbRequisicion.Controls.Add(Me.txtTiempoEntregaRequisicion)
-            Me.gbRequisicion.Controls.Add(Me.txtFechaRequisicionProducto)
-            Me.gbRequisicion.Controls.Add(Me.lblEtiquetaNumeroRequisicion)
-            Me.gbRequisicion.Controls.Add(Me.lblEntregaRequerimientoProductoServicio)
-            Me.gbRequisicion.Controls.Add(Me.lblFechaRequisicionProductoServicio)
-            Me.gbRequisicion.Controls.Add(Me.txtNombrePersonal)
-            Me.gbRequisicion.Controls.Add(Me.lblRealizadoPor)
-            Me.gbRequisicion.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.gbRequisicion.Location = New System.Drawing.Point(541, 34)
-            Me.gbRequisicion.Name = "gbRequisicion"
-            Me.gbRequisicion.Size = New System.Drawing.Size(439, 150)
-            Me.gbRequisicion.TabIndex = 1
-            Me.gbRequisicion.TabStop = False
-            Me.gbRequisicion.Text = "DATOS REQUISICIÓN"
             '
             'txtPrioridadEntregaRequisicion
             '
@@ -96,20 +79,10 @@
             Me.txtPrioridadEntregaRequisicion.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtPrioridadEntregaRequisicion.Enabled = False
             Me.txtPrioridadEntregaRequisicion.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtPrioridadEntregaRequisicion.Location = New System.Drawing.Point(106, 111)
+            Me.txtPrioridadEntregaRequisicion.Location = New System.Drawing.Point(82, 59)
             Me.txtPrioridadEntregaRequisicion.Name = "txtPrioridadEntregaRequisicion"
-            Me.txtPrioridadEntregaRequisicion.Size = New System.Drawing.Size(148, 22)
+            Me.txtPrioridadEntregaRequisicion.Size = New System.Drawing.Size(112, 22)
             Me.txtPrioridadEntregaRequisicion.TabIndex = 25
-            '
-            'lblEstadoRequisicionProductoServicio
-            '
-            Me.lblEstadoRequisicionProductoServicio.AutoSize = True
-            Me.lblEstadoRequisicionProductoServicio.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.lblEstadoRequisicionProductoServicio.Location = New System.Drawing.Point(4, 114)
-            Me.lblEstadoRequisicionProductoServicio.Name = "lblEstadoRequisicionProductoServicio"
-            Me.lblEstadoRequisicionProductoServicio.Size = New System.Drawing.Size(70, 14)
-            Me.lblEstadoRequisicionProductoServicio.TabIndex = 24
-            Me.lblEstadoRequisicionProductoServicio.Text = "PRIORIDAD:"
             '
             'txtIdRequisicionProductoServicio
             '
@@ -117,9 +90,9 @@
             Me.txtIdRequisicionProductoServicio.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtIdRequisicionProductoServicio.Enabled = False
             Me.txtIdRequisicionProductoServicio.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtIdRequisicionProductoServicio.Location = New System.Drawing.Point(106, 27)
+            Me.txtIdRequisicionProductoServicio.Location = New System.Drawing.Point(82, 3)
             Me.txtIdRequisicionProductoServicio.Name = "txtIdRequisicionProductoServicio"
-            Me.txtIdRequisicionProductoServicio.Size = New System.Drawing.Size(69, 22)
+            Me.txtIdRequisicionProductoServicio.Size = New System.Drawing.Size(58, 22)
             Me.txtIdRequisicionProductoServicio.TabIndex = 23
             '
             'txtTiempoEntregaRequisicion
@@ -128,9 +101,9 @@
             Me.txtTiempoEntregaRequisicion.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtTiempoEntregaRequisicion.Enabled = False
             Me.txtTiempoEntregaRequisicion.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtTiempoEntregaRequisicion.Location = New System.Drawing.Point(328, 111)
+            Me.txtTiempoEntregaRequisicion.Location = New System.Drawing.Point(261, 61)
             Me.txtTiempoEntregaRequisicion.Name = "txtTiempoEntregaRequisicion"
-            Me.txtTiempoEntregaRequisicion.Size = New System.Drawing.Size(106, 22)
+            Me.txtTiempoEntregaRequisicion.Size = New System.Drawing.Size(99, 22)
             Me.txtTiempoEntregaRequisicion.TabIndex = 20
             '
             'txtFechaRequisicionProducto
@@ -139,40 +112,10 @@
             Me.txtFechaRequisicionProducto.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtFechaRequisicionProducto.Enabled = False
             Me.txtFechaRequisicionProducto.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtFechaRequisicionProducto.Location = New System.Drawing.Point(106, 55)
+            Me.txtFechaRequisicionProducto.Location = New System.Drawing.Point(261, 5)
             Me.txtFechaRequisicionProducto.Name = "txtFechaRequisicionProducto"
-            Me.txtFechaRequisicionProducto.Size = New System.Drawing.Size(148, 22)
+            Me.txtFechaRequisicionProducto.Size = New System.Drawing.Size(99, 22)
             Me.txtFechaRequisicionProducto.TabIndex = 15
-            '
-            'lblEtiquetaNumeroRequisicion
-            '
-            Me.lblEtiquetaNumeroRequisicion.AutoSize = True
-            Me.lblEtiquetaNumeroRequisicion.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.lblEtiquetaNumeroRequisicion.Location = New System.Drawing.Point(4, 30)
-            Me.lblEtiquetaNumeroRequisicion.Name = "lblEtiquetaNumeroRequisicion"
-            Me.lblEtiquetaNumeroRequisicion.Size = New System.Drawing.Size(87, 14)
-            Me.lblEtiquetaNumeroRequisicion.TabIndex = 22
-            Me.lblEtiquetaNumeroRequisicion.Text = "REQ. NÚMERO:"
-            '
-            'lblEntregaRequerimientoProductoServicio
-            '
-            Me.lblEntregaRequerimientoProductoServicio.AutoSize = True
-            Me.lblEntregaRequerimientoProductoServicio.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.lblEntregaRequerimientoProductoServicio.Location = New System.Drawing.Point(260, 114)
-            Me.lblEntregaRequerimientoProductoServicio.Name = "lblEntregaRequerimientoProductoServicio"
-            Me.lblEntregaRequerimientoProductoServicio.Size = New System.Drawing.Size(63, 14)
-            Me.lblEntregaRequerimientoProductoServicio.TabIndex = 18
-            Me.lblEntregaRequerimientoProductoServicio.Text = "ENTREGA:"
-            '
-            'lblFechaRequisicionProductoServicio
-            '
-            Me.lblFechaRequisicionProductoServicio.AutoSize = True
-            Me.lblFechaRequisicionProductoServicio.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.lblFechaRequisicionProductoServicio.Location = New System.Drawing.Point(4, 58)
-            Me.lblFechaRequisicionProductoServicio.Name = "lblFechaRequisicionProductoServicio"
-            Me.lblFechaRequisicionProductoServicio.Size = New System.Drawing.Size(49, 14)
-            Me.lblFechaRequisicionProductoServicio.TabIndex = 14
-            Me.lblFechaRequisicionProductoServicio.Text = "FECHA:"
             '
             'txtNombrePersonal
             '
@@ -180,20 +123,10 @@
             Me.txtNombrePersonal.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtNombrePersonal.Enabled = False
             Me.txtNombrePersonal.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtNombrePersonal.Location = New System.Drawing.Point(106, 83)
+            Me.txtNombrePersonal.Location = New System.Drawing.Point(82, 31)
             Me.txtNombrePersonal.Name = "txtNombrePersonal"
-            Me.txtNombrePersonal.Size = New System.Drawing.Size(328, 22)
+            Me.txtNombrePersonal.Size = New System.Drawing.Size(278, 22)
             Me.txtNombrePersonal.TabIndex = 17
-            '
-            'lblRealizadoPor
-            '
-            Me.lblRealizadoPor.AutoSize = True
-            Me.lblRealizadoPor.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.lblRealizadoPor.Location = New System.Drawing.Point(4, 86)
-            Me.lblRealizadoPor.Name = "lblRealizadoPor"
-            Me.lblRealizadoPor.Size = New System.Drawing.Size(98, 14)
-            Me.lblRealizadoPor.TabIndex = 16
-            Me.lblRealizadoPor.Text = "REALIZADO POR:"
             '
             'dgvDetalleRequisicionProductoServicio
             '
@@ -203,14 +136,16 @@
             Me.dgvDetalleRequisicionProductoServicio.AllowUserToResizeRows = False
             DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
             Me.dgvDetalleRequisicionProductoServicio.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle2
-            Me.dgvDetalleRequisicionProductoServicio.BackgroundColor = System.Drawing.Color.White
+            Me.dgvDetalleRequisicionProductoServicio.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(185, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(227, Byte), Integer))
+            Me.dgvDetalleRequisicionProductoServicio.BorderStyle = System.Windows.Forms.BorderStyle.None
             Me.dgvDetalleRequisicionProductoServicio.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
             Me.dgvDetalleRequisicionProductoServicio.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-            Me.dgvDetalleRequisicionProductoServicio.Location = New System.Drawing.Point(2, 185)
+            Me.dgvDetalleRequisicionProductoServicio.Location = New System.Drawing.Point(2, 162)
             Me.dgvDetalleRequisicionProductoServicio.Name = "dgvDetalleRequisicionProductoServicio"
             Me.dgvDetalleRequisicionProductoServicio.RowHeadersVisible = False
+            Me.dgvDetalleRequisicionProductoServicio.RowTemplate.DefaultCellStyle.Font = New System.Drawing.Font("Roboto", 8.25!)
             Me.dgvDetalleRequisicionProductoServicio.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvDetalleRequisicionProductoServicio.Size = New System.Drawing.Size(978, 369)
+            Me.dgvDetalleRequisicionProductoServicio.Size = New System.Drawing.Size(919, 328)
             Me.dgvDetalleRequisicionProductoServicio.TabIndex = 2
             '
             'MenuStrip1
@@ -221,7 +156,7 @@
             Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
             Me.MenuStrip1.Name = "MenuStrip1"
             Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(7, 2, 0, 2)
-            Me.MenuStrip1.Size = New System.Drawing.Size(982, 32)
+            Me.MenuStrip1.Size = New System.Drawing.Size(923, 32)
             Me.MenuStrip1.TabIndex = 184
             Me.MenuStrip1.Text = "msIngresoBodega"
             '
@@ -279,15 +214,78 @@
             Me.btnCancelar.Size = New System.Drawing.Size(97, 28)
             Me.btnCancelar.Text = "CANCELAR"
             '
+            'KryptonGroupBox1
+            '
+            Me.KryptonGroupBox1.CaptionOverlap = 0R
+            Me.KryptonGroupBox1.GroupBackStyle = Krypton.Toolkit.PaletteBackStyle.ControlRibbon
+            Me.KryptonGroupBox1.Location = New System.Drawing.Point(543, 37)
+            Me.KryptonGroupBox1.Name = "KryptonGroupBox1"
+            '
+            'KryptonGroupBox1.Panel
+            '
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel5)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.txtTiempoEntregaRequisicion)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.txtPrioridadEntregaRequisicion)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel4)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel3)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel2)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel1)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.txtIdRequisicionProductoServicio)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.txtFechaRequisicionProducto)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.txtNombrePersonal)
+            Me.KryptonGroupBox1.Size = New System.Drawing.Size(378, 121)
+            Me.KryptonGroupBox1.TabIndex = 185
+            Me.KryptonGroupBox1.Values.Heading = "Datos "
+            '
+            'KryptonLabel5
+            '
+            Me.KryptonLabel5.Location = New System.Drawing.Point(200, 61)
+            Me.KryptonLabel5.Name = "KryptonLabel5"
+            Me.KryptonLabel5.Size = New System.Drawing.Size(52, 20)
+            Me.KryptonLabel5.TabIndex = 27
+            Me.KryptonLabel5.Values.Text = "Entrega"
+            '
+            'KryptonLabel4
+            '
+            Me.KryptonLabel4.Location = New System.Drawing.Point(3, 59)
+            Me.KryptonLabel4.Name = "KryptonLabel4"
+            Me.KryptonLabel4.Size = New System.Drawing.Size(60, 20)
+            Me.KryptonLabel4.TabIndex = 26
+            Me.KryptonLabel4.Values.Text = "Prioridad"
+            '
+            'KryptonLabel3
+            '
+            Me.KryptonLabel3.Location = New System.Drawing.Point(3, 33)
+            Me.KryptonLabel3.Name = "KryptonLabel3"
+            Me.KryptonLabel3.Size = New System.Drawing.Size(63, 20)
+            Me.KryptonLabel3.TabIndex = 25
+            Me.KryptonLabel3.Values.Text = "Realizado"
+            '
+            'KryptonLabel2
+            '
+            Me.KryptonLabel2.Location = New System.Drawing.Point(210, 3)
+            Me.KryptonLabel2.Name = "KryptonLabel2"
+            Me.KryptonLabel2.Size = New System.Drawing.Size(42, 20)
+            Me.KryptonLabel2.TabIndex = 24
+            Me.KryptonLabel2.Values.Text = "Fecha"
+            '
+            'KryptonLabel1
+            '
+            Me.KryptonLabel1.Location = New System.Drawing.Point(3, 3)
+            Me.KryptonLabel1.Name = "KryptonLabel1"
+            Me.KryptonLabel1.Size = New System.Drawing.Size(80, 20)
+            Me.KryptonLabel1.TabIndex = 0
+            Me.KryptonLabel1.Values.Text = "Req Numero"
+            '
             'FormAprovacionRequisicion
             '
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-            Me.BackColor = System.Drawing.Color.White
-            Me.ClientSize = New System.Drawing.Size(982, 557)
+            Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(185, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(227, Byte), Integer))
+            Me.ClientSize = New System.Drawing.Size(923, 496)
+            Me.Controls.Add(Me.KryptonGroupBox1)
             Me.Controls.Add(Me.MenuStrip1)
             Me.Controls.Add(Me.dgvDetalleRequisicionProductoServicio)
-            Me.Controls.Add(Me.gbRequisicion)
             Me.Controls.Add(Me.dgvRequisicionProductoServicio)
             Me.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -299,28 +297,25 @@
             Me.StateActive.Border.Rounding = 5.0!
             Me.Text = "APROBACIÓN DE REQUISICIÓN DE PRODUCTO/SERVICIO"
             CType(Me.dgvRequisicionProductoServicio, System.ComponentModel.ISupportInitialize).EndInit()
-            Me.gbRequisicion.ResumeLayout(False)
-            Me.gbRequisicion.PerformLayout()
             CType(Me.dgvDetalleRequisicionProductoServicio, System.ComponentModel.ISupportInitialize).EndInit()
             Me.MenuStrip1.ResumeLayout(False)
             Me.MenuStrip1.PerformLayout()
+            CType(Me.KryptonGroupBox1.Panel, System.ComponentModel.ISupportInitialize).EndInit()
+            Me.KryptonGroupBox1.Panel.ResumeLayout(False)
+            Me.KryptonGroupBox1.Panel.PerformLayout()
+            CType(Me.KryptonGroupBox1, System.ComponentModel.ISupportInitialize).EndInit()
+            Me.KryptonGroupBox1.ResumeLayout(False)
             Me.ResumeLayout(False)
             Me.PerformLayout()
 
         End Sub
         Friend WithEvents dgvRequisicionProductoServicio As System.Windows.Forms.DataGridView
-        Friend WithEvents gbRequisicion As System.Windows.Forms.GroupBox
         Friend WithEvents txtIdRequisicionProductoServicio As System.Windows.Forms.TextBox
         Friend WithEvents txtTiempoEntregaRequisicion As System.Windows.Forms.TextBox
         Friend WithEvents txtFechaRequisicionProducto As System.Windows.Forms.TextBox
-        Friend WithEvents lblEtiquetaNumeroRequisicion As System.Windows.Forms.Label
-        Friend WithEvents lblEntregaRequerimientoProductoServicio As System.Windows.Forms.Label
-        Friend WithEvents lblFechaRequisicionProductoServicio As System.Windows.Forms.Label
         Friend WithEvents txtNombrePersonal As System.Windows.Forms.TextBox
-        Friend WithEvents lblRealizadoPor As System.Windows.Forms.Label
         Friend WithEvents dgvDetalleRequisicionProductoServicio As System.Windows.Forms.DataGridView
         Friend WithEvents txtPrioridadEntregaRequisicion As System.Windows.Forms.TextBox
-        Friend WithEvents lblEstadoRequisicionProductoServicio As System.Windows.Forms.Label
         Friend WithEvents MenuStrip1 As System.Windows.Forms.MenuStrip
         Friend WithEvents btnAprovar As System.Windows.Forms.ToolStripMenuItem
         Friend WithEvents btnModificar As System.Windows.Forms.ToolStripMenuItem
@@ -328,5 +323,11 @@
         Friend WithEvents btnRechazar As System.Windows.Forms.ToolStripMenuItem
         Friend WithEvents btnGuardar As System.Windows.Forms.ToolStripMenuItem
         Friend WithEvents btnRecargar As System.Windows.Forms.ToolStripMenuItem
+        Friend WithEvents KryptonGroupBox1 As Krypton.Toolkit.KryptonGroupBox
+        Friend WithEvents KryptonLabel5 As Krypton.Toolkit.KryptonLabel
+        Friend WithEvents KryptonLabel4 As Krypton.Toolkit.KryptonLabel
+        Friend WithEvents KryptonLabel3 As Krypton.Toolkit.KryptonLabel
+        Friend WithEvents KryptonLabel2 As Krypton.Toolkit.KryptonLabel
+        Friend WithEvents KryptonLabel1 As Krypton.Toolkit.KryptonLabel
     End Class
 End Namespace

@@ -3,6 +3,7 @@ Imports ClassLibraryCisepro.CONTABILIDAD.BANCOS.AUDITORIA
 Imports ClassLibraryCisepro.CONTABILIDAD.COMPRAS.PROVEEDORES
 Imports ClassLibraryCisepro.ENUMS
 Imports syscisepro.FORMULARIOS.INVENTARIOS.PROCESO
+Imports Krypton.Toolkit
 
 Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.PROVEEDORES
     ''' <summary>

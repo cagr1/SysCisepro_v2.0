@@ -40,9 +40,8 @@ namespace SysCisepro3.TalentoHumano
         private void FrmBuscarRolPago_Load(object sender, EventArgs e)
         {
             // CARGAR ICONO Y DESIEÑO SEGUN SISTEMA 
-            BackColor = ValidationForms.GetColorSistema(TipoCon);
-            Label1.ForeColor = Color.White;
-            lblHasta.ForeColor = Color.White;
+            //BackColor = ValidationForms.GetColorSistema(TipoCon);
+            
             dgvRoles.DefaultCellStyle.SelectionBackColor = ValidationForms.GetColorSistema(TipoCon);
             dgvRoles.MultiSelect = MultiSelect;
 

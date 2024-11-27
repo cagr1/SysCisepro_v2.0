@@ -1,7 +1,8 @@
 ﻿Namespace FORMULARIOS.CONTABILIDAD.BANCOS.REPORTES
     <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
     Partial Class FormReporteComprobanteIngresoBancos
-        Inherits System.Windows.Forms.Form
+        'Inherits System.Windows.Forms.Form
+        Inherits Krypton.Toolkit.KryptonForm
 
         'Form reemplaza a Dispose para limpiar la lista de componentes.
         <System.Diagnostics.DebuggerNonUserCode()> _
@@ -31,11 +32,11 @@
             'crvComprobanteIngresoBancos
             '
             Me.crvComprobanteIngresoBancos.ActiveViewIndex = -1
-            Me.crvComprobanteIngresoBancos.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
             Me.crvComprobanteIngresoBancos.Cursor = System.Windows.Forms.Cursors.Default
             Me.crvComprobanteIngresoBancos.Dock = System.Windows.Forms.DockStyle.Fill
             Me.crvComprobanteIngresoBancos.Location = New System.Drawing.Point(0, 0)
             Me.crvComprobanteIngresoBancos.Name = "crvComprobanteIngresoBancos"
+            Me.crvComprobanteIngresoBancos.ShowLogo = False
             Me.crvComprobanteIngresoBancos.Size = New System.Drawing.Size(730, 666)
             Me.crvComprobanteIngresoBancos.TabIndex = 0
             Me.crvComprobanteIngresoBancos.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None
@@ -43,6 +44,8 @@
             'lblIdComprobanteIngreso
             '
             Me.lblIdComprobanteIngreso.AutoSize = True
+            Me.lblIdComprobanteIngreso.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.lblIdComprobanteIngreso.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
             Me.lblIdComprobanteIngreso.Location = New System.Drawing.Point(506, 9)
             Me.lblIdComprobanteIngreso.Name = "lblIdComprobanteIngreso"
             Me.lblIdComprobanteIngreso.Size = New System.Drawing.Size(13, 13)
@@ -53,7 +56,7 @@
             '
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-            Me.BackColor = System.Drawing.Color.White
+            Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(185, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(227, Byte), Integer))
             Me.ClientSize = New System.Drawing.Size(730, 666)
             Me.Controls.Add(Me.lblIdComprobanteIngreso)
             Me.Controls.Add(Me.crvComprobanteIngresoBancos)
@@ -61,6 +64,10 @@
             Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
             Me.Name = "FormReporteComprobanteIngresoBancos"
             Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+            Me.StateActive.Border.DrawBorders = CType((((Krypton.Toolkit.PaletteDrawBorders.Top Or Krypton.Toolkit.PaletteDrawBorders.Bottom) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Left) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Right), Krypton.Toolkit.PaletteDrawBorders)
+            Me.StateActive.Border.Rounding = 5.0!
             Me.Text = "REPORTE COMPROBANTE INGRESO BANCOS"
             Me.ResumeLayout(False)
             Me.PerformLayout()

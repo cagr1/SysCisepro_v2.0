@@ -37,7 +37,7 @@
             '
             Me.Label1.AutoSize = True
             Me.Label1.Font = New System.Drawing.Font("Calibri", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label1.ForeColor = System.Drawing.Color.White
+            Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
             Me.Label1.Location = New System.Drawing.Point(3, 6)
             Me.Label1.Name = "Label1"
             Me.Label1.Size = New System.Drawing.Size(143, 14)
@@ -51,7 +51,7 @@
             DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
             Me.dgvCustodios.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
             Me.dgvCustodios.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
-            Me.dgvCustodios.BackgroundColor = System.Drawing.Color.White
+            Me.dgvCustodios.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(185, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(227, Byte), Integer))
             Me.dgvCustodios.BorderStyle = System.Windows.Forms.BorderStyle.None
             Me.dgvCustodios.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
             Me.dgvCustodios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
@@ -77,7 +77,7 @@
             '
             Me.dtpMes.CustomFormat = "MMMM yyyy"
             Me.dtpMes.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-            Me.dtpMes.Location = New System.Drawing.Point(145, 3)
+            Me.dtpMes.Location = New System.Drawing.Point(154, 3)
             Me.dtpMes.Name = "dtpMes"
             Me.dtpMes.Size = New System.Drawing.Size(100, 20)
             Me.dtpMes.TabIndex = 199
@@ -86,8 +86,8 @@
             '
             Me.Label2.AutoSize = True
             Me.Label2.Font = New System.Drawing.Font("Calibri", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label2.ForeColor = System.Drawing.Color.White
-            Me.Label2.Location = New System.Drawing.Point(253, 6)
+            Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
+            Me.Label2.Location = New System.Drawing.Point(266, 6)
             Me.Label2.Name = "Label2"
             Me.Label2.Size = New System.Drawing.Size(43, 14)
             Me.Label2.TabIndex = 200
@@ -97,7 +97,7 @@
             '
             Me.DateTimePicker1.CustomFormat = "MMMM yyyy"
             Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-            Me.DateTimePicker1.Location = New System.Drawing.Point(302, 3)
+            Me.DateTimePicker1.Location = New System.Drawing.Point(330, 3)
             Me.DateTimePicker1.Name = "DateTimePicker1"
             Me.DateTimePicker1.Size = New System.Drawing.Size(100, 20)
             Me.DateTimePicker1.TabIndex = 201
@@ -106,6 +106,7 @@
             '
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+            Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(185, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(227, Byte), Integer))
             Me.ClientSize = New System.Drawing.Size(754, 293)
             Me.Controls.Add(Me.DateTimePicker1)
             Me.Controls.Add(Me.Label2)

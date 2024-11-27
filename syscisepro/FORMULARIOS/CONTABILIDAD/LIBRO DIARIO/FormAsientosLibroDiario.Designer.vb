@@ -144,9 +144,10 @@
             Me.txtCuentaNueva.BackColor = System.Drawing.Color.White
             Me.txtCuentaNueva.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtCuentaNueva.Enabled = False
+            Me.txtCuentaNueva.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtCuentaNueva.Location = New System.Drawing.Point(726, 3)
             Me.txtCuentaNueva.Name = "txtCuentaNueva"
-            Me.txtCuentaNueva.Size = New System.Drawing.Size(309, 22)
+            Me.txtCuentaNueva.Size = New System.Drawing.Size(309, 21)
             Me.txtCuentaNueva.TabIndex = 58
             '
             'txtNumeroAsientoBuscar

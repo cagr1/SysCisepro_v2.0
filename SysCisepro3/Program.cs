@@ -1,7 +1,10 @@
 ﻿using System;
 using System.Windows.Forms;
 using System.Threading;
+using System.Data;
+using System.Linq;
 using ClassLibraryCisepro3.Enums;
+using System.Security.Cryptography.X509Certificates;
 
 namespace SysCisepro3
 {
@@ -13,7 +16,7 @@ namespace SysCisepro3
 
     // LA MAYORÍA DE MÉTODOS EN syscisepro obtiene información de la BD desde sus respectivos PROCEDIMIENTOS ALMACENADOS
     // OTROS MÉTODOS obtienen información de la BD a través de DATASETS, ejecutan sus propias SQL y procesan dichos datos para retornar en DATATABLE, aptos para el uso conveniente.
-    static class Program
+    internal static class Program
     {
         /// <summary>
         /// Punto de entrada principal para la aplicación.
@@ -25,7 +28,7 @@ namespace SysCisepro3
             // CAMBIAR EL TIPO SEGUN EL CASO, ANTES DE COMPILAR
             //0 CISEPRO            //1 SEPORTPAC            //2 ASENAVA
             const TipoConexion tipo = (TipoConexion)0;
-            const int tiempoNotificacion = 2;
+             const int tiempoNotificacion = 2;
 
             // CONFIGURACIONES INICIALES DEL PROGRAMA
             Thread.CurrentThread.CurrentCulture = new System.Globalization.CultureInfo("es-ES")

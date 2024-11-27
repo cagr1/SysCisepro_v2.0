@@ -32,7 +32,6 @@
             'crvComprobanteCompra
             '
             Me.crvComprobanteCompra.ActiveViewIndex = -1
-            Me.crvComprobanteCompra.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
             Me.crvComprobanteCompra.Cursor = System.Windows.Forms.Cursors.Default
             Me.crvComprobanteCompra.Dock = System.Windows.Forms.DockStyle.Fill
             Me.crvComprobanteCompra.Location = New System.Drawing.Point(0, 0)
@@ -46,6 +45,8 @@
             '
             Me.lblIdComprobanteCompra.AutoSize = True
             Me.lblIdComprobanteCompra.BackColor = System.Drawing.Color.Transparent
+            Me.lblIdComprobanteCompra.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.lblIdComprobanteCompra.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
             Me.lblIdComprobanteCompra.Location = New System.Drawing.Point(505, 9)
             Me.lblIdComprobanteCompra.Name = "lblIdComprobanteCompra"
             Me.lblIdComprobanteCompra.Size = New System.Drawing.Size(13, 13)
@@ -56,7 +57,7 @@
             '
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-            Me.BackColor = System.Drawing.Color.White
+            Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(185, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(227, Byte), Integer))
             Me.ClientSize = New System.Drawing.Size(792, 671)
             Me.Controls.Add(Me.lblIdComprobanteCompra)
             Me.Controls.Add(Me.crvComprobanteCompra)

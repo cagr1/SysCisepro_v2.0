@@ -8,6 +8,7 @@ Imports syscisepro.DATOS
 Imports syscisepro.FORMULARIOS.INVENTARIOS.PROCESO
 Imports ClassLibraryCisepro.VALIDACIONES
 Imports Microsoft.VisualBasic.ApplicationServices
+Imports Krypton.Toolkit
 
 Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.REQUERIMIENTOS
     ''' <summary>
@@ -127,9 +128,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.REQUERIMIENTOS
         Public Function ValidarParametros() As Boolean
             Return lblIdPersonal.Text.Trim.Length > 0 And txtFechaRequisicionProducto.Text.Trim.Length > 0 And txtNombrePersonal.Text.Trim.Length > 0 And txtEntregaNumeroDias.Text.Trim.Length > 0
         End Function
-        Private Sub dgvDetalleRequisicionPS_CellEndEdit(ByVal sender As System.Object, ByVal e As Windows.Forms.DataGridViewCellEventArgs) Handles dgvDetalleRequisicionPS.CellEndEdit
-            BuscarItemRepetidoDatagridview()
-        End Sub
+
         Public Sub BuscarItemRepetidoDatagridview()
             Try
                 If dgvDetalleRequisicionPS.CurrentRow.Cells(1).Value <> "" And dgvDetalleRequisicionPS.CurrentCell.ColumnIndex = 1 Then
@@ -177,7 +176,8 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.REQUERIMIENTOS
                     Next
                 End If
             Catch ex As Exception
-                MsgBox("BUSCAR ID DE ITEM." & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
+                'MsgBox("BUSCAR ID DE ITEM." & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
+                KryptonMessageBox.Show("BUSCAR ID DE ITEM." & vbNewLine & ex.Message.ToString, "Mensaje de excepción", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
         Private Sub btnBuscarPersonal_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnBuscarPersonal.Click
@@ -206,20 +206,8 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.REQUERIMIENTOS
             If dgvDetalleRequisicionPS.CurrentRow.Index = dgvDetalleRequisicionPS.RowCount - 1 Then Return
             dgvDetalleRequisicionPS.Rows.RemoveAt(dgvDetalleRequisicionPS.CurrentRow.Index)
         End Sub
-        Private Sub dgvDetalleRequisicionPS_EditingControlShowing(ByVal sender As System.Object, ByVal e As Windows.Forms.DataGridViewEditingControlShowingEventArgs) Handles dgvDetalleRequisicionPS.EditingControlShowing
-            Dim itemName = TryCast(e.Control, TextBox)
-            If itemName Is Nothing Then Return
-            itemName.CharacterCasing = CharacterCasing.Upper
-            itemName.AutoCompleteMode = AutoCompleteMode.None
-            RemoveHandler itemName.KeyPress, AddressOf ItemQuantity_KeyPress 'cambio
-            If dgvDetalleRequisicionPS.CurrentCell.ColumnIndex = 1 Then
-                itemName.AutoCompleteCustomSource = _objetoSecuencialItem.Autocompletar(_tipoCon)
-                itemName.AutoCompleteMode = AutoCompleteMode.Suggest
-                itemName.AutoCompleteSource = AutoCompleteSource.CustomSource
-            End If
-            If dgvDetalleRequisicionPS.CurrentCell.ColumnIndex = 3 Then AddHandler itemName.KeyPress, AddressOf ItemQuantity_KeyPress
-        End Sub
-        Private Sub ItemQuantity_KeyPress(ByVal sender As System.Object, ByVal e As Windows.Forms.KeyPressEventArgs) Handles dgvDetalleRequisicionPS.KeyPress
+
+        Private Sub ItemQuantity_KeyPress(ByVal sender As System.Object, ByVal e As Windows.Forms.KeyPressEventArgs)
             e.Handled = Not _objVal.EsNumero(e.KeyChar)
         End Sub
         Private Sub txtEntregaNumeroDias_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtEntregaNumeroDias.KeyPress
@@ -229,7 +217,8 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.REQUERIMIENTOS
             If dgvDetalleRequisicionPS.RowCount > 0 Then
                 If ValidarParametros() Then
 
-                    If MessageBox.Show("¿ESTA SEGUR@ QUE DESEA GUARDAR?", "Mensaje de validación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> DialogResult.Yes Then Return
+                    If KryptonMessageBox.Show("¿Esta segur@ que desea guardar?", "Mensaje de validación", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) <> DialogResult.Yes Then Return
+                    'If MessageBox.Show("¿ESTA SEGUR@ QUE DESEA GUARDAR?", "Mensaje de validación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> DialogResult.Yes Then Return
                     _sqlCommands.Clear()
 
                     GuardarRegistroRequisicionProductoServicio()
@@ -240,14 +229,24 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.REQUERIMIENTOS
                     If res(0) Then
                         DeshabilitadoInicio()
                     End If
-                    MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
+
+                    Dim messageIcon As KryptonMessageBoxIcon
+                    If res(0) Then
+                        messageIcon = KryptonMessageBoxIcon.Information
+                    Else
+                        messageIcon = KryptonMessageBoxIcon.Exclamation
+                    End If
+                    KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, messageIcon)
+                    'MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
                 Else
-                    MsgBox("No se puede guardar." & vbNewLine & "NO SE HAN LLENADO TODOS LOS CAMPOS NECESARIOS.", MsgBoxStyle.Exclamation, "Mensaje de validación")
+                    'MsgBox("No se puede guardar." & vbNewLine & "NO SE HAN LLENADO TODOS LOS CAMPOS NECESARIOS.", MsgBoxStyle.Exclamation, "Mensaje de validación")
+                    KryptonMessageBox.Show("No se puede guardar." & vbNewLine & "No se han llenado todos los campos necesarios.", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                 End If
             Else
-                MsgBox("No se puede guardar." & vbNewLine & "NO HA AGREGADO NINGÚN ITEM A LA REQUISICIÓN.", MsgBoxStyle.Exclamation, "Mensaje de validación")
+                'MsgBox("No se puede guardar." & vbNewLine & "NO HA AGREGADO NINGÚN ITEM A LA REQUISICIÓN.", MsgBoxStyle.Exclamation, "Mensaje de validación")
+                KryptonMessageBox.Show("No se puede guardar." & vbNewLine & "No ha agregado ningún item a la requisición.", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
             End If
-        End Sub 
+        End Sub
         Public Sub GuardarRegistroRequisicionProductoServicio()
             txtIdRequisicionProductoServicio.Text = _objetoRequisicionProductoServicio.BuscarMayorIdRequisicionProductoServicio(_tipoCon) + 1
             With _objetoRequisicionProductoServicio
@@ -283,10 +282,28 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.REQUERIMIENTOS
                 _sqlCommands.Add(_objetoDetalleRequisicionProductoServicio.NuevoRegistroDetalleRequisicionProductoServicio)
                 id += 1
             Next
-        End Sub         
+        End Sub
 
-        Private Sub dgvDetalleRequisicionPS_CellContentClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles dgvDetalleRequisicionPS.CellContentClick
+        Private Sub dgvDetalleRequisicionPS_CellContentClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs)
 
+        End Sub
+
+        Private Sub dgvDetalleRequisicionPS_CellEndEdit(sender As Object, e As DataGridViewCellEventArgs) Handles dgvDetalleRequisicionPS.CellEndEdit
+            BuscarItemRepetidoDatagridview()
+        End Sub
+
+        Private Sub dgvDetalleRequisicionPS_EditingControlShowing(sender As Object, e As DataGridViewEditingControlShowingEventArgs) Handles dgvDetalleRequisicionPS.EditingControlShowing
+            Dim itemName = TryCast(e.Control, TextBox)
+            If itemName Is Nothing Then Return
+            itemName.CharacterCasing = CharacterCasing.Upper
+            itemName.AutoCompleteMode = AutoCompleteMode.None
+            RemoveHandler itemName.KeyPress, AddressOf ItemQuantity_KeyPress 'cambio
+            If dgvDetalleRequisicionPS.CurrentCell.ColumnIndex = 1 Then
+                itemName.AutoCompleteCustomSource = _objetoSecuencialItem.Autocompletar(_tipoCon)
+                itemName.AutoCompleteMode = AutoCompleteMode.Suggest
+                itemName.AutoCompleteSource = AutoCompleteSource.CustomSource
+            End If
+            If dgvDetalleRequisicionPS.CurrentCell.ColumnIndex = 3 Then AddHandler itemName.KeyPress, AddressOf ItemQuantity_KeyPress
         End Sub
     End Class
 End Namespace

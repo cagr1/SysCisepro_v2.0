@@ -442,11 +442,11 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
 
 
                     Dim idContent As New Phrase()
-                    idContent.Add(New Chunk("Id    ", fuente10Bold))
-                    idContent.Add(New Chunk("   " & lblIdComprobanteCompra.Text, fuente10))
+                    idContent.Add(New Chunk("Id    ", fuente8Bold))
+                    idContent.Add(New Chunk("   " & lblIdComprobanteCompra.Text, fuente8))
                     idContent.Add(New Chunk(vbLf, fuente10))
-                    idContent.Add(New Chunk(vbLf & "Tipo    ", fuente10Bold))
-                    idContent.Add(New Chunk(dgvComprobantesCompra.CurrentRow.Cells.Item(2).Value.ToString(), fuente10))
+                    idContent.Add(New Chunk(vbLf & "Tipo    ", fuente8Bold))
+                    idContent.Add(New Chunk(dgvComprobantesCompra.CurrentRow.Cells.Item(2).Value.ToString(), fuente8))
 
 
 
@@ -470,10 +470,10 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
                                     .Border = PdfPCell.NO_BORDER
                                 }
                     headerTable.AddCell(logoCell)
-                    headerTable.WriteSelectedRows(0, -1, 50, 825, writer.DirectContent)
+                    headerTable.WriteSelectedRows(0, -1, 50, 820, writer.DirectContent)
 
                     Dim rectTabla1 As PdfContentByte = writer.DirectContent
-                    rectTabla1.RoundRectangle(40.0F, 785.0F, 525.0F, 45.0F, 10.0F)
+                    rectTabla1.RoundRectangle(40.0F, 775.0F, 525.0F, 50.0F, 10.0F)
                     rectTabla1.Stroke()
 
 
@@ -542,11 +542,23 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
                                 }
 
                     tabla1.AddCell(NroComprobanteCell)
-                    tabla1.AddCell(emptyCell)
+
+                    Dim comproTable As DataTable = ds.Tables("COMPROBANTES_COMPRA")
+                    Dim DocModComprobanteContent As New Phrase()
+                    DocModComprobanteContent.Add(New Chunk("Doc Modf   ", fuente8Bold))
+                    DocModComprobanteContent.Add(New Chunk(comproTable.Rows(0)("DOC_MOD_COMPROBANTE_COMPRA").ToString(), fuente8))
+
+                    Dim DocNroComprobanteCell As New PdfPCell(DocModComprobanteContent) With {
+                                    .HorizontalAlignment = Element.ALIGN_LEFT,
+                                    .VerticalAlignment = Element.ALIGN_MIDDLE,
+                                    .Border = PdfPCell.NO_BORDER
+                                }
+
+                    tabla1.AddCell(DocNroComprobanteCell)
                     tabla1.AddCell(emptyCell2)
                     'tabla1.AddCell(separatorCell)
 
-                    Dim comproTable As DataTable = ds.Tables("COMPROBANTES_COMPRA")
+
                     Dim numAutorizacionContent As New Phrase()
                     numAutorizacionContent.Add(New Chunk("Nro. Autorización SRI ", fuente8Bold))
                     numAutorizacionContent.Add(New Chunk(comproTable.Rows(0)("NUM_AUTO_SRI_COMPROBANTE_COMPRA").ToString(), fuente8))
@@ -850,7 +862,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
 
 
 
-
+                    KryptonNavigator1.SelectedPage = KryptonPage3
 
 
                     'Dim f = New FormReporteComprobanteCompra

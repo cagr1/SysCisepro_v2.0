@@ -174,7 +174,8 @@
             Me.dgvContactosProveedorCalificado.AllowUserToResizeRows = False
             DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
             Me.dgvContactosProveedorCalificado.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
-            Me.dgvContactosProveedorCalificado.BackgroundColor = System.Drawing.Color.White
+            Me.dgvContactosProveedorCalificado.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(185, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(227, Byte), Integer))
+            Me.dgvContactosProveedorCalificado.BorderStyle = System.Windows.Forms.BorderStyle.None
             Me.dgvContactosProveedorCalificado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
             Me.dgvContactosProveedorCalificado.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.idContactoProveedorCalificado, Me.nombresContactoProveedorCalificado, Me.apellidosContactoProveedorCalificado, Me.cargoContactoProveedorCalificado, Me.telefonoContactoProveedorCalificado, Me.celularContactoProveedorCalificado, Me.emailContactoProveedorCalificado, Me.estadoContactoProveedorCalificado, Me.idProveedorGeneral})
             DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
@@ -249,8 +250,7 @@
             '
             'panelAgregarEliminar
             '
-            Me.panelAgregarEliminar.BackColor = System.Drawing.Color.White
-            Me.panelAgregarEliminar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+            Me.panelAgregarEliminar.BackColor = System.Drawing.Color.FromArgb(CType(CType(185, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(227, Byte), Integer))
             Me.panelAgregarEliminar.Controls.Add(Me.lblEtiquetaContactosProveedor)
             Me.panelAgregarEliminar.Controls.Add(Me.btnEliminar)
             Me.panelAgregarEliminar.Controls.Add(Me.btnAgregar)
@@ -263,6 +263,7 @@
             '
             Me.lblEtiquetaContactosProveedor.AutoSize = True
             Me.lblEtiquetaContactosProveedor.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.lblEtiquetaContactosProveedor.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
             Me.lblEtiquetaContactosProveedor.Location = New System.Drawing.Point(253, 9)
             Me.lblEtiquetaContactosProveedor.Name = "lblEtiquetaContactosProveedor"
             Me.lblEtiquetaContactosProveedor.Size = New System.Drawing.Size(172, 14)
@@ -271,7 +272,7 @@
             '
             'btnEliminar
             '
-            Me.btnEliminar.BackColor = System.Drawing.Color.White
+            Me.btnEliminar.BackColor = System.Drawing.Color.Transparent
             Me.btnEliminar.FlatAppearance.BorderSize = 0
             Me.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.btnEliminar.Image = Global.syscisepro.My.Resources.Resources.do_not_disturb_on_24dp_FILL0_wght400_GRAD0_opsz24
@@ -283,7 +284,7 @@
             '
             'btnAgregar
             '
-            Me.btnAgregar.BackColor = System.Drawing.Color.White
+            Me.btnAgregar.BackColor = System.Drawing.Color.Transparent
             Me.btnAgregar.FlatAppearance.BorderSize = 0
             Me.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.btnAgregar.Image = Global.syscisepro.My.Resources.Resources.add_circle_24dp_FILL0_wght400_GRAD0_opsz24__3_
@@ -337,7 +338,7 @@
             '
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-            Me.BackColor = System.Drawing.Color.White
+            Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(185, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(227, Byte), Integer))
             Me.ClientSize = New System.Drawing.Size(704, 413)
             Me.Controls.Add(Me.MenuStrip1)
             Me.Controls.Add(Me.dgvContactosProveedorCalificado)

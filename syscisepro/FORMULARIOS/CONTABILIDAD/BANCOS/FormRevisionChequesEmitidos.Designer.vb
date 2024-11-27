@@ -66,6 +66,7 @@
             Me.Label1 = New System.Windows.Forms.Label()
             Me.chkCaducado = New System.Windows.Forms.CheckBox()
             Me.Label2 = New System.Windows.Forms.Label()
+            Me.Label3 = New System.Windows.Forms.Label()
             CType(Me.dgvChequesEmitidosAprobados, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.tcRevisionCheques.SuspendLayout()
             Me.tpEmitidosNoCobrados.SuspendLayout()
@@ -201,7 +202,7 @@
             Me.tpEmitidosCobrados.Location = New System.Drawing.Point(4, 22)
             Me.tpEmitidosCobrados.Name = "tpEmitidosCobrados"
             Me.tpEmitidosCobrados.Padding = New System.Windows.Forms.Padding(3)
-            Me.tpEmitidosCobrados.Size = New System.Drawing.Size(941, 357)
+            Me.tpEmitidosCobrados.Size = New System.Drawing.Size(924, 431)
             Me.tpEmitidosCobrados.TabIndex = 1
             Me.tpEmitidosCobrados.Text = "EMITIDOS COBRADOS GENERAL"
             '
@@ -260,7 +261,7 @@
             Me.tpCaducados.Location = New System.Drawing.Point(4, 22)
             Me.tpCaducados.Name = "tpCaducados"
             Me.tpCaducados.Padding = New System.Windows.Forms.Padding(3)
-            Me.tpCaducados.Size = New System.Drawing.Size(941, 357)
+            Me.tpCaducados.Size = New System.Drawing.Size(924, 431)
             Me.tpCaducados.TabIndex = 2
             Me.tpCaducados.Text = "EMITIDOS CADUCADOS"
             Me.tpCaducados.UseVisualStyleBackColor = True
@@ -324,7 +325,7 @@
             '
             Me.dtpFechaCobroCheque.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.dtpFechaCobroCheque.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-            Me.dtpFechaCobroCheque.Location = New System.Drawing.Point(452, 3)
+            Me.dtpFechaCobroCheque.Location = New System.Drawing.Point(432, 5)
             Me.dtpFechaCobroCheque.Name = "dtpFechaCobroCheque"
             Me.dtpFechaCobroCheque.Size = New System.Drawing.Size(91, 21)
             Me.dtpFechaCobroCheque.TabIndex = 2
@@ -336,7 +337,7 @@
             Me.cmbCuentaBancos.DropDownWidth = 130
             Me.cmbCuentaBancos.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cmbCuentaBancos.FormattingEnabled = True
-            Me.cmbCuentaBancos.Location = New System.Drawing.Point(674, 4)
+            Me.cmbCuentaBancos.Location = New System.Drawing.Point(672, 4)
             Me.cmbCuentaBancos.Name = "cmbCuentaBancos"
             Me.cmbCuentaBancos.Size = New System.Drawing.Size(87, 21)
             Me.cmbCuentaBancos.TabIndex = 29
@@ -348,9 +349,9 @@
             Me.cmbBancos.DropDownWidth = 140
             Me.cmbBancos.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cmbBancos.FormattingEnabled = True
-            Me.cmbBancos.Location = New System.Drawing.Point(554, 4)
+            Me.cmbBancos.Location = New System.Drawing.Point(568, 4)
             Me.cmbBancos.Name = "cmbBancos"
-            Me.cmbBancos.Size = New System.Drawing.Size(112, 21)
+            Me.cmbBancos.Size = New System.Drawing.Size(98, 21)
             Me.cmbBancos.TabIndex = 25
             '
             'MenuStrip1
@@ -437,7 +438,7 @@
             '
             Me.btnBuscarModi.AutoSize = True
             Me.btnBuscarModi.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-            Me.btnBuscarModi.Location = New System.Drawing.Point(412, -4)
+            Me.btnBuscarModi.Location = New System.Drawing.Point(381, -4)
             Me.btnBuscarModi.Name = "btnBuscarModi"
             Me.btnBuscarModi.Size = New System.Drawing.Size(32, 32)
             Me.btnBuscarModi.StateCommon.Back.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.[False]
@@ -461,14 +462,14 @@
             Me.txtFiltro.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtFiltro.Location = New System.Drawing.Point(231, 4)
             Me.txtFiltro.Name = "txtFiltro"
-            Me.txtFiltro.Size = New System.Drawing.Size(176, 21)
+            Me.txtFiltro.Size = New System.Drawing.Size(146, 21)
             Me.txtFiltro.TabIndex = 13
             '
             'KryptonGroupBox6
             '
             Me.KryptonGroupBox6.CaptionOverlap = 0R
             Me.KryptonGroupBox6.GroupBackStyle = Krypton.Toolkit.PaletteBackStyle.ControlRibbon
-            Me.KryptonGroupBox6.Location = New System.Drawing.Point(6, 38)
+            Me.KryptonGroupBox6.Location = New System.Drawing.Point(6, 39)
             Me.KryptonGroupBox6.Name = "KryptonGroupBox6"
             '
             'KryptonGroupBox6.Panel
@@ -501,7 +502,7 @@
             Me.Label1.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.Label1.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
-            Me.Label1.Location = New System.Drawing.Point(465, 43)
+            Me.Label1.Location = New System.Drawing.Point(426, 45)
             Me.Label1.Name = "Label1"
             Me.Label1.Size = New System.Drawing.Size(39, 13)
             Me.Label1.TabIndex = 194
@@ -510,8 +511,10 @@
             'chkCaducado
             '
             Me.chkCaducado.AutoSize = True
-            Me.chkCaducado.BackColor = System.Drawing.Color.FromArgb(CType(CType(187, Byte), Integer), CType(CType(206, Byte), Integer), CType(CType(230, Byte), Integer))
-            Me.chkCaducado.Location = New System.Drawing.Point(578, 60)
+            Me.chkCaducado.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
+            Me.chkCaducado.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.chkCaducado.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
+            Me.chkCaducado.Location = New System.Drawing.Point(484, 44)
             Me.chkCaducado.Name = "chkCaducado"
             Me.chkCaducado.Size = New System.Drawing.Size(75, 17)
             Me.chkCaducado.TabIndex = 3
@@ -524,11 +527,23 @@
             Me.Label2.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.Label2.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
-            Me.Label2.Location = New System.Drawing.Point(566, 44)
+            Me.Label2.Location = New System.Drawing.Point(582, 44)
             Me.Label2.Name = "Label2"
             Me.Label2.Size = New System.Drawing.Size(38, 13)
             Me.Label2.TabIndex = 195
             Me.Label2.Text = "Banco"
+            '
+            'Label3
+            '
+            Me.Label3.AutoSize = True
+            Me.Label3.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
+            Me.Label3.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
+            Me.Label3.Location = New System.Drawing.Point(683, 46)
+            Me.Label3.Name = "Label3"
+            Me.Label3.Size = New System.Drawing.Size(55, 13)
+            Me.Label3.TabIndex = 196
+            Me.Label3.Text = "CA/CC/TA"
             '
             'FormRevisionChequesEmitidos
             '
@@ -536,13 +551,14 @@
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(185, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(227, Byte), Integer))
             Me.ClientSize = New System.Drawing.Size(942, 560)
+            Me.Controls.Add(Me.chkCaducado)
+            Me.Controls.Add(Me.Label3)
             Me.Controls.Add(Me.Label2)
             Me.Controls.Add(Me.lblIdComprobanteEgresoBanco)
             Me.Controls.Add(Me.Label1)
             Me.Controls.Add(Me.KryptonGroupBox6)
             Me.Controls.Add(Me.MenuStrip1)
             Me.Controls.Add(Me.tcRevisionCheques)
-            Me.Controls.Add(Me.chkCaducado)
             Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
             Me.Name = "FormRevisionChequesEmitidos"
             Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
@@ -602,5 +618,6 @@
         Friend WithEvents Label1 As Label
         Friend WithEvents chkCaducado As CheckBox
         Friend WithEvents Label2 As Label
+        Friend WithEvents Label3 As Label
     End Class
 End Namespace

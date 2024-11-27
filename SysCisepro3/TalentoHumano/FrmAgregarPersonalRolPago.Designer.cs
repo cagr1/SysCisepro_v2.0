@@ -72,7 +72,7 @@
             // 
             this.Button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(166)))), ((int)(((byte)(79)))));
             this.Button2.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.Button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Button2.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Button2.ForeColor = System.Drawing.Color.White;
             this.Button2.Location = new System.Drawing.Point(697, 149);
             this.Button2.Name = "Button2";
@@ -316,6 +316,7 @@
             // 
             this.Button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(62)))), ((int)(((byte)(58)))));
             this.Button1.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.Button1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Button1.ForeColor = System.Drawing.Color.White;
             this.Button1.Location = new System.Drawing.Point(616, 149);
             this.Button1.Name = "Button1";
@@ -353,7 +354,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(204)))), ((int)(((byte)(227)))));
             this.ClientSize = new System.Drawing.Size(779, 178);
             this.Controls.Add(this.cbxEstado);
             this.Controls.Add(this.label1);

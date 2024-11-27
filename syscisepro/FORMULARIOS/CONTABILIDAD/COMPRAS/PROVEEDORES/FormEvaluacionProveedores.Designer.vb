@@ -1,7 +1,8 @@
 ﻿Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.PROVEEDORES
     <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
     Partial Class FormEvaluacionProveedores
-        Inherits System.Windows.Forms.Form
+        'Inherits System.Windows.Forms.Form
+        Inherits Krypton.Toolkit.KryptonForm
 
         'Form reemplaza a Dispose para limpiar la lista de componentes.
         <System.Diagnostics.DebuggerNonUserCode()> _
@@ -222,7 +223,7 @@
             Me.lblEtiquetaFechaEvluacioProveedorServicios.AutoSize = True
             Me.lblEtiquetaFechaEvluacioProveedorServicios.Location = New System.Drawing.Point(135, 0)
             Me.lblEtiquetaFechaEvluacioProveedorServicios.Name = "lblEtiquetaFechaEvluacioProveedorServicios"
-            Me.lblEtiquetaFechaEvluacioProveedorServicios.Size = New System.Drawing.Size(134, 13)
+            Me.lblEtiquetaFechaEvluacioProveedorServicios.Size = New System.Drawing.Size(129, 13)
             Me.lblEtiquetaFechaEvluacioProveedorServicios.TabIndex = 1
             Me.lblEtiquetaFechaEvluacioProveedorServicios.Text = "FECHA DE EVALUACIÓN:"
             '
@@ -241,6 +242,7 @@
             Me.gbFechaEvaluacionProveedores.Controls.Add(Me.lblIdPersonal)
             Me.gbFechaEvaluacionProveedores.Controls.Add(Me.lblIdProveedorGeneral)
             Me.gbFechaEvaluacionProveedores.Controls.Add(Me.lblProveedorEvaluado)
+            Me.gbFechaEvaluacionProveedores.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.gbFechaEvaluacionProveedores.Location = New System.Drawing.Point(2, 54)
             Me.gbFechaEvaluacionProveedores.Name = "gbFechaEvaluacionProveedores"
             Me.gbFechaEvaluacionProveedores.Size = New System.Drawing.Size(617, 73)
@@ -252,7 +254,7 @@
             Me.dtpFechaEvaluacion.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
             Me.dtpFechaEvaluacion.Location = New System.Drawing.Point(274, 0)
             Me.dtpFechaEvaluacion.Name = "dtpFechaEvaluacion"
-            Me.dtpFechaEvaluacion.Size = New System.Drawing.Size(140, 20)
+            Me.dtpFechaEvaluacion.Size = New System.Drawing.Size(140, 21)
             Me.dtpFechaEvaluacion.TabIndex = 9
             '
             'lblFechaEvaluacionProveedor
@@ -269,7 +271,7 @@
             Me.Label2.AutoSize = True
             Me.Label2.Location = New System.Drawing.Point(6, 0)
             Me.Label2.Name = "Label2"
-            Me.Label2.Size = New System.Drawing.Size(93, 13)
+            Me.Label2.Size = New System.Drawing.Size(91, 13)
             Me.Label2.TabIndex = 7
             Me.Label2.Text = "EVALUACIÓN N°:"
             '
@@ -295,9 +297,10 @@
             'lblTipoProveedor
             '
             Me.lblTipoProveedor.AutoSize = True
+            Me.lblTipoProveedor.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.lblTipoProveedor.Location = New System.Drawing.Point(321, 32)
             Me.lblTipoProveedor.Name = "lblTipoProveedor"
-            Me.lblTipoProveedor.Size = New System.Drawing.Size(106, 13)
+            Me.lblTipoProveedor.Size = New System.Drawing.Size(101, 13)
             Me.lblTipoProveedor.TabIndex = 6
             Me.lblTipoProveedor.Text = "TIPO PROVEEDOR:"
             '
@@ -306,18 +309,19 @@
             Me.cmbTipoProveedor.BackColor = System.Drawing.Color.White
             Me.cmbTipoProveedor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cmbTipoProveedor.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-            Me.cmbTipoProveedor.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.cmbTipoProveedor.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cmbTipoProveedor.FormattingEnabled = True
             Me.cmbTipoProveedor.Items.AddRange(New Object() {"SERVICIOS", "MATERIALES"})
             Me.cmbTipoProveedor.Location = New System.Drawing.Point(433, 28)
             Me.cmbTipoProveedor.Name = "cmbTipoProveedor"
-            Me.cmbTipoProveedor.Size = New System.Drawing.Size(182, 23)
+            Me.cmbTipoProveedor.Size = New System.Drawing.Size(182, 21)
             Me.cmbTipoProveedor.TabIndex = 5
             '
             'tcEvaluacionesProveedores
             '
             Me.tcEvaluacionesProveedores.Controls.Add(Me.tpEvaluacionProveedorServicios)
             Me.tcEvaluacionesProveedores.Controls.Add(Me.tpEvaluacionProveedorMateriales)
+            Me.tcEvaluacionesProveedores.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.tcEvaluacionesProveedores.Location = New System.Drawing.Point(-2, 128)
             Me.tcEvaluacionesProveedores.Name = "tcEvaluacionesProveedores"
             Me.tcEvaluacionesProveedores.SelectedIndex = 0
@@ -375,8 +379,8 @@
             Me.lblLetreroClasificacion.Name = "lblLetreroClasificacion"
             Me.lblLetreroClasificacion.Size = New System.Drawing.Size(128, 36)
             Me.lblLetreroClasificacion.TabIndex = 2
-            Me.lblLetreroClasificacion.Text = "CLASIFICACION                     (%)    " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Proveedor FIJO                  75-100" & _
-                "%" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Proveedor OCASIONAL      65-74%" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Proveedor DESCARTADO   0-64%"
+            Me.lblLetreroClasificacion.Text = "CLASIFICACION                     (%)    " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Proveedor FIJO                  75-100" &
+    "%" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Proveedor OCASIONAL      65-74%" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Proveedor DESCARTADO   0-64%"
             '
             'txtTotalEvaluacionServicios
             '
@@ -416,13 +420,13 @@
             Me.cmbPregunta10Servicios.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cmbPregunta10Servicios.DropDownWidth = 500
             Me.cmbPregunta10Servicios.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-            Me.cmbPregunta10Servicios.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.cmbPregunta10Servicios.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cmbPregunta10Servicios.FormattingEnabled = True
-            Me.cmbPregunta10Servicios.Items.AddRange(New Object() {"(   0% ) - NO FACILITA NINGÚN TIPO DE INFORMACIÓN", "(   5% ) - FACILITA INFORMACIÓN SOLO SI ES UNA EXIGENCIA, EN CASOS PUNTUALES", "( 10% ) - FACILITA DOCUMENTACIÓN COMO: PERMISOS LEGALES, CERTIFICADOS DE CALIDAD," & _
-                            " ETC."})
+            Me.cmbPregunta10Servicios.Items.AddRange(New Object() {"(   0% ) - NO FACILITA NINGÚN TIPO DE INFORMACIÓN", "(   5% ) - FACILITA INFORMACIÓN SOLO SI ES UNA EXIGENCIA, EN CASOS PUNTUALES", "( 10% ) - FACILITA DOCUMENTACIÓN COMO: PERMISOS LEGALES, CERTIFICADOS DE CALIDAD," &
+                " ETC."})
             Me.cmbPregunta10Servicios.Location = New System.Drawing.Point(16, 20)
             Me.cmbPregunta10Servicios.Name = "cmbPregunta10Servicios"
-            Me.cmbPregunta10Servicios.Size = New System.Drawing.Size(393, 23)
+            Me.cmbPregunta10Servicios.Size = New System.Drawing.Size(393, 22)
             Me.cmbPregunta10Servicios.TabIndex = 2
             '
             'txtPregunta10Servicios
@@ -445,8 +449,8 @@
             Me.lblPregunta10Servicios.Name = "lblPregunta10Servicios"
             Me.lblPregunta10Servicios.Size = New System.Drawing.Size(529, 13)
             Me.lblPregunta10Servicios.TabIndex = 0
-            Me.lblPregunta10Servicios.Text = "DOCUMENTOS ACTUALIZADOS RESPALDO DEL SERVICIO (Permisos Legales, Certificados, In" & _
-                "formes, etc.)"
+            Me.lblPregunta10Servicios.Text = "DOCUMENTOS ACTUALIZADOS RESPALDO DEL SERVICIO (Permisos Legales, Certificados, In" &
+    "formes, etc.)"
             '
             'Panel9
             '
@@ -466,12 +470,12 @@
             Me.cmbPregunta9Servicios.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cmbPregunta9Servicios.DropDownWidth = 500
             Me.cmbPregunta9Servicios.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-            Me.cmbPregunta9Servicios.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.cmbPregunta9Servicios.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cmbPregunta9Servicios.FormattingEnabled = True
             Me.cmbPregunta9Servicios.Items.AddRange(New Object() {"(   0% ) - NO EXIXTE SOPORTE TÉCNICO", "( 20% ) - SOLO EN LA CIUDAD"})
             Me.cmbPregunta9Servicios.Location = New System.Drawing.Point(19, 20)
             Me.cmbPregunta9Servicios.Name = "cmbPregunta9Servicios"
-            Me.cmbPregunta9Servicios.Size = New System.Drawing.Size(390, 23)
+            Me.cmbPregunta9Servicios.Size = New System.Drawing.Size(390, 22)
             Me.cmbPregunta9Servicios.TabIndex = 2
             '
             'txtPregunta9Servicios
@@ -514,12 +518,12 @@
             Me.cmbPregunta8Servicios.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cmbPregunta8Servicios.DropDownWidth = 500
             Me.cmbPregunta8Servicios.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-            Me.cmbPregunta8Servicios.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.cmbPregunta8Servicios.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cmbPregunta8Servicios.FormattingEnabled = True
             Me.cmbPregunta8Servicios.Items.AddRange(New Object() {"( 0% ) - NO PRESENTA GARANTÍAS", "( 5% ) - SI PRESENTA GARANTÍAS O NO APLICA"})
             Me.cmbPregunta8Servicios.Location = New System.Drawing.Point(16, 20)
             Me.cmbPregunta8Servicios.Name = "cmbPregunta8Servicios"
-            Me.cmbPregunta8Servicios.Size = New System.Drawing.Size(393, 23)
+            Me.cmbPregunta8Servicios.Size = New System.Drawing.Size(393, 22)
             Me.cmbPregunta8Servicios.TabIndex = 2
             '
             'txtPregunta8Servicios
@@ -562,12 +566,12 @@
             Me.cmbPregunta7Servicios.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cmbPregunta7Servicios.DropDownWidth = 500
             Me.cmbPregunta7Servicios.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-            Me.cmbPregunta7Servicios.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.cmbPregunta7Servicios.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cmbPregunta7Servicios.FormattingEnabled = True
             Me.cmbPregunta7Servicios.Items.AddRange(New Object() {"( 2% ) DE 15 A 30 DÍAS", "( 5% ) D3 30 DÍAS EN ADELANTE"})
             Me.cmbPregunta7Servicios.Location = New System.Drawing.Point(16, 20)
             Me.cmbPregunta7Servicios.Name = "cmbPregunta7Servicios"
-            Me.cmbPregunta7Servicios.Size = New System.Drawing.Size(393, 23)
+            Me.cmbPregunta7Servicios.Size = New System.Drawing.Size(393, 22)
             Me.cmbPregunta7Servicios.TabIndex = 2
             '
             'txtPregunta7Servicios
@@ -610,12 +614,12 @@
             Me.cmbPregunta6Servicios.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cmbPregunta6Servicios.DropDownWidth = 500
             Me.cmbPregunta6Servicios.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-            Me.cmbPregunta6Servicios.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.cmbPregunta6Servicios.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cmbPregunta6Servicios.FormattingEnabled = True
             Me.cmbPregunta6Servicios.Items.AddRange(New Object() {"(   2% ) - PRECIO SUPERIOR AL MERCADO", "(   5% ) - PRECIO COMPETITIVO", "( 10% ) - PRECIO INFERIOR AL MERCADO"})
             Me.cmbPregunta6Servicios.Location = New System.Drawing.Point(16, 20)
             Me.cmbPregunta6Servicios.Name = "cmbPregunta6Servicios"
-            Me.cmbPregunta6Servicios.Size = New System.Drawing.Size(393, 23)
+            Me.cmbPregunta6Servicios.Size = New System.Drawing.Size(393, 22)
             Me.cmbPregunta6Servicios.TabIndex = 2
             '
             'txtPregunta6Servicios
@@ -658,12 +662,12 @@
             Me.cmbPregunta5Servicios.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cmbPregunta5Servicios.DropDownWidth = 500
             Me.cmbPregunta5Servicios.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-            Me.cmbPregunta5Servicios.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.cmbPregunta5Servicios.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cmbPregunta5Servicios.FormattingEnabled = True
             Me.cmbPregunta5Servicios.Items.AddRange(New Object() {"(   5% ) - PERMANENTES RETRASOS", "( 10% ) - PRESENTA RETRASOS ESPORADICOS", "( 15% ) - NUNCA PRESENTA RETRASOS CON LAS ENTREGAS"})
             Me.cmbPregunta5Servicios.Location = New System.Drawing.Point(16, 20)
             Me.cmbPregunta5Servicios.Name = "cmbPregunta5Servicios"
-            Me.cmbPregunta5Servicios.Size = New System.Drawing.Size(393, 23)
+            Me.cmbPregunta5Servicios.Size = New System.Drawing.Size(393, 22)
             Me.cmbPregunta5Servicios.TabIndex = 2
             '
             'txtPregunta5Servicios
@@ -706,12 +710,12 @@
             Me.cmbPregunta4Servicios.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cmbPregunta4Servicios.DropDownWidth = 500
             Me.cmbPregunta4Servicios.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-            Me.cmbPregunta4Servicios.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.cmbPregunta4Servicios.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cmbPregunta4Servicios.FormattingEnabled = True
             Me.cmbPregunta4Servicios.Items.AddRange(New Object() {"( 2% ) - SIEMPRE TRANSCURRE UN TIEMPO PARA RECIBIR RESPUESTA", "( 4% ) - RESPUESTA CASI INMEDIATA", "( 5% ) - RESPUESTA INMEDIATA Y GENERALMENTE PERSONAL"})
             Me.cmbPregunta4Servicios.Location = New System.Drawing.Point(16, 20)
             Me.cmbPregunta4Servicios.Name = "cmbPregunta4Servicios"
-            Me.cmbPregunta4Servicios.Size = New System.Drawing.Size(393, 23)
+            Me.cmbPregunta4Servicios.Size = New System.Drawing.Size(393, 22)
             Me.cmbPregunta4Servicios.TabIndex = 2
             '
             'txtPregunta4Servicios
@@ -754,12 +758,12 @@
             Me.cmbPregunta3Servicios.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cmbPregunta3Servicios.DropDownWidth = 500
             Me.cmbPregunta3Servicios.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-            Me.cmbPregunta3Servicios.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.cmbPregunta3Servicios.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cmbPregunta3Servicios.FormattingEnabled = True
             Me.cmbPregunta3Servicios.Items.AddRange(New Object() {"(   5% ) - TRANSPORTE RENTADO", "( 10% ) - TRANSPORTE PROPIO", "( 10% ) - TRANSPORTE NO ES NECESARIO"})
             Me.cmbPregunta3Servicios.Location = New System.Drawing.Point(16, 20)
             Me.cmbPregunta3Servicios.Name = "cmbPregunta3Servicios"
-            Me.cmbPregunta3Servicios.Size = New System.Drawing.Size(393, 23)
+            Me.cmbPregunta3Servicios.Size = New System.Drawing.Size(393, 22)
             Me.cmbPregunta3Servicios.TabIndex = 2
             '
             'txtPregunta3Servicios
@@ -802,12 +806,12 @@
             Me.cmbPregunta2Servicios.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cmbPregunta2Servicios.DropDownWidth = 500
             Me.cmbPregunta2Servicios.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-            Me.cmbPregunta2Servicios.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.cmbPregunta2Servicios.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cmbPregunta2Servicios.FormattingEnabled = True
             Me.cmbPregunta2Servicios.Items.AddRange(New Object() {"(   5% ) - NO DISPONE DE PERSONAL ADICIONAL Y SI ES NECESARIO", "( 10% ) - NO DISPONE DE PERSONAL ADICIONAL Y NO ES NECESARIO", "( 10% ) - PRESENTACIÓN DE ROL DEL IESS"})
             Me.cmbPregunta2Servicios.Location = New System.Drawing.Point(16, 19)
             Me.cmbPregunta2Servicios.Name = "cmbPregunta2Servicios"
-            Me.cmbPregunta2Servicios.Size = New System.Drawing.Size(393, 23)
+            Me.cmbPregunta2Servicios.Size = New System.Drawing.Size(393, 22)
             Me.cmbPregunta2Servicios.TabIndex = 2
             '
             'txtPregunta2Servicios
@@ -850,12 +854,12 @@
             Me.cmbPregunta1Servicios.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cmbPregunta1Servicios.DropDownWidth = 500
             Me.cmbPregunta1Servicios.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-            Me.cmbPregunta1Servicios.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.cmbPregunta1Servicios.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cmbPregunta1Servicios.FormattingEnabled = True
             Me.cmbPregunta1Servicios.Items.AddRange(New Object() {"(   5% ) - ALQUILADAS U OTRO", "( 10% ) - PROPIA"})
             Me.cmbPregunta1Servicios.Location = New System.Drawing.Point(16, 19)
             Me.cmbPregunta1Servicios.Name = "cmbPregunta1Servicios"
-            Me.cmbPregunta1Servicios.Size = New System.Drawing.Size(393, 23)
+            Me.cmbPregunta1Servicios.Size = New System.Drawing.Size(393, 22)
             Me.cmbPregunta1Servicios.TabIndex = 2
             '
             'txtPregunta1Servicios
@@ -940,8 +944,8 @@
             Me.Label4.Name = "Label4"
             Me.Label4.Size = New System.Drawing.Size(176, 52)
             Me.Label4.TabIndex = 2
-            Me.Label4.Text = "CLASIFICACION                     (%)    " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Proveedor FIJO                  75-100" & _
-                "%" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Proveedor OCASIONAL      65-74%" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Proveedor DESCARTADO   0-64%"
+            Me.Label4.Text = "CLASIFICACION                     (%)    " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Proveedor FIJO                  75-100" &
+    "%" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Proveedor OCASIONAL      65-74%" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Proveedor DESCARTADO   0-64%"
             '
             'txtTotalEvaluacionMateriales
             '
@@ -1436,7 +1440,7 @@
             '
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-            Me.BackColor = System.Drawing.Color.White
+            Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(185, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(227, Byte), Integer))
             Me.ClientSize = New System.Drawing.Size(619, 667)
             Me.Controls.Add(Me.lblTipoProveedor)
             Me.Controls.Add(Me.MenuStrip1)
@@ -1447,6 +1451,10 @@
             Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
             Me.Name = "FormEvaluacionProveedores"
             Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+            Me.StateActive.Border.DrawBorders = CType((((Krypton.Toolkit.PaletteDrawBorders.Top Or Krypton.Toolkit.PaletteDrawBorders.Bottom) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Left) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Right), Krypton.Toolkit.PaletteDrawBorders)
+            Me.StateActive.Border.Rounding = 5.0!
             Me.Text = "EVALUACIÓN PROVEEDORES"
             Me.gbFechaEvaluacionProveedores.ResumeLayout(False)
             Me.gbFechaEvaluacionProveedores.PerformLayout()

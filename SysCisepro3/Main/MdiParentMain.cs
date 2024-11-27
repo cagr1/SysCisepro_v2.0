@@ -45,7 +45,7 @@ namespace SysCisepro3.Main
         /// 
         
         public ClassUsuarioGeneral ObjUsuario { private get; set; }
-        public int TiempoNotificacion { private get; set; }
+        public int  TiempoNotificacion { private get; set; }
         public TipoConexion TipoCon { private get; set; }
         public ClassPermisosUsuario ObjPermiso { private get; set; }
         private bool IsAdmin { get; set; }
@@ -178,25 +178,15 @@ namespace SysCisepro3.Main
                     tslLogo.BackgroundImage = Resources.Cisepro_Wall;
                     this.BackgroundImage = Resources.Your_paragraph_text;
                     this.BackgroundImageLayout = ImageLayout.Stretch;
-
-
-                    
+                                                          
 
                     toolStrip1.BackColor = Color.FromArgb(21, 101, 192);   //ValidationForms.GetColorSistema(TipoCon);
                     statusStrip.BackColor = Color.FromArgb(21, 101, 192); // ValidationForms.GetColorSistema(TipoCon);
                     //materialSkinManager.ColorScheme = new MaterialSkin.ColorScheme(
                     //Primary.Blue800, Primary.Blue800, Primary.Blue600,
                     //Accent.LightBlue200, TextShade.WHITE);
-
-                    
-
-                    
-                    
-                    
-
-
-
-                    break;
+                           
+                                                            break;
 
             }
 
@@ -1319,7 +1309,7 @@ namespace SysCisepro3.Main
         }
         private void mANTENIMINETOPROVEEDORESToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form f = new syscisepro.FORMULARIOS.CONTABILIDAD.COMPRAS.PROVEEDORES.FormMantenimientoProveedores { MdiParent = this, TipoCox = TipoCox, IdUsuario = ObjUsuario.IdUsuario };
+            Form f = new syscisepro.FORMULARIOS.CONTABILIDAD.COMPRAS.PROVEEDORES.FormMantenimientoProveedores { MdiParent = this, TipoCox = TipoCox, IdUsuario = ObjUsuario.IdUsuario, UserName = ObjUsuario.Datos };
             f.Show();
         }
         private void rEGISTRODEDATOSPROVEEDORESCALIFICADOSToolStripMenuItem_Click(object sender, EventArgs e)
@@ -1865,21 +1855,23 @@ namespace SysCisepro3.Main
         {
             try
             {
-                var hoy = ObjUsuario.Now(TipoCon);
-                if (hoy.Minute % TiempoNotificacion != 0) return;
+                //var hoy = ObjUsuario.Now(TipoCon);
+                var hoy2 = DateTime.Now;
+
+                if (hoy2.Minute % TiempoNotificacion != 0) return;
 
                 if (ObjUsuario.TipoUsuario.Contains("ADMINISTRADOR"))
                 {  
                     _data = _objLibroDiario.SeleccionarRegistrosCodigoCuentaCambiadaLibroDiario(TipoCon);
                     _tipoNoficicacion = 5;
-                    notifyIcon1.BalloonTipText = @"ALERTA!!! Existen alteraciones de codigo y cuentas en el libro diario!"; 
+                    notifyIcon1.BalloonTipText = @"Existen alteraciones de codigo y cuentas en el libro diario!"; 
                 }
 
                 if (ObjUsuario.TipoUsuario.Contains("CONTABILIDAD") && Settings.Default.Usuario.Equals("MABEL"))
                 {
                     _data = _objClienteGeneral.BuscarClientesSinFacturarXRangoFecha(TipoCon, _fechaInicialMesActual, _fechaFinalMesActual, _fechaInicialMesAnterior, _fechaFinalMesAnterior);
                     _tipoNoficicacion = 1;
-                    notifyIcon1.BalloonTipText = @"ALERTA!!! Existen clientes a los que aún no les ha hecho la facturación correspondiente!"; 
+                    notifyIcon1.BalloonTipText = @"Existen clientes a los que aún no les ha hecho la facturación correspondiente!"; 
                 }
 
                 if (ObjUsuario.TipoUsuario == "RR.HH" && Settings.Default.Usuario.Equals("MARMIJOS"))
@@ -1898,7 +1890,7 @@ namespace SysCisepro3.Main
                         }
 
                         _tipoNoficicacion = 2;
-                        notifyIcon1.BalloonTipText = @"ALERTA!!! Existe personal de guardias que tiene días pendientes de vacaciones! Por favor, coordine con OPERACIONES para procesar la salida correspondiente.";
+                        notifyIcon1.BalloonTipText = @"Existe personal de guardias que tiene días pendientes de vacaciones! Por favor, coordine con OPERACIONES para procesar la salida correspondiente.";
                     }
                     catch (Exception ex)
                     {
@@ -1914,7 +1906,7 @@ namespace SysCisepro3.Main
                         _data2 = _objPersonal.SeleccionarPersonalPorCulminar3mesesPrueba(TipoCon);
 
                         _tipoNoficicacion = 3;
-                        notifyIcon1.BalloonTipText = @"ALERTA!!! Existe personal que está por culminar el contrato según el proycto registardo o tiene más de 3 meses (período de prueba)!. Por favor, coordine con OPERACIONES para procesar la salida / reubicación correspondiente.";
+                        notifyIcon1.BalloonTipText = @"Existe personal que está por culminar el contrato según el proycto registardo o tiene más de 3 meses (período de prueba)!. Por favor, coordine con OPERACIONES para procesar la salida / reubicación correspondiente.";
 
                     }
                     catch (Exception ex)
@@ -1929,7 +1921,7 @@ namespace SysCisepro3.Main
                     {
                         _data = _objPersonal.SeleccionarPersonalPor2MesesDocumentacion(TipoCon);
                         _tipoNoficicacion = 6;
-                        notifyIcon1.BalloonTipText = @"ALERTA!!! Existe personal que tiene al menos 2 meses desde su ingreso y no ha presentado su documentación!. Por favor, verifique la información correspondiente.";
+                        notifyIcon1.BalloonTipText = @"Existe personal que tiene al menos 2 meses desde su ingreso y no ha presentado su documentación!. Por favor, verifique la información correspondiente.";
                     }
                     catch (Exception ex)
                     {
@@ -1940,7 +1932,7 @@ namespace SysCisepro3.Main
                 {
                     _data = _objChaleco.SeleccionarChalecosxCaducar(TipoCon);
                     _tipoNoficicacion = 7;
-                    notifyIcon1.BalloonTipText = @"ALERTA!!! Aviso por chalecos que estan a punto de expirar su permiso. Por favor, verifique la información correspondiente.";
+                    notifyIcon1.BalloonTipText = @"Aviso por chalecos que estan a punto de expirar su permiso. Por favor, verifique la información correspondiente.";
                 }
 
                

@@ -809,7 +809,8 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                                 End If
                             Else
                                 ' Show the input box.
-                                claveIngresada = InputBox("INGRESE LA CLAVE AUTORIZACIÓN", "VALOR COMPROBANTE")
+                                'claveIngresada = InputBox("INGRESE LA CLAVE AUTORIZACIÓN", "VALOR COMPROBANTE")
+                                claveIngresada = KryptonInputBox.Show("INGRESE LA CLAVE AUTORIZACIÓN", "VALOR COMPROBANTE")
                                 If Not IsNumeric(claveIngresada) Then
                                     MsgBox("POR FAVOR INGRESE SOLO NÚMEROS", MsgBoxStyle.Exclamation, "Mensaje de validación")
                                     Exit Sub

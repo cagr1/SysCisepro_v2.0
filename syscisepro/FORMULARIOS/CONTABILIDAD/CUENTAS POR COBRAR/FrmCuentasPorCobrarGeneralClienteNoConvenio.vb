@@ -4,6 +4,7 @@ Imports ClassLibraryCisepro.CONTABILIDAD.VENTAS
 Imports ClassLibraryCisepro.ENUMS
 Imports Microsoft.Office.Interop
 Imports syscisepro.DATOS
+Imports Krypton.Toolkit
 
 Namespace FORMULARIOS.CONTABILIDAD.CUENTAS_POR_COBRAR
     Public Class FrmCuentasPorCobrarGeneralClienteNoConvenio
@@ -169,6 +170,7 @@ Namespace FORMULARIOS.CONTABILIDAD.CUENTAS_POR_COBRAR
                 dgvCuentasPorCobrar.AutoResizeRows()
             Catch ex As Exception
                 dgvCuentasPorCobrar.Rows.Clear()
+                KryptonMessageBox.Show("Metodo cargar cuentas por cobrar general por cliente" & vbNewLine & ex.Message.ToString, "Mensaje de excepción", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
 
@@ -198,7 +200,8 @@ Namespace FORMULARIOS.CONTABILIDAD.CUENTAS_POR_COBRAR
                     txtTotalCuentasPorCobrar.Text = Math.Round(((totalFacturado - totalRetenido) - (totalNotaCredito + totalAbonado)), 2)
                 End If
             Catch ex As Exception
-                MsgBox("METODO SUMAR TOTAL CUENTAS POR COBRAR" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
+                'MsgBox("METODO SUMAR TOTAL CUENTAS POR COBRAR" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
+                KryptonMessageBox.Show("Metodo sumar total cuentas por cobrar" & vbNewLine & ex.Message.ToString, "Mensaje de excepción", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
 
@@ -208,14 +211,15 @@ Namespace FORMULARIOS.CONTABILIDAD.CUENTAS_POR_COBRAR
                     ExportarDatosExcel(dgvCuentasPorCobrar, "CUENTAS POR COBRAR")
                 End If
             Catch ex As Exception
-
+                KryptonMessageBox.Show("Metodo exportar" & vbNewLine & ex.Message.ToString, "Mensaje de excepción", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
 
         Private Sub ExportarDatosExcel(ByVal dgvCuentasPorPagar As DataGridView, ByVal titulo As String)
             Try
                 If dgvCuentasPorPagar.Rows.Count = 0 Then
-                    MsgBox("No hay datos que exportar!", MsgBoxStyle.Exclamation, "Mensaje de validación")
+                    'MsgBox("No hay datos que exportar!", MsgBoxStyle.Exclamation, "Mensaje de validación")
+                    KryptonMessageBox.Show("No hay datos que exportar!", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                     Return
                 End If
 
@@ -326,7 +330,8 @@ Namespace FORMULARIOS.CONTABILIDAD.CUENTAS_POR_COBRAR
                 app.Visible = True
                 app.DisplayAlerts = True
             Catch ex As Exception
-                MessageBox.Show("Hubo un problema al exportar datos!", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                'MessageBox.Show("Hubo un problema al exportar datos!", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                KryptonMessageBox.Show("Metodo exportar datos" & vbNewLine & ex.Message.ToString, "Mensaje de excepción", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
          

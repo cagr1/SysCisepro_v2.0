@@ -431,7 +431,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
             dtpFechaEmisionComprobanteCompra.Enabled = True
             chkActivarRetencion.Enabled = True
             chkReq.Enabled = True
-            btnOrdenCompra.Enabled = True
+            'btnOrdenCompra.Enabled = True
 
             'gbValoresComprobanteCompra.Enabled = True
             'txtSubtotal12FacturaCompra.Enabled = True
@@ -2051,10 +2051,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
             btnGuardarEnFondoRotativo.Enabled = True
         End Sub
 
-        Private Sub chkReq_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
-            lblOrdenCompra.Text = "###"
-            btnOrdenCompra.Enabled = chkReq.Checked
-        End Sub
+
 
         Private Sub btnOrdenCompra_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
             Try
@@ -2209,7 +2206,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
                 cmbBienServicio.Enabled = True
                 btnAgregarImpuesto.Enabled = True
                 btnEliminarImpuesto.Enabled = True
-                cmbBienServicio.Enabled = True
+
 
                 'GroupBox1.Enabled = True
                 dgvDetalleComprobanteRetencion.Enabled = True
@@ -2344,6 +2341,11 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
 
         Private Sub KryptonGroupBox3_Panel_Paint(sender As Object, e As PaintEventArgs) Handles KryptonGroupBox3.Panel.Paint
 
+        End Sub
+
+        Private Sub chkReq_CheckedChanged(sender As Object, e As EventArgs) Handles chkReq.CheckedChanged
+            lblOrdenCompra.Text = "###"
+            btnOrdenCompra.Enabled = chkReq.Checked
         End Sub
     End Class
 End Namespace

@@ -139,6 +139,9 @@ namespace SysCisepro3.TalentoHumano
             dgvNotificacion.DefaultCellStyle.SelectionBackColor = ValidationForms.GetColorSistema(TipoCon);
             dgvVacaciones.DefaultCellStyle.SelectionBackColor = ValidationForms.GetColorSistema(TipoCon);
             dgv3meses.DefaultCellStyle.SelectionBackColor = ValidationForms.GetColorSistema(TipoCon);
+            dgvNotificacion.DefaultCellStyle.SelectionForeColor = Color.White;
+            dgvVacaciones.DefaultCellStyle.SelectionForeColor = Color.White;
+            dgv3meses.DefaultCellStyle.SelectionForeColor = Color.White;
             switch (TipoCon)
             {
                 case TipoConexion.Seportpac:

@@ -35,10 +35,11 @@
             Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle14 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle15 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle15 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle16 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim DataGridViewCellStyle13 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle14 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormComprobanteIngresoBanco))
             Me.txtNombreComercialClienteGeneral = New System.Windows.Forms.TextBox()
             Me.lblIdClienteGeneral = New System.Windows.Forms.Label()
@@ -103,12 +104,6 @@
             Me.KryptonLabel18 = New ComponentFactory.Krypton.Toolkit.KryptonLabel()
             Me.KryptonLabel17 = New ComponentFactory.Krypton.Toolkit.KryptonLabel()
             Me.KryptonLabel16 = New ComponentFactory.Krypton.Toolkit.KryptonLabel()
-            Me.KryptonGroupBox2 = New ComponentFactory.Krypton.Toolkit.KryptonGroupBox()
-            Me.RadioButton4 = New System.Windows.Forms.RadioButton()
-            Me.RadioButton5 = New System.Windows.Forms.RadioButton()
-            Me.RadioButton6 = New System.Windows.Forms.RadioButton()
-            Me.RadioButton7 = New System.Windows.Forms.RadioButton()
-            Me.RadioButton8 = New System.Windows.Forms.RadioButton()
             Me.gbFormaPago = New ComponentFactory.Krypton.Toolkit.KryptonGroupBox()
             Me.rbNotaCredito = New System.Windows.Forms.RadioButton()
             Me.rbCheque = New System.Windows.Forms.RadioButton()
@@ -130,16 +125,6 @@
             Me.KryptonLabel5 = New ComponentFactory.Krypton.Toolkit.KryptonLabel()
             Me.KryptonLabel4 = New ComponentFactory.Krypton.Toolkit.KryptonLabel()
             Me.KryptonLabel3 = New ComponentFactory.Krypton.Toolkit.KryptonLabel()
-            Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-            Me.RadioButton1 = New System.Windows.Forms.RadioButton()
-            Me.RadioButton2 = New System.Windows.Forms.RadioButton()
-            Me.RadioButton3 = New System.Windows.Forms.RadioButton()
-            Me.GroupBox5 = New System.Windows.Forms.GroupBox()
-            Me.RadioButton12 = New System.Windows.Forms.RadioButton()
-            Me.RadioButton13 = New System.Windows.Forms.RadioButton()
-            Me.RadioButton14 = New System.Windows.Forms.RadioButton()
-            Me.Label8 = New System.Windows.Forms.Label()
-            Me.Label7 = New System.Windows.Forms.Label()
             Me.KryptonLabel2 = New ComponentFactory.Krypton.Toolkit.KryptonLabel()
             Me.KryptonLabel1 = New ComponentFactory.Krypton.Toolkit.KryptonLabel()
             CType(Me.dgvFacturaVenta, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -163,10 +148,6 @@
             CType(Me.gbFacturaVenta.Panel, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.gbFacturaVenta.Panel.SuspendLayout()
             Me.gbFacturaVenta.SuspendLayout()
-            CType(Me.KryptonGroupBox2, System.ComponentModel.ISupportInitialize).BeginInit()
-            CType(Me.KryptonGroupBox2.Panel, System.ComponentModel.ISupportInitialize).BeginInit()
-            Me.KryptonGroupBox2.Panel.SuspendLayout()
-            Me.KryptonGroupBox2.SuspendLayout()
             CType(Me.gbFormaPago, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.gbFormaPago.Panel, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.gbFormaPago.Panel.SuspendLayout()
@@ -175,8 +156,6 @@
             CType(Me.gbCheque.Panel, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.gbCheque.Panel.SuspendLayout()
             Me.gbCheque.SuspendLayout()
-            Me.GroupBox2.SuspendLayout()
-            Me.GroupBox5.SuspendLayout()
             Me.SuspendLayout()
             '
             'txtNombreComercialClienteGeneral
@@ -258,6 +237,7 @@
             Me.dgvFacturaVenta.RowHeadersVisible = False
             DataGridViewCellStyle5.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.dgvFacturaVenta.RowsDefaultCellStyle = DataGridViewCellStyle5
+            Me.dgvFacturaVenta.RowTemplate.DefaultCellStyle.Font = New System.Drawing.Font("Roboto", 8.25!)
             Me.dgvFacturaVenta.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
             Me.dgvFacturaVenta.Size = New System.Drawing.Size(297, 286)
             Me.dgvFacturaVenta.TabIndex = 0
@@ -281,7 +261,7 @@
             Me.dgvPagosFacturaVenta.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
             DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
             DataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control
-            DataGridViewCellStyle7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle7.Font = New System.Drawing.Font("Roboto", 8.25!)
             DataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText
             DataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption
             DataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText
@@ -300,9 +280,17 @@
             Me.dgvPagosFacturaVenta.Location = New System.Drawing.Point(0, 0)
             Me.dgvPagosFacturaVenta.MultiSelect = False
             Me.dgvPagosFacturaVenta.Name = "dgvPagosFacturaVenta"
+            DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+            DataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control
+            DataGridViewCellStyle9.Font = New System.Drawing.Font("Roboto", 8.25!)
+            DataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText
+            DataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight
+            DataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+            DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+            Me.dgvPagosFacturaVenta.RowHeadersDefaultCellStyle = DataGridViewCellStyle9
             Me.dgvPagosFacturaVenta.RowHeadersVisible = False
-            DataGridViewCellStyle9.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.dgvPagosFacturaVenta.RowsDefaultCellStyle = DataGridViewCellStyle9
+            DataGridViewCellStyle10.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.dgvPagosFacturaVenta.RowsDefaultCellStyle = DataGridViewCellStyle10
             Me.dgvPagosFacturaVenta.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
             Me.dgvPagosFacturaVenta.Size = New System.Drawing.Size(297, 198)
             Me.dgvPagosFacturaVenta.TabIndex = 0
@@ -396,6 +384,7 @@
             'rbAcreditadoBancos
             '
             Me.rbAcreditadoBancos.AutoSize = True
+            Me.rbAcreditadoBancos.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.rbAcreditadoBancos.Checked = True
             Me.rbAcreditadoBancos.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.rbAcreditadoBancos.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
@@ -405,11 +394,12 @@
             Me.rbAcreditadoBancos.TabIndex = 67
             Me.rbAcreditadoBancos.TabStop = True
             Me.rbAcreditadoBancos.Text = "Bancos"
-            Me.rbAcreditadoBancos.UseVisualStyleBackColor = True
+            Me.rbAcreditadoBancos.UseVisualStyleBackColor = False
             '
             'rbAcreditadoCaja
             '
             Me.rbAcreditadoCaja.AutoSize = True
+            Me.rbAcreditadoCaja.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.rbAcreditadoCaja.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.rbAcreditadoCaja.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
             Me.rbAcreditadoCaja.Location = New System.Drawing.Point(6, 24)
@@ -418,11 +408,12 @@
             Me.rbAcreditadoCaja.TabIndex = 68
             Me.rbAcreditadoCaja.TabStop = True
             Me.rbAcreditadoCaja.Text = "Caja"
-            Me.rbAcreditadoCaja.UseVisualStyleBackColor = True
+            Me.rbAcreditadoCaja.UseVisualStyleBackColor = False
             '
             'rbAcreditadoCruceCtas
             '
             Me.rbAcreditadoCruceCtas.AutoSize = True
+            Me.rbAcreditadoCruceCtas.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.rbAcreditadoCruceCtas.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.rbAcreditadoCruceCtas.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
             Me.rbAcreditadoCruceCtas.Location = New System.Drawing.Point(6, 40)
@@ -431,11 +422,11 @@
             Me.rbAcreditadoCruceCtas.TabIndex = 69
             Me.rbAcreditadoCruceCtas.TabStop = True
             Me.rbAcreditadoCruceCtas.Text = "Cruce Ctas"
-            Me.rbAcreditadoCruceCtas.UseVisualStyleBackColor = True
+            Me.rbAcreditadoCruceCtas.UseVisualStyleBackColor = False
             '
             'GroupBox4
             '
-            Me.GroupBox4.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(247, Byte), Integer))
+            Me.GroupBox4.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.GroupBox4.Controls.Add(Me.RadioButton9)
             Me.GroupBox4.Controls.Add(Me.RadioButton10)
             Me.GroupBox4.Controls.Add(Me.RadioButton11)
@@ -614,31 +605,31 @@
             Me.dgvComprobanteIngresoBanco.AllowUserToAddRows = False
             Me.dgvComprobanteIngresoBanco.AllowUserToDeleteRows = False
             Me.dgvComprobanteIngresoBanco.AllowUserToResizeRows = False
-            DataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-            DataGridViewCellStyle10.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.dgvComprobanteIngresoBanco.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle10
+            DataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+            DataGridViewCellStyle11.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.dgvComprobanteIngresoBanco.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle11
             Me.dgvComprobanteIngresoBanco.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.dgvComprobanteIngresoBanco.BorderStyle = System.Windows.Forms.BorderStyle.None
             Me.dgvComprobanteIngresoBanco.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
             Me.dgvComprobanteIngresoBanco.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-            DataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-            DataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Control
-            DataGridViewCellStyle11.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            DataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText
-            DataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption
-            DataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-            DataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-            Me.dgvComprobanteIngresoBanco.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle11
+            DataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+            DataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Control
+            DataGridViewCellStyle12.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText
+            DataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption
+            DataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+            DataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+            Me.dgvComprobanteIngresoBanco.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle12
             Me.dgvComprobanteIngresoBanco.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
             Me.dgvComprobanteIngresoBanco.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.CODIGO, Me.CUENTA, Me.CONCEPTO, Me.DETALLE, Me.DEBE, Me.HABER, Me.ID_CC})
-            DataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-            DataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Window
-            DataGridViewCellStyle14.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            DataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.ControlText
-            DataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(123, Byte), Integer))
-            DataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-            DataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-            Me.dgvComprobanteIngresoBanco.DefaultCellStyle = DataGridViewCellStyle14
+            DataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+            DataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.Window
+            DataGridViewCellStyle15.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.ControlText
+            DataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(123, Byte), Integer))
+            DataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+            DataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+            Me.dgvComprobanteIngresoBanco.DefaultCellStyle = DataGridViewCellStyle15
             Me.dgvComprobanteIngresoBanco.Dock = System.Windows.Forms.DockStyle.Fill
             Me.dgvComprobanteIngresoBanco.GridColor = System.Drawing.SystemColors.ControlLight
             Me.dgvComprobanteIngresoBanco.Location = New System.Drawing.Point(3, 16)
@@ -646,8 +637,8 @@
             Me.dgvComprobanteIngresoBanco.Name = "dgvComprobanteIngresoBanco"
             Me.dgvComprobanteIngresoBanco.RowHeadersVisible = False
             Me.dgvComprobanteIngresoBanco.RowHeadersWidth = 25
-            DataGridViewCellStyle15.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.dgvComprobanteIngresoBanco.RowsDefaultCellStyle = DataGridViewCellStyle15
+            DataGridViewCellStyle16.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.dgvComprobanteIngresoBanco.RowsDefaultCellStyle = DataGridViewCellStyle16
             Me.dgvComprobanteIngresoBanco.RowTemplate.DefaultCellStyle.Font = New System.Drawing.Font("Roboto", 8.25!)
             Me.dgvComprobanteIngresoBanco.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
             Me.dgvComprobanteIngresoBanco.Size = New System.Drawing.Size(483, 202)
@@ -680,16 +671,16 @@
             '
             'DEBE
             '
-            DataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-            Me.DEBE.DefaultCellStyle = DataGridViewCellStyle12
+            DataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+            Me.DEBE.DefaultCellStyle = DataGridViewCellStyle13
             Me.DEBE.HeaderText = "DEBE"
             Me.DEBE.Name = "DEBE"
             Me.DEBE.Width = 85
             '
             'HABER
             '
-            DataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-            Me.HABER.DefaultCellStyle = DataGridViewCellStyle13
+            DataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+            Me.HABER.DefaultCellStyle = DataGridViewCellStyle14
             Me.HABER.HeaderText = "HABER"
             Me.HABER.Name = "HABER"
             Me.HABER.Width = 85
@@ -907,7 +898,6 @@
             Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel16)
             Me.KryptonGroupBox1.Panel.Controls.Add(Me.btnAgregarConceptoComprobante)
             Me.KryptonGroupBox1.Panel.Controls.Add(Me.txtObservacionesComprobanteIngreso)
-            Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonGroupBox2)
             Me.KryptonGroupBox1.Panel.Controls.Add(Me.gbFormaPago)
             Me.KryptonGroupBox1.Panel.Controls.Add(Me.cmbCuentaBancos)
             Me.KryptonGroupBox1.Panel.Controls.Add(Me.gbCheque)
@@ -930,7 +920,6 @@
             Me.KryptonGroupBox1.Panel.Controls.Add(Me.lblIdClienteGeneral)
             Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel3)
             Me.KryptonGroupBox1.Panel.Controls.Add(Me.txtNombreComercialClienteGeneral)
-            Me.KryptonGroupBox1.Panel.Controls.Add(Me.GroupBox2)
             Me.KryptonGroupBox1.Panel.Controls.Add(Me.lblIdComprobanteIngresoBancos)
             Me.KryptonGroupBox1.Panel.Controls.Add(Me.gbAcreditado)
             Me.KryptonGroupBox1.Panel.Controls.Add(Me.txtActividad)
@@ -994,97 +983,10 @@
             Me.KryptonLabel16.TabIndex = 116
             Me.KryptonLabel16.Values.Text = "Observaciones"
             '
-            'KryptonGroupBox2
-            '
-            Me.KryptonGroupBox2.CaptionOverlap = 0.15R
-            Me.KryptonGroupBox2.GroupBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.PanelRibbonInactive
-            Me.KryptonGroupBox2.Location = New System.Drawing.Point(11, 134)
-            Me.KryptonGroupBox2.Name = "KryptonGroupBox2"
-            '
-            'KryptonGroupBox2.Panel
-            '
-            Me.KryptonGroupBox2.Panel.Controls.Add(Me.RadioButton4)
-            Me.KryptonGroupBox2.Panel.Controls.Add(Me.RadioButton5)
-            Me.KryptonGroupBox2.Panel.Controls.Add(Me.RadioButton6)
-            Me.KryptonGroupBox2.Panel.Controls.Add(Me.RadioButton7)
-            Me.KryptonGroupBox2.Panel.Controls.Add(Me.RadioButton8)
-            Me.KryptonGroupBox2.Size = New System.Drawing.Size(246, 52)
-            Me.KryptonGroupBox2.TabIndex = 115
-            Me.KryptonGroupBox2.Values.Heading = "Pago"
-            '
-            'RadioButton4
-            '
-            Me.RadioButton4.AutoSize = True
-            Me.RadioButton4.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(247, Byte), Integer))
-            Me.RadioButton4.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.RadioButton4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
-            Me.RadioButton4.Location = New System.Drawing.Point(195, 3)
-            Me.RadioButton4.Name = "RadioButton4"
-            Me.RadioButton4.Size = New System.Drawing.Size(39, 17)
-            Me.RadioButton4.TabIndex = 73
-            Me.RadioButton4.TabStop = True
-            Me.RadioButton4.Text = "Nc"
-            Me.RadioButton4.UseVisualStyleBackColor = False
-            '
-            'RadioButton5
-            '
-            Me.RadioButton5.AutoSize = True
-            Me.RadioButton5.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(247, Byte), Integer))
-            Me.RadioButton5.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.RadioButton5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
-            Me.RadioButton5.Location = New System.Drawing.Point(6, 3)
-            Me.RadioButton5.Name = "RadioButton5"
-            Me.RadioButton5.Size = New System.Drawing.Size(44, 17)
-            Me.RadioButton5.TabIndex = 69
-            Me.RadioButton5.TabStop = True
-            Me.RadioButton5.Text = "Che"
-            Me.RadioButton5.UseVisualStyleBackColor = False
-            '
-            'RadioButton6
-            '
-            Me.RadioButton6.AutoSize = True
-            Me.RadioButton6.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(247, Byte), Integer))
-            Me.RadioButton6.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.RadioButton6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
-            Me.RadioButton6.Location = New System.Drawing.Point(150, 3)
-            Me.RadioButton6.Name = "RadioButton6"
-            Me.RadioButton6.Size = New System.Drawing.Size(42, 17)
-            Me.RadioButton6.TabIndex = 72
-            Me.RadioButton6.TabStop = True
-            Me.RadioButton6.Text = "Tra"
-            Me.RadioButton6.UseVisualStyleBackColor = False
-            '
-            'RadioButton7
-            '
-            Me.RadioButton7.AutoSize = True
-            Me.RadioButton7.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(247, Byte), Integer))
-            Me.RadioButton7.Checked = True
-            Me.RadioButton7.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.RadioButton7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
-            Me.RadioButton7.Location = New System.Drawing.Point(51, 3)
-            Me.RadioButton7.Name = "RadioButton7"
-            Me.RadioButton7.Size = New System.Drawing.Size(41, 17)
-            Me.RadioButton7.TabIndex = 70
-            Me.RadioButton7.TabStop = True
-            Me.RadioButton7.Text = "Efe"
-            Me.RadioButton7.UseVisualStyleBackColor = False
-            '
-            'RadioButton8
-            '
-            Me.RadioButton8.AutoSize = True
-            Me.RadioButton8.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(247, Byte), Integer))
-            Me.RadioButton8.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.RadioButton8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
-            Me.RadioButton8.Location = New System.Drawing.Point(97, 3)
-            Me.RadioButton8.Name = "RadioButton8"
-            Me.RadioButton8.Size = New System.Drawing.Size(44, 17)
-            Me.RadioButton8.TabIndex = 71
-            Me.RadioButton8.TabStop = True
-            Me.RadioButton8.Text = "Tarj"
-            Me.RadioButton8.UseVisualStyleBackColor = False
-            '
             'gbFormaPago
             '
+            Me.gbFormaPago.CaptionOverlap = 0R
+            Me.gbFormaPago.GroupBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.PanelRibbonInactive
             Me.gbFormaPago.Location = New System.Drawing.Point(11, 134)
             Me.gbFormaPago.Name = "gbFormaPago"
             '
@@ -1102,7 +1004,7 @@
             'rbNotaCredito
             '
             Me.rbNotaCredito.AutoSize = True
-            Me.rbNotaCredito.BackColor = System.Drawing.Color.FromArgb(CType(CType(189, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(232, Byte), Integer))
+            Me.rbNotaCredito.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(247, Byte), Integer))
             Me.rbNotaCredito.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.rbNotaCredito.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
             Me.rbNotaCredito.Location = New System.Drawing.Point(195, 3)
@@ -1116,7 +1018,7 @@
             'rbCheque
             '
             Me.rbCheque.AutoSize = True
-            Me.rbCheque.BackColor = System.Drawing.Color.FromArgb(CType(CType(189, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(232, Byte), Integer))
+            Me.rbCheque.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(247, Byte), Integer))
             Me.rbCheque.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.rbCheque.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
             Me.rbCheque.Location = New System.Drawing.Point(6, 3)
@@ -1130,7 +1032,7 @@
             'rbTransaccion
             '
             Me.rbTransaccion.AutoSize = True
-            Me.rbTransaccion.BackColor = System.Drawing.Color.FromArgb(CType(CType(189, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(232, Byte), Integer))
+            Me.rbTransaccion.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(247, Byte), Integer))
             Me.rbTransaccion.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.rbTransaccion.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
             Me.rbTransaccion.Location = New System.Drawing.Point(150, 3)
@@ -1144,7 +1046,7 @@
             'rbEfectivo
             '
             Me.rbEfectivo.AutoSize = True
-            Me.rbEfectivo.BackColor = System.Drawing.Color.FromArgb(CType(CType(189, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(232, Byte), Integer))
+            Me.rbEfectivo.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(247, Byte), Integer))
             Me.rbEfectivo.Checked = True
             Me.rbEfectivo.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.rbEfectivo.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
@@ -1159,7 +1061,7 @@
             'rbTarjetaCredido
             '
             Me.rbTarjetaCredido.AutoSize = True
-            Me.rbTarjetaCredido.BackColor = System.Drawing.Color.FromArgb(CType(CType(189, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(232, Byte), Integer))
+            Me.rbTarjetaCredido.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(247, Byte), Integer))
             Me.rbTarjetaCredido.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.rbTarjetaCredido.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
             Me.rbTarjetaCredido.Location = New System.Drawing.Point(97, 3)
@@ -1172,7 +1074,7 @@
             '
             'gbCheque
             '
-            Me.gbCheque.CaptionOverlap = 0.15R
+            Me.gbCheque.CaptionOverlap = 0R
             Me.gbCheque.GroupBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.ControlRibbon
             Me.gbCheque.Location = New System.Drawing.Point(11, 190)
             Me.gbCheque.Name = "gbCheque"
@@ -1309,140 +1211,6 @@
             Me.KryptonLabel3.TabIndex = 79
             Me.KryptonLabel3.Values.Text = "Cliente"
             '
-            'GroupBox2
-            '
-            Me.GroupBox2.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(247, Byte), Integer))
-            Me.GroupBox2.Controls.Add(Me.RadioButton1)
-            Me.GroupBox2.Controls.Add(Me.RadioButton2)
-            Me.GroupBox2.Controls.Add(Me.RadioButton3)
-            Me.GroupBox2.Controls.Add(Me.GroupBox5)
-            Me.GroupBox2.Controls.Add(Me.Label8)
-            Me.GroupBox2.Controls.Add(Me.Label7)
-            Me.GroupBox2.Location = New System.Drawing.Point(77, 69)
-            Me.GroupBox2.Name = "GroupBox2"
-            Me.GroupBox2.Size = New System.Drawing.Size(107, 59)
-            Me.GroupBox2.TabIndex = 70
-            Me.GroupBox2.TabStop = False
-            '
-            'RadioButton1
-            '
-            Me.RadioButton1.AutoSize = True
-            Me.RadioButton1.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
-            Me.RadioButton1.Checked = True
-            Me.RadioButton1.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.RadioButton1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
-            Me.RadioButton1.Location = New System.Drawing.Point(6, 8)
-            Me.RadioButton1.Name = "RadioButton1"
-            Me.RadioButton1.Size = New System.Drawing.Size(62, 17)
-            Me.RadioButton1.TabIndex = 67
-            Me.RadioButton1.TabStop = True
-            Me.RadioButton1.Text = "Bancos"
-            Me.RadioButton1.UseVisualStyleBackColor = False
-            '
-            'RadioButton2
-            '
-            Me.RadioButton2.AutoSize = True
-            Me.RadioButton2.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
-            Me.RadioButton2.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.RadioButton2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
-            Me.RadioButton2.Location = New System.Drawing.Point(6, 24)
-            Me.RadioButton2.Name = "RadioButton2"
-            Me.RadioButton2.Size = New System.Drawing.Size(47, 17)
-            Me.RadioButton2.TabIndex = 68
-            Me.RadioButton2.TabStop = True
-            Me.RadioButton2.Text = "Caja"
-            Me.RadioButton2.UseVisualStyleBackColor = False
-            '
-            'RadioButton3
-            '
-            Me.RadioButton3.AutoSize = True
-            Me.RadioButton3.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
-            Me.RadioButton3.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.RadioButton3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
-            Me.RadioButton3.Location = New System.Drawing.Point(6, 40)
-            Me.RadioButton3.Name = "RadioButton3"
-            Me.RadioButton3.Size = New System.Drawing.Size(80, 17)
-            Me.RadioButton3.TabIndex = 69
-            Me.RadioButton3.TabStop = True
-            Me.RadioButton3.Text = "Cruce Ctas"
-            Me.RadioButton3.UseVisualStyleBackColor = False
-            '
-            'GroupBox5
-            '
-            Me.GroupBox5.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
-            Me.GroupBox5.Controls.Add(Me.RadioButton12)
-            Me.GroupBox5.Controls.Add(Me.RadioButton13)
-            Me.GroupBox5.Controls.Add(Me.RadioButton14)
-            Me.GroupBox5.Location = New System.Drawing.Point(0, 0)
-            Me.GroupBox5.Name = "GroupBox5"
-            Me.GroupBox5.Size = New System.Drawing.Size(107, 59)
-            Me.GroupBox5.TabIndex = 70
-            Me.GroupBox5.TabStop = False
-            '
-            'RadioButton12
-            '
-            Me.RadioButton12.AutoSize = True
-            Me.RadioButton12.Checked = True
-            Me.RadioButton12.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.RadioButton12.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
-            Me.RadioButton12.Location = New System.Drawing.Point(6, 8)
-            Me.RadioButton12.Name = "RadioButton12"
-            Me.RadioButton12.Size = New System.Drawing.Size(62, 17)
-            Me.RadioButton12.TabIndex = 67
-            Me.RadioButton12.TabStop = True
-            Me.RadioButton12.Text = "Bancos"
-            Me.RadioButton12.UseVisualStyleBackColor = True
-            '
-            'RadioButton13
-            '
-            Me.RadioButton13.AutoSize = True
-            Me.RadioButton13.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.RadioButton13.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
-            Me.RadioButton13.Location = New System.Drawing.Point(6, 24)
-            Me.RadioButton13.Name = "RadioButton13"
-            Me.RadioButton13.Size = New System.Drawing.Size(47, 17)
-            Me.RadioButton13.TabIndex = 68
-            Me.RadioButton13.TabStop = True
-            Me.RadioButton13.Text = "Caja"
-            Me.RadioButton13.UseVisualStyleBackColor = True
-            '
-            'RadioButton14
-            '
-            Me.RadioButton14.AutoSize = True
-            Me.RadioButton14.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.RadioButton14.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
-            Me.RadioButton14.Location = New System.Drawing.Point(6, 40)
-            Me.RadioButton14.Name = "RadioButton14"
-            Me.RadioButton14.Size = New System.Drawing.Size(80, 17)
-            Me.RadioButton14.TabIndex = 69
-            Me.RadioButton14.TabStop = True
-            Me.RadioButton14.Text = "Cruce Ctas"
-            Me.RadioButton14.UseVisualStyleBackColor = True
-            '
-            'Label8
-            '
-            Me.Label8.AutoSize = True
-            Me.Label8.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(247, Byte), Integer))
-            Me.Label8.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
-            Me.Label8.Location = New System.Drawing.Point(-3, -69)
-            Me.Label8.Name = "Label8"
-            Me.Label8.Size = New System.Drawing.Size(16, 13)
-            Me.Label8.TabIndex = 77
-            Me.Label8.Text = "..."
-            '
-            'Label7
-            '
-            Me.Label7.AutoSize = True
-            Me.Label7.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(247, Byte), Integer))
-            Me.Label7.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
-            Me.Label7.Location = New System.Drawing.Point(269, -71)
-            Me.Label7.Name = "Label7"
-            Me.Label7.Size = New System.Drawing.Size(16, 13)
-            Me.Label7.TabIndex = 76
-            Me.Label7.Text = "..."
-            '
             'KryptonLabel2
             '
             Me.KryptonLabel2.Location = New System.Drawing.Point(152, 14)
@@ -1501,11 +1269,6 @@
             Me.gbFacturaVenta.Panel.ResumeLayout(False)
             CType(Me.gbFacturaVenta, System.ComponentModel.ISupportInitialize).EndInit()
             Me.gbFacturaVenta.ResumeLayout(False)
-            CType(Me.KryptonGroupBox2.Panel, System.ComponentModel.ISupportInitialize).EndInit()
-            Me.KryptonGroupBox2.Panel.ResumeLayout(False)
-            Me.KryptonGroupBox2.Panel.PerformLayout()
-            CType(Me.KryptonGroupBox2, System.ComponentModel.ISupportInitialize).EndInit()
-            Me.KryptonGroupBox2.ResumeLayout(False)
             CType(Me.gbFormaPago.Panel, System.ComponentModel.ISupportInitialize).EndInit()
             Me.gbFormaPago.Panel.ResumeLayout(False)
             Me.gbFormaPago.Panel.PerformLayout()
@@ -1516,10 +1279,6 @@
             Me.gbCheque.Panel.PerformLayout()
             CType(Me.gbCheque, System.ComponentModel.ISupportInitialize).EndInit()
             Me.gbCheque.ResumeLayout(False)
-            Me.GroupBox2.ResumeLayout(False)
-            Me.GroupBox2.PerformLayout()
-            Me.GroupBox5.ResumeLayout(False)
-            Me.GroupBox5.PerformLayout()
             Me.ResumeLayout(False)
             Me.PerformLayout()
 
@@ -1601,29 +1360,13 @@
         Friend WithEvents KryptonLabel17 As ComponentFactory.Krypton.Toolkit.KryptonLabel
         Friend WithEvents KryptonLabel16 As ComponentFactory.Krypton.Toolkit.KryptonLabel
         Friend WithEvents KryptonLabel18 As ComponentFactory.Krypton.Toolkit.KryptonLabel
-        Friend WithEvents KryptonGroupBox2 As ComponentFactory.Krypton.Toolkit.KryptonGroupBox
-        Friend WithEvents RadioButton4 As RadioButton
-        Friend WithEvents RadioButton5 As RadioButton
-        Friend WithEvents RadioButton6 As RadioButton
-        Friend WithEvents RadioButton7 As RadioButton
-        Friend WithEvents RadioButton8 As RadioButton
         Friend WithEvents Label3 As Label
-        Friend WithEvents GroupBox2 As GroupBox
-        Friend WithEvents RadioButton1 As RadioButton
-        Friend WithEvents RadioButton2 As RadioButton
-        Friend WithEvents RadioButton3 As RadioButton
         Friend WithEvents GroupBox4 As GroupBox
         Friend WithEvents RadioButton9 As RadioButton
         Friend WithEvents RadioButton10 As RadioButton
         Friend WithEvents RadioButton11 As RadioButton
         Friend WithEvents Label5 As Label
         Friend WithEvents Label6 As Label
-        Friend WithEvents GroupBox5 As GroupBox
-        Friend WithEvents RadioButton12 As RadioButton
-        Friend WithEvents RadioButton13 As RadioButton
-        Friend WithEvents RadioButton14 As RadioButton
-        Friend WithEvents Label8 As Label
-        Friend WithEvents Label7 As Label
         Friend WithEvents gbFacturaVenta As ComponentFactory.Krypton.Toolkit.KryptonGroupBox
         Friend WithEvents gbPagosFacturaVenta As ComponentFactory.Krypton.Toolkit.KryptonGroupBox
     End Class

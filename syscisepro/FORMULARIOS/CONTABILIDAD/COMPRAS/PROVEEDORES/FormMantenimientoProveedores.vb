@@ -8,6 +8,8 @@ Imports ClassLibraryCisepro.ProcesosSql
 Imports ClassLibraryCisepro.VALIDACIONES
 Imports syscisepro.DATOS
 Imports Microsoft.Office.Interop
+Imports Krypton.Toolkit
+Imports System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel
 
 Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.PROVEEDORES
     ''' <summary>
@@ -38,6 +40,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.PROVEEDORES
             End Set
         End Property
         Public IdUsuario As Integer
+        Public UserName As String
 
         ReadOnly _objAuditoria As New ClassAuditoriaGeneral
         ReadOnly _objetoProveedorGeneral As New ClassProveedores
@@ -157,7 +160,8 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.PROVEEDORES
         End Sub
         Private Sub btnModificarProveedorGeneral_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnModificarProveedorGeneral.Click
             If txtIdProveedorGeneral.Text = "" Then
-                MsgBox("NO HA SELECCIONA NINGÚN REGISTRO.", MsgBoxStyle.Information, "Mensaje de información")
+                'MsgBox("NO HA SELECCIONA NINGÚN REGISTRO.", MsgBoxStyle.Information, "Mensaje de información")
+                KryptonMessageBox.Show("No ha selecciona ningún registro.", "Mensaje de información", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
             Else
                 HabilitadoModificar()
                 _botonSeleccionado = 2
@@ -227,50 +231,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.PROVEEDORES
                 dgvProveedoresGeneral.DataSource = Nothing
             End Try
         End Sub
-        Private Sub dgvProveedoresGeneral_SelectionChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles dgvProveedoresGeneral.SelectionChanged
-            If dgvProveedoresGeneral.RowCount = 0 Then
-                LimpiarParametros()
-                Return
-            End If
-            If dgvProveedoresGeneral.CurrentRow Is Nothing Then
-                LimpiarParametros()
-                Return
-            End If
-            If dgvProveedoresGeneral.CurrentRow.Cells.Item(0).Value Is DBNull.Value Then
-                txtIdProveedorGeneral.Text = ""
-            Else
-                txtIdProveedorGeneral.Text = dgvProveedoresGeneral.CurrentRow.Cells.Item(0).Value
-                txtFechaProveedorGeneral.Text = dgvProveedoresGeneral.CurrentRow.Cells.Item(1).Value
 
-                txtRazonSocial.Text = dgvProveedoresGeneral.CurrentRow.Cells.Item(3).Value
-                txtNombreComercialProveedorGeneral.Text = dgvProveedoresGeneral.CurrentRow.Cells.Item(4).Value
-                cmbTipoProveedorGeneral.Text = dgvProveedoresGeneral.CurrentRow.Cells.Item(5).Value
-                cmbContabilidadProveedorGeneral.Text = dgvProveedoresGeneral.CurrentRow.Cells.Item(6).Value
-                cmbContribuyenteEspecial.Text = dgvProveedoresGeneral.CurrentRow.Cells.Item(7).Value
-                txtDireccionProveedorGeneral.Text = dgvProveedoresGeneral.CurrentRow.Cells.Item(8).Value
-                lblIdCiudad.Text = dgvProveedoresGeneral.CurrentRow.Cells.Item(9).Value
-
-                If (dgvProveedoresGeneral.CurrentRow.Cells.Item(14).Value.Equals("CED")) Then
-                    cbxCiruc.SelectedIndex = 0
-                ElseIf (dgvProveedoresGeneral.CurrentRow.Cells.Item(14).Value.Equals("RUC")) Then
-                    cbxCiruc.SelectedIndex = 1
-                Else
-                    cbxCiruc.SelectedIndex = 2
-                End If
-
-                If (dgvProveedoresGeneral.CurrentRow.Cells.Item(15).Value.Equals("PN")) Then
-                    cbxTipo.SelectedIndex = 0
-                Else
-                    cbxTipo.SelectedIndex = 1
-                End If
-
-                txtRucCiProveedorGeneral.Text = dgvProveedoresGeneral.CurrentRow.Cells.Item(2).Value
-                txtNombreCiudad.Text = _objetoCiudad.BuscarNombreCiudadXIdCiudad(_tipoCon, lblIdCiudad.Text.Trim)
-                txtTelefono1ProveedorGeneral.Text = dgvProveedoresGeneral.CurrentRow.Cells.Item(10).Value
-                txtTelefono2ProveedorGeneral.Text = dgvProveedoresGeneral.CurrentRow.Cells.Item(11).Value
-                txtEmailProveedorGeneral.Text = dgvProveedoresGeneral.CurrentRow.Cells.Item(12).Value
-            End If
-        End Sub
         Private Sub txtNombreCiudad_KeyUp(ByVal sender As System.Object, ByVal e As Windows.Forms.KeyEventArgs) Handles txtNombreCiudad.KeyUp
             If e.KeyCode <> Keys.Enter Then Return
             lblIdCiudad.Text = _objetoCiudad.BuscarIdCiudadPorNombreCiudad(_tipoCon, txtNombreCiudad.Text)
@@ -351,7 +312,8 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.PROVEEDORES
             If r.Rows.Count > 0 Then
                 If Not txtIdProveedorGeneral.Text.Trim.Equals(r(0)(0).ToString.Trim) Then
                     If txtRucCiProveedorGeneral.Text.Trim.Equals(r(0)(2)) Then
-                        MsgBox("ESTE C.I./R.U.C. YA SE ENCUANTRA REGISTRADO CON EL PROVEEDOR:" & vbNewLine & r(0)(3), MsgBoxStyle.Exclamation, "Mensaje de validación")
+                        'MsgBox("ESTE C.I./R.U.C. YA SE ENCUANTRA REGISTRADO CON EL PROVEEDOR:" & vbNewLine & r(0)(3), MsgBoxStyle.Exclamation, "Mensaje de validación")
+                        KryptonMessageBox.Show("Este C.I./R.U.C. ya se encuentra registrado con el proveedor:" & vbNewLine & r(0)(3), "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                         txtRucCiProveedorGeneral.Focus()
                     End If
                 End If
@@ -376,12 +338,14 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.PROVEEDORES
         End Function
         Private Sub btnGuardarProveedorGeneral_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnGuardarProveedorGeneral.Click
             If cbxCiruc.SelectedIndex = 0 And txtRucCiProveedorGeneral.Text.Trim.Length <> 10 Then
-                MessageBox.Show("La C.I. ingresada no es válida!", "Mensaje de validación", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                'MessageBox.Show("La C.I. ingresada no es válida!", "Mensaje de validación", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                KryptonMessageBox.Show("La C.I. ingresada no es válida!", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Warning)
                 Return
             End If
 
             If cbxCiruc.SelectedIndex = 1 And txtRucCiProveedorGeneral.Text.Trim.Length <> 13 Then
-                MessageBox.Show("El R.U.C. ingresado no es válido!", "Mensaje de validación", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                'MessageBox.Show("El R.U.C. ingresado no es válido!", "Mensaje de validación", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                KryptonMessageBox.Show("El R.U.C. ingresado no es válido!", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Warning)
                 Return
             End If
 
@@ -389,7 +353,8 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.PROVEEDORES
             If r.Rows.Count > 0 Then
                 If Not txtIdProveedorGeneral.Text.Trim().Equals(r(0)(0).ToString().Trim()) Then
                     If txtRucCiProveedorGeneral.Text.Trim.Equals(r(0)(2)) Then
-                        MsgBox("ESTE C.I./R.U.C. YA SE ENCUANTRA REGISTRADO CON EL PROVEEDOR:" & vbNewLine & r(0)(3), MsgBoxStyle.Exclamation, "Mensaje de validación")
+                        'MsgBox("ESTE C.I./R.U.C. YA SE ENCUANTRA REGISTRADO CON EL PROVEEDOR:" & vbNewLine & r(0)(3), MsgBoxStyle.Exclamation, "Mensaje de validación")
+                        KryptonMessageBox.Show("Este C.I./R.U.C. ya se encuentra registrado con el proveedor:" & vbNewLine & r(0)(3), "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                         txtRucCiProveedorGeneral.Focus()
                         Return
                     End If
@@ -397,17 +362,22 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.PROVEEDORES
             End If
 
             If ValidacionParametros() Then
-                If MessageBox.Show("¿ESTA SEGURA QUE DESEA GUARDAR?", "Mensaje de validación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> DialogResult.Yes Then Return
+                If KryptonMessageBox.Show("¿Esta segura que desea guardar?", "Mensaje de validación", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) <> DialogResult.Yes Then Return
+                'If MessageBox.Show("¿ESTA SEGURA QUE DESEA GUARDAR?", "Mensaje de validación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> DialogResult.Yes Then Return
                 _sqlCommands.Clear()
 
+                Dim nombreU As String = ""
                 Select Case (_botonSeleccionado)
                     Case 1
                         GuargarRegistroProveedorGeneralNuevo()
+                        nombreU = "Creó un nuevo proveedor general. RUC: " + txtRucCiProveedorGeneral.Text & " por " & UserName
                     Case 2
                         GuargarRegistroProveedorGeneralModificar()
+                        nombreU = "Modificó un proveedor general. RUC: " + txtRucCiProveedorGeneral.Text & " por " & UserName
                 End Select
 
-                Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, String.Empty)
+
+                Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, nombreU)
                 If res(0) Then
                     DeshabilitadoInicio()
                     LimpiarParametros()
@@ -416,9 +386,17 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.PROVEEDORES
 
                     CargarProveedores()
                 End If
-                MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
+                Dim messageIcon As KryptonMessageBoxIcon
+                If res(0) Then
+                    messageIcon = KryptonMessageBoxIcon.Information
+                Else
+                    messageIcon = KryptonMessageBoxIcon.Exclamation
+                End If
+                KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, messageIcon)
+                'MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
             Else
-                MsgBox("No se puede guardar." & vbNewLine & "NO SE HAN LLENADO TODOS LOS CAMPOS NECESARIOS.", MsgBoxStyle.Exclamation, "Mensaje de validación")
+                'MsgBox("No se puede guardar." & vbNewLine & "NO SE HAN LLENADO TODOS LOS CAMPOS NECESARIOS.", MsgBoxStyle.Exclamation, "Mensaje de validación")
+                KryptonMessageBox.Show("No se puede guardar." & vbNewLine & "NO SE HAN LLENADO TODOS LOS CAMPOS NECESARIOS.", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
             End If
         End Sub
         Private Sub Auditoria()
@@ -510,6 +488,51 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.PROVEEDORES
 
         Private Sub cbxCiruc_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cbxCiruc.SelectedIndexChanged
             txtRucCiProveedorGeneral.Clear()
+        End Sub
+
+        Private Sub dgvProveedoresGeneral_SelectionChanged(sender As Object, e As EventArgs) Handles dgvProveedoresGeneral.SelectionChanged
+            If dgvProveedoresGeneral.RowCount = 0 Then
+                LimpiarParametros()
+                Return
+            End If
+            If dgvProveedoresGeneral.CurrentRow Is Nothing Then
+                LimpiarParametros()
+                Return
+            End If
+            If dgvProveedoresGeneral.CurrentRow.Cells.Item(0).Value Is DBNull.Value Then
+                txtIdProveedorGeneral.Text = ""
+            Else
+                txtIdProveedorGeneral.Text = dgvProveedoresGeneral.CurrentRow.Cells.Item(0).Value
+                txtFechaProveedorGeneral.Text = dgvProveedoresGeneral.CurrentRow.Cells.Item(1).Value
+
+                txtRazonSocial.Text = dgvProveedoresGeneral.CurrentRow.Cells.Item(3).Value
+                txtNombreComercialProveedorGeneral.Text = dgvProveedoresGeneral.CurrentRow.Cells.Item(4).Value
+                cmbTipoProveedorGeneral.Text = dgvProveedoresGeneral.CurrentRow.Cells.Item(5).Value
+                cmbContabilidadProveedorGeneral.Text = dgvProveedoresGeneral.CurrentRow.Cells.Item(6).Value
+                cmbContribuyenteEspecial.Text = dgvProveedoresGeneral.CurrentRow.Cells.Item(7).Value
+                txtDireccionProveedorGeneral.Text = dgvProveedoresGeneral.CurrentRow.Cells.Item(8).Value
+                lblIdCiudad.Text = dgvProveedoresGeneral.CurrentRow.Cells.Item(9).Value
+
+                If (dgvProveedoresGeneral.CurrentRow.Cells.Item(14).Value.Equals("CED")) Then
+                    cbxCiruc.SelectedIndex = 0
+                ElseIf (dgvProveedoresGeneral.CurrentRow.Cells.Item(14).Value.Equals("RUC")) Then
+                    cbxCiruc.SelectedIndex = 1
+                Else
+                    cbxCiruc.SelectedIndex = 2
+                End If
+
+                If (dgvProveedoresGeneral.CurrentRow.Cells.Item(15).Value.Equals("PN")) Then
+                    cbxTipo.SelectedIndex = 0
+                Else
+                    cbxTipo.SelectedIndex = 1
+                End If
+
+                txtRucCiProveedorGeneral.Text = dgvProveedoresGeneral.CurrentRow.Cells.Item(2).Value
+                txtNombreCiudad.Text = _objetoCiudad.BuscarNombreCiudadXIdCiudad(_tipoCon, lblIdCiudad.Text.Trim)
+                txtTelefono1ProveedorGeneral.Text = dgvProveedoresGeneral.CurrentRow.Cells.Item(10).Value
+                txtTelefono2ProveedorGeneral.Text = dgvProveedoresGeneral.CurrentRow.Cells.Item(11).Value
+                txtEmailProveedorGeneral.Text = dgvProveedoresGeneral.CurrentRow.Cells.Item(12).Value
+            End If
         End Sub
     End Class
 End Namespace

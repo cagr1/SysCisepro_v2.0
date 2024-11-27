@@ -1,7 +1,8 @@
 ﻿Namespace FORMULARIOS.CONTABILIDAD.BANCOS.REPORTES
     <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
     Partial Class FormReporteComprobanteEgresoBancos
-        Inherits System.Windows.Forms.Form
+        'Inherits System.Windows.Forms.Form
+        Inherits Krypton.Toolkit.KryptonForm
 
         'Form reemplaza a Dispose para limpiar la lista de componentes.
         <System.Diagnostics.DebuggerNonUserCode()> _
@@ -42,11 +43,11 @@
             'crvComprovanteEgresoBancos
             '
             Me.crvComprovanteEgresoBancos.ActiveViewIndex = -1
-            Me.crvComprovanteEgresoBancos.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
             Me.crvComprovanteEgresoBancos.Cursor = System.Windows.Forms.Cursors.Default
             Me.crvComprovanteEgresoBancos.Dock = System.Windows.Forms.DockStyle.Fill
             Me.crvComprovanteEgresoBancos.Location = New System.Drawing.Point(3, 3)
             Me.crvComprovanteEgresoBancos.Name = "crvComprovanteEgresoBancos"
+            Me.crvComprovanteEgresoBancos.ShowLogo = False
             Me.crvComprovanteEgresoBancos.Size = New System.Drawing.Size(868, 632)
             Me.crvComprovanteEgresoBancos.TabIndex = 0
             Me.crvComprovanteEgresoBancos.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None
@@ -55,7 +56,7 @@
             '
             Me.tcReporteEgresoBancos.Controls.Add(Me.tpComprobanteEgresoBancos)
             Me.tcReporteEgresoBancos.Controls.Add(Me.TabPage2)
-            Me.tcReporteEgresoBancos.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.tcReporteEgresoBancos.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.tcReporteEgresoBancos.Location = New System.Drawing.Point(1, 2)
             Me.tcReporteEgresoBancos.Name = "tcReporteEgresoBancos"
             Me.tcReporteEgresoBancos.SelectedIndex = 0
@@ -66,6 +67,7 @@
             '
             Me.tpComprobanteEgresoBancos.Controls.Add(Me.txtIdComprobanteEgreso)
             Me.tpComprobanteEgresoBancos.Controls.Add(Me.crvComprovanteEgresoBancos)
+            Me.tpComprobanteEgresoBancos.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
             Me.tpComprobanteEgresoBancos.Location = New System.Drawing.Point(4, 22)
             Me.tpComprobanteEgresoBancos.Name = "tpComprobanteEgresoBancos"
             Me.tpComprobanteEgresoBancos.Padding = New System.Windows.Forms.Padding(3)
@@ -88,6 +90,7 @@
             '
             Me.TabPage2.Controls.Add(Me.txtIdComprobamteEgreso2)
             Me.TabPage2.Controls.Add(Me.crvChequeEmitido)
+            Me.TabPage2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
             Me.TabPage2.Location = New System.Drawing.Point(4, 22)
             Me.TabPage2.Name = "TabPage2"
             Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
@@ -109,11 +112,11 @@
             'crvChequeEmitido
             '
             Me.crvChequeEmitido.ActiveViewIndex = -1
-            Me.crvChequeEmitido.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
             Me.crvChequeEmitido.Cursor = System.Windows.Forms.Cursors.Default
             Me.crvChequeEmitido.Dock = System.Windows.Forms.DockStyle.Fill
             Me.crvChequeEmitido.Location = New System.Drawing.Point(3, 3)
             Me.crvChequeEmitido.Name = "crvChequeEmitido"
+            Me.crvChequeEmitido.ShowLogo = False
             Me.crvChequeEmitido.Size = New System.Drawing.Size(868, 632)
             Me.crvChequeEmitido.TabIndex = 0
             Me.crvChequeEmitido.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None
@@ -121,6 +124,8 @@
             'lblIdComprobanteEgreso
             '
             Me.lblIdComprobanteEgreso.AutoSize = True
+            Me.lblIdComprobanteEgreso.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.lblIdComprobanteEgreso.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
             Me.lblIdComprobanteEgreso.Location = New System.Drawing.Point(422, 4)
             Me.lblIdComprobanteEgreso.Name = "lblIdComprobanteEgreso"
             Me.lblIdComprobanteEgreso.Size = New System.Drawing.Size(25, 13)
@@ -130,6 +135,7 @@
             'Label2
             '
             Me.Label2.AutoSize = True
+            Me.Label2.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Label2.Location = New System.Drawing.Point(454, 4)
             Me.Label2.Name = "Label2"
             Me.Label2.Size = New System.Drawing.Size(12, 13)
@@ -139,6 +145,7 @@
             'Label1
             '
             Me.Label1.AutoSize = True
+            Me.Label1.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Label1.Location = New System.Drawing.Point(402, 4)
             Me.Label1.Name = "Label1"
             Me.Label1.Size = New System.Drawing.Size(12, 13)
@@ -149,7 +156,7 @@
             '
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-            Me.BackColor = System.Drawing.Color.White
+            Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(185, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(227, Byte), Integer))
             Me.ClientSize = New System.Drawing.Size(882, 662)
             Me.Controls.Add(Me.lblIdComprobanteEgreso)
             Me.Controls.Add(Me.Label2)
@@ -159,6 +166,10 @@
             Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
             Me.Name = "FormReporteComprobanteEgresoBancos"
             Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+            Me.StateActive.Border.DrawBorders = CType((((Krypton.Toolkit.PaletteDrawBorders.Top Or Krypton.Toolkit.PaletteDrawBorders.Bottom) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Left) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Right), Krypton.Toolkit.PaletteDrawBorders)
+            Me.StateActive.Border.Rounding = 5.0!
             Me.Text = "REPORTE COMPROBANTE EGRESO BANCOS"
             Me.tcReporteEgresoBancos.ResumeLayout(False)
             Me.tpComprobanteEgresoBancos.ResumeLayout(False)

@@ -238,7 +238,7 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
                 txtBancoCheque.AutoCompleteCustomSource = Nothing
             End Try
         End Sub
-        Private Sub rbAcreditadoBancos_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles rbAcreditadoBancos.CheckedChanged, RadioButton1.CheckedChanged, RadioButton9.CheckedChanged, RadioButton12.CheckedChanged
+        Private Sub rbAcreditadoBancos_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles rbAcreditadoBancos.CheckedChanged, RadioButton9.CheckedChanged
             If rbAcreditadoBancos.Checked Then
                 'gbCtaContable.Enabled = False
                 cmbCuentasContables.Enabled = False
@@ -247,7 +247,7 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
                 cmbCuentaBancos.Enabled = True
             End If
         End Sub
-        Private Sub rbAcreditadoCaja_CheckedChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles rbAcreditadoCaja.CheckedChanged, RadioButton2.CheckedChanged, RadioButton13.CheckedChanged, RadioButton10.CheckedChanged
+        Private Sub rbAcreditadoCaja_CheckedChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles rbAcreditadoCaja.CheckedChanged, RadioButton10.CheckedChanged
             If rbAcreditadoCaja.Checked Then
                 'gbCtaContable.Enabled = True
                 cmbCuentasContables.Enabled = True
@@ -256,7 +256,7 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
                 cmbCuentaBancos.Enabled = False
             End If
         End Sub
-        Private Sub rbAcreditadoCruceCtas_CheckedChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles rbAcreditadoCruceCtas.CheckedChanged, RadioButton3.CheckedChanged, RadioButton14.CheckedChanged, RadioButton11.CheckedChanged
+        Private Sub rbAcreditadoCruceCtas_CheckedChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles rbAcreditadoCruceCtas.CheckedChanged, RadioButton11.CheckedChanged
             If rbAcreditadoCruceCtas.Checked Then
                 'gbCtaContable.Enabled = True
                 cmbCuentasContables.Enabled = True
@@ -778,6 +778,7 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
                                             _objetoComprobanteIngresoBancos.ValorComprobanteIngreso = CDec(txtTotalDebe.Text.Trim)
                                         Else
                                             Dim response = InputBox("Ingrese el valor del comprobante para cruce de cuentas", "Valor comprobante ingreso", 0, , )
+                                            'Dim response = KryptonInputBox.Show("Ingrese el valor del comprobante para cruce de cuentas", "Valor comprobante ingreso", 0, , )
                                             If IsNumeric(response) Then
                                                 _objetoComprobanteIngresoBancos.ValorComprobanteIngreso = CDec(response)
                                             Else
@@ -1032,7 +1033,7 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
 
         End Sub
 
-        Private Sub rbCheque_CheckedChanged_1(sender As Object, e As EventArgs) Handles rbCheque.CheckedChanged, RadioButton5.CheckedChanged
+        Private Sub rbCheque_CheckedChanged_1(sender As Object, e As EventArgs) Handles rbCheque.CheckedChanged
             If rbCheque.Checked Then
                 If txtNombreComercialClienteGeneral.Text <> "" And lblIdClienteGeneral.Text <> "..." Then
                     gbCheque.Enabled = True

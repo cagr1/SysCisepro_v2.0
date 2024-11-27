@@ -35,7 +35,6 @@
             'crvComprobanteEgresoBancoMachala
             '
             Me.crvComprobanteEgresoBancoMachala.ActiveViewIndex = -1
-            Me.crvComprobanteEgresoBancoMachala.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
             Me.crvComprobanteEgresoBancoMachala.Cursor = System.Windows.Forms.Cursors.Default
             Me.crvComprobanteEgresoBancoMachala.Dock = System.Windows.Forms.DockStyle.Fill
             Me.crvComprobanteEgresoBancoMachala.Location = New System.Drawing.Point(0, 0)
@@ -48,6 +47,7 @@
             'lblIdComprobanteEgreso
             '
             Me.lblIdComprobanteEgreso.AutoSize = True
+            Me.lblIdComprobanteEgreso.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
             Me.lblIdComprobanteEgreso.Location = New System.Drawing.Point(613, 9)
             Me.lblIdComprobanteEgreso.Name = "lblIdComprobanteEgreso"
             Me.lblIdComprobanteEgreso.Size = New System.Drawing.Size(25, 13)
@@ -86,7 +86,7 @@
             '
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-            Me.BackColor = System.Drawing.Color.White
+            Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(185, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(227, Byte), Integer))
             Me.ClientSize = New System.Drawing.Size(1194, 675)
             Me.Controls.Add(Me.txtIdComprobanteEgreso)
             Me.Controls.Add(Me.lblIdComprobanteEgreso)

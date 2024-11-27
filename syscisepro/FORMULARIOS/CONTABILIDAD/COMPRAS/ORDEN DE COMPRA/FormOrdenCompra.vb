@@ -197,7 +197,8 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.ORDEN_DE_COMPRA
                 'dgvRequisicionProductoServicioNew.Columns(2).DefaultCellStyle.Format = "g"
 
             Catch ex As Exception
-                MsgBox("METODO CARGAR REQUISICIONES PRODUCTO / SERVICIO" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
+                'MsgBox("METODO CARGAR REQUISICIONES PRODUCTO / SERVICIO" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
+                KryptonMessageBox.Show("Error al cargar las requisiciones" & vbNewLine & ex.Message.ToString, "Mensaje de excepción", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
         Private Sub dgvRequisicionProductoServicio_SelectionChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles dgvRequisicionProductoServicio.SelectionChanged
@@ -241,7 +242,8 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.ORDEN_DE_COMPRA
                 dgvDetalleRequisicionProductoServicio.Columns(7).Visible = False
                 dgvDetalleRequisicionProductoServicio.Columns(8).Visible = False
             Catch ex As Exception
-                MsgBox("METODO CARGAR DETALLE REQUISICIONES PRODUCTO/SERVICIO" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
+                'MsgBox("METODO CARGAR DETALLE REQUISICIONES PRODUCTO/SERVICIO" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
+                KryptonMessageBox.Show("Error al cargar el detalle de la requisición" & vbNewLine & ex.Message.ToString, "Mensaje de excepción", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
         Private Sub btnNuevo_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnNuevo.Click
@@ -275,7 +277,8 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.ORDEN_DE_COMPRA
                     txtNombreCiudad.Text = _objetoCiudad.BuscarNombreCiudadXIdCiudad(_tipoCon, CInt(lblIdCiudad.Text))
                 End If
             Catch ex As Exception
-                MsgBox("CARGAR DATOS PROVEEDOR." & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
+                'MsgBox("CARGAR DATOS PROVEEDOR." & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
+                KryptonMessageBox.Show("Error al cargar los datos del proveedor" & vbNewLine & ex.Message.ToString, "Mensaje de excepción", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
         Private Sub dgvDetalleRequisicionProductoServicio_DoubleClick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles dgvDetalleRequisicionProductoServicio.DoubleClick
@@ -284,7 +287,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.ORDEN_DE_COMPRA
                 If (dgvDetalleOrdenCompra.Rows(indice).Cells(0).Value & "").ToString.Trim.Length = 0 Then Continue For
                 If dgvDetalleOrdenCompra.Rows(indice).Cells(0).Value = dgvDetalleRequisicionProductoServicio.CurrentRow.Cells(8).Value Then
                     'MsgBox("ESTE ITEM YA ESTÁ AGREGADO A LA ORDEN!", MsgBoxStyle.Exclamation, "Mensaje de validación")
-                    KryptonMessageBox.Show("ESTE ITEM YA ESTÁ AGREGADO A LA ORDEN!", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
+                    KryptonMessageBox.Show("Este item ya está agregado a la orden!", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                     Return
                 End If
             Next
@@ -304,17 +307,17 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.ORDEN_DE_COMPRA
                 RequisionesSeleccionadas()
                 If chkReq.Checked And Label3.Text.Equals("###") Then
                     'MsgBox("SELECCIONE LAS REQUISICIONES QUE SERÁN PROCESADAS!", MsgBoxStyle.Exclamation, "Mensaje de validación")
-                    KryptonMessageBox.Show("SELECCIONE LAS REQUISICIONES QUE SERÁN PROCESADAS!", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
+                    KryptonMessageBox.Show("Seleccione las requisiciones que serán procesadas!", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                     Return
                 End If
 
                 If CDec(txtTotalOrdenCompra.Text) < 0.01 Then
                     'MsgBox("VERIFIQUE LOS VALORES Y EL TOTAL DE LA ORDEN DE COMPRA!", MsgBoxStyle.Exclamation, "Mensaje de validación")
-                    KryptonMessageBox.Show("VERIFIQUE LOS VALORES Y EL TOTAL DE LA ORDEN DE COMPRA!", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
+                    KryptonMessageBox.Show("Verifique los valores y el total de la orden de compra!", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                     Return
                 End If
 
-                If KryptonMessageBox.Show("¿ESTA SEGURA QUE DESEA GUARDAR EL COMPROBANTE?", "Mensaje de validación", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) <> DialogResult.Yes Then Return
+                If KryptonMessageBox.Show("¿Esta segura que desea guardar el comprobante?", "Mensaje de validación", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) <> DialogResult.Yes Then Return
 
                 _sqlCommands.Clear()
                 Try
@@ -412,7 +415,8 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.ORDEN_DE_COMPRA
                                     dgvDetalleOrdenCompra.CurrentRow.Cells(3).Value = ""
                                     dgvDetalleOrdenCompra.CurrentRow.Cells(4).Value = ""
                                     dgvDetalleOrdenCompra.CurrentRow.Cells(5).Value = ""
-                                    MsgBox("EL ITEM INGRESADO NO SE ENCUENTRA EN LA BASE DE DATOS. POR FAVOR REGISTRELO ANTES DE INGRESARLO EN LA REQUISICIÓN", MsgBoxStyle.Exclamation, "Mensaje de validación")
+                                    'MsgBox("EL ITEM INGRESADO NO SE ENCUENTRA EN LA BASE DE DATOS. POR FAVOR REGISTRELO ANTES DE INGRESARLO EN LA REQUISICIÓN", MsgBoxStyle.Exclamation, "Mensaje de validación")
+                                    KryptonMessageBox.Show("El item ingresado no se encuentra en la base de datos. por favor registrelo antes de ingresarlo en la requisición", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                                     Return
                                 End If
                                 dgvDetalleOrdenCompra.CurrentRow.Cells(0).Value = tab.Rows(0)(0).ToString
@@ -437,7 +441,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.ORDEN_DE_COMPRA
                                 'End If
                             Else
                                 'MsgBox("EL ITEM SELECCIONADO YA ESTA AGREGADO A LA ORDEN DE COMPRA.", MsgBoxStyle.Exclamation, "Mensaje de validación")
-                                KryptonMessageBox.Show("EL ITEM SELECCIONADO YA ESTA AGREGADO A LA ORDEN DE COMPRA.", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
+                                KryptonMessageBox.Show("El item seleccionado ya esta agregado a la orden de compra.", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                                 dgvDetalleOrdenCompra.CurrentRow.Cells(1).Value = ""
                                 dgvDetalleOrdenCompra.Rows.RemoveAt(dgvDetalleOrdenCompra.CurrentRow.Index)
                                 Exit For
@@ -546,7 +550,8 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.ORDEN_DE_COMPRA
                 'total = subtotal0 + subTotal12 + iva
 
             Catch ex As Exception
-                MsgBox("CALCULAR TOTALES ORDEN DE COMPRA." & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
+                '                MsgBox("CALCULAR TOTALES ORDEN DE COMPRA." & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
+                KryptonMessageBox.Show("Error al calcular los totales de la orden de compra" & vbNewLine & ex.Message.ToString, "Mensaje de excepción", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
         Private Sub btnCancelar_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnCancelar.Click

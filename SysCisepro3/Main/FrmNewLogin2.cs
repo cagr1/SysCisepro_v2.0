@@ -154,5 +154,10 @@ namespace SysCisepro3.Main
             this.DialogResult = DialogResult.OK;
             Hide();
         }
+
+        private void materialCard1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

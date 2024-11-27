@@ -28,7 +28,6 @@ Partial Class FormReportCuentasPagar
         'crvReporteVentas
         '
         Me.crvReporteVentas.ActiveViewIndex = -1
-        Me.crvReporteVentas.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.crvReporteVentas.Cursor = System.Windows.Forms.Cursors.Default
         Me.crvReporteVentas.Dock = System.Windows.Forms.DockStyle.Fill
         Me.crvReporteVentas.Location = New System.Drawing.Point(0, 0)
@@ -46,6 +45,7 @@ Partial Class FormReportCuentasPagar
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1018, 611)
         Me.Controls.Add(Me.crvReporteVentas)
+        Me.ForeColor = System.Drawing.Color.FromArgb(CType(CType(185, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(227, Byte), Integer))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
         Me.Name = "FormReportCuentasPagar"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen

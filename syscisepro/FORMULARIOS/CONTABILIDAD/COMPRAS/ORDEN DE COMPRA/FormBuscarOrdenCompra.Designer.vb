@@ -69,7 +69,7 @@
             Me.dgvDetalleOrdenCompra.AllowUserToAddRows = False
             Me.dgvDetalleOrdenCompra.AllowUserToDeleteRows = False
             Me.dgvDetalleOrdenCompra.AllowUserToResizeRows = False
-            Me.dgvDetalleOrdenCompra.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
+            Me.dgvDetalleOrdenCompra.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(185, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(227, Byte), Integer))
             Me.dgvDetalleOrdenCompra.BorderStyle = System.Windows.Forms.BorderStyle.None
             Me.dgvDetalleOrdenCompra.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
             Me.dgvDetalleOrdenCompra.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
@@ -223,7 +223,7 @@
             Me.dgvOrdenCompra.AllowUserToResizeRows = False
             DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
             Me.dgvOrdenCompra.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
-            Me.dgvOrdenCompra.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
+            Me.dgvOrdenCompra.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(185, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(227, Byte), Integer))
             Me.dgvOrdenCompra.BorderStyle = System.Windows.Forms.BorderStyle.None
             Me.dgvOrdenCompra.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
             Me.dgvOrdenCompra.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
@@ -277,6 +277,7 @@
             '
             'KryptonGroupBox1
             '
+            Me.KryptonGroupBox1.CaptionOverlap = 0R
             Me.KryptonGroupBox1.GroupBackStyle = Krypton.Toolkit.PaletteBackStyle.ControlRibbon
             Me.KryptonGroupBox1.Location = New System.Drawing.Point(587, 34)
             Me.KryptonGroupBox1.Name = "KryptonGroupBox1"
@@ -402,7 +403,7 @@
             '
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-            Me.BackColor = System.Drawing.Color.White
+            Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(185, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(227, Byte), Integer))
             Me.ClientSize = New System.Drawing.Size(1018, 572)
             Me.Controls.Add(Me.KryptonGroupBox1)
             Me.Controls.Add(Me.MenuStrip1)

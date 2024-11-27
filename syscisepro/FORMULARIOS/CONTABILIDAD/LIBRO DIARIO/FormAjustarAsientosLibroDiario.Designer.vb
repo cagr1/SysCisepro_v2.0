@@ -123,6 +123,10 @@
             Me.btnGenerar = New Krypton.Toolkit.KryptonButton()
             Me.KryptonDockableNavigator1 = New ComponentFactory.Krypton.Docking.KryptonDockableNavigator()
             Me.KryptonPage3 = New ComponentFactory.Krypton.Navigator.KryptonPage()
+            Me.txtTotalHaber = New System.Windows.Forms.TextBox()
+            Me.txtTotalDebe = New System.Windows.Forms.TextBox()
+            Me.lblTotal = New System.Windows.Forms.Label()
+            Me.KryptonGroupBox5 = New Krypton.Toolkit.KryptonGroupBox()
             Me.KryptonGroupBox4 = New ComponentFactory.Krypton.Toolkit.KryptonGroupBox()
             Me.KryptonLabel18 = New ComponentFactory.Krypton.Toolkit.KryptonLabel()
             Me.KryptonLabel17 = New ComponentFactory.Krypton.Toolkit.KryptonLabel()
@@ -141,10 +145,6 @@
             Me.KryptonLabel2 = New ComponentFactory.Krypton.Toolkit.KryptonLabel()
             Me.KryptonLabel1 = New ComponentFactory.Krypton.Toolkit.KryptonLabel()
             Me.KryptonPage4 = New ComponentFactory.Krypton.Navigator.KryptonPage()
-            Me.KryptonGroupBox5 = New Krypton.Toolkit.KryptonGroupBox()
-            Me.txtTotalHaber = New System.Windows.Forms.TextBox()
-            Me.txtTotalDebe = New System.Windows.Forms.TextBox()
-            Me.lblTotal = New System.Windows.Forms.Label()
             Me.GroupBox3.SuspendLayout()
             CType(Me.dgvNumeroRegistroAsiento, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.dgvAsientoBuscado, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -161,6 +161,10 @@
             Me.KryptonDockableNavigator1.SuspendLayout()
             CType(Me.KryptonPage3, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.KryptonPage3.SuspendLayout()
+            CType(Me.KryptonGroupBox5, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType(Me.KryptonGroupBox5.Panel, System.ComponentModel.ISupportInitialize).BeginInit()
+            Me.KryptonGroupBox5.Panel.SuspendLayout()
+            Me.KryptonGroupBox5.SuspendLayout()
             CType(Me.KryptonGroupBox4, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.KryptonGroupBox4.Panel, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.KryptonGroupBox4.Panel.SuspendLayout()
@@ -175,10 +179,6 @@
             Me.KryptonGroupBox2.SuspendLayout()
             CType(Me.KryptonPage4, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.KryptonPage4.SuspendLayout()
-            CType(Me.KryptonGroupBox5, System.ComponentModel.ISupportInitialize).BeginInit()
-            CType(Me.KryptonGroupBox5.Panel, System.ComponentModel.ISupportInitialize).BeginInit()
-            Me.KryptonGroupBox5.Panel.SuspendLayout()
-            Me.KryptonGroupBox5.SuspendLayout()
             Me.SuspendLayout()
             '
             'rbFechaAsiento
@@ -396,9 +396,9 @@
             Me.btnEliminar.FlatAppearance.BorderSize = 0
             Me.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.btnEliminar.Image = Global.syscisepro.My.Resources.Resources.do_not_disturb_on_24dp_FILL0_wght400_GRAD0_opsz24
-            Me.btnEliminar.Location = New System.Drawing.Point(852, 234)
+            Me.btnEliminar.Location = New System.Drawing.Point(909, 234)
             Me.btnEliminar.Name = "btnEliminar"
-            Me.btnEliminar.Size = New System.Drawing.Size(42, 27)
+            Me.btnEliminar.Size = New System.Drawing.Size(23, 27)
             Me.btnEliminar.TabIndex = 19
             Me.btnEliminar.UseVisualStyleBackColor = False
             '
@@ -409,9 +409,9 @@
             Me.btnAgregar.FlatAppearance.BorderSize = 0
             Me.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.btnAgregar.Image = Global.syscisepro.My.Resources.Resources.add_circle_24dp_FILL0_wght400_GRAD0_opsz24__3_
-            Me.btnAgregar.Location = New System.Drawing.Point(807, 234)
+            Me.btnAgregar.Location = New System.Drawing.Point(873, 234)
             Me.btnAgregar.Name = "btnAgregar"
-            Me.btnAgregar.Size = New System.Drawing.Size(42, 27)
+            Me.btnAgregar.Size = New System.Drawing.Size(28, 27)
             Me.btnAgregar.TabIndex = 18
             Me.btnAgregar.UseVisualStyleBackColor = False
             '
@@ -456,7 +456,6 @@
             '
             Me.cmbCentroCosto.BackColor = System.Drawing.Color.White
             Me.cmbCentroCosto.DropDownWidth = 120
-            Me.cmbCentroCosto.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.cmbCentroCosto.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cmbCentroCosto.FormattingEnabled = True
             Me.cmbCentroCosto.Location = New System.Drawing.Point(93, 28)
@@ -786,9 +785,10 @@
             '
             Me.txtNombreClienteProveedorPersonal.BackColor = System.Drawing.Color.White
             Me.txtNombreClienteProveedorPersonal.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+            Me.txtNombreClienteProveedorPersonal.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtNombreClienteProveedorPersonal.Location = New System.Drawing.Point(434, 71)
             Me.txtNombreClienteProveedorPersonal.Name = "txtNombreClienteProveedorPersonal"
-            Me.txtNombreClienteProveedorPersonal.Size = New System.Drawing.Size(310, 20)
+            Me.txtNombreClienteProveedorPersonal.Size = New System.Drawing.Size(310, 21)
             Me.txtNombreClienteProveedorPersonal.TabIndex = 0
             '
             'MenuStrip1
@@ -1127,7 +1127,7 @@
             Me.KryptonDockableNavigator1.Location = New System.Drawing.Point(0, 32)
             Me.KryptonDockableNavigator1.Name = "KryptonDockableNavigator1"
             Me.KryptonDockableNavigator1.Pages.AddRange(New ComponentFactory.Krypton.Navigator.KryptonPage() {Me.KryptonPage3, Me.KryptonPage4})
-            Me.KryptonDockableNavigator1.SelectedIndex = 1
+            Me.KryptonDockableNavigator1.SelectedIndex = 0
             Me.KryptonDockableNavigator1.Size = New System.Drawing.Size(968, 555)
             Me.KryptonDockableNavigator1.TabIndex = 187
             Me.KryptonDockableNavigator1.Text = "KryptonDockableNavigator1"
@@ -1153,6 +1153,57 @@
             Me.KryptonPage3.Text = "Asientos"
             Me.KryptonPage3.ToolTipTitle = "Page ToolTip"
             Me.KryptonPage3.UniqueName = "EE3C6E7505E746DF0297AD06BDEBCD19"
+            '
+            'txtTotalHaber
+            '
+            Me.txtTotalHaber.BackColor = System.Drawing.Color.White
+            Me.txtTotalHaber.Enabled = False
+            Me.txtTotalHaber.Font = New System.Drawing.Font("Roboto", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtTotalHaber.Location = New System.Drawing.Point(822, 497)
+            Me.txtTotalHaber.Name = "txtTotalHaber"
+            Me.txtTotalHaber.Size = New System.Drawing.Size(100, 23)
+            Me.txtTotalHaber.TabIndex = 136
+            Me.txtTotalHaber.Text = "0.00"
+            Me.txtTotalHaber.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+            '
+            'txtTotalDebe
+            '
+            Me.txtTotalDebe.BackColor = System.Drawing.Color.White
+            Me.txtTotalDebe.Enabled = False
+            Me.txtTotalDebe.Font = New System.Drawing.Font("Roboto", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtTotalDebe.Location = New System.Drawing.Point(716, 497)
+            Me.txtTotalDebe.Name = "txtTotalDebe"
+            Me.txtTotalDebe.Size = New System.Drawing.Size(100, 23)
+            Me.txtTotalDebe.TabIndex = 137
+            Me.txtTotalDebe.Text = "0.00"
+            Me.txtTotalDebe.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+            '
+            'lblTotal
+            '
+            Me.lblTotal.AutoSize = True
+            Me.lblTotal.BackColor = System.Drawing.Color.FromArgb(CType(CType(185, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(227, Byte), Integer))
+            Me.lblTotal.Font = New System.Drawing.Font("Roboto Medium", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.lblTotal.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
+            Me.lblTotal.Location = New System.Drawing.Point(653, 500)
+            Me.lblTotal.Name = "lblTotal"
+            Me.lblTotal.Size = New System.Drawing.Size(40, 15)
+            Me.lblTotal.TabIndex = 135
+            Me.lblTotal.Text = "Total"
+            '
+            'KryptonGroupBox5
+            '
+            Me.KryptonGroupBox5.CaptionOverlap = 0R
+            Me.KryptonGroupBox5.GroupBackStyle = Krypton.Toolkit.PaletteBackStyle.PanelRibbonInactive
+            Me.KryptonGroupBox5.Location = New System.Drawing.Point(162, 233)
+            Me.KryptonGroupBox5.Name = "KryptonGroupBox5"
+            '
+            'KryptonGroupBox5.Panel
+            '
+            Me.KryptonGroupBox5.Panel.Controls.Add(Me.dgvAsientosDiario)
+            Me.KryptonGroupBox5.Panel.Controls.Add(Me.dgvAsientoBuscado)
+            Me.KryptonGroupBox5.Size = New System.Drawing.Size(796, 258)
+            Me.KryptonGroupBox5.TabIndex = 134
+            Me.KryptonGroupBox5.Values.Heading = "Transaccion de Diario"
             '
             'KryptonGroupBox4
             '
@@ -1356,57 +1407,6 @@
             Me.KryptonPage4.ToolTipTitle = "page tooltip"
             Me.KryptonPage4.UniqueName = "a9858e40b3764290cab36cb635175c42"
             '
-            'KryptonGroupBox5
-            '
-            Me.KryptonGroupBox5.CaptionOverlap = 0R
-            Me.KryptonGroupBox5.GroupBackStyle = Krypton.Toolkit.PaletteBackStyle.PanelRibbonInactive
-            Me.KryptonGroupBox5.Location = New System.Drawing.Point(162, 233)
-            Me.KryptonGroupBox5.Name = "KryptonGroupBox5"
-            '
-            'KryptonGroupBox5.Panel
-            '
-            Me.KryptonGroupBox5.Panel.Controls.Add(Me.dgvAsientosDiario)
-            Me.KryptonGroupBox5.Panel.Controls.Add(Me.dgvAsientoBuscado)
-            Me.KryptonGroupBox5.Size = New System.Drawing.Size(796, 258)
-            Me.KryptonGroupBox5.TabIndex = 134
-            Me.KryptonGroupBox5.Values.Heading = "Transaccion de Diario"
-            '
-            'txtTotalHaber
-            '
-            Me.txtTotalHaber.BackColor = System.Drawing.Color.White
-            Me.txtTotalHaber.Enabled = False
-            Me.txtTotalHaber.Font = New System.Drawing.Font("Roboto", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtTotalHaber.Location = New System.Drawing.Point(822, 497)
-            Me.txtTotalHaber.Name = "txtTotalHaber"
-            Me.txtTotalHaber.Size = New System.Drawing.Size(100, 23)
-            Me.txtTotalHaber.TabIndex = 136
-            Me.txtTotalHaber.Text = "0.00"
-            Me.txtTotalHaber.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-            '
-            'txtTotalDebe
-            '
-            Me.txtTotalDebe.BackColor = System.Drawing.Color.White
-            Me.txtTotalDebe.Enabled = False
-            Me.txtTotalDebe.Font = New System.Drawing.Font("Roboto", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtTotalDebe.Location = New System.Drawing.Point(716, 497)
-            Me.txtTotalDebe.Name = "txtTotalDebe"
-            Me.txtTotalDebe.Size = New System.Drawing.Size(100, 23)
-            Me.txtTotalDebe.TabIndex = 137
-            Me.txtTotalDebe.Text = "0.00"
-            Me.txtTotalDebe.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-            '
-            'lblTotal
-            '
-            Me.lblTotal.AutoSize = True
-            Me.lblTotal.BackColor = System.Drawing.Color.FromArgb(CType(CType(185, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(227, Byte), Integer))
-            Me.lblTotal.Font = New System.Drawing.Font("Roboto Medium", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.lblTotal.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
-            Me.lblTotal.Location = New System.Drawing.Point(653, 500)
-            Me.lblTotal.Name = "lblTotal"
-            Me.lblTotal.Size = New System.Drawing.Size(40, 15)
-            Me.lblTotal.TabIndex = 135
-            Me.lblTotal.Text = "Total"
-            '
             'FormAjustarAsientosLibroDiario
             '
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1446,6 +1446,10 @@
             CType(Me.KryptonPage3, System.ComponentModel.ISupportInitialize).EndInit()
             Me.KryptonPage3.ResumeLayout(False)
             Me.KryptonPage3.PerformLayout()
+            CType(Me.KryptonGroupBox5.Panel, System.ComponentModel.ISupportInitialize).EndInit()
+            Me.KryptonGroupBox5.Panel.ResumeLayout(False)
+            CType(Me.KryptonGroupBox5, System.ComponentModel.ISupportInitialize).EndInit()
+            Me.KryptonGroupBox5.ResumeLayout(False)
             CType(Me.KryptonGroupBox4.Panel, System.ComponentModel.ISupportInitialize).EndInit()
             Me.KryptonGroupBox4.Panel.ResumeLayout(False)
             Me.KryptonGroupBox4.Panel.PerformLayout()
@@ -1462,10 +1466,6 @@
             Me.KryptonGroupBox2.ResumeLayout(False)
             CType(Me.KryptonPage4, System.ComponentModel.ISupportInitialize).EndInit()
             Me.KryptonPage4.ResumeLayout(False)
-            CType(Me.KryptonGroupBox5.Panel, System.ComponentModel.ISupportInitialize).EndInit()
-            Me.KryptonGroupBox5.Panel.ResumeLayout(False)
-            CType(Me.KryptonGroupBox5, System.ComponentModel.ISupportInitialize).EndInit()
-            Me.KryptonGroupBox5.ResumeLayout(False)
             Me.ResumeLayout(False)
             Me.PerformLayout()
 
