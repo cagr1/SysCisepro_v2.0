@@ -249,7 +249,7 @@ namespace SysCisepro3.TalentoHumano
             if (dgvBusquedaPersonal.RowCount == 0 || txtCodigo.Text.Trim().Length == 0)
             {
                 KryptonMessageBox.Show(@"Debe seleccionar un registro para generar documentos!",
-                    "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+                    "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
                 return;
             }
 
@@ -278,7 +278,7 @@ namespace SysCisepro3.TalentoHumano
             catch
             {
                 KryptonMessageBox.Show(@"Error al generar documento!",
-                    "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+                    "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
             }
         }
 
@@ -287,7 +287,7 @@ namespace SysCisepro3.TalentoHumano
             if (dgvBusquedaPersonal.RowCount == 0 || txtCodigo.Text.Trim().Length == 0)
             {
                 KryptonMessageBox.Show(@"Debe seleccionar un registro para generar documentos!",
-                    "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+                    "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
                 return;
             }
 
@@ -316,7 +316,7 @@ namespace SysCisepro3.TalentoHumano
             catch
             {
                 KryptonMessageBox.Show(@"Error al generar documento!",
-                    "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+                    "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
             }
         }
 
@@ -325,7 +325,7 @@ namespace SysCisepro3.TalentoHumano
             if (DataGridView1.RowCount == 0) return;
             if (DataGridView1[1, e.RowIndex].Value == DBNull.Value || DataGridView1[e.ColumnIndex, e.RowIndex].Value == null)
             {
-                KryptonMessageBox.Show(@"Error al visualizar documento 'NULL'!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation);
+                KryptonMessageBox.Show(@"Error al visualizar documento 'NULL'!", "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation);
                 return;
             }
             try
@@ -348,7 +348,7 @@ namespace SysCisepro3.TalentoHumano
             {
                 crvCredenciales.Visible = true;
                 axAcroPDF1.Visible = false;
-                KryptonMessageBox.Show(@"Error al visualizar documento: " + ex.Message, "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation);
+                KryptonMessageBox.Show(@"Error al visualizar documento: " + ex.Message, "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation);
             }
         }
 
@@ -419,7 +419,7 @@ namespace SysCisepro3.TalentoHumano
             //    }
             //    catch (Exception ex)
             //    {
-            //        KryptonMessageBox.Show(@"Error al visualizar documento: " + ex.Message, "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation);
+            //        KryptonMessageBox.Show(@"Error al visualizar documento: " + ex.Message, "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation);
             //    } 
         }
 
@@ -428,7 +428,7 @@ namespace SysCisepro3.TalentoHumano
             if (dgvBusquedaPersonal.RowCount == 0 || txtCodigo.Text.Trim().Length == 0)
             {
                 KryptonMessageBox.Show(@"Debe seleccionar un registro para generar documentos!",
-                    "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+                    "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
                 return;
             }
 
@@ -458,7 +458,7 @@ namespace SysCisepro3.TalentoHumano
             catch
             {
                 KryptonMessageBox.Show(@"Error al generar documento!",
-                    "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+                    "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
             }
         }
 
@@ -467,7 +467,7 @@ namespace SysCisepro3.TalentoHumano
             if (dgvBusquedaPersonal.RowCount == 0 || txtCodigo.Text.Trim().Length == 0)
             {
                 KryptonMessageBox.Show(@"Debe seleccionar un registro para generar documentos!",
-                    "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+                    "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
                 return;
             }
 
@@ -525,7 +525,7 @@ namespace SysCisepro3.TalentoHumano
                 crvCredenciales.Visible = true;
                // axAcroPDF1.Visible = false;
             }
-            KryptonMessageBox.Show((string)res[1], "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information); 
+            KryptonMessageBox.Show((string)res[1], "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information); 
           
         }
 
@@ -534,7 +534,7 @@ namespace SysCisepro3.TalentoHumano
             if (dgvBusquedaPersonal.RowCount == 0 || txtCodigo.Text.Trim().Length == 0)
             {
                 KryptonMessageBox.Show(@"Debe seleccionar un registro para generar documentos!",
-                    "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+                    "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
                 return;
             }
 
@@ -589,7 +589,7 @@ namespace SysCisepro3.TalentoHumano
                 crvCredenciales.Visible = true;
                // axAcroPDF1.Visible = false;
             }
-            KryptonMessageBox.Show((string)res[1], "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information); 
+            KryptonMessageBox.Show((string)res[1], "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information); 
         }
 
         private void toolStripButton1_Click(object sender, EventArgs e)
@@ -597,7 +597,7 @@ namespace SysCisepro3.TalentoHumano
             if (dgvBusquedaPersonal.RowCount == 0 || txtCodigo.Text.Trim().Length == 0)
             {
                 KryptonMessageBox.Show(@"Debe seleccionar un registro para generar documentos!",
-                    "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+                    "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
                 return;
             }
 
@@ -663,7 +663,7 @@ namespace SysCisepro3.TalentoHumano
                 crvCredenciales.Visible = true;
                // axAcroPDF1.Visible = false;
             }
-            KryptonMessageBox.Show((string)res[1], "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information); 
+            KryptonMessageBox.Show((string)res[1], "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information); 
         }
 
         private void dgvBusquedaPersonal_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -681,7 +681,7 @@ namespace SysCisepro3.TalentoHumano
             if (dgvBusquedaPersonal.RowCount == 0 || txtCodigo.Text.Trim().Length == 0)
             {
                 KryptonMessageBox.Show(@"Debe seleccionar un registro para generar documentos!",
-                    "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+                    "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
                 return;
             }
 
@@ -738,7 +738,7 @@ namespace SysCisepro3.TalentoHumano
                 crvCredenciales.Visible = true;
                // axAcroPDF1.Visible = false;
             }
-            KryptonMessageBox.Show((string)res[1], "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information); 
+            KryptonMessageBox.Show((string)res[1], "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information); 
         }
     }
 }

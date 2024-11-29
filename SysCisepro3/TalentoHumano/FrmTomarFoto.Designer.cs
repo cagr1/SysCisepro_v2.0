@@ -112,7 +112,10 @@
             // 
             // btnPerfil
             // 
-            this.btnPerfil.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPerfil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(204)))), ((int)(((byte)(227)))));
+            this.btnPerfil.FlatAppearance.BorderSize = 0;
+            this.btnPerfil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPerfil.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPerfil.Image = global::SysCisepro3.Properties.Resources.add_a_photo_24dp_FILL0_wght400_GRAD0_opsz24;
             this.btnPerfil.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPerfil.Location = new System.Drawing.Point(481, 294);
@@ -121,12 +124,15 @@
             this.btnPerfil.TabIndex = 219;
             this.btnPerfil.Text = "PERFIL";
             this.btnPerfil.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnPerfil.UseVisualStyleBackColor = true;
+            this.btnPerfil.UseVisualStyleBackColor = false;
             this.btnPerfil.Click += new System.EventHandler(this.btnPerfil_Click);
             // 
             // btnCapturar
             // 
-            this.btnCapturar.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCapturar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(204)))), ((int)(((byte)(227)))));
+            this.btnCapturar.FlatAppearance.BorderSize = 0;
+            this.btnCapturar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCapturar.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCapturar.Image = global::SysCisepro3.Properties.Resources.add_a_photo_24dp_FILL0_wght400_GRAD0_opsz24;
             this.btnCapturar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCapturar.Location = new System.Drawing.Point(342, 294);
@@ -135,11 +141,14 @@
             this.btnCapturar.TabIndex = 218;
             this.btnCapturar.Text = "FRONTAL";
             this.btnCapturar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCapturar.UseVisualStyleBackColor = true;
+            this.btnCapturar.UseVisualStyleBackColor = false;
             this.btnCapturar.Click += new System.EventHandler(this.btnCapturar_Click);
             // 
             // Button1
             // 
+            this.Button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(204)))), ((int)(((byte)(227)))));
+            this.Button1.FlatAppearance.BorderSize = 0;
+            this.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Button1.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Button1.Image = global::SysCisepro3.Properties.Resources.cancel_24dp_FILL0_wght400_GRAD0_opsz24;
             this.Button1.Location = new System.Drawing.Point(247, 608);
@@ -148,7 +157,7 @@
             this.Button1.TabIndex = 232;
             this.Button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.toolTip1.SetToolTip(this.Button1, "Eliminar");
-            this.Button1.UseVisualStyleBackColor = true;
+            this.Button1.UseVisualStyleBackColor = false;
             this.Button1.Click += new System.EventHandler(this.Button1_Click);
             // 
             // Label1
@@ -163,6 +172,9 @@
             // 
             // btnAbrirFrontal
             // 
+            this.btnAbrirFrontal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(204)))), ((int)(((byte)(227)))));
+            this.btnAbrirFrontal.FlatAppearance.BorderSize = 0;
+            this.btnAbrirFrontal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAbrirFrontal.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAbrirFrontal.Image = global::SysCisepro3.Properties.Resources.folder_open_24dp_FILL0_wght400_GRAD0_opsz24__2_;
             this.btnAbrirFrontal.Location = new System.Drawing.Point(32, 608);
@@ -171,13 +183,12 @@
             this.btnAbrirFrontal.TabIndex = 230;
             this.btnAbrirFrontal.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.toolTip1.SetToolTip(this.btnAbrirFrontal, "Abrir");
-            this.btnAbrirFrontal.UseVisualStyleBackColor = true;
+            this.btnAbrirFrontal.UseVisualStyleBackColor = false;
             this.btnAbrirFrontal.Click += new System.EventHandler(this.btnAbrirFrontal_Click);
             // 
             // pbFotoCortadaFrontal
             // 
-            this.pbFotoCortadaFrontal.BackColor = System.Drawing.Color.White;
-            this.pbFotoCortadaFrontal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbFotoCortadaFrontal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(204)))), ((int)(((byte)(227)))));
             this.pbFotoCortadaFrontal.Location = new System.Drawing.Point(314, 327);
             this.pbFotoCortadaFrontal.Name = "pbFotoCortadaFrontal";
             this.pbFotoCortadaFrontal.Size = new System.Drawing.Size(140, 160);
@@ -187,6 +198,9 @@
             // 
             // btn180
             // 
+            this.btn180.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(204)))), ((int)(((byte)(227)))));
+            this.btn180.FlatAppearance.BorderSize = 0;
+            this.btn180.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn180.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn180.Image = global::SysCisepro3.Properties.Resources.rotate_left_24dp_FILL0_wght400_GRAD0_opsz24;
             this.btn180.Location = new System.Drawing.Point(204, 608);
@@ -195,11 +209,14 @@
             this.btn180.TabIndex = 224;
             this.btn180.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.toolTip1.SetToolTip(this.btn180, "Giro 180");
-            this.btn180.UseVisualStyleBackColor = true;
+            this.btn180.UseVisualStyleBackColor = false;
             this.btn180.Click += new System.EventHandler(this.btn180_Click);
             // 
             // btn90
             // 
+            this.btn90.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(204)))), ((int)(((byte)(227)))));
+            this.btn90.FlatAppearance.BorderSize = 0;
+            this.btn90.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn90.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn90.Image = global::SysCisepro3.Properties.Resources.rotate_right_24dp_FILL0_wght400_GRAD0_opsz24;
             this.btn90.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -209,11 +226,14 @@
             this.btn90.TabIndex = 223;
             this.btn90.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.toolTip1.SetToolTip(this.btn90, "Giro 90");
-            this.btn90.UseVisualStyleBackColor = true;
+            this.btn90.UseVisualStyleBackColor = false;
             this.btn90.Click += new System.EventHandler(this.btn90_Click);
             // 
             // btnVertical
             // 
+            this.btnVertical.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(204)))), ((int)(((byte)(227)))));
+            this.btnVertical.FlatAppearance.BorderSize = 0;
+            this.btnVertical.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVertical.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVertical.Image = global::SysCisepro3.Properties.Resources.align_vertical_bottom_24dp_FILL0_wght400_GRAD0_opsz24;
             this.btnVertical.Location = new System.Drawing.Point(75, 608);
@@ -222,11 +242,14 @@
             this.btnVertical.TabIndex = 222;
             this.btnVertical.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.toolTip1.SetToolTip(this.btnVertical, "Vertical");
-            this.btnVertical.UseVisualStyleBackColor = true;
+            this.btnVertical.UseVisualStyleBackColor = false;
             this.btnVertical.Click += new System.EventHandler(this.btnVertical_Click);
             // 
             // btnHorizontal
             // 
+            this.btnHorizontal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(204)))), ((int)(((byte)(227)))));
+            this.btnHorizontal.FlatAppearance.BorderSize = 0;
+            this.btnHorizontal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHorizontal.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHorizontal.Image = global::SysCisepro3.Properties.Resources.align_horizontal_right_24dp_FILL0_wght400_GRAD0_opsz24;
             this.btnHorizontal.Location = new System.Drawing.Point(118, 608);
@@ -235,13 +258,12 @@
             this.btnHorizontal.TabIndex = 221;
             this.btnHorizontal.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.toolTip1.SetToolTip(this.btnHorizontal, "Horizontal");
-            this.btnHorizontal.UseVisualStyleBackColor = true;
+            this.btnHorizontal.UseVisualStyleBackColor = false;
             this.btnHorizontal.Click += new System.EventHandler(this.btnHorizontal_Click);
             // 
             // pbFoto
             // 
-            this.pbFoto.BackColor = System.Drawing.Color.White;
-            this.pbFoto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbFoto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(204)))), ((int)(((byte)(227)))));
             this.pbFoto.Location = new System.Drawing.Point(10, 327);
             this.pbFoto.Name = "pbFoto";
             this.pbFoto.Size = new System.Drawing.Size(301, 280);
@@ -252,6 +274,9 @@
             // 
             // Button2
             // 
+            this.Button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(204)))), ((int)(((byte)(227)))));
+            this.Button2.FlatAppearance.BorderSize = 0;
+            this.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Button2.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Button2.Image = global::SysCisepro3.Properties.Resources.cancel_24dp_FILL0_wght400_GRAD0_opsz24;
             this.Button2.Location = new System.Drawing.Point(842, 608);
@@ -260,7 +285,7 @@
             this.Button2.TabIndex = 245;
             this.Button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.toolTip1.SetToolTip(this.Button2, "Eliminar");
-            this.Button2.UseVisualStyleBackColor = true;
+            this.Button2.UseVisualStyleBackColor = false;
             this.Button2.Click += new System.EventHandler(this.Button2_Click);
             // 
             // Label2
@@ -275,6 +300,9 @@
             // 
             // btnAbrirPerfil
             // 
+            this.btnAbrirPerfil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(204)))), ((int)(((byte)(227)))));
+            this.btnAbrirPerfil.FlatAppearance.BorderSize = 0;
+            this.btnAbrirPerfil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAbrirPerfil.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAbrirPerfil.Image = global::SysCisepro3.Properties.Resources.folder_open_24dp_FILL0_wght400_GRAD0_opsz24__2_;
             this.btnAbrirPerfil.Location = new System.Drawing.Point(627, 608);
@@ -283,13 +311,12 @@
             this.btnAbrirPerfil.TabIndex = 243;
             this.btnAbrirPerfil.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.toolTip1.SetToolTip(this.btnAbrirPerfil, "Abrir");
-            this.btnAbrirPerfil.UseVisualStyleBackColor = true;
+            this.btnAbrirPerfil.UseVisualStyleBackColor = false;
             this.btnAbrirPerfil.Click += new System.EventHandler(this.btnAbrirPerfil_Click);
             // 
             // pbFotoCortadaPerfil
             // 
-            this.pbFotoCortadaPerfil.BackColor = System.Drawing.Color.White;
-            this.pbFotoCortadaPerfil.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbFotoCortadaPerfil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(204)))), ((int)(((byte)(227)))));
             this.pbFotoCortadaPerfil.Location = new System.Drawing.Point(460, 327);
             this.pbFotoCortadaPerfil.Name = "pbFotoCortadaPerfil";
             this.pbFotoCortadaPerfil.Size = new System.Drawing.Size(140, 160);
@@ -299,6 +326,9 @@
             // 
             // btn180Perfil
             // 
+            this.btn180Perfil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(204)))), ((int)(((byte)(227)))));
+            this.btn180Perfil.FlatAppearance.BorderSize = 0;
+            this.btn180Perfil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn180Perfil.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn180Perfil.Image = global::SysCisepro3.Properties.Resources.rotate_left_24dp_FILL0_wght400_GRAD0_opsz24;
             this.btn180Perfil.Location = new System.Drawing.Point(799, 608);
@@ -307,11 +337,14 @@
             this.btn180Perfil.TabIndex = 237;
             this.btn180Perfil.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.toolTip1.SetToolTip(this.btn180Perfil, "Giro 180");
-            this.btn180Perfil.UseVisualStyleBackColor = true;
+            this.btn180Perfil.UseVisualStyleBackColor = false;
             this.btn180Perfil.Click += new System.EventHandler(this.btn180Perfil_Click);
             // 
             // btn90Perfil
             // 
+            this.btn90Perfil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(204)))), ((int)(((byte)(227)))));
+            this.btn90Perfil.FlatAppearance.BorderSize = 0;
+            this.btn90Perfil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn90Perfil.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn90Perfil.Image = global::SysCisepro3.Properties.Resources.rotate_right_24dp_FILL0_wght400_GRAD0_opsz24;
             this.btn90Perfil.Location = new System.Drawing.Point(756, 608);
@@ -320,11 +353,14 @@
             this.btn90Perfil.TabIndex = 236;
             this.btn90Perfil.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.toolTip1.SetToolTip(this.btn90Perfil, "Giro 90");
-            this.btn90Perfil.UseVisualStyleBackColor = true;
+            this.btn90Perfil.UseVisualStyleBackColor = false;
             this.btn90Perfil.Click += new System.EventHandler(this.btn90Perfil_Click);
             // 
             // btnVerticalPerfil
             // 
+            this.btnVerticalPerfil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(204)))), ((int)(((byte)(227)))));
+            this.btnVerticalPerfil.FlatAppearance.BorderSize = 0;
+            this.btnVerticalPerfil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVerticalPerfil.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVerticalPerfil.Image = global::SysCisepro3.Properties.Resources.align_vertical_bottom_24dp_FILL0_wght400_GRAD0_opsz24;
             this.btnVerticalPerfil.Location = new System.Drawing.Point(670, 608);
@@ -333,11 +369,14 @@
             this.btnVerticalPerfil.TabIndex = 235;
             this.btnVerticalPerfil.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.toolTip1.SetToolTip(this.btnVerticalPerfil, "Vertical");
-            this.btnVerticalPerfil.UseVisualStyleBackColor = true;
+            this.btnVerticalPerfil.UseVisualStyleBackColor = false;
             this.btnVerticalPerfil.Click += new System.EventHandler(this.btnVerticalPerfil_Click);
             // 
             // btnHorizontalPerfil
             // 
+            this.btnHorizontalPerfil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(204)))), ((int)(((byte)(227)))));
+            this.btnHorizontalPerfil.FlatAppearance.BorderSize = 0;
+            this.btnHorizontalPerfil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHorizontalPerfil.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHorizontalPerfil.Image = global::SysCisepro3.Properties.Resources.align_horizontal_right_24dp_FILL0_wght400_GRAD0_opsz24;
             this.btnHorizontalPerfil.Location = new System.Drawing.Point(713, 608);
@@ -346,13 +385,12 @@
             this.btnHorizontalPerfil.TabIndex = 234;
             this.btnHorizontalPerfil.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.toolTip1.SetToolTip(this.btnHorizontalPerfil, "Horizontal");
-            this.btnHorizontalPerfil.UseVisualStyleBackColor = true;
+            this.btnHorizontalPerfil.UseVisualStyleBackColor = false;
             this.btnHorizontalPerfil.Click += new System.EventHandler(this.btnHorizontalPerfil_Click);
             // 
             // pbPerfil
             // 
-            this.pbPerfil.BackColor = System.Drawing.Color.White;
-            this.pbPerfil.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbPerfil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(204)))), ((int)(((byte)(227)))));
             this.pbPerfil.Location = new System.Drawing.Point(603, 327);
             this.pbPerfil.Name = "pbPerfil";
             this.pbPerfil.Size = new System.Drawing.Size(301, 280);
@@ -367,6 +405,8 @@
             // 
             // videoSourceFoto
             // 
+            this.videoSourceFoto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(204)))), ((int)(((byte)(227)))));
+            this.videoSourceFoto.BorderColor = System.Drawing.Color.Transparent;
             this.videoSourceFoto.Location = new System.Drawing.Point(300, 33);
             this.videoSourceFoto.Name = "videoSourceFoto";
             this.videoSourceFoto.Size = new System.Drawing.Size(320, 258);
@@ -378,7 +418,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(204)))), ((int)(((byte)(227)))));
             this.ClientSize = new System.Drawing.Size(916, 651);
             this.Controls.Add(this.videoSourceFoto);
             this.Controls.Add(this.pbPerfil);

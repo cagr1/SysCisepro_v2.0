@@ -364,7 +364,7 @@ namespace SysCisepro3.TalentoHumano
         {
             if (dgvPersonal.RowCount == 0)
             {
-                KryptonMessageBox.Show(@"NO HAY DATOS PARA EXPORTAR!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+                KryptonMessageBox.Show(@"NO HAY DATOS PARA EXPORTAR!", "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
                 return;
             }
 
@@ -440,11 +440,11 @@ namespace SysCisepro3.TalentoHumano
                 app.Visible = true;
                 app.DisplayAlerts = true;
 
-                KryptonMessageBox.Show(@"REPORTE DE NÓMINA GENERAL DEL " + dtpAnio.Value + " generado correctamente!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+                KryptonMessageBox.Show(@"REPORTE DE NÓMINA GENERAL DEL " + dtpAnio.Value + " generado correctamente!", "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
             }
             catch
             {
-                KryptonMessageBox.Show(@"HUBO UN PROBLEMA AL EXPORTAR DATOS!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error);
+                KryptonMessageBox.Show(@"HUBO UN PROBLEMA AL EXPORTAR DATOS!", "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error);
             }
         }
     }

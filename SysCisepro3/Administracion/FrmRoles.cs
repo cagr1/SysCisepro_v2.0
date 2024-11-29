@@ -190,7 +190,7 @@ namespace SysCisepro3.Administracion
                 CargarRoles();
                 CargarRolesPermiso();
             }
-            MessageBox.Show((string)res[1], "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show((string)res[1], "Mensaje del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
 
         }
@@ -386,7 +386,7 @@ namespace SysCisepro3.Administracion
                     HabilitarBotonesMenu2(false, true, false);
                     
                 }
-                MessageBox.Show((string)res[1], "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show((string)res[1], "Mensaje del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             }
             catch (Exception ex)

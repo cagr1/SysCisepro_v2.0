@@ -24,17 +24,8 @@
         <System.Diagnostics.DebuggerStepThrough()> _
         Private Sub InitializeComponent()
             Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormInformacionTributaria))
-            Me.gbEmpresa = New System.Windows.Forms.GroupBox()
-            Me.Label6 = New System.Windows.Forms.Label()
-            Me.Label5 = New System.Windows.Forms.Label()
-            Me.Label4 = New System.Windows.Forms.Label()
-            Me.Label3 = New System.Windows.Forms.Label()
-            Me.Label2 = New System.Windows.Forms.Label()
-            Me.Label1 = New System.Windows.Forms.Label()
             Me.chkEmpresa = New System.Windows.Forms.CheckBox()
             Me.lblIdEmpresa = New System.Windows.Forms.Label()
-            Me.txtLlevaContabilidadEmpresa = New System.Windows.Forms.TextBox()
-            Me.txtContribuyenteEspecialEmpresa = New System.Windows.Forms.TextBox()
             Me.txtDireccionMatrizEmpresa = New System.Windows.Forms.TextBox()
             Me.txtRucEmpresa = New System.Windows.Forms.TextBox()
             Me.txtRazonSocialEmpresa = New System.Windows.Forms.TextBox()
@@ -68,165 +59,86 @@
             Me.btnGuardar = New System.Windows.Forms.ToolStripMenuItem()
             Me.btnModificar = New System.Windows.Forms.ToolStripMenuItem()
             Me.btnCancelar = New System.Windows.Forms.ToolStripMenuItem()
-            Me.gbEmpresa.SuspendLayout()
+            Me.KryptonGroupBox1 = New Krypton.Toolkit.KryptonGroupBox()
+            Me.KryptonLabel1 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLanguageManager1 = New Krypton.Toolkit.KryptonLanguageManager()
+            Me.KryptonLabel2 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel3 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel4 = New Krypton.Toolkit.KryptonLabel()
+            Me.txtContribuyenteEspecialEmpresa = New System.Windows.Forms.TextBox()
+            Me.txtLlevaContabilidadEmpresa = New System.Windows.Forms.TextBox()
+            Me.Label1 = New System.Windows.Forms.Label()
+            Me.Label2 = New System.Windows.Forms.Label()
+            Me.Label3 = New System.Windows.Forms.Label()
+            Me.Label4 = New System.Windows.Forms.Label()
+            Me.Label5 = New System.Windows.Forms.Label()
+            Me.Label6 = New System.Windows.Forms.Label()
+            Me.gbEmpresa = New System.Windows.Forms.GroupBox()
             Me.gbSecuenciaComprobantes.SuspendLayout()
             Me.GroupBox1.SuspendLayout()
             Me.gbNumeroAutorizaciones.SuspendLayout()
             CType(Me.dgvEmpresa, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.MenuStrip1.SuspendLayout()
+            CType(Me.KryptonGroupBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType(Me.KryptonGroupBox1.Panel, System.ComponentModel.ISupportInitialize).BeginInit()
+            Me.KryptonGroupBox1.Panel.SuspendLayout()
+            Me.KryptonGroupBox1.SuspendLayout()
+            Me.gbEmpresa.SuspendLayout()
             Me.SuspendLayout()
-            '
-            'gbEmpresa
-            '
-            Me.gbEmpresa.BackColor = System.Drawing.Color.White
-            Me.gbEmpresa.Controls.Add(Me.Label6)
-            Me.gbEmpresa.Controls.Add(Me.Label5)
-            Me.gbEmpresa.Controls.Add(Me.Label4)
-            Me.gbEmpresa.Controls.Add(Me.Label3)
-            Me.gbEmpresa.Controls.Add(Me.Label2)
-            Me.gbEmpresa.Controls.Add(Me.Label1)
-            Me.gbEmpresa.Controls.Add(Me.chkEmpresa)
-            Me.gbEmpresa.Controls.Add(Me.lblIdEmpresa)
-            Me.gbEmpresa.Controls.Add(Me.txtLlevaContabilidadEmpresa)
-            Me.gbEmpresa.Controls.Add(Me.txtContribuyenteEspecialEmpresa)
-            Me.gbEmpresa.Controls.Add(Me.txtDireccionMatrizEmpresa)
-            Me.gbEmpresa.Controls.Add(Me.txtRucEmpresa)
-            Me.gbEmpresa.Controls.Add(Me.txtRazonSocialEmpresa)
-            Me.gbEmpresa.Controls.Add(Me.txtNombreComercialEmpresa)
-            Me.gbEmpresa.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.gbEmpresa.Location = New System.Drawing.Point(2, 33)
-            Me.gbEmpresa.Name = "gbEmpresa"
-            Me.gbEmpresa.Size = New System.Drawing.Size(626, 173)
-            Me.gbEmpresa.TabIndex = 0
-            Me.gbEmpresa.TabStop = False
-            Me.gbEmpresa.Text = "EMPRESA"
-            '
-            'Label6
-            '
-            Me.Label6.AutoSize = True
-            Me.Label6.Location = New System.Drawing.Point(327, 143)
-            Me.Label6.Name = "Label6"
-            Me.Label6.Size = New System.Drawing.Size(186, 13)
-            Me.Label6.TabIndex = 13
-            Me.Label6.Text = "OBLIGADO LLEVAR CONTABILIDAD:"
-            '
-            'Label5
-            '
-            Me.Label5.AutoSize = True
-            Me.Label5.Location = New System.Drawing.Point(7, 143)
-            Me.Label5.Name = "Label5"
-            Me.Label5.Size = New System.Drawing.Size(190, 13)
-            Me.Label5.TabIndex = 12
-            Me.Label5.Text = "NRO RESOLUCIÓN CONT. ESPECIAL:"
-            '
-            'Label4
-            '
-            Me.Label4.AutoSize = True
-            Me.Label4.Location = New System.Drawing.Point(7, 112)
-            Me.Label4.Name = "Label4"
-            Me.Label4.Size = New System.Drawing.Size(109, 13)
-            Me.Label4.TabIndex = 11
-            Me.Label4.Text = "DIRECCIÓN MATRIZ:"
-            '
-            'Label3
-            '
-            Me.Label3.AutoSize = True
-            Me.Label3.Location = New System.Drawing.Point(7, 81)
-            Me.Label3.Name = "Label3"
-            Me.Label3.Size = New System.Drawing.Size(120, 13)
-            Me.Label3.TabIndex = 10
-            Me.Label3.Text = "NOMBRE COMERCIAL:"
-            '
-            'Label2
-            '
-            Me.Label2.AutoSize = True
-            Me.Label2.Location = New System.Drawing.Point(7, 50)
-            Me.Label2.Name = "Label2"
-            Me.Label2.Size = New System.Drawing.Size(88, 13)
-            Me.Label2.TabIndex = 9
-            Me.Label2.Text = "RAZÓN SOCIAL:"
-            '
-            'Label1
-            '
-            Me.Label1.AutoSize = True
-            Me.Label1.Location = New System.Drawing.Point(7, 19)
-            Me.Label1.Name = "Label1"
-            Me.Label1.Size = New System.Drawing.Size(40, 13)
-            Me.Label1.TabIndex = 8
-            Me.Label1.Text = "R.U.C.:"
             '
             'chkEmpresa
             '
             Me.chkEmpresa.AutoSize = True
-            Me.chkEmpresa.Location = New System.Drawing.Point(550, -1)
+            Me.chkEmpresa.Location = New System.Drawing.Point(477, 30)
             Me.chkEmpresa.Name = "chkEmpresa"
-            Me.chkEmpresa.Size = New System.Drawing.Size(71, 17)
+            Me.chkEmpresa.Size = New System.Drawing.Size(59, 17)
             Me.chkEmpresa.TabIndex = 7
-            Me.chkEmpresa.Text = "ACTIVAR"
+            Me.chkEmpresa.Text = "Activar"
             Me.chkEmpresa.UseVisualStyleBackColor = True
             '
             'lblIdEmpresa
             '
             Me.lblIdEmpresa.AutoSize = True
-            Me.lblIdEmpresa.Location = New System.Drawing.Point(61, 0)
+            Me.lblIdEmpresa.Location = New System.Drawing.Point(152, 5)
             Me.lblIdEmpresa.Name = "lblIdEmpresa"
             Me.lblIdEmpresa.Size = New System.Drawing.Size(10, 13)
             Me.lblIdEmpresa.TabIndex = 6
             Me.lblIdEmpresa.Text = "."
             '
-            'txtLlevaContabilidadEmpresa
-            '
-            Me.txtLlevaContabilidadEmpresa.BackColor = System.Drawing.Color.White
-            Me.txtLlevaContabilidadEmpresa.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-            Me.txtLlevaContabilidadEmpresa.Location = New System.Drawing.Point(520, 140)
-            Me.txtLlevaContabilidadEmpresa.Name = "txtLlevaContabilidadEmpresa"
-            Me.txtLlevaContabilidadEmpresa.Size = New System.Drawing.Size(98, 21)
-            Me.txtLlevaContabilidadEmpresa.TabIndex = 5
-            '
-            'txtContribuyenteEspecialEmpresa
-            '
-            Me.txtContribuyenteEspecialEmpresa.BackColor = System.Drawing.Color.White
-            Me.txtContribuyenteEspecialEmpresa.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-            Me.txtContribuyenteEspecialEmpresa.Location = New System.Drawing.Point(200, 140)
-            Me.txtContribuyenteEspecialEmpresa.Name = "txtContribuyenteEspecialEmpresa"
-            Me.txtContribuyenteEspecialEmpresa.Size = New System.Drawing.Size(115, 21)
-            Me.txtContribuyenteEspecialEmpresa.TabIndex = 4
-            Me.txtContribuyenteEspecialEmpresa.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-            '
             'txtDireccionMatrizEmpresa
             '
             Me.txtDireccionMatrizEmpresa.BackColor = System.Drawing.Color.White
             Me.txtDireccionMatrizEmpresa.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-            Me.txtDireccionMatrizEmpresa.Location = New System.Drawing.Point(116, 109)
+            Me.txtDireccionMatrizEmpresa.Location = New System.Drawing.Point(74, 56)
             Me.txtDireccionMatrizEmpresa.Name = "txtDireccionMatrizEmpresa"
-            Me.txtDireccionMatrizEmpresa.Size = New System.Drawing.Size(502, 21)
+            Me.txtDireccionMatrizEmpresa.Size = New System.Drawing.Size(369, 20)
             Me.txtDireccionMatrizEmpresa.TabIndex = 3
             '
             'txtRucEmpresa
             '
             Me.txtRucEmpresa.BackColor = System.Drawing.Color.White
             Me.txtRucEmpresa.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-            Me.txtRucEmpresa.Location = New System.Drawing.Point(116, 16)
+            Me.txtRucEmpresa.Location = New System.Drawing.Point(46, 3)
             Me.txtRucEmpresa.Name = "txtRucEmpresa"
-            Me.txtRucEmpresa.Size = New System.Drawing.Size(100, 21)
+            Me.txtRucEmpresa.Size = New System.Drawing.Size(100, 20)
             Me.txtRucEmpresa.TabIndex = 2
             '
             'txtRazonSocialEmpresa
             '
             Me.txtRazonSocialEmpresa.BackColor = System.Drawing.Color.White
             Me.txtRazonSocialEmpresa.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-            Me.txtRazonSocialEmpresa.Location = New System.Drawing.Point(116, 47)
+            Me.txtRazonSocialEmpresa.Location = New System.Drawing.Point(247, 3)
             Me.txtRazonSocialEmpresa.Name = "txtRazonSocialEmpresa"
-            Me.txtRazonSocialEmpresa.Size = New System.Drawing.Size(502, 21)
+            Me.txtRazonSocialEmpresa.Size = New System.Drawing.Size(321, 20)
             Me.txtRazonSocialEmpresa.TabIndex = 1
             '
             'txtNombreComercialEmpresa
             '
             Me.txtNombreComercialEmpresa.BackColor = System.Drawing.Color.White
             Me.txtNombreComercialEmpresa.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-            Me.txtNombreComercialEmpresa.Location = New System.Drawing.Point(116, 78)
+            Me.txtNombreComercialEmpresa.Location = New System.Drawing.Point(122, 30)
             Me.txtNombreComercialEmpresa.Name = "txtNombreComercialEmpresa"
-            Me.txtNombreComercialEmpresa.Size = New System.Drawing.Size(502, 21)
+            Me.txtNombreComercialEmpresa.Size = New System.Drawing.Size(321, 20)
             Me.txtNombreComercialEmpresa.TabIndex = 0
             '
             'gbSecuenciaComprobantes
@@ -241,9 +153,9 @@
             Me.gbSecuenciaComprobantes.Controls.Add(Me.txtSecuencialNotaCredito)
             Me.gbSecuenciaComprobantes.Controls.Add(Me.txtSecuencialFactura)
             Me.gbSecuenciaComprobantes.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.gbSecuenciaComprobantes.Location = New System.Drawing.Point(2, 207)
+            Me.gbSecuenciaComprobantes.Location = New System.Drawing.Point(50, 207)
             Me.gbSecuenciaComprobantes.Name = "gbSecuenciaComprobantes"
-            Me.gbSecuenciaComprobantes.Size = New System.Drawing.Size(321, 97)
+            Me.gbSecuenciaComprobantes.Size = New System.Drawing.Size(273, 97)
             Me.gbSecuenciaComprobantes.TabIndex = 1
             Me.gbSecuenciaComprobantes.TabStop = False
             Me.gbSecuenciaComprobantes.Text = "SECUENCIA COMPROBANTES"
@@ -479,9 +391,9 @@
             '
             Me.dgvEmpresa.AllowUserToAddRows = False
             Me.dgvEmpresa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-            Me.dgvEmpresa.Location = New System.Drawing.Point(2, 2)
+            Me.dgvEmpresa.Location = New System.Drawing.Point(255, 73)
             Me.dgvEmpresa.Name = "dgvEmpresa"
-            Me.dgvEmpresa.Size = New System.Drawing.Size(321, 59)
+            Me.dgvEmpresa.Size = New System.Drawing.Size(101, 59)
             Me.dgvEmpresa.TabIndex = 46
             '
             'MenuStrip1
@@ -534,12 +446,162 @@
             Me.btnCancelar.Size = New System.Drawing.Size(97, 28)
             Me.btnCancelar.Text = "CANCELAR"
             '
+            'KryptonGroupBox1
+            '
+            Me.KryptonGroupBox1.CaptionOverlap = 0R
+            Me.KryptonGroupBox1.GroupBackStyle = Krypton.Toolkit.PaletteBackStyle.ControlRibbon
+            Me.KryptonGroupBox1.Location = New System.Drawing.Point(2, 268)
+            Me.KryptonGroupBox1.Name = "KryptonGroupBox1"
+            '
+            'KryptonGroupBox1.Panel
+            '
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.chkEmpresa)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel4)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel3)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel2)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel1)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.txtRucEmpresa)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.lblIdEmpresa)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.txtRazonSocialEmpresa)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.txtNombreComercialEmpresa)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.txtDireccionMatrizEmpresa)
+            Me.KryptonGroupBox1.Size = New System.Drawing.Size(585, 82)
+            Me.KryptonGroupBox1.TabIndex = 190
+            Me.KryptonGroupBox1.Values.Description = "Empresa"
+            Me.KryptonGroupBox1.Values.Heading = ""
+            Me.KryptonGroupBox1.Values.Image = Global.syscisepro.My.Resources.Resources.business_20dp__1_
+            '
+            'KryptonLabel1
+            '
+            Me.KryptonLabel1.Location = New System.Drawing.Point(3, 3)
+            Me.KryptonLabel1.Name = "KryptonLabel1"
+            Me.KryptonLabel1.Size = New System.Drawing.Size(34, 20)
+            Me.KryptonLabel1.TabIndex = 0
+            Me.KryptonLabel1.Values.Text = "RUC"
+            '
+            'KryptonLabel2
+            '
+            Me.KryptonLabel2.Location = New System.Drawing.Point(161, 3)
+            Me.KryptonLabel2.Name = "KryptonLabel2"
+            Me.KryptonLabel2.Size = New System.Drawing.Size(79, 20)
+            Me.KryptonLabel2.TabIndex = 3
+            Me.KryptonLabel2.Values.Text = "Razon Social"
+            '
+            'KryptonLabel3
+            '
+            Me.KryptonLabel3.Location = New System.Drawing.Point(3, 29)
+            Me.KryptonLabel3.Name = "KryptonLabel3"
+            Me.KryptonLabel3.Size = New System.Drawing.Size(113, 20)
+            Me.KryptonLabel3.TabIndex = 4
+            Me.KryptonLabel3.Values.Text = "Nombre Comercial"
+            '
+            'KryptonLabel4
+            '
+            Me.KryptonLabel4.Location = New System.Drawing.Point(4, 56)
+            Me.KryptonLabel4.Name = "KryptonLabel4"
+            Me.KryptonLabel4.Size = New System.Drawing.Size(62, 20)
+            Me.KryptonLabel4.TabIndex = 8
+            Me.KryptonLabel4.Values.Text = "Direccion"
+            '
+            'txtContribuyenteEspecialEmpresa
+            '
+            Me.txtContribuyenteEspecialEmpresa.BackColor = System.Drawing.Color.White
+            Me.txtContribuyenteEspecialEmpresa.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+            Me.txtContribuyenteEspecialEmpresa.Location = New System.Drawing.Point(200, 140)
+            Me.txtContribuyenteEspecialEmpresa.Name = "txtContribuyenteEspecialEmpresa"
+            Me.txtContribuyenteEspecialEmpresa.Size = New System.Drawing.Size(115, 21)
+            Me.txtContribuyenteEspecialEmpresa.TabIndex = 4
+            Me.txtContribuyenteEspecialEmpresa.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+            '
+            'txtLlevaContabilidadEmpresa
+            '
+            Me.txtLlevaContabilidadEmpresa.BackColor = System.Drawing.Color.White
+            Me.txtLlevaContabilidadEmpresa.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+            Me.txtLlevaContabilidadEmpresa.Location = New System.Drawing.Point(520, 140)
+            Me.txtLlevaContabilidadEmpresa.Name = "txtLlevaContabilidadEmpresa"
+            Me.txtLlevaContabilidadEmpresa.Size = New System.Drawing.Size(98, 21)
+            Me.txtLlevaContabilidadEmpresa.TabIndex = 5
+            '
+            'Label1
+            '
+            Me.Label1.AutoSize = True
+            Me.Label1.Location = New System.Drawing.Point(7, 19)
+            Me.Label1.Name = "Label1"
+            Me.Label1.Size = New System.Drawing.Size(40, 13)
+            Me.Label1.TabIndex = 8
+            Me.Label1.Text = "R.U.C.:"
+            '
+            'Label2
+            '
+            Me.Label2.AutoSize = True
+            Me.Label2.Location = New System.Drawing.Point(7, 50)
+            Me.Label2.Name = "Label2"
+            Me.Label2.Size = New System.Drawing.Size(88, 13)
+            Me.Label2.TabIndex = 9
+            Me.Label2.Text = "RAZÓN SOCIAL:"
+            '
+            'Label3
+            '
+            Me.Label3.AutoSize = True
+            Me.Label3.Location = New System.Drawing.Point(7, 81)
+            Me.Label3.Name = "Label3"
+            Me.Label3.Size = New System.Drawing.Size(120, 13)
+            Me.Label3.TabIndex = 10
+            Me.Label3.Text = "NOMBRE COMERCIAL:"
+            '
+            'Label4
+            '
+            Me.Label4.AutoSize = True
+            Me.Label4.Location = New System.Drawing.Point(7, 112)
+            Me.Label4.Name = "Label4"
+            Me.Label4.Size = New System.Drawing.Size(109, 13)
+            Me.Label4.TabIndex = 11
+            Me.Label4.Text = "DIRECCIÓN MATRIZ:"
+            '
+            'Label5
+            '
+            Me.Label5.AutoSize = True
+            Me.Label5.Location = New System.Drawing.Point(7, 143)
+            Me.Label5.Name = "Label5"
+            Me.Label5.Size = New System.Drawing.Size(190, 13)
+            Me.Label5.TabIndex = 12
+            Me.Label5.Text = "NRO RESOLUCIÓN CONT. ESPECIAL:"
+            '
+            'Label6
+            '
+            Me.Label6.AutoSize = True
+            Me.Label6.Location = New System.Drawing.Point(327, 143)
+            Me.Label6.Name = "Label6"
+            Me.Label6.Size = New System.Drawing.Size(186, 13)
+            Me.Label6.TabIndex = 13
+            Me.Label6.Text = "OBLIGADO LLEVAR CONTABILIDAD:"
+            '
+            'gbEmpresa
+            '
+            Me.gbEmpresa.BackColor = System.Drawing.Color.White
+            Me.gbEmpresa.Controls.Add(Me.Label6)
+            Me.gbEmpresa.Controls.Add(Me.Label5)
+            Me.gbEmpresa.Controls.Add(Me.Label4)
+            Me.gbEmpresa.Controls.Add(Me.Label3)
+            Me.gbEmpresa.Controls.Add(Me.Label2)
+            Me.gbEmpresa.Controls.Add(Me.Label1)
+            Me.gbEmpresa.Controls.Add(Me.txtLlevaContabilidadEmpresa)
+            Me.gbEmpresa.Controls.Add(Me.txtContribuyenteEspecialEmpresa)
+            Me.gbEmpresa.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.gbEmpresa.Location = New System.Drawing.Point(7, 33)
+            Me.gbEmpresa.Name = "gbEmpresa"
+            Me.gbEmpresa.Size = New System.Drawing.Size(565, 168)
+            Me.gbEmpresa.TabIndex = 0
+            Me.gbEmpresa.TabStop = False
+            Me.gbEmpresa.Text = "EMPRESA"
+            '
             'FormInformacionTributaria
             '
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-            Me.BackColor = System.Drawing.Color.White
+            Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(185, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(227, Byte), Integer))
             Me.ClientSize = New System.Drawing.Size(629, 353)
+            Me.Controls.Add(Me.KryptonGroupBox1)
             Me.Controls.Add(Me.MenuStrip1)
             Me.Controls.Add(Me.gbNumeroAutorizaciones)
             Me.Controls.Add(Me.GroupBox1)
@@ -554,8 +616,6 @@
             Or Krypton.Toolkit.PaletteDrawBorders.Right), Krypton.Toolkit.PaletteDrawBorders)
             Me.StateActive.Border.Rounding = 5.0!
             Me.Text = "INFORMACIÓN TRIBUTARIA"
-            Me.gbEmpresa.ResumeLayout(False)
-            Me.gbEmpresa.PerformLayout()
             Me.gbSecuenciaComprobantes.ResumeLayout(False)
             Me.gbSecuenciaComprobantes.PerformLayout()
             Me.GroupBox1.ResumeLayout(False)
@@ -565,13 +625,17 @@
             CType(Me.dgvEmpresa, System.ComponentModel.ISupportInitialize).EndInit()
             Me.MenuStrip1.ResumeLayout(False)
             Me.MenuStrip1.PerformLayout()
+            CType(Me.KryptonGroupBox1.Panel, System.ComponentModel.ISupportInitialize).EndInit()
+            Me.KryptonGroupBox1.Panel.ResumeLayout(False)
+            Me.KryptonGroupBox1.Panel.PerformLayout()
+            CType(Me.KryptonGroupBox1, System.ComponentModel.ISupportInitialize).EndInit()
+            Me.KryptonGroupBox1.ResumeLayout(False)
+            Me.gbEmpresa.ResumeLayout(False)
+            Me.gbEmpresa.PerformLayout()
             Me.ResumeLayout(False)
             Me.PerformLayout()
 
         End Sub
-        Friend WithEvents gbEmpresa As System.Windows.Forms.GroupBox
-        Friend WithEvents txtLlevaContabilidadEmpresa As System.Windows.Forms.TextBox
-        Friend WithEvents txtContribuyenteEspecialEmpresa As System.Windows.Forms.TextBox
         Friend WithEvents txtDireccionMatrizEmpresa As System.Windows.Forms.TextBox
         Friend WithEvents txtRucEmpresa As System.Windows.Forms.TextBox
         Friend WithEvents txtRazonSocialEmpresa As System.Windows.Forms.TextBox
@@ -594,12 +658,6 @@
         Friend WithEvents chkSecuenciales As System.Windows.Forms.CheckBox
         Friend WithEvents chkImpuestos As System.Windows.Forms.CheckBox
         Friend WithEvents chkNroAutorizaciones As System.Windows.Forms.CheckBox
-        Friend WithEvents Label6 As System.Windows.Forms.Label
-        Friend WithEvents Label5 As System.Windows.Forms.Label
-        Friend WithEvents Label4 As System.Windows.Forms.Label
-        Friend WithEvents Label3 As System.Windows.Forms.Label
-        Friend WithEvents Label2 As System.Windows.Forms.Label
-        Friend WithEvents Label1 As System.Windows.Forms.Label
         Friend WithEvents Label9 As System.Windows.Forms.Label
         Friend WithEvents Label8 As System.Windows.Forms.Label
         Friend WithEvents Label7 As System.Windows.Forms.Label
@@ -613,5 +671,20 @@
         Friend WithEvents btnGuardar As System.Windows.Forms.ToolStripMenuItem
         Friend WithEvents btnModificar As System.Windows.Forms.ToolStripMenuItem
         Friend WithEvents btnCancelar As System.Windows.Forms.ToolStripMenuItem
+        Friend WithEvents KryptonGroupBox1 As Krypton.Toolkit.KryptonGroupBox
+        Friend WithEvents KryptonLabel1 As Krypton.Toolkit.KryptonLabel
+        Friend WithEvents KryptonLanguageManager1 As Krypton.Toolkit.KryptonLanguageManager
+        Friend WithEvents KryptonLabel4 As Krypton.Toolkit.KryptonLabel
+        Friend WithEvents KryptonLabel3 As Krypton.Toolkit.KryptonLabel
+        Friend WithEvents KryptonLabel2 As Krypton.Toolkit.KryptonLabel
+        Friend WithEvents txtContribuyenteEspecialEmpresa As TextBox
+        Friend WithEvents txtLlevaContabilidadEmpresa As TextBox
+        Friend WithEvents Label1 As Label
+        Friend WithEvents Label2 As Label
+        Friend WithEvents Label3 As Label
+        Friend WithEvents Label4 As Label
+        Friend WithEvents Label5 As Label
+        Friend WithEvents Label6 As Label
+        Friend WithEvents gbEmpresa As GroupBox
     End Class
 End Namespace

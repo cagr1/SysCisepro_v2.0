@@ -1626,11 +1626,11 @@ Namespace FORMULARIOS.OPERACIONES
 
                 If workbook.Sheets.Count = 1 Then workbook.Sheets.Add()
 
-                worksheetd = workbook.Sheets("Hoja1")
-                worksheetn = workbook.Sheets("Hoja2")
+                worksheetn = workbook.Sheets("Hoja1")
+                worksheetd = workbook.Sheets("Hoja2")
 
-                worksheetd.Name = "ASISTENCIA DIURNA"
-                worksheetn.Name = "ASISTENCIA NOCTURNA"
+                worksheetn.Name = "Asistencia Nocturna"
+                worksheetd.Name = "Asistencia Diurna"
 
                 Dim ld = -1
                 For i = 0 To dgvDia.Columns.Count - 1
@@ -2217,7 +2217,7 @@ Namespace FORMULARIOS.OPERACIONES
 
                 If str.Split("|")(1).Trim.Length > 0 Then _r.Cells(1).Style.BackColor = Color.LightSkyBlue
 
-                dgvNoche.FirstDisplayedScrollingRowIndex = dgvNoche.SelectedRows(0).Index
+                ' dgvNoche.FirstDisplayedScrollingRowIndex = dgvNoche.SelectedRows(0).Index
                 dgvNoche.Sort(dgvNoche.Columns(0), System.ComponentModel.ListSortDirection.Ascending)
 
                 ' CAMBIAR HORARIO (254 DIA, 255 NOCHE)
@@ -2481,7 +2481,283 @@ Namespace FORMULARIOS.OPERACIONES
             btnSig.Tag = currentIndex + 1
         End Sub
 
+        Private Sub btndia_Click(sender As Object, e As EventArgs) Handles btndia.Click
+            _hoy = ValidationForms.FechaActual(_tipoCon)
+
+            Try
+
+                If dgvDia.RowCount = 0 Then
+
+                    KryptonMessageBox.Show("No hay registros para imprimir", "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
+                    Return
+                End If
+
+                Dim app As Excel._Application = New Excel.Application()
+                Dim workbook As Excel._Workbook = app.Workbooks.Add(Type.Missing)
+                Dim worksheetd As Excel._Worksheet = Nothing
 
 
+
+
+                worksheetd = workbook.Sheets("Hoja1")
+
+
+                worksheetd.Name = "Asistencia Diurna"
+
+
+                Dim ld = -1
+                For i = 0 To dgvDia.Columns.Count - 1
+                    If dgvDia.Columns(i).Visible Then ld += 1
+                Next
+                Dim id = NumToCharExcel(ld + 1)
+
+                Dim ln = -1
+                For i = 0 To dgvNoche.Columns.Count - 1
+                    If dgvNoche.Columns(i).Visible Then ln += 1
+                Next
+                Dim io = NumToCharExcel(ln + 1)
+
+                worksheetd.Range("A1:" & id & dgvDia.RowCount + 25).Font.Size = 10
+
+
+                worksheetd.Range("A1:" & id & "1").Merge()
+                worksheetd.Range("A1:" & id & "1").Value = ValidationForms.NombreCompany(_tipoCon)
+                worksheetd.Range("A1:" & id & "1").Font.Bold = True
+                worksheetd.Range("A1:" & id & "1").Cells.HorizontalAlignment = Excel.XlHAlign.xlHAlignCenter
+                worksheetd.Range("A1:" & id & "1").Interior.Color = ValidationForms.GetColorSistema(_tipoCon)
+                worksheetd.Range("A1:" & id & "1").Font.Color = Color.White
+                worksheetd.Range("A1:" & id & "1").Font.Size = 12
+                worksheetd.Range("A2:" & id & "2").Merge()
+                worksheetd.Range("A2:" & id & "2").Value = "REPORTE ASISTENCIA"
+                worksheetd.Range("A2:" & id & "2").Font.Size = 12
+                worksheetd.Range("A3:" & id & "3").Merge()
+                worksheetd.Range("A3:" & id & "3").Value = "TURNO: " & Label8.Text.Trim
+                worksheetd.Range("A3:" & id & "3").Font.Size = 12
+                worksheetd.Range("A4:" & id & "4").Merge()
+                worksheetd.Range("A4:" & id & "4").Value = "Fecha: " & DateTimePicker5.Value & "              Fecha de Impresión: " & Date.Now
+                worksheetd.Range("A4:" & id & "4").Font.Size = 12
+
+
+
+                Dim headd = 6
+                Dim footd = headd + dgvDia.RowCount + 2
+
+                Dim headn = 6
+                Dim footn = headn + dgvNoche.RowCount + 2
+
+                Dim x = 1
+                For i = 0 To dgvDia.Columns.Count
+                    If i >= dgvDia.Columns.Count Then
+                        worksheetd.Cells(headd, x) = "OBSERVACIÓN"
+                        worksheetd.Cells(headd, x).Font.Bold = True
+                        worksheetd.Cells(headd, x).Borders.LineStyle = Excel.XlLineStyle.xlContinuous
+                        worksheetd.Cells(headd, x).Cells.HorizontalAlignment = Excel.XlHAlign.xlHAlignCenter
+                        worksheetd.Cells(headd, x).Interior.Color = ValidationForms.GetColorSistema(_tipoCon)
+                        worksheetd.Cells(headd, x).Font.Color = Color.White
+                        Exit For
+                    End If
+
+                    If Not dgvDia.Columns(i).Visible Then Continue For
+                    worksheetd.Cells(headd, x) = dgvDia.Columns(i).HeaderText
+                    worksheetd.Cells(headd, x).Font.Bold = True
+                    worksheetd.Cells(headd, x).Borders.LineStyle = Excel.XlLineStyle.xlContinuous
+                    worksheetd.Cells(headd, x).Cells.HorizontalAlignment = Excel.XlHAlign.xlHAlignCenter
+                    worksheetd.Cells(headd, x).Interior.Color = ValidationForms.GetColorSistema(_tipoCon)
+                    worksheetd.Cells(headd, x).Font.Color = Color.White
+                    x += 1
+                Next
+
+
+
+                Dim y As Integer
+                headd = 7
+                For Each row As DataGridViewRow In dgvDia.Rows
+                    y = 1
+                    For j As Integer = 0 To dgvDia.Columns.Count - 1
+                        If Not dgvDia.Columns(j).Visible Then Continue For
+                        worksheetd.Cells(headd, y) = (row.Cells(j).Value & "")
+
+                        If j > 10 Then
+                            If dgvDia.Columns(j).Name.StartsWith("RR") Then
+                                If (row.Cells(j).Value & "").ToString.Equals("True") Then
+                                    worksheetd.Cells(headd, y) = "*"
+                                Else
+                                    If (row.Cells(j + 1).Value & "").ToString.Equals("-") Then
+                                        worksheetd.Cells(headd, y) = "-"
+                                    Else
+                                        worksheetd.Cells(headd, y) = "S/R"
+                                    End If
+                                End If
+                            End If
+                            worksheetd.Cells(headd, y).Cells.HorizontalAlignment = Excel.XlHAlign.xlHAlignCenter
+                        End If
+
+                        ' definir bordes
+                        worksheetd.Cells(headd, y).Borders(Excel.XlBordersIndex.xlEdgeLeft).LineStyle = Excel.XlLineStyle.xlContinuous
+                        worksheetd.Cells(headd, y).Borders(Excel.XlBordersIndex.xlEdgeRight).LineStyle = Excel.XlLineStyle.xlContinuous
+                        If headd = dgvDia.RowCount + 6 Then
+                            worksheetd.Cells(headd, y).Borders(Excel.XlBordersIndex.xlEdgeBottom).LineStyle = Excel.XlLineStyle.xlContinuous
+                            worksheetd.Cells(headd, y).Borders(Excel.XlBordersIndex.xlEdgeBottom).LineStyle = Excel.XlLineStyle.xlContinuous
+                            worksheetd.Cells(headd, y + 1).Borders(Excel.XlBordersIndex.xlEdgeBottom).LineStyle = Excel.XlLineStyle.xlContinuous
+                            worksheetd.Cells(headd, y + 1).Borders(Excel.XlBordersIndex.xlEdgeBottom).LineStyle = Excel.XlLineStyle.xlContinuous
+                        End If
+                        y += 1
+                    Next
+                    worksheetd.Cells(headd, y) = row.Tag.ToString.Split("|")(1)
+                    worksheetd.Cells(headd, y).Borders(Excel.XlBordersIndex.xlEdgeRight).LineStyle = Excel.XlLineStyle.xlContinuous
+
+                    headd += 1
+
+                Next
+
+
+
+                worksheetd.Range("A1:" & id & dgvDia.RowCount + 25).Columns.AutoFit()
+
+
+                app.DisplayAlerts = False
+                app.Visible = True
+                app.DisplayAlerts = True
+            Catch ex As Exception
+
+                KryptonMessageBox.Show("Error al exportar datos! " & vbNewLine & ex.Message, "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+            End Try
+        End Sub
+
+        Private Sub btnNoche_Click(sender As Object, e As EventArgs) Handles btnNoche.Click
+            _hoy = ValidationForms.FechaActual(_tipoCon)
+
+            Try
+
+                If dgvNoche.RowCount = 0 Then
+                    KryptonMessageBox.Show("No hay registros para exportar", "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
+                    Return
+                End If
+
+                Dim app As Excel._Application = New Excel.Application()
+                Dim workbook As Excel._Workbook = app.Workbooks.Add(Type.Missing)
+
+                For Each sheet As Excel._Worksheet In workbook.Sheets
+                    If sheet.Name <> "Hoja1" Then sheet.Delete()
+                Next
+
+
+                Dim worksheetn As Excel._Worksheet = workbook.Sheets(1)
+
+                worksheetn.Name = "Asistencia Nocturna"
+
+
+
+                Dim ln = -1
+                For i = 0 To dgvNoche.Columns.Count - 1
+                    If dgvNoche.Columns(i).Visible Then ln += 1
+                Next
+                Dim io = NumToCharExcel(ln + 1)
+
+
+                worksheetn.Range("A1:" & io & dgvNoche.RowCount + 25).Font.Size = 10
+
+
+
+                worksheetn.Range("A1:" & io & "1").Merge()
+                worksheetn.Range("A1:" & io & "1").Value = ValidationForms.NombreCompany(_tipoCon)
+                worksheetn.Range("A1:" & io & "1").Font.Bold = True
+                worksheetn.Range("A1:" & io & "1").Cells.HorizontalAlignment = Excel.XlHAlign.xlHAlignCenter
+                worksheetn.Range("A1:" & io & "1").Interior.Color = ValidationForms.GetColorSistema(_tipoCon)
+                worksheetn.Range("A1:" & io & "1").Font.Color = Color.White
+                worksheetn.Range("A1:" & io & "1").Font.Size = 12
+                worksheetn.Range("A2:" & io & "2").Merge()
+                worksheetn.Range("A2:" & io & "2").Value = "REPORTE ASISTENCIA"
+                worksheetn.Range("A2:" & io & "2").Font.Size = 12
+                worksheetn.Range("A3:" & io & "3").Merge()
+                worksheetn.Range("A3:" & io & "3").Value = "TURNO: " & Label8.Text.Trim
+                worksheetn.Range("A3:" & io & "3").Font.Size = 12
+                worksheetn.Range("A4:" & io & "4").Merge()
+                worksheetn.Range("A4:" & io & "4").Value = "Fecha: " & DateTimePicker5.Value & "              Fecha de Impresión: " & Date.Now
+                worksheetn.Range("A4:" & io & "4").Font.Size = 12
+
+
+
+                Dim headn = 6
+                Dim footn = headn + dgvNoche.RowCount + 2
+
+                Dim x = 1
+
+                x = 1
+                For i = 0 To dgvNoche.Columns.Count
+                    If (i >= dgvNoche.Columns.Count) Then
+                        worksheetn.Cells(headn, x) = "OBSERVACIÓN"
+                        worksheetn.Cells(headn, x).Font.Bold = True
+                        worksheetn.Cells(headn, x).Borders.LineStyle = Excel.XlLineStyle.xlContinuous
+                        worksheetn.Cells(headn, x).Cells.HorizontalAlignment = Excel.XlHAlign.xlHAlignCenter
+                        worksheetn.Cells(headn, x).Interior.Color = ValidationForms.GetColorSistema(_tipoCon)
+                        worksheetn.Cells(headn, x).Font.Color = Color.White
+                        Exit For
+                    End If
+
+                    If Not dgvNoche.Columns(i).Visible Then Continue For
+                    worksheetn.Cells(headn, x) = dgvNoche.Columns(i).HeaderText
+                    worksheetn.Cells(headn, x).Font.Bold = True
+                    worksheetn.Cells(headn, x).Borders.LineStyle = Excel.XlLineStyle.xlContinuous
+                    worksheetn.Cells(headn, x).Cells.HorizontalAlignment = Excel.XlHAlign.xlHAlignCenter
+                    worksheetn.Cells(headn, x).Interior.Color = ValidationForms.GetColorSistema(_tipoCon)
+                    worksheetn.Cells(headn, x).Font.Color = Color.White
+                    x += 1
+                Next
+
+                Dim y As Integer
+
+
+                headn = 7
+                For Each row As DataGridViewRow In dgvNoche.Rows
+                    y = 1
+                    For j As Integer = 0 To dgvNoche.Columns.Count - 1
+                        If Not dgvNoche.Columns(j).Visible Then Continue For
+                        worksheetn.Cells(headn, y) = (row.Cells(j).Value & "")
+
+                        If j > 10 Then
+                            If dgvNoche.Columns(j).Name.StartsWith("RR") Then
+                                If (row.Cells(j).Value & "").ToString.Equals("True") Then
+                                    worksheetn.Cells(headn, y) = "*"
+                                Else
+                                    If (row.Cells(j + 1).Value & "").ToString.Equals("-") Then
+                                        worksheetn.Cells(headn, y) = "-"
+                                    Else
+                                        worksheetn.Cells(headn, y) = "S/R"
+                                    End If
+                                End If
+                            End If
+                            worksheetn.Cells(headn, y).Cells.HorizontalAlignment = Excel.XlHAlign.xlHAlignCenter
+                        End If
+
+                        ' definir bordes
+                        worksheetn.Cells(headn, y).Borders(Excel.XlBordersIndex.xlEdgeLeft).LineStyle = Excel.XlLineStyle.xlContinuous
+                        worksheetn.Cells(headn, y).Borders(Excel.XlBordersIndex.xlEdgeRight).LineStyle = Excel.XlLineStyle.xlContinuous
+                        If headn = dgvNoche.RowCount + 6 Then
+                            worksheetn.Cells(headn, y).Borders(Excel.XlBordersIndex.xlEdgeBottom).LineStyle = Excel.XlLineStyle.xlContinuous
+                            worksheetn.Cells(headn, y).Borders(Excel.XlBordersIndex.xlEdgeBottom).LineStyle = Excel.XlLineStyle.xlContinuous
+                            worksheetn.Cells(headn, y + 1).Borders(Excel.XlBordersIndex.xlEdgeBottom).LineStyle = Excel.XlLineStyle.xlContinuous
+                            worksheetn.Cells(headn, y + 1).Borders(Excel.XlBordersIndex.xlEdgeBottom).LineStyle = Excel.XlLineStyle.xlContinuous
+                        End If
+                        y += 1
+                    Next
+                    worksheetn.Cells(headn, y) = row.Tag.ToString.Split("|")(1)
+                    worksheetn.Cells(headn, y).Borders(Excel.XlBordersIndex.xlEdgeRight).LineStyle = Excel.XlLineStyle.xlContinuous
+
+                    headn += 1
+
+                Next
+
+
+                worksheetn.Range("A1:" & io & dgvNoche.RowCount + 25).Columns.AutoFit()
+
+                app.DisplayAlerts = False
+                app.Visible = True
+                app.DisplayAlerts = True
+            Catch ex As Exception
+
+                KryptonMessageBox.Show("Error al exportar datos! " & vbNewLine & ex.Message, "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+            End Try
+        End Sub
     End Class
 End Namespace

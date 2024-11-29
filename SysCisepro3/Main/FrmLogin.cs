@@ -37,7 +37,7 @@ namespace SysCisepro3.Main
             if (u == null || !u.Password.Equals(txtPassword.Text)) // CLAVE DEBE COINCIDER EN MAYÚSCULAS Y/O MINÚSCULAS
             {
                 txtPassword.Clear();
-                MessageBox.Show(@"La contraseña ingresada es incorrecta!", @"MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(@"La contraseña ingresada es incorrecta!", @"Mensaje del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
 

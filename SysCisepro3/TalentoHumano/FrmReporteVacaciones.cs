@@ -165,7 +165,7 @@ namespace SysCisepro3.TalentoHumano
                 var data = dataGridView1.CurrentRow;
 
                 if (KryptonMessageBox.Show(@"El registro selecconado corresponde a la solicitud n° " + data.Cells[2].Value + @" de vacaciones. Desea IMPRIMIR la solicitud correspondiente?",
-                   "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) !=
+                   "Mensaje del Sistema", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) !=
                DialogResult.Yes) return;
 
                 var ds = new DsSysSecurity();
@@ -206,7 +206,7 @@ namespace SysCisepro3.TalentoHumano
             catch (Exception)
             {
                 KryptonMessageBox.Show(@"Error al generar solicitud. Por favor, contácte al administrador!",
-                    "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+                    "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
             }
         }
 
@@ -215,7 +215,7 @@ namespace SysCisepro3.TalentoHumano
             if (dataGridView1.RowCount == 0) return;
             if (dataGridView1.CurrentRow == null) return;
             if (KryptonMessageBox.Show(@"Desea guardar la solicitud seleccionada?",
-                   "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) !=
+                   "Mensaje del Sistema", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) !=
                DialogResult.Yes) return;
             _sqlCommands.Clear();
 
@@ -229,14 +229,14 @@ namespace SysCisepro3.TalentoHumano
             var res = ComandosSql.ProcesarTransacciones(TipoCon, _sqlCommands, "REGISTRO VACACIONES");
 
             if ((bool)res[0]) LlenarDetalleVacaciones(txtFiltro.Text.Trim());
-            KryptonMessageBox.Show((string)res[1], "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+            KryptonMessageBox.Show((string)res[1], "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             if (dataGridView1.RowCount == 0)
             {
-                KryptonMessageBox.Show(@"NO HAY DATOS PARA EXPORTAR!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+                KryptonMessageBox.Show(@"NO HAY DATOS PARA EXPORTAR!", "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
                 return;
             }
 
@@ -323,11 +323,11 @@ namespace SysCisepro3.TalentoHumano
                 app.DisplayAlerts = false;
                 app.Visible = true;
                 app.DisplayAlerts = true;
-                KryptonMessageBox.Show(@"ARCHIVO generado correctamente!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+                KryptonMessageBox.Show(@"ARCHIVO generado correctamente!", "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
             }
             catch
             {
-                KryptonMessageBox.Show(@"HUBO UN PROBLEMA AL EXPORTAR DATOS!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error);
+                KryptonMessageBox.Show(@"HUBO UN PROBLEMA AL EXPORTAR DATOS!", "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error);
             }
         }
 
@@ -355,17 +355,17 @@ namespace SysCisepro3.TalentoHumano
         {
             if (dataGridView1.RowCount == 0 || dataGridView1.CurrentRow == null)
             {
-                KryptonMessageBox.Show(@"NO SE HA SELECCIONADO NINGÚN DATO!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation);
+                KryptonMessageBox.Show(@"NO SE HA SELECCIONADO NINGÚN DATO!", "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation);
                 return;
             }
             if (!dataGridView1.CurrentRow.Cells[9].Value.ToString().Trim().Contains('-'))
             {
-                KryptonMessageBox.Show(@"ERROR AL SELECCIONAR PERÍODO, CONTÁCTE AL ADMINISTRADOR!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation);
+                KryptonMessageBox.Show(@"ERROR AL SELECCIONAR PERÍODO, CONTÁCTE AL ADMINISTRADOR!", "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation);
                 return;
             }
 
             if (KryptonMessageBox.Show(@"DESEA CAMBIAR EL PERÍODO CORRESPONDIENTE AL DETALLE DE VACACIONES SELECCIONADO?",
-                   "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) != DialogResult.Yes) return;
+                   "Mensaje del Sistema", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) != DialogResult.Yes) return;
           
             var p = dataGridView1.CurrentRow.Cells[9].Value.ToString().Trim().Split('-');
 
@@ -390,7 +390,7 @@ namespace SysCisepro3.TalentoHumano
             var res = ComandosSql.ProcesarTransacciones(TipoCon, _sqlCommands, "REGISTRAR PERSONAL");
 
             if ((bool)res[0]) LlenarDetalleVacaciones(txtFiltro.Text.Trim());
-            KryptonMessageBox.Show((string)res[1], "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+            KryptonMessageBox.Show((string)res[1], "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
         }
 
         private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)

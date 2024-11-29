@@ -46,6 +46,8 @@ namespace SysCisepro3.TalentoHumano
         private void FrmDetalleAsistenciaRol_Load(object sender, EventArgs e)
         {
             // CARGAR ICONO Y DESIEÑO SEGUN SISTEMA 
+            
+
             switch (TipoCon)
             {
                 case TipoConexion.Seportpac:
@@ -145,7 +147,7 @@ namespace SysCisepro3.TalentoHumano
             catch 
             {
                 ListView3.Items.Clear();
-                KryptonMessageBox.Show(@"HUBO UN PROBLEMA AL MOSTRAR DETALLE DE ASISTENCIA!!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation);
+                KryptonMessageBox.Show(@"HUBO UN PROBLEMA AL MOSTRAR DETALLE DE ASISTENCIA!!", "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation);
             }
         }
 
@@ -230,7 +232,7 @@ namespace SysCisepro3.TalentoHumano
             catch (Exception)
             {
                 KryptonMessageBox.Show(@"Error al generar solicitud. Por favor, contácte al administrador!",
-                    "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+                    "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
             }
         }
 
@@ -317,7 +319,7 @@ namespace SysCisepro3.TalentoHumano
             catch (Exception)
             {
                 KryptonMessageBox.Show(@"Error al generar solicitud. Por favor, contácte al administrador!",
-                    "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+                    "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
             }
         }
     

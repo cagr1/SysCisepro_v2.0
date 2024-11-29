@@ -118,7 +118,7 @@ namespace SysCisepro3.Main
             if (u == null || !u.Password.Equals(txtPassword.Text)) // CLAVE DEBE COINCIDER EN MAYÚSCULAS Y/O MINÚSCULAS
             {
                 txtPassword.Clear();
-                KryptonMessageBox.Show(@"La contraseña ingresada es incorrecta!", @"MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+                KryptonMessageBox.Show(@"La contraseña ingresada es incorrecta!", @"Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
                 return;
             }
 

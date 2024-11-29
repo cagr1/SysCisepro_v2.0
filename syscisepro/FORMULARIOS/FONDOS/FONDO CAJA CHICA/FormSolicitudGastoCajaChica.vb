@@ -600,7 +600,7 @@ Namespace FORMULARIOS.FONDOS.FONDO_CAJA_CHICA
             frm.rbtProveedor.Visible = False
             frm.rbtPersonal.Checked = True
             frm.rbtCliente.Visible = False
-            frm.txtParametrobusqueda.Width = frm.txtParametrobusqueda.Width + frm.rbtProveedor.Width + frm.rbtPersonal.Width
+            frm.txtParametrobusqueda.Width = frm.txtParametrobusqueda.Width + frm.rbtProveedor.Width '+ frm.rbtPersonal.Width
             frm.rbtPersonal.Location = New Point(frm.txtParametrobusqueda.Width + frm.Label1.Width + 10, 4)
             Try
                 If frm.ShowDialog = vbOK Then

@@ -79,21 +79,16 @@ Namespace FORMULARIOS.OPERACIONES
             Select Case _tipoCon
                 Case TipoConexion.Asenava
                     Icon = My.Resources.logo_a
-                    Label1.BackColor = My.MySettingsProperty.Settings.ColorAsenava
-                    Label1.ForeColor = Color.White
-                    BackColor = My.MySettingsProperty.Settings.ColorAsenava
+
+
                     dgvCustodios.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorAsenava 
                 Case TipoConexion.Seportpac
                     Icon = My.Resources.logo_s
-                    Label1.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
-                    Label1.ForeColor = Color.White
-                    BackColor = My.MySettingsProperty.Settings.ColorSeportpac
+
                     dgvCustodios.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorSeportpac
                 Case Else
                     Icon = My.Resources.logo_c
-                    Label1.BackColor = My.MySettingsProperty.Settings.ColorCisepro
-                    Label1.ForeColor = Color.White
-                    BackColor = My.MySettingsProperty.Settings.ColorCisepro
+
                     dgvCustodios.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
             End Select
             dgvCustodios.Font = New Font("Roboto", 9, FontStyle.Regular)

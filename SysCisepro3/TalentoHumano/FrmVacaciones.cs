@@ -138,27 +138,27 @@ namespace SysCisepro3.TalentoHumano
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             if (KryptonMessageBox.Show(@"Desea guardar el registro actual?",
-                   "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) !=
+                   "Mensaje del Sistema", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) !=
                DialogResult.Yes) return;
 
             if (dataGridView2.RowCount == 0)
             {
                 KryptonMessageBox.Show(@"Debe definir los detalles y días de vacaciones para guardar!",
-                    "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+                    "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
                 return;
             }
 
             if (txtIdPersonal.Text.Trim().Length == 0 || txtSitio.Text.Trim().Length == 0 || txtDias.Text.Trim().Length == 0)
             {
                 KryptonMessageBox.Show(@"Debe definir los datos y días de vacaciones para guardar!",
-                    "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+                    "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
                 return;
             }
 
             if (dtpDesde.Value > dtpHasta.Value)
             {
                 KryptonMessageBox.Show(@"La fecha SALIDA no puede ser mayor que la fecha de ENTRADA!",
-                    "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+                    "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
                 return;
             }
 
@@ -238,7 +238,7 @@ namespace SysCisepro3.TalentoHumano
 
                 LlenarDetalleVacaciones(Convert.ToInt32(txtIdPersonal.Text.Trim()));
             }
-            KryptonMessageBox.Show((string)res[1], "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+            KryptonMessageBox.Show((string)res[1], "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -432,7 +432,7 @@ namespace SysCisepro3.TalentoHumano
 
                     txtNumDoc.Focus();
                 //}
-                //else KryptonMessageBox.Show(@"Aún no se ha cumplido el tiempo mínimo para aplicar VACACIONES!!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+                //else KryptonMessageBox.Show(@"Aún no se ha cumplido el tiempo mínimo para aplicar VACACIONES!!", "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
             }
             catch
             {
@@ -473,7 +473,7 @@ namespace SysCisepro3.TalentoHumano
                 txtDias.Text = @"0";
                 txtPendientes.Text = @"0";
                 btnAgregar.Enabled = false;
-                KryptonMessageBox.Show(@"La fecha SALIDA no puede ser mayor que la fecha de ENTRADA!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+                KryptonMessageBox.Show(@"La fecha SALIDA no puede ser mayor que la fecha de ENTRADA!", "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
                 return;
             }
 
@@ -482,7 +482,7 @@ namespace SysCisepro3.TalentoHumano
                 txtDias.Text = @"0";
                 txtPendientes.Text = @"0";
                 btnAgregar.Enabled = false;
-                KryptonMessageBox.Show(@"El número de días no debe ser mayor a los días pendientes para el período seleccionado!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+                KryptonMessageBox.Show(@"El número de días no debe ser mayor a los días pendientes para el período seleccionado!", "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
                 return;
             }
 
@@ -506,13 +506,13 @@ namespace SysCisepro3.TalentoHumano
 
             if (ex)
             {
-                KryptonMessageBox.Show(@"El detalle ya fue agregado a la lista!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+                KryptonMessageBox.Show(@"El detalle ya fue agregado a la lista!", "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
                 return;
             }
 
             if (dtpDesde.Value == dtpHasta.Value)
             {
-                KryptonMessageBox.Show(@"Verifique la fecha de SALIDA - ENTRADA!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+                KryptonMessageBox.Show(@"Verifique la fecha de SALIDA - ENTRADA!", "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
                 return;
             }
 

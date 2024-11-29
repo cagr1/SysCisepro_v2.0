@@ -155,12 +155,14 @@
             Me.KryptonPage1 = New ComponentFactory.Krypton.Navigator.KryptonPage()
             Me.TabControl1 = New ReaLTaiizor.Controls.MetroTabControl()
             Me.MetroTabPage1 = New ReaLTaiizor.Child.Metro.MetroTabPage()
+            Me.btndia = New Krypton.Toolkit.KryptonButton()
             Me.lblDia = New System.Windows.Forms.Label()
             Me.txtBuscar = New System.Windows.Forms.TextBox()
             Me.KryptonLabel9 = New ComponentFactory.Krypton.Toolkit.KryptonLabel()
             Me.btnSig = New System.Windows.Forms.Button()
             Me.btnAnt = New System.Windows.Forms.Button()
             Me.MetroTabPage2 = New ReaLTaiizor.Child.Metro.MetroTabPage()
+            Me.btnNoche = New Krypton.Toolkit.KryptonButton()
             Me.lblNoche = New System.Windows.Forms.Label()
             Me.txtBuscarNoche = New System.Windows.Forms.TextBox()
             Me.KryptonLabel11 = New ComponentFactory.Krypton.Toolkit.KryptonLabel()
@@ -1130,7 +1132,7 @@
             Me.NOVEDADESACBMToolStripMenuItem.Image = Global.syscisepro.My.Resources.Resources.icons8_excel_48
             Me.NOVEDADESACBMToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.NOVEDADESACBMToolStripMenuItem.Name = "NOVEDADESACBMToolStripMenuItem"
-            Me.NOVEDADESACBMToolStripMenuItem.Size = New System.Drawing.Size(208, 30)
+            Me.NOVEDADESACBMToolStripMenuItem.Size = New System.Drawing.Size(206, 30)
             Me.NOVEDADESACBMToolStripMenuItem.Text = "NOVEDADES A / C B.M."
             '
             'REPORTESDERADIOToolStripMenuItem
@@ -1138,20 +1140,20 @@
             Me.REPORTESDERADIOToolStripMenuItem.Image = Global.syscisepro.My.Resources.Resources.icons8_excel_48
             Me.REPORTESDERADIOToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.REPORTESDERADIOToolStripMenuItem.Name = "REPORTESDERADIOToolStripMenuItem"
-            Me.REPORTESDERADIOToolStripMenuItem.Size = New System.Drawing.Size(208, 30)
+            Me.REPORTESDERADIOToolStripMenuItem.Size = New System.Drawing.Size(206, 30)
             Me.REPORTESDERADIOToolStripMenuItem.Text = "SANCIONES / MULTAS"
             '
             'ToolStripSeparator1
             '
             Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
-            Me.ToolStripSeparator1.Size = New System.Drawing.Size(205, 6)
+            Me.ToolStripSeparator1.Size = New System.Drawing.Size(203, 6)
             '
             'EXPORTARDATOSToolStripMenuItem
             '
             Me.EXPORTARDATOSToolStripMenuItem.Image = Global.syscisepro.My.Resources.Resources.icons8_excel_48
             Me.EXPORTARDATOSToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.EXPORTARDATOSToolStripMenuItem.Name = "EXPORTARDATOSToolStripMenuItem"
-            Me.EXPORTARDATOSToolStripMenuItem.Size = New System.Drawing.Size(208, 30)
+            Me.EXPORTARDATOSToolStripMenuItem.Size = New System.Drawing.Size(206, 30)
             Me.EXPORTARDATOSToolStripMenuItem.Text = "EXPORTAR DATOS"
             '
             'GUARDARCAMBIOSToolStripMenuItem
@@ -1330,6 +1332,7 @@
             'MetroTabPage1
             '
             Me.MetroTabPage1.BaseColor = System.Drawing.Color.White
+            Me.MetroTabPage1.Controls.Add(Me.btndia)
             Me.MetroTabPage1.Controls.Add(Me.lblDia)
             Me.MetroTabPage1.Controls.Add(Me.txtBuscar)
             Me.MetroTabPage1.Controls.Add(Me.KryptonLabel9)
@@ -1350,6 +1353,21 @@
             Me.MetroTabPage1.ThemeAuthor = "Taiizor"
             Me.MetroTabPage1.ThemeName = "MetroLight"
             Me.MetroTabPage1.ToolTipText = Nothing
+            '
+            'btndia
+            '
+            Me.btndia.AutoSize = True
+            Me.btndia.ButtonStyle = Krypton.Toolkit.ButtonStyle.LowProfile
+            Me.btndia.Location = New System.Drawing.Point(433, 0)
+            Me.btndia.Name = "btndia"
+            Me.btndia.Size = New System.Drawing.Size(72, 30)
+            Me.btndia.StateCommon.Border.DrawBorders = CType((((Krypton.Toolkit.PaletteDrawBorders.Top Or Krypton.Toolkit.PaletteDrawBorders.Bottom) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Left) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Right), Krypton.Toolkit.PaletteDrawBorders)
+            Me.btndia.StateCommon.Border.Rounding = 2.0!
+            Me.btndia.TabIndex = 210
+            Me.btndia.Values.Image = Global.syscisepro.My.Resources.Resources.icons8_excel_48
+            Me.btndia.Values.Text = "Dia"
             '
             'lblDia
             '
@@ -1406,6 +1424,7 @@
             'MetroTabPage2
             '
             Me.MetroTabPage2.BaseColor = System.Drawing.Color.White
+            Me.MetroTabPage2.Controls.Add(Me.btnNoche)
             Me.MetroTabPage2.Controls.Add(Me.lblNoche)
             Me.MetroTabPage2.Controls.Add(Me.txtBuscarNoche)
             Me.MetroTabPage2.Controls.Add(Me.KryptonLabel11)
@@ -1426,6 +1445,21 @@
             Me.MetroTabPage2.ThemeAuthor = "Taiizor"
             Me.MetroTabPage2.ThemeName = "MetroLight"
             Me.MetroTabPage2.ToolTipText = Nothing
+            '
+            'btnNoche
+            '
+            Me.btnNoche.AutoSize = True
+            Me.btnNoche.ButtonStyle = Krypton.Toolkit.ButtonStyle.LowProfile
+            Me.btnNoche.Location = New System.Drawing.Point(430, 0)
+            Me.btnNoche.Name = "btnNoche"
+            Me.btnNoche.Size = New System.Drawing.Size(72, 30)
+            Me.btnNoche.StateCommon.Border.DrawBorders = CType((((Krypton.Toolkit.PaletteDrawBorders.Top Or Krypton.Toolkit.PaletteDrawBorders.Bottom) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Left) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Right), Krypton.Toolkit.PaletteDrawBorders)
+            Me.btnNoche.StateCommon.Border.Rounding = 2.0!
+            Me.btnNoche.TabIndex = 215
+            Me.btnNoche.Values.Image = Global.syscisepro.My.Resources.Resources.icons8_excel_48
+            Me.btnNoche.Values.Text = "Noche"
             '
             'lblNoche
             '
@@ -1819,5 +1853,7 @@
         Friend WithEvents btnAntNoche As Button
         Friend WithEvents lblDia As Label
         Friend WithEvents lblNoche As Label
+        Friend WithEvents btndia As Krypton.Toolkit.KryptonButton
+        Friend WithEvents btnNoche As Krypton.Toolkit.KryptonButton
     End Class
 End Namespace

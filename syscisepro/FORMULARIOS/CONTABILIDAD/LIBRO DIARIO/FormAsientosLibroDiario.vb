@@ -430,19 +430,7 @@ Namespace FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
             End Try
         End Sub
 
-        Private Sub dgvAsientosDiario_EditingControlShowing(ByVal sender As System.Object, ByVal e As DataGridViewEditingControlShowingEventArgs)
-            Dim tBox = CType(e.Control, Windows.Forms.TextBox)
-            tBox.CharacterCasing = CharacterCasing.Upper
-            AddHandler tBox.KeyPress, AddressOf ItemType_KeyPress
-            If dgvAsientosDiario.CurrentCell.ColumnIndex = 3 Then
-                tBox.Multiline = False
-                tBox.AutoCompleteSource = AutoCompleteSource.CustomSource
-                tBox.AutoCompleteMode = AutoCompleteMode.SuggestAppend
-                tBox.AutoCompleteCustomSource = _objetoPlanCuentas.Autocompletar(_tipoCon)
-            Else
-                tBox.AutoCompleteMode = AutoCompleteMode.None
-            End If
-        End Sub
+
 
         Private Sub ItemType_KeyPress(ByVal sender As System.Object, ByVal e As KeyPressEventArgs)
             Select Case dgvAsientosDiario.CurrentCell.ColumnIndex
@@ -455,25 +443,7 @@ Namespace FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
             End Select
         End Sub
 
-        Private Sub dgvAsientosDiario_CellEndEdit(ByVal sender As System.Object, ByVal e As DataGridViewCellEventArgs)
-            dgvAsientosDiario.Rows(e.RowIndex).ErrorText = [String].Empty
-            If e.ColumnIndex = 3 Then
-                Try
-                    Dim codicuenta = dgvAsientosDiario.CurrentRow.Cells(3).Value.ToString.Trim()
-                    Dim codigo = codicuenta.Split("-")(0).Trim
-                    Dim cuenta = codicuenta.Replace((codigo.Trim & " - "), String.Empty).Trim
 
-                    ' codigo
-                    dgvAsientosDiario.CurrentRow.Cells(2).Value = codigo
-
-                    ' cuenta
-                    dgvAsientosDiario.CurrentRow.Cells(3).Value = cuenta
-                Catch ex As Exception
-                    dgvAsientosDiario.CurrentRow.Cells(2).Value = "CUENTA NO EXISTE!"
-                End Try
-            End If
-            SumarTotalAsientoDiario()
-        End Sub
 
         Private Sub btnAnular_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnAnular.Click
             If txtNumeroAsientoBuscar.Text.Trim.Length = 0 Or dgvAsientosDiario.RowCount = 0 Or Not rbNumero.Checked Then
@@ -534,16 +504,9 @@ Namespace FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
 
         End Sub
 
-        Private Sub dgvAsientosDiario_CellBeginEdit(ByVal sender As System.Object, ByVal e As DataGridViewCellCancelEventArgs)
-            If dgvAsientosDiario.RowCount = 0 Then Return
-            If Not (e.ColumnIndex = 3 Or e.ColumnIndex = 6 Or e.ColumnIndex = 7) Then Return
-        End Sub
 
-        Private Sub dgvAsientosDiario_SelectionChanged(ByVal sender As System.Object, ByVal e As EventArgs)
-            If dgvAsientosDiario.Rows.Count = 0 Or dgvAsientosDiario.CurrentRow Is Nothing Then Return
-            If dgvAsientosDiario.CurrentRow.Cells.Item(0).Value Is DBNull.Value Then Return
-            txtNumeroAsientoBuscar.Text = dgvAsientosDiario.CurrentRow.Cells("ASIENTO").Value
-        End Sub
+
+
 
         Private Sub ToolStripMenuItem1_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ToolStripMenuItem1.Click
             btnBuscarAsiento.PerformClick()
@@ -602,6 +565,51 @@ Namespace FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
 
         Private Sub btnReporte_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnReporte.Click
 
+        End Sub
+
+        Private Sub dgvAsientosDiario_EditingControlShowing(sender As Object, e As DataGridViewEditingControlShowingEventArgs) Handles dgvAsientosDiario.EditingControlShowing
+            Dim tBox = CType(e.Control, Windows.Forms.TextBox)
+            tBox.CharacterCasing = CharacterCasing.Upper
+            AddHandler tBox.KeyPress, AddressOf ItemType_KeyPress
+            If dgvAsientosDiario.CurrentCell.ColumnIndex = 3 Then
+                tBox.Multiline = False
+                tBox.AutoCompleteSource = AutoCompleteSource.CustomSource
+                tBox.AutoCompleteMode = AutoCompleteMode.SuggestAppend
+                tBox.AutoCompleteCustomSource = _objetoPlanCuentas.Autocompletar(_tipoCon)
+            Else
+                tBox.AutoCompleteMode = AutoCompleteMode.None
+            End If
+        End Sub
+
+        Private Sub dgvAsientosDiario_CellBeginEdit(sender As Object, e As DataGridViewCellCancelEventArgs) Handles dgvAsientosDiario.CellBeginEdit
+            If dgvAsientosDiario.RowCount = 0 Then Return
+            If Not (e.ColumnIndex = 3 Or e.ColumnIndex = 6 Or e.ColumnIndex = 7) Then Return
+        End Sub
+
+        Private Sub dgvAsientosDiario_SelectionChanged(sender As Object, e As EventArgs) Handles dgvAsientosDiario.SelectionChanged
+            If dgvAsientosDiario.Rows.Count = 0 Or dgvAsientosDiario.CurrentRow Is Nothing Then Return
+            If dgvAsientosDiario.CurrentRow.Cells.Item(0).Value Is DBNull.Value Then Return
+            txtNumeroAsientoBuscar.Text = dgvAsientosDiario.CurrentRow.Cells("ASIENTO").Value
+        End Sub
+
+        Private Sub dgvAsientosDiario_CellEndEdit(sender As Object, e As DataGridViewCellEventArgs) Handles dgvAsientosDiario.CellEndEdit
+            dgvAsientosDiario.Rows(e.RowIndex).ErrorText = [String].Empty
+            If e.ColumnIndex = 3 Then
+                Try
+                    Dim codicuenta = dgvAsientosDiario.CurrentRow.Cells(3).Value.ToString.Trim()
+                    Dim codigo = codicuenta.Split("-")(0).Trim
+                    Dim cuenta = codicuenta.Replace((codigo.Trim & " - "), String.Empty).Trim
+
+                    ' codigo
+                    dgvAsientosDiario.CurrentRow.Cells(2).Value = codigo
+
+                    ' cuenta
+                    dgvAsientosDiario.CurrentRow.Cells(3).Value = cuenta
+                Catch ex As Exception
+                    dgvAsientosDiario.CurrentRow.Cells(2).Value = "CUENTA NO EXISTE!"
+                End Try
+            End If
+            SumarTotalAsientoDiario()
         End Sub
     End Class
 End Namespace

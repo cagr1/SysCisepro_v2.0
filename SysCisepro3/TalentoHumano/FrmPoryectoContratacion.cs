@@ -120,7 +120,7 @@ namespace SysCisepro3.TalentoHumano
             catch (Exception ex)
             {
                 Label1.Text = @"0 REGISTRO(S)";
-                KryptonMessageBox.Show(@"Error al cargar detalles: " + ex.Message, "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+                KryptonMessageBox.Show(@"Error al cargar detalles: " + ex.Message, "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
             }
         }
 
@@ -182,12 +182,12 @@ namespace SysCisepro3.TalentoHumano
             if (txtNombre.Text.Trim().Length == 0)
             {
                 KryptonMessageBox.Show(@"Debe definir los datos del proyecto para guardar!",
-                    "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+                    "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
                 return;
             }
 
             if (KryptonMessageBox.Show(@"Desea guardar el proyecto actual?",
-                   "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) !=
+                   "Mensaje del Sistema", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) !=
                DialogResult.Yes) return;
 
             _sqlCommands.Clear();
@@ -225,7 +225,7 @@ namespace SysCisepro3.TalentoHumano
 
                 CargarAsignaciones(string.Empty);
             }
-            KryptonMessageBox.Show((string)res[1], "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+            KryptonMessageBox.Show((string)res[1], "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
         }
 
         private void btnModificar_Click(object sender, EventArgs e)

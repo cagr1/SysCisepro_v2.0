@@ -42,8 +42,12 @@
             Me.gbComandos = New System.Windows.Forms.GroupBox()
             Me.btnCancelar = New System.Windows.Forms.Button()
             Me.btnEnviar = New System.Windows.Forms.Button()
+            Me.KryptonGroupBox1 = New Krypton.Toolkit.KryptonGroupBox()
             Me.gbRegistro.SuspendLayout()
             Me.gbComandos.SuspendLayout()
+            CType(Me.KryptonGroupBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType(Me.KryptonGroupBox1.Panel, System.ComponentModel.ISupportInitialize).BeginInit()
+            Me.KryptonGroupBox1.SuspendLayout()
             Me.SuspendLayout()
             '
             'gbRegistro
@@ -244,12 +248,23 @@
             Me.btnEnviar.TextAlign = System.Drawing.ContentAlignment.BottomCenter
             Me.btnEnviar.UseVisualStyleBackColor = False
             '
+            'KryptonGroupBox1
+            '
+            Me.KryptonGroupBox1.CaptionOverlap = 0R
+            Me.KryptonGroupBox1.GroupBackStyle = Krypton.Toolkit.PaletteBackStyle.ControlRibbon
+            Me.KryptonGroupBox1.Location = New System.Drawing.Point(1, 253)
+            Me.KryptonGroupBox1.Name = "KryptonGroupBox1"
+            Me.KryptonGroupBox1.Size = New System.Drawing.Size(594, 150)
+            Me.KryptonGroupBox1.TabIndex = 22
+            Me.KryptonGroupBox1.Values.Heading = "Datos"
+            '
             'FormAgregarDiarioNoDeducibles
             '
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-            Me.BackColor = System.Drawing.Color.White
-            Me.ClientSize = New System.Drawing.Size(596, 245)
+            Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(185, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(227, Byte), Integer))
+            Me.ClientSize = New System.Drawing.Size(596, 402)
+            Me.Controls.Add(Me.KryptonGroupBox1)
             Me.Controls.Add(Me.gbComandos)
             Me.Controls.Add(Me.gbRegistro)
             Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
@@ -266,6 +281,9 @@
             Me.gbRegistro.ResumeLayout(False)
             Me.gbRegistro.PerformLayout()
             Me.gbComandos.ResumeLayout(False)
+            CType(Me.KryptonGroupBox1.Panel, System.ComponentModel.ISupportInitialize).EndInit()
+            CType(Me.KryptonGroupBox1, System.ComponentModel.ISupportInitialize).EndInit()
+            Me.KryptonGroupBox1.ResumeLayout(False)
             Me.ResumeLayout(False)
 
         End Sub
@@ -287,5 +305,6 @@
         Friend WithEvents cmbCentroCosto As System.Windows.Forms.ComboBox
         Friend WithEvents txtConceptoAsiento As System.Windows.Forms.TextBox
         Friend WithEvents btnCancelar As System.Windows.Forms.Button
+        Friend WithEvents KryptonGroupBox1 As Krypton.Toolkit.KryptonGroupBox
     End Class
 End Namespace

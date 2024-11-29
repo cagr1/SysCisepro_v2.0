@@ -8,6 +8,7 @@ Imports ClassLibraryCisepro.VALIDACIONES
 Imports Microsoft.Office.Interop
 Imports syscisepro.DATOS
 Imports ClassLibraryCisepro.ProcesosSql
+Imports Krypton.Toolkit
 
 Namespace FORMULARIOS.CONTABILIDAD.MAYORIZACION
     ''' <summary>
@@ -62,7 +63,8 @@ Namespace FORMULARIOS.CONTABILIDAD.MAYORIZACION
         Public Sub ExportarDatosExcel(ByVal dgvAsientosDiario As DataGridView, ByVal titulo As String)
             Try
                 If dgvAsientosDiario.Rows.Count = 0 Then
-                    MsgBox("No hay datos que exportar!", MsgBoxStyle.Exclamation, "Mensaje de validación")
+                    'MsgBox("No hay datos que exportar!", MsgBoxStyle.Exclamation, "Mensaje de validación")
+                    KryptonMessageBox.Show("No hay datos que exportar!", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                     Return
                 End If
 
@@ -247,7 +249,7 @@ Namespace FORMULARIOS.CONTABILIDAD.MAYORIZACION
                 Dim utilidad = activo + pasivo + capital
                 If (utilidad > 0) Then
                     lblUtilidadPerdida.Text = "UTILIDAD"
-                    lblUtilidadPerdida.ForeColor = Color.Navy
+                    lblUtilidadPerdida.ForeColor = Color.SeaGreen
                     For index = 0 To dgvCuentas.Rows.Count - 1 Step 1
                         If dgvCuentas.Rows(index).Cells("CUENTA").Value = "GANACIA NETA DEL PERIODO" Then
                             dgvCuentas.Rows(index).Cells("HABER").Value = dgvCuentas.Rows(index).Cells("HABER").Value + Convert.ToDouble(txtUtilidad.Text)
@@ -265,7 +267,7 @@ Namespace FORMULARIOS.CONTABILIDAD.MAYORIZACION
                     Next
                 Else
                     lblUtilidadPerdida.Text = "UTILIDAD"
-                    lblUtilidadPerdida.ForeColor = Color.Navy
+                    lblUtilidadPerdida.ForeColor = Color.SeaGreen
                 End If
 
                 txtDeudorIngresos.Text = deudorIngresos
@@ -277,10 +279,12 @@ Namespace FORMULARIOS.CONTABILIDAD.MAYORIZACION
                 txtEgresos.Text = Math.Round(Math.Abs(txtDeudorEgresos.Text - txtAcreedorEgresos.Text), 2)
                 txtTotal.Text = Math.Round(Math.Abs(txtIngresos.Text - txtEgresos.Text), 2)
 
-                MsgBox("COMPROBACIÓN DE MAYORES EXITOSA!" & vbNewLine & "Por favor, verifique toda la información antes de generar el asiento!", MsgBoxStyle.Information, "Mensaje de información")
+                'MsgBox("COMPROBACIÓN DE MAYORES EXITOSA!" & vbNewLine & "Por favor, verifique toda la información antes de generar el asiento!", MsgBoxStyle.Information, "Mensaje de información")
+                KryptonMessageBox.Show("Comprobación de mayores exitosa!" & vbNewLine & "Por favor, verifique toda la información antes de generar el asiento!", "Mensaje de información", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
                 btnAsientoInicial.Enabled = True
             Else
-                MsgBox("HUBO UN PROBLEMA AL REALIZAR LA COMPROBACIÓN!", MsgBoxStyle.Information, "Mensaje de información")
+                'MsgBox("HUBO UN PROBLEMA AL REALIZAR LA COMPROBACIÓN!", MsgBoxStyle.Information, "Mensaje de información")
+                KryptonMessageBox.Show("Hubo un problema al realizar la comprobación!", "Mensaje de información", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
                 btnAsientoInicial.Enabled = False
             End If
 
@@ -608,17 +612,17 @@ Namespace FORMULARIOS.CONTABILIDAD.MAYORIZACION
             Select Case _tipoCon
                 Case TipoConexion.Asenava
                     Icon = My.Resources.logo_a
-                    MenuStrip1.ForeColor = Color.White
+
                     'MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorAsenava
                     dgvCuentas.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorAsenava
                 Case TipoConexion.Seportpac
                     Icon = My.Resources.logo_s
-                    MenuStrip1.ForeColor = Color.White
+
                     'MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
                     dgvCuentas.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorSeportpac
                 Case Else
                     Icon = My.Resources.logo_c
-                    MenuStrip1.ForeColor = Color.White
+
                     'MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorCisepro
                     dgvCuentas.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
             End Select
@@ -747,11 +751,18 @@ Namespace FORMULARIOS.CONTABILIDAD.MAYORIZACION
                 _sqlCommands.Add(objAuditoria.NuevaAuditoria)
 
                 Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, String.Empty)
-
-                MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
+                Dim messageIcon As KryptonMessageBoxIcon
+                If res(0) Then
+                    messageIcon = KryptonMessageBoxIcon.Information
+                Else
+                    messageIcon = KryptonMessageBoxIcon.Exclamation
+                End If
+                KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, messageIcon)
+                'MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
 
             Catch ex As Exception
-                MessageBox.Show("HUBO UN PROBLEMA GUARDAR!" & vbNewLine & ex.Message, "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                'MessageBox.Show("HUBO UN PROBLEMA GUARDAR!" & vbNewLine & ex.Message, "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                KryptonMessageBox.Show("Hubo un problema guardar!" & vbNewLine & ex.Message, "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
 
@@ -790,7 +801,8 @@ Namespace FORMULARIOS.CONTABILIDAD.MAYORIZACION
                     End If
                 End If
             Catch ex As Exception
-                MsgBox(ex.Message.ToString)
+                'MsgBox(ex.Message.ToString)
+                KryptonMessageBox.Show(ex.Message, "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
 

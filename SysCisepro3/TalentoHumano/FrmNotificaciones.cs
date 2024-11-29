@@ -109,13 +109,13 @@ namespace SysCisepro3.TalentoHumano
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             if (KryptonMessageBox.Show(@"Desea guardar el registro actual?",
-                   "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) !=
+                   "Mensaje del Sistema", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) !=
                DialogResult.Yes) return;
 
             if (txtNumDoc.Text.Trim().Length == 0 || txtCiRuc.Text.Trim().Length == 0 || txtDetallesNotificacion.Text.Trim().Length == 0)
             {
                 KryptonMessageBox.Show(@"Debe definir los datos de a notificación para guardar!",
-                    "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+                    "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
                 return;
             }
 
@@ -153,14 +153,14 @@ namespace SysCisepro3.TalentoHumano
 
                 CargarAsignaciones(_objNotificacionesDenuncias.IdRegistro);
             }
-            KryptonMessageBox.Show((string)res[1], "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+            KryptonMessageBox.Show((string)res[1], "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
         }
 
         private void btnAnular_Click(object sender, EventArgs e)
         {
             if (dataGridView1.RowCount == 0 || dtpFechaRegistro.Tag == null) return;
 
-            if (KryptonMessageBox.Show(@"Desea anular el registro seleccioando?", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) != DialogResult.Yes) return;
+            if (KryptonMessageBox.Show(@"Desea anular el registro seleccioando?", "Mensaje del Sistema", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) != DialogResult.Yes) return;
 
             _sqlCommands.Clear();
 
@@ -188,7 +188,7 @@ namespace SysCisepro3.TalentoHumano
                 txtFiltro.Clear();
                 CargarAsignaciones(0);
             }
-            KryptonMessageBox.Show((string)res[1], "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+            KryptonMessageBox.Show((string)res[1], "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -245,7 +245,7 @@ namespace SysCisepro3.TalentoHumano
             catch (Exception ex)
             {
                 dataGridView1.Rows.Clear();
-                KryptonMessageBox.Show(@"Error al cargar detalles: " + ex.Message, "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+                KryptonMessageBox.Show(@"Error al cargar detalles: " + ex.Message, "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
             }
         }
 
@@ -291,7 +291,7 @@ namespace SysCisepro3.TalentoHumano
         {
             if (dataGridView1.RowCount == 0)
             {
-                KryptonMessageBox.Show(@"NO HAY DATOS PARA EXPORTAR!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+                KryptonMessageBox.Show(@"NO HAY DATOS PARA EXPORTAR!", "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
                 return;
             }
 
@@ -377,11 +377,11 @@ namespace SysCisepro3.TalentoHumano
                 app.Visible = true;
                 app.DisplayAlerts = true;
                 //workbook.SaveAs(sfd.FileName, XlFileFormat.xlWorkbookNormal, Type.Missing, Type.Missing, Type.Missing, Type.Missing, XlSaveAsAccessMode.xlExclusive, Type.Missing, Type.Missing, Type.Missing, Type.Missing);
-                KryptonMessageBox.Show(@"ARCHIVO generado correctamente!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+                KryptonMessageBox.Show(@"ARCHIVO generado correctamente!", "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
             }
             catch
             {
-                KryptonMessageBox.Show(@"HUBO UN PROBLEMA AL EXPORTAR DATOS!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error);
+                KryptonMessageBox.Show(@"HUBO UN PROBLEMA AL EXPORTAR DATOS!", "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error);
             }
         }
     }

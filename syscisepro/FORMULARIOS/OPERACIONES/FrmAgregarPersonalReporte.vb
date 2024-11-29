@@ -2,6 +2,7 @@
 Imports ClassLibraryCisepro.ENUMS
 Imports ClassLibraryCisepro.OPERACIONES
 Imports syscisepro.FORMULARIOS.INVENTARIOS.PROCESO
+Imports Krypton.Toolkit
 
 Namespace FORMULARIOS.OPERACIONES
     ''' <summary>
@@ -65,7 +66,8 @@ Namespace FORMULARIOS.OPERACIONES
 
         Private Sub bntPuesto_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles bntPuesto.Click
             If txtIdPersonal.Text.Trim.Length = 0 Then
-                MsgBox("Por favor, seleccione un empleado o personal", MsgBoxStyle.Exclamation, "Mensaje de validación")
+                'MsgBox("Por favor, seleccione un empleado o personal", MsgBoxStyle.Exclamation, "Mensaje de validación")
+                KryptonMessageBox.Show("Por favor, seleccione un empleado o personal", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                 Return
             End If
 
@@ -92,7 +94,8 @@ Namespace FORMULARIOS.OPERACIONES
 
         Private Sub bntHorarios_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles bntHorarios.Click
             If txtIdPersonal.Text.Trim.Length = 0 Then
-                MsgBox("Por favor, seleccione un empleado o personal", MsgBoxStyle.Exclamation, "Mensaje de validación")
+                'MsgBox("Por favor, seleccione un empleado o personal", MsgBoxStyle.Exclamation, "Mensaje de validación")
+                KryptonMessageBox.Show("Por favor, seleccione un empleado o personal", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                 Return
             End If
 
@@ -170,16 +173,13 @@ Namespace FORMULARIOS.OPERACIONES
             Select Case _tipoCon
                 Case TipoConexion.Asenava
                     Icon = My.Resources.logo_a
-                    GroupBox1.BackColor = My.MySettingsProperty.Settings.ColorAsenava
-                    GroupBox1.ForeColor = Color.White
+
                 Case TipoConexion.Seportpac
                     Icon = My.Resources.logo_s
-                    GroupBox1.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
-                    GroupBox1.ForeColor = Color.White
+
                 Case Else
                     Icon = My.Resources.logo_c
-                    GroupBox1.BackColor = My.MySettingsProperty.Settings.ColorCisepro
-                    GroupBox1.ForeColor = Color.White 
+
             End Select
         End Sub
 

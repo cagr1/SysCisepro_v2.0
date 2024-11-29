@@ -60,10 +60,10 @@ namespace SysCisepro3.TalentoHumano
             // CARGAR ICONO Y DESIEÑO SEGUN SISTEMA 
             //toolStrip1.BackColor = ValidationForms.GetColorSistema(TipoCon);
             toolStrip1.ForeColor = Color.White;
-            Label1.BackColor = ValidationForms.GetColorSistema(TipoCon);
-            Label24.BackColor = ValidationForms.GetColorSistema(TipoCon);
-            Label1.ForeColor = Color.White;
-            Label24.ForeColor = Color.White;
+            
+           
+            
+           
             switch (TipoCon)
             {
                 case TipoConexion.Seportpac:
@@ -185,7 +185,7 @@ namespace SysCisepro3.TalentoHumano
             catch (Exception ex)
             {
                 ListView1.Items.Clear();
-                KryptonMessageBox.Show(@"Error al cargar detalles: " + ex.Message, "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+                KryptonMessageBox.Show(@"Error al cargar detalles: " + ex.Message, "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
             }
         }
 
@@ -264,12 +264,12 @@ namespace SysCisepro3.TalentoHumano
             if (txtIdPersonal.Text.Trim().Length == 0 || (int)cbxBanco.SelectedValue == 0 || string.IsNullOrEmpty(txtNumCuenta.Text))
             {
                 KryptonMessageBox.Show(@"Debe definir los datos y tipo de cuenta para guardar!",
-                    "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+                    "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
                 return;
             }
 
             if (KryptonMessageBox.Show(@"Desea guardar la cuenta actual?",
-                   "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) !=
+                   "Mensaje del Sistema", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) !=
                DialogResult.Yes) return;
 
             _sqlCommands.Clear();
@@ -279,7 +279,7 @@ namespace SysCisepro3.TalentoHumano
             //    var data = _objBancos.SeleccionarRegistroBancoPorIdPersonal(TipoCon, Convert.ToInt32(txtIdPersonal.Text.Trim()));
             //    if (data.Rows.Count > 0)
             //    {
-            //        KryptonMessageBox.Show(txtPersonal.Text + @" ya tiene una cuenta registrada en " + data.Rows[0][6] + @" (" + data.Rows[0][2] + @")", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation);
+            //        KryptonMessageBox.Show(txtPersonal.Text + @" ya tiene una cuenta registrada en " + data.Rows[0][6] + @" (" + data.Rows[0][2] + @")", "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation);
             //        return;
             //    }
             //}
@@ -288,7 +288,7 @@ namespace SysCisepro3.TalentoHumano
             //    var data = _objBancos.SeleccionarRegistroBancoPorNumCuenta(TipoCon, txtNumCuenta.Text.Trim());
             //    if (data.Rows.Count > 0)
             //    {
-            //        KryptonMessageBox.Show(@"La cuenta " + txtNumCuenta.Text + @" ya se encuentra registrada para " + data.Rows[0][13] + @" " + data.Rows[0][14] + @", en " + data.Rows[0][6], "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation);
+            //        KryptonMessageBox.Show(@"La cuenta " + txtNumCuenta.Text + @" ya se encuentra registrada para " + data.Rows[0][13] + @" " + data.Rows[0][14] + @", en " + data.Rows[0][6], "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation);
             //        return;
             //    }
             //}
@@ -298,7 +298,7 @@ namespace SysCisepro3.TalentoHumano
                 var data = _objBancos.SeleccionarRegistroBancoPorNumCuenta(TipoCon, txtNumCuenta.Text.Trim());
                 if (data.Rows.Count > 0)
                 {
-                    KryptonMessageBox.Show(@"La cuenta " + txtNumCuenta.Text + @" ya se encuentra registrada para " + data.Rows[0][13] + @" " + data.Rows[0][14] + @", en " + data.Rows[0][6], "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation);
+                    KryptonMessageBox.Show(@"La cuenta " + txtNumCuenta.Text + @" ya se encuentra registrada para " + data.Rows[0][13] + @" " + data.Rows[0][14] + @", en " + data.Rows[0][6], "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation);
                     return;
                 }
             }
@@ -338,7 +338,7 @@ namespace SysCisepro3.TalentoHumano
 
                 CargarAsignaciones(string.Empty, Convert.ToInt32(txtIdPersonal.Text.Trim()));
             }
-            KryptonMessageBox.Show((string)res[1], "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+            KryptonMessageBox.Show((string)res[1], "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
         }
 
         private void btnAnular_Click(object sender, EventArgs e)
@@ -347,7 +347,7 @@ namespace SysCisepro3.TalentoHumano
             if (ListView1.SelectedItems.Count == 0) return;
 
             if (KryptonMessageBox.Show(@"Desea quitar la cuenta actual?",
-                   "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) !=
+                   "Mensaje del Sistema", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) !=
                DialogResult.Yes) return;
 
             _sqlCommands.Clear();
@@ -383,7 +383,7 @@ namespace SysCisepro3.TalentoHumano
 
                 CargarAsignaciones(string.Empty, Convert.ToInt32(txtIdPersonal.Text.Trim()));
             }
-            KryptonMessageBox.Show((string)res[1], "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+            KryptonMessageBox.Show((string)res[1], "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
         }
 
         private void toolStripButton1_Click(object sender, EventArgs e)
@@ -426,7 +426,7 @@ namespace SysCisepro3.TalentoHumano
         {
             if (ListView1.Items.Count == 0)
             {
-                KryptonMessageBox.Show(@"NO HAY DATOS PARA EXPORTAR!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+                KryptonMessageBox.Show(@"NO HAY DATOS PARA EXPORTAR!", "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
                 return;
             }
 
@@ -511,11 +511,11 @@ namespace SysCisepro3.TalentoHumano
                 app.DisplayAlerts = false;
                 app.Visible = true;
                 app.DisplayAlerts = true;
-                KryptonMessageBox.Show(@"ARCHIVO generado correctamente!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+                KryptonMessageBox.Show(@"Archivo generado correctamente!", "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
             }
             catch
             {
-                KryptonMessageBox.Show(@"HUBO UN PROBLEMA AL EXPORTAR DATOS!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error);
+                KryptonMessageBox.Show(@"Hubo un problema al exportar datos!", "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error);
             }
         }
 

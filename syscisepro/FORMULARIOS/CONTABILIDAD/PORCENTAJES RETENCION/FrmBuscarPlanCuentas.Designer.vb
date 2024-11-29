@@ -43,23 +43,23 @@
             '
             Me.label2.AutoSize = True
             Me.label2.Font = New System.Drawing.Font("Calibri", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.label2.ForeColor = System.Drawing.Color.White
+            Me.label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
             Me.label2.Location = New System.Drawing.Point(406, 8)
             Me.label2.Name = "label2"
-            Me.label2.Size = New System.Drawing.Size(33, 14)
+            Me.label2.Size = New System.Drawing.Size(28, 14)
             Me.label2.TabIndex = 137
-            Me.label2.Text = "TIPO:"
+            Me.label2.Text = "Tipo"
             '
             'Label1
             '
             Me.Label1.AutoSize = True
             Me.Label1.Font = New System.Drawing.Font("Calibri", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label1.ForeColor = System.Drawing.Color.White
+            Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
             Me.Label1.Location = New System.Drawing.Point(6, 8)
             Me.Label1.Name = "Label1"
-            Me.Label1.Size = New System.Drawing.Size(51, 14)
+            Me.Label1.Size = New System.Drawing.Size(40, 14)
             Me.Label1.TabIndex = 134
-            Me.Label1.Text = "BUSCAR:"
+            Me.Label1.Text = "Buscar"
             '
             'ColumnHeader4
             '
@@ -75,8 +75,7 @@
             '
             Me.cbxTipoCuenta.BackColor = System.Drawing.Color.White
             Me.cbxTipoCuenta.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-            Me.cbxTipoCuenta.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-            Me.cbxTipoCuenta.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.cbxTipoCuenta.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cbxTipoCuenta.FormattingEnabled = True
             Me.cbxTipoCuenta.Items.AddRange(New Object() {"-- TODOS --", "ACTIVOS", "PASIVOS", "PATRIMONIO", "INGRESOS", "GASTOS", "GANANCIAS"})
             Me.cbxTipoCuenta.Location = New System.Drawing.Point(445, 4)
@@ -86,7 +85,7 @@
             '
             'label4
             '
-            Me.label4.BackColor = System.Drawing.Color.White
+            Me.label4.BackColor = System.Drawing.Color.FromArgb(CType(CType(185, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(227, Byte), Integer))
             Me.label4.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.label4.ForeColor = System.Drawing.Color.Black
             Me.label4.Location = New System.Drawing.Point(12, 136)
@@ -100,16 +99,17 @@
             '
             Me.txtParametrobusqueda.BackColor = System.Drawing.Color.White
             Me.txtParametrobusqueda.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-            Me.txtParametrobusqueda.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtParametrobusqueda.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtParametrobusqueda.ForeColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(123, Byte), Integer))
             Me.txtParametrobusqueda.Location = New System.Drawing.Point(59, 4)
             Me.txtParametrobusqueda.Name = "txtParametrobusqueda"
-            Me.txtParametrobusqueda.Size = New System.Drawing.Size(295, 23)
+            Me.txtParametrobusqueda.Size = New System.Drawing.Size(295, 21)
             Me.txtParametrobusqueda.TabIndex = 133
             '
             'listView1
             '
-            Me.listView1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+            Me.listView1.BackColor = System.Drawing.Color.FromArgb(CType(CType(185, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(227, Byte), Integer))
+            Me.listView1.BorderStyle = System.Windows.Forms.BorderStyle.None
             Me.listView1.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader1, Me.ColumnHeader4, Me.ColumnHeader3})
             Me.listView1.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.listView1.FullRowSelect = True
@@ -126,7 +126,7 @@
             '
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-            Me.BackColor = System.Drawing.Color.White
+            Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(185, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(227, Byte), Integer))
             Me.ClientSize = New System.Drawing.Size(733, 298)
             Me.Controls.Add(Me.label2)
             Me.Controls.Add(Me.Label1)

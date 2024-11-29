@@ -220,7 +220,7 @@ namespace SysCisepro3.Main
             }
 
             if (res) return;
-            KryptonMessageBox.Show(@"Error al generar SECUENCIAL DE CONTRATOS!. Por favor, contácte al administrador!", @"MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK , KryptonMessageBoxIcon.Information );
+            KryptonMessageBox.Show(@"Error al generar SECUENCIAL DE CONTRATOS!. Por favor, contácte al administrador!", @"Mensaje del Sistema", KryptonMessageBoxButtons.OK , KryptonMessageBoxIcon.Information );
             Close();
         }
             
@@ -749,7 +749,7 @@ namespace SysCisepro3.Main
 
         private void MdiParentMain_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (KryptonMessageBox.Show(@"Está seguro que desea salir del sistema?", @"MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) !=
+            if (KryptonMessageBox.Show(@"Está seguro que desea salir del sistema?", @"Mensaje del Sistema", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) !=
                 DialogResult.Yes)
             {
                 e.Cancel = true;
@@ -789,7 +789,7 @@ namespace SysCisepro3.Main
             
             if (string.IsNullOrEmpty(r)) // CLAVE DEBE COINCIDER EN MAYÚSCULAS Y/O MINÚSCULAS
             {
-                KryptonMessageBox.Show(@"Error al cargar rutas del sistema!", @"MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+                KryptonMessageBox.Show(@"Error al cargar rutas del sistema!", @"Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
                 Close();
             }
 
@@ -800,7 +800,7 @@ namespace SysCisepro3.Main
 
             if (fechaUltimoLibro == DateTime.MinValue)
             {
-                KryptonMessageBox.Show(@"Error al generar LIBRO DIARIO  de hoy. Por favor, contácte al administrador!", @"MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+                KryptonMessageBox.Show(@"Error al generar LIBRO DIARIO  de hoy. Por favor, contácte al administrador!", @"Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
                 Close();
             }
 
@@ -815,7 +815,7 @@ namespace SysCisepro3.Main
             var res = ComandosSql.ProcesarComando(TipoCon, _objLibroDiario.NuevoRegistroLibroDiario());
 
             if (res) return;
-            KryptonMessageBox.Show(@"Error al generar LIBRO DIARIO  de hoy. Por favor, contácte al administrador!", @"MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+            KryptonMessageBox.Show(@"Error al generar LIBRO DIARIO  de hoy. Por favor, contácte al administrador!", @"Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
             Close();
         }
 
@@ -997,7 +997,7 @@ namespace SysCisepro3.Main
             if (ib.textBox1.Text.Trim().Length == 0)
             {
                 KryptonMessageBox.Show(@"Debe ingresar el n° de transferencia para consultar!",
-                    @"MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+                    @"Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
                 return;
             }
 
@@ -1011,7 +1011,7 @@ namespace SysCisepro3.Main
             if (ib.textBox1.Text.Trim().Length == 0)
             {
                 KryptonMessageBox.Show(@"Debe ingresar el n° de transferncia para consultar!",
-                    @"MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+                    @"Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
                 return;
             }
 
@@ -1025,7 +1025,7 @@ namespace SysCisepro3.Main
             if (ib.textBox1.Text.Trim().Length == 0)
             {
                 KryptonMessageBox.Show(@"Debe ingresar el n° de transferncia para consultar!",
-                    @"MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+                    @"Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
                 return;
             }
 
@@ -1044,7 +1044,7 @@ namespace SysCisepro3.Main
             if (ib.textBox1.Text.Trim().Length == 0)
             {
                 KryptonMessageBox.Show(@"Debe ingresar el n° de transferncia para consultar!",
-                    @"MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+                    @"Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
                 return;
             }
 
@@ -1770,7 +1770,7 @@ namespace SysCisepro3.Main
             }
             catch
             {
-                KryptonMessageBox.Show(@"Hubo un problema al iniciar CALCULADORA!", @"MENSAJE DEL SISTEMA",
+                KryptonMessageBox.Show(@"Hubo un problema al iniciar CALCULADORA!", @"Mensaje del Sistema",
                      KryptonMessageBoxButtons.OK , KryptonMessageBoxIcon.Exclamation);
             }
         }
@@ -1782,7 +1782,7 @@ namespace SysCisepro3.Main
             }
             catch
             {
-                KryptonMessageBox.Show(@"Hubo un problema al iniciar BLOC DE NOTAS!", @"MENSAJE DEL SISTEMA",
+                KryptonMessageBox.Show(@"Hubo un problema al iniciar BLOC DE NOTAS!", @"Mensaje del Sistema",
                     KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation);
             }
         }
@@ -1796,7 +1796,7 @@ namespace SysCisepro3.Main
 
         private void btnChange_Click(object sender, EventArgs e)
         {
-            if (KryptonMessageBox.Show(@"ESTÁ SEGURO QUE DESEA CAMBIAR EL ENTORNO DE TRABAJO?", @"MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) != DialogResult.Yes) return;
+            if (KryptonMessageBox.Show(@"ESTÁ SEGURO QUE DESEA CAMBIAR EL ENTORNO DE TRABAJO?", @"Mensaje del Sistema", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) != DialogResult.Yes) return;
             switch (TipoCon)
             {
                 case TipoConexion.Cisepro:
@@ -1819,7 +1819,7 @@ namespace SysCisepro3.Main
 
         private void toolStripButtonUser_Click(object sender, EventArgs e)
         {
-            if (KryptonMessageBox.Show(@"ESTÁ SEGURO QUE DESEA CAMBIAR DE USUARIO?", @"MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) != DialogResult.Yes) return;
+            if (KryptonMessageBox.Show(@"ESTÁ SEGURO QUE DESEA CAMBIAR DE USUARIO?", @"Mensaje del Sistema", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) != DialogResult.Yes) return;
 
             DisposeAllButThis();            
 
@@ -1940,6 +1940,11 @@ namespace SysCisepro3.Main
 
 
                 if (_data.Rows.Count > 0) notifyIcon1.ShowBalloonTip(10000);
+                //if (_data.Rows.Count > 0)
+                //{
+                //    _frmNotificacion = new FrmNotificarNovedades(TipoCon, ObjUsuario, notifyIcon1.BalloonTipText, _tipoNoficicacion) { DataNotificacion = _data, DataVacaciones = _data2 };
+                //    _frmNotificacion.Show();
+                //}
             }
             catch (Exception ex)
 

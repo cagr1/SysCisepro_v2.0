@@ -93,31 +93,17 @@ Namespace FORMULARIOS.INVENTARIOS.PROCESO
             Select Case _tipoCon
                 Case TipoConexion.Asenava
                     Icon = My.Resources.logo_a
-                    Label1.ForeColor = Color.White
-                    Label2.ForeColor = Color.White
-                    Label3.ForeColor = Color.White
-                    Label1.BackColor = My.MySettingsProperty.Settings.ColorAsenava
-                    Label2.BackColor = My.MySettingsProperty.Settings.ColorAsenava
-                    Label3.BackColor = My.MySettingsProperty.Settings.ColorAsenava 
-                    BackColor = My.MySettingsProperty.Settings.ColorAsenava
+
+
+
                 Case TipoConexion.Seportpac
                     Icon = My.Resources.logo_s
-                    BackColor = My.MySettingsProperty.Settings.ColorSeportpac
-                    Label1.ForeColor = Color.White
-                    Label2.ForeColor = Color.White
-                    Label3.ForeColor = Color.White
-                    Label1.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
-                    Label2.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
-                    Label3.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
+
+
                 Case Else
                     Icon = My.Resources.logo_c
-                    BackColor = My.MySettingsProperty.Settings.ColorCisepro
-                    Label1.ForeColor = Color.White
-                    Label2.ForeColor = Color.White
-                    Label3.ForeColor = Color.White
-                    Label1.BackColor = My.MySettingsProperty.Settings.ColorCisepro
-                    Label2.BackColor = My.MySettingsProperty.Settings.ColorCisepro
-                    Label3.BackColor = My.MySettingsProperty.Settings.ColorCisepro
+
+
             End Select
 
             If Cargado Then txtParametrobusqueda_KeyUp(Nothing, Nothing)

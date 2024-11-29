@@ -2364,15 +2364,22 @@
             this.kryptonNavigator1.Button.PreviousButtonAction = ComponentFactory.Krypton.Navigator.DirectionButtonAction.ModeAppropriateAction;
             this.kryptonNavigator1.Button.PreviousButtonDisplay = ComponentFactory.Krypton.Navigator.ButtonDisplay.Logic;
             this.kryptonNavigator1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.kryptonNavigator1.Group.GroupBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.ControlClient;
+            this.kryptonNavigator1.Group.GroupBorderStyle = ComponentFactory.Krypton.Toolkit.PaletteBorderStyle.ControlClient;
+            this.kryptonNavigator1.Header.HeaderStyleBar = ComponentFactory.Krypton.Toolkit.HeaderStyle.Secondary;
+            this.kryptonNavigator1.Header.HeaderStylePrimary = ComponentFactory.Krypton.Toolkit.HeaderStyle.Primary;
+            this.kryptonNavigator1.Header.HeaderStyleSecondary = ComponentFactory.Krypton.Toolkit.HeaderStyle.Secondary;
             this.kryptonNavigator1.Location = new System.Drawing.Point(0, 31);
             this.kryptonNavigator1.Name = "kryptonNavigator1";
             this.kryptonNavigator1.NavigatorMode = ComponentFactory.Krypton.Navigator.NavigatorMode.BarTabGroup;
+            this.kryptonNavigator1.PageBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.ControlClient;
             this.kryptonNavigator1.Pages.AddRange(new ComponentFactory.Krypton.Navigator.KryptonPage[] {
             this.kryptonPage1,
             this.kryptonPage3,
             this.kryptonPage2,
             this.kryptonPage4,
             this.kryptonPage5});
+            this.kryptonNavigator1.Panel.PanelBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.PanelClient;
             this.kryptonNavigator1.SelectedIndex = 0;
             this.kryptonNavigator1.Size = new System.Drawing.Size(849, 632);
             this.kryptonNavigator1.TabIndex = 218;
@@ -2388,6 +2395,7 @@
             this.kryptonPage1.Name = "kryptonPage1";
             this.kryptonPage1.Size = new System.Drawing.Size(847, 605);
             this.kryptonPage1.Text = "Datos Personales";
+            this.kryptonPage1.ToolTipStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.ToolTip;
             this.kryptonPage1.ToolTipTitle = "Page ToolTip";
             this.kryptonPage1.UniqueName = "BF6778DB7B6E4FC64698D4730B10B066";
             // 
@@ -2890,6 +2898,7 @@
             this.kryptonPage3.Name = "kryptonPage3";
             this.kryptonPage3.Size = new System.Drawing.Size(847, 605);
             this.kryptonPage3.Text = "Datos Familiares";
+            this.kryptonPage3.ToolTipStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.ToolTip;
             this.kryptonPage3.ToolTipTitle = "Page ToolTip";
             this.kryptonPage3.UniqueName = "73B0FF3B837C4161F9A583351D4DCB0B";
             // 
@@ -3108,6 +3117,7 @@
             this.kryptonPage2.Name = "kryptonPage2";
             this.kryptonPage2.Size = new System.Drawing.Size(847, 605);
             this.kryptonPage2.Text = "Referencias";
+            this.kryptonPage2.ToolTipStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.ToolTip;
             this.kryptonPage2.ToolTipTitle = "Page ToolTip";
             this.kryptonPage2.UniqueName = "7221C065FCD54597588560CF2D42EC8B";
             // 
@@ -3237,6 +3247,7 @@
             this.kryptonPage4.Name = "kryptonPage4";
             this.kryptonPage4.Size = new System.Drawing.Size(847, 605);
             this.kryptonPage4.Text = "Fotos";
+            this.kryptonPage4.ToolTipStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.ToolTip;
             this.kryptonPage4.ToolTipTitle = "Page ToolTip";
             this.kryptonPage4.UniqueName = "13E9095214FE457CA385A754B99B308B";
             // 
@@ -3282,6 +3293,7 @@
             this.kryptonPage5.Name = "kryptonPage5";
             this.kryptonPage5.Size = new System.Drawing.Size(847, 605);
             this.kryptonPage5.Text = "Historial Laboral";
+            this.kryptonPage5.ToolTipStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.ToolTip;
             this.kryptonPage5.ToolTipTitle = "Page ToolTip";
             this.kryptonPage5.UniqueName = "03A69FD16918476A6A93D26165BA2179";
             // 
@@ -3304,11 +3316,11 @@
             // 
             // kryptonGroupBox3
             // 
-            this.kryptonGroupBox3.CaptionOverlap = 0.85D;
+            this.kryptonGroupBox3.CaptionOverlap = 0D;
             this.kryptonGroupBox3.CaptionStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.GroupBoxCaption;
             this.kryptonGroupBox3.GroupBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.ControlRibbon;
             this.kryptonGroupBox3.GroupBorderStyle = ComponentFactory.Krypton.Toolkit.PaletteBorderStyle.ControlGroupBox;
-            this.kryptonGroupBox3.Location = new System.Drawing.Point(2, 425);
+            this.kryptonGroupBox3.Location = new System.Drawing.Point(2, 428);
             this.kryptonGroupBox3.Name = "kryptonGroupBox3";
             // 
             // kryptonGroupBox3.Panel
@@ -3316,7 +3328,7 @@
             this.kryptonGroupBox3.Panel.Controls.Add(this.Button1);
             this.kryptonGroupBox3.Panel.Controls.Add(this.dgvPersonal);
             this.kryptonGroupBox3.Panel.Controls.Add(this.txtFiltro);
-            this.kryptonGroupBox3.Size = new System.Drawing.Size(844, 238);
+            this.kryptonGroupBox3.Size = new System.Drawing.Size(844, 231);
             this.kryptonGroupBox3.TabIndex = 219;
             this.kryptonGroupBox3.Values.Heading = "Busqueda";
             // 

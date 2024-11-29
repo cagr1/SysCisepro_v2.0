@@ -2,6 +2,7 @@
 Imports ClassLibraryCisepro.CONTABILIDAD.SRI
 Imports ClassLibraryCisepro.ENUMS
 Imports ClassLibraryCisepro.ESTRUCTURA_EMPRESA
+Imports Krypton.Toolkit
 
 Namespace FORMULARIOS.CONTABILIDAD.SRI
     ''' <summary>
@@ -158,7 +159,8 @@ Namespace FORMULARIOS.CONTABILIDAD.SRI
                 dgvComprasATS.Columns(2).Width = 250
             Catch ex As Exception
                 dgvComprasATS.DataSource = Nothing
-                MsgBox("METODO CARGAR COMPROBANTES DE COMPRA" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
+                'MsgBox("METODO CARGAR COMPROBANTES DE COMPRA" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
+                KryptonMessageBox.Show("Metodo cargar comprobantes de compra" & vbNewLine & ex.Message.ToString, "Mensaje de excepción", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
             SumarTotalesCompras()
         End Sub
@@ -235,7 +237,8 @@ Namespace FORMULARIOS.CONTABILIDAD.SRI
                 dgvVentasATS.ReadOnly = True
             Catch ex As Exception
                 dgvVentasATS.DataSource = Nothing
-                MsgBox("METODO CARGAR FACTURA VENTA" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
+                'MsgBox("METODO CARGAR FACTURA VENTA" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
+                KryptonMessageBox.Show("Metodo cargar factura venta" & vbNewLine & ex.Message.ToString, "Mensaje de excepción", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
             SumarTotalesVentas()
         End Sub
@@ -316,7 +319,9 @@ Namespace FORMULARIOS.CONTABILIDAD.SRI
                 dgvNotasCredito.Columns(0).Width = 50
                 dgvNotasCredito.Columns(1).Width = 50
             Catch ex As Exception
-                MsgBox("METODO CARGAR FACTURA VENTA" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
+                'MsgBox("METODO CARGAR FACTURA VENTA" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
+                KryptonMessageBox.Show("Metodo cargar factura venta" & vbNewLine & ex.Message.ToString, "Mensaje de excepción", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+
             End Try
             SumarTotalesNotasCredito()
         End Sub
@@ -960,7 +965,8 @@ Namespace FORMULARIOS.CONTABILIDAD.SRI
 
                 Dim res = _objetoAnexoTransaccional.NuevoRegistroAts(_tipoCon)
                 If Not res Then
-                    MsgBox("Error al guardar ATS! Por favor, contácte al administrador.", MsgBoxStyle.Exclamation, "Mensaje del sistema")
+                    'MsgBox("Error al guardar ATS! Por favor, contácte al administrador.", MsgBoxStyle.Exclamation, "Mensaje del sistema")
+                    KryptonMessageBox.Show("Error al guardar ATS! Por favor, contácte al administrador.", "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                     Return
                 End If
 
@@ -1378,10 +1384,12 @@ Namespace FORMULARIOS.CONTABILIDAD.SRI
                 archivo.writeline("</iva>")
                 archivo.close()
 
-                MsgBox("XML GENERADO CORRECTAMENTE", MsgBoxStyle.Information, "Mensaje de información.")
+                'MsgBox("XML GENERADO CORRECTAMENTE", MsgBoxStyle.Information, "Mensaje de información.")
+                KryptonMessageBox.Show("XML generado correctamente", "Mensaje de información", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
 
             Else
-                MsgBox("NO SE PUEDE GENERAR EL XML." & vbNewLine & "ASEGURESE DE HABER ESCOGIDO BIEN LAS FECHAS", MsgBoxStyle.Exclamation, "Mensaje de validación.")
+                'MsgBox("NO SE PUEDE GENERAR EL XML." & vbNewLine & "ASEGURESE DE HABER ESCOGIDO BIEN LAS FECHAS", MsgBoxStyle.Exclamation, "Mensaje de validación.")
+                KryptonMessageBox.Show("No se puede generar el xml." & vbNewLine & "Asegurese de haber escogido bien las fechas", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
             End If
         End Sub
 

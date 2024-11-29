@@ -301,7 +301,7 @@ namespace SysCisepro3.TalentoHumano
             }
             catch (Exception ex)
             {
-                KryptonMessageBox.Show(@"Error al cargar detalles del personal: " + ex.Message, "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+                KryptonMessageBox.Show(@"Error al cargar detalles del personal: " + ex.Message, "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
             }
         }
 
@@ -382,7 +382,7 @@ namespace SysCisepro3.TalentoHumano
                 lblValCed.Image = Resources.erri;
                 ButtonGuardar.Enabled = false;
                 KryptonMessageBox.Show(@"El número de cédula ingresado ya se encuentra registrado como aspirante!",
-                   @"MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+                   @"Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
             }
             else
             {
@@ -610,7 +610,7 @@ namespace SysCisepro3.TalentoHumano
             if (lblAspirante.Text.Trim().Length < 1)
             {
                 KryptonMessageBox.Show(@"Debe seleccionar un registro para modificar datos!",
-                    "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+                    "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
                 return;
             }
 
@@ -647,7 +647,7 @@ namespace SysCisepro3.TalentoHumano
         private void ButtonGuardar_Click(object sender, EventArgs e)
         {
             if (KryptonMessageBox.Show(@"Desea guardar el registro actual?",
-                   "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) !=
+                   "Mensaje del Sistema", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) !=
                DialogResult.Yes) return;
 
             txtTelefono.Text = txtTelefono.Text.Trim().Length == 0 ? @"NO TIENE" : txtTelefono.Text.Trim();
@@ -675,7 +675,7 @@ namespace SysCisepro3.TalentoHumano
                 CargarPersonal();
                 dgvPersonal_SelectionChanged(null, null);
             }
-            KryptonMessageBox.Show((string)res[1], "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+            KryptonMessageBox.Show((string)res[1], "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
         }
 
         private void GuardarRegistroNuevoAspirante(bool esActualizar)
@@ -788,7 +788,7 @@ namespace SysCisepro3.TalentoHumano
         {
             if (dgvPersonal.RowCount == 0)
             {
-                KryptonMessageBox.Show(@"NO HAY DATOS PARA EXPORTAR!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+                KryptonMessageBox.Show(@"NO HAY DATOS PARA EXPORTAR!", "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
                 return;
             }
 
@@ -875,11 +875,11 @@ namespace SysCisepro3.TalentoHumano
                 app.DisplayAlerts = false;
                 app.Visible = true;
                 app.DisplayAlerts = true;
-                KryptonMessageBox.Show(@"ARCHIVO generado correctamente!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+                KryptonMessageBox.Show(@"ARCHIVO generado correctamente!", "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
             }
             catch
             {
-                KryptonMessageBox.Show(@"HUBO UN PROBLEMA AL EXPORTAR DATOS!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error);
+                KryptonMessageBox.Show(@"HUBO UN PROBLEMA AL EXPORTAR DATOS!", "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error);
             }
         }
     }

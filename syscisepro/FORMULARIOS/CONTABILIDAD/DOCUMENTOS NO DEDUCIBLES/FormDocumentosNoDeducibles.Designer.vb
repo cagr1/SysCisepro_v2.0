@@ -24,155 +24,86 @@
         <System.Diagnostics.DebuggerStepThrough()> _
         Private Sub InitializeComponent()
             Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormDocumentosNoDeducibles))
-            Me.gbDocumentoNoDeducible = New System.Windows.Forms.GroupBox()
             Me.txtValorDocumentoNoDeducible = New System.Windows.Forms.TextBox()
-            Me.Label2 = New System.Windows.Forms.Label()
             Me.dtpDocumentoNoDeducible = New System.Windows.Forms.DateTimePicker()
-            Me.lblNumeroRecibo = New System.Windows.Forms.Label()
             Me.txtNumeroDocumentoNoDeducible = New System.Windows.Forms.TextBox()
-            Me.lblFechaDocumentoDeducible = New System.Windows.Forms.Label()
-            Me.GroupBox1 = New System.Windows.Forms.GroupBox()
             Me.txtDescripcionDocumentoNoDeducible = New System.Windows.Forms.TextBox()
-            Me.gbConceptoCompra = New System.Windows.Forms.GroupBox()
             Me.TextBox1 = New System.Windows.Forms.TextBox()
             Me.lblCodigoCuentaConcepto = New System.Windows.Forms.Label()
             Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
             Me.btnListo = New System.Windows.Forms.ToolStripMenuItem()
             Me.btnCancelar = New System.Windows.Forms.ToolStripMenuItem()
-            Me.gbDocumentoNoDeducible.SuspendLayout()
-            Me.GroupBox1.SuspendLayout()
-            Me.gbConceptoCompra.SuspendLayout()
+            Me.KryptonGroupBox1 = New Krypton.Toolkit.KryptonGroupBox()
+            Me.KryptonLabel1 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel2 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel3 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel4 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel5 = New Krypton.Toolkit.KryptonLabel()
             Me.MenuStrip1.SuspendLayout()
+            CType(Me.KryptonGroupBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType(Me.KryptonGroupBox1.Panel, System.ComponentModel.ISupportInitialize).BeginInit()
+            Me.KryptonGroupBox1.Panel.SuspendLayout()
+            Me.KryptonGroupBox1.SuspendLayout()
             Me.SuspendLayout()
-            '
-            'gbDocumentoNoDeducible
-            '
-            Me.gbDocumentoNoDeducible.BackColor = System.Drawing.Color.White
-            Me.gbDocumentoNoDeducible.Controls.Add(Me.txtValorDocumentoNoDeducible)
-            Me.gbDocumentoNoDeducible.Controls.Add(Me.Label2)
-            Me.gbDocumentoNoDeducible.Controls.Add(Me.dtpDocumentoNoDeducible)
-            Me.gbDocumentoNoDeducible.Controls.Add(Me.lblNumeroRecibo)
-            Me.gbDocumentoNoDeducible.Controls.Add(Me.txtNumeroDocumentoNoDeducible)
-            Me.gbDocumentoNoDeducible.Controls.Add(Me.lblFechaDocumentoDeducible)
-            Me.gbDocumentoNoDeducible.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.gbDocumentoNoDeducible.Location = New System.Drawing.Point(1, 32)
-            Me.gbDocumentoNoDeducible.Name = "gbDocumentoNoDeducible"
-            Me.gbDocumentoNoDeducible.Size = New System.Drawing.Size(614, 43)
-            Me.gbDocumentoNoDeducible.TabIndex = 49
-            Me.gbDocumentoNoDeducible.TabStop = False
-            Me.gbDocumentoNoDeducible.Text = "DOCUMENTO"
             '
             'txtValorDocumentoNoDeducible
             '
             Me.txtValorDocumentoNoDeducible.BackColor = System.Drawing.Color.White
             Me.txtValorDocumentoNoDeducible.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtValorDocumentoNoDeducible.Location = New System.Drawing.Point(502, 13)
+            Me.txtValorDocumentoNoDeducible.Location = New System.Drawing.Point(435, 4)
             Me.txtValorDocumentoNoDeducible.Name = "txtValorDocumentoNoDeducible"
-            Me.txtValorDocumentoNoDeducible.Size = New System.Drawing.Size(106, 22)
+            Me.txtValorDocumentoNoDeducible.Size = New System.Drawing.Size(91, 22)
             Me.txtValorDocumentoNoDeducible.TabIndex = 4
             Me.txtValorDocumentoNoDeducible.Text = "0.00"
             Me.txtValorDocumentoNoDeducible.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-            '
-            'Label2
-            '
-            Me.Label2.AutoSize = True
-            Me.Label2.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label2.Location = New System.Drawing.Point(456, 18)
-            Me.Label2.Name = "Label2"
-            Me.Label2.Size = New System.Drawing.Size(46, 15)
-            Me.Label2.TabIndex = 35
-            Me.Label2.Text = "VALOR:"
             '
             'dtpDocumentoNoDeducible
             '
             Me.dtpDocumentoNoDeducible.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.dtpDocumentoNoDeducible.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-            Me.dtpDocumentoNoDeducible.Location = New System.Drawing.Point(261, 14)
+            Me.dtpDocumentoNoDeducible.Location = New System.Drawing.Point(255, 6)
             Me.dtpDocumentoNoDeducible.Name = "dtpDocumentoNoDeducible"
-            Me.dtpDocumentoNoDeducible.Size = New System.Drawing.Size(129, 22)
+            Me.dtpDocumentoNoDeducible.Size = New System.Drawing.Size(112, 22)
             Me.dtpDocumentoNoDeducible.TabIndex = 2
-            '
-            'lblNumeroRecibo
-            '
-            Me.lblNumeroRecibo.AutoSize = True
-            Me.lblNumeroRecibo.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.lblNumeroRecibo.Location = New System.Drawing.Point(7, 17)
-            Me.lblNumeroRecibo.Name = "lblNumeroRecibo"
-            Me.lblNumeroRecibo.Size = New System.Drawing.Size(35, 15)
-            Me.lblNumeroRecibo.TabIndex = 9
-            Me.lblNumeroRecibo.Text = "NRO:"
             '
             'txtNumeroDocumentoNoDeducible
             '
             Me.txtNumeroDocumentoNoDeducible.BackColor = System.Drawing.Color.White
             Me.txtNumeroDocumentoNoDeducible.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtNumeroDocumentoNoDeducible.Location = New System.Drawing.Point(48, 14)
+            Me.txtNumeroDocumentoNoDeducible.Location = New System.Drawing.Point(65, 3)
             Me.txtNumeroDocumentoNoDeducible.Name = "txtNumeroDocumentoNoDeducible"
-            Me.txtNumeroDocumentoNoDeducible.Size = New System.Drawing.Size(129, 22)
+            Me.txtNumeroDocumentoNoDeducible.Size = New System.Drawing.Size(116, 22)
             Me.txtNumeroDocumentoNoDeducible.TabIndex = 1
-            '
-            'lblFechaDocumentoDeducible
-            '
-            Me.lblFechaDocumentoDeducible.AutoSize = True
-            Me.lblFechaDocumentoDeducible.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.lblFechaDocumentoDeducible.Location = New System.Drawing.Point(206, 17)
-            Me.lblFechaDocumentoDeducible.Name = "lblFechaDocumentoDeducible"
-            Me.lblFechaDocumentoDeducible.Size = New System.Drawing.Size(47, 15)
-            Me.lblFechaDocumentoDeducible.TabIndex = 34
-            Me.lblFechaDocumentoDeducible.Text = "FECHA:"
-            '
-            'GroupBox1
-            '
-            Me.GroupBox1.BackColor = System.Drawing.Color.White
-            Me.GroupBox1.Controls.Add(Me.txtDescripcionDocumentoNoDeducible)
-            Me.GroupBox1.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.GroupBox1.Location = New System.Drawing.Point(1, 122)
-            Me.GroupBox1.Name = "GroupBox1"
-            Me.GroupBox1.Size = New System.Drawing.Size(614, 76)
-            Me.GroupBox1.TabIndex = 50
-            Me.GroupBox1.TabStop = False
-            Me.GroupBox1.Text = "DETALLE"
             '
             'txtDescripcionDocumentoNoDeducible
             '
             Me.txtDescripcionDocumentoNoDeducible.BackColor = System.Drawing.Color.White
             Me.txtDescripcionDocumentoNoDeducible.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtDescripcionDocumentoNoDeducible.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtDescripcionDocumentoNoDeducible.Location = New System.Drawing.Point(6, 17)
+            Me.txtDescripcionDocumentoNoDeducible.Location = New System.Drawing.Point(65, 61)
             Me.txtDescripcionDocumentoNoDeducible.Multiline = True
             Me.txtDescripcionDocumentoNoDeducible.Name = "txtDescripcionDocumentoNoDeducible"
-            Me.txtDescripcionDocumentoNoDeducible.Size = New System.Drawing.Size(602, 54)
+            Me.txtDescripcionDocumentoNoDeducible.Size = New System.Drawing.Size(461, 21)
             Me.txtDescripcionDocumentoNoDeducible.TabIndex = 3
-            '
-            'gbConceptoCompra
-            '
-            Me.gbConceptoCompra.BackColor = System.Drawing.Color.White
-            Me.gbConceptoCompra.Controls.Add(Me.TextBox1)
-            Me.gbConceptoCompra.Controls.Add(Me.lblCodigoCuentaConcepto)
-            Me.gbConceptoCompra.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.gbConceptoCompra.Location = New System.Drawing.Point(1, 76)
-            Me.gbConceptoCompra.Name = "gbConceptoCompra"
-            Me.gbConceptoCompra.Size = New System.Drawing.Size(614, 45)
-            Me.gbConceptoCompra.TabIndex = 85
-            Me.gbConceptoCompra.TabStop = False
-            Me.gbConceptoCompra.Text = "CONCEPTO:"
             '
             'TextBox1
             '
             Me.TextBox1.BackColor = System.Drawing.Color.White
             Me.TextBox1.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.TextBox1.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.TextBox1.Location = New System.Drawing.Point(6, 16)
+            Me.TextBox1.Location = New System.Drawing.Point(65, 34)
             Me.TextBox1.Name = "TextBox1"
-            Me.TextBox1.Size = New System.Drawing.Size(602, 22)
+            Me.TextBox1.Size = New System.Drawing.Size(302, 22)
             Me.TextBox1.TabIndex = 2
             '
             'lblCodigoCuentaConcepto
             '
             Me.lblCodigoCuentaConcepto.AutoSize = True
-            Me.lblCodigoCuentaConcepto.Location = New System.Drawing.Point(81, 1)
+            Me.lblCodigoCuentaConcepto.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
+            Me.lblCodigoCuentaConcepto.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
+            Me.lblCodigoCuentaConcepto.Location = New System.Drawing.Point(387, 37)
             Me.lblCodigoCuentaConcepto.Name = "lblCodigoCuentaConcepto"
-            Me.lblCodigoCuentaConcepto.Size = New System.Drawing.Size(16, 14)
+            Me.lblCodigoCuentaConcepto.Size = New System.Drawing.Size(16, 13)
             Me.lblCodigoCuentaConcepto.TabIndex = 1
             Me.lblCodigoCuentaConcepto.Text = "..."
             '
@@ -209,16 +140,78 @@
             Me.btnCancelar.Size = New System.Drawing.Size(103, 28)
             Me.btnCancelar.Text = "CANCELAR"
             '
+            'KryptonGroupBox1
+            '
+            Me.KryptonGroupBox1.CaptionOverlap = 0R
+            Me.KryptonGroupBox1.GroupBackStyle = Krypton.Toolkit.PaletteBackStyle.ControlRibbon
+            Me.KryptonGroupBox1.Location = New System.Drawing.Point(1, 39)
+            Me.KryptonGroupBox1.Name = "KryptonGroupBox1"
+            '
+            'KryptonGroupBox1.Panel
+            '
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.txtDescripcionDocumentoNoDeducible)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel5)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.lblCodigoCuentaConcepto)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.TextBox1)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel4)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.txtValorDocumentoNoDeducible)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel3)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel2)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel1)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.dtpDocumentoNoDeducible)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.txtNumeroDocumentoNoDeducible)
+            Me.KryptonGroupBox1.Size = New System.Drawing.Size(614, 137)
+            Me.KryptonGroupBox1.TabIndex = 185
+            Me.KryptonGroupBox1.Values.Heading = "Documento"
+            '
+            'KryptonLabel1
+            '
+            Me.KryptonLabel1.Location = New System.Drawing.Point(4, 8)
+            Me.KryptonLabel1.Name = "KryptonLabel1"
+            Me.KryptonLabel1.Size = New System.Drawing.Size(55, 20)
+            Me.KryptonLabel1.TabIndex = 0
+            Me.KryptonLabel1.Values.Text = "Numero"
+            '
+            'KryptonLabel2
+            '
+            Me.KryptonLabel2.Location = New System.Drawing.Point(207, 6)
+            Me.KryptonLabel2.Name = "KryptonLabel2"
+            Me.KryptonLabel2.Size = New System.Drawing.Size(42, 20)
+            Me.KryptonLabel2.TabIndex = 2
+            Me.KryptonLabel2.Values.Text = "Fecha"
+            '
+            'KryptonLabel3
+            '
+            Me.KryptonLabel3.Location = New System.Drawing.Point(390, 8)
+            Me.KryptonLabel3.Name = "KryptonLabel3"
+            Me.KryptonLabel3.Size = New System.Drawing.Size(39, 20)
+            Me.KryptonLabel3.TabIndex = 3
+            Me.KryptonLabel3.Values.Text = "Valor"
+            '
+            'KryptonLabel4
+            '
+            Me.KryptonLabel4.Location = New System.Drawing.Point(4, 34)
+            Me.KryptonLabel4.Name = "KryptonLabel4"
+            Me.KryptonLabel4.Size = New System.Drawing.Size(63, 20)
+            Me.KryptonLabel4.TabIndex = 5
+            Me.KryptonLabel4.Values.Text = "Concepto"
+            '
+            'KryptonLabel5
+            '
+            Me.KryptonLabel5.Location = New System.Drawing.Point(4, 62)
+            Me.KryptonLabel5.Name = "KryptonLabel5"
+            Me.KryptonLabel5.Size = New System.Drawing.Size(49, 20)
+            Me.KryptonLabel5.TabIndex = 6
+            Me.KryptonLabel5.Values.Text = "Detalle"
+            '
             'FormDocumentosNoDeducibles
             '
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-            Me.BackColor = System.Drawing.Color.White
-            Me.ClientSize = New System.Drawing.Size(616, 196)
+            Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(185, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(227, Byte), Integer))
+            Me.ClientSize = New System.Drawing.Size(616, 177)
+            Me.Controls.Add(Me.KryptonGroupBox1)
             Me.Controls.Add(Me.MenuStrip1)
-            Me.Controls.Add(Me.gbConceptoCompra)
-            Me.Controls.Add(Me.GroupBox1)
-            Me.Controls.Add(Me.gbDocumentoNoDeducible)
             Me.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
             Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -231,32 +224,31 @@
             Or Krypton.Toolkit.PaletteDrawBorders.Right), Krypton.Toolkit.PaletteDrawBorders)
             Me.StateActive.Border.Rounding = 5.0!
             Me.Text = "DOCUMENTO NO DEDUCIBLES"
-            Me.gbDocumentoNoDeducible.ResumeLayout(False)
-            Me.gbDocumentoNoDeducible.PerformLayout()
-            Me.GroupBox1.ResumeLayout(False)
-            Me.GroupBox1.PerformLayout()
-            Me.gbConceptoCompra.ResumeLayout(False)
-            Me.gbConceptoCompra.PerformLayout()
             Me.MenuStrip1.ResumeLayout(False)
             Me.MenuStrip1.PerformLayout()
+            CType(Me.KryptonGroupBox1.Panel, System.ComponentModel.ISupportInitialize).EndInit()
+            Me.KryptonGroupBox1.Panel.ResumeLayout(False)
+            Me.KryptonGroupBox1.Panel.PerformLayout()
+            CType(Me.KryptonGroupBox1, System.ComponentModel.ISupportInitialize).EndInit()
+            Me.KryptonGroupBox1.ResumeLayout(False)
             Me.ResumeLayout(False)
             Me.PerformLayout()
 
         End Sub
-        Friend WithEvents gbDocumentoNoDeducible As System.Windows.Forms.GroupBox
         Friend WithEvents dtpDocumentoNoDeducible As System.Windows.Forms.DateTimePicker
-        Friend WithEvents lblNumeroRecibo As System.Windows.Forms.Label
         Friend WithEvents txtNumeroDocumentoNoDeducible As System.Windows.Forms.TextBox
-        Friend WithEvents lblFechaDocumentoDeducible As System.Windows.Forms.Label
-        Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
         Friend WithEvents txtValorDocumentoNoDeducible As System.Windows.Forms.TextBox
         Friend WithEvents txtDescripcionDocumentoNoDeducible As System.Windows.Forms.TextBox
-        Friend WithEvents gbConceptoCompra As System.Windows.Forms.GroupBox
         Friend WithEvents MenuStrip1 As System.Windows.Forms.MenuStrip
         Friend WithEvents btnListo As System.Windows.Forms.ToolStripMenuItem
         Friend WithEvents btnCancelar As System.Windows.Forms.ToolStripMenuItem
-        Friend WithEvents Label2 As System.Windows.Forms.Label
         Friend WithEvents lblCodigoCuentaConcepto As System.Windows.Forms.Label
         Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
+        Friend WithEvents KryptonGroupBox1 As Krypton.Toolkit.KryptonGroupBox
+        Friend WithEvents KryptonLabel5 As Krypton.Toolkit.KryptonLabel
+        Friend WithEvents KryptonLabel4 As Krypton.Toolkit.KryptonLabel
+        Friend WithEvents KryptonLabel3 As Krypton.Toolkit.KryptonLabel
+        Friend WithEvents KryptonLabel2 As Krypton.Toolkit.KryptonLabel
+        Friend WithEvents KryptonLabel1 As Krypton.Toolkit.KryptonLabel
     End Class
 End Namespace

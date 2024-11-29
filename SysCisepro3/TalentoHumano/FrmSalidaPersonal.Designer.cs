@@ -83,6 +83,9 @@
             this.kryptonLabel8 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.txtNombreFirmado = new System.Windows.Forms.TextBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.kryptonDockableNavigator2 = new ComponentFactory.Krypton.Docking.KryptonDockableNavigator();
+            this.kryptonPage3 = new ComponentFactory.Krypton.Navigator.KryptonPage();
+            this.kryptonPage4 = new ComponentFactory.Krypton.Navigator.KryptonPage();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPersonal)).BeginInit();
             this.tabControl1.SuspendLayout();
@@ -91,7 +94,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.kryptonDockableNavigator1)).BeginInit();
             this.kryptonDockableNavigator1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPage1)).BeginInit();
-            this.kryptonPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox2.Panel)).BeginInit();
             this.kryptonGroupBox2.Panel.SuspendLayout();
@@ -101,7 +103,6 @@
             this.kryptonGroupBox1.Panel.SuspendLayout();
             this.kryptonGroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPage2)).BeginInit();
-            this.kryptonPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox4.Panel)).BeginInit();
             this.kryptonGroupBox4.Panel.SuspendLayout();
@@ -111,6 +112,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox3.Panel)).BeginInit();
             this.kryptonGroupBox3.Panel.SuspendLayout();
             this.kryptonGroupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonDockableNavigator2)).BeginInit();
+            this.kryptonDockableNavigator2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonPage3)).BeginInit();
+            this.kryptonPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonPage4)).BeginInit();
+            this.kryptonPage4.SuspendLayout();
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -197,7 +204,7 @@
             this.dgvPersonal.AllowUserToDeleteRows = false;
             this.dgvPersonal.AllowUserToOrderColumns = true;
             this.dgvPersonal.AllowUserToResizeRows = false;
-            this.dgvPersonal.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            this.dgvPersonal.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(235)))), ((int)(((byte)(247)))));
             this.dgvPersonal.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvPersonal.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
             this.dgvPersonal.Location = new System.Drawing.Point(0, 0);
@@ -216,7 +223,7 @@
             // chkbxFichaMedica
             // 
             this.chkbxFichaMedica.AutoSize = true;
-            this.chkbxFichaMedica.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(206)))), ((int)(((byte)(230)))));
+            this.chkbxFichaMedica.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(235)))), ((int)(((byte)(247)))));
             this.chkbxFichaMedica.Enabled = false;
             this.chkbxFichaMedica.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkbxFichaMedica.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
@@ -300,7 +307,7 @@
             // chkbxCredencial
             // 
             this.chkbxCredencial.AutoSize = true;
-            this.chkbxCredencial.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(206)))), ((int)(((byte)(230)))));
+            this.chkbxCredencial.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(235)))), ((int)(((byte)(247)))));
             this.chkbxCredencial.Enabled = false;
             this.chkbxCredencial.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkbxCredencial.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
@@ -314,7 +321,7 @@
             // chkbxRoles
             // 
             this.chkbxRoles.AutoSize = true;
-            this.chkbxRoles.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(206)))), ((int)(((byte)(230)))));
+            this.chkbxRoles.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(235)))), ((int)(((byte)(247)))));
             this.chkbxRoles.Enabled = false;
             this.chkbxRoles.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkbxRoles.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
@@ -328,7 +335,7 @@
             // chkbxUniformes
             // 
             this.chkbxUniformes.AutoSize = true;
-            this.chkbxUniformes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(206)))), ((int)(((byte)(230)))));
+            this.chkbxUniformes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(235)))), ((int)(((byte)(247)))));
             this.chkbxUniformes.Enabled = false;
             this.chkbxUniformes.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkbxUniformes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
@@ -361,6 +368,7 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(235)))), ((int)(((byte)(247)))));
             this.tabPage2.Controls.Add(this.dgvPersonal);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
@@ -368,10 +376,10 @@
             this.tabPage2.Size = new System.Drawing.Size(823, 433);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "BUSQUEDA";
-            this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // tabPage1
             // 
+            this.tabPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(235)))), ((int)(((byte)(247)))));
             this.tabPage1.Controls.Add(this.crvSalida);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
@@ -379,12 +387,10 @@
             this.tabPage1.Size = new System.Drawing.Size(823, 433);
             this.tabPage1.TabIndex = 2;
             this.tabPage1.Text = "REPORTE";
-            this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // crvSalida
             // 
             this.crvSalida.ActiveViewIndex = -1;
-            this.crvSalida.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.crvSalida.Cursor = System.Windows.Forms.Cursors.Default;
             this.crvSalida.Dock = System.Windows.Forms.DockStyle.Fill;
             this.crvSalida.Location = new System.Drawing.Point(3, 3);
@@ -416,9 +422,6 @@
             // kryptonPage1
             // 
             this.kryptonPage1.AutoHiddenSlideSize = new System.Drawing.Size(200, 200);
-            this.kryptonPage1.Controls.Add(this.kryptonGroupBox2);
-            this.kryptonPage1.Controls.Add(this.kryptonGroupBox1);
-            this.kryptonPage1.Controls.Add(this.tabControl1);
             this.kryptonPage1.Flags = 65534;
             this.kryptonPage1.LastVisibleSet = true;
             this.kryptonPage1.MinimumSize = new System.Drawing.Size(50, 50);
@@ -430,6 +433,8 @@
             // 
             // kryptonGroupBox2
             // 
+            this.kryptonGroupBox2.CaptionOverlap = 0D;
+            this.kryptonGroupBox2.GroupBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.PanelRibbonInactive;
             this.kryptonGroupBox2.Location = new System.Drawing.Point(612, 4);
             this.kryptonGroupBox2.Name = "kryptonGroupBox2";
             // 
@@ -445,6 +450,8 @@
             // 
             // kryptonGroupBox1
             // 
+            this.kryptonGroupBox1.CaptionOverlap = 0D;
+            this.kryptonGroupBox1.GroupBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.PanelRibbonInactive;
             this.kryptonGroupBox1.Location = new System.Drawing.Point(12, 5);
             this.kryptonGroupBox1.Name = "kryptonGroupBox1";
             // 
@@ -537,8 +544,6 @@
             // kryptonPage2
             // 
             this.kryptonPage2.AutoHiddenSlideSize = new System.Drawing.Size(200, 200);
-            this.kryptonPage2.Controls.Add(this.kryptonGroupBox4);
-            this.kryptonPage2.Controls.Add(this.kryptonGroupBox3);
             this.kryptonPage2.Flags = 65534;
             this.kryptonPage2.LastVisibleSet = true;
             this.kryptonPage2.MinimumSize = new System.Drawing.Size(50, 50);
@@ -550,6 +555,8 @@
             // 
             // kryptonGroupBox4
             // 
+            this.kryptonGroupBox4.CaptionOverlap = 0D;
+            this.kryptonGroupBox4.GroupBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.PanelRibbonInactive;
             this.kryptonGroupBox4.Location = new System.Drawing.Point(3, 190);
             this.kryptonGroupBox4.Name = "kryptonGroupBox4";
             // 
@@ -570,10 +577,14 @@
             this.dgvFirmado.RowHeadersVisible = false;
             this.dgvFirmado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvFirmado.Size = new System.Drawing.Size(817, 413);
+            this.dgvFirmado.StateCommon.Background.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(235)))), ((int)(((byte)(247)))));
+            this.dgvFirmado.StateCommon.BackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.GridBackgroundList;
             this.dgvFirmado.TabIndex = 12;
             // 
             // kryptonGroupBox3
             // 
+            this.kryptonGroupBox3.CaptionOverlap = 0D;
+            this.kryptonGroupBox3.GroupBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.PanelRibbonInactive;
             this.kryptonGroupBox3.Location = new System.Drawing.Point(3, 5);
             this.kryptonGroupBox3.Name = "kryptonGroupBox3";
             // 
@@ -757,13 +768,60 @@
             this.txtNombreFirmado.TabIndex = 0;
             this.txtNombreFirmado.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtNombreFirmado_KeyDown);
             // 
+            // kryptonDockableNavigator2
+            // 
+            this.kryptonDockableNavigator2.Button.ButtonDisplayLogic = ComponentFactory.Krypton.Navigator.ButtonDisplayLogic.None;
+            this.kryptonDockableNavigator2.Button.CloseButtonDisplay = ComponentFactory.Krypton.Navigator.ButtonDisplay.Hide;
+            this.kryptonDockableNavigator2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.kryptonDockableNavigator2.Group.GroupBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.ButtonInputControl;
+            this.kryptonDockableNavigator2.Group.GroupBorderStyle = ComponentFactory.Krypton.Toolkit.PaletteBorderStyle.ButtonCustom2;
+            this.kryptonDockableNavigator2.Location = new System.Drawing.Point(0, 31);
+            this.kryptonDockableNavigator2.Name = "kryptonDockableNavigator2";
+            this.kryptonDockableNavigator2.Pages.AddRange(new ComponentFactory.Krypton.Navigator.KryptonPage[] {
+            this.kryptonPage3,
+            this.kryptonPage4});
+            this.kryptonDockableNavigator2.SelectedIndex = 0;
+            this.kryptonDockableNavigator2.Size = new System.Drawing.Size(847, 675);
+            this.kryptonDockableNavigator2.StateCommon.Page.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
+            this.kryptonDockableNavigator2.TabIndex = 9;
+            this.kryptonDockableNavigator2.Text = "kryptonDockableNavigator2";
+            // 
+            // kryptonPage3
+            // 
+            this.kryptonPage3.AutoHiddenSlideSize = new System.Drawing.Size(200, 200);
+            this.kryptonPage3.Controls.Add(this.kryptonGroupBox2);
+            this.kryptonPage3.Controls.Add(this.kryptonGroupBox1);
+            this.kryptonPage3.Controls.Add(this.tabControl1);
+            this.kryptonPage3.Flags = 65534;
+            this.kryptonPage3.LastVisibleSet = true;
+            this.kryptonPage3.MinimumSize = new System.Drawing.Size(50, 50);
+            this.kryptonPage3.Name = "kryptonPage3";
+            this.kryptonPage3.Size = new System.Drawing.Size(843, 646);
+            this.kryptonPage3.Text = "SALIDA";
+            this.kryptonPage3.ToolTipTitle = "Page ToolTip";
+            this.kryptonPage3.UniqueName = "72B6CA9884A342142F9E3662CA6DFBB1";
+            // 
+            // kryptonPage4
+            // 
+            this.kryptonPage4.AutoHiddenSlideSize = new System.Drawing.Size(200, 200);
+            this.kryptonPage4.Controls.Add(this.kryptonGroupBox4);
+            this.kryptonPage4.Controls.Add(this.kryptonGroupBox3);
+            this.kryptonPage4.Flags = 65534;
+            this.kryptonPage4.LastVisibleSet = true;
+            this.kryptonPage4.MinimumSize = new System.Drawing.Size(50, 50);
+            this.kryptonPage4.Name = "kryptonPage4";
+            this.kryptonPage4.Size = new System.Drawing.Size(843, 646);
+            this.kryptonPage4.Text = "FIRMAS";
+            this.kryptonPage4.ToolTipTitle = "Page ToolTip";
+            this.kryptonPage4.UniqueName = "207CC92FB639448F449DC3AA0545F4B6";
+            // 
             // FrmSalidaPersonal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(847, 706);
-            this.Controls.Add(this.kryptonDockableNavigator1);
+            this.Controls.Add(this.kryptonDockableNavigator2);
             this.Controls.Add(this.toolStrip1);
             this.Name = "FrmSalidaPersonal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -782,7 +840,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.kryptonDockableNavigator1)).EndInit();
             this.kryptonDockableNavigator1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPage1)).EndInit();
-            this.kryptonPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox2.Panel)).EndInit();
             this.kryptonGroupBox2.Panel.ResumeLayout(false);
             this.kryptonGroupBox2.Panel.PerformLayout();
@@ -794,7 +851,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox1)).EndInit();
             this.kryptonGroupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPage2)).EndInit();
-            this.kryptonPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox4.Panel)).EndInit();
             this.kryptonGroupBox4.Panel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox4)).EndInit();
@@ -805,6 +861,12 @@
             this.kryptonGroupBox3.Panel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox3)).EndInit();
             this.kryptonGroupBox3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonDockableNavigator2)).EndInit();
+            this.kryptonDockableNavigator2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonPage3)).EndInit();
+            this.kryptonPage3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonPage4)).EndInit();
+            this.kryptonPage4.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -866,5 +928,8 @@
         private ComponentFactory.Krypton.Toolkit.KryptonDataGridView dgvFirmado;
         private ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker dtpAnio;
         private System.Windows.Forms.ToolStripButton btnExportarFirmas;
+        private ComponentFactory.Krypton.Docking.KryptonDockableNavigator kryptonDockableNavigator2;
+        private ComponentFactory.Krypton.Navigator.KryptonPage kryptonPage3;
+        private ComponentFactory.Krypton.Navigator.KryptonPage kryptonPage4;
     }
 }

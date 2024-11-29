@@ -29,9 +29,6 @@
             Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormAtsSimplificado))
-            Me.gbRangoFechas = New System.Windows.Forms.GroupBox()
-            Me.Label95 = New System.Windows.Forms.Label()
-            Me.Label1 = New System.Windows.Forms.Label()
             Me.dtpFechaHasta = New System.Windows.Forms.DateTimePicker()
             Me.dtpFechaDesde = New System.Windows.Forms.DateTimePicker()
             Me.lblIdComprobanteCompra = New System.Windows.Forms.Label()
@@ -404,7 +401,8 @@
             Me.btnCargar = New System.Windows.Forms.ToolStripMenuItem()
             Me.btnGenerarXML = New System.Windows.Forms.ToolStripMenuItem()
             Me.btnReporte = New System.Windows.Forms.ToolStripMenuItem()
-            Me.gbRangoFechas.SuspendLayout()
+            Me.KryptonLabel1 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel2 = New Krypton.Toolkit.KryptonLabel()
             Me.tcATSSimplificado.SuspendLayout()
             Me.tpVentasATS.SuspendLayout()
             CType(Me.dgvVentasATS, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -434,50 +432,20 @@
             Me.MenuStrip1.SuspendLayout()
             Me.SuspendLayout()
             '
-            'gbRangoFechas
-            '
-            Me.gbRangoFechas.BackColor = System.Drawing.Color.White
-            Me.gbRangoFechas.Controls.Add(Me.Label95)
-            Me.gbRangoFechas.Controls.Add(Me.Label1)
-            Me.gbRangoFechas.Controls.Add(Me.dtpFechaHasta)
-            Me.gbRangoFechas.Controls.Add(Me.dtpFechaDesde)
-            Me.gbRangoFechas.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.gbRangoFechas.Location = New System.Drawing.Point(1, 34)
-            Me.gbRangoFechas.Name = "gbRangoFechas"
-            Me.gbRangoFechas.Size = New System.Drawing.Size(1071, 44)
-            Me.gbRangoFechas.TabIndex = 106
-            Me.gbRangoFechas.TabStop = False
-            '
-            'Label95
-            '
-            Me.Label95.AutoSize = True
-            Me.Label95.Location = New System.Drawing.Point(8, 18)
-            Me.Label95.Name = "Label95"
-            Me.Label95.Size = New System.Drawing.Size(110, 13)
-            Me.Label95.TabIndex = 3
-            Me.Label95.Text = "CARGAR DATOS DEL"
-            '
-            'Label1
-            '
-            Me.Label1.AutoSize = True
-            Me.Label1.Location = New System.Drawing.Point(419, 18)
-            Me.Label1.Name = "Label1"
-            Me.Label1.Size = New System.Drawing.Size(20, 13)
-            Me.Label1.TabIndex = 2
-            Me.Label1.Text = "AL"
-            '
             'dtpFechaHasta
             '
-            Me.dtpFechaHasta.Location = New System.Drawing.Point(444, 14)
+            Me.dtpFechaHasta.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.dtpFechaHasta.Location = New System.Drawing.Point(339, 43)
             Me.dtpFechaHasta.Name = "dtpFechaHasta"
-            Me.dtpFechaHasta.Size = New System.Drawing.Size(274, 21)
+            Me.dtpFechaHasta.Size = New System.Drawing.Size(206, 21)
             Me.dtpFechaHasta.TabIndex = 1
             '
             'dtpFechaDesde
             '
-            Me.dtpFechaDesde.Location = New System.Drawing.Point(124, 14)
+            Me.dtpFechaDesde.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.dtpFechaDesde.Location = New System.Drawing.Point(70, 43)
             Me.dtpFechaDesde.Name = "dtpFechaDesde"
-            Me.dtpFechaDesde.Size = New System.Drawing.Size(274, 21)
+            Me.dtpFechaDesde.Size = New System.Drawing.Size(206, 21)
             Me.dtpFechaDesde.TabIndex = 0
             '
             'lblIdComprobanteCompra
@@ -497,10 +465,10 @@
             Me.tcATSSimplificado.Controls.Add(Me.tpCodigosRetencionCompras)
             Me.tcATSSimplificado.Controls.Add(Me.tpResumenATS)
             Me.tcATSSimplificado.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.tcATSSimplificado.Location = New System.Drawing.Point(-1, 79)
+            Me.tcATSSimplificado.Location = New System.Drawing.Point(8, 69)
             Me.tcATSSimplificado.Name = "tcATSSimplificado"
             Me.tcATSSimplificado.SelectedIndex = 0
-            Me.tcATSSimplificado.Size = New System.Drawing.Size(1077, 628)
+            Me.tcATSSimplificado.Size = New System.Drawing.Size(1087, 628)
             Me.tcATSSimplificado.TabIndex = 108
             '
             'tpVentasATS
@@ -517,7 +485,7 @@
             Me.tpVentasATS.Location = New System.Drawing.Point(4, 22)
             Me.tpVentasATS.Name = "tpVentasATS"
             Me.tpVentasATS.Padding = New System.Windows.Forms.Padding(3)
-            Me.tpVentasATS.Size = New System.Drawing.Size(1069, 602)
+            Me.tpVentasATS.Size = New System.Drawing.Size(1079, 602)
             Me.tpVentasATS.TabIndex = 1
             Me.tpVentasATS.Text = "VENTAS"
             '
@@ -528,7 +496,8 @@
             Me.dgvVentasATS.AllowUserToResizeRows = False
             DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
             Me.dgvVentasATS.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
-            Me.dgvVentasATS.BackgroundColor = System.Drawing.Color.White
+            Me.dgvVentasATS.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
+            Me.dgvVentasATS.BorderStyle = System.Windows.Forms.BorderStyle.None
             Me.dgvVentasATS.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
             Me.dgvVentasATS.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
             DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
@@ -539,12 +508,13 @@
             DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
             DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
             Me.dgvVentasATS.DefaultCellStyle = DataGridViewCellStyle2
-            Me.dgvVentasATS.Location = New System.Drawing.Point(0, 0)
+            Me.dgvVentasATS.Dock = System.Windows.Forms.DockStyle.Fill
+            Me.dgvVentasATS.Location = New System.Drawing.Point(3, 3)
             Me.dgvVentasATS.Name = "dgvVentasATS"
             Me.dgvVentasATS.ReadOnly = True
             Me.dgvVentasATS.RowHeadersVisible = False
             Me.dgvVentasATS.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvVentasATS.Size = New System.Drawing.Size(1069, 519)
+            Me.dgvVentasATS.Size = New System.Drawing.Size(1073, 596)
             Me.dgvVentasATS.TabIndex = 1
             '
             'gbTotalesVentas
@@ -819,9 +789,9 @@
             Me.dgvDetalleComprobanteRetencionVenta.AllowUserToAddRows = False
             Me.dgvDetalleComprobanteRetencionVenta.AllowUserToDeleteRows = False
             Me.dgvDetalleComprobanteRetencionVenta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-            Me.dgvDetalleComprobanteRetencionVenta.Location = New System.Drawing.Point(0, 435)
+            Me.dgvDetalleComprobanteRetencionVenta.Location = New System.Drawing.Point(214, 435)
             Me.dgvDetalleComprobanteRetencionVenta.Name = "dgvDetalleComprobanteRetencionVenta"
-            Me.dgvDetalleComprobanteRetencionVenta.Size = New System.Drawing.Size(1069, 84)
+            Me.dgvDetalleComprobanteRetencionVenta.Size = New System.Drawing.Size(780, 84)
             Me.dgvDetalleComprobanteRetencionVenta.TabIndex = 3
             '
             'dgvComprobanteRetencionVenta
@@ -829,9 +799,9 @@
             Me.dgvComprobanteRetencionVenta.AllowUserToAddRows = False
             Me.dgvComprobanteRetencionVenta.AllowUserToDeleteRows = False
             Me.dgvComprobanteRetencionVenta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-            Me.dgvComprobanteRetencionVenta.Location = New System.Drawing.Point(0, 346)
+            Me.dgvComprobanteRetencionVenta.Location = New System.Drawing.Point(127, 346)
             Me.dgvComprobanteRetencionVenta.Name = "dgvComprobanteRetencionVenta"
-            Me.dgvComprobanteRetencionVenta.Size = New System.Drawing.Size(1069, 83)
+            Me.dgvComprobanteRetencionVenta.Size = New System.Drawing.Size(798, 83)
             Me.dgvComprobanteRetencionVenta.TabIndex = 2
             '
             'dgvDatosAgrupadosVentas
@@ -840,10 +810,10 @@
             Me.dgvDatosAgrupadosVentas.AllowUserToDeleteRows = False
             Me.dgvDatosAgrupadosVentas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
             Me.dgvDatosAgrupadosVentas.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.TIPO_ID, Me.NUMERO_ID, Me.SUBTOTAL_0, Me.SUBTOTAL_12, Me.DESCUENTO, Me.SUBTOTAL, Me.IVA, Me.TOTAL, Me.VALOR_RET_IVA, Me.VALOR_RET_RENTA, Me.CANTIDAD})
-            Me.dgvDatosAgrupadosVentas.Location = New System.Drawing.Point(0, 209)
+            Me.dgvDatosAgrupadosVentas.Location = New System.Drawing.Point(214, 209)
             Me.dgvDatosAgrupadosVentas.Name = "dgvDatosAgrupadosVentas"
             Me.dgvDatosAgrupadosVentas.ReadOnly = True
-            Me.dgvDatosAgrupadosVentas.Size = New System.Drawing.Size(1069, 136)
+            Me.dgvDatosAgrupadosVentas.Size = New System.Drawing.Size(733, 136)
             Me.dgvDatosAgrupadosVentas.TabIndex = 59
             '
             'TIPO_ID
@@ -930,7 +900,7 @@
             Me.tpNotasCredito.Location = New System.Drawing.Point(4, 22)
             Me.tpNotasCredito.Name = "tpNotasCredito"
             Me.tpNotasCredito.Padding = New System.Windows.Forms.Padding(3)
-            Me.tpNotasCredito.Size = New System.Drawing.Size(1069, 602)
+            Me.tpNotasCredito.Size = New System.Drawing.Size(1079, 602)
             Me.tpNotasCredito.TabIndex = 4
             Me.tpNotasCredito.Text = "NOTAS DE CRÉDITO"
             '
@@ -941,15 +911,17 @@
             Me.dgvNotasCredito.AllowUserToResizeRows = False
             DataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
             Me.dgvNotasCredito.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle3
-            Me.dgvNotasCredito.BackgroundColor = System.Drawing.Color.White
+            Me.dgvNotasCredito.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
+            Me.dgvNotasCredito.BorderStyle = System.Windows.Forms.BorderStyle.None
             Me.dgvNotasCredito.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
             Me.dgvNotasCredito.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-            Me.dgvNotasCredito.Location = New System.Drawing.Point(0, 0)
+            Me.dgvNotasCredito.Dock = System.Windows.Forms.DockStyle.Fill
+            Me.dgvNotasCredito.Location = New System.Drawing.Point(3, 3)
             Me.dgvNotasCredito.Name = "dgvNotasCredito"
             Me.dgvNotasCredito.ReadOnly = True
             Me.dgvNotasCredito.RowHeadersVisible = False
             Me.dgvNotasCredito.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvNotasCredito.Size = New System.Drawing.Size(1069, 520)
+            Me.dgvNotasCredito.Size = New System.Drawing.Size(1073, 596)
             Me.dgvNotasCredito.TabIndex = 61
             '
             'GroupBox1
@@ -1268,7 +1240,7 @@
             Me.tpComprasATS.Location = New System.Drawing.Point(4, 22)
             Me.tpComprasATS.Name = "tpComprasATS"
             Me.tpComprasATS.Padding = New System.Windows.Forms.Padding(3)
-            Me.tpComprasATS.Size = New System.Drawing.Size(1069, 602)
+            Me.tpComprasATS.Size = New System.Drawing.Size(1079, 602)
             Me.tpComprasATS.TabIndex = 0
             Me.tpComprasATS.Text = "COMPRAS"
             '
@@ -1279,15 +1251,17 @@
             Me.dgvComprasATS.AllowUserToResizeRows = False
             DataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
             Me.dgvComprasATS.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle4
-            Me.dgvComprasATS.BackgroundColor = System.Drawing.Color.White
+            Me.dgvComprasATS.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
+            Me.dgvComprasATS.BorderStyle = System.Windows.Forms.BorderStyle.None
             Me.dgvComprasATS.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
             Me.dgvComprasATS.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-            Me.dgvComprasATS.Location = New System.Drawing.Point(0, 0)
+            Me.dgvComprasATS.Dock = System.Windows.Forms.DockStyle.Fill
+            Me.dgvComprasATS.Location = New System.Drawing.Point(3, 3)
             Me.dgvComprasATS.Name = "dgvComprasATS"
             Me.dgvComprasATS.ReadOnly = True
             Me.dgvComprasATS.RowHeadersVisible = False
             Me.dgvComprasATS.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvComprasATS.Size = New System.Drawing.Size(1069, 520)
+            Me.dgvComprasATS.Size = New System.Drawing.Size(1073, 596)
             Me.dgvComprasATS.TabIndex = 0
             '
             'gbTotalesCompras
@@ -1563,7 +1537,7 @@
             Me.tpCodigosRetencionCompras.Location = New System.Drawing.Point(4, 22)
             Me.tpCodigosRetencionCompras.Name = "tpCodigosRetencionCompras"
             Me.tpCodigosRetencionCompras.Padding = New System.Windows.Forms.Padding(3)
-            Me.tpCodigosRetencionCompras.Size = New System.Drawing.Size(1069, 602)
+            Me.tpCodigosRetencionCompras.Size = New System.Drawing.Size(1079, 602)
             Me.tpCodigosRetencionCompras.TabIndex = 3
             Me.tpCodigosRetencionCompras.Text = "CODIGO RETENCIONES COMPRAS"
             Me.tpCodigosRetencionCompras.UseVisualStyleBackColor = True
@@ -1573,7 +1547,8 @@
             Me.dgvCodigosRetencionCompras.AllowUserToAddRows = False
             Me.dgvCodigosRetencionCompras.AllowUserToDeleteRows = False
             Me.dgvCodigosRetencionCompras.AllowUserToResizeRows = False
-            Me.dgvCodigosRetencionCompras.BackgroundColor = System.Drawing.Color.White
+            Me.dgvCodigosRetencionCompras.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
+            Me.dgvCodigosRetencionCompras.BorderStyle = System.Windows.Forms.BorderStyle.None
             Me.dgvCodigosRetencionCompras.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
             Me.dgvCodigosRetencionCompras.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
             Me.dgvCodigosRetencionCompras.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ID_DETALLE_RETENCION_COMPRA, Me.EJ_FISCAL_DETALLE_RETENCION_COMPRA, Me.CODIGO_DETALLE_RETENCION_COMPRA, Me.BASE_IMPONIBLE_DETALLE_RETENCION_COMPRA, Me.IMPUESTO_DETALLE_RETENCION_COMPRA, Me.PORCENTAJE_DETALLE_RETENCION_COMPRA, Me.VALOR_DETALLE_RETENCION_COMPRA, Me.ESTADO_DETALLE_RETENCION_COMPRA, Me.ID_COMPROBANTE_RETENCION_COMPRA, Me.ID_COMPROBANTE_COMPRA})
@@ -1583,7 +1558,7 @@
             Me.dgvCodigosRetencionCompras.ReadOnly = True
             Me.dgvCodigosRetencionCompras.RowHeadersVisible = False
             Me.dgvCodigosRetencionCompras.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvCodigosRetencionCompras.Size = New System.Drawing.Size(1063, 596)
+            Me.dgvCodigosRetencionCompras.Size = New System.Drawing.Size(1073, 596)
             Me.dgvCodigosRetencionCompras.TabIndex = 0
             '
             'ID_DETALLE_RETENCION_COMPRA
@@ -1655,7 +1630,7 @@
             '
             'tpResumenATS
             '
-            Me.tpResumenATS.BackColor = System.Drawing.Color.White
+            Me.tpResumenATS.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.tpResumenATS.Controls.Add(Me.gbCabecera)
             Me.tpResumenATS.Controls.Add(Me.lblSinRetencion)
             Me.tpResumenATS.Controls.Add(Me.gbRetencionesEfectuaron)
@@ -1667,7 +1642,7 @@
             Me.tpResumenATS.Location = New System.Drawing.Point(4, 22)
             Me.tpResumenATS.Name = "tpResumenATS"
             Me.tpResumenATS.Padding = New System.Windows.Forms.Padding(3)
-            Me.tpResumenATS.Size = New System.Drawing.Size(1069, 602)
+            Me.tpResumenATS.Size = New System.Drawing.Size(1079, 602)
             Me.tpResumenATS.TabIndex = 2
             Me.tpResumenATS.Text = "RESUMEN"
             '
@@ -1683,10 +1658,11 @@
             'Label36
             '
             Me.Label36.AutoSize = True
-            Me.Label36.Font = New System.Drawing.Font("Consolas", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Label36.Font = New System.Drawing.Font("Roboto", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Label36.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
             Me.Label36.Location = New System.Drawing.Point(292, 9)
             Me.Label36.Name = "Label36"
-            Me.Label36.Size = New System.Drawing.Size(467, 28)
+            Me.Label36.Size = New System.Drawing.Size(503, 29)
             Me.Label36.TabIndex = 0
             Me.Label36.Text = "TALÓN RESUMEN - ANEXO TRANSACCIONAL"
             '
@@ -1710,9 +1686,10 @@
             Me.gbRetencionesEfectuaron.Controls.Add(Me.Label32)
             Me.gbRetencionesEfectuaron.Controls.Add(Me.TextBox76)
             Me.gbRetencionesEfectuaron.Controls.Add(Me.ShapeContainer6)
-            Me.gbRetencionesEfectuaron.Location = New System.Drawing.Point(0, 449)
+            Me.gbRetencionesEfectuaron.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
+            Me.gbRetencionesEfectuaron.Location = New System.Drawing.Point(0, 450)
             Me.gbRetencionesEfectuaron.Name = "gbRetencionesEfectuaron"
-            Me.gbRetencionesEfectuaron.Size = New System.Drawing.Size(571, 154)
+            Me.gbRetencionesEfectuaron.Size = New System.Drawing.Size(571, 147)
             Me.gbRetencionesEfectuaron.TabIndex = 5
             Me.gbRetencionesEfectuaron.TabStop = False
             Me.gbRetencionesEfectuaron.Text = "RESUMEN DE RETENCION QUE LE EFECTUARON EN EL PERIODO"
@@ -1804,7 +1781,7 @@
             Me.ShapeContainer6.Margin = New System.Windows.Forms.Padding(0)
             Me.ShapeContainer6.Name = "ShapeContainer6"
             Me.ShapeContainer6.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.LineShape50, Me.LineShape49, Me.LineShape48, Me.LineShape47, Me.LineShape46})
-            Me.ShapeContainer6.Size = New System.Drawing.Size(565, 134)
+            Me.ShapeContainer6.Size = New System.Drawing.Size(565, 127)
             Me.ShapeContainer6.TabIndex = 105
             Me.ShapeContainer6.TabStop = False
             '
@@ -1872,9 +1849,10 @@
             Me.gbRetencionesFuenteIva.Controls.Add(Me.Label25)
             Me.gbRetencionesFuenteIva.Controls.Add(Me.Label26)
             Me.gbRetencionesFuenteIva.Controls.Add(Me.ShapeContainer5)
-            Me.gbRetencionesFuenteIva.Location = New System.Drawing.Point(574, 374)
+            Me.gbRetencionesFuenteIva.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
+            Me.gbRetencionesFuenteIva.Location = New System.Drawing.Point(574, 383)
             Me.gbRetencionesFuenteIva.Name = "gbRetencionesFuenteIva"
-            Me.gbRetencionesFuenteIva.Size = New System.Drawing.Size(495, 229)
+            Me.gbRetencionesFuenteIva.Size = New System.Drawing.Size(495, 213)
             Me.gbRetencionesFuenteIva.TabIndex = 3
             Me.gbRetencionesFuenteIva.TabStop = False
             Me.gbRetencionesFuenteIva.Text = "RETENCIONES EN LA FUENTE DEL IVA"
@@ -1921,7 +1899,7 @@
             'Label80
             '
             Me.Label80.AutoSize = True
-            Me.Label80.Location = New System.Drawing.Point(275, 195)
+            Me.Label80.Location = New System.Drawing.Point(154, 192)
             Me.Label80.Name = "Label80"
             Me.Label80.Size = New System.Drawing.Size(45, 13)
             Me.Label80.TabIndex = 44
@@ -1973,7 +1951,7 @@
             '
             Me.TextBox75.BackColor = System.Drawing.Color.White
             Me.TextBox75.BorderStyle = System.Windows.Forms.BorderStyle.None
-            Me.TextBox75.Location = New System.Drawing.Point(406, 195)
+            Me.TextBox75.Location = New System.Drawing.Point(406, 192)
             Me.TextBox75.Name = "TextBox75"
             Me.TextBox75.ReadOnly = True
             Me.TextBox75.Size = New System.Drawing.Size(68, 14)
@@ -2050,7 +2028,7 @@
             Me.ShapeContainer5.Margin = New System.Windows.Forms.Padding(0)
             Me.ShapeContainer5.Name = "ShapeContainer5"
             Me.ShapeContainer5.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.LineShape55, Me.LineShape45, Me.LineShape44, Me.LineShape43, Me.LineShape42, Me.LineShape41, Me.LineShape40, Me.LineShape39, Me.LineShape38})
-            Me.ShapeContainer5.Size = New System.Drawing.Size(489, 209)
+            Me.ShapeContainer5.Size = New System.Drawing.Size(489, 193)
             Me.ShapeContainer5.TabIndex = 103
             Me.ShapeContainer5.TabStop = False
             '
@@ -2157,6 +2135,7 @@
             Me.gbVentas.Controls.Add(Me.Label23)
             Me.gbVentas.Controls.Add(Me.Label24)
             Me.gbVentas.Controls.Add(Me.ShapeContainer2)
+            Me.gbVentas.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
             Me.gbVentas.Location = New System.Drawing.Point(0, 259)
             Me.gbVentas.Name = "gbVentas"
             Me.gbVentas.Size = New System.Drawing.Size(571, 115)
@@ -2557,9 +2536,10 @@
             Me.gbRetencionesFuenteRenta.Controls.Add(Me.Label6)
             Me.gbRetencionesFuenteRenta.Controls.Add(Me.Label51)
             Me.gbRetencionesFuenteRenta.Controls.Add(Me.ShapeContainer4)
-            Me.gbRetencionesFuenteRenta.Location = New System.Drawing.Point(574, 34)
+            Me.gbRetencionesFuenteRenta.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
+            Me.gbRetencionesFuenteRenta.Location = New System.Drawing.Point(574, 43)
             Me.gbRetencionesFuenteRenta.Name = "gbRetencionesFuenteRenta"
-            Me.gbRetencionesFuenteRenta.Size = New System.Drawing.Size(495, 340)
+            Me.gbRetencionesFuenteRenta.Size = New System.Drawing.Size(502, 342)
             Me.gbRetencionesFuenteRenta.TabIndex = 1
             Me.gbRetencionesFuenteRenta.TabStop = False
             Me.gbRetencionesFuenteRenta.Text = "RETENCIONES EN LA FUENTE DEL IMPUESTO A LA RENTA"
@@ -3692,7 +3672,7 @@
             Me.ShapeContainer4.Margin = New System.Windows.Forms.Padding(0)
             Me.ShapeContainer4.Name = "ShapeContainer4"
             Me.ShapeContainer4.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.LineShape37, Me.LineShape36, Me.LineShape35, Me.LineShape34, Me.LineShape33, Me.LineShape32, Me.LineShape31, Me.LineShape30, Me.LineShape29, Me.LineShape28, Me.LineShape27, Me.LineShape26, Me.LineShape25, Me.LineShape24, Me.LineShape23, Me.LineShape22, Me.LineShape21, Me.LineShape20, Me.LineShape19})
-            Me.ShapeContainer4.Size = New System.Drawing.Size(489, 320)
+            Me.ShapeContainer4.Size = New System.Drawing.Size(496, 322)
             Me.ShapeContainer4.TabIndex = 102
             Me.ShapeContainer4.TabStop = False
             '
@@ -3904,9 +3884,10 @@
             Me.gbCompras.Controls.Add(Me.Label3)
             Me.gbCompras.Controls.Add(Me.Label2)
             Me.gbCompras.Controls.Add(Me.ShapeContainer1)
-            Me.gbCompras.Location = New System.Drawing.Point(0, 34)
+            Me.gbCompras.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
+            Me.gbCompras.Location = New System.Drawing.Point(0, 43)
             Me.gbCompras.Name = "gbCompras"
-            Me.gbCompras.Size = New System.Drawing.Size(571, 224)
+            Me.gbCompras.Size = New System.Drawing.Size(571, 215)
             Me.gbCompras.TabIndex = 0
             Me.gbCompras.TabStop = False
             Me.gbCompras.Text = "COMPRAS"
@@ -3960,6 +3941,7 @@
             'Label35
             '
             Me.Label35.AutoSize = True
+            Me.Label35.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
             Me.Label35.Location = New System.Drawing.Point(2, 145)
             Me.Label35.Name = "Label35"
             Me.Label35.Size = New System.Drawing.Size(101, 13)
@@ -3969,6 +3951,7 @@
             'Label34
             '
             Me.Label34.AutoSize = True
+            Me.Label34.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
             Me.Label34.Location = New System.Drawing.Point(2, 120)
             Me.Label34.Name = "Label34"
             Me.Label34.Size = New System.Drawing.Size(108, 13)
@@ -4266,6 +4249,7 @@
             'Label4
             '
             Me.Label4.AutoSize = True
+            Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
             Me.Label4.Location = New System.Drawing.Point(2, 70)
             Me.Label4.Name = "Label4"
             Me.Label4.Size = New System.Drawing.Size(98, 13)
@@ -4275,6 +4259,7 @@
             'Label3
             '
             Me.Label3.AutoSize = True
+            Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
             Me.Label3.Location = New System.Drawing.Point(2, 95)
             Me.Label3.Name = "Label3"
             Me.Label3.Size = New System.Drawing.Size(298, 13)
@@ -4284,6 +4269,7 @@
             'Label2
             '
             Me.Label2.AutoSize = True
+            Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
             Me.Label2.Location = New System.Drawing.Point(2, 45)
             Me.Label2.Name = "Label2"
             Me.Label2.Size = New System.Drawing.Size(61, 13)
@@ -4296,7 +4282,7 @@
             Me.ShapeContainer1.Margin = New System.Windows.Forms.Padding(0)
             Me.ShapeContainer1.Name = "ShapeContainer1"
             Me.ShapeContainer1.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.LineShape51, Me.LineShape10, Me.LineShape9, Me.LineShape8, Me.LineShape7, Me.LineShape6, Me.LineShape5, Me.LineShape4, Me.LineShape3, Me.LineShape2, Me.LineShape1})
-            Me.ShapeContainer1.Size = New System.Drawing.Size(565, 204)
+            Me.ShapeContainer1.Size = New System.Drawing.Size(565, 195)
             Me.ShapeContainer1.TabIndex = 34
             Me.ShapeContainer1.TabStop = False
             '
@@ -4405,6 +4391,7 @@
             Me.gbComprobantesAnulados.Controls.Add(Me.Label28)
             Me.gbComprobantesAnulados.Controls.Add(Me.TextBox66)
             Me.gbComprobantesAnulados.Controls.Add(Me.ShapeContainer3)
+            Me.gbComprobantesAnulados.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
             Me.gbComprobantesAnulados.Location = New System.Drawing.Point(0, 374)
             Me.gbComprobantesAnulados.Name = "gbComprobantesAnulados"
             Me.gbComprobantesAnulados.Size = New System.Drawing.Size(571, 75)
@@ -4488,7 +4475,7 @@
             Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
             Me.MenuStrip1.Name = "MenuStrip1"
             Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(7, 2, 0, 2)
-            Me.MenuStrip1.Size = New System.Drawing.Size(1076, 32)
+            Me.MenuStrip1.Size = New System.Drawing.Size(1100, 32)
             Me.MenuStrip1.TabIndex = 187
             Me.MenuStrip1.Text = "msIngresoBodega"
             '
@@ -4529,15 +4516,34 @@
             Me.btnReporte.Text = "REPORTE"
             Me.btnReporte.Visible = False
             '
+            'KryptonLabel1
+            '
+            Me.KryptonLabel1.Location = New System.Drawing.Point(13, 44)
+            Me.KryptonLabel1.Name = "KryptonLabel1"
+            Me.KryptonLabel1.Size = New System.Drawing.Size(45, 20)
+            Me.KryptonLabel1.TabIndex = 188
+            Me.KryptonLabel1.Values.Text = "Desde"
+            '
+            'KryptonLabel2
+            '
+            Me.KryptonLabel2.Location = New System.Drawing.Point(287, 43)
+            Me.KryptonLabel2.Name = "KryptonLabel2"
+            Me.KryptonLabel2.Size = New System.Drawing.Size(41, 20)
+            Me.KryptonLabel2.TabIndex = 189
+            Me.KryptonLabel2.Values.Text = "Hasta"
+            '
             'FormAtsSimplificado
             '
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-            Me.BackColor = System.Drawing.Color.White
-            Me.ClientSize = New System.Drawing.Size(1076, 696)
+            Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(185, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(227, Byte), Integer))
+            Me.ClientSize = New System.Drawing.Size(1100, 696)
+            Me.Controls.Add(Me.KryptonLabel2)
+            Me.Controls.Add(Me.KryptonLabel1)
             Me.Controls.Add(Me.MenuStrip1)
+            Me.Controls.Add(Me.dtpFechaHasta)
             Me.Controls.Add(Me.tcATSSimplificado)
-            Me.Controls.Add(Me.gbRangoFechas)
+            Me.Controls.Add(Me.dtpFechaDesde)
             Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
             Me.MaximizeBox = False
             Me.MinimizeBox = False
@@ -4548,8 +4554,6 @@
             Or Krypton.Toolkit.PaletteDrawBorders.Right), Krypton.Toolkit.PaletteDrawBorders)
             Me.StateActive.Border.Rounding = 5.0!
             Me.Text = "ATS SIMPLIFICADO"
-            Me.gbRangoFechas.ResumeLayout(False)
-            Me.gbRangoFechas.PerformLayout()
             Me.tcATSSimplificado.ResumeLayout(False)
             Me.tpVentasATS.ResumeLayout(False)
             Me.tpVentasATS.PerformLayout()
@@ -4595,9 +4599,7 @@
             Me.PerformLayout()
 
         End Sub
-        Friend WithEvents gbRangoFechas As System.Windows.Forms.GroupBox
         Friend WithEvents lblIdComprobanteCompra As System.Windows.Forms.Label
-        Friend WithEvents Label1 As System.Windows.Forms.Label
         Friend WithEvents dtpFechaHasta As System.Windows.Forms.DateTimePicker
         Friend WithEvents dtpFechaDesde As System.Windows.Forms.DateTimePicker
         Friend WithEvents tcATSSimplificado As System.Windows.Forms.TabControl
@@ -4955,7 +4957,6 @@
         Friend WithEvents btnCargar As System.Windows.Forms.ToolStripMenuItem
         Friend WithEvents btnGenerarXML As System.Windows.Forms.ToolStripMenuItem
         Friend WithEvents btnReporte As System.Windows.Forms.ToolStripMenuItem
-        Friend WithEvents Label95 As System.Windows.Forms.Label
         Friend WithEvents ID_DETALLE_RETENCION_COMPRA As System.Windows.Forms.DataGridViewTextBoxColumn
         Friend WithEvents EJ_FISCAL_DETALLE_RETENCION_COMPRA As System.Windows.Forms.DataGridViewTextBoxColumn
         Friend WithEvents CODIGO_DETALLE_RETENCION_COMPRA As System.Windows.Forms.DataGridViewTextBoxColumn
@@ -4970,5 +4971,7 @@
         Friend WithEvents Label96 As System.Windows.Forms.Label
         Friend WithEvents TextBox103 As System.Windows.Forms.TextBox
         Friend WithEvents Label97 As System.Windows.Forms.Label
+        Friend WithEvents KryptonLabel1 As Krypton.Toolkit.KryptonLabel
+        Friend WithEvents KryptonLabel2 As Krypton.Toolkit.KryptonLabel
     End Class
 End Namespace

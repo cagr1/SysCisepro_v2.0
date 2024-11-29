@@ -5,6 +5,9 @@ Imports ClassLibraryCisepro.ENUMS
 
 Namespace FORMULARIOS.CONTABILIDAD.LIQUIDACIONES
     Public Class FormAgregarDiarioNoDeducibles
+        Private Sub FormAgregarDiarioNoDeducibles_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+        End Sub
         'ReadOnly _tipoCon = [Enum].Parse(GetType(TipoConexion), 0) ' CISEPRO
         'Public varDetallePlanCuentas As String
         'Public varValorDebe As Decimal = 0

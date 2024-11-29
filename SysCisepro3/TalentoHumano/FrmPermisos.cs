@@ -237,27 +237,27 @@ namespace SysCisepro3.TalentoHumano
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             if (KryptonMessageBox.Show(@"Desea guardar el registro actual?",
-                   "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) !=
+                   "Mensaje del Sistema", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) !=
                DialogResult.Yes) return;
 
             if (txtIdPersonal.Text.Trim().Length == 0 || txtSitio.Text.Trim().Length == 0 || txtObservacion.Text.Trim().Length == 0 ||
                 string.IsNullOrEmpty(cbmMotivo.Text))
             {
                 KryptonMessageBox.Show(@"Debe definir los datos y tipo de permiso para guardar!",
-                    "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+                    "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
                 return;
             }
 
             if (dtpDesde.Value > dtpHasta.Value)
             {
                 KryptonMessageBox.Show(@"La fecha de inicio debe ser mayor o igual a la fecha fin!",
-                    "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+                    "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
                 return;
             }
             if (Convert.ToInt32(cbmMotivo.SelectedValue) == 33 && txtCertificado.Text.Trim().Length == 0)
             {
                 KryptonMessageBox.Show(@"Seleccione el documento PDF",
-                    "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+                    "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
                 return;
             }
 
@@ -295,7 +295,7 @@ namespace SysCisepro3.TalentoHumano
             }
             catch (Exception ex)
             {
-                KryptonMessageBox.Show(@"Error al procesar datos: " + ex.Message, "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+                KryptonMessageBox.Show(@"Error al procesar datos: " + ex.Message, "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
                 return;
             }
             var user = Usuario.Datos.ToString();
@@ -324,14 +324,14 @@ namespace SysCisepro3.TalentoHumano
 
                 CargarAsignaciones(string.Empty, _objRegistroPermisoPersonal.IdRegistro);
             }
-            KryptonMessageBox.Show((string)res[1], "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+            KryptonMessageBox.Show((string)res[1], "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
         }
 
         private void btnAnular_Click(object sender, EventArgs e)
         {
             if (listView2.Items.Count == 0 || dtpFecha.Tag == null) return;
 
-            if (KryptonMessageBox.Show(@"Desea anular el registro seleccioando?", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) != DialogResult.Yes) return;
+            if (KryptonMessageBox.Show(@"Desea anular el registro seleccioando?", "Mensaje del Sistema", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) != DialogResult.Yes) return;
 
             _sqlCommands.Clear();
 
@@ -365,7 +365,7 @@ namespace SysCisepro3.TalentoHumano
                 txtCertificado.Clear();
                 CargarAsignaciones(string.Empty, 0);
             }
-            KryptonMessageBox.Show((string)res[1], "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+            KryptonMessageBox.Show((string)res[1], "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -471,7 +471,7 @@ namespace SysCisepro3.TalentoHumano
             catch (Exception ex)
             {
                 listView2.Items.Clear();
-                KryptonMessageBox.Show(@"Error al cargar detalles: " + ex.Message, "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+                KryptonMessageBox.Show(@"Error al cargar detalles: " + ex.Message, "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
             }
         }
 
@@ -612,7 +612,7 @@ namespace SysCisepro3.TalentoHumano
             btnCancelar.Enabled = false;
             cbmMotivo.SelectedIndex = 0;
             Label1.Text = @"0 REGISTRO(S)";
-            KryptonMessageBox.Show(@"Para registrar detalle de VACACONES utlize la opción correspondiente del sistema!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+            KryptonMessageBox.Show(@"Para registrar detalle de VACACONES utlize la opción correspondiente del sistema!", "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
         }
 
         private void txtNumDoc_KeyPress(object sender, KeyPressEventArgs e)
@@ -624,7 +624,7 @@ namespace SysCisepro3.TalentoHumano
         {
             if (listView2.Items.Count == 0)
             {
-                KryptonMessageBox.Show(@"NO HAY DATOS PARA EXPORTAR!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+                KryptonMessageBox.Show(@"NO HAY DATOS PARA EXPORTAR!", "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
                 return;
             }
 
@@ -720,11 +720,11 @@ namespace SysCisepro3.TalentoHumano
                 app.Visible = true;
                 app.DisplayAlerts = true;
                 //workbook.SaveAs(sfd.FileName, XlFileFormat.xlWorkbookNormal, Type.Missing, Type.Missing, Type.Missing, Type.Missing, XlSaveAsAccessMode.xlExclusive, Type.Missing, Type.Missing, Type.Missing, Type.Missing);
-                KryptonMessageBox.Show(@"ARCHIVO generado correctamente!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+                KryptonMessageBox.Show(@"ARCHIVO generado correctamente!", "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
             }
             catch
             {
-                KryptonMessageBox.Show(@"HUBO UN PROBLEMA AL EXPORTAR DATOS!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error);
+                KryptonMessageBox.Show(@"HUBO UN PROBLEMA AL EXPORTAR DATOS!", "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error);
             }
         }
 
@@ -747,7 +747,7 @@ namespace SysCisepro3.TalentoHumano
             ListViewItem data = listView2.SelectedItems[0];
             
             if (KryptonMessageBox.Show(@"El registro seleccionado corresponde a la solicitud n° " + data.SubItems[0].Text.ToString() + @" de permisos. Desea IMPRIMIR la solicitud correspondiente?",
-                   "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) !=
+                   "Mensaje del Sistema", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) !=
                DialogResult.Yes) return;
             if (data == null) return;
             
@@ -808,7 +808,7 @@ namespace SysCisepro3.TalentoHumano
             catch (Exception ex)
             {
                 KryptonMessageBox.Show(@"Error al generar solicitud. Por favor, contácte al administrador!",
-                    "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+                    "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
             }
 
             //try
@@ -859,7 +859,7 @@ namespace SysCisepro3.TalentoHumano
             //catch (Exception)
             //{
             //    KryptonMessageBox.Show(@"Error al generar solicitud. Por favor, contácte al administrador!",
-            //        "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+            //        "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
             //}
 
 
@@ -1020,7 +1020,7 @@ namespace SysCisepro3.TalentoHumano
                 var data = _objRegistroPermisoPersonal.BuscarIdRegistroPermiso(TipoCon, Convert.ToInt32(id));
                 if (data.Rows.Count == 0)
                 {
-                    KryptonMessageBox.Show(@"NO SE ENCUENTRA CERTIFICADO PARA EL REGISTRO SELECCIONADO!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+                    KryptonMessageBox.Show(@"NO SE ENCUENTRA CERTIFICADO PARA EL REGISTRO SELECCIONADO!", "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
                     return;
                 }
 
@@ -1040,7 +1040,7 @@ namespace SysCisepro3.TalentoHumano
             }
             catch (Exception ex)
             {
-                KryptonMessageBox.Show(@"Error al buscar certificado " + ex.Message, "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+                KryptonMessageBox.Show(@"Error al buscar certificado " + ex.Message, "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
             }
         }
 

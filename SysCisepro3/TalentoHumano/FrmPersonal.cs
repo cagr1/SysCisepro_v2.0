@@ -534,7 +534,7 @@ namespace SysCisepro3.TalentoHumano
             }
             catch (Exception ex)
             {
-                KryptonMessageBox.Show(@"Error al cargar detalles del personal: " + ex.Message, "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+                KryptonMessageBox.Show(@"Error al cargar detalles del personal: " + ex.Message, "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
             }
         }
 
@@ -805,7 +805,7 @@ namespace SysCisepro3.TalentoHumano
                         lblValCon.Image = Resources.cancel_24dp_FILL0_wght400_GRAD0_opsz24;
                         lblValCon.Tag = 0;
                         txtContrato.Tag = @"NÚMERO DE CONTRATO YA SE ENCUENTRA REGISTRADO PARA: " + per.Rows[0][1];
-                        KryptonMessageBox.Show(txtContrato.Tag.ToString(), "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+                        KryptonMessageBox.Show(txtContrato.Tag.ToString(), "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
                     }
                 }
             }
@@ -815,7 +815,7 @@ namespace SysCisepro3.TalentoHumano
                 lblValCon.Visible = true;
                 lblValCon.Tag = 0;
                 txtContrato.Tag = @"OCURRIÓ UN PROBLEMA AL VERIFICAR NÚMERO DE CONTRATO";
-                KryptonMessageBox.Show(txtContrato.Tag.ToString(), "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+                KryptonMessageBox.Show(txtContrato.Tag.ToString(), "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
             }
         }
 
@@ -824,33 +824,33 @@ namespace SysCisepro3.TalentoHumano
             if (txtContrato.Text.Trim().Length == 0)
             {
                 KryptonMessageBox.Show(@"Ingrese el número del contrato para personal ADMINISTRATIVO / OPERATIVO!",
-                    "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+                    "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
                 return;
             }
 
             if (_estado != 2 && lblValCon.Tag.ToString().Trim().Equals("0"))
             {
                 KryptonMessageBox.Show(txtContrato.Tag + @" --- Por favor, verifique el secuencial para continuar!",
-                    "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+                    "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
                 return;
             }
 
             if (cbArea.Text.StartsWith("___") && cbArea.Text.EndsWith("___"))
             {
                 KryptonMessageBox.Show(@"Seleccione el área asignada al personal ADMINISTRATIVO / OPERATIVO!",
-                     "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+                     "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
                 return;
             }
 
             if (txtSitio.Tag == null)
             {
                 KryptonMessageBox.Show(@"Ingrese el sitio / puesto de trabajo para el personal ADMINISTRATIVO / OPERATIVO!",
-                     "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+                     "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
                 return;
             }
 
             if (KryptonMessageBox.Show(@"Desea guardar el registro actual?",
-                   "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) !=
+                   "Mensaje del Sistema", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) !=
                DialogResult.Yes) return;
 
             
@@ -887,7 +887,7 @@ namespace SysCisepro3.TalentoHumano
                     (nudCantidadHijos.Value > 0 && txtDatosHijos.Text.Trim().Length == 0))
                 {
                     KryptonMessageBox.Show(@"Por favor, ingrese los datos correspondientes a las casillas que ud. seleccionó!",
-                    "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+                    "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
                     return;
                 }
 
@@ -968,11 +968,11 @@ namespace SysCisepro3.TalentoHumano
 
                     dgvPersonal_SelectionChanged(null, null);
                 }
-                KryptonMessageBox.Show((string)res[1], "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+                KryptonMessageBox.Show((string)res[1], "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
             }
             else
                 KryptonMessageBox.Show(@"No se puede guardar debido a que no ha llenado todos los campos necesarios!",
-                    "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+                    "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
         }
 
         private bool ValidacionParametros()
@@ -1307,7 +1307,7 @@ namespace SysCisepro3.TalentoHumano
             }
             catch (Exception ex)
             {
-                KryptonMessageBox.Show(@"Error al guardar el registro: " + ex.Message, @"MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error);
+                KryptonMessageBox.Show(@"Error al guardar el registro: " + ex.Message, @"Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error);
             }
         }
 
@@ -1316,7 +1316,7 @@ namespace SysCisepro3.TalentoHumano
             if (lblIdPersonal.Text.Trim().Length < 1)
             {
                 KryptonMessageBox.Show(@"Debe seleccionar un registro para modificar datos!",
-                    "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+                    "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
                 return;
             }
 
@@ -1381,7 +1381,7 @@ namespace SysCisepro3.TalentoHumano
                 lblValCed.Image = Resources.cancel_24dp_FILL0_wght400_GRAD0_opsz24;
                 ButtonGuardar.Enabled = false;
                 KryptonMessageBox.Show(@"El número de cédula ingresado ya se encuentra registrado como personal con estado ACTIVO!",
-                   @"MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+                   @"Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
             }
             else
             {
@@ -1619,7 +1619,7 @@ namespace SysCisepro3.TalentoHumano
             if (_estado == 0 && (dgvPersonal.RowCount == 0 || dgvPersonal.CurrentRow == null))
             {
                 KryptonMessageBox.Show(@"Debe seleccionar un registro para modificar datos!",
-                    "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+                    "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
                 return;
             }
 
@@ -1686,14 +1686,14 @@ namespace SysCisepro3.TalentoHumano
             if (lblIdPersonal.Text.Trim().Length < 1)
             {
                 KryptonMessageBox.Show(@"Debe seleccionar un registro para modificar datos!",
-                    "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+                    "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
                 return;
             }
 
             if (KryptonMessageBox.Show("DESEA DAR DE BAJA EL REGISTRO DE PERSONAL ADMINISTRATIVO / OPERATIVO? \n\n" +
                 "NOTA: Este proceso debe realizarlo cuando ya se haya cancelado la liquidación del mismo, \n" +
                 "de lo contrario seguirá generándose el rol de pagos correspondiente!",
-                   "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) != DialogResult.Yes) return;
+                   "Mensaje del Sistema", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) != DialogResult.Yes) return;
 
             _objMotivoFechaSalida = new FrmSeleccionarMotivoFechaSalida { TipoCon = TipoCon, TextBox1 = { Text = txtObservacion.Text } };
 
@@ -1721,7 +1721,7 @@ namespace SysCisepro3.TalentoHumano
                 CargarPersonal(txtCedula.Text.Trim());
                 dgvPersonal_SelectionChanged(null, null);
             }
-            KryptonMessageBox.Show((string)res[1], "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+            KryptonMessageBox.Show((string)res[1], "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
         }
 
         private void GuardarRegistroFinalizarContratoPersonal(DateTime salida, bool noSePresento)
@@ -1755,7 +1755,7 @@ namespace SysCisepro3.TalentoHumano
         {
             if (dataGridViewExp.RowCount == 0)
             {
-                KryptonMessageBox.Show(@"NO HAY DATOS PARA EXPORTAR!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+                KryptonMessageBox.Show(@"NO HAY DATOS PARA EXPORTAR!", "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
                 return;
             }
 
@@ -1830,12 +1830,12 @@ namespace SysCisepro3.TalentoHumano
                 worksheet.Range["A1:" + ic + rc].Columns.AutoFit();
                 app.DisplayAlerts = false;
                 app.Visible = true;
-                KryptonMessageBox.Show(@"PERSONAL generado correctamente!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+                KryptonMessageBox.Show(@"PERSONAL generado correctamente!", "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
 
             }
             catch
             {
-                KryptonMessageBox.Show(@"HUBO UN PROBLEMA AL EXPORTAR!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation);
+                KryptonMessageBox.Show(@"HUBO UN PROBLEMA AL EXPORTAR!", "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation);
             }
         }
 

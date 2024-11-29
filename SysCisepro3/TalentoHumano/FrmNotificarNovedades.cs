@@ -44,7 +44,7 @@ namespace SysCisepro3.TalentoHumano
         {
             if (dgvNotificacion.RowCount == 0)
             {
-                KryptonMessageBox.Show(@"NO HAY DATOS PARA EXPORTAR!", @"MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+                KryptonMessageBox.Show(@"NO HAY DATOS PARA EXPORTAR!", @"Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
                 return;
             }
 
@@ -119,12 +119,12 @@ namespace SysCisepro3.TalentoHumano
                 worksheet.Range["A1:" + ic + rc].Columns.AutoFit();
                 app.DisplayAlerts = false;
                 app.Visible = true;
-                KryptonMessageBox.Show(@"PERSONAL generado correctamente!", @"MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+                KryptonMessageBox.Show(@"PERSONAL generado correctamente!", @"Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
 
             }
             catch
             {
-                KryptonMessageBox.Show(@"HUBO UN PROBLEMA AL EXPORTAR!", @"MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation);
+                KryptonMessageBox.Show(@"HUBO UN PROBLEMA AL EXPORTAR!", @"Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation);
             }
         }
 

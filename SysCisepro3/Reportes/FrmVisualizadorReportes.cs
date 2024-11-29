@@ -1,10 +1,11 @@
 ﻿using System.Windows.Forms;
 using ClassLibraryCisepro3.Enums;
 using SysCisepro3.Properties;
+using Krypton.Toolkit;
 
 namespace SysCisepro3.Reportes
 {
-    public partial class FrmVisualizadorReportes : Form
+    public partial class FrmVisualizadorReportes : KryptonForm
     {
         /// <summary>
         /// CISEPRO 2019

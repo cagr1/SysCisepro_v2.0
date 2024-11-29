@@ -101,7 +101,6 @@
             'cbmProvincia
             '
             Me.cbmProvincia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-            Me.cbmProvincia.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.cbmProvincia.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cbmProvincia.FormattingEnabled = True
             Me.cbmProvincia.Location = New System.Drawing.Point(181, 32)
@@ -348,7 +347,8 @@
             Me.dgvLiquidacionFondoCajaChica.AllowUserToResizeRows = False
             DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
             Me.dgvLiquidacionFondoCajaChica.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
-            Me.dgvLiquidacionFondoCajaChica.BackgroundColor = System.Drawing.Color.White
+            Me.dgvLiquidacionFondoCajaChica.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
+            Me.dgvLiquidacionFondoCajaChica.BorderStyle = System.Windows.Forms.BorderStyle.None
             Me.dgvLiquidacionFondoCajaChica.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
             DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
             DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control
@@ -440,7 +440,6 @@
             'cbmCentroCosto
             '
             Me.cbmCentroCosto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-            Me.cbmCentroCosto.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.cbmCentroCosto.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cbmCentroCosto.FormattingEnabled = True
             Me.cbmCentroCosto.Location = New System.Drawing.Point(728, 4)
@@ -451,7 +450,6 @@
             'cbmCajasChicas
             '
             Me.cbmCajasChicas.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-            Me.cbmCajasChicas.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.cbmCajasChicas.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cbmCajasChicas.FormattingEnabled = True
             Me.cbmCajasChicas.Location = New System.Drawing.Point(469, 4)
@@ -462,7 +460,6 @@
             'cbmParroquia
             '
             Me.cbmParroquia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-            Me.cbmParroquia.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.cbmParroquia.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cbmParroquia.FormattingEnabled = True
             Me.cbmParroquia.Location = New System.Drawing.Point(728, 31)
@@ -473,7 +470,6 @@
             'cbmCanton
             '
             Me.cbmCanton.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-            Me.cbmCanton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.cbmCanton.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cbmCanton.FormattingEnabled = True
             Me.cbmCanton.Location = New System.Drawing.Point(469, 35)

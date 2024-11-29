@@ -263,7 +263,7 @@ namespace SysCisepro3.Contabilidad.Compras
                 lblIdProveedor.Text = "";
             }
 
-            KryptonMessageBox.Show((string)res[1], "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+            KryptonMessageBox.Show((string)res[1], "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
 
         }
 

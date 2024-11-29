@@ -7,6 +7,7 @@ Imports ClassLibraryCisepro.CONTABILIDAD.CUENTAS_POR_PAGAR
 Imports ClassLibraryCisepro.ENUMS
 Imports Microsoft.Office.Interop
 Imports syscisepro.DATOS
+Imports Krypton.Toolkit
 
 Namespace FORMULARIOS.CONTABILIDAD.CUENTAS_POR_PAGAR
     ''' <summary>
@@ -65,7 +66,8 @@ Namespace FORMULARIOS.CONTABILIDAD.CUENTAS_POR_PAGAR
                     lblRucProveedorGeneral.Text = dgvProveedorGeneral.Rows(0).Cells(2).Value
                 End If
             Catch ex As Exception
-                MsgBox("CARGAR DATOS PROVEEDOR." & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
+                'MsgBox("CARGAR DATOS PROVEEDOR." & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
+                KryptonMessageBox.Show("CARGAR DATOS PROVEEDOR." & vbNewLine & ex.Message.ToString, "Mensaje de excepción", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
 
@@ -206,7 +208,8 @@ Namespace FORMULARIOS.CONTABILIDAD.CUENTAS_POR_PAGAR
                 cargarCuentasPorPagarPorProveedor(ChkTodos.Checked)
                 sumarCuentasPorPagarPorProveedor()
             Else
-                MsgBox("ESCOJA UN TIPOD E CONSULTA.", MsgBoxStyle.Information, "Mensaje de validación")
+                'MsgBox("ESCOJA UN TIPOD E CONSULTA.", MsgBoxStyle.Information, "Mensaje de validación")
+                KryptonMessageBox.Show("Escoja un tipod e consulta.", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
             End If
             dgvCuentasPorPagar.ReadOnly = True
         End Sub
@@ -215,7 +218,8 @@ Namespace FORMULARIOS.CONTABILIDAD.CUENTAS_POR_PAGAR
         Private Sub btnExportar_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnExportar.Click
             Try
                 If dgvCuentasPorPagar.Rows.Count = 0 Then
-                    MsgBox("No hay datos que exportar!", MsgBoxStyle.Exclamation, "Mensaje de validación")
+                    'MsgBox("No hay datos que exportar!", MsgBoxStyle.Exclamation, "Mensaje de validación")
+                    KryptonMessageBox.Show("No hay datos que exportar!", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                     Return
                 End If
 
@@ -314,7 +318,8 @@ Namespace FORMULARIOS.CONTABILIDAD.CUENTAS_POR_PAGAR
 
         Private Sub REPORTEASIENTOToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles REPORTEASIENTOToolStripMenuItem.Click
             If dgvCuentasPorPagar.Rows.Count = 0 Then
-                MsgBox("NO HAY REGISTROS QUE CARGAR. Primero realice una busqueda", MsgBoxStyle.Exclamation, "Mensaje de validación")
+                'MsgBox("NO HAY REGISTROS QUE CARGAR. Primero realice una busqueda", MsgBoxStyle.Exclamation, "Mensaje de validación")
+                KryptonMessageBox.Show("NO HAY REGISTROS QUE CARGAR. Primero realice una busqueda", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                 Return
             End If
 

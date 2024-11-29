@@ -256,7 +256,7 @@ namespace SysCisepro3.TalentoHumano
             }
                 catch (Exception ex)
                 {
-                    KryptonMessageBox.Show(@"Surgio un Error, faltan elegir las coordenadas!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+                    KryptonMessageBox.Show(@"Surgio un Error, faltan elegir las coordenadas!", "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
                 }
 
            
@@ -279,7 +279,7 @@ namespace SysCisepro3.TalentoHumano
             }
             catch
             {
-                KryptonMessageBox.Show(@"Surgio un Error, faltan elegir las coordenadas!", "MENSAJE DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+                KryptonMessageBox.Show(@"Surgio un Error, faltan elegir las coordenadas!", "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
             }
         }
 

@@ -91,5 +91,10 @@ namespace SysCisepro3.TalentoHumano
         {
 
         }
+
+        private void Button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -1,7 +1,8 @@
 ﻿Namespace FORMULARIOS.CONTABILIDAD.PERDIDAS_Y_GANANCIAS
     <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
     Partial Class FrmReportePerdidasYGanancias
-        Inherits System.Windows.Forms.Form
+        'Inherits System.Windows.Forms.Form
+        Inherits Krypton.Toolkit.KryptonForm
 
         'Form reemplaza a Dispose para limpiar la lista de componentes.
         <System.Diagnostics.DebuggerNonUserCode()> _
@@ -30,11 +31,11 @@
             'crvPlanDeCuentas
             '
             Me.crvPlanDeCuentas.ActiveViewIndex = -1
-            Me.crvPlanDeCuentas.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
             Me.crvPlanDeCuentas.Cursor = System.Windows.Forms.Cursors.Default
             Me.crvPlanDeCuentas.Dock = System.Windows.Forms.DockStyle.Fill
             Me.crvPlanDeCuentas.Location = New System.Drawing.Point(0, 0)
             Me.crvPlanDeCuentas.Name = "crvPlanDeCuentas"
+            Me.crvPlanDeCuentas.ShowLogo = False
             Me.crvPlanDeCuentas.Size = New System.Drawing.Size(1012, 734)
             Me.crvPlanDeCuentas.TabIndex = 1
             Me.crvPlanDeCuentas.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None
@@ -52,6 +53,10 @@
             Me.MinimizeBox = False
             Me.Name = "FrmReportePerdidasYGanancias"
             Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+            Me.StateActive.Border.DrawBorders = CType((((Krypton.Toolkit.PaletteDrawBorders.Top Or Krypton.Toolkit.PaletteDrawBorders.Bottom) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Left) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Right), Krypton.Toolkit.PaletteDrawBorders)
+            Me.StateActive.Border.Rounding = 5.0!
             Me.Text = "REPORTE GENERAL DEL PERDIDAS Y GANANCIAS"
             Me.ResumeLayout(False)
 

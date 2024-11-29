@@ -1,6 +1,7 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
 Partial Class FormReportMayorizacion
-    Inherits System.Windows.Forms.Form
+    'Inherits System.Windows.Forms.Form
+    Inherits Krypton.Toolkit.KryptonForm
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
     <System.Diagnostics.DebuggerNonUserCode()> _
@@ -28,12 +29,12 @@ Partial Class FormReportMayorizacion
         'crvReporteVentas
         '
         Me.crvReporteVentas.ActiveViewIndex = -1
-        Me.crvReporteVentas.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.crvReporteVentas.Cursor = System.Windows.Forms.Cursors.Default
         Me.crvReporteVentas.Dock = System.Windows.Forms.DockStyle.Fill
         Me.crvReporteVentas.Location = New System.Drawing.Point(0, 0)
         Me.crvReporteVentas.Name = "crvReporteVentas"
         Me.crvReporteVentas.ShowCloseButton = False
+        Me.crvReporteVentas.ShowLogo = False
         Me.crvReporteVentas.Size = New System.Drawing.Size(1018, 611)
         Me.crvReporteVentas.TabIndex = 1
         Me.crvReporteVentas.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None
@@ -42,12 +43,16 @@ Partial Class FormReportMayorizacion
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.White
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(185, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(227, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1018, 611)
         Me.Controls.Add(Me.crvReporteVentas)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
         Me.Name = "FormReportMayorizacion"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.StateActive.Border.DrawBorders = CType((((Krypton.Toolkit.PaletteDrawBorders.Top Or Krypton.Toolkit.PaletteDrawBorders.Bottom) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Left) _
+            Or Krypton.Toolkit.PaletteDrawBorders.Right), Krypton.Toolkit.PaletteDrawBorders)
+        Me.StateActive.Border.Rounding = 5.0!
         Me.Text = "REPORTE MAYORIZACION"
         Me.ResumeLayout(False)
 
