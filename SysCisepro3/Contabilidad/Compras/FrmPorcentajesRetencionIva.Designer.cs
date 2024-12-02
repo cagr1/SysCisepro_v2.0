@@ -38,7 +38,6 @@
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.txtFiltro = new System.Windows.Forms.TextBox();
-            this.Label24 = new System.Windows.Forms.Label();
             this.Label1 = new System.Windows.Forms.Label();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.btnBuscar = new System.Windows.Forms.ToolStripButton();
@@ -47,8 +46,6 @@
             this.btnModificar = new System.Windows.Forms.ToolStripButton();
             this.btnCancelar = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.label18 = new System.Windows.Forms.Label();
             this.btnVentaBienEsp = new System.Windows.Forms.Button();
             this.txtVentaBienEsp = new System.Windows.Forms.TextBox();
             this.btnCompraBienEsp = new System.Windows.Forms.Button();
@@ -69,20 +66,22 @@
             this.txtVentaBienSoc = new System.Windows.Forms.TextBox();
             this.btnCompraBienSoc = new System.Windows.Forms.Button();
             this.txtCompraBienSoc = new System.Windows.Forms.TextBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
             this.txtBienEsp = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
             this.txtBienExp = new System.Windows.Forms.TextBox();
             this.txtBienPsin = new System.Windows.Forms.TextBox();
             this.txtBienPcon = new System.Windows.Forms.TextBox();
             this.txtBienSoc = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.kryptonGroupBox1 = new Krypton.Toolkit.KryptonGroupBox();
+            this.kryptonLabel12 = new Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel11 = new Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel6 = new Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel10 = new Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel9 = new Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel8 = new Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel7 = new Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel4 = new Krypton.Toolkit.KryptonLabel();
+            this.kryptonGroupBox2 = new Krypton.Toolkit.KryptonGroupBox();
+            this.kryptonLabel15 = new Krypton.Toolkit.KryptonLabel();
             this.btnVentaServiEsp = new System.Windows.Forms.Button();
             this.txtVentaServiEsp = new System.Windows.Forms.TextBox();
             this.btnCompraServiEsp = new System.Windows.Forms.Button();
@@ -103,21 +102,33 @@
             this.txtVentaServiSoc = new System.Windows.Forms.TextBox();
             this.btnCompraServiSoc = new System.Windows.Forms.Button();
             this.txtCompraServiSoc = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.txtServiEsp = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.txtServiExp = new System.Windows.Forms.TextBox();
             this.txtServiPsin = new System.Windows.Forms.TextBox();
             this.txtServiPcon = new System.Windows.Forms.TextBox();
             this.txtServiSoc = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
+            this.kryptonLabel1 = new Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel2 = new Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel3 = new Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel5 = new Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel13 = new Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel14 = new Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel16 = new Krypton.Toolkit.KryptonLabel();
+            this.kryptonGroupBox3 = new Krypton.Toolkit.KryptonGroupBox();
+            this.kryptonLabel17 = new Krypton.Toolkit.KryptonLabel();
             this.toolStrip1.SuspendLayout();
-            this.groupBox3.SuspendLayout();
-            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox1.Panel)).BeginInit();
+            this.kryptonGroupBox1.Panel.SuspendLayout();
+            this.kryptonGroupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox2.Panel)).BeginInit();
+            this.kryptonGroupBox2.Panel.SuspendLayout();
+            this.kryptonGroupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox3.Panel)).BeginInit();
+            this.kryptonGroupBox3.Panel.SuspendLayout();
+            this.kryptonGroupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // Label7
@@ -125,7 +136,7 @@
             this.Label7.AutoSize = true;
             this.Label7.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Label7.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label7.Location = new System.Drawing.Point(10, 310);
+            this.Label7.Location = new System.Drawing.Point(10, 481);
             this.Label7.Name = "Label7";
             this.Label7.Size = new System.Drawing.Size(46, 13);
             this.Label7.TabIndex = 238;
@@ -150,7 +161,8 @@
             // 
             // ListView1
             // 
-            this.ListView1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ListView1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
+            this.ListView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.ListView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader3,
@@ -161,10 +173,10 @@
             this.ListView1.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ListView1.FullRowSelect = true;
             this.ListView1.HideSelection = false;
-            this.ListView1.Location = new System.Drawing.Point(1, 330);
+            this.ListView1.Location = new System.Drawing.Point(12, 29);
             this.ListView1.MultiSelect = false;
             this.ListView1.Name = "ListView1";
-            this.ListView1.Size = new System.Drawing.Size(892, 319);
+            this.ListView1.Size = new System.Drawing.Size(817, 174);
             this.ListView1.TabIndex = 240;
             this.ListView1.UseCompatibleStateImageBehavior = false;
             this.ListView1.View = System.Windows.Forms.View.Details;
@@ -190,30 +202,20 @@
             this.txtFiltro.BackColor = System.Drawing.Color.White;
             this.txtFiltro.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtFiltro.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFiltro.Location = new System.Drawing.Point(64, 306);
+            this.txtFiltro.Location = new System.Drawing.Point(64, 3);
             this.txtFiltro.Name = "txtFiltro";
-            this.txtFiltro.Size = new System.Drawing.Size(829, 21);
+            this.txtFiltro.Size = new System.Drawing.Size(598, 21);
             this.txtFiltro.TabIndex = 239;
             this.txtFiltro.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtFiltro_KeyUp);
-            // 
-            // Label24
-            // 
-            this.Label24.Cursor = System.Windows.Forms.Cursors.Default;
-            this.Label24.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label24.Location = new System.Drawing.Point(1, 285);
-            this.Label24.Name = "Label24";
-            this.Label24.Size = new System.Drawing.Size(894, 18);
-            this.Label24.TabIndex = 236;
-            this.Label24.Text = "PORCENTAJES DE RETENCIÓN REGISTRADOS";
-            this.Label24.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Label1
             // 
             this.Label1.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.Label1.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label1.Font = new System.Drawing.Font("Roboto Medium", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
             this.Label1.Location = new System.Drawing.Point(-2, 652);
             this.Label1.Name = "Label1";
-            this.Label1.Size = new System.Drawing.Size(897, 21);
+            this.Label1.Size = new System.Drawing.Size(849, 21);
             this.Label1.TabIndex = 235;
             this.Label1.Text = "0 REGISTRO(S)";
             this.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -231,7 +233,7 @@
             this.toolStripButton1});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(895, 31);
+            this.toolStrip1.Size = new System.Drawing.Size(849, 31);
             this.toolStrip1.TabIndex = 234;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -297,66 +299,14 @@
             this.toolStripButton1.Text = "EXPORTAR";
             this.toolStripButton1.Visible = false;
             // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.label18);
-            this.groupBox3.Controls.Add(this.btnVentaBienEsp);
-            this.groupBox3.Controls.Add(this.txtVentaBienEsp);
-            this.groupBox3.Controls.Add(this.btnCompraBienEsp);
-            this.groupBox3.Controls.Add(this.txtCompraBienEsp);
-            this.groupBox3.Controls.Add(this.btnVentaBienExp);
-            this.groupBox3.Controls.Add(this.txtVentaBienExp);
-            this.groupBox3.Controls.Add(this.btnVentaBienPsin);
-            this.groupBox3.Controls.Add(this.txtVentaBienPsin);
-            this.groupBox3.Controls.Add(this.btnCompraBienExp);
-            this.groupBox3.Controls.Add(this.txtCompraBienExp);
-            this.groupBox3.Controls.Add(this.btnCompraBienPsin);
-            this.groupBox3.Controls.Add(this.txtCompraBienPsin);
-            this.groupBox3.Controls.Add(this.btnVentaBienPcon);
-            this.groupBox3.Controls.Add(this.txtVentaBienPcon);
-            this.groupBox3.Controls.Add(this.btnCompraBienPcon);
-            this.groupBox3.Controls.Add(this.btnVentaBienSoc);
-            this.groupBox3.Controls.Add(this.txtCompraBienPcon);
-            this.groupBox3.Controls.Add(this.txtVentaBienSoc);
-            this.groupBox3.Controls.Add(this.btnCompraBienSoc);
-            this.groupBox3.Controls.Add(this.txtCompraBienSoc);
-            this.groupBox3.Controls.Add(this.label15);
-            this.groupBox3.Controls.Add(this.label16);
-            this.groupBox3.Controls.Add(this.txtBienEsp);
-            this.groupBox3.Controls.Add(this.label14);
-            this.groupBox3.Controls.Add(this.txtBienExp);
-            this.groupBox3.Controls.Add(this.txtBienPsin);
-            this.groupBox3.Controls.Add(this.txtBienPcon);
-            this.groupBox3.Controls.Add(this.txtBienSoc);
-            this.groupBox3.Controls.Add(this.label6);
-            this.groupBox3.Controls.Add(this.label8);
-            this.groupBox3.Controls.Add(this.label9);
-            this.groupBox3.Controls.Add(this.label10);
-            this.groupBox3.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(1, 33);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(894, 125);
-            this.groupBox3.TabIndex = 199;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "RETENCIÓN IVA (BIENES)";
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(247, 0);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(50, 13);
-            this.label18.TabIndex = 246;
-            this.label18.Text = "PRCN. %";
-            // 
             // btnVentaBienEsp
             // 
-            this.btnVentaBienEsp.BackColor = System.Drawing.Color.White;
+            this.btnVentaBienEsp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
             this.btnVentaBienEsp.Enabled = false;
             this.btnVentaBienEsp.FlatAppearance.BorderSize = 0;
             this.btnVentaBienEsp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVentaBienEsp.Image = ((System.Drawing.Image)(resources.GetObject("btnVentaBienEsp.Image")));
-            this.btnVentaBienEsp.Location = new System.Drawing.Point(867, 96);
+            this.btnVentaBienEsp.Location = new System.Drawing.Point(808, 128);
             this.btnVentaBienEsp.Name = "btnVentaBienEsp";
             this.btnVentaBienEsp.Size = new System.Drawing.Size(25, 25);
             this.btnVentaBienEsp.TabIndex = 240;
@@ -369,19 +319,20 @@
             this.txtVentaBienEsp.BackColor = System.Drawing.Color.White;
             this.txtVentaBienEsp.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtVentaBienEsp.Enabled = false;
-            this.txtVentaBienEsp.Location = new System.Drawing.Point(618, 98);
+            this.txtVentaBienEsp.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtVentaBienEsp.Location = new System.Drawing.Point(551, 131);
             this.txtVentaBienEsp.Name = "txtVentaBienEsp";
             this.txtVentaBienEsp.Size = new System.Drawing.Size(250, 21);
             this.txtVentaBienEsp.TabIndex = 239;
             // 
             // btnCompraBienEsp
             // 
-            this.btnCompraBienEsp.BackColor = System.Drawing.Color.White;
+            this.btnCompraBienEsp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
             this.btnCompraBienEsp.Enabled = false;
             this.btnCompraBienEsp.FlatAppearance.BorderSize = 0;
             this.btnCompraBienEsp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCompraBienEsp.Image = ((System.Drawing.Image)(resources.GetObject("btnCompraBienEsp.Image")));
-            this.btnCompraBienEsp.Location = new System.Drawing.Point(580, 96);
+            this.btnCompraBienEsp.Location = new System.Drawing.Point(510, 131);
             this.btnCompraBienEsp.Name = "btnCompraBienEsp";
             this.btnCompraBienEsp.Size = new System.Drawing.Size(25, 25);
             this.btnCompraBienEsp.TabIndex = 238;
@@ -394,19 +345,20 @@
             this.txtCompraBienEsp.BackColor = System.Drawing.Color.White;
             this.txtCompraBienEsp.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtCompraBienEsp.Enabled = false;
-            this.txtCompraBienEsp.Location = new System.Drawing.Point(331, 98);
+            this.txtCompraBienEsp.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCompraBienEsp.Location = new System.Drawing.Point(244, 135);
             this.txtCompraBienEsp.Name = "txtCompraBienEsp";
             this.txtCompraBienEsp.Size = new System.Drawing.Size(250, 21);
             this.txtCompraBienEsp.TabIndex = 237;
             // 
             // btnVentaBienExp
             // 
-            this.btnVentaBienExp.BackColor = System.Drawing.Color.White;
+            this.btnVentaBienExp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
             this.btnVentaBienExp.Enabled = false;
             this.btnVentaBienExp.FlatAppearance.BorderSize = 0;
             this.btnVentaBienExp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVentaBienExp.Image = ((System.Drawing.Image)(resources.GetObject("btnVentaBienExp.Image")));
-            this.btnVentaBienExp.Location = new System.Drawing.Point(867, 75);
+            this.btnVentaBienExp.Location = new System.Drawing.Point(808, 106);
             this.btnVentaBienExp.Name = "btnVentaBienExp";
             this.btnVentaBienExp.Size = new System.Drawing.Size(25, 25);
             this.btnVentaBienExp.TabIndex = 236;
@@ -419,19 +371,20 @@
             this.txtVentaBienExp.BackColor = System.Drawing.Color.White;
             this.txtVentaBienExp.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtVentaBienExp.Enabled = false;
-            this.txtVentaBienExp.Location = new System.Drawing.Point(618, 77);
+            this.txtVentaBienExp.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtVentaBienExp.Location = new System.Drawing.Point(551, 109);
             this.txtVentaBienExp.Name = "txtVentaBienExp";
             this.txtVentaBienExp.Size = new System.Drawing.Size(250, 21);
             this.txtVentaBienExp.TabIndex = 235;
             // 
             // btnVentaBienPsin
             // 
-            this.btnVentaBienPsin.BackColor = System.Drawing.Color.White;
+            this.btnVentaBienPsin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
             this.btnVentaBienPsin.Enabled = false;
             this.btnVentaBienPsin.FlatAppearance.BorderSize = 0;
             this.btnVentaBienPsin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVentaBienPsin.Image = ((System.Drawing.Image)(resources.GetObject("btnVentaBienPsin.Image")));
-            this.btnVentaBienPsin.Location = new System.Drawing.Point(867, 54);
+            this.btnVentaBienPsin.Location = new System.Drawing.Point(808, 80);
             this.btnVentaBienPsin.Name = "btnVentaBienPsin";
             this.btnVentaBienPsin.Size = new System.Drawing.Size(25, 25);
             this.btnVentaBienPsin.TabIndex = 234;
@@ -444,19 +397,20 @@
             this.txtVentaBienPsin.BackColor = System.Drawing.Color.White;
             this.txtVentaBienPsin.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtVentaBienPsin.Enabled = false;
-            this.txtVentaBienPsin.Location = new System.Drawing.Point(618, 56);
+            this.txtVentaBienPsin.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtVentaBienPsin.Location = new System.Drawing.Point(551, 83);
             this.txtVentaBienPsin.Name = "txtVentaBienPsin";
             this.txtVentaBienPsin.Size = new System.Drawing.Size(250, 21);
             this.txtVentaBienPsin.TabIndex = 233;
             // 
             // btnCompraBienExp
             // 
-            this.btnCompraBienExp.BackColor = System.Drawing.Color.White;
+            this.btnCompraBienExp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
             this.btnCompraBienExp.Enabled = false;
             this.btnCompraBienExp.FlatAppearance.BorderSize = 0;
             this.btnCompraBienExp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCompraBienExp.Image = ((System.Drawing.Image)(resources.GetObject("btnCompraBienExp.Image")));
-            this.btnCompraBienExp.Location = new System.Drawing.Point(580, 75);
+            this.btnCompraBienExp.Location = new System.Drawing.Point(510, 106);
             this.btnCompraBienExp.Name = "btnCompraBienExp";
             this.btnCompraBienExp.Size = new System.Drawing.Size(25, 25);
             this.btnCompraBienExp.TabIndex = 232;
@@ -469,19 +423,20 @@
             this.txtCompraBienExp.BackColor = System.Drawing.Color.White;
             this.txtCompraBienExp.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtCompraBienExp.Enabled = false;
-            this.txtCompraBienExp.Location = new System.Drawing.Point(331, 77);
+            this.txtCompraBienExp.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCompraBienExp.Location = new System.Drawing.Point(244, 109);
             this.txtCompraBienExp.Name = "txtCompraBienExp";
             this.txtCompraBienExp.Size = new System.Drawing.Size(250, 21);
             this.txtCompraBienExp.TabIndex = 231;
             // 
             // btnCompraBienPsin
             // 
-            this.btnCompraBienPsin.BackColor = System.Drawing.Color.White;
+            this.btnCompraBienPsin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
             this.btnCompraBienPsin.Enabled = false;
             this.btnCompraBienPsin.FlatAppearance.BorderSize = 0;
             this.btnCompraBienPsin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCompraBienPsin.Image = ((System.Drawing.Image)(resources.GetObject("btnCompraBienPsin.Image")));
-            this.btnCompraBienPsin.Location = new System.Drawing.Point(580, 54);
+            this.btnCompraBienPsin.Location = new System.Drawing.Point(510, 80);
             this.btnCompraBienPsin.Name = "btnCompraBienPsin";
             this.btnCompraBienPsin.Size = new System.Drawing.Size(25, 25);
             this.btnCompraBienPsin.TabIndex = 230;
@@ -494,19 +449,20 @@
             this.txtCompraBienPsin.BackColor = System.Drawing.Color.White;
             this.txtCompraBienPsin.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtCompraBienPsin.Enabled = false;
-            this.txtCompraBienPsin.Location = new System.Drawing.Point(331, 56);
+            this.txtCompraBienPsin.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCompraBienPsin.Location = new System.Drawing.Point(244, 83);
             this.txtCompraBienPsin.Name = "txtCompraBienPsin";
             this.txtCompraBienPsin.Size = new System.Drawing.Size(250, 21);
             this.txtCompraBienPsin.TabIndex = 229;
             // 
             // btnVentaBienPcon
             // 
-            this.btnVentaBienPcon.BackColor = System.Drawing.Color.White;
+            this.btnVentaBienPcon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
             this.btnVentaBienPcon.Enabled = false;
             this.btnVentaBienPcon.FlatAppearance.BorderSize = 0;
             this.btnVentaBienPcon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVentaBienPcon.Image = ((System.Drawing.Image)(resources.GetObject("btnVentaBienPcon.Image")));
-            this.btnVentaBienPcon.Location = new System.Drawing.Point(867, 33);
+            this.btnVentaBienPcon.Location = new System.Drawing.Point(808, 55);
             this.btnVentaBienPcon.Name = "btnVentaBienPcon";
             this.btnVentaBienPcon.Size = new System.Drawing.Size(25, 25);
             this.btnVentaBienPcon.TabIndex = 228;
@@ -519,19 +475,20 @@
             this.txtVentaBienPcon.BackColor = System.Drawing.Color.White;
             this.txtVentaBienPcon.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtVentaBienPcon.Enabled = false;
-            this.txtVentaBienPcon.Location = new System.Drawing.Point(618, 35);
+            this.txtVentaBienPcon.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtVentaBienPcon.Location = new System.Drawing.Point(551, 58);
             this.txtVentaBienPcon.Name = "txtVentaBienPcon";
             this.txtVentaBienPcon.Size = new System.Drawing.Size(250, 21);
             this.txtVentaBienPcon.TabIndex = 227;
             // 
             // btnCompraBienPcon
             // 
-            this.btnCompraBienPcon.BackColor = System.Drawing.Color.White;
+            this.btnCompraBienPcon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
             this.btnCompraBienPcon.Enabled = false;
             this.btnCompraBienPcon.FlatAppearance.BorderSize = 0;
             this.btnCompraBienPcon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCompraBienPcon.Image = ((System.Drawing.Image)(resources.GetObject("btnCompraBienPcon.Image")));
-            this.btnCompraBienPcon.Location = new System.Drawing.Point(580, 33);
+            this.btnCompraBienPcon.Location = new System.Drawing.Point(510, 55);
             this.btnCompraBienPcon.Name = "btnCompraBienPcon";
             this.btnCompraBienPcon.Size = new System.Drawing.Size(25, 25);
             this.btnCompraBienPcon.TabIndex = 224;
@@ -541,12 +498,12 @@
             // 
             // btnVentaBienSoc
             // 
-            this.btnVentaBienSoc.BackColor = System.Drawing.Color.White;
+            this.btnVentaBienSoc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
             this.btnVentaBienSoc.Enabled = false;
             this.btnVentaBienSoc.FlatAppearance.BorderSize = 0;
             this.btnVentaBienSoc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVentaBienSoc.Image = ((System.Drawing.Image)(resources.GetObject("btnVentaBienSoc.Image")));
-            this.btnVentaBienSoc.Location = new System.Drawing.Point(867, 11);
+            this.btnVentaBienSoc.Location = new System.Drawing.Point(808, 29);
             this.btnVentaBienSoc.Name = "btnVentaBienSoc";
             this.btnVentaBienSoc.Size = new System.Drawing.Size(25, 25);
             this.btnVentaBienSoc.TabIndex = 226;
@@ -559,7 +516,8 @@
             this.txtCompraBienPcon.BackColor = System.Drawing.Color.White;
             this.txtCompraBienPcon.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtCompraBienPcon.Enabled = false;
-            this.txtCompraBienPcon.Location = new System.Drawing.Point(331, 35);
+            this.txtCompraBienPcon.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCompraBienPcon.Location = new System.Drawing.Point(244, 58);
             this.txtCompraBienPcon.Name = "txtCompraBienPcon";
             this.txtCompraBienPcon.Size = new System.Drawing.Size(250, 21);
             this.txtCompraBienPcon.TabIndex = 223;
@@ -569,19 +527,20 @@
             this.txtVentaBienSoc.BackColor = System.Drawing.Color.White;
             this.txtVentaBienSoc.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtVentaBienSoc.Enabled = false;
-            this.txtVentaBienSoc.Location = new System.Drawing.Point(618, 14);
+            this.txtVentaBienSoc.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtVentaBienSoc.Location = new System.Drawing.Point(551, 32);
             this.txtVentaBienSoc.Name = "txtVentaBienSoc";
             this.txtVentaBienSoc.Size = new System.Drawing.Size(250, 21);
             this.txtVentaBienSoc.TabIndex = 225;
             // 
             // btnCompraBienSoc
             // 
-            this.btnCompraBienSoc.BackColor = System.Drawing.Color.White;
+            this.btnCompraBienSoc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
             this.btnCompraBienSoc.Enabled = false;
             this.btnCompraBienSoc.FlatAppearance.BorderSize = 0;
             this.btnCompraBienSoc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCompraBienSoc.Image = ((System.Drawing.Image)(resources.GetObject("btnCompraBienSoc.Image")));
-            this.btnCompraBienSoc.Location = new System.Drawing.Point(580, 12);
+            this.btnCompraBienSoc.Location = new System.Drawing.Point(510, 29);
             this.btnCompraBienSoc.Name = "btnCompraBienSoc";
             this.btnCompraBienSoc.Size = new System.Drawing.Size(25, 25);
             this.btnCompraBienSoc.TabIndex = 222;
@@ -594,56 +553,32 @@
             this.txtCompraBienSoc.BackColor = System.Drawing.Color.White;
             this.txtCompraBienSoc.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtCompraBienSoc.Enabled = false;
-            this.txtCompraBienSoc.Location = new System.Drawing.Point(331, 14);
+            this.txtCompraBienSoc.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCompraBienSoc.Location = new System.Drawing.Point(244, 32);
             this.txtCompraBienSoc.Name = "txtCompraBienSoc";
             this.txtCompraBienSoc.Size = new System.Drawing.Size(250, 21);
             this.txtCompraBienSoc.TabIndex = 221;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(615, 2);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(111, 13);
-            this.label15.TabIndex = 214;
-            this.label15.Text = "CUENTA EN VENTAS";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(328, 2);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(122, 13);
-            this.label16.TabIndex = 213;
-            this.label16.Text = "CUENTA EN COMPRAS";
             // 
             // txtBienEsp
             // 
             this.txtBienEsp.BackColor = System.Drawing.Color.White;
             this.txtBienEsp.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtBienEsp.Enabled = false;
-            this.txtBienEsp.Location = new System.Drawing.Point(250, 98);
+            this.txtBienEsp.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBienEsp.Location = new System.Drawing.Point(178, 135);
             this.txtBienEsp.Name = "txtBienEsp";
             this.txtBienEsp.Size = new System.Drawing.Size(49, 21);
             this.txtBienEsp.TabIndex = 212;
             this.txtBienEsp.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtBienEsp.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtRentaEsp_KeyPress);
             // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(11, 101);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(150, 13);
-            this.label14.TabIndex = 211;
-            this.label14.Text = "CONTRIBUYENTE ESPECIAL:";
-            // 
             // txtBienExp
             // 
             this.txtBienExp.BackColor = System.Drawing.Color.White;
             this.txtBienExp.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtBienExp.Enabled = false;
-            this.txtBienExp.Location = new System.Drawing.Point(250, 77);
+            this.txtBienExp.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBienExp.Location = new System.Drawing.Point(178, 109);
             this.txtBienExp.Name = "txtBienExp";
             this.txtBienExp.Size = new System.Drawing.Size(49, 21);
             this.txtBienExp.TabIndex = 210;
@@ -655,7 +590,8 @@
             this.txtBienPsin.BackColor = System.Drawing.Color.White;
             this.txtBienPsin.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtBienPsin.Enabled = false;
-            this.txtBienPsin.Location = new System.Drawing.Point(250, 56);
+            this.txtBienPsin.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBienPsin.Location = new System.Drawing.Point(178, 83);
             this.txtBienPsin.Name = "txtBienPsin";
             this.txtBienPsin.Size = new System.Drawing.Size(49, 21);
             this.txtBienPsin.TabIndex = 209;
@@ -667,7 +603,8 @@
             this.txtBienPcon.BackColor = System.Drawing.Color.White;
             this.txtBienPcon.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtBienPcon.Enabled = false;
-            this.txtBienPcon.Location = new System.Drawing.Point(250, 35);
+            this.txtBienPcon.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBienPcon.Location = new System.Drawing.Point(178, 58);
             this.txtBienPcon.Name = "txtBienPcon";
             this.txtBienPcon.Size = new System.Drawing.Size(49, 21);
             this.txtBienPcon.TabIndex = 208;
@@ -679,112 +616,192 @@
             this.txtBienSoc.BackColor = System.Drawing.Color.White;
             this.txtBienSoc.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtBienSoc.Enabled = false;
-            this.txtBienSoc.Location = new System.Drawing.Point(250, 14);
+            this.txtBienSoc.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBienSoc.Location = new System.Drawing.Point(178, 32);
             this.txtBienSoc.Name = "txtBienSoc";
             this.txtBienSoc.Size = new System.Drawing.Size(49, 21);
             this.txtBienSoc.TabIndex = 207;
             this.txtBienSoc.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtBienSoc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtRentaEsp_KeyPress);
             // 
-            // label6
+            // kryptonGroupBox1
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(11, 82);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(88, 13);
-            this.label6.TabIndex = 206;
-            this.label6.Text = "EXPORTADORA:";
+            this.kryptonGroupBox1.CaptionOverlap = 0D;
+            this.kryptonGroupBox1.GroupBackStyle = Krypton.Toolkit.PaletteBackStyle.ControlRibbon;
+            this.kryptonGroupBox1.Location = new System.Drawing.Point(1, 34);
+            this.kryptonGroupBox1.Name = "kryptonGroupBox1";
             // 
-            // label8
+            // kryptonGroupBox1.Panel
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(10, 59);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(212, 13);
-            this.label8.TabIndex = 205;
-            this.label8.Text = "PERSONA NATURAL SIN CONTABILIDAD:";
+            this.kryptonGroupBox1.Panel.Controls.Add(this.kryptonLabel12);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.btnVentaBienEsp);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.kryptonLabel11);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.btnVentaBienExp);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.txtVentaBienEsp);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.btnVentaBienPsin);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.kryptonLabel6);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.btnVentaBienPcon);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.btnCompraBienEsp);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.btnVentaBienSoc);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.txtVentaBienExp);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.kryptonLabel10);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.txtCompraBienEsp);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.txtVentaBienPsin);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.kryptonLabel9);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.kryptonLabel8);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.txtVentaBienPcon);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.kryptonLabel7);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.btnCompraBienExp);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.txtVentaBienSoc);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.kryptonLabel4);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.btnCompraBienPsin);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.txtBienSoc);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.txtBienPcon);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.txtCompraBienExp);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.btnCompraBienPcon);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.txtBienPsin);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.txtBienExp);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.txtCompraBienPsin);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.btnCompraBienSoc);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.txtBienEsp);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.txtCompraBienSoc);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.txtCompraBienPcon);
+            this.kryptonGroupBox1.Size = new System.Drawing.Size(846, 187);
+            this.kryptonGroupBox1.TabIndex = 242;
+            this.kryptonGroupBox1.Values.Heading = "Rentencion IVA Bienes";
             // 
-            // label9
+            // kryptonLabel12
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(10, 37);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(217, 13);
-            this.label9.TabIndex = 204;
-            this.label9.Text = "PERSONA NATURAL CON CONTABILIDAD:";
+            this.kryptonLabel12.Location = new System.Drawing.Point(607, 8);
+            this.kryptonLabel12.Name = "kryptonLabel12";
+            this.kryptonLabel12.Size = new System.Drawing.Size(101, 20);
+            this.kryptonLabel12.StateCommon.ShortText.Color1 = System.Drawing.Color.SeaGreen;
+            this.kryptonLabel12.TabIndex = 244;
+            this.kryptonLabel12.Values.Text = "Cuenta en Venta";
             // 
-            // label10
+            // kryptonLabel11
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(10, 17);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(62, 13);
-            this.label10.TabIndex = 203;
-            this.label10.Text = "SOCIEDAD:";
+            this.kryptonLabel11.Location = new System.Drawing.Point(309, 7);
+            this.kryptonLabel11.Name = "kryptonLabel11";
+            this.kryptonLabel11.Size = new System.Drawing.Size(113, 20);
+            this.kryptonLabel11.StateCommon.ShortText.Color1 = System.Drawing.Color.SeaGreen;
+            this.kryptonLabel11.TabIndex = 243;
+            this.kryptonLabel11.Values.Text = "Cuenta en Compra";
             // 
-            // groupBox1
+            // kryptonLabel6
             // 
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.btnVentaServiEsp);
-            this.groupBox1.Controls.Add(this.txtVentaServiEsp);
-            this.groupBox1.Controls.Add(this.btnCompraServiEsp);
-            this.groupBox1.Controls.Add(this.txtCompraServiEsp);
-            this.groupBox1.Controls.Add(this.btnVentaServiExp);
-            this.groupBox1.Controls.Add(this.txtVentaServiExp);
-            this.groupBox1.Controls.Add(this.btnVentaServiPsin);
-            this.groupBox1.Controls.Add(this.txtVentaServiPsin);
-            this.groupBox1.Controls.Add(this.btnCompraServiExp);
-            this.groupBox1.Controls.Add(this.txtCompraServiExp);
-            this.groupBox1.Controls.Add(this.btnCompraServiPsin);
-            this.groupBox1.Controls.Add(this.txtCompraServiPsin);
-            this.groupBox1.Controls.Add(this.btnVentaServiPcon);
-            this.groupBox1.Controls.Add(this.txtVentaServiPcon);
-            this.groupBox1.Controls.Add(this.btnCompraServiPcon);
-            this.groupBox1.Controls.Add(this.btnVentaServiSoc);
-            this.groupBox1.Controls.Add(this.txtCompraServiPcon);
-            this.groupBox1.Controls.Add(this.txtVentaServiSoc);
-            this.groupBox1.Controls.Add(this.btnCompraServiSoc);
-            this.groupBox1.Controls.Add(this.txtCompraServiSoc);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.txtServiEsp);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.txtServiExp);
-            this.groupBox1.Controls.Add(this.txtServiPsin);
-            this.groupBox1.Controls.Add(this.txtServiPcon);
-            this.groupBox1.Controls.Add(this.txtServiSoc);
-            this.groupBox1.Controls.Add(this.label11);
-            this.groupBox1.Controls.Add(this.label12);
-            this.groupBox1.Controls.Add(this.label13);
-            this.groupBox1.Controls.Add(this.label17);
-            this.groupBox1.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(1, 160);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(894, 125);
-            this.groupBox1.TabIndex = 241;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "RETENCIÓN IVA (SERVICIOS)";
+            this.kryptonLabel6.Location = new System.Drawing.Point(168, 7);
+            this.kryptonLabel6.Name = "kryptonLabel6";
+            this.kryptonLabel6.Size = new System.Drawing.Size(68, 20);
+            this.kryptonLabel6.StateCommon.ShortText.Color1 = System.Drawing.Color.SeaGreen;
+            this.kryptonLabel6.TabIndex = 242;
+            this.kryptonLabel6.Values.Text = "Porcentaje";
             // 
-            // label2
+            // kryptonLabel10
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(247, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(50, 13);
-            this.label2.TabIndex = 246;
-            this.label2.Text = "PRCN. %";
+            this.kryptonLabel10.Location = new System.Drawing.Point(12, 135);
+            this.kryptonLabel10.Name = "kryptonLabel10";
+            this.kryptonLabel10.Size = new System.Drawing.Size(135, 20);
+            this.kryptonLabel10.TabIndex = 216;
+            this.kryptonLabel10.Values.Text = "Contribuyente Especial";
+            // 
+            // kryptonLabel9
+            // 
+            this.kryptonLabel9.Location = new System.Drawing.Point(12, 109);
+            this.kryptonLabel9.Name = "kryptonLabel9";
+            this.kryptonLabel9.Size = new System.Drawing.Size(77, 20);
+            this.kryptonLabel9.TabIndex = 215;
+            this.kryptonLabel9.Values.Text = "Exportadora";
+            // 
+            // kryptonLabel8
+            // 
+            this.kryptonLabel8.Location = new System.Drawing.Point(12, 83);
+            this.kryptonLabel8.Name = "kryptonLabel8";
+            this.kryptonLabel8.Size = new System.Drawing.Size(158, 20);
+            this.kryptonLabel8.TabIndex = 214;
+            this.kryptonLabel8.Values.Text = "Persona N sin Contabilidad";
+            // 
+            // kryptonLabel7
+            // 
+            this.kryptonLabel7.Location = new System.Drawing.Point(12, 58);
+            this.kryptonLabel7.Name = "kryptonLabel7";
+            this.kryptonLabel7.Size = new System.Drawing.Size(163, 20);
+            this.kryptonLabel7.TabIndex = 213;
+            this.kryptonLabel7.Values.Text = "Persona N con Contabilidad";
+            // 
+            // kryptonLabel4
+            // 
+            this.kryptonLabel4.Location = new System.Drawing.Point(12, 32);
+            this.kryptonLabel4.Name = "kryptonLabel4";
+            this.kryptonLabel4.Size = new System.Drawing.Size(60, 20);
+            this.kryptonLabel4.TabIndex = 212;
+            this.kryptonLabel4.Values.Text = "Sociedad";
+            // 
+            // kryptonGroupBox2
+            // 
+            this.kryptonGroupBox2.CaptionOverlap = 0D;
+            this.kryptonGroupBox2.GroupBackStyle = Krypton.Toolkit.PaletteBackStyle.ControlRibbon;
+            this.kryptonGroupBox2.Location = new System.Drawing.Point(1, 226);
+            this.kryptonGroupBox2.Name = "kryptonGroupBox2";
+            // 
+            // kryptonGroupBox2.Panel
+            // 
+            this.kryptonGroupBox2.Panel.Controls.Add(this.kryptonLabel15);
+            this.kryptonGroupBox2.Panel.Controls.Add(this.btnVentaServiEsp);
+            this.kryptonGroupBox2.Panel.Controls.Add(this.txtVentaServiEsp);
+            this.kryptonGroupBox2.Panel.Controls.Add(this.btnCompraServiEsp);
+            this.kryptonGroupBox2.Panel.Controls.Add(this.txtCompraServiEsp);
+            this.kryptonGroupBox2.Panel.Controls.Add(this.btnVentaServiExp);
+            this.kryptonGroupBox2.Panel.Controls.Add(this.txtVentaServiExp);
+            this.kryptonGroupBox2.Panel.Controls.Add(this.btnVentaServiPsin);
+            this.kryptonGroupBox2.Panel.Controls.Add(this.txtVentaServiPsin);
+            this.kryptonGroupBox2.Panel.Controls.Add(this.btnCompraServiExp);
+            this.kryptonGroupBox2.Panel.Controls.Add(this.txtCompraServiExp);
+            this.kryptonGroupBox2.Panel.Controls.Add(this.btnCompraServiPsin);
+            this.kryptonGroupBox2.Panel.Controls.Add(this.txtCompraServiPsin);
+            this.kryptonGroupBox2.Panel.Controls.Add(this.btnVentaServiPcon);
+            this.kryptonGroupBox2.Panel.Controls.Add(this.txtVentaServiPcon);
+            this.kryptonGroupBox2.Panel.Controls.Add(this.btnCompraServiPcon);
+            this.kryptonGroupBox2.Panel.Controls.Add(this.btnVentaServiSoc);
+            this.kryptonGroupBox2.Panel.Controls.Add(this.txtCompraServiPcon);
+            this.kryptonGroupBox2.Panel.Controls.Add(this.txtVentaServiSoc);
+            this.kryptonGroupBox2.Panel.Controls.Add(this.btnCompraServiSoc);
+            this.kryptonGroupBox2.Panel.Controls.Add(this.txtCompraServiSoc);
+            this.kryptonGroupBox2.Panel.Controls.Add(this.txtServiEsp);
+            this.kryptonGroupBox2.Panel.Controls.Add(this.txtServiExp);
+            this.kryptonGroupBox2.Panel.Controls.Add(this.txtServiPsin);
+            this.kryptonGroupBox2.Panel.Controls.Add(this.txtServiPcon);
+            this.kryptonGroupBox2.Panel.Controls.Add(this.txtServiSoc);
+            this.kryptonGroupBox2.Panel.Controls.Add(this.kryptonLabel1);
+            this.kryptonGroupBox2.Panel.Controls.Add(this.kryptonLabel2);
+            this.kryptonGroupBox2.Panel.Controls.Add(this.kryptonLabel3);
+            this.kryptonGroupBox2.Panel.Controls.Add(this.kryptonLabel5);
+            this.kryptonGroupBox2.Panel.Controls.Add(this.kryptonLabel13);
+            this.kryptonGroupBox2.Panel.Controls.Add(this.kryptonLabel14);
+            this.kryptonGroupBox2.Panel.Controls.Add(this.kryptonLabel16);
+            this.kryptonGroupBox2.Size = new System.Drawing.Size(846, 187);
+            this.kryptonGroupBox2.TabIndex = 243;
+            this.kryptonGroupBox2.Values.Heading = "Rentencion IVA Servicios";
+            // 
+            // kryptonLabel15
+            // 
+            this.kryptonLabel15.Location = new System.Drawing.Point(12, 57);
+            this.kryptonLabel15.Name = "kryptonLabel15";
+            this.kryptonLabel15.Size = new System.Drawing.Size(163, 20);
+            this.kryptonLabel15.TabIndex = 270;
+            this.kryptonLabel15.Values.Text = "Persona N con Contabilidad";
             // 
             // btnVentaServiEsp
             // 
-            this.btnVentaServiEsp.BackColor = System.Drawing.Color.White;
+            this.btnVentaServiEsp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
             this.btnVentaServiEsp.Enabled = false;
             this.btnVentaServiEsp.FlatAppearance.BorderSize = 0;
             this.btnVentaServiEsp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVentaServiEsp.Image = ((System.Drawing.Image)(resources.GetObject("btnVentaServiEsp.Image")));
-            this.btnVentaServiEsp.Location = new System.Drawing.Point(867, 96);
+            this.btnVentaServiEsp.Location = new System.Drawing.Point(804, 132);
             this.btnVentaServiEsp.Name = "btnVentaServiEsp";
             this.btnVentaServiEsp.Size = new System.Drawing.Size(25, 25);
-            this.btnVentaServiEsp.TabIndex = 240;
+            this.btnVentaServiEsp.TabIndex = 269;
             this.btnVentaServiEsp.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnVentaServiEsp.UseVisualStyleBackColor = false;
             this.btnVentaServiEsp.Click += new System.EventHandler(this.btnVentaServiEsp_Click);
@@ -794,22 +811,23 @@
             this.txtVentaServiEsp.BackColor = System.Drawing.Color.White;
             this.txtVentaServiEsp.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtVentaServiEsp.Enabled = false;
-            this.txtVentaServiEsp.Location = new System.Drawing.Point(618, 98);
+            this.txtVentaServiEsp.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtVentaServiEsp.Location = new System.Drawing.Point(551, 135);
             this.txtVentaServiEsp.Name = "txtVentaServiEsp";
             this.txtVentaServiEsp.Size = new System.Drawing.Size(250, 21);
-            this.txtVentaServiEsp.TabIndex = 239;
+            this.txtVentaServiEsp.TabIndex = 268;
             // 
             // btnCompraServiEsp
             // 
-            this.btnCompraServiEsp.BackColor = System.Drawing.Color.White;
+            this.btnCompraServiEsp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
             this.btnCompraServiEsp.Enabled = false;
             this.btnCompraServiEsp.FlatAppearance.BorderSize = 0;
             this.btnCompraServiEsp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCompraServiEsp.Image = ((System.Drawing.Image)(resources.GetObject("btnCompraServiEsp.Image")));
-            this.btnCompraServiEsp.Location = new System.Drawing.Point(580, 96);
+            this.btnCompraServiEsp.Location = new System.Drawing.Point(510, 132);
             this.btnCompraServiEsp.Name = "btnCompraServiEsp";
             this.btnCompraServiEsp.Size = new System.Drawing.Size(25, 25);
-            this.btnCompraServiEsp.TabIndex = 238;
+            this.btnCompraServiEsp.TabIndex = 267;
             this.btnCompraServiEsp.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCompraServiEsp.UseVisualStyleBackColor = false;
             this.btnCompraServiEsp.Click += new System.EventHandler(this.btnCompraServiEsp_Click);
@@ -819,22 +837,23 @@
             this.txtCompraServiEsp.BackColor = System.Drawing.Color.White;
             this.txtCompraServiEsp.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtCompraServiEsp.Enabled = false;
-            this.txtCompraServiEsp.Location = new System.Drawing.Point(331, 98);
+            this.txtCompraServiEsp.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCompraServiEsp.Location = new System.Drawing.Point(244, 135);
             this.txtCompraServiEsp.Name = "txtCompraServiEsp";
             this.txtCompraServiEsp.Size = new System.Drawing.Size(250, 21);
-            this.txtCompraServiEsp.TabIndex = 237;
+            this.txtCompraServiEsp.TabIndex = 266;
             // 
             // btnVentaServiExp
             // 
-            this.btnVentaServiExp.BackColor = System.Drawing.Color.White;
+            this.btnVentaServiExp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
             this.btnVentaServiExp.Enabled = false;
             this.btnVentaServiExp.FlatAppearance.BorderSize = 0;
             this.btnVentaServiExp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVentaServiExp.Image = ((System.Drawing.Image)(resources.GetObject("btnVentaServiExp.Image")));
-            this.btnVentaServiExp.Location = new System.Drawing.Point(867, 75);
+            this.btnVentaServiExp.Location = new System.Drawing.Point(804, 106);
             this.btnVentaServiExp.Name = "btnVentaServiExp";
             this.btnVentaServiExp.Size = new System.Drawing.Size(25, 25);
-            this.btnVentaServiExp.TabIndex = 236;
+            this.btnVentaServiExp.TabIndex = 265;
             this.btnVentaServiExp.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnVentaServiExp.UseVisualStyleBackColor = false;
             this.btnVentaServiExp.Click += new System.EventHandler(this.btnVentaServiExp_Click);
@@ -844,22 +863,23 @@
             this.txtVentaServiExp.BackColor = System.Drawing.Color.White;
             this.txtVentaServiExp.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtVentaServiExp.Enabled = false;
-            this.txtVentaServiExp.Location = new System.Drawing.Point(618, 77);
+            this.txtVentaServiExp.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtVentaServiExp.Location = new System.Drawing.Point(551, 109);
             this.txtVentaServiExp.Name = "txtVentaServiExp";
             this.txtVentaServiExp.Size = new System.Drawing.Size(250, 21);
-            this.txtVentaServiExp.TabIndex = 235;
+            this.txtVentaServiExp.TabIndex = 264;
             // 
             // btnVentaServiPsin
             // 
-            this.btnVentaServiPsin.BackColor = System.Drawing.Color.White;
+            this.btnVentaServiPsin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
             this.btnVentaServiPsin.Enabled = false;
             this.btnVentaServiPsin.FlatAppearance.BorderSize = 0;
             this.btnVentaServiPsin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVentaServiPsin.Image = ((System.Drawing.Image)(resources.GetObject("btnVentaServiPsin.Image")));
-            this.btnVentaServiPsin.Location = new System.Drawing.Point(867, 54);
+            this.btnVentaServiPsin.Location = new System.Drawing.Point(804, 77);
             this.btnVentaServiPsin.Name = "btnVentaServiPsin";
             this.btnVentaServiPsin.Size = new System.Drawing.Size(25, 25);
-            this.btnVentaServiPsin.TabIndex = 234;
+            this.btnVentaServiPsin.TabIndex = 263;
             this.btnVentaServiPsin.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnVentaServiPsin.UseVisualStyleBackColor = false;
             this.btnVentaServiPsin.Click += new System.EventHandler(this.btnVentaServiPsin_Click);
@@ -869,22 +889,23 @@
             this.txtVentaServiPsin.BackColor = System.Drawing.Color.White;
             this.txtVentaServiPsin.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtVentaServiPsin.Enabled = false;
-            this.txtVentaServiPsin.Location = new System.Drawing.Point(618, 56);
+            this.txtVentaServiPsin.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtVentaServiPsin.Location = new System.Drawing.Point(551, 80);
             this.txtVentaServiPsin.Name = "txtVentaServiPsin";
             this.txtVentaServiPsin.Size = new System.Drawing.Size(250, 21);
-            this.txtVentaServiPsin.TabIndex = 233;
+            this.txtVentaServiPsin.TabIndex = 262;
             // 
             // btnCompraServiExp
             // 
-            this.btnCompraServiExp.BackColor = System.Drawing.Color.White;
+            this.btnCompraServiExp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
             this.btnCompraServiExp.Enabled = false;
             this.btnCompraServiExp.FlatAppearance.BorderSize = 0;
             this.btnCompraServiExp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCompraServiExp.Image = ((System.Drawing.Image)(resources.GetObject("btnCompraServiExp.Image")));
-            this.btnCompraServiExp.Location = new System.Drawing.Point(580, 75);
+            this.btnCompraServiExp.Location = new System.Drawing.Point(510, 106);
             this.btnCompraServiExp.Name = "btnCompraServiExp";
             this.btnCompraServiExp.Size = new System.Drawing.Size(25, 25);
-            this.btnCompraServiExp.TabIndex = 232;
+            this.btnCompraServiExp.TabIndex = 261;
             this.btnCompraServiExp.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCompraServiExp.UseVisualStyleBackColor = false;
             this.btnCompraServiExp.Click += new System.EventHandler(this.btnCompraServiExp_Click);
@@ -894,22 +915,23 @@
             this.txtCompraServiExp.BackColor = System.Drawing.Color.White;
             this.txtCompraServiExp.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtCompraServiExp.Enabled = false;
-            this.txtCompraServiExp.Location = new System.Drawing.Point(331, 77);
+            this.txtCompraServiExp.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCompraServiExp.Location = new System.Drawing.Point(244, 109);
             this.txtCompraServiExp.Name = "txtCompraServiExp";
             this.txtCompraServiExp.Size = new System.Drawing.Size(250, 21);
-            this.txtCompraServiExp.TabIndex = 231;
+            this.txtCompraServiExp.TabIndex = 260;
             // 
             // btnCompraServiPsin
             // 
-            this.btnCompraServiPsin.BackColor = System.Drawing.Color.White;
+            this.btnCompraServiPsin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
             this.btnCompraServiPsin.Enabled = false;
             this.btnCompraServiPsin.FlatAppearance.BorderSize = 0;
             this.btnCompraServiPsin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCompraServiPsin.Image = ((System.Drawing.Image)(resources.GetObject("btnCompraServiPsin.Image")));
-            this.btnCompraServiPsin.Location = new System.Drawing.Point(580, 54);
+            this.btnCompraServiPsin.Location = new System.Drawing.Point(510, 77);
             this.btnCompraServiPsin.Name = "btnCompraServiPsin";
             this.btnCompraServiPsin.Size = new System.Drawing.Size(25, 25);
-            this.btnCompraServiPsin.TabIndex = 230;
+            this.btnCompraServiPsin.TabIndex = 259;
             this.btnCompraServiPsin.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCompraServiPsin.UseVisualStyleBackColor = false;
             this.btnCompraServiPsin.Click += new System.EventHandler(this.btnCompraServiPsin_Click);
@@ -919,22 +941,23 @@
             this.txtCompraServiPsin.BackColor = System.Drawing.Color.White;
             this.txtCompraServiPsin.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtCompraServiPsin.Enabled = false;
-            this.txtCompraServiPsin.Location = new System.Drawing.Point(331, 56);
+            this.txtCompraServiPsin.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCompraServiPsin.Location = new System.Drawing.Point(244, 83);
             this.txtCompraServiPsin.Name = "txtCompraServiPsin";
             this.txtCompraServiPsin.Size = new System.Drawing.Size(250, 21);
-            this.txtCompraServiPsin.TabIndex = 229;
+            this.txtCompraServiPsin.TabIndex = 258;
             // 
             // btnVentaServiPcon
             // 
-            this.btnVentaServiPcon.BackColor = System.Drawing.Color.White;
+            this.btnVentaServiPcon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
             this.btnVentaServiPcon.Enabled = false;
             this.btnVentaServiPcon.FlatAppearance.BorderSize = 0;
             this.btnVentaServiPcon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVentaServiPcon.Image = ((System.Drawing.Image)(resources.GetObject("btnVentaServiPcon.Image")));
-            this.btnVentaServiPcon.Location = new System.Drawing.Point(867, 33);
+            this.btnVentaServiPcon.Location = new System.Drawing.Point(804, 54);
             this.btnVentaServiPcon.Name = "btnVentaServiPcon";
             this.btnVentaServiPcon.Size = new System.Drawing.Size(25, 25);
-            this.btnVentaServiPcon.TabIndex = 228;
+            this.btnVentaServiPcon.TabIndex = 257;
             this.btnVentaServiPcon.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnVentaServiPcon.UseVisualStyleBackColor = false;
             this.btnVentaServiPcon.Click += new System.EventHandler(this.btnVentaServiPcon_Click);
@@ -944,37 +967,38 @@
             this.txtVentaServiPcon.BackColor = System.Drawing.Color.White;
             this.txtVentaServiPcon.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtVentaServiPcon.Enabled = false;
-            this.txtVentaServiPcon.Location = new System.Drawing.Point(618, 35);
+            this.txtVentaServiPcon.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtVentaServiPcon.Location = new System.Drawing.Point(551, 57);
             this.txtVentaServiPcon.Name = "txtVentaServiPcon";
             this.txtVentaServiPcon.Size = new System.Drawing.Size(250, 21);
-            this.txtVentaServiPcon.TabIndex = 227;
+            this.txtVentaServiPcon.TabIndex = 256;
             // 
             // btnCompraServiPcon
             // 
-            this.btnCompraServiPcon.BackColor = System.Drawing.Color.White;
+            this.btnCompraServiPcon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
             this.btnCompraServiPcon.Enabled = false;
             this.btnCompraServiPcon.FlatAppearance.BorderSize = 0;
             this.btnCompraServiPcon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCompraServiPcon.Image = ((System.Drawing.Image)(resources.GetObject("btnCompraServiPcon.Image")));
-            this.btnCompraServiPcon.Location = new System.Drawing.Point(580, 33);
+            this.btnCompraServiPcon.Location = new System.Drawing.Point(510, 54);
             this.btnCompraServiPcon.Name = "btnCompraServiPcon";
             this.btnCompraServiPcon.Size = new System.Drawing.Size(25, 25);
-            this.btnCompraServiPcon.TabIndex = 224;
+            this.btnCompraServiPcon.TabIndex = 253;
             this.btnCompraServiPcon.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCompraServiPcon.UseVisualStyleBackColor = false;
             this.btnCompraServiPcon.Click += new System.EventHandler(this.btnCompraServiPcon_Click);
             // 
             // btnVentaServiSoc
             // 
-            this.btnVentaServiSoc.BackColor = System.Drawing.Color.White;
+            this.btnVentaServiSoc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
             this.btnVentaServiSoc.Enabled = false;
             this.btnVentaServiSoc.FlatAppearance.BorderSize = 0;
             this.btnVentaServiSoc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVentaServiSoc.Image = ((System.Drawing.Image)(resources.GetObject("btnVentaServiSoc.Image")));
-            this.btnVentaServiSoc.Location = new System.Drawing.Point(867, 11);
+            this.btnVentaServiSoc.Location = new System.Drawing.Point(804, 29);
             this.btnVentaServiSoc.Name = "btnVentaServiSoc";
             this.btnVentaServiSoc.Size = new System.Drawing.Size(25, 25);
-            this.btnVentaServiSoc.TabIndex = 226;
+            this.btnVentaServiSoc.TabIndex = 255;
             this.btnVentaServiSoc.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnVentaServiSoc.UseVisualStyleBackColor = false;
             this.btnVentaServiSoc.Click += new System.EventHandler(this.btnVentaServiSoc_Click);
@@ -984,32 +1008,34 @@
             this.txtCompraServiPcon.BackColor = System.Drawing.Color.White;
             this.txtCompraServiPcon.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtCompraServiPcon.Enabled = false;
-            this.txtCompraServiPcon.Location = new System.Drawing.Point(331, 35);
+            this.txtCompraServiPcon.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCompraServiPcon.Location = new System.Drawing.Point(244, 57);
             this.txtCompraServiPcon.Name = "txtCompraServiPcon";
             this.txtCompraServiPcon.Size = new System.Drawing.Size(250, 21);
-            this.txtCompraServiPcon.TabIndex = 223;
+            this.txtCompraServiPcon.TabIndex = 252;
             // 
             // txtVentaServiSoc
             // 
             this.txtVentaServiSoc.BackColor = System.Drawing.Color.White;
             this.txtVentaServiSoc.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtVentaServiSoc.Enabled = false;
-            this.txtVentaServiSoc.Location = new System.Drawing.Point(618, 14);
+            this.txtVentaServiSoc.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtVentaServiSoc.Location = new System.Drawing.Point(551, 32);
             this.txtVentaServiSoc.Name = "txtVentaServiSoc";
             this.txtVentaServiSoc.Size = new System.Drawing.Size(250, 21);
-            this.txtVentaServiSoc.TabIndex = 225;
+            this.txtVentaServiSoc.TabIndex = 254;
             // 
             // btnCompraServiSoc
             // 
-            this.btnCompraServiSoc.BackColor = System.Drawing.Color.White;
+            this.btnCompraServiSoc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
             this.btnCompraServiSoc.Enabled = false;
             this.btnCompraServiSoc.FlatAppearance.BorderSize = 0;
             this.btnCompraServiSoc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCompraServiSoc.Image = ((System.Drawing.Image)(resources.GetObject("btnCompraServiSoc.Image")));
-            this.btnCompraServiSoc.Location = new System.Drawing.Point(580, 12);
+            this.btnCompraServiSoc.Location = new System.Drawing.Point(510, 27);
             this.btnCompraServiSoc.Name = "btnCompraServiSoc";
             this.btnCompraServiSoc.Size = new System.Drawing.Size(25, 25);
-            this.btnCompraServiSoc.TabIndex = 222;
+            this.btnCompraServiSoc.TabIndex = 251;
             this.btnCompraServiSoc.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCompraServiSoc.UseVisualStyleBackColor = false;
             this.btnCompraServiSoc.Click += new System.EventHandler(this.btnCompraServiSoc_Click);
@@ -1019,58 +1045,34 @@
             this.txtCompraServiSoc.BackColor = System.Drawing.Color.White;
             this.txtCompraServiSoc.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtCompraServiSoc.Enabled = false;
-            this.txtCompraServiSoc.Location = new System.Drawing.Point(331, 14);
+            this.txtCompraServiSoc.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCompraServiSoc.Location = new System.Drawing.Point(244, 32);
             this.txtCompraServiSoc.Name = "txtCompraServiSoc";
             this.txtCompraServiSoc.Size = new System.Drawing.Size(250, 21);
-            this.txtCompraServiSoc.TabIndex = 221;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(615, 2);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(111, 13);
-            this.label3.TabIndex = 214;
-            this.label3.Text = "CUENTA EN VENTAS";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(328, 2);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(122, 13);
-            this.label4.TabIndex = 213;
-            this.label4.Text = "CUENTA EN COMPRAS";
+            this.txtCompraServiSoc.TabIndex = 250;
             // 
             // txtServiEsp
             // 
             this.txtServiEsp.BackColor = System.Drawing.Color.White;
             this.txtServiEsp.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtServiEsp.Enabled = false;
-            this.txtServiEsp.Location = new System.Drawing.Point(250, 98);
+            this.txtServiEsp.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtServiEsp.Location = new System.Drawing.Point(178, 135);
             this.txtServiEsp.Name = "txtServiEsp";
             this.txtServiEsp.Size = new System.Drawing.Size(49, 21);
-            this.txtServiEsp.TabIndex = 212;
+            this.txtServiEsp.TabIndex = 249;
             this.txtServiEsp.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(11, 101);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(150, 13);
-            this.label5.TabIndex = 211;
-            this.label5.Text = "CONTRIBUYENTE ESPECIAL:";
             // 
             // txtServiExp
             // 
             this.txtServiExp.BackColor = System.Drawing.Color.White;
             this.txtServiExp.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtServiExp.Enabled = false;
-            this.txtServiExp.Location = new System.Drawing.Point(250, 77);
+            this.txtServiExp.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtServiExp.Location = new System.Drawing.Point(178, 109);
             this.txtServiExp.Name = "txtServiExp";
             this.txtServiExp.Size = new System.Drawing.Size(49, 21);
-            this.txtServiExp.TabIndex = 210;
+            this.txtServiExp.TabIndex = 248;
             this.txtServiExp.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtServiPsin
@@ -1078,10 +1080,11 @@
             this.txtServiPsin.BackColor = System.Drawing.Color.White;
             this.txtServiPsin.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtServiPsin.Enabled = false;
-            this.txtServiPsin.Location = new System.Drawing.Point(250, 56);
+            this.txtServiPsin.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtServiPsin.Location = new System.Drawing.Point(178, 84);
             this.txtServiPsin.Name = "txtServiPsin";
             this.txtServiPsin.Size = new System.Drawing.Size(49, 21);
-            this.txtServiPsin.TabIndex = 209;
+            this.txtServiPsin.TabIndex = 247;
             this.txtServiPsin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtServiPcon
@@ -1089,10 +1092,11 @@
             this.txtServiPcon.BackColor = System.Drawing.Color.White;
             this.txtServiPcon.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtServiPcon.Enabled = false;
-            this.txtServiPcon.Location = new System.Drawing.Point(250, 35);
+            this.txtServiPcon.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtServiPcon.Location = new System.Drawing.Point(178, 57);
             this.txtServiPcon.Name = "txtServiPcon";
             this.txtServiPcon.Size = new System.Drawing.Size(49, 21);
-            this.txtServiPcon.TabIndex = 208;
+            this.txtServiPcon.TabIndex = 246;
             this.txtServiPcon.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtServiSoc
@@ -1100,60 +1104,106 @@
             this.txtServiSoc.BackColor = System.Drawing.Color.White;
             this.txtServiSoc.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtServiSoc.Enabled = false;
-            this.txtServiSoc.Location = new System.Drawing.Point(250, 14);
+            this.txtServiSoc.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtServiSoc.Location = new System.Drawing.Point(178, 32);
             this.txtServiSoc.Name = "txtServiSoc";
             this.txtServiSoc.Size = new System.Drawing.Size(49, 21);
-            this.txtServiSoc.TabIndex = 207;
+            this.txtServiSoc.TabIndex = 245;
             this.txtServiSoc.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // label11
+            // kryptonLabel1
             // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(11, 82);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(88, 13);
-            this.label11.TabIndex = 206;
-            this.label11.Text = "EXPORTADORA:";
+            this.kryptonLabel1.Location = new System.Drawing.Point(607, 8);
+            this.kryptonLabel1.Name = "kryptonLabel1";
+            this.kryptonLabel1.Size = new System.Drawing.Size(101, 20);
+            this.kryptonLabel1.StateCommon.ShortText.Color1 = System.Drawing.Color.SeaGreen;
+            this.kryptonLabel1.TabIndex = 244;
+            this.kryptonLabel1.Values.Text = "Cuenta en Venta";
             // 
-            // label12
+            // kryptonLabel2
             // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(10, 59);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(212, 13);
-            this.label12.TabIndex = 205;
-            this.label12.Text = "PERSONA NATURAL SIN CONTABILIDAD:";
+            this.kryptonLabel2.Location = new System.Drawing.Point(309, 7);
+            this.kryptonLabel2.Name = "kryptonLabel2";
+            this.kryptonLabel2.Size = new System.Drawing.Size(113, 20);
+            this.kryptonLabel2.StateCommon.ShortText.Color1 = System.Drawing.Color.SeaGreen;
+            this.kryptonLabel2.TabIndex = 243;
+            this.kryptonLabel2.Values.Text = "Cuenta en Compra";
             // 
-            // label13
+            // kryptonLabel3
             // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(10, 37);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(217, 13);
-            this.label13.TabIndex = 204;
-            this.label13.Text = "PERSONA NATURAL CON CONTABILIDAD:";
+            this.kryptonLabel3.Location = new System.Drawing.Point(168, 7);
+            this.kryptonLabel3.Name = "kryptonLabel3";
+            this.kryptonLabel3.Size = new System.Drawing.Size(68, 20);
+            this.kryptonLabel3.StateCommon.ShortText.Color1 = System.Drawing.Color.SeaGreen;
+            this.kryptonLabel3.TabIndex = 242;
+            this.kryptonLabel3.Values.Text = "Porcentaje";
             // 
-            // label17
+            // kryptonLabel5
             // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(10, 17);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(62, 13);
-            this.label17.TabIndex = 203;
-            this.label17.Text = "SOCIEDAD:";
+            this.kryptonLabel5.Location = new System.Drawing.Point(12, 135);
+            this.kryptonLabel5.Name = "kryptonLabel5";
+            this.kryptonLabel5.Size = new System.Drawing.Size(135, 20);
+            this.kryptonLabel5.TabIndex = 216;
+            this.kryptonLabel5.Values.Text = "Contribuyente Especial";
+            // 
+            // kryptonLabel13
+            // 
+            this.kryptonLabel13.Location = new System.Drawing.Point(12, 109);
+            this.kryptonLabel13.Name = "kryptonLabel13";
+            this.kryptonLabel13.Size = new System.Drawing.Size(77, 20);
+            this.kryptonLabel13.TabIndex = 215;
+            this.kryptonLabel13.Values.Text = "Exportadora";
+            // 
+            // kryptonLabel14
+            // 
+            this.kryptonLabel14.Location = new System.Drawing.Point(12, 83);
+            this.kryptonLabel14.Name = "kryptonLabel14";
+            this.kryptonLabel14.Size = new System.Drawing.Size(158, 20);
+            this.kryptonLabel14.TabIndex = 214;
+            this.kryptonLabel14.Values.Text = "Persona N sin Contabilidad";
+            // 
+            // kryptonLabel16
+            // 
+            this.kryptonLabel16.Location = new System.Drawing.Point(12, 32);
+            this.kryptonLabel16.Name = "kryptonLabel16";
+            this.kryptonLabel16.Size = new System.Drawing.Size(60, 20);
+            this.kryptonLabel16.TabIndex = 212;
+            this.kryptonLabel16.Values.Text = "Sociedad";
+            // 
+            // kryptonGroupBox3
+            // 
+            this.kryptonGroupBox3.CaptionOverlap = 0D;
+            this.kryptonGroupBox3.GroupBackStyle = Krypton.Toolkit.PaletteBackStyle.ControlRibbon;
+            this.kryptonGroupBox3.Location = new System.Drawing.Point(1, 419);
+            this.kryptonGroupBox3.Name = "kryptonGroupBox3";
+            // 
+            // kryptonGroupBox3.Panel
+            // 
+            this.kryptonGroupBox3.Panel.Controls.Add(this.kryptonLabel17);
+            this.kryptonGroupBox3.Panel.Controls.Add(this.txtFiltro);
+            this.kryptonGroupBox3.Panel.Controls.Add(this.ListView1);
+            this.kryptonGroupBox3.Size = new System.Drawing.Size(846, 230);
+            this.kryptonGroupBox3.TabIndex = 244;
+            this.kryptonGroupBox3.Values.Heading = "Porcentaje De Rentencion Registrados";
+            // 
+            // kryptonLabel17
+            // 
+            this.kryptonLabel17.Location = new System.Drawing.Point(12, 3);
+            this.kryptonLabel17.Name = "kryptonLabel17";
+            this.kryptonLabel17.Size = new System.Drawing.Size(46, 20);
+            this.kryptonLabel17.TabIndex = 213;
+            this.kryptonLabel17.Values.Text = "Buscar";
             // 
             // FrmPorcentajesRetencionIva
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(895, 672);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.groupBox3);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(204)))), ((int)(((byte)(227)))));
+            this.ClientSize = new System.Drawing.Size(849, 672);
+            this.Controls.Add(this.kryptonGroupBox3);
+            this.Controls.Add(this.kryptonGroupBox2);
+            this.Controls.Add(this.kryptonGroupBox1);
             this.Controls.Add(this.Label7);
-            this.Controls.Add(this.ListView1);
-            this.Controls.Add(this.txtFiltro);
-            this.Controls.Add(this.Label24);
             this.Controls.Add(this.Label1);
             this.Controls.Add(this.toolStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
@@ -1167,10 +1217,21 @@
             this.Load += new System.EventHandler(this.FrmPorcentajesRetencionIva_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox1.Panel)).EndInit();
+            this.kryptonGroupBox1.Panel.ResumeLayout(false);
+            this.kryptonGroupBox1.Panel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox1)).EndInit();
+            this.kryptonGroupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox2.Panel)).EndInit();
+            this.kryptonGroupBox2.Panel.ResumeLayout(false);
+            this.kryptonGroupBox2.Panel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox2)).EndInit();
+            this.kryptonGroupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox3.Panel)).EndInit();
+            this.kryptonGroupBox3.Panel.ResumeLayout(false);
+            this.kryptonGroupBox3.Panel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox3)).EndInit();
+            this.kryptonGroupBox3.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1187,7 +1248,6 @@
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader6;
         internal System.Windows.Forms.TextBox txtFiltro;
-        internal System.Windows.Forms.Label Label24;
         internal System.Windows.Forms.Label Label1;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton btnBuscar;
@@ -1196,8 +1256,6 @@
         private System.Windows.Forms.ToolStripButton btnModificar;
         private System.Windows.Forms.ToolStripButton btnCancelar;
         private System.Windows.Forms.ToolStripButton toolStripButton1;
-        private System.Windows.Forms.GroupBox groupBox3;
-        internal System.Windows.Forms.Label label18;
         internal System.Windows.Forms.Button btnVentaBienEsp;
         internal System.Windows.Forms.TextBox txtVentaBienEsp;
         internal System.Windows.Forms.Button btnCompraBienEsp;
@@ -1218,20 +1276,22 @@
         internal System.Windows.Forms.TextBox txtVentaBienSoc;
         internal System.Windows.Forms.Button btnCompraBienSoc;
         internal System.Windows.Forms.TextBox txtCompraBienSoc;
-        internal System.Windows.Forms.Label label15;
-        internal System.Windows.Forms.Label label16;
         internal System.Windows.Forms.TextBox txtBienEsp;
-        internal System.Windows.Forms.Label label14;
         internal System.Windows.Forms.TextBox txtBienExp;
         internal System.Windows.Forms.TextBox txtBienPsin;
         internal System.Windows.Forms.TextBox txtBienPcon;
         internal System.Windows.Forms.TextBox txtBienSoc;
-        internal System.Windows.Forms.Label label6;
-        internal System.Windows.Forms.Label label8;
-        internal System.Windows.Forms.Label label9;
-        internal System.Windows.Forms.Label label10;
-        private System.Windows.Forms.GroupBox groupBox1;
-        internal System.Windows.Forms.Label label2;
+        private Krypton.Toolkit.KryptonGroupBox kryptonGroupBox1;
+        private Krypton.Toolkit.KryptonLabel kryptonLabel10;
+        private Krypton.Toolkit.KryptonLabel kryptonLabel9;
+        private Krypton.Toolkit.KryptonLabel kryptonLabel8;
+        private Krypton.Toolkit.KryptonLabel kryptonLabel7;
+        private Krypton.Toolkit.KryptonLabel kryptonLabel4;
+        private Krypton.Toolkit.KryptonLabel kryptonLabel12;
+        private Krypton.Toolkit.KryptonLabel kryptonLabel11;
+        private Krypton.Toolkit.KryptonLabel kryptonLabel6;
+        private Krypton.Toolkit.KryptonGroupBox kryptonGroupBox2;
+        private Krypton.Toolkit.KryptonLabel kryptonLabel15;
         internal System.Windows.Forms.Button btnVentaServiEsp;
         internal System.Windows.Forms.TextBox txtVentaServiEsp;
         internal System.Windows.Forms.Button btnCompraServiEsp;
@@ -1252,17 +1312,19 @@
         internal System.Windows.Forms.TextBox txtVentaServiSoc;
         internal System.Windows.Forms.Button btnCompraServiSoc;
         internal System.Windows.Forms.TextBox txtCompraServiSoc;
-        internal System.Windows.Forms.Label label3;
-        internal System.Windows.Forms.Label label4;
         internal System.Windows.Forms.TextBox txtServiEsp;
-        internal System.Windows.Forms.Label label5;
         internal System.Windows.Forms.TextBox txtServiExp;
         internal System.Windows.Forms.TextBox txtServiPsin;
         internal System.Windows.Forms.TextBox txtServiPcon;
         internal System.Windows.Forms.TextBox txtServiSoc;
-        internal System.Windows.Forms.Label label11;
-        internal System.Windows.Forms.Label label12;
-        internal System.Windows.Forms.Label label13;
-        internal System.Windows.Forms.Label label17;
+        private Krypton.Toolkit.KryptonLabel kryptonLabel1;
+        private Krypton.Toolkit.KryptonLabel kryptonLabel2;
+        private Krypton.Toolkit.KryptonLabel kryptonLabel3;
+        private Krypton.Toolkit.KryptonLabel kryptonLabel5;
+        private Krypton.Toolkit.KryptonLabel kryptonLabel13;
+        private Krypton.Toolkit.KryptonLabel kryptonLabel14;
+        private Krypton.Toolkit.KryptonLabel kryptonLabel16;
+        private Krypton.Toolkit.KryptonGroupBox kryptonGroupBox3;
+        private Krypton.Toolkit.KryptonLabel kryptonLabel17;
     }
 }

@@ -92,7 +92,7 @@ namespace SysCisepro3.Main
             }
             catch (Exception ex)
             {
-                KryptonMessageBox.Show(@"Error al iniciar: " + ex.Message, "MENSAJE DELL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+                KryptonMessageBox.Show(@"Error al iniciar: " + ex.Message, "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
             }
 
 

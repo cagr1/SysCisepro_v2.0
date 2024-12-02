@@ -136,7 +136,7 @@ namespace SysCisepro3.Main
             }
             catch (Exception ex)
             {
-                MessageBox.Show(@"Error al iniciar: " + ex.Message, "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(@"Error al iniciar: " + ex.Message, "Mensaje del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 

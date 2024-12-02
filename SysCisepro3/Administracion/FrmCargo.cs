@@ -150,7 +150,7 @@ namespace SysCisepro3.Administracion
             catch (Exception ex)
             {
                 dgGrupoOcupacional.DataSource = null;
-                MessageBox.Show(@"Error al cargar grupos: " + ex.Message, "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(@"Error al cargar grupos: " + ex.Message, "Mensaje del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -175,7 +175,7 @@ namespace SysCisepro3.Administracion
             catch (Exception ex)
             {
                 dgSeries.DataSource = null;
-                MessageBox.Show(@"Error al cargar series: " + ex.Message, "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(@"Error al cargar series: " + ex.Message, "Mensaje del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -202,7 +202,7 @@ namespace SysCisepro3.Administracion
             catch (Exception ex)
             {
                 dgCargo.DataSource = null;
-                MessageBox.Show(@"Error al cargar series: " + ex.Message, "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(@"Error al cargar series: " + ex.Message, "Mensaje del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -332,12 +332,12 @@ namespace SysCisepro3.Administracion
         {
             if (!ValidacionParametros())
             {
-                MessageBox.Show(@"Debe ingresar todos los datos para guardar!", "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(@"Debe ingresar todos los datos para guardar!", "Mensaje del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
 
             if (MessageBox.Show(@"Desea guardar los cambios realizados?",
-                    "MENSAJE DELL SISTEMA", MessageBoxButtons.YesNo, MessageBoxIcon.Question) !=
+                    "Mensaje del Sistema", MessageBoxButtons.YesNo, MessageBoxIcon.Question) !=
                 DialogResult.Yes) return;
 
             _sqlCommands.Clear();
@@ -358,7 +358,7 @@ namespace SysCisepro3.Administracion
                 CargarGrupoOcupacional();
                 HabilitarBotones(true, true, false, false);
             }
-            MessageBox.Show((string)res[1], "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show((string)res[1], "Mensaje del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
@@ -389,7 +389,7 @@ namespace SysCisepro3.Administracion
             }
             catch
             {
-                MessageBox.Show(@"Error al generar reporte!", "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(@"Error al generar reporte!", "Mensaje del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -409,12 +409,12 @@ namespace SysCisepro3.Administracion
         {
             if (!ValidacionParametrosSerie())
             {
-                MessageBox.Show(@"Debe ingresar todos los datos para guardar!", "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(@"Debe ingresar todos los datos para guardar!", "Mensaje del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
 
             if (MessageBox.Show(@"Desea guardar los cambios realizados?",
-                    "MENSAJE DELL SISTEMA", MessageBoxButtons.YesNo, MessageBoxIcon.Question) !=
+                    "Mensaje del Sistema", MessageBoxButtons.YesNo, MessageBoxIcon.Question) !=
                 DialogResult.Yes) return;
 
             _sqlCommands.Clear();
@@ -436,7 +436,7 @@ namespace SysCisepro3.Administracion
                 CargarSerieOcupacional();
                 HabilitarBotonesSerie(true, true, false, false);
             }
-            MessageBox.Show((string)res[1], "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show((string)res[1], "Mensaje del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void btnModificarSerie_Click(object sender, EventArgs e)
@@ -468,7 +468,7 @@ namespace SysCisepro3.Administracion
             }
             catch
             {
-                MessageBox.Show(@"Error al generar reporte!", "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(@"Error al generar reporte!", "Mensaje del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -487,12 +487,12 @@ namespace SysCisepro3.Administracion
         {
             if (!ValidacionParametrosCargo())
             {
-                MessageBox.Show(@"Debe ingresar todos los datos para guardar!", "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(@"Debe ingresar todos los datos para guardar!", "Mensaje del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
 
             if (MessageBox.Show(@"Desea guardar los cambios realizados?",
-                    "MENSAJE DELL SISTEMA", MessageBoxButtons.YesNo, MessageBoxIcon.Question) !=
+                    "Mensaje del Sistema", MessageBoxButtons.YesNo, MessageBoxIcon.Question) !=
                 DialogResult.Yes) return;
 
             _sqlCommands.Clear();
@@ -520,7 +520,7 @@ namespace SysCisepro3.Administracion
                 CargarCargo();
                 HabilitarBotonesCargos(true, true, false, false);
             }
-            MessageBox.Show((string)res[1], "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show((string)res[1], "Mensaje del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void btnModificarCargo_Click(object sender, EventArgs e)
@@ -544,7 +544,7 @@ namespace SysCisepro3.Administracion
             }
             catch
             {
-                MessageBox.Show(@"Error al generar reporte!", "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(@"Error al generar reporte!", "Mensaje del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 

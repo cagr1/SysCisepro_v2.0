@@ -144,7 +144,7 @@ namespace SysCisepro3.Contabilidad.Compras
             {
                 dgvOrdenCompra.DataSource = null;
                 dgvDetalleOrdenCompra.DataSource = null;
-                MessageBox.Show(@"Error al cargar órdenes de compra: " + ex.Message, "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(@"Error al cargar órdenes de compra: " + ex.Message, "Mensaje del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -202,7 +202,7 @@ namespace SysCisepro3.Contabilidad.Compras
             catch (Exception ex)
             {
                 dgvDetalleOrdenCompra.DataSource = null;
-                MessageBox.Show(@"Error al cargar detalles de la compra: " + ex.Message, "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(@"Error al cargar detalles de la compra: " + ex.Message, "Mensaje del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -220,19 +220,19 @@ namespace SysCisepro3.Contabilidad.Compras
         {
             if (dgvOrdenCompra.Rows.Count == 0)
             {
-                MessageBox.Show(@"No se ha seleccionado una órden de compra pendiente!", "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(@"No se ha seleccionado una órden de compra pendiente!", "Mensaje del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
 
             if (dgvDetalleOrdenCompra.RowCount == 0)
             {
-                MessageBox.Show(@"No se han cargado los detalles de la órden de compra, no se puede finalizar la revisión!", "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(@"No se han cargado los detalles de la órden de compra, no se puede finalizar la revisión!", "Mensaje del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
 
             if (MessageBox.Show(
                     @"Está seguro que desea rechazar la órden de compra? Una vez aprobado no se puede realizar cambios",
-                    "MENSAJE DELL SISTEMA", MessageBoxButtons.YesNo, MessageBoxIcon.Question) !=
+                    "Mensaje del Sistema", MessageBoxButtons.YesNo, MessageBoxIcon.Question) !=
                 DialogResult.Yes) return;
 
             _sqlCommands.Clear();
@@ -246,26 +246,26 @@ namespace SysCisepro3.Contabilidad.Compras
             var res = ComandosSql.ProcesarTransacciones(TipoCon, _sqlCommands, nombre);
 
             if ((bool)res[0]) btnRecargar.PerformClick();
-            MessageBox.Show((string)res[1], "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show((string)res[1], "Mensaje del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void btnAprobarLiquidacion_Click(object sender, EventArgs e)
         {
             if (dgvOrdenCompra.Rows.Count == 0)
             {
-                MessageBox.Show(@"No se ha seleccionado una órden de compra pendiente!", "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(@"No se ha seleccionado una órden de compra pendiente!", "Mensaje del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
 
             if (dgvDetalleOrdenCompra.RowCount == 0)
             {
-                MessageBox.Show(@"No se han cargado los detalles de la órden de compra, no se puede finalizar la revisión!", "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(@"No se han cargado los detalles de la órden de compra, no se puede finalizar la revisión!", "Mensaje del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
 
             if (MessageBox.Show(
                     @"Está seguro que desea aprobar la órden de compra? Una vez aprobado no se puede realizar cambios",
-                    "MENSAJE DELL SISTEMA", MessageBoxButtons.YesNo, MessageBoxIcon.Question) !=
+                    "Mensaje del Sistema", MessageBoxButtons.YesNo, MessageBoxIcon.Question) !=
                 DialogResult.Yes) return;
 
             _sqlCommands.Clear();
@@ -280,7 +280,7 @@ namespace SysCisepro3.Contabilidad.Compras
             var res = ComandosSql.ProcesarTransacciones(TipoCon, _sqlCommands, nombre);
 
             if ((bool)res[0]) btnRecargar.PerformClick();
-            MessageBox.Show((string)res[1], "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show((string)res[1], "Mensaje del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void txtSubtotal12OrdenCompra_KeyPress(object sender, KeyPressEventArgs e)

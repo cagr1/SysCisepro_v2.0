@@ -84,7 +84,7 @@ namespace SysCisepro3.TalentoHumano
             catch (Exception ex)
             {
                 dataGridView1.DataSource = null;
-                MessageBox.Show(@"Error al cargar detalles: " + ex.Message, "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(@"Error al cargar detalles: " + ex.Message, "Mensaje del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -101,7 +101,7 @@ namespace SysCisepro3.TalentoHumano
             }
             catch (Exception ex)
             {
-                MessageBox.Show(@"Error al cargar detalles: " + ex.Message, "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(@"Error al cargar detalles: " + ex.Message, "Mensaje del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 

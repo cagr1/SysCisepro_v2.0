@@ -344,7 +344,7 @@ namespace SysCisepro3.TalentoHumano
             }
              else
 
-                // MessageBox.Show(@"No se puede guardar debido a que no ha llenado todos los campos necesarios!","MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                // MessageBox.Show(@"No se puede guardar debido a que no ha llenado todos los campos necesarios!","Mensaje del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Krypton.Toolkit.KryptonMessageBox.Show(@"No se puede guardar debido a que no ha llenado todos los campos necesarios!", "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
 
 
@@ -418,7 +418,7 @@ namespace SysCisepro3.TalentoHumano
              catch (Exception ex)
              {
                  MessageBox.Show(@"No se puede guardar historial debido a:" + ex.Message ,
-                     "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                     "Mensaje del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
              }
          }
 
@@ -476,7 +476,7 @@ namespace SysCisepro3.TalentoHumano
              catch (Exception)
              {
                  MessageBox.Show(@"Error al generar solicitud. Por favor, contácte al administrador!",
-                     "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                     "Mensaje del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
              }
          }
 
@@ -693,7 +693,7 @@ namespace SysCisepro3.TalentoHumano
         {
             if (dgvFirmado.RowCount == 0)
             {
-                Krypton.Toolkit.KryptonMessageBox.Show(@"NO HAY DATOS PARA EXPORTAR!", "MENSAJE DELL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+                Krypton.Toolkit.KryptonMessageBox.Show(@"NO HAY DATOS PARA EXPORTAR!", "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
                 return;
             }
 

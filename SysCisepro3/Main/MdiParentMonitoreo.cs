@@ -104,7 +104,7 @@ namespace SysCisepro3.Main
 
         private void MdiParentMain_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (KryptonMessageBox.Show(@"Está seguro que desea salir del sistema?", @"MENSAJE DELL SISTEMA", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) !=
+            if (KryptonMessageBox.Show(@"Está seguro que desea salir del sistema?", @"Mensaje del Sistema", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) !=
                 DialogResult.Yes)
             {
                 e.Cancel = true;

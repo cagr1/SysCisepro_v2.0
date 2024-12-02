@@ -31,9 +31,7 @@ namespace SysCisepro3.Contabilidad
         {
             // CARGAR ICONO Y DESIEÑO SEGUN SISTEMA 
 
-            BackColor = ValidationForms.GetColorSistema(TipoCon);
-            Label1.ForeColor = Color.White;
-            label2.ForeColor = Color.White;
+            
             switch (TipoCon)
             {
                 case TipoConexion.Seportpac:
@@ -106,12 +104,13 @@ namespace SysCisepro3.Contabilidad
 
                 foreach (var col in listView1.Columns.Cast<ColumnHeader>().Where(col => col.Width > 5)) col.Width = -2;
 
-                label4.Visible = false;
+                
             }
             catch (Exception ex)
             {
-                label4.Text = @"ERROR AL CARGAR DATOS: " + ex.Message;
-                label4.Visible = true;
+                
+                KryptonMessageBox.Show(@"ERROR AL CARGAR DATOS: " + ex.Message, @"ERROR", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error);
+
                 listView1.Clear();
             }
         }

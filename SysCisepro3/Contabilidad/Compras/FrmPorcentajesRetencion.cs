@@ -54,10 +54,10 @@ namespace SysCisepro3.Contabilidad.Compras
         {
             // CARGAR ICONO Y DESIEÑO SEGUN SISTEMA 
             //toolStrip1.BackColor = ValidationForms.GetColorSistema(TipoCon);
-            toolStrip1.ForeColor = Color.White;
-            Label1.BackColor = ValidationForms.GetColorSistema(TipoCon);
+            //toolStrip1.ForeColor = Color.White;
+            //Label1.BackColor = ValidationForms.GetColorSistema(TipoCon);
             //Label24.BackColor = ValidationForms.GetColorSistema(TipoCon);
-            Label1.ForeColor = Color.White;
+            //Label1.ForeColor = Color.White;
             //Label24.ForeColor = Color.White;
             switch (TipoCon)
             {
@@ -116,7 +116,8 @@ namespace SysCisepro3.Contabilidad.Compras
             catch (Exception ex)
             {
                 ListView1.Items.Clear();
-                MessageBox.Show(@"Error al cargar detalles: " + ex.Message, "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //MessageBox.Show(@"Error al cargar detalles: " + ex.Message, "Mensaje del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                KryptonMessageBox.Show(@"Error al cargar detalles: " + ex.Message, @"Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
             }
         }
 
@@ -193,13 +194,15 @@ namespace SysCisepro3.Contabilidad.Compras
         { 
             if (string.IsNullOrEmpty(txtCodigo.Text.Trim()) || string.IsNullOrEmpty(txtConcepto.Text.Trim()))
             {
-                MessageBox.Show(@"Debe llenar código y concepto para guardar!", "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+               //MessageBox.Show(@"Debe llenar código y concepto para guardar!", "Mensaje del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                KryptonMessageBox.Show(@"Debe llenar código y concepto para guardar!", @"Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Warning);
                 return;
             }
 
             if (string.IsNullOrEmpty(txtRentaSoc.Text.Trim()) || string.IsNullOrEmpty(txtRentaPcon.Text.Trim()) || string.IsNullOrEmpty(txtRentaPsin.Text.Trim()) || string.IsNullOrEmpty(txtRentaExp.Text.Trim()) || string.IsNullOrEmpty(txtRentaEsp.Text.Trim()))
             {
-                MessageBox.Show(@"Debe llenar todos los porcentajes para guardar!", "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                //MessageBox.Show(@"Debe llenar todos los porcentajes para guardar!", "Mensaje del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                KryptonMessageBox.Show(@"Debe llenar todos los porcentajes para guardar!", @"Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Warning);
                 return;
             }
 
@@ -209,7 +212,8 @@ namespace SysCisepro3.Contabilidad.Compras
                 string.IsNullOrEmpty(txtVentaRentaPcon.Text.Trim()) && string.IsNullOrEmpty(txtVentaRentaPsin.Text.Trim()) &&
                 string.IsNullOrEmpty(txtVentaRentaExp.Text.Trim()) && string.IsNullOrEmpty(txtVentaRentaEsp.Text.Trim()))
             {
-                MessageBox.Show(@"Debe llenar todos los datos para guardar!", "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                //MessageBox.Show(@"Debe llenar todos los datos para guardar!", "Mensaje del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                KryptonMessageBox.Show(@"Debe llenar todos los datos para guardar!", @"Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Warning);
                 return;
             }
 
@@ -220,12 +224,14 @@ namespace SysCisepro3.Contabilidad.Compras
             {
                 if (data.Rows[0][4].ToString().Trim().Equals("1"))
                 {
-                    MessageBox.Show(@"El código que intenta registrar ya existe! " + @"(" + data.Rows[0][2] + @")", "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    //MessageBox.Show(@"El código que intenta registrar ya existe! " + @"(" + data.Rows[0][2] + @")", "Mensaje del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    KryptonMessageBox.Show(@"El código que intenta registrar ya existe! " + @"(" + data.Rows[0][2] + @")", @"Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation);
                     return;
                 }
             }
 
-            if (MessageBox.Show(@"Desea guardar el código de retención actual?", "MENSAJE DELL SISTEMA", MessageBoxButtons.YesNo, MessageBoxIcon.Question) != DialogResult.Yes) return;
+            //if (MessageBox.Show(@"Desea guardar el código de retención actual?", "Mensaje del Sistema", MessageBoxButtons.YesNo, MessageBoxIcon.Question) != DialogResult.Yes) return;
+            if (KryptonMessageBox.Show(@"Desea guardar el código de retención actual?", @"Mensaje del sistema", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) != DialogResult.Yes) return;
 
             _sqlCommands.Clear();
 
@@ -291,8 +297,9 @@ namespace SysCisepro3.Contabilidad.Compras
             _objPorcentajesRetencion.TipoBienServicio = 1;
             _sqlCommands.Add((txtRentaEsp.Tag + "").Trim().Equals("0") ? _objPorcentajesRetencion.RegistrarNuevoPorcentajeRetencionCommand() : _objPorcentajesRetencion.ActualizarNuevoPorcentajeRetencionCommand());
 
-             
-            var res = ComandosSql.ProcesarTransacciones(TipoCon, _sqlCommands, "GUARDAR PORCENTAJE RETENCIÓN");
+            string user = Usuario.Datos.ToString();
+            string nombreU = "Nuevo Porcentaje retencion por: " + user;
+            var res = ComandosSql.ProcesarTransacciones(TipoCon, _sqlCommands, nombreU);
 
             if ((bool)res[0])
             {
@@ -327,7 +334,10 @@ namespace SysCisepro3.Contabilidad.Compras
 
                 btnBuscar_Click(null, null);
             }
-            MessageBox.Show((string)res[1], "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            KryptonMessageBox.Show((string)res[1], "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+
+            //MessageBox.Show((string)res[1], "Mensaje del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
@@ -368,9 +378,13 @@ namespace SysCisepro3.Contabilidad.Compras
             if (ListView1.Items.Count == 0) return;
             if (ListView1.SelectedItems.Count == 0) return;
 
-            if (MessageBox.Show(@"Desea quitar el porcentaje de retención: " + txtCodigo.Text.Trim() + " - " + txtConcepto.Text.Trim() + "?",
-                   "MENSAJE DELL SISTEMA", MessageBoxButtons.YesNo, MessageBoxIcon.Question) !=
-               DialogResult.Yes) return;
+            //if (MessageBox.Show(@"Desea quitar el porcentaje de retención: " + txtCodigo.Text.Trim() + " - " + txtConcepto.Text.Trim() + "?",
+            //       "Mensaje del Sistema", MessageBoxButtons.YesNo, MessageBoxIcon.Question) !=
+            //   DialogResult.Yes) return;
+
+            if (KryptonMessageBox.Show(@"Desea quitar el porcentaje de retención: " + txtCodigo.Text.Trim() + " - " + txtConcepto.Text.Trim() + "?",
+                                  "Mensaje del sistema", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) !=
+                                                DialogResult.Yes) return;
 
             _sqlCommands.Clear();
 
@@ -380,7 +394,9 @@ namespace SysCisepro3.Contabilidad.Compras
 
             _sqlCommands.Add(_objPorcentajesRetencion.EliminarPorcentajeRetencionCommand());
 
-            var res = ComandosSql.ProcesarTransacciones(TipoCon, _sqlCommands, "ANULAR PORCENTAJE RETENCION");
+            string user = Usuario.Datos.ToString();
+            string nombreU = "Anulacion Porcentaje retencion por: " + user;
+            var res = ComandosSql.ProcesarTransacciones(TipoCon, _sqlCommands, nombreU);
 
             if ((bool)res[0])
             {
@@ -397,7 +413,8 @@ namespace SysCisepro3.Contabilidad.Compras
                 txtFiltro.Clear();
                 btnBuscar_Click(null, null);
             }
-            MessageBox.Show((string)res[1], "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //MessageBox.Show((string)res[1], "Mensaje del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            KryptonMessageBox.Show((string)res[1], "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -527,7 +544,8 @@ namespace SysCisepro3.Contabilidad.Compras
             }
             catch
             {
-                MessageBox.Show("ERROR AL CARGAR DATOS!", "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                //MessageBox.Show("ERROR AL CARGAR DATOS!", "Mensaje del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                KryptonMessageBox.Show("Error al cargar datos!", "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation);
             }
         }
          

@@ -267,7 +267,7 @@ namespace SysCisepro3.Bodega
         {
             if (dgvsitios.RowCount == 0)
             {
-                MessageBox.Show(@"NO HAY DATOS PARA EXPORTAR!", "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(@"NO HAY DATOS PARA EXPORTAR!", "Mensaje del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
 
@@ -349,12 +349,12 @@ namespace SysCisepro3.Bodega
                 app.Visible = true;
                 app.DisplayAlerts = true;
                 //workbook.SaveAs(sfd.FileName, XlFileFormat.xlWorkbookNormal, Type.Missing, Type.Missing, Type.Missing, Type.Missing, XlSaveAsAccessMode.xlExclusive, Type.Missing, Type.Missing, Type.Missing, Type.Missing);
-                MessageBox.Show(@"REPORTE DE SITIOS DE BODEGA generado correctamente!", "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(@"REPORTE DE SITIOS DE BODEGA generado correctamente!", "Mensaje del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
-                //MessageBox.Show(@"HUBO UN PROBLEMA AL EXPORTAR DATOS!" + "\n" + ex.Message, "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                KryptonMessageBox.Show(@"HUBO UN PROBLEMA AL EXPORTAR DATOS!" + "\n" + ex.Message, @"MENSAJE DELL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error);
+                //MessageBox.Show(@"HUBO UN PROBLEMA AL EXPORTAR DATOS!" + "\n" + ex.Message, "Mensaje del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                KryptonMessageBox.Show(@"HUBO UN PROBLEMA AL EXPORTAR DATOS!" + "\n" + ex.Message, @"Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error);
             }
 
         }

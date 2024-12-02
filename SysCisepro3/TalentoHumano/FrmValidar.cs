@@ -32,7 +32,7 @@ namespace SysCisepro3.TalentoHumano
             if (u == null || !u.Password.Equals(txtPassword.Text)) // CLAVE DEBE COINCIDER EN MAYÚSCULAS Y/O MINÚSCULAS
             {
                 txtPassword.Clear();
-                MessageBox.Show(@"La contraseña ingresada es incorrecta!", @"MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(@"La contraseña ingresada es incorrecta!", @"Mensaje del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
 
@@ -97,7 +97,7 @@ namespace SysCisepro3.TalentoHumano
             }
             catch (Exception ex)
             {
-                MessageBox.Show(@"Error al iniciar: " + ex.Message, "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(@"Error al iniciar: " + ex.Message, "Mensaje del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 

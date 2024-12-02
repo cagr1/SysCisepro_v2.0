@@ -1085,6 +1085,12 @@
     <Compile Include="FORMULARIOS\CONTABILIDAD\SRI\FormAtsSimplificado.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FORMULARIOS\CONTABILIDAD\SRI\FormInformacionTributaria.Designer.vb">
+      <DependentUpon>FormInformacionTributaria.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORMULARIOS\CONTABILIDAD\SRI\FormInformacionTributaria.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FORMULARIOS\CONTABILIDAD\SRI\FormReporte.Designer.vb">
       <DependentUpon>FormReporte.vb</DependentUpon>
     </Compile>
@@ -1131,12 +1137,6 @@
       <DependentUpon>FormFacturaVenta.vb</DependentUpon>
     </Compile>
     <Compile Include="FORMULARIOS\CONTABILIDAD\VENTAS\FormFacturaVenta.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FORMULARIOS\CONTABILIDAD\SRI\FormInformacionTributaria.Designer.vb">
-      <DependentUpon>FormInformacionTributaria.vb</DependentUpon>
-    </Compile>
-    <Compile Include="FORMULARIOS\CONTABILIDAD\SRI\FormInformacionTributaria.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FORMULARIOS\CONTABILIDAD\VENTAS\FormGenerarFacturasElectronicas.designer.vb">
@@ -2824,6 +2824,9 @@
     <EmbeddedResource Include="FORMULARIOS\CONTABILIDAD\SRI\FormAtsSimplificado.resx">
       <DependentUpon>FormAtsSimplificado.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FORMULARIOS\CONTABILIDAD\SRI\FormInformacionTributaria.resx">
+      <DependentUpon>FormInformacionTributaria.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FORMULARIOS\CONTABILIDAD\SRI\FormReporte.resx">
       <DependentUpon>FormReporte.vb</DependentUpon>
     </EmbeddedResource>
@@ -2848,9 +2851,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FORMULARIOS\CONTABILIDAD\VENTAS\FormFacturaVenta.resx">
       <DependentUpon>FormFacturaVenta.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FORMULARIOS\CONTABILIDAD\SRI\FormInformacionTributaria.resx">
-      <DependentUpon>FormInformacionTributaria.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FORMULARIOS\CONTABILIDAD\VENTAS\FormGenerarFacturasElectronicas.resx">
       <DependentUpon>FormGenerarFacturasElectronicas.vb</DependentUpon>

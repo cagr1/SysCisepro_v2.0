@@ -314,7 +314,7 @@ namespace SysCisepro3.Administracion
             catch (Exception ex)
             {
                 dgvGerencia.DataSource = null;
-                MessageBox.Show(@"Error al cargar gerencia: " + ex.Message, "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(@"Error al cargar gerencia: " + ex.Message, "Mensaje del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -340,7 +340,7 @@ namespace SysCisepro3.Administracion
             catch (Exception ex)
             {
                 dgvGerencias.DataSource = null;
-                MessageBox.Show(@"Error al cargar gerencias: " + ex.Message, "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(@"Error al cargar gerencias: " + ex.Message, "Mensaje del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -366,7 +366,7 @@ namespace SysCisepro3.Administracion
             catch (Exception ex)
             {
                 dgvAreas.DataSource = null;
-                MessageBox.Show(@"Error al cargar áreas: " + ex.Message, "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(@"Error al cargar áreas: " + ex.Message, "Mensaje del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -392,7 +392,7 @@ namespace SysCisepro3.Administracion
             catch (Exception ex)
             {
                 dgvSecciones.DataSource = null;
-                MessageBox.Show(@"Error al cargar secciones: " + ex.Message, "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(@"Error al cargar secciones: " + ex.Message, "Mensaje del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -418,7 +418,7 @@ namespace SysCisepro3.Administracion
             catch (Exception ex)
             {
                 dgvSubSecciones.DataSource = null;
-                MessageBox.Show(@"Error al cargar subsecciones: " + ex.Message, "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(@"Error al cargar subsecciones: " + ex.Message, "Mensaje del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -683,12 +683,12 @@ namespace SysCisepro3.Administracion
         {
             if (!ValidacionParametrosGerencia())
             {
-                MessageBox.Show(@"Debe ingresar todos los datos para guardar!", "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(@"Debe ingresar todos los datos para guardar!", "Mensaje del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
 
             if (MessageBox.Show(@"Desea guardar los cambios realizados?",
-                    "MENSAJE DELL SISTEMA", MessageBoxButtons.YesNo, MessageBoxIcon.Question) !=
+                    "Mensaje del Sistema", MessageBoxButtons.YesNo, MessageBoxIcon.Question) !=
                 DialogResult.Yes) return;
 
             _sqlCommands.Clear();
@@ -715,19 +715,19 @@ namespace SysCisepro3.Administracion
                 HabilitarBotones(true, true, false, false);
                 CargarGerencia();
             }
-            MessageBox.Show((string)res[1], "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show((string)res[1], "Mensaje del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void btnGuardarGerencias_Click(object sender, EventArgs e)
         {
             if (!ValidacionParametrosGerencias())
             {
-                MessageBox.Show(@"Debe ingresar todos los datos para guardar!", "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(@"Debe ingresar todos los datos para guardar!", "Mensaje del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
 
             if (MessageBox.Show(@"Desea guardar los cambios realizados?",
-                    "MENSAJE DELL SISTEMA", MessageBoxButtons.YesNo, MessageBoxIcon.Question) !=
+                    "Mensaje del Sistema", MessageBoxButtons.YesNo, MessageBoxIcon.Question) !=
                 DialogResult.Yes) return;
 
             _sqlCommands.Clear();
@@ -753,19 +753,19 @@ namespace SysCisepro3.Administracion
                 HabilitarBotonesGerencias(true, true, false, false);
                 CargarGerencias();
             }
-            MessageBox.Show((string)res[1], "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show((string)res[1], "Mensaje del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void btnGuardarAreas_Click(object sender, EventArgs e)
         {
             if (!ValidacionParametrosAreas())
             {
-                MessageBox.Show(@"Debe ingresar todos los datos para guardar!", "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(@"Debe ingresar todos los datos para guardar!", "Mensaje del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
 
             if (MessageBox.Show(@"Desea guardar los cambios realizados?",
-                    "MENSAJE DELL SISTEMA", MessageBoxButtons.YesNo, MessageBoxIcon.Question) !=
+                    "Mensaje del Sistema", MessageBoxButtons.YesNo, MessageBoxIcon.Question) !=
                 DialogResult.Yes) return;
 
             _sqlCommands.Clear();
@@ -791,19 +791,19 @@ namespace SysCisepro3.Administracion
                 HabilitarBotonesAreas(true, true, false, false);
                 CargarAreas();
             }
-            MessageBox.Show((string)res[1], "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show((string)res[1], "Mensaje del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void btnGuardarSeccion_Click(object sender, EventArgs e)
         {
             if (!ValidacionParametrosSecciones())
             {
-                MessageBox.Show(@"Debe ingresar todos los datos para guardar!", "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(@"Debe ingresar todos los datos para guardar!", "Mensaje del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
 
             if (MessageBox.Show(@"Desea guardar los cambios realizados?",
-                    "MENSAJE DELL SISTEMA", MessageBoxButtons.YesNo, MessageBoxIcon.Question) !=
+                    "Mensaje del Sistema", MessageBoxButtons.YesNo, MessageBoxIcon.Question) !=
                 DialogResult.Yes) return;
 
             _sqlCommands.Clear();
@@ -829,19 +829,19 @@ namespace SysCisepro3.Administracion
                 HabilitarBotonesSecciones(true, true, false, false);
                 CargarSecciones();
             }
-            MessageBox.Show((string)res[1], "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show((string)res[1], "Mensaje del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void btnGuardarSubSeccion_Click(object sender, EventArgs e)
         {
             if (!ValidacionParametrosSubSecciones())
             {
-                MessageBox.Show(@"Debe ingresar todos los datos para guardar!", "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(@"Debe ingresar todos los datos para guardar!", "Mensaje del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
 
             if (MessageBox.Show(@"Desea guardar los cambios realizados?",
-                    "MENSAJE DELL SISTEMA", MessageBoxButtons.YesNo, MessageBoxIcon.Question) !=
+                    "Mensaje del Sistema", MessageBoxButtons.YesNo, MessageBoxIcon.Question) !=
                 DialogResult.Yes) return;
 
             _sqlCommands.Clear();
@@ -867,7 +867,7 @@ namespace SysCisepro3.Administracion
                 HabilitarBotonesSubSecciones(true, true, false, false);
                 CargarSubSecciones();
             }
-            MessageBox.Show((string)res[1], "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show((string)res[1], "Mensaje del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void dgvGerencia_SelectionChanged(object sender, EventArgs e)
@@ -979,7 +979,7 @@ namespace SysCisepro3.Administracion
             }
             catch
             {
-                MessageBox.Show(@"Error al generar reporte!", "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(@"Error al generar reporte!", "Mensaje del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -996,7 +996,7 @@ namespace SysCisepro3.Administracion
             }
             catch
             {
-                MessageBox.Show(@"Error al generar reporte!", "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(@"Error al generar reporte!", "Mensaje del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -1013,7 +1013,7 @@ namespace SysCisepro3.Administracion
             }
             catch
             {
-                MessageBox.Show(@"Error al generar reporte!", "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(@"Error al generar reporte!", "Mensaje del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -1030,7 +1030,7 @@ namespace SysCisepro3.Administracion
             }
             catch
             {
-                MessageBox.Show(@"Error al generar reporte!", "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(@"Error al generar reporte!", "Mensaje del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -1047,7 +1047,7 @@ namespace SysCisepro3.Administracion
             }
             catch
             {
-                MessageBox.Show(@"Error al generar reporte!", "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(@"Error al generar reporte!", "Mensaje del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 

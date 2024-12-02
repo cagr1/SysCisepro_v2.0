@@ -30,7 +30,6 @@
         {
             this.Label1 = new System.Windows.Forms.Label();
             this.txtParametrobusqueda = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.listView1 = new System.Windows.Forms.ListView();
             this.ColumnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ColumnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -43,12 +42,12 @@
             // 
             this.Label1.AutoSize = true;
             this.Label1.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label1.ForeColor = System.Drawing.Color.White;
+            this.Label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
             this.Label1.Location = new System.Drawing.Point(6, 8);
             this.Label1.Name = "Label1";
-            this.Label1.Size = new System.Drawing.Size(51, 14);
+            this.Label1.Size = new System.Drawing.Size(40, 14);
             this.Label1.TabIndex = 20;
-            this.Label1.Text = "BUSCAR:";
+            this.Label1.Text = "Buscar";
             // 
             // txtParametrobusqueda
             // 
@@ -62,21 +61,10 @@
             this.txtParametrobusqueda.TabIndex = 19;
             this.txtParametrobusqueda.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtParametrobusqueda_KeyUp);
             // 
-            // label4
-            // 
-            this.label4.BackColor = System.Drawing.Color.White;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(12, 136);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(709, 68);
-            this.label4.TabIndex = 23;
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label4.Visible = false;
-            // 
             // listView1
             // 
-            this.listView1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.listView1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
+            this.listView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.ColumnHeader1,
             this.ColumnHeader4,
@@ -112,12 +100,12 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
             this.label2.Location = new System.Drawing.Point(406, 8);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(33, 14);
+            this.label2.Size = new System.Drawing.Size(28, 14);
             this.label2.TabIndex = 26;
-            this.label2.Text = "TIPO:";
+            this.label2.Text = "Tipo";
             // 
             // cbxTipoCuenta
             // 
@@ -144,11 +132,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(204)))), ((int)(((byte)(227)))));
             this.ClientSize = new System.Drawing.Size(733, 298);
             this.Controls.Add(this.cbxTipoCuenta);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.Label1);
             this.Controls.Add(this.txtParametrobusqueda);
             this.Controls.Add(this.listView1);
@@ -169,7 +156,6 @@
         #endregion
 
         internal System.Windows.Forms.Label Label1;
-        internal System.Windows.Forms.Label label4;
         internal System.Windows.Forms.ListView listView1;
         internal System.Windows.Forms.ColumnHeader ColumnHeader1;
         internal System.Windows.Forms.ColumnHeader ColumnHeader4;

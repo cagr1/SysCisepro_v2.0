@@ -162,12 +162,12 @@ namespace SysCisepro3.Administracion
         {
             if (!ValidacionParametros())
             {
-                MessageBox.Show(@"Debe ingresar todos los datos para guardar!", "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(@"Debe ingresar todos los datos para guardar!", "Mensaje del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
 
             if (MessageBox.Show(@"Desea guardar los cambios realizados?",
-                    "MENSAJE DELL SISTEMA", MessageBoxButtons.YesNo, MessageBoxIcon.Question) !=
+                    "Mensaje del Sistema", MessageBoxButtons.YesNo, MessageBoxIcon.Question) !=
                 DialogResult.Yes) return;
 
             _sqlCommands.Clear();
@@ -319,7 +319,7 @@ namespace SysCisepro3.Administracion
         private void gUARDARPERMISOSToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show(@"Desea guardar los cambios realizados?",
-                   "MENSAJE DELL SISTEMA", MessageBoxButtons.YesNo, MessageBoxIcon.Question) !=
+                   "Mensaje del Sistema", MessageBoxButtons.YesNo, MessageBoxIcon.Question) !=
                DialogResult.Yes) return;
 
             _sqlCommands.Clear();

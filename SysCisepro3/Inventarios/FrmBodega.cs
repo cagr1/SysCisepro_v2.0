@@ -104,7 +104,7 @@ namespace SysCisepro3.Inventarios
             catch (Exception ex)
             {
                 dgvBodega.DataSource = null;
-                MessageBox.Show(@"Error al cargar detalles: " + ex.Message, "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(@"Error al cargar detalles: " + ex.Message, "Mensaje del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -194,7 +194,7 @@ namespace SysCisepro3.Inventarios
             }
             catch (Exception ex)
             {
-                MessageBox.Show(@"Error al cargar detalles: " + ex.Message, "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(@"Error al cargar detalles: " + ex.Message, "Mensaje del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -243,7 +243,7 @@ namespace SysCisepro3.Inventarios
             if (txtNombreBodega.TextLength > 0 && txtNombresPersonal.TextLength > 0)
             {
                 if (MessageBox.Show(@"Desea guardar el registro actual?",
-                  "MENSAJE DELL SISTEMA", MessageBoxButtons.YesNo, MessageBoxIcon.Question) !=
+                  "Mensaje del Sistema", MessageBoxButtons.YesNo, MessageBoxIcon.Question) !=
               DialogResult.Yes) return;
 
 
@@ -283,12 +283,12 @@ namespace SysCisepro3.Inventarios
                     _botonSeleccionado = 0;
                     CargarBodegasActivas();
                 }
-                MessageBox.Show((string)res[1], "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show((string)res[1], "Mensaje del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
                 MessageBox.Show(@"PARA GUARDAR, ES NECESARIO LLENAR TODOS LOS CAMPOS!",
-                    "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    "Mensaje del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
             }
         }

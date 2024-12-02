@@ -55,11 +55,8 @@ namespace SysCisepro3.Contabilidad.Compras
         {
             // CARGAR ICONO Y DESIEÑO SEGUN SISTEMA 
             //toolStrip1.BackColor = ValidationForms.GetColorSistema(TipoCon);
-            toolStrip1.ForeColor = Color.White;
-            Label1.BackColor = ValidationForms.GetColorSistema(TipoCon);
-            Label24.BackColor = ValidationForms.GetColorSistema(TipoCon);
-            Label1.ForeColor = Color.White;
-            Label24.ForeColor = Color.White;
+            //toolStrip1.ForeColor = Color.White;
+            
             switch (TipoCon)
             {
                 case TipoConexion.Seportpac:
@@ -117,7 +114,8 @@ namespace SysCisepro3.Contabilidad.Compras
             catch (Exception ex)
             {
                 ListView1.Items.Clear();
-                MessageBox.Show(@"Error al cargar detalles: " + ex.Message, "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //MessageBox.Show(@"Error al cargar detalles: " + ex.Message, "Mensaje del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                KryptonMessageBox.Show(@"Error al cargar detalles: " + ex.Message, @"Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
             }
         }
         private ListViewGroup GetListViewGroup(string name)
@@ -231,7 +229,8 @@ namespace SysCisepro3.Contabilidad.Compras
                  string.IsNullOrEmpty(txtServiPcon.Text.Trim()) || string.IsNullOrEmpty(txtServiPsin.Text.Trim()) ||
                  string.IsNullOrEmpty(txtServiExp.Text.Trim()) || string.IsNullOrEmpty(txtServiEsp.Text.Trim()))
             {
-                MessageBox.Show(@"Debe llenar todos los porcentajes para guardar!", "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                //MessageBox.Show(@"Debe llenar todos los porcentajes para guardar!", "Mensaje del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                KryptonMessageBox.Show(@"Debe llenar todos los porcentajes para guardar!", @"Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Warning);
                 return;
             }
 
@@ -246,12 +245,13 @@ namespace SysCisepro3.Contabilidad.Compras
                 string.IsNullOrEmpty(txtVentaServiPcon.Text.Trim()) && string.IsNullOrEmpty(txtVentaServiPsin.Text.Trim()) &&
                 string.IsNullOrEmpty(txtVentaServiExp.Text.Trim()) && string.IsNullOrEmpty(txtVentaServiEsp.Text.Trim()))
             {
-                MessageBox.Show(@"Debe llenar todos los datos para guardar!", "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                //MessageBox.Show(@"Debe llenar todos los datos para guardar!", "Mensaje del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                KryptonMessageBox.Show(@"Debe llenar todos los datos para guardar!", @"Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Warning);
                 return;
             }
 
-            if (MessageBox.Show(@"Desea guardar los porcentajes de retención actuales?", "MENSAJE DELL SISTEMA", MessageBoxButtons.YesNo, MessageBoxIcon.Question) != DialogResult.Yes) return;
-
+            //if (MessageBox.Show(@"Desea guardar los porcentajes de retención actuales?", "Mensaje del Sistema", MessageBoxButtons.YesNo, MessageBoxIcon.Question) != DialogResult.Yes) return;
+            if (KryptonMessageBox.Show(@"Desea guardar los porcentajes de retención actuales?", @"Mensaje del Sistema", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) != DialogResult.Yes) return;
             _sqlCommands.Clear();
 
             // para crear los porcentajes correspondientes a cada tipo de contribuyente según codigo renta
@@ -348,7 +348,8 @@ namespace SysCisepro3.Contabilidad.Compras
             _objPorcentajesRetencion.TipoBienServicio = 1; // servicio
             _sqlCommands.Add((txtServiEsp.Tag + "").Trim().Equals("0") ? _objPorcentajesRetencion.RegistrarNuevoPorcentajeRetencionCommand() : _objPorcentajesRetencion.ActualizarNuevoPorcentajeRetencionCommand());
 
-
+            string user = Usuario.Datos.ToString();
+            string nombreU = "Guardar Porcentaje retencion por: " + user;
             var res = ComandosSql.ProcesarTransacciones(TipoCon, _sqlCommands, "GUARDAR PORCENTAJE RETENCIÓN");
 
             if ((bool)res[0])
@@ -398,7 +399,8 @@ namespace SysCisepro3.Contabilidad.Compras
 
                 btnBuscar_Click(null, null);
             }
-            MessageBox.Show((string)res[1], "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //MessageBox.Show((string)res[1], "Mensaje del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            KryptonMessageBox.Show((string)res[1], @"Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
@@ -643,7 +645,8 @@ namespace SysCisepro3.Contabilidad.Compras
             }
             catch
             {
-                MessageBox.Show("ERROR AL CARGAR DATOS!", "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                //MessageBox.Show("ERROR AL CARGAR DATOS!", "Mensaje del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                KryptonMessageBox.Show("Error al cargar datos!", "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation);
             }
         }
         private void txtRentaEsp_KeyPress(object sender, KeyPressEventArgs e)
@@ -742,95 +745,15 @@ namespace SysCisepro3.Contabilidad.Compras
             }
         }
 
-        private void btnCompraServiSoc_Click(object sender, EventArgs e)
-        {
-            _frmPlan = new FrmBuscarPlanCuentas { TipoCon = TipoCon, Tipo = 2 };
-            _frmPlan.txtParametrobusqueda.Text = "201070102";
-            _frmPlan.cbxTipoCuenta.Enabled = false;
-            _frmPlan.txtParametrobusqueda.Enabled = false;
-            try
-            {
-                if (_frmPlan.ShowDialog() != DialogResult.OK) return;
-                if (_frmPlan.listView1.SelectedItems.Count == 0) return;
-                txtCompraServiSoc.Text = _frmPlan.listView1.SelectedItems[0].SubItems[1].Text.Trim() + " - " + _frmPlan.listView1.SelectedItems[0].SubItems[2].Text.Trim();
-            }
-            catch
-            {
-                txtCompraServiSoc.Clear();
-            }
-        }
+       
 
-        private void btnCompraServiPcon_Click(object sender, EventArgs e)
-        {
-            _frmPlan = new FrmBuscarPlanCuentas { TipoCon = TipoCon, Tipo = 2 };
-            _frmPlan.txtParametrobusqueda.Text = "201070102";
-            _frmPlan.cbxTipoCuenta.Enabled = false;
-            _frmPlan.txtParametrobusqueda.Enabled = false;
-            try
-            {
-                if (_frmPlan.ShowDialog() != DialogResult.OK) return;
-                if (_frmPlan.listView1.SelectedItems.Count == 0) return;
-                txtCompraServiPcon.Text = _frmPlan.listView1.SelectedItems[0].SubItems[1].Text.Trim() + " - " + _frmPlan.listView1.SelectedItems[0].SubItems[2].Text.Trim();
-            }
-            catch
-            {
-                txtCompraServiPcon.Clear();
-            }
-        }
+       
 
-        private void btnCompraServiPsin_Click(object sender, EventArgs e)
-        {
-            _frmPlan = new FrmBuscarPlanCuentas { TipoCon = TipoCon, Tipo = 2 };
-            _frmPlan.txtParametrobusqueda.Text = "201070102";
-            _frmPlan.cbxTipoCuenta.Enabled = false;
-            _frmPlan.txtParametrobusqueda.Enabled = false;
-            try
-            {
-                if (_frmPlan.ShowDialog() != DialogResult.OK) return;
-                if (_frmPlan.listView1.SelectedItems.Count == 0) return;
-                txtCompraServiPsin.Text = _frmPlan.listView1.SelectedItems[0].SubItems[1].Text.Trim() + " - " + _frmPlan.listView1.SelectedItems[0].SubItems[2].Text.Trim();
-            }
-            catch
-            {
-                txtCompraServiPsin.Clear();
-            }
-        }
+      
 
-        private void btnCompraServiExp_Click(object sender, EventArgs e)
-        {
-            _frmPlan = new FrmBuscarPlanCuentas { TipoCon = TipoCon, Tipo = 2 };
-            _frmPlan.txtParametrobusqueda.Text = "201070102";
-            _frmPlan.cbxTipoCuenta.Enabled = false;
-            _frmPlan.txtParametrobusqueda.Enabled = false;
-            try
-            {
-                if (_frmPlan.ShowDialog() != DialogResult.OK) return;
-                if (_frmPlan.listView1.SelectedItems.Count == 0) return;
-                txtCompraServiExp.Text = _frmPlan.listView1.SelectedItems[0].SubItems[1].Text.Trim() + " - " + _frmPlan.listView1.SelectedItems[0].SubItems[2].Text.Trim();
-            }
-            catch
-            {
-                txtCompraServiExp.Clear();
-            }
-        }
+       
 
-        private void btnCompraServiEsp_Click(object sender, EventArgs e)
-        {
-            _frmPlan = new FrmBuscarPlanCuentas { TipoCon = TipoCon, Tipo = 2 };
-            _frmPlan.txtParametrobusqueda.Text = "201070102";
-            _frmPlan.cbxTipoCuenta.Enabled = false;
-            _frmPlan.txtParametrobusqueda.Enabled = false;
-            try
-            {
-                if (_frmPlan.ShowDialog() != DialogResult.OK) return;
-                if (_frmPlan.listView1.SelectedItems.Count == 0) return;
-                txtCompraServiEsp.Text = _frmPlan.listView1.SelectedItems[0].SubItems[1].Text.Trim() + " - " + _frmPlan.listView1.SelectedItems[0].SubItems[2].Text.Trim();
-            }
-            catch
-            {
-                txtCompraServiEsp.Clear();
-            }
-        }
+       
 
         private void btnVentaBienSoc_Click(object sender, EventArgs e)
         {
@@ -919,6 +842,106 @@ namespace SysCisepro3.Contabilidad.Compras
             catch
             {
                 txtVentaBienEsp.Clear();
+            }
+        }
+
+       
+
+       
+
+       
+
+       
+
+       
+
+        private void btnCompraServiSoc_Click(object sender, EventArgs e)
+        {
+            _frmPlan = new FrmBuscarPlanCuentas { TipoCon = TipoCon, Tipo = 2 };
+            _frmPlan.txtParametrobusqueda.Text = "201070102";
+            _frmPlan.cbxTipoCuenta.Enabled = false;
+            _frmPlan.txtParametrobusqueda.Enabled = false;
+            try
+            {
+                if (_frmPlan.ShowDialog() != DialogResult.OK) return;
+                if (_frmPlan.listView1.SelectedItems.Count == 0) return;
+                txtCompraServiSoc.Text = _frmPlan.listView1.SelectedItems[0].SubItems[1].Text.Trim() + " - " + _frmPlan.listView1.SelectedItems[0].SubItems[2].Text.Trim();
+            }
+            catch
+            {
+                txtCompraServiSoc.Clear();
+            }
+        }
+
+        private void btnCompraServiPcon_Click(object sender, EventArgs e)
+        {
+            _frmPlan = new FrmBuscarPlanCuentas { TipoCon = TipoCon, Tipo = 2 };
+            _frmPlan.txtParametrobusqueda.Text = "201070102";
+            _frmPlan.cbxTipoCuenta.Enabled = false;
+            _frmPlan.txtParametrobusqueda.Enabled = false;
+            try
+            {
+                if (_frmPlan.ShowDialog() != DialogResult.OK) return;
+                if (_frmPlan.listView1.SelectedItems.Count == 0) return;
+                txtCompraServiPcon.Text = _frmPlan.listView1.SelectedItems[0].SubItems[1].Text.Trim() + " - " + _frmPlan.listView1.SelectedItems[0].SubItems[2].Text.Trim();
+            }
+            catch
+            {
+                txtCompraServiPcon.Clear();
+            }
+        }
+
+        private void btnCompraServiPsin_Click(object sender, EventArgs e)
+        {
+            _frmPlan = new FrmBuscarPlanCuentas { TipoCon = TipoCon, Tipo = 2 };
+            _frmPlan.txtParametrobusqueda.Text = "201070102";
+            _frmPlan.cbxTipoCuenta.Enabled = false;
+            _frmPlan.txtParametrobusqueda.Enabled = false;
+            try
+            {
+                if (_frmPlan.ShowDialog() != DialogResult.OK) return;
+                if (_frmPlan.listView1.SelectedItems.Count == 0) return;
+                txtCompraServiPsin.Text = _frmPlan.listView1.SelectedItems[0].SubItems[1].Text.Trim() + " - " + _frmPlan.listView1.SelectedItems[0].SubItems[2].Text.Trim();
+            }
+            catch
+            {
+                txtCompraServiPsin.Clear();
+            }
+        }
+
+        private void btnCompraServiExp_Click(object sender, EventArgs e)
+        {
+            _frmPlan = new FrmBuscarPlanCuentas { TipoCon = TipoCon, Tipo = 2 };
+            _frmPlan.txtParametrobusqueda.Text = "201070102";
+            _frmPlan.cbxTipoCuenta.Enabled = false;
+            _frmPlan.txtParametrobusqueda.Enabled = false;
+            try
+            {
+                if (_frmPlan.ShowDialog() != DialogResult.OK) return;
+                if (_frmPlan.listView1.SelectedItems.Count == 0) return;
+                txtCompraServiExp.Text = _frmPlan.listView1.SelectedItems[0].SubItems[1].Text.Trim() + " - " + _frmPlan.listView1.SelectedItems[0].SubItems[2].Text.Trim();
+            }
+            catch
+            {
+                txtCompraServiExp.Clear();
+            }
+        }
+
+        private void btnCompraServiEsp_Click(object sender, EventArgs e)
+        {
+            _frmPlan = new FrmBuscarPlanCuentas { TipoCon = TipoCon, Tipo = 2 };
+            _frmPlan.txtParametrobusqueda.Text = "201070102";
+            _frmPlan.cbxTipoCuenta.Enabled = false;
+            _frmPlan.txtParametrobusqueda.Enabled = false;
+            try
+            {
+                if (_frmPlan.ShowDialog() != DialogResult.OK) return;
+                if (_frmPlan.listView1.SelectedItems.Count == 0) return;
+                txtCompraServiEsp.Text = _frmPlan.listView1.SelectedItems[0].SubItems[1].Text.Trim() + " - " + _frmPlan.listView1.SelectedItems[0].SubItems[2].Text.Trim();
+            }
+            catch
+            {
+                txtCompraServiEsp.Clear();
             }
         }
 

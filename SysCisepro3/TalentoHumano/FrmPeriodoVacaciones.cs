@@ -50,7 +50,7 @@ namespace SysCisepro3.TalentoHumano
         {
             if (dtpDesde.Value > dtpHasta.Value)
             {
-                MessageBox.Show(@"El período seleccionado NO ES VÁLIDO!", "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show(@"El período seleccionado NO ES VÁLIDO!", "Mensaje del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
             Observacion = txtObservacion.Text;

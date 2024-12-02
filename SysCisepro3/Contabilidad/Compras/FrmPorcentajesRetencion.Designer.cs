@@ -38,9 +38,6 @@
             this.btnCancelar = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.Label1 = new System.Windows.Forms.Label();
-            this.GroupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.label18 = new System.Windows.Forms.Label();
             this.btnVentaRentaEsp = new System.Windows.Forms.Button();
             this.txtVentaRentaEsp = new System.Windows.Forms.TextBox();
             this.btnCompraRentaEsp = new System.Windows.Forms.Button();
@@ -61,25 +58,14 @@
             this.txtVentaRentaSoc = new System.Windows.Forms.TextBox();
             this.btnCompraRentaSoc = new System.Windows.Forms.Button();
             this.txtCompraRentaSoc = new System.Windows.Forms.TextBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
             this.txtRentaEsp = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
             this.txtRentaExp = new System.Windows.Forms.TextBox();
             this.txtRentaPsin = new System.Windows.Forms.TextBox();
             this.txtRentaPcon = new System.Windows.Forms.TextBox();
             this.txtRentaSoc = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
             this.txtConcepto = new System.Windows.Forms.TextBox();
-            this.Label27 = new System.Windows.Forms.Label();
             this.txtCodigo = new System.Windows.Forms.TextBox();
-            this.Label25 = new System.Windows.Forms.Label();
             this.txtIdConcepto = new System.Windows.Forms.TextBox();
-            this.Label22 = new System.Windows.Forms.Label();
-            this.Label7 = new System.Windows.Forms.Label();
             this.txtFiltro = new System.Windows.Forms.TextBox();
             this.ListView1 = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -88,9 +74,30 @@
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.kryptonGroupBox1 = new Krypton.Toolkit.KryptonGroupBox();
+            this.kryptonLabel12 = new Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel11 = new Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel10 = new Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel9 = new Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel8 = new Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel7 = new Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel4 = new Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel6 = new Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel5 = new Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel3 = new Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel2 = new Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel1 = new Krypton.Toolkit.KryptonLabel();
+            this.kryptonGroupBox2 = new Krypton.Toolkit.KryptonGroupBox();
+            this.kryptonLabel13 = new Krypton.Toolkit.KryptonLabel();
             this.toolStrip1.SuspendLayout();
-            this.GroupBox1.SuspendLayout();
-            this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox1.Panel)).BeginInit();
+            this.kryptonGroupBox1.Panel.SuspendLayout();
+            this.kryptonGroupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox2.Panel)).BeginInit();
+            this.kryptonGroupBox2.Panel.SuspendLayout();
+            this.kryptonGroupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -107,7 +114,7 @@
             this.toolStripButton1});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(897, 31);
+            this.toolStrip1.Size = new System.Drawing.Size(841, 31);
             this.toolStrip1.TabIndex = 227;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -188,91 +195,23 @@
             // Label1
             // 
             this.Label1.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.Label1.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label1.Location = new System.Drawing.Point(-3, 675);
+            this.Label1.Font = new System.Drawing.Font("Roboto Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
+            this.Label1.Location = new System.Drawing.Point(-1, 662);
             this.Label1.Name = "Label1";
-            this.Label1.Size = new System.Drawing.Size(892, 21);
+            this.Label1.Size = new System.Drawing.Size(824, 21);
             this.Label1.TabIndex = 228;
             this.Label1.Text = "0 REGISTRO(S)";
             this.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // GroupBox1
-            // 
-            this.GroupBox1.BackColor = System.Drawing.Color.White;
-            this.GroupBox1.Controls.Add(this.groupBox3);
-            this.GroupBox1.Controls.Add(this.txtConcepto);
-            this.GroupBox1.Controls.Add(this.Label27);
-            this.GroupBox1.Controls.Add(this.txtCodigo);
-            this.GroupBox1.Controls.Add(this.Label25);
-            this.GroupBox1.Controls.Add(this.txtIdConcepto);
-            this.GroupBox1.Controls.Add(this.Label22);
-            this.GroupBox1.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GroupBox1.Location = new System.Drawing.Point(1, 35);
-            this.GroupBox1.Name = "GroupBox1";
-            this.GroupBox1.Size = new System.Drawing.Size(893, 220);
-            this.GroupBox1.TabIndex = 230;
-            this.GroupBox1.TabStop = false;
-            this.GroupBox1.Text = "DATOS / CONCEPTO O PAGO";
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.label18);
-            this.groupBox3.Controls.Add(this.btnVentaRentaEsp);
-            this.groupBox3.Controls.Add(this.txtVentaRentaEsp);
-            this.groupBox3.Controls.Add(this.btnCompraRentaEsp);
-            this.groupBox3.Controls.Add(this.txtCompraRentaEsp);
-            this.groupBox3.Controls.Add(this.btnVentaRentaExp);
-            this.groupBox3.Controls.Add(this.txtVentaRentaExp);
-            this.groupBox3.Controls.Add(this.btnVentaRentaPsin);
-            this.groupBox3.Controls.Add(this.txtVentaRentaPsin);
-            this.groupBox3.Controls.Add(this.btnCompraRentaExp);
-            this.groupBox3.Controls.Add(this.txtCompraRentaExp);
-            this.groupBox3.Controls.Add(this.btnCompraRentaPsin);
-            this.groupBox3.Controls.Add(this.txtCompraRentaPsin);
-            this.groupBox3.Controls.Add(this.btnVentaRentaPcon);
-            this.groupBox3.Controls.Add(this.txtVentaRentaPcon);
-            this.groupBox3.Controls.Add(this.btnCompraRentaPcon);
-            this.groupBox3.Controls.Add(this.btnVentaRentaSoc);
-            this.groupBox3.Controls.Add(this.txtCompraRentaPcon);
-            this.groupBox3.Controls.Add(this.txtVentaRentaSoc);
-            this.groupBox3.Controls.Add(this.btnCompraRentaSoc);
-            this.groupBox3.Controls.Add(this.txtCompraRentaSoc);
-            this.groupBox3.Controls.Add(this.label15);
-            this.groupBox3.Controls.Add(this.label16);
-            this.groupBox3.Controls.Add(this.txtRentaEsp);
-            this.groupBox3.Controls.Add(this.label14);
-            this.groupBox3.Controls.Add(this.txtRentaExp);
-            this.groupBox3.Controls.Add(this.txtRentaPsin);
-            this.groupBox3.Controls.Add(this.txtRentaPcon);
-            this.groupBox3.Controls.Add(this.txtRentaSoc);
-            this.groupBox3.Controls.Add(this.label6);
-            this.groupBox3.Controls.Add(this.label8);
-            this.groupBox3.Controls.Add(this.label9);
-            this.groupBox3.Controls.Add(this.label10);
-            this.groupBox3.Location = new System.Drawing.Point(1, 74);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(890, 140);
-            this.groupBox3.TabIndex = 199;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "RETENCIÓN RENTA";
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(247, 0);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(50, 13);
-            this.label18.TabIndex = 246;
-            this.label18.Text = "PRCN. %";
-            // 
             // btnVentaRentaEsp
             // 
-            this.btnVentaRentaEsp.BackColor = System.Drawing.Color.White;
+            this.btnVentaRentaEsp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
             this.btnVentaRentaEsp.Enabled = false;
             this.btnVentaRentaEsp.FlatAppearance.BorderSize = 0;
             this.btnVentaRentaEsp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVentaRentaEsp.Image = ((System.Drawing.Image)(resources.GetObject("btnVentaRentaEsp.Image")));
-            this.btnVentaRentaEsp.Location = new System.Drawing.Point(863, 109);
+            this.btnVentaRentaEsp.Location = new System.Drawing.Point(792, 179);
             this.btnVentaRentaEsp.Name = "btnVentaRentaEsp";
             this.btnVentaRentaEsp.Size = new System.Drawing.Size(26, 26);
             this.btnVentaRentaEsp.TabIndex = 240;
@@ -285,7 +224,8 @@
             this.txtVentaRentaEsp.BackColor = System.Drawing.Color.White;
             this.txtVentaRentaEsp.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtVentaRentaEsp.Enabled = false;
-            this.txtVentaRentaEsp.Location = new System.Drawing.Point(614, 110);
+            this.txtVentaRentaEsp.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtVentaRentaEsp.Location = new System.Drawing.Point(536, 183);
             this.txtVentaRentaEsp.Name = "txtVentaRentaEsp";
             this.txtVentaRentaEsp.Size = new System.Drawing.Size(250, 21);
             this.txtVentaRentaEsp.TabIndex = 239;
@@ -293,13 +233,13 @@
             // 
             // btnCompraRentaEsp
             // 
-            this.btnCompraRentaEsp.BackColor = System.Drawing.Color.White;
+            this.btnCompraRentaEsp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
             this.btnCompraRentaEsp.Enabled = false;
             this.btnCompraRentaEsp.FlatAppearance.BorderSize = 0;
             this.btnCompraRentaEsp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCompraRentaEsp.Image = ((System.Drawing.Image)(resources.GetObject("btnCompraRentaEsp.Image")));
             this.btnCompraRentaEsp.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCompraRentaEsp.Location = new System.Drawing.Point(579, 107);
+            this.btnCompraRentaEsp.Location = new System.Drawing.Point(498, 181);
             this.btnCompraRentaEsp.Name = "btnCompraRentaEsp";
             this.btnCompraRentaEsp.Size = new System.Drawing.Size(26, 26);
             this.btnCompraRentaEsp.TabIndex = 238;
@@ -312,19 +252,20 @@
             this.txtCompraRentaEsp.BackColor = System.Drawing.Color.White;
             this.txtCompraRentaEsp.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtCompraRentaEsp.Enabled = false;
-            this.txtCompraRentaEsp.Location = new System.Drawing.Point(327, 110);
+            this.txtCompraRentaEsp.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCompraRentaEsp.Location = new System.Drawing.Point(242, 184);
             this.txtCompraRentaEsp.Name = "txtCompraRentaEsp";
             this.txtCompraRentaEsp.Size = new System.Drawing.Size(250, 21);
             this.txtCompraRentaEsp.TabIndex = 237;
             // 
             // btnVentaRentaExp
             // 
-            this.btnVentaRentaExp.BackColor = System.Drawing.Color.White;
+            this.btnVentaRentaExp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
             this.btnVentaRentaExp.Enabled = false;
             this.btnVentaRentaExp.FlatAppearance.BorderSize = 0;
             this.btnVentaRentaExp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVentaRentaExp.Image = ((System.Drawing.Image)(resources.GetObject("btnVentaRentaExp.Image")));
-            this.btnVentaRentaExp.Location = new System.Drawing.Point(863, 83);
+            this.btnVentaRentaExp.Location = new System.Drawing.Point(792, 153);
             this.btnVentaRentaExp.Name = "btnVentaRentaExp";
             this.btnVentaRentaExp.Size = new System.Drawing.Size(26, 26);
             this.btnVentaRentaExp.TabIndex = 236;
@@ -337,19 +278,20 @@
             this.txtVentaRentaExp.BackColor = System.Drawing.Color.White;
             this.txtVentaRentaExp.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtVentaRentaExp.Enabled = false;
-            this.txtVentaRentaExp.Location = new System.Drawing.Point(614, 86);
+            this.txtVentaRentaExp.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtVentaRentaExp.Location = new System.Drawing.Point(536, 157);
             this.txtVentaRentaExp.Name = "txtVentaRentaExp";
             this.txtVentaRentaExp.Size = new System.Drawing.Size(250, 21);
             this.txtVentaRentaExp.TabIndex = 235;
             // 
             // btnVentaRentaPsin
             // 
-            this.btnVentaRentaPsin.BackColor = System.Drawing.Color.White;
+            this.btnVentaRentaPsin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
             this.btnVentaRentaPsin.Enabled = false;
             this.btnVentaRentaPsin.FlatAppearance.BorderSize = 0;
             this.btnVentaRentaPsin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVentaRentaPsin.Image = ((System.Drawing.Image)(resources.GetObject("btnVentaRentaPsin.Image")));
-            this.btnVentaRentaPsin.Location = new System.Drawing.Point(863, 60);
+            this.btnVentaRentaPsin.Location = new System.Drawing.Point(792, 128);
             this.btnVentaRentaPsin.Name = "btnVentaRentaPsin";
             this.btnVentaRentaPsin.Size = new System.Drawing.Size(26, 26);
             this.btnVentaRentaPsin.TabIndex = 234;
@@ -362,20 +304,21 @@
             this.txtVentaRentaPsin.BackColor = System.Drawing.Color.White;
             this.txtVentaRentaPsin.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtVentaRentaPsin.Enabled = false;
-            this.txtVentaRentaPsin.Location = new System.Drawing.Point(614, 60);
+            this.txtVentaRentaPsin.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtVentaRentaPsin.Location = new System.Drawing.Point(536, 132);
             this.txtVentaRentaPsin.Name = "txtVentaRentaPsin";
             this.txtVentaRentaPsin.Size = new System.Drawing.Size(250, 21);
             this.txtVentaRentaPsin.TabIndex = 233;
             // 
             // btnCompraRentaExp
             // 
-            this.btnCompraRentaExp.BackColor = System.Drawing.Color.White;
+            this.btnCompraRentaExp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
             this.btnCompraRentaExp.Enabled = false;
             this.btnCompraRentaExp.FlatAppearance.BorderSize = 0;
             this.btnCompraRentaExp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCompraRentaExp.Image = ((System.Drawing.Image)(resources.GetObject("btnCompraRentaExp.Image")));
             this.btnCompraRentaExp.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCompraRentaExp.Location = new System.Drawing.Point(579, 82);
+            this.btnCompraRentaExp.Location = new System.Drawing.Point(498, 153);
             this.btnCompraRentaExp.Name = "btnCompraRentaExp";
             this.btnCompraRentaExp.Size = new System.Drawing.Size(26, 26);
             this.btnCompraRentaExp.TabIndex = 232;
@@ -388,20 +331,21 @@
             this.txtCompraRentaExp.BackColor = System.Drawing.Color.White;
             this.txtCompraRentaExp.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtCompraRentaExp.Enabled = false;
-            this.txtCompraRentaExp.Location = new System.Drawing.Point(327, 86);
+            this.txtCompraRentaExp.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCompraRentaExp.Location = new System.Drawing.Point(242, 158);
             this.txtCompraRentaExp.Name = "txtCompraRentaExp";
             this.txtCompraRentaExp.Size = new System.Drawing.Size(250, 21);
             this.txtCompraRentaExp.TabIndex = 231;
             // 
             // btnCompraRentaPsin
             // 
-            this.btnCompraRentaPsin.BackColor = System.Drawing.Color.White;
+            this.btnCompraRentaPsin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
             this.btnCompraRentaPsin.Enabled = false;
             this.btnCompraRentaPsin.FlatAppearance.BorderSize = 0;
             this.btnCompraRentaPsin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCompraRentaPsin.Image = ((System.Drawing.Image)(resources.GetObject("btnCompraRentaPsin.Image")));
             this.btnCompraRentaPsin.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCompraRentaPsin.Location = new System.Drawing.Point(579, 59);
+            this.btnCompraRentaPsin.Location = new System.Drawing.Point(498, 127);
             this.btnCompraRentaPsin.Name = "btnCompraRentaPsin";
             this.btnCompraRentaPsin.Size = new System.Drawing.Size(26, 26);
             this.btnCompraRentaPsin.TabIndex = 230;
@@ -414,19 +358,20 @@
             this.txtCompraRentaPsin.BackColor = System.Drawing.Color.White;
             this.txtCompraRentaPsin.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtCompraRentaPsin.Enabled = false;
-            this.txtCompraRentaPsin.Location = new System.Drawing.Point(327, 61);
+            this.txtCompraRentaPsin.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCompraRentaPsin.Location = new System.Drawing.Point(242, 132);
             this.txtCompraRentaPsin.Name = "txtCompraRentaPsin";
             this.txtCompraRentaPsin.Size = new System.Drawing.Size(250, 21);
             this.txtCompraRentaPsin.TabIndex = 229;
             // 
             // btnVentaRentaPcon
             // 
-            this.btnVentaRentaPcon.BackColor = System.Drawing.Color.White;
+            this.btnVentaRentaPcon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
             this.btnVentaRentaPcon.Enabled = false;
             this.btnVentaRentaPcon.FlatAppearance.BorderSize = 0;
             this.btnVentaRentaPcon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVentaRentaPcon.Image = ((System.Drawing.Image)(resources.GetObject("btnVentaRentaPcon.Image")));
-            this.btnVentaRentaPcon.Location = new System.Drawing.Point(863, 35);
+            this.btnVentaRentaPcon.Location = new System.Drawing.Point(792, 102);
             this.btnVentaRentaPcon.Name = "btnVentaRentaPcon";
             this.btnVentaRentaPcon.Size = new System.Drawing.Size(26, 26);
             this.btnVentaRentaPcon.TabIndex = 228;
@@ -439,20 +384,21 @@
             this.txtVentaRentaPcon.BackColor = System.Drawing.Color.White;
             this.txtVentaRentaPcon.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtVentaRentaPcon.Enabled = false;
-            this.txtVentaRentaPcon.Location = new System.Drawing.Point(614, 38);
+            this.txtVentaRentaPcon.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtVentaRentaPcon.Location = new System.Drawing.Point(536, 106);
             this.txtVentaRentaPcon.Name = "txtVentaRentaPcon";
             this.txtVentaRentaPcon.Size = new System.Drawing.Size(250, 21);
             this.txtVentaRentaPcon.TabIndex = 227;
             // 
             // btnCompraRentaPcon
             // 
-            this.btnCompraRentaPcon.BackColor = System.Drawing.Color.White;
+            this.btnCompraRentaPcon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
             this.btnCompraRentaPcon.Enabled = false;
             this.btnCompraRentaPcon.FlatAppearance.BorderSize = 0;
             this.btnCompraRentaPcon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCompraRentaPcon.Image = ((System.Drawing.Image)(resources.GetObject("btnCompraRentaPcon.Image")));
             this.btnCompraRentaPcon.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCompraRentaPcon.Location = new System.Drawing.Point(579, 37);
+            this.btnCompraRentaPcon.Location = new System.Drawing.Point(498, 105);
             this.btnCompraRentaPcon.Name = "btnCompraRentaPcon";
             this.btnCompraRentaPcon.Size = new System.Drawing.Size(26, 26);
             this.btnCompraRentaPcon.TabIndex = 224;
@@ -462,12 +408,12 @@
             // 
             // btnVentaRentaSoc
             // 
-            this.btnVentaRentaSoc.BackColor = System.Drawing.Color.White;
+            this.btnVentaRentaSoc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
             this.btnVentaRentaSoc.Enabled = false;
             this.btnVentaRentaSoc.FlatAppearance.BorderSize = 0;
             this.btnVentaRentaSoc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVentaRentaSoc.Image = ((System.Drawing.Image)(resources.GetObject("btnVentaRentaSoc.Image")));
-            this.btnVentaRentaSoc.Location = new System.Drawing.Point(863, 11);
+            this.btnVentaRentaSoc.Location = new System.Drawing.Point(792, 76);
             this.btnVentaRentaSoc.Name = "btnVentaRentaSoc";
             this.btnVentaRentaSoc.Size = new System.Drawing.Size(26, 26);
             this.btnVentaRentaSoc.TabIndex = 226;
@@ -480,7 +426,8 @@
             this.txtCompraRentaPcon.BackColor = System.Drawing.Color.White;
             this.txtCompraRentaPcon.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtCompraRentaPcon.Enabled = false;
-            this.txtCompraRentaPcon.Location = new System.Drawing.Point(327, 38);
+            this.txtCompraRentaPcon.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCompraRentaPcon.Location = new System.Drawing.Point(242, 107);
             this.txtCompraRentaPcon.Name = "txtCompraRentaPcon";
             this.txtCompraRentaPcon.Size = new System.Drawing.Size(250, 21);
             this.txtCompraRentaPcon.TabIndex = 223;
@@ -490,20 +437,21 @@
             this.txtVentaRentaSoc.BackColor = System.Drawing.Color.White;
             this.txtVentaRentaSoc.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtVentaRentaSoc.Enabled = false;
-            this.txtVentaRentaSoc.Location = new System.Drawing.Point(614, 14);
+            this.txtVentaRentaSoc.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtVentaRentaSoc.Location = new System.Drawing.Point(536, 80);
             this.txtVentaRentaSoc.Name = "txtVentaRentaSoc";
             this.txtVentaRentaSoc.Size = new System.Drawing.Size(250, 21);
             this.txtVentaRentaSoc.TabIndex = 225;
             // 
             // btnCompraRentaSoc
             // 
-            this.btnCompraRentaSoc.BackColor = System.Drawing.Color.White;
+            this.btnCompraRentaSoc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
             this.btnCompraRentaSoc.Enabled = false;
             this.btnCompraRentaSoc.FlatAppearance.BorderSize = 0;
             this.btnCompraRentaSoc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCompraRentaSoc.Image = ((System.Drawing.Image)(resources.GetObject("btnCompraRentaSoc.Image")));
             this.btnCompraRentaSoc.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCompraRentaSoc.Location = new System.Drawing.Point(579, 12);
+            this.btnCompraRentaSoc.Location = new System.Drawing.Point(498, 77);
             this.btnCompraRentaSoc.Name = "btnCompraRentaSoc";
             this.btnCompraRentaSoc.Size = new System.Drawing.Size(26, 26);
             this.btnCompraRentaSoc.TabIndex = 222;
@@ -516,56 +464,32 @@
             this.txtCompraRentaSoc.BackColor = System.Drawing.Color.White;
             this.txtCompraRentaSoc.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtCompraRentaSoc.Enabled = false;
-            this.txtCompraRentaSoc.Location = new System.Drawing.Point(327, 14);
+            this.txtCompraRentaSoc.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCompraRentaSoc.Location = new System.Drawing.Point(242, 81);
             this.txtCompraRentaSoc.Name = "txtCompraRentaSoc";
             this.txtCompraRentaSoc.Size = new System.Drawing.Size(250, 21);
             this.txtCompraRentaSoc.TabIndex = 221;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(611, 2);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(111, 13);
-            this.label15.TabIndex = 214;
-            this.label15.Text = "CUENTA EN VENTAS";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(324, 2);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(122, 13);
-            this.label16.TabIndex = 213;
-            this.label16.Text = "CUENTA EN COMPRAS";
             // 
             // txtRentaEsp
             // 
             this.txtRentaEsp.BackColor = System.Drawing.Color.White;
             this.txtRentaEsp.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtRentaEsp.Enabled = false;
-            this.txtRentaEsp.Location = new System.Drawing.Point(250, 112);
+            this.txtRentaEsp.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRentaEsp.Location = new System.Drawing.Point(178, 183);
             this.txtRentaEsp.Name = "txtRentaEsp";
             this.txtRentaEsp.Size = new System.Drawing.Size(49, 21);
             this.txtRentaEsp.TabIndex = 212;
             this.txtRentaEsp.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtRentaEsp.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtRentaEsp_KeyPress);
             // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(11, 101);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(150, 13);
-            this.label14.TabIndex = 211;
-            this.label14.Text = "CONTRIBUYENTE ESPECIAL:";
-            // 
             // txtRentaExp
             // 
             this.txtRentaExp.BackColor = System.Drawing.Color.White;
             this.txtRentaExp.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtRentaExp.Enabled = false;
-            this.txtRentaExp.Location = new System.Drawing.Point(250, 88);
+            this.txtRentaExp.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRentaExp.Location = new System.Drawing.Point(178, 157);
             this.txtRentaExp.Name = "txtRentaExp";
             this.txtRentaExp.Size = new System.Drawing.Size(49, 21);
             this.txtRentaExp.TabIndex = 210;
@@ -577,7 +501,8 @@
             this.txtRentaPsin.BackColor = System.Drawing.Color.White;
             this.txtRentaPsin.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtRentaPsin.Enabled = false;
-            this.txtRentaPsin.Location = new System.Drawing.Point(250, 65);
+            this.txtRentaPsin.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRentaPsin.Location = new System.Drawing.Point(178, 132);
             this.txtRentaPsin.Name = "txtRentaPsin";
             this.txtRentaPsin.Size = new System.Drawing.Size(49, 21);
             this.txtRentaPsin.TabIndex = 209;
@@ -589,7 +514,8 @@
             this.txtRentaPcon.BackColor = System.Drawing.Color.White;
             this.txtRentaPcon.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtRentaPcon.Enabled = false;
-            this.txtRentaPcon.Location = new System.Drawing.Point(250, 39);
+            this.txtRentaPcon.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRentaPcon.Location = new System.Drawing.Point(178, 106);
             this.txtRentaPcon.Name = "txtRentaPcon";
             this.txtRentaPcon.Size = new System.Drawing.Size(49, 21);
             this.txtRentaPcon.TabIndex = 208;
@@ -601,134 +527,64 @@
             this.txtRentaSoc.BackColor = System.Drawing.Color.White;
             this.txtRentaSoc.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtRentaSoc.Enabled = false;
-            this.txtRentaSoc.Location = new System.Drawing.Point(250, 14);
+            this.txtRentaSoc.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRentaSoc.Location = new System.Drawing.Point(178, 80);
             this.txtRentaSoc.Name = "txtRentaSoc";
             this.txtRentaSoc.Size = new System.Drawing.Size(49, 21);
             this.txtRentaSoc.TabIndex = 207;
             this.txtRentaSoc.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtRentaSoc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtRentaEsp_KeyPress);
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(11, 82);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(88, 13);
-            this.label6.TabIndex = 206;
-            this.label6.Text = "EXPORTADORA:";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(10, 59);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(212, 13);
-            this.label8.TabIndex = 205;
-            this.label8.Text = "PERSONA NATURAL SIN CONTABILIDAD:";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(10, 37);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(217, 13);
-            this.label9.TabIndex = 204;
-            this.label9.Text = "PERSONA NATURAL CON CONTABILIDAD:";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(10, 17);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(62, 13);
-            this.label10.TabIndex = 203;
-            this.label10.Text = "SOCIEDAD:";
-            // 
             // txtConcepto
             // 
             this.txtConcepto.BackColor = System.Drawing.Color.White;
             this.txtConcepto.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtConcepto.Enabled = false;
-            this.txtConcepto.Location = new System.Drawing.Point(211, 13);
+            this.txtConcepto.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtConcepto.Location = new System.Drawing.Point(249, 4);
             this.txtConcepto.Multiline = true;
             this.txtConcepto.Name = "txtConcepto";
-            this.txtConcepto.Size = new System.Drawing.Size(680, 45);
+            this.txtConcepto.Size = new System.Drawing.Size(578, 19);
             this.txtConcepto.TabIndex = 197;
-            // 
-            // Label27
-            // 
-            this.Label27.Location = new System.Drawing.Point(144, 16);
-            this.Label27.Name = "Label27";
-            this.Label27.Size = new System.Drawing.Size(61, 39);
-            this.Label27.TabIndex = 196;
-            this.Label27.Text = "DESC. / CONCEPTO:";
-            this.Label27.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // txtCodigo
             // 
             this.txtCodigo.BackColor = System.Drawing.Color.White;
             this.txtCodigo.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtCodigo.Enabled = false;
-            this.txtCodigo.Location = new System.Drawing.Point(62, 37);
+            this.txtCodigo.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCodigo.Location = new System.Drawing.Point(60, 28);
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(56, 21);
             this.txtCodigo.TabIndex = 195;
             this.txtCodigo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // Label25
-            // 
-            this.Label25.AutoSize = true;
-            this.Label25.Location = new System.Drawing.Point(7, 40);
-            this.Label25.Name = "Label25";
-            this.Label25.Size = new System.Drawing.Size(51, 13);
-            this.Label25.TabIndex = 194;
-            this.Label25.Text = "CÓDIGO:";
             // 
             // txtIdConcepto
             // 
             this.txtIdConcepto.BackColor = System.Drawing.Color.White;
             this.txtIdConcepto.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtIdConcepto.Enabled = false;
-            this.txtIdConcepto.Location = new System.Drawing.Point(62, 15);
+            this.txtIdConcepto.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIdConcepto.Location = new System.Drawing.Point(60, 3);
             this.txtIdConcepto.Name = "txtIdConcepto";
             this.txtIdConcepto.Size = new System.Drawing.Size(56, 21);
             this.txtIdConcepto.TabIndex = 28;
-            // 
-            // Label22
-            // 
-            this.Label22.AutoSize = true;
-            this.Label22.Location = new System.Drawing.Point(13, 18);
-            this.Label22.Name = "Label22";
-            this.Label22.Size = new System.Drawing.Size(20, 13);
-            this.Label22.TabIndex = 8;
-            this.Label22.Text = "ID:";
-            // 
-            // Label7
-            // 
-            this.Label7.AutoSize = true;
-            this.Label7.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Label7.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label7.Location = new System.Drawing.Point(9, 265);
-            this.Label7.Name = "Label7";
-            this.Label7.Size = new System.Drawing.Size(46, 13);
-            this.Label7.TabIndex = 231;
-            this.Label7.Text = "FILTRO:";
-            this.Label7.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // txtFiltro
             // 
             this.txtFiltro.BackColor = System.Drawing.Color.White;
             this.txtFiltro.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtFiltro.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFiltro.Location = new System.Drawing.Point(63, 261);
+            this.txtFiltro.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFiltro.Location = new System.Drawing.Point(65, 5);
             this.txtFiltro.Name = "txtFiltro";
-            this.txtFiltro.Size = new System.Drawing.Size(829, 21);
+            this.txtFiltro.Size = new System.Drawing.Size(446, 21);
             this.txtFiltro.TabIndex = 232;
             this.txtFiltro.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtFiltro_KeyUp);
             // 
             // ListView1
             // 
-            this.ListView1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ListView1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
+            this.ListView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.ListView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader3,
@@ -739,10 +595,10 @@
             this.ListView1.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ListView1.FullRowSelect = true;
             this.ListView1.HideSelection = false;
-            this.ListView1.Location = new System.Drawing.Point(0, 287);
+            this.ListView1.Location = new System.Drawing.Point(3, 32);
             this.ListView1.MultiSelect = false;
             this.ListView1.Name = "ListView1";
-            this.ListView1.Size = new System.Drawing.Size(892, 387);
+            this.ListView1.Size = new System.Drawing.Size(824, 325);
             this.ListView1.TabIndex = 233;
             this.ListView1.UseCompatibleStateImageBehavior = false;
             this.ListView1.View = System.Windows.Forms.View.Details;
@@ -779,16 +635,191 @@
             this.columnHeader6.Text = "IDCP";
             this.columnHeader6.Width = 0;
             // 
+            // kryptonGroupBox1
+            // 
+            this.kryptonGroupBox1.CaptionOverlap = 0D;
+            this.kryptonGroupBox1.GroupBackStyle = Krypton.Toolkit.PaletteBackStyle.ControlRibbon;
+            this.kryptonGroupBox1.Location = new System.Drawing.Point(1, 34);
+            this.kryptonGroupBox1.Name = "kryptonGroupBox1";
+            // 
+            // kryptonGroupBox1.Panel
+            // 
+            this.kryptonGroupBox1.Panel.Controls.Add(this.kryptonLabel12);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.kryptonLabel11);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.btnVentaRentaEsp);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.kryptonLabel10);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.btnVentaRentaExp);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.btnCompraRentaEsp);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.btnVentaRentaPsin);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.btnVentaRentaPcon);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.txtVentaRentaEsp);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.btnVentaRentaSoc);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.kryptonLabel9);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.kryptonLabel8);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.btnCompraRentaExp);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.kryptonLabel7);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.btnCompraRentaPsin);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.txtVentaRentaExp);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.txtCompraRentaEsp);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.btnCompraRentaPcon);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.kryptonLabel4);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.txtVentaRentaPsin);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.btnCompraRentaSoc);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.kryptonLabel6);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.kryptonLabel5);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.kryptonLabel3);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.txtConcepto);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.txtVentaRentaPcon);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.kryptonLabel2);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.txtCompraRentaExp);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.kryptonLabel1);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.txtVentaRentaSoc);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.txtIdConcepto);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.txtCompraRentaPsin);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.txtCodigo);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.txtRentaSoc);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.txtRentaPcon);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.txtRentaPsin);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.txtRentaExp);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.txtCompraRentaPcon);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.txtRentaEsp);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.txtCompraRentaSoc);
+            this.kryptonGroupBox1.Size = new System.Drawing.Size(837, 236);
+            this.kryptonGroupBox1.TabIndex = 234;
+            this.kryptonGroupBox1.Values.Heading = "Datos";
+            // 
+            // kryptonLabel12
+            // 
+            this.kryptonLabel12.Location = new System.Drawing.Point(627, 55);
+            this.kryptonLabel12.Name = "kryptonLabel12";
+            this.kryptonLabel12.Size = new System.Drawing.Size(101, 20);
+            this.kryptonLabel12.StateCommon.ShortText.Color1 = System.Drawing.Color.SeaGreen;
+            this.kryptonLabel12.TabIndex = 241;
+            this.kryptonLabel12.Values.Text = "Cuenta en Venta";
+            // 
+            // kryptonLabel11
+            // 
+            this.kryptonLabel11.Location = new System.Drawing.Point(298, 54);
+            this.kryptonLabel11.Name = "kryptonLabel11";
+            this.kryptonLabel11.Size = new System.Drawing.Size(113, 20);
+            this.kryptonLabel11.StateCommon.ShortText.Color1 = System.Drawing.Color.SeaGreen;
+            this.kryptonLabel11.TabIndex = 238;
+            this.kryptonLabel11.Values.Text = "Cuenta en Compra";
+            // 
+            // kryptonLabel10
+            // 
+            this.kryptonLabel10.Location = new System.Drawing.Point(3, 184);
+            this.kryptonLabel10.Name = "kryptonLabel10";
+            this.kryptonLabel10.Size = new System.Drawing.Size(135, 20);
+            this.kryptonLabel10.TabIndex = 211;
+            this.kryptonLabel10.Values.Text = "Contribuyente Especial";
+            // 
+            // kryptonLabel9
+            // 
+            this.kryptonLabel9.Location = new System.Drawing.Point(3, 158);
+            this.kryptonLabel9.Name = "kryptonLabel9";
+            this.kryptonLabel9.Size = new System.Drawing.Size(77, 20);
+            this.kryptonLabel9.TabIndex = 210;
+            this.kryptonLabel9.Values.Text = "Exportadora";
+            // 
+            // kryptonLabel8
+            // 
+            this.kryptonLabel8.Location = new System.Drawing.Point(3, 132);
+            this.kryptonLabel8.Name = "kryptonLabel8";
+            this.kryptonLabel8.Size = new System.Drawing.Size(158, 20);
+            this.kryptonLabel8.TabIndex = 203;
+            this.kryptonLabel8.Values.Text = "Persona N sin Contabilidad";
+            // 
+            // kryptonLabel7
+            // 
+            this.kryptonLabel7.Location = new System.Drawing.Point(3, 107);
+            this.kryptonLabel7.Name = "kryptonLabel7";
+            this.kryptonLabel7.Size = new System.Drawing.Size(163, 20);
+            this.kryptonLabel7.TabIndex = 202;
+            this.kryptonLabel7.Values.Text = "Persona N con Contabilidad";
+            // 
+            // kryptonLabel4
+            // 
+            this.kryptonLabel4.Location = new System.Drawing.Point(3, 81);
+            this.kryptonLabel4.Name = "kryptonLabel4";
+            this.kryptonLabel4.Size = new System.Drawing.Size(60, 20);
+            this.kryptonLabel4.TabIndex = 201;
+            this.kryptonLabel4.Values.Text = "Sociedad";
+            // 
+            // kryptonLabel6
+            // 
+            this.kryptonLabel6.Location = new System.Drawing.Point(169, 54);
+            this.kryptonLabel6.Name = "kryptonLabel6";
+            this.kryptonLabel6.Size = new System.Drawing.Size(68, 20);
+            this.kryptonLabel6.StateCommon.ShortText.Color1 = System.Drawing.Color.SeaGreen;
+            this.kryptonLabel6.TabIndex = 200;
+            this.kryptonLabel6.Values.Text = "Porcentaje";
+            // 
+            // kryptonLabel5
+            // 
+            this.kryptonLabel5.Location = new System.Drawing.Point(3, 55);
+            this.kryptonLabel5.Name = "kryptonLabel5";
+            this.kryptonLabel5.Size = new System.Drawing.Size(100, 20);
+            this.kryptonLabel5.StateCommon.ShortText.Color1 = System.Drawing.Color.SeaGreen;
+            this.kryptonLabel5.TabIndex = 199;
+            this.kryptonLabel5.Values.Text = "Retencion Renta";
+            // 
+            // kryptonLabel3
+            // 
+            this.kryptonLabel3.Location = new System.Drawing.Point(169, 4);
+            this.kryptonLabel3.Name = "kryptonLabel3";
+            this.kryptonLabel3.Size = new System.Drawing.Size(74, 20);
+            this.kryptonLabel3.TabIndex = 196;
+            this.kryptonLabel3.Values.Text = "Descripcion";
+            // 
+            // kryptonLabel2
+            // 
+            this.kryptonLabel2.Location = new System.Drawing.Point(3, 29);
+            this.kryptonLabel2.Name = "kryptonLabel2";
+            this.kryptonLabel2.Size = new System.Drawing.Size(50, 20);
+            this.kryptonLabel2.TabIndex = 29;
+            this.kryptonLabel2.Values.Text = "Codigo";
+            // 
+            // kryptonLabel1
+            // 
+            this.kryptonLabel1.Location = new System.Drawing.Point(3, 3);
+            this.kryptonLabel1.Name = "kryptonLabel1";
+            this.kryptonLabel1.Size = new System.Drawing.Size(21, 20);
+            this.kryptonLabel1.TabIndex = 0;
+            this.kryptonLabel1.Values.Text = "Id";
+            // 
+            // kryptonGroupBox2
+            // 
+            this.kryptonGroupBox2.CaptionOverlap = 0D;
+            this.kryptonGroupBox2.GroupBackStyle = Krypton.Toolkit.PaletteBackStyle.ControlRibbon;
+            this.kryptonGroupBox2.Location = new System.Drawing.Point(1, 276);
+            this.kryptonGroupBox2.Name = "kryptonGroupBox2";
+            // 
+            // kryptonGroupBox2.Panel
+            // 
+            this.kryptonGroupBox2.Panel.Controls.Add(this.kryptonLabel13);
+            this.kryptonGroupBox2.Panel.Controls.Add(this.txtFiltro);
+            this.kryptonGroupBox2.Panel.Controls.Add(this.ListView1);
+            this.kryptonGroupBox2.Size = new System.Drawing.Size(837, 384);
+            this.kryptonGroupBox2.TabIndex = 235;
+            this.kryptonGroupBox2.Values.Heading = "Busqueda";
+            // 
+            // kryptonLabel13
+            // 
+            this.kryptonLabel13.Location = new System.Drawing.Point(3, 6);
+            this.kryptonLabel13.Name = "kryptonLabel13";
+            this.kryptonLabel13.Size = new System.Drawing.Size(46, 20);
+            this.kryptonLabel13.TabIndex = 242;
+            this.kryptonLabel13.Values.Text = "Buscar";
+            // 
             // FrmPorcentajesRetencion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(897, 695);
-            this.Controls.Add(this.ListView1);
-            this.Controls.Add(this.Label7);
-            this.Controls.Add(this.txtFiltro);
-            this.Controls.Add(this.GroupBox1);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(204)))), ((int)(((byte)(227)))));
+            this.ClientSize = new System.Drawing.Size(841, 681);
+            this.Controls.Add(this.kryptonGroupBox2);
+            this.Controls.Add(this.kryptonGroupBox1);
             this.Controls.Add(this.Label1);
             this.Controls.Add(this.toolStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
@@ -802,10 +833,16 @@
             this.Load += new System.EventHandler(this.FrmPorcentajesRetencion_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
-            this.GroupBox1.ResumeLayout(false);
-            this.GroupBox1.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox1.Panel)).EndInit();
+            this.kryptonGroupBox1.Panel.ResumeLayout(false);
+            this.kryptonGroupBox1.Panel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox1)).EndInit();
+            this.kryptonGroupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox2.Panel)).EndInit();
+            this.kryptonGroupBox2.Panel.ResumeLayout(false);
+            this.kryptonGroupBox2.Panel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox2)).EndInit();
+            this.kryptonGroupBox2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -821,33 +858,22 @@
         private System.Windows.Forms.ToolStripButton btnAnular;
         private System.Windows.Forms.ToolStripButton btnCancelar;
         internal System.Windows.Forms.Label Label1;
-        internal System.Windows.Forms.GroupBox GroupBox1;
         internal System.Windows.Forms.TextBox txtConcepto;
-        internal System.Windows.Forms.Label Label27;
         internal System.Windows.Forms.TextBox txtCodigo;
-        internal System.Windows.Forms.Label Label25;
-        internal System.Windows.Forms.Label Label22;
-        internal System.Windows.Forms.Label Label7;
         internal System.Windows.Forms.TextBox txtFiltro;
         internal System.Windows.Forms.ListView ListView1;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader4;
-        private System.Windows.Forms.GroupBox groupBox3;
         internal System.Windows.Forms.TextBox txtRentaExp;
         internal System.Windows.Forms.TextBox txtRentaPsin;
         internal System.Windows.Forms.TextBox txtRentaPcon;
         internal System.Windows.Forms.TextBox txtRentaSoc;
-        internal System.Windows.Forms.Label label6;
-        internal System.Windows.Forms.Label label8;
-        internal System.Windows.Forms.Label label9;
-        internal System.Windows.Forms.Label label10;
         private System.Windows.Forms.ColumnHeader columnHeader5;
         internal System.Windows.Forms.TextBox txtIdConcepto;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader6;
         internal System.Windows.Forms.TextBox txtRentaEsp;
-        internal System.Windows.Forms.Label label14;
         internal System.Windows.Forms.Button btnVentaRentaEsp;
         internal System.Windows.Forms.TextBox txtVentaRentaEsp;
         internal System.Windows.Forms.Button btnCompraRentaEsp;
@@ -868,9 +894,21 @@
         internal System.Windows.Forms.TextBox txtVentaRentaSoc;
         internal System.Windows.Forms.Button btnCompraRentaSoc;
         internal System.Windows.Forms.TextBox txtCompraRentaSoc;
-        internal System.Windows.Forms.Label label15;
-        internal System.Windows.Forms.Label label16;
         private System.Windows.Forms.ToolStripButton toolStripButton1;
-        internal System.Windows.Forms.Label label18;
+        private Krypton.Toolkit.KryptonGroupBox kryptonGroupBox1;
+        private Krypton.Toolkit.KryptonLabel kryptonLabel1;
+        private Krypton.Toolkit.KryptonLabel kryptonLabel8;
+        private Krypton.Toolkit.KryptonLabel kryptonLabel7;
+        private Krypton.Toolkit.KryptonLabel kryptonLabel4;
+        private Krypton.Toolkit.KryptonLabel kryptonLabel6;
+        private Krypton.Toolkit.KryptonLabel kryptonLabel5;
+        private Krypton.Toolkit.KryptonLabel kryptonLabel3;
+        private Krypton.Toolkit.KryptonLabel kryptonLabel2;
+        private Krypton.Toolkit.KryptonLabel kryptonLabel11;
+        private Krypton.Toolkit.KryptonLabel kryptonLabel10;
+        private Krypton.Toolkit.KryptonLabel kryptonLabel9;
+        private Krypton.Toolkit.KryptonLabel kryptonLabel12;
+        private Krypton.Toolkit.KryptonGroupBox kryptonGroupBox2;
+        private Krypton.Toolkit.KryptonLabel kryptonLabel13;
     }
 }

@@ -108,7 +108,7 @@ namespace SysCisepro3.Operaciones
             catch (Exception ex)
             {
                 dgvProvincias.DataSource = null;
-                MessageBox.Show(@"Error al cargar provincias: " + ex.Message, "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(@"Error al cargar provincias: " + ex.Message, "Mensaje del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -157,7 +157,7 @@ namespace SysCisepro3.Operaciones
             catch (Exception ex)
             {
                 dgvCiudades.DataSource = null;
-                MessageBox.Show(@"Error al cargar provincias: " + ex.Message, "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(@"Error al cargar provincias: " + ex.Message, "Mensaje del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -206,7 +206,7 @@ namespace SysCisepro3.Operaciones
             catch (Exception ex)
             {
                 dgvParroquias.DataSource = null;
-                MessageBox.Show(@"Error al cargar provincias: " + ex.Message, "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(@"Error al cargar provincias: " + ex.Message, "Mensaje del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -342,11 +342,11 @@ namespace SysCisepro3.Operaciones
         {
             if (txtNombreProvincia.Text.Trim().Length == 0)
             {
-                MessageBox.Show(@"No se ha ingresado el nombre!", "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(@"No se ha ingresado el nombre!", "Mensaje del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
             if (MessageBox.Show(@"Desea guardar los cambios realizados?",
-                    "MENSAJE DELL SISTEMA", MessageBoxButtons.YesNo, MessageBoxIcon.Question) !=
+                    "Mensaje del Sistema", MessageBoxButtons.YesNo, MessageBoxIcon.Question) !=
                 DialogResult.Yes) return;
             _sqlCommands.Clear();
             _objProvincias.IdProvinciaProvincias = _estado == 1 ? _objProvincias.BuscarMayorIdProvincia(TipoCon) + 1 : Convert.ToInt32(txtIdProvincia.Text.Trim());
@@ -386,18 +386,18 @@ namespace SysCisepro3.Operaciones
                 btnCancelarParroquia.Enabled = false;
                 btnCargarParroquias.Enabled = true;
             }
-            MessageBox.Show((string)res[1], "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show((string)res[1], "Mensaje del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void btnGuardarCiudad_Click(object sender, EventArgs e)
         {
             if (txtNombreCiudades.Text.Trim().Length == 0)
             {
-                MessageBox.Show(@"No se ha ingresado el nombre!", "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(@"No se ha ingresado el nombre!", "Mensaje del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
             if (MessageBox.Show(@"Desea guardar los cambios realizados?",
-                    "MENSAJE DELL SISTEMA", MessageBoxButtons.YesNo, MessageBoxIcon.Question) !=
+                    "Mensaje del Sistema", MessageBoxButtons.YesNo, MessageBoxIcon.Question) !=
                 DialogResult.Yes) return;
             _sqlCommands.Clear();
             _objCiudades.IdCiudadCiudades = _estado == 1 ? _objCiudades.BuscarMayorIdCiudades(TipoCon) + 1 : Convert.ToInt32(txtIdCiudades.Text.Trim());
@@ -437,18 +437,18 @@ namespace SysCisepro3.Operaciones
                 btnCancelarParroquia.Enabled = false;
                 btnCargarParroquias.Enabled = true;
             }
-            MessageBox.Show((string)res[1], "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show((string)res[1], "Mensaje del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void btnGuardarParroquia_Click(object sender, EventArgs e)
         {
             if (txtNombreParroquia.Text.Trim().Length == 0)
             {
-                MessageBox.Show(@"No se ha ingresado el nombre!", "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(@"No se ha ingresado el nombre!", "Mensaje del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
             if (MessageBox.Show(@"Desea guardar los cambios realizados?",
-                    "MENSAJE DELL SISTEMA", MessageBoxButtons.YesNo, MessageBoxIcon.Question) !=
+                    "Mensaje del Sistema", MessageBoxButtons.YesNo, MessageBoxIcon.Question) !=
                 DialogResult.Yes) return;
             _sqlCommands.Clear();
             _objParroquias.IdParroquiaParroquias = _estado == 1 ? _objParroquias.BuscarMayorIdParroquias(TipoCon) + 1 : Convert.ToInt32(txtIdParroquia.Text.Trim());
@@ -488,14 +488,14 @@ namespace SysCisepro3.Operaciones
                 btnCancelarParroquia.Enabled = false;
                 btnCargarParroquias.Enabled = true;
             }
-            MessageBox.Show((string)res[1], "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show((string)res[1], "Mensaje del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void btnModificarProvincia_Click(object sender, EventArgs e)
         {
             if (txtNombreProvincia.Text.Trim().Length == 0)
             {
-                MessageBox.Show(@"No se ha ingresado el nombre!", "MENSAJE DELL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(@"No se ha ingresado el nombre!", "Mensaje del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
 
