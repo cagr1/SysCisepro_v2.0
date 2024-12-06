@@ -98,30 +98,24 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                     Icon = Nothing
                     MenuStrip1.ForeColor = Color.White
                     'MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorAsenava
-                    panelDetalle.BackColor = My.MySettingsProperty.Settings.ColorAsenava
-                    panelDetalle.ForeColor = Color.White
-                    Panel1.BackColor = My.MySettingsProperty.Settings.ColorAsenava
-                    Panel1.ForeColor = Color.White
+
+
                     dgvFacturaVenta.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorAsenava
                     dgvDetalleFacturaVenta.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorAsenava
                 Case TipoConexion.Seportpac
                     Icon = My.Resources.logo_s
                     MenuStrip1.ForeColor = Color.White
                     'MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
-                    panelDetalle.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
-                    panelDetalle.ForeColor = Color.White
-                    Panel1.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
-                    Panel1.ForeColor = Color.White
+
+
                     dgvFacturaVenta.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorSeportpac
                     dgvDetalleFacturaVenta.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorSeportpac
                 Case Else
                     Icon = My.Resources.logo_c
                     MenuStrip1.ForeColor = Color.White
                     'MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorCisepro
-                    panelDetalle.BackColor = My.MySettingsProperty.Settings.ColorCisepro
-                    panelDetalle.ForeColor = Color.White
-                    Panel1.BackColor = My.MySettingsProperty.Settings.ColorCisepro
-                    Panel1.ForeColor = Color.White
+
+
                     dgvFacturaVenta.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
                     dgvDetalleFacturaVenta.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
             End Select
@@ -140,11 +134,23 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
             rbProduccion.Checked = True
             rbTipoEmisionNormal.Checked = True
             rbPtoEmision002.Checked = True
+
         End Sub
+
+
         Private Sub DeshabilitadoInicio()
-            gbClienteGeneral.Enabled = False
-            gbFechaNotaCredito.Enabled = False
-            gbValoresNotaCredito.Enabled = False
+            'gbClienteGeneral.Enabled = False
+            txtNombreComercialCliente.Enabled = False
+            'gbFechaNotaCredito.Enabled = False
+            txtComprobanteModificaNotaCredito.Enabled = False
+            txtRazonModificacionNotaCredito.Enabled = False
+            'gbValoresNotaCredito.Enabled = False
+            txtSubtotal12NotaCredito.Enabled = False
+            txtSubtotal0NotaCredito.Enabled = False
+            txtDescuentoNotaCredito.Enabled = False
+            txtSubTotalNotaCredito.Enabled = False
+            txtIvaNotaCredito.Enabled = False
+            txtTotalNotaCredito.Enabled = False
             btnNuevo.Enabled = True
             btnCancelar.Enabled = False
             btnGuardarSinFirmar.Enabled = False
@@ -193,13 +199,25 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
             GenerarNumeroNotaCredito()
         End Sub
         Private Sub HabilitadoNuevo()
-            gbPtoEmision.Enabled = False
-            gbTipoAnbiente.Enabled = False
-            gbTipoEmision.Enabled = False
 
-            gbClienteGeneral.Enabled = True
-            gbFechaNotaCredito.Enabled = True
-            gbValoresNotaCredito.Enabled = True
+            rbPtoEmision001.Enabled = False
+            rbPtoEmision002.Enabled = False
+            rbPruebas.Enabled = False
+            rbProduccion.Enabled = False
+            rbTipoEmisionNormal.Enabled = False
+            rbTipoEmisionIndisponibilidadSistema.Enabled = False
+            'gbClienteGeneral.Enabled = True
+            txtNombreComercialCliente.Enabled = True
+            'gbFechaNotaCredito.Enabled = True
+            txtComprobanteModificaNotaCredito.Enabled = True
+            txtRazonModificacionNotaCredito.Enabled = True
+            'gbValoresNotaCredito.Enabled = True
+            txtSubtotal12NotaCredito.Enabled = True
+            txtSubtotal0NotaCredito.Enabled = True
+            txtDescuentoNotaCredito.Enabled = True
+            txtSubTotalNotaCredito.Enabled = True
+            txtIvaNotaCredito.Enabled = True
+            txtTotalNotaCredito.Enabled = True
             btnNuevo.Enabled = False
             btnCancelar.Enabled = True
             btnGuardarSinFirmar.Enabled = True
@@ -818,6 +836,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                 MsgBox("ERROR AL GENERAR NOTA DE CRÉDITO ELECTRÓNICA" & vbNewLine & ex.Message, MsgBoxStyle.Information, "Mensaje de información.")
             End Try
         End Sub
+
 
     End Class
 End Namespace

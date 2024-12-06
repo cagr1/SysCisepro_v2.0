@@ -235,14 +235,12 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
                 If res(0) Then
                     LlenarComboCuentasBancos()
                     CargarComprobanteEgresoBancos()
-                End If
-                Dim messageIcon As KryptonMessageBoxIcon
-                If res(0) Then
-                    messageIcon = KryptonMessageBoxIcon.Information
+                    KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
                 Else
-                    messageIcon = KryptonMessageBoxIcon.Exclamation
+                    KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+                    Return
                 End If
-                KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, messageIcon)
+
 
             Else
 

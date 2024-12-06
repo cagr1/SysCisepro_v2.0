@@ -308,17 +308,17 @@ Namespace FORMULARIOS.CONTABILIDAD.LIQUIDACIONES
         Private Sub btnReportes_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnFinRevision.Click
             If dgvSolicitudFondoRotativo.RowCount = 0 And dgvSolicitudFonoRotativoNoDeducible.RowCount = 0 Then
                 'MsgBox("NO SE CARGARON LAS SOLICITUDES DE FONDO POR FAVOR REVISE LA LIQUIDACIÓN", MsgBoxStyle.Information, "Mensaje de información")
-                KryptonMessageBox.Show("NO SE CARGARON LAS SOLICITUDES DE FONDO POR FAVOR REVISE LA LIQUIDACIÓN", "Mensaje de información", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
+                KryptonMessageBox.Show("No se cargaron las solicitudes de fondo por favor revise la liquidación", "Mensaje de información", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
             Else
 
                 If Not ValidarSeleccion() Then
                     'MsgBox("DEBE SELECCIONAR AL MENOS UNA SOLICITUD PARA REALIZAR LA LIQUIDACIÓN", MsgBoxStyle.Information, "Mensaje de información")
-                    KryptonMessageBox.Show("DEBE SELECCIONAR AL MENOS UNA SOLICITUD PARA REALIZAR LA LIQUIDACIÓN", "Mensaje de información", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
+                    KryptonMessageBox.Show("Debe seleccionar al menos una solicitud para realizar la liquidación", "Mensaje de información", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
                     Return
                 End If
 
                 'If MsgBox("ESTÁ SEGURO QUE DESEA PROCESAR LA LIQUIDACIÓN ACTUAL?", MsgBoxStyle.YesNo, "Mensaje de información") <> DialogResult.Yes Then Return
-                If KryptonMessageBox.Show("ESTÁ PROCESANDO LA LIQUIDACIÓN ACTUAL", "Mensaje de información", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information) <> DialogResult.Yes Then Return
+                If KryptonMessageBox.Show("Está procesando la liquidación actuaL", "Mensaje de información", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Information) <> DialogResult.Yes Then Return
                 dgvSolicitudFondoRotativo_CellEndEdit(Nothing, Nothing)
                 dgvSolicitudFonoRotativoNoDeducible_CellEndEdit(Nothing, Nothing)
 
@@ -348,8 +348,8 @@ Namespace FORMULARIOS.CONTABILIDAD.LIQUIDACIONES
 
                 Dim texto = "DEBE: " & _valDebe & "        -        HABER: " & _valHaber
                 If Math.Abs(_valDebe - _valHaber) > 0.01 Then
-                    'MsgBox("NO ES POSBLE PROCESAR LA LIQUIDACIÓN PORQUE LA TRANSACCIÓN GENERADA NO CUADRA!!!" & vbNewLine & texto)
-                    KryptonMessageBox.Show("NO ES POSBLE PROCESAR LA LIQUIDACIÓN PORQUE LA TRANSACCIÓN GENERADA NO CUADRA!!!" & vbNewLine & texto, "Mensaje de información", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+
+                    KryptonMessageBox.Show("No es posible procesar la liquidación porque la transacción generada no cuadra!!!" & vbNewLine & texto, "Mensaje de información", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
                     Return
                 End If
 
@@ -359,18 +359,11 @@ Namespace FORMULARIOS.CONTABILIDAD.LIQUIDACIONES
                 If res(0) Then
                     LimpiarParametros()
                     CargarLiquidacionFondoRotativo()
-                End If
-                'MsgBox(res(1) & vbNewLine & texto, If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
-
-                Dim messageIcon As KryptonMessageBoxIcon
-                If res(0) Then
-                    messageIcon = KryptonMessageBoxIcon.Information
+                    KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
                 Else
-                    messageIcon = KryptonMessageBoxIcon.Exclamation
+                    KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+                    Return
                 End If
-                KryptonMessageBox.Show(res(1) & vbNewLine & texto, "Mensaje del sistema", KryptonMessageBoxButtons.OK, messageIcon)
-
-
 
             End If
         End Sub

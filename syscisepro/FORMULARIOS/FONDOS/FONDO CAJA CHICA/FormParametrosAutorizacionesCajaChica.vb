@@ -4,6 +4,7 @@ Imports ClassLibraryCisepro.ENUMS
 Imports ClassLibraryCisepro.FONDOS.CAJA_CHICA
 Imports ClassLibraryCisepro.ProcesosSql
 Imports ClassLibraryCisepro.TALENTO_HUMANO
+Imports Krypton.Toolkit
 Imports syscisepro.DATOS
 
 Namespace FORMULARIOS.FONDOS.FONDO_CAJA_CHICA
@@ -51,7 +52,7 @@ Namespace FORMULARIOS.FONDOS.FONDO_CAJA_CHICA
                 Case "APELLIDOS"
                     dgvPersonal.DataSource = _objPersonal.BuscarPorApellidosElPersonal(_tipoCon, txtParametroBusqueda.Text, True)
             End Select
-            dgvPersonal.AutoResizeColumns() 
+            dgvPersonal.AutoResizeColumns()
             dgvPersonal.EditMode = DataGridViewEditMode.EditProgrammatically
             dgvPersonal.Columns(0).HeaderText = "ID"
             dgvPersonal.Columns(6).DefaultCellStyle.Format = "d"
@@ -63,7 +64,7 @@ Namespace FORMULARIOS.FONDOS.FONDO_CAJA_CHICA
         '===============================================================================================================================================================================================================
         Private Sub CargarAutorizaciones()
             Try
-                dgvParametroAutorizaciones.DataSource = _objAutorizaciones.SeleccionarResponsablesAutorizacionCajaChica(_tipoCon) 
+                dgvParametroAutorizaciones.DataSource = _objAutorizaciones.SeleccionarResponsablesAutorizacionCajaChica(_tipoCon)
                 dgvParametroAutorizaciones.EditMode = DataGridViewEditMode.EditProgrammatically
                 For indice = 0 To dgvParametroAutorizaciones.RowCount - 1
                     If dgvParametroAutorizaciones.Rows(indice).Cells("ESTADO_RESPONSABLE_AUTO_CCH").Value = 2 Then
@@ -157,33 +158,41 @@ Namespace FORMULARIOS.FONDOS.FONDO_CAJA_CHICA
 
             txtParametroBusqueda.Focus()
         End Sub
-      
+
         '===============================================================================================================================================================================================================
         Private Sub btnActualizar_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnActualizar.Click
             If txtIdResponsable.Text <> "" Then
 
-                If MessageBox.Show("¿ESTA SEGURO QUE DESEA ACTUALIZAR LOS DATOS?", "Mensaje de validación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> MsgBoxResult.Yes Then Return
+                If KryptonMessageBox.Show("¿ESTA SEGURO QUE DESEA ACTUALIZAR LOS DATOS?", "Mensaje de validación", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) <> MsgBoxResult.Yes Then Return
+
                 _sqlCommands.Clear()
 
-                If rbActivo.Checked = True Then
-                    _sqlCommands.Add(_objAutorizaciones.ActivarResponsableAutorizacionFondoCaja(CType(txtIdResponsable.Text, Integer)))
-                End If
-                If rbInactivo.Checked = True Then
-                    _sqlCommands.Add(_objAutorizaciones.DesactivarResponsableAutorizacionFondoCaja(CType(txtIdResponsable.Text, Integer)))
-                End If
+                    If rbActivo.Checked = True Then
+                        _sqlCommands.Add(_objAutorizaciones.ActivarResponsableAutorizacionFondoCaja(CType(txtIdResponsable.Text, Integer)))
+                    End If
+                    If rbInactivo.Checked = True Then
+                        _sqlCommands.Add(_objAutorizaciones.DesactivarResponsableAutorizacionFondoCaja(CType(txtIdResponsable.Text, Integer)))
+                    End If
 
-                Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, String.Empty)
-                If res(0) Then CargarAutorizaciones()
-                MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
-            Else
-                MsgBox("No se pudo actualizar el estado del Responsable de Autorización sino selecciona un registro válido", MsgBoxStyle.Information, "Mensaje d Información")
+                    Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, String.Empty)
+                    If res(0) Then
+                        CargarAutorizaciones()
+                        KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
+                    Else
+                        KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+                        Return
+                    End If
+
+                Else
+                    MsgBox("No se pudo actualizar el estado del Responsable de Autorización sino selecciona un registro válido", MsgBoxStyle.Information, "Mensaje d Información")
             End If 
         End Sub
       
         Private Sub btnGuardar_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles Button1.Click
             If txtCedula.Text <> "" And txtIdPersonal.Text <> "" And txtNombres.Text <> "" And cbmCiudad.Text <> "" And cbmProvincias.Text <> "" Then
 
-                If MessageBox.Show("¿Esta seguro que desea guardar?", "Mensaje de validación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> MsgBoxResult.Yes Then Return
+                If KryptonMessageBox.Show("¿Esta seguro que desea guardar?", "Mensaje de validación", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) <> MsgBoxResult.Yes Then Return
+
                 _sqlCommands.Clear()
 
                 With _objAutorizaciones
@@ -199,10 +208,17 @@ Namespace FORMULARIOS.FONDOS.FONDO_CAJA_CHICA
                 _sqlCommands.Add(_objAutorizaciones.NuevoRegistroResponsableAutorizacionFondoCaja)
 
                 Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, String.Empty)
-                If res(0) Then CargarAutorizaciones()
-                MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
+                If res(0) Then
+                    CargarAutorizaciones()
+                    KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
+                Else
+                    KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+                    Return
+                End If
+
             Else
-                MsgBox("No se puede guardar el registro sino agrega todos los parámetros ", MsgBoxStyle.Information, "Mensaje de información")
+                KryptonMessageBox.Show("No se puede guardar el registro sino agrega todos los parámetros ", "Mensaje de información", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
+
             End If
         End Sub
         '===============================================================================================================================================================================================================

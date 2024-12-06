@@ -163,15 +163,14 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
 
             Dim nombreU As String = "Comprobante de Egreso aprobado por: " & UserName
             Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, String.Empty)
-            If res(0) Then CargarComprobanteEgresoBancos()
-            Dim messageIcon As KryptonMessageBoxIcon
             If res(0) Then
-                messageIcon = KryptonMessageBoxIcon.Information
+                CargarComprobanteEgresoBancos()
+                KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
             Else
-                messageIcon = KryptonMessageBoxIcon.Exclamation
+                KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+                Return
             End If
-            KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, messageIcon)
-            'MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
+
         End Sub
 
         Private Sub ToolStripMenuItem2_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnRechazar.Click
@@ -195,14 +194,14 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
             Dim User As String = "Comprobante de Egreso rechazado por: " & UserName
             Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, User)
 
-            If res(0) Then CargarComprobanteEgresoBancos()
-            Dim messageIcon As KryptonMessageBoxIcon
             If res(0) Then
-                messageIcon = KryptonMessageBoxIcon.Information
+                CargarComprobanteEgresoBancos()
+                KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
             Else
-                messageIcon = KryptonMessageBoxIcon.Exclamation
+                KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+                Return
             End If
-            KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, messageIcon)
+
 
 
         End Sub

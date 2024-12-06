@@ -4,6 +4,7 @@ Imports ClassLibraryCisepro.CONTABILIDAD.BANCOS.AUDITORIA
 Imports ClassLibraryCisepro.CONTABILIDAD.SRI
 Imports ClassLibraryCisepro.ENUMS
 Imports ClassLibraryCisepro.ESTRUCTURA_EMPRESA
+Imports Krypton.Toolkit
 
 Namespace FORMULARIOS.CONTABILIDAD.SRI
     ''' <summary>
@@ -163,6 +164,8 @@ Namespace FORMULARIOS.CONTABILIDAD.SRI
                 objAuditoria.FormularioAuditoria = Me.Text.ToUpper
                 auditoria()
             Catch ex As Exception
+                KryptonMessageBox.Show("Error al actualizar autorizaciones de comprobantes " & ex.Message.ToString(), "Error", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+                Return
             End Try
         End Sub
         Public Sub actualizarPorcentajesInformacionTributaria()
@@ -177,12 +180,14 @@ Namespace FORMULARIOS.CONTABILIDAD.SRI
                 objAuditoria.FormularioAuditoria = Me.Text.ToUpper
                 auditoria()
             Catch ex As Exception
+                KryptonMessageBox.Show("Error al actualizar porcentajes de impuestos " & ex.Message.ToString(), "Error", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+                Return
             End Try
         End Sub
         Public Sub cargarEmpresaInformacionTributaria()
             Try
-                dgvEmpresa.DataSource = objetoEmpresa.SeleccionarRegistroEmpresaGeneralInformacionTributaria(_tipoCon) 
-              
+                dgvEmpresa.DataSource = objetoEmpresa.SeleccionarRegistroEmpresaGeneralInformacionTributaria(_tipoCon)
+
                 dgvEmpresa.Columns(0).HeaderText = "ID EMPRESA"
                 dgvEmpresa.Columns(0).DefaultCellStyle.Alignment = DataGridViewContentAlignment.BottomLeft
                 dgvEmpresa.Columns(1).HeaderText = "CODIGO EMPRESA"
@@ -222,6 +227,7 @@ Namespace FORMULARIOS.CONTABILIDAD.SRI
                 dgvEmpresa.ReadOnly = False
                 dgvEmpresa.EditMode = DataGridViewEditMode.EditProgrammatically
             Catch ex As Exception
+                KryptonMessageBox.Show("Error al cargar información de la empresa " & ex.Message.ToString(), "Error", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
         Public Sub llenarCamposEmpresaInformacionTributaria()

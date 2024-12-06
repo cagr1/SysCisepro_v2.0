@@ -246,8 +246,8 @@ Namespace FORMULARIOS.FONDOS.FONDO_ROTATIVO
 
             btnBuscarPersonal.Enabled = False
 
-            'GroupBox3.Enabled = False
-            gbCombustible.Enabled = False
+            GroupBox3.Enabled = False
+            'gbCombustible.Enabled = False
             chkCombustible.Enabled = False
 
             txtValorSolicitudFR.Enabled = False
@@ -466,14 +466,14 @@ Namespace FORMULARIOS.FONDOS.FONDO_ROTATIVO
             If cmbConcepto.SelectedValue Is Nothing Or TypeOf cmbConcepto.SelectedValue Is DataRowView Then Return
             txtCodDebe.Text = _objetoGastosFondoRotativo.BuscarCtaContableGastosFondoRotativoXNombre(_tipoCon, cmbConcepto.Text)
             If CInt(cmbConcepto.SelectedValue) = 2 Then
-                'GroupBox3.Enabled = True
-                gbCombustible.Enabled = True
+                GroupBox3.Enabled = True
+                'gbCombustible.Enabled = True
                 chkCombustible.Checked = True
 
                 KryptonMessageBox.Show("No se olvide de realizar el control del combustible!", "Mensaje de información", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
             Else
-                'GroupBox3.Enabled = False
-                gbCombustible.Enabled = False
+                GroupBox3.Enabled = False
+                'gbCombustible.Enabled = False
                 chkCombustible.Checked = False
             End If
         End Sub
@@ -870,19 +870,13 @@ _tipoAmbiente, _establecimientoLiqCompra, _ptoEmisionLiqCompra,
                         btnGuardarSolicitudFR.Enabled = False
                         btnCancelarSolicitudFR.Enabled = False
                         DeshabilitadoInicio()
+                        KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
                     Else
+                        KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+                        Return
 
-                        KryptonMessageBox.Show("No se puede guardar." & vbNewLine & "NO SE HAN LLENADO LOS DATOS DEL DOCUMENTO.", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
                     End If
-                    'MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
 
-                    Dim messageIcon As KryptonMessageBoxIcon
-                    If res(0) Then
-                        messageIcon = KryptonMessageBoxIcon.Information
-                    Else
-                        messageIcon = KryptonMessageBoxIcon.Exclamation
-                    End If
-                    KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, messageIcon)
 
                 Else
 
@@ -1267,29 +1261,19 @@ _tipoAmbiente, _establecimientoLiqCompra, _ptoEmisionLiqCompra,
             End If
         End Function
 
-        Private Sub txtValorControl_KeyPress(ByVal sender As System.Object, ByVal e As Windows.Forms.KeyPressEventArgs) Handles txtValorControl.KeyPress, txtKmSalidaVehiculo.KeyPress, txtKmLlegadaVehiculo.KeyPress
+        Private Sub txtValorControl_KeyPress(ByVal sender As System.Object, ByVal e As Windows.Forms.KeyPressEventArgs)
             Dim txt = CType(sender, TextBox)
             e.Handled = Not _validacionesDecimales.EsDecimal(e.KeyChar, txt.Text)
         End Sub
 
-        Private Sub txtKmLlegadaVehiculo_KeyUp(ByVal sender As System.Object, ByVal e As Windows.Forms.KeyEventArgs) Handles txtKmSalidaVehiculo.KeyUp, txtKmLlegadaVehiculo.KeyUp
+        Private Sub txtKmLlegadaVehiculo_KeyUp(ByVal sender As System.Object, ByVal e As Windows.Forms.KeyEventArgs)
             If txtKmLlegadaVehiculo.Text.Trim().Length = 0 Then txtKmLlegadaVehiculo.Text = 0
             If txtKmSalidaVehiculo.Text.Trim().Length = 0 Then txtKmSalidaVehiculo.Text = 0
             txtKmLlegadaVehiculo.ForeColor = If(CInt(txtKmLlegadaVehiculo.Text) < CInt(txtKmSalidaVehiculo.Text), Color.Red, Color.Black)
             txtTotalKmControlC.Text = CInt(txtKmLlegadaVehiculo.Text) - CInt(txtKmSalidaVehiculo.Text)
         End Sub
 
-        Private Sub btnBuscarVehiculo_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnBuscarVehiculo.Click
-            Dim formBuscarVehiculo As New FormBuscarVehiculo
-            formBuscarVehiculo.TipoCox = TipoCox
-            DialogResult = formBuscarVehiculo.ShowDialog
-            If DialogResult = vbOK Then
-                txtIdActivoFijo.Text = formBuscarVehiculo.dgvVehiculos.CurrentRow.Cells.Item("ID_ACTIVO_FIJO").Value.ToString
-                txtPlacaVehiculo.Text = formBuscarVehiculo.dgvVehiculos.CurrentRow.Cells.Item("PLACAS").Value.ToString
-                txtMarcaVehiculo.Text = formBuscarVehiculo.dgvVehiculos.CurrentRow.Cells.Item("MARCA").Value.ToString
-                txtModeloVehiculo.Text = formBuscarVehiculo.dgvVehiculos.CurrentRow.Cells.Item("MODELO").Value.ToString
-            End If
-        End Sub
+
 
         Public RutaDocsElec As String
         Private Sub ExportarXml()
@@ -1547,6 +1531,18 @@ _tipoAmbiente, _establecimientoLiqCompra, _ptoEmisionLiqCompra,
 
                 KryptonMessageBox.Show("ERROR A GENERAR LIQUIDACIÓN DE COMPRAS " & vbNewLine & ex.Message, "Mensaje de información", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
+        End Sub
+
+        Private Sub btnBuscarVehiculo_Click(sender As Object, e As EventArgs) Handles btnBuscarVehiculo.Click
+            Dim formBuscarVehiculo As New FormBuscarVehiculo
+            formBuscarVehiculo.TipoCox = TipoCox
+            DialogResult = formBuscarVehiculo.ShowDialog
+            If DialogResult = vbOK Then
+                txtIdActivoFijo.Text = formBuscarVehiculo.dgvVehiculos.CurrentRow.Cells.Item("ID_ACTIVO_FIJO").Value.ToString
+                txtPlacaVehiculo.Text = formBuscarVehiculo.dgvVehiculos.CurrentRow.Cells.Item("PLACAS").Value.ToString
+                txtMarcaVehiculo.Text = formBuscarVehiculo.dgvVehiculos.CurrentRow.Cells.Item("MARCA").Value.ToString
+                txtModeloVehiculo.Text = formBuscarVehiculo.dgvVehiculos.CurrentRow.Cells.Item("MODELO").Value.ToString
+            End If
         End Sub
     End Class
 End Namespace

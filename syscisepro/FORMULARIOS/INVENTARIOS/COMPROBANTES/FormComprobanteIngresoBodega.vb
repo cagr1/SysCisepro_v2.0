@@ -405,23 +405,43 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
         End Sub
         Private Sub tsmAgregar_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles tsmAgregar.Click
             If _detalleKardex Is Nothing Then
-                MsgBox("POR FAVOR, SELECCIONE UN ITEM PARA AGREGAR A LA LISTA!", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÒN")
+                MsgBox("POR FAVOR, SELECCIONE UN ITEM PARA AGREGAR A LA LISTA!", MsgBoxStyle.Exclamation, "Mensaje de Validacion")
                 Return
             End If
 
             If _detalleKardex.Rows.Count = 0 Then
-                MsgBox("POR FAVOR, SELECCIONE UN ITEM PARA AGREGAR A LA LISTA!", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÒN")
+                MsgBox("POR FAVOR, SELECCIONE UN ITEM PARA AGREGAR A LA LISTA!", MsgBoxStyle.Exclamation, "Mensaje de Validacion")
                 Return
             End If
 
             If cmbObservacionCalidad.SelectedIndex = 0 Then
-                MsgBox("POR FAVOR, SELECCIONE LA OBSERVACIÓN DE CALIDAD PARA ESTE ITEM", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÒN")
+                MsgBox("POR FAVOR, SELECCIONE LA OBSERVACIÓN DE CALIDAD PARA ESTE ITEM", MsgBoxStyle.Exclamation, "Mensaje de Validacion")
                 Return
             End If
+
+            If nudCantidad.Value = 0 Then
+
+                KryptonMessageBox.Show("Por favor, ingrese la cantidad de artículos a egresar", "Mensaje de Validacion", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
+                Return
+            End If
+
             lblDetalle.Text = txtSerie.Text
             Dim cant = CInt(nudCantidad.Value)
             Dim val = CDbl(nudValor.Value)
+            Dim idKardex As String = _detalleKardex.Rows(0)(0).ToString()
+            Dim idSecuencial As String = _detalleKardex.Rows(0)(1).ToString()
+            Dim saldo As Double = CDbl(_detalleKardex.Rows(0)(19).ToString()) + cant
             If Not ValidarKardexRepetidos(CLng(lblIdKardex.Text), lblDetalle.Text) Then
+
+                Dim ultimoSaldo As Double = saldo
+                For i As Integer = dgvSecuencial.Rows.Count - 1 To 0 Step -1
+                    Dim filaActual As DataGridViewRow = dgvSecuencial.Rows(i)
+                    If filaActual.Cells(7).Value.ToString() = idKardex AndAlso filaActual.Cells(14).Value.ToString() = idSecuencial Then
+                        ' Si encuentra una coincidencia, tomar el saldo de esa fila
+                        ultimoSaldo = CDbl(filaActual.Cells(11).Value) + cant
+                        Exit For
+                    End If
+                Next
 
                 Dim fila As String() =
                     {
@@ -436,10 +456,10 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                         _detalleKardex.Rows(0)(9).ToString(),'ID_DETALLE_KARDEX / DETALLE_KARDEX / 8
                         If(_detalleKardex.Rows(0)(12).ToString().Equals("INGRESO"), CDbl(_detalleKardex.Rows(0)(14).ToString()), CDbl(_detalleKardex.Rows(0)(17).ToString())), 'VALOR_UNITARIO_ANTERIOR / 9
                         If(_detalleKardex.Rows(0)(12).ToString().Equals("INGRESO"), CDbl(_detalleKardex.Rows(0)(15).ToString()), CDbl(_detalleKardex.Rows(0)(18).ToString())), 'VALOR_TOTAL_ANTERIOR / 10
-                        CDbl(_detalleKardex.Rows(0)(19).ToString()) + cant, 'SALDO / 11
+                        ultimoSaldo,        ' CDbl(_detalleKardex.Rows(0)(19).ToString()) + cant, 'SALDO / 11
                         val, 'CANTIDAD_SALDO / 12
-                        (CDbl(_detalleKardex.Rows(0)(19).ToString()) + cant) * val,'VALOR_UNITARIO_SALDO / 13
-                        _detalleKardex.Rows(0)(1).ToString()'ID_SECUENCIAL / 14
+                        ultimoSaldo * val,                   ' (CDbl(_detalleKardex.Rows(0)(19).ToString()) + cant) * val,'VALOR_UNITARIO_SALDO / 13
+                        idSecuencial                                  '_detalleKardex.Rows(0)(1).ToString()'ID_SECUENCIAL / 14
                     }
                 dgvSecuencial.Rows.Add(fila)
                 dgvSecuencial.Rows(dgvSecuencial.RowCount - 1).Tag = If(txtSerie.Text.Trim().Length = 0, "-", txtSerie.Text.Trim())
@@ -459,9 +479,9 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                 tsmAgregar.Enabled = False
                 tsmEliminar.Enabled = True
 
-                Label14.Text = dgvSecuencial.Rows.Count & " REGISTRO(S) - TOTAL"
+                label14.Text = dgvSecuencial.Rows.Count & " REGISTRO(S) - TOTAL"
             Else
-                MsgBox("NO SE PUEDE AGREGAR UN ITEM REPETIDO", MsgBoxStyle.Information, "MENSAJE DE VALIDACIÒN")
+                MsgBox("No se puede agregar un item con una serie repetida", MsgBoxStyle.Information, "Mensaje de Validacion")
             End If
         End Sub
 
@@ -899,10 +919,10 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
             Try
                 dgvDetalleComprobate.DataSource = _objCompIng.SeleccionarDetallesComprobantesIngreso(_tipoCon, idcomprobante)
 
-                dgvDetalleComprobate.Columns(0).Width = 80
-                dgvDetalleComprobate.Columns(1).Width = 60
+                dgvDetalleComprobate.Columns(0).Width = 80 ' id comprobante
+                dgvDetalleComprobate.Columns(1).Width = 60 ' id det comp
                 dgvDetalleComprobate.Columns(2).Width = 60 'Id Kardex
-                dgvDetalleComprobate.Columns(3).Width = 200
+                dgvDetalleComprobate.Columns(3).Width = 200 ' item
                 dgvDetalleComprobate.Columns(4).Width = 60 'Cantidad Kardex
                 dgvDetalleComprobate.Columns(5).Width = 60
                 dgvDetalleComprobate.Columns(6).Width = 120
@@ -1256,6 +1276,8 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                 KryptonMessageBox.Show("ERROR AL MODIFICAR DETALLE DE COMPROBANTE DE INGRESO DE BODEGA" & vbNewLine & ex.Message, "Mensaje de información", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
 
+            Dim tabla As DataTable = _objKardex.BuscarUltimoMoviminetoKardexXIdKardex(_tipoCon, lblIdKardex.Text, lblIdDetalleKardex.Text)
+
             If CantidadIngreso > cant Then
                 Try
                     With _objDetalleKardex
@@ -1283,10 +1305,13 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                 End Try
 
                 Try
+
+
+
                     With _objKardex
                         .Id = Convert.ToInt64(lblIdKardex.Text)
                         .IdsecuencialItem = Convert.ToInt64(lblIdSecuencial.Text)
-                        .Cantidad = saldoTotal - (CantidadIngreso - cant)
+                        .Cantidad = CDbl(tabla.Rows(0)(19).ToString()) - (CantidadIngreso - cant)
                         .Fecha = dtpFecha.Value
                     End With
                     _sqlCommands.Add(_objKardex.ModificarCantidadKardexCommand)
@@ -1325,7 +1350,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                     With _objKardex
                         .Id = Convert.ToInt64(lblIdKardex.Text)
                         .IdsecuencialItem = Convert.ToInt64(lblIdSecuencial.Text)
-                        .Cantidad = saldoTotal + (cant - CantidadIngreso)
+                        .Cantidad = CDbl(tabla.Rows(0)(19).ToString()) + (cant - CantidadIngreso)
                         .Fecha = dtpFecha.Value
                     End With
 
@@ -1377,6 +1402,8 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                 End Try
 
             End If
+            'put the table 'tabla' withot data or reset 
+            tabla.Clear()
 
         End Sub
 
@@ -1384,10 +1411,10 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
 
             If KryptonMessageBox.Show("DESEA ANULAR EL REGISTRO?", "Mensaje del sistema", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) <> DialogResult.Yes Then Return
 
-            'Dim fechaDesde = dtpFechaDesde.Value.Day.ToString & "-" & dtpFechaDesde.Value.Month.ToString & "-" & dtpFechaDesde.Value.Year.ToString & " 00:00:00"
-            'Dim fechaHasta = dtpFechaHasta.Value.Day.ToString & "-" & dtpFechaHasta.Value.Month.ToString & "-" & dtpFechaHasta.Value.Year.ToString & " 23:59:59"
             _sqlCommands.Clear()
             Try
+
+
                 With _objCompIng
                     .Id = txtNroComprobante.Text  'Id Comprobante 
                 End With
@@ -1395,7 +1422,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
 
 
                 For Each row In dgvDetalleComprobate.Rows
-
+                    Dim tabla1 As DataTable = _objKardex.BuscarUltimoMoviminetoKardexXIdKardex(_tipoCon, row.Cells.Item(0).Value, row.Cells.Item(1).Value)
                     Dim result As DataTable = _objControl.SeleccionarIdControlUniformes(_tipoCon, txtNroComprobante.Text, row.Cells.Item(1).Value)
 
                     If result.Rows.Count > 0 Then
@@ -1421,36 +1448,46 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                     End With
                     _sqlCommands.Add(_objDetalleKardex.AnularRegistroDetalleKardexCommand())
 
-                    With _objKardex
-                        .Id = row.Cells.Item(2).Value
-                        .Cantidad = Convert.ToInt32(row.Cells.Item(4).Value) - Convert.ToInt32(row.Cells.Item(8).Value)
-                    End With
-                    _sqlCommands.Add(_objKardex.ModificarCantidadKardexMinCommand())
+
+                    If tabla1.Rows.Count = 0 Then
+                        KryptonMessageBox.Show("No se encuentra movimiento de este item" & tabla1.Rows(0).ToString(), "Mensaje de información", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+                        Return
+                    Else
+                        With _objKardex
+                            .Id = row.Cells.Item(2).Value
+                            .Cantidad = CDbl(tabla1.Rows(0)(5).ToString()) - Convert.ToInt32(row.Cells.Item(8).Value)
+                        End With
+                        _sqlCommands.Add(_objKardex.ModificarCantidadKardexMinCommand())
+
+                    End If
+
 
 
                 Next
             Catch ex As Exception
                 KryptonMessageBox.Show("ERROR AL ANULAR COMPROBANTE DE INGRESO DE BODEGA" & vbNewLine & ex.Message, "Mensaje de información", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+                Return
             End Try
 
 
             Dim nombreU As String = "ANULACIÓN COMPROBANTE INGRESO " & UserName
             Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, nombreU)
 
+
             If res(0) Then
                 tsmNuevo.Enabled = False
                 tsmGuardar.Enabled = False
                 tsmCancelar.Enabled = False
-            End If
-
-            Dim messageIcon As KryptonMessageBoxIcon
-            If res(0) Then
-                messageIcon = KryptonMessageBoxIcon.Information
+                KryptonMessageBox.Show(res(0), "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
             Else
-                messageIcon = KryptonMessageBoxIcon.Exclamation
+                KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+                Return
             End If
 
-            KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, messageIcon)
+
+
+
+
         End Sub
 
         Private Sub TmsEliminar_Click(sender As Object, e As EventArgs) Handles TmsEliminar.Click
@@ -1515,24 +1552,24 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
         End Sub
 
         Private Sub txtSerie_TextChanged(sender As Object, e As EventArgs) Handles txtSerie.TextChanged
-            Dim idkardex = Convert.ToInt32(lblIdKardex.Text)
+            'Dim idkardex = Convert.ToInt32(lblIdKardex.Text)
 
-            If txtSerie.Text.Trim().Length > 0 Then
-                Try
-                    Dim data As DataTable = _objDetCompIng.BuscarSerieRepetida(_tipoCon, txtSerie.Text, idkardex)
-                    If data IsNot Nothing AndAlso data.Rows.Count > 0 Then
-                        Dim last As DataRow = data.Rows(data.Rows.Count - 1)
-                        If Convert.ToInt32(last("ID_ACTIVIDAD")) = 1 Then
-                            KryptonMessageBox.Show("LA SERIE YA FUE UTILIZADA EN UN INGRESO", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
-                            txtSerie.Clear()
-                            Return
-                        End If
-                    End If
-                Catch ex As Exception
-                    KryptonMessageBox.Show("OCURRIÓ UN PROBLEMA AL BUSCAR LA SERIE. POR FAVOR, CONTÁCTE AL ADMINISTRADOR!!!", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
+            'If txtSerie.Text.Trim().Length > 0 Then
+            '    Try
+            '        Dim data As DataTable = _objDetCompIng.BuscarSerieRepetida(_tipoCon, txtSerie.Text, idkardex)
+            '        If data IsNot Nothing AndAlso data.Rows.Count > 0 Then
+            '            Dim first As DataRow = data.Rows(0)
+            '            If Convert.ToInt32(first("ID_ACTIVIDAD")) = 1 Then
+            '                KryptonMessageBox.Show("La serie no puede ingresar dos veces", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
+            '                txtSerie.Clear()
+            '                Return
+            '            End If
+            '        End If
+            '    Catch ex As Exception
+            '        KryptonMessageBox.Show("Ocurrió un problema al buscar la serie. por favor, contácte al administrador!!!", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
 
-                End Try
-            End If
+            '    End Try
+            'End If
 
         End Sub
 

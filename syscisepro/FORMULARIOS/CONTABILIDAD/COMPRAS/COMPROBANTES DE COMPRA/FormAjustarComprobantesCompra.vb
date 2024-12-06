@@ -302,19 +302,14 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
                         LimpiarParametrosGeneral()
                         DeshabilitadoInicio()
                         CargarComprobantesCompra()
+                        KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
 
-                    End If
-
-                    Dim messageIcon As KryptonMessageBoxIcon
-                    If res(0) Then
-                        messageIcon = KryptonMessageBoxIcon.Information
                     Else
-                        messageIcon = KryptonMessageBoxIcon.Exclamation
+                        KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+                        Return
                     End If
-                    KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, messageIcon)
 
 
-                    'MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
                 Else
                     'MsgBox("NO SE PUEDE MODIFICAR. NO HA LLENADO TODOS LOS PARAMETROS NECESARIOS", MsgBoxStyle.Information, "Mensaje de validación")
                     KryptonMessageBox.Show("No se puede modificar. No ha llenado todos los parametros necesarios", "Mensaje de validación")

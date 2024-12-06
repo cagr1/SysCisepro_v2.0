@@ -411,22 +411,22 @@ Namespace FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
 
                     Dim nombreU As String = "AJUSTE EN BUSQUEDA LIBRO DIARIO " & UserName
                     Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, String.Empty)
-                    If res(0) Then btnBuscarAsiento.PerformClick()
-                    'MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
-                    Dim messageIcon As KryptonMessageBoxIcon
                     If res(0) Then
-                        messageIcon = KryptonMessageBoxIcon.Information
+                        btnBuscarAsiento.PerformClick()
+                        KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
                     Else
-                        messageIcon = KryptonMessageBoxIcon.Exclamation
+                        KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+
                     End If
-                    KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, messageIcon)
+
 
                 Else
-                    'MsgBox("No se puede guardar." & vbNewLine & "LOS VALORES DE EL DEBE Y EL HABER NO COINCIDEN POR FAVOR REVISE LAS TRANSACCIONES.", MsgBoxStyle.Exclamation, "Mensaje de validación")
+
                     KryptonMessageBox.Show("No se puede guardar." & vbNewLine & "LOS VALORES DE EL DEBE Y EL HABER NO COINCIDEN POR FAVOR REVISE LAS TRANSACCIONES.", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                 End If
             Catch ex As Exception
-
+                KryptonMessageBox.Show("No se puede guardar " & ex.Message, "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+                Return
             End Try
         End Sub
 
@@ -488,18 +488,17 @@ Namespace FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
 
                 Dim nombreU As String = "ANULACION EN BUSQUEDA LIBRO DIARIO " & UserName
                 Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, nombreU)
-                If res(0) Then btnBuscarAsiento.PerformClick()
-                'MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
-                Dim messageIcon As KryptonMessageBoxIcon
                 If res(0) Then
-                    messageIcon = KryptonMessageBoxIcon.Information
+                    btnBuscarAsiento.PerformClick()
+                    KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
                 Else
-                    messageIcon = KryptonMessageBoxIcon.Exclamation
+                    KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
                 End If
-                KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, messageIcon)
+
             Catch ex As Exception
-                'MsgBox("No se puede guardar." & ex.Message, MsgBoxStyle.Exclamation, "Mensaje de validación")
+
                 KryptonMessageBox.Show("No se puede guardar " & ex.Message, "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+                Return
             End Try
 
         End Sub

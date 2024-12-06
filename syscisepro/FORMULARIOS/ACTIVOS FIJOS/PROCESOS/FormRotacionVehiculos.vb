@@ -229,15 +229,13 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
                 btnGuardar.Enabled = False
                 dgvRotaciones.Rows.Clear()
                 Cargar()
+                KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
+            Else
+                KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+                Return
             End If
 
-            Dim messageIcon As KryptonMessageBoxIcon
-            If res(0) Then
-                messageIcon = KryptonMessageBoxIcon.Information
-            Else
-                messageIcon = KryptonMessageBoxIcon.Exclamation
-            End If
-            KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, messageIcon)
+
 
 
         End Sub

@@ -235,13 +235,13 @@
             DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
             Me.dgvEmitidosCobrados.DefaultCellStyle = DataGridViewCellStyle6
             Me.dgvEmitidosCobrados.GridColor = System.Drawing.SystemColors.Control
-            Me.dgvEmitidosCobrados.Location = New System.Drawing.Point(3, 5)
+            Me.dgvEmitidosCobrados.Location = New System.Drawing.Point(3, 4)
             Me.dgvEmitidosCobrados.MultiSelect = False
             Me.dgvEmitidosCobrados.Name = "dgvEmitidosCobrados"
             Me.dgvEmitidosCobrados.ReadOnly = True
             Me.dgvEmitidosCobrados.RowHeadersVisible = False
             Me.dgvEmitidosCobrados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvEmitidosCobrados.Size = New System.Drawing.Size(929, 454)
+            Me.dgvEmitidosCobrados.Size = New System.Drawing.Size(918, 420)
             Me.dgvEmitidosCobrados.TabIndex = 0
             '
             'gbTotalEmitidosCobrados

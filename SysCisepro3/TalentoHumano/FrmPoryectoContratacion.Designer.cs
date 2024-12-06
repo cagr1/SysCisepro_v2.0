@@ -51,12 +51,12 @@
             this.txtFiltro = new System.Windows.Forms.TextBox();
             this.dgvPoryectos = new System.Windows.Forms.DataGridView();
             this.kryptonGroupBox1 = new Krypton.Toolkit.KryptonGroupBox();
-            this.kryptonLabel1 = new Krypton.Toolkit.KryptonLabel();
-            this.kryptonLabel2 = new Krypton.Toolkit.KryptonLabel();
-            this.kryptonLabel3 = new Krypton.Toolkit.KryptonLabel();
-            this.kryptonLabel4 = new Krypton.Toolkit.KryptonLabel();
-            this.kryptonLabel5 = new Krypton.Toolkit.KryptonLabel();
             this.kryptonLabel6 = new Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel5 = new Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel4 = new Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel3 = new Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel2 = new Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel1 = new Krypton.Toolkit.KryptonLabel();
             this.kryptonGroupBox2 = new Krypton.Toolkit.KryptonGroupBox();
             this.kryptonLabel7 = new Krypton.Toolkit.KryptonLabel();
             this.toolStrip1.SuspendLayout();
@@ -171,9 +171,10 @@
             this.txtCodigo.BackColor = System.Drawing.Color.White;
             this.txtCodigo.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtCodigo.Enabled = false;
+            this.txtCodigo.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCodigo.Location = new System.Drawing.Point(53, 28);
             this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(76, 20);
+            this.txtCodigo.Size = new System.Drawing.Size(76, 21);
             this.txtCodigo.TabIndex = 210;
             // 
             // dateTimePicker2
@@ -201,9 +202,10 @@
             this.txtNombre.BackColor = System.Drawing.Color.White;
             this.txtNombre.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtNombre.Enabled = false;
+            this.txtNombre.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombre.Location = new System.Drawing.Point(195, 29);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(320, 20);
+            this.txtNombre.Size = new System.Drawing.Size(320, 21);
             this.txtNombre.TabIndex = 197;
             // 
             // btnCliente
@@ -227,9 +229,10 @@
             this.txtIdProyecto.BackColor = System.Drawing.Color.White;
             this.txtIdProyecto.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtIdProyecto.Enabled = false;
+            this.txtIdProyecto.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIdProyecto.Location = new System.Drawing.Point(53, 3);
             this.txtIdProyecto.Name = "txtIdProyecto";
-            this.txtIdProyecto.Size = new System.Drawing.Size(47, 20);
+            this.txtIdProyecto.Size = new System.Drawing.Size(47, 21);
             this.txtIdProyecto.TabIndex = 28;
             // 
             // txtCliente
@@ -237,9 +240,10 @@
             this.txtCliente.BackColor = System.Drawing.Color.White;
             this.txtCliente.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtCliente.Enabled = false;
+            this.txtCliente.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCliente.Location = new System.Drawing.Point(195, 3);
             this.txtCliente.Name = "txtCliente";
-            this.txtCliente.Size = new System.Drawing.Size(320, 20);
+            this.txtCliente.Size = new System.Drawing.Size(320, 21);
             this.txtCliente.TabIndex = 0;
             // 
             // txtFiltro
@@ -324,37 +328,13 @@
             this.kryptonGroupBox1.TabIndex = 234;
             this.kryptonGroupBox1.Values.Heading = "Datos";
             // 
-            // kryptonLabel1
+            // kryptonLabel6
             // 
-            this.kryptonLabel1.Location = new System.Drawing.Point(1, 3);
-            this.kryptonLabel1.Name = "kryptonLabel1";
-            this.kryptonLabel1.Size = new System.Drawing.Size(21, 20);
-            this.kryptonLabel1.TabIndex = 0;
-            this.kryptonLabel1.Values.Text = "Id";
-            // 
-            // kryptonLabel2
-            // 
-            this.kryptonLabel2.Location = new System.Drawing.Point(3, 29);
-            this.kryptonLabel2.Name = "kryptonLabel2";
-            this.kryptonLabel2.Size = new System.Drawing.Size(50, 20);
-            this.kryptonLabel2.TabIndex = 29;
-            this.kryptonLabel2.Values.Text = "Codigo";
-            // 
-            // kryptonLabel3
-            // 
-            this.kryptonLabel3.Location = new System.Drawing.Point(141, 3);
-            this.kryptonLabel3.Name = "kryptonLabel3";
-            this.kryptonLabel3.Size = new System.Drawing.Size(48, 20);
-            this.kryptonLabel3.TabIndex = 211;
-            this.kryptonLabel3.Values.Text = "Cliente";
-            // 
-            // kryptonLabel4
-            // 
-            this.kryptonLabel4.Location = new System.Drawing.Point(141, 28);
-            this.kryptonLabel4.Name = "kryptonLabel4";
-            this.kryptonLabel4.Size = new System.Drawing.Size(56, 20);
-            this.kryptonLabel4.TabIndex = 212;
-            this.kryptonLabel4.Values.Text = "Nombre";
+            this.kryptonLabel6.Location = new System.Drawing.Point(149, 53);
+            this.kryptonLabel6.Name = "kryptonLabel6";
+            this.kryptonLabel6.Size = new System.Drawing.Size(27, 20);
+            this.kryptonLabel6.TabIndex = 214;
+            this.kryptonLabel6.Values.Text = "Fin";
             // 
             // kryptonLabel5
             // 
@@ -364,13 +344,37 @@
             this.kryptonLabel5.TabIndex = 213;
             this.kryptonLabel5.Values.Text = "Inicio";
             // 
-            // kryptonLabel6
+            // kryptonLabel4
             // 
-            this.kryptonLabel6.Location = new System.Drawing.Point(149, 53);
-            this.kryptonLabel6.Name = "kryptonLabel6";
-            this.kryptonLabel6.Size = new System.Drawing.Size(27, 20);
-            this.kryptonLabel6.TabIndex = 214;
-            this.kryptonLabel6.Values.Text = "Fin";
+            this.kryptonLabel4.Location = new System.Drawing.Point(141, 28);
+            this.kryptonLabel4.Name = "kryptonLabel4";
+            this.kryptonLabel4.Size = new System.Drawing.Size(56, 20);
+            this.kryptonLabel4.TabIndex = 212;
+            this.kryptonLabel4.Values.Text = "Nombre";
+            // 
+            // kryptonLabel3
+            // 
+            this.kryptonLabel3.Location = new System.Drawing.Point(141, 3);
+            this.kryptonLabel3.Name = "kryptonLabel3";
+            this.kryptonLabel3.Size = new System.Drawing.Size(48, 20);
+            this.kryptonLabel3.TabIndex = 211;
+            this.kryptonLabel3.Values.Text = "Cliente";
+            // 
+            // kryptonLabel2
+            // 
+            this.kryptonLabel2.Location = new System.Drawing.Point(3, 29);
+            this.kryptonLabel2.Name = "kryptonLabel2";
+            this.kryptonLabel2.Size = new System.Drawing.Size(50, 20);
+            this.kryptonLabel2.TabIndex = 29;
+            this.kryptonLabel2.Values.Text = "Codigo";
+            // 
+            // kryptonLabel1
+            // 
+            this.kryptonLabel1.Location = new System.Drawing.Point(1, 3);
+            this.kryptonLabel1.Name = "kryptonLabel1";
+            this.kryptonLabel1.Size = new System.Drawing.Size(21, 20);
+            this.kryptonLabel1.TabIndex = 0;
+            this.kryptonLabel1.Values.Text = "Id";
             // 
             // kryptonGroupBox2
             // 

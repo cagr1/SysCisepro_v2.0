@@ -457,25 +457,25 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
         Private Sub tsmAgregar_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles tsmAgregar.Click
             If _detalleKardex Is Nothing Then
 
-                KryptonMessageBox.Show("Por favor, seleccione un item para agregar a la lista!", "MENSAJE DE VALIDACIÒN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
+                KryptonMessageBox.Show("Por favor, seleccione un item para agregar a la lista!", "Mensaje de Validacion", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                 Return
             End If
 
             If _detalleKardex.Rows.Count = 0 Then
 
-                KryptonMessageBox.Show("Por favor, seleccione un item para agregar a la lista!", "MENSAJE DE VALIDACIÒN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
+                KryptonMessageBox.Show("Por favor, seleccione un item para agregar a la lista!", "Mensaje de Validacion", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                 Return
             End If
 
             If cmbObservacionCalidad.SelectedIndex = 0 Then
 
-                KryptonMessageBox.Show("Por favor, seleccione la observación de calidad para este item", "MENSAJE DE VALIDACIÒN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
+                KryptonMessageBox.Show("Por favor, seleccione la observación de calidad para este item", "Mensaje de Validacion", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                 Return
             End If
 
             If nudCantidad.Value = 0 Then
 
-                KryptonMessageBox.Show("Por favor, ingrese la cantidad de artículos a egresar", "MENSAJE DE VALIDACIÒN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
+                KryptonMessageBox.Show("Por favor, ingrese la cantidad de artículos a egresar", "Mensaje de Validacion", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                 Return
             End If
 
@@ -483,7 +483,26 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
             Dim cant = CInt(nudCantidad.Value)
             Dim val = CDbl(nudValor.Value)
             lbldetalle.Text = txtSerie.Text
+            Dim idKardex As String = _detalleKardex.Rows(0)(0).ToString()
+            Dim idSecuencial As String = _detalleKardex.Rows(0)(1).ToString()
+            Dim saldo As Double = CDbl(_detalleKardex.Rows(0)(19).ToString()) - cant
+
             If Not ValidarKardexRepetidos(CLng(lblIdKardex.Text), lbldetalle.Text) Then
+
+                Dim ultimoSaldo As Double = saldo
+                For i As Integer = dgvSecuencial.Rows.Count - 1 To 0 Step -1
+                    Dim filaActual As DataGridViewRow = dgvSecuencial.Rows(i)
+                    If filaActual.Cells(7).Value.ToString() = idKardex AndAlso filaActual.Cells(14).Value.ToString() = idSecuencial Then
+                        ' Ajustar saldo al último valor encontrado en el DataGridView
+                        ultimoSaldo = CDbl(filaActual.Cells(11).Value) - cant
+                        Exit For
+                    End If
+                Next
+
+                If ultimoSaldo < 0 Then
+                    KryptonMessageBox.Show("No se puede egresar una cantidad mayor a la existente en el inventario", "Mensaje de Validacion", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
+                    Return
+                End If
 
                 Dim fila As String() =
                     {
@@ -498,10 +517,10 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                         _detalleKardex.Rows(0)(9).ToString(),
                         If(_detalleKardex.Rows(0)(12).ToString().Equals("INGRESO"), CDbl(_detalleKardex.Rows(0)(14).ToString()), CDbl(_detalleKardex.Rows(0)(17).ToString())),
                         If(_detalleKardex.Rows(0)(12).ToString().Equals("INGRESO"), CDbl(_detalleKardex.Rows(0)(15).ToString()), CDbl(_detalleKardex.Rows(0)(18).ToString())),
-                        CDbl(_detalleKardex.Rows(0)(19).ToString()) - cant,
-                        val,
-                        (CDbl(_detalleKardex.Rows(0)(19).ToString()) - cant) * val,
-                        _detalleKardex.Rows(0)(1).ToString()
+                        ultimoSaldo, 'CDbl(_detalleKardex.Rows(0)(19).ToString()) - cant,'saldo
+                        val, 'cantidad_saldo 
+                        ultimoSaldo * val,   '(CDbl(_detalleKardex.Rows(0)(19).ToString()) - cant) * val, 'valor_unitario_saldo
+                        idSecuencial                    '_detalleKardex.Rows(0)(1).ToString() 'Id secuencial
                     }
 
                 dgvSecuencial.Rows.Add(fila)
@@ -524,7 +543,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                 Label11.Text = dgvSecuencial.Rows.Count & " REGISTRO(S) - TOTAL"
             Else
 
-                KryptonMessageBox.Show("No se puede agregar un item repetido", "MENSAJE DE VALIDACIÒN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
+                KryptonMessageBox.Show("No se puede agregar un item con una serie repetida", "Mensaje de Validacion", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
             End If
         End Sub
 
@@ -1048,7 +1067,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                 app.DisplayAlerts = True
             Catch ex As Exception
 
-                KryptonMessageBox.Show("No se puede exportar: " & ex.Message, "MENSAJE DE VALIDACIÒN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
+                KryptonMessageBox.Show("No se puede exportar: " & ex.Message, "Mensaje de Validacion", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
             End Try
         End Sub
 
@@ -1328,7 +1347,10 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
 
             Dim result As DataTable = _objControl.SeleccionarIdControlUniformes(_tipoCon, lblComp.Text, lblDetKardex.Text)
 
-
+            If (saldoTotal - cant) < 0 Then
+                KryptonMessageBox.Show("No se puede modificar cantidad mayor a la existente en el inventario", "Mensaje de Validacion", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
+                Return
+            End If
 
 
             With _objCompEgr
@@ -1493,7 +1515,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
             For Each row In dgvDetalleComprobate.Rows
 
                 Dim result As DataTable = _objControl.SeleccionarIdControlUniformes(_tipoCon, txtNumero.Text, row.Cells.Item(1).Value)
-
+                Dim tabla As DataTable = _objKardex.BuscarUltimoMoviminetoKardexXIdKardex(_tipoCon, row.Cells.Item(), lblIdDetalleKardex.Text)
 
                 If result.Rows.Count > 0 Then
                     Dim idcon As Long = Convert.ToInt64(result.Rows(0)("ID_CONTROL"))
@@ -1633,7 +1655,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                 End If
             Catch ex As Exception
 
-                KryptonMessageBox.Show("Error al cargar la ubicación del personal: " & ex.Message, "MENSAJE DE VALIDACIÒN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
+                KryptonMessageBox.Show("Error al cargar la ubicación del personal: " & ex.Message, "Mensaje de Validacion", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
                 txtUbicacion.Clear()
             End Try
         End Sub
@@ -1910,7 +1932,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
 
                 Next
             Catch ex As Exception
-                KryptonMessageBox.Show("Error al guardar el reingreso: " & ex.Message, "MENSAJE DE VALIDACIÒN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+                KryptonMessageBox.Show("Error al guardar el reingreso: " & ex.Message, "Mensaje de Validacion", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
                 Return
             End Try
 
@@ -1919,17 +1941,17 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
 
         Private Sub btnAgregarIngreso_Click(sender As Object, e As EventArgs) Handles btnAgregarIngreso.Click
             If _detalleKardexIngreso Is Nothing Then
-                KryptonMessageBox.Show("Por favor, seleccione un item para agregar a la lista!", "MENSAJE DE VALIDACIÒN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+                KryptonMessageBox.Show("Por favor, seleccione un item para agregar a la lista!", "Mensaje de Validacion", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
                 Return
             End If
 
             If _detalleKardexIngreso.Rows.Count = 0 Then
-                KryptonMessageBox.Show("Por favor, seleccione un item para agregar a la lista!", "MENSAJE DE VALIDACIÒN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+                KryptonMessageBox.Show("Por favor, seleccione un item para agregar a la lista!", "Mensaje de Validacion", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
                 Return
             End If
 
             If cbxCalidadIngreso.SelectedIndex = 0 Then
-                KryptonMessageBox.Show("Por favor, seleccione la observación de calidad para este item", "MENSAJE DE VALIDACIÒN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+                KryptonMessageBox.Show("Por favor, seleccione la observación de calidad para este item", "Mensaje de Validacion", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
                 Return
             End If
             _validar = 2
@@ -1978,7 +2000,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                 'Label11.Text = dgvDetalleComprobanteIngreso.Rows.Count & " REGISTRO(S) - TOTAL"
             Else
 
-                KryptonMessageBox.Show("No se puede agregar un item repetido", "MENSAJE DE VALIDACIÒN", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
+                KryptonMessageBox.Show("No se puede agregar un item repetido", "Mensaje de Validacion", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
             End If
         End Sub
 
@@ -2129,8 +2151,8 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                 Try
                     Dim data As DataTable = _objDetCompEgr.BuscarSerieRepetida(_tipoCon, txtSerie.Text, idkardex)
                     If data IsNot Nothing AndAlso data.Rows.Count > 0 Then
-                        Dim last As DataRow = data.Rows(data.Rows.Count - 1)
-                        If Convert.ToInt32(last("ID_ACTIVIDAD")) = 2 Then
+                        Dim first As DataRow = data.Rows(0)
+                        If Convert.ToInt32(first("ID_ACTIVIDAD")) = 2 Then
                             KryptonMessageBox.Show("La serie ya fue utilizada en un egreso", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
                             txtSerie.Clear()
                             Return

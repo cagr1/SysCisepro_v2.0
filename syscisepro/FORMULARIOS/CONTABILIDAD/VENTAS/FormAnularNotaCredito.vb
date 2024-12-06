@@ -203,15 +203,14 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
 
             Dim nombreU As String = "Nota de Credito anulada por: " & UserName
             Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, nombreU)
-            If res(0) Then ToolStripMenuItem1_Click(Nothing, Nothing)
-            Dim messageIcon As KryptonMessageBoxIcon
             If res(0) Then
-                messageIcon = KryptonMessageBoxIcon.Information
+                ToolStripMenuItem1_Click(Nothing, Nothing)
+                KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
             Else
-                messageIcon = KryptonMessageBoxIcon.Exclamation
+                KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+                Return
             End If
-            KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, messageIcon)
-            'MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
+
 
         End Sub
         Private Sub ActualizarEstadoNotaCredito()

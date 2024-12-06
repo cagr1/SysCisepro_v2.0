@@ -2780,8 +2780,8 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(204)))), ((int)(((byte)(227)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(1284, 749);
-            this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.statusStrip);
+            this.Controls.Add(this.toolStrip1);
             this.Font = new System.Drawing.Font("MS Outlook", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
@@ -2799,7 +2799,6 @@
             | Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.Text = " ";
             this.TransparencyKey = System.Drawing.Color.Fuchsia;
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MdiParentMain_FormClosing);
             this.Load += new System.EventHandler(this.MdiParentMain_Load);
             this.statusStrip.ResumeLayout(false);

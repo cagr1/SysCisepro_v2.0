@@ -190,7 +190,6 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.REQUERIMIENTOS
             If dgvDetalleRequisicionProductoServicio.RowCount = 0 Then Return
             Try
                 If KryptonMessageBox.Show("¿Esta segura que desea guardar los cambios?", "Mensaje de validación", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) <> DialogResult.Yes Then Return
-                'If MessageBox.Show("¿ESTA SEGURA QUE DESEA GUARDAR LOS CAMBIOS?", "Mensaje de validación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> DialogResult.Yes Then Return
 
                 _sqlCommands.Clear()
 
@@ -201,21 +200,15 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.REQUERIMIENTOS
                 If res(0) Then
                     DeshabilitadoInicio()
                     CargarDetalleRequisicionProductoServicio()
-                End If
-
-                Dim messageIcon As KryptonMessageBoxIcon
-                If res(0) Then
-                    messageIcon = KryptonMessageBoxIcon.Information
+                    KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
                 Else
-                    messageIcon = KryptonMessageBoxIcon.Exclamation
+                    KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
                 End If
-                KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, messageIcon)
 
-                'MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
 
             Catch ex As Exception
-                'MsgBox("HUBO UN PROBLEMA AL GUARDAR CAMBIOS. POR FAVOR, CONTÁCTE AL ADMINISTRADOR!" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
                 KryptonMessageBox.Show("Hubo un problema al guardar cambios. Por favor, contácte al administrador!" & vbNewLine & ex.Message.ToString, "Mensaje de excepción")
+                Return
             End Try
         End Sub
         Public Sub ModificarDetalleSolicitudMensualSuministros()
@@ -233,10 +226,8 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.REQUERIMIENTOS
                 Try
                     If KryptonMessageBox.Show("¿Esta segura que desea rechazar?", "Mensaje de validación", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) <> DialogResult.Yes Then Return
                     'If MessageBox.Show("¿ESTA SEGURA QUE DESEA RECHAZAR?", "Mensaje de validación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> DialogResult.Yes Then Return
-
                     _sqlCommands.Clear()
-
-                    rechazarRequisicionProductoServicio()
+                    RechazarRequisicionProductoServicio()
 
                     Dim nombreU As String = "Rechazar adquisicion por: " & UserName
                     Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, nombreU)
@@ -244,21 +235,15 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.REQUERIMIENTOS
                         LimpiarParametros()
                         CargarRequisicionProductoServicio()
                         CargarDetalleRequisicionProductoServicio()
-                    End If
-
-                    Dim messageIcon As KryptonMessageBoxIcon
-                    If res(0) Then
-                        messageIcon = KryptonMessageBoxIcon.Information
+                        KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
                     Else
-                        messageIcon = KryptonMessageBoxIcon.Exclamation
+                        KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+                        Return
                     End If
-                    KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, messageIcon)
-
-                    'MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
 
                 Catch ex As Exception
-                    'MsgBox("HUBO UN PROBLEMA AL RECHAZAR. POR FAVOR, CONTÁCTE AL ADMINISTRADOR!" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
                     KryptonMessageBox.Show("Hubo un problema al rechazar. Por favor, contácte al administrador!" & vbNewLine & ex.Message.ToString, "Mensaje de excepción")
+                    Return
                 End Try
             Else
                 'MsgBox("SELECCIONE UNA REQUISICIÓN PARA PODER RECHAZAR", MsgBoxStyle.Exclamation, "Mensaje de validación")
@@ -285,7 +270,6 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.REQUERIMIENTOS
             If dgvRequisicionProductoServicio.RowCount > 0 And dgvDetalleRequisicionProductoServicio.RowCount > 0 And txtIdRequisicionProductoServicio.Text <> "" Then
                 Try
                     If KryptonMessageBox.Show("¿Esta segura que desea aprobar?", "Mensaje de validación", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) <> DialogResult.Yes Then Return
-                    'If MessageBox.Show("¿ESTA SEGURA QUE DESEA APROBAR?", "Mensaje de validación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> DialogResult.Yes Then Return
 
                     _sqlCommands.Clear()
 
@@ -297,24 +281,20 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.REQUERIMIENTOS
                     If res(0) Then
                         limpiarParametros()
                         CargarRequisicionProductoServicio()
-                    End If
-
-                    Dim messageIcon As KryptonMessageBoxIcon
-                    If res(0) Then
-                        messageIcon = KryptonMessageBoxIcon.Information
+                        KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
                     Else
-                        messageIcon = KryptonMessageBoxIcon.Exclamation
-                    End If
-                    KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, messageIcon)
+                        KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
 
-                    'MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
+                    End If
+
 
                 Catch ex As Exception
-                    'MsgBox("HUBO UN PROBLEMA AL APROBAR. POR FAVOR, CONTÁCTE AL ADMINISTRADOR!" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
                     KryptonMessageBox.Show("Hubo un problema al aprobar. Por favor, contácte al administrador!" & vbNewLine & ex.Message.ToString, "Mensaje de excepción")
+                    Return
                 End Try 
             Else
-                MsgBox("SELECCIONE UNA REQUISICIÓN PARA PODER APROBAR", MsgBoxStyle.Exclamation, "Mensaje de validación")
+
+                KryptonMessageBox.Show("Seleccione una requisición para poder aprobar", "Mensaje de validación", KryptonMessageBoxButtons.OK)
             End If
         End Sub
         Public Sub AprovarRequisicionProductoServicio()

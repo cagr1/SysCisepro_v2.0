@@ -1,6 +1,7 @@
 ﻿Imports ClassLibraryCisepro.CONTABILIDAD.BANCOS
 Imports ClassLibraryCisepro.CONTABILIDAD.BANCOS.AUDITORIA
 Imports ClassLibraryCisepro.ENUMS
+Imports ClassLibraryCisepro.ProcesosSql
 Imports Krypton.Toolkit
 
 Namespace FORMULARIOS.CONTABILIDAD.BANCOS
@@ -9,6 +10,7 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
     ''' </summary>
     Public Class FormCuentasBancos
         Private _tipoCon As TipoConexion
+
         Property TipoCox As Integer
             Get
                 Select Case _tipoCon
@@ -232,16 +234,13 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
                     End If
 
 
-
-                Else
-
                     KryptonMessageBox.Show("No se puede guardar." & vbNewLine & "NO SE HAN LLENADO TODOS LOS CAMPOS NECESARIOS.", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                     txtNumeroCuentasBancos.Focus()
                 End If
             Catch ex As Exception
-                'MsgBox(ex.ToString, MsgBoxStyle.Critical, "NO GUARDO. CUENTAS BANCOS")
-                KryptonMessageBox.Show("No se puede guardar." & vbNewLine & "NO SE HAN LLENADO TODOS LOS CAMPOS NECESARIOS." & vbNewLine & ex.Message.ToString(), "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
 
+                KryptonMessageBox.Show("No se puede guardar." & vbNewLine & "NO SE HAN LLENADO TODOS LOS CAMPOS NECESARIOS." & vbNewLine & ex.Message.ToString(), "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
+                Return
 
             End Try
         End Sub

@@ -385,14 +385,14 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.PROVEEDORES
                     _botonSeleccionado = 0
 
                     CargarProveedores()
-                End If
-                Dim messageIcon As KryptonMessageBoxIcon
-                If res(0) Then
-                    messageIcon = KryptonMessageBoxIcon.Information
+                    KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
+
                 Else
-                    messageIcon = KryptonMessageBoxIcon.Exclamation
+                    KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+
+                    Return
                 End If
-                KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, messageIcon)
+
                 'MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
             Else
                 'MsgBox("No se puede guardar." & vbNewLine & "NO SE HAN LLENADO TODOS LOS CAMPOS NECESARIOS.", MsgBoxStyle.Exclamation, "Mensaje de validación")

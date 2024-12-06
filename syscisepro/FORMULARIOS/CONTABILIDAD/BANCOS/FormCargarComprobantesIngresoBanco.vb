@@ -260,16 +260,12 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
                                     txtRutaArchivo.Text = ""
                                     txtCuentaDebe.Text = ""
                                     lblCodigoCta.Text = "0"
-
+                                    KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
+                                Else
+                                    KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+                                    Return
                                 End If
                                 'MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
-                                Dim messageIcon As KryptonMessageBoxIcon
-                                If res(0) Then
-                                    messageIcon = KryptonMessageBoxIcon.Information
-                                Else
-                                    messageIcon = KryptonMessageBoxIcon.Exclamation
-                                End If
-                                KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, messageIcon)
 
 
                             Else

@@ -101,6 +101,7 @@ Namespace FORMULARIOS.FONDOS.FONDO_ROTATIVO
             cmbCanton.SelectedValue = 58 ' MACHALA
 
             btnCargar.Enabled = True
+            btnReporte.Enabled = True
             btnLiquidacionFondoRotativo.Enabled = False
             btnGuardarSolicitudFR.Enabled = False
             btnCancelarSolicitudFR.Enabled = False
@@ -194,6 +195,7 @@ Namespace FORMULARIOS.FONDOS.FONDO_ROTATIVO
 
 
                 btnCargar.Enabled = True
+                btnReporte.Enabled = True
                 btnLiquidacionFondoRotativo.Enabled = True
                 btnGuardarSolicitudFR.Enabled = False
                 btnCancelarSolicitudFR.Enabled = False
@@ -395,7 +397,7 @@ Namespace FORMULARIOS.FONDOS.FONDO_ROTATIVO
             btnCancelarSolicitudFR.Enabled = False
         End Sub
 
-        Private Sub bntCargar_Click(ByVal sender As System.Object, ByVal e As EventArgs)
+        Private Sub bntCargar_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnReporte.Click
             Try
                 Dim liq = _objetoLiquidacionFondoRotativo.SeleccionarLiquidacionFondoRotativoXid(_tipoCon, CInt(txtIdLiquidacionBusqueda.Text))
                 _crLiquidacionFondoRotativoNew.SetDataSource(_objetoLiquidacionFondoRotativo.ReporteFondoRotativoPorIdLiquidacion(_tipoCon, CInt(txtIdLiquidacionBusqueda.Text)))
@@ -492,6 +494,10 @@ Namespace FORMULARIOS.FONDOS.FONDO_ROTATIVO
                 'MsgBox("ERROR AL ANULAR DOCUMENTO: " & ex.ToString, MsgBoxStyle.Critical)
                 KryptonMessageBox.Show("ERROR AL ANULAR DOCUMENTO: " & ex.ToString, "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
+        End Sub
+
+        Private Sub btnReporte_Click(sender As Object, e As EventArgs) Handles btnReporte.Click
+
         End Sub
     End Class
 End Namespace

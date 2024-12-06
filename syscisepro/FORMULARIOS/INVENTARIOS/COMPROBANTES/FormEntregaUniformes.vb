@@ -239,17 +239,17 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
 
         Private Sub tsmAgregarArticulos_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles tsmAgregar.Click
             If _detalleKardex Is Nothing Then
-                MsgBox("POR FAVOR, SELECCIONE UN ITEM PARA AGREGAR A LA LISTA!", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÒN")
+                MsgBox("POR FAVOR, SELECCIONE UN ITEM PARA AGREGAR A LA LISTA!", MsgBoxStyle.Exclamation, "Mensaje de Validacion")
                 Return
             End If
 
             If _detalleKardex.Rows.Count = 0 Then
-                MsgBox("POR FAVOR, SELECCIONE UN ITEM PARA AGREGAR A LA LISTA!", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÒN")
+                MsgBox("POR FAVOR, SELECCIONE UN ITEM PARA AGREGAR A LA LISTA!", MsgBoxStyle.Exclamation, "Mensaje de Validacion")
                 Return
             End If
 
             If cmbObservacionCalidad.SelectedIndex = 0 Then
-                MsgBox("POR FAVOR, SELECCIONE LA OBSERVACIÓN DE CALIDAD PARA ESTE ITEM", MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÒN")
+                MsgBox("POR FAVOR, SELECCIONE LA OBSERVACIÓN DE CALIDAD PARA ESTE ITEM", MsgBoxStyle.Exclamation, "Mensaje de Validacion")
                 Return
             End If
 
@@ -295,7 +295,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
 
                 CalcuarTotal()
             Else
-                MsgBox("NO SE PUEDE AGREGAR UN ITEM REPETIDO", MsgBoxStyle.Information, "MENSAJE DE VALIDACIÒN")
+                MsgBox("NO SE PUEDE AGREGAR UN ITEM REPETIDO", MsgBoxStyle.Information, "Mensaje de Validacion")
             End If
         End Sub
 

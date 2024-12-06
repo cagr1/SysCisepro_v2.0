@@ -346,19 +346,12 @@ Namespace FORMULARIOS.FONDOS.FONDO_CAJA_CHICA
                         txtIdLiquidacionBusqueda.Text = txtIdLiquidacion.Text
 
                         tcLiquidar.SelectedIndex = 1
-                    End If
-
-                    Dim messageIcon As KryptonMessageBoxIcon
-                    Dim messageText As String = res(1)
-                    If res(0) Then
-                        messageIcon = KryptonMessageBoxIcon.Information
+                        KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
                     Else
-                        messageIcon = KryptonMessageBoxIcon.Exclamation
+                        KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+
                     End If
 
-                    KryptonMessageBox.Show(messageText, "Mensaje del sistema", KryptonMessageBoxButtons.OK, messageIcon)
-
-                    'MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
 
 
 
@@ -370,6 +363,7 @@ Namespace FORMULARIOS.FONDOS.FONDO_CAJA_CHICA
             Catch ex As Exception
 
                 KryptonMessageBox.Show(ex.ToString, "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+                Return
             End Try
         End Sub
 
@@ -406,7 +400,7 @@ Namespace FORMULARIOS.FONDOS.FONDO_CAJA_CHICA
 
         Private Sub btnAnularSolicitud_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAnularSolicitud.Click
             'If MessageBox.Show("¿ESTA SEGURA QUE DESEA ANULAR EL DOCUMENTO: '" & dgvLiquidacionFondoCajaChica.CurrentRow.Cells(6).Value & "' N° " & dgvLiquidacionFondoCajaChica.CurrentRow.Cells(7).Value & "?", "Mensaje de validación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> DialogResult.Yes Then Return
-            If KryptonMessageBox.Show("¿ESTA SEGURA QUE DESEA ANULAR EL DOCUMENTO: '" & dgvLiquidacionFondoCajaChica.CurrentRow.Cells(6).Value & "' N° " & dgvLiquidacionFondoCajaChica.CurrentRow.Cells(7).Value & "?", "Mensaje de validación", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) <> DialogResult.Yes Then Return
+            If KryptonMessageBox.Show("¿Esta segura que desea anular el documento: '" & dgvLiquidacionFondoCajaChica.CurrentRow.Cells(6).Value & "' N° " & dgvLiquidacionFondoCajaChica.CurrentRow.Cells(7).Value & "?", "Mensaje de validación", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) <> DialogResult.Yes Then Return
             Try
                 _sqlCommands.Clear()
 
@@ -442,22 +436,21 @@ Namespace FORMULARIOS.FONDOS.FONDO_CAJA_CHICA
 
                 Dim nombreU As String = "LIQUIDACION-CAJA-CHICA-ANULADA " & UserName
                 Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, nombreU)
-                If res(0) Then btnCargar_Click(Nothing, Nothing)
-
-                Dim messageIcon As KryptonMessageBoxIcon
-                Dim messageText As String = res(1)
                 If res(0) Then
-                    messageIcon = KryptonMessageBoxIcon.Information
+                    btnCargar_Click(Nothing, Nothing)
+                    KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
                 Else
-                    messageIcon = KryptonMessageBoxIcon.Exclamation
+                    KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+
                 End If
 
-                KryptonMessageBox.Show(messageText, "Mensaje del sistema", KryptonMessageBoxButtons.OK, messageIcon)
+
 
 
             Catch ex As Exception
 
                 KryptonMessageBox.Show(ex.ToString, "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+                Return
             End Try
         End Sub
 

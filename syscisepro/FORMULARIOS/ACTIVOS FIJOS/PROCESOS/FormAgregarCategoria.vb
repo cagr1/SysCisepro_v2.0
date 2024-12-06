@@ -177,21 +177,16 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
                     btnNuevoCategoria.Enabled = True
                     MostrarTodosRegistrosCategoria()
                     LlenarComboCategoriaGrupo()
-                End If
-
-                Dim messageIcon As KryptonMessageBoxIcon
-                If res(0) Then
-                    messageIcon = KryptonMessageBoxIcon.Information
+                    KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
                 Else
-                    messageIcon = KryptonMessageBoxIcon.Exclamation
+                    KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+                    Return
                 End If
-                KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, messageIcon)
 
-                'MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
 
 
             Else
-                'MsgBox("No se puede guardar la CATEGORIA debido a que no ha llenado todos los parámetros nesesarios", MsgBoxStyle.Information, "Mensaje de validación")
+
                 KryptonMessageBox.Show("No se puede guardar la CATEGORIA debido a que no ha llenado todos los parámetros nesesarios", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
                 txtCodigoCategoria.Focus()
             End If
@@ -249,17 +244,13 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
                     btnNuevoGrupo.Enabled = True
                     MostrarTodosRegistrosGrupo()
                     LlenarComboGrupoSubGrupo()
-                End If
-
-                Dim messageIcon As KryptonMessageBoxIcon
-                If res(0) Then
-                    messageIcon = KryptonMessageBoxIcon.Information
+                    KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
                 Else
-                    messageIcon = KryptonMessageBoxIcon.Exclamation
+                    KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+                    Return
                 End If
-                KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, messageIcon)
 
-                'MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
+
             Else
                 'MsgBox("No se puede guardar el GRUPO debido a que no ha llenado todos los parámetros nesesarios", MsgBoxStyle.Information, "Mensaje de validación")
                 KryptonMessageBox.Show("No se puede guardar el GRUPO debido a que no ha llenado todos los parámetros nesesarios", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
@@ -291,17 +282,13 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
                     cbmSubGrupo.Enabled = False
                     btnNuevoGrupo.Enabled = True
                     MostrarTodosRegistrosSubGrupo()
-                End If
-
-                Dim messageIcon As KryptonMessageBoxIcon
-                If res(0) Then
-                    messageIcon = KryptonMessageBoxIcon.Information
+                    KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
                 Else
-                    messageIcon = KryptonMessageBoxIcon.Exclamation
+                    KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+                    Return
                 End If
-                KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, messageIcon)
 
-                'MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
+
             Else
                 'MsgBox("No se puede guardar el SUB GRUPO debido a que no ha llenado todos los parámetros nesesarios", MsgBoxStyle.Information, "Mensaje de validación")
                 KryptonMessageBox.Show("No se puede guardar el SUB GRUPO debido a que no ha llenado todos los parámetros nesesarios", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
@@ -375,16 +362,13 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
                 btnNuevoSecuecial.Enabled = True
                 MostrarTodosRegistrosSecuencial()
                 btnGuardarSecuencial.Enabled = False
+                KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
+            Else
+                KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+                Return
             End If
 
-            Dim messageIcon As KryptonMessageBoxIcon
-            If res(0) Then
-                messageIcon = KryptonMessageBoxIcon.Information
-            Else
-                messageIcon = KryptonMessageBoxIcon.Exclamation
-            End If
-            KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, messageIcon)
-            'MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema") 
+
         End Sub
        
         Private Sub cbmCategoriaGrupo_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cbmCategoriaGrupo.SelectedIndexChanged

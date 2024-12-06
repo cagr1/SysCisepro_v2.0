@@ -5,6 +5,7 @@ Imports ClassLibraryCisepro.ENUMS
 Imports ClassLibraryCisepro.FONDOS.FONDO_ROTATIVO
 Imports ClassLibraryCisepro.ProcesosSql
 Imports ClassLibraryCisepro.VALIDACIONES
+Imports Krypton.Toolkit
 Imports syscisepro.FORMULARIOS.FONDOS.FONDO_ROTATIVO.REPORTES
 
 Namespace FORMULARIOS.FONDOS.FONDO_ROTATIVO
@@ -103,7 +104,7 @@ Namespace FORMULARIOS.FONDOS.FONDO_ROTATIVO
                 .CtaContableGastos = txtCtaContableGastoFR.Text
                 .EstadoGastos = 1
                 .IdFondoRotativoGastos = 1
-                .Idplan = 137  
+                .Idplan = 137
             End With
             _sqlCommands.Add(_objetoGastosFondoRotativo.NuevoRegistroGastosForndoRotativo)
             _objAuditoria.AccionAuditoria = "CREO UN NUEVO CONCEPTO DE FONDO ROTATIVO. ID: " + txtIdGastosFR.Text + " CONCEPTO: " + CType(txtNombreGastoFR.Text, String)
@@ -131,7 +132,7 @@ Namespace FORMULARIOS.FONDOS.FONDO_ROTATIVO
                 Case TipoConexion.Seportpac
                     Icon = My.Resources.logo_s
                     'MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
-                    MenuStrip1.ForeColor = Color.White 
+                    MenuStrip1.ForeColor = Color.White
                     dgvGastosFondoRotativo.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorSeportpac
                 Case Else
                     Icon = My.Resources.logo_c
@@ -159,8 +160,9 @@ Namespace FORMULARIOS.FONDOS.FONDO_ROTATIVO
 
         Private Sub btnGuardarGastosFondoRotativo_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnGuardarGastosFondoRotativo.Click
             If ValidacionParametros() Then
-                 
-                If MessageBox.Show("¿Esta seguro que desea guardar?", "Mensaje de validación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> MsgBoxResult.Yes Then Return
+
+                If KryptonMessageBox.Show("¿Esta seguro que desea guardar?", "Mensaje de validación", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) <> MsgBoxResult.Yes Then Return
+                'If MessageBox.Show("¿Esta seguro que desea guardar?", "Mensaje de validación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> MsgBoxResult.Yes Then Return
                 _sqlCommands.Clear()
 
                 Select Case (_botonSeleccionado)
@@ -173,8 +175,11 @@ Namespace FORMULARIOS.FONDOS.FONDO_ROTATIVO
                 If res(0) Then
                     DesabilitadoCancelar()
                     CargarGastosFondoRotativo()
+                    KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
+                Else
+                    KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
                 End If
-                MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
+
             Else
                 MsgBox("No se puede guardar." & vbNewLine & "NO SE HAN LLENADO TODOS LOS CAMPOS NECESARIOS.", MsgBoxStyle.Exclamation, "Mensaje de validación")
                 txtIdGastosFR.Focus()

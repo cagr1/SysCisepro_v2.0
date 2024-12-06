@@ -737,16 +737,15 @@ Namespace FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
             If res(0) Then
                 DeshabilitadoInicio()
                 LimpiarParametros()
-            End If
-            'MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
-            Dim messageIcon As KryptonMessageBoxIcon
-            If res(0) Then
-                messageIcon = KryptonMessageBoxIcon.Information
+                KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
+                CargarNumeroRegistroAsientoLibroDiario()
             Else
-                messageIcon = KryptonMessageBoxIcon.Exclamation
+                KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+                CargarNumeroRegistroAsientoLibroDiario()
+                Return
             End If
-            KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, messageIcon)
-            CargarNumeroRegistroAsientoLibroDiario()
+
+
         End Sub
         Private Sub NuevoRegistroAsientoDiario()
             Dim i = _objetoAsientoLibroDiario.BuscarMayorIdAsientoLibroDiario(_tipoCon) + 1

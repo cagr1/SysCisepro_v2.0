@@ -337,16 +337,19 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
                         Dim NombreU As String = "Cheques aprobados por: " + UserName
                         Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, NombreU)
 
-                        Dim messageIcon As KryptonMessageBoxIcon
+
                         If res(0) Then
-                            messageIcon = KryptonMessageBoxIcon.Information
+                            KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
+                            chkCaducado.Checked = False
                         Else
-                            messageIcon = KryptonMessageBoxIcon.Exclamation
+                            KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+                            chkCaducado.Checked = False
+                            Return
                         End If
-                        KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, messageIcon)
 
 
-                        chkCaducado.Checked = False
+
+
                     End If
                 Else
 

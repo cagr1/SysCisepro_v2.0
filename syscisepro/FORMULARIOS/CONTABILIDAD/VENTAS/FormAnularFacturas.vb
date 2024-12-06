@@ -5,6 +5,7 @@ Imports ClassLibraryCisepro.CONTABILIDAD.LIBRO_DIARIO
 Imports ClassLibraryCisepro.CONTABILIDAD.VENTAS
 Imports ClassLibraryCisepro.ENUMS
 Imports ClassLibraryCisepro.ProcesosSql
+Imports Krypton.Toolkit
 
 
 Namespace FORMULARIOS.CONTABILIDAD.VENTAS
@@ -74,10 +75,10 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
             dgvFacturaVenta.Font = New Font("Roboto", 8, FontStyle.Regular)
             _sqlCommands = New List(Of SqlCommand)
             _notSelect = New List(Of Integer)
-             
+
             AutocompletarNombreCliente()
             txtNombreComercialCliente.Focus()
-        End Sub 
+        End Sub
         Private Sub AutocompletarNombreCliente()
             Try
                 txtNombreComercialCliente.AutoCompleteCustomSource = _objetoClienteGeneral.Autocompletar(_tipoCon)
@@ -87,7 +88,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                 txtNombreComercialCliente.AutoCompleteCustomSource = Nothing
             End Try
         End Sub
-        
+
         Private Sub CargarDatosCliente()
             Try
                 Dim cli = _objetoClienteGeneral.BuscarClienteGeneralXRazonSocial(_tipoCon, txtNombreComercialCliente.Text)
@@ -98,12 +99,13 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                     lblLlevaContabilidadClienteGeneral.Text = cli.Rows(0)(7)
                 End If
             Catch ex As Exception
-                MsgBox("CARGAR DATOS CLIENTE." & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
+                'MsgBox("CARGAR DATOS CLIENTE." & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
+                KryptonMessageBox.Show("Cargar datos cliente." & vbNewLine & ex.Message.ToString, "Mensaje de excepción", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
         Private Sub CargarFacturasVentaXIdCliente()
             Try
-                dgvFacturaVenta.DataSource = _objetoFacturaVenta.SeleccionarFacturaVentaXIdCliente(_tipoCon, lblIdClienteGeneral.Text) 
+                dgvFacturaVenta.DataSource = _objetoFacturaVenta.SeleccionarFacturaVentaXIdCliente(_tipoCon, lblIdClienteGeneral.Text)
                 dgvFacturaVenta.Columns(0).HeaderText = "CHK"
                 dgvFacturaVenta.Columns(0).DefaultCellStyle.Alignment = DataGridViewContentAlignment.BottomLeft
                 dgvFacturaVenta.Columns(0).ReadOnly = False
@@ -155,7 +157,8 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                 dgvFacturaVenta.AutoResizeColumns()
                 dgvFacturaVenta.AutoResizeRows()
             Catch ex As Exception
-                MsgBox("METODO CARGAR FACTURA VENTA" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
+                'MsgBox("METODO CARGAR FACTURA VENTA" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
+                KryptonMessageBox.Show("Metodo cargar factura venta" & vbNewLine & ex.Message.ToString, "Mensaje de excepción", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
         Private Sub CargarFacturasVentaXNroFactura()
@@ -213,21 +216,23 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                 dgvFacturaVenta.AutoResizeColumns()
                 dgvFacturaVenta.AutoResizeRows()
             Catch ex As Exception
-                MsgBox("METODO CARGAR FACTURA VENTA" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
+                'MsgBox("METODO CARGAR FACTURA VENTA" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
+                KryptonMessageBox.Show("Metodo cargar factura venta" & vbNewLine & ex.Message.ToString, "Mensaje de excepción", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
         Private Sub CargarPagosFacturaVenta()
             Try
-                dgvPagosFacturaVenta.DataSource = _objetoPagosFacturaVenta.SeleccionarPagosFacturaVentaXIdFactura(_tipoCon, _idFacturaVenta) 
+                dgvPagosFacturaVenta.DataSource = _objetoPagosFacturaVenta.SeleccionarPagosFacturaVentaXIdFactura(_tipoCon, _idFacturaVenta)
                 dgvPagosFacturaVenta.Columns(1).HeaderText = "FECHA"
                 dgvPagosFacturaVenta.Columns(2).HeaderText = "NÚMERO"
                 dgvPagosFacturaVenta.Columns(3).HeaderText = "FORMA"
                 dgvPagosFacturaVenta.Columns(4).HeaderText = "MONTO"
                 dgvPagosFacturaVenta.Columns(5).HeaderText = "SALDO"
                 dgvPagosFacturaVenta.Columns(6).HeaderText = "EST"
-                dgvPagosFacturaVenta.Columns(7).HeaderText = "ID FV"  
+                dgvPagosFacturaVenta.Columns(7).HeaderText = "ID FV"
             Catch ex As Exception
-                MsgBox("METODO CARGAR PAGOS FACTURA VENTA" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
+                'MsgBox("METODO CARGAR PAGOS FACTURA VENTA" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
+                KryptonMessageBox.Show("Metodo cargar pagos factura venta" & vbNewLine & ex.Message.ToString, "Mensaje de excepción", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
         Private Sub CargarComprobanteRetencion()
@@ -236,7 +241,8 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                 dgvComprobanteRetencion.ReadOnly = False
                 dgvComprobanteRetencion.EditMode = DataGridViewEditMode.EditProgrammatically
             Catch ex As Exception
-                MsgBox("METODO CARGAR COMPROBANTE DE RETENCIÓN" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
+                'MsgBox("METODO CARGAR COMPROBANTE DE RETENCIÓN" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
+                KryptonMessageBox.Show("Metodo cargar comprobante de retención" & vbNewLine & ex.Message.ToString, "Mensaje de excepción", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
         Private Sub CargarDetalleComprobanteRetencion(ByVal idCompRetenciom As Integer)
@@ -245,7 +251,8 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                 dgvDetalleComprobanteRetencion.ReadOnly = False
                 dgvDetalleComprobanteRetencion.EditMode = DataGridViewEditMode.EditProgrammatically
             Catch ex As Exception
-                MsgBox("METODO CARGAR DETALLE COMPROBANTE DE RETENCIÓN" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
+                'MsgBox("METODO CARGAR DETALLE COMPROBANTE DE RETENCIÓN" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
+                KryptonMessageBox.Show("Metodo cargar detalle comprobante de retención" & vbNewLine & ex.Message.ToString, "Mensaje de excepción", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
         Private Sub CargarNotaCreditoVenta(ByVal idFacturaVenta As Integer)
@@ -255,15 +262,16 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                 dgvDetalleComprobanteRetencion.EditMode = DataGridViewEditMode.EditProgrammatically
             Catch ex As Exception
                 dgvNotaCreditoVenta.DataSource = Nothing
-                MsgBox("METODO CARGAR DETALLE COMPROBANTE DE RETENCIÓN" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
+                'MsgBox("METODO CARGAR DETALLE COMPROBANTE DE RETENCIÓN" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
+                KryptonMessageBox.Show("Metodo cargar detalle comprobante de retención" & vbNewLine & ex.Message.ToString, "Mensaje de excepción", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
-        
+
         Private Sub txtNombreComercialCliente_KeyUp(ByVal sender As System.Object, ByVal e As Windows.Forms.KeyEventArgs) Handles txtNombreComercialCliente.KeyUp
             If e.KeyCode <> Keys.Enter Then Return
             txtNumeroFacturaBuscar.Clear()
             CargarDatosCliente()
-            CargarFacturasVentaXIdCliente() 
+            CargarFacturasVentaXIdCliente()
         End Sub
         Private Sub btnBuscarAsiento_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnBuscarAsiento.Click
             txtNombreComercialCliente.Clear()
@@ -276,11 +284,13 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
         Private Sub btnGuardar_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnGuardar.Click
             Dim sel = dgvFacturaVenta.Rows.Cast(Of DataGridViewRow)().Any(Function(row) CBool(row.Cells(0).EditedFormattedValue))
             If Not sel Then
-                MessageBox.Show("DEBE SELECCIONAR AL MENOS UNA FACTURA!", "Mensaje de validación", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                'MessageBox.Show("DEBE SELECCIONAR AL MENOS UNA FACTURA!", "Mensaje de validación", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                KryptonMessageBox.Show("Debe seleccionar al menos una factura!", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                 Return
             End If
 
-            If MessageBox.Show("¿ESTA SEGURA QUE DESEA ANULAR LAS FACTURAS SELECCIONADAS?", "Mensaje de validación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> DialogResult.Yes Then Return
+            'If MessageBox.Show("¿ESTA SEGURA QUE DESEA ANULAR LAS FACTURAS SELECCIONADAS?", "Mensaje de validación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> DialogResult.Yes Then Return
+            If KryptonMessageBox.Show("¿Esta segura que desea anular las facturas seleccionadas?", "Mensaje de validación", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) <> DialogResult.Yes Then Return
             _sqlCommands.Clear()
 
             ActualizarEstadoFacturasVenta() ' actualizar estado factura y asiento
@@ -291,8 +301,14 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
 
             Dim nombreU As String = "FACTURA-ANULADA " & UserName
             Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, nombreU)
-            If res(0) Then btnNuevo_Click(Nothing, Nothing)
-            MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
+            If res(0) Then
+                btnNuevo_Click(Nothing, Nothing)
+                KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
+            Else
+                KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+                Return
+            End If
+
         End Sub
 
         Private Sub ActualizarEstadoFacturasVenta()
@@ -304,11 +320,10 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                         '.ActualizarEstadoFacturaVenta(_tipoCon)
                     End With
                     _sqlCommands.Add(_objetoFacturaVenta.ActualizarEstadoFacturaVenta)
-
-                    anularAsientoLibroDiarioFactura(dgvFacturaVenta.Rows(i).Cells(1).Value)
+                    AnularAsientoLibroDiarioFactura(dgvFacturaVenta.Rows(i).Cells(1).Value)
                 End If
             Next
-        End Sub 
+        End Sub
         Private Sub AnularAsientoLibroDiarioFactura(ByVal idFactura As Int64)
             Dim numerRegistro = _objetoNumeroRegistroAsientoFacturaVenta.BuscarNumeroRegistroAsientoPorIdFactura(_tipoCon, idFactura)
             With _objetoAsientoLibroDiario
@@ -316,7 +331,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                 '.AnularAsientoLibroDiarioXNumeroRegistro(_tipoCon)
             End With
             _sqlCommands.Add(_objetoAsientoLibroDiario.AnularAsientoLibroDiarioXNumeroRegistro)
-        End Sub 
+        End Sub
         Private Sub ActualizarPagosFacturaVenta()
             For i = 0 To dgvFacturaVenta.RowCount - 1
                 If dgvFacturaVenta.Rows(i).Cells(0).Value = True Then ' Si la fila de la grilla esta checkeada 
@@ -342,11 +357,11 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                             _sqlCommands.Add(_objetoPagosFacturaVenta.AnularPagosFacturaVentaByIdComprobanteIngresos)
                         End If
 
-                       
+
                     Next
                 End If
             Next
-        End Sub 
+        End Sub
         Private Sub ActualizarEstadoRetencionVenta()
             For i = 0 To dgvFacturaVenta.RowCount - 1
                 If dgvFacturaVenta.Rows(i).Cells(0).Value = True Then ' Si la fila de la grilla esta checkeada 
@@ -363,7 +378,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                         _sqlCommands.Add(_objetoComprobanteRetencionCompraVenta.ActualizarEstadoComprobanteRetencionVenta)
 
                         CargarDetalleComprobanteRetencion(dgvComprobanteRetencion.Rows(indiceRetencion).Cells(0).Value)
-                        actualizarEstadoDetalleRetencionVenta()
+                        ActualizarEstadoDetalleRetencionVenta()
                     Next
                 End If
             Next
@@ -377,7 +392,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                 End With
                 _sqlCommands.Add(_objetoDetalleComprobantesRetencionVenta.ActualizarEstadoComprobanteRetencionVenta)
             Next
-        End Sub 
+        End Sub
         Private Sub ActualizarEstadoNotaCredito()
             For indiceFactura = 0 To dgvFacturaVenta.RowCount - 1
                 If dgvFacturaVenta.Rows(indiceFactura).Cells(0).Value = True Then ' Si la fila de la grilla esta checkeada 
@@ -398,7 +413,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
             Next
         End Sub
         Private Sub AnularAsientoLibroDiarioNotaCredito(ByVal idNotaCredito As Integer)
-            Dim numerRegistro  = _objetoNumeroRegistroAsientoNotaCredito.BuscarNumeroRegistroAsientoPorIdNotaCredito(_tipoCon, idNotaCredito)
+            Dim numerRegistro = _objetoNumeroRegistroAsientoNotaCredito.BuscarNumeroRegistroAsientoPorIdNotaCredito(_tipoCon, idNotaCredito)
             With _objetoAsientoLibroDiario
                 .NumeroRegistroAsiento = numerRegistro
                 '.AnularAsientoLibroDiarioXNumeroRegistro(_tipoCon)
@@ -425,12 +440,14 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                 If CBool(dgvFacturaVenta.CurrentCell.EditedFormattedValue) Then
                     If _objetoPagosFacturaVenta.BuscarMayorSaldoPagosFacturaventaXIdFactura(_tipoCon, dgvFacturaVenta.CurrentRow.Cells.Item(1).Value) < 0.01 Then
                         If Not _notSelect.Contains(dgvFacturaVenta.CurrentCell.RowIndex) Then _notSelect.Add(dgvFacturaVenta.CurrentCell.RowIndex)
-                        MsgBox("ESTA FACTUARA YA HA SIDO CANCELADA" & vbNewLine & "NO SE PUEDE ANULAR", MsgBoxStyle.Information, "Mensaje de información")
+                        'MsgBox("ESTA FACTUARA YA HA SIDO CANCELADA" & vbNewLine & "NO SE PUEDE ANULAR", MsgBoxStyle.Information, "Mensaje de información")
+                        KryptonMessageBox.Show("Esta factura ya ha sido cancelada" & vbNewLine & "No se puede anular", "Mensaje de información", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
                     Else
                         Dim si = _objetoPagosFacturaVenta.SeleccionarPagosActivoXIdComprobante(_tipoCon, CLng(dgvFacturaVenta.CurrentRow.Cells(1).Value))
                         If si.Rows.Count > 1 Or si.Rows(0)(2) > 1 Then
                             If Not _notSelect.Contains(dgvFacturaVenta.CurrentCell.RowIndex) Then _notSelect.Add(dgvFacturaVenta.CurrentCell.RowIndex)
-                            MsgBox("ESTA FACTURA YA REGISTRA PAGOS. ANULE PRIMERO LOS PAGOS CORRESPONDIENTES O LA FACTURA NO SERÁ ANULADA!", MsgBoxStyle.Information, "Mensaje de validación")
+                            'MsgBox("ESTA FACTURA YA REGISTRA PAGOS. ANULE PRIMERO LOS PAGOS CORRESPONDIENTES O LA FACTURA NO SERÁ ANULADA!", MsgBoxStyle.Information, "Mensaje de validación")
+                            KryptonMessageBox.Show("Esta factura ya registra pagos. Anule primero los pagos correspondientes o la factura no será anulada!", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
                         End If
                     End If
                 End If

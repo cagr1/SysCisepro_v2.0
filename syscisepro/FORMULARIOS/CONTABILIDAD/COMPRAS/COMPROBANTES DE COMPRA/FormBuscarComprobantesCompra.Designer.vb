@@ -26,6 +26,7 @@
             Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormBuscarComprobantesCompra))
             Me.lblPorcentaje = New System.Windows.Forms.Label()
             Me.lblEstadoComprobanteCompra = New System.Windows.Forms.Label()
@@ -194,23 +195,31 @@
             Me.dgvComprobantesCompra.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
             DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
             DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
-            DataGridViewCellStyle2.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle2.Font = New System.Drawing.Font("Roboto", 6.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
             DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(123, Byte), Integer))
             DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
             DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
             Me.dgvComprobantesCompra.DefaultCellStyle = DataGridViewCellStyle2
-            Me.dgvComprobantesCompra.Location = New System.Drawing.Point(11, 90)
+            Me.dgvComprobantesCompra.Location = New System.Drawing.Point(5, 90)
             Me.dgvComprobantesCompra.MultiSelect = False
             Me.dgvComprobantesCompra.Name = "dgvComprobantesCompra"
             Me.dgvComprobantesCompra.ReadOnly = True
-            Me.dgvComprobantesCompra.RowHeadersVisible = False
-            DataGridViewCellStyle3.Font = New System.Drawing.Font("Roboto", 8.25!)
+            DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+            DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control
+            DataGridViewCellStyle3.Font = New System.Drawing.Font("Roboto", 7.0!)
+            DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText
+            DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
+            DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
             DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-            Me.dgvComprobantesCompra.RowsDefaultCellStyle = DataGridViewCellStyle3
+            Me.dgvComprobantesCompra.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
+            Me.dgvComprobantesCompra.RowHeadersVisible = False
+            DataGridViewCellStyle4.Font = New System.Drawing.Font("Roboto", 8.25!)
+            DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+            Me.dgvComprobantesCompra.RowsDefaultCellStyle = DataGridViewCellStyle4
             Me.dgvComprobantesCompra.RowTemplate.DefaultCellStyle.Font = New System.Drawing.Font("Roboto", 8.25!)
             Me.dgvComprobantesCompra.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvComprobantesCompra.Size = New System.Drawing.Size(923, 394)
+            Me.dgvComprobantesCompra.Size = New System.Drawing.Size(1220, 394)
             Me.dgvComprobantesCompra.TabIndex = 96
             '
             'rbTodos
@@ -293,7 +302,7 @@
             Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
             Me.MenuStrip1.Name = "MenuStrip1"
             Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(7, 2, 0, 2)
-            Me.MenuStrip1.Size = New System.Drawing.Size(956, 32)
+            Me.MenuStrip1.Size = New System.Drawing.Size(1244, 32)
             Me.MenuStrip1.TabIndex = 183
             Me.MenuStrip1.Text = "msIngresoBodega"
             '
@@ -435,7 +444,7 @@
             Me.KryptonNavigator1.Name = "KryptonNavigator1"
             Me.KryptonNavigator1.Pages.AddRange(New ComponentFactory.Krypton.Navigator.KryptonPage() {Me.KryptonPage1, Me.KryptonPage2, Me.KryptonPage3})
             Me.KryptonNavigator1.SelectedIndex = 0
-            Me.KryptonNavigator1.Size = New System.Drawing.Size(944, 584)
+            Me.KryptonNavigator1.Size = New System.Drawing.Size(1238, 584)
             Me.KryptonNavigator1.TabIndex = 184
             Me.KryptonNavigator1.Text = "KryptonNavigator1"
             '
@@ -449,7 +458,7 @@
             Me.KryptonPage1.LastVisibleSet = True
             Me.KryptonPage1.MinimumSize = New System.Drawing.Size(50, 50)
             Me.KryptonPage1.Name = "KryptonPage1"
-            Me.KryptonPage1.Size = New System.Drawing.Size(942, 557)
+            Me.KryptonPage1.Size = New System.Drawing.Size(1236, 557)
             Me.KryptonPage1.StateCommon.Page.Color1 = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.KryptonPage1.Text = "Consultas"
             Me.KryptonPage1.ToolTipTitle = "Page ToolTip"
@@ -763,7 +772,7 @@
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(185, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(227, Byte), Integer))
-            Me.ClientSize = New System.Drawing.Size(956, 645)
+            Me.ClientSize = New System.Drawing.Size(1244, 645)
             Me.Controls.Add(Me.KryptonNavigator1)
             Me.Controls.Add(Me.MenuStrip1)
             Me.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))

@@ -355,84 +355,79 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
                 End If
                 _sqlCommands.Clear()
 
-                    Dim idasientoCuenta = 0
-                    Dim valorCuenta = 0.0
-                    For Each row As DataGridViewRow In dgvAsientoDiarioCompra.Rows
-                        If (row.Cells(2).Value.ToString().StartsWith("20103") And CDec(row.Cells(7).Value) > 0) Then
-                            idasientoCuenta = row.Cells(0).Value.ToString()
-                            valorCuenta = CDec(row.Cells(7).Value)
-                        End If
-                        If (row.Cells(2).Value.ToString().StartsWith("201070101") Or
-                            row.Cells(2).Value.ToString().StartsWith("201070102")) And row.Cells(3).Value.ToString().Contains("RETEN") Then
-                            With _objetoAsientoLibroDiario
-                                .IdAsiento = row.Cells(0).Value.ToString().Trim()
-                            End With
-                            _sqlCommands.Add(_objetoAsientoLibroDiario.AnularAsientoLibroDiarioXIdRegistro)
-                        End If
-                    Next
-
-                    ' sumar a la cuenta por cobrar
-                    With _objetoAsientoLibroDiario
-                        .IdAsiento = idasientoCuenta
-                        .ValorHaberAsiento = valorCuenta + CDec(txtTotalComprobanteRetencion.Text.Trim())
-                    End With
-                    _sqlCommands.Add(_objetoAsientoLibroDiario.SumarHaberRetencionAsientoLibroDiarioXIdRegistro)
-
-
-                    ' anular retencion
-                    With _objetoComprobanteRetencion
-                        .IdComprobanteCompra = lblIdComprobanteCompra.Text
-                    End With
-                    _sqlCommands.Add(_objetoComprobanteRetencion.AnularComprobanteRetencionVentaByIdCompra)
-
-                    '        ' anular detalle retencion
-                    With _objetoDetalleComprobantesRetencion
-                        .IdComprobanteCompra = lblIdComprobanteCompra.Text
-                    End With
-                    _sqlCommands.Add(_objetoDetalleComprobantesRetencion.AnularDetalleComprobanteRetencionVentaByIdCompra)
-
-                    ' anular pago retencion
-                    If dgvPagosFacturaCompra.RowCount > 0 Then
-                        If dgvPagosFacturaCompra.RowCount = 1 Then
-                            With _objetoPagosComprobantesCompra
-                                .IdComprobante = lblIdComprobanteCompra.Text
-                                .SaldoPagosComprobantes = CDec(txtTotalComprobanteCompra.Text)
-                            End With
-                            _sqlCommands.Add(_objetoPagosComprobantesCompra.RestarPagoRetencionFacturaCompraByIdComprobanteCompra)
-                        Else
-                            Dim idpago = 0
-                            For Each row As DataGridViewRow In dgvPagosFacturaCompra.Rows
-                                If CDec(row.Cells(3).Value) = CDec(txtTotalComprobanteRetencion.Text) And CDec(row.Cells(8).Value) = 0 Then
-                                    idpago = row.Cells(0).Value.ToString()
-                                End If
-                            Next
-                            With _objetoPagosComprobantesCompra
-                                .IdComprobante = lblIdComprobanteCompra.Text
-                            End With
-                            _sqlCommands.Add(_objetoPagosComprobantesCompra.AnularPagoRetencionFacturaCompraByIdComprobanteCompra)
-                        End If
+                Dim idasientoCuenta = 0
+                Dim valorCuenta = 0.0
+                For Each row As DataGridViewRow In dgvAsientoDiarioCompra.Rows
+                    If (row.Cells(2).Value.ToString().StartsWith("20103") And CDec(row.Cells(7).Value) > 0) Then
+                        idasientoCuenta = row.Cells(0).Value.ToString()
+                        valorCuenta = CDec(row.Cells(7).Value)
                     End If
+                    If (row.Cells(2).Value.ToString().StartsWith("201070101") Or
+                        row.Cells(2).Value.ToString().StartsWith("201070102")) And row.Cells(3).Value.ToString().Contains("RETEN") Then
+                        With _objetoAsientoLibroDiario
+                            .IdAsiento = row.Cells(0).Value.ToString().Trim()
+                        End With
+                        _sqlCommands.Add(_objetoAsientoLibroDiario.AnularAsientoLibroDiarioXIdRegistro)
+                    End If
+                Next
+
+                ' sumar a la cuenta por cobrar
+                With _objetoAsientoLibroDiario
+                    .IdAsiento = idasientoCuenta
+                    .ValorHaberAsiento = valorCuenta + CDec(txtTotalComprobanteRetencion.Text.Trim())
+                End With
+                _sqlCommands.Add(_objetoAsientoLibroDiario.SumarHaberRetencionAsientoLibroDiarioXIdRegistro)
 
 
-                    Dim nombreU As String = "ANULAR COMPROBANTE RETENCION COMPRA " & UserName
-                    Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, String.Empty)
+                ' anular retencion
+                With _objetoComprobanteRetencion
+                    .IdComprobanteCompra = lblIdComprobanteCompra.Text
+                End With
+                _sqlCommands.Add(_objetoComprobanteRetencion.AnularComprobanteRetencionVentaByIdCompra)
+
+                '        ' anular detalle retencion
+                With _objetoDetalleComprobantesRetencion
+                    .IdComprobanteCompra = lblIdComprobanteCompra.Text
+                End With
+                _sqlCommands.Add(_objetoDetalleComprobantesRetencion.AnularDetalleComprobanteRetencionVentaByIdCompra)
+
+                ' anular pago retencion
+                If dgvPagosFacturaCompra.RowCount > 0 Then
+                    If dgvPagosFacturaCompra.RowCount = 1 Then
+                        With _objetoPagosComprobantesCompra
+                            .IdComprobante = lblIdComprobanteCompra.Text
+                            .SaldoPagosComprobantes = CDec(txtTotalComprobanteCompra.Text)
+                        End With
+                        _sqlCommands.Add(_objetoPagosComprobantesCompra.RestarPagoRetencionFacturaCompraByIdComprobanteCompra)
+                    Else
+                        Dim idpago = 0
+                        For Each row As DataGridViewRow In dgvPagosFacturaCompra.Rows
+                            If CDec(row.Cells(3).Value) = CDec(txtTotalComprobanteRetencion.Text) And CDec(row.Cells(8).Value) = 0 Then
+                                idpago = row.Cells(0).Value.ToString()
+                            End If
+                        Next
+                        With _objetoPagosComprobantesCompra
+                            .IdComprobante = lblIdComprobanteCompra.Text
+                        End With
+                        _sqlCommands.Add(_objetoPagosComprobantesCompra.AnularPagoRetencionFacturaCompraByIdComprobanteCompra)
+                    End If
+                End If
+
+
+                Dim nombreU As String = "ANULAR COMPROBANTE RETENCION COMPRA " & UserName
+                Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, String.Empty)
                 If res(0) Then
                     LimpiarParametrosRetencion()
                     dgvComprobantesCompra_SelectionChanged(Nothing, Nothing)
-                End If
-                Dim messageIcon As KryptonMessageBoxIcon
-                If res(0) Then
-                    messageIcon = KryptonMessageBoxIcon.Information
+                    KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
                 Else
-                    messageIcon = KryptonMessageBoxIcon.Exclamation
+                    KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+                    Return
                 End If
-                KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, messageIcon)
-
-
-                'MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
 
             Else
-                'MessageBox.Show("LA FACTURA SELECCIONADA NO TIENE REGISTRADO UN COMPROBANTE DE RETENCIÓN!", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+
+
                 KryptonMessageBox.Show("La factura seleccionada no tiene registrado un comprobante de retención!", "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
             End If
         End Sub

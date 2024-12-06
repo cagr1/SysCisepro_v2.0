@@ -228,22 +228,19 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.REQUERIMIENTOS
                     Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, nombreU)
                     If res(0) Then
                         DeshabilitadoInicio()
+                        KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
+                    Else
+                        KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+                        Return
                     End If
 
-                    Dim messageIcon As KryptonMessageBoxIcon
-                    If res(0) Then
-                        messageIcon = KryptonMessageBoxIcon.Information
-                    Else
-                        messageIcon = KryptonMessageBoxIcon.Exclamation
-                    End If
-                    KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, messageIcon)
-                    'MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
+
                 Else
-                    'MsgBox("No se puede guardar." & vbNewLine & "NO SE HAN LLENADO TODOS LOS CAMPOS NECESARIOS.", MsgBoxStyle.Exclamation, "Mensaje de validación")
+
                     KryptonMessageBox.Show("No se puede guardar." & vbNewLine & "No se han llenado todos los campos necesarios.", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                 End If
             Else
-                'MsgBox("No se puede guardar." & vbNewLine & "NO HA AGREGADO NINGÚN ITEM A LA REQUISICIÓN.", MsgBoxStyle.Exclamation, "Mensaje de validación")
+
                 KryptonMessageBox.Show("No se puede guardar." & vbNewLine & "No ha agregado ningún item a la requisición.", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
             End If
         End Sub

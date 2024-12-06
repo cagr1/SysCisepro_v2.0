@@ -6,6 +6,7 @@ Imports ClassLibraryCisepro.FONDOS.CAJA_CHICA
 Imports ClassLibraryCisepro.FONDOS.FONDO_ROTATIVO
 Imports ClassLibraryCisepro.ProcesosSql
 Imports ClassLibraryCisepro.VALIDACIONES
+Imports Krypton.Toolkit
 Imports syscisepro.DATOS
 
 Namespace FORMULARIOS.FONDOS.FONDO_CAJA_CHICA
@@ -130,10 +131,15 @@ Namespace FORMULARIOS.FONDOS.FONDO_CAJA_CHICA
                     btnNuevo.Enabled = True
                     txtDetalle.Text = ""
                     txtDetalle.Enabled = False
+                    KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
+                Else
+                    KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+                    Return
                 End If
-                MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
+
             Else
-                MsgBox("No ha llenado todos los parámetros necesarios", MsgBoxStyle.Information, "Mensaje de validación")
+
+                KryptonMessageBox.Show("No ha llenado todos los parámetros necesarios", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
                 txtDetalle.Focus()
             End If
         End Sub

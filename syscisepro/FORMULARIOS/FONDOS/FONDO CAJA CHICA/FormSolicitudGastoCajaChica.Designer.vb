@@ -168,6 +168,7 @@
             CType(Me.dgvDetallesRetencion, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.MenuStrip1.SuspendLayout()
             CType(Me.KryptonDockableNavigator1, System.ComponentModel.ISupportInitialize).BeginInit()
+            Me.KryptonDockableNavigator1.SuspendLayout()
             CType(Me.KryptonNavigator1, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.KryptonNavigator1.SuspendLayout()
             CType(Me.KryptonPage1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -738,7 +739,6 @@
             Me.cbmAutoriza.BackColor = System.Drawing.Color.White
             Me.cbmAutoriza.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cbmAutoriza.Enabled = False
-            Me.cbmAutoriza.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.cbmAutoriza.FormattingEnabled = True
             Me.cbmAutoriza.Location = New System.Drawing.Point(600, 4)
             Me.cbmAutoriza.Name = "cbmAutoriza"
@@ -781,7 +781,6 @@
             Me.cbmConcepto.BackColor = System.Drawing.Color.White
             Me.cbmConcepto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cbmConcepto.Enabled = False
-            Me.cbmConcepto.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.cbmConcepto.FormattingEnabled = True
             Me.cbmConcepto.Location = New System.Drawing.Point(254, 38)
             Me.cbmConcepto.Name = "cbmConcepto"
@@ -793,7 +792,6 @@
             Me.cbmCentroCosto.BackColor = System.Drawing.Color.White
             Me.cbmCentroCosto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cbmCentroCosto.Enabled = False
-            Me.cbmCentroCosto.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.cbmCentroCosto.FormattingEnabled = True
             Me.cbmCentroCosto.Location = New System.Drawing.Point(600, 38)
             Me.cbmCentroCosto.Name = "cbmCentroCosto"
@@ -805,7 +803,6 @@
             Me.cbmParroquia.BackColor = System.Drawing.Color.White
             Me.cbmParroquia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cbmParroquia.Enabled = False
-            Me.cbmParroquia.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.cbmParroquia.FormattingEnabled = True
             Me.cbmParroquia.Location = New System.Drawing.Point(600, 73)
             Me.cbmParroquia.Name = "cbmParroquia"
@@ -817,7 +814,6 @@
             Me.cbmCanton.BackColor = System.Drawing.Color.White
             Me.cbmCanton.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cbmCanton.Enabled = False
-            Me.cbmCanton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.cbmCanton.FormattingEnabled = True
             Me.cbmCanton.Location = New System.Drawing.Point(254, 72)
             Me.cbmCanton.Name = "cbmCanton"
@@ -1071,6 +1067,7 @@
             '
             Me.KryptonDockableNavigator1.Location = New System.Drawing.Point(0, 0)
             Me.KryptonDockableNavigator1.Name = "KryptonDockableNavigator1"
+            Me.KryptonDockableNavigator1.Size = New System.Drawing.Size(250, 150)
             Me.KryptonDockableNavigator1.TabIndex = 0
             '
             'KryptonNavigator1
@@ -1584,6 +1581,7 @@
             Me.MenuStrip1.ResumeLayout(False)
             Me.MenuStrip1.PerformLayout()
             CType(Me.KryptonDockableNavigator1, System.ComponentModel.ISupportInitialize).EndInit()
+            Me.KryptonDockableNavigator1.ResumeLayout(False)
             CType(Me.KryptonNavigator1, System.ComponentModel.ISupportInitialize).EndInit()
             Me.KryptonNavigator1.ResumeLayout(False)
             CType(Me.KryptonPage1, System.ComponentModel.ISupportInitialize).EndInit()

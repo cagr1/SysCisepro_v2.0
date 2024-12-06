@@ -90,10 +90,10 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
                 dgvComprobantesCompra.AutoResizeColumns()
 
 
-                dgvComprobantesCompra.Columns(1).Width = 400
+                dgvComprobantesCompra.Columns(1).Width = 350
                 dgvComprobantesCompra.Columns(2).Width = 90
                 dgvComprobantesCompra.Columns(4).DefaultCellStyle.Format = "g"
-                dgvComprobantesCompra.Columns(4).Width = 150
+                dgvComprobantesCompra.Columns(4).Width = 100
                 dgvComprobantesCompra.Columns(5).Width = 70
                 dgvComprobantesCompra.Columns(6).Width = 70
                 dgvComprobantesCompra.Columns(7).Width = 70

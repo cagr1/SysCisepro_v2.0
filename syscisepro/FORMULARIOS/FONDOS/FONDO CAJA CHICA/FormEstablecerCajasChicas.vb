@@ -6,6 +6,7 @@ Imports ClassLibraryCisepro.FONDOS.CAJA_CHICA
 Imports ClassLibraryCisepro.ProcesosSql
 Imports ClassLibraryCisepro.TALENTO_HUMANO
 Imports ClassLibraryCisepro.VALIDACIONES
+Imports Krypton.Toolkit
 Imports syscisepro.DATOS
 Imports syscisepro.FORMULARIOS.INVENTARIOS.PROCESO
 
@@ -75,7 +76,7 @@ Namespace FORMULARIOS.FONDOS.FONDO_CAJA_CHICA
             _sqlCommands = New List(Of SqlCommand)
             LlenarComboProvincias()
             LlenarComboCentroCostos()
-             
+
         End Sub
         Private Sub LlenarComboProvincias()
             Try
@@ -117,7 +118,7 @@ Namespace FORMULARIOS.FONDOS.FONDO_CAJA_CHICA
             Catch
                 cbmParroquia.DataSource = Nothing
             End Try
-        End Sub 
+        End Sub
         Private Sub LlenarComboCentroCostos()
             Try
                 cbmCentroCosto.DataSource = _objCentroCostos.SeleccionarCentroCosto(_tipoCon)
@@ -130,7 +131,7 @@ Namespace FORMULARIOS.FONDOS.FONDO_CAJA_CHICA
             End Try
         End Sub
         Private Sub ToolStripMenuItem1_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ToolStripMenuItem1.Click
-            cargarCustodiosCajas()
+            CargarCustodiosCajas()
         End Sub
         Private Sub CargarCustodiosCajas()
             Try
@@ -151,7 +152,7 @@ Namespace FORMULARIOS.FONDOS.FONDO_CAJA_CHICA
                 dgvCajas.Columns(4).HeaderText = "CUENTA"
                 dgvCajas.Columns(4).Width = 80
                 dgvCajas.Columns(5).Visible = False
-                dgvCajas.Columns(6).Visible = False 
+                dgvCajas.Columns(6).Visible = False
                 dgvCajas.Columns(7).Visible = False
                 dgvCajas.Columns(8).Visible = False
                 dgvCajas.Columns(9).Visible = False
@@ -171,7 +172,7 @@ Namespace FORMULARIOS.FONDOS.FONDO_CAJA_CHICA
                 btnModificar.Enabled = dgvCajas.RowCount > 0 And Not dgvCajas.CurrentRow Is Nothing
             Catch
                 dgvCajas.DataSource = Nothing
-            End Try 
+            End Try
         End Sub
         Private Sub LimpiarCaja()
             txtIdCajaChica.Clear()
@@ -249,11 +250,13 @@ Namespace FORMULARIOS.FONDOS.FONDO_CAJA_CHICA
         End Sub
         Private Sub btnGuardar_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnGuardar.Click
             If Not Validacion() Then
-                MsgBox("No se puede guardar debido a que no ha llenado todos los parámetros nesesarios", MsgBoxStyle.Information, "Mensaje de validación")
+                KryptonMessageBox.Show("No se puede guardar debido a que no ha llenado todos los parámetros nesesarios", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
+
                 Return
             End If
 
-            If MessageBox.Show("¿Esta seguro que desea guardar?", "Mensaje de validación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> MsgBoxResult.Yes Then Return
+            If KryptonMessageBox.Show("¿Esta seguro que desea guardar?", "Mensaje de validación", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) <> MsgBoxResult.Yes Then Return
+
             _sqlCommands.Clear()
 
             Select Case (_botonSelecionado)
@@ -310,9 +313,13 @@ Namespace FORMULARIOS.FONDOS.FONDO_CAJA_CHICA
                 btnCancelar.Enabled = False
 
                 CargarCustodiosCajas()
+                KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
+            Else
+                KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+                Return
             End If
-            MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
-             
+
+
         End Sub
         Private Sub btnModificar_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnModificar.Click
             _botonSelecionado = 2

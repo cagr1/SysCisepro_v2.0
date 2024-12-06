@@ -253,7 +253,7 @@
             Me.txtBuscarProveedor.BackColor = System.Drawing.Color.White
             Me.txtBuscarProveedor.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtBuscarProveedor.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtBuscarProveedor.Location = New System.Drawing.Point(65, 85)
+            Me.txtBuscarProveedor.Location = New System.Drawing.Point(65, 80)
             Me.txtBuscarProveedor.Name = "txtBuscarProveedor"
             Me.txtBuscarProveedor.Size = New System.Drawing.Size(528, 22)
             Me.txtBuscarProveedor.TabIndex = 0
@@ -330,7 +330,7 @@
             '
             'KryptonLabel2
             '
-            Me.KryptonLabel2.Location = New System.Drawing.Point(10, 85)
+            Me.KryptonLabel2.Location = New System.Drawing.Point(10, 80)
             Me.KryptonLabel2.Name = "KryptonLabel2"
             Me.KryptonLabel2.Size = New System.Drawing.Size(46, 20)
             Me.KryptonLabel2.TabIndex = 188
@@ -340,7 +340,7 @@
             '
             Me.KryptonGroupBox1.CaptionOverlap = 0R
             Me.KryptonGroupBox1.GroupBackStyle = Krypton.Toolkit.PaletteBackStyle.ControlRibbon
-            Me.KryptonGroupBox1.Location = New System.Drawing.Point(5, 113)
+            Me.KryptonGroupBox1.Location = New System.Drawing.Point(5, 106)
             Me.KryptonGroupBox1.Name = "KryptonGroupBox1"
             '
             'KryptonGroupBox1.Panel
@@ -374,7 +374,7 @@
             Me.KryptonGroupBox1.Panel.Controls.Add(Me.txtNombreComercialProveedorGeneral)
             Me.KryptonGroupBox1.Panel.Controls.Add(Me.cmbTipoProveedorGeneral)
             Me.KryptonGroupBox1.Panel.Controls.Add(Me.cmbContabilidadProveedorGeneral)
-            Me.KryptonGroupBox1.Size = New System.Drawing.Size(601, 133)
+            Me.KryptonGroupBox1.Size = New System.Drawing.Size(601, 197)
             Me.KryptonGroupBox1.TabIndex = 189
             Me.KryptonGroupBox1.Values.Heading = "Datos"
             '
@@ -510,7 +510,7 @@
             DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
             DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
             Me.dgvProveedoresGeneral.DefaultCellStyle = DataGridViewCellStyle3
-            Me.dgvProveedoresGeneral.Location = New System.Drawing.Point(10, 252)
+            Me.dgvProveedoresGeneral.Location = New System.Drawing.Point(10, 309)
             Me.dgvProveedoresGeneral.Name = "dgvProveedoresGeneral"
             Me.dgvProveedoresGeneral.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
             DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
@@ -523,7 +523,7 @@
             Me.dgvProveedoresGeneral.RowHeadersDefaultCellStyle = DataGridViewCellStyle4
             Me.dgvProveedoresGeneral.RowHeadersVisible = False
             Me.dgvProveedoresGeneral.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvProveedoresGeneral.Size = New System.Drawing.Size(596, 292)
+            Me.dgvProveedoresGeneral.Size = New System.Drawing.Size(596, 224)
             Me.dgvProveedoresGeneral.TabIndex = 190
             '
             'FormMantenimientoProveedores

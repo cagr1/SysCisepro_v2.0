@@ -345,15 +345,15 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.ORDEN_DE_COMPRA
                 If res(0) Then
                     ' DEJA EL FORMULARIO EN SU ESTADO INICIAL
                     DeshabilitadoInicio()
+                    KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
+
+                Else
+                    KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+
+                    Return
                 End If
 
-                Dim messageIcon As KryptonMessageBoxIcon
-                If res(0) Then
-                    messageIcon = KryptonMessageBoxIcon.Information
-                Else
-                    messageIcon = KryptonMessageBoxIcon.Exclamation
-                End If
-                KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, messageIcon)
+
             Else
                 KryptonMessageBox.Show("NO HA LLENADO TODOS LOS PARAMETROS NECESARIOS", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
             End If

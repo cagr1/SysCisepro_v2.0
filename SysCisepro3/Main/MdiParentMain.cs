@@ -731,12 +731,12 @@ namespace SysCisepro3.Main
             // CARGAR ICONO Y DESIEÑO SEGUN SISTEMA
             DefinirTipoSistema();             
             timer1.Start();
-
+            
             //Image image = Resources.Your_paragraph_text__2_;
             // AdjustImageToFit(pictureBox1, image);
+            //this.MdiChildActivate += MdiParentMain_MdiChildActivate;
+            
 
-            
-            
 
         }
 
@@ -2163,6 +2163,32 @@ namespace SysCisepro3.Main
         {
             
         }
+
+        //private void MdiParentMain_MdiChildActivate(object sender, EventArgs e)
+        //{
+        //    if (this.ActiveMdiChild != null)
+        //    {
+        //        this.ActiveMdiChild.SizeChanged -= ChildWindow_SizeChanged;
+        //        this.ActiveMdiChild.SizeChanged += ChildWindow_SizeChanged;
+        //    }
+        //}
+
+
+        //private void ChildWindow_SizeChanged(object sender, EventArgs e)
+        //{
+        //    var childForm = sender as Form;
+
+        //    // Si la ventana hija está maximizada, enviamos el ToolStrip al fondo.
+        //    if (childForm.WindowState == FormWindowState.Maximized)
+        //    {
+        //        toolStrip1.SendToBack();
+        //    }
+        //    else
+        //    {
+        //        // Si no está maximizada, mantenemos el ToolStrip al frente.
+        //        toolStrip1.BringToFront();
+        //    }
+        //}
 
         private void AdjustImageToFit(PictureBox pbx, Image image)
         {

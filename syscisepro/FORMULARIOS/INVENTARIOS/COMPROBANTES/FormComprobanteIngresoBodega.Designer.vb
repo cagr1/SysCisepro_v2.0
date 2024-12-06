@@ -813,7 +813,6 @@
             Me.SALDO.HeaderText = "SALDO"
             Me.SALDO.Name = "SALDO"
             Me.SALDO.ReadOnly = True
-            Me.SALDO.Visible = False
             Me.SALDO.Width = 60
             '
             'CANTIDAD_SALDO
@@ -985,7 +984,7 @@
             Me.KryptonNavigator1.Location = New System.Drawing.Point(0, 32)
             Me.KryptonNavigator1.Name = "KryptonNavigator1"
             Me.KryptonNavigator1.Pages.AddRange(New ComponentFactory.Krypton.Navigator.KryptonPage() {Me.KryptonPage1, Me.KryptonPage2, Me.KryptonPage3})
-            Me.KryptonNavigator1.SelectedIndex = 0
+            Me.KryptonNavigator1.SelectedIndex = 1
             Me.KryptonNavigator1.Size = New System.Drawing.Size(952, 600)
             Me.KryptonNavigator1.TabIndex = 197
             Me.KryptonNavigator1.Text = "KryptonNavigator1"
@@ -2058,21 +2057,6 @@
         Friend WithEvents txtSerie As TextBox
         Friend WithEvents nudValor As NumericUpDown
         Friend WithEvents dgvSecuencial As DataGridView
-        Friend WithEvents CODIGO As DataGridViewTextBoxColumn
-        Friend WithEvents NOMBRE As DataGridViewTextBoxColumn
-        Friend WithEvents CANTIDAD As DataGridViewTextBoxColumn
-        Friend WithEvents VALOR As DataGridViewTextBoxColumn
-        Friend WithEvents TOTAL As DataGridViewTextBoxColumn
-        Friend WithEvents OBSERVACION As DataGridViewTextBoxColumn
-        Friend WithEvents DETALLES As DataGridViewTextBoxColumn
-        Friend WithEvents NUMERO_KARDEX As DataGridViewTextBoxColumn
-        Friend WithEvents DETALLE_KARDEX As DataGridViewTextBoxColumn
-        Friend WithEvents VALOR_UNITARIO_ANTERIOR As DataGridViewTextBoxColumn
-        Friend WithEvents VALOR_TOTAL_ANTERIOR As DataGridViewTextBoxColumn
-        Friend WithEvents SALDO As DataGridViewTextBoxColumn
-        Friend WithEvents CANTIDAD_SALDO As DataGridViewTextBoxColumn
-        Friend WithEvents VALOR_UNITARIO_SALDO As DataGridViewTextBoxColumn
-        Friend WithEvents ID_SECUENCIAL As DataGridViewTextBoxColumn
         Friend WithEvents tsmEliminar As Button
         Friend WithEvents tsmAgregar As Button
         Friend WithEvents txtObservacion As TextBox
@@ -2163,5 +2147,20 @@
         Friend WithEvents txtIdComprobante As TextBox
         Friend WithEvents KryptonButton1 As ComponentFactory.Krypton.Toolkit.KryptonButton
         Friend WithEvents btnExportarComprobantes As ComponentFactory.Krypton.Toolkit.KryptonButton
+        Friend WithEvents CODIGO As DataGridViewTextBoxColumn
+        Friend WithEvents NOMBRE As DataGridViewTextBoxColumn
+        Friend WithEvents CANTIDAD As DataGridViewTextBoxColumn
+        Friend WithEvents VALOR As DataGridViewTextBoxColumn
+        Friend WithEvents TOTAL As DataGridViewTextBoxColumn
+        Friend WithEvents OBSERVACION As DataGridViewTextBoxColumn
+        Friend WithEvents DETALLES As DataGridViewTextBoxColumn
+        Friend WithEvents NUMERO_KARDEX As DataGridViewTextBoxColumn
+        Friend WithEvents DETALLE_KARDEX As DataGridViewTextBoxColumn
+        Friend WithEvents VALOR_UNITARIO_ANTERIOR As DataGridViewTextBoxColumn
+        Friend WithEvents VALOR_TOTAL_ANTERIOR As DataGridViewTextBoxColumn
+        Friend WithEvents SALDO As DataGridViewTextBoxColumn
+        Friend WithEvents CANTIDAD_SALDO As DataGridViewTextBoxColumn
+        Friend WithEvents VALOR_UNITARIO_SALDO As DataGridViewTextBoxColumn
+        Friend WithEvents ID_SECUENCIAL As DataGridViewTextBoxColumn
     End Class
 End Namespace

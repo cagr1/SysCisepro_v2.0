@@ -50,16 +50,21 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
         Dim _estadoFactura As Integer = 0
 
         Private Sub DeshabilitadoInicio()
-            gbClienteGeneral.Enabled = False 
-            gbBuscarFactura.Enabled = False
-            gbDatosFacturaVenta.Enabled = False
+            'gbClienteGeneral.Enabled = False
+            txtNombreComercialCliente.Enabled = False
+            'gbBuscarFactura.Enabled = False
+            txtNumeroFacturaBuscar.Enabled = False
+            'gbDatosFacturaVenta.Enabled = False
+            dtpFechaEmisionFacturaVenta.Enabled = False
             btnNuevo.Enabled = True 
             btnCancelar.Enabled = False
             btnGuardar.Enabled = False
         End Sub
         Private Sub HabilitadoNuevo()
-            gbClienteGeneral.Enabled = True
-            gbBuscarFactura.Enabled = True
+            'gbClienteGeneral.Enabled = True
+            txtNombreComercialCliente.Enabled = True
+            'gbBuscarFactura.Enabled = True
+            txtNumeroFacturaBuscar.Enabled = True
             btnNuevo.Enabled = False 
             btnCancelar.Enabled = True
             btnGuardar.Enabled = True
@@ -89,7 +94,8 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
 
                 End If
             Catch ex As Exception
-                MsgBox("CARGAR DATOS EMPRESA." & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
+                'MsgBox("CARGAR DATOS EMPRESA." & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
+                KryptonMessageBox.Show("Cargar datos empresa." & vbNewLine & ex.Message.ToString, "Mensaje de excepción", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
         Private Sub AutocompletarNombreCliente()
@@ -111,7 +117,8 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                     lblLlevaContabilidadClienteGeneral.Text = cli.Rows(0)(7)
                 End If
             Catch ex As Exception
-                MsgBox("CARGAR DATOS CLIENTE." & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
+                'MsgBox("CARGAR DATOS CLIENTE." & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
+                KryptonMessageBox.Show("Cargar datos cliente." & vbNewLine & ex.Message.ToString, "Mensaje de excepción", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
         Private Sub CargarFacturasVentaXIdCliente()
@@ -120,7 +127,8 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                 dgvFacturaVenta.AutoResizeColumns()
                 dgvFacturaVenta.AutoResizeRows()
             Catch ex As Exception
-                MsgBox("METODO CARGAR FACTURA VENTA" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
+                'MsgBox("METODO CARGAR FACTURA VENTA" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
+                KryptonMessageBox.Show("Metodo cargar factura venta" & vbNewLine & ex.Message.ToString, "Mensaje de excepción", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
         Private Sub CargarFacturasVentaXNroFactura()
@@ -129,7 +137,8 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                 dgvFacturaVenta.AutoResizeColumns()
                 dgvFacturaVenta.AutoResizeRows()
             Catch ex As Exception
-                MsgBox("METODO CARGAR FACTURA VENTA" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
+                'MsgBox("METODO CARGAR FACTURA VENTA" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
+                KryptonMessageBox.Show("Metodo cargar factura venta" & vbNewLine & ex.Message.ToString, "Mensaje de excepción", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
         Private Sub FormAjustarFacturasVenta_Load(ByVal sender As System.Object, ByVal e As EventArgs) Handles MyBase.Load
@@ -166,7 +175,8 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
         End Sub
         Private Sub btnGuardar_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnGuardar.Click
             If lblIdClienteGeneral.Text <> "..." And lblIdFacturaVenta.Text <> "..." Then
-                If KryptonMessageBox.Show("¿ESTA SEGURA QUE DESEA GUARDAR LOS CAMBIOS?", "Mensaje de validación", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) <> DialogResult.Yes Then Return
+
+                If KryptonMessageBox.Show("¿Esta segura que desea guardar los cambios?", "Mensaje de validación", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) <> DialogResult.Yes Then Return
                 _sqlCommands.Clear()
 
                 ModificarFacturaVenta()
@@ -178,15 +188,12 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                 If res(0) Then
                     LimpiarParametros()
                     DeshabilitadoInicio()
-                End If
-                Dim messageIcon As KryptonMessageBoxIcon
-                If res(0) Then
-                    messageIcon = KryptonMessageBoxIcon.Information
+                    KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
                 Else
-                    messageIcon = KryptonMessageBoxIcon.Exclamation
+                    KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+                    Return
                 End If
-                KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, messageIcon)
-                'MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema") 
+
             End If
         End Sub
         Private Sub dgvFacturaVenta_SelectionChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles dgvFacturaVenta.SelectionChanged
@@ -219,7 +226,8 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
             If e.KeyCode <> Keys.Enter Then Return
             CargarDatosCliente()
             CargarFacturasVentaXIdCliente()
-            gbBuscarFactura.Enabled = True
+            'gbBuscarFactura.Enabled = True
+            txtNumeroFacturaBuscar.Enabled = True
         End Sub
         Private Sub btnBuscarAsiento_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnBuscarAsiento.Click
             cargarFacturasVentaXNroFactura()

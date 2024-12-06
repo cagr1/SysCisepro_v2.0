@@ -83,31 +83,6 @@
             Me.btnGuardarSolicitudFR = New System.Windows.Forms.ToolStripMenuItem()
             Me.btnCancelarSolicitudFR = New System.Windows.Forms.ToolStripMenuItem()
             Me.chkCombustible = New System.Windows.Forms.CheckBox()
-            Me.txtFechaControl = New System.Windows.Forms.DateTimePicker()
-            Me.gbLlegadaVehiculo = New System.Windows.Forms.GroupBox()
-            Me.dtpHoraLlegadaVehiculo = New System.Windows.Forms.DateTimePicker()
-            Me.dtpFechaLlegadaVehiculo = New System.Windows.Forms.DateTimePicker()
-            Me.txtKmLlegadaVehiculo = New System.Windows.Forms.TextBox()
-            Me.LblKilometrajeLlegadaVehiculo = New System.Windows.Forms.Label()
-            Me.lblHoraLlegadaVehiculo = New System.Windows.Forms.Label()
-            Me.lblFechaLlegadaVehiculo = New System.Windows.Forms.Label()
-            Me.txtIdActivoFijo = New System.Windows.Forms.TextBox()
-            Me.btnBuscarVehiculo = New System.Windows.Forms.Button()
-            Me.txtPlacaVehiculo = New System.Windows.Forms.TextBox()
-            Me.txtModeloVehiculo = New System.Windows.Forms.TextBox()
-            Me.txtMarcaVehiculo = New System.Windows.Forms.TextBox()
-            Me.txtTotalKmControlC = New System.Windows.Forms.TextBox()
-            Me.gpSalidaVehiculo = New System.Windows.Forms.GroupBox()
-            Me.Label2 = New System.Windows.Forms.Label()
-            Me.Label1 = New System.Windows.Forms.Label()
-            Me.dtpHoraSalidaVehiculo = New System.Windows.Forms.DateTimePicker()
-            Me.dtpFechaSalidaVehiculo = New System.Windows.Forms.DateTimePicker()
-            Me.txtKmSalidaVehiculo = New System.Windows.Forms.TextBox()
-            Me.lblKilometrajeSalidaVehiculo = New System.Windows.Forms.Label()
-            Me.cbmCombustible = New System.Windows.Forms.ComboBox()
-            Me.txtMotivoControlC = New System.Windows.Forms.TextBox()
-            Me.txtDestinoControlC = New System.Windows.Forms.TextBox()
-            Me.txtValorControl = New System.Windows.Forms.TextBox()
             Me.lblMontoFondoRotativo = New System.Windows.Forms.Label()
             Me.Label3 = New System.Windows.Forms.Label()
             Me.lblMontoAsignado = New System.Windows.Forms.Label()
@@ -137,32 +112,54 @@
             Me.KryptonLabel4 = New ComponentFactory.Krypton.Toolkit.KryptonLabel()
             Me.KryptonLabel2 = New ComponentFactory.Krypton.Toolkit.KryptonLabel()
             Me.KryptonLabel1 = New ComponentFactory.Krypton.Toolkit.KryptonLabel()
-            Me.gbCombustible = New ComponentFactory.Krypton.Toolkit.KryptonGroupBox()
+            Me.GroupBox3 = New System.Windows.Forms.GroupBox()
             Me.KryptonLabel32 = New ComponentFactory.Krypton.Toolkit.KryptonLabel()
+            Me.gbLlegadaVehiculo = New System.Windows.Forms.GroupBox()
+            Me.dtpHoraLlegadaVehiculo = New System.Windows.Forms.DateTimePicker()
+            Me.dtpFechaLlegadaVehiculo = New System.Windows.Forms.DateTimePicker()
+            Me.txtKmLlegadaVehiculo = New System.Windows.Forms.TextBox()
+            Me.LblKilometrajeLlegadaVehiculo = New System.Windows.Forms.Label()
+            Me.lblHoraLlegadaVehiculo = New System.Windows.Forms.Label()
+            Me.lblFechaLlegadaVehiculo = New System.Windows.Forms.Label()
             Me.KryptonLabel31 = New ComponentFactory.Krypton.Toolkit.KryptonLabel()
+            Me.gpSalidaVehiculo = New System.Windows.Forms.GroupBox()
+            Me.Label2 = New System.Windows.Forms.Label()
+            Me.Label1 = New System.Windows.Forms.Label()
+            Me.dtpHoraSalidaVehiculo = New System.Windows.Forms.DateTimePicker()
+            Me.dtpFechaSalidaVehiculo = New System.Windows.Forms.DateTimePicker()
+            Me.txtKmSalidaVehiculo = New System.Windows.Forms.TextBox()
+            Me.lblKilometrajeSalidaVehiculo = New System.Windows.Forms.Label()
+            Me.txtTotalKmControlC = New System.Windows.Forms.TextBox()
             Me.KryptonLabel33 = New ComponentFactory.Krypton.Toolkit.KryptonLabel()
             Me.KryptonLabel34 = New ComponentFactory.Krypton.Toolkit.KryptonLabel()
             Me.KryptonLabel37 = New ComponentFactory.Krypton.Toolkit.KryptonLabel()
             Me.KryptonLabel36 = New ComponentFactory.Krypton.Toolkit.KryptonLabel()
             Me.KryptonLabel30 = New ComponentFactory.Krypton.Toolkit.KryptonLabel()
             Me.KryptonLabel29 = New ComponentFactory.Krypton.Toolkit.KryptonLabel()
+            Me.cbmCombustible = New System.Windows.Forms.ComboBox()
+            Me.txtMotivoControlC = New System.Windows.Forms.TextBox()
             Me.KryptonLabel28 = New ComponentFactory.Krypton.Toolkit.KryptonLabel()
             Me.KryptonLabel27 = New ComponentFactory.Krypton.Toolkit.KryptonLabel()
             Me.KryptonLabel26 = New ComponentFactory.Krypton.Toolkit.KryptonLabel()
+            Me.txtValorControl = New System.Windows.Forms.TextBox()
+            Me.btnBuscarVehiculo = New System.Windows.Forms.Button()
+            Me.txtPlacaVehiculo = New System.Windows.Forms.TextBox()
+            Me.txtIdActivoFijo = New System.Windows.Forms.TextBox()
+            Me.txtModeloVehiculo = New System.Windows.Forms.TextBox()
+            Me.txtFechaControl = New System.Windows.Forms.DateTimePicker()
+            Me.txtDestinoControlC = New System.Windows.Forms.TextBox()
+            Me.txtMarcaVehiculo = New System.Windows.Forms.TextBox()
             Me.gbReferencia.SuspendLayout()
             CType(Me.dgvDetallesRetencion, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.dgvAsientosDiario, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.MenuStrip1.SuspendLayout()
-            Me.gbLlegadaVehiculo.SuspendLayout()
-            Me.gpSalidaVehiculo.SuspendLayout()
             CType(Me.KryptonGroupBox1, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.KryptonGroupBox1.Panel, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.KryptonGroupBox1.Panel.SuspendLayout()
             Me.KryptonGroupBox1.SuspendLayout()
-            CType(Me.gbCombustible, System.ComponentModel.ISupportInitialize).BeginInit()
-            CType(Me.gbCombustible.Panel, System.ComponentModel.ISupportInitialize).BeginInit()
-            Me.gbCombustible.Panel.SuspendLayout()
-            Me.gbCombustible.SuspendLayout()
+            Me.GroupBox3.SuspendLayout()
+            Me.gbLlegadaVehiculo.SuspendLayout()
+            Me.gpSalidaVehiculo.SuspendLayout()
             Me.SuspendLayout()
             '
             'txtNroSolicitudFR
@@ -180,7 +177,6 @@
             Me.cmbCentroCosto.BackColor = System.Drawing.Color.White
             Me.cmbCentroCosto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cmbCentroCosto.Enabled = False
-            Me.cmbCentroCosto.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.cmbCentroCosto.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cmbCentroCosto.ForeColor = System.Drawing.Color.Black
             Me.cmbCentroCosto.FormattingEnabled = True
@@ -194,7 +190,6 @@
             Me.cmbParroquia.BackColor = System.Drawing.Color.White
             Me.cmbParroquia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cmbParroquia.Enabled = False
-            Me.cmbParroquia.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.cmbParroquia.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cmbParroquia.ForeColor = System.Drawing.Color.Black
             Me.cmbParroquia.FormattingEnabled = True
@@ -208,7 +203,6 @@
             Me.cmbCanton.BackColor = System.Drawing.Color.White
             Me.cmbCanton.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cmbCanton.Enabled = False
-            Me.cmbCanton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.cmbCanton.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cmbCanton.ForeColor = System.Drawing.Color.Black
             Me.cmbCanton.FormattingEnabled = True
@@ -236,7 +230,6 @@
             Me.cmbConcepto.BackColor = System.Drawing.Color.White
             Me.cmbConcepto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cmbConcepto.Enabled = False
-            Me.cmbConcepto.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.cmbConcepto.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cmbConcepto.ForeColor = System.Drawing.Color.Black
             Me.cmbConcepto.FormattingEnabled = True
@@ -644,7 +637,6 @@
             Me.cmbNombreParametroDocumentos.BackColor = System.Drawing.Color.White
             Me.cmbNombreParametroDocumentos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cmbNombreParametroDocumentos.Enabled = False
-            Me.cmbNombreParametroDocumentos.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.cmbNombreParametroDocumentos.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cmbNombreParametroDocumentos.FormattingEnabled = True
             Me.cmbNombreParametroDocumentos.Location = New System.Drawing.Point(91, 231)
@@ -706,278 +698,6 @@
             Me.chkCombustible.TabIndex = 23
             Me.chkCombustible.Text = "Control de Combustible"
             Me.chkCombustible.UseVisualStyleBackColor = False
-            '
-            'txtFechaControl
-            '
-            Me.txtFechaControl.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-            Me.txtFechaControl.Location = New System.Drawing.Point(73, 6)
-            Me.txtFechaControl.Name = "txtFechaControl"
-            Me.txtFechaControl.Size = New System.Drawing.Size(99, 22)
-            Me.txtFechaControl.TabIndex = 24
-            '
-            'gbLlegadaVehiculo
-            '
-            Me.gbLlegadaVehiculo.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(247, Byte), Integer))
-            Me.gbLlegadaVehiculo.Controls.Add(Me.dtpHoraLlegadaVehiculo)
-            Me.gbLlegadaVehiculo.Controls.Add(Me.dtpFechaLlegadaVehiculo)
-            Me.gbLlegadaVehiculo.Controls.Add(Me.txtKmLlegadaVehiculo)
-            Me.gbLlegadaVehiculo.Controls.Add(Me.LblKilometrajeLlegadaVehiculo)
-            Me.gbLlegadaVehiculo.Controls.Add(Me.lblHoraLlegadaVehiculo)
-            Me.gbLlegadaVehiculo.Controls.Add(Me.lblFechaLlegadaVehiculo)
-            Me.gbLlegadaVehiculo.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.gbLlegadaVehiculo.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
-            Me.gbLlegadaVehiculo.Location = New System.Drawing.Point(453, 66)
-            Me.gbLlegadaVehiculo.Name = "gbLlegadaVehiculo"
-            Me.gbLlegadaVehiculo.Size = New System.Drawing.Size(165, 95)
-            Me.gbLlegadaVehiculo.TabIndex = 32
-            Me.gbLlegadaVehiculo.TabStop = False
-            Me.gbLlegadaVehiculo.Text = "Llegada"
-            '
-            'dtpHoraLlegadaVehiculo
-            '
-            Me.dtpHoraLlegadaVehiculo.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.dtpHoraLlegadaVehiculo.Format = System.Windows.Forms.DateTimePickerFormat.Time
-            Me.dtpHoraLlegadaVehiculo.Location = New System.Drawing.Point(49, 42)
-            Me.dtpHoraLlegadaVehiculo.Name = "dtpHoraLlegadaVehiculo"
-            Me.dtpHoraLlegadaVehiculo.ShowUpDown = True
-            Me.dtpHoraLlegadaVehiculo.Size = New System.Drawing.Size(110, 21)
-            Me.dtpHoraLlegadaVehiculo.TabIndex = 36
-            '
-            'dtpFechaLlegadaVehiculo
-            '
-            Me.dtpFechaLlegadaVehiculo.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.dtpFechaLlegadaVehiculo.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-            Me.dtpFechaLlegadaVehiculo.Location = New System.Drawing.Point(49, 19)
-            Me.dtpFechaLlegadaVehiculo.Name = "dtpFechaLlegadaVehiculo"
-            Me.dtpFechaLlegadaVehiculo.Size = New System.Drawing.Size(110, 21)
-            Me.dtpFechaLlegadaVehiculo.TabIndex = 35
-            '
-            'txtKmLlegadaVehiculo
-            '
-            Me.txtKmLlegadaVehiculo.BackColor = System.Drawing.Color.White
-            Me.txtKmLlegadaVehiculo.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtKmLlegadaVehiculo.Location = New System.Drawing.Point(49, 65)
-            Me.txtKmLlegadaVehiculo.Name = "txtKmLlegadaVehiculo"
-            Me.txtKmLlegadaVehiculo.Size = New System.Drawing.Size(110, 21)
-            Me.txtKmLlegadaVehiculo.TabIndex = 37
-            Me.txtKmLlegadaVehiculo.Text = "0"
-            '
-            'LblKilometrajeLlegadaVehiculo
-            '
-            Me.LblKilometrajeLlegadaVehiculo.AutoSize = True
-            Me.LblKilometrajeLlegadaVehiculo.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.LblKilometrajeLlegadaVehiculo.Location = New System.Drawing.Point(8, 68)
-            Me.LblKilometrajeLlegadaVehiculo.Name = "LblKilometrajeLlegadaVehiculo"
-            Me.LblKilometrajeLlegadaVehiculo.Size = New System.Drawing.Size(24, 13)
-            Me.LblKilometrajeLlegadaVehiculo.TabIndex = 2
-            Me.LblKilometrajeLlegadaVehiculo.Text = "Km"
-            '
-            'lblHoraLlegadaVehiculo
-            '
-            Me.lblHoraLlegadaVehiculo.AutoSize = True
-            Me.lblHoraLlegadaVehiculo.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.lblHoraLlegadaVehiculo.Location = New System.Drawing.Point(8, 45)
-            Me.lblHoraLlegadaVehiculo.Name = "lblHoraLlegadaVehiculo"
-            Me.lblHoraLlegadaVehiculo.Size = New System.Drawing.Size(31, 13)
-            Me.lblHoraLlegadaVehiculo.TabIndex = 1
-            Me.lblHoraLlegadaVehiculo.Text = "Hora"
-            '
-            'lblFechaLlegadaVehiculo
-            '
-            Me.lblFechaLlegadaVehiculo.AutoSize = True
-            Me.lblFechaLlegadaVehiculo.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.lblFechaLlegadaVehiculo.Location = New System.Drawing.Point(8, 22)
-            Me.lblFechaLlegadaVehiculo.Name = "lblFechaLlegadaVehiculo"
-            Me.lblFechaLlegadaVehiculo.Size = New System.Drawing.Size(37, 13)
-            Me.lblFechaLlegadaVehiculo.TabIndex = 0
-            Me.lblFechaLlegadaVehiculo.Text = "Fecha"
-            '
-            'txtIdActivoFijo
-            '
-            Me.txtIdActivoFijo.BackColor = System.Drawing.Color.White
-            Me.txtIdActivoFijo.Enabled = False
-            Me.txtIdActivoFijo.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtIdActivoFijo.Location = New System.Drawing.Point(73, 76)
-            Me.txtIdActivoFijo.Name = "txtIdActivoFijo"
-            Me.txtIdActivoFijo.Size = New System.Drawing.Size(99, 21)
-            Me.txtIdActivoFijo.TabIndex = 30
-            Me.txtIdActivoFijo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-            '
-            'btnBuscarVehiculo
-            '
-            Me.btnBuscarVehiculo.Cursor = System.Windows.Forms.Cursors.Hand
-            Me.btnBuscarVehiculo.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-            Me.btnBuscarVehiculo.Location = New System.Drawing.Point(188, 74)
-            Me.btnBuscarVehiculo.Name = "btnBuscarVehiculo"
-            Me.btnBuscarVehiculo.Size = New System.Drawing.Size(26, 24)
-            Me.btnBuscarVehiculo.TabIndex = 32
-            Me.btnBuscarVehiculo.Text = "..."
-            Me.btnBuscarVehiculo.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-            Me.btnBuscarVehiculo.UseVisualStyleBackColor = True
-            '
-            'txtPlacaVehiculo
-            '
-            Me.txtPlacaVehiculo.BackColor = System.Drawing.Color.White
-            Me.txtPlacaVehiculo.Enabled = False
-            Me.txtPlacaVehiculo.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtPlacaVehiculo.Location = New System.Drawing.Point(281, 107)
-            Me.txtPlacaVehiculo.Name = "txtPlacaVehiculo"
-            Me.txtPlacaVehiculo.Size = New System.Drawing.Size(141, 21)
-            Me.txtPlacaVehiculo.TabIndex = 34
-            Me.txtPlacaVehiculo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-            '
-            'txtModeloVehiculo
-            '
-            Me.txtModeloVehiculo.BackColor = System.Drawing.Color.White
-            Me.txtModeloVehiculo.Enabled = False
-            Me.txtModeloVehiculo.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtModeloVehiculo.Location = New System.Drawing.Point(280, 76)
-            Me.txtModeloVehiculo.Name = "txtModeloVehiculo"
-            Me.txtModeloVehiculo.Size = New System.Drawing.Size(141, 21)
-            Me.txtModeloVehiculo.TabIndex = 33
-            Me.txtModeloVehiculo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-            '
-            'txtMarcaVehiculo
-            '
-            Me.txtMarcaVehiculo.BackColor = System.Drawing.Color.White
-            Me.txtMarcaVehiculo.Enabled = False
-            Me.txtMarcaVehiculo.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtMarcaVehiculo.Location = New System.Drawing.Point(73, 107)
-            Me.txtMarcaVehiculo.Name = "txtMarcaVehiculo"
-            Me.txtMarcaVehiculo.Size = New System.Drawing.Size(141, 21)
-            Me.txtMarcaVehiculo.TabIndex = 31
-            Me.txtMarcaVehiculo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-            '
-            'txtTotalKmControlC
-            '
-            Me.txtTotalKmControlC.BackColor = System.Drawing.Color.White
-            Me.txtTotalKmControlC.Enabled = False
-            Me.txtTotalKmControlC.Location = New System.Drawing.Point(747, 9)
-            Me.txtTotalKmControlC.Name = "txtTotalKmControlC"
-            Me.txtTotalKmControlC.Size = New System.Drawing.Size(47, 22)
-            Me.txtTotalKmControlC.TabIndex = 29
-            Me.txtTotalKmControlC.Text = "0"
-            Me.txtTotalKmControlC.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-            '
-            'gpSalidaVehiculo
-            '
-            Me.gpSalidaVehiculo.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(247, Byte), Integer))
-            Me.gpSalidaVehiculo.Controls.Add(Me.Label2)
-            Me.gpSalidaVehiculo.Controls.Add(Me.Label1)
-            Me.gpSalidaVehiculo.Controls.Add(Me.dtpHoraSalidaVehiculo)
-            Me.gpSalidaVehiculo.Controls.Add(Me.dtpFechaSalidaVehiculo)
-            Me.gpSalidaVehiculo.Controls.Add(Me.txtKmSalidaVehiculo)
-            Me.gpSalidaVehiculo.Controls.Add(Me.lblKilometrajeSalidaVehiculo)
-            Me.gpSalidaVehiculo.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.gpSalidaVehiculo.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
-            Me.gpSalidaVehiculo.Location = New System.Drawing.Point(641, 65)
-            Me.gpSalidaVehiculo.Name = "gpSalidaVehiculo"
-            Me.gpSalidaVehiculo.Size = New System.Drawing.Size(165, 95)
-            Me.gpSalidaVehiculo.TabIndex = 31
-            Me.gpSalidaVehiculo.TabStop = False
-            Me.gpSalidaVehiculo.Text = "Salida"
-            '
-            'Label2
-            '
-            Me.Label2.AutoSize = True
-            Me.Label2.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label2.Location = New System.Drawing.Point(6, 46)
-            Me.Label2.Name = "Label2"
-            Me.Label2.Size = New System.Drawing.Size(31, 13)
-            Me.Label2.TabIndex = 38
-            Me.Label2.Text = "Hora"
-            '
-            'Label1
-            '
-            Me.Label1.AutoSize = True
-            Me.Label1.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label1.Location = New System.Drawing.Point(6, 23)
-            Me.Label1.Name = "Label1"
-            Me.Label1.Size = New System.Drawing.Size(37, 13)
-            Me.Label1.TabIndex = 38
-            Me.Label1.Text = "Fecha"
-            '
-            'dtpHoraSalidaVehiculo
-            '
-            Me.dtpHoraSalidaVehiculo.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.dtpHoraSalidaVehiculo.Format = System.Windows.Forms.DateTimePickerFormat.Time
-            Me.dtpHoraSalidaVehiculo.Location = New System.Drawing.Point(46, 42)
-            Me.dtpHoraSalidaVehiculo.Name = "dtpHoraSalidaVehiculo"
-            Me.dtpHoraSalidaVehiculo.ShowUpDown = True
-            Me.dtpHoraSalidaVehiculo.Size = New System.Drawing.Size(110, 21)
-            Me.dtpHoraSalidaVehiculo.TabIndex = 39
-            '
-            'dtpFechaSalidaVehiculo
-            '
-            Me.dtpFechaSalidaVehiculo.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.dtpFechaSalidaVehiculo.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-            Me.dtpFechaSalidaVehiculo.Location = New System.Drawing.Point(46, 19)
-            Me.dtpFechaSalidaVehiculo.Name = "dtpFechaSalidaVehiculo"
-            Me.dtpFechaSalidaVehiculo.Size = New System.Drawing.Size(110, 21)
-            Me.dtpFechaSalidaVehiculo.TabIndex = 38
-            '
-            'txtKmSalidaVehiculo
-            '
-            Me.txtKmSalidaVehiculo.BackColor = System.Drawing.Color.White
-            Me.txtKmSalidaVehiculo.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtKmSalidaVehiculo.Location = New System.Drawing.Point(46, 65)
-            Me.txtKmSalidaVehiculo.Name = "txtKmSalidaVehiculo"
-            Me.txtKmSalidaVehiculo.Size = New System.Drawing.Size(110, 21)
-            Me.txtKmSalidaVehiculo.TabIndex = 40
-            Me.txtKmSalidaVehiculo.Text = "0"
-            '
-            'lblKilometrajeSalidaVehiculo
-            '
-            Me.lblKilometrajeSalidaVehiculo.AutoSize = True
-            Me.lblKilometrajeSalidaVehiculo.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.lblKilometrajeSalidaVehiculo.Location = New System.Drawing.Point(6, 68)
-            Me.lblKilometrajeSalidaVehiculo.Name = "lblKilometrajeSalidaVehiculo"
-            Me.lblKilometrajeSalidaVehiculo.Size = New System.Drawing.Size(24, 13)
-            Me.lblKilometrajeSalidaVehiculo.TabIndex = 2
-            Me.lblKilometrajeSalidaVehiculo.Text = "Km"
-            '
-            'cbmCombustible
-            '
-            Me.cbmCombustible.BackColor = System.Drawing.Color.White
-            Me.cbmCombustible.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-            Me.cbmCombustible.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-            Me.cbmCombustible.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.cbmCombustible.FormattingEnabled = True
-            Me.cbmCombustible.Location = New System.Drawing.Point(358, 7)
-            Me.cbmCombustible.Name = "cbmCombustible"
-            Me.cbmCombustible.Size = New System.Drawing.Size(175, 21)
-            Me.cbmCombustible.TabIndex = 25
-            '
-            'txtMotivoControlC
-            '
-            Me.txtMotivoControlC.BackColor = System.Drawing.Color.White
-            Me.txtMotivoControlC.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-            Me.txtMotivoControlC.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtMotivoControlC.Location = New System.Drawing.Point(513, 38)
-            Me.txtMotivoControlC.Name = "txtMotivoControlC"
-            Me.txtMotivoControlC.Size = New System.Drawing.Size(283, 21)
-            Me.txtMotivoControlC.TabIndex = 28
-            '
-            'txtDestinoControlC
-            '
-            Me.txtDestinoControlC.BackColor = System.Drawing.Color.White
-            Me.txtDestinoControlC.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-            Me.txtDestinoControlC.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtDestinoControlC.Location = New System.Drawing.Point(73, 35)
-            Me.txtDestinoControlC.Name = "txtDestinoControlC"
-            Me.txtDestinoControlC.Size = New System.Drawing.Size(274, 21)
-            Me.txtDestinoControlC.TabIndex = 27
-            '
-            'txtValorControl
-            '
-            Me.txtValorControl.BackColor = System.Drawing.Color.White
-            Me.txtValorControl.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtValorControl.ForeColor = System.Drawing.Color.Black
-            Me.txtValorControl.Location = New System.Drawing.Point(595, 7)
-            Me.txtValorControl.Name = "txtValorControl"
-            Me.txtValorControl.Size = New System.Drawing.Size(83, 21)
-            Me.txtValorControl.TabIndex = 26
-            Me.txtValorControl.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
             '
             'lblMontoFondoRotativo
             '
@@ -1281,139 +1001,405 @@
             Me.KryptonLabel1.TabIndex = 0
             Me.KryptonLabel1.Values.Text = "Nro "
             '
-            'gbCombustible
+            'GroupBox3
             '
-            Me.gbCombustible.GroupBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.ButtonAlternate
-            Me.gbCombustible.Location = New System.Drawing.Point(0, 354)
-            Me.gbCombustible.Name = "gbCombustible"
-            '
-            'gbCombustible.Panel
-            '
-            Me.gbCombustible.Panel.Controls.Add(Me.KryptonLabel32)
-            Me.gbCombustible.Panel.Controls.Add(Me.gbLlegadaVehiculo)
-            Me.gbCombustible.Panel.Controls.Add(Me.KryptonLabel31)
-            Me.gbCombustible.Panel.Controls.Add(Me.gpSalidaVehiculo)
-            Me.gbCombustible.Panel.Controls.Add(Me.txtTotalKmControlC)
-            Me.gbCombustible.Panel.Controls.Add(Me.KryptonLabel33)
-            Me.gbCombustible.Panel.Controls.Add(Me.KryptonLabel34)
-            Me.gbCombustible.Panel.Controls.Add(Me.KryptonLabel37)
-            Me.gbCombustible.Panel.Controls.Add(Me.KryptonLabel36)
-            Me.gbCombustible.Panel.Controls.Add(Me.KryptonLabel30)
-            Me.gbCombustible.Panel.Controls.Add(Me.KryptonLabel29)
-            Me.gbCombustible.Panel.Controls.Add(Me.cbmCombustible)
-            Me.gbCombustible.Panel.Controls.Add(Me.txtMotivoControlC)
-            Me.gbCombustible.Panel.Controls.Add(Me.KryptonLabel28)
-            Me.gbCombustible.Panel.Controls.Add(Me.KryptonLabel27)
-            Me.gbCombustible.Panel.Controls.Add(Me.KryptonLabel26)
-            Me.gbCombustible.Panel.Controls.Add(Me.txtValorControl)
-            Me.gbCombustible.Panel.Controls.Add(Me.btnBuscarVehiculo)
-            Me.gbCombustible.Panel.Controls.Add(Me.txtPlacaVehiculo)
-            Me.gbCombustible.Panel.Controls.Add(Me.txtIdActivoFijo)
-            Me.gbCombustible.Panel.Controls.Add(Me.txtModeloVehiculo)
-            Me.gbCombustible.Panel.Controls.Add(Me.txtFechaControl)
-            Me.gbCombustible.Panel.Controls.Add(Me.txtDestinoControlC)
-            Me.gbCombustible.Panel.Controls.Add(Me.txtMarcaVehiculo)
-            Me.gbCombustible.Panel.Enabled = False
-            Me.gbCombustible.Size = New System.Drawing.Size(828, 173)
-            Me.gbCombustible.TabIndex = 193
-            Me.gbCombustible.Values.Heading = ""
+            Me.GroupBox3.Controls.Add(Me.KryptonLabel32)
+            Me.GroupBox3.Controls.Add(Me.gbLlegadaVehiculo)
+            Me.GroupBox3.Controls.Add(Me.KryptonLabel31)
+            Me.GroupBox3.Controls.Add(Me.gpSalidaVehiculo)
+            Me.GroupBox3.Controls.Add(Me.txtTotalKmControlC)
+            Me.GroupBox3.Controls.Add(Me.KryptonLabel33)
+            Me.GroupBox3.Controls.Add(Me.KryptonLabel34)
+            Me.GroupBox3.Controls.Add(Me.KryptonLabel37)
+            Me.GroupBox3.Controls.Add(Me.KryptonLabel36)
+            Me.GroupBox3.Controls.Add(Me.KryptonLabel30)
+            Me.GroupBox3.Controls.Add(Me.KryptonLabel29)
+            Me.GroupBox3.Controls.Add(Me.cbmCombustible)
+            Me.GroupBox3.Controls.Add(Me.txtMotivoControlC)
+            Me.GroupBox3.Controls.Add(Me.KryptonLabel28)
+            Me.GroupBox3.Controls.Add(Me.KryptonLabel27)
+            Me.GroupBox3.Controls.Add(Me.KryptonLabel26)
+            Me.GroupBox3.Controls.Add(Me.txtValorControl)
+            Me.GroupBox3.Controls.Add(Me.btnBuscarVehiculo)
+            Me.GroupBox3.Controls.Add(Me.txtPlacaVehiculo)
+            Me.GroupBox3.Controls.Add(Me.txtIdActivoFijo)
+            Me.GroupBox3.Controls.Add(Me.txtModeloVehiculo)
+            Me.GroupBox3.Controls.Add(Me.txtFechaControl)
+            Me.GroupBox3.Controls.Add(Me.txtDestinoControlC)
+            Me.GroupBox3.Controls.Add(Me.txtMarcaVehiculo)
+            Me.GroupBox3.Location = New System.Drawing.Point(5, 354)
+            Me.GroupBox3.Name = "GroupBox3"
+            Me.GroupBox3.Size = New System.Drawing.Size(816, 174)
+            Me.GroupBox3.TabIndex = 193
+            Me.GroupBox3.TabStop = False
             '
             'KryptonLabel32
             '
-            Me.KryptonLabel32.Location = New System.Drawing.Point(682, 11)
+            Me.KryptonLabel32.Location = New System.Drawing.Point(682, 15)
             Me.KryptonLabel32.Name = "KryptonLabel32"
             Me.KryptonLabel32.Size = New System.Drawing.Size(59, 20)
-            Me.KryptonLabel32.TabIndex = 216
+            Me.KryptonLabel32.TabIndex = 264
             Me.KryptonLabel32.Values.Text = "Total Km"
+            '
+            'gbLlegadaVehiculo
+            '
+            Me.gbLlegadaVehiculo.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(247, Byte), Integer))
+            Me.gbLlegadaVehiculo.Controls.Add(Me.dtpHoraLlegadaVehiculo)
+            Me.gbLlegadaVehiculo.Controls.Add(Me.dtpFechaLlegadaVehiculo)
+            Me.gbLlegadaVehiculo.Controls.Add(Me.txtKmLlegadaVehiculo)
+            Me.gbLlegadaVehiculo.Controls.Add(Me.LblKilometrajeLlegadaVehiculo)
+            Me.gbLlegadaVehiculo.Controls.Add(Me.lblHoraLlegadaVehiculo)
+            Me.gbLlegadaVehiculo.Controls.Add(Me.lblFechaLlegadaVehiculo)
+            Me.gbLlegadaVehiculo.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.gbLlegadaVehiculo.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
+            Me.gbLlegadaVehiculo.Location = New System.Drawing.Point(453, 70)
+            Me.gbLlegadaVehiculo.Name = "gbLlegadaVehiculo"
+            Me.gbLlegadaVehiculo.Size = New System.Drawing.Size(165, 95)
+            Me.gbLlegadaVehiculo.TabIndex = 251
+            Me.gbLlegadaVehiculo.TabStop = False
+            Me.gbLlegadaVehiculo.Text = "Llegada"
+            '
+            'dtpHoraLlegadaVehiculo
+            '
+            Me.dtpHoraLlegadaVehiculo.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.dtpHoraLlegadaVehiculo.Format = System.Windows.Forms.DateTimePickerFormat.Time
+            Me.dtpHoraLlegadaVehiculo.Location = New System.Drawing.Point(49, 42)
+            Me.dtpHoraLlegadaVehiculo.Name = "dtpHoraLlegadaVehiculo"
+            Me.dtpHoraLlegadaVehiculo.ShowUpDown = True
+            Me.dtpHoraLlegadaVehiculo.Size = New System.Drawing.Size(110, 21)
+            Me.dtpHoraLlegadaVehiculo.TabIndex = 36
+            '
+            'dtpFechaLlegadaVehiculo
+            '
+            Me.dtpFechaLlegadaVehiculo.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.dtpFechaLlegadaVehiculo.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+            Me.dtpFechaLlegadaVehiculo.Location = New System.Drawing.Point(49, 19)
+            Me.dtpFechaLlegadaVehiculo.Name = "dtpFechaLlegadaVehiculo"
+            Me.dtpFechaLlegadaVehiculo.Size = New System.Drawing.Size(110, 21)
+            Me.dtpFechaLlegadaVehiculo.TabIndex = 35
+            '
+            'txtKmLlegadaVehiculo
+            '
+            Me.txtKmLlegadaVehiculo.BackColor = System.Drawing.Color.White
+            Me.txtKmLlegadaVehiculo.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtKmLlegadaVehiculo.Location = New System.Drawing.Point(49, 65)
+            Me.txtKmLlegadaVehiculo.Name = "txtKmLlegadaVehiculo"
+            Me.txtKmLlegadaVehiculo.Size = New System.Drawing.Size(110, 21)
+            Me.txtKmLlegadaVehiculo.TabIndex = 37
+            Me.txtKmLlegadaVehiculo.Text = "0"
+            '
+            'LblKilometrajeLlegadaVehiculo
+            '
+            Me.LblKilometrajeLlegadaVehiculo.AutoSize = True
+            Me.LblKilometrajeLlegadaVehiculo.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.LblKilometrajeLlegadaVehiculo.Location = New System.Drawing.Point(8, 68)
+            Me.LblKilometrajeLlegadaVehiculo.Name = "LblKilometrajeLlegadaVehiculo"
+            Me.LblKilometrajeLlegadaVehiculo.Size = New System.Drawing.Size(24, 13)
+            Me.LblKilometrajeLlegadaVehiculo.TabIndex = 2
+            Me.LblKilometrajeLlegadaVehiculo.Text = "Km"
+            '
+            'lblHoraLlegadaVehiculo
+            '
+            Me.lblHoraLlegadaVehiculo.AutoSize = True
+            Me.lblHoraLlegadaVehiculo.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.lblHoraLlegadaVehiculo.Location = New System.Drawing.Point(8, 45)
+            Me.lblHoraLlegadaVehiculo.Name = "lblHoraLlegadaVehiculo"
+            Me.lblHoraLlegadaVehiculo.Size = New System.Drawing.Size(31, 13)
+            Me.lblHoraLlegadaVehiculo.TabIndex = 1
+            Me.lblHoraLlegadaVehiculo.Text = "Hora"
+            '
+            'lblFechaLlegadaVehiculo
+            '
+            Me.lblFechaLlegadaVehiculo.AutoSize = True
+            Me.lblFechaLlegadaVehiculo.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.lblFechaLlegadaVehiculo.Location = New System.Drawing.Point(8, 22)
+            Me.lblFechaLlegadaVehiculo.Name = "lblFechaLlegadaVehiculo"
+            Me.lblFechaLlegadaVehiculo.Size = New System.Drawing.Size(37, 13)
+            Me.lblFechaLlegadaVehiculo.TabIndex = 0
+            Me.lblFechaLlegadaVehiculo.Text = "Fecha"
             '
             'KryptonLabel31
             '
-            Me.KryptonLabel31.Location = New System.Drawing.Point(428, 36)
+            Me.KryptonLabel31.Location = New System.Drawing.Point(428, 40)
             Me.KryptonLabel31.Name = "KryptonLabel31"
             Me.KryptonLabel31.Size = New System.Drawing.Size(49, 20)
-            Me.KryptonLabel31.TabIndex = 215
+            Me.KryptonLabel31.TabIndex = 263
             Me.KryptonLabel31.Values.Text = "Motivo"
+            '
+            'gpSalidaVehiculo
+            '
+            Me.gpSalidaVehiculo.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(247, Byte), Integer))
+            Me.gpSalidaVehiculo.Controls.Add(Me.Label2)
+            Me.gpSalidaVehiculo.Controls.Add(Me.Label1)
+            Me.gpSalidaVehiculo.Controls.Add(Me.dtpHoraSalidaVehiculo)
+            Me.gpSalidaVehiculo.Controls.Add(Me.dtpFechaSalidaVehiculo)
+            Me.gpSalidaVehiculo.Controls.Add(Me.txtKmSalidaVehiculo)
+            Me.gpSalidaVehiculo.Controls.Add(Me.lblKilometrajeSalidaVehiculo)
+            Me.gpSalidaVehiculo.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.gpSalidaVehiculo.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
+            Me.gpSalidaVehiculo.Location = New System.Drawing.Point(641, 69)
+            Me.gpSalidaVehiculo.Name = "gpSalidaVehiculo"
+            Me.gpSalidaVehiculo.Size = New System.Drawing.Size(165, 95)
+            Me.gpSalidaVehiculo.TabIndex = 249
+            Me.gpSalidaVehiculo.TabStop = False
+            Me.gpSalidaVehiculo.Text = "Salida"
+            '
+            'Label2
+            '
+            Me.Label2.AutoSize = True
+            Me.Label2.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Label2.Location = New System.Drawing.Point(6, 46)
+            Me.Label2.Name = "Label2"
+            Me.Label2.Size = New System.Drawing.Size(31, 13)
+            Me.Label2.TabIndex = 38
+            Me.Label2.Text = "Hora"
+            '
+            'Label1
+            '
+            Me.Label1.AutoSize = True
+            Me.Label1.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Label1.Location = New System.Drawing.Point(6, 23)
+            Me.Label1.Name = "Label1"
+            Me.Label1.Size = New System.Drawing.Size(37, 13)
+            Me.Label1.TabIndex = 38
+            Me.Label1.Text = "Fecha"
+            '
+            'dtpHoraSalidaVehiculo
+            '
+            Me.dtpHoraSalidaVehiculo.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.dtpHoraSalidaVehiculo.Format = System.Windows.Forms.DateTimePickerFormat.Time
+            Me.dtpHoraSalidaVehiculo.Location = New System.Drawing.Point(46, 42)
+            Me.dtpHoraSalidaVehiculo.Name = "dtpHoraSalidaVehiculo"
+            Me.dtpHoraSalidaVehiculo.ShowUpDown = True
+            Me.dtpHoraSalidaVehiculo.Size = New System.Drawing.Size(110, 21)
+            Me.dtpHoraSalidaVehiculo.TabIndex = 39
+            '
+            'dtpFechaSalidaVehiculo
+            '
+            Me.dtpFechaSalidaVehiculo.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.dtpFechaSalidaVehiculo.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+            Me.dtpFechaSalidaVehiculo.Location = New System.Drawing.Point(46, 19)
+            Me.dtpFechaSalidaVehiculo.Name = "dtpFechaSalidaVehiculo"
+            Me.dtpFechaSalidaVehiculo.Size = New System.Drawing.Size(110, 21)
+            Me.dtpFechaSalidaVehiculo.TabIndex = 38
+            '
+            'txtKmSalidaVehiculo
+            '
+            Me.txtKmSalidaVehiculo.BackColor = System.Drawing.Color.White
+            Me.txtKmSalidaVehiculo.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtKmSalidaVehiculo.Location = New System.Drawing.Point(46, 65)
+            Me.txtKmSalidaVehiculo.Name = "txtKmSalidaVehiculo"
+            Me.txtKmSalidaVehiculo.Size = New System.Drawing.Size(110, 21)
+            Me.txtKmSalidaVehiculo.TabIndex = 40
+            Me.txtKmSalidaVehiculo.Text = "0"
+            '
+            'lblKilometrajeSalidaVehiculo
+            '
+            Me.lblKilometrajeSalidaVehiculo.AutoSize = True
+            Me.lblKilometrajeSalidaVehiculo.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.lblKilometrajeSalidaVehiculo.Location = New System.Drawing.Point(6, 68)
+            Me.lblKilometrajeSalidaVehiculo.Name = "lblKilometrajeSalidaVehiculo"
+            Me.lblKilometrajeSalidaVehiculo.Size = New System.Drawing.Size(24, 13)
+            Me.lblKilometrajeSalidaVehiculo.TabIndex = 2
+            Me.lblKilometrajeSalidaVehiculo.Text = "Km"
+            '
+            'txtTotalKmControlC
+            '
+            Me.txtTotalKmControlC.BackColor = System.Drawing.Color.White
+            Me.txtTotalKmControlC.Enabled = False
+            Me.txtTotalKmControlC.Location = New System.Drawing.Point(747, 13)
+            Me.txtTotalKmControlC.Name = "txtTotalKmControlC"
+            Me.txtTotalKmControlC.Size = New System.Drawing.Size(47, 22)
+            Me.txtTotalKmControlC.TabIndex = 246
+            Me.txtTotalKmControlC.Text = "0"
+            Me.txtTotalKmControlC.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
             '
             'KryptonLabel33
             '
-            Me.KryptonLabel33.Location = New System.Drawing.Point(546, 11)
+            Me.KryptonLabel33.Location = New System.Drawing.Point(546, 15)
             Me.KryptonLabel33.Name = "KryptonLabel33"
             Me.KryptonLabel33.Size = New System.Drawing.Size(39, 20)
-            Me.KryptonLabel33.TabIndex = 214
+            Me.KryptonLabel33.TabIndex = 262
             Me.KryptonLabel33.Values.Text = "Valor"
             '
             'KryptonLabel34
             '
-            Me.KryptonLabel34.Location = New System.Drawing.Point(240, 8)
+            Me.KryptonLabel34.Location = New System.Drawing.Point(240, 12)
             Me.KryptonLabel34.Name = "KryptonLabel34"
             Me.KryptonLabel34.Size = New System.Drawing.Size(79, 20)
-            Me.KryptonLabel34.TabIndex = 213
+            Me.KryptonLabel34.TabIndex = 261
             Me.KryptonLabel34.Values.Text = "Combustible"
             '
             'KryptonLabel37
             '
-            Me.KryptonLabel37.Location = New System.Drawing.Point(229, 107)
+            Me.KryptonLabel37.Location = New System.Drawing.Point(229, 111)
             Me.KryptonLabel37.Name = "KryptonLabel37"
             Me.KryptonLabel37.Size = New System.Drawing.Size(39, 20)
-            Me.KryptonLabel37.TabIndex = 212
+            Me.KryptonLabel37.TabIndex = 260
             Me.KryptonLabel37.Values.Text = "Placa"
             '
             'KryptonLabel36
             '
-            Me.KryptonLabel36.Location = New System.Drawing.Point(230, 78)
+            Me.KryptonLabel36.Location = New System.Drawing.Point(230, 82)
             Me.KryptonLabel36.Name = "KryptonLabel36"
             Me.KryptonLabel36.Size = New System.Drawing.Size(44, 20)
-            Me.KryptonLabel36.TabIndex = 211
+            Me.KryptonLabel36.TabIndex = 259
             Me.KryptonLabel36.Values.Text = "Marca"
             '
             'KryptonLabel30
             '
-            Me.KryptonLabel30.Location = New System.Drawing.Point(10, 104)
+            Me.KryptonLabel30.Location = New System.Drawing.Point(10, 108)
             Me.KryptonLabel30.Name = "KryptonLabel30"
             Me.KryptonLabel30.Size = New System.Drawing.Size(44, 20)
-            Me.KryptonLabel30.TabIndex = 210
+            Me.KryptonLabel30.TabIndex = 258
             Me.KryptonLabel30.Values.Text = "Marca"
             '
             'KryptonLabel29
             '
-            Me.KryptonLabel29.Location = New System.Drawing.Point(10, 78)
+            Me.KryptonLabel29.Location = New System.Drawing.Point(10, 82)
             Me.KryptonLabel29.Name = "KryptonLabel29"
             Me.KryptonLabel29.Size = New System.Drawing.Size(45, 20)
-            Me.KryptonLabel29.TabIndex = 209
+            Me.KryptonLabel29.TabIndex = 257
             Me.KryptonLabel29.Values.Text = "Activo"
+            '
+            'cbmCombustible
+            '
+            Me.cbmCombustible.BackColor = System.Drawing.Color.White
+            Me.cbmCombustible.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+            Me.cbmCombustible.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.cbmCombustible.FormattingEnabled = True
+            Me.cbmCombustible.Location = New System.Drawing.Point(358, 11)
+            Me.cbmCombustible.Name = "cbmCombustible"
+            Me.cbmCombustible.Size = New System.Drawing.Size(175, 21)
+            Me.cbmCombustible.TabIndex = 242
+            '
+            'txtMotivoControlC
+            '
+            Me.txtMotivoControlC.BackColor = System.Drawing.Color.White
+            Me.txtMotivoControlC.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+            Me.txtMotivoControlC.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtMotivoControlC.Location = New System.Drawing.Point(513, 42)
+            Me.txtMotivoControlC.Name = "txtMotivoControlC"
+            Me.txtMotivoControlC.Size = New System.Drawing.Size(283, 21)
+            Me.txtMotivoControlC.TabIndex = 245
             '
             'KryptonLabel28
             '
-            Me.KryptonLabel28.Location = New System.Drawing.Point(10, 36)
+            Me.KryptonLabel28.Location = New System.Drawing.Point(10, 40)
             Me.KryptonLabel28.Name = "KryptonLabel28"
             Me.KryptonLabel28.Size = New System.Drawing.Size(52, 20)
-            Me.KryptonLabel28.TabIndex = 208
+            Me.KryptonLabel28.TabIndex = 254
             Me.KryptonLabel28.Values.Text = "Destino"
             '
             'KryptonLabel27
             '
-            Me.KryptonLabel27.Location = New System.Drawing.Point(10, 6)
+            Me.KryptonLabel27.Location = New System.Drawing.Point(10, 10)
             Me.KryptonLabel27.Name = "KryptonLabel27"
             Me.KryptonLabel27.Size = New System.Drawing.Size(42, 20)
-            Me.KryptonLabel27.TabIndex = 208
+            Me.KryptonLabel27.TabIndex = 255
             Me.KryptonLabel27.Values.Text = "Fecha"
             '
             'KryptonLabel26
             '
-            Me.KryptonLabel26.Location = New System.Drawing.Point(10, 57)
+            Me.KryptonLabel26.Location = New System.Drawing.Point(10, 61)
             Me.KryptonLabel26.Name = "KryptonLabel26"
             Me.KryptonLabel26.Size = New System.Drawing.Size(58, 20)
             Me.KryptonLabel26.StateCommon.ShortText.Color1 = System.Drawing.Color.SeaGreen
-            Me.KryptonLabel26.TabIndex = 208
+            Me.KryptonLabel26.TabIndex = 256
             Me.KryptonLabel26.Values.Text = "Vehiculo"
+            '
+            'txtValorControl
+            '
+            Me.txtValorControl.BackColor = System.Drawing.Color.White
+            Me.txtValorControl.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtValorControl.ForeColor = System.Drawing.Color.Black
+            Me.txtValorControl.Location = New System.Drawing.Point(595, 11)
+            Me.txtValorControl.Name = "txtValorControl"
+            Me.txtValorControl.Size = New System.Drawing.Size(83, 21)
+            Me.txtValorControl.TabIndex = 243
+            Me.txtValorControl.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+            '
+            'btnBuscarVehiculo
+            '
+            Me.btnBuscarVehiculo.Cursor = System.Windows.Forms.Cursors.Hand
+            Me.btnBuscarVehiculo.ImageAlign = System.Drawing.ContentAlignment.TopCenter
+            Me.btnBuscarVehiculo.Location = New System.Drawing.Point(188, 78)
+            Me.btnBuscarVehiculo.Name = "btnBuscarVehiculo"
+            Me.btnBuscarVehiculo.Size = New System.Drawing.Size(26, 24)
+            Me.btnBuscarVehiculo.TabIndex = 250
+            Me.btnBuscarVehiculo.Text = "..."
+            Me.btnBuscarVehiculo.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+            Me.btnBuscarVehiculo.UseVisualStyleBackColor = True
+            '
+            'txtPlacaVehiculo
+            '
+            Me.txtPlacaVehiculo.BackColor = System.Drawing.Color.White
+            Me.txtPlacaVehiculo.Enabled = False
+            Me.txtPlacaVehiculo.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtPlacaVehiculo.Location = New System.Drawing.Point(281, 111)
+            Me.txtPlacaVehiculo.Name = "txtPlacaVehiculo"
+            Me.txtPlacaVehiculo.Size = New System.Drawing.Size(141, 21)
+            Me.txtPlacaVehiculo.TabIndex = 253
+            Me.txtPlacaVehiculo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+            '
+            'txtIdActivoFijo
+            '
+            Me.txtIdActivoFijo.BackColor = System.Drawing.Color.White
+            Me.txtIdActivoFijo.Enabled = False
+            Me.txtIdActivoFijo.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtIdActivoFijo.Location = New System.Drawing.Point(73, 80)
+            Me.txtIdActivoFijo.Name = "txtIdActivoFijo"
+            Me.txtIdActivoFijo.Size = New System.Drawing.Size(99, 21)
+            Me.txtIdActivoFijo.TabIndex = 247
+            Me.txtIdActivoFijo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+            '
+            'txtModeloVehiculo
+            '
+            Me.txtModeloVehiculo.BackColor = System.Drawing.Color.White
+            Me.txtModeloVehiculo.Enabled = False
+            Me.txtModeloVehiculo.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtModeloVehiculo.Location = New System.Drawing.Point(280, 80)
+            Me.txtModeloVehiculo.Name = "txtModeloVehiculo"
+            Me.txtModeloVehiculo.Size = New System.Drawing.Size(141, 21)
+            Me.txtModeloVehiculo.TabIndex = 252
+            Me.txtModeloVehiculo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+            '
+            'txtFechaControl
+            '
+            Me.txtFechaControl.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+            Me.txtFechaControl.Location = New System.Drawing.Point(73, 10)
+            Me.txtFechaControl.Name = "txtFechaControl"
+            Me.txtFechaControl.Size = New System.Drawing.Size(99, 22)
+            Me.txtFechaControl.TabIndex = 241
+            '
+            'txtDestinoControlC
+            '
+            Me.txtDestinoControlC.BackColor = System.Drawing.Color.White
+            Me.txtDestinoControlC.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+            Me.txtDestinoControlC.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtDestinoControlC.Location = New System.Drawing.Point(73, 39)
+            Me.txtDestinoControlC.Name = "txtDestinoControlC"
+            Me.txtDestinoControlC.Size = New System.Drawing.Size(274, 21)
+            Me.txtDestinoControlC.TabIndex = 244
+            '
+            'txtMarcaVehiculo
+            '
+            Me.txtMarcaVehiculo.BackColor = System.Drawing.Color.White
+            Me.txtMarcaVehiculo.Enabled = False
+            Me.txtMarcaVehiculo.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtMarcaVehiculo.Location = New System.Drawing.Point(73, 111)
+            Me.txtMarcaVehiculo.Name = "txtMarcaVehiculo"
+            Me.txtMarcaVehiculo.Size = New System.Drawing.Size(141, 21)
+            Me.txtMarcaVehiculo.TabIndex = 248
+            Me.txtMarcaVehiculo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
             '
             'FormSolicitudFondoRotativo
             '
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.BackColor = System.Drawing.Color.White
-            Me.ClientSize = New System.Drawing.Size(828, 527)
-            Me.Controls.Add(Me.gbCombustible)
+            Me.ClientSize = New System.Drawing.Size(828, 536)
+            Me.Controls.Add(Me.GroupBox3)
             Me.Controls.Add(Me.chkCombustible)
             Me.Controls.Add(Me.KryptonGroupBox1)
             Me.Controls.Add(Me.lblMontoFondoRotativo)
@@ -1439,20 +1425,17 @@
             CType(Me.dgvAsientosDiario, System.ComponentModel.ISupportInitialize).EndInit()
             Me.MenuStrip1.ResumeLayout(False)
             Me.MenuStrip1.PerformLayout()
-            Me.gbLlegadaVehiculo.ResumeLayout(False)
-            Me.gbLlegadaVehiculo.PerformLayout()
-            Me.gpSalidaVehiculo.ResumeLayout(False)
-            Me.gpSalidaVehiculo.PerformLayout()
             CType(Me.KryptonGroupBox1.Panel, System.ComponentModel.ISupportInitialize).EndInit()
             Me.KryptonGroupBox1.Panel.ResumeLayout(False)
             Me.KryptonGroupBox1.Panel.PerformLayout()
             CType(Me.KryptonGroupBox1, System.ComponentModel.ISupportInitialize).EndInit()
             Me.KryptonGroupBox1.ResumeLayout(False)
-            CType(Me.gbCombustible.Panel, System.ComponentModel.ISupportInitialize).EndInit()
-            Me.gbCombustible.Panel.ResumeLayout(False)
-            Me.gbCombustible.Panel.PerformLayout()
-            CType(Me.gbCombustible, System.ComponentModel.ISupportInitialize).EndInit()
-            Me.gbCombustible.ResumeLayout(False)
+            Me.GroupBox3.ResumeLayout(False)
+            Me.GroupBox3.PerformLayout()
+            Me.gbLlegadaVehiculo.ResumeLayout(False)
+            Me.gbLlegadaVehiculo.PerformLayout()
+            Me.gpSalidaVehiculo.ResumeLayout(False)
+            Me.gpSalidaVehiculo.PerformLayout()
             Me.ResumeLayout(False)
             Me.PerformLayout()
 
@@ -1486,30 +1469,7 @@
         Friend WithEvents dtpComprobanteRetencion As System.Windows.Forms.DateTimePicker
         Friend WithEvents btnDocumento As System.Windows.Forms.Button
         Friend WithEvents txtNroDocumento As System.Windows.Forms.TextBox
-        Friend WithEvents txtFechaControl As System.Windows.Forms.DateTimePicker
-        Friend WithEvents gbLlegadaVehiculo As System.Windows.Forms.GroupBox
-        Friend WithEvents dtpHoraLlegadaVehiculo As System.Windows.Forms.DateTimePicker
-        Friend WithEvents dtpFechaLlegadaVehiculo As System.Windows.Forms.DateTimePicker
-        Friend WithEvents txtKmLlegadaVehiculo As System.Windows.Forms.TextBox
-        Friend WithEvents LblKilometrajeLlegadaVehiculo As System.Windows.Forms.Label
-        Friend WithEvents lblHoraLlegadaVehiculo As System.Windows.Forms.Label
-        Friend WithEvents lblFechaLlegadaVehiculo As System.Windows.Forms.Label
-        Friend WithEvents txtIdActivoFijo As System.Windows.Forms.TextBox
-        Friend WithEvents btnBuscarVehiculo As System.Windows.Forms.Button
-        Friend WithEvents txtPlacaVehiculo As System.Windows.Forms.TextBox
-        Friend WithEvents txtModeloVehiculo As System.Windows.Forms.TextBox
-        Friend WithEvents txtMarcaVehiculo As System.Windows.Forms.TextBox
-        Friend WithEvents txtTotalKmControlC As System.Windows.Forms.TextBox
-        Friend WithEvents gpSalidaVehiculo As System.Windows.Forms.GroupBox
-        Friend WithEvents dtpHoraSalidaVehiculo As System.Windows.Forms.DateTimePicker
-        Friend WithEvents dtpFechaSalidaVehiculo As System.Windows.Forms.DateTimePicker
-        Friend WithEvents txtKmSalidaVehiculo As System.Windows.Forms.TextBox
-        Friend WithEvents lblKilometrajeSalidaVehiculo As System.Windows.Forms.Label
         Friend WithEvents chkCombustible As System.Windows.Forms.CheckBox
-        Friend WithEvents cbmCombustible As System.Windows.Forms.ComboBox
-        Friend WithEvents txtMotivoControlC As System.Windows.Forms.TextBox
-        Friend WithEvents txtDestinoControlC As System.Windows.Forms.TextBox
-        Friend WithEvents txtValorControl As System.Windows.Forms.TextBox
         Friend WithEvents lblMontoFondoRotativo As System.Windows.Forms.Label
         Friend WithEvents Label3 As System.Windows.Forms.Label
         Friend WithEvents lblMontoAsignado As System.Windows.Forms.Label
@@ -1555,19 +1515,42 @@
         Friend WithEvents KryptonLabel24 As ComponentFactory.Krypton.Toolkit.KryptonLabel
         Friend WithEvents KryptonLabel23 As ComponentFactory.Krypton.Toolkit.KryptonLabel
         Friend WithEvents KryptonLabel22 As ComponentFactory.Krypton.Toolkit.KryptonLabel
-        Friend WithEvents gbCombustible As ComponentFactory.Krypton.Toolkit.KryptonGroupBox
+        Friend WithEvents GroupBox3 As GroupBox
+        Friend WithEvents KryptonLabel32 As ComponentFactory.Krypton.Toolkit.KryptonLabel
+        Friend WithEvents gbLlegadaVehiculo As GroupBox
+        Friend WithEvents dtpHoraLlegadaVehiculo As DateTimePicker
+        Friend WithEvents dtpFechaLlegadaVehiculo As DateTimePicker
+        Friend WithEvents txtKmLlegadaVehiculo As TextBox
+        Friend WithEvents LblKilometrajeLlegadaVehiculo As Label
+        Friend WithEvents lblHoraLlegadaVehiculo As Label
+        Friend WithEvents lblFechaLlegadaVehiculo As Label
+        Friend WithEvents KryptonLabel31 As ComponentFactory.Krypton.Toolkit.KryptonLabel
+        Friend WithEvents gpSalidaVehiculo As GroupBox
+        Friend WithEvents Label2 As Label
+        Friend WithEvents Label1 As Label
+        Friend WithEvents dtpHoraSalidaVehiculo As DateTimePicker
+        Friend WithEvents dtpFechaSalidaVehiculo As DateTimePicker
+        Friend WithEvents txtKmSalidaVehiculo As TextBox
+        Friend WithEvents lblKilometrajeSalidaVehiculo As Label
+        Friend WithEvents txtTotalKmControlC As TextBox
+        Friend WithEvents KryptonLabel33 As ComponentFactory.Krypton.Toolkit.KryptonLabel
+        Friend WithEvents KryptonLabel34 As ComponentFactory.Krypton.Toolkit.KryptonLabel
+        Friend WithEvents KryptonLabel37 As ComponentFactory.Krypton.Toolkit.KryptonLabel
+        Friend WithEvents KryptonLabel36 As ComponentFactory.Krypton.Toolkit.KryptonLabel
+        Friend WithEvents KryptonLabel30 As ComponentFactory.Krypton.Toolkit.KryptonLabel
         Friend WithEvents KryptonLabel29 As ComponentFactory.Krypton.Toolkit.KryptonLabel
+        Friend WithEvents cbmCombustible As ComboBox
+        Friend WithEvents txtMotivoControlC As TextBox
         Friend WithEvents KryptonLabel28 As ComponentFactory.Krypton.Toolkit.KryptonLabel
         Friend WithEvents KryptonLabel27 As ComponentFactory.Krypton.Toolkit.KryptonLabel
         Friend WithEvents KryptonLabel26 As ComponentFactory.Krypton.Toolkit.KryptonLabel
-        Friend WithEvents KryptonLabel30 As ComponentFactory.Krypton.Toolkit.KryptonLabel
-        Friend WithEvents KryptonLabel37 As ComponentFactory.Krypton.Toolkit.KryptonLabel
-        Friend WithEvents KryptonLabel36 As ComponentFactory.Krypton.Toolkit.KryptonLabel
-        Friend WithEvents KryptonLabel32 As ComponentFactory.Krypton.Toolkit.KryptonLabel
-        Friend WithEvents KryptonLabel31 As ComponentFactory.Krypton.Toolkit.KryptonLabel
-        Friend WithEvents KryptonLabel33 As ComponentFactory.Krypton.Toolkit.KryptonLabel
-        Friend WithEvents KryptonLabel34 As ComponentFactory.Krypton.Toolkit.KryptonLabel
-        Friend WithEvents Label2 As Label
-        Friend WithEvents Label1 As Label
+        Friend WithEvents txtValorControl As TextBox
+        Friend WithEvents btnBuscarVehiculo As Button
+        Friend WithEvents txtPlacaVehiculo As TextBox
+        Friend WithEvents txtIdActivoFijo As TextBox
+        Friend WithEvents txtModeloVehiculo As TextBox
+        Friend WithEvents txtFechaControl As DateTimePicker
+        Friend WithEvents txtDestinoControlC As TextBox
+        Friend WithEvents txtMarcaVehiculo As TextBox
     End Class
 End Namespace
