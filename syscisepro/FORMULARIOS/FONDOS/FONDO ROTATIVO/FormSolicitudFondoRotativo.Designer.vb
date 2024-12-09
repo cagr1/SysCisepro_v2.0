@@ -1003,6 +1003,7 @@
             '
             'GroupBox3
             '
+            Me.GroupBox3.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.GroupBox3.Controls.Add(Me.KryptonLabel32)
             Me.GroupBox3.Controls.Add(Me.gbLlegadaVehiculo)
             Me.GroupBox3.Controls.Add(Me.KryptonLabel31)

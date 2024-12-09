@@ -387,7 +387,8 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                     lblIdKardex.Text = 0
                     tsmAgregar.Enabled = False
                     tsmEliminar.Enabled = dgvSecuencial.RowCount > 0
-                    MsgBox("EL ITEM SELECCIONADO NO EXISTE EN EL SISTEMA. DEBE CREAR EL ITEM EN LA OPCIÓN 'BODEGA / ARTÍCULOS Y PRODUCTOS' Y LUEGO REGISTAR EL 'COMPROBANTE DE INGRESO' CORRESPONDIENTE!!!", MsgBoxStyle.Exclamation, "Mensaje de validación")
+                    ' MsgBox("EL ITEM SELECCIONADO NO EXISTE EN EL SISTEMA. DEBE CREAR EL ITEM EN LA OPCIÓN 'BODEGA / ARTÍCULOS Y PRODUCTOS' Y LUEGO REGISTAR EL 'COMPROBANTE DE INGRESO' CORRESPONDIENTE!!!", MsgBoxStyle.Exclamation, "Mensaje de validación")
+                    KryptonMessageBox.Show("El item seleccionado no existe en el sistema. debe crear el item en la opción 'bodega / artículos y productos' y luego registar el 'comprobante de ingreso' correspondiente!!!", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                 End If
             Catch
                 lblIdArticulo.Text = 0
@@ -400,22 +401,26 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                 nudCantidad.Value = 0
                 nudValor.Value = 0
                 txtObservacion.Clear()
-                MsgBox("OCURRIÓ UN PROBLEMA AL SELECCIONAR ARTÍCULOS. POR FAVOR, CONTÁCTE AL ADMINISTRADOR!!!", MsgBoxStyle.Exclamation, "Mensaje de validación")
+                'MsgBox("OCURRIÓ UN PROBLEMA AL SELECCIONAR ARTÍCULOS. POR FAVOR, CONTÁCTE AL ADMINISTRADOR!!!", MsgBoxStyle.Exclamation, "Mensaje de validación")
+                KryptonMessageBox.Show("Ocurrió un problema al seleccionar artículos. por favor, contácte al administrador!!!", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
             End Try
         End Sub
         Private Sub tsmAgregar_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles tsmAgregar.Click
             If _detalleKardex Is Nothing Then
-                MsgBox("POR FAVOR, SELECCIONE UN ITEM PARA AGREGAR A LA LISTA!", MsgBoxStyle.Exclamation, "Mensaje de Validacion")
+                'MsgBox("POR FAVOR, SELECCIONE UN ITEM PARA AGREGAR A LA LISTA!", MsgBoxStyle.Exclamation, "Mensaje de Validacion")
+                KryptonMessageBox.Show("Por favor, seleccione un item para agregar a la lista!", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                 Return
             End If
 
             If _detalleKardex.Rows.Count = 0 Then
-                MsgBox("POR FAVOR, SELECCIONE UN ITEM PARA AGREGAR A LA LISTA!", MsgBoxStyle.Exclamation, "Mensaje de Validacion")
+                'MsgBox("POR FAVOR, SELECCIONE UN ITEM PARA AGREGAR A LA LISTA!", MsgBoxStyle.Exclamation, "Mensaje de Validacion")
+                KryptonMessageBox.Show("Por favor, seleccione un item para agregar a la lista!", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                 Return
             End If
 
             If cmbObservacionCalidad.SelectedIndex = 0 Then
-                MsgBox("POR FAVOR, SELECCIONE LA OBSERVACIÓN DE CALIDAD PARA ESTE ITEM", MsgBoxStyle.Exclamation, "Mensaje de Validacion")
+                'MsgBox("POR FAVOR, SELECCIONE LA OBSERVACIÓN DE CALIDAD PARA ESTE ITEM", MsgBoxStyle.Exclamation, "Mensaje de Validacion")
+                KryptonMessageBox.Show("Por favor, seleccione la observación de calidad para este item", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                 Return
             End If
 
@@ -769,17 +774,17 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                     tbComprobanteIngresoBodega.SelectedIndex = 2
                     tsmNuevo.Enabled = True
                     tsmGuardar.Enabled = False
-                    tsmCancelar.Enabled = False
-                    TmsActualizar.Enabled = True
-                End If
-                'MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
-                Dim messageIcon As KryptonMessageBoxIcon
-                If res(0) Then
-                    messageIcon = KryptonMessageBoxIcon.Information
-                Else
-                    messageIcon = KryptonMessageBoxIcon.Exclamation
-                End If
-                KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, messageIcon)
+                tsmCancelar.Enabled = False
+                TmsEliminar.Enabled = False
+                TmsActualizar.Enabled = False
+                KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
+            Else
+                KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+                Return
+
+            End If
+            'MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
+
         End Sub
         'Private Sub chkNumeroComprobante_CheckedChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles chkTodos.CheckedChanged
         '    If chkTodos.Checked Then
@@ -1263,7 +1268,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
             Try
                 With _objDetCompIng
                     .IdDetalle = Convert.ToInt64(lblDetaComp.Text)
-                    .IdKardex = Convert.ToInt64(lblIdKardex.Text)
+                    .IdKardex = Convert.ToInt64(lblIdKardex2.Text)
                     .IdDetalleKardex = Convert.ToInt64(lblDetaKardex.Text)
                     .ObservacionCalidadDetalle = cmbObservacionCalidad.Text.ToUpper
                     .ObservacionDetalleSerial = txtObservacion.Text.ToUpper & " - SERIE: " & If(txtSerie.Text.Trim().Length = 0, "-", txtSerie.Text.Trim())
@@ -1276,132 +1281,138 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                 KryptonMessageBox.Show("ERROR AL MODIFICAR DETALLE DE COMPROBANTE DE INGRESO DE BODEGA" & vbNewLine & ex.Message, "Mensaje de información", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
 
-            Dim tabla As DataTable = _objKardex.BuscarUltimoMoviminetoKardexXIdKardex(_tipoCon, lblIdKardex.Text, lblIdDetalleKardex.Text)
+            Dim tabla As DataTable = _objKardex.BuscarUltimoMoviminetoKardexXIdKardex(_tipoCon, lblIdKardex2.Text, lblDetaKardex.Text)
 
-            If CantidadIngreso > cant Then
-                Try
-                    With _objDetalleKardex
-                        .Id = Convert.ToInt64(lblDetaKardex.Text)
-                        .IdActividad = 1
-                        .IdConcepto = cmbConceptos.SelectedValue
-                        .CantidadIngreso = cant
-                        .ValorUnitarioIngreso = val
-                        .ValorTotalIngreso = toIngre
-                        .CantidadEgreso = 0.0
-                        .ValorUnitarioEgreso = 0.0
-                        .ValorTotalEgreso = 0.0
-                        .CantidadSaldo = saldoTotal - (CantidadIngreso - cant)
-                        .ValorUnitarioSaldo = val
-                        .ValorTotalSaldo = (saldoTotal - (CantidadIngreso - cant)) * val
-                        .Fecha = dtpFecha.Value
-                        .IdKardex = Convert.ToInt64(lblIdKardex.Text)
-                        .NroComprobante = txtNroComprobante.Text
+            If (Convert.ToInt32(lblIdKardex2.Text.ToString()) > 0) And (Convert.ToInt32(lblDetaKardex.Text.ToString()) > 0) Then
+                If CantidadIngreso > cant Then
+                    Try
+                        With _objDetalleKardex
+                            .Id = Convert.ToInt64(lblDetaKardex.Text)
+                            .IdActividad = 1
+                            .IdConcepto = cmbConceptos.SelectedValue
+                            .CantidadIngreso = cant
+                            .ValorUnitarioIngreso = val
+                            .ValorTotalIngreso = toIngre
+                            .CantidadEgreso = 0.0
+                            .ValorUnitarioEgreso = 0.0
+                            .ValorTotalEgreso = 0.0
+                            .CantidadSaldo = saldoTotal - (CantidadIngreso - cant)
+                            .ValorUnitarioSaldo = val
+                            .ValorTotalSaldo = (saldoTotal - (CantidadIngreso - cant)) * val
+                            .Fecha = dtpFecha.Value
+                            .IdKardex = Convert.ToInt64(lblIdKardex2.Text)
+                            .NroComprobante = txtNroComprobante.Text
 
-                    End With
-                    _sqlCommands.Add(_objDetalleKardex.ModificarDetalleKardexCommand())
+                        End With
+                        _sqlCommands.Add(_objDetalleKardex.ModificarDetalleKardexCommand())
 
-                Catch ex As Exception
-                    KryptonMessageBox.Show("ERROR AL MODIFICAR DETALLE DE KARDEX" & vbNewLine & ex.Message, "Mensaje de información", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
-                End Try
+                    Catch ex As Exception
+                        KryptonMessageBox.Show("ERROR AL MODIFICAR DETALLE DE KARDEX" & vbNewLine & ex.Message, "Mensaje de información", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+                    End Try
 
-                Try
+                    Try
 
 
 
-                    With _objKardex
-                        .Id = Convert.ToInt64(lblIdKardex.Text)
-                        .IdsecuencialItem = Convert.ToInt64(lblIdSecuencial.Text)
-                        .Cantidad = CDbl(tabla.Rows(0)(19).ToString()) - (CantidadIngreso - cant)
-                        .Fecha = dtpFecha.Value
-                    End With
-                    _sqlCommands.Add(_objKardex.ModificarCantidadKardexCommand)
-                Catch ex As Exception
-                    KryptonMessageBox.Show("ERROR AL MODIFICAR KARDEX" & vbNewLine & ex.Message, "Mensaje de información", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
-                End Try
+                        With _objKardex
+                            .Id = Convert.ToInt64(lblIdKardex2.Text)
+                            .IdsecuencialItem = Convert.ToInt64(lblIdSecuencial.Text)
+                            .Cantidad = CDbl(tabla.Rows(0)(19).ToString()) - (CantidadIngreso - cant)
+                            .Fecha = dtpFecha.Value
+                        End With
+                        _sqlCommands.Add(_objKardex.ModificarCantidadKardexCommand)
+                    Catch ex As Exception
+                        KryptonMessageBox.Show("ERROR AL MODIFICAR KARDEX" & vbNewLine & ex.Message, "Mensaje de información", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+                    End Try
 
-            ElseIf CantidadIngreso < cant Then
+                ElseIf CantidadIngreso < cant Then
 
-                Try
-                    With _objDetalleKardex
-                        .Id = Convert.ToInt64(lblDetaKardex.Text)
-                        .IdActividad = 1
-                        .IdConcepto = cmbConceptos.SelectedValue
-                        .CantidadIngreso = cant
-                        .ValorUnitarioIngreso = val
-                        .ValorTotalIngreso = toIngre
-                        .CantidadEgreso = 0.0
-                        .ValorUnitarioEgreso = 0.0
-                        .ValorTotalEgreso = 0.0
-                        .CantidadSaldo = saldoTotal + (cant - CantidadIngreso)
-                        .ValorUnitarioSaldo = val
-                        .ValorTotalSaldo = (saldoTotal + (cant - CantidadIngreso)) * cant
-                        .Fecha = dtpFecha.Value
-                        .IdKardex = Convert.ToInt64(lblIdKardex.Text)
-                        .NroComprobante = txtNroComprobante.Text
+                    Try
+                        With _objDetalleKardex
+                            .Id = Convert.ToInt64(lblDetaKardex.Text)
+                            .IdActividad = 1
+                            .IdConcepto = cmbConceptos.SelectedValue
+                            .CantidadIngreso = cant
+                            .ValorUnitarioIngreso = val
+                            .ValorTotalIngreso = toIngre
+                            .CantidadEgreso = 0.0
+                            .ValorUnitarioEgreso = 0.0
+                            .ValorTotalEgreso = 0.0
+                            .CantidadSaldo = saldoTotal + (cant - CantidadIngreso)
+                            .ValorUnitarioSaldo = val
+                            .ValorTotalSaldo = (saldoTotal + (cant - CantidadIngreso)) * cant
+                            .Fecha = dtpFecha.Value
+                            .IdKardex = Convert.ToInt64(lblIdKardex.Text)
+                            .NroComprobante = txtNroComprobante.Text
 
-                    End With
-                    _sqlCommands.Add(_objDetalleKardex.ModificarDetalleKardexCommand())
+                        End With
+                        _sqlCommands.Add(_objDetalleKardex.ModificarDetalleKardexCommand())
 
-                Catch ex As Exception
-                    KryptonMessageBox.Show("ERROR AL MODIFICAR DETALLE DE KARDEX" & vbNewLine & ex.Message, "Mensaje de información", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
-                End Try
+                    Catch ex As Exception
+                        KryptonMessageBox.Show("ERROR AL MODIFICAR DETALLE DE KARDEX" & vbNewLine & ex.Message, "Mensaje de información", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+                    End Try
 
-                Try
-                    With _objKardex
-                        .Id = Convert.ToInt64(lblIdKardex.Text)
-                        .IdsecuencialItem = Convert.ToInt64(lblIdSecuencial.Text)
-                        .Cantidad = CDbl(tabla.Rows(0)(19).ToString()) + (cant - CantidadIngreso)
-                        .Fecha = dtpFecha.Value
-                    End With
+                    Try
+                        With _objKardex
+                            .Id = Convert.ToInt64(lblIdKardex.Text)
+                            .IdsecuencialItem = Convert.ToInt64(lblIdSecuencial.Text)
+                            .Cantidad = CDbl(tabla.Rows(0)(19).ToString()) + (cant - CantidadIngreso)
+                            .Fecha = dtpFecha.Value
+                        End With
 
-                    _sqlCommands.Add(_objKardex.ModificarCantidadKardexCommand)
-                Catch ex As Exception
-                    KryptonMessageBox.Show("ERROR AL MODIFICAR KARDEX" & vbNewLine & ex.Message, "Mensaje de información", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
-                End Try
+                        _sqlCommands.Add(_objKardex.ModificarCantidadKardexCommand)
+                    Catch ex As Exception
+                        KryptonMessageBox.Show("ERROR AL MODIFICAR KARDEX" & vbNewLine & ex.Message, "Mensaje de información", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+                    End Try
 
-            ElseIf CantidadIngreso = cant Then
+                ElseIf CantidadIngreso = cant Then
 
-                Try
-                    With _objDetalleKardex
-                        .Id = Convert.ToInt64(lblDetaKardex.Text)
-                        .IdActividad = 1
-                        .IdConcepto = cmbConceptos.SelectedValue
-                        .CantidadIngreso = cant
-                        .ValorUnitarioIngreso = val
-                        .ValorTotalIngreso = toIngre
-                        .CantidadEgreso = 0.0
-                        .ValorUnitarioEgreso = 0.0
-                        .ValorTotalEgreso = 0.0
-                        .CantidadSaldo = saldoTotal
-                        .ValorUnitarioSaldo = val
-                        .ValorTotalSaldo = saldoTotal * val
-                        .Fecha = dtpFecha.Value
-                        .IdKardex = Convert.ToInt64(lblIdKardex.Text)
-                        .Estado = 1
-                        .NroComprobante = txtNroComprobante.Text
+                    Try
+                        With _objDetalleKardex
+                            .Id = Convert.ToInt64(lblDetaKardex.Text)
+                            .IdActividad = 1
+                            .IdConcepto = cmbConceptos.SelectedValue
+                            .CantidadIngreso = cant
+                            .ValorUnitarioIngreso = val
+                            .ValorTotalIngreso = toIngre
+                            .CantidadEgreso = 0.0
+                            .ValorUnitarioEgreso = 0.0
+                            .ValorTotalEgreso = 0.0
+                            .CantidadSaldo = saldoTotal
+                            .ValorUnitarioSaldo = val
+                            .ValorTotalSaldo = saldoTotal * val
+                            .Fecha = dtpFecha.Value
+                            .IdKardex = Convert.ToInt64(lblIdKardex.Text)
+                            .Estado = 1
+                            .NroComprobante = txtNroComprobante.Text
 
-                    End With
-                    _sqlCommands.Add(_objDetalleKardex.ModificarDetalleKardexCommand())
+                        End With
+                        _sqlCommands.Add(_objDetalleKardex.ModificarDetalleKardexCommand())
 
-                Catch ex As Exception
-                    KryptonMessageBox.Show("ERROR AL MODIFICAR DETALLE DE KARDEX" & vbNewLine & ex.Message, "Mensaje de información", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
-                End Try
+                    Catch ex As Exception
+                        KryptonMessageBox.Show("ERROR AL MODIFICAR DETALLE DE KARDEX" & vbNewLine & ex.Message, "Mensaje de información", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+                    End Try
 
-                Try
+                    Try
 
-                    With _objKardex
-                        .Id = Convert.ToInt64(lblIdKardex.Text)
-                        .IdsecuencialItem = Convert.ToInt64(lblIdSecuencial.Text)
-                        .Cantidad = saldoTotal
-                        .Fecha = dtpFecha.Value
-                        .Estado = 1
-                    End With
-                    _sqlCommands.Add(_objKardex.ModificarCantidadKardexCommand)
-                Catch ex As Exception
-                    KryptonMessageBox.Show("ERROR AL MODIFICAR KARDEX" & vbNewLine & ex.Message, "Mensaje de información", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
-                End Try
+                        With _objKardex
+                            .Id = Convert.ToInt64(lblIdKardex.Text)
+                            .IdsecuencialItem = Convert.ToInt64(lblIdSecuencial.Text)
+                            .Cantidad = saldoTotal
+                            .Fecha = dtpFecha.Value
+                            .Estado = 1
+                        End With
+                        _sqlCommands.Add(_objKardex.ModificarCantidadKardexCommand)
+                    Catch ex As Exception
+                        KryptonMessageBox.Show("ERROR AL MODIFICAR KARDEX" & vbNewLine & ex.Message, "Mensaje de información", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+                    End Try
 
+                End If
+            Else
+                KryptonMessageBox.Show("El valor de Id de kardex no puede ser cero contante con el Administrador", "Mensaje de información", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+                Return
             End If
+
             'put the table 'tabla' withot data or reset 
             tabla.Clear()
 
@@ -1422,7 +1433,8 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
 
 
                 For Each row In dgvDetalleComprobate.Rows
-                    Dim tabla1 As DataTable = _objKardex.BuscarUltimoMoviminetoKardexXIdKardex(_tipoCon, row.Cells.Item(0).Value, row.Cells.Item(1).Value)
+                    Dim tabla1 As DataTable = _objKardex.BuscarUltimoMoviminetoKardexXIdKardex(_tipoCon, row.Cells.Item(2).Value, row.Cells.Item(1).Value)
+
                     Dim result As DataTable = _objControl.SeleccionarIdControlUniformes(_tipoCon, txtNroComprobante.Text, row.Cells.Item(1).Value)
 
                     If result.Rows.Count > 0 Then
@@ -1478,7 +1490,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                 tsmNuevo.Enabled = False
                 tsmGuardar.Enabled = False
                 tsmCancelar.Enabled = False
-                KryptonMessageBox.Show(res(0), "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
+                KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
             Else
                 KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
                 Return

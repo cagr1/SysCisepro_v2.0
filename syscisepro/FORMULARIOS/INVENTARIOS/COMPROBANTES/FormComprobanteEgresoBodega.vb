@@ -500,7 +500,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                 Next
 
                 If ultimoSaldo < 0 Then
-                    KryptonMessageBox.Show("No se puede egresar una cantidad mayor a la existente en el inventario", "Mensaje de Validacion", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
+                    KryptonMessageBox.Show("Esta egresando: " & CInt(nudCantidad.Value) & " y el ultimo movimiento tiene " & ultimoSaldo.ToString() & vbCrLf & "Contacte con el administrador", "Mensaje de Validacion", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
                     Return
                 End If
 
@@ -951,21 +951,13 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                 txtNumero.Text = _objCompEgr.Id
                 txtIdComprobante.Text = txtNumero.Text
                 tbComprobanteIngresoBodega.SelectedIndex = 2
-
-            End If
-
-            Dim messageIcon As KryptonMessageBoxIcon
-            Dim messageText As String = res(1)
-            If res(0) Then
-                messageIcon = KryptonMessageBoxIcon.Information
+                KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
             Else
-                messageIcon = KryptonMessageBoxIcon.Exclamation
-            End If
-            If _botonSeleccionadoSitio = 3 Then
-                messageText = res(1) & " " & "El Comprobante " & _IdComprobanteIngreso & " ha sido reingresado"
+                KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+                Return
             End If
 
-            KryptonMessageBox.Show(messageText, "Mensaje del sistema", KryptonMessageBoxButtons.OK, messageIcon)
+
             HabilitarIngresos(False)
             Limpiar()
             tsmNuevo.Enabled = True
@@ -1352,6 +1344,10 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                 Return
             End If
 
+            If cant = 0 Then
+                KryptonMessageBox.Show("La cantidad no puede ser 0", "Mensaje de Validacion", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
+                Return
+            End If
 
             With _objCompEgr
 
@@ -1392,7 +1388,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
 
             With _objDetCompEgr
                 .IdDetalle = Convert.ToInt64(lblDetaComp.Text)
-                .IdKardex = Convert.ToInt64(lblIdKardex.Text)
+                .IdKardex = Convert.ToInt64(lblIdKardex2.Text)
                 .IdDetalleKardex = Convert.ToInt64(lblDetKardex.Text)
                 .ObservacionCalidad = cmbObservacionCalidad.Text.ToUpper
                 .ObservacionDetalle = txtObservacion.Text.ToUpper & " - SERIE: " & If(txtSerie.Text.Trim().Length = 0, "-", txtSerie.Text.Trim())
@@ -1401,6 +1397,8 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
             End With
             _sqlCommands.Add(_objDetCompEgr.ModificarDetalleComprobanteEgresoBodegaCommand())
 
+
+            Dim tabla As DataTable = _objKardex.BuscarUltimoMoviminetoKardexXIdKardex(_tipoCon, lblIdKardex2.Text, lblDetKardex.Text)
 
             If CantidadEgreso > cant Then
 
@@ -1418,7 +1416,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                     .ValorUnitarioSaldo = val
                     .ValorTotalSaldo = (saldoTotal + (CantidadEgreso - cant)) * val
                     .Fecha = dtpFecha.Value
-                    .IdKardex = Convert.ToInt64(lblIdKardex.Text)
+                    .IdKardex = Convert.ToInt64(lblIdKardex2.Text)
                     .NroComprobante = txtNumero.Text.ToString()
 
                 End With
@@ -1427,7 +1425,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                 With _objKardex
                     .Id = lblIdKardex2.Text
                     .IdsecuencialItem = lblIdSecuencial.Text
-                    .Cantidad = saldoTotal + (CantidadEgreso - cant)
+                    .Cantidad = CDbl(tabla.Rows(0)(19).ToString()) + (CantidadEgreso - cant)
                     .Fecha = dtpFecha.Value
                 End With
                 _sqlCommands.Add(_objKardex.ModificarCantidadKardexCommand)
@@ -1457,7 +1455,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                 With _objKardex
                     .Id = Convert.ToInt64(lblIdKardex.Text)
                     .IdsecuencialItem = lblIdSecuencial.Text
-                    .Cantidad = saldoTotal - (cant - CantidadEgreso)
+                    .Cantidad = CDbl(tabla.Rows(0)(19).ToString()) - (cant - CantidadEgreso)
                     .Fecha = dtpFecha.Value
                 End With
 
@@ -1515,7 +1513,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
             For Each row In dgvDetalleComprobate.Rows
 
                 Dim result As DataTable = _objControl.SeleccionarIdControlUniformes(_tipoCon, txtNumero.Text, row.Cells.Item(1).Value)
-                Dim tabla As DataTable = _objKardex.BuscarUltimoMoviminetoKardexXIdKardex(_tipoCon, row.Cells.Item(), lblIdDetalleKardex.Text)
+                Dim tabla As DataTable = _objKardex.BuscarUltimoMoviminetoKardexXIdKardex(_tipoCon, row.Cells.Item(2).Value, row.Cells.Item(1).Value)
 
                 If result.Rows.Count > 0 Then
                     Dim idcon As Long = Convert.ToInt64(result.Rows(0)("ID_CONTROL"))
@@ -1528,8 +1526,6 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                 End If
 
                 Dim idpersonal = If(txtRecibe.Tag Is Nothing, txtRecibe.Text.Split("-")(1).Trim(), CType(txtRecibe.Tag, Integer))
-                'Dim mes = dtpFecha.Value.Month
-                'Dim anio = dtpFecha.Value.Year
                 Dim fechaDesde = dtpFecha.Value.Day.ToString & "-" & dtpFecha.Value.Month.ToString & "-" & dtpFecha.Value.Year.ToString & " 00:00:00"
                 Dim fechaHasta = dtpFecha.Value.Day.ToString & "-" & dtpFecha.Value.Month.ToString & "-" & dtpFecha.Value.Year.ToString & " 23:59:59"
                 With _objRegistroDescuento
@@ -1547,12 +1543,16 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                     .Id = row.Cells.Item(5).Value
                 End With
                 _sqlCommands.Add(_objDetalleKardex.AnularRegistroDetalleKardexCommand())
-
-                With _objKardex
-                    .Id = row.Cells.Item(2).Value
-                    .Cantidad = Convert.ToInt32(row.cells.item(4).value) + Convert.ToInt32(row.cells.item(8).value)
-                End With
-                _sqlCommands.Add(_objKardex.ModificarCantidadKardexMinCommand())
+                If tabla.Rows.Count = 0 Then
+                    KryptonMessageBox.Show("No se encuentra movimiento de este item" & tabla.Rows(0).ToString(), "Mensaje de información", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+                    Return
+                Else
+                    With _objKardex
+                        .Id = row.Cells.Item(2).Value
+                        .Cantidad = CDbl(tabla.Rows(0)(5).ToString()) + Convert.ToInt32(row.cells.item(8).value)
+                    End With
+                    _sqlCommands.Add(_objKardex.ModificarCantidadKardexMinCommand())
+                End If
 
             Next
 
@@ -1568,16 +1568,14 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                 tsmActualizar.Enabled = False
                 tsmEliminar.Enabled = False
                 tsmReingreso.Enabled = False
-            End If
+                KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
 
-            Dim messageIcon As KryptonMessageBoxIcon
-            If res(0) Then
-                messageIcon = KryptonMessageBoxIcon.Information
             Else
-                messageIcon = KryptonMessageBoxIcon.Exclamation
+                KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+                Return
             End If
 
-            KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, messageIcon)
+
         End Sub
 
         Private Sub tsmActualizar_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles tsmActualizar.Click
@@ -1613,7 +1611,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                 dgvComprobantesEgreso.DataSource = Nothing
                 dgvDetalleComprobate.DataSource = Nothing
 
-                Return
+
             End If
         End Sub
 
@@ -1798,7 +1796,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                             End If
                         Catch ex As Exception
                             KryptonMessageBox.Show("Ocurrió un problema al buscar la serie. por favor, contácte al administrador!!!", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
-
+                            Return
                         End Try
                     End If
                 Next
@@ -1854,81 +1852,93 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
 
                 For indice = 0 To dgvDetalleComprobanteIngreso.RowCount - 1
 
-
-                    With _objDetalleKardex
-                        .Id = iddk
-                        .IdActividad = 1
-                        .IdConcepto = cmbConceptos.SelectedValue
-                        .CantidadIngreso = dgvDetalleComprobanteIngreso.Rows(indice).Cells(3).Value
-                        .ValorUnitarioIngreso = dgvDetalleComprobanteIngreso.Rows(indice).Cells(4).Value
-                        .ValorTotalIngreso = dgvDetalleComprobanteIngreso.Rows(indice).Cells(5).Value
-                        .CantidadEgreso = 0.0
-                        .ValorUnitarioEgreso = 0.0
-                        .ValorTotalEgreso = 0.0
-                        .CantidadSaldo = dgvDetalleComprobanteIngreso.Rows(indice).Cells("CANTIDAD_TOTAL_INGRESO").Value
-                        .ValorUnitarioSaldo = dgvDetalleComprobanteIngreso.Rows(indice).Cells(8).Value
-                        .ValorTotalSaldo = dgvDetalleComprobanteIngreso.Rows(indice).Cells(9).Value
-                        .Fecha = dtpFecha.Value
-                        .IdKardex = CLng(dgvDetalleComprobanteIngreso.Rows(indice).Cells(0).Value)
-                        .Estado = 1
-                        .NroComprobante = _objCompIng.Id
-                        cantidadPrendasLleva = dgvDetalleComprobanteIngreso.Rows(indice).Cells(3).Value
-                    End With
-                    _sqlCommands.Add(_objDetalleKardex.NuevoRegistroDetalleKardexCommand())
+                    'lblIdArticulo.Text = _objSecuencialItem.BuscarIdSecuencialItemXNombreSecuencialItem(_tipoCon, txtArticulo.Text.Trim)
+                    'lblIdKardex.Text = _objKardex.BuscarKardexPorIdSecuencialItem(_tipoCon, lblIdArticulo.Text.Trim)
+                    'lblIdDetalleKardex.Text = _objDetalleKardex.BuscarMayorIdDetalleKardexxIdKardex(_tipoCon, lblIdKardex.Text)
 
 
+                    Dim IdDetKarIngreso As String = _objDetalleKardex.BuscarMayorIdDetalleKardexxIdKardex(_tipoCon, dgvDetalleComprobanteIngreso.Rows(indice).Cells(2).Value)
+                    Dim UltimoMovimiento As DataTable = _objKardex.BuscarUltimoMoviminetoKardexXIdKardex(_tipoCon, dgvDetalleComprobanteIngreso.Rows(indice).Cells(0).Value, IdDetKarIngreso)
 
-                    With _objKardex
-                        .Id = CLng(dgvDetalleComprobanteIngreso.Rows(indice).Cells(0).Value)
-                        .IdsecuencialItem = CLng(dgvDetalleComprobanteIngreso.Rows(indice).Cells(2).Value)
-                        .Cantidad = dgvDetalleComprobanteIngreso.Rows(indice).Cells("CANTIDAD_TOTAL_INGRESO").Value 'calcular aqui
-                        .Fecha = _objCompIng.Fecha
-                        .Estado = 1
-                    End With
-                    _sqlCommands.Add(_objKardex.ModificarCantidadKardexCommand())
-
-                    If cmbBodega.SelectedValue = 1 Then
-                        With _objControl
-                            .IdControl = idu
-                            .IdPersonal = If(txtRecibe.Tag Is Nothing, txtRecibe.Text.Split("-")(1).Trim(), CType(txtRecibe.Tag, Integer))
-                            .IdComprobante = _objCompIng.Id
-                            .Cantidad = cantidadPrendasLleva
-                            .Fecha = _objCompIng.Fecha
+                    If Not (Convert.ToInt32(dgvDetalleComprobanteIngreso.Rows(indice).Cells(0).Value) = 0) Then
+                        With _objDetalleKardex
+                            .Id = iddk
                             .IdActividad = 1
+                            .IdConcepto = cmbConceptos.SelectedValue
+                            .CantidadIngreso = CInt(dgvDetalleComprobanteIngreso.Rows(indice).Cells(3).Value)
+                            .ValorUnitarioIngreso = CDec(CDbl(UltimoMovimiento.Rows(0)(14).ToString()))
+                            .ValorTotalIngreso = CDec(dgvDetalleComprobanteIngreso.Rows(indice).Cells(3).Value) * CDec(dgvDetalleComprobanteIngreso.Rows(indice).Cells(4).Value)
+                            .CantidadEgreso = 0.0
+                            .ValorUnitarioEgreso = 0.0
+                            .ValorTotalEgreso = 0.0
+                            .CantidadSaldo = CDbl(UltimoMovimiento.Rows(0)(5).ToString()) + CDbl(dgvDetalleComprobanteIngreso.Rows(indice).Cells(3).Value)
+                            .ValorUnitarioSaldo = CDec(CDbl(UltimoMovimiento.Rows(0)(14).ToString()))
+                            .ValorTotalSaldo = CDbl(UltimoMovimiento.Rows(0)(5).ToString()) * (CDbl(UltimoMovimiento.Rows(0)(5).ToString()) + CDbl(dgvDetalleComprobanteIngreso.Rows(indice).Cells(3).Value))
+                            .Fecha = dtpFecha.Value
+                            .IdKardex = CLng(dgvDetalleComprobanteIngreso.Rows(indice).Cells(0).Value)
                             .Estado = 1
-                            .IdDetalleKardex = _objDetalleKardex.Id
+                            .NroComprobante = _objCompIng.Id
+                            cantidadPrendasLleva = dgvDetalleComprobanteIngreso.Rows(indice).Cells(3).Value
                         End With
-                        _sqlCommands.Add(_objControl.NuevoRegistroControlUniformesCommand())
+                        _sqlCommands.Add(_objDetalleKardex.NuevoRegistroDetalleKardexCommand())
+
+
+
+                        With _objKardex
+                            .Id = CLng(dgvDetalleComprobanteIngreso.Rows(indice).Cells(0).Value)
+                            .IdsecuencialItem = CLng(dgvDetalleComprobanteIngreso.Rows(indice).Cells(2).Value)
+                            .Cantidad = CDbl(UltimoMovimiento.Rows(0)(5).ToString()) + CDbl(dgvDetalleComprobanteIngreso.Rows(indice).Cells(3).Value) 'calcular aqui
+                            .Fecha = _objCompIng.Fecha
+                            .Estado = 1
+                        End With
+                        _sqlCommands.Add(_objKardex.ModificarCantidadKardexCommand())
+
+                        If cmbBodega.SelectedValue = 1 Then
+                            With _objControl
+                                .IdControl = idu
+                                .IdPersonal = If(txtRecibe.Tag Is Nothing, txtRecibe.Text.Split("-")(1).Trim(), CType(txtRecibe.Tag, Integer))
+                                .IdComprobante = _objCompIng.Id
+                                .Cantidad = cantidadPrendasLleva
+                                .Fecha = _objCompIng.Fecha
+                                .IdActividad = 1
+                                .Estado = 1
+                                .IdDetalleKardex = _objDetalleKardex.Id
+                            End With
+                            _sqlCommands.Add(_objControl.NuevoRegistroControlUniformesCommand())
+                        End If
+
+                        With _objDetCompIng
+                            .IdDetalle = idci
+                            .IdKardex = CLng(dgvDetalleComprobanteIngreso.Rows(indice).Cells(0).Value.ToString.ToUpper)
+                            .IdDetalleKardex = _objDetalleKardex.Id
+                            .ObservacionCalidadDetalle = dgvDetalleComprobanteIngreso.Rows.Item(indice).Cells(6).Value.ToString.ToUpper
+                            .IdComprobante = _objCompIng.Id
+                            .ObservacionDetalleSerial = dgvDetalleComprobanteIngreso.Rows.Item(indice).Cells(7).Value.ToString.ToUpper
+                            .Estado = 1
+                        End With
+                        _sqlCommands.Add(_objDetCompIng.NuevoRegistroDetalleComprobanteIngresoBodegaCommand())
+
+                        ' PUESTO   -   DETALLE
+                        With _objDetalleEgresoPuesto
+                            .Id = idd
+                            .IdSitio = CInt(txtUbicacion.Tag)
+                            .IdDetalle = idci
+                            .Fecha = _objCompIng.Fecha
+                            .Tipo = "INGRESO"
+                            .Estado = 1
+                            .Serie = dgvDetalleComprobanteIngreso.Rows(indice).Cells(7).ToString()
+                        End With
+
+                        _sqlCommands.Add(_objDetalleEgresoPuesto.NuevoRegistroDetalleComprobanteEgresoSitioCommand())
+
+                        idd += 1
+                        iddk += 1
+                        idci += 1
+                        idu += 1
+                    Else
+                        KryptonMessageBox.Show("No el Id Kardex no puede ser cero, contacte al Administrador " & dgvDetalleComprobanteIngreso.Rows(indice).Cells(2).Value, "Mensaje de Validacion", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+                        Return
                     End If
-
-                    With _objDetCompIng
-                        .IdDetalle = idci
-                        .IdKardex = CLng(dgvDetalleComprobanteIngreso.Rows(indice).Cells(0).Value.ToString.ToUpper)
-                        .IdDetalleKardex = _objDetalleKardex.Id
-                        .ObservacionCalidadDetalle = dgvDetalleComprobanteIngreso.Rows.Item(indice).Cells(6).Value.ToString.ToUpper
-                        .IdComprobante = _objCompIng.Id
-                        .ObservacionDetalleSerial = dgvDetalleComprobanteIngreso.Rows.Item(indice).Cells(7).Value.ToString.ToUpper
-                        .Estado = 1
-                    End With
-                    _sqlCommands.Add(_objDetCompIng.NuevoRegistroDetalleComprobanteIngresoBodegaCommand())
-
-                    ' PUESTO   -   DETALLE
-                    With _objDetalleEgresoPuesto
-                        .Id = idd
-                        .IdSitio = CInt(txtUbicacion.Tag)
-                        .IdDetalle = idci
-                        .Fecha = _objCompIng.Fecha
-                        .Tipo = "INGRESO"
-                        .Estado = 1
-                        .Serie = dgvDetalleComprobanteIngreso.Rows(indice).Cells(7).ToString()
-                    End With
-
-                    _sqlCommands.Add(_objDetalleEgresoPuesto.NuevoRegistroDetalleComprobanteEgresoSitioCommand())
-
-                    idd += 1
-                    iddk += 1
-                    idci += 1
-                    idu += 1
 
                 Next
             Catch ex As Exception
@@ -1958,6 +1968,11 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
             Dim cant = CInt(nudCantidadIngreso.Value)
             Dim val = CDbl(nudValorIngreso.Value)
             lbldetalleIngreso.Text = txtSerieIngreso.Text
+
+            'lblIdArticulo.Text = _objSecuencialItem.BuscarIdSecuencialItemXNombreSecuencialItem(_tipoCon, txtArticulo.Text.Trim)
+            'lblIdKardex.Text = _objKardex.BuscarKardexPorIdSecuencialItem(_tipoCon, lblIdArticulo.Text.Trim)
+            'lblIdDetalleKardex.Text = _objDetalleKardex.BuscarMayorIdDetalleKardexxIdKardex(_tipoCon, lblIdKardex.Text)
+
             If Not ValidarKardexRepetidos(CLng(lblIdKardexIngreso.Text), lbldetalleIngreso.Text) Then
 
                 Dim fila As String() =
@@ -2343,6 +2358,10 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
 
         Private Sub btnExportarDetalleComprobante_Click_1(sender As Object, e As EventArgs) Handles btnExportarDetalleComprobante.Click
             ExportarDatosExcel(dgvDetalleComprobate, "DETALLE DE COMPROABANTE DE EGRESO N°: " & CType(dgvComprobantesEgreso.CurrentRow.Cells.Item(0).Value, String))
+        End Sub
+
+        Private Sub KryptonPage2_Click(sender As Object, e As EventArgs) Handles KryptonPage2.Click
+
         End Sub
     End Class
 End Namespace

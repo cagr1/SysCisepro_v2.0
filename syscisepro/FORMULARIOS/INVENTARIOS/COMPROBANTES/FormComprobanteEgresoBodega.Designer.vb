@@ -650,7 +650,7 @@
             Me.dgvDetalleComprobate.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
             Me.dgvDetalleComprobate.RowHeadersVisible = False
             Me.dgvDetalleComprobate.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvDetalleComprobate.Size = New System.Drawing.Size(945, 273)
+            Me.dgvDetalleComprobate.Size = New System.Drawing.Size(945, 12)
             Me.dgvDetalleComprobate.TabIndex = 146
             '
             'gbxIngreso
@@ -2004,7 +2004,7 @@
             'gbxDetalles.Panel
             '
             Me.gbxDetalles.Panel.Controls.Add(Me.dgvDetalleComprobate)
-            Me.gbxDetalles.Size = New System.Drawing.Size(949, 297)
+            Me.gbxDetalles.Size = New System.Drawing.Size(949, 36)
             Me.gbxDetalles.TabIndex = 196
             Me.gbxDetalles.Values.Heading = "Detalles Comprobante"
             '

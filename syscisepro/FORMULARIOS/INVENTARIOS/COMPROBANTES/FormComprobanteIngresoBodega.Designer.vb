@@ -522,7 +522,6 @@
             Me.cmbConceptos.BackColor = System.Drawing.Color.White
             Me.cmbConceptos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cmbConceptos.Enabled = False
-            Me.cmbConceptos.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.cmbConceptos.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cmbConceptos.ForeColor = System.Drawing.Color.Black
             Me.cmbConceptos.FormattingEnabled = True
@@ -577,7 +576,6 @@
             Me.cbmParroquia.BackColor = System.Drawing.Color.White
             Me.cbmParroquia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cbmParroquia.Enabled = False
-            Me.cbmParroquia.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.cbmParroquia.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cbmParroquia.ForeColor = System.Drawing.Color.Black
             Me.cbmParroquia.FormattingEnabled = True
@@ -605,7 +603,6 @@
             Me.cbmIngreso.BackColor = System.Drawing.Color.White
             Me.cbmIngreso.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cbmIngreso.Enabled = False
-            Me.cbmIngreso.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.cbmIngreso.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cbmIngreso.ForeColor = System.Drawing.Color.Black
             Me.cbmIngreso.FormattingEnabled = True
@@ -631,7 +628,6 @@
             Me.cmbDocumento.BackColor = System.Drawing.Color.White
             Me.cmbDocumento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cmbDocumento.Enabled = False
-            Me.cmbDocumento.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.cmbDocumento.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cmbDocumento.FormattingEnabled = True
             Me.cmbDocumento.Location = New System.Drawing.Point(94, 68)
@@ -883,7 +879,6 @@
             '
             Me.cmbObservacionCalidad.BackColor = System.Drawing.Color.White
             Me.cmbObservacionCalidad.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-            Me.cmbObservacionCalidad.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.cmbObservacionCalidad.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cmbObservacionCalidad.ForeColor = System.Drawing.Color.Black
             Me.cmbObservacionCalidad.FormattingEnabled = True
@@ -914,7 +909,7 @@
             Me.txtCodigoArticulo.ForeColor = System.Drawing.Color.Black
             Me.txtCodigoArticulo.Location = New System.Drawing.Point(104, 5)
             Me.txtCodigoArticulo.Name = "txtCodigoArticulo"
-            Me.txtCodigoArticulo.Size = New System.Drawing.Size(150, 21)
+            Me.txtCodigoArticulo.Size = New System.Drawing.Size(10, 21)
             Me.txtCodigoArticulo.TabIndex = 161
             Me.txtCodigoArticulo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
             Me.txtCodigoArticulo.Visible = False
@@ -925,7 +920,7 @@
             Me.txtArticulo.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtArticulo.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtArticulo.ForeColor = System.Drawing.Color.Black
-            Me.txtArticulo.Location = New System.Drawing.Point(67, 6)
+            Me.txtArticulo.Location = New System.Drawing.Point(67, 7)
             Me.txtArticulo.Name = "txtArticulo"
             Me.txtArticulo.Size = New System.Drawing.Size(208, 21)
             Me.txtArticulo.TabIndex = 118
@@ -984,7 +979,7 @@
             Me.KryptonNavigator1.Location = New System.Drawing.Point(0, 32)
             Me.KryptonNavigator1.Name = "KryptonNavigator1"
             Me.KryptonNavigator1.Pages.AddRange(New ComponentFactory.Krypton.Navigator.KryptonPage() {Me.KryptonPage1, Me.KryptonPage2, Me.KryptonPage3})
-            Me.KryptonNavigator1.SelectedIndex = 1
+            Me.KryptonNavigator1.SelectedIndex = 0
             Me.KryptonNavigator1.Size = New System.Drawing.Size(952, 600)
             Me.KryptonNavigator1.TabIndex = 197
             Me.KryptonNavigator1.Text = "KryptonNavigator1"

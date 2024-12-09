@@ -466,7 +466,7 @@
             Me.TabControl1.Location = New System.Drawing.Point(0, 32)
             Me.TabControl1.Name = "TabControl1"
             Me.TabControl1.Pages.AddRange(New ComponentFactory.Krypton.Navigator.KryptonPage() {Me.KryptonPage1, Me.KryptonPage2})
-            Me.TabControl1.SelectedIndex = 1
+            Me.TabControl1.SelectedIndex = 0
             Me.TabControl1.Size = New System.Drawing.Size(1222, 555)
             Me.TabControl1.TabIndex = 191
             Me.TabControl1.Text = "KryptonNavigator1"

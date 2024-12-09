@@ -189,11 +189,11 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
             dgvNotaCredito.EndEdit()
             Dim sel = dgvNotaCredito.Rows.Cast(Of DataGridViewRow)().Any(Function(row) CBool(row.Cells(0).EditedFormattedValue))
             If Not sel Then
-                KryptonMessageBox.Show("DEBE SELECCIONAR AL MENOS UN REGISTRO!", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
+                KryptonMessageBox.Show("Debe seleccionar al menos un registro!", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                 Return
             End If
 
-            If KryptonMessageBox.Show("¿ESTA SEGURA QUE DESEA ANULAR LOS REGISTROS SELECCIONADOS?", "Mensaje de validación", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) <> DialogResult.Yes Then Return
+            If KryptonMessageBox.Show("¿Esta segura que desea anular los registros seleccionados?", "Mensaje de validación", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) <> DialogResult.Yes Then Return
             _sqlCommands.Clear()
 
             ActualizarEstadoNotaCredito()
