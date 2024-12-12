@@ -237,7 +237,7 @@
             'MenuStrip1
             '
             Me.MenuStrip1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-            Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsmNuevo, Me.tsmGuardar, Me.tsmCancelar, Me.TmsActualizar, Me.TmsEliminar})
+            Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsmNuevo, Me.tsmGuardar, Me.tsmCancelar, Me.TmsEliminar, Me.TmsActualizar})
             Me.MenuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow
             Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
             Me.MenuStrip1.Name = "MenuStrip1"
@@ -283,6 +283,7 @@
             Me.TmsActualizar.Name = "TmsActualizar"
             Me.TmsActualizar.Size = New System.Drawing.Size(112, 28)
             Me.TmsActualizar.Text = "ACTUALIZAR"
+            Me.TmsActualizar.Visible = False
             '
             'TmsEliminar
             '

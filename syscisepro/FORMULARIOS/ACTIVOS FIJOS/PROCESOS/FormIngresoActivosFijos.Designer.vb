@@ -6550,7 +6550,7 @@
             Me.txtNombreProvedor.BackColor = System.Drawing.Color.White
             Me.txtNombreProvedor.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtNombreProvedor.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtNombreProvedor.Location = New System.Drawing.Point(305, 114)
+            Me.txtNombreProvedor.Location = New System.Drawing.Point(304, 67)
             Me.txtNombreProvedor.Name = "txtNombreProvedor"
             Me.txtNombreProvedor.Size = New System.Drawing.Size(182, 21)
             Me.txtNombreProvedor.TabIndex = 90
@@ -6560,7 +6560,7 @@
             Me.txtNombreCustodio.BackColor = System.Drawing.Color.White
             Me.txtNombreCustodio.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtNombreCustodio.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtNombreCustodio.Location = New System.Drawing.Point(305, 67)
+            Me.txtNombreCustodio.Location = New System.Drawing.Point(304, 114)
             Me.txtNombreCustodio.Name = "txtNombreCustodio"
             Me.txtNombreCustodio.Size = New System.Drawing.Size(182, 21)
             Me.txtNombreCustodio.TabIndex = 88

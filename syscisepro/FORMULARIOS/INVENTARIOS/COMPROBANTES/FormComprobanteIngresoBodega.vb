@@ -1426,56 +1426,15 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
             Try
 
 
-                With _objCompIng
-                    .Id = txtNroComprobante.Text  'Id Comprobante 
-                End With
-                _sqlCommands.Add(_objCompIng.AnularRegistroComprobanteIngresoBodegaCommand())
-
-
-                For Each row In dgvDetalleComprobate.Rows
-                    Dim tabla1 As DataTable = _objKardex.BuscarUltimoMoviminetoKardexXIdKardex(_tipoCon, row.Cells.Item(2).Value, row.Cells.Item(1).Value)
-
-                    Dim result As DataTable = _objControl.SeleccionarIdControlUniformes(_tipoCon, txtNroComprobante.Text, row.Cells.Item(1).Value)
-
-                    If result.Rows.Count > 0 Then
-                        Dim idcon As Long = Convert.ToInt64(result.Rows(0)("ID_CONTROL"))
-
-                        With _objControl
-                            .IdControl = idcon
-                        End With
-                        _sqlCommands.Add(_objControl.AnularControlCommand())
-
-                    End If
+                _sqlCommands.Clear()
+                Dim cantidadPrendasLleva As Integer = 0
+                'With _objCompEgr
+                '    .Id = txtNumero.Text  'Id Comprobante 
+                'End With
+                '_sqlCommands.Add(_objCompEgr.AnularRegistroComprobanteEgresoBodegaCommand())
 
 
 
-                    With _objDetCompIng
-                        .IdDetalle = row.Cells.Item(1).Value
-                    End With
-                    _sqlCommands.Add(_objDetCompIng.anularDetalleComprobanteIngresoBodegaCommand())
-
-
-                    With _objDetalleKardex
-                        .Id = row.Cells.Item(5).Value
-                    End With
-                    _sqlCommands.Add(_objDetalleKardex.AnularRegistroDetalleKardexCommand())
-
-
-                    If tabla1.Rows.Count = 0 Then
-                        KryptonMessageBox.Show("No se encuentra movimiento de este item" & tabla1.Rows(0).ToString(), "Mensaje de información", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
-                        Return
-                    Else
-                        With _objKardex
-                            .Id = row.Cells.Item(2).Value
-                            .Cantidad = CDbl(tabla1.Rows(0)(5).ToString()) - Convert.ToInt32(row.Cells.Item(8).Value)
-                        End With
-                        _sqlCommands.Add(_objKardex.ModificarCantidadKardexMinCommand())
-
-                    End If
-
-
-
-                Next
             Catch ex As Exception
                 KryptonMessageBox.Show("ERROR AL ANULAR COMPROBANTE DE INGRESO DE BODEGA" & vbNewLine & ex.Message, "Mensaje de información", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
                 Return

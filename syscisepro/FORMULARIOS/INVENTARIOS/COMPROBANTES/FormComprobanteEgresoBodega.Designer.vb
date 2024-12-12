@@ -127,9 +127,9 @@
             Me.tsmNuevo = New System.Windows.Forms.ToolStripMenuItem()
             Me.tsmGuardar = New System.Windows.Forms.ToolStripMenuItem()
             Me.tsmCancelar = New System.Windows.Forms.ToolStripMenuItem()
-            Me.tsmActualizar = New System.Windows.Forms.ToolStripMenuItem()
             Me.tmsEliminar = New System.Windows.Forms.ToolStripMenuItem()
             Me.tsmReingreso = New System.Windows.Forms.ToolStripMenuItem()
+            Me.tsmActualizar = New System.Windows.Forms.ToolStripMenuItem()
             Me.lblIdKardex2 = New System.Windows.Forms.Label()
             Me.lblDetaComp = New System.Windows.Forms.Label()
             Me.lblDetKardex = New System.Windows.Forms.Label()
@@ -650,7 +650,7 @@
             Me.dgvDetalleComprobate.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
             Me.dgvDetalleComprobate.RowHeadersVisible = False
             Me.dgvDetalleComprobate.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvDetalleComprobate.Size = New System.Drawing.Size(945, 12)
+            Me.dgvDetalleComprobate.Size = New System.Drawing.Size(945, 275)
             Me.dgvDetalleComprobate.TabIndex = 146
             '
             'gbxIngreso
@@ -1238,7 +1238,7 @@
             'MenuStrip1
             '
             Me.MenuStrip1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-            Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsmNuevo, Me.tsmGuardar, Me.tsmCancelar, Me.tsmActualizar, Me.tmsEliminar, Me.tsmReingreso})
+            Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsmNuevo, Me.tsmGuardar, Me.tsmCancelar, Me.tmsEliminar, Me.tsmReingreso, Me.tsmActualizar})
             Me.MenuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow
             Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
             Me.MenuStrip1.Name = "MenuStrip1"
@@ -1275,15 +1275,6 @@
             Me.tsmCancelar.Size = New System.Drawing.Size(97, 28)
             Me.tsmCancelar.Text = "CANCELAR"
             '
-            'tsmActualizar
-            '
-            Me.tsmActualizar.Enabled = False
-            Me.tsmActualizar.Image = Global.syscisepro.My.Resources.Resources.refresh_24dp_FILL0_wght400_GRAD0_opsz24__2_
-            Me.tsmActualizar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-            Me.tsmActualizar.Name = "tsmActualizar"
-            Me.tsmActualizar.Size = New System.Drawing.Size(112, 28)
-            Me.tsmActualizar.Text = "ACTUALIZAR"
-            '
             'tmsEliminar
             '
             Me.tmsEliminar.Enabled = False
@@ -1301,6 +1292,16 @@
             Me.tsmReingreso.Name = "tsmReingreso"
             Me.tsmReingreso.Size = New System.Drawing.Size(104, 28)
             Me.tsmReingreso.Text = "REINGRESO"
+            '
+            'tsmActualizar
+            '
+            Me.tsmActualizar.Enabled = False
+            Me.tsmActualizar.Image = Global.syscisepro.My.Resources.Resources.refresh_24dp_FILL0_wght400_GRAD0_opsz24__2_
+            Me.tsmActualizar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+            Me.tsmActualizar.Name = "tsmActualizar"
+            Me.tsmActualizar.Size = New System.Drawing.Size(112, 28)
+            Me.tsmActualizar.Text = "ACTUALIZAR"
+            Me.tsmActualizar.Visible = False
             '
             'lblIdKardex2
             '
@@ -2004,7 +2005,7 @@
             'gbxDetalles.Panel
             '
             Me.gbxDetalles.Panel.Controls.Add(Me.dgvDetalleComprobate)
-            Me.gbxDetalles.Size = New System.Drawing.Size(949, 36)
+            Me.gbxDetalles.Size = New System.Drawing.Size(949, 299)
             Me.gbxDetalles.TabIndex = 196
             Me.gbxDetalles.Values.Heading = "Detalles Comprobante"
             '

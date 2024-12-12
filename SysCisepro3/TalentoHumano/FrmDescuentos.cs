@@ -1276,29 +1276,7 @@ namespace SysCisepro3.TalentoHumano
 
 
 
-        private void txtCuota_TextChanged(object sender, EventArgs e)
-        {
-
-
-            double total = 0;
-            double val1 = 0;
-            double val2 = 0;
-
-            if (!string.IsNullOrEmpty(txtValor.Text) && !string.IsNullOrEmpty(txtCuota.Text))
-            {
-
-
-                val1 = double.Parse(txtValor.Text);
-                val2 = double.Parse(txtCuota.Text);
-                if (val2 != 0)
-                {
-                    total = val1 / val2;
-                    txtValorPago.Text = Math.Round(total, 3).ToString();
-
-
-                }
-            }
-        }
+       
 
         private void txtValorPago_TextChanged(object sender, EventArgs e)
         {
@@ -2046,6 +2024,29 @@ namespace SysCisepro3.TalentoHumano
                 btnGuardar.Enabled = false;
                 btnAnular.Enabled = false;
                 btnCancelar.Enabled = false;
+            }
+        }
+
+        private void txtCuota_TextChanged(object sender, EventArgs e)
+        {
+
+            double total = 0;
+            double val1 = 0;
+            double val2 = 0;
+
+            if (!string.IsNullOrEmpty(txtValor.Text) && !string.IsNullOrEmpty(txtCuota.Text))
+            {
+
+
+                val1 = double.Parse(txtValor.Text);
+                val2 = double.Parse(txtCuota.Text);
+                if (val2 != 0)
+                {
+                    total = val1 / val2;
+                    txtValorPago.Text = Math.Round(total, 3).ToString();
+
+
+                }
             }
         }
     }

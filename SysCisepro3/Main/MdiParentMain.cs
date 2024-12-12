@@ -1935,7 +1935,7 @@ namespace SysCisepro3.Main
                     notifyIcon1.BalloonTipText = @"Aviso por chalecos que estan a punto de expirar su permiso. Por favor, verifique la información correspondiente.";
                 }
 
-               
+
 
 
 

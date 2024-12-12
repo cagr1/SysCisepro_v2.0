@@ -87,9 +87,10 @@
             Me.txtTotalOrdenCompra.BackColor = System.Drawing.Color.White
             Me.txtTotalOrdenCompra.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtTotalOrdenCompra.Enabled = False
+            Me.txtTotalOrdenCompra.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtTotalOrdenCompra.Location = New System.Drawing.Point(336, 150)
             Me.txtTotalOrdenCompra.Name = "txtTotalOrdenCompra"
-            Me.txtTotalOrdenCompra.Size = New System.Drawing.Size(65, 20)
+            Me.txtTotalOrdenCompra.Size = New System.Drawing.Size(65, 21)
             Me.txtTotalOrdenCompra.TabIndex = 22
             Me.txtTotalOrdenCompra.Text = "0.00"
             Me.txtTotalOrdenCompra.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -99,9 +100,10 @@
             Me.txtIvaOrdenCompra.BackColor = System.Drawing.Color.White
             Me.txtIvaOrdenCompra.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtIvaOrdenCompra.Enabled = False
+            Me.txtIvaOrdenCompra.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtIvaOrdenCompra.Location = New System.Drawing.Point(336, 122)
             Me.txtIvaOrdenCompra.Name = "txtIvaOrdenCompra"
-            Me.txtIvaOrdenCompra.Size = New System.Drawing.Size(65, 20)
+            Me.txtIvaOrdenCompra.Size = New System.Drawing.Size(65, 21)
             Me.txtIvaOrdenCompra.TabIndex = 20
             Me.txtIvaOrdenCompra.Text = "0.00"
             Me.txtIvaOrdenCompra.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -111,9 +113,10 @@
             Me.txtDescuentoOrdenCompra.BackColor = System.Drawing.Color.White
             Me.txtDescuentoOrdenCompra.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtDescuentoOrdenCompra.Enabled = False
+            Me.txtDescuentoOrdenCompra.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtDescuentoOrdenCompra.Location = New System.Drawing.Point(336, 96)
             Me.txtDescuentoOrdenCompra.Name = "txtDescuentoOrdenCompra"
-            Me.txtDescuentoOrdenCompra.Size = New System.Drawing.Size(65, 20)
+            Me.txtDescuentoOrdenCompra.Size = New System.Drawing.Size(65, 21)
             Me.txtDescuentoOrdenCompra.TabIndex = 18
             Me.txtDescuentoOrdenCompra.Text = "0.00"
             Me.txtDescuentoOrdenCompra.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -123,9 +126,10 @@
             Me.txtSubtotal0OrdenCompra.BackColor = System.Drawing.Color.White
             Me.txtSubtotal0OrdenCompra.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtSubtotal0OrdenCompra.Enabled = False
+            Me.txtSubtotal0OrdenCompra.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtSubtotal0OrdenCompra.Location = New System.Drawing.Point(336, 70)
             Me.txtSubtotal0OrdenCompra.Name = "txtSubtotal0OrdenCompra"
-            Me.txtSubtotal0OrdenCompra.Size = New System.Drawing.Size(65, 20)
+            Me.txtSubtotal0OrdenCompra.Size = New System.Drawing.Size(65, 21)
             Me.txtSubtotal0OrdenCompra.TabIndex = 16
             Me.txtSubtotal0OrdenCompra.Text = "0.00"
             Me.txtSubtotal0OrdenCompra.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -135,9 +139,10 @@
             Me.txtSubtotal12OrdenCompra.BackColor = System.Drawing.Color.White
             Me.txtSubtotal12OrdenCompra.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtSubtotal12OrdenCompra.Enabled = False
+            Me.txtSubtotal12OrdenCompra.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtSubtotal12OrdenCompra.Location = New System.Drawing.Point(336, 45)
             Me.txtSubtotal12OrdenCompra.Name = "txtSubtotal12OrdenCompra"
-            Me.txtSubtotal12OrdenCompra.Size = New System.Drawing.Size(65, 20)
+            Me.txtSubtotal12OrdenCompra.Size = New System.Drawing.Size(65, 21)
             Me.txtSubtotal12OrdenCompra.TabIndex = 14
             Me.txtSubtotal12OrdenCompra.Text = "0.00"
             Me.txtSubtotal12OrdenCompra.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -147,9 +152,10 @@
             Me.txtTipoPagoOrdenCompra.BackColor = System.Drawing.Color.White
             Me.txtTipoPagoOrdenCompra.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtTipoPagoOrdenCompra.Enabled = False
+            Me.txtTipoPagoOrdenCompra.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtTipoPagoOrdenCompra.Location = New System.Drawing.Point(79, 150)
             Me.txtTipoPagoOrdenCompra.Name = "txtTipoPagoOrdenCompra"
-            Me.txtTipoPagoOrdenCompra.Size = New System.Drawing.Size(146, 20)
+            Me.txtTipoPagoOrdenCompra.Size = New System.Drawing.Size(146, 21)
             Me.txtTipoPagoOrdenCompra.TabIndex = 12
             '
             'txtFormaPagoOrdenCompra
@@ -157,9 +163,10 @@
             Me.txtFormaPagoOrdenCompra.BackColor = System.Drawing.Color.White
             Me.txtFormaPagoOrdenCompra.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtFormaPagoOrdenCompra.Enabled = False
+            Me.txtFormaPagoOrdenCompra.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtFormaPagoOrdenCompra.Location = New System.Drawing.Point(79, 122)
             Me.txtFormaPagoOrdenCompra.Name = "txtFormaPagoOrdenCompra"
-            Me.txtFormaPagoOrdenCompra.Size = New System.Drawing.Size(146, 20)
+            Me.txtFormaPagoOrdenCompra.Size = New System.Drawing.Size(146, 21)
             Me.txtFormaPagoOrdenCompra.TabIndex = 10
             '
             'txtNombreProveedor
@@ -167,6 +174,7 @@
             Me.txtNombreProveedor.BackColor = System.Drawing.Color.White
             Me.txtNombreProveedor.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtNombreProveedor.Enabled = False
+            Me.txtNombreProveedor.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtNombreProveedor.Location = New System.Drawing.Point(8, 70)
             Me.txtNombreProveedor.Multiline = True
             Me.txtNombreProveedor.Name = "txtNombreProveedor"
@@ -178,9 +186,10 @@
             Me.txtRucProveedor.BackColor = System.Drawing.Color.White
             Me.txtRucProveedor.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtRucProveedor.Enabled = False
+            Me.txtRucProveedor.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtRucProveedor.Location = New System.Drawing.Point(307, 20)
             Me.txtRucProveedor.Name = "txtRucProveedor"
-            Me.txtRucProveedor.Size = New System.Drawing.Size(94, 20)
+            Me.txtRucProveedor.Size = New System.Drawing.Size(94, 21)
             Me.txtRucProveedor.TabIndex = 6
             '
             'txtFechaOrdenCompra
@@ -188,9 +197,10 @@
             Me.txtFechaOrdenCompra.BackColor = System.Drawing.Color.White
             Me.txtFechaOrdenCompra.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtFechaOrdenCompra.Enabled = False
+            Me.txtFechaOrdenCompra.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtFechaOrdenCompra.Location = New System.Drawing.Point(164, 21)
             Me.txtFechaOrdenCompra.Name = "txtFechaOrdenCompra"
-            Me.txtFechaOrdenCompra.Size = New System.Drawing.Size(98, 20)
+            Me.txtFechaOrdenCompra.Size = New System.Drawing.Size(98, 21)
             Me.txtFechaOrdenCompra.TabIndex = 4
             '
             'txtIdOrdenCompra
@@ -198,9 +208,10 @@
             Me.txtIdOrdenCompra.BackColor = System.Drawing.Color.White
             Me.txtIdOrdenCompra.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtIdOrdenCompra.Enabled = False
+            Me.txtIdOrdenCompra.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtIdOrdenCompra.Location = New System.Drawing.Point(41, 21)
             Me.txtIdOrdenCompra.Name = "txtIdOrdenCompra"
-            Me.txtIdOrdenCompra.Size = New System.Drawing.Size(72, 20)
+            Me.txtIdOrdenCompra.Size = New System.Drawing.Size(72, 21)
             Me.txtIdOrdenCompra.TabIndex = 3
             '
             'lblIdOrdenCompra

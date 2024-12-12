@@ -336,7 +336,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.ORDEN_DE_COMPRA
                         AprovarRequisicionProductoServicio(Label3.Text)
                     End If
                 Catch ex As Exception
-                    KryptonMessageBox.Show("ERROR AL GUARDAR LA ORDEN DE COMPRA" & vbNewLine & ex.Message.ToString, "Mensaje de excepción", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+                    KryptonMessageBox.Show("Error al guardar la orden de compra" & vbNewLine & ex.Message.ToString, "Mensaje de excepción", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
                     Return
                 End Try
 
@@ -377,19 +377,32 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.ORDEN_DE_COMPRA
         Private Sub dgvDetalleOrdenCompra_CellValueChanged(ByVal sender As System.Object, ByVal e As Windows.Forms.DataGridViewCellEventArgs) Handles dgvDetalleOrdenCompra.CellValueChanged
             Try
                 Dim cant, valor As Decimal
-                If dgvDetalleOrdenCompra.Columns(e.ColumnIndex).Name = "valorUnitarioProductoServicio" Or dgvDetalleOrdenCompra.Columns(e.ColumnIndex).Name = "cantidadProductoServicio" Then
+                Dim columna = dgvDetalleOrdenCompra.Columns(e.ColumnIndex).Name
+
+                If dgvDetalleOrdenCompra.Columns(e.ColumnIndex).Name = "valorUnitarioProductoServicio" Or dgvDetalleOrdenCompra.Columns(e.ColumnIndex).Name = "cantidadProductoServicio" Or dgvDetalleOrdenCompra.Columns(e.ColumnIndex).Name = "porcentaje" Then
                     If dgvDetalleOrdenCompra.CurrentRow.Cells(3).Value.ToString <> "" And dgvDetalleOrdenCompra.CurrentRow.Cells(4).Value.ToString <> "" Then
-                        'Modificacion 2023
-                        'Dim dialogo = MsgBox("GRAVA IVA", MsgBoxStyle.YesNo, "Mensaje de validación")
-                        Dim dialogo = KryptonMessageBox.Show("GRAVA IVA", "Mensaje de validación", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question)
-                        If dialogo = Windows.Forms.DialogResult.Yes Then
-                            dgvDetalleOrdenCompra.CurrentRow.Cells("IVA").Value = "S"
-                        Else
-                            dgvDetalleOrdenCompra.CurrentRow.Cells("IVA").Value = "N"
-                        End If
+
+
+
                         cant = CDec(dgvDetalleOrdenCompra.CurrentRow.Cells(3).Value)
                         valor = CDec(dgvDetalleOrdenCompra.CurrentRow.Cells(4).Value)
                         dgvDetalleOrdenCompra.CurrentRow.Cells(5).Value = cant * valor
+                    End If
+
+                    If dgvDetalleOrdenCompra.Columns(e.ColumnIndex).Name = "porcentaje" Then
+                        Dim porcentaje As Integer = Convert.ToInt32(dgvDetalleOrdenCompra.CurrentRow.Cells("porcentaje").Value)
+
+                        Select Case porcentaje
+                            Case 0
+                                dgvDetalleOrdenCompra.CurrentRow.Cells("IVA").Value = "N"
+                            Case 12, 15
+                                dgvDetalleOrdenCompra.CurrentRow.Cells("IVA").Value = "S"
+
+
+                        End Select
+
+
+
                     End If
                 End If
             Catch ex As Exception
@@ -399,6 +412,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.ORDEN_DE_COMPRA
         End Sub
         Private Sub dgvDetalleOrdenCompra_CellEndEdit(ByVal sender As System.Object, ByVal e As Windows.Forms.DataGridViewCellEventArgs) Handles dgvDetalleOrdenCompra.CellEndEdit
             dgvDetalleOrdenCompra.Rows(e.RowIndex).ErrorText = [String].Empty
+
             BuscarIdItemDetalleOrdenCompra()
         End Sub
         Public Sub BuscarIdItemDetalleOrdenCompra()
@@ -424,21 +438,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.ORDEN_DE_COMPRA
                                 dgvDetalleOrdenCompra.CurrentRow.Cells(2).Value = tab.Rows(0)(18).ToString
                                 dgvDetalleOrdenCompra.CurrentRow.Cells(3).Value = 1
 
-                                '' CARGA EL ED DEL ITEM
-                                'dgvDetalleOrdenCompra.CurrentRow.Cells(0).Value = _objetoSecuencialItem.BuscarIdSecuencialItemXNombreSecuencialItem(_tipoCon, dgvDetalleOrdenCompra.CurrentRow.Cells(1).Value.ToString)
-                                '' CARGA CANTIDAD POR DEFECTO = 1
-                                'dgvDetalleOrdenCompra.CurrentRow.Cells(3).Value = 1
-                                '' CARGA EL PRECIO DEL ITEM
-                                'dgvDetalleOrdenCompra.CurrentRow.Cells(4).Value = _objetoSecuencialItem.BuscarCostoSecuencialItemXNombreSecuencialItem(_tipoCon, dgvDetalleOrdenCompra.CurrentRow.Cells(1).Value.ToString)
-                                'dgvDetalleOrdenCompra.CurrentRow.Cells(2).Value = "um"
-                                'If dgvDetalleOrdenCompra.CurrentRow.Cells(0).Value.ToString <> "" Then
-                                '    If dgvDetalleOrdenCompra.CurrentRow.Cells(0).Value.ToString = 0 Then
-                                '        MsgBox("EL ITEM INGRESADO NO SE ENCUENTRA EN LA BASE DE DATOS. POR FAVOR REGISTRELO ANTES DE INGRESARLO EN LA ORDEN DE COMPRA", MsgBoxStyle.Exclamation, "Mensaje de validación")
-                                '        dgvDetalleOrdenCompra.CurrentRow.Cells(0).Value = ""
-                                '        dgvDetalleOrdenCompra.CurrentRow.Cells(1).Value = ""
-                                '        dgvDetalleOrdenCompra.CurrentRow.Cells(2).Value = ""
-                                '    End If
-                                'End If
+
                             Else
                                 'MsgBox("EL ITEM SELECCIONADO YA ESTA AGREGADO A LA ORDEN DE COMPRA.", MsgBoxStyle.Exclamation, "Mensaje de validación")
                                 KryptonMessageBox.Show("El item seleccionado ya esta agregado a la orden de compra.", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
@@ -463,21 +463,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.ORDEN_DE_COMPRA
                             dgvDetalleOrdenCompra.CurrentRow.Cells(1).Value = tab.Rows(0)(2).ToString
                             dgvDetalleOrdenCompra.CurrentRow.Cells(2).Value = tab.Rows(0)(18).ToString
                             dgvDetalleOrdenCompra.CurrentRow.Cells(3).Value = 1
-                            '' CARGA EL ID DEL ITEM
-                            'dgvDetalleOrdenCompra.CurrentRow.Cells(0).Value = _objetoSecuencialItem.BuscarIdSecuencialItemXNombreSecuencialItem(_tipoCon, dgvDetalleOrdenCompra.CurrentRow.Cells(1).Value.ToString)
-                            '' CARGA CANTIDAD POR DEFECTO = 1
-                            'dgvDetalleOrdenCompra.CurrentRow.Cells(3).Value = 1
-                            '' CARGA EL PRECIO DEL ITEM
-                            'dgvDetalleOrdenCompra.CurrentRow.Cells(4).Value = _objetoSecuencialItem.BuscarCostoSecuencialItemXNombreSecuencialItem(_tipoCon, dgvDetalleOrdenCompra.CurrentRow.Cells(1).Value.ToString)
-                            'dgvDetalleOrdenCompra.CurrentRow.Cells(2).Value = "um"
-                            'If dgvDetalleOrdenCompra.CurrentRow.Cells(0).Value.ToString <> "" Then
-                            '    If dgvDetalleOrdenCompra.CurrentRow.Cells(0).Value.ToString = 0 Then
-                            '        MsgBox("EL ITEM INGRESADO NO SE ENCUENTRA EN LA BASE DE DATOS. POR FAVOR REGISTRELO ANTES DE INGRESARLO EN LA ORDEN DE COMPRA", MsgBoxStyle.Exclamation, "Mensaje de validación")
-                            '        dgvDetalleOrdenCompra.CurrentRow.Cells(0).Value = ""
-                            '        dgvDetalleOrdenCompra.CurrentRow.Cells(1).Value = ""
-                            '        dgvDetalleOrdenCompra.CurrentRow.Cells(2).Value = ""
-                            '    End If
-                            'End If
+
                         End If
                     Next
                 End If
@@ -496,15 +482,21 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.ORDEN_DE_COMPRA
         End Sub
         Private Sub dgvDetalleOrdenCompra_EditingControlShowing(ByVal sender As System.Object, ByVal e As Windows.Forms.DataGridViewEditingControlShowingEventArgs) Handles dgvDetalleOrdenCompra.EditingControlShowing
             Dim itemName = TryCast(e.Control, TextBox)
+            'Dim comboBox = TryCast(e.Control, ComboBox)
+
+            'If comboBox IsNot Nothing Then
+            '    comboBox.DropDownStyle = ComboBoxStyle.DropDownList
+            'ElseIf itemName IsNot Nothing Then
             If itemName Is Nothing Then Return
             itemName.CharacterCasing = CharacterCasing.Upper
-            If dgvDetalleOrdenCompra.CurrentCell.ColumnIndex = 1 Then
-                itemName.AutoCompleteCustomSource = _objetoSecuencialItem.Autocompletar(_tipoCon)
-                itemName.AutoCompleteMode = AutoCompleteMode.Suggest
-                itemName.AutoCompleteSource = AutoCompleteSource.CustomSource
-            Else
-                itemName.AutoCompleteMode = AutoCompleteMode.None
-            End If
+                    If dgvDetalleOrdenCompra.CurrentCell.ColumnIndex = 1 Then
+                        itemName.AutoCompleteCustomSource = _objetoSecuencialItem.Autocompletar(_tipoCon)
+                        itemName.AutoCompleteMode = AutoCompleteMode.Suggest
+                        itemName.AutoCompleteSource = AutoCompleteSource.CustomSource
+                    Else
+                        itemName.AutoCompleteMode = AutoCompleteMode.None
+                    End If
+
             AddHandler itemName.KeyPress, AddressOf ItemType_KeyPress
         End Sub
         Private Sub ItemType_KeyPress(ByVal sender As System.Object, ByVal e As Windows.Forms.KeyPressEventArgs) Handles dgvDetalleOrdenCompra.KeyPress
@@ -529,7 +521,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.ORDEN_DE_COMPRA
                 For indice = 0 To dgvDetalleOrdenCompra.RowCount - 2
                     Dim row = dgvDetalleOrdenCompra.Rows(indice)
 
-                    If dgvDetalleOrdenCompra.Rows(indice).Cells(3).Value <> Nothing And dgvDetalleOrdenCompra.Rows(indice).Cells(4).Value <> Nothing And dgvDetalleOrdenCompra.Rows(indice).Cells(6).Value = "S" Then
+                    If dgvDetalleOrdenCompra.Rows(indice).Cells(3).Value <> Nothing And dgvDetalleOrdenCompra.Rows(indice).Cells(4).Value <> Nothing And dgvDetalleOrdenCompra.Rows(indice).Cells(7).Value = "S" Then
                         'cambio 2023
 
                         subTotal12 += CDec(row.Cells(5).Value)
@@ -545,6 +537,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.ORDEN_DE_COMPRA
                 txtSubtotal12OrdenCompra.Text = subTotal12
                 txtIvaOrdenCompra.Text = iva
                 txtTotalOrdenCompra.Text = subtotal0 + iva + subTotal12
+                lblSubtotalIva.Text = "Subtotal " & piva & "%"
 
                 'iva = subTotal12 * (piva / 100)
                 'total = subtotal0 + subTotal12 + iva

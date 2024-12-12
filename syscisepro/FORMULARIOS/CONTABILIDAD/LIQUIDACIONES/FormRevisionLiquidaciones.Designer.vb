@@ -220,7 +220,7 @@
             DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
             Me.dgvSolicitudFondoRotativo.RowsDefaultCellStyle = DataGridViewCellStyle5
             Me.dgvSolicitudFondoRotativo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvSolicitudFondoRotativo.Size = New System.Drawing.Size(812, 152)
+            Me.dgvSolicitudFondoRotativo.Size = New System.Drawing.Size(810, 152)
             Me.dgvSolicitudFondoRotativo.TabIndex = 17
             '
             'CHK
@@ -563,7 +563,7 @@
             'KryptonGroupBox3.Panel
             '
             Me.KryptonGroupBox3.Panel.Controls.Add(Me.dgvSolicitudFondoRotativo)
-            Me.KryptonGroupBox3.Size = New System.Drawing.Size(816, 176)
+            Me.KryptonGroupBox3.Size = New System.Drawing.Size(814, 176)
             Me.KryptonGroupBox3.TabIndex = 187
             Me.KryptonGroupBox3.Values.Heading = "Deducibles"
             '

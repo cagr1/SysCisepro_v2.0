@@ -25,14 +25,13 @@
         Private Sub InitializeComponent()
             Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormOrdenCompra))
             Me.lblIdProveedorGeneral = New System.Windows.Forms.Label()
             Me.txtTelefono1ProveedorGeneral = New System.Windows.Forms.TextBox()
@@ -51,13 +50,6 @@
             Me.txtIdOrdenCompra = New System.Windows.Forms.TextBox()
             Me.chkReq = New System.Windows.Forms.CheckBox()
             Me.dgvDetalleOrdenCompra = New System.Windows.Forms.DataGridView()
-            Me.idItem = New System.Windows.Forms.DataGridViewTextBoxColumn()
-            Me.nombreProductoServicio = New System.Windows.Forms.DataGridViewTextBoxColumn()
-            Me.unidadMedida = New System.Windows.Forms.DataGridViewTextBoxColumn()
-            Me.cantidadProductoServicio = New System.Windows.Forms.DataGridViewTextBoxColumn()
-            Me.valorUnitarioProductoServicio = New System.Windows.Forms.DataGridViewTextBoxColumn()
-            Me.valorTotalProductoServicio = New System.Windows.Forms.DataGridViewTextBoxColumn()
-            Me.IVA = New System.Windows.Forms.DataGridViewTextBoxColumn()
             Me.btnEliminar = New System.Windows.Forms.Button()
             Me.txtObservacionesOrdenCompra = New System.Windows.Forms.TextBox()
             Me.cmbTipoPagoOrdenCompra = New System.Windows.Forms.ComboBox()
@@ -87,28 +79,36 @@
             Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
             Me.dgvDetalleRequisicionProductoServicio = New System.Windows.Forms.DataGridView()
             Me.KryptonGroupBox1 = New Krypton.Toolkit.KryptonGroupBox()
-            Me.KryptonLabel1 = New Krypton.Toolkit.KryptonLabel()
-            Me.KryptonLabel2 = New Krypton.Toolkit.KryptonLabel()
-            Me.KryptonLabel3 = New Krypton.Toolkit.KryptonLabel()
-            Me.KryptonLabel4 = New Krypton.Toolkit.KryptonLabel()
-            Me.KryptonLabel5 = New Krypton.Toolkit.KryptonLabel()
-            Me.KryptonLabel6 = New Krypton.Toolkit.KryptonLabel()
-            Me.KryptonLabel7 = New Krypton.Toolkit.KryptonLabel()
-            Me.KryptonLabel8 = New Krypton.Toolkit.KryptonLabel()
-            Me.KryptonLabel9 = New Krypton.Toolkit.KryptonLabel()
             Me.KryptonLabel10 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel9 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel8 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel7 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel6 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel5 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel4 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel3 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel2 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel1 = New Krypton.Toolkit.KryptonLabel()
             Me.KryptonGroupBox2 = New Krypton.Toolkit.KryptonGroupBox()
             Me.KryptonGroupBox3 = New Krypton.Toolkit.KryptonGroupBox()
-            Me.KryptonLabel11 = New Krypton.Toolkit.KryptonLabel()
-            Me.KryptonLabel12 = New Krypton.Toolkit.KryptonLabel()
-            Me.KryptonLabel13 = New Krypton.Toolkit.KryptonLabel()
             Me.KryptonLabel26 = New Krypton.Toolkit.KryptonLabel()
             Me.KryptonLabel24 = New Krypton.Toolkit.KryptonLabel()
             Me.lblIva = New Krypton.Toolkit.KryptonLabel()
             Me.KryptonLabel21 = New Krypton.Toolkit.KryptonLabel()
-            Me.KryptonLabel14 = New Krypton.Toolkit.KryptonLabel()
+            Me.lblSubtotalIva = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel13 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel12 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel11 = New Krypton.Toolkit.KryptonLabel()
             Me.KryptonGroupBox4 = New Krypton.Toolkit.KryptonGroupBox()
             Me.KryptonGroupBox5 = New Krypton.Toolkit.KryptonGroupBox()
+            Me.idItem = New System.Windows.Forms.DataGridViewTextBoxColumn()
+            Me.nombreProductoServicio = New System.Windows.Forms.DataGridViewTextBoxColumn()
+            Me.unidadMedida = New System.Windows.Forms.DataGridViewTextBoxColumn()
+            Me.cantidadProductoServicio = New System.Windows.Forms.DataGridViewTextBoxColumn()
+            Me.valorUnitarioProductoServicio = New System.Windows.Forms.DataGridViewTextBoxColumn()
+            Me.valorTotalProductoServicio = New System.Windows.Forms.DataGridViewTextBoxColumn()
+            Me.porcentaje = New System.Windows.Forms.DataGridViewComboBoxColumn()
+            Me.IVA = New System.Windows.Forms.DataGridViewTextBoxColumn()
             CType(Me.dgvDetalleOrdenCompra, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.MenuStrip1.SuspendLayout()
             CType(Me.dgvRequisicionProductoServicioNew, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -316,7 +316,7 @@
             Me.dgvDetalleOrdenCompra.BorderStyle = System.Windows.Forms.BorderStyle.None
             Me.dgvDetalleOrdenCompra.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
             Me.dgvDetalleOrdenCompra.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-            Me.dgvDetalleOrdenCompra.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.idItem, Me.nombreProductoServicio, Me.unidadMedida, Me.cantidadProductoServicio, Me.valorUnitarioProductoServicio, Me.valorTotalProductoServicio, Me.IVA})
+            Me.dgvDetalleOrdenCompra.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.idItem, Me.nombreProductoServicio, Me.unidadMedida, Me.cantidadProductoServicio, Me.valorUnitarioProductoServicio, Me.valorTotalProductoServicio, Me.porcentaje, Me.IVA})
             DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
             DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window
             DataGridViewCellStyle3.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -331,53 +331,6 @@
             Me.dgvDetalleOrdenCompra.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
             Me.dgvDetalleOrdenCompra.Size = New System.Drawing.Size(741, 191)
             Me.dgvDetalleOrdenCompra.TabIndex = 4
-            '
-            'idItem
-            '
-            Me.idItem.HeaderText = "ID"
-            Me.idItem.Name = "idItem"
-            Me.idItem.ReadOnly = True
-            Me.idItem.Width = 50
-            '
-            'nombreProductoServicio
-            '
-            DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-            Me.nombreProductoServicio.DefaultCellStyle = DataGridViewCellStyle2
-            Me.nombreProductoServicio.HeaderText = "PRODUCTO/SERVICIO"
-            Me.nombreProductoServicio.Name = "nombreProductoServicio"
-            Me.nombreProductoServicio.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-            Me.nombreProductoServicio.Width = 375
-            '
-            'unidadMedida
-            '
-            Me.unidadMedida.HeaderText = "UND"
-            Me.unidadMedida.Name = "unidadMedida"
-            Me.unidadMedida.ReadOnly = True
-            Me.unidadMedida.Width = 48
-            '
-            'cantidadProductoServicio
-            '
-            Me.cantidadProductoServicio.HeaderText = "CANT."
-            Me.cantidadProductoServicio.Name = "cantidadProductoServicio"
-            Me.cantidadProductoServicio.Width = 50
-            '
-            'valorUnitarioProductoServicio
-            '
-            Me.valorUnitarioProductoServicio.HeaderText = "V. UNITARIO"
-            Me.valorUnitarioProductoServicio.Name = "valorUnitarioProductoServicio"
-            Me.valorUnitarioProductoServicio.Width = 105
-            '
-            'valorTotalProductoServicio
-            '
-            Me.valorTotalProductoServicio.HeaderText = "V. TOTAL"
-            Me.valorTotalProductoServicio.Name = "valorTotalProductoServicio"
-            Me.valorTotalProductoServicio.ReadOnly = True
-            Me.valorTotalProductoServicio.Width = 105
-            '
-            'IVA
-            '
-            Me.IVA.HeaderText = "IVA"
-            Me.IVA.Name = "IVA"
             '
             'btnEliminar
             '
@@ -675,14 +628,6 @@
             Me.dgvDetalleRequisicionProductoServicio.BorderStyle = System.Windows.Forms.BorderStyle.None
             Me.dgvDetalleRequisicionProductoServicio.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
             Me.dgvDetalleRequisicionProductoServicio.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-            DataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-            DataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Window
-            DataGridViewCellStyle10.Font = New System.Drawing.Font("Roboto", 8.25!)
-            DataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.ControlText
-            DataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight
-            DataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-            DataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-            Me.dgvDetalleRequisicionProductoServicio.DefaultCellStyle = DataGridViewCellStyle10
             Me.dgvDetalleRequisicionProductoServicio.Dock = System.Windows.Forms.DockStyle.Fill
             Me.dgvDetalleRequisicionProductoServicio.Location = New System.Drawing.Point(0, 0)
             Me.dgvDetalleRequisicionProductoServicio.Name = "dgvDetalleRequisicionProductoServicio"
@@ -730,69 +675,13 @@
             Me.KryptonGroupBox1.TabIndex = 190
             Me.KryptonGroupBox1.Values.Heading = "Datos"
             '
-            'KryptonLabel1
+            'KryptonLabel10
             '
-            Me.KryptonLabel1.Location = New System.Drawing.Point(5, 4)
-            Me.KryptonLabel1.Name = "KryptonLabel1"
-            Me.KryptonLabel1.Size = New System.Drawing.Size(65, 20)
-            Me.KryptonLabel1.TabIndex = 0
-            Me.KryptonLabel1.Values.Text = "No Orden"
-            '
-            'KryptonLabel2
-            '
-            Me.KryptonLabel2.Location = New System.Drawing.Point(250, 4)
-            Me.KryptonLabel2.Name = "KryptonLabel2"
-            Me.KryptonLabel2.Size = New System.Drawing.Size(42, 20)
-            Me.KryptonLabel2.TabIndex = 36
-            Me.KryptonLabel2.Values.Text = "Fecha"
-            '
-            'KryptonLabel3
-            '
-            Me.KryptonLabel3.Location = New System.Drawing.Point(5, 30)
-            Me.KryptonLabel3.Name = "KryptonLabel3"
-            Me.KryptonLabel3.Size = New System.Drawing.Size(41, 20)
-            Me.KryptonLabel3.TabIndex = 45
-            Me.KryptonLabel3.Values.Text = "Sr(es)"
-            '
-            'KryptonLabel4
-            '
-            Me.KryptonLabel4.Location = New System.Drawing.Point(298, 32)
-            Me.KryptonLabel4.Name = "KryptonLabel4"
-            Me.KryptonLabel4.Size = New System.Drawing.Size(53, 20)
-            Me.KryptonLabel4.TabIndex = 46
-            Me.KryptonLabel4.Values.Text = "RUC /CI"
-            '
-            'KryptonLabel5
-            '
-            Me.KryptonLabel5.Location = New System.Drawing.Point(4, 55)
-            Me.KryptonLabel5.Name = "KryptonLabel5"
-            Me.KryptonLabel5.Size = New System.Drawing.Size(62, 20)
-            Me.KryptonLabel5.TabIndex = 47
-            Me.KryptonLabel5.Values.Text = "Direccion"
-            '
-            'KryptonLabel6
-            '
-            Me.KryptonLabel6.Location = New System.Drawing.Point(298, 55)
-            Me.KryptonLabel6.Name = "KryptonLabel6"
-            Me.KryptonLabel6.Size = New System.Drawing.Size(30, 20)
-            Me.KryptonLabel6.TabIndex = 48
-            Me.KryptonLabel6.Values.Text = "Telf"
-            '
-            'KryptonLabel7
-            '
-            Me.KryptonLabel7.Location = New System.Drawing.Point(446, 32)
-            Me.KryptonLabel7.Name = "KryptonLabel7"
-            Me.KryptonLabel7.Size = New System.Drawing.Size(75, 20)
-            Me.KryptonLabel7.TabIndex = 49
-            Me.KryptonLabel7.Values.Text = "Contr Espec"
-            '
-            'KryptonLabel8
-            '
-            Me.KryptonLabel8.Location = New System.Drawing.Point(600, 30)
-            Me.KryptonLabel8.Name = "KryptonLabel8"
-            Me.KryptonLabel8.Size = New System.Drawing.Size(67, 20)
-            Me.KryptonLabel8.TabIndex = 50
-            Me.KryptonLabel8.Values.Text = "Lleva Cont"
+            Me.KryptonLabel10.Location = New System.Drawing.Point(600, 56)
+            Me.KryptonLabel10.Name = "KryptonLabel10"
+            Me.KryptonLabel10.Size = New System.Drawing.Size(40, 20)
+            Me.KryptonLabel10.TabIndex = 52
+            Me.KryptonLabel10.Values.Text = "Email"
             '
             'KryptonLabel9
             '
@@ -802,13 +691,69 @@
             Me.KryptonLabel9.TabIndex = 51
             Me.KryptonLabel9.Values.Text = "Ciudad"
             '
-            'KryptonLabel10
+            'KryptonLabel8
             '
-            Me.KryptonLabel10.Location = New System.Drawing.Point(600, 56)
-            Me.KryptonLabel10.Name = "KryptonLabel10"
-            Me.KryptonLabel10.Size = New System.Drawing.Size(40, 20)
-            Me.KryptonLabel10.TabIndex = 52
-            Me.KryptonLabel10.Values.Text = "Email"
+            Me.KryptonLabel8.Location = New System.Drawing.Point(600, 30)
+            Me.KryptonLabel8.Name = "KryptonLabel8"
+            Me.KryptonLabel8.Size = New System.Drawing.Size(67, 20)
+            Me.KryptonLabel8.TabIndex = 50
+            Me.KryptonLabel8.Values.Text = "Lleva Cont"
+            '
+            'KryptonLabel7
+            '
+            Me.KryptonLabel7.Location = New System.Drawing.Point(446, 32)
+            Me.KryptonLabel7.Name = "KryptonLabel7"
+            Me.KryptonLabel7.Size = New System.Drawing.Size(75, 20)
+            Me.KryptonLabel7.TabIndex = 49
+            Me.KryptonLabel7.Values.Text = "Contr Espec"
+            '
+            'KryptonLabel6
+            '
+            Me.KryptonLabel6.Location = New System.Drawing.Point(298, 55)
+            Me.KryptonLabel6.Name = "KryptonLabel6"
+            Me.KryptonLabel6.Size = New System.Drawing.Size(30, 20)
+            Me.KryptonLabel6.TabIndex = 48
+            Me.KryptonLabel6.Values.Text = "Telf"
+            '
+            'KryptonLabel5
+            '
+            Me.KryptonLabel5.Location = New System.Drawing.Point(4, 55)
+            Me.KryptonLabel5.Name = "KryptonLabel5"
+            Me.KryptonLabel5.Size = New System.Drawing.Size(62, 20)
+            Me.KryptonLabel5.TabIndex = 47
+            Me.KryptonLabel5.Values.Text = "Direccion"
+            '
+            'KryptonLabel4
+            '
+            Me.KryptonLabel4.Location = New System.Drawing.Point(298, 32)
+            Me.KryptonLabel4.Name = "KryptonLabel4"
+            Me.KryptonLabel4.Size = New System.Drawing.Size(53, 20)
+            Me.KryptonLabel4.TabIndex = 46
+            Me.KryptonLabel4.Values.Text = "RUC /CI"
+            '
+            'KryptonLabel3
+            '
+            Me.KryptonLabel3.Location = New System.Drawing.Point(5, 30)
+            Me.KryptonLabel3.Name = "KryptonLabel3"
+            Me.KryptonLabel3.Size = New System.Drawing.Size(41, 20)
+            Me.KryptonLabel3.TabIndex = 45
+            Me.KryptonLabel3.Values.Text = "Sr(es)"
+            '
+            'KryptonLabel2
+            '
+            Me.KryptonLabel2.Location = New System.Drawing.Point(250, 4)
+            Me.KryptonLabel2.Name = "KryptonLabel2"
+            Me.KryptonLabel2.Size = New System.Drawing.Size(42, 20)
+            Me.KryptonLabel2.TabIndex = 36
+            Me.KryptonLabel2.Values.Text = "Fecha"
+            '
+            'KryptonLabel1
+            '
+            Me.KryptonLabel1.Location = New System.Drawing.Point(5, 4)
+            Me.KryptonLabel1.Name = "KryptonLabel1"
+            Me.KryptonLabel1.Size = New System.Drawing.Size(65, 20)
+            Me.KryptonLabel1.TabIndex = 0
+            Me.KryptonLabel1.Values.Text = "No Orden"
             '
             'KryptonGroupBox2
             '
@@ -842,7 +787,7 @@
             Me.KryptonGroupBox3.Panel.Controls.Add(Me.txtSubtotal0OrdenCompra)
             Me.KryptonGroupBox3.Panel.Controls.Add(Me.KryptonLabel21)
             Me.KryptonGroupBox3.Panel.Controls.Add(Me.txtSubtotal12OrdenCompra)
-            Me.KryptonGroupBox3.Panel.Controls.Add(Me.KryptonLabel14)
+            Me.KryptonGroupBox3.Panel.Controls.Add(Me.lblSubtotalIva)
             Me.KryptonGroupBox3.Panel.Controls.Add(Me.txtObservacionesOrdenCompra)
             Me.KryptonGroupBox3.Panel.Controls.Add(Me.KryptonLabel13)
             Me.KryptonGroupBox3.Panel.Controls.Add(Me.cmbTipoPagoOrdenCompra)
@@ -853,30 +798,6 @@
             Me.KryptonGroupBox3.Size = New System.Drawing.Size(754, 149)
             Me.KryptonGroupBox3.TabIndex = 192
             Me.KryptonGroupBox3.Values.Heading = "Valores"
-            '
-            'KryptonLabel11
-            '
-            Me.KryptonLabel11.Location = New System.Drawing.Point(10, 30)
-            Me.KryptonLabel11.Name = "KryptonLabel11"
-            Me.KryptonLabel11.Size = New System.Drawing.Size(76, 20)
-            Me.KryptonLabel11.TabIndex = 2
-            Me.KryptonLabel11.Values.Text = "Forma Pago"
-            '
-            'KryptonLabel12
-            '
-            Me.KryptonLabel12.Location = New System.Drawing.Point(261, 30)
-            Me.KryptonLabel12.Name = "KryptonLabel12"
-            Me.KryptonLabel12.Size = New System.Drawing.Size(66, 20)
-            Me.KryptonLabel12.TabIndex = 3
-            Me.KryptonLabel12.Values.Text = "Tipo Pago"
-            '
-            'KryptonLabel13
-            '
-            Me.KryptonLabel13.Location = New System.Drawing.Point(10, 56)
-            Me.KryptonLabel13.Name = "KryptonLabel13"
-            Me.KryptonLabel13.Size = New System.Drawing.Size(90, 20)
-            Me.KryptonLabel13.TabIndex = 4
-            Me.KryptonLabel13.Values.Text = "Observaciones"
             '
             'KryptonLabel26
             '
@@ -910,13 +831,37 @@
             Me.KryptonLabel21.TabIndex = 157
             Me.KryptonLabel21.Values.Text = "Descuento"
             '
-            'KryptonLabel14
+            'lblSubtotalIva
             '
-            Me.KryptonLabel14.Location = New System.Drawing.Point(541, 0)
-            Me.KryptonLabel14.Name = "KryptonLabel14"
-            Me.KryptonLabel14.Size = New System.Drawing.Size(83, 20)
-            Me.KryptonLabel14.TabIndex = 156
-            Me.KryptonLabel14.Values.Text = "Subtotal 12%"
+            Me.lblSubtotalIva.Location = New System.Drawing.Point(541, 0)
+            Me.lblSubtotalIva.Name = "lblSubtotalIva"
+            Me.lblSubtotalIva.Size = New System.Drawing.Size(83, 20)
+            Me.lblSubtotalIva.TabIndex = 156
+            Me.lblSubtotalIva.Values.Text = "Subtotal 12%"
+            '
+            'KryptonLabel13
+            '
+            Me.KryptonLabel13.Location = New System.Drawing.Point(10, 56)
+            Me.KryptonLabel13.Name = "KryptonLabel13"
+            Me.KryptonLabel13.Size = New System.Drawing.Size(90, 20)
+            Me.KryptonLabel13.TabIndex = 4
+            Me.KryptonLabel13.Values.Text = "Observaciones"
+            '
+            'KryptonLabel12
+            '
+            Me.KryptonLabel12.Location = New System.Drawing.Point(261, 30)
+            Me.KryptonLabel12.Name = "KryptonLabel12"
+            Me.KryptonLabel12.Size = New System.Drawing.Size(66, 20)
+            Me.KryptonLabel12.TabIndex = 3
+            Me.KryptonLabel12.Values.Text = "Tipo Pago"
+            '
+            'KryptonLabel11
+            '
+            Me.KryptonLabel11.Location = New System.Drawing.Point(10, 30)
+            Me.KryptonLabel11.Name = "KryptonLabel11"
+            Me.KryptonLabel11.Size = New System.Drawing.Size(76, 20)
+            Me.KryptonLabel11.TabIndex = 2
+            Me.KryptonLabel11.Values.Text = "Forma Pago"
             '
             'KryptonGroupBox4
             '
@@ -946,6 +891,60 @@
             Me.KryptonGroupBox5.Size = New System.Drawing.Size(312, 305)
             Me.KryptonGroupBox5.TabIndex = 194
             Me.KryptonGroupBox5.Values.Heading = "Detalles de Requisicion"
+            '
+            'idItem
+            '
+            Me.idItem.HeaderText = "ID"
+            Me.idItem.Name = "idItem"
+            Me.idItem.ReadOnly = True
+            Me.idItem.Width = 50
+            '
+            'nombreProductoServicio
+            '
+            DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+            Me.nombreProductoServicio.DefaultCellStyle = DataGridViewCellStyle2
+            Me.nombreProductoServicio.HeaderText = "PRODUCTO/SERVICIO"
+            Me.nombreProductoServicio.Name = "nombreProductoServicio"
+            Me.nombreProductoServicio.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+            Me.nombreProductoServicio.Width = 325
+            '
+            'unidadMedida
+            '
+            Me.unidadMedida.HeaderText = "UND"
+            Me.unidadMedida.Name = "unidadMedida"
+            Me.unidadMedida.ReadOnly = True
+            Me.unidadMedida.Width = 48
+            '
+            'cantidadProductoServicio
+            '
+            Me.cantidadProductoServicio.HeaderText = "CANT."
+            Me.cantidadProductoServicio.Name = "cantidadProductoServicio"
+            Me.cantidadProductoServicio.Width = 50
+            '
+            'valorUnitarioProductoServicio
+            '
+            Me.valorUnitarioProductoServicio.HeaderText = "V. UNITARIO"
+            Me.valorUnitarioProductoServicio.Name = "valorUnitarioProductoServicio"
+            Me.valorUnitarioProductoServicio.Width = 75
+            '
+            'valorTotalProductoServicio
+            '
+            Me.valorTotalProductoServicio.HeaderText = "V. TOTAL"
+            Me.valorTotalProductoServicio.Name = "valorTotalProductoServicio"
+            Me.valorTotalProductoServicio.ReadOnly = True
+            Me.valorTotalProductoServicio.Width = 85
+            '
+            'porcentaje
+            '
+            Me.porcentaje.HeaderText = "%"
+            Me.porcentaje.Items.AddRange(New Object() {"0", "12", "15"})
+            Me.porcentaje.Name = "porcentaje"
+            Me.porcentaje.Width = 50
+            '
+            'IVA
+            '
+            Me.IVA.HeaderText = "IVA"
+            Me.IVA.Name = "IVA"
             '
             'FormOrdenCompra
             '
@@ -1035,14 +1034,7 @@
         Friend WithEvents dgvDetalleRequisicionProductoServicio As System.Windows.Forms.DataGridView
         Friend WithEvents Label1 As System.Windows.Forms.Label
         Friend WithEvents Label3 As System.Windows.Forms.Label
-        Friend WithEvents idItem As System.Windows.Forms.DataGridViewTextBoxColumn
-        Friend WithEvents nombreProductoServicio As System.Windows.Forms.DataGridViewTextBoxColumn
-        Friend WithEvents unidadMedida As System.Windows.Forms.DataGridViewTextBoxColumn
-        Friend WithEvents cantidadProductoServicio As System.Windows.Forms.DataGridViewTextBoxColumn
-        Friend WithEvents valorUnitarioProductoServicio As System.Windows.Forms.DataGridViewTextBoxColumn
-        Friend WithEvents valorTotalProductoServicio As System.Windows.Forms.DataGridViewTextBoxColumn
         Friend WithEvents chkReq As System.Windows.Forms.CheckBox
-        Friend WithEvents IVA As System.Windows.Forms.DataGridViewTextBoxColumn
         Friend WithEvents Column1 As DataGridViewCheckBoxColumn
         Friend WithEvents Column2 As DataGridViewTextBoxColumn
         Friend WithEvents Column3 As DataGridViewTextBoxColumn
@@ -1074,8 +1066,16 @@
         Friend WithEvents KryptonLabel24 As Krypton.Toolkit.KryptonLabel
         Friend WithEvents lblIva As Krypton.Toolkit.KryptonLabel
         Friend WithEvents KryptonLabel21 As Krypton.Toolkit.KryptonLabel
-        Friend WithEvents KryptonLabel14 As Krypton.Toolkit.KryptonLabel
+        Friend WithEvents lblSubtotalIva As Krypton.Toolkit.KryptonLabel
         Friend WithEvents KryptonGroupBox4 As Krypton.Toolkit.KryptonGroupBox
         Friend WithEvents KryptonGroupBox5 As Krypton.Toolkit.KryptonGroupBox
+        Friend WithEvents idItem As DataGridViewTextBoxColumn
+        Friend WithEvents nombreProductoServicio As DataGridViewTextBoxColumn
+        Friend WithEvents unidadMedida As DataGridViewTextBoxColumn
+        Friend WithEvents cantidadProductoServicio As DataGridViewTextBoxColumn
+        Friend WithEvents valorUnitarioProductoServicio As DataGridViewTextBoxColumn
+        Friend WithEvents valorTotalProductoServicio As DataGridViewTextBoxColumn
+        Friend WithEvents porcentaje As DataGridViewComboBoxColumn
+        Friend WithEvents IVA As DataGridViewTextBoxColumn
     End Class
 End Namespace
