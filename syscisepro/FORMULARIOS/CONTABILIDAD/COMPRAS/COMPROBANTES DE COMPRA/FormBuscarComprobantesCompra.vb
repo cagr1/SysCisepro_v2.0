@@ -396,16 +396,16 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
             If lblIdComprobanteCompra.Text <> 0 Then
                 If lblEstadoComprobanteCompra.Text = "COMPRAS" Then
                     Dim numeroRegistro = _objetoNumeroRegistroAsientoCompCompra.BuscarNumeroRegistroAsientoPorIdComprobanteCompra(_tipoCon, lblIdComprobanteCompra.Text)
-                    Dim ds As DataSet = _objetoComprobantesCompra.BuscarReporteComprobanteCompraXIdComprobanteNumeroRegistro(_tipoCon, Convert.ToInt32(lblIdComprobanteCompra.Text), numeroRegistro)
+                    Dim ds As DataSet = _objetoComprobantesCompra.BuscarReporteComprobanteCompraXIdComprobanteNumeroRegistro2(_tipoCon, Convert.ToInt32(lblIdComprobanteCompra.Text), numeroRegistro)
 
                     Dim iva5 As DataTable = _objetoComprobantesCompra.IvaComprobanteTabla(_tipoCon, CType(lblIdComprobanteCompra.Text, Int64))
 
-                    Dim subtotal5Value As String = "0"
-                    Dim iva5Value As String = "0"
+                    Dim subtotal5Value As Decimal = 0.0
+                    Dim iva5Value As Decimal = 0.0
                     If iva5.Rows.Count > 0 Then
 
-                        subtotal5Value = If(iva5.Rows(0)("SUBTOTAL_5_COMPROBANTE_COMPRA") IsNot DBNull.Value, iva5.Rows(0)("SUBTOTAL_5_COMPROBANTE_COMPRA").ToString(), "0,00")
-                        iva5Value = If(iva5.Rows(0)("IVA5_COMPROBANTE_COMPRA") IsNot DBNull.Value, iva5.Rows(0)("IVA5_COMPROBANTE_COMPRA").ToString(), "0,00")
+                        subtotal5Value = If(iva5.Rows(0)("SUBTOTAL_5_COMPROBANTE_COMPRA") IsNot DBNull.Value, Convert.ToDecimal(iva5.Rows(0)("SUBTOTAL_5_COMPROBANTE_COMPRA")).ToString("#,##0.00"), "0,00")
+                        iva5Value = If(iva5.Rows(0)("IVA5_COMPROBANTE_COMPRA") IsNot DBNull.Value, Convert.ToDecimal(iva5.Rows(0)("IVA5_COMPROBANTE_COMPRA")).ToString("#,##0.00"), "0,00")
                     End If
 
                     Dim pdfStream As New MemoryStream()
@@ -415,7 +415,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
                     PdfViewer1.Document = Nothing
 
                     'Using fs As New FileStream(ruta, FileMode.Create, FileAccess.Write, FileShare.None)
-                    Dim document As New iTextSharp.text.Document()
+                    Dim document As New iTextSharp.text.Document(PageSize.A5)
                     Dim writer As PdfWriter = PdfWriter.GetInstance(document, pdfStream)
                     writer.CloseStream = False
                     document.Open()
@@ -429,14 +429,14 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
 
                     Dim rutaImagen As String = ValidationForms.NombreLogoNuevo(_tipoCon, Application.StartupPath)
                     Dim logo As iTextSharp.text.Image = iTextSharp.text.Image.GetInstance(rutaImagen)
-                    logo.ScaleToFit(35, 35)
+                    logo.ScaleToFit(30, 30)
 
 
 
                     Dim headerTable As PdfPTable = New PdfPTable(3)
-                    headerTable.TotalWidth = 500
+                    headerTable.TotalWidth = 400
 
-                    Dim ColumnWidhts As Single() = New Single() {150, 250, 100}
+                    Dim ColumnWidhts As Single() = New Single() {120, 200, 80}
                     headerTable.SetWidths(ColumnWidhts)
 
 
@@ -445,7 +445,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
                     idContent.Add(New Chunk("Id    ", fuente8Bold))
                     idContent.Add(New Chunk("   " & lblIdComprobanteCompra.Text, fuente8))
                     idContent.Add(New Chunk(vbLf, fuente10))
-                    idContent.Add(New Chunk(vbLf & "Tipo    ", fuente8Bold))
+                    idContent.Add(New Chunk(vbLf & "Tipo  ", fuente8Bold))
                     idContent.Add(New Chunk(dgvComprobantesCompra.CurrentRow.Cells.Item(2).Value.ToString(), fuente8))
 
 
@@ -470,18 +470,18 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
                                     .Border = PdfPCell.NO_BORDER
                                 }
                     headerTable.AddCell(logoCell)
-                    headerTable.WriteSelectedRows(0, -1, 50, 820, writer.DirectContent)
+                    headerTable.WriteSelectedRows(0, -1, 20, 575, writer.DirectContent)
 
                     Dim rectTabla1 As PdfContentByte = writer.DirectContent
-                    rectTabla1.RoundRectangle(40.0F, 775.0F, 525.0F, 50.0F, 10.0F)
+                    rectTabla1.RoundRectangle(10.0F, 530.0F, 390.0F, 50.0F, 10.0F)
                     rectTabla1.Stroke()
 
 
 
                     Dim tabla1 As PdfPTable = New PdfPTable(2)
-                    tabla1.TotalWidth = 500
+                    tabla1.TotalWidth = 400
 
-                    Dim ColumnWidhts1 As Single() = New Single() {300, 200}
+                    Dim ColumnWidhts1 As Single() = New Single() {220, 180}
                     tabla1.SetWidths(ColumnWidhts1)
 
                     Dim proveedorContent As New Phrase()
@@ -529,7 +529,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
 
 
 
-                    'tabla1.AddCell(emptyCell)
+                    'Comprobante Compra
 
                     Dim NroComprobanteContent As New Phrase()
                     NroComprobanteContent.Add(New Chunk("Nro. Comprobante   ", fuente8Bold))
@@ -599,13 +599,14 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
                     tabla1.AddCell(ObservacionCell)
 
                     Dim table2 As PdfPTable = New PdfPTable(2)
-                    table2.TotalWidth = 200
+                    table2.TotalWidth = 180
                     table2.HorizontalAlignment = Element.ALIGN_CENTER
                     'Dim columnWidthsTable5() As Single = {150, 50}
 
-
+                    Dim subtotal12 As Decimal = Convert.ToDecimal(comproTable.Rows(0)("SUBTOTAL_12_COMPROBANTE_COMPRA"))
+                    Dim formatSubtotal12 As String = subtotal12.ToString("#,##0.00")
                     Dim cell1Row1 As New PdfPCell(New Phrase("Subtotal " & lblPorcentaje.Text & "%", fuente8Bold))
-                    Dim cell2Row1 As New PdfPCell(New Phrase(comproTable.Rows(0)("SUBTOTAL_12_COMPROBANTE_COMPRA").ToString(), fuente8))
+                    Dim cell2Row1 As New PdfPCell(New Phrase(formatSubtotal12, fuente8))
                     cell2Row1.HorizontalAlignment = Element.ALIGN_RIGHT
                     table2.AddCell(cell1Row1)
                     table2.AddCell(cell2Row1)
@@ -616,8 +617,11 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
                     table2.AddCell(cell1Row2)
                     table2.AddCell(cell2Row2)
 
+
+                    Dim subtotal0 As Decimal = Convert.ToDecimal(comproTable.Rows(0)("SUBTOTAL_0_COMPROBANTE_COMPRA"))
+                    Dim formatSubtotal0 As String = subtotal0.ToString("#,##0.00")
                     Dim cell1Row3 As New PdfPCell(New Phrase("Subtotal 0%", fuente8Bold))
-                    Dim cell2Row3 As New PdfPCell(New Phrase(comproTable.Rows(0)("SUBTOTAL_12_COMPROBANTE_COMPRA").ToString(), fuente8))
+                    Dim cell2Row3 As New PdfPCell(New Phrase(formatSubtotal0, fuente8))
                     cell2Row3.HorizontalAlignment = Element.ALIGN_RIGHT
                     table2.AddCell(cell1Row3)
                     table2.AddCell(cell2Row3)
@@ -628,8 +632,10 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
                     table2.AddCell(cell1Row4)
                     table2.AddCell(cell2Row4)
 
+                    Dim subtotal As Decimal = Convert.ToDecimal(comproTable.Rows(0)("SUBTOTAL_COMPROBANTE_COMPRA"))
+                    Dim formatSubtotal As String = subtotal.ToString("#,##0.00")
                     Dim cell1Row5 As New PdfPCell(New Phrase("Subtotal", fuente8Bold))
-                    Dim cell2Row5 As New PdfPCell(New Phrase(comproTable.Rows(0)("SUBTOTAL_COMPROBANTE_COMPRA").ToString(), fuente8))
+                    Dim cell2Row5 As New PdfPCell(New Phrase(formatSubtotal, fuente8))
                     cell2Row5.HorizontalAlignment = Element.ALIGN_RIGHT
                     table2.AddCell(cell1Row5)
                     table2.AddCell(cell2Row5)
@@ -640,14 +646,17 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
                     table2.AddCell(cell1Row6)
                     table2.AddCell(cell2Row6)
 
+
                     Dim cell1Row7 As New PdfPCell(New Phrase("IVA " & lblPorcentaje.Text & "%", fuente8Bold))
                     Dim cell2Row7 As New PdfPCell(New Phrase(comproTable.Rows(0)("IVA_COMPROBANTE_COMPRA").ToString(), fuente8))
                     cell2Row7.HorizontalAlignment = Element.ALIGN_RIGHT
                     table2.AddCell(cell1Row7)
                     table2.AddCell(cell2Row7)
 
+                    Dim total As Decimal = Convert.ToDecimal(comproTable.Rows(0)("TOTAL_COMPROBANTE_COMPRA"))
+                    Dim formatTotal As String = total.ToString("#,##0.00")
                     Dim cell1Row8 As New PdfPCell(New Phrase("TOTAL ", fuente8Bold))
-                    Dim cell2Row8 As New PdfPCell(New Phrase(comproTable.Rows(0)("TOTAL_COMPROBANTE_COMPRA").ToString(), fuente8))
+                    Dim cell2Row8 As New PdfPCell(New Phrase(formatTotal, fuente8Bold))
                     cell2Row8.HorizontalAlignment = Element.ALIGN_RIGHT
                     table2.AddCell(cell1Row8)
                     table2.AddCell(cell2Row8)
@@ -657,13 +666,13 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
                                         .HorizontalAlignment = Element.ALIGN_RIGHT,
                                         .VerticalAlignment = Element.ALIGN_TOP}
                     tabla1.AddCell(nestedTableCell)
-                    tabla1.WriteSelectedRows(0, -1, 50, 775, writer.DirectContent)
+                    tabla1.WriteSelectedRows(0, -1, 10, 520, writer.DirectContent)
 
 
                     Dim tabla3 As PdfPTable = New PdfPTable(2)
-                    tabla3.TotalWidth = 500
+                    tabla3.TotalWidth = 400
 
-                    Dim ColumnWidhts3 As Single() = New Single() {250, 250}
+                    Dim ColumnWidhts3 As Single() = New Single() {200, 200}
                     tabla3.SetWidths(ColumnWidhts3)
 
                     Dim TituloTabla3 As New PdfPCell(New Phrase("COMPROBANTE DE RETENCIÓN", fuente10Bold)) With {
@@ -760,13 +769,13 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
 
                     tabla3.AddCell(FechaAutorizacionSRICell)
 
-                    tabla3.WriteSelectedRows(0, -1, 50, 600, writer.DirectContent)
+                    tabla3.WriteSelectedRows(0, -1, 10, 360, writer.DirectContent)
 
                     Dim table4 As New PdfPTable(6)
-                    table4.TotalWidth = 500
+                    table4.TotalWidth = 400
 
                     Dim detalleRetencionTable As DataTable = ds.Tables("DETALLE_COMPROBANTE_RETENCION_COMPRA")
-                    Dim columnWidthsTable4() As Single = {80, 80, 80, 100, 80, 80}
+                    Dim columnWidthsTable4() As Single = {66, 66, 66, 70, 66, 66}
                     table4.SetWidths(columnWidthsTable4)
 
                     ' First row (header)
@@ -777,21 +786,48 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
                     table4.AddCell(New Phrase("Porcentaje", fuente8Bold))
                     table4.AddCell(New Phrase("Valor", fuente8Bold))
 
-                    table4.AddCell(New Phrase(detalleRetencionTable.Rows(0)("EJ_FISCAL_DETALLE_COMPROBANTE_RETENCION_COMPRA").ToString(), fuente8))
-                    table4.AddCell(New Phrase(detalleRetencionTable.Rows(0)("CODIGO_DETALLE_COMPROBANTE_RETENCION_COMPRA").ToString(), fuente8))
-                    table4.AddCell(New Phrase(detalleRetencionTable.Rows(0)("BASE_IMPONIBLE_DETALLE_COMPROBANTE_RETENCION_COMPRA").ToString(), fuente8))
-                    table4.AddCell(New Phrase(detalleRetencionTable.Rows(0)("IMPUESTO_DETALLE_COMPROBANTE_RETENCION_COMPRA").ToString(), fuente8))
-                    table4.AddCell(New Phrase(detalleRetencionTable.Rows(0)("PORCENTAJE_DETALLE_COMPROBANTE_RETENCION_COMPRA").ToString(), fuente8))
-                    table4.AddCell(New Phrase(detalleRetencionTable.Rows(0)("VALOR_DETALLE_COMPROBANTE_RETENCION_COMPRA").ToString(), fuente8))
+                    Dim totalRetencion As Decimal = 0
+                    For Each row In detalleRetencionTable.Rows
+                        table4.AddCell(New Phrase(row("EJ_FISCAL_DETALLE_COMPROBANTE_RETENCION_COMPRA").ToString(), fuente8))
+                        table4.AddCell(New Phrase(row("CODIGO_DETALLE_COMPROBANTE_RETENCION_COMPRA").ToString(), fuente8))
+                        Dim baseimponible As Decimal = Convert.ToDecimal(row("BASE_IMPONIBLE_DETALLE_COMPROBANTE_RETENCION_COMPRA"))
+                        table4.AddCell(New Phrase(baseimponible.ToString("#,##0.00"), fuente8))
+                        table4.AddCell(New Phrase(row("IMPUESTO_DETALLE_COMPROBANTE_RETENCION_COMPRA").ToString(), fuente8))
+                        table4.AddCell(New Phrase(row("PORCENTAJE_DETALLE_COMPROBANTE_RETENCION_COMPRA").ToString(), fuente8))
+                        Dim valor As Decimal = Convert.ToDecimal(row("VALOR_DETALLE_COMPROBANTE_RETENCION_COMPRA"))
+                        table4.AddCell(New Phrase(valor.ToString("#,##0.00"), fuente8))
+                        totalRetencion += valor
+                    Next
 
-                    table4.WriteSelectedRows(0, -1, 50, 520, writer.DirectContent)
+                    table4.WriteSelectedRows(0, -1, 10, 280, writer.DirectContent)
+
+                    Dim totalRetencionTable As New PdfPTable(2)
+                    totalRetencionTable.TotalWidth = 142
+                    Dim columnWidthsTotalRentencion() As Single = {66, 66}
+
+                    totalRetencionTable.SetWidths(columnWidthsTotalRentencion)
+
+                    Dim TotalRetencionTi As New PdfPCell(New Phrase("Total Retención", fuente8Bold)) With {
+                                    .HorizontalAlignment = Element.ALIGN_CENTER,
+                                    .VerticalAlignment = Element.ALIGN_MIDDLE,
+                                    .Border = PdfPCell.NO_BORDER
+                                                                    }
+
+                    totalRetencionTable.AddCell(TotalRetencionTi)
+                    Dim totalRetencionCell As New PdfPCell(New Phrase(totalRetencion.ToString("#,##0.00"), fuente8Bold)) With {
+                                    .HorizontalAlignment = Element.ALIGN_CENTER,
+                                    .VerticalAlignment = Element.ALIGN_MIDDLE,
+                                    .Border = PdfPCell.NO_BORDER
+                                }
+                    totalRetencionTable.AddCell(totalRetencionCell)
+                    totalRetencionTable.WriteSelectedRows(0, -1, 270, 240, writer.DirectContent)
 
 
                     Dim asientoTable As DataTable = ds.Tables("ASIENTOS_LIBRO_DIARIO")
                     Dim table5 As New PdfPTable(4)
-                    table5.TotalWidth = 500
+                    table5.TotalWidth = 400
 
-                    Dim columnWidthsTable5() As Single = {80, 270, 75, 75}
+                    Dim columnWidthsTable5() As Single = {60, 120, 60, 60}
                     table5.SetWidths(columnWidthsTable5)
 
                     Dim TituloTabla5 As New PdfPCell(New Phrase("ASIENTO DE DIARIO", fuente10Bold)) With {
@@ -822,28 +858,33 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
                     For Each row As DataRow In asientoTable.Rows
                         table5.AddCell(New Phrase(row("CODIGO_CUENTA_ASIENTO").ToString(), fuente8))
                         table5.AddCell(New Phrase(row("NOMBRE_CUENTA_ASIENTO").ToString(), fuente8))
-                        table5.AddCell(New Phrase(row("VALOR_DEBE_ASIENTO").ToString(), fuente8))
-                        table5.AddCell(New Phrase(row("VALOR_HABER_ASIENTO").ToString(), fuente8))
+                        Dim valorDebeAsiento As Decimal = Convert.ToDecimal(row("VALOR_DEBE_ASIENTO"))
+                        table5.AddCell(New Phrase(valorDebeAsiento.ToString("#,##0.00"), fuente8))
+                        Dim valorHaberAsiento As Decimal = Convert.ToDecimal(row("VALOR_HABER_ASIENTO"))
+                        table5.AddCell(New Phrase(valorHaberAsiento.ToString("#,##0.00"), fuente8))
                         valorDebe += Convert.ToDecimal(row("VALOR_DEBE_ASIENTO"))
                         valorHaber += Convert.ToDecimal(row("VALOR_HABER_ASIENTO"))
                     Next
 
-                    table5.WriteSelectedRows(0, -1, 50, 450, writer.DirectContent)
+                    table5.WriteSelectedRows(0, -1, 10, 220, writer.DirectContent)
 
                     Dim table6 As New PdfPTable(2)
-                    table6.TotalWidth = 150
-
+                    Dim columnWidthsTotal() As Single = {80, 80}
+                    table6.TotalWidth = 160
                     Dim table5Height As Single = table5.TotalHeight
-                    table6.AddCell(New Phrase(valorDebe.ToString(), fuente8Bold))
-                    table6.AddCell(New Phrase(valorHaber.ToString(), fuente8Bold))
+                    table6.SetWidths(columnWidthsTotal)
 
-                    table6.WriteSelectedRows(0, -1, 400, 450 - table5Height, writer.DirectContent)
+                    table6.AddCell(New Phrase(valorDebe.ToString("#,##0.00"), fuente8Bold))
+                    table6.AddCell(New Phrase(valorHaber.ToString("#,##0.00"), fuente8Bold))
+                    Dim baseY As Single = 220 - table5Height
+
+                    table6.WriteSelectedRows(0, -1, 250, baseY, writer.DirectContent)
 
 
 
                     'add the actual date in the document footer
                     Dim footerTable As PdfPTable = New PdfPTable(1)
-                    footerTable.TotalWidth = 500
+                    footerTable.TotalWidth = 400
                     Dim footerCell As New PdfPCell(New Phrase("Fecha de Reporte: " & DateAndTime.DateString() & " " & DateAndTime.TimeString(), fuente8)) With {
                                     .HorizontalAlignment = Element.ALIGN_RIGHT,
                                     .VerticalAlignment = Element.ALIGN_MIDDLE,
@@ -851,7 +892,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
                                 }
 
                     footerTable.AddCell(footerCell)
-                    footerTable.WriteSelectedRows(0, -1, 50, 50, writer.DirectContent)
+                    footerTable.WriteSelectedRows(0, -1, 10, 50, writer.DirectContent)
 
                     document.Close()
                     writer.Close()

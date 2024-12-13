@@ -260,6 +260,43 @@ Namespace CONTABILIDAD.COMPRAS.COMPROBANTES_COMPRA
             Return ds
         End Function
 
+        Public Function BuscarReporteComprobanteCompraXIdComprobanteNumeroRegistro2(ByVal tipoCon As TipoConexion, ByVal idCompCompra As Integer, ByVal numeroRegistro As Int64) As DataSet
+            Dim pars = New List(Of Object())
+            pars.Add(New Object() {"ID_COMPROBANTE_COMPRA", SqlDbType.BigInt, idCompCompra})
+            Dim acts = ComandosSql.SeleccionarQueryWithParamsToDataAdapter(tipoCon, "SeleccionarComprobanteCompraXIdComprobanteCompra", True, pars)
+
+            Dim emprPars = New List(Of Object())
+            emprPars.Add(New Object() {"ESTADO_PROVEEDOR_GENERAL", SqlDbType.Int, 0})
+            Dim empr = ComandosSql.SeleccionarQueryWithParamsToDataAdapter(tipoCon, "SELECT * FROM dbo.PROVEEDOR_GENERAL WHERE ESTADO_PROVEEDOR_GENERAL <> @ESTADO_PROVEEDOR_GENERAL", False, emprPars)
+
+            Dim sucuPars = New List(Of Object())
+            sucuPars.Add(New Object() {"ID_COMPROBANTE_COMPRA", SqlDbType.BigInt, idCompCompra})
+            sucuPars.Add(New Object() {"ESTADO_COMPROBANTE_RETENCION_COMPRA", SqlDbType.Int, 0})
+            Dim sucu = ComandosSql.SeleccionarQueryWithParamsToDataAdapter(tipoCon, "SELECT * FROM dbo.COMPROBANTE_RETENCION_COMPRA WHERE ESTADO_COMPROBANTE_RETENCION_COMPRA <> @ESTADO_COMPROBANTE_RETENCION_COMPRA AND ID_COMPROBANTE_COMPRA = @ID_COMPROBANTE_COMPRA", False, sucuPars)
+
+            Dim areaPars = New List(Of Object())
+            areaPars.Add(New Object() {"ID_COMPROBANTE_COMPRA", SqlDbType.BigInt, idCompCompra})
+            areaPars.Add(New Object() {"ESTADO_DETALLE_COMPROBANTE_RETENCION_COMPRA", SqlDbType.Int, 0})
+            Dim area = ComandosSql.SeleccionarQueryWithParamsToDataAdapter(tipoCon, "SELECT * FROM dbo.DETALLE_COMPROBANTE_RETENCION_COMPRA WHERE ESTADO_DETALLE_COMPROBANTE_RETENCION_COMPRA <> @ESTADO_DETALLE_COMPROBANTE_RETENCION_COMPRA AND ID_COMPROBANTE_COMPRA = @ID_COMPROBANTE_COMPRA", False, areaPars)
+
+            Dim gerePars = New List(Of Object())
+            gerePars.Add(New Object() {"ID_COMPROBANTE_COMPRA", SqlDbType.BigInt, idCompCompra})
+            Dim gere = ComandosSql.SeleccionarQueryWithParamsToDataAdapter(tipoCon, "SELECT * FROM dbo.NUMERO_REGISTRO_ASIENTOS_COMPROBANTE_COMPRA WHERE ID_COMPROBANTE_COMPRA = @ID_COMPROBANTE_COMPRA", False, gerePars)
+
+            Dim persPars = New List(Of Object())
+            persPars.Add(New Object() {"NUMERO_REGISTRO_ASIENTO", SqlDbType.BigInt, numeroRegistro})
+            Dim pers = ComandosSql.SeleccionarQueryWithParamsToDataAdapter(tipoCon, "SELECT * FROM dbo.ASIENTOS_LIBRO_DIARIO WHERE NUMERO_REGISTRO_ASIENTO = @NUMERO_REGISTRO_ASIENTO", False, persPars)
+
+            Dim ds = New DataSet()
+            acts.Fill(ds, "COMPROBANTES_COMPRA")
+            empr.Fill(ds, "PROVEEDOR_GENERAL")
+            sucu.Fill(ds, "COMPROBANTE_RETENCION_COMPRA")
+            area.Fill(ds, "DETALLE_COMPROBANTE_RETENCION_COMPRA")
+            gere.Fill(ds, "NUMERO_REGISTRO_ASIENTOS_COMPROBANTE_COMPRA")
+            pers.Fill(ds, "ASIENTOS_LIBRO_DIARIO")
+            Return ds
+        End Function
+
         Public Function IvaComprobanteTabla(ByVal tipoCon As TipoConexion, ByVal idCompCompra As Integer) As DataTable
             Dim pars = New List(Of Object())
             pars.Add(New Object() {"ID_COMPROBANTE_COMPRA", SqlDbType.BigInt, idCompCompra})
