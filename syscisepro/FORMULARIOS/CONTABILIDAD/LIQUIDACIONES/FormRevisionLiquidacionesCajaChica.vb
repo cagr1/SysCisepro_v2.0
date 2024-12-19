@@ -334,7 +334,17 @@ Namespace FORMULARIOS.CONTABILIDAD.LIQUIDACIONES
                                 With _objetoAsientoLibroDiario 'iva 
                                     .IdAsiento = _idald
                                     .FechaAsiento = txtFechaLiquidacion.Text
-                                    .CodigoCuentaAsiento = "1010512"
+                                    Dim codigo As String = dgvComprobanteCompra.Rows(0).Cells(15).Value.ToString()
+
+                                    Select Case codigo
+                                        Case "5"
+                                            .CodigoCuentaAsiento = "1010514"
+                                        Case "12"
+                                            .CodigoCuentaAsiento = "1010512"
+                                        Case "15"
+                                            .CodigoCuentaAsiento = "1010513"
+                                    End Select
+                                    '.CodigoCuentaAsiento = "1010512"
                                     .NombreCuentaAsiento = _objetoPlanCuentas.BuscarDetallePlanCuentasXcodigo(_tipoCon, .CodigoCuentaAsiento)
                                     .ConceptoAsiento = "IVA PAGADO POR COMPRA"
                                     .DetalleTransaccionAsiento = "ID CCH : " + txtIdLiquidacion.Text.ToString + " CAJA: " + txtCaja.Text.ToString + " DETALLE: " + dgvSolicitudes.Rows(indiceComprobantes).Cells("DETALLE").Value

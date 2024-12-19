@@ -1378,7 +1378,7 @@
             '
             'KryptonLabel16
             '
-            Me.KryptonLabel16.Location = New System.Drawing.Point(374, 149)
+            Me.KryptonLabel16.Location = New System.Drawing.Point(374, 154)
             Me.KryptonLabel16.Name = "KryptonLabel16"
             Me.KryptonLabel16.Size = New System.Drawing.Size(61, 20)
             Me.KryptonLabel16.TabIndex = 57

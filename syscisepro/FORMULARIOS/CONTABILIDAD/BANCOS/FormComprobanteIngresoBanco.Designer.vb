@@ -344,11 +344,15 @@
             '
             'cmbCentroCosto
             '
+            Me.cmbCentroCosto.AllowDrop = True
             Me.cmbCentroCosto.BackColor = System.Drawing.Color.White
+            Me.cmbCentroCosto.DropDownHeight = 250
             Me.cmbCentroCosto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+            Me.cmbCentroCosto.DropDownWidth = 300
             Me.cmbCentroCosto.Enabled = False
             Me.cmbCentroCosto.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cmbCentroCosto.FormattingEnabled = True
+            Me.cmbCentroCosto.IntegralHeight = False
             Me.cmbCentroCosto.Location = New System.Drawing.Point(296, 76)
             Me.cmbCentroCosto.Name = "cmbCentroCosto"
             Me.cmbCentroCosto.Size = New System.Drawing.Size(145, 21)
@@ -516,10 +520,12 @@
             'cmbCuentasContables
             '
             Me.cmbCuentasContables.BackColor = System.Drawing.Color.White
-            Me.cmbCuentasContables.DropDownWidth = 200
+            Me.cmbCuentasContables.DropDownHeight = 350
+            Me.cmbCuentasContables.DropDownWidth = 400
             Me.cmbCuentasContables.Enabled = False
             Me.cmbCuentasContables.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cmbCuentasContables.FormattingEnabled = True
+            Me.cmbCuentasContables.IntegralHeight = False
             Me.cmbCuentasContables.Location = New System.Drawing.Point(295, 215)
             Me.cmbCuentasContables.Name = "cmbCuentasContables"
             Me.cmbCuentasContables.Size = New System.Drawing.Size(146, 21)

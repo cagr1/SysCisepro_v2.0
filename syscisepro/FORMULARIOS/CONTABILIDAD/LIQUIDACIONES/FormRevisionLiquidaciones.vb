@@ -475,7 +475,18 @@ Namespace FORMULARIOS.CONTABILIDAD.LIQUIDACIONES
                     With _objetoAsientoLibroDiario 'iva 
                         .IdAsiento = _idald
                         .FechaAsiento = txtFechaLiquidacion.Text
-                        .CodigoCuentaAsiento = "1010512"
+                        Dim codigo As String = dgvComprobanteCompra.Rows(0).Cells(15).Value.ToString()
+
+                        Select Case codigo
+                            Case "5"
+                                .CodigoCuentaAsiento = "1010514"
+                            Case "12"
+                                .CodigoCuentaAsiento = "1010512"
+                            Case "15"
+                                .CodigoCuentaAsiento = "1010513"
+                        End Select
+
+                        '.CodigoCuentaAsiento = "1010512" 'Aqui esta el puto error
                         .NombreCuentaAsiento = _objetoPlanCuentas.BuscarDetallePlanCuentasXcodigo(_tipoCon, .CodigoCuentaAsiento)
                         .ConceptoAsiento = "IVA PAGADO POR COMPRA"
                         .DetalleTransaccionAsiento = "ID FR: " + txtIdLiquidacion.Text + " DETALLE: " + dgvSolicitudFondoRotativo.Rows(i).Cells(5).Value

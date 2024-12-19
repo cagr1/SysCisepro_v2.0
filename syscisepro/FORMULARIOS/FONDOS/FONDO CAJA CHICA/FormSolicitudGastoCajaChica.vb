@@ -645,17 +645,19 @@ Namespace FORMULARIOS.FONDOS.FONDO_CAJA_CHICA
                     _formComprobanteCompra.ValorMaximo = CDbl(lblMontoPorTransaccion.Text)
                     _formComprobanteCompra.btnGuardar.Visible = False
                     _formComprobanteCompra.btnGuardarEnFondoRotativo.Visible = True
+                    _formComprobanteCompra.btnGuardarEnFondoRotativo.Enabled = True
                     _formComprobanteCompra.btnNuevo_Click(Nothing, Nothing)
+                    _formComprobanteCompra.btnNuevo.Enabled = False
 
                     _formComprobanteCompra.cmbNombreParametroDocumentos.SelectedValue = cbmParametrosDocumentos.SelectedValue
-                    _formComprobanteCompra.cmbConceptoCompra.SelectedValue = cbmConcepto.SelectedValue
+                    '_formComprobanteCompra.cmbConceptoCompra.SelectedValue = cbmConcepto.SelectedValue
 
                     If _formComprobanteCompra.ShowDialog <> DialogResult.OK Then Return
 
                     If (CDbl(_formComprobanteCompra.txtTotalComprobanteCompra.Text) - CDbl(_formComprobanteCompra.txtTotalComprobanteRetencion.Text)) > CDbl(lblMontoPorTransaccion.Text) Then Throw New Exception("No se permite procesar un valor mayor monto disponible para caja ($" & lblMontoPorTransaccion.Text & ")!")
 
                     cbmParametrosDocumentos.SelectedValue = _formComprobanteCompra.cmbNombreParametroDocumentos.SelectedValue
-                    cbmConcepto.SelectedValue = _formComprobanteCompra.cmbConceptoCompra.SelectedValue
+                    'cbmConcepto.SelectedValue = _formComprobanteCompra.cmbConceptoCompra.SelectedValue
                     dtpFechaEmisionComprobanteCompra.Value = _formComprobanteCompra.dtpFechaEmisionComprobanteCompra.Value
 
                     _idProveedorGeneral = _formComprobanteCompra.lblIdProveedorGeneral.Text
@@ -834,7 +836,8 @@ Namespace FORMULARIOS.FONDOS.FONDO_CAJA_CHICA
                 crvReporteCombustible.Zoom(75)
                 crvReporteCombustible.Refresh()
             Catch ex As Exception
-                MsgBox("Error: " & ex.Message)
+                'MsgBox("Error: " & ex.Message)
+                KryptonMessageBox.Show("Error: " & ex.Message, "Mensaje de error", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
 
@@ -852,14 +855,17 @@ Namespace FORMULARIOS.FONDOS.FONDO_CAJA_CHICA
             End If
 
             If fechaRetencion < fechaCompra Then
-                MsgBox("Hey!! ¯\_(ツ)_/¯ la fecha de la retención no puede ser menor a la compra!")
+                'MsgBox("Hey!! ¯\_(ツ)_/¯ la fecha de la retención no puede ser menor a la compra!")
+                KryptonMessageBox.Show("La fecha de la retención no puede ser menor a la compra!", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
                 Return False
             Else
                 If fechaActual > fechaMaximaIngreso Then
-                    MsgBox("Hey!! ¯\_(ツ)_/¯ NO PUEDE ingresar facturas despues de 90 días de su emisión!")
+                    'MsgBox("Hey!! ¯\_(ツ)_/¯ NO PUEDE ingresar facturas despues de 90 días de su emisión!")
+                    KryptonMessageBox.Show("No puede ingresar facturas despues de 90 días de su emisión!", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
                     Return False
                 ElseIf fechaCompra > fechaActual Then
-                    MsgBox("Hey!! ¯\_(ツ)_/¯ no es la maquina del tiempo no puede ingresar fechas futuras!")
+                    'MsgBox("Hey!! ¯\_(ツ)_/¯ no es la maquina del tiempo no puede ingresar fechas futuras!")
+                    KryptonMessageBox.Show("No puede ingresar fechas futuras!", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
                     Return False
                 Else
                     Return True
@@ -885,7 +891,8 @@ Namespace FORMULARIOS.FONDOS.FONDO_CAJA_CHICA
             If Not ValidarNumeroComprobanteLiquidacionRepetido() Then Return
 
             If chkCombustible.Checked And Not ValidacionParametrosCombustible() Then
-                MsgBox("NO OLVIDE INGRESAR LOS DATOS DEL CONTROL DE COMBUSTIBLE!")
+                'MsgBox("NO OLVIDE INGRESAR LOS DATOS DEL CONTROL DE COMBUSTIBLE!")
+                KryptonMessageBox.Show("No olvide ingresar los datos del control de combustible!", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
                 Return
             End If
 
@@ -894,7 +901,8 @@ Namespace FORMULARIOS.FONDOS.FONDO_CAJA_CHICA
                 If _validarLlenarDocumento = 1 Then
 
                     If CDbl(txtValorGasto.Text) > CDbl(lblMontoPorTransaccion.Text) Then
-                        MsgBox("No se puede procesar un valor mayor al valor disponible en caja ($" & lblMontoPorTransaccion.Text & ")! Por favor, realice una reposición", MsgBoxStyle.Information, "Mensaje de información")
+                        'MsgBox("No se puede procesar un valor mayor al valor disponible en caja ($" & lblMontoPorTransaccion.Text & ")! Por favor, realice una reposición", MsgBoxStyle.Information, "Mensaje de información")
+                        KryptonMessageBox.Show("No se puede procesar un valor mayor al valor disponible en caja ($" & lblMontoPorTransaccion.Text & ")! Por favor, realice una reposición", "Mensaje de información", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
                         Return
                     End If
 
@@ -913,7 +921,8 @@ Namespace FORMULARIOS.FONDOS.FONDO_CAJA_CHICA
                     If cbmParametrosDocumentos.Tag.ToString() = "DEDUCIBLE" Then
 
                         If _objetoAts.ValidarCompraConDeclaracion(_tipoCon, dtpFechaEmisionComprobanteCompra.Value) Then
-                            MsgBox("EL ATS DEL MES " & dtpFechaEmisionComprobanteCompra.Value.Month.ToString & " DEL AÑO " & dtpFechaEmisionComprobanteCompra.Value.Year.ToString & " YA FUE GENERADO." & vbNewLine & " SI NECESITA INGRESAR ESTE COMPROBANTE SOLICITE UNA SUSTUTIVA A LA CONTADORA Y HAGA UNA REQUISICIÓN AL DEPARTAMENTO DE SISTEMAS.", MsgBoxStyle.Exclamation, "Mensaje de validación")
+                            'MsgBox("EL ATS DEL MES " & dtpFechaEmisionComprobanteCompra.Value.Month.ToString & " DEL AÑO " & dtpFechaEmisionComprobanteCompra.Value.Year.ToString & " YA FUE GENERADO." & vbNewLine & " SI NECESITA INGRESAR ESTE COMPROBANTE SOLICITE UNA SUSTUTIVA A LA CONTADORA Y HAGA UNA REQUISICIÓN AL DEPARTAMENTO DE SISTEMAS.", MsgBoxStyle.Exclamation, "Mensaje de validación")
+                            KryptonMessageBox.Show("El ATS del mes " & dtpFechaEmisionComprobanteCompra.Value.Month.ToString & " del año " & dtpFechaEmisionComprobanteCompra.Value.Year.ToString & " ya fue generado." & vbNewLine & " Si necesita ingresar este comprobante solicite una sustutiva a la contadora y haga una requisición al departamento de sistemas.", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
                         Else
 
                             ' AUX IDS
@@ -949,7 +958,8 @@ Namespace FORMULARIOS.FONDOS.FONDO_CAJA_CHICA
                                     GuardarComprobanteRetencion()
                                     GuardarDetalleComprobanteRetencion()
                                 Else
-                                    MsgBox("ERROR AL GENERAR RETENCIÓN: CLAVE DE ACCESO INVALIDA!")
+                                    'MsgBox("ERROR AL GENERAR RETENCIÓN: CLAVE DE ACCESO INVALIDA!")
+                                    KryptonMessageBox.Show("Error al generar retención: clave de acceso invalida!", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
                                     Return
                                 End If
                             End If

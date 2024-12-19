@@ -81,6 +81,10 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
         ReadOnly _objFoto As New ClassFoto
 
         ReadOnly _objDetalleEgresoPuesto As New ClassDetalleBodegaSitio
+        ReadOnly _objCompEgr As New ClassComprobanteEgresoBodega
+        ReadOnly _objDetCompEgr As New ClassDetalleComprobanteEgreso
+        ReadOnly _objDetalle As New ClassDetalleUniforme
+        ReadOnly _objEntrega As New ClassEntregaUniformes
 
         Dim _botonSeleccionadoSitio As Integer = 0
 
@@ -1424,15 +1428,129 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
 
             _sqlCommands.Clear()
             Try
+                If dgvDetalleComprobate.Rows.Count = 0 Then
+                    KryptonMessageBox.Show("No hay datos para anular!", "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
+                    Return
+                End If
+
 
 
                 _sqlCommands.Clear()
                 Dim cantidadPrendasLleva As Integer = 0
-                'With _objCompEgr
-                '    .Id = txtNumero.Text  'Id Comprobante 
-                'End With
-                '_sqlCommands.Add(_objCompEgr.AnularRegistroComprobanteEgresoBodegaCommand())
+                With _objCompIng
+                    .Id = txtNroComprobante.Text  'Id Comprobante 
+                End With
+                _sqlCommands.Add(_objCompIng.AnularRegistroComprobanteIngresoBodegaCommand())
 
+                If cmbBodega.SelectedValue = 1 Then
+                    With _objEntrega
+                        .Id = .BuscarMayorIdEntregaUniforme(_tipoCon) + 1
+                        .Codigo = "RE-3.8.1-2"
+                        .Version = "003"
+                        .Fecha = dtpFecha.Value
+                        .Nombre = txtRecibe.Text.ToUpper.Trim
+                        .Cedula = 0
+                        .Cliente = txtUbicacion.Text.ToUpper.Trim
+                        .FechaIngreso = dtpFecha.Value
+                        .Realizado = "ING. JOSÉ NAVARRETE M."
+                        .Revisado = "ING. KAREN NAVARRETE M"
+                        .Aprobado = "MYR(R) IGNACIO NAVARRETE L"
+                        .Registrado = txtNombre.Text.ToUpper.Trim
+                        .Estado = 1
+                        .Observacion = txtRazon.Text.ToUpper.Trim
+                    End With
+                    _sqlCommands.Add(_objEntrega.NuevoRegistroEntregaUniformesCommand())
+
+                End If
+
+
+                With _objCompEgr
+
+                    .Id = (_objSerie.Serie(_objCompEgr.BuscarMayorIdComprobanteEgresoBodega(_tipoCon) + 1))
+                    .Fecha = dtpFecha.Value
+                    .Nro = txtNroDocumento.Text
+                    .IdBodega = cmbBodega.SelectedValue
+                    .IdActividad = 2
+                    .IdConcepto = cmbConceptos.SelectedValue
+                    .IdProvincias = cbmProvincia.SelectedValue
+                    .IdCiudad = cbmCanton.SelectedValue
+                    .IdParroquias = cbmParroquia.SelectedValue
+                    .IdCentroCosto = cbmCentroCosto.SelectedValue
+                    .IdParametroDocumento = cmbDocumento.SelectedValue
+                    .Estado = 1
+                    .Razon = txtRazon.Text.ToUpper
+                    .IdPersonal = If(txtRecibe.Tag Is Nothing, txtRecibe.Text.Split("-")(1).Trim(), CType(txtRecibe.Tag, Integer))
+                    .Cliente = txtUbicacion.Text.Trim
+                    .IdEmpresa = 1
+                    .SitioTrabajo = CInt(txtUbicacion.Tag)
+                End With
+                _sqlCommands.Add(_objCompEgr.NuevoRegistroComprobanteEgresoBodegaCommand())
+
+                Dim iddk = _objDetalleKardex.BuscarMayorIdDetalleKardex(_tipoCon) + 1
+                Dim idce = _objDetCompEgr.BuscarMayorIdDetalleComprobanteEgresoBodega(_tipoCon) + 1
+                Dim idcu = _objControl.BuscarMayorIdControlUniformes(_tipoCon) + 1
+                Dim idd = _objDetalleEgresoPuesto.BuscarMayorIdRegistroDetalleComprobante(_tipoCon) + 1
+                Dim iddu = _objDetalle.BuscarMayorIdDetalleUniformes(_tipoCon) + 1
+
+
+
+                For indice = 0 To dgvDetalleComprobate.RowCount - 1
+
+                    Dim result As DataTable = _objControl.SeleccionarIdControlUniformes(_tipoCon, txtNroComprobante.Text, dgvDetalleComprobate.Rows.Item(indice).Cells.Item(1).Value)
+
+                    If result.Rows.Count > 0 Then
+                        Dim idcon As Long = Convert.ToInt64(result.Rows(0)("ID_CONTROL"))
+
+                        With _objControl
+                            .IdControl = idcon
+                        End With
+                        _sqlCommands.Add(_objControl.AnularControlCommand())
+
+                    End If
+
+                    If cmbBodega.SelectedValue = 1 Then
+                        With _objDetalle
+                            .IdDetalle = iddu
+                            .IdKardex = CType(dgvDetalleComprobate.Rows.Item(indice).Cells("NUMERO_KARDEX").Value.ToString.ToUpper, Int64)
+                            .IdDetalleKardex = _objDetalleKardex.Id
+                            .ObservacionEstado = dgvDetalleComprobate.Rows.Item(indice).Cells("OBSERVACION").Value.ToString.ToUpper
+                            .Cantidad = CType(dgvDetalleComprobate.Rows.Item(indice).Cells("CANTIDAD").Value.ToString.ToUpper, Integer)
+                            .Estado = 1
+                            .FechaRenovacion = dtpFecha.Value
+                            .IdUniformes = _objEntrega.Id
+                            .ObservacionDetalle = dgvDetalleComprobate.Rows.Item(indice).Cells("DETALLES").Value.ToString.ToUpper
+                        End With
+                        _sqlCommands.Add(_objDetalle.NuevoRegistroDetalleUniformesCommand())
+                        iddu += 1
+                    End If
+
+                    Dim IdDetKarIngreso As String = _objDetalleKardex.BuscarMayorIdDetalleKardexxIdKardex(_tipoCon, dgvDetalleComprobate.Rows(indice).Cells(2).Value)
+                    Dim UltimoMovimiento As DataTable = _objKardex.BuscarUltimoMoviminetoKardexXIdKardex(_tipoCon, dgvDetalleComprobate.Rows(indice).Cells(0).Value, IdDetKarIngreso)
+
+                    With _objDetalleKardex
+                        .Id = iddk
+                        .IdActividad = 2
+                        .IdConcepto = cmbConceptos.SelectedValue
+                        .CantidadIngreso = 0.0
+                        .ValorUnitarioIngreso = 0.0
+                        .ValorTotalIngreso = 0.0
+                        .CantidadEgreso = CInt(dgvDetalleComprobate.Rows.Item(indice).Cells("CANTIDAD").Value.ToString.ToUpper)
+                        .ValorUnitarioEgreso = CDec(dgvDetalleComprobate.Rows.Item(indice).Cells("VALOR").Value.ToString.ToUpper)
+                        .ValorTotalEgreso = CDec(dgvDetalleComprobate.Rows.Item(indice).Cells("TOTAL").Value.ToString.ToUpper)
+                        .CantidadSaldo = dgvDetalleComprobate.Rows.Item(indice).Cells("SALDO").Value.ToString.ToUpper 'de CANTIDAD_SALDO a SALDO
+                        .ValorUnitarioSaldo = CDec(dgvDetalleComprobate.Rows.Item(indice).Cells("CANTIDAD_SALDO").Value.ToString.ToUpper) 'de VALOR_UNITARIO_SALDO a CANTIDAD_SALDO
+                        .ValorTotalSaldo = CDec(dgvDetalleComprobate.Rows.Item(indice).Cells("VALOR_UNITARIO_SALDO").Value.ToString.ToUpper) 'de SALDO a VALOR_UNITARIO_SALDO
+                        .Fecha = _objCompEgr.Fecha
+                        .IdKardex = CLng(dgvDetalleComprobate.Rows.Item(indice).Cells("NUMERO_KARDEX").Value.ToString.ToUpper)
+                        .Estado = 1
+                        .NroComprobante = _objCompEgr.Id
+                        cantidadPrendasLleva = dgvSecuencial.Rows.Item(indice).Cells("CANTIDAD").Value
+                    End With
+                    _sqlCommands.Add(_objDetalleKardex.NuevoRegistroDetalleKardexCommand())
+
+
+
+                Next
 
 
             Catch ex As Exception

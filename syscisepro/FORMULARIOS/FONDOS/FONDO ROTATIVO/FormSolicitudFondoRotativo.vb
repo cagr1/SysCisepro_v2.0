@@ -567,14 +567,14 @@ Namespace FORMULARIOS.FONDOS.FONDO_ROTATIVO
                     _formComprobanteCompra.btnNuevo_Click(Nothing, Nothing)
 
                     _formComprobanteCompra.cmbNombreParametroDocumentos.SelectedValue = cmbNombreParametroDocumentos.SelectedValue
-                    _formComprobanteCompra.cmbConceptoCompra.SelectedValue = cmbConcepto.SelectedValue
+                    '_formComprobanteCompra.cmbConceptoCompra.SelectedValue = cmbConcepto.SelectedValue
 
                     If _formComprobanteCompra.ShowDialog <> DialogResult.OK Then Return
 
                     If (CDbl(_formComprobanteCompra.txtTotalComprobanteCompra.Text) - CDbl(_formComprobanteCompra.txtTotalComprobanteRetencion.Text)) > CDbl(lblMontoFondoRotativo.Text) Then Throw New Exception("No se permite procesar un valor mayor monto disponible para fondo rotativo ($" & lblMontoFondoRotativo.Text & ")!")
 
                     cmbNombreParametroDocumentos.SelectedValue = _formComprobanteCompra.cmbNombreParametroDocumentos.SelectedValue
-                    cmbConcepto.SelectedValue = _formComprobanteCompra.cmbConceptoCompra.SelectedValue
+                    'cmbConcepto.SelectedValue = _formComprobanteCompra.cmbConceptoCompra.SelectedValue
                     dtpFechaEmisionComprobanteCompra.Value = _formComprobanteCompra.dtpFechaEmisionComprobanteCompra.Value
 
                     _idProveedorGeneral = _formComprobanteCompra.lblIdProveedorGeneral.Text
@@ -677,6 +677,15 @@ Namespace FORMULARIOS.FONDOS.FONDO_ROTATIVO
                             End If
                         Next
 
+                        Dim dt As DataTable = DataGridViewToDataTable(_formComprobanteCompra.dgvAsientosDiario)
+
+                        For Each row As DataRow In dt.Rows
+                            If row(1).ToString().Trim().Length > 0 Then
+                                dgvAsientosDiario.Rows.Add(row(0).ToString(), row(1).ToString(), row(2).ToString(), row(3).ToString(), row(4).ToString())
+                            End If
+                        Next
+
+
                         _validarComprobanteLiqCompra = 1
                     Else
                         _validarComprobanteLiqCompra = 0
@@ -721,6 +730,28 @@ Namespace FORMULARIOS.FONDOS.FONDO_ROTATIVO
             End If
         End Sub
 
+
+        Public Function DataGridViewToDataTable(dgv As DataGridView) As DataTable
+            Dim dt As New DataTable()
+
+            ' Crear las columnas en el DataTable basadas en las columnas del DataGridView
+            For Each col As DataGridViewColumn In dgv.Columns
+                dt.Columns.Add(col.HeaderText, GetType(String)) ' Cambia GetType si necesitas otro tipo de datos
+            Next
+
+            ' Agregar las filas desde el DataGridView al DataTable
+            For Each row As DataGridViewRow In dgv.Rows
+                If Not row.IsNewRow Then ' Ignorar la fila nueva
+                    Dim dataRow As DataRow = dt.NewRow()
+                    For Each cell As DataGridViewCell In row.Cells
+                        dataRow(cell.ColumnIndex) = If(cell.Value IsNot Nothing, cell.Value.ToString(), DBNull.Value)
+                    Next
+                    dt.Rows.Add(dataRow)
+                End If
+            Next
+
+            Return dt
+        End Function
         Private Sub btnGuardar_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnGuardarSolicitudFR.Click
             If txtDetalleSolicitudFR.Text.Trim().Equals("...") Or txtDetalleSolicitudFR.Text.Length < 6 Then
 

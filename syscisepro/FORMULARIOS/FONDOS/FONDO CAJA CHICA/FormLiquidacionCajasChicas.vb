@@ -166,10 +166,7 @@ Namespace FORMULARIOS.FONDOS.FONDO_CAJA_CHICA
             LlenarComboCiudad()
         End Sub
 
-        Private Sub cbmCanton_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As EventArgs)
-            If cbmCanton.SelectedValue Is Nothing Or TypeOf cbmCanton.SelectedValue Is DataRowView Then Return
-            LlenarComboParroquias()
-        End Sub
+
 
         Private Sub cbmCajasChicas_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As EventArgs)
             If cbmCajasChicas.SelectedValue Is Nothing Or TypeOf cbmCajasChicas.SelectedValue Is DataRowView Then Return
@@ -376,19 +373,7 @@ Namespace FORMULARIOS.FONDOS.FONDO_CAJA_CHICA
             btnCancelar.Enabled = False
         End Sub
 
-        Private Sub bntCargar_Click(ByVal sender As System.Object, ByVal e As EventArgs)
-            Try
-                '_crLiquidacionCajaChica.SetDataSource(_objLiquidacionCajaChica.BuscarSolicitudesFondoCajaChicaPorIdLiquidacion(_tipoCon, txtIdLiquidacionBusqueda.Text))
-                '_crLiquidacionCajaChica.SetParameterValue("img", ValidationForms.NombreLogo(_tipoCon, Application.StartupPath))
-                _crLiquidacionCajaChicaNew.SetDataSource(_objLiquidacionCajaChica.BuscarSolicitudesFondoCajaChicaPorIdLiquidacion(_tipoCon, txtIdLiquidacionBusqueda.Text))
-                _crLiquidacionCajaChicaNew.SetParameterValue("img", ValidationForms.NombreLogo(_tipoCon, Application.StartupPath))
-                crvLiquidacion.ReportSource = _crLiquidacionCajaChicaNew
-                crvLiquidacion.Zoom(2)
-                crvLiquidacion.Refresh()
-            Catch ex As Exception
-                crvLiquidacion.ReportSource = Nothing
-            End Try
-        End Sub
+
 
         Private Sub tcLiquidar_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As EventArgs)
             If tcLiquidar.SelectedIndex = 1 Then txtIdLiquidacionBusqueda.Focus()
@@ -456,6 +441,25 @@ Namespace FORMULARIOS.FONDOS.FONDO_CAJA_CHICA
 
         Private Sub crvLiquidacion_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles crvLiquidacion.Load
 
+        End Sub
+
+        Private Sub cbmCanton_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbmCanton.SelectedIndexChanged
+            If cbmCanton.SelectedValue Is Nothing Or TypeOf cbmCanton.SelectedValue Is DataRowView Then Return
+            LlenarComboParroquias()
+        End Sub
+
+        Private Sub bntCargar_Click(sender As Object, e As EventArgs) Handles bntCargar.Click
+            Try
+                '_crLiquidacionCajaChica.SetDataSource(_objLiquidacionCajaChica.BuscarSolicitudesFondoCajaChicaPorIdLiquidacion(_tipoCon, txtIdLiquidacionBusqueda.Text))
+                '_crLiquidacionCajaChica.SetParameterValue("img", ValidationForms.NombreLogo(_tipoCon, Application.StartupPath))
+                _crLiquidacionCajaChicaNew.SetDataSource(_objLiquidacionCajaChica.BuscarSolicitudesFondoCajaChicaPorIdLiquidacion(_tipoCon, txtIdLiquidacionBusqueda.Text))
+                _crLiquidacionCajaChicaNew.SetParameterValue("img", ValidationForms.NombreLogo(_tipoCon, Application.StartupPath))
+                crvLiquidacion.ReportSource = _crLiquidacionCajaChicaNew
+                crvLiquidacion.Zoom(2)
+                crvLiquidacion.Refresh()
+            Catch ex As Exception
+                crvLiquidacion.ReportSource = Nothing
+            End Try
         End Sub
     End Class
 End Namespace

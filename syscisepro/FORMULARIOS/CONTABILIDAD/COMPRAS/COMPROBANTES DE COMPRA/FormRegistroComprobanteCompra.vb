@@ -543,17 +543,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
             End Try
         End Sub
 
-        Private Sub btnBuscar_Click(ByVal sender As System.Object, ByVal e As EventArgs)
-            ofdSeleccionarArchivo.InitialDirectory = "C:\"
-            ofdSeleccionarArchivo.Filter = "ARCHIVO DE FACTURA ELECTRÓNICA (*.xml)|*.xml"
-            ofdSeleccionarArchivo.Title = "Seleccione el archivo de factura electrónica"
-            If ofdSeleccionarArchivo.ShowDialog() <> Windows.Forms.DialogResult.OK Then Return
 
-            Dim archivo = ofdSeleccionarArchivo.OpenFile
-            LeerXml(archivo)
-            archivo.Close()
-
-        End Sub
 
         Private Sub LeerXml(ByVal s As IO.Stream)
             Try
@@ -2022,30 +2012,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
             End Try
         End Sub
 
-        Private Sub bntBuscarMod_Click(ByVal sender As System.Object, ByVal e As EventArgs)
-            Dim frmEmitido = New FrmBuscarComprobanteCompraNotaCredito
-            frmEmitido.IdProveedor = If(lblIdProveedorGeneral.Text = "...", 0, lblIdProveedorGeneral.Text)
-            frmEmitido.TipoCox = TipoCox
-            If frmEmitido.ShowDialog <> DialogResult.OK Then Return
 
-            txtDocModComprobanteCompra.Text = frmEmitido.dgvCustodios.CurrentRow.Cells(3).Value ' numero
-            txtRazModComprobanteCompra.Text = frmEmitido.dgvCustodios.CurrentRow.Cells(20).Value ' autorizacion
-
-            ' VERIFICAR PAGOS Y NOTA DE CREDITO
-            Dim ret = _objetoComprobantesRetencion.SeleccionarComrpobantesRetencionXIdComprobanteCompra(_tipoCon, frmEmitido.dgvCustodios.CurrentRow.Cells(0).Value)
-            If ret.Rows.Count > 0 Or CDec(frmEmitido.dgvCustodios.CurrentRow.Cells(10).Value) <> CDec(frmEmitido.dgvCustodios.CurrentRow.Cells(17).Value) Then
-                'If MessageBox.Show("Existen retenciones o valores pagados para esta factura!! " & vbNewLine & "TOTAL: $ " & frmEmitido.dgvCustodios.CurrentRow.Cells(10).Value & " - SALDO: $" & frmEmitido.dgvCustodios.CurrentRow.Cells(17).Value & vbNewLine & "¿Desea continuar con el proceso?", "VALIDACIÓN", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> DialogResult.Yes Then
-                If KryptonMessageBox.Show("Existen retenciones o valores pagados para esta factura!! " & vbNewLine & "TOTAL: $ " & frmEmitido.dgvCustodios.CurrentRow.Cells(10).Value & " - SALDO: $" & frmEmitido.dgvCustodios.CurrentRow.Cells(17).Value & vbNewLine & "¿Desea continuar con el proceso?", "VALIDACIÓN", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) <> DialogResult.Yes Then
-
-                        btnGuardar.Enabled = False
-                    btnGuardarEnFondoRotativo.Enabled = False
-                    Return
-                End If
-            End If
-
-            btnGuardar.Enabled = True
-            btnGuardarEnFondoRotativo.Enabled = True
-        End Sub
 
 
 
@@ -2342,6 +2309,42 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
         Private Sub chkReq_CheckedChanged(sender As Object, e As EventArgs) Handles chkReq.CheckedChanged
             lblOrdenCompra.Text = "###"
             btnOrdenCompra.Enabled = chkReq.Checked
+        End Sub
+
+        Private Sub btnBuscar_Click(sender As Object, e As EventArgs) Handles btnBuscar.Click
+            ofdSeleccionarArchivo.InitialDirectory = "C:\"
+            ofdSeleccionarArchivo.Filter = "ARCHIVO DE FACTURA ELECTRÓNICA (*.xml)|*.xml"
+            ofdSeleccionarArchivo.Title = "Seleccione el archivo de factura electrónica"
+            If ofdSeleccionarArchivo.ShowDialog() <> Windows.Forms.DialogResult.OK Then Return
+
+            Dim archivo = ofdSeleccionarArchivo.OpenFile
+            LeerXml(archivo)
+            archivo.Close()
+        End Sub
+
+        Private Sub bntBuscarMod_Click(sender As Object, e As EventArgs) Handles bntBuscarMod.Click
+            Dim frmEmitido = New FrmBuscarComprobanteCompraNotaCredito
+            frmEmitido.IdProveedor = If(lblIdProveedorGeneral.Text = "...", 0, lblIdProveedorGeneral.Text)
+            frmEmitido.TipoCox = TipoCox
+            If frmEmitido.ShowDialog <> DialogResult.OK Then Return
+
+            txtDocModComprobanteCompra.Text = frmEmitido.dgvCustodios.CurrentRow.Cells(3).Value ' numero
+            txtRazModComprobanteCompra.Text = frmEmitido.dgvCustodios.CurrentRow.Cells(20).Value ' autorizacion
+
+            ' VERIFICAR PAGOS Y NOTA DE CREDITO
+            Dim ret = _objetoComprobantesRetencion.SeleccionarComrpobantesRetencionXIdComprobanteCompra(_tipoCon, frmEmitido.dgvCustodios.CurrentRow.Cells(0).Value)
+            If ret.Rows.Count > 0 Or CDec(frmEmitido.dgvCustodios.CurrentRow.Cells(10).Value) <> CDec(frmEmitido.dgvCustodios.CurrentRow.Cells(17).Value) Then
+                'If MessageBox.Show("Existen retenciones o valores pagados para esta factura!! " & vbNewLine & "TOTAL: $ " & frmEmitido.dgvCustodios.CurrentRow.Cells(10).Value & " - SALDO: $" & frmEmitido.dgvCustodios.CurrentRow.Cells(17).Value & vbNewLine & "¿Desea continuar con el proceso?", "VALIDACIÓN", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> DialogResult.Yes Then
+                If KryptonMessageBox.Show("Existen retenciones o valores pagados para esta factura!! " & vbNewLine & "TOTAL: $ " & frmEmitido.dgvCustodios.CurrentRow.Cells(10).Value & " - SALDO: $" & frmEmitido.dgvCustodios.CurrentRow.Cells(17).Value & vbNewLine & "¿Desea continuar con el proceso?", "VALIDACIÓN", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) <> DialogResult.Yes Then
+
+                    btnGuardar.Enabled = False
+                    btnGuardarEnFondoRotativo.Enabled = False
+                    Return
+                End If
+            End If
+
+            btnGuardar.Enabled = True
+            btnGuardarEnFondoRotativo.Enabled = True
         End Sub
     End Class
 End Namespace

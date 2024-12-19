@@ -725,6 +725,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
             If KryptonMessageBox.Show("Desea guardar los cambios?", "Mensaje del sistema", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) <> DialogResult.Yes Then Return
 
             _sqlCommands.Clear()
+
             If _botonSeleccionadoSitio = 1 Then
 
                 If dgvSecuencial.RowCount = 0 Then

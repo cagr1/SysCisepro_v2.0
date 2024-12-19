@@ -462,7 +462,7 @@
             Me.cbmParroquia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cbmParroquia.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cbmParroquia.FormattingEnabled = True
-            Me.cbmParroquia.Location = New System.Drawing.Point(728, 31)
+            Me.cbmParroquia.Location = New System.Drawing.Point(728, 35)
             Me.cbmParroquia.Name = "cbmParroquia"
             Me.cbmParroquia.Size = New System.Drawing.Size(153, 21)
             Me.cbmParroquia.TabIndex = 68

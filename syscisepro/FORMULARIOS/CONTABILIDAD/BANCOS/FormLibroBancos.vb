@@ -151,6 +151,24 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
                     End If
 
                 Next
+                Dim dt As New DataTable()
+
+                ' Crear las columnas basadas en el DataGridView
+                For Each column As DataGridViewColumn In dgvChequesEmitidosAprobados.Columns
+                    dt.Columns.Add(column.HeaderText, GetType(String)) ' Todas las celdas como texto
+                Next
+
+                ' Rellenar el DataTable con las filas del DataGridView
+                For Each row As DataGridViewRow In dgvChequesEmitidosAprobados.Rows
+                    If Not row.IsNewRow Then ' Ignorar la fila nueva vacía
+                        Dim dr As DataRow = dt.NewRow()
+                        For Each column As DataGridViewColumn In dgvChequesEmitidosAprobados.Columns
+                            dr(column.HeaderText) = row.Cells(column.Index).Value?.ToString() ' Maneja valores nulos
+                        Next
+                        dt.Rows.Add(dr)
+                    End If
+                Next
+
 
                 label12.Text = "Emitidos (no cobrados) -> " & dgvChequesEmitidosAprobados.RowCount & "" '                                             Emitidos (cobrados) -> " & dgvEmitidosCobrados.RowCount & ""
                 lblcobrados.Text = "Emitidos (Cobrados) -> " & dgvEmitidosCobrados.RowCount & ""
@@ -175,6 +193,8 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
 
                 label12.Text = "Emitidos (no cobrados) -> " & dgvChequesEmitidosAprobados.RowCount & "" '                                             Emitidos (cobrados) -> " & dgvEmitidosCobrados.RowCount & ""
                 lblcobrados.Text = "Emitidos (Cobrados) -> " & dgvEmitidosCobrados.RowCount & ""
+
+
             Catch ex As Exception
                 'MsgBox("Error al cargar cheques cobrados")
                 KryptonMessageBox.Show("Error al cargar cheques cobrados" & vbNewLine & ex.Message.ToString, "Mensaje de excepción", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)

@@ -44,8 +44,8 @@
             Me.tsmNuevo = New System.Windows.Forms.ToolStripMenuItem()
             Me.tsmGuardar = New System.Windows.Forms.ToolStripMenuItem()
             Me.tsmCancelar = New System.Windows.Forms.ToolStripMenuItem()
-            Me.TmsActualizar = New System.Windows.Forms.ToolStripMenuItem()
             Me.TmsEliminar = New System.Windows.Forms.ToolStripMenuItem()
+            Me.TmsActualizar = New System.Windows.Forms.ToolStripMenuItem()
             Me.lblCantidadSaldo = New System.Windows.Forms.Label()
             Me.lblComp = New System.Windows.Forms.Label()
             Me.lblDetaComp = New System.Windows.Forms.Label()
@@ -274,6 +274,15 @@
             Me.tsmCancelar.Size = New System.Drawing.Size(97, 28)
             Me.tsmCancelar.Text = "CANCELAR"
             '
+            'TmsEliminar
+            '
+            Me.TmsEliminar.Enabled = False
+            Me.TmsEliminar.Image = Global.syscisepro.My.Resources.Resources.do_not_disturb_on_24dp_FILL0_wght400_GRAD0_opsz24
+            Me.TmsEliminar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+            Me.TmsEliminar.Name = "TmsEliminar"
+            Me.TmsEliminar.Size = New System.Drawing.Size(89, 28)
+            Me.TmsEliminar.Text = "ANULAR"
+            '
             'TmsActualizar
             '
             Me.TmsActualizar.Enabled = False
@@ -284,15 +293,6 @@
             Me.TmsActualizar.Size = New System.Drawing.Size(112, 28)
             Me.TmsActualizar.Text = "ACTUALIZAR"
             Me.TmsActualizar.Visible = False
-            '
-            'TmsEliminar
-            '
-            Me.TmsEliminar.Enabled = False
-            Me.TmsEliminar.Image = Global.syscisepro.My.Resources.Resources.do_not_disturb_on_24dp_FILL0_wght400_GRAD0_opsz24
-            Me.TmsEliminar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-            Me.TmsEliminar.Name = "TmsEliminar"
-            Me.TmsEliminar.Size = New System.Drawing.Size(89, 28)
-            Me.TmsEliminar.Text = "ANULAR"
             '
             'lblCantidadSaldo
             '
@@ -980,7 +980,7 @@
             Me.KryptonNavigator1.Location = New System.Drawing.Point(0, 32)
             Me.KryptonNavigator1.Name = "KryptonNavigator1"
             Me.KryptonNavigator1.Pages.AddRange(New ComponentFactory.Krypton.Navigator.KryptonPage() {Me.KryptonPage1, Me.KryptonPage2, Me.KryptonPage3})
-            Me.KryptonNavigator1.SelectedIndex = 0
+            Me.KryptonNavigator1.SelectedIndex = 1
             Me.KryptonNavigator1.Size = New System.Drawing.Size(952, 600)
             Me.KryptonNavigator1.TabIndex = 197
             Me.KryptonNavigator1.Text = "KryptonNavigator1"

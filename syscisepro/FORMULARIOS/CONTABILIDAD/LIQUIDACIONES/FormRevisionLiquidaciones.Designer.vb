@@ -374,10 +374,10 @@
             Me.dgvComprobanteCompra.AllowUserToAddRows = False
             Me.dgvComprobanteCompra.AllowUserToDeleteRows = False
             Me.dgvComprobanteCompra.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-            Me.dgvComprobanteCompra.Location = New System.Drawing.Point(917, 154)
+            Me.dgvComprobanteCompra.Location = New System.Drawing.Point(661, 219)
             Me.dgvComprobanteCompra.Name = "dgvComprobanteCompra"
             Me.dgvComprobanteCompra.ReadOnly = True
-            Me.dgvComprobanteCompra.Size = New System.Drawing.Size(240, 160)
+            Me.dgvComprobanteCompra.Size = New System.Drawing.Size(95, 146)
             Me.dgvComprobanteCompra.TabIndex = 34
             '
             'dgvComprobanteRetencionCompra
@@ -396,7 +396,7 @@
             Me.dgvDetalleComprobanteRetencionCompra.AllowUserToAddRows = False
             Me.dgvDetalleComprobanteRetencionCompra.AllowUserToDeleteRows = False
             Me.dgvDetalleComprobanteRetencionCompra.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-            Me.dgvDetalleComprobanteRetencionCompra.Location = New System.Drawing.Point(917, 522)
+            Me.dgvDetalleComprobanteRetencionCompra.Location = New System.Drawing.Point(481, 6)
             Me.dgvDetalleComprobanteRetencionCompra.Name = "dgvDetalleComprobanteRetencionCompra"
             Me.dgvDetalleComprobanteRetencionCompra.ReadOnly = True
             Me.dgvDetalleComprobanteRetencionCompra.Size = New System.Drawing.Size(240, 127)
@@ -563,6 +563,7 @@
             'KryptonGroupBox3.Panel
             '
             Me.KryptonGroupBox3.Panel.Controls.Add(Me.dgvSolicitudFondoRotativo)
+            Me.KryptonGroupBox3.Panel.Controls.Add(Me.dgvDetalleComprobanteRetencionCompra)
             Me.KryptonGroupBox3.Size = New System.Drawing.Size(814, 176)
             Me.KryptonGroupBox3.TabIndex = 187
             Me.KryptonGroupBox3.Values.Heading = "Deducibles"
@@ -582,7 +583,6 @@
             Me.Controls.Add(Me.txtIdLiquidacion)
             Me.Controls.Add(Me.KryptonGroupBox1)
             Me.Controls.Add(Me.MenuStrip1)
-            Me.Controls.Add(Me.dgvDetalleComprobanteRetencionCompra)
             Me.Controls.Add(Me.dgvComprobanteRetencionCompra)
             Me.Controls.Add(Me.dgvComprobanteCompra)
             Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
