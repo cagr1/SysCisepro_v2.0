@@ -156,6 +156,8 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
             btnGuardarSinFirmar.Enabled = False
             dgvFacturaVenta.Enabled = False
             dgvDetalleFacturaVenta.Enabled = False
+            rbPtoEmision001.Enabled = True
+            rbPtoEmision002.Enabled = True
         End Sub
         Private Sub AutocompletarNombreCliente()
             Try

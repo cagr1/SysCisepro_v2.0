@@ -100,16 +100,6 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                     Icon = Nothing
                     MenuStrip1.ForeColor = Color.White
                     'MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorAsenava
-                    gbPtoEmision.ForeColor = Color.White
-                    gbPtoEmision.BackColor = My.MySettingsProperty.Settings.ColorAsenava
-                    gbTipoAnbiente.ForeColor = Color.White
-                    gbTipoAnbiente.BackColor = My.MySettingsProperty.Settings.ColorAsenava
-                    gbTipoEmision.ForeColor = Color.White
-                    panelDetalle.BackColor = My.MySettingsProperty.Settings.ColorAsenava
-                    panelDetalle.ForeColor = Color.White
-                    Panel1.BackColor = My.MySettingsProperty.Settings.ColorAsenava
-                    Panel1.ForeColor = Color.White
-                    gbTipoEmision.BackColor = My.MySettingsProperty.Settings.ColorAsenava
                     dgvFacturaVenta.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorAsenava
                     dgvDetalleFacturaVenta.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorAsenava
                     dgvAsientoDiarioFactura.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorAsenava
@@ -117,17 +107,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                     Icon = My.Resources.logo_s
                     MenuStrip1.ForeColor = Color.White
                     'MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
-                    gbPtoEmision.ForeColor = Color.White
-                    gbPtoEmision.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
-                    gbTipoAnbiente.ForeColor = Color.White
-                    gbTipoAnbiente.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
-                    gbTipoEmision.ForeColor = Color.White
-                    gbTipoEmision.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
-                    panelDetalle.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
-                    panelDetalle.ForeColor = Color.White
-                    Panel1.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
-                    Panel1.ForeColor = Color.White
-                    gbTipoEmision.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
+
                     dgvFacturaVenta.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorSeportpac
                     dgvDetalleFacturaVenta.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorSeportpac
                     dgvAsientoDiarioFactura.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorSeportpac
@@ -135,16 +115,8 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                     Icon = My.Resources.logo_c
                     MenuStrip1.ForeColor = Color.White
                     'MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorCisepro
-                    gbPtoEmision.ForeColor = Color.White
-                    gbPtoEmision.BackColor = My.MySettingsProperty.Settings.ColorCisepro
-                    gbTipoAnbiente.ForeColor = Color.White
-                    gbTipoAnbiente.BackColor = My.MySettingsProperty.Settings.ColorCisepro
-                    gbTipoEmision.ForeColor = Color.White
-                    gbTipoEmision.BackColor = My.MySettingsProperty.Settings.ColorCisepro
-                    panelDetalle.BackColor = My.MySettingsProperty.Settings.ColorCisepro
-                    panelDetalle.ForeColor = Color.White
-                    Panel1.BackColor = My.MySettingsProperty.Settings.ColorCisepro
-                    Panel1.ForeColor = Color.White
+
+
                     dgvFacturaVenta.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
                     dgvDetalleFacturaVenta.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
                     dgvAsientoDiarioFactura.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
@@ -165,6 +137,10 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
             LlenarComboConcepto()
             LlenarComboFormasPago()
             LlenarComboIva()
+            rbPtoEmision002.Checked = True
+            'rbProduccion.Checked = True
+            'rbTipoEmisionNormal.Checked = True
+
         End Sub
         Private Sub VerificarCbConvenio()
             If cbxConvenio.DataSource Is Nothing Then
@@ -183,25 +159,43 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
             End Try
         End Sub
         Private Sub DeshabilitadoInicio()
-            gbPtoEmision.Enabled = True
-            gbTipoAnbiente.Enabled = True
-            gbTipoEmision.Enabled = True
-            gbCliente.Enabled = False
-            gbFecha.Enabled = False
-            gbSon.Enabled = False
-            gbFormaPago.Enabled = False
-            gbTipoPago.Enabled = False
-            gbConceptoFactura.Enabled = False
-            gbObservaciones.Enabled = False
-            gbValores.Enabled = False
+            'gbPtoEmision.Enabled = True
+            rbPtoEmision001.Enabled = True
+            rbPtoEmision002.Enabled = True
+            'gbTipoAnbiente.Enabled = True
+            rbPruebas.Enabled = True
+            rbProduccion.Enabled = True
+            'gbTipoEmision.Enabled = True
+            rbTipoEmisionNormal.Enabled = True
+            rbTipoEmisionIndisponibilidadSistema.Enabled = True
+            'gbCliente.Enabled = False
+            txtNombreComercialCliente.Enabled = False
+            cmbDirecciones.Enabled = False
+            'gbFecha.Enabled = False
+            dtpFechaEmisionFacturaVenta.Enabled = False
+            'gbSon.Enabled = False
+            txtSon.Enabled = False
+            'gbFormaPago.Enabled = False
+            rbContado.Enabled = False
+            rbCredito.Enabled = False
+            'gbTipoPago.Enabled = False
+            cmbTipoPagoFactura.Enabled = False
+            'gbConceptoFactura.Enabled = False
+            cmbConcepto.Enabled = False
+            'gbObservaciones.Enabled = False
+            txtObservacionesFactura.Enabled = False
+            'gbValores.Enabled = False
+            cmbIva.Enabled = False
+
             dgvDetalleFacturaVenta.Enabled = False
             btnNuevo.Enabled = True
             btnModificar.Enabled = False
             btnCancelar.Enabled = False
             btnGuardar.Enabled = False
             btnCompEgreso.Enabled = False
-            GroupBox5.Enabled = False
-            GroupBox4.Enabled = False
+            'GroupBox5.Enabled = False
+            cbxConvenio.Enabled = False
+            'GroupBox4.Enabled = False
         End Sub
         Private Sub CargarDatosEmpresa()
             Try
@@ -407,23 +401,45 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
             End Select
         End Sub
         Private Sub HabilitadoNuevo()
-            gbPtoEmision.Enabled = False
-            gbTipoAnbiente.Enabled = False
-            gbTipoEmision.Enabled = False
+            'gbPtoEmision.Enabled = False
+            'gbTipoAnbiente.Enabled = False
+            'gbTipoEmision.Enabled = False
 
-            gbCliente.Enabled = True
-            gbFecha.Enabled = True
-            txtSon.Enabled = False
-            gbFormaPago.Enabled = True
-            gbTipoPago.Enabled = True
-            gbConceptoFactura.Enabled = True
-            gbObservaciones.Enabled = True
-            gbValores.Enabled = True
+            rbPtoEmision001.Enabled = False
+            rbPtoEmision002.Enabled = False
+            rbPruebas.Enabled = False
+            rbProduccion.Enabled = False
+            rbTipoEmisionNormal.Enabled = False
+            rbTipoEmisionIndisponibilidadSistema.Enabled = False
+
+
+
+            'gbCliente.Enabled = True
+            txtNombreComercialCliente.Enabled = True
+            cmbDirecciones.Enabled = True
+            'gbFecha.Enabled = True
+            dtpFechaEmisionFacturaVenta.Enabled = True
+            txtSon.Enabled = True
+            'gbFormaPago.Enabled = True
+            rbContado.Enabled = True
+            rbCredito.Enabled = True
+            'gbTipoPago.Enabled = True
+            cmbTipoPagoFactura.Enabled = True
+            'gbConceptoFactura.Enabled = True
+            cmbConcepto.Enabled = True
+
+
+            'gbObservaciones.Enabled = True
+            txtObservacionesFactura.Enabled = True
+            'gbValores.Enabled = False
+            cmbIva.Enabled = True
+            'gbValores.Enabled = True
             dgvDetalleFacturaVenta.Enabled = True
             dgvDetalleFacturaVenta.ReadOnly = False
 
-            GroupBox5.Enabled = True
-            GroupBox4.Enabled = True
+            'GroupBox5.Enabled = True
+            cbxConvenio.Enabled = True
+            'GroupBox4.Enabled = True
 
             ' para que no se editen estas columnas del detalle de la factura
             dgvDetalleFacturaVenta.Columns(0).ReadOnly = True ' columna suprimir

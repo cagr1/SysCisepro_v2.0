@@ -73,11 +73,8 @@
             Me.btnNuevo = New System.Windows.Forms.ToolStripMenuItem()
             Me.btnGuardarSinFirmar = New System.Windows.Forms.ToolStripMenuItem()
             Me.btnCancelar = New System.Windows.Forms.ToolStripMenuItem()
-            Me.KryptonGroupBox1 = New Krypton.Toolkit.KryptonGroupBox()
             Me.KryptonLabel3 = New Krypton.Toolkit.KryptonLabel()
-            Me.SpaceSeparatorVertical2 = New ReaLTaiizor.Controls.SpaceSeparatorVertical()
             Me.KryptonLabel2 = New Krypton.Toolkit.KryptonLabel()
-            Me.SpaceSeparatorVertical1 = New ReaLTaiizor.Controls.SpaceSeparatorVertical()
             Me.KryptonLabel1 = New Krypton.Toolkit.KryptonLabel()
             Me.KryptonGroupBox2 = New Krypton.Toolkit.KryptonGroupBox()
             Me.txtDireccionEmpresa = New Krypton.Toolkit.KryptonLabel()
@@ -114,13 +111,12 @@
             Me.lblSubtotalIva = New Krypton.Toolkit.KryptonLabel()
             Me.KryptonLabel18 = New Krypton.Toolkit.KryptonLabel()
             Me.KryptonLabel14 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonGroupBox6 = New Krypton.Toolkit.KryptonGroupBox()
+            Me.KryptonGroupBox7 = New Krypton.Toolkit.KryptonGroupBox()
+            Me.KryptonGroupBox8 = New Krypton.Toolkit.KryptonGroupBox()
             CType(Me.dgvFacturaVenta, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.dgvDetalleFacturaVenta, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.MenuStrip1.SuspendLayout()
-            CType(Me.KryptonGroupBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-            CType(Me.KryptonGroupBox1.Panel, System.ComponentModel.ISupportInitialize).BeginInit()
-            Me.KryptonGroupBox1.Panel.SuspendLayout()
-            Me.KryptonGroupBox1.SuspendLayout()
             CType(Me.KryptonGroupBox2, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.KryptonGroupBox2.Panel, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.KryptonGroupBox2.Panel.SuspendLayout()
@@ -137,6 +133,18 @@
             CType(Me.KryptonGroupBox5.Panel, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.KryptonGroupBox5.Panel.SuspendLayout()
             Me.KryptonGroupBox5.SuspendLayout()
+            CType(Me.KryptonGroupBox6, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType(Me.KryptonGroupBox6.Panel, System.ComponentModel.ISupportInitialize).BeginInit()
+            Me.KryptonGroupBox6.Panel.SuspendLayout()
+            Me.KryptonGroupBox6.SuspendLayout()
+            CType(Me.KryptonGroupBox7, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType(Me.KryptonGroupBox7.Panel, System.ComponentModel.ISupportInitialize).BeginInit()
+            Me.KryptonGroupBox7.Panel.SuspendLayout()
+            Me.KryptonGroupBox7.SuspendLayout()
+            CType(Me.KryptonGroupBox8, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType(Me.KryptonGroupBox8.Panel, System.ComponentModel.ISupportInitialize).BeginInit()
+            Me.KryptonGroupBox8.Panel.SuspendLayout()
+            Me.KryptonGroupBox8.SuspendLayout()
             Me.SuspendLayout()
             '
             'txtRazonModificacionNotaCredito
@@ -452,11 +460,10 @@
             Me.rbPtoEmision002.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.rbPtoEmision002.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.rbPtoEmision002.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
-            Me.rbPtoEmision002.Location = New System.Drawing.Point(128, 7)
+            Me.rbPtoEmision002.Location = New System.Drawing.Point(128, 6)
             Me.rbPtoEmision002.Name = "rbPtoEmision002"
             Me.rbPtoEmision002.Size = New System.Drawing.Size(43, 17)
             Me.rbPtoEmision002.TabIndex = 3
-            Me.rbPtoEmision002.TabStop = True
             Me.rbPtoEmision002.Text = "002"
             Me.rbPtoEmision002.UseVisualStyleBackColor = False
             '
@@ -466,11 +473,10 @@
             Me.rbPtoEmision001.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.rbPtoEmision001.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.rbPtoEmision001.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
-            Me.rbPtoEmision001.Location = New System.Drawing.Point(81, 7)
+            Me.rbPtoEmision001.Location = New System.Drawing.Point(81, 6)
             Me.rbPtoEmision001.Name = "rbPtoEmision001"
             Me.rbPtoEmision001.Size = New System.Drawing.Size(43, 17)
             Me.rbPtoEmision001.TabIndex = 2
-            Me.rbPtoEmision001.TabStop = True
             Me.rbPtoEmision001.Text = "001"
             Me.rbPtoEmision001.UseVisualStyleBackColor = False
             '
@@ -480,11 +486,10 @@
             Me.rbTipoEmisionIndisponibilidadSistema.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.rbTipoEmisionIndisponibilidadSistema.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.rbTipoEmisionIndisponibilidadSistema.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
-            Me.rbTipoEmisionIndisponibilidadSistema.Location = New System.Drawing.Point(589, 5)
+            Me.rbTipoEmisionIndisponibilidadSistema.Location = New System.Drawing.Point(146, 6)
             Me.rbTipoEmisionIndisponibilidadSistema.Name = "rbTipoEmisionIndisponibilidadSistema"
             Me.rbTipoEmisionIndisponibilidadSistema.Size = New System.Drawing.Size(100, 17)
             Me.rbTipoEmisionIndisponibilidadSistema.TabIndex = 22
-            Me.rbTipoEmisionIndisponibilidadSistema.TabStop = True
             Me.rbTipoEmisionIndisponibilidadSistema.Text = "Indisp Sistema"
             Me.rbTipoEmisionIndisponibilidadSistema.UseVisualStyleBackColor = False
             '
@@ -492,9 +497,10 @@
             '
             Me.rbTipoEmisionNormal.AutoSize = True
             Me.rbTipoEmisionNormal.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
+            Me.rbTipoEmisionNormal.Checked = True
             Me.rbTipoEmisionNormal.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.rbTipoEmisionNormal.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
-            Me.rbTipoEmisionNormal.Location = New System.Drawing.Point(513, 5)
+            Me.rbTipoEmisionNormal.Location = New System.Drawing.Point(70, 6)
             Me.rbTipoEmisionNormal.Name = "rbTipoEmisionNormal"
             Me.rbTipoEmisionNormal.Size = New System.Drawing.Size(62, 17)
             Me.rbTipoEmisionNormal.TabIndex = 21
@@ -506,9 +512,10 @@
             '
             Me.rbProduccion.AutoSize = True
             Me.rbProduccion.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
+            Me.rbProduccion.Checked = True
             Me.rbProduccion.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.rbProduccion.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
-            Me.rbProduccion.Location = New System.Drawing.Point(331, 7)
+            Me.rbProduccion.Location = New System.Drawing.Point(144, 6)
             Me.rbProduccion.Name = "rbProduccion"
             Me.rbProduccion.Size = New System.Drawing.Size(81, 17)
             Me.rbProduccion.TabIndex = 1
@@ -522,11 +529,10 @@
             Me.rbPruebas.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.rbPruebas.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.rbPruebas.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
-            Me.rbPruebas.Location = New System.Drawing.Point(259, 7)
+            Me.rbPruebas.Location = New System.Drawing.Point(72, 6)
             Me.rbPruebas.Name = "rbPruebas"
             Me.rbPruebas.Size = New System.Drawing.Size(66, 17)
             Me.rbPruebas.TabIndex = 0
-            Me.rbPruebas.TabStop = True
             Me.rbPruebas.Text = "Pruebas"
             Me.rbPruebas.UseVisualStyleBackColor = False
             '
@@ -682,75 +688,25 @@
             Me.btnCancelar.Size = New System.Drawing.Size(97, 28)
             Me.btnCancelar.Text = "CANCELAR"
             '
-            'KryptonGroupBox1
-            '
-            Me.KryptonGroupBox1.CaptionOverlap = 0R
-            Me.KryptonGroupBox1.GroupBackStyle = Krypton.Toolkit.PaletteBackStyle.ControlRibbon
-            Me.KryptonGroupBox1.Location = New System.Drawing.Point(1, 35)
-            Me.KryptonGroupBox1.Name = "KryptonGroupBox1"
-            '
-            'KryptonGroupBox1.Panel
-            '
-            Me.KryptonGroupBox1.Panel.Controls.Add(Me.rbTipoEmisionIndisponibilidadSistema)
-            Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel3)
-            Me.KryptonGroupBox1.Panel.Controls.Add(Me.rbTipoEmisionNormal)
-            Me.KryptonGroupBox1.Panel.Controls.Add(Me.rbProduccion)
-            Me.KryptonGroupBox1.Panel.Controls.Add(Me.rbPtoEmision002)
-            Me.KryptonGroupBox1.Panel.Controls.Add(Me.rbPruebas)
-            Me.KryptonGroupBox1.Panel.Controls.Add(Me.SpaceSeparatorVertical2)
-            Me.KryptonGroupBox1.Panel.Controls.Add(Me.rbPtoEmision001)
-            Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel2)
-            Me.KryptonGroupBox1.Panel.Controls.Add(Me.SpaceSeparatorVertical1)
-            Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel1)
-            Me.KryptonGroupBox1.Size = New System.Drawing.Size(730, 36)
-            Me.KryptonGroupBox1.TabIndex = 189
-            Me.KryptonGroupBox1.Values.Heading = ""
-            '
             'KryptonLabel3
             '
-            Me.KryptonLabel3.Location = New System.Drawing.Point(456, 4)
+            Me.KryptonLabel3.Location = New System.Drawing.Point(13, 5)
             Me.KryptonLabel3.Name = "KryptonLabel3"
             Me.KryptonLabel3.Size = New System.Drawing.Size(53, 20)
             Me.KryptonLabel3.TabIndex = 6
             Me.KryptonLabel3.Values.Text = "Emision"
             '
-            'SpaceSeparatorVertical2
-            '
-            Me.SpaceSeparatorVertical2.Customization = "Kioq/yoqKv8jIyP/Kioq/w=="
-            Me.SpaceSeparatorVertical2.Font = New System.Drawing.Font("Verdana", 8.0!)
-            Me.SpaceSeparatorVertical2.Image = Nothing
-            Me.SpaceSeparatorVertical2.Location = New System.Drawing.Point(439, 5)
-            Me.SpaceSeparatorVertical2.Name = "SpaceSeparatorVertical2"
-            Me.SpaceSeparatorVertical2.NoRounding = False
-            Me.SpaceSeparatorVertical2.Size = New System.Drawing.Size(4, 15)
-            Me.SpaceSeparatorVertical2.TabIndex = 5
-            Me.SpaceSeparatorVertical2.Text = "SpaceSeparatorVertical2"
-            Me.SpaceSeparatorVertical2.Transparent = False
-            '
             'KryptonLabel2
             '
-            Me.KryptonLabel2.Location = New System.Drawing.Point(190, 4)
+            Me.KryptonLabel2.Location = New System.Drawing.Point(3, 6)
             Me.KryptonLabel2.Name = "KryptonLabel2"
             Me.KryptonLabel2.Size = New System.Drawing.Size(63, 20)
             Me.KryptonLabel2.TabIndex = 4
             Me.KryptonLabel2.Values.Text = "Ambiente"
             '
-            'SpaceSeparatorVertical1
-            '
-            Me.SpaceSeparatorVertical1.Customization = "Kioq/yoqKv8jIyP/Kioq/w=="
-            Me.SpaceSeparatorVertical1.Font = New System.Drawing.Font("Verdana", 8.0!)
-            Me.SpaceSeparatorVertical1.Image = Nothing
-            Me.SpaceSeparatorVertical1.Location = New System.Drawing.Point(176, 6)
-            Me.SpaceSeparatorVertical1.Name = "SpaceSeparatorVertical1"
-            Me.SpaceSeparatorVertical1.NoRounding = False
-            Me.SpaceSeparatorVertical1.Size = New System.Drawing.Size(4, 15)
-            Me.SpaceSeparatorVertical1.TabIndex = 3
-            Me.SpaceSeparatorVertical1.Text = "SpaceSeparatorVertical1"
-            Me.SpaceSeparatorVertical1.Transparent = False
-            '
             'KryptonLabel1
             '
-            Me.KryptonLabel1.Location = New System.Drawing.Point(4, 4)
+            Me.KryptonLabel1.Location = New System.Drawing.Point(4, 3)
             Me.KryptonLabel1.Name = "KryptonLabel1"
             Me.KryptonLabel1.Size = New System.Drawing.Size(75, 20)
             Me.KryptonLabel1.TabIndex = 0
@@ -760,7 +716,7 @@
             '
             Me.KryptonGroupBox2.CaptionOverlap = 0R
             Me.KryptonGroupBox2.GroupBackStyle = Krypton.Toolkit.PaletteBackStyle.PanelRibbonInactive
-            Me.KryptonGroupBox2.Location = New System.Drawing.Point(1, 71)
+            Me.KryptonGroupBox2.Location = New System.Drawing.Point(1, 75)
             Me.KryptonGroupBox2.Name = "KryptonGroupBox2"
             '
             'KryptonGroupBox2.Panel
@@ -775,13 +731,13 @@
             Me.KryptonGroupBox2.Panel.Controls.Add(Me.lblNumeroSecuencialNotaCredito)
             Me.KryptonGroupBox2.Panel.Controls.Add(Me.lblRucEmpresa)
             Me.KryptonGroupBox2.Panel.Controls.Add(Me.lblEstablecimientoFacturaEmpresa)
-            Me.KryptonGroupBox2.Size = New System.Drawing.Size(730, 74)
+            Me.KryptonGroupBox2.Size = New System.Drawing.Size(730, 71)
             Me.KryptonGroupBox2.TabIndex = 190
             Me.KryptonGroupBox2.Values.Heading = "Datos Empresa"
             '
             'txtDireccionEmpresa
             '
-            Me.txtDireccionEmpresa.Location = New System.Drawing.Point(6, 24)
+            Me.txtDireccionEmpresa.Location = New System.Drawing.Point(6, 27)
             Me.txtDireccionEmpresa.Name = "txtDireccionEmpresa"
             Me.txtDireccionEmpresa.Size = New System.Drawing.Size(58, 17)
             Me.txtDireccionEmpresa.StateCommon.ShortText.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -810,10 +766,10 @@
             '
             Me.KryptonLabel5.Location = New System.Drawing.Point(384, 24)
             Me.KryptonLabel5.Name = "KryptonLabel5"
-            Me.KryptonLabel5.Size = New System.Drawing.Size(70, 20)
+            Me.KryptonLabel5.Size = New System.Drawing.Size(50, 20)
             Me.KryptonLabel5.StateCommon.ShortText.Color1 = System.Drawing.Color.SeaGreen
             Me.KryptonLabel5.TabIndex = 6
-            Me.KryptonLabel5.Values.Text = "No Credito"
+            Me.KryptonLabel5.Values.Text = "Factura"
             '
             'KryptonLabel4
             '
@@ -828,7 +784,7 @@
             '
             Me.KryptonGroupBox3.CaptionOverlap = 0R
             Me.KryptonGroupBox3.GroupBackStyle = Krypton.Toolkit.PaletteBackStyle.ControlRibbon
-            Me.KryptonGroupBox3.Location = New System.Drawing.Point(1, 146)
+            Me.KryptonGroupBox3.Location = New System.Drawing.Point(1, 147)
             Me.KryptonGroupBox3.Name = "KryptonGroupBox3"
             '
             'KryptonGroupBox3.Panel
@@ -862,7 +818,7 @@
             Me.KryptonGroupBox3.Panel.Controls.Add(Me.txtRucCiCliente)
             Me.KryptonGroupBox3.Panel.Controls.Add(Me.lblIdClienteGeneral)
             Me.KryptonGroupBox3.Panel.Controls.Add(Me.txtTelefonoClienteGeneral)
-            Me.KryptonGroupBox3.Size = New System.Drawing.Size(730, 241)
+            Me.KryptonGroupBox3.Size = New System.Drawing.Size(730, 240)
             Me.KryptonGroupBox3.TabIndex = 191
             Me.KryptonGroupBox3.Values.Heading = "Datos Cliente"
             '
@@ -985,7 +941,7 @@
             Me.Label1.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.Label1.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Label1.ForeColor = System.Drawing.Color.SeaGreen
-            Me.Label1.Location = New System.Drawing.Point(390, 149)
+            Me.Label1.Location = New System.Drawing.Point(389, 149)
             Me.Label1.Name = "Label1"
             Me.Label1.Size = New System.Drawing.Size(46, 15)
             Me.Label1.TabIndex = 192
@@ -1134,12 +1090,63 @@
             Me.KryptonLabel14.TabIndex = 88
             Me.KryptonLabel14.Values.Text = "Compr Modif"
             '
+            'KryptonGroupBox6
+            '
+            Me.KryptonGroupBox6.CaptionOverlap = 0R
+            Me.KryptonGroupBox6.GroupBackStyle = Krypton.Toolkit.PaletteBackStyle.ControlRibbon
+            Me.KryptonGroupBox6.Location = New System.Drawing.Point(0, 36)
+            Me.KryptonGroupBox6.Name = "KryptonGroupBox6"
+            '
+            'KryptonGroupBox6.Panel
+            '
+            Me.KryptonGroupBox6.Panel.Controls.Add(Me.KryptonLabel1)
+            Me.KryptonGroupBox6.Panel.Controls.Add(Me.rbPtoEmision001)
+            Me.KryptonGroupBox6.Panel.Controls.Add(Me.rbPtoEmision002)
+            Me.KryptonGroupBox6.Size = New System.Drawing.Size(183, 39)
+            Me.KryptonGroupBox6.TabIndex = 205
+            Me.KryptonGroupBox6.Values.Heading = ""
+            '
+            'KryptonGroupBox7
+            '
+            Me.KryptonGroupBox7.CaptionOverlap = 0R
+            Me.KryptonGroupBox7.GroupBackStyle = Krypton.Toolkit.PaletteBackStyle.ControlRibbon
+            Me.KryptonGroupBox7.Location = New System.Drawing.Point(189, 36)
+            Me.KryptonGroupBox7.Name = "KryptonGroupBox7"
+            '
+            'KryptonGroupBox7.Panel
+            '
+            Me.KryptonGroupBox7.Panel.Controls.Add(Me.KryptonLabel2)
+            Me.KryptonGroupBox7.Panel.Controls.Add(Me.rbPruebas)
+            Me.KryptonGroupBox7.Panel.Controls.Add(Me.rbProduccion)
+            Me.KryptonGroupBox7.Size = New System.Drawing.Size(255, 39)
+            Me.KryptonGroupBox7.TabIndex = 206
+            Me.KryptonGroupBox7.Values.Heading = ""
+            '
+            'KryptonGroupBox8
+            '
+            Me.KryptonGroupBox8.CaptionOverlap = 0R
+            Me.KryptonGroupBox8.GroupBackStyle = Krypton.Toolkit.PaletteBackStyle.ControlRibbon
+            Me.KryptonGroupBox8.Location = New System.Drawing.Point(450, 36)
+            Me.KryptonGroupBox8.Name = "KryptonGroupBox8"
+            '
+            'KryptonGroupBox8.Panel
+            '
+            Me.KryptonGroupBox8.Panel.Controls.Add(Me.rbTipoEmisionIndisponibilidadSistema)
+            Me.KryptonGroupBox8.Panel.Controls.Add(Me.KryptonLabel3)
+            Me.KryptonGroupBox8.Panel.Controls.Add(Me.rbTipoEmisionNormal)
+            Me.KryptonGroupBox8.Size = New System.Drawing.Size(279, 39)
+            Me.KryptonGroupBox8.TabIndex = 207
+            Me.KryptonGroupBox8.Values.Heading = ""
+            '
             'FormNotaCredito
             '
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(185, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(227, Byte), Integer))
             Me.ClientSize = New System.Drawing.Size(732, 685)
+            Me.Controls.Add(Me.KryptonGroupBox8)
+            Me.Controls.Add(Me.KryptonGroupBox7)
+            Me.Controls.Add(Me.KryptonGroupBox6)
             Me.Controls.Add(Me.KryptonGroupBox5)
             Me.Controls.Add(Me.KryptonGroupBox4)
             Me.Controls.Add(Me.lblIdFacturaVenta)
@@ -1149,7 +1156,6 @@
             Me.Controls.Add(Me.KryptonGroupBox3)
             Me.Controls.Add(Me.lblIdEmpresa)
             Me.Controls.Add(Me.KryptonGroupBox2)
-            Me.Controls.Add(Me.KryptonGroupBox1)
             Me.Controls.Add(Me.MenuStrip1)
             Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
             Me.Name = "FormNotaCredito"
@@ -1165,11 +1171,6 @@
             CType(Me.dgvDetalleFacturaVenta, System.ComponentModel.ISupportInitialize).EndInit()
             Me.MenuStrip1.ResumeLayout(False)
             Me.MenuStrip1.PerformLayout()
-            CType(Me.KryptonGroupBox1.Panel, System.ComponentModel.ISupportInitialize).EndInit()
-            Me.KryptonGroupBox1.Panel.ResumeLayout(False)
-            Me.KryptonGroupBox1.Panel.PerformLayout()
-            CType(Me.KryptonGroupBox1, System.ComponentModel.ISupportInitialize).EndInit()
-            Me.KryptonGroupBox1.ResumeLayout(False)
             CType(Me.KryptonGroupBox2.Panel, System.ComponentModel.ISupportInitialize).EndInit()
             Me.KryptonGroupBox2.Panel.ResumeLayout(False)
             Me.KryptonGroupBox2.Panel.PerformLayout()
@@ -1189,6 +1190,21 @@
             Me.KryptonGroupBox5.Panel.PerformLayout()
             CType(Me.KryptonGroupBox5, System.ComponentModel.ISupportInitialize).EndInit()
             Me.KryptonGroupBox5.ResumeLayout(False)
+            CType(Me.KryptonGroupBox6.Panel, System.ComponentModel.ISupportInitialize).EndInit()
+            Me.KryptonGroupBox6.Panel.ResumeLayout(False)
+            Me.KryptonGroupBox6.Panel.PerformLayout()
+            CType(Me.KryptonGroupBox6, System.ComponentModel.ISupportInitialize).EndInit()
+            Me.KryptonGroupBox6.ResumeLayout(False)
+            CType(Me.KryptonGroupBox7.Panel, System.ComponentModel.ISupportInitialize).EndInit()
+            Me.KryptonGroupBox7.Panel.ResumeLayout(False)
+            Me.KryptonGroupBox7.Panel.PerformLayout()
+            CType(Me.KryptonGroupBox7, System.ComponentModel.ISupportInitialize).EndInit()
+            Me.KryptonGroupBox7.ResumeLayout(False)
+            CType(Me.KryptonGroupBox8.Panel, System.ComponentModel.ISupportInitialize).EndInit()
+            Me.KryptonGroupBox8.Panel.ResumeLayout(False)
+            Me.KryptonGroupBox8.Panel.PerformLayout()
+            CType(Me.KryptonGroupBox8, System.ComponentModel.ISupportInitialize).EndInit()
+            Me.KryptonGroupBox8.ResumeLayout(False)
             Me.ResumeLayout(False)
             Me.PerformLayout()
 
@@ -1233,11 +1249,8 @@
         Friend WithEvents btnNuevo As System.Windows.Forms.ToolStripMenuItem
         Friend WithEvents btnGuardarSinFirmar As System.Windows.Forms.ToolStripMenuItem
         Friend WithEvents btnCancelar As System.Windows.Forms.ToolStripMenuItem
-        Friend WithEvents KryptonGroupBox1 As Krypton.Toolkit.KryptonGroupBox
         Friend WithEvents KryptonLabel3 As Krypton.Toolkit.KryptonLabel
-        Friend WithEvents SpaceSeparatorVertical2 As ReaLTaiizor.Controls.SpaceSeparatorVertical
         Friend WithEvents KryptonLabel2 As Krypton.Toolkit.KryptonLabel
-        Friend WithEvents SpaceSeparatorVertical1 As ReaLTaiizor.Controls.SpaceSeparatorVertical
         Friend WithEvents KryptonLabel1 As Krypton.Toolkit.KryptonLabel
         Friend WithEvents KryptonGroupBox2 As Krypton.Toolkit.KryptonGroupBox
         Friend WithEvents KryptonLabel5 As Krypton.Toolkit.KryptonLabel
@@ -1274,5 +1287,8 @@
         Friend WithEvents lblSubtotalIva As Krypton.Toolkit.KryptonLabel
         Friend WithEvents KryptonLabel18 As Krypton.Toolkit.KryptonLabel
         Friend WithEvents KryptonLabel14 As Krypton.Toolkit.KryptonLabel
+        Friend WithEvents KryptonGroupBox6 As Krypton.Toolkit.KryptonGroupBox
+        Friend WithEvents KryptonGroupBox7 As Krypton.Toolkit.KryptonGroupBox
+        Friend WithEvents KryptonGroupBox8 As Krypton.Toolkit.KryptonGroupBox
     End Class
 End Namespace

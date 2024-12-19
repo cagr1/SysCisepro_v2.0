@@ -677,13 +677,13 @@ Namespace FORMULARIOS.FONDOS.FONDO_ROTATIVO
                             End If
                         Next
 
-                        Dim dt As DataTable = DataGridViewToDataTable(_formComprobanteCompra.dgvAsientosDiario)
+                        'Dim dt As DataTable = DataGridViewToDataTable(_formComprobanteCompra.dgvAsientosDiario)
 
-                        For Each row As DataRow In dt.Rows
-                            If row(1).ToString().Trim().Length > 0 Then
-                                dgvAsientosDiario.Rows.Add(row(0).ToString(), row(1).ToString(), row(2).ToString(), row(3).ToString(), row(4).ToString())
-                            End If
-                        Next
+                        'For Each row As DataRow In dt.Rows
+                        '    If row(1).ToString().Trim().Length > 0 Then
+                        '        dgvAsientosDiario.Rows.Add(row(0).ToString(), row(1).ToString(), row(2).ToString(), row(3).ToString(), row(4).ToString())
+                        '    End If
+                        'Next
 
 
                         _validarComprobanteLiqCompra = 1

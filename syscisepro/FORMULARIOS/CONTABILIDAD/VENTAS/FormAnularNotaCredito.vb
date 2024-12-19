@@ -69,7 +69,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
             End Select
             _sqlCommands = New List(Of SqlCommand)
             _notSelect = New List(Of Integer)
-
+            dgvNotaCredito.ColumnHeadersDefaultCellStyle.Font = New Font("Roboto", 8, FontStyle.Regular)
             AutocompletarNombreCliente()
         End Sub
         Private Sub AutocompletarNombreCliente()
@@ -116,7 +116,8 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                     lblLlevaContabilidadClienteGeneral.Text = cli.Rows(0)(7)
                 End If
             Catch ex As Exception
-                MsgBox("CARGAR DATOS CLIENTE." & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
+                'MsgBox("CARGAR DATOS CLIENTE." & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
+                KryptonMessageBox.Show("Error al cargar datos del cliente", "Mensaje de error", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
         Private Sub CargarNotaCreditoXIdCliente()
@@ -158,7 +159,8 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                     End If
                 Next 
             Catch ex As Exception
-                MsgBox("Error calcular pagos" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Error")
+                'MsgBox("Error calcular pagos" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Error")
+                KryptonMessageBox.Show("Error al calcular pagos" & vbNewLine & ex.Message.ToString, "Mensaje de error", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
         Private Sub dgvNotaCredito_CellContentClick(ByVal sender As System.Object, ByVal e As Windows.Forms.DataGridViewCellEventArgs) Handles dgvNotaCredito.CellContentClick

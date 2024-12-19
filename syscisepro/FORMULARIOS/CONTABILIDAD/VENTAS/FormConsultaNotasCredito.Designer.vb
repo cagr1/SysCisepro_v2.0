@@ -27,165 +27,131 @@
             Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormConsultaNotasCredito))
-            Me.gbNumeroFactura = New System.Windows.Forms.GroupBox()
             Me.txtNumeroFacturaBuscar = New System.Windows.Forms.TextBox()
-            Me.gbRangoFechas = New System.Windows.Forms.GroupBox()
             Me.lblIdFacturaVenta = New System.Windows.Forms.Label()
-            Me.Label1 = New System.Windows.Forms.Label()
             Me.dtpFechaHasta = New System.Windows.Forms.DateTimePicker()
             Me.dtpFechaDesde = New System.Windows.Forms.DateTimePicker()
-            Me.gbClienteGeneral = New System.Windows.Forms.GroupBox()
             Me.txtClienteGeneral = New System.Windows.Forms.TextBox()
             Me.lblIdClienteGeneral = New System.Windows.Forms.Label()
             Me.dgvNotaCredito = New System.Windows.Forms.DataGridView()
-            Me.gbTotal = New System.Windows.Forms.GroupBox()
-            Me.lblSubtotalIva = New System.Windows.Forms.Label()
             Me.txtTotalSubtotal = New System.Windows.Forms.TextBox()
-            Me.lblIva = New System.Windows.Forms.Label()
             Me.txtTotalIVA = New System.Windows.Forms.TextBox()
-            Me.Label4 = New System.Windows.Forms.Label()
             Me.txtTotalFacturas = New System.Windows.Forms.TextBox()
             Me.dgvFacturaVenta = New System.Windows.Forms.DataGridView()
             Me.dgvDetalleFacturaVenta = New System.Windows.Forms.DataGridView()
             Me.dgvCliente = New System.Windows.Forms.DataGridView()
-            Me.gbEstadoFactura = New System.Windows.Forms.GroupBox()
             Me.rbTodas = New System.Windows.Forms.RadioButton()
             Me.rbAnuladas = New System.Windows.Forms.RadioButton()
             Me.rbActivas = New System.Windows.Forms.RadioButton()
-            Me.gbTipoReporte = New System.Windows.Forms.GroupBox()
             Me.rbNroNotaCredito = New System.Windows.Forms.RadioButton()
             Me.rbConsorcio = New System.Windows.Forms.RadioButton()
             Me.rbPorCliente = New System.Windows.Forms.RadioButton()
             Me.rbTodo = New System.Windows.Forms.RadioButton()
-            Me.GroupBox1 = New System.Windows.Forms.GroupBox()
             Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
             Me.btnBuscar = New System.Windows.Forms.ToolStripMenuItem()
             Me.btnExportar = New System.Windows.Forms.ToolStripMenuItem()
             Me.btnSalir = New System.Windows.Forms.ToolStripMenuItem()
             Me.GENERARRIDEToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
             Me.ofdSeleccionarArchivo = New System.Windows.Forms.OpenFileDialog()
-            Me.TabControl1 = New System.Windows.Forms.TabControl()
-            Me.TabPage1 = New System.Windows.Forms.TabPage()
-            Me.TabPage2 = New System.Windows.Forms.TabPage()
-            Me.GroupBox2 = New System.Windows.Forms.GroupBox()
             Me.btnNotaCreditoPath = New System.Windows.Forms.Button()
             Me.txtNotaCreditoPath = New System.Windows.Forms.TextBox()
-            Me.Label9 = New System.Windows.Forms.Label()
-            Me.gbNumeroFactura.SuspendLayout()
-            Me.gbRangoFechas.SuspendLayout()
-            Me.gbClienteGeneral.SuspendLayout()
+            Me.KryptonGroupBox1 = New Krypton.Toolkit.KryptonGroupBox()
+            Me.KryptonLabel5 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel4 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel3 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel2 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel1 = New Krypton.Toolkit.KryptonLabel()
+            Me.MetroTabControl1 = New ReaLTaiizor.Controls.MetroTabControl()
+            Me.MetroTabPage1 = New ReaLTaiizor.Child.Metro.MetroTabPage()
+            Me.MetroTabPage2 = New ReaLTaiizor.Child.Metro.MetroTabPage()
+            Me.KryptonGroupBox2 = New Krypton.Toolkit.KryptonGroupBox()
+            Me.KryptonLabel6 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonGroupBox3 = New Krypton.Toolkit.KryptonGroupBox()
+            Me.KryptonLabel9 = New Krypton.Toolkit.KryptonLabel()
+            Me.lblIva = New Krypton.Toolkit.KryptonLabel()
+            Me.lblSubtotalIva = New Krypton.Toolkit.KryptonLabel()
             CType(Me.dgvNotaCredito, System.ComponentModel.ISupportInitialize).BeginInit()
-            Me.gbTotal.SuspendLayout()
             CType(Me.dgvFacturaVenta, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.dgvDetalleFacturaVenta, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.dgvCliente, System.ComponentModel.ISupportInitialize).BeginInit()
-            Me.gbEstadoFactura.SuspendLayout()
-            Me.gbTipoReporte.SuspendLayout()
-            Me.GroupBox1.SuspendLayout()
             Me.MenuStrip1.SuspendLayout()
-            Me.TabControl1.SuspendLayout()
-            Me.TabPage1.SuspendLayout()
-            Me.TabPage2.SuspendLayout()
-            Me.GroupBox2.SuspendLayout()
+            CType(Me.KryptonGroupBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType(Me.KryptonGroupBox1.Panel, System.ComponentModel.ISupportInitialize).BeginInit()
+            Me.KryptonGroupBox1.Panel.SuspendLayout()
+            Me.KryptonGroupBox1.SuspendLayout()
+            Me.MetroTabControl1.SuspendLayout()
+            Me.MetroTabPage1.SuspendLayout()
+            Me.MetroTabPage2.SuspendLayout()
+            CType(Me.KryptonGroupBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType(Me.KryptonGroupBox2.Panel, System.ComponentModel.ISupportInitialize).BeginInit()
+            Me.KryptonGroupBox2.Panel.SuspendLayout()
+            Me.KryptonGroupBox2.SuspendLayout()
+            CType(Me.KryptonGroupBox3, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType(Me.KryptonGroupBox3.Panel, System.ComponentModel.ISupportInitialize).BeginInit()
+            Me.KryptonGroupBox3.Panel.SuspendLayout()
+            Me.KryptonGroupBox3.SuspendLayout()
             Me.SuspendLayout()
-            '
-            'gbNumeroFactura
-            '
-            Me.gbNumeroFactura.BackColor = System.Drawing.Color.White
-            Me.gbNumeroFactura.Controls.Add(Me.txtNumeroFacturaBuscar)
-            Me.gbNumeroFactura.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.gbNumeroFactura.Location = New System.Drawing.Point(954, 8)
-            Me.gbNumeroFactura.Name = "gbNumeroFactura"
-            Me.gbNumeroFactura.Size = New System.Drawing.Size(117, 61)
-            Me.gbNumeroFactura.TabIndex = 101
-            Me.gbNumeroFactura.TabStop = False
-            Me.gbNumeroFactura.Text = "NRO NOTA CREDITO"
             '
             'txtNumeroFacturaBuscar
             '
             Me.txtNumeroFacturaBuscar.BackColor = System.Drawing.Color.White
             Me.txtNumeroFacturaBuscar.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-            Me.txtNumeroFacturaBuscar.Location = New System.Drawing.Point(7, 24)
+            Me.txtNumeroFacturaBuscar.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtNumeroFacturaBuscar.Location = New System.Drawing.Point(914, 24)
             Me.txtNumeroFacturaBuscar.Name = "txtNumeroFacturaBuscar"
-            Me.txtNumeroFacturaBuscar.Size = New System.Drawing.Size(105, 20)
+            Me.txtNumeroFacturaBuscar.Size = New System.Drawing.Size(105, 21)
             Me.txtNumeroFacturaBuscar.TabIndex = 0
             Me.txtNumeroFacturaBuscar.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-            '
-            'gbRangoFechas
-            '
-            Me.gbRangoFechas.BackColor = System.Drawing.Color.White
-            Me.gbRangoFechas.Controls.Add(Me.lblIdFacturaVenta)
-            Me.gbRangoFechas.Controls.Add(Me.Label1)
-            Me.gbRangoFechas.Controls.Add(Me.dtpFechaHasta)
-            Me.gbRangoFechas.Controls.Add(Me.dtpFechaDesde)
-            Me.gbRangoFechas.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.gbRangoFechas.Location = New System.Drawing.Point(728, 7)
-            Me.gbRangoFechas.Name = "gbRangoFechas"
-            Me.gbRangoFechas.Size = New System.Drawing.Size(222, 61)
-            Me.gbRangoFechas.TabIndex = 98
-            Me.gbRangoFechas.TabStop = False
-            Me.gbRangoFechas.Text = "RANGO DE FECHAS"
             '
             'lblIdFacturaVenta
             '
             Me.lblIdFacturaVenta.AutoSize = True
-            Me.lblIdFacturaVenta.Location = New System.Drawing.Point(191, 1)
+            Me.lblIdFacturaVenta.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
+            Me.lblIdFacturaVenta.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.lblIdFacturaVenta.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
+            Me.lblIdFacturaVenta.Location = New System.Drawing.Point(873, 5)
             Me.lblIdFacturaVenta.Name = "lblIdFacturaVenta"
             Me.lblIdFacturaVenta.Size = New System.Drawing.Size(16, 13)
             Me.lblIdFacturaVenta.TabIndex = 4
             Me.lblIdFacturaVenta.Text = "..."
-            '
-            'Label1
-            '
-            Me.Label1.AutoSize = True
-            Me.Label1.Location = New System.Drawing.Point(104, 28)
-            Me.Label1.Name = "Label1"
-            Me.Label1.Size = New System.Drawing.Size(13, 13)
-            Me.Label1.TabIndex = 2
-            Me.Label1.Text = "a"
+            Me.lblIdFacturaVenta.Visible = False
             '
             'dtpFechaHasta
             '
+            Me.dtpFechaHasta.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.dtpFechaHasta.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-            Me.dtpFechaHasta.Location = New System.Drawing.Point(118, 24)
+            Me.dtpFechaHasta.Location = New System.Drawing.Point(802, 23)
             Me.dtpFechaHasta.Name = "dtpFechaHasta"
-            Me.dtpFechaHasta.Size = New System.Drawing.Size(98, 21)
+            Me.dtpFechaHasta.Size = New System.Drawing.Size(87, 21)
             Me.dtpFechaHasta.TabIndex = 1
             '
             'dtpFechaDesde
             '
+            Me.dtpFechaDesde.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.dtpFechaDesde.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-            Me.dtpFechaDesde.Location = New System.Drawing.Point(5, 24)
+            Me.dtpFechaDesde.Location = New System.Drawing.Point(695, 24)
             Me.dtpFechaDesde.Name = "dtpFechaDesde"
-            Me.dtpFechaDesde.Size = New System.Drawing.Size(98, 21)
+            Me.dtpFechaDesde.Size = New System.Drawing.Size(89, 21)
             Me.dtpFechaDesde.TabIndex = 0
-            '
-            'gbClienteGeneral
-            '
-            Me.gbClienteGeneral.BackColor = System.Drawing.Color.White
-            Me.gbClienteGeneral.Controls.Add(Me.txtClienteGeneral)
-            Me.gbClienteGeneral.Controls.Add(Me.lblIdClienteGeneral)
-            Me.gbClienteGeneral.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.gbClienteGeneral.Location = New System.Drawing.Point(202, 7)
-            Me.gbClienteGeneral.Name = "gbClienteGeneral"
-            Me.gbClienteGeneral.Size = New System.Drawing.Size(382, 61)
-            Me.gbClienteGeneral.TabIndex = 97
-            Me.gbClienteGeneral.TabStop = False
-            Me.gbClienteGeneral.Text = "CLIENTES"
             '
             'txtClienteGeneral
             '
             Me.txtClienteGeneral.BackColor = System.Drawing.Color.White
             Me.txtClienteGeneral.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-            Me.txtClienteGeneral.Location = New System.Drawing.Point(6, 24)
+            Me.txtClienteGeneral.Enabled = False
+            Me.txtClienteGeneral.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtClienteGeneral.Location = New System.Drawing.Point(176, 23)
             Me.txtClienteGeneral.Name = "txtClienteGeneral"
-            Me.txtClienteGeneral.Size = New System.Drawing.Size(357, 21)
+            Me.txtClienteGeneral.Size = New System.Drawing.Size(297, 21)
             Me.txtClienteGeneral.TabIndex = 31
             '
             'lblIdClienteGeneral
             '
             Me.lblIdClienteGeneral.AutoSize = True
-            Me.lblIdClienteGeneral.Location = New System.Drawing.Point(66, 1)
+            Me.lblIdClienteGeneral.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
+            Me.lblIdClienteGeneral.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.lblIdClienteGeneral.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
+            Me.lblIdClienteGeneral.Location = New System.Drawing.Point(241, 5)
             Me.lblIdClienteGeneral.Name = "lblIdClienteGeneral"
             Me.lblIdClienteGeneral.Size = New System.Drawing.Size(13, 13)
             Me.lblIdClienteGeneral.TabIndex = 30
@@ -198,13 +164,13 @@
             Me.dgvNotaCredito.AllowUserToResizeRows = False
             DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
             Me.dgvNotaCredito.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
-            Me.dgvNotaCredito.BackgroundColor = System.Drawing.Color.White
+            Me.dgvNotaCredito.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.dgvNotaCredito.BorderStyle = System.Windows.Forms.BorderStyle.None
             Me.dgvNotaCredito.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
             Me.dgvNotaCredito.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
             DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
             DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control
-            DataGridViewCellStyle2.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
             DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText
             DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption
             DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
@@ -213,91 +179,48 @@
             Me.dgvNotaCredito.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
             DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
             DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window
-            DataGridViewCellStyle3.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
             DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText
             DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(123, Byte), Integer))
             DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
             DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
             Me.dgvNotaCredito.DefaultCellStyle = DataGridViewCellStyle3
             Me.dgvNotaCredito.Dock = System.Windows.Forms.DockStyle.Fill
-            Me.dgvNotaCredito.Location = New System.Drawing.Point(3, 16)
+            Me.dgvNotaCredito.Location = New System.Drawing.Point(0, 0)
             Me.dgvNotaCredito.MultiSelect = False
             Me.dgvNotaCredito.Name = "dgvNotaCredito"
             Me.dgvNotaCredito.ReadOnly = True
             Me.dgvNotaCredito.RowHeadersVisible = False
             Me.dgvNotaCredito.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvNotaCredito.Size = New System.Drawing.Size(1080, 456)
+            Me.dgvNotaCredito.Size = New System.Drawing.Size(1030, 367)
             Me.dgvNotaCredito.TabIndex = 102
-            '
-            'gbTotal
-            '
-            Me.gbTotal.BackColor = System.Drawing.Color.White
-            Me.gbTotal.Controls.Add(Me.lblSubtotalIva)
-            Me.gbTotal.Controls.Add(Me.txtTotalSubtotal)
-            Me.gbTotal.Controls.Add(Me.lblIva)
-            Me.gbTotal.Controls.Add(Me.txtTotalIVA)
-            Me.gbTotal.Controls.Add(Me.Label4)
-            Me.gbTotal.Controls.Add(Me.txtTotalFacturas)
-            Me.gbTotal.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.gbTotal.Location = New System.Drawing.Point(1, 609)
-            Me.gbTotal.Name = "gbTotal"
-            Me.gbTotal.Size = New System.Drawing.Size(1092, 44)
-            Me.gbTotal.TabIndex = 103
-            Me.gbTotal.TabStop = False
-            '
-            'lblSubtotalIva
-            '
-            Me.lblSubtotalIva.AutoSize = True
-            Me.lblSubtotalIva.Location = New System.Drawing.Point(506, 20)
-            Me.lblSubtotalIva.Name = "lblSubtotalIva"
-            Me.lblSubtotalIva.Size = New System.Drawing.Size(85, 13)
-            Me.lblSubtotalIva.TabIndex = 9
-            Me.lblSubtotalIva.Text = "SUBTOTAL 12%:"
             '
             'txtTotalSubtotal
             '
-            Me.txtTotalSubtotal.Font = New System.Drawing.Font("Consolas", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtTotalSubtotal.Location = New System.Drawing.Point(597, 15)
+            Me.txtTotalSubtotal.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtTotalSubtotal.Location = New System.Drawing.Point(555, 13)
             Me.txtTotalSubtotal.Name = "txtTotalSubtotal"
-            Me.txtTotalSubtotal.Size = New System.Drawing.Size(89, 23)
+            Me.txtTotalSubtotal.Size = New System.Drawing.Size(89, 22)
             Me.txtTotalSubtotal.TabIndex = 8
             Me.txtTotalSubtotal.Text = "0.00"
             Me.txtTotalSubtotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
             '
-            'lblIva
-            '
-            Me.lblIva.AutoSize = True
-            Me.lblIva.Location = New System.Drawing.Point(695, 20)
-            Me.lblIva.Name = "lblIva"
-            Me.lblIva.Size = New System.Drawing.Size(61, 13)
-            Me.lblIva.TabIndex = 7
-            Me.lblIva.Text = "IVA(12%):"
-            '
             'txtTotalIVA
             '
-            Me.txtTotalIVA.Font = New System.Drawing.Font("Consolas", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtTotalIVA.Location = New System.Drawing.Point(760, 15)
+            Me.txtTotalIVA.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtTotalIVA.Location = New System.Drawing.Point(717, 13)
             Me.txtTotalIVA.Name = "txtTotalIVA"
-            Me.txtTotalIVA.Size = New System.Drawing.Size(89, 23)
+            Me.txtTotalIVA.Size = New System.Drawing.Size(89, 22)
             Me.txtTotalIVA.TabIndex = 6
             Me.txtTotalIVA.Text = "0.00"
             Me.txtTotalIVA.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
             '
-            'Label4
-            '
-            Me.Label4.AutoSize = True
-            Me.Label4.Location = New System.Drawing.Point(853, 20)
-            Me.Label4.Name = "Label4"
-            Me.Label4.Size = New System.Drawing.Size(121, 13)
-            Me.Label4.TabIndex = 5
-            Me.Label4.Text = "TOTAL NOTA CRÉDITO:"
-            '
             'txtTotalFacturas
             '
-            Me.txtTotalFacturas.Font = New System.Drawing.Font("Consolas", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtTotalFacturas.Location = New System.Drawing.Point(979, 15)
+            Me.txtTotalFacturas.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtTotalFacturas.Location = New System.Drawing.Point(931, 13)
             Me.txtTotalFacturas.Name = "txtTotalFacturas"
-            Me.txtTotalFacturas.Size = New System.Drawing.Size(89, 23)
+            Me.txtTotalFacturas.Size = New System.Drawing.Size(89, 22)
             Me.txtTotalFacturas.TabIndex = 4
             Me.txtTotalFacturas.Text = "0.00"
             Me.txtTotalFacturas.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -308,10 +231,10 @@
             Me.dgvFacturaVenta.AllowUserToDeleteRows = False
             Me.dgvFacturaVenta.BackgroundColor = System.Drawing.SystemColors.ControlLight
             Me.dgvFacturaVenta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-            Me.dgvFacturaVenta.Location = New System.Drawing.Point(48, 10)
+            Me.dgvFacturaVenta.Location = New System.Drawing.Point(615, 53)
             Me.dgvFacturaVenta.Name = "dgvFacturaVenta"
             Me.dgvFacturaVenta.ReadOnly = True
-            Me.dgvFacturaVenta.Size = New System.Drawing.Size(125, 43)
+            Me.dgvFacturaVenta.Size = New System.Drawing.Size(44, 38)
             Me.dgvFacturaVenta.TabIndex = 105
             '
             'dgvDetalleFacturaVenta
@@ -319,10 +242,10 @@
             Me.dgvDetalleFacturaVenta.AllowUserToAddRows = False
             Me.dgvDetalleFacturaVenta.AllowUserToDeleteRows = False
             Me.dgvDetalleFacturaVenta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-            Me.dgvDetalleFacturaVenta.Location = New System.Drawing.Point(9, 192)
+            Me.dgvDetalleFacturaVenta.Location = New System.Drawing.Point(534, 171)
             Me.dgvDetalleFacturaVenta.Name = "dgvDetalleFacturaVenta"
             Me.dgvDetalleFacturaVenta.ReadOnly = True
-            Me.dgvDetalleFacturaVenta.Size = New System.Drawing.Size(1041, 181)
+            Me.dgvDetalleFacturaVenta.Size = New System.Drawing.Size(192, 115)
             Me.dgvDetalleFacturaVenta.TabIndex = 106
             '
             'dgvCliente
@@ -330,127 +253,107 @@
             Me.dgvCliente.AllowUserToAddRows = False
             Me.dgvCliente.AllowUserToDeleteRows = False
             Me.dgvCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-            Me.dgvCliente.Location = New System.Drawing.Point(464, 10)
+            Me.dgvCliente.Location = New System.Drawing.Point(548, 53)
             Me.dgvCliente.Name = "dgvCliente"
             Me.dgvCliente.ReadOnly = True
-            Me.dgvCliente.Size = New System.Drawing.Size(125, 43)
+            Me.dgvCliente.Size = New System.Drawing.Size(44, 38)
             Me.dgvCliente.TabIndex = 107
             Me.dgvCliente.Visible = False
-            '
-            'gbEstadoFactura
-            '
-            Me.gbEstadoFactura.BackColor = System.Drawing.Color.White
-            Me.gbEstadoFactura.Controls.Add(Me.rbTodas)
-            Me.gbEstadoFactura.Controls.Add(Me.rbAnuladas)
-            Me.gbEstadoFactura.Controls.Add(Me.rbActivas)
-            Me.gbEstadoFactura.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.gbEstadoFactura.Location = New System.Drawing.Point(588, 7)
-            Me.gbEstadoFactura.Name = "gbEstadoFactura"
-            Me.gbEstadoFactura.Size = New System.Drawing.Size(139, 61)
-            Me.gbEstadoFactura.TabIndex = 108
-            Me.gbEstadoFactura.TabStop = False
-            Me.gbEstadoFactura.Text = "ESTADO FACTURA"
             '
             'rbTodas
             '
             Me.rbTodas.AutoSize = True
+            Me.rbTodas.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.rbTodas.Checked = True
-            Me.rbTodas.Location = New System.Drawing.Point(74, 18)
+            Me.rbTodas.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.rbTodas.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
+            Me.rbTodas.Location = New System.Drawing.Point(626, 24)
             Me.rbTodas.Name = "rbTodas"
-            Me.rbTodas.Size = New System.Drawing.Size(61, 17)
+            Me.rbTodas.Size = New System.Drawing.Size(55, 17)
             Me.rbTodas.TabIndex = 2
             Me.rbTodas.TabStop = True
-            Me.rbTodas.Text = "TODAS"
-            Me.rbTodas.UseVisualStyleBackColor = True
+            Me.rbTodas.Text = "Todas"
+            Me.rbTodas.UseVisualStyleBackColor = False
             '
             'rbAnuladas
             '
             Me.rbAnuladas.AutoSize = True
-            Me.rbAnuladas.Location = New System.Drawing.Point(4, 36)
+            Me.rbAnuladas.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
+            Me.rbAnuladas.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.rbAnuladas.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
+            Me.rbAnuladas.Location = New System.Drawing.Point(553, 24)
             Me.rbAnuladas.Name = "rbAnuladas"
-            Me.rbAnuladas.Size = New System.Drawing.Size(81, 17)
+            Me.rbAnuladas.Size = New System.Drawing.Size(71, 17)
             Me.rbAnuladas.TabIndex = 1
-            Me.rbAnuladas.Text = "ANULADAS"
-            Me.rbAnuladas.UseVisualStyleBackColor = True
+            Me.rbAnuladas.Text = "Anuladas"
+            Me.rbAnuladas.UseVisualStyleBackColor = False
             '
             'rbActivas
             '
             Me.rbActivas.AutoSize = True
-            Me.rbActivas.Location = New System.Drawing.Point(4, 18)
+            Me.rbActivas.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
+            Me.rbActivas.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.rbActivas.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
+            Me.rbActivas.Location = New System.Drawing.Point(488, 24)
             Me.rbActivas.Name = "rbActivas"
-            Me.rbActivas.Size = New System.Drawing.Size(70, 17)
+            Me.rbActivas.Size = New System.Drawing.Size(62, 17)
             Me.rbActivas.TabIndex = 0
-            Me.rbActivas.Text = "ACTIVAS"
-            Me.rbActivas.UseVisualStyleBackColor = True
-            '
-            'gbTipoReporte
-            '
-            Me.gbTipoReporte.BackColor = System.Drawing.Color.White
-            Me.gbTipoReporte.Controls.Add(Me.rbNroNotaCredito)
-            Me.gbTipoReporte.Controls.Add(Me.rbConsorcio)
-            Me.gbTipoReporte.Controls.Add(Me.rbPorCliente)
-            Me.gbTipoReporte.Controls.Add(Me.rbTodo)
-            Me.gbTipoReporte.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.gbTipoReporte.Location = New System.Drawing.Point(5, 6)
-            Me.gbTipoReporte.Name = "gbTipoReporte"
-            Me.gbTipoReporte.Size = New System.Drawing.Size(191, 61)
-            Me.gbTipoReporte.TabIndex = 109
-            Me.gbTipoReporte.TabStop = False
-            Me.gbTipoReporte.Text = "TIPO DE REPORTE"
+            Me.rbActivas.Text = "Activas"
+            Me.rbActivas.UseVisualStyleBackColor = False
             '
             'rbNroNotaCredito
             '
             Me.rbNroNotaCredito.AutoSize = True
-            Me.rbNroNotaCredito.Location = New System.Drawing.Point(96, 18)
+            Me.rbNroNotaCredito.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
+            Me.rbNroNotaCredito.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.rbNroNotaCredito.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
+            Me.rbNroNotaCredito.Location = New System.Drawing.Point(99, 3)
             Me.rbNroNotaCredito.Name = "rbNroNotaCredito"
             Me.rbNroNotaCredito.Size = New System.Drawing.Size(70, 17)
             Me.rbNroNotaCredito.TabIndex = 34
             Me.rbNroNotaCredito.Text = "Nro Nota"
-            Me.rbNroNotaCredito.UseVisualStyleBackColor = True
+            Me.rbNroNotaCredito.UseVisualStyleBackColor = False
             '
             'rbConsorcio
             '
             Me.rbConsorcio.AutoSize = True
-            Me.rbConsorcio.Location = New System.Drawing.Point(6, 36)
+            Me.rbConsorcio.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
+            Me.rbConsorcio.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.rbConsorcio.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
+            Me.rbConsorcio.Location = New System.Drawing.Point(9, 21)
             Me.rbConsorcio.Name = "rbConsorcio"
             Me.rbConsorcio.Size = New System.Drawing.Size(55, 17)
             Me.rbConsorcio.TabIndex = 24
             Me.rbConsorcio.Text = "Grupo"
-            Me.rbConsorcio.UseVisualStyleBackColor = True
+            Me.rbConsorcio.UseVisualStyleBackColor = False
             '
             'rbPorCliente
             '
             Me.rbPorCliente.AutoSize = True
-            Me.rbPorCliente.Location = New System.Drawing.Point(6, 18)
+            Me.rbPorCliente.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
+            Me.rbPorCliente.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.rbPorCliente.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
+            Me.rbPorCliente.Location = New System.Drawing.Point(9, 3)
             Me.rbPorCliente.Name = "rbPorCliente"
             Me.rbPorCliente.Size = New System.Drawing.Size(80, 17)
             Me.rbPorCliente.TabIndex = 1
             Me.rbPorCliente.Text = "Por Cliente"
-            Me.rbPorCliente.UseVisualStyleBackColor = True
+            Me.rbPorCliente.UseVisualStyleBackColor = False
             '
             'rbTodo
             '
             Me.rbTodo.AutoSize = True
+            Me.rbTodo.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.rbTodo.Checked = True
-            Me.rbTodo.Location = New System.Drawing.Point(96, 38)
+            Me.rbTodo.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.rbTodo.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
+            Me.rbTodo.Location = New System.Drawing.Point(99, 23)
             Me.rbTodo.Name = "rbTodo"
             Me.rbTodo.Size = New System.Drawing.Size(49, 17)
             Me.rbTodo.TabIndex = 0
             Me.rbTodo.TabStop = True
             Me.rbTodo.Text = "Todo"
-            Me.rbTodo.UseVisualStyleBackColor = True
-            '
-            'GroupBox1
-            '
-            Me.GroupBox1.BackColor = System.Drawing.Color.White
-            Me.GroupBox1.Controls.Add(Me.dgvNotaCredito)
-            Me.GroupBox1.Controls.Add(Me.dgvDetalleFacturaVenta)
-            Me.GroupBox1.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.GroupBox1.Location = New System.Drawing.Point(7, 132)
-            Me.GroupBox1.Name = "GroupBox1"
-            Me.GroupBox1.Size = New System.Drawing.Size(1086, 475)
-            Me.GroupBox1.TabIndex = 110
-            Me.GroupBox1.TabStop = False
+            Me.rbTodo.UseVisualStyleBackColor = False
             '
             'MenuStrip1
             '
@@ -460,7 +363,7 @@
             Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
             Me.MenuStrip1.Name = "MenuStrip1"
             Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(7, 2, 0, 2)
-            Me.MenuStrip1.Size = New System.Drawing.Size(1097, 32)
+            Me.MenuStrip1.Size = New System.Drawing.Size(1041, 32)
             Me.MenuStrip1.TabIndex = 191
             Me.MenuStrip1.Text = "msIngresoBodega"
             '
@@ -504,98 +407,242 @@
             '
             Me.ofdSeleccionarArchivo.FileName = "OpenFileDialog1"
             '
-            'TabControl1
-            '
-            Me.TabControl1.Controls.Add(Me.TabPage1)
-            Me.TabControl1.Controls.Add(Me.TabPage2)
-            Me.TabControl1.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.TabControl1.Location = New System.Drawing.Point(1, 32)
-            Me.TabControl1.Name = "TabControl1"
-            Me.TabControl1.SelectedIndex = 0
-            Me.TabControl1.Size = New System.Drawing.Size(1092, 106)
-            Me.TabControl1.TabIndex = 192
-            '
-            'TabPage1
-            '
-            Me.TabPage1.Controls.Add(Me.gbTipoReporte)
-            Me.TabPage1.Controls.Add(Me.gbClienteGeneral)
-            Me.TabPage1.Controls.Add(Me.gbNumeroFactura)
-            Me.TabPage1.Controls.Add(Me.gbEstadoFactura)
-            Me.TabPage1.Controls.Add(Me.gbRangoFechas)
-            Me.TabPage1.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.TabPage1.Location = New System.Drawing.Point(4, 22)
-            Me.TabPage1.Name = "TabPage1"
-            Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-            Me.TabPage1.Size = New System.Drawing.Size(1084, 80)
-            Me.TabPage1.TabIndex = 0
-            Me.TabPage1.Text = "CONSULTA"
-            Me.TabPage1.UseVisualStyleBackColor = True
-            '
-            'TabPage2
-            '
-            Me.TabPage2.Controls.Add(Me.GroupBox2)
-            Me.TabPage2.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.TabPage2.Location = New System.Drawing.Point(4, 22)
-            Me.TabPage2.Name = "TabPage2"
-            Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-            Me.TabPage2.Size = New System.Drawing.Size(1084, 80)
-            Me.TabPage2.TabIndex = 1
-            Me.TabPage2.Text = "RUTA DE DOCUMENTO"
-            Me.TabPage2.UseVisualStyleBackColor = True
-            '
-            'GroupBox2
-            '
-            Me.GroupBox2.Controls.Add(Me.btnNotaCreditoPath)
-            Me.GroupBox2.Controls.Add(Me.txtNotaCreditoPath)
-            Me.GroupBox2.Controls.Add(Me.Label9)
-            Me.GroupBox2.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.GroupBox2.Location = New System.Drawing.Point(3, 6)
-            Me.GroupBox2.Name = "GroupBox2"
-            Me.GroupBox2.Size = New System.Drawing.Size(1150, 68)
-            Me.GroupBox2.TabIndex = 2
-            Me.GroupBox2.TabStop = False
-            Me.GroupBox2.Text = "SELECCIONE RUTA"
-            '
             'btnNotaCreditoPath
             '
+            Me.btnNotaCreditoPath.BackColor = System.Drawing.Color.Transparent
             Me.btnNotaCreditoPath.FlatAppearance.BorderSize = 0
             Me.btnNotaCreditoPath.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.btnNotaCreditoPath.Image = Global.syscisepro.My.Resources.Resources.search_24dp_FILL0_wght400_GRAD0_opsz24__2_
-            Me.btnNotaCreditoPath.Location = New System.Drawing.Point(751, 22)
+            Me.btnNotaCreditoPath.Location = New System.Drawing.Point(736, 3)
             Me.btnNotaCreditoPath.Name = "btnNotaCreditoPath"
             Me.btnNotaCreditoPath.Size = New System.Drawing.Size(28, 28)
             Me.btnNotaCreditoPath.TabIndex = 2
-            Me.btnNotaCreditoPath.UseVisualStyleBackColor = True
+            Me.btnNotaCreditoPath.UseVisualStyleBackColor = False
             '
             'txtNotaCreditoPath
             '
             Me.txtNotaCreditoPath.Enabled = False
-            Me.txtNotaCreditoPath.Location = New System.Drawing.Point(121, 25)
+            Me.txtNotaCreditoPath.Font = New System.Drawing.Font("Roboto", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtNotaCreditoPath.Location = New System.Drawing.Point(156, 4)
             Me.txtNotaCreditoPath.Name = "txtNotaCreditoPath"
-            Me.txtNotaCreditoPath.Size = New System.Drawing.Size(621, 21)
+            Me.txtNotaCreditoPath.Size = New System.Drawing.Size(574, 23)
             Me.txtNotaCreditoPath.TabIndex = 1
             '
-            'Label9
+            'KryptonGroupBox1
             '
-            Me.Label9.AutoSize = True
-            Me.Label9.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label9.Location = New System.Drawing.Point(6, 28)
-            Me.Label9.Name = "Label9"
-            Me.Label9.Size = New System.Drawing.Size(103, 13)
-            Me.Label9.TabIndex = 0
-            Me.Label9.Text = "RUTA DE FACTURA:"
+            Me.KryptonGroupBox1.CaptionOverlap = 0R
+            Me.KryptonGroupBox1.GroupBackStyle = Krypton.Toolkit.PaletteBackStyle.ControlRibbon
+            Me.KryptonGroupBox1.Location = New System.Drawing.Point(1, 35)
+            Me.KryptonGroupBox1.Name = "KryptonGroupBox1"
+            '
+            'KryptonGroupBox1.Panel
+            '
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.lblIdFacturaVenta)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.txtNumeroFacturaBuscar)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel5)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel4)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel3)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.rbTodas)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel2)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.dtpFechaHasta)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.rbAnuladas)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.dtpFechaDesde)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.lblIdClienteGeneral)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.rbActivas)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.txtClienteGeneral)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel1)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.rbNroNotaCredito)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.rbPorCliente)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.rbConsorcio)
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.rbTodo)
+            Me.KryptonGroupBox1.Size = New System.Drawing.Size(1038, 80)
+            Me.KryptonGroupBox1.TabIndex = 193
+            Me.KryptonGroupBox1.Values.Heading = "Tipo"
+            '
+            'KryptonLabel5
+            '
+            Me.KryptonLabel5.Location = New System.Drawing.Point(911, 2)
+            Me.KryptonLabel5.Name = "KryptonLabel5"
+            Me.KryptonLabel5.Size = New System.Drawing.Size(87, 20)
+            Me.KryptonLabel5.TabIndex = 39
+            Me.KryptonLabel5.Values.Text = "Nro N Credito"
+            '
+            'KryptonLabel4
+            '
+            Me.KryptonLabel4.Location = New System.Drawing.Point(802, 1)
+            Me.KryptonLabel4.Name = "KryptonLabel4"
+            Me.KryptonLabel4.Size = New System.Drawing.Size(41, 20)
+            Me.KryptonLabel4.TabIndex = 38
+            Me.KryptonLabel4.Values.Text = "Hasta"
+            '
+            'KryptonLabel3
+            '
+            Me.KryptonLabel3.Location = New System.Drawing.Point(695, 1)
+            Me.KryptonLabel3.Name = "KryptonLabel3"
+            Me.KryptonLabel3.Size = New System.Drawing.Size(45, 20)
+            Me.KryptonLabel3.TabIndex = 37
+            Me.KryptonLabel3.Values.Text = "Desde"
+            '
+            'KryptonLabel2
+            '
+            Me.KryptonLabel2.Location = New System.Drawing.Point(489, 2)
+            Me.KryptonLabel2.Name = "KryptonLabel2"
+            Me.KryptonLabel2.Size = New System.Drawing.Size(90, 20)
+            Me.KryptonLabel2.TabIndex = 36
+            Me.KryptonLabel2.Values.Text = "Estado Factura"
+            '
+            'KryptonLabel1
+            '
+            Me.KryptonLabel1.Location = New System.Drawing.Point(176, 3)
+            Me.KryptonLabel1.Name = "KryptonLabel1"
+            Me.KryptonLabel1.Size = New System.Drawing.Size(48, 20)
+            Me.KryptonLabel1.TabIndex = 35
+            Me.KryptonLabel1.Values.Text = "Cliente"
+            '
+            'MetroTabControl1
+            '
+            Me.MetroTabControl1.AnimateEasingType = ReaLTaiizor.[Enum].Metro.EasingType.CubeOut
+            Me.MetroTabControl1.AnimateTime = 200
+            Me.MetroTabControl1.BackgroundColor = System.Drawing.Color.White
+            Me.MetroTabControl1.Controls.Add(Me.MetroTabPage1)
+            Me.MetroTabControl1.Controls.Add(Me.MetroTabPage2)
+            Me.MetroTabControl1.ControlsVisible = True
+            Me.MetroTabControl1.IsDerivedStyle = True
+            Me.MetroTabControl1.ItemSize = New System.Drawing.Size(100, 38)
+            Me.MetroTabControl1.Location = New System.Drawing.Point(1, 120)
+            Me.MetroTabControl1.MCursor = System.Windows.Forms.Cursors.Hand
+            Me.MetroTabControl1.Name = "MetroTabControl1"
+            Me.MetroTabControl1.SelectedIndex = 0
+            Me.MetroTabControl1.SelectedTextColor = System.Drawing.Color.FromArgb(CType(CType(65, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(225, Byte), Integer))
+            Me.MetroTabControl1.Size = New System.Drawing.Size(1038, 413)
+            Me.MetroTabControl1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed
+            Me.MetroTabControl1.Speed = 100
+            Me.MetroTabControl1.Style = ReaLTaiizor.[Enum].Metro.Style.Light
+            Me.MetroTabControl1.StyleManager = Nothing
+            Me.MetroTabControl1.TabIndex = 194
+            Me.MetroTabControl1.TabStyle = ReaLTaiizor.[Enum].Metro.TabStyle.Style2
+            Me.MetroTabControl1.ThemeAuthor = "Taiizor"
+            Me.MetroTabControl1.ThemeName = "MetroLight"
+            Me.MetroTabControl1.UnselectedTextColor = System.Drawing.Color.Gray
+            '
+            'MetroTabPage1
+            '
+            Me.MetroTabPage1.BaseColor = System.Drawing.Color.White
+            Me.MetroTabPage1.Controls.Add(Me.dgvNotaCredito)
+            Me.MetroTabPage1.Font = Nothing
+            Me.MetroTabPage1.ImageIndex = 0
+            Me.MetroTabPage1.ImageKey = Nothing
+            Me.MetroTabPage1.IsDerivedStyle = True
+            Me.MetroTabPage1.Location = New System.Drawing.Point(4, 42)
+            Me.MetroTabPage1.Name = "MetroTabPage1"
+            Me.MetroTabPage1.Size = New System.Drawing.Size(1030, 367)
+            Me.MetroTabPage1.Style = ReaLTaiizor.[Enum].Metro.Style.Light
+            Me.MetroTabPage1.StyleManager = Nothing
+            Me.MetroTabPage1.TabIndex = 0
+            Me.MetroTabPage1.Text = "Consulta"
+            Me.MetroTabPage1.ThemeAuthor = "Taiizor"
+            Me.MetroTabPage1.ThemeName = "MetroLight"
+            Me.MetroTabPage1.ToolTipText = Nothing
+            '
+            'MetroTabPage2
+            '
+            Me.MetroTabPage2.BaseColor = System.Drawing.Color.White
+            Me.MetroTabPage2.Controls.Add(Me.KryptonGroupBox2)
+            Me.MetroTabPage2.Font = Nothing
+            Me.MetroTabPage2.ImageIndex = 0
+            Me.MetroTabPage2.ImageKey = Nothing
+            Me.MetroTabPage2.IsDerivedStyle = True
+            Me.MetroTabPage2.Location = New System.Drawing.Point(4, 42)
+            Me.MetroTabPage2.Name = "MetroTabPage2"
+            Me.MetroTabPage2.Size = New System.Drawing.Size(1030, 367)
+            Me.MetroTabPage2.Style = ReaLTaiizor.[Enum].Metro.Style.Light
+            Me.MetroTabPage2.StyleManager = Nothing
+            Me.MetroTabPage2.TabIndex = 1
+            Me.MetroTabPage2.Text = "Ruta de Documento"
+            Me.MetroTabPage2.ThemeAuthor = "Taiizor"
+            Me.MetroTabPage2.ThemeName = "MetroLight"
+            Me.MetroTabPage2.ToolTipText = Nothing
+            '
+            'KryptonGroupBox2
+            '
+            Me.KryptonGroupBox2.CaptionOverlap = 0R
+            Me.KryptonGroupBox2.GroupBackStyle = Krypton.Toolkit.PaletteBackStyle.ControlRibbon
+            Me.KryptonGroupBox2.Location = New System.Drawing.Point(12, 20)
+            Me.KryptonGroupBox2.Name = "KryptonGroupBox2"
+            '
+            'KryptonGroupBox2.Panel
+            '
+            Me.KryptonGroupBox2.Panel.Controls.Add(Me.btnNotaCreditoPath)
+            Me.KryptonGroupBox2.Panel.Controls.Add(Me.KryptonLabel6)
+            Me.KryptonGroupBox2.Panel.Controls.Add(Me.txtNotaCreditoPath)
+            Me.KryptonGroupBox2.Size = New System.Drawing.Size(784, 70)
+            Me.KryptonGroupBox2.TabIndex = 0
+            Me.KryptonGroupBox2.Values.Heading = "Seleccione Ruta"
+            '
+            'KryptonLabel6
+            '
+            Me.KryptonLabel6.Location = New System.Drawing.Point(7, 6)
+            Me.KryptonLabel6.Name = "KryptonLabel6"
+            Me.KryptonLabel6.Size = New System.Drawing.Size(143, 20)
+            Me.KryptonLabel6.TabIndex = 0
+            Me.KryptonLabel6.Values.Text = "Ruta de Nota de Credito"
+            '
+            'KryptonGroupBox3
+            '
+            Me.KryptonGroupBox3.CaptionOverlap = 0R
+            Me.KryptonGroupBox3.GroupBackStyle = Krypton.Toolkit.PaletteBackStyle.ControlRibbon
+            Me.KryptonGroupBox3.Location = New System.Drawing.Point(0, 538)
+            Me.KryptonGroupBox3.Name = "KryptonGroupBox3"
+            '
+            'KryptonGroupBox3.Panel
+            '
+            Me.KryptonGroupBox3.Panel.Controls.Add(Me.KryptonLabel9)
+            Me.KryptonGroupBox3.Panel.Controls.Add(Me.txtTotalSubtotal)
+            Me.KryptonGroupBox3.Panel.Controls.Add(Me.txtTotalIVA)
+            Me.KryptonGroupBox3.Panel.Controls.Add(Me.txtTotalFacturas)
+            Me.KryptonGroupBox3.Panel.Controls.Add(Me.lblIva)
+            Me.KryptonGroupBox3.Panel.Controls.Add(Me.lblSubtotalIva)
+            Me.KryptonGroupBox3.Size = New System.Drawing.Size(1039, 56)
+            Me.KryptonGroupBox3.TabIndex = 195
+            Me.KryptonGroupBox3.Values.Heading = ""
+            '
+            'KryptonLabel9
+            '
+            Me.KryptonLabel9.Location = New System.Drawing.Point(831, 16)
+            Me.KryptonLabel9.Name = "KryptonLabel9"
+            Me.KryptonLabel9.Size = New System.Drawing.Size(96, 20)
+            Me.KryptonLabel9.TabIndex = 2
+            Me.KryptonLabel9.Values.Text = "Total N. Credito"
+            '
+            'lblIva
+            '
+            Me.lblIva.Location = New System.Drawing.Point(675, 16)
+            Me.lblIva.Name = "lblIva"
+            Me.lblIva.Size = New System.Drawing.Size(29, 20)
+            Me.lblIva.TabIndex = 1
+            Me.lblIva.Values.Text = "IVA"
+            '
+            'lblSubtotalIva
+            '
+            Me.lblSubtotalIva.Location = New System.Drawing.Point(485, 16)
+            Me.lblSubtotalIva.Name = "lblSubtotalIva"
+            Me.lblSubtotalIva.Size = New System.Drawing.Size(59, 20)
+            Me.lblSubtotalIva.TabIndex = 0
+            Me.lblSubtotalIva.Values.Text = "SubTotal"
             '
             'FormConsultaNotasCredito
             '
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-            Me.ClientSize = New System.Drawing.Size(1097, 661)
-            Me.Controls.Add(Me.TabControl1)
+            Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(185, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(227, Byte), Integer))
+            Me.ClientSize = New System.Drawing.Size(1041, 594)
+            Me.Controls.Add(Me.KryptonGroupBox3)
+            Me.Controls.Add(Me.MetroTabControl1)
+            Me.Controls.Add(Me.KryptonGroupBox1)
             Me.Controls.Add(Me.MenuStrip1)
             Me.Controls.Add(Me.dgvFacturaVenta)
-            Me.Controls.Add(Me.GroupBox1)
-            Me.Controls.Add(Me.gbTotal)
             Me.Controls.Add(Me.dgvCliente)
+            Me.Controls.Add(Me.dgvDetalleFacturaVenta)
             Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
             Me.Name = "FormConsultaNotasCredito"
             Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
@@ -604,77 +651,76 @@
             Or Krypton.Toolkit.PaletteDrawBorders.Right), Krypton.Toolkit.PaletteDrawBorders)
             Me.StateActive.Border.Rounding = 5.0!
             Me.Text = "CONSULTA NOTAS DE CREDITO"
-            Me.gbNumeroFactura.ResumeLayout(False)
-            Me.gbNumeroFactura.PerformLayout()
-            Me.gbRangoFechas.ResumeLayout(False)
-            Me.gbRangoFechas.PerformLayout()
-            Me.gbClienteGeneral.ResumeLayout(False)
-            Me.gbClienteGeneral.PerformLayout()
             CType(Me.dgvNotaCredito, System.ComponentModel.ISupportInitialize).EndInit()
-            Me.gbTotal.ResumeLayout(False)
-            Me.gbTotal.PerformLayout()
             CType(Me.dgvFacturaVenta, System.ComponentModel.ISupportInitialize).EndInit()
             CType(Me.dgvDetalleFacturaVenta, System.ComponentModel.ISupportInitialize).EndInit()
             CType(Me.dgvCliente, System.ComponentModel.ISupportInitialize).EndInit()
-            Me.gbEstadoFactura.ResumeLayout(False)
-            Me.gbEstadoFactura.PerformLayout()
-            Me.gbTipoReporte.ResumeLayout(False)
-            Me.gbTipoReporte.PerformLayout()
-            Me.GroupBox1.ResumeLayout(False)
             Me.MenuStrip1.ResumeLayout(False)
             Me.MenuStrip1.PerformLayout()
-            Me.TabControl1.ResumeLayout(False)
-            Me.TabPage1.ResumeLayout(False)
-            Me.TabPage2.ResumeLayout(False)
-            Me.GroupBox2.ResumeLayout(False)
-            Me.GroupBox2.PerformLayout()
+            CType(Me.KryptonGroupBox1.Panel, System.ComponentModel.ISupportInitialize).EndInit()
+            Me.KryptonGroupBox1.Panel.ResumeLayout(False)
+            Me.KryptonGroupBox1.Panel.PerformLayout()
+            CType(Me.KryptonGroupBox1, System.ComponentModel.ISupportInitialize).EndInit()
+            Me.KryptonGroupBox1.ResumeLayout(False)
+            Me.MetroTabControl1.ResumeLayout(False)
+            Me.MetroTabPage1.ResumeLayout(False)
+            Me.MetroTabPage2.ResumeLayout(False)
+            CType(Me.KryptonGroupBox2.Panel, System.ComponentModel.ISupportInitialize).EndInit()
+            Me.KryptonGroupBox2.Panel.ResumeLayout(False)
+            Me.KryptonGroupBox2.Panel.PerformLayout()
+            CType(Me.KryptonGroupBox2, System.ComponentModel.ISupportInitialize).EndInit()
+            Me.KryptonGroupBox2.ResumeLayout(False)
+            CType(Me.KryptonGroupBox3.Panel, System.ComponentModel.ISupportInitialize).EndInit()
+            Me.KryptonGroupBox3.Panel.ResumeLayout(False)
+            Me.KryptonGroupBox3.Panel.PerformLayout()
+            CType(Me.KryptonGroupBox3, System.ComponentModel.ISupportInitialize).EndInit()
+            Me.KryptonGroupBox3.ResumeLayout(False)
             Me.ResumeLayout(False)
             Me.PerformLayout()
 
         End Sub
-        Friend WithEvents gbNumeroFactura As System.Windows.Forms.GroupBox
         Friend WithEvents txtNumeroFacturaBuscar As System.Windows.Forms.TextBox
-        Friend WithEvents gbRangoFechas As System.Windows.Forms.GroupBox
         Friend WithEvents lblIdFacturaVenta As System.Windows.Forms.Label
-        Friend WithEvents Label1 As System.Windows.Forms.Label
         Friend WithEvents dtpFechaHasta As System.Windows.Forms.DateTimePicker
         Friend WithEvents dtpFechaDesde As System.Windows.Forms.DateTimePicker
-        Friend WithEvents gbClienteGeneral As System.Windows.Forms.GroupBox
         Friend WithEvents txtClienteGeneral As System.Windows.Forms.TextBox
         Friend WithEvents lblIdClienteGeneral As System.Windows.Forms.Label
         Friend WithEvents dgvNotaCredito As System.Windows.Forms.DataGridView
-        Friend WithEvents gbTotal As System.Windows.Forms.GroupBox
-        Friend WithEvents lblSubtotalIva As System.Windows.Forms.Label
         Friend WithEvents txtTotalSubtotal As System.Windows.Forms.TextBox
-        Friend WithEvents lblIva As System.Windows.Forms.Label
         Friend WithEvents txtTotalIVA As System.Windows.Forms.TextBox
-        Friend WithEvents Label4 As System.Windows.Forms.Label
         Friend WithEvents txtTotalFacturas As System.Windows.Forms.TextBox
         Friend WithEvents dgvFacturaVenta As System.Windows.Forms.DataGridView
         Friend WithEvents dgvDetalleFacturaVenta As System.Windows.Forms.DataGridView
         Friend WithEvents dgvCliente As System.Windows.Forms.DataGridView
-        Friend WithEvents gbEstadoFactura As System.Windows.Forms.GroupBox
         Friend WithEvents rbTodas As System.Windows.Forms.RadioButton
         Friend WithEvents rbAnuladas As System.Windows.Forms.RadioButton
         Friend WithEvents rbActivas As System.Windows.Forms.RadioButton
-        Friend WithEvents gbTipoReporte As System.Windows.Forms.GroupBox
         Friend WithEvents rbNroNotaCredito As System.Windows.Forms.RadioButton
         Friend WithEvents rbConsorcio As System.Windows.Forms.RadioButton
         Friend WithEvents rbPorCliente As System.Windows.Forms.RadioButton
         Friend WithEvents rbTodo As System.Windows.Forms.RadioButton
-        Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
         Friend WithEvents MenuStrip1 As System.Windows.Forms.MenuStrip
         Friend WithEvents btnBuscar As System.Windows.Forms.ToolStripMenuItem
         Friend WithEvents btnExportar As System.Windows.Forms.ToolStripMenuItem
         Friend WithEvents btnSalir As System.Windows.Forms.ToolStripMenuItem
         Friend WithEvents GENERARRIDEToolStripMenuItem As ToolStripMenuItem
         Friend WithEvents ofdSeleccionarArchivo As OpenFileDialog
-        Friend WithEvents TabControl1 As TabControl
-        Friend WithEvents TabPage1 As TabPage
-        Friend WithEvents TabPage2 As TabPage
-        Friend WithEvents GroupBox2 As GroupBox
         Friend WithEvents btnNotaCreditoPath As Button
         Friend WithEvents txtNotaCreditoPath As TextBox
-        Friend WithEvents Label9 As Label
+        Friend WithEvents KryptonGroupBox1 As Krypton.Toolkit.KryptonGroupBox
+        Friend WithEvents KryptonLabel2 As Krypton.Toolkit.KryptonLabel
+        Friend WithEvents KryptonLabel1 As Krypton.Toolkit.KryptonLabel
+        Friend WithEvents KryptonLabel5 As Krypton.Toolkit.KryptonLabel
+        Friend WithEvents KryptonLabel4 As Krypton.Toolkit.KryptonLabel
+        Friend WithEvents KryptonLabel3 As Krypton.Toolkit.KryptonLabel
+        Friend WithEvents MetroTabControl1 As ReaLTaiizor.Controls.MetroTabControl
+        Friend WithEvents MetroTabPage1 As ReaLTaiizor.Child.Metro.MetroTabPage
+        Friend WithEvents MetroTabPage2 As ReaLTaiizor.Child.Metro.MetroTabPage
+        Friend WithEvents KryptonGroupBox2 As Krypton.Toolkit.KryptonGroupBox
+        Friend WithEvents KryptonLabel6 As Krypton.Toolkit.KryptonLabel
+        Friend WithEvents KryptonGroupBox3 As Krypton.Toolkit.KryptonGroupBox
+        Friend WithEvents KryptonLabel9 As Krypton.Toolkit.KryptonLabel
+        Friend WithEvents lblIva As Krypton.Toolkit.KryptonLabel
+        Friend WithEvents lblSubtotalIva As Krypton.Toolkit.KryptonLabel
     End Class
 End Namespace

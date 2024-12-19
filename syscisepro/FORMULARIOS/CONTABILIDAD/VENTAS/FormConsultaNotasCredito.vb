@@ -14,6 +14,7 @@ Imports System.Text
 Imports System.IO
 Imports iTextSharp.text
 Imports iTextSharp.text.pdf
+Imports Krypton.Toolkit
 
 Namespace FORMULARIOS.CONTABILIDAD.VENTAS
     ''' <summary>
@@ -129,17 +130,25 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                     _porcentajeIva = epr.Rows(0)(21)
                 End If
             Catch ex As Exception
-                MsgBox("CARGAR DATOS EMPRESA." & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
+                'MsgBox("CARGAR DATOS EMPRESA." & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
+                KryptonMessageBox.Show("Cargar datos empresa." & vbNewLine & ex.Message.ToString, "Mensaje de excepción", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
         Private Sub rbPorCliente_CheckedChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles rbPorCliente.CheckedChanged
             If rbPorCliente.Checked Then
-                gbClienteGeneral.Enabled = True
-                gbEstadoFactura.Enabled = True
-                gbRangoFechas.Enabled = True
-                gbNumeroFactura.Enabled = False
+                'gbClienteGeneral.Enabled = True
+                'gbEstadoFactura.Enabled = True
+                rbActivas.Enabled = True
+                rbAnuladas.Enabled = True
+                rbTodas.Enabled = True
+                'gbRangoFechas.Enabled = True
+                dtpFechaDesde.Enabled = True
+                dtpFechaHasta.Enabled = True
+                'gbNumeroFactura.Enabled = False
+                txtNumeroFacturaBuscar.Enabled = False
                 txtNumeroFacturaBuscar.Clear()
                 txtClienteGeneral.Clear()
+                txtClienteGeneral.Enabled = True
                 lblIdClienteGeneral.Text = "0"
                 _tipoBusqueda = 1
                 AutocompletarNombreCliente()
@@ -157,12 +166,19 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
         End Sub
         Private Sub rbConsorcio_CheckedChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles rbConsorcio.CheckedChanged
             If rbConsorcio.Checked = True Then
-                gbClienteGeneral.Enabled = True
-                gbEstadoFactura.Enabled = True
-                gbRangoFechas.Enabled = True
-                gbNumeroFactura.Enabled = False
+                'gbClienteGeneral.Enabled = True
+                'gbEstadoFactura.Enabled = True
+                rbActivas.Enabled = True
+                rbAnuladas.Enabled = True
+                rbTodas.Enabled = True
+                'gbRangoFechas.Enabled = True
+                dtpFechaDesde.Enabled = True
+                dtpFechaHasta.Enabled = True
+                'gbNumeroFactura.Enabled = False
+                txtNumeroFacturaBuscar.Enabled = False
                 txtNumeroFacturaBuscar.Clear()
                 txtClienteGeneral.Clear()
+                txtClienteGeneral.Enabled = True
                 lblIdClienteGeneral.Text = "0"
                 _tipoBusqueda = 2
                 AutocompletarConsorcioCliente()
@@ -180,11 +196,18 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
         End Sub
         Private Sub rbNroNotaCredito_CheckedChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles rbNroNotaCredito.CheckedChanged
             If rbNroNotaCredito.Checked Then
-                gbClienteGeneral.Enabled = False
-                gbEstadoFactura.Enabled = False
-                gbRangoFechas.Enabled = False
-                gbNumeroFactura.Enabled = True
+                'gbClienteGeneral.Enabled = False
+                'gbEstadoFactura.Enabled = False
+                rbActivas.Enabled = False
+                rbAnuladas.Enabled = False
+                rbTodas.Enabled = False
+                'gbRangoFechas.Enabled = False
+                dtpFechaDesde.Enabled = False
+                dtpFechaHasta.Enabled = False
+                'gbNumeroFactura.Enabled = True
+                txtNumeroFacturaBuscar.Enabled = True
                 txtNumeroFacturaBuscar.Clear()
+                txtClienteGeneral.Enabled = False
                 lblIdClienteGeneral.Text = "0"
                 txtClienteGeneral.Clear()
                 _tipoBusqueda = 3
@@ -193,11 +216,18 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
         End Sub
         Private Sub rbTodo_CheckedChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles rbTodo.CheckedChanged
             If rbTodo.Checked Then
-                gbClienteGeneral.Enabled = False
-                gbEstadoFactura.Enabled = True
-                gbRangoFechas.Enabled = True
-                gbNumeroFactura.Enabled = False
+                'gbClienteGeneral.Enabled = False
+                'gbEstadoFactura.Enabled = True
+                rbActivas.Enabled = True
+                rbAnuladas.Enabled = True
+                rbTodas.Enabled = True
+                'gbRangoFechas.Enabled = True
+                dtpFechaDesde.Enabled = True
+                dtpFechaHasta.Enabled = True
+                'gbNumeroFactura.Enabled = False
+                txtNumeroFacturaBuscar.Enabled = False
                 txtNumeroFacturaBuscar.Clear()
+                txtClienteGeneral.Enabled = False
                 lblIdClienteGeneral.Text = "0"
                 txtClienteGeneral.Clear()
                 _tipoBusqueda = 4
@@ -251,6 +281,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                 dgvNotaCredito.Columns(9).HeaderText = "SUBTOTAL    "
                 dgvNotaCredito.Columns(9).DefaultCellStyle.Alignment = DataGridViewContentAlignment.BottomRight
                 dgvNotaCredito.Columns(10).HeaderText = "IVA (" + _porcentajeIva.ToString + "%)   "
+                dgvNotaCredito.Columns(10).Width = 70
                 dgvNotaCredito.Columns(10).DefaultCellStyle.Alignment = DataGridViewContentAlignment.BottomRight
                 dgvNotaCredito.Columns(11).HeaderText = "TOTAL"
                 dgvNotaCredito.Columns(11).DefaultCellStyle.Alignment = DataGridViewContentAlignment.BottomRight
@@ -261,11 +292,15 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                 dgvNotaCredito.Columns(2).Width = 80
                 dgvNotaCredito.Columns(4).Width = 270
                 dgvNotaCredito.Columns(6).Width = 145
+                dgvNotaCredito.Columns(7).Width = 70
                 dgvNotaCredito.Columns(8).Width = 70
+                dgvNotaCredito.Columns(9).Width = 70
+                dgvNotaCredito.Columns(10).Width = 70
                 dgvNotaCredito.ReadOnly = True
                 SumarTotalFacturas()
             Catch ex As Exception
-                MsgBox("METODO CARGAR FACTURA VENTA" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
+                'MsgBox("METODO CARGAR FACTURA VENTA" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
+                KryptonMessageBox.Show("Metodo cargar factura venta" & vbNewLine & ex.Message.ToString, "Mensaje de excepción", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
         Private Sub SumarTotalFacturas()
@@ -304,7 +339,8 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                 CargarNotasCreditoVenta()
                 ValidarValorAsiento()
             Catch ex As Exception
-                MsgBox("CARGAR DATOS" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
+                'MsgBox("CARGAR DATOS" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
+                KryptonMessageBox.Show("Cargar datos" & vbNewLine & ex.Message.ToString, "Mensaje de excepción", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
             SumarTotalFacturas()
         End Sub
@@ -331,7 +367,8 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                     formAsientoDiario.ShowDialog()
                 End If
             Catch ex As Exception
-                MsgBox("ERROR AL CARGAR ASIENTO" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
+                'MsgBox("ERROR AL CARGAR ASIENTO" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
+                KryptonMessageBox.Show("Error al cargar asiento" & vbNewLine & ex.Message.ToString, "Mensaje de excepción", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
         Private Sub dgvNotaCredito_SelectionChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles dgvNotaCredito.SelectionChanged
@@ -347,13 +384,15 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
             If dgvNotaCredito.Rows.Count > 0 Then
                 ExportarDatosExcel(dgvNotaCredito, "NOTAS DE CREDITO")
             Else
-                MsgBox("PRIMERO REALICE UNA CONSULTA", MsgBoxStyle.Exclamation, "Mensaje de validación")
+                'MsgBox("PRIMERO REALICE UNA CONSULTA", MsgBoxStyle.Exclamation, "Mensaje de validación")
+                KryptonMessageBox.Show("Primero realice una consulta", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
             End If
         End Sub
         Private Sub ExportarDatosExcel(ByVal dgvAsientosDiario As DataGridView, ByVal titulo As String)
             Try
                 If dgvAsientosDiario.Rows.Count = 0 Then
-                    MsgBox("No hay datos que exportar!", MsgBoxStyle.Exclamation, "Mensaje de validación")
+                    'MsgBox("No hay datos que exportar!", MsgBoxStyle.Exclamation, "Mensaje de validación")
+                    KryptonMessageBox.Show("No hay datos que exportar", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                     Return
                 End If
 
@@ -422,7 +461,8 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                 app.DisplayAlerts = True
                 'workbook.SaveAs(sfd.FileName, Excel.XlFileFormat.xlWorkbookNormal, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Excel.XlSaveAsAccessMode.xlExclusive, Type.Missing, Type.Missing, Type.Missing, Type.Missing)
             Catch ex As Exception
-                MessageBox.Show("Hubo un problema al exportar datos!", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                'MessageBox.Show("Hubo un problema al exportar datos!", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                KryptonMessageBox.Show("Hubo un problema al exportar datos", "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
         Private Sub btnSalir_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnSalir.Click
@@ -461,7 +501,8 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
             If _claveAcceso.ToString.Length = 49 Then
                 ExportarXml()
             Else
-                MsgBox("CLAVE DE ACCESO INVALIDA")
+                'MsgBox("CLAVE DE ACCESO INVALIDA")
+                KryptonMessageBox.Show("Clave de acceso invalida", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End If
 
         End Sub
@@ -486,7 +527,8 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                     _rucCliente = dgvCliente.Rows(0).Cells(3).Value
                 End If
             Catch ex As Exception
-                MsgBox("CARGAR DATOS CLIENTE." & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
+                'MsgBox("CARGAR DATOS CLIENTE." & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
+                KryptonMessageBox.Show("Cargar datos cliente." & vbNewLine & ex.Message.ToString, "Mensaje de excepción", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
         Private Sub CargarFacturasVenta()
@@ -606,9 +648,11 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                 writer.Flush()
                 writer.Close()
 
-                MsgBox("NOTA DE CRÉDITO ELECTRÓNICA" & vbNewLine & "XML GENERADO CORRECTAMENTE", MsgBoxStyle.Information, "Mensaje de información.")
+                'MsgBox("NOTA DE CRÉDITO ELECTRÓNICA" & vbNewLine & "XML GENERADO CORRECTAMENTE", MsgBoxStyle.Information, "Mensaje de información.")
+                KryptonMessageBox.Show("Nota de crédito electrónica" & vbNewLine & "XML generado correctamente", "Mensaje de información", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
             Catch ex As Exception
-                MsgBox("ERROR AL GENERAR NOTA DE CRÉDITO ELECTRÓNICA" & vbNewLine & ex.Message, MsgBoxStyle.Exclamation, "Mensaje de información.")
+                'MsgBox("ERROR AL GENERAR NOTA DE CRÉDITO ELECTRÓNICA" & vbNewLine & ex.Message, MsgBoxStyle.Exclamation, "Mensaje de información.")
+                KryptonMessageBox.Show("Error al generar nota de crédito electrónica" & vbNewLine & ex.Message, "Mensaje de información", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
 
@@ -1289,10 +1333,12 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                 xmlDoc = Nothing
                 File.Delete(ruta)
                 writer.Close()
-                MsgBox("LIQUIDACION DE COMPRA CREADA CORRECTAMENTE!", MsgBoxStyle.Information, "Mensaje de validación")
+                'MsgBox("LIQUIDACION DE COMPRA CREADA CORRECTAMENTE!", MsgBoxStyle.Information, "Mensaje de validación")
+                KryptonMessageBox.Show("Liquidación de compra creada correctamente", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
 
             Catch ex As Exception
-                MsgBox("HUBO UN PROBLEMA AL CARGAR EL XML! " & vbNewLine & ex.Message, MsgBoxStyle.Exclamation, "Mensaje de validación")
+                'MsgBox("HUBO UN PROBLEMA AL CARGAR EL XML! " & vbNewLine & ex.Message, MsgBoxStyle.Exclamation, "Mensaje de validación")
+                KryptonMessageBox.Show("Hubo un problema al cargar el XML" & vbNewLine & ex.Message, "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
 
         End Sub

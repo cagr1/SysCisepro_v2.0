@@ -18,6 +18,7 @@ Imports iTextSharp.text
 Imports iTextSharp.text.pdf
 'Imports iTextSharp.text.Image
 Imports System.Xml.XPath
+Imports Krypton.Toolkit
 
 
 Namespace FORMULARIOS.CONTABILIDAD.VENTAS
@@ -131,6 +132,9 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
             lblNroRegistros.Text = dgvFacturaVenta.RowCount
 
             dgvFacturaVenta.AutoResizeColumns()
+            dgvFacturaVenta.Columns(1).Width = 60
+            dgvFacturaVenta.Columns(7).Width = 60
+            dgvFacturaVenta.Columns(9).Width = 60
             dgvFacturaVenta.AutoResizeRows()
 
             dgvFacturaVenta.ReadOnly = True
@@ -172,7 +176,8 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                 txtTotalIVA.Text = totalIva
                 txtTotalFacturas.Text = totalFacturacion
             Catch ex As Exception
-                MsgBox(ex.Message.ToString)
+                'MsgBox(ex.Message.ToString)
+                KryptonMessageBox.Show("Error al sumar totales de facturas!" & vbNewLine & ex.Message.ToString, "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
 
             End Try
         End Sub
@@ -190,7 +195,8 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
         Private Sub ExportarDatosExcel(ByVal dgvAsientosDiario As DataGridView, ByVal titulo As String)
             Try
                 If dgvAsientosDiario.Rows.Count = 0 Then
-                    MsgBox("No hay datos que exportar!", MsgBoxStyle.Exclamation, "Mensaje de validación")
+                    'MsgBox("No hay datos que exportar!", MsgBoxStyle.Exclamation, "Mensaje de validación")
+                    KryptonMessageBox.Show("No hay datos que exportar!", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                     Return
                 End If
 
@@ -259,7 +265,8 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                 app.DisplayAlerts = True
                 'workbook.SaveAs(sfd.FileName, Excel.XlFileFormat.xlWorkbookNormal, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Excel.XlSaveAsAccessMode.xlExclusive, Type.Missing, Type.Missing, Type.Missing, Type.Missing)
             Catch ex As Exception
-                MessageBox.Show("Hubo un problema al exportar datos!", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                'MessageBox.Show("Hubo un problema al exportar datos!", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                KryptonMessageBox.Show("Hubo un problema al exportar datos!" & vbNewLine & ex.Message, "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
 
@@ -271,7 +278,8 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
 
                 End If
             Catch ex As Exception
-                MsgBox("CARGAR DATOS EMPRESA." & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
+                'MsgBox("CARGAR DATOS EMPRESA." & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
+                KryptonMessageBox.Show("Cargar datos empresa." & vbNewLine & ex.Message.ToString, "Mensaje de excepción", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
         Private Sub FormConsultaFacturasVenta_Load(ByVal sender As System.Object, ByVal e As EventArgs) Handles MyBase.Load
@@ -383,18 +391,25 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                     DialogResult = formAsientoDiario.ShowDialog
                 End If
             Catch ex As Exception
-                MessageBox.Show("Error al cargar asiento de venta!")
+                'MessageBox.Show("Error al cargar asiento de venta!")
+                KryptonMessageBox.Show("Error al cargar asiento de venta!" & vbNewLine & ex.Message, "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
 
         Private Sub rbPorCliente_CheckedChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles rbPorCliente.CheckedChanged
             If rbPorCliente.Checked = True Then
-                gbClienteGeneral.Enabled = True
-                gbClienteGeneral.Text = "INGRESE RAZON SOCIAL DEL CLIENTE"
+                'gbClienteGeneral.Enabled = True
+                'gbClienteGeneral.Text = "INGRESE RAZON SOCIAL DEL CLIENTE"
                 lblIdClienteGeneral.Text = 0
                 txtClienteGeneral.Text = ""
-                gbEstadoFactura.Enabled = True
-                gbRangoFechas.Enabled = True
+                txtClienteGeneral.Enabled = True
+                'gbEstadoFactura.Enabled = True
+                rbFacturasActivas.Enabled = True
+                rbFacturasAnuladas.Enabled = True
+                rbFacturasTodas.Enabled = True
+                'gbRangoFechas.Enabled = True
+                dtpFechaDesde.Enabled = True
+                dtpFechaHasta.Enabled = True
                 _tipoBusqueda = 1
                 AutocompletarNombreCliente()
             End If
@@ -402,12 +417,17 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
 
         Private Sub rbConsorcio_CheckedChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles rbConsorcio.CheckedChanged
             If rbConsorcio.Checked = True Then
-                gbClienteGeneral.Enabled = True
-                gbClienteGeneral.Text = "INGRESE CONSORCIO / GRUPO EMPRESARIAL"
+                'gbClienteGeneral.Enabled = True
+                'gbClienteGeneral.Text = "INGRESE CONSORCIO / GRUPO EMPRESARIAL"
                 lblIdClienteGeneral.Text = 0
                 txtClienteGeneral.Text = ""
-                gbEstadoFactura.Enabled = True
-                gbRangoFechas.Enabled = True
+                'gbEstadoFactura.Enabled = True
+                rbFacturasActivas.Enabled = True
+                rbFacturasAnuladas.Enabled = True
+                rbFacturasTodas.Enabled = True
+                'gbRangoFechas.Enabled = True
+                dtpFechaDesde.Enabled = True
+                dtpFechaHasta.Enabled = True
                 _tipoBusqueda = 2
                 autocompletarConsorcioCliente()
             End If
@@ -415,21 +435,33 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
 
         Private Sub rbNroFactura_CheckedChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles rbNroFactura.CheckedChanged
             If rbNroFactura.Checked = True Then
-                gbClienteGeneral.Enabled = True
-                gbClienteGeneral.Text = "INGRESE NÚMERO DE FACTURA"
+                'gbClienteGeneral.Enabled = True
+                'gbClienteGeneral.Text = "INGRESE NÚMERO DE FACTURA"
                 lblIdClienteGeneral.Text = 0
                 txtClienteGeneral.Text = 0
-                gbEstadoFactura.Enabled = False
-                gbRangoFechas.Enabled = False
+                txtClienteGeneral.Enabled = True
+                'gbEstadoFactura.Enabled = False
+                rbFacturasActivas.Enabled = False
+                rbFacturasAnuladas.Enabled = False
+                rbFacturasTodas.Enabled = False
+                'gbRangoFechas.Enabled = False
+                dtpFechaDesde.Enabled = False
+                dtpFechaHasta.Enabled = False
                 _tipoBusqueda = 3
             End If
         End Sub
 
         Private Sub rbTodo_CheckedChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles rbTodo.CheckedChanged
             If rbTodo.Checked = True Then
-                gbClienteGeneral.Enabled = False
-                gbEstadoFactura.Enabled = True
-                gbRangoFechas.Enabled = True
+                'gbClienteGeneral.Enabled = False
+                txtClienteGeneral.Enabled = False
+                'gbEstadoFactura.Enabled = True
+                rbFacturasActivas.Enabled = True
+                rbFacturasAnuladas.Enabled = True
+                rbFacturasTodas.Enabled = True
+                'gbRangoFechas.Enabled = True
+                dtpFechaDesde.Enabled = True
+                dtpFechaHasta.Enabled = True
                 lblIdClienteGeneral.Text = 0
                 txtClienteGeneral.Text = ""
                 _tipoBusqueda = 4
@@ -438,12 +470,18 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
 
         Private Sub rbConcepto_CheckedChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles rbConcepto.CheckedChanged
             If rbConcepto.Checked = True Then
-                gbClienteGeneral.Enabled = True
-                gbClienteGeneral.Text = "INGRESE CONCEPTO DE VENTA DE FACTURA"
+                'gbClienteGeneral.Enabled = True
+                'gbClienteGeneral.Text = "INGRESE CONCEPTO DE VENTA DE FACTURA"
                 lblIdClienteGeneral.Text = 0
                 txtClienteGeneral.Text = ""
-                gbEstadoFactura.Enabled = True
-                gbRangoFechas.Enabled = True
+                txtClienteGeneral.Enabled = True
+                'gbEstadoFactura.Enabled = True
+                rbFacturasActivas.Enabled = True
+                rbFacturasAnuladas.Enabled = True
+                rbFacturasTodas.Enabled = True
+                'gbRangoFechas.Enabled = True
+                dtpFechaDesde.Enabled = True
+                dtpFechaHasta.Enabled = True
                 lblIdClienteGeneral.Text = 0
                 txtClienteGeneral.Text = ""
                 _tipoBusqueda = 5
@@ -480,7 +518,8 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
             Try
                 Dim data = _objetoComprobantesElectronicos.BuscarComprobanteElectronicoByIdComprobanteTipo(_tipoCon, "FACTURA VENTA", lblIdFacturaVenta.Text)
                 If data.Rows.Count = 0 Then
-                    MsgBox("NO SE ENCONTRÓ COMPROBANTE ELECTRONICO!", MsgBoxStyle.Exclamation, "Mensaje de validación")
+                    'MsgBox("NO SE ENCONTRÓ COMPROBANTE ELECTRONICO!", MsgBoxStyle.Exclamation, "Mensaje de validación")
+                    KryptonMessageBox.Show("No se encontró comprobante electrónico!", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                     Return
                 End If
 
@@ -504,9 +543,12 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                 writer.Flush()
                 writer.Close()
 
-                MsgBox("COMPROBANTE ELECTRONICO EXPORTADO CORRECTAMENTE!", MsgBoxStyle.Information, "Mensaje de validación")
+                'MsgBox("COMPROBANTE ELECTRONICO EXPORTADO CORRECTAMENTE!", MsgBoxStyle.Information, "Mensaje de validación")
+                KryptonMessageBox.Show("Comprobante electrónico exportado correctamente!", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
             Catch ex As Exception
-                MsgBox("HUBO UN PROBLEMA AL CARGAR EL COMPROBANTE ELECTRONICO! " & vbNewLine & ex.Message, MsgBoxStyle.Exclamation, "Mensaje de validación")
+                'MsgBox("HUBO UN PROBLEMA AL CARGAR EL COMPROBANTE ELECTRONICO! " & vbNewLine & ex.Message, MsgBoxStyle.Exclamation, "Mensaje de validación")
+                KryptonMessageBox.Show("Hubo un problema al cargar el comprobante electrónico!" & vbNewLine & ex.Message, "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+                Return
             End Try
         End Sub
 
@@ -520,7 +562,9 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                 f.lblFechaFinal.Text = _fechaHasta
                 f.Show()
             Else
-                MsgBox("NO HAY FACTURAS QUE CARGAR. Primero realice una busqueda", MsgBoxStyle.Exclamation, "Mensaje de validación")
+                'MsgBox("NO HAY FACTURAS QUE CARGAR. Primero realice una busqueda", MsgBoxStyle.Exclamation, "Mensaje de validación")
+                KryptonMessageBox.Show("No hay facturas que cargar. Primero realice una busqueda", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
+                Return
             End If
         End Sub
 
@@ -543,7 +587,8 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                 f.lblFechaFinal.Text = _fechaHasta
                 f.Show()
             Else
-                MsgBox("NO HAY FACTURAS QUE CARGAR. Primero realice una busqueda", MsgBoxStyle.Exclamation, "Mensaje de validación")
+                'MsgBox("NO HAY FACTURAS QUE CARGAR. Primero realice una busqueda", MsgBoxStyle.Exclamation, "Mensaje de validación")
+                KryptonMessageBox.Show("No hay facturas que cargar. Primero realice una busqueda", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
             End If
         End Sub
 
@@ -1322,10 +1367,12 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                 xmlDoc = Nothing
                 File.Delete(ruta)
                 writer.Close()
-                MsgBox("FACTURA CREADA CORRECTAMENTE!", MsgBoxStyle.Information, "Mensaje de validación")
+                'MsgBox("FACTURA CREADA CORRECTAMENTE!", MsgBoxStyle.Information, "Mensaje de validación")
+                KryptonMessageBox.Show("Factura creada correctamente!", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
 
             Catch ex As Exception
-                MsgBox("HUBO UN PROBLEMA AL CARGAR EL XML! " & vbNewLine & ex.Message, MsgBoxStyle.Exclamation, "Mensaje de validación")
+                'MsgBox("HUBO UN PROBLEMA AL CARGAR EL XML! " & vbNewLine & ex.Message, MsgBoxStyle.Exclamation, "Mensaje de validación")
+                KryptonMessageBox.Show("Hubo un problema al cargar el XML! " & vbNewLine & ex.Message, "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
             End Try
 
         End Sub
