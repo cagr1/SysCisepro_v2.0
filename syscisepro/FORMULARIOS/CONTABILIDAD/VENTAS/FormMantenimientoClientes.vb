@@ -12,6 +12,7 @@ Imports ClassLibraryCisepro.VALIDACIONES
 Imports Microsoft.Office.Interop
 Imports syscisepro.DATOS
 Imports syscisepro.FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
+Imports Krypton.Toolkit
 
 Namespace FORMULARIOS.CONTABILIDAD.VENTAS
     ''' <summary>
@@ -68,16 +69,8 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
             Select Case _tipoCon
                 Case TipoConexion.Asenava
                     Icon = Nothing
-                    msKardex.ForeColor = Color.White
-                    'msKardex.BackColor = My.MySettingsProperty.Settings.ColorAsenava
-                    'MenuStrip1.ForeColor = Color.White
-                    'MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorAsenava
-                    'MenuStrip4.ForeColor = Color.White
-                    'MenuStrip4.BackColor = My.MySettingsProperty.Settings.ColorAsenava
-                    Label24.ForeColor = Color.White
-                    Label24.BackColor = My.MySettingsProperty.Settings.ColorAsenava
-                    Label30.ForeColor = Color.White
-                    Label30.BackColor = My.MySettingsProperty.Settings.ColorAsenava
+
+
                     MenuStrip2.ForeColor = Color.White
                     MenuStrip2.BackColor = My.MySettingsProperty.Settings.ColorAsenava
                     MenuStrip3.ForeColor = Color.White
@@ -92,22 +85,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                     DataGridView3.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorAsenava
                 Case TipoConexion.Seportpac
                     Icon = My.Resources.logo_s
-                    msKardex.ForeColor = Color.White
-                    'msKardex.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
-                    'MenuStrip1.ForeColor = Color.White
-                    'MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
-                    'MenuStrip4.ForeColor = Color.White
-                    'MenuStrip4.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
-                    Label24.ForeColor = Color.White
-                    Label24.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
-                    Label30.ForeColor = Color.White
-                    Label30.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
-                    'MenuStrip2.ForeColor = Color.White
-                    'MenuStrip2.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
-                    'MenuStrip3.ForeColor = Color.White
-                    'MenuStrip3.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
-                    'MenuStrip5.ForeColor = Color.White
-                    'MenuStrip5.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
+
                     dgvClienteGeneral.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorSeportpac
                     dgvSitios.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorSeportpac
                     DataGridView1.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorSeportpac
@@ -116,18 +94,8 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                     DataGridView3.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorSeportpac
                 Case Else
                     Icon = My.Resources.logo_c
-                    msKardex.ForeColor = Color.White
-                    'msKardex.BackColor = My.MySettingsProperty.Settings.ColorCisepro
-                    'MenuStrip1.ForeColor = Color.White
-                    'MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorCisepro
-                    'MenuStrip4.ForeColor = Color.White
-                    'MenuStrip4.BackColor = My.MySettingsProperty.Settings.ColorCisepro
-                    Label24.ForeColor = Color.White
-                    Label24.BackColor = My.MySettingsProperty.Settings.ColorCisepro
-                    'MenuStrip2.ForeColor = Color.White
-                    'MenuStrip2.BackColor = My.MySettingsProperty.Settings.ColorCisepro
-                    Label30.ForeColor = Color.White
-                    Label30.BackColor = My.MySettingsProperty.Settings.ColorCisepro
+
+
                     'MenuStrip3.ForeColor = Color.White
                     'MenuStrip3.BackColor = My.MySettingsProperty.Settings.ColorCisepro
                     'MenuStrip5.ForeColor = Color.White
@@ -162,16 +130,40 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
         End Sub
 
         Private Sub DeshabilitadoInicio()
-            gbDatosClienteGeneral.Enabled = False
-            gbDireccionClienteGeneral.Enabled = False
-            gbFechaIngresoClienteGeneral.Enabled = False
-            gbInformacionContacto.Enabled = False
-            gbTelefonos.Enabled = False
-            gbIngresoObservaciones.Enabled = False
-            gbNroResolucionContEspecial.Enabled = False
-            gbOligadoLlevarContabilidad.Enabled = False
-            gbTipoClienteGeneral.Enabled = False
+            'gbDatosClienteGeneral.Enabled = False
+            cmbTipoCliente.Enabled = False
+            cmbTipoIdentificacion.Enabled = False
+            txtNombreRazonSocialClienteGeneral.Enabled = False
+            txtApellidoNombreComercial.Enabled = False
+            txtRucCiClienteGeneral.Enabled = False
+            'gbDireccionClienteGeneral.Enabled = False
+            txtCiudad.Enabled = False
+            txtDireccionUbicacionClienteGeneral.Enabled = False
+            txtDireccionFacturacionClienteGeneral.Enabled = False
+            txtConsorcioGrupo.Enabled = False
+            'gbFechaIngresoClienteGeneral.Enabled = False
+            dtpFechaIngresoClienteGeneral.Enabled = False
 
+            'gbInformacionContacto.Enabled = False
+            txtContactoClienteGeneral.Enabled = False
+            txtEmailClienteGeneral.Enabled = False
+            'gbTelefonos.Enabled = False
+            txtTelefono1ClienteGeneral.Enabled = False
+            txtTelefono2ClienteGeneral.Enabled = False
+            'gbIngresoObservaciones.Enabled = False
+            TextBoxVal.Enabled = False
+            ComboBox2.Enabled = False
+            txtObservaciones.Enabled = False
+            'gbNroResolucionContEspecial.Enabled = False
+            rbSiContribuyenteEspecial.Enabled = False
+            rbNoContribuyenteEspecial.Enabled = False
+            txtnroResContEspecial.Enabled = False
+            'gbOligadoLlevarContabilidad.Enabled = False
+            rbSILlevaContabilidad.Enabled = False
+            rbNOLlevaContabilidad.Enabled = False
+            txtnroResContEspecial.Enabled = False
+            'gbTipoClienteGeneral.Enabled = False
+            cmbTipoCliente.Enabled = False
             ToolStripMenuItem14.Enabled = False
             ToolStripMenuItem11.Enabled = False
             ToolStripMenuItem16.Enabled = False
@@ -413,15 +405,40 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
             txtRucCiClienteGeneral.Focus()
         End Sub
         Private Sub HabilitadoNuevo()
-            gbDatosClienteGeneral.Enabled = True
-            gbDireccionClienteGeneral.Enabled = True
-            gbFechaIngresoClienteGeneral.Enabled = True
-            gbInformacionContacto.Enabled = True
-            gbTelefonos.Enabled = True
-            gbIngresoObservaciones.Enabled = True
-            gbNroResolucionContEspecial.Enabled = True
-            gbOligadoLlevarContabilidad.Enabled = True
-            gbTipoClienteGeneral.Enabled = True
+            'gbDatosClienteGeneral.Enabled = True
+            cmbTipoCliente.Enabled = True
+            cmbTipoIdentificacion.Enabled = True
+            txtNombreRazonSocialClienteGeneral.Enabled = True
+            txtApellidoNombreComercial.Enabled = True
+            txtRucCiClienteGeneral.Enabled = True
+            'gbDireccionClienteGeneral.Enabled = True
+            txtCiudad.Enabled = True
+            txtDireccionUbicacionClienteGeneral.Enabled = True
+            txtDireccionFacturacionClienteGeneral.Enabled = True
+            txtConsorcioGrupo.Enabled = True
+            'gbFechaIngresoClienteGeneral.Enabled = True
+            dtpFechaIngresoClienteGeneral.Enabled = True
+            'gbInformacionContacto.Enabled = True
+            txtContactoClienteGeneral.Enabled = True
+            txtEmailClienteGeneral.Enabled = True
+            'gbTelefonos.Enabled = True
+            txtTelefono1ClienteGeneral.Enabled = True
+            txtTelefono2ClienteGeneral.Enabled = True
+            'gbIngresoObservaciones.Enabled = True
+            TextBoxVal.Enabled = True
+            ComboBox2.Enabled = True
+            txtObservaciones.Enabled = True
+            'gbNroResolucionContEspecial.Enabled = True
+            rbSiContribuyenteEspecial.Enabled = True
+            rbNoContribuyenteEspecial.Enabled = True
+            'gbOligadoLlevarContabilidad.Enabled = True
+            rbSILlevaContabilidad.Enabled = True
+            rbNOLlevaContabilidad.Enabled = True
+            txtnroResContEspecial.Enabled = True
+
+
+            'gbTipoClienteGeneral.Enabled = True
+            cmbTipoCliente.Enabled = True
 
             ToolStripMenuItem14.Enabled = False
             ToolStripMenuItem11.Enabled = False
@@ -438,15 +455,40 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
             btnRemove.Enabled = True
         End Sub
         Private Sub HabilitadoModificar()
-            gbDatosClienteGeneral.Enabled = True
-            gbDireccionClienteGeneral.Enabled = True
-            gbFechaIngresoClienteGeneral.Enabled = True
-            gbInformacionContacto.Enabled = True
-            gbTelefonos.Enabled = True
-            gbIngresoObservaciones.Enabled = True
-            gbNroResolucionContEspecial.Enabled = True
-            gbOligadoLlevarContabilidad.Enabled = True
-            gbTipoClienteGeneral.Enabled = True
+            'gbDatosClienteGeneral.Enabled = True
+            cmbTipoCliente.Enabled = True
+            cmbTipoIdentificacion.Enabled = True
+            txtNombreRazonSocialClienteGeneral.Enabled = True
+            txtApellidoNombreComercial.Enabled = True
+            txtRucCiClienteGeneral.Enabled = True
+            'gbDireccionClienteGeneral.Enabled = True
+            txtCiudad.Enabled = True
+            txtDireccionUbicacionClienteGeneral.Enabled = True
+            txtDireccionFacturacionClienteGeneral.Enabled = True
+            txtConsorcioGrupo.Enabled = True
+            'gbFechaIngresoClienteGeneral.Enabled = True
+            dtpFechaIngresoClienteGeneral.Enabled = True
+            'gbInformacionContacto.Enabled = True
+            txtContactoClienteGeneral.Enabled = True
+            txtEmailClienteGeneral.Enabled = True
+            'gbTelefonos.Enabled = True
+            txtTelefono1ClienteGeneral.Enabled = True
+            txtTelefono2ClienteGeneral.Enabled = True
+            'gbIngresoObservaciones.Enabled = True
+            TextBoxVal.Enabled = True
+            ComboBox2.Enabled = True
+            txtObservaciones.Enabled = True
+            'gbNroResolucionContEspecial.Enabled = True
+            rbSiContribuyenteEspecial.Enabled = True
+            rbNoContribuyenteEspecial.Enabled = True
+            'gbOligadoLlevarContabilidad.Enabled = True
+            rbSILlevaContabilidad.Enabled = True
+            rbNOLlevaContabilidad.Enabled = True
+            txtnroResContEspecial.Enabled = True
+            'gbOligadoLlevarContabilidad.Enabled = True
+
+            'gbTipoClienteGeneral.Enabled = True
+            cmbTipoCliente.Enabled = True
 
             ToolStripMenuItem14.Enabled = False
             ToolStripMenuItem11.Enabled = False
@@ -495,7 +537,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
             TextBox2.Clear()
             TextBox3.Clear()
         End Sub
-        Private Sub txtCiudad_KeyUp(ByVal sender As System.Object, ByVal e As Windows.Forms.KeyEventArgs) Handles txtCiudad.KeyUp, TextBox14.KeyUp
+        Private Sub txtCiudad_KeyUp(ByVal sender As System.Object, ByVal e As Windows.Forms.KeyEventArgs) Handles txtCiudad.KeyUp
             If e.KeyCode <> Keys.Enter Then Return
             lblIdCiudad.Text = _objCiudad.BuscarIdCiudadPorNombreCiudad(_tipoCon, txtCiudad.Text)
         End Sub
@@ -503,7 +545,8 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
             If _botonSeleccionado = 1 Then
                 Dim c = _objetoClienteGeneral.BuscarRazonSocialClienteGeneralXRuc(_tipoCon, txtRucCiClienteGeneral.Text)
                 If c <> "0" Then
-                    MsgBox("ESTE RUC YA SE ENCUANTRA REGISTRADO CON EL CLIENTE:" & vbNewLine & c, MsgBoxStyle.Exclamation, "Mensaje de validación")
+                    'MsgBox("ESTE RUC YA SE ENCUANTRA REGISTRADO CON EL CLIENTE:" & vbNewLine & c, MsgBoxStyle.Exclamation, "Mensaje de validación")
+                    KryptonMessageBox.Show("Este ruc ya se encuentra registrado con el cliente:" & vbNewLine & c, "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                     txtRucCiClienteGeneral.Focus()
                 End If
             End If
@@ -596,7 +639,8 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
         End Sub
         Private Sub dgvClienteGeneral_CellDoubleClick(ByVal sender As System.Object, ByVal e As Windows.Forms.DataGridViewCellEventArgs) Handles dgvClienteGeneral.CellDoubleClick, dgvSitios.CellDoubleClick
             If dgvClienteGeneral.RowCount = 0 Then Return
-            TabControl1.SelectedIndex = 1
+            'TabControl1.SelectedIndex = 1
+            KryptonNavigator1.SelectedPage = KryptonPage2
         End Sub
         Private Sub dgvSitios_SelectionChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles dgvSitios.SelectionChanged
             If botonSeleccionadoSitio <> 0 Or dgvSitios.CurrentRow Is Nothing Then
@@ -783,6 +827,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
 
                 ActualizarEstadoClienteGeneral()
 
+
                 Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, String.Empty)
                 If res(0) Then
                     DeshabilitadoInicio()
@@ -825,8 +870,11 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                     CargarClienteGeneral()
 
                     txtBuscarCliente.Focus()
+                    KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
+                Else
+                    KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+                    Return
                 End If
-                MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
 
             Else
                 MsgBox("No se puede guardar." & vbNewLine & "NO SE HAN LLENADO TODOS LOS CAMPOS NECESARIOS.", MsgBoxStyle.Exclamation, "Mensaje de validación")
@@ -1283,6 +1331,14 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
             Dim f As New syscisepro.FORMULARIOS.DIVISION_GEOGRÁFICA.FormSitiosTrabajo()
             f.TipoCox = _tipoCon
             f.Show()
+        End Sub
+
+        Private Sub KryptonPage5_Click(sender As Object, e As EventArgs) Handles KryptonPage5.Click
+
+        End Sub
+
+        Private Sub KryptonPage1_Click(sender As Object, e As EventArgs) Handles TabControl1.Click
+
         End Sub
     End Class
 End Namespace

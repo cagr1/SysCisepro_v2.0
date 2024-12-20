@@ -622,6 +622,9 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
                 f.TipoCox = TipoCox
                 f.lblIdComprobanteCompra.Text = lblIdComprobanteCompra.Text
                 f._porcentaje = PorcentajeIva
+                f._tipoComprobante = cmbNombreParametroDocumentos.Text
+                f._proveedorCompra = txtNombreComercialProveedorGeneral.Text
+                f._numeroComprobante = Trim(txtNumeroComprobanteCompra.Text.Trim)
                 f.ShowDialog()
             Else
                 'MsgBox("NO SE HA ENCONTRADO EL ID DEL COMPROBANTE DE COMPRA", MsgBoxStyle.Exclamation, "Mensaje de validación")

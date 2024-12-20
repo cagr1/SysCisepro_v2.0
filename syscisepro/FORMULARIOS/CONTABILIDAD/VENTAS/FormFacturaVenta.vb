@@ -196,6 +196,9 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
             'GroupBox5.Enabled = False
             cbxConvenio.Enabled = False
             'GroupBox4.Enabled = False
+            lblRucCiCliente.Text = "..."
+            lblLlevaContabilidad.Text = "..."
+
         End Sub
         Private Sub CargarDatosEmpresa()
             Try
@@ -212,7 +215,8 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                     '_porcentajeIva = emp.Rows(0)(21)  'AQUI CAMBIO 2024
                 End If
             Catch ex As Exception
-                MsgBox("CARGAR DATOS EMPRESA." & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
+                'MsgBox("CARGAR DATOS EMPRESA." & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
+                KryptonMessageBox.Show("CARGAR DATOS EMPRESA." & vbNewLine & ex.Message.ToString, "Mensaje de excepción", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
         Private Sub LlenarComboConcepto()
@@ -360,7 +364,8 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                     Next
                 End If
             Catch ex As Exception
-                MsgBox("Cargar Asiento" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Error, Favor reportar a Sistemas")
+                'MsgBox("Cargar Asiento" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Error, Favor reportar a Sistemas")
+                KryptonMessageBox.Show("Cargar Asiento" & vbNewLine & ex.Message.ToString, "Error, Favor reportar a Sistemas", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
         Private Sub btnNuevo_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnNuevo.Click
@@ -534,7 +539,8 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                     End Try
                 End If
             Catch ex As Exception
-                MsgBox("CARGAR DATOS CLIENTE." & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
+                'MsgBox("CARGAR DATOS CLIENTE." & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
+                KryptonMessageBox.Show("Cargar datos cliente." & vbNewLine & ex.Message.ToString, "Mensaje de excepción", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
         Private Sub CargarConveniosDebitoBanco()
@@ -550,7 +556,8 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                     VerificarCbConvenio()
                 End If
             Catch ex As Exception
-                MsgBox("ERROR AL CARGAR CONVENIOS DÉBITO BANCARIO:" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
+                'MsgBox("ERROR AL CARGAR CONVENIOS DÉBITO BANCARIO:" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
+                KryptonMessageBox.Show("Error al cargar convenios débito bancario:" & vbNewLine & ex.Message.ToString, "Mensaje de excepción", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
         Private Sub cmbTipoPagoFactura_SelectedValueChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles cmbTipoPagoFactura.SelectedValueChanged
@@ -618,7 +625,8 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
         Private Sub dtpFechaEmisionFacturaVenta_ValueChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles dtpFechaEmisionFacturaVenta.ValueChanged
             ObservacionesFecha()
             If Not ValidarFecha() Then
-                MsgBox("LA SECUENCIA DE LOS MESES DE FACTURACIÓN ESTA SALTADA", MsgBoxStyle.Exclamation, "Mensaje de validación")
+                'MsgBox("LA SECUENCIA DE LOS MESES DE FACTURACIÓN ESTA SALTADA", MsgBoxStyle.Exclamation, "Mensaje de validación")
+                KryptonMessageBox.Show("La secuencia de los meses de facturación esta saltada", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
             End If
         End Sub
         Private Function ValidarFecha()
@@ -697,7 +705,8 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                                 dgvDetalleFacturaVenta.CurrentRow.Cells(6).Value = dgvDetalleFacturaVenta.CurrentRow.Cells(4).Value
                             Else
                                 dgvDetalleFacturaVenta.Rows.RemoveAt(dgvDetalleFacturaVenta.CurrentRow.Index)
-                                MsgBox("EL ITEM SELECCIONADO YA ESTA AGREGADO A LA FACTURA.", MsgBoxStyle.Exclamation, "Mensaje de validación")
+                                'MsgBox("EL ITEM SELECCIONADO YA ESTA AGREGADO A LA FACTURA.", MsgBoxStyle.Exclamation, "Mensaje de validación")
+                                KryptonMessageBox.Show("El item seleccionado ya esta agregado a la factura.", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                                 Exit For
                             End If
                         Else
@@ -715,7 +724,8 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                 CargarAsiento()
 
             Catch ex As Exception
-                MsgBox("BUSCAR ID DE ITEM." & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Error, por favor reportar a Sistemas")
+                'MsgBox("BUSCAR ID DE ITEM." & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Error, por favor reportar a Sistemas")
+                KryptonMessageBox.Show("Buscar id de item." & vbNewLine & ex.Message.ToString, "Error, por favor reportar a Sistemas", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
         Private Sub dgvDetalleFacturaVenta_CellValueChanged(ByVal sender As System.Object, ByVal e As Windows.Forms.DataGridViewCellEventArgs) Handles dgvDetalleFacturaVenta.CellValueChanged
@@ -782,14 +792,15 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
             Dim fechaActualIngreso = New Date(dtpFechaEmisionFacturaVenta.Value.Year, dtpFechaEmisionFacturaVenta.Value.Month, dtpFechaEmisionFacturaVenta.Value.Day)
 
             If fechaMinimaIngreso > fechaActualIngreso Then ' si la fecha de registro de la factura corresponde al periodo contable en curso
-                MsgBox("NO SE PUEDEN REGISTRAR TRANSACCIONES DEL PERIODO " + dtpFechaEmisionFacturaVenta.Value.Year.ToString + "!", MsgBoxStyle.Critical, "Mensaje de validación")
+                'MsgBox("NO SE PUEDEN REGISTRAR TRANSACCIONES DEL PERIODO " + dtpFechaEmisionFacturaVenta.Value.Year.ToString + "!", MsgBoxStyle.Critical, "Mensaje de validación")
+                KryptonMessageBox.Show("No se pueden registrar transacciones del periodo " + dtpFechaEmisionFacturaVenta.Value.Year.ToString + "!", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             Else
                 If ValidarParametros() Then
                     If ValidarValores() Then ' verifica si los valores de la factura estan correctos
                         If ValidarAsiento() Then
 
-                            If MessageBox.Show("¿ESTA SEGURA QUE DESEA GUARDAR LA VENTA ACTUAL?", "Mensaje de validación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> DialogResult.Yes Then Return
-
+                            'If MessageBox.Show("¿ESTA SEGURA QUE DESEA GUARDAR LA VENTA ACTUAL?", "Mensaje de validación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> DialogResult.Yes Then Return
+                            If KryptonMessageBox.Show("¿ESTA SEGURA QUE DESEA GUARDAR LA VENTA ACTUAL?", "Mensaje de validación", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) <> DialogResult.Yes Then Return
                             _sqlCommands.Clear()
 
                             NumFactura()
@@ -820,7 +831,8 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                                     NuevoRegistroAsientoDiarioIva() ' registra en el asiento diario la cuenta contable del iva
 
                                 Else
-                                    MsgBox("CLAVE DE ACCESO INVALIDA. Por favor, intente nuevamente o póngase en contácto con el administrador!")
+                                    'MsgBox("CLAVE DE ACCESO INVALIDA. Por favor, intente nuevamente o póngase en contácto con el administrador!")
+                                    KryptonMessageBox.Show("Clave de acceso invalida. Por favor, intente nuevamente o póngase en contácto con el administrador!", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
                                     Exit Sub ' sale del evento
                                 End If
                             Else
@@ -828,7 +840,8 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                                 'claveIngresada = InputBox("INGRESE LA CLAVE AUTORIZACIÓN", "VALOR COMPROBANTE")
                                 claveIngresada = KryptonInputBox.Show("INGRESE LA CLAVE AUTORIZACIÓN", "VALOR COMPROBANTE")
                                 If Not IsNumeric(claveIngresada) Then
-                                    MsgBox("POR FAVOR INGRESE SOLO NÚMEROS", MsgBoxStyle.Exclamation, "Mensaje de validación")
+                                    'MsgBox("POR FAVOR INGRESE SOLO NÚMEROS", MsgBoxStyle.Exclamation, "Mensaje de validación")
+                                    KryptonMessageBox.Show("Por favor ingrese solo números", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                                     Exit Sub
                                 End If
 
@@ -863,11 +876,13 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                                         NuevoRegistroAsientoDiarioIva() ' registra en el asiento diario la cuenta contable del iva
 
                                     Else
-                                        MsgBox("CLAVE DE ACCESO INVALIDA. Por favor, intente nuevamente o póngase en contácto con el administrador!")
+                                        'MsgBox("CLAVE DE ACCESO INVALIDA. Por favor, intente nuevamente o póngase en contácto con el administrador!")
+                                        KryptonMessageBox.Show("Clave de acceso invalida. Por favor, intente nuevamente o póngase en contácto con el administrador!", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
                                         Exit Sub ' sale del evento
                                     End If
                                 Else
-                                    MsgBox("CLAVE INGRESADA Y GENERADA NO SON IGUALES. Por favor, intente nuevamente o póngase en contácto con el administrador!")
+                                    'MsgBox("CLAVE INGRESADA Y GENERADA NO SON IGUALES. Por favor, intente nuevamente o póngase en contácto con el administrador!")
+                                    KryptonMessageBox.Show("Clave ingresada y generada no son iguales. Por favor, intente nuevamente o póngase en contácto con el administrador!", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
                                     Exit Sub ' sale del evento
                                 End If
                             End If
@@ -878,19 +893,27 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                             If res(0) Then
                                 If lblPtoEmisionFacturaEmpresa.Text = "002" Then ExportarXml()
                                 DeshabilitadoInicio() ' bloquea los campos
+                                KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
+                            Else
+                                KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+                                Return
                             End If
-                            MsgBox(If(res(0), res(1) & vbNewLine & "XML GENERADO CORRECTAMENTE" & If(resx, " - XML GUARDADO", " - XML NO GUARDADO!"), res(1)), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
+
+                            'MsgBox(If(res(0), res(1) & vbNewLine & "XML GENERADO CORRECTAMENTE" & If(resx, " - XML GUARDADO", " - XML NO GUARDADO!"), res(1)), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
 
 
 
                         Else
-                            MsgBox("No se puede guardar." & vbNewLine & ", EL ASIENTO NO CUADRA. REVISE EL ASIENTO DE DIARIO, SUBTOTAL, IVA Y TOTAL DE LA FACTURA.", MsgBoxStyle.Exclamation, "Mensaje de validación")
+                            'MsgBox("No se puede guardar." & vbNewLine & ", EL ASIENTO NO CUADRA. REVISE EL ASIENTO DE DIARIO, SUBTOTAL, IVA Y TOTAL DE LA FACTURA.", MsgBoxStyle.Exclamation, "Mensaje de validación")
+                            KryptonMessageBox.Show("El asiento no cuadra. revise el asiento de diario, subtotal, iva y total de la factura", "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
                         End If
                     Else
-                        MsgBox("No se puede guardar." & vbNewLine & "INCONSISTENCIA CON LOS VALORES. REVISE EL ASIENTO DE DIARIO, SUBTOTAL, IVA Y TOTAL DE LA FACTURA.", MsgBoxStyle.Exclamation, "Mensaje de validación")
+                        'MsgBox("No se puede guardar." & vbNewLine & "INCONSISTENCIA CON LOS VALORES. REVISE EL ASIENTO DE DIARIO, SUBTOTAL, IVA Y TOTAL DE LA FACTURA.", MsgBoxStyle.Exclamation, "Mensaje de validación")
+                        KryptonMessageBox.Show("Inconsistencia con los valores. revise el asiento de diario, subtotal, iva y total de la factura", "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
                     End If
                 Else
-                    MsgBox("No se puede guardar." & vbNewLine & "NO SE HAN LLENADO TODOS LOS CAMPOS NECESARIOS.", MsgBoxStyle.Exclamation, "Mensaje de validación")
+                    'MsgBox("No se puede guardar." & vbNewLine & "NO SE HAN LLENADO TODOS LOS CAMPOS NECESARIOS.", MsgBoxStyle.Exclamation, "Mensaje de validación")
+                    KryptonMessageBox.Show("No se han llenado todos los campos necesarios", "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
                 End If
             End If
         End Sub
@@ -1208,7 +1231,8 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
 
             Catch ex As Exception
                 resx = False
-                MsgBox("ERROR A GENERAR FACTURA ELECTRÓNICA " & vbNewLine & ex.Message, MsgBoxStyle.Exclamation, "Mensaje de información.")
+                'MsgBox("ERROR A GENERAR FACTURA ELECTRÓNICA " & vbNewLine & ex.Message, MsgBoxStyle.Exclamation, "Mensaje de información.")
+                KryptonMessageBox.Show("Error a generar factura electrónica " & vbNewLine & ex.Message, "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
 
@@ -1235,7 +1259,9 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                     CargarAsiento()
                 End If
             Catch ex As Exception
-                MsgBox("ERROR AL CARGAR COMPROBANTE DE EGRESO " & vbNewLine & ex.Message, MsgBoxStyle.Exclamation, "Mensaje de información.")
+                'MsgBox("ERROR AL CARGAR COMPROBANTE DE EGRESO " & vbNewLine & ex.Message, MsgBoxStyle.Exclamation, "Mensaje de información.")
+                KryptonMessageBox.Show("Error al cargar comprobante de egreso " & vbNewLine & ex.Message, "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+
             End Try
         End Sub
 

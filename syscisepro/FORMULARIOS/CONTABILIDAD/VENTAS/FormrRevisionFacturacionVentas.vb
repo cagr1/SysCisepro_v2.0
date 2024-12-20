@@ -10,7 +10,8 @@ Imports syscisepro.DATOS
 Imports syscisepro.FORMULARIOS.CONTABILIDAD.LIBRO_DIARIO
 Imports Krypton.Toolkit
 Imports ClassLibraryCisepro.USUARIOS_DEL_SISTEMA
-
+Imports ClosedXML.Excel
+Imports System.IO
 Namespace FORMULARIOS.CONTABILIDAD.VENTAS
     ''' <summary>
     ''' CISEPRO - SEPORTPAC - ASENAVA 2019
@@ -270,10 +271,10 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
 
                 Case 12 : _fechaInicial = "01-" + mesActual.ToString + "-" + añoActual.ToString : _fechaFinal = "31-" + mesActual.ToString + "-" + añoActual.ToString : lblMesActual.Text = "DICIEMBRE :"
                     _fechaInicialAnte = "01-" + mesAnterior.ToString + "-" + añoActual.ToString : _fechaFinalAnte = "30-" + mesAnterior.ToString + "-" + añoActual.ToString : lblMesAnte.Text = "NOVIEMBRE :"
-                    _fechaInicialAnte2 = "01-" + mesAnterior2.ToString + "-" + añoActual.ToString : _fechaFinalAnte = "31-" + mesAnterior2.ToString + "-" + añoActual.ToString : lblMesAnte2.Text = "OCTUBRE :"
-                    _fechaInicialAnte3 = "01-0" + mesAnterior3.ToString + "-" + añoActual.ToString : _fechaFinalAnte2 = "30-0" + mesAnterior3.ToString + "-" + añoActual.ToString : lblMesAnte3.Text = "SEPTIEMBRE :"
-                    _fechaInicialAnte4 = "01-0" + mesAnterior4.ToString + "-" + añoActual.ToString : _fechaFinalAnte3 = "31-0" + mesAnterior4.ToString + "-" + añoActual.ToString : lblMesAnte4.Text = "AGOSTO :"
-                    _fechaInicialAnte5 = "01-0" + mesAnterior5.ToString + "-" + añoActual.ToString : _fechaFinalAnte4 = "31-0" + mesAnterior5.ToString + "-" + añoActual.ToString : lblMesAnte5.Text = "JULIO :"
+                    _fechaInicialAnte2 = "01-" + mesAnterior2.ToString + "-" + añoActual.ToString : _fechaFinalAnte2 = "31-" + mesAnterior2.ToString + "-" + añoActual.ToString : lblMesAnte2.Text = "OCTUBRE :"
+                    _fechaInicialAnte3 = "01-0" + mesAnterior3.ToString + "-" + añoActual.ToString : _fechaFinalAnte3 = "30-0" + mesAnterior3.ToString + "-" + añoActual.ToString : lblMesAnte3.Text = "SEPTIEMBRE :"
+                    _fechaInicialAnte4 = "01-0" + mesAnterior4.ToString + "-" + añoActual.ToString : _fechaFinalAnte4 = "31-0" + mesAnterior4.ToString + "-" + añoActual.ToString : lblMesAnte4.Text = "AGOSTO :"
+                    _fechaInicialAnte5 = "01-0" + mesAnterior5.ToString + "-" + añoActual.ToString : _fechaFinalAnte5 = "31-0" + mesAnterior5.ToString + "-" + añoActual.ToString : lblMesAnte5.Text = "JULIO :"
 
             End Select
             _fechaInicial = _fechaInicial + " 00:00:00.001"
@@ -287,7 +288,8 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
             _fechaFinalAnte2 = _fechaFinalAnte2 + " 23:59:59.000"
             _fechaFinalAnte3 = _fechaFinalAnte3 + " 23:59:59.000"
             _fechaFinalAnte4 = _fechaFinalAnte4 + " 23:59:59.000"
-            _fechaFinalAnte5 = _fechaFinalAnte5 + " 23:59:59.000"
+            '_fechaFinalAnte5 = _fechaFinalAnte5 + " 23:59:59.000"
+            _fechaFinalAnte5 = _fechaFinalAnte5 + " 23:59:59"
         End Sub
 
         Private Sub CargarTotalesFacturacion()
@@ -431,7 +433,9 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                 mExcel.Cursor = Excel.XlMousePointer.xlDefault
             Catch ex As Exception
                 MsgBox("EXPORTAR REVISIÓN DE FACTURACIÓN." & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
-            End Try            
+            End Try
+
+
         End Sub
 
         Private Sub FormrRevisionFacturacionVentas_Load(ByVal sender As System.Object, ByVal e As EventArgs) Handles MyBase.Load
@@ -559,5 +563,8 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
             CargarDatosFactura()
         End Sub
 
+        Private Sub txtTotalFacturadoMesAnte_TextChanged(sender As Object, e As EventArgs) Handles txtTotalFacturadoMesAnte.TextChanged
+
+        End Sub
     End Class
 End Namespace

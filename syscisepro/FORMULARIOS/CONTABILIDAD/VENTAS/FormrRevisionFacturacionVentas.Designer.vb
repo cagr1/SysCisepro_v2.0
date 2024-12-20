@@ -185,10 +185,10 @@
             Me.txtTotalFacturadoMesAnte5.BorderStyle = System.Windows.Forms.BorderStyle.None
             Me.txtTotalFacturadoMesAnte5.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtTotalFacturadoMesAnte5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
-            Me.txtTotalFacturadoMesAnte5.Location = New System.Drawing.Point(85, 18)
+            Me.txtTotalFacturadoMesAnte5.Location = New System.Drawing.Point(72, 18)
             Me.txtTotalFacturadoMesAnte5.Name = "txtTotalFacturadoMesAnte5"
             Me.txtTotalFacturadoMesAnte5.ReadOnly = True
-            Me.txtTotalFacturadoMesAnte5.Size = New System.Drawing.Size(90, 14)
+            Me.txtTotalFacturadoMesAnte5.Size = New System.Drawing.Size(80, 14)
             Me.txtTotalFacturadoMesAnte5.TabIndex = 47
             Me.txtTotalFacturadoMesAnte5.Text = "0.00"
             Me.txtTotalFacturadoMesAnte5.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -203,6 +203,7 @@
             Me.lblMesAnte5.Size = New System.Drawing.Size(16, 13)
             Me.lblMesAnte5.TabIndex = 46
             Me.lblMesAnte5.Text = "..."
+            Me.lblMesAnte5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
             '
             'txtTotalFacturadoMesAnte4
             '
@@ -210,10 +211,10 @@
             Me.txtTotalFacturadoMesAnte4.BorderStyle = System.Windows.Forms.BorderStyle.None
             Me.txtTotalFacturadoMesAnte4.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtTotalFacturadoMesAnte4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
-            Me.txtTotalFacturadoMesAnte4.Location = New System.Drawing.Point(270, 17)
+            Me.txtTotalFacturadoMesAnte4.Location = New System.Drawing.Point(249, 17)
             Me.txtTotalFacturadoMesAnte4.Name = "txtTotalFacturadoMesAnte4"
             Me.txtTotalFacturadoMesAnte4.ReadOnly = True
-            Me.txtTotalFacturadoMesAnte4.Size = New System.Drawing.Size(90, 14)
+            Me.txtTotalFacturadoMesAnte4.Size = New System.Drawing.Size(80, 14)
             Me.txtTotalFacturadoMesAnte4.TabIndex = 45
             Me.txtTotalFacturadoMesAnte4.Text = "0.00"
             Me.txtTotalFacturadoMesAnte4.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -235,10 +236,10 @@
             Me.txtTotalFacturadoMesAnte3.BorderStyle = System.Windows.Forms.BorderStyle.None
             Me.txtTotalFacturadoMesAnte3.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtTotalFacturadoMesAnte3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
-            Me.txtTotalFacturadoMesAnte3.Location = New System.Drawing.Point(456, 17)
+            Me.txtTotalFacturadoMesAnte3.Location = New System.Drawing.Point(437, 17)
             Me.txtTotalFacturadoMesAnte3.Name = "txtTotalFacturadoMesAnte3"
             Me.txtTotalFacturadoMesAnte3.ReadOnly = True
-            Me.txtTotalFacturadoMesAnte3.Size = New System.Drawing.Size(90, 14)
+            Me.txtTotalFacturadoMesAnte3.Size = New System.Drawing.Size(80, 14)
             Me.txtTotalFacturadoMesAnte3.TabIndex = 43
             Me.txtTotalFacturadoMesAnte3.Text = "0.00"
             Me.txtTotalFacturadoMesAnte3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -253,6 +254,7 @@
             Me.lblMesAnte3.Size = New System.Drawing.Size(16, 13)
             Me.lblMesAnte3.TabIndex = 42
             Me.lblMesAnte3.Text = "..."
+            Me.lblMesAnte3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
             '
             'txtTotalFacturadoMesAnte2
             '
@@ -260,10 +262,10 @@
             Me.txtTotalFacturadoMesAnte2.BorderStyle = System.Windows.Forms.BorderStyle.None
             Me.txtTotalFacturadoMesAnte2.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtTotalFacturadoMesAnte2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
-            Me.txtTotalFacturadoMesAnte2.Location = New System.Drawing.Point(642, 17)
+            Me.txtTotalFacturadoMesAnte2.Location = New System.Drawing.Point(614, 17)
             Me.txtTotalFacturadoMesAnte2.Name = "txtTotalFacturadoMesAnte2"
             Me.txtTotalFacturadoMesAnte2.ReadOnly = True
-            Me.txtTotalFacturadoMesAnte2.Size = New System.Drawing.Size(90, 14)
+            Me.txtTotalFacturadoMesAnte2.Size = New System.Drawing.Size(80, 14)
             Me.txtTotalFacturadoMesAnte2.TabIndex = 41
             Me.txtTotalFacturadoMesAnte2.Text = "0.00"
             Me.txtTotalFacturadoMesAnte2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -273,11 +275,12 @@
             Me.lblMesAnte2.AutoSize = True
             Me.lblMesAnte2.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.lblMesAnte2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
-            Me.lblMesAnte2.Location = New System.Drawing.Point(553, 17)
+            Me.lblMesAnte2.Location = New System.Drawing.Point(547, 17)
             Me.lblMesAnte2.Name = "lblMesAnte2"
             Me.lblMesAnte2.Size = New System.Drawing.Size(16, 13)
             Me.lblMesAnte2.TabIndex = 40
             Me.lblMesAnte2.Text = "..."
+            Me.lblMesAnte2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
             '
             'txtTotalFacturadoMesAnte
             '
@@ -285,10 +288,10 @@
             Me.txtTotalFacturadoMesAnte.BorderStyle = System.Windows.Forms.BorderStyle.None
             Me.txtTotalFacturadoMesAnte.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtTotalFacturadoMesAnte.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
-            Me.txtTotalFacturadoMesAnte.Location = New System.Drawing.Point(806, 17)
+            Me.txtTotalFacturadoMesAnte.Location = New System.Drawing.Point(795, 17)
             Me.txtTotalFacturadoMesAnte.Name = "txtTotalFacturadoMesAnte"
             Me.txtTotalFacturadoMesAnte.ReadOnly = True
-            Me.txtTotalFacturadoMesAnte.Size = New System.Drawing.Size(90, 14)
+            Me.txtTotalFacturadoMesAnte.Size = New System.Drawing.Size(80, 14)
             Me.txtTotalFacturadoMesAnte.TabIndex = 39
             Me.txtTotalFacturadoMesAnte.Text = "0.00"
             Me.txtTotalFacturadoMesAnte.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -298,11 +301,12 @@
             Me.lblMesAnte.AutoSize = True
             Me.lblMesAnte.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.lblMesAnte.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
-            Me.lblMesAnte.Location = New System.Drawing.Point(738, 17)
+            Me.lblMesAnte.Location = New System.Drawing.Point(714, 17)
             Me.lblMesAnte.Name = "lblMesAnte"
             Me.lblMesAnte.Size = New System.Drawing.Size(16, 13)
             Me.lblMesAnte.TabIndex = 38
             Me.lblMesAnte.Text = "..."
+            Me.lblMesAnte.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
             '
             'txtTotalFacturadoMesActual
             '
@@ -310,10 +314,10 @@
             Me.txtTotalFacturadoMesActual.BorderStyle = System.Windows.Forms.BorderStyle.None
             Me.txtTotalFacturadoMesActual.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtTotalFacturadoMesActual.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
-            Me.txtTotalFacturadoMesActual.Location = New System.Drawing.Point(951, 17)
+            Me.txtTotalFacturadoMesActual.Location = New System.Drawing.Point(950, 17)
             Me.txtTotalFacturadoMesActual.Name = "txtTotalFacturadoMesActual"
             Me.txtTotalFacturadoMesActual.ReadOnly = True
-            Me.txtTotalFacturadoMesActual.Size = New System.Drawing.Size(90, 14)
+            Me.txtTotalFacturadoMesActual.Size = New System.Drawing.Size(80, 14)
             Me.txtTotalFacturadoMesActual.TabIndex = 37
             Me.txtTotalFacturadoMesActual.Text = "0.00"
             Me.txtTotalFacturadoMesActual.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -323,11 +327,12 @@
             Me.lblMesActual.AutoSize = True
             Me.lblMesActual.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.lblMesActual.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
-            Me.lblMesActual.Location = New System.Drawing.Point(901, 17)
+            Me.lblMesActual.Location = New System.Drawing.Point(880, 17)
             Me.lblMesActual.Name = "lblMesActual"
             Me.lblMesActual.Size = New System.Drawing.Size(16, 13)
             Me.lblMesActual.TabIndex = 36
             Me.lblMesActual.Text = "..."
+            Me.lblMesActual.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
             '
             'gbDatosFacturaVenta
             '
