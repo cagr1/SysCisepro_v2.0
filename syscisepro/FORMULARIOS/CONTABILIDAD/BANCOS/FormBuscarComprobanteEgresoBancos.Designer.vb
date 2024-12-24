@@ -39,9 +39,6 @@
             Me.rbAprobados = New System.Windows.Forms.RadioButton()
             Me.rbEmitidos = New System.Windows.Forms.RadioButton()
             Me.txtNumeroCheque = New System.Windows.Forms.TextBox()
-            Me.gbTotal = New System.Windows.Forms.GroupBox()
-            Me.txtTotalComprobantesEgreso = New System.Windows.Forms.TextBox()
-            Me.Label2 = New System.Windows.Forms.Label()
             Me.cmbCuentaBancos = New System.Windows.Forms.ComboBox()
             Me.cmbBancos = New System.Windows.Forms.ComboBox()
             Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
@@ -50,19 +47,31 @@
             Me.btnReporte = New System.Windows.Forms.ToolStripMenuItem()
             Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
             Me.btnExportar = New System.Windows.Forms.ToolStripMenuItem()
+            Me.btnReporteTodos = New System.Windows.Forms.ToolStripMenuItem()
             Me.KryptonGroupBox1 = New ComponentFactory.Krypton.Toolkit.KryptonGroupBox()
             Me.KryptonLabel5 = New Krypton.Toolkit.KryptonLabel()
             Me.KryptonLabel4 = New Krypton.Toolkit.KryptonLabel()
             Me.KryptonLabel3 = New Krypton.Toolkit.KryptonLabel()
             Me.KryptonLabel1 = New Krypton.Toolkit.KryptonLabel()
             Me.KryptonLabel2 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonNavigator1 = New ComponentFactory.Krypton.Navigator.KryptonNavigator()
+            Me.KryptonPage1 = New ComponentFactory.Krypton.Navigator.KryptonPage()
+            Me.txtTotalComprobantesEgreso = New System.Windows.Forms.TextBox()
+            Me.Label2 = New System.Windows.Forms.Label()
+            Me.KryptonPage2 = New ComponentFactory.Krypton.Navigator.KryptonPage()
+            Me.PdfViewer1 = New PdfiumViewer.PdfViewer()
             CType(Me.dgvComprobanteEgresoBancos, System.ComponentModel.ISupportInitialize).BeginInit()
-            Me.gbTotal.SuspendLayout()
             Me.MenuStrip1.SuspendLayout()
             CType(Me.KryptonGroupBox1, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.KryptonGroupBox1.Panel, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.KryptonGroupBox1.Panel.SuspendLayout()
             Me.KryptonGroupBox1.SuspendLayout()
+            CType(Me.KryptonNavigator1, System.ComponentModel.ISupportInitialize).BeginInit()
+            Me.KryptonNavigator1.SuspendLayout()
+            CType(Me.KryptonPage1, System.ComponentModel.ISupportInitialize).BeginInit()
+            Me.KryptonPage1.SuspendLayout()
+            CType(Me.KryptonPage2, System.ComponentModel.ISupportInitialize).BeginInit()
+            Me.KryptonPage2.SuspendLayout()
             Me.SuspendLayout()
             '
             'dgvComprobanteEgresoBancos
@@ -91,12 +100,12 @@
             DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
             DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
             Me.dgvComprobanteEgresoBancos.DefaultCellStyle = DataGridViewCellStyle3
-            Me.dgvComprobanteEgresoBancos.Location = New System.Drawing.Point(4, 121)
+            Me.dgvComprobanteEgresoBancos.Location = New System.Drawing.Point(13, 83)
             Me.dgvComprobanteEgresoBancos.MultiSelect = False
             Me.dgvComprobanteEgresoBancos.Name = "dgvComprobanteEgresoBancos"
             Me.dgvComprobanteEgresoBancos.RowHeadersVisible = False
             Me.dgvComprobanteEgresoBancos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvComprobanteEgresoBancos.Size = New System.Drawing.Size(947, 407)
+            Me.dgvComprobanteEgresoBancos.Size = New System.Drawing.Size(925, 396)
             Me.dgvComprobanteEgresoBancos.TabIndex = 18
             '
             'lblIdBeneficiario
@@ -230,42 +239,6 @@
             Me.txtNumeroCheque.Text = "0"
             Me.txtNumeroCheque.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
             '
-            'gbTotal
-            '
-            Me.gbTotal.BackColor = System.Drawing.Color.FromArgb(CType(CType(185, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(227, Byte), Integer))
-            Me.gbTotal.Controls.Add(Me.txtTotalComprobantesEgreso)
-            Me.gbTotal.Controls.Add(Me.Label2)
-            Me.gbTotal.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.gbTotal.Location = New System.Drawing.Point(12, 534)
-            Me.gbTotal.Name = "gbTotal"
-            Me.gbTotal.Size = New System.Drawing.Size(939, 35)
-            Me.gbTotal.TabIndex = 115
-            Me.gbTotal.TabStop = False
-            '
-            'txtTotalComprobantesEgreso
-            '
-            Me.txtTotalComprobantesEgreso.BackColor = System.Drawing.Color.White
-            Me.txtTotalComprobantesEgreso.Enabled = False
-            Me.txtTotalComprobantesEgreso.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtTotalComprobantesEgreso.Location = New System.Drawing.Point(825, 14)
-            Me.txtTotalComprobantesEgreso.Name = "txtTotalComprobantesEgreso"
-            Me.txtTotalComprobantesEgreso.ReadOnly = True
-            Me.txtTotalComprobantesEgreso.Size = New System.Drawing.Size(100, 21)
-            Me.txtTotalComprobantesEgreso.TabIndex = 110
-            Me.txtTotalComprobantesEgreso.Text = "0.00"
-            Me.txtTotalComprobantesEgreso.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-            '
-            'Label2
-            '
-            Me.Label2.AutoSize = True
-            Me.Label2.Font = New System.Drawing.Font("Roboto Medium", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
-            Me.Label2.Location = New System.Drawing.Point(756, 16)
-            Me.Label2.Name = "Label2"
-            Me.Label2.Size = New System.Drawing.Size(50, 13)
-            Me.Label2.TabIndex = 111
-            Me.Label2.Text = "TOTAL:"
-            '
             'cmbCuentaBancos
             '
             Me.cmbCuentaBancos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
@@ -289,7 +262,7 @@
             'MenuStrip1
             '
             Me.MenuStrip1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-            Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnBuscar, Me.btnGuardar, Me.btnReporte, Me.ToolStripMenuItem1, Me.btnExportar})
+            Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnBuscar, Me.btnGuardar, Me.btnReporte, Me.ToolStripMenuItem1, Me.btnExportar, Me.btnReporteTodos})
             Me.MenuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow
             Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
             Me.MenuStrip1.Name = "MenuStrip1"
@@ -343,11 +316,19 @@
             Me.btnExportar.Size = New System.Drawing.Size(99, 28)
             Me.btnExportar.Text = "EXPORTAR"
             '
+            'btnReporteTodos
+            '
+            Me.btnReporteTodos.Image = Global.syscisepro.My.Resources.Resources.description_24dp_FILL0_wght400_GRAD0_opsz24__2_
+            Me.btnReporteTodos.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+            Me.btnReporteTodos.Name = "btnReporteTodos"
+            Me.btnReporteTodos.Size = New System.Drawing.Size(125, 28)
+            Me.btnReporteTodos.Text = "REPORTE TOTAL"
+            '
             'KryptonGroupBox1
             '
             Me.KryptonGroupBox1.CaptionOverlap = 0R
             Me.KryptonGroupBox1.GroupBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.ControlRibbon
-            Me.KryptonGroupBox1.Location = New System.Drawing.Point(4, 40)
+            Me.KryptonGroupBox1.Location = New System.Drawing.Point(0, 3)
             Me.KryptonGroupBox1.Name = "KryptonGroupBox1"
             '
             'KryptonGroupBox1.Panel
@@ -371,7 +352,7 @@
             Me.KryptonGroupBox1.Panel.Controls.Add(Me.rbAprobados)
             Me.KryptonGroupBox1.Panel.Controls.Add(Me.rbTodos)
             Me.KryptonGroupBox1.Panel.Controls.Add(Me.rbNumeroCheque)
-            Me.KryptonGroupBox1.Size = New System.Drawing.Size(947, 74)
+            Me.KryptonGroupBox1.Size = New System.Drawing.Size(921, 74)
             Me.KryptonGroupBox1.TabIndex = 184
             Me.KryptonGroupBox1.Values.Heading = "Busqueda"
             '
@@ -415,16 +396,88 @@
             Me.KryptonLabel2.TabIndex = 85
             Me.KryptonLabel2.Values.Text = "Banco"
             '
+            'KryptonNavigator1
+            '
+            Me.KryptonNavigator1.Button.ButtonDisplayLogic = ComponentFactory.Krypton.Navigator.ButtonDisplayLogic.None
+            Me.KryptonNavigator1.Button.CloseButtonDisplay = ComponentFactory.Krypton.Navigator.ButtonDisplay.Hide
+            Me.KryptonNavigator1.Dock = System.Windows.Forms.DockStyle.Fill
+            Me.KryptonNavigator1.Location = New System.Drawing.Point(0, 32)
+            Me.KryptonNavigator1.Name = "KryptonNavigator1"
+            Me.KryptonNavigator1.PageBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.ControlGroupBox
+            Me.KryptonNavigator1.Pages.AddRange(New ComponentFactory.Krypton.Navigator.KryptonPage() {Me.KryptonPage1, Me.KryptonPage2})
+            Me.KryptonNavigator1.SelectedIndex = 0
+            Me.KryptonNavigator1.Size = New System.Drawing.Size(951, 538)
+            Me.KryptonNavigator1.TabIndex = 185
+            Me.KryptonNavigator1.Text = "KryptonNavigator1"
+            '
+            'KryptonPage1
+            '
+            Me.KryptonPage1.AutoHiddenSlideSize = New System.Drawing.Size(200, 200)
+            Me.KryptonPage1.Controls.Add(Me.txtTotalComprobantesEgreso)
+            Me.KryptonPage1.Controls.Add(Me.Label2)
+            Me.KryptonPage1.Controls.Add(Me.KryptonGroupBox1)
+            Me.KryptonPage1.Controls.Add(Me.dgvComprobanteEgresoBancos)
+            Me.KryptonPage1.Flags = 65534
+            Me.KryptonPage1.LastVisibleSet = True
+            Me.KryptonPage1.MinimumSize = New System.Drawing.Size(50, 50)
+            Me.KryptonPage1.Name = "KryptonPage1"
+            Me.KryptonPage1.Size = New System.Drawing.Size(949, 511)
+            Me.KryptonPage1.Text = "Busqueda"
+            Me.KryptonPage1.ToolTipTitle = "Page ToolTip"
+            Me.KryptonPage1.UniqueName = "2685B76B94C8487025ABD2AF7DF1EE84"
+            '
+            'txtTotalComprobantesEgreso
+            '
+            Me.txtTotalComprobantesEgreso.BackColor = System.Drawing.Color.White
+            Me.txtTotalComprobantesEgreso.Enabled = False
+            Me.txtTotalComprobantesEgreso.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtTotalComprobantesEgreso.Location = New System.Drawing.Point(821, 485)
+            Me.txtTotalComprobantesEgreso.Name = "txtTotalComprobantesEgreso"
+            Me.txtTotalComprobantesEgreso.ReadOnly = True
+            Me.txtTotalComprobantesEgreso.Size = New System.Drawing.Size(100, 21)
+            Me.txtTotalComprobantesEgreso.TabIndex = 185
+            Me.txtTotalComprobantesEgreso.Text = "0.00"
+            Me.txtTotalComprobantesEgreso.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+            '
+            'Label2
+            '
+            Me.Label2.AutoSize = True
+            Me.Label2.Font = New System.Drawing.Font("Roboto Medium", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
+            Me.Label2.Location = New System.Drawing.Point(762, 490)
+            Me.Label2.Name = "Label2"
+            Me.Label2.Size = New System.Drawing.Size(50, 13)
+            Me.Label2.TabIndex = 186
+            Me.Label2.Text = "TOTAL:"
+            '
+            'KryptonPage2
+            '
+            Me.KryptonPage2.AutoHiddenSlideSize = New System.Drawing.Size(200, 200)
+            Me.KryptonPage2.Controls.Add(Me.PdfViewer1)
+            Me.KryptonPage2.Flags = 65534
+            Me.KryptonPage2.LastVisibleSet = True
+            Me.KryptonPage2.MinimumSize = New System.Drawing.Size(50, 50)
+            Me.KryptonPage2.Name = "KryptonPage2"
+            Me.KryptonPage2.Size = New System.Drawing.Size(949, 511)
+            Me.KryptonPage2.Text = "Reporte Total"
+            Me.KryptonPage2.ToolTipTitle = "Page ToolTip"
+            Me.KryptonPage2.UniqueName = "2039460348D1486504B11D9AE0B19389"
+            '
+            'PdfViewer1
+            '
+            Me.PdfViewer1.Location = New System.Drawing.Point(2, 3)
+            Me.PdfViewer1.Name = "PdfViewer1"
+            Me.PdfViewer1.Size = New System.Drawing.Size(944, 505)
+            Me.PdfViewer1.TabIndex = 0
+            '
             'FormBuscarComprobanteEgresoBancos
             '
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(185, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(227, Byte), Integer))
             Me.ClientSize = New System.Drawing.Size(951, 570)
-            Me.Controls.Add(Me.KryptonGroupBox1)
+            Me.Controls.Add(Me.KryptonNavigator1)
             Me.Controls.Add(Me.MenuStrip1)
-            Me.Controls.Add(Me.dgvComprobanteEgresoBancos)
-            Me.Controls.Add(Me.gbTotal)
             Me.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Name = "FormBuscarComprobanteEgresoBancos"
             Me.ShowIcon = False
@@ -435,8 +488,6 @@
             Me.StateActive.Border.Rounding = 5.0!
             Me.Text = "BUSCAR COMPROBANTE EGRESO BANCOS"
             CType(Me.dgvComprobanteEgresoBancos, System.ComponentModel.ISupportInitialize).EndInit()
-            Me.gbTotal.ResumeLayout(False)
-            Me.gbTotal.PerformLayout()
             Me.MenuStrip1.ResumeLayout(False)
             Me.MenuStrip1.PerformLayout()
             CType(Me.KryptonGroupBox1.Panel, System.ComponentModel.ISupportInitialize).EndInit()
@@ -444,6 +495,13 @@
             Me.KryptonGroupBox1.Panel.PerformLayout()
             CType(Me.KryptonGroupBox1, System.ComponentModel.ISupportInitialize).EndInit()
             Me.KryptonGroupBox1.ResumeLayout(False)
+            CType(Me.KryptonNavigator1, System.ComponentModel.ISupportInitialize).EndInit()
+            Me.KryptonNavigator1.ResumeLayout(False)
+            CType(Me.KryptonPage1, System.ComponentModel.ISupportInitialize).EndInit()
+            Me.KryptonPage1.ResumeLayout(False)
+            Me.KryptonPage1.PerformLayout()
+            CType(Me.KryptonPage2, System.ComponentModel.ISupportInitialize).EndInit()
+            Me.KryptonPage2.ResumeLayout(False)
             Me.ResumeLayout(False)
             Me.PerformLayout()
 
@@ -459,9 +517,6 @@
         Friend WithEvents rbTodos As System.Windows.Forms.RadioButton
         Friend WithEvents rbBanco As System.Windows.Forms.RadioButton
         Friend WithEvents rbFecha As System.Windows.Forms.RadioButton
-        Friend WithEvents gbTotal As System.Windows.Forms.GroupBox
-        Friend WithEvents txtTotalComprobantesEgreso As System.Windows.Forms.TextBox
-        Friend WithEvents Label2 As System.Windows.Forms.Label
         Friend WithEvents cmbCuentaBancos As System.Windows.Forms.ComboBox
         Friend WithEvents cmbBancos As System.Windows.Forms.ComboBox
         Friend WithEvents MenuStrip1 As System.Windows.Forms.MenuStrip
@@ -478,5 +533,12 @@
         Friend WithEvents KryptonLabel2 As Krypton.Toolkit.KryptonLabel
         Friend WithEvents KryptonLabel4 As Krypton.Toolkit.KryptonLabel
         Friend WithEvents KryptonLabel5 As Krypton.Toolkit.KryptonLabel
+        Friend WithEvents btnReporteTodos As ToolStripMenuItem
+        Friend WithEvents KryptonNavigator1 As ComponentFactory.Krypton.Navigator.KryptonNavigator
+        Friend WithEvents KryptonPage1 As ComponentFactory.Krypton.Navigator.KryptonPage
+        Friend WithEvents KryptonPage2 As ComponentFactory.Krypton.Navigator.KryptonPage
+        Friend WithEvents txtTotalComprobantesEgreso As TextBox
+        Friend WithEvents Label2 As Label
+        Friend WithEvents PdfViewer1 As PdfiumViewer.PdfViewer
     End Class
 End Namespace

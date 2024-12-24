@@ -142,6 +142,7 @@ Namespace FORMULARIOS.DIVISION_GEOGRÁFICA
             LlenarSupervisores()
 
             btnBuscarPersonal.Enabled = True
+
             cbmGrupo.SelectedValue = "GENERAL"
 
             cbmProvincia.SelectedValue = 7
@@ -782,8 +783,7 @@ Namespace FORMULARIOS.DIVISION_GEOGRÁFICA
             'MenuStrip2.BackColor = ValidationForms.GetColorSistema(_tipoCon)
             MenuStrip1.ForeColor = Color.White
             'MenuStrip1.BackColor = ValidationForms.GetColorSistema(_tipoCon)
-            Label24.ForeColor = Color.White
-            Label24.BackColor = ValidationForms.GetColorSistema(_tipoCon)
+
             Label32.ForeColor = Color.White
             Label32.BackColor = ValidationForms.GetColorSistema(_tipoCon)
             Label33.ForeColor = Color.White
@@ -876,6 +876,10 @@ Namespace FORMULARIOS.DIVISION_GEOGRÁFICA
 
         Private Sub ToolStripMenuItem7_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ToolStripMenuItem7.Click
             ExportarDatosExcel(ListView3, "REPORTE DE PUESTO")
+        End Sub
+
+        Private Sub cbxHorasPuesto_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbxHorasPuesto.SelectedIndexChanged
+
         End Sub
     End Class
 End Namespace

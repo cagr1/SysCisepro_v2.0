@@ -26,8 +26,6 @@
             Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormAjustarFacturasVenta))
             Me.dgvEmpresa = New System.Windows.Forms.DataGridView()
             Me.txtNombreComercialCliente = New System.Windows.Forms.TextBox()
@@ -46,26 +44,26 @@
             Me.btnGuardar = New System.Windows.Forms.ToolStripMenuItem()
             Me.btnCancelar = New System.Windows.Forms.ToolStripMenuItem()
             Me.KryptonGroupBox1 = New Krypton.Toolkit.KryptonGroupBox()
-            Me.KryptonLabel1 = New Krypton.Toolkit.KryptonLabel()
-            Me.lblRucClienteGenral = New Krypton.Toolkit.KryptonLabel()
-            Me.KryptonLabel2 = New Krypton.Toolkit.KryptonLabel()
-            Me.lblLlevaContabilidadClienteGeneral = New Krypton.Toolkit.KryptonLabel()
             Me.lblIdClienteGeneral = New Krypton.Toolkit.KryptonLabel()
+            Me.lblLlevaContabilidadClienteGeneral = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel2 = New Krypton.Toolkit.KryptonLabel()
+            Me.lblRucClienteGenral = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel1 = New Krypton.Toolkit.KryptonLabel()
             Me.KryptonGroupBox2 = New Krypton.Toolkit.KryptonGroupBox()
-            Me.KryptonLabel3 = New Krypton.Toolkit.KryptonLabel()
-            Me.lblIdFacturaVenta = New Krypton.Toolkit.KryptonLabel()
-            Me.KryptonLabel4 = New Krypton.Toolkit.KryptonLabel()
-            Me.lblTipoPagoFacturaCompra = New Krypton.Toolkit.KryptonLabel()
-            Me.KryptonLabel5 = New Krypton.Toolkit.KryptonLabel()
-            Me.KryptonLabel6 = New Krypton.Toolkit.KryptonLabel()
-            Me.lblNumeroFacturaVenta = New Krypton.Toolkit.KryptonLabel()
-            Me.KryptonLabel7 = New Krypton.Toolkit.KryptonLabel()
             Me.KryptonLabel13 = New Krypton.Toolkit.KryptonLabel()
             Me.KryptonLabel8 = New Krypton.Toolkit.KryptonLabel()
             Me.KryptonLabel15 = New Krypton.Toolkit.KryptonLabel()
             Me.KryptonLabel16 = New Krypton.Toolkit.KryptonLabel()
             Me.KryptonLabel17 = New Krypton.Toolkit.KryptonLabel()
             Me.KryptonLabel9 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel7 = New Krypton.Toolkit.KryptonLabel()
+            Me.lblNumeroFacturaVenta = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel6 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel5 = New Krypton.Toolkit.KryptonLabel()
+            Me.lblTipoPagoFacturaCompra = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel4 = New Krypton.Toolkit.KryptonLabel()
+            Me.lblIdFacturaVenta = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel3 = New Krypton.Toolkit.KryptonLabel()
             CType(Me.dgvEmpresa, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.dgvFacturaVenta, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.MenuStrip1.SuspendLayout()
@@ -210,38 +208,22 @@
             Me.dgvFacturaVenta.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.dgvFacturaVenta.BorderStyle = System.Windows.Forms.BorderStyle.None
             Me.dgvFacturaVenta.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
-            DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-            DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control
-            DataGridViewCellStyle2.Font = New System.Drawing.Font("Roboto", 8.25!)
-            DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText
-            DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-            DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-            DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-            Me.dgvFacturaVenta.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
             Me.dgvFacturaVenta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-            DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-            DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window
-            DataGridViewCellStyle3.Font = New System.Drawing.Font("Roboto", 8.25!)
-            DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText
-            DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(123, Byte), Integer))
-            DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-            DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-            Me.dgvFacturaVenta.DefaultCellStyle = DataGridViewCellStyle3
+            DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+            DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
+            DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
+            DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(123, Byte), Integer))
+            DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+            DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+            Me.dgvFacturaVenta.DefaultCellStyle = DataGridViewCellStyle2
             Me.dgvFacturaVenta.Location = New System.Drawing.Point(5, 81)
             Me.dgvFacturaVenta.MultiSelect = False
             Me.dgvFacturaVenta.Name = "dgvFacturaVenta"
             Me.dgvFacturaVenta.ReadOnly = True
-            DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-            DataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control
-            DataGridViewCellStyle4.Font = New System.Drawing.Font("Roboto", 8.25!)
-            DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText
-            DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
-            DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-            DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-            Me.dgvFacturaVenta.RowHeadersDefaultCellStyle = DataGridViewCellStyle4
             Me.dgvFacturaVenta.RowHeadersVisible = False
-            DataGridViewCellStyle5.Font = New System.Drawing.Font("Roboto", 8.25!)
-            Me.dgvFacturaVenta.RowsDefaultCellStyle = DataGridViewCellStyle5
+            DataGridViewCellStyle3.Font = New System.Drawing.Font("Roboto", 8.25!)
+            Me.dgvFacturaVenta.RowsDefaultCellStyle = DataGridViewCellStyle3
             Me.dgvFacturaVenta.RowTemplate.DefaultCellStyle.Font = New System.Drawing.Font("Roboto", 8.25!)
             Me.dgvFacturaVenta.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
             Me.dgvFacturaVenta.Size = New System.Drawing.Size(598, 264)
@@ -306,29 +288,13 @@
             Me.KryptonGroupBox1.TabIndex = 96
             Me.KryptonGroupBox1.Values.Heading = "Datos Cliente"
             '
-            'KryptonLabel1
+            'lblIdClienteGeneral
             '
-            Me.KryptonLabel1.Location = New System.Drawing.Point(362, 4)
-            Me.KryptonLabel1.Name = "KryptonLabel1"
-            Me.KryptonLabel1.Size = New System.Drawing.Size(34, 20)
-            Me.KryptonLabel1.TabIndex = 1
-            Me.KryptonLabel1.Values.Text = "RUC"
-            '
-            'lblRucClienteGenral
-            '
-            Me.lblRucClienteGenral.Location = New System.Drawing.Point(401, 3)
-            Me.lblRucClienteGenral.Name = "lblRucClienteGenral"
-            Me.lblRucClienteGenral.Size = New System.Drawing.Size(16, 20)
-            Me.lblRucClienteGenral.TabIndex = 2
-            Me.lblRucClienteGenral.Values.Text = ".."
-            '
-            'KryptonLabel2
-            '
-            Me.KryptonLabel2.Location = New System.Drawing.Point(490, 5)
-            Me.KryptonLabel2.Name = "KryptonLabel2"
-            Me.KryptonLabel2.Size = New System.Drawing.Size(80, 20)
-            Me.KryptonLabel2.TabIndex = 3
-            Me.KryptonLabel2.Values.Text = "Contabilidad"
+            Me.lblIdClienteGeneral.Location = New System.Drawing.Point(313, 3)
+            Me.lblIdClienteGeneral.Name = "lblIdClienteGeneral"
+            Me.lblIdClienteGeneral.Size = New System.Drawing.Size(16, 20)
+            Me.lblIdClienteGeneral.TabIndex = 5
+            Me.lblIdClienteGeneral.Values.Text = ".."
             '
             'lblLlevaContabilidadClienteGeneral
             '
@@ -338,13 +304,29 @@
             Me.lblLlevaContabilidadClienteGeneral.TabIndex = 4
             Me.lblLlevaContabilidadClienteGeneral.Values.Text = ".."
             '
-            'lblIdClienteGeneral
+            'KryptonLabel2
             '
-            Me.lblIdClienteGeneral.Location = New System.Drawing.Point(313, 3)
-            Me.lblIdClienteGeneral.Name = "lblIdClienteGeneral"
-            Me.lblIdClienteGeneral.Size = New System.Drawing.Size(16, 20)
-            Me.lblIdClienteGeneral.TabIndex = 5
-            Me.lblIdClienteGeneral.Values.Text = ".."
+            Me.KryptonLabel2.Location = New System.Drawing.Point(490, 5)
+            Me.KryptonLabel2.Name = "KryptonLabel2"
+            Me.KryptonLabel2.Size = New System.Drawing.Size(80, 20)
+            Me.KryptonLabel2.TabIndex = 3
+            Me.KryptonLabel2.Values.Text = "Contabilidad"
+            '
+            'lblRucClienteGenral
+            '
+            Me.lblRucClienteGenral.Location = New System.Drawing.Point(401, 2)
+            Me.lblRucClienteGenral.Name = "lblRucClienteGenral"
+            Me.lblRucClienteGenral.Size = New System.Drawing.Size(16, 20)
+            Me.lblRucClienteGenral.TabIndex = 2
+            Me.lblRucClienteGenral.Values.Text = ".."
+            '
+            'KryptonLabel1
+            '
+            Me.KryptonLabel1.Location = New System.Drawing.Point(361, 3)
+            Me.KryptonLabel1.Name = "KryptonLabel1"
+            Me.KryptonLabel1.Size = New System.Drawing.Size(34, 20)
+            Me.KryptonLabel1.TabIndex = 1
+            Me.KryptonLabel1.Values.Text = "RUC"
             '
             'KryptonGroupBox2
             '
@@ -382,70 +364,6 @@
             Me.KryptonGroupBox2.Size = New System.Drawing.Size(617, 372)
             Me.KryptonGroupBox2.TabIndex = 189
             Me.KryptonGroupBox2.Values.Heading = "Facturas"
-            '
-            'KryptonLabel3
-            '
-            Me.KryptonLabel3.Location = New System.Drawing.Point(2, 3)
-            Me.KryptonLabel3.Name = "KryptonLabel3"
-            Me.KryptonLabel3.Size = New System.Drawing.Size(21, 20)
-            Me.KryptonLabel3.TabIndex = 2
-            Me.KryptonLabel3.Values.Text = "Id"
-            '
-            'lblIdFacturaVenta
-            '
-            Me.lblIdFacturaVenta.Location = New System.Drawing.Point(29, 3)
-            Me.lblIdFacturaVenta.Name = "lblIdFacturaVenta"
-            Me.lblIdFacturaVenta.Size = New System.Drawing.Size(16, 20)
-            Me.lblIdFacturaVenta.TabIndex = 3
-            Me.lblIdFacturaVenta.Values.Text = ".."
-            '
-            'KryptonLabel4
-            '
-            Me.KryptonLabel4.Location = New System.Drawing.Point(80, 3)
-            Me.KryptonLabel4.Name = "KryptonLabel4"
-            Me.KryptonLabel4.Size = New System.Drawing.Size(34, 20)
-            Me.KryptonLabel4.TabIndex = 4
-            Me.KryptonLabel4.Values.Text = "Tipo"
-            '
-            'lblTipoPagoFacturaCompra
-            '
-            Me.lblTipoPagoFacturaCompra.Location = New System.Drawing.Point(123, 2)
-            Me.lblTipoPagoFacturaCompra.Name = "lblTipoPagoFacturaCompra"
-            Me.lblTipoPagoFacturaCompra.Size = New System.Drawing.Size(16, 20)
-            Me.lblTipoPagoFacturaCompra.TabIndex = 5
-            Me.lblTipoPagoFacturaCompra.Values.Text = ".."
-            '
-            'KryptonLabel5
-            '
-            Me.KryptonLabel5.Location = New System.Drawing.Point(1, 29)
-            Me.KryptonLabel5.Name = "KryptonLabel5"
-            Me.KryptonLabel5.Size = New System.Drawing.Size(46, 20)
-            Me.KryptonLabel5.TabIndex = 6
-            Me.KryptonLabel5.Values.Text = "Buscar"
-            '
-            'KryptonLabel6
-            '
-            Me.KryptonLabel6.Location = New System.Drawing.Point(187, 3)
-            Me.KryptonLabel6.Name = "KryptonLabel6"
-            Me.KryptonLabel6.Size = New System.Drawing.Size(53, 20)
-            Me.KryptonLabel6.TabIndex = 27
-            Me.KryptonLabel6.Values.Text = "No Fact"
-            '
-            'lblNumeroFacturaVenta
-            '
-            Me.lblNumeroFacturaVenta.Location = New System.Drawing.Point(256, 3)
-            Me.lblNumeroFacturaVenta.Name = "lblNumeroFacturaVenta"
-            Me.lblNumeroFacturaVenta.Size = New System.Drawing.Size(17, 20)
-            Me.lblNumeroFacturaVenta.TabIndex = 28
-            Me.lblNumeroFacturaVenta.Values.Text = "0"
-            '
-            'KryptonLabel7
-            '
-            Me.KryptonLabel7.Location = New System.Drawing.Point(187, 29)
-            Me.KryptonLabel7.Name = "KryptonLabel7"
-            Me.KryptonLabel7.Size = New System.Drawing.Size(65, 20)
-            Me.KryptonLabel7.TabIndex = 29
-            Me.KryptonLabel7.Values.Text = "Fecha Emi"
             '
             'KryptonLabel13
             '
@@ -494,6 +412,70 @@
             Me.KryptonLabel9.Size = New System.Drawing.Size(75, 20)
             Me.KryptonLabel9.TabIndex = 205
             Me.KryptonLabel9.Values.Text = "SubTotal 12"
+            '
+            'KryptonLabel7
+            '
+            Me.KryptonLabel7.Location = New System.Drawing.Point(187, 29)
+            Me.KryptonLabel7.Name = "KryptonLabel7"
+            Me.KryptonLabel7.Size = New System.Drawing.Size(65, 20)
+            Me.KryptonLabel7.TabIndex = 29
+            Me.KryptonLabel7.Values.Text = "Fecha Emi"
+            '
+            'lblNumeroFacturaVenta
+            '
+            Me.lblNumeroFacturaVenta.Location = New System.Drawing.Point(256, 3)
+            Me.lblNumeroFacturaVenta.Name = "lblNumeroFacturaVenta"
+            Me.lblNumeroFacturaVenta.Size = New System.Drawing.Size(17, 20)
+            Me.lblNumeroFacturaVenta.TabIndex = 28
+            Me.lblNumeroFacturaVenta.Values.Text = "0"
+            '
+            'KryptonLabel6
+            '
+            Me.KryptonLabel6.Location = New System.Drawing.Point(187, 3)
+            Me.KryptonLabel6.Name = "KryptonLabel6"
+            Me.KryptonLabel6.Size = New System.Drawing.Size(53, 20)
+            Me.KryptonLabel6.TabIndex = 27
+            Me.KryptonLabel6.Values.Text = "No Fact"
+            '
+            'KryptonLabel5
+            '
+            Me.KryptonLabel5.Location = New System.Drawing.Point(1, 29)
+            Me.KryptonLabel5.Name = "KryptonLabel5"
+            Me.KryptonLabel5.Size = New System.Drawing.Size(46, 20)
+            Me.KryptonLabel5.TabIndex = 6
+            Me.KryptonLabel5.Values.Text = "Buscar"
+            '
+            'lblTipoPagoFacturaCompra
+            '
+            Me.lblTipoPagoFacturaCompra.Location = New System.Drawing.Point(123, 2)
+            Me.lblTipoPagoFacturaCompra.Name = "lblTipoPagoFacturaCompra"
+            Me.lblTipoPagoFacturaCompra.Size = New System.Drawing.Size(16, 20)
+            Me.lblTipoPagoFacturaCompra.TabIndex = 5
+            Me.lblTipoPagoFacturaCompra.Values.Text = ".."
+            '
+            'KryptonLabel4
+            '
+            Me.KryptonLabel4.Location = New System.Drawing.Point(80, 3)
+            Me.KryptonLabel4.Name = "KryptonLabel4"
+            Me.KryptonLabel4.Size = New System.Drawing.Size(34, 20)
+            Me.KryptonLabel4.TabIndex = 4
+            Me.KryptonLabel4.Values.Text = "Tipo"
+            '
+            'lblIdFacturaVenta
+            '
+            Me.lblIdFacturaVenta.Location = New System.Drawing.Point(29, 3)
+            Me.lblIdFacturaVenta.Name = "lblIdFacturaVenta"
+            Me.lblIdFacturaVenta.Size = New System.Drawing.Size(16, 20)
+            Me.lblIdFacturaVenta.TabIndex = 3
+            Me.lblIdFacturaVenta.Values.Text = ".."
+            '
+            'KryptonLabel3
+            '
+            Me.KryptonLabel3.Location = New System.Drawing.Point(2, 3)
+            Me.KryptonLabel3.Name = "KryptonLabel3"
+            Me.KryptonLabel3.Size = New System.Drawing.Size(21, 20)
+            Me.KryptonLabel3.TabIndex = 2
+            Me.KryptonLabel3.Values.Text = "Id"
             '
             'FormAjustarFacturasVenta
             '

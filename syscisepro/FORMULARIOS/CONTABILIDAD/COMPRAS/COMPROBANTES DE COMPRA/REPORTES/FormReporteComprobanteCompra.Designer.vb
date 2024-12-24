@@ -67,28 +67,11 @@
             'KryptonNavigator1
             '
             Me.KryptonNavigator1.Button.ButtonDisplayLogic = ComponentFactory.Krypton.Navigator.ButtonDisplayLogic.None
-            Me.KryptonNavigator1.Button.CloseButtonAction = ComponentFactory.Krypton.Navigator.CloseButtonAction.RemovePageAndDispose
             Me.KryptonNavigator1.Button.CloseButtonDisplay = ComponentFactory.Krypton.Navigator.ButtonDisplay.Hide
-            Me.KryptonNavigator1.Button.ContextButtonAction = ComponentFactory.Krypton.Navigator.ContextButtonAction.SelectPage
-            Me.KryptonNavigator1.Button.ContextButtonDisplay = ComponentFactory.Krypton.Navigator.ButtonDisplay.Logic
-            Me.KryptonNavigator1.Button.ContextMenuMapImage = ComponentFactory.Krypton.Navigator.MapKryptonPageImage.Small
-            Me.KryptonNavigator1.Button.ContextMenuMapText = ComponentFactory.Krypton.Navigator.MapKryptonPageText.TextTitle
-            Me.KryptonNavigator1.Button.NextButtonAction = ComponentFactory.Krypton.Navigator.DirectionButtonAction.ModeAppropriateAction
-            Me.KryptonNavigator1.Button.NextButtonDisplay = ComponentFactory.Krypton.Navigator.ButtonDisplay.Logic
-            Me.KryptonNavigator1.Button.PreviousButtonAction = ComponentFactory.Krypton.Navigator.DirectionButtonAction.ModeAppropriateAction
-            Me.KryptonNavigator1.Button.PreviousButtonDisplay = ComponentFactory.Krypton.Navigator.ButtonDisplay.Logic
             Me.KryptonNavigator1.Dock = System.Windows.Forms.DockStyle.Fill
-            Me.KryptonNavigator1.Group.GroupBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.ControlClient
-            Me.KryptonNavigator1.Group.GroupBorderStyle = ComponentFactory.Krypton.Toolkit.PaletteBorderStyle.ControlClient
-            Me.KryptonNavigator1.Header.HeaderStyleBar = ComponentFactory.Krypton.Toolkit.HeaderStyle.Secondary
-            Me.KryptonNavigator1.Header.HeaderStylePrimary = ComponentFactory.Krypton.Toolkit.HeaderStyle.Primary
-            Me.KryptonNavigator1.Header.HeaderStyleSecondary = ComponentFactory.Krypton.Toolkit.HeaderStyle.Secondary
             Me.KryptonNavigator1.Location = New System.Drawing.Point(0, 0)
             Me.KryptonNavigator1.Name = "KryptonNavigator1"
-            Me.KryptonNavigator1.NavigatorMode = ComponentFactory.Krypton.Navigator.NavigatorMode.BarTabGroup
-            Me.KryptonNavigator1.PageBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.ControlClient
             Me.KryptonNavigator1.Pages.AddRange(New ComponentFactory.Krypton.Navigator.KryptonPage() {Me.reporte1, Me.reporte2})
-            Me.KryptonNavigator1.Panel.PanelBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.PanelClient
             Me.KryptonNavigator1.SelectedIndex = 0
             Me.KryptonNavigator1.Size = New System.Drawing.Size(792, 671)
             Me.KryptonNavigator1.TabIndex = 2
@@ -104,7 +87,6 @@
             Me.reporte1.Name = "reporte1"
             Me.reporte1.Size = New System.Drawing.Size(790, 644)
             Me.reporte1.Text = "Reporte 1"
-            Me.reporte1.ToolTipStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.ToolTip
             Me.reporte1.ToolTipTitle = "Page ToolTip"
             Me.reporte1.UniqueName = "F7990784E53E44CC669371C96A36F93B"
             '
@@ -118,7 +100,6 @@
             Me.reporte2.Name = "reporte2"
             Me.reporte2.Size = New System.Drawing.Size(790, 644)
             Me.reporte2.Text = "Reporte 2"
-            Me.reporte2.ToolTipStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.ToolTip
             Me.reporte2.ToolTipTitle = "Page ToolTip"
             Me.reporte2.UniqueName = "07F3F7733153425D7C8171E10751E838"
             '

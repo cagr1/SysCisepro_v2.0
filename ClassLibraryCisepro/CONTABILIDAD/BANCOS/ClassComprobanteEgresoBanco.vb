@@ -118,6 +118,14 @@ Namespace CONTABILIDAD.BANCOS
             Return ds
         End Function
 
+
+        Public Function BuscarComporbanteEgresoBancoxIdComprobanteNumeroRegistro2(ByVal tipoCon As TipoConexion, ByVal numeroRegistro As Int64) As DataSet
+            Dim gere = ComandosSql.SeleccionarQueryToDataAdapter(tipoCon, "SELECT * FROM dbo.ASIENTOS_LIBRO_DIARIO WHERE NUMERO_REGISTRO_ASIENTO=" + numeroRegistro.ToString, False)
+            Dim ds = New DataSet()
+            gere.Fill(ds, "ASIENTOS_LIBRO_DIARIO")
+            Return ds
+        End Function
+
         Public Function BuscarReporteComprobantesEgresoBancoMachalaXIdComprobanteNumeroRegistro(ByVal tipoCon As TipoConexion, ByVal idCeBanco As Integer, ByVal numeroRegistro As Int64) As DataSet
             Dim pars = New List(Of Object())
             pars.Add(New Object() {"ID_COMPROBANTE_EGRESO_BANCOS", SqlDbType.BigInt, idCeBanco})

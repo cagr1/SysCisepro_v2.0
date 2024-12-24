@@ -48,6 +48,7 @@ Namespace FORMULARIOS.CONTABILIDAD.AUXILIARES
                 dgvSolicitudes.DataSource = _objSolC.SeleccionarSolicitudesXIdLiquidacion(_tipoCon, idLiquidacion)
                 dgvSolicitudes.AutoResizeColumns()
                 dgvSolicitudes.AutoResizeRows()
+                dgvSolicitudes.Columns(4).Width = 50
             Catch
                 dgvSolicitudes.DataSource = Nothing
             End Try

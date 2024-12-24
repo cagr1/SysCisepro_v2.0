@@ -983,7 +983,7 @@
             Me.dgvAsientoDiarioIngreso.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
             Me.dgvAsientoDiarioIngreso.RowHeadersVisible = False
             Me.dgvAsientoDiarioIngreso.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvAsientoDiarioIngreso.Size = New System.Drawing.Size(407, 86)
+            Me.dgvAsientoDiarioIngreso.Size = New System.Drawing.Size(407, 103)
             Me.dgvAsientoDiarioIngreso.TabIndex = 119
             '
             'lblIdComprobanteIngresoBanco
@@ -2368,7 +2368,7 @@
             '
             Me.KryptonGroupBox14.Panel.Controls.Add(Me.dgvAsientoDiarioIngreso)
             Me.KryptonGroupBox14.Panel.Controls.Add(Me.DataGridView5)
-            Me.KryptonGroupBox14.Size = New System.Drawing.Size(411, 110)
+            Me.KryptonGroupBox14.Size = New System.Drawing.Size(411, 127)
             Me.KryptonGroupBox14.TabIndex = 118
             Me.KryptonGroupBox14.Values.Heading = "Asiento Diario"
             '
@@ -2410,7 +2410,7 @@
             Me.DataGridView5.RowHeadersVisible = False
             Me.DataGridView5.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal
             Me.DataGridView5.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.DataGridView5.Size = New System.Drawing.Size(407, 86)
+            Me.DataGridView5.Size = New System.Drawing.Size(407, 103)
             Me.DataGridView5.TabIndex = 118
             '
             'KryptonGroupBox11

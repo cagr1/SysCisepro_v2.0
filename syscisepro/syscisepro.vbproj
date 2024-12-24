@@ -799,6 +799,12 @@
     <Compile Include="FORMULARIOS\CONTABILIDAD\BANCOS\REPORTES\FormReporteComprobanteIngresoBancos.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FORMULARIOS\CONTABILIDAD\BANCOS\REPORTES\FormReporteTodo.Designer.vb">
+      <DependentUpon>FormReporteTodo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORMULARIOS\CONTABILIDAD\BANCOS\REPORTES\FormReporteTodo.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FORMULARIOS\CONTABILIDAD\BANCOS\REPORTES\FrmBuscarClientesFacturaImpagaGeneral.Designer.vb">
       <DependentUpon>FrmBuscarClientesFacturaImpagaGeneral.vb</DependentUpon>
     </Compile>
@@ -2699,6 +2705,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FORMULARIOS\CONTABILIDAD\BANCOS\REPORTES\FormReporteComprobanteIngresoBancos.resx">
       <DependentUpon>FormReporteComprobanteIngresoBancos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMULARIOS\CONTABILIDAD\BANCOS\REPORTES\FormReporteTodo.resx">
+      <DependentUpon>FormReporteTodo.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FORMULARIOS\CONTABILIDAD\BANCOS\REPORTES\FrmBuscarClientesFacturaImpagaGeneral.resx">
       <DependentUpon>FrmBuscarClientesFacturaImpagaGeneral.vb</DependentUpon>

@@ -509,7 +509,7 @@
             Me.lblCodigoFormasPago.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.lblCodigoFormasPago.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.lblCodigoFormasPago.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
-            Me.lblCodigoFormasPago.Location = New System.Drawing.Point(372, 243)
+            Me.lblCodigoFormasPago.Location = New System.Drawing.Point(367, 219)
             Me.lblCodigoFormasPago.Name = "lblCodigoFormasPago"
             Me.lblCodigoFormasPago.Size = New System.Drawing.Size(13, 13)
             Me.lblCodigoFormasPago.TabIndex = 3
@@ -549,7 +549,7 @@
             Me.lblCodigoCuentaConcepto.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.lblCodigoCuentaConcepto.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.lblCodigoCuentaConcepto.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
-            Me.lblCodigoCuentaConcepto.Location = New System.Drawing.Point(372, 219)
+            Me.lblCodigoCuentaConcepto.Location = New System.Drawing.Point(367, 244)
             Me.lblCodigoCuentaConcepto.Name = "lblCodigoCuentaConcepto"
             Me.lblCodigoCuentaConcepto.Size = New System.Drawing.Size(16, 13)
             Me.lblCodigoCuentaConcepto.TabIndex = 1

@@ -100,12 +100,12 @@
             'crvReporteVentas
             '
             Me.crvReporteVentas.ActiveViewIndex = -1
-            Me.crvReporteVentas.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
             Me.crvReporteVentas.Cursor = System.Windows.Forms.Cursors.Default
             Me.crvReporteVentas.Dock = System.Windows.Forms.DockStyle.Fill
             Me.crvReporteVentas.Location = New System.Drawing.Point(3, 16)
             Me.crvReporteVentas.Name = "crvReporteVentas"
             Me.crvReporteVentas.ShowCloseButton = False
+            Me.crvReporteVentas.ShowLogo = False
             Me.crvReporteVentas.Size = New System.Drawing.Size(1012, 629)
             Me.crvReporteVentas.TabIndex = 0
             Me.crvReporteVentas.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None
@@ -114,7 +114,7 @@
             '
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-            Me.BackColor = System.Drawing.Color.White
+            Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(185, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(227, Byte), Integer))
             Me.ClientSize = New System.Drawing.Size(1018, 696)
             Me.Controls.Add(Me.GroupBox2)
             Me.Controls.Add(Me.GroupBox1)
