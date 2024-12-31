@@ -183,7 +183,10 @@ namespace SysCisepro3.TalentoHumano
             //Image resizeBcoPichincha = new Bitmap(orginalBcoPichicha, new Size(btnBizPichincha.Width, btnBizPichincha.Height));
             //btnBizPichincha.Image = resizeBcoPichincha;
             //btnBizPichincha.ImageAlign = ContentAlignment.MiddleCenter;
-
+            metroTabControl1.BackgroundColor = Color.FromArgb(239, 246, 253);
+            metroTabPage1.BaseColor = Color.FromArgb(239, 246, 253);
+            metroTabPage2.BaseColor = Color.FromArgb(239, 246, 253);
+            metroTabPage3.BaseColor = Color.FromArgb(239, 246, 253);
             ComboColumnas(); 
         }
 
@@ -941,7 +944,7 @@ namespace SysCisepro3.TalentoHumano
                         cbxGrupo.Items.Add(row[0]);
 
                     if (cbxGrupo.Items.Count > 0) cbxGrupo.SelectedIndex = 0;
-                    cbxGrupo.DropDownWidth = 350;
+                    cbxGrupo.DropDownWidth = 450;
                     cbxGrupo.Enabled = _estado == 1;
                 }
                 else if ((cbxTipo.SelectedIndex == 1))  //  admin

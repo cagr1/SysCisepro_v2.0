@@ -877,7 +877,8 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                 End If
 
             Else
-                MsgBox("No se puede guardar." & vbNewLine & "NO SE HAN LLENADO TODOS LOS CAMPOS NECESARIOS.", MsgBoxStyle.Exclamation, "Mensaje de validación")
+                'MsgBox("No se puede guardar." & vbNewLine & "NO SE HAN LLENADO TODOS LOS CAMPOS NECESARIOS.", MsgBoxStyle.Exclamation, "Mensaje de validación")
+                KryptonMessageBox.Show("No se puede guardar." & vbNewLine & "NO SE HAN LLENADO TODOS LOS CAMPOS NECESARIOS.", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
             End If
 
         End Sub
@@ -1127,7 +1128,8 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                     DialogResult = formAsientoDiario.ShowDialog
                 End If
             Catch ex As Exception
-                MessageBox.Show("Error al cargar asiento de venta! " & vbNewLine & ex.Message)
+                'MessageBox.Show("Error al cargar asiento de venta! " & vbNewLine & ex.Message)
+                KryptonMessageBox.Show("Error al cargar asiento de venta! " & vbNewLine & ex.Message, "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
 
@@ -1249,7 +1251,8 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
 
             ' GUARDAR DIRECCIONES
             If Label44.Text = "..." Then Return
-            If MessageBox.Show("¿ESTA SEGURA QUE DESEA GUARDAR LOS CAMBIOS?", "Mensaje de validación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> DialogResult.Yes Then Return
+            'If MessageBox.Show("¿ESTA SEGURA QUE DESEA GUARDAR LOS CAMBIOS?", "Mensaje de validación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> DialogResult.Yes Then Return
+            If KryptonMessageBox.Show("¿Esta segura que desea guardar los cambios?", "Mensaje de validación", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) <> DialogResult.Yes Then Return
             _sqlCommands.Clear()
 
             Dim id = _objetoDireccionesFacturacion.BuscarMayorIdDireccionFacturacion(_tipoCon) + 1
@@ -1279,8 +1282,13 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                 ToolStripMenuItem16.Enabled = False
                 Button2.Enabled = False
                 ToolStripMenuItem9.PerformClick()
+                KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
+            Else
+                KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+                Return
             End If
-            MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
+            'End If
+            'MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
         End Sub
 
         Private Sub ToolStripMenuItem14_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ToolStripMenuItem14.Click

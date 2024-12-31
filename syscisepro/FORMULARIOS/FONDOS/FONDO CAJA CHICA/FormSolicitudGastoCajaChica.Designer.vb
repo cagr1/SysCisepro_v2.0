@@ -486,7 +486,6 @@
             '
             Me.cbmCombustible.BackColor = System.Drawing.Color.White
             Me.cbmCombustible.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-            Me.cbmCombustible.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.cbmCombustible.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cbmCombustible.FormattingEnabled = True
             Me.cbmCombustible.Location = New System.Drawing.Point(304, 9)
@@ -759,7 +758,6 @@
             Me.cbmProvincia.BackColor = System.Drawing.Color.White
             Me.cbmProvincia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cbmProvincia.Enabled = False
-            Me.cbmProvincia.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.cbmProvincia.FormattingEnabled = True
             Me.cbmProvincia.Location = New System.Drawing.Point(76, 73)
             Me.cbmProvincia.Name = "cbmProvincia"

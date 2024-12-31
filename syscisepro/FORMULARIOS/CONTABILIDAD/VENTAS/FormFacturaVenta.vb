@@ -780,7 +780,8 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
         Private Sub btnModificar_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnModificar.Click
             If Not cbxConvenio.DataSource Is Nothing Then
                 If cbxConvenio.Items.Count > 1 And cbxConvenio.SelectedIndex = 0 Then
-                    MessageBox.Show("SELECCIONE EL CONVENIO DÉBTIO BANCO!!", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                    'MessageBox.Show("SELECCIONE EL CONVENIO DÉBTIO BANCO!!", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                    KryptonMessageBox.Show("Seleccione el convenio débito banco!!", "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                     Return
                 End If
             End If

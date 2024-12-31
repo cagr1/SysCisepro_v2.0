@@ -7,6 +7,7 @@ Imports ClassLibraryCisepro.VALIDACIONES
 Imports Microsoft.Office.Interop
 Imports syscisepro.DATOS
 Imports syscisepro.FORMULARIOS.INVENTARIOS.PROCESO
+Imports Krypton.Toolkit
 
 Namespace FORMULARIOS.DIVISION_GEOGRÁFICA
     ''' <summary>
@@ -65,7 +66,7 @@ Namespace FORMULARIOS.DIVISION_GEOGRÁFICA
             cbmGrupo.DataSource = data
             cbmGrupo.DisplayMember = "grupo"
             cbmGrupo.ValueMember = "grupo"
-            cbmGrupo.DropDownWidth = 180
+            cbmGrupo.DropDownWidth = 450
         End Sub
 
         Private Sub CargarSitiosClienteGeneral(ByVal filtro As String, ByVal selId As Int32)
@@ -210,23 +211,27 @@ Namespace FORMULARIOS.DIVISION_GEOGRÁFICA
         Private Sub ToolStripMenuItem4_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnGuardarSitio.Click
             Try
                 If Label23.Text = "..." Or txtCiRuc.Text.Trim.Length = 0 Then
-                    MessageBox.Show("Por favor, seleccione un cliente para este sitio / punto!", "VALIDACION DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                    'MessageBox.Show("Por favor, seleccione un cliente para este sitio / punto!", "VALIDACION DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                    KryptonMessageBox.Show("Por favor, seleccione un cliente para este sitio / punto!", "VALIDACION DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                     Return
                 End If
 
                 If txtRiver.Text.Trim.Length = 0 Then
-                    MessageBox.Show("Por favor, asigne el número de river para este sitio / punto!", "VALIDACION DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                    'MessageBox.Show("Por favor, asigne el número de river para este sitio / punto!", "VALIDACION DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                    KryptonMessageBox.Show("Por favor, asigne el número de river para este sitio / punto!", "VALIDACION DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                     Return
                 End If
 
                 Dim s = _objetoSitio.ExisteNumeroRiverActivo(_tipoCon, Label28.Text.Trim, txtRiver.Text.Trim)
                 If s.Trim.Length > 0 Then
-                    MessageBox.Show("El N° de river que intenta regisrar ya está asignado al sitio: " & s, "VALIDACION DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                    'MessageBox.Show("El N° de river que intenta regisrar ya está asignado al sitio: " & s, "VALIDACION DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                    KryptonMessageBox.Show("El N° de river que intenta regisrar ya está asignado al sitio: " & s, "VALIDACION DEL SISTEMA", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                     Return
                 End If
                 _sqlCommands.Clear()
 
-                If MessageBox.Show("Desea guardar los cambios realizados?", "VALIDACION DEL SISTEMA", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) <> DialogResult.Yes Then Return
+                'If MessageBox.Show("Desea guardar los cambios realizados?", "VALIDACION DEL SISTEMA", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) <> DialogResult.Yes Then Return
+                If KryptonMessageBox.Show("Desea guardar los cambios realizados?", "VALIDACION DEL SISTEMA", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Exclamation) <> DialogResult.Yes Then Return
 
                 If cbmGrupo.SelectedValue Is Nothing Then
                     Dim g = _objetoSitio.SeleccionarGruposSitioTrabajo(_tipoCon, cbmGrupo.Text)
@@ -332,11 +337,17 @@ Namespace FORMULARIOS.DIVISION_GEOGRÁFICA
 
                     _botonSeleccionadoSitio = 0
                     CargarSitiosClienteGeneral(txtFiltro.Text.Trim, _objetoSitio.Id)
+                    KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
+                Else
+                    KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+                    Return
                 End If
-                MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
+                'End If
+                'MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
 
             Catch ex As Exception
-                MsgBox("ERROR AL GUARDAR SITIO DE TRABAJO: " & ex.Message, MsgBoxStyle.Exclamation, "Mensaje de validación")
+                'MsgBox("ERROR AL GUARDAR SITIO DE TRABAJO: " & ex.Message, MsgBoxStyle.Exclamation, "Mensaje de validación")
+                KryptonMessageBox.Show("Error al guardar sitio de trabajo: " & ex.Message, "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
 
@@ -394,31 +405,38 @@ Namespace FORMULARIOS.DIVISION_GEOGRÁFICA
         End Sub
 
         Private Sub ToolStripMenuItem6_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnAnularSitio.Click
-            If MessageBox.Show("Seguro que desea anular este Sitio de Trabajo?", "ANULAR SITIO", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
-                _sqlCommands.Clear()
 
-                With _objetoSitio
-                    .Id = Label28.Text
-                    .Estado = 0
-                End With
-                _sqlCommands.Add(_objetoSitio.ModificarEstadoSitioTrabajoCommand())
+            'If MessageBox.Show("Seguro que desea anular este Sitio de Trabajo?", "ANULAR SITIO", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
+            If KryptonMessageBox.Show("Seguro que desea anular este Sitio de Trabajo?", "ANULAR SITIO", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) = DialogResult.Yes Then
+                    _sqlCommands.Clear()
 
-                Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, String.Empty)
-                If res(0) Then
-                    _botonSeleccionadoSitio = 0
+                    With _objetoSitio
+                        .Id = Label28.Text
+                        .Estado = 0
+                    End With
+                    _sqlCommands.Add(_objetoSitio.ModificarEstadoSitioTrabajoCommand())
 
-                    btnCargarSitios.Enabled = True ' cargar
-                    btnNuevoSitio.Enabled = True ' nuevo
-                    btnGuardarSitio.Enabled = False ' guardar
-                    btnActualizarSitio.Enabled = ListView1.SelectedItems.Count > 0 ' catualizar
-                    btnAnularSitio.Enabled = ListView1.SelectedItems.Count > 0 ' anular
-                    btnCancelarSitio.Enabled = False ' cancelar
-                    btnExportarSitio.Enabled = ListView1.Items.Count > 0 ' exportar
+                    Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, String.Empty)
+                    If res(0) Then
+                        _botonSeleccionadoSitio = 0
 
-                    CargarSitiosClienteGeneral("", 0)
+                        btnCargarSitios.Enabled = True ' cargar
+                        btnNuevoSitio.Enabled = True ' nuevo
+                        btnGuardarSitio.Enabled = False ' guardar
+                        btnActualizarSitio.Enabled = ListView1.SelectedItems.Count > 0 ' catualizar
+                        btnAnularSitio.Enabled = ListView1.SelectedItems.Count > 0 ' anular
+                        btnCancelarSitio.Enabled = False ' cancelar
+                        btnExportarSitio.Enabled = ListView1.Items.Count > 0 ' exportar
+
+                        CargarSitiosClienteGeneral("", 0)
+                        KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
+                    Else
+                        KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+                        Return
+                    End If
+                    'End If
+                    'MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
                 End If
-                MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
-            End If
         End Sub
 
         Private Sub ToolStripMenuItem7_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnCancelarSitio.Click
@@ -784,10 +802,8 @@ Namespace FORMULARIOS.DIVISION_GEOGRÁFICA
             MenuStrip1.ForeColor = Color.White
             'MenuStrip1.BackColor = ValidationForms.GetColorSistema(_tipoCon)
 
-            Label32.ForeColor = Color.White
-            Label32.BackColor = ValidationForms.GetColorSistema(_tipoCon)
-            Label33.ForeColor = Color.White
-            Label33.BackColor = ValidationForms.GetColorSistema(_tipoCon)
+
+
             Select Case _tipoCon
                 Case TipoConexion.Asenava
                     Icon = My.Resources.logo_a

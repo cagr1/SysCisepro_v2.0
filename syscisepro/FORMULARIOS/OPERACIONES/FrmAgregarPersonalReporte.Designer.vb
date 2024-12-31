@@ -176,7 +176,7 @@
             Me.bntHorarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.bntHorarios.Font = New System.Drawing.Font("Consolas", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.bntHorarios.Image = Global.syscisepro.My.Resources.Resources.calendar_month_24dp_FILL0_wght400_GRAD0_opsz24__2_
-            Me.bntHorarios.Location = New System.Drawing.Point(640, 121)
+            Me.bntHorarios.Location = New System.Drawing.Point(640, 120)
             Me.bntHorarios.Name = "bntHorarios"
             Me.bntHorarios.Size = New System.Drawing.Size(26, 26)
             Me.bntHorarios.TabIndex = 194
@@ -505,7 +505,7 @@
             Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.Button2.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Button2.ForeColor = System.Drawing.Color.White
-            Me.Button2.Location = New System.Drawing.Point(598, 275)
+            Me.Button2.Location = New System.Drawing.Point(598, 272)
             Me.Button2.Name = "Button2"
             Me.Button2.Size = New System.Drawing.Size(89, 34)
             Me.Button2.TabIndex = 199
@@ -520,7 +520,7 @@
             Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.Button1.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Button1.ForeColor = System.Drawing.Color.White
-            Me.Button1.Location = New System.Drawing.Point(490, 275)
+            Me.Button1.Location = New System.Drawing.Point(490, 272)
             Me.Button1.Name = "Button1"
             Me.Button1.Size = New System.Drawing.Size(89, 34)
             Me.Button1.TabIndex = 198
@@ -531,7 +531,7 @@
             '
             Me.KryptonGroupBox1.CaptionOverlap = 0R
             Me.KryptonGroupBox1.GroupBackStyle = Krypton.Toolkit.PaletteBackStyle.ControlRibbon
-            Me.KryptonGroupBox1.Location = New System.Drawing.Point(1, 12)
+            Me.KryptonGroupBox1.Location = New System.Drawing.Point(1, 8)
             Me.KryptonGroupBox1.Name = "KryptonGroupBox1"
             '
             'KryptonGroupBox1.Panel

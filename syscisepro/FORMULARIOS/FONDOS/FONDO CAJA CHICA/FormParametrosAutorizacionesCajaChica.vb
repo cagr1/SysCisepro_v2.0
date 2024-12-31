@@ -184,7 +184,8 @@ Namespace FORMULARIOS.FONDOS.FONDO_CAJA_CHICA
                     End If
 
                 Else
-                    MsgBox("No se pudo actualizar el estado del Responsable de Autorización sino selecciona un registro válido", MsgBoxStyle.Information, "Mensaje d Información")
+                'MsgBox("No se pudo actualizar el estado del Responsable de Autorización sino selecciona un registro válido", MsgBoxStyle.Information, "Mensaje d Información")
+                KryptonMessageBox.Show("No se pudo actualizar el estado del Responsable de Autorización sino selecciona un registro válido", "Mensaje de información", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
             End If 
         End Sub
       

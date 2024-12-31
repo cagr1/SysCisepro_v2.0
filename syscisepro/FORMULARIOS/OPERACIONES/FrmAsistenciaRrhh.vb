@@ -6,6 +6,7 @@ Imports ClassLibraryCisepro.TALENTO_HUMANO
 Imports Microsoft.Office.Interop
 Imports syscisepro.DATOS
 Imports syscisepro.FORMULARIOS.INVENTARIOS.PROCESO
+Imports Krypton.Toolkit
 
 Namespace FORMULARIOS.OPERACIONES
     ''' <summary>
@@ -58,16 +59,10 @@ Namespace FORMULARIOS.OPERACIONES
             Select Case _tipoCon
                 Case TipoConexion.Asenava
                     Icon = My.Resources.logo_a
-                    MenuStrip1.ForeColor = Color.White
-                    'MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorAsenava
-                    MenuStrip2.ForeColor = Color.White
+
                     'MenuStrip2.BackColor = My.MySettingsProperty.Settings.ColorAsenava
-                    Label24.ForeColor = Color.White
-                    Label24.BackColor = My.MySettingsProperty.Settings.ColorAsenava
-                    Label2.ForeColor = Color.White
-                    Label2.BackColor = My.MySettingsProperty.Settings.ColorAsenava
-                    Label4.ForeColor = Color.White
-                    Label4.BackColor = My.MySettingsProperty.Settings.ColorAsenava
+
+
                     dgvDia.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorAsenava
                     dgvNoche.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorAsenava
                     DataGridView1.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorAsenava
@@ -78,15 +73,10 @@ Namespace FORMULARIOS.OPERACIONES
                 Case TipoConexion.Seportpac
                     Icon = My.Resources.logo_s
                     'MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
-                    MenuStrip1.ForeColor = Color.White
-                    MenuStrip2.ForeColor = Color.White
+
                     'MenuStrip2.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
-                    Label24.ForeColor = Color.White
-                    Label24.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
-                    Label2.ForeColor = Color.White
-                    Label2.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
-                    Label4.ForeColor = Color.White
-                    Label4.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
+
+
                     dgvDia.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorSeportpac
                     dgvNoche.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorSeportpac
                     DataGridView1.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorSeportpac
@@ -97,15 +87,10 @@ Namespace FORMULARIOS.OPERACIONES
                 Case Else
                     Icon = My.Resources.logo_c
                     'MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorCisepro
-                    MenuStrip1.ForeColor = Color.White
-                    MenuStrip2.ForeColor = Color.White
+
                     'MenuStrip2.BackColor = My.MySettingsProperty.Settings.ColorCisepro
-                    Label24.ForeColor = Color.White
-                    Label24.BackColor = My.MySettingsProperty.Settings.ColorCisepro
-                    Label2.ForeColor = Color.White
-                    Label2.BackColor = My.MySettingsProperty.Settings.ColorCisepro
-                    Label4.ForeColor = Color.White
-                    Label4.BackColor = My.MySettingsProperty.Settings.ColorCisepro
+
+
                     dgvDia.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
                     dgvNoche.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
                     DataGridView1.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
@@ -121,6 +106,8 @@ Namespace FORMULARIOS.OPERACIONES
             dgvDecimo3.Font = New Font("Roboto", 8, FontStyle.Regular)
             dgvDecimo4.Font = New Font("Roboto", 8, FontStyle.Regular)
             dgvBuscarUtilidades.Font = New Font("Roboto", 8, FontStyle.Regular)
+            dgvUtilidades.Font = New Font("Roboto", 8, FontStyle.Regular)
+            DataGridView3.Font = New Font("Roboto", 8, FontStyle.Regular)
             _indices3 = New List(Of Integer)
             _indices4 = New List(Of Integer)
 
@@ -176,7 +163,8 @@ Namespace FORMULARIOS.OPERACIONES
 
                 Dim ex = _objAsignacionPersonal.SeleccionarProgramacionByIdProgFecha(_tipoCon, prog.Rows(0).Item(0), fechaDesde, fechaHasta)
                 If ex Then
-                    Select Case MessageBox.Show("YA EXISTE un reporte del " & DateTimePicker4.Text & " si pone 'SI' se cargará dicho reporte y podrá continuar los cambios sobre el mismo, si pone 'NO' se cargará un nuevo reporte según el día de la programación correspondiente. Desea cargar los datos del reporte existente? ", "Mensaje del sistema", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question)
+                    ' Select Case MessageBox.Show("YA EXISTE un reporte del " & DateTimePicker4.Text & " si pone 'SI' se cargará dicho reporte y podrá continuar los cambios sobre el mismo, si pone 'NO' se cargará un nuevo reporte según el día de la programación correspondiente. Desea cargar los datos del reporte existente? ", "Mensaje del sistema", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question)
+                    Select Case KryptonMessageBox.Show("Ya existe un reporte del " & DateTimePicker4.Text & " si pone 'SI' se cargará dicho reporte y podrá continuar los cambios sobre el mismo" & vbNewLine & "Si pone 'NO' se cargará un nuevo reporte según el día de la programación correspondiente." & vbNewLine & " Desea cargar los datos del reporte existente? ", "Mensaje del sistema", KryptonMessageBoxButtons.YesNoCancel, KryptonMessageBoxIcon.Question)
                         Case DialogResult.Yes
                             datosd = _objdetaProgramacionOps.SeleccionarDetalleAsistenciaByIdProgramacion(_tipoCon, True, prog.Rows(0).Item(0), dia, ndia, fechaDesde, fechaHasta, jdia, 1)
                             datosn = _objdetaProgramacionOps.SeleccionarDetalleAsistenciaByIdProgramacion(_tipoCon, True, prog.Rows(0).Item(0), dia, ndia, fechaDesde, fechaHasta, jdia, 2)
@@ -272,7 +260,7 @@ Namespace FORMULARIOS.OPERACIONES
                 dgvDia.Columns("RIVER").DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
                 dgvDia.Columns("HORARIO").DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
                 dgvDia.AutoResizeRows()
-                TabControl1.TabPages(0).Text = "DÍA - " & dgvDia.RowCount & " VIGILANTES"
+                MetroTabControl1.TabPages(0).Text = "DÍA - " & dgvDia.RowCount & " VIGILANTES"
 
                 ' noche
                 DeleteColumnsReport(dgvNoche)
@@ -339,7 +327,7 @@ Namespace FORMULARIOS.OPERACIONES
                 dgvNoche.Columns("RIVER2").DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
                 dgvNoche.Columns("HORARIO2").DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
                 dgvNoche.AutoResizeRows()
-                TabControl1.TabPages(1).Text = "NOCHE - " & dgvNoche.RowCount & " VIGILANTES"
+                MetroTabControl1.TabPages(1).Text = "NOCHE - " & dgvNoche.RowCount & " VIGILANTES"
 
                 ' verifica persisos
                 If _cleanRead Then
@@ -422,7 +410,8 @@ Namespace FORMULARIOS.OPERACIONES
                 dgvDia.Rows.Clear()
                 dgvNoche.Rows.Clear()
                 Dim m = If(ex.Message.Contains("fila en la posición 0"), "NO HA REGISTRADO LA PROGRAMACIÓN CORRESPONDIENTE A LA FECHA SELECCIONADA!", ex.Message)
-                MsgBox("ERROR AL CARGAR PROGRAMACIÓN DE HOY: " & vbNewLine & m, MsgBoxStyle.Exclamation, "Mensaje de validación")
+                'MsgBox("ERROR AL CARGAR PROGRAMACIÓN DE HOY: " & vbNewLine & m, MsgBoxStyle.Exclamation, "Mensaje de validación")
+                KryptonMessageBox.Show("ERROR AL CARGAR PROGRAMACIÓN DE HOY: " & vbNewLine & m, "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
             End Try
         End Sub
 
@@ -486,7 +475,8 @@ Namespace FORMULARIOS.OPERACIONES
                     Next
                 End If
             Catch ex As Exception
-                MessageBox.Show("ERROR: En VerificarFaltas() DIA, index:" & r & " , " & ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                'MessageBox.Show("ERROR: En VerificarFaltas() DIA, index:" & r & " , " & ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                KryptonMessageBox.Show("Error: En VerificarFaltas() DIA, index:" & r & " , " & ex.Message, "ERROR", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
             End Try
             Try
                 If dgvNoche.Rows.Count > 0 Then
@@ -510,7 +500,8 @@ Namespace FORMULARIOS.OPERACIONES
                     Next
                 End If
             Catch ex As Exception
-                MessageBox.Show("ERROR: En VerificarFaltas() NOCHE, index:" & r & " , " & ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                'MessageBox.Show("ERROR: En VerificarFaltas() NOCHE, index:" & r & " , " & ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                KryptonMessageBox.Show("ERROR: En VerificarFaltas() NOCHE, index:" & r & " , " & ex.Message, "ERROR", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
             End Try
         End Sub
 
@@ -974,21 +965,23 @@ Namespace FORMULARIOS.OPERACIONES
             Try
 
                 If DateTimePicker8.Value.Year <> DateTimePicker3.Value.Year Then
-                    MessageBox.Show("Rango de consulta debe ser del mismo año!", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    'MessageBox.Show("Rango de consulta debe ser del mismo año!", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    KryptonMessageBox.Show("Rango de consulta debe ser del mismo año!", "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
                     Return
                 End If
 
                 ' select cliente
                 Dim idc = If(txtIdCliente.Text.Trim.Length = 0, 0, CInt(txtIdCliente.Text))
                 If idc = 0 Then
-                    MessageBox.Show("Por favor, seleccione un cliente!", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    'MessageBox.Show("Por favor, seleccione un cliente!", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    KryptonMessageBox.Show("Por favor, seleccione un cliente!", "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
                     Return
                 End If
 
                 ' año - utilidades
-                Dim fechaDesde = DateTimePicker8.Value.Day.ToString & "-" & DateTimePicker8.Value.Month.ToString & "-" & DateTimePicker8.Value.Year.ToString & " 00:00:00"
-                Dim fechaHasta = DateTimePicker3.Value.Day.ToString & "-" & DateTimePicker3.Value.Month.ToString & "-" & DateTimePicker3.Value.Year.ToString & " 23:59:59"
 
+                Dim fechaDesde = DateTimePicker8.Value.ToString("yyyy-MM-dd 00:00:00")
+                Dim fechaHasta = DateTimePicker3.Value.ToString("yyyy-MM-dd 23:59:59")
 
                 ' xiii
                 Dim desdeXiii = New DateTime(DateTimePicker13.Value.Year - 1, 12, 1)
@@ -996,11 +989,14 @@ Namespace FORMULARIOS.OPERACIONES
 
                 ' xiv
                 Dim desdeXiv = New DateTime(DateTimePicker13.Value.Year - 1, 3, 1)
-                Dim hastaXiv = New DateTime(DateTimePicker13.Value.Year, 2, 1).AddMonths(1).AddDays(-1)
+                Dim hastaXiv = New DateTime(DateTimePicker13.Value.Year, 2, 28)
 
+                If DateTime.IsLeapYear(DateTimePicker3.Value.Year) Then
+                    hastaXiv = New DateTime(DateTimePicker13.Value.Year, 2, 29)
+                End If
 
                 dgvUtilidades.Rows.Clear()
-                Dim utilidades = _objAsignacionPersonal.SeleccionarReporteParaUtilidadesByAnio(_tipoCon, DateTimePicker13.Value.Year, desdeXiii.Month, desdeXiii.Day, hastaXiii.Month, hastaXiii.Day, desdeXiv.Month, desdeXiv.Day, hastaXiv.Month, hastaXiv.Day)
+                Dim utilidades = _objAsignacionPersonal.SeleccionarReporteParaUtilidadesByAnio(_tipoCon, fechaDesde, fechaHasta, desdeXiii, hastaXiii, desdeXiv, hastaXiv)
                 Dim gan As String
                 Dim fres As String
                 Dim xiii As String
@@ -1352,7 +1348,8 @@ Namespace FORMULARIOS.OPERACIONES
         Private Sub Button8_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnCargar3.Click
             Try
                 dgvDecimo3.Rows.Clear()
-                Dim vigia = _objAsignacionPersonal.SeleccionarReportePara10Mo3ByAnio(_tipoCon, dtpDecimo3.Value.Year, DateTimePicker9.Value.Month, DateTimePicker9.Value.Day, DateTimePicker10.Value.Month, DateTimePicker10.Value.Day)
+                'Dim vigia = _objAsignacionPersonal.SeleccionarReportePara10Mo3ByAnio(_tipoCon, dtpDecimo3.Value.Year, DateTimePicker9.Value.Month, DateTimePicker9.Value.Day, DateTimePicker10.Value.Month, DateTimePicker10.Value.Day)
+                Dim vigia = _objAsignacionPersonal.SeleccionarReportePara10Mo3ByAnio(_tipoCon, DateTimePicker9.Value, DateTimePicker10.Value)
                 Dim t As String
                 For Each d As DataRow In vigia.Rows
                     t = Convert.ToDecimal(d(5)).ToString("N")
@@ -1480,7 +1477,7 @@ Namespace FORMULARIOS.OPERACIONES
             End Try
         End Sub
 
-        Private Sub Button4_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnExportar3.Click
+        Private Sub Button4_Click(ByVal sender As System.Object, ByVal e As EventArgs)
             Try
                 Dim filePath As String = "10MO3RO_MENSUALIZACION_" & dtpDecimo3.Value.Year & ".csv"
                 Const delimeter = ","
@@ -1510,7 +1507,7 @@ Namespace FORMULARIOS.OPERACIONES
         Private Sub Button14_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnCargar4.Click
             Try
                 dgvDecimo4.Rows.Clear()
-                Dim vigia = _objAsignacionPersonal.SeleccionarReportePara10Mo4ByAnio(_tipoCon, dtpDecimo4.Value.Year, DateTimePicker12.Value.Month, DateTimePicker12.Value.Day, DateTimePicker11.Value.Month, DateTimePicker11.Value.Day)
+                Dim vigia = _objAsignacionPersonal.SeleccionarReportePara10Mo4ByAnio(_tipoCon, DateTimePicker12.Value, DateTimePicker11.Value)
                 For Each d As DataRow In vigia.Rows
                     dgvDecimo4.Rows.Add(d(0), d(1), d(2), d(3), d(4), d(6), d(7), d(8), d(9), d(10), String.Empty, d(11), d(12))
                 Next
@@ -1588,7 +1585,7 @@ Namespace FORMULARIOS.OPERACIONES
             End If
         End Sub
 
-        Private Sub btnExportar4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnExportar4.Click
+        Private Sub btnExportar4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
             Try
                 Dim filePath As String = "10MO4TO_MENSUALIZACION_" & dtpDecimo4.Value.Year & ".csv"
                 Const delimeter = ","

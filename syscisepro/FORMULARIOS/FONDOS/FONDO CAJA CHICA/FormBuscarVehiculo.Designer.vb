@@ -38,7 +38,8 @@
             Me.dgvVehiculos.AllowUserToResizeRows = False
             DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
             Me.dgvVehiculos.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
-            Me.dgvVehiculos.BackgroundColor = System.Drawing.Color.White
+            Me.dgvVehiculos.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(185, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(227, Byte), Integer))
+            Me.dgvVehiculos.BorderStyle = System.Windows.Forms.BorderStyle.None
             Me.dgvVehiculos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
             Me.dgvVehiculos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
             DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
@@ -65,14 +66,14 @@
             Me.txtNombresRecibe.ForeColor = System.Drawing.Color.Black
             Me.txtNombresRecibe.Location = New System.Drawing.Point(6, 3)
             Me.txtNombresRecibe.Name = "txtNombresRecibe"
-            Me.txtNombresRecibe.Size = New System.Drawing.Size(713, 21)
+            Me.txtNombresRecibe.Size = New System.Drawing.Size(406, 21)
             Me.txtNombresRecibe.TabIndex = 9
             '
             'FormBuscarVehiculo
             '
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-            Me.BackColor = System.Drawing.Color.White
+            Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(185, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(227, Byte), Integer))
             Me.ClientSize = New System.Drawing.Size(861, 319)
             Me.Controls.Add(Me.txtNombresRecibe)
             Me.Controls.Add(Me.dgvVehiculos)

@@ -5,6 +5,7 @@ Imports ClassLibraryCisepro.INVENTARIOS.BODEGA
 Imports ClassLibraryCisepro.INVENTARIOS.UBICACIONES
 Imports ClassLibraryCisepro.ProcesosSql
 Imports ClassLibraryCisepro.VALIDACIONES
+Imports Krypton.Toolkit
 
 Namespace FORMULARIOS.INVENTARIOS.PROCESO
     ''' <summary>
@@ -280,7 +281,8 @@ Namespace FORMULARIOS.INVENTARIOS.PROCESO
 
         Private Sub tsmGuardar_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnGuardarCategoría.Click
             If ValidacionParametrosCategorías() Then
-                If MessageBox.Show("¿Esta seguro que desea guardar?", "Mensaje de validación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> MsgBoxResult.Yes Then Return
+                'If MessageBox.Show("¿Esta seguro que desea guardar?", "Mensaje de validación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> MsgBoxResult.Yes Then Return
+                If KryptonMessageBox.Show("¿Esta seguro que desea guardar?", "Mensaje de validación", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) <> MsgBoxResult.Yes Then Return
                 _sqlCommands.Clear()
                 With _objCategorias
                     .IdCategoriaUbicacion = .BuscarMayorIdCategoriaUbicacionItem(_tipoCon) + 1
@@ -304,11 +306,15 @@ Namespace FORMULARIOS.INVENTARIOS.PROCESO
                     HabilitarParámetrosCategoria(False, False, False, False)
                     CargarCategorias()
 
+                    KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
+                Else
+                    KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+                    Return
                 End If
-                MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema") 
-                
+
             Else
-                MsgBox("DATO NO GUARDADO, LLENE LOS PARÁMETROS NECESARIOS", MsgBoxStyle.Information, "Mensaje de validación")
+                'MsgBox("DATO NO GUARDADO, LLENE LOS PARÁMETROS NECESARIOS", MsgBoxStyle.Information, "Mensaje de validación")
+                KryptonMessageBox.Show("Dato no guardado, llene los parámetros necesarios", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
             End If 
         End Sub
 
@@ -324,7 +330,8 @@ Namespace FORMULARIOS.INVENTARIOS.PROCESO
 
         Private Sub ToolStripMenuItem4_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnGuardarGrupo.Click
             If ValidacionParametrosGrupos() Then
-                If MessageBox.Show("¿Esta seguro que desea guardar?", "Mensaje de validación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> MsgBoxResult.Yes Then Return
+                'If MessageBox.Show("¿Esta seguro que desea guardar?", "Mensaje de validación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> MsgBoxResult.Yes Then Return
+                If KryptonMessageBox.Show("¿Esta seguro que desea guardar?", "Mensaje de validación", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) <> MsgBoxResult.Yes Then Return
                 _sqlCommands.Clear()
                 With _objGrupos
                     .IdGrupoUbicacion = .BuscarMayorIdGrupoUbicacionItem(_tipoCon) + 1
@@ -349,11 +356,15 @@ Namespace FORMULARIOS.INVENTARIOS.PROCESO
                     BotonesGrupo(True, False, False)
                     ParámetrosGrupo("", "SELECCIONE PERCHA", "", 0, "SELECCIONE BODEGA")
                     HabilitarParámetrosGrupo(False, False, False, False, False)
+                    KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
+                Else
+                    KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+                    Return
                 End If
-                MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
 
             Else
-                MsgBox("DATO NO GUARDADO, LLENE LOS PARÁMETROS NECESARIOS", MsgBoxStyle.Information, "Mensaje de validación")
+                'MsgBox("DATO NO GUARDADO, LLENE LOS PARÁMETROS NECESARIOS", MsgBoxStyle.Information, "Mensaje de validación")
+                KryptonMessageBox.Show("Dato no guardado, llene los parámetros necesarios", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
             End If
         End Sub
 
@@ -400,7 +411,8 @@ Namespace FORMULARIOS.INVENTARIOS.PROCESO
             Dim fila As String = dgvGrupoItem.CurrentRow.Cells.Item(1).Value
             Dim idGrupoUbicacion As Integer = dgvGrupoItem.CurrentRow.Cells.Item(0).Value
 
-            If MessageBox.Show("¿Esta seguro que desea guardar?", "Mensaje de validación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> MsgBoxResult.Yes Then Return
+            'If MessageBox.Show("¿Esta seguro que desea guardar?", "Mensaje de validación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> MsgBoxResult.Yes Then Return
+            If KryptonMessageBox.Show("¿Esta seguro que desea guardar?", "Mensaje de validación", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) <> MsgBoxResult.Yes Then Return
             _sqlCommands.Clear()
 
             With _objSubGrupos
@@ -408,11 +420,11 @@ Namespace FORMULARIOS.INVENTARIOS.PROCESO
                 .NombreSubGrupoUbicacion = percha & fila & .IdSubGrupoUbicacion
                 .FechaSubGrupoUbicacion = Date.Now
                 .EstadoSubGrupoUbicacion = 1
-                .IdGrupoSubGrupoUbicacion = idGrupoUbicacion 
+                .IdGrupoSubGrupoUbicacion = idGrupoUbicacion
             End With
             _sqlCommands.Add(_objSubGrupos.NuevaSubGrupoUbicacion)
 
-            Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, String.Empty) 
+            Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, String.Empty)
             MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
         End Sub
 
@@ -425,10 +437,7 @@ Namespace FORMULARIOS.INVENTARIOS.PROCESO
                     'MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorAsenava
                     msKardex.ForeColor = Color.White
                     'msKardex.BackColor = My.MySettingsProperty.Settings.ColorAsenava
-                    Label3.ForeColor = Color.White
-                    Label3.BackColor = My.MySettingsProperty.Settings.ColorAsenava
-                    Button1.ForeColor = Color.White
-                    Button1.BackColor = My.MySettingsProperty.Settings.ColorAsenava 
+
                     dgvCategoriaItem.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorAsenava
                     dgvGrupoItem.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorAsenava
                     dgvCasilleros.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorAsenava
@@ -438,10 +447,7 @@ Namespace FORMULARIOS.INVENTARIOS.PROCESO
                     MenuStrip1.ForeColor = Color.White
                     msKardex.ForeColor = Color.White
                     'msKardex.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
-                    Label3.ForeColor = Color.White
-                    Label3.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
-                    Button1.ForeColor = Color.White
-                    Button1.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
+
                     dgvCategoriaItem.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorSeportpac
                     dgvGrupoItem.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorSeportpac
                     dgvCasilleros.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorSeportpac
@@ -451,10 +457,7 @@ Namespace FORMULARIOS.INVENTARIOS.PROCESO
                     MenuStrip1.ForeColor = Color.White
                     msKardex.ForeColor = Color.White
                     'msKardex.BackColor = My.MySettingsProperty.Settings.ColorCisepro
-                    Label3.ForeColor = Color.White
-                    Label3.BackColor = My.MySettingsProperty.Settings.ColorCisepro
-                    Button1.ForeColor = Color.White
-                    Button1.BackColor = My.MySettingsProperty.Settings.ColorCisepro
+
                     dgvCategoriaItem.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
                     dgvGrupoItem.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
                     dgvCasilleros.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro

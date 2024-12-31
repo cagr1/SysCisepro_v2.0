@@ -134,7 +134,9 @@ Namespace FORMULARIOS.INVENTARIOS.PROCESO
 
             ConectarReport(CType(dgvKardex.CurrentRow.Cells.Item(0).Value, Int64))
             'ConectarReport(CInt(IdUsuario))
-            tcKardex.SelectedIndex = 1
+            'tcKardex.SelectedIndex = 1
+            KryptonNavigator1.SelectedIndex = 1
+
         End Sub
 
         Private Sub ConectarReport(ByVal idKardex As Int64)
@@ -281,10 +283,7 @@ Namespace FORMULARIOS.INVENTARIOS.PROCESO
             End Try
         End Sub
 
-        Private Sub dgvDetalleKardex_SelectionChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles dgvDetalleKardex.SelectionChanged
-            If dgvDetalleKardex.Rows.Count = 0 Or dgvDetalleKardex.CurrentRow Is Nothing Then Return
-            CargarComprobantesIngresoEgreso(dgvDetalleKardex.CurrentRow.Cells(0).Value, dgvDetalleKardex.CurrentRow.Cells(15).Value)
-        End Sub
+
 
         Private Sub btnExportarComprobantes_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnExportarComprobantes.Click
             ExportarDatosExcel(dgvKardex, "REPORTE KARDEX (INVENTARIO) ")
@@ -369,6 +368,9 @@ Namespace FORMULARIOS.INVENTARIOS.PROCESO
                     ElseIf cantidad >= 1 And cantidad < 10 Then
                         row.DefaultCellStyle.BackColor = Color.Red
                         row.DefaultCellStyle.ForeColor = Color.White
+                    ElseIf cantidad < 0 Then
+                        row.DefaultCellStyle.BackColor = Color.Purple
+                        row.DefaultCellStyle.ForeColor = Color.White
                     End If
 
                 Next
@@ -432,6 +434,15 @@ Namespace FORMULARIOS.INVENTARIOS.PROCESO
 
         Private Sub txtBuscarKardex_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtBuscarKardex.TextChanged
 
+        End Sub
+
+        Private Sub KryptonLabel9_Click(sender As Object, e As EventArgs) Handles KryptonLabel9.Click
+
+        End Sub
+
+        Private Sub dgvDetalleKardex_SelectionChanged(sender As Object, e As EventArgs) Handles dgvDetalleKardex.SelectionChanged
+            If dgvDetalleKardex.Rows.Count = 0 Or dgvDetalleKardex.CurrentRow Is Nothing Then Return
+            CargarComprobantesIngresoEgreso(dgvDetalleKardex.CurrentRow.Cells(0).Value, dgvDetalleKardex.CurrentRow.Cells(15).Value)
         End Sub
     End Class
 End Namespace

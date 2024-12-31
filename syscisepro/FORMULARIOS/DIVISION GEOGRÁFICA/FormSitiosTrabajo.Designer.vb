@@ -26,8 +26,34 @@
             Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormSitiosTrabajo))
-            Me.tcSitios = New System.Windows.Forms.TabControl()
-            Me.TabPage1 = New System.Windows.Forms.TabPage()
+            Me.dgvCategoriaItem = New System.Windows.Forms.DataGridView()
+            Me.ListView3 = New System.Windows.Forms.ListView()
+            Me.ColumnHeader24 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+            Me.ColumnHeader25 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+            Me.ColumnHeader26 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+            Me.ColumnHeader27 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+            Me.ColumnHeader28 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+            Me.ColumnHeader29 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+            Me.ColumnHeader30 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+            Me.ColumnHeader31 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+            Me.ColumnHeader32 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+            Me.ColumnHeader33 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+            Me.ColumnHeader34 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+            Me.ColumnHeader35 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+            Me.ColumnHeader36 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+            Me.ColumnHeader37 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+            Me.ColumnHeader38 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+            Me.Button2 = New System.Windows.Forms.Button()
+            Me.crvSitios = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
+            Me.cbmProvincia2 = New System.Windows.Forms.TextBox()
+            Me.cbmGrupo2 = New System.Windows.Forms.ComboBox()
+            Me.txtRiver2 = New System.Windows.Forms.TextBox()
+            Me.txtLongitud2 = New System.Windows.Forms.TextBox()
+            Me.txtLatitud2 = New System.Windows.Forms.TextBox()
+            Me.txtNombreSitio2 = New System.Windows.Forms.TextBox()
+            Me.txtReferencia2 = New System.Windows.Forms.TextBox()
+            Me.txtDireccion2 = New System.Windows.Forms.TextBox()
+            Me.Label12 = New System.Windows.Forms.Label()
             Me.chkExtra = New System.Windows.Forms.CheckBox()
             Me.txtAdicional = New System.Windows.Forms.TextBox()
             Me.txtHorasNoct = New System.Windows.Forms.TextBox()
@@ -88,134 +114,333 @@
             Me.ColumnHeader22 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
             Me.ColumnHeader39 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
             Me.ColumnHeader40 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-            Me.TabPage2 = New System.Windows.Forms.TabPage()
-            Me.dgvCategoriaItem = New System.Windows.Forms.DataGridView()
-            Me.Label33 = New System.Windows.Forms.Label()
-            Me.Label32 = New System.Windows.Forms.Label()
-            Me.ListView3 = New System.Windows.Forms.ListView()
-            Me.ColumnHeader24 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-            Me.ColumnHeader25 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-            Me.ColumnHeader26 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-            Me.ColumnHeader27 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-            Me.ColumnHeader28 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-            Me.ColumnHeader29 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-            Me.ColumnHeader30 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-            Me.ColumnHeader31 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-            Me.ColumnHeader32 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-            Me.ColumnHeader33 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-            Me.ColumnHeader34 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-            Me.ColumnHeader35 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-            Me.ColumnHeader36 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-            Me.ColumnHeader37 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-            Me.ColumnHeader38 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
             Me.MenuStrip2 = New System.Windows.Forms.MenuStrip()
             Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
             Me.ToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
             Me.ToolStripMenuItem3 = New System.Windows.Forms.ToolStripMenuItem()
             Me.ToolStripMenuItem4 = New System.Windows.Forms.ToolStripMenuItem()
             Me.ToolStripMenuItem7 = New System.Windows.Forms.ToolStripMenuItem()
-            Me.GroupBox4 = New System.Windows.Forms.GroupBox()
-            Me.DateTimePicker6 = New System.Windows.Forms.DateTimePicker()
-            Me.DateTimePicker7 = New System.Windows.Forms.DateTimePicker()
-            Me.Label18 = New System.Windows.Forms.Label()
-            Me.Label17 = New System.Windows.Forms.Label()
-            Me.GroupBox3 = New System.Windows.Forms.GroupBox()
-            Me.cbmProvincia2 = New System.Windows.Forms.TextBox()
-            Me.cbmGrupo2 = New System.Windows.Forms.ComboBox()
-            Me.txtRiver2 = New System.Windows.Forms.TextBox()
-            Me.Label2 = New System.Windows.Forms.Label()
-            Me.txtLongitud2 = New System.Windows.Forms.TextBox()
-            Me.txtLatitud2 = New System.Windows.Forms.TextBox()
-            Me.txtNombreSitio2 = New System.Windows.Forms.TextBox()
-            Me.Label3 = New System.Windows.Forms.Label()
-            Me.txtReferencia2 = New System.Windows.Forms.TextBox()
-            Me.Label4 = New System.Windows.Forms.Label()
-            Me.txtDireccion2 = New System.Windows.Forms.TextBox()
-            Me.Label6 = New System.Windows.Forms.Label()
-            Me.Label12 = New System.Windows.Forms.Label()
-            Me.Label16 = New System.Windows.Forms.Label()
-            Me.Label1 = New System.Windows.Forms.Label()
-            Me.Label5 = New System.Windows.Forms.Label()
-            Me.tpReporte = New System.Windows.Forms.TabPage()
-            Me.Button2 = New System.Windows.Forms.Button()
-            Me.crvSitios = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
             Me.KryptonNavigator1 = New ComponentFactory.Krypton.Navigator.KryptonNavigator()
             Me.KryptonPage1 = New ComponentFactory.Krypton.Navigator.KryptonPage()
-            Me.KryptonPage2 = New ComponentFactory.Krypton.Navigator.KryptonPage()
-            Me.KryptonPage3 = New ComponentFactory.Krypton.Navigator.KryptonPage()
-            Me.KryptonLabel1 = New Krypton.Toolkit.KryptonLabel()
-            Me.KryptonGroupBox1 = New Krypton.Toolkit.KryptonGroupBox()
-            Me.KryptonLabel2 = New Krypton.Toolkit.KryptonLabel()
-            Me.KryptonLabel3 = New Krypton.Toolkit.KryptonLabel()
-            Me.KryptonLabel4 = New Krypton.Toolkit.KryptonLabel()
-            Me.KryptonLabel5 = New Krypton.Toolkit.KryptonLabel()
-            Me.KryptonLabel6 = New Krypton.Toolkit.KryptonLabel()
-            Me.KryptonLabel7 = New Krypton.Toolkit.KryptonLabel()
-            Me.KryptonLabel8 = New Krypton.Toolkit.KryptonLabel()
-            Me.KryptonLabel9 = New Krypton.Toolkit.KryptonLabel()
-            Me.KryptonLabel10 = New Krypton.Toolkit.KryptonLabel()
-            Me.KryptonLabel11 = New Krypton.Toolkit.KryptonLabel()
-            Me.KryptonLabel12 = New Krypton.Toolkit.KryptonLabel()
-            Me.KryptonLabel13 = New Krypton.Toolkit.KryptonLabel()
-            Me.KryptonLabel14 = New Krypton.Toolkit.KryptonLabel()
-            Me.btnBuscarPersonal = New System.Windows.Forms.Button()
-            Me.cbxSupervisor = New System.Windows.Forms.ComboBox()
-            Me.KryptonLabel15 = New Krypton.Toolkit.KryptonLabel()
-            Me.KryptonGroupBox2 = New Krypton.Toolkit.KryptonGroupBox()
-            Me.KryptonLabel16 = New Krypton.Toolkit.KryptonLabel()
-            Me.KryptonLabel17 = New Krypton.Toolkit.KryptonLabel()
-            Me.KryptonLabel18 = New Krypton.Toolkit.KryptonLabel()
-            Me.KryptonLabel19 = New Krypton.Toolkit.KryptonLabel()
-            Me.KryptonLabel20 = New Krypton.Toolkit.KryptonLabel()
-            Me.KryptonLabel21 = New Krypton.Toolkit.KryptonLabel()
-            Me.KryptonLabel22 = New Krypton.Toolkit.KryptonLabel()
             Me.KryptonLabel23 = New Krypton.Toolkit.KryptonLabel()
-            Me.tcSitios.SuspendLayout()
-            Me.MenuStrip1.SuspendLayout()
-            Me.TabPage2.SuspendLayout()
+            Me.KryptonLabel22 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonGroupBox2 = New Krypton.Toolkit.KryptonGroupBox()
+            Me.KryptonLabel21 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel20 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel19 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel18 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel17 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel16 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonGroupBox1 = New Krypton.Toolkit.KryptonGroupBox()
+            Me.KryptonLabel15 = New Krypton.Toolkit.KryptonLabel()
+            Me.btnBuscarPersonal = New System.Windows.Forms.Button()
+            Me.KryptonLabel14 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel13 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel12 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel11 = New Krypton.Toolkit.KryptonLabel()
+            Me.cbxSupervisor = New System.Windows.Forms.ComboBox()
+            Me.KryptonLabel10 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel9 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel8 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel7 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel6 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel5 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel4 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel3 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel2 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel1 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonPage2 = New ComponentFactory.Krypton.Navigator.KryptonPage()
+            Me.KryptonGroupBox4 = New Krypton.Toolkit.KryptonGroupBox()
+            Me.KryptonLabel33 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel32 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel24 = New Krypton.Toolkit.KryptonLabel()
+            Me.DateTimePicker6 = New System.Windows.Forms.DateTimePicker()
+            Me.DateTimePicker7 = New System.Windows.Forms.DateTimePicker()
+            Me.KryptonGroupBox3 = New Krypton.Toolkit.KryptonGroupBox()
+            Me.KryptonLabel31 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel30 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel25 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel26 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel27 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel28 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel29 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonPage3 = New ComponentFactory.Krypton.Navigator.KryptonPage()
             CType(Me.dgvCategoriaItem, System.ComponentModel.ISupportInitialize).BeginInit()
+            Me.MenuStrip1.SuspendLayout()
             Me.MenuStrip2.SuspendLayout()
-            Me.GroupBox4.SuspendLayout()
-            Me.GroupBox3.SuspendLayout()
-            Me.tpReporte.SuspendLayout()
             CType(Me.KryptonNavigator1, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.KryptonNavigator1.SuspendLayout()
             CType(Me.KryptonPage1, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.KryptonPage1.SuspendLayout()
-            CType(Me.KryptonPage2, System.ComponentModel.ISupportInitialize).BeginInit()
-            Me.KryptonPage2.SuspendLayout()
-            CType(Me.KryptonPage3, System.ComponentModel.ISupportInitialize).BeginInit()
-            CType(Me.KryptonGroupBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-            CType(Me.KryptonGroupBox1.Panel, System.ComponentModel.ISupportInitialize).BeginInit()
-            Me.KryptonGroupBox1.Panel.SuspendLayout()
-            Me.KryptonGroupBox1.SuspendLayout()
             CType(Me.KryptonGroupBox2, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.KryptonGroupBox2.Panel, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.KryptonGroupBox2.Panel.SuspendLayout()
             Me.KryptonGroupBox2.SuspendLayout()
+            CType(Me.KryptonGroupBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType(Me.KryptonGroupBox1.Panel, System.ComponentModel.ISupportInitialize).BeginInit()
+            Me.KryptonGroupBox1.Panel.SuspendLayout()
+            Me.KryptonGroupBox1.SuspendLayout()
+            CType(Me.KryptonPage2, System.ComponentModel.ISupportInitialize).BeginInit()
+            Me.KryptonPage2.SuspendLayout()
+            CType(Me.KryptonGroupBox4, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType(Me.KryptonGroupBox4.Panel, System.ComponentModel.ISupportInitialize).BeginInit()
+            Me.KryptonGroupBox4.Panel.SuspendLayout()
+            Me.KryptonGroupBox4.SuspendLayout()
+            CType(Me.KryptonGroupBox3, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType(Me.KryptonGroupBox3.Panel, System.ComponentModel.ISupportInitialize).BeginInit()
+            Me.KryptonGroupBox3.Panel.SuspendLayout()
+            Me.KryptonGroupBox3.SuspendLayout()
+            CType(Me.KryptonPage3, System.ComponentModel.ISupportInitialize).BeginInit()
+            Me.KryptonPage3.SuspendLayout()
             Me.SuspendLayout()
             '
-            'tcSitios
+            'dgvCategoriaItem
             '
-            Me.tcSitios.Controls.Add(Me.TabPage1)
-            Me.tcSitios.Controls.Add(Me.TabPage2)
-            Me.tcSitios.Controls.Add(Me.tpReporte)
-            Me.tcSitios.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.tcSitios.Location = New System.Drawing.Point(2, 2)
-            Me.tcSitios.Name = "tcSitios"
-            Me.tcSitios.SelectedIndex = 0
-            Me.tcSitios.Size = New System.Drawing.Size(910, 692)
-            Me.tcSitios.TabIndex = 0
+            Me.dgvCategoriaItem.AllowUserToAddRows = False
+            Me.dgvCategoriaItem.AllowUserToDeleteRows = False
+            DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+            Me.dgvCategoriaItem.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+            Me.dgvCategoriaItem.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
+            Me.dgvCategoriaItem.BorderStyle = System.Windows.Forms.BorderStyle.None
+            Me.dgvCategoriaItem.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
+            Me.dgvCategoriaItem.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+            DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+            DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
+            DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
+            DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(123, Byte), Integer))
+            DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+            DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+            Me.dgvCategoriaItem.DefaultCellStyle = DataGridViewCellStyle2
+            Me.dgvCategoriaItem.GridColor = System.Drawing.Color.LightSteelBlue
+            Me.dgvCategoriaItem.Location = New System.Drawing.Point(5, 292)
+            Me.dgvCategoriaItem.MultiSelect = False
+            Me.dgvCategoriaItem.Name = "dgvCategoriaItem"
+            Me.dgvCategoriaItem.ReadOnly = True
+            Me.dgvCategoriaItem.RowHeadersVisible = False
+            Me.dgvCategoriaItem.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+            Me.dgvCategoriaItem.Size = New System.Drawing.Size(811, 192)
+            Me.dgvCategoriaItem.TabIndex = 211
             '
-            'TabPage1
+            'ListView3
             '
-            Me.TabPage1.BackColor = System.Drawing.Color.White
-            Me.TabPage1.Location = New System.Drawing.Point(4, 22)
-            Me.TabPage1.Name = "TabPage1"
-            Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-            Me.TabPage1.Size = New System.Drawing.Size(902, 666)
-            Me.TabPage1.TabIndex = 0
-            Me.TabPage1.Text = "MANTENIMIENTO"
+            Me.ListView3.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
+            Me.ListView3.BorderStyle = System.Windows.Forms.BorderStyle.None
+            Me.ListView3.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader24, Me.ColumnHeader25, Me.ColumnHeader26, Me.ColumnHeader27, Me.ColumnHeader28, Me.ColumnHeader29, Me.ColumnHeader30, Me.ColumnHeader31, Me.ColumnHeader32, Me.ColumnHeader33, Me.ColumnHeader34, Me.ColumnHeader35, Me.ColumnHeader36, Me.ColumnHeader37, Me.ColumnHeader38})
+            Me.ListView3.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.ListView3.FullRowSelect = True
+            Me.ListView3.HideSelection = False
+            Me.ListView3.Location = New System.Drawing.Point(2, 28)
+            Me.ListView3.MultiSelect = False
+            Me.ListView3.Name = "ListView3"
+            Me.ListView3.Size = New System.Drawing.Size(814, 234)
+            Me.ListView3.TabIndex = 208
+            Me.ListView3.UseCompatibleStateImageBehavior = False
+            Me.ListView3.View = System.Windows.Forms.View.Details
+            '
+            'ColumnHeader24
+            '
+            Me.ColumnHeader24.Text = "DIA"
+            Me.ColumnHeader24.Width = 0
+            '
+            'ColumnHeader25
+            '
+            Me.ColumnHeader25.Text = "FECHA"
+            Me.ColumnHeader25.Width = 0
+            '
+            'ColumnHeader26
+            '
+            Me.ColumnHeader26.Text = "IDP"
+            Me.ColumnHeader26.Width = 0
+            '
+            'ColumnHeader27
+            '
+            Me.ColumnHeader27.Text = "CÉDULA"
+            Me.ColumnHeader27.Width = 80
+            '
+            'ColumnHeader28
+            '
+            Me.ColumnHeader28.Text = "APELLIDOS Y NOMBRES"
+            Me.ColumnHeader28.Width = 250
+            '
+            'ColumnHeader29
+            '
+            Me.ColumnHeader29.Text = "REGISTRO"
+            Me.ColumnHeader29.Width = 80
+            '
+            'ColumnHeader30
+            '
+            Me.ColumnHeader30.Text = "HORARIO"
+            Me.ColumnHeader30.Width = 120
+            '
+            'ColumnHeader31
+            '
+            Me.ColumnHeader31.Text = "HORA ING."
+            Me.ColumnHeader31.Width = 80
+            '
+            'ColumnHeader32
+            '
+            Me.ColumnHeader32.Text = "050"
+            Me.ColumnHeader32.Width = 50
+            '
+            'ColumnHeader33
+            '
+            Me.ColumnHeader33.Text = "051"
+            Me.ColumnHeader33.Width = 50
+            '
+            'ColumnHeader34
+            '
+            Me.ColumnHeader34.Text = "040"
+            Me.ColumnHeader34.Width = 50
+            '
+            'ColumnHeader35
+            '
+            Me.ColumnHeader35.Text = "041"
+            Me.ColumnHeader35.Width = 50
+            '
+            'ColumnHeader36
+            '
+            Me.ColumnHeader36.Text = "HORA SAL."
+            Me.ColumnHeader36.Width = 80
+            '
+            'ColumnHeader37
+            '
+            Me.ColumnHeader37.Text = "MULTA"
+            Me.ColumnHeader37.Width = 80
+            '
+            'ColumnHeader38
+            '
+            Me.ColumnHeader38.Text = "OBSERVACIONES"
+            Me.ColumnHeader38.Width = 300
+            '
+            'Button2
+            '
+            Me.Button2.BackColor = System.Drawing.Color.White
+            Me.Button2.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Button2.ForeColor = System.Drawing.Color.Black
+            Me.Button2.Image = Global.syscisepro.My.Resources.Resources.description_24dp_FILL0_wght400_GRAD0_opsz24__2_
+            Me.Button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+            Me.Button2.Location = New System.Drawing.Point(574, 1)
+            Me.Button2.Name = "Button2"
+            Me.Button2.Size = New System.Drawing.Size(125, 27)
+            Me.Button2.TabIndex = 191
+            Me.Button2.Text = "Cargar Reportes"
+            Me.Button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+            Me.Button2.UseVisualStyleBackColor = False
+            '
+            'crvSitios
+            '
+            Me.crvSitios.ActiveViewIndex = -1
+            Me.crvSitios.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+            Me.crvSitios.Cursor = System.Windows.Forms.Cursors.Default
+            Me.crvSitios.Dock = System.Windows.Forms.DockStyle.Fill
+            Me.crvSitios.Location = New System.Drawing.Point(0, 0)
+            Me.crvSitios.Name = "crvSitios"
+            Me.crvSitios.ShowLogo = False
+            Me.crvSitios.Size = New System.Drawing.Size(825, 669)
+            Me.crvSitios.TabIndex = 0
+            Me.crvSitios.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None
+            '
+            'cbmProvincia2
+            '
+            Me.cbmProvincia2.BackColor = System.Drawing.Color.White
+            Me.cbmProvincia2.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+            Me.cbmProvincia2.Enabled = False
+            Me.cbmProvincia2.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.cbmProvincia2.Location = New System.Drawing.Point(79, 2)
+            Me.cbmProvincia2.Name = "cbmProvincia2"
+            Me.cbmProvincia2.Size = New System.Drawing.Size(337, 21)
+            Me.cbmProvincia2.TabIndex = 200
+            '
+            'cbmGrupo2
+            '
+            Me.cbmGrupo2.AutoCompleteCustomSource.AddRange(New String() {"FIJO", "TEMPORAL"})
+            Me.cbmGrupo2.BackColor = System.Drawing.Color.White
+            Me.cbmGrupo2.DropDownWidth = 300
+            Me.cbmGrupo2.Enabled = False
+            Me.cbmGrupo2.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.cbmGrupo2.FormattingEnabled = True
+            Me.cbmGrupo2.Location = New System.Drawing.Point(506, 28)
+            Me.cbmGrupo2.Name = "cbmGrupo2"
+            Me.cbmGrupo2.Size = New System.Drawing.Size(124, 21)
+            Me.cbmGrupo2.TabIndex = 187
+            '
+            'txtRiver2
+            '
+            Me.txtRiver2.BackColor = System.Drawing.Color.White
+            Me.txtRiver2.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+            Me.txtRiver2.Enabled = False
+            Me.txtRiver2.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtRiver2.Location = New System.Drawing.Point(710, 28)
+            Me.txtRiver2.Name = "txtRiver2"
+            Me.txtRiver2.Size = New System.Drawing.Size(55, 21)
+            Me.txtRiver2.TabIndex = 198
+            '
+            'txtLongitud2
+            '
+            Me.txtLongitud2.BackColor = System.Drawing.Color.White
+            Me.txtLongitud2.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+            Me.txtLongitud2.Enabled = False
+            Me.txtLongitud2.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtLongitud2.Location = New System.Drawing.Point(626, 2)
+            Me.txtLongitud2.Name = "txtLongitud2"
+            Me.txtLongitud2.Size = New System.Drawing.Size(84, 21)
+            Me.txtLongitud2.TabIndex = 192
+            '
+            'txtLatitud2
+            '
+            Me.txtLatitud2.BackColor = System.Drawing.Color.White
+            Me.txtLatitud2.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+            Me.txtLatitud2.Enabled = False
+            Me.txtLatitud2.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtLatitud2.Location = New System.Drawing.Point(506, 2)
+            Me.txtLatitud2.Name = "txtLatitud2"
+            Me.txtLatitud2.Size = New System.Drawing.Size(84, 21)
+            Me.txtLatitud2.TabIndex = 191
+            '
+            'txtNombreSitio2
+            '
+            Me.txtNombreSitio2.BackColor = System.Drawing.Color.White
+            Me.txtNombreSitio2.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+            Me.txtNombreSitio2.Enabled = False
+            Me.txtNombreSitio2.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtNombreSitio2.Location = New System.Drawing.Point(79, 27)
+            Me.txtNombreSitio2.Name = "txtNombreSitio2"
+            Me.txtNombreSitio2.Size = New System.Drawing.Size(337, 21)
+            Me.txtNombreSitio2.TabIndex = 29
+            '
+            'txtReferencia2
+            '
+            Me.txtReferencia2.BackColor = System.Drawing.Color.White
+            Me.txtReferencia2.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+            Me.txtReferencia2.Enabled = False
+            Me.txtReferencia2.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtReferencia2.Location = New System.Drawing.Point(506, 53)
+            Me.txtReferencia2.Multiline = True
+            Me.txtReferencia2.Name = "txtReferencia2"
+            Me.txtReferencia2.Size = New System.Drawing.Size(309, 24)
+            Me.txtReferencia2.TabIndex = 31
+            '
+            'txtDireccion2
+            '
+            Me.txtDireccion2.BackColor = System.Drawing.Color.White
+            Me.txtDireccion2.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+            Me.txtDireccion2.Enabled = False
+            Me.txtDireccion2.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtDireccion2.Location = New System.Drawing.Point(79, 53)
+            Me.txtDireccion2.Name = "txtDireccion2"
+            Me.txtDireccion2.Size = New System.Drawing.Size(337, 21)
+            Me.txtDireccion2.TabIndex = 30
+            '
+            'Label12
+            '
+            Me.Label12.AutoSize = True
+            Me.Label12.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Label12.Location = New System.Drawing.Point(96, 42)
+            Me.Label12.Name = "Label12"
+            Me.Label12.Size = New System.Drawing.Size(16, 13)
+            Me.Label12.TabIndex = 6
+            Me.Label12.Text = "..."
             '
             'chkExtra
             '
@@ -321,6 +546,7 @@
             'cbmGrupo
             '
             Me.cbmGrupo.BackColor = System.Drawing.Color.White
+            Me.cbmGrupo.DropDownWidth = 300
             Me.cbmGrupo.Enabled = False
             Me.cbmGrupo.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cbmGrupo.FormattingEnabled = True
@@ -445,7 +671,9 @@
             'Label28
             '
             Me.Label28.AutoSize = True
+            Me.Label28.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.Label28.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Label28.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
             Me.Label28.Location = New System.Drawing.Point(640, 37)
             Me.Label28.Name = "Label28"
             Me.Label28.Size = New System.Drawing.Size(16, 13)
@@ -469,6 +697,9 @@
             'Label23
             '
             Me.Label23.AutoSize = True
+            Me.Label23.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
+            Me.Label23.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Label23.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
             Me.Label23.Location = New System.Drawing.Point(76, 38)
             Me.Label23.Name = "Label23"
             Me.Label23.Size = New System.Drawing.Size(16, 13)
@@ -515,7 +746,7 @@
             Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
             Me.MenuStrip1.Name = "MenuStrip1"
             Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(7, 2, 0, 2)
-            Me.MenuStrip1.Size = New System.Drawing.Size(844, 32)
+            Me.MenuStrip1.Size = New System.Drawing.Size(842, 32)
             Me.MenuStrip1.TabIndex = 182
             Me.MenuStrip1.Text = "msIngresoBodega"
             '
@@ -599,7 +830,7 @@
             Me.ListView1.Location = New System.Drawing.Point(6, 349)
             Me.ListView1.MultiSelect = False
             Me.ListView1.Name = "ListView1"
-            Me.ListView1.Size = New System.Drawing.Size(830, 274)
+            Me.ListView1.Size = New System.Drawing.Size(830, 312)
             Me.ListView1.TabIndex = 196
             Me.ListView1.UseCompatibleStateImageBehavior = False
             Me.ListView1.View = System.Windows.Forms.View.Details
@@ -728,159 +959,6 @@
             Me.ColumnHeader40.Text = "PUESTO"
             Me.ColumnHeader40.Width = 0
             '
-            'TabPage2
-            '
-            Me.TabPage2.Controls.Add(Me.dgvCategoriaItem)
-            Me.TabPage2.Controls.Add(Me.Label33)
-            Me.TabPage2.Controls.Add(Me.Label32)
-            Me.TabPage2.Controls.Add(Me.ListView3)
-            Me.TabPage2.Controls.Add(Me.GroupBox4)
-            Me.TabPage2.Controls.Add(Me.GroupBox3)
-            Me.TabPage2.Location = New System.Drawing.Point(4, 22)
-            Me.TabPage2.Name = "TabPage2"
-            Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-            Me.TabPage2.Size = New System.Drawing.Size(902, 666)
-            Me.TabPage2.TabIndex = 2
-            Me.TabPage2.Text = "DETALLES DEL PUESTO"
-            Me.TabPage2.UseVisualStyleBackColor = True
-            '
-            'dgvCategoriaItem
-            '
-            Me.dgvCategoriaItem.AllowUserToAddRows = False
-            Me.dgvCategoriaItem.AllowUserToDeleteRows = False
-            DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-            Me.dgvCategoriaItem.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
-            Me.dgvCategoriaItem.BackgroundColor = System.Drawing.Color.White
-            Me.dgvCategoriaItem.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
-            Me.dgvCategoriaItem.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-            DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-            DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
-            DataGridViewCellStyle2.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
-            DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(123, Byte), Integer))
-            DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-            DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-            Me.dgvCategoriaItem.DefaultCellStyle = DataGridViewCellStyle2
-            Me.dgvCategoriaItem.GridColor = System.Drawing.Color.LightSteelBlue
-            Me.dgvCategoriaItem.Location = New System.Drawing.Point(4, 434)
-            Me.dgvCategoriaItem.MultiSelect = False
-            Me.dgvCategoriaItem.Name = "dgvCategoriaItem"
-            Me.dgvCategoriaItem.ReadOnly = True
-            Me.dgvCategoriaItem.RowHeadersVisible = False
-            Me.dgvCategoriaItem.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvCategoriaItem.Size = New System.Drawing.Size(906, 229)
-            Me.dgvCategoriaItem.TabIndex = 211
-            '
-            'Label33
-            '
-            Me.Label33.Cursor = System.Windows.Forms.Cursors.Hand
-            Me.Label33.Location = New System.Drawing.Point(1, 413)
-            Me.Label33.Name = "Label33"
-            Me.Label33.Size = New System.Drawing.Size(911, 18)
-            Me.Label33.TabIndex = 210
-            Me.Label33.Text = "EQUIPO DE SEGURIDAD ASIGNADO"
-            Me.Label33.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-            '
-            'Label32
-            '
-            Me.Label32.Cursor = System.Windows.Forms.Cursors.Hand
-            Me.Label32.Location = New System.Drawing.Point(1, 133)
-            Me.Label32.Name = "Label32"
-            Me.Label32.Size = New System.Drawing.Size(911, 18)
-            Me.Label32.TabIndex = 209
-            Me.Label32.Text = "SITIO / PUESTOS REGISTRADOS"
-            Me.Label32.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-            '
-            'ListView3
-            '
-            Me.ListView3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-            Me.ListView3.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader24, Me.ColumnHeader25, Me.ColumnHeader26, Me.ColumnHeader27, Me.ColumnHeader28, Me.ColumnHeader29, Me.ColumnHeader30, Me.ColumnHeader31, Me.ColumnHeader32, Me.ColumnHeader33, Me.ColumnHeader34, Me.ColumnHeader35, Me.ColumnHeader36, Me.ColumnHeader37, Me.ColumnHeader38})
-            Me.ListView3.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.ListView3.FullRowSelect = True
-            Me.ListView3.HideSelection = False
-            Me.ListView3.Location = New System.Drawing.Point(3, 202)
-            Me.ListView3.MultiSelect = False
-            Me.ListView3.Name = "ListView3"
-            Me.ListView3.Size = New System.Drawing.Size(907, 208)
-            Me.ListView3.TabIndex = 208
-            Me.ListView3.UseCompatibleStateImageBehavior = False
-            Me.ListView3.View = System.Windows.Forms.View.Details
-            '
-            'ColumnHeader24
-            '
-            Me.ColumnHeader24.Text = "DIA"
-            Me.ColumnHeader24.Width = 0
-            '
-            'ColumnHeader25
-            '
-            Me.ColumnHeader25.Text = "FECHA"
-            Me.ColumnHeader25.Width = 0
-            '
-            'ColumnHeader26
-            '
-            Me.ColumnHeader26.Text = "IDP"
-            Me.ColumnHeader26.Width = 0
-            '
-            'ColumnHeader27
-            '
-            Me.ColumnHeader27.Text = "CÉDULA"
-            Me.ColumnHeader27.Width = 80
-            '
-            'ColumnHeader28
-            '
-            Me.ColumnHeader28.Text = "APELLIDOS Y NOMBRES"
-            Me.ColumnHeader28.Width = 250
-            '
-            'ColumnHeader29
-            '
-            Me.ColumnHeader29.Text = "REGISTRO"
-            Me.ColumnHeader29.Width = 80
-            '
-            'ColumnHeader30
-            '
-            Me.ColumnHeader30.Text = "HORARIO"
-            Me.ColumnHeader30.Width = 120
-            '
-            'ColumnHeader31
-            '
-            Me.ColumnHeader31.Text = "HORA ING."
-            Me.ColumnHeader31.Width = 80
-            '
-            'ColumnHeader32
-            '
-            Me.ColumnHeader32.Text = "050"
-            Me.ColumnHeader32.Width = 50
-            '
-            'ColumnHeader33
-            '
-            Me.ColumnHeader33.Text = "051"
-            Me.ColumnHeader33.Width = 50
-            '
-            'ColumnHeader34
-            '
-            Me.ColumnHeader34.Text = "040"
-            Me.ColumnHeader34.Width = 50
-            '
-            'ColumnHeader35
-            '
-            Me.ColumnHeader35.Text = "041"
-            Me.ColumnHeader35.Width = 50
-            '
-            'ColumnHeader36
-            '
-            Me.ColumnHeader36.Text = "HORA SAL."
-            Me.ColumnHeader36.Width = 80
-            '
-            'ColumnHeader37
-            '
-            Me.ColumnHeader37.Text = "MULTA"
-            Me.ColumnHeader37.Width = 80
-            '
-            'ColumnHeader38
-            '
-            Me.ColumnHeader38.Text = "OBSERVACIONES"
-            Me.ColumnHeader38.Width = 300
-            '
             'MenuStrip2
             '
             Me.MenuStrip2.Font = New System.Drawing.Font("Segoe UI", 9.0!)
@@ -889,7 +967,7 @@
             Me.MenuStrip2.Location = New System.Drawing.Point(0, 0)
             Me.MenuStrip2.Name = "MenuStrip2"
             Me.MenuStrip2.Padding = New System.Windows.Forms.Padding(7, 2, 0, 2)
-            Me.MenuStrip2.Size = New System.Drawing.Size(844, 32)
+            Me.MenuStrip2.Size = New System.Drawing.Size(842, 32)
             Me.MenuStrip2.TabIndex = 204
             Me.MenuStrip2.Text = "msIngresoBodega"
             '
@@ -944,298 +1022,16 @@
             Me.ToolStripMenuItem7.Size = New System.Drawing.Size(99, 28)
             Me.ToolStripMenuItem7.Text = "EXPORTAR"
             '
-            'GroupBox4
-            '
-            Me.GroupBox4.BackColor = System.Drawing.Color.White
-            Me.GroupBox4.Controls.Add(Me.DateTimePicker6)
-            Me.GroupBox4.Controls.Add(Me.DateTimePicker7)
-            Me.GroupBox4.Controls.Add(Me.Label18)
-            Me.GroupBox4.Controls.Add(Me.Label17)
-            Me.GroupBox4.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.GroupBox4.Location = New System.Drawing.Point(3, 155)
-            Me.GroupBox4.Name = "GroupBox4"
-            Me.GroupBox4.Size = New System.Drawing.Size(907, 47)
-            Me.GroupBox4.TabIndex = 203
-            Me.GroupBox4.TabStop = False
-            Me.GroupBox4.Text = "REPORTE DE ASISTENCIA"
-            '
-            'DateTimePicker6
-            '
-            Me.DateTimePicker6.CustomFormat = "MMMM yyyy"
-            Me.DateTimePicker6.Location = New System.Drawing.Point(339, 19)
-            Me.DateTimePicker6.Name = "DateTimePicker6"
-            Me.DateTimePicker6.Size = New System.Drawing.Size(255, 21)
-            Me.DateTimePicker6.TabIndex = 202
-            '
-            'DateTimePicker7
-            '
-            Me.DateTimePicker7.CustomFormat = "MMMM yyyy"
-            Me.DateTimePicker7.Location = New System.Drawing.Point(39, 19)
-            Me.DateTimePicker7.Name = "DateTimePicker7"
-            Me.DateTimePicker7.Size = New System.Drawing.Size(255, 21)
-            Me.DateTimePicker7.TabIndex = 200
-            '
-            'Label18
-            '
-            Me.Label18.AutoSize = True
-            Me.Label18.Location = New System.Drawing.Point(10, 22)
-            Me.Label18.Name = "Label18"
-            Me.Label18.Size = New System.Drawing.Size(29, 13)
-            Me.Label18.TabIndex = 201
-            Me.Label18.Text = "DEL:"
-            '
-            'Label17
-            '
-            Me.Label17.AutoSize = True
-            Me.Label17.Location = New System.Drawing.Point(318, 22)
-            Me.Label17.Name = "Label17"
-            Me.Label17.Size = New System.Drawing.Size(23, 13)
-            Me.Label17.TabIndex = 203
-            Me.Label17.Text = "AL:"
-            '
-            'GroupBox3
-            '
-            Me.GroupBox3.BackColor = System.Drawing.Color.White
-            Me.GroupBox3.Controls.Add(Me.cbmProvincia2)
-            Me.GroupBox3.Controls.Add(Me.cbmGrupo2)
-            Me.GroupBox3.Controls.Add(Me.txtRiver2)
-            Me.GroupBox3.Controls.Add(Me.Label2)
-            Me.GroupBox3.Controls.Add(Me.txtLongitud2)
-            Me.GroupBox3.Controls.Add(Me.txtLatitud2)
-            Me.GroupBox3.Controls.Add(Me.txtNombreSitio2)
-            Me.GroupBox3.Controls.Add(Me.Label3)
-            Me.GroupBox3.Controls.Add(Me.txtReferencia2)
-            Me.GroupBox3.Controls.Add(Me.Label4)
-            Me.GroupBox3.Controls.Add(Me.txtDireccion2)
-            Me.GroupBox3.Controls.Add(Me.Label6)
-            Me.GroupBox3.Controls.Add(Me.Label12)
-            Me.GroupBox3.Controls.Add(Me.Label16)
-            Me.GroupBox3.Controls.Add(Me.Label1)
-            Me.GroupBox3.Controls.Add(Me.Label5)
-            Me.GroupBox3.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.GroupBox3.Location = New System.Drawing.Point(7, 54)
-            Me.GroupBox3.Name = "GroupBox3"
-            Me.GroupBox3.Size = New System.Drawing.Size(907, 95)
-            Me.GroupBox3.TabIndex = 188
-            Me.GroupBox3.TabStop = False
-            Me.GroupBox3.Text = "LUGAR (SITIO TRABAJO)"
-            '
-            'cbmProvincia2
-            '
-            Me.cbmProvincia2.BackColor = System.Drawing.Color.White
-            Me.cbmProvincia2.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-            Me.cbmProvincia2.Enabled = False
-            Me.cbmProvincia2.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.cbmProvincia2.Location = New System.Drawing.Point(68, 15)
-            Me.cbmProvincia2.Name = "cbmProvincia2"
-            Me.cbmProvincia2.Size = New System.Drawing.Size(376, 21)
-            Me.cbmProvincia2.TabIndex = 200
-            '
-            'cbmGrupo2
-            '
-            Me.cbmGrupo2.AutoCompleteCustomSource.AddRange(New String() {"FIJO", "TEMPORAL"})
-            Me.cbmGrupo2.BackColor = System.Drawing.Color.White
-            Me.cbmGrupo2.DropDownWidth = 300
-            Me.cbmGrupo2.Enabled = False
-            Me.cbmGrupo2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-            Me.cbmGrupo2.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.cbmGrupo2.FormattingEnabled = True
-            Me.cbmGrupo2.Location = New System.Drawing.Point(770, 15)
-            Me.cbmGrupo2.Name = "cbmGrupo2"
-            Me.cbmGrupo2.Size = New System.Drawing.Size(131, 21)
-            Me.cbmGrupo2.TabIndex = 187
-            '
-            'txtRiver2
-            '
-            Me.txtRiver2.BackColor = System.Drawing.Color.White
-            Me.txtRiver2.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-            Me.txtRiver2.Enabled = False
-            Me.txtRiver2.Location = New System.Drawing.Point(475, 15)
-            Me.txtRiver2.Name = "txtRiver2"
-            Me.txtRiver2.Size = New System.Drawing.Size(55, 21)
-            Me.txtRiver2.TabIndex = 198
-            '
-            'Label2
-            '
-            Me.Label2.AutoSize = True
-            Me.Label2.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label2.Location = New System.Drawing.Point(457, 18)
-            Me.Label2.Name = "Label2"
-            Me.Label2.Size = New System.Drawing.Size(21, 13)
-            Me.Label2.TabIndex = 197
-            Me.Label2.Text = "R#:"
-            '
-            'txtLongitud2
-            '
-            Me.txtLongitud2.BackColor = System.Drawing.Color.White
-            Me.txtLongitud2.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-            Me.txtLongitud2.Enabled = False
-            Me.txtLongitud2.Location = New System.Drawing.Point(644, 15)
-            Me.txtLongitud2.Name = "txtLongitud2"
-            Me.txtLongitud2.Size = New System.Drawing.Size(72, 21)
-            Me.txtLongitud2.TabIndex = 192
-            '
-            'txtLatitud2
-            '
-            Me.txtLatitud2.BackColor = System.Drawing.Color.White
-            Me.txtLatitud2.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-            Me.txtLatitud2.Enabled = False
-            Me.txtLatitud2.Location = New System.Drawing.Point(572, 15)
-            Me.txtLatitud2.Name = "txtLatitud2"
-            Me.txtLatitud2.Size = New System.Drawing.Size(72, 21)
-            Me.txtLatitud2.TabIndex = 191
-            '
-            'txtNombreSitio2
-            '
-            Me.txtNombreSitio2.BackColor = System.Drawing.Color.White
-            Me.txtNombreSitio2.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-            Me.txtNombreSitio2.Enabled = False
-            Me.txtNombreSitio2.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtNombreSitio2.Location = New System.Drawing.Point(68, 42)
-            Me.txtNombreSitio2.Name = "txtNombreSitio2"
-            Me.txtNombreSitio2.Size = New System.Drawing.Size(462, 21)
-            Me.txtNombreSitio2.TabIndex = 29
-            '
-            'Label3
-            '
-            Me.Label3.AutoSize = True
-            Me.Label3.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label3.Location = New System.Drawing.Point(5, 45)
-            Me.Label3.Name = "Label3"
-            Me.Label3.Size = New System.Drawing.Size(50, 13)
-            Me.Label3.TabIndex = 32
-            Me.Label3.Text = "NOMBRE:"
-            '
-            'txtReferencia2
-            '
-            Me.txtReferencia2.BackColor = System.Drawing.Color.White
-            Me.txtReferencia2.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-            Me.txtReferencia2.Enabled = False
-            Me.txtReferencia2.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtReferencia2.Location = New System.Drawing.Point(608, 41)
-            Me.txtReferencia2.Multiline = True
-            Me.txtReferencia2.Name = "txtReferencia2"
-            Me.txtReferencia2.Size = New System.Drawing.Size(293, 49)
-            Me.txtReferencia2.TabIndex = 31
-            '
-            'Label4
-            '
-            Me.Label4.AutoSize = True
-            Me.Label4.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label4.Location = New System.Drawing.Point(540, 45)
-            Me.Label4.Name = "Label4"
-            Me.Label4.Size = New System.Drawing.Size(64, 13)
-            Me.Label4.TabIndex = 34
-            Me.Label4.Text = "REFERENCIA:"
-            '
-            'txtDireccion2
-            '
-            Me.txtDireccion2.BackColor = System.Drawing.Color.White
-            Me.txtDireccion2.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-            Me.txtDireccion2.Enabled = False
-            Me.txtDireccion2.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtDireccion2.Location = New System.Drawing.Point(66, 69)
-            Me.txtDireccion2.Name = "txtDireccion2"
-            Me.txtDireccion2.Size = New System.Drawing.Size(464, 21)
-            Me.txtDireccion2.TabIndex = 30
-            '
-            'Label6
-            '
-            Me.Label6.AutoSize = True
-            Me.Label6.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label6.Location = New System.Drawing.Point(4, 16)
-            Me.Label6.Name = "Label6"
-            Me.Label6.Size = New System.Drawing.Size(46, 13)
-            Me.Label6.TabIndex = 26
-            Me.Label6.Text = "CIUDAD:"
-            '
-            'Label12
-            '
-            Me.Label12.AutoSize = True
-            Me.Label12.Location = New System.Drawing.Point(141, 0)
-            Me.Label12.Name = "Label12"
-            Me.Label12.Size = New System.Drawing.Size(16, 13)
-            Me.Label12.TabIndex = 6
-            Me.Label12.Text = "..."
-            '
-            'Label16
-            '
-            Me.Label16.AutoSize = True
-            Me.Label16.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label16.Location = New System.Drawing.Point(726, 18)
-            Me.Label16.Name = "Label16"
-            Me.Label16.Size = New System.Drawing.Size(43, 13)
-            Me.Label16.TabIndex = 188
-            Me.Label16.Text = "GRUPO:"
-            '
-            'Label1
-            '
-            Me.Label1.AutoSize = True
-            Me.Label1.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label1.Location = New System.Drawing.Point(540, 18)
-            Me.Label1.Name = "Label1"
-            Me.Label1.Size = New System.Drawing.Size(34, 13)
-            Me.Label1.TabIndex = 203
-            Me.Label1.Text = "LT/LG:"
-            '
-            'Label5
-            '
-            Me.Label5.AutoSize = True
-            Me.Label5.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label5.Location = New System.Drawing.Point(3, 72)
-            Me.Label5.Name = "Label5"
-            Me.Label5.Size = New System.Drawing.Size(60, 13)
-            Me.Label5.TabIndex = 33
-            Me.Label5.Text = "DIRECCION:"
-            '
-            'tpReporte
-            '
-            Me.tpReporte.BackColor = System.Drawing.Color.White
-            Me.tpReporte.Controls.Add(Me.Button2)
-            Me.tpReporte.Controls.Add(Me.crvSitios)
-            Me.tpReporte.Location = New System.Drawing.Point(4, 22)
-            Me.tpReporte.Name = "tpReporte"
-            Me.tpReporte.Padding = New System.Windows.Forms.Padding(3)
-            Me.tpReporte.Size = New System.Drawing.Size(913, 666)
-            Me.tpReporte.TabIndex = 1
-            Me.tpReporte.Text = "REPORTE"
-            '
-            'Button2
-            '
-            Me.Button2.BackColor = System.Drawing.Color.White
-            Me.Button2.Font = New System.Drawing.Font("Consolas", 6.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Button2.ForeColor = System.Drawing.Color.Black
-            Me.Button2.Image = Global.syscisepro.My.Resources.Resources.BuscarRegistro
-            Me.Button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-            Me.Button2.Location = New System.Drawing.Point(727, 5)
-            Me.Button2.Name = "Button2"
-            Me.Button2.Size = New System.Drawing.Size(181, 25)
-            Me.Button2.TabIndex = 191
-            Me.Button2.Text = "CARGAR REPORTE SITIOS TRABAJO" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
-            Me.Button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-            Me.Button2.UseVisualStyleBackColor = False
-            '
-            'crvSitios
-            '
-            Me.crvSitios.ActiveViewIndex = -1
-            Me.crvSitios.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-            Me.crvSitios.Cursor = System.Windows.Forms.Cursors.Default
-            Me.crvSitios.Dock = System.Windows.Forms.DockStyle.Fill
-            Me.crvSitios.Location = New System.Drawing.Point(3, 3)
-            Me.crvSitios.Name = "crvSitios"
-            Me.crvSitios.Size = New System.Drawing.Size(907, 660)
-            Me.crvSitios.TabIndex = 0
-            Me.crvSitios.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None
-            '
             'KryptonNavigator1
             '
             Me.KryptonNavigator1.Button.ButtonDisplayLogic = ComponentFactory.Krypton.Navigator.ButtonDisplayLogic.None
             Me.KryptonNavigator1.Button.CloseButtonDisplay = ComponentFactory.Krypton.Navigator.ButtonDisplay.Hide
-            Me.KryptonNavigator1.Location = New System.Drawing.Point(6, 201)
+            Me.KryptonNavigator1.Dock = System.Windows.Forms.DockStyle.Fill
+            Me.KryptonNavigator1.Location = New System.Drawing.Point(0, 0)
             Me.KryptonNavigator1.Name = "KryptonNavigator1"
             Me.KryptonNavigator1.Pages.AddRange(New ComponentFactory.Krypton.Navigator.KryptonPage() {Me.KryptonPage1, Me.KryptonPage2, Me.KryptonPage3})
-            Me.KryptonNavigator1.SelectedIndex = 1
-            Me.KryptonNavigator1.Size = New System.Drawing.Size(846, 483)
+            Me.KryptonNavigator1.SelectedIndex = 0
+            Me.KryptonNavigator1.Size = New System.Drawing.Size(844, 696)
             Me.KryptonNavigator1.TabIndex = 1
             Me.KryptonNavigator1.Text = "KryptonNavigator1"
             '
@@ -1255,46 +1051,101 @@
             Me.KryptonPage1.LastVisibleSet = True
             Me.KryptonPage1.MinimumSize = New System.Drawing.Size(50, 50)
             Me.KryptonPage1.Name = "KryptonPage1"
-            Me.KryptonPage1.Size = New System.Drawing.Size(844, 631)
+            Me.KryptonPage1.Size = New System.Drawing.Size(842, 669)
             Me.KryptonPage1.StateNormal.Page.Color1 = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.KryptonPage1.Text = "Mantenimiento"
             Me.KryptonPage1.ToolTipTitle = "Page ToolTip"
             Me.KryptonPage1.UniqueName = "A7760DE8B6654C909AAB43BECBA99897"
             '
-            'KryptonPage2
+            'KryptonLabel23
             '
-            Me.KryptonPage2.AutoHiddenSlideSize = New System.Drawing.Size(200, 200)
-            Me.KryptonPage2.Controls.Add(Me.MenuStrip2)
-            Me.KryptonPage2.Flags = 65534
-            Me.KryptonPage2.LastVisibleSet = True
-            Me.KryptonPage2.MinimumSize = New System.Drawing.Size(50, 50)
-            Me.KryptonPage2.Name = "KryptonPage2"
-            Me.KryptonPage2.Size = New System.Drawing.Size(844, 456)
-            Me.KryptonPage2.StateNormal.Page.Color1 = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
-            Me.KryptonPage2.Text = "Detalles Puesto"
-            Me.KryptonPage2.ToolTipTitle = "Page ToolTip"
-            Me.KryptonPage2.UniqueName = "E045B108B7314CC4939CA15E6E928B4F"
+            Me.KryptonLabel23.Location = New System.Drawing.Point(469, 322)
+            Me.KryptonLabel23.Name = "KryptonLabel23"
+            Me.KryptonLabel23.Size = New System.Drawing.Size(47, 20)
+            Me.KryptonLabel23.TabIndex = 209
+            Me.KryptonLabel23.Values.Text = "Estado"
             '
-            'KryptonPage3
+            'KryptonLabel22
             '
-            Me.KryptonPage3.AutoHiddenSlideSize = New System.Drawing.Size(200, 200)
-            Me.KryptonPage3.Flags = 65534
-            Me.KryptonPage3.LastVisibleSet = True
-            Me.KryptonPage3.MinimumSize = New System.Drawing.Size(50, 50)
-            Me.KryptonPage3.Name = "KryptonPage3"
-            Me.KryptonPage3.Size = New System.Drawing.Size(879, 166)
-            Me.KryptonPage3.StateNormal.Page.Color1 = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
-            Me.KryptonPage3.Text = "Reporte"
-            Me.KryptonPage3.ToolTipTitle = "Page ToolTip"
-            Me.KryptonPage3.UniqueName = "138C511FC73A433A8EA515C1C51EC045"
+            Me.KryptonLabel22.Location = New System.Drawing.Point(10, 321)
+            Me.KryptonLabel22.Name = "KryptonLabel22"
+            Me.KryptonLabel22.Size = New System.Drawing.Size(46, 20)
+            Me.KryptonLabel22.TabIndex = 208
+            Me.KryptonLabel22.Values.Text = "Buscar"
             '
-            'KryptonLabel1
+            'KryptonGroupBox2
             '
-            Me.KryptonLabel1.Location = New System.Drawing.Point(3, 7)
-            Me.KryptonLabel1.Name = "KryptonLabel1"
-            Me.KryptonLabel1.Size = New System.Drawing.Size(111, 20)
-            Me.KryptonLabel1.TabIndex = 0
-            Me.KryptonLabel1.Values.Text = "Tipo Identificacion"
+            Me.KryptonGroupBox2.CaptionOverlap = 0R
+            Me.KryptonGroupBox2.GroupBackStyle = Krypton.Toolkit.PaletteBackStyle.PanelRibbonInactive
+            Me.KryptonGroupBox2.Location = New System.Drawing.Point(6, 234)
+            Me.KryptonGroupBox2.Name = "KryptonGroupBox2"
+            '
+            'KryptonGroupBox2.Panel
+            '
+            Me.KryptonGroupBox2.Panel.Controls.Add(Me.chkExtra)
+            Me.KryptonGroupBox2.Panel.Controls.Add(Me.KryptonLabel21)
+            Me.KryptonGroupBox2.Panel.Controls.Add(Me.KryptonLabel20)
+            Me.KryptonGroupBox2.Panel.Controls.Add(Me.txtAdicional)
+            Me.KryptonGroupBox2.Panel.Controls.Add(Me.KryptonLabel19)
+            Me.KryptonGroupBox2.Panel.Controls.Add(Me.KryptonLabel18)
+            Me.KryptonGroupBox2.Panel.Controls.Add(Me.txtHorasNoct)
+            Me.KryptonGroupBox2.Panel.Controls.Add(Me.KryptonLabel17)
+            Me.KryptonGroupBox2.Panel.Controls.Add(Me.KryptonLabel16)
+            Me.KryptonGroupBox2.Panel.Controls.Add(Me.txtHorasNormal)
+            Me.KryptonGroupBox2.Panel.Controls.Add(Me.txtHoras50)
+            Me.KryptonGroupBox2.Panel.Controls.Add(Me.txtHorasFeria)
+            Me.KryptonGroupBox2.Panel.Controls.Add(Me.txtHoras100)
+            Me.KryptonGroupBox2.Size = New System.Drawing.Size(830, 83)
+            Me.KryptonGroupBox2.TabIndex = 11
+            Me.KryptonGroupBox2.Values.Heading = "Datos Contables"
+            '
+            'KryptonLabel21
+            '
+            Me.KryptonLabel21.Location = New System.Drawing.Point(461, 30)
+            Me.KryptonLabel21.Name = "KryptonLabel21"
+            Me.KryptonLabel21.Size = New System.Drawing.Size(84, 20)
+            Me.KryptonLabel21.TabIndex = 212
+            Me.KryptonLabel21.Values.Text = "Valor Adicion"
+            '
+            'KryptonLabel20
+            '
+            Me.KryptonLabel20.Location = New System.Drawing.Point(461, 4)
+            Me.KryptonLabel20.Name = "KryptonLabel20"
+            Me.KryptonLabel20.Size = New System.Drawing.Size(85, 20)
+            Me.KryptonLabel20.TabIndex = 211
+            Me.KryptonLabel20.Values.Text = "Recargo Noct"
+            '
+            'KryptonLabel19
+            '
+            Me.KryptonLabel19.Location = New System.Drawing.Point(206, 29)
+            Me.KryptonLabel19.Name = "KryptonLabel19"
+            Me.KryptonLabel19.Size = New System.Drawing.Size(163, 20)
+            Me.KryptonLabel19.TabIndex = 210
+            Me.KryptonLabel19.Values.Text = "No Horas Ext 100% Recargo"
+            '
+            'KryptonLabel18
+            '
+            Me.KryptonLabel18.Location = New System.Drawing.Point(206, 3)
+            Me.KryptonLabel18.Name = "KryptonLabel18"
+            Me.KryptonLabel18.Size = New System.Drawing.Size(160, 20)
+            Me.KryptonLabel18.TabIndex = 209
+            Me.KryptonLabel18.Values.Text = "No Horas Ext 100% Suplem"
+            '
+            'KryptonLabel17
+            '
+            Me.KryptonLabel17.Location = New System.Drawing.Point(2, 29)
+            Me.KryptonLabel17.Name = "KryptonLabel17"
+            Me.KryptonLabel17.Size = New System.Drawing.Size(109, 20)
+            Me.KryptonLabel17.TabIndex = 208
+            Me.KryptonLabel17.Values.Text = "No Horas ext 50%"
+            '
+            'KryptonLabel16
+            '
+            Me.KryptonLabel16.Location = New System.Drawing.Point(2, 3)
+            Me.KryptonLabel16.Name = "KryptonLabel16"
+            Me.KryptonLabel16.Size = New System.Drawing.Size(118, 20)
+            Me.KryptonLabel16.TabIndex = 207
+            Me.KryptonLabel16.Values.Text = "No Horas Normales"
             '
             'KryptonGroupBox1
             '
@@ -1342,110 +1193,14 @@
             Me.KryptonGroupBox1.TabIndex = 10
             Me.KryptonGroupBox1.Values.Heading = "Cliente"
             '
-            'KryptonLabel2
+            'KryptonLabel15
             '
-            Me.KryptonLabel2.Location = New System.Drawing.Point(313, 8)
-            Me.KryptonLabel2.Name = "KryptonLabel2"
-            Me.KryptonLabel2.Size = New System.Drawing.Size(53, 20)
-            Me.KryptonLabel2.TabIndex = 10
-            Me.KryptonLabel2.Values.Text = "RUC /CI"
-            '
-            'KryptonLabel3
-            '
-            Me.KryptonLabel3.Location = New System.Drawing.Point(4, 32)
-            Me.KryptonLabel3.Name = "KryptonLabel3"
-            Me.KryptonLabel3.Size = New System.Drawing.Size(48, 20)
-            Me.KryptonLabel3.TabIndex = 11
-            Me.KryptonLabel3.Values.Text = "Cliente"
-            '
-            'KryptonLabel4
-            '
-            Me.KryptonLabel4.Location = New System.Drawing.Point(4, 59)
-            Me.KryptonLabel4.Name = "KryptonLabel4"
-            Me.KryptonLabel4.Size = New System.Drawing.Size(60, 20)
-            Me.KryptonLabel4.TabIndex = 12
-            Me.KryptonLabel4.Values.Text = "Provincia"
-            '
-            'KryptonLabel5
-            '
-            Me.KryptonLabel5.Location = New System.Drawing.Point(301, 61)
-            Me.KryptonLabel5.Name = "KryptonLabel5"
-            Me.KryptonLabel5.Size = New System.Drawing.Size(50, 20)
-            Me.KryptonLabel5.TabIndex = 24
-            Me.KryptonLabel5.Values.Text = "Canton"
-            '
-            'KryptonLabel6
-            '
-            Me.KryptonLabel6.Location = New System.Drawing.Point(565, 61)
-            Me.KryptonLabel6.Name = "KryptonLabel6"
-            Me.KryptonLabel6.Size = New System.Drawing.Size(63, 20)
-            Me.KryptonLabel6.TabIndex = 25
-            Me.KryptonLabel6.Values.Text = "Parroquia"
-            '
-            'KryptonLabel7
-            '
-            Me.KryptonLabel7.Location = New System.Drawing.Point(3, 87)
-            Me.KryptonLabel7.Name = "KryptonLabel7"
-            Me.KryptonLabel7.Size = New System.Drawing.Size(56, 20)
-            Me.KryptonLabel7.TabIndex = 26
-            Me.KryptonLabel7.Values.Text = "Nombre"
-            '
-            'KryptonLabel8
-            '
-            Me.KryptonLabel8.Location = New System.Drawing.Point(677, 89)
-            Me.KryptonLabel8.Name = "KryptonLabel8"
-            Me.KryptonLabel8.Size = New System.Drawing.Size(25, 20)
-            Me.KryptonLabel8.TabIndex = 30
-            Me.KryptonLabel8.Values.Text = "R#"
-            '
-            'KryptonLabel9
-            '
-            Me.KryptonLabel9.Location = New System.Drawing.Point(565, 119)
-            Me.KryptonLabel9.Name = "KryptonLabel9"
-            Me.KryptonLabel9.Size = New System.Drawing.Size(42, 20)
-            Me.KryptonLabel9.TabIndex = 199
-            Me.KryptonLabel9.Values.Text = "LT/LG"
-            '
-            'KryptonLabel10
-            '
-            Me.KryptonLabel10.Location = New System.Drawing.Point(397, 88)
-            Me.KryptonLabel10.Name = "KryptonLabel10"
-            Me.KryptonLabel10.Size = New System.Drawing.Size(45, 20)
-            Me.KryptonLabel10.TabIndex = 200
-            Me.KryptonLabel10.Values.Text = "Grupo"
-            '
-            'KryptonLabel11
-            '
-            Me.KryptonLabel11.Location = New System.Drawing.Point(565, 32)
-            Me.KryptonLabel11.Name = "KryptonLabel11"
-            Me.KryptonLabel11.Size = New System.Drawing.Size(48, 20)
-            Me.KryptonLabel11.StateNormal.ShortText.Color1 = System.Drawing.Color.SeaGreen
-            Me.KryptonLabel11.TabIndex = 202
-            Me.KryptonLabel11.Values.Text = "Id Sitio"
-            '
-            'KryptonLabel12
-            '
-            Me.KryptonLabel12.Location = New System.Drawing.Point(4, 118)
-            Me.KryptonLabel12.Name = "KryptonLabel12"
-            Me.KryptonLabel12.Size = New System.Drawing.Size(62, 20)
-            Me.KryptonLabel12.TabIndex = 203
-            Me.KryptonLabel12.Values.Text = "Direccion"
-            '
-            'KryptonLabel13
-            '
-            Me.KryptonLabel13.Location = New System.Drawing.Point(2, 144)
-            Me.KryptonLabel13.Name = "KryptonLabel13"
-            Me.KryptonLabel13.Size = New System.Drawing.Size(67, 20)
-            Me.KryptonLabel13.TabIndex = 204
-            Me.KryptonLabel13.Values.Text = "Referencia"
-            '
-            'KryptonLabel14
-            '
-            Me.KryptonLabel14.Location = New System.Drawing.Point(565, 146)
-            Me.KryptonLabel14.Name = "KryptonLabel14"
-            Me.KryptonLabel14.Size = New System.Drawing.Size(48, 20)
-            Me.KryptonLabel14.TabIndex = 205
-            Me.KryptonLabel14.Values.Text = "Puesto"
+            Me.KryptonLabel15.Location = New System.Drawing.Point(679, 7)
+            Me.KryptonLabel15.Name = "KryptonLabel15"
+            Me.KryptonLabel15.Size = New System.Drawing.Size(68, 20)
+            Me.KryptonLabel15.TabIndex = 206
+            Me.KryptonLabel15.Values.Text = "Supervisor"
+            Me.KryptonLabel15.Visible = False
             '
             'btnBuscarPersonal
             '
@@ -1461,6 +1216,39 @@
             Me.btnBuscarPersonal.TabIndex = 27
             Me.btnBuscarPersonal.UseVisualStyleBackColor = False
             '
+            'KryptonLabel14
+            '
+            Me.KryptonLabel14.Location = New System.Drawing.Point(565, 146)
+            Me.KryptonLabel14.Name = "KryptonLabel14"
+            Me.KryptonLabel14.Size = New System.Drawing.Size(48, 20)
+            Me.KryptonLabel14.TabIndex = 205
+            Me.KryptonLabel14.Values.Text = "Puesto"
+            '
+            'KryptonLabel13
+            '
+            Me.KryptonLabel13.Location = New System.Drawing.Point(2, 144)
+            Me.KryptonLabel13.Name = "KryptonLabel13"
+            Me.KryptonLabel13.Size = New System.Drawing.Size(67, 20)
+            Me.KryptonLabel13.TabIndex = 204
+            Me.KryptonLabel13.Values.Text = "Referencia"
+            '
+            'KryptonLabel12
+            '
+            Me.KryptonLabel12.Location = New System.Drawing.Point(4, 118)
+            Me.KryptonLabel12.Name = "KryptonLabel12"
+            Me.KryptonLabel12.Size = New System.Drawing.Size(62, 20)
+            Me.KryptonLabel12.TabIndex = 203
+            Me.KryptonLabel12.Values.Text = "Direccion"
+            '
+            'KryptonLabel11
+            '
+            Me.KryptonLabel11.Location = New System.Drawing.Point(565, 32)
+            Me.KryptonLabel11.Name = "KryptonLabel11"
+            Me.KryptonLabel11.Size = New System.Drawing.Size(48, 20)
+            Me.KryptonLabel11.StateNormal.ShortText.Color1 = System.Drawing.Color.SeaGreen
+            Me.KryptonLabel11.TabIndex = 202
+            Me.KryptonLabel11.Values.Text = "Id Sitio"
+            '
             'cbxSupervisor
             '
             Me.cbxSupervisor.BackColor = System.Drawing.Color.White
@@ -1474,112 +1262,272 @@
             Me.cbxSupervisor.TabIndex = 186
             Me.cbxSupervisor.Visible = False
             '
-            'KryptonLabel15
+            'KryptonLabel10
             '
-            Me.KryptonLabel15.Location = New System.Drawing.Point(679, 7)
-            Me.KryptonLabel15.Name = "KryptonLabel15"
-            Me.KryptonLabel15.Size = New System.Drawing.Size(68, 20)
-            Me.KryptonLabel15.TabIndex = 206
-            Me.KryptonLabel15.Values.Text = "Supervisor"
+            Me.KryptonLabel10.Location = New System.Drawing.Point(397, 88)
+            Me.KryptonLabel10.Name = "KryptonLabel10"
+            Me.KryptonLabel10.Size = New System.Drawing.Size(45, 20)
+            Me.KryptonLabel10.TabIndex = 200
+            Me.KryptonLabel10.Values.Text = "Grupo"
             '
-            'KryptonGroupBox2
+            'KryptonLabel9
             '
-            Me.KryptonGroupBox2.CaptionOverlap = 0R
-            Me.KryptonGroupBox2.GroupBackStyle = Krypton.Toolkit.PaletteBackStyle.PanelRibbonInactive
-            Me.KryptonGroupBox2.Location = New System.Drawing.Point(6, 234)
-            Me.KryptonGroupBox2.Name = "KryptonGroupBox2"
+            Me.KryptonLabel9.Location = New System.Drawing.Point(565, 119)
+            Me.KryptonLabel9.Name = "KryptonLabel9"
+            Me.KryptonLabel9.Size = New System.Drawing.Size(42, 20)
+            Me.KryptonLabel9.TabIndex = 199
+            Me.KryptonLabel9.Values.Text = "LT/LG"
             '
-            'KryptonGroupBox2.Panel
+            'KryptonLabel8
             '
-            Me.KryptonGroupBox2.Panel.Controls.Add(Me.chkExtra)
-            Me.KryptonGroupBox2.Panel.Controls.Add(Me.KryptonLabel21)
-            Me.KryptonGroupBox2.Panel.Controls.Add(Me.KryptonLabel20)
-            Me.KryptonGroupBox2.Panel.Controls.Add(Me.txtAdicional)
-            Me.KryptonGroupBox2.Panel.Controls.Add(Me.KryptonLabel19)
-            Me.KryptonGroupBox2.Panel.Controls.Add(Me.KryptonLabel18)
-            Me.KryptonGroupBox2.Panel.Controls.Add(Me.txtHorasNoct)
-            Me.KryptonGroupBox2.Panel.Controls.Add(Me.KryptonLabel17)
-            Me.KryptonGroupBox2.Panel.Controls.Add(Me.KryptonLabel16)
-            Me.KryptonGroupBox2.Panel.Controls.Add(Me.txtHorasNormal)
-            Me.KryptonGroupBox2.Panel.Controls.Add(Me.txtHoras50)
-            Me.KryptonGroupBox2.Panel.Controls.Add(Me.txtHorasFeria)
-            Me.KryptonGroupBox2.Panel.Controls.Add(Me.txtHoras100)
-            Me.KryptonGroupBox2.Size = New System.Drawing.Size(830, 83)
-            Me.KryptonGroupBox2.TabIndex = 11
-            Me.KryptonGroupBox2.Values.Heading = "Datos Contables"
+            Me.KryptonLabel8.Location = New System.Drawing.Point(677, 89)
+            Me.KryptonLabel8.Name = "KryptonLabel8"
+            Me.KryptonLabel8.Size = New System.Drawing.Size(48, 20)
+            Me.KryptonLabel8.TabIndex = 30
+            Me.KryptonLabel8.Values.Text = "# River"
             '
-            'KryptonLabel16
+            'KryptonLabel7
             '
-            Me.KryptonLabel16.Location = New System.Drawing.Point(2, 3)
-            Me.KryptonLabel16.Name = "KryptonLabel16"
-            Me.KryptonLabel16.Size = New System.Drawing.Size(118, 20)
-            Me.KryptonLabel16.TabIndex = 207
-            Me.KryptonLabel16.Values.Text = "No Horas Normales"
+            Me.KryptonLabel7.Location = New System.Drawing.Point(3, 87)
+            Me.KryptonLabel7.Name = "KryptonLabel7"
+            Me.KryptonLabel7.Size = New System.Drawing.Size(56, 20)
+            Me.KryptonLabel7.TabIndex = 26
+            Me.KryptonLabel7.Values.Text = "Nombre"
             '
-            'KryptonLabel17
+            'KryptonLabel6
             '
-            Me.KryptonLabel17.Location = New System.Drawing.Point(2, 29)
-            Me.KryptonLabel17.Name = "KryptonLabel17"
-            Me.KryptonLabel17.Size = New System.Drawing.Size(109, 20)
-            Me.KryptonLabel17.TabIndex = 208
-            Me.KryptonLabel17.Values.Text = "No Horas ext 50%"
+            Me.KryptonLabel6.Location = New System.Drawing.Point(565, 61)
+            Me.KryptonLabel6.Name = "KryptonLabel6"
+            Me.KryptonLabel6.Size = New System.Drawing.Size(63, 20)
+            Me.KryptonLabel6.TabIndex = 25
+            Me.KryptonLabel6.Values.Text = "Parroquia"
             '
-            'KryptonLabel18
+            'KryptonLabel5
             '
-            Me.KryptonLabel18.Location = New System.Drawing.Point(206, 3)
-            Me.KryptonLabel18.Name = "KryptonLabel18"
-            Me.KryptonLabel18.Size = New System.Drawing.Size(160, 20)
-            Me.KryptonLabel18.TabIndex = 209
-            Me.KryptonLabel18.Values.Text = "No Horas Ext 100% Suplem"
+            Me.KryptonLabel5.Location = New System.Drawing.Point(301, 61)
+            Me.KryptonLabel5.Name = "KryptonLabel5"
+            Me.KryptonLabel5.Size = New System.Drawing.Size(50, 20)
+            Me.KryptonLabel5.TabIndex = 24
+            Me.KryptonLabel5.Values.Text = "Canton"
             '
-            'KryptonLabel19
+            'KryptonLabel4
             '
-            Me.KryptonLabel19.Location = New System.Drawing.Point(206, 29)
-            Me.KryptonLabel19.Name = "KryptonLabel19"
-            Me.KryptonLabel19.Size = New System.Drawing.Size(163, 20)
-            Me.KryptonLabel19.TabIndex = 210
-            Me.KryptonLabel19.Values.Text = "No Horas Ext 100% Recargo"
+            Me.KryptonLabel4.Location = New System.Drawing.Point(4, 59)
+            Me.KryptonLabel4.Name = "KryptonLabel4"
+            Me.KryptonLabel4.Size = New System.Drawing.Size(60, 20)
+            Me.KryptonLabel4.TabIndex = 12
+            Me.KryptonLabel4.Values.Text = "Provincia"
             '
-            'KryptonLabel20
+            'KryptonLabel3
             '
-            Me.KryptonLabel20.Location = New System.Drawing.Point(461, 4)
-            Me.KryptonLabel20.Name = "KryptonLabel20"
-            Me.KryptonLabel20.Size = New System.Drawing.Size(85, 20)
-            Me.KryptonLabel20.TabIndex = 211
-            Me.KryptonLabel20.Values.Text = "Recargo Noct"
+            Me.KryptonLabel3.Location = New System.Drawing.Point(4, 32)
+            Me.KryptonLabel3.Name = "KryptonLabel3"
+            Me.KryptonLabel3.Size = New System.Drawing.Size(48, 20)
+            Me.KryptonLabel3.TabIndex = 11
+            Me.KryptonLabel3.Values.Text = "Cliente"
             '
-            'KryptonLabel21
+            'KryptonLabel2
             '
-            Me.KryptonLabel21.Location = New System.Drawing.Point(461, 30)
-            Me.KryptonLabel21.Name = "KryptonLabel21"
-            Me.KryptonLabel21.Size = New System.Drawing.Size(84, 20)
-            Me.KryptonLabel21.TabIndex = 212
-            Me.KryptonLabel21.Values.Text = "Valor Adicion"
+            Me.KryptonLabel2.Location = New System.Drawing.Point(313, 8)
+            Me.KryptonLabel2.Name = "KryptonLabel2"
+            Me.KryptonLabel2.Size = New System.Drawing.Size(53, 20)
+            Me.KryptonLabel2.TabIndex = 10
+            Me.KryptonLabel2.Values.Text = "RUC /CI"
             '
-            'KryptonLabel22
+            'KryptonLabel1
             '
-            Me.KryptonLabel22.Location = New System.Drawing.Point(10, 321)
-            Me.KryptonLabel22.Name = "KryptonLabel22"
-            Me.KryptonLabel22.Size = New System.Drawing.Size(46, 20)
-            Me.KryptonLabel22.TabIndex = 208
-            Me.KryptonLabel22.Values.Text = "Buscar"
+            Me.KryptonLabel1.Location = New System.Drawing.Point(3, 7)
+            Me.KryptonLabel1.Name = "KryptonLabel1"
+            Me.KryptonLabel1.Size = New System.Drawing.Size(111, 20)
+            Me.KryptonLabel1.TabIndex = 0
+            Me.KryptonLabel1.Values.Text = "Tipo Identificacion"
             '
-            'KryptonLabel23
+            'KryptonPage2
             '
-            Me.KryptonLabel23.Location = New System.Drawing.Point(469, 322)
-            Me.KryptonLabel23.Name = "KryptonLabel23"
-            Me.KryptonLabel23.Size = New System.Drawing.Size(47, 20)
-            Me.KryptonLabel23.TabIndex = 209
-            Me.KryptonLabel23.Values.Text = "Estado"
+            Me.KryptonPage2.AutoHiddenSlideSize = New System.Drawing.Size(200, 200)
+            Me.KryptonPage2.Controls.Add(Me.KryptonGroupBox4)
+            Me.KryptonPage2.Controls.Add(Me.Label12)
+            Me.KryptonPage2.Controls.Add(Me.KryptonGroupBox3)
+            Me.KryptonPage2.Controls.Add(Me.MenuStrip2)
+            Me.KryptonPage2.Flags = 65534
+            Me.KryptonPage2.LastVisibleSet = True
+            Me.KryptonPage2.MinimumSize = New System.Drawing.Size(50, 50)
+            Me.KryptonPage2.Name = "KryptonPage2"
+            Me.KryptonPage2.Size = New System.Drawing.Size(842, 669)
+            Me.KryptonPage2.StateNormal.Page.Color1 = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
+            Me.KryptonPage2.Text = "Detalles Puesto"
+            Me.KryptonPage2.ToolTipTitle = "Page ToolTip"
+            Me.KryptonPage2.UniqueName = "E045B108B7314CC4939CA15E6E928B4F"
+            '
+            'KryptonGroupBox4
+            '
+            Me.KryptonGroupBox4.CaptionOverlap = 0R
+            Me.KryptonGroupBox4.GroupBackStyle = Krypton.Toolkit.PaletteBackStyle.ControlRibbon
+            Me.KryptonGroupBox4.Location = New System.Drawing.Point(4, 144)
+            Me.KryptonGroupBox4.Name = "KryptonGroupBox4"
+            '
+            'KryptonGroupBox4.Panel
+            '
+            Me.KryptonGroupBox4.Panel.Controls.Add(Me.KryptonLabel33)
+            Me.KryptonGroupBox4.Panel.Controls.Add(Me.dgvCategoriaItem)
+            Me.KryptonGroupBox4.Panel.Controls.Add(Me.KryptonLabel32)
+            Me.KryptonGroupBox4.Panel.Controls.Add(Me.KryptonLabel24)
+            Me.KryptonGroupBox4.Panel.Controls.Add(Me.ListView3)
+            Me.KryptonGroupBox4.Panel.Controls.Add(Me.DateTimePicker6)
+            Me.KryptonGroupBox4.Panel.Controls.Add(Me.DateTimePicker7)
+            Me.KryptonGroupBox4.Size = New System.Drawing.Size(827, 522)
+            Me.KryptonGroupBox4.TabIndex = 206
+            Me.KryptonGroupBox4.Values.Heading = "Reporte de Asistencia"
+            '
+            'KryptonLabel33
+            '
+            Me.KryptonLabel33.LabelStyle = Krypton.Toolkit.LabelStyle.BoldControl
+            Me.KryptonLabel33.Location = New System.Drawing.Point(340, 266)
+            Me.KryptonLabel33.Name = "KryptonLabel33"
+            Me.KryptonLabel33.Size = New System.Drawing.Size(189, 20)
+            Me.KryptonLabel33.TabIndex = 216
+            Me.KryptonLabel33.Values.Text = "Equipo de Seguridad Asignado"
+            '
+            'KryptonLabel32
+            '
+            Me.KryptonLabel32.Location = New System.Drawing.Point(277, 4)
+            Me.KryptonLabel32.Name = "KryptonLabel32"
+            Me.KryptonLabel32.Size = New System.Drawing.Size(41, 20)
+            Me.KryptonLabel32.TabIndex = 215
+            Me.KryptonLabel32.Values.Text = "Hasta"
+            '
+            'KryptonLabel24
+            '
+            Me.KryptonLabel24.Location = New System.Drawing.Point(4, 3)
+            Me.KryptonLabel24.Name = "KryptonLabel24"
+            Me.KryptonLabel24.Size = New System.Drawing.Size(45, 20)
+            Me.KryptonLabel24.TabIndex = 214
+            Me.KryptonLabel24.Values.Text = "Desde"
+            '
+            'DateTimePicker6
+            '
+            Me.DateTimePicker6.CustomFormat = "MMMM yyyy"
+            Me.DateTimePicker6.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.DateTimePicker6.Location = New System.Drawing.Point(335, 3)
+            Me.DateTimePicker6.Name = "DateTimePicker6"
+            Me.DateTimePicker6.Size = New System.Drawing.Size(203, 21)
+            Me.DateTimePicker6.TabIndex = 204
+            '
+            'DateTimePicker7
+            '
+            Me.DateTimePicker7.CustomFormat = "MMMM yyyy"
+            Me.DateTimePicker7.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.DateTimePicker7.Location = New System.Drawing.Point(55, 4)
+            Me.DateTimePicker7.Name = "DateTimePicker7"
+            Me.DateTimePicker7.Size = New System.Drawing.Size(201, 21)
+            Me.DateTimePicker7.TabIndex = 203
+            '
+            'KryptonGroupBox3
+            '
+            Me.KryptonGroupBox3.CaptionOverlap = 0R
+            Me.KryptonGroupBox3.GroupBackStyle = Krypton.Toolkit.PaletteBackStyle.ControlRibbon
+            Me.KryptonGroupBox3.Location = New System.Drawing.Point(5, 36)
+            Me.KryptonGroupBox3.Name = "KryptonGroupBox3"
+            '
+            'KryptonGroupBox3.Panel
+            '
+            Me.KryptonGroupBox3.Panel.Controls.Add(Me.txtRiver2)
+            Me.KryptonGroupBox3.Panel.Controls.Add(Me.cbmGrupo2)
+            Me.KryptonGroupBox3.Panel.Controls.Add(Me.KryptonLabel31)
+            Me.KryptonGroupBox3.Panel.Controls.Add(Me.txtLongitud2)
+            Me.KryptonGroupBox3.Panel.Controls.Add(Me.cbmProvincia2)
+            Me.KryptonGroupBox3.Panel.Controls.Add(Me.txtLatitud2)
+            Me.KryptonGroupBox3.Panel.Controls.Add(Me.KryptonLabel30)
+            Me.KryptonGroupBox3.Panel.Controls.Add(Me.KryptonLabel25)
+            Me.KryptonGroupBox3.Panel.Controls.Add(Me.txtNombreSitio2)
+            Me.KryptonGroupBox3.Panel.Controls.Add(Me.txtReferencia2)
+            Me.KryptonGroupBox3.Panel.Controls.Add(Me.KryptonLabel26)
+            Me.KryptonGroupBox3.Panel.Controls.Add(Me.KryptonLabel27)
+            Me.KryptonGroupBox3.Panel.Controls.Add(Me.txtDireccion2)
+            Me.KryptonGroupBox3.Panel.Controls.Add(Me.KryptonLabel28)
+            Me.KryptonGroupBox3.Panel.Controls.Add(Me.KryptonLabel29)
+            Me.KryptonGroupBox3.Size = New System.Drawing.Size(826, 105)
+            Me.KryptonGroupBox3.TabIndex = 205
+            Me.KryptonGroupBox3.Values.Heading = "Puesto"
+            '
+            'KryptonLabel31
+            '
+            Me.KryptonLabel31.Location = New System.Drawing.Point(4, 24)
+            Me.KryptonLabel31.Name = "KryptonLabel31"
+            Me.KryptonLabel31.Size = New System.Drawing.Size(56, 20)
+            Me.KryptonLabel31.TabIndex = 213
+            Me.KryptonLabel31.Values.Text = "Nombre"
+            '
+            'KryptonLabel30
+            '
+            Me.KryptonLabel30.Location = New System.Drawing.Point(4, 0)
+            Me.KryptonLabel30.Name = "KryptonLabel30"
+            Me.KryptonLabel30.Size = New System.Drawing.Size(49, 20)
+            Me.KryptonLabel30.TabIndex = 212
+            Me.KryptonLabel30.Values.Text = "Ciudad"
+            '
+            'KryptonLabel25
+            '
+            Me.KryptonLabel25.Location = New System.Drawing.Point(433, 53)
+            Me.KryptonLabel25.Name = "KryptonLabel25"
+            Me.KryptonLabel25.Size = New System.Drawing.Size(67, 20)
+            Me.KryptonLabel25.TabIndex = 210
+            Me.KryptonLabel25.Values.Text = "Referencia"
+            '
+            'KryptonLabel26
+            '
+            Me.KryptonLabel26.Location = New System.Drawing.Point(3, 50)
+            Me.KryptonLabel26.Name = "KryptonLabel26"
+            Me.KryptonLabel26.Size = New System.Drawing.Size(62, 20)
+            Me.KryptonLabel26.TabIndex = 209
+            Me.KryptonLabel26.Values.Text = "Direccion"
+            '
+            'KryptonLabel27
+            '
+            Me.KryptonLabel27.Location = New System.Drawing.Point(433, 28)
+            Me.KryptonLabel27.Name = "KryptonLabel27"
+            Me.KryptonLabel27.Size = New System.Drawing.Size(45, 20)
+            Me.KryptonLabel27.TabIndex = 208
+            Me.KryptonLabel27.Values.Text = "Grupo"
+            '
+            'KryptonLabel28
+            '
+            Me.KryptonLabel28.Location = New System.Drawing.Point(433, 3)
+            Me.KryptonLabel28.Name = "KryptonLabel28"
+            Me.KryptonLabel28.Size = New System.Drawing.Size(42, 20)
+            Me.KryptonLabel28.TabIndex = 207
+            Me.KryptonLabel28.Values.Text = "LT/LG"
+            '
+            'KryptonLabel29
+            '
+            Me.KryptonLabel29.Location = New System.Drawing.Point(656, 28)
+            Me.KryptonLabel29.Name = "KryptonLabel29"
+            Me.KryptonLabel29.Size = New System.Drawing.Size(48, 20)
+            Me.KryptonLabel29.TabIndex = 206
+            Me.KryptonLabel29.Values.Text = "# River"
+            '
+            'KryptonPage3
+            '
+            Me.KryptonPage3.AutoHiddenSlideSize = New System.Drawing.Size(200, 200)
+            Me.KryptonPage3.Controls.Add(Me.Button2)
+            Me.KryptonPage3.Controls.Add(Me.crvSitios)
+            Me.KryptonPage3.Flags = 65534
+            Me.KryptonPage3.LastVisibleSet = True
+            Me.KryptonPage3.MinimumSize = New System.Drawing.Size(50, 50)
+            Me.KryptonPage3.Name = "KryptonPage3"
+            Me.KryptonPage3.Size = New System.Drawing.Size(825, 669)
+            Me.KryptonPage3.StateNormal.Page.Color1 = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
+            Me.KryptonPage3.Text = "Reporte"
+            Me.KryptonPage3.ToolTipTitle = "Page ToolTip"
+            Me.KryptonPage3.UniqueName = "138C511FC73A433A8EA515C1C51EC045"
             '
             'FormSitiosTrabajo
             '
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.BackColor = System.Drawing.Color.White
-            Me.ClientSize = New System.Drawing.Size(924, 696)
+            Me.ClientSize = New System.Drawing.Size(844, 696)
             Me.Controls.Add(Me.KryptonNavigator1)
-            Me.Controls.Add(Me.tcSitios)
             Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
             Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
             Me.Name = "FormSitiosTrabajo"
@@ -1589,43 +1537,44 @@
             Or Krypton.Toolkit.PaletteDrawBorders.Right), Krypton.Toolkit.PaletteDrawBorders)
             Me.StateActive.Border.Rounding = 5.0!
             Me.Text = "SITIOS DE TRABAJO"
-            Me.tcSitios.ResumeLayout(False)
+            CType(Me.dgvCategoriaItem, System.ComponentModel.ISupportInitialize).EndInit()
             Me.MenuStrip1.ResumeLayout(False)
             Me.MenuStrip1.PerformLayout()
-            Me.TabPage2.ResumeLayout(False)
-            CType(Me.dgvCategoriaItem, System.ComponentModel.ISupportInitialize).EndInit()
             Me.MenuStrip2.ResumeLayout(False)
             Me.MenuStrip2.PerformLayout()
-            Me.GroupBox4.ResumeLayout(False)
-            Me.GroupBox4.PerformLayout()
-            Me.GroupBox3.ResumeLayout(False)
-            Me.GroupBox3.PerformLayout()
-            Me.tpReporte.ResumeLayout(False)
             CType(Me.KryptonNavigator1, System.ComponentModel.ISupportInitialize).EndInit()
             Me.KryptonNavigator1.ResumeLayout(False)
             CType(Me.KryptonPage1, System.ComponentModel.ISupportInitialize).EndInit()
             Me.KryptonPage1.ResumeLayout(False)
             Me.KryptonPage1.PerformLayout()
-            CType(Me.KryptonPage2, System.ComponentModel.ISupportInitialize).EndInit()
-            Me.KryptonPage2.ResumeLayout(False)
-            Me.KryptonPage2.PerformLayout()
-            CType(Me.KryptonPage3, System.ComponentModel.ISupportInitialize).EndInit()
-            CType(Me.KryptonGroupBox1.Panel, System.ComponentModel.ISupportInitialize).EndInit()
-            Me.KryptonGroupBox1.Panel.ResumeLayout(False)
-            Me.KryptonGroupBox1.Panel.PerformLayout()
-            CType(Me.KryptonGroupBox1, System.ComponentModel.ISupportInitialize).EndInit()
-            Me.KryptonGroupBox1.ResumeLayout(False)
             CType(Me.KryptonGroupBox2.Panel, System.ComponentModel.ISupportInitialize).EndInit()
             Me.KryptonGroupBox2.Panel.ResumeLayout(False)
             Me.KryptonGroupBox2.Panel.PerformLayout()
             CType(Me.KryptonGroupBox2, System.ComponentModel.ISupportInitialize).EndInit()
             Me.KryptonGroupBox2.ResumeLayout(False)
+            CType(Me.KryptonGroupBox1.Panel, System.ComponentModel.ISupportInitialize).EndInit()
+            Me.KryptonGroupBox1.Panel.ResumeLayout(False)
+            Me.KryptonGroupBox1.Panel.PerformLayout()
+            CType(Me.KryptonGroupBox1, System.ComponentModel.ISupportInitialize).EndInit()
+            Me.KryptonGroupBox1.ResumeLayout(False)
+            CType(Me.KryptonPage2, System.ComponentModel.ISupportInitialize).EndInit()
+            Me.KryptonPage2.ResumeLayout(False)
+            Me.KryptonPage2.PerformLayout()
+            CType(Me.KryptonGroupBox4.Panel, System.ComponentModel.ISupportInitialize).EndInit()
+            Me.KryptonGroupBox4.Panel.ResumeLayout(False)
+            Me.KryptonGroupBox4.Panel.PerformLayout()
+            CType(Me.KryptonGroupBox4, System.ComponentModel.ISupportInitialize).EndInit()
+            Me.KryptonGroupBox4.ResumeLayout(False)
+            CType(Me.KryptonGroupBox3.Panel, System.ComponentModel.ISupportInitialize).EndInit()
+            Me.KryptonGroupBox3.Panel.ResumeLayout(False)
+            Me.KryptonGroupBox3.Panel.PerformLayout()
+            CType(Me.KryptonGroupBox3, System.ComponentModel.ISupportInitialize).EndInit()
+            Me.KryptonGroupBox3.ResumeLayout(False)
+            CType(Me.KryptonPage3, System.ComponentModel.ISupportInitialize).EndInit()
+            Me.KryptonPage3.ResumeLayout(False)
             Me.ResumeLayout(False)
 
         End Sub
-        Friend WithEvents tcSitios As System.Windows.Forms.TabControl
-        Friend WithEvents TabPage1 As System.Windows.Forms.TabPage
-        Friend WithEvents tpReporte As System.Windows.Forms.TabPage
         Friend WithEvents crvSitios As CrystalDecisions.Windows.Forms.CrystalReportViewer
         Friend WithEvents MenuStrip1 As System.Windows.Forms.MenuStrip
         Friend WithEvents btnNuevoSitio As System.Windows.Forms.ToolStripMenuItem
@@ -1677,28 +1626,15 @@
         Friend WithEvents ColumnHeader23 As System.Windows.Forms.ColumnHeader
         Friend WithEvents ColumnHeader22 As System.Windows.Forms.ColumnHeader
         Friend WithEvents cbxFiltro As System.Windows.Forms.ComboBox
-        Friend WithEvents TabPage2 As System.Windows.Forms.TabPage
-        Friend WithEvents GroupBox3 As System.Windows.Forms.GroupBox
         Friend WithEvents cbmGrupo2 As System.Windows.Forms.ComboBox
         Friend WithEvents txtRiver2 As System.Windows.Forms.TextBox
-        Friend WithEvents Label2 As System.Windows.Forms.Label
         Friend WithEvents txtLongitud2 As System.Windows.Forms.TextBox
         Friend WithEvents txtLatitud2 As System.Windows.Forms.TextBox
         Friend WithEvents txtNombreSitio2 As System.Windows.Forms.TextBox
-        Friend WithEvents Label3 As System.Windows.Forms.Label
         Friend WithEvents txtReferencia2 As System.Windows.Forms.TextBox
-        Friend WithEvents Label4 As System.Windows.Forms.Label
         Friend WithEvents txtDireccion2 As System.Windows.Forms.TextBox
-        Friend WithEvents Label5 As System.Windows.Forms.Label
-        Friend WithEvents Label6 As System.Windows.Forms.Label
         Friend WithEvents Label12 As System.Windows.Forms.Label
-        Friend WithEvents Label16 As System.Windows.Forms.Label
         Friend WithEvents cbmProvincia2 As System.Windows.Forms.TextBox
-        Friend WithEvents GroupBox4 As System.Windows.Forms.GroupBox
-        Friend WithEvents DateTimePicker6 As System.Windows.Forms.DateTimePicker
-        Friend WithEvents Label17 As System.Windows.Forms.Label
-        Friend WithEvents DateTimePicker7 As System.Windows.Forms.DateTimePicker
-        Friend WithEvents Label18 As System.Windows.Forms.Label
         Friend WithEvents MenuStrip2 As System.Windows.Forms.MenuStrip
         Friend WithEvents ToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
         Friend WithEvents ToolStripMenuItem7 As System.Windows.Forms.ToolStripMenuItem
@@ -1718,9 +1654,6 @@
         Friend WithEvents ColumnHeader36 As System.Windows.Forms.ColumnHeader
         Friend WithEvents ColumnHeader37 As System.Windows.Forms.ColumnHeader
         Friend WithEvents ColumnHeader38 As System.Windows.Forms.ColumnHeader
-        Friend WithEvents Label1 As System.Windows.Forms.Label
-        Friend WithEvents Label32 As System.Windows.Forms.Label
-        Friend WithEvents Label33 As System.Windows.Forms.Label
         Friend WithEvents dgvCategoriaItem As System.Windows.Forms.DataGridView
         Friend WithEvents ToolStripMenuItem2 As System.Windows.Forms.ToolStripMenuItem
         Friend WithEvents ToolStripMenuItem3 As System.Windows.Forms.ToolStripMenuItem
@@ -1767,5 +1700,19 @@
         Friend WithEvents KryptonLabel16 As Krypton.Toolkit.KryptonLabel
         Friend WithEvents KryptonLabel23 As Krypton.Toolkit.KryptonLabel
         Friend WithEvents KryptonLabel22 As Krypton.Toolkit.KryptonLabel
+        Friend WithEvents KryptonGroupBox3 As Krypton.Toolkit.KryptonGroupBox
+        Friend WithEvents KryptonLabel31 As Krypton.Toolkit.KryptonLabel
+        Friend WithEvents KryptonLabel30 As Krypton.Toolkit.KryptonLabel
+        Friend WithEvents KryptonLabel25 As Krypton.Toolkit.KryptonLabel
+        Friend WithEvents KryptonLabel26 As Krypton.Toolkit.KryptonLabel
+        Friend WithEvents KryptonLabel27 As Krypton.Toolkit.KryptonLabel
+        Friend WithEvents KryptonLabel28 As Krypton.Toolkit.KryptonLabel
+        Friend WithEvents KryptonLabel29 As Krypton.Toolkit.KryptonLabel
+        Friend WithEvents KryptonGroupBox4 As Krypton.Toolkit.KryptonGroupBox
+        Friend WithEvents KryptonLabel32 As Krypton.Toolkit.KryptonLabel
+        Friend WithEvents KryptonLabel24 As Krypton.Toolkit.KryptonLabel
+        Friend WithEvents DateTimePicker6 As DateTimePicker
+        Friend WithEvents DateTimePicker7 As DateTimePicker
+        Friend WithEvents KryptonLabel33 As Krypton.Toolkit.KryptonLabel
     End Class
 End Namespace

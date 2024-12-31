@@ -1984,7 +1984,7 @@
             'KryptonGroupBox6.Panel
             '
             Me.KryptonGroupBox6.Panel.Controls.Add(Me.dgvAsientoDiarioEgreso)
-            Me.KryptonGroupBox6.Size = New System.Drawing.Size(413, 118)
+            Me.KryptonGroupBox6.Size = New System.Drawing.Size(413, 119)
             Me.KryptonGroupBox6.TabIndex = 122
             Me.KryptonGroupBox6.Values.Heading = "Asiento Diario"
             '
@@ -2027,7 +2027,7 @@
             Me.dgvAsientoDiarioEgreso.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
             Me.dgvAsientoDiarioEgreso.RowHeadersVisible = False
             Me.dgvAsientoDiarioEgreso.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvAsientoDiarioEgreso.Size = New System.Drawing.Size(409, 94)
+            Me.dgvAsientoDiarioEgreso.Size = New System.Drawing.Size(409, 95)
             Me.dgvAsientoDiarioEgreso.TabIndex = 119
             '
             'KryptonGroupBox5

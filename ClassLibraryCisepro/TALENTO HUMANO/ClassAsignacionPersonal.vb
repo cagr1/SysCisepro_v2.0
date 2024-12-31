@@ -165,46 +165,40 @@ Namespace TALENTO_HUMANO
             Return ComandosSql.SeleccionarQueryWithParamsToDataTable(tipoCon, sql, False, pars)
         End Function
 
-        Public Function SeleccionarReportePara10Mo3ByAnio(ByVal tipoCon As TipoConexion, ByVal anio As Integer,
-                                                          ByVal mesDesde As Integer, ByVal diaDesde As Integer,
-                                                          ByVal mesHasta As Integer, ByVal diaHasta As Integer) As DataTable
-            Dim desde = "'" & (anio - 1) & "-" & (mesDesde - 1) & "-" & 26 & " 00:00:00'"
-            Dim hasta = "'" & anio & "-" & mesHasta & "-" & diaHasta & " 23:59:59'"
+        Public Function SeleccionarReportePara10Mo3ByAnio(ByVal tipoCon As TipoConexion, ByVal desde As DateTime,
+                                                          ByVal hasta As DateTime) As DataTable
+            'Dim desde = "'" & (anio - 1) & "-" & (mesDesde - 1) & "-" & 26 & " 00:00:00'"
+            'Dim hasta = "'" & anio & "-" & mesHasta & "-" & diaHasta & " 23:59:59'"
+
+
             Dim sql = "select p.cedula, p.nombres, p.apellidos , substring(p.SEXO, 1,1) genero, co.CODIGO_OCUPACIONAL ocupacion, (sum(d.xiii)+sum(d.xiii_pension)) ganado, sum(d.diast) dias, 'P' pago, '' pjornada, '' hjornada , CASE WHEN p.discapacidad = 'SI' then 'X' else '' end discapacidad, '' rtenido, 'X' decimo from DETALLES_ROL d join PERSONAL p on d.ID_PERSONAL = p.id_personal join rol_pago r on d.id_rol = r.id_rol join CODIGO_CARGO_OCUPACIONAL co on p.ID_CARGO_OCUPACIONAL = co.ID_CARGO_OCUPACIONAL where r.estado = 2 and d.id_personal > 0 and r.quincena = 1 and d.grupo <> '' and (r.desde >= " & desde & " and r.hasta <= " & hasta & ") group by p.id_personal,p.cedula, p.apellidos, p.nombres, p.SEXO, p.discapacidad, co.CODIGO_OCUPACIONAL order by p.apellidos, p.nombres;"
             Return ComandosSql.SeleccionarQueryToDataTable(tipoCon, sql, False)
         End Function
 
-        Public Function SeleccionarReportePara10Mo4ByAnio(ByVal tipoCon As TipoConexion, ByVal anio As Integer,
-                                                          ByVal mesDesde As Integer, ByVal diaDesde As Integer,
-                                                          ByVal mesHasta As Integer, ByVal diaHasta As Integer) As DataTable
-            Dim desde = "'" & (anio - 1) & "-" & (mesDesde - 1) & "-" & 26 & " 00:00:00'"
-            Dim hasta = "'" & anio & "-" & mesHasta & "-" & diaHasta & " 23:59:59'"
+        Public Function SeleccionarReportePara10Mo4ByAnio(ByVal tipoCon As TipoConexion, ByVal desde As DateTime,
+                                                          ByVal hasta As DateTime) As DataTable
+            'Dim desde = "'" & (anio - 1) & "-" & (mesDesde - 1) & "-" & 26 & " 00:00:00'"
+            'Dim hasta = "'" & anio & "-" & mesHasta & "-" & diaHasta & " 23:59:59'"
             Dim sql = "select p.cedula, p.nombres, p.apellidos , substring(p.SEXO, 1,1) genero, co.CODIGO_OCUPACIONAL ocupacion, (sum(d.xiv)+sum(d.xiv_pension)) ganado, (sum(d.diast)+sum(d.diasdm)) dias, 'P' pago, '' pjornada, '' hjornada , CASE WHEN p.discapacidad = 'SI' then 'X' else '' end discapacidad, '' rtenido, 'X' decimo from DETALLES_ROL d join PERSONAL p on d.ID_PERSONAL = p.id_personal join rol_pago r on d.id_rol = r.id_rol join CODIGO_CARGO_OCUPACIONAL co on p.ID_CARGO_OCUPACIONAL = co.ID_CARGO_OCUPACIONAL where d.id_personal > 0 and r.estado = 2 and r.quincena = 1 and d.grupo <> '' and (r.desde >= " & desde & " and r.hasta <= " & hasta & ") group by p.id_personal,p.cedula, p.apellidos, p.nombres, p.SEXO, p.discapacidad, co.CODIGO_OCUPACIONAL order by p.apellidos, p.nombres;"
             Return ComandosSql.SeleccionarQueryToDataTable(tipoCon, sql, False)
         End Function
 
 
-        Public Function SeleccionarReporteParaUtilidadesByAnio(ByVal tipoCon As TipoConexion, ByVal anio As Integer,
-                                                               ByVal mesDesdeXiii As Integer, ByVal diaDesdeXiii As Integer,
-                                                               ByVal mesHastaXiii As Integer, ByVal diaHastaXiii As Integer,
-                                                               ByVal mesDesdeXiv As Integer, ByVal diaDesdeXiv As Integer,
-                                                               ByVal mesHastaXiv As Integer, ByVal diaHastaXiv As Integer) As DataTable
+        Public Function SeleccionarReporteParaUtilidadesByAnio(ByVal tipoCon As TipoConexion, ByVal desde As DateTime, ByVal hasta As DateTime,
+                                                               ByVal desdexiii As DateTime, ByVal hastaxiii As DateTime, ByVal desdexiv As DateTime,
+                                                               ByVal hastaxiv As DateTime) As DataTable
 
-            ' utilidades
-            Dim desde = "'" & anio & "-" & 1 & "-" & 1 & " 00:00:00'"
-            Dim hasta = "'" & anio & "-" & 12 & "-" & 31 & " 23:59:59'"
+            Dim pars = New List(Of Object())
+            pars.Add(New Object() {"@desde", SqlDbType.DateTime, desde})
+            pars.Add(New Object() {"@hasta", SqlDbType.DateTime, hasta})
+            pars.Add(New Object() {"@desdexiii", SqlDbType.DateTime, desdexiii})
+            pars.Add(New Object() {"@hastaxiii", SqlDbType.DateTime, hastaxiii})
+            pars.Add(New Object() {"@desdexiv", SqlDbType.DateTime, desdexiv})
+            pars.Add(New Object() {"@hastaxiv", SqlDbType.DateTime, hastaxiv})
 
 
-            ' xiii
-            Dim desdeXiii = "'" & (anio - 1) & "-" & (mesDesdeXiii - 1) & "-" & 26 & " 00:00:00'"
-            Dim hastaXiii = "'" & anio & "-" & mesHastaXiii & "-" & diaHastaXiii & " 23:59:59'"
-
-            ' xiv
-            Dim desdeXiv = "'" & (anio - 1) & "-" & (mesDesdeXiv - 1) & "-" & 26 & " 00:00:00'"
-            Dim hastaXiv = "'" & anio & "-" & mesHastaXiv & "-" & diaHastaXiv & " 23:59:59'"
-
-            Dim sql = "select p.cedula, p.nombres, p.apellidos, substring(p.SEXO, 1,1) genero, co.CODIGO_OCUPACIONAL ocupacion, 0 cargas, sum(d.diast) dias, 'P' pago, '' pjornada, '' hjornada, CASE WHEN p.discapacidad = 'SI' then 'X' else '' end discapacidad, '' ruc, (select sum(dx.xiii) + sum(dx.xiii_pension) from DETALLES_ROL dx join PERSONAL px on dx.ID_PERSONAL = px.id_personal join rol_pago rx on dx.id_rol = rx.id_rol join CODIGO_CARGO_OCUPACIONAL cox on px.ID_CARGO_OCUPACIONAL = cox.ID_CARGO_OCUPACIONAL where dx.id_personal = p.id_personal and rx.estado = 2 and rx.quincena = 1 and dx.grupo <> '' and (rx.desde >= " & desdeXiii & " and rx.hasta <= " & hastaXiii & ") group by px.id_personal) xiii, (select (sum(dx.xiv) + sum(dx.xiv_pension)) xiv from DETALLES_ROL dx join PERSONAL px on dx.ID_PERSONAL = px.id_personal join rol_pago rx on dx.id_rol = rx.id_rol join CODIGO_CARGO_OCUPACIONAL cox on px.ID_CARGO_OCUPACIONAL = cox.ID_CARGO_OCUPACIONAL where dx.id_personal = p.id_personal and rx.estado = 2 and rx.quincena = 1 and dx.grupo <> '' and (rx.desde >= " & desdeXiv & " and rx.hasta <= " & hastaXiv & ") group by px.id_personal) xiv, 0 utilidad, sum(d.neto_rol) ganado, (sum(d.fon_res) + sum(d.fon_res_ant) + sum(d.val_acum_fon_res)) fonres from DETALLES_ROL d join PERSONAL p on d.ID_PERSONAL = p.id_personal join rol_pago r on d.id_rol = r.id_rol join CODIGO_CARGO_OCUPACIONAL co on p.ID_CARGO_OCUPACIONAL = co.ID_CARGO_OCUPACIONAL where r.estado = 2 and d.id_personal > 0 and r.quincena = 1 and d.grupo <> '' and (r.desde >= " & desde & " and r.hasta <= " & hasta & ") group by p.id_personal,p.cedula, p.apellidos, p.nombres, p.SEXO, p.discapacidad, co.CODIGO_OCUPACIONAL order by p.apellidos, p.nombres;"
-            Return ComandosSql.SeleccionarQueryToDataTable(tipoCon, sql, False)
+            Dim sql = "select p.cedula, p.nombres, p.apellidos, substring(p.SEXO, 1,1) genero, co.CODIGO_OCUPACIONAL ocupacion, 0 cargas, sum(d.diast) dias, 'P' pago, '' pjornada, '' hjornada, CASE WHEN p.discapacidad = 'SI' then 'X' else '' end discapacidad, '' ruc, (select sum(dx.xiii) + sum(dx.xiii_pension) from DETALLES_ROL dx join PERSONAL px on dx.ID_PERSONAL = px.id_personal join rol_pago rx on dx.id_rol = rx.id_rol join CODIGO_CARGO_OCUPACIONAL cox on px.ID_CARGO_OCUPACIONAL = cox.ID_CARGO_OCUPACIONAL where dx.id_personal = p.id_personal and rx.estado = 2 and rx.quincena = 1 and dx.grupo <> '' and (rx.desde >=  @desdexiii  and rx.hasta <= @hastaxiii ) group by px.id_personal) xiii, (select (sum(dx.xiv) + sum(dx.xiv_pension)) xiv from DETALLES_ROL dx join PERSONAL px on dx.ID_PERSONAL = px.id_personal join rol_pago rx on dx.id_rol = rx.id_rol join CODIGO_CARGO_OCUPACIONAL cox on px.ID_CARGO_OCUPACIONAL = cox.ID_CARGO_OCUPACIONAL where dx.id_personal = p.id_personal and rx.estado = 2 and rx.quincena = 1 and dx.grupo <> '' and (rx.desde >= @desdexiv  and rx.hasta <= @hastaxiv ) group by px.id_personal) xiv, 0 utilidad, sum(d.neto_rol) ganado, (sum(d.fon_res) + sum(d.fon_res_ant) + sum(d.val_acum_fon_res)) fonres from DETALLES_ROL d join PERSONAL p on d.ID_PERSONAL = p.id_personal join rol_pago r on d.id_rol = r.id_rol join CODIGO_CARGO_OCUPACIONAL co on p.ID_CARGO_OCUPACIONAL = co.ID_CARGO_OCUPACIONAL where (r.estado = 2 or r.estado = 1) and d.id_personal > 0 and r.quincena = 1 and d.grupo <> '' and (r.desde >= @desde  and r.hasta <= @hasta ) group by p.id_personal,p.cedula, p.apellidos, p.nombres, p.SEXO, p.discapacidad, co.CODIGO_OCUPACIONAL order by p.apellidos, p.nombres;"
+            Return ComandosSql.SeleccionarQueryWithParamsToDataTable(tipoCon, sql, False, pars)
         End Function
 
 

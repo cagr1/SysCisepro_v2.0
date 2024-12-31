@@ -30,11 +30,11 @@
             'crvReporteConceptosFondoRotativo
             '
             Me.crvReporteConceptosFondoRotativo.ActiveViewIndex = -1
-            Me.crvReporteConceptosFondoRotativo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
             Me.crvReporteConceptosFondoRotativo.Cursor = System.Windows.Forms.Cursors.Default
             Me.crvReporteConceptosFondoRotativo.Dock = System.Windows.Forms.DockStyle.Fill
             Me.crvReporteConceptosFondoRotativo.Location = New System.Drawing.Point(0, 0)
             Me.crvReporteConceptosFondoRotativo.Name = "crvReporteConceptosFondoRotativo"
+            Me.crvReporteConceptosFondoRotativo.ShowLogo = False
             Me.crvReporteConceptosFondoRotativo.Size = New System.Drawing.Size(863, 536)
             Me.crvReporteConceptosFondoRotativo.TabIndex = 0
             Me.crvReporteConceptosFondoRotativo.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None
@@ -43,7 +43,7 @@
             '
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-            Me.BackColor = System.Drawing.Color.White
+            Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(185, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(227, Byte), Integer))
             Me.ClientSize = New System.Drawing.Size(863, 536)
             Me.Controls.Add(Me.crvReporteConceptosFondoRotativo)
             Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow

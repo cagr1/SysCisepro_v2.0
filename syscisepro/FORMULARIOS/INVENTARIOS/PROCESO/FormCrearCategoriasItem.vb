@@ -202,19 +202,19 @@ Namespace FORMULARIOS.INVENTARIOS.PROCESO
             cbmCategoría.Enabled = False
         End Sub
 
-        Private Sub lblCategoría_DoubleClick(ByVal sender As System.Object, ByVal e As EventArgs) Handles lblCategoría.DoubleClick
+        Private Sub lblCategoría_DoubleClick(ByVal sender As System.Object, ByVal e As EventArgs)
             cbmCategoría.Enabled = True
         End Sub
 
-        Private Sub lblGrupo_DoubleClick(ByVal sender As System.Object, ByVal e As EventArgs) Handles lblGrupo.DoubleClick
+        Private Sub lblGrupo_DoubleClick(ByVal sender As System.Object, ByVal e As EventArgs)
             cbmGrupo.Enabled = True
         End Sub
 
-        Private Sub cbmGrupo_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles cbmGrupo.SelectedIndexChanged
+        Private Sub cbmGrupo_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As EventArgs)
             CargarIdGrupo()
         End Sub
 
-        Private Sub cbmGrupo_SelectionChangeCommitted(ByVal sender As System.Object, ByVal e As EventArgs) Handles cbmGrupo.SelectionChangeCommitted
+        Private Sub cbmGrupo_SelectionChangeCommitted(ByVal sender As System.Object, ByVal e As EventArgs)
             cbmGrupo.Enabled = False
         End Sub
 
@@ -244,7 +244,7 @@ Namespace FORMULARIOS.INVENTARIOS.PROCESO
             End Try
         End Sub
 
-        Private Sub txtNombreSubGrupo_KeyDown(ByVal sender As System.Object, ByVal e As Windows.Forms.KeyEventArgs) Handles txtNombreSubGrupo.KeyDown
+        Private Sub txtNombreSubGrupo_KeyDown(ByVal sender As System.Object, ByVal e As Windows.Forms.KeyEventArgs)
             Try
                 dgvPrevio.DataSource = _objSubGrupo.SeleccionarSubGrupoItemsActivas(_tipoCon)
                 dgvPrevio.AutoResizeRows()

@@ -85,7 +85,7 @@
             Me.lblNombres.BackColor = System.Drawing.Color.White
             Me.lblNombres.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.lblNombres.Enabled = False
-            Me.lblNombres.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.lblNombres.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.lblNombres.Location = New System.Drawing.Point(81, 48)
             Me.lblNombres.Name = "lblNombres"
             Me.lblNombres.Size = New System.Drawing.Size(178, 21)
@@ -96,8 +96,7 @@
             Me.cbmParroquia.BackColor = System.Drawing.Color.White
             Me.cbmParroquia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cbmParroquia.Enabled = False
-            Me.cbmParroquia.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-            Me.cbmParroquia.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.cbmParroquia.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cbmParroquia.FormattingEnabled = True
             Me.cbmParroquia.Location = New System.Drawing.Point(412, 112)
             Me.cbmParroquia.Name = "cbmParroquia"
@@ -123,7 +122,7 @@
             Me.txtIdCustodio.BackColor = System.Drawing.Color.White
             Me.txtIdCustodio.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtIdCustodio.Enabled = False
-            Me.txtIdCustodio.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtIdCustodio.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtIdCustodio.Location = New System.Drawing.Point(191, 7)
             Me.txtIdCustodio.Name = "txtIdCustodio"
             Me.txtIdCustodio.Size = New System.Drawing.Size(68, 21)
@@ -134,8 +133,7 @@
             Me.cbmCiudad.BackColor = System.Drawing.Color.White
             Me.cbmCiudad.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cbmCiudad.Enabled = False
-            Me.cbmCiudad.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-            Me.cbmCiudad.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.cbmCiudad.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cbmCiudad.FormattingEnabled = True
             Me.cbmCiudad.Location = New System.Drawing.Point(412, 80)
             Me.cbmCiudad.Name = "cbmCiudad"
@@ -147,8 +145,7 @@
             Me.cbmProvincia.BackColor = System.Drawing.Color.White
             Me.cbmProvincia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cbmProvincia.Enabled = False
-            Me.cbmProvincia.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-            Me.cbmProvincia.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.cbmProvincia.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cbmProvincia.FormattingEnabled = True
             Me.cbmProvincia.Location = New System.Drawing.Point(412, 47)
             Me.cbmProvincia.Name = "cbmProvincia"
@@ -173,8 +170,7 @@
             Me.cbmNivelCuenta.BackColor = System.Drawing.Color.White
             Me.cbmNivelCuenta.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cbmNivelCuenta.Enabled = False
-            Me.cbmNivelCuenta.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-            Me.cbmNivelCuenta.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.cbmNivelCuenta.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cbmNivelCuenta.FormattingEnabled = True
             Me.cbmNivelCuenta.Items.AddRange(New Object() {"1", "2", "3", "4", "5", "6", "7"})
             Me.cbmNivelCuenta.Location = New System.Drawing.Point(612, 47)
@@ -187,8 +183,7 @@
             Me.cbmTipoCuenta.BackColor = System.Drawing.Color.White
             Me.cbmTipoCuenta.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cbmTipoCuenta.Enabled = False
-            Me.cbmTipoCuenta.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-            Me.cbmTipoCuenta.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.cbmTipoCuenta.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cbmTipoCuenta.FormattingEnabled = True
             Me.cbmTipoCuenta.Items.AddRange(New Object() {"1", "2", "3", "4", "5", "6"})
             Me.cbmTipoCuenta.Location = New System.Drawing.Point(612, 8)
@@ -201,8 +196,7 @@
             Me.cbmCentroCosto.BackColor = System.Drawing.Color.White
             Me.cbmCentroCosto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cbmCentroCosto.Enabled = False
-            Me.cbmCentroCosto.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-            Me.cbmCentroCosto.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.cbmCentroCosto.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cbmCentroCosto.FormattingEnabled = True
             Me.cbmCentroCosto.Location = New System.Drawing.Point(412, 7)
             Me.cbmCentroCosto.Name = "cbmCentroCosto"
@@ -214,7 +208,7 @@
             Me.txtValorGasto.BackColor = System.Drawing.Color.White
             Me.txtValorGasto.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtValorGasto.Enabled = False
-            Me.txtValorGasto.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtValorGasto.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtValorGasto.Location = New System.Drawing.Point(204, 112)
             Me.txtValorGasto.Name = "txtValorGasto"
             Me.txtValorGasto.Size = New System.Drawing.Size(55, 21)
@@ -225,7 +219,7 @@
             Me.txtMonto.BackColor = System.Drawing.Color.White
             Me.txtMonto.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtMonto.Enabled = False
-            Me.txtMonto.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtMonto.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtMonto.Location = New System.Drawing.Point(81, 111)
             Me.txtMonto.Name = "txtMonto"
             Me.txtMonto.Size = New System.Drawing.Size(55, 21)
@@ -236,7 +230,7 @@
             Me.txtDetalle.BackColor = System.Drawing.Color.White
             Me.txtDetalle.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtDetalle.Enabled = False
-            Me.txtDetalle.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtDetalle.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtDetalle.Location = New System.Drawing.Point(81, 80)
             Me.txtDetalle.Name = "txtDetalle"
             Me.txtDetalle.Size = New System.Drawing.Size(178, 21)
@@ -247,7 +241,7 @@
             Me.txtIdCajaChica.BackColor = System.Drawing.Color.White
             Me.txtIdCajaChica.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtIdCajaChica.Enabled = False
-            Me.txtIdCajaChica.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.txtIdCajaChica.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtIdCajaChica.Location = New System.Drawing.Point(33, 8)
             Me.txtIdCajaChica.Name = "txtIdCajaChica"
             Me.txtIdCajaChica.Size = New System.Drawing.Size(55, 21)
@@ -260,7 +254,8 @@
             Me.dgvCajas.AllowUserToResizeRows = False
             DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
             Me.dgvCajas.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
-            Me.dgvCajas.BackgroundColor = System.Drawing.Color.White
+            Me.dgvCajas.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
+            Me.dgvCajas.BorderStyle = System.Windows.Forms.BorderStyle.None
             Me.dgvCajas.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
             Me.dgvCajas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
             DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
@@ -289,7 +284,7 @@
             Me.crvCajasChicasCustodios.Location = New System.Drawing.Point(0, 0)
             Me.crvCajasChicasCustodios.Name = "crvCajasChicasCustodios"
             Me.crvCajasChicasCustodios.ShowLogo = False
-            Me.crvCajasChicasCustodios.Size = New System.Drawing.Size(879, 450)
+            Me.crvCajasChicasCustodios.Size = New System.Drawing.Size(763, 420)
             Me.crvCajasChicasCustodios.TabIndex = 0
             Me.crvCajasChicasCustodios.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None
             '
@@ -540,7 +535,7 @@
             Me.KryptonPage2.LastVisibleSet = True
             Me.KryptonPage2.MinimumSize = New System.Drawing.Size(50, 50)
             Me.KryptonPage2.Name = "KryptonPage2"
-            Me.KryptonPage2.Size = New System.Drawing.Size(879, 450)
+            Me.KryptonPage2.Size = New System.Drawing.Size(763, 420)
             Me.KryptonPage2.Text = "Reporte"
             Me.KryptonPage2.ToolTipTitle = "Page ToolTip"
             Me.KryptonPage2.UniqueName = "28364F020BAD4D2B7FB04B9630471402"

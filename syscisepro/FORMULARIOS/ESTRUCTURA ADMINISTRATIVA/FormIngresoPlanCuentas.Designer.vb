@@ -117,7 +117,6 @@
             Me.cbmMovimiento.BackColor = System.Drawing.Color.White
             Me.cbmMovimiento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cbmMovimiento.Enabled = False
-            Me.cbmMovimiento.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.cbmMovimiento.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cbmMovimiento.ForeColor = System.Drawing.Color.Black
             Me.cbmMovimiento.FormattingEnabled = True
@@ -132,12 +131,11 @@
             Me.cbmPresupuesto.BackColor = System.Drawing.Color.White
             Me.cbmPresupuesto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cbmPresupuesto.Enabled = False
-            Me.cbmPresupuesto.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.cbmPresupuesto.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cbmPresupuesto.ForeColor = System.Drawing.Color.Black
             Me.cbmPresupuesto.FormattingEnabled = True
             Me.cbmPresupuesto.Items.AddRange(New Object() {"SI", "NO", ""})
-            Me.cbmPresupuesto.Location = New System.Drawing.Point(602, 4)
+            Me.cbmPresupuesto.Location = New System.Drawing.Point(592, 4)
             Me.cbmPresupuesto.Name = "cbmPresupuesto"
             Me.cbmPresupuesto.Size = New System.Drawing.Size(73, 21)
             Me.cbmPresupuesto.TabIndex = 59
@@ -147,11 +145,10 @@
             Me.cbmEmpresa.BackColor = System.Drawing.Color.White
             Me.cbmEmpresa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cbmEmpresa.Enabled = False
-            Me.cbmEmpresa.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.cbmEmpresa.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cbmEmpresa.ForeColor = System.Drawing.Color.Black
             Me.cbmEmpresa.FormattingEnabled = True
-            Me.cbmEmpresa.Location = New System.Drawing.Point(565, 57)
+            Me.cbmEmpresa.Location = New System.Drawing.Point(555, 57)
             Me.cbmEmpresa.Name = "cbmEmpresa"
             Me.cbmEmpresa.Size = New System.Drawing.Size(110, 21)
             Me.cbmEmpresa.TabIndex = 61
@@ -172,7 +169,6 @@
             Me.cbmNivel.BackColor = System.Drawing.Color.White
             Me.cbmNivel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cbmNivel.Enabled = False
-            Me.cbmNivel.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.cbmNivel.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cbmNivel.ForeColor = System.Drawing.Color.Black
             Me.cbmNivel.FormattingEnabled = True
@@ -187,7 +183,6 @@
             Me.cbmTipo.BackColor = System.Drawing.Color.White
             Me.cbmTipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cbmTipo.Enabled = False
-            Me.cbmTipo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.cbmTipo.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cbmTipo.ForeColor = System.Drawing.Color.Black
             Me.cbmTipo.FormattingEnabled = True
@@ -241,12 +236,11 @@
             Me.cbmEstadoContable.BackColor = System.Drawing.Color.White
             Me.cbmEstadoContable.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cbmEstadoContable.Enabled = False
-            Me.cbmEstadoContable.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.cbmEstadoContable.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cbmEstadoContable.ForeColor = System.Drawing.Color.Black
             Me.cbmEstadoContable.FormattingEnabled = True
             Me.cbmEstadoContable.Items.AddRange(New Object() {"1", "2", "3", "4"})
-            Me.cbmEstadoContable.Location = New System.Drawing.Point(602, 30)
+            Me.cbmEstadoContable.Location = New System.Drawing.Point(592, 30)
             Me.cbmEstadoContable.Name = "cbmEstadoContable"
             Me.cbmEstadoContable.Size = New System.Drawing.Size(73, 21)
             Me.cbmEstadoContable.TabIndex = 199
@@ -379,7 +373,7 @@
             Me.KryptonGroupBox1.CaptionOverlap = 0R
             Me.KryptonGroupBox1.CaptionStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.KeyTip
             Me.KryptonGroupBox1.GroupBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.ControlRibbon
-            Me.KryptonGroupBox1.Location = New System.Drawing.Point(6, 36)
+            Me.KryptonGroupBox1.Location = New System.Drawing.Point(6, 38)
             Me.KryptonGroupBox1.Name = "KryptonGroupBox1"
             '
             'KryptonGroupBox1.Panel
@@ -410,11 +404,11 @@
             Me.KryptonGroupBox1.Panel.Controls.Add(Me.cbmNivel)
             Me.KryptonGroupBox1.Size = New System.Drawing.Size(908, 104)
             Me.KryptonGroupBox1.TabIndex = 210
-            Me.KryptonGroupBox1.Values.Heading = "Datos"
+            Me.KryptonGroupBox1.Values.Heading = " Datos"
             '
             'KryptonLabel14
             '
-            Me.KryptonLabel14.Location = New System.Drawing.Point(685, 58)
+            Me.KryptonLabel14.Location = New System.Drawing.Point(680, 58)
             Me.KryptonLabel14.Name = "KryptonLabel14"
             Me.KryptonLabel14.Size = New System.Drawing.Size(220, 20)
             Me.KryptonLabel14.TabIndex = 203
@@ -422,7 +416,7 @@
             '
             'KryptonLabel13
             '
-            Me.KryptonLabel13.Location = New System.Drawing.Point(685, 39)
+            Me.KryptonLabel13.Location = New System.Drawing.Point(680, 39)
             Me.KryptonLabel13.Name = "KryptonLabel13"
             Me.KryptonLabel13.Size = New System.Drawing.Size(175, 20)
             Me.KryptonLabel13.TabIndex = 202
@@ -430,7 +424,7 @@
             '
             'KryptonLabel12
             '
-            Me.KryptonLabel12.Location = New System.Drawing.Point(685, 19)
+            Me.KryptonLabel12.Location = New System.Drawing.Point(680, 19)
             Me.KryptonLabel12.Name = "KryptonLabel12"
             Me.KryptonLabel12.Size = New System.Drawing.Size(179, 20)
             Me.KryptonLabel12.TabIndex = 201
@@ -438,7 +432,7 @@
             '
             'KryptonLabel11
             '
-            Me.KryptonLabel11.Location = New System.Drawing.Point(685, 1)
+            Me.KryptonLabel11.Location = New System.Drawing.Point(680, 1)
             Me.KryptonLabel11.Name = "KryptonLabel11"
             Me.KryptonLabel11.Size = New System.Drawing.Size(189, 20)
             Me.KryptonLabel11.TabIndex = 200
@@ -446,7 +440,7 @@
             '
             'KryptonLabel10
             '
-            Me.KryptonLabel10.Location = New System.Drawing.Point(505, 57)
+            Me.KryptonLabel10.Location = New System.Drawing.Point(495, 57)
             Me.KryptonLabel10.Name = "KryptonLabel10"
             Me.KryptonLabel10.Size = New System.Drawing.Size(57, 20)
             Me.KryptonLabel10.TabIndex = 68
@@ -454,7 +448,7 @@
             '
             'KryptonLabel9
             '
-            Me.KryptonLabel9.Location = New System.Drawing.Point(507, 29)
+            Me.KryptonLabel9.Location = New System.Drawing.Point(497, 29)
             Me.KryptonLabel9.Name = "KryptonLabel9"
             Me.KryptonLabel9.Size = New System.Drawing.Size(72, 20)
             Me.KryptonLabel9.TabIndex = 67
@@ -462,7 +456,7 @@
             '
             'KryptonLabel8
             '
-            Me.KryptonLabel8.Location = New System.Drawing.Point(505, 5)
+            Me.KryptonLabel8.Location = New System.Drawing.Point(495, 5)
             Me.KryptonLabel8.Name = "KryptonLabel8"
             Me.KryptonLabel8.Size = New System.Drawing.Size(78, 20)
             Me.KryptonLabel8.TabIndex = 66
@@ -518,7 +512,7 @@
             '
             'KryptonLabel1
             '
-            Me.KryptonLabel1.Location = New System.Drawing.Point(3, 4)
+            Me.KryptonLabel1.Location = New System.Drawing.Point(4, 5)
             Me.KryptonLabel1.Name = "KryptonLabel1"
             Me.KryptonLabel1.Size = New System.Drawing.Size(21, 20)
             Me.KryptonLabel1.TabIndex = 0

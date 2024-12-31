@@ -3,6 +3,7 @@ Imports ClassLibraryCisepro.CONTABILIDAD.BANCOS.AUDITORIA
 Imports ClassLibraryCisepro.ENUMS
 Imports ClassLibraryCisepro.INVENTARIOS.PARAMETROS
 Imports ClassLibraryCisepro.ProcesosSql
+Imports Krypton.Toolkit
 
 Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
     ''' <summary>
@@ -50,12 +51,12 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
                     dgvColores.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorAsenava
                     dgvMateriales.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorAsenava
                 Case TipoConexion.Seportpac
-                    Icon = My.Resources.logo_s 
+                    Icon = My.Resources.logo_s
                     dgvMarcas.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorSeportpac
                     dgvColores.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorSeportpac
                     dgvMateriales.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorSeportpac
                 Case Else
-                    Icon = My.Resources.logo_c 
+                    Icon = My.Resources.logo_c
                     dgvMarcas.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
                     dgvColores.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
                     dgvMateriales.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
@@ -64,9 +65,9 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
             dgvMarcas.Font = New Font("Roboto", 8, FontStyle.Regular)
             dgvMateriales.Font = New Font("Roboto", 8, FontStyle.Regular)
             _sqlCommands = New List(Of SqlCommand)
-            mostrarTodosRegistrosColores()
-            mostrarTodosRegistrosMarcas()
-            mostrarTodosRegistrosMateriales() 
+            MostrarTodosRegistrosColores()
+            MostrarTodosRegistrosMarcas()
+            MostrarTodosRegistrosMateriales() 
         End Sub
 
         Private Sub MostrarTodosRegistrosMarcas()
@@ -112,7 +113,8 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
         Private Sub btnGuardarMarca_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnGuardarMarca.Click
             If txtDetalleMarca.Text <> "" Then
 
-                If MessageBox.Show("¿Esta seguro que desea guardar?", "Mensaje de validación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> MsgBoxResult.Yes Then Return
+                'If MessageBox.Show("¿Esta seguro que desea guardar?", "Mensaje de validación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> MsgBoxResult.Yes Then Return
+                If KryptonMessageBox.Show("¿Esta seguro que desea guardar?", "Mensaje de validación", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) <> DialogResult.Yes Then Return
                 _sqlCommands.Clear()
 
                 _objAuditoria.IdAuditoria = _objAuditoria.BuscarMayorIdAuditoriaGeneral(_tipoCon) + 1
@@ -137,10 +139,16 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
                     btnGuardarMarca.Enabled = False
                     btnNuevoMarca.Enabled = True
                     MostrarTodosRegistrosMarcas()
+                    KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
+                Else
+                    KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+                    Return
                 End If
-                MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
+                'End If
+                'MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
             Else
-                MsgBox("No se puede guardar la MARCA debido a que no ha llenado todos los parámetros nesesarios", MsgBoxStyle.Information, "Mensaje de validación")
+                'MsgBox("No se puede guardar la MARCA debido a que no ha llenado todos los parámetros nesesarios", MsgBoxStyle.Information, "Mensaje de validación")
+                KryptonMessageBox.Show("No se puede guardar la MARCA debido a que no ha llenado todos los parámetros nesesarios", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
                 txtDetalleMarca.Focus()
             End If
         End Sub
@@ -155,7 +163,8 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
         Private Sub btnGuardarColor_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnGuardarColor.Click
             If txtDetalleColor.Text <> "" Then
 
-                If MessageBox.Show("¿Esta seguro que desea guardar?", "Mensaje de validación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> MsgBoxResult.Yes Then Return
+                'If MessageBox.Show("¿Esta seguro que desea guardar?", "Mensaje de validación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> MsgBoxResult.Yes Then Return
+                If KryptonMessageBox.Show("¿Esta seguro que desea guardar?", "Mensaje de validación", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) <> DialogResult.Yes Then Return
                 _sqlCommands.Clear()
 
                 _objAuditoria.IdAuditoria = _objAuditoria.BuscarMayorIdAuditoriaGeneral(_tipoCon) + 1
@@ -180,10 +189,16 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
                     txtDetalleColor.Enabled = False
                     btnGuardarColor.Enabled = False
                     btnNuevoColor.Enabled = True
+                    KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
+                Else
+                    KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+                    Return
                 End If
-                MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
+                'End If
+                'MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
             Else
-                MsgBox("No se puede guardar el COLOR debido a que no ha llenado todos los parámetros nesesarios", MsgBoxStyle.Information, "Mensaje de validación")
+                'MsgBox("No se puede guardar el COLOR debido a que no ha llenado todos los parámetros nesesarios", MsgBoxStyle.Information, "Mensaje de validación")
+                KryptonMessageBox.Show("No se puede guardar el COLOR debido a que no ha llenado todos los parámetros nesesarios", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
                 txtDetalleColor.Focus()
             End If
         End Sub
@@ -198,7 +213,8 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
         Private Sub btnGuardarMaterial_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnGuardarMaterial.Click
             If txtDetalleMaterial.Text <> "" Then
 
-                If MessageBox.Show("¿Esta seguro que desea guardar?", "Mensaje de validación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> MsgBoxResult.Yes Then Return
+                'If MessageBox.Show("¿Esta seguro que desea guardar?", "Mensaje de validación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> MsgBoxResult.Yes Then Return
+                If KryptonMessageBox.Show("¿Esta seguro que desea guardar?", "Mensaje de validación", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) <> DialogResult.Yes Then Return
                 _sqlCommands.Clear()
 
                 _objAuditoria.IdAuditoria = _objAuditoria.BuscarMayorIdAuditoriaGeneral(_tipoCon) + 1
@@ -223,10 +239,16 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
                     txtDetalleMaterial.Enabled = False
                     btnGuardarMaterial.Enabled = False
                     btnNuevoMaterial.Enabled = True
+                    KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
+                Else
+                    KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+                    Return
                 End If
-                MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
+                'End If
+                'MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
             Else
-                MsgBox("No se puede guardar el MATERIAL debido a que no ha llenado todos los parámetros nesesarios", MsgBoxStyle.Information, "Mensaje de validación")
+                'MsgBox("No se puede guardar el MATERIAL debido a que no ha llenado todos los parámetros nesesarios", MsgBoxStyle.Information, "Mensaje de validación")
+                KryptonMessageBox.Show("No se puede guardar el MATERIAL debido a que no ha llenado todos los parámetros nesesarios", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
                 txtDetalleMaterial.Focus()
             End If
         End Sub

@@ -4,6 +4,7 @@ Imports ClassLibraryCisepro.INVENTARIOS.UNIFORMES
 Imports ClassLibraryCisepro.TALENTO_HUMANO
 Imports Microsoft.Office.Interop
 Imports syscisepro.DATOS
+Imports Krypton.Toolkit
 
 Namespace FORMULARIOS.INVENTARIOS.PROCESO
     ''' <summary>
@@ -170,7 +171,8 @@ Namespace FORMULARIOS.INVENTARIOS.PROCESO
                     cuantos = 0 
                 Next 
             Catch ex As Exception
-                MsgBox("NO SE PUEDE PROCESAR" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
+                'MsgBox("NO SE PUEDE PROCESAR" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
+                KryptonMessageBox.Show("NO SE PUEDE PROCESAR" & vbNewLine & ex.Message.ToString, "Mensaje de excepción", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
 
@@ -188,6 +190,7 @@ Namespace FORMULARIOS.INVENTARIOS.PROCESO
                     Return False
                 End If
             Catch ex As Exception
+                KryptonMessageBox.Show("Problema de validacion de kardex" & vbNewLine & ex.Message.ToString, "Mensaje de excepción", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
                 Return False
             End Try
         End Function
@@ -204,7 +207,8 @@ Namespace FORMULARIOS.INVENTARIOS.PROCESO
 
         Public Sub ExportarDatosExcel(ByVal DataGridViewExp As DataGridView, ByVal titulo As String)
             If DataGridViewExp.Rows.Count = 0 Then
-                MsgBox("No hay datos que exportar!", MsgBoxStyle.Exclamation, "Mensaje de validación")
+                'MsgBox("No hay datos que exportar!", MsgBoxStyle.Exclamation, "Mensaje de validación")
+                KryptonMessageBox.Show("No hay datos que exportar!", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                 Return
             End If
 
@@ -274,7 +278,8 @@ Namespace FORMULARIOS.INVENTARIOS.PROCESO
             Try
                 ExportarDatosExcel(dgvCustodios, If(chkCustodio.Checked, "REPORTE POR CUSTODIO", "REPORTE DE ITEM / KARDEX"))
             Catch ex As Exception
-                MsgBox("NO SE PUEDE PROCESAR" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
+                'MsgBox("NO SE PUEDE PROCESAR" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
+                KryptonMessageBox.Show("NO SE PUEDE PROCESAR" & vbNewLine & ex.Message.ToString, "Mensaje de excepción", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
 
@@ -282,7 +287,8 @@ Namespace FORMULARIOS.INVENTARIOS.PROCESO
             Try
                 ExportarDatosExcel(dgvControl, If(chkCustodio.Checked, "CUSTODIO: " & dgvCustodios.CurrentRow.Cells(2).Value, "REPORTE DE ITEM / KARDEX"))
             Catch ex As Exception
-                MsgBox("NO SE PUEDE PROCESAR" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
+                'MsgBox("NO SE PUEDE PROCESAR" & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
+                KryptonMessageBox.Show("NO SE PUEDE PROCESAR" & vbNewLine & ex.Message.ToString, "Mensaje de excepción", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
 

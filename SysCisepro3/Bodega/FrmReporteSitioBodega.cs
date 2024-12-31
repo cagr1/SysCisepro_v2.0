@@ -59,10 +59,7 @@ namespace SysCisepro3.Bodega
 
         private void FrmReporteSitioBodega_Load(object sender, EventArgs e)
         {
-            toolStrip1.BackColor = ValidationForms.GetColorSistema(TipoCon);
-            toolStrip1.ForeColor = Color.White;
-            toolStripLabel1.BackColor = ValidationForms.GetColorSistema(TipoCon);
-            toolStripLabel1.ForeColor = Color.White;
+            
             dgvsitios.DefaultCellStyle.SelectionBackColor = ValidationForms.GetColorSistema(TipoCon);
             
 
@@ -159,12 +156,12 @@ namespace SysCisepro3.Bodega
                     dgvsitios.AutoResizeColumns();
                     
                     dgvsitios.Columns[0].HeaderText = "ID COMPROBANTE";
-                    dgvsitios.Columns[0].Width = 70;
+                    dgvsitios.Columns[0].Width = 80;
                     dgvsitios.Columns[1].HeaderText = "FECHA";
                     dgvsitios.Columns[1].Width = 90;
                     dgvsitios.Columns[1].DefaultCellStyle.Format = "d";
                     dgvsitios.Columns[2].HeaderText = "CANTIDAD";
-                    dgvsitios.Columns[2].Width = 50;
+                    dgvsitios.Columns[2].Width = 60;
                     dgvsitios.Columns[3].HeaderText = "TIPO";
                     dgvsitios.Columns[3].Width = 40;
                     dgvsitios.Columns[4].HeaderText = "ID KARDEX";
@@ -174,9 +171,9 @@ namespace SysCisepro3.Bodega
                     dgvsitios.Columns[6].HeaderText = "DESCRIPCION";
                     dgvsitios.Columns[6].Width = 200;
                     dgvsitios.Columns[7].HeaderText = "RAZON";
-                    dgvsitios.Columns[7].Width = 400;
+                    dgvsitios.Columns[7].Width = 300;
                     dgvsitios.Columns[8].HeaderText = "SITIO";
-                    dgvsitios.Columns[8].Width = 400;
+                    dgvsitios.Columns[8].Width = 300;
                     
                     dgvsitios.AutoResizeRows();
                 }
@@ -349,7 +346,8 @@ namespace SysCisepro3.Bodega
                 app.Visible = true;
                 app.DisplayAlerts = true;
                 //workbook.SaveAs(sfd.FileName, XlFileFormat.xlWorkbookNormal, Type.Missing, Type.Missing, Type.Missing, Type.Missing, XlSaveAsAccessMode.xlExclusive, Type.Missing, Type.Missing, Type.Missing, Type.Missing);
-                MessageBox.Show(@"REPORTE DE SITIOS DE BODEGA generado correctamente!", "Mensaje del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //MessageBox.Show(@"REPORTE DE SITIOS DE BODEGA generado correctamente!", "Mensaje del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                KryptonMessageBox.Show(@"REPORTE DE SITIOS DE BODEGA generado correctamente!", @"Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
             }
             catch (Exception ex)
             {

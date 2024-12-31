@@ -33,7 +33,6 @@
             'crvControlCombustible
             '
             Me.crvControlCombustible.ActiveViewIndex = -1
-            Me.crvControlCombustible.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
             Me.crvControlCombustible.Cursor = System.Windows.Forms.Cursors.Default
             Me.crvControlCombustible.Dock = System.Windows.Forms.DockStyle.Fill
             Me.crvControlCombustible.Location = New System.Drawing.Point(0, 0)
@@ -74,7 +73,7 @@
             '
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-            Me.BackColor = System.Drawing.Color.White
+            Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(185, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(227, Byte), Integer))
             Me.ClientSize = New System.Drawing.Size(896, 568)
             Me.Controls.Add(Me.Label2)
             Me.Controls.Add(Me.Label1)

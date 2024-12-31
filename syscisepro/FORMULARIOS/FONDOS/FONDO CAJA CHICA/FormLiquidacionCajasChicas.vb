@@ -226,12 +226,13 @@ Namespace FORMULARIOS.FONDOS.FONDO_CAJA_CHICA
                 btnLiquidacionFondoCCH.Enabled = False
                 btnGuardarSolicitudCCH.Enabled = True
                 btnCancelar.Enabled = True
-            Catch
+            Catch ex As Exception
                 _fondo = 0
                 _gasto = 0
                 _saldo = 0
                 _reposicion = 0
-                MessageBox.Show("Ocurrió un problema al realizar la sumatoria!", "Mensaje de validación", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                'MessageBox.Show("Ocurrió un problema al realizar la sumatoria!", "Mensaje de validación", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                KryptonMessageBox.Show("Ocurrió un problema al realizar la sumatoria!" & vbNewLine & ex.Message.ToString(), "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
             End Try
             txtFondoCajaChica.Text = _fondo
             txtGastosFondoCajaChica.Text = _gasto

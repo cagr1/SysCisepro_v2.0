@@ -369,7 +369,6 @@
             '
             Me.cmbObservacionCalidad.BackColor = System.Drawing.Color.White
             Me.cmbObservacionCalidad.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-            Me.cmbObservacionCalidad.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.cmbObservacionCalidad.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cmbObservacionCalidad.ForeColor = System.Drawing.Color.Black
             Me.cmbObservacionCalidad.FormattingEnabled = True
@@ -1203,7 +1202,6 @@
             '
             Me.crvComprobante.ActiveViewIndex = -1
             Me.crvComprobante.AutoSize = True
-            Me.crvComprobante.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
             Me.crvComprobante.Cursor = System.Windows.Forms.Cursors.Default
             Me.crvComprobante.Dock = System.Windows.Forms.DockStyle.Fill
             Me.crvComprobante.ForeColor = System.Drawing.SystemColors.ControlText
@@ -1783,7 +1781,6 @@
             Me.cbmParroquia.BackColor = System.Drawing.Color.White
             Me.cbmParroquia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cbmParroquia.Enabled = False
-            Me.cbmParroquia.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.cbmParroquia.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cbmParroquia.ForeColor = System.Drawing.Color.Black
             Me.cbmParroquia.FormattingEnabled = True
@@ -1808,7 +1805,6 @@
             Me.cmbBodega.BackColor = System.Drawing.Color.White
             Me.cmbBodega.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cmbBodega.Enabled = False
-            Me.cmbBodega.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.cmbBodega.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cmbBodega.FormattingEnabled = True
             Me.cmbBodega.ItemHeight = 13
@@ -1822,7 +1818,6 @@
             Me.cbmProvincia.BackColor = System.Drawing.Color.White
             Me.cbmProvincia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cbmProvincia.Enabled = False
-            Me.cbmProvincia.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.cbmProvincia.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cbmProvincia.ForeColor = System.Drawing.Color.Black
             Me.cbmProvincia.FormattingEnabled = True
@@ -1836,7 +1831,6 @@
             Me.cbmCanton.BackColor = System.Drawing.Color.White
             Me.cbmCanton.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cbmCanton.Enabled = False
-            Me.cbmCanton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.cbmCanton.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cbmCanton.ForeColor = System.Drawing.Color.Black
             Me.cbmCanton.FormattingEnabled = True
@@ -1894,7 +1888,6 @@
             Me.cbmCentroCosto.BackColor = System.Drawing.Color.White
             Me.cbmCentroCosto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cbmCentroCosto.Enabled = False
-            Me.cbmCentroCosto.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.cbmCentroCosto.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cbmCentroCosto.ForeColor = System.Drawing.Color.Black
             Me.cbmCentroCosto.FormattingEnabled = True
@@ -1908,7 +1901,6 @@
             Me.cmbConceptos.BackColor = System.Drawing.Color.White
             Me.cmbConceptos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cmbConceptos.Enabled = False
-            Me.cmbConceptos.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.cmbConceptos.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cmbConceptos.ForeColor = System.Drawing.Color.Black
             Me.cmbConceptos.FormattingEnabled = True
@@ -1922,7 +1914,6 @@
             Me.cbmEgreso.BackColor = System.Drawing.Color.White
             Me.cbmEgreso.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cbmEgreso.Enabled = False
-            Me.cbmEgreso.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.cbmEgreso.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cbmEgreso.ForeColor = System.Drawing.Color.Black
             Me.cbmEgreso.FormattingEnabled = True
@@ -1937,7 +1928,6 @@
             Me.cmbDocumento.BackColor = System.Drawing.Color.White
             Me.cmbDocumento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cmbDocumento.Enabled = False
-            Me.cmbDocumento.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.cmbDocumento.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cmbDocumento.FormattingEnabled = True
             Me.cmbDocumento.Location = New System.Drawing.Point(84, 71)
@@ -2172,6 +2162,7 @@
             Me.KryptonPage3.MinimumSize = New System.Drawing.Size(50, 50)
             Me.KryptonPage3.Name = "KryptonPage3"
             Me.KryptonPage3.Size = New System.Drawing.Size(950, 601)
+            Me.KryptonPage3.StateNormal.Page.Color1 = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.KryptonPage3.Text = "Reporte"
             Me.KryptonPage3.ToolTipTitle = "Page ToolTip"
             Me.KryptonPage3.UniqueName = "CF1859721FEB44DA25A4318F18E1F105"

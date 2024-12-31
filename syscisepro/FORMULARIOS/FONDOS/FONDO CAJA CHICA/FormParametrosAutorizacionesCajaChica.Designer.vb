@@ -132,7 +132,7 @@
             Me.btnActualizar.ForeColor = System.Drawing.Color.Black
             Me.btnActualizar.Image = Global.syscisepro.My.Resources.Resources.refresh_24dp_FILL0_wght400_GRAD0_opsz24__2_
             Me.btnActualizar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-            Me.btnActualizar.Location = New System.Drawing.Point(741, 6)
+            Me.btnActualizar.Location = New System.Drawing.Point(746, 6)
             Me.btnActualizar.Name = "btnActualizar"
             Me.btnActualizar.Size = New System.Drawing.Size(36, 26)
             Me.btnActualizar.TabIndex = 13
@@ -146,11 +146,11 @@
             Me.rbInactivo.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.rbInactivo.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.rbInactivo.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
-            Me.rbInactivo.Location = New System.Drawing.Point(653, 18)
+            Me.rbInactivo.Location = New System.Drawing.Point(653, 21)
             Me.rbInactivo.Name = "rbInactivo"
-            Me.rbInactivo.Size = New System.Drawing.Size(75, 17)
+            Me.rbInactivo.Size = New System.Drawing.Size(64, 17)
             Me.rbInactivo.TabIndex = 10
-            Me.rbInactivo.Text = "INACTIVO"
+            Me.rbInactivo.Text = "Inactivo"
             Me.rbInactivo.UseVisualStyleBackColor = False
             '
             'rbActivo
@@ -160,12 +160,12 @@
             Me.rbActivo.Checked = True
             Me.rbActivo.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.rbActivo.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
-            Me.rbActivo.Location = New System.Drawing.Point(654, -1)
+            Me.rbActivo.Location = New System.Drawing.Point(654, 1)
             Me.rbActivo.Name = "rbActivo"
-            Me.rbActivo.Size = New System.Drawing.Size(64, 17)
+            Me.rbActivo.Size = New System.Drawing.Size(56, 17)
             Me.rbActivo.TabIndex = 9
             Me.rbActivo.TabStop = True
-            Me.rbActivo.Text = "ACTIVO"
+            Me.rbActivo.Text = "Activo"
             Me.rbActivo.UseVisualStyleBackColor = False
             '
             'dgvParametroAutorizaciones
@@ -201,27 +201,27 @@
             Me.rbApellidos.AutoSize = True
             Me.rbApellidos.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.rbApellidos.Checked = True
-            Me.rbApellidos.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.rbApellidos.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.rbApellidos.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
             Me.rbApellidos.Location = New System.Drawing.Point(78, 5)
             Me.rbApellidos.Name = "rbApellidos"
-            Me.rbApellidos.Size = New System.Drawing.Size(82, 17)
+            Me.rbApellidos.Size = New System.Drawing.Size(73, 17)
             Me.rbApellidos.TabIndex = 7
             Me.rbApellidos.TabStop = True
-            Me.rbApellidos.Text = "APELLIDOS"
+            Me.rbApellidos.Text = "Apellidos"
             Me.rbApellidos.UseVisualStyleBackColor = False
             '
             'rbCedula
             '
             Me.rbCedula.AutoSize = True
             Me.rbCedula.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
-            Me.rbCedula.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.rbCedula.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.rbCedula.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
             Me.rbCedula.Location = New System.Drawing.Point(9, 6)
             Me.rbCedula.Name = "rbCedula"
-            Me.rbCedula.Size = New System.Drawing.Size(65, 17)
+            Me.rbCedula.Size = New System.Drawing.Size(61, 17)
             Me.rbCedula.TabIndex = 6
-            Me.rbCedula.Text = "CÉDULA"
+            Me.rbCedula.Text = "Cedula"
             Me.rbCedula.UseVisualStyleBackColor = False
             '
             'dgvPersonal
@@ -277,7 +277,7 @@
             Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.Button1.ForeColor = System.Drawing.Color.Black
             Me.Button1.Image = Global.syscisepro.My.Resources.Resources.save_24dp_FILL0_wght400_GRAD0_opsz24__2_
-            Me.Button1.Location = New System.Drawing.Point(766, 4)
+            Me.Button1.Location = New System.Drawing.Point(766, 3)
             Me.Button1.Name = "Button1"
             Me.Button1.Size = New System.Drawing.Size(27, 26)
             Me.Button1.TabIndex = 19
@@ -287,7 +287,6 @@
             'cbmParroquias
             '
             Me.cbmParroquias.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-            Me.cbmParroquias.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.cbmParroquias.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cbmParroquias.FormattingEnabled = True
             Me.cbmParroquias.Location = New System.Drawing.Point(621, 34)
@@ -331,7 +330,6 @@
             'cbmCiudad
             '
             Me.cbmCiudad.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-            Me.cbmCiudad.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.cbmCiudad.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cbmCiudad.FormattingEnabled = True
             Me.cbmCiudad.Location = New System.Drawing.Point(320, 35)
@@ -342,7 +340,6 @@
             'cbmProvincias
             '
             Me.cbmProvincias.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-            Me.cbmProvincias.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.cbmProvincias.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cbmProvincias.FormattingEnabled = True
             Me.cbmProvincias.Location = New System.Drawing.Point(78, 34)
@@ -546,7 +543,7 @@
             Me.KryptonPage2.LastVisibleSet = True
             Me.KryptonPage2.MinimumSize = New System.Drawing.Size(50, 50)
             Me.KryptonPage2.Name = "KryptonPage2"
-            Me.KryptonPage2.Size = New System.Drawing.Size(837, 540)
+            Me.KryptonPage2.Size = New System.Drawing.Size(837, 497)
             Me.KryptonPage2.StateCommon.Page.Color1 = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.KryptonPage2.Text = "Reporte"
             Me.KryptonPage2.ToolTipTitle = "Page ToolTip"
@@ -561,7 +558,7 @@
             Me.crvAutorizaciones.Location = New System.Drawing.Point(0, 0)
             Me.crvAutorizaciones.Name = "crvAutorizaciones"
             Me.crvAutorizaciones.ShowLogo = False
-            Me.crvAutorizaciones.Size = New System.Drawing.Size(837, 540)
+            Me.crvAutorizaciones.Size = New System.Drawing.Size(837, 497)
             Me.crvAutorizaciones.TabIndex = 1
             Me.crvAutorizaciones.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None
             '

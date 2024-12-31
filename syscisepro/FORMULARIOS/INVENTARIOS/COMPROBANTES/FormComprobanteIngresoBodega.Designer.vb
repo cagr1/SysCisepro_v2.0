@@ -391,9 +391,9 @@
             Me.chkReq.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
             Me.chkReq.Location = New System.Drawing.Point(294, 134)
             Me.chkReq.Name = "chkReq"
-            Me.chkReq.Size = New System.Drawing.Size(95, 17)
+            Me.chkReq.Size = New System.Drawing.Size(90, 17)
             Me.chkReq.TabIndex = 116
-            Me.chkReq.Text = "ÓRDEN C. N°:"
+            Me.chkReq.Text = "Órden C. N°:"
             Me.chkReq.UseVisualStyleBackColor = False
             '
             'bntPuesto
@@ -536,7 +536,6 @@
             Me.cbmProvincia.BackColor = System.Drawing.Color.White
             Me.cbmProvincia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cbmProvincia.Enabled = False
-            Me.cbmProvincia.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.cbmProvincia.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cbmProvincia.ForeColor = System.Drawing.Color.Black
             Me.cbmProvincia.FormattingEnabled = True
@@ -550,7 +549,6 @@
             Me.cmbBodega.BackColor = System.Drawing.Color.White
             Me.cmbBodega.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cmbBodega.Enabled = False
-            Me.cmbBodega.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.cmbBodega.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cmbBodega.FormattingEnabled = True
             Me.cmbBodega.Location = New System.Drawing.Point(174, 5)
@@ -563,7 +561,6 @@
             Me.cbmCanton.BackColor = System.Drawing.Color.White
             Me.cbmCanton.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cbmCanton.Enabled = False
-            Me.cbmCanton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.cbmCanton.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cbmCanton.ForeColor = System.Drawing.Color.Black
             Me.cbmCanton.FormattingEnabled = True
@@ -590,7 +587,6 @@
             Me.cbmCentroCosto.BackColor = System.Drawing.Color.White
             Me.cbmCentroCosto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cbmCentroCosto.Enabled = False
-            Me.cbmCentroCosto.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.cbmCentroCosto.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cbmCentroCosto.ForeColor = System.Drawing.Color.Black
             Me.cbmCentroCosto.FormattingEnabled = True
@@ -708,7 +704,7 @@
             Me.dgvSecuencial.Name = "dgvSecuencial"
             Me.dgvSecuencial.RowHeadersVisible = False
             Me.dgvSecuencial.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvSecuencial.Size = New System.Drawing.Size(919, 243)
+            Me.dgvSecuencial.Size = New System.Drawing.Size(919, 241)
             Me.dgvSecuencial.TabIndex = 175
             '
             'CODIGO
@@ -980,8 +976,9 @@
             Me.KryptonNavigator1.Location = New System.Drawing.Point(0, 32)
             Me.KryptonNavigator1.Name = "KryptonNavigator1"
             Me.KryptonNavigator1.Pages.AddRange(New ComponentFactory.Krypton.Navigator.KryptonPage() {Me.KryptonPage1, Me.KryptonPage2, Me.KryptonPage3})
-            Me.KryptonNavigator1.SelectedIndex = 1
+            Me.KryptonNavigator1.SelectedIndex = 0
             Me.KryptonNavigator1.Size = New System.Drawing.Size(952, 600)
+            Me.KryptonNavigator1.StateNormal.Page.Color1 = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.KryptonNavigator1.TabIndex = 197
             Me.KryptonNavigator1.Text = "KryptonNavigator1"
             '
@@ -1584,7 +1581,7 @@
             Me.TabControl1.Location = New System.Drawing.Point(-1, 3)
             Me.TabControl1.Name = "TabControl1"
             Me.TabControl1.SelectedIndex = 0
-            Me.TabControl1.Size = New System.Drawing.Size(998, 556)
+            Me.TabControl1.Size = New System.Drawing.Size(949, 556)
             Me.TabControl1.TabIndex = 154
             '
             'TabPage1
@@ -1595,7 +1592,7 @@
             Me.TabPage1.Location = New System.Drawing.Point(4, 22)
             Me.TabPage1.Name = "TabPage1"
             Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-            Me.TabPage1.Size = New System.Drawing.Size(990, 530)
+            Me.TabPage1.Size = New System.Drawing.Size(941, 530)
             Me.TabPage1.TabIndex = 0
             Me.TabPage1.Text = "Comprobante"
             Me.TabPage1.UseVisualStyleBackColor = True
@@ -1634,7 +1631,7 @@
             Me.crvComprobante.ShowCloseButton = False
             Me.crvComprobante.ShowGroupTreeButton = False
             Me.crvComprobante.ShowLogo = False
-            Me.crvComprobante.Size = New System.Drawing.Size(984, 524)
+            Me.crvComprobante.Size = New System.Drawing.Size(935, 524)
             Me.crvComprobante.TabIndex = 153
             Me.crvComprobante.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None
             '

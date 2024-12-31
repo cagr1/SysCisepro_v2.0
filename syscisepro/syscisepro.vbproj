@@ -4466,6 +4466,8 @@
   <ItemGroup>
     <None Include="Resources\pdf %281%29.png" />
     <None Include="Resources\pdf .png" />
+    <None Include="Resources\pngtree-locker-clipart-yellow-locking-locker-with-the-doors-opened-into-it-png-image_11075519.png" />
+    <None Include="Resources\opened-metal-school-locker-isolated-vector.jpg" />
     <Content Include="SqlServerTypes\Loader.cs" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">

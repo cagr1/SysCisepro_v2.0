@@ -2,6 +2,7 @@
 Imports ClassLibraryCisepro.CONTABILIDAD.VENTAS
 Imports ClassLibraryCisepro.ENUMS
 Imports ClassLibraryCisepro.ProcesosSql
+Imports Krypton.Toolkit
 Imports Microsoft.Office.Interop
 Imports syscisepro.DATOS
 
@@ -67,7 +68,8 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
             If lblActual.Text <> "0" And txtCantidadFacturaSecuencial.Text <> "0" And dtpFechaFacturaSecuenciales.Value.Day >= Date.Now.Day Then
                 Return True
             Else
-                MsgBox("DATOS INGRESADOS INVALIDOS. POR FAVOR REVISE", MsgBoxStyle.Exclamation, "Mensaje de validación")
+                'MsgBox("DATOS INGRESADOS INVALIDOS. POR FAVOR REVISE", MsgBoxStyle.Exclamation, "Mensaje de validación")
+                KryptonMessageBox.Show("Datos ingresados invalidos. por favor revise", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                 Return False
             End If
         End Function
@@ -140,7 +142,8 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
         Private Sub btnGuardar_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnGuardar.Click
             If ValidarCampos() = True Then
 
-                If MessageBox.Show("¿Esta seguro que desea guardar?", "Mensaje de validación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> MsgBoxResult.Yes Then Return
+                'If MessageBox.Show("¿Esta seguro que desea guardar?", "Mensaje de validación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> MsgBoxResult.Yes Then Return
+                If KryptonMessageBox.Show("¿Esta seguro que desea guardar?", "Mensaje de validación", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) <> DialogResult.Yes Then Return
                 _sqlCommands.Clear()
 
                 GuardarFacturaSecuenciales()
@@ -150,9 +153,14 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                     Cargar()
                     Limpiar()
                     Deshabilitado()
+                    KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
+                Else
+                    KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+                    Return
                 End If
-                MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
-                 
+                'End If
+                'MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
+
             End If
             Cargar()
         End Sub
@@ -309,7 +317,8 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
 
                 mExcel.Cursor = Excel.XlMousePointer.xlDefault
             Catch ex As Exception
-                MsgBox("EXPORTAR REVISIÓN DE FACTURACIÓN." & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
+                'MsgBox("EXPORTAR REVISIÓN DE FACTURACIÓN." & vbNewLine & ex.Message.ToString, MsgBoxStyle.Critical, "Mensaje de excepción")
+                KryptonMessageBox.Show("Exportar revisión de facturación." & vbNewLine & ex.Message.ToString, "Mensaje de excepción", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
     End Class

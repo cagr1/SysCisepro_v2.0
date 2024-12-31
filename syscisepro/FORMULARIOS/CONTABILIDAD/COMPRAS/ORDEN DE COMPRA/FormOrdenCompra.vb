@@ -386,7 +386,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.ORDEN_DE_COMPRA
 
                         cant = CDec(dgvDetalleOrdenCompra.CurrentRow.Cells(3).Value)
                         valor = CDec(dgvDetalleOrdenCompra.CurrentRow.Cells(4).Value)
-                        dgvDetalleOrdenCompra.CurrentRow.Cells(5).Value = cant * valor
+                        dgvDetalleOrdenCompra.CurrentRow.Cells(5).Value = Math.Round(cant * valor, 2)
                     End If
 
                     If dgvDetalleOrdenCompra.Columns(e.ColumnIndex).Name = "porcentaje" Then
@@ -530,13 +530,13 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.ORDEN_DE_COMPRA
                     End If
                 Next
 
-                iva = subTotal12 * (piva / 100)
-                total = subTotal12 + iva
+                iva = Math.Round(subTotal12 * (piva / 100), 2)
+                total = Math.Round(subTotal12 + iva + subtotal0, 2)
 
                 txtSubtotal0OrdenCompra.Text = subtotal0
                 txtSubtotal12OrdenCompra.Text = subTotal12
                 txtIvaOrdenCompra.Text = iva
-                txtTotalOrdenCompra.Text = subtotal0 + iva + subTotal12
+                txtTotalOrdenCompra.Text = total
                 lblSubtotalIva.Text = "Subtotal " & piva & "%"
 
                 'iva = subTotal12 * (piva / 100)

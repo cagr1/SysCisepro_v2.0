@@ -30,11 +30,11 @@
             'crvPlanDeCuentas
             '
             Me.crvPlanDeCuentas.ActiveViewIndex = -1
-            Me.crvPlanDeCuentas.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
             Me.crvPlanDeCuentas.Cursor = System.Windows.Forms.Cursors.Default
             Me.crvPlanDeCuentas.Dock = System.Windows.Forms.DockStyle.Fill
             Me.crvPlanDeCuentas.Location = New System.Drawing.Point(0, 0)
             Me.crvPlanDeCuentas.Name = "crvPlanDeCuentas"
+            Me.crvPlanDeCuentas.ShowLogo = False
             Me.crvPlanDeCuentas.Size = New System.Drawing.Size(1012, 673)
             Me.crvPlanDeCuentas.TabIndex = 0
             Me.crvPlanDeCuentas.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None
@@ -43,7 +43,7 @@
             '
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-            Me.BackColor = System.Drawing.Color.White
+            Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(185, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(227, Byte), Integer))
             Me.ClientSize = New System.Drawing.Size(1012, 673)
             Me.Controls.Add(Me.crvPlanDeCuentas)
             Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow

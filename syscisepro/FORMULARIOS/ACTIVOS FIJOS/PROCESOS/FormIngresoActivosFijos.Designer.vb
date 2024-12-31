@@ -6276,7 +6276,6 @@
             Me.cbmSecuencial.DisplayMember = "NOMBRE"
             Me.cbmSecuencial.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cbmSecuencial.Enabled = False
-            Me.cbmSecuencial.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.cbmSecuencial.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cbmSecuencial.FormattingEnabled = True
             Me.cbmSecuencial.Location = New System.Drawing.Point(83, 85)
@@ -6289,7 +6288,7 @@
             '
             Me.dtpFechaMantenimiento.Enabled = False
             Me.dtpFechaMantenimiento.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.dtpFechaMantenimiento.Location = New System.Drawing.Point(487, 83)
+            Me.dtpFechaMantenimiento.Location = New System.Drawing.Point(487, 85)
             Me.dtpFechaMantenimiento.Name = "dtpFechaMantenimiento"
             Me.dtpFechaMantenimiento.Size = New System.Drawing.Size(205, 21)
             Me.dtpFechaMantenimiento.TabIndex = 217
@@ -6300,7 +6299,6 @@
             Me.cbmSubGrupo.DisplayMember = "NOMBRE"
             Me.cbmSubGrupo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cbmSubGrupo.Enabled = False
-            Me.cbmSubGrupo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.cbmSubGrupo.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cbmSubGrupo.FormattingEnabled = True
             Me.cbmSubGrupo.Location = New System.Drawing.Point(83, 56)
@@ -6315,7 +6313,6 @@
             Me.cbmMantenimiento.BackColor = System.Drawing.Color.White
             Me.cbmMantenimiento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cbmMantenimiento.Enabled = False
-            Me.cbmMantenimiento.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.cbmMantenimiento.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cbmMantenimiento.FormattingEnabled = True
             Me.cbmMantenimiento.Items.AddRange(New Object() {"SI", "NO"})
@@ -6329,7 +6326,6 @@
             Me.cbmCategoria.BackColor = System.Drawing.Color.White
             Me.cbmCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cbmCategoria.Enabled = False
-            Me.cbmCategoria.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.cbmCategoria.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cbmCategoria.FormattingEnabled = True
             Me.cbmCategoria.Location = New System.Drawing.Point(83, 3)
@@ -6444,7 +6440,6 @@
             Me.cbmGrupo.BackColor = System.Drawing.Color.White
             Me.cbmGrupo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cbmGrupo.Enabled = False
-            Me.cbmGrupo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.cbmGrupo.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cbmGrupo.FormattingEnabled = True
             Me.cbmGrupo.Location = New System.Drawing.Point(83, 30)
@@ -6589,7 +6584,6 @@
             '
             Me.cbArea.BackColor = System.Drawing.Color.White
             Me.cbArea.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-            Me.cbArea.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.cbArea.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cbArea.FormattingEnabled = True
             Me.cbArea.Location = New System.Drawing.Point(172, 23)
@@ -7123,7 +7117,7 @@
             '
             'KryptonLabel152
             '
-            Me.KryptonLabel152.Location = New System.Drawing.Point(173, 92)
+            Me.KryptonLabel152.Location = New System.Drawing.Point(169, 91)
             Me.KryptonLabel152.Name = "KryptonLabel152"
             Me.KryptonLabel152.Size = New System.Drawing.Size(59, 20)
             Me.KryptonLabel152.TabIndex = 79
@@ -7139,7 +7133,7 @@
             '
             'KryptonLabel150
             '
-            Me.KryptonLabel150.Location = New System.Drawing.Point(171, 2)
+            Me.KryptonLabel150.Location = New System.Drawing.Point(173, 3)
             Me.KryptonLabel150.Name = "KryptonLabel150"
             Me.KryptonLabel150.Size = New System.Drawing.Size(36, 20)
             Me.KryptonLabel150.TabIndex = 77
@@ -7163,7 +7157,7 @@
             '
             'KryptonLabel147
             '
-            Me.KryptonLabel147.Location = New System.Drawing.Point(8, -3)
+            Me.KryptonLabel147.Location = New System.Drawing.Point(8, -1)
             Me.KryptonLabel147.Name = "KryptonLabel147"
             Me.KryptonLabel147.Size = New System.Drawing.Size(57, 20)
             Me.KryptonLabel147.TabIndex = 1

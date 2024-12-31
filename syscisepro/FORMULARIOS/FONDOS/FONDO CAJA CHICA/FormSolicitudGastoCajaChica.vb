@@ -500,10 +500,12 @@ Namespace FORMULARIOS.FONDOS.FONDO_CAJA_CHICA
             lblMontoCajaChica.ForeColor = Label6.ForeColor
             If CType(lblMontoCajaChica.Text, Decimal) <= valorPorcentaje90 Then
                 lblMontoCajaChica.ForeColor = Color.Red
-                MessageBox.Show("Ha superado el 90% de su saldo. Realice Reposición inmediatamente!!!", "Mensaje de validación", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                'MessageBox.Show("Ha superado el 90% de su saldo. Realice Reposición inmediatamente!!!", "Mensaje de validación", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                KryptonMessageBox.Show("Ha superado el 90% de su saldo. Realice Reposición inmediatamente!!!", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
             ElseIf CType(lblMontoCajaChica.Text, Decimal) <= valorPorcentaje70 Then
                 lblMontoCajaChica.ForeColor = Color.Yellow
-                MessageBox.Show("Ha superado el 70% de su saldo. Realice una Reposición!", "Mensaje de validación", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                'MessageBox.Show("Ha superado el 70% de su saldo. Realice una Reposición!", "Mensaje de validación", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                KryptonMessageBox.Show("Ha superado el 70% de su saldo. Realice una Reposición!", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
             End If
         End Sub
 

@@ -301,7 +301,7 @@ Namespace FORMULARIOS.INVENTARIOS.PROCESO
             cargarSecuencialesItems()
         End Sub
 
-        Private Sub dgvItems_SelectionChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles dgvItems.SelectionChanged
+        Private Sub dgvItems_SelectionChanged(ByVal sender As System.Object, ByVal e As EventArgs) 
             If dgvItems.Rows.Count = 0 Or dgvItems.CurrentRow Is Nothing Then Return
             CargarProveedoresItems(dgvItems.CurrentRow.Cells(0).Value)
         End Sub

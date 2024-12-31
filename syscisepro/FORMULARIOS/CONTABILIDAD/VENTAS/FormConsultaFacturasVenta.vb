@@ -421,6 +421,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                 'gbClienteGeneral.Text = "INGRESE CONSORCIO / GRUPO EMPRESARIAL"
                 lblIdClienteGeneral.Text = 0
                 txtClienteGeneral.Text = ""
+                txtClienteGeneral.Enabled = True
                 'gbEstadoFactura.Enabled = True
                 rbFacturasActivas.Enabled = True
                 rbFacturasAnuladas.Enabled = True
@@ -454,6 +455,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
         Private Sub rbTodo_CheckedChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles rbTodo.CheckedChanged
             If rbTodo.Checked = True Then
                 'gbClienteGeneral.Enabled = False
+                txtClienteGeneral.Enabled = False
                 txtClienteGeneral.Enabled = False
                 'gbEstadoFactura.Enabled = True
                 rbFacturasActivas.Enabled = True

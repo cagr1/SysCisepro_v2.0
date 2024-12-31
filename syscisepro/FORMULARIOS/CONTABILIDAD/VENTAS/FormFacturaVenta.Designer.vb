@@ -999,7 +999,7 @@
             '
             Me.KryptonGroupBox4.CaptionOverlap = 0R
             Me.KryptonGroupBox4.GroupBackStyle = Krypton.Toolkit.PaletteBackStyle.ControlRibbon
-            Me.KryptonGroupBox4.Location = New System.Drawing.Point(7, 240)
+            Me.KryptonGroupBox4.Location = New System.Drawing.Point(4, 240)
             Me.KryptonGroupBox4.Name = "KryptonGroupBox4"
             '
             'KryptonGroupBox4.Panel
@@ -1032,7 +1032,7 @@
             Me.KryptonGroupBox4.Panel.Controls.Add(Me.dgvDetalleFacturaVenta)
             Me.KryptonGroupBox4.Panel.Controls.Add(Me.txtSubtotal0)
             Me.KryptonGroupBox4.Panel.Controls.Add(Me.lblIva)
-            Me.KryptonGroupBox4.Size = New System.Drawing.Size(727, 346)
+            Me.KryptonGroupBox4.Size = New System.Drawing.Size(730, 346)
             Me.KryptonGroupBox4.TabIndex = 194
             Me.KryptonGroupBox4.Values.Heading = "Detalle Factura"
             '

@@ -216,7 +216,6 @@
             Me.cmbProvincia.BackColor = System.Drawing.Color.White
             Me.cmbProvincia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cmbProvincia.Enabled = False
-            Me.cmbProvincia.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.cmbProvincia.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cmbProvincia.ForeColor = System.Drawing.Color.Black
             Me.cmbProvincia.FormattingEnabled = True
@@ -289,7 +288,6 @@
             Me.cmbCargoResponsableAutoFR.BackColor = System.Drawing.Color.White
             Me.cmbCargoResponsableAutoFR.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cmbCargoResponsableAutoFR.Enabled = False
-            Me.cmbCargoResponsableAutoFR.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.cmbCargoResponsableAutoFR.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cmbCargoResponsableAutoFR.FormattingEnabled = True
             Me.cmbCargoResponsableAutoFR.Location = New System.Drawing.Point(73, 118)

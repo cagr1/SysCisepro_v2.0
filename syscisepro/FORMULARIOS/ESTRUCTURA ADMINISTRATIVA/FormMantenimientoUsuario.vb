@@ -208,16 +208,20 @@ Namespace FORMULARIOS.ESTRUCTURA_ADMINISTRATIVA
                 LimpiarTextBoxs()
                 btnPersonal.Enabled = False
                 CargarUsuarios()
-
-            End If
-
-            Dim messageIcon As KryptonMessageBoxIcon
-            If res(0) Then
-                messageIcon = KryptonMessageBoxIcon.Information
+                KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
             Else
-                messageIcon = KryptonMessageBoxIcon.Exclamation
+                KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+                Return
             End If
-            KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, messageIcon)
+            'End If
+
+            'Dim messageIcon As KryptonMessageBoxIcon
+            'If res(0) Then
+            '    messageIcon = KryptonMessageBoxIcon.Information
+            'Else
+            '    messageIcon = KryptonMessageBoxIcon.Exclamation
+            'End If
+            'KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, messageIcon)
 
             'MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
         End Sub
@@ -231,7 +235,8 @@ Namespace FORMULARIOS.ESTRUCTURA_ADMINISTRATIVA
                 Return
             End If
 
-            Dim respuesta = InputBox("Modificar contraseña o password", "Ingrese su contraseña actual" & vbCr & "" & vbCr & " Recuerde siempre su contraseña")
+            'Dim respuesta = InputBox("Modificar contraseña o password", "Ingrese su contraseña actual" & vbCr & "" & vbCr & " Recuerde siempre su contraseña")
+            Dim respuesta = KryptonInputBox.Show("Modificar contraseña o password", "Ingrese su contraseña actual" & vbNewLine & "Recuerde siempre su contraseña", "")
 
             If respuesta = _objUsuarioGeneral.BuscarPasswordPorLogin(_tipoCon, txtLogin.Text) Then
                 txtPassword.Enabled = True

@@ -30,7 +30,6 @@
             'crvPlanDeCuentas
             '
             Me.crvPlanDeCuentas.ActiveViewIndex = -1
-            Me.crvPlanDeCuentas.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
             Me.crvPlanDeCuentas.Cursor = System.Windows.Forms.Cursors.Default
             Me.crvPlanDeCuentas.Dock = System.Windows.Forms.DockStyle.Fill
             Me.crvPlanDeCuentas.Location = New System.Drawing.Point(0, 0)

@@ -31,11 +31,11 @@
             'crvSolicitudFondoRotativo
             '
             Me.crvSolicitudFondoRotativo.ActiveViewIndex = -1
-            Me.crvSolicitudFondoRotativo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
             Me.crvSolicitudFondoRotativo.Cursor = System.Windows.Forms.Cursors.Default
             Me.crvSolicitudFondoRotativo.Dock = System.Windows.Forms.DockStyle.Fill
             Me.crvSolicitudFondoRotativo.Location = New System.Drawing.Point(0, 0)
             Me.crvSolicitudFondoRotativo.Name = "crvSolicitudFondoRotativo"
+            Me.crvSolicitudFondoRotativo.ShowLogo = False
             Me.crvSolicitudFondoRotativo.Size = New System.Drawing.Size(885, 613)
             Me.crvSolicitudFondoRotativo.TabIndex = 0
             Me.crvSolicitudFondoRotativo.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None
@@ -57,7 +57,7 @@
             '
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-            Me.BackColor = System.Drawing.Color.White
+            Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(185, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(227, Byte), Integer))
             Me.ClientSize = New System.Drawing.Size(885, 613)
             Me.Controls.Add(Me.btnVolver)
             Me.Controls.Add(Me.crvSolicitudFondoRotativo)

@@ -42,7 +42,6 @@
             'crvComprobanteCompra
             '
             Me.crvComprobanteCompra.ActiveViewIndex = -1
-            Me.crvComprobanteCompra.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
             Me.crvComprobanteCompra.Cursor = System.Windows.Forms.Cursors.Default
             Me.crvComprobanteCompra.Dock = System.Windows.Forms.DockStyle.Fill
             Me.crvComprobanteCompra.Location = New System.Drawing.Point(0, 0)

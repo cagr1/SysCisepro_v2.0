@@ -25,8 +25,8 @@
         Private Sub InitializeComponent()
             Me.components = New System.ComponentModel.Container()
             Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormProductosBodega))
-            Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Me.cbmCategoría = New System.Windows.Forms.ComboBox()
             Me.lblCategoría = New System.Windows.Forms.Label()
             Me.cbmGrupo = New System.Windows.Forms.ComboBox()
@@ -133,7 +133,6 @@
             Me.cbmCategoría.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cbmCategoría.DropDownWidth = 177
             Me.cbmCategoría.Enabled = False
-            Me.cbmCategoría.FlatStyle = System.Windows.Forms.FlatStyle.Popup
             Me.cbmCategoría.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cbmCategoría.ForeColor = System.Drawing.Color.Black
             Me.cbmCategoría.FormattingEnabled = True
@@ -158,7 +157,6 @@
             Me.cbmGrupo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cbmGrupo.DropDownWidth = 177
             Me.cbmGrupo.Enabled = False
-            Me.cbmGrupo.FlatStyle = System.Windows.Forms.FlatStyle.Popup
             Me.cbmGrupo.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cbmGrupo.ForeColor = System.Drawing.Color.Black
             Me.cbmGrupo.FormattingEnabled = True
@@ -183,7 +181,6 @@
             Me.cbmSubGrupo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cbmSubGrupo.DropDownWidth = 177
             Me.cbmSubGrupo.Enabled = False
-            Me.cbmSubGrupo.FlatStyle = System.Windows.Forms.FlatStyle.Popup
             Me.cbmSubGrupo.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cbmSubGrupo.ForeColor = System.Drawing.Color.Black
             Me.cbmSubGrupo.FormattingEnabled = True
@@ -242,7 +239,6 @@
             Me.cbmMaterial.BackColor = System.Drawing.Color.White
             Me.cbmMaterial.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cbmMaterial.Enabled = False
-            Me.cbmMaterial.FlatStyle = System.Windows.Forms.FlatStyle.Popup
             Me.cbmMaterial.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cbmMaterial.ForeColor = System.Drawing.Color.Black
             Me.cbmMaterial.FormattingEnabled = True
@@ -266,7 +262,6 @@
             Me.cbmModelo.BackColor = System.Drawing.Color.White
             Me.cbmModelo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cbmModelo.Enabled = False
-            Me.cbmModelo.FlatStyle = System.Windows.Forms.FlatStyle.Popup
             Me.cbmModelo.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cbmModelo.ForeColor = System.Drawing.Color.Black
             Me.cbmModelo.FormattingEnabled = True
@@ -290,7 +285,6 @@
             Me.cbmMarca.BackColor = System.Drawing.Color.White
             Me.cbmMarca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cbmMarca.Enabled = False
-            Me.cbmMarca.FlatStyle = System.Windows.Forms.FlatStyle.Popup
             Me.cbmMarca.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cbmMarca.ForeColor = System.Drawing.Color.Black
             Me.cbmMarca.FormattingEnabled = True
@@ -314,7 +308,6 @@
             Me.cbmColor.BackColor = System.Drawing.Color.White
             Me.cbmColor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cbmColor.Enabled = False
-            Me.cbmColor.FlatStyle = System.Windows.Forms.FlatStyle.Popup
             Me.cbmColor.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cbmColor.ForeColor = System.Drawing.Color.Black
             Me.cbmColor.FormattingEnabled = True
@@ -339,7 +332,6 @@
             Me.cbmUnidadDeMedida.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cbmUnidadDeMedida.DropDownWidth = 177
             Me.cbmUnidadDeMedida.Enabled = False
-            Me.cbmUnidadDeMedida.FlatStyle = System.Windows.Forms.FlatStyle.Popup
             Me.cbmUnidadDeMedida.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cbmUnidadDeMedida.ForeColor = System.Drawing.Color.Black
             Me.cbmUnidadDeMedida.FormattingEnabled = True
@@ -484,7 +476,7 @@
             Me.chbxDescuento.Enabled = False
             Me.chbxDescuento.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.chbxDescuento.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
-            Me.chbxDescuento.Location = New System.Drawing.Point(411, 105)
+            Me.chbxDescuento.Location = New System.Drawing.Point(379, 105)
             Me.chbxDescuento.Name = "chbxDescuento"
             Me.chbxDescuento.Size = New System.Drawing.Size(116, 18)
             Me.chbxDescuento.TabIndex = 205
@@ -509,7 +501,6 @@
             Me.cbmSubGrupo2.BackColor = System.Drawing.Color.White
             Me.cbmSubGrupo2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cbmSubGrupo2.DropDownWidth = 177
-            Me.cbmSubGrupo2.FlatStyle = System.Windows.Forms.FlatStyle.Popup
             Me.cbmSubGrupo2.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cbmSubGrupo2.ForeColor = System.Drawing.Color.Black
             Me.cbmSubGrupo2.FormattingEnabled = True
@@ -523,7 +514,6 @@
             Me.cbmGrupo2.BackColor = System.Drawing.Color.White
             Me.cbmGrupo2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cbmGrupo2.DropDownWidth = 177
-            Me.cbmGrupo2.FlatStyle = System.Windows.Forms.FlatStyle.Popup
             Me.cbmGrupo2.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cbmGrupo2.ForeColor = System.Drawing.Color.Black
             Me.cbmGrupo2.FormattingEnabled = True
@@ -537,7 +527,6 @@
             Me.cbmCategoria2.BackColor = System.Drawing.Color.White
             Me.cbmCategoria2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cbmCategoria2.DropDownWidth = 177
-            Me.cbmCategoria2.FlatStyle = System.Windows.Forms.FlatStyle.Popup
             Me.cbmCategoria2.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cbmCategoria2.ForeColor = System.Drawing.Color.Black
             Me.cbmCategoria2.FormattingEnabled = True
@@ -799,19 +788,19 @@
             Me.dgvSecuencial.AllowUserToAddRows = False
             Me.dgvSecuencial.AllowUserToDeleteRows = False
             Me.dgvSecuencial.AllowUserToResizeRows = False
-            DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-            Me.dgvSecuencial.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+            DataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+            Me.dgvSecuencial.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle9
             Me.dgvSecuencial.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(185, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(227, Byte), Integer))
             Me.dgvSecuencial.BorderStyle = System.Windows.Forms.BorderStyle.None
             Me.dgvSecuencial.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
-            DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-            DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
-            DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
-            DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(123, Byte), Integer))
-            DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-            DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-            Me.dgvSecuencial.DefaultCellStyle = DataGridViewCellStyle2
+            DataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+            DataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Window
+            DataGridViewCellStyle10.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.ControlText
+            DataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(123, Byte), Integer))
+            DataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+            DataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+            Me.dgvSecuencial.DefaultCellStyle = DataGridViewCellStyle10
             Me.dgvSecuencial.GridColor = System.Drawing.SystemColors.Control
             Me.dgvSecuencial.Location = New System.Drawing.Point(7, 249)
             Me.dgvSecuencial.MultiSelect = False
@@ -889,11 +878,11 @@
             '
             'KryptonLabel18
             '
-            Me.KryptonLabel18.Location = New System.Drawing.Point(628, 3)
+            Me.KryptonLabel18.Location = New System.Drawing.Point(622, 3)
             Me.KryptonLabel18.Name = "KryptonLabel18"
-            Me.KryptonLabel18.Size = New System.Drawing.Size(38, 20)
+            Me.KryptonLabel18.Size = New System.Drawing.Size(46, 20)
             Me.KryptonLabel18.TabIndex = 207
-            Me.KryptonLabel18.Values.Text = "Filtro"
+            Me.KryptonLabel18.Values.Text = "Buscar"
             '
             'KryptonLabel17
             '
@@ -973,13 +962,13 @@
             Me.KryptonGroupBox1.Panel.Controls.Add(Me.cbmSubGrupo)
             Me.KryptonGroupBox1.Panel.Controls.Add(Me.cbmGrupo)
             Me.KryptonGroupBox1.Panel.Controls.Add(Me.cbmCategoría)
-            Me.KryptonGroupBox1.Size = New System.Drawing.Size(898, 147)
+            Me.KryptonGroupBox1.Size = New System.Drawing.Size(898, 150)
             Me.KryptonGroupBox1.TabIndex = 179
             Me.KryptonGroupBox1.Values.Heading = "Datos"
             '
             'KryptonLabel13
             '
-            Me.KryptonLabel13.Location = New System.Drawing.Point(757, 93)
+            Me.KryptonLabel13.Location = New System.Drawing.Point(766, 93)
             Me.KryptonLabel13.Name = "KryptonLabel13"
             Me.KryptonLabel13.Size = New System.Drawing.Size(32, 20)
             Me.KryptonLabel13.TabIndex = 203
@@ -1098,11 +1087,11 @@
             'crvInventarios
             '
             Me.crvInventarios.ActiveViewIndex = -1
-            Me.crvInventarios.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
             Me.crvInventarios.Cursor = System.Windows.Forms.Cursors.Default
             Me.crvInventarios.Dock = System.Windows.Forms.DockStyle.Fill
             Me.crvInventarios.Location = New System.Drawing.Point(0, 0)
             Me.crvInventarios.Name = "crvInventarios"
+            Me.crvInventarios.ShowLogo = False
             Me.crvInventarios.Size = New System.Drawing.Size(912, 669)
             Me.crvInventarios.TabIndex = 1
             Me.crvInventarios.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None

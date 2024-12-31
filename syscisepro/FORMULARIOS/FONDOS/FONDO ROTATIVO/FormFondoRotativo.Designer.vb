@@ -46,17 +46,17 @@
             Me.btnCancelarFondoRotativo = New System.Windows.Forms.ToolStripMenuItem()
             Me.btnReporteFondoRotativo = New System.Windows.Forms.ToolStripMenuItem()
             Me.KryptonGroupBox1 = New Krypton.Toolkit.KryptonGroupBox()
-            Me.KryptonLabel1 = New Krypton.Toolkit.KryptonLabel()
-            Me.KryptonLabel2 = New Krypton.Toolkit.KryptonLabel()
-            Me.KryptonLabel3 = New Krypton.Toolkit.KryptonLabel()
-            Me.KryptonLabel4 = New Krypton.Toolkit.KryptonLabel()
-            Me.KryptonLabel5 = New Krypton.Toolkit.KryptonLabel()
-            Me.KryptonLabel6 = New Krypton.Toolkit.KryptonLabel()
-            Me.KryptonLabel7 = New Krypton.Toolkit.KryptonLabel()
-            Me.KryptonLabel8 = New Krypton.Toolkit.KryptonLabel()
-            Me.KryptonLabel9 = New Krypton.Toolkit.KryptonLabel()
-            Me.KryptonLabel10 = New Krypton.Toolkit.KryptonLabel()
             Me.KryptonLabel11 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel10 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel9 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel8 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel7 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel6 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel5 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel4 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel3 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel2 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel1 = New Krypton.Toolkit.KryptonLabel()
             CType(Me.dgvFondoRotativo, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.MenuStrip1.SuspendLayout()
             CType(Me.KryptonGroupBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -142,7 +142,6 @@
             Me.cmbCentroCosto.BackColor = System.Drawing.Color.White
             Me.cmbCentroCosto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cmbCentroCosto.Enabled = False
-            Me.cmbCentroCosto.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.cmbCentroCosto.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cmbCentroCosto.FormattingEnabled = True
             Me.cmbCentroCosto.Location = New System.Drawing.Point(346, 110)
@@ -155,7 +154,6 @@
             Me.cmbParroquia.BackColor = System.Drawing.Color.White
             Me.cmbParroquia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cmbParroquia.Enabled = False
-            Me.cmbParroquia.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.cmbParroquia.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cmbParroquia.FormattingEnabled = True
             Me.cmbParroquia.Location = New System.Drawing.Point(74, 109)
@@ -168,7 +166,6 @@
             Me.cmbCanton.BackColor = System.Drawing.Color.White
             Me.cmbCanton.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cmbCanton.Enabled = False
-            Me.cmbCanton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.cmbCanton.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cmbCanton.FormattingEnabled = True
             Me.cmbCanton.Location = New System.Drawing.Point(346, 82)
@@ -181,7 +178,6 @@
             Me.cmbProvincia.BackColor = System.Drawing.Color.White
             Me.cmbProvincia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cmbProvincia.Enabled = False
-            Me.cmbProvincia.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.cmbProvincia.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cmbProvincia.FormattingEnabled = True
             Me.cmbProvincia.Location = New System.Drawing.Point(72, 82)
@@ -194,7 +190,6 @@
             Me.cmbNivelCuenta.BackColor = System.Drawing.Color.White
             Me.cmbNivelCuenta.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cmbNivelCuenta.Enabled = False
-            Me.cmbNivelCuenta.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.cmbNivelCuenta.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cmbNivelCuenta.FormattingEnabled = True
             Me.cmbNivelCuenta.Items.AddRange(New Object() {"1", "2", "3", "4", "5"})
@@ -208,7 +203,6 @@
             Me.cmbTipoCuenta.BackColor = System.Drawing.Color.White
             Me.cmbTipoCuenta.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cmbTipoCuenta.Enabled = False
-            Me.cmbTipoCuenta.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.cmbTipoCuenta.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cmbTipoCuenta.FormattingEnabled = True
             Me.cmbTipoCuenta.Items.AddRange(New Object() {"1", "2", "3", "4", "5"})
@@ -338,77 +332,13 @@
             Me.KryptonGroupBox1.TabIndex = 190
             Me.KryptonGroupBox1.Values.Heading = "Datos"
             '
-            'KryptonLabel1
+            'KryptonLabel11
             '
-            Me.KryptonLabel1.Location = New System.Drawing.Point(4, 4)
-            Me.KryptonLabel1.Name = "KryptonLabel1"
-            Me.KryptonLabel1.Size = New System.Drawing.Size(22, 20)
-            Me.KryptonLabel1.TabIndex = 0
-            Me.KryptonLabel1.Values.Text = "ID"
-            '
-            'KryptonLabel2
-            '
-            Me.KryptonLabel2.Location = New System.Drawing.Point(142, 4)
-            Me.KryptonLabel2.Name = "KryptonLabel2"
-            Me.KryptonLabel2.Size = New System.Drawing.Size(59, 20)
-            Me.KryptonLabel2.TabIndex = 11
-            Me.KryptonLabel2.Values.Text = "Custodio"
-            '
-            'KryptonLabel3
-            '
-            Me.KryptonLabel3.Location = New System.Drawing.Point(4, 30)
-            Me.KryptonLabel3.Name = "KryptonLabel3"
-            Me.KryptonLabel3.Size = New System.Drawing.Size(49, 20)
-            Me.KryptonLabel3.TabIndex = 17
-            Me.KryptonLabel3.Values.Text = "Detalle"
-            '
-            'KryptonLabel4
-            '
-            Me.KryptonLabel4.Location = New System.Drawing.Point(4, 56)
-            Me.KryptonLabel4.Name = "KryptonLabel4"
-            Me.KryptonLabel4.Size = New System.Drawing.Size(47, 20)
-            Me.KryptonLabel4.TabIndex = 18
-            Me.KryptonLabel4.Values.Text = "Monto"
-            '
-            'KryptonLabel5
-            '
-            Me.KryptonLabel5.Location = New System.Drawing.Point(494, 4)
-            Me.KryptonLabel5.Name = "KryptonLabel5"
-            Me.KryptonLabel5.Size = New System.Drawing.Size(81, 20)
-            Me.KryptonLabel5.TabIndex = 19
-            Me.KryptonLabel5.Values.Text = "Cta Contable"
-            '
-            'KryptonLabel6
-            '
-            Me.KryptonLabel6.Location = New System.Drawing.Point(494, 30)
-            Me.KryptonLabel6.Name = "KryptonLabel6"
-            Me.KryptonLabel6.Size = New System.Drawing.Size(34, 20)
-            Me.KryptonLabel6.TabIndex = 20
-            Me.KryptonLabel6.Values.Text = "Tipo"
-            '
-            'KryptonLabel7
-            '
-            Me.KryptonLabel7.Location = New System.Drawing.Point(494, 56)
-            Me.KryptonLabel7.Name = "KryptonLabel7"
-            Me.KryptonLabel7.Size = New System.Drawing.Size(38, 20)
-            Me.KryptonLabel7.TabIndex = 21
-            Me.KryptonLabel7.Values.Text = "Nivel"
-            '
-            'KryptonLabel8
-            '
-            Me.KryptonLabel8.Location = New System.Drawing.Point(6, 82)
-            Me.KryptonLabel8.Name = "KryptonLabel8"
-            Me.KryptonLabel8.Size = New System.Drawing.Size(60, 20)
-            Me.KryptonLabel8.TabIndex = 22
-            Me.KryptonLabel8.Values.Text = "Provincia"
-            '
-            'KryptonLabel9
-            '
-            Me.KryptonLabel9.Location = New System.Drawing.Point(251, 82)
-            Me.KryptonLabel9.Name = "KryptonLabel9"
-            Me.KryptonLabel9.Size = New System.Drawing.Size(50, 20)
-            Me.KryptonLabel9.TabIndex = 23
-            Me.KryptonLabel9.Values.Text = "Canton"
+            Me.KryptonLabel11.Location = New System.Drawing.Point(251, 109)
+            Me.KryptonLabel11.Name = "KryptonLabel11"
+            Me.KryptonLabel11.Size = New System.Drawing.Size(82, 20)
+            Me.KryptonLabel11.TabIndex = 25
+            Me.KryptonLabel11.Values.Text = "Centro Costo"
             '
             'KryptonLabel10
             '
@@ -418,13 +348,77 @@
             Me.KryptonLabel10.TabIndex = 24
             Me.KryptonLabel10.Values.Text = "Parroquia"
             '
-            'KryptonLabel11
+            'KryptonLabel9
             '
-            Me.KryptonLabel11.Location = New System.Drawing.Point(251, 109)
-            Me.KryptonLabel11.Name = "KryptonLabel11"
-            Me.KryptonLabel11.Size = New System.Drawing.Size(82, 20)
-            Me.KryptonLabel11.TabIndex = 25
-            Me.KryptonLabel11.Values.Text = "Centro Costo"
+            Me.KryptonLabel9.Location = New System.Drawing.Point(251, 82)
+            Me.KryptonLabel9.Name = "KryptonLabel9"
+            Me.KryptonLabel9.Size = New System.Drawing.Size(50, 20)
+            Me.KryptonLabel9.TabIndex = 23
+            Me.KryptonLabel9.Values.Text = "Canton"
+            '
+            'KryptonLabel8
+            '
+            Me.KryptonLabel8.Location = New System.Drawing.Point(6, 82)
+            Me.KryptonLabel8.Name = "KryptonLabel8"
+            Me.KryptonLabel8.Size = New System.Drawing.Size(60, 20)
+            Me.KryptonLabel8.TabIndex = 22
+            Me.KryptonLabel8.Values.Text = "Provincia"
+            '
+            'KryptonLabel7
+            '
+            Me.KryptonLabel7.Location = New System.Drawing.Point(494, 56)
+            Me.KryptonLabel7.Name = "KryptonLabel7"
+            Me.KryptonLabel7.Size = New System.Drawing.Size(38, 20)
+            Me.KryptonLabel7.TabIndex = 21
+            Me.KryptonLabel7.Values.Text = "Nivel"
+            '
+            'KryptonLabel6
+            '
+            Me.KryptonLabel6.Location = New System.Drawing.Point(494, 30)
+            Me.KryptonLabel6.Name = "KryptonLabel6"
+            Me.KryptonLabel6.Size = New System.Drawing.Size(34, 20)
+            Me.KryptonLabel6.TabIndex = 20
+            Me.KryptonLabel6.Values.Text = "Tipo"
+            '
+            'KryptonLabel5
+            '
+            Me.KryptonLabel5.Location = New System.Drawing.Point(494, 4)
+            Me.KryptonLabel5.Name = "KryptonLabel5"
+            Me.KryptonLabel5.Size = New System.Drawing.Size(81, 20)
+            Me.KryptonLabel5.TabIndex = 19
+            Me.KryptonLabel5.Values.Text = "Cta Contable"
+            '
+            'KryptonLabel4
+            '
+            Me.KryptonLabel4.Location = New System.Drawing.Point(4, 56)
+            Me.KryptonLabel4.Name = "KryptonLabel4"
+            Me.KryptonLabel4.Size = New System.Drawing.Size(47, 20)
+            Me.KryptonLabel4.TabIndex = 18
+            Me.KryptonLabel4.Values.Text = "Monto"
+            '
+            'KryptonLabel3
+            '
+            Me.KryptonLabel3.Location = New System.Drawing.Point(4, 30)
+            Me.KryptonLabel3.Name = "KryptonLabel3"
+            Me.KryptonLabel3.Size = New System.Drawing.Size(49, 20)
+            Me.KryptonLabel3.TabIndex = 17
+            Me.KryptonLabel3.Values.Text = "Detalle"
+            '
+            'KryptonLabel2
+            '
+            Me.KryptonLabel2.Location = New System.Drawing.Point(142, 4)
+            Me.KryptonLabel2.Name = "KryptonLabel2"
+            Me.KryptonLabel2.Size = New System.Drawing.Size(59, 20)
+            Me.KryptonLabel2.TabIndex = 11
+            Me.KryptonLabel2.Values.Text = "Custodio"
+            '
+            'KryptonLabel1
+            '
+            Me.KryptonLabel1.Location = New System.Drawing.Point(4, 4)
+            Me.KryptonLabel1.Name = "KryptonLabel1"
+            Me.KryptonLabel1.Size = New System.Drawing.Size(22, 20)
+            Me.KryptonLabel1.TabIndex = 0
+            Me.KryptonLabel1.Values.Text = "ID"
             '
             'FormFondoRotativo
             '

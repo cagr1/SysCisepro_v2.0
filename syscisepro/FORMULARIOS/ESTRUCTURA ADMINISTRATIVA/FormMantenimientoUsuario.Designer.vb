@@ -78,7 +78,6 @@
             Me.cbmEmpresa.BackColor = System.Drawing.Color.White
             Me.cbmEmpresa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cbmEmpresa.Enabled = False
-            Me.cbmEmpresa.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.cbmEmpresa.FormattingEnabled = True
             Me.cbmEmpresa.Location = New System.Drawing.Point(278, 40)
             Me.cbmEmpresa.Name = "cbmEmpresa"
@@ -90,7 +89,6 @@
             Me.cbmSucursal.BackColor = System.Drawing.Color.White
             Me.cbmSucursal.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cbmSucursal.Enabled = False
-            Me.cbmSucursal.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.cbmSucursal.FormattingEnabled = True
             Me.cbmSucursal.Location = New System.Drawing.Point(501, 40)
             Me.cbmSucursal.Name = "cbmSucursal"
@@ -102,7 +100,6 @@
             Me.cbmArea.BackColor = System.Drawing.Color.White
             Me.cbmArea.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cbmArea.Enabled = False
-            Me.cbmArea.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.cbmArea.FormattingEnabled = True
             Me.cbmArea.Location = New System.Drawing.Point(50, 40)
             Me.cbmArea.Name = "cbmArea"
@@ -133,7 +130,6 @@
             Me.cbmTipoUsuario.BackColor = System.Drawing.Color.White
             Me.cbmTipoUsuario.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cbmTipoUsuario.Enabled = False
-            Me.cbmTipoUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.cbmTipoUsuario.FormattingEnabled = True
             Me.cbmTipoUsuario.Items.AddRange(New Object() {"ADMINISTRADOR", "GERENTE", "RR.HH", "TESORERIA", "CONTABILIDAD", "AUDITOR", "SUPERVISOR"})
             Me.cbmTipoUsuario.Location = New System.Drawing.Point(50, 67)
@@ -257,7 +253,6 @@
             Me.cbmIdRol.BackColor = System.Drawing.Color.White
             Me.cbmIdRol.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cbmIdRol.Enabled = False
-            Me.cbmIdRol.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.cbmIdRol.FormattingEnabled = True
             Me.cbmIdRol.Location = New System.Drawing.Point(50, 94)
             Me.cbmIdRol.Name = "cbmIdRol"
