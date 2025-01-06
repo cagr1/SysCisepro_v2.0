@@ -106,6 +106,7 @@
             Me.unidadMedida = New System.Windows.Forms.DataGridViewTextBoxColumn()
             Me.cantidadProductoServicio = New System.Windows.Forms.DataGridViewTextBoxColumn()
             Me.valorUnitarioProductoServicio = New System.Windows.Forms.DataGridViewTextBoxColumn()
+            Me.DESC = New System.Windows.Forms.DataGridViewTextBoxColumn()
             Me.valorTotalProductoServicio = New System.Windows.Forms.DataGridViewTextBoxColumn()
             Me.porcentaje = New System.Windows.Forms.DataGridViewComboBoxColumn()
             Me.IVA = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -316,7 +317,7 @@
             Me.dgvDetalleOrdenCompra.BorderStyle = System.Windows.Forms.BorderStyle.None
             Me.dgvDetalleOrdenCompra.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
             Me.dgvDetalleOrdenCompra.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-            Me.dgvDetalleOrdenCompra.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.idItem, Me.nombreProductoServicio, Me.unidadMedida, Me.cantidadProductoServicio, Me.valorUnitarioProductoServicio, Me.valorTotalProductoServicio, Me.porcentaje, Me.IVA})
+            Me.dgvDetalleOrdenCompra.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.idItem, Me.nombreProductoServicio, Me.unidadMedida, Me.cantidadProductoServicio, Me.valorUnitarioProductoServicio, Me.DESC, Me.valorTotalProductoServicio, Me.porcentaje, Me.IVA})
             DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
             DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window
             DataGridViewCellStyle3.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -897,7 +898,7 @@
             Me.idItem.HeaderText = "ID"
             Me.idItem.Name = "idItem"
             Me.idItem.ReadOnly = True
-            Me.idItem.Width = 50
+            Me.idItem.Width = 45
             '
             'nombreProductoServicio
             '
@@ -906,7 +907,7 @@
             Me.nombreProductoServicio.HeaderText = "PRODUCTO/SERVICIO"
             Me.nombreProductoServicio.Name = "nombreProductoServicio"
             Me.nombreProductoServicio.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-            Me.nombreProductoServicio.Width = 325
+            Me.nombreProductoServicio.Width = 300
             '
             'unidadMedida
             '
@@ -926,6 +927,12 @@
             Me.valorUnitarioProductoServicio.HeaderText = "V. UNITARIO"
             Me.valorUnitarioProductoServicio.Name = "valorUnitarioProductoServicio"
             Me.valorUnitarioProductoServicio.Width = 75
+            '
+            'DESC
+            '
+            Me.DESC.HeaderText = "DESC"
+            Me.DESC.Name = "DESC"
+            Me.DESC.Width = 60
             '
             'valorTotalProductoServicio
             '
@@ -1074,6 +1081,7 @@
         Friend WithEvents unidadMedida As DataGridViewTextBoxColumn
         Friend WithEvents cantidadProductoServicio As DataGridViewTextBoxColumn
         Friend WithEvents valorUnitarioProductoServicio As DataGridViewTextBoxColumn
+        Friend WithEvents DESC As DataGridViewTextBoxColumn
         Friend WithEvents valorTotalProductoServicio As DataGridViewTextBoxColumn
         Friend WithEvents porcentaje As DataGridViewComboBoxColumn
         Friend WithEvents IVA As DataGridViewTextBoxColumn

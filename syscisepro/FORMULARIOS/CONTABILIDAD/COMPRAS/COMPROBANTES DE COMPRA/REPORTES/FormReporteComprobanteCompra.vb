@@ -173,9 +173,9 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA.REPORTES
 
 
             Dim tabla1 As PdfPTable = New PdfPTable(2)
-            tabla1.TotalWidth = 400
+            tabla1.TotalWidth = 380
 
-            Dim ColumnWidhts1 As Single() = New Single() {220, 180}
+            Dim ColumnWidhts1 As Single() = New Single() {200, 180}
             tabla1.SetWidths(ColumnWidhts1)
 
             Dim proveedorContent As New Phrase()
@@ -466,10 +466,10 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA.REPORTES
             tabla3.WriteSelectedRows(0, -1, 10, 360, writer.DirectContent)
 
             Dim table4 As New PdfPTable(6)
-            table4.TotalWidth = 400
+            table4.TotalWidth = 380
 
             Dim detalleRetencionTable As DataTable = ds.Tables("DETALLE_COMPROBANTE_RETENCION_COMPRA")
-            Dim columnWidthsTable4() As Single = {66, 66, 66, 70, 66, 66}
+            Dim columnWidthsTable4() As Single = {63, 63, 63, 65, 63, 63}
             table4.SetWidths(columnWidthsTable4)
 
             ' First row (header)
@@ -496,32 +496,32 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA.REPORTES
             table4.WriteSelectedRows(0, -1, 10, 280, writer.DirectContent)
 
             Dim totalRetencionTable As New PdfPTable(2)
-            totalRetencionTable.TotalWidth = 142
-            Dim columnWidthsTotalRentencion() As Single = {66, 66}
+            totalRetencionTable.TotalWidth = 140
+            Dim columnWidthsTotalRentencion() As Single = {70, 70}
 
             totalRetencionTable.SetWidths(columnWidthsTotalRentencion)
 
             Dim TotalRetencionTi As New PdfPCell(New Phrase("Total Retención", fuente8Bold)) With {
-                                    .HorizontalAlignment = Element.ALIGN_CENTER,
+                                    .HorizontalAlignment = Element.ALIGN_LEFT,
                                     .VerticalAlignment = Element.ALIGN_MIDDLE,
                                     .Border = PdfPCell.NO_BORDER
                                                                     }
 
             totalRetencionTable.AddCell(TotalRetencionTi)
             Dim totalRetencionCell As New PdfPCell(New Phrase(totalRetencion.ToString("#,##0.00"), fuente8Bold)) With {
-                                    .HorizontalAlignment = Element.ALIGN_CENTER,
+                                    .HorizontalAlignment = Element.ALIGN_LEFT,
                                     .VerticalAlignment = Element.ALIGN_MIDDLE,
                                     .Border = PdfPCell.NO_BORDER
                                 }
             totalRetencionTable.AddCell(totalRetencionCell)
-            totalRetencionTable.WriteSelectedRows(0, -1, 270, 240, writer.DirectContent)
+            totalRetencionTable.WriteSelectedRows(0, -1, 260, 240, writer.DirectContent)
 
 
             Dim asientoTable As DataTable = ds.Tables("ASIENTOS_LIBRO_DIARIO")
             Dim table5 As New PdfPTable(4)
-            table5.TotalWidth = 400
+            table5.TotalWidth = 380
 
-            Dim columnWidthsTable5() As Single = {60, 120, 60, 60}
+            Dim columnWidthsTable5() As Single = {60, 120, 50, 50}
             table5.SetWidths(columnWidthsTable5)
 
             Dim TituloTabla5 As New PdfPCell(New Phrase("ASIENTO DE DIARIO", fuente10Bold)) With {
@@ -563,8 +563,8 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA.REPORTES
             table5.WriteSelectedRows(0, -1, 10, 220, writer.DirectContent)
 
             Dim table6 As New PdfPTable(2)
-            Dim columnWidthsTotal() As Single = {80, 80}
-            table6.TotalWidth = 160
+            Dim columnWidthsTotal() As Single = {67, 67}
+            table6.TotalWidth = 135
             Dim table5Height As Single = table5.TotalHeight
             table6.SetWidths(columnWidthsTotal)
 
@@ -572,7 +572,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA.REPORTES
             table6.AddCell(New Phrase(valorHaber.ToString("#,##0.00"), fuente8Bold))
             Dim baseY As Single = 220 - table5Height
 
-            table6.WriteSelectedRows(0, -1, 250, baseY, writer.DirectContent)
+            table6.WriteSelectedRows(0, -1, 255, baseY, writer.DirectContent)
 
 
 

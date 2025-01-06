@@ -152,7 +152,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.ORDEN_DE_COMPRA
 
             dgvDetalleOrdenCompra.Columns(0).ReadOnly = True
             dgvDetalleOrdenCompra.Columns(2).ReadOnly = True
-            dgvDetalleOrdenCompra.Columns(5).ReadOnly = True
+            dgvDetalleOrdenCompra.Columns(6).ReadOnly = True
         End Sub
         Public Sub LimpiarParametros()
             Label3.Text = "###"
@@ -294,7 +294,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.ORDEN_DE_COMPRA
             dgvDetalleOrdenCompra.Rows.Add(dgvDetalleRequisicionProductoServicio.CurrentRow.Cells(8).Value.ToString,
                                            dgvDetalleRequisicionProductoServicio.CurrentRow.Cells(1).Value.ToString,
                                            dgvDetalleRequisicionProductoServicio.CurrentRow.Cells(2).Value.ToString,
-                                           dgvDetalleRequisicionProductoServicio.CurrentRow.Cells(3).Value.ToString)
+                                           dgvDetalleRequisicionProductoServicio.CurrentRow.Cells(3).Value.ToString, String.Empty, 0)
         End Sub
         Private Sub btnEliminar_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnEliminar.Click
             If dgvDetalleOrdenCompra.RowCount < 2 Then Return
@@ -306,13 +306,13 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.ORDEN_DE_COMPRA
 
                 RequisionesSeleccionadas()
                 If chkReq.Checked And Label3.Text.Equals("###") Then
-                    'MsgBox("SELECCIONE LAS REQUISICIONES QUE SERÁN PROCESADAS!", MsgBoxStyle.Exclamation, "Mensaje de validación")
+
                     KryptonMessageBox.Show("Seleccione las requisiciones que serán procesadas!", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                     Return
                 End If
 
                 If CDec(txtTotalOrdenCompra.Text) < 0.01 Then
-                    'MsgBox("VERIFIQUE LOS VALORES Y EL TOTAL DE LA ORDEN DE COMPRA!", MsgBoxStyle.Exclamation, "Mensaje de validación")
+
                     KryptonMessageBox.Show("Verifique los valores y el total de la orden de compra!", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                     Return
                 End If
@@ -325,16 +325,18 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.ORDEN_DE_COMPRA
                     GuardarRegistroOrdenCompra()
                     GuardarRegistroDetalleOrdenCompra()
 
+                    If chkReq.Checked AndAlso Label3.Text <> "###" Then
+                        ' CAMBIA EL ESTADO DEL DETALLE REQUISICIÓN A APROVADO
 
-                    ' CAMBIA EL ESTADO DEL DETALLE REQUISICIÓN A APROVADO
-                    If Label3.Text.Trim.Contains("-") Then
                         Dim ids = Label3.Text.Split("-")
-                        For Each id In ids
-                            AprovarRequisicionProductoServicio(id)
-                        Next
+                            For Each id In ids
+                                AprovarRequisicionProductoServicio(id)
+                            Next
+
                     Else
-                        AprovarRequisicionProductoServicio(Label3.Text)
+                        AprovarRequisicionProductoServicio(Label1.Text)
                     End If
+
                 Catch ex As Exception
                     KryptonMessageBox.Show("Error al guardar la orden de compra" & vbNewLine & ex.Message.ToString, "Mensaje de excepción", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
                     Return
@@ -376,17 +378,18 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.ORDEN_DE_COMPRA
         End Sub
         Private Sub dgvDetalleOrdenCompra_CellValueChanged(ByVal sender As System.Object, ByVal e As Windows.Forms.DataGridViewCellEventArgs) Handles dgvDetalleOrdenCompra.CellValueChanged
             Try
-                Dim cant, valor As Decimal
+                Dim cant, valor, desc As Decimal
                 Dim columna = dgvDetalleOrdenCompra.Columns(e.ColumnIndex).Name
 
-                If dgvDetalleOrdenCompra.Columns(e.ColumnIndex).Name = "valorUnitarioProductoServicio" Or dgvDetalleOrdenCompra.Columns(e.ColumnIndex).Name = "cantidadProductoServicio" Or dgvDetalleOrdenCompra.Columns(e.ColumnIndex).Name = "porcentaje" Then
+                If dgvDetalleOrdenCompra.Columns(e.ColumnIndex).Name = "valorUnitarioProductoServicio" Or dgvDetalleOrdenCompra.Columns(e.ColumnIndex).Name = "cantidadProductoServicio" Or dgvDetalleOrdenCompra.Columns(e.ColumnIndex).Name = "porcentaje" Or dgvDetalleOrdenCompra.Columns(e.ColumnIndex).Name = "DESC" Then
                     If dgvDetalleOrdenCompra.CurrentRow.Cells(3).Value.ToString <> "" And dgvDetalleOrdenCompra.CurrentRow.Cells(4).Value.ToString <> "" Then
 
 
 
                         cant = CDec(dgvDetalleOrdenCompra.CurrentRow.Cells(3).Value)
                         valor = CDec(dgvDetalleOrdenCompra.CurrentRow.Cells(4).Value)
-                        dgvDetalleOrdenCompra.CurrentRow.Cells(5).Value = Math.Round(cant * valor, 2)
+                        desc = CDec(dgvDetalleOrdenCompra.CurrentRow.Cells(5).Value)
+                        dgvDetalleOrdenCompra.CurrentRow.Cells(6).Value = Math.Round((cant * valor) - desc, 2)
                     End If
 
                     If dgvDetalleOrdenCompra.Columns(e.ColumnIndex).Name = "porcentaje" Then
@@ -407,7 +410,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.ORDEN_DE_COMPRA
                 End If
             Catch ex As Exception
                 KryptonMessageBox.Show("ERROR AL CALCULAR EL TOTAL DEL ITEM" & vbNewLine & ex.Message.ToString, "Mensaje de excepción", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
-                dgvDetalleOrdenCompra.CurrentRow.Cells(5).Value = 0
+                dgvDetalleOrdenCompra.CurrentRow.Cells(6).Value = 0
             End Try
         End Sub
         Private Sub dgvDetalleOrdenCompra_CellEndEdit(ByVal sender As System.Object, ByVal e As Windows.Forms.DataGridViewCellEventArgs) Handles dgvDetalleOrdenCompra.CellEndEdit
@@ -429,6 +432,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.ORDEN_DE_COMPRA
                                     dgvDetalleOrdenCompra.CurrentRow.Cells(3).Value = ""
                                     dgvDetalleOrdenCompra.CurrentRow.Cells(4).Value = ""
                                     dgvDetalleOrdenCompra.CurrentRow.Cells(5).Value = ""
+                                    dgvDetalleOrdenCompra.CurrentRow.Cells(6).Value = ""
                                     'MsgBox("EL ITEM INGRESADO NO SE ENCUENTRA EN LA BASE DE DATOS. POR FAVOR REGISTRELO ANTES DE INGRESARLO EN LA REQUISICIÓN", MsgBoxStyle.Exclamation, "Mensaje de validación")
                                     KryptonMessageBox.Show("El item ingresado no se encuentra en la base de datos. por favor registrelo antes de ingresarlo en la requisición", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                                     Return
@@ -437,6 +441,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.ORDEN_DE_COMPRA
                                 dgvDetalleOrdenCompra.CurrentRow.Cells(1).Value = tab.Rows(0)(2).ToString
                                 dgvDetalleOrdenCompra.CurrentRow.Cells(2).Value = tab.Rows(0)(18).ToString
                                 dgvDetalleOrdenCompra.CurrentRow.Cells(3).Value = 1
+                                dgvDetalleOrdenCompra.CurrentRow.Cells(5).Value = 0
 
 
                             Else
@@ -455,6 +460,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.ORDEN_DE_COMPRA
                                 dgvDetalleOrdenCompra.CurrentRow.Cells(3).Value = ""
                                 dgvDetalleOrdenCompra.CurrentRow.Cells(4).Value = ""
                                 dgvDetalleOrdenCompra.CurrentRow.Cells(5).Value = ""
+                                dgvDetalleOrdenCompra.CurrentRow.Cells(6).Value = ""
                                 'MsgBox("EL ITEM INGRESADO NO SE ENCUENTRA EN LA BASE DE DATOS. POR FAVOR REGISTRELO ANTES DE INGRESARLO EN LA REQUISICIÓN", MsgBoxStyle.Exclamation, "Mensaje de validación")
                                 KryptonMessageBox.Show("EL ITEM INGRESADO NO SE ENCUENTRA EN LA BASE DE DATOS. POR FAVOR REGISTRELO ANTES DE INGRESARLO EN LA REQUISICIÓN", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                                 Return
@@ -463,6 +469,7 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.ORDEN_DE_COMPRA
                             dgvDetalleOrdenCompra.CurrentRow.Cells(1).Value = tab.Rows(0)(2).ToString
                             dgvDetalleOrdenCompra.CurrentRow.Cells(2).Value = tab.Rows(0)(18).ToString
                             dgvDetalleOrdenCompra.CurrentRow.Cells(3).Value = 1
+                            dgvDetalleOrdenCompra.CurrentRow.Cells(5).Value = 0
 
                         End If
                     Next
@@ -507,6 +514,8 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.ORDEN_DE_COMPRA
                     e.Handled = Not _validacionesNumeros.EsNumero(e.KeyChar)
                 Case 4
                     e.Handled = Not _validacionesDecimales.EsDecimal(e.KeyChar)
+                Case 5
+                    e.Handled = Not _validacionesDecimales.EsDecimal(e.KeyChar)
             End Select
         End Sub
         Public Function ValidarParametros() As Boolean
@@ -517,24 +526,27 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.ORDEN_DE_COMPRA
                 Dim epr = New ClassEmpresa
                 Dim empre = epr.SeleccionarRegistroEmpresaGeneralInformacionTributaria(_tipoCon)
                 Dim piva = If(empre.Rows.Count = 0, 0, CInt(empre.Rows(0)(21).ToString()))
-                Dim subtotal0, subTotal12, iva, total As Decimal
+                Dim subtotal0, subTotal12, iva, desc, total As Decimal
                 For indice = 0 To dgvDetalleOrdenCompra.RowCount - 2
                     Dim row = dgvDetalleOrdenCompra.Rows(indice)
 
-                    If dgvDetalleOrdenCompra.Rows(indice).Cells(3).Value <> Nothing And dgvDetalleOrdenCompra.Rows(indice).Cells(4).Value <> Nothing And dgvDetalleOrdenCompra.Rows(indice).Cells(7).Value = "S" Then
+                    If dgvDetalleOrdenCompra.Rows(indice).Cells(3).Value <> Nothing And dgvDetalleOrdenCompra.Rows(indice).Cells(4).Value <> Nothing And dgvDetalleOrdenCompra.Rows(indice).Cells(8).Value = "S" Then
                         'cambio 2023
 
-                        subTotal12 += CDec(row.Cells(5).Value)
+                        subTotal12 += CDec(row.Cells(6).Value)
+                        desc += CDec(row.Cells(5).Value)
                     Else
-                        subtotal0 += CDec(row.Cells(5).Value)
+                        subtotal0 += CDec(row.Cells(6).Value)
+                        desc += CDec(row.Cells(5).Value)
                     End If
                 Next
 
                 iva = Math.Round(subTotal12 * (piva / 100), 2)
-                total = Math.Round(subTotal12 + iva + subtotal0, 2)
+                total = Math.Round(subTotal12 + iva + subtotal0 + desc, 2)
 
                 txtSubtotal0OrdenCompra.Text = subtotal0
                 txtSubtotal12OrdenCompra.Text = subTotal12
+                txtDescuentoOrdenCompra.Text = desc
                 txtIvaOrdenCompra.Text = iva
                 txtTotalOrdenCompra.Text = total
                 lblSubtotalIva.Text = "Subtotal " & piva & "%"
@@ -668,7 +680,41 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.ORDEN_DE_COMPRA
                 Return
             End If
             Label1.Text = dgvRequisicionProductoServicioNew.CurrentRow.Cells(1).Value
+
+
             CargarDetalleRequisicionProductoServicio()
         End Sub
+
+        Private Sub dgvRequisicionProductoServicioNew_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvRequisicionProductoServicioNew.CellContentClick
+            If e.RowIndex >= 0 AndAlso e.ColumnIndex = 0 AndAlso chkReq.Checked Then
+                ' Confirma el cambio de estado de la celda activa
+                dgvRequisicionProductoServicioNew.CommitEdit(DataGridViewDataErrorContexts.Commit)
+
+                ' Recupera el estado actual del CheckBox
+                Dim isChecked As Boolean = Convert.ToBoolean(dgvRequisicionProductoServicioNew.Rows(e.RowIndex).Cells(0).Value)
+
+                ' Obtén el valor de la celda en la columna 1
+                Dim value As String = dgvRequisicionProductoServicioNew.Rows(e.RowIndex).Cells(1).Value.ToString()
+
+                ' Actualiza el contenido del Label3
+                If isChecked Then
+                    ' Agregar el valor al Label si está marcado
+                    If Not Label3.Text.Contains(value) Then
+                        If Label3.Text = "###" Then
+                            Label3.Text = value
+                        Else
+                            Label3.Text &= "-" & value
+                        End If
+                    End If
+                Else
+                    ' Remover el valor del Label si se desmarca
+                    Dim values = Label3.Text.Split("-"c).ToList()
+                    values.Remove(value)
+                    Label3.Text = If(values.Count > 0, String.Join("-", values), "###")
+                End If
+            End If
+        End Sub
+
+
     End Class
 End Namespace
