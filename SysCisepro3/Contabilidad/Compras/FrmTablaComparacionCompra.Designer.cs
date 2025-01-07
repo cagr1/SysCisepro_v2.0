@@ -79,15 +79,32 @@
             // kryptonNavigator1
             // 
             this.kryptonNavigator1.Button.ButtonDisplayLogic = ComponentFactory.Krypton.Navigator.ButtonDisplayLogic.None;
+            this.kryptonNavigator1.Button.CloseButtonAction = ComponentFactory.Krypton.Navigator.CloseButtonAction.RemovePageAndDispose;
             this.kryptonNavigator1.Button.CloseButtonDisplay = ComponentFactory.Krypton.Navigator.ButtonDisplay.Hide;
+            this.kryptonNavigator1.Button.ContextButtonAction = ComponentFactory.Krypton.Navigator.ContextButtonAction.SelectPage;
+            this.kryptonNavigator1.Button.ContextButtonDisplay = ComponentFactory.Krypton.Navigator.ButtonDisplay.Logic;
+            this.kryptonNavigator1.Button.ContextMenuMapImage = ComponentFactory.Krypton.Navigator.MapKryptonPageImage.Small;
+            this.kryptonNavigator1.Button.ContextMenuMapText = ComponentFactory.Krypton.Navigator.MapKryptonPageText.TextTitle;
+            this.kryptonNavigator1.Button.NextButtonAction = ComponentFactory.Krypton.Navigator.DirectionButtonAction.ModeAppropriateAction;
+            this.kryptonNavigator1.Button.NextButtonDisplay = ComponentFactory.Krypton.Navigator.ButtonDisplay.Logic;
+            this.kryptonNavigator1.Button.PreviousButtonAction = ComponentFactory.Krypton.Navigator.DirectionButtonAction.ModeAppropriateAction;
+            this.kryptonNavigator1.Button.PreviousButtonDisplay = ComponentFactory.Krypton.Navigator.ButtonDisplay.Logic;
             this.kryptonNavigator1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.kryptonNavigator1.Group.GroupBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.ControlClient;
+            this.kryptonNavigator1.Group.GroupBorderStyle = ComponentFactory.Krypton.Toolkit.PaletteBorderStyle.ControlClient;
+            this.kryptonNavigator1.Header.HeaderStyleBar = ComponentFactory.Krypton.Toolkit.HeaderStyle.Secondary;
+            this.kryptonNavigator1.Header.HeaderStylePrimary = ComponentFactory.Krypton.Toolkit.HeaderStyle.Primary;
+            this.kryptonNavigator1.Header.HeaderStyleSecondary = ComponentFactory.Krypton.Toolkit.HeaderStyle.Secondary;
             this.kryptonNavigator1.Location = new System.Drawing.Point(0, 0);
             this.kryptonNavigator1.Name = "kryptonNavigator1";
+            this.kryptonNavigator1.NavigatorMode = ComponentFactory.Krypton.Navigator.NavigatorMode.BarTabGroup;
+            this.kryptonNavigator1.PageBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.ControlClient;
             this.kryptonNavigator1.Pages.AddRange(new ComponentFactory.Krypton.Navigator.KryptonPage[] {
             this.kryptonPage1,
             this.kryptonPage3,
             this.kryptonPage2});
-            this.kryptonNavigator1.SelectedIndex = 1;
+            this.kryptonNavigator1.Panel.PanelBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.PanelClient;
+            this.kryptonNavigator1.SelectedIndex = 0;
             this.kryptonNavigator1.Size = new System.Drawing.Size(808, 450);
             this.kryptonNavigator1.TabIndex = 0;
             this.kryptonNavigator1.Text = "kryptonNavigator1";
@@ -102,6 +119,7 @@
             this.kryptonPage1.Name = "kryptonPage1";
             this.kryptonPage1.Size = new System.Drawing.Size(806, 423);
             this.kryptonPage1.Text = "Tabla";
+            this.kryptonPage1.ToolTipStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.ToolTip;
             this.kryptonPage1.ToolTipTitle = "Page ToolTip";
             this.kryptonPage1.UniqueName = "D4060D1C0D89425282AA47AD5C22FCF4";
             // 
@@ -152,10 +170,12 @@
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(32, 32);
             this.btnAgregar.StateCommon.Back.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.False;
+            this.btnAgregar.StateCommon.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.btnAgregar.StateCommon.Border.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.False;
             this.btnAgregar.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnAgregar.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.btnAgregar.TabIndex = 12;
             this.toolTip1.SetToolTip(this.btnAgregar, "Agregar Proveedor");
             this.btnAgregar.Values.ImageStates.ImageCheckedNormal = null;
@@ -192,10 +212,12 @@
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(32, 32);
             this.btnCancelar.StateCommon.Back.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.False;
+            this.btnCancelar.StateCommon.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.btnCancelar.StateCommon.Border.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.False;
             this.btnCancelar.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnCancelar.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.btnCancelar.TabIndex = 9;
             this.toolTip1.SetToolTip(this.btnCancelar, "Cancelar");
             this.btnCancelar.UseMnemonic = false;
@@ -215,10 +237,12 @@
             this.btnGuardarTabla.Name = "btnGuardarTabla";
             this.btnGuardarTabla.Size = new System.Drawing.Size(32, 32);
             this.btnGuardarTabla.StateCommon.Back.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.False;
+            this.btnGuardarTabla.StateCommon.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.btnGuardarTabla.StateCommon.Border.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.False;
             this.btnGuardarTabla.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnGuardarTabla.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.btnGuardarTabla.TabIndex = 8;
             this.toolTip1.SetToolTip(this.btnGuardarTabla, "Guardar Tabla");
             this.btnGuardarTabla.Values.ImageStates.ImageCheckedNormal = null;
@@ -237,10 +261,12 @@
             this.btnNuevaTabla.Name = "btnNuevaTabla";
             this.btnNuevaTabla.Size = new System.Drawing.Size(32, 32);
             this.btnNuevaTabla.StateCommon.Back.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.False;
+            this.btnNuevaTabla.StateCommon.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.btnNuevaTabla.StateCommon.Border.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.False;
             this.btnNuevaTabla.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnNuevaTabla.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.btnNuevaTabla.TabIndex = 7;
             this.toolTip1.SetToolTip(this.btnNuevaTabla, "Nueva Tabla");
             this.btnNuevaTabla.Values.ImageStates.ImageCheckedNormal = null;
@@ -320,7 +346,9 @@
             this.kryptonPage3.Name = "kryptonPage3";
             this.kryptonPage3.Size = new System.Drawing.Size(806, 423);
             this.kryptonPage3.StateCommon.Page.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
+            this.kryptonPage3.StateCommon.Page.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.kryptonPage3.Text = "Buscar";
+            this.kryptonPage3.ToolTipStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.ToolTip;
             this.kryptonPage3.ToolTipTitle = "Page ToolTip";
             this.kryptonPage3.UniqueName = "52EB43BB56504659649444E3236E61E5";
             // 
@@ -403,6 +431,7 @@
             this.kryptonPage2.Name = "kryptonPage2";
             this.kryptonPage2.Size = new System.Drawing.Size(806, 423);
             this.kryptonPage2.Text = "Reporte";
+            this.kryptonPage2.ToolTipStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.ToolTip;
             this.kryptonPage2.ToolTipTitle = "Page ToolTip";
             this.kryptonPage2.UniqueName = "1E3B42D390BC4975BF83023BF932CB93";
             // 

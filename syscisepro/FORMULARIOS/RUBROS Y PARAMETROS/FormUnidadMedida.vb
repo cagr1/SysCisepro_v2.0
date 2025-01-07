@@ -3,6 +3,7 @@ Imports ClassLibraryCisepro.CONTABILIDAD.BANCOS.AUDITORIA
 Imports ClassLibraryCisepro.ENUMS
 Imports ClassLibraryCisepro.INVENTARIOS.PARAMETROS
 Imports ClassLibraryCisepro.ProcesosSql
+Imports Krypton.Toolkit
 
 Namespace FORMULARIOS.RUBROS_Y_PARAMETROS
     ''' <summary>
@@ -39,7 +40,7 @@ Namespace FORMULARIOS.RUBROS_Y_PARAMETROS
         Private ReadOnly _objetoAuditoria As New ClassAuditoriaGeneral
         Private ReadOnly _objetoUnidadMedida As New ClassUnidadMedida
         Dim _botonSeleccionado As New Integer
-         
+
         Private Sub Auditoria()
             _objetoAuditoria.IdAuditoria = _objetoAuditoria.BuscarMayorIdAuditoriaGeneral(_tipoCon) + 1
             _objetoAuditoria.FechaAuditoria = _objetoAuditoria.FechaExactaAuditoria(_tipoCon)
@@ -86,13 +87,12 @@ Namespace FORMULARIOS.RUBROS_Y_PARAMETROS
         Private Sub CargarUnidadMedida()
             Try
                 dgvUnidadMedida.DataSource = _objetoUnidadMedida.SeleccionarRegistrosUnidadMedida(_tipoCon)
-
-                dgvUnidadMedida.Columns(0).HeaderText = "ID" 
-                dgvUnidadMedida.Columns(1).HeaderText = "DETALLE UNIDAD MEDIDA" 
-                dgvUnidadMedida.Columns(2).HeaderText = "CODIGO" 
-                dgvUnidadMedida.Columns(3).HeaderText = "EST" 
+                dgvUnidadMedida.Columns(0).HeaderText = "ID"
+                dgvUnidadMedida.Columns(1).HeaderText = "DETALLE UNIDAD MEDIDA"
+                dgvUnidadMedida.Columns(2).HeaderText = "CODIGO"
+                dgvUnidadMedida.Columns(3).HeaderText = "EST"
                 dgvUnidadMedida.AutoResizeColumns()
-                dgvUnidadMedida.AutoResizeRows() 
+                dgvUnidadMedida.AutoResizeRows()
             Catch
                 dgvUnidadMedida.DataSource = Nothing
             End Try
@@ -114,9 +114,9 @@ Namespace FORMULARIOS.RUBROS_Y_PARAMETROS
         Private Sub GuardarUnidadMedidaModificado()
             With _objetoUnidadMedida
                 .IdUnidadMedida = txtIdUnidadMedida.Text
-                .DetalleUnidadMedida = txtDetalleUnidadMedida.Text 
+                .DetalleUnidadMedida = txtDetalleUnidadMedida.Text
                 .CodigoUnidadMedida = txtCodigoUnidadMedida.Text
-                .EstadoUnidadMedida = 1 
+                .EstadoUnidadMedida = 1
             End With
             _sqlCommands.Add(_objetoUnidadMedida.ModificarRegistroUnidadMedida)
 
@@ -173,10 +173,15 @@ Namespace FORMULARIOS.RUBROS_Y_PARAMETROS
                 If res(0) Then
                     DesabilitadoCancelar()
                     CargarUnidadMedida()
+                    KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
+                Else
+                    KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+                    Return
                 End If
-                MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
+                'MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
             Else
-                MsgBox("No se puede guardar." & vbNewLine & "NO SE HAN LLENADO TODOS LOS CAMPOS NECESARIOS.", MsgBoxStyle.Information, "Mensaje de validación")
+                'MsgBox("No se puede guardar." & vbNewLine & "NO SE HAN LLENADO TODOS LOS CAMPOS NECESARIOS.", MsgBoxStyle.Information, "Mensaje de validación")
+                KryptonMessageBox.Show("No se puede guardar." & vbNewLine & "No se han llenado todos los campos necesarios.", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
             End If
         End Sub
         Private Sub btnCancelarUnidadMedida_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnCancelarUnidadMedida.Click

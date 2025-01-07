@@ -263,7 +263,7 @@ Namespace FORMULARIOS.INVENTARIOS.PROCESO
                     If cantidad >= 10 And cantidad <= 30 Then
                         row.DefaultCellStyle.BackColor = Color.Orange
                         row.DefaultCellStyle.ForeColor = Color.Black
-                    ElseIf cantidad >= 1 And cantidad < 10 Then
+                    ElseIf cantidad >= 0 And cantidad < 10 Then
                         row.DefaultCellStyle.BackColor = Color.Red
                         row.DefaultCellStyle.ForeColor = Color.White
                     ElseIf cantidad < 0 Then

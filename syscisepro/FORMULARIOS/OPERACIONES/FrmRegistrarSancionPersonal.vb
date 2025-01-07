@@ -274,12 +274,15 @@ Namespace FORMULARIOS.OPERACIONES
         Private Sub btnGuardar_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnGuardar.Click
             Try
                 txtTotal.Text = TotalMultas()
-                If MessageBox.Show("Está seguro que desea guardar los cambios realizados", "Mensaje del sistema", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.No Then
-                    Return
+                'If MessageBox.Show("Está seguro que desea guardar los cambios realizados", "Mensaje del sistema", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.No Then
+                If KryptonMessageBox.Show("Está seguro que desea guardar los cambios realizados", "Mensaje del sistema", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) = DialogResult.No Then
+
+                        Return
                 End If
 
                 If txtIdPersonal.Text.Trim.Length = 0 Or txtValor.Text.Trim.Length = 0 Then
-                    MessageBox.Show("Debe definir los datos de la sanción para guardar!", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                    'MessageBox.Show("Debe definir los datos de la sanción para guardar!", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                    KryptonMessageBox.Show("Debe definir los datos de la sanción para guardar!", "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                     Return
                 End If
                 _sqlCommands.Clear()
@@ -355,18 +358,23 @@ Namespace FORMULARIOS.OPERACIONES
                     txtFiltro.Clear()
 
                     CargarAsignaciones(String.Empty, _objRegistroSancion.IdSancion)
+                    KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
+                Else
+                    KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+                    Return
                 End If
                 'MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
-                Dim messageIcon As KryptonMessageBoxIcon
-                If res(0) Then
-                    messageIcon = KryptonMessageBoxIcon.Information
-                Else
-                    messageIcon = KryptonMessageBoxIcon.Exclamation
-                End If
+                'Dim messageIcon As KryptonMessageBoxIcon
+                'If res(0) Then
+                '    messageIcon = KryptonMessageBoxIcon.Information
+                'Else
+                '    messageIcon = KryptonMessageBoxIcon.Exclamation
+                'End If
 
-                KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, messageIcon)
+                'KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, messageIcon)
             Catch ex As Exception
-                MsgBox("ERROR AL GUARDAR HORARIO DE TRABAJO: " & ex.Message, MsgBoxStyle.Exclamation, "Mensaje de validación")
+                'MsgBox("ERROR AL GUARDAR HORARIO DE TRABAJO: " & ex.Message, MsgBoxStyle.Exclamation, "Mensaje de validación")
+                KryptonMessageBox.Show("Error al guardar horario de trabajo: " & ex.Message, "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
 
@@ -446,18 +454,23 @@ Namespace FORMULARIOS.OPERACIONES
 
                     txtFiltro.Clear()
                     CargarAsignaciones(String.Empty, 0)
+                    KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
+                Else
+                    KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+                    Return
                 End If
                 'MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
-                Dim messageIcon As KryptonMessageBoxIcon
-                If res(0) Then
-                    messageIcon = KryptonMessageBoxIcon.Information
-                Else
-                    messageIcon = KryptonMessageBoxIcon.Exclamation
-                End If
+                'Dim messageIcon As KryptonMessageBoxIcon
+                'If res(0) Then
+                '    messageIcon = KryptonMessageBoxIcon.Information
+                'Else
+                '    messageIcon = KryptonMessageBoxIcon.Exclamation
+                'End If
 
-                KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, messageIcon)
+                'KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, messageIcon)
             Catch ex As Exception
-                MsgBox("ERROR AL GUARDAR HORARIO DE TRABAJO: " & ex.Message, MsgBoxStyle.Exclamation, "Mensaje de validación")
+                'MsgBox("ERROR AL GUARDAR HORARIO DE TRABAJO: " & ex.Message, MsgBoxStyle.Exclamation, "Mensaje de validación")
+                KryptonMessageBox.Show("Error al guardar horario de trabajo: " & ex.Message, "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
 
@@ -660,7 +673,7 @@ Namespace FORMULARIOS.OPERACIONES
 
             Catch ex As Exception
                 KryptonMessageBox.Show("ERROR AL CARGAR LOS DATOS: " & ex.Message, "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
-
+                Return
             End Try
         End Sub
 
@@ -754,6 +767,8 @@ Namespace FORMULARIOS.OPERACIONES
                 txtIdPersonal.Clear()
                 txtCargo.Clear()
                 txtArea.Clear()
+                KryptonMessageBox.Show("Error al seleccionar el personal: " & ex.Message, "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+                Return
             End Try
         End Sub
 

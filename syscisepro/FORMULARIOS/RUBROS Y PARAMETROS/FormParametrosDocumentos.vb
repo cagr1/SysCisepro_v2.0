@@ -3,6 +3,7 @@ Imports ClassLibraryCisepro
 Imports ClassLibraryCisepro.CONTABILIDAD.BANCOS.AUDITORIA
 Imports ClassLibraryCisepro.ENUMS
 Imports ClassLibraryCisepro.ProcesosSql
+Imports Krypton.Toolkit
 
 Namespace FORMULARIOS.RUBROS_Y_PARAMETROS
     ''' <summary>
@@ -139,7 +140,8 @@ Namespace FORMULARIOS.RUBROS_Y_PARAMETROS
         Private Sub btnGuardarParametroDocumentos_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnGuardarParametroDocumentos.Click
             If ValidacionParametros() Then
 
-                If MessageBox.Show("¿Esta seguro que desea guardar?", "Mensaje de validación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> MsgBoxResult.Yes Then Return
+                'If MessageBox.Show("¿Esta seguro que desea guardar?", "Mensaje de validación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> MsgBoxResult.Yes Then Return
+                If KryptonMessageBox.Show("¿Esta seguro que desea guardar?", "Mensaje de validación", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) <> MsgBoxResult.Yes Then Return
                 _sqlCommands.Clear()
                  
                 Select Case (_botonSeleccionado)
@@ -151,10 +153,15 @@ Namespace FORMULARIOS.RUBROS_Y_PARAMETROS
                 If res(0) Then
                     DesabilitadoCancelar()
                     CargarParametrosDocumentos()
+                    KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
+                Else
+                    KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+                    Return
                 End If
-                MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema") 
+                'MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema") 
             Else
-                MsgBox("No se puede guardar." & vbNewLine & "NO SE HAN LLENADO TODOS LOS CAMPOS NECESARIOS.", MsgBoxStyle.Exclamation, "Mensaje de validación")
+                'MsgBox("No se puede guardar." & vbNewLine & "NO SE HAN LLENADO TODOS LOS CAMPOS NECESARIOS.", MsgBoxStyle.Exclamation, "Mensaje de validación")
+                KryptonMessageBox.Show("No se puede guardar." & vbNewLine & "No se han llenado todos los campos necesarios.", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                 txtDetalleParametro.Focus()
             End If
         End Sub

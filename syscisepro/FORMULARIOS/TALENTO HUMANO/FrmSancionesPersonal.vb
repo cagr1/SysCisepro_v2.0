@@ -4,6 +4,7 @@ Imports ClassLibraryCisepro.ProcesosSql
 Imports ClassLibraryCisepro.TALENTO_HUMANO
 Imports Microsoft.Office.Interop
 Imports syscisepro.DATOS
+Imports Krypton.Toolkit
 
 Namespace FORMULARIOS.TALENTO_HUMANO
     ''' <summary>
@@ -74,12 +75,15 @@ Namespace FORMULARIOS.TALENTO_HUMANO
 
         Private Sub btnGuardar_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnGuardar.Click
             Try
-                If MessageBox.Show("Está seguro que desea guardar los cambios realizados", "Mensaje del sistema", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.No Then
+                'If MessageBox.Show("Está seguro que desea guardar los cambios realizados", "Mensaje del sistema", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.No Then
+                If KryptonMessageBox.Show("Está seguro que desea guardar los cambios realizados", "Mensaje del sistema", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) = DialogResult.No Then
                     Return
                 End If
 
+
                 If cbxTipo.Text.Trim.Length = 0 Or txtDefinicion.Text.Trim.Length = 0 Or txtValor.Text.Trim.Length = 0 Then
-                    MessageBox.Show("Debe definir los datos de la sanción para guardar!", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                    'MessageBox.Show("Debe definir los datos de la sanción para guardar!", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                    KryptonMessageBox.Show("Debe definir los datos de la sanción para guardar!", "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                     Return
                 End If
 
@@ -127,10 +131,15 @@ Namespace FORMULARIOS.TALENTO_HUMANO
 
                     txtFiltro.Clear()
                     CargarSanciones(String.Empty, _objSancionesPersonal.IdSancion)
+                    KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
+                Else
+                    KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+                    Return
                 End If
-                MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
+                'MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
             Catch ex As Exception
-                MsgBox("ERROR AL GUARDAR HORARIO DE TRABAJO: " & ex.Message, MsgBoxStyle.Exclamation, "Mensaje de validación")
+                'MsgBox("ERROR AL GUARDAR HORARIO DE TRABAJO: " & ex.Message, MsgBoxStyle.Exclamation, "Mensaje de validación")
+                KryptonMessageBox.Show("Error al guardar horario de trabajo: " & ex.Message, "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
 
@@ -154,7 +163,8 @@ Namespace FORMULARIOS.TALENTO_HUMANO
 
         Private Sub btnAnular_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnAnular.Click
             Try
-                If MessageBox.Show("Seguro que desea anular la sanción seleccionada?", "Mensaje del sistema", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.No Then
+                'If MessageBox.Show("Seguro que desea anular la sanción seleccionada?", "Mensaje del sistema", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.No Then
+                If KryptonMessageBox.Show("Seguro que desea anular la sanción seleccionada?", "Mensaje del sistema", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) = DialogResult.No Then
                     Return
                 End If
 
@@ -181,10 +191,15 @@ Namespace FORMULARIOS.TALENTO_HUMANO
                     btnAnular.Enabled = False
                     btnCancelar.Enabled = False
                     _estadoAccion = 0
+                    KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
+                Else
+                    KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+                    Return
                 End If
-                MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
+                'MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
             Catch ex As Exception
-                MsgBox("ERROR AL GUARDAR HORARIO DE TRABAJO: " & ex.Message, MsgBoxStyle.Exclamation, "Mensaje de validación")
+                'MsgBox("ERROR AL GUARDAR HORARIO DE TRABAJO: " & ex.Message, MsgBoxStyle.Exclamation, "Mensaje de validación")
+                KryptonMessageBox.Show("Error al guardar horario de trabajo: " & ex.Message, "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
 
@@ -263,22 +278,13 @@ Namespace FORMULARIOS.TALENTO_HUMANO
             Select Case _tipoCon
                 Case TipoConexion.Asenava
                     Icon = My.Resources.logo_a
-                    MenuStrip1.ForeColor = Color.White
-                    'MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorAsenava
-                    Label21.ForeColor = Color.White
-                    Label21.BackColor = My.MySettingsProperty.Settings.ColorAsenava
+
                 Case TipoConexion.Seportpac
                     Icon = My.Resources.logo_s
-                    'MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
-                    MenuStrip1.ForeColor = Color.White
-                    Label21.ForeColor = Color.White
-                    Label21.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
+
                 Case Else
                     Icon = My.Resources.logo_c
-                    'MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorCisepro
-                    MenuStrip1.ForeColor = Color.White
-                    Label21.ForeColor = Color.White
-                    Label21.BackColor = My.MySettingsProperty.Settings.ColorCisepro
+
             End Select
 
             CargarTiposSanciones()
@@ -292,7 +298,7 @@ Namespace FORMULARIOS.TALENTO_HUMANO
             End If
         End Sub
 
-        Private Sub ListView1_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles ListView1.SelectedIndexChanged
+        Private Sub ListView1_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As EventArgs)
             If ListView1.Items.Count > 0 Then
                 Try
                     txtIdSancion.Text = ListView1.SelectedItems(0).SubItems(0).Text
@@ -310,7 +316,7 @@ Namespace FORMULARIOS.TALENTO_HUMANO
                 End Try
             End If
         End Sub
-         
+
         Private Sub ExportarDatosExcel(ByVal dataGridViewExp As ListView, ByVal titulo As String)
 
             Dim app As Excel._Application = New Excel.Application()
@@ -408,7 +414,8 @@ Namespace FORMULARIOS.TALENTO_HUMANO
         Private Sub ConectarReporte()
             Try
                 If ListView1.Items.Count = 0 Then
-                    MessageBox.Show("NO SE HA SELECCIONADO DATOS PARA EXPORTAR!", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                    'MessageBox.Show("NO SE HA SELECCIONADO DATOS PARA EXPORTAR!", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                    KryptonMessageBox.Show("No se ha seleccionado datos para exportar!", "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                     Return
                 End If
 

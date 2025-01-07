@@ -2,6 +2,7 @@
 Imports ClassLibraryCisepro
 Imports ClassLibraryCisepro.ENUMS
 Imports ClassLibraryCisepro.ProcesosSql
+Imports Krypton.Toolkit
 
 Namespace FORMULARIOS.RUBROS_Y_PARAMETROS
     ''' <summary>
@@ -52,7 +53,7 @@ Namespace FORMULARIOS.RUBROS_Y_PARAMETROS
             txtValorRubro.Enabled = True
             btnGuardarRubroFondoRotativo.Enabled = True
             btnCancelarRubroFondorotativo.Enabled = True
-            btnNuevoRubroFondoRotativo.Enabled = False            
+            btnNuevoRubroFondoRotativo.Enabled = False
         End Sub
 
         Private Sub DesabilitadoCancelar()
@@ -135,11 +136,15 @@ Namespace FORMULARIOS.RUBROS_Y_PARAMETROS
 
                     DesabilitadoCancelar()
                     CargarRubrosFondoRotativo()
-
+                    KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
+                Else
+                    KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+                    Return
                 End If
-                MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
+                'MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
             Else
-                MsgBox("No se puede guardar." & vbNewLine & "NO SE HAN LLENADO TODOS LOS CAMPOS NECESARIOS.", MsgBoxStyle.Exclamation, "Mensaje de validación")
+                'MsgBox("No se puede guardar." & vbNewLine & "NO SE HAN LLENADO TODOS LOS CAMPOS NECESARIOS.", MsgBoxStyle.Exclamation, "Mensaje de validación")
+                KryptonMessageBox.Show("No se puede guardar." & vbNewLine & "No se han llenado todos los campos necesarios.", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
             End If
         End Sub
 

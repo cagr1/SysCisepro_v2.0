@@ -26,10 +26,8 @@ namespace SysCisepro3.Contabilidad.Compras
         private void FrmBuscarProveedor_Load(object sender, EventArgs e)
         {
             // CARGAR ICONO Y DESIEÑO SEGUN SISTEMA 
-            BackColor = ValidationForms.GetColorSistema(TipoCon);
-            Label1.ForeColor = Color.White;
-            Label2.ForeColor = Color.White;
-            Label3.ForeColor = Color.White;
+            //BackColor = ValidationForms.GetColorSistema(TipoCon);
+            
             switch (TipoCon)
             {
                 case TipoConexion.Seportpac:

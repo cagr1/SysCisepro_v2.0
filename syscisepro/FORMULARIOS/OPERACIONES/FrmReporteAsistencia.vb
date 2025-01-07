@@ -130,12 +130,17 @@ Namespace FORMULARIOS.OPERACIONES
             Dim validation As New ValidationForms()
             validation.SetPlaceholder(TextBox1, "Buscar por Nombre")
             _sqlCommands = New List(Of SqlCommand)
+            'TabControl1.SelectTab(MetroTabPage1)
+            TabControl1.BackgroundColor = Color.FromArgb(239, 246, 253)
+            MetroTabPage1.BaseColor = Color.FromArgb(239, 246, 253)
+            MetroTabPage2.BaseColor = Color.FromArgb(239, 246, 253)
+            MetroTabPage3.BaseColor = Color.FromArgb(239, 246, 253)
         End Sub
 
         Private Sub ToolStripMenuItem1_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ToolStripMenuItem2.Click
 
             If dgvDia.RowCount > 0 Or dgvNoche.RowCount > 0 Then
-                If KryptonMessageBox.Show("Se detectó datos en las tabla DÍA / NOCHE, si no ha guardado los cambios se volverá a cargar la información almacenada anteriormente para la fecha correspondiente. Desea continuar?", "Mensaje del sistema", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) <> DialogResult.Yes Then Return
+                If KryptonMessageBox.Show("Se detectó datos en las tabla DÍA / NOCHE" & vbNewLine & "Si no ha guardado los cambios se volverá a cargar la información almacenada anteriormente para la fecha correspondiente." & vbNewLine & "Desea continuar?", "Mensaje del sistema", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) <> DialogResult.Yes Then Return
             End If
 
             Try
@@ -146,7 +151,7 @@ Namespace FORMULARIOS.OPERACIONES
 
                 Dim prog = _objProgramacionOps.SeleccionarProgramacionByFecha(_tipoCon, fechaDesde)
                 If prog.Rows.Count = 0 Then
-                    KryptonMessageBox.Show("NO HAY REGISTRO DE LA PROGRAMACIÓN CORRESPONDIENTE A LA FECHA SELECCIONADA!", "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
+                    KryptonMessageBox.Show("No hay registro de la programación correspondiente a la fecha seleccionada!", "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                     Return
                 End If
 
@@ -458,7 +463,7 @@ Namespace FORMULARIOS.OPERACIONES
                     ToolStripMenuItem6.Enabled = False
                     dgvDia.ReadOnly = True
                     dgvNoche.ReadOnly = True
-                    KryptonMessageBox.Show("HAN PASADO MÁS DE 48H, NO SE PUEDE MODIFICAR EL REPORTE CORRESPONDIENTE!!", "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
+                    KryptonMessageBox.Show("Han pasado más de 48h, no se puede modificar el reporte correspondiente!!", "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                 Else
                     btnAgregar.Enabled = True
                     btnCambiar.Enabled = True
@@ -473,7 +478,7 @@ Namespace FORMULARIOS.OPERACIONES
             Catch ex As Exception
                 dgvDia.Rows.Clear()
                 dgvNoche.Rows.Clear()
-                Dim m = If(ex.Message.Contains("fila en la posición 0"), "HUBO UN PROBLEMA AL CARGAR LA PROGRAMACIÓN CORRESPONDIENTE A LA FECHA SELECCIONADA!", ex.Message)
+                Dim m = If(ex.Message.Contains("fila en la posición 0"), "Hubo un problema al cargar la programación correspondiente a la fecha seleccionada!", ex.Message)
                 'MsgBox(m, MsgBoxStyle.Exclamation, "Mensaje de validación")
                 KryptonMessageBox.Show(m, "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
             End Try
@@ -526,7 +531,7 @@ Namespace FORMULARIOS.OPERACIONES
             _hoy = ValidationForms.FechaActual(_tipoCon)
 
             If Not Admin And _hoy > DateTimePicker5.Value.AddDays(2).AddHours(2) Then
-                KryptonMessageBox.Show("HAN PASADO MÁS DE 48H, NO SE PUEDE MODIFICAR EL REPORTE CORRESPONDIENTE!!", "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
+                KryptonMessageBox.Show("Han pasado más de 48h, no se puede modificar el reporte correspondiente!!", "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                 Return
             End If
 
@@ -1838,7 +1843,7 @@ Namespace FORMULARIOS.OPERACIONES
 
             If Not Admin And _hoy > DateTimePicker4.Value.AddDays(2).AddHours(2) Then
                 'If Not _modificar Then
-                KryptonMessageBox.Show("HAN PASADO MÁS DE 48H, NO SE PUEDE MODIFICAR EL REPORTE CORRESPONDIENTE!!", "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
+                KryptonMessageBox.Show("Han pasado más de 48h, no se puede modificar el reporte correspondiente!!", "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                 Return
             End If
 
@@ -1961,7 +1966,7 @@ Namespace FORMULARIOS.OPERACIONES
             _hoy = ValidationForms.FechaActual(_tipoCon)
 
             If Not Admin And _hoy > DateTimePicker5.Value.AddDays(2).AddHours(2) Then
-                MessageBox.Show("HAN PASADO MÁS DE 48H, NO SE PUEDE MODIFICAR EL REPORTE CORRESPONDIENTE!!", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                MessageBox.Show("Han pasado más de 48h, no se puede modificar el reporte correspondiente!!", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
                 Return
             End If
 
@@ -2026,7 +2031,7 @@ Namespace FORMULARIOS.OPERACIONES
             _hoy = ValidationForms.FechaActual(_tipoCon)
 
             If Not Admin And _hoy > DateTimePicker5.Value.AddDays(2).AddHours(2) Then
-                KryptonMessageBox.Show("HAN PASADO MÁS DE 48H, NO SE PUEDE MODIFICAR EL REPORTE CORRESPONDIENTE!!", "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
+                KryptonMessageBox.Show("Han pasado más de 48h, no se puede modificar el reporte correspondiente!!", "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                 Return
             End If
 
@@ -2329,7 +2334,7 @@ Namespace FORMULARIOS.OPERACIONES
             If Not Admin And _hoy > DateTimePicker4.Value.AddDays(2).AddHours(2) Then
                 'If Not _modificar Then
                 'MessageBox.Show("HAN PASADO MÁS DE 48H, NO SE PUEDE MODIFICAR EL REPORTE CORRESPONDIENTE!!", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
-                KryptonMessageBox.Show("HAN PASADO MÁS DE 48H, NO SE PUEDE MODIFICAR EL REPORTE CORRESPONDIENTE!!", "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
+                KryptonMessageBox.Show("Han pasado más de 48h, no se puede modificar el reporte correspondiente!!", "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
                 Return
             End If
 

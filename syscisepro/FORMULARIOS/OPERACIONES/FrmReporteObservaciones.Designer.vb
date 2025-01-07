@@ -23,98 +23,60 @@
         'No lo modifique con el editor de código.
         <System.Diagnostics.DebuggerStepThrough()> _
         Private Sub InitializeComponent()
-            Me.GroupBox4 = New System.Windows.Forms.GroupBox()
             Me.Label3 = New System.Windows.Forms.Label()
-            Me.Label16 = New System.Windows.Forms.Label()
             Me.DateTimePicker5 = New System.Windows.Forms.DateTimePicker()
-            Me.Label1 = New System.Windows.Forms.Label()
             Me.txtObservaciones = New System.Windows.Forms.TextBox()
-            Me.Label2 = New System.Windows.Forms.Label()
             Me.Button2 = New System.Windows.Forms.Button()
             Me.Button1 = New System.Windows.Forms.Button()
-            Me.Label4 = New System.Windows.Forms.Label()
             Me.lblCantRep = New System.Windows.Forms.Label()
-            Me.GroupBox4.SuspendLayout()
+            Me.KryptonLabel1 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel2 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel3 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel4 = New Krypton.Toolkit.KryptonLabel()
             Me.SuspendLayout()
-            '
-            'GroupBox4
-            '
-            Me.GroupBox4.BackColor = System.Drawing.Color.White
-            Me.GroupBox4.Controls.Add(Me.Label3)
-            Me.GroupBox4.Controls.Add(Me.Label16)
-            Me.GroupBox4.Controls.Add(Me.DateTimePicker5)
-            Me.GroupBox4.Controls.Add(Me.Label1)
-            Me.GroupBox4.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.GroupBox4.Location = New System.Drawing.Point(-2, 0)
-            Me.GroupBox4.Name = "GroupBox4"
-            Me.GroupBox4.Size = New System.Drawing.Size(619, 44)
-            Me.GroupBox4.TabIndex = 202
-            Me.GroupBox4.TabStop = False
-            Me.GroupBox4.Text = "OBSERVACIONES DEL PUESTO / VIGILANTE"
             '
             'Label3
             '
             Me.Label3.AutoSize = True
-            Me.Label3.Location = New System.Drawing.Point(86, 21)
+            Me.Label3.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
+            Me.Label3.Location = New System.Drawing.Point(63, 28)
             Me.Label3.Name = "Label3"
-            Me.Label3.Size = New System.Drawing.Size(0, 13)
+            Me.Label3.Size = New System.Drawing.Size(13, 13)
             Me.Label3.TabIndex = 207
-            '
-            'Label16
-            '
-            Me.Label16.AutoSize = True
-            Me.Label16.Location = New System.Drawing.Point(13, 21)
-            Me.Label16.Name = "Label16"
-            Me.Label16.Size = New System.Drawing.Size(65, 13)
-            Me.Label16.TabIndex = 205
-            Me.Label16.Text = "VIGILANTE:"
+            Me.Label3.Text = "0"
             '
             'DateTimePicker5
             '
             Me.DateTimePicker5.Enabled = False
-            Me.DateTimePicker5.Location = New System.Drawing.Point(361, 15)
+            Me.DateTimePicker5.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.DateTimePicker5.Location = New System.Drawing.Point(350, 24)
             Me.DateTimePicker5.Name = "DateTimePicker5"
-            Me.DateTimePicker5.Size = New System.Drawing.Size(248, 21)
+            Me.DateTimePicker5.Size = New System.Drawing.Size(189, 21)
             Me.DateTimePicker5.TabIndex = 204
-            '
-            'Label1
-            '
-            Me.Label1.AutoSize = True
-            Me.Label1.Location = New System.Drawing.Point(320, 17)
-            Me.Label1.Name = "Label1"
-            Me.Label1.Size = New System.Drawing.Size(44, 13)
-            Me.Label1.TabIndex = 206
-            Me.Label1.Text = "FECHA:"
             '
             'txtObservaciones
             '
             Me.txtObservaciones.BackColor = System.Drawing.Color.White
             Me.txtObservaciones.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtObservaciones.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtObservaciones.Location = New System.Drawing.Point(-1, 73)
+            Me.txtObservaciones.Location = New System.Drawing.Point(-1, 77)
             Me.txtObservaciones.Multiline = True
             Me.txtObservaciones.Name = "txtObservaciones"
-            Me.txtObservaciones.Size = New System.Drawing.Size(619, 103)
+            Me.txtObservaciones.Size = New System.Drawing.Size(540, 95)
             Me.txtObservaciones.TabIndex = 203
-            '
-            'Label2
-            '
-            Me.Label2.AutoSize = True
-            Me.Label2.Location = New System.Drawing.Point(-1, 48)
-            Me.Label2.Name = "Label2"
-            Me.Label2.Size = New System.Drawing.Size(101, 13)
-            Me.Label2.TabIndex = 206
-            Me.Label2.Text = "OBSERVACIONES:"
             '
             'Button2
             '
             Me.Button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(75, Byte), Integer), CType(CType(166, Byte), Integer), CType(CType(79, Byte), Integer))
             Me.Button2.DialogResult = System.Windows.Forms.DialogResult.OK
+            Me.Button2.FlatAppearance.BorderSize = 0
+            Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Button2.ForeColor = System.Drawing.Color.White
-            Me.Button2.Location = New System.Drawing.Point(533, 182)
+            Me.Button2.Location = New System.Drawing.Point(439, 178)
             Me.Button2.Name = "Button2"
-            Me.Button2.Size = New System.Drawing.Size(75, 23)
+            Me.Button2.Size = New System.Drawing.Size(89, 34)
             Me.Button2.TabIndex = 208
             Me.Button2.Text = "ACEPTAR"
             Me.Button2.UseVisualStyleBackColor = False
@@ -123,45 +85,76 @@
             '
             Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(58, Byte), Integer))
             Me.Button1.DialogResult = System.Windows.Forms.DialogResult.Cancel
+            Me.Button1.FlatAppearance.BorderSize = 0
+            Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+            Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Button1.ForeColor = System.Drawing.Color.White
-            Me.Button1.Location = New System.Drawing.Point(452, 182)
+            Me.Button1.Location = New System.Drawing.Point(341, 178)
             Me.Button1.Name = "Button1"
-            Me.Button1.Size = New System.Drawing.Size(75, 23)
+            Me.Button1.Size = New System.Drawing.Size(89, 34)
             Me.Button1.TabIndex = 207
             Me.Button1.Text = "CANCELAR"
             Me.Button1.UseVisualStyleBackColor = False
             '
-            'Label4
-            '
-            Me.Label4.AutoSize = True
-            Me.Label4.Location = New System.Drawing.Point(442, 47)
-            Me.Label4.Name = "Label4"
-            Me.Label4.Size = New System.Drawing.Size(154, 13)
-            Me.Label4.TabIndex = 209
-            Me.Label4.Text = "RADIOS NO CONTESTADOS:"
-            '
             'lblCantRep
             '
             Me.lblCantRep.AutoSize = True
-            Me.lblCantRep.Location = New System.Drawing.Point(596, 47)
+            Me.lblCantRep.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.lblCantRep.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
+            Me.lblCantRep.Location = New System.Drawing.Point(505, 54)
             Me.lblCantRep.Name = "lblCantRep"
             Me.lblCantRep.Size = New System.Drawing.Size(13, 13)
             Me.lblCantRep.TabIndex = 210
             Me.lblCantRep.Text = "0"
             '
+            'KryptonLabel1
+            '
+            Me.KryptonLabel1.Location = New System.Drawing.Point(-1, 51)
+            Me.KryptonLabel1.Name = "KryptonLabel1"
+            Me.KryptonLabel1.Size = New System.Drawing.Size(90, 20)
+            Me.KryptonLabel1.TabIndex = 211
+            Me.KryptonLabel1.Values.Text = "Observaciones"
+            '
+            'KryptonLabel2
+            '
+            Me.KryptonLabel2.Location = New System.Drawing.Point(363, 51)
+            Me.KryptonLabel2.Name = "KryptonLabel2"
+            Me.KryptonLabel2.Size = New System.Drawing.Size(133, 20)
+            Me.KryptonLabel2.TabIndex = 212
+            Me.KryptonLabel2.Values.Text = "Radios No Contestado"
+            '
+            'KryptonLabel3
+            '
+            Me.KryptonLabel3.Location = New System.Drawing.Point(-1, 24)
+            Me.KryptonLabel3.Name = "KryptonLabel3"
+            Me.KryptonLabel3.Size = New System.Drawing.Size(58, 20)
+            Me.KryptonLabel3.TabIndex = 213
+            Me.KryptonLabel3.Values.Text = "Vigilante"
+            '
+            'KryptonLabel4
+            '
+            Me.KryptonLabel4.Location = New System.Drawing.Point(302, 24)
+            Me.KryptonLabel4.Name = "KryptonLabel4"
+            Me.KryptonLabel4.Size = New System.Drawing.Size(42, 20)
+            Me.KryptonLabel4.TabIndex = 214
+            Me.KryptonLabel4.Values.Text = "Fecha"
+            '
             'FrmReporteObservaciones
             '
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-            Me.BackColor = System.Drawing.Color.White
-            Me.ClientSize = New System.Drawing.Size(616, 213)
+            Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(185, Byte), Integer), CType(CType(206, Byte), Integer), CType(CType(230, Byte), Integer))
+            Me.ClientSize = New System.Drawing.Size(540, 213)
+            Me.Controls.Add(Me.KryptonLabel4)
+            Me.Controls.Add(Me.DateTimePicker5)
+            Me.Controls.Add(Me.Label3)
+            Me.Controls.Add(Me.KryptonLabel3)
+            Me.Controls.Add(Me.KryptonLabel2)
+            Me.Controls.Add(Me.KryptonLabel1)
             Me.Controls.Add(Me.lblCantRep)
-            Me.Controls.Add(Me.Label4)
             Me.Controls.Add(Me.Button2)
             Me.Controls.Add(Me.Button1)
-            Me.Controls.Add(Me.Label2)
             Me.Controls.Add(Me.txtObservaciones)
-            Me.Controls.Add(Me.GroupBox4)
             Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
             Me.Name = "FrmReporteObservaciones"
             Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
@@ -170,22 +163,19 @@
             Or Krypton.Toolkit.PaletteDrawBorders.Right), Krypton.Toolkit.PaletteDrawBorders)
             Me.StateActive.Border.Rounding = 5.0!
             Me.Text = "OBSERVACIONES POR VIGILANTE"
-            Me.GroupBox4.ResumeLayout(False)
-            Me.GroupBox4.PerformLayout()
             Me.ResumeLayout(False)
             Me.PerformLayout()
 
         End Sub
-        Friend WithEvents GroupBox4 As System.Windows.Forms.GroupBox
         Friend WithEvents DateTimePicker5 As System.Windows.Forms.DateTimePicker
-        Friend WithEvents Label16 As System.Windows.Forms.Label
-        Friend WithEvents Label1 As System.Windows.Forms.Label
         Friend WithEvents txtObservaciones As System.Windows.Forms.TextBox
-        Friend WithEvents Label2 As System.Windows.Forms.Label
         Friend WithEvents Button2 As System.Windows.Forms.Button
         Friend WithEvents Button1 As System.Windows.Forms.Button
         Friend WithEvents Label3 As System.Windows.Forms.Label
-        Friend WithEvents Label4 As System.Windows.Forms.Label
         Friend WithEvents lblCantRep As System.Windows.Forms.Label
+        Friend WithEvents KryptonLabel1 As Krypton.Toolkit.KryptonLabel
+        Friend WithEvents KryptonLabel2 As Krypton.Toolkit.KryptonLabel
+        Friend WithEvents KryptonLabel3 As Krypton.Toolkit.KryptonLabel
+        Friend WithEvents KryptonLabel4 As Krypton.Toolkit.KryptonLabel
     End Class
 End Namespace

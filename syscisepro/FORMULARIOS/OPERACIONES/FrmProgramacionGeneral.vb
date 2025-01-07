@@ -4,6 +4,7 @@ Imports ClassLibraryCisepro.OPERACIONES
 Imports ClassLibraryCisepro.ProcesosSql
 Imports syscisepro.DATOS
 Imports syscisepro.FORMULARIOS.INVENTARIOS.PROCESO
+Imports Krypton.Toolkit
 
 Namespace FORMULARIOS.OPERACIONES
     ''' <summary>
@@ -53,20 +54,17 @@ Namespace FORMULARIOS.OPERACIONES
                     Icon = My.Resources.logo_a
                     MenuStrip1.ForeColor = Color.White
                     'MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorAsenava
-                    Label24.ForeColor = Color.White
-                    Label24.BackColor = My.MySettingsProperty.Settings.ColorAsenava
+
                 Case TipoConexion.Seportpac
                     Icon = My.Resources.logo_s
                     'MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
                     MenuStrip1.ForeColor = Color.White
-                    Label24.ForeColor = Color.White
-                    Label24.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
+
                 Case Else
                     Icon = My.Resources.logo_c
                     'MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorCisepro
                     MenuStrip1.ForeColor = Color.White
-                    Label24.ForeColor = Color.White
-                    Label24.BackColor = My.MySettingsProperty.Settings.ColorCisepro
+
             End Select
 
             _hoy = ValidationForms.FechaActual(_tipoCon)
@@ -198,22 +196,27 @@ Namespace FORMULARIOS.OPERACIONES
             Try
                  
                 If ListView1.Items.Count = 0 Then
-                    MessageBox.Show("Debe agregar al menos un registro para guardar la programción!", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                    'MessageBox.Show("Debe agregar al menos un registro para guardar la programción!", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                    KryptonMessageBox.Show("Debe agregar al menos un registro para guardar la programción!", "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Warning)
                     Return
                 End If
 
                 If DateTimePicker2.Value <= DateTimePicker1.Value Then
-                    MessageBox.Show("La fecha de finalización debe ser mayor a la fecha de inicio!", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                    'MessageBox.Show("La fecha de finalización debe ser mayor a la fecha de inicio!", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                    KryptonMessageBox.Show("La fecha de finalización debe ser mayor a la fecha de inicio!", "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Warning)
                     Return
                 End If
 
-                If MessageBox.Show("Está seguro que desea guardar los cambios realizados?", "Mensaje del sistema", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.No Then
+                'If MessageBox.Show("Está seguro que desea guardar los cambios realizados?", "Mensaje del sistema", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.No Then
+                If KryptonMessageBox.Show("Está seguro que desea guardar los cambios realizados?", "Mensaje del sistema", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) = DialogResult.No Then
+
                     Return
                 End If
-                 
+
                 If _estadoAccion = 1 Then
                     If _objProgramacionOps.ExisteProgramacionMesAnio(_tipoCon, dtpMes.Value.Month, dtpMes.Value.Year) Then
-                        MessageBox.Show("Ya existe una programación para el mes/año seleccionado!", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                        'MessageBox.Show("Ya existe una programación para el mes/año seleccionado!", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                        KryptonMessageBox.Show("Ya existe una programación para el mes/año seleccionado!", "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Warning)
                         Return
                     End If
 
@@ -300,12 +303,17 @@ Namespace FORMULARIOS.OPERACIONES
                     btnEditar.Enabled = True
                     DateTimePicker1.Enabled = False
                     DateTimePicker2.Enabled = False
-
+                    KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
+                Else
+                    KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+                    Return
                 End If
-                MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
+
+                'MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
 
             Catch ex As Exception
-                MsgBox("ERROR AL GUARDAR PROGRAMACIÓN DE TRABAJO: " & ex.Message, MsgBoxStyle.Exclamation, "Mensaje de validación")
+                'MsgBox("ERROR AL GUARDAR PROGRAMACIÓN DE TRABAJO: " & ex.Message, MsgBoxStyle.Exclamation, "Mensaje de validación")
+                KryptonMessageBox.Show("Error al guardar programación de trabajo: " & ex.Message, "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
 
@@ -493,7 +501,7 @@ Namespace FORMULARIOS.OPERACIONES
             End Try
         End Sub
 
-        Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnReporte.Click
+        Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As EventArgs)
             Try
                 If ListView1.Items.Count = 0 Then
                     MessageBox.Show("Debe seleccionar una programación para generar reporte!", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Warning)
@@ -541,7 +549,8 @@ Namespace FORMULARIOS.OPERACIONES
                 crvSitios.Zoom(75)
                 crvSitios.Refresh()
             Catch ex As Exception
-                MsgBox("ERROR AL GENERAR REPORTE: " & ex.Message, MsgBoxStyle.Exclamation, "Mensaje de validación")
+                'MsgBox("ERROR AL GENERAR REPORTE: " & ex.Message, MsgBoxStyle.Exclamation, "Mensaje de validación")
+                KryptonMessageBox.Show("Error al generar reporte: " & ex.Message, "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
 
@@ -593,7 +602,8 @@ Namespace FORMULARIOS.OPERACIONES
                     btnNoSitiosProgramacion.Enabled = True
                 End If
             Catch ex As Exception
-                MsgBox("ERROR AL CARGAR PROGRAMACIÓN SELECCIONADA: " & ex.Message, MsgBoxStyle.Exclamation, "Mensaje de validación")
+                'MsgBox("ERROR AL CARGAR PROGRAMACIÓN SELECCIONADA: " & ex.Message, MsgBoxStyle.Exclamation, "Mensaje de validación")
+                KryptonMessageBox.Show("Error al cargar programación seleccionada: " & ex.Message, "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
 
@@ -866,11 +876,13 @@ Namespace FORMULARIOS.OPERACIONES
             Dim ulm = _objProgramacionOps.BuscarMesAnioUltimaProgramacion(_tipoCon)
             If ulm.Rows.Count = 0 Then Return
             If String.IsNullOrEmpty(ulm.Rows(0)(0)) Then Return
-            If MessageBox.Show("Desea cargar la programación del mes anterior (" & ValidationForms.Mes(ulm.Rows(0)(1)) & "-" & ulm.Rows(0)(2) & ")?", "Mensaje del sistema", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> DialogResult.Yes Then Return
+            'If MessageBox.Show("Desea cargar la programación del mes anterior (" & ValidationForms.Mes(ulm.Rows(0)(1)) & "-" & ulm.Rows(0)(2) & ")?", "Mensaje del sistema", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> DialogResult.Yes Then Return
+            If KryptonMessageBox.Show("Desea cargar la programación del mes anterior (" & ValidationForms.Mes(ulm.Rows(0)(1)) & "-" & ulm.Rows(0)(2) & ")?", "Mensaje del sistema", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) <> DialogResult.Yes Then Return
 
             Dim pro = _objProgramacionOps.SeleccionarProgramacionById(_tipoCon, ulm.Rows(0)(0))
             If pro Is Nothing Or pro.Rows.Count = 0 Then
-                MessageBox.Show("Los datos de la programación del mes anterior (" & ValidationForms.Mes(ulm.Rows(0)(1)) & "-" & ulm.Rows(0)(2) & " no han podido ser cargados!!", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                'MessageBox.Show("Los datos de la programación del mes anterior (" & ValidationForms.Mes(ulm.Rows(0)(1)) & "-" & ulm.Rows(0)(2) & " no han podido ser cargados!!", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                KryptonMessageBox.Show("Los datos de la programación del mes anterior (" & ValidationForms.Mes(ulm.Rows(0)(1)) & "-" & ulm.Rows(0)(2) & " no han podido ser cargados!!", "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Warning)
                 Return
             End If
 
@@ -967,5 +979,20 @@ Namespace FORMULARIOS.OPERACIONES
             Next
         End Sub
 
+        Private Sub KryptonGroupBox1_Panel_Paint(sender As Object, e As PaintEventArgs) Handles KryptonGroupBox1.Panel.Paint
+
+        End Sub
+
+        Private Sub KryptonGroupBox1_Paint(sender As Object, e As PaintEventArgs) Handles KryptonGroupBox1.Paint
+
+        End Sub
+
+        Private Sub KryptonLabel4_Click(sender As Object, e As EventArgs) Handles KryptonLabel4.Click
+
+        End Sub
+
+        Private Sub KryptonLabel3_Click(sender As Object, e As EventArgs) Handles KryptonLabel3.Click
+
+        End Sub
     End Class
 End Namespace

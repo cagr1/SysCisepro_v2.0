@@ -66,13 +66,13 @@
             Me.dgvCategoriaItem = New System.Windows.Forms.DataGridView()
             Me.ttPublico = New System.Windows.Forms.ToolTip(Me.components)
             Me.KryptonGroupBox1 = New Krypton.Toolkit.KryptonGroupBox()
-            Me.KryptonLabel1 = New Krypton.Toolkit.KryptonLabel()
             Me.KryptonLabel2 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel1 = New Krypton.Toolkit.KryptonLabel()
             Me.KryptonGroupBox2 = New Krypton.Toolkit.KryptonGroupBox()
-            Me.KryptonLabel3 = New Krypton.Toolkit.KryptonLabel()
-            Me.KryptonLabel4 = New Krypton.Toolkit.KryptonLabel()
-            Me.KryptonLabel5 = New Krypton.Toolkit.KryptonLabel()
             Me.KryptonLabel6 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel5 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel4 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel3 = New Krypton.Toolkit.KryptonLabel()
             Me.KryptonGroupBox3 = New Krypton.Toolkit.KryptonGroupBox()
             Me.KryptonLabel7 = New Krypton.Toolkit.KryptonLabel()
             Me.KryptonLabel8 = New Krypton.Toolkit.KryptonLabel()
@@ -146,8 +146,7 @@
             Me.btnExportarSubGrupo.Image = Global.syscisepro.My.Resources.Resources.icons8_excel_48
             Me.btnExportarSubGrupo.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnExportarSubGrupo.Name = "btnExportarSubGrupo"
-            Me.btnExportarSubGrupo.Size = New System.Drawing.Size(99, 28)
-            Me.btnExportarSubGrupo.Text = "EXPORTAR"
+            Me.btnExportarSubGrupo.Size = New System.Drawing.Size(36, 28)
             '
             'txtCodigoGrupo
             '
@@ -289,8 +288,7 @@
             Me.btnExportarGrupos.Image = Global.syscisepro.My.Resources.Resources.icons8_excel_48
             Me.btnExportarGrupos.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnExportarGrupos.Name = "btnExportarGrupos"
-            Me.btnExportarGrupos.Size = New System.Drawing.Size(99, 28)
-            Me.btnExportarGrupos.Text = "EXPORTAR"
+            Me.btnExportarGrupos.Size = New System.Drawing.Size(36, 28)
             '
             'txtCodigoCategoría
             '
@@ -427,8 +425,7 @@
             Me.btnExportar.Image = Global.syscisepro.My.Resources.Resources.icons8_excel_48
             Me.btnExportar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.btnExportar.Name = "btnExportar"
-            Me.btnExportar.Size = New System.Drawing.Size(99, 28)
-            Me.btnExportar.Text = "EXPORTAR"
+            Me.btnExportar.Size = New System.Drawing.Size(36, 28)
             '
             'txtIdCategoría
             '
@@ -517,14 +514,6 @@
             Me.KryptonGroupBox1.TabIndex = 2
             Me.KryptonGroupBox1.Values.Heading = "Categoria"
             '
-            'KryptonLabel1
-            '
-            Me.KryptonLabel1.Location = New System.Drawing.Point(6, 35)
-            Me.KryptonLabel1.Name = "KryptonLabel1"
-            Me.KryptonLabel1.Size = New System.Drawing.Size(50, 20)
-            Me.KryptonLabel1.TabIndex = 181
-            Me.KryptonLabel1.Values.Text = "Codigo"
-            '
             'KryptonLabel2
             '
             Me.KryptonLabel2.Location = New System.Drawing.Point(134, 36)
@@ -532,6 +521,14 @@
             Me.KryptonLabel2.Size = New System.Drawing.Size(56, 20)
             Me.KryptonLabel2.TabIndex = 182
             Me.KryptonLabel2.Values.Text = "Nombre"
+            '
+            'KryptonLabel1
+            '
+            Me.KryptonLabel1.Location = New System.Drawing.Point(6, 35)
+            Me.KryptonLabel1.Name = "KryptonLabel1"
+            Me.KryptonLabel1.Size = New System.Drawing.Size(50, 20)
+            Me.KryptonLabel1.TabIndex = 181
+            Me.KryptonLabel1.Values.Text = "Codigo"
             '
             'KryptonGroupBox2
             '
@@ -557,21 +554,13 @@
             Me.KryptonGroupBox2.TabIndex = 3
             Me.KryptonGroupBox2.Values.Heading = "Grupo"
             '
-            'KryptonLabel3
+            'KryptonLabel6
             '
-            Me.KryptonLabel3.Location = New System.Drawing.Point(8, 37)
-            Me.KryptonLabel3.Name = "KryptonLabel3"
-            Me.KryptonLabel3.Size = New System.Drawing.Size(21, 20)
-            Me.KryptonLabel3.TabIndex = 183
-            Me.KryptonLabel3.Values.Text = "Id"
-            '
-            'KryptonLabel4
-            '
-            Me.KryptonLabel4.Location = New System.Drawing.Point(116, 34)
-            Me.KryptonLabel4.Name = "KryptonLabel4"
-            Me.KryptonLabel4.Size = New System.Drawing.Size(50, 20)
-            Me.KryptonLabel4.TabIndex = 184
-            Me.KryptonLabel4.Values.Text = "Codigo"
+            Me.KryptonLabel6.Location = New System.Drawing.Point(8, 63)
+            Me.KryptonLabel6.Name = "KryptonLabel6"
+            Me.KryptonLabel6.Size = New System.Drawing.Size(56, 20)
+            Me.KryptonLabel6.TabIndex = 186
+            Me.KryptonLabel6.Values.Text = "Nombre"
             '
             'KryptonLabel5
             '
@@ -581,13 +570,21 @@
             Me.KryptonLabel5.TabIndex = 185
             Me.KryptonLabel5.Values.Text = "Categoria"
             '
-            'KryptonLabel6
+            'KryptonLabel4
             '
-            Me.KryptonLabel6.Location = New System.Drawing.Point(8, 63)
-            Me.KryptonLabel6.Name = "KryptonLabel6"
-            Me.KryptonLabel6.Size = New System.Drawing.Size(56, 20)
-            Me.KryptonLabel6.TabIndex = 186
-            Me.KryptonLabel6.Values.Text = "Nombre"
+            Me.KryptonLabel4.Location = New System.Drawing.Point(116, 34)
+            Me.KryptonLabel4.Name = "KryptonLabel4"
+            Me.KryptonLabel4.Size = New System.Drawing.Size(50, 20)
+            Me.KryptonLabel4.TabIndex = 184
+            Me.KryptonLabel4.Values.Text = "Codigo"
+            '
+            'KryptonLabel3
+            '
+            Me.KryptonLabel3.Location = New System.Drawing.Point(8, 37)
+            Me.KryptonLabel3.Name = "KryptonLabel3"
+            Me.KryptonLabel3.Size = New System.Drawing.Size(21, 20)
+            Me.KryptonLabel3.TabIndex = 183
+            Me.KryptonLabel3.Values.Text = "Id"
             '
             'KryptonGroupBox3
             '

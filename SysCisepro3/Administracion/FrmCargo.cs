@@ -150,7 +150,9 @@ namespace SysCisepro3.Administracion
             catch (Exception ex)
             {
                 dgGrupoOcupacional.DataSource = null;
-                MessageBox.Show(@"Error al cargar grupos: " + ex.Message, "Mensaje del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //MessageBox.Show(@"Error al cargar grupos: " + ex.Message, "Mensaje del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                KryptonMessageBox.Show("Error al cargar grupos: " + ex.Message, "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+                return;
             }
         }
 
@@ -175,7 +177,9 @@ namespace SysCisepro3.Administracion
             catch (Exception ex)
             {
                 dgSeries.DataSource = null;
-                MessageBox.Show(@"Error al cargar series: " + ex.Message, "Mensaje del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //MessageBox.Show(@"Error al cargar series: " + ex.Message, "Mensaje del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                KryptonMessageBox.Show("Error al cargar series: " + ex.Message, "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+                return;
             }
         }
 
@@ -202,7 +206,9 @@ namespace SysCisepro3.Administracion
             catch (Exception ex)
             {
                 dgCargo.DataSource = null;
-                MessageBox.Show(@"Error al cargar series: " + ex.Message, "Mensaje del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //MessageBox.Show(@"Error al cargar series: " + ex.Message, "Mensaje del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                KryptonMessageBox.Show("Error al cargar series: " + ex.Message, "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+                return;
             }
         }
 
@@ -332,13 +338,16 @@ namespace SysCisepro3.Administracion
         {
             if (!ValidacionParametros())
             {
-                MessageBox.Show(@"Debe ingresar todos los datos para guardar!", "Mensaje del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //MessageBox.Show(@"Debe ingresar todos los datos para guardar!", "Mensaje del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                KryptonMessageBox.Show("Debe ingresar todos los datos para guardar!", "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
                 return;
             }
 
-            if (MessageBox.Show(@"Desea guardar los cambios realizados?",
-                    "Mensaje del Sistema", MessageBoxButtons.YesNo, MessageBoxIcon.Question) !=
-                DialogResult.Yes) return;
+            //if (MessageBox.Show(@"Desea guardar los cambios realizados?",
+            //        "Mensaje del Sistema", MessageBoxButtons.YesNo, MessageBoxIcon.Question) !=
+            //    DialogResult.Yes) return;
+
+            if (KryptonMessageBox.Show("Desea guardar los cambios realizados?", "Mensaje del Sistema", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) != DialogResult.Yes) return;
 
             _sqlCommands.Clear();
 
@@ -357,8 +366,14 @@ namespace SysCisepro3.Administracion
                 DeshabilitarRegistro();
                 CargarGrupoOcupacional();
                 HabilitarBotones(true, true, false, false);
+                KryptonMessageBox.Show((string)res[1], "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
             }
-            MessageBox.Show((string)res[1], "Mensaje del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            else
+            {
+                KryptonMessageBox.Show((string)res[1], "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+                return;
+            }
+            //MessageBox.Show((string)res[1], "Mensaje del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
@@ -387,9 +402,11 @@ namespace SysCisepro3.Administracion
                 _frmReportes.crystalReportViewer1.ReportSource = _rptGrupoOcupacional;
                 _frmReportes.ShowDialog();
             }
-            catch
+
+            catch (Exception ex)
             {
-                MessageBox.Show(@"Error al generar reporte!", "Mensaje del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //MessageBox.Show(@"Error al generar reporte!", "Mensaje del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                KryptonMessageBox.Show("Error al generar reporte!" + ex.ToString() , "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
             }
         }
 
@@ -409,13 +426,15 @@ namespace SysCisepro3.Administracion
         {
             if (!ValidacionParametrosSerie())
             {
-                MessageBox.Show(@"Debe ingresar todos los datos para guardar!", "Mensaje del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //MessageBox.Show(@"Debe ingresar todos los datos para guardar!", "Mensaje del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                KryptonMessageBox.Show("Debe ingresar todos los datos para guardar!", "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
                 return;
             }
 
-            if (MessageBox.Show(@"Desea guardar los cambios realizados?",
-                    "Mensaje del Sistema", MessageBoxButtons.YesNo, MessageBoxIcon.Question) !=
-                DialogResult.Yes) return;
+            //if (MessageBox.Show(@"Desea guardar los cambios realizados?",
+            //        "Mensaje del Sistema", MessageBoxButtons.YesNo, MessageBoxIcon.Question) !=
+            //    DialogResult.Yes) return;
+            if (KryptonMessageBox.Show("Desea guardar los cambios realizados?", "Mensaje del Sistema", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) != DialogResult.Yes) return;
 
             _sqlCommands.Clear();
 
@@ -435,8 +454,15 @@ namespace SysCisepro3.Administracion
                 DeshabilitarRegistroSerie();
                 CargarSerieOcupacional();
                 HabilitarBotonesSerie(true, true, false, false);
+                KryptonMessageBox.Show((string)res[1], "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+
             }
-            MessageBox.Show((string)res[1], "Mensaje del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            else
+            {
+                KryptonMessageBox.Show((string)res[1], "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+                return;
+            }
+            //MessageBox.Show((string)res[1], "Mensaje del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void btnModificarSerie_Click(object sender, EventArgs e)
@@ -466,9 +492,10 @@ namespace SysCisepro3.Administracion
                 _frmReportes.crystalReportViewer1.ReportSource = _rptSerieOcupacional;
                 _frmReportes.ShowDialog();
             }
-            catch
+            catch (Exception ex)
             {
-                MessageBox.Show(@"Error al generar reporte!", "Mensaje del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //MessageBox.Show(@"Error al generar reporte! " + ex.Message.ToString(), "Mensaje del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                KryptonMessageBox.Show("Error al generar reporte!" + ex.ToString(), "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
             }
         }
 
@@ -487,13 +514,16 @@ namespace SysCisepro3.Administracion
         {
             if (!ValidacionParametrosCargo())
             {
-                MessageBox.Show(@"Debe ingresar todos los datos para guardar!", "Mensaje del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //MessageBox.Show(@"Debe ingresar todos los datos para guardar!", "Mensaje del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                KryptonMessageBox.Show("Debe ingresar todos los datos para guardar!", "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
                 return;
             }
 
-            if (MessageBox.Show(@"Desea guardar los cambios realizados?",
-                    "Mensaje del Sistema", MessageBoxButtons.YesNo, MessageBoxIcon.Question) !=
-                DialogResult.Yes) return;
+            //if (MessageBox.Show(@"Desea guardar los cambios realizados?",
+            //        "Mensaje del Sistema", MessageBoxButtons.YesNo, MessageBoxIcon.Question) !=
+            //    DialogResult.Yes) return;
+
+            if (KryptonMessageBox.Show("Desea guardar los cambios realizados?", "Mensaje del Sistema", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) != DialogResult.Yes) return;
 
             _sqlCommands.Clear();
 
@@ -519,8 +549,14 @@ namespace SysCisepro3.Administracion
                 DeshabilitarRegistroCargos();
                 CargarCargo();
                 HabilitarBotonesCargos(true, true, false, false);
+                KryptonMessageBox.Show((string)res[1], "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
             }
-            MessageBox.Show((string)res[1], "Mensaje del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            else
+            {
+                KryptonMessageBox.Show((string)res[1], "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+                return;
+            }
+            //MessageBox.Show((string)res[1], "Mensaje del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void btnModificarCargo_Click(object sender, EventArgs e)
@@ -542,9 +578,10 @@ namespace SysCisepro3.Administracion
                 _frmReportes.crystalReportViewer1.ReportSource = _rptCargoOcupacional;
                 _frmReportes.ShowDialog();
             }
-            catch
+            catch (Exception ex)
             {
-                MessageBox.Show(@"Error al generar reporte!", "Mensaje del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //MessageBox.Show(@"Error al generar reporte!", "Mensaje del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                KryptonMessageBox.Show("Error al generar reporte!" + ex.ToString(), "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
             }
         }
 

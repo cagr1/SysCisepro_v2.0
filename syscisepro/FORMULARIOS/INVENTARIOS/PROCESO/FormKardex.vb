@@ -259,6 +259,7 @@ Namespace FORMULARIOS.INVENTARIOS.PROCESO
                     txtRazón.Text = table.Rows(0).Item(9)
                     TextBox1.Text = table.Rows(0).Item(10) + " - " + table.Rows(0).Item(11)
                     txtRazón.BackColor = Color.White
+                    'txtSitio.Text = table.Rows(0).Item(12)
                 End If
             Catch ex As Exception
                 txtNumero.Clear()
@@ -271,9 +272,10 @@ Namespace FORMULARIOS.INVENTARIOS.PROCESO
                 txtConcepto.Clear()
                 txtCódigo.Clear()
                 TextBox1.Clear()
+                txtSitio.Clear()
 
                 If dgvDetalleKardex.CurrentRow.Index = 0 Then
-                    txtRazón.Text = "REGISTRO DE INICIALIZACIÓN DE KARDE DEL ARTÍCULO / ITEM"
+                    txtRazón.Text = "REGISTRO DE INICIALIZACIÓN DE KARDEX DEL ARTÍCULO / ITEM"
                     txtRazón.BackColor = Color.Aqua
                 Else
                     txtRazón.Text = "NO SE HA PODIDO CARGAR LOS DETALLES DEL COMPROBANTE"
@@ -365,7 +367,7 @@ Namespace FORMULARIOS.INVENTARIOS.PROCESO
                     If cantidad >= 10 And cantidad <= 30 Then
                         row.DefaultCellStyle.BackColor = Color.Orange
                         row.DefaultCellStyle.ForeColor = Color.Black
-                    ElseIf cantidad >= 1 And cantidad < 10 Then
+                    ElseIf cantidad >= 0 And cantidad < 10 Then
                         row.DefaultCellStyle.BackColor = Color.Red
                         row.DefaultCellStyle.ForeColor = Color.White
                     ElseIf cantidad < 0 Then
@@ -443,6 +445,7 @@ Namespace FORMULARIOS.INVENTARIOS.PROCESO
         Private Sub dgvDetalleKardex_SelectionChanged(sender As Object, e As EventArgs) Handles dgvDetalleKardex.SelectionChanged
             If dgvDetalleKardex.Rows.Count = 0 Or dgvDetalleKardex.CurrentRow Is Nothing Then Return
             CargarComprobantesIngresoEgreso(dgvDetalleKardex.CurrentRow.Cells(0).Value, dgvDetalleKardex.CurrentRow.Cells(15).Value)
+            txtSitio.Text = dgvDetalleKardex.CurrentRow.Cells(16).Value
         End Sub
     End Class
 End Namespace

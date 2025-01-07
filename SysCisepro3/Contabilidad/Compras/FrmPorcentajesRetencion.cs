@@ -333,9 +333,15 @@ namespace SysCisepro3.Contabilidad.Compras
                 _estado = 0;
 
                 btnBuscar_Click(null, null);
+                KryptonMessageBox.Show((string)res[1], "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+            }
+            else
+            {
+                KryptonMessageBox.Show((string)res[1], "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+                return;
             }
 
-            KryptonMessageBox.Show((string)res[1], "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+            //KryptonMessageBox.Show((string)res[1], "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
 
             //MessageBox.Show((string)res[1], "Mensaje del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
@@ -412,9 +418,15 @@ namespace SysCisepro3.Contabilidad.Compras
 
                 txtFiltro.Clear();
                 btnBuscar_Click(null, null);
+                KryptonMessageBox.Show((string)res[1], "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+            }
+            else
+            {
+                KryptonMessageBox.Show((string)res[1], "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+                return;
             }
             //MessageBox.Show((string)res[1], "Mensaje del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            KryptonMessageBox.Show((string)res[1], "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+            //KryptonMessageBox.Show((string)res[1], "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -542,10 +554,11 @@ namespace SysCisepro3.Contabilidad.Compras
                 btnModificar.Enabled = true;
                 btnCancelar.Enabled = false;
             }
-            catch
+            catch (Exception ex)
             {
                 //MessageBox.Show("ERROR AL CARGAR DATOS!", "Mensaje del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                KryptonMessageBox.Show("Error al cargar datos!", "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation);
+                KryptonMessageBox.Show("Error al cargar datos! " + ex.Message.ToString() , "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation);
+                return;
             }
         }
          

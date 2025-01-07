@@ -29,34 +29,25 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.Label1 = new System.Windows.Forms.Label();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Label3 = new System.Windows.Forms.Label();
             this.txtParametrobusqueda = new System.Windows.Forms.TextBox();
             this.Label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.kryptonLabel1 = new Krypton.Toolkit.KryptonLabel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // Label1
-            // 
-            this.Label1.AutoSize = true;
-            this.Label1.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label1.ForeColor = System.Drawing.Color.White;
-            this.Label1.Location = new System.Drawing.Point(4, 6);
-            this.Label1.Name = "Label1";
-            this.Label1.Size = new System.Drawing.Size(51, 14);
-            this.Label1.TabIndex = 18;
-            this.Label1.Text = "BUSCAR:";
             // 
             // Label3
             // 
             this.Label3.AutoSize = true;
-            this.Label3.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label3.ForeColor = System.Drawing.Color.White;
+            this.Label3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
             this.Label3.Location = new System.Drawing.Point(507, 6);
             this.Label3.Name = "Label3";
-            this.Label3.Size = new System.Drawing.Size(0, 14);
+            this.Label3.Size = new System.Drawing.Size(0, 15);
             this.Label3.TabIndex = 20;
             // 
             // txtParametrobusqueda
@@ -74,19 +65,19 @@
             // Label2
             // 
             this.Label2.AutoSize = true;
-            this.Label2.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label2.ForeColor = System.Drawing.Color.White;
-            this.Label2.Location = new System.Drawing.Point(376, 6);
+            this.Label2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
+            this.Label2.Location = new System.Drawing.Point(367, 6);
             this.Label2.Name = "Label2";
-            this.Label2.Size = new System.Drawing.Size(153, 14);
+            this.Label2.Size = new System.Drawing.Size(134, 15);
             this.Label2.TabIndex = 19;
-            this.Label2.Text = "PROVEEDOR SELECCIONADO:";
+            this.Label2.Text = "Proveedor Seleccionado";
             // 
             // label4
             // 
-            this.label4.BackColor = System.Drawing.Color.White;
+            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(206)))), ((int)(((byte)(230)))));
             this.label4.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
             this.label4.Location = new System.Drawing.Point(12, 161);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(835, 68);
@@ -101,9 +92,26 @@
             this.dataGridView1.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(206)))), ((int)(((byte)(230)))));
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Roboto", 8F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Roboto", 8F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.Location = new System.Drawing.Point(2, 31);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
@@ -113,14 +121,22 @@
             this.dataGridView1.TabIndex = 23;
             this.dataGridView1.DoubleClick += new System.EventHandler(this.dataGridView1_DoubleClick);
             // 
+            // kryptonLabel1
+            // 
+            this.kryptonLabel1.Location = new System.Drawing.Point(6, 5);
+            this.kryptonLabel1.Name = "kryptonLabel1";
+            this.kryptonLabel1.Size = new System.Drawing.Size(46, 20);
+            this.kryptonLabel1.TabIndex = 24;
+            this.kryptonLabel1.Values.Text = "Buscar";
+            // 
             // FrmBuscarProveedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(206)))), ((int)(((byte)(230)))));
             this.ClientSize = new System.Drawing.Size(859, 341);
+            this.Controls.Add(this.kryptonLabel1);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.Label1);
             this.Controls.Add(this.Label3);
             this.Controls.Add(this.txtParametrobusqueda);
             this.Controls.Add(this.Label2);
@@ -141,12 +157,11 @@
         }
 
         #endregion
-
-        internal System.Windows.Forms.Label Label1;
         internal System.Windows.Forms.Label Label3;
         internal System.Windows.Forms.TextBox txtParametrobusqueda;
         internal System.Windows.Forms.Label Label2;
         internal System.Windows.Forms.Label label4;
         public System.Windows.Forms.DataGridView dataGridView1;
+        private Krypton.Toolkit.KryptonLabel kryptonLabel1;
     }
 }

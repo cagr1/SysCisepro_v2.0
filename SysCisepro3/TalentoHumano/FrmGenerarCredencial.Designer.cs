@@ -57,11 +57,11 @@
             this.dgvBusquedaPersonal = new System.Windows.Forms.DataGridView();
             this.crvCredenciales = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
             this.kryptonGroupBox1 = new Krypton.Toolkit.KryptonGroupBox();
-            this.kryptonLabel1 = new Krypton.Toolkit.KryptonLabel();
-            this.kryptonLabel2 = new Krypton.Toolkit.KryptonLabel();
-            this.kryptonLabel3 = new Krypton.Toolkit.KryptonLabel();
-            this.kryptonLabel4 = new Krypton.Toolkit.KryptonLabel();
             this.kryptonLabel5 = new Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel4 = new Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel3 = new Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel2 = new Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel1 = new Krypton.Toolkit.KryptonLabel();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridView1)).BeginInit();
@@ -342,7 +342,6 @@
             // crvCredenciales
             // 
             this.crvCredenciales.ActiveViewIndex = -1;
-            this.crvCredenciales.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.crvCredenciales.Cursor = System.Windows.Forms.Cursors.Default;
             this.crvCredenciales.EnableRefresh = false;
             this.crvCredenciales.Location = new System.Drawing.Point(2, 196);
@@ -384,29 +383,13 @@
             this.kryptonGroupBox1.TabIndex = 221;
             this.kryptonGroupBox1.Values.Heading = "Busqueda";
             // 
-            // kryptonLabel1
+            // kryptonLabel5
             // 
-            this.kryptonLabel1.Location = new System.Drawing.Point(3, 4);
-            this.kryptonLabel1.Name = "kryptonLabel1";
-            this.kryptonLabel1.Size = new System.Drawing.Size(46, 20);
-            this.kryptonLabel1.TabIndex = 0;
-            this.kryptonLabel1.Values.Text = "Buscar";
-            // 
-            // kryptonLabel2
-            // 
-            this.kryptonLabel2.Location = new System.Drawing.Point(3, 30);
-            this.kryptonLabel2.Name = "kryptonLabel2";
-            this.kryptonLabel2.Size = new System.Drawing.Size(50, 20);
-            this.kryptonLabel2.TabIndex = 40;
-            this.kryptonLabel2.Values.Text = "Codigo";
-            // 
-            // kryptonLabel3
-            // 
-            this.kryptonLabel3.Location = new System.Drawing.Point(3, 57);
-            this.kryptonLabel3.Name = "kryptonLabel3";
-            this.kryptonLabel3.Size = new System.Drawing.Size(88, 20);
-            this.kryptonLabel3.TabIndex = 41;
-            this.kryptonLabel3.Values.Text = "Fecha Emision";
+            this.kryptonLabel5.Location = new System.Drawing.Point(153, 29);
+            this.kryptonLabel5.Name = "kryptonLabel5";
+            this.kryptonLabel5.Size = new System.Drawing.Size(56, 20);
+            this.kryptonLabel5.TabIndex = 46;
+            this.kryptonLabel5.Values.Text = "No Cont";
             // 
             // kryptonLabel4
             // 
@@ -416,13 +399,29 @@
             this.kryptonLabel4.TabIndex = 42;
             this.kryptonLabel4.Values.Text = "Fecha Caducidad";
             // 
-            // kryptonLabel5
+            // kryptonLabel3
             // 
-            this.kryptonLabel5.Location = new System.Drawing.Point(153, 29);
-            this.kryptonLabel5.Name = "kryptonLabel5";
-            this.kryptonLabel5.Size = new System.Drawing.Size(56, 20);
-            this.kryptonLabel5.TabIndex = 46;
-            this.kryptonLabel5.Values.Text = "No Cont";
+            this.kryptonLabel3.Location = new System.Drawing.Point(3, 57);
+            this.kryptonLabel3.Name = "kryptonLabel3";
+            this.kryptonLabel3.Size = new System.Drawing.Size(88, 20);
+            this.kryptonLabel3.TabIndex = 41;
+            this.kryptonLabel3.Values.Text = "Fecha Emision";
+            // 
+            // kryptonLabel2
+            // 
+            this.kryptonLabel2.Location = new System.Drawing.Point(3, 30);
+            this.kryptonLabel2.Name = "kryptonLabel2";
+            this.kryptonLabel2.Size = new System.Drawing.Size(50, 20);
+            this.kryptonLabel2.TabIndex = 40;
+            this.kryptonLabel2.Values.Text = "Codigo";
+            // 
+            // kryptonLabel1
+            // 
+            this.kryptonLabel1.Location = new System.Drawing.Point(3, 4);
+            this.kryptonLabel1.Name = "kryptonLabel1";
+            this.kryptonLabel1.Size = new System.Drawing.Size(46, 20);
+            this.kryptonLabel1.TabIndex = 0;
+            this.kryptonLabel1.Values.Text = "Buscar";
             // 
             // FrmGenerarCredencial
             // 

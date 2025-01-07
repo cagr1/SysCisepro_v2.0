@@ -119,7 +119,7 @@
             Me.txtArea.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtArea.Enabled = False
             Me.txtArea.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtArea.Location = New System.Drawing.Point(251, 30)
+            Me.txtArea.Location = New System.Drawing.Point(307, 30)
             Me.txtArea.Name = "txtArea"
             Me.txtArea.Size = New System.Drawing.Size(205, 21)
             Me.txtArea.TabIndex = 197
@@ -393,9 +393,9 @@
             Me.txtMultador.BackColor = System.Drawing.Color.White
             Me.txtMultador.Enabled = False
             Me.txtMultador.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtMultador.Location = New System.Drawing.Point(74, 169)
+            Me.txtMultador.Location = New System.Drawing.Point(89, 169)
             Me.txtMultador.Name = "txtMultador"
-            Me.txtMultador.Size = New System.Drawing.Size(259, 21)
+            Me.txtMultador.Size = New System.Drawing.Size(275, 21)
             Me.txtMultador.TabIndex = 210
             '
             'txtTotal
@@ -404,7 +404,7 @@
             Me.txtTotal.DecimalPlaces = 2
             Me.txtTotal.Enabled = False
             Me.txtTotal.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtTotal.Location = New System.Drawing.Point(182, 143)
+            Me.txtTotal.Location = New System.Drawing.Point(229, 143)
             Me.txtTotal.Name = "txtTotal"
             Me.txtTotal.Size = New System.Drawing.Size(52, 21)
             Me.txtTotal.TabIndex = 208
@@ -425,7 +425,7 @@
             Me.dtpFecha.Enabled = False
             Me.dtpFecha.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-            Me.dtpFecha.Location = New System.Drawing.Point(182, 116)
+            Me.dtpFecha.Location = New System.Drawing.Point(229, 116)
             Me.dtpFecha.Name = "dtpFecha"
             Me.dtpFecha.Size = New System.Drawing.Size(80, 21)
             Me.dtpFecha.TabIndex = 110
@@ -438,7 +438,7 @@
             Me.bntSanciones.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.bntSanciones.Font = New System.Drawing.Font("Consolas", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.bntSanciones.Image = Global.syscisepro.My.Resources.Resources.search_24dp_FILL0_wght400_GRAD0_opsz24__2_
-            Me.bntSanciones.Location = New System.Drawing.Point(462, 108)
+            Me.bntSanciones.Location = New System.Drawing.Point(518, 108)
             Me.bntSanciones.Name = "bntSanciones"
             Me.bntSanciones.Size = New System.Drawing.Size(26, 26)
             Me.bntSanciones.TabIndex = 111
@@ -453,7 +453,7 @@
             Me.txtObservacion.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtObservacion.Location = New System.Drawing.Point(89, 193)
             Me.txtObservacion.Name = "txtObservacion"
-            Me.txtObservacion.Size = New System.Drawing.Size(242, 21)
+            Me.txtObservacion.Size = New System.Drawing.Size(337, 21)
             Me.txtObservacion.TabIndex = 113
             '
             'txtValor
@@ -462,9 +462,9 @@
             Me.txtValor.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtValor.Enabled = False
             Me.txtValor.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtValor.Location = New System.Drawing.Point(327, 141)
+            Me.txtValor.Location = New System.Drawing.Point(383, 141)
             Me.txtValor.Name = "txtValor"
-            Me.txtValor.Size = New System.Drawing.Size(33, 21)
+            Me.txtValor.Size = New System.Drawing.Size(43, 21)
             Me.txtValor.TabIndex = 199
             '
             'txtIdSancion
@@ -484,7 +484,7 @@
             Me.txtSancion.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtSancion.Enabled = False
             Me.txtSancion.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtSancion.Location = New System.Drawing.Point(327, 114)
+            Me.txtSancion.Location = New System.Drawing.Point(383, 114)
             Me.txtSancion.Name = "txtSancion"
             Me.txtSancion.Size = New System.Drawing.Size(129, 21)
             Me.txtSancion.TabIndex = 0
@@ -497,7 +497,7 @@
             Me.txtCliente.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtCliente.Location = New System.Drawing.Point(74, 88)
             Me.txtCliente.Name = "txtCliente"
-            Me.txtCliente.Size = New System.Drawing.Size(381, 21)
+            Me.txtCliente.Size = New System.Drawing.Size(438, 21)
             Me.txtCliente.TabIndex = 201
             '
             'txtIdPuesto
@@ -517,7 +517,7 @@
             Me.txtUbicacionPuesto.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtUbicacionPuesto.Enabled = False
             Me.txtUbicacionPuesto.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtUbicacionPuesto.Location = New System.Drawing.Point(197, 62)
+            Me.txtUbicacionPuesto.Location = New System.Drawing.Point(253, 62)
             Me.txtUbicacionPuesto.Name = "txtUbicacionPuesto"
             Me.txtUbicacionPuesto.Size = New System.Drawing.Size(259, 21)
             Me.txtUbicacionPuesto.TabIndex = 0
@@ -541,7 +541,7 @@
             Me.btnPersonalEntra.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.btnPersonalEntra.Font = New System.Drawing.Font("Consolas", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.btnPersonalEntra.Image = Global.syscisepro.My.Resources.Resources.search_24dp_FILL0_wght400_GRAD0_opsz24__2_
-            Me.btnPersonalEntra.Location = New System.Drawing.Point(462, 0)
+            Me.btnPersonalEntra.Location = New System.Drawing.Point(518, 0)
             Me.btnPersonalEntra.Name = "btnPersonalEntra"
             Me.btnPersonalEntra.Size = New System.Drawing.Size(26, 26)
             Me.btnPersonalEntra.TabIndex = 105
@@ -565,7 +565,7 @@
             Me.txtPersonal.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtPersonal.Enabled = False
             Me.txtPersonal.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtPersonal.Location = New System.Drawing.Point(197, 4)
+            Me.txtPersonal.Location = New System.Drawing.Point(253, 4)
             Me.txtPersonal.Name = "txtPersonal"
             Me.txtPersonal.Size = New System.Drawing.Size(259, 21)
             Me.txtPersonal.TabIndex = 0
@@ -658,7 +658,7 @@
             '
             'KryptonGroupBox2
             '
-            Me.KryptonGroupBox2.CaptionOverlap = 0.85R
+            Me.KryptonGroupBox2.CaptionOverlap = 0R
             Me.KryptonGroupBox2.GroupBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.ControlRibbon
             Me.KryptonGroupBox2.Location = New System.Drawing.Point(0, 33)
             Me.KryptonGroupBox2.Name = "KryptonGroupBox2"
@@ -711,7 +711,7 @@
             '
             'KryptonLabel16
             '
-            Me.KryptonLabel16.Location = New System.Drawing.Point(269, 143)
+            Me.KryptonLabel16.Location = New System.Drawing.Point(325, 143)
             Me.KryptonLabel16.Name = "KryptonLabel16"
             Me.KryptonLabel16.Size = New System.Drawing.Size(39, 20)
             Me.KryptonLabel16.TabIndex = 211
@@ -727,7 +727,7 @@
             '
             'KryptonLabel14
             '
-            Me.KryptonLabel14.Location = New System.Drawing.Point(129, 142)
+            Me.KryptonLabel14.Location = New System.Drawing.Point(174, 141)
             Me.KryptonLabel14.Name = "KryptonLabel14"
             Me.KryptonLabel14.Size = New System.Drawing.Size(38, 20)
             Me.KryptonLabel14.TabIndex = 206
@@ -743,7 +743,7 @@
             '
             'KryptonLabel12
             '
-            Me.KryptonLabel12.Location = New System.Drawing.Point(269, 114)
+            Me.KryptonLabel12.Location = New System.Drawing.Point(325, 114)
             Me.KryptonLabel12.Name = "KryptonLabel12"
             Me.KryptonLabel12.Size = New System.Drawing.Size(53, 20)
             Me.KryptonLabel12.TabIndex = 204
@@ -751,7 +751,7 @@
             '
             'KryptonLabel11
             '
-            Me.KryptonLabel11.Location = New System.Drawing.Point(132, 116)
+            Me.KryptonLabel11.Location = New System.Drawing.Point(175, 116)
             Me.KryptonLabel11.Name = "KryptonLabel11"
             Me.KryptonLabel11.Size = New System.Drawing.Size(42, 20)
             Me.KryptonLabel11.TabIndex = 203
@@ -775,7 +775,7 @@
             '
             'KryptonLabel8
             '
-            Me.KryptonLabel8.Location = New System.Drawing.Point(118, 62)
+            Me.KryptonLabel8.Location = New System.Drawing.Point(174, 62)
             Me.KryptonLabel8.Name = "KryptonLabel8"
             Me.KryptonLabel8.Size = New System.Drawing.Size(64, 20)
             Me.KryptonLabel8.TabIndex = 199
@@ -791,7 +791,7 @@
             '
             'KryptonLabel6
             '
-            Me.KryptonLabel6.Location = New System.Drawing.Point(209, 29)
+            Me.KryptonLabel6.Location = New System.Drawing.Point(265, 29)
             Me.KryptonLabel6.Name = "KryptonLabel6"
             Me.KryptonLabel6.Size = New System.Drawing.Size(36, 20)
             Me.KryptonLabel6.TabIndex = 196
@@ -807,7 +807,7 @@
             '
             'KryptonLabel4
             '
-            Me.KryptonLabel4.Location = New System.Drawing.Point(119, 3)
+            Me.KryptonLabel4.Location = New System.Drawing.Point(175, 3)
             Me.KryptonLabel4.Name = "KryptonLabel4"
             Me.KryptonLabel4.Size = New System.Drawing.Size(61, 20)
             Me.KryptonLabel4.TabIndex = 29

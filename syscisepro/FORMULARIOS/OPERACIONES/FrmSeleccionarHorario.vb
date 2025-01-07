@@ -89,20 +89,17 @@ Namespace FORMULARIOS.OPERACIONES
             Select Case _tipoCon
                 Case TipoConexion.Asenava
                     Icon = My.Resources.logo_a
-                    Label1.ForeColor = Color.White
-                    Label1.BackColor = My.MySettingsProperty.Settings.ColorAsenava
+
                     BackColor = My.MySettingsProperty.Settings.ColorAsenava 
                     dgvCustodios.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorAsenava
                 Case TipoConexion.Seportpac
                     Icon = My.Resources.logo_s
-                    Label1.ForeColor = Color.White
-                    Label1.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
+
                     BackColor = My.MySettingsProperty.Settings.ColorSeportpac
                     dgvCustodios.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorSeportpac
                 Case Else
                     Icon = My.Resources.logo_c
-                    Label1.ForeColor = Color.White
-                    Label1.BackColor = My.MySettingsProperty.Settings.ColorCisepro
+
                     BackColor = My.MySettingsProperty.Settings.ColorCisepro
                     dgvCustodios.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
             End Select

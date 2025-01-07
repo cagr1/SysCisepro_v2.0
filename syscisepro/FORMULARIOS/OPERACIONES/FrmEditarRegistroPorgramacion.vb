@@ -103,16 +103,13 @@ Namespace FORMULARIOS.OPERACIONES
             Select Case _tipoCon
                 Case TipoConexion.Asenava
                     Icon = My.Resources.logo_a
-                    GroupBox1.BackColor = My.MySettingsProperty.Settings.ColorAsenava
-                    GroupBox1.ForeColor = Color.White 
+
                 Case TipoConexion.Seportpac
                     Icon = My.Resources.logo_s
-                    GroupBox1.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
-                    GroupBox1.ForeColor = Color.White
+
                 Case Else
                     Icon = My.Resources.logo_c
-                    GroupBox1.BackColor = My.MySettingsProperty.Settings.ColorCisepro
-                    GroupBox1.ForeColor = Color.White 
+
             End Select
         End Sub
     End Class

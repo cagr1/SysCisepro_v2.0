@@ -26,92 +26,48 @@
             Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormUnidadMedida))
-            Me.gbUnidadMedida = New System.Windows.Forms.GroupBox()
             Me.txtCodigoUnidadMedida = New System.Windows.Forms.TextBox()
-            Me.lblCodigoUnidadMedida = New System.Windows.Forms.Label()
             Me.txtDetalleUnidadMedida = New System.Windows.Forms.TextBox()
-            Me.lblDetalleUnidadMedida = New System.Windows.Forms.Label()
             Me.txtIdUnidadMedida = New System.Windows.Forms.TextBox()
-            Me.lblIdUnidadMedida = New System.Windows.Forms.Label()
             Me.dgvUnidadMedida = New System.Windows.Forms.DataGridView()
             Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
             Me.btnNuevoUnidadMedida = New System.Windows.Forms.ToolStripMenuItem()
             Me.btnGuardarUnidadMedida = New System.Windows.Forms.ToolStripMenuItem()
             Me.btnModificarUnidadMedida = New System.Windows.Forms.ToolStripMenuItem()
             Me.btnCancelarUnidadMedida = New System.Windows.Forms.ToolStripMenuItem()
-            Me.gbUnidadMedida.SuspendLayout()
+            Me.KryptonLabel1 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel2 = New Krypton.Toolkit.KryptonLabel()
+            Me.KryptonLabel3 = New Krypton.Toolkit.KryptonLabel()
             CType(Me.dgvUnidadMedida, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.MenuStrip1.SuspendLayout()
             Me.SuspendLayout()
-            '
-            'gbUnidadMedida
-            '
-            Me.gbUnidadMedida.BackColor = System.Drawing.Color.White
-            Me.gbUnidadMedida.Controls.Add(Me.txtCodigoUnidadMedida)
-            Me.gbUnidadMedida.Controls.Add(Me.lblCodigoUnidadMedida)
-            Me.gbUnidadMedida.Controls.Add(Me.txtDetalleUnidadMedida)
-            Me.gbUnidadMedida.Controls.Add(Me.lblDetalleUnidadMedida)
-            Me.gbUnidadMedida.Controls.Add(Me.txtIdUnidadMedida)
-            Me.gbUnidadMedida.Controls.Add(Me.lblIdUnidadMedida)
-            Me.gbUnidadMedida.Location = New System.Drawing.Point(5, 34)
-            Me.gbUnidadMedida.Name = "gbUnidadMedida"
-            Me.gbUnidadMedida.Size = New System.Drawing.Size(384, 113)
-            Me.gbUnidadMedida.TabIndex = 0
-            Me.gbUnidadMedida.TabStop = False
             '
             'txtCodigoUnidadMedida
             '
             Me.txtCodigoUnidadMedida.BackColor = System.Drawing.Color.White
             Me.txtCodigoUnidadMedida.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-            Me.txtCodigoUnidadMedida.Location = New System.Drawing.Point(76, 76)
+            Me.txtCodigoUnidadMedida.Location = New System.Drawing.Point(68, 91)
             Me.txtCodigoUnidadMedida.Name = "txtCodigoUnidadMedida"
-            Me.txtCodigoUnidadMedida.Size = New System.Drawing.Size(255, 22)
+            Me.txtCodigoUnidadMedida.Size = New System.Drawing.Size(231, 22)
             Me.txtCodigoUnidadMedida.TabIndex = 5
-            '
-            'lblCodigoUnidadMedida
-            '
-            Me.lblCodigoUnidadMedida.AutoSize = True
-            Me.lblCodigoUnidadMedida.Location = New System.Drawing.Point(7, 79)
-            Me.lblCodigoUnidadMedida.Name = "lblCodigoUnidadMedida"
-            Me.lblCodigoUnidadMedida.Size = New System.Drawing.Size(54, 13)
-            Me.lblCodigoUnidadMedida.TabIndex = 4
-            Me.lblCodigoUnidadMedida.Text = "CODIGO:"
             '
             'txtDetalleUnidadMedida
             '
             Me.txtDetalleUnidadMedida.BackColor = System.Drawing.Color.White
             Me.txtDetalleUnidadMedida.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-            Me.txtDetalleUnidadMedida.Location = New System.Drawing.Point(76, 48)
+            Me.txtDetalleUnidadMedida.Location = New System.Drawing.Point(68, 63)
             Me.txtDetalleUnidadMedida.Name = "txtDetalleUnidadMedida"
-            Me.txtDetalleUnidadMedida.Size = New System.Drawing.Size(255, 22)
+            Me.txtDetalleUnidadMedida.Size = New System.Drawing.Size(231, 22)
             Me.txtDetalleUnidadMedida.TabIndex = 3
-            '
-            'lblDetalleUnidadMedida
-            '
-            Me.lblDetalleUnidadMedida.AutoSize = True
-            Me.lblDetalleUnidadMedida.Location = New System.Drawing.Point(7, 51)
-            Me.lblDetalleUnidadMedida.Name = "lblDetalleUnidadMedida"
-            Me.lblDetalleUnidadMedida.Size = New System.Drawing.Size(52, 13)
-            Me.lblDetalleUnidadMedida.TabIndex = 2
-            Me.lblDetalleUnidadMedida.Text = "DETALLE:"
             '
             'txtIdUnidadMedida
             '
             Me.txtIdUnidadMedida.BackColor = System.Drawing.Color.White
             Me.txtIdUnidadMedida.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-            Me.txtIdUnidadMedida.Location = New System.Drawing.Point(76, 20)
+            Me.txtIdUnidadMedida.Location = New System.Drawing.Point(68, 36)
             Me.txtIdUnidadMedida.Name = "txtIdUnidadMedida"
-            Me.txtIdUnidadMedida.Size = New System.Drawing.Size(255, 22)
+            Me.txtIdUnidadMedida.Size = New System.Drawing.Size(83, 22)
             Me.txtIdUnidadMedida.TabIndex = 1
-            '
-            'lblIdUnidadMedida
-            '
-            Me.lblIdUnidadMedida.AutoSize = True
-            Me.lblIdUnidadMedida.Location = New System.Drawing.Point(7, 23)
-            Me.lblIdUnidadMedida.Name = "lblIdUnidadMedida"
-            Me.lblIdUnidadMedida.Size = New System.Drawing.Size(21, 13)
-            Me.lblIdUnidadMedida.TabIndex = 0
-            Me.lblIdUnidadMedida.Text = "ID:"
             '
             'dgvUnidadMedida
             '
@@ -120,7 +76,8 @@
             Me.dgvUnidadMedida.AllowUserToResizeRows = False
             DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
             Me.dgvUnidadMedida.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
-            Me.dgvUnidadMedida.BackgroundColor = System.Drawing.Color.White
+            Me.dgvUnidadMedida.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(185, Byte), Integer), CType(CType(206, Byte), Integer), CType(CType(230, Byte), Integer))
+            Me.dgvUnidadMedida.BorderStyle = System.Windows.Forms.BorderStyle.None
             Me.dgvUnidadMedida.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
             Me.dgvUnidadMedida.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
             DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
@@ -131,7 +88,7 @@
             DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
             DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
             Me.dgvUnidadMedida.DefaultCellStyle = DataGridViewCellStyle2
-            Me.dgvUnidadMedida.Location = New System.Drawing.Point(0, 150)
+            Me.dgvUnidadMedida.Location = New System.Drawing.Point(0, 123)
             Me.dgvUnidadMedida.MultiSelect = False
             Me.dgvUnidadMedida.Name = "dgvUnidadMedida"
             Me.dgvUnidadMedida.ReadOnly = True
@@ -191,15 +148,44 @@
             Me.btnCancelarUnidadMedida.Size = New System.Drawing.Size(99, 28)
             Me.btnCancelarUnidadMedida.Text = "CANCELAR"
             '
+            'KryptonLabel1
+            '
+            Me.KryptonLabel1.Location = New System.Drawing.Point(13, 36)
+            Me.KryptonLabel1.Name = "KryptonLabel1"
+            Me.KryptonLabel1.Size = New System.Drawing.Size(21, 20)
+            Me.KryptonLabel1.TabIndex = 187
+            Me.KryptonLabel1.Values.Text = "Id"
+            '
+            'KryptonLabel2
+            '
+            Me.KryptonLabel2.Location = New System.Drawing.Point(13, 65)
+            Me.KryptonLabel2.Name = "KryptonLabel2"
+            Me.KryptonLabel2.Size = New System.Drawing.Size(49, 20)
+            Me.KryptonLabel2.TabIndex = 188
+            Me.KryptonLabel2.Values.Text = "Detalle"
+            '
+            'KryptonLabel3
+            '
+            Me.KryptonLabel3.Location = New System.Drawing.Point(13, 91)
+            Me.KryptonLabel3.Name = "KryptonLabel3"
+            Me.KryptonLabel3.Size = New System.Drawing.Size(50, 20)
+            Me.KryptonLabel3.TabIndex = 189
+            Me.KryptonLabel3.Values.Text = "Codigo"
+            '
             'FormUnidadMedida
             '
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-            Me.BackColor = System.Drawing.Color.White
-            Me.ClientSize = New System.Drawing.Size(389, 320)
+            Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(185, Byte), Integer), CType(CType(206, Byte), Integer), CType(CType(230, Byte), Integer))
+            Me.ClientSize = New System.Drawing.Size(389, 293)
+            Me.Controls.Add(Me.txtCodigoUnidadMedida)
+            Me.Controls.Add(Me.KryptonLabel3)
+            Me.Controls.Add(Me.KryptonLabel2)
+            Me.Controls.Add(Me.KryptonLabel1)
+            Me.Controls.Add(Me.txtDetalleUnidadMedida)
             Me.Controls.Add(Me.MenuStrip1)
             Me.Controls.Add(Me.dgvUnidadMedida)
-            Me.Controls.Add(Me.gbUnidadMedida)
+            Me.Controls.Add(Me.txtIdUnidadMedida)
             Me.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
             Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -210,8 +196,6 @@
             Or Krypton.Toolkit.PaletteDrawBorders.Right), Krypton.Toolkit.PaletteDrawBorders)
             Me.StateActive.Border.Rounding = 5.0!
             Me.Text = "UNIDAD DE MEDIDA"
-            Me.gbUnidadMedida.ResumeLayout(False)
-            Me.gbUnidadMedida.PerformLayout()
             CType(Me.dgvUnidadMedida, System.ComponentModel.ISupportInitialize).EndInit()
             Me.MenuStrip1.ResumeLayout(False)
             Me.MenuStrip1.PerformLayout()
@@ -219,18 +203,17 @@
             Me.PerformLayout()
 
         End Sub
-        Friend WithEvents gbUnidadMedida As System.Windows.Forms.GroupBox
         Friend WithEvents txtDetalleUnidadMedida As System.Windows.Forms.TextBox
-        Friend WithEvents lblDetalleUnidadMedida As System.Windows.Forms.Label
         Friend WithEvents txtIdUnidadMedida As System.Windows.Forms.TextBox
-        Friend WithEvents lblIdUnidadMedida As System.Windows.Forms.Label
         Friend WithEvents txtCodigoUnidadMedida As System.Windows.Forms.TextBox
-        Friend WithEvents lblCodigoUnidadMedida As System.Windows.Forms.Label
         Friend WithEvents dgvUnidadMedida As System.Windows.Forms.DataGridView
         Friend WithEvents MenuStrip1 As System.Windows.Forms.MenuStrip
         Friend WithEvents btnNuevoUnidadMedida As System.Windows.Forms.ToolStripMenuItem
         Friend WithEvents btnGuardarUnidadMedida As System.Windows.Forms.ToolStripMenuItem
         Friend WithEvents btnModificarUnidadMedida As System.Windows.Forms.ToolStripMenuItem
         Friend WithEvents btnCancelarUnidadMedida As System.Windows.Forms.ToolStripMenuItem
+        Friend WithEvents KryptonLabel1 As Krypton.Toolkit.KryptonLabel
+        Friend WithEvents KryptonLabel2 As Krypton.Toolkit.KryptonLabel
+        Friend WithEvents KryptonLabel3 As Krypton.Toolkit.KryptonLabel
     End Class
 End Namespace

@@ -1011,7 +1011,7 @@
             Me.MenuStrip3.Dock = System.Windows.Forms.DockStyle.None
             Me.MenuStrip3.Font = New System.Drawing.Font("Segoe UI", 9.0!)
             Me.MenuStrip3.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnAgregar, Me.btnCambiar, Me.ToolStripMenuItem3, Me.ToolStripMenuItem1, Me.btnQuitar, Me.btnAddRad, Me.ToolStripMenuItem6})
-            Me.MenuStrip3.Location = New System.Drawing.Point(414, 104)
+            Me.MenuStrip3.Location = New System.Drawing.Point(476, 104)
             Me.MenuStrip3.Name = "MenuStrip3"
             Me.MenuStrip3.ShowItemToolTips = True
             Me.MenuStrip3.Size = New System.Drawing.Size(283, 39)
@@ -1132,7 +1132,7 @@
             Me.NOVEDADESACBMToolStripMenuItem.Image = Global.syscisepro.My.Resources.Resources.icons8_excel_48
             Me.NOVEDADESACBMToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.NOVEDADESACBMToolStripMenuItem.Name = "NOVEDADESACBMToolStripMenuItem"
-            Me.NOVEDADESACBMToolStripMenuItem.Size = New System.Drawing.Size(206, 30)
+            Me.NOVEDADESACBMToolStripMenuItem.Size = New System.Drawing.Size(208, 30)
             Me.NOVEDADESACBMToolStripMenuItem.Text = "NOVEDADES A / C B.M."
             '
             'REPORTESDERADIOToolStripMenuItem
@@ -1140,20 +1140,20 @@
             Me.REPORTESDERADIOToolStripMenuItem.Image = Global.syscisepro.My.Resources.Resources.icons8_excel_48
             Me.REPORTESDERADIOToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.REPORTESDERADIOToolStripMenuItem.Name = "REPORTESDERADIOToolStripMenuItem"
-            Me.REPORTESDERADIOToolStripMenuItem.Size = New System.Drawing.Size(206, 30)
+            Me.REPORTESDERADIOToolStripMenuItem.Size = New System.Drawing.Size(208, 30)
             Me.REPORTESDERADIOToolStripMenuItem.Text = "SANCIONES / MULTAS"
             '
             'ToolStripSeparator1
             '
             Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
-            Me.ToolStripSeparator1.Size = New System.Drawing.Size(203, 6)
+            Me.ToolStripSeparator1.Size = New System.Drawing.Size(205, 6)
             '
             'EXPORTARDATOSToolStripMenuItem
             '
             Me.EXPORTARDATOSToolStripMenuItem.Image = Global.syscisepro.My.Resources.Resources.icons8_excel_48
             Me.EXPORTARDATOSToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
             Me.EXPORTARDATOSToolStripMenuItem.Name = "EXPORTARDATOSToolStripMenuItem"
-            Me.EXPORTARDATOSToolStripMenuItem.Size = New System.Drawing.Size(206, 30)
+            Me.EXPORTARDATOSToolStripMenuItem.Size = New System.Drawing.Size(208, 30)
             Me.EXPORTARDATOSToolStripMenuItem.Text = "EXPORTAR DATOS"
             '
             'GUARDARCAMBIOSToolStripMenuItem
@@ -1306,7 +1306,7 @@
             '
             Me.TabControl1.AnimateEasingType = ReaLTaiizor.[Enum].Metro.EasingType.CubeOut
             Me.TabControl1.AnimateTime = 200
-            Me.TabControl1.BackgroundColor = System.Drawing.Color.White
+            Me.TabControl1.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.TabControl1.Controls.Add(Me.MetroTabPage1)
             Me.TabControl1.Controls.Add(Me.MetroTabPage2)
             Me.TabControl1.Controls.Add(Me.MetroTabPage3)
@@ -1331,7 +1331,7 @@
             '
             'MetroTabPage1
             '
-            Me.MetroTabPage1.BaseColor = System.Drawing.Color.White
+            Me.MetroTabPage1.BaseColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.MetroTabPage1.Controls.Add(Me.btndia)
             Me.MetroTabPage1.Controls.Add(Me.lblDia)
             Me.MetroTabPage1.Controls.Add(Me.txtBuscar)
@@ -1399,7 +1399,7 @@
             '
             'btnSig
             '
-            Me.btnSig.BackColor = System.Drawing.Color.White
+            Me.btnSig.BackColor = System.Drawing.Color.Transparent
             Me.btnSig.FlatAppearance.BorderSize = 0
             Me.btnSig.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.btnSig.Image = Global.syscisepro.My.Resources.Resources.arrow_forward_24dp_FILL0_wght400_GRAD0_opsz24
@@ -1411,7 +1411,7 @@
             '
             'btnAnt
             '
-            Me.btnAnt.BackColor = System.Drawing.Color.White
+            Me.btnAnt.BackColor = System.Drawing.Color.Transparent
             Me.btnAnt.FlatAppearance.BorderSize = 0
             Me.btnAnt.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.btnAnt.Image = Global.syscisepro.My.Resources.Resources.arrow_back_24dp_FILL0_wght400_GRAD0_opsz24
@@ -1423,7 +1423,7 @@
             '
             'MetroTabPage2
             '
-            Me.MetroTabPage2.BaseColor = System.Drawing.Color.White
+            Me.MetroTabPage2.BaseColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.MetroTabPage2.Controls.Add(Me.btnNoche)
             Me.MetroTabPage2.Controls.Add(Me.lblNoche)
             Me.MetroTabPage2.Controls.Add(Me.txtBuscarNoche)
@@ -1491,7 +1491,7 @@
             '
             'btnSigNoche
             '
-            Me.btnSigNoche.BackColor = System.Drawing.Color.White
+            Me.btnSigNoche.BackColor = System.Drawing.Color.Transparent
             Me.btnSigNoche.FlatAppearance.BorderSize = 0
             Me.btnSigNoche.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.btnSigNoche.Image = Global.syscisepro.My.Resources.Resources.arrow_forward_24dp_FILL0_wght400_GRAD0_opsz24
@@ -1503,7 +1503,7 @@
             '
             'btnAntNoche
             '
-            Me.btnAntNoche.BackColor = System.Drawing.Color.White
+            Me.btnAntNoche.BackColor = System.Drawing.Color.Transparent
             Me.btnAntNoche.FlatAppearance.BorderSize = 0
             Me.btnAntNoche.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.btnAntNoche.Image = Global.syscisepro.My.Resources.Resources.arrow_back_24dp_FILL0_wght400_GRAD0_opsz24
@@ -1534,7 +1534,7 @@
             '
             'KryptonGroupBox1
             '
-            Me.KryptonGroupBox1.CaptionOverlap = 0.85R
+            Me.KryptonGroupBox1.CaptionOverlap = 0R
             Me.KryptonGroupBox1.GroupBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.ButtonAlternate
             Me.KryptonGroupBox1.Location = New System.Drawing.Point(-1, 41)
             Me.KryptonGroupBox1.Name = "KryptonGroupBox1"
@@ -1601,7 +1601,7 @@
             '
             'KryptonGroupBox2
             '
-            Me.KryptonGroupBox2.CaptionOverlap = 0.85R
+            Me.KryptonGroupBox2.CaptionOverlap = 0R
             Me.KryptonGroupBox2.GroupBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.ButtonAlternate
             Me.KryptonGroupBox2.Location = New System.Drawing.Point(0, 4)
             Me.KryptonGroupBox2.Name = "KryptonGroupBox2"

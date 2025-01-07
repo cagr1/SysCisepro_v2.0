@@ -4,6 +4,7 @@ Imports ClassLibraryCisepro.OPERACIONES
 Imports ClassLibraryCisepro.ProcesosSql
 Imports Microsoft.Office.Interop
 Imports syscisepro.DATOS
+Imports Krypton.Toolkit
 
 Namespace FORMULARIOS.OPERACIONES
     ''' <summary>
@@ -48,24 +49,18 @@ Namespace FORMULARIOS.OPERACIONES
             Select Case _tipoCon
                 Case TipoConexion.Asenava
                     Icon = My.Resources.logo_a
-                    MenuStrip1.ForeColor = Color.White
-                    MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorAsenava
-                    Label21.ForeColor = Color.White
-                    Label21.BackColor = My.MySettingsProperty.Settings.ColorAsenava
+
+
                     dgvHorarios.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorAsenava
                 Case TipoConexion.Seportpac
                     Icon = My.Resources.logo_s
-                    MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
-                    MenuStrip1.ForeColor = Color.White
-                    Label21.ForeColor = Color.White
-                    Label21.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
+
+
                     dgvHorarios.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorSeportpac
                 Case Else
                     Icon = My.Resources.logo_c
-                    MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorCisepro
-                    MenuStrip1.ForeColor = Color.White
-                    Label21.ForeColor = Color.White
-                    Label21.BackColor = My.MySettingsProperty.Settings.ColorCisepro
+
+
                     dgvHorarios.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
             End Select
             dgvHorarios.Font = New Font("Roboto", 8, FontStyle.Regular)
@@ -177,12 +172,12 @@ Namespace FORMULARIOS.OPERACIONES
 
         Private Sub btnGuardar_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnGuardar.Click
             Try
-                If MessageBox.Show("Está seguro que desea guardar los cambios realizados", "Mensaje del sistema", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.No Then
+                If MessageBox.Show("Está seguro que desea guardar los cambios realizados", "MENSAJE DEL SISTEMA", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.No Then
                     Return
                 End If
 
                 If txtHorasRegular.Text.Trim.Length = 0 Then
-                    MessageBox.Show("Debe definir los horarios para guardar (Presione el botón 'CALCULAR')!", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                    MessageBox.Show("Debe definir los horarios para guardar (Presione el botón 'CALCULAR')!", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
                     Return
                 End If
 
@@ -196,7 +191,7 @@ Namespace FORMULARIOS.OPERACIONES
                 Dim domingo = dtpDeDomingo.Text & " ~ " & dtpADomingo.Text
 
                 If _objetoHorario.ExisteHorarioOperacion(_tipoCon, txtIdHorario.Text, dias, lunes, martes, miercoles, jueves, viernes, sabado, domingo) > 0 Then
-                    MessageBox.Show("Ya existe un horario registrado con los mismos días y horas!", "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                    MessageBox.Show("Ya existe un horario registrado con los mismos días y horas!", "MENSAJE DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Warning)
                     Return
                 End If
 
@@ -292,10 +287,15 @@ Namespace FORMULARIOS.OPERACIONES
 
                     txtFiltro.Clear()
                     CargarHorariosOperacion(String.Empty)
+                    KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
+                Else
+                    KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+                    Return
                 End If
-                MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
+                'MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
             Catch ex As Exception
-                MsgBox("ERROR AL GUARDAR HORARIO DE TRABAJO: " & ex.Message, MsgBoxStyle.Exclamation, "Mensaje de validación")
+                'MsgBox("ERROR AL GUARDAR HORARIO DE TRABAJO: " & ex.Message, MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                KryptonMessageBox.Show("Error al guardar horario de trabajo: " & ex.Message, "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
 
@@ -350,7 +350,7 @@ Namespace FORMULARIOS.OPERACIONES
 
         Private Sub btnAnular_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnAnular.Click
             Try
-                If MessageBox.Show("Seguro que desea anular el horario seleccionado?", "Mensaje del sistema", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.No Then
+                If MessageBox.Show("Seguro que desea anular el horario seleccionado?", "MENSAJE DEL SISTEMA", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.No Then
                     Return
                 End If
 
@@ -386,11 +386,16 @@ Namespace FORMULARIOS.OPERACIONES
                     btnAnular.Enabled = False
                     btnCancelar.Enabled = False
                     _estadoAccion = 0
+                    KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
+                Else
+                    KryptonMessageBox.Show(res(1), "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+                    Return
                 End If
-                MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
+                'MsgBox(res(1), If(res(0), MsgBoxStyle.Information, MsgBoxStyle.Exclamation), "Mensaje del sistema")
 
             Catch ex As Exception
-                MsgBox("ERROR AL GUARDAR HORARIO DE TRABAJO: " & ex.Message, MsgBoxStyle.Exclamation, "Mensaje de validación")
+                'MsgBox("ERROR AL GUARDAR HORARIO DE TRABAJO: " & ex.Message, MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                KryptonMessageBox.Show("Error al guardar horario de trabajo: " & ex.Message, "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
 
@@ -769,52 +774,7 @@ Namespace FORMULARIOS.OPERACIONES
             End Try
         End Sub
 
-        Private Sub dgvHorarios_SelectionChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles dgvHorarios.SelectionChanged
-            If _estadoAccion <> 0 Or dgvHorarios.CurrentRow Is Nothing Then
-                Return
-            End If
 
-            txtIdHorario.Text = dgvHorarios.CurrentRow.Cells("ID").Value
-            txtDefinicion.Text = dgvHorarios.CurrentRow.Cells("DETALLE").Value
-            chkLunes.Checked = dgvHorarios.CurrentRow.Cells("DIAS").Value.ToString.Contains("LU")
-            chkMartes.Checked = dgvHorarios.CurrentRow.Cells("DIAS").Value.ToString.Contains("MA")
-            chkMiercoles.Checked = dgvHorarios.CurrentRow.Cells("DIAS").Value.ToString.Contains("MI")
-            chkJueves.Checked = dgvHorarios.CurrentRow.Cells("DIAS").Value.ToString.Contains("JU")
-            chkViernes.Checked = dgvHorarios.CurrentRow.Cells("DIAS").Value.ToString.Contains("VI")
-            chkSabado.Checked = dgvHorarios.CurrentRow.Cells("DIAS").Value.ToString.Contains("SA")
-            chkDomingo.Checked = dgvHorarios.CurrentRow.Cells("DIAS").Value.ToString.Contains("DO")
-
-            dtpDeLunes.Text = If(dgvHorarios.CurrentRow.Cells("LUNES").Value.ToString.Trim.Length = 1, "00:00", dgvHorarios.CurrentRow.Cells("LUNES").Value.ToString.Split("~")(0).Trim)
-            dtpALunes.Text = If(dgvHorarios.CurrentRow.Cells("LUNES").Value.ToString.Trim.Length = 1, "00:00", dgvHorarios.CurrentRow.Cells("LUNES").Value.ToString.Split("~")(1).Trim)
-            dtpDeMartes.Text = If(dgvHorarios.CurrentRow.Cells("MARTES").Value.ToString.Trim.Length = 1, "00:00", dgvHorarios.CurrentRow.Cells("MARTES").Value.ToString.Split("~")(0).Trim)
-            dtpAMartes.Text = If(dgvHorarios.CurrentRow.Cells("MARTES").Value.ToString.Trim.Length = 1, "00:00", dgvHorarios.CurrentRow.Cells("MARTES").Value.ToString.Split("~")(1).Trim)
-            dtpDeMiercoles.Text = If(dgvHorarios.CurrentRow.Cells("MIERCOLES").Value.ToString.Trim.Length = 1, "00:00", dgvHorarios.CurrentRow.Cells("MIERCOLES").Value.ToString.Split("~")(0).Trim)
-            dtpAMiercoles.Text = If(dgvHorarios.CurrentRow.Cells("MIERCOLES").Value.ToString.Trim.Length = 1, "00:00", dgvHorarios.CurrentRow.Cells("MIERCOLES").Value.ToString.Split("~")(1).Trim)
-            dtpDeJueves.Text = If(dgvHorarios.CurrentRow.Cells("JUEVES").Value.ToString.Trim.Length = 1, "00:00", dgvHorarios.CurrentRow.Cells("JUEVES").Value.ToString.Split("~")(0).Trim)
-            dtpAJueves.Text = If(dgvHorarios.CurrentRow.Cells("JUEVES").Value.ToString.Trim.Length = 1, "00:00", dgvHorarios.CurrentRow.Cells("JUEVES").Value.ToString.Split("~")(1).Trim)
-            dtpDeViernes.Text = If(dgvHorarios.CurrentRow.Cells("VIERNES").Value.ToString.Trim.Length = 1, "00:00", dgvHorarios.CurrentRow.Cells("VIERNES").Value.ToString.Split("~")(0).Trim)
-            dtpAViernes.Text = If(dgvHorarios.CurrentRow.Cells("VIERNES").Value.ToString.Trim.Length = 1, "00:00", dgvHorarios.CurrentRow.Cells("VIERNES").Value.ToString.Split("~")(1).Trim)
-            dtpDeSabado.Text = If(dgvHorarios.CurrentRow.Cells("SABADO").Value.ToString.Trim.Length = 1, "00:00", dgvHorarios.CurrentRow.Cells("SABADO").Value.ToString.Split("~")(0).Trim)
-            dtpASabado.Text = If(dgvHorarios.CurrentRow.Cells("SABADO").Value.ToString.Trim.Length = 1, "00:00", dgvHorarios.CurrentRow.Cells("SABADO").Value.ToString.Split("~")(1).Trim)
-            dtpDeDomingo.Text = If(dgvHorarios.CurrentRow.Cells("DOMINGO").Value.ToString.Trim.Length = 1, "00:00", dgvHorarios.CurrentRow.Cells("DOMINGO").Value.ToString.Split("~")(0).Trim)
-            dtpADomingo.Text = If(dgvHorarios.CurrentRow.Cells("DOMINGO").Value.ToString.Trim.Length = 1, "00:00", dgvHorarios.CurrentRow.Cells("DOMINGO").Value.ToString.Split("~")(1).Trim)
-
-            txtHorasRegular.Text = dgvHorarios.CurrentRow.Cells("HORA_REGULAR").Value
-            txtRecargoNocturno.Text = dgvHorarios.CurrentRow.Cells("RECARGO_NOCTURNO").Value
-            txtHoras50.Text = dgvHorarios.CurrentRow.Cells("HORA_CINCUENTA").Value
-            txtHoras100.Text = dgvHorarios.CurrentRow.Cells("HORA_CIEN").Value
-            txtObservacion.Text = dgvHorarios.CurrentRow.Cells("OBSERVACION").Value
-
-            CmbTipo.SelectedIndex = dgvHorarios.CurrentRow.Cells("TIPO").Value
-            cbmCategoria.Text = dgvHorarios.CurrentRow.Cells("CATEGORIA").Value
-            txtTotalHoras.Text = dgvHorarios.CurrentRow.Cells("TOT_HORAS").Value
-
-            btnNuevo.Enabled = True ' nuevo
-            btnGuardar.Enabled = False ' guardar
-            btnModificar.Enabled = (CmbTipo.SelectedIndex = 1) ' actualizar
-            btnAnular.Enabled = True ' anular
-            btnCancelar.Enabled = False ' cancelar         
-        End Sub
 
         Private Sub txtFiltro_KeyUp(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles txtFiltro.KeyUp
             CargarHorariosOperacion(txtFiltro.Text.Trim)
@@ -904,7 +864,8 @@ Namespace FORMULARIOS.OPERACIONES
                 crvSitios.Zoom(75)
                 crvSitios.Refresh()
             Catch ex As Exception
-                MsgBox("ERROR AL GENERAR REPORTE: " & ex.Message, MsgBoxStyle.Exclamation, "Mensaje de validación")
+                'MsgBox("ERROR AL GENERAR REPORTE: " & ex.Message, MsgBoxStyle.Exclamation, "MENSAJE DE VALIDACIÓN")
+                KryptonMessageBox.Show("Error al generar reporte: " & ex.Message, "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
 
@@ -933,5 +894,55 @@ Namespace FORMULARIOS.OPERACIONES
             cbmCategoria.Enabled = (CmbTipo.SelectedIndex = 1)
         End Sub
 
+        Private Sub KryptonGroupBox1_Panel_Paint(sender As Object, e As PaintEventArgs) Handles KryptonGroupBox1.Panel.Paint
+
+        End Sub
+
+        Private Sub dgvHorarios_SelectionChanged(sender As Object, e As EventArgs) Handles dgvHorarios.SelectionChanged
+            If _estadoAccion <> 0 Or dgvHorarios.CurrentRow Is Nothing Then
+                Return
+            End If
+
+            txtIdHorario.Text = dgvHorarios.CurrentRow.Cells("ID").Value
+            txtDefinicion.Text = dgvHorarios.CurrentRow.Cells("DETALLE").Value
+            chkLunes.Checked = dgvHorarios.CurrentRow.Cells("DIAS").Value.ToString.Contains("LU")
+            chkMartes.Checked = dgvHorarios.CurrentRow.Cells("DIAS").Value.ToString.Contains("MA")
+            chkMiercoles.Checked = dgvHorarios.CurrentRow.Cells("DIAS").Value.ToString.Contains("MI")
+            chkJueves.Checked = dgvHorarios.CurrentRow.Cells("DIAS").Value.ToString.Contains("JU")
+            chkViernes.Checked = dgvHorarios.CurrentRow.Cells("DIAS").Value.ToString.Contains("VI")
+            chkSabado.Checked = dgvHorarios.CurrentRow.Cells("DIAS").Value.ToString.Contains("SA")
+            chkDomingo.Checked = dgvHorarios.CurrentRow.Cells("DIAS").Value.ToString.Contains("DO")
+
+            dtpDeLunes.Text = If(dgvHorarios.CurrentRow.Cells("LUNES").Value.ToString.Trim.Length = 1, "00:00", dgvHorarios.CurrentRow.Cells("LUNES").Value.ToString.Split("~")(0).Trim)
+            dtpALunes.Text = If(dgvHorarios.CurrentRow.Cells("LUNES").Value.ToString.Trim.Length = 1, "00:00", dgvHorarios.CurrentRow.Cells("LUNES").Value.ToString.Split("~")(1).Trim)
+            dtpDeMartes.Text = If(dgvHorarios.CurrentRow.Cells("MARTES").Value.ToString.Trim.Length = 1, "00:00", dgvHorarios.CurrentRow.Cells("MARTES").Value.ToString.Split("~")(0).Trim)
+            dtpAMartes.Text = If(dgvHorarios.CurrentRow.Cells("MARTES").Value.ToString.Trim.Length = 1, "00:00", dgvHorarios.CurrentRow.Cells("MARTES").Value.ToString.Split("~")(1).Trim)
+            dtpDeMiercoles.Text = If(dgvHorarios.CurrentRow.Cells("MIERCOLES").Value.ToString.Trim.Length = 1, "00:00", dgvHorarios.CurrentRow.Cells("MIERCOLES").Value.ToString.Split("~")(0).Trim)
+            dtpAMiercoles.Text = If(dgvHorarios.CurrentRow.Cells("MIERCOLES").Value.ToString.Trim.Length = 1, "00:00", dgvHorarios.CurrentRow.Cells("MIERCOLES").Value.ToString.Split("~")(1).Trim)
+            dtpDeJueves.Text = If(dgvHorarios.CurrentRow.Cells("JUEVES").Value.ToString.Trim.Length = 1, "00:00", dgvHorarios.CurrentRow.Cells("JUEVES").Value.ToString.Split("~")(0).Trim)
+            dtpAJueves.Text = If(dgvHorarios.CurrentRow.Cells("JUEVES").Value.ToString.Trim.Length = 1, "00:00", dgvHorarios.CurrentRow.Cells("JUEVES").Value.ToString.Split("~")(1).Trim)
+            dtpDeViernes.Text = If(dgvHorarios.CurrentRow.Cells("VIERNES").Value.ToString.Trim.Length = 1, "00:00", dgvHorarios.CurrentRow.Cells("VIERNES").Value.ToString.Split("~")(0).Trim)
+            dtpAViernes.Text = If(dgvHorarios.CurrentRow.Cells("VIERNES").Value.ToString.Trim.Length = 1, "00:00", dgvHorarios.CurrentRow.Cells("VIERNES").Value.ToString.Split("~")(1).Trim)
+            dtpDeSabado.Text = If(dgvHorarios.CurrentRow.Cells("SABADO").Value.ToString.Trim.Length = 1, "00:00", dgvHorarios.CurrentRow.Cells("SABADO").Value.ToString.Split("~")(0).Trim)
+            dtpASabado.Text = If(dgvHorarios.CurrentRow.Cells("SABADO").Value.ToString.Trim.Length = 1, "00:00", dgvHorarios.CurrentRow.Cells("SABADO").Value.ToString.Split("~")(1).Trim)
+            dtpDeDomingo.Text = If(dgvHorarios.CurrentRow.Cells("DOMINGO").Value.ToString.Trim.Length = 1, "00:00", dgvHorarios.CurrentRow.Cells("DOMINGO").Value.ToString.Split("~")(0).Trim)
+            dtpADomingo.Text = If(dgvHorarios.CurrentRow.Cells("DOMINGO").Value.ToString.Trim.Length = 1, "00:00", dgvHorarios.CurrentRow.Cells("DOMINGO").Value.ToString.Split("~")(1).Trim)
+
+            txtHorasRegular.Text = dgvHorarios.CurrentRow.Cells("HORA_REGULAR").Value
+            txtRecargoNocturno.Text = dgvHorarios.CurrentRow.Cells("RECARGO_NOCTURNO").Value
+            txtHoras50.Text = dgvHorarios.CurrentRow.Cells("HORA_CINCUENTA").Value
+            txtHoras100.Text = dgvHorarios.CurrentRow.Cells("HORA_CIEN").Value
+            txtObservacion.Text = dgvHorarios.CurrentRow.Cells("OBSERVACION").Value
+
+            CmbTipo.SelectedIndex = dgvHorarios.CurrentRow.Cells("TIPO").Value
+            cbmCategoria.Text = dgvHorarios.CurrentRow.Cells("CATEGORIA").Value
+            txtTotalHoras.Text = dgvHorarios.CurrentRow.Cells("TOT_HORAS").Value
+
+            btnNuevo.Enabled = True ' nuevo
+            btnGuardar.Enabled = False ' guardar
+            btnModificar.Enabled = (CmbTipo.SelectedIndex = 1) ' actualizar
+            btnAnular.Enabled = True ' anular
+            btnCancelar.Enabled = False ' cancelar   
+        End Sub
     End Class
 End Namespace

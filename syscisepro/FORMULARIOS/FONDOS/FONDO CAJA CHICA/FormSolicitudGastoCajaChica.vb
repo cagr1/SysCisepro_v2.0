@@ -160,51 +160,17 @@ Namespace FORMULARIOS.FONDOS.FONDO_CAJA_CHICA
                 Case TipoConexion.Asenava
                     Icon = My.Resources.logo_a
                     MenuStrip1.ForeColor = Color.White
-                    'MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorAsenava
-                    'Label30.ForeColor = Color.White
-                    'Label30.BackColor = My.MySettingsProperty.Settings.ColorAsenava
-                    'Label3.ForeColor = Color.White
-                    'Label3.BackColor = My.MySettingsProperty.Settings.ColorAsenava
-                    'Label6.ForeColor = Color.White
-                    'Label6.BackColor = My.MySettingsProperty.Settings.ColorAsenava
-                    'lblMontoAsignado.ForeColor = Color.White
-                    'lblMontoAsignado.BackColor = My.MySettingsProperty.Settings.ColorAsenava
-                    'lblMontoCajaChica.ForeColor = Color.White
-                    'lblMontoCajaChica.BackColor = My.MySettingsProperty.Settings.ColorAsenava
-                    'lblMontoPorTransaccion.ForeColor = Color.White
-                    'lblMontoPorTransaccion.BackColor = My.MySettingsProperty.Settings.ColorAsenava
+
+
                 Case TipoConexion.Seportpac
                     Icon = My.Resources.logo_s
-                    'MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
                     MenuStrip1.ForeColor = Color.White
-                    'Label30.ForeColor = Color.White
-                    'Label30.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
-                    'Label3.ForeColor = Color.White
-                    'Label3.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
-                    'Label6.ForeColor = Color.White
-                    'Label6.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
-                    'lblMontoAsignado.ForeColor = Color.White
-                    'lblMontoAsignado.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
-                    'lblMontoCajaChica.ForeColor = Color.White
-                    'lblMontoCajaChica.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
-                    'lblMontoPorTransaccion.ForeColor = Color.White
-                    'lblMontoPorTransaccion.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
+
+
                 Case Else
                     Icon = My.Resources.logo_c
-                    'MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorCisepro
                     MenuStrip1.ForeColor = Color.White
-                    'Label30.ForeColor = Color.White
-                    'Label30.BackColor = My.MySettingsProperty.Settings.ColorCisepro
-                    'Label3.ForeColor = Color.White
-                    'Label3.BackColor = My.MySettingsProperty.Settings.ColorCisepro
-                    'Label6.ForeColor = Color.White
-                    'Label6.BackColor = My.MySettingsProperty.Settings.ColorCisepro
-                    'lblMontoAsignado.ForeColor = Color.White
-                    'lblMontoAsignado.BackColor = My.MySettingsProperty.Settings.ColorCisepro
-                    'lblMontoCajaChica.ForeColor = Color.White
-                    'lblMontoCajaChica.BackColor = My.MySettingsProperty.Settings.ColorCisepro
-                    'lblMontoPorTransaccion.ForeColor = Color.White
-                    'lblMontoPorTransaccion.BackColor = My.MySettingsProperty.Settings.ColorCisepro
+
             End Select
             _sqlCommands = New List(Of SqlCommand)
             AutocompletarNombreCliente()

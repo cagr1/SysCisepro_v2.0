@@ -26,21 +26,11 @@
             Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmSeleccionarHorario))
-            Me.Label1 = New System.Windows.Forms.Label()
             Me.txtParametrobusqueda = New System.Windows.Forms.TextBox()
             Me.dgvCustodios = New System.Windows.Forms.DataGridView()
+            Me.KryptonLabel1 = New Krypton.Toolkit.KryptonLabel()
             CType(Me.dgvCustodios, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.SuspendLayout()
-            '
-            'Label1
-            '
-            Me.Label1.AutoSize = True
-            Me.Label1.Font = New System.Drawing.Font("Calibri", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label1.Location = New System.Drawing.Point(3, 8)
-            Me.Label1.Name = "Label1"
-            Me.Label1.Size = New System.Drawing.Size(102, 14)
-            Me.Label1.TabIndex = 10
-            Me.Label1.Text = "BUSCAR HORARIO:"
             '
             'txtParametrobusqueda
             '
@@ -50,7 +40,7 @@
             Me.txtParametrobusqueda.ForeColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(123, Byte), Integer))
             Me.txtParametrobusqueda.Location = New System.Drawing.Point(111, 3)
             Me.txtParametrobusqueda.Name = "txtParametrobusqueda"
-            Me.txtParametrobusqueda.Size = New System.Drawing.Size(642, 23)
+            Me.txtParametrobusqueda.Size = New System.Drawing.Size(358, 23)
             Me.txtParametrobusqueda.TabIndex = 8
             '
             'dgvCustodios
@@ -61,7 +51,7 @@
             DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
             Me.dgvCustodios.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
             Me.dgvCustodios.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
-            Me.dgvCustodios.BackgroundColor = System.Drawing.Color.White
+            Me.dgvCustodios.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(185, Byte), Integer), CType(CType(206, Byte), Integer), CType(CType(230, Byte), Integer))
             Me.dgvCustodios.BorderStyle = System.Windows.Forms.BorderStyle.None
             Me.dgvCustodios.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
             Me.dgvCustodios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
@@ -83,12 +73,21 @@
             Me.dgvCustodios.Size = New System.Drawing.Size(752, 265)
             Me.dgvCustodios.TabIndex = 9
             '
+            'KryptonLabel1
+            '
+            Me.KryptonLabel1.Location = New System.Drawing.Point(1, 3)
+            Me.KryptonLabel1.Name = "KryptonLabel1"
+            Me.KryptonLabel1.Size = New System.Drawing.Size(91, 20)
+            Me.KryptonLabel1.TabIndex = 10
+            Me.KryptonLabel1.Values.Text = "Buscar Horario"
+            '
             'FrmSeleccionarHorario
             '
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+            Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(185, Byte), Integer), CType(CType(206, Byte), Integer), CType(CType(230, Byte), Integer))
             Me.ClientSize = New System.Drawing.Size(754, 294)
-            Me.Controls.Add(Me.Label1)
+            Me.Controls.Add(Me.KryptonLabel1)
             Me.Controls.Add(Me.txtParametrobusqueda)
             Me.Controls.Add(Me.dgvCustodios)
             Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
@@ -105,8 +104,8 @@
             Me.PerformLayout()
 
         End Sub
-        Friend WithEvents Label1 As System.Windows.Forms.Label
         Friend WithEvents txtParametrobusqueda As System.Windows.Forms.TextBox
         Friend WithEvents dgvCustodios As System.Windows.Forms.DataGridView
+        Friend WithEvents KryptonLabel1 As Krypton.Toolkit.KryptonLabel
     End Class
 End Namespace

@@ -13,6 +13,7 @@ using SysCisepro3.Datos;
 using SysCisepro3.Properties;
 using SysCisepro3.Reportes;
 using Krypton.Toolkit;
+using Microsoft.VisualBasic.Logging;
 
 namespace SysCisepro3.Administracion
 {
@@ -162,12 +163,17 @@ namespace SysCisepro3.Administracion
         {
             if (!ValidacionParametros())
             {
-                MessageBox.Show(@"Debe ingresar todos los datos para guardar!", "Mensaje del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //MessageBox.Show(@"Debe ingresar todos los datos para guardar!", "Mensaje del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                KryptonMessageBox.Show("Debe ingresar todos los datos para guardar! ", "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
                 return;
             }
 
-            if (MessageBox.Show(@"Desea guardar los cambios realizados?",
-                    "Mensaje del Sistema", MessageBoxButtons.YesNo, MessageBoxIcon.Question) !=
+            //if (MessageBox.Show(@"Desea guardar los cambios realizados?",
+            //        "Mensaje del Sistema", MessageBoxButtons.YesNo, MessageBoxIcon.Question) !=
+            //DialogResult.Yes) return;
+
+            if(KryptonMessageBox.Show("Desea guardar los cambios realizados ? ",
+                    "Mensaje del Sistema", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) !=
                 DialogResult.Yes) return;
 
             _sqlCommands.Clear();
@@ -189,8 +195,14 @@ namespace SysCisepro3.Administracion
                 HabilitarBotonesMenu(true, true, false, false);
                 CargarRoles();
                 CargarRolesPermiso();
+                KryptonMessageBox.Show((string)res[1], "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
             }
-            MessageBox.Show((string)res[1], "Mensaje del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            else
+            {
+                KryptonMessageBox.Show((string)res[1], "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+                return;
+            }
+            //MessageBox.Show((string)res[1], "Mensaje del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
 
         }
@@ -318,9 +330,13 @@ namespace SysCisepro3.Administracion
 
         private void gUARDARPERMISOSToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show(@"Desea guardar los cambios realizados?",
-                   "Mensaje del Sistema", MessageBoxButtons.YesNo, MessageBoxIcon.Question) !=
-               DialogResult.Yes) return;
+            //if (MessageBox.Show(@"Desea guardar los cambios realizados?",
+            //       "Mensaje del Sistema", MessageBoxButtons.YesNo, MessageBoxIcon.Question) !=
+            //   DialogResult.Yes) return;
+
+            if (KryptonMessageBox.Show("Desea guardar los cambios realizados ? ",
+                                   "Mensaje del Sistema", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) !=
+                                                  DialogResult.Yes) return;
 
             _sqlCommands.Clear();
             
@@ -349,16 +365,13 @@ namespace SysCisepro3.Administracion
                         }
                         else
                         {
-                            // Handle the case where the cell value cannot be interpreted as a boolean
-                            // For example, log an error or set a default value
+
                             _objPermisos.estado = false; // Set a default value
                         }
 
-
                         _objPermisos.fecha = Usuario.Now(TipoCon);
                         _sqlCommands.Add(_objPermisos.ModificarPermiso());
-
-                        
+                                          
                         
                     }
 
@@ -384,15 +397,22 @@ namespace SysCisepro3.Administracion
                     _estadoPermiso = 0;
                     CargarRolesPermiso();
                     HabilitarBotonesMenu2(false, true, false);
-                    
+                    KryptonMessageBox.Show((string)res[1], "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+
                 }
-                MessageBox.Show((string)res[1], "Mensaje del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                else
+                {
+                    KryptonMessageBox.Show((string)res[1], "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+                    return;
+                }
+                //MessageBox.Show((string)res[1], "Mensaje del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             }
             catch (Exception ex)
             {
                 dgvPermisos.DataSource = null;
-                MessageBox.Show(ex.Message);
+                //MessageBox.Show(ex.Message);
+                KryptonMessageBox.Show(ex.Message, "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
             }
 
         }

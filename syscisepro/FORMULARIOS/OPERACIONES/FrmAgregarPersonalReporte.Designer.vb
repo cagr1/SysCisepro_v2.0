@@ -103,9 +103,10 @@
             Me.txtCliente.BackColor = System.Drawing.Color.White
             Me.txtCliente.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtCliente.Enabled = False
+            Me.txtCliente.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtCliente.Location = New System.Drawing.Point(57, 95)
             Me.txtCliente.Name = "txtCliente"
-            Me.txtCliente.Size = New System.Drawing.Size(390, 20)
+            Me.txtCliente.Size = New System.Drawing.Size(390, 21)
             Me.txtCliente.TabIndex = 201
             '
             'bntPuesto
@@ -127,9 +128,10 @@
             Me.txtIdPuesto.BackColor = System.Drawing.Color.White
             Me.txtIdPuesto.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtIdPuesto.Enabled = False
+            Me.txtIdPuesto.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtIdPuesto.Location = New System.Drawing.Point(57, 62)
             Me.txtIdPuesto.Name = "txtIdPuesto"
-            Me.txtIdPuesto.Size = New System.Drawing.Size(37, 20)
+            Me.txtIdPuesto.Size = New System.Drawing.Size(37, 21)
             Me.txtIdPuesto.TabIndex = 28
             '
             'txtUbicacionPuesto
@@ -137,14 +139,16 @@
             Me.txtUbicacionPuesto.BackColor = System.Drawing.Color.White
             Me.txtUbicacionPuesto.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtUbicacionPuesto.Enabled = False
+            Me.txtUbicacionPuesto.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtUbicacionPuesto.Location = New System.Drawing.Point(190, 63)
             Me.txtUbicacionPuesto.Name = "txtUbicacionPuesto"
-            Me.txtUbicacionPuesto.Size = New System.Drawing.Size(390, 20)
+            Me.txtUbicacionPuesto.Size = New System.Drawing.Size(390, 21)
             Me.txtUbicacionPuesto.TabIndex = 0
             '
             'lblDiaNoche
             '
             Me.lblDiaNoche.AutoSize = True
+            Me.lblDiaNoche.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.lblDiaNoche.Location = New System.Drawing.Point(451, 187)
             Me.lblDiaNoche.Name = "lblDiaNoche"
             Me.lblDiaNoche.Size = New System.Drawing.Size(0, 13)
@@ -154,6 +158,7 @@
             'lblDias
             '
             Me.lblDias.AutoSize = True
+            Me.lblDias.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.lblDias.Location = New System.Drawing.Point(355, 179)
             Me.lblDias.Name = "lblDias"
             Me.lblDias.Size = New System.Drawing.Size(0, 13)
@@ -163,6 +168,7 @@
             'lblIdHorario
             '
             Me.lblIdHorario.AutoSize = True
+            Me.lblIdHorario.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.lblIdHorario.Location = New System.Drawing.Point(503, 204)
             Me.lblIdHorario.Name = "lblIdHorario"
             Me.lblIdHorario.Size = New System.Drawing.Size(0, 13)
@@ -187,22 +193,24 @@
             '
             Me.dtpADomingo.CustomFormat = "HH:mm"
             Me.dtpADomingo.Enabled = False
+            Me.dtpADomingo.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.dtpADomingo.Format = System.Windows.Forms.DateTimePickerFormat.Custom
             Me.dtpADomingo.Location = New System.Drawing.Point(605, 202)
             Me.dtpADomingo.Name = "dtpADomingo"
             Me.dtpADomingo.ShowUpDown = True
-            Me.dtpADomingo.Size = New System.Drawing.Size(61, 20)
+            Me.dtpADomingo.Size = New System.Drawing.Size(61, 21)
             Me.dtpADomingo.TabIndex = 42
             '
             'dtpDeDomingo
             '
             Me.dtpDeDomingo.CustomFormat = "HH:mm"
             Me.dtpDeDomingo.Enabled = False
+            Me.dtpDeDomingo.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.dtpDeDomingo.Format = System.Windows.Forms.DateTimePickerFormat.Custom
             Me.dtpDeDomingo.Location = New System.Drawing.Point(605, 181)
             Me.dtpDeDomingo.Name = "dtpDeDomingo"
             Me.dtpDeDomingo.ShowUpDown = True
-            Me.dtpDeDomingo.Size = New System.Drawing.Size(61, 20)
+            Me.dtpDeDomingo.Size = New System.Drawing.Size(61, 21)
             Me.dtpDeDomingo.TabIndex = 41
             '
             'chkDomingo
@@ -223,22 +231,24 @@
             '
             Me.dtpASabado.CustomFormat = "HH:mm"
             Me.dtpASabado.Enabled = False
+            Me.dtpASabado.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.dtpASabado.Format = System.Windows.Forms.DateTimePickerFormat.Custom
             Me.dtpASabado.Location = New System.Drawing.Point(517, 202)
             Me.dtpASabado.Name = "dtpASabado"
             Me.dtpASabado.ShowUpDown = True
-            Me.dtpASabado.Size = New System.Drawing.Size(61, 20)
+            Me.dtpASabado.Size = New System.Drawing.Size(61, 21)
             Me.dtpASabado.TabIndex = 37
             '
             'dtpDeSabado
             '
             Me.dtpDeSabado.CustomFormat = "HH:mm"
             Me.dtpDeSabado.Enabled = False
+            Me.dtpDeSabado.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.dtpDeSabado.Format = System.Windows.Forms.DateTimePickerFormat.Custom
             Me.dtpDeSabado.Location = New System.Drawing.Point(517, 181)
             Me.dtpDeSabado.Name = "dtpDeSabado"
             Me.dtpDeSabado.ShowUpDown = True
-            Me.dtpDeSabado.Size = New System.Drawing.Size(61, 20)
+            Me.dtpDeSabado.Size = New System.Drawing.Size(61, 21)
             Me.dtpDeSabado.TabIndex = 36
             '
             'chkSabado
@@ -259,22 +269,24 @@
             '
             Me.dtpAViernes.CustomFormat = "HH:mm"
             Me.dtpAViernes.Enabled = False
+            Me.dtpAViernes.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.dtpAViernes.Format = System.Windows.Forms.DateTimePickerFormat.Custom
             Me.dtpAViernes.Location = New System.Drawing.Point(429, 202)
             Me.dtpAViernes.Name = "dtpAViernes"
             Me.dtpAViernes.ShowUpDown = True
-            Me.dtpAViernes.Size = New System.Drawing.Size(61, 20)
+            Me.dtpAViernes.Size = New System.Drawing.Size(61, 21)
             Me.dtpAViernes.TabIndex = 32
             '
             'dtpDeViernes
             '
             Me.dtpDeViernes.CustomFormat = "HH:mm"
             Me.dtpDeViernes.Enabled = False
+            Me.dtpDeViernes.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.dtpDeViernes.Format = System.Windows.Forms.DateTimePickerFormat.Custom
             Me.dtpDeViernes.Location = New System.Drawing.Point(429, 181)
             Me.dtpDeViernes.Name = "dtpDeViernes"
             Me.dtpDeViernes.ShowUpDown = True
-            Me.dtpDeViernes.Size = New System.Drawing.Size(61, 20)
+            Me.dtpDeViernes.Size = New System.Drawing.Size(61, 21)
             Me.dtpDeViernes.TabIndex = 31
             '
             'chkViernes
@@ -295,22 +307,24 @@
             '
             Me.dtpAJueves.CustomFormat = "HH:mm"
             Me.dtpAJueves.Enabled = False
+            Me.dtpAJueves.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.dtpAJueves.Format = System.Windows.Forms.DateTimePickerFormat.Custom
             Me.dtpAJueves.Location = New System.Drawing.Point(339, 202)
             Me.dtpAJueves.Name = "dtpAJueves"
             Me.dtpAJueves.ShowUpDown = True
-            Me.dtpAJueves.Size = New System.Drawing.Size(61, 20)
+            Me.dtpAJueves.Size = New System.Drawing.Size(61, 21)
             Me.dtpAJueves.TabIndex = 27
             '
             'dtpDeJueves
             '
             Me.dtpDeJueves.CustomFormat = "HH:mm"
             Me.dtpDeJueves.Enabled = False
+            Me.dtpDeJueves.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.dtpDeJueves.Format = System.Windows.Forms.DateTimePickerFormat.Custom
             Me.dtpDeJueves.Location = New System.Drawing.Point(339, 181)
             Me.dtpDeJueves.Name = "dtpDeJueves"
             Me.dtpDeJueves.ShowUpDown = True
-            Me.dtpDeJueves.Size = New System.Drawing.Size(61, 20)
+            Me.dtpDeJueves.Size = New System.Drawing.Size(61, 21)
             Me.dtpDeJueves.TabIndex = 26
             '
             'chkJueves
@@ -331,22 +345,24 @@
             '
             Me.dtpAMiercoles.CustomFormat = "HH:mm"
             Me.dtpAMiercoles.Enabled = False
+            Me.dtpAMiercoles.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.dtpAMiercoles.Format = System.Windows.Forms.DateTimePickerFormat.Custom
             Me.dtpAMiercoles.Location = New System.Drawing.Point(247, 202)
             Me.dtpAMiercoles.Name = "dtpAMiercoles"
             Me.dtpAMiercoles.ShowUpDown = True
-            Me.dtpAMiercoles.Size = New System.Drawing.Size(61, 20)
+            Me.dtpAMiercoles.Size = New System.Drawing.Size(61, 21)
             Me.dtpAMiercoles.TabIndex = 22
             '
             'dtpDeMiercoles
             '
             Me.dtpDeMiercoles.CustomFormat = "HH:mm"
             Me.dtpDeMiercoles.Enabled = False
+            Me.dtpDeMiercoles.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.dtpDeMiercoles.Format = System.Windows.Forms.DateTimePickerFormat.Custom
             Me.dtpDeMiercoles.Location = New System.Drawing.Point(247, 181)
             Me.dtpDeMiercoles.Name = "dtpDeMiercoles"
             Me.dtpDeMiercoles.ShowUpDown = True
-            Me.dtpDeMiercoles.Size = New System.Drawing.Size(61, 20)
+            Me.dtpDeMiercoles.Size = New System.Drawing.Size(61, 21)
             Me.dtpDeMiercoles.TabIndex = 21
             '
             'chkMiercoles
@@ -367,22 +383,24 @@
             '
             Me.dtpAMartes.CustomFormat = "HH:mm"
             Me.dtpAMartes.Enabled = False
+            Me.dtpAMartes.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.dtpAMartes.Format = System.Windows.Forms.DateTimePickerFormat.Custom
             Me.dtpAMartes.Location = New System.Drawing.Point(159, 202)
             Me.dtpAMartes.Name = "dtpAMartes"
             Me.dtpAMartes.ShowUpDown = True
-            Me.dtpAMartes.Size = New System.Drawing.Size(61, 20)
+            Me.dtpAMartes.Size = New System.Drawing.Size(61, 21)
             Me.dtpAMartes.TabIndex = 17
             '
             'dtpDeMartes
             '
             Me.dtpDeMartes.CustomFormat = "HH:mm"
             Me.dtpDeMartes.Enabled = False
+            Me.dtpDeMartes.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.dtpDeMartes.Format = System.Windows.Forms.DateTimePickerFormat.Custom
             Me.dtpDeMartes.Location = New System.Drawing.Point(159, 181)
             Me.dtpDeMartes.Name = "dtpDeMartes"
             Me.dtpDeMartes.ShowUpDown = True
-            Me.dtpDeMartes.Size = New System.Drawing.Size(61, 20)
+            Me.dtpDeMartes.Size = New System.Drawing.Size(61, 21)
             Me.dtpDeMartes.TabIndex = 16
             '
             'chkMartes
@@ -403,22 +421,24 @@
             '
             Me.dtpALunes.CustomFormat = "HH:mm"
             Me.dtpALunes.Enabled = False
+            Me.dtpALunes.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.dtpALunes.Format = System.Windows.Forms.DateTimePickerFormat.Custom
             Me.dtpALunes.Location = New System.Drawing.Point(68, 202)
             Me.dtpALunes.Name = "dtpALunes"
             Me.dtpALunes.ShowUpDown = True
-            Me.dtpALunes.Size = New System.Drawing.Size(61, 20)
+            Me.dtpALunes.Size = New System.Drawing.Size(61, 21)
             Me.dtpALunes.TabIndex = 12
             '
             'dtpDeLunes
             '
             Me.dtpDeLunes.CustomFormat = "HH:mm"
             Me.dtpDeLunes.Enabled = False
+            Me.dtpDeLunes.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.dtpDeLunes.Format = System.Windows.Forms.DateTimePickerFormat.Custom
             Me.dtpDeLunes.Location = New System.Drawing.Point(68, 181)
             Me.dtpDeLunes.Name = "dtpDeLunes"
             Me.dtpDeLunes.ShowUpDown = True
-            Me.dtpDeLunes.Size = New System.Drawing.Size(61, 20)
+            Me.dtpDeLunes.Size = New System.Drawing.Size(61, 21)
             Me.dtpDeLunes.TabIndex = 11
             '
             'chkLunes
@@ -448,9 +468,10 @@
             Me.txtArea.BackColor = System.Drawing.Color.White
             Me.txtArea.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtArea.Enabled = False
+            Me.txtArea.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtArea.Location = New System.Drawing.Point(342, 31)
             Me.txtArea.Name = "txtArea"
-            Me.txtArea.Size = New System.Drawing.Size(238, 20)
+            Me.txtArea.Size = New System.Drawing.Size(238, 21)
             Me.txtArea.TabIndex = 197
             '
             'txtCargo
@@ -458,9 +479,10 @@
             Me.txtCargo.BackColor = System.Drawing.Color.White
             Me.txtCargo.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtCargo.Enabled = False
+            Me.txtCargo.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtCargo.Location = New System.Drawing.Point(57, 33)
             Me.txtCargo.Name = "txtCargo"
-            Me.txtCargo.Size = New System.Drawing.Size(225, 20)
+            Me.txtCargo.Size = New System.Drawing.Size(225, 21)
             Me.txtCargo.TabIndex = 195
             '
             'btnPersonal
@@ -482,9 +504,10 @@
             Me.txtIdPersonal.BackColor = System.Drawing.Color.White
             Me.txtIdPersonal.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtIdPersonal.Enabled = False
+            Me.txtIdPersonal.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtIdPersonal.Location = New System.Drawing.Point(57, 4)
             Me.txtIdPersonal.Name = "txtIdPersonal"
-            Me.txtIdPersonal.Size = New System.Drawing.Size(37, 20)
+            Me.txtIdPersonal.Size = New System.Drawing.Size(37, 21)
             Me.txtIdPersonal.TabIndex = 28
             '
             'txtPersonal
@@ -492,9 +515,10 @@
             Me.txtPersonal.BackColor = System.Drawing.Color.White
             Me.txtPersonal.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtPersonal.Enabled = False
+            Me.txtPersonal.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtPersonal.Location = New System.Drawing.Point(190, 5)
             Me.txtPersonal.Name = "txtPersonal"
-            Me.txtPersonal.Size = New System.Drawing.Size(390, 20)
+            Me.txtPersonal.Size = New System.Drawing.Size(390, 21)
             Me.txtPersonal.TabIndex = 0
             '
             'Button2

@@ -1511,10 +1511,11 @@ Namespace FORMULARIOS.OPERACIONES
                 For Each d As DataRow In vigia.Rows
                     dgvDecimo4.Rows.Add(d(0), d(1), d(2), d(3), d(4), d(6), d(7), d(8), d(9), d(10), String.Empty, d(11), d(12))
                 Next
-                lblCantidad4.Text = dgvDecimo3.RowCount & " REGISTROS EN TOTAL"
-            Catch
+                lblCantidad4.Text = dgvDecimo4.RowCount & " REGISTROS EN TOTAL"
+            Catch ex As Exception
                 dgvDecimo4.DataSource = Nothing
                 lblCantidad4.Text = "0 REGISTROS EN TOTAL"
+                KryptonMessageBox.Show("Hubo un problema al cargar datos 10MO4TO!" & vbNewLine & ex.Message.ToString(), "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
         End Sub
 
@@ -1523,8 +1524,8 @@ Namespace FORMULARIOS.OPERACIONES
                 _indices4.Clear()
                 btnAnt4.Tag = 0
                 btnSig4.Tag = 0
-                dgvDecimo4.Rows(0).Selected = True
-                dgvDecimo4.FirstDisplayedScrollingRowIndex = 0
+                'dgvDecimo4.Rows(0).Selected = True
+                'dgvDecimo4.FirstDisplayedScrollingRowIndex = 0
                 Return
             End If
 

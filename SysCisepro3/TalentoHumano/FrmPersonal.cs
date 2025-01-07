@@ -967,8 +967,14 @@ namespace SysCisepro3.TalentoHumano
                     CargarPersonal(txtFiltro.Text.Trim());
 
                     dgvPersonal_SelectionChanged(null, null);
+                    KryptonMessageBox.Show(res[1].ToString(), "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
                 }
-                KryptonMessageBox.Show((string)res[1], "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
+                else
+                {
+                    KryptonMessageBox.Show(res[1].ToString(), "Mensaje del sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error);
+                    return;
+                }
+                //KryptonMessageBox.Show((string)res[1], "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
             }
             else
                 KryptonMessageBox.Show(@"No se puede guardar debido a que no ha llenado todos los campos necesarios!",
