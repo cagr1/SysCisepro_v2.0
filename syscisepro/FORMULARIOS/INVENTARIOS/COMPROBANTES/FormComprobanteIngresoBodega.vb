@@ -23,6 +23,7 @@ Imports syscisepro.DATOS
 Imports syscisepro.FORMULARIOS.INVENTARIOS.PROCESO
 Imports Krypton.Toolkit
 Imports System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel
+'Imports DocumentFormat.OpenXml.Office2010.Excel
 
 
 Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
@@ -122,7 +123,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
             Select Case _tipoCon
                 Case TipoConexion.Asenava
                     Icon = My.Resources.logo_a
-                    MenuStrip1.ForeColor = Color.White
+                    'MenuStrip1.ForeColor = Color.White
                     'MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorAsenava
                     'Label14.ForeColor = Color.White
                     'Label14.BackColor = My.MySettingsProperty.Settings.ColorAsenava
@@ -132,7 +133,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                 Case TipoConexion.Seportpac
                     Icon = My.Resources.logo_s
                     'MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
-                    MenuStrip1.ForeColor = Color.White
+                    'MenuStrip1.ForeColor = Color.White
                     'Label14.ForeColor = Color.White
                     'Label14.BackColor = My.MySettingsProperty.Settings.ColorSeportpac
                     dgvSecuencial.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorSeportpac
@@ -141,7 +142,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                 Case Else
                     Icon = My.Resources.logo_c
                     'MenuStrip1.BackColor = My.MySettingsProperty.Settings.ColorCisepro
-                    MenuStrip1.ForeColor = Color.White
+                    'MenuStrip1.ForeColor = Color.White
                     'Label14.ForeColor = Color.White
                     'Label14.BackColor = My.MySettingsProperty.Settings.ColorCisepro
                     dgvSecuencial.DefaultCellStyle.SelectionBackColor = My.MySettingsProperty.Settings.ColorCisepro
@@ -154,7 +155,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
             _sqlCommands = New List(Of SqlCommand)
             Dim validation As New ValidationForms()
             validation.SetPlaceholder(txtFiltro, "Buscar por Sitio o Nombre")
-            Label14.Text = "0  REGISTRO(S) - TOTAL"
+            label14.Text = "0  REGISTRO(S) - TOTAL"
             'pbFoto.TabStop = False
         End Sub
         Private Sub tsmNuevo_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles tsmNuevo.Click
@@ -246,7 +247,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
             dgvComprobantesIngreso.Rows.Clear()
             dgvDetalleComprobate.DataSource = Nothing
             dgvDetalleComprobate.Rows.Clear()
-            Label14.Text = "0  REGISTRO(S) - TOTAL"
+            label14.Text = "0  REGISTRO(S) - TOTAL"
         End Sub
 
         Private Sub CargarBodegas()
@@ -773,10 +774,10 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
             End If
             Dim res = ComandosSql.ProcesarTransacciones(_tipoCon, _sqlCommands, nombreU)
             If res(0) Then
-                    txtNroComprobante.Text = _objCompIng.Id
-                    txtIdComprobante.Text = txtNroComprobante.Text
-                    tbComprobanteIngresoBodega.SelectedIndex = 2
-                    tsmNuevo.Enabled = True
+                txtNroComprobante.Text = _objCompIng.Id
+                txtIdComprobante.Text = txtNroComprobante.Text
+                tbComprobanteIngresoBodega.SelectedIndex = 2
+                tsmNuevo.Enabled = True
                     tsmGuardar.Enabled = False
                 tsmCancelar.Enabled = False
                 TmsEliminar.Enabled = False
@@ -1511,21 +1512,21 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                     If cmbBodega.SelectedValue = 1 Then
                         With _objDetalle
                             .IdDetalle = iddu
-                            .IdKardex = CType(dgvDetalleComprobate.Rows.Item(indice).Cells("NUMERO_KARDEX").Value.ToString.ToUpper, Int64)
+                            .IdKardex = CType(dgvDetalleComprobate.Rows.Item(indice).Cells(2).Value.ToString.ToUpper, Int64)
                             .IdDetalleKardex = _objDetalleKardex.Id
                             .ObservacionEstado = dgvDetalleComprobate.Rows.Item(indice).Cells("OBSERVACION").Value.ToString.ToUpper
-                            .Cantidad = CType(dgvDetalleComprobate.Rows.Item(indice).Cells("CANTIDAD").Value.ToString.ToUpper, Integer)
+                            .Cantidad = CType(dgvDetalleComprobate.Rows.Item(indice).Cells(4).Value.ToString.ToUpper, Integer)
                             .Estado = 1
                             .FechaRenovacion = dtpFecha.Value
                             .IdUniformes = _objEntrega.Id
-                            .ObservacionDetalle = dgvDetalleComprobate.Rows.Item(indice).Cells("DETALLES").Value.ToString.ToUpper
+                            .ObservacionDetalle = dgvDetalleComprobate.Rows.Item(indice).Cells("OBSERVACION_DETALLE").Value.ToString.ToUpper
                         End With
                         _sqlCommands.Add(_objDetalle.NuevoRegistroDetalleUniformesCommand())
                         iddu += 1
                     End If
 
-                    Dim IdDetKarIngreso As String = _objDetalleKardex.BuscarMayorIdDetalleKardexxIdKardex(_tipoCon, dgvDetalleComprobate.Rows(indice).Cells(2).Value)
-                    Dim UltimoMovimiento As DataTable = _objKardex.BuscarUltimoMoviminetoKardexXIdKardex(_tipoCon, dgvDetalleComprobate.Rows(indice).Cells(0).Value, IdDetKarIngreso)
+                    Dim IdDetKarEgreso As String = _objDetalleKardex.BuscarMayorIdDetalleKardexxIdKardex(_tipoCon, dgvDetalleComprobate.Rows(indice).Cells(2).Value)
+                    Dim UltimoMovimiento As DataTable = _objKardex.BuscarUltimoMoviminetoKardexXIdKardex(_tipoCon, dgvDetalleComprobate.Rows(indice).Cells(2).Value, IdDetKarEgreso)
 
                     With _objDetalleKardex
                         .Id = iddk
@@ -1534,19 +1535,76 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
                         .CantidadIngreso = 0.0
                         .ValorUnitarioIngreso = 0.0
                         .ValorTotalIngreso = 0.0
-                        .CantidadEgreso = CInt(dgvDetalleComprobate.Rows.Item(indice).Cells("CANTIDAD").Value.ToString.ToUpper)
-                        .ValorUnitarioEgreso = CDec(dgvDetalleComprobate.Rows.Item(indice).Cells("VALOR").Value.ToString.ToUpper)
-                        .ValorTotalEgreso = CDec(dgvDetalleComprobate.Rows.Item(indice).Cells("TOTAL").Value.ToString.ToUpper)
-                        .CantidadSaldo = dgvDetalleComprobate.Rows.Item(indice).Cells("SALDO").Value.ToString.ToUpper 'de CANTIDAD_SALDO a SALDO
-                        .ValorUnitarioSaldo = CDec(dgvDetalleComprobate.Rows.Item(indice).Cells("CANTIDAD_SALDO").Value.ToString.ToUpper) 'de VALOR_UNITARIO_SALDO a CANTIDAD_SALDO
-                        .ValorTotalSaldo = CDec(dgvDetalleComprobate.Rows.Item(indice).Cells("VALOR_UNITARIO_SALDO").Value.ToString.ToUpper) 'de SALDO a VALOR_UNITARIO_SALDO
-                        .Fecha = _objCompEgr.Fecha
-                        .IdKardex = CLng(dgvDetalleComprobate.Rows.Item(indice).Cells("NUMERO_KARDEX").Value.ToString.ToUpper)
+                        .CantidadEgreso = CInt(dgvDetalleComprobate.Rows.Item(indice).Cells(8).Value.ToString.ToUpper)
+                        .ValorUnitarioEgreso = CDec(CDbl(UltimoMovimiento.Rows(0)(14).ToString()))
+                        .ValorTotalEgreso = CDec(dgvDetalleComprobate.Rows(indice).Cells(9).Value) * CDec(dgvDetalleComprobate.Rows(indice).Cells(8).Value)
+                        .CantidadSaldo = CDbl(UltimoMovimiento.Rows(0)(5).ToString()) - CDbl(dgvDetalleComprobate.Rows(indice).Cells(8).Value) 'de CANTIDAD_SALDO a SALDO
+                        .ValorUnitarioSaldo = CDec(CDbl(UltimoMovimiento.Rows(0)(14).ToString())) 'de VALOR_UNITARIO_SALDO a CANTIDAD_SALDO
+                        .ValorTotalSaldo = CDbl(UltimoMovimiento.Rows(0)(5).ToString()) * (CDbl(UltimoMovimiento.Rows(0)(5).ToString()) - CDbl(dgvDetalleComprobate.Rows(indice).Cells(8).Value)) 'de SALDO a VALOR_UNITARIO_SALDO
+                        .Fecha = DateAndTime.Today
+                        .IdKardex = CLng(dgvDetalleComprobate.Rows(indice).Cells(2).Value)
                         .Estado = 1
                         .NroComprobante = _objCompEgr.Id
-                        cantidadPrendasLleva = dgvSecuencial.Rows.Item(indice).Cells("CANTIDAD").Value
+                        cantidadPrendasLleva = dgvDetalleComprobate.Rows(indice).Cells(8).Value
                     End With
                     _sqlCommands.Add(_objDetalleKardex.NuevoRegistroDetalleKardexCommand())
+
+                    With _objDetalleKardex
+                        .Id = dgvDetalleComprobate.Rows(indice).Cells(1).Value
+                    End With
+                    _sqlCommands.Add(_objDetalleKardex.AnularRegistroDetalleKardexCommand())
+
+                    With _objKardex
+                        .Id = CLng(dgvDetalleComprobate.Rows(indice).Cells(2).Value)
+                        .IdsecuencialItem = CLng(dgvDetalleComprobate.Rows(indice).Cells(16).Value)
+                        .Cantidad = CDbl(UltimoMovimiento.Rows(0)(5).ToString()) - CDbl(dgvDetalleComprobate.Rows(indice).Cells(8).Value) 'calcular aqui
+                        .Fecha = _objCompEgr.Fecha
+                        .Estado = 1
+                    End With
+                    _sqlCommands.Add(_objKardex.ModificarCantidadKardexCommand())
+
+                    If cmbBodega.SelectedValue = 1 Then
+                        With _objControl
+                            .IdControl = idcu
+                            .IdPersonal = If(txtRecibe.Tag Is Nothing, txtRecibe.Text.Split("-")(1).Trim(), CType(txtRecibe.Tag, Integer))
+                            .IdComprobante = _objCompIng.Id
+                            .Cantidad = cantidadPrendasLleva
+                            .Fecha = _objCompEgr.Fecha
+                            .IdActividad = 2
+                            .Estado = 1
+                            .IdDetalleKardex = _objDetalleKardex.Id
+                        End With
+                        _sqlCommands.Add(_objControl.NuevoRegistroControlUniformesCommand())
+                    End If
+
+                    With _objDetCompEgr
+                        .IdDetalle = idce
+                        .IdKardex = CLng(dgvDetalleComprobate.Rows(indice).Cells(2).Value)
+                        .IdDetalleKardex = _objDetalleKardex.Id
+                        .ObservacionCalidad = dgvDetalleComprobate.Rows(indice).Cells(6).Value.ToString.ToUpper
+                        .ObservacionDetalle = dgvDetalleComprobate.Rows(indice).Cells(7).Value.ToString.ToUpper & " RETORNO"
+                        .IdComprobante = _objCompEgr.Id
+                        .Estado = 1
+                    End With
+                    _sqlCommands.Add(_objDetCompEgr.NuevoRegistroDetalleComprobanteEgresoBodegaCommand())
+
+                    With _objDetalleEgresoPuesto
+                        .Id = idd
+                        .IdSitio = CInt(txtUbicacion.Tag)
+                        .IdDetalle = idce
+                        .Fecha = _objCompEgr.Fecha
+                        .Tipo = "EGRESO"
+                        .Estado = 1
+                        .Serie = dgvDetalleComprobate.Rows(indice).Cells(7).ToString()
+                    End With
+
+                    _sqlCommands.Add(_objDetalleEgresoPuesto.NuevoRegistroDetalleComprobanteEgresoSitioCommand())
+
+
+                    idd += 1
+                    idce += 1
+                    iddk += 1
+                    idcu += 1
 
 
 

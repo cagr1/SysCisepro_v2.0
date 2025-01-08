@@ -30,8 +30,6 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.tcBodega = new System.Windows.Forms.TabControl();
-            this.tpMantenimiento = new System.Windows.Forms.TabPage();
             this.msKardex = new System.Windows.Forms.MenuStrip();
             this.ToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmNuevo = new System.Windows.Forms.ToolStripMenuItem();
@@ -46,58 +44,25 @@
             this.txtIdPersonal = new System.Windows.Forms.TextBox();
             this.txtObservación = new System.Windows.Forms.TextBox();
             this.txtNombreBodega = new System.Windows.Forms.TextBox();
-            this.Label4 = new System.Windows.Forms.Label();
-            this.lblObservación = new System.Windows.Forms.Label();
-            this.lblTelefono = new System.Windows.Forms.Label();
             this.cbmUbicación = new System.Windows.Forms.ComboBox();
-            this.lblUbicación = new System.Windows.Forms.Label();
-            this.Label1 = new System.Windows.Forms.Label();
-            this.lblNombreBodega = new System.Windows.Forms.Label();
-            this.tpReporteBodega = new System.Windows.Forms.TabPage();
+            this.tcBodega = new ComponentFactory.Krypton.Navigator.KryptonNavigator();
+            this.kryptonPage1 = new ComponentFactory.Krypton.Navigator.KryptonPage();
+            this.kryptonPage2 = new ComponentFactory.Krypton.Navigator.KryptonPage();
+            this.kryptonLabel1 = new Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel2 = new Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel3 = new Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel4 = new Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel5 = new Krypton.Toolkit.KryptonLabel();
             this.crvBodegas = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
-            this.tcBodega.SuspendLayout();
-            this.tpMantenimiento.SuspendLayout();
             this.msKardex.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBodega)).BeginInit();
-            this.tpReporteBodega.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tcBodega)).BeginInit();
+            this.tcBodega.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonPage1)).BeginInit();
+            this.kryptonPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonPage2)).BeginInit();
+            this.kryptonPage2.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // tcBodega
-            // 
-            this.tcBodega.Controls.Add(this.tpMantenimiento);
-            this.tcBodega.Controls.Add(this.tpReporteBodega);
-            this.tcBodega.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tcBodega.Location = new System.Drawing.Point(3, 5);
-            this.tcBodega.Name = "tcBodega";
-            this.tcBodega.SelectedIndex = 0;
-            this.tcBodega.Size = new System.Drawing.Size(999, 533);
-            this.tcBodega.TabIndex = 1;
-            // 
-            // tpMantenimiento
-            // 
-            this.tpMantenimiento.Controls.Add(this.msKardex);
-            this.tpMantenimiento.Controls.Add(this.txtTelefono);
-            this.tpMantenimiento.Controls.Add(this.btnBuscarCustodio);
-            this.tpMantenimiento.Controls.Add(this.dgvBodega);
-            this.tpMantenimiento.Controls.Add(this.txtNombresPersonal);
-            this.tpMantenimiento.Controls.Add(this.txtIdPersonal);
-            this.tpMantenimiento.Controls.Add(this.txtObservación);
-            this.tpMantenimiento.Controls.Add(this.txtNombreBodega);
-            this.tpMantenimiento.Controls.Add(this.Label4);
-            this.tpMantenimiento.Controls.Add(this.lblObservación);
-            this.tpMantenimiento.Controls.Add(this.lblTelefono);
-            this.tpMantenimiento.Controls.Add(this.cbmUbicación);
-            this.tpMantenimiento.Controls.Add(this.lblUbicación);
-            this.tpMantenimiento.Controls.Add(this.Label1);
-            this.tpMantenimiento.Controls.Add(this.lblNombreBodega);
-            this.tpMantenimiento.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tpMantenimiento.Location = new System.Drawing.Point(4, 22);
-            this.tpMantenimiento.Name = "tpMantenimiento";
-            this.tpMantenimiento.Padding = new System.Windows.Forms.Padding(3);
-            this.tpMantenimiento.Size = new System.Drawing.Size(991, 507);
-            this.tpMantenimiento.TabIndex = 0;
-            this.tpMantenimiento.Text = "MANTENIMIENTO";
-            this.tpMantenimiento.UseVisualStyleBackColor = true;
             // 
             // msKardex
             // 
@@ -110,10 +75,10 @@
             this.tsmCancelar,
             this.ToolStripMenuItem2});
             this.msKardex.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow;
-            this.msKardex.Location = new System.Drawing.Point(3, 3);
+            this.msKardex.Location = new System.Drawing.Point(0, 0);
             this.msKardex.Name = "msKardex";
             this.msKardex.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
-            this.msKardex.Size = new System.Drawing.Size(985, 32);
+            this.msKardex.Size = new System.Drawing.Size(925, 32);
             this.msKardex.TabIndex = 179;
             this.msKardex.Text = "msIngresoBodega";
             // 
@@ -185,7 +150,7 @@
             this.txtTelefono.BackColor = System.Drawing.Color.White;
             this.txtTelefono.Enabled = false;
             this.txtTelefono.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTelefono.Location = new System.Drawing.Point(86, 99);
+            this.txtTelefono.Location = new System.Drawing.Point(76, 95);
             this.txtTelefono.Mask = "(99)0000-000";
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(100, 22);
@@ -193,7 +158,7 @@
             // 
             // btnBuscarCustodio
             // 
-            this.btnBuscarCustodio.BackColor = System.Drawing.Color.White;
+            this.btnBuscarCustodio.BackColor = System.Drawing.Color.Transparent;
             this.btnBuscarCustodio.Enabled = false;
             this.btnBuscarCustodio.FlatAppearance.BorderSize = 0;
             this.btnBuscarCustodio.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSteelBlue;
@@ -201,7 +166,7 @@
             this.btnBuscarCustodio.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscarCustodio.ForeColor = System.Drawing.Color.Black;
             this.btnBuscarCustodio.Image = global::SysCisepro3.Properties.Resources.search_24dp_FILL0_wght400_GRAD0_opsz24__2_;
-            this.btnBuscarCustodio.Location = new System.Drawing.Point(410, 69);
+            this.btnBuscarCustodio.Location = new System.Drawing.Point(407, 64);
             this.btnBuscarCustodio.Name = "btnBuscarCustodio";
             this.btnBuscarCustodio.Size = new System.Drawing.Size(26, 26);
             this.btnBuscarCustodio.TabIndex = 55;
@@ -215,25 +180,26 @@
             this.dgvBodega.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.dgvBodega.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvBodega.BackgroundColor = System.Drawing.Color.White;
+            this.dgvBodega.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
+            this.dgvBodega.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvBodega.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
             this.dgvBodega.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvBodega.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvBodega.GridColor = System.Drawing.Color.LightSteelBlue;
-            this.dgvBodega.Location = new System.Drawing.Point(3, 127);
+            this.dgvBodega.Location = new System.Drawing.Point(9, 128);
             this.dgvBodega.MultiSelect = false;
             this.dgvBodega.Name = "dgvBodega";
             this.dgvBodega.ReadOnly = true;
             this.dgvBodega.RowHeadersVisible = false;
             this.dgvBodega.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvBodega.Size = new System.Drawing.Size(985, 377);
+            this.dgvBodega.Size = new System.Drawing.Size(905, 304);
             this.dgvBodega.TabIndex = 54;
             this.dgvBodega.SelectionChanged += new System.EventHandler(this.dgvBodega_SelectionChanged);
             // 
@@ -243,7 +209,7 @@
             this.txtNombresPersonal.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtNombresPersonal.Enabled = false;
             this.txtNombresPersonal.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombresPersonal.Location = new System.Drawing.Point(86, 71);
+            this.txtNombresPersonal.Location = new System.Drawing.Point(76, 67);
             this.txtNombresPersonal.Name = "txtNombresPersonal";
             this.txtNombresPersonal.Size = new System.Drawing.Size(324, 22);
             this.txtNombresPersonal.TabIndex = 40;
@@ -254,7 +220,7 @@
             this.txtIdPersonal.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtIdPersonal.Enabled = false;
             this.txtIdPersonal.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIdPersonal.Location = new System.Drawing.Point(86, 71);
+            this.txtIdPersonal.Location = new System.Drawing.Point(265, 67);
             this.txtIdPersonal.Name = "txtIdPersonal";
             this.txtIdPersonal.Size = new System.Drawing.Size(44, 22);
             this.txtIdPersonal.TabIndex = 39;
@@ -267,10 +233,10 @@
             this.txtObservación.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtObservación.Enabled = false;
             this.txtObservación.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtObservación.Location = new System.Drawing.Point(583, 73);
+            this.txtObservación.Location = new System.Drawing.Point(530, 65);
             this.txtObservación.Multiline = true;
             this.txtObservación.Name = "txtObservación";
-            this.txtObservación.Size = new System.Drawing.Size(361, 48);
+            this.txtObservación.Size = new System.Drawing.Size(347, 24);
             this.txtObservación.TabIndex = 37;
             // 
             // txtNombreBodega
@@ -279,112 +245,137 @@
             this.txtNombreBodega.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtNombreBodega.Enabled = false;
             this.txtNombreBodega.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombreBodega.Location = new System.Drawing.Point(86, 43);
+            this.txtNombreBodega.Location = new System.Drawing.Point(76, 39);
             this.txtNombreBodega.Name = "txtNombreBodega";
-            this.txtNombreBodega.Size = new System.Drawing.Size(355, 22);
+            this.txtNombreBodega.Size = new System.Drawing.Size(324, 22);
             this.txtNombreBodega.TabIndex = 29;
-            // 
-            // Label4
-            // 
-            this.Label4.AutoSize = true;
-            this.Label4.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label4.Location = new System.Drawing.Point(15, 74);
-            this.Label4.Name = "Label4";
-            this.Label4.Size = new System.Drawing.Size(65, 13);
-            this.Label4.TabIndex = 38;
-            this.Label4.Text = "CUSTODIO:";
-            // 
-            // lblObservación
-            // 
-            this.lblObservación.AutoSize = true;
-            this.lblObservación.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblObservación.Location = new System.Drawing.Point(491, 76);
-            this.lblObservación.Name = "lblObservación";
-            this.lblObservación.Size = new System.Drawing.Size(84, 13);
-            this.lblObservación.TabIndex = 36;
-            this.lblObservación.Text = "OBSERVACIÓN:";
-            // 
-            // lblTelefono
-            // 
-            this.lblTelefono.AutoSize = true;
-            this.lblTelefono.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTelefono.Location = new System.Drawing.Point(15, 102);
-            this.lblTelefono.Name = "lblTelefono";
-            this.lblTelefono.Size = new System.Drawing.Size(65, 13);
-            this.lblTelefono.TabIndex = 34;
-            this.lblTelefono.Text = "TELÉFONO:";
             // 
             // cbmUbicación
             // 
             this.cbmUbicación.BackColor = System.Drawing.Color.White;
             this.cbmUbicación.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbmUbicación.Enabled = false;
-            this.cbmUbicación.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbmUbicación.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbmUbicación.FormattingEnabled = true;
-            this.cbmUbicación.Location = new System.Drawing.Point(583, 43);
+            this.cbmUbicación.Location = new System.Drawing.Point(530, 38);
             this.cbmUbicación.Name = "cbmUbicación";
-            this.cbmUbicación.Size = new System.Drawing.Size(361, 21);
+            this.cbmUbicación.Size = new System.Drawing.Size(347, 21);
             this.cbmUbicación.TabIndex = 32;
             // 
-            // lblUbicación
+            // tcBodega
             // 
-            this.lblUbicación.AutoSize = true;
-            this.lblUbicación.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUbicación.Location = new System.Drawing.Point(491, 46);
-            this.lblUbicación.Name = "lblUbicación";
-            this.lblUbicación.Size = new System.Drawing.Size(68, 13);
-            this.lblUbicación.TabIndex = 31;
-            this.lblUbicación.Text = "UBICACIÓN:";
+            this.tcBodega.Button.ButtonDisplayLogic = ComponentFactory.Krypton.Navigator.ButtonDisplayLogic.None;
+            this.tcBodega.Button.CloseButtonDisplay = ComponentFactory.Krypton.Navigator.ButtonDisplay.Hide;
+            this.tcBodega.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tcBodega.Location = new System.Drawing.Point(0, 0);
+            this.tcBodega.Name = "tcBodega";
+            this.tcBodega.Pages.AddRange(new ComponentFactory.Krypton.Navigator.KryptonPage[] {
+            this.kryptonPage1,
+            this.kryptonPage2});
+            this.tcBodega.SelectedIndex = 0;
+            this.tcBodega.Size = new System.Drawing.Size(927, 475);
+            this.tcBodega.StateNormal.Page.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
+            this.tcBodega.TabIndex = 2;
+            this.tcBodega.Text = "kryptonNavigator1";
             // 
-            // Label1
+            // kryptonPage1
             // 
-            this.Label1.AutoSize = true;
-            this.Label1.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label1.Location = new System.Drawing.Point(3, 123);
-            this.Label1.Name = "Label1";
-            this.Label1.Size = new System.Drawing.Size(0, 13);
-            this.Label1.TabIndex = 30;
+            this.kryptonPage1.AutoHiddenSlideSize = new System.Drawing.Size(200, 200);
+            this.kryptonPage1.Controls.Add(this.kryptonLabel5);
+            this.kryptonPage1.Controls.Add(this.dgvBodega);
+            this.kryptonPage1.Controls.Add(this.txtTelefono);
+            this.kryptonPage1.Controls.Add(this.kryptonLabel4);
+            this.kryptonPage1.Controls.Add(this.kryptonLabel3);
+            this.kryptonPage1.Controls.Add(this.kryptonLabel2);
+            this.kryptonPage1.Controls.Add(this.kryptonLabel1);
+            this.kryptonPage1.Controls.Add(this.txtObservación);
+            this.kryptonPage1.Controls.Add(this.btnBuscarCustodio);
+            this.kryptonPage1.Controls.Add(this.msKardex);
+            this.kryptonPage1.Controls.Add(this.txtNombreBodega);
+            this.kryptonPage1.Controls.Add(this.txtNombresPersonal);
+            this.kryptonPage1.Controls.Add(this.cbmUbicación);
+            this.kryptonPage1.Controls.Add(this.txtIdPersonal);
+            this.kryptonPage1.Flags = 65534;
+            this.kryptonPage1.LastVisibleSet = true;
+            this.kryptonPage1.MinimumSize = new System.Drawing.Size(50, 50);
+            this.kryptonPage1.Name = "kryptonPage1";
+            this.kryptonPage1.Size = new System.Drawing.Size(925, 448);
+            this.kryptonPage1.Text = "Mantenimiento";
+            this.kryptonPage1.ToolTipTitle = "Page ToolTip";
+            this.kryptonPage1.UniqueName = "F8A390BEFCE04F1B408009AB155EA7CA";
             // 
-            // lblNombreBodega
+            // kryptonPage2
             // 
-            this.lblNombreBodega.AutoSize = true;
-            this.lblNombreBodega.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombreBodega.Location = new System.Drawing.Point(15, 46);
-            this.lblNombreBodega.Name = "lblNombreBodega";
-            this.lblNombreBodega.Size = new System.Drawing.Size(56, 13);
-            this.lblNombreBodega.TabIndex = 28;
-            this.lblNombreBodega.Text = "NOMBRE:";
+            this.kryptonPage2.AutoHiddenSlideSize = new System.Drawing.Size(200, 200);
+            this.kryptonPage2.Controls.Add(this.crvBodegas);
+            this.kryptonPage2.Flags = 65534;
+            this.kryptonPage2.LastVisibleSet = true;
+            this.kryptonPage2.MinimumSize = new System.Drawing.Size(50, 50);
+            this.kryptonPage2.Name = "kryptonPage2";
+            this.kryptonPage2.Size = new System.Drawing.Size(949, 209);
+            this.kryptonPage2.Text = "Reporte";
+            this.kryptonPage2.ToolTipTitle = "Page ToolTip";
+            this.kryptonPage2.UniqueName = "5F728D65400A4EA2C4A34798F65448A5";
             // 
-            // tpReporteBodega
+            // kryptonLabel1
             // 
-            this.tpReporteBodega.Controls.Add(this.crvBodegas);
-            this.tpReporteBodega.Location = new System.Drawing.Point(4, 22);
-            this.tpReporteBodega.Name = "tpReporteBodega";
-            this.tpReporteBodega.Padding = new System.Windows.Forms.Padding(3);
-            this.tpReporteBodega.Size = new System.Drawing.Size(991, 507);
-            this.tpReporteBodega.TabIndex = 1;
-            this.tpReporteBodega.Text = "REPORTE";
-            this.tpReporteBodega.UseVisualStyleBackColor = true;
+            this.kryptonLabel1.Location = new System.Drawing.Point(14, 39);
+            this.kryptonLabel1.Name = "kryptonLabel1";
+            this.kryptonLabel1.Size = new System.Drawing.Size(56, 20);
+            this.kryptonLabel1.TabIndex = 180;
+            this.kryptonLabel1.Values.Text = "Nombre";
+            // 
+            // kryptonLabel2
+            // 
+            this.kryptonLabel2.Location = new System.Drawing.Point(14, 65);
+            this.kryptonLabel2.Name = "kryptonLabel2";
+            this.kryptonLabel2.Size = new System.Drawing.Size(59, 20);
+            this.kryptonLabel2.TabIndex = 181;
+            this.kryptonLabel2.Values.Text = "Custodio";
+            // 
+            // kryptonLabel3
+            // 
+            this.kryptonLabel3.Location = new System.Drawing.Point(446, 39);
+            this.kryptonLabel3.Name = "kryptonLabel3";
+            this.kryptonLabel3.Size = new System.Drawing.Size(64, 20);
+            this.kryptonLabel3.TabIndex = 182;
+            this.kryptonLabel3.Values.Text = "Ubicacion";
+            // 
+            // kryptonLabel4
+            // 
+            this.kryptonLabel4.Location = new System.Drawing.Point(446, 65);
+            this.kryptonLabel4.Name = "kryptonLabel4";
+            this.kryptonLabel4.Size = new System.Drawing.Size(78, 20);
+            this.kryptonLabel4.TabIndex = 183;
+            this.kryptonLabel4.Values.Text = "Observacion";
+            // 
+            // kryptonLabel5
+            // 
+            this.kryptonLabel5.Location = new System.Drawing.Point(14, 91);
+            this.kryptonLabel5.Name = "kryptonLabel5";
+            this.kryptonLabel5.Size = new System.Drawing.Size(58, 20);
+            this.kryptonLabel5.TabIndex = 184;
+            this.kryptonLabel5.Values.Text = "Telefono";
             // 
             // crvBodegas
             // 
             this.crvBodegas.ActiveViewIndex = -1;
-            this.crvBodegas.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.crvBodegas.Cursor = System.Windows.Forms.Cursors.Default;
             this.crvBodegas.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.crvBodegas.Location = new System.Drawing.Point(3, 3);
+            this.crvBodegas.Location = new System.Drawing.Point(0, 0);
             this.crvBodegas.Name = "crvBodegas";
-            this.crvBodegas.Size = new System.Drawing.Size(985, 501);
-            this.crvBodegas.TabIndex = 1;
+            this.crvBodegas.ShowCloseButton = false;
+            this.crvBodegas.ShowLogo = false;
+            this.crvBodegas.Size = new System.Drawing.Size(949, 209);
+            this.crvBodegas.TabIndex = 2;
             this.crvBodegas.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None;
             // 
             // FrmBodega
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1003, 541);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(206)))), ((int)(((byte)(230)))));
+            this.ClientSize = new System.Drawing.Size(927, 475);
             this.Controls.Add(this.tcBodega);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "FrmBodega";
@@ -395,21 +386,21 @@
             this.StateActive.Border.Rounding = 5F;
             this.Text = "REGISTRO BODEGAS";
             this.Load += new System.EventHandler(this.FrmBodega_Load);
-            this.tcBodega.ResumeLayout(false);
-            this.tpMantenimiento.ResumeLayout(false);
-            this.tpMantenimiento.PerformLayout();
             this.msKardex.ResumeLayout(false);
             this.msKardex.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBodega)).EndInit();
-            this.tpReporteBodega.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.tcBodega)).EndInit();
+            this.tcBodega.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonPage1)).EndInit();
+            this.kryptonPage1.ResumeLayout(false);
+            this.kryptonPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonPage2)).EndInit();
+            this.kryptonPage2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        internal System.Windows.Forms.TabControl tcBodega;
-        internal System.Windows.Forms.TabPage tpMantenimiento;
         internal System.Windows.Forms.MenuStrip msKardex;
         internal System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem1;
         internal System.Windows.Forms.ToolStripMenuItem tsmNuevo;
@@ -424,14 +415,15 @@
         internal System.Windows.Forms.TextBox txtIdPersonal;
         internal System.Windows.Forms.TextBox txtObservación;
         internal System.Windows.Forms.TextBox txtNombreBodega;
-        internal System.Windows.Forms.Label Label4;
-        internal System.Windows.Forms.Label lblObservación;
-        internal System.Windows.Forms.Label lblTelefono;
         internal System.Windows.Forms.ComboBox cbmUbicación;
-        internal System.Windows.Forms.Label lblUbicación;
-        internal System.Windows.Forms.Label Label1;
-        internal System.Windows.Forms.Label lblNombreBodega;
-        internal System.Windows.Forms.TabPage tpReporteBodega;
+        private ComponentFactory.Krypton.Navigator.KryptonNavigator tcBodega;
+        private ComponentFactory.Krypton.Navigator.KryptonPage kryptonPage1;
+        private Krypton.Toolkit.KryptonLabel kryptonLabel2;
+        private Krypton.Toolkit.KryptonLabel kryptonLabel1;
+        private ComponentFactory.Krypton.Navigator.KryptonPage kryptonPage2;
+        private Krypton.Toolkit.KryptonLabel kryptonLabel5;
+        private Krypton.Toolkit.KryptonLabel kryptonLabel4;
+        private Krypton.Toolkit.KryptonLabel kryptonLabel3;
         internal CrystalDecisions.Windows.Forms.CrystalReportViewer crvBodegas;
     }
 }

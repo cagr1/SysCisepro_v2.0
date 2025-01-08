@@ -1585,7 +1585,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
 
 
                     Dim IdDetKarIngreso As String = _objDetalleKardex.BuscarMayorIdDetalleKardexxIdKardex(_tipoCon, dgvDetalleComprobate.Rows(indice).Cells(2).Value)
-                    Dim UltimoMovimiento As DataTable = _objKardex.BuscarUltimoMoviminetoKardexXIdKardex(_tipoCon, dgvDetalleComprobanteIngreso.Rows(indice).Cells(0).Value, IdDetKarIngreso)
+                    Dim UltimoMovimiento As DataTable = _objKardex.BuscarUltimoMoviminetoKardexXIdKardex(_tipoCon, dgvDetalleComprobanteIngreso.Rows(indice).Cells(2).Value, IdDetKarIngreso)
 
                     If Not (Convert.ToInt32(dgvDetalleComprobate.Rows(indice).Cells(2).Value) = 0) Then
                         With _objDetalleKardex
@@ -1611,7 +1611,7 @@ Namespace FORMULARIOS.INVENTARIOS.COMPROBANTES
 
 
                         With _objDetalleKardex
-                            .Id = dgvDetalleComprobate.Rows(indice).Cells(8).Value
+                            .Id = dgvDetalleComprobate.Rows(indice).Cells(1).Value
                         End With
                         _sqlCommands.Add(_objDetalleKardex.AnularRegistroDetalleKardexCommand())
 
