@@ -30,9 +30,8 @@ namespace SysCisepro3.Operaciones
         {
             // CARGAR ICONO Y DESIEÑO SEGUN SISTEMA 
             BackColor = ValidationForms.GetColorSistema(TipoCon);
-            Label1.ForeColor = Color.White;
-            Label2.ForeColor = Color.White;
-            Label3.ForeColor = Color.White;
+            
+            
             switch (TipoCon)
             {
                 case TipoConexion.Seportpac:

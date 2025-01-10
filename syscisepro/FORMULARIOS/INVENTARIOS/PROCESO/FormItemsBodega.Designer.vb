@@ -100,13 +100,13 @@
             '
             'MenuStrip2
             '
+            Me.MenuStrip2.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.MenuStrip2.Font = New System.Drawing.Font("Segoe UI", 9.0!)
             Me.MenuStrip2.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnNuevoSubGrupo, Me.btnGuardarSubGrupo, Me.btnCancelarSubGrupo, Me.btnExportarSubGrupo})
             Me.MenuStrip2.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow
             Me.MenuStrip2.Location = New System.Drawing.Point(0, 0)
             Me.MenuStrip2.Name = "MenuStrip2"
             Me.MenuStrip2.Padding = New System.Windows.Forms.Padding(7, 2, 0, 2)
-            Me.MenuStrip2.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
             Me.MenuStrip2.Size = New System.Drawing.Size(560, 32)
             Me.MenuStrip2.TabIndex = 182
             Me.MenuStrip2.Text = "msIngresoBodega"
@@ -242,13 +242,13 @@
             '
             'MenuStrip1
             '
+            Me.MenuStrip1.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.MenuStrip1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
             Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnNuevoGrupo, Me.btnGuardarGrupo, Me.btnCancelarGrupo, Me.btnExportarGrupos})
             Me.MenuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow
             Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
             Me.MenuStrip1.Name = "MenuStrip1"
             Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(7, 2, 0, 2)
-            Me.MenuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
             Me.MenuStrip1.Size = New System.Drawing.Size(560, 32)
             Me.MenuStrip1.TabIndex = 181
             Me.MenuStrip1.Text = "msIngresoBodega"
@@ -379,13 +379,13 @@
             '
             'msKardex
             '
+            Me.msKardex.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.msKardex.Font = New System.Drawing.Font("Segoe UI", 9.0!)
             Me.msKardex.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnNuevoCategoría, Me.btnGuardarCategoría, Me.btnCancelarCategoría, Me.btnExportar})
             Me.msKardex.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow
             Me.msKardex.Location = New System.Drawing.Point(0, 0)
             Me.msKardex.Name = "msKardex"
             Me.msKardex.Padding = New System.Windows.Forms.Padding(7, 2, 0, 2)
-            Me.msKardex.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
             Me.msKardex.Size = New System.Drawing.Size(393, 32)
             Me.msKardex.TabIndex = 180
             Me.msKardex.Text = "msIngresoBodega"

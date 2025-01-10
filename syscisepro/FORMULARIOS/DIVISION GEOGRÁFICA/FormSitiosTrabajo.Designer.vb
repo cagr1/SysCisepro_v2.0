@@ -546,6 +546,7 @@
             'cbmGrupo
             '
             Me.cbmGrupo.BackColor = System.Drawing.Color.White
+            Me.cbmGrupo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cbmGrupo.DropDownWidth = 300
             Me.cbmGrupo.Enabled = False
             Me.cbmGrupo.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))

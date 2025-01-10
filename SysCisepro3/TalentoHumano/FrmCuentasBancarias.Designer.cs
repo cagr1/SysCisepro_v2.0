@@ -251,7 +251,6 @@
             this.cbxBanco.BackColor = System.Drawing.Color.White;
             this.cbxBanco.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxBanco.Enabled = false;
-            this.cbxBanco.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbxBanco.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxBanco.FormattingEnabled = true;
             this.cbxBanco.Location = new System.Drawing.Point(59, 56);

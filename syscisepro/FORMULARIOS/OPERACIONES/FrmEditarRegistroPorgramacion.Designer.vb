@@ -210,6 +210,7 @@
             Me.Button1.DialogResult = System.Windows.Forms.DialogResult.Cancel
             Me.Button1.FlatAppearance.BorderSize = 0
             Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+            Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Button1.ForeColor = System.Drawing.Color.White
             Me.Button1.Location = New System.Drawing.Point(495, 266)
             Me.Button1.Name = "Button1"

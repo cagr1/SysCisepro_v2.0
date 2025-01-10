@@ -2488,8 +2488,12 @@ namespace SysCisepro3.TalentoHumano
                 _indices.Clear();
                 btnAnt.Tag = 0;
                 btnSig.Tag = 0;
-                dgvDetallesRol.Rows[0].Selected = true;
-                dgvDetallesRol.FirstDisplayedScrollingRowIndex = 0;
+                if (dgvDetallesRol.RowCount > 0)
+                {
+                    dgvDetallesRol.Rows[0].Selected = true;
+                    dgvDetallesRol.FirstDisplayedScrollingRowIndex = 0;
+                }
+                Label16.Text = String.Empty;
                 return;
             }
 

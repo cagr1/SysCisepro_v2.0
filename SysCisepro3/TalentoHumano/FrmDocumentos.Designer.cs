@@ -72,9 +72,11 @@
             // CheckBox4
             // 
             this.CheckBox4.AutoSize = true;
+            this.CheckBox4.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CheckBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
             this.CheckBox4.Location = new System.Drawing.Point(12, 74);
             this.CheckBox4.Name = "CheckBox4";
-            this.CheckBox4.Size = new System.Drawing.Size(284, 17);
+            this.CheckBox4.Size = new System.Drawing.Size(277, 17);
             this.CheckBox4.TabIndex = 115;
             this.CheckBox4.Tag = "4";
             this.CheckBox4.Text = "SOLICITUD DE EMPLEO COMPLETAMENTE LLENA";
@@ -83,30 +85,42 @@
             // 
             // Button2
             // 
-            this.Button2.Location = new System.Drawing.Point(480, 267);
+            this.Button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(166)))), ((int)(((byte)(79)))));
+            this.Button2.FlatAppearance.BorderSize = 0;
+            this.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Button2.ForeColor = System.Drawing.Color.White;
+            this.Button2.Location = new System.Drawing.Point(464, 293);
             this.Button2.Name = "Button2";
-            this.Button2.Size = new System.Drawing.Size(75, 23);
+            this.Button2.Size = new System.Drawing.Size(89, 34);
             this.Button2.TabIndex = 114;
             this.Button2.Text = "ACEPTAR";
-            this.Button2.UseVisualStyleBackColor = true;
+            this.Button2.UseVisualStyleBackColor = false;
             this.Button2.Click += new System.EventHandler(this.Button2_Click);
             // 
             // Button1
             // 
+            this.Button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(62)))), ((int)(((byte)(58)))));
             this.Button1.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.Button1.Location = new System.Drawing.Point(399, 267);
+            this.Button1.FlatAppearance.BorderSize = 0;
+            this.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Button1.ForeColor = System.Drawing.Color.White;
+            this.Button1.Location = new System.Drawing.Point(369, 293);
             this.Button1.Name = "Button1";
-            this.Button1.Size = new System.Drawing.Size(75, 23);
+            this.Button1.Size = new System.Drawing.Size(89, 34);
             this.Button1.TabIndex = 113;
             this.Button1.Text = "CANCELAR";
-            this.Button1.UseVisualStyleBackColor = true;
+            this.Button1.UseVisualStyleBackColor = false;
             // 
             // CheckBox12
             // 
             this.CheckBox12.AutoSize = true;
+            this.CheckBox12.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CheckBox12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
             this.CheckBox12.Location = new System.Drawing.Point(12, 242);
             this.CheckBox12.Name = "CheckBox12";
-            this.CheckBox12.Size = new System.Drawing.Size(254, 17);
+            this.CheckBox12.Size = new System.Drawing.Size(244, 17);
             this.CheckBox12.TabIndex = 112;
             this.CheckBox12.Tag = "12";
             this.CheckBox12.Text = "CERT. MÉDICO APTITUD PREOCUPACIONAL";
@@ -116,9 +130,11 @@
             // CheckBox11
             // 
             this.CheckBox11.AutoSize = true;
+            this.CheckBox11.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CheckBox11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
             this.CheckBox11.Location = new System.Drawing.Point(12, 221);
             this.CheckBox11.Name = "CheckBox11";
-            this.CheckBox11.Size = new System.Drawing.Size(276, 17);
+            this.CheckBox11.Size = new System.Drawing.Size(271, 17);
             this.CheckBox11.TabIndex = 111;
             this.CheckBox11.Tag = "11";
             this.CheckBox11.Text = "EXÁMENES MÉDICOS SOLICITADOS POR LA CÍA.";
@@ -128,9 +144,11 @@
             // CheckBox10
             // 
             this.CheckBox10.AutoSize = true;
+            this.CheckBox10.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CheckBox10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
             this.CheckBox10.Location = new System.Drawing.Point(12, 200);
             this.CheckBox10.Name = "CheckBox10";
-            this.CheckBox10.Size = new System.Drawing.Size(306, 17);
+            this.CheckBox10.Size = new System.Drawing.Size(301, 17);
             this.CheckBox10.TabIndex = 110;
             this.CheckBox10.Tag = "10";
             this.CheckBox10.Text = "AFIS (REGISTRO DE IDENTIFICACIÓN FÍSICA HUMANA)";
@@ -140,9 +158,11 @@
             // CheckBox9
             // 
             this.CheckBox9.AutoSize = true;
+            this.CheckBox9.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CheckBox9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
             this.CheckBox9.Location = new System.Drawing.Point(12, 179);
             this.CheckBox9.Name = "CheckBox9";
-            this.CheckBox9.Size = new System.Drawing.Size(177, 17);
+            this.CheckBox9.Size = new System.Drawing.Size(175, 17);
             this.CheckBox9.TabIndex = 109;
             this.CheckBox9.Tag = "9";
             this.CheckBox9.Text = "PARTIDA NACIMIENTO HIJOS";
@@ -152,9 +172,11 @@
             // CheckBox8
             // 
             this.CheckBox8.AutoSize = true;
+            this.CheckBox8.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CheckBox8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
             this.CheckBox8.Location = new System.Drawing.Point(12, 158);
             this.CheckBox8.Name = "CheckBox8";
-            this.CheckBox8.Size = new System.Drawing.Size(210, 17);
+            this.CheckBox8.Size = new System.Drawing.Size(207, 17);
             this.CheckBox8.TabIndex = 108;
             this.CheckBox8.Tag = "8";
             this.CheckBox8.Text = "ACTA MATRIMONIO O UNIÓN LIBRE";
@@ -164,6 +186,8 @@
             // CheckBox7
             // 
             this.CheckBox7.AutoSize = true;
+            this.CheckBox7.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CheckBox7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
             this.CheckBox7.Location = new System.Drawing.Point(12, 137);
             this.CheckBox7.Name = "CheckBox7";
             this.CheckBox7.Size = new System.Drawing.Size(178, 17);
@@ -176,9 +200,11 @@
             // CheckBox6
             // 
             this.CheckBox6.AutoSize = true;
+            this.CheckBox6.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CheckBox6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
             this.CheckBox6.Location = new System.Drawing.Point(12, 117);
             this.CheckBox6.Name = "CheckBox6";
-            this.CheckBox6.Size = new System.Drawing.Size(231, 17);
+            this.CheckBox6.Size = new System.Drawing.Size(220, 17);
             this.CheckBox6.TabIndex = 106;
             this.CheckBox6.Tag = "6";
             this.CheckBox6.Text = "CERT. 120H VIGILANTE DE SEGURIDAD";
@@ -188,9 +214,11 @@
             // CheckBox5
             // 
             this.CheckBox5.AutoSize = true;
+            this.CheckBox5.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CheckBox5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
             this.CheckBox5.Location = new System.Drawing.Point(12, 95);
             this.CheckBox5.Name = "CheckBox5";
-            this.CheckBox5.Size = new System.Drawing.Size(184, 17);
+            this.CheckBox5.Size = new System.Drawing.Size(178, 17);
             this.CheckBox5.TabIndex = 105;
             this.CheckBox5.Tag = "5";
             this.CheckBox5.Text = "TÍTULO REGISTRO SENESCYT";
@@ -200,9 +228,11 @@
             // CheckBox3
             // 
             this.CheckBox3.AutoSize = true;
+            this.CheckBox3.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CheckBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
             this.CheckBox3.Location = new System.Drawing.Point(12, 53);
             this.CheckBox3.Name = "CheckBox3";
-            this.CheckBox3.Size = new System.Drawing.Size(185, 17);
+            this.CheckBox3.Size = new System.Drawing.Size(178, 17);
             this.CheckBox3.TabIndex = 104;
             this.CheckBox3.Tag = "3";
             this.CheckBox3.Text = "REENTRENAMIENTO VIGENTE";
@@ -212,9 +242,11 @@
             // CheckBox2
             // 
             this.CheckBox2.AutoSize = true;
+            this.CheckBox2.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CheckBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
             this.CheckBox2.Location = new System.Drawing.Point(12, 32);
             this.CheckBox2.Name = "CheckBox2";
-            this.CheckBox2.Size = new System.Drawing.Size(190, 17);
+            this.CheckBox2.Size = new System.Drawing.Size(182, 17);
             this.CheckBox2.TabIndex = 103;
             this.CheckBox2.Tag = "2";
             this.CheckBox2.Text = "CÉDULA Y CERT. DE VOTACIÓN";
@@ -224,9 +256,11 @@
             // CheckBox1
             // 
             this.CheckBox1.AutoSize = true;
+            this.CheckBox1.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CheckBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
             this.CheckBox1.Location = new System.Drawing.Point(12, 12);
             this.CheckBox1.Name = "CheckBox1";
-            this.CheckBox1.Size = new System.Drawing.Size(132, 17);
+            this.CheckBox1.Size = new System.Drawing.Size(127, 17);
             this.CheckBox1.TabIndex = 102;
             this.CheckBox1.Tag = "1";
             this.CheckBox1.Text = "CURRÍCULUM VITAE";
@@ -475,8 +509,9 @@
             // 
             // label1
             // 
+            this.label1.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.label1.Location = new System.Drawing.Point(9, 267);
+            this.label1.Location = new System.Drawing.Point(9, 265);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(384, 23);
             this.label1.TabIndex = 140;
@@ -486,8 +521,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(565, 295);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(206)))), ((int)(((byte)(230)))));
+            this.ClientSize = new System.Drawing.Size(565, 328);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btn12);
             this.Controls.Add(this.txt12);
@@ -530,6 +565,10 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "FrmDocumentos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StateActive.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.StateActive.Border.Rounding = 5F;
             this.Text = "DOCUMENTOS PERSONAL";
             this.Load += new System.EventHandler(this.FrmDocumentos_Load);
             this.ResumeLayout(false);

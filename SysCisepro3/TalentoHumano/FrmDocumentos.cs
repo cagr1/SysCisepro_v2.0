@@ -5,10 +5,11 @@ using SysCisepro3.Properties;
 using System.IO;
 using ClassLibraryCisepro3.TalentoHumano;
 using System.Data;
+using Krypton.Toolkit;
 
 namespace SysCisepro3.TalentoHumano
 {
-    public partial class FrmDocumentos : Form
+    public partial class FrmDocumentos : KryptonForm
     {
         /// <summary>
         /// CISEPRO 2019

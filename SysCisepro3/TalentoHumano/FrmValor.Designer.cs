@@ -39,11 +39,11 @@
             // 
             this.Button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(166)))), ((int)(((byte)(79)))));
             this.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Button2.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Button2.ForeColor = System.Drawing.Color.White;
-            this.Button2.Location = new System.Drawing.Point(302, 49);
+            this.Button2.Location = new System.Drawing.Point(241, 35);
             this.Button2.Name = "Button2";
-            this.Button2.Size = new System.Drawing.Size(75, 23);
+            this.Button2.Size = new System.Drawing.Size(89, 34);
             this.Button2.TabIndex = 16;
             this.Button2.Text = "ACEPTAR";
             this.Button2.UseVisualStyleBackColor = false;
@@ -54,10 +54,11 @@
             this.Button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(62)))), ((int)(((byte)(58)))));
             this.Button1.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Button1.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Button1.ForeColor = System.Drawing.Color.White;
-            this.Button1.Location = new System.Drawing.Point(221, 49);
+            this.Button1.Location = new System.Drawing.Point(140, 35);
             this.Button1.Name = "Button1";
-            this.Button1.Size = new System.Drawing.Size(75, 23);
+            this.Button1.Size = new System.Drawing.Size(89, 34);
             this.Button1.TabIndex = 15;
             this.Button1.Text = "CANCELAR";
             this.Button1.UseVisualStyleBackColor = false;
@@ -77,7 +78,7 @@
             // numericUpDown1
             // 
             this.numericUpDown1.DecimalPlaces = 2;
-            this.numericUpDown1.Location = new System.Drawing.Point(221, 23);
+            this.numericUpDown1.Location = new System.Drawing.Point(248, 4);
             this.numericUpDown1.Maximum = new decimal(new int[] {
             3000,
             0,
@@ -91,8 +92,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(389, 81);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(206)))), ((int)(((byte)(230)))));
+            this.ClientSize = new System.Drawing.Size(335, 81);
             this.Controls.Add(this.numericUpDown1);
             this.Controls.Add(this.Button2);
             this.Controls.Add(this.Button1);
@@ -104,7 +105,7 @@
             this.StateActive.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | Krypton.Toolkit.PaletteDrawBorders.Left) 
             | Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.StateActive.Border.Rounding = 10F;
+            this.StateActive.Border.Rounding = 5F;
             this.Text = "INGRESE VALOR";
             this.Load += new System.EventHandler(this.FrmValor_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();

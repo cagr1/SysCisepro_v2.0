@@ -778,7 +778,7 @@
             Me.tcVarios1.AnimateEasingType = ReaLTaiizor.[Enum].Metro.EasingType.CubeOut
             Me.tcVarios1.AnimateTime = 200
             Me.tcVarios1.Appearance = System.Windows.Forms.TabAppearance.Buttons
-            Me.tcVarios1.BackgroundColor = System.Drawing.Color.White
+            Me.tcVarios1.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.tcVarios1.Controls.Add(Me.MetroTabPage1)
             Me.tcVarios1.Controls.Add(Me.tpRadio)
             Me.tcVarios1.Controls.Add(Me.MetroTabPage3)
@@ -797,7 +797,7 @@
             Me.tcVarios1.Controls.Add(Me.MetroTabPage16)
             Me.tcVarios1.ControlsVisible = True
             Me.tcVarios1.IsDerivedStyle = True
-            Me.tcVarios1.ItemSize = New System.Drawing.Size(100, 38)
+            Me.tcVarios1.ItemSize = New System.Drawing.Size(100, 30)
             Me.tcVarios1.Location = New System.Drawing.Point(0, 401)
             Me.tcVarios1.MCursor = System.Windows.Forms.Cursors.Hand
             Me.tcVarios1.Name = "tcVarios1"
@@ -816,7 +816,7 @@
             '
             'MetroTabPage1
             '
-            Me.MetroTabPage1.BaseColor = System.Drawing.Color.White
+            Me.MetroTabPage1.BaseColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.MetroTabPage1.Controls.Add(Me.lblArmasCount)
             Me.MetroTabPage1.Controls.Add(Me.KryptonGroupBox3)
             Me.MetroTabPage1.Controls.Add(Me.dgvArmas)
@@ -826,9 +826,9 @@
             Me.MetroTabPage1.ImageIndex = 0
             Me.MetroTabPage1.ImageKey = Nothing
             Me.MetroTabPage1.IsDerivedStyle = True
-            Me.MetroTabPage1.Location = New System.Drawing.Point(4, 42)
+            Me.MetroTabPage1.Location = New System.Drawing.Point(4, 34)
             Me.MetroTabPage1.Name = "MetroTabPage1"
-            Me.MetroTabPage1.Size = New System.Drawing.Size(826, 242)
+            Me.MetroTabPage1.Size = New System.Drawing.Size(826, 250)
             Me.MetroTabPage1.Style = ReaLTaiizor.[Enum].Metro.Style.Light
             Me.MetroTabPage1.StyleManager = Nothing
             Me.MetroTabPage1.TabIndex = 0
@@ -839,9 +839,9 @@
             '
             'lblArmasCount
             '
-            Me.lblArmasCount.BackColor = System.Drawing.Color.White
+            Me.lblArmasCount.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.lblArmasCount.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.lblArmasCount.ForeColor = System.Drawing.Color.DodgerBlue
+            Me.lblArmasCount.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
             Me.lblArmasCount.Location = New System.Drawing.Point(348, 213)
             Me.lblArmasCount.Name = "lblArmasCount"
             Me.lblArmasCount.Size = New System.Drawing.Size(470, 13)
@@ -876,13 +876,13 @@
             Me.KryptonGroupBox3.Panel.Controls.Add(Me.dtpAceptacionTenencia)
             Me.KryptonGroupBox3.Panel.Controls.Add(Me.txtNroMatriculaArma)
             Me.KryptonGroupBox3.Panel.Controls.Add(Me.dtpAceptacionMatricula)
-            Me.KryptonGroupBox3.Size = New System.Drawing.Size(344, 226)
+            Me.KryptonGroupBox3.Size = New System.Drawing.Size(344, 242)
             Me.KryptonGroupBox3.TabIndex = 290
             Me.KryptonGroupBox3.Values.Heading = ""
             '
             'KryptonLabel31
             '
-            Me.KryptonLabel31.Location = New System.Drawing.Point(167, 198)
+            Me.KryptonLabel31.Location = New System.Drawing.Point(167, 203)
             Me.KryptonLabel31.Name = "KryptonLabel31"
             Me.KryptonLabel31.Size = New System.Drawing.Size(68, 20)
             Me.KryptonLabel31.TabIndex = 289
@@ -890,7 +890,7 @@
             '
             'KryptonLabel30
             '
-            Me.KryptonLabel30.Location = New System.Drawing.Point(167, 149)
+            Me.KryptonLabel30.Location = New System.Drawing.Point(167, 148)
             Me.KryptonLabel30.Name = "KryptonLabel30"
             Me.KryptonLabel30.Size = New System.Drawing.Size(68, 20)
             Me.KryptonLabel30.StateCommon.ShortText.Color1 = System.Drawing.Color.SeaGreen
@@ -899,7 +899,7 @@
             '
             'KryptonLabel29
             '
-            Me.KryptonLabel29.Location = New System.Drawing.Point(168, 175)
+            Me.KryptonLabel29.Location = New System.Drawing.Point(168, 174)
             Me.KryptonLabel29.Name = "KryptonLabel29"
             Me.KryptonLabel29.Size = New System.Drawing.Size(71, 20)
             Me.KryptonLabel29.TabIndex = 287
@@ -907,7 +907,7 @@
             '
             'KryptonLabel28
             '
-            Me.KryptonLabel28.Location = New System.Drawing.Point(168, 121)
+            Me.KryptonLabel28.Location = New System.Drawing.Point(169, 121)
             Me.KryptonLabel28.Name = "KryptonLabel28"
             Me.KryptonLabel28.Size = New System.Drawing.Size(71, 20)
             Me.KryptonLabel28.StateCommon.ShortText.Color1 = System.Drawing.Color.SeaGreen
@@ -916,7 +916,7 @@
             '
             'KryptonLabel27
             '
-            Me.KryptonLabel27.Location = New System.Drawing.Point(7, 173)
+            Me.KryptonLabel27.Location = New System.Drawing.Point(7, 178)
             Me.KryptonLabel27.Name = "KryptonLabel27"
             Me.KryptonLabel27.Size = New System.Drawing.Size(61, 20)
             Me.KryptonLabel27.TabIndex = 5
@@ -924,7 +924,7 @@
             '
             'KryptonLabel26
             '
-            Me.KryptonLabel26.Location = New System.Drawing.Point(9, 121)
+            Me.KryptonLabel26.Location = New System.Drawing.Point(9, 126)
             Me.KryptonLabel26.Name = "KryptonLabel26"
             Me.KryptonLabel26.Size = New System.Drawing.Size(59, 20)
             Me.KryptonLabel26.StateCommon.ShortText.Color1 = System.Drawing.Color.SeaGreen
@@ -976,10 +976,11 @@
             '
             'dtpCaducidadMatricula
             '
+            Me.dtpCaducidadMatricula.CalendarMonthBackground = System.Drawing.Color.White
             Me.dtpCaducidadMatricula.Enabled = False
             Me.dtpCaducidadMatricula.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.dtpCaducidadMatricula.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-            Me.dtpCaducidadMatricula.Location = New System.Drawing.Point(241, 196)
+            Me.dtpCaducidadMatricula.Location = New System.Drawing.Point(241, 201)
             Me.dtpCaducidadMatricula.Name = "dtpCaducidadMatricula"
             Me.dtpCaducidadMatricula.Size = New System.Drawing.Size(91, 21)
             Me.dtpCaducidadMatricula.TabIndex = 134
@@ -1009,11 +1010,12 @@
             '
             'dtpCaducidadTenencia
             '
+            Me.dtpCaducidadTenencia.CalendarMonthBackground = System.Drawing.Color.White
             Me.dtpCaducidadTenencia.CalendarTitleForeColor = System.Drawing.SystemColors.Control
             Me.dtpCaducidadTenencia.Enabled = False
             Me.dtpCaducidadTenencia.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.dtpCaducidadTenencia.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-            Me.dtpCaducidadTenencia.Location = New System.Drawing.Point(241, 143)
+            Me.dtpCaducidadTenencia.Location = New System.Drawing.Point(241, 148)
             Me.dtpCaducidadTenencia.Name = "dtpCaducidadTenencia"
             Me.dtpCaducidadTenencia.Size = New System.Drawing.Size(91, 21)
             Me.dtpCaducidadTenencia.TabIndex = 133
@@ -1028,7 +1030,7 @@
             Me.cbxOrigen.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cbxOrigen.FormattingEnabled = True
             Me.cbxOrigen.Items.AddRange(New Object() {"NACIONAL", "IMPORTADO"})
-            Me.cbxOrigen.Location = New System.Drawing.Point(192, 89)
+            Me.cbxOrigen.Location = New System.Drawing.Point(192, 88)
             Me.cbxOrigen.Name = "cbxOrigen"
             Me.cbxOrigen.Size = New System.Drawing.Size(137, 21)
             Me.cbxOrigen.TabIndex = 285
@@ -1039,7 +1041,7 @@
             Me.txtNroTenenciaArmas.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtNroTenenciaArmas.Enabled = False
             Me.txtNroTenenciaArmas.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtNroTenenciaArmas.Location = New System.Drawing.Point(71, 120)
+            Me.txtNroTenenciaArmas.Location = New System.Drawing.Point(71, 125)
             Me.txtNroTenenciaArmas.Name = "txtNroTenenciaArmas"
             Me.txtNroTenenciaArmas.Size = New System.Drawing.Size(91, 21)
             Me.txtNroTenenciaArmas.TabIndex = 120
@@ -1047,11 +1049,12 @@
             '
             'dtpAceptacionTenencia
             '
+            Me.dtpAceptacionTenencia.CalendarMonthBackground = System.Drawing.Color.White
             Me.dtpAceptacionTenencia.CalendarTitleForeColor = System.Drawing.SystemColors.Control
             Me.dtpAceptacionTenencia.Enabled = False
             Me.dtpAceptacionTenencia.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.dtpAceptacionTenencia.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-            Me.dtpAceptacionTenencia.Location = New System.Drawing.Point(240, 116)
+            Me.dtpAceptacionTenencia.Location = New System.Drawing.Point(240, 121)
             Me.dtpAceptacionTenencia.Name = "dtpAceptacionTenencia"
             Me.dtpAceptacionTenencia.Size = New System.Drawing.Size(92, 21)
             Me.dtpAceptacionTenencia.TabIndex = 127
@@ -1063,7 +1066,7 @@
             Me.txtNroMatriculaArma.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtNroMatriculaArma.Enabled = False
             Me.txtNroMatriculaArma.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtNroMatriculaArma.Location = New System.Drawing.Point(71, 171)
+            Me.txtNroMatriculaArma.Location = New System.Drawing.Point(71, 176)
             Me.txtNroMatriculaArma.Name = "txtNroMatriculaArma"
             Me.txtNroMatriculaArma.Size = New System.Drawing.Size(91, 21)
             Me.txtNroMatriculaArma.TabIndex = 121
@@ -1071,10 +1074,11 @@
             '
             'dtpAceptacionMatricula
             '
+            Me.dtpAceptacionMatricula.CalendarMonthBackground = System.Drawing.Color.White
             Me.dtpAceptacionMatricula.Enabled = False
             Me.dtpAceptacionMatricula.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.dtpAceptacionMatricula.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-            Me.dtpAceptacionMatricula.Location = New System.Drawing.Point(240, 171)
+            Me.dtpAceptacionMatricula.Location = New System.Drawing.Point(240, 176)
             Me.dtpAceptacionMatricula.Name = "dtpAceptacionMatricula"
             Me.dtpAceptacionMatricula.Size = New System.Drawing.Size(92, 21)
             Me.dtpAceptacionMatricula.TabIndex = 128
@@ -1087,7 +1091,7 @@
             Me.dgvArmas.AllowUserToResizeRows = False
             DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
             Me.dgvArmas.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
-            Me.dgvArmas.BackgroundColor = System.Drawing.Color.White
+            Me.dgvArmas.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.dgvArmas.BorderStyle = System.Windows.Forms.BorderStyle.None
             Me.dgvArmas.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken
             Me.dgvArmas.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6, Me.Column5, Me.Column6, Me.Column7, Me.Column8, Me.Column9, Me.ValorFact, Me.ValorResi, Me.VidaUtil})
@@ -1194,7 +1198,7 @@
             '
             'btnEliminarArma
             '
-            Me.btnEliminarArma.BackColor = System.Drawing.Color.White
+            Me.btnEliminarArma.BackColor = System.Drawing.Color.Transparent
             Me.btnEliminarArma.Enabled = False
             Me.btnEliminarArma.FlatAppearance.BorderSize = 0
             Me.btnEliminarArma.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -1209,7 +1213,7 @@
             '
             'btnAgregarArma
             '
-            Me.btnAgregarArma.BackColor = System.Drawing.Color.White
+            Me.btnAgregarArma.BackColor = System.Drawing.Color.Transparent
             Me.btnAgregarArma.Enabled = False
             Me.btnAgregarArma.FlatAppearance.BorderSize = 0
             Me.btnAgregarArma.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -1224,7 +1228,7 @@
             '
             'tpRadio
             '
-            Me.tpRadio.BaseColor = System.Drawing.Color.White
+            Me.tpRadio.BaseColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.tpRadio.Controls.Add(Me.lblRadiosCount)
             Me.tpRadio.Controls.Add(Me.KryptonGroupBox2)
             Me.tpRadio.Controls.Add(Me.btnGarantiaRadio)
@@ -1238,9 +1242,9 @@
             Me.tpRadio.ImageIndex = 0
             Me.tpRadio.ImageKey = Nothing
             Me.tpRadio.IsDerivedStyle = True
-            Me.tpRadio.Location = New System.Drawing.Point(4, 42)
+            Me.tpRadio.Location = New System.Drawing.Point(4, 34)
             Me.tpRadio.Name = "tpRadio"
-            Me.tpRadio.Size = New System.Drawing.Size(826, 242)
+            Me.tpRadio.Size = New System.Drawing.Size(826, 250)
             Me.tpRadio.Style = ReaLTaiizor.[Enum].Metro.Style.Light
             Me.tpRadio.StyleManager = Nothing
             Me.tpRadio.TabIndex = 1
@@ -1251,10 +1255,10 @@
             '
             'lblRadiosCount
             '
-            Me.lblRadiosCount.BackColor = System.Drawing.Color.White
+            Me.lblRadiosCount.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.lblRadiosCount.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.lblRadiosCount.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.lblRadiosCount.ForeColor = System.Drawing.Color.DodgerBlue
+            Me.lblRadiosCount.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
             Me.lblRadiosCount.Location = New System.Drawing.Point(293, 209)
             Me.lblRadiosCount.Name = "lblRadiosCount"
             Me.lblRadiosCount.Size = New System.Drawing.Size(533, 19)
@@ -1285,13 +1289,13 @@
             Me.KryptonGroupBox2.Panel.Controls.Add(Me.txtModeloRadio)
             Me.KryptonGroupBox2.Panel.Controls.Add(Me.txtNumeroPermisoUsoRadio)
             Me.KryptonGroupBox2.Panel.Controls.Add(Me.txtSerieRadio)
-            Me.KryptonGroupBox2.Size = New System.Drawing.Size(273, 233)
+            Me.KryptonGroupBox2.Size = New System.Drawing.Size(273, 244)
             Me.KryptonGroupBox2.TabIndex = 224
             Me.KryptonGroupBox2.Values.Heading = ""
             '
             'KryptonLabel21
             '
-            Me.KryptonLabel21.Location = New System.Drawing.Point(8, 198)
+            Me.KryptonLabel21.Location = New System.Drawing.Point(8, 204)
             Me.KryptonLabel21.Name = "KryptonLabel21"
             Me.KryptonLabel21.Size = New System.Drawing.Size(68, 20)
             Me.KryptonLabel21.TabIndex = 149
@@ -1299,7 +1303,7 @@
             '
             'KryptonLabel20
             '
-            Me.KryptonLabel20.Location = New System.Drawing.Point(8, 172)
+            Me.KryptonLabel20.Location = New System.Drawing.Point(8, 178)
             Me.KryptonLabel20.Name = "KryptonLabel20"
             Me.KryptonLabel20.Size = New System.Drawing.Size(71, 20)
             Me.KryptonLabel20.TabIndex = 148
@@ -1307,7 +1311,7 @@
             '
             'KryptonLabel19
             '
-            Me.KryptonLabel19.Location = New System.Drawing.Point(8, 145)
+            Me.KryptonLabel19.Location = New System.Drawing.Point(8, 151)
             Me.KryptonLabel19.Name = "KryptonLabel19"
             Me.KryptonLabel19.Size = New System.Drawing.Size(99, 20)
             Me.KryptonLabel19.TabIndex = 147
@@ -1315,7 +1319,7 @@
             '
             'KryptonLabel18
             '
-            Me.KryptonLabel18.Location = New System.Drawing.Point(8, 117)
+            Me.KryptonLabel18.Location = New System.Drawing.Point(8, 123)
             Me.KryptonLabel18.Name = "KryptonLabel18"
             Me.KryptonLabel18.Size = New System.Drawing.Size(40, 20)
             Me.KryptonLabel18.TabIndex = 146
@@ -1323,7 +1327,7 @@
             '
             'KryptonLabel17
             '
-            Me.KryptonLabel17.Location = New System.Drawing.Point(8, 87)
+            Me.KryptonLabel17.Location = New System.Drawing.Point(8, 93)
             Me.KryptonLabel17.Name = "KryptonLabel17"
             Me.KryptonLabel17.Size = New System.Drawing.Size(47, 20)
             Me.KryptonLabel17.TabIndex = 145
@@ -1331,7 +1335,7 @@
             '
             'KryptonLabel16
             '
-            Me.KryptonLabel16.Location = New System.Drawing.Point(8, 57)
+            Me.KryptonLabel16.Location = New System.Drawing.Point(8, 63)
             Me.KryptonLabel16.Name = "KryptonLabel16"
             Me.KryptonLabel16.Size = New System.Drawing.Size(37, 20)
             Me.KryptonLabel16.TabIndex = 144
@@ -1339,7 +1343,7 @@
             '
             'KryptonLabel15
             '
-            Me.KryptonLabel15.Location = New System.Drawing.Point(8, 31)
+            Me.KryptonLabel15.Location = New System.Drawing.Point(8, 37)
             Me.KryptonLabel15.Name = "KryptonLabel15"
             Me.KryptonLabel15.Size = New System.Drawing.Size(53, 20)
             Me.KryptonLabel15.TabIndex = 143
@@ -1347,7 +1351,7 @@
             '
             'KryptonLabel14
             '
-            Me.KryptonLabel14.Location = New System.Drawing.Point(8, 6)
+            Me.KryptonLabel14.Location = New System.Drawing.Point(8, 12)
             Me.KryptonLabel14.Name = "KryptonLabel14"
             Me.KryptonLabel14.Size = New System.Drawing.Size(44, 20)
             Me.KryptonLabel14.TabIndex = 142
@@ -1360,7 +1364,7 @@
             Me.cbmMarcaRadio.Enabled = False
             Me.cbmMarcaRadio.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cbmMarcaRadio.FormattingEnabled = True
-            Me.cbmMarcaRadio.Location = New System.Drawing.Point(116, 4)
+            Me.cbmMarcaRadio.Location = New System.Drawing.Point(116, 10)
             Me.cbmMarcaRadio.Name = "cbmMarcaRadio"
             Me.cbmMarcaRadio.Size = New System.Drawing.Size(130, 21)
             Me.cbmMarcaRadio.TabIndex = 104
@@ -1373,7 +1377,7 @@
             Me.dtpFecPerUsoRadioAceptacion.Enabled = False
             Me.dtpFecPerUsoRadioAceptacion.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.dtpFecPerUsoRadioAceptacion.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-            Me.dtpFecPerUsoRadioAceptacion.Location = New System.Drawing.Point(115, 172)
+            Me.dtpFecPerUsoRadioAceptacion.Location = New System.Drawing.Point(115, 178)
             Me.dtpFecPerUsoRadioAceptacion.Name = "dtpFecPerUsoRadioAceptacion"
             Me.dtpFecPerUsoRadioAceptacion.Size = New System.Drawing.Size(131, 22)
             Me.dtpFecPerUsoRadioAceptacion.TabIndex = 139
@@ -1386,7 +1390,7 @@
             Me.dtpFecPerRadioCaducidad.Enabled = False
             Me.dtpFecPerRadioCaducidad.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.dtpFecPerRadioCaducidad.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-            Me.dtpFecPerRadioCaducidad.Location = New System.Drawing.Point(116, 198)
+            Me.dtpFecPerRadioCaducidad.Location = New System.Drawing.Point(116, 204)
             Me.dtpFecPerRadioCaducidad.Name = "dtpFecPerRadioCaducidad"
             Me.dtpFecPerRadioCaducidad.Size = New System.Drawing.Size(130, 22)
             Me.dtpFecPerRadioCaducidad.TabIndex = 141
@@ -1400,7 +1404,7 @@
             Me.cbmEstadoRadio.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cbmEstadoRadio.FormattingEnabled = True
             Me.cbmEstadoRadio.Items.AddRange(New Object() {"BUENO", "REGULAR", "MALO"})
-            Me.cbmEstadoRadio.Location = New System.Drawing.Point(116, 84)
+            Me.cbmEstadoRadio.Location = New System.Drawing.Point(116, 90)
             Me.cbmEstadoRadio.Name = "cbmEstadoRadio"
             Me.cbmEstadoRadio.Size = New System.Drawing.Size(130, 21)
             Me.cbmEstadoRadio.TabIndex = 138
@@ -1412,7 +1416,7 @@
             Me.cbmColoresRadio.Enabled = False
             Me.cbmColoresRadio.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cbmColoresRadio.FormattingEnabled = True
-            Me.cbmColoresRadio.Location = New System.Drawing.Point(116, 117)
+            Me.cbmColoresRadio.Location = New System.Drawing.Point(116, 123)
             Me.cbmColoresRadio.Name = "cbmColoresRadio"
             Me.cbmColoresRadio.Size = New System.Drawing.Size(130, 21)
             Me.cbmColoresRadio.TabIndex = 129
@@ -1423,7 +1427,7 @@
             Me.txtModeloRadio.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtModeloRadio.Enabled = False
             Me.txtModeloRadio.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtModeloRadio.Location = New System.Drawing.Point(116, 31)
+            Me.txtModeloRadio.Location = New System.Drawing.Point(116, 37)
             Me.txtModeloRadio.Name = "txtModeloRadio"
             Me.txtModeloRadio.Size = New System.Drawing.Size(130, 21)
             Me.txtModeloRadio.TabIndex = 141
@@ -1435,7 +1439,7 @@
             Me.txtNumeroPermisoUsoRadio.Enabled = False
             Me.txtNumeroPermisoUsoRadio.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtNumeroPermisoUsoRadio.ForeColor = System.Drawing.SystemColors.WindowText
-            Me.txtNumeroPermisoUsoRadio.Location = New System.Drawing.Point(116, 145)
+            Me.txtNumeroPermisoUsoRadio.Location = New System.Drawing.Point(116, 151)
             Me.txtNumeroPermisoUsoRadio.Name = "txtNumeroPermisoUsoRadio"
             Me.txtNumeroPermisoUsoRadio.Size = New System.Drawing.Size(130, 21)
             Me.txtNumeroPermisoUsoRadio.TabIndex = 136
@@ -1447,7 +1451,7 @@
             Me.txtSerieRadio.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtSerieRadio.Enabled = False
             Me.txtSerieRadio.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtSerieRadio.Location = New System.Drawing.Point(116, 57)
+            Me.txtSerieRadio.Location = New System.Drawing.Point(116, 63)
             Me.txtSerieRadio.Name = "txtSerieRadio"
             Me.txtSerieRadio.Size = New System.Drawing.Size(130, 21)
             Me.txtSerieRadio.TabIndex = 108
@@ -1465,7 +1469,7 @@
             '
             'btnDelRadio
             '
-            Me.btnDelRadio.BackColor = System.Drawing.Color.White
+            Me.btnDelRadio.BackColor = System.Drawing.Color.Transparent
             Me.btnDelRadio.Enabled = False
             Me.btnDelRadio.FlatAppearance.BorderSize = 0
             Me.btnDelRadio.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -1489,7 +1493,7 @@
             '
             'btnAddRadio
             '
-            Me.btnAddRadio.BackColor = System.Drawing.Color.White
+            Me.btnAddRadio.BackColor = System.Drawing.Color.Transparent
             Me.btnAddRadio.Enabled = False
             Me.btnAddRadio.FlatAppearance.BorderSize = 0
             Me.btnAddRadio.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -1505,7 +1509,7 @@
             'chkGarantiaRadio
             '
             Me.chkGarantiaRadio.AutoSize = True
-            Me.chkGarantiaRadio.BackColor = System.Drawing.Color.White
+            Me.chkGarantiaRadio.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.chkGarantiaRadio.Enabled = False
             Me.chkGarantiaRadio.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.chkGarantiaRadio.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
@@ -1523,7 +1527,7 @@
             Me.dgvRadios.AllowUserToResizeRows = False
             DataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
             Me.dgvRadios.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle3
-            Me.dgvRadios.BackgroundColor = System.Drawing.Color.White
+            Me.dgvRadios.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.dgvRadios.BorderStyle = System.Windows.Forms.BorderStyle.None
             Me.dgvRadios.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
             Me.dgvRadios.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn7, Me.GARANTIA, Me.DataGridViewTextBoxColumn8, Me.DataGridViewTextBoxColumn9, Me.DataGridViewTextBoxColumn10, Me.DataGridViewTextBoxColumn11, Me.DataGridViewTextBoxColumn12, Me.DataGridViewTextBoxColumn13, Me.DataGridViewTextBoxColumn17, Me.DataGridViewTextBoxColumn14, Me.DOCUMENTO, Me.Column17, Me.Column18, Me.Column19})
@@ -1644,7 +1648,7 @@
             '
             'MetroTabPage3
             '
-            Me.MetroTabPage3.BaseColor = System.Drawing.Color.White
+            Me.MetroTabPage3.BaseColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.MetroTabPage3.Controls.Add(Me.KryptonGroupBox5)
             Me.MetroTabPage3.Controls.Add(Me.KryptonGroupBox4)
             Me.MetroTabPage3.Controls.Add(Me.chNingunSeguro)
@@ -1654,9 +1658,9 @@
             Me.MetroTabPage3.ImageIndex = 0
             Me.MetroTabPage3.ImageKey = Nothing
             Me.MetroTabPage3.IsDerivedStyle = True
-            Me.MetroTabPage3.Location = New System.Drawing.Point(4, 42)
+            Me.MetroTabPage3.Location = New System.Drawing.Point(4, 34)
             Me.MetroTabPage3.Name = "MetroTabPage3"
-            Me.MetroTabPage3.Size = New System.Drawing.Size(826, 242)
+            Me.MetroTabPage3.Size = New System.Drawing.Size(826, 250)
             Me.MetroTabPage3.Style = ReaLTaiizor.[Enum].Metro.Style.Light
             Me.MetroTabPage3.StyleManager = Nothing
             Me.MetroTabPage3.TabIndex = 2
@@ -1850,7 +1854,7 @@
             Me.KryptonGroupBox4.Panel.Controls.Add(Me.KryptonLabel34)
             Me.KryptonGroupBox4.Panel.Controls.Add(Me.KryptonLabel33)
             Me.KryptonGroupBox4.Panel.Controls.Add(Me.KryptonLabel32)
-            Me.KryptonGroupBox4.Size = New System.Drawing.Size(205, 213)
+            Me.KryptonGroupBox4.Size = New System.Drawing.Size(205, 215)
             Me.KryptonGroupBox4.TabIndex = 197
             Me.KryptonGroupBox4.Values.Heading = ""
             '
@@ -1930,7 +1934,7 @@
             'chNingunSeguro
             '
             Me.chNingunSeguro.AutoSize = True
-            Me.chNingunSeguro.BackColor = System.Drawing.Color.White
+            Me.chNingunSeguro.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.chNingunSeguro.Cursor = System.Windows.Forms.Cursors.Hand
             Me.chNingunSeguro.Enabled = False
             Me.chNingunSeguro.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -1946,7 +1950,7 @@
             'chNingunDispositivo
             '
             Me.chNingunDispositivo.AutoSize = True
-            Me.chNingunDispositivo.BackColor = System.Drawing.Color.White
+            Me.chNingunDispositivo.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.chNingunDispositivo.Cursor = System.Windows.Forms.Cursors.Hand
             Me.chNingunDispositivo.Enabled = False
             Me.chNingunDispositivo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -2049,7 +2053,6 @@
             Me.cbmColorVehiculo.BackColor = System.Drawing.Color.White
             Me.cbmColorVehiculo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cbmColorVehiculo.Enabled = False
-            Me.cbmColorVehiculo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.cbmColorVehiculo.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cbmColorVehiculo.FormattingEnabled = True
             Me.cbmColorVehiculo.Location = New System.Drawing.Point(62, 198)
@@ -2252,15 +2255,15 @@
             '
             'MetroTabPage4
             '
-            Me.MetroTabPage4.BaseColor = System.Drawing.Color.White
+            Me.MetroTabPage4.BaseColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.MetroTabPage4.Controls.Add(Me.KryptonGroupBox6)
             Me.MetroTabPage4.Font = Nothing
             Me.MetroTabPage4.ImageIndex = 0
             Me.MetroTabPage4.ImageKey = Nothing
             Me.MetroTabPage4.IsDerivedStyle = True
-            Me.MetroTabPage4.Location = New System.Drawing.Point(4, 42)
+            Me.MetroTabPage4.Location = New System.Drawing.Point(4, 34)
             Me.MetroTabPage4.Name = "MetroTabPage4"
-            Me.MetroTabPage4.Size = New System.Drawing.Size(826, 242)
+            Me.MetroTabPage4.Size = New System.Drawing.Size(826, 250)
             Me.MetroTabPage4.Style = ReaLTaiizor.[Enum].Metro.Style.Light
             Me.MetroTabPage4.StyleManager = Nothing
             Me.MetroTabPage4.TabIndex = 3
@@ -2346,7 +2349,7 @@
             '
             'MetroTabPage5
             '
-            Me.MetroTabPage5.BaseColor = System.Drawing.Color.White
+            Me.MetroTabPage5.BaseColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.MetroTabPage5.Controls.Add(Me.KryptonGroupBox7)
             Me.MetroTabPage5.Controls.Add(Me.txtGarantiaComputo)
             Me.MetroTabPage5.Controls.Add(Me.btnGarantiaComputo)
@@ -2360,9 +2363,9 @@
             Me.MetroTabPage5.ImageIndex = 0
             Me.MetroTabPage5.ImageKey = Nothing
             Me.MetroTabPage5.IsDerivedStyle = True
-            Me.MetroTabPage5.Location = New System.Drawing.Point(4, 42)
+            Me.MetroTabPage5.Location = New System.Drawing.Point(4, 34)
             Me.MetroTabPage5.Name = "MetroTabPage5"
-            Me.MetroTabPage5.Size = New System.Drawing.Size(826, 242)
+            Me.MetroTabPage5.Size = New System.Drawing.Size(826, 250)
             Me.MetroTabPage5.Style = ReaLTaiizor.[Enum].Metro.Style.Light
             Me.MetroTabPage5.StyleManager = Nothing
             Me.MetroTabPage5.TabIndex = 4
@@ -2373,7 +2376,7 @@
             '
             'KryptonGroupBox7
             '
-            Me.KryptonGroupBox7.Location = New System.Drawing.Point(21, -1)
+            Me.KryptonGroupBox7.Location = New System.Drawing.Point(21, 4)
             Me.KryptonGroupBox7.Name = "KryptonGroupBox7"
             '
             'KryptonGroupBox7.Panel
@@ -2503,7 +2506,7 @@
             'btnGarantiaComputo
             '
             Me.btnGarantiaComputo.Enabled = False
-            Me.btnGarantiaComputo.Location = New System.Drawing.Point(557, 8)
+            Me.btnGarantiaComputo.Location = New System.Drawing.Point(562, 12)
             Me.btnGarantiaComputo.Name = "btnGarantiaComputo"
             Me.btnGarantiaComputo.Size = New System.Drawing.Size(33, 23)
             Me.btnGarantiaComputo.TabIndex = 301
@@ -2513,7 +2516,7 @@
             'chkGarantiaComputo
             '
             Me.chkGarantiaComputo.AutoSize = True
-            Me.chkGarantiaComputo.BackColor = System.Drawing.Color.White
+            Me.chkGarantiaComputo.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.chkGarantiaComputo.Enabled = False
             Me.chkGarantiaComputo.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.chkGarantiaComputo.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
@@ -2526,7 +2529,7 @@
             '
             'btnEliminarEquipoComputo
             '
-            Me.btnEliminarEquipoComputo.BackColor = System.Drawing.Color.White
+            Me.btnEliminarEquipoComputo.BackColor = System.Drawing.Color.Transparent
             Me.btnEliminarEquipoComputo.Enabled = False
             Me.btnEliminarEquipoComputo.FlatAppearance.BorderSize = 0
             Me.btnEliminarEquipoComputo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -2541,7 +2544,7 @@
             '
             'btnAgregarEquipo
             '
-            Me.btnAgregarEquipo.BackColor = System.Drawing.Color.White
+            Me.btnAgregarEquipo.BackColor = System.Drawing.Color.Transparent
             Me.btnAgregarEquipo.Enabled = False
             Me.btnAgregarEquipo.FlatAppearance.BorderSize = 0
             Me.btnAgregarEquipo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -2561,7 +2564,7 @@
             Me.dgvEquiposComputo.AllowUserToResizeRows = False
             DataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
             Me.dgvEquiposComputo.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle5
-            Me.dgvEquiposComputo.BackgroundColor = System.Drawing.Color.White
+            Me.dgvEquiposComputo.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.dgvEquiposComputo.BorderStyle = System.Windows.Forms.BorderStyle.None
             Me.dgvEquiposComputo.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
             Me.dgvEquiposComputo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
@@ -2580,7 +2583,7 @@
             Me.dgvEquiposComputo.ReadOnly = True
             Me.dgvEquiposComputo.RowHeadersVisible = False
             Me.dgvEquiposComputo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvEquiposComputo.Size = New System.Drawing.Size(488, 177)
+            Me.dgvEquiposComputo.Size = New System.Drawing.Size(488, 184)
             Me.dgvEquiposComputo.TabIndex = 64
             '
             'Column1
@@ -2680,15 +2683,15 @@
             '
             'MetroTabPage6
             '
-            Me.MetroTabPage6.BaseColor = System.Drawing.Color.White
+            Me.MetroTabPage6.BaseColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.MetroTabPage6.Controls.Add(Me.KryptonGroupBox8)
             Me.MetroTabPage6.Font = Nothing
             Me.MetroTabPage6.ImageIndex = 0
             Me.MetroTabPage6.ImageKey = Nothing
             Me.MetroTabPage6.IsDerivedStyle = True
-            Me.MetroTabPage6.Location = New System.Drawing.Point(4, 42)
+            Me.MetroTabPage6.Location = New System.Drawing.Point(4, 34)
             Me.MetroTabPage6.Name = "MetroTabPage6"
-            Me.MetroTabPage6.Size = New System.Drawing.Size(826, 242)
+            Me.MetroTabPage6.Size = New System.Drawing.Size(826, 250)
             Me.MetroTabPage6.Style = ReaLTaiizor.[Enum].Metro.Style.Light
             Me.MetroTabPage6.StyleManager = Nothing
             Me.MetroTabPage6.TabIndex = 5
@@ -2792,7 +2795,7 @@
             '
             'MetroTabPage7
             '
-            Me.MetroTabPage7.BaseColor = System.Drawing.Color.White
+            Me.MetroTabPage7.BaseColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.MetroTabPage7.Controls.Add(Me.lblEquiposOficinaCount)
             Me.MetroTabPage7.Controls.Add(Me.KryptonGroupBox9)
             Me.MetroTabPage7.Controls.Add(Me.txtGarantiaOficina)
@@ -2805,9 +2808,9 @@
             Me.MetroTabPage7.ImageIndex = 0
             Me.MetroTabPage7.ImageKey = Nothing
             Me.MetroTabPage7.IsDerivedStyle = True
-            Me.MetroTabPage7.Location = New System.Drawing.Point(4, 42)
+            Me.MetroTabPage7.Location = New System.Drawing.Point(4, 34)
             Me.MetroTabPage7.Name = "MetroTabPage7"
-            Me.MetroTabPage7.Size = New System.Drawing.Size(826, 242)
+            Me.MetroTabPage7.Size = New System.Drawing.Size(826, 250)
             Me.MetroTabPage7.Style = ReaLTaiizor.[Enum].Metro.Style.Light
             Me.MetroTabPage7.StyleManager = Nothing
             Me.MetroTabPage7.TabIndex = 6
@@ -2818,10 +2821,10 @@
             '
             'lblEquiposOficinaCount
             '
-            Me.lblEquiposOficinaCount.BackColor = System.Drawing.Color.White
+            Me.lblEquiposOficinaCount.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.lblEquiposOficinaCount.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.lblEquiposOficinaCount.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.lblEquiposOficinaCount.ForeColor = System.Drawing.Color.DodgerBlue
+            Me.lblEquiposOficinaCount.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
             Me.lblEquiposOficinaCount.Location = New System.Drawing.Point(298, 212)
             Me.lblEquiposOficinaCount.Name = "lblEquiposOficinaCount"
             Me.lblEquiposOficinaCount.Size = New System.Drawing.Size(533, 19)
@@ -3026,7 +3029,7 @@
             '
             'btnDelEquipoOficina
             '
-            Me.btnDelEquipoOficina.BackColor = System.Drawing.Color.White
+            Me.btnDelEquipoOficina.BackColor = System.Drawing.Color.Transparent
             Me.btnDelEquipoOficina.Enabled = False
             Me.btnDelEquipoOficina.FlatAppearance.BorderSize = 0
             Me.btnDelEquipoOficina.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -3041,7 +3044,7 @@
             '
             'btnAddEquipoOficina
             '
-            Me.btnAddEquipoOficina.BackColor = System.Drawing.Color.White
+            Me.btnAddEquipoOficina.BackColor = System.Drawing.Color.Transparent
             Me.btnAddEquipoOficina.Enabled = False
             Me.btnAddEquipoOficina.FlatAppearance.BorderSize = 0
             Me.btnAddEquipoOficina.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -3057,7 +3060,7 @@
             'chkGarantiaOficina
             '
             Me.chkGarantiaOficina.AutoSize = True
-            Me.chkGarantiaOficina.BackColor = System.Drawing.Color.White
+            Me.chkGarantiaOficina.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.chkGarantiaOficina.Enabled = False
             Me.chkGarantiaOficina.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.chkGarantiaOficina.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
@@ -3085,7 +3088,7 @@
             Me.dgvEquiposOficina.AllowUserToResizeRows = False
             DataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
             Me.dgvEquiposOficina.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle7
-            Me.dgvEquiposOficina.BackgroundColor = System.Drawing.Color.White
+            Me.dgvEquiposOficina.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.dgvEquiposOficina.BorderStyle = System.Windows.Forms.BorderStyle.None
             Me.dgvEquiposOficina.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
             Me.dgvEquiposOficina.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
@@ -3193,7 +3196,7 @@
             '
             'MetroTabPage9
             '
-            Me.MetroTabPage9.BaseColor = System.Drawing.Color.White
+            Me.MetroTabPage9.BaseColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.MetroTabPage9.Controls.Add(Me.lblMuebleOficinaCount)
             Me.MetroTabPage9.Controls.Add(Me.KryptonGroupBox10)
             Me.MetroTabPage9.Controls.Add(Me.btnDelMuebleOficina)
@@ -3203,9 +3206,9 @@
             Me.MetroTabPage9.ImageIndex = 0
             Me.MetroTabPage9.ImageKey = Nothing
             Me.MetroTabPage9.IsDerivedStyle = True
-            Me.MetroTabPage9.Location = New System.Drawing.Point(4, 42)
+            Me.MetroTabPage9.Location = New System.Drawing.Point(4, 34)
             Me.MetroTabPage9.Name = "MetroTabPage9"
-            Me.MetroTabPage9.Size = New System.Drawing.Size(826, 242)
+            Me.MetroTabPage9.Size = New System.Drawing.Size(826, 250)
             Me.MetroTabPage9.Style = ReaLTaiizor.[Enum].Metro.Style.Light
             Me.MetroTabPage9.StyleManager = Nothing
             Me.MetroTabPage9.TabIndex = 8
@@ -3216,10 +3219,10 @@
             '
             'lblMuebleOficinaCount
             '
-            Me.lblMuebleOficinaCount.BackColor = System.Drawing.Color.White
+            Me.lblMuebleOficinaCount.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.lblMuebleOficinaCount.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.lblMuebleOficinaCount.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.lblMuebleOficinaCount.ForeColor = System.Drawing.Color.DodgerBlue
+            Me.lblMuebleOficinaCount.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
             Me.lblMuebleOficinaCount.Location = New System.Drawing.Point(287, 215)
             Me.lblMuebleOficinaCount.Name = "lblMuebleOficinaCount"
             Me.lblMuebleOficinaCount.Size = New System.Drawing.Size(527, 19)
@@ -3372,7 +3375,7 @@
             '
             'btnDelMuebleOficina
             '
-            Me.btnDelMuebleOficina.BackColor = System.Drawing.Color.White
+            Me.btnDelMuebleOficina.BackColor = System.Drawing.Color.Transparent
             Me.btnDelMuebleOficina.Enabled = False
             Me.btnDelMuebleOficina.FlatAppearance.BorderSize = 0
             Me.btnDelMuebleOficina.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -3392,7 +3395,7 @@
             Me.dgvMuebleOficina.AllowUserToResizeRows = False
             DataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
             Me.dgvMuebleOficina.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle9
-            Me.dgvMuebleOficina.BackgroundColor = System.Drawing.Color.White
+            Me.dgvMuebleOficina.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.dgvMuebleOficina.BorderStyle = System.Windows.Forms.BorderStyle.None
             Me.dgvMuebleOficina.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
             Me.dgvMuebleOficina.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
@@ -3476,7 +3479,7 @@
             '
             'btnAddMuebleOficina
             '
-            Me.btnAddMuebleOficina.BackColor = System.Drawing.Color.White
+            Me.btnAddMuebleOficina.BackColor = System.Drawing.Color.Transparent
             Me.btnAddMuebleOficina.Enabled = False
             Me.btnAddMuebleOficina.FlatAppearance.BorderSize = 0
             Me.btnAddMuebleOficina.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -3491,7 +3494,7 @@
             '
             'MetroTabPage8
             '
-            Me.MetroTabPage8.BaseColor = System.Drawing.Color.White
+            Me.MetroTabPage8.BaseColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.MetroTabPage8.Controls.Add(Me.lblEquipoCocinaCount)
             Me.MetroTabPage8.Controls.Add(Me.KryptonGroupBox11)
             Me.MetroTabPage8.Controls.Add(Me.btnDellEquipoCocina)
@@ -3501,9 +3504,9 @@
             Me.MetroTabPage8.ImageIndex = 0
             Me.MetroTabPage8.ImageKey = Nothing
             Me.MetroTabPage8.IsDerivedStyle = True
-            Me.MetroTabPage8.Location = New System.Drawing.Point(4, 42)
+            Me.MetroTabPage8.Location = New System.Drawing.Point(4, 34)
             Me.MetroTabPage8.Name = "MetroTabPage8"
-            Me.MetroTabPage8.Size = New System.Drawing.Size(826, 242)
+            Me.MetroTabPage8.Size = New System.Drawing.Size(826, 250)
             Me.MetroTabPage8.Style = ReaLTaiizor.[Enum].Metro.Style.Light
             Me.MetroTabPage8.StyleManager = Nothing
             Me.MetroTabPage8.TabIndex = 7
@@ -3514,13 +3517,13 @@
             '
             'lblEquipoCocinaCount
             '
-            Me.lblEquipoCocinaCount.BackColor = System.Drawing.Color.White
+            Me.lblEquipoCocinaCount.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.lblEquipoCocinaCount.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.lblEquipoCocinaCount.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.lblEquipoCocinaCount.ForeColor = System.Drawing.Color.DodgerBlue
+            Me.lblEquipoCocinaCount.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
             Me.lblEquipoCocinaCount.Location = New System.Drawing.Point(300, 221)
             Me.lblEquipoCocinaCount.Name = "lblEquipoCocinaCount"
-            Me.lblEquipoCocinaCount.Size = New System.Drawing.Size(533, 19)
+            Me.lblEquipoCocinaCount.Size = New System.Drawing.Size(515, 19)
             Me.lblEquipoCocinaCount.TabIndex = 317
             Me.lblEquipoCocinaCount.Text = "VERIFIQUE LAS SERIES ANTES DE GUARDAR!! "
             Me.lblEquipoCocinaCount.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -3693,7 +3696,7 @@
             '
             'btnDellEquipoCocina
             '
-            Me.btnDellEquipoCocina.BackColor = System.Drawing.Color.White
+            Me.btnDellEquipoCocina.BackColor = System.Drawing.Color.Transparent
             Me.btnDellEquipoCocina.Enabled = False
             Me.btnDellEquipoCocina.FlatAppearance.BorderSize = 0
             Me.btnDellEquipoCocina.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -3713,8 +3716,8 @@
             Me.dgvEquipoCocina.AllowUserToResizeRows = False
             DataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
             Me.dgvEquipoCocina.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle11
-            Me.dgvEquipoCocina.BackgroundColor = System.Drawing.Color.White
-            Me.dgvEquipoCocina.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+            Me.dgvEquipoCocina.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
+            Me.dgvEquipoCocina.BorderStyle = System.Windows.Forms.BorderStyle.None
             Me.dgvEquipoCocina.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
             Me.dgvEquipoCocina.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
             Me.dgvEquipoCocina.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn27, Me.DataGridViewTextBoxColumn32, Me.DataGridViewTextBoxColumn33, Me.Column10, Me.DataGridViewTextBoxColumn34, Me.DataGridViewTextBoxColumn35, Me.DataGridViewTextBoxColumn36, Me.DataGridViewTextBoxColumn37, Me.valorFactCocina, Me.valorResiCocina, Me.vidaUtilCocina})
@@ -3803,7 +3806,7 @@
             '
             'btnAddEquipoCocina
             '
-            Me.btnAddEquipoCocina.BackColor = System.Drawing.Color.White
+            Me.btnAddEquipoCocina.BackColor = System.Drawing.Color.Transparent
             Me.btnAddEquipoCocina.Enabled = False
             Me.btnAddEquipoCocina.FlatAppearance.BorderSize = 0
             Me.btnAddEquipoCocina.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -3818,7 +3821,7 @@
             '
             'MetroTabPage10
             '
-            Me.MetroTabPage10.BaseColor = System.Drawing.Color.White
+            Me.MetroTabPage10.BaseColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.MetroTabPage10.Controls.Add(Me.lblEquipoAmbientacionCount)
             Me.MetroTabPage10.Controls.Add(Me.KryptonGroupBox12)
             Me.MetroTabPage10.Controls.Add(Me.dgvEquipoAmbientacion)
@@ -3828,9 +3831,9 @@
             Me.MetroTabPage10.ImageIndex = 0
             Me.MetroTabPage10.ImageKey = Nothing
             Me.MetroTabPage10.IsDerivedStyle = True
-            Me.MetroTabPage10.Location = New System.Drawing.Point(4, 42)
+            Me.MetroTabPage10.Location = New System.Drawing.Point(4, 34)
             Me.MetroTabPage10.Name = "MetroTabPage10"
-            Me.MetroTabPage10.Size = New System.Drawing.Size(826, 242)
+            Me.MetroTabPage10.Size = New System.Drawing.Size(826, 250)
             Me.MetroTabPage10.Style = ReaLTaiizor.[Enum].Metro.Style.Light
             Me.MetroTabPage10.StyleManager = Nothing
             Me.MetroTabPage10.TabIndex = 9
@@ -3841,10 +3844,10 @@
             '
             'lblEquipoAmbientacionCount
             '
-            Me.lblEquipoAmbientacionCount.BackColor = System.Drawing.Color.White
+            Me.lblEquipoAmbientacionCount.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.lblEquipoAmbientacionCount.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.lblEquipoAmbientacionCount.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.lblEquipoAmbientacionCount.ForeColor = System.Drawing.Color.DodgerBlue
+            Me.lblEquipoAmbientacionCount.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
             Me.lblEquipoAmbientacionCount.Location = New System.Drawing.Point(321, 210)
             Me.lblEquipoAmbientacionCount.Name = "lblEquipoAmbientacionCount"
             Me.lblEquipoAmbientacionCount.Size = New System.Drawing.Size(493, 19)
@@ -4038,7 +4041,6 @@
             Me.cbmAñosEquiposAmbientacion.BackColor = System.Drawing.Color.White
             Me.cbmAñosEquiposAmbientacion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cbmAñosEquiposAmbientacion.Enabled = False
-            Me.cbmAñosEquiposAmbientacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.cbmAñosEquiposAmbientacion.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cbmAñosEquiposAmbientacion.FormattingEnabled = True
             Me.cbmAñosEquiposAmbientacion.Location = New System.Drawing.Point(70, 171)
@@ -4088,7 +4090,7 @@
             Me.dgvEquipoAmbientacion.AllowUserToResizeRows = False
             DataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
             Me.dgvEquipoAmbientacion.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle13
-            Me.dgvEquipoAmbientacion.BackgroundColor = System.Drawing.Color.White
+            Me.dgvEquipoAmbientacion.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.dgvEquipoAmbientacion.BorderStyle = System.Windows.Forms.BorderStyle.None
             Me.dgvEquipoAmbientacion.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
             Me.dgvEquipoAmbientacion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
@@ -4196,7 +4198,7 @@
             '
             'btnDelEquipoAmbientacion
             '
-            Me.btnDelEquipoAmbientacion.BackColor = System.Drawing.Color.White
+            Me.btnDelEquipoAmbientacion.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.btnDelEquipoAmbientacion.Enabled = False
             Me.btnDelEquipoAmbientacion.FlatAppearance.BorderSize = 0
             Me.btnDelEquipoAmbientacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -4211,7 +4213,7 @@
             '
             'btnAddEquipoAmbientacion
             '
-            Me.btnAddEquipoAmbientacion.BackColor = System.Drawing.Color.White
+            Me.btnAddEquipoAmbientacion.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.btnAddEquipoAmbientacion.Enabled = False
             Me.btnAddEquipoAmbientacion.FlatAppearance.BorderSize = 0
             Me.btnAddEquipoAmbientacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -4226,7 +4228,7 @@
             '
             'MetroTabPage11
             '
-            Me.MetroTabPage11.BaseColor = System.Drawing.Color.White
+            Me.MetroTabPage11.BaseColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.MetroTabPage11.Controls.Add(Me.lblEquipoComunicacionCount)
             Me.MetroTabPage11.Controls.Add(Me.KryptonGroupBox13)
             Me.MetroTabPage11.Controls.Add(Me.txtGarantiaComunicacion)
@@ -4239,9 +4241,9 @@
             Me.MetroTabPage11.ImageIndex = 0
             Me.MetroTabPage11.ImageKey = Nothing
             Me.MetroTabPage11.IsDerivedStyle = True
-            Me.MetroTabPage11.Location = New System.Drawing.Point(4, 42)
+            Me.MetroTabPage11.Location = New System.Drawing.Point(4, 34)
             Me.MetroTabPage11.Name = "MetroTabPage11"
-            Me.MetroTabPage11.Size = New System.Drawing.Size(826, 242)
+            Me.MetroTabPage11.Size = New System.Drawing.Size(826, 250)
             Me.MetroTabPage11.Style = ReaLTaiizor.[Enum].Metro.Style.Light
             Me.MetroTabPage11.StyleManager = Nothing
             Me.MetroTabPage11.TabIndex = 10
@@ -4252,10 +4254,10 @@
             '
             'lblEquipoComunicacionCount
             '
-            Me.lblEquipoComunicacionCount.BackColor = System.Drawing.Color.White
+            Me.lblEquipoComunicacionCount.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.lblEquipoComunicacionCount.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.lblEquipoComunicacionCount.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.lblEquipoComunicacionCount.ForeColor = System.Drawing.Color.DodgerBlue
+            Me.lblEquipoComunicacionCount.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
             Me.lblEquipoComunicacionCount.Location = New System.Drawing.Point(290, 221)
             Me.lblEquipoComunicacionCount.Name = "lblEquipoComunicacionCount"
             Me.lblEquipoComunicacionCount.Size = New System.Drawing.Size(517, 19)
@@ -4482,7 +4484,7 @@
             'chkGarantiaComunicacion
             '
             Me.chkGarantiaComunicacion.AutoSize = True
-            Me.chkGarantiaComunicacion.BackColor = System.Drawing.Color.White
+            Me.chkGarantiaComunicacion.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.chkGarantiaComunicacion.Enabled = False
             Me.chkGarantiaComunicacion.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.chkGarantiaComunicacion.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
@@ -4511,7 +4513,7 @@
             Me.dgvEquipoComunicacion.AllowUserToResizeRows = False
             DataGridViewCellStyle15.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
             Me.dgvEquipoComunicacion.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle15
-            Me.dgvEquipoComunicacion.BackgroundColor = System.Drawing.Color.White
+            Me.dgvEquipoComunicacion.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.dgvEquipoComunicacion.BorderStyle = System.Windows.Forms.BorderStyle.None
             Me.dgvEquipoComunicacion.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
             Me.dgvEquipoComunicacion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
@@ -4625,7 +4627,7 @@
             '
             'btnDelEquipoComunicacion
             '
-            Me.btnDelEquipoComunicacion.BackColor = System.Drawing.Color.White
+            Me.btnDelEquipoComunicacion.BackColor = System.Drawing.Color.Transparent
             Me.btnDelEquipoComunicacion.Enabled = False
             Me.btnDelEquipoComunicacion.FlatAppearance.BorderSize = 0
             Me.btnDelEquipoComunicacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -4640,7 +4642,7 @@
             '
             'btnAddEquipoComunicacion
             '
-            Me.btnAddEquipoComunicacion.BackColor = System.Drawing.Color.White
+            Me.btnAddEquipoComunicacion.BackColor = System.Drawing.Color.Transparent
             Me.btnAddEquipoComunicacion.Enabled = False
             Me.btnAddEquipoComunicacion.FlatAppearance.BorderSize = 0
             Me.btnAddEquipoComunicacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -4655,7 +4657,7 @@
             '
             'MetroTabPage12
             '
-            Me.MetroTabPage12.BaseColor = System.Drawing.Color.White
+            Me.MetroTabPage12.BaseColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.MetroTabPage12.Controls.Add(Me.lblEquipoSeguridadCount)
             Me.MetroTabPage12.Controls.Add(Me.KryptonGroupBox14)
             Me.MetroTabPage12.Controls.Add(Me.dgvEquipoSeguridad)
@@ -4665,9 +4667,9 @@
             Me.MetroTabPage12.ImageIndex = 0
             Me.MetroTabPage12.ImageKey = Nothing
             Me.MetroTabPage12.IsDerivedStyle = True
-            Me.MetroTabPage12.Location = New System.Drawing.Point(4, 42)
+            Me.MetroTabPage12.Location = New System.Drawing.Point(4, 34)
             Me.MetroTabPage12.Name = "MetroTabPage12"
-            Me.MetroTabPage12.Size = New System.Drawing.Size(826, 242)
+            Me.MetroTabPage12.Size = New System.Drawing.Size(826, 250)
             Me.MetroTabPage12.Style = ReaLTaiizor.[Enum].Metro.Style.Light
             Me.MetroTabPage12.StyleManager = Nothing
             Me.MetroTabPage12.TabIndex = 11
@@ -4678,10 +4680,10 @@
             '
             'lblEquipoSeguridadCount
             '
-            Me.lblEquipoSeguridadCount.BackColor = System.Drawing.Color.White
+            Me.lblEquipoSeguridadCount.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.lblEquipoSeguridadCount.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.lblEquipoSeguridadCount.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.lblEquipoSeguridadCount.ForeColor = System.Drawing.Color.DodgerBlue
+            Me.lblEquipoSeguridadCount.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
             Me.lblEquipoSeguridadCount.Location = New System.Drawing.Point(295, 214)
             Me.lblEquipoSeguridadCount.Name = "lblEquipoSeguridadCount"
             Me.lblEquipoSeguridadCount.Size = New System.Drawing.Size(513, 19)
@@ -4784,6 +4786,7 @@
             '
             'cbmAñosEquipoSeguridad
             '
+            Me.cbmAñosEquipoSeguridad.BackColor = System.Drawing.Color.White
             Me.cbmAñosEquipoSeguridad.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cbmAñosEquipoSeguridad.Enabled = False
             Me.cbmAñosEquipoSeguridad.FlatStyle = System.Windows.Forms.FlatStyle.System
@@ -4796,6 +4799,7 @@
             '
             'txtSerieEquipoSeguridad
             '
+            Me.txtSerieEquipoSeguridad.BackColor = System.Drawing.Color.White
             Me.txtSerieEquipoSeguridad.Enabled = False
             Me.txtSerieEquipoSeguridad.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtSerieEquipoSeguridad.Location = New System.Drawing.Point(75, 103)
@@ -4813,6 +4817,7 @@
             '
             'cbmMarcaEquipoSeguridad
             '
+            Me.cbmMarcaEquipoSeguridad.BackColor = System.Drawing.Color.White
             Me.cbmMarcaEquipoSeguridad.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cbmMarcaEquipoSeguridad.Enabled = False
             Me.cbmMarcaEquipoSeguridad.FlatStyle = System.Windows.Forms.FlatStyle.System
@@ -4825,6 +4830,7 @@
             '
             'cbmMaterialEquipoSeguridad
             '
+            Me.cbmMaterialEquipoSeguridad.BackColor = System.Drawing.Color.White
             Me.cbmMaterialEquipoSeguridad.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cbmMaterialEquipoSeguridad.Enabled = False
             Me.cbmMaterialEquipoSeguridad.FlatStyle = System.Windows.Forms.FlatStyle.System
@@ -4837,6 +4843,7 @@
             '
             'txtModeloEquipoSeguridad
             '
+            Me.txtModeloEquipoSeguridad.BackColor = System.Drawing.Color.White
             Me.txtModeloEquipoSeguridad.Enabled = False
             Me.txtModeloEquipoSeguridad.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtModeloEquipoSeguridad.Location = New System.Drawing.Point(75, 31)
@@ -4847,6 +4854,7 @@
             'cbmEstadoEquipoSeguridad
             '
             Me.cbmEstadoEquipoSeguridad.AutoCompleteCustomSource.AddRange(New String() {"BUENO", "REGULAR", "MALO"})
+            Me.cbmEstadoEquipoSeguridad.BackColor = System.Drawing.Color.White
             Me.cbmEstadoEquipoSeguridad.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cbmEstadoEquipoSeguridad.Enabled = False
             Me.cbmEstadoEquipoSeguridad.FlatStyle = System.Windows.Forms.FlatStyle.System
@@ -4860,6 +4868,7 @@
             '
             'cbmColorEquipoSeguridad
             '
+            Me.cbmColorEquipoSeguridad.BackColor = System.Drawing.Color.White
             Me.cbmColorEquipoSeguridad.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cbmColorEquipoSeguridad.Enabled = False
             Me.cbmColorEquipoSeguridad.FlatStyle = System.Windows.Forms.FlatStyle.System
@@ -4877,8 +4886,8 @@
             Me.dgvEquipoSeguridad.AllowUserToResizeRows = False
             DataGridViewCellStyle17.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
             Me.dgvEquipoSeguridad.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle17
-            Me.dgvEquipoSeguridad.BackgroundColor = System.Drawing.Color.White
-            Me.dgvEquipoSeguridad.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+            Me.dgvEquipoSeguridad.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
+            Me.dgvEquipoSeguridad.BorderStyle = System.Windows.Forms.BorderStyle.None
             Me.dgvEquipoSeguridad.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
             Me.dgvEquipoSeguridad.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
             Me.dgvEquipoSeguridad.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn51, Me.DataGridViewTextBoxColumn52, Me.DataGridViewTextBoxColumn53, Me.DataGridViewTextBoxColumn57, Me.DataGridViewTextBoxColumn58, Me.DataGridViewTextBoxColumn59, Me.DataGridViewTextBoxColumn60, Me.DataGridViewTextBoxColumn62, Me.DataGridViewTextBoxColumn63, Me.valorFactSeguridad, Me.ValorResiSeguridad, Me.vidaUtilSeguridad})
@@ -4973,7 +4982,7 @@
             '
             'btnDelEquipoSeguridad
             '
-            Me.btnDelEquipoSeguridad.BackColor = System.Drawing.Color.White
+            Me.btnDelEquipoSeguridad.BackColor = System.Drawing.Color.Transparent
             Me.btnDelEquipoSeguridad.Enabled = False
             Me.btnDelEquipoSeguridad.FlatAppearance.BorderSize = 0
             Me.btnDelEquipoSeguridad.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -4988,7 +4997,7 @@
             '
             'btnAddEquipoSeguridad
             '
-            Me.btnAddEquipoSeguridad.BackColor = System.Drawing.Color.White
+            Me.btnAddEquipoSeguridad.BackColor = System.Drawing.Color.Transparent
             Me.btnAddEquipoSeguridad.Enabled = False
             Me.btnAddEquipoSeguridad.FlatAppearance.BorderSize = 0
             Me.btnAddEquipoSeguridad.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -5003,7 +5012,7 @@
             '
             'MetroTabPage13
             '
-            Me.MetroTabPage13.BaseColor = System.Drawing.Color.White
+            Me.MetroTabPage13.BaseColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.MetroTabPage13.Controls.Add(Me.lblCamaraCount)
             Me.MetroTabPage13.Controls.Add(Me.KryptonGroupBox15)
             Me.MetroTabPage13.Controls.Add(Me.txtGarantiaCamara)
@@ -5016,9 +5025,9 @@
             Me.MetroTabPage13.ImageIndex = 0
             Me.MetroTabPage13.ImageKey = Nothing
             Me.MetroTabPage13.IsDerivedStyle = True
-            Me.MetroTabPage13.Location = New System.Drawing.Point(4, 42)
+            Me.MetroTabPage13.Location = New System.Drawing.Point(4, 34)
             Me.MetroTabPage13.Name = "MetroTabPage13"
-            Me.MetroTabPage13.Size = New System.Drawing.Size(826, 242)
+            Me.MetroTabPage13.Size = New System.Drawing.Size(826, 250)
             Me.MetroTabPage13.Style = ReaLTaiizor.[Enum].Metro.Style.Light
             Me.MetroTabPage13.StyleManager = Nothing
             Me.MetroTabPage13.TabIndex = 12
@@ -5029,10 +5038,10 @@
             '
             'lblCamaraCount
             '
-            Me.lblCamaraCount.BackColor = System.Drawing.Color.White
+            Me.lblCamaraCount.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.lblCamaraCount.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.lblCamaraCount.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.lblCamaraCount.ForeColor = System.Drawing.Color.DodgerBlue
+            Me.lblCamaraCount.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
             Me.lblCamaraCount.Location = New System.Drawing.Point(310, 214)
             Me.lblCamaraCount.Name = "lblCamaraCount"
             Me.lblCamaraCount.Size = New System.Drawing.Size(514, 19)
@@ -5262,7 +5271,7 @@
             'chkGarantiaCamara
             '
             Me.chkGarantiaCamara.AutoSize = True
-            Me.chkGarantiaCamara.BackColor = System.Drawing.Color.White
+            Me.chkGarantiaCamara.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.chkGarantiaCamara.Enabled = False
             Me.chkGarantiaCamara.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.chkGarantiaCamara.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
@@ -5292,8 +5301,8 @@
             Me.dgvCamara.AllowUserToResizeRows = False
             DataGridViewCellStyle19.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
             Me.dgvCamara.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle19
-            Me.dgvCamara.BackgroundColor = System.Drawing.Color.White
-            Me.dgvCamara.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+            Me.dgvCamara.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
+            Me.dgvCamara.BorderStyle = System.Windows.Forms.BorderStyle.None
             Me.dgvCamara.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
             Me.dgvCamara.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
             Me.dgvCamara.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn61, Me.DataGridViewTextBoxColumn64, Me.DataGridViewTextBoxColumn65, Me.DataGridViewTextBoxColumn66, Me.DataGridViewTextBoxColumn67, Me.DataGridViewTextBoxColumn68, Me.DataGridViewTextBoxColumn69, Me.DataGridViewTextBoxColumn70, Me.DataGridViewTextBoxColumn71, Me.garantiaCamara, Me.rutaCamara, Me.valorFactCamara, Me.valorResiCamara, Me.vidaUtilCamara, Me.caducidad_chaleco})
@@ -5406,7 +5415,7 @@
             '
             'btnDelCamara
             '
-            Me.btnDelCamara.BackColor = System.Drawing.Color.White
+            Me.btnDelCamara.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.btnDelCamara.Enabled = False
             Me.btnDelCamara.FlatAppearance.BorderSize = 0
             Me.btnDelCamara.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -5421,7 +5430,7 @@
             '
             'btnAddCamara
             '
-            Me.btnAddCamara.BackColor = System.Drawing.Color.White
+            Me.btnAddCamara.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.btnAddCamara.Enabled = False
             Me.btnAddCamara.FlatAppearance.BorderSize = 0
             Me.btnAddCamara.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -5436,15 +5445,15 @@
             '
             'MetroTabPage14
             '
-            Me.MetroTabPage14.BaseColor = System.Drawing.Color.White
+            Me.MetroTabPage14.BaseColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.MetroTabPage14.Controls.Add(Me.KryptonGroupBox16)
             Me.MetroTabPage14.Font = Nothing
             Me.MetroTabPage14.ImageIndex = 0
             Me.MetroTabPage14.ImageKey = Nothing
             Me.MetroTabPage14.IsDerivedStyle = True
-            Me.MetroTabPage14.Location = New System.Drawing.Point(4, 42)
+            Me.MetroTabPage14.Location = New System.Drawing.Point(4, 34)
             Me.MetroTabPage14.Name = "MetroTabPage14"
-            Me.MetroTabPage14.Size = New System.Drawing.Size(826, 242)
+            Me.MetroTabPage14.Size = New System.Drawing.Size(826, 250)
             Me.MetroTabPage14.Style = ReaLTaiizor.[Enum].Metro.Style.Light
             Me.MetroTabPage14.StyleManager = Nothing
             Me.MetroTabPage14.TabIndex = 13
@@ -5700,7 +5709,7 @@
             '
             'MetroTabPage15
             '
-            Me.MetroTabPage15.BaseColor = System.Drawing.Color.White
+            Me.MetroTabPage15.BaseColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.MetroTabPage15.Controls.Add(Me.lblChalecoCount)
             Me.MetroTabPage15.Controls.Add(Me.KryptonGroupBox17)
             Me.MetroTabPage15.Controls.Add(Me.txtGarantiaChaleco)
@@ -5713,9 +5722,9 @@
             Me.MetroTabPage15.ImageIndex = 0
             Me.MetroTabPage15.ImageKey = Nothing
             Me.MetroTabPage15.IsDerivedStyle = True
-            Me.MetroTabPage15.Location = New System.Drawing.Point(4, 42)
+            Me.MetroTabPage15.Location = New System.Drawing.Point(4, 34)
             Me.MetroTabPage15.Name = "MetroTabPage15"
-            Me.MetroTabPage15.Size = New System.Drawing.Size(826, 242)
+            Me.MetroTabPage15.Size = New System.Drawing.Size(826, 250)
             Me.MetroTabPage15.Style = ReaLTaiizor.[Enum].Metro.Style.Light
             Me.MetroTabPage15.StyleManager = Nothing
             Me.MetroTabPage15.TabIndex = 14
@@ -5726,7 +5735,7 @@
             '
             'lblChalecoCount
             '
-            Me.lblChalecoCount.BackColor = System.Drawing.Color.White
+            Me.lblChalecoCount.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.lblChalecoCount.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.lblChalecoCount.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.lblChalecoCount.ForeColor = System.Drawing.Color.DodgerBlue
@@ -5824,9 +5833,10 @@
             '
             'dtpCaducidadChaleco
             '
+            Me.dtpCaducidadChaleco.CalendarMonthBackground = System.Drawing.Color.White
             Me.dtpCaducidadChaleco.Enabled = False
             Me.dtpCaducidadChaleco.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.dtpCaducidadChaleco.Location = New System.Drawing.Point(76, 200)
+            Me.dtpCaducidadChaleco.Location = New System.Drawing.Point(75, 205)
             Me.dtpCaducidadChaleco.Name = "dtpCaducidadChaleco"
             Me.dtpCaducidadChaleco.Size = New System.Drawing.Size(157, 21)
             Me.dtpCaducidadChaleco.TabIndex = 361
@@ -5864,7 +5874,7 @@
             '
             Me.txtAdicionalChaleco.Enabled = False
             Me.txtAdicionalChaleco.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtAdicionalChaleco.Location = New System.Drawing.Point(76, 177)
+            Me.txtAdicionalChaleco.Location = New System.Drawing.Point(75, 180)
             Me.txtAdicionalChaleco.Multiline = True
             Me.txtAdicionalChaleco.Name = "txtAdicionalChaleco"
             Me.txtAdicionalChaleco.Size = New System.Drawing.Size(210, 21)
@@ -5884,14 +5894,15 @@
             'cbmEstadoChaleco
             '
             Me.cbmEstadoChaleco.AutoCompleteCustomSource.AddRange(New String() {"BUENO", "REGULAR", "MALO"})
+            Me.cbmEstadoChaleco.BackColor = System.Drawing.Color.White
             Me.cbmEstadoChaleco.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cbmEstadoChaleco.Enabled = False
             Me.cbmEstadoChaleco.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cbmEstadoChaleco.FormattingEnabled = True
             Me.cbmEstadoChaleco.Items.AddRange(New Object() {"BUENO", "REGULAR", "MALO"})
-            Me.cbmEstadoChaleco.Location = New System.Drawing.Point(76, 55)
+            Me.cbmEstadoChaleco.Location = New System.Drawing.Point(75, 55)
             Me.cbmEstadoChaleco.Name = "cbmEstadoChaleco"
-            Me.cbmEstadoChaleco.Size = New System.Drawing.Size(156, 21)
+            Me.cbmEstadoChaleco.Size = New System.Drawing.Size(157, 21)
             Me.cbmEstadoChaleco.TabIndex = 344
             '
             'cbmAñosChaleco
@@ -5902,7 +5913,7 @@
             Me.cbmAñosChaleco.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cbmAñosChaleco.FormattingEnabled = True
             Me.cbmAñosChaleco.Items.AddRange(New Object() {"1990", "1991", "1992", "1993", "1994", "1995", "1996", "1997", "1998", "1999", "2000", "2001", "2002", "2003", "2004", "2005", "2006", "2007", "2008", "2009", "2010", "2011", "2012"})
-            Me.cbmAñosChaleco.Location = New System.Drawing.Point(77, 153)
+            Me.cbmAñosChaleco.Location = New System.Drawing.Point(75, 152)
             Me.cbmAñosChaleco.Name = "cbmAñosChaleco"
             Me.cbmAñosChaleco.Size = New System.Drawing.Size(89, 21)
             Me.cbmAñosChaleco.TabIndex = 355
@@ -5918,22 +5929,24 @@
             '
             'cbmColorChaleco
             '
+            Me.cbmColorChaleco.BackColor = System.Drawing.Color.White
             Me.cbmColorChaleco.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cbmColorChaleco.Enabled = False
             Me.cbmColorChaleco.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cbmColorChaleco.FormattingEnabled = True
             Me.cbmColorChaleco.Location = New System.Drawing.Point(75, 80)
             Me.cbmColorChaleco.Name = "cbmColorChaleco"
-            Me.cbmColorChaleco.Size = New System.Drawing.Size(155, 21)
+            Me.cbmColorChaleco.Size = New System.Drawing.Size(157, 21)
             Me.cbmColorChaleco.TabIndex = 346
             '
             'cbmMaterialChaleco
             '
+            Me.cbmMaterialChaleco.BackColor = System.Drawing.Color.White
             Me.cbmMaterialChaleco.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cbmMaterialChaleco.Enabled = False
             Me.cbmMaterialChaleco.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.cbmMaterialChaleco.FormattingEnabled = True
-            Me.cbmMaterialChaleco.Location = New System.Drawing.Point(77, 129)
+            Me.cbmMaterialChaleco.Location = New System.Drawing.Point(75, 128)
             Me.cbmMaterialChaleco.Name = "cbmMaterialChaleco"
             Me.cbmMaterialChaleco.Size = New System.Drawing.Size(157, 21)
             Me.cbmMaterialChaleco.TabIndex = 352
@@ -5950,7 +5963,7 @@
             '
             'btnDelChaleco
             '
-            Me.btnDelChaleco.BackColor = System.Drawing.Color.White
+            Me.btnDelChaleco.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.btnDelChaleco.Enabled = False
             Me.btnDelChaleco.FlatAppearance.BorderSize = 0
             Me.btnDelChaleco.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -5966,7 +5979,7 @@
             'chkGarantiaChaleco
             '
             Me.chkGarantiaChaleco.AutoSize = True
-            Me.chkGarantiaChaleco.BackColor = System.Drawing.Color.White
+            Me.chkGarantiaChaleco.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.chkGarantiaChaleco.Enabled = False
             Me.chkGarantiaChaleco.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.chkGarantiaChaleco.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
@@ -5991,7 +6004,7 @@
             '
             'btnAddChaleco
             '
-            Me.btnAddChaleco.BackColor = System.Drawing.Color.White
+            Me.btnAddChaleco.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.btnAddChaleco.Enabled = False
             Me.btnAddChaleco.FlatAppearance.BorderSize = 0
             Me.btnAddChaleco.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -6011,8 +6024,8 @@
             Me.dgvChaleco.AllowUserToResizeRows = False
             DataGridViewCellStyle21.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
             Me.dgvChaleco.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle21
-            Me.dgvChaleco.BackgroundColor = System.Drawing.Color.White
-            Me.dgvChaleco.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+            Me.dgvChaleco.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
+            Me.dgvChaleco.BorderStyle = System.Windows.Forms.BorderStyle.None
             Me.dgvChaleco.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
             Me.dgvChaleco.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
             Me.dgvChaleco.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn72, Me.DataGridViewTextBoxColumn73, Me.DataGridViewTextBoxColumn74, Me.DataGridViewTextBoxColumn75, Me.DataGridViewTextBoxColumn76, Me.DataGridViewTextBoxColumn77, Me.DataGridViewTextBoxColumn78, Me.DataGridViewTextBoxColumn79, Me.DataGridViewTextBoxColumn80, Me.garantiaChaleco, Me.RutaChaleco, Me.valorFactChaleco, Me.valorResiChaleco, Me.VidaUtilChaleco, Me.venceChaleco})
@@ -6125,15 +6138,15 @@
             '
             'MetroTabPage16
             '
-            Me.MetroTabPage16.BaseColor = System.Drawing.Color.White
+            Me.MetroTabPage16.BaseColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.MetroTabPage16.Controls.Add(Me.KryptonGroupBox18)
             Me.MetroTabPage16.Font = Nothing
             Me.MetroTabPage16.ImageIndex = 0
             Me.MetroTabPage16.ImageKey = Nothing
             Me.MetroTabPage16.IsDerivedStyle = True
-            Me.MetroTabPage16.Location = New System.Drawing.Point(4, 42)
+            Me.MetroTabPage16.Location = New System.Drawing.Point(4, 34)
             Me.MetroTabPage16.Name = "MetroTabPage16"
-            Me.MetroTabPage16.Size = New System.Drawing.Size(826, 242)
+            Me.MetroTabPage16.Size = New System.Drawing.Size(826, 250)
             Me.MetroTabPage16.Style = ReaLTaiizor.[Enum].Metro.Style.Light
             Me.MetroTabPage16.StyleManager = Nothing
             Me.MetroTabPage16.TabIndex = 15
@@ -6912,7 +6925,7 @@
             Me.gbxInformacion.CaptionOverlap = 0R
             Me.gbxInformacion.Enabled = False
             Me.gbxInformacion.GroupBackStyle = Krypton.Toolkit.PaletteBackStyle.ControlRibbon
-            Me.gbxInformacion.Location = New System.Drawing.Point(0, 32)
+            Me.gbxInformacion.Location = New System.Drawing.Point(0, 34)
             Me.gbxInformacion.Name = "gbxInformacion"
             '
             'gbxInformacion.Panel
@@ -7028,7 +7041,7 @@
             Me.gbxDatos.CaptionOverlap = 0R
             Me.gbxDatos.Enabled = False
             Me.gbxDatos.GroupBackStyle = Krypton.Toolkit.PaletteBackStyle.ControlRibbon
-            Me.gbxDatos.Location = New System.Drawing.Point(0, 170)
+            Me.gbxDatos.Location = New System.Drawing.Point(0, 173)
             Me.gbxDatos.Name = "gbxDatos"
             '
             'gbxDatos.Panel
@@ -7167,7 +7180,7 @@
             '
             Me.gbxContabilidad.Enabled = False
             Me.gbxContabilidad.GroupBackStyle = Krypton.Toolkit.PaletteBackStyle.ControlRibbon
-            Me.gbxContabilidad.Location = New System.Drawing.Point(0, 334)
+            Me.gbxContabilidad.Location = New System.Drawing.Point(0, 335)
             Me.gbxContabilidad.Name = "gbxContabilidad"
             '
             'gbxContabilidad.Panel

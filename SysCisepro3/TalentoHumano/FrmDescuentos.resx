@@ -193,9 +193,9 @@
     <value>True</value>
   </metadata>
   <data name="kryptonLabel13.Values.Text" xml:space="preserve">
-    <value>La siguiente nómna representa una lista de aspirantes a quienes se ha entregado equipo de seguridad y no se presentaron a laborar
-de tal manera que no aparecen en el rol de pagos correspondientes. Ni registran descuento alguno por dicho equipo.
-Este equipo debe ser reingresado a bodega.</value>
+    <value>La siguiente nómina representa una lista de aspirantes a quienes se ha entregado equipo de seguridad y no se presen_
+taron a laborar de tal manera que no aparecen en el rol de pagos correspondientes. Ni registran descuento alguno por
+dicho equipo. Este equipo debe ser reingresado a bodega.</value>
   </data>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>58</value>

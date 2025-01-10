@@ -28,13 +28,13 @@
             Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmRegistrarSancionPersonal))
             Me.txtArea = New System.Windows.Forms.TextBox()
             Me.KryptonGroupBox1 = New ComponentFactory.Krypton.Toolkit.KryptonGroupBox()
+            Me.MetroTabControl1 = New ReaLTaiizor.Controls.MetroTabControl()
+            Me.MetroTabPage1 = New ReaLTaiizor.Child.Metro.MetroTabPage()
+            Me.dgvNormal = New ComponentFactory.Krypton.Toolkit.KryptonDataGridView()
+            Me.MetroTabPage2 = New ReaLTaiizor.Child.Metro.MetroTabPage()
+            Me.dgvSanciones = New System.Windows.Forms.DataGridView()
             Me.Button1 = New System.Windows.Forms.Button()
             Me.btnNormalF = New System.Windows.Forms.Button()
-            Me.TabControl1 = New System.Windows.Forms.TabControl()
-            Me.TabPage1 = New System.Windows.Forms.TabPage()
-            Me.dgvNormal = New ComponentFactory.Krypton.Toolkit.KryptonDataGridView()
-            Me.TabPage2 = New System.Windows.Forms.TabPage()
-            Me.dgvSanciones = New System.Windows.Forms.DataGridView()
             Me.KryptonLabel3 = New ComponentFactory.Krypton.Toolkit.KryptonLabel()
             Me.KryptonLabel2 = New ComponentFactory.Krypton.Toolkit.KryptonLabel()
             Me.txtFiltro = New System.Windows.Forms.TextBox()
@@ -99,10 +99,10 @@
             CType(Me.KryptonGroupBox1.Panel, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.KryptonGroupBox1.Panel.SuspendLayout()
             Me.KryptonGroupBox1.SuspendLayout()
-            Me.TabControl1.SuspendLayout()
-            Me.TabPage1.SuspendLayout()
+            Me.MetroTabControl1.SuspendLayout()
+            Me.MetroTabPage1.SuspendLayout()
             CType(Me.dgvNormal, System.ComponentModel.ISupportInitialize).BeginInit()
-            Me.TabPage2.SuspendLayout()
+            Me.MetroTabPage2.SuspendLayout()
             CType(Me.dgvSanciones, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.txtTotal, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.txtCant, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -119,7 +119,7 @@
             Me.txtArea.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtArea.Enabled = False
             Me.txtArea.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtArea.Location = New System.Drawing.Point(307, 30)
+            Me.txtArea.Location = New System.Drawing.Point(305, 30)
             Me.txtArea.Name = "txtArea"
             Me.txtArea.Size = New System.Drawing.Size(205, 21)
             Me.txtArea.TabIndex = 197
@@ -133,18 +133,125 @@
             '
             'KryptonGroupBox1.Panel
             '
+            Me.KryptonGroupBox1.Panel.Controls.Add(Me.MetroTabControl1)
             Me.KryptonGroupBox1.Panel.Controls.Add(Me.Button1)
             Me.KryptonGroupBox1.Panel.Controls.Add(Me.btnNormalF)
-            Me.KryptonGroupBox1.Panel.Controls.Add(Me.TabControl1)
             Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel3)
             Me.KryptonGroupBox1.Panel.Controls.Add(Me.KryptonLabel2)
             Me.KryptonGroupBox1.Panel.Controls.Add(Me.txtFiltro)
             Me.KryptonGroupBox1.Panel.Controls.Add(Me.dtpFechaDesde)
             Me.KryptonGroupBox1.Panel.Controls.Add(Me.dtpFechaHasta)
             Me.KryptonGroupBox1.Panel.Controls.Add(Me.ListView1)
-            Me.KryptonGroupBox1.Size = New System.Drawing.Size(569, 303)
+            Me.KryptonGroupBox1.Size = New System.Drawing.Size(569, 310)
             Me.KryptonGroupBox1.TabIndex = 300
             Me.KryptonGroupBox1.Values.Heading = "Registro de Multas"
+            '
+            'MetroTabControl1
+            '
+            Me.MetroTabControl1.AnimateEasingType = ReaLTaiizor.[Enum].Metro.EasingType.CubeOut
+            Me.MetroTabControl1.AnimateTime = 200
+            Me.MetroTabControl1.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
+            Me.MetroTabControl1.Controls.Add(Me.MetroTabPage1)
+            Me.MetroTabControl1.Controls.Add(Me.MetroTabPage2)
+            Me.MetroTabControl1.ControlsVisible = True
+            Me.MetroTabControl1.IsDerivedStyle = True
+            Me.MetroTabControl1.ItemSize = New System.Drawing.Size(100, 25)
+            Me.MetroTabControl1.Location = New System.Drawing.Point(4, 35)
+            Me.MetroTabControl1.MCursor = System.Windows.Forms.Cursors.Hand
+            Me.MetroTabControl1.Name = "MetroTabControl1"
+            Me.MetroTabControl1.SelectedIndex = 0
+            Me.MetroTabControl1.SelectedTextColor = System.Drawing.Color.FromArgb(CType(CType(65, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(225, Byte), Integer))
+            Me.MetroTabControl1.Size = New System.Drawing.Size(558, 248)
+            Me.MetroTabControl1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed
+            Me.MetroTabControl1.Speed = 100
+            Me.MetroTabControl1.Style = ReaLTaiizor.[Enum].Metro.Style.Light
+            Me.MetroTabControl1.StyleManager = Nothing
+            Me.MetroTabControl1.TabIndex = 308
+            Me.MetroTabControl1.TabStyle = ReaLTaiizor.[Enum].Metro.TabStyle.Style2
+            Me.MetroTabControl1.ThemeAuthor = "Taiizor"
+            Me.MetroTabControl1.ThemeName = "MetroLight"
+            Me.MetroTabControl1.UnselectedTextColor = System.Drawing.Color.Gray
+            '
+            'MetroTabPage1
+            '
+            Me.MetroTabPage1.BaseColor = System.Drawing.Color.White
+            Me.MetroTabPage1.Controls.Add(Me.dgvNormal)
+            Me.MetroTabPage1.Font = Nothing
+            Me.MetroTabPage1.ImageIndex = 0
+            Me.MetroTabPage1.ImageKey = Nothing
+            Me.MetroTabPage1.IsDerivedStyle = True
+            Me.MetroTabPage1.Location = New System.Drawing.Point(4, 29)
+            Me.MetroTabPage1.Name = "MetroTabPage1"
+            Me.MetroTabPage1.Size = New System.Drawing.Size(550, 215)
+            Me.MetroTabPage1.Style = ReaLTaiizor.[Enum].Metro.Style.Light
+            Me.MetroTabPage1.StyleManager = Nothing
+            Me.MetroTabPage1.TabIndex = 0
+            Me.MetroTabPage1.Text = "Normal"
+            Me.MetroTabPage1.ThemeAuthor = "Taiizor"
+            Me.MetroTabPage1.ThemeName = "MetroLight"
+            Me.MetroTabPage1.ToolTipText = Nothing
+            '
+            'dgvNormal
+            '
+            Me.dgvNormal.AllowUserToAddRows = False
+            Me.dgvNormal.AllowUserToDeleteRows = False
+            Me.dgvNormal.AllowUserToResizeColumns = False
+            Me.dgvNormal.AllowUserToResizeRows = False
+            DataGridViewCellStyle1.BackColor = System.Drawing.Color.LightGray
+            Me.dgvNormal.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+            Me.dgvNormal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+            Me.dgvNormal.Dock = System.Windows.Forms.DockStyle.Fill
+            Me.dgvNormal.Location = New System.Drawing.Point(0, 0)
+            Me.dgvNormal.Name = "dgvNormal"
+            Me.dgvNormal.RowHeadersVisible = False
+            Me.dgvNormal.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+            Me.dgvNormal.Size = New System.Drawing.Size(550, 215)
+            Me.dgvNormal.StateCommon.Background.Color1 = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
+            Me.dgvNormal.StateCommon.BackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.GridBackgroundList
+            Me.dgvNormal.StateCommon.DataCell.Border.Color1 = System.Drawing.Color.White
+            Me.dgvNormal.StateCommon.DataCell.Border.DrawBorders = CType((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top Or ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) _
+            Or ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) _
+            Or ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right), ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)
+            Me.dgvNormal.TabIndex = 206
+            '
+            'MetroTabPage2
+            '
+            Me.MetroTabPage2.BaseColor = System.Drawing.Color.White
+            Me.MetroTabPage2.Controls.Add(Me.dgvSanciones)
+            Me.MetroTabPage2.Font = Nothing
+            Me.MetroTabPage2.ImageIndex = 0
+            Me.MetroTabPage2.ImageKey = Nothing
+            Me.MetroTabPage2.IsDerivedStyle = True
+            Me.MetroTabPage2.Location = New System.Drawing.Point(4, 29)
+            Me.MetroTabPage2.Name = "MetroTabPage2"
+            Me.MetroTabPage2.Size = New System.Drawing.Size(550, 215)
+            Me.MetroTabPage2.Style = ReaLTaiizor.[Enum].Metro.Style.Light
+            Me.MetroTabPage2.StyleManager = Nothing
+            Me.MetroTabPage2.TabIndex = 1
+            Me.MetroTabPage2.Text = "Agrupado"
+            Me.MetroTabPage2.ThemeAuthor = "Taiizor"
+            Me.MetroTabPage2.ThemeName = "MetroLight"
+            Me.MetroTabPage2.ToolTipText = Nothing
+            '
+            'dgvSanciones
+            '
+            Me.dgvSanciones.AllowUserToAddRows = False
+            Me.dgvSanciones.AllowUserToDeleteRows = False
+            Me.dgvSanciones.AllowUserToOrderColumns = True
+            Me.dgvSanciones.AllowUserToResizeRows = False
+            DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+            Me.dgvSanciones.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle2
+            Me.dgvSanciones.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
+            Me.dgvSanciones.BorderStyle = System.Windows.Forms.BorderStyle.None
+            Me.dgvSanciones.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedHorizontal
+            Me.dgvSanciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+            Me.dgvSanciones.Location = New System.Drawing.Point(-92, -11)
+            Me.dgvSanciones.Name = "dgvSanciones"
+            Me.dgvSanciones.RowHeadersVisible = False
+            Me.dgvSanciones.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+            Me.dgvSanciones.ShowEditingIcon = False
+            Me.dgvSanciones.Size = New System.Drawing.Size(533, 206)
+            Me.dgvSanciones.TabIndex = 1
             '
             'Button1
             '
@@ -181,83 +288,6 @@
             Me.btnNormalF.Text = "Normal"
             Me.btnNormalF.TextAlign = System.Drawing.ContentAlignment.MiddleRight
             Me.btnNormalF.UseVisualStyleBackColor = False
-            '
-            'TabControl1
-            '
-            Me.TabControl1.Controls.Add(Me.TabPage1)
-            Me.TabControl1.Controls.Add(Me.TabPage2)
-            Me.TabControl1.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.TabControl1.Location = New System.Drawing.Point(8, 38)
-            Me.TabControl1.Name = "TabControl1"
-            Me.TabControl1.SelectedIndex = 0
-            Me.TabControl1.Size = New System.Drawing.Size(547, 238)
-            Me.TabControl1.TabIndex = 305
-            '
-            'TabPage1
-            '
-            Me.TabPage1.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
-            Me.TabPage1.Controls.Add(Me.dgvNormal)
-            Me.TabPage1.Location = New System.Drawing.Point(4, 22)
-            Me.TabPage1.Name = "TabPage1"
-            Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-            Me.TabPage1.Size = New System.Drawing.Size(539, 212)
-            Me.TabPage1.TabIndex = 0
-            Me.TabPage1.Text = "Normal"
-            '
-            'dgvNormal
-            '
-            Me.dgvNormal.AllowUserToAddRows = False
-            Me.dgvNormal.AllowUserToDeleteRows = False
-            Me.dgvNormal.AllowUserToResizeColumns = False
-            Me.dgvNormal.AllowUserToResizeRows = False
-            DataGridViewCellStyle1.BackColor = System.Drawing.Color.LightGray
-            Me.dgvNormal.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
-            Me.dgvNormal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-            Me.dgvNormal.Dock = System.Windows.Forms.DockStyle.Fill
-            Me.dgvNormal.Location = New System.Drawing.Point(3, 3)
-            Me.dgvNormal.Name = "dgvNormal"
-            Me.dgvNormal.RowHeadersVisible = False
-            Me.dgvNormal.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvNormal.Size = New System.Drawing.Size(533, 206)
-            Me.dgvNormal.StateCommon.Background.Color1 = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
-            Me.dgvNormal.StateCommon.BackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.GridBackgroundList
-            Me.dgvNormal.StateCommon.DataCell.Border.Color1 = System.Drawing.Color.White
-            Me.dgvNormal.StateCommon.DataCell.Border.DrawBorders = CType((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top Or ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) _
-            Or ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) _
-            Or ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right), ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)
-            Me.dgvNormal.TabIndex = 205
-            '
-            'TabPage2
-            '
-            Me.TabPage2.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
-            Me.TabPage2.Controls.Add(Me.dgvSanciones)
-            Me.TabPage2.Location = New System.Drawing.Point(4, 22)
-            Me.TabPage2.Name = "TabPage2"
-            Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-            Me.TabPage2.Size = New System.Drawing.Size(539, 212)
-            Me.TabPage2.TabIndex = 1
-            Me.TabPage2.Text = "Agrupado"
-            '
-            'dgvSanciones
-            '
-            Me.dgvSanciones.AllowUserToAddRows = False
-            Me.dgvSanciones.AllowUserToDeleteRows = False
-            Me.dgvSanciones.AllowUserToOrderColumns = True
-            Me.dgvSanciones.AllowUserToResizeRows = False
-            DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-            Me.dgvSanciones.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle2
-            Me.dgvSanciones.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
-            Me.dgvSanciones.BorderStyle = System.Windows.Forms.BorderStyle.None
-            Me.dgvSanciones.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedHorizontal
-            Me.dgvSanciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-            Me.dgvSanciones.Dock = System.Windows.Forms.DockStyle.Fill
-            Me.dgvSanciones.Location = New System.Drawing.Point(3, 3)
-            Me.dgvSanciones.Name = "dgvSanciones"
-            Me.dgvSanciones.RowHeadersVisible = False
-            Me.dgvSanciones.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvSanciones.ShowEditingIcon = False
-            Me.dgvSanciones.Size = New System.Drawing.Size(533, 206)
-            Me.dgvSanciones.TabIndex = 0
             '
             'KryptonLabel3
             '
@@ -404,7 +434,7 @@
             Me.txtTotal.DecimalPlaces = 2
             Me.txtTotal.Enabled = False
             Me.txtTotal.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtTotal.Location = New System.Drawing.Point(229, 143)
+            Me.txtTotal.Location = New System.Drawing.Point(215, 143)
             Me.txtTotal.Name = "txtTotal"
             Me.txtTotal.Size = New System.Drawing.Size(52, 21)
             Me.txtTotal.TabIndex = 208
@@ -425,7 +455,7 @@
             Me.dtpFecha.Enabled = False
             Me.dtpFecha.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-            Me.dtpFecha.Location = New System.Drawing.Point(229, 116)
+            Me.dtpFecha.Location = New System.Drawing.Point(215, 116)
             Me.dtpFecha.Name = "dtpFecha"
             Me.dtpFecha.Size = New System.Drawing.Size(80, 21)
             Me.dtpFecha.TabIndex = 110
@@ -438,7 +468,7 @@
             Me.bntSanciones.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.bntSanciones.Font = New System.Drawing.Font("Consolas", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.bntSanciones.Image = Global.syscisepro.My.Resources.Resources.search_24dp_FILL0_wght400_GRAD0_opsz24__2_
-            Me.bntSanciones.Location = New System.Drawing.Point(518, 108)
+            Me.bntSanciones.Location = New System.Drawing.Point(516, 111)
             Me.bntSanciones.Name = "bntSanciones"
             Me.bntSanciones.Size = New System.Drawing.Size(26, 26)
             Me.bntSanciones.TabIndex = 111
@@ -453,7 +483,7 @@
             Me.txtObservacion.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtObservacion.Location = New System.Drawing.Point(89, 193)
             Me.txtObservacion.Name = "txtObservacion"
-            Me.txtObservacion.Size = New System.Drawing.Size(337, 21)
+            Me.txtObservacion.Size = New System.Drawing.Size(369, 21)
             Me.txtObservacion.TabIndex = 113
             '
             'txtValor
@@ -462,7 +492,7 @@
             Me.txtValor.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtValor.Enabled = False
             Me.txtValor.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtValor.Location = New System.Drawing.Point(383, 141)
+            Me.txtValor.Location = New System.Drawing.Point(381, 141)
             Me.txtValor.Name = "txtValor"
             Me.txtValor.Size = New System.Drawing.Size(43, 21)
             Me.txtValor.TabIndex = 199
@@ -484,7 +514,7 @@
             Me.txtSancion.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtSancion.Enabled = False
             Me.txtSancion.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtSancion.Location = New System.Drawing.Point(383, 114)
+            Me.txtSancion.Location = New System.Drawing.Point(381, 114)
             Me.txtSancion.Name = "txtSancion"
             Me.txtSancion.Size = New System.Drawing.Size(129, 21)
             Me.txtSancion.TabIndex = 0
@@ -497,7 +527,7 @@
             Me.txtCliente.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.txtCliente.Location = New System.Drawing.Point(74, 88)
             Me.txtCliente.Name = "txtCliente"
-            Me.txtCliente.Size = New System.Drawing.Size(438, 21)
+            Me.txtCliente.Size = New System.Drawing.Size(436, 21)
             Me.txtCliente.TabIndex = 201
             '
             'txtIdPuesto
@@ -517,7 +547,7 @@
             Me.txtUbicacionPuesto.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtUbicacionPuesto.Enabled = False
             Me.txtUbicacionPuesto.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtUbicacionPuesto.Location = New System.Drawing.Point(253, 62)
+            Me.txtUbicacionPuesto.Location = New System.Drawing.Point(251, 62)
             Me.txtUbicacionPuesto.Name = "txtUbicacionPuesto"
             Me.txtUbicacionPuesto.Size = New System.Drawing.Size(259, 21)
             Me.txtUbicacionPuesto.TabIndex = 0
@@ -541,7 +571,7 @@
             Me.btnPersonalEntra.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.btnPersonalEntra.Font = New System.Drawing.Font("Consolas", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.btnPersonalEntra.Image = Global.syscisepro.My.Resources.Resources.search_24dp_FILL0_wght400_GRAD0_opsz24__2_
-            Me.btnPersonalEntra.Location = New System.Drawing.Point(518, 0)
+            Me.btnPersonalEntra.Location = New System.Drawing.Point(516, 0)
             Me.btnPersonalEntra.Name = "btnPersonalEntra"
             Me.btnPersonalEntra.Size = New System.Drawing.Size(26, 26)
             Me.btnPersonalEntra.TabIndex = 105
@@ -565,7 +595,7 @@
             Me.txtPersonal.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.txtPersonal.Enabled = False
             Me.txtPersonal.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.txtPersonal.Location = New System.Drawing.Point(253, 4)
+            Me.txtPersonal.Location = New System.Drawing.Point(251, 4)
             Me.txtPersonal.Name = "txtPersonal"
             Me.txtPersonal.Size = New System.Drawing.Size(259, 21)
             Me.txtPersonal.TabIndex = 0
@@ -632,11 +662,11 @@
             '
             'Label1
             '
-            Me.Label1.BackColor = System.Drawing.Color.White
+            Me.Label1.BackColor = System.Drawing.Color.FromArgb(CType(CType(185, Byte), Integer), CType(CType(206, Byte), Integer), CType(CType(230, Byte), Integer))
             Me.Label1.Cursor = System.Windows.Forms.Cursors.Hand
             Me.Label1.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
-            Me.Label1.Location = New System.Drawing.Point(151, 586)
+            Me.Label1.Location = New System.Drawing.Point(151, 593)
             Me.Label1.Name = "Label1"
             Me.Label1.Size = New System.Drawing.Size(339, 16)
             Me.Label1.TabIndex = 205
@@ -645,11 +675,11 @@
             '
             'Label2
             '
-            Me.Label2.BackColor = System.Drawing.Color.White
+            Me.Label2.BackColor = System.Drawing.Color.FromArgb(CType(CType(185, Byte), Integer), CType(CType(206, Byte), Integer), CType(CType(230, Byte), Integer))
             Me.Label2.Cursor = System.Windows.Forms.Cursors.Hand
             Me.Label2.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
-            Me.Label2.Location = New System.Drawing.Point(496, 585)
+            Me.Label2.Location = New System.Drawing.Point(490, 593)
             Me.Label2.Name = "Label2"
             Me.Label2.Size = New System.Drawing.Size(66, 16)
             Me.Label2.TabIndex = 206
@@ -711,7 +741,7 @@
             '
             'KryptonLabel16
             '
-            Me.KryptonLabel16.Location = New System.Drawing.Point(325, 143)
+            Me.KryptonLabel16.Location = New System.Drawing.Point(323, 143)
             Me.KryptonLabel16.Name = "KryptonLabel16"
             Me.KryptonLabel16.Size = New System.Drawing.Size(39, 20)
             Me.KryptonLabel16.TabIndex = 211
@@ -727,7 +757,7 @@
             '
             'KryptonLabel14
             '
-            Me.KryptonLabel14.Location = New System.Drawing.Point(174, 141)
+            Me.KryptonLabel14.Location = New System.Drawing.Point(160, 141)
             Me.KryptonLabel14.Name = "KryptonLabel14"
             Me.KryptonLabel14.Size = New System.Drawing.Size(38, 20)
             Me.KryptonLabel14.TabIndex = 206
@@ -743,7 +773,7 @@
             '
             'KryptonLabel12
             '
-            Me.KryptonLabel12.Location = New System.Drawing.Point(325, 114)
+            Me.KryptonLabel12.Location = New System.Drawing.Point(323, 114)
             Me.KryptonLabel12.Name = "KryptonLabel12"
             Me.KryptonLabel12.Size = New System.Drawing.Size(53, 20)
             Me.KryptonLabel12.TabIndex = 204
@@ -751,7 +781,7 @@
             '
             'KryptonLabel11
             '
-            Me.KryptonLabel11.Location = New System.Drawing.Point(175, 116)
+            Me.KryptonLabel11.Location = New System.Drawing.Point(161, 116)
             Me.KryptonLabel11.Name = "KryptonLabel11"
             Me.KryptonLabel11.Size = New System.Drawing.Size(42, 20)
             Me.KryptonLabel11.TabIndex = 203
@@ -775,7 +805,7 @@
             '
             'KryptonLabel8
             '
-            Me.KryptonLabel8.Location = New System.Drawing.Point(174, 62)
+            Me.KryptonLabel8.Location = New System.Drawing.Point(172, 62)
             Me.KryptonLabel8.Name = "KryptonLabel8"
             Me.KryptonLabel8.Size = New System.Drawing.Size(64, 20)
             Me.KryptonLabel8.TabIndex = 199
@@ -791,7 +821,7 @@
             '
             'KryptonLabel6
             '
-            Me.KryptonLabel6.Location = New System.Drawing.Point(265, 29)
+            Me.KryptonLabel6.Location = New System.Drawing.Point(263, 29)
             Me.KryptonLabel6.Name = "KryptonLabel6"
             Me.KryptonLabel6.Size = New System.Drawing.Size(36, 20)
             Me.KryptonLabel6.TabIndex = 196
@@ -807,7 +837,7 @@
             '
             'KryptonLabel4
             '
-            Me.KryptonLabel4.Location = New System.Drawing.Point(175, 3)
+            Me.KryptonLabel4.Location = New System.Drawing.Point(173, 3)
             Me.KryptonLabel4.Name = "KryptonLabel4"
             Me.KryptonLabel4.Size = New System.Drawing.Size(61, 20)
             Me.KryptonLabel4.TabIndex = 29
@@ -825,7 +855,7 @@
             '
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-            Me.BackColor = System.Drawing.Color.White
+            Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(185, Byte), Integer), CType(CType(206, Byte), Integer), CType(CType(230, Byte), Integer))
             Me.ClientSize = New System.Drawing.Size(569, 610)
             Me.Controls.Add(Me.KryptonGroupBox2)
             Me.Controls.Add(Me.KryptonGroupBox1)
@@ -845,10 +875,10 @@
             Me.KryptonGroupBox1.Panel.PerformLayout()
             CType(Me.KryptonGroupBox1, System.ComponentModel.ISupportInitialize).EndInit()
             Me.KryptonGroupBox1.ResumeLayout(False)
-            Me.TabControl1.ResumeLayout(False)
-            Me.TabPage1.ResumeLayout(False)
+            Me.MetroTabControl1.ResumeLayout(False)
+            Me.MetroTabPage1.ResumeLayout(False)
             CType(Me.dgvNormal, System.ComponentModel.ISupportInitialize).EndInit()
-            Me.TabPage2.ResumeLayout(False)
+            Me.MetroTabPage2.ResumeLayout(False)
             CType(Me.dgvSanciones, System.ComponentModel.ISupportInitialize).EndInit()
             CType(Me.txtTotal, System.ComponentModel.ISupportInitialize).EndInit()
             CType(Me.txtCant, System.ComponentModel.ISupportInitialize).EndInit()
@@ -904,16 +934,11 @@
         Friend WithEvents ColumnHeader10 As System.Windows.Forms.ColumnHeader
         Friend WithEvents txtTotal As System.Windows.Forms.NumericUpDown
         Friend WithEvents txtCant As System.Windows.Forms.NumericUpDown
-        Friend WithEvents dgvSanciones As System.Windows.Forms.DataGridView
         Friend WithEvents txtMultador As TextBox
         Friend WithEvents ColumnHeader14 As ColumnHeader
         Friend WithEvents KryptonGroupBox1 As ComponentFactory.Krypton.Toolkit.KryptonGroupBox
         Friend WithEvents KryptonLabel3 As ComponentFactory.Krypton.Toolkit.KryptonLabel
         Friend WithEvents KryptonLabel2 As ComponentFactory.Krypton.Toolkit.KryptonLabel
-        Friend WithEvents dgvNormal As ComponentFactory.Krypton.Toolkit.KryptonDataGridView
-        Friend WithEvents TabControl1 As TabControl
-        Friend WithEvents TabPage1 As TabPage
-        Friend WithEvents TabPage2 As TabPage
         Friend WithEvents btnNormalF As Button
         Friend WithEvents Button1 As Button
         Friend WithEvents KryptonGroupBox2 As ComponentFactory.Krypton.Toolkit.KryptonGroupBox
@@ -932,5 +957,10 @@
         Friend WithEvents KryptonLabel17 As ComponentFactory.Krypton.Toolkit.KryptonLabel
         Friend WithEvents KryptonLabel16 As ComponentFactory.Krypton.Toolkit.KryptonLabel
         Friend WithEvents KryptonLabel15 As ComponentFactory.Krypton.Toolkit.KryptonLabel
+        Friend WithEvents MetroTabControl1 As ReaLTaiizor.Controls.MetroTabControl
+        Friend WithEvents MetroTabPage1 As ReaLTaiizor.Child.Metro.MetroTabPage
+        Friend WithEvents dgvNormal As ComponentFactory.Krypton.Toolkit.KryptonDataGridView
+        Friend WithEvents MetroTabPage2 As ReaLTaiizor.Child.Metro.MetroTabPage
+        Friend WithEvents dgvSanciones As DataGridView
     End Class
 End Namespace

@@ -945,11 +945,11 @@ Namespace FORMULARIOS.OPERACIONES
             End Try
         End Sub
 
-        Private Sub dgvNormal_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvNormal.CellContentClick
+        Private Sub dgvNormal_CellContentClick(sender As Object, e As DataGridViewCellEventArgs)
 
         End Sub
 
-        Private Sub dgvNormal_SelectionChanged(sender As Object, e As EventArgs) Handles dgvNormal.SelectionChanged
+        Private Sub dgvNormal_SelectionChanged(sender As Object, e As EventArgs)
             If dgvNormal.Rows.Count > 0 Then
                 Try
                     txtIdSancion.Text = dgvNormal.CurrentRow.Cells.Item(1).Value.ToString()

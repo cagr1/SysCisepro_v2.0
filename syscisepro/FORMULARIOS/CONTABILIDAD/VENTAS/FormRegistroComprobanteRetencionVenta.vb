@@ -471,7 +471,8 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                             cue = porret.Rows(0)(2)
                         End If
 
-                        Dim response = InputBox("INGRESE LA BASE IMPONIBLE", "COMPROBANTE RETENCIÓN", CDec(txtSubtotal.Text))
+                        'Dim response = InputBox("INGRESE LA BASE IMPONIBLE", "COMPROBANTE RETENCIÓN", CDec(txtSubtotal.Text))
+                        Dim response = KryptonInputBox.Show("Ingrese la base imponible", "Comprobante de retención", CDec(txtSubtotal.Text).ToString())
                         If IsNumeric(response) Then
                             If _validarRenta = 1 Then
                                 Dim valorRetenido0 = (CDec(response) * porcent) / 100

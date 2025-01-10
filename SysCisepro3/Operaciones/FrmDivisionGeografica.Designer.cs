@@ -40,10 +40,6 @@
             this.btnGuardarProvincia = new System.Windows.Forms.ToolStripButton();
             this.btnModificarProvincia = new System.Windows.Forms.ToolStripButton();
             this.btnCancelarProvincia = new System.Windows.Forms.ToolStripButton();
-            this.txtNombreParroquia = new System.Windows.Forms.TextBox();
-            this.Label8 = new System.Windows.Forms.Label();
-            this.Label9 = new System.Windows.Forms.Label();
-            this.txtIdCiudades = new System.Windows.Forms.TextBox();
             this.txtIdParroquia = new System.Windows.Forms.TextBox();
             this.btnCancelarParroquia = new System.Windows.Forms.ToolStripMenuItem();
             this.btnGuardarParroquia = new System.Windows.Forms.ToolStripMenuItem();
@@ -54,31 +50,41 @@
             this.MenuStrip1 = new System.Windows.Forms.MenuStrip();
             this.btnModificarCiudad = new System.Windows.Forms.ToolStripMenuItem();
             this.btnCancelarCiudad = new System.Windows.Forms.ToolStripMenuItem();
-            this.gbCantones = new System.Windows.Forms.GroupBox();
-            this.Label1 = new System.Windows.Forms.Label();
-            this.Label2 = new System.Windows.Forms.Label();
-            this.txtNombreCiudades = new System.Windows.Forms.TextBox();
             this.dgvCiudades = new System.Windows.Forms.DataGridView();
             this.btnNuevaParroquia = new System.Windows.Forms.ToolStripMenuItem();
             this.btnCargarParroquias = new System.Windows.Forms.ToolStripMenuItem();
-            this.GroupBox1 = new System.Windows.Forms.GroupBox();
             this.MenuStrip2 = new System.Windows.Forms.MenuStrip();
             this.btnModificarParroquia = new System.Windows.Forms.ToolStripMenuItem();
             this.dgvParroquias = new System.Windows.Forms.DataGridView();
             this.txtIdProvincia = new System.Windows.Forms.TextBox();
             this.txtNombreProvincia = new System.Windows.Forms.TextBox();
-            this.Label4 = new System.Windows.Forms.Label();
-            this.Label5 = new System.Windows.Forms.Label();
             this.dgvProvincias = new System.Windows.Forms.DataGridView();
+            this.kryptonLabel1 = new Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel2 = new Krypton.Toolkit.KryptonLabel();
+            this.kryptonGroupBox1 = new Krypton.Toolkit.KryptonGroupBox();
+            this.kryptonLabel3 = new Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel4 = new Krypton.Toolkit.KryptonLabel();
+            this.txtNombreCiudades = new System.Windows.Forms.TextBox();
+            this.txtIdCiudades = new System.Windows.Forms.TextBox();
+            this.kryptonGroupBox2 = new Krypton.Toolkit.KryptonGroupBox();
+            this.kryptonLabel5 = new Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel6 = new Krypton.Toolkit.KryptonLabel();
+            this.txtNombreParroquia = new System.Windows.Forms.TextBox();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbDivision)).BeginInit();
             this.MenuStrip1.SuspendLayout();
-            this.gbCantones.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCiudades)).BeginInit();
-            this.GroupBox1.SuspendLayout();
             this.MenuStrip2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvParroquias)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProvincias)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox1.Panel)).BeginInit();
+            this.kryptonGroupBox1.Panel.SuspendLayout();
+            this.kryptonGroupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox2.Panel)).BeginInit();
+            this.kryptonGroupBox2.Panel.SuspendLayout();
+            this.kryptonGroupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -150,52 +156,14 @@
             this.btnCancelarProvincia.Text = "CANCELAR";
             this.btnCancelarProvincia.Click += new System.EventHandler(this.btnCancelarProvincia_Click);
             // 
-            // txtNombreParroquia
-            // 
-            this.txtNombreParroquia.BackColor = System.Drawing.Color.White;
-            this.txtNombreParroquia.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtNombreParroquia.Enabled = false;
-            this.txtNombreParroquia.Location = new System.Drawing.Point(194, 71);
-            this.txtNombreParroquia.Multiline = true;
-            this.txtNombreParroquia.Name = "txtNombreParroquia";
-            this.txtNombreParroquia.Size = new System.Drawing.Size(158, 21);
-            this.txtNombreParroquia.TabIndex = 27;
-            // 
-            // Label8
-            // 
-            this.Label8.AutoSize = true;
-            this.Label8.Location = new System.Drawing.Point(132, 74);
-            this.Label8.Name = "Label8";
-            this.Label8.Size = new System.Drawing.Size(56, 13);
-            this.Label8.TabIndex = 26;
-            this.Label8.Text = "NOMBRE:";
-            // 
-            // Label9
-            // 
-            this.Label9.AutoSize = true;
-            this.Label9.Location = new System.Drawing.Point(16, 74);
-            this.Label9.Name = "Label9";
-            this.Label9.Size = new System.Drawing.Size(20, 13);
-            this.Label9.TabIndex = 25;
-            this.Label9.Text = "ID:";
-            // 
-            // txtIdCiudades
-            // 
-            this.txtIdCiudades.BackColor = System.Drawing.Color.White;
-            this.txtIdCiudades.Enabled = false;
-            this.txtIdCiudades.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIdCiudades.Location = new System.Drawing.Point(32, 71);
-            this.txtIdCiudades.Name = "txtIdCiudades";
-            this.txtIdCiudades.Size = new System.Drawing.Size(64, 21);
-            this.txtIdCiudades.TabIndex = 7;
-            // 
             // txtIdParroquia
             // 
             this.txtIdParroquia.BackColor = System.Drawing.Color.White;
             this.txtIdParroquia.Enabled = false;
-            this.txtIdParroquia.Location = new System.Drawing.Point(43, 71);
+            this.txtIdParroquia.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIdParroquia.Location = new System.Drawing.Point(37, 53);
             this.txtIdParroquia.Name = "txtIdParroquia";
-            this.txtIdParroquia.Size = new System.Drawing.Size(68, 21);
+            this.txtIdParroquia.Size = new System.Drawing.Size(64, 21);
             this.txtIdParroquia.TabIndex = 28;
             // 
             // btnCancelarParroquia
@@ -223,9 +191,9 @@
             // pbDivision
             // 
             this.pbDivision.Image = global::SysCisepro3.Properties.Resources.mapa_de_ecuador_con_sus_provincias_1;
-            this.pbDivision.Location = new System.Drawing.Point(368, 39);
+            this.pbDivision.Location = new System.Drawing.Point(402, 39);
             this.pbDivision.Name = "pbDivision";
-            this.pbDivision.Size = new System.Drawing.Size(367, 209);
+            this.pbDivision.Size = new System.Drawing.Size(316, 209);
             this.pbDivision.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbDivision.TabIndex = 203;
             this.pbDivision.TabStop = false;
@@ -264,6 +232,7 @@
             // MenuStrip1
             // 
             this.MenuStrip1.AutoSize = false;
+            this.MenuStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
             this.MenuStrip1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.MenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnCargarCiudades,
@@ -272,10 +241,10 @@
             this.btnModificarCiudad,
             this.btnCancelarCiudad});
             this.MenuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow;
-            this.MenuStrip1.Location = new System.Drawing.Point(3, 17);
+            this.MenuStrip1.Location = new System.Drawing.Point(0, 0);
             this.MenuStrip1.Name = "MenuStrip1";
             this.MenuStrip1.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
-            this.MenuStrip1.Size = new System.Drawing.Size(351, 42);
+            this.MenuStrip1.Size = new System.Drawing.Size(353, 42);
             this.MenuStrip1.TabIndex = 184;
             this.MenuStrip1.Text = "msIngresoBodega";
             // 
@@ -301,55 +270,6 @@
             this.btnCancelarCiudad.Size = new System.Drawing.Size(36, 28);
             this.btnCancelarCiudad.Click += new System.EventHandler(this.btnCancelarCiudad_Click);
             // 
-            // gbCantones
-            // 
-            this.gbCantones.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
-            this.gbCantones.Controls.Add(this.MenuStrip1);
-            this.gbCantones.Controls.Add(this.Label1);
-            this.gbCantones.Controls.Add(this.Label2);
-            this.gbCantones.Controls.Add(this.txtNombreCiudades);
-            this.gbCantones.Controls.Add(this.txtIdCiudades);
-            this.gbCantones.Controls.Add(this.dgvCiudades);
-            this.gbCantones.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbCantones.Location = new System.Drawing.Point(0, 256);
-            this.gbCantones.Name = "gbCantones";
-            this.gbCantones.Size = new System.Drawing.Size(357, 364);
-            this.gbCantones.TabIndex = 204;
-            this.gbCantones.TabStop = false;
-            this.gbCantones.Text = "CANTONES";
-            // 
-            // Label1
-            // 
-            this.Label1.AutoSize = true;
-            this.Label1.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label1.Location = new System.Drawing.Point(6, 74);
-            this.Label1.Name = "Label1";
-            this.Label1.Size = new System.Drawing.Size(20, 13);
-            this.Label1.TabIndex = 4;
-            this.Label1.Text = "ID:";
-            // 
-            // Label2
-            // 
-            this.Label2.AutoSize = true;
-            this.Label2.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label2.Location = new System.Drawing.Point(109, 74);
-            this.Label2.Name = "Label2";
-            this.Label2.Size = new System.Drawing.Size(56, 13);
-            this.Label2.TabIndex = 5;
-            this.Label2.Text = "NOMBRE:";
-            // 
-            // txtNombreCiudades
-            // 
-            this.txtNombreCiudades.BackColor = System.Drawing.Color.White;
-            this.txtNombreCiudades.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtNombreCiudades.Enabled = false;
-            this.txtNombreCiudades.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombreCiudades.Location = new System.Drawing.Point(178, 71);
-            this.txtNombreCiudades.Multiline = true;
-            this.txtNombreCiudades.Name = "txtNombreCiudades";
-            this.txtNombreCiudades.Size = new System.Drawing.Size(158, 21);
-            this.txtNombreCiudades.TabIndex = 6;
-            // 
             // dgvCiudades
             // 
             this.dgvCiudades.AllowUserToAddRows = false;
@@ -363,18 +283,18 @@
             this.dgvCiudades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(60)))), ((int)(((byte)(123)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvCiudades.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvCiudades.Location = new System.Drawing.Point(3, 102);
+            this.dgvCiudades.Location = new System.Drawing.Point(3, 77);
             this.dgvCiudades.Name = "dgvCiudades";
             this.dgvCiudades.ReadOnly = true;
             this.dgvCiudades.RowHeadersVisible = false;
             this.dgvCiudades.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvCiudades.Size = new System.Drawing.Size(333, 231);
+            this.dgvCiudades.Size = new System.Drawing.Size(345, 224);
             this.dgvCiudades.TabIndex = 8;
             this.dgvCiudades.SelectionChanged += new System.EventHandler(this.dgvCiudades_SelectionChanged);
             // 
@@ -398,26 +318,10 @@
             this.btnCargarParroquias.Size = new System.Drawing.Size(36, 28);
             this.btnCargarParroquias.Click += new System.EventHandler(this.btnCargarParroquias_Click);
             // 
-            // GroupBox1
-            // 
-            this.GroupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
-            this.GroupBox1.Controls.Add(this.MenuStrip2);
-            this.GroupBox1.Controls.Add(this.txtNombreParroquia);
-            this.GroupBox1.Controls.Add(this.Label9);
-            this.GroupBox1.Controls.Add(this.dgvParroquias);
-            this.GroupBox1.Controls.Add(this.Label8);
-            this.GroupBox1.Controls.Add(this.txtIdParroquia);
-            this.GroupBox1.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GroupBox1.Location = new System.Drawing.Point(363, 256);
-            this.GroupBox1.Name = "GroupBox1";
-            this.GroupBox1.Size = new System.Drawing.Size(372, 350);
-            this.GroupBox1.TabIndex = 202;
-            this.GroupBox1.TabStop = false;
-            this.GroupBox1.Text = "PARROQUIAS";
-            // 
             // MenuStrip2
             // 
             this.MenuStrip2.AutoSize = false;
+            this.MenuStrip2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
             this.MenuStrip2.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.MenuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnCargarParroquias,
@@ -426,10 +330,10 @@
             this.btnModificarParroquia,
             this.btnCancelarParroquia});
             this.MenuStrip2.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow;
-            this.MenuStrip2.Location = new System.Drawing.Point(3, 17);
+            this.MenuStrip2.Location = new System.Drawing.Point(0, 0);
             this.MenuStrip2.Name = "MenuStrip2";
             this.MenuStrip2.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
-            this.MenuStrip2.Size = new System.Drawing.Size(366, 42);
+            this.MenuStrip2.Size = new System.Drawing.Size(373, 42);
             this.MenuStrip2.TabIndex = 185;
             this.MenuStrip2.Text = "msIngresoBodega";
             // 
@@ -457,13 +361,13 @@
             this.dgvParroquias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(60)))), ((int)(((byte)(123)))));
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvParroquias.DefaultCellStyle = dataGridViewCellStyle4;
-            this.dgvParroquias.Location = new System.Drawing.Point(3, 102);
+            this.dgvParroquias.Location = new System.Drawing.Point(8, 80);
             this.dgvParroquias.Name = "dgvParroquias";
             this.dgvParroquias.ReadOnly = true;
             this.dgvParroquias.RowHeadersVisible = false;
@@ -491,28 +395,8 @@
             this.txtNombreProvincia.Location = new System.Drawing.Point(146, 42);
             this.txtNombreProvincia.Multiline = true;
             this.txtNombreProvincia.Name = "txtNombreProvincia";
-            this.txtNombreProvincia.Size = new System.Drawing.Size(211, 25);
+            this.txtNombreProvincia.Size = new System.Drawing.Size(211, 20);
             this.txtNombreProvincia.TabIndex = 200;
-            // 
-            // Label4
-            // 
-            this.Label4.AutoSize = true;
-            this.Label4.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label4.Location = new System.Drawing.Point(88, 45);
-            this.Label4.Name = "Label4";
-            this.Label4.Size = new System.Drawing.Size(56, 13);
-            this.Label4.TabIndex = 199;
-            this.Label4.Text = "NOMBRE:";
-            // 
-            // Label5
-            // 
-            this.Label5.AutoSize = true;
-            this.Label5.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label5.Location = new System.Drawing.Point(9, 45);
-            this.Label5.Name = "Label5";
-            this.Label5.Size = new System.Drawing.Size(20, 13);
-            this.Label5.TabIndex = 198;
-            this.Label5.Text = "ID:";
             // 
             // dgvProvincias
             // 
@@ -521,7 +405,7 @@
             this.dgvProvincias.AllowUserToResizeRows = false;
             dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.dgvProvincias.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
-            this.dgvProvincias.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
+            this.dgvProvincias.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(206)))), ((int)(((byte)(230)))));
             this.dgvProvincias.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvProvincias.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
             this.dgvProvincias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -533,14 +417,134 @@
             dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvProvincias.DefaultCellStyle = dataGridViewCellStyle6;
-            this.dgvProvincias.Location = new System.Drawing.Point(3, 73);
+            this.dgvProvincias.Location = new System.Drawing.Point(17, 73);
             this.dgvProvincias.Name = "dgvProvincias";
             this.dgvProvincias.ReadOnly = true;
             this.dgvProvincias.RowHeadersVisible = false;
             this.dgvProvincias.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvProvincias.Size = new System.Drawing.Size(354, 177);
+            this.dgvProvincias.Size = new System.Drawing.Size(332, 177);
             this.dgvProvincias.TabIndex = 197;
             this.dgvProvincias.SelectionChanged += new System.EventHandler(this.dgvProvincias_SelectionChanged);
+            // 
+            // kryptonLabel1
+            // 
+            this.kryptonLabel1.Location = new System.Drawing.Point(8, 42);
+            this.kryptonLabel1.Name = "kryptonLabel1";
+            this.kryptonLabel1.Size = new System.Drawing.Size(21, 20);
+            this.kryptonLabel1.TabIndex = 205;
+            this.kryptonLabel1.Values.Text = "Id";
+            // 
+            // kryptonLabel2
+            // 
+            this.kryptonLabel2.Location = new System.Drawing.Point(84, 43);
+            this.kryptonLabel2.Name = "kryptonLabel2";
+            this.kryptonLabel2.Size = new System.Drawing.Size(56, 20);
+            this.kryptonLabel2.TabIndex = 206;
+            this.kryptonLabel2.Values.Text = "Nombre";
+            // 
+            // kryptonGroupBox1
+            // 
+            this.kryptonGroupBox1.CaptionOverlap = 0D;
+            this.kryptonGroupBox1.GroupBackStyle = Krypton.Toolkit.PaletteBackStyle.ControlRibbon;
+            this.kryptonGroupBox1.Location = new System.Drawing.Point(0, 256);
+            this.kryptonGroupBox1.Name = "kryptonGroupBox1";
+            // 
+            // kryptonGroupBox1.Panel
+            // 
+            this.kryptonGroupBox1.Panel.Controls.Add(this.txtNombreCiudades);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.txtIdCiudades);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.dgvCiudades);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.kryptonLabel3);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.kryptonLabel4);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.MenuStrip1);
+            this.kryptonGroupBox1.Size = new System.Drawing.Size(357, 333);
+            this.kryptonGroupBox1.TabIndex = 207;
+            this.kryptonGroupBox1.Values.Heading = "Cantones";
+            // 
+            // kryptonLabel3
+            // 
+            this.kryptonLabel3.Location = new System.Drawing.Point(97, 49);
+            this.kryptonLabel3.Name = "kryptonLabel3";
+            this.kryptonLabel3.Size = new System.Drawing.Size(56, 20);
+            this.kryptonLabel3.TabIndex = 208;
+            this.kryptonLabel3.Values.Text = "Nombre";
+            // 
+            // kryptonLabel4
+            // 
+            this.kryptonLabel4.Location = new System.Drawing.Point(7, 49);
+            this.kryptonLabel4.Name = "kryptonLabel4";
+            this.kryptonLabel4.Size = new System.Drawing.Size(21, 20);
+            this.kryptonLabel4.TabIndex = 207;
+            this.kryptonLabel4.Values.Text = "Id";
+            // 
+            // txtNombreCiudades
+            // 
+            this.txtNombreCiudades.BackColor = System.Drawing.Color.White;
+            this.txtNombreCiudades.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtNombreCiudades.Enabled = false;
+            this.txtNombreCiudades.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombreCiudades.Location = new System.Drawing.Point(156, 48);
+            this.txtNombreCiudades.Multiline = true;
+            this.txtNombreCiudades.Name = "txtNombreCiudades";
+            this.txtNombreCiudades.Size = new System.Drawing.Size(158, 21);
+            this.txtNombreCiudades.TabIndex = 209;
+            // 
+            // txtIdCiudades
+            // 
+            this.txtIdCiudades.BackColor = System.Drawing.Color.White;
+            this.txtIdCiudades.Enabled = false;
+            this.txtIdCiudades.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIdCiudades.Location = new System.Drawing.Point(27, 48);
+            this.txtIdCiudades.Name = "txtIdCiudades";
+            this.txtIdCiudades.Size = new System.Drawing.Size(64, 21);
+            this.txtIdCiudades.TabIndex = 210;
+            // 
+            // kryptonGroupBox2
+            // 
+            this.kryptonGroupBox2.CaptionOverlap = 0D;
+            this.kryptonGroupBox2.GroupBackStyle = Krypton.Toolkit.PaletteBackStyle.ControlRibbon;
+            this.kryptonGroupBox2.Location = new System.Drawing.Point(363, 256);
+            this.kryptonGroupBox2.Name = "kryptonGroupBox2";
+            // 
+            // kryptonGroupBox2.Panel
+            // 
+            this.kryptonGroupBox2.Panel.Controls.Add(this.txtNombreParroquia);
+            this.kryptonGroupBox2.Panel.Controls.Add(this.kryptonLabel5);
+            this.kryptonGroupBox2.Panel.Controls.Add(this.kryptonLabel6);
+            this.kryptonGroupBox2.Panel.Controls.Add(this.dgvParroquias);
+            this.kryptonGroupBox2.Panel.Controls.Add(this.MenuStrip2);
+            this.kryptonGroupBox2.Panel.Controls.Add(this.txtIdParroquia);
+            this.kryptonGroupBox2.Size = new System.Drawing.Size(377, 333);
+            this.kryptonGroupBox2.TabIndex = 208;
+            this.kryptonGroupBox2.Values.Heading = "Parroquias";
+            // 
+            // kryptonLabel5
+            // 
+            this.kryptonLabel5.Location = new System.Drawing.Point(107, 53);
+            this.kryptonLabel5.Name = "kryptonLabel5";
+            this.kryptonLabel5.Size = new System.Drawing.Size(56, 20);
+            this.kryptonLabel5.TabIndex = 210;
+            this.kryptonLabel5.Values.Text = "Nombre";
+            // 
+            // kryptonLabel6
+            // 
+            this.kryptonLabel6.Location = new System.Drawing.Point(17, 53);
+            this.kryptonLabel6.Name = "kryptonLabel6";
+            this.kryptonLabel6.Size = new System.Drawing.Size(21, 20);
+            this.kryptonLabel6.TabIndex = 209;
+            this.kryptonLabel6.Values.Text = "Id";
+            // 
+            // txtNombreParroquia
+            // 
+            this.txtNombreParroquia.BackColor = System.Drawing.Color.White;
+            this.txtNombreParroquia.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtNombreParroquia.Enabled = false;
+            this.txtNombreParroquia.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombreParroquia.Location = new System.Drawing.Point(169, 53);
+            this.txtNombreParroquia.Multiline = true;
+            this.txtNombreParroquia.Name = "txtNombreParroquia";
+            this.txtNombreParroquia.Size = new System.Drawing.Size(158, 21);
+            this.txtNombreParroquia.TabIndex = 211;
             // 
             // FrmDivisionGeografica
             // 
@@ -548,13 +552,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(204)))), ((int)(((byte)(227)))));
             this.ClientSize = new System.Drawing.Size(740, 593);
+            this.Controls.Add(this.kryptonGroupBox2);
+            this.Controls.Add(this.kryptonGroupBox1);
+            this.Controls.Add(this.kryptonLabel2);
+            this.Controls.Add(this.kryptonLabel1);
             this.Controls.Add(this.pbDivision);
-            this.Controls.Add(this.gbCantones);
-            this.Controls.Add(this.GroupBox1);
             this.Controls.Add(this.txtIdProvincia);
             this.Controls.Add(this.txtNombreProvincia);
-            this.Controls.Add(this.Label4);
-            this.Controls.Add(this.Label5);
             this.Controls.Add(this.dgvProvincias);
             this.Controls.Add(this.toolStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
@@ -567,15 +571,21 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbDivision)).EndInit();
             this.MenuStrip1.ResumeLayout(false);
             this.MenuStrip1.PerformLayout();
-            this.gbCantones.ResumeLayout(false);
-            this.gbCantones.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCiudades)).EndInit();
-            this.GroupBox1.ResumeLayout(false);
-            this.GroupBox1.PerformLayout();
             this.MenuStrip2.ResumeLayout(false);
             this.MenuStrip2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvParroquias)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProvincias)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox1.Panel)).EndInit();
+            this.kryptonGroupBox1.Panel.ResumeLayout(false);
+            this.kryptonGroupBox1.Panel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox1)).EndInit();
+            this.kryptonGroupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox2.Panel)).EndInit();
+            this.kryptonGroupBox2.Panel.ResumeLayout(false);
+            this.kryptonGroupBox2.Panel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox2)).EndInit();
+            this.kryptonGroupBox2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -587,10 +597,6 @@
         private System.Windows.Forms.ToolStripButton btnCargarProvincias;
         private System.Windows.Forms.ToolStripButton btnGuardarProvincia;
         private System.Windows.Forms.ToolStripButton btnCancelarProvincia;
-        internal System.Windows.Forms.TextBox txtNombreParroquia;
-        internal System.Windows.Forms.Label Label8;
-        internal System.Windows.Forms.Label Label9;
-        internal System.Windows.Forms.TextBox txtIdCiudades;
         internal System.Windows.Forms.TextBox txtIdParroquia;
         internal System.Windows.Forms.ToolStripMenuItem btnCancelarParroquia;
         internal System.Windows.Forms.ToolStripMenuItem btnGuardarParroquia;
@@ -600,24 +606,28 @@
         internal System.Windows.Forms.ToolStripMenuItem btnCargarCiudades;
         internal System.Windows.Forms.MenuStrip MenuStrip1;
         internal System.Windows.Forms.ToolStripMenuItem btnCancelarCiudad;
-        internal System.Windows.Forms.GroupBox gbCantones;
-        internal System.Windows.Forms.Label Label1;
-        internal System.Windows.Forms.Label Label2;
-        internal System.Windows.Forms.TextBox txtNombreCiudades;
         internal System.Windows.Forms.DataGridView dgvCiudades;
         internal System.Windows.Forms.ToolStripMenuItem btnNuevaParroquia;
         internal System.Windows.Forms.ToolStripMenuItem btnCargarParroquias;
-        internal System.Windows.Forms.GroupBox GroupBox1;
         internal System.Windows.Forms.MenuStrip MenuStrip2;
         internal System.Windows.Forms.DataGridView dgvParroquias;
         internal System.Windows.Forms.TextBox txtIdProvincia;
         internal System.Windows.Forms.TextBox txtNombreProvincia;
-        internal System.Windows.Forms.Label Label4;
-        internal System.Windows.Forms.Label Label5;
         internal System.Windows.Forms.DataGridView dgvProvincias;
         private System.Windows.Forms.ToolStripButton btnNuevoProvincia;
         private System.Windows.Forms.ToolStripButton btnModificarProvincia;
         internal System.Windows.Forms.ToolStripMenuItem btnModificarCiudad;
         internal System.Windows.Forms.ToolStripMenuItem btnModificarParroquia;
+        private Krypton.Toolkit.KryptonLabel kryptonLabel1;
+        private Krypton.Toolkit.KryptonLabel kryptonLabel2;
+        private Krypton.Toolkit.KryptonGroupBox kryptonGroupBox1;
+        private Krypton.Toolkit.KryptonLabel kryptonLabel3;
+        private Krypton.Toolkit.KryptonLabel kryptonLabel4;
+        internal System.Windows.Forms.TextBox txtNombreCiudades;
+        internal System.Windows.Forms.TextBox txtIdCiudades;
+        private Krypton.Toolkit.KryptonGroupBox kryptonGroupBox2;
+        internal System.Windows.Forms.TextBox txtNombreParroquia;
+        private Krypton.Toolkit.KryptonLabel kryptonLabel5;
+        private Krypton.Toolkit.KryptonLabel kryptonLabel6;
     }
 }

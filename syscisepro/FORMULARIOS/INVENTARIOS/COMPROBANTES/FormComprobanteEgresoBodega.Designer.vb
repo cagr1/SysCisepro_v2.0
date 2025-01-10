@@ -1202,6 +1202,7 @@
             '
             Me.crvComprobante.ActiveViewIndex = -1
             Me.crvComprobante.AutoSize = True
+            Me.crvComprobante.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
             Me.crvComprobante.Cursor = System.Windows.Forms.Cursors.Default
             Me.crvComprobante.Dock = System.Windows.Forms.DockStyle.Fill
             Me.crvComprobante.ForeColor = System.Drawing.SystemColors.ControlText
@@ -1385,7 +1386,7 @@
             '
             'gbBusquedaArticulo
             '
-            Me.gbBusquedaArticulo.CaptionOverlap = 0.85R
+            Me.gbBusquedaArticulo.CaptionOverlap = 0R
             Me.gbBusquedaArticulo.GroupBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.ControlRibbon
             Me.gbBusquedaArticulo.Location = New System.Drawing.Point(2, 199)
             Me.gbBusquedaArticulo.Name = "gbBusquedaArticulo"
@@ -1499,7 +1500,7 @@
             '
             'KryptonGroupBox1
             '
-            Me.KryptonGroupBox1.CaptionOverlap = 0.85R
+            Me.KryptonGroupBox1.CaptionOverlap = 0R
             Me.KryptonGroupBox1.GroupBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.ControlRibbon
             Me.KryptonGroupBox1.Location = New System.Drawing.Point(0, 2)
             Me.KryptonGroupBox1.Name = "KryptonGroupBox1"
@@ -1978,7 +1979,7 @@
             '
             'btnExportarComprobantes
             '
-            Me.btnExportarComprobantes.Location = New System.Drawing.Point(827, 55)
+            Me.btnExportarComprobantes.Location = New System.Drawing.Point(827, 35)
             Me.btnExportarComprobantes.Name = "btnExportarComprobantes"
             Me.btnExportarComprobantes.Size = New System.Drawing.Size(89, 25)
             Me.btnExportarComprobantes.TabIndex = 197
@@ -2001,7 +2002,7 @@
             '
             'KryptonGroupBox3
             '
-            Me.KryptonGroupBox3.CaptionOverlap = 0.85R
+            Me.KryptonGroupBox3.CaptionOverlap = 0R
             Me.KryptonGroupBox3.GroupBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.ControlRibbon
             Me.KryptonGroupBox3.Location = New System.Drawing.Point(3, 66)
             Me.KryptonGroupBox3.Name = "KryptonGroupBox3"

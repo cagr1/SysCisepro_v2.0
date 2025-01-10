@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.Label1 = new System.Windows.Forms.Label();
             this.ListView1 = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -51,24 +50,15 @@
             this.columnHeader19 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Label3 = new System.Windows.Forms.Label();
             this.txtParametrobusqueda = new System.Windows.Forms.TextBox();
-            this.Label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.kryptonLabel1 = new Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel2 = new Krypton.Toolkit.KryptonLabel();
             this.SuspendLayout();
-            // 
-            // Label1
-            // 
-            this.Label1.AutoSize = true;
-            this.Label1.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label1.ForeColor = System.Drawing.Color.White;
-            this.Label1.Location = new System.Drawing.Point(4, 6);
-            this.Label1.Name = "Label1";
-            this.Label1.Size = new System.Drawing.Size(51, 14);
-            this.Label1.TabIndex = 18;
-            this.Label1.Text = "BUSCAR:";
             // 
             // ListView1
             // 
-            this.ListView1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ListView1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(206)))), ((int)(((byte)(230)))));
+            this.ListView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.ListView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2,
@@ -201,7 +191,7 @@
             this.Label3.AutoSize = true;
             this.Label3.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label3.ForeColor = System.Drawing.Color.White;
-            this.Label3.Location = new System.Drawing.Point(507, 6);
+            this.Label3.Location = new System.Drawing.Point(489, 6);
             this.Label3.Name = "Label3";
             this.Label3.Size = new System.Drawing.Size(0, 14);
             this.Label3.TabIndex = 20;
@@ -218,22 +208,11 @@
             this.txtParametrobusqueda.TabIndex = 17;
             this.txtParametrobusqueda.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtParametrobusqueda_KeyUp);
             // 
-            // Label2
-            // 
-            this.Label2.AutoSize = true;
-            this.Label2.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label2.ForeColor = System.Drawing.Color.White;
-            this.Label2.Location = new System.Drawing.Point(376, 6);
-            this.Label2.Name = "Label2";
-            this.Label2.Size = new System.Drawing.Size(130, 14);
-            this.Label2.TabIndex = 19;
-            this.Label2.Text = "CLIENTE SELECCIONADO:";
-            // 
             // label4
             // 
-            this.label4.BackColor = System.Drawing.Color.White;
+            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(206)))), ((int)(((byte)(230)))));
             this.label4.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
             this.label4.Location = new System.Drawing.Point(12, 161);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(835, 68);
@@ -241,18 +220,34 @@
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label4.Visible = false;
             // 
+            // kryptonLabel1
+            // 
+            this.kryptonLabel1.Location = new System.Drawing.Point(2, 2);
+            this.kryptonLabel1.Name = "kryptonLabel1";
+            this.kryptonLabel1.Size = new System.Drawing.Size(46, 20);
+            this.kryptonLabel1.TabIndex = 23;
+            this.kryptonLabel1.Values.Text = "Buscar";
+            // 
+            // kryptonLabel2
+            // 
+            this.kryptonLabel2.Location = new System.Drawing.Point(359, 5);
+            this.kryptonLabel2.Name = "kryptonLabel2";
+            this.kryptonLabel2.Size = new System.Drawing.Size(117, 20);
+            this.kryptonLabel2.TabIndex = 24;
+            this.kryptonLabel2.Values.Text = "Cliente Sleccionado";
+            // 
             // FrmBuscarPuestoTrabajo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(206)))), ((int)(((byte)(230)))));
             this.ClientSize = new System.Drawing.Size(859, 341);
+            this.Controls.Add(this.kryptonLabel2);
+            this.Controls.Add(this.kryptonLabel1);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.Label1);
             this.Controls.Add(this.ListView1);
             this.Controls.Add(this.Label3);
             this.Controls.Add(this.txtParametrobusqueda);
-            this.Controls.Add(this.Label2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "FrmBuscarPuestoTrabajo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -268,12 +263,9 @@
         }
 
         #endregion
-
-        internal System.Windows.Forms.Label Label1;
         internal System.Windows.Forms.ListView ListView1;
         internal System.Windows.Forms.Label Label3;
         internal System.Windows.Forms.TextBox txtParametrobusqueda;
-        internal System.Windows.Forms.Label Label2;
         internal System.Windows.Forms.Label label4;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
@@ -294,5 +286,7 @@
         private System.Windows.Forms.ColumnHeader columnHeader17;
         private System.Windows.Forms.ColumnHeader columnHeader18;
         private System.Windows.Forms.ColumnHeader columnHeader19;
+        private Krypton.Toolkit.KryptonLabel kryptonLabel1;
+        private Krypton.Toolkit.KryptonLabel kryptonLabel2;
     }
 }

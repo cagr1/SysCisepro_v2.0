@@ -90,8 +90,7 @@ namespace SysCisepro3.TalentoHumano
             //toolStrip1.BackColor = ValidationForms.GetColorSistema(TipoCon);
             toolStrip1.ForeColor = Color.White;
 
-            label9.BackColor = ValidationForms.GetColorSistema(TipoCon);
-            label9.ForeColor = Color.White; 
+            
             switch (TipoCon)
             {
                 case TipoConexion.Seportpac:
@@ -200,110 +199,7 @@ namespace SysCisepro3.TalentoHumano
             }
         }
 
-        private void dgvPersonal_SelectionChanged(object sender, EventArgs e)
-        {
-            if (_estado != 0 || dgvPersonal.CurrentRow == null) return;
-            try
-            {
-                var row = dgvPersonal.CurrentRow;
-                lblValCed.Visible = false;
-
-                lblAspirante.Text = row.Cells["ID"].Value.ToString();
-                var asp = _objAspirante.SeleccionarDatosAspiranteById(TipoCon, lblAspirante.Text.Trim()).Rows[0];
-
-                txtCedula.Text = asp["CEDULA"].ToString();
-                cbmSexo.Text = asp["SEXO"].ToString();
-                dtpFechaNacimiento.Value = Convert.ToDateTime(asp["FECHA_NACIMIENTO"]);
-                dtpHoy.Value = Convert.ToDateTime(asp["FECHA_REGISTRO"]);
-
-                txtEdad.Text = asp["ANIOS"].ToString();
-                txtNombres.Text = asp["NOMBRES"].ToString();
-                txtApellidos.Text = asp["APELLIDOS"].ToString();
-                cbEstadoCivil.Text = asp["ESTADO_CIVIL"].ToString();
-                cbmInstruccion.Text = asp["INSTRUCCION"].ToString();
-                txtTelefono.Text = asp["TELEFONO"].ToString();
-                txtMovil.Text = asp["MOVIL"].ToString();
-                txtEmail.Text = asp["EMAIL"].ToString();
-                cbmProvincia.Text = asp["PROVINCIA"].ToString();
-                cbmCanton.Text = asp["CIUDAD"].ToString();
-                cbmParroquia.Text = asp["PARROQUIA"].ToString();
-                txtDireccion.Text = asp["DIRECCION"].ToString();
-                txtObservacion.Text = asp["OBSERVACION"].ToString();
-                cbmPara.Text = asp["APTO_PARA"].ToString();
-
-                chkCedula.Checked = Convert.ToInt32(asp["TIENE_CEDULA"].ToString()) == 1;
-
-                chkVotacion.Checked = Convert.ToInt32(asp["TIENE_CERTIFICADO_VOTACION"].ToString()) == 1;
-                chkMilitar.Checked = Convert.ToInt32(asp["TIENE_LIBRETA_MILITAR"].ToString()) == 1;
-
-                chkDiscapacitado.Checked = Convert.ToInt32(asp["TIENE_DISCAPACIDAD"].ToString()) == 1;
-                txtDiscapacitado.Text = asp["TIPO_DISCAPACIDAD"].ToString();
-
-                chkCursoVigilante.Checked = Convert.ToInt32(asp["TIENE_CURSO"].ToString()) == 1;
-                txtEmisorCursoVigilante.Text = asp["ENTIDAD_CURSO"].ToString();
-
-                chkCredencial.Checked = Convert.ToInt32(asp["TIENE_CREDENCIAL"].ToString()) == 1;
-                txtCredencial.Text = asp["ENTIDAD_CREDENCIAL"].ToString();
-
-                chkAntecedentes.Checked = Convert.ToInt32(asp["TIENE_ANTECEDENTES"].ToString()) == 1;
-                txtAntecedentes.Text = asp["DETALLE_ANTECEDENTES"].ToString();
-
-
-                chkNoViolencia.Checked = Convert.ToInt32(asp["TIENE_NO_VIOLENCIA"].ToString()) == 1;
-                txtNoViolencia.Text = asp["DETALLE_NO_VIOLENCIA"].ToString();
-
-
-                chkPiscologico.Checked = Convert.ToInt32(asp["TIENE_PSICOLOGICO"].ToString()) == 1;
-                txtPiscologico.Text = asp["DETALLE_PSICOLOGICO"].ToString();
-
-
-                chkCertificadoTrabajo.Checked = Convert.ToInt32(asp["TIENE_CERT_TRABAJO"].ToString()) == 1;
-                txtCertificadoTrabajo.Text = asp["DETALLE_CERT_TRABAJO"].ToString();
-
-                chkRecomendaciones.Checked = Convert.ToInt32(asp["TIENE_RECOMENDACION"].ToString()) == 1;
-                txtRecomendaciones.Text = asp["DETALLE_RECOMENDACION"].ToString();
-
-
-                chkBachiller.Checked = Convert.ToInt32(asp["TIENE_BACHILLER"].ToString()) == 1;
-                txtBachiller.Text = asp["DETALLE_BACHILLER"].ToString();
-
-
-                chkPoligrafica.Checked = Convert.ToInt32(asp["TIENE_POLIGRAFICA"].ToString()) == 1;
-                txtPoligrafica.Text = asp["DETALLE_POLIGRAFICA"].ToString();
-
-
-                chkAfis.Checked = Convert.ToInt32(asp["TIENE_AFIS"].ToString()) == 1;
-                txtAfis.Text = asp["DETALLE_AFIS"].ToString();
-
-                chkVehiculo.Checked = Convert.ToInt32(asp["TIENE_VEHICULO"].ToString()) == 1;
-                txtVehiculo.Text = asp["DETALLE_VEHICULO"].ToString();
-
-
-                try
-                {
-                    var tempFileName = Path.ChangeExtension(Path.GetTempFileName(), "PDF");
-                    File.WriteAllBytes(tempFileName, (byte[])asp["DOCUMENTOS"]);
-
-                    
-                    //axAcroPDF1.LoadFile(tempFileName);
-                    //axAcroPDF1.setShowToolbar(false);
-                    //axAcroPDF1.setZoom(75);
-                    //axAcroPDF1.setLayoutMode("SinglePage");
-                    //axAcroPDF1.Show();
-                }
-                catch
-                {                              
-                    //axAcroPDF1.LoadFile("people.pdf");
-                    //axAcroPDF1.Refresh();
-                }
-
-                HabilitarBotonesMenu(true, false, true, false);
-            }
-            catch (Exception ex)
-            {
-                KryptonMessageBox.Show(@"Error al cargar detalles del personal: " + ex.Message, "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
-            }
-        }
+       
 
         private void txtFiltro_KeyUp(object sender, KeyEventArgs e)
         {
@@ -880,6 +776,111 @@ namespace SysCisepro3.TalentoHumano
             catch
             {
                 KryptonMessageBox.Show(@"HUBO UN PROBLEMA AL EXPORTAR DATOS!", "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error);
+            }
+        }
+
+        private void dgvPersonal_SelectionChanged(object sender, EventArgs e)
+        {
+            if (_estado != 0 || dgvPersonal.CurrentRow == null) return;
+            try
+            {
+                var row = dgvPersonal.CurrentRow;
+                lblValCed.Visible = false;
+
+                lblAspirante.Text = row.Cells["ID"].Value.ToString();
+                var asp = _objAspirante.SeleccionarDatosAspiranteById(TipoCon, lblAspirante.Text.Trim()).Rows[0];
+
+                txtCedula.Text = asp["CEDULA"].ToString();
+                cbmSexo.Text = asp["SEXO"].ToString();
+                dtpFechaNacimiento.Value = Convert.ToDateTime(asp["FECHA_NACIMIENTO"]);
+                dtpHoy.Value = Convert.ToDateTime(asp["FECHA_REGISTRO"]);
+
+                txtEdad.Text = asp["ANIOS"].ToString();
+                txtNombres.Text = asp["NOMBRES"].ToString();
+                txtApellidos.Text = asp["APELLIDOS"].ToString();
+                cbEstadoCivil.Text = asp["ESTADO_CIVIL"].ToString();
+                cbmInstruccion.Text = asp["INSTRUCCION"].ToString();
+                txtTelefono.Text = asp["TELEFONO"].ToString();
+                txtMovil.Text = asp["MOVIL"].ToString();
+                txtEmail.Text = asp["EMAIL"].ToString();
+                cbmProvincia.Text = asp["PROVINCIA"].ToString();
+                cbmCanton.Text = asp["CIUDAD"].ToString();
+                cbmParroquia.Text = asp["PARROQUIA"].ToString();
+                txtDireccion.Text = asp["DIRECCION"].ToString();
+                txtObservacion.Text = asp["OBSERVACION"].ToString();
+                cbmPara.Text = asp["APTO_PARA"].ToString();
+
+                chkCedula.Checked = Convert.ToInt32(asp["TIENE_CEDULA"].ToString()) == 1;
+
+                chkVotacion.Checked = Convert.ToInt32(asp["TIENE_CERTIFICADO_VOTACION"].ToString()) == 1;
+                chkMilitar.Checked = Convert.ToInt32(asp["TIENE_LIBRETA_MILITAR"].ToString()) == 1;
+
+                chkDiscapacitado.Checked = Convert.ToInt32(asp["TIENE_DISCAPACIDAD"].ToString()) == 1;
+                txtDiscapacitado.Text = asp["TIPO_DISCAPACIDAD"].ToString();
+
+                chkCursoVigilante.Checked = Convert.ToInt32(asp["TIENE_CURSO"].ToString()) == 1;
+                txtEmisorCursoVigilante.Text = asp["ENTIDAD_CURSO"].ToString();
+
+                chkCredencial.Checked = Convert.ToInt32(asp["TIENE_CREDENCIAL"].ToString()) == 1;
+                txtCredencial.Text = asp["ENTIDAD_CREDENCIAL"].ToString();
+
+                chkAntecedentes.Checked = Convert.ToInt32(asp["TIENE_ANTECEDENTES"].ToString()) == 1;
+                txtAntecedentes.Text = asp["DETALLE_ANTECEDENTES"].ToString();
+
+
+                chkNoViolencia.Checked = Convert.ToInt32(asp["TIENE_NO_VIOLENCIA"].ToString()) == 1;
+                txtNoViolencia.Text = asp["DETALLE_NO_VIOLENCIA"].ToString();
+
+
+                chkPiscologico.Checked = Convert.ToInt32(asp["TIENE_PSICOLOGICO"].ToString()) == 1;
+                txtPiscologico.Text = asp["DETALLE_PSICOLOGICO"].ToString();
+
+
+                chkCertificadoTrabajo.Checked = Convert.ToInt32(asp["TIENE_CERT_TRABAJO"].ToString()) == 1;
+                txtCertificadoTrabajo.Text = asp["DETALLE_CERT_TRABAJO"].ToString();
+
+                chkRecomendaciones.Checked = Convert.ToInt32(asp["TIENE_RECOMENDACION"].ToString()) == 1;
+                txtRecomendaciones.Text = asp["DETALLE_RECOMENDACION"].ToString();
+
+
+                chkBachiller.Checked = Convert.ToInt32(asp["TIENE_BACHILLER"].ToString()) == 1;
+                txtBachiller.Text = asp["DETALLE_BACHILLER"].ToString();
+
+
+                chkPoligrafica.Checked = Convert.ToInt32(asp["TIENE_POLIGRAFICA"].ToString()) == 1;
+                txtPoligrafica.Text = asp["DETALLE_POLIGRAFICA"].ToString();
+
+
+                chkAfis.Checked = Convert.ToInt32(asp["TIENE_AFIS"].ToString()) == 1;
+                txtAfis.Text = asp["DETALLE_AFIS"].ToString();
+
+                chkVehiculo.Checked = Convert.ToInt32(asp["TIENE_VEHICULO"].ToString()) == 1;
+                txtVehiculo.Text = asp["DETALLE_VEHICULO"].ToString();
+
+
+                try
+                {
+                    var tempFileName = Path.ChangeExtension(Path.GetTempFileName(), "PDF");
+                    File.WriteAllBytes(tempFileName, (byte[])asp["DOCUMENTOS"]);
+
+
+                    //axAcroPDF1.LoadFile(tempFileName);
+                    //axAcroPDF1.setShowToolbar(false);
+                    //axAcroPDF1.setZoom(75);
+                    //axAcroPDF1.setLayoutMode("SinglePage");
+                    //axAcroPDF1.Show();
+                }
+                catch
+                {
+                    //axAcroPDF1.LoadFile("people.pdf");
+                    //axAcroPDF1.Refresh();
+                }
+
+                HabilitarBotonesMenu(true, false, true, false);
+            }
+            catch (Exception ex)
+            {
+                KryptonMessageBox.Show(@"Error al cargar detalles del personal: " + ex.Message, "Mensaje del Sistema", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information);
             }
         }
     }

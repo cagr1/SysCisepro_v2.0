@@ -568,7 +568,7 @@
             Me.dgvNoche.Name = "dgvNoche"
             Me.dgvNoche.RowHeadersVisible = False
             Me.dgvNoche.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvNoche.Size = New System.Drawing.Size(1009, 425)
+            Me.dgvNoche.Size = New System.Drawing.Size(1009, 434)
             Me.dgvNoche.TabIndex = 203
             '
             'DataGridViewTextBoxColumn1
@@ -749,7 +749,7 @@
             Me.DataGridView1.Name = "DataGridView1"
             Me.DataGridView1.RowHeadersVisible = False
             Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.DataGridView1.Size = New System.Drawing.Size(1009, 459)
+            Me.DataGridView1.Size = New System.Drawing.Size(1009, 464)
             Me.DataGridView1.TabIndex = 204
             '
             'DataGridViewTextBoxColumn10
@@ -841,7 +841,7 @@
             Me.dgvDia.Name = "dgvDia"
             Me.dgvDia.RowHeadersVisible = False
             Me.dgvDia.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvDia.Size = New System.Drawing.Size(1009, 425)
+            Me.dgvDia.Size = New System.Drawing.Size(1009, 433)
             Me.dgvDia.TabIndex = 202
             '
             'Column15
@@ -1306,13 +1306,13 @@
             '
             Me.TabControl1.AnimateEasingType = ReaLTaiizor.[Enum].Metro.EasingType.CubeOut
             Me.TabControl1.AnimateTime = 200
-            Me.TabControl1.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
+            Me.TabControl1.BackgroundColor = System.Drawing.Color.White
             Me.TabControl1.Controls.Add(Me.MetroTabPage1)
             Me.TabControl1.Controls.Add(Me.MetroTabPage2)
             Me.TabControl1.Controls.Add(Me.MetroTabPage3)
             Me.TabControl1.ControlsVisible = True
             Me.TabControl1.IsDerivedStyle = True
-            Me.TabControl1.ItemSize = New System.Drawing.Size(180, 30)
+            Me.TabControl1.ItemSize = New System.Drawing.Size(180, 25)
             Me.TabControl1.Location = New System.Drawing.Point(3, 143)
             Me.TabControl1.MCursor = System.Windows.Forms.Cursors.Hand
             Me.TabControl1.Name = "TabControl1"
@@ -1331,7 +1331,7 @@
             '
             'MetroTabPage1
             '
-            Me.MetroTabPage1.BaseColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
+            Me.MetroTabPage1.BaseColor = System.Drawing.Color.White
             Me.MetroTabPage1.Controls.Add(Me.btndia)
             Me.MetroTabPage1.Controls.Add(Me.lblDia)
             Me.MetroTabPage1.Controls.Add(Me.txtBuscar)
@@ -1343,9 +1343,9 @@
             Me.MetroTabPage1.ImageIndex = 0
             Me.MetroTabPage1.ImageKey = Nothing
             Me.MetroTabPage1.IsDerivedStyle = True
-            Me.MetroTabPage1.Location = New System.Drawing.Point(4, 34)
+            Me.MetroTabPage1.Location = New System.Drawing.Point(4, 29)
             Me.MetroTabPage1.Name = "MetroTabPage1"
-            Me.MetroTabPage1.Size = New System.Drawing.Size(1009, 459)
+            Me.MetroTabPage1.Size = New System.Drawing.Size(1009, 464)
             Me.MetroTabPage1.Style = ReaLTaiizor.[Enum].Metro.Style.Light
             Me.MetroTabPage1.StyleManager = Nothing
             Me.MetroTabPage1.TabIndex = 0
@@ -1372,7 +1372,7 @@
             'lblDia
             '
             Me.lblDia.AutoSize = True
-            Me.lblDia.BackColor = System.Drawing.Color.White
+            Me.lblDia.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.lblDia.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.lblDia.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
             Me.lblDia.Location = New System.Drawing.Point(331, 11)
@@ -1423,7 +1423,7 @@
             '
             'MetroTabPage2
             '
-            Me.MetroTabPage2.BaseColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
+            Me.MetroTabPage2.BaseColor = System.Drawing.Color.White
             Me.MetroTabPage2.Controls.Add(Me.btnNoche)
             Me.MetroTabPage2.Controls.Add(Me.lblNoche)
             Me.MetroTabPage2.Controls.Add(Me.txtBuscarNoche)
@@ -1435,9 +1435,9 @@
             Me.MetroTabPage2.ImageIndex = 0
             Me.MetroTabPage2.ImageKey = Nothing
             Me.MetroTabPage2.IsDerivedStyle = True
-            Me.MetroTabPage2.Location = New System.Drawing.Point(4, 34)
+            Me.MetroTabPage2.Location = New System.Drawing.Point(4, 29)
             Me.MetroTabPage2.Name = "MetroTabPage2"
-            Me.MetroTabPage2.Size = New System.Drawing.Size(1009, 459)
+            Me.MetroTabPage2.Size = New System.Drawing.Size(1009, 464)
             Me.MetroTabPage2.Style = ReaLTaiizor.[Enum].Metro.Style.Light
             Me.MetroTabPage2.StyleManager = Nothing
             Me.MetroTabPage2.TabIndex = 1
@@ -1464,7 +1464,7 @@
             'lblNoche
             '
             Me.lblNoche.AutoSize = True
-            Me.lblNoche.BackColor = System.Drawing.Color.White
+            Me.lblNoche.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
             Me.lblNoche.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.lblNoche.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
             Me.lblNoche.Location = New System.Drawing.Point(325, 10)
@@ -1521,9 +1521,9 @@
             Me.MetroTabPage3.ImageIndex = 0
             Me.MetroTabPage3.ImageKey = Nothing
             Me.MetroTabPage3.IsDerivedStyle = True
-            Me.MetroTabPage3.Location = New System.Drawing.Point(4, 34)
+            Me.MetroTabPage3.Location = New System.Drawing.Point(4, 29)
             Me.MetroTabPage3.Name = "MetroTabPage3"
-            Me.MetroTabPage3.Size = New System.Drawing.Size(1009, 459)
+            Me.MetroTabPage3.Size = New System.Drawing.Size(1009, 464)
             Me.MetroTabPage3.Style = ReaLTaiizor.[Enum].Metro.Style.Light
             Me.MetroTabPage3.StyleManager = Nothing
             Me.MetroTabPage3.TabIndex = 2

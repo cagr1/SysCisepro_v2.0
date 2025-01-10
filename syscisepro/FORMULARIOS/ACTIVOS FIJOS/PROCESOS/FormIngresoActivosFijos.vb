@@ -3134,6 +3134,10 @@ Namespace FORMULARIOS.ACTIVOS_FIJOS.PROCESOS
 
         End Sub
 
+        Private Sub cbmMaterialChaleco_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbmMaterialChaleco.SelectedIndexChanged
+
+        End Sub
+
 
         'NO BORRAR ESTE METODO
         'Private Sub tcVarios_DrawItem(sender As Object, e As DrawItemEventArgs) Handles tcVarios.DrawItem
