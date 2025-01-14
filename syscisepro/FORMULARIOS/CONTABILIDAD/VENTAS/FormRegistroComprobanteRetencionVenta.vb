@@ -63,7 +63,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
 
         Dim _validarRenta As Integer = 0
 
-        Dim _busacarNumeroFactura As Integer = 0 ' para difereciar al cargar datos de grilla
+        Dim _buscarNumeroFactura As Integer = 0 ' para difereciar al cargar datos de grilla
 
         Private Sub FormRegistroComprobanteRetencionVenta_Load(ByVal sender As System.Object, ByVal e As EventArgs) Handles MyBase.Load
             ' DEFINIR TIPO Y COLOR DE SISTEMA
@@ -99,7 +99,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
             DeshabilitadoInicio()
             AutocompletarNombreCliente()
 
-            _busacarNumeroFactura = 0 ' 0 => carga grilla por cliente / 1 => carga grilla por numero factura
+            _buscarNumeroFactura = 0 ' 0 => carga grilla por cliente / 1 => carga grilla por numero factura
             txtNombreComercialCliente.Focus()
         End Sub
         Private Sub DeshabilitadoInicio()
@@ -183,7 +183,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
             LlenarComboConcepto()
             LlenarComboContribuyente()
 
-            _busacarNumeroFactura = 0 ' 0 => carga grilla por cliente / 1 => carga grilla por numero factura
+            _buscarNumeroFactura = 0 ' 0 => carga grilla por cliente / 1 => carga grilla por numero factura
         End Sub
         Private Sub HabilitadoNuevo()
             'gbClienteGeneral.Enabled = False
@@ -386,7 +386,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
         Private Sub btnCancelar_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnCancelar.Click
             LimpiarParametros()
             DeshabilitadoInicio()
-            _busacarNumeroFactura = 0 ' 0 => carga grilla por cliente / 1 => carga grilla por numero factura
+            _buscarNumeroFactura = 0 ' 0 => carga grilla por cliente / 1 => carga grilla por numero factura
             txtNombreComercialCliente.Focus()
         End Sub
         Private Sub txtNumeroFacturaBuscar_KeyUp(ByVal sender As System.Object, ByVal e As Windows.Forms.KeyEventArgs) Handles txtNumeroFacturaBuscar.KeyUp
@@ -397,10 +397,11 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
         Private Sub txtNombreComercialCliente_KeyUp(ByVal sender As System.Object, ByVal e As Windows.Forms.KeyEventArgs) Handles txtNombreComercialCliente.KeyUp
             If e.KeyCode <> Keys.Enter Then Return
             txtNumeroFacturaBuscar.Clear()
+            LimpiarDataGridView()
             CargarDatosCliente()
             If lblLlevaContabilidadClienteGeneral.Text = "SI" Then
+                _buscarNumeroFactura = 0
                 CargarFacturasVentaXIdCliente()
-                _busacarNumeroFactura = 0
             ElseIf lblLlevaContabilidadClienteGeneral.Text = "NO" Then
                 'MsgBox("NO SE REGISTRAN RETENCIONES DE CLIENTES QUE NO LLEVAN CONTABILIDAD", MsgBoxStyle.Exclamation, "Mensaje de validación")
                 KryptonMessageBox.Show("No se registran retenciones de clientes que no llevan contabilidad", "Mensaje de validación", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Exclamation)
@@ -408,9 +409,23 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
         End Sub
         Private Sub btnBuscarAsiento_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnBuscarAsiento.Click
             txtNombreComercialCliente.Clear()
+            _buscarNumeroFactura = 1 ' 0 => carga grilla por cliente / 1 => carga grilla por numero factura
+            LimpiarDataGridView()
             CargarFacturasVentaXNroFactura()
-            _busacarNumeroFactura = 1 ' 0 => carga grilla por cliente / 1 => carga grilla por numero factura
+
         End Sub
+
+        Private Sub LimpiarDataGridView()
+            RemoveHandler dgvFacturaVenta.SelectionChanged, AddressOf dgvFacturaVenta_SelectionChanged
+
+            ' Limpiar el DataGridView
+            dgvFacturaVenta.DataSource = Nothing
+            dgvFacturaVenta.Rows.Clear()
+
+            ' Restaurar el manejador de eventos
+            AddHandler dgvFacturaVenta.SelectionChanged, AddressOf dgvFacturaVenta_SelectionChanged
+        End Sub
+
         Private Sub dgvFacturaVenta_SelectionChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles dgvFacturaVenta.SelectionChanged
             If dgvFacturaVenta.RowCount = 0 Then Return
             If dgvFacturaVenta.CurrentRow Is Nothing Then Return
@@ -421,7 +436,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                     'MsgBox("ESTA FACTUARA YA HA SIDO CANCELADA" & vbNewLine & "NO SE PUEDE REGISTRAR RETENCIÓN", MsgBoxStyle.Information, "Mensaje de información")
                     KryptonMessageBox.Show("Esta factura ya ha sido cancelada" & vbNewLine & "No se puede registrar retención", "Mensaje de información", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Information)
                 Else
-                    If _busacarNumeroFactura = 0 Then
+                    If _buscarNumeroFactura = 0 Then
                         lblIdFacturaVenta.Text = dgvFacturaVenta.CurrentRow.Cells.Item(0).Value
                         lblTipoPagoFacturaCompra.Text = dgvFacturaVenta.CurrentRow.Cells.Item(6).Value
                         lblNumeroFacturaVenta.Text = dgvFacturaVenta.CurrentRow.Cells.Item(2).Value
@@ -439,7 +454,7 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
 
                     Else
                         lblIdFacturaVenta.Text = dgvFacturaVenta.CurrentRow.Cells.Item(0).Value
-                        lblTipoPagoFacturaCompra.Text = dgvFacturaVenta.CurrentRow.Cells.Item(6).Value
+                        lblTipoPagoFacturaCompra.Text = dgvFacturaVenta.CurrentRow.Cells.Item(24).Value
                         lblNumeroFacturaVenta.Text = dgvFacturaVenta.CurrentRow.Cells.Item(1).Value
                         lblFechaEmisionVenta.Text = Format(dgvFacturaVenta.CurrentRow.Cells.Item(2).Value, "dd/MM/yyyy")
                         dtpComprobanteRetencion.MinDate = lblFechaEmisionVenta.Text ' Establece como fecha minima del comprobante de retención la de el comprobante de compra
@@ -448,8 +463,8 @@ Namespace FORMULARIOS.CONTABILIDAD.VENTAS
                         txtSubtotal0.Text = dgvFacturaVenta.CurrentRow.Cells.Item(6).Value
                         txtDescuento.Text = dgvFacturaVenta.CurrentRow.Cells.Item(7).Value
                         txtSubtotal.Text = dgvFacturaVenta.CurrentRow.Cells.Item(8).Value
-                        txtIva.Text = dgvFacturaVenta.CurrentRow.Cells.Item(9).Value
-                        txtTotal.Text = dgvFacturaVenta.CurrentRow.Cells.Item(10).Value
+                        txtIva.Text = dgvFacturaVenta.CurrentRow.Cells.Item(10).Value
+                        txtTotal.Text = dgvFacturaVenta.CurrentRow.Cells.Item(11).Value
                     End If
                     CargarComprobanteRetencionVenta()
                 End If

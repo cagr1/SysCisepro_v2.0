@@ -103,6 +103,8 @@ Namespace FORMULARIOS.CONTABILIDAD.LIQUIDACIONES
             dgvLiquidacionesPendientes.Font = New Font("Roboto", 8, FontStyle.Regular)
             dgvSolicitudFondoRotativo.Font = New Font("Roboto", 8, FontStyle.Regular)
             dgvSolicitudFonoRotativoNoDeducible.Font = New Font("Roboto", 8, FontStyle.Regular)
+            dgvComprobanteCompra.Font = New Font("Roboto", 8, FontStyle.Regular)
+            dgvComprobanteRetencionCompra.Font = New Font("Roboto", 8, FontStyle.Regular)
 
             _sqlCommands = New List(Of SqlCommand)
         End Sub

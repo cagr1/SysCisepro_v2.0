@@ -1841,23 +1841,24 @@ Namespace FORMULARIOS.OPERACIONES
 
                 For Each d As DataRow In Uti.Rows
 
-                    dgvBuscarUtilidades.Rows.Add(d(0), d(1), d(2), d(3), d(4), d(5), d(6), d(7), d(8))
+                    dgvBuscarUtilidades.Rows.Add(d(0), d(1), d(2), d(3), d(4), d(5), d(6), d(7), d(8), d(9))
                 Next
 
                 dgvBuscarUtilidades.Columns(0).Width = 90
                 dgvBuscarUtilidades.Columns(1).Width = 250
                 dgvBuscarUtilidades.Columns(2).Width = 100
                 dgvBuscarUtilidades.Columns(2).DefaultCellStyle.Format = "d"
-                dgvBuscarUtilidades.Columns(3).Width = 100
-                dgvBuscarUtilidades.Columns(4).Width = 80
-                dgvBuscarUtilidades.Columns(5).Width = 180
-                dgvBuscarUtilidades.Columns(6).Width = 100
-                dgvBuscarUtilidades.Columns(6).DefaultCellStyle.Format = "d"
-                dgvBuscarUtilidades.Columns(6).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
+                dgvBuscarUtilidades.Columns(3).Width = 80
+                dgvBuscarUtilidades.Columns(4).Width = 100
+                dgvBuscarUtilidades.Columns(5).Width = 80
+                dgvBuscarUtilidades.Columns(6).Width = 180
                 dgvBuscarUtilidades.Columns(7).Width = 100
                 dgvBuscarUtilidades.Columns(7).DefaultCellStyle.Format = "d"
                 dgvBuscarUtilidades.Columns(7).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
                 dgvBuscarUtilidades.Columns(8).Width = 100
+                dgvBuscarUtilidades.Columns(8).DefaultCellStyle.Format = "d"
+                dgvBuscarUtilidades.Columns(8).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
+                dgvBuscarUtilidades.Columns(9).Width = 100
 
 
 

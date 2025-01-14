@@ -196,6 +196,16 @@
             Me.btnBuscar = New System.Windows.Forms.Button()
             Me.dtpHasta = New System.Windows.Forms.DateTimePicker()
             Me.dgvBuscarUtilidades = New System.Windows.Forms.DataGridView()
+            Me.ID = New System.Windows.Forms.DataGridViewTextBoxColumn()
+            Me.PERSONAL = New System.Windows.Forms.DataGridViewTextBoxColumn()
+            Me.F_NAC = New System.Windows.Forms.DataGridViewTextBoxColumn()
+            Me.edad = New System.Windows.Forms.DataGridViewTextBoxColumn()
+            Me.SUELDO = New System.Windows.Forms.DataGridViewTextBoxColumn()
+            Me.SEXO = New System.Windows.Forms.DataGridViewTextBoxColumn()
+            Me.CARGO = New System.Windows.Forms.DataGridViewTextBoxColumn()
+            Me.F_ENTRADA = New System.Windows.Forms.DataGridViewTextBoxColumn()
+            Me.F_SAL = New System.Windows.Forms.DataGridViewTextBoxColumn()
+            Me.ESTADO = New System.Windows.Forms.DataGridViewTextBoxColumn()
             Me.TextBox1 = New System.Windows.Forms.TextBox()
             Me.ListView3 = New System.Windows.Forms.ListView()
             Me.ColumnHeader11 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
@@ -314,15 +324,6 @@
             Me.KryptonLabel26 = New Krypton.Toolkit.KryptonLabel()
             Me.KryptonLabel25 = New Krypton.Toolkit.KryptonLabel()
             Me.KryptonLabel24 = New Krypton.Toolkit.KryptonLabel()
-            Me.ID = New System.Windows.Forms.DataGridViewTextBoxColumn()
-            Me.PERSONAL = New System.Windows.Forms.DataGridViewTextBoxColumn()
-            Me.F_NAC = New System.Windows.Forms.DataGridViewTextBoxColumn()
-            Me.SUELDO = New System.Windows.Forms.DataGridViewTextBoxColumn()
-            Me.SEXO = New System.Windows.Forms.DataGridViewTextBoxColumn()
-            Me.CARGO = New System.Windows.Forms.DataGridViewTextBoxColumn()
-            Me.F_ENTRADA = New System.Windows.Forms.DataGridViewTextBoxColumn()
-            Me.F_SAL = New System.Windows.Forms.DataGridViewTextBoxColumn()
-            Me.ESTADO = New System.Windows.Forms.DataGridViewTextBoxColumn()
             CType(Me.dgvUtilidades, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -1451,13 +1452,63 @@
             Me.dgvBuscarUtilidades.BorderStyle = System.Windows.Forms.BorderStyle.None
             Me.dgvBuscarUtilidades.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
             Me.dgvBuscarUtilidades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-            Me.dgvBuscarUtilidades.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ID, Me.PERSONAL, Me.F_NAC, Me.SUELDO, Me.SEXO, Me.CARGO, Me.F_ENTRADA, Me.F_SAL, Me.ESTADO})
+            Me.dgvBuscarUtilidades.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ID, Me.PERSONAL, Me.F_NAC, Me.edad, Me.SUELDO, Me.SEXO, Me.CARGO, Me.F_ENTRADA, Me.F_SAL, Me.ESTADO})
             Me.dgvBuscarUtilidades.Location = New System.Drawing.Point(12, 68)
             Me.dgvBuscarUtilidades.Name = "dgvBuscarUtilidades"
             Me.dgvBuscarUtilidades.RowHeadersVisible = False
             Me.dgvBuscarUtilidades.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvBuscarUtilidades.Size = New System.Drawing.Size(799, 513)
+            Me.dgvBuscarUtilidades.Size = New System.Drawing.Size(998, 513)
             Me.dgvBuscarUtilidades.TabIndex = 212
+            '
+            'ID
+            '
+            Me.ID.HeaderText = "CEDULA"
+            Me.ID.Name = "ID"
+            '
+            'PERSONAL
+            '
+            Me.PERSONAL.HeaderText = "PERSONAL"
+            Me.PERSONAL.Name = "PERSONAL"
+            '
+            'F_NAC
+            '
+            Me.F_NAC.HeaderText = "F NACIMIENTO"
+            Me.F_NAC.Name = "F_NAC"
+            '
+            'edad
+            '
+            Me.edad.HeaderText = "EDAD"
+            Me.edad.Name = "edad"
+            '
+            'SUELDO
+            '
+            Me.SUELDO.HeaderText = "SUELDO"
+            Me.SUELDO.Name = "SUELDO"
+            '
+            'SEXO
+            '
+            Me.SEXO.HeaderText = "SEXO"
+            Me.SEXO.Name = "SEXO"
+            '
+            'CARGO
+            '
+            Me.CARGO.HeaderText = "CARGO"
+            Me.CARGO.Name = "CARGO"
+            '
+            'F_ENTRADA
+            '
+            Me.F_ENTRADA.HeaderText = "F ENTRADA"
+            Me.F_ENTRADA.Name = "F_ENTRADA"
+            '
+            'F_SAL
+            '
+            Me.F_SAL.HeaderText = "F SALIDA"
+            Me.F_SAL.Name = "F_SAL"
+            '
+            'ESTADO
+            '
+            Me.ESTADO.HeaderText = "ESTADO"
+            Me.ESTADO.Name = "ESTADO"
             '
             'TextBox1
             '
@@ -2217,14 +2268,32 @@
             'KryptonNavigator1
             '
             Me.KryptonNavigator1.Button.ButtonDisplayLogic = ComponentFactory.Krypton.Navigator.ButtonDisplayLogic.None
+            Me.KryptonNavigator1.Button.CloseButtonAction = ComponentFactory.Krypton.Navigator.CloseButtonAction.RemovePageAndDispose
             Me.KryptonNavigator1.Button.CloseButtonDisplay = ComponentFactory.Krypton.Navigator.ButtonDisplay.Hide
+            Me.KryptonNavigator1.Button.ContextButtonAction = ComponentFactory.Krypton.Navigator.ContextButtonAction.SelectPage
+            Me.KryptonNavigator1.Button.ContextButtonDisplay = ComponentFactory.Krypton.Navigator.ButtonDisplay.Logic
+            Me.KryptonNavigator1.Button.ContextMenuMapImage = ComponentFactory.Krypton.Navigator.MapKryptonPageImage.Small
+            Me.KryptonNavigator1.Button.ContextMenuMapText = ComponentFactory.Krypton.Navigator.MapKryptonPageText.TextTitle
+            Me.KryptonNavigator1.Button.NextButtonAction = ComponentFactory.Krypton.Navigator.DirectionButtonAction.ModeAppropriateAction
+            Me.KryptonNavigator1.Button.NextButtonDisplay = ComponentFactory.Krypton.Navigator.ButtonDisplay.Logic
+            Me.KryptonNavigator1.Button.PreviousButtonAction = ComponentFactory.Krypton.Navigator.DirectionButtonAction.ModeAppropriateAction
+            Me.KryptonNavigator1.Button.PreviousButtonDisplay = ComponentFactory.Krypton.Navigator.ButtonDisplay.Logic
             Me.KryptonNavigator1.Dock = System.Windows.Forms.DockStyle.Fill
+            Me.KryptonNavigator1.Group.GroupBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.ControlClient
+            Me.KryptonNavigator1.Group.GroupBorderStyle = ComponentFactory.Krypton.Toolkit.PaletteBorderStyle.ControlClient
+            Me.KryptonNavigator1.Header.HeaderStyleBar = ComponentFactory.Krypton.Toolkit.HeaderStyle.Secondary
+            Me.KryptonNavigator1.Header.HeaderStylePrimary = ComponentFactory.Krypton.Toolkit.HeaderStyle.Primary
+            Me.KryptonNavigator1.Header.HeaderStyleSecondary = ComponentFactory.Krypton.Toolkit.HeaderStyle.Secondary
             Me.KryptonNavigator1.Location = New System.Drawing.Point(0, 0)
             Me.KryptonNavigator1.Name = "KryptonNavigator1"
+            Me.KryptonNavigator1.NavigatorMode = ComponentFactory.Krypton.Navigator.NavigatorMode.BarTabGroup
+            Me.KryptonNavigator1.PageBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.ControlClient
             Me.KryptonNavigator1.Pages.AddRange(New ComponentFactory.Krypton.Navigator.KryptonPage() {Me.KryptonPage1, Me.KryptonPage2, Me.KryptonPage3, Me.KryptonPage4, Me.KryptonPage5, Me.KryptonPage6})
+            Me.KryptonNavigator1.Panel.PanelBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.PanelClient
             Me.KryptonNavigator1.SelectedIndex = 0
             Me.KryptonNavigator1.Size = New System.Drawing.Size(1127, 619)
             Me.KryptonNavigator1.StateNormal.Page.Color1 = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
+            Me.KryptonNavigator1.StateNormal.Page.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit
             Me.KryptonNavigator1.TabIndex = 4
             Me.KryptonNavigator1.Text = "KryptonNavigator1"
             '
@@ -2241,6 +2310,7 @@
             Me.KryptonPage1.Name = "KryptonPage1"
             Me.KryptonPage1.Size = New System.Drawing.Size(1125, 592)
             Me.KryptonPage1.Text = "Mantenimiento"
+            Me.KryptonPage1.ToolTipStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.ToolTip
             Me.KryptonPage1.ToolTipTitle = "Page ToolTip"
             Me.KryptonPage1.UniqueName = "70707D4545EF4B60CCA6BA34AC0B8DB8"
             '
@@ -2320,6 +2390,7 @@
             Me.KryptonPage2.Name = "KryptonPage2"
             Me.KryptonPage2.Size = New System.Drawing.Size(1125, 592)
             Me.KryptonPage2.Text = "Detalle Puestos"
+            Me.KryptonPage2.ToolTipStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.ToolTip
             Me.KryptonPage2.ToolTipTitle = "Page ToolTip"
             Me.KryptonPage2.UniqueName = "7BFF323237214E91818EB1B33DCB2542"
             '
@@ -2412,6 +2483,7 @@
             Me.KryptonPage3.Name = "KryptonPage3"
             Me.KryptonPage3.Size = New System.Drawing.Size(1125, 592)
             Me.KryptonPage3.Text = "Utilidades"
+            Me.KryptonPage3.ToolTipStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.ToolTip
             Me.KryptonPage3.ToolTipTitle = "Page ToolTip"
             Me.KryptonPage3.UniqueName = "2E4723DB5E624F10669D01462233CFFA"
             '
@@ -2606,6 +2678,7 @@
             Me.KryptonPage4.Name = "KryptonPage4"
             Me.KryptonPage4.Size = New System.Drawing.Size(1125, 592)
             Me.KryptonPage4.Text = "XII Reporte"
+            Me.KryptonPage4.ToolTipStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.ToolTip
             Me.KryptonPage4.ToolTipTitle = "Page ToolTip"
             Me.KryptonPage4.UniqueName = "D52C29C173DE490F31B7EFD2751281D1"
             '
@@ -2679,6 +2752,7 @@
             Me.KryptonPage5.Name = "KryptonPage5"
             Me.KryptonPage5.Size = New System.Drawing.Size(1125, 592)
             Me.KryptonPage5.Text = "XVI Reporte"
+            Me.KryptonPage5.ToolTipStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.ToolTip
             Me.KryptonPage5.ToolTipTitle = "Page ToolTip"
             Me.KryptonPage5.UniqueName = "436CB7C7ECBD4B7E87B9E3C89B5A37E0"
             '
@@ -2752,6 +2826,7 @@
             Me.KryptonPage6.Name = "KryptonPage6"
             Me.KryptonPage6.Size = New System.Drawing.Size(1125, 592)
             Me.KryptonPage6.Text = "Utilidad para IESS"
+            Me.KryptonPage6.ToolTipStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.ToolTip
             Me.KryptonPage6.ToolTipTitle = "Page ToolTip"
             Me.KryptonPage6.UniqueName = "C9388DF1C95541716A8B697C3E3C93E0"
             '
@@ -2799,51 +2874,6 @@
             Me.KryptonLabel24.Size = New System.Drawing.Size(45, 20)
             Me.KryptonLabel24.TabIndex = 208
             Me.KryptonLabel24.Values.Text = "Desde"
-            '
-            'ID
-            '
-            Me.ID.HeaderText = "CEDULA"
-            Me.ID.Name = "ID"
-            '
-            'PERSONAL
-            '
-            Me.PERSONAL.HeaderText = "PERSONAL"
-            Me.PERSONAL.Name = "PERSONAL"
-            '
-            'F_NAC
-            '
-            Me.F_NAC.HeaderText = "F NACIMIENTO"
-            Me.F_NAC.Name = "F_NAC"
-            '
-            'SUELDO
-            '
-            Me.SUELDO.HeaderText = "SUELDO"
-            Me.SUELDO.Name = "SUELDO"
-            '
-            'SEXO
-            '
-            Me.SEXO.HeaderText = "SEXO"
-            Me.SEXO.Name = "SEXO"
-            '
-            'CARGO
-            '
-            Me.CARGO.HeaderText = "CARGO"
-            Me.CARGO.Name = "CARGO"
-            '
-            'F_ENTRADA
-            '
-            Me.F_ENTRADA.HeaderText = "F ENTRADA"
-            Me.F_ENTRADA.Name = "F_ENTRADA"
-            '
-            'F_SAL
-            '
-            Me.F_SAL.HeaderText = "F SALIDA"
-            Me.F_SAL.Name = "F_SAL"
-            '
-            'ESTADO
-            '
-            Me.ESTADO.HeaderText = "ESTADO"
-            Me.ESTADO.Name = "ESTADO"
             '
             'FrmAsistenciaRrhh
             '
@@ -3156,6 +3186,7 @@
         Friend WithEvents ID As DataGridViewTextBoxColumn
         Friend WithEvents PERSONAL As DataGridViewTextBoxColumn
         Friend WithEvents F_NAC As DataGridViewTextBoxColumn
+        Friend WithEvents edad As DataGridViewTextBoxColumn
         Friend WithEvents SUELDO As DataGridViewTextBoxColumn
         Friend WithEvents SEXO As DataGridViewTextBoxColumn
         Friend WithEvents CARGO As DataGridViewTextBoxColumn

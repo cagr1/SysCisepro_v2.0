@@ -1398,7 +1398,12 @@ Namespace FORMULARIOS.CONTABILIDAD.COMPRAS.COMPROBANTES_DE_COMPRA
                 .DescuentoComprobante = txtDescuentoFacturaCompra.Text
                 .SubtotalComprobante = txtSubTotalComprobanteCompra.Text
                 .PorcentajeIvaComprobante = PorcentajeIva
-                .IvaComprobante = txtIvaComprobanteCompra.Text
+                If txtIva5ComprobanteCompra.Text.Length > 0 Then
+                    .IvaComprobante = txtIva5ComprobanteCompra.Text
+                Else
+                    .IvaComprobante = txtIvaComprobanteCompra.Text
+                End If
+                '.IvaComprobante = txtIvaComprobanteCompra.Text
                 .Iva5Comprobante = txtIva5ComprobanteCompra.Text
                 .TotalComprobante = txtTotalComprobanteCompra.Text
                 .EstadoComprobante = 1

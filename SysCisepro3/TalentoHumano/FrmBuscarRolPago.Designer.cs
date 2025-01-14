@@ -63,7 +63,7 @@
             // dtpFechaDesde
             // 
             this.dtpFechaDesde.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaDesde.Location = new System.Drawing.Point(263, 12);
+            this.dtpFechaDesde.Location = new System.Drawing.Point(249, 12);
             this.dtpFechaDesde.Name = "dtpFechaDesde";
             this.dtpFechaDesde.Size = new System.Drawing.Size(101, 20);
             this.dtpFechaDesde.TabIndex = 36;
@@ -114,8 +114,11 @@
             // 
             // btnSig
             // 
-            this.btnSig.BackColor = System.Drawing.Color.White;
+            this.btnSig.BackColor = System.Drawing.Color.Transparent;
+            this.btnSig.FlatAppearance.BorderSize = 0;
+            this.btnSig.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSig.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSig.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
             this.btnSig.Image = global::SysCisepro3.Properties.Resources.check_circle_24dp_FILL0_wght400_GRAD0_opsz24__3_;
             this.btnSig.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSig.Location = new System.Drawing.Point(862, 5);
@@ -131,7 +134,7 @@
             // 
             this.dtpFechaMes.CustomFormat = "MMMM - yyyy";
             this.dtpFechaMes.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpFechaMes.Location = new System.Drawing.Point(233, 12);
+            this.dtpFechaMes.Location = new System.Drawing.Point(219, 12);
             this.dtpFechaMes.Name = "dtpFechaMes";
             this.dtpFechaMes.Size = new System.Drawing.Size(136, 20);
             this.dtpFechaMes.TabIndex = 214;

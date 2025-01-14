@@ -82,9 +82,8 @@ namespace SysCisepro3.TalentoHumano
         {
             // CARGAR ICONO Y DESIEÑO SEGUN SISTEMA 
             //toolStrip1.BackColor = ValidationForms.GetColorSistema(TipoCon);
-            toolStrip1.ForeColor = Color.White;
-            Label14.BackColor = ValidationForms.GetColorSistema(TipoCon);
-            Label14.ForeColor = Color.White;
+            
+            
             dgvDetallesRol.DefaultCellStyle.SelectionBackColor = ValidationForms.GetColorSistema(TipoCon);
             dgvInformePago.DefaultCellStyle.SelectionBackColor = ValidationForms.GetColorSistema(TipoCon);
             dgvHorasExtra.DefaultCellStyle.SelectionBackColor = ValidationForms.GetColorSistema(TipoCon);
