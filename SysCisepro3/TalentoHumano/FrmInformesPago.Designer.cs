@@ -96,6 +96,14 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle74 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle75 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle76 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle66 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle67 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle68 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle69 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle70 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle71 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle72 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle73 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle77 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle85 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle86 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -107,14 +115,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle82 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle83 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle84 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle66 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle67 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle68 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle69 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle70 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle71 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle72 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle73 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvDetallesRol = new System.Windows.Forms.DataGridView();
             this.GRP = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -200,6 +200,24 @@
             this.btnAnt = new System.Windows.Forms.Button();
             this.TextBox1 = new System.Windows.Forms.TextBox();
             this.dgvInformePago = new System.Windows.Forms.DataGridView();
+            this.DataGridViewTextBoxColumn166 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DataGridViewTextBoxColumn167 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DataGridViewTextBoxColumn168 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DataGridViewTextBoxColumn169 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DataGridViewTextBoxColumn170 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DataGridViewTextBoxColumn171 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DataGridViewTextBoxColumn172 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DataGridViewTextBoxColumn173 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DataGridViewTextBoxColumn174 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DataGridViewTextBoxColumn175 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DataGridViewTextBoxColumn176 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DataGridViewTextBoxColumn177 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DataGridViewTextBoxColumn178 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DataGridViewTextBoxColumn179 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DataGridViewTextBoxColumn180 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label3 = new System.Windows.Forms.Label();
             this.lblRuc = new System.Windows.Forms.Label();
             this.dtpMesExtra = new System.Windows.Forms.DateTimePicker();
@@ -229,9 +247,8 @@
             this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
             this.kryptonNavigator1 = new ComponentFactory.Krypton.Navigator.KryptonNavigator();
             this.kryptonPage1 = new ComponentFactory.Krypton.Navigator.KryptonPage();
-            this.kryptonPage2 = new ComponentFactory.Krypton.Navigator.KryptonPage();
-            this.kryptonPage3 = new ComponentFactory.Krypton.Navigator.KryptonPage();
-            this.kryptonLabel1 = new Krypton.Toolkit.KryptonLabel();
+            this.txtTotCobrar = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
             this.txtAcfonRes = new System.Windows.Forms.TextBox();
             this.txtAcfoOp = new System.Windows.Forms.TextBox();
             this.txtAcfoAd = new System.Windows.Forms.TextBox();
@@ -242,19 +259,8 @@
             this.label25 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.chkFondos = new System.Windows.Forms.CheckBox();
-            this.txtTotCobrar = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.lblEmpresa = new System.Windows.Forms.Label();
+            this.kryptonLabel1 = new Krypton.Toolkit.KryptonLabel();
+            this.kryptonPage2 = new ComponentFactory.Krypton.Navigator.KryptonPage();
             this.TextBox8 = new System.Windows.Forms.TextBox();
             this.TextBox7 = new System.Windows.Forms.TextBox();
             this.TextBox6 = new System.Windows.Forms.TextBox();
@@ -262,26 +268,20 @@
             this.TextBox4 = new System.Windows.Forms.TextBox();
             this.TextBox3 = new System.Windows.Forms.TextBox();
             this.TextBox2 = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.kryptonPage3 = new ComponentFactory.Krypton.Navigator.KryptonPage();
             this.textBox10 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.DataGridViewTextBoxColumn166 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DataGridViewTextBoxColumn167 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DataGridViewTextBoxColumn168 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DataGridViewTextBoxColumn169 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DataGridViewTextBoxColumn170 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DataGridViewTextBoxColumn171 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DataGridViewTextBoxColumn172 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DataGridViewTextBoxColumn173 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DataGridViewTextBoxColumn174 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DataGridViewTextBoxColumn175 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DataGridViewTextBoxColumn176 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DataGridViewTextBoxColumn177 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DataGridViewTextBoxColumn178 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DataGridViewTextBoxColumn179 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DataGridViewTextBoxColumn180 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblEmpresa = new System.Windows.Forms.Label();
+            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.chkFondos = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetallesRol)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInformePago)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHorasExtra)).BeginInit();
@@ -1305,6 +1305,180 @@
             this.dgvInformePago.Size = new System.Drawing.Size(1104, 580);
             this.dgvInformePago.TabIndex = 217;
             // 
+            // DataGridViewTextBoxColumn166
+            // 
+            this.DataGridViewTextBoxColumn166.Frozen = true;
+            this.DataGridViewTextBoxColumn166.HeaderText = "GRP";
+            this.DataGridViewTextBoxColumn166.Name = "DataGridViewTextBoxColumn166";
+            this.DataGridViewTextBoxColumn166.ReadOnly = true;
+            this.DataGridViewTextBoxColumn166.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.DataGridViewTextBoxColumn166.Visible = false;
+            this.DataGridViewTextBoxColumn166.Width = 50;
+            // 
+            // DataGridViewTextBoxColumn167
+            // 
+            this.DataGridViewTextBoxColumn167.Frozen = true;
+            this.DataGridViewTextBoxColumn167.HeaderText = "IDP";
+            this.DataGridViewTextBoxColumn167.Name = "DataGridViewTextBoxColumn167";
+            this.DataGridViewTextBoxColumn167.ReadOnly = true;
+            this.DataGridViewTextBoxColumn167.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.DataGridViewTextBoxColumn167.Visible = false;
+            this.DataGridViewTextBoxColumn167.Width = 40;
+            // 
+            // DataGridViewTextBoxColumn168
+            // 
+            dataGridViewCellStyle66.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle66.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle66.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DataGridViewTextBoxColumn168.DefaultCellStyle = dataGridViewCellStyle66;
+            this.DataGridViewTextBoxColumn168.Frozen = true;
+            this.DataGridViewTextBoxColumn168.HeaderText = "N°";
+            this.DataGridViewTextBoxColumn168.Name = "DataGridViewTextBoxColumn168";
+            this.DataGridViewTextBoxColumn168.ReadOnly = true;
+            this.DataGridViewTextBoxColumn168.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.DataGridViewTextBoxColumn168.Width = 35;
+            // 
+            // DataGridViewTextBoxColumn169
+            // 
+            this.DataGridViewTextBoxColumn169.Frozen = true;
+            this.DataGridViewTextBoxColumn169.HeaderText = "CLIENTE";
+            this.DataGridViewTextBoxColumn169.Name = "DataGridViewTextBoxColumn169";
+            this.DataGridViewTextBoxColumn169.ReadOnly = true;
+            this.DataGridViewTextBoxColumn169.Width = 180;
+            // 
+            // DataGridViewTextBoxColumn170
+            // 
+            this.DataGridViewTextBoxColumn170.Frozen = true;
+            this.DataGridViewTextBoxColumn170.HeaderText = "UBICACIÓN";
+            this.DataGridViewTextBoxColumn170.Name = "DataGridViewTextBoxColumn170";
+            this.DataGridViewTextBoxColumn170.ReadOnly = true;
+            this.DataGridViewTextBoxColumn170.Width = 200;
+            // 
+            // DataGridViewTextBoxColumn171
+            // 
+            this.DataGridViewTextBoxColumn171.Frozen = true;
+            this.DataGridViewTextBoxColumn171.HeaderText = "NÓMINA";
+            this.DataGridViewTextBoxColumn171.Name = "DataGridViewTextBoxColumn171";
+            this.DataGridViewTextBoxColumn171.ReadOnly = true;
+            this.DataGridViewTextBoxColumn171.Width = 200;
+            // 
+            // DataGridViewTextBoxColumn172
+            // 
+            dataGridViewCellStyle67.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.DataGridViewTextBoxColumn172.DefaultCellStyle = dataGridViewCellStyle67;
+            this.DataGridViewTextBoxColumn172.Frozen = true;
+            this.DataGridViewTextBoxColumn172.HeaderText = "C.I.";
+            this.DataGridViewTextBoxColumn172.Name = "DataGridViewTextBoxColumn172";
+            this.DataGridViewTextBoxColumn172.ReadOnly = true;
+            this.DataGridViewTextBoxColumn172.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.DataGridViewTextBoxColumn172.Width = 80;
+            // 
+            // Column14
+            // 
+            dataGridViewCellStyle68.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column14.DefaultCellStyle = dataGridViewCellStyle68;
+            this.Column14.Frozen = true;
+            this.Column14.HeaderText = "F. NACIM.";
+            this.Column14.Name = "Column14";
+            this.Column14.ReadOnly = true;
+            this.Column14.Width = 90;
+            // 
+            // DataGridViewTextBoxColumn173
+            // 
+            dataGridViewCellStyle69.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.DataGridViewTextBoxColumn173.DefaultCellStyle = dataGridViewCellStyle69;
+            this.DataGridViewTextBoxColumn173.Frozen = true;
+            this.DataGridViewTextBoxColumn173.HeaderText = "INGRESO";
+            this.DataGridViewTextBoxColumn173.Name = "DataGridViewTextBoxColumn173";
+            this.DataGridViewTextBoxColumn173.ReadOnly = true;
+            this.DataGridViewTextBoxColumn173.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.DataGridViewTextBoxColumn173.Width = 75;
+            // 
+            // DataGridViewTextBoxColumn174
+            // 
+            dataGridViewCellStyle70.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.DataGridViewTextBoxColumn174.DefaultCellStyle = dataGridViewCellStyle70;
+            this.DataGridViewTextBoxColumn174.Frozen = true;
+            this.DataGridViewTextBoxColumn174.HeaderText = "CARGO";
+            this.DataGridViewTextBoxColumn174.Name = "DataGridViewTextBoxColumn174";
+            this.DataGridViewTextBoxColumn174.ReadOnly = true;
+            this.DataGridViewTextBoxColumn174.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.DataGridViewTextBoxColumn174.Width = 150;
+            // 
+            // DataGridViewTextBoxColumn175
+            // 
+            dataGridViewCellStyle71.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.DataGridViewTextBoxColumn175.DefaultCellStyle = dataGridViewCellStyle71;
+            this.DataGridViewTextBoxColumn175.Frozen = true;
+            this.DataGridViewTextBoxColumn175.HeaderText = "ÁREA";
+            this.DataGridViewTextBoxColumn175.Name = "DataGridViewTextBoxColumn175";
+            this.DataGridViewTextBoxColumn175.ReadOnly = true;
+            this.DataGridViewTextBoxColumn175.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.DataGridViewTextBoxColumn175.Visible = false;
+            // 
+            // DataGridViewTextBoxColumn176
+            // 
+            dataGridViewCellStyle72.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle72.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DataGridViewTextBoxColumn176.DefaultCellStyle = dataGridViewCellStyle72;
+            this.DataGridViewTextBoxColumn176.Frozen = true;
+            this.DataGridViewTextBoxColumn176.HeaderText = "NETO A RECIBIR";
+            this.DataGridViewTextBoxColumn176.Name = "DataGridViewTextBoxColumn176";
+            this.DataGridViewTextBoxColumn176.ReadOnly = true;
+            this.DataGridViewTextBoxColumn176.Width = 90;
+            // 
+            // DataGridViewTextBoxColumn177
+            // 
+            this.DataGridViewTextBoxColumn177.Frozen = true;
+            this.DataGridViewTextBoxColumn177.HeaderText = "IDB";
+            this.DataGridViewTextBoxColumn177.Name = "DataGridViewTextBoxColumn177";
+            this.DataGridViewTextBoxColumn177.ReadOnly = true;
+            this.DataGridViewTextBoxColumn177.Visible = false;
+            this.DataGridViewTextBoxColumn177.Width = 50;
+            // 
+            // DataGridViewTextBoxColumn178
+            // 
+            this.DataGridViewTextBoxColumn178.Frozen = true;
+            this.DataGridViewTextBoxColumn178.HeaderText = "BANCO";
+            this.DataGridViewTextBoxColumn178.Name = "DataGridViewTextBoxColumn178";
+            this.DataGridViewTextBoxColumn178.ReadOnly = true;
+            this.DataGridViewTextBoxColumn178.Width = 150;
+            // 
+            // DataGridViewTextBoxColumn179
+            // 
+            this.DataGridViewTextBoxColumn179.Frozen = true;
+            this.DataGridViewTextBoxColumn179.HeaderText = "CUENTA";
+            this.DataGridViewTextBoxColumn179.Name = "DataGridViewTextBoxColumn179";
+            this.DataGridViewTextBoxColumn179.ReadOnly = true;
+            this.DataGridViewTextBoxColumn179.Width = 90;
+            // 
+            // DataGridViewTextBoxColumn180
+            // 
+            this.DataGridViewTextBoxColumn180.Frozen = true;
+            this.DataGridViewTextBoxColumn180.HeaderText = "TIPO";
+            this.DataGridViewTextBoxColumn180.Name = "DataGridViewTextBoxColumn180";
+            this.DataGridViewTextBoxColumn180.ReadOnly = true;
+            this.DataGridViewTextBoxColumn180.Width = 50;
+            // 
+            // Column23
+            // 
+            this.Column23.Frozen = true;
+            this.Column23.HeaderText = "EST";
+            this.Column23.Name = "Column23";
+            this.Column23.ReadOnly = true;
+            this.Column23.Visible = false;
+            this.Column23.Width = 50;
+            // 
+            // Column15
+            // 
+            dataGridViewCellStyle73.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column15.DefaultCellStyle = dataGridViewCellStyle73;
+            this.Column15.Frozen = true;
+            this.Column15.HeaderText = "CODB";
+            this.Column15.Name = "Column15";
+            this.Column15.ReadOnly = true;
+            this.Column15.Width = 50;
+            // 
             // label3
             // 
             this.label3.BackColor = System.Drawing.Color.Transparent;
@@ -1631,14 +1805,31 @@
             // kryptonNavigator1
             // 
             this.kryptonNavigator1.Button.ButtonDisplayLogic = ComponentFactory.Krypton.Navigator.ButtonDisplayLogic.None;
+            this.kryptonNavigator1.Button.CloseButtonAction = ComponentFactory.Krypton.Navigator.CloseButtonAction.RemovePageAndDispose;
             this.kryptonNavigator1.Button.CloseButtonDisplay = ComponentFactory.Krypton.Navigator.ButtonDisplay.Hide;
+            this.kryptonNavigator1.Button.ContextButtonAction = ComponentFactory.Krypton.Navigator.ContextButtonAction.SelectPage;
+            this.kryptonNavigator1.Button.ContextButtonDisplay = ComponentFactory.Krypton.Navigator.ButtonDisplay.Logic;
+            this.kryptonNavigator1.Button.ContextMenuMapImage = ComponentFactory.Krypton.Navigator.MapKryptonPageImage.Small;
+            this.kryptonNavigator1.Button.ContextMenuMapText = ComponentFactory.Krypton.Navigator.MapKryptonPageText.TextTitle;
+            this.kryptonNavigator1.Button.NextButtonAction = ComponentFactory.Krypton.Navigator.DirectionButtonAction.ModeAppropriateAction;
+            this.kryptonNavigator1.Button.NextButtonDisplay = ComponentFactory.Krypton.Navigator.ButtonDisplay.Logic;
+            this.kryptonNavigator1.Button.PreviousButtonAction = ComponentFactory.Krypton.Navigator.DirectionButtonAction.ModeAppropriateAction;
+            this.kryptonNavigator1.Button.PreviousButtonDisplay = ComponentFactory.Krypton.Navigator.ButtonDisplay.Logic;
             this.kryptonNavigator1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.kryptonNavigator1.Group.GroupBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.ControlClient;
+            this.kryptonNavigator1.Group.GroupBorderStyle = ComponentFactory.Krypton.Toolkit.PaletteBorderStyle.ControlClient;
+            this.kryptonNavigator1.Header.HeaderStyleBar = ComponentFactory.Krypton.Toolkit.HeaderStyle.Secondary;
+            this.kryptonNavigator1.Header.HeaderStylePrimary = ComponentFactory.Krypton.Toolkit.HeaderStyle.Primary;
+            this.kryptonNavigator1.Header.HeaderStyleSecondary = ComponentFactory.Krypton.Toolkit.HeaderStyle.Secondary;
             this.kryptonNavigator1.Location = new System.Drawing.Point(0, 31);
             this.kryptonNavigator1.Name = "kryptonNavigator1";
+            this.kryptonNavigator1.NavigatorMode = ComponentFactory.Krypton.Navigator.NavigatorMode.BarTabGroup;
+            this.kryptonNavigator1.PageBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.ControlClient;
             this.kryptonNavigator1.Pages.AddRange(new ComponentFactory.Krypton.Navigator.KryptonPage[] {
             this.kryptonPage1,
             this.kryptonPage2,
             this.kryptonPage3});
+            this.kryptonNavigator1.Panel.PanelBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.PanelClient;
             this.kryptonNavigator1.SelectedIndex = 0;
             this.kryptonNavigator1.Size = new System.Drawing.Size(1121, 667);
             this.kryptonNavigator1.TabIndex = 215;
@@ -1671,69 +1862,35 @@
             this.kryptonPage1.Name = "kryptonPage1";
             this.kryptonPage1.Size = new System.Drawing.Size(1119, 640);
             this.kryptonPage1.StateNormal.Page.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
+            this.kryptonPage1.StateNormal.Page.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.kryptonPage1.Text = "Detalles de Rol";
+            this.kryptonPage1.ToolTipStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.ToolTip;
             this.kryptonPage1.ToolTipTitle = "Page ToolTip";
             this.kryptonPage1.UniqueName = "8A7AEEA4AD9945479EB1E7B0BC20EE5D";
             // 
-            // kryptonPage2
+            // txtTotCobrar
             // 
-            this.kryptonPage2.AutoHiddenSlideSize = new System.Drawing.Size(200, 200);
-            this.kryptonPage2.Controls.Add(this.TextBox8);
-            this.kryptonPage2.Controls.Add(this.TextBox7);
-            this.kryptonPage2.Controls.Add(this.TextBox6);
-            this.kryptonPage2.Controls.Add(this.TextBox5);
-            this.kryptonPage2.Controls.Add(this.TextBox4);
-            this.kryptonPage2.Controls.Add(this.TextBox3);
-            this.kryptonPage2.Controls.Add(this.TextBox2);
-            this.kryptonPage2.Controls.Add(this.label5);
-            this.kryptonPage2.Controls.Add(this.label6);
-            this.kryptonPage2.Controls.Add(this.label7);
-            this.kryptonPage2.Controls.Add(this.label8);
-            this.kryptonPage2.Controls.Add(this.label10);
-            this.kryptonPage2.Controls.Add(this.label14);
-            this.kryptonPage2.Controls.Add(this.label21);
-            this.kryptonPage2.Controls.Add(this.dgvInformePago);
-            this.kryptonPage2.Flags = 65534;
-            this.kryptonPage2.LastVisibleSet = true;
-            this.kryptonPage2.MinimumSize = new System.Drawing.Size(50, 50);
-            this.kryptonPage2.Name = "kryptonPage2";
-            this.kryptonPage2.Size = new System.Drawing.Size(1119, 640);
-            this.kryptonPage2.StateNormal.Page.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
-            this.kryptonPage2.Text = "Informe de Pago";
-            this.kryptonPage2.ToolTipTitle = "Page ToolTip";
-            this.kryptonPage2.UniqueName = "16FD358289D3475A518044205B4FE386";
+            this.txtTotCobrar.BackColor = System.Drawing.Color.White;
+            this.txtTotCobrar.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtTotCobrar.Enabled = false;
+            this.txtTotCobrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTotCobrar.Location = new System.Drawing.Point(1004, 607);
+            this.txtTotCobrar.Name = "txtTotCobrar";
+            this.txtTotCobrar.Size = new System.Drawing.Size(101, 20);
+            this.txtTotCobrar.TabIndex = 262;
+            this.txtTotCobrar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // kryptonPage3
+            // label12
             // 
-            this.kryptonPage3.AutoHiddenSlideSize = new System.Drawing.Size(200, 200);
-            this.kryptonPage3.Controls.Add(this.textBox10);
-            this.kryptonPage3.Controls.Add(this.label2);
-            this.kryptonPage3.Controls.Add(this.lblEmpresa);
-            this.kryptonPage3.Controls.Add(this.textBox9);
-            this.kryptonPage3.Controls.Add(this.label1);
-            this.kryptonPage3.Controls.Add(this.label3);
-            this.kryptonPage3.Controls.Add(this.chkFondos);
-            this.kryptonPage3.Controls.Add(this.dgvHorasExtra);
-            this.kryptonPage3.Controls.Add(this.lblRuc);
-            this.kryptonPage3.Controls.Add(this.label4);
-            this.kryptonPage3.Controls.Add(this.dtpMesExtra);
-            this.kryptonPage3.Flags = 65534;
-            this.kryptonPage3.LastVisibleSet = true;
-            this.kryptonPage3.MinimumSize = new System.Drawing.Size(50, 50);
-            this.kryptonPage3.Name = "kryptonPage3";
-            this.kryptonPage3.Size = new System.Drawing.Size(1119, 640);
-            this.kryptonPage3.StateNormal.Page.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
-            this.kryptonPage3.Text = "Horas Extra";
-            this.kryptonPage3.ToolTipTitle = "Page ToolTip";
-            this.kryptonPage3.UniqueName = "62C884C7ECB14B8355AFDDFD0FB554B8";
-            // 
-            // kryptonLabel1
-            // 
-            this.kryptonLabel1.Location = new System.Drawing.Point(9, 8);
-            this.kryptonLabel1.Name = "kryptonLabel1";
-            this.kryptonLabel1.Size = new System.Drawing.Size(46, 20);
-            this.kryptonLabel1.TabIndex = 211;
-            this.kryptonLabel1.Values.Text = "Buscar";
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
+            this.label12.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
+            this.label12.Location = new System.Drawing.Point(933, 608);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(61, 13);
+            this.label12.TabIndex = 261;
+            this.label12.Text = "Tot Cobrar";
             // 
             // txtAcfonRes
             // 
@@ -1855,161 +2012,43 @@
             this.label9.TabIndex = 251;
             this.label9.Text = "Tot Ingresos";
             // 
-            // chkFondos
+            // kryptonLabel1
             // 
-            this.chkFondos.AutoSize = true;
-            this.chkFondos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
-            this.chkFondos.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkFondos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
-            this.chkFondos.Location = new System.Drawing.Point(961, 14);
-            this.chkFondos.Name = "chkFondos";
-            this.chkFondos.Size = new System.Drawing.Size(148, 17);
-            this.chkFondos.TabIndex = 234;
-            this.chkFondos.Text = "Marcar Personal conF.R.";
-            this.chkFondos.UseVisualStyleBackColor = false;
-            this.chkFondos.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            this.kryptonLabel1.Location = new System.Drawing.Point(9, 8);
+            this.kryptonLabel1.Name = "kryptonLabel1";
+            this.kryptonLabel1.Size = new System.Drawing.Size(46, 20);
+            this.kryptonLabel1.TabIndex = 211;
+            this.kryptonLabel1.Values.Text = "Buscar";
             // 
-            // txtTotCobrar
+            // kryptonPage2
             // 
-            this.txtTotCobrar.BackColor = System.Drawing.Color.White;
-            this.txtTotCobrar.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtTotCobrar.Enabled = false;
-            this.txtTotCobrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTotCobrar.Location = new System.Drawing.Point(1004, 607);
-            this.txtTotCobrar.Name = "txtTotCobrar";
-            this.txtTotCobrar.Size = new System.Drawing.Size(101, 20);
-            this.txtTotCobrar.TabIndex = 262;
-            this.txtTotCobrar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
-            this.label12.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
-            this.label12.Location = new System.Drawing.Point(933, 608);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(61, 13);
-            this.label12.TabIndex = 261;
-            this.label12.Text = "Tot Cobrar";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
-            this.label5.Location = new System.Drawing.Point(851, 610);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(76, 13);
-            this.label5.TabIndex = 244;
-            this.label5.Text = "PAGO TOTAL:";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
-            this.label6.Location = new System.Drawing.Point(709, 610);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(69, 13);
-            this.label6.TabIndex = 242;
-            this.label6.Text = "RETENIDOS:";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
-            this.label7.Location = new System.Drawing.Point(554, 610);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(79, 13);
-            this.label7.TabIndex = 240;
-            this.label7.Text = "PER. CHEQUE:";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
-            this.label8.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
-            this.label8.Location = new System.Drawing.Point(411, 610);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(77, 13);
-            this.label8.TabIndex = 238;
-            this.label8.Text = "GENERAL BP:";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
-            this.label10.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
-            this.label10.Location = new System.Drawing.Point(266, 610);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(60, 13);
-            this.label10.TabIndex = 236;
-            this.label10.Text = "PER. B.M.:";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
-            this.label14.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
-            this.label14.Location = new System.Drawing.Point(118, 610);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(81, 13);
-            this.label14.TabIndex = 234;
-            this.label14.Text = "GENERAL BM:";
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
-            this.label21.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
-            this.label21.Location = new System.Drawing.Point(3, 610);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(40, 13);
-            this.label21.TabIndex = 232;
-            this.label21.Text = "CANT:";
-            // 
-            // textBox9
-            // 
-            this.textBox9.BackColor = System.Drawing.Color.White;
-            this.textBox9.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.textBox9.Enabled = false;
-            this.textBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox9.Location = new System.Drawing.Point(975, 613);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(115, 20);
-            this.textBox9.TabIndex = 244;
-            this.textBox9.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
-            this.label1.Location = new System.Drawing.Point(897, 616);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(79, 13);
-            this.label1.TabIndex = 243;
-            this.label1.Text = "TOTAL H. EXT:";
-            // 
-            // lblEmpresa
-            // 
-            this.lblEmpresa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
-            this.lblEmpresa.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmpresa.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.lblEmpresa.Location = new System.Drawing.Point(11, 12);
-            this.lblEmpresa.Name = "lblEmpresa";
-            this.lblEmpresa.Size = new System.Drawing.Size(221, 20);
-            this.lblEmpresa.TabIndex = 239;
+            this.kryptonPage2.AutoHiddenSlideSize = new System.Drawing.Size(200, 200);
+            this.kryptonPage2.Controls.Add(this.TextBox8);
+            this.kryptonPage2.Controls.Add(this.TextBox7);
+            this.kryptonPage2.Controls.Add(this.TextBox6);
+            this.kryptonPage2.Controls.Add(this.TextBox5);
+            this.kryptonPage2.Controls.Add(this.TextBox4);
+            this.kryptonPage2.Controls.Add(this.TextBox3);
+            this.kryptonPage2.Controls.Add(this.TextBox2);
+            this.kryptonPage2.Controls.Add(this.label5);
+            this.kryptonPage2.Controls.Add(this.label6);
+            this.kryptonPage2.Controls.Add(this.label7);
+            this.kryptonPage2.Controls.Add(this.label8);
+            this.kryptonPage2.Controls.Add(this.label10);
+            this.kryptonPage2.Controls.Add(this.label14);
+            this.kryptonPage2.Controls.Add(this.label21);
+            this.kryptonPage2.Controls.Add(this.dgvInformePago);
+            this.kryptonPage2.Flags = 65534;
+            this.kryptonPage2.LastVisibleSet = true;
+            this.kryptonPage2.MinimumSize = new System.Drawing.Size(50, 50);
+            this.kryptonPage2.Name = "kryptonPage2";
+            this.kryptonPage2.Size = new System.Drawing.Size(1119, 640);
+            this.kryptonPage2.StateNormal.Page.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
+            this.kryptonPage2.StateNormal.Page.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.kryptonPage2.Text = "Informe de Pago";
+            this.kryptonPage2.ToolTipStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.ToolTip;
+            this.kryptonPage2.ToolTipTitle = "Page ToolTip";
+            this.kryptonPage2.UniqueName = "16FD358289D3475A518044205B4FE386";
             // 
             // TextBox8
             // 
@@ -2095,6 +2134,116 @@
             this.TextBox2.TabIndex = 247;
             this.TextBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
+            this.label5.Location = new System.Drawing.Point(851, 610);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(76, 13);
+            this.label5.TabIndex = 244;
+            this.label5.Text = "PAGO TOTAL:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
+            this.label6.Location = new System.Drawing.Point(709, 610);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(69, 13);
+            this.label6.TabIndex = 242;
+            this.label6.Text = "RETENIDOS:";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
+            this.label7.Location = new System.Drawing.Point(554, 610);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(79, 13);
+            this.label7.TabIndex = 240;
+            this.label7.Text = "PER. CHEQUE:";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
+            this.label8.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
+            this.label8.Location = new System.Drawing.Point(411, 610);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(77, 13);
+            this.label8.TabIndex = 238;
+            this.label8.Text = "GENERAL BP:";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
+            this.label10.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
+            this.label10.Location = new System.Drawing.Point(266, 610);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(60, 13);
+            this.label10.TabIndex = 236;
+            this.label10.Text = "PER. B.M.:";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
+            this.label14.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
+            this.label14.Location = new System.Drawing.Point(118, 610);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(81, 13);
+            this.label14.TabIndex = 234;
+            this.label14.Text = "GENERAL BM:";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
+            this.label21.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
+            this.label21.Location = new System.Drawing.Point(3, 610);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(40, 13);
+            this.label21.TabIndex = 232;
+            this.label21.Text = "CANT:";
+            // 
+            // kryptonPage3
+            // 
+            this.kryptonPage3.AutoHiddenSlideSize = new System.Drawing.Size(200, 200);
+            this.kryptonPage3.Controls.Add(this.textBox10);
+            this.kryptonPage3.Controls.Add(this.label2);
+            this.kryptonPage3.Controls.Add(this.lblEmpresa);
+            this.kryptonPage3.Controls.Add(this.textBox9);
+            this.kryptonPage3.Controls.Add(this.label1);
+            this.kryptonPage3.Controls.Add(this.label3);
+            this.kryptonPage3.Controls.Add(this.chkFondos);
+            this.kryptonPage3.Controls.Add(this.dgvHorasExtra);
+            this.kryptonPage3.Controls.Add(this.lblRuc);
+            this.kryptonPage3.Controls.Add(this.label4);
+            this.kryptonPage3.Controls.Add(this.dtpMesExtra);
+            this.kryptonPage3.Flags = 65534;
+            this.kryptonPage3.LastVisibleSet = true;
+            this.kryptonPage3.MinimumSize = new System.Drawing.Size(50, 50);
+            this.kryptonPage3.Name = "kryptonPage3";
+            this.kryptonPage3.Size = new System.Drawing.Size(1119, 640);
+            this.kryptonPage3.StateNormal.Page.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
+            this.kryptonPage3.StateNormal.Page.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.kryptonPage3.Text = "Horas Extra";
+            this.kryptonPage3.ToolTipStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.ToolTip;
+            this.kryptonPage3.ToolTipTitle = "Page ToolTip";
+            this.kryptonPage3.UniqueName = "62C884C7ECB14B8355AFDDFD0FB554B8";
+            // 
             // textBox10
             // 
             this.textBox10.BackColor = System.Drawing.Color.White;
@@ -2119,179 +2268,53 @@
             this.label2.TabIndex = 245;
             this.label2.Text = "CANT. SELECCIONADOS:";
             // 
-            // DataGridViewTextBoxColumn166
+            // lblEmpresa
             // 
-            this.DataGridViewTextBoxColumn166.Frozen = true;
-            this.DataGridViewTextBoxColumn166.HeaderText = "GRP";
-            this.DataGridViewTextBoxColumn166.Name = "DataGridViewTextBoxColumn166";
-            this.DataGridViewTextBoxColumn166.ReadOnly = true;
-            this.DataGridViewTextBoxColumn166.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.DataGridViewTextBoxColumn166.Visible = false;
-            this.DataGridViewTextBoxColumn166.Width = 50;
+            this.lblEmpresa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
+            this.lblEmpresa.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmpresa.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.lblEmpresa.Location = new System.Drawing.Point(11, 12);
+            this.lblEmpresa.Name = "lblEmpresa";
+            this.lblEmpresa.Size = new System.Drawing.Size(221, 20);
+            this.lblEmpresa.TabIndex = 239;
             // 
-            // DataGridViewTextBoxColumn167
+            // textBox9
             // 
-            this.DataGridViewTextBoxColumn167.Frozen = true;
-            this.DataGridViewTextBoxColumn167.HeaderText = "IDP";
-            this.DataGridViewTextBoxColumn167.Name = "DataGridViewTextBoxColumn167";
-            this.DataGridViewTextBoxColumn167.ReadOnly = true;
-            this.DataGridViewTextBoxColumn167.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.DataGridViewTextBoxColumn167.Visible = false;
-            this.DataGridViewTextBoxColumn167.Width = 40;
+            this.textBox9.BackColor = System.Drawing.Color.White;
+            this.textBox9.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.textBox9.Enabled = false;
+            this.textBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox9.Location = new System.Drawing.Point(975, 613);
+            this.textBox9.Name = "textBox9";
+            this.textBox9.Size = new System.Drawing.Size(115, 20);
+            this.textBox9.TabIndex = 244;
+            this.textBox9.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // DataGridViewTextBoxColumn168
+            // label1
             // 
-            dataGridViewCellStyle66.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle66.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle66.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DataGridViewTextBoxColumn168.DefaultCellStyle = dataGridViewCellStyle66;
-            this.DataGridViewTextBoxColumn168.Frozen = true;
-            this.DataGridViewTextBoxColumn168.HeaderText = "N°";
-            this.DataGridViewTextBoxColumn168.Name = "DataGridViewTextBoxColumn168";
-            this.DataGridViewTextBoxColumn168.ReadOnly = true;
-            this.DataGridViewTextBoxColumn168.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.DataGridViewTextBoxColumn168.Width = 35;
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
+            this.label1.Location = new System.Drawing.Point(897, 616);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(79, 13);
+            this.label1.TabIndex = 243;
+            this.label1.Text = "TOTAL H. EXT:";
             // 
-            // DataGridViewTextBoxColumn169
+            // chkFondos
             // 
-            this.DataGridViewTextBoxColumn169.Frozen = true;
-            this.DataGridViewTextBoxColumn169.HeaderText = "CLIENTE";
-            this.DataGridViewTextBoxColumn169.Name = "DataGridViewTextBoxColumn169";
-            this.DataGridViewTextBoxColumn169.ReadOnly = true;
-            this.DataGridViewTextBoxColumn169.Width = 180;
-            // 
-            // DataGridViewTextBoxColumn170
-            // 
-            this.DataGridViewTextBoxColumn170.Frozen = true;
-            this.DataGridViewTextBoxColumn170.HeaderText = "UBICACIÓN";
-            this.DataGridViewTextBoxColumn170.Name = "DataGridViewTextBoxColumn170";
-            this.DataGridViewTextBoxColumn170.ReadOnly = true;
-            this.DataGridViewTextBoxColumn170.Width = 200;
-            // 
-            // DataGridViewTextBoxColumn171
-            // 
-            this.DataGridViewTextBoxColumn171.Frozen = true;
-            this.DataGridViewTextBoxColumn171.HeaderText = "NÓMINA";
-            this.DataGridViewTextBoxColumn171.Name = "DataGridViewTextBoxColumn171";
-            this.DataGridViewTextBoxColumn171.ReadOnly = true;
-            this.DataGridViewTextBoxColumn171.Width = 200;
-            // 
-            // DataGridViewTextBoxColumn172
-            // 
-            dataGridViewCellStyle67.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.DataGridViewTextBoxColumn172.DefaultCellStyle = dataGridViewCellStyle67;
-            this.DataGridViewTextBoxColumn172.Frozen = true;
-            this.DataGridViewTextBoxColumn172.HeaderText = "C.I.";
-            this.DataGridViewTextBoxColumn172.Name = "DataGridViewTextBoxColumn172";
-            this.DataGridViewTextBoxColumn172.ReadOnly = true;
-            this.DataGridViewTextBoxColumn172.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.DataGridViewTextBoxColumn172.Width = 80;
-            // 
-            // Column14
-            // 
-            dataGridViewCellStyle68.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Column14.DefaultCellStyle = dataGridViewCellStyle68;
-            this.Column14.Frozen = true;
-            this.Column14.HeaderText = "F. NACIM.";
-            this.Column14.Name = "Column14";
-            this.Column14.ReadOnly = true;
-            this.Column14.Width = 90;
-            // 
-            // DataGridViewTextBoxColumn173
-            // 
-            dataGridViewCellStyle69.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.DataGridViewTextBoxColumn173.DefaultCellStyle = dataGridViewCellStyle69;
-            this.DataGridViewTextBoxColumn173.Frozen = true;
-            this.DataGridViewTextBoxColumn173.HeaderText = "INGRESO";
-            this.DataGridViewTextBoxColumn173.Name = "DataGridViewTextBoxColumn173";
-            this.DataGridViewTextBoxColumn173.ReadOnly = true;
-            this.DataGridViewTextBoxColumn173.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.DataGridViewTextBoxColumn173.Width = 75;
-            // 
-            // DataGridViewTextBoxColumn174
-            // 
-            dataGridViewCellStyle70.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.DataGridViewTextBoxColumn174.DefaultCellStyle = dataGridViewCellStyle70;
-            this.DataGridViewTextBoxColumn174.Frozen = true;
-            this.DataGridViewTextBoxColumn174.HeaderText = "CARGO";
-            this.DataGridViewTextBoxColumn174.Name = "DataGridViewTextBoxColumn174";
-            this.DataGridViewTextBoxColumn174.ReadOnly = true;
-            this.DataGridViewTextBoxColumn174.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.DataGridViewTextBoxColumn174.Width = 150;
-            // 
-            // DataGridViewTextBoxColumn175
-            // 
-            dataGridViewCellStyle71.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.DataGridViewTextBoxColumn175.DefaultCellStyle = dataGridViewCellStyle71;
-            this.DataGridViewTextBoxColumn175.Frozen = true;
-            this.DataGridViewTextBoxColumn175.HeaderText = "ÁREA";
-            this.DataGridViewTextBoxColumn175.Name = "DataGridViewTextBoxColumn175";
-            this.DataGridViewTextBoxColumn175.ReadOnly = true;
-            this.DataGridViewTextBoxColumn175.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.DataGridViewTextBoxColumn175.Visible = false;
-            // 
-            // DataGridViewTextBoxColumn176
-            // 
-            dataGridViewCellStyle72.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle72.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DataGridViewTextBoxColumn176.DefaultCellStyle = dataGridViewCellStyle72;
-            this.DataGridViewTextBoxColumn176.Frozen = true;
-            this.DataGridViewTextBoxColumn176.HeaderText = "NETO A RECIBIR";
-            this.DataGridViewTextBoxColumn176.Name = "DataGridViewTextBoxColumn176";
-            this.DataGridViewTextBoxColumn176.ReadOnly = true;
-            this.DataGridViewTextBoxColumn176.Width = 90;
-            // 
-            // DataGridViewTextBoxColumn177
-            // 
-            this.DataGridViewTextBoxColumn177.Frozen = true;
-            this.DataGridViewTextBoxColumn177.HeaderText = "IDB";
-            this.DataGridViewTextBoxColumn177.Name = "DataGridViewTextBoxColumn177";
-            this.DataGridViewTextBoxColumn177.ReadOnly = true;
-            this.DataGridViewTextBoxColumn177.Visible = false;
-            this.DataGridViewTextBoxColumn177.Width = 50;
-            // 
-            // DataGridViewTextBoxColumn178
-            // 
-            this.DataGridViewTextBoxColumn178.Frozen = true;
-            this.DataGridViewTextBoxColumn178.HeaderText = "BANCO";
-            this.DataGridViewTextBoxColumn178.Name = "DataGridViewTextBoxColumn178";
-            this.DataGridViewTextBoxColumn178.ReadOnly = true;
-            this.DataGridViewTextBoxColumn178.Width = 150;
-            // 
-            // DataGridViewTextBoxColumn179
-            // 
-            this.DataGridViewTextBoxColumn179.Frozen = true;
-            this.DataGridViewTextBoxColumn179.HeaderText = "CUENTA";
-            this.DataGridViewTextBoxColumn179.Name = "DataGridViewTextBoxColumn179";
-            this.DataGridViewTextBoxColumn179.ReadOnly = true;
-            this.DataGridViewTextBoxColumn179.Width = 90;
-            // 
-            // DataGridViewTextBoxColumn180
-            // 
-            this.DataGridViewTextBoxColumn180.Frozen = true;
-            this.DataGridViewTextBoxColumn180.HeaderText = "TIPO";
-            this.DataGridViewTextBoxColumn180.Name = "DataGridViewTextBoxColumn180";
-            this.DataGridViewTextBoxColumn180.ReadOnly = true;
-            this.DataGridViewTextBoxColumn180.Width = 50;
-            // 
-            // Column23
-            // 
-            this.Column23.Frozen = true;
-            this.Column23.HeaderText = "EST";
-            this.Column23.Name = "Column23";
-            this.Column23.ReadOnly = true;
-            this.Column23.Visible = false;
-            this.Column23.Width = 50;
-            // 
-            // Column15
-            // 
-            dataGridViewCellStyle73.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Column15.DefaultCellStyle = dataGridViewCellStyle73;
-            this.Column15.Frozen = true;
-            this.Column15.HeaderText = "CODB";
-            this.Column15.Name = "Column15";
-            this.Column15.ReadOnly = true;
-            this.Column15.Width = 50;
+            this.chkFondos.AutoSize = true;
+            this.chkFondos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
+            this.chkFondos.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkFondos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
+            this.chkFondos.Location = new System.Drawing.Point(961, 14);
+            this.chkFondos.Name = "chkFondos";
+            this.chkFondos.Size = new System.Drawing.Size(148, 17);
+            this.chkFondos.TabIndex = 234;
+            this.chkFondos.Text = "Marcar Personal conF.R.";
+            this.chkFondos.UseVisualStyleBackColor = false;
+            this.chkFondos.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // FrmInformesPago
             // 

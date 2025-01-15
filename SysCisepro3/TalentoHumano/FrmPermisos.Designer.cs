@@ -30,43 +30,26 @@
         {
             this.components = new System.ComponentModel.Container();
             this.Label1 = new System.Windows.Forms.Label();
-            this.GroupBox2 = new System.Windows.Forms.GroupBox();
             this.btnBuscarTipo = new Krypton.Toolkit.KryptonButton();
             this.btnBuscarPuesto = new Krypton.Toolkit.KryptonButton();
             this.txtCertificado = new System.Windows.Forms.TextBox();
             this.txtNumDoc = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.txtSitio = new System.Windows.Forms.TextBox();
-            this.Label23 = new System.Windows.Forms.Label();
             this.dtpHasta = new System.Windows.Forms.DateTimePicker();
-            this.Label4 = new System.Windows.Forms.Label();
             this.dtpDesde = new System.Windows.Forms.DateTimePicker();
-            this.Label3 = new System.Windows.Forms.Label();
             this.cbmMotivo = new System.Windows.Forms.ComboBox();
             this.dtpFecha = new System.Windows.Forms.DateTimePicker();
-            this.Label31 = new System.Windows.Forms.Label();
             this.txtObservacion = new System.Windows.Forms.TextBox();
-            this.Label18 = new System.Windows.Forms.Label();
-            this.Label30 = new System.Windows.Forms.Label();
             this.dtpFechaHasta = new System.Windows.Forms.DateTimePicker();
             this.dtpFechaDesde = new System.Windows.Forms.DateTimePicker();
             this.txtFiltro = new System.Windows.Forms.TextBox();
-            this.Label7 = new System.Windows.Forms.Label();
-            this.Label11 = new System.Windows.Forms.Label();
-            this.GroupBox1 = new System.Windows.Forms.GroupBox();
             this.btnBuscarPersonal = new Krypton.Toolkit.KryptonButton();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.label6 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.txtArea = new System.Windows.Forms.TextBox();
-            this.Label27 = new System.Windows.Forms.Label();
             this.txtCargo = new System.Windows.Forms.TextBox();
-            this.Label25 = new System.Windows.Forms.Label();
             this.txtIdPersonal = new System.Windows.Forms.TextBox();
-            this.Label22 = new System.Windows.Forms.Label();
             this.txtPersonal = new System.Windows.Forms.TextBox();
-            this.Label26 = new System.Windows.Forms.Label();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.btnBuscar = new System.Windows.Forms.ToolStripButton();
             this.btnNuevo = new System.Windows.Forms.ToolStripButton();
@@ -91,64 +74,59 @@
             this.columnHeader26 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader27 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader28 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
             this.btnCertificado = new Krypton.Toolkit.KryptonButton();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.pdfViewer1 = new PdfiumViewer.PdfViewer();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.GroupBox2.SuspendLayout();
-            this.GroupBox1.SuspendLayout();
+            this.kryptonNavigator1 = new ComponentFactory.Krypton.Navigator.KryptonNavigator();
+            this.kryptonPage1 = new ComponentFactory.Krypton.Navigator.KryptonPage();
+            this.kryptonLabel14 = new Krypton.Toolkit.KryptonLabel();
+            this.kryptonGroupBox1 = new Krypton.Toolkit.KryptonGroupBox();
+            this.kryptonLabel13 = new Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel12 = new Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel11 = new Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel10 = new Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel9 = new Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel8 = new Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel7 = new Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel6 = new Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel5 = new Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel4 = new Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel3 = new Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel2 = new Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel1 = new Krypton.Toolkit.KryptonLabel();
+            this.kryptonPage2 = new ComponentFactory.Krypton.Navigator.KryptonPage();
             this.toolStrip1.SuspendLayout();
-            this.tabControl1.SuspendLayout();
-            this.tabPage1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonNavigator1)).BeginInit();
+            this.kryptonNavigator1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonPage1)).BeginInit();
+            this.kryptonPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox1.Panel)).BeginInit();
+            this.kryptonGroupBox1.Panel.SuspendLayout();
+            this.kryptonGroupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonPage2)).BeginInit();
+            this.kryptonPage2.SuspendLayout();
             this.SuspendLayout();
             // 
             // Label1
             // 
+            this.Label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
             this.Label1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Label1.Location = new System.Drawing.Point(0, 601);
+            this.Label1.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
+            this.Label1.Location = new System.Drawing.Point(7, 586);
             this.Label1.Name = "Label1";
-            this.Label1.Size = new System.Drawing.Size(768, 15);
+            this.Label1.Size = new System.Drawing.Size(694, 14);
             this.Label1.TabIndex = 205;
             this.Label1.Text = "O REGISTRO(S)";
             this.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // GroupBox2
-            // 
-            this.GroupBox2.BackColor = System.Drawing.Color.White;
-            this.GroupBox2.Controls.Add(this.btnBuscarTipo);
-            this.GroupBox2.Controls.Add(this.btnBuscarPuesto);
-            this.GroupBox2.Controls.Add(this.txtCertificado);
-            this.GroupBox2.Controls.Add(this.txtNumDoc);
-            this.GroupBox2.Controls.Add(this.label2);
-            this.GroupBox2.Controls.Add(this.txtSitio);
-            this.GroupBox2.Controls.Add(this.Label23);
-            this.GroupBox2.Controls.Add(this.dtpHasta);
-            this.GroupBox2.Controls.Add(this.Label4);
-            this.GroupBox2.Controls.Add(this.dtpDesde);
-            this.GroupBox2.Controls.Add(this.Label3);
-            this.GroupBox2.Controls.Add(this.cbmMotivo);
-            this.GroupBox2.Controls.Add(this.dtpFecha);
-            this.GroupBox2.Controls.Add(this.Label31);
-            this.GroupBox2.Controls.Add(this.txtObservacion);
-            this.GroupBox2.Controls.Add(this.Label18);
-            this.GroupBox2.Controls.Add(this.Label30);
-            this.GroupBox2.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GroupBox2.Location = new System.Drawing.Point(3, 77);
-            this.GroupBox2.Name = "GroupBox2";
-            this.GroupBox2.Size = new System.Drawing.Size(770, 102);
-            this.GroupBox2.TabIndex = 203;
-            this.GroupBox2.TabStop = false;
-            this.GroupBox2.Text = "DATOS DE LA SOLICITUD / PERMISO";
-            // 
             // btnBuscarTipo
             // 
             this.btnBuscarTipo.Enabled = false;
-            this.btnBuscarTipo.Location = new System.Drawing.Point(733, 39);
+            this.btnBuscarTipo.Location = new System.Drawing.Point(636, 101);
             this.btnBuscarTipo.Name = "btnBuscarTipo";
             this.btnBuscarTipo.Size = new System.Drawing.Size(30, 30);
             this.btnBuscarTipo.StateCommon.Back.Draw = Krypton.Toolkit.InheritBool.False;
@@ -173,7 +151,7 @@
             // btnBuscarPuesto
             // 
             this.btnBuscarPuesto.Enabled = false;
-            this.btnBuscarPuesto.Location = new System.Drawing.Point(676, 11);
+            this.btnBuscarPuesto.Location = new System.Drawing.Point(630, 65);
             this.btnBuscarPuesto.Name = "btnBuscarPuesto";
             this.btnBuscarPuesto.Size = new System.Drawing.Size(30, 30);
             this.btnBuscarPuesto.StateCommon.Back.Draw = Krypton.Toolkit.InheritBool.False;
@@ -199,99 +177,68 @@
             // 
             this.txtCertificado.BackColor = System.Drawing.Color.White;
             this.txtCertificado.Enabled = false;
-            this.txtCertificado.Location = new System.Drawing.Point(658, 76);
+            this.txtCertificado.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCertificado.Location = new System.Drawing.Point(574, 128);
             this.txtCertificado.Name = "txtCertificado";
             this.txtCertificado.Size = new System.Drawing.Size(61, 21);
             this.txtCertificado.TabIndex = 216;
+            this.txtCertificado.Visible = false;
             // 
             // txtNumDoc
             // 
             this.txtNumDoc.BackColor = System.Drawing.Color.White;
             this.txtNumDoc.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtNumDoc.Enabled = false;
-            this.txtNumDoc.Location = new System.Drawing.Point(588, 76);
+            this.txtNumDoc.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNumDoc.Location = new System.Drawing.Point(504, 128);
             this.txtNumDoc.Name = "txtNumDoc";
             this.txtNumDoc.Size = new System.Drawing.Size(52, 21);
             this.txtNumDoc.TabIndex = 215;
             this.txtNumDoc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNumDoc_KeyPress);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(539, 79);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(47, 13);
-            this.label2.TabIndex = 214;
-            this.label2.Text = "N° DOC:";
             // 
             // txtSitio
             // 
             this.txtSitio.BackColor = System.Drawing.Color.White;
             this.txtSitio.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtSitio.Enabled = false;
-            this.txtSitio.Location = new System.Drawing.Point(220, 17);
+            this.txtSitio.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSitio.Location = new System.Drawing.Point(212, 75);
             this.txtSitio.Name = "txtSitio";
-            this.txtSitio.Size = new System.Drawing.Size(445, 21);
+            this.txtSitio.Size = new System.Drawing.Size(405, 21);
             this.txtSitio.TabIndex = 211;
-            // 
-            // Label23
-            // 
-            this.Label23.AutoSize = true;
-            this.Label23.Location = new System.Drawing.Point(168, 20);
-            this.Label23.Name = "Label23";
-            this.Label23.Size = new System.Drawing.Size(52, 13);
-            this.Label23.TabIndex = 212;
-            this.Label23.Text = "PUESTO:";
             // 
             // dtpHasta
             // 
             this.dtpHasta.CustomFormat = " dddd, dd/MM/yyyy HH:mm ";
             this.dtpHasta.Enabled = false;
+            this.dtpHasta.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpHasta.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpHasta.Location = new System.Drawing.Point(274, 46);
+            this.dtpHasta.Location = new System.Drawing.Point(279, 102);
             this.dtpHasta.Name = "dtpHasta";
-            this.dtpHasta.Size = new System.Drawing.Size(207, 21);
+            this.dtpHasta.Size = new System.Drawing.Size(176, 21);
             this.dtpHasta.TabIndex = 209;
-            // 
-            // Label4
-            // 
-            this.Label4.AutoSize = true;
-            this.Label4.Location = new System.Drawing.Point(252, 49);
-            this.Label4.Name = "Label4";
-            this.Label4.Size = new System.Drawing.Size(23, 13);
-            this.Label4.TabIndex = 210;
-            this.Label4.Text = "AL:";
             // 
             // dtpDesde
             // 
             this.dtpDesde.CustomFormat = "dddd, dd/MM/yyyy HH:mm ";
             this.dtpDesde.Enabled = false;
+            this.dtpDesde.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpDesde.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpDesde.Location = new System.Drawing.Point(45, 46);
+            this.dtpDesde.Location = new System.Drawing.Point(58, 101);
             this.dtpDesde.Name = "dtpDesde";
-            this.dtpDesde.Size = new System.Drawing.Size(201, 21);
+            this.dtpDesde.Size = new System.Drawing.Size(174, 21);
             this.dtpDesde.TabIndex = 207;
-            // 
-            // Label3
-            // 
-            this.Label3.AutoSize = true;
-            this.Label3.Location = new System.Drawing.Point(1, 48);
-            this.Label3.Name = "Label3";
-            this.Label3.Size = new System.Drawing.Size(43, 13);
-            this.Label3.TabIndex = 208;
-            this.Label3.Text = "DESDE:";
             // 
             // cbmMotivo
             // 
             this.cbmMotivo.BackColor = System.Drawing.Color.White;
             this.cbmMotivo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbmMotivo.Enabled = false;
-            this.cbmMotivo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbmMotivo.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbmMotivo.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbmMotivo.FormattingEnabled = true;
-            this.cbmMotivo.Location = new System.Drawing.Point(527, 45);
+            this.cbmMotivo.Location = new System.Drawing.Point(509, 101);
             this.cbmMotivo.Name = "cbmMotivo";
-            this.cbmMotivo.Size = new System.Drawing.Size(192, 21);
+            this.cbmMotivo.Size = new System.Drawing.Size(123, 21);
             this.cbmMotivo.TabIndex = 206;
             this.cbmMotivo.SelectedValueChanged += new System.EventHandler(this.cbmMotivo_SelectedValueChanged);
             // 
@@ -299,55 +246,30 @@
             // 
             this.dtpFecha.CustomFormat = "MMMM yyyy";
             this.dtpFecha.Enabled = false;
+            this.dtpFecha.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFecha.Location = new System.Drawing.Point(45, 20);
+            this.dtpFecha.Location = new System.Drawing.Point(58, 75);
             this.dtpFecha.Name = "dtpFecha";
-            this.dtpFecha.Size = new System.Drawing.Size(90, 21);
+            this.dtpFecha.Size = new System.Drawing.Size(85, 21);
             this.dtpFecha.TabIndex = 204;
-            // 
-            // Label31
-            // 
-            this.Label31.AutoSize = true;
-            this.Label31.Location = new System.Drawing.Point(4, 23);
-            this.Label31.Name = "Label31";
-            this.Label31.Size = new System.Drawing.Size(44, 13);
-            this.Label31.TabIndex = 205;
-            this.Label31.Text = "FECHA:";
             // 
             // txtObservacion
             // 
             this.txtObservacion.BackColor = System.Drawing.Color.White;
             this.txtObservacion.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtObservacion.Enabled = false;
-            this.txtObservacion.Location = new System.Drawing.Point(60, 76);
+            this.txtObservacion.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtObservacion.Location = new System.Drawing.Point(58, 128);
             this.txtObservacion.Name = "txtObservacion";
-            this.txtObservacion.Size = new System.Drawing.Size(462, 21);
+            this.txtObservacion.Size = new System.Drawing.Size(387, 21);
             this.txtObservacion.TabIndex = 201;
-            // 
-            // Label18
-            // 
-            this.Label18.AutoSize = true;
-            this.Label18.Location = new System.Drawing.Point(4, 76);
-            this.Label18.Name = "Label18";
-            this.Label18.Size = new System.Drawing.Size(55, 13);
-            this.Label18.TabIndex = 200;
-            this.Label18.Text = "DETALLE:";
-            // 
-            // Label30
-            // 
-            this.Label30.AutoSize = true;
-            this.Label30.Location = new System.Drawing.Point(487, 49);
-            this.Label30.Name = "Label30";
-            this.Label30.Size = new System.Drawing.Size(35, 13);
-            this.Label30.TabIndex = 3;
-            this.Label30.Text = "TIPO:";
             // 
             // dtpFechaHasta
             // 
             this.dtpFechaHasta.CustomFormat = "dddd, dd-MMM-yyyy";
             this.dtpFechaHasta.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpFechaHasta.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaHasta.Location = new System.Drawing.Point(605, 184);
+            this.dtpFechaHasta.Location = new System.Drawing.Point(572, 191);
             this.dtpFechaHasta.Name = "dtpFechaHasta";
             this.dtpFechaHasta.Size = new System.Drawing.Size(93, 22);
             this.dtpFechaHasta.TabIndex = 200;
@@ -357,7 +279,7 @@
             this.dtpFechaDesde.CustomFormat = "dddd, dd-MMM-yyyy";
             this.dtpFechaDesde.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpFechaDesde.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaDesde.Location = new System.Drawing.Point(483, 185);
+            this.dtpFechaDesde.Location = new System.Drawing.Point(456, 191);
             this.dtpFechaDesde.Name = "dtpFechaDesde";
             this.dtpFechaDesde.Size = new System.Drawing.Size(93, 22);
             this.dtpFechaDesde.TabIndex = 199;
@@ -367,63 +289,16 @@
             this.txtFiltro.BackColor = System.Drawing.Color.White;
             this.txtFiltro.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtFiltro.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFiltro.Location = new System.Drawing.Point(53, 187);
+            this.txtFiltro.Location = new System.Drawing.Point(63, 191);
             this.txtFiltro.Name = "txtFiltro";
-            this.txtFiltro.Size = new System.Drawing.Size(182, 21);
+            this.txtFiltro.Size = new System.Drawing.Size(174, 21);
             this.txtFiltro.TabIndex = 191;
             this.txtFiltro.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtFiltro_KeyUp);
-            // 
-            // Label7
-            // 
-            this.Label7.AutoSize = true;
-            this.Label7.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Label7.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label7.Location = new System.Drawing.Point(6, 192);
-            this.Label7.Name = "Label7";
-            this.Label7.Size = new System.Drawing.Size(46, 13);
-            this.Label7.TabIndex = 190;
-            this.Label7.Text = "FILTRO:";
-            this.Label7.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // Label11
-            // 
-            this.Label11.AutoSize = true;
-            this.Label11.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label11.Location = new System.Drawing.Point(583, 190);
-            this.Label11.Name = "Label11";
-            this.Label11.Size = new System.Drawing.Size(17, 13);
-            this.Label11.TabIndex = 202;
-            this.Label11.Text = "A:";
-            // 
-            // GroupBox1
-            // 
-            this.GroupBox1.BackColor = System.Drawing.Color.White;
-            this.GroupBox1.Controls.Add(this.btnBuscarPersonal);
-            this.GroupBox1.Controls.Add(this.dateTimePicker1);
-            this.GroupBox1.Controls.Add(this.label6);
-            this.GroupBox1.Controls.Add(this.textBox1);
-            this.GroupBox1.Controls.Add(this.label5);
-            this.GroupBox1.Controls.Add(this.txtArea);
-            this.GroupBox1.Controls.Add(this.Label27);
-            this.GroupBox1.Controls.Add(this.txtCargo);
-            this.GroupBox1.Controls.Add(this.Label25);
-            this.GroupBox1.Controls.Add(this.txtIdPersonal);
-            this.GroupBox1.Controls.Add(this.Label22);
-            this.GroupBox1.Controls.Add(this.txtPersonal);
-            this.GroupBox1.Controls.Add(this.Label26);
-            this.GroupBox1.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GroupBox1.Location = new System.Drawing.Point(6, 6);
-            this.GroupBox1.Name = "GroupBox1";
-            this.GroupBox1.Size = new System.Drawing.Size(767, 65);
-            this.GroupBox1.TabIndex = 184;
-            this.GroupBox1.TabStop = false;
-            this.GroupBox1.Text = "DATOS DE PERSONAL";
-            this.GroupBox1.Enter += new System.EventHandler(this.GroupBox1_Enter);
             // 
             // btnBuscarPersonal
             // 
             this.btnBuscarPersonal.Enabled = false;
-            this.btnBuscarPersonal.Location = new System.Drawing.Point(670, 10);
+            this.btnBuscarPersonal.Location = new System.Drawing.Point(597, 1);
             this.btnBuscarPersonal.Name = "btnBuscarPersonal";
             this.btnBuscarPersonal.Size = new System.Drawing.Size(30, 30);
             this.btnBuscarPersonal.StateCommon.Back.Draw = Krypton.Toolkit.InheritBool.False;
@@ -449,115 +324,67 @@
             // 
             this.dateTimePicker1.CustomFormat = "dddd, dd/MM/yyyy";
             this.dateTimePicker1.Enabled = false;
+            this.dateTimePicker1.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(563, 37);
+            this.dateTimePicker1.Location = new System.Drawing.Point(504, 34);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(99, 21);
+            this.dateTimePicker1.Size = new System.Drawing.Size(85, 21);
             this.dateTimePicker1.TabIndex = 218;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(517, 41);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(43, 13);
-            this.label6.TabIndex = 219;
-            this.label6.Text = "F. NAC:";
             // 
             // textBox1
             // 
             this.textBox1.BackColor = System.Drawing.Color.White;
             this.textBox1.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(718, 39);
+            this.textBox1.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(641, 36);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(44, 21);
             this.textBox1.TabIndex = 217;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(671, 40);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(37, 13);
-            this.label5.TabIndex = 216;
-            this.label5.Text = "EDAD:";
             // 
             // txtArea
             // 
             this.txtArea.BackColor = System.Drawing.Color.White;
             this.txtArea.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtArea.Enabled = false;
-            this.txtArea.Location = new System.Drawing.Point(310, 37);
+            this.txtArea.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtArea.Location = new System.Drawing.Point(259, 34);
             this.txtArea.Name = "txtArea";
-            this.txtArea.Size = new System.Drawing.Size(198, 21);
+            this.txtArea.Size = new System.Drawing.Size(171, 21);
             this.txtArea.TabIndex = 197;
-            // 
-            // Label27
-            // 
-            this.Label27.AutoSize = true;
-            this.Label27.Location = new System.Drawing.Point(266, 42);
-            this.Label27.Name = "Label27";
-            this.Label27.Size = new System.Drawing.Size(37, 13);
-            this.Label27.TabIndex = 196;
-            this.Label27.Text = "ÁREA:";
             // 
             // txtCargo
             // 
             this.txtCargo.BackColor = System.Drawing.Color.White;
             this.txtCargo.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtCargo.Enabled = false;
-            this.txtCargo.Location = new System.Drawing.Point(50, 37);
+            this.txtCargo.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCargo.Location = new System.Drawing.Point(52, 34);
             this.txtCargo.Name = "txtCargo";
-            this.txtCargo.Size = new System.Drawing.Size(205, 21);
+            this.txtCargo.Size = new System.Drawing.Size(148, 21);
             this.txtCargo.TabIndex = 195;
-            // 
-            // Label25
-            // 
-            this.Label25.AutoSize = true;
-            this.Label25.Location = new System.Drawing.Point(4, 42);
-            this.Label25.Name = "Label25";
-            this.Label25.Size = new System.Drawing.Size(47, 13);
-            this.Label25.TabIndex = 194;
-            this.Label25.Text = "CARGO:";
             // 
             // txtIdPersonal
             // 
             this.txtIdPersonal.BackColor = System.Drawing.Color.White;
             this.txtIdPersonal.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtIdPersonal.Enabled = false;
-            this.txtIdPersonal.Location = new System.Drawing.Point(44, 13);
+            this.txtIdPersonal.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIdPersonal.Location = new System.Drawing.Point(34, 7);
             this.txtIdPersonal.Name = "txtIdPersonal";
             this.txtIdPersonal.Size = new System.Drawing.Size(47, 21);
             this.txtIdPersonal.TabIndex = 28;
-            // 
-            // Label22
-            // 
-            this.Label22.AutoSize = true;
-            this.Label22.Location = new System.Drawing.Point(7, 18);
-            this.Label22.Name = "Label22";
-            this.Label22.Size = new System.Drawing.Size(20, 13);
-            this.Label22.TabIndex = 8;
-            this.Label22.Text = "ID:";
             // 
             // txtPersonal
             // 
             this.txtPersonal.BackColor = System.Drawing.Color.White;
             this.txtPersonal.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtPersonal.Enabled = false;
-            this.txtPersonal.Location = new System.Drawing.Point(214, 11);
+            this.txtPersonal.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPersonal.Location = new System.Drawing.Point(154, 7);
             this.txtPersonal.Name = "txtPersonal";
-            this.txtPersonal.Size = new System.Drawing.Size(448, 21);
+            this.txtPersonal.Size = new System.Drawing.Size(410, 21);
             this.txtPersonal.TabIndex = 0;
-            // 
-            // Label26
-            // 
-            this.Label26.AutoSize = true;
-            this.Label26.Location = new System.Drawing.Point(147, 17);
-            this.Label26.Name = "Label26";
-            this.Label26.Size = new System.Drawing.Size(63, 13);
-            this.Label26.TabIndex = 3;
-            this.Label26.Text = "NOMBRES:";
             // 
             // toolStrip1
             // 
@@ -573,7 +400,7 @@
             this.toolStripButton1});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(786, 31);
+            this.toolStrip1.Size = new System.Drawing.Size(712, 31);
             this.toolStrip1.TabIndex = 214;
             this.toolStrip1.Text = "toolStrip1";
             this.toolStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.toolStrip1_ItemClicked);
@@ -655,18 +482,19 @@
             // 
             this.cbxFiltro.BackColor = System.Drawing.Color.White;
             this.cbxFiltro.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbxFiltro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbxFiltro.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxFiltro.DropDownWidth = 190;
+            this.cbxFiltro.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxFiltro.FormattingEnabled = true;
-            this.cbxFiltro.Location = new System.Drawing.Point(248, 186);
+            this.cbxFiltro.Location = new System.Drawing.Point(246, 191);
             this.cbxFiltro.Name = "cbxFiltro";
-            this.cbxFiltro.Size = new System.Drawing.Size(222, 21);
+            this.cbxFiltro.Size = new System.Drawing.Size(157, 21);
             this.cbxFiltro.TabIndex = 226;
             this.cbxFiltro.SelectedIndexChanged += new System.EventHandler(this.cbxFiltro_SelectedIndexChanged);
             // 
             // listView2
             // 
-            this.listView2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.listView2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
+            this.listView2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.listView2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader15,
             this.columnHeader16,
@@ -685,10 +513,10 @@
             this.listView2.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listView2.FullRowSelect = true;
             this.listView2.HideSelection = false;
-            this.listView2.Location = new System.Drawing.Point(3, 212);
+            this.listView2.Location = new System.Drawing.Point(8, 227);
             this.listView2.MultiSelect = false;
             this.listView2.Name = "listView2";
-            this.listView2.Size = new System.Drawing.Size(772, 384);
+            this.listView2.Size = new System.Drawing.Size(693, 351);
             this.listView2.TabIndex = 227;
             this.listView2.UseCompatibleStateImageBehavior = false;
             this.listView2.View = System.Windows.Forms.View.Details;
@@ -761,41 +589,9 @@
             // 
             this.columnHeader28.Text = "N° DOC";
             // 
-            // tabControl1
-            // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabControl1.Location = new System.Drawing.Point(2, 34);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(784, 648);
-            this.tabControl1.TabIndex = 228;
-            // 
-            // tabPage1
-            // 
-            this.tabPage1.BackColor = System.Drawing.Color.White;
-            this.tabPage1.Controls.Add(this.btnCertificado);
-            this.tabPage1.Controls.Add(this.listView2);
-            this.tabPage1.Controls.Add(this.cbxFiltro);
-            this.tabPage1.Controls.Add(this.dtpFechaHasta);
-            this.tabPage1.Controls.Add(this.Label1);
-            this.tabPage1.Controls.Add(this.Label11);
-            this.tabPage1.Controls.Add(this.dtpFechaDesde);
-            this.tabPage1.Controls.Add(this.Label7);
-            this.tabPage1.Controls.Add(this.txtFiltro);
-            this.tabPage1.Controls.Add(this.GroupBox2);
-            this.tabPage1.Controls.Add(this.GroupBox1);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(776, 622);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Registro";
-            // 
             // btnCertificado
             // 
-            this.btnCertificado.Location = new System.Drawing.Point(715, 179);
+            this.btnCertificado.Location = new System.Drawing.Point(671, 191);
             this.btnCertificado.Name = "btnCertificado";
             this.btnCertificado.Size = new System.Drawing.Size(30, 30);
             this.btnCertificado.StateCommon.Back.Draw = Krypton.Toolkit.InheritBool.False;
@@ -815,22 +611,12 @@
             this.btnCertificado.Values.Text = "";
             this.btnCertificado.Click += new System.EventHandler(this.btnCertificado_Click);
             // 
-            // tabPage2
-            // 
-            this.tabPage2.BackColor = System.Drawing.Color.White;
-            this.tabPage2.Controls.Add(this.pdfViewer1);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(776, 622);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Permiso IESS";
-            // 
             // pdfViewer1
             // 
             this.pdfViewer1.Location = new System.Drawing.Point(3, 3);
             this.pdfViewer1.Name = "pdfViewer1";
-            this.pdfViewer1.Size = new System.Drawing.Size(770, 613);
+            this.pdfViewer1.ShowToolbar = false;
+            this.pdfViewer1.Size = new System.Drawing.Size(705, 638);
             this.pdfViewer1.TabIndex = 1;
             // 
             // toolStripSeparator1
@@ -842,13 +628,218 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // kryptonNavigator1
+            // 
+            this.kryptonNavigator1.Button.ButtonDisplayLogic = ComponentFactory.Krypton.Navigator.ButtonDisplayLogic.None;
+            this.kryptonNavigator1.Button.CloseButtonDisplay = ComponentFactory.Krypton.Navigator.ButtonDisplay.Hide;
+            this.kryptonNavigator1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.kryptonNavigator1.Location = new System.Drawing.Point(0, 31);
+            this.kryptonNavigator1.Name = "kryptonNavigator1";
+            this.kryptonNavigator1.Pages.AddRange(new ComponentFactory.Krypton.Navigator.KryptonPage[] {
+            this.kryptonPage1,
+            this.kryptonPage2});
+            this.kryptonNavigator1.SelectedIndex = 0;
+            this.kryptonNavigator1.Size = new System.Drawing.Size(712, 635);
+            this.kryptonNavigator1.StateCommon.Page.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
+            this.kryptonNavigator1.TabIndex = 229;
+            this.kryptonNavigator1.Text = "kryptonNavigator1";
+            // 
+            // kryptonPage1
+            // 
+            this.kryptonPage1.AutoHiddenSlideSize = new System.Drawing.Size(200, 200);
+            this.kryptonPage1.Controls.Add(this.Label1);
+            this.kryptonPage1.Controls.Add(this.listView2);
+            this.kryptonPage1.Controls.Add(this.btnCertificado);
+            this.kryptonPage1.Controls.Add(this.kryptonLabel14);
+            this.kryptonPage1.Controls.Add(this.kryptonGroupBox1);
+            this.kryptonPage1.Controls.Add(this.dtpFechaHasta);
+            this.kryptonPage1.Controls.Add(this.cbxFiltro);
+            this.kryptonPage1.Controls.Add(this.txtFiltro);
+            this.kryptonPage1.Controls.Add(this.dtpFechaDesde);
+            this.kryptonPage1.Flags = 65534;
+            this.kryptonPage1.LastVisibleSet = true;
+            this.kryptonPage1.MinimumSize = new System.Drawing.Size(50, 50);
+            this.kryptonPage1.Name = "kryptonPage1";
+            this.kryptonPage1.Size = new System.Drawing.Size(710, 608);
+            this.kryptonPage1.Text = "Registro";
+            this.kryptonPage1.ToolTipTitle = "Page ToolTip";
+            this.kryptonPage1.UniqueName = "4964E65558C04CF3FC9EF9A419764D19";
+            // 
+            // kryptonLabel14
+            // 
+            this.kryptonLabel14.Location = new System.Drawing.Point(12, 191);
+            this.kryptonLabel14.Name = "kryptonLabel14";
+            this.kryptonLabel14.Size = new System.Drawing.Size(46, 20);
+            this.kryptonLabel14.TabIndex = 229;
+            this.kryptonLabel14.Values.Text = "Buscar";
+            // 
+            // kryptonGroupBox1
+            // 
+            this.kryptonGroupBox1.CaptionOverlap = 0D;
+            this.kryptonGroupBox1.GroupBackStyle = Krypton.Toolkit.PaletteBackStyle.ControlRibbon;
+            this.kryptonGroupBox1.Location = new System.Drawing.Point(3, 5);
+            this.kryptonGroupBox1.Name = "kryptonGroupBox1";
+            // 
+            // kryptonGroupBox1.Panel
+            // 
+            this.kryptonGroupBox1.Panel.Controls.Add(this.txtCertificado);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.kryptonLabel13);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.txtNumDoc);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.btnBuscarTipo);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.kryptonLabel12);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.kryptonLabel11);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.kryptonLabel10);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.kryptonLabel9);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.kryptonLabel8);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.btnBuscarPuesto);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.kryptonLabel7);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.dtpHasta);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.txtObservacion);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.cbmMotivo);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.btnBuscarPersonal);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.kryptonLabel6);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.kryptonLabel5);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.dtpDesde);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.txtSitio);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.textBox1);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.dateTimePicker1);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.kryptonLabel4);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.kryptonLabel3);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.kryptonLabel2);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.kryptonLabel1);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.txtIdPersonal);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.txtArea);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.dtpFecha);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.txtPersonal);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.txtCargo);
+            this.kryptonGroupBox1.Size = new System.Drawing.Size(705, 180);
+            this.kryptonGroupBox1.TabIndex = 0;
+            this.kryptonGroupBox1.Values.Heading = "Datos";
+            // 
+            // kryptonLabel13
+            // 
+            this.kryptonLabel13.Location = new System.Drawing.Point(451, 128);
+            this.kryptonLabel13.Name = "kryptonLabel13";
+            this.kryptonLabel13.Size = new System.Drawing.Size(52, 20);
+            this.kryptonLabel13.TabIndex = 228;
+            this.kryptonLabel13.Values.Text = "No Doc";
+            // 
+            // kryptonLabel12
+            // 
+            this.kryptonLabel12.Location = new System.Drawing.Point(7, 128);
+            this.kryptonLabel12.Name = "kryptonLabel12";
+            this.kryptonLabel12.Size = new System.Drawing.Size(49, 20);
+            this.kryptonLabel12.TabIndex = 227;
+            this.kryptonLabel12.Values.Text = "Detalle";
+            // 
+            // kryptonLabel11
+            // 
+            this.kryptonLabel11.Location = new System.Drawing.Point(457, 102);
+            this.kryptonLabel11.Name = "kryptonLabel11";
+            this.kryptonLabel11.Size = new System.Drawing.Size(34, 20);
+            this.kryptonLabel11.TabIndex = 226;
+            this.kryptonLabel11.Values.Text = "Tipo";
+            // 
+            // kryptonLabel10
+            // 
+            this.kryptonLabel10.Location = new System.Drawing.Point(235, 102);
+            this.kryptonLabel10.Name = "kryptonLabel10";
+            this.kryptonLabel10.Size = new System.Drawing.Size(41, 20);
+            this.kryptonLabel10.TabIndex = 225;
+            this.kryptonLabel10.Values.Text = "Hasta";
+            // 
+            // kryptonLabel9
+            // 
+            this.kryptonLabel9.Location = new System.Drawing.Point(7, 102);
+            this.kryptonLabel9.Name = "kryptonLabel9";
+            this.kryptonLabel9.Size = new System.Drawing.Size(45, 20);
+            this.kryptonLabel9.TabIndex = 224;
+            this.kryptonLabel9.Values.Text = "Desde";
+            // 
+            // kryptonLabel8
+            // 
+            this.kryptonLabel8.Location = new System.Drawing.Point(158, 76);
+            this.kryptonLabel8.Name = "kryptonLabel8";
+            this.kryptonLabel8.Size = new System.Drawing.Size(48, 20);
+            this.kryptonLabel8.TabIndex = 223;
+            this.kryptonLabel8.Values.Text = "Puesto";
+            // 
+            // kryptonLabel7
+            // 
+            this.kryptonLabel7.Location = new System.Drawing.Point(7, 76);
+            this.kryptonLabel7.Name = "kryptonLabel7";
+            this.kryptonLabel7.Size = new System.Drawing.Size(42, 20);
+            this.kryptonLabel7.TabIndex = 222;
+            this.kryptonLabel7.Values.Text = "Fecha";
+            // 
+            // kryptonLabel6
+            // 
+            this.kryptonLabel6.Location = new System.Drawing.Point(597, 34);
+            this.kryptonLabel6.Name = "kryptonLabel6";
+            this.kryptonLabel6.Size = new System.Drawing.Size(38, 20);
+            this.kryptonLabel6.TabIndex = 219;
+            this.kryptonLabel6.Values.Text = "Edad";
+            // 
+            // kryptonLabel5
+            // 
+            this.kryptonLabel5.Location = new System.Drawing.Point(451, 34);
+            this.kryptonLabel5.Name = "kryptonLabel5";
+            this.kryptonLabel5.Size = new System.Drawing.Size(41, 20);
+            this.kryptonLabel5.TabIndex = 198;
+            this.kryptonLabel5.Values.Text = "F Nac";
+            // 
+            // kryptonLabel4
+            // 
+            this.kryptonLabel4.Location = new System.Drawing.Point(217, 34);
+            this.kryptonLabel4.Name = "kryptonLabel4";
+            this.kryptonLabel4.Size = new System.Drawing.Size(36, 20);
+            this.kryptonLabel4.TabIndex = 196;
+            this.kryptonLabel4.Values.Text = "Area";
+            // 
+            // kryptonLabel3
+            // 
+            this.kryptonLabel3.Location = new System.Drawing.Point(3, 34);
+            this.kryptonLabel3.Name = "kryptonLabel3";
+            this.kryptonLabel3.Size = new System.Drawing.Size(43, 20);
+            this.kryptonLabel3.TabIndex = 30;
+            this.kryptonLabel3.Values.Text = "Cargo";
+            // 
+            // kryptonLabel2
+            // 
+            this.kryptonLabel2.Location = new System.Drawing.Point(87, 8);
+            this.kryptonLabel2.Name = "kryptonLabel2";
+            this.kryptonLabel2.Size = new System.Drawing.Size(61, 20);
+            this.kryptonLabel2.TabIndex = 29;
+            this.kryptonLabel2.Values.Text = "Nombres";
+            // 
+            // kryptonLabel1
+            // 
+            this.kryptonLabel1.Location = new System.Drawing.Point(7, 8);
+            this.kryptonLabel1.Name = "kryptonLabel1";
+            this.kryptonLabel1.Size = new System.Drawing.Size(21, 20);
+            this.kryptonLabel1.TabIndex = 0;
+            this.kryptonLabel1.Values.Text = "Id";
+            // 
+            // kryptonPage2
+            // 
+            this.kryptonPage2.AutoHiddenSlideSize = new System.Drawing.Size(200, 200);
+            this.kryptonPage2.Controls.Add(this.pdfViewer1);
+            this.kryptonPage2.Flags = 65534;
+            this.kryptonPage2.LastVisibleSet = true;
+            this.kryptonPage2.MinimumSize = new System.Drawing.Size(50, 50);
+            this.kryptonPage2.Name = "kryptonPage2";
+            this.kryptonPage2.Size = new System.Drawing.Size(710, 625);
+            this.kryptonPage2.Text = "Permiso IESS";
+            this.kryptonPage2.ToolTipTitle = "Page ToolTip";
+            this.kryptonPage2.UniqueName = "E4F1CA26ADD74058C68E1217CD79921D";
+            // 
             // FrmPermisos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(786, 683);
-            this.Controls.Add(this.tabControl1);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(206)))), ((int)(((byte)(230)))));
+            this.ClientSize = new System.Drawing.Size(712, 666);
+            this.Controls.Add(this.kryptonNavigator1);
             this.Controls.Add(this.toolStrip1);
             this.Name = "FrmPermisos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -859,16 +850,20 @@
             this.Text = "REGISTRAR PERMISOS PERSONAL";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmPermisos_FormClosed);
             this.Load += new System.EventHandler(this.FrmPermisos_Load);
-            this.GroupBox2.ResumeLayout(false);
-            this.GroupBox2.PerformLayout();
-            this.GroupBox1.ResumeLayout(false);
-            this.GroupBox1.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
-            this.tabControl1.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage1.PerformLayout();
-            this.tabPage2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonNavigator1)).EndInit();
+            this.kryptonNavigator1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonPage1)).EndInit();
+            this.kryptonPage1.ResumeLayout(false);
+            this.kryptonPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox1.Panel)).EndInit();
+            this.kryptonGroupBox1.Panel.ResumeLayout(false);
+            this.kryptonGroupBox1.Panel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox1)).EndInit();
+            this.kryptonGroupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonPage2)).EndInit();
+            this.kryptonPage2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -877,33 +872,19 @@
         #endregion
 
         internal System.Windows.Forms.Label Label1;
-        internal System.Windows.Forms.GroupBox GroupBox2;
         internal System.Windows.Forms.TextBox txtSitio;
-        internal System.Windows.Forms.Label Label23;
         internal System.Windows.Forms.DateTimePicker dtpHasta;
-        internal System.Windows.Forms.Label Label4;
         internal System.Windows.Forms.DateTimePicker dtpDesde;
-        internal System.Windows.Forms.Label Label3;
         internal System.Windows.Forms.ComboBox cbmMotivo;
         internal System.Windows.Forms.DateTimePicker dtpFecha;
-        internal System.Windows.Forms.Label Label31;
         internal System.Windows.Forms.TextBox txtObservacion;
-        internal System.Windows.Forms.Label Label18;
-        internal System.Windows.Forms.Label Label30;
         internal System.Windows.Forms.DateTimePicker dtpFechaHasta;
         internal System.Windows.Forms.DateTimePicker dtpFechaDesde;
         internal System.Windows.Forms.TextBox txtFiltro;
-        internal System.Windows.Forms.Label Label7;
-        internal System.Windows.Forms.Label Label11;
-        internal System.Windows.Forms.GroupBox GroupBox1;
         internal System.Windows.Forms.TextBox txtArea;
-        internal System.Windows.Forms.Label Label27;
         internal System.Windows.Forms.TextBox txtCargo;
-        internal System.Windows.Forms.Label Label25;
         internal System.Windows.Forms.TextBox txtIdPersonal;
-        internal System.Windows.Forms.Label Label22;
         internal System.Windows.Forms.TextBox txtPersonal;
-        internal System.Windows.Forms.Label Label26;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton btnBuscar;
         private System.Windows.Forms.ToolStripButton btnNuevo;
@@ -911,11 +892,8 @@
         private System.Windows.Forms.ToolStripButton btnAnular;
         private System.Windows.Forms.ToolStripButton btnCancelar;
         internal System.Windows.Forms.TextBox txtNumDoc;
-        internal System.Windows.Forms.Label label2;
         internal System.Windows.Forms.DateTimePicker dateTimePicker1;
-        internal System.Windows.Forms.Label label6;
         internal System.Windows.Forms.TextBox textBox1;
-        internal System.Windows.Forms.Label label5;
         internal System.Windows.Forms.ComboBox cbxFiltro;
         private System.Windows.Forms.ToolStripButton toolStripButton2;
         private System.Windows.Forms.ToolStripButton toolStripButton1;
@@ -934,9 +912,6 @@
         private System.Windows.Forms.ColumnHeader columnHeader26;
         private System.Windows.Forms.ColumnHeader columnHeader27;
         private System.Windows.Forms.ColumnHeader columnHeader28;
-        private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TextBox txtCertificado;
         private System.Windows.Forms.ToolTip toolTip1;
         private Krypton.Toolkit.KryptonButton btnBuscarPersonal;
@@ -947,5 +922,23 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private Krypton.Toolkit.KryptonButton btnCertificado;
         private PdfiumViewer.PdfViewer pdfViewer1;
+        private ComponentFactory.Krypton.Navigator.KryptonNavigator kryptonNavigator1;
+        private ComponentFactory.Krypton.Navigator.KryptonPage kryptonPage1;
+        private ComponentFactory.Krypton.Navigator.KryptonPage kryptonPage2;
+        private Krypton.Toolkit.KryptonGroupBox kryptonGroupBox1;
+        private Krypton.Toolkit.KryptonLabel kryptonLabel3;
+        private Krypton.Toolkit.KryptonLabel kryptonLabel2;
+        private Krypton.Toolkit.KryptonLabel kryptonLabel1;
+        private Krypton.Toolkit.KryptonLabel kryptonLabel8;
+        private Krypton.Toolkit.KryptonLabel kryptonLabel7;
+        private Krypton.Toolkit.KryptonLabel kryptonLabel6;
+        private Krypton.Toolkit.KryptonLabel kryptonLabel5;
+        private Krypton.Toolkit.KryptonLabel kryptonLabel4;
+        private Krypton.Toolkit.KryptonLabel kryptonLabel12;
+        private Krypton.Toolkit.KryptonLabel kryptonLabel11;
+        private Krypton.Toolkit.KryptonLabel kryptonLabel10;
+        private Krypton.Toolkit.KryptonLabel kryptonLabel9;
+        private Krypton.Toolkit.KryptonLabel kryptonLabel13;
+        private Krypton.Toolkit.KryptonLabel kryptonLabel14;
     }
 }
