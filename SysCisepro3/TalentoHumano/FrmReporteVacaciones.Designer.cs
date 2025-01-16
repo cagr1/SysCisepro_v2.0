@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.btnRecargar = new System.Windows.Forms.ToolStripButton();
             this.btnGuardar = new System.Windows.Forms.ToolStripButton();
@@ -39,9 +39,6 @@
             this.dtpFechaHasta = new System.Windows.Forms.DateTimePicker();
             this.dtpFechaDesde = new System.Windows.Forms.DateTimePicker();
             this.txtFiltro = new System.Windows.Forms.TextBox();
-            this.Label10 = new System.Windows.Forms.Label();
-            this.Label7 = new System.Windows.Forms.Label();
-            this.Label11 = new System.Windows.Forms.Label();
             this.Label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -64,15 +61,28 @@
             this.Column18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.chkDetalle = new System.Windows.Forms.CheckBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.chkPeriodo = new System.Windows.Forms.CheckBox();
             this.cbxPeriodo = new System.Windows.Forms.ComboBox();
+            this.kryptonGroupBox1 = new Krypton.Toolkit.KryptonGroupBox();
+            this.kryptonGroupBox2 = new Krypton.Toolkit.KryptonGroupBox();
+            this.kryptonGroupBox3 = new Krypton.Toolkit.KryptonGroupBox();
+            this.kryptonLabel1 = new Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel2 = new Krypton.Toolkit.KryptonLabel();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox1.Panel)).BeginInit();
+            this.kryptonGroupBox1.Panel.SuspendLayout();
+            this.kryptonGroupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox2.Panel)).BeginInit();
+            this.kryptonGroupBox2.Panel.SuspendLayout();
+            this.kryptonGroupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox3.Panel)).BeginInit();
+            this.kryptonGroupBox3.Panel.SuspendLayout();
+            this.kryptonGroupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -87,7 +97,7 @@
             this.toolStripButton1});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1074, 31);
+            this.toolStrip1.Size = new System.Drawing.Size(990, 31);
             this.toolStrip1.TabIndex = 216;
             this.toolStrip1.Text = "toolStrip1";
             this.toolStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.toolStrip1_ItemClicked);
@@ -149,9 +159,9 @@
             this.dtpFechaHasta.CustomFormat = "dddd, dd-MMM-yyyy";
             this.dtpFechaHasta.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpFechaHasta.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaHasta.Location = new System.Drawing.Point(432, 19);
+            this.dtpFechaHasta.Location = new System.Drawing.Point(421, 3);
             this.dtpFechaHasta.Name = "dtpFechaHasta";
-            this.dtpFechaHasta.Size = new System.Drawing.Size(93, 22);
+            this.dtpFechaHasta.Size = new System.Drawing.Size(88, 22);
             this.dtpFechaHasta.TabIndex = 220;
             this.dtpFechaHasta.ValueChanged += new System.EventHandler(this.dtpFechaDesde_ValueChanged);
             // 
@@ -161,9 +171,9 @@
             this.dtpFechaDesde.CustomFormat = "dddd, dd-MMM-yyyy";
             this.dtpFechaDesde.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpFechaDesde.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaDesde.Location = new System.Drawing.Point(309, 19);
+            this.dtpFechaDesde.Location = new System.Drawing.Point(278, 3);
             this.dtpFechaDesde.Name = "dtpFechaDesde";
-            this.dtpFechaDesde.Size = new System.Drawing.Size(93, 22);
+            this.dtpFechaDesde.Size = new System.Drawing.Size(85, 22);
             this.dtpFechaDesde.TabIndex = 219;
             this.dtpFechaDesde.ValueChanged += new System.EventHandler(this.dtpFechaDesde_ValueChanged);
             // 
@@ -172,49 +182,20 @@
             this.txtFiltro.BackColor = System.Drawing.Color.White;
             this.txtFiltro.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtFiltro.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFiltro.Location = new System.Drawing.Point(60, 43);
+            this.txtFiltro.Location = new System.Drawing.Point(3, 3);
             this.txtFiltro.Name = "txtFiltro";
             this.txtFiltro.Size = new System.Drawing.Size(244, 21);
             this.txtFiltro.TabIndex = 218;
             this.txtFiltro.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtFiltro_KeyUp);
             // 
-            // Label10
-            // 
-            this.Label10.AutoSize = true;
-            this.Label10.Location = new System.Drawing.Point(262, 22);
-            this.Label10.Name = "Label10";
-            this.Label10.Size = new System.Drawing.Size(43, 13);
-            this.Label10.TabIndex = 221;
-            this.Label10.Text = "DESDE:";
-            // 
-            // Label7
-            // 
-            this.Label7.AutoSize = true;
-            this.Label7.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Label7.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label7.Location = new System.Drawing.Point(6, 47);
-            this.Label7.Name = "Label7";
-            this.Label7.Size = new System.Drawing.Size(46, 13);
-            this.Label7.TabIndex = 217;
-            this.Label7.Text = "FILTRO:";
-            this.Label7.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // Label11
-            // 
-            this.Label11.AutoSize = true;
-            this.Label11.Location = new System.Drawing.Point(416, 22);
-            this.Label11.Name = "Label11";
-            this.Label11.Size = new System.Drawing.Size(17, 13);
-            this.Label11.TabIndex = 222;
-            this.Label11.Text = "A:";
-            // 
             // Label1
             // 
             this.Label1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Label1.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label1.Location = new System.Drawing.Point(0, 516);
+            this.Label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
+            this.Label1.Location = new System.Drawing.Point(0, 413);
             this.Label1.Name = "Label1";
-            this.Label1.Size = new System.Drawing.Size(1074, 15);
+            this.Label1.Size = new System.Drawing.Size(970, 15);
             this.Label1.TabIndex = 223;
             this.Label1.Text = "O REGISTRO(S)";
             this.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -224,8 +205,8 @@
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -248,12 +229,12 @@
             this.Column16,
             this.Column17,
             this.Column18});
-            this.dataGridView1.Location = new System.Drawing.Point(2, 83);
+            this.dataGridView1.Location = new System.Drawing.Point(2, 97);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(1070, 430);
+            this.dataGridView1.Size = new System.Drawing.Size(981, 311);
             this.dataGridView1.TabIndex = 224;
             // 
             // Column9
@@ -372,8 +353,8 @@
             // 
             // Column17
             // 
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.Column17.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.Column17.DefaultCellStyle = dataGridViewCellStyle6;
             this.Column17.HeaderText = "COBRO";
             this.Column17.Name = "Column17";
             this.Column17.ReadOnly = true;
@@ -390,69 +371,42 @@
             // 
             this.radioButton1.AutoSize = true;
             this.radioButton1.Checked = true;
-            this.radioButton1.Location = new System.Drawing.Point(6, 19);
+            this.radioButton1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
+            this.radioButton1.Location = new System.Drawing.Point(10, 7);
             this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(115, 17);
+            this.radioButton1.Size = new System.Drawing.Size(97, 17);
             this.radioButton1.TabIndex = 225;
             this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "FECHA REGISTRO";
+            this.radioButton1.Text = "Fecha Registro";
             this.radioButton1.UseVisualStyleBackColor = true;
             // 
             // radioButton2
             // 
             this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(142, 20);
+            this.radioButton2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
+            this.radioButton2.Location = new System.Drawing.Point(116, 8);
             this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(99, 17);
+            this.radioButton2.Size = new System.Drawing.Size(87, 17);
             this.radioButton2.TabIndex = 226;
-            this.radioButton2.Text = "FECHA SALIDA";
+            this.radioButton2.Text = "Fecha Salida";
             this.radioButton2.UseVisualStyleBackColor = true;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.dtpFechaHasta);
-            this.groupBox1.Controls.Add(this.Label11);
-            this.groupBox1.Controls.Add(this.chkDetalle);
-            this.groupBox1.Controls.Add(this.radioButton1);
-            this.groupBox1.Controls.Add(this.radioButton2);
-            this.groupBox1.Controls.Add(this.Label10);
-            this.groupBox1.Controls.Add(this.dtpFechaDesde);
-            this.groupBox1.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(310, 32);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(534, 50);
-            this.groupBox1.TabIndex = 227;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "DETALLE";
             // 
             // chkDetalle
             // 
             this.chkDetalle.AutoSize = true;
             this.chkDetalle.Checked = true;
             this.chkDetalle.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkDetalle.Location = new System.Drawing.Point(61, 0);
+            this.chkDetalle.Location = new System.Drawing.Point(337, 38);
             this.chkDetalle.Name = "chkDetalle";
             this.chkDetalle.Size = new System.Drawing.Size(15, 14);
             this.chkDetalle.TabIndex = 227;
             this.chkDetalle.UseVisualStyleBackColor = true;
             this.chkDetalle.CheckedChanged += new System.EventHandler(this.chkDetalle_CheckedChanged);
             // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.chkPeriodo);
-            this.groupBox2.Controls.Add(this.cbxPeriodo);
-            this.groupBox2.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(850, 33);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(222, 50);
-            this.groupBox2.TabIndex = 228;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "PERÍODO";
-            // 
             // chkPeriodo
             // 
             this.chkPeriodo.AutoSize = true;
-            this.chkPeriodo.Location = new System.Drawing.Point(68, 1);
+            this.chkPeriodo.Location = new System.Drawing.Point(873, 39);
             this.chkPeriodo.Name = "chkPeriodo";
             this.chkPeriodo.Size = new System.Drawing.Size(15, 14);
             this.chkPeriodo.TabIndex = 229;
@@ -464,26 +418,89 @@
             this.cbxPeriodo.BackColor = System.Drawing.Color.White;
             this.cbxPeriodo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxPeriodo.Enabled = false;
-            this.cbxPeriodo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbxPeriodo.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxPeriodo.FormattingEnabled = true;
-            this.cbxPeriodo.Location = new System.Drawing.Point(6, 19);
+            this.cbxPeriodo.Location = new System.Drawing.Point(6, 4);
             this.cbxPeriodo.Name = "cbxPeriodo";
-            this.cbxPeriodo.Size = new System.Drawing.Size(210, 21);
+            this.cbxPeriodo.Size = new System.Drawing.Size(154, 21);
             this.cbxPeriodo.TabIndex = 228;
+            // 
+            // kryptonGroupBox1
+            // 
+            this.kryptonGroupBox1.CaptionOverlap = 0D;
+            this.kryptonGroupBox1.GroupBackStyle = Krypton.Toolkit.PaletteBackStyle.ControlRibbon;
+            this.kryptonGroupBox1.Location = new System.Drawing.Point(12, 35);
+            this.kryptonGroupBox1.Name = "kryptonGroupBox1";
+            // 
+            // kryptonGroupBox1.Panel
+            // 
+            this.kryptonGroupBox1.Panel.Controls.Add(this.txtFiltro);
+            this.kryptonGroupBox1.Size = new System.Drawing.Size(260, 59);
+            this.kryptonGroupBox1.TabIndex = 229;
+            this.kryptonGroupBox1.Values.Heading = "Busqueda";
+            // 
+            // kryptonGroupBox2
+            // 
+            this.kryptonGroupBox2.CaptionOverlap = 0D;
+            this.kryptonGroupBox2.GroupBackStyle = Krypton.Toolkit.PaletteBackStyle.ControlRibbon;
+            this.kryptonGroupBox2.Location = new System.Drawing.Point(278, 34);
+            this.kryptonGroupBox2.Name = "kryptonGroupBox2";
+            // 
+            // kryptonGroupBox2.Panel
+            // 
+            this.kryptonGroupBox2.Panel.Controls.Add(this.kryptonLabel2);
+            this.kryptonGroupBox2.Panel.Controls.Add(this.kryptonLabel1);
+            this.kryptonGroupBox2.Panel.Controls.Add(this.dtpFechaHasta);
+            this.kryptonGroupBox2.Panel.Controls.Add(this.radioButton1);
+            this.kryptonGroupBox2.Panel.Controls.Add(this.dtpFechaDesde);
+            this.kryptonGroupBox2.Panel.Controls.Add(this.radioButton2);
+            this.kryptonGroupBox2.Size = new System.Drawing.Size(524, 60);
+            this.kryptonGroupBox2.TabIndex = 230;
+            this.kryptonGroupBox2.Values.Heading = "Detalle";
+            // 
+            // kryptonGroupBox3
+            // 
+            this.kryptonGroupBox3.CaptionOverlap = 0D;
+            this.kryptonGroupBox3.GroupBackStyle = Krypton.Toolkit.PaletteBackStyle.ControlRibbon;
+            this.kryptonGroupBox3.Location = new System.Drawing.Point(808, 34);
+            this.kryptonGroupBox3.Name = "kryptonGroupBox3";
+            // 
+            // kryptonGroupBox3.Panel
+            // 
+            this.kryptonGroupBox3.Panel.Controls.Add(this.cbxPeriodo);
+            this.kryptonGroupBox3.Size = new System.Drawing.Size(175, 60);
+            this.kryptonGroupBox3.TabIndex = 231;
+            this.kryptonGroupBox3.Values.Heading = "Periodo";
+            // 
+            // kryptonLabel1
+            // 
+            this.kryptonLabel1.Location = new System.Drawing.Point(227, 5);
+            this.kryptonLabel1.Name = "kryptonLabel1";
+            this.kryptonLabel1.Size = new System.Drawing.Size(45, 20);
+            this.kryptonLabel1.TabIndex = 227;
+            this.kryptonLabel1.Values.Text = "Desde";
+            // 
+            // kryptonLabel2
+            // 
+            this.kryptonLabel2.Location = new System.Drawing.Point(374, 4);
+            this.kryptonLabel2.Name = "kryptonLabel2";
+            this.kryptonLabel2.Size = new System.Drawing.Size(41, 20);
+            this.kryptonLabel2.TabIndex = 228;
+            this.kryptonLabel2.Values.Text = "Hasta";
             // 
             // FrmReporteVacaciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1074, 531);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox1);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
+            this.ClientSize = new System.Drawing.Size(990, 435);
+            this.Controls.Add(this.chkPeriodo);
+            this.Controls.Add(this.kryptonGroupBox3);
+            this.Controls.Add(this.chkDetalle);
+            this.Controls.Add(this.kryptonGroupBox2);
+            this.Controls.Add(this.kryptonGroupBox1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.Label1);
-            this.Controls.Add(this.txtFiltro);
-            this.Controls.Add(this.Label7);
             this.Controls.Add(this.toolStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "FrmReporteVacaciones";
@@ -493,10 +510,20 @@
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox1.Panel)).EndInit();
+            this.kryptonGroupBox1.Panel.ResumeLayout(false);
+            this.kryptonGroupBox1.Panel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox1)).EndInit();
+            this.kryptonGroupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox2.Panel)).EndInit();
+            this.kryptonGroupBox2.Panel.ResumeLayout(false);
+            this.kryptonGroupBox2.Panel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox2)).EndInit();
+            this.kryptonGroupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox3.Panel)).EndInit();
+            this.kryptonGroupBox3.Panel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox3)).EndInit();
+            this.kryptonGroupBox3.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -511,16 +538,11 @@
         internal System.Windows.Forms.DateTimePicker dtpFechaHasta;
         internal System.Windows.Forms.DateTimePicker dtpFechaDesde;
         internal System.Windows.Forms.TextBox txtFiltro;
-        internal System.Windows.Forms.Label Label10;
-        internal System.Windows.Forms.Label Label7;
-        internal System.Windows.Forms.Label Label11;
         internal System.Windows.Forms.Label Label1;
         public System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.ToolStripButton btnRecargar;
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.GroupBox groupBox2;
         internal System.Windows.Forms.ComboBox cbxPeriodo;
         private System.Windows.Forms.CheckBox chkDetalle;
         private System.Windows.Forms.CheckBox chkPeriodo;
@@ -543,5 +565,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column17;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column18;
         private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private Krypton.Toolkit.KryptonGroupBox kryptonGroupBox1;
+        private Krypton.Toolkit.KryptonGroupBox kryptonGroupBox2;
+        private Krypton.Toolkit.KryptonGroupBox kryptonGroupBox3;
+        private Krypton.Toolkit.KryptonLabel kryptonLabel2;
+        private Krypton.Toolkit.KryptonLabel kryptonLabel1;
     }
 }

@@ -84,7 +84,10 @@ namespace SysCisepro3.TalentoHumano
             toolStripLabel1.ForeColor = Color.White;
             dgvPersonal.DefaultCellStyle.SelectionBackColor = ValidationForms.GetColorSistema(TipoCon);
             dataGridView1.DefaultCellStyle.SelectionBackColor = ValidationForms.GetColorSistema(TipoCon);
-
+            dataGridView2.DefaultCellStyle.SelectionBackColor = ValidationForms.GetColorSistema(TipoCon);
+            dgvPersonal.DefaultCellStyle.SelectionForeColor = Color.White;
+            dataGridView1.DefaultCellStyle.SelectionForeColor = Color.White;
+            dataGridView2.DefaultCellStyle.SelectionForeColor = Color.White;
             switch (TipoCon)
             {
                 case TipoConexion.Seportpac:

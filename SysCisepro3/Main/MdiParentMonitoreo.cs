@@ -5,6 +5,7 @@ using System.Windows.Forms;
 using ClassLibraryCisepro3.Enums;
 using ClassLibraryCisepro3.TalentoHumano;
 using ClassLibraryCisepro3.UsuarioGeneral;
+using ClassLibraryCisepro3.ProcesosSql;
 using SysCisepro3.Properties;
 using SysCisepro3.TalentoHumano;
 using SysCisepro3.Operaciones;
@@ -33,6 +34,8 @@ namespace SysCisepro3.Main
         private readonly DataTable _datavacaciones;
 
         private readonly List<int> _anios;
+
+        public FrmNewLogin2 _frmNewLogin { private get; set; }
 
         public MdiParentMonitoreo()
         {
@@ -504,6 +507,42 @@ namespace SysCisepro3.Main
                 _formularios.Add(_tag, f);
                 f.FormClosing += FormOnFormClosing;
                 f.Show();
+            }
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void asdToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (KryptonMessageBox.Show(@"ESTÁ SEGURO QUE DESEA CAMBIAR DE USUARIO?", @"Mensaje del Sistema", KryptonMessageBoxButtons.YesNo, KryptonMessageBoxIcon.Question) != DialogResult.Yes) return;
+
+            DisposeAllButThis();
+
+            timer1.Stop();
+
+            ObjUsuario.SalirSistema(TipoCon);
+
+            Dispose();
+            //GC.SuppressFinalize(this);
+
+            if (_frmNewLogin == null) _frmNewLogin = new FrmNewLogin2();
+
+
+            _frmNewLogin.TipoCon = TipoCon;
+            _frmNewLogin.txtPassword.Clear();
+            _frmNewLogin.CargarSisitema();
+            _frmNewLogin.Show();
+        }
+
+        private void DisposeAllButThis()
+        {
+            foreach (var frm in MdiChildren)
+            {
+                frm.Dispose();
+                frm.Close();
             }
         }
     }

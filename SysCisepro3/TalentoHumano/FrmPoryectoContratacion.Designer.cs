@@ -297,7 +297,7 @@
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvPoryectos.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvPoryectos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvPoryectos.Size = new System.Drawing.Size(550, 258);
+            this.dgvPoryectos.Size = new System.Drawing.Size(546, 258);
             this.dgvPoryectos.TabIndex = 233;
             this.dgvPoryectos.SelectionChanged += new System.EventHandler(this.dgvPoryectos_SelectionChanged);
             // 
@@ -380,7 +380,7 @@
             // 
             this.kryptonGroupBox2.CaptionOverlap = 0D;
             this.kryptonGroupBox2.GroupBackStyle = Krypton.Toolkit.PaletteBackStyle.ControlRibbon;
-            this.kryptonGroupBox2.Location = new System.Drawing.Point(-1, 150);
+            this.kryptonGroupBox2.Location = new System.Drawing.Point(3, 150);
             this.kryptonGroupBox2.Name = "kryptonGroupBox2";
             // 
             // kryptonGroupBox2.Panel
@@ -388,7 +388,7 @@
             this.kryptonGroupBox2.Panel.Controls.Add(this.kryptonLabel7);
             this.kryptonGroupBox2.Panel.Controls.Add(this.txtFiltro);
             this.kryptonGroupBox2.Panel.Controls.Add(this.dgvPoryectos);
-            this.kryptonGroupBox2.Size = new System.Drawing.Size(565, 319);
+            this.kryptonGroupBox2.Size = new System.Drawing.Size(561, 319);
             this.kryptonGroupBox2.TabIndex = 235;
             this.kryptonGroupBox2.Values.Heading = "Proyectos";
             // 

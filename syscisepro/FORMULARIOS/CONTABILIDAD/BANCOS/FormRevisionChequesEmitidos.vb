@@ -163,8 +163,9 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
                 Next
                 dgvChequesEmitidosAprobados.Columns(0).ReadOnly = False
 
-            Catch
+            Catch ex As Exception
                 dgvChequesEmitidosAprobados.DataSource = Nothing
+                KryptonMessageBox.Show(ex.Message, "Mensaje de excepción", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
             SumarTotalEmitidosNoCobrados()
         End Sub
@@ -181,8 +182,9 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
                 dgvEmitidosCobrados.Columns(9).DefaultCellStyle.Format = "d"
                 dgvEmitidosCobrados.AutoResizeRows()
                 dgvEmitidosCobrados.ReadOnly = True
-            Catch
+            Catch ex As Exception
                 dgvEmitidosCobrados.DataSource = Nothing
+                KryptonMessageBox.Show(ex.Message, "Mensaje de excepción", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
             End Try
             SumarTotalEmitidosCobrados()
         End Sub
@@ -191,7 +193,7 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
             Try
                 If _fechaDesde = "" Then Return
 
-                dgvEmitidosCaducados.DataSource = _objetoChequesEmitidos.BuscarChequesEmitidosCaducadosXRangoFechaCobro(_tipoCon, _fechaDesde, _fechaHasta, cmbBancos.Text)
+                dgvEmitidosCaducados.DataSource = _objetoChequesEmitidos.BuscarChequesEmitidosCaducadosXRangoFechaCobro(_tipoCon, _fechaDesde, _fechaHasta, cmbBancos.Text.ToString())
                 dgvEmitidosCaducados.ReadOnly = False
                 dgvEmitidosCaducados.EditMode = DataGridViewEditMode.EditProgrammatically
                 dgvEmitidosCaducados.AutoResizeColumns()
@@ -199,8 +201,10 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
                 dgvEmitidosCaducados.Columns(9).DefaultCellStyle.Format = "d"
                 dgvEmitidosCaducados.AutoResizeRows()
                 dgvEmitidosCaducados.ReadOnly = True
-            Catch
+            Catch ex As Exception
                 dgvEmitidosCaducados.DataSource = Nothing
+                KryptonMessageBox.Show(ex.Message, "Mensaje de excepción", KryptonMessageBoxButtons.OK, KryptonMessageBoxIcon.Error)
+                Return
             End Try
             SumarTotalEmitidosCaducados()
         End Sub
@@ -211,7 +215,7 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
                 acuTotalNoCobrados += CDec(dgvChequesEmitidosAprobados.Rows(indice).Cells(7).Value)
             Next
             txtTotalEmitidosNoCobrados.Text = acuTotalNoCobrados
-            tpEmitidosNoCobrados.Text = "EMITIDOS NO COBRADOS GENERAL: $ " & acuTotalNoCobrados
+            tpEmitidosNoCobrados.Text = "Emitidos no cobrados general $ " & acuTotalNoCobrados
         End Sub
 
         Private Sub SumarTotalEmitidosCobrados()
@@ -220,7 +224,7 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
                 acuTotalCobrados += CDec(dgvEmitidosCobrados.Rows(indice).Cells(6).Value)
             Next
             txtTotalEmitidosCobrados.Text = acuTotalCobrados
-            tpEmitidosCobrados.Text = "EMITIDOS COBRADOS GENERAL: $ " & acuTotalCobrados
+            tpEmitidosCobrados.Text = "Emitidos cobrados general $ " & acuTotalCobrados
         End Sub
 
         Private Sub SumarTotalEmitidosCaducados()
@@ -228,7 +232,7 @@ Namespace FORMULARIOS.CONTABILIDAD.BANCOS
             For indice = 0 To dgvEmitidosCaducados.RowCount - 1
                 acuTotalCaducados += CDec(dgvEmitidosCaducados.Rows(indice).Cells(6).Value)
             Next
-            tpCaducados.Text = "EMITIDOS CADUCADOS: $ " & acuTotalCaducados
+            tpCaducados.Text = "Emitidos caducados $ " & acuTotalCaducados
         End Sub
 
         Private Sub ActualizarChequeEmitidoACobrado()

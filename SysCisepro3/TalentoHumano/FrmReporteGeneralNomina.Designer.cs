@@ -54,14 +54,10 @@
             this.btnCancelar = new System.Windows.Forms.ToolStripButton();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
-            this.GroupBox1 = new System.Windows.Forms.GroupBox();
             this.txtFiltro = new System.Windows.Forms.TextBox();
             this.dtpAnio = new System.Windows.Forms.DateTimePicker();
             this.dtpFechaHasta = new System.Windows.Forms.DateTimePicker();
-            this.Label6 = new System.Windows.Forms.Label();
             this.dtpFechaDesde = new System.Windows.Forms.DateTimePicker();
-            this.Label7 = new System.Windows.Forms.Label();
-            this.Label20 = new System.Windows.Forms.Label();
             this.dgvPersonal = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -83,9 +79,16 @@
             this.Column20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.kryptonGroupBox1 = new Krypton.Toolkit.KryptonGroupBox();
+            this.kryptonLabel1 = new Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel2 = new Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel3 = new Krypton.Toolkit.KryptonLabel();
             this.toolStrip1.SuspendLayout();
-            this.GroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPersonal)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox1.Panel)).BeginInit();
+            this.kryptonGroupBox1.Panel.SuspendLayout();
+            this.kryptonGroupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -99,7 +102,7 @@
             this.toolStripLabel2});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1052, 31);
+            this.toolStrip1.Size = new System.Drawing.Size(1005, 31);
             this.toolStrip1.TabIndex = 218;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -135,31 +138,13 @@
             this.toolStripLabel2.Name = "toolStripLabel2";
             this.toolStripLabel2.Size = new System.Drawing.Size(0, 28);
             // 
-            // GroupBox1
-            // 
-            this.GroupBox1.BackColor = System.Drawing.Color.White;
-            this.GroupBox1.Controls.Add(this.txtFiltro);
-            this.GroupBox1.Controls.Add(this.dtpAnio);
-            this.GroupBox1.Controls.Add(this.dtpFechaHasta);
-            this.GroupBox1.Controls.Add(this.Label6);
-            this.GroupBox1.Controls.Add(this.dtpFechaDesde);
-            this.GroupBox1.Controls.Add(this.Label7);
-            this.GroupBox1.Controls.Add(this.Label20);
-            this.GroupBox1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GroupBox1.Location = new System.Drawing.Point(0, 33);
-            this.GroupBox1.Name = "GroupBox1";
-            this.GroupBox1.Size = new System.Drawing.Size(1052, 43);
-            this.GroupBox1.TabIndex = 219;
-            this.GroupBox1.TabStop = false;
-            this.GroupBox1.Text = "DATOS DEL REPORTE";
-            // 
             // txtFiltro
             // 
             this.txtFiltro.BackColor = System.Drawing.Color.White;
             this.txtFiltro.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtFiltro.Location = new System.Drawing.Point(776, 14);
+            this.txtFiltro.Location = new System.Drawing.Point(700, 2);
             this.txtFiltro.Name = "txtFiltro";
-            this.txtFiltro.Size = new System.Drawing.Size(270, 22);
+            this.txtFiltro.Size = new System.Drawing.Size(270, 20);
             this.txtFiltro.TabIndex = 227;
             this.txtFiltro.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtFiltro_KeyUp);
             // 
@@ -167,10 +152,10 @@
             // 
             this.dtpAnio.CustomFormat = "yyyy";
             this.dtpAnio.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpAnio.Location = new System.Drawing.Point(69, 14);
+            this.dtpAnio.Location = new System.Drawing.Point(46, 4);
             this.dtpAnio.Name = "dtpAnio";
             this.dtpAnio.ShowUpDown = true;
-            this.dtpAnio.Size = new System.Drawing.Size(68, 22);
+            this.dtpAnio.Size = new System.Drawing.Size(68, 20);
             this.dtpAnio.TabIndex = 224;
             this.dtpAnio.ValueChanged += new System.EventHandler(this.dtpAnio_ValueChanged);
             // 
@@ -179,47 +164,20 @@
             this.dtpFechaHasta.CustomFormat = "MMMM yyyy";
             this.dtpFechaHasta.Enabled = false;
             this.dtpFechaHasta.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaHasta.Location = new System.Drawing.Point(396, 14);
+            this.dtpFechaHasta.Location = new System.Drawing.Point(389, 2);
             this.dtpFechaHasta.Name = "dtpFechaHasta";
-            this.dtpFechaHasta.Size = new System.Drawing.Size(97, 22);
+            this.dtpFechaHasta.Size = new System.Drawing.Size(97, 20);
             this.dtpFechaHasta.TabIndex = 222;
-            // 
-            // Label6
-            // 
-            this.Label6.AutoSize = true;
-            this.Label6.Location = new System.Drawing.Point(347, 18);
-            this.Label6.Name = "Label6";
-            this.Label6.Size = new System.Drawing.Size(43, 13);
-            this.Label6.TabIndex = 223;
-            this.Label6.Text = "HASTA:";
             // 
             // dtpFechaDesde
             // 
             this.dtpFechaDesde.CustomFormat = "MMMM yyyy";
             this.dtpFechaDesde.Enabled = false;
             this.dtpFechaDesde.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaDesde.Location = new System.Drawing.Point(225, 14);
+            this.dtpFechaDesde.Location = new System.Drawing.Point(209, 3);
             this.dtpFechaDesde.Name = "dtpFechaDesde";
-            this.dtpFechaDesde.Size = new System.Drawing.Size(97, 22);
+            this.dtpFechaDesde.Size = new System.Drawing.Size(97, 20);
             this.dtpFechaDesde.TabIndex = 220;
-            // 
-            // Label7
-            // 
-            this.Label7.AutoSize = true;
-            this.Label7.Location = new System.Drawing.Point(176, 17);
-            this.Label7.Name = "Label7";
-            this.Label7.Size = new System.Drawing.Size(44, 13);
-            this.Label7.TabIndex = 221;
-            this.Label7.Text = "DESDE:";
-            // 
-            // Label20
-            // 
-            this.Label20.AutoSize = true;
-            this.Label20.Location = new System.Drawing.Point(12, 18);
-            this.Label20.Name = "Label20";
-            this.Label20.Size = new System.Drawing.Size(56, 13);
-            this.Label20.TabIndex = 225;
-            this.Label20.Text = "DEL AÑO:";
             // 
             // dgvPersonal
             // 
@@ -230,7 +188,8 @@
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvPersonal.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvPersonal.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            this.dgvPersonal.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
+            this.dgvPersonal.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvPersonal.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgvPersonal.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
@@ -265,7 +224,7 @@
             dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvPersonal.DefaultCellStyle = dataGridViewCellStyle19;
             this.dgvPersonal.GridColor = System.Drawing.SystemColors.AppWorkspace;
-            this.dgvPersonal.Location = new System.Drawing.Point(0, 78);
+            this.dgvPersonal.Location = new System.Drawing.Point(6, 100);
             this.dgvPersonal.MultiSelect = false;
             this.dgvPersonal.Name = "dgvPersonal";
             this.dgvPersonal.ReadOnly = true;
@@ -283,7 +242,7 @@
             dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvPersonal.RowsDefaultCellStyle = dataGridViewCellStyle21;
             this.dgvPersonal.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvPersonal.Size = new System.Drawing.Size(1052, 557);
+            this.dgvPersonal.Size = new System.Drawing.Size(992, 535);
             this.dgvPersonal.TabIndex = 220;
             // 
             // Column1
@@ -474,14 +433,58 @@
             this.Column16.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.Column16.Width = 80;
             // 
+            // kryptonGroupBox1
+            // 
+            this.kryptonGroupBox1.CaptionOverlap = 0D;
+            this.kryptonGroupBox1.GroupBackStyle = Krypton.Toolkit.PaletteBackStyle.ControlRibbon;
+            this.kryptonGroupBox1.Location = new System.Drawing.Point(6, 36);
+            this.kryptonGroupBox1.Name = "kryptonGroupBox1";
+            // 
+            // kryptonGroupBox1.Panel
+            // 
+            this.kryptonGroupBox1.Panel.Controls.Add(this.txtFiltro);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.kryptonLabel3);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.dtpFechaHasta);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.kryptonLabel2);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.kryptonLabel1);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.dtpAnio);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.dtpFechaDesde);
+            this.kryptonGroupBox1.Size = new System.Drawing.Size(992, 55);
+            this.kryptonGroupBox1.TabIndex = 221;
+            this.kryptonGroupBox1.Values.Heading = "Datos";
+            // 
+            // kryptonLabel1
+            // 
+            this.kryptonLabel1.Location = new System.Drawing.Point(7, 4);
+            this.kryptonLabel1.Name = "kryptonLabel1";
+            this.kryptonLabel1.Size = new System.Drawing.Size(33, 20);
+            this.kryptonLabel1.TabIndex = 0;
+            this.kryptonLabel1.Values.Text = "Año";
+            // 
+            // kryptonLabel2
+            // 
+            this.kryptonLabel2.Location = new System.Drawing.Point(158, 4);
+            this.kryptonLabel2.Name = "kryptonLabel2";
+            this.kryptonLabel2.Size = new System.Drawing.Size(45, 20);
+            this.kryptonLabel2.TabIndex = 225;
+            this.kryptonLabel2.Values.Text = "Desde";
+            // 
+            // kryptonLabel3
+            // 
+            this.kryptonLabel3.Location = new System.Drawing.Point(342, 3);
+            this.kryptonLabel3.Name = "kryptonLabel3";
+            this.kryptonLabel3.Size = new System.Drawing.Size(41, 20);
+            this.kryptonLabel3.TabIndex = 226;
+            this.kryptonLabel3.Values.Text = "Hasta";
+            // 
             // FrmReporteGeneralNomina
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1052, 635);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
+            this.ClientSize = new System.Drawing.Size(1005, 635);
+            this.Controls.Add(this.kryptonGroupBox1);
             this.Controls.Add(this.dgvPersonal);
-            this.Controls.Add(this.GroupBox1);
             this.Controls.Add(this.toolStrip1);
             this.Name = "FrmReporteGeneralNomina";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -493,9 +496,12 @@
             this.Load += new System.EventHandler(this.FrmReporteGeneralNomina_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
-            this.GroupBox1.ResumeLayout(false);
-            this.GroupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPersonal)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox1.Panel)).EndInit();
+            this.kryptonGroupBox1.Panel.ResumeLayout(false);
+            this.kryptonGroupBox1.Panel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox1)).EndInit();
+            this.kryptonGroupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -507,13 +513,9 @@
         private System.Windows.Forms.ToolStripButton btnRecargar;
         private System.Windows.Forms.ToolStripButton btnCancelar;
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
-        internal System.Windows.Forms.GroupBox GroupBox1;
         internal System.Windows.Forms.DateTimePicker dtpAnio;
         internal System.Windows.Forms.DateTimePicker dtpFechaHasta;
-        internal System.Windows.Forms.Label Label6;
         internal System.Windows.Forms.DateTimePicker dtpFechaDesde;
-        internal System.Windows.Forms.Label Label7;
-        internal System.Windows.Forms.Label Label20;
         internal System.Windows.Forms.TextBox txtFiltro;
         internal System.Windows.Forms.DataGridView dgvPersonal;
         private System.Windows.Forms.ToolStripLabel toolStripLabel2;
@@ -537,5 +539,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column20;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column15;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column16;
+        private Krypton.Toolkit.KryptonGroupBox kryptonGroupBox1;
+        private Krypton.Toolkit.KryptonLabel kryptonLabel3;
+        private Krypton.Toolkit.KryptonLabel kryptonLabel2;
+        private Krypton.Toolkit.KryptonLabel kryptonLabel1;
     }
 }

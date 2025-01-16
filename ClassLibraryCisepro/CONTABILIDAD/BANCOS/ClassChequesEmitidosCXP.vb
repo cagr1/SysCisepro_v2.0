@@ -97,7 +97,8 @@ Namespace CONTABILIDAD.BANCOS
             Dim pars = New List(Of Object())
             pars.Add(New Object() {"FECHA_INICIAL", SqlDbType.DateTime, fechaDesde})
             pars.Add(New Object() {"FECHA_FINAL", SqlDbType.DateTime, fechaHasta})
-            pars.Add(New Object() {"BANCO_CHEQUE_EMITIDO", SqlDbType.VarChar, ban})
+            'pars.Add(New Object() {"BANCO_CHEQUE_EMITIDO", SqlDbType.VarChar, ban})
+            pars.Add(New Object() {"FILTRO", SqlDbType.VarChar, ban})
             Return ComandosSql.SeleccionarQueryWithParamsToDataTable(tipoCon, "BuscarChequesEmitidosCaducadosXRangoFechaCobro", True, pars)
         End Function
 

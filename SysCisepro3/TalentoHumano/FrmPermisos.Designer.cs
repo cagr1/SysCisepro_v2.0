@@ -269,7 +269,7 @@
             this.dtpFechaHasta.CustomFormat = "dddd, dd-MMM-yyyy";
             this.dtpFechaHasta.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpFechaHasta.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaHasta.Location = new System.Drawing.Point(572, 191);
+            this.dtpFechaHasta.Location = new System.Drawing.Point(548, 189);
             this.dtpFechaHasta.Name = "dtpFechaHasta";
             this.dtpFechaHasta.Size = new System.Drawing.Size(93, 22);
             this.dtpFechaHasta.TabIndex = 200;
@@ -279,7 +279,7 @@
             this.dtpFechaDesde.CustomFormat = "dddd, dd-MMM-yyyy";
             this.dtpFechaDesde.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpFechaDesde.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaDesde.Location = new System.Drawing.Point(456, 191);
+            this.dtpFechaDesde.Location = new System.Drawing.Point(444, 190);
             this.dtpFechaDesde.Name = "dtpFechaDesde";
             this.dtpFechaDesde.Size = new System.Drawing.Size(93, 22);
             this.dtpFechaDesde.TabIndex = 199;
@@ -513,10 +513,10 @@
             this.listView2.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listView2.FullRowSelect = true;
             this.listView2.HideSelection = false;
-            this.listView2.Location = new System.Drawing.Point(8, 227);
+            this.listView2.Location = new System.Drawing.Point(8, 218);
             this.listView2.MultiSelect = false;
             this.listView2.Name = "listView2";
-            this.listView2.Size = new System.Drawing.Size(693, 351);
+            this.listView2.Size = new System.Drawing.Size(693, 360);
             this.listView2.TabIndex = 227;
             this.listView2.UseCompatibleStateImageBehavior = false;
             this.listView2.View = System.Windows.Forms.View.Details;
@@ -591,7 +591,7 @@
             // 
             // btnCertificado
             // 
-            this.btnCertificado.Location = new System.Drawing.Point(671, 191);
+            this.btnCertificado.Location = new System.Drawing.Point(669, 187);
             this.btnCertificado.Name = "btnCertificado";
             this.btnCertificado.Size = new System.Drawing.Size(30, 30);
             this.btnCertificado.StateCommon.Back.Draw = Krypton.Toolkit.InheritBool.False;

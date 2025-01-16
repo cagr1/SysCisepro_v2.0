@@ -1,10 +1,10 @@
 ﻿Namespace FORMULARIOS.CONTABILIDAD.BANCOS
-    <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+    <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
     Partial Class FormRevisionChequesEmitidos
         'Inherits System.Windows.Forms.Form
         Inherits Krypton.Toolkit.KryptonForm
         'Form reemplaza a Dispose para limpiar la lista de componentes.
-        <System.Diagnostics.DebuggerNonUserCode()> _
+        <System.Diagnostics.DebuggerNonUserCode()>
         Protected Overrides Sub Dispose(ByVal disposing As Boolean)
             Try
                 If disposing AndAlso components IsNot Nothing Then
@@ -21,7 +21,7 @@
         'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
         'Se puede modificar usando el Diseñador de Windows Forms.  
         'No lo modifique con el editor de código.
-        <System.Diagnostics.DebuggerStepThrough()> _
+        <System.Diagnostics.DebuggerStepThrough()>
         Private Sub InitializeComponent()
             Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
@@ -38,13 +38,7 @@
             Me.lblIdComprobanteEgresoBanco = New System.Windows.Forms.Label()
             Me.dgvChequesEmitidosAprobados = New System.Windows.Forms.DataGridView()
             Me.CHK = New System.Windows.Forms.DataGridViewCheckBoxColumn()
-            Me.gbTotalChequesEmitidosNoCobrados = New System.Windows.Forms.GroupBox()
-            Me.tcRevisionCheques = New System.Windows.Forms.TabControl()
-            Me.tpEmitidosNoCobrados = New System.Windows.Forms.TabPage()
-            Me.tpEmitidosCobrados = New System.Windows.Forms.TabPage()
             Me.dgvEmitidosCobrados = New System.Windows.Forms.DataGridView()
-            Me.gbTotalEmitidosCobrados = New System.Windows.Forms.GroupBox()
-            Me.tpCaducados = New System.Windows.Forms.TabPage()
             Me.dgvEmitidosCaducados = New System.Windows.Forms.DataGridView()
             Me.dtpFechaHasta = New System.Windows.Forms.DateTimePicker()
             Me.dtpFechaDesde = New System.Windows.Forms.DateTimePicker()
@@ -67,18 +61,22 @@
             Me.chkCaducado = New System.Windows.Forms.CheckBox()
             Me.Label2 = New System.Windows.Forms.Label()
             Me.Label3 = New System.Windows.Forms.Label()
+            Me.MetroTabControl1 = New ReaLTaiizor.Controls.MetroTabControl()
+            Me.tpEmitidosNoCobrados = New ReaLTaiizor.Child.Metro.MetroTabPage()
+            Me.tpEmitidosCobrados = New ReaLTaiizor.Child.Metro.MetroTabPage()
+            Me.tpCaducados = New ReaLTaiizor.Child.Metro.MetroTabPage()
             CType(Me.dgvChequesEmitidosAprobados, System.ComponentModel.ISupportInitialize).BeginInit()
-            Me.tcRevisionCheques.SuspendLayout()
-            Me.tpEmitidosNoCobrados.SuspendLayout()
-            Me.tpEmitidosCobrados.SuspendLayout()
             CType(Me.dgvEmitidosCobrados, System.ComponentModel.ISupportInitialize).BeginInit()
-            Me.tpCaducados.SuspendLayout()
             CType(Me.dgvEmitidosCaducados, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.MenuStrip1.SuspendLayout()
             CType(Me.KryptonGroupBox6, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.KryptonGroupBox6.Panel, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.KryptonGroupBox6.Panel.SuspendLayout()
             Me.KryptonGroupBox6.SuspendLayout()
+            Me.MetroTabControl1.SuspendLayout()
+            Me.tpEmitidosNoCobrados.SuspendLayout()
+            Me.tpEmitidosCobrados.SuspendLayout()
+            Me.tpCaducados.SuspendLayout()
             Me.SuspendLayout()
             '
             'txtTotalEmitidosNoCobrados
@@ -129,7 +127,7 @@
             Me.dgvChequesEmitidosAprobados.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
             DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
             DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control
-            DataGridViewCellStyle2.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle2.Font = New System.Drawing.Font("Roboto", 8.0!)
             DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText
             DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption
             DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
@@ -139,18 +137,19 @@
             Me.dgvChequesEmitidosAprobados.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.CHK})
             DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
             DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window
-            DataGridViewCellStyle3.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle3.Font = New System.Drawing.Font("Roboto", 8.0!)
             DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText
             DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(123, Byte), Integer))
             DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
             DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
             Me.dgvChequesEmitidosAprobados.DefaultCellStyle = DataGridViewCellStyle3
-            Me.dgvChequesEmitidosAprobados.Location = New System.Drawing.Point(3, 4)
+            Me.dgvChequesEmitidosAprobados.Dock = System.Windows.Forms.DockStyle.Fill
+            Me.dgvChequesEmitidosAprobados.Location = New System.Drawing.Point(0, 0)
             Me.dgvChequesEmitidosAprobados.MultiSelect = False
             Me.dgvChequesEmitidosAprobados.Name = "dgvChequesEmitidosAprobados"
             Me.dgvChequesEmitidosAprobados.RowHeadersVisible = False
             Me.dgvChequesEmitidosAprobados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvChequesEmitidosAprobados.Size = New System.Drawing.Size(929, 454)
+            Me.dgvChequesEmitidosAprobados.Size = New System.Drawing.Size(924, 414)
             Me.dgvChequesEmitidosAprobados.TabIndex = 46
             '
             'CHK
@@ -158,53 +157,6 @@
             Me.CHK.HeaderText = "CHK"
             Me.CHK.Name = "CHK"
             Me.CHK.Width = 40
-            '
-            'gbTotalChequesEmitidosNoCobrados
-            '
-            Me.gbTotalChequesEmitidosNoCobrados.BackColor = System.Drawing.Color.White
-            Me.gbTotalChequesEmitidosNoCobrados.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.gbTotalChequesEmitidosNoCobrados.Location = New System.Drawing.Point(3, 616)
-            Me.gbTotalChequesEmitidosNoCobrados.Name = "gbTotalChequesEmitidosNoCobrados"
-            Me.gbTotalChequesEmitidosNoCobrados.Size = New System.Drawing.Size(1118, 42)
-            Me.gbTotalChequesEmitidosNoCobrados.TabIndex = 56
-            Me.gbTotalChequesEmitidosNoCobrados.TabStop = False
-            Me.gbTotalChequesEmitidosNoCobrados.Text = "TOTAL EMITIDOS NO COBRADOS"
-            '
-            'tcRevisionCheques
-            '
-            Me.tcRevisionCheques.Controls.Add(Me.tpEmitidosNoCobrados)
-            Me.tcRevisionCheques.Controls.Add(Me.tpEmitidosCobrados)
-            Me.tcRevisionCheques.Controls.Add(Me.tpCaducados)
-            Me.tcRevisionCheques.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.tcRevisionCheques.Location = New System.Drawing.Point(6, 102)
-            Me.tcRevisionCheques.Name = "tcRevisionCheques"
-            Me.tcRevisionCheques.SelectedIndex = 0
-            Me.tcRevisionCheques.Size = New System.Drawing.Size(932, 457)
-            Me.tcRevisionCheques.TabIndex = 57
-            '
-            'tpEmitidosNoCobrados
-            '
-            Me.tpEmitidosNoCobrados.BackColor = System.Drawing.Color.White
-            Me.tpEmitidosNoCobrados.Controls.Add(Me.dgvChequesEmitidosAprobados)
-            Me.tpEmitidosNoCobrados.Controls.Add(Me.gbTotalChequesEmitidosNoCobrados)
-            Me.tpEmitidosNoCobrados.Location = New System.Drawing.Point(4, 22)
-            Me.tpEmitidosNoCobrados.Name = "tpEmitidosNoCobrados"
-            Me.tpEmitidosNoCobrados.Padding = New System.Windows.Forms.Padding(3)
-            Me.tpEmitidosNoCobrados.Size = New System.Drawing.Size(924, 431)
-            Me.tpEmitidosNoCobrados.TabIndex = 0
-            Me.tpEmitidosNoCobrados.Text = "EMITIDOS NO COBRADOS GENERAL"
-            '
-            'tpEmitidosCobrados
-            '
-            Me.tpEmitidosCobrados.BackColor = System.Drawing.Color.White
-            Me.tpEmitidosCobrados.Controls.Add(Me.dgvEmitidosCobrados)
-            Me.tpEmitidosCobrados.Controls.Add(Me.gbTotalEmitidosCobrados)
-            Me.tpEmitidosCobrados.Location = New System.Drawing.Point(4, 22)
-            Me.tpEmitidosCobrados.Name = "tpEmitidosCobrados"
-            Me.tpEmitidosCobrados.Padding = New System.Windows.Forms.Padding(3)
-            Me.tpEmitidosCobrados.Size = New System.Drawing.Size(924, 431)
-            Me.tpEmitidosCobrados.TabIndex = 1
-            Me.tpEmitidosCobrados.Text = "EMITIDOS COBRADOS GENERAL"
             '
             'dgvEmitidosCobrados
             '
@@ -219,7 +171,7 @@
             Me.dgvEmitidosCobrados.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
             DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
             DataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control
-            DataGridViewCellStyle5.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle5.Font = New System.Drawing.Font("Roboto", 8.0!)
             DataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText
             DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption
             DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
@@ -228,43 +180,22 @@
             Me.dgvEmitidosCobrados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
             DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
             DataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window
-            DataGridViewCellStyle6.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle6.Font = New System.Drawing.Font("Roboto", 8.0!)
             DataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText
             DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(123, Byte), Integer))
             DataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText
             DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
             Me.dgvEmitidosCobrados.DefaultCellStyle = DataGridViewCellStyle6
+            Me.dgvEmitidosCobrados.Dock = System.Windows.Forms.DockStyle.Fill
             Me.dgvEmitidosCobrados.GridColor = System.Drawing.SystemColors.Control
-            Me.dgvEmitidosCobrados.Location = New System.Drawing.Point(3, 4)
+            Me.dgvEmitidosCobrados.Location = New System.Drawing.Point(0, 0)
             Me.dgvEmitidosCobrados.MultiSelect = False
             Me.dgvEmitidosCobrados.Name = "dgvEmitidosCobrados"
             Me.dgvEmitidosCobrados.ReadOnly = True
             Me.dgvEmitidosCobrados.RowHeadersVisible = False
             Me.dgvEmitidosCobrados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvEmitidosCobrados.Size = New System.Drawing.Size(918, 420)
+            Me.dgvEmitidosCobrados.Size = New System.Drawing.Size(495, 62)
             Me.dgvEmitidosCobrados.TabIndex = 0
-            '
-            'gbTotalEmitidosCobrados
-            '
-            Me.gbTotalEmitidosCobrados.BackColor = System.Drawing.Color.White
-            Me.gbTotalEmitidosCobrados.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.gbTotalEmitidosCobrados.Location = New System.Drawing.Point(6, 616)
-            Me.gbTotalEmitidosCobrados.Name = "gbTotalEmitidosCobrados"
-            Me.gbTotalEmitidosCobrados.Size = New System.Drawing.Size(1115, 42)
-            Me.gbTotalEmitidosCobrados.TabIndex = 57
-            Me.gbTotalEmitidosCobrados.TabStop = False
-            Me.gbTotalEmitidosCobrados.Text = "TOTAL EMITIDOS COBRADOS"
-            '
-            'tpCaducados
-            '
-            Me.tpCaducados.Controls.Add(Me.dgvEmitidosCaducados)
-            Me.tpCaducados.Location = New System.Drawing.Point(4, 22)
-            Me.tpCaducados.Name = "tpCaducados"
-            Me.tpCaducados.Padding = New System.Windows.Forms.Padding(3)
-            Me.tpCaducados.Size = New System.Drawing.Size(924, 431)
-            Me.tpCaducados.TabIndex = 2
-            Me.tpCaducados.Text = "EMITIDOS CADUCADOS"
-            Me.tpCaducados.UseVisualStyleBackColor = True
             '
             'dgvEmitidosCaducados
             '
@@ -279,7 +210,7 @@
             Me.dgvEmitidosCaducados.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
             DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
             DataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control
-            DataGridViewCellStyle8.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle8.Font = New System.Drawing.Font("Roboto", 8.0!)
             DataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText
             DataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption
             DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText
@@ -288,19 +219,20 @@
             Me.dgvEmitidosCaducados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
             DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
             DataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Window
-            DataGridViewCellStyle9.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle9.Font = New System.Drawing.Font("Roboto", 8.0!)
             DataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.ControlText
             DataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(123, Byte), Integer))
             DataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText
             DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
             Me.dgvEmitidosCaducados.DefaultCellStyle = DataGridViewCellStyle9
-            Me.dgvEmitidosCaducados.Location = New System.Drawing.Point(3, 5)
+            Me.dgvEmitidosCaducados.Dock = System.Windows.Forms.DockStyle.Fill
+            Me.dgvEmitidosCaducados.Location = New System.Drawing.Point(0, 0)
             Me.dgvEmitidosCaducados.MultiSelect = False
             Me.dgvEmitidosCaducados.Name = "dgvEmitidosCaducados"
             Me.dgvEmitidosCaducados.ReadOnly = True
             Me.dgvEmitidosCaducados.RowHeadersVisible = False
             Me.dgvEmitidosCaducados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-            Me.dgvEmitidosCaducados.Size = New System.Drawing.Size(929, 460)
+            Me.dgvEmitidosCaducados.Size = New System.Drawing.Size(495, 62)
             Me.dgvEmitidosCaducados.TabIndex = 1
             '
             'dtpFechaHasta
@@ -442,10 +374,12 @@
             Me.btnBuscarModi.Name = "btnBuscarModi"
             Me.btnBuscarModi.Size = New System.Drawing.Size(32, 32)
             Me.btnBuscarModi.StateCommon.Back.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.[False]
+            Me.btnBuscarModi.StateCommon.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit
             Me.btnBuscarModi.StateCommon.Border.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.[False]
             Me.btnBuscarModi.StateCommon.Border.DrawBorders = CType((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top Or ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) _
             Or ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) _
             Or ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right), ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)
+            Me.btnBuscarModi.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit
             Me.btnBuscarModi.StateCommon.Content.Padding = New System.Windows.Forms.Padding(2)
             Me.btnBuscarModi.TabIndex = 249
             Me.btnBuscarModi.Values.ImageStates.ImageCheckedNormal = Nothing
@@ -545,12 +479,97 @@
             Me.Label3.TabIndex = 196
             Me.Label3.Text = "CA/CC/TA"
             '
+            'MetroTabControl1
+            '
+            Me.MetroTabControl1.AnimateEasingType = ReaLTaiizor.[Enum].Metro.EasingType.CubeOut
+            Me.MetroTabControl1.AnimateTime = 200
+            Me.MetroTabControl1.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
+            Me.MetroTabControl1.Controls.Add(Me.tpEmitidosNoCobrados)
+            Me.MetroTabControl1.Controls.Add(Me.tpEmitidosCobrados)
+            Me.MetroTabControl1.Controls.Add(Me.tpCaducados)
+            Me.MetroTabControl1.ControlsVisible = True
+            Me.MetroTabControl1.IsDerivedStyle = True
+            Me.MetroTabControl1.ItemSize = New System.Drawing.Size(100, 30)
+            Me.MetroTabControl1.Location = New System.Drawing.Point(6, 104)
+            Me.MetroTabControl1.MCursor = System.Windows.Forms.Cursors.Hand
+            Me.MetroTabControl1.Name = "MetroTabControl1"
+            Me.MetroTabControl1.SelectedIndex = 0
+            Me.MetroTabControl1.SelectedTextColor = System.Drawing.Color.FromArgb(CType(CType(65, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(225, Byte), Integer))
+            Me.MetroTabControl1.Size = New System.Drawing.Size(932, 452)
+            Me.MetroTabControl1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed
+            Me.MetroTabControl1.Speed = 100
+            Me.MetroTabControl1.Style = ReaLTaiizor.[Enum].Metro.Style.Light
+            Me.MetroTabControl1.StyleManager = Nothing
+            Me.MetroTabControl1.TabIndex = 197
+            Me.MetroTabControl1.TabStyle = ReaLTaiizor.[Enum].Metro.TabStyle.Style2
+            Me.MetroTabControl1.ThemeAuthor = "Taiizor"
+            Me.MetroTabControl1.ThemeName = "MetroLight"
+            Me.MetroTabControl1.UnselectedTextColor = System.Drawing.Color.Gray
+            '
+            'tpEmitidosNoCobrados
+            '
+            Me.tpEmitidosNoCobrados.BaseColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
+            Me.tpEmitidosNoCobrados.Controls.Add(Me.dgvChequesEmitidosAprobados)
+            Me.tpEmitidosNoCobrados.Font = Nothing
+            Me.tpEmitidosNoCobrados.ImageIndex = 0
+            Me.tpEmitidosNoCobrados.ImageKey = Nothing
+            Me.tpEmitidosNoCobrados.IsDerivedStyle = True
+            Me.tpEmitidosNoCobrados.Location = New System.Drawing.Point(4, 34)
+            Me.tpEmitidosNoCobrados.Name = "tpEmitidosNoCobrados"
+            Me.tpEmitidosNoCobrados.Size = New System.Drawing.Size(924, 414)
+            Me.tpEmitidosNoCobrados.Style = ReaLTaiizor.[Enum].Metro.Style.Light
+            Me.tpEmitidosNoCobrados.StyleManager = Nothing
+            Me.tpEmitidosNoCobrados.TabIndex = 0
+            Me.tpEmitidosNoCobrados.Text = "Emitidos No Cobrados                    "
+            Me.tpEmitidosNoCobrados.ThemeAuthor = "Taiizor"
+            Me.tpEmitidosNoCobrados.ThemeName = "MetroLight"
+            Me.tpEmitidosNoCobrados.ToolTipText = Nothing
+            '
+            'tpEmitidosCobrados
+            '
+            Me.tpEmitidosCobrados.BaseColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
+            Me.tpEmitidosCobrados.Controls.Add(Me.dgvEmitidosCobrados)
+            Me.tpEmitidosCobrados.Font = Nothing
+            Me.tpEmitidosCobrados.ImageIndex = 0
+            Me.tpEmitidosCobrados.ImageKey = Nothing
+            Me.tpEmitidosCobrados.IsDerivedStyle = True
+            Me.tpEmitidosCobrados.Location = New System.Drawing.Point(4, 34)
+            Me.tpEmitidosCobrados.Name = "tpEmitidosCobrados"
+            Me.tpEmitidosCobrados.Size = New System.Drawing.Size(495, 62)
+            Me.tpEmitidosCobrados.Style = ReaLTaiizor.[Enum].Metro.Style.Light
+            Me.tpEmitidosCobrados.StyleManager = Nothing
+            Me.tpEmitidosCobrados.TabIndex = 1
+            Me.tpEmitidosCobrados.Text = "Emitidos Cobrados General            "
+            Me.tpEmitidosCobrados.ThemeAuthor = "Taiizor"
+            Me.tpEmitidosCobrados.ThemeName = "MetroLight"
+            Me.tpEmitidosCobrados.ToolTipText = Nothing
+            '
+            'tpCaducados
+            '
+            Me.tpCaducados.BaseColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(253, Byte), Integer))
+            Me.tpCaducados.Controls.Add(Me.dgvEmitidosCaducados)
+            Me.tpCaducados.Font = Nothing
+            Me.tpCaducados.ImageIndex = 0
+            Me.tpCaducados.ImageKey = Nothing
+            Me.tpCaducados.IsDerivedStyle = True
+            Me.tpCaducados.Location = New System.Drawing.Point(4, 34)
+            Me.tpCaducados.Name = "tpCaducados"
+            Me.tpCaducados.Size = New System.Drawing.Size(495, 62)
+            Me.tpCaducados.Style = ReaLTaiizor.[Enum].Metro.Style.Light
+            Me.tpCaducados.StyleManager = Nothing
+            Me.tpCaducados.TabIndex = 2
+            Me.tpCaducados.Text = "Emitidos Caducados            "
+            Me.tpCaducados.ThemeAuthor = "Taiizor"
+            Me.tpCaducados.ThemeName = "MetroLight"
+            Me.tpCaducados.ToolTipText = Nothing
+            '
             'FormRevisionChequesEmitidos
             '
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(185, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(227, Byte), Integer))
             Me.ClientSize = New System.Drawing.Size(942, 560)
+            Me.Controls.Add(Me.MetroTabControl1)
             Me.Controls.Add(Me.chkCaducado)
             Me.Controls.Add(Me.Label3)
             Me.Controls.Add(Me.Label2)
@@ -558,7 +577,6 @@
             Me.Controls.Add(Me.Label1)
             Me.Controls.Add(Me.KryptonGroupBox6)
             Me.Controls.Add(Me.MenuStrip1)
-            Me.Controls.Add(Me.tcRevisionCheques)
             Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
             Me.Name = "FormRevisionChequesEmitidos"
             Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
@@ -568,11 +586,7 @@
             Me.StateActive.Border.Rounding = 5.0!
             Me.Text = "REVISIÓN DE CHEQUES EMITIDOS"
             CType(Me.dgvChequesEmitidosAprobados, System.ComponentModel.ISupportInitialize).EndInit()
-            Me.tcRevisionCheques.ResumeLayout(False)
-            Me.tpEmitidosNoCobrados.ResumeLayout(False)
-            Me.tpEmitidosCobrados.ResumeLayout(False)
             CType(Me.dgvEmitidosCobrados, System.ComponentModel.ISupportInitialize).EndInit()
-            Me.tpCaducados.ResumeLayout(False)
             CType(Me.dgvEmitidosCaducados, System.ComponentModel.ISupportInitialize).EndInit()
             Me.MenuStrip1.ResumeLayout(False)
             Me.MenuStrip1.PerformLayout()
@@ -581,19 +595,18 @@
             Me.KryptonGroupBox6.Panel.PerformLayout()
             CType(Me.KryptonGroupBox6, System.ComponentModel.ISupportInitialize).EndInit()
             Me.KryptonGroupBox6.ResumeLayout(False)
+            Me.MetroTabControl1.ResumeLayout(False)
+            Me.tpEmitidosNoCobrados.ResumeLayout(False)
+            Me.tpEmitidosCobrados.ResumeLayout(False)
+            Me.tpCaducados.ResumeLayout(False)
             Me.ResumeLayout(False)
             Me.PerformLayout()
 
         End Sub
         Friend WithEvents dgvChequesEmitidosAprobados As System.Windows.Forms.DataGridView
         Friend WithEvents CHK As System.Windows.Forms.DataGridViewCheckBoxColumn
-        Friend WithEvents gbTotalChequesEmitidosNoCobrados As System.Windows.Forms.GroupBox
         Friend WithEvents txtTotalEmitidosNoCobrados As System.Windows.Forms.TextBox
-        Friend WithEvents tcRevisionCheques As System.Windows.Forms.TabControl
-        Friend WithEvents tpEmitidosNoCobrados As System.Windows.Forms.TabPage
-        Friend WithEvents tpEmitidosCobrados As System.Windows.Forms.TabPage
         Friend WithEvents dgvEmitidosCobrados As System.Windows.Forms.DataGridView
-        Friend WithEvents gbTotalEmitidosCobrados As System.Windows.Forms.GroupBox
         Friend WithEvents txtTotalEmitidosCobrados As System.Windows.Forms.TextBox
         Friend WithEvents lblIdComprobanteEgresoBanco As System.Windows.Forms.Label
         Friend WithEvents dtpFechaHasta As System.Windows.Forms.DateTimePicker
@@ -601,7 +614,6 @@
         Friend WithEvents dtpFechaCobroCheque As System.Windows.Forms.DateTimePicker
         Friend WithEvents cmbCuentaBancos As System.Windows.Forms.ComboBox
         Friend WithEvents cmbBancos As System.Windows.Forms.ComboBox
-        Friend WithEvents tpCaducados As System.Windows.Forms.TabPage
         Friend WithEvents dgvEmitidosCaducados As System.Windows.Forms.DataGridView
         Friend WithEvents MenuStrip1 As System.Windows.Forms.MenuStrip
         Friend WithEvents btnBuscar As System.Windows.Forms.ToolStripMenuItem
@@ -619,5 +631,9 @@
         Friend WithEvents chkCaducado As CheckBox
         Friend WithEvents Label2 As Label
         Friend WithEvents Label3 As Label
+        Friend WithEvents MetroTabControl1 As ReaLTaiizor.Controls.MetroTabControl
+        Friend WithEvents tpEmitidosNoCobrados As ReaLTaiizor.Child.Metro.MetroTabPage
+        Friend WithEvents tpEmitidosCobrados As ReaLTaiizor.Child.Metro.MetroTabPage
+        Friend WithEvents tpCaducados As ReaLTaiizor.Child.Metro.MetroTabPage
     End Class
 End Namespace
